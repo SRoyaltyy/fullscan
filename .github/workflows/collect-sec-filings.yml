@@ -1,0 +1,34 @@
+name: "Collect: SEC Filings"
+
+on:
+  schedule:
+    - cron: "45 */3 * * 1-5"     # :45 past every 3rd hour, Mon-Fri
+  workflow_dispatch:
+
+concurrency:
+  group: db-write
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run collector
+        run: python -m collectors.sec_filings
+
+      - name: Commit and push updated DB
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/pipeline.db
+          git diff --staged --quiet || git commit -m "data: sec filings $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
