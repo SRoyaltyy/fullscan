@@ -2,35 +2,22 @@ name: "Collect: FRED Macro Data"
 
 on:
   schedule:
-    - cron: "0 13 * * *"          # 1 PM UTC = ~8-9 AM Eastern
+    - cron: "0 13 * * *"
   workflow_dispatch:
-
-concurrency:
-  group: db-write
-  cancel-in-progress: false
 
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run collector
         env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python -m collectors.macro_fred
-
-      - name: Commit and push updated DB
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/pipeline.db
-          git diff --staged --quiet || git commit -m "data: fred macro $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
