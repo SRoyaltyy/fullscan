@@ -8,17 +8,16 @@ Backfills 6 months on first run. Prints daily change report.
 import os
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date, timezone
 from pathlib import Path
 
-# Allow running as:  python -m collectors.macro_sentiment  OR  python collectors/macro_sentiment.py
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
 import requests
 import yfinance as yf
 
-from db.db_utils import get_db, ensure_schema
+from db.connection import get_connection
 
 try:
     from fredapi import Fred
@@ -85,22 +84,35 @@ REPORT_SECTIONS = {
 
 
 # ── Database helpers ────────────────────────────────────────────────
-def latest_date(conn, indicator):
-    row = conn.execute(
-        "SELECT MAX(date) FROM macro_indicators WHERE indicator=?", (indicator,)
-    ).fetchone()
-    return row[0] if row and row[0] else None
+def _to_date(val):
+    """Normalize a date value (date object or string) to datetime.date."""
+    if val is None:
+        return None
+    if isinstance(val, date):
+        return val
+    return datetime.strptime(str(val)[:10], "%Y-%m-%d").date()
 
 
-def upsert(conn, indicator, series_id, date_str, value, source):
-    conn.execute(
-        "INSERT OR REPLACE INTO macro_indicators(indicator,series_id,date,value,source) VALUES(?,?,?,?,?)",
+def latest_date(cur, indicator):
+    cur.execute("SELECT MAX(date) FROM macro_indicators WHERE indicator=%s", (indicator,))
+    row = cur.fetchone()
+    return _to_date(row[0]) if row and row[0] else None
+
+
+def upsert(cur, indicator, series_id, date_str, value, source):
+    cur.execute(
+        """INSERT INTO macro_indicators(indicator, series_id, date, value, source)
+           VALUES(%s, %s, %s, %s, %s)
+           ON CONFLICT (indicator, date) DO UPDATE SET
+               value = EXCLUDED.value,
+               source = EXCLUDED.source,
+               collected_at = NOW()""",
         (indicator, series_id, date_str, value, source),
     )
 
 
 # ── Collectors ──────────────────────────────────────────────────────
-def collect_fred(conn):
+def collect_fred(conn, cur):
     if not HAS_FRED:
         print("  SKIP: fredapi not installed (pip install fredapi)")
         return 0
@@ -109,22 +121,23 @@ def collect_fred(conn):
         return 0
 
     fred = Fred(api_key=FRED_API_KEY)
-    today = datetime.now()
+    today = datetime.now().date()
     total = 0
 
     for name, sid in FRED_SERIES.items():
-        ld = latest_date(conn, name)
-        start = (datetime.strptime(ld, "%Y-%m-%d") + timedelta(days=1)) if ld else (today - timedelta(days=BACKFILL_DAYS))
+        ld = latest_date(cur, name)
+        start = (ld + timedelta(days=1)) if ld else (today - timedelta(days=BACKFILL_DAYS))
         try:
             data = fred.get_series(sid, observation_start=start.strftime("%Y-%m-%d"))
             n = 0
             for dt, val in data.items():
                 if pd.notna(val):
-                    upsert(conn, name, sid, dt.strftime("%Y-%m-%d"), float(val), "FRED")
+                    upsert(cur, name, sid, dt.strftime("%Y-%m-%d"), float(val), "FRED")
                     n += 1
             total += n
             print(f"  {name:<25} +{n}")
         except Exception as e:
+            conn.rollback()
             print(f"  {name:<25} ERROR: {e}")
         time.sleep(0.2)
 
@@ -132,13 +145,13 @@ def collect_fred(conn):
     return total
 
 
-def collect_yfinance(conn):
-    today = datetime.now()
+def collect_yfinance(conn, cur):
+    today = datetime.now().date()
     total = 0
 
     for name, ticker in YFINANCE_TICKERS.items():
-        ld = latest_date(conn, name)
-        start = (datetime.strptime(ld, "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d") if ld else (today - timedelta(days=BACKFILL_DAYS)).strftime("%Y-%m-%d")
+        ld = latest_date(cur, name)
+        start = (ld + timedelta(days=1)).strftime("%Y-%m-%d") if ld else (today - timedelta(days=BACKFILL_DAYS)).strftime("%Y-%m-%d")
         end = (today + timedelta(days=1)).strftime("%Y-%m-%d")
 
         try:
@@ -154,18 +167,19 @@ def collect_yfinance(conn):
             for dt_idx, row in df.iterrows():
                 date_str = dt_idx.strftime("%Y-%m-%d") if hasattr(dt_idx, "strftime") else str(dt_idx)[:10]
                 val = float(row["Close"])
-                upsert(conn, name, ticker, date_str, val, "yfinance")
+                upsert(cur, name, ticker, date_str, val, "yfinance")
                 n += 1
             total += n
             print(f"  {name:<25} +{n}")
         except Exception as e:
+            conn.rollback()
             print(f"  {name:<25} ERROR: {e}")
 
     conn.commit()
     return total
 
 
-def collect_fear_greed(conn):
+def collect_fear_greed(conn, cur):
     try:
         resp = requests.get(
             FEAR_GREED_URL,
@@ -179,31 +193,33 @@ def collect_fear_greed(conn):
         fg = data.get("fear_and_greed", {})
         score = fg.get("score")
         if score is not None:
-            upsert(conn, "FEAR_GREED", "cnn_fg", datetime.now().strftime("%Y-%m-%d"), float(score), "CNN")
+            upsert(cur, "FEAR_GREED", "cnn_fg", datetime.now().strftime("%Y-%m-%d"), float(score), "CNN")
             n += 1
 
         for point in data.get("fear_and_greed_historical", {}).get("data", []):
             ts, val = point.get("x"), point.get("y")
             if ts and val is not None:
-                date_str = datetime.utcfromtimestamp(ts / 1000).strftime("%Y-%m-%d")
-                upsert(conn, "FEAR_GREED", "cnn_fg", date_str, float(val), "CNN")
+                date_str = datetime.fromtimestamp(ts / 1000, tz=timezone.utc).strftime("%Y-%m-%d")
+                upsert(cur, "FEAR_GREED", "cnn_fg", date_str, float(val), "CNN")
                 n += 1
 
         conn.commit()
         print(f"  {'FEAR_GREED':<25} +{n}")
         return n
     except Exception as e:
+        conn.rollback()
         print(f"  {'FEAR_GREED':<25} ERROR: {e}")
         return 0
 
 
 # ── Change report ───────────────────────────────────────────────────
-def get_historical_value(conn, indicator, ref_date, window_days=7):
-    earliest = (ref_date - timedelta(days=window_days)).isoformat()
-    row = conn.execute(
-        "SELECT value FROM macro_indicators WHERE indicator=? AND date<=? AND date>=? ORDER BY date DESC LIMIT 1",
-        (indicator, ref_date.isoformat(), earliest),
-    ).fetchone()
+def get_historical_value(cur, indicator, ref_date, window_days=7):
+    earliest = ref_date - timedelta(days=window_days)
+    cur.execute(
+        "SELECT value FROM macro_indicators WHERE indicator=%s AND date<=%s AND date>=%s ORDER BY date DESC LIMIT 1",
+        (indicator, ref_date, earliest),
+    )
+    row = cur.fetchone()
     return row[0] if row else None
 
 
@@ -226,7 +242,7 @@ def fmt_val(value, indicator):
     return f"{value:,.2f}"
 
 
-def print_report(conn):
+def print_report(cur):
     today = datetime.now().date()
     periods = {"Day": 1, "Week": 7, "Month": 30, "Quarter": 91}
 
@@ -240,30 +256,34 @@ def print_report(conn):
         print(f"  {'-'*73}")
 
         for ind in indicators:
-            row = conn.execute(
-                "SELECT value, date FROM macro_indicators WHERE indicator=? ORDER BY date DESC LIMIT 1",
+            cur.execute(
+                "SELECT value, date FROM macro_indicators WHERE indicator=%s ORDER BY date DESC LIMIT 1",
                 (ind,),
-            ).fetchone()
+            )
+            row = cur.fetchone()
 
             if not row or row[0] is None:
                 print(f"  {ind:<25}{'N/A':>12}")
                 continue
 
             current_val = row[0]
-            current_date = datetime.strptime(row[1], "%Y-%m-%d").date()
+            current_date = _to_date(row[1])
             val_str = fmt_val(current_val, ind)
 
             changes = {}
             for pname, days in periods.items():
                 ref = current_date - timedelta(days=days)
-                prev = get_historical_value(conn, ind, ref)
+                prev = get_historical_value(cur, ind, ref)
                 changes[pname] = fmt_change(current_val, prev)
 
             print(f"  {ind:<25}{val_str:>12}{changes['Day']:>9}{changes['Week']:>9}{changes['Month']:>9}{changes['Quarter']:>9}")
 
-    total = conn.execute("SELECT COUNT(DISTINCT indicator) FROM macro_indicators").fetchone()[0]
-    points = conn.execute("SELECT COUNT(*) FROM macro_indicators").fetchone()[0]
-    earliest = conn.execute("SELECT MIN(date) FROM macro_indicators").fetchone()[0]
+    cur.execute("SELECT COUNT(DISTINCT indicator) FROM macro_indicators")
+    total = cur.fetchone()[0]
+    cur.execute("SELECT COUNT(*) FROM macro_indicators")
+    points = cur.fetchone()[0]
+    cur.execute("SELECT MIN(date) FROM macro_indicators")
+    earliest = cur.fetchone()[0]
     print(f"\n  Coverage: {total} indicators, {points} data points, from {earliest}")
     print(f"{'='*80}\n")
 
@@ -271,30 +291,31 @@ def print_report(conn):
 # ── Main ────────────────────────────────────────────────────────────
 def main():
     start_time = time.time()
-    conn = get_db()
-    ensure_schema(conn)
+    conn = get_connection()
+    cur = conn.cursor()
 
     print("=== FRED Economic Indicators ===")
-    fred_n = collect_fred(conn)
+    fred_n = collect_fred(conn, cur)
 
     print("\n=== Market Data (yfinance) ===")
-    yf_n = collect_yfinance(conn)
+    yf_n = collect_yfinance(conn, cur)
 
     print("\n=== CNN Fear & Greed Index ===")
-    fg_n = collect_fear_greed(conn)
+    fg_n = collect_fear_greed(conn, cur)
 
     duration = time.time() - start_time
     total_n = fred_n + yf_n + fg_n
 
-    conn.execute(
-        "INSERT INTO collection_log(collector,status,records_added,duration_sec) VALUES(?,?,?,?)",
+    cur.execute(
+        "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
         ("macro_sentiment", "ok", total_n, round(duration, 1)),
     )
     conn.commit()
 
-    print_report(conn)
+    print_report(cur)
     print(f"Done in {duration:.1f}s — {total_n} records added/updated")
 
+    cur.close()
     conn.close()
 
 
