@@ -7,7 +7,6 @@ Run all collectors sequentially. Useful for:
 import sys
 from pathlib import Path
 
-# Add project root to Python path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from collectors import (
@@ -16,24 +15,28 @@ from collectors import (
     news_newsapi,
     news_reddit,
     macro_fred,
+    macro_sentiment,
     market_yfinance,
     sec_filings,
+    finviz_financials,
 )
 
 
 def main():
     collectors = [
-        ("Ticker Master List",  ticker_master.collect),
-        ("RSS News",            news_rss.collect),
-        ("NewsAPI",             news_newsapi.collect),
-        ("Reddit",              news_reddit.collect),
-        ("FRED Macro Data",     macro_fred.collect),
-        ("yfinance Market",     market_yfinance.collect),
-        ("SEC Filings",         sec_filings.collect),
+        ("Ticker Master List",      ticker_master.collect),
+        ("RSS News",                news_rss.collect),
+        ("NewsAPI",                 news_newsapi.collect),
+        ("Reddit",                  news_reddit.collect),
+        ("FRED Macro Data",         macro_fred.collect),
+        ("Macro & Sentiment",       macro_sentiment.main),
+        ("yfinance Market",         market_yfinance.collect),
+        ("SEC Filings",             sec_filings.collect),
+        ("Finviz Financials",       finviz_financials.main),
     ]
 
     print("=" * 60)
-    print("STOCK CATALYST ENGINE — Full Collection Run")
+    print("FULLSCAN — Full Collection Run")
     print("=" * 60)
 
     for name, func in collectors:
