@@ -17,12 +17,7 @@ from datetime import datetime
 # ── CONFIG ────────────────────────────────────────────
 FMP_API_KEY     = os.getenv("FMP_API_KEY")
 FMP_BASE_URL    = "https://financialmodelingprep.com/api/v3"
-
-DB_HOST         = os.getenv("DB_HOST", "localhost")
-DB_PORT         = os.getenv("DB_PORT", "5432")
-DB_NAME         = os.getenv("DB_NAME", "trading_bot")
-DB_USER         = os.getenv("DB_USER", "postgres")
-DB_PASSWORD     = os.getenv("DB_PASSWORD", "")
+DATABASE_URL    = os.getenv("DATABASE_URL")
 
 RATE_LIMIT_SEC  = 0.5
 
@@ -36,10 +31,10 @@ logger = logging.getLogger(__name__)
 
 # ── DATABASE ──────────────────────────────────────────
 def get_db_connection():
-    return psycopg2.connect(
-        host=DB_HOST, port=DB_PORT, dbname=DB_NAME,
-        user=DB_USER, password=DB_PASSWORD
-    )
+    if not DATABASE_URL:
+        logger.error("DATABASE_URL not set — cannot connect to database.")
+        sys.exit(1)
+    return psycopg2.connect(DATABASE_URL)
 
 def get_tracked_tickers(conn):
     with conn.cursor() as cur:
