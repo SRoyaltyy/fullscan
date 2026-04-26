@@ -6,6 +6,10 @@ Populates: macro_indicators table
 
 FRED has 800,000+ time series. We pull the ~25 most market-relevant ones.
 Free tier: 120 requests/minute, no daily limit.
+
+NOTE: macro_sentiment.py also pulls some FRED series under human-readable
+indicator names (e.g. "CPI" instead of "CPIAUCSL").  The overlap is harmless —
+both coexist in the same table with different primary keys.
 """
 
 import requests
@@ -17,7 +21,6 @@ API_KEY = os.environ.get("FRED_API_KEY", "")
 BASE_URL = "https://api.stlouisfed.org/fred/series/observations"
 
 # ── Key macro series ───────────────────────────────────────────
-# Format: FRED_SERIES_ID → human-readable name
 SERIES = {
     # Inflation & Prices
     "CPIAUCSL":         "CPI — All Urban Consumers",
@@ -82,7 +85,7 @@ def collect():
                 "api_key": API_KEY,
                 "file_type": "json",
                 "sort_order": "desc",
-                "limit": 60,       # last 60 observations
+                "limit": 60,
             }, timeout=15)
 
             resp.raise_for_status()
@@ -91,18 +94,18 @@ def collect():
             count = 0
             for obs in data.get("observations", []):
                 val = obs.get("value", ".")
-                if val == ".":     # FRED uses "." for missing/pending data
+                if val == ".":
                     continue
 
                 try:
                     cursor.execute("""
                         INSERT INTO macro_indicators
-                            (series_id, series_name, date, value)
-                        VALUES (?, ?, ?, ?)
-                        ON CONFLICT(series_id, date) DO UPDATE SET
+                            (indicator, series_id, series_name, date, value, source)
+                        VALUES (?, ?, ?, ?, ?, 'FRED')
+                        ON CONFLICT(indicator, date) DO UPDATE SET
                             value = excluded.value,
-                            updated_at = CURRENT_TIMESTAMP
-                    """, (series_id, series_name, obs["date"], float(val)))
+                            collected_at = datetime('now')
+                    """, (series_id, series_id, series_name, obs["date"], float(val)))
                     count += 1
                 except (ValueError, Exception):
                     pass
@@ -110,7 +113,7 @@ def collect():
             total_points += count
             print(f"  {series_id} ({series_name}): {count} data points")
 
-            time.sleep(0.2)  # be gentle with the API
+            time.sleep(0.2)
 
         except Exception as e:
             print(f"  [ERROR] {series_id}: {e}")
