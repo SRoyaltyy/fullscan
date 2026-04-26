@@ -1,0 +1,37 @@
+name: "Collect: Finviz Financials"
+
+on:
+  schedule:
+    - cron: "0 22 * * 5"          # Friday 10 PM UTC (after market close)
+  workflow_dispatch:
+
+concurrency:
+  group: db-write
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run collector
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+        run: python -m collectors.finviz_financials
+
+      - name: Commit and push updated DB
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/pipeline.db data/exports/
+          git diff --staged --quiet || git commit -m "data: finviz snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
