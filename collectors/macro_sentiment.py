@@ -7,14 +7,18 @@ Backfills 6 months on first run. Prints daily change report.
 
 import os
 import sys
-import sqlite3
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# Allow running as:  python -m collectors.macro_sentiment  OR  python collectors/macro_sentiment.py
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import pandas as pd
 import requests
 import yfinance as yf
+
+from db.db_utils import get_db, ensure_schema
 
 try:
     from fredapi import Fred
@@ -23,40 +27,34 @@ except ImportError:
     HAS_FRED = False
 
 # ── Config ──────────────────────────────────────────────────────────
-DB_PATH = os.environ.get("DB_PATH", str(Path(__file__).parent.parent / "data" / "fullscan.db"))
 FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
 BACKFILL_DAYS = 180
 
 FRED_SERIES = {
-    # Economic indicators
-    "CPI":                  "CPIAUCSL",     # monthly
-    "CORE_CPI":             "CPILFESL",     # monthly
-    "FED_FUNDS_RATE":       "DFF",          # daily
-    "UNEMPLOYMENT":         "UNRATE",       # monthly
-    "GDP":                  "GDP",          # quarterly
-    "NONFARM_PAYROLLS":     "PAYEMS",       # monthly
-    "INITIAL_CLAIMS":       "ICSA",         # weekly
-    "RETAIL_SALES":         "RSAFS",        # monthly
-    "INDUSTRIAL_PRODUCTION":"INDPRO",       # monthly
-    "CONSUMER_SENTIMENT":   "UMCSENT",      # monthly
-    "PPI":                  "PPIACO",       # monthly
-    "M2_MONEY_SUPPLY":      "M2SL",        # monthly
-    # Rates & Bonds
-    "10Y_TREASURY":         "DGS10",        # daily
-    "2Y_TREASURY":          "DGS2",         # daily
-    "YIELD_CURVE":          "T10Y2Y",       # daily
-    "HY_SPREAD":            "BAMLH0A0HYM2", # daily – high yield OAS
+    "CPI":                  "CPIAUCSL",
+    "CORE_CPI":             "CPILFESL",
+    "FED_FUNDS_RATE":       "DFF",
+    "UNEMPLOYMENT":         "UNRATE",
+    "GDP":                  "GDP",
+    "NONFARM_PAYROLLS":     "PAYEMS",
+    "INITIAL_CLAIMS":       "ICSA",
+    "RETAIL_SALES":         "RSAFS",
+    "INDUSTRIAL_PRODUCTION":"INDPRO",
+    "CONSUMER_SENTIMENT":   "UMCSENT",
+    "PPI":                  "PPIACO",
+    "M2_MONEY_SUPPLY":      "M2SL",
+    "10Y_TREASURY":         "DGS10",
+    "2Y_TREASURY":          "DGS2",
+    "YIELD_CURVE":          "T10Y2Y",
+    "HY_SPREAD":            "BAMLH0A0HYM2",
 }
 
 YFINANCE_TICKERS = {
-    # Sentiment
     "VIX":              "^VIX",
-    # Major indices
     "SP500":            "^GSPC",
     "NASDAQ":           "^IXIC",
     "DOW":              "^DJI",
     "RUSSELL_2000":     "^RUT",
-    # Commodities
     "CRUDE_OIL":        "CL=F",
     "GOLD":             "GC=F",
     "SILVER":           "SI=F",
@@ -65,16 +63,13 @@ YFINANCE_TICKERS = {
     "CORN":             "ZC=F",
     "WHEAT":            "ZW=F",
     "SOYBEANS":         "ZS=F",
-    # Currency / bonds
     "US_DOLLAR_INDEX":  "DX-Y.NYB",
     "20Y_BOND_ETF":     "TLT",
-    # Crypto
     "BITCOIN":          "BTC-USD",
 }
 
 FEAR_GREED_URL = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
 
-# ── Report layout ───────────────────────────────────────────────────
 REPORT_SECTIONS = {
     "MARKET SENTIMENT":  ["VIX", "FEAR_GREED", "HY_SPREAD"],
     "MAJOR INDICES":     ["SP500", "NASDAQ", "DOW", "RUSSELL_2000"],
@@ -90,13 +85,6 @@ REPORT_SECTIONS = {
 
 
 # ── Database helpers ────────────────────────────────────────────────
-def get_db():
-    Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    conn.execute("PRAGMA journal_mode=WAL")
-    return conn
-
-
 def latest_date(conn, indicator):
     row = conn.execute(
         "SELECT MAX(date) FROM macro_indicators WHERE indicator=?", (indicator,)
@@ -138,7 +126,7 @@ def collect_fred(conn):
             print(f"  {name:<25} +{n}")
         except Exception as e:
             print(f"  {name:<25} ERROR: {e}")
-        time.sleep(0.2)  # be nice to FRED
+        time.sleep(0.2)
 
     conn.commit()
     return total
@@ -159,7 +147,6 @@ def collect_yfinance(conn):
                 print(f"  {name:<25} no new data")
                 continue
 
-            # Flatten MultiIndex columns if present
             if isinstance(df.columns, pd.MultiIndex):
                 df.columns = df.columns.get_level_values(0)
 
@@ -189,14 +176,12 @@ def collect_fear_greed(conn):
         data = resp.json()
 
         n = 0
-        # Current value
         fg = data.get("fear_and_greed", {})
         score = fg.get("score")
         if score is not None:
             upsert(conn, "FEAR_GREED", "cnn_fg", datetime.now().strftime("%Y-%m-%d"), float(score), "CNN")
             n += 1
 
-        # Historical backfill
         for point in data.get("fear_and_greed_historical", {}).get("data", []):
             ts, val = point.get("x"), point.get("y")
             if ts and val is not None:
@@ -214,7 +199,6 @@ def collect_fear_greed(conn):
 
 # ── Change report ───────────────────────────────────────────────────
 def get_historical_value(conn, indicator, ref_date, window_days=7):
-    """Find closest available value on or before ref_date, searching up to window_days back."""
     earliest = (ref_date - timedelta(days=window_days)).isoformat()
     row = conn.execute(
         "SELECT value FROM macro_indicators WHERE indicator=? AND date<=? AND date>=? ORDER BY date DESC LIMIT 1",
@@ -277,7 +261,6 @@ def print_report(conn):
 
             print(f"  {ind:<25}{val_str:>12}{changes['Day']:>9}{changes['Week']:>9}{changes['Month']:>9}{changes['Quarter']:>9}")
 
-    # Summary stats
     total = conn.execute("SELECT COUNT(DISTINCT indicator) FROM macro_indicators").fetchone()[0]
     points = conn.execute("SELECT COUNT(*) FROM macro_indicators").fetchone()[0]
     earliest = conn.execute("SELECT MIN(date) FROM macro_indicators").fetchone()[0]
@@ -289,16 +272,7 @@ def print_report(conn):
 def main():
     start_time = time.time()
     conn = get_db()
-
-    # Ensure table exists (in case init_db.py wasn't run)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS macro_indicators (
-            indicator TEXT NOT NULL, series_id TEXT, date TEXT NOT NULL,
-            value REAL, source TEXT NOT NULL,
-            collected_at TEXT DEFAULT (datetime('now')),
-            PRIMARY KEY (indicator, date)
-        )
-    """)
+    ensure_schema(conn)
 
     print("=== FRED Economic Indicators ===")
     fred_n = collect_fred(conn)
@@ -312,7 +286,6 @@ def main():
     duration = time.time() - start_time
     total_n = fred_n + yf_n + fg_n
 
-    # Log the run
     conn.execute(
         "INSERT INTO collection_log(collector,status,records_added,duration_sec) VALUES(?,?,?,?)",
         ("macro_sentiment", "ok", total_n, round(duration, 1)),
