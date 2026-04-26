@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '0 14 * * 1-5'  # Weekdays at 2:00 PM UTC
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   collect:
