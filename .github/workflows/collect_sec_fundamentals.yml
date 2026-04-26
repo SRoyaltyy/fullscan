@@ -2,7 +2,7 @@ name: Collect SEC Fundamentals
 
 on:
   schedule:
-    - cron: '0 11 * * 0'   # Every Sunday at 11:00 AM UTC (1 hour after profiles)
+    - cron: '0 11 * * 0'   # Every Sunday at 11:00 AM UTC
   workflow_dispatch:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests psycopg2-binary pandas edgartools python-dotenv
+        run: pip install -r requirements.txt
 
       - name: Run SEC fundamentals collector
         env:
