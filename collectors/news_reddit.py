@@ -3,21 +3,23 @@ Collector: Reddit
 Sources: r/stocks, r/valueinvesting, r/investing, r/wallstreetbets, etc.
 Schedule: Every hour
 Populates: news table
-
-Uses PRAW (Python Reddit API Wrapper) to pull hot/top posts.
-Reddit's API rate limit is 100 requests/minute with OAuth — we use far less.
 """
 
-import praw
 import os
+import sys
 from datetime import datetime, timezone
-from db.db_utils import get_db, ensure_schema
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+import praw
+from db.connection import get_connection
 
 CLIENT_ID = os.environ.get("REDDIT_CLIENT_ID", "")
 CLIENT_SECRET = os.environ.get("REDDIT_CLIENT_SECRET", "")
 
 SUBREDDITS = [
-    ("stocks", 30),             # (subreddit_name, num_posts_to_fetch)
+    ("stocks", 30),
     ("valueinvesting", 25),
     ("investing", 25),
     ("wallstreetbets", 30),
@@ -42,9 +44,8 @@ def collect():
         user_agent="StockCatalystEngine/1.0 (by u/your_username)"
     )
 
-    db = get_db()
-    ensure_schema(db)
-    cursor = db.cursor()
+    conn = get_connection()
+    cur = conn.cursor()
 
     total_new = 0
 
@@ -57,14 +58,12 @@ def collect():
                 url = f"https://reddit.com{post.permalink}"
                 title = (post.title or "").strip()
 
-                # Build a useful summary: score, comment count, and post text
                 selftext = (post.selftext or "")[:800]
                 summary = (
                     f"[Score: {post.score} | Comments: {post.num_comments}] "
                     f"{selftext}"
                 )[:1000]
 
-                # Convert Unix timestamp to ISO format
                 pub_dt = datetime.fromtimestamp(
                     post.created_utc, tz=timezone.utc
                 ).isoformat()
@@ -72,23 +71,32 @@ def collect():
                 if not title:
                     continue
 
-                cursor.execute("""
-                    INSERT OR IGNORE INTO news
-                        (source, title, url, summary, published_at)
-                    VALUES (?, ?, ?, ?, ?)
+                cur.execute("""
+                    INSERT INTO news (source, title, url, summary, published_at)
+                    VALUES (%s, %s, %s, %s, %s)
+                    ON CONFLICT (url) DO NOTHING
                 """, (f"reddit_r/{sub_name}", title, url, summary, pub_dt))
 
-                if cursor.rowcount > 0:
+                if cur.rowcount > 0:
                     new_count += 1
 
             total_new += new_count
             print(f"  r/{sub_name}: {new_count} new posts")
 
         except Exception as e:
+            conn.rollback()
             print(f"  [ERROR] r/{sub_name}: {e}")
 
-    db.commit()
-    db.close()
+    conn.commit()
+
+    cur.execute(
+        "INSERT INTO collection_log(collector, status, records_added) VALUES(%s,%s,%s)",
+        ("news_reddit", "ok", total_new),
+    )
+    conn.commit()
+
+    cur.close()
+    conn.close()
     print(f"[reddit] Done. {total_new} new posts total.")
 
 
