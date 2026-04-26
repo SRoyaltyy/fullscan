@@ -28,6 +28,8 @@ FINVIZ_PASSWORD = os.environ.get("FINVIZ_PASSWORD", "")
 FINVIZ_LOGIN_URL = "https://finviz.com/login_submit.ashx"
 FINVIZ_EXPORT_URL = "https://elite.finviz.com/export.ashx"
 
+REQUEST_TIMEOUT = 30  # seconds — never hang forever
+
 VIEWS = {
     111: "Overview",
     121: "Valuation",
@@ -99,38 +101,59 @@ def parse_value(val, col_name):
 # ── Mode 1: Authenticated CSV export ───────────────────────────────
 def try_elite_export():
     if not FINVIZ_EMAIL or not FINVIZ_PASSWORD:
+        print("  No FINVIZ_EMAIL/PASSWORD set — skipping Elite export.", flush=True)
         return None
 
-    print("  Attempting Finviz Elite login...")
+    print("  Attempting Finviz Elite login...", flush=True)
     session = requests.Session()
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
     })
 
-    session.post(FINVIZ_LOGIN_URL, data={
-        "email": FINVIZ_EMAIL,
-        "password": FINVIZ_PASSWORD,
-    }, allow_redirects=True)
-
-    test = session.get(f"{FINVIZ_EXPORT_URL}?v=111", stream=True)
-    first_bytes = test.content[:200].decode("utf-8", errors="ignore")
-    if first_bytes.strip().startswith("<!") or test.status_code != 200:
-        print("  Login may have failed (got HTML instead of CSV).")
+    try:
+        login_resp = session.post(FINVIZ_LOGIN_URL, data={
+            "email": FINVIZ_EMAIL,
+            "password": FINVIZ_PASSWORD,
+        }, allow_redirects=True, timeout=REQUEST_TIMEOUT)
+        print(f"  Login response: {login_resp.status_code}", flush=True)
+    except requests.exceptions.Timeout:
+        print("  Login request timed out.", flush=True)
+        return None
+    except requests.exceptions.RequestException as e:
+        print(f"  Login request failed: {e}", flush=True)
         return None
 
-    print("  Login OK. Downloading views...")
+    try:
+        test = session.get(f"{FINVIZ_EXPORT_URL}?v=111", timeout=REQUEST_TIMEOUT)
+        first_bytes = test.content[:200].decode("utf-8", errors="ignore")
+        if first_bytes.strip().startswith("<!") or test.status_code != 200:
+            print(f"  Login failed (status={test.status_code}, got HTML instead of CSV).", flush=True)
+            return None
+    except requests.exceptions.Timeout:
+        print("  Test export request timed out.", flush=True)
+        return None
+    except requests.exceptions.RequestException as e:
+        print(f"  Test export failed: {e}", flush=True)
+        return None
+
+    print("  Login OK. Downloading views...", flush=True)
     dfs = []
     for view_id, view_name in VIEWS.items():
-        r = session.get(f"{FINVIZ_EXPORT_URL}?v={view_id}")
-        if r.status_code != 200 or r.text.strip().startswith("<!"):
-            print(f"    {view_name} (v={view_id}): SKIP — non-CSV response")
-            continue
-        df = pd.read_csv(StringIO(r.text))
-        if "No." in df.columns:
-            df = df.drop(columns=["No."])
-        print(f"    {view_name} (v={view_id}): {len(df)} stocks, {len(df.columns)} cols")
-        dfs.append(df)
-        time.sleep(1)
+        try:
+            r = session.get(f"{FINVIZ_EXPORT_URL}?v={view_id}", timeout=REQUEST_TIMEOUT)
+            if r.status_code != 200 or r.text.strip().startswith("<!"):
+                print(f"    {view_name} (v={view_id}): SKIP — non-CSV response", flush=True)
+                continue
+            df = pd.read_csv(StringIO(r.text))
+            if "No." in df.columns:
+                df = df.drop(columns=["No."])
+            print(f"    {view_name} (v={view_id}): {len(df)} stocks, {len(df.columns)} cols", flush=True)
+            dfs.append(df)
+            time.sleep(1)
+        except requests.exceptions.Timeout:
+            print(f"    {view_name} (v={view_id}): SKIP — timed out", flush=True)
+        except Exception as e:
+            print(f"    {view_name} (v={view_id}): SKIP — {e}", flush=True)
 
     if not dfs:
         return None
@@ -148,7 +171,7 @@ def try_manual_csv():
     manual_path = EXPORTS_DIR / "finviz_latest.csv"
     if not manual_path.exists():
         return None
-    print(f"  Reading manual CSV: {manual_path}")
+    print(f"  Reading manual CSV: {manual_path}", flush=True)
     df = pd.read_csv(manual_path)
     if "No." in df.columns:
         df = df.drop(columns=["No."])
@@ -163,7 +186,7 @@ def store(conn, cur, df, snapshot_date):
             available[finviz_col] = sql_col
 
     if "Ticker" not in df.columns and "ticker" not in df.columns:
-        print("  ERROR: no Ticker column found in data")
+        print("  ERROR: no Ticker column found in data", flush=True)
         return 0
 
     cur.execute("TRUNCATE company_financials")
@@ -190,7 +213,7 @@ def store(conn, cur, df, snapshot_date):
             count += 1
         except Exception as e:
             conn.rollback()
-            print(f"  Row error ({values.get('ticker')}): {e}")
+            print(f"  Row error ({values.get('ticker')}): {e}", flush=True)
 
     conn.commit()
     return count
@@ -200,32 +223,42 @@ def main():
     start_time = time.time()
     EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
+    print("=== Finviz Financial Data Collector ===", flush=True)
+
     conn = get_connection()
     cur = conn.cursor()
 
     snapshot_date = datetime.now().strftime("%Y-%m-%d")
     df = None
 
-    print("=== Finviz Elite CSV Export ===")
+    print("\n--- Mode 1: Elite CSV Export ---", flush=True)
     df = try_elite_export()
 
     if df is None:
-        print("\n=== Checking for manual CSV ===")
+        print("\n--- Mode 2: Manual CSV ---", flush=True)
         df = try_manual_csv()
 
     if df is None:
-        print("\nNo data source available. Options:")
-        print("  1. Set FINVIZ_EMAIL + FINVIZ_PASSWORD env vars for automated export")
-        print("  2. Save CSV from elite.finviz.com/screener → data/exports/finviz_latest.csv")
+        print("\nNo data source available. Options:", flush=True)
+        print("  1. Set FINVIZ_EMAIL + FINVIZ_PASSWORD env vars for automated export", flush=True)
+        print("  2. Save CSV from elite.finviz.com/screener → data/exports/finviz_latest.csv", flush=True)
+
+        duration = time.time() - start_time
+        cur.execute(
+            "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
+            ("finviz_financials", "skipped", 0, round(duration, 1)),
+        )
+        conn.commit()
         cur.close()
         conn.close()
-        sys.exit(1)
+        print(f"\n  Finished in {duration:.1f}s (no data collected)", flush=True)
+        return
 
-    print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns")
+    print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns", flush=True)
 
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
     df.to_csv(archive_path, index=False)
-    print(f"  Archived to {archive_path}")
+    print(f"  Archived to {archive_path}", flush=True)
 
     count = store(conn, cur, df, snapshot_date)
     duration = time.time() - start_time
@@ -240,12 +273,12 @@ def main():
         "SELECT sector, COUNT(*) FROM company_financials GROUP BY sector ORDER BY COUNT(*) DESC LIMIT 10"
     )
     sectors = cur.fetchall()
-    print(f"\n  Stored {count} stocks")
-    print(f"  Top sectors:")
+    print(f"\n  Stored {count} stocks", flush=True)
+    print(f"  Top sectors:", flush=True)
     for s, c in sectors:
-        print(f"    {s or 'N/A':<30} {c:>5}")
+        print(f"    {s or 'N/A':<30} {c:>5}", flush=True)
 
-    print(f"\n  Done in {duration:.1f}s")
+    print(f"\n  Done in {duration:.1f}s", flush=True)
     cur.close()
     conn.close()
 
