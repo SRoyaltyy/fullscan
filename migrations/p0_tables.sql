@@ -1,6 +1,15 @@
 -- ============================================================
--- P0 TABLES: Company Profiles, Financials, Filings, Insider Trades
+-- P0 TABLES: Ticker Master, Company Profiles, Financials,
+--            Filings, Insider Trades
 -- ============================================================
+
+-- 0. Tracked Ticker List (seed + manually curated)
+CREATE TABLE IF NOT EXISTS ticker_master (
+    ticker          VARCHAR(16) PRIMARY KEY,
+    company_name    TEXT,
+    is_active       BOOLEAN DEFAULT TRUE,
+    added_at        TIMESTAMPTZ DEFAULT NOW()
+);
 
 -- 1. Company Profiles (from FMP)
 CREATE TABLE IF NOT EXISTS company_profiles (
@@ -118,3 +127,27 @@ CREATE INDEX IF NOT EXISTS idx_insider_ticker ON insider_trades(ticker);
 CREATE INDEX IF NOT EXISTS idx_insider_date ON insider_trades(filing_date DESC);
 CREATE INDEX IF NOT EXISTS idx_insider_owner ON insider_trades(owner_name);
 CREATE INDEX IF NOT EXISTS idx_profiles_ticker ON company_profiles(ticker);
+
+-- SEED ticker_master with initial watchlist
+INSERT INTO ticker_master (ticker, company_name) VALUES
+    ('AAPL',  'Apple Inc.'),
+    ('MSFT',  'Microsoft Corporation'),
+    ('GOOGL', 'Alphabet Inc.'),
+    ('AMZN',  'Amazon.com Inc.'),
+    ('NVDA',  'NVIDIA Corporation'),
+    ('META',  'Meta Platforms Inc.'),
+    ('TSLA',  'Tesla Inc.'),
+    ('JPM',   'JPMorgan Chase & Co.'),
+    ('V',     'Visa Inc.'),
+    ('UNH',   'UnitedHealth Group Inc.'),
+    ('JNJ',   'Johnson & Johnson'),
+    ('WMT',   'Walmart Inc.'),
+    ('MA',    'Mastercard Inc.'),
+    ('PG',    'Procter & Gamble Co.'),
+    ('HD',    'Home Depot Inc.'),
+    ('XOM',   'Exxon Mobil Corporation'),
+    ('BAC',   'Bank of America Corp.'),
+    ('COST',  'Costco Wholesale Corp.'),
+    ('ABBV',  'AbbVie Inc.'),
+    ('CRM',   'Salesforce Inc.')
+ON CONFLICT (ticker) DO NOTHING;
