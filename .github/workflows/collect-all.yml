@@ -1,0 +1,34 @@
+name: "Collect: ALL"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 14 * * 1-5"   # Weekdays 2 PM UTC
+
+jobs:
+  collect-all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run all collectors
+        env:
+          DATABASE_URL:         ${{ secrets.DATABASE_URL }}
+          FRED_API_KEY:         ${{ secrets.FRED_API_KEY }}
+          NEWSAPI_KEY:          ${{ secrets.NEWSAPI_KEY }}
+          REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          EDGAR_IDENTITY:       ${{ secrets.EDGAR_IDENTITY }}
+          FMP_API_KEY:          ${{ secrets.FMP_API_KEY }}
+          FINVIZ_EMAIL:         ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD:      ${{ secrets.FINVIZ_PASSWORD }}
+        run: python scripts/run_all.py
