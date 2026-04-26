@@ -2,12 +2,8 @@ name: "Collect: RSS News"
 
 on:
   schedule:
-    # Every 20 minutes — GitHub may skip some, but most will land
     - cron: "*/20 * * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   collect:
@@ -15,32 +11,18 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run RSS collector (with retry)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           for attempt in 1 2 3; do
             echo "Attempt $attempt..."
-            python collectors/rss_news.py && break
+            python -m collectors.rss_news && break
             echo "Failed, retrying in 15s..."
             sleep 15
-          done
-
-      - name: Commit updated DB
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/pipeline.db
-          git diff --cached --quiet && echo "No new articles" && exit 0
-          git commit -m "📰 RSS news update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          for attempt in 1 2 3; do
-            git pull --rebase origin main && git push && break
-            echo "Push failed, retrying..."
-            sleep 5
           done
