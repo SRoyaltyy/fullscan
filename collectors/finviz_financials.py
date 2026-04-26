@@ -2,14 +2,9 @@
 """
 Finviz Elite Financial Data Collector
 
-Three modes (tried in order):
+Two modes (tried in order):
   1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
   2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
-  3. (no fallback — modes 1 or 2 must succeed)
-
-NOTE ON ToS: Finviz prohibits automated scraping. Mode 1 automates what you'd
-do manually with your paid Elite account. Review their Terms before enabling.
-If you're uncomfortable with Mode 1, save the CSV manually (Mode 2).
 """
 
 import os
@@ -19,13 +14,12 @@ from datetime import datetime
 from io import StringIO
 from pathlib import Path
 
-# Allow running as module or script
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
 import requests
 
-from db.db_utils import get_db, ensure_schema
+from db.connection import get_connection
 
 EXPORTS_DIR = Path(__file__).parent.parent / "data" / "exports"
 FINVIZ_EMAIL = os.environ.get("FINVIZ_EMAIL", "")
@@ -162,7 +156,7 @@ def try_manual_csv():
 
 
 # ── Store in DB ─────────────────────────────────────────────────────
-def store(conn, df, snapshot_date):
+def store(conn, cur, df, snapshot_date):
     available = {}
     for finviz_col, sql_col in COLUMN_MAP.items():
         if finviz_col in df.columns:
@@ -172,7 +166,7 @@ def store(conn, df, snapshot_date):
         print("  ERROR: no Ticker column found in data")
         return 0
 
-    conn.execute("DELETE FROM company_financials")
+    cur.execute("TRUNCATE company_financials")
 
     count = 0
     for _, row in df.iterrows():
@@ -183,10 +177,20 @@ def store(conn, df, snapshot_date):
         if not values.get("ticker"):
             continue
 
-        cols = ", ".join(values.keys())
-        placeholders = ", ".join(["?"] * len(values))
-        conn.execute(f"INSERT OR REPLACE INTO company_financials ({cols}) VALUES ({placeholders})", list(values.values()))
-        count += 1
+        cols_list = list(values.keys())
+        cols = ", ".join(cols_list)
+        placeholders = ", ".join(["%s"] * len(cols_list))
+
+        try:
+            cur.execute(
+                f"INSERT INTO company_financials ({cols}) VALUES ({placeholders}) "
+                f"ON CONFLICT (ticker) DO NOTHING",
+                list(values.values()),
+            )
+            count += 1
+        except Exception as e:
+            conn.rollback()
+            print(f"  Row error ({values.get('ticker')}): {e}")
 
     conn.commit()
     return count
@@ -196,8 +200,8 @@ def main():
     start_time = time.time()
     EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    conn = get_db()
-    ensure_schema(conn)
+    conn = get_connection()
+    cur = conn.cursor()
 
     snapshot_date = datetime.now().strftime("%Y-%m-%d")
     df = None
@@ -213,6 +217,7 @@ def main():
         print("\nNo data source available. Options:")
         print("  1. Set FINVIZ_EMAIL + FINVIZ_PASSWORD env vars for automated export")
         print("  2. Save CSV from elite.finviz.com/screener → data/exports/finviz_latest.csv")
+        cur.close()
         conn.close()
         sys.exit(1)
 
@@ -222,22 +227,26 @@ def main():
     df.to_csv(archive_path, index=False)
     print(f"  Archived to {archive_path}")
 
-    count = store(conn, df, snapshot_date)
+    count = store(conn, cur, df, snapshot_date)
     duration = time.time() - start_time
 
-    conn.execute(
-        "INSERT INTO collection_log(collector,status,records_added,duration_sec) VALUES(?,?,?,?)",
+    cur.execute(
+        "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
         ("finviz_financials", "ok", count, round(duration, 1)),
     )
     conn.commit()
 
-    sectors = conn.execute("SELECT sector, COUNT(*) FROM company_financials GROUP BY sector ORDER BY COUNT(*) DESC LIMIT 10").fetchall()
+    cur.execute(
+        "SELECT sector, COUNT(*) FROM company_financials GROUP BY sector ORDER BY COUNT(*) DESC LIMIT 10"
+    )
+    sectors = cur.fetchall()
     print(f"\n  Stored {count} stocks")
     print(f"  Top sectors:")
     for s, c in sectors:
         print(f"    {s or 'N/A':<30} {c:>5}")
 
     print(f"\n  Done in {duration:.1f}s")
+    cur.close()
     conn.close()
 
 
