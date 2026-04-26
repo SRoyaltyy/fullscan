@@ -6,29 +6,46 @@ on:
     - cron: "0 14 * * 1-5"   # Weekdays 2 PM UTC
 
 jobs:
-  collect-all:
-    runs-on: ubuntu-latest
-    timeout-minutes: 150
+  finviz:
+    uses: ./.github/workflows/collect-finviz.yml
+    secrets: inherit
 
-    steps:
-      - uses: actions/checkout@v4
+  macro-fred:
+    uses: ./.github/workflows/collect-macro-fred.yml
+    secrets: inherit
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+  macro-sentiment:
+    uses: ./.github/workflows/collect-macro-sentiment.yml
+    secrets: inherit
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+  market-yfinance:
+    uses: ./.github/workflows/collect-market-yfinance.yml
+    secrets: inherit
 
-      - name: Run all collectors
-        env:
-          DATABASE_URL:         ${{ secrets.DATABASE_URL }}
-          FRED_API_KEY:         ${{ secrets.FRED_API_KEY }}
-          NEWSAPI_KEY:          ${{ secrets.NEWSAPI_KEY }}
-          REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          EDGAR_IDENTITY:       ${{ secrets.EDGAR_IDENTITY }}
-          FMP_API_KEY:          ${{ secrets.FMP_API_KEY }}
-          FINVIZ_EMAIL:         ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD:      ${{ secrets.FINVIZ_PASSWORD }}
-        run: python scripts/run_all.py
+  news-newsapi:
+    uses: ./.github/workflows/collect-news-newsapi.yml
+    secrets: inherit
+
+  news-reddit:
+    uses: ./.github/workflows/collect-news-reddit.yml
+    secrets: inherit
+
+  news-rss:
+    uses: ./.github/workflows/collect-news-rss.yml
+    secrets: inherit
+
+  sec-filings:
+    uses: ./.github/workflows/collect-sec-filings.yml
+    secrets: inherit
+
+  tickers:
+    uses: ./.github/workflows/collect-tickers.yml
+    secrets: inherit
+
+  company-profiles:
+    uses: ./.github/workflows/collect_company_profiles.yml
+    secrets: inherit
+
+  sec-fundamentals:
+    uses: ./.github/workflows/collect_sec_fundamentals.yml
+    secrets: inherit
