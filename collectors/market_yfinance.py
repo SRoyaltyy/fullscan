@@ -3,15 +3,17 @@ Collector: Market Data via yfinance
 Sources: Commodity futures, major indices, currency pairs
 Schedule: Every 4 hours
 Populates: commodity_prices table
-
-yfinance is an unofficial Yahoo Finance wrapper — no API key needed.
-Be aware it can break if Yahoo changes their page structure.
 """
 
-import yfinance as yf
-from db.db_utils import get_db, ensure_schema
+import sys
+import time
+from pathlib import Path
 
-# ── Commodities (futures) ─────────────────────────────────────
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+import yfinance as yf
+from db.connection import get_connection
+
 COMMODITIES = {
     "CL=F":     "Crude Oil WTI Futures",
     "BZ=F":     "Brent Crude Oil Futures",
@@ -32,7 +34,6 @@ COMMODITIES = {
     "LBS=F":    "Lumber Futures",
 }
 
-# ── Major indices ──────────────────────────────────────────────
 INDICES = {
     "^GSPC":    "S&P 500",
     "^DJI":     "Dow Jones Industrial Average",
@@ -43,7 +44,6 @@ INDICES = {
     "^TYX":     "30-Year Treasury Yield",
 }
 
-# ── Currency & Dollar ──────────────────────────────────────────
 CURRENCIES = {
     "DX-Y.NYB":    "US Dollar Index (DXY)",
     "EURUSD=X":    "EUR/USD",
@@ -54,11 +54,11 @@ CURRENCIES = {
 
 
 def collect():
+    start_time = time.time()
     print("[yfinance] Collecting commodity, index, and currency data...")
 
-    db = get_db()
-    ensure_schema(db)
-    cursor = db.cursor()
+    conn = get_connection()
+    cur = conn.cursor()
 
     all_symbols = {**COMMODITIES, **INDICES, **CURRENCIES}
     total_points = 0
@@ -67,7 +67,6 @@ def collect():
     for symbol, name in all_symbols.items():
         try:
             ticker = yf.Ticker(symbol)
-            # Pull last 5 trading days to catch any gaps
             hist = ticker.history(period="5d")
 
             if hist.empty:
@@ -78,17 +77,17 @@ def collect():
             for date_idx, row in hist.iterrows():
                 date_str = date_idx.strftime("%Y-%m-%d")
 
-                cursor.execute("""
+                cur.execute("""
                     INSERT INTO commodity_prices
                         (symbol, name, date, open, high, low, close, volume)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                    ON CONFLICT(symbol, date) DO UPDATE SET
-                        open = excluded.open,
-                        high = excluded.high,
-                        low = excluded.low,
-                        close = excluded.close,
-                        volume = excluded.volume,
-                        updated_at = CURRENT_TIMESTAMP
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (symbol, date) DO UPDATE SET
+                        open = EXCLUDED.open,
+                        high = EXCLUDED.high,
+                        low = EXCLUDED.low,
+                        close = EXCLUDED.close,
+                        volume = EXCLUDED.volume,
+                        updated_at = NOW()
                 """, (
                     symbol, name, date_str,
                     round(float(row["Open"]), 4) if row["Open"] else None,
@@ -104,11 +103,21 @@ def collect():
             print(f"  {symbol:12s} ({name:35s}): close={latest['Close']:.2f}  ({count} pts)")
 
         except Exception as e:
+            conn.rollback()
             print(f"  [ERROR] {symbol} ({name}): {e}")
             errors += 1
 
-    db.commit()
-    db.close()
+    conn.commit()
+
+    duration = time.time() - start_time
+    cur.execute(
+        "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
+        ("market_yfinance", "ok", total_points, round(duration, 1)),
+    )
+    conn.commit()
+
+    cur.close()
+    conn.close()
     print(f"[yfinance] Done. {total_points} price points updated, {errors} errors.")
 
 
