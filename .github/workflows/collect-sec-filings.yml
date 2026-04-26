@@ -2,7 +2,7 @@ name: Collect SEC Filings & Insider Trades
 
 on:
   schedule:
-    - cron: '0 14 * * 1-5'  # Weekdays at 2:00 PM UTC (after market hours)
+    - cron: '0 14 * * 1-5'  # Weekdays at 2:00 PM UTC
   workflow_dispatch:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests psycopg2-binary pandas edgartools python-dotenv
+        run: pip install -r requirements.txt
 
       - name: Run SEC filings collector
         env:
