@@ -5,7 +5,7 @@ Finviz Elite Financial Data Collector
 Three modes (tried in order):
   1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
   2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
-  3. finvizfinance library — slow public scrape fallback, no auth needed
+  3. (no fallback — modes 1 or 2 must succeed)
 
 NOTE ON ToS: Finviz prohibits automated scraping. Mode 1 automates what you'd
 do manually with your paid Elite account. Review their Terms before enabling.
@@ -14,17 +14,19 @@ If you're uncomfortable with Mode 1, save the CSV manually (Mode 2).
 
 import os
 import sys
-import csv
-import sqlite3
 import time
 from datetime import datetime
 from io import StringIO
 from pathlib import Path
 
+# Allow running as module or script
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import pandas as pd
 import requests
 
-DB_PATH = os.environ.get("DB_PATH", str(Path(__file__).parent.parent / "data" / "fullscan.db"))
+from db.db_utils import get_db, ensure_schema
+
 EXPORTS_DIR = Path(__file__).parent.parent / "data" / "exports"
 FINVIZ_EMAIL = os.environ.get("FINVIZ_EMAIL", "")
 FINVIZ_PASSWORD = os.environ.get("FINVIZ_PASSWORD", "")
@@ -32,7 +34,6 @@ FINVIZ_PASSWORD = os.environ.get("FINVIZ_PASSWORD", "")
 FINVIZ_LOGIN_URL = "https://finviz.com/login_submit.ashx"
 FINVIZ_EXPORT_URL = "https://elite.finviz.com/export.ashx"
 
-# Each view gives different columns; we merge on Ticker
 VIEWS = {
     111: "Overview",
     121: "Valuation",
@@ -42,7 +43,6 @@ VIEWS = {
     161: "Technical",
 }
 
-# Finviz CSV header → SQL column name
 COLUMN_MAP = {
     "Ticker": "ticker", "Company": "company", "Sector": "sector",
     "Industry": "industry", "Country": "country", "Market Cap": "market_cap",
@@ -76,31 +76,26 @@ COLUMN_MAP = {
     "Beta": "beta", "ATR": "atr",
 }
 
-# SQL columns that should remain text (not parsed as numbers)
 TEXT_COLS = {"ticker", "company", "sector", "industry", "country", "earnings_date", "ipo_date", "snapshot_date"}
 
 
 def parse_value(val, col_name):
-    """Convert Finviz display values to Python types."""
     if col_name in TEXT_COLS:
         return str(val).strip() if pd.notna(val) and str(val).strip() not in ("-", "") else None
     if pd.isna(val) or str(val).strip() in ("-", ""):
         return None
     s = str(val).strip()
-    # Percentage
     if s.endswith("%"):
         try:
             return float(s[:-1])
         except ValueError:
             return None
-    # Suffixed numbers
     multipliers = {"B": 1e9, "M": 1e6, "K": 1e3}
     if s[-1] in multipliers:
         try:
             return float(s[:-1]) * multipliers[s[-1]]
         except ValueError:
             return None
-    # Plain number
     try:
         return float(s.replace(",", ""))
     except ValueError:
@@ -118,18 +113,15 @@ def try_elite_export():
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
     })
 
-    # Login
-    resp = session.post(FINVIZ_LOGIN_URL, data={
+    session.post(FINVIZ_LOGIN_URL, data={
         "email": FINVIZ_EMAIL,
         "password": FINVIZ_PASSWORD,
     }, allow_redirects=True)
 
-    # Quick check — try fetching the export page
     test = session.get(f"{FINVIZ_EXPORT_URL}?v=111", stream=True)
     first_bytes = test.content[:200].decode("utf-8", errors="ignore")
     if first_bytes.strip().startswith("<!") or test.status_code != 200:
         print("  Login may have failed (got HTML instead of CSV).")
-        print("  TIP: open devtools → Network → export a CSV manually, and check the exact URL + cookies.")
         return None
 
     print("  Login OK. Downloading views...")
@@ -140,7 +132,6 @@ def try_elite_export():
             print(f"    {view_name} (v={view_id}): SKIP — non-CSV response")
             continue
         df = pd.read_csv(StringIO(r.text))
-        # Drop the row-number column if present
         if "No." in df.columns:
             df = df.drop(columns=["No."])
         print(f"    {view_name} (v={view_id}): {len(df)} stocks, {len(df.columns)} cols")
@@ -150,7 +141,6 @@ def try_elite_export():
     if not dfs:
         return None
 
-    # Merge all on Ticker
     merged = dfs[0]
     for df in dfs[1:]:
         new_cols = ["Ticker"] + [c for c in df.columns if c not in merged.columns]
@@ -173,7 +163,6 @@ def try_manual_csv():
 
 # ── Store in DB ─────────────────────────────────────────────────────
 def store(conn, df, snapshot_date):
-    # Determine which SQL columns we can populate from this DataFrame
     available = {}
     for finviz_col, sql_col in COLUMN_MAP.items():
         if finviz_col in df.columns:
@@ -206,16 +195,16 @@ def store(conn, df, snapshot_date):
 def main():
     start_time = time.time()
     EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    snapshot_date = datetime.now().strftime("%Y-%m-%d")
 
+    conn = get_db()
+    ensure_schema(conn)
+
+    snapshot_date = datetime.now().strftime("%Y-%m-%d")
     df = None
 
-    # Mode 1
     print("=== Finviz Elite CSV Export ===")
     df = try_elite_export()
 
-    # Mode 2
     if df is None:
         print("\n=== Checking for manual CSV ===")
         df = try_manual_csv()
@@ -229,12 +218,10 @@ def main():
 
     print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns")
 
-    # Archive raw CSV
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
     df.to_csv(archive_path, index=False)
     print(f"  Archived to {archive_path}")
 
-    # Store
     count = store(conn, df, snapshot_date)
     duration = time.time() - start_time
 
@@ -244,7 +231,6 @@ def main():
     )
     conn.commit()
 
-    # Quick summary
     sectors = conn.execute("SELECT sector, COUNT(*) FROM company_financials GROUP BY sector ORDER BY COUNT(*) DESC LIMIT 10").fetchall()
     print(f"\n  Stored {count} stocks")
     print(f"  Top sectors:")
