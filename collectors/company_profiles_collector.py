@@ -16,7 +16,7 @@ from datetime import datetime
 
 # ── CONFIG ────────────────────────────────────────────
 FMP_API_KEY     = os.getenv("FMP_API_KEY")
-FMP_BASE_URL    = "https://financialmodelingprep.com/api/v3"
+FMP_BASE_URL    = "https://financialmodelingprep.com/stable"
 DATABASE_URL    = os.getenv("DATABASE_URL")
 
 RATE_LIMIT_SEC  = 0.5
@@ -83,16 +83,19 @@ def upsert_profile(conn, profile):
 
 # ── FMP API ───────────────────────────────────────────
 def fetch_fmp_profile(ticker):
-    url = f"{FMP_BASE_URL}/profile/{ticker}"
-    params = {"apikey": FMP_API_KEY}
+    url = f"{FMP_BASE_URL}/profile"
+    params = {"symbol": ticker, "apikey": FMP_API_KEY}
     try:
         resp = requests.get(url, params=params, timeout=15)
         resp.raise_for_status()
         data = resp.json()
-        if not data or len(data) == 0:
+        if not data:
             logger.warning(f"  No profile data returned for {ticker}")
             return None
-        return data[0]
+        # Stable endpoint may return a list or a single object
+        if isinstance(data, list):
+            return data[0] if len(data) > 0 else None
+        return data
     except requests.exceptions.RequestException as e:
         logger.error(f"  HTTP error fetching {ticker}: {e}")
         return None
