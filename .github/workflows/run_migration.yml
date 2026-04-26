@@ -1,12 +1,11 @@
-name: Run Database Migration
+name: Run Database Migrations
 
 on:
-  workflow_dispatch:  # Manual trigger only — you click "Run" when ready
+  workflow_dispatch:
 
 jobs:
   migrate:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -16,7 +15,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y postgresql-client
 
-      - name: Run migration
+      - name: Run P0 migration (core tables)
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: psql "$DATABASE_URL" -f migrations/p0_tables.sql
+
+      - name: Run P1 migration (remaining tables)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: psql "$DATABASE_URL" -f migrations/p1_remaining_tables.sql
