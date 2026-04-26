@@ -1,23 +1,22 @@
-name: Run P0 Database Migration
+name: Run Database Migration
 
 on:
-  workflow_dispatch:  # Manual trigger only — you click a button to run it
+  workflow_dispatch:  # Manual trigger only — you click "Run" when ready
 
 jobs:
   migrate:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Install PostgreSQL client
-        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
 
-      - name: Run migration SQL
+      - name: Run migration
         env:
-          PGHOST: ${{ secrets.DB_HOST }}
-          PGPORT: ${{ secrets.DB_PORT }}
-          PGDATABASE: ${{ secrets.DB_NAME }}
-          PGUSER: ${{ secrets.DB_USER }}
-          PGPASSWORD: ${{ secrets.DB_PASSWORD }}
-        run: psql -f migrations/p0_tables.sql
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: psql "$DATABASE_URL" -f migrations/p0_tables.sql
