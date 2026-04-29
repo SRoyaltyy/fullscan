@@ -16,6 +16,8 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: pip install openai requests
+      - name: Install dependencies
+        run: pip install -r requirements.txt  
       - name: Run catalyst analysis
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
