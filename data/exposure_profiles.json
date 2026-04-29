@@ -1,0 +1,9 @@
+{
+  "AAOI": {
+    "sector": "Optical Networking",
+    "debt_load": "medium",
+    "govt_contract_exposure": 0.7,
+    "key_revenue_drivers": ["data centre transceivers", "CATV", "defence optics"],
+    "key_risks": ["China supply chain", "tariffs", "optical component pricing"]
+  }
+}
