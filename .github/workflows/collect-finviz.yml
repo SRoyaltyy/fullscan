@@ -23,3 +23,9 @@ jobs:
           FINVIZ_EMAIL:    ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
         run: python -m collectors.finviz_financials
+      - name: Upload headers for debugging
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: finviz-headers
+          path: data/exports/finviz_headers.txt
