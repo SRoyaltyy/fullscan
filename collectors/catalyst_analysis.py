@@ -15,8 +15,8 @@ from openai import OpenAI
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-MAX_SEARCHES         = 35          # exhaustive but fast
-SEARCH_DELAY         = 0.5         # seconds
+MAX_SEARCHES         = 35
+SEARCH_DELAY         = 0.5
 MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
@@ -99,9 +99,7 @@ You are a forensic financial analyst. Given a raw snapshot of a company's financ
 Output a single block of plain text (no JSON). Keep it under 500 words. Be direct — no fluff, no recap of the prompt."""
 
 # ── Full Catalyst Taxonomy with pre‑defined weights ─────
-# Weights are 1‑10; 10 = strongest possible market‑moving impact.
 CATALYST_WEIGHTS = {
-    # Positive Internal
     "Contract win/expansion": 8,
     "Strategic partnership/alliance": 6,
     "Product launch/FDA approval/regulatory greenlight": 9,
@@ -121,7 +119,6 @@ CATALYST_WEIGHTS = {
     "Supply chain de‑risking (dual sourcing/reshoring)": 5,
     "Patent grant/IP protection": 4,
     "Customer concentration expansion": 5,
-    # Positive External
     "Government policy (tariffs/subsidies/mandates)": 7,
     "Institutional policy (Fed rate cut/QE/stimulus)": 9,
     "Favorable court ruling/patent grant": 8,
@@ -134,10 +131,8 @@ CATALYST_WEIGHTS = {
     "ESG mandate/green subsidy qualification": 4,
     "Currency tailwind": 3,
     "Technical breakout (above key moving averages)": 4,
-    # Positive Market Mechanics
     "Short squeeze": 8,
     "Institutional ownership increase (13F filings)": 6,
-    # Negative Internal
     "Contract loss/non‑renewal/reduction": 8,
     "Partnership dissolution/breakdown": 6,
     "Product delay/failure/rejection/safety recall": 9,
@@ -157,7 +152,6 @@ CATALYST_WEIGHTS = {
     "Supply chain shock (fire/shipping disruption)": 8,
     "Patent litigation loss/IP theft": 7,
     "Customer concentration risk (over‑reliance)": 6,
-    # Negative External
     "Policy reversal/new regulation/tax increase": 7,
     "Rate hike/monetary tightening/liquidity withdrawal": 9,
     "Adverse litigation outcome/patent invalidation/antitrust ruling": 8,
@@ -170,7 +164,6 @@ CATALYST_WEIGHTS = {
     "ESG controversy/exclusion from green funds/carbon tax": 4,
     "Currency headwind (dollar strength for exporters)": 3,
     "Technical breakdown (below support, death cross)": 5,
-    # Negative Market Mechanics
     "Short attack/bear raid (activist short report)": 8,
     "Institutional ownership decline (major holders reducing)": 6,
 }
@@ -232,7 +225,6 @@ Return ONLY the JSON object below. Do NOT add commentary.
       "source_urls": [],
       "confidence": 0‑100
     }}
-    // … every single catalyst from the taxonomy must appear here
   ],
   "catalyst_stack": "4‑sentence narrative with specific dates.",
   "net_signal": "Strong Bullish|Bullish|Neutral|Bearish|Strong Bearish",
@@ -256,6 +248,7 @@ CORRECT EVERY MISCLASSIFICATION:
 6. If debt/equity is rising rapidly or liabilities surged, add a negative catalyst.
 7. Remove any vague language; every event must cite an exact date.
 8. Ensure the catalyst_grid contains EVERY catalyst from the taxonomy, even if only with status "MISS" or "N/A".
+9. The top‑level JSON MUST contain "net_signal" and "conviction" fields. If they are missing, infer them from the catalyst_stack.
 
 Return ONLY the corrected JSON with NO additional commentary.
 """
@@ -312,7 +305,6 @@ def generate_health_check(ticker: str, snapshot: dict) -> str:
 
 # ── Main analysis function ──────────────────────────────
 def analyze_stock(ticker: str, health_check_text: str) -> dict:
-    # Build the system prompt with health check and weights
     weights_str = "\n".join([f"  - {k}: {v}" for k, v in CATALYST_WEIGHTS.items()])
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
         today=TODAY,
@@ -408,6 +400,9 @@ Always compare analyst targets to the CURRENT stock price."""}
         final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
     final_text = final_text.strip()
 
+    # —— DIAGNOSTIC: show raw output before audit ——
+    print("  📝 RAW FINAL OUTPUT (first 800 chars):", final_text[:800])
+
     # Phase 2: Audit
     print("  🧠 Running context audit layer…")
     audit_messages = [
@@ -457,6 +452,30 @@ Always compare analyst targets to the CURRENT stock price."""}
                     "search_queries_used": search_queries_used,
                 }
 
+    # ── Fallback for missing net_signal ──
+    if result.get("net_signal") is None:
+        stack = (result.get("catalyst_stack") or "").lower()
+        if "strong bullish" in stack:
+            result["net_signal"] = "Strong Bullish"
+        elif "bullish" in stack:
+            result["net_signal"] = "Bullish"
+        elif "strong bearish" in stack:
+            result["net_signal"] = "Strong Bearish"
+        elif "bearish" in stack:
+            result["net_signal"] = "Bearish"
+        else:
+            # Count positive vs negative hits
+            positive = sum(1 for c in result.get("catalyst_grid", []) if c.get("type") == "positive" and c.get("status") == "HIT")
+            negative = sum(1 for c in result.get("catalyst_grid", []) if c.get("type") == "negative" and c.get("status") == "HIT")
+            if positive > negative:
+                result["net_signal"] = "Bullish" if positive - negative >= 2 else "Cautiously Bullish"
+            elif negative > positive:
+                result["net_signal"] = "Bearish" if negative - positive >= 2 else "Cautiously Bearish"
+            else:
+                result["net_signal"] = "Neutral"
+        if result.get("conviction") is None:
+            result["conviction"] = 50
+
     result["search_count"] = search_count
     result["search_queries_used"] = search_queries_used
     return result
@@ -483,7 +502,6 @@ if __name__ == "__main__":
 
     # ═══════════════════════════════════════════════════
     # TEST MODE: only BBAI
-    # Remove/comment the next line to restore full watchlist
     # ═══════════════════════════════════════════════════
     tickers = ["BBAI"]
 
@@ -508,7 +526,7 @@ if __name__ == "__main__":
                     cur = conn.cursor()
                 snap = build_health_snapshot(ticker, conn)
                 health_text = generate_health_check(ticker, snap)
-                print(health_text[:300] + "…" if len(health_text) > 300 else health_text)
+                print(health_text)
             except Exception as e:
                 print(f"⚠️  Health check error: {e}")
 
@@ -523,6 +541,9 @@ if __name__ == "__main__":
             print(f"   Catalyst grid: {len(grid)} items")
             for item in grid[:5]:
                 print(f"     [{item.get('type','?')}] {item.get('taxonomy')}: {item.get('status')} (weight {item.get('weight')})")
+            # Print hit count
+            hits = sum(1 for c in grid if c.get("status") == "HIT")
+            print(f"   HIT: {hits}, MISS: {len(grid)-hits}")
 
         if HAS_DB and "error" not in result:
             if conn is None:
@@ -540,7 +561,7 @@ if __name__ == "__main__":
                     raw_json = EXCLUDED.raw_json,
                     search_count = EXCLUDED.search_count
             """, (
-                result["ticker"],
+                result.get("ticker", ticker),
                 result.get("analysis_date", TODAY),
                 result.get("net_signal"),
                 result.get("conviction"),
