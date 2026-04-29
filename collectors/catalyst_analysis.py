@@ -206,32 +206,87 @@ Weights:
 5. FINANCIAL HEALTH: Negative ROE or profit margins → negative catalyst.
 6. TARIFF/GEO: Quantify exposure % and weigh against current policy.
 
-────────────── OUTPUT FORMAT ───────────────────────────
-Return ONLY the JSON object below. Do NOT add commentary.
+    # ── JSON repair ──
+    def robust_parse(text):
+        """Try to parse JSON even if it's mildly damaged or truncated."""
+        # 1. Remove markdown fences
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+        text = text.strip()
 
-{{
-  "ticker": "...",
-  "analysis_date": "{today}",
-  "lookback_start": "{lookback_start}",
-  "current_price": "extracted from search results or health check",
-  "catalyst_grid": [
-    {{
-      "taxonomy": "exact label from the list",
-      "type": "positive|negative",
-      "category": "internal|external|market_mechanic",
-      "status": "HIT|MISS|N/A",
-      "weight": 0‑10,
-      "evidence": "If HIT: exact date & source summary. If MISS: empty string.",
-      "source_urls": [],
-      "confidence": 0‑100
-    }}
-  ],
-  "catalyst_stack": "4‑sentence narrative with specific dates.",
-  "net_signal": "Strong Bullish|Bullish|Neutral|Bearish|Strong Bearish",
-  "conviction": 0‑100,
-  "key_assumption": "Single assumption that, if wrong, flips the call.",
-  "search_queries_used": ["..."]
-}}
+        # 2. Try straight parse
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            pass
+
+        # 3. Remove trailing commas before } or ]
+        cleaned = re.sub(r",\s*}", "}", text)
+        cleaned = re.sub(r",\s*]", "]", cleaned)
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError:
+            pass
+
+        # 4. Try to close any unclosed arrays/objects
+        # Count open brackets
+        open_braces = cleaned.count("{") - cleaned.count("}")
+        open_brackets = cleaned.count("[") - cleaned.count("]")
+        closed = cleaned
+        if open_brackets > 0:
+            closed += "]" * open_brackets
+        if open_braces > 0:
+            closed += "}" * open_braces
+        try:
+            return json.loads(closed)
+        except json.JSONDecodeError:
+            pass
+
+        # 5. Last resort: cut off at the last valid object boundary
+        # Find the last successful "}," or "] and try parsing up to there
+        for match in reversed(list(re.finditer(r'("confidence":\s*\d+\s*})', cleaned))):
+            end_pos = match.end()
+            truncated = cleaned[:end_pos] + "\n    ]\n  }"
+            try:
+                return json.loads(truncated)
+            except json.JSONDecodeError:
+                continue
+
+        # 6. DeepSeek fix (small payload only)
+        try:
+            fix_resp = safe_create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": (
+                        "Return ONLY valid JSON. If the input is truncated, close all open "
+                        "brackets/braces. Use single quotes inside string values, never double quotes."
+                    )},
+                    {"role": "user", "content": f"Fix this JSON:\n\n{cleaned[:20000]}"}
+                ],
+                temperature=0.0,
+                max_tokens=500
+            )
+            fixed2 = fix_resp.choices[0].message.content.strip()
+            if fixed2.startswith("```"):
+                fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
+            return json.loads(fixed2.strip())
+        except Exception:
+            pass
+
+        raise ValueError("All JSON repair strategies failed")
+
+    try:
+        result = robust_parse(final_text)
+    except Exception as e:
+        print(f"  ❌ Robust parse also failed: {e}")
+        print(f"  📄 Broken JSON start: {final_text[:500]}")
+        print(f"  📄 Broken JSON end: {final_text[-500:]}")
+        return {
+            "error": f"JSON parse failed after all repairs: {e}",
+            "raw_preview": final_text[:2000],
+            "search_count": search_count,
+            "search_queries_used": search_queries_used,
+        }
 """
 
 # ── Audit prompt ────────────────────────────────────────
@@ -424,54 +479,86 @@ Always compare analyst targets to the CURRENT stock price."""}
 
     # JSON repair
         # ── JSON repair ──
-    try:
-        result = json.loads(final_text)
-    except json.JSONDecodeError as first_exc:
-        print(f"  ⚠️  Initial JSON parse failed: {first_exc}")
-        print(f"  📄 Faulty JSON (first 2000 chars): {final_text[:2000]}")
-        print(f"  📄 Faulty JSON (last 500 chars): {final_text[-500:]}")
+    def robust_parse(text):
+        """Try to parse JSON even if it's mildly damaged or truncated."""
+        # 1. Remove markdown fences
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+        text = text.strip()
 
-        # 1. Simple clean: trailing commas
-        fixed = re.sub(r",\s*}", "}", final_text)
-        fixed = re.sub(r",\s*]", "]", fixed)
+        # 2. Try straight parse
         try:
-            result = json.loads(fixed)
-            print("  ✅ Fixed with trailing‑comma removal.")
+            return json.loads(text)
         except json.JSONDecodeError:
-            # 2. Ask DeepSeek to fix, but with a size limit
-            repair_payload = fixed[:30000]  # never send more than 30K chars
+            pass
+
+        # 3. Remove trailing commas before } or ]
+        cleaned = re.sub(r",\s*}", "}", text)
+        cleaned = re.sub(r",\s*]", "]", cleaned)
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError:
+            pass
+
+        # 4. Try to close any unclosed arrays/objects
+        # Count open brackets
+        open_braces = cleaned.count("{") - cleaned.count("}")
+        open_brackets = cleaned.count("[") - cleaned.count("]")
+        closed = cleaned
+        if open_brackets > 0:
+            closed += "]" * open_brackets
+        if open_braces > 0:
+            closed += "}" * open_braces
+        try:
+            return json.loads(closed)
+        except json.JSONDecodeError:
+            pass
+
+        # 5. Last resort: cut off at the last valid object boundary
+        # Find the last successful "}," or "] and try parsing up to there
+        for match in reversed(list(re.finditer(r'("confidence":\s*\d+\s*})', cleaned))):
+            end_pos = match.end()
+            truncated = cleaned[:end_pos] + "\n    ]\n  }"
             try:
-                fix_resp = safe_create(
-                    model=MODEL,
-                    messages=[
-                        {"role": "system", "content": (
-                            "Return ONLY valid JSON. If the input is truncated, close all open "
-                            "brackets/braces and add ']' to close the catalyst_grid array "
-                            "and '}' to close the outer object."
-                        )},
-                        {"role": "user", "content": f"Fix this JSON:\n\n{repair_payload}"}
-                    ],
-                    temperature=0.0,
-                    max_tokens=800  # keep the fix attempt small
-                )
-                fixed2 = fix_resp.choices[0].message.content.strip()
-                if fixed2.startswith("```"):
-                    fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
-                result = json.loads(fixed2)
-                print("  ✅ Fixed with DeepSeek repair.")
-            except Exception as repair_exc:
-                print(f"  ❌ DeepSeek repair also failed: {repair_exc}")
-                # Dump the actual broken text to the workflow log so we can debug
-                print("  ╔══════════════════════════════════════╗")
-                print("  ║  BEGIN BROKEN JSON (up to 5K chars) ║")
-                print("  ╚══════════════════════════════════════╝")
-                print(final_text[:5000])
-                return {
-                    "error": f"JSON parse failed after repair: {repair_exc}",
-                    "raw_preview": final_text[:2000],
-                    "search_count": search_count,
-                    "search_queries_used": search_queries_used,
-                }
+                return json.loads(truncated)
+            except json.JSONDecodeError:
+                continue
+
+        # 6. DeepSeek fix (small payload only)
+        try:
+            fix_resp = safe_create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": (
+                        "Return ONLY valid JSON. If the input is truncated, close all open "
+                        "brackets/braces. Use single quotes inside string values, never double quotes."
+                    )},
+                    {"role": "user", "content": f"Fix this JSON:\n\n{cleaned[:20000]}"}
+                ],
+                temperature=0.0,
+                max_tokens=500
+            )
+            fixed2 = fix_resp.choices[0].message.content.strip()
+            if fixed2.startswith("```"):
+                fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
+            return json.loads(fixed2.strip())
+        except Exception:
+            pass
+
+        raise ValueError("All JSON repair strategies failed")
+
+    try:
+        result = robust_parse(final_text)
+    except Exception as e:
+        print(f"  ❌ Robust parse also failed: {e}")
+        print(f"  📄 Broken JSON start: {final_text[:500]}")
+        print(f"  📄 Broken JSON end: {final_text[-500:]}")
+        return {
+            "error": f"JSON parse failed after all repairs: {e}",
+            "raw_preview": final_text[:2000],
+            "search_count": search_count,
+            "search_queries_used": search_queries_used,
+        }
 
     # ── Fallback for missing net_signal ──
     if result.get("net_signal") is None:
