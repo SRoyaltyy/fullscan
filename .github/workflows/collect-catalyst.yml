@@ -22,4 +22,5 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }} 
         run: python -m collectors.catalyst_analysis
