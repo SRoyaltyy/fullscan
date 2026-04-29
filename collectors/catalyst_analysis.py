@@ -176,7 +176,6 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
     search_queries_used = []
 
     def safe_create(**kwargs):
-        """Call the API with up to 3 retries on transient errors."""
         for attempt in range(3):
             try:
                 return client.chat.completions.create(**kwargs)
@@ -198,29 +197,41 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
 
     # ── Execute tool calls until we hit the hard limit ──
     while msg.tool_calls and search_count < MAX_SEARCHES:
-        messages.append(msg)
+        messages.append(msg)          # assistant message with tool_calls
 
+        # Respond to EVERY tool call – even if limit is reached we send a placeholder
         for tc in msg.tool_calls:
             if tc.function.name != "web_search":
+                # unknown tool – still answer with a dummy to satisfy the API
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tc.id,
+                    "content": "TOOL_NOT_SUPPORTED"
+                })
                 continue
-            if search_count >= MAX_SEARCHES:
-                break
 
             args = json.loads(tc.function.arguments)
             query = args.get("query", "")
             cats  = args.get("categories", "general,news")
-            print(f"  🔍 Searching [{search_count+1}/{MAX_SEARCHES}]: {query[:100]}…")
-            result_text = web_search(query, cats)
+
+            if search_count < MAX_SEARCHES:
+                print(f"  🔍 Searching [{search_count+1}/{MAX_SEARCHES}]: {query[:100]}…")
+                result_text = web_search(query, cats)
+                search_queries_used.append(query)
+                search_count += 1
+            else:
+                # over the limit – placeholder to keep the conversation valid
+                result_text = "SEARCH_SKIPPED: Maximum search limit reached."
+                print(f"  ⏭️  Skipping search (limit reached): {query[:80]}…")
+
             messages.append({
                 "role": "tool",
                 "tool_call_id": tc.id,
                 "content": result_text,
             })
-            search_queries_used.append(query)
-            search_count += 1
             time.sleep(SEARCH_DELAY)
 
-        # Stop if we've hit the limit
+        # Don't call API again if we're already at the limit
         if search_count >= MAX_SEARCHES:
             break
 
@@ -233,25 +244,18 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
 
         msg = response.choices[0].message
 
-    # ── Force final answer if we still have unanswered tool_calls ──
+    # ── Force final answer if the model still wants more tools or returned no text ──
     if (msg.tool_calls and search_count >= MAX_SEARCHES) or not (msg.content and msg.content.strip()):
-        # Remove the last assistant message (the orphaned tool_calls one) if it hasn't been fulfilled
-        if messages and messages[-1].get("role") == "assistant" and messages[-1].get("tool_calls"):
-            messages.pop()
-
-        # Add a firm forcing prompt
         messages.append({
             "role": "user",
             "content": (
-                "You have now exhausted all available web searches. "
-                "Based on the search results and the internal data provided above, "
-                "produce the final JSON analysis immediately. "
-                "You MUST output ONLY the JSON object with NO additional commentary. "
-                "Do not ask for more data — use what you have."
+                "You have exhausted all available web searches. "
+                "Based strictly on the search results and previous data, "
+                "produce the final JSON analysis NOW. "
+                "Output ONLY the JSON object, no other text."
             )
         })
         try:
-            # Call WITHOUT tools
             response = safe_create(
                 model=MODEL, messages=messages, temperature=0.2
             )
@@ -271,18 +275,23 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
     try:
         result = json.loads(final_text)
     except json.JSONDecodeError:
+        # Simple repair: trailing commas
+        import re
         fixed = re.sub(r",\s*}", "}", final_text)
         fixed = re.sub(r",\s*]", "]", fixed)
         try:
             result = json.loads(fixed)
         except json.JSONDecodeError:
-            # One‑shot repair via DeepSeek
-            fix_prompt = [
-                {"role": "system", "content": "You are a JSON repair tool. Return ONLY valid JSON."},
-                {"role": "user", "content": f"Fix this JSON:\n\n{final_text}"}
-            ]
+            # DeepSeek repair attempt
             try:
-                fix_resp = safe_create(model=MODEL, messages=fix_prompt, temperature=0.0)
+                fix_resp = safe_create(
+                    model=MODEL,
+                    messages=[
+                        {"role": "system", "content": "Return only valid JSON."},
+                        {"role": "user", "content": f"Fix this JSON:\n\n{final_text}"}
+                    ],
+                    temperature=0.0
+                )
                 fixed2 = fix_resp.choices[0].message.content.strip()
                 if fixed2.startswith("```"):
                     fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
