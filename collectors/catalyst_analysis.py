@@ -423,31 +423,52 @@ Always compare analyst targets to the CURRENT stock price."""}
         print(f"  ⚠️  Audit layer failed: {e}")
 
     # JSON repair
+        # ── JSON repair ──
     try:
         result = json.loads(final_text)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as first_exc:
+        print(f"  ⚠️  Initial JSON parse failed: {first_exc}")
+        print(f"  📄 Faulty JSON (first 2000 chars): {final_text[:2000]}")
+        print(f"  📄 Faulty JSON (last 500 chars): {final_text[-500:]}")
+
+        # 1. Simple clean: trailing commas
         fixed = re.sub(r",\s*}", "}", final_text)
         fixed = re.sub(r",\s*]", "]", fixed)
         try:
             result = json.loads(fixed)
+            print("  ✅ Fixed with trailing‑comma removal.")
         except json.JSONDecodeError:
+            # 2. Ask DeepSeek to fix, but with a size limit
+            repair_payload = fixed[:30000]  # never send more than 30K chars
             try:
                 fix_resp = safe_create(
                     model=MODEL,
                     messages=[
-                        {"role": "system", "content": "Return only valid JSON."},
-                        {"role": "user", "content": f"Fix this JSON:\n\n{final_text}"}
+                        {"role": "system", "content": (
+                            "Return ONLY valid JSON. If the input is truncated, close all open "
+                            "brackets/braces and add ']' to close the catalyst_grid array "
+                            "and '}' to close the outer object."
+                        )},
+                        {"role": "user", "content": f"Fix this JSON:\n\n{repair_payload}"}
                     ],
-                    temperature=0.0
+                    temperature=0.0,
+                    max_tokens=800  # keep the fix attempt small
                 )
                 fixed2 = fix_resp.choices[0].message.content.strip()
                 if fixed2.startswith("```"):
                     fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
                 result = json.loads(fixed2)
-            except Exception:
+                print("  ✅ Fixed with DeepSeek repair.")
+            except Exception as repair_exc:
+                print(f"  ❌ DeepSeek repair also failed: {repair_exc}")
+                # Dump the actual broken text to the workflow log so we can debug
+                print("  ╔══════════════════════════════════════╗")
+                print("  ║  BEGIN BROKEN JSON (up to 5K chars) ║")
+                print("  ╚══════════════════════════════════════╝")
+                print(final_text[:5000])
                 return {
-                    "error": "JSON parse failed after repair",
-                    "raw": final_text,
+                    "error": f"JSON parse failed after repair: {repair_exc}",
+                    "raw_preview": final_text[:2000],
                     "search_count": search_count,
                     "search_queries_used": search_queries_used,
                 }
