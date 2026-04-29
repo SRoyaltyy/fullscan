@@ -87,10 +87,6 @@ client = OpenAI(
 
 # -------------------- MAIN ANALYSIS FUNCTION --------------------
 def analyze_stock(ticker: str, exposure_profile: dict, last_signals: list[str] = None) -> dict:
-    """
-    Run a full catalyst analysis for one stock.
-    DeepSeek decides what to search, then synthesises a structured verdict.
-    """
     system_prompt = """\
 You are an event‑driven equity analyst with a 1‑2 week horizon.
 You have access to a live web search tool.  USE IT — do not guess about recent events.
@@ -127,10 +123,11 @@ Analyse all active catalysts for {ticker} using web search.  Be exhaustive.  Cit
     ]
 
     search_count = 0
+    search_queries_used = []
 
-    # -------- Round 1: Model decides what to search --------
+    # -------- Round 1 with tools --------
     response = client.chat.completions.create(
-        model="deepseek-v4-flash",   # or deepseek-chat
+        model="deepseek-chat",    # or "deepseek-v4-flash"
         messages=messages,
         tools=TOOLS,
         tool_choice="auto",
@@ -138,7 +135,7 @@ Analyse all active catalysts for {ticker} using web search.  Be exhaustive.  Cit
     )
     msg = response.choices[0].message
 
-    # -------- Execute searches if requested --------
+    # -------- Execute tools loop --------
     while msg.tool_calls and search_count < MAX_SEARCHES_PER_STOCK:
         messages.append(msg)
 
@@ -147,20 +144,21 @@ Analyse all active catalysts for {ticker} using web search.  Be exhaustive.  Cit
                 continue
             args = json.loads(tc.function.arguments)
             query = args.get("query", "")
-            cats  = args.get("categories", "general,news")
+            categories = args.get("categories", "general,news")
             print(f"  🔍 Searching: {query[:100]}…")
-            result_text = web_search(query, cats)
+            result_text = web_search(query, categories)
             messages.append({
                 "role": "tool",
                 "tool_call_id": tc.id,
                 "content": result_text
             })
+            search_queries_used.append(query)
             search_count += 1
             time.sleep(SEARCH_DELAY)
 
-        # Ask DeepSeek again with the new results
+        # Ask again, still with tools available
         response = client.chat.completions.create(
-            model="deepseek-v4-flash",
+            model="deepseek-chat",
             messages=messages,
             tools=TOOLS,
             tool_choice="auto",
@@ -168,20 +166,43 @@ Analyse all active catalysts for {ticker} using web search.  Be exhaustive.  Cit
         )
         msg = response.choices[0].message
 
-    # -------- Final answer: extract JSON --------
+    # -------- FALLBACK if model didn't produce text --------
+    # (e.g. it wanted more searches but we hit the limit)
+    if not msg.content or not msg.content.strip():
+        # Force a final synthesis without tools
+        messages.append({"role": "user", "content": (
+            "You have now completed all searches.  Based strictly on the search results "
+            "and the internal data provided above, produce the final JSON analysis.  "
+            "Do NOT ask for more searches — use only the information you have."
+        )})
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=messages,
+            # no tools → forces text output
+            temperature=0.3,
+        )
+        msg = response.choices[0].message
+
+    # -------- Extract JSON --------
     final_text = msg.content.strip()
     # Remove markdown code fences if present
     if final_text.startswith("```"):
-        final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
+        final_text = final_text.split("\n", 1)[1]
+        final_text = final_text.rsplit("```", 1)[0]
+    final_text = final_text.strip()
 
     try:
         result = json.loads(final_text)
         result["search_count"] = search_count
+        result["search_queries_used"] = search_queries_used
         return result
     except json.JSONDecodeError:
-        return {"error": "JSON parse failed", "raw": final_text, "search_count": search_count}
-
-# -------------------- RUNNABLE --------------------
+        return {
+            "error": "JSON parse failed",
+            "raw": final_text,
+            "search_count": search_count,
+            "search_queries_used": search_queries_used
+        }
 if __name__ == "__main__":
     # Example: analyse AAOI
     profile = {
