@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine – Strict Date‑Aware Version
+Catalyst Analysis Engine – Deep Context, Unlimited Searches
 
-– DeepSeek function calling → SearXNG search → structured catalyst output
-– Enforces 6‑month lookback & exact event dates
-– Stores results in Supabase `signals` table (optional)
+- DeepSeek function calling → SearXNG search → mandatory context audit → structured output
+- Enforces 6‑month lookback & exact event dates
+- Context rules prevent misclassification (e.g., analyst target below current price = negative)
+- Stores results in Supabase `signals` table (optional)
 Schedule: Daily, after data collectors finish
 """
 
-import os, json, time, requests
-import re
+import os, json, time, requests, re
 from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
 
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-MAX_SEARCHES         = 8          # per stock – enough to cover every lens
-SEARCH_DELAY         = 0.7        # seconds
-MODEL                = "deepseek-chat"   # or "deepseek-v4-flash" when available
+MAX_SEARCHES         = 100        # unlimited SearXNG – cover every lens exhaustively
+SEARCH_DELAY         = 0.5        # seconds between searches (rate‑limit safety)
+MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
-LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()  # ~6 months
+LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
 # ── Tools ───────────────────────────────────────────────
 TOOLS = [{
@@ -29,7 +29,7 @@ TOOLS = [{
         "name": "web_search",
         "description": (
             "Search the live web for real‑time financial news, filings, contracts, "
-            "regulatory decisions, patents, and analyst actions. "
+            "regulatory decisions, patents, insider trades, and analyst actions. "
             "Use this whenever up‑to‑date information is required. "
             "Prefix site‑specific queries with 'site:domain.com'."
         ),
@@ -40,7 +40,7 @@ TOOLS = [{
                     "type": "string",
                     "description": (
                         "Search query. Be specific: include company name, topic, "
-                        "and year if relevant. For date‑sensitive info, include month/year."
+                        "and year/month for date‑sensitive info."
                     )
                 },
                 "categories": {
@@ -88,14 +88,15 @@ def web_search(query: str, categories: str = "general,news") -> str:
         formatted.append(f"[{engine}] {title}\nDate: {pubdate}\nSnippet: {snippet}\nURL: {url}")
     return "\n\n".join(formatted)
 
-# ── System Prompt (THE CRITICAL PART) ───────────────────
+# ── System Prompt ───────────────────────────────────────
 SYSTEM_PROMPT = f"""\
 You are a rigorous event‑driven equity analyst with a 1‑2 week horizon.
 
-TODAY IS {TODAY}. The analysis must use ONLY information from the LAST 6 MONTHS
-({LOOKBACK_START} to {TODAY}). Ignore any event outside this window.
+TODAY IS {TODAY}. Use ONLY information from {LOOKBACK_START} to {TODAY}.
 
-CATALYST TAXONOMY (every active catalyst must be classified into one of these):
+──────────────────────────────────────────────────────
+CATALYST TAXONOMY (classify every catalyst into one)
+──────────────────────────────────────────────────────
 Positive Internal: Contract win/expansion, Strategic partnership, Product launch/FDA approval,
   Analyst upgrade/PT increase, Positive personnel change, Capital infusion, Earnings beat,
   Guidance raise, Share repurchase/dividend increase, Successful acquisition,
@@ -120,43 +121,107 @@ Negative External: Policy reversal/tax increase, Rate hike/monetary tightening,
   Commodity price unfavorable, ESG controversy/carbon tax, Currency headwind, Technical breakdown.
 Negative Market Mechanics: Short attack/bear raid, Institutional ownership decline.
 
-REQUIRED SEARCH LENSES (you must cover all of these via web_search):
-1. Company‑specific news (contracts, product, management, earnings, guidance, insider trades)
-2. Analyst & institutional sentiment (upgrades, downgrades, PT changes, 13F filings)
-3. Sector & peer events (NVIDIA, Lumentum, Coherent – whatever is relevant)
-4. Supply chain & geopolitical risks (tariffs, China, factory news)
-5. Regulatory & legislative environment
-6. Macro & commodity context (Fed, inflation, oil, AI capex)
+──────────────────────────────────────────────────────
+CONTEXT RULES – APPLY THESE TO EVERY CATALYST
+──────────────────────────────────────────────────────
 
-CRITICAL RULES FOR OUTPUT:
-1. EVERY active catalyst MUST include an EXACT DATE in the summary (e.g., "On March 15, 2026, AAOI announced...").
-   If the exact date cannot be determined, use the most specific date available (at least month/year)
-   and mark confidence lower.
-2. NEVER use vague phrases like "recently," "in the past," "has had a parabolic run."
-   Always pin events to specific dates drawn from search result publication dates or article content.
-3. If multiple sources reference the same event, combine them into ONE catalyst with higher confidence.
+1. ANALYST PRICE TARGETS:
+   ALWAYS compare the target price to the CURRENT stock price.
+   - If target < current price → NEGATIVE (analysts see downside)
+   - If target > current price → POSITIVE (analysts see upside)
+   - Report: "Target $X vs current $Y = Z% premium/discount"
+   - Distinguish consensus (average) from individual analyst targets.
+   - An increase in target that still sits below the current price IS STILL NEGATIVE.
+
+2. INSIDER TRADING:
+   Distinguish routine 10b5‑1 plan sales from discretionary cluster sales.
+   Report the NET: total $ bought vs total $ sold.
+   CEO/CFO cluster sales outside of 10b5‑1 plans = high negative weight.
+
+3. SHORT INTEREST:
+   >15% of float = elevated short‑squeeze risk (bullish if positive catalysts exist).
+   Rising short interest + negative catalysts = bear‑raid potential.
+   Include days‑to‑cover ratio.
+
+4. VALUATION:
+   Compare P/E, P/S, EV/EBITDA to sector medians and 5‑year historical averages.
+   Stock trading >200% above consensus analyst target = significant downside risk.
+
+5. FINANCIAL HEALTH:
+   Negative ROE, negative profit margins, or rapidly rising liabilities are
+   negative catalysts even when revenue is growing.
+
+6. TARIFF / GEOGRAPHIC EXPOSURE:
+   Quantify % of revenue or manufacturing exposed to geopolitical risk.
+   Weigh against current tariff/trade policy stance.
+
+──────────────────────────────────────────────────────
+REQUIRED SEARCH LENSES (exhaust them all)
+──────────────────────────────────────────────────────
+1.  Company‑specific news (contracts, products, management, earnings, guidance)
+2.  Insider trading – buying AND selling, Form 4 filings
+3.  Analyst actions – upgrades, downgrades, price target changes, initiations
+4.  Institutional ownership – 13F filings, major holder changes
+5.  Short interest – % of float, days‑to‑cover, trend
+6.  Financial health – debt, cash, profitability, liabilities
+7.  Valuation – P/E, P/S, EV/EBITDA vs peers
+8.  Sector & peer events (competitors, suppliers, customers)
+9.  Supply chain & geopolitical risks (tariffs, China exposure, factory news)
+10. Regulatory & legislative environment (SEC, FDA, Congress, export controls)
+11. Macro context (Fed, rates, inflation, commodity prices, GDP)
+12. Technical analysis (moving averages, support/resistance, volume)
+
+──────────────────────────────────────────────────────
+OUTPUT RULES
+──────────────────────────────────────────────────────
+1. EVERY active catalyst MUST include an EXACT DATE (e.g., "On March 18, 2026…").
+2. NEVER use "recently," "in the past," "has had a parabolic run."
+3. Combine duplicate events from multiple sources into ONE catalyst with higher confidence.
 4. Every catalyst must be classified into the taxonomy above.
-5. The final JSON MUST contain:
-   {{
-     "ticker": "...",
-     "analysis_date": "{TODAY}",
-     "lookback_start": "{LOOKBACK_START}",
-     "active_catalysts": [
-       {{
-         "type": "positive|negative|neutral",
-         "category": "internal|external|market_mechanic",
-         "taxonomy": "exact taxonomy label (e.g., 'Contract win/expansion')",
-         "summary": "Detailed summary with EXACT DATE. E.g., 'On March 18, 2026, AAOI secured a $200M order for 1.6T transceivers...'",
-         "source_urls": ["url1", "url2"],
-         "confidence": 0-100
-       }}
-     ],
-     "catalyst_stack": "A 4‑sentence narrative synthesising the net effect. Must reference specific dates.",
-     "net_signal": "Strong Bullish|Bullish|Neutral|Bearish|Strong Bearish",
-     "conviction": 0-100,
-     "key_assumption": "The single assumption that, if wrong, would flip the call.",
-     "search_queries_used": ["..."]
-   }}
+5. Output ONLY the JSON object below, no other text.
+
+{{
+  "ticker": "...",
+  "analysis_date": "{TODAY}",
+  "lookback_start": "{LOOKBACK_START}",
+  "current_price": "extracted from search results or state if unknown",
+  "active_catalysts": [
+    {{
+      "type": "positive|negative|neutral",
+      "category": "internal|external|market_mechanic",
+      "taxonomy": "exact taxonomy label",
+      "summary": "Detailed summary with EXACT DATE. For analyst targets, include 'Target $X vs current $Y = Z% premium/discount'.",
+      "source_urls": ["url1", "url2"],
+      "confidence": 0-100
+    }}
+  ],
+  "catalyst_stack": "4‑sentence narrative with specific dates.",
+  "net_signal": "Strong Bullish|Bullish|Neutral|Bearish|Strong Bearish",
+  "conviction": 0-100,
+  "key_assumption": "The single assumption that, if wrong, would flip the call.",
+  "search_queries_used": ["..."]
+}}
+"""
+
+# ── Audit prompt ────────────────────────────────────────
+AUDIT_PROMPT = f"""\
+You are a forensic financial audit layer. Review the catalyst analysis below.
+TODAY IS {TODAY}. The stock's current price should appear in the search results.
+
+CORRECT EVERY MISCLASSIFICATION:
+1. If any analyst price target is BELOW the current stock price, reclassify it as
+   NEGATIVE (type: "negative", taxonomy: "Analyst downgrade/PT cut") regardless of
+   whether the target was recently raised.
+2. If a target is ABOVE the current price, keep it positive.
+3. For insider transactions: if net selling exceeds net buying, add a negative catalyst
+   explicitly. If sales are routine 10b5‑1, note that but keep the negative.
+4. If short interest >15% and positive catalysts dominate, add a positive
+   "Short squeeze" catalyst to market_mechanic.
+5. If ROE is negative or profit margins are negative, add a negative catalyst.
+6. If debt/equity is rising rapidly or liabilities surged, add a negative catalyst.
+7. Remove any vague language; every event must cite an exact date.
+
+Return ONLY the corrected JSON with NO additional commentary.
 """
 
 # ── Main analysis function ──────────────────────────────
@@ -168,8 +233,9 @@ Ticker: {ticker}
 Exposure profile: {json.dumps(exposure_profile)}
 Previous signals (from DB): {json.dumps(previous_signals) if previous_signals else 'None'}
 
-Today is {TODAY}. Analyse all active catalysts for {ticker} within the last 6 months ({LOOKBACK_START} to {TODAY}).
-Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst to an exact date."""}
+Today is {TODAY}. Analyse ALL active catalysts for {ticker} within the last 6 months ({LOOKBACK_START} to {TODAY}).
+Use web_search to cover ALL 12 required lenses. Be exhaustive. Pin every catalyst to an exact date.
+Always compare analyst targets to the CURRENT stock price — a target below the current price is NEGATIVE."""}
     ]
 
     search_count = 0
@@ -186,6 +252,7 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
                 else:
                     raise
 
+    # ── Phase 1: Web search loop ──
     try:
         response = safe_create(
             model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
@@ -195,14 +262,11 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
 
     msg = response.choices[0].message
 
-    # ── Execute tool calls until we hit the hard limit ──
     while msg.tool_calls and search_count < MAX_SEARCHES:
-        messages.append(msg)          # assistant message with tool_calls
+        messages.append(msg)
 
-        # Respond to EVERY tool call – even if limit is reached we send a placeholder
         for tc in msg.tool_calls:
             if tc.function.name != "web_search":
-                # unknown tool – still answer with a dummy to satisfy the API
                 messages.append({
                     "role": "tool",
                     "tool_call_id": tc.id,
@@ -215,14 +279,13 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
             cats  = args.get("categories", "general,news")
 
             if search_count < MAX_SEARCHES:
-                print(f"  🔍 Searching [{search_count+1}/{MAX_SEARCHES}]: {query[:100]}…")
+                print(f"  🔍 [{search_count+1}/{MAX_SEARCHES}] {query[:100]}…")
                 result_text = web_search(query, cats)
                 search_queries_used.append(query)
                 search_count += 1
             else:
-                # over the limit – placeholder to keep the conversation valid
-                result_text = "SEARCH_SKIPPED: Maximum search limit reached."
-                print(f"  ⏭️  Skipping search (limit reached): {query[:80]}…")
+                result_text = "SEARCH_SKIPPED: Limit reached."
+                print(f"  ⏭️  Skipping: {query[:80]}…")
 
             messages.append({
                 "role": "tool",
@@ -231,7 +294,6 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
             })
             time.sleep(SEARCH_DELAY)
 
-        # Don't call API again if we're already at the limit
         if search_count >= MAX_SEARCHES:
             break
 
@@ -244,45 +306,55 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
 
         msg = response.choices[0].message
 
-    # ── Force final answer if the model still wants more tools or returned no text ──
+    # ── Force final answer if needed ──
     if (msg.tool_calls and search_count >= MAX_SEARCHES) or not (msg.content and msg.content.strip()):
         messages.append({
             "role": "user",
-            "content": (
-                "You have exhausted all available web searches. "
-                "Based strictly on the search results and previous data, "
-                "produce the final JSON analysis NOW. "
-                "Output ONLY the JSON object, no other text."
-            )
+            "content": "You have exhausted all searches. Produce the final JSON analysis NOW. Output ONLY the JSON object."
         })
         try:
-            response = safe_create(
-                model=MODEL, messages=messages, temperature=0.2
-            )
+            response = safe_create(model=MODEL, messages=messages, temperature=0.2)
         except Exception as e:
             return {"error": f"API call failed during forced final: {e}", "search_count": search_count}
         msg = response.choices[0].message
 
-    # ── Extract and repair JSON ──
+    # ── Extract JSON from Phase 1 ──
     final_text = (msg.content or "").strip()
     if not final_text:
-        return {"error": "Empty final response", "search_count": search_count, "search_queries_used": search_queries_used}
+        return {"error": "Empty final response", "search_count": search_count}
 
     if final_text.startswith("```"):
         final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
     final_text = final_text.strip()
 
+    # ── Phase 2: Context audit ──
+    print("  🧠 Running context audit layer…")
+    audit_messages = [
+        {"role": "system", "content": AUDIT_PROMPT},
+        {"role": "user", "content": f"Current stock: {ticker}. Review and correct this analysis:\n\n{final_text}"}
+    ]
+    try:
+        audit_response = safe_create(model=MODEL, messages=audit_messages, temperature=0.2)
+        audit_text = (audit_response.choices[0].message.content or "").strip()
+        if audit_text:
+            if audit_text.startswith("```"):
+                audit_text = audit_text.split("\n", 1)[1].rsplit("```", 1)[0]
+            audit_text = audit_text.strip()
+            if audit_text:
+                final_text = audit_text
+                print("  ✅ Audit layer applied corrections.")
+    except Exception as e:
+        print(f"  ⚠️  Audit layer failed (using raw output): {e}")
+
+    # ── JSON repair ──
     try:
         result = json.loads(final_text)
     except json.JSONDecodeError:
-        # Simple repair: trailing commas
-        import re
         fixed = re.sub(r",\s*}", "}", final_text)
         fixed = re.sub(r",\s*]", "]", fixed)
         try:
             result = json.loads(fixed)
         except json.JSONDecodeError:
-            # DeepSeek repair attempt
             try:
                 fix_resp = safe_create(
                     model=MODEL,
@@ -307,9 +379,10 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
     result["search_count"] = search_count
     result["search_queries_used"] = search_queries_used
     return result
-# ── Main loop (for GitHub Actions) ──────────────────────
+
+
+# ── Main loop ───────────────────────────────────────────
 if __name__ == "__main__":
-    # Try to load the DB connector, but don't crash if it's not installed
     try:
         from db.connection import get_connection
         HAS_DB = True
@@ -317,7 +390,6 @@ if __name__ == "__main__":
         HAS_DB = False
         print("⚠️  psycopg2 not installed – running without database storage.")
 
-    # Load exposure profiles
     try:
         with open("data/exposure_profiles.json") as f:
             profiles = json.load(f)
@@ -335,7 +407,6 @@ if __name__ == "__main__":
         cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
         tickers = [row[0] for row in cur.fetchall()]
     else:
-        # Fallback – analyse just the tickers in the profiles file
         tickers = list(profiles.keys())
 
     for ticker in tickers:
@@ -353,7 +424,8 @@ if __name__ == "__main__":
 
         if HAS_DB and "error" not in result:
             cur.execute("""
-                INSERT INTO signals (ticker, analysis_date, net_signal, conviction, catalyst_stack, key_assumption, raw_json, search_count)
+                INSERT INTO signals (ticker, analysis_date, net_signal, conviction,
+                    catalyst_stack, key_assumption, raw_json, search_count)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (ticker, analysis_date) DO UPDATE SET
                     net_signal = EXCLUDED.net_signal,
