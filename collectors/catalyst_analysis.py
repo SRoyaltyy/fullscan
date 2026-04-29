@@ -174,18 +174,23 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
     search_count = 0
     search_queries_used = []
 
-    # Round 1 – tool call
+    # Round 1
     response = client.chat.completions.create(
         model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
     )
     msg = response.choices[0].message
 
-    # Execute tools loop
+    # ── Execute tool calls until we hit the hard limit ──
     while msg.tool_calls and search_count < MAX_SEARCHES:
         messages.append(msg)
+
         for tc in msg.tool_calls:
             if tc.function.name != "web_search":
                 continue
+            # Stop early if we already hit the limit (safety)
+            if search_count >= MAX_SEARCHES:
+                break
+
             args = json.loads(tc.function.arguments)
             query = args.get("query", "")
             cats  = args.get("categories", "general,news")
@@ -200,41 +205,87 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
             search_count += 1
             time.sleep(SEARCH_DELAY)
 
+        # Only ask again if we still have room for more searches
+        if search_count >= MAX_SEARCHES:
+            break
+
         response = client.chat.completions.create(
             model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
         )
         msg = response.choices[0].message
 
-    # If the model still wants more searches, force final answer
-    if not msg.content or not msg.content.strip():
-        messages.append({"role": "user", "content": (
-            "You have completed all available searches. Based strictly on the results, "
-            "produce the final JSON analysis now. Do NOT ask for more searches."
-        )})
+    # ── Force a final synthesis ──
+    # If the model tried to request more searches or produced empty text,
+    # we strip tools and issue a firm instruction.
+    if (msg.tool_calls and search_count >= MAX_SEARCHES) or not (msg.content and msg.content.strip()):
+        # Replace the last assistant message with a clean instruction
+        messages.append({
+            "role": "user",
+            "content": (
+                "You have now exhausted all available web searches. "
+                "Based on the search results and the internal data provided above, "
+                "produce the final JSON analysis immediately. "
+                "You MUST output ONLY the JSON object with NO additional commentary. "
+                "Do not ask for more data — use what you have."
+            )
+        })
+        # Call WITHOUT tools so it cannot issue a new search
         response = client.chat.completions.create(
-            model=MODEL, messages=messages, temperature=0.3
+            model=MODEL, messages=messages, temperature=0.2
         )
         msg = response.choices[0].message
 
-    # Extract JSON from final text
-    final_text = msg.content.strip()
-    if final_text.startswith("```"):
-        final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
-    final_text = final_text.strip()
-
-    try:
-        result = json.loads(final_text)
-        result["search_count"] = search_count
-        result["search_queries_used"] = search_queries_used
-        return result
-    except json.JSONDecodeError:
+    # ── Extract and repair JSON ──
+    final_text = (msg.content or "").strip()
+    if not final_text:
         return {
-            "error": "JSON parse failed",
-            "raw": final_text,
+            "error": "Empty response from model",
             "search_count": search_count,
             "search_queries_used": search_queries_used,
         }
 
+    # Remove markdown fences
+    if final_text.startswith("```"):
+        final_text = final_text.split("\n", 1)[1]
+        final_text = final_text.rsplit("```", 1)[0]
+    final_text = final_text.strip()
+
+    # Attempt JSON parse with repair
+    try:
+        result = json.loads(final_text)
+    except json.JSONDecodeError:
+        # Try to fix common issues
+        # 1. Trailing commas
+        import re
+        fixed = re.sub(r",\s*}", "}", final_text)
+        fixed = re.sub(r",\s*]", "]", fixed)
+        try:
+            result = json.loads(fixed)
+        except json.JSONDecodeError:
+            # 2. If still broken, ask the model to fix it in a quick follow‑up
+            fix_messages = [
+                {"role": "system", "content": "You are a JSON repair tool. Return ONLY valid JSON."},
+                {"role": "user", "content": f"The following text is meant to be JSON but contains errors. Fix it:\n\n{final_text}"}
+            ]
+            try:
+                fix_resp = client.chat.completions.create(
+                    model=MODEL, messages=fix_messages, temperature=0.0
+                )
+                fixed2 = fix_resp.choices[0].message.content.strip()
+                if fixed2.startswith("```"):
+                    fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
+                result = json.loads(fixed2)
+            except Exception:
+                return {
+                    "error": "JSON parse failed after repair",
+                    "raw": final_text,
+                    "search_count": search_count,
+                    "search_queries_used": search_queries_used,
+                }
+
+    result["search_count"] = search_count
+    result["search_queries_used"] = search_queries_used
+    return result
 # ── Main loop (for GitHub Actions) ──────────────────────
 if __name__ == "__main__":
     # Try to load the DB connector, but don't crash if it's not installed
