@@ -6,10 +6,11 @@ Two modes (tried in order):
   1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
   2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
 """
-import re
+
 import os
 import sys
 import time
+import re
 from datetime import datetime
 from io import StringIO
 from pathlib import Path
@@ -29,7 +30,7 @@ FINVIZ_PASSWORD = os.environ.get("FINVIZ_PASSWORD", "")
 FINVIZ_LOGIN_URL = "https://finviz.com/login_submit.ashx"
 FINVIZ_EXPORT_URL = "https://elite.finviz.com/export.ashx"
 
-REQUEST_TIMEOUT = 30  # seconds — never hang forever
+REQUEST_TIMEOUT = 30
 
 VIEWS = {
     111: "Overview",
@@ -97,6 +98,11 @@ def parse_value(val, col_name):
         return float(s.replace(",", ""))
     except ValueError:
         return s
+
+
+def _normalize_key(s: str) -> str:
+    """Remove everything except alphanumeric + underscore, then lowercase."""
+    return re.sub(r"[^a-zA-Z0-9_]", "", s.replace(" ", "_")).lower()
 
 
 # ── Mode 1: Authenticated CSV export ───────────────────────────────
@@ -179,38 +185,45 @@ def try_manual_csv():
     return df
 
 
-# ── Store in DB (BULK INSERT — FAST) ─────────────────────────────────
+# ── Store in DB (ROBUST COLUMN MATCHING) ──────────────────────────
 def store(conn, cur, df, snapshot_date):
-    # -- Normalize all DataFrame column names (strip, collapse spaces) --
-    df.columns = [re.sub(r"\s+", " ", str(c).strip()) for c in df.columns]
+    # 1. Print all CSV headers for debugging
+    print("  CSV headers (first 20):", flush=True)
+    for i, h in enumerate(df.columns[:20]):
+        print(f"    [{i}] '{h}'", flush=True)
+    print(f"  ... total {len(df.columns)} columns", flush=True)
 
-    # -- Build a reverse map from normalized Finviz name -> sql column --
-    norm_map = {}
+    # 2. Build normalized mapping: norm -> original header
+    norm_to_orig = {}
+    for orig in df.columns:
+        norm_to_orig[_normalize_key(str(orig))] = orig
+
+    # 3. Match COLUMN_MAP keys to actual CSV columns
+    available = {}          # original header -> sql column name
+    matched_keys = []
+    missing_keys = []
+
     for fv_col, sql_col in COLUMN_MAP.items():
-        norm_map[re.sub(r"\s+", " ", fv_col.strip())] = sql_col
+        norm = _normalize_key(fv_col)
+        if norm in norm_to_orig:
+            orig = norm_to_orig[norm]
+            available[orig] = sql_col
+            matched_keys.append(f"{fv_col} -> {sql_col}")
+        else:
+            missing_keys.append(fv_col)
 
-    available = {}
-    for norm_col in df.columns:
-        if norm_col in norm_map:
-            available[norm_col] = norm_map[norm_col]
+    print(f"  Matched {len(available)}/{len(COLUMN_MAP)} columns", flush=True)
+    if missing_keys:
+        print(f"  Missing columns (will be NULL): {missing_keys[:20]}", flush=True)
 
-    # -- Diagnostic: show which COLUMN_MAP keys were NOT found --
-    missing = [k for k in COLUMN_MAP.keys() if re.sub(r"\s+", " ", k.strip()) not in df.columns]
-    if missing:
-        print(f"  ⚠️  {len(missing)} column(s) not found in CSV: {missing[:15]}...", flush=True)
-
-    if "Ticker" not in df.columns:
-        print("  ERROR: no Ticker column found in data", flush=True)
-        return 0
-
-    # -- Build rows for bulk insert --
-    cols_ordered = ["snapshot_date"] + list(available.values())
+    # 4. Build rows for bulk insert
+    cols_ordered = ["snapshot_date"] + [available[orig] for orig in available]
     rows = []
     for _, row in df.iterrows():
         values = [snapshot_date]
         ticker = None
-        for norm_col, sql_col in available.items():
-            val = parse_value(row[norm_col], sql_col)
+        for orig, sql_col in available.items():
+            val = parse_value(row[orig], sql_col)
             values.append(val)
             if sql_col == "ticker":
                 ticker = val
@@ -218,16 +231,17 @@ def store(conn, cur, df, snapshot_date):
             continue
         rows.append(tuple(values))
 
-    # -- Show first row sample for validation --
+    # 5. Show sample row for AAOI or first row
     if rows:
-        print(f"  Sample row ({rows[0][cols_ordered.index('ticker')]}):", flush=True)
+        sample = rows[0]
+        ticker_idx = cols_ordered.index("ticker") if "ticker" in cols_ordered else 0
+        print(f"  Sample row ({sample[ticker_idx]}):", flush=True)
         for i, col in enumerate(cols_ordered):
-            print(f"    {col}: {rows[0][i]}", flush=True)
+            print(f"    {col}: {sample[i]}", flush=True)
 
-    # -- Bulk insert --
+    # 6. Bulk insert
     cur.execute("TRUNCATE company_financials")
     cols_str = ", ".join(cols_ordered)
-    from psycopg2.extras import execute_values
     execute_values(
         cur,
         f"INSERT INTO company_financials ({cols_str}) VALUES %s ON CONFLICT DO NOTHING",
