@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
 import requests
+from psycopg2.extras import execute_values
 
 from db.connection import get_connection
 
@@ -178,7 +179,7 @@ def try_manual_csv():
     return df
 
 
-# ── Store in DB ─────────────────────────────────────────────────────
+# ── Store in DB (BULK INSERT — FAST) ─────────────────────────────────
 def store(conn, cur, df, snapshot_date):
     available = {}
     for finviz_col, sql_col in COLUMN_MAP.items():
@@ -189,34 +190,34 @@ def store(conn, cur, df, snapshot_date):
         print("  ERROR: no Ticker column found in data", flush=True)
         return 0
 
-    cur.execute("TRUNCATE company_financials")
+    # Build column list
+    cols_ordered = ["snapshot_date"] + list(available.values())
 
-    count = 0
+    # Parse all rows into a list of tuples
+    rows = []
     for _, row in df.iterrows():
-        values = {"snapshot_date": snapshot_date}
+        values = [snapshot_date]
+        ticker = None
         for fv_col, sql_col in available.items():
-            values[sql_col] = parse_value(row[fv_col], sql_col)
-
-        if not values.get("ticker"):
+            val = parse_value(row[fv_col], sql_col)
+            values.append(val)
+            if sql_col == "ticker":
+                ticker = val
+        if not ticker:
             continue
+        rows.append(tuple(values))
 
-        cols_list = list(values.keys())
-        cols = ", ".join(cols_list)
-        placeholders = ", ".join(["%s"] * len(cols_list))
-
-        try:
-            cur.execute(
-                f"INSERT INTO company_financials ({cols}) VALUES ({placeholders}) "
-                f"ON CONFLICT (ticker) DO NOTHING",
-                list(values.values()),
-            )
-            count += 1
-        except Exception as e:
-            conn.rollback()
-            print(f"  Row error ({values.get('ticker')}): {e}", flush=True)
-
+    # Truncate then bulk insert
+    cur.execute("TRUNCATE company_financials")
+    cols_str = ", ".join(cols_ordered)
+    execute_values(
+        cur,
+        f"INSERT INTO company_financials ({cols_str}) VALUES %s ON CONFLICT DO NOTHING",
+        rows,
+        page_size=1000
+    )
     conn.commit()
-    return count
+    return len(rows)
 
 
 def main():
