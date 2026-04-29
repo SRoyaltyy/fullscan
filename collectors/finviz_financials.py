@@ -87,6 +87,9 @@ COLUMN_MAP = {
     "Performance (Half Year)": "perf_half_y",
     "Performance (YTD)": "perf_ytd",
     "Performance (Year)": "perf_year",
+    "Performance (3 Years)": "perf_3y",
+    "Performance (5 Years)": "perf_5y",
+    "Performance (10 Years)": "perf_10y",
 
     # ---- Volatility ----
     "Volatility (Week)": "volatility_week",
@@ -117,26 +120,24 @@ COLUMN_MAP = {
     "Relative Volume": "rel_volume",
     "Earnings Date": "earnings_date",
 
-    # ---- Technical (v=171) ----
+    # ---- Technical ----
     "Beta": "beta",
-    "ATR": "atr",
-    "RSI (14)": "rsi",
-    "RSI": "rsi",
-    "SMA20": "sma20",
-    "SMA50": "sma50",
-    "SMA200": "sma200",
-    "50D High": "high_50d",
-    "50D Low": "low_50d",
-    "52W High": "high_52w",
-    "52W Low": "low_52w",
-    "from Open": "change_from_open",
+    "Average True Range": "atr",
+    "20-Day Simple Moving Average": "sma20",
+    "50-Day Simple Moving Average": "sma50",
+    "200-Day Simple Moving Average": "sma200",
+    "52-Week High": "high_52w",
+    "52-Week Low": "low_52w",
+    "Relative Strength Index (14)": "rsi",
+    "Change from Open": "change_from_open",
     "Gap": "gap",
+
+    # ---- Analyst (these may appear in future or different Finviz plans) ----
     "Analyst Recom": "analyst_recom",
     "Recom": "analyst_recom",
     "Target Price": "target_price",
     "IPO Date": "ipo_date",
 }
-
 TEXT_COLS = {
     "ticker", "company", "sector", "industry", "country",
     "earnings_date", "ipo_date", "snapshot_date",
