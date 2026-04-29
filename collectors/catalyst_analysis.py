@@ -237,42 +237,49 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
 
 # ── Main loop (for GitHub Actions) ──────────────────────
 if __name__ == "__main__":
-    from db.connection import get_connection
+    # Try to load the DB connector, but don't crash if it's not installed
+    try:
+        from db.connection import get_connection
+        HAS_DB = True
+    except ModuleNotFoundError:
+        HAS_DB = False
+        print("⚠️  psycopg2 not installed – running without database storage.")
 
-    # Load exposure profiles (maintain this file manually)
+    # Load exposure profiles
     try:
         with open("data/exposure_profiles.json") as f:
             profiles = json.load(f)
     except FileNotFoundError:
         profiles = {}
+        print("⚠️  No exposure_profiles.json found – using empty profiles.")
 
-    conn = get_connection()
-    cur = conn.cursor()
+    conn = None
+    cur = None
+    tickers = []
 
-    # Get active tickers
-    cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
-    tickers = [row[0] for row in cur.fetchall()]
+    if HAS_DB:
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
+        tickers = [row[0] for row in cur.fetchall()]
+    else:
+        # Fallback – analyse just the tickers in the profiles file
+        tickers = list(profiles.keys())
 
     for ticker in tickers:
-        profile = profiles.get(ticker)
-        if not profile:
-            print(f"⏭️  Skipping {ticker} – no exposure profile")
-            continue
-
+        profile = profiles.get(ticker, {})
         print(f"\n{'='*60}\n📊 Analyzing {ticker}…\n{'='*60}")
         result = analyze_stock(ticker, profile)
 
-        # Print summary
         if "error" in result:
-            print(f"❌ Error: {result}")
+            print(f"❌ Error: {result['error']}")
         else:
             print(f"✅ Net signal: {result.get('net_signal')} (conviction {result.get('conviction')})")
             print(f"   Catalysts: {len(result.get('active_catalysts', []))}")
             for cat in result.get("active_catalysts", []):
                 print(f"     - [{cat['type']}] {cat['summary'][:120]}…")
 
-        # Store in DB
-        if "error" not in result:
+        if HAS_DB and "error" not in result:
             cur.execute("""
                 INSERT INTO signals (ticker, analysis_date, net_signal, conviction, catalyst_stack, key_assumption, raw_json, search_count)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
@@ -296,8 +303,8 @@ if __name__ == "__main__":
             conn.commit()
             print(f"   💾 Stored in signals table.")
 
-        time.sleep(2)   # be kind to SearXNG & DeepSeek
+        time.sleep(2)
 
-    cur.close()
-    conn.close()
+    if cur: cur.close()
+    if conn: conn.close()
     print(f"\n{'='*60}\n🏁 All analyses complete.")
