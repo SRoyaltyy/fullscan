@@ -3,7 +3,7 @@
 Finviz Elite Financial Data Collector
 
 Two modes (tried in order):
-  1. Authenticated CSV export — auto‑discovers all available views (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
+  1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
   2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
 """
 
@@ -30,11 +30,21 @@ FINVIZ_PASSWORD = os.environ.get("FINVIZ_PASSWORD", "")
 FINVIZ_LOGIN_URL = "https://finviz.com/login_submit.ashx"
 FINVIZ_EXPORT_URL = "https://elite.finviz.com/export.ashx"
 
-REQUEST_TIMEOUT = 30
+REQUEST_TIMEOUT = 30   # seconds
 
-# ── COLUMN MAP (covers every known Finviz field) ──────────────────
-# After each run the logger prints which fields were matched / missing.
-# If a new field appears, add it here and re‑run.
+# ── Finviz export views (proven working IDs) ────────────────────
+#  111 = Overview     121 = Valuation     131 = Ownership
+#  141 = Performance  161 = Financial     171 = Technical
+VIEWS = {
+    111: "Overview",
+    121: "Valuation",
+    131: "Ownership",
+    141: "Performance",
+    161: "Financial",
+    171: "Technical",
+}
+
+# ── Column mapping (every field Finviz serves) ──────────────────
 COLUMN_MAP = {
     # ---- Overview / General ----
     "Ticker": "ticker",
@@ -60,7 +70,7 @@ COLUMN_MAP = {
     "EPS Growth Next 5 Years": "eps_growth_next_5y",
     "Sales Growth Past 5 Years": "sales_growth_past_5y",
 
-    # ---- Financials / Ownership ----
+    # ---- Ownership ----
     "Shares Outstanding": "shares_outstanding",
     "Shares Float": "float_shares",
     "Insider Ownership": "insider_own",
@@ -69,8 +79,6 @@ COLUMN_MAP = {
     "Institutional Transactions": "inst_trans",
     "Short Float": "float_short",
     "Short Ratio": "short_ratio",
-    "Average Volume": "avg_volume",
-    "Relative Volume": "rel_volume",
 
     # ---- Performance ----
     "Performance (Week)": "perf_week",
@@ -105,13 +113,15 @@ COLUMN_MAP = {
     "Price": "price",
     "Change": "change",
     "Volume": "volume",
+    "Average Volume": "avg_volume",
+    "Relative Volume": "rel_volume",
     "Earnings Date": "earnings_date",
 
-    # ---- Technical (v=171 or wherever they appear) ----
+    # ---- Technical (v=171) ----
     "Beta": "beta",
     "ATR": "atr",
     "RSI (14)": "rsi",
-    "RSI": "rsi",                         # both possible labels
+    "RSI": "rsi",
     "SMA20": "sma20",
     "SMA50": "sma50",
     "SMA200": "sma200",
@@ -121,13 +131,16 @@ COLUMN_MAP = {
     "52W Low": "low_52w",
     "from Open": "change_from_open",
     "Gap": "gap",
-    "Analyst Recom": "analyst_recom",     # might appear as "Recom" or "Analyst Recom"
+    "Analyst Recom": "analyst_recom",
     "Recom": "analyst_recom",
     "Target Price": "target_price",
     "IPO Date": "ipo_date",
 }
 
-TEXT_COLS = {"ticker", "company", "sector", "industry", "country", "earnings_date", "ipo_date", "snapshot_date"}
+TEXT_COLS = {
+    "ticker", "company", "sector", "industry", "country",
+    "earnings_date", "ipo_date", "snapshot_date",
+}
 
 
 def parse_value(val, col_name):
@@ -158,7 +171,7 @@ def _normalize_key(s: str) -> str:
     return re.sub(r"[^a-zA-Z0-9_]", "", s.replace(" ", "_")).lower()
 
 
-# ── Mode 1: Authenticated CSV export (auto‑discover all views) ────
+# ── Mode 1: Authenticated CSV export ───────────────────────────────
 def try_elite_export():
     if not FINVIZ_EMAIL or not FINVIZ_PASSWORD:
         print("  No FINVIZ_EMAIL/PASSWORD set — skipping Elite export.", flush=True)
@@ -183,7 +196,6 @@ def try_elite_export():
         print(f"  Login request failed: {e}", flush=True)
         return None
 
-    # Quick sanity check
     try:
         test = session.get(f"{FINVIZ_EXPORT_URL}?v=111", timeout=REQUEST_TIMEOUT)
         first_bytes = test.content[:200].decode("utf-8", errors="ignore")
@@ -197,63 +209,38 @@ def try_elite_export():
         print(f"  Test export failed: {e}", flush=True)
         return None
 
-    print("  Login OK. Auto‑discovering views (IDs 100‑199)...", flush=True)
-
-    view_data = {}          # view_id -> DataFrame
-    for view_id in range(100, 200):
+    print("  Login OK. Downloading views...", flush=True)
+    dfs = []
+    for view_id, view_name in VIEWS.items():
         try:
             r = session.get(f"{FINVIZ_EXPORT_URL}?v={view_id}", timeout=REQUEST_TIMEOUT)
-            if r.status_code != 200 or r.text.strip().startswith("<!") or len(r.text) < 50:
+            if r.status_code != 200 or r.text.strip().startswith("<!"):
+                print(f"    {view_name} (v={view_id}): SKIP — non-CSV response", flush=True)
                 continue
             df = pd.read_csv(StringIO(r.text))
-            if df.empty or "Ticker" not in df.columns:
-                continue
             if "No." in df.columns:
                 df = df.drop(columns=["No."])
-
-            stock_count = len(df)
-            col_count = len(df.columns)
-
-            # Skip duplicate views (identical column set)
-            cols_set = frozenset(df.columns)
-            duplicate = False
-            for existing_df in view_data.values():
-                if frozenset(existing_df.columns) == cols_set and len(existing_df.columns) == col_count:
-                    duplicate = True
-                    break
-            if duplicate:
-                continue
-
-            view_data[view_id] = df
-            print(f"    v={view_id}: {stock_count} stocks, {col_count} cols  — {list(df.columns)[:8]}...", flush=True)
-            time.sleep(0.6)
+            print(f"    {view_name} (v={view_id}): {len(df)} stocks, {len(df.columns)} cols", flush=True)
+            print(f"      Columns: {list(df.columns)}", flush=True)
+            dfs.append(df)
+            time.sleep(1)
         except requests.exceptions.Timeout:
-            continue
+            print(f"    {view_name} (v={view_id}): SKIP — timed out", flush=True)
         except Exception as e:
-            print(f"    v={view_id}: error {e}", flush=True)
-            continue
+            print(f"    {view_name} (v={view_id}): SKIP — {e}", flush=True)
 
-    if not view_data:
-        print("  No views discovered.", flush=True)
+    if not dfs:
         return None
 
-    print(f"\n  Discovered {len(view_data)} unique views. Merging...", flush=True)
-
-    # Merge all discovered views on "Ticker"
-    merged = None
-    for view_id, df in view_data.items():
-        if merged is None:
-            merged = df
-        else:
-            new_cols = ["Ticker"] + [c for c in df.columns if c not in merged.columns]
-            if len(new_cols) > 1:
-                merged = merged.merge(df[new_cols], on="Ticker", how="outer")
-
-    print(f"  Merged dataset: {len(merged)} stocks, {len(merged.columns)} unique columns", flush=True)
+    merged = dfs[0]
+    for df in dfs[1:]:
+        new_cols = ["Ticker"] + [c for c in df.columns if c not in merged.columns]
+        if len(new_cols) > 1:
+            merged = merged.merge(df[new_cols], on="Ticker", how="outer")
     return merged
 
 
-# ── Mode 2: Manual CSV drop ──────────────────────────────────────
+# ── Mode 2: Manual CSV drop ────────────────────────────────────────
 def try_manual_csv():
     manual_path = EXPORTS_DIR / "finviz_latest.csv"
     if not manual_path.exists():
@@ -265,27 +252,25 @@ def try_manual_csv():
     return df
 
 
-# ── Store in DB (robust column matching) ─────────────────────────
+# ── Store in DB ─────────────────────────────────────────────────────
 def store(conn, cur, df, snapshot_date):
     # 1. Print ALL CSV headers for debugging
     print(f"  ALL CSV headers ({len(df.columns)} total):", flush=True)
     for i, h in enumerate(df.columns):
         print(f"    [{i}] '{h}'", flush=True)
 
-    # Also write to a file
     header_log = EXPORTS_DIR / "finviz_headers.txt"
     with open(header_log, "w") as hf:
         for i, h in enumerate(df.columns):
             hf.write(f"[{i}] {h}\n")
-    print(f"  Headers also saved to {header_log}", flush=True)
+    print(f"  Headers saved to {header_log}", flush=True)
 
-    # 2. Build normalized mapping: norm -> original header
+    # 2. Normalize and match columns
     norm_to_orig = {}
     for orig in df.columns:
         norm_to_orig[_normalize_key(str(orig))] = orig
 
-    # 3. Match COLUMN_MAP keys to actual CSV columns
-    available = {}          # original header -> sql column name
+    available = {}
     matched_keys = []
     missing_keys = []
 
@@ -300,9 +285,9 @@ def store(conn, cur, df, snapshot_date):
 
     print(f"  Matched {len(available)}/{len(COLUMN_MAP)} columns", flush=True)
     if missing_keys:
-        print(f"  Missing columns (will be NULL): {missing_keys[:20]}", flush=True)
+        print(f"  Missing (will be NULL): {missing_keys[:25]}", flush=True)
 
-    # 4. Build rows for bulk insert
+    # 3. Build rows for bulk insert
     cols_ordered = ["snapshot_date"] + [available[orig] for orig in available]
     rows = []
     for _, row in df.iterrows():
@@ -317,7 +302,7 @@ def store(conn, cur, df, snapshot_date):
             continue
         rows.append(tuple(values))
 
-    # 5. Show sample row (first ticker found)
+    # 4. Sample row for debugging
     if rows:
         sample = rows[0]
         ticker_idx = cols_ordered.index("ticker") if "ticker" in cols_ordered else 0
@@ -325,14 +310,14 @@ def store(conn, cur, df, snapshot_date):
         for i, col in enumerate(cols_ordered):
             print(f"    {col}: {sample[i]}", flush=True)
 
-    # 6. Bulk insert
+    # 5. Bulk insert
     cur.execute("TRUNCATE company_financials")
     cols_str = ", ".join(cols_ordered)
     execute_values(
         cur,
         f"INSERT INTO company_financials ({cols_str}) VALUES %s ON CONFLICT DO NOTHING",
         rows,
-        page_size=1000
+        page_size=1000,
     )
     conn.commit()
     return len(rows)
@@ -350,7 +335,7 @@ def main():
     snapshot_date = datetime.now().strftime("%Y-%m-%d")
     df = None
 
-    print("\n--- Mode 1: Elite CSV Export (auto‑discover) ---", flush=True)
+    print("\n--- Mode 1: Elite CSV Export ---", flush=True)
     df = try_elite_export()
 
     if df is None:
