@@ -6,7 +6,7 @@ Two modes (tried in order):
   1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
   2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
 """
-
+import re
 import os
 import sys
 import time
