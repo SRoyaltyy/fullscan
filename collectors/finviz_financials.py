@@ -181,25 +181,36 @@ def try_manual_csv():
 
 # ── Store in DB (BULK INSERT — FAST) ─────────────────────────────────
 def store(conn, cur, df, snapshot_date):
-    available = {}
-    for finviz_col, sql_col in COLUMN_MAP.items():
-        if finviz_col in df.columns:
-            available[finviz_col] = sql_col
+    # -- Normalize all DataFrame column names (strip, collapse spaces) --
+    df.columns = [re.sub(r"\s+", " ", str(c).strip()) for c in df.columns]
 
-    if "Ticker" not in df.columns and "ticker" not in df.columns:
+    # -- Build a reverse map from normalized Finviz name -> sql column --
+    norm_map = {}
+    for fv_col, sql_col in COLUMN_MAP.items():
+        norm_map[re.sub(r"\s+", " ", fv_col.strip())] = sql_col
+
+    available = {}
+    for norm_col in df.columns:
+        if norm_col in norm_map:
+            available[norm_col] = norm_map[norm_col]
+
+    # -- Diagnostic: show which COLUMN_MAP keys were NOT found --
+    missing = [k for k in COLUMN_MAP.keys() if re.sub(r"\s+", " ", k.strip()) not in df.columns]
+    if missing:
+        print(f"  ⚠️  {len(missing)} column(s) not found in CSV: {missing[:15]}...", flush=True)
+
+    if "Ticker" not in df.columns:
         print("  ERROR: no Ticker column found in data", flush=True)
         return 0
 
-    # Build column list
+    # -- Build rows for bulk insert --
     cols_ordered = ["snapshot_date"] + list(available.values())
-
-    # Parse all rows into a list of tuples
     rows = []
     for _, row in df.iterrows():
         values = [snapshot_date]
         ticker = None
-        for fv_col, sql_col in available.items():
-            val = parse_value(row[fv_col], sql_col)
+        for norm_col, sql_col in available.items():
+            val = parse_value(row[norm_col], sql_col)
             values.append(val)
             if sql_col == "ticker":
                 ticker = val
@@ -207,9 +218,16 @@ def store(conn, cur, df, snapshot_date):
             continue
         rows.append(tuple(values))
 
-    # Truncate then bulk insert
+    # -- Show first row sample for validation --
+    if rows:
+        print(f"  Sample row ({rows[0][cols_ordered.index('ticker')]}):", flush=True)
+        for i, col in enumerate(cols_ordered):
+            print(f"    {col}: {rows[0][i]}", flush=True)
+
+    # -- Bulk insert --
     cur.execute("TRUNCATE company_financials")
     cols_str = ", ".join(cols_ordered)
+    from psycopg2.extras import execute_values
     execute_values(
         cur,
         f"INSERT INTO company_financials ({cols_str}) VALUES %s ON CONFLICT DO NOTHING",
