@@ -9,6 +9,7 @@ Schedule: Daily, after data collectors finish
 """
 
 import os, json, time, requests
+import re
 from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
 
@@ -174,10 +175,25 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
     search_count = 0
     search_queries_used = []
 
-    # Round 1
-    response = client.chat.completions.create(
-        model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
-    )
+    def safe_create(**kwargs):
+        """Call the API with up to 3 retries on transient errors."""
+        for attempt in range(3):
+            try:
+                return client.chat.completions.create(**kwargs)
+            except Exception as e:
+                print(f"  ⚠️  API error (attempt {attempt+1}/3): {e}")
+                if attempt < 2:
+                    time.sleep(2 * (attempt + 1))
+                else:
+                    raise
+
+    try:
+        response = safe_create(
+            model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
+        )
+    except Exception as e:
+        return {"error": f"Initial API call failed: {e}", "search_count": 0}
+
     msg = response.choices[0].message
 
     # ── Execute tool calls until we hit the hard limit ──
@@ -187,7 +203,6 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
         for tc in msg.tool_calls:
             if tc.function.name != "web_search":
                 continue
-            # Stop early if we already hit the limit (safety)
             if search_count >= MAX_SEARCHES:
                 break
 
@@ -205,20 +220,26 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
             search_count += 1
             time.sleep(SEARCH_DELAY)
 
-        # Only ask again if we still have room for more searches
+        # Stop if we've hit the limit
         if search_count >= MAX_SEARCHES:
             break
 
-        response = client.chat.completions.create(
-            model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
-        )
+        try:
+            response = safe_create(
+                model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
+            )
+        except Exception as e:
+            return {"error": f"API call failed during search loop: {e}", "search_count": search_count}
+
         msg = response.choices[0].message
 
-    # ── Force a final synthesis ──
-    # If the model tried to request more searches or produced empty text,
-    # we strip tools and issue a firm instruction.
+    # ── Force final answer if we still have unanswered tool_calls ──
     if (msg.tool_calls and search_count >= MAX_SEARCHES) or not (msg.content and msg.content.strip()):
-        # Replace the last assistant message with a clean instruction
+        # Remove the last assistant message (the orphaned tool_calls one) if it hasn't been fulfilled
+        if messages and messages[-1].get("role") == "assistant" and messages[-1].get("tool_calls"):
+            messages.pop()
+
+        # Add a firm forcing prompt
         messages.append({
             "role": "user",
             "content": (
@@ -229,48 +250,39 @@ Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst t
                 "Do not ask for more data — use what you have."
             )
         })
-        # Call WITHOUT tools so it cannot issue a new search
-        response = client.chat.completions.create(
-            model=MODEL, messages=messages, temperature=0.2
-        )
+        try:
+            # Call WITHOUT tools
+            response = safe_create(
+                model=MODEL, messages=messages, temperature=0.2
+            )
+        except Exception as e:
+            return {"error": f"API call failed during forced final: {e}", "search_count": search_count}
         msg = response.choices[0].message
 
     # ── Extract and repair JSON ──
     final_text = (msg.content or "").strip()
     if not final_text:
-        return {
-            "error": "Empty response from model",
-            "search_count": search_count,
-            "search_queries_used": search_queries_used,
-        }
+        return {"error": "Empty final response", "search_count": search_count, "search_queries_used": search_queries_used}
 
-    # Remove markdown fences
     if final_text.startswith("```"):
-        final_text = final_text.split("\n", 1)[1]
-        final_text = final_text.rsplit("```", 1)[0]
+        final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
     final_text = final_text.strip()
 
-    # Attempt JSON parse with repair
     try:
         result = json.loads(final_text)
     except json.JSONDecodeError:
-        # Try to fix common issues
-        # 1. Trailing commas
-        import re
         fixed = re.sub(r",\s*}", "}", final_text)
         fixed = re.sub(r",\s*]", "]", fixed)
         try:
             result = json.loads(fixed)
         except json.JSONDecodeError:
-            # 2. If still broken, ask the model to fix it in a quick follow‑up
-            fix_messages = [
+            # One‑shot repair via DeepSeek
+            fix_prompt = [
                 {"role": "system", "content": "You are a JSON repair tool. Return ONLY valid JSON."},
-                {"role": "user", "content": f"The following text is meant to be JSON but contains errors. Fix it:\n\n{final_text}"}
+                {"role": "user", "content": f"Fix this JSON:\n\n{final_text}"}
             ]
             try:
-                fix_resp = client.chat.completions.create(
-                    model=MODEL, messages=fix_messages, temperature=0.0
-                )
+                fix_resp = safe_create(model=MODEL, messages=fix_prompt, temperature=0.0)
                 fixed2 = fix_resp.choices[0].message.content.strip()
                 if fixed2.startswith("```"):
                     fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
