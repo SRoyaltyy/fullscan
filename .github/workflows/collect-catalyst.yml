@@ -1,0 +1,23 @@
+name: "Catalyst Analysis Engine"
+
+on:
+  schedule:
+    - cron: "0 15 * * 1-5"   # 3 PM UTC on weekdays (after market close)
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install openai requests
+      - name: Run catalyst analysis
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+        run: python -m collectors.catalyst_analysis
