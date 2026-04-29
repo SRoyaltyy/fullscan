@@ -188,10 +188,17 @@ def try_manual_csv():
 # ── Store in DB (ROBUST COLUMN MATCHING) ──────────────────────────
 def store(conn, cur, df, snapshot_date):
     # 1. Print all CSV headers for debugging
-    print("  CSV headers (first 20):", flush=True)
-    for i, h in enumerate(df.columns[:20]):
+        # 1. Print ALL CSV headers for debugging
+    print(f"  ALL CSV headers ({len(df.columns)} total):", flush=True)
+    for i, h in enumerate(df.columns):
         print(f"    [{i}] '{h}'", flush=True)
-    print(f"  ... total {len(df.columns)} columns", flush=True)
+
+    # Also write to a file so we can retrieve it even if logs truncate
+    header_log = EXPORTS_DIR / "finviz_headers.txt"
+    with open(header_log, "w") as hf:
+        for i, h in enumerate(df.columns):
+            hf.write(f"[{i}] {h}\n")
+    print(f"  Headers also saved to {header_log}", flush=True)
 
     # 2. Build normalized mapping: norm -> original header
     norm_to_orig = {}
