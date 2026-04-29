@@ -176,6 +176,7 @@ def try_elite_export():
             if "No." in df.columns:
                 df = df.drop(columns=["No."])
             print(f"    {view_name} (v={view_id}): {len(df)} stocks, {len(df.columns)} cols", flush=True)
+            print(f"      Columns: {list(df.columns)}", flush=True)
             dfs.append(df)
             time.sleep(1)
         except requests.exceptions.Timeout:
