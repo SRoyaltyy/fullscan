@@ -15,8 +15,8 @@ from openai import OpenAI
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-MAX_SEARCHES         = 35
-SEARCH_DELAY         = 0.5
+MAX_SEARCHES         = 35          # exhaustive but fast
+SEARCH_DELAY         = 0.5         # seconds
 MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
@@ -206,87 +206,38 @@ Weights:
 5. FINANCIAL HEALTH: Negative ROE or profit margins → negative catalyst.
 6. TARIFF/GEO: Quantify exposure % and weigh against current policy.
 
-    # ── JSON repair ──
-    def robust_parse(text):
-        """Try to parse JSON even if it's mildly damaged or truncated."""
-        # 1. Remove markdown fences
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1].rsplit("```", 1)[0]
-        text = text.strip()
+────────────── OUTPUT FORMAT ───────────────────────────
+Return ONLY the JSON object below.  STRICT RULES:
+- Include every catalyst from the taxonomy in `catalyst_grid`, but ONLY set "evidence" when status is "HIT".
+- When status is MISS or N/A, OMIT the "evidence" field entirely (do NOT include an empty string).
+- All evidence strings MUST be ≤ 250 characters.  Summarise, don't paste.
+- NEVER include unescaped double-quotes inside evidence strings.  Use single quotes or remove them.
+- NEVER include literal newlines inside evidence strings.
+- NEVER use trailing commas.
 
-        # 2. Try straight parse
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            pass
-
-        # 3. Remove trailing commas before } or ]
-        cleaned = re.sub(r",\s*}", "}", text)
-        cleaned = re.sub(r",\s*]", "]", cleaned)
-        try:
-            return json.loads(cleaned)
-        except json.JSONDecodeError:
-            pass
-
-        # 4. Try to close any unclosed arrays/objects
-        # Count open brackets
-        open_braces = cleaned.count("{") - cleaned.count("}")
-        open_brackets = cleaned.count("[") - cleaned.count("]")
-        closed = cleaned
-        if open_brackets > 0:
-            closed += "]" * open_brackets
-        if open_braces > 0:
-            closed += "}" * open_braces
-        try:
-            return json.loads(closed)
-        except json.JSONDecodeError:
-            pass
-
-        # 5. Last resort: cut off at the last valid object boundary
-        # Find the last successful "}," or "] and try parsing up to there
-        for match in reversed(list(re.finditer(r'("confidence":\s*\d+\s*})', cleaned))):
-            end_pos = match.end()
-            truncated = cleaned[:end_pos] + "\n    ]\n  }"
-            try:
-                return json.loads(truncated)
-            except json.JSONDecodeError:
-                continue
-
-        # 6. DeepSeek fix (small payload only)
-        try:
-            fix_resp = safe_create(
-                model=MODEL,
-                messages=[
-                    {"role": "system", "content": (
-                        "Return ONLY valid JSON. If the input is truncated, close all open "
-                        "brackets/braces. Use single quotes inside string values, never double quotes."
-                    )},
-                    {"role": "user", "content": f"Fix this JSON:\n\n{cleaned[:20000]}"}
-                ],
-                temperature=0.0,
-                max_tokens=500
-            )
-            fixed2 = fix_resp.choices[0].message.content.strip()
-            if fixed2.startswith("```"):
-                fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
-            return json.loads(fixed2.strip())
-        except Exception:
-            pass
-
-        raise ValueError("All JSON repair strategies failed")
-
-    try:
-        result = robust_parse(final_text)
-    except Exception as e:
-        print(f"  ❌ Robust parse also failed: {e}")
-        print(f"  📄 Broken JSON start: {final_text[:500]}")
-        print(f"  📄 Broken JSON end: {final_text[-500:]}")
-        return {
-            "error": f"JSON parse failed after all repairs: {e}",
-            "raw_preview": final_text[:2000],
-            "search_count": search_count,
-            "search_queries_used": search_queries_used,
-        }
+{{
+  "ticker": "...",
+  "analysis_date": "{today}",
+  "lookback_start": "{lookback_start}",
+  "current_price": "...",
+  "catalyst_grid": [
+    {{
+      "taxonomy": "exact label",
+      "type": "positive|negative",
+      "category": "internal|external|market_mechanic",
+      "status": "HIT|MISS|N/A",
+      "weight": 0‑10,
+      "evidence": "≤250 chars, only if HIT. Single quotes only. No newlines.",
+      "source_urls": [...],
+      "confidence": 0‑100
+    }}
+  ],
+  "catalyst_stack": "4‑sentence narrative with dates.",
+  "net_signal": "Strong Bullish|Bullish|Neutral|Bearish|Strong Bearish",
+  "conviction": 0‑100,
+  "key_assumption": "Single assumption that flips the call if wrong.",
+  "search_queries_used": ["..."]
+}}
 """
 
 # ── Audit prompt ────────────────────────────────────────
@@ -357,6 +308,70 @@ def generate_health_check(ticker: str, snapshot: dict) -> str:
     except Exception as e:
         print(f"  ⚠️  Health check LLM failed: {e}")
         return "Health check unavailable."
+
+# ── Robust JSON parser ─────────────────────────────────
+def robust_parse(text: str):
+    """Try to parse JSON even if it's mildly damaged or truncated."""
+    # 1. Remove markdown fences
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+    text = text.strip()
+
+    # 2. Try straight parse
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # 3. Remove trailing commas before } or ]
+    cleaned = re.sub(r",\s*}", "}", text)
+    cleaned = re.sub(r",\s*]", "]", cleaned)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+
+    # 4. Try to close any unclosed arrays/objects
+    open_braces = cleaned.count("{") - cleaned.count("}")
+    open_brackets = cleaned.count("[") - cleaned.count("]")
+    if open_brackets > 0 or open_braces > 0:
+        closed = cleaned + "]" * open_brackets + "}" * open_braces
+        try:
+            return json.loads(closed)
+        except json.JSONDecodeError:
+            pass
+
+    # 5. Find last valid object and truncate
+    for match in reversed(list(re.finditer(r'("confidence":\s*\d+\s*})', cleaned))):
+        end_pos = match.end()
+        try:
+            truncated = cleaned[:end_pos] + "\n    ]\n  }"
+            return json.loads(truncated)
+        except json.JSONDecodeError:
+            continue
+
+    # 6. DeepSeek repair (small payload)
+    try:
+        fix_resp = safe_create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": (
+                    "Return ONLY valid JSON. If the input is truncated, close all open "
+                    "brackets/braces. Use single quotes inside string values, never double quotes."
+                )},
+                {"role": "user", "content": f"Fix this JSON:\n\n{cleaned[:20000]}"}
+            ],
+            temperature=0.0,
+            max_tokens=500
+        )
+        fixed2 = fix_resp.choices[0].message.content.strip()
+        if fixed2.startswith("```"):
+            fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
+        return json.loads(fixed2.strip())
+    except Exception:
+        pass
+
+    raise ValueError("All JSON repair strategies failed")
 
 # ── Main analysis function ──────────────────────────────
 def analyze_stock(ticker: str, health_check_text: str) -> dict:
@@ -451,11 +466,6 @@ Always compare analyst targets to the CURRENT stock price."""}
     if not final_text:
         return {"error": "Empty final response", "search_count": search_count}
 
-    if final_text.startswith("```"):
-        final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
-    final_text = final_text.strip()
-
-    # —— DIAGNOSTIC: show raw output before audit ——
     print("  📝 RAW FINAL OUTPUT (first 800 chars):", final_text[:800])
 
     # Phase 2: Audit
@@ -477,80 +487,11 @@ Always compare analyst targets to the CURRENT stock price."""}
     except Exception as e:
         print(f"  ⚠️  Audit layer failed: {e}")
 
-    # JSON repair
-        # ── JSON repair ──
-    def robust_parse(text):
-        """Try to parse JSON even if it's mildly damaged or truncated."""
-        # 1. Remove markdown fences
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1].rsplit("```", 1)[0]
-        text = text.strip()
-
-        # 2. Try straight parse
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            pass
-
-        # 3. Remove trailing commas before } or ]
-        cleaned = re.sub(r",\s*}", "}", text)
-        cleaned = re.sub(r",\s*]", "]", cleaned)
-        try:
-            return json.loads(cleaned)
-        except json.JSONDecodeError:
-            pass
-
-        # 4. Try to close any unclosed arrays/objects
-        # Count open brackets
-        open_braces = cleaned.count("{") - cleaned.count("}")
-        open_brackets = cleaned.count("[") - cleaned.count("]")
-        closed = cleaned
-        if open_brackets > 0:
-            closed += "]" * open_brackets
-        if open_braces > 0:
-            closed += "}" * open_braces
-        try:
-            return json.loads(closed)
-        except json.JSONDecodeError:
-            pass
-
-        # 5. Last resort: cut off at the last valid object boundary
-        # Find the last successful "}," or "] and try parsing up to there
-        for match in reversed(list(re.finditer(r'("confidence":\s*\d+\s*})', cleaned))):
-            end_pos = match.end()
-            truncated = cleaned[:end_pos] + "\n    ]\n  }"
-            try:
-                return json.loads(truncated)
-            except json.JSONDecodeError:
-                continue
-
-        # 6. DeepSeek fix (small payload only)
-        try:
-            fix_resp = safe_create(
-                model=MODEL,
-                messages=[
-                    {"role": "system", "content": (
-                        "Return ONLY valid JSON. If the input is truncated, close all open "
-                        "brackets/braces. Use single quotes inside string values, never double quotes."
-                    )},
-                    {"role": "user", "content": f"Fix this JSON:\n\n{cleaned[:20000]}"}
-                ],
-                temperature=0.0,
-                max_tokens=500
-            )
-            fixed2 = fix_resp.choices[0].message.content.strip()
-            if fixed2.startswith("```"):
-                fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0]
-            return json.loads(fixed2.strip())
-        except Exception:
-            pass
-
-        raise ValueError("All JSON repair strategies failed")
-
+    # ── JSON repair ──
     try:
         result = robust_parse(final_text)
     except Exception as e:
-        print(f"  ❌ Robust parse also failed: {e}")
+        print(f"  ❌ Robust parse failed: {e}")
         print(f"  📄 Broken JSON start: {final_text[:500]}")
         print(f"  📄 Broken JSON end: {final_text[-500:]}")
         return {
@@ -572,7 +513,6 @@ Always compare analyst targets to the CURRENT stock price."""}
         elif "bearish" in stack:
             result["net_signal"] = "Bearish"
         else:
-            # Count positive vs negative hits
             positive = sum(1 for c in result.get("catalyst_grid", []) if c.get("type") == "positive" and c.get("status") == "HIT")
             negative = sum(1 for c in result.get("catalyst_grid", []) if c.get("type") == "negative" and c.get("status") == "HIT")
             if positive > negative:
@@ -613,15 +553,6 @@ if __name__ == "__main__":
     # ═══════════════════════════════════════════════════
     tickers = ["BBAI"]
 
-    # Full watchlist (uncomment when ready):
-    # if HAS_DB:
-    #     conn = get_connection()
-    #     cur = conn.cursor()
-    #     cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
-    #     tickers = [row[0] for row in cur.fetchall()]
-    # else:
-    #     tickers = list(profiles.keys())
-
     for ticker in tickers:
         profile = profiles.get(ticker, {})
         print(f"\n{'='*60}\n📊 Health check for {ticker}…\n{'='*60}")
@@ -649,7 +580,6 @@ if __name__ == "__main__":
             print(f"   Catalyst grid: {len(grid)} items")
             for item in grid[:5]:
                 print(f"     [{item.get('type','?')}] {item.get('taxonomy')}: {item.get('status')} (weight {item.get('weight')})")
-            # Print hit count
             hits = sum(1 for c in grid if c.get("status") == "HIT")
             print(f"   HIT: {hits}, MISS: {len(grid)-hits}")
 
