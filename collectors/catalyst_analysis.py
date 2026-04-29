@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine – Deep Context, Unlimited Searches
+Catalyst Analysis Engine – with Health Check 2.0 & Full Catalyst Grid
 
-- DeepSeek function calling → SearXNG search → mandatory context audit → structured output
-- Enforces 6‑month lookback & exact event dates
-- Context rules prevent misclassification (e.g., analyst target below current price = negative)
-- Stores results in Supabase `signals` table (optional)
+Phase 0: DB Health Check → narrative evaluation
+Phase 1: DeepSeek + SearXNG (35 searches) → exhaustive catalyst grid → structured output
+Phase 2: Audit layer
 Schedule: Daily, after data collectors finish
 """
 
@@ -16,8 +15,8 @@ from openai import OpenAI
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-MAX_SEARCHES         = 100        # unlimited SearXNG – cover every lens exhaustively
-SEARCH_DELAY         = 0.5        # seconds between searches (rate‑limit safety)
+MAX_SEARCHES         = 35          # exhaustive but fast
+SEARCH_DELAY         = 0.5         # seconds
 MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
@@ -38,10 +37,7 @@ TOOLS = [{
             "properties": {
                 "query": {
                     "type": "string",
-                    "description": (
-                        "Search query. Be specific: include company name, topic, "
-                        "and year/month for date‑sensitive info."
-                    )
+                    "description": "Specific query, include company name and date."
                 },
                 "categories": {
                     "type": "string",
@@ -88,171 +84,256 @@ def web_search(query: str, categories: str = "general,news") -> str:
         formatted.append(f"[{engine}] {title}\nDate: {pubdate}\nSnippet: {snippet}\nURL: {url}")
     return "\n\n".join(formatted)
 
-# ── System Prompt ───────────────────────────────────────
-SYSTEM_PROMPT = f"""\
+# ── Health Check Prompt ─────────────────────────────────
+HEALTH_CHECK_SYSTEM = """\
+You are a forensic financial analyst. Given a raw snapshot of a company's financial metrics (valuation, profitability, growth, technicals, ownership, etc.), produce a concise, plain‑English evaluation that covers:
+
+1. Business profile (sector, industry, market cap, institutional ownership)
+2. Financial health & profitability (margins, ROE, debt, liquidity)
+3. Valuation (P/E, forward P/E, PEG, vs. peers if deducible)
+4. Momentum & technicals (performance over various periods, RSI, SMA positioning, 52‑week high/low)
+5. Ownership & short interest (insider/inst ownership, short float, days to cover)
+6. Growth trajectory (EPS & sales growth past & future)
+7. Overall pre‑search verdict: Bullish / Bearish / Neutral with a brief reason and missing pieces to investigate.
+
+Output a single block of plain text (no JSON). Keep it under 500 words. Be direct — no fluff, no recap of the prompt."""
+
+# ── Full Catalyst Taxonomy with pre‑defined weights ─────
+# Weights are 1‑10; 10 = strongest possible market‑moving impact.
+CATALYST_WEIGHTS = {
+    # Positive Internal
+    "Contract win/expansion": 8,
+    "Strategic partnership/alliance": 6,
+    "Product launch/FDA approval/regulatory greenlight": 9,
+    "Analyst upgrade/PT increase": 5,
+    "Positive personnel change": 4,
+    "Capital infusion (PIPE/funding round/favorable terms)": 6,
+    "Earnings beat (revenue/EBITDA/EPS)": 8,
+    "Earnings guidance raise": 7,
+    "Share repurchase/dividend increase": 5,
+    "Successful acquisition/synergy realization": 7,
+    "Deleveraging/sale of toxic assets/spin-off": 5,
+    "Operational milestone (trial/satellite/patient)": 6,
+    "Insider buying (cluster purchases)": 7,
+    "Activist investor accumulation (9.9% stake)": 7,
+    "Capacity expansion announced": 6,
+    "Strategic pivot/rebranding to high‑growth": 5,
+    "Supply chain de‑risking (dual sourcing/reshoring)": 5,
+    "Patent grant/IP protection": 4,
+    "Customer concentration expansion": 5,
+    # Positive External
+    "Government policy (tariffs/subsidies/mandates)": 7,
+    "Institutional policy (Fed rate cut/QE/stimulus)": 9,
+    "Favorable court ruling/patent grant": 8,
+    "Geopolitical event that boosts sector": 7,
+    "Sector tailwind/index inclusion": 5,
+    "Regulatory approval (FDA/FCC/FTC clearance)": 9,
+    "Macro tailwinds (CPI cooling/GDP beat/soft landing)": 8,
+    "Sector rotation into the stock's industry": 6,
+    "Commodity price move favorable to company": 6,
+    "ESG mandate/green subsidy qualification": 4,
+    "Currency tailwind": 3,
+    "Technical breakout (above key moving averages)": 4,
+    # Positive Market Mechanics
+    "Short squeeze": 8,
+    "Institutional ownership increase (13F filings)": 6,
+    # Negative Internal
+    "Contract loss/non‑renewal/reduction": 8,
+    "Partnership dissolution/breakdown": 6,
+    "Product delay/failure/rejection/safety recall": 9,
+    "Analyst downgrade/PT cut": 5,
+    "Negative personnel change (departures/scandals)": 5,
+    "Dilutive offering/distressed fundraising/down round": 7,
+    "Earnings miss (revenue/EBITDA/EPS)": 8,
+    "Earnings guidance cut": 7,
+    "Suspension of buyback/dividend cut": 5,
+    "Failed acquisition/overpayment/goodwill impairment": 6,
+    "Accumulation of debt/toxic assets/failed divestiture": 6,
+    "Operational setback (trial halt/satellite failure/production halt)": 7,
+    "Insider selling (clustered CEO/CFO sales)": 7,
+    "Activist exits stake/13D hostile": 7,
+    "Capacity underutilization/overexpansion write‑down": 5,
+    "Strategic pivot failure/loss of identity": 5,
+    "Supply chain shock (fire/shipping disruption)": 8,
+    "Patent litigation loss/IP theft": 7,
+    "Customer concentration risk (over‑reliance)": 6,
+    # Negative External
+    "Policy reversal/new regulation/tax increase": 7,
+    "Rate hike/monetary tightening/liquidity withdrawal": 9,
+    "Adverse litigation outcome/patent invalidation/antitrust ruling": 8,
+    "Geopolitical event that hurts sector": 8,
+    "Sector headwind/index exclusion/rotation away": 6,
+    "Regulatory denial or delay/antitrust block": 9,
+    "Macro headwinds (inflation spike/recession/unemployment surge)": 8,
+    "Sector rotation out of the industry": 6,
+    "Unfavorable commodity price move (higher input costs)": 6,
+    "ESG controversy/exclusion from green funds/carbon tax": 4,
+    "Currency headwind (dollar strength for exporters)": 3,
+    "Technical breakdown (below support, death cross)": 5,
+    # Negative Market Mechanics
+    "Short attack/bear raid (activist short report)": 8,
+    "Institutional ownership decline (major holders reducing)": 6,
+}
+
+# ── System Prompt (main analysis) ───────────────────────
+SYSTEM_PROMPT_TEMPLATE = """\
 You are a rigorous event‑driven equity analyst with a 1‑2 week horizon.
 
-TODAY IS {TODAY}. Use ONLY information from {LOOKBACK_START} to {TODAY}.
+TODAY IS {today}. Use ONLY information from {lookback_start} to {today}.
 
-──────────────────────────────────────────────────────
-CATALYST TAXONOMY (classify every catalyst into one)
-──────────────────────────────────────────────────────
-Positive Internal: Contract win/expansion, Strategic partnership, Product launch/FDA approval,
-  Analyst upgrade/PT increase, Positive personnel change, Capital infusion, Earnings beat,
-  Guidance raise, Share repurchase/dividend increase, Successful acquisition,
-  Deleveraging/asset sale, Operational milestone, Insider buying (cluster),
-  Activist investor accumulation, Capacity expansion, Strategic pivot, Supply chain de‑risking,
-  Patent grant/IP protection, Customer concentration expansion.
-Positive External: Government policy (subsidies/mandates), Institutional policy (rate cut/QE),
-  Favorable court ruling, Geopolitical boost, Sector tailwind/index inclusion,
-  Regulatory approval, Macro tailwind (CPI cooling/GDP beat), Sector rotation in,
-  Commodity price favorable, ESG/green subsidy, Currency tailwind, Technical breakout.
-Positive Market Mechanics: Short squeeze, Institutional accumulation (13F filings).
+────────────── HEALTH CHECK (pre‑computed from internal database) ──────────────
+{health_check}
 
-Negative Internal: Contract loss, Partnership dissolution, Product delay/failure/recall,
-  Analyst downgrade/PT cut, Negative personnel change, Dilutive offering,
-  Earnings miss, Guidance cut, Dividend/buyback suspension, Failed acquisition,
-  Debt accumulation/toxic assets, Operational setback, Insider selling (clustered),
-  Activist exit, Capacity underutilization, Strategic pivot failure,
-  Supply chain shock, Patent litigation loss/IP theft, Customer concentration risk.
-Negative External: Policy reversal/tax increase, Rate hike/monetary tightening,
-  Adverse litigation/antitrust, Geopolitical hurt (sanctions/conflict), Sector headwind/index exclusion,
-  Regulatory denial/delay, Macro headwind (inflation/recession), Sector rotation out,
-  Commodity price unfavorable, ESG controversy/carbon tax, Currency headwind, Technical breakdown.
-Negative Market Mechanics: Short attack/bear raid, Institutional ownership decline.
+────────────── CATALYST TAXONOMY & WEIGHTS ──────────────
+You MUST output a COMPLETE catalyst grid that includes EVERY catalyst below.
+For each catalyst, set status: "HIT" if evidence was found in the searches, "MISS" if the catalyst type was looked for but no evidence found, "N/A" if the catalyst does not apply to this company.
+Use the weight provided; adjust ±1 only if the magnitude is unusually large or small.
+Weights:
+{weights}
 
-──────────────────────────────────────────────────────
-CONTEXT RULES – APPLY THESE TO EVERY CATALYST
-──────────────────────────────────────────────────────
-
-1. ANALYST PRICE TARGETS:
-   ALWAYS compare the target price to the CURRENT stock price.
-   - If target < current price → NEGATIVE (analysts see downside)
-   - If target > current price → POSITIVE (analysts see upside)
-   - Report: "Target $X vs current $Y = Z% premium/discount"
-   - Distinguish consensus (average) from individual analyst targets.
-   - An increase in target that still sits below the current price IS STILL NEGATIVE.
-
-2. INSIDER TRADING:
-   Distinguish routine 10b5‑1 plan sales from discretionary cluster sales.
-   Report the NET: total $ bought vs total $ sold.
-   CEO/CFO cluster sales outside of 10b5‑1 plans = high negative weight.
-
-3. SHORT INTEREST:
-   >15% of float = elevated short‑squeeze risk (bullish if positive catalysts exist).
-   Rising short interest + negative catalysts = bear‑raid potential.
-   Include days‑to‑cover ratio.
-
-4. VALUATION:
-   Compare P/E, P/S, EV/EBITDA to sector medians and 5‑year historical averages.
-   Stock trading >200% above consensus analyst target = significant downside risk.
-
-5. FINANCIAL HEALTH:
-   Negative ROE, negative profit margins, or rapidly rising liabilities are
-   negative catalysts even when revenue is growing.
-
-6. TARIFF / GEOGRAPHIC EXPOSURE:
-   Quantify % of revenue or manufacturing exposed to geopolitical risk.
-   Weigh against current tariff/trade policy stance.
-
-──────────────────────────────────────────────────────
-REQUIRED SEARCH LENSES (exhaust them all)
-──────────────────────────────────────────────────────
-1.  Company‑specific news (contracts, products, management, earnings, guidance)
-2.  Insider trading – buying AND selling, Form 4 filings
-3.  Analyst actions – upgrades, downgrades, price target changes, initiations
-4.  Institutional ownership – 13F filings, major holder changes
-5.  Short interest – % of float, days‑to‑cover, trend
-6.  Financial health – debt, cash, profitability, liabilities
-7.  Valuation – P/E, P/S, EV/EBITDA vs peers
-8.  Sector & peer events (competitors, suppliers, customers)
-9.  Supply chain & geopolitical risks (tariffs, China exposure, factory news)
-10. Regulatory & legislative environment (SEC, FDA, Congress, export controls)
-11. Macro context (Fed, rates, inflation, commodity prices, GDP)
+────────────── REQUIRED SEARCH LENSES ──────────────────
+1. Company‑specific news (contracts, products, management, earnings, guidance)
+2. Insider trading – buying AND selling, Form 4 filings
+3. Analyst actions – upgrades, downgrades, PT changes, initiations
+4. Institutional ownership – 13F filings, major holder changes
+5. Short interest – % of float, days‑to‑cover, trend
+6. Financial health – debt, cash, profitability, liabilities
+7. Valuation – P/E, P/S, EV/EBITDA vs peers
+8. Sector & peer events
+9. Supply chain & geopolitical risks
+10. Regulatory & legislative environment
+11. Macro context (Fed, rates, inflation, commodities, GDP)
 12. Technical analysis (moving averages, support/resistance, volume)
 
-──────────────────────────────────────────────────────
-OUTPUT RULES
-──────────────────────────────────────────────────────
-1. EVERY active catalyst MUST include an EXACT DATE (e.g., "On March 18, 2026…").
-2. NEVER use "recently," "in the past," "has had a parabolic run."
-3. Combine duplicate events from multiple sources into ONE catalyst with higher confidence.
-4. Every catalyst must be classified into the taxonomy above.
-5. Output ONLY the JSON object below, no other text.
+────────────── CONTEXT RULES ──────────────────────────
+1. ANALYST TARGETS: If target < current price → NEGATIVE.
+2. INSIDER TRADING: Distinguish 10b5‑1 routine from discretionary cluster sales.
+3. SHORT INTEREST: >15% = squeeze risk (bullish if positive catalysts).
+4. VALUATION: Compare to sector medians; >200% above consensus analyst target = high downside risk.
+5. FINANCIAL HEALTH: Negative ROE or profit margins → negative catalyst.
+6. TARIFF/GEO: Quantify exposure % and weigh against current policy.
+
+────────────── OUTPUT FORMAT ───────────────────────────
+Return ONLY the JSON object below. Do NOT add commentary.
 
 {{
   "ticker": "...",
-  "analysis_date": "{TODAY}",
-  "lookback_start": "{LOOKBACK_START}",
-  "current_price": "extracted from search results or state if unknown",
-  "active_catalysts": [
+  "analysis_date": "{today}",
+  "lookback_start": "{lookback_start}",
+  "current_price": "extracted from search results or health check",
+  "catalyst_grid": [
     {{
-      "type": "positive|negative|neutral",
+      "taxonomy": "exact label from the list",
+      "type": "positive|negative",
       "category": "internal|external|market_mechanic",
-      "taxonomy": "exact taxonomy label",
-      "summary": "Detailed summary with EXACT DATE. For analyst targets, include 'Target $X vs current $Y = Z% premium/discount'.",
-      "source_urls": ["url1", "url2"],
-      "confidence": 0-100
+      "status": "HIT|MISS|N/A",
+      "weight": 0‑10,
+      "evidence": "If HIT: exact date & source summary. If MISS: empty string.",
+      "source_urls": [],
+      "confidence": 0‑100
     }}
+    // … every single catalyst from the taxonomy must appear here
   ],
   "catalyst_stack": "4‑sentence narrative with specific dates.",
   "net_signal": "Strong Bullish|Bullish|Neutral|Bearish|Strong Bearish",
-  "conviction": 0-100,
-  "key_assumption": "The single assumption that, if wrong, would flip the call.",
+  "conviction": 0‑100,
+  "key_assumption": "Single assumption that, if wrong, flips the call.",
   "search_queries_used": ["..."]
 }}
 """
 
 # ── Audit prompt ────────────────────────────────────────
-AUDIT_PROMPT = f"""\
+AUDIT_PROMPT = """\
 You are a forensic financial audit layer. Review the catalyst analysis below.
-TODAY IS {TODAY}. The stock's current price should appear in the search results.
+TODAY IS {today}. The stock's current price should appear in the analysis.
 
 CORRECT EVERY MISCLASSIFICATION:
-1. If any analyst price target is BELOW the current stock price, reclassify it as
-   NEGATIVE (type: "negative", taxonomy: "Analyst downgrade/PT cut") regardless of
-   whether the target was recently raised.
+1. If any analyst price target is BELOW the current stock price, reclassify it as NEGATIVE ("type": "negative", "taxonomy": "Analyst downgrade/PT cut") regardless of whether the target was recently raised.
 2. If a target is ABOVE the current price, keep it positive.
-3. For insider transactions: if net selling exceeds net buying, add a negative catalyst
-   explicitly. If sales are routine 10b5‑1, note that but keep the negative.
-4. If short interest >15% and positive catalysts dominate, add a positive
-   "Short squeeze" catalyst to market_mechanic.
+3. For insider transactions: if net selling exceeds net buying, add a negative catalyst explicitly. If sales are routine 10b5‑1, note that but keep the negative.
+4. If short interest >15% and positive catalysts dominate, add a positive "Short squeeze" catalyst to market_mechanic.
 5. If ROE is negative or profit margins are negative, add a negative catalyst.
 6. If debt/equity is rising rapidly or liabilities surged, add a negative catalyst.
 7. Remove any vague language; every event must cite an exact date.
+8. Ensure the catalyst_grid contains EVERY catalyst from the taxonomy, even if only with status "MISS" or "N/A".
 
 Return ONLY the corrected JSON with NO additional commentary.
 """
 
-# ── Main analysis function ──────────────────────────────
-def analyze_stock(ticker: str, exposure_profile: dict, previous_signals: list = None) -> dict:
+def safe_create(**kwargs):
+    for attempt in range(3):
+        try:
+            return client.chat.completions.create(**kwargs)
+        except Exception as e:
+            print(f"  ⚠️  API error (attempt {attempt+1}/3): {e}")
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+            else:
+                raise
+
+# ── Build health snapshot from DB ───────────────────────
+def build_health_snapshot(ticker: str, conn) -> dict:
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM company_financials WHERE ticker = %s", (ticker,))
+    cols = [desc[0] for desc in cur.description]
+    row = cur.fetchone()
+    finviz = dict(zip(cols, row)) if row else {}
+
+    cur.execute("""
+        SELECT company_name, sector, industry, country, description
+        FROM company_profiles WHERE ticker = %s
+    """, (ticker,))
+    prof = cur.fetchone()
+    profile = {}
+    if prof:
+        profile = {
+            "company_name": prof[0],
+            "sector": prof[1],
+            "industry": prof[2],
+            "country": prof[3],
+            "description": prof[4],
+        }
+    cur.close()
+    return {"profile": profile, "finviz": finviz}
+
+# ── Generate health check evaluation (LLM call) ─────────
+def generate_health_check(ticker: str, snapshot: dict) -> str:
+    snapshot_text = json.dumps(snapshot, indent=2, default=str)
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "system", "content": HEALTH_CHECK_SYSTEM},
+        {"role": "user", "content": f"Ticker: {ticker}\nSnapshot:\n{snapshot_text}\n\nProduce the evaluation."}
+    ]
+    try:
+        resp = safe_create(model=MODEL, messages=messages, temperature=0.3, max_tokens=800)
+        return resp.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"  ⚠️  Health check LLM failed: {e}")
+        return "Health check unavailable."
+
+# ── Main analysis function ──────────────────────────────
+def analyze_stock(ticker: str, health_check_text: str) -> dict:
+    # Build the system prompt with health check and weights
+    weights_str = "\n".join([f"  - {k}: {v}" for k, v in CATALYST_WEIGHTS.items()])
+    system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
+        today=TODAY,
+        lookback_start=LOOKBACK_START,
+        health_check=health_check_text,
+        weights=weights_str,
+    )
+
+    messages = [
+        {"role": "system", "content": system_prompt},
         {"role": "user", "content": f"""\
 Ticker: {ticker}
-Exposure profile: {json.dumps(exposure_profile)}
-Previous signals (from DB): {json.dumps(previous_signals) if previous_signals else 'None'}
-
-Today is {TODAY}. Analyse ALL active catalysts for {ticker} within the last 6 months ({LOOKBACK_START} to {TODAY}).
-Use web_search to cover ALL 12 required lenses. Be exhaustive. Pin every catalyst to an exact date.
-Always compare analyst targets to the CURRENT stock price — a target below the current price is NEGATIVE."""}
+Today is {TODAY}. Analyse ALL catalysts for {ticker} within the last 6 months ({LOOKBACK_START} to {TODAY}).
+Use web_search to cover ALL required lenses. Be exhaustive. Pin every catalyst to an exact date.
+Always compare analyst targets to the CURRENT stock price."""}
     ]
 
     search_count = 0
     search_queries_used = []
 
-    def safe_create(**kwargs):
-        for attempt in range(3):
-            try:
-                return client.chat.completions.create(**kwargs)
-            except Exception as e:
-                print(f"  ⚠️  API error (attempt {attempt+1}/3): {e}")
-                if attempt < 2:
-                    time.sleep(2 * (attempt + 1))
-                else:
-                    raise
-
-    # ── Phase 1: Web search loop ──
+    # Phase 1: Web search loop
     try:
         response = safe_create(
             model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto", temperature=0.3
@@ -276,7 +357,7 @@ Always compare analyst targets to the CURRENT stock price — a target below the
 
             args = json.loads(tc.function.arguments)
             query = args.get("query", "")
-            cats  = args.get("categories", "general,news")
+            cats = args.get("categories", "general,news")
 
             if search_count < MAX_SEARCHES:
                 print(f"  🔍 [{search_count+1}/{MAX_SEARCHES}] {query[:100]}…")
@@ -306,11 +387,11 @@ Always compare analyst targets to the CURRENT stock price — a target below the
 
         msg = response.choices[0].message
 
-    # ── Force final answer if needed ──
+    # Force final answer if needed
     if (msg.tool_calls and search_count >= MAX_SEARCHES) or not (msg.content and msg.content.strip()):
         messages.append({
             "role": "user",
-            "content": "You have exhausted all searches. Produce the final JSON analysis NOW. Output ONLY the JSON object."
+            "content": "All searches exhausted. Produce the final JSON analysis NOW. Output ONLY the JSON object."
         })
         try:
             response = safe_create(model=MODEL, messages=messages, temperature=0.2)
@@ -318,7 +399,7 @@ Always compare analyst targets to the CURRENT stock price — a target below the
             return {"error": f"API call failed during forced final: {e}", "search_count": search_count}
         msg = response.choices[0].message
 
-    # ── Extract JSON from Phase 1 ──
+    # Extract JSON
     final_text = (msg.content or "").strip()
     if not final_text:
         return {"error": "Empty final response", "search_count": search_count}
@@ -327,10 +408,10 @@ Always compare analyst targets to the CURRENT stock price — a target below the
         final_text = final_text.split("\n", 1)[1].rsplit("```", 1)[0]
     final_text = final_text.strip()
 
-    # ── Phase 2: Context audit ──
+    # Phase 2: Audit
     print("  🧠 Running context audit layer…")
     audit_messages = [
-        {"role": "system", "content": AUDIT_PROMPT},
+        {"role": "system", "content": AUDIT_PROMPT.format(today=TODAY)},
         {"role": "user", "content": f"Current stock: {ticker}. Review and correct this analysis:\n\n{final_text}"}
     ]
     try:
@@ -344,9 +425,9 @@ Always compare analyst targets to the CURRENT stock price — a target below the
                 final_text = audit_text
                 print("  ✅ Audit layer applied corrections.")
     except Exception as e:
-        print(f"  ⚠️  Audit layer failed (using raw output): {e}")
+        print(f"  ⚠️  Audit layer failed: {e}")
 
-    # ── JSON repair ──
+    # JSON repair
     try:
         result = json.loads(final_text)
     except json.JSONDecodeError:
@@ -388,41 +469,65 @@ if __name__ == "__main__":
         HAS_DB = True
     except ModuleNotFoundError:
         HAS_DB = False
-        print("⚠️  psycopg2 not installed – running without database storage.")
+        print("⚠️  psycopg2 not installed – no DB health check will be performed.")
 
     try:
         with open("data/exposure_profiles.json") as f:
             profiles = json.load(f)
     except FileNotFoundError:
         profiles = {}
-        print("⚠️  No exposure_profiles.json found – using empty profiles.")
+        print("⚠️  No exposure_profiles.json.")
 
     conn = None
     cur = None
-    tickers = []
 
-    if HAS_DB:
-        conn = get_connection()
-        cur = conn.cursor()
-        cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
-        tickers = [row[0] for row in cur.fetchall()]
-    else:
-        tickers = list(profiles.keys())
+    # ═══════════════════════════════════════════════════
+    # TEST MODE: only BBAI
+    # Remove/comment the next line to restore full watchlist
+    # ═══════════════════════════════════════════════════
+    tickers = ["BBAI"]
+
+    # Full watchlist (uncomment when ready):
+    # if HAS_DB:
+    #     conn = get_connection()
+    #     cur = conn.cursor()
+    #     cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
+    #     tickers = [row[0] for row in cur.fetchall()]
+    # else:
+    #     tickers = list(profiles.keys())
 
     for ticker in tickers:
         profile = profiles.get(ticker, {})
-        print(f"\n{'='*60}\n📊 Analyzing {ticker}…\n{'='*60}")
-        result = analyze_stock(ticker, profile)
+        print(f"\n{'='*60}\n📊 Health check for {ticker}…\n{'='*60}")
+
+        health_text = ""
+        if HAS_DB:
+            try:
+                if conn is None:
+                    conn = get_connection()
+                    cur = conn.cursor()
+                snap = build_health_snapshot(ticker, conn)
+                health_text = generate_health_check(ticker, snap)
+                print(health_text[:300] + "…" if len(health_text) > 300 else health_text)
+            except Exception as e:
+                print(f"⚠️  Health check error: {e}")
+
+        print(f"\n{'='*60}\n📊 Catalyst analysis for {ticker}…\n{'='*60}")
+        result = analyze_stock(ticker, health_text)
 
         if "error" in result:
             print(f"❌ Error: {result['error']}")
         else:
             print(f"✅ Net signal: {result.get('net_signal')} (conviction {result.get('conviction')})")
-            print(f"   Catalysts: {len(result.get('active_catalysts', []))}")
-            for cat in result.get("active_catalysts", []):
-                print(f"     - [{cat['type']}] {cat['summary'][:120]}…")
+            grid = result.get("catalyst_grid", [])
+            print(f"   Catalyst grid: {len(grid)} items")
+            for item in grid[:5]:
+                print(f"     [{item.get('type','?')}] {item.get('taxonomy')}: {item.get('status')} (weight {item.get('weight')})")
 
         if HAS_DB and "error" not in result:
+            if conn is None:
+                conn = get_connection()
+                cur = conn.cursor()
             cur.execute("""
                 INSERT INTO signals (ticker, analysis_date, net_signal, conviction,
                     catalyst_stack, key_assumption, raw_json, search_count)
