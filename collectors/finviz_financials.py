@@ -3,7 +3,7 @@
 Finviz Elite Financial Data Collector
 
 Two modes (tried in order):
-  1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
+  1. Authenticated CSV export — auto‑discovers all available views (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
   2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
 """
 
@@ -32,22 +32,19 @@ FINVIZ_EXPORT_URL = "https://elite.finviz.com/export.ashx"
 
 REQUEST_TIMEOUT = 30
 
-VIEWS = {
-    111: "Overview",
-    121: "Valuation",
-    131: "Financial",
-    141: "Ownership",
-    151: "Performance",
-    161: "Technical",
-}
-
+# ── COLUMN MAP (covers every known Finviz field) ──────────────────
+# After each run the logger prints which fields were matched / missing.
+# If a new field appears, add it here and re‑run.
 COLUMN_MAP = {
+    # ---- Overview / General ----
     "Ticker": "ticker",
     "Company": "company",
     "Sector": "sector",
     "Industry": "industry",
     "Country": "country",
     "Market Cap": "market_cap",
+
+    # ---- Valuation ----
     "P/E": "pe",
     "Forward P/E": "forward_pe",
     "PEG": "peg",
@@ -55,12 +52,15 @@ COLUMN_MAP = {
     "P/B": "pb",
     "P/Cash": "p_cash",
     "P/Free Cash Flow": "p_fcf",
-    "Dividend Yield": "dividend_yield",
+
+    # ---- Growth ----
     "EPS Growth This Year": "eps_growth_this_y",
     "EPS Growth Next Year": "eps_growth_next_y",
     "EPS Growth Past 5 Years": "eps_growth_past_5y",
     "EPS Growth Next 5 Years": "eps_growth_next_5y",
     "Sales Growth Past 5 Years": "sales_growth_past_5y",
+
+    # ---- Financials / Ownership ----
     "Shares Outstanding": "shares_outstanding",
     "Shares Float": "float_shares",
     "Insider Ownership": "insider_own",
@@ -69,30 +69,62 @@ COLUMN_MAP = {
     "Institutional Transactions": "inst_trans",
     "Short Float": "float_short",
     "Short Ratio": "short_ratio",
-    "Return on Assets": "roa",
-    "Return on Equity": "roe",
-    "Return on Invested Capital": "roi",
-    "Current Ratio": "current_ratio",
-    "Quick Ratio": "quick_ratio",
-    "LT Debt/Equity": "lt_debt_equity",
-    "Total Debt/Equity": "debt_equity",
-    "Gross Margin": "gross_margin",
-    "Operating Margin": "oper_margin",
-    "Profit Margin": "profit_margin",
+    "Average Volume": "avg_volume",
+    "Relative Volume": "rel_volume",
+
+    # ---- Performance ----
     "Performance (Week)": "perf_week",
     "Performance (Month)": "perf_month",
     "Performance (Quarter)": "perf_quarter",
     "Performance (Half Year)": "perf_half_y",
     "Performance (YTD)": "perf_ytd",
     "Performance (Year)": "perf_year",
+
+    # ---- Volatility ----
     "Volatility (Week)": "volatility_week",
     "Volatility (Month)": "volatility_month",
-    "Average Volume": "avg_volume",
-    "Relative Volume": "rel_volume",
+
+    # ---- Dividends & Returns ----
+    "Dividend Yield": "dividend_yield",
+    "Return on Assets": "roa",
+    "Return on Equity": "roe",
+    "Return on Invested Capital": "roi",
+
+    # ---- Liquidity & Debt ----
+    "Current Ratio": "current_ratio",
+    "Quick Ratio": "quick_ratio",
+    "LT Debt/Equity": "lt_debt_equity",
+    "Total Debt/Equity": "debt_equity",
+
+    # ---- Margins ----
+    "Gross Margin": "gross_margin",
+    "Operating Margin": "oper_margin",
+    "Profit Margin": "profit_margin",
+
+    # ---- Price & Volume ----
     "Price": "price",
     "Change": "change",
     "Volume": "volume",
     "Earnings Date": "earnings_date",
+
+    # ---- Technical (v=171 or wherever they appear) ----
+    "Beta": "beta",
+    "ATR": "atr",
+    "RSI (14)": "rsi",
+    "RSI": "rsi",                         # both possible labels
+    "SMA20": "sma20",
+    "SMA50": "sma50",
+    "SMA200": "sma200",
+    "50D High": "high_50d",
+    "50D Low": "low_50d",
+    "52W High": "high_52w",
+    "52W Low": "low_52w",
+    "from Open": "change_from_open",
+    "Gap": "gap",
+    "Analyst Recom": "analyst_recom",     # might appear as "Recom" or "Analyst Recom"
+    "Recom": "analyst_recom",
+    "Target Price": "target_price",
+    "IPO Date": "ipo_date",
 }
 
 TEXT_COLS = {"ticker", "company", "sector", "industry", "country", "earnings_date", "ipo_date", "snapshot_date"}
@@ -126,7 +158,7 @@ def _normalize_key(s: str) -> str:
     return re.sub(r"[^a-zA-Z0-9_]", "", s.replace(" ", "_")).lower()
 
 
-# ── Mode 1: Authenticated CSV export ───────────────────────────────
+# ── Mode 1: Authenticated CSV export (auto‑discover all views) ────
 def try_elite_export():
     if not FINVIZ_EMAIL or not FINVIZ_PASSWORD:
         print("  No FINVIZ_EMAIL/PASSWORD set — skipping Elite export.", flush=True)
@@ -151,6 +183,7 @@ def try_elite_export():
         print(f"  Login request failed: {e}", flush=True)
         return None
 
+    # Quick sanity check
     try:
         test = session.get(f"{FINVIZ_EXPORT_URL}?v=111", timeout=REQUEST_TIMEOUT)
         first_bytes = test.content[:200].decode("utf-8", errors="ignore")
@@ -164,38 +197,63 @@ def try_elite_export():
         print(f"  Test export failed: {e}", flush=True)
         return None
 
-    print("  Login OK. Downloading views...", flush=True)
-    dfs = []
-    for view_id, view_name in VIEWS.items():
+    print("  Login OK. Auto‑discovering views (IDs 100‑199)...", flush=True)
+
+    view_data = {}          # view_id -> DataFrame
+    for view_id in range(100, 200):
         try:
             r = session.get(f"{FINVIZ_EXPORT_URL}?v={view_id}", timeout=REQUEST_TIMEOUT)
-            if r.status_code != 200 or r.text.strip().startswith("<!"):
-                print(f"    {view_name} (v={view_id}): SKIP — non-CSV response", flush=True)
+            if r.status_code != 200 or r.text.strip().startswith("<!") or len(r.text) < 50:
                 continue
             df = pd.read_csv(StringIO(r.text))
+            if df.empty or "Ticker" not in df.columns:
+                continue
             if "No." in df.columns:
                 df = df.drop(columns=["No."])
-            print(f"    {view_name} (v={view_id}): {len(df)} stocks, {len(df.columns)} cols", flush=True)
-            print(f"      Columns: {list(df.columns)}", flush=True)
-            dfs.append(df)
-            time.sleep(1)
-        except requests.exceptions.Timeout:
-            print(f"    {view_name} (v={view_id}): SKIP — timed out", flush=True)
-        except Exception as e:
-            print(f"    {view_name} (v={view_id}): SKIP — {e}", flush=True)
 
-    if not dfs:
+            stock_count = len(df)
+            col_count = len(df.columns)
+
+            # Skip duplicate views (identical column set)
+            cols_set = frozenset(df.columns)
+            duplicate = False
+            for existing_df in view_data.values():
+                if frozenset(existing_df.columns) == cols_set and len(existing_df.columns) == col_count:
+                    duplicate = True
+                    break
+            if duplicate:
+                continue
+
+            view_data[view_id] = df
+            print(f"    v={view_id}: {stock_count} stocks, {col_count} cols  — {list(df.columns)[:8]}...", flush=True)
+            time.sleep(0.6)
+        except requests.exceptions.Timeout:
+            continue
+        except Exception as e:
+            print(f"    v={view_id}: error {e}", flush=True)
+            continue
+
+    if not view_data:
+        print("  No views discovered.", flush=True)
         return None
 
-    merged = dfs[0]
-    for df in dfs[1:]:
-        new_cols = ["Ticker"] + [c for c in df.columns if c not in merged.columns]
-        if len(new_cols) > 1:
-            merged = merged.merge(df[new_cols], on="Ticker", how="outer")
+    print(f"\n  Discovered {len(view_data)} unique views. Merging...", flush=True)
+
+    # Merge all discovered views on "Ticker"
+    merged = None
+    for view_id, df in view_data.items():
+        if merged is None:
+            merged = df
+        else:
+            new_cols = ["Ticker"] + [c for c in df.columns if c not in merged.columns]
+            if len(new_cols) > 1:
+                merged = merged.merge(df[new_cols], on="Ticker", how="outer")
+
+    print(f"  Merged dataset: {len(merged)} stocks, {len(merged.columns)} unique columns", flush=True)
     return merged
 
 
-# ── Mode 2: Manual CSV drop ────────────────────────────────────────
+# ── Mode 2: Manual CSV drop ──────────────────────────────────────
 def try_manual_csv():
     manual_path = EXPORTS_DIR / "finviz_latest.csv"
     if not manual_path.exists():
@@ -207,15 +265,14 @@ def try_manual_csv():
     return df
 
 
-# ── Store in DB (ROBUST COLUMN MATCHING) ──────────────────────────
+# ── Store in DB (robust column matching) ─────────────────────────
 def store(conn, cur, df, snapshot_date):
-    # 1. Print all CSV headers for debugging
-        # 1. Print ALL CSV headers for debugging
+    # 1. Print ALL CSV headers for debugging
     print(f"  ALL CSV headers ({len(df.columns)} total):", flush=True)
     for i, h in enumerate(df.columns):
         print(f"    [{i}] '{h}'", flush=True)
 
-    # Also write to a file so we can retrieve it even if logs truncate
+    # Also write to a file
     header_log = EXPORTS_DIR / "finviz_headers.txt"
     with open(header_log, "w") as hf:
         for i, h in enumerate(df.columns):
@@ -260,7 +317,7 @@ def store(conn, cur, df, snapshot_date):
             continue
         rows.append(tuple(values))
 
-    # 5. Show sample row for AAOI or first row
+    # 5. Show sample row (first ticker found)
     if rows:
         sample = rows[0]
         ticker_idx = cols_ordered.index("ticker") if "ticker" in cols_ordered else 0
@@ -293,7 +350,7 @@ def main():
     snapshot_date = datetime.now().strftime("%Y-%m-%d")
     df = None
 
-    print("\n--- Mode 1: Elite CSV Export ---", flush=True)
+    print("\n--- Mode 1: Elite CSV Export (auto‑discover) ---", flush=True)
     df = try_elite_export()
 
     if df is None:
