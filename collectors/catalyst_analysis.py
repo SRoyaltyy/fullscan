@@ -944,7 +944,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
     prompt2 = _format_step2(ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
 
-    def call_llm(prompt, user_msg, temperature=0.1, max_tokens=3000):
+    def call_llm(prompt, user_msg, temperature=0.1, max_tokens=15000):
         messages = [
             {"role": "system", "content": prompt},
             {"role": "user", "content": user_msg}
@@ -953,8 +953,8 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         return resp.choices[0].message.content.strip()
 
     print("  🧠 Running Step 1 (event extraction) and Step 2 (context sensitivity) in parallel...")
-    step1_task = asyncio.to_thread(call_llm, prompt1, f"Extract all evidence for {ticker}.")
-    step2_task = asyncio.to_thread(call_llm, prompt2, f"Analyze company context for {ticker}.")
+    step1_task = asyncio.to_thread(call_llm, prompt1, f"Extract all evidence for {ticker}.", 0.1, 15000)
+    step2_task = asyncio.to_thread(call_llm, prompt2, f"Analyze company context for {ticker}.", 15000)
     step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
     print("  ✅ Step 1 LLM done.")
     print("  ✅ Step 2 LLM done.")
@@ -994,7 +994,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         snapshot_json=json.dumps(snapshot, indent=2, default=str)
     )
     print("  🧠 Running Step 4 (final synthesis)...")
-    final_raw = call_llm(prompt4, f"Synthesize final analysis for {ticker}.", temperature=0.3)
+    final_raw = call_llm(prompt4, f"Synthesize final analysis for {ticker}.", temperature=0.3, max_token=15000)
     try:
         final_result = parse_json(final_raw)
     except Exception as e:
