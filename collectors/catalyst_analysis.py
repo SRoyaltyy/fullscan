@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Full Async, Exhaustive Prompts, Verbose Logging
+Catalyst Analysis Engine v2 – Full Async, Completely Granular Searches,
+Company‑Name‑Aware Prompts, Verbose Logging
 
 Phase 0 : DB Snapshot
-Phase 1 : Async Event Hunter (24 catalyst searches, LLM extraction – flat list)
-Phase 2 : Async Company Context (12 context searches, LLM sensitivity profile)
+Phase 1 : Async Event Hunter (~70 granular catalyst searches, LLM extraction)
+Phase 2 : Async Company Context (~35 granular context searches, LLM sensitivity)
 Phase 3 : Weighting (Python)
 Phase 4 : Final Synthesis (LLM verdict – classifies events into grid)
 All intermediate data is printed directly to the log.
@@ -18,8 +19,8 @@ from openai import OpenAI
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-SEARCH_CONCURRENCY   = 8
-SEARCH_DELAY         = 0.2
+SEARCH_CONCURRENCY   = 10         # higher concurrency for many small queries
+SEARCH_DELAY         = 0.1        # shorter delay between batches
 MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
@@ -98,50 +99,178 @@ def safe_create(**kwargs):
             else:
                 raise
 
-# ── Search templates ────────────────────────────────────
-CATALYST_SEARCH_TEMPLATES = [
-    "{ticker} contract award win expansion 2025 2026",
-    "{ticker} strategic partnership alliance joint venture 2025 2026",
-    "{ticker} product launch FDA approval regulatory greenlight 2025 2026",
-    "{ticker} analyst upgrade downgrade price target initiation 2025 2026",
-    "{ticker} CEO CFO management change appointment departure 2025 2026",
-    "{ticker} capital raise PIPE funding round offering 2025 2026",
-    "{ticker} share buyback repurchase dividend increase 2025 2026",
-    "{ticker} earnings beat miss revenue EBITDA EPS results 2025 2026",
-    "{ticker} earnings guidance raise cut outlook 2025 2026",
-    "{ticker} acquisition merger divestiture spin-off 2025 2026",
-    "{ticker} operational milestone capacity expansion factory 2025 2026",
-    "{ticker} product delay failure recall safety 2025 2026",
-    "{ticker} insider trading buying selling CEO CFO Form 4 2025 2026",
-    "{ticker} activist investor 13D stake accumulation 2025 2026",
-    "{ticker} institutional ownership 13F filing increase decrease 2025 2026",
-    "{ticker} supply chain disruption de-risking factory fire shipping 2025 2026",
-    "{ticker} patent grant litigation IP theft lawsuit 2025 2026",
-    "{ticker} sector tailwind headwind rotation 2025 2026",
-    "{ticker} commodity price impact input cost 2025 2026",
-    "{ticker} tariff trade policy impact 2025 2026",
-    "{ticker} short interest short squeeze bear raid 2025 2026",
-    "{ticker} technical analysis breakout breakdown moving average 2026",
-    "{ticker} geopolitical impact sanctions conflict 2025 2026",
-    "{ticker} regulatory approval denial antitrust block 2025 2026",
-]
+# ── GRANULAR SEARCH TEMPLATES ─────────────────────────
+#   Every single concept has its own query.
+#   {full_name} = "Company Name SERV" format.
 
-CONTEXT_SEARCH_TEMPLATES = [
-    "{ticker} revenue breakdown by segment product customer type geography",
-    "{ticker} business model recurring revenue subscription one-time",
-    "{ticker} customer concentration largest client revenue percent",
-    "{ticker} cost structure input costs raw materials commodities",
-    "{ticker} supply chain manufacturing exposure China reshoring",
-    "{ticker} operating leverage fixed variable cost margin structure",
-    "{ticker} competitive advantage moat market share pricing power",
-    "{ticker} industry barriers to entry switching costs",
-    "{ticker} debt maturity floating fixed rate interest rate sensitivity",
-    "{ticker} regulatory environment government contracts exposure",
-    "{ticker} management track record capital allocation history",
-    "{ticker} litigation risk pending lawsuits regulatory investigation",
-]
+def _make_catalyst_templates(full_name):
+    """Return a list of ~70 individual, focused catalyst queries."""
+    return [
+        # ── Contracts ──
+        f"{full_name} contract award win 2025 2026",
+        f"{full_name} contract expansion 2025 2026",
+        f"{full_name} contract loss non-renewal 2025 2026",
 
-# ── Taxonomy ────────────────────────────────────────────
+        # ── Partnerships ──
+        f"{full_name} strategic partnership 2025 2026",
+        f"{full_name} alliance joint venture 2025 2026",
+        f"{full_name} partnership dissolution 2025 2026",
+
+        # ── Products / Regulatory ──
+        f"{full_name} new product launch 2025 2026",
+        f"{full_name} FDA approval 2025 2026",
+        f"{full_name} regulatory greenlight 2025 2026",
+        f"{full_name} product delay failure 2025 2026",
+        f"{full_name} product recall safety 2025 2026",
+
+        # ── Analyst ──
+        f"{full_name} analyst upgrade 2025 2026",
+        f"{full_name} analyst downgrade 2025 2026",
+        f"{full_name} analyst price target increase 2025 2026",
+        f"{full_name} analyst price target cut 2025 2026",
+        f"{full_name} analyst initiation coverage 2025 2026",
+
+        # ── Management ──
+        f"{full_name} CEO change departure 2025 2026",
+        f"{full_name} CFO management change 2025 2026",
+        f"{full_name} board member appointment 2025 2026",
+        f"{full_name} executive resignation scandal 2025 2026",
+
+        # ── Capital / Financing ──
+        f"{full_name} capital raise PIPE 2025 2026",
+        f"{full_name} funding round offering 2025 2026",
+        f"{full_name} dilutive offering down round 2025 2026",
+        f"{full_name} share buyback repurchase 2025 2026",
+        f"{full_name} dividend increase 2025 2026",
+        f"{full_name} dividend cut suspension 2025 2026",
+
+        # ── Earnings ──
+        f"{full_name} earnings beat 2025 2026",
+        f"{full_name} earnings miss 2025 2026",
+        f"{full_name} earnings guidance raise 2025 2026",
+        f"{full_name} earnings guidance cut 2025 2026",
+        f"{full_name} revenue results 2025 2026",
+        f"{full_name} EBITDA EPS results 2025 2026",
+
+        # ── M&A ──
+        f"{full_name} acquisition merger 2025 2026",
+        f"{full_name} divestiture spin-off 2025 2026",
+        f"{full_name} failed acquisition overpayment 2025 2026",
+
+        # ── Operations ──
+        f"{full_name} operational milestone 2025 2026",
+        f"{full_name} capacity expansion factory 2025 2026",
+        f"{full_name} operational setback trial halted 2025 2026",
+        f"{full_name} production halt 2025 2026",
+
+        # ── Insider Trading ──
+        f"{full_name} insider buying CEO CFO 2025 2026",
+        f"{full_name} insider selling CEO CFO 2025 2026",
+        f"{full_name} Form 4 SEC filing insider 2025 2026",
+        f"{full_name} insider trading cluster sales 2025 2026",
+
+        # ── Activist / Institutional ──
+        f"{full_name} activist investor 13D stake 2025 2026",
+        f"{full_name} activist exits stake 2025 2026",
+        f"{full_name} institutional ownership 13F increase 2025 2026",
+        f"{full_name} institutional ownership decline 2025 2026",
+
+        # ── Supply Chain ──
+        f"{full_name} supply chain disruption 2025 2026",
+        f"{full_name} factory fire shipping 2025 2026",
+        f"{full_name} supply chain de-risking reshoring 2025 2026",
+
+        # ── IP / Litigation ──
+        f"{full_name} patent grant 2025 2026",
+        f"{full_name} patent litigation lawsuit 2025 2026",
+        f"{full_name} IP theft 2025 2026",
+
+        # ── Sector / Macro ──
+        f"{full_name} sector tailwind 2025 2026",
+        f"{full_name} sector headwind rotation 2025 2026",
+        f"{full_name} commodity price impact 2025 2026",
+        f"{full_name} tariff trade policy 2025 2026",
+        f"{full_name} government subsidy mandate 2025 2026",
+
+        # ── Technical / Market Mechanics ──
+        f"{full_name} short interest 2025 2026",
+        f"{full_name} short squeeze 2025 2026",
+        f"{full_name} bear raid short attack 2025 2026",
+        f"{full_name} technical breakout 2026",
+        f"{full_name} technical breakdown death cross 2026",
+
+        # ── Geopolitical / Regulatory ──
+        f"{full_name} geopolitical impact sanctions 2025 2026",
+        f"{full_name} regulatory approval 2025 2026",
+        f"{full_name} regulatory denial antitrust 2025 2026",
+    ]
+
+def _make_context_templates(full_name):
+    """Return a list of ~35 individual, focused context queries."""
+    return [
+        # ── Revenue ──
+        f"{full_name} revenue breakdown by segment",
+        f"{full_name} revenue by customer type",
+        f"{full_name} revenue geography domestic international",
+        f"{full_name} revenue government contracts percentage",
+        f"{full_name} commercial vs consumer revenue mix",
+
+        # ── Customer Concentration ──
+        f"{full_name} customer concentration largest client",
+        f"{full_name} customer concentration risk",
+
+        # ── Business Model ──
+        f"{full_name} business model",
+        f"{full_name} recurring revenue subscription",
+
+        # ── Cost Structure ──
+        f"{full_name} cost structure input costs",
+        f"{full_name} raw materials commodities exposure",
+        f"{full_name} COGS breakdown",
+
+        # ── Supply Chain ──
+        f"{full_name} supply chain manufacturing",
+        f"{full_name} China exposure manufacturing",
+        f"{full_name} supplier concentration risk",
+
+        # ── Operating Leverage ──
+        f"{full_name} operating leverage fixed variable costs",
+        f"{full_name} margin structure",
+
+        # ── Competitive Position ──
+        f"{full_name} competitive advantage moat",
+        f"{full_name} market share",
+        f"{full_name} pricing power",
+        f"{full_name} industry barriers to entry",
+        f"{full_name} switching costs",
+        f"{full_name} competitors peer comparison",
+
+        # ── Financial ──
+        f"{full_name} debt structure maturity",
+        f"{full_name} interest rate sensitivity floating fixed",
+        f"{full_name} cash burn rate runway",
+
+        # ── Regulatory ──
+        f"{full_name} regulatory environment",
+        f"{full_name} government contracts exposure",
+
+        # ── Management ──
+        f"{full_name} CEO track record",
+        f"{full_name} management capital allocation",
+        f"{full_name} insider ownership percentage",
+
+        # ── Litigation ──
+        f"{full_name} litigation risk pending lawsuits",
+        f"{full_name} patent portfolio IP protection",
+
+        # ── Growth ──
+        f"{full_name} organic vs acquisitive growth",
+        f"{full_name} order backlog visibility",
+        f"{full_name} capacity expansion plans",
+        f"{full_name} end market growth rate",
+    ]
+
+# ── Taxonomy, weights (unchanged from your working version) ─────
 TAXONOMY_LIST = [
     "Contract win/expansion",
     "Strategic partnership/alliance",
@@ -280,11 +409,17 @@ CATALYST_WEIGHTS = {
     "Institutional ownership decline (major holders reducing stakes)": 6,
 }
 
-# ── Prompt templates ────────────────────────────────────
+# ── Prompt Templates (with company‑name verification) ──
 STEP1_TEMPLATE = """
-You are an event extraction engine. Your ONLY input is the search
-results below for {ticker}. Extract every distinct event that could
-affect the company's stock price in a 1‑2 week horizon.
+You are an event extraction engine. Your input is the search results below
+for {full_name} (ticker: {ticker}).
+
+CRITICAL: The articles below may mention other companies. You MUST verify
+that the article refers to {full_name} BEFORE extracting an event.
+- If a snippet mentions ANI Pharmaceuticals, Pipe, Pool, Apple, Verisk,
+  Bar Harbor Bankshares, or any company that is NOT {full_name}, DISCARD IT.
+- Only create events for snippets that explicitly mention {full_name} or
+  its ticker {ticker}.
 
 Rules:
 - Describe each event in one sentence.
@@ -302,8 +437,8 @@ Return ONLY a JSON array. No other text.
 [
   {{
     "event_date": "2026-03-02",
-    "description": "Q4 revenue of $27.3M missed consensus.",
-    "evidence_excerpt": "\\"revenue of $27.3M missed the $32M consensus\\"",
+    "description": "{full_name} reported Q4 revenue of $27.3M.",
+    "evidence_excerpt": "\\"revenue of $27.3M\\"",
     "source_urls": ["https://..."],
     "confidence": 90
   }},
@@ -579,10 +714,12 @@ Institutional ownership decline:
 
 STEP2_TEMPLATE = """
 You are a COMPANY CONTEXT ANALYST. Your inputs are:
-1. A financial snapshot of {ticker} (from a database).
-2. Search snippets about {ticker}'s business model, operations, and risks.
+1. A financial snapshot of {full_name} (ticker: {ticker}) from a database.
+2. Search snippets about {full_name} (ticker: {ticker})'s business model,
+   operations, and risks.
 
-Your output will be used to adjust the weighting of catalysts for {ticker}.
+CRITICAL: Only use snippets that explicitly refer to {full_name}. Discard
+any snippet about a different company.
 
 FINANCIAL SNAPSHOT:
 {snapshot}
@@ -680,7 +817,7 @@ Return ONLY this JSON.
   "sensitivity_profile": {{
     "Contract win/expansion": {{
       "multiplier": 1.3,
-      "rationale": "High revenue concentration (45% from single client) amplifies contract wins. [source: Q1c]"
+      "rationale": "High revenue concentration amplifies contract wins. [source: Q1c]"
     }},
     ... for ALL catalysts ...
   }},
@@ -689,10 +826,11 @@ Return ONLY this JSON.
 """
 
 STEP4_TEMPLATE = """
-You are a FINAL CATALYST SYNTHESIZER for {ticker} on {today}.
+You are a FINAL CATALYST SYNTHESIZER for {full_name} (ticker: {ticker}) on {today}.
 
 INPUTS:
-1. Raw events – a flat list of events extracted from web searches.
+1. Raw events – a flat list of events extracted from web searches. These
+   have been verified to be about {full_name} only.
 {raw_events_json}
 
 2. Weighted taxonomy – each catalyst has a base weight and an
@@ -781,8 +919,9 @@ Return ONLY this JSON.
 """
 
 # ── Helpers for prompt formatting ──────────────────────
-def _format_step1(ticker, today, lookback_start, search_results_json, taxonomy_list_str):
+def _format_step1(full_name, ticker, today, lookback_start, search_results_json, taxonomy_list_str):
     return STEP1_TEMPLATE.format(
+        full_name=full_name,
         ticker=ticker,
         today=today,
         lookback_start=lookback_start,
@@ -790,8 +929,9 @@ def _format_step1(ticker, today, lookback_start, search_results_json, taxonomy_l
         taxonomy_list_str=taxonomy_list_str,
     )
 
-def _format_step2(ticker, snapshot, context_search_results, amp_damp_table, taxonomy_list_str):
+def _format_step2(full_name, ticker, snapshot, context_search_results, amp_damp_table, taxonomy_list_str):
     return STEP2_TEMPLATE.format(
+        full_name=full_name,
         ticker=ticker,
         snapshot=json.dumps(snapshot, indent=2, default=str),
         context_search_results=context_search_results,
@@ -799,8 +939,9 @@ def _format_step2(ticker, snapshot, context_search_results, amp_damp_table, taxo
         taxonomy_list_str=taxonomy_list_str,
     )
 
-def _format_step4(ticker, today, raw_events_json, weighted_taxonomy_json, snapshot_json):
+def _format_step4(full_name, ticker, today, raw_events_json, weighted_taxonomy_json, snapshot_json):
     return STEP4_TEMPLATE.format(
+        full_name=full_name,
         ticker=ticker,
         today=today,
         raw_events_json=raw_events_json,
@@ -815,13 +956,11 @@ def parse_json(raw):
     if raw.startswith("```"):
         raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
 
-    # Attempt 1 – direct
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
         pass
 
-    # Attempt 2 – remove trailing commas
     cleaned = re.sub(r",\s*}", "}", raw)
     cleaned = re.sub(r",\s*]", "]", cleaned)
     try:
@@ -829,19 +968,17 @@ def parse_json(raw):
     except json.JSONDecodeError:
         pass
 
-    # Attempt 3 – fix unescaped quotes inside strings
     repaired = re.sub(r'(?<!\\)"(?=(?:(?<!\\)(?:\\\\)*\\")*[^"]*$)', r'\"', cleaned)
     try:
         return json.loads(repaired)
     except json.JSONDecodeError:
         pass
 
-    # Attempt 4 – ask DeepSeek to fix
     try:
         fix_resp = safe_create(
             model=MODEL,
             messages=[
-                {"role": "system", "content": "Return ONLY valid JSON. Close all open brackets/braces. Use single quotes inside string values."},
+                {"role": "system", "content": "Return ONLY valid JSON. Close all open brackets/braces."},
                 {"role": "user", "content": f"Fix this JSON:\n\n{raw[:20000]}"}
             ],
             temperature=0.0,
@@ -854,7 +991,6 @@ def parse_json(raw):
     except Exception:
         pass
 
-    # Attempt 5 – truncate at last valid object
     last_good = 0
     brace_count = 0
     in_string = False
@@ -877,7 +1013,6 @@ def parse_json(raw):
             brace_count -= 1
             if brace_count == 0:
                 last_good = i + 1
-
     if last_good > 0:
         truncated = cleaned[:last_good] + "\n    ]\n  }"
         try:
@@ -887,9 +1022,8 @@ def parse_json(raw):
 
     raise ValueError(f"All JSON repair strategies failed. Raw start: {raw[:200]}")
 
-# ── LLM caller with explicit keyword defaults ──────────
+# ── LLM caller ─────────────────────────────────────────
 def call_llm(prompt, user_msg, temperature=0.3, max_tokens=15000):
-    """Call DeepSeek with explicit keyword-safe defaults."""
     messages = [
         {"role": "system", "content": prompt},
         {"role": "user", "content": user_msg}
@@ -902,84 +1036,87 @@ def call_llm(prompt, user_msg, temperature=0.3, max_tokens=15000):
     )
     return resp.choices[0].message.content.strip()
 
-# ── Build empty evidence grid (all MISS) ────────────────
 def build_evidence_grid_from_events(events, taxonomy_list):
-    """Convert a flat event list into a 66-item evidence grid (all MISS)."""
     grid = []
     for catalyst in taxonomy_list:
-        grid.append({
-            "catalyst": catalyst,
-            "status": "MISS",
-            "confidence": 0
-        })
+        grid.append({"catalyst": catalyst, "status": "MISS", "confidence": 0})
     return grid
 
 # ── Async analysis pipeline ────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
+    # Determine full name for search
+    full_name = snapshot.get("profile", {}).get("company_name", ticker)
+    if not full_name or full_name == ticker:
+        full_name = ticker
+    else:
+        full_name = f"{full_name} {ticker}"
+
     taxonomy_list_str = "\n".join(TAXONOMY_LIST)
 
-    print(f"  ⏳ Preparing {len(CATALYST_SEARCH_TEMPLATES)} catalyst search queries...")
-    catalyst_queries = [q.format(ticker=ticker) for q in CATALYST_SEARCH_TEMPLATES]
-    context_queries = [q.format(ticker=ticker) for q in CONTEXT_SEARCH_TEMPLATES]
+    # Build granular search queries
+    catalyst_queries = _make_catalyst_templates(full_name)
+    context_queries = _make_context_templates(full_name)
 
-    print(f"  🔎 Launching {len(catalyst_queries)} catalyst + {len(context_queries)} context searches in parallel...")
+    print(f"  Full name for searches: {full_name}")
+    print(f"  ⏳ Preparing {len(catalyst_queries)} catalyst + {len(context_queries)} context search queries...")
+
+    # Print all queries
+    print("\n  ── Catalyst Queries ──")
+    for i, q in enumerate(catalyst_queries):
+        print(f"    [{i+1}] {q}")
+    print("  ── Context Queries ──")
+    for i, q in enumerate(context_queries):
+        print(f"    [{i+1}] {q}")
+
+    print(f"\n  🔎 Launching all {len(catalyst_queries) + len(context_queries)} searches in parallel...")
     catalyst_task = batch_search(catalyst_queries, searxng_url)
     context_task = batch_search(context_queries, searxng_url)
     catalyst_results, context_results = await asyncio.gather(catalyst_task, context_task)
-    print(f"  ✅ Catalyst searches complete: {sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
-    print(f"  ✅ Context searches complete: {sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
 
-    # ── DUMP SEARCH QUERIES & RAW SNIPPETS ──
+    cat_with = sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))
+    ctx_with = sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))
+    print(f"  ✅ Catalyst searches: {cat_with}/{len(catalyst_queries)} with results")
+    print(f"  ✅ Context searches:  {ctx_with}/{len(context_queries)} with results")
+
+    # ── DUMP SEARCH RESULTS ──
     print("\n" + "="*80)
-    print("  🔎 CATALYST SEARCH QUERIES & RAW RESULTS")
+    print("  🔎 CATALYST SEARCH RESULTS")
     print("="*80)
     for q, v in catalyst_results.items():
         print(f"\n  QUERY: {q}")
-        print(f"  RESULT: {v[:600]}{'...' if len(v)>600 else ''}")
+        print(f"  RESULT: {v[:500]}{'...' if len(v)>500 else ''}")
         print("  ──")
     print("\n" + "="*80)
-    print("  🔎 CONTEXT SEARCH QUERIES & RAW RESULTS")
+    print("  🔎 CONTEXT SEARCH RESULTS")
     print("="*80)
     for q, v in context_results.items():
         print(f"\n  QUERY: {q}")
-        print(f"  RESULT: {v[:600]}{'...' if len(v)>600 else ''}")
+        print(f"  RESULT: {v[:500]}{'...' if len(v)>500 else ''}")
         print("  ──")
 
     # Prepare prompts
     search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
-    prompt1 = _format_step1(ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
+    prompt1 = _format_step1(full_name, ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
 
     context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
-    prompt2 = _format_step2(ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
+    prompt2 = _format_step2(full_name, ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
 
     print("  🧠 Running Step 1 (event extraction) and Step 2 (context sensitivity) in parallel...")
-    step1_task = asyncio.to_thread(
-        call_llm,
-        prompt=prompt1,
-        user_msg=f"Extract all events for {ticker}.",
-        temperature=0.3,
-        max_tokens=15000
-    )
-    step2_task = asyncio.to_thread(
-        call_llm,
-        prompt=prompt2,
-        user_msg=f"Analyze company context for {ticker}.",
-        temperature=0.3,
-        max_tokens=15000
-    )
+    step1_task = asyncio.to_thread(call_llm, prompt=prompt1, user_msg=f"Extract all events for {full_name}.")
+    step2_task = asyncio.to_thread(call_llm, prompt=prompt2, user_msg=f"Analyze company context for {full_name}.")
     step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
     print("  ✅ Step 1 LLM done.")
     print("  ✅ Step 2 LLM done.")
 
-    # Parse Step 1 – raw events list
+    # Parse Step 1
     try:
         raw_events = parse_json(step1_raw)
         if isinstance(raw_events, dict):
             raw_events = raw_events.get("events", raw_events.get("evidence_grid", []))
         if not isinstance(raw_events, list):
             raise ValueError("Step 1 output is not a list")
-        print(f"  📋 Step 1 extracted {len(raw_events)} raw events")
-        # ── DUMP RAW EVENTS ──
+        print(f"  📋 Step 1 extracted {len(raw_events)} raw events for {full_name}")
+        # Dump raw events
         print("\n" + "="*80)
         print("  📋 RAW EVENTS (STEP 1 OUTPUT)")
         print("="*80)
@@ -994,14 +1131,14 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         print(f"  ❌ Failed to parse Step 1 output: {e}")
         return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
 
-    # Parse Step 2 – context profile
+    # Parse Step 2
     try:
         context_profile = parse_json(step2_raw)
     except Exception as e:
         print(f"  ❌ Failed to parse Step 2 JSON: {e}")
         return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
 
-    # ── DUMP CONTEXT QUESTIONNAIRE ──
+    # Dump context questionnaire
     extracted = context_profile.get("extracted_context", {})
     if extracted:
         print("\n" + "="*80)
@@ -1012,9 +1149,8 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             for q, a in answers.items():
                 print(f"    {q}: {a}")
 
-    # Step 3: Weighting
+    # Dump sensitivity profile
     sensitivity = context_profile.get("sensitivity_profile", {})
-    # ── DUMP SENSITIVITY PROFILE ──
     if sensitivity:
         print("\n" + "="*80)
         print("  📈 SENSITIVITY PROFILE (STEP 2 PART 2)")
@@ -1022,6 +1158,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         for cat, val in sensitivity.items():
             print(f"  {cat}: multiplier={val.get('multiplier')} | {val.get('rationale','')}")
 
+    # Step 3: Weighting
     weighted_taxonomy = {}
     for catalyst, profile in sensitivity.items():
         base = CATALYST_WEIGHTS.get(catalyst, 5)
@@ -1034,15 +1171,15 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             "rationale": profile.get("rationale", "")
         }
 
-    # ── DUMP WEIGHTED TAXONOMY ──
     print("\n" + "="*80)
     print("  ⚖️  WEIGHTED TAXONOMY (STEP 3)")
     print("="*80)
     for cat, w in weighted_taxonomy.items():
         print(f"  {cat}: base={w['base_weight']} × {w['multiplier']} = {w['adjusted_weight']} | {w.get('rationale','')}")
 
-    # Step 4: Final synthesis (classify events and produce grid)
+    # Step 4: Final synthesis
     prompt4 = _format_step4(
+        full_name=full_name,
         ticker=ticker,
         today=TODAY,
         raw_events_json=json.dumps(raw_events, indent=2),
@@ -1050,12 +1187,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         snapshot_json=json.dumps(snapshot, indent=2, default=str)
     )
     print("  🧠 Running Step 4 (final synthesis)...")
-    final_raw = call_llm(
-        prompt=prompt4,
-        user_msg=f"Synthesize final analysis for {ticker}.",
-        temperature=0.3,
-        max_tokens=15000
-    )
+    final_raw = call_llm(prompt=prompt4, user_msg=f"Synthesize final analysis for {full_name}.", temperature=0.3, max_tokens=15000)
     try:
         final_result = parse_json(final_raw)
     except Exception as e:
@@ -1068,7 +1200,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
 def analyze_stock(ticker, snapshot, searxng_url):
     return asyncio.run(analyze_stock_async(ticker, snapshot, searxng_url))
 
-# ── Main loop (test on BBAI) ──────────────────────────
+# ── Main loop (test on one ticker) ────────────────────
 if __name__ == "__main__":
     try:
         from db.connection import get_connection
@@ -1087,6 +1219,7 @@ if __name__ == "__main__":
     conn = None
     cur = None
 
+    # ── Set ticker here ──
     tickers = ["SERV"]
 
     for ticker in tickers:
@@ -1117,7 +1250,7 @@ if __name__ == "__main__":
             misses = [c for c in grid if c.get("status") == "MISS"]
             nas = [c for c in grid if c.get("status") == "N/A"]
             print(f"   Grid: {len(grid)} catalysts | HIT: {len(hits)} | MISS: {len(misses)} | N/A: {len(nas)}")
-            # Print ALL HITs
+
             print("\n" + "="*80)
             print("  🟢🔴 ALL HIT CATALYSTS")
             print("="*80)
@@ -1130,16 +1263,16 @@ if __name__ == "__main__":
                 print(f"      Confidence: {h.get('confidence','')}")
                 print(f"      Rationale: {h.get('sensitivity_rationale','')}")
                 print("  ──")
-            # Print MISS summary
+
             print("\n" + "="*80)
-            print("  ⚪ MISS CATALYSTS (searched, nothing found)")
+            print("  ⚪ MISS CATALYSTS")
             print("="*80)
             for m in misses:
                 print(f"  {m.get('taxonomy')}")
-            # Print N/A summary
+
             if nas:
                 print("\n" + "="*80)
-                print("  ⛔ N/A CATALYSTS (not applicable to this company)")
+                print("  ⛔ N/A CATALYSTS")
                 print("="*80)
                 for n in nas:
                     print(f"  {n.get('taxonomy')}")
