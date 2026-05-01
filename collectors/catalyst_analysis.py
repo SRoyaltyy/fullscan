@@ -3,7 +3,7 @@
 Catalyst Analysis Engine v2 – Full Async, Exhaustive Prompts
 
 Phase 0 : DB Snapshot
-Phase 1 : Async Event Hunter (25 catalyst searches, LLM extraction)
+Phase 1 : Async Event Hunter (24 catalyst searches, LLM extraction)
 Phase 2 : Async Company Context (12 context searches, LLM sensitivity profile)
 Phase 3 : Weighting (Python)
 Phase 4 : Final Synthesis (LLM verdict)
@@ -210,7 +210,7 @@ TAXONOMY_LIST = [
     "Institutional ownership decline (major holders reducing stakes)",
 ]
 
-# ── Base catalyst weights (same as before) ─────────────
+# ── Base catalyst weights ───────────────────────────────
 CATALYST_WEIGHTS = {
     "Contract win/expansion": 8,
     "Strategic partnership/alliance": 6,
@@ -280,15 +280,17 @@ CATALYST_WEIGHTS = {
     "Institutional ownership decline (major holders reducing stakes)": 6,
 }
 
-# ── Step 1 System Prompt (Event Hunter) ─────────────────
-STEP1_SYSTEM_PROMPT = f"""
-You are an exhaustive financial event auditor. Your mission is to find
-evidence for EVERY catalyst in the attached TAXONOMY for stock {{ticker}}.
+# ── Prompts (regular strings, placeholders filled later) ──
 
-TODAY is {{today}}. The LOOKBACK window is {{lookback_start}} to {{today}}.
+# ----- Step 1 Template -----
+STEP1_TEMPLATE = """
+You are an exhaustive financial event auditor. Your mission is to find
+evidence for EVERY catalyst in the attached TAXONOMY for stock {ticker}.
+
+TODAY is {today}. The LOOKBACK window is {lookback_start} to {today}.
 
 TAXONOMY (every catalyst you must check):
-{chr(10).join(TAXONOMY_LIST)}
+{taxonomy_list_str}
 
 PHASE 1: Create a Search Plan
 For each catalyst, create at least ONE highly specific search query using the
@@ -310,7 +312,7 @@ Output the plan as JSON:
 (Code will execute all queries and return results for Phase 2.)
 
 PHASE 2: Extract Evidence from Search Results
-Below are the search results for {{ticker}}, organized by catalyst.
+Below are the search results for {ticker}, organized by catalyst.
 For each catalyst, examine the snippets and:
 
 - If a catalyst occurred: extract the EXACT date (YYYY-MM-DD), a VERBATIM
@@ -323,12 +325,12 @@ For each catalyst, examine the snippets and:
 - NEVER use your own knowledge. Only use the provided snippets.
 
 Search results:
-{{search_results_json}}
+{search_results_json}
 
 OUTPUT FORMAT:
 Return ONLY this JSON.
 {{
-  "ticker": "{{ticker}}",
+  "ticker": "{ticker}",
   "evidence_grid": [
     {{
       "catalyst": "Contract win/expansion",
@@ -354,8 +356,7 @@ Return ONLY this JSON.
 }}
 """
 
-# ── Step 2 System Prompt (Context & Sensitivity) ────────
-# (Contains the full amplifier/dampener reference table)
+# ----- Amplifier/Dampener Table (multiline string) ------
 AMP_DAMP_TABLE = """
 Contract win/expansion:
   [+] High customer concentration, low past revenue growth, small market cap
@@ -622,18 +623,19 @@ Institutional ownership decline:
   [−] Passive rebalancing, one small fund
 """
 
-STEP2_SYSTEM_PROMPT = f"""
+# ----- Step 2 Template -----
+STEP2_TEMPLATE = """
 You are a COMPANY CONTEXT ANALYST. Your inputs are:
-1. A financial snapshot of {{ticker}} (from a database).
-2. Search snippets about {{ticker}}'s business model, operations, and risks.
+1. A financial snapshot of {ticker} (from a database).
+2. Search snippets about {ticker}'s business model, operations, and risks.
 
-Your output will be used to adjust the weighting of catalysts for {{ticker}}.
+Your output will be used to adjust the weighting of catalysts for {ticker}.
 
 FINANCIAL SNAPSHOT:
-{{snapshot}}
+{snapshot}
 
 CONTEXT SEARCH SNIPPETS:
-{{context_search_results}}
+{context_search_results}
 
 PHASE 1: Structured Context Questionnaire
 Answer every question using the snapshot and snippets.
@@ -704,15 +706,15 @@ Rules:
 - Provide a one-sentence rationale citing the specific extracted fact.
 
 AMPLIFIER/DAMPENER REFERENCE TABLE:
-{AMP_DAMP_TABLE}
+{amp_damp_table}
 
 TAXONOMY:
-{chr(10).join(TAXONOMY_LIST)}
+{taxonomy_list_str}
 
 OUTPUT FORMAT:
 Return ONLY this JSON.
 {{
-  "ticker": "{{ticker}}",
+  "ticker": "{ticker}",
   "extracted_context": {{
     "revenue_structure": {{ ... }},
     "cost_structure": {{ ... }},
@@ -733,21 +735,21 @@ Return ONLY this JSON.
 }}
 """
 
-# ── Step 4 System Prompt (Final Synthesis) ──────────────
-STEP4_SYSTEM_PROMPT = f"""
-You are a FINAL CATALYST SYNTHESIZER for {{ticker}} on {{today}}.
+# ----- Step 4 Template -----
+STEP4_TEMPLATE = """
+You are a FINAL CATALYST SYNTHESIZER for {ticker} on {today}.
 
 INPUTS:
 1. Evidence grid – from exhaustive web search, every catalyst has a status,
    date, excerpt, and source URL.
-{{evidence_grid_json}}
+{evidence_grid_json}
 
 2. Weighted taxonomy – each catalyst has a base weight and an
    adjusted_weight that already incorporates company context.
-{{weighted_taxonomy_json}}
+{weighted_taxonomy_json}
 
 3. Financial snapshot:
-{{snapshot_json}}
+{snapshot_json}
 
 TASKS:
 A. Merge the evidence grid with the weighted taxonomy. For each catalyst,
@@ -793,8 +795,8 @@ E. Identify the single `key_assumption` that, if wrong, would flip
 OUTPUT FORMAT:
 Return ONLY this JSON.
 {{
-  "ticker": "{{ticker}}",
-  "analysis_date": "{{today}}",
+  "ticker": "{ticker}",
+  "analysis_date": "{today}",
   "current_price": "...",
   "catalyst_grid": [
     {{
@@ -819,8 +821,38 @@ Return ONLY this JSON.
 }}
 """
 
+# ── Helpers for prompt formatting ──────────────────────
+def _format_step1(ticker, today, lookback_start, search_results_json, taxonomy_list_str):
+    return STEP1_TEMPLATE.format(
+        ticker=ticker,
+        today=today,
+        lookback_start=lookback_start,
+        search_results_json=search_results_json,
+        taxonomy_list_str=taxonomy_list_str,
+    )
+
+def _format_step2(ticker, snapshot, context_search_results, amp_damp_table, taxonomy_list_str):
+    return STEP2_TEMPLATE.format(
+        ticker=ticker,
+        snapshot=json.dumps(snapshot, indent=2, default=str),
+        context_search_results=context_search_results,
+        amp_damp_table=amp_damp_table,
+        taxonomy_list_str=taxonomy_list_str,
+    )
+
+def _format_step4(ticker, today, evidence_grid_json, weighted_taxonomy_json, snapshot_json):
+    return STEP4_TEMPLATE.format(
+        ticker=ticker,
+        today=today,
+        evidence_grid_json=evidence_grid_json,
+        weighted_taxonomy_json=weighted_taxonomy_json,
+        snapshot_json=snapshot_json,
+    )
+
 # ── Async analysis pipeline ────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
+    taxonomy_list_str = "\n".join(TAXONOMY_LIST)
+
     print(f"  ⏳ Preparing {len(CATALYST_SEARCH_TEMPLATES)} catalyst search queries...")
     catalyst_queries = [q.format(ticker=ticker) for q in CATALYST_SEARCH_TEMPLATES]
     context_queries = [q.format(ticker=ticker) for q in CONTEXT_SEARCH_TEMPLATES]
@@ -833,40 +865,29 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print(f"  ✅ Catalyst searches complete: {sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
     print(f"  ✅ Context searches complete: {sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
 
-    # LLM calls for Step 1 and Step 2 can run in parallel (they are independent)
-    def call_step1():
-        search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
-        prompt = STEP1_SYSTEM_PROMPT.format(
-            ticker=ticker,
-            today=TODAY,
-            lookback_start=LOOKBACK_START,
-            search_results_json=search_results_str
-        )
-        messages = [{"role": "system", "content": prompt},
-                    {"role": "user", "content": f"Extract all evidence for {ticker}."}]
-        resp = safe_create(model=MODEL, messages=messages, temperature=0.1, max_tokens=3000)
-        return resp.choices[0].message.content.strip()
+    # Prepare Step 1 prompt
+    search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
+    prompt1 = _format_step1(ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
 
-    def call_step2():
-        context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
-        prompt = STEP2_SYSTEM_PROMPT.format(
-            ticker=ticker,
-            snapshot=json.dumps(snapshot, indent=2, default=str),
-            context_search_results=context_str
-        )
-        messages = [{"role": "system", "content": prompt},
-                    {"role": "user", "content": f"Analyze company context for {ticker}."}]
-        resp = safe_create(model=MODEL, messages=messages, temperature=0.1, max_tokens=3000)
+    # Prepare Step 2 prompt
+    context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
+    prompt2 = _format_step2(ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
+
+    def call_llm(prompt, user_msg, temperature=0.1, max_tokens=3000):
+        messages = [
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": user_msg}
+        ]
+        resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
         return resp.choices[0].message.content.strip()
 
     print("  🧠 Running Step 1 (event extraction) and Step 2 (context sensitivity) in parallel...")
-    step1_task = asyncio.to_thread(call_step1)
-    step2_task = asyncio.to_thread(call_step2)
+    step1_task = asyncio.to_thread(call_llm, prompt1, f"Extract all evidence for {ticker}.")
+    step2_task = asyncio.to_thread(call_llm, prompt2, f"Analyze company context for {ticker}.")
     step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
     print("  ✅ Step 1 LLM done.")
     print("  ✅ Step 2 LLM done.")
 
-    # Parse Step 1 JSON grid
     def parse_json(raw):
         raw = raw.strip()
         if raw.startswith("```"):
@@ -889,7 +910,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     sensitivity = context_profile.get("sensitivity_profile", {})
     weighted_taxonomy = {}
     for catalyst, profile in sensitivity.items():
-        base = CATALYST_WEIGHTS.get(catalyst, 5)  # fallback
+        base = CATALYST_WEIGHTS.get(catalyst, 5)
         multiplier = profile.get("multiplier", 1.0)
         adjusted = round(base * multiplier)
         weighted_taxonomy[catalyst] = {
@@ -900,18 +921,15 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         }
 
     # Step 4: Final synthesis
-    step4_prompt = STEP4_SYSTEM_PROMPT.format(
+    prompt4 = _format_step4(
         ticker=ticker,
         today=TODAY,
         evidence_grid_json=json.dumps(evidence_grid, indent=2),
         weighted_taxonomy_json=json.dumps(weighted_taxonomy, indent=2),
         snapshot_json=json.dumps(snapshot, indent=2, default=str)
     )
-    messages = [{"role": "system", "content": step4_prompt},
-                {"role": "user", "content": f"Synthesize final analysis for {ticker}."}]
     print("  🧠 Running Step 4 (final synthesis)...")
-    resp = safe_create(model=MODEL, messages=messages, temperature=0.3, max_tokens=3000)
-    final_raw = resp.choices[0].message.content.strip()
+    final_raw = call_llm(prompt4, f"Synthesize final analysis for {ticker}.", temperature=0.3)
     try:
         final_result = parse_json(final_raw)
     except Exception as e:
@@ -973,7 +991,6 @@ if __name__ == "__main__":
             for h in hits[:5]:
                 print(f"     [{h.get('type')}] {h.get('taxonomy')}: {h.get('adjusted_weight')}wt | {h.get('event_date','')}")
 
-        # Optionally store to DB (skip for this test)
         time.sleep(2)
 
     if cur: cur.close()
