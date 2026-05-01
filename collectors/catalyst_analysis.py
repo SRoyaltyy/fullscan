@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Full Async, Exhaustive Prompts
+Catalyst Analysis Engine v2 – Full Async, Exhaustive Prompts, Verbose Logging
 
 Phase 0 : DB Snapshot
 Phase 1 : Async Event Hunter (24 catalyst searches, LLM extraction – flat list)
 Phase 2 : Async Company Context (12 context searches, LLM sensitivity profile)
 Phase 3 : Weighting (Python)
 Phase 4 : Final Synthesis (LLM verdict – classifies events into grid)
+All intermediate data is printed directly to the log.
 Schedule: Daily, after data collectors finish
 """
 
@@ -928,6 +929,22 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print(f"  ✅ Catalyst searches complete: {sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
     print(f"  ✅ Context searches complete: {sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
 
+    # ── DUMP SEARCH QUERIES & RAW SNIPPETS ──
+    print("\n" + "="*80)
+    print("  🔎 CATALYST SEARCH QUERIES & RAW RESULTS")
+    print("="*80)
+    for q, v in catalyst_results.items():
+        print(f"\n  QUERY: {q}")
+        print(f"  RESULT: {v[:600]}{'...' if len(v)>600 else ''}")
+        print("  ──")
+    print("\n" + "="*80)
+    print("  🔎 CONTEXT SEARCH QUERIES & RAW RESULTS")
+    print("="*80)
+    for q, v in context_results.items():
+        print(f"\n  QUERY: {q}")
+        print(f"  RESULT: {v[:600]}{'...' if len(v)>600 else ''}")
+        print("  ──")
+
     # Prepare prompts
     search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
     prompt1 = _format_step1(ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
@@ -962,6 +979,17 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         if not isinstance(raw_events, list):
             raise ValueError("Step 1 output is not a list")
         print(f"  📋 Step 1 extracted {len(raw_events)} raw events")
+        # ── DUMP RAW EVENTS ──
+        print("\n" + "="*80)
+        print("  📋 RAW EVENTS (STEP 1 OUTPUT)")
+        print("="*80)
+        for i, ev in enumerate(raw_events):
+            print(f"  [{i+1}] Date: {ev.get('event_date','?')}")
+            print(f"      Description: {ev.get('description','')}")
+            print(f"      Excerpt: {ev.get('evidence_excerpt','')}")
+            print(f"      URLs: {ev.get('source_urls',[])}")
+            print(f"      Confidence: {ev.get('confidence','')}")
+            print("  ──")
     except Exception as e:
         print(f"  ❌ Failed to parse Step 1 output: {e}")
         return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
@@ -973,8 +1001,27 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         print(f"  ❌ Failed to parse Step 2 JSON: {e}")
         return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
 
+    # ── DUMP CONTEXT QUESTIONNAIRE ──
+    extracted = context_profile.get("extracted_context", {})
+    if extracted:
+        print("\n" + "="*80)
+        print("  📝 EXTRACTED CONTEXT (STEP 2 PART 1)")
+        print("="*80)
+        for section, answers in extracted.items():
+            print(f"\n  [{section}]")
+            for q, a in answers.items():
+                print(f"    {q}: {a}")
+
     # Step 3: Weighting
     sensitivity = context_profile.get("sensitivity_profile", {})
+    # ── DUMP SENSITIVITY PROFILE ──
+    if sensitivity:
+        print("\n" + "="*80)
+        print("  📈 SENSITIVITY PROFILE (STEP 2 PART 2)")
+        print("="*80)
+        for cat, val in sensitivity.items():
+            print(f"  {cat}: multiplier={val.get('multiplier')} | {val.get('rationale','')}")
+
     weighted_taxonomy = {}
     for catalyst, profile in sensitivity.items():
         base = CATALYST_WEIGHTS.get(catalyst, 5)
@@ -986,6 +1033,13 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             "adjusted_weight": max(0, min(10, adjusted)),
             "rationale": profile.get("rationale", "")
         }
+
+    # ── DUMP WEIGHTED TAXONOMY ──
+    print("\n" + "="*80)
+    print("  ⚖️  WEIGHTED TAXONOMY (STEP 3)")
+    print("="*80)
+    for cat, w in weighted_taxonomy.items():
+        print(f"  {cat}: base={w['base_weight']} × {w['multiplier']} = {w['adjusted_weight']} | {w.get('rationale','')}")
 
     # Step 4: Final synthesis (classify events and produce grid)
     prompt4 = _format_step4(
@@ -1033,7 +1087,7 @@ if __name__ == "__main__":
     conn = None
     cur = None
 
-    tickers = ["BBAI"]
+    tickers = ["SERV"]
 
     for ticker in tickers:
         print(f"\n{'='*60}\n📊 Snapshot for {ticker}…")
@@ -1056,11 +1110,39 @@ if __name__ == "__main__":
             print(f"❌ Error: {result['error']}")
         else:
             print(f"✅ Net signal: {result.get('net_signal')} (conviction {result.get('conviction')})")
+            print(f"   Catalyst stack: {result.get('catalyst_stack','')}")
+            print(f"   Key assumption: {result.get('key_assumption','')}")
             grid = result.get("catalyst_grid", [])
             hits = [c for c in grid if c.get("status") == "HIT"]
-            print(f"   Grid: {len(grid)} catalysts, {len(hits)} HITs")
-            for h in hits[:5]:
-                print(f"     [{h.get('type')}] {h.get('taxonomy')}: {h.get('adjusted_weight')}wt | {h.get('event_date','')}")
+            misses = [c for c in grid if c.get("status") == "MISS"]
+            nas = [c for c in grid if c.get("status") == "N/A"]
+            print(f"   Grid: {len(grid)} catalysts | HIT: {len(hits)} | MISS: {len(misses)} | N/A: {len(nas)}")
+            # Print ALL HITs
+            print("\n" + "="*80)
+            print("  🟢🔴 ALL HIT CATALYSTS")
+            print("="*80)
+            for h in hits:
+                print(f"  [{h.get('type','?')}] {h.get('taxonomy')}")
+                print(f"      Date: {h.get('event_date','?')}")
+                print(f"      Base/Adj Weight: {h.get('base_weight')}/{h.get('adjusted_weight')}")
+                print(f"      Excerpt: {h.get('evidence_excerpt','')}")
+                print(f"      URLs: {h.get('source_urls',[])}")
+                print(f"      Confidence: {h.get('confidence','')}")
+                print(f"      Rationale: {h.get('sensitivity_rationale','')}")
+                print("  ──")
+            # Print MISS summary
+            print("\n" + "="*80)
+            print("  ⚪ MISS CATALYSTS (searched, nothing found)")
+            print("="*80)
+            for m in misses:
+                print(f"  {m.get('taxonomy')}")
+            # Print N/A summary
+            if nas:
+                print("\n" + "="*80)
+                print("  ⛔ N/A CATALYSTS (not applicable to this company)")
+                print("="*80)
+                for n in nas:
+                    print(f"  {n.get('taxonomy')}")
 
         time.sleep(2)
 
