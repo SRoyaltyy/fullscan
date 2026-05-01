@@ -889,54 +889,85 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print("  ✅ Step 2 LLM done.")
 
     def parse_json(raw):
-        raw = raw.strip()
-        if raw.startswith("```"):
-            raw = raw.split("\n", 1)[1].rsplit("```", 1)[0]
+    """Parse JSON, handling common LLM output quirks."""
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    
+    # --- Attempt 1: straight parse ---
+    try:
         return json.loads(raw)
-
+    except json.JSONDecodeError:
+        pass
+    
+    # --- Attempt 2: remove trailing commas ---
+    cleaned = re.sub(r",\s*}", "}", raw)
+    cleaned = re.sub(r",\s*]", "]", cleaned)
     try:
-        evidence_grid = parse_json(step1_raw)
-    except Exception as e:
-        print(f"  ❌ Failed to parse Step 1 JSON: {e}")
-        return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
-
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+    
+    # --- Attempt 3: fix unescaped quotes inside strings ---
+    # Replace any unescaped double-quote that appears inside a string value.
+    # Strategy: replace " with \\" only when it's not preceded by a backslash.
+    repaired = re.sub(r'(?<!\\)"', r'\\"', cleaned)
     try:
-        context_profile = parse_json(step2_raw)
-    except Exception as e:
-        print(f"  ❌ Failed to parse Step 2 JSON: {e}")
-        return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
-
-    # Step 3: Weighting
-    sensitivity = context_profile.get("sensitivity_profile", {})
-    weighted_taxonomy = {}
-    for catalyst, profile in sensitivity.items():
-        base = CATALYST_WEIGHTS.get(catalyst, 5)
-        multiplier = profile.get("multiplier", 1.0)
-        adjusted = round(base * multiplier)
-        weighted_taxonomy[catalyst] = {
-            "base_weight": base,
-            "multiplier": multiplier,
-            "adjusted_weight": max(0, min(10, adjusted)),
-            "rationale": profile.get("rationale", "")
-        }
-
-    # Step 4: Final synthesis
-    prompt4 = _format_step4(
-        ticker=ticker,
-        today=TODAY,
-        evidence_grid_json=json.dumps(evidence_grid, indent=2),
-        weighted_taxonomy_json=json.dumps(weighted_taxonomy, indent=2),
-        snapshot_json=json.dumps(snapshot, indent=2, default=str)
-    )
-    print("  🧠 Running Step 4 (final synthesis)...")
-    final_raw = call_llm(prompt4, f"Synthesize final analysis for {ticker}.", temperature=0.3)
+        return json.loads(repaired)
+    except json.JSONDecodeError:
+        pass
+    
+    # --- Attempt 4: ask DeepSeek to fix (trimmed to 20K chars) ---
     try:
-        final_result = parse_json(final_raw)
-    except Exception as e:
-        print(f"  ❌ Failed to parse Step 4 JSON: {e}")
-        return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
-
-    return final_result
+        fix_resp = safe_create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "Return ONLY valid JSON. Close all open brackets/braces. Use single quotes inside string values."},
+                {"role": "user", "content": f"Fix this JSON:\n\n{raw[:20000]}"}
+            ],
+            temperature=0.0,
+            max_tokens=500
+        )
+        fixed2 = fix_resp.choices[0].message.content.strip()
+        if fixed2.startswith("```"):
+            fixed2 = fixed2.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+        return json.loads(fixed2)
+    except Exception:
+        pass
+    
+    # --- Attempt 5: truncate at last known good position ---
+    # Find the last complete catalyst object
+    last_good = 0
+    brace_count = 0
+    in_string = False
+    escaped = False
+    for i, ch in enumerate(cleaned):
+        if escaped:
+            escaped = False
+            continue
+        if ch == '\\':
+            escaped = True
+            continue
+        if ch == '"' and not escaped:
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == '{':
+            brace_count += 1
+        elif ch == '}':
+            brace_count -= 1
+            if brace_count == 0:
+                last_good = i + 1
+    
+    if last_good > 0:
+        truncated = cleaned[:last_good] + "\n    ]\n  }"
+        try:
+            return json.loads(truncated)
+        except json.JSONDecodeError:
+            pass
+    
+    raise ValueError(f"All JSON repair strategies failed. Raw start: {raw[:200]}")
 
 # ── Main synchronous wrapper ────────────────────────────
 def analyze_stock(ticker, snapshot, searxng_url):
