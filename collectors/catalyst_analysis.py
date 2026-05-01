@@ -17,8 +17,8 @@ from openai import OpenAI
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-SEARCH_CONCURRENCY   = 8          # simultaneous SearXNG requests
-SEARCH_DELAY         = 0.2        # between batches (if any)
+SEARCH_CONCURRENCY   = 8
+SEARCH_DELAY         = 0.2
 MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
@@ -97,7 +97,7 @@ def safe_create(**kwargs):
             else:
                 raise
 
-# ── Pre-defined search templates ───────────────────────
+# ── Search templates ────────────────────────────────────
 CATALYST_SEARCH_TEMPLATES = [
     "{ticker} contract award win expansion 2025 2026",
     "{ticker} strategic partnership alliance joint venture 2025 2026",
@@ -140,7 +140,7 @@ CONTEXT_SEARCH_TEMPLATES = [
     "{ticker} litigation risk pending lawsuits regulatory investigation",
 ]
 
-# ── Full catalyst taxonomy (for prompts) ───────────────
+# ── Taxonomy ────────────────────────────────────────────
 TAXONOMY_LIST = [
     "Contract win/expansion",
     "Strategic partnership/alliance",
@@ -210,7 +210,6 @@ TAXONOMY_LIST = [
     "Institutional ownership decline (major holders reducing stakes)",
 ]
 
-# ── Base catalyst weights ───────────────────────────────
 CATALYST_WEIGHTS = {
     "Contract win/expansion": 8,
     "Strategic partnership/alliance": 6,
@@ -280,9 +279,7 @@ CATALYST_WEIGHTS = {
     "Institutional ownership decline (major holders reducing stakes)": 6,
 }
 
-# ── Prompts (regular strings, placeholders filled later) ──
-
-# ----- Step 1 Template -----
+# ── Prompt templates ────────────────────────────────────
 STEP1_TEMPLATE = """
 You are an exhaustive financial event auditor. Your mission is to find
 evidence for EVERY catalyst in the attached TAXONOMY for stock {ticker}.
@@ -356,7 +353,6 @@ Return ONLY this JSON.
 }}
 """
 
-# ----- Amplifier/Dampener Table (multiline string) ------
 AMP_DAMP_TABLE = """
 Contract win/expansion:
   [+] High customer concentration, low past revenue growth, small market cap
@@ -623,7 +619,6 @@ Institutional ownership decline:
   [−] Passive rebalancing, one small fund
 """
 
-# ----- Step 2 Template -----
 STEP2_TEMPLATE = """
 You are a COMPANY CONTEXT ANALYST. Your inputs are:
 1. A financial snapshot of {ticker} (from a database).
@@ -735,7 +730,6 @@ Return ONLY this JSON.
 }}
 """
 
-# ----- Step 4 Template -----
 STEP4_TEMPLATE = """
 You are a FINAL CATALYST SYNTHESIZER for {ticker} on {today}.
 
@@ -849,75 +843,35 @@ def _format_step4(ticker, today, evidence_grid_json, weighted_taxonomy_json, sna
         snapshot_json=snapshot_json,
     )
 
-# ── Async analysis pipeline ────────────────────────────
-async def analyze_stock_async(ticker, snapshot, searxng_url):
-    taxonomy_list_str = "\n".join(TAXONOMY_LIST)
-
-    print(f"  ⏳ Preparing {len(CATALYST_SEARCH_TEMPLATES)} catalyst search queries...")
-    catalyst_queries = [q.format(ticker=ticker) for q in CATALYST_SEARCH_TEMPLATES]
-    context_queries = [q.format(ticker=ticker) for q in CONTEXT_SEARCH_TEMPLATES]
-
-    # Phase 1 & 2 searches concurrently
-    print(f"  🔎 Launching {len(catalyst_queries)} catalyst + {len(context_queries)} context searches in parallel...")
-    catalyst_task = batch_search(catalyst_queries, searxng_url)
-    context_task = batch_search(context_queries, searxng_url)
-    catalyst_results, context_results = await asyncio.gather(catalyst_task, context_task)
-    print(f"  ✅ Catalyst searches complete: {sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
-    print(f"  ✅ Context searches complete: {sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
-
-    # Prepare Step 1 prompt
-    search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
-    prompt1 = _format_step1(ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
-
-    # Prepare Step 2 prompt
-    context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
-    prompt2 = _format_step2(ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
-
-    def call_llm(prompt, user_msg, temperature=0.1, max_tokens=3000):
-        messages = [
-            {"role": "system", "content": prompt},
-            {"role": "user", "content": user_msg}
-        ]
-        resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
-        return resp.choices[0].message.content.strip()
-
-    print("  🧠 Running Step 1 (event extraction) and Step 2 (context sensitivity) in parallel...")
-    step1_task = asyncio.to_thread(call_llm, prompt1, f"Extract all evidence for {ticker}.")
-    step2_task = asyncio.to_thread(call_llm, prompt2, f"Analyze company context for {ticker}.")
-    step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
-    print("  ✅ Step 1 LLM done.")
-    print("  ✅ Step 2 LLM done.")
-
-    def parse_json(raw):
+# ── Robust JSON parser ──────────────────────────────────
+def parse_json(raw):
     """Parse JSON, handling common LLM output quirks."""
     raw = raw.strip()
     if raw.startswith("```"):
         raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-    
-    # --- Attempt 1: straight parse ---
+
+    # Attempt 1 – direct
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
         pass
-    
-    # --- Attempt 2: remove trailing commas ---
+
+    # Attempt 2 – remove trailing commas
     cleaned = re.sub(r",\s*}", "}", raw)
     cleaned = re.sub(r",\s*]", "]", cleaned)
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
-    
-    # --- Attempt 3: fix unescaped quotes inside strings ---
-    # Replace any unescaped double-quote that appears inside a string value.
-    # Strategy: replace " with \\" only when it's not preceded by a backslash.
-    repaired = re.sub(r'(?<!\\)"', r'\\"', cleaned)
+
+    # Attempt 3 – fix unescaped quotes inside strings
+    repaired = re.sub(r'(?<!\\)"(?=(?:(?<!\\)(?:\\\\)*\\")*[^"]*$)', r'\"', cleaned)
     try:
         return json.loads(repaired)
     except json.JSONDecodeError:
         pass
-    
-    # --- Attempt 4: ask DeepSeek to fix (trimmed to 20K chars) ---
+
+    # Attempt 4 – ask DeepSeek to fix
     try:
         fix_resp = safe_create(
             model=MODEL,
@@ -934,9 +888,8 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         return json.loads(fixed2)
     except Exception:
         pass
-    
-    # --- Attempt 5: truncate at last known good position ---
-    # Find the last complete catalyst object
+
+    # Attempt 5 – truncate at last valid object
     last_good = 0
     brace_count = 0
     in_string = False
@@ -959,15 +912,96 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             brace_count -= 1
             if brace_count == 0:
                 last_good = i + 1
-    
+
     if last_good > 0:
         truncated = cleaned[:last_good] + "\n    ]\n  }"
         try:
             return json.loads(truncated)
         except json.JSONDecodeError:
             pass
-    
+
     raise ValueError(f"All JSON repair strategies failed. Raw start: {raw[:200]}")
+
+# ── Async analysis pipeline ────────────────────────────
+async def analyze_stock_async(ticker, snapshot, searxng_url):
+    taxonomy_list_str = "\n".join(TAXONOMY_LIST)
+
+    print(f"  ⏳ Preparing {len(CATALYST_SEARCH_TEMPLATES)} catalyst search queries...")
+    catalyst_queries = [q.format(ticker=ticker) for q in CATALYST_SEARCH_TEMPLATES]
+    context_queries = [q.format(ticker=ticker) for q in CONTEXT_SEARCH_TEMPLATES]
+
+    print(f"  🔎 Launching {len(catalyst_queries)} catalyst + {len(context_queries)} context searches in parallel...")
+    catalyst_task = batch_search(catalyst_queries, searxng_url)
+    context_task = batch_search(context_queries, searxng_url)
+    catalyst_results, context_results = await asyncio.gather(catalyst_task, context_task)
+    print(f"  ✅ Catalyst searches complete: {sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
+    print(f"  ✅ Context searches complete: {sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))} with results")
+
+    # Prepare prompts
+    search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
+    prompt1 = _format_step1(ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
+
+    context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
+    prompt2 = _format_step2(ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
+
+    def call_llm(prompt, user_msg, temperature=0.1, max_tokens=3000):
+        messages = [
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": user_msg}
+        ]
+        resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
+        return resp.choices[0].message.content.strip()
+
+    print("  🧠 Running Step 1 (event extraction) and Step 2 (context sensitivity) in parallel...")
+    step1_task = asyncio.to_thread(call_llm, prompt1, f"Extract all evidence for {ticker}.")
+    step2_task = asyncio.to_thread(call_llm, prompt2, f"Analyze company context for {ticker}.")
+    step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
+    print("  ✅ Step 1 LLM done.")
+    print("  ✅ Step 2 LLM done.")
+
+    try:
+        evidence_grid = parse_json(step1_raw)
+    except Exception as e:
+        print(f"  ❌ Failed to parse Step 1 JSON: {e}")
+        return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
+
+    try:
+        context_profile = parse_json(step2_raw)
+    except Exception as e:
+        print(f"  ❌ Failed to parse Step 2 JSON: {e}")
+        return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
+
+    # Step 3: Weighting
+    sensitivity = context_profile.get("sensitivity_profile", {})
+    weighted_taxonomy = {}
+    for catalyst, profile in sensitivity.items():
+        base = CATALYST_WEIGHTS.get(catalyst, 5)
+        multiplier = profile.get("multiplier", 1.0)
+        adjusted = round(base * multiplier)
+        weighted_taxonomy[catalyst] = {
+            "base_weight": base,
+            "multiplier": multiplier,
+            "adjusted_weight": max(0, min(10, adjusted)),
+            "rationale": profile.get("rationale", "")
+        }
+
+    # Step 4: Final synthesis
+    prompt4 = _format_step4(
+        ticker=ticker,
+        today=TODAY,
+        evidence_grid_json=json.dumps(evidence_grid, indent=2),
+        weighted_taxonomy_json=json.dumps(weighted_taxonomy, indent=2),
+        snapshot_json=json.dumps(snapshot, indent=2, default=str)
+    )
+    print("  🧠 Running Step 4 (final synthesis)...")
+    final_raw = call_llm(prompt4, f"Synthesize final analysis for {ticker}.", temperature=0.3)
+    try:
+        final_result = parse_json(final_raw)
+    except Exception as e:
+        print(f"  ❌ Failed to parse Step 4 JSON: {e}")
+        return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
+
+    return final_result
 
 # ── Main synchronous wrapper ────────────────────────────
 def analyze_stock(ticker, snapshot, searxng_url):
@@ -992,7 +1026,6 @@ if __name__ == "__main__":
     conn = None
     cur = None
 
-    # Test ticker
     tickers = ["BBAI"]
 
     for ticker in tickers:
