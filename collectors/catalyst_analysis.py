@@ -3,10 +3,10 @@
 Catalyst Analysis Engine v2 – Full Async, Exhaustive Prompts
 
 Phase 0 : DB Snapshot
-Phase 1 : Async Event Hunter (24 catalyst searches, LLM extraction)
+Phase 1 : Async Event Hunter (24 catalyst searches, LLM extraction – flat list)
 Phase 2 : Async Company Context (12 context searches, LLM sensitivity profile)
 Phase 3 : Weighting (Python)
-Phase 4 : Final Synthesis (LLM verdict)
+Phase 4 : Final Synthesis (LLM verdict – classifies events into grid)
 Schedule: Daily, after data collectors finish
 """
 
@@ -281,76 +281,33 @@ CATALYST_WEIGHTS = {
 
 # ── Prompt templates ────────────────────────────────────
 STEP1_TEMPLATE = """
-You are an exhaustive financial event auditor. Your mission is to find
-evidence for EVERY catalyst in the attached TAXONOMY for stock {ticker}.
+You are an event extraction engine. Your ONLY input is the search
+results below for {ticker}. Extract every distinct event that could
+affect the company's stock price in a 1‑2 week horizon.
 
-TODAY is {today}. The LOOKBACK window is {lookback_start} to {today}.
-
-TAXONOMY (every catalyst you must check):
-{taxonomy_list_str}
-
-PHASE 1: Create a Search Plan
-For each catalyst, create at least ONE highly specific search query using the
-company name and ticker. Include date cues (2025, 2026, Q1 2026). Be granular:
-instead of "contract news", query "$165M Army GFIM contract".
-
-Output the plan as JSON:
-{{
-  "search_plan": [
-    {{
-      "catalyst": "Contract win/expansion",
-      "query": "BigBear.ai BBAI $165 million Army GFIM contract 2025 2026",
-      "rationale": "Targets the known Army contract to see if awarded or extended."
-    }},
-    ...
-  ]
-}}
-
-(Code will execute all queries and return results for Phase 2.)
-
-PHASE 2: Extract Evidence from Search Results
-Below are the search results for {ticker}, organized by catalyst.
-For each catalyst, examine the snippets and:
-
-- If a catalyst occurred: extract the EXACT date (YYYY-MM-DD), a VERBATIM
-  excerpt (≤150 chars, quoted), and the source URL(s).
-- If the catalyst did NOT occur but the search returned relevant articles
-  that mention the topic without a positive finding, mark it MISS.
-- If the catalyst is irrelevant to this company (e.g., "FDA approval" for a
-  non-pharma company), mark it N/A.
-- If the search returned nothing, mark it MISS with confidence=0.
-- NEVER use your own knowledge. Only use the provided snippets.
+Rules:
+- Describe each event in one sentence.
+- Include the EXACT date (YYYY-MM-DD) from the snippet.
+- Include a VERBATIM excerpt (≤150 chars, quoted) from the snippet.
+- Include all source URLs related to the event.
+- If multiple snippets describe the same event, merge them and set
+  confidence higher.
+- Use ONLY the provided snippets. Do NOT add your own knowledge.
 
 Search results:
 {search_results_json}
 
-OUTPUT FORMAT:
-Return ONLY this JSON.
-{{
-  "ticker": "{ticker}",
-  "evidence_grid": [
-    {{
-      "catalyst": "Contract win/expansion",
-      "status": "HIT",
-      "event_date": "2025-10-14",
-      "evidence_excerpt": "\\"...$165.15M Army contract...\\"",
-      "source_urls": ["https://..."],
-      "confidence": 90
-    }},
-    {{
-      "catalyst": "Strategic partnership/alliance",
-      "status": "MISS",
-      "confidence": 0
-    }},
-    {{
-      "catalyst": "Product launch/FDA approval/regulatory greenlight",
-      "status": "N/A",
-      "rationale": "Not applicable – no pharma/biotech products."
-    }},
-    ... every catalyst
-  ],
-  "search_queries_used": ["..."]
-}}
+Return ONLY a JSON array. No other text.
+[
+  {{
+    "event_date": "2026-03-02",
+    "description": "Q4 revenue of $27.3M missed consensus.",
+    "evidence_excerpt": "\\"revenue of $27.3M missed the $32M consensus\\"",
+    "source_urls": ["https://..."],
+    "confidence": 90
+  }},
+  ...
+]
 """
 
 AMP_DAMP_TABLE = """
@@ -734,9 +691,8 @@ STEP4_TEMPLATE = """
 You are a FINAL CATALYST SYNTHESIZER for {ticker} on {today}.
 
 INPUTS:
-1. Evidence grid – from exhaustive web search, every catalyst has a status,
-   date, excerpt, and source URL.
-{evidence_grid_json}
+1. Raw events – a flat list of events extracted from web searches.
+{raw_events_json}
 
 2. Weighted taxonomy – each catalyst has a base weight and an
    adjusted_weight that already incorporates company context.
@@ -746,11 +702,19 @@ INPUTS:
 {snapshot_json}
 
 TASKS:
-A. Merge the evidence grid with the weighted taxonomy. For each catalyst,
-   use the adjusted_weight from the taxonomy. Leave MISS/N.A. catalysts
-   with weight=0 and no evidence.
+A. Classify each raw event into one or more catalyst categories from the
+   taxonomy.  Use the EXACT taxonomy label.  An event can trigger
+   multiple catalysts.
 
-B. Apply INTERACTION RULES:
+B. Build the FULL catalyst grid.  For every catalyst in the taxonomy:
+   - status: "HIT" if at least one event was classified to it,
+     "MISS" if no event applies but the catalyst is relevant,
+     "N/A" if the catalyst does not apply to this company.
+   - For each HIT, include the event's date, excerpt, source URLs,
+     and confidence.  Use the adjusted_weight from the weighted taxonomy.
+   - For MISS or N/A, adjusted_weight = 0.
+
+C. Apply INTERACTION RULES:
    1. If "Insider selling (cluster)" is HIT AND "Earnings beat" is HIT
       within 14 days, reduce the beat's adjusted_weight by 1 and add a
       synthetic negative catalyst "Insider-earnings divergence" with
@@ -765,7 +729,7 @@ B. Apply INTERACTION RULES:
       reduce the breakdown's adjusted_weight by 2 (fundamentals may
       override momentum).
 
-C. Compute FINAL SCORES:
+D. Compute FINAL SCORES:
    - Positive_Score = sum(adjusted_weight × confidence/100) for all
      positive HITs.
    - Negative_Score = sum(adjusted_weight × confidence/100) for all
@@ -779,11 +743,11 @@ C. Compute FINAL SCORES:
      else       → Strong Bearish
    - Conviction = min(100, abs(Net) * 2)
 
-D. Write a `catalyst_stack` – a 4-sentence narrative that references
+E. Write a `catalyst_stack` – a 4-sentence narrative that references
    specific dates, ties the most impactful events to the company's
    context, and explains the net signal.
 
-E. Identify the single `key_assumption` that, if wrong, would flip
+F. Identify the single `key_assumption` that, if wrong, would flip
    the call.
 
 OUTPUT FORMAT:
@@ -834,11 +798,11 @@ def _format_step2(ticker, snapshot, context_search_results, amp_damp_table, taxo
         taxonomy_list_str=taxonomy_list_str,
     )
 
-def _format_step4(ticker, today, evidence_grid_json, weighted_taxonomy_json, snapshot_json):
+def _format_step4(ticker, today, raw_events_json, weighted_taxonomy_json, snapshot_json):
     return STEP4_TEMPLATE.format(
         ticker=ticker,
         today=today,
-        evidence_grid_json=evidence_grid_json,
+        raw_events_json=raw_events_json,
         weighted_taxonomy_json=weighted_taxonomy_json,
         snapshot_json=snapshot_json,
     )
@@ -923,7 +887,7 @@ def parse_json(raw):
     raise ValueError(f"All JSON repair strategies failed. Raw start: {raw[:200]}")
 
 # ── LLM caller with explicit keyword defaults ──────────
-def call_llm(prompt, user_msg, temperature=0.3, max_tokens=4096):
+def call_llm(prompt, user_msg, temperature=0.3, max_tokens=15000):
     """Call DeepSeek with explicit keyword-safe defaults."""
     messages = [
         {"role": "system", "content": prompt},
@@ -936,6 +900,18 @@ def call_llm(prompt, user_msg, temperature=0.3, max_tokens=4096):
         max_tokens=max_tokens
     )
     return resp.choices[0].message.content.strip()
+
+# ── Build empty evidence grid (all MISS) ────────────────
+def build_evidence_grid_from_events(events, taxonomy_list):
+    """Convert a flat event list into a 66-item evidence grid (all MISS)."""
+    grid = []
+    for catalyst in taxonomy_list:
+        grid.append({
+            "catalyst": catalyst,
+            "status": "MISS",
+            "confidence": 0
+        })
+    return grid
 
 # ── Async analysis pipeline ────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
@@ -963,27 +939,34 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     step1_task = asyncio.to_thread(
         call_llm,
         prompt=prompt1,
-        user_msg=f"Extract all evidence for {ticker}.",
+        user_msg=f"Extract all events for {ticker}.",
         temperature=0.3,
-        max_tokens=4096
+        max_tokens=15000
     )
     step2_task = asyncio.to_thread(
         call_llm,
         prompt=prompt2,
         user_msg=f"Analyze company context for {ticker}.",
         temperature=0.3,
-        max_tokens=4096
+        max_tokens=15000
     )
     step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
     print("  ✅ Step 1 LLM done.")
     print("  ✅ Step 2 LLM done.")
 
+    # Parse Step 1 – raw events list
     try:
-        evidence_grid = parse_json(step1_raw)
+        raw_events = parse_json(step1_raw)
+        if isinstance(raw_events, dict):
+            raw_events = raw_events.get("events", raw_events.get("evidence_grid", []))
+        if not isinstance(raw_events, list):
+            raise ValueError("Step 1 output is not a list")
+        print(f"  📋 Step 1 extracted {len(raw_events)} raw events")
     except Exception as e:
-        print(f"  ❌ Failed to parse Step 1 JSON: {e}")
+        print(f"  ❌ Failed to parse Step 1 output: {e}")
         return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
 
+    # Parse Step 2 – context profile
     try:
         context_profile = parse_json(step2_raw)
     except Exception as e:
@@ -1004,11 +987,11 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             "rationale": profile.get("rationale", "")
         }
 
-    # Step 4: Final synthesis
+    # Step 4: Final synthesis (classify events and produce grid)
     prompt4 = _format_step4(
         ticker=ticker,
         today=TODAY,
-        evidence_grid_json=json.dumps(evidence_grid, indent=2),
+        raw_events_json=json.dumps(raw_events, indent=2),
         weighted_taxonomy_json=json.dumps(weighted_taxonomy, indent=2),
         snapshot_json=json.dumps(snapshot, indent=2, default=str)
     )
@@ -1017,7 +1000,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         prompt=prompt4,
         user_msg=f"Synthesize final analysis for {ticker}.",
         temperature=0.3,
-        max_tokens=4096
+        max_tokens=15000
     )
     try:
         final_result = parse_json(final_raw)
