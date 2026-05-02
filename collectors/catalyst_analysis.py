@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
 Catalyst Analysis Engine v2 – Full Async, Granular Searches,
-Company‑Name‑Aware Prompts, Verbose Logging,
-+ FinvizFinance News Scrape + Gemini Fact‑Check Layer
+Full Company Name Resolution, Finviz-First Evidence,
+Smart Snippet Filtering, Gemini Fact-Check Layer
 
-Phase 0   : DB Snapshot
-Phase 0.5 : FinvizFinance per‑ticker news scrape
-Phase 1   : Async Event Hunter (~70 granular catalyst searches, LLM extraction)
-Phase 2   : Async Company Context (~35 granular context searches, LLM sensitivity)
+Phase 0   : DB Snapshot + Company Name Resolution
+Phase 0.5 : FinvizFinance per‑ticker news scrape (PRIMARY EVIDENCE)
+Phase 1   : Async Event Hunter (LLM extracts only NEW events)
+Phase 2   : Async Company Context (LLM sensitivity)
 Phase 3   : Weighting (Python)
-Phase 4   : Final Synthesis (LLM verdict – classifies events into grid)
+Phase 4   : Final Synthesis (LLM verdict)
 Phase 5   : Gemini Fact‑Check (verify all 66 catalysts + audit multipliers)
 Phase 6   : Merge corrections & recalculate net_signal
 All intermediate data is printed directly to the log.
@@ -27,7 +27,7 @@ SEARCH_CONCURRENCY   = 10
 SEARCH_DELAY         = 0.1
 MODEL                = "deepseek-chat"
 GEMINI_API_KEY       = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL         = "gemini-2.5-pro"   # supports Grounding via AI Studio
+GEMINI_MODEL         = "gemini-2.5-pro"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
@@ -64,6 +64,108 @@ async def batch_search(queries, searxng_url, concurrency=SEARCH_CONCURRENCY):
         results = await asyncio.gather(*tasks)
     return dict(results)
 
+# ── Filter snippets to only those mentioning the company ──
+def _snippet_is_relevant(snippet_text, full_name, ticker, aliases=None):
+    """Return True if the snippet mentions the company or its ticker."""
+    check = snippet_text.lower()
+    if ticker.lower() in check:
+        return True
+    # Check official name words
+    name_words = full_name.lower().split()
+    # Require at least 2 words of the company name to appear (for multi-word names)
+    matches = sum(1 for w in name_words if w in check)
+    if matches >= min(2, len(name_words)):
+        return True
+    if aliases:
+        for alias in aliases:
+            if alias.lower() in check:
+                return True
+    return False
+
+def _filter_search_results(results_dict, full_name, ticker, aliases=None):
+    """Replace irrelevant search results with 'NO_RELEVANT_RESULTS'."""
+    filtered = {}
+    for query, text in results_dict.items():
+        if text.startswith("NO_RESULTS") or text.startswith("SEARCH_ERROR"):
+            filtered[query] = text
+        elif _snippet_is_relevant(text, full_name, ticker, aliases):
+            filtered[query] = text
+        else:
+            filtered[query] = "NO_RELEVANT_RESULTS"
+    return filtered
+
+# ── Company Name Resolution (multiple fallbacks) ────────
+async def _resolve_company_name_async(ticker, searxng_url):
+    """Try multiple sources to get the full company name for a ticker.
+    Returns (official_name, aliases_list)."""
+
+    # 1. Try finvizfinance ticker_fundament (fast, free)
+    try:
+        from finvizfinance.quote import finvizfinance
+        stock = finvizfinance(ticker)
+        fund = stock.ticker_fundament()
+        if fund and fund.get('Company'):
+            name = fund['Company'].strip()
+            if name and name.lower() != ticker.lower():
+                print(f"  ✅ Company name from Finviz: {name}")
+                return name, []
+    except Exception:
+        pass
+
+    # 2. Try yfinance (free, reliable)
+    try:
+        import yfinance as yf
+        info = yf.Ticker(ticker).info
+        for key in ('longName', 'shortName', 'displayName'):
+            name = info.get(key, '')
+            if name and ticker.lower() in name.lower():
+                # Clean common suffixes
+                for suffix in (' Common Stock', ' Inc.', ' Inc', ' Corp.', ' Corp',
+                               ' Corporation', ' Ltd.', ' Ltd', ' PLC', ' Class A',
+                               ' - Ordinary Shares', ' Holdings'):
+                    name = name.replace(suffix, '')
+                name = name.strip()
+                if name and name.lower() != ticker.lower():
+                    print(f"  ✅ Company name from Yahoo Finance: {name}")
+                    return name, []
+    except Exception:
+        pass
+
+    # 3. Try SearXNG search as last resort
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                f"{searxng_url}/search",
+                params={"q": f"{ticker} stock company name", "format": "json", "categories": "general"},
+                timeout=aiohttp.ClientTimeout(total=10),
+                headers={"User-Agent": "CatalystEngine/2.0"}
+            ) as resp:
+                data = await resp.json()
+                results = data.get("results", [])
+                for r in results[:3]:
+                    snippet = r.get("content", "")
+                    title = r.get("title", "")
+                    combined = f"{title} {snippet}".lower()
+                    patterns = [
+                        rf"{ticker.lower()}\s*[|–\-—]\s*([A-Z][A-Za-z\s]+?)(?:\s+Stock|\s+Inc|\s+Corp|\s+Profile|,)",
+                    ]
+                    for pat in patterns:
+                        m = re.search(pat, combined, re.IGNORECASE)
+                        if m:
+                            name = m.group(1).strip()
+                            if name and len(name) > 3 and name.lower() != ticker.lower():
+                                print(f"  ✅ Company name from web search: {name}")
+                                return name, []
+    except Exception:
+        pass
+
+    print(f"  ⚠️  Could not resolve company name for {ticker}; using ticker as name.")
+    return ticker, []
+
+def resolve_company_name(ticker, searxng_url):
+    """Synchronous wrapper."""
+    return asyncio.run(_resolve_company_name_async(ticker, searxng_url))
+
 # ── Finviz snapshot from DB ─────────────────────────────
 def build_health_snapshot(ticker, conn):
     cur = conn.cursor()
@@ -71,6 +173,9 @@ def build_health_snapshot(ticker, conn):
     cols = [desc[0] for desc in cur.description]
     row = cur.fetchone()
     finviz = dict(zip(cols, row)) if row else {}
+
+    # Get company name from Finviz DB first
+    db_company = finviz.get("company", "").strip()
     cur.execute("""
         SELECT company_name, sector, industry, country, description
         FROM company_profiles WHERE ticker = %s
@@ -79,11 +184,19 @@ def build_health_snapshot(ticker, conn):
     profile = {}
     if prof:
         profile = {
-            "company_name": prof[0],
+            "company_name": prof[0] or db_company or ticker,
             "sector": prof[1],
             "industry": prof[2],
             "country": prof[3],
             "description": prof[4],
+        }
+    else:
+        profile = {
+            "company_name": db_company or ticker,
+            "sector": finviz.get("sector"),
+            "industry": finviz.get("industry"),
+            "country": finviz.get("country"),
+            "description": "",
         }
     cur.close()
     return {"profile": profile, "finviz": finviz}
@@ -117,7 +230,6 @@ def scrape_finviz_news(ticker):
         events = []
         for _, row in news_df.iterrows():
             d = row.get('Date', '')
-            # Attempt to parse the date; Finviz uses human‑readable like "02:30 PM 04/28/2026"
             try:
                 parsed = datetime.strptime(str(d), "%I:%M %p %m/%d/%Y")
                 date_str = parsed.strftime("%Y-%m-%d")
@@ -125,13 +237,17 @@ def scrape_finviz_news(ticker):
                 date_str = str(d)[:10]
             title = str(row.get('Title', ''))
             source = str(row.get('Source', ''))
+            # Build a URL from the specific news link if available
+            link = str(row.get('Link', ''))
+            urls = [link] if link and link.startswith('http') else [f"https://finviz.com/quote.ashx?t={ticker}"]
             events.append({
                 "event_date": date_str,
                 "description": f"{title} (via {source})",
                 "evidence_excerpt": title[:150],
-                "source_urls": [f"https://finviz.com/quote.ashx?t={ticker}"],
-                "confidence": 70,   # scraped headline, not LLM‑verified
-                "source": "finviz"
+                "source_urls": urls,
+                "confidence": 85,       # Finviz headlines are ticker‑verified
+                "source": "finviz",
+                "finviz_source": source
             })
         return events
     except ImportError:
@@ -143,15 +259,13 @@ def scrape_finviz_news(ticker):
 
 # ── Gemini Fact‑Check Layer ────────────────────────────
 def gemini_factcheck(full_name, ticker, grid, snapshot, weighted_taxonomy, taxonomy_list):
-    """Verify ALL 66 grid items + audit multipliers using Gemini with Google Search Grounding.
-    Returns a corrections list and an updated weighted_taxonomy dict."""
+    """Verify ALL 66 grid items + audit multipliers using Gemini with Google Search Grounding."""
     if not GEMINI_API_KEY:
         print("  ⚠️  GEMINI_API_KEY not set – skipping Gemini fact‑check.")
         return grid, weighted_taxonomy
 
     print("  🔍 Running Gemini fact‑check layer…")
 
-    # Split into HITs and MISSes for the prompt
     hits = [c for c in grid if c.get("status") == "HIT"]
     misses = [c for c in grid if c.get("status") == "MISS"]
     nas = [c for c in grid if c.get("status") == "N/A"]
@@ -193,7 +307,7 @@ For multiplier accuracy:
 {json.dumps(nas, indent=2)}
 
 ────────────── CURRENT MULTIPLIERS ──────────────
-{json.dumps({k: v.get("multiplier", 1.0) for k, v in weighted_taxonomy.items()}, indent=2)}
+{json.dumps({{k: v.get("multiplier", 1.0) for k, v in weighted_taxonomy.items()}}, indent=2)}
 
 ────────────── FINANCIAL SNAPSHOT ──────────────
 {json.dumps(snapshot, indent=2, default=str)}
@@ -236,7 +350,6 @@ Return ONLY this JSON:
         resp = requests.post(url, headers=headers, params=params, json=payload, timeout=60)
         resp.raise_for_status()
         data = resp.json()
-        # Extract text from Gemini response
         candidates = data.get("candidates", [])
         if not candidates:
             raise ValueError("No candidates in Gemini response")
@@ -248,7 +361,6 @@ Return ONLY this JSON:
         print(f"  ❌ Gemini API call failed: {e}")
         return grid, weighted_taxonomy
 
-    # Parse Gemini's JSON
     try:
         gemini_text = gemini_text.strip()
         if gemini_text.startswith("```"):
@@ -259,11 +371,9 @@ Return ONLY this JSON:
         print(f"  Raw Gemini output (first 500 chars): {gemini_text[:500]}")
         return grid, weighted_taxonomy
 
-    # Merge corrections into grid
     corrected_grid = corrections.get("corrected_grid", [])
     multiplier_overrides = corrections.get("multiplier_overrides", {})
 
-    # Build lookup by taxonomy
     grid_lookup = {c.get("taxonomy"): c for c in grid}
 
     for corr in corrected_grid:
@@ -272,11 +382,9 @@ Return ONLY this JSON:
             continue
         entry = grid_lookup[taxonomy]
         ct = corr.get("correction_type", "confirmed")
-
         if ct == "confirmed":
-            continue  # no change needed
-
-        if ct == "new_find" or ct == "reclassified":
+            continue
+        if ct in ("new_find", "reclassified"):
             entry["status"] = corr.get("corrected_status", entry.get("status"))
             if corr.get("event_date"):
                 entry["event_date"] = corr["event_date"]
@@ -296,13 +404,12 @@ Return ONLY this JSON:
                 entry["evidence_excerpt"] = corr["evidence_excerpt"]
         elif ct == "date_corrected":
             entry["event_date"] = corr.get("event_date", entry.get("event_date"))
-        elif ct == "multiplier_override" or ct == "impact_adjusted":
+        elif ct in ("multiplier_override", "impact_adjusted"):
             if corr.get("corrected_multiplier"):
                 entry["adjusted_weight"] = min(10, round(corr["corrected_multiplier"]))
             if corr.get("impact_strength"):
                 entry["impact_strength"] = corr["impact_strength"]
 
-    # Apply multiplier overrides to weighted_taxonomy
     for catalyst, override in multiplier_overrides.items():
         if catalyst in weighted_taxonomy:
             new_mult = override.get("multiplier")
@@ -313,16 +420,14 @@ Return ONLY this JSON:
             if override.get("rationale"):
                 weighted_taxonomy[catalyst]["rationale"] = override["rationale"]
 
-    # Log corrections
     change_count = sum(1 for c in corrected_grid if c.get("correction_type") != "confirmed")
     mult_changes = len(multiplier_overrides)
     print(f"  ✅ Gemini applied {change_count} grid corrections and {mult_changes} multiplier overrides.")
-
     return grid, weighted_taxonomy
 
-# ── GRANULAR SEARCH TEMPLATES ─────────────────────────
+# ── GRANULAR SEARCH TEMPLATES (with full_name placeholder) ──
 def _make_catalyst_templates(full_name):
-    """Return a list of ~70 individual, focused catalyst queries."""
+    """Return ~66 individual, focused catalyst queries using the official company name."""
     return [
         f"{full_name} contract award win 2025 2026",
         f"{full_name} contract expansion 2025 2026",
@@ -393,7 +498,7 @@ def _make_catalyst_templates(full_name):
     ]
 
 def _make_context_templates(full_name):
-    """Return a list of ~35 individual, focused context queries."""
+    """Return ~37 individual, focused context queries using the official company name."""
     return [
         f"{full_name} revenue breakdown by segment",
         f"{full_name} revenue by customer type",
@@ -434,7 +539,7 @@ def _make_context_templates(full_name):
         f"{full_name} end market growth rate",
     ]
 
-# ── Taxonomy, weights (unchanged) ──────────────────────
+# ── Taxonomy (unchanged) ────────────────────────────────
 TAXONOMY_LIST = [
     "Contract win/expansion",
     "Strategic partnership/alliance",
@@ -575,23 +680,27 @@ CATALYST_WEIGHTS = {
 
 # ── Prompt Templates ───────────────────────────────────
 STEP1_TEMPLATE = """
-You are an event extraction engine. Your input is the search results below
-for {full_name} (ticker: {ticker}).
+You are an event extraction engine for {full_name} ({ticker}).
 
-CRITICAL: The articles below may mention other companies. You MUST verify
-that the article refers to {full_name} BEFORE extracting an event.
-- If a snippet mentions ANI Pharmaceuticals, Pipe, Pool, Apple, Verisk,
-  Bar Harbor Bankshares, or any company that is NOT {full_name}, DISCARD IT.
-- Only create events for snippets that explicitly mention {full_name} or
-  its ticker {ticker}.
+BELOW ARE KNOWN EVENTS FROM FINVIZ (ticker‑verified, high confidence):
+{finviz_events_json}
+
+CRITICAL: These Finviz events are ALREADY CONFIRMED. Do NOT duplicate them.
+Only extract NEW, DISTINCT events from the search results below that are
+NOT already covered by the Finviz events.  Limit your output to at most 30
+new events ― prioritise those with the highest impact.
+
+Before extracting, verify that the snippet refers SPECIFICALLY to
+{full_name} or its ticker {ticker}. If an article is about a different
+company (e.g., ANI Pharmaceuticals, Pipe, Pool, Apple, Verisk),
+DISCARD IT.
 
 Rules:
 - Describe each event in one sentence.
 - Include the EXACT date (YYYY-MM-DD) from the snippet.
 - Include a VERBATIM excerpt (≤150 chars, quoted) from the snippet.
 - Include all source URLs related to the event.
-- If multiple snippets describe the same event, merge them and set
-  confidence higher.
+- If multiple snippets describe the same event, merge them.
 - Use ONLY the provided snippets. Do NOT add your own knowledge.
 
 Search results:
@@ -602,7 +711,7 @@ Return ONLY a JSON array. No other text.
   {{
     "event_date": "2026-03-02",
     "description": "{full_name} reported Q4 revenue of $27.3M.",
-    "evidence_excerpt": "\"revenue of $27.3M\"",
+    "evidence_excerpt": "\\"revenue of $27.3M\\"",
     "source_urls": ["https://..."],
     "confidence": 90
   }},
@@ -610,280 +719,14 @@ Return ONLY a JSON array. No other text.
 ]
 """
 
-AMP_DAMP_TABLE = """
-Contract win/expansion:
-  [+] High customer concentration, low past revenue growth, small market cap
-  [−] Diversified customer base, large cap, contract small relative to revenue
-
-Strategic partnership/alliance:
-  [+] Niche industry with high barriers, low institutional ownership, high R&D
-  [−] Many existing partnerships, low switching costs
-
-Product launch/FDA approval/regulatory greenlight:
-  [+] Biotech/pharma sector, single-product, low cash, high short interest
-  [−] Diversified product portfolio, large cap, approval widely expected
-
-Analyst upgrade/PT increase:
-  [+] Low analyst coverage, stock near 52-week low, low inst ownership, high short float, PT above current price
-  [−] High coverage, PT still below current price (reclassify negative)
-
-Positive personnel change:
-  [+] Company in distress, recent scandals, high insider ownership
-  [−] Stable company, routine appointment, large cap
-
-Capital infusion:
-  [+] High debt, low cash, negative FCF, high short interest
-  [−] Already cash-rich, infusion is dilutive
-
-Earnings beat:
-  [+] High short interest, stock beaten down, low expectations
-  [−] Stock rallied into earnings, beat narrow, peers also beat
-
-Earnings guidance raise:
-  [+] Same as beat + CEO credibility, analyst lag
-  [−] Raise expected, macro tailwinds obvious, raise small
-
-Share repurchase/dividend increase:
-  [+] High cash, low debt, undervalued (P/B < 1), insider buying alongside
-  [−] Low cash, high debt, token repurchase, dividend cut history
-
-Successful acquisition/synergy realization:
-  [+] Recent acquisition, synergy ahead of plan, accretive
-  [−] Integration risk, overpayment history, small deal
-
-Deleveraging/sale of toxic assets/spin-off:
-  [+] High debt, negative credit outlook, toxic assets
-  [−] Already well-capitalised, sale of core asset
-
-Operational milestone:
-  [+] Pre-revenue (biotech/space), regulatory catalyst pending, high R&D
-  [−] Routine maintenance, non-value-creating
-
-Insider buying (cluster):
-  [+] High insider ownership already, buying after crash, multiple C-suite
-  [−] Small amounts, one insider, buying at ATH, option exercise
-
-Activist investor accumulation:
-  [+] Underperforming, high cash, breakup value > market cap, low inst ownership
-  [−] Management addressing issues, activist poor track record
-
-Capacity expansion:
-  [+] High utilisation, growing backlogs, sector demand surging, high margins
-  [−] Industry overcapacity, debt-funded, demand weakening
-
-Strategic pivot/rebranding:
-  [+] Old business declining, high debt (pivot desperate), CEO credible
-  [−] Stable business, pivot faddish, execution risk high
-
-Supply chain de-risking:
-  [+] High China exposure, tariff sensitivity, recent supply shocks
-  [−] Already diversified, de-risking costly
-
-Patent grant/IP protection:
-  [+] Tech/pharma, high R&D, history of IP theft, narrow moat
-  [−] Many patents already, patent narrow, workaround easy
-
-Customer concentration expansion:
-  [+] High customer concentration currently, expansion to new sectors
-  [−] Already diversified, new customer immaterial
-
-Government policy (tariffs/subsidies/mandates):
-  [+] Sector directly affected, domestic capacity, bipartisan support
-  [−] Policy temporary, company relies on imports, unfunded
-
-Institutional policy (Fed rate cut/QE/stimulus):
-  [+] High debt, floating-rate, growth/tech, low cash flow
-  [−] Low debt, fixed-rate, cut already priced in
-
-Favorable court ruling/patent grant:
-  [+] Litigation priced in, binary outcome, damages large
-  [−] Ruling narrow, appeal likely, stock didn't move
-
-Geopolitical event that boosts sector:
-  [+] Defence sector, domestic production, govt contract exposure
-  [−] Event temporary, indirect benefit
-
-Sector tailwind/index inclusion:
-  [+] Small cap added to major index, sector ETF inflows, low liquidity
-  [−] Already in index, inclusion priced in, momentum exhausted
-
-Regulatory approval:
-  [+] Binary event, no alternatives, high legal costs if denied
-  [−] Approval expected, minimal incremental revenue
-
-Macro tailwinds:
-  [+] High cyclicality, beta > 1.5, high operating leverage
-  [−] Defensive sector, tailwind temporary
-
-Sector rotation into industry:
-  [+] Underperformed long, low relative valuations, low inst ownership
-  [−] Rotation already happened, industry still overvalued
-
-Commodity price move favorable:
-  [+] High commodity sensitivity, unhedged, producer
-  [−] Fully hedged, commodity small input cost
-
-ESG mandate/green subsidy:
-  [+] Renewable/green sector, high capital requirements
-  [−] Already funded, subsidy small
-
-Currency tailwind:
-  [+] High export %, high foreign revenue, unhedged
-  [−] Hedged, import costs offset, small foreign exposure
-
-Technical breakout:
-  [+] High short interest, breakout on volume, long downtrend before
-  [−] Low volume breakout, already overbought
-
-Short squeeze:
-  [+] Short float > 20%, days-to-cover > 4, positive catalyst cluster
-  [−] Short float < 10%, no positive catalyst
-
-Institutional ownership increase:
-  [+] Low inst ownership, concentrated fund, recent decline
-  [−] Already highly owned, passive flow
-
-Contract loss/non-renewal:
-  [+] High customer concentration, contract large % revenue
-  [−] Diversified, contract small
-
-Partnership dissolution:
-  [+] Partner critical, exclusive, no alternatives
-  [−] Small partnership, many alternatives
-
-Product delay/failure/recall:
-  [+] Single-product, safety risk, large revenue exposure
-  [−] Diverse products, delay minor
-
-Analyst downgrade/PT cut:
-  [+] Low coverage, respected analyst, stock near highs
-  [−] High coverage, perma-bear, stock already at lows
-
-Negative personnel change:
-  [+] Founder/CEO departure, key rainmaker, during crisis
-  [−] Routine succession, company stable
-
-Dilutive offering:
-  [+] Low cash, high debt, negative FCF, stock down
-  [−] Small offering, debt-for-equity swap deleverages
-
-Earnings miss:
-  [+] High short interest, high expectations, revenue miss, guidance cut alongside
-  [−] Miss small, macro driven, peers also missed
-
-Earnings guidance cut:
-  [+] Cut large, structural, peers not cutting, previously guided positive
-  [−] Cut small, temporary, peers also cut
-
-Suspension of buyback/dividend cut:
-  [+] Cash-strapped, previous commitment, signals distress
-  [−] Cut to fund high-return project
-
-Failed acquisition/overpayment:
-  [+] High debt taken, goodwill impairment large, integration disaster
-  [−] Small deal, regulatory block
-
-Accumulation of debt/toxic assets:
-  [+] Already high leverage, deteriorating metrics, near covenant breach
-  [−] Accretive debt for growth, low cost
-
-Operational setback:
-  [+] Single facility, no backup, revenue concentration
-  [−] Diversified operations, insurance covers
-
-Insider selling (cluster):
-  [+] CEO/CFO selling after beat, large amounts, no 10b5-1, multiple execs
-  [−] Routine 10b5-1, small amounts, one insider
-
-Activist exits/file hostile 13D:
-  [+] Activist good track record, large position, underperformed
-  [−] Activist exits fast, position small
-
-Capacity underutilization/overexpansion:
-  [+] High fixed costs, demand weakening, industry overcapacity
-  [−] Temporary underutilisation, upturn expected
-
-Strategic pivot failure:
-  [+] Pivot expensive, CEO staked reputation, high debt
-  [−] Pivot small experiment, quickly reversed
-
-Supply chain shock:
-  [+] Single-source, long lead times, no inventory
-  [−] Diversified suppliers, buffer inventory
-
-Patent litigation loss/IP theft:
-  [+] Core patent, high royalty income, competitive advantage lost
-  [−] Peripheral patent, workaround exists
-
-Customer concentration risk:
-  [+] Single customer > 30% revenue, no long-term contract
-  [−] Diversified, contract locked in
-
-Policy reversal/new regulation/tax increase:
-  [+] Industry directly targeted, high cost impact
-  [−] Sector exempt, impact small
-
-Rate hike/monetary tightening:
-  [+] High debt, floating rate, low interest coverage, negative FCF
-  [−] Low debt, fixed-rate, cash-rich
-
-Adverse litigation/antitrust:
-  [+] Binary penalties, large damages, core at risk
-  [−] Nuisance suit, low probability
-
-Geopolitical event that hurts sector:
-  [+] High exposure to conflict region, supply chain disruption
-  [−] Diversified geography, domestic focus
-
-Sector headwind/index exclusion:
-  [+] Index fund selling forced, low liquidity
-  [−] Exclusion expected, small ETF weight
-
-Regulatory denial/antitrust block:
-  [+] Deal-breaker, no alternative, sunk cost
-  [−] Denial expected, alternative paths
-
-Macro headwinds:
-  [+] High cyclicality, consumer discretionary, high operating leverage
-  [−] Defensive sector, high cash, flexible costs
-
-Sector rotation out:
-  [+] High valuation premium, high beta, crowded institutional positioning
-  [−] Already underowned, attractive value
-
-Unfavorable commodity price move:
-  [+] High input cost sensitivity, unhedged, low pricing power
-  [−] Hedged, high pricing power, small input cost
-
-ESG controversy/carbon tax:
-  [+] High emission industry, no offset plan, brand risk
-  [−] Already green, tax small
-
-Currency headwind:
-  [+] High export revenue, unhedged, domestic costs in strong currency
-  [−] Hedged, foreign costs decline, small foreign share
-
-Technical breakdown:
-  [+] Breakdown on high volume, death cross, preceded by rally
-  [−] Low volume, already oversold
-
-Short attack/bear raid:
-  [+] High short interest, credible short report, fraud allegation
-  [−] Already heavily shorted, report low credibility
-
-Institutional ownership decline:
-  [+] Concentrated holders, high-conviction fund exiting, after pop
-  [−] Passive rebalancing, one small fund
-"""
-
 STEP2_TEMPLATE = """
 You are a COMPANY CONTEXT ANALYST. Your inputs are:
-1. A financial snapshot of {full_name} (ticker: {ticker}) from a database.
-2. Search snippets about {full_name} (ticker: {ticker})'s business model,
+1. A financial snapshot of {full_name} ({ticker}) from a database.
+2. Search snippets about {full_name} ({ticker})'s business model,
    operations, and risks.
 
-CRITICAL: Only use snippets that explicitly refer to {full_name}. Discard
-any snippet about a different company.
+CRITICAL: Only use snippets that explicitly refer to {full_name} or {ticker}.
+Discard any snippet about a different company.
 
 FINANCIAL SNAPSHOT:
 {snapshot}
@@ -895,68 +738,53 @@ PHASE 1: Structured Context Questionnaire
 Answer every question using the snapshot and snippets.
 Write "DATUM_MISSING" if data is not available.
 
+(Questionnaire table unchanged...)
 1. REVENUE STRUCTURE
    a) % revenue from government / commercial / consumer?
    b) % revenue from domestic (US) / international?
-   c) Top 3 customers and their approximate revenue share?
+   c) Top 3 customers and approximate revenue share?
    d) Revenue concentration risk (high/medium/low)?
 
 2. COST STRUCTURE & SUPPLY CHAIN
-   a) Top 3 input costs (e.g., labour, cloud, aluminium)?
-   b) % of COGS that is commodity-linked?
+   a) Top 3 input costs?
+   b) % of COGS commodity-linked?
    c) Manufacturing in-house vs. outsourced?
-   d) % of supply chain exposed to China or geopolitical risk zones?
-   e) Supplier concentration risk (high/medium/low)?
+   d) % supply chain exposed to China/geopolitical risk?
+   e) Supplier concentration risk?
 
 3. COMPETITIVE POSITION
-   a) Pricing power? (can raise prices without losing volume – yes/no/partial)
-   b) Customer switching costs? (high/medium/low)
-   c) Industry structure? (fragmented/oligopoly/monopoly)
+   a) Pricing power?
+   b) Customer switching costs?
+   c) Industry structure?
    d) Approximate market share?
    e) Top 3 competitors?
 
 4. FINANCIAL SENSITIVITIES (snapshot + snippets)
-   a) Debt-to-equity ratio
-   b) % of debt that is fixed-rate vs. floating-rate?
-   c) Interest coverage ratio (EBIT / interest expense)
-   d) Cash runway (current assets / monthly cash burn)
-   e) Revenue growth trend (accelerating / flat / declining)
-   f) Gross margin trend (expanding / stable / compressing)
-   g) Profit margin trend
-   h) Free cash flow (positive / negative / trend)
+   a‑h) (debt/equity, fixed vs floating, interest coverage, cash runway,
+         revenue/gross/profit margin trends, FCF)
 
 5. EXTERNAL EXPOSURES
-   a) Tariff sensitivity? (high/medium/low + which tariffs)
-   b) Commodity price sensitivity? (which commodities, % of revenue/cost)
-   c) Currency sensitivity? (which pairs, % exposure)
-   d) Key regulatory agencies (FDA, DoD, SEC, FTC, etc.)
-   e) Geopolitical risk concentration? (regions, specific conflicts)
-   f) Government contract exposure? (high/medium/low + % revenue)
+   a‑f) (tariff, commodity, currency sensitivity, key regulators,
+         geopolitical risk, government contract exposure)
 
 6. MANAGEMENT & RISKS
-   a) CEO track record (tenure, prior successes/failures)
-   b) Insider ownership % and recent buy/sell trend
-   c) Pending litigation (list cases, materiality, potential damages)
-   d) Regulatory investigations (list, status, potential impact)
+   a‑d) (CEO track record, insider ownership trend, pending litigation,
+         regulatory investigations)
 
 7. GROWTH TRAJECTORY
-   a) Organic vs. acquisitive growth mix
-   b) Order-book or backlog visibility
-   c) Capacity expansion plans
-   d) Primary end-market growth rate
+   a‑d) (organic vs acquisitive, backlog visibility, capacity plans,
+         end-market growth rate)
 
 Cite snippet IDs or snapshot fields for each answer.
 
 PHASE 2: Sensitivity Multiplier Generation
 
-Now, using the completed context questionnaire, compute a multiplier for
-EVERY catalyst in the TAXONOMY list. Use the AMPLIFIER/DAMPENER REFERENCE
-TABLE below.
+Using the completed questionnaire, compute a multiplier for EVERY catalyst
+in the TAXONOMY list. Use the AMPLIFIER/DAMPENER REFERENCE TABLE below.
 
 Rules:
-- Default multiplier = 1.0 (no change) unless conditions are met.
-- Amplified (hits harder): 1.2–1.5.  Dampened (hits weaker): 0.5–0.8.
-- Irrelevant (cannot affect this company): 0.0.
+- Default = 1.0 unless conditions met. Amplified: 1.2‑1.5. Dampened: 0.5‑0.8.
+- Irrelevant: 0.0.
 - Provide a one-sentence rationale citing the specific extracted fact.
 
 AMPLIFIER/DAMPENER REFERENCE TABLE:
@@ -965,179 +793,145 @@ AMPLIFIER/DAMPENER REFERENCE TABLE:
 TAXONOMY:
 {taxonomy_list_str}
 
-OUTPUT FORMAT:
-Return ONLY this JSON.
+OUTPUT FORMAT: Return ONLY this JSON.
 {{
   "ticker": "{ticker}",
-  "extracted_context": {{
-    "revenue_structure": {{ ... }},
-    "cost_structure": {{ ... }},
-    "competitive_position": {{ ... }},
-    "financial_sensitivities": {{ ... }},
-    "external_exposures": {{ ... }},
-    "management_risks": {{ ... }},
-    "growth_trajectory": {{ ... }}
-  }},
-  "sensitivity_profile": {{
-    "Contract win/expansion": {{
-      "multiplier": 1.3,
-      "rationale": "High revenue concentration amplifies contract wins. [source: Q1c]"
-    }},
-    ... for ALL catalysts ...
-  }},
-  "missing_data": ["list any questionnaire items answered DATUM_MISSING"]
+  "extracted_context": {{ ... }},
+  "sensitivity_profile": {{ ... }},
+  "missing_data": [...]
 }}
 """
 
 STEP4_TEMPLATE = """
-You are a FINAL CATALYST SYNTHESIZER for {full_name} (ticker: {ticker}) on {today}.
+You are a FINAL CATALYST SYNTHESIZER for {full_name} ({ticker}) on {today}.
 
 INPUTS:
-1. Raw events – a flat list of events extracted from web searches. These
-   have been verified to be about {full_name} only.
+1. Finviz confirmed events (ticker‑verified, high confidence):
+{finviz_events_json}
+
+2. Additional raw events extracted from web searches:
 {raw_events_json}
 
-2. Weighted taxonomy – each catalyst has a base weight and an
-   adjusted_weight that already incorporates company context.
+3. Weighted taxonomy (company‑context‑adjusted):
 {weighted_taxonomy_json}
 
-3. Financial snapshot:
+4. Financial snapshot:
 {snapshot_json}
 
 TASKS:
-A. Classify each raw event into one or more catalyst categories from the
-   taxonomy.  Use the EXACT taxonomy label.  An event can trigger
-   multiple catalysts.
+A. Merge Finviz events + raw events.  Give Finviz events a confidence boost
+   (+10 over raw confidence).  Deduplicate by matching descriptions.
 
-B. Build the FULL catalyst grid.  For every catalyst in the taxonomy:
-   - status: "HIT" if at least one event was classified to it,
-     "MISS" if no event applies but the catalyst is relevant,
-     "N/A" if the catalyst does not apply to this company.
-   - For each HIT, include the event's date, excerpt, source URLs,
-     and confidence.  Use the adjusted_weight from the weighted taxonomy.
-   - For MISS or N/A, adjusted_weight = 0.
+B. Classify every event into one or more catalyst categories from the
+   taxonomy.  Use the EXACT taxonomy label.
 
-C. Apply INTERACTION RULES:
-   1. If "Insider selling (cluster)" is HIT AND "Earnings beat" is HIT
-      within 14 days, reduce the beat's adjusted_weight by 1 and add a
-      synthetic negative catalyst "Insider-earnings divergence" with
-      adjusted_weight=1.
-   2. If snapshot shows float_short > 20% AND positive HITs dominate,
-      add a positive catalyst "Short squeeze potential" with
-      adjusted_weight=3.
-   3. If snapshot shows analyst target price < current price, any
-      "Analyst upgrade/PT increase" HIT is reclassified as negative
-      (type: negative, taxonomy: "Analyst downgrade/PT cut").
+C. Build the FULL catalyst grid (66 items).  Status: HIT / MISS / N/A.
+   Use adjusted_weight from the weighted taxonomy for HITs.
+
+D. Apply INTERACTION RULES:
+   1. If "Insider selling (cluster)" HIT AND "Earnings beat" HIT
+      within 14 days, reduce the beat's adjusted_weight by 1 and add
+      "Insider-earnings divergence" (negative, weight=1).
+   2. If float_short > 20% AND positive HITs dominate, add
+      "Short squeeze potential" (positive, weight=3).
+   3. If analyst target < current price, reclassify
+      "Analyst upgrade/PT increase" as negative.
    4. If both "Technical breakdown" and "Earnings beat" are HIT,
-      reduce the breakdown's adjusted_weight by 2 (fundamentals may
-      override momentum).
+      reduce breakdown's weight by 2.
 
-D. Compute FINAL SCORES:
-   - Positive_Score = sum(adjusted_weight × confidence/100) for all
-     positive HITs.
-   - Negative_Score = sum(adjusted_weight × confidence/100) for all
-     negative HITs.
+E. Compute FINAL SCORES:
+   - Positive_Score = sum(adjusted_weight × confidence/100) for positive HITs.
+   - Negative_Score = sum(adjusted_weight × confidence/100) for negative HITs.
    - Net = Positive_Score − Negative_Score.
-   - Map:
-     Net >= 20  → Strong Bullish
-     Net >=  8  → Bullish
-     Net >= -8  → Neutral
-     Net >= -20 → Bearish
-     else       → Strong Bearish
+   - Net >= 20→Strong Bullish, >=8→Bullish, >=-8→Neutral, >=-20→Bearish,
+     else→Strong Bearish.
    - Conviction = min(100, abs(Net) * 2)
 
-E. Write a `catalyst_stack` – a 4-sentence narrative that references
-   specific dates, ties the most impactful events to the company's
-   context, and explains the net signal.
+F. Write a catalyst_stack (4 sentences, with dates).
+G. Identify the key_assumption.
 
-F. Identify the single `key_assumption` that, if wrong, would flip
-   the call.
-
-OUTPUT FORMAT:
-Return ONLY this JSON.
+OUTPUT FORMAT: Return ONLY this JSON. (Every catalyst must appear.)
 {{
   "ticker": "{ticker}",
   "analysis_date": "{today}",
   "current_price": "...",
-  "catalyst_grid": [
-    {{
-      "taxonomy": "Contract win/expansion",
-      "type": "positive",
-      "category": "internal",
-      "status": "HIT",
-      "base_weight": 8,
-      "adjusted_weight": 10,
-      "event_date": "2025-10-14",
-      "evidence_excerpt": "\"...$165.15M Army contract...\"",
-      "source_urls": ["https://..."],
-      "confidence": 90,
-      "sensitivity_rationale": "Amplified – high govt contract exposure."
-    }},
-    ... every catalyst
-  ],
+  "catalyst_grid": [ ... ],
   "catalyst_stack": "...",
-  "net_signal": "Bullish",
-  "conviction": 78,
+  "net_signal": "...",
+  "conviction": 0-100,
   "key_assumption": "..."
 }}
 """
 
 # ── Helpers for prompt formatting ──────────────────────
-def _format_step1(full_name, ticker, today, lookback_start, search_results_json, taxonomy_list_str):
+def _format_step1(full_name, ticker, today, lookback_start, search_results_json, finviz_events_json, taxonomy_list_str):
     return STEP1_TEMPLATE.format(
-        full_name=full_name,
-        ticker=ticker,
-        today=today,
-        lookback_start=lookback_start,
-        search_results_json=search_results_json,
-        taxonomy_list_str=taxonomy_list_str,
+        full_name=full_name, ticker=ticker, today=today,
+        lookback_start=lookback_start, search_results_json=search_results_json,
+        finviz_events_json=finviz_events_json, taxonomy_list_str=taxonomy_list_str,
     )
 
 def _format_step2(full_name, ticker, snapshot, context_search_results, amp_damp_table, taxonomy_list_str):
     return STEP2_TEMPLATE.format(
-        full_name=full_name,
-        ticker=ticker,
+        full_name=full_name, ticker=ticker,
         snapshot=json.dumps(snapshot, indent=2, default=str),
         context_search_results=context_search_results,
-        amp_damp_table=amp_damp_table,
-        taxonomy_list_str=taxonomy_list_str,
+        amp_damp_table=amp_damp_table, taxonomy_list_str=taxonomy_list_str,
     )
 
-def _format_step4(full_name, ticker, today, raw_events_json, weighted_taxonomy_json, snapshot_json):
+def _format_step4(full_name, ticker, today, raw_events_json, finviz_events_json, weighted_taxonomy_json, snapshot_json):
     return STEP4_TEMPLATE.format(
-        full_name=full_name,
-        ticker=ticker,
-        today=today,
-        raw_events_json=raw_events_json,
+        full_name=full_name, ticker=ticker, today=today,
+        raw_events_json=raw_events_json, finviz_events_json=finviz_events_json,
         weighted_taxonomy_json=weighted_taxonomy_json,
         snapshot_json=snapshot_json,
     )
 
 # ── Robust JSON parser ──────────────────────────────────
 def parse_json(raw):
-    """Parse JSON, handling common LLM output quirks."""
+    """Parse JSON, handling common LLM output quirks including truncation."""
     raw = raw.strip()
     if raw.startswith("```"):
         raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
         pass
-
     cleaned = re.sub(r",\s*}", "}", raw)
     cleaned = re.sub(r",\s*]", "]", cleaned)
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
-
     repaired = re.sub(r'(?<!\\)"(?=(?:(?<!\\)(?:\\\\)*\\")*[^"]*$)', r'\"', cleaned)
     try:
         return json.loads(repaired)
     except json.JSONDecodeError:
         pass
-
+    in_string = False
+    escaped = False
+    last_quote_pos = -1
+    for i, ch in enumerate(cleaned):
+        if escaped: escaped = False; continue
+        if ch == '\\': escaped = True; continue
+        if ch == '"': in_string = not in_string; last_quote_pos = i
+    if in_string and last_quote_pos > 0:
+        truncated = cleaned[:last_quote_pos + 1] + '"]'
+        open_brackets = truncated.count("[") - truncated.count("]")
+        open_braces = truncated.count("{") - truncated.count("}")
+        truncated += "]" * open_brackets + "}" * open_braces
+        try:
+            return json.loads(truncated)
+        except json.JSONDecodeError:
+            pass
+    open_brackets = cleaned.count("[") - cleaned.count("]")
+    open_braces = cleaned.count("{") - cleaned.count("}")
+    if open_brackets > 0 or open_braces > 0:
+        truncated = cleaned + "]" * open_brackets + "}" * open_braces
+        try:
+            return json.loads(truncated)
+        except json.JSONDecodeError:
+            pass
     try:
         fix_resp = safe_create(
             model=MODEL,
@@ -1145,8 +939,7 @@ def parse_json(raw):
                 {"role": "system", "content": "Return ONLY valid JSON. Close all open brackets/braces."},
                 {"role": "user", "content": f"Fix this JSON:\n\n{raw[:20000]}"}
             ],
-            temperature=0.0,
-            max_tokens=500
+            temperature=0.0, max_tokens=500
         )
         fixed2 = fix_resp.choices[0].message.content.strip()
         if fixed2.startswith("```"):
@@ -1154,100 +947,54 @@ def parse_json(raw):
         return json.loads(fixed2)
     except Exception:
         pass
-
-    last_good = 0
-    brace_count = 0
-    in_string = False
-    escaped = False
-    for i, ch in enumerate(cleaned):
-        if escaped:
-            escaped = False
-            continue
-        if ch == '\\':
-            escaped = True
-            continue
-        if ch == '"' and not escaped:
-            in_string = not in_string
-            continue
-        if in_string:
-            continue
-        if ch == '{':
-            brace_count += 1
-        elif ch == '}':
-            brace_count -= 1
-            if brace_count == 0:
-                last_good = i + 1
-    if last_good > 0:
-        truncated = cleaned[:last_good] + "\n    ]\n  }"
-        try:
-            return json.loads(truncated)
-        except json.JSONDecodeError:
-            pass
-
     raise ValueError(f"All JSON repair strategies failed. Raw start: {raw[:200]}")
 
 # ── LLM caller ─────────────────────────────────────────
-def call_llm(prompt, user_msg, temperature=0.3, max_tokens=15000):
-    messages = [
-        {"role": "system", "content": prompt},
-        {"role": "user", "content": user_msg}
-    ]
-    resp = safe_create(
-        model=MODEL,
-        messages=messages,
-        temperature=temperature,
-        max_tokens=max_tokens
-    )
+def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000):
+    messages = [{"role": "system", "content": prompt}, {"role": "user", "content": user_msg}]
+    resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
     return resp.choices[0].message.content.strip()
 
-# ── Recalculate signal after corrections ──────────────────
+# ── Recalculate signal ──────────────────────────────────
 def recalculate_signal(grid):
-    """Recompute net_signal and conviction from the (possibly corrected) grid."""
-    pos_score = sum(
-        c.get("adjusted_weight", 0) * c.get("confidence", 50) / 100
-        for c in grid
-        if c.get("status") == "HIT" and c.get("type") == "positive"
-    )
-    neg_score = sum(
-        c.get("adjusted_weight", 0) * c.get("confidence", 50) / 100
-        for c in grid
-        if c.get("status") == "HIT" and c.get("type") == "negative"
-    )
+    pos_score = sum(c.get("adjusted_weight", 0) * c.get("confidence", 50) / 100
+                    for c in grid if c.get("status") == "HIT" and c.get("type") == "positive")
+    neg_score = sum(c.get("adjusted_weight", 0) * c.get("confidence", 50) / 100
+                    for c in grid if c.get("status") == "HIT" and c.get("type") == "negative")
     net = pos_score - neg_score
-
-    if net >= 20:
-        signal = "Strong Bullish"
-    elif net >= 8:
-        signal = "Bullish"
-    elif net >= -8:
-        signal = "Neutral"
-    elif net >= -20:
-        signal = "Bearish"
-    else:
-        signal = "Strong Bearish"
+    if net >= 20: signal = "Strong Bullish"
+    elif net >= 8: signal = "Bullish"
+    elif net >= -8: signal = "Neutral"
+    elif net >= -20: signal = "Bearish"
+    else: signal = "Strong Bearish"
     conviction = min(100, int(abs(net) * 2))
     return signal, conviction
 
 # ── Async analysis pipeline ────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
-    full_name = snapshot.get("profile", {}).get("company_name", ticker)
-    if not full_name or full_name == ticker:
-        full_name = ticker
+    # Resolve company name
+    db_name = snapshot.get("profile", {}).get("company_name", "")
+    if db_name and db_name.lower() != ticker.lower() and len(db_name) > 2:
+        official_name = db_name
+        aliases = []
+        print(f"  🏢 Using DB company name: {official_name}")
     else:
-        full_name = f"{full_name} {ticker}"
+        official_name, aliases = resolve_company_name(ticker, searxng_url)
+
+    # Build disambiguated full name for searches
+    if official_name.lower() != ticker.lower():
+        full_name = f"{official_name} ({ticker})"
+    else:
+        full_name = ticker
 
     taxonomy_list_str = "\n".join(TAXONOMY_LIST)
 
-    # ════════════════════════════════════════════════════
-    #  PHASE 0.5: FinvizFinance news scrape
-    # ════════════════════════════════════════════════════
+    # ═══ Phase 0.5: Finviz news scrape ═══
     print("  📰 Scraping Finviz news…")
     finviz_events = scrape_finviz_news(ticker)
     print(f"  📰 Finviz returned {len(finviz_events)} headlines")
 
-    # ════════════════════════════════════════════════════
-    #  PHASE 1 & 2: Granular Searches
-    # ════════════════════════════════════════════════════
+    # ═══ Phase 1 & 2: Granular Searches ═══
     catalyst_queries = _make_catalyst_templates(full_name)
     context_queries = _make_context_templates(full_name)
 
@@ -1266,36 +1013,43 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     context_task = batch_search(context_queries, searxng_url)
     catalyst_results, context_results = await asyncio.gather(catalyst_task, context_task)
 
-    cat_with = sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))
-    ctx_with = sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and not v.startswith('NO_RESULTS'))
-    print(f"  ✅ Catalyst searches: {cat_with}/{len(catalyst_queries)} with results")
-    print(f"  ✅ Context searches:  {ctx_with}/{len(context_queries)} with results")
+    # ── FILTER irrelevant snippets ──
+    catalyst_results = _filter_search_results(catalyst_results, official_name, ticker, aliases)
+    context_results = _filter_search_results(context_results, official_name, ticker, aliases)
+
+    cat_with = sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and v != 'NO_RELEVANT_RESULTS' and not v.startswith('NO_RESULTS'))
+    ctx_with = sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and v != 'NO_RELEVANT_RESULTS' and not v.startswith('NO_RESULTS'))
+    print(f"  ✅ Catalyst searches: {cat_with}/{len(catalyst_queries)} with relevant results")
+    print(f"  ✅ Context searches:  {ctx_with}/{len(context_queries)} with relevant results")
 
     # ── DUMP SEARCH RESULTS ──
     print("\n" + "="*80)
-    print("  🔎 CATALYST SEARCH RESULTS")
+    print("  🔎 CATALYST SEARCH RESULTS (relevance‑filtered)")
     print("="*80)
     for q, v in catalyst_results.items():
-        print(f"\n  QUERY: {q}")
-        print(f"  RESULT: {v[:500]}{'...' if len(v)>500 else ''}")
-        print("  ──")
+        if v not in ("NO_RELEVANT_RESULTS",) and not v.startswith("NO_RESULTS") and not v.startswith("SEARCH_ERROR"):
+            print(f"\n  QUERY: {q}")
+            print(f"  RESULT: {v[:400]}{'...' if len(v)>400 else ''}")
+            print("  ──")
     print("\n" + "="*80)
-    print("  🔎 CONTEXT SEARCH RESULTS")
+    print("  🔎 CONTEXT SEARCH RESULTS (relevance‑filtered)")
     print("="*80)
     for q, v in context_results.items():
-        print(f"\n  QUERY: {q}")
-        print(f"  RESULT: {v[:500]}{'...' if len(v)>500 else ''}")
-        print("  ──")
+        if v not in ("NO_RELEVANT_RESULTS",) and not v.startswith("NO_RESULTS") and not v.startswith("SEARCH_ERROR"):
+            print(f"\n  QUERY: {q}")
+            print(f"  RESULT: {v[:400]}{'...' if len(v)>400 else ''}")
+            print("  ──")
 
     search_results_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in catalyst_results.items()])
-    prompt1 = _format_step1(full_name, ticker, TODAY, LOOKBACK_START, search_results_str, taxonomy_list_str)
+    finviz_json = json.dumps(finviz_events, indent=2)
+    prompt1 = _format_step1(full_name, ticker, TODAY, LOOKBACK_START, search_results_str, finviz_json, taxonomy_list_str)
 
     context_str = "\n\n".join([f"Query: {q}\n{v}" for q, v in context_results.items()])
     prompt2 = _format_step2(full_name, ticker, snapshot, context_str, AMP_DAMP_TABLE, taxonomy_list_str)
 
     print("  🧠 Running Step 1 (event extraction) and Step 2 (context sensitivity) in parallel…")
-    step1_task = asyncio.to_thread(call_llm, prompt=prompt1, user_msg=f"Extract all events for {full_name}.")
-    step2_task = asyncio.to_thread(call_llm, prompt=prompt2, user_msg=f"Analyze company context for {full_name}.")
+    step1_task = asyncio.to_thread(call_llm, prompt=prompt1, user_msg=f"Extract NEW events for {full_name}.", temperature=0.3, max_tokens=40000)
+    step2_task = asyncio.to_thread(call_llm, prompt=prompt2, user_msg=f"Context for {full_name}.", temperature=0.3, max_tokens=40000)
     step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
     print("  ✅ Step 1 LLM done.")
     print("  ✅ Step 2 LLM done.")
@@ -1307,19 +1061,9 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             raw_events = raw_events.get("events", raw_events.get("evidence_grid", []))
         if not isinstance(raw_events, list):
             raise ValueError("Step 1 output is not a list")
-
-        # ══════════════════════════════════════════════
-        #  MERGE Finviz headlines into raw events
-        # ══════════════════════════════════════════════
-        for fe in finviz_events:
-            # Avoid duplicates – skip if an event with the same description already exists
-            dup = any(fe.get("description", "")[:80] == re.get("description", "")[:80] for re in raw_events)
-            if not dup:
-                raw_events.append(fe)
-
-        print(f"  📋 Step 1 extracted {len(raw_events)} raw events (incl. {len(finviz_events)} Finviz headlines merged)")
+        print(f"  📋 Step 1 extracted {len(raw_events)} NEW raw events")
         print("\n" + "="*80)
-        print("  📋 RAW EVENTS (STEP 1 OUTPUT, AFTER FINVIZ MERGE)")
+        print("  📋 NEW RAW EVENTS (STEP 1 OUTPUT)")
         print("="*80)
         for i, ev in enumerate(raw_events):
             print(f"  [{i+1}] Date: {ev.get('event_date','?')}")
@@ -1364,8 +1108,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         multiplier = profile.get("multiplier", 1.0)
         adjusted = round(base * multiplier)
         weighted_taxonomy[catalyst] = {
-            "base_weight": base,
-            "multiplier": multiplier,
+            "base_weight": base, "multiplier": multiplier,
             "adjusted_weight": max(0, min(10, adjusted)),
             "rationale": profile.get("rationale", "")
         }
@@ -1378,37 +1121,28 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
 
     # Step 4: Final synthesis
     prompt4 = _format_step4(
-        full_name=full_name,
-        ticker=ticker,
-        today=TODAY,
+        full_name=full_name, ticker=ticker, today=TODAY,
         raw_events_json=json.dumps(raw_events, indent=2),
+        finviz_events_json=json.dumps(finviz_events, indent=2),
         weighted_taxonomy_json=json.dumps(weighted_taxonomy, indent=2),
         snapshot_json=json.dumps(snapshot, indent=2, default=str)
     )
     print("  🧠 Running Step 4 (final synthesis)…")
-    final_raw = call_llm(prompt=prompt4, user_msg=f"Synthesize final analysis for {full_name}.", temperature=0.3, max_tokens=15000)
+    final_raw = call_llm(prompt=prompt4, user_msg=f"Finalize {full_name}.", temperature=0.3, max_tokens=40000)
     try:
         final_result = parse_json(final_raw)
     except Exception as e:
         print(f"  ❌ Failed to parse Step 4 JSON: {e}")
         return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
 
-    # ════════════════════════════════════════════════════
-    #  PHASE 5: Gemini Fact‑Check Layer
-    # ════════════════════════════════════════════════════
+    # Phase 5: Gemini Fact‑Check
     grid = final_result.get("catalyst_grid", [])
     corrected_grid, updated_taxonomy = gemini_factcheck(
-        full_name=full_name,
-        ticker=ticker,
-        grid=grid,
-        snapshot=snapshot,
-        weighted_taxonomy=weighted_taxonomy,
-        taxonomy_list=TAXONOMY_LIST
+        full_name=full_name, ticker=ticker, grid=grid, snapshot=snapshot,
+        weighted_taxonomy=weighted_taxonomy, taxonomy_list=TAXONOMY_LIST
     )
 
-    # ════════════════════════════════════════════════════
-    #  PHASE 6: Recalculate signal after corrections
-    # ════════════════════════════════════════════════════
+    # Phase 6: Recalculate
     final_result["catalyst_grid"] = corrected_grid
     new_signal, new_conviction = recalculate_signal(corrected_grid)
     final_result["net_signal"] = new_signal
@@ -1417,7 +1151,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
 
     return final_result
 
-# ── Main synchronous wrapper ────────────────────────────
+# ── Main wrapper ────────────────────────────────────────
 def analyze_stock(ticker, snapshot, searxng_url):
     return asyncio.run(analyze_stock_async(ticker, snapshot, searxng_url))
 
@@ -1439,7 +1173,6 @@ if __name__ == "__main__":
 
     conn = None
     cur = None
-
     tickers = ["SERV"]
 
     for ticker in tickers:
@@ -1489,14 +1222,12 @@ if __name__ == "__main__":
             print("="*80)
             for m in misses:
                 print(f"  {m.get('taxonomy')}")
-
             if nas:
                 print("\n" + "="*80)
                 print("  ⛔ N/A CATALYSTS")
                 print("="*80)
                 for n in nas:
                     print(f"  {n.get('taxonomy')}")
-
         time.sleep(2)
 
     if cur: cur.close()
