@@ -23,7 +23,7 @@ from openai import OpenAI
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
-SEARCH_CONCURRENCY   = 10
+SEARCH_CONCURRENCY   = 6          # reduced to avoid OOM on SearXNG
 SEARCH_DELAY         = 0.1
 MODEL                = "deepseek-chat"
 GEMINI_API_KEY       = os.environ.get("GEMINI_API_KEY", "")
@@ -43,7 +43,7 @@ async def search_single(session, query, searxng_url, categories="general,news"):
             data = await resp.json()
             results = data.get("results", [])
             formatted = []
-            for r in results[:6]:
+            for r in results[:4]:   # reduced from 6 to 4 to reduce memory pressure
                 formatted.append(
                     f"[{r.get('engine','?')}] {r.get('title','')}\n"
                     f"Date: {r.get('publishedDate','')}\n"
@@ -70,9 +70,7 @@ def _snippet_is_relevant(snippet_text, full_name, ticker, aliases=None):
     check = snippet_text.lower()
     if ticker.lower() in check:
         return True
-    # Check official name words
     name_words = full_name.lower().split()
-    # Require at least 2 words of the company name to appear (for multi-word names)
     matches = sum(1 for w in name_words if w in check)
     if matches >= min(2, len(name_words)):
         return True
@@ -98,8 +96,6 @@ def _filter_search_results(results_dict, full_name, ticker, aliases=None):
 async def _resolve_company_name_async(ticker, searxng_url):
     """Try multiple sources to get the full company name for a ticker.
     Returns (official_name, aliases_list)."""
-
-    # 1. Try finvizfinance ticker_fundament (fast, free)
     try:
         from finvizfinance.quote import finvizfinance
         stock = finvizfinance(ticker)
@@ -112,14 +108,12 @@ async def _resolve_company_name_async(ticker, searxng_url):
     except Exception:
         pass
 
-    # 2. Try yfinance (free, reliable)
     try:
         import yfinance as yf
         info = yf.Ticker(ticker).info
         for key in ('longName', 'shortName', 'displayName'):
             name = info.get(key, '')
             if name and ticker.lower() in name.lower():
-                # Clean common suffixes
                 for suffix in (' Common Stock', ' Inc.', ' Inc', ' Corp.', ' Corp',
                                ' Corporation', ' Ltd.', ' Ltd', ' PLC', ' Class A',
                                ' - Ordinary Shares', ' Holdings'):
@@ -131,7 +125,6 @@ async def _resolve_company_name_async(ticker, searxng_url):
     except Exception:
         pass
 
-    # 3. Try SearXNG search as last resort
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
@@ -173,8 +166,6 @@ def build_health_snapshot(ticker, conn):
     cols = [desc[0] for desc in cur.description]
     row = cur.fetchone()
     finviz = dict(zip(cols, row)) if row else {}
-
-    # Get company name from Finviz DB first
     db_company = finviz.get("company", "").strip()
     cur.execute("""
         SELECT company_name, sector, industry, country, description
@@ -237,7 +228,6 @@ def scrape_finviz_news(ticker):
                 date_str = str(d)[:10]
             title = str(row.get('Title', ''))
             source = str(row.get('Source', ''))
-            # Build a URL from the specific news link if available
             link = str(row.get('Link', ''))
             urls = [link] if link and link.startswith('http') else [f"https://finviz.com/quote.ashx?t={ticker}"]
             events.append({
@@ -245,7 +235,7 @@ def scrape_finviz_news(ticker):
                 "description": f"{title} (via {source})",
                 "evidence_excerpt": title[:150],
                 "source_urls": urls,
-                "confidence": 85,       # Finviz headlines are ticker‑verified
+                "confidence": 85,
                 "source": "finviz",
                 "finviz_source": source
             })
@@ -307,7 +297,7 @@ For multiplier accuracy:
 {json.dumps(nas, indent=2)}
 
 ────────────── CURRENT MULTIPLIERS ──────────────
-{json.dumps({{k: v.get("multiplier", 1.0) for k, v in weighted_taxonomy.items()}}, indent=2)}
+{json.dumps({k: v.get("multiplier", 1.0) for k, v in weighted_taxonomy.items()}, indent=2)}
 
 ────────────── FINANCIAL SNAPSHOT ──────────────
 {json.dumps(snapshot, indent=2, default=str)}
@@ -425,9 +415,8 @@ Return ONLY this JSON:
     print(f"  ✅ Gemini applied {change_count} grid corrections and {mult_changes} multiplier overrides.")
     return grid, weighted_taxonomy
 
-# ── GRANULAR SEARCH TEMPLATES (with full_name placeholder) ──
+# ── GRANULAR SEARCH TEMPLATES ─────────────────────────
 def _make_catalyst_templates(full_name):
-    """Return ~66 individual, focused catalyst queries using the official company name."""
     return [
         f"{full_name} contract award win 2025 2026",
         f"{full_name} contract expansion 2025 2026",
@@ -498,7 +487,6 @@ def _make_catalyst_templates(full_name):
     ]
 
 def _make_context_templates(full_name):
-    """Return ~37 individual, focused context queries using the official company name."""
     return [
         f"{full_name} revenue breakdown by segment",
         f"{full_name} revenue by customer type",
@@ -539,7 +527,7 @@ def _make_context_templates(full_name):
         f"{full_name} end market growth rate",
     ]
 
-# ── Taxonomy (unchanged) ────────────────────────────────
+# ── Taxonomy ────────────────────────────────────────────
 TAXONOMY_LIST = [
     "Contract win/expansion",
     "Strategic partnership/alliance",
@@ -678,6 +666,273 @@ CATALYST_WEIGHTS = {
     "Institutional ownership decline (major holders reducing stakes)": 6,
 }
 
+# ── AMPLIFIER / DAMPENER TABLE (re‑added) ───────────────
+AMP_DAMP_TABLE = """
+Contract win/expansion:
+  [+] High customer concentration, low past revenue growth, small market cap
+  [−] Diversified customer base, large cap, contract small relative to revenue
+
+Strategic partnership/alliance:
+  [+] Niche industry with high barriers, low institutional ownership, high R&D
+  [−] Many existing partnerships, low switching costs
+
+Product launch/FDA approval/regulatory greenlight:
+  [+] Biotech/pharma sector, single-product, low cash, high short interest
+  [−] Diversified product portfolio, large cap, approval widely expected
+
+Analyst upgrade/PT increase:
+  [+] Low analyst coverage, stock near 52-week low, low inst ownership, high short float, PT above current price
+  [−] High coverage, PT still below current price (reclassify negative)
+
+Positive personnel change:
+  [+] Company in distress, recent scandals, high insider ownership
+  [−] Stable company, routine appointment, large cap
+
+Capital infusion:
+  [+] High debt, low cash, negative FCF, high short interest
+  [−] Already cash-rich, infusion is dilutive
+
+Earnings beat:
+  [+] High short interest, stock beaten down, low expectations
+  [−] Stock rallied into earnings, beat narrow, peers also beat
+
+Earnings guidance raise:
+  [+] Same as beat + CEO credibility, analyst lag
+  [−] Raise expected, macro tailwinds obvious, raise small
+
+Share repurchase/dividend increase:
+  [+] High cash, low debt, undervalued (P/B < 1), insider buying alongside
+  [−] Low cash, high debt, token repurchase, dividend cut history
+
+Successful acquisition/synergy realization:
+  [+] Recent acquisition, synergy ahead of plan, accretive
+  [−] Integration risk, overpayment history, small deal
+
+Deleveraging/sale of toxic assets/spin-off:
+  [+] High debt, negative credit outlook, toxic assets
+  [−] Already well-capitalised, sale of core asset
+
+Operational milestone:
+  [+] Pre-revenue (biotech/space), regulatory catalyst pending, high R&D
+  [−] Routine maintenance, non-value-creating
+
+Insider buying (cluster):
+  [+] High insider ownership already, buying after crash, multiple C-suite
+  [−] Small amounts, one insider, buying at ATH, option exercise
+
+Activist investor accumulation:
+  [+] Underperforming, high cash, breakup value > market cap, low inst ownership
+  [−] Management addressing issues, activist poor track record
+
+Capacity expansion:
+  [+] High utilisation, growing backlogs, sector demand surging, high margins
+  [−] Industry overcapacity, debt-funded, demand weakening
+
+Strategic pivot/rebranding:
+  [+] Old business declining, high debt (pivot desperate), CEO credible
+  [−] Stable business, pivot faddish, execution risk high
+
+Supply chain de-risking:
+  [+] High China exposure, tariff sensitivity, recent supply shocks
+  [−] Already diversified, de-risking costly
+
+Patent grant/IP protection:
+  [+] Tech/pharma, high R&D, history of IP theft, narrow moat
+  [−] Many patents already, patent narrow, workaround easy
+
+Customer concentration expansion:
+  [+] High customer concentration currently, expansion to new sectors
+  [−] Already diversified, new customer immaterial
+
+Government policy (tariffs/subsidies/mandates):
+  [+] Sector directly affected, domestic capacity, bipartisan support
+  [−] Policy temporary, company relies on imports, unfunded
+
+Institutional policy (Fed rate cut/QE/stimulus):
+  [+] High debt, floating-rate, growth/tech, low cash flow
+  [−] Low debt, fixed-rate, cut already priced in
+
+Favorable court ruling/patent grant:
+  [+] Litigation priced in, binary outcome, damages large
+  [−] Ruling narrow, appeal likely, stock didn't move
+
+Geopolitical event that boosts sector:
+  [+] Defence sector, domestic production, govt contract exposure
+  [−] Event temporary, indirect benefit
+
+Sector tailwind/index inclusion:
+  [+] Small cap added to major index, sector ETF inflows, low liquidity
+  [−] Already in index, inclusion priced in, momentum exhausted
+
+Regulatory approval:
+  [+] Binary event, no alternatives, high legal costs if denied
+  [−] Approval expected, minimal incremental revenue
+
+Macro tailwinds:
+  [+] High cyclicality, beta > 1.5, high operating leverage
+  [−] Defensive sector, tailwind temporary
+
+Sector rotation into industry:
+  [+] Underperformed long, low relative valuations, low inst ownership
+  [−] Rotation already happened, industry still overvalued
+
+Commodity price move favorable:
+  [+] High commodity sensitivity, unhedged, producer
+  [−] Fully hedged, commodity small input cost
+
+ESG mandate/green subsidy:
+  [+] Renewable/green sector, high capital requirements
+  [−] Already funded, subsidy small
+
+Currency tailwind:
+  [+] High export %, high foreign revenue, unhedged
+  [−] Hedged, import costs offset, small foreign exposure
+
+Technical breakout:
+  [+] High short interest, breakout on volume, long downtrend before
+  [−] Low volume breakout, already overbought
+
+Short squeeze:
+  [+] Short float > 20%, days-to-cover > 4, positive catalyst cluster
+  [−] Short float < 10%, no positive catalyst
+
+Institutional ownership increase:
+  [+] Low inst ownership, concentrated fund, recent decline
+  [−] Already highly owned, passive flow
+
+Contract loss/non-renewal:
+  [+] High customer concentration, contract large % revenue
+  [−] Diversified, contract small
+
+Partnership dissolution:
+  [+] Partner critical, exclusive, no alternatives
+  [−] Small partnership, many alternatives
+
+Product delay/failure/recall:
+  [+] Single-product, safety risk, large revenue exposure
+  [−] Diverse products, delay minor
+
+Analyst downgrade/PT cut:
+  [+] Low coverage, respected analyst, stock near highs
+  [−] High coverage, perma-bear, stock already at lows
+
+Negative personnel change:
+  [+] Founder/CEO departure, key rainmaker, during crisis
+  [−] Routine succession, company stable
+
+Dilutive offering:
+  [+] Low cash, high debt, negative FCF, stock down
+  [−] Small offering, debt-for-equity swap deleverages
+
+Earnings miss:
+  [+] High short interest, high expectations, revenue miss, guidance cut alongside
+  [−] Miss small, macro driven, peers also missed
+
+Earnings guidance cut:
+  [+] Cut large, structural, peers not cutting, previously guided positive
+  [−] Cut small, temporary, peers also cut
+
+Suspension of buyback/dividend cut:
+  [+] Cash-strapped, previous commitment, signals distress
+  [−] Cut to fund high-return project
+
+Failed acquisition/overpayment:
+  [+] High debt taken, goodwill impairment large, integration disaster
+  [−] Small deal, regulatory block
+
+Accumulation of debt/toxic assets:
+  [+] Already high leverage, deteriorating metrics, near covenant breach
+  [−] Accretive debt for growth, low cost
+
+Operational setback:
+  [+] Single facility, no backup, revenue concentration
+  [−] Diversified operations, insurance covers
+
+Insider selling (cluster):
+  [+] CEO/CFO selling after beat, large amounts, no 10b5-1, multiple execs
+  [−] Routine 10b5-1, small amounts, one insider
+
+Activist exits/file hostile 13D:
+  [+] Activist good track record, large position, underperformed
+  [−] Activist exits fast, position small
+
+Capacity underutilization/overexpansion:
+  [+] High fixed costs, demand weakening, industry overcapacity
+  [−] Temporary underutilisation, upturn expected
+
+Strategic pivot failure:
+  [+] Pivot expensive, CEO staked reputation, high debt
+  [−] Pivot small experiment, quickly reversed
+
+Supply chain shock:
+  [+] Single-source, long lead times, no inventory
+  [−] Diversified suppliers, buffer inventory
+
+Patent litigation loss/IP theft:
+  [+] Core patent, high royalty income, competitive advantage lost
+  [−] Peripheral patent, workaround exists
+
+Customer concentration risk:
+  [+] Single customer > 30% revenue, no long-term contract
+  [−] Diversified, contract locked in
+
+Policy reversal/new regulation/tax increase:
+  [+] Industry directly targeted, high cost impact
+  [−] Sector exempt, impact small
+
+Rate hike/monetary tightening:
+  [+] High debt, floating rate, low interest coverage, negative FCF
+  [−] Low debt, fixed-rate, cash-rich
+
+Adverse litigation/antitrust:
+  [+] Binary penalties, large damages, core at risk
+  [−] Nuisance suit, low probability
+
+Geopolitical event that hurts sector:
+  [+] High exposure to conflict region, supply chain disruption
+  [−] Diversified geography, domestic focus
+
+Sector headwind/index exclusion:
+  [+] Index fund selling forced, low liquidity
+  [−] Exclusion expected, small ETF weight
+
+Regulatory denial/antitrust block:
+  [+] Deal-breaker, no alternative, sunk cost
+  [−] Denial expected, alternative paths
+
+Macro headwinds:
+  [+] High cyclicality, consumer discretionary, high operating leverage
+  [−] Defensive sector, high cash, flexible costs
+
+Sector rotation out:
+  [+] High valuation premium, high beta, crowded institutional positioning
+  [−] Already underowned, attractive value
+
+Unfavorable commodity price move:
+  [+] High input cost sensitivity, unhedged, low pricing power
+  [−] Hedged, high pricing power, small input cost
+
+ESG controversy/carbon tax:
+  [+] High emission industry, no offset plan, brand risk
+  [−] Already green, tax small
+
+Currency headwind:
+  [+] High export revenue, unhedged, domestic costs in strong currency
+  [−] Hedged, foreign costs decline, small foreign share
+
+Technical breakdown:
+  [+] Breakdown on high volume, death cross, preceded by rally
+  [−] Low volume, already oversold
+
+Short attack/bear raid:
+  [+] High short interest, credible short report, fraud allegation
+  [−] Already heavily shorted, report low credibility
+
+Institutional ownership decline:
+  [+] Concentrated holders, high-conviction fund exiting, after pop
+  [−] Passive rebalancing, one small fund
+"""
+
 # ── Prompt Templates ───────────────────────────────────
 STEP1_TEMPLATE = """
 You are an event extraction engine for {full_name} ({ticker}).
@@ -692,8 +947,7 @@ new events ― prioritise those with the highest impact.
 
 Before extracting, verify that the snippet refers SPECIFICALLY to
 {full_name} or its ticker {ticker}. If an article is about a different
-company (e.g., ANI Pharmaceuticals, Pipe, Pool, Apple, Verisk),
-DISCARD IT.
+company, DISCARD IT.
 
 Rules:
 - Describe each event in one sentence.
@@ -738,7 +992,6 @@ PHASE 1: Structured Context Questionnaire
 Answer every question using the snapshot and snippets.
 Write "DATUM_MISSING" if data is not available.
 
-(Questionnaire table unchanged...)
 1. REVENUE STRUCTURE
    a) % revenue from government / commercial / consumer?
    b) % revenue from domestic (US) / international?
@@ -746,45 +999,61 @@ Write "DATUM_MISSING" if data is not available.
    d) Revenue concentration risk (high/medium/low)?
 
 2. COST STRUCTURE & SUPPLY CHAIN
-   a) Top 3 input costs?
-   b) % of COGS commodity-linked?
+   a) Top 3 input costs (e.g., labour, cloud, aluminium)?
+   b) % of COGS that is commodity-linked?
    c) Manufacturing in-house vs. outsourced?
-   d) % supply chain exposed to China/geopolitical risk?
-   e) Supplier concentration risk?
+   d) % of supply chain exposed to China or geopolitical risk zones?
+   e) Supplier concentration risk (high/medium/low)?
 
 3. COMPETITIVE POSITION
-   a) Pricing power?
-   b) Customer switching costs?
-   c) Industry structure?
+   a) Pricing power? (can raise prices without losing volume – yes/no/partial)
+   b) Customer switching costs? (high/medium/low)
+   c) Industry structure? (fragmented/oligopoly/monopoly)
    d) Approximate market share?
    e) Top 3 competitors?
 
 4. FINANCIAL SENSITIVITIES (snapshot + snippets)
-   a‑h) (debt/equity, fixed vs floating, interest coverage, cash runway,
-         revenue/gross/profit margin trends, FCF)
+   a) Debt-to-equity ratio
+   b) % of debt that is fixed-rate vs. floating-rate?
+   c) Interest coverage ratio (EBIT / interest expense)
+   d) Cash runway (current assets / monthly cash burn)
+   e) Revenue growth trend (accelerating / flat / declining)
+   f) Gross margin trend (expanding / stable / compressing)
+   g) Profit margin trend
+   h) Free cash flow (positive / negative / trend)
 
 5. EXTERNAL EXPOSURES
-   a‑f) (tariff, commodity, currency sensitivity, key regulators,
-         geopolitical risk, government contract exposure)
+   a) Tariff sensitivity? (high/medium/low + which tariffs)
+   b) Commodity price sensitivity? (which commodities, % of revenue/cost)
+   c) Currency sensitivity? (which pairs, % exposure)
+   d) Key regulatory agencies (FDA, DoD, SEC, FTC, etc.)
+   e) Geopolitical risk concentration? (regions, specific conflicts)
+   f) Government contract exposure? (high/medium/low + % revenue)
 
 6. MANAGEMENT & RISKS
-   a‑d) (CEO track record, insider ownership trend, pending litigation,
-         regulatory investigations)
+   a) CEO track record (tenure, prior successes/failures)
+   b) Insider ownership % and recent buy/sell trend
+   c) Pending litigation (list cases, materiality, potential damages)
+   d) Regulatory investigations (list, status, potential impact)
 
 7. GROWTH TRAJECTORY
-   a‑d) (organic vs acquisitive, backlog visibility, capacity plans,
-         end-market growth rate)
+   a) Organic vs. acquisitive growth mix
+   b) Order-book or backlog visibility
+   c) Capacity expansion plans
+   d) Primary end-market growth rate
 
 Cite snippet IDs or snapshot fields for each answer.
 
 PHASE 2: Sensitivity Multiplier Generation
 
-Using the completed questionnaire, compute a multiplier for EVERY catalyst
-in the TAXONOMY list. Use the AMPLIFIER/DAMPENER REFERENCE TABLE below.
+Now, using the completed context questionnaire, compute a multiplier for
+EVERY catalyst in the TAXONOMY list. Use the AMPLIFIER/DAMPENER REFERENCE
+TABLE below.
 
 Rules:
-- Default = 1.0 unless conditions met. Amplified: 1.2‑1.5. Dampened: 0.5‑0.8.
-- Irrelevant: 0.0.
+- Default multiplier = 1.0 (no change) unless conditions are met.
+- Amplified (hits harder): 1.2–1.5.  Dampened (hits weaker): 0.5–0.8.
+- Irrelevant (cannot affect this company): 0.0.
 - Provide a one-sentence rationale citing the specific extracted fact.
 
 AMPLIFIER/DAMPENER REFERENCE TABLE:
@@ -793,12 +1062,27 @@ AMPLIFIER/DAMPENER REFERENCE TABLE:
 TAXONOMY:
 {taxonomy_list_str}
 
-OUTPUT FORMAT: Return ONLY this JSON.
+OUTPUT FORMAT:
+Return ONLY this JSON.
 {{
   "ticker": "{ticker}",
-  "extracted_context": {{ ... }},
-  "sensitivity_profile": {{ ... }},
-  "missing_data": [...]
+  "extracted_context": {{
+    "revenue_structure": {{ ... }},
+    "cost_structure": {{ ... }},
+    "competitive_position": {{ ... }},
+    "financial_sensitivities": {{ ... }},
+    "external_exposures": {{ ... }},
+    "management_risks": {{ ... }},
+    "growth_trajectory": {{ ... }}
+  }},
+  "sensitivity_profile": {{
+    "Contract win/expansion": {{
+      "multiplier": 1.3,
+      "rationale": "High revenue concentration amplifies contract wins. [source: Q1c]"
+    }},
+    ... for ALL catalysts ...
+  }},
+  "missing_data": ["list any questionnaire items answered DATUM_MISSING"]
 }}
 """
 
@@ -981,7 +1265,6 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     else:
         official_name, aliases = resolve_company_name(ticker, searxng_url)
 
-    # Build disambiguated full name for searches
     if official_name.lower() != ticker.lower():
         full_name = f"{official_name} ({ticker})"
     else:
@@ -993,20 +1276,19 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print("  📰 Scraping Finviz news…")
     finviz_events = scrape_finviz_news(ticker)
     print(f"  📰 Finviz returned {len(finviz_events)} headlines")
+    # PRINT THE FIRST N HEADLINES FOR VERIFICATION
+    print("\n  ── FINVIZ HEADLINES (first 10) ──")
+    for i, ev in enumerate(finviz_events[:10]):
+        print(f"    [{i+1}] {ev['event_date']} | {ev.get('finviz_source','?')} | {ev['description'][:120]}")
+    if len(finviz_events) > 10:
+        print(f"    ... and {len(finviz_events) - 10} more")
 
     # ═══ Phase 1 & 2: Granular Searches ═══
     catalyst_queries = _make_catalyst_templates(full_name)
     context_queries = _make_context_templates(full_name)
 
-    print(f"  Full name for searches: {full_name}")
+    print(f"\n  Full name for searches: {full_name}")
     print(f"  ⏳ Preparing {len(catalyst_queries)} catalyst + {len(context_queries)} context search queries…")
-
-    print("\n  ── Catalyst Queries ──")
-    for i, q in enumerate(catalyst_queries):
-        print(f"    [{i+1}] {q}")
-    print("  ── Context Queries ──")
-    for i, q in enumerate(context_queries):
-        print(f"    [{i+1}] {q}")
 
     print(f"\n  🔎 Launching all {len(catalyst_queries) + len(context_queries)} searches in parallel…")
     catalyst_task = batch_search(catalyst_queries, searxng_url)
@@ -1017,8 +1299,8 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     catalyst_results = _filter_search_results(catalyst_results, official_name, ticker, aliases)
     context_results = _filter_search_results(context_results, official_name, ticker, aliases)
 
-    cat_with = sum(1 for v in catalyst_results.values() if not v.startswith('SEARCH_ERROR') and v != 'NO_RELEVANT_RESULTS' and not v.startswith('NO_RESULTS'))
-    ctx_with = sum(1 for v in context_results.values() if not v.startswith('SEARCH_ERROR') and v != 'NO_RELEVANT_RESULTS' and not v.startswith('NO_RESULTS'))
+    cat_with = sum(1 for v in catalyst_results.values() if v not in ("NO_RELEVANT_RESULTS",) and not v.startswith("NO_RESULTS") and not v.startswith("SEARCH_ERROR"))
+    ctx_with = sum(1 for v in context_results.values() if v not in ("NO_RELEVANT_RESULTS",) and not v.startswith("NO_RESULTS") and not v.startswith("SEARCH_ERROR"))
     print(f"  ✅ Catalyst searches: {cat_with}/{len(catalyst_queries)} with relevant results")
     print(f"  ✅ Context searches:  {ctx_with}/{len(context_queries)} with relevant results")
 
