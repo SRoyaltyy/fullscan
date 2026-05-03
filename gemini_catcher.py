@@ -98,8 +98,8 @@ async def run_gemini(prompt: str) -> dict:
             await input_box.press("Enter")
 
         # ── Wait 60 seconds for the response ──
-        print("[catcher] ⏳ Waiting 60s for Gemini response…")
-        await page.wait_for_timeout(60000)
+        print("[catcher] ⏳ Waiting 35s for Gemini response…")
+        await page.wait_for_timeout(35000)
         try:
             await page.wait_for_selector(
                 "[data-message-author='assistant'], div[class*='assistant'], "
