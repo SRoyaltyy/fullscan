@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Backtest‑Capable, Gemini Catcher Pass.
-- Ticker(s) and cutoff date at the top.
+Catalyst Analysis Engine v2 – Backtest‑Capable, Gemini Catcher (Full Prompt).
+- Ticker(s) and cutoff date set at the top.
 - DeepSeek + SearXNG pipeline unchanged.
 - After DeepSeek, CloakBrowser Gemini acts as a catcher for missed events.
+- Gemini receives the complete terminal output + instructions in one prompt.
 """
 
 import os, json, time, re, asyncio, aiohttp
@@ -25,16 +26,6 @@ MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 CUTOFF_DATE = CUTOFF_DATE.strip() if CUTOFF_DATE else None
-
-# ── Gemini catcher availability ────────────────────────
-# ── Gemini catcher availability ────────────────────────
-try:
-    from gemini_catcher import run_gemini as gemini_catcher_run
-    _GEMINI_CATCHER_IMPORTED = True
-except ImportError:
-    _GEMINI_CATCHER_IMPORTED = False
-    gemini_catcher_run = None
-
 
 # ── SearXNG async executor ─────────────────────────────
 async def search_single(session, query, searxng_url, categories="general,news"):
@@ -235,9 +226,7 @@ def scrape_finviz_news(ticker):
         print(f"  ⚠️  Finviz news scrape failed: {e}")
         return []
 
-# ── Search templates ────────────────────────────────────
-
-
+# ── Search templates (trimmed context) ────────────────
 def _make_catalyst_templates(full_name):
     return [
         f"{full_name} contract partnership agreement 2025 2026",
@@ -273,44 +262,27 @@ def _make_catalyst_templates(full_name):
     ]
 
 def _make_context_templates(full_name):
+    # Only the most impactful context queries – reduced from 37 to ~15
     return [
         f"{full_name} revenue breakdown by segment",
         f"{full_name} revenue by customer type",
         f"{full_name} revenue geography domestic international",
         f"{full_name} revenue government contracts percentage",
-        f"{full_name} commercial vs consumer revenue mix",
         f"{full_name} customer concentration largest client",
-        f"{full_name} customer concentration risk",
         f"{full_name} business model",
-        f"{full_name} recurring revenue subscription",
         f"{full_name} cost structure input costs",
         f"{full_name} raw materials commodities exposure",
-        f"{full_name} COGS breakdown",
         f"{full_name} supply chain manufacturing",
         f"{full_name} China exposure manufacturing",
-        f"{full_name} supplier concentration risk",
         f"{full_name} operating leverage fixed variable costs",
-        f"{full_name} margin structure",
         f"{full_name} competitive advantage moat",
         f"{full_name} market share",
         f"{full_name} pricing power",
-        f"{full_name} industry barriers to entry",
-        f"{full_name} switching costs",
-        f"{full_name} competitors peer comparison",
         f"{full_name} debt structure maturity",
-        f"{full_name} interest rate sensitivity floating fixed",
-        f"{full_name} cash burn rate runway",
         f"{full_name} regulatory environment",
         f"{full_name} government contracts exposure",
-        f"{full_name} CEO track record",
-        f"{full_name} management capital allocation",
-        f"{full_name} insider ownership percentage",
         f"{full_name} litigation risk pending lawsuits",
-        f"{full_name} patent portfolio IP protection",
-        f"{full_name} organic vs acquisitive growth",
-        f"{full_name} order backlog visibility",
         f"{full_name} capacity expansion plans",
-        f"{full_name} end market growth rate",
     ]
 
 # ── Taxonomy & Weights (unchanged) ──────────────────────
@@ -418,7 +390,9 @@ CATALYST_WEIGHTS = {
 
 POSITIVE_CATALYSTS = set([k for k in CATALYST_WEIGHTS if k in TAXONOMY_LIST and TAXONOMY_LIST.index(k) < 33])
 
-# ── Prompt templates ───────────────────────────────────
+# ── Prompt templates (unchanged) ───────────────────────
+
+
 STEP1_TEMPLATE = """
 You are an event extraction engine for {full_name} ({ticker}).
 
@@ -621,7 +595,7 @@ OUTPUT FORMAT: Return ONLY this JSON.
 }}
 """
 
-# ── Helpers ────────────────────────────────────────────
+# ── Prompt formatters ───────────────────────────────────
 def _format_step1(full_name, ticker, today, lookback_start, search_results_json, finviz_events_json):
     return STEP1_TEMPLATE.format(full_name=full_name, ticker=ticker, today=today,
                                 lookback_start=lookback_start, search_results_json=search_results_json,
@@ -648,26 +622,6 @@ def parse_json(raw):
     except: pass
     raise ValueError(f"Failed to parse JSON. Start: {raw[:200]}")
 
-def robust_parse_json(text):
-    text = text.strip()
-    if text.startswith("```"): text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-    try: return json.loads(text)
-    except: pass
-    fixed = re.sub(r'\}\s*\{', '}, {', text)
-    try: return json.loads(fixed)
-    except: pass
-    cleaned = re.sub(r",\s*]", "]", fixed)
-    cleaned = re.sub(r",\s*}", "}", cleaned)
-    try: return json.loads(cleaned)
-    except: pass
-    ob = text.count("[") - text.count("]")
-    cb = text.count("{") - text.count("}")
-    if ob > 0 or cb > 0:
-        closed = text + "]"*ob + "}"*cb
-        try: return json.loads(closed)
-        except: pass
-    raise ValueError("Failed to parse Gemini output")
-
 def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000):
     messages = [{"role": "system", "content": prompt}, {"role": "user", "content": user_msg}]
     resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
@@ -685,70 +639,102 @@ def recalculate_signal(grid):
     conviction = min(100, int(abs(net)*2))
     return signal, conviction
 
-# ── Catcher prompt builder ─────────────────────────────
-def build_catcher_prompt(full_name, ticker, cutoff_date, grid):
+# ── Gemini catcher prompt builder ──────────────────────
+def build_catcher_prompt(full_name, ticker, cutoff_date, grid, net_signal, conviction):
+    lines = []
+    lines.append(f"🔄 Final signal: {net_signal} (conviction {conviction})")
+
+    positive_hits = [c for c in grid if c.get("status") == "HIT" and c.get("type") == "positive"]
+    lines.append(f"🟢 Positive HITs: {len(positive_hits)}")
+    for h in positive_hits:
+        eid = h.get("event_id", "?")
+        headline = h.get("headline", h.get("evidence_excerpt", ""))[:100].strip()
+        urls = h.get("source_urls", [])
+        link = urls[0] if urls else ""
+        lines.append(f"   #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {headline}")
+        lines.append(f"      wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')} | {link[:70]}")
+    if not positive_hits:
+        lines.append("   (none)")
+
+    negative_hits = [c for c in grid if c.get("status") == "HIT" and c.get("type") == "negative"]
+    lines.append(f"🔴 Negative HITs: {len(negative_hits)}")
+    for h in negative_hits:
+        eid = h.get("event_id", "?")
+        headline = h.get("headline", h.get("evidence_excerpt", ""))[:100].strip()
+        urls = h.get("source_urls", [])
+        link = urls[0] if urls else ""
+        lines.append(f"   #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {headline}")
+        lines.append(f"      wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')} | {link[:70]}")
+    if not negative_hits:
+        lines.append("   (none)")
+
     miss_items = [c.get("taxonomy") for c in grid if c.get("status") == "MISS"]
-    hit_items = [
-        {
-            "taxonomy": c.get("taxonomy"),
-            "event_date": c.get("event_date"),
-            "evidence_excerpt": c.get("evidence_excerpt","")[:120],
-            "source_urls": c.get("source_urls",[])[:2]
-        }
-        for c in grid if c.get("status") == "HIT"
-    ]
-    cutoff_info = f"IMPORTANT: Only consider events that occurred on or before {cutoff_date}." if cutoff_date else ""
-    return f"""
-You are a financial fact‑checker and missing event catcher for {full_name} (ticker: {ticker}).
-Today is {TODAY}. Lookback is six months.
-{cutoff_info}
+    lines.append("")
+    lines.append("MISS CATALYSTS (pipeline found NO evidence):")
+    if miss_items:
+        for m in miss_items:
+            lines.append(f"  {m}")
+    else:
+        lines.append("  (none)")
 
-Your job is to verify if the following automated analysis missed any important catalysts,
-especially NEGATIVE ones (insider selling, short reports, dilutive offerings, regulatory actions,
-safety issues, analyst downgrades, lawsuits, etc.). Use the web to search for concrete evidence.
+    na_items = [c.get("taxonomy") for c in grid if c.get("status") == "N/A"]
+    if na_items:
+        lines.append("")
+        lines.append("N/A CATALYSTS (not applicable to this company):")
+        for n in na_items:
+            lines.append(f"  {n}")
 
-Here is what the automated pipeline found:
-HIT CATALYSTS (these are events the pipeline THINKS happened):
-{json.dumps(hit_items, indent=2)}
+    instructions = f"""
+You are a financial fact‑checker for {full_name} (ticker: {ticker}).
+TODAY is {cutoff_date}.  LOOKBACK is the 6 months before {cutoff_date}.
+ONLY events on or before {cutoff_date} are valid. Discard anything after {cutoff_date}.
 
-MISS CATALYSTS (the pipeline found NO evidence for these):
-{json.dumps(miss_items, indent=2)}
+**USE THE WEB** to search for evidence.
+Your job:
+- Verify every HIT above. If a HIT is wrong, correct it.
+- Check every MISS category. If you find evidence, add it as a new HIT.
+- Especially hunt for NEGATIVE catalysts (insider selling, short reports, dilutive offerings, regulatory actions, safety issues, analyst downgrades, lawsuits, workforce reductions, SEC filings that reveal dilution/R&D cuts).
 
-Please do your own research and return a JSON object with exactly this structure:
+**OUTPUT ONLY THIS EXACT JSON – no other text:**
 {{
   "new_hits": [
     {{
-      "taxonomy": "Category from the list above",
+      "taxonomy": "exact label from the MISS list (or another category if more appropriate)",
       "type": "positive or negative",
       "event_date": "YYYY-MM-DD",
-      "description": "Brief one-line description of the event",
-      "evidence_excerpt": "Short verbatim excerpt (≤150 chars) from a source",
+      "evidence_excerpt": "≤150 chars, verbatim from a real web source",
       "source_urls": ["https://..."]
     }}
   ],
   "corrected_hits": [
     {{
-      "taxonomy": "Existing hit category",
+      "taxonomy": "label from HIT list",
       "corrected_status": "MISS or HIT",
       "correction_type": "source_disputed or reclassified",
-      "rationale": "Why the correction is needed"
+      "rationale": "one sentence"
     }}
   ]
 }}
-Only include events that YOU find through web search.  Make sure every event has a specific date and a real source link.  Do not include events already correctly captured by the pipeline.
+If nothing is found, return empty arrays.
+Every source MUST be a real URL you found via web search.
 """
+    return "\n".join(lines) + instructions
 
-# ── Run catcher pass ───────────────────────────────────
-async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy):
-    # Check at runtime — secret is only available inside the workflow
-    if not _GEMINI_CATCHER_IMPORTED:
+# ── Catcher pass (lazy import) ────────────────────────
+async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy,
+                           net_signal, conviction):
+    try:
+        from gemini_catcher import run_gemini as gemini_catcher_run
+    except ImportError:
+        print("  ⚠️  gemini_catcher not available – skipping catcher.")
         return grid
+
     if not (os.environ.get("GEMINI_BROWSER_STATE") or os.path.exists("gemini_browser_state.json")):
-        print("  ⚠️  Gemini browser state not available — skipping catcher.")
+        print("  ⚠️  Gemini browser state not available – skipping catcher.")
         return grid
 
-    prompt = build_catcher_prompt(full_name, ticker, cutoff_date, grid)
-    print("  🐾 Running CloakBrowser Gemini catcher…")
+    prompt = build_catcher_prompt(full_name, ticker, cutoff_date, grid, net_signal, conviction)
+    print("  🐾 Running Gemini catcher (full output + instructions)…")
     try:
         result = await gemini_catcher_run(prompt)
         if result.get("error"):
@@ -762,20 +748,19 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
         print(f"  ⚠️  Gemini catcher failed: {e}")
         return grid
 
-    # Parse JSON
-    parsed = None
     try:
-        parsed = robust_parse_json(answer)
-    except Exception:
+        parsed = json.loads(answer)
+    except json.JSONDecodeError:
         match = re.search(r'\{.*\}', answer, re.DOTALL)
         if match:
             try:
                 parsed = json.loads(match.group())
             except:
-                pass
-    if not parsed:
-        print("  ⚠️  Could not extract JSON from catcher response; using original grid.")
-        return grid
+                print("  ⚠️  Could not extract JSON from catcher response; using original grid.")
+                return grid
+        else:
+            print("  ⚠️  Catcher response contained no JSON; using original grid.")
+            return grid
 
     new_hits = parsed.get("new_hits", [])
     corrected = parsed.get("corrected_hits", [])
@@ -951,7 +936,9 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             })
 
     # ── Run CloakBrowser Gemini catcher ──
-    grid = await run_catcher_pass(full_name, ticker, CUTOFF_DATE, grid, weighted_taxonomy)
+    grid = await run_catcher_pass(full_name, ticker, CUTOFF_DATE, grid, weighted_taxonomy,
+                                  final_result.get("net_signal", "?"),
+                                  final_result.get("conviction", 0))
 
     dedup = {}
     for entry in grid:
