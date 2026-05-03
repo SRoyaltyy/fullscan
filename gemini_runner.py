@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Gemini Web Interface Scraper — Anti‑detection via CloakBrowser.
+Gemini Web Interface Scraper — Anti‑detection via CloakBrowser Async API.
 Reuses saved browser login state (base64‑encoded GEMINI_BROWSER_STATE secret).
 """
 
 import asyncio, json, os, sys, base64
-from cloakbrowser import launch_context
+from cloakbrowser import launch_context_async
 
 GEMINI_URL   = "https://gemini.google.com"
 STATE_FILE   = "gemini_browser_state.json"
@@ -38,20 +38,14 @@ def load_state():
 async def run_gemini(prompt: str) -> dict:
     load_state()
 
-    # Launch anti‑detection browser using your saved session
-    # launch_context creates browser + context in one call, forwarding
-    # storage_state to Playwright's browser.new_context() under the hood.
-    context = await asyncio.to_thread(
-        launch_context,
+    # Native async API — no greenlet, no thread pool, no crash
+    ctx = await launch_context_async(
         storage_state=STATE_FILE,
         humanize=True,
         headless=True,
-        args=[
-            "--no-sandbox",
-            "--disable-setuid-sandbox",
-        ],
+        args=["--no-sandbox", "--disable-setuid-sandbox"],
     )
-    page = await context.new_page()
+    page = await ctx.new_page()
     await page.goto(GEMINI_URL, wait_until="domcontentloaded")
 
     # ── Find the input box ──
@@ -71,7 +65,7 @@ async def run_gemini(prompt: str) -> dict:
             continue
     if not input_box:
         await page.screenshot(path="gemini_debug_input.png")
-        await context.close()
+        await ctx.close()
         return {"error": "input_not_found"}
 
     # ── Type the prompt ──
@@ -167,7 +161,7 @@ async def run_gemini(prompt: str) -> dict:
             seen.add(href)
             source_links.append(href)
 
-    await context.close()
+    await ctx.close()
     return {"answer": full_text, "sources": source_links[:20]}
 
 
