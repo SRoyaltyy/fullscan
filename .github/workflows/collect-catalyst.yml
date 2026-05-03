@@ -20,6 +20,7 @@ jobs:
         run: pip install -r requirements.txt  
       - name: Run catalyst analysis
         env:
+          GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
