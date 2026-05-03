@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Catalyst Analysis Engine v2 – Full Async, Company‑Name Resolution,
-Finviz‑First Evidence, Smart Snippet Filtering, Unified Gemini Fact‑Check & MISS‑Recovery.
+Finviz‑First Evidence, Smart Snippet Filtering, Gemini‑First Fact‑Check & MISS‑Recovery.
 DeepSeek runs ONLY after Gemini is confirmed operational.
+Full 66‑item grid guaranteed; Gemini corrections fully logged.
 """
 
 import os, json, time, re, asyncio, aiohttp, requests
@@ -391,6 +392,27 @@ Financial snapshot:
         hit.setdefault("source_urls", [])
         hit.setdefault("evidence_excerpt", "")
         grid.append(hit)
+
+    # ── Detailed Gemini log ──
+    if corrected_grid:
+        print("  📋 Gemini corrections detail:")
+        for corr in corrected_grid:
+            print(f"    • {corr.get('taxonomy')}: {corr.get('original_status')}→{corr.get('corrected_status')} ({corr.get('correction_type')})")
+            if corr.get("rationale"):
+                print(f"      Reason: {corr['rationale'][:100]}")
+    if new_hits:
+        print("  📋 Gemini recovered MISS items:")
+        for nh in new_hits:
+            print(f"    • {nh.get('taxonomy')} – {nh.get('event_date','?')}: {nh.get('evidence_excerpt','')[:80]}")
+    if not corrected_grid and not new_hits:
+        print("  📋 Gemini found no corrections or missing catalysts – all HITs verified.")
+
+    # Also show what MISS items Gemini was asked to check (first 10)
+    miss_check = [c for c in compact_grid if c["status"] == "MISS"]
+    if miss_check:
+        print(f"  🔍 Gemini searched for {len(miss_check)} MISS catalysts (showing first 10):")
+        for mc in miss_check[:10]:
+            print(f"    • {mc['taxonomy']}")
 
     print(f"  ✅ Gemini unified check applied corrections to {len(corrected_grid)} items, recovered {len(new_hits)} new HITs.")
     return grid, weighted_taxonomy, new_hits
@@ -951,10 +973,11 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         print(f"  ❌ Step 4 parse failed: {e}")
         return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
 
-    # Populate grid from event IDs
+    # ── Populate grid and ensure full 66 items ──
     grid = final_result.get("catalyst_grid", [])
     events_by_id = {e["id"]: e for e in merged_events}
 
+    # Fill missing fields from event IDs (existing code)
     for entry in grid:
         for alt, std in (("catalyst","taxonomy"), ("label","taxonomy")):
             if alt in entry and "taxonomy" not in entry:
@@ -988,6 +1011,25 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         for k in ("base_weight","adjusted_weight"):
             if k in entry and entry[k] is not None:
                 entry[k] = int(round(entry[k]))
+
+    # Ensure every taxonomy item is present as MISS if missing
+    existing_tax = {c.get("taxonomy") for c in grid}
+    for i, label in enumerate(TAXONOMY_LIST):
+        if label not in existing_tax:
+            wt = weighted_taxonomy.get(label, {})
+            cat_type = "internal" if i < 33 else ("external" if i < 60 else "market_mechanic")
+            grid.append({
+                "taxonomy": label,
+                "type": "positive" if label in POSITIVE_CATALYSTS else "negative",
+                "category": cat_type,
+                "status": "MISS",
+                "base_weight": CATALYST_WEIGHTS.get(label, 5),
+                "adjusted_weight": wt.get("adjusted_weight", CATALYST_WEIGHTS.get(label, 5)),
+                "event_date": None,
+                "evidence_excerpt": "",
+                "source_urls": [],
+                "confidence": 0
+            })
 
     # Gemini unified check (now guaranteed to have a working Gemini)
     time.sleep(3)  # brief RPM breathing room
