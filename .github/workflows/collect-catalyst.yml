@@ -2,7 +2,7 @@ name: "Catalyst Analysis Engine"
 
 on:
   schedule:
-    - cron: "0 15 * * 1-5"   # 3 PM UTC on weekdays (after market close)
+    - cron: "0 15 * * 1-5"
   workflow_dispatch:
 
 jobs:
@@ -14,16 +14,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies
-        run: pip install openai requests
-      - name: Install dependencies
-        run: pip install -r requirements.txt  
+
+      - name: Install system dependencies for Chromium
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 \
+            libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 \
+            libpango-1.0-0 libcairo2 libasound2 libxshmfence1
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Pre-download CloakBrowser binary
+        run: python -m cloakbrowser install
+
       - name: Run catalyst analysis
         env:
           GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
-          CLOAK_SILENT: 1  
-        run: python -m collectors.catalyst_analysis
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PYTHONUNBUFFERED: "1"
+        run: python -u -m collectors.catalyst_analysis
