@@ -11,3 +11,4 @@ python-dotenv
 psycopg2-binary
 aiohttp>=3.9.0
 finvizfinance
+google-genai>=0.3.0
