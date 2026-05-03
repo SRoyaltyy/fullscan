@@ -239,6 +239,8 @@ def scrape_finviz_news(ticker):
         return []
 
 # ── Search templates ────────────────────────────────────
+
+
 def _make_catalyst_templates(full_name):
     return [
         f"{full_name} contract partnership agreement 2025 2026",
@@ -314,7 +316,7 @@ def _make_context_templates(full_name):
         f"{full_name} end market growth rate",
     ]
 
-# ── Taxonomy & Weights ──────────────────────────────────
+# ── Taxonomy & Weights (unchanged) ──────────────────────
 TAXONOMY_LIST = [
     "Contract win/expansion", "Strategic partnership/alliance",
     "Product launch/FDA approval/regulatory greenlight", "Analyst upgrade/PT increase",
@@ -460,11 +462,167 @@ Return ONLY a JSON array. No other text.
 """
 
 AMP_DAMP_TABLE = """Contract win/expansion: [+] High customer concentration, low past revenue growth, small market cap [−] Diversified customer base, large cap, contract small relative to revenue
-... (keep the full table exactly as in your current code) ...
+Strategic partnership/alliance: [+] Niche industry with high barriers, low institutional ownership, high R&D [−] Many existing partnerships, low switching costs
+Product launch/FDA approval/regulatory greenlight: [+] Biotech/pharma sector, single-product, low cash, high short interest [−] Diversified product portfolio, large cap, approval widely expected
+Analyst upgrade/PT increase: [+] Low analyst coverage, stock near 52-week low, low inst ownership, high short float, PT above current price [−] High coverage, PT still below current price (reclassify negative)
+Positive personnel change: [+] Company in distress, recent scandals, high insider ownership [−] Stable company, routine appointment, large cap
+Capital infusion: [+] High debt, low cash, negative FCF, high short interest [−] Already cash-rich, infusion is dilutive
+Earnings beat: [+] High short interest, stock beaten down, low expectations [−] Stock rallied into earnings, beat narrow, peers also beat
+Earnings guidance raise: [+] Same as beat + CEO credibility, analyst lag [−] Raise expected, macro tailwinds obvious, raise small
+Share repurchase/dividend increase: [+] High cash, low debt, undervalued (P/B < 1), insider buying alongside [−] Low cash, high debt, token repurchase, dividend cut history
+Successful acquisition/synergy realization: [+] Recent acquisition, synergy ahead of plan, accretive [−] Integration risk, overpayment history, small deal
+Deleveraging/sale of toxic assets/spin-off: [+] High debt, negative credit outlook, toxic assets [−] Already well-capitalised, sale of core asset
+Operational milestone: [+] Pre-revenue (biotech/space), regulatory catalyst pending, high R&D [−] Routine maintenance, non-value-creating
+Insider buying (cluster): [+] High insider ownership already, buying after crash, multiple C-suite [−] Small amounts, one insider, buying at ATH, option exercise
+Activist investor accumulation: [+] Underperforming, high cash, breakup value > market cap, low inst ownership [−] Management addressing issues, activist poor track record
+Capacity expansion: [+] High utilisation, growing backlogs, sector demand surging, high margins [−] Industry overcapacity, debt-funded, demand weakening
+Strategic pivot/rebranding: [+] Old business declining, high debt (pivot desperate), CEO credible [−] Stable business, pivot faddish, execution risk high
+Supply chain de-risking: [+] High China exposure, tariff sensitivity, recent supply shocks [−] Already diversified, de-risking costly
+Patent grant/IP protection: [+] Tech/pharma, high R&D, history of IP theft, narrow moat [−] Many patents already, patent narrow, workaround easy
+Customer concentration expansion: [+] High customer concentration currently, expansion to new sectors [−] Already diversified, new customer immaterial
+Government policy (tariffs/subsidies/mandates): [+] Sector directly affected, domestic capacity, bipartisan support [−] Policy temporary, company relies on imports, unfunded
+Institutional policy (Fed rate cut/QE/stimulus): [+] High debt, floating-rate, growth/tech, low cash flow [−] Low debt, fixed-rate, cut already priced in
+Favorable court ruling/patent grant: [+] Litigation priced in, binary outcome, damages large [−] Ruling narrow, appeal likely, stock didn't move
+Geopolitical event that boosts sector: [+] Defence sector, domestic production, govt contract exposure [−] Event temporary, indirect benefit
+Sector tailwind/index inclusion: [+] Small cap added to major index, sector ETF inflows, low liquidity [−] Already in index, inclusion priced in, momentum exhausted
+Regulatory approval: [+] Binary event, no alternatives, high legal costs if denied [−] Approval expected, minimal incremental revenue
+Macro tailwinds: [+] High cyclicality, beta > 1.5, high operating leverage [−] Defensive sector, tailwind temporary
+Sector rotation into industry: [+] Underperformed long, low relative valuations, low inst ownership [−] Rotation already happened, industry still overvalued
+Commodity price move favorable: [+] High commodity sensitivity, unhedged, producer [−] Fully hedged, commodity small input cost
+ESG mandate/green subsidy: [+] Renewable/green sector, high capital requirements [−] Already funded, subsidy small
+Currency tailwind: [+] High export %, high foreign revenue, unhedged [−] Hedged, import costs offset, small foreign exposure
+Technical breakout: [+] High short interest, breakout on volume, long downtrend before [−] Low volume breakout, already overbought
+Short squeeze: [+] Short float > 20%, days-to-cover > 4, positive catalyst cluster [−] Short float < 10%, no positive catalyst
+Institutional ownership increase: [+] Low inst ownership, concentrated fund, recent decline [−] Already highly owned, passive flow
+Contract loss/non-renewal: [+] High customer concentration, contract large % revenue [−] Diversified, contract small
+Partnership dissolution: [+] Partner critical, exclusive, no alternatives [−] Small partnership, many alternatives
+Product delay/failure/recall: [+] Single-product, safety risk, large revenue exposure [−] Diverse products, delay minor
+Analyst downgrade/PT cut: [+] Low coverage, respected analyst, stock near highs [−] High coverage, perma-bear, stock already at lows
+Negative personnel change: [+] Founder/CEO departure, key rainmaker, during crisis [−] Routine succession, company stable
+Dilutive offering: [+] Low cash, high debt, negative FCF, stock down [−] Small offering, debt-for-equity swap deleverages
+Earnings miss: [+] High short interest, high expectations, revenue miss, guidance cut alongside [−] Miss small, macro driven, peers also missed
+Earnings guidance cut: [+] Cut large, structural, peers not cutting, previously guided positive [−] Cut small, temporary, peers also cut
+Suspension of buyback/dividend cut: [+] Cash-strapped, previous commitment, signals distress [−] Cut to fund high-return project
+Failed acquisition/overpayment: [+] High debt taken, goodwill impairment large, integration disaster [−] Small deal, regulatory block
+Accumulation of debt/toxic assets: [+] Already high leverage, deteriorating metrics, near covenant breach [−] Accretive debt for growth, low cost
+Operational setback: [+] Single facility, no backup, revenue concentration [−] Diversified operations, insurance covers
+Insider selling (cluster): [+] CEO/CFO selling after beat, large amounts, no 10b5-1, multiple execs [−] Routine 10b5-1, small amounts, one insider
+Activist exits/file hostile 13D: [+] Activist good track record, large position, underperformed [−] Activist exits fast, position small
+Capacity underutilization/overexpansion: [+] High fixed costs, demand weakening, industry overcapacity [−] Temporary underutilisation, upturn expected
+Strategic pivot failure: [+] Pivot expensive, CEO staked reputation, high debt [−] Pivot small experiment, quickly reversed
+Supply chain shock: [+] Single-source, long lead times, no inventory [−] Diversified suppliers, buffer inventory
+Patent litigation loss/IP theft: [+] Core patent, high royalty income, competitive advantage lost [−] Peripheral patent, workaround exists
+Customer concentration risk: [+] Single customer > 30% revenue, no long-term contract [−] Diversified, contract locked in
+Policy reversal/new regulation/tax increase: [+] Industry directly targeted, high cost impact [−] Sector exempt, impact small
+Rate hike/monetary tightening: [+] High debt, floating rate, low interest coverage, negative FCF [−] Low debt, fixed-rate, cash-rich
+Adverse litigation/antitrust: [+] Binary penalties, large damages, core at risk [−] Nuisance suit, low probability
+Geopolitical event that hurts sector: [+] High exposure to conflict region, supply chain disruption [−] Diversified geography, domestic focus
+Sector headwind/index exclusion: [+] Index fund selling forced, low liquidity [−] Exclusion expected, small ETF weight
+Regulatory denial/antitrust block: [+] Deal-breaker, no alternative, sunk cost [−] Denial expected, alternative paths
+Macro headwinds: [+] High cyclicality, consumer discretionary, high operating leverage [−] Defensive sector, high cash, flexible costs
+Sector rotation out: [+] High valuation premium, high beta, crowded institutional positioning [−] Already underowned, attractive value
+Unfavorable commodity price move: [+] High input cost sensitivity, unhedged, low pricing power [−] Hedged, high pricing power, small input cost
+ESG controversy/carbon tax: [+] High emission industry, no offset plan, brand risk [−] Already green, tax small
+Currency headwind: [+] High export revenue, unhedged, domestic costs in strong currency [−] Hedged, foreign costs decline, small foreign share
+Technical breakdown: [+] Breakdown on high volume, death cross, preceded by rally [−] Low volume, already oversold
+Short attack/bear raid: [+] High short interest, credible short report, fraud allegation [−] Already heavily shorted, report low credibility
+Institutional ownership decline: [+] Concentrated holders, high-conviction fund exiting, after pop [−] Passive rebalancing, one small fund"""
+
+STEP2_TEMPLATE = """
+You are a COMPANY CONTEXT ANALYST. Your inputs are:
+1. A financial snapshot of {full_name} ({ticker}) from a database.
+2. Search snippets about {full_name} ({ticker})'s business model, operations, and risks.
+
+CRITICAL: Only use snippets that explicitly refer to {full_name} or {ticker}. Discard any snippet about a different company.
+
+FINANCIAL SNAPSHOT:
+{snapshot}
+
+CONTEXT SEARCH SNIPPETS:
+{context_search_results}
+
+PHASE 1: Structured Context Questionnaire
+Answer every question using the snapshot and snippets. Write "DATUM_MISSING" if data is not available.
+
+1. REVENUE STRUCTURE a) % revenue government/commercial/consumer? b) domestic/international? c) Top 3 customers & share? d) concentration risk?
+2. COST STRUCTURE & SUPPLY CHAIN a) Top 3 input costs? b) % COGS commodity-linked? c) in-house vs outsourced? d) % supply chain China/geopolitical? e) supplier concentration risk?
+3. COMPETITIVE POSITION a) pricing power? b) switching costs? c) industry structure? d) market share? e) top 3 competitors?
+4. FINANCIAL SENSITIVITIES a) debt/equity b) fixed vs floating debt % c) interest coverage d) cash runway e) revenue growth trend f) gross margin trend g) profit margin trend h) FCF trend.
+5. EXTERNAL EXPOSURES a) tariff sensitivity b) commodity sensitivity c) currency sensitivity d) key regulators e) geopolitical risk f) govt contract exposure.
+6. MANAGEMENT & RISKS a) CEO track record b) insider ownership % trend c) pending litigation d) regulatory investigations.
+7. GROWTH TRAJECTORY a) organic vs acquisitive b) backlog visibility c) capacity plans d) end-market growth rate.
+
+Cite snippet IDs or snapshot fields. Then compute a sensitivity multiplier for EVERY catalyst using the AMPLIFIER/DAMPENER table below.
+
+AMPLIFIER/DAMPENER REFERENCE TABLE:
+{amp_damp_table}
+
+TAXONOMY:
+{taxonomy_list_str}
+
+OUTPUT FORMAT: Return ONLY this JSON.
+{{
+  "ticker": "{ticker}",
+  "extracted_context": {{ ... }},
+  "sensitivity_profile": {{ "Contract win/expansion": {{"multiplier": 1.3, "rationale": "High customer concentration amplifies contract wins. [source: Q1c]"}} ... }},
+  "missing_data": [...]
+}}
 """
 
-STEP2_TEMPLATE = """ ... (unchanged) ... """
-STEP4_TEMPLATE = """ ... (unchanged) ... """
+STEP4_TEMPLATE = """
+You are a FINAL CATALYST SYNTHESIZER for {full_name} ({ticker}) on {today}.
+
+INPUTS:
+1. Merged event list (Finviz + raw) – each with an EVENT_ID:
+{merged_events_json}
+
+2. Weighted taxonomy (company‑context‑adjusted):
+{weighted_taxonomy_json}
+
+3. Financial snapshot:
+{snapshot_json}
+
+TASKS:
+A. Classify each event into one or more catalyst categories from the taxonomy. Use EXACT taxonomy label.
+B. Build the FULL catalyst grid (66 items). For each catalyst, set status: HIT / MISS / N/A.
+   - For each HIT, copy event_date, evidence_excerpt, source_urls, confidence from the event.
+   - Include the EVENT_ID numbers that contributed to this HIT (list of integers).
+   - Use the adjusted_weight from the weighted taxonomy for that catalyst.
+C. Apply INTERACTION RULES:
+   1. If "Insider selling (cluster)" HIT AND "Earnings beat" HIT within 14 days, reduce beat's weight by 1 and add "Insider-earnings divergence" (negative, weight=1).
+   2. If float_short > 20% AND positive HITs dominate, add "Short squeeze potential" (positive, weight=3).
+   3. If analyst target < current price, reclassify "Analyst upgrade/PT increase" as negative.
+   4. If both "Technical breakdown" and "Earnings beat" are HIT, reduce breakdown's weight by 2.
+D. Compute FINAL SCORES: Positive_Score = sum(adjusted_weight * confidence/100) for positive HITs, Negative_Score similarly. Net = Positive − Negative. Map: Net>=20→Strong Bullish, >=8→Bullish, >=-8→Neutral, >=-20→Bearish, else→Strong Bearish. Conviction = min(100, abs(Net)*2).
+E. Write a catalyst_stack (4 sentences, with dates). F. Identify key_assumption.
+
+OUTPUT FORMAT: Return ONLY this JSON.
+{{
+  "ticker": "{ticker}",
+  "analysis_date": "{today}",
+  "current_price": "...",
+  "catalyst_grid": [
+    {{
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [0, 3],
+      "event_date": "2025-10-14",
+      "evidence_excerpt": "...",
+      "source_urls": ["https://..."],
+      "confidence": 90
+    }},
+    ... every catalyst
+  ],
+  "catalyst_stack": "...",
+  "net_signal": "Bullish",
+  "conviction": 78,
+  "key_assumption": "..."
+}}
+"""
 
 # ── Prompt formatters ───────────────────────────────────
 def _format_step1(full_name, ticker, today, lookback_start, search_results_json, finviz_events_json):
