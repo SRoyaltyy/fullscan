@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Gemini Web Interface Scraper – Anti‑detection via CloakBrowser.
+Gemini Web Interface Scraper — Anti‑detection via CloakBrowser.
 Reuses saved browser login state (base64‑encoded GEMINI_BROWSER_STATE secret).
 """
 
 import asyncio, json, os, sys, base64
-from cloaker import CloakBrowser
+from cloakbrowser import launch_context
 
 GEMINI_URL   = "https://gemini.google.com"
 STATE_FILE   = "gemini_browser_state.json"
@@ -39,19 +39,19 @@ async def run_gemini(prompt: str) -> dict:
     load_state()
 
     # Launch anti‑detection browser using your saved session
-    browser = await CloakBrowser.launch(
+    # launch_context creates browser + context in one call, forwarding
+    # storage_state to Playwright's browser.new_context() under the hood.
+    context = await asyncio.to_thread(
+        launch_context,
+        storage_state=STATE_FILE,
+        humanize=True,
         headless=True,
-        state_file=STATE_FILE,
-        humanize=True,          # realistic mouse movements & typing
         args=[
-            "--disable-blink-features=AutomationControlled",
             "--no-sandbox",
             "--disable-setuid-sandbox",
         ],
     )
-
-    context = browser.contexts[0] if browser.contexts else await browser.new_context()
-    page = context.pages[0] if context.pages else await context.new_page()
+    page = await context.new_page()
     await page.goto(GEMINI_URL, wait_until="domcontentloaded")
 
     # ── Find the input box ──
@@ -71,7 +71,7 @@ async def run_gemini(prompt: str) -> dict:
             continue
     if not input_box:
         await page.screenshot(path="gemini_debug_input.png")
-        await browser.close()
+        await context.close()
         return {"error": "input_not_found"}
 
     # ── Type the prompt ──
@@ -104,7 +104,7 @@ async def run_gemini(prompt: str) -> dict:
         await page.wait_for_selector(
             "div.response-content, div.model-response, div.message-content, "
             "div[class*='thread-item'] div[class*='text'], div[class*='chat-message']",
-            timeout=20000,
+            timeout=25000,
         )
     except Exception:
         pass
@@ -113,7 +113,7 @@ async def run_gemini(prompt: str) -> dict:
         await loading.wait_for(state="hidden", timeout=15000)
     except Exception:
         pass
-    await page.wait_for_timeout(4000)
+    await page.wait_for_timeout(5000)
 
     # ── Screenshot for debugging ──
     await page.screenshot(path="gemini_debug_response.png", full_page=True)
@@ -167,7 +167,7 @@ async def run_gemini(prompt: str) -> dict:
             seen.add(href)
             source_links.append(href)
 
-    await browser.close()
+    await context.close()
     return {"answer": full_text, "sources": source_links[:20]}
 
 
