@@ -969,7 +969,16 @@ if __name__ == "__main__":
     for ticker in TICKERS:
         print(f"\n{'='*60}\n📊 Snapshot for {ticker}…")
         if HAS_DB:
-            if conn is None: conn = get_connection(); cur = conn.cursor()
+            if conn is None: 
+                try:
+                    conn = get_connection()
+                    # Set a statement timeout so queries can't hang either
+                    cur = conn.cursor()
+                    cur.execute("SET statement_timeout = '60000';")  # 60 second query timeout
+                except Exception as e:
+                    print(f"  ⚠️  DB connection failed: {e}")
+                    HAS_DB = False
+                    conn = None
             snap = build_health_snapshot(ticker, conn)
         else:
             snap = {}
