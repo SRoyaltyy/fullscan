@@ -737,7 +737,7 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
     print("  🐾 Running Gemini catcher (full output + instructions)…")
     try:
         # Hard 90‑second timeout – catcher must finish or be killed
-        result = await asyncio.wait_for(gemini_catcher_run(prompt), timeout=90)
+        result = await asyncio.wait_for(gemini_catcher_run(prompt), timeout=150)
         if result.get("error"):
             print(f"  ⚠️  Gemini catcher error: {result['error']}")
             return grid
