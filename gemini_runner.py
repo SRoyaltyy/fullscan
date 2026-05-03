@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
 """
-Gemini Web Interface Scraper — reuses a saved browser login state.
-Handles base64‑encoded GEMINI_BROWSER_STATE secret from GitHub Actions.
+Gemini Web Interface Scraper – robust response extraction.
 """
 
-import asyncio, json, os, sys, base64
+import asyncio, json, os, sys, base64, re
 from playwright.async_api import async_playwright
 
 GEMINI_URL   = "https://gemini.google.com"
 STATE_FILE   = "gemini_browser_state.json"
 
-# ═══════════════════════════════════════════════════
-# CHANGE YOUR PROMPT HERE
-# ═══════════════════════════════════════════════════
 TEST_PROMPT = (
     "Please do research on the company BBAI (BigBear.ai) using web search "
     "and tell me what you see here. Include: core business, revenue sources, "
     "key products, major contracts, financial situation, leadership, recent news, "
     "and geographic footprint."
 )
-# ═══════════════════════════════════════════════════
 
 
 def load_state():
-    """Decode base64 GEMINI_BROWSER_STATE secret to a JSON file."""
     env_state = os.environ.get("GEMINI_BROWSER_STATE", "")
     if env_state:
         raw = base64.b64decode(env_state)
@@ -36,7 +30,6 @@ def load_state():
 
 
 async def run_gemini(prompt: str) -> dict:
-    """Open Gemini, type prompt, submit, extract response + sources."""
     load_state()
 
     async with async_playwright() as p:
@@ -68,23 +61,23 @@ async def run_gemini(prompt: str) -> dict:
             except Exception:
                 continue
         if not input_box:
-            print("❌ Could not find Gemini input box. Taking debug screenshot…")
-            await page.screenshot(path="gemini_debug.png")
+            await page.screenshot(path="gemini_debug_input.png")
             await browser.close()
             return {"error": "input_not_found"}
 
         # ── Type the prompt ──
         await input_box.click()
         await input_box.fill(prompt)
-        await page.wait_for_timeout(800)
+        await page.wait_for_timeout(1000)
 
         # ── Submit ──
-        sent = False
         SEND_SELECTORS = [
             "button[aria-label='Send message']",
             "button[data-test-id='send-button']",
             "button.send-button",
+            "button[aria-label='Send']",
         ]
+        sent = False
         for sel in SEND_SELECTORS:
             try:
                 btn = await page.wait_for_selector(sel, timeout=3000)
@@ -98,31 +91,72 @@ async def run_gemini(prompt: str) -> dict:
             await input_box.press("Enter")
 
         # ── Wait for the response to finish streaming ──
-        await page.wait_for_timeout(3000)
+        # First, wait up to 20 seconds for a response block to appear
         try:
             await page.wait_for_selector(
-                "div.response-content, div.model-response, div.message-content",
+                "div.response-content, div.model-response, div.message-content, "
+                "div[class*='thread-item'] div[class*='text'], div[class*='chat-message']",
                 timeout=20000,
             )
         except Exception:
             pass
-        await page.wait_for_timeout(5000)  # extra for streaming
 
-        # ── Extract the full response text ──
+        # Wait for the streaming indicator to disappear (if it exists)
+        try:
+            loading = page.locator("[data-test-id='loading-indicator'], .spinner, [class*='loading']")
+            await loading.wait_for(state="hidden", timeout=15000)
+        except Exception:
+            pass
+
+        await page.wait_for_timeout(4000)  # extra settling time
+
+        # ── Take a full‑page screenshot for debugging ──
+        await page.screenshot(path="gemini_debug_response.png", full_page=True)
+
+        # ── Extraction: try specific selectors first ──
         RESPONSE_SELECTORS = [
             "div.response-content",
             "div.model-response",
-            "div[class*='response']",
             "div.message-content",
+            "div[class*='thread-item'] div[class*='text']",
+            "div[class*='chat-message'] div[class*='text']",
+            "div[class*='assistant'] div[class*='text']",
         ]
         full_text = ""
         for sel in RESPONSE_SELECTORS:
             elements = await page.query_selector_all(sel)
             if elements:
-                parts = [await el.inner_text() for el in elements if await el.inner_text()]
-                full_text = "\n\n".join(parts)
-                if len(full_text) > 50:
-                    break
+                parts = []
+                for el in elements:
+                    txt = await el.inner_text()
+                    if txt:
+                        parts.append(txt.strip())
+                candidate = "\n\n".join(parts)
+                if len(candidate) > len(full_text):
+                    full_text = candidate
+
+        # ── Fallback: grab all visible text and filter UI lines ──
+        if not full_text or len(full_text) < 50:
+            body_text = await page.inner_text("body")
+            # Remove common Gemini UI labels
+            unwanted = [
+                "Defining the Approach", "Answer now", "Gemini said",
+                "You said", "Send message", "Clear chat", "New chat",
+                "Extensions", "Apps", "Settings", "Help", "Feedback",
+                "Google apps", "Account", "Search", "Menu", "Close",
+                "Upload an image", "Type something", "Chat with Gemini",
+                "Please do research", "Attach files",
+            ]
+            lines = body_text.split("\n")
+            clean = []
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                if any(uw in line for uw in unwanted):
+                    continue
+                clean.append(line)
+            full_text = "\n".join(clean)
 
         # ── Extract grounding source links ──
         source_links = []
