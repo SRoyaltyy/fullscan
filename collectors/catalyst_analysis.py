@@ -13,8 +13,8 @@ from openai import OpenAI
 # ═══════════════════════════════════════════════════════
 #  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
 # ═══════════════════════════════════════════════════════
-TICKERS = ["RBLX"]
-CUTOFF_DATE = "2026-03-22"          # e.g. "2026-03-15" — discard events after this; set to None for live
+TICKERS = ["NIO"]
+CUTOFF_DATE = "2026-03-28"          # e.g. "2026-03-15" — discard events after this; set to None for live
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
