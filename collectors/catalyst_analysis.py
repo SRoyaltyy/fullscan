@@ -17,8 +17,8 @@ from google.genai import types as google_types
 # ═══════════════════════════════════════════════════════
 #  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
 # ═══════════════════════════════════════════════════════
-TICKERS = ["SERV"]
-CUTOFF_DATE = "2026-03-15"          # e.g. "2026-03-15" — discard events after this; set to None for live
+TICKERS = ["CGEN"]
+CUTOFF_DATE = "2026-04-01"          # e.g. "2026-03-15" — discard events after this; set to None for live
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
@@ -261,14 +261,15 @@ def gemini_robust_parse_json(text):
     text = text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-    
+
     # Attempt 1: direct
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
 
-    # Attempt 2: fix missing commas between array elements (e.g. `} {` → `}, {`)
+    # Attempt 2: fix missing commas between objects in arrays (common Gemini error)
+    # e.g. `} {` → `}, {`
     fixed = re.sub(r'\}\s*\{', '}, {', text)
     try:
         return json.loads(fixed)
@@ -283,21 +284,27 @@ def gemini_robust_parse_json(text):
     except json.JSONDecodeError:
         pass
 
-    # Attempt 4: find the outermost JSON object/array and try to parse that substring
-    start = text.find('{')
-    end = text.rfind('}')
-    if start != -1 and end != -1 and end > start:
-        substr = text[start:end+1]
-        try:
-            return json.loads(substr)
-        except json.JSONDecodeError:
-            pass
+    # Attempt 4: extract the outermost JSON object or array
+    for bracket in ('{', '['):
+        start = text.find(bracket)
+        end = text.rfind('}' if bracket == '{' else ']')
+        if start != -1 and end != -1 and end > start:
+            substr = text[start:end+1]
+            # Try to fix missing commas in the substr too
+            substr_fixed = re.sub(r'\}\s*\{', '}, {', substr)
+            try:
+                return json.loads(substr_fixed)
+            except json.JSONDecodeError:
+                try:
+                    return json.loads(substr)
+                except json.JSONDecodeError:
+                    pass
 
-    # Attempt 5: try to close unclosed brackets/braces
+    # Attempt 5: close unclosed brackets/braces
     ob = text.count("[") - text.count("]")
     cb = text.count("{") - text.count("}")
     if ob > 0 or cb > 0:
-        closed = text + "]"*ob + "}"*cb
+        closed = text + "]" * ob + "}" * cb
         try:
             return json.loads(closed)
         except json.JSONDecodeError:
@@ -313,6 +320,12 @@ def gemini_unified_check(full_name, ticker, grid, snapshot, weighted_taxonomy, t
 
     miss_items = [c for c in grid if c.get("status") == "MISS"]
     hit_items  = [c for c in grid if c.get("status") == "HIT"]
+
+    # ── If everything is already covered, skip Gemini ──
+    if not miss_items and not hit_items:
+        print("  ✅ Grid is empty or all N/A; skipping Gemini.")
+        return grid, weighted_taxonomy, []
+
     compact_hits = [{
         "taxonomy": c.get("taxonomy"),
         "event_date": c.get("event_date"),
@@ -330,11 +343,22 @@ MISS CATALYSTS (search Google for evidence and return new HITs if found):
 HIT CATALYSTS (verify they are about {full_name} and correctly classified):
 {json.dumps(compact_hits, indent=2)}
 
-Return ONLY this tiny JSON:
+Return ONLY valid JSON with this exact structure:
 {{
-  "new_hits_from_miss": [ {{"taxonomy":"...","event_date":"...","evidence_excerpt":"≤120 chars","source_urls":["..."],"confidence":80}} ],
-  "corrected_hits": [ {{"taxonomy":"...","original_status":"HIT","corrected_status":"MISS|HIT","correction_type":"source_disputed|reclassified","rationale":"short"}} ]
+  "new_hits_from_miss": [],
+  "corrected_hits": []
 }}
+
+The arrays may be empty if nothing needs to change.
+Do NOT include trailing commas.
+Every object inside the arrays must have these fields:
+- "taxonomy": string
+- "event_date": string (YYYY-MM-DD)
+- "evidence_excerpt": short string
+- "source_urls": list of strings
+- "confidence": integer (0-100)
+- "correction_type": string (one of "confirmed","source_disputed","reclassified")
+- "rationale": short string
 """
 
     try:
@@ -352,17 +376,53 @@ Return ONLY this tiny JSON:
                         max_output_tokens=4096,
                     ),
                 )
-                if not response.candidates:
-                    raise ValueError("No candidates returned")
-                parts = response.candidates[0].content.parts
-                text = "".join(p.text for p in parts if p.text).strip()
-                break
+
+                # ── Defensive extraction of text from response ──
+                text = ""
+                if response.candidates:
+                    candidate = response.candidates[0]
+                    # Check finish reason
+                    finish_reason = getattr(candidate, "finish_reason", None)
+                    if finish_reason and "SAFETY" in str(finish_reason).upper():
+                        print(f"  ⚠️  Gemini blocked by safety filter (finish_reason={finish_reason})")
+                        return grid, weighted_taxonomy, []
+
+                    content = getattr(candidate, "content", None)
+                    if content is not None:
+                        parts = getattr(content, "parts", None)
+                        if parts is not None and len(parts) > 0:
+                            text = "".join(
+                                getattr(p, "text", "") or ""
+                                for p in parts
+                            ).strip()
+
+                if not text:
+                    print(f"  ⚠️  Gemini returned empty response (attempt {attempt+1}/3).")
+                    time.sleep(2)
+                    continue
+
+                # ── Parse and validate ──
+                result = gemini_robust_parse_json(text)
+                corrected_hits = result.get("corrected_hits", [])
+                new_hits = result.get("new_hits_from_miss", [])
+
+                # Basic validation – if both fields are present, accept
+                if corrected_hits or new_hits or "corrected_hits" in result:
+                    break  # valid response, exit retry loop
+
+                print(f"  ⚠️  Gemini returned JSON without expected fields (attempt {attempt+1}/3).")
+                time.sleep(2)
+
             except Exception as e:
                 error_str = str(e)
                 if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
                     wait = 2 ** attempt
                     print(f"  ⚠️  Gemini rate‑limited (429), waiting {wait}s…")
                     time.sleep(wait)
+                    continue
+                elif "JSON" in error_str or "Failed to parse" in error_str:
+                    print(f"  ⚠️  Gemini JSON parse error (attempt {attempt+1}/3): {e}")
+                    time.sleep(2)
                     continue
                 else:
                     raise
@@ -374,21 +434,12 @@ Return ONLY this tiny JSON:
         print(f"  ⚠️  Gemini SDK call failed: {e}")
         return grid, weighted_taxonomy, []
 
-    # Parse response
-    try:
-        result = gemini_robust_parse_json(text)
-    except Exception as e:
-        print(f"  ❌ Failed to parse Gemini JSON: {e}")
-        return grid, weighted_taxonomy, []
-
-    # Apply corrections
-    corrected_hits = result.get("corrected_hits", [])
-    new_hits = result.get("new_hits_from_miss", [])
-
+    # ── Apply corrections ──
     grid_lookup = {c.get("taxonomy"): c for c in grid}
     for corr in corrected_hits:
         t = corr.get("taxonomy")
-        if not t or t not in grid_lookup: continue
+        if not t or t not in grid_lookup:
+            continue
         entry = grid_lookup[t]
         if corr.get("corrected_status") == "MISS":
             entry["status"] = "MISS"
@@ -404,7 +455,9 @@ Return ONLY this tiny JSON:
         hit["status"] = "HIT"
         hit["type"] = "positive" if hit.get("taxonomy") in POSITIVE_CATALYSTS else "negative"
         hit["base_weight"] = CATALYST_WEIGHTS.get(hit["taxonomy"], 5)
-        hit["adjusted_weight"] = round(hit["base_weight"] * weighted_taxonomy.get(hit["taxonomy"], {}).get("multiplier", 1.0))
+        hit["adjusted_weight"] = round(
+            hit["base_weight"] * weighted_taxonomy.get(hit["taxonomy"], {}).get("multiplier", 1.0)
+        )
         hit.setdefault("confidence", 80)
         hit.setdefault("event_date", "?")
         hit.setdefault("source_urls", [])
