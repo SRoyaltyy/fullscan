@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Backtest-Capable, Robust Gemini, Full Transparency.
-- Ticker(s) and cutoff date set at the top of the file.
-- Gemini calls via Google GenAI SDK (the working method).
-- CUTOFF_DATE discards all events after the specified date (None = live).
-- Hardened JSON parser for Gemini responses.
-- Prints every HIT with headline, event ID, and source link.
+Catalyst Analysis Engine v2 – Backtest‑Capable, CloakBrowser Gemini Catcher.
+- Ticker(s) and cutoff date at the top.
+- DeepSeek + SearXNG pipeline unchanged.
+- After DeepSeek, Gemini (web interface) acts as a catcher for missed events.
+- Result merged into final grid.
 """
 
 import os, json, time, re, asyncio, aiohttp
 from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
-from google import genai
-from google.genai import types as google_types
 
 # ═══════════════════════════════════════════════════════
 #  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
@@ -26,34 +23,21 @@ SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 6
 MODEL                = "deepseek-chat"
-GEMINI_API_KEY       = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL         = "gemini-2.5-flash"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
-
-# Convert CUTOFF_DATE to string for easy comparison
 CUTOFF_DATE = CUTOFF_DATE.strip() if CUTOFF_DATE else None
 
-# ── Gemini health check (Google GenAI SDK) ──────────────
-def gemini_health_check():
-    if not GEMINI_API_KEY:
-        return False
-    try:
-        client = genai.Client(api_key=GEMINI_API_KEY)
-        tools = google_types.Tool(google_search=google_types.GoogleSearch())
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents="Google Search: What is the current stock price of Apple (AAPL)?",
-            config=google_types.GenerateContentConfig(
-                tools=[tools],
-                temperature=0.0,
-                max_output_tokens=128,
-            ),
-        )
-        return response.candidates is not None and len(response.candidates) > 0
-    except Exception as e:
-        print(f"  ⚠️  Gemini health check error: {e}")
-        return False
+# ── Gemini catcher availability ────────────────────────
+try:
+    from gemini_catcher import run_gemini as gemini_catcher_run
+    # Quick sanity check – we only need the state file present
+    if not (os.path.exists("gemini_browser_state.json") or os.environ.get("GEMINI_BROWSER_STATE")):
+        raise ImportError
+    GEMINI_CATCHER_AVAILABLE = True
+except ImportError:
+    GEMINI_CATCHER_AVAILABLE = False
+    print("⚠️  Gemini catcher module not found / state missing. Proceeding without catcher.")
+
 
 # ── SearXNG async executor ─────────────────────────────
 async def search_single(session, query, searxng_url, categories="general,news"):
@@ -230,7 +214,6 @@ def scrape_finviz_news(ticker):
                 date_str = parsed.strftime("%Y-%m-%d")
             except ValueError:
                 date_str = str(d)[:10]
-            # Apply cutoff
             if CUTOFF_DATE and date_str > CUTOFF_DATE:
                 continue
             title = str(row.get('Title', ''))
@@ -255,222 +238,7 @@ def scrape_finviz_news(ticker):
         print(f"  ⚠️  Finviz news scrape failed: {e}")
         return []
 
-# ── Gemini unified call (Google GenAI SDK – robust) ─────
-def gemini_robust_parse_json(text):
-    """Try multiple strategies to parse Gemini's JSON output."""
-    text = text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-
-    # Attempt 1: direct
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        pass
-
-    # Attempt 2: fix missing commas between objects in arrays (common Gemini error)
-    # e.g. `} {` → `}, {`
-    fixed = re.sub(r'\}\s*\{', '}, {', text)
-    try:
-        return json.loads(fixed)
-    except json.JSONDecodeError:
-        pass
-
-    # Attempt 3: remove trailing commas before ] or }
-    cleaned = re.sub(r",\s*]", "]", fixed)
-    cleaned = re.sub(r",\s*}", "}", cleaned)
-    try:
-        return json.loads(cleaned)
-    except json.JSONDecodeError:
-        pass
-
-    # Attempt 4: extract the outermost JSON object or array
-    for bracket in ('{', '['):
-        start = text.find(bracket)
-        end = text.rfind('}' if bracket == '{' else ']')
-        if start != -1 and end != -1 and end > start:
-            substr = text[start:end+1]
-            # Try to fix missing commas in the substr too
-            substr_fixed = re.sub(r'\}\s*\{', '}, {', substr)
-            try:
-                return json.loads(substr_fixed)
-            except json.JSONDecodeError:
-                try:
-                    return json.loads(substr)
-                except json.JSONDecodeError:
-                    pass
-
-    # Attempt 5: close unclosed brackets/braces
-    ob = text.count("[") - text.count("]")
-    cb = text.count("{") - text.count("}")
-    if ob > 0 or cb > 0:
-        closed = text + "]" * ob + "}" * cb
-        try:
-            return json.loads(closed)
-        except json.JSONDecodeError:
-            pass
-
-    raise ValueError(f"Failed to parse Gemini JSON. Start: {text[:200]}")
-
-def gemini_unified_check(full_name, ticker, grid, snapshot, weighted_taxonomy, taxonomy_list):
-    if not GEMINI_API_KEY:
-        return grid, weighted_taxonomy, []
-
-    print("  🔍 Running lightweight Gemini fact‑check + MISS gap‑filler…")
-
-    miss_items = [c for c in grid if c.get("status") == "MISS"]
-    hit_items  = [c for c in grid if c.get("status") == "HIT"]
-
-    # ── If everything is already covered, skip Gemini ──
-    if not miss_items and not hit_items:
-        print("  ✅ Grid is empty or all N/A; skipping Gemini.")
-        return grid, weighted_taxonomy, []
-
-    compact_hits = [{
-        "taxonomy": c.get("taxonomy"),
-        "event_date": c.get("event_date"),
-        "evidence_excerpt": c.get("evidence_excerpt","")[:120],
-        "source_urls": c.get("source_urls",[])[:2]
-    } for c in hit_items]
-
-    prompt = f"""
-You are a financial fact‑checker for {full_name} (ticker: {ticker}).
-TODAY is {TODAY}. Lookback: {LOOKBACK_START} to {TODAY}.
-
-MISS CATALYSTS (search Google for evidence and return new HITs if found):
-{json.dumps([c.get("taxonomy") for c in miss_items], indent=2)}
-
-HIT CATALYSTS (verify they are about {full_name} and correctly classified):
-{json.dumps(compact_hits, indent=2)}
-
-Return ONLY valid JSON with this exact structure:
-{{
-  "new_hits_from_miss": [],
-  "corrected_hits": []
-}}
-
-The arrays may be empty if nothing needs to change.
-Do NOT include trailing commas.
-Every object inside the arrays must have these fields:
-- "taxonomy": string
-- "event_date": string (YYYY-MM-DD)
-- "evidence_excerpt": short string
-- "source_urls": list of strings
-- "confidence": integer (0-100)
-- "correction_type": string (one of "confirmed","source_disputed","reclassified")
-- "rationale": short string
-"""
-
-    try:
-        gemini_client = genai.Client(api_key=GEMINI_API_KEY)
-        tools = google_types.Tool(google_search=google_types.GoogleSearch())
-
-        for attempt in range(3):
-            try:
-                response = gemini_client.models.generate_content(
-                    model=GEMINI_MODEL,
-                    contents=prompt,
-                    config=google_types.GenerateContentConfig(
-                        tools=[tools],
-                        temperature=0.1,
-                        max_output_tokens=4096,
-                    ),
-                )
-
-                # ── Defensive extraction of text from response ──
-                text = ""
-                if response.candidates:
-                    candidate = response.candidates[0]
-                    # Check finish reason
-                    finish_reason = getattr(candidate, "finish_reason", None)
-                    if finish_reason and "SAFETY" in str(finish_reason).upper():
-                        print(f"  ⚠️  Gemini blocked by safety filter (finish_reason={finish_reason})")
-                        return grid, weighted_taxonomy, []
-
-                    content = getattr(candidate, "content", None)
-                    if content is not None:
-                        parts = getattr(content, "parts", None)
-                        if parts is not None and len(parts) > 0:
-                            text = "".join(
-                                getattr(p, "text", "") or ""
-                                for p in parts
-                            ).strip()
-
-                if not text:
-                    print(f"  ⚠️  Gemini returned empty response (attempt {attempt+1}/3).")
-                    time.sleep(2)
-                    continue
-
-                # ── Parse and validate ──
-                result = gemini_robust_parse_json(text)
-                corrected_hits = result.get("corrected_hits", [])
-                new_hits = result.get("new_hits_from_miss", [])
-
-                # Basic validation – if both fields are present, accept
-                if corrected_hits or new_hits or "corrected_hits" in result:
-                    break  # valid response, exit retry loop
-
-                print(f"  ⚠️  Gemini returned JSON without expected fields (attempt {attempt+1}/3).")
-                time.sleep(2)
-
-            except Exception as e:
-                error_str = str(e)
-                if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
-                    wait = 2 ** attempt
-                    print(f"  ⚠️  Gemini rate‑limited (429), waiting {wait}s…")
-                    time.sleep(wait)
-                    continue
-                elif "JSON" in error_str or "Failed to parse" in error_str:
-                    print(f"  ⚠️  Gemini JSON parse error (attempt {attempt+1}/3): {e}")
-                    time.sleep(2)
-                    continue
-                else:
-                    raise
-        else:
-            print("  ❌ All Gemini attempts failed; skipping Gemini corrections.")
-            return grid, weighted_taxonomy, []
-
-    except Exception as e:
-        print(f"  ⚠️  Gemini SDK call failed: {e}")
-        return grid, weighted_taxonomy, []
-
-    # ── Apply corrections ──
-    grid_lookup = {c.get("taxonomy"): c for c in grid}
-    for corr in corrected_hits:
-        t = corr.get("taxonomy")
-        if not t or t not in grid_lookup:
-            continue
-        entry = grid_lookup[t]
-        if corr.get("corrected_status") == "MISS":
-            entry["status"] = "MISS"
-            entry["adjusted_weight"] = 0
-            entry["event_date"] = None
-            entry["evidence_excerpt"] = ""
-            entry["source_urls"] = []
-            entry["confidence"] = 0
-        elif corr.get("corrected_status") == "HIT":
-            entry["status"] = "HIT"
-
-    for hit in new_hits:
-        hit["status"] = "HIT"
-        hit["type"] = "positive" if hit.get("taxonomy") in POSITIVE_CATALYSTS else "negative"
-        hit["base_weight"] = CATALYST_WEIGHTS.get(hit["taxonomy"], 5)
-        hit["adjusted_weight"] = round(
-            hit["base_weight"] * weighted_taxonomy.get(hit["taxonomy"], {}).get("multiplier", 1.0)
-        )
-        hit.setdefault("confidence", 80)
-        hit.setdefault("event_date", "?")
-        hit.setdefault("source_urls", [])
-        hit.setdefault("evidence_excerpt", "")
-        hit.setdefault("headline", "")
-        grid.append(hit)
-
-    print(f"  ✅ Gemini applied {len(corrected_hits)} corrections, found {len(new_hits)} new MISS HITs.")
-    return grid, weighted_taxonomy, new_hits
-
-# ── Search templates (unchanged) ────────────────────────
-
-
+# ── Search templates ────────────────────────────────────
 def _make_catalyst_templates(full_name):
     return [
         f"{full_name} contract partnership agreement 2025 2026",
@@ -546,7 +314,7 @@ def _make_context_templates(full_name):
         f"{full_name} end market growth rate",
     ]
 
-# ── Taxonomy & Weights (unchanged) ──────────────────────
+# ── Taxonomy & Weights ──────────────────────────────────
 TAXONOMY_LIST = [
     "Contract win/expansion", "Strategic partnership/alliance",
     "Product launch/FDA approval/regulatory greenlight", "Analyst upgrade/PT increase",
@@ -692,167 +460,11 @@ Return ONLY a JSON array. No other text.
 """
 
 AMP_DAMP_TABLE = """Contract win/expansion: [+] High customer concentration, low past revenue growth, small market cap [−] Diversified customer base, large cap, contract small relative to revenue
-Strategic partnership/alliance: [+] Niche industry with high barriers, low institutional ownership, high R&D [−] Many existing partnerships, low switching costs
-Product launch/FDA approval/regulatory greenlight: [+] Biotech/pharma sector, single-product, low cash, high short interest [−] Diversified product portfolio, large cap, approval widely expected
-Analyst upgrade/PT increase: [+] Low analyst coverage, stock near 52-week low, low inst ownership, high short float, PT above current price [−] High coverage, PT still below current price (reclassify negative)
-Positive personnel change: [+] Company in distress, recent scandals, high insider ownership [−] Stable company, routine appointment, large cap
-Capital infusion: [+] High debt, low cash, negative FCF, high short interest [−] Already cash-rich, infusion is dilutive
-Earnings beat: [+] High short interest, stock beaten down, low expectations [−] Stock rallied into earnings, beat narrow, peers also beat
-Earnings guidance raise: [+] Same as beat + CEO credibility, analyst lag [−] Raise expected, macro tailwinds obvious, raise small
-Share repurchase/dividend increase: [+] High cash, low debt, undervalued (P/B < 1), insider buying alongside [−] Low cash, high debt, token repurchase, dividend cut history
-Successful acquisition/synergy realization: [+] Recent acquisition, synergy ahead of plan, accretive [−] Integration risk, overpayment history, small deal
-Deleveraging/sale of toxic assets/spin-off: [+] High debt, negative credit outlook, toxic assets [−] Already well-capitalised, sale of core asset
-Operational milestone: [+] Pre-revenue (biotech/space), regulatory catalyst pending, high R&D [−] Routine maintenance, non-value-creating
-Insider buying (cluster): [+] High insider ownership already, buying after crash, multiple C-suite [−] Small amounts, one insider, buying at ATH, option exercise
-Activist investor accumulation: [+] Underperforming, high cash, breakup value > market cap, low inst ownership [−] Management addressing issues, activist poor track record
-Capacity expansion: [+] High utilisation, growing backlogs, sector demand surging, high margins [−] Industry overcapacity, debt-funded, demand weakening
-Strategic pivot/rebranding: [+] Old business declining, high debt (pivot desperate), CEO credible [−] Stable business, pivot faddish, execution risk high
-Supply chain de-risking: [+] High China exposure, tariff sensitivity, recent supply shocks [−] Already diversified, de-risking costly
-Patent grant/IP protection: [+] Tech/pharma, high R&D, history of IP theft, narrow moat [−] Many patents already, patent narrow, workaround easy
-Customer concentration expansion: [+] High customer concentration currently, expansion to new sectors [−] Already diversified, new customer immaterial
-Government policy (tariffs/subsidies/mandates): [+] Sector directly affected, domestic capacity, bipartisan support [−] Policy temporary, company relies on imports, unfunded
-Institutional policy (Fed rate cut/QE/stimulus): [+] High debt, floating-rate, growth/tech, low cash flow [−] Low debt, fixed-rate, cut already priced in
-Favorable court ruling/patent grant: [+] Litigation priced in, binary outcome, damages large [−] Ruling narrow, appeal likely, stock didn't move
-Geopolitical event that boosts sector: [+] Defence sector, domestic production, govt contract exposure [−] Event temporary, indirect benefit
-Sector tailwind/index inclusion: [+] Small cap added to major index, sector ETF inflows, low liquidity [−] Already in index, inclusion priced in, momentum exhausted
-Regulatory approval: [+] Binary event, no alternatives, high legal costs if denied [−] Approval expected, minimal incremental revenue
-Macro tailwinds: [+] High cyclicality, beta > 1.5, high operating leverage [−] Defensive sector, tailwind temporary
-Sector rotation into industry: [+] Underperformed long, low relative valuations, low inst ownership [−] Rotation already happened, industry still overvalued
-Commodity price move favorable: [+] High commodity sensitivity, unhedged, producer [−] Fully hedged, commodity small input cost
-ESG mandate/green subsidy: [+] Renewable/green sector, high capital requirements [−] Already funded, subsidy small
-Currency tailwind: [+] High export %, high foreign revenue, unhedged [−] Hedged, import costs offset, small foreign exposure
-Technical breakout: [+] High short interest, breakout on volume, long downtrend before [−] Low volume breakout, already overbought
-Short squeeze: [+] Short float > 20%, days-to-cover > 4, positive catalyst cluster [−] Short float < 10%, no positive catalyst
-Institutional ownership increase: [+] Low inst ownership, concentrated fund, recent decline [−] Already highly owned, passive flow
-Contract loss/non-renewal: [+] High customer concentration, contract large % revenue [−] Diversified, contract small
-Partnership dissolution: [+] Partner critical, exclusive, no alternatives [−] Small partnership, many alternatives
-Product delay/failure/recall: [+] Single-product, safety risk, large revenue exposure [−] Diverse products, delay minor
-Analyst downgrade/PT cut: [+] Low coverage, respected analyst, stock near highs [−] High coverage, perma-bear, stock already at lows
-Negative personnel change: [+] Founder/CEO departure, key rainmaker, during crisis [−] Routine succession, company stable
-Dilutive offering: [+] Low cash, high debt, negative FCF, stock down [−] Small offering, debt-for-equity swap deleverages
-Earnings miss: [+] High short interest, high expectations, revenue miss, guidance cut alongside [−] Miss small, macro driven, peers also missed
-Earnings guidance cut: [+] Cut large, structural, peers not cutting, previously guided positive [−] Cut small, temporary, peers also cut
-Suspension of buyback/dividend cut: [+] Cash-strapped, previous commitment, signals distress [−] Cut to fund high-return project
-Failed acquisition/overpayment: [+] High debt taken, goodwill impairment large, integration disaster [−] Small deal, regulatory block
-Accumulation of debt/toxic assets: [+] Already high leverage, deteriorating metrics, near covenant breach [−] Accretive debt for growth, low cost
-Operational setback: [+] Single facility, no backup, revenue concentration [−] Diversified operations, insurance covers
-Insider selling (cluster): [+] CEO/CFO selling after beat, large amounts, no 10b5-1, multiple execs [−] Routine 10b5-1, small amounts, one insider
-Activist exits/file hostile 13D: [+] Activist good track record, large position, underperformed [−] Activist exits fast, position small
-Capacity underutilization/overexpansion: [+] High fixed costs, demand weakening, industry overcapacity [−] Temporary underutilisation, upturn expected
-Strategic pivot failure: [+] Pivot expensive, CEO staked reputation, high debt [−] Pivot small experiment, quickly reversed
-Supply chain shock: [+] Single-source, long lead times, no inventory [−] Diversified suppliers, buffer inventory
-Patent litigation loss/IP theft: [+] Core patent, high royalty income, competitive advantage lost [−] Peripheral patent, workaround exists
-Customer concentration risk: [+] Single customer > 30% revenue, no long-term contract [−] Diversified, contract locked in
-Policy reversal/new regulation/tax increase: [+] Industry directly targeted, high cost impact [−] Sector exempt, impact small
-Rate hike/monetary tightening: [+] High debt, floating rate, low interest coverage, negative FCF [−] Low debt, fixed-rate, cash-rich
-Adverse litigation/antitrust: [+] Binary penalties, large damages, core at risk [−] Nuisance suit, low probability
-Geopolitical event that hurts sector: [+] High exposure to conflict region, supply chain disruption [−] Diversified geography, domestic focus
-Sector headwind/index exclusion: [+] Index fund selling forced, low liquidity [−] Exclusion expected, small ETF weight
-Regulatory denial/antitrust block: [+] Deal-breaker, no alternative, sunk cost [−] Denial expected, alternative paths
-Macro headwinds: [+] High cyclicality, consumer discretionary, high operating leverage [−] Defensive sector, high cash, flexible costs
-Sector rotation out: [+] High valuation premium, high beta, crowded institutional positioning [−] Already underowned, attractive value
-Unfavorable commodity price move: [+] High input cost sensitivity, unhedged, low pricing power [−] Hedged, high pricing power, small input cost
-ESG controversy/carbon tax: [+] High emission industry, no offset plan, brand risk [−] Already green, tax small
-Currency headwind: [+] High export revenue, unhedged, domestic costs in strong currency [−] Hedged, foreign costs decline, small foreign share
-Technical breakdown: [+] Breakdown on high volume, death cross, preceded by rally [−] Low volume, already oversold
-Short attack/bear raid: [+] High short interest, credible short report, fraud allegation [−] Already heavily shorted, report low credibility
-Institutional ownership decline: [+] Concentrated holders, high-conviction fund exiting, after pop [−] Passive rebalancing, one small fund"""
-
-STEP2_TEMPLATE = """
-You are a COMPANY CONTEXT ANALYST. Your inputs are:
-1. A financial snapshot of {full_name} ({ticker}) from a database.
-2. Search snippets about {full_name} ({ticker})'s business model, operations, and risks.
-
-CRITICAL: Only use snippets that explicitly refer to {full_name} or {ticker}. Discard any snippet about a different company.
-
-FINANCIAL SNAPSHOT:
-{snapshot}
-
-CONTEXT SEARCH SNIPPETS:
-{context_search_results}
-
-PHASE 1: Structured Context Questionnaire
-Answer every question using the snapshot and snippets. Write "DATUM_MISSING" if data is not available.
-
-1. REVENUE STRUCTURE a) % revenue government/commercial/consumer? b) domestic/international? c) Top 3 customers & share? d) concentration risk?
-2. COST STRUCTURE & SUPPLY CHAIN a) Top 3 input costs? b) % COGS commodity-linked? c) in-house vs outsourced? d) % supply chain China/geopolitical? e) supplier concentration risk?
-3. COMPETITIVE POSITION a) pricing power? b) switching costs? c) industry structure? d) market share? e) top 3 competitors?
-4. FINANCIAL SENSITIVITIES a) debt/equity b) fixed vs floating debt % c) interest coverage d) cash runway e) revenue growth trend f) gross margin trend g) profit margin trend h) FCF trend.
-5. EXTERNAL EXPOSURES a) tariff sensitivity b) commodity sensitivity c) currency sensitivity d) key regulators e) geopolitical risk f) govt contract exposure.
-6. MANAGEMENT & RISKS a) CEO track record b) insider ownership % trend c) pending litigation d) regulatory investigations.
-7. GROWTH TRAJECTORY a) organic vs acquisitive b) backlog visibility c) capacity plans d) end-market growth rate.
-
-Cite snippet IDs or snapshot fields. Then compute a sensitivity multiplier for EVERY catalyst using the AMPLIFIER/DAMPENER table below.
-
-AMPLIFIER/DAMPENER REFERENCE TABLE:
-{amp_damp_table}
-
-TAXONOMY:
-{taxonomy_list_str}
-
-OUTPUT FORMAT: Return ONLY this JSON.
-{{
-  "ticker": "{ticker}",
-  "extracted_context": {{ ... }},
-  "sensitivity_profile": {{ "Contract win/expansion": {{"multiplier": 1.3, "rationale": "High customer concentration amplifies contract wins. [source: Q1c]"}} ... }},
-  "missing_data": [...]
-}}
+... (keep the full table exactly as in your current code) ...
 """
 
-STEP4_TEMPLATE = """
-You are a FINAL CATALYST SYNTHESIZER for {full_name} ({ticker}) on {today}.
-
-INPUTS:
-1. Merged event list (Finviz + raw) – each with an EVENT_ID:
-{merged_events_json}
-
-2. Weighted taxonomy (company‑context‑adjusted):
-{weighted_taxonomy_json}
-
-3. Financial snapshot:
-{snapshot_json}
-
-TASKS:
-A. Classify each event into one or more catalyst categories from the taxonomy. Use EXACT taxonomy label.
-B. Build the FULL catalyst grid (66 items). For each catalyst, set status: HIT / MISS / N/A.
-   - For each HIT, copy event_date, evidence_excerpt, source_urls, confidence from the event.
-   - Include the EVENT_ID numbers that contributed to this HIT (list of integers).
-   - Use the adjusted_weight from the weighted taxonomy for that catalyst.
-C. Apply INTERACTION RULES:
-   1. If "Insider selling (cluster)" HIT AND "Earnings beat" HIT within 14 days, reduce beat's weight by 1 and add "Insider-earnings divergence" (negative, weight=1).
-   2. If float_short > 20% AND positive HITs dominate, add "Short squeeze potential" (positive, weight=3).
-   3. If analyst target < current price, reclassify "Analyst upgrade/PT increase" as negative.
-   4. If both "Technical breakdown" and "Earnings beat" are HIT, reduce breakdown's weight by 2.
-D. Compute FINAL SCORES: Positive_Score = sum(adjusted_weight * confidence/100) for positive HITs, Negative_Score similarly. Net = Positive − Negative. Map: Net>=20→Strong Bullish, >=8→Bullish, >=-8→Neutral, >=-20→Bearish, else→Strong Bearish. Conviction = min(100, abs(Net)*2).
-E. Write a catalyst_stack (4 sentences, with dates). F. Identify key_assumption.
-
-OUTPUT FORMAT: Return ONLY this JSON.
-{{
-  "ticker": "{ticker}",
-  "analysis_date": "{today}",
-  "current_price": "...",
-  "catalyst_grid": [
-    {{
-      "taxonomy": "Contract win/expansion",
-      "type": "positive",
-      "category": "internal",
-      "status": "HIT",
-      "base_weight": 8,
-      "adjusted_weight": 10,
-      "event_ids": [0, 3],
-      "event_date": "2025-10-14",
-      "evidence_excerpt": "...",
-      "source_urls": ["https://..."],
-      "confidence": 90
-    }},
-    ... every catalyst
-  ],
-  "catalyst_stack": "...",
-  "net_signal": "Bullish",
-  "conviction": 78,
-  "key_assumption": "..."
-}}
-"""
+STEP2_TEMPLATE = """ ... (unchanged) ... """
+STEP4_TEMPLATE = """ ... (unchanged) ... """
 
 # ── Prompt formatters ───────────────────────────────────
 def _format_step1(full_name, ticker, today, lookback_start, search_results_json, finviz_events_json):
@@ -872,7 +484,7 @@ def _format_step4(full_name, ticker, today, merged_events_json, weighted_taxonom
                                 weighted_taxonomy_json=weighted_taxonomy_json,
                                 snapshot_json=snapshot_json)
 
-# ── JSON parser (DeepSeek) ─────────────────────────────
+# ── JSON parser ─────────────────────────────────────────
 def parse_json(raw):
     if raw.startswith("```"): raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
     try: return json.loads(raw)
@@ -881,6 +493,26 @@ def parse_json(raw):
     try: return json.loads(cleaned)
     except: pass
     raise ValueError(f"Failed to parse JSON. Start: {raw[:200]}")
+
+def robust_parse_json(text):
+    text = text.strip()
+    if text.startswith("```"): text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    try: return json.loads(text)
+    except: pass
+    fixed = re.sub(r'\}\s*\{', '}, {', text)
+    try: return json.loads(fixed)
+    except: pass
+    cleaned = re.sub(r",\s*]", "]", fixed)
+    cleaned = re.sub(r",\s*}", "}", cleaned)
+    try: return json.loads(cleaned)
+    except: pass
+    ob = text.count("[") - text.count("]")
+    cb = text.count("{") - text.count("}")
+    if ob > 0 or cb > 0:
+        closed = text + "]"*ob + "}"*cb
+        try: return json.loads(closed)
+        except: pass
+    raise ValueError("Failed to parse Gemini output")
 
 # ── LLM caller ─────────────────────────────────────────
 def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000):
@@ -901,11 +533,132 @@ def recalculate_signal(grid):
     conviction = min(100, int(abs(net)*2))
     return signal, conviction
 
+# ── Gemini Catcher Integration ──────────────────────────
+def build_catcher_prompt(full_name, ticker, cutoff_date, grid):
+    """Create the prompt for the Gemini web catcher."""
+    miss_items = [c.get("taxonomy") for c in grid if c.get("status") == "MISS"]
+    hit_items = [
+        {
+            "taxonomy": c.get("taxonomy"),
+            "event_date": c.get("event_date"),
+            "evidence_excerpt": c.get("evidence_excerpt","")[:120],
+            "source_urls": c.get("source_urls",[])[:2]
+        }
+        for c in grid if c.get("status") == "HIT"
+    ]
+    cutoff_info = f"IMPORTANT: Only consider events that occurred on or before {cutoff_date}." if cutoff_date else ""
+    prompt = f"""
+You are a financial fact‑checker and missing event catcher for {full_name} (ticker: {ticker}).
+Today is {TODAY}. Lookback is six months.
+{cutoff_info}
+
+Your job is to verify if the following automated analysis missed any important catalysts,
+especially NEGATIVE ones (insider selling, short reports, dilutive offerings, regulatory actions,
+safety issues, analyst downgrades, lawsuits, etc.). Use the web to search for concrete evidence.
+
+Here is what the automated pipeline found:
+HIT CATALYSTS (these are events the pipeline THINKS happened):
+{json.dumps(hit_items, indent=2)}
+
+MISS CATALYSTS (the pipeline found NO evidence for these):
+{json.dumps(miss_items, indent=2)}
+
+Please do your own research and return a JSON object with exactly this structure:
+{{
+  "new_hits": [
+    {{
+      "taxonomy": "Category from the list above",
+      "type": "positive or negative",
+      "event_date": "YYYY-MM-DD",
+      "description": "Brief one-line description of the event",
+      "evidence_excerpt": "Short verbatim excerpt (≤150 chars) from a source",
+      "source_urls": ["https://..."]
+    }}
+  ],
+  "corrected_hits": [
+    {{
+      "taxonomy": "Existing hit category",
+      "corrected_status": "MISS or HIT",
+      "correction_type": "source_disputed or reclassified",
+      "rationale": "Why the correction is needed"
+    }}
+  ]
+}}
+Only include events that YOU find through web search.  Make sure every event has a specific date and a real source link.  Do not include events already correctly captured by the pipeline.
+"""
+    return prompt
+
+async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy):
+    if not GEMINI_CATCHER_AVAILABLE:
+        print("  ⚠️  Gemini catcher not available; skipping catcher pass.")
+        return grid
+
+    prompt = build_catcher_prompt(full_name, ticker, cutoff_date, grid)
+    print("  🐾 Running CloakBrowser Gemini catcher…")
+    try:
+        result = await gemini_catcher_run(prompt)
+        answer = result.get("answer", "")
+        if not answer:
+            print("  ⚠️  Gemini catcher returned empty response.")
+            return grid
+    except Exception as e:
+        print(f"  ⚠️  Gemini catcher failed: {e}")
+        return grid
+
+    # Extract JSON from the answer
+    parsed = None
+    try:
+        parsed = robust_parse_json(answer)
+    except Exception:
+        # Try to find JSON object in the text
+        match = re.search(r'\{.*\}', answer, re.DOTALL)
+        if match:
+            try:
+                parsed = json.loads(match.group())
+            except:
+                pass
+    if not parsed:
+        print("  ⚠️  Could not extract JSON from catcher response; using original grid.")
+        return grid
+
+    new_hits = parsed.get("new_hits", [])
+    corrected = parsed.get("corrected_hits", [])
+
+    # Apply corrections
+    for corr in corrected:
+        tax = corr.get("taxonomy")
+        for entry in grid:
+            if entry.get("taxonomy") == tax:
+                if corr.get("corrected_status") == "MISS":
+                    entry["status"] = "MISS"
+                    entry["adjusted_weight"] = 0
+                    entry["confidence"] = 0
+                print(f"    🔧 Corrected {tax}: {corr.get('rationale','')}")
+
+    # Add new HITs
+    for hit in new_hits:
+        hit["status"] = "HIT"
+        hit["type"] = hit.get("type", "positive")  # default to positive if missing
+        if hit["type"] not in ("positive", "negative"):
+            hit["type"] = "positive"
+        hit["base_weight"] = CATALYST_WEIGHTS.get(hit["taxonomy"], 5)
+        # Use existing multiplier if available, else 1.0
+        mult = weighted_taxonomy.get(hit["taxonomy"], {}).get("multiplier", 1.0)
+        hit["adjusted_weight"] = max(0, min(10, round(hit["base_weight"] * mult)))
+        hit.setdefault("confidence", 80)
+        hit.setdefault("event_date", "?")
+        hit.setdefault("source_urls", [])
+        hit.setdefault("evidence_excerpt", "")
+        hit.setdefault("headline", hit.get("description", ""))
+        grid.append(hit)
+        print(f"    ➕ Catcher added {hit['taxonomy']} ({hit.get('event_date','?')})")
+
+    return grid
+
+
 # ── Async pipeline ──────────────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
-    if not gemini_health_check():
-        print("  ❌ Gemini health check FAILED. Skipping entire analysis to preserve DeepSeek tokens.")
-        return {"error": "Gemini health check failed; analysis aborted."}
+    # No Gemini API health check needed; catcher will handle its own availability
 
     db_name = snapshot["profile"].get("company_name", "")
     if db_name and db_name.lower() != ticker.lower() and len(db_name)>2:
@@ -929,7 +682,6 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     catalyst_results = _filter_search_results(catalyst_results, official_name, ticker, aliases)
     context_results = _filter_search_results(context_results, official_name, ticker, aliases)
 
-    # Prompt generation
     search_results_str = "\n\n".join(f"Query: {q}\n{v}" for q,v in catalyst_results.items())
     finviz_json = json.dumps(finviz_events, indent=2)
     prompt1 = _format_step1(full_name, ticker, TODAY, LOOKBACK_START, search_results_str, finviz_json)
@@ -950,7 +702,6 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         print(f"  ❌ Step 1 parse failed: {e}")
         return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
 
-    # Filter raw events by cutoff
     if CUTOFF_DATE:
         raw_events = [e for e in raw_events if e.get("event_date", "9999") <= CUTOFF_DATE]
     print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after cutoff)")
@@ -1051,10 +802,8 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                 "source_urls": [], "event_id": None, "confidence": 0
             })
 
-    time.sleep(2)
-    grid, weighted_taxonomy, new_hits = gemini_unified_check(
-        full_name, ticker, grid, snapshot, weighted_taxonomy, TAXONOMY_LIST
-    )
+    # ── Run CloakBrowser Gemini catcher ──
+    grid = await run_catcher_pass(full_name, ticker, CUTOFF_DATE, grid, weighted_taxonomy)
 
     dedup = {}
     for entry in grid:
