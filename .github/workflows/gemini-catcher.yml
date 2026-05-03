@@ -18,9 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          # Cloaker may need to download its custom Chromium binary on first run
-          # Pre‑fetch it now so the actual run doesn't timeout
-          python -c "from cloaker import CloakBrowser; import asyncio; asyncio.run(CloakBrowser.download_binary())"
+          playwright install --with-deps chromium
 
       - name: Run Gemini catcher
         env:
