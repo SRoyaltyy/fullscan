@@ -27,12 +27,13 @@ LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 CUTOFF_DATE = CUTOFF_DATE.strip() if CUTOFF_DATE else None
 
 # ── Gemini catcher availability ────────────────────────
+# ── Gemini catcher availability ────────────────────────
 try:
     from gemini_catcher import run_gemini as gemini_catcher_run
-    GEMINI_CATCHER_AVAILABLE = True
+    _GEMINI_CATCHER_IMPORTED = True
 except ImportError:
-    GEMINI_CATCHER_AVAILABLE = False
-    print("⚠️  gemini_catcher module not found. Catcher disabled.")
+    _GEMINI_CATCHER_IMPORTED = False
+    gemini_catcher_run = None
 
 
 # ── SearXNG async executor ─────────────────────────────
@@ -739,7 +740,11 @@ Only include events that YOU find through web search.  Make sure every event has
 
 # ── Run catcher pass ───────────────────────────────────
 async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy):
-    if not GEMINI_CATCHER_AVAILABLE:
+    # Check at runtime — secret is only available inside the workflow
+    if not _GEMINI_CATCHER_IMPORTED:
+        return grid
+    if not (os.environ.get("GEMINI_BROWSER_STATE") or os.path.exists("gemini_browser_state.json")):
+        print("  ⚠️  Gemini browser state not available — skipping catcher.")
         return grid
 
     prompt = build_catcher_prompt(full_name, ticker, cutoff_date, grid)
