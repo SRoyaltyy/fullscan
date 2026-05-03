@@ -744,6 +744,9 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
         if not answer:
             print("  ⚠️  Gemini catcher returned empty response.")
             return grid
+    except asyncio.TimeoutError:
+        print("  ⚠️  Gemini catcher timed out (90s) — using original grid.")
+        return grid        
     except Exception as e:
         print(f"  ⚠️  Gemini catcher failed: {e}")
         return grid
