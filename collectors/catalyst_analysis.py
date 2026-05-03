@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """
 Catalyst Analysis Engine v2 – Optimised for Speed, Full Transparency.
-- Gemini health check first
+- Gemini health check first (Google GenAI SDK)
 - SearXNG → DeepSeek extraction → Finviz merge → Step4 synthesis
-- Gemini only verifies MISS & HIT gaps with a tiny prompt
+- Gemini verifies MISS & HIT gaps via GenAI SDK
 - Cap 50 events, fast token generation
-- Output all positive & negative HITs
+- Output all positive & negative HITs with headlines, event IDs, and source links
 """
 
-import os, json, time, re, asyncio, aiohttp, requests
+import os, json, time, re, asyncio, aiohttp
 from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
+from google import genai
+from google.genai import types as google_types
 
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
@@ -22,21 +24,26 @@ GEMINI_MODEL         = "gemini-2.5-flash"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
-# ── Gemini health check ─────────────────────────────────
+# ── Gemini health check (Google GenAI SDK) ──────────────
 def gemini_health_check():
+    """Return True if Gemini is reachable and grounding works."""
     if not GEMINI_API_KEY:
         return False
     try:
-        test_prompt = "Google Search: What is the current stock price of Apple (AAPL)?"
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
-        payload = {
-            "contents": [{"parts": [{"text": test_prompt}]}],
-            "tools": [{"googleSearch": {}}],
-            "generationConfig": {"temperature": 0.0, "maxOutputTokens": 128}
-        }
-        resp = requests.post(url, params={"key": GEMINI_API_KEY}, json=payload, timeout=30)
-        return resp.status_code == 200
-    except Exception:
+        client = genai.Client(api_key=GEMINI_API_KEY)
+        tools = google_types.Tool(google_search=google_types.GoogleSearch())
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents="Google Search: What is the current stock price of Apple (AAPL)?",
+            config=google_types.GenerateContentConfig(
+                tools=[tools],
+                temperature=0.0,
+                max_output_tokens=128,
+            ),
+        )
+        return response.candidates is not None and len(response.candidates) > 0
+    except Exception as e:
+        print(f"  ⚠️  Gemini health check error: {e}")
         return False
 
 # ── SearXNG async executor ─────────────────────────────
@@ -220,6 +227,7 @@ def scrape_finviz_news(ticker):
             urls = [link] if link and link.startswith('http') else [f"https://finviz.com/quote.ashx?t={ticker}"]
             events.append({
                 "event_date": date_str,
+                "headline": title,
                 "description": f"{title} (via {source})",
                 "evidence_excerpt": title[:150],
                 "source_urls": urls,
@@ -235,7 +243,7 @@ def scrape_finviz_news(ticker):
         print(f"  ⚠️  Finviz news scrape failed: {e}")
         return []
 
-# ── Gemini unified call (lightweight) ────────────────────
+# ── Gemini unified call (Google GenAI SDK – works) ──────
 def gemini_unified_check(full_name, ticker, grid, snapshot, weighted_taxonomy, taxonomy_list):
     if not GEMINI_API_KEY:
         print("  ⚠️  GEMINI_API_KEY not set – skipping Gemini check.")
@@ -243,7 +251,6 @@ def gemini_unified_check(full_name, ticker, grid, snapshot, weighted_taxonomy, t
 
     print("  🔍 Running lightweight Gemini fact‑check + MISS gap‑filler…")
 
-    # Only MISS items and compact HITs
     miss_items = [c for c in grid if c.get("status") == "MISS"]
     hit_items  = [c for c in grid if c.get("status") == "HIT"]
     compact_hits = [{
@@ -270,31 +277,41 @@ Return ONLY this tiny JSON:
 }}
 """
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"googleSearch": {}}],
-        "generationConfig": {"temperature": 0.0, "maxOutputTokens": 4096}
-    }
+    try:
+        gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+        tools = google_types.Tool(google_search=google_types.GoogleSearch())
 
-    for attempt in range(2):          # only 2 attempts
-        try:
-            resp = requests.post(url, params={"key": GEMINI_API_KEY}, json=payload, timeout=45)
-            if resp.status_code == 429:
-                wait = 2 ** attempt
-                print(f"  ⚠️  Gemini rate‑limited (429), waiting {wait}s…")
-                time.sleep(wait)
-                continue
-            resp.raise_for_status()
-            data = resp.json()
-            parts = data["candidates"][0]["content"]["parts"]
-            text = "\n".join(p.get("text", "") for p in parts).strip()
-            break
-        except Exception as e:
-            print(f"  ⚠️  Gemini API attempt {attempt+1} failed: {e}")
-            time.sleep(5)
-    else:
-        print("  ❌ All Gemini attempts failed; skipping Gemini corrections.")
+        for attempt in range(3):
+            try:
+                response = gemini_client.models.generate_content(
+                    model=GEMINI_MODEL,
+                    contents=prompt,
+                    config=google_types.GenerateContentConfig(
+                        tools=[tools],
+                        temperature=0.1,
+                        max_output_tokens=4096,
+                    ),
+                )
+                if not response.candidates:
+                    raise ValueError("No candidates returned")
+                parts = response.candidates[0].content.parts
+                text = "".join(p.text for p in parts if p.text).strip()
+                break
+            except Exception as e:
+                error_str = str(e)
+                if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+                    wait = 2 ** attempt
+                    print(f"  ⚠️  Gemini rate‑limited (429), waiting {wait}s…")
+                    time.sleep(wait)
+                    continue
+                else:
+                    raise
+        else:
+            print("  ❌ All Gemini attempts failed; skipping Gemini corrections.")
+            return grid, weighted_taxonomy, []
+
+    except Exception as e:
+        print(f"  ⚠️  Gemini SDK call failed: {e}")
         return grid, weighted_taxonomy, []
 
     # Parse response
@@ -323,7 +340,6 @@ Return ONLY this tiny JSON:
             entry["confidence"] = 0
         elif corr.get("corrected_status") == "HIT":
             entry["status"] = "HIT"
-            # (keep existing data; may add rationale note)
 
     for hit in new_hits:
         hit["status"] = "HIT"
@@ -334,6 +350,7 @@ Return ONLY this tiny JSON:
         hit.setdefault("event_date", "?")
         hit.setdefault("source_urls", [])
         hit.setdefault("evidence_excerpt", "")
+        hit.setdefault("headline", "")
         grid.append(hit)
 
     print(f"  ✅ Gemini applied {len(corrected_hits)} corrections, found {len(new_hits)} new MISS HITs.")
@@ -912,16 +929,22 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                 ev = events_by_id[primary_id]
                 entry["event_date"] = ev.get("event_date", "?")
                 entry["evidence_excerpt"] = ev.get("evidence_excerpt", "")
+                entry["headline"] = ev.get("headline", ev.get("description", ""))
                 entry["source_urls"] = ev.get("source_urls", [])
                 entry["confidence"] = ev.get("confidence", 70)
+                entry["event_id"] = primary_id
             else:
                 entry["event_date"] = "?"
                 entry["source_urls"] = []
                 entry["evidence_excerpt"] = ""
+                entry["headline"] = ""
+                entry["event_id"] = None
         elif entry.get("status") != "HIT":
             entry["event_date"] = None
             entry["source_urls"] = []
             entry["evidence_excerpt"] = ""
+            entry["headline"] = ""
+            entry["event_id"] = None
         for k in ("base_weight","adjusted_weight"):
             if k in entry and entry[k] is not None:
                 entry[k] = int(round(entry[k]))
@@ -941,12 +964,14 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                 "adjusted_weight": wt.get("adjusted_weight", CATALYST_WEIGHTS.get(label, 5)),
                 "event_date": None,
                 "evidence_excerpt": "",
+                "headline": "",
                 "source_urls": [],
+                "event_id": None,
                 "confidence": 0
             })
 
-    # Gemini fact‑check
-    time.sleep(2)  # brief RPM breathing room
+    # Gemini fact‑check (uses Google GenAI SDK)
+    time.sleep(2)
     grid, weighted_taxonomy, new_hits = gemini_unified_check(
         full_name, ticker, grid, snapshot, weighted_taxonomy, TAXONOMY_LIST
     )
@@ -999,10 +1024,20 @@ if __name__ == "__main__":
             print(f"✅ Net signal: {result.get('net_signal')} (conviction {result.get('conviction')})")
             print(f"   🟢 Positive HITs: {len(positive_hits)}")
             for h in positive_hits:
-                print(f"      {h['taxonomy']} | {h.get('event_date','?')} | wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')}")
+                eid = h.get("event_id", "?")
+                hl = h.get("headline", h.get("evidence_excerpt", ""))
+                urls = h.get("source_urls", [])
+                link = urls[0] if urls else ""
+                print(f"      #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {hl[:80]}")
+                print(f"         wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')} | {link[:70]}")
             print(f"   🔴 Negative HITs: {len(negative_hits)}")
             for h in negative_hits:
-                print(f"      {h['taxonomy']} | {h.get('event_date','?')} | wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')}")
+                eid = h.get("event_id", "?")
+                hl = h.get("headline", h.get("evidence_excerpt", ""))
+                urls = h.get("source_urls", [])
+                link = urls[0] if urls else ""
+                print(f"      #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {hl[:80]}")
+                print(f"         wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')} | {link[:70]}")
         time.sleep(2)
     if cur: cur.close()
     if conn: conn.close()
