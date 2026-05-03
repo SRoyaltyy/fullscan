@@ -98,18 +98,23 @@ async def run_gemini(prompt: str) -> dict:
             await input_box.press("Enter")
 
         # ── Wait 60 seconds for the response ──
-        print("[catcher] ⏳ Waiting 35s for Gemini response…")
-        await page.wait_for_timeout(35000)
+                
         try:
             await page.wait_for_selector(
                 "[data-message-author='assistant'], div[class*='assistant'], "
                 "div.model-response, div.response-content",
-                timeout=5000,
+                timeout=30000,
             )
+            # Wait for the loading spinner to disappear (if present)
+            try:
+                loading = page.locator("[data-test-id='loading-indicator'], .spinner, [class*='loading']")
+                await loading.wait_for(state="hidden", timeout=15000)
+            except Exception:
+                pass
+            # Extra settling time for the last part of the stream
+            await page.wait_for_timeout(5000)
         except Exception:
             pass
-
-        await page.screenshot(path="gemini_debug_response.png", full_page=True)
 
         # ── Extract the last assistant message ──
         ASSISTANT_SELECTORS = [
