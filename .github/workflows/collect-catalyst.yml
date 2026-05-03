@@ -30,6 +30,11 @@ jobs:
       - name: Pre-download CloakBrowser binary
         run: python -m cloakbrowser install
 
+      - name: Start virtual display
+        run: |
+          Xvfb :99 -screen 0 1920x1080x24 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV  
+
       - name: Run catalyst analysis
         env:
           GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
