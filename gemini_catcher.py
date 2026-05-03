@@ -6,7 +6,7 @@ Gemini web interface and returns the grounded response text + source links.
 """
 
 import asyncio, json, os, sys, base64
-from cloakbrowser import launch_context_async
+
 
 GEMINI_URL   = "https://gemini.google.com"
 STATE_FILE   = "gemini_browser_state.json"
@@ -36,6 +36,8 @@ async def run_gemini(prompt: str) -> dict:
     """
     if not load_state():
         return {"answer": "", "sources": [], "error": "state_not_found"}
+
+    from cloakbrowser import launch_context_async
 
     try:
         ctx = await launch_context_async(
