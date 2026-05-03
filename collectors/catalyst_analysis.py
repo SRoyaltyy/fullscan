@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Backtest‑Capable, CloakBrowser Gemini Catcher.
+Catalyst Analysis Engine v2 – Backtest‑Capable, Gemini Catcher Pass.
 - Ticker(s) and cutoff date at the top.
 - DeepSeek + SearXNG pipeline unchanged.
-- After DeepSeek, Gemini (web interface) acts as a catcher for missed events.
-- Result merged into final grid.
+- After DeepSeek, CloakBrowser Gemini acts as a catcher for missed events.
 """
 
 import os, json, time, re, asyncio, aiohttp
@@ -30,13 +29,10 @@ CUTOFF_DATE = CUTOFF_DATE.strip() if CUTOFF_DATE else None
 # ── Gemini catcher availability ────────────────────────
 try:
     from gemini_catcher import run_gemini as gemini_catcher_run
-    # Quick sanity check – we only need the state file present
-    if not (os.path.exists("gemini_browser_state.json") or os.environ.get("GEMINI_BROWSER_STATE")):
-        raise ImportError
     GEMINI_CATCHER_AVAILABLE = True
 except ImportError:
     GEMINI_CATCHER_AVAILABLE = False
-    print("⚠️  Gemini catcher module not found / state missing. Proceeding without catcher.")
+    print("⚠️  gemini_catcher module not found. Catcher disabled.")
 
 
 # ── SearXNG async executor ─────────────────────────────
@@ -624,7 +620,7 @@ OUTPUT FORMAT: Return ONLY this JSON.
 }}
 """
 
-# ── Prompt formatters ───────────────────────────────────
+# ── Helpers ────────────────────────────────────────────
 def _format_step1(full_name, ticker, today, lookback_start, search_results_json, finviz_events_json):
     return STEP1_TEMPLATE.format(full_name=full_name, ticker=ticker, today=today,
                                 lookback_start=lookback_start, search_results_json=search_results_json,
@@ -642,7 +638,6 @@ def _format_step4(full_name, ticker, today, merged_events_json, weighted_taxonom
                                 weighted_taxonomy_json=weighted_taxonomy_json,
                                 snapshot_json=snapshot_json)
 
-# ── JSON parser ─────────────────────────────────────────
 def parse_json(raw):
     if raw.startswith("```"): raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
     try: return json.loads(raw)
@@ -672,13 +667,11 @@ def robust_parse_json(text):
         except: pass
     raise ValueError("Failed to parse Gemini output")
 
-# ── LLM caller ─────────────────────────────────────────
 def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000):
     messages = [{"role": "system", "content": prompt}, {"role": "user", "content": user_msg}]
     resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
     return resp.choices[0].message.content.strip()
 
-# ── Recalculate signal ─────────────────────────────────
 def recalculate_signal(grid):
     pos = sum(c.get("adjusted_weight",0) * c.get("confidence",50)/100 for c in grid if c.get("status")=="HIT" and c.get("type")=="positive")
     neg = sum(c.get("adjusted_weight",0) * c.get("confidence",50)/100 for c in grid if c.get("status")=="HIT" and c.get("type")=="negative")
@@ -691,9 +684,8 @@ def recalculate_signal(grid):
     conviction = min(100, int(abs(net)*2))
     return signal, conviction
 
-# ── Gemini Catcher Integration ──────────────────────────
+# ── Catcher prompt builder ─────────────────────────────
 def build_catcher_prompt(full_name, ticker, cutoff_date, grid):
-    """Create the prompt for the Gemini web catcher."""
     miss_items = [c.get("taxonomy") for c in grid if c.get("status") == "MISS"]
     hit_items = [
         {
@@ -705,7 +697,7 @@ def build_catcher_prompt(full_name, ticker, cutoff_date, grid):
         for c in grid if c.get("status") == "HIT"
     ]
     cutoff_info = f"IMPORTANT: Only consider events that occurred on or before {cutoff_date}." if cutoff_date else ""
-    prompt = f"""
+    return f"""
 You are a financial fact‑checker and missing event catcher for {full_name} (ticker: {ticker}).
 Today is {TODAY}. Lookback is six months.
 {cutoff_info}
@@ -744,17 +736,19 @@ Please do your own research and return a JSON object with exactly this structure
 }}
 Only include events that YOU find through web search.  Make sure every event has a specific date and a real source link.  Do not include events already correctly captured by the pipeline.
 """
-    return prompt
 
+# ── Run catcher pass ───────────────────────────────────
 async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy):
     if not GEMINI_CATCHER_AVAILABLE:
-        print("  ⚠️  Gemini catcher not available; skipping catcher pass.")
         return grid
 
     prompt = build_catcher_prompt(full_name, ticker, cutoff_date, grid)
     print("  🐾 Running CloakBrowser Gemini catcher…")
     try:
         result = await gemini_catcher_run(prompt)
+        if result.get("error"):
+            print(f"  ⚠️  Gemini catcher error: {result['error']}")
+            return grid
         answer = result.get("answer", "")
         if not answer:
             print("  ⚠️  Gemini catcher returned empty response.")
@@ -763,12 +757,11 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
         print(f"  ⚠️  Gemini catcher failed: {e}")
         return grid
 
-    # Extract JSON from the answer
+    # Parse JSON
     parsed = None
     try:
         parsed = robust_parse_json(answer)
     except Exception:
-        # Try to find JSON object in the text
         match = re.search(r'\{.*\}', answer, re.DOTALL)
         if match:
             try:
@@ -782,7 +775,6 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
     new_hits = parsed.get("new_hits", [])
     corrected = parsed.get("corrected_hits", [])
 
-    # Apply corrections
     for corr in corrected:
         tax = corr.get("taxonomy")
         for entry in grid:
@@ -793,14 +785,10 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
                     entry["confidence"] = 0
                 print(f"    🔧 Corrected {tax}: {corr.get('rationale','')}")
 
-    # Add new HITs
     for hit in new_hits:
         hit["status"] = "HIT"
-        hit["type"] = hit.get("type", "positive")  # default to positive if missing
-        if hit["type"] not in ("positive", "negative"):
-            hit["type"] = "positive"
+        hit["type"] = hit.get("type", "positive")
         hit["base_weight"] = CATALYST_WEIGHTS.get(hit["taxonomy"], 5)
-        # Use existing multiplier if available, else 1.0
         mult = weighted_taxonomy.get(hit["taxonomy"], {}).get("multiplier", 1.0)
         hit["adjusted_weight"] = max(0, min(10, round(hit["base_weight"] * mult)))
         hit.setdefault("confidence", 80)
@@ -813,11 +801,8 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
 
     return grid
 
-
 # ── Async pipeline ──────────────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
-    # No Gemini API health check needed; catcher will handle its own availability
-
     db_name = snapshot["profile"].get("company_name", "")
     if db_name and db_name.lower() != ticker.lower() and len(db_name)>2:
         official_name = db_name
