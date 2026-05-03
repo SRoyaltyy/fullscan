@@ -25,23 +25,4 @@ jobs:
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
-        run: |
-          python -c "
-          import sys, io, os
-          # optional: CloakBrowser env var attempt
-          os.environ['CLOAK_SILENT'] = '1'
-
-          # swallow the import banner
-          old_stdout = sys.stdout
-          sys.stdout = io.StringIO()
-          try:
-              import gemini_catcher
-          except Exception:
-              pass
-          finally:
-              sys.stdout = old_stdout
-
-          # now run the actual analysis
-          import runpy
-          runpy.run_module('collectors.catalyst_analysis', run_name='__main__')
-          "
+        run: python -m collectors.catalyst_analysis
