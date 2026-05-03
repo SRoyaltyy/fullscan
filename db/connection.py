@@ -21,4 +21,4 @@ def get_connection():
     if not database_url:
         print("FATAL: DATABASE_URL environment variable is not set.")
         sys.exit(1)
-    return psycopg2.connect(database_url)
+    return psycopg2.connect(database_url, connect_timeout=10)
