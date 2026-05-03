@@ -42,9 +42,10 @@ async def run_gemini(prompt: str) -> dict:
     try:
         ctx = await launch_context_async(
             storage_state=STATE_FILE,
-            humanize=True,
+            humanize=False,          # ← OFF in headless mode – prevents silent hang
             headless=True,
             args=["--no-sandbox", "--disable-setuid-sandbox"],
+            timeout=30000,
         )
         page = await ctx.new_page()
         await page.goto(GEMINI_URL, wait_until="domcontentloaded")
