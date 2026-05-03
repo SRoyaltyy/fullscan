@@ -15,7 +15,7 @@ SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 6          # reduced to avoid SearXNG OOM
 MODEL                = "deepseek-chat"
 GEMINI_API_KEY       = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL         = "gemini-2.5-pro"
+GEMINI_MODEL         = "gemini-2.5-flash"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
