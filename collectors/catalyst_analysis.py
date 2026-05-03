@@ -17,8 +17,8 @@ from google.genai import types as google_types
 # ═══════════════════════════════════════════════════════
 #  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
 # ═══════════════════════════════════════════════════════
-TICKERS = ["EXTR"]
-CUTOFF_DATE = "2026-04-1"          # e.g. "2026-03-15" — discard events after this; set to None for live
+TICKERS = ["RBLX"]
+CUTOFF_DATE = "2026-03-22"          # e.g. "2026-03-15" — discard events after this; set to None for live
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
