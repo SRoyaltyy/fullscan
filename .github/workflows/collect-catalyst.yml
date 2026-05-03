@@ -25,4 +25,5 @@ jobs:
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
+          CLOAK_SILENT: 1  
         run: python -m collectors.catalyst_analysis
