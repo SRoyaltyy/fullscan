@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 Gemini Catcher – CloakBrowser-based web scraper.
-Reusable async function `run_gemini(prompt)` that sends a prompt to the
-Gemini web interface and returns the grounded response text + source links.
+Handles huge prompts by injecting text directly into the DOM.
 """
 
 import asyncio, json, os, sys, base64
@@ -67,11 +66,28 @@ async def run_gemini(prompt: str) -> dict:
         await ctx.close()
         return {"answer": "", "sources": [], "error": "input_not_found"}
 
-    # ── Type the prompt ──
+    # ── Inject the prompt in chunks to avoid freezing the UI ──
     await input_box.click()
     await page.wait_for_timeout(300)
-    await input_box.fill(prompt)
-    await page.wait_for_timeout(800)
+
+    # Clear any existing text
+    await input_box.evaluate("el => el.innerText = ''")
+    await page.wait_for_timeout(200)
+
+    # Paste the entire prompt, 2000 chars at a time
+    chunk_size = 2000
+    for i in range(0, len(prompt), chunk_size):
+        chunk = prompt[i:i+chunk_size]
+        await input_box.evaluate(
+            """(el, text) => {
+                el.innerText += text;
+                el.dispatchEvent(new Event('input', { bubbles: true }));
+            }""",
+            chunk
+        )
+        await page.wait_for_timeout(100)
+
+    # Trailing space + backspace to enable the Send button
     await input_box.press("Space")
     await input_box.press("Backspace")
     await page.wait_for_timeout(500)
