@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Optimised for Speed, Full Transparency.
-- Gemini health check first (Google GenAI SDK)
-- SearXNG → DeepSeek extraction → Finviz merge → Step4 synthesis
-- Gemini verifies MISS & HIT gaps via GenAI SDK
-- Cap 50 events, fast token generation
-- Output all positive & negative HITs with headlines, event IDs, and source links
+Catalyst Analysis Engine v2 – Backtest-Capable, Robust Gemini, Full Transparency.
+- Ticker(s) and cutoff date set at the top of the file.
+- Gemini calls via Google GenAI SDK (the working method).
+- CUTOFF_DATE discards all events after the specified date (None = live).
+- Hardened JSON parser for Gemini responses.
+- Prints every HIT with headline, event ID, and source link.
 """
 
 import os, json, time, re, asyncio, aiohttp
@@ -13,6 +13,13 @@ from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
 from google import genai
 from google.genai import types as google_types
+
+# ═══════════════════════════════════════════════════════
+#  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
+# ═══════════════════════════════════════════════════════
+TICKERS = ["SERV"]
+CUTOFF_DATE = "2026-03-15"          # e.g. "2026-03-15" — discard events after this; set to None for live
+# ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
@@ -24,9 +31,11 @@ GEMINI_MODEL         = "gemini-2.5-flash"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
+# Convert CUTOFF_DATE to string for easy comparison
+CUTOFF_DATE = CUTOFF_DATE.strip() if CUTOFF_DATE else None
+
 # ── Gemini health check (Google GenAI SDK) ──────────────
 def gemini_health_check():
-    """Return True if Gemini is reachable and grounding works."""
     if not GEMINI_API_KEY:
         return False
     try:
@@ -221,6 +230,9 @@ def scrape_finviz_news(ticker):
                 date_str = parsed.strftime("%Y-%m-%d")
             except ValueError:
                 date_str = str(d)[:10]
+            # Apply cutoff
+            if CUTOFF_DATE and date_str > CUTOFF_DATE:
+                continue
             title = str(row.get('Title', ''))
             source = str(row.get('Source', ''))
             link = str(row.get('Link', ''))
@@ -243,10 +255,58 @@ def scrape_finviz_news(ticker):
         print(f"  ⚠️  Finviz news scrape failed: {e}")
         return []
 
-# ── Gemini unified call (Google GenAI SDK – works) ──────
+# ── Gemini unified call (Google GenAI SDK – robust) ─────
+def gemini_robust_parse_json(text):
+    """Try multiple strategies to parse Gemini's JSON output."""
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    
+    # Attempt 1: direct
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # Attempt 2: fix missing commas between array elements (e.g. `} {` → `}, {`)
+    fixed = re.sub(r'\}\s*\{', '}, {', text)
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        pass
+
+    # Attempt 3: remove trailing commas before ] or }
+    cleaned = re.sub(r",\s*]", "]", fixed)
+    cleaned = re.sub(r",\s*}", "}", cleaned)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+
+    # Attempt 4: find the outermost JSON object/array and try to parse that substring
+    start = text.find('{')
+    end = text.rfind('}')
+    if start != -1 and end != -1 and end > start:
+        substr = text[start:end+1]
+        try:
+            return json.loads(substr)
+        except json.JSONDecodeError:
+            pass
+
+    # Attempt 5: try to close unclosed brackets/braces
+    ob = text.count("[") - text.count("]")
+    cb = text.count("{") - text.count("}")
+    if ob > 0 or cb > 0:
+        closed = text + "]"*ob + "}"*cb
+        try:
+            return json.loads(closed)
+        except json.JSONDecodeError:
+            pass
+
+    raise ValueError(f"Failed to parse Gemini JSON. Start: {text[:200]}")
+
 def gemini_unified_check(full_name, ticker, grid, snapshot, weighted_taxonomy, taxonomy_list):
     if not GEMINI_API_KEY:
-        print("  ⚠️  GEMINI_API_KEY not set – skipping Gemini check.")
         return grid, weighted_taxonomy, []
 
     print("  🔍 Running lightweight Gemini fact‑check + MISS gap‑filler…")
@@ -316,9 +376,8 @@ Return ONLY this tiny JSON:
 
     # Parse response
     try:
-        if text.startswith("```"): text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-        result = json.loads(text)
-    except json.JSONDecodeError as e:
+        result = gemini_robust_parse_json(text)
+    except Exception as e:
         print(f"  ❌ Failed to parse Gemini JSON: {e}")
         return grid, weighted_taxonomy, []
 
@@ -354,13 +413,11 @@ Return ONLY this tiny JSON:
         grid.append(hit)
 
     print(f"  ✅ Gemini applied {len(corrected_hits)} corrections, found {len(new_hits)} new MISS HITs.")
-    if new_hits:
-        print("  📋 New HITs from Gemini:")
-        for nh in new_hits:
-            print(f"    • {nh['taxonomy']} – {nh.get('event_date','?')}: {nh.get('evidence_excerpt','')[:80]}")
     return grid, weighted_taxonomy, new_hits
 
-# ── BROADER CATALYST SEARCH TEMPLATES (30) ───────────────
+# ── Search templates (unchanged) ────────────────────────
+
+
 def _make_catalyst_templates(full_name):
     return [
         f"{full_name} contract partnership agreement 2025 2026",
@@ -762,31 +819,14 @@ def _format_step4(full_name, ticker, today, merged_events_json, weighted_taxonom
                                 weighted_taxonomy_json=weighted_taxonomy_json,
                                 snapshot_json=snapshot_json)
 
-# ── JSON parser ─────────────────────────────────────────
+# ── JSON parser (DeepSeek) ─────────────────────────────
 def parse_json(raw):
-    raw = raw.strip()
     if raw.startswith("```"): raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
     try: return json.loads(raw)
     except: pass
     cleaned = re.sub(r",\s*}", "}", raw); cleaned = re.sub(r",\s*]", "]", cleaned)
     try: return json.loads(cleaned)
     except: pass
-    in_string = False; escaped = False; last_quote = -1
-    for i, ch in enumerate(cleaned):
-        if escaped: escaped = False; continue
-        if ch == '\\': escaped = True; continue
-        if ch == '"': in_string = not in_string; last_quote = i
-    if in_string and last_quote > 0:
-        truncated = cleaned[:last_quote+1] + '"]'
-        truncated += "]" * (truncated.count("[") - truncated.count("]")) + "}" * (truncated.count("{") - truncated.count("}"))
-        try: return json.loads(truncated)
-        except: pass
-    ob = cleaned.count("[") - cleaned.count("]")
-    cb = cleaned.count("{") - cleaned.count("}")
-    if ob > 0 or cb > 0:
-        truncated = cleaned + "]"*ob + "}"*cb
-        try: return json.loads(truncated)
-        except: pass
     raise ValueError(f"Failed to parse JSON. Start: {raw[:200]}")
 
 # ── LLM caller ─────────────────────────────────────────
@@ -810,7 +850,6 @@ def recalculate_signal(grid):
 
 # ── Async pipeline ──────────────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
-    # ── Gemini health check FIRST ──
     if not gemini_health_check():
         print("  ❌ Gemini health check FAILED. Skipping entire analysis to preserve DeepSeek tokens.")
         return {"error": "Gemini health check failed; analysis aborted."}
@@ -824,11 +863,9 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         official_name, aliases = resolve_company_name(ticker, searxng_url)
     full_name = f"{official_name} ({ticker})" if official_name.lower() != ticker.lower() else ticker
 
-    # Phase 0.5: Finviz news
     finviz_events = scrape_finviz_news(ticker)
-    print(f"  📰 Finviz returned {len(finviz_events)} headlines")
+    print(f"  📰 Finviz returned {len(finviz_events)} headlines (after cutoff)")
 
-    # Search queries
     catalyst_queries = _make_catalyst_templates(full_name)
     context_queries = _make_context_templates(full_name)
     print(f"  ⏳ {len(catalyst_queries)} catalyst + {len(context_queries)} context queries…")
@@ -847,13 +884,11 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     context_str = "\n\n".join(f"Query: {q}\n{v}" for q,v in context_results.items())
     prompt2 = _format_step2(full_name, ticker, snapshot, context_str, "\n".join(TAXONOMY_LIST))
 
-    # LLM calls in parallel
     step1_task = asyncio.to_thread(call_llm, prompt=prompt1, user_msg=f"Extract events for {full_name}.", max_tokens=40000)
     step2_task = asyncio.to_thread(call_llm, prompt=prompt2, user_msg=f"Context for {full_name}.", max_tokens=40000)
     step1_raw, step2_raw = await asyncio.gather(step1_task, step2_task)
     print("  ✅ Step 1 + Step 2 LLM done.")
 
-    # Parse Step 1
     try:
         raw_events = parse_json(step1_raw)
         if isinstance(raw_events, dict): raw_events = raw_events.get("events", raw_events.get("evidence_grid", []))
@@ -861,9 +896,12 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     except Exception as e:
         print(f"  ❌ Step 1 parse failed: {e}")
         return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
-    print(f"  📋 Step 1 extracted {len(raw_events)} new raw events")
 
-    # Parse Step 2
+    # Filter raw events by cutoff
+    if CUTOFF_DATE:
+        raw_events = [e for e in raw_events if e.get("event_date", "9999") <= CUTOFF_DATE]
+    print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after cutoff)")
+
     try:
         context_profile = parse_json(step2_raw)
     except Exception as e:
@@ -880,21 +918,17 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                                   "adjusted_weight": max(0, min(10, adj)),
                                   "rationale": prof.get("rationale","")}
 
-    # Build merged event list, cap at 50
     merged_events = []
     idx = 0
     for ev in finviz_events:
-        merged_events.append({**ev, "id": idx})
-        idx += 1
+        merged_events.append({**ev, "id": idx}); idx += 1
     for ev in raw_events:
-        merged_events.append({**ev, "id": idx})
-        idx += 1
+        merged_events.append({**ev, "id": idx}); idx += 1
 
     merged_events.sort(key=lambda e: e.get("confidence", 0), reverse=True)
     merged_events = merged_events[:50]
     print(f"  🔗 Merged event list: {len(merged_events)} total (capped at 50)")
 
-    # Step 4
     merged_json = json.dumps([{"id": e["id"], "description": e["description"], "event_date": e["event_date"],
                                "evidence_excerpt": e.get("evidence_excerpt", ""), "source_urls": e.get("source_urls", []),
                                "confidence": e.get("confidence", 70)} for e in merged_events], indent=2)
@@ -908,7 +942,6 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         print(f"  ❌ Step 4 parse failed: {e}")
         return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
 
-    # Populate grid and ensure completeness
     grid = final_result.get("catalyst_grid", [])
     events_by_id = {e["id"]: e for e in merged_events}
 
@@ -949,7 +982,6 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             if k in entry and entry[k] is not None:
                 entry[k] = int(round(entry[k]))
 
-    # Ensure full taxonomy
     existing_tax = {c.get("taxonomy") for c in grid}
     for i, label in enumerate(TAXONOMY_LIST):
         if label not in existing_tax:
@@ -962,21 +994,15 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                 "status": "MISS",
                 "base_weight": CATALYST_WEIGHTS.get(label, 5),
                 "adjusted_weight": wt.get("adjusted_weight", CATALYST_WEIGHTS.get(label, 5)),
-                "event_date": None,
-                "evidence_excerpt": "",
-                "headline": "",
-                "source_urls": [],
-                "event_id": None,
-                "confidence": 0
+                "event_date": None, "evidence_excerpt": "", "headline": "",
+                "source_urls": [], "event_id": None, "confidence": 0
             })
 
-    # Gemini fact‑check (uses Google GenAI SDK)
     time.sleep(2)
     grid, weighted_taxonomy, new_hits = gemini_unified_check(
         full_name, ticker, grid, snapshot, weighted_taxonomy, TAXONOMY_LIST
     )
 
-    # Deduplicate by taxonomy – keep the highest adjusted weight entry
     dedup = {}
     for entry in grid:
         tax = entry.get("taxonomy")
@@ -984,7 +1010,6 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
             dedup[tax] = entry
     grid = list(dedup.values())
 
-    # Recalculate signal
     final_result["catalyst_grid"] = grid
     new_signal, new_conviction = recalculate_signal(grid)
     final_result["net_signal"] = new_signal
@@ -1003,14 +1028,16 @@ if __name__ == "__main__":
     except:
         HAS_DB = False
         print("⚠️  psycopg2 not installed")
-    conn = None; cur = None; tickers = ["SERV"]
-    for ticker in tickers:
+    conn = None; cur = None
+    for ticker in TICKERS:
         print(f"\n{'='*60}\n📊 Snapshot for {ticker}…")
         if HAS_DB:
             if conn is None: conn = get_connection(); cur = conn.cursor()
             snap = build_health_snapshot(ticker, conn)
         else:
             snap = {}
+        if CUTOFF_DATE:
+            print(f"   ⚠️  Backtest mode: discarding events after {CUTOFF_DATE}")
         start = time.time()
         result = analyze_stock(ticker, snap, SEARXNG_URL)
         elapsed = time.time() - start
@@ -1025,18 +1052,18 @@ if __name__ == "__main__":
             print(f"   🟢 Positive HITs: {len(positive_hits)}")
             for h in positive_hits:
                 eid = h.get("event_id", "?")
-                hl = h.get("headline", h.get("evidence_excerpt", ""))
+                hl = h.get("headline", h.get("evidence_excerpt", ""))[:80].strip()
                 urls = h.get("source_urls", [])
                 link = urls[0] if urls else ""
-                print(f"      #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {hl[:80]}")
+                print(f"      #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {hl}")
                 print(f"         wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')} | {link[:70]}")
             print(f"   🔴 Negative HITs: {len(negative_hits)}")
             for h in negative_hits:
                 eid = h.get("event_id", "?")
-                hl = h.get("headline", h.get("evidence_excerpt", ""))
+                hl = h.get("headline", h.get("evidence_excerpt", ""))[:80].strip()
                 urls = h.get("source_urls", [])
                 link = urls[0] if urls else ""
-                print(f"      #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {hl[:80]}")
+                print(f"      #{eid} | {h['taxonomy']} | {h.get('event_date','?')} | {hl}")
                 print(f"         wt {h.get('base_weight','?')}/{h.get('adjusted_weight','?')} | conf {h.get('confidence','?')} | {link[:70]}")
         time.sleep(2)
     if cur: cur.close()
