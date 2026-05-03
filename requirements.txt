@@ -14,3 +14,4 @@ finvizfinance
 google-genai>=0.3.0
 playwright>=1.48.0
 cloakbrowser
+openai>=1.0.0
