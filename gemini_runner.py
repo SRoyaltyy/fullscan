@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Gemini Web Interface Scraper – Robust submit, 60s wait, fixed JS.
+Gemini Web Interface Scraper – robust submission, 60s fixed wait,
+extracts the last assistant message.
 """
 
 import asyncio, json, os, sys, base64
@@ -16,6 +17,7 @@ TEST_PROMPT = (
     "and geographic footprint."
 )
 
+
 def load_state():
     env_state = os.environ.get("GEMINI_BROWSER_STATE", "")
     if env_state:
@@ -26,6 +28,7 @@ def load_state():
     if not os.path.exists(STATE_FILE):
         print("❌ No browser state found.")
         sys.exit(1)
+
 
 async def run_gemini(prompt: str) -> dict:
     load_state()
@@ -39,7 +42,7 @@ async def run_gemini(prompt: str) -> dict:
     page = await ctx.new_page()
     await page.goto(GEMINI_URL, wait_until="domcontentloaded")
 
-    # 1. Find the input box
+    # ── Find input box ──
     INPUT_SELECTORS = [
         "div[contenteditable='true']",
         "div[role='textbox']",
@@ -60,23 +63,16 @@ async def run_gemini(prompt: str) -> dict:
         await ctx.close()
         return {"error": "input_not_found"}
 
-    # 2. Type like a human (triggers React state)
+    # ── Type the prompt (fill + follow‑up keystroke for React) ──
     await input_box.click()
-    await page.wait_for_timeout(500)
-    await input_box.type(prompt, delay=50)
-    await page.wait_for_timeout(1000)
+    await page.wait_for_timeout(300)
+    await input_box.fill(prompt)
+    await page.wait_for_timeout(800)
     await input_box.press("Space")
     await input_box.press("Backspace")
     await page.wait_for_timeout(500)
 
-    # 3. Count existing assistant messages before sending
-    assistant_selector = (
-        "[data-message-author='assistant'], [data-role='assistant'], "
-        "div[class*='assistant'], div[class*='model-response']"
-    )
-    assistant_msg_count = await page.locator(assistant_selector).count()
-
-    # 4. Submit
+    # ── Submit ──
     SEND_SELECTORS = [
         "button[aria-label='Send message']",
         "button[data-test-id='send-button']",
@@ -96,46 +92,64 @@ async def run_gemini(prompt: str) -> dict:
     if not sent:
         await input_box.press("Enter")
 
-    # 5. Wait up to 60 seconds for a new assistant message
+    # ── Wait a fixed 60 seconds for the response to stream ──
     print("⏳ Waiting 60 seconds for Gemini to respond…")
+    await page.wait_for_timeout(60000)
+
+    # ── Optional: wait for a well‑known response element (soft) ──
     try:
-        async def new_message_appeared():
-            count = await page.locator(assistant_selector).count()
-            if count <= assistant_msg_count:
-                return False
-            last_text = await page.locator(assistant_selector).nth(count - 1).inner_text()
-            return len(last_text.strip()) > 50
-
-        await page.wait_for_function(
-            "async () => {"
-            f"const msgs = document.querySelectorAll('{assistant_selector}'.replace(/'/g, \"\\\\'\"));"
-            f"if (msgs.length <= {assistant_msg_count}) return false;"
-            "const text = msgs[msgs.length - 1].innerText || '';"
-            "return text.trim().length > 50;"
-            "}",
-            timeout=60000
+        await page.wait_for_selector(
+            "[data-message-author='assistant'], div[class*='assistant'], "
+            "div.model-response, div.response-content",
+            timeout=5000,
         )
-        print("✅ New assistant message detected.")
-    except Exception as e:
-        print(f"⚠️  Waited 60 seconds, no new message detected: {e}")
-        await page.screenshot(path="gemini_debug_timeout.png", full_page=True)
-        await ctx.close()
-        return {"error": "no_response_after_60s"}
+    except Exception:
+        pass
 
-    # 6. Extra settling time
-    await page.wait_for_timeout(3000)
+    # ── Screenshot for debugging ──
     await page.screenshot(path="gemini_debug_response.png", full_page=True)
 
-    # 7. Extract last assistant message
+    # ── Extract the LAST assistant message ──
+    ASSISTANT_SELECTORS = [
+        "[data-message-author='assistant']",
+        "[data-role='assistant']",
+        "div[class*='assistant']",
+        "div.model-response",
+        "div.response-content",
+    ]
     full_text = ""
-    elements = await page.query_selector_all(assistant_selector)
-    if elements and len(elements) > assistant_msg_count:
-        last_el = elements[-1]
-        txt = await last_el.inner_text()
-        if txt and len(txt.strip()) > 30:
-            full_text = txt.strip()
+    for sel in ASSISTANT_SELECTORS:
+        elements = await page.query_selector_all(sel)
+        if elements:
+            # take the last one
+            last_el = elements[-1]
+            txt = await last_el.inner_text()
+            if txt and len(txt.strip()) > 30:
+                full_text = txt.strip()
+                break
 
-    # 8. Grounding source links
+    # ── Fallback: use the full page but filter out UI chrome ──
+    if not full_text or len(full_text) < 50:
+        body_text = await page.inner_text("body")
+        unwanted = [
+            "Defining the Approach", "Answer now", "Gemini said",
+            "You said", "Send message", "Clear chat", "New chat",
+            "Extensions", "Apps", "Settings", "Help", "Feedback",
+            "Google apps", "Account", "Search", "Menu", "Close",
+            "Upload an image", "Type something", "Chat with Gemini",
+            "Attach files", "Conversation with Gemini", "Defining the Scope",
+            "Tools", "Pro", "Gemini is AI and can make mistakes.",
+        ]
+        lines = body_text.split("\n")
+        clean = []
+        for line in lines:
+            line = line.strip()
+            if not line or any(uw in line for uw in unwanted):
+                continue
+            clean.append(line)
+        full_text = "\n".join(clean)
+
+    # ── Grounding source links ──
     source_links = []
     source_els = await page.query_selector_all("a[href^='http']")
     seen = set()
@@ -147,6 +161,7 @@ async def run_gemini(prompt: str) -> dict:
 
     await ctx.close()
     return {"answer": full_text, "sources": source_links[:20]}
+
 
 if __name__ == "__main__":
     result = asyncio.run(run_gemini(TEST_PROMPT))
