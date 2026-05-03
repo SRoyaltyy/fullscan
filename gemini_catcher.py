@@ -10,12 +10,7 @@ from cloakbrowser import launch_context_async
 GEMINI_URL   = "https://gemini.google.com"
 STATE_FILE   = "gemini_browser_state.json"
 
-TEST_PROMPT = (
-    "Please do research on the company BBAI (BigBear.ai) using web search "
-    "and tell me what you see here. Include: core business, revenue sources, "
-    "key products, major contracts, financial situation, leadership, recent news, "
-    "and geographic footprint."
-)
+
 
 
 def load_state():
