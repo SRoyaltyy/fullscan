@@ -92,14 +92,13 @@ async def run_gemini(prompt: str) -> dict:
             if (!el) return false;
             el.focus();
 
-            // Clear the editor completely
-            el.innerHTML = '';
+            // Clear the editor completely – use textContent (Trusted Types safe)
+            el.textContent = '';
 
             // Insert the plain text – innerText preserves newlines as <br>
             el.innerText = text;
 
             // React listens for trusted InputEvent with correct inputType
-            // This is the key: fires the internal state update
             const inputEvent = new InputEvent('input', {
                 bubbles: true,
                 cancelable: true,
