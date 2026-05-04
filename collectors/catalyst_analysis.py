@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Backtest‑Capable, Gemini Catcher (Full Prompt).
+Catalyst Analysis Engine v2 – Backtest‑Capable, Gemini Catcher + Independent Verdict.
 - Ticker(s) and cutoff date set at the top.
 - DeepSeek + SearXNG pipeline unchanged.
-- After DeepSeek, CloakBrowser Gemini acts as a catcher for missed events.
-- Gemini receives the complete terminal output + instructions in one prompt.
+- Gemini Catcher: fills missed events after DeepSeek (existing).
+- Gemini Verdict: standalone Bullish/Bearish opinion using web search (new).
 """
 
 import os, json, time, re, asyncio, aiohttp
@@ -262,7 +262,6 @@ def _make_catalyst_templates(full_name):
     ]
 
 def _make_context_templates(full_name):
-    # Only the most impactful context queries – reduced from 37 to ~15
     return [
         f"{full_name} revenue breakdown by segment",
         f"{full_name} revenue by customer type",
@@ -390,9 +389,7 @@ CATALYST_WEIGHTS = {
 
 POSITIVE_CATALYSTS = set([k for k in CATALYST_WEIGHTS if k in TAXONOMY_LIST and TAXONOMY_LIST.index(k) < 33])
 
-# ── Prompt templates (unchanged) ───────────────────────
-
-
+# ── Prompt templates ───────────────────────────────────
 STEP1_TEMPLATE = """
 You are an event extraction engine for {full_name} ({ticker}).
 
@@ -639,7 +636,184 @@ def recalculate_signal(grid):
     conviction = min(100, int(abs(net)*2))
     return signal, conviction
 
-# ── Gemini catcher prompt builder ──────────────────────
+# ═══════════════════════════════════════════════════════
+#  GEMINI INDEPENDENT VERDICT (NEW)
+# ═══════════════════════════════════════════════════════
+
+def build_verdict_prompt(full_name, ticker, cutoff_date, sector="Technology"):
+    """Standalone Gemini prompt: independent Bullish/Bearish verdict using web search."""
+    positive_internal = [
+        "Contract win/expansion", "Strategic partnership/alliance",
+        "Product launch/FDA approval/regulatory greenlight", "Analyst upgrade/PT increase",
+        "Positive personnel change (new CEO, CFO, board members)",
+        "Capital infusion (PIPE, funding round, favorable terms)",
+        "Earnings beat (revenue, EBITDA, EPS)", "Earnings guidance raise",
+        "Share repurchase program/increased dividend", "Successful acquisition/synergy realization",
+        "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+        "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+        "Insider buying (cluster purchases by executives/directors)",
+        "Activist investor accumulation (e.g., 9.9% stake filing)",
+        "Capacity expansion announced (new factory, satellite constellation)",
+        "Strategic pivot/rebranding to high-growth area",
+        "Supply chain de-risking (dual sourcing, reshoring)",
+        "Patent grant/IP protection",
+        "Customer concentration expansion (existing customer deepens relationship)",
+    ]
+    positive_external = [
+        "Government policy (tariffs, subsidies, mandates)",
+        "Institutional policy (Fed rate cut, QE, stimulus)",
+        "Favorable court ruling/patent grant",
+        "Geopolitical event that boosts sector (e.g., defense spending surge)",
+        "Sector tailwind/index inclusion",
+        "Regulatory approval (FDA, FCC, FTC clearance)",
+        "Macro tailwinds (CPI cooling, GDP growth surprise, soft landing)",
+        "Sector rotation into the stock's industry",
+        "Commodity price move favorable to the company",
+        "ESG mandate/green subsidy qualification",
+        "Currency tailwind (stronger home currency if importing)",
+        "Technical breakout (above key moving averages, resistance levels)",
+    ]
+    positive_mechanics = [
+        "Short squeeze (rapid covering of heavily shorted stock)",
+        "Institutional ownership increase (13F filings showing accumulation)",
+    ]
+    negative_internal = [
+        "Contract loss/non-renewal/reduction in scope",
+        "Partnership dissolution/breakdown/rival alliance",
+        "Product delay/failure/rejection/safety recall",
+        "Analyst downgrade/price target cut",
+        "Negative personnel change (departures, resignations, scandals)",
+        "Dilutive offering/distressed fundraising/down round",
+        "Earnings miss (revenue, EBITDA, EPS)",
+        "Earnings guidance cut",
+        "Suspension of buyback/dividend cut/elimination",
+        "Failed acquisition/overpayment/goodwill impairment",
+        "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+        "Operational setback (trial halted, satellite failure, production halt)",
+        "Insider selling (especially by CEO/CFO, or clustered sales)",
+        "Activist exits stake/files hostile 13D to force changes",
+        "Capacity underutilization/overexpansion write-down",
+        "Strategic pivot failure/loss of identity",
+        "Supply chain shock (factory fire, shipping disruption)",
+        "Patent litigation loss/IP theft",
+        "Customer concentration risk (over-reliance on one client)",
+    ]
+    negative_external = [
+        "Policy reversal/new regulation/tax increase",
+        "Rate hike/monetary tightening/liquidity withdrawal",
+        "Adverse litigation outcome/patent invalidation/antitrust ruling",
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Sector headwind/index exclusion/rotation away",
+        "Regulatory denial or delay/antitrust block",
+        "Macro headwinds (inflation spike, recession, unemployment surge)",
+        "Sector rotation out of the industry",
+        "Unfavorable commodity price move (higher input costs)",
+        "ESG controversy/exclusion from green funds/carbon tax",
+        "Currency headwind (dollar strength for exporters)",
+        "Technical breakdown (below support, \"death cross\")",
+    ]
+    negative_mechanics = [
+        "Short attack/bear raid (activist short report)/large new short positions",
+        "Institutional ownership decline (major holders reducing stakes)",
+    ]
+
+    def format_list(title, items):
+        return f"{title}\n  " + "\n  ".join(items)
+
+    catalyst_section = "\n".join([
+        format_list("Positive Internal:", positive_internal),
+        format_list("Positive External:", positive_external),
+        format_list("Positive Market Mechanics:", positive_mechanics),
+        format_list("Negative Internal:", negative_internal),
+        format_list("Negative External:", negative_external),
+        format_list("Negative Market Mechanics:", negative_mechanics),
+    ])
+
+    return f"""You are an expert market analyst.
+
+STOCK: {full_name} (ticker: {ticker}), a {sector} company.
+CUTOFF DATE: {cutoff_date}.
+LOOKBACK: 6 months before {cutoff_date} (i.e., from approximately {LOOKBACK_START} to {cutoff_date}).
+
+ONLY data points and events published on or before {cutoff_date} are valid.
+Discard everything after {cutoff_date}. Looking forward is strictly prohibited.
+
+TASK: Predict the stock's direction for the 2 weeks after {cutoff_date}.
+Provide a clear verdict: Bullish or Bearish, followed by a concise explanation
+(3‑5 sentences) citing specific dates and real source URLs.
+
+Before evaluating {ticker} individually, search for and summarize the condition of
+the {sector} sector in early {cutoff_date[:4]}. Consider peer performance, sector
+ETF trends, and any industry‑specific headwinds or tailwinds.
+
+Then, for each catalyst in the framework below, perform a separate web search.
+Search specifically for events involving "{full_name}" or "{ticker}" within the
+lookback window.
+
+========== CATALYST FRAMEWORK (66 catalysts) ==========
+{catalyst_section}
+
+========== CRITICAL ANTI‑HALLUCINATION RULES ==========
+- Every event you cite MUST have been published on or before {cutoff_date}.
+- Every event MUST include at least one real URL you found during web search.
+- If you cannot find a real URL for a claim, do NOT make the claim.
+- Do NOT guess dates. If the exact date is unclear, use the publication date
+  of the source you found, and note that the date is approximate.
+- Search for BOTH positive and negative events equally. Do not bias your
+  search toward good or bad news.
+- Spend extra effort looking for NEGATIVE catalysts: insider selling, short
+  reports, dilutive offerings, regulatory actions, lawsuits, workforce
+  reductions, SEC filings that reveal dilution or R&D cuts.
+- If you truly find no evidence for a catalyst category, state that explicitly
+  rather than inventing an event.
+
+========== OUTPUT FORMAT ==========
+At the very top of your response, write ONLY the single word: Bullish or Bearish.
+Then provide a concise explanation (3‑5 sentences) covering:
+  - The {sector} sector condition around {cutoff_date}.
+  - The most impactful positive and negative catalysts you found for {ticker}
+    (with specific dates and URLs).
+  - Why the net weight of evidence supports your Bullish or Bearish verdict.
+
+Do NOT output JSON. Do NOT include a full catalyst grid.
+Every factual claim in your explanation must cite a specific date (YYYY-MM-DD)
+and include at least one source URL.
+
+Please begin your analysis now. Search the web extensively and take as much
+time as you need for higher quality reasoning."""
+
+
+async def run_verdict_pass(full_name, ticker, cutoff_date, sector="Technology"):
+    """Send the standalone verdict prompt to Gemini and extract Bullish/Bearish."""
+    try:
+        from gemini_catcher import run_gemini as gemini_catcher_run
+    except ImportError:
+        return None, "gemini module not available"
+
+    if not (os.environ.get("GEMINI_BROWSER_STATE") or os.path.exists("gemini_browser_state.json")):
+        return None, "browser state not available"
+
+    prompt = build_verdict_prompt(full_name, ticker, cutoff_date, sector)
+    print("  🧠 Asking Gemini for an independent verdict…")
+    try:
+        result = await asyncio.wait_for(gemini_catcher_run(prompt), timeout=150)
+        if result.get("error"):
+            return None, result["error"]
+        answer = result.get("answer", "").strip()
+        first_word = answer.split()[0].lower() if answer else ""
+        if first_word in ("bullish", "bearish"):
+            return first_word.capitalize(), answer[answer.find(" "):].strip()
+        return "Unclear", answer[:200]
+    except asyncio.TimeoutError:
+        return None, "timeout"
+    except Exception as e:
+        return None, str(e)
+
+
+# ═══════════════════════════════════════════════════════
+#  GEMINI CATCHER (EXISTING)
+# ═══════════════════════════════════════════════════════
+
 def build_catcher_prompt(full_name, ticker, cutoff_date, grid, net_signal, conviction):
     lines = []
     lines.append(f"🔄 Final signal: {net_signal} (conviction {conviction})")
@@ -720,7 +894,7 @@ Every source MUST be a real URL you found via web search.
 """
     return "\n".join(lines) + instructions
 
-# ── Catcher pass (lazy import) ────────────────────────
+
 async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy,
                            net_signal, conviction):
     try:
@@ -736,7 +910,6 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
     prompt = build_catcher_prompt(full_name, ticker, cutoff_date, grid, net_signal, conviction)
     print("  🐾 Running Gemini catcher (full output + instructions)…")
     try:
-        # Hard 90‑second timeout – catcher must finish or be killed
         result = await asyncio.wait_for(gemini_catcher_run(prompt), timeout=150)
         if result.get("error"):
             print(f"  ⚠️  Gemini catcher error: {result['error']}")
@@ -746,13 +919,12 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
             print("  ⚠️  Gemini catcher returned empty response.")
             return grid
     except asyncio.TimeoutError:
-        print("  ⚠️  Gemini catcher timed out (90s) — using original grid.")
+        print("  ⚠️  Gemini catcher timed out (150s) — using original grid.")
         return grid
     except Exception as e:
         print(f"  ⚠️  Gemini catcher failed: {e}")
         return grid
 
-    # Parse JSON
     try:
         parsed = json.loads(answer)
     except json.JSONDecodeError:
@@ -795,6 +967,7 @@ async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxono
         print(f"    ➕ Catcher added {hit['taxonomy']} ({hit.get('event_date','?')})")
 
     return grid
+
 
 # ── Async pipeline ──────────────────────────────────────
 async def analyze_stock_async(ticker, snapshot, searxng_url):
@@ -940,7 +1113,16 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                 "source_urls": [], "event_id": None, "confidence": 0
             })
 
-    # ── Run CloakBrowser Gemini catcher ──
+    # ── Gemini independent verdict (NEW) ──
+    gem_verdict, gem_reason = await run_verdict_pass(
+        full_name, ticker, CUTOFF_DATE,
+        snapshot.get("profile", {}).get("sector", "Technology")
+    )
+    print(f"  🧠 Gemini verdict: {gem_verdict or 'N/A'}")
+    if gem_reason:
+        print(f"     Reason: {gem_reason[:200]}")
+
+    # ── Run CloakBrowser Gemini catcher (EXISTING) ──
     grid = await run_catcher_pass(full_name, ticker, CUTOFF_DATE, grid, weighted_taxonomy,
                                   final_result.get("net_signal", "?"),
                                   final_result.get("conviction", 0))
@@ -959,6 +1141,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print(f"  🔄 Final signal: {new_signal} (conviction {new_conviction})")
     return final_result
 
+
 # ── Main entry ──────────────────────────────────────────
 def analyze_stock(ticker, snapshot, searxng_url):
     return asyncio.run(analyze_stock_async(ticker, snapshot, searxng_url))
@@ -974,12 +1157,11 @@ if __name__ == "__main__":
     for ticker in TICKERS:
         print(f"\n{'='*60}\n📊 Snapshot for {ticker}…")
         if HAS_DB:
-            if conn is None: 
+            if conn is None:
                 try:
                     conn = get_connection()
-                    # Set a statement timeout so queries can't hang either
                     cur = conn.cursor()
-                    cur.execute("SET statement_timeout = '60000';")  # 60 second query timeout
+                    cur.execute("SET statement_timeout = '60000';")
                 except Exception as e:
                     print(f"  ⚠️  DB connection failed: {e}")
                     HAS_DB = False
