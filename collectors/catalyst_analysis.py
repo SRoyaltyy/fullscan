@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Catalyst Analysis Engine v2 – Backtest‑Capable, Gemini Catcher + Independent Verdict.
+Catalyst Analysis Engine v2 – Parallel DeepSeek + Gemini Verdict, Gemini Catcher
 - Ticker(s) and cutoff date set at the top.
 - DeepSeek + SearXNG pipeline unchanged.
-- Gemini Catcher: fills missed events after DeepSeek (existing).
-- Gemini Verdict: standalone Bullish/Bearish opinion using web search (new).
+- Gemini independent verdict runs CONCURRENTLY with DeepSeek.
+- Gemini catcher still runs after DeepSeek to fill missed events.
 """
 
-import os, json, time, re, asyncio, aiohttp
+import os, json, time, re, asyncio, aiohttp, textwrap
 from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
 
@@ -390,6 +390,8 @@ CATALYST_WEIGHTS = {
 POSITIVE_CATALYSTS = set([k for k in CATALYST_WEIGHTS if k in TAXONOMY_LIST and TAXONOMY_LIST.index(k) < 33])
 
 # ── Prompt templates ───────────────────────────────────
+
+
 STEP1_TEMPLATE = """
 You are an event extraction engine for {full_name} ({ticker}).
 
@@ -637,11 +639,12 @@ def recalculate_signal(grid):
     return signal, conviction
 
 # ═══════════════════════════════════════════════════════
-#  GEMINI INDEPENDENT VERDICT (NEW)
+#  GEMINI INDEPENDENT VERDICT (NEW – no sector preamble)
 # ═══════════════════════════════════════════════════════
 
-def build_verdict_prompt(full_name, ticker, cutoff_date, sector="Technology"):
+def build_verdict_prompt(full_name, ticker, cutoff_date):
     """Standalone Gemini prompt: independent Bullish/Bearish verdict using web search."""
+
     positive_internal = [
         "Contract win/expansion", "Strategic partnership/alliance",
         "Product launch/FDA approval/regulatory greenlight", "Analyst upgrade/PT increase",
@@ -729,9 +732,9 @@ def build_verdict_prompt(full_name, ticker, cutoff_date, sector="Technology"):
         format_list("Negative Market Mechanics:", negative_mechanics),
     ])
 
-    return f"""You are an expert market analyst.
+    prompt = f"""You are an expert market analyst.
 
-STOCK: {full_name} (ticker: {ticker}), a {sector} company.
+STOCK: {full_name} (ticker: {ticker}).
 CUTOFF DATE: {cutoff_date}.
 LOOKBACK: 6 months before {cutoff_date} (i.e., from approximately {LOOKBACK_START} to {cutoff_date}).
 
@@ -742,11 +745,7 @@ TASK: Predict the stock's direction for the 2 weeks after {cutoff_date}.
 Provide a clear verdict: Bullish or Bearish, followed by a concise explanation
 (3‑5 sentences) citing specific dates and real source URLs.
 
-Before evaluating {ticker} individually, search for and summarize the condition of
-the {sector} sector in early {cutoff_date[:4]}. Consider peer performance, sector
-ETF trends, and any industry‑specific headwinds or tailwinds.
-
-Then, for each catalyst in the framework below, perform a separate web search.
+For each catalyst in the framework below, perform a separate web search.
 Search specifically for events involving "{full_name}" or "{ticker}" within the
 lookback window.
 
@@ -770,7 +769,6 @@ lookback window.
 ========== OUTPUT FORMAT ==========
 At the very top of your response, write ONLY the single word: Bullish or Bearish.
 Then provide a concise explanation (3‑5 sentences) covering:
-  - The {sector} sector condition around {cutoff_date}.
   - The most impactful positive and negative catalysts you found for {ticker}
     (with specific dates and URLs).
   - Why the net weight of evidence supports your Bullish or Bearish verdict.
@@ -781,10 +779,11 @@ and include at least one source URL.
 
 Please begin your analysis now. Search the web extensively and take as much
 time as you need for higher quality reasoning."""
+    return textwrap.dedent(prompt)
 
 
-async def run_verdict_pass(full_name, ticker, cutoff_date, sector="Technology"):
-    """Send the standalone verdict prompt to Gemini and extract Bullish/Bearish."""
+async def run_verdict_pass(full_name, ticker, cutoff_date):
+    """Send the standalone verdict prompt to Gemini and extract Bullish/Bearish (no sector)."""
     try:
         from gemini_catcher import run_gemini as gemini_catcher_run
     except ImportError:
@@ -793,10 +792,10 @@ async def run_verdict_pass(full_name, ticker, cutoff_date, sector="Technology"):
     if not (os.environ.get("GEMINI_BROWSER_STATE") or os.path.exists("gemini_browser_state.json")):
         return None, "browser state not available"
 
-    prompt = build_verdict_prompt(full_name, ticker, cutoff_date, sector)
-    print("  🧠 Asking Gemini for an independent verdict…")
+    prompt = build_verdict_prompt(full_name, ticker, cutoff_date)
+    print("  🧠 Asking Gemini for an independent verdict (in parallel with DeepSeek)…")
     try:
-        result = await asyncio.wait_for(gemini_catcher_run(prompt), timeout=150)
+        result = await gemini_catcher_run(prompt)
         if result.get("error"):
             return None, result["error"]
         answer = result.get("answer", "").strip()
@@ -804,8 +803,6 @@ async def run_verdict_pass(full_name, ticker, cutoff_date, sector="Technology"):
         if first_word in ("bullish", "bearish"):
             return first_word.capitalize(), answer[answer.find(" "):].strip()
         return "Unclear", answer[:200]
-    except asyncio.TimeoutError:
-        return None, "timeout"
     except Exception as e:
         return None, str(e)
 
@@ -892,7 +889,7 @@ Your job:
 If nothing is found, return empty arrays.
 Every source MUST be a real URL you found via web search.
 """
-    return "\n".join(lines) + instructions
+    return textwrap.dedent("\n".join(lines) + instructions)
 
 
 async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy,
@@ -980,6 +977,10 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         official_name, aliases = resolve_company_name(ticker, searxng_url)
     full_name = f"{official_name} ({ticker})" if official_name.lower() != ticker.lower() else ticker
 
+    # ── Fire Gemini verdict in the background NOW ──
+    verdict_task = asyncio.create_task(run_verdict_pass(full_name, ticker, CUTOFF_DATE))
+
+    # ── DeepSeek pipeline (unchanged) ──
     finviz_events = scrape_finviz_news(ticker)
     print(f"  📰 Finviz returned {len(finviz_events)} headlines (after cutoff)")
 
@@ -1113,16 +1114,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                 "source_urls": [], "event_id": None, "confidence": 0
             })
 
-    # ── Gemini independent verdict (NEW) ──
-    gem_verdict, gem_reason = await run_verdict_pass(
-        full_name, ticker, CUTOFF_DATE,
-        snapshot.get("profile", {}).get("sector", "Technology")
-    )
-    print(f"  🧠 Gemini verdict: {gem_verdict or 'N/A'}")
-    if gem_reason:
-        print(f"     Reason: {gem_reason[:200]}")
-
-    # ── Run CloakBrowser Gemini catcher (EXISTING) ──
+    # ── Run Gemini catcher (sequential – needs the grid) ──
     grid = await run_catcher_pass(full_name, ticker, CUTOFF_DATE, grid, weighted_taxonomy,
                                   final_result.get("net_signal", "?"),
                                   final_result.get("conviction", 0))
@@ -1139,6 +1131,13 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     final_result["net_signal"] = new_signal
     final_result["conviction"] = new_conviction
     print(f"  🔄 Final signal: {new_signal} (conviction {new_conviction})")
+
+    # ── Collect Gemini verdict (already running in parallel) ──
+    gem_verdict, gem_reason = await verdict_task
+    print(f"  🧠 Gemini verdict: {gem_verdict or 'N/A'}")
+    if gem_reason:
+        print(f"     Reason: {gem_reason[:200]}")
+
     return final_result
 
 
