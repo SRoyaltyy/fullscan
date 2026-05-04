@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 Gemini Catcher – CloakBrowser-based web scraper.
-Sends prompts to Gemini via the web interface, cleaning whitespace by
-using innerText + InputEvent to bypass paragraph‑level rendering.
+Sends prompts to Gemini via the web interface using fill().
 """
 
 import asyncio, json, os, sys, base64, re
@@ -30,11 +29,9 @@ def load_state():
 
 
 def _compact_prompt(text: str) -> str:
-    """Collapse whitespace so the prompt renders tightly in Gemini's editor."""
+    """Collapse whitespace to reduce paragraph-style gaps."""
     text = text.strip()
-    # Collapse 2+ consecutive newlines into a single newline
     text = re.sub(r'\n[ \t]*\n', '\n', text)
-    # Remove trailing spaces on each line
     text = re.sub(r'[ \t]+\n', '\n', text)
     return text
 
@@ -78,30 +75,22 @@ async def run_gemini(prompt: str) -> dict:
             await ctx.close()
             return {"answer": "", "sources": [], "error": "input_not_found"}
 
-        # ── Inject the prompt as plain text into React's editor ──
-        prompt_clean = _compact_prompt(prompt)
-
-        # Focus the input
-                
+        # ── Clear the input box ──
         await input_box.click()
         await page.wait_for_timeout(300)
-
-        # Clear any existing content with a simple triple-click + delete
         await input_box.click(click_count=3)
         await input_box.press("Delete")
         await page.wait_for_timeout(300)
 
-        # Use the unpatched page's fill() — this types character-by-character
-        # with proper keystrokes that React actually listens to.
-        # _compact_prompt reduces newline clutter, but each \n still becomes
-        # a proper Enter keypress that Gemini recognises.
+        # ── Fill the prompt ──
         prompt_clean = _compact_prompt(prompt)
-        original_page = getattr(page, '_original', page)
-        await original_page.locator(
-            "div[contenteditable='true'], div[role='textbox']"
-        ).first.fill(prompt_clean)
-
+        await input_box.fill(prompt_clean)
         await page.wait_for_timeout(1000)
+
+        # ── Trigger Send button activation ──
+        await input_box.press("Space")
+        await input_box.press("Backspace")
+        await page.wait_for_timeout(500)
 
         # ── Submit ──
         SEND_SELECTORS = [
@@ -124,17 +113,18 @@ async def run_gemini(prompt: str) -> dict:
             await input_box.press("Enter")
 
         # ── Wait for response ──
+        print("[catcher] ⏳ Waiting for Gemini response…")
         try:
             await page.wait_for_selector(
                 "[data-message-author='assistant'], div[class*='assistant'], "
                 "div.model-response, div.response-content",
-                timeout=30000,
+                timeout=90000,
             )
             try:
                 loading = page.locator(
                     "[data-test-id='loading-indicator'], .spinner, [class*='loading']"
                 )
-                await loading.wait_for(state="hidden", timeout=15000)
+                await loading.wait_for(state="hidden", timeout=30000)
             except Exception:
                 pass
             await page.wait_for_timeout(5000)
