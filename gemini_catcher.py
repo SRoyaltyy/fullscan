@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Gemini Catcher – CloakBrowser-based web scraper.
-Sends prompts to Gemini via the web interface, avoiding paragraph‑level
-whitespace by injecting text directly via JavaScript.
+Sends prompts to Gemini via the web interface, cleaning whitespace by
+using innerText + InputEvent to bypass paragraph‑level rendering.
 """
 
 import asyncio, json, os, sys, base64, re
@@ -78,14 +78,13 @@ async def run_gemini(prompt: str) -> dict:
             await ctx.close()
             return {"answer": "", "sources": [], "error": "input_not_found"}
 
-        # ── Inject the prompt via JavaScript (multiple fallback methods) ──
+        # ── Inject the prompt as plain text into React's editor ──
         prompt_clean = _compact_prompt(prompt)
 
-        # Click to focus the input
+        # Focus the input
         await input_box.click()
         await page.wait_for_timeout(300)
 
-        # Try multiple injection methods in sequence
         injection_success = await page.evaluate("""(text) => {
             const el = document.querySelector(
                 "div[contenteditable='true'], div[role='textbox']"
@@ -93,56 +92,42 @@ async def run_gemini(prompt: str) -> dict:
             if (!el) return false;
             el.focus();
 
-            // Method 1: execCommand('insertText') – best for contenteditable
-            // This inserts as plain text with newlines as <br>
-            try {
-                el.textContent = '';
-                el.dispatchEvent(new Event('input', { bubbles: true }));
-                const ok = document.execCommand('insertText', false, text);
-                if (ok) {
-                    el.dispatchEvent(new Event('input', { bubbles: true }));
-                    return true;
-                }
-            } catch(e) {}
+            // Clear the editor completely
+            el.innerHTML = '';
 
-            // Method 2: Set textContent + dispatch synthetic beforeInput/input events
-            // This mimics how the browser handles text insertion
-            try {
-                el.textContent = text;
-                el.dispatchEvent(new InputEvent('beforeinput', {
-                    bubbles: true,
-                    inputType: 'insertText',
-                    data: text
-                }));
-                el.dispatchEvent(new InputEvent('input', {
-                    bubbles: true,
-                    inputType: 'insertText',
-                    data: text
-                }));
-                return true;
-            } catch(e) {}
+            // Insert the plain text – innerText preserves newlines as <br>
+            el.innerText = text;
 
-            // Method 3: innerText – simplest, works in most editors
-            try {
-                el.innerText = text;
-                el.dispatchEvent(new Event('input', { bubbles: true }));
-                el.dispatchEvent(new Event('change', { bubbles: true }));
-                return true;
-            } catch(e) {}
+            // React listens for trusted InputEvent with correct inputType
+            // This is the key: fires the internal state update
+            const inputEvent = new InputEvent('input', {
+                bubbles: true,
+                cancelable: true,
+                composed: true,
+                data: text,
+                inputType: 'insertText',
+            });
+            el.dispatchEvent(inputEvent);
 
-            return false;
+            // Also fire a change event for good measure
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+            return true;
         }""", prompt_clean)
 
         if not injection_success:
-            # Final fallback: use the unpatched page to fill without humanize
+            # Final fallback: fill on the unpatched page
             original_page = getattr(page, '_original', page)
-            await original_page.locator(
-                "div[contenteditable='true'], div[role='textbox']"
-            ).first.fill(prompt_clean)
+            try:
+                await original_page.locator(
+                    "div[contenteditable='true'], div[role='textbox']"
+                ).first.fill(prompt_clean)
+            except Exception:
+                # Last resort: fill on the patched page (will have extra whitespace)
+                await input_box.fill(prompt_clean)
 
-        await page.wait_for_timeout(1000)
+        await page.wait_for_timeout(800)
 
-        # Tiny edit so Gemini recognises content was added
+        # Small edit so Gemini realises content was added and enables the Send button
         await input_box.press("Space")
         await input_box.press("Backspace")
         await page.wait_for_timeout(500)
