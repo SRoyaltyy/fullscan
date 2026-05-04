@@ -14,8 +14,8 @@ from openai import OpenAI
 # ═══════════════════════════════════════════════════════
 #  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
 # ═══════════════════════════════════════════════════════
-TICKERS = ["ARCB"]
-CUTOFF_DATE = "2026-03-20"          # e.g. "2026-03-15" — discard events after this; set to None for live
+TICKERS = ["CAR"]
+CUTOFF_DATE = "2026-04-02"          # e.g. "2026-03-15" — discard events after this; set to None for live
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
