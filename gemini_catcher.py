@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Gemini Catcher – CloakBrowser-based web scraper.
-Sends prompts to Gemini via the web interface using fill().
+Sends prompts to Gemini via the web interface using native JS input.
 """
 
 import asyncio, json, os, sys, base64, re
@@ -29,7 +29,10 @@ def load_state():
 
 
 def _compact_prompt(text: str) -> str:
-    """Collapse whitespace to reduce paragraph-style gaps."""
+    """Collapse whitespace to avoid extra paragraph gaps.
+    If you want a single‑line prompt, replace with:
+        text = re.sub(r'\s+', ' ', text.strip())
+    """
     text = text.strip()
     text = re.sub(r'\n[ \t]*\n', '\n', text)
     text = re.sub(r'[ \t]+\n', '\n', text)
@@ -54,7 +57,7 @@ async def run_gemini(prompt: str) -> dict:
         page = await ctx.new_page()
         await page.goto(GEMINI_URL, wait_until="domcontentloaded")
 
-        # ── Find input box ──
+        # ── Find the input box (contenteditable div) ──
         INPUT_SELECTORS = [
             "div[contenteditable='true']",
             "div[role='textbox']",
@@ -75,29 +78,54 @@ async def run_gemini(prompt: str) -> dict:
             await ctx.close()
             return {"answer": "", "sources": [], "error": "input_not_found"}
 
-        # ── Clear the input box ──
-        await input_box.click()
-        await page.wait_for_timeout(300)
-        await input_box.click(click_count=3)
-        await input_box.press("Delete")
-        await page.wait_for_timeout(300)
-
-        # ── Fill the prompt ──
+        # ── Insert prompt into the contenteditable div (pure JS, no fill()) ──
         prompt_clean = _compact_prompt(prompt)
-        await input_box.fill(prompt_clean)
-        await page.wait_for_timeout(1000)
 
-        # ── Trigger Send button activation ──
-        await input_box.press("Space")
-        await input_box.press("Backspace")
-        await page.wait_for_timeout(500)
+        await page.evaluate(
+            """(div, text) => {
+                // 1. Clear existing content
+                div.textContent = '';
+                div.focus();
+
+                // 2. Set the new text as plain text (no HTML formatting)
+                div.textContent = text;
+
+                // 3. Fire the exact events React/Gemini listeners expect
+                div.dispatchEvent(new InputEvent('beforeinput', {
+                    inputType: 'insertText',
+                    data: text,
+                    bubbles: true,
+                    cancelable: true,
+                }));
+                div.dispatchEvent(new InputEvent('input', {
+                    inputType: 'insertText',
+                    data: text,
+                    bubbles: true,
+                }));
+            }""",
+            input_box,
+            prompt_clean,
+        )
+        await page.wait_for_timeout(800)
+
+        # ── Ensure Send button is enabled (safety nudge if still disabled) ──
+        SEND_BTN_SELECTOR = "button[aria-label='Send message']"
+        try:
+            send_btn = await page.wait_for_selector(SEND_BTN_SELECTOR, timeout=3000)
+            is_disabled = await send_btn.get_attribute("disabled")
+            if is_disabled:
+                # Sometimes a real keypress is required – type a space then delete it
+                await input_box.press("Space")
+                await input_box.press("Backspace")
+                await page.wait_for_timeout(500)
+        except Exception:
+            pass
 
         # ── Submit ──
         SEND_SELECTORS = [
             "button[aria-label='Send message']",
             "button[data-test-id='send-button']",
             "button.send-button",
-            "button[aria-label='Send']",
         ]
         sent = False
         for sel in SEND_SELECTORS:
@@ -120,6 +148,7 @@ async def run_gemini(prompt: str) -> dict:
                 "div.model-response, div.response-content",
                 timeout=90000,
             )
+            # Hide loading indicator if present
             try:
                 loading = page.locator(
                     "[data-test-id='loading-indicator'], .spinner, [class*='loading']"
@@ -150,6 +179,7 @@ async def run_gemini(prompt: str) -> dict:
                     break
 
         if not answer or len(answer) < 50:
+            # Fallback: extract from whole body, filtering out UI text
             body_text = await page.inner_text("body")
             unwanted = [
                 "Defining the Approach", "Answer now", "Gemini said",
@@ -178,3 +208,24 @@ async def run_gemini(prompt: str) -> dict:
 
     except Exception as e:
         return {"answer": "", "sources": [], "error": str(e)}
+
+
+# ── CLI entry point ─────────────────────────────────────────────
+async def main():
+    """Read a prompt from the GEMINI_PROMPT env variable (default test prompt)."""
+    prompt = os.environ.get("GEMINI_PROMPT", "Explain the current market outlook for NVDA in 2 sentences.")
+    result = await run_gemini(prompt)
+    if result["error"]:
+        print(f"[catcher] ❌ Error: {result['error']}")
+        sys.exit(1)
+    print("=" * 60)
+    print(result["answer"])
+    if result["sources"]:
+        print("\n--- Sources ---")
+        for s in result["sources"]:
+            print(s)
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
