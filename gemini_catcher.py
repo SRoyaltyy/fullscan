@@ -82,54 +82,26 @@ async def run_gemini(prompt: str) -> dict:
         prompt_clean = _compact_prompt(prompt)
 
         # Focus the input
+                
         await input_box.click()
         await page.wait_for_timeout(300)
 
-        injection_success = await page.evaluate("""(text) => {
-            const el = document.querySelector(
-                "div[contenteditable='true'], div[role='textbox']"
-            );
-            if (!el) return false;
-            el.focus();
+        # Clear any existing content with a simple triple-click + delete
+        await input_box.click(click_count=3)
+        await input_box.press("Delete")
+        await page.wait_for_timeout(300)
 
-            // Clear the editor completely – use textContent (Trusted Types safe)
-            el.textContent = '';
+        # Use the unpatched page's fill() — this types character-by-character
+        # with proper keystrokes that React actually listens to.
+        # _compact_prompt reduces newline clutter, but each \n still becomes
+        # a proper Enter keypress that Gemini recognises.
+        prompt_clean = _compact_prompt(prompt)
+        original_page = getattr(page, '_original', page)
+        await original_page.locator(
+            "div[contenteditable='true'], div[role='textbox']"
+        ).first.fill(prompt_clean)
 
-            // Insert the plain text – innerText preserves newlines as <br>
-            el.innerText = text;
-
-            // React listens for trusted InputEvent with correct inputType
-            const inputEvent = new InputEvent('input', {
-                bubbles: true,
-                cancelable: true,
-                composed: true,
-                data: text,
-                inputType: 'insertText',
-            });
-            el.dispatchEvent(inputEvent);
-
-            // Also fire a change event for good measure
-            el.dispatchEvent(new Event('change', { bubbles: true }));
-            return true;
-        }""", prompt_clean)
-
-        if not injection_success:
-            # Final fallback: fill on the unpatched page
-            original_page = getattr(page, '_original', page)
-            try:
-                await original_page.locator(
-                    "div[contenteditable='true'], div[role='textbox']"
-                ).first.fill(prompt_clean)
-            except Exception:
-                # Last resort: fill on the patched page (will have extra whitespace)
-                await input_box.fill(prompt_clean)
-
-        await page.wait_for_timeout(800)
-
-        # Small edit so Gemini realises content was added and enables the Send button
-        await input_box.press("Space")
-        await input_box.press("Backspace")
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(1000)
 
         # ── Submit ──
         SEND_SELECTORS = [
