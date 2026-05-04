@@ -78,19 +78,15 @@ async def run_gemini(prompt: str) -> dict:
             await ctx.close()
             return {"answer": "", "sources": [], "error": "input_not_found"}
 
-        # ── Insert prompt into the contenteditable div (pure JS, no fill()) ──
+                # ── Insert prompt into the contenteditable div ──
         prompt_clean = _compact_prompt(prompt)
-
         await page.evaluate(
-            """(div, text) => {
-                // 1. Clear existing content
+            """(args) => {
+                const div = args[0];
+                const text = args[1];
                 div.textContent = '';
                 div.focus();
-
-                // 2. Set the new text as plain text (no HTML formatting)
                 div.textContent = text;
-
-                // 3. Fire the exact events React/Gemini listeners expect
                 div.dispatchEvent(new InputEvent('beforeinput', {
                     inputType: 'insertText',
                     data: text,
@@ -103,8 +99,7 @@ async def run_gemini(prompt: str) -> dict:
                     bubbles: true,
                 }));
             }""",
-            input_box,
-            prompt_clean,
+            [input_box, prompt_clean],   # <-- single argument (a list)
         )
         await page.wait_for_timeout(800)
 
