@@ -2,7 +2,7 @@
 """
 Gemini Catcher – CloakBrowser-based web scraper.
 Sends prompts to Gemini via the web interface, avoiding paragraph‑level
-whitespace by injecting text directly with execCommand('insertText').
+whitespace by injecting text directly via JavaScript.
 """
 
 import asyncio, json, os, sys, base64, re
@@ -78,44 +78,71 @@ async def run_gemini(prompt: str) -> dict:
             await ctx.close()
             return {"answer": "", "sources": [], "error": "input_not_found"}
 
-        # ── Inject the prompt via JavaScript ──
+        # ── Inject the prompt via JavaScript (multiple fallback methods) ──
         prompt_clean = _compact_prompt(prompt)
 
-        # Click to focus
+        # Click to focus the input
         await input_box.click()
         await page.wait_for_timeout(300)
 
-        # Use execCommand('insertText') — newlines become <br>, not <p>
-        # This avoids the CSS margin/padding that causes massive gaps
-        injected = await page.evaluate("""(text) => {
+        # Try multiple injection methods in sequence
+        injection_success = await page.evaluate("""(text) => {
             const el = document.querySelector(
                 "div[contenteditable='true'], div[role='textbox']"
             );
             if (!el) return false;
             el.focus();
 
-            // Clear existing content
-            el.textContent = '';
-            el.dispatchEvent(new Event('input', { bubbles: true }));
+            // Method 1: execCommand('insertText') – best for contenteditable
+            // This inserts as plain text with newlines as <br>
+            try {
+                el.textContent = '';
+                el.dispatchEvent(new Event('input', { bubbles: true }));
+                const ok = document.execCommand('insertText', false, text);
+                if (ok) {
+                    el.dispatchEvent(new Event('input', { bubbles: true }));
+                    return true;
+                }
+            } catch(e) {}
 
-            // insertText inserts plain text — newlines become <br>
-            const ok = document.execCommand('insertText', false, text);
-            if (ok) return true;
+            // Method 2: Set textContent + dispatch synthetic beforeInput/input events
+            // This mimics how the browser handles text insertion
+            try {
+                el.textContent = text;
+                el.dispatchEvent(new InputEvent('beforeinput', {
+                    bubbles: true,
+                    inputType: 'insertText',
+                    data: text
+                }));
+                el.dispatchEvent(new InputEvent('input', {
+                    bubbles: true,
+                    inputType: 'insertText',
+                    data: text
+                }));
+                return true;
+            } catch(e) {}
 
-            // Fallback: set innerText directly
-            el.innerText = text;
-            el.dispatchEvent(new Event('input', { bubbles: true }));
-            el.dispatchEvent(new Event('change', { bubbles: true }));
-            return true;
+            // Method 3: innerText – simplest, works in most editors
+            try {
+                el.innerText = text;
+                el.dispatchEvent(new Event('input', { bubbles: true }));
+                el.dispatchEvent(new Event('change', { bubbles: true }));
+                return true;
+            } catch(e) {}
+
+            return false;
         }""", prompt_clean)
 
-        if not injected:
-            # Final fallback: fill without humanize
-            await input_box.fill(prompt_clean)
+        if not injection_success:
+            # Final fallback: use the unpatched page to fill without humanize
+            original_page = getattr(page, '_original', page)
+            await original_page.locator(
+                "div[contenteditable='true'], div[role='textbox']"
+            ).first.fill(prompt_clean)
 
-        await page.wait_for_timeout(800)
+        await page.wait_for_timeout(1000)
 
-        # Tiny edit so Gemini's send button becomes active
+        # Tiny edit so Gemini recognises content was added
         await input_box.press("Space")
         await input_box.press("Backspace")
         await page.wait_for_timeout(500)
