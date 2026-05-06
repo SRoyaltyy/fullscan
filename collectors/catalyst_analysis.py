@@ -634,6 +634,73 @@ def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000):
     resp = safe_create(model=MODEL, messages=messages, temperature=temperature, max_tokens=max_tokens)
     return resp.choices[0].message.content.strip()
 
+def deduplicate_grid_by_event_id(grid):
+    """
+     1. If the same event_id appears as BOTH positive and negative,
+        keep only the entry with the higher confidence.
+     2. If the same event_id appears multiple times on the SAME side,
+        keep only the entry with the highest adjusted_weight.
+     MISS/N.A. entries (event_id = None) are left untouched.
+    """
+    # Group HIT entries by event_id
+    hits_by_id = {}
+    for entry in grid:
+        eid = entry.get("event_id")
+        if eid is None or entry.get("status") != "HIT":
+            continue
+        hits_by_id.setdefault(eid, []).append(entry)
+
+    removed = []   # track what we drop for logging
+
+    for eid, entries in hits_by_id.items():
+        if len(entries) < 2:
+            continue
+
+        positives = [e for e in entries if e.get("type") == "positive"]
+        negatives = [e for e in entries if e.get("type") == "negative"]
+
+        # ── Rule 1: Same event_id spans BOTH positive and negative ──
+        if positives and negatives:
+            all_conflicting = positives + negatives
+            # keep the one with highest confidence, break ties with adjusted_weight
+            best = max(all_conflicting,
+                       key=lambda e: (e.get("confidence", 0), e.get("adjusted_weight", 0)))
+            for e in all_conflicting:
+                if e is not best:
+                    e["status"] = "MISS"
+                    e["adjusted_weight"] = 0
+                    e["confidence"] = 0
+                    removed.append((eid, e.get("taxonomy"), "conflict -> dropped"))
+            continue   # done with this event_id
+
+        # ── Rule 2: Same event_id, SAME side duplicates ──
+        if len(positives) > 1:
+            best = max(positives,
+                       key=lambda e: (e.get("adjusted_weight", 0), e.get("confidence", 0)))
+            for e in positives:
+                if e is not best:
+                    e["status"] = "MISS"
+                    e["adjusted_weight"] = 0
+                    e["confidence"] = 0
+                    removed.append((eid, e.get("taxonomy"), "duplicate positive -> dropped"))
+
+        if len(negatives) > 1:
+            best = max(negatives,
+                       key=lambda e: (e.get("adjusted_weight", 0), e.get("confidence", 0)))
+            for e in negatives:
+                if e is not best:
+                    e["status"] = "MISS"
+                    e["adjusted_weight"] = 0
+                    e["confidence"] = 0
+                    removed.append((eid, e.get("taxonomy"), "duplicate negative -> dropped"))
+
+    if removed:
+        print("  🔍 Event-ID deduplication applied:")
+        for eid, tax, reason in removed:
+            print(f"    • Event #{eid} | {tax} — {reason}")
+
+    return grid
+
 def recalculate_signal(grid):
     pos = sum(c.get("adjusted_weight",0) * c.get("confidence",50)/100 for c in grid if c.get("status")=="HIT" and c.get("type")=="positive")
     neg = sum(c.get("adjusted_weight",0) * c.get("confidence",50)/100 for c in grid if c.get("status")=="HIT" and c.get("type")=="negative")
@@ -1126,7 +1193,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     grid = await run_catcher_pass(full_name, ticker, CUTOFF_DATE, grid, weighted_taxonomy,
                                   final_result.get("net_signal", "?"),
                                   final_result.get("conviction", 0))
-
+    grid = deduplicate_grid_by_event_id(grid)
     dedup = {}
     for entry in grid:
         tax = entry.get("taxonomy")
