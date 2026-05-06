@@ -564,7 +564,15 @@ C. Apply INTERACTION RULES:
    3. If analyst target < current price, reclassify "Analyst upgrade/PT increase" as negative.
    4. If both "Technical breakdown" and "Earnings beat" are HIT, reduce breakdown's weight by 2.
 D. Compute FINAL SCORES: Positive_Score = sum(adjusted_weight * confidence/100) for positive HITs, Negative_Score similarly. Net = Positive − Negative. Map: Net>=20→Strong Bullish, >=8→Bullish, >=-8→Neutral, >=-20→Bearish, else→Strong Bearish. Conviction = min(100, abs(Net)*2).
-E. Write a catalyst_stack (4 sentences, with dates). F. Identify key_assumption.
+E. Write a catalyst_stack (4 sentences, with dates). 
+F. Identify key_assumption.
+G. The same source article CANNOT be classified as both a positive AND a negative
+  catalyst. If a single article describes contradictory signals (e.g., "insiders
+  bought but earnings missed"), split it into separate events, each with a
+  distinct excerpt and rationale.
+H. A single event should NOT generate more than one catalyst of the same type
+  (both "Geopolitical event" and "Technical breakdown" from the same headline
+  is likely over‑counting).
 
 OUTPUT FORMAT: Return ONLY this JSON.
 {{
