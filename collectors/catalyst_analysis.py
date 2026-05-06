@@ -15,7 +15,7 @@ from openai import OpenAI
 #  EDIT HERE – TICKER(S) AND BACKTEST CUTOFF DATE
 # ═══════════════════════════════════════════════════════
 TICKERS = ["BBAI"]
-CUTOFF_DATE = "2026-04-01"          # e.g. "2026-03-15" — discard events after this; set to None for live
+CUTOFF_DATE = "2026-01-23"          # e.g. "2026-03-15" — discard events after this; set to None for live
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
