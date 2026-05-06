@@ -874,25 +874,46 @@ async def run_verdict_pass(full_name, ticker, cutoff_date):
         if result.get("error"):
             return None, result["error"]
         answer = result.get("answer", "").strip()
+        
+        # ── DEBUG: show the full raw answer so you can see what Gemini returned ──
+        print("  🔍 RAW VERDICT (full answer):")
+        print(answer[:1500])
+        print("  ── end of raw verdict ──")
 
-        # Strip common Gemini UI prefixes
-        for prefix in ["Gemini said", "Gemini", "said"]:
-            if answer.lower().startswith(prefix.lower()):
-                answer = answer[len(prefix):].strip()
+        # ── Scan line by line for Bullish / Bearish ──
+        verdict = None
+        explanation = ""
+        lines = answer.splitlines()
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            # Skip Gemini UI prefixes
+            for junk in ["Gemini said", "Gemini", "said", "Defining", "Answer now"]:
+                if stripped.lower().startswith(junk.lower()):
+                    stripped = stripped[len(junk):].strip()
+                    break
+            # If the clean line is exactly Bullish or Bearish, grab it
+            if stripped.lower() in ("bullish", "bearish"):
+                verdict = stripped.capitalize()
+                # The explanation is the remaining lines after the verdict
+                explanation = " ".join(
+                    l.strip() for l in lines[i+1:] if l.strip()
+                )
                 break
 
-        # Search for "Bullish" or "Bearish" anywhere in the first 500 chars
+        if verdict:
+            return verdict, explanation[:600]
+
+        # ── Fallback if line scan failed: try a broad regex over the whole answer ──
+        for junk in ["Gemini said", "Gemini", "said"]:
+            if answer.lower().startswith(junk.lower()):
+                answer = answer[len(junk):].strip()
+                break
         match = re.search(r'\b(Bullish|Bearish)\b', answer[:500], re.IGNORECASE)
         if match:
             verdict = match.group(1).capitalize()
-            # Return the rest of the text after the verdict word (up to 600 chars)
             rest = answer[match.end():].strip()
             return verdict, rest[:600]
 
-        # Fallback: legacy first-word method
-        first_word = answer.split()[0].lower() if answer else ""
-        if first_word in ("bullish", "bearish"):
-            return first_word.capitalize(), answer[answer.find(" "):].strip()
         return "Unclear", answer[:600]
     except Exception as e:
         return None, str(e)
