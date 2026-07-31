@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-07-31T03:01:11.762106-04:00",
+  "fetched_at": "2026-07-31T11:20:09.497909-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -28,19 +28,19 @@
     },
     "BAMLH0A0HYM2": {
       "available": true,
-      "date": "2026-07-29",
-      "current": 2.87,
-      "delta_1d": 0.03,
-      "delta_1w": 0.19,
-      "delta_1m": 0.12
+      "date": "2026-07-30",
+      "current": 2.84,
+      "delta_1d": -0.03,
+      "delta_1w": 0.07,
+      "delta_1m": 0.1
     },
     "SOFR": {
       "available": true,
-      "date": "2026-07-29",
+      "date": "2026-07-30",
       "current": 3.65,
       "delta_1d": 0.0,
-      "delta_1w": 0.03,
-      "delta_1m": 0.03
+      "delta_1w": 0.01,
+      "delta_1m": -0.03
     },
     "IORB": {
       "available": true,
@@ -60,59 +60,58 @@
     },
     "USEPUINDXD": {
       "available": true,
-      "date": "2026-07-29",
-      "current": 282.75,
-      "delta_1d": 6.05,
-      "delta_1w": -454.54,
-      "delta_1m": 92.29
+      "date": "2026-07-30",
+      "current": 310.2,
+      "delta_1d": 88.87,
+      "delta_1w": 16.43,
+      "delta_1m": 26.76
     }
   },
   "vix": {
     "vix": {
-      "date": "2026-07-30",
-      "current": 17.09,
-      "delta_1d": -3.57,
-      "delta_1w": -1.61
+      "date": "2026-07-31",
+      "current": 17.45,
+      "delta_1d": 0.36,
+      "delta_1w": -1.13
     },
     "vix3m": {
-      "date": "2026-07-17",
-      "current": 20.54
+      "date": "2026-07-31",
+      "current": 19.71
     },
-    "ratio": null,
-    "ratio_stale": "VIX3M quote is 13 days older than VIX (2026-07-17 vs 2026-07-30); ratio suppressed — do not use backwardation rule"
+    "ratio": 0.885
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-07-31",
-      "last": 82.03,
-      "pct_1d": -1.87
+      "last": 85.91,
+      "pct_1d": 2.78
     },
     "BZ=F": {
       "available": true,
       "date": "2026-07-31",
-      "last": 87.53,
-      "pct_1d": -1.68
+      "last": 90.2,
+      "pct_1d": 1.31
     },
     "DXY": {
       "available": true,
       "date": "2026-07-31",
-      "pct_1d": 0.06,
-      "pct_1m": -1.3
+      "pct_1d": 0.12,
+      "pct_1m": -1.24
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-07-31",
-      "last": 7493.0,
-      "pct_1d": 0.27
+      "last": 7467.75,
+      "pct_1d": -0.06
     },
     "NQ=F": {
       "available": true,
       "date": "2026-07-31",
-      "last": 28463.0,
-      "pct_1d": 0.8
+      "last": 28260.25,
+      "pct_1d": 0.08
     }
   },
   "global_sessions": {
@@ -120,71 +119,71 @@
       "per_index": {
         "Nikkei": {
           "available": true,
-          "date": "2026-07-31",
-          "last": 64362.02,
-          "pct_1d": 4.03
+          "date": "2026-07-30",
+          "last": 61867.43,
+          "pct_1d": 0.71
         },
         "Hang Seng": {
           "available": true,
           "date": "2026-07-31",
-          "last": 25797.92,
-          "pct_1d": -0.24
+          "last": 25884.43,
+          "pct_1d": 0.1
         },
         "Shanghai": {
           "available": true,
           "date": "2026-07-31",
-          "last": 3832.11,
+          "last": 3832.26,
           "pct_1d": 0.72
         },
         "Kospi": {
           "available": true,
           "date": "2026-07-31",
-          "last": 6595.45,
-          "pct_1d": 17.91
+          "last": NaN,
+          "pct_1d": NaN
         },
         "ASX200": {
           "available": true,
-          "date": "2026-07-31",
-          "last": 8976.8,
-          "pct_1d": 0.1
+          "date": "2026-07-30",
+          "last": 8967.7,
+          "pct_1d": -0.78
         }
       },
-      "composite_avg": 4.5
+      "composite_avg": NaN
     },
     "europe": {
       "per_index": {
         "FTSE": {
           "available": true,
-          "date": "2026-07-30",
-          "last": 10897.3,
-          "pct_1d": -0.1
+          "date": "2026-07-31",
+          "last": 10879.79,
+          "pct_1d": -0.16
         },
         "DAX": {
           "available": true,
-          "date": "2026-07-30",
-          "last": 25612.03,
-          "pct_1d": 0.6
+          "date": "2026-07-31",
+          "last": 25690.74,
+          "pct_1d": 0.31
         },
         "CAC": {
           "available": true,
-          "date": "2026-07-30",
-          "last": 8485.64,
-          "pct_1d": 0.92
+          "date": "2026-07-31",
+          "last": 8532.63,
+          "pct_1d": 0.55
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-07-30",
-          "last": 6344.4,
-          "pct_1d": 1.53
+          "date": "2026-07-31",
+          "last": 6371.01,
+          "pct_1d": 0.42
         }
       },
-      "composite_avg": 0.74
+      "composite_avg": 0.28
     }
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": 0.216,
-    "window": "2026-07-23..2026-07-30"
+    "corr_5d": 0.148,
+    "window": "2026-07-24..2026-07-31"
   },
   "fear_greed": {
     "available": false,
@@ -195,8 +194,189 @@
     "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
   },
   "news_24h": {
-    "available": false,
-    "count": 0,
-    "items": []
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_us",
+        "title": "Partial human head found in Fox River near McHenry in area of where U.S. Marine veteran died in boat crash - Lake and McHenry County Scanner",
+        "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSXU1Qi1CT25jM1V6RG5PZTVPUjRyZXpwekk1aUJiUFpHRzVGcGJsMHdkOGkxb1RLdGZBc2ZybzYwT3hqYXFZVEpsRUpFcHAtRmpWbGI4WWpNSHFVNVBuX3lnWng3bzI3TUhzNVowLWg5YjZNRTEySURjN3VRbVluM2RWWnlGWVRqdEVpNkdFenJxak90MUtHTXJGcm56aWZtRTRteGY2WVlQTG96b1dtWkl0Q1JEaGsxZlFBT1FYVWpzOTZaamU3SUg1TkhJZTcxRHpoMDd4cTQ1blIyNHR1LUFaYUxtXzQ?oc=5",
+        "published_at": "Thu, 30 Jul 2026 16:25:05 GMT"
+      },
+      {
+        "source": "rss_google_us",
+        "title": "T.S.A. Finds 5 Civil War Cannonballs in Passenger’s Luggage in Alabama - The New York Times",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOc0FYSUFYRlRXLTlKMU9NaTNUMEdEVjZYcFdLcTBrczdRVzlOeWNjS3BfV3pFTGtFamd6cjBONFFIVVk1R3ZDbktWRUVBMVJIWmtqbTZib3dLcEUyRmZQQ3NRbUotd3U3YlNPRU5GbzRQY1NUUWQ4bXdtZFNyRldEenZR?oc=5",
+        "published_at": "Thu, 30 Jul 2026 22:45:22 GMT"
+      },
+      {
+        "source": "rss_google_us",
+        "title": "Vote to limit Trump’s Iran war powers fails in the Senate - The Washington Post",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNcEhYTGNVOFdHd29CSW1PXzZtc2p2UGxuSE5xT2NOLUY2WTF2ZDF0RURwSm1CRzEzQVJuYmJoWDNvN3ZfVWE1NWhsdTIwdDhGSVJYaTc3bWZxdTk2ejNVWjEtbG85aFlsUHhtaHdMUk5UVUxlRVlieXpnSHp2bUlvZkpNaXY2bXg3UFZVTF9IcjVJblBwYmpZZUNDNUNMUms?oc=5",
+        "published_at": "Fri, 31 Jul 2026 00:46:55 GMT"
+      },
+      {
+        "source": "rss_google_us",
+        "title": "Historic first public hearing held for terrorist deportation court - Politico",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMW5KQXZjNUROZG1Sczl6RTN6dnZKRnRKQzZValliX2hrZTBfNklKM3owVGNmM2FMRy04NndpMl92RDM0NWNpaDdqalB5emxmcVV6Q0s0bWdLOEkxaGVWZS12bzZVRXNia0p4c1VVQ1lyUEpEYmtTNDJJeGpuYXJwQi1adldfTGhqSlE?oc=5",
+        "published_at": "Thu, 30 Jul 2026 17:20:00 GMT"
+      },
+      {
+        "source": "rss_google_us",
+        "title": "Texas and Florida Draw Up Terrorism Lists and Take Aim at a Muslim Group - The New York Times",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdkdYdkpYVEZwTVNZZTNkbHhjWVNkQjFvWXBDZkVGNVRScVFUZi1LUGs3c3dOS3B4SFA5MEVNR0xFRmRyZHBpVGtxMXBuWHl4cm1RUUJIa2p1VVRLWmFNNzBJVG85dTBTTlcxVW1sMVFfUF9yNHZYYnpJT3BLakFrMDh2SHNYTFBOdnhLag?oc=5",
+        "published_at": "Fri, 31 Jul 2026 09:01:43 GMT"
+      },
+      {
+        "source": "rss_google_us",
+        "title": "Trump Hit With A String Of Record-Low Polling Numbers - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSWhQQ18tWjFMNGx4Q0RnNnFXRzBqb3dpbkxVdVhCTHgtRVVoclBUbDhRS1NLdVNLLUlsYUF2bFRSWXd2VTA3Q216M3dsMVRsd0ZQX0oyUzFUQkdlTW9wWk5sanJqMEtBaC1DaEJPVjBlNE5DMHBBVS15X1BPUnJBTlJvOWJYR21OVVNiLXBKMXdqT1dxcXAwbXVlRmxEU0d2QTBOcjlxVUxJMkxQ?oc=5",
+        "published_at": "Thu, 30 Jul 2026 20:20:58 GMT"
+      },
+      {
+        "source": "rss_google_us",
+        "title": "Man Detained During Nancy Guthrie Investigation to Sue for $2.5 Million - TMZ",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONk9USG1BQ1poamxKSkNaeTVJcktGRUJCSjlBRExwUnhMc0FvbkstdmxpNFdsS3JPM1M4TkhqRWhHT25WcERZUlZRZFJqaEoyT3A3NW1ZNkJKMEJEWTFMdlNQb05mVFRzUkl2ekxwY042T2JCcXB0WmZGa1lfM25jOC0wcVptMnhCOElqSjZLS0ZhcVVTNjdBVXV0dkFaaXlUTzZhekgwMG5mS2NRWFBpeXJxVUNwODlVckNNeg?oc=5",
+        "published_at": "Thu, 30 Jul 2026 23:09:36 GMT"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Fed officials who voted to hike rates say action is needed now against inflation",
+        "url": "https://www.cnbc.com/2026/07/31/fed-officials-who-voted-to-hike-rates-say-action-is-needed-now-against-inflation.html",
+        "published_at": "Fri, 31 Jul 2026 12:15:27 GMT"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "More consumer companies are staying private for longer, avoiding the IPO road",
+        "url": "https://www.cnbc.com/2026/07/31/private-consumer-companies-ipo.html",
+        "published_at": "Fri, 31 Jul 2026 11:30:01 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The cyclospora outbreak is the biggest ever. Why this ‘unusual’ outbreak is so hard to manage.",
+        "url": "https://www.marketwatch.com/story/the-cyclospora-outbreak-is-the-biggest-ever-why-the-unusual-outbreak-is-so-hard-to-manage-4d1b4841?mod=mw_rss_topstories",
+        "published_at": "Fri, 31 Jul 2026 12:27:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The Big Mac Index turns 40, and here’s the beef: It’s still relevant.",
+        "url": "https://www.marketwatch.com/story/the-big-mac-index-turns-forty-and-heres-the-beef-its-still-relevant-b56497dd?mod=mw_rss_topstories",
+        "published_at": "Fri, 31 Jul 2026 12:16:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Why fresh volatility means a ‘valuation opportunity’ is opening up in U.S. stocks",
+        "url": "https://www.marketwatch.com/story/why-fresh-volatility-means-a-valuation-opportunity-is-opening-up-in-u-s-stocks-9dbef149?mod=mw_rss_topstories",
+        "published_at": "Fri, 31 Jul 2026 10:49:00 GMT"
+      },
+      {
+        "source": "rss_bbc_world",
+        "title": "Peru's ex-president has 15-year jail sentence for corruption charges overturned",
+        "url": "https://www.bbc.co.uk/news/articles/cx2j9nj88rro?at_medium=RSS&at_campaign=rss",
+        "published_at": "Fri, 31 Jul 2026 10:32:17 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "'I don't want to die': Passenger describes terror on British Airways mayday flight",
+        "url": "https://www.bbc.co.uk/news/articles/cn9n2v3lwr0o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Fri, 31 Jul 2026 12:19:20 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "‘Migrant tsunami’: Second day of Spain – Morocco border clashes",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/7/31/migrant-tsunami-second-day-of-spain-morocco-border-clashes?traffic_source=rss",
+        "published_at": "Fri, 31 Jul 2026 11:45:42 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Russia’s Africa Corps killed Mali civilians in air strike: HRW",
+        "url": "https://www.aljazeera.com/news/2026/7/31/russias-africa-corps-killed-mali-civilians-in-air-strike-hrw?traffic_source=rss",
+        "published_at": "Fri, 31 Jul 2026 11:41:32 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Gaza Board of Peace announces Hamas disarmament agreement: What we know",
+        "url": "https://www.aljazeera.com/news/2026/7/31/gaza-board-of-peace-announces-hamas-disarmament-agreement-what-we-know?traffic_source=rss",
+        "published_at": "Fri, 31 Jul 2026 11:23:09 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Palestinians in Gaza are sceptical about the latest peace plan",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/7/31/31-07-reported-hani-mahmoud-gaza-ps?traffic_source=rss",
+        "published_at": "Fri, 31 Jul 2026 10:47:57 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Spain PM to visit Ceuta after 34 migrants die breaching border from Morocco",
+        "url": "https://www.aljazeera.com/news/2026/7/31/spain-pm-to-visit-ceuta-after-19-migrants-die-breaching-border-from-morocco?traffic_source=rss",
+        "published_at": "Fri, 31 Jul 2026 10:40:11 +0000"
+      },
+      {
+        "source": "rss_dw_world",
+        "title": "Military flare-up between Houthis and Saudi Arabia challenges relative calm in Yemen",
+        "url": "https://www.dw.com/en/military-flare-up-between-houthis-and-saudi-arabia-challenges-relative-calm-in-yemen/a-78186262?maca=en-rss-en-world-4025-rdf",
+        "published_at": "2026-07-31T11:15:00Z"
+      },
+      {
+        "source": "rss_dw_world",
+        "title": "Spain's PM heads to Ceuta after thousands breached border",
+        "url": "https://www.dw.com/en/spain-s-pm-heads-to-ceuta-after-thousands-breached-border/a-78187002?maca=en-rss-en-world-4025-rdf",
+        "published_at": "2026-07-31T10:37:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: Ameriprise Financial Inc",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_3876_AnalystReport_1785496444000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-07-31T11:14:04Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why JPMorgan Chase Stock Tumbled Today",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/why-jpmorgan-chase-stock-tumbled-001423875.html",
+        "published_at": "2026-07-30T00:14:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "IDEX Corporation Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/idex-corporation-q2-2026-earnings-003650436.html",
+        "published_at": "2026-07-30T00:36:50Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Littelfuse, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/littelfuse-inc-q2-2026-earnings-004111159.html",
+        "published_at": "2026-07-30T00:41:11Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: NextEra Energy Inc",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_2983_AnalystReport_1785496444000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-07-31T11:14:04Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Titan Minerals accelerates Dynasty growth strategy as drilling and scoping studies advance",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/titan-minerals-accelerates-dynasty-growth-002000729.html",
+        "published_at": "2026-07-30T00:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Safe Bulkers, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/safe-bulkers-inc-q2-2026-005113225.html",
+        "published_at": "2026-07-30T00:51:13Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Penske Automotive Group, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/penske-automotive-group-inc-q2-005535172.html",
+        "published_at": "2026-07-30T00:55:35Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stepan Company Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stepan-company-q2-2026-earnings-005537746.html",
+        "published_at": "2026-07-30T00:55:37Z"
+      }
+    ]
   }
 }
