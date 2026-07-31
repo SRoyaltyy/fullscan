@@ -2,10 +2,9 @@ name: Autonomous Daily Market Pipeline
 
 on:
   schedule:
-    # 9:00 AM ET premarket predict (13:00 UTC in EDT; runs 1h early in EST —
-    # data is timestamped at fetch time, so the drift is harmless)
+    # 9:00 AM ET premarket predict (13:00 UTC)
     - cron: '0 13 * * 1-5'
-    # 5:00 PM ET postmarket outcome + reflection
+    # 5:00 PM ET postmarket outcome + reflection (21:00 UTC)
     - cron: '0 21 * * 1-5'
   workflow_dispatch:
     inputs:
@@ -38,14 +37,19 @@ jobs:
       - name: Install dependencies
         run: pip install requests yfinance pandas openai ddgs psycopg2-binary
 
+      # FIXED: Uses the runner's actual UTC hour instead of the invalid github.event.schedule
       - name: Decide stage
         id: stage
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            case "${{ github.event.schedule }}" in
-              "0 13 * * 1-5") echo "plan=predict" >> "$GITHUB_OUTPUT" ;;
-              "0 21 * * 1-5") echo "plan=outcome_reflect" >> "$GITHUB_OUTPUT" ;;
-            esac
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" = "13" ]; then
+              echo "plan=predict" >> "$GITHUB_OUTPUT"
+            elif [ "$HOUR" = "21" ]; then
+              echo "plan=outcome_reflect" >> "$GITHUB_OUTPUT"
+            else
+              echo "plan=none" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "plan=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"
           fi
