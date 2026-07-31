@@ -1,0 +1,34 @@
+name: Monthly Memory Distillation
+
+on:
+  schedule:
+    # 1st of month, 11:00 AM ET (15:00 UTC EDT)
+    - cron: '0 15 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  distill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests openai ddgs
+      - name: Rewrite consolidated memory + archive stale lessons
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python -m src.distill_memory
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "auto: monthly memory distillation [$(date -u +%F)]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
