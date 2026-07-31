@@ -1,0 +1,90 @@
+name: Autonomous Daily Market Pipeline
+
+on:
+  schedule:
+    # 9:00 AM ET premarket predict (13:00 UTC in EDT; runs 1h early in EST —
+    # data is timestamped at fetch time, so the drift is harmless)
+    - cron: '0 13 * * 1-5'
+    # 5:00 PM ET postmarket outcome + reflection
+    - cron: '0 21 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: 'predict | outcome | reflect | all'
+        required: true
+        default: 'all'
+      run_date:
+        description: 'YYYY-MM-DD (default: today ET)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests yfinance pandas openai ddgs psycopg2-binary
+
+      - name: Decide stage
+        id: stage
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            case "${{ github.event.schedule }}" in
+              "0 13 * * 1-5") echo "plan=predict" >> "$GITHUB_OUTPUT" ;;
+              "0 21 * * 1-5") echo "plan=outcome_reflect" >> "$GITHUB_OUTPUT" ;;
+            esac
+          else
+            echo "plan=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run prediction stage
+        if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.run_predict ${DATE:+--date "$DATE"}
+
+      - name: Run outcome stage
+        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.run_outcome ${DATE:+--date "$DATE"}
+
+      - name: Run reflection stage
+        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'reflect' || steps.stage.outputs.plan == 'all'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.run_reflect ${DATE:+--date "$DATE"}
+
+      - name: Commit updated logs & scoreboard
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "auto: pipeline run [$(date -u +%F_%H%M)]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
