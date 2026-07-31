@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-07-31T00:08:22.238829-04:00",
+  "fetched_at": "2026-07-31T03:01:11.762106-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -78,40 +78,41 @@
       "date": "2026-07-17",
       "current": 20.54
     },
-    "ratio": 0.832
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 13 days older than VIX (2026-07-17 vs 2026-07-30); ratio suppressed — do not use backwardation rule"
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
-      "date": "2026-07-30",
-      "last": 83.59,
-      "pct_1d": -1.03
+      "date": "2026-07-31",
+      "last": 82.03,
+      "pct_1d": -1.87
     },
     "BZ=F": {
       "available": true,
-      "date": "2026-07-30",
-      "last": 89.03,
-      "pct_1d": -1.88
+      "date": "2026-07-31",
+      "last": 87.53,
+      "pct_1d": -1.68
     },
     "DXY": {
       "available": true,
-      "date": "2026-07-30",
-      "pct_1d": -0.78,
-      "pct_1m": -1.17
+      "date": "2026-07-31",
+      "pct_1d": 0.06,
+      "pct_1m": -1.3
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
-      "date": "2026-07-30",
-      "last": 7472.5,
-      "pct_1d": 1.65
+      "date": "2026-07-31",
+      "last": 7493.0,
+      "pct_1d": 0.27
     },
     "NQ=F": {
       "available": true,
-      "date": "2026-07-30",
-      "last": 28237.75,
-      "pct_1d": 3.28
+      "date": "2026-07-31",
+      "last": 28463.0,
+      "pct_1d": 0.8
     }
   },
   "global_sessions": {
@@ -120,35 +121,35 @@
         "Nikkei": {
           "available": true,
           "date": "2026-07-31",
-          "last": 64156.32,
-          "pct_1d": 3.7
+          "last": 64362.02,
+          "pct_1d": 4.03
         },
         "Hang Seng": {
           "available": true,
           "date": "2026-07-31",
-          "last": 25825.79,
-          "pct_1d": -0.13
+          "last": 25797.92,
+          "pct_1d": -0.24
         },
         "Shanghai": {
           "available": true,
           "date": "2026-07-31",
-          "last": 3833.65,
-          "pct_1d": 0.76
+          "last": 3832.11,
+          "pct_1d": 0.72
         },
         "Kospi": {
           "available": true,
           "date": "2026-07-31",
-          "last": 6378.84,
-          "pct_1d": 14.04
+          "last": 6595.45,
+          "pct_1d": 17.91
         },
         "ASX200": {
           "available": true,
           "date": "2026-07-31",
-          "last": 8980.8,
-          "pct_1d": 0.15
+          "last": 8976.8,
+          "pct_1d": 0.1
         }
       },
-      "composite_avg": 3.7
+      "composite_avg": 4.5
     },
     "europe": {
       "per_index": {
