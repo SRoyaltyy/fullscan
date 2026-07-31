@@ -92,7 +92,18 @@ def fetch_vix() -> dict:
     if vix3m:
         out["vix3m"] = {"date": vix3m[-1]["date"], "current": round(vix3m[-1]["close"], 2)}
     if vix and vix3m and vix3m[-1]["close"]:
-        out["ratio"] = round(vix[-1]["close"] / vix3m[-1]["close"], 3)
+        try:
+            gap = abs((datetime.fromisoformat(vix[-1]["date"])
+                       - datetime.fromisoformat(vix3m[-1]["date"])).days)
+        except ValueError:
+            gap = 999
+        if gap <= 7:
+            out["ratio"] = round(vix[-1]["close"] / vix3m[-1]["close"], 3)
+        else:
+            out["ratio"] = None
+            out["ratio_stale"] = (f"VIX3M quote is {gap} days older than VIX "
+                                  f"({vix3m[-1]['date']} vs {vix[-1]['date']}); "
+                                  "ratio suppressed — do not use backwardation rule")
     return out
 
 
@@ -237,8 +248,11 @@ def to_markdown(data: dict) -> str:
         lines.append(f"[VIX: {vv['current']} as of {vv['date']} | 1d {vv['delta_1d']:+} | 1w {vv['delta_1w']:+}]"
                      .replace("None", "n/a"))
     if v.get("vix3m"):
-        lines.append(f"[VIX3M: {v['vix3m']['current']} | ratio VIX/VIX3M: {v['ratio']}"
-                     f"{' — BACKWARDATION (>1.0)' if (v['ratio'] or 0) > 1.0 else ''}]")
+        ratio_txt = (f"ratio VIX/VIX3M: {v['ratio']}"
+                     f"{' — BACKWARDATION (>1.0)' if (v['ratio'] or 0) > 1.0 else ''}"
+                     if v.get("ratio") is not None
+                     else f"ratio VIX/VIX3M: STALE — {v.get('ratio_stale', 'suppressed')}")
+        lines.append(f"[VIX3M: {v['vix3m']['current']} | {ratio_txt}]")
     for s in ("DGS30", "DGS10", "DFII10", "BAMLH0A0HYM2", "RRPONTSYD", "USEPUINDXD"):
         lines.append(_fmt_delta(s, f.get(s, {})))
     sofr, iorb = f.get("SOFR", {}), f.get("IORB", {})

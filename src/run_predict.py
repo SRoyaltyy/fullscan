@@ -38,11 +38,13 @@ def main() -> None:
                 "Execute the full rubric now. Remember: use web_search for "
                 "ALL six Channel 2 categories before scoring.")
 
-    # 3. LLM with tool loop
+    # 3. LLM with tool loop (full transcript saved for audit)
     text = deepseek_client.chat(
         [{"role": "system", "content": rubric},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_PREDICT, tools=True, max_tokens=8000)
+        model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
+        transcript_path=os.path.join("01_daily/_transcripts",
+                                     f"{date_str}_predict.json"))
 
     # 4. Deterministic scoring
     scores = compute_scores.parse_scores(text)

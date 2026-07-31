@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -52,7 +53,9 @@ def main() -> None:
     text = deepseek_client.chat(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_OUTCOME, tools=True, max_tokens=8000)
+        model=config.MODEL_OUTCOME, tools=True, max_tokens=8000,
+        transcript_path=os.path.join("01_daily/_transcripts",
+                                     f"{date_str}_outcome.json"))
 
     # 3. Verify citations
     claims, verify_md = verifier.verify_outcome(text)

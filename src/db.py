@@ -16,26 +16,37 @@ def _conn():
 
 
 def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
-    """Last-N-hours rows from the `news` table (rss/newsapi collectors)."""
+    """Last-N-hours rows from the `news` table (rss/newsapi collectors).
+    Tries `collected_at` first, falls back to `published_at` ordering —
+    the table schema comes from migrations, so be liberal."""
     conn = _conn()
     if conn is None:
         return []
+    queries = [
+        """SELECT source, title, url, published_at
+           FROM news
+           WHERE collected_at >= NOW() - INTERVAL '%s hours'
+           ORDER BY collected_at DESC LIMIT %s""",
+        """SELECT source, title, url, published_at
+           FROM news
+           ORDER BY published_at DESC LIMIT %s""",
+    ]
     try:
         cur = conn.cursor()
-        cur.execute(
-            """SELECT source, title, url, published_at
-               FROM news
-               WHERE collected_at >= NOW() - INTERVAL '%s hours'
-               ORDER BY collected_at DESC
-               LIMIT %s""",
-            (hours, limit),
-        )
-        rows = [{"source": s, "title": t, "url": u, "published_at": str(p)}
-                for s, t, u, p in cur.fetchall()]
+        for i, q in enumerate(queries):
+            try:
+                params = (hours, limit) if i == 0 else (limit,)
+                cur.execute(q, params)
+                rows = [{"source": s, "title": t, "url": u,
+                         "published_at": str(p)}
+                        for s, t, u, p in cur.fetchall()]
+                cur.close()
+                if rows or i == 1:
+                    return rows
+            except Exception as e:  # noqa: BLE001
+                conn.rollback()
+                print(f"[db] news query variant {i} failed: {e}")
         cur.close()
-        return rows
-    except Exception as e:  # noqa: BLE001
-        print(f"[db] news query failed: {e}")
         return []
     finally:
         conn.close()
