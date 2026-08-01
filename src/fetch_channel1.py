@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -31,7 +32,8 @@ def _yf_history(symbol: str, days: int = 45) -> list[dict]:
         hist = yf.Ticker(symbol).history(period=f"{days}d", interval="1d")
         out = [{"date": str(idx.date()), "open": float(row["Open"]),
                 "close": float(row["Close"])}
-               for idx, row in hist.iterrows()]
+               for idx, row in hist.iterrows()
+               if row["Open"] == row["Open"] and row["Close"] == row["Close"]]
         return out
     except Exception as e:  # noqa: BLE001
         print(f"[ch1] yfinance {symbol} failed: {e}")
@@ -39,7 +41,10 @@ def _yf_history(symbol: str, days: int = 45) -> list[dict]:
 
 
 def _pct(a: float, b: float) -> float | None:
-    return round((a / b - 1) * 100, 2) if b else None
+    if not b:
+        return None
+    r = round((a / b - 1) * 100, 2)
+    return None if math.isnan(r) else r
 
 
 def _fred(series_id: str) -> list[tuple[str, float]]:
@@ -142,8 +147,9 @@ def _composite(symbols: dict) -> dict:
     for sym, name in symbols.items():
         b = _pct_block(sym)
         per[name] = b
-        if b.get("available") and b.get("pct_1d") is not None:
-            vals.append(b["pct_1d"])
+        p = b.get("pct_1d")
+        if b.get("available") and p is not None and not math.isnan(p):
+            vals.append(p)
     return {"per_index": per,
             "composite_avg": round(sum(vals) / len(vals), 2) if vals else None}
 
@@ -188,16 +194,25 @@ def fetch_fear_greed() -> dict:
         return {"available": False, "note": f"fetch failed: {e}"}
 
 
-def fetch_actual_close() -> dict:
-    """Outcome stage: actual index results for today."""
+def fetch_actual_close(date_str: str | None = None) -> dict:
+    """Outcome stage: actual index results. If date_str is given, pin to that
+    trading day so past outcomes can be re-graded correctly; otherwise use
+    the latest session."""
     out = {}
     for sym, name in (("^GSPC", "SPX"), ("^DJI", "DOW"), ("^IXIC", "NDX")):
-        h = _yf_history(sym, days=5)
-        if len(h) >= 2:
-            out[name] = {"date": h[-1]["date"], "open": round(h[-1]["open"], 2),
-                         "close": round(h[-1]["close"], 2),
-                         "pct_change": _pct(h[-1]["close"], h[-2]["close"]),
-                         "prev_close": round(h[-2]["close"], 2)}
+        h = _yf_history(sym, days=15)
+        idx = None
+        if date_str:
+            for i, row in enumerate(h):
+                if row["date"] == date_str:
+                    idx = i
+        if idx is None:
+            idx = len(h) - 1  # fallback: latest session
+        if idx >= 1:
+            out[name] = {"date": h[idx]["date"], "open": round(h[idx]["open"], 2),
+                         "close": round(h[idx]["close"], 2),
+                         "pct_change": _pct(h[idx]["close"], h[idx - 1]["close"]),
+                         "prev_close": round(h[idx - 1]["close"], 2)}
         else:
             out[name] = {"available": False}
     return out
@@ -209,7 +224,7 @@ def fetch_news_block() -> dict:
 
 
 # ------------------------------------------------------------------ assembly
-def build(stage: str) -> dict:
+def build(stage: str, date_str: str | None = None) -> dict:
     data = {
         "stage": stage,
         "fetched_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
@@ -226,7 +241,7 @@ def build(stage: str) -> dict:
         "news_24h": fetch_news_block(),
     }
     if stage == "outcome":
-        data["actual_close"] = fetch_actual_close()
+        data["actual_close"] = fetch_actual_close(date_str)
     return data
 
 
@@ -306,7 +321,7 @@ def save(data: dict, date_str: str, stage: str) -> str:
     os.makedirs(config.CHANNEL1_DIR, exist_ok=True)
     path = os.path.join(config.CHANNEL1_DIR, f"{date_str}_{stage}.json")
     with open(path, "w", encoding="utf-8") as fh:
-        json.dump(data, fh, indent=2, ensure_ascii=False)
+        json.dump(data, fh, indent=2, ensure_ascii=False, allow_nan=False)
     return path
 
 

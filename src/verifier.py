@@ -12,7 +12,7 @@ import requests
 CLAIM_RE = re.compile(
     r"CLAIM:\s*(?P<claim>.+?)\s*\n\s*URL:\s*(?P<url>\S+)\s*\n\s*PUBLISHED:\s*"
     r"(?P<pub>.+?)\s*\n\s*QUOTE:\s*(?P<quote>.+?)\s*\n\s*SUMMARY:\s*"
-    r"(?P<summary>.+?)(?=\n\s*(?:CLAIM:|OUTCOME_BEGIN|$))", re.S)
+    r"(?P<summary>[^\n]+)", re.S)
 
 
 def extract_claims(text: str) -> list[dict]:

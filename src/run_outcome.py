@@ -33,11 +33,23 @@ def main() -> None:
     if not config.DEEPSEEK_API_KEY:
         raise SystemExit("DEEPSEEK_API_KEY not set")
 
-    # 1. Actual close (deterministic)
-    ch1 = fetch_channel1.build("outcome")
+    # 1. Actual close (deterministic) — pinned to the target date
+    ch1 = fetch_channel1.build("outcome", date_str)
     fetch_channel1.save(ch1, date_str, "outcome")
     actual = ch1["actual_close"]
     spx_pct = actual.get("SPX", {}).get("pct_change")
+
+    # 1b. Archived MORNING channel1 — the LLM must grade B-scores against
+    # these numbers, never against the fresh post-close data above.
+    morning_md = "(archived morning Channel 1 not found)"
+    try:
+        import json
+        with open(os.path.join(config.CHANNEL1_DIR,
+                               f"{date_str}_predict.json"),
+                  encoding="utf-8") as fh:
+            morning_md = fetch_channel1.to_markdown(json.load(fh))
+    except (OSError, ValueError) as e:
+        print(f"[outcome] morning channel1 load failed: {e}")
 
     # 2. LLM review
     predict_md = _read(os.path.join(config.DAILY_GENERAL,
@@ -47,6 +59,10 @@ def main() -> None:
         prompt = fh.read()
     user_msg = (f"TODAY: {date_str}\n\n"
                 f"=== MORNING PREDICTION ===\n{predict_md}\n\n"
+                f"=== MORNING CHANNEL 1 (archived premarket data — when judging "
+                f"whether each morning B-score was right, quote THESE numbers; "
+                f"the fresh data below is post-close and must NOT be used to "
+                f"re-describe the morning readings) ===\n{morning_md}\n\n"
                 f"{fetch_channel1.to_markdown(ch1)}\n\n"
                 "Execute the post-market review now. Every factual claim MUST "
                 "use the CLAIM/URL/PUBLISHED/QUOTE/SUMMARY format.")
