@@ -20,18 +20,107 @@
         "B7_OIL_DOLLAR": -0.5
       },
       "leading_sum": -4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7462.13,
+      "actual_close": 7489.72,
+      "actual_pct_change": 0.7,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -0.5,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": []
+      "sources_used": [
+        {
+          "url": "https://www.cnbc.com/2026/07/30/stock-market-today-live-updates.html",
+          "date_accessed": "2026-07-31",
+          "summary": "CNBC confirmed the exact closing figures, attributing the rally to Amazon's surge and revived AI-trade optimism.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-07-30/stock-market-today-dow-s-p-live-updates",
+          "date_accessed": "2026-07-31",
+          "summary": "Bloomberg reported that Amazon's strength dominated the session, offsetting Apple's decline and lifting megacap tech broadly.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-31-2026",
+          "date_accessed": "2026-07-31",
+          "summary": "TheStreet confirmed the closing figures and noted that oil's gain outpaced stocks for the day, yet equities still finished higher.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-july-31-dow-sp-500-nasdaq-081227738.html",
+          "date_accessed": "2026-07-31",
+          "summary": "Yahoo Finance reported that AI-trade optimism, reignited by Big Tech earnings, drove the week's positive close.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/07/31/oil-prices-today-brent-wti-hormuz-trump-iran-.html",
+          "date_accessed": "2026-07-31",
+          "summary": "CNBC confirmed the oil spike from renewed Hormuz tanker attacks, a headwind that nonetheless failed to derail the equity rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-07-30/stock-market-today-dow-s-p-live-updates",
+          "date_accessed": "2026-07-31",
+          "summary": "Bloomberg noted that strong earnings outweighed inflation concerns that had pressured the bond market.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-073126",
+          "date_accessed": "2026-07-31",
+          "summary": "Barron's highlighted that despite Friday's gain, July was a historically weak month for the Nasdaq and S&P 500.\n\n---\n\n## 3. Component-by-Component Comparison (B0–B7)\n\n**B0 (Global Overnight):** Mornin",
+          "verification": "http_401"
+        }
+      ]
     }
   ]
 }

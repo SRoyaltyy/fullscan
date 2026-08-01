@@ -1,0 +1,405 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-07-31T22:53:12.590147-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 5.21,
+      "delta_1d": 0.01,
+      "delta_1w": 0.04,
+      "delta_1m": 0.3
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 4.68,
+      "delta_1d": 0.01,
+      "delta_1w": -0.03,
+      "delta_1m": 0.24
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 2.41,
+      "delta_1d": 0.0,
+      "delta_1w": -0.02,
+      "delta_1m": 0.21
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 2.84,
+      "delta_1d": -0.03,
+      "delta_1w": 0.07,
+      "delta_1m": 0.1
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.01,
+      "delta_1m": -0.03
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-07-31",
+      "current": 2.151,
+      "delta_1d": 1.075,
+      "delta_1w": 1.476,
+      "delta_1m": 1.15
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 310.2,
+      "delta_1d": 88.87,
+      "delta_1w": 16.43,
+      "delta_1m": 26.76
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-07-31",
+      "current": 15.99,
+      "delta_1d": -1.1,
+      "delta_1w": -2.59
+    },
+    "vix3m": {
+      "date": "2026-07-31",
+      "current": 19.02
+    },
+    "ratio": 0.841
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 86.8,
+      "pct_1d": 3.84
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 90.12,
+      "pct_1d": 1.22
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-07-31",
+      "pct_1d": -0.21,
+      "pct_1m": -1.57
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 7503.5,
+      "pct_1d": 0.41
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 28287.0,
+      "pct_1d": 0.17
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 64362.02,
+          "pct_1d": 4.03
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 25884.43,
+          "pct_1d": 0.1
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 3832.26,
+          "pct_1d": 0.72
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 6595.45,
+          "pct_1d": 17.91
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 8976.8,
+          "pct_1d": 0.1
+        }
+      },
+      "composite_avg": 4.57
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 10868.1,
+          "pct_1d": -0.27
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 25629.24,
+          "pct_1d": 0.07
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 8509.64,
+          "pct_1d": 0.28
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 6358.01,
+          "pct_1d": 0.21
+        }
+      },
+      "composite_avg": 0.07
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": 0.316,
+    "window": "2026-07-24..2026-07-31"
+  },
+  "fear_greed": {
+    "available": false,
+    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "newsapi_Investopedia",
+        "title": "Fed Keeps Interest Rates Steady And Leaves Future Plans A Mystery",
+        "url": "https://www.investopedia.com/fed-meeting-july-live-12029481",
+        "published_at": "2026-07-29T16:22:59Z"
+      },
+      {
+        "source": "newsapi_BeInCrypto",
+        "title": "Play the Ball, Says Warsh as Fed Keeps Inflation Front and Center; SPY, Bonds React",
+        "url": "https://beincrypto.com/warsh-play-the-ball-fed-inflation/",
+        "published_at": "2026-07-29T19:33:35Z"
+      },
+      {
+        "source": "newsapi_Crypto Briefing",
+        "title": "The 30-year U.S. treasury yield has climbed to its highest level since 2007",
+        "url": "https://cryptobriefing.com/the-30-year-us-treasury-yield-has-climbed-to-its-highest-level-since-2007/",
+        "published_at": "2026-07-29T20:33:51Z"
+      },
+      {
+        "source": "newsapi_The Times of India",
+        "title": "Gold edges higher as markets weigh Warsh's inflation message after Fed decision",
+        "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-edges-higher-as-markets-weigh-warshs-inflation-message-after-fed-decision/articleshow/132724739.cms",
+        "published_at": "2026-07-30T01:46:40Z"
+      },
+      {
+        "source": "newsapi_BusinessLine",
+        "title": "Nifty trades flat in narrow band; IT leads, banks drag",
+        "url": "https://www.thehindubusinessline.com/markets/stock-markets/nifty-trades-flat-in-narrow-band-it-leads-banks-drag/article71284972.ece",
+        "published_at": "2026-07-30T08:00:59Z"
+      },
+      {
+        "source": "newsapi_Bitcoinfoundation.org",
+        "title": "Fed Holds Rates: Here’s What the Decision Means for Bitcoin, Ethereum and Altcoins in August",
+        "url": "https://bitcoinfoundation.org/news/altcoins/fed-holds-rates-heres-what-the-decision-means-for-bitcoin-ethereum-and-altcoins-in-august/",
+        "published_at": "2026-07-30T13:35:17Z"
+      },
+      {
+        "source": "newsapi_Reason",
+        "title": "The Bond Market Is Unhappy With the Federal Reserve's Unwillingness To Fight Inflation",
+        "url": "https://reason.com/2026/07/30/the-bond-market-is-unhappy-with-the-federal-reserves-unwillingness-to-fight-inflation/",
+        "published_at": "2026-07-30T17:26:26Z"
+      },
+      {
+        "source": "newsapi_Yahoo Entertainment",
+        "title": "Dress Your Portfolio for Success with Reformation IPO",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/dress-portfolio-success-reformation-ipo-162243096.html",
+        "published_at": "2026-07-30T16:22:43Z"
+      },
+      {
+        "source": "newsapi_Yahoo Entertainment",
+        "title": "Dress Your Portfolio for Success with Reformation IPO",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/dress-your-portfolio-for-success-with-reformation-ipo-162243096.html",
+        "published_at": "2026-07-30T16:22:43Z"
+      },
+      {
+        "source": "newsapi_Advfn.com",
+        "title": "Mastercard stock climbs after Q2 earnings beat",
+        "url": "https://investorshub.advfn.com/market-news/article/33130/mastercard-stock-q2-2026-earnings-beat",
+        "published_at": "2026-07-30T16:23:03Z"
+      },
+      {
+        "source": "newsapi_Barchart.com",
+        "title": "Intel Just Posted Its Best Revenue Growth in 15 Years. Here’s What It Means for INTC Stock.",
+        "url": "https://www.barchart.com/story/news/3556940/intel-just-posted-its-best-revenue-growth-in-15-years-heres-what-it-means-for-intc-stock",
+        "published_at": "2026-07-30T16:31:16Z"
+      },
+      {
+        "source": "newsapi_Yahoo Entertainment",
+        "title": "AMD Fell 8% as China Unveils New Technology — the Real Risk Is the Multiple, Not the Lithography",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amd-fell-8-china-unveils-163317303.html",
+        "published_at": "2026-07-30T16:33:17Z"
+      },
+      {
+        "source": "newsapi_Crypto Briefing",
+        "title": "Meta CEO signals plans to monetize AI computing capacity",
+        "url": "https://cryptobriefing.com/meta-ceo-monetize-ai-computing-capacity/",
+        "published_at": "2026-07-30T16:37:35Z"
+      },
+      {
+        "source": "newsapi_Forkast.news",
+        "title": "Samsung’s $200 Billion Broadcom Deal Is a Bid to Break TSMC’s AI Foundry Lock",
+        "url": "https://forkast.news/samsungs-200-billion-broadcom-deal-is-a-bid-to-break-tsmcs-ai-foundry-lock/",
+        "published_at": "2026-07-30T16:46:03Z"
+      },
+      {
+        "source": "newsapi_Moby.co",
+        "title": "Euronet Worldwide, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-euronet-worldwide-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss",
+        "published_at": "2026-07-30T16:46:14Z"
+      },
+      {
+        "source": "newsapi_TheStreet",
+        "title": "Wells Fargo sees a massive number in Snowflake's future",
+        "url": "https://www.thestreet.com/investing/stocks/wells-fargo-snowflake-snow-stock-highest-price-target-500",
+        "published_at": "2026-07-30T16:47:00Z"
+      },
+      {
+        "source": "newsapi_Barchart.com",
+        "title": "CRWV Stock Alert: What to Know as CoreWeave Teams Up With Leidos",
+        "url": "https://www.barchart.com/story/news/3557351/crwv-stock-alert-what-to-know-as-coreweave-teams-up-with-leidos",
+        "published_at": "2026-07-30T16:51:12Z"
+      },
+      {
+        "source": "newsapi_Thurrott.com",
+        "title": "Microsoft Earnings Analysis: Hide Me The Money ⭐",
+        "url": "https://www.thurrott.com/microsoft/339880/microsoft-earnings-analysis-hide-me-the-money",
+        "published_at": "2026-07-30T16:51:58Z"
+      },
+      {
+        "source": "newsapi_Barchart.com",
+        "title": "Why a New Core Scientific Deal Is a Big Win for AMD Stock",
+        "url": "https://www.barchart.com/story/news/3557368/why-a-new-core-scientific-deal-is-a-big-win-for-amd-stock",
+        "published_at": "2026-07-30T16:53:45Z"
+      },
+      {
+        "source": "newsapi_Investopedia",
+        "title": "Tech Earnings, July 30, 2026: Sales, Profits at Amazon, Apple Beat Estimates as Mag 7 Results Continue",
+        "url": "https://www.investopedia.com/tech-earnings-today-apple-amazon-set-to-report-aapl-amzn-magnificent-7-12030700",
+        "published_at": "2026-07-30T16:55:16Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Icon Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/icon-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-07-30T17:04:24Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "HUTCHMED H1 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/hutchmed-h1-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-07-30T17:04:24Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Landmark Bancorp Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/landmark-bancorp-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-07-30T17:04:25Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Industrial Logistics Properties Trust Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/industrial-logistics-properties-trust-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-07-30T17:04:25Z"
+      },
+      {
+        "source": "newsapi_TheStreet",
+        "title": "Morgan Stanley warns SpaceX approaching its most dangerous moment",
+        "url": "https://www.thestreet.com/investing/stocks/spcx-spacex-morgan-stanley-morgan-stanley-maintains-overweight-but-warns-of-100b-lockup-share-unlock",
+        "published_at": "2026-07-30T17:17:00Z"
+      },
+      {
+        "source": "newsapi_Crypto Briefing",
+        "title": "ASE Technology raises 2026 capex by $2B as AI demand proves ‘insatiable’",
+        "url": "https://cryptobriefing.com/ase-technology-raises-2026-capex-ai-demand/",
+        "published_at": "2026-07-30T17:18:32Z"
+      },
+      {
+        "source": "newsapi_Barchart.com",
+        "title": "Bloom Energy Is Rising as AI Power Demand Strengthens. Only Buy BE Stock If You Can Stomach the Valuation.",
+        "url": "https://www.barchart.com/story/news/3557992/bloom-energy-is-rising-as-ai-power-demand-strengthens-only-buy-be-stock-if-you-can-stomach-the-valuation",
+        "published_at": "2026-07-30T17:26:20Z"
+      },
+      {
+        "source": "newsapi_24/7 Wall St.",
+        "title": "Bloom Energy Soars 28%, FuelCell Energy Rockets 27% as Q2 Results Sink In and Mizuho Upgrades",
+        "url": "https://247wallst.com/investing/2026/07/30/bloom-energy-soars-28-fuelcell-energy-rockets-27-as-q2-results-sink-in-and-mizuho-upgrades/",
+        "published_at": "2026-07-30T17:26:34Z"
+      },
+      {
+        "source": "newsapi_24/7 Wall St.",
+        "title": "Prediction: Where Will Rambus End The Year?",
+        "url": "https://247wallst.com/investing/2026/07/30/prediction-where-will-rambus-end-the-year/",
+        "published_at": "2026-07-30T17:30:49Z"
+      },
+      {
+        "source": "newsapi_Trefis",
+        "title": "Adobe Stock Trades Below The Market On Earnings While Its Growth Engine Is Being Rebuilt",
+        "url": "https://www.trefis.com/articles/609509/adobe-stock-trades-below-the-market-on-earnings-while-its-growth-engine-is-being-rebuilt/2026-07-30",
+        "published_at": "2026-07-30T17:32:06Z"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-07-31",
+      "open": 7462.13,
+      "close": 7489.72,
+      "pct_change": 0.7,
+      "prev_close": 7437.63
+    },
+    "DOW": {
+      "date": "2026-07-31",
+      "open": 52235.03,
+      "close": 52485.03,
+      "pct_change": 0.53,
+      "prev_close": 52208.06
+    },
+    "NDX": {
+      "date": "2026-07-31",
+      "open": 25340.71,
+      "close": 25373.85,
+      "pct_change": 1.0,
+      "prev_close": 25122.18
+    }
+  }
+}
