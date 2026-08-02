@@ -12,7 +12,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import (compute_scores, config, deepseek_client, fetch_channel1,
-               memory, scoreboard)
+               memory, scoreboard, snapshot)
 
 
 def main() -> None:
@@ -36,25 +36,33 @@ def main() -> None:
     user_msg = (f"TODAY: {date_str} (America/New_York)\n\n"
                 f"{memory.prediction_context()}\n\n{ch1_md}\n\n"
                 "Execute the full rubric now. Remember: use web_search for "
-                "ALL six Channel 2 categories before scoring.")
+                "ALL six Channel 2 categories before scoring.\n"
+                "In the SCORES block, also include these three lines:\n"
+                "GOOD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
+                "BAD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
+                "UNCERTAINTY_LEVEL: <low|moderate|elevated|high>")
 
-    # 3. LLM with tool loop (full transcript saved for audit)
+    # 3. LLM with tool loop (full transcript + readable trace saved)
     text = deepseek_client.chat(
         [{"role": "system", "content": rubric},
          {"role": "user", "content": user_msg}],
         model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
         transcript_path=os.path.join("01_daily/_transcripts",
-                                     f"{date_str}_predict.json"))
+                                     f"{date_str}_predict.json"),
+        trace_path=os.path.join(config.DAILY_GENERAL,
+                                f"{date_str}_predict_trace.md"),
+        stage_label=f"PREDICT {date_str}")
 
     # 4. Deterministic scoring
     scores = compute_scores.parse_scores(text)
     decision = compute_scores.compute(scores)
 
-    # 5. Write prediction file
+    # 5. Write prediction file (human-readable snapshot first)
     os.makedirs(config.DAILY_GENERAL, exist_ok=True)
     path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Premarket Prediction — {date_str}\n\n")
+        fh.write(snapshot.predict_snapshot(decision, scores, ch1))
         fh.write(text)
         fh.write("\n\n---\n## Pipeline-computed decision (deterministic)\n\n")
         fh.write(f"- total_score: **{decision['total_score']}** "

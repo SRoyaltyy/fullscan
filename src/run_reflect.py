@@ -12,7 +12,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import config, deepseek_client, memory, scoreboard
+from . import config, deepseek_client, memory, scoreboard, snapshot
 
 
 def _read(path: str) -> str:
@@ -74,11 +74,16 @@ def main() -> None:
     text = deepseek_client.chat(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_REFLECT, tools=False, max_tokens=8000)
+        model=config.MODEL_REFLECT, tools=False, max_tokens=8000,
+        transcript_path=os.path.join("01_daily/_transcripts",
+                                     f"{date_str}_reflect.json"),
+        trace_path=os.path.join(config.DAILY_GENERAL,
+                                f"{date_str}_reflect_trace.md"),
+        stage_label=f"REFLECT {date_str}")
 
     lb = _parse_lesson_block(text)
 
-    # candidate lesson file (yaml frontmatter per spec)
+    # candidate lesson file (yaml frontmatter + human snapshot per spec)
     os.makedirs(config.LESSONS_CANDIDATE, exist_ok=True)
     lesson_path = os.path.join(config.LESSONS_CANDIDATE,
                                f"{date_str}_lesson.md")
@@ -91,7 +96,9 @@ def main() -> None:
         fh.write(f"error_category: \"{lb.get('ERROR_CATEGORY', 'NONE')}\"\n")
         fh.write(f"date: \"{date_str}\"\n")
         fh.write("status: \"candidate\"\n---\n\n")
-        fh.write(f"# Reflection — {date_str}\n\n{text}\n")
+        fh.write(f"# Reflection — {date_str}\n\n")
+        fh.write(snapshot.reflect_snapshot(lb, entry))
+        fh.write(text + "\n")
 
     entry["reflection_lesson_ref"] = lesson_path
     dv = lb.get("DIVERGENCE_VERDICT")

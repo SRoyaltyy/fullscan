@@ -13,7 +13,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import (compute_scores, config, deepseek_client, fetch_channel1,
-               scoreboard, verifier)
+               scoreboard, snapshot, verifier)
 
 
 def _read(path: str) -> str:
@@ -71,25 +71,43 @@ def main() -> None:
          {"role": "user", "content": user_msg}],
         model=config.MODEL_OUTCOME, tools=True, max_tokens=8000,
         transcript_path=os.path.join("01_daily/_transcripts",
-                                     f"{date_str}_outcome.json"))
+                                     f"{date_str}_outcome.json"),
+        trace_path=os.path.join(config.DAILY_GENERAL,
+                                f"{date_str}_outcome_trace.md"),
+        stage_label=f"OUTCOME {date_str}")
 
     # 3. Verify citations
     claims, verify_md = verifier.verify_outcome(text)
 
-    # 4. Write outcome file
-    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write(f"# Post-Market Outcome — {date_str}\n\n")
-        fh.write(text)
-        fh.write(verify_md + "\n")
-
-    # 5. Grade prediction in scoreboard
+    # 4. Grade prediction (needed for the snapshot, so before writing)
+    board = scoreboard.load()
+    entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
+    grade = None
     if spx_pct is not None:
-        board = scoreboard.load()
-        entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
         grade = compute_scores.grade(entry.get("predicted_direction") or "flat",
                                      entry.get("predicted_magnitude_band")
                                      or "flat", spx_pct)
+
+    # 5. Write outcome file (human-readable snapshot first)
+    ob = snapshot.parse_kv_block(text, "OUTCOME_BEGIN", "OUTCOME_END")
+    snap_entry = dict(entry)
+    if grade is not None:
+        snap_entry.update({
+            "actual_pct_change": spx_pct,
+            "actual_direction": grade["actual_direction"],
+            "actual_magnitude_band": grade["actual_magnitude_band"],
+            "direction_hit": grade["direction_hit"],
+            "magnitude_hit": grade["magnitude_hit"],
+        })
+    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(f"# Post-Market Outcome — {date_str}\n\n")
+        fh.write(snapshot.outcome_snapshot(snap_entry, ob, claims))
+        fh.write(text)
+        fh.write(verify_md + "\n")
+
+    # 6. Scoreboard
+    if grade is not None:
         entry.update({
             "actual_open": actual["SPX"].get("open"),
             "actual_close": actual["SPX"].get("close"),
