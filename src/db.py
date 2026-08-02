@@ -17,8 +17,9 @@ def _conn():
 
 def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
     """Last-N-hours rows from the `news` table (rss/newsapi collectors).
-    Tries `collected_at` first, falls back to `published_at` ordering —
-    the table schema comes from migrations, so be liberal."""
+    Market-relevant sources are ranked first. Tries `collected_at` first,
+    falls back to `published_at` ordering — the table schema comes from
+    migrations, so be liberal."""
     conn = _conn()
     if conn is None:
         return []
@@ -26,10 +27,18 @@ def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
         """SELECT source, title, url, published_at
            FROM news
            WHERE collected_at >= NOW() - INTERVAL '%s hours'
-           ORDER BY collected_at DESC LIMIT %s""",
+           ORDER BY CASE WHEN lower(source) ~
+                '(market|financ|cnbc|macro|business|bloomberg|reuters|wsj|stock|econom)'
+                THEN 0 ELSE 1 END,
+                collected_at DESC
+           LIMIT %s""",
         """SELECT source, title, url, published_at
            FROM news
-           ORDER BY published_at DESC LIMIT %s""",
+           ORDER BY CASE WHEN lower(source) ~
+                '(market|financ|cnbc|macro|business|bloomberg|reuters|wsj|stock|econom)'
+                THEN 0 ELSE 1 END,
+                published_at DESC
+           LIMIT %s""",
     ]
     try:
         cur = conn.cursor()

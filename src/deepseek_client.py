@@ -32,7 +32,7 @@ SEARCH_TOOL = {
 def _searxng(query: str, max_results: int) -> list[dict]:
     r = requests.get(f"{config.SEARXNG_URL}/search",
                      params={"q": query, "format": "json"},
-                     timeout=20)
+                     timeout=10)
     r.raise_for_status()
     return [{"title": x.get("title"), "url": x.get("url"),
              "snippet": x.get("content")}
@@ -91,11 +91,13 @@ def _post(payload: dict, retries: int = 4) -> dict:
 
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
-         transcript_path: str | None = None) -> str:
+         transcript_path: str | None = None,
+         trace_path: str | None = None, stage_label: str = "") -> str:
     """Chat completion; if tools=True, runs a web_search tool loop and
     returns the final assistant text. If transcript_path is set, the FULL
     conversation (every tool call + every search result + final answer) is
-    dumped there as JSON for audit."""
+    dumped there as JSON for audit. If trace_path is set, a human-readable
+    step-by-step reasoning log is written there as Markdown."""
     import copy
     import os
 
@@ -105,6 +107,18 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         payload["tools"] = [SEARCH_TOOL]
         payload["tool_choice"] = "auto"
 
+    trace = [f"# Reasoning trace — {stage_label or 'llm run'}", ""]
+    sys_chars = sum(len(str(m.get('content') or '')) for m in messages)
+    trace.append(f"**Step 0 — Setup.** Loaded the rubric, standing lessons, "
+                 f"and Channel 1 data ({sys_chars:,} characters of input). "
+                 f"Model: `{model}`. "
+                 + ("Web search is ENABLED; the model must research current "
+                    "events before judging." if tools else
+                    "Web search is disabled for this stage; the model works "
+                    "only from the documents it was given."))
+    trace.append("")
+
+    step = 0
     final = None
     for _round in range(config.MAX_TOOL_ROUNDS if tools else 1):
         payload["messages"] = messages
@@ -114,16 +128,42 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         if not calls:
             final = msg.get("content") or ""
             messages.append({"role": "assistant", "content": final})
+            step += 1
+            trace.append(f"**Step {step} — Done researching.** The model "
+                         f"stopped searching and wrote its full analysis "
+                         f"({len(final):,} characters).")
             break
+        step += 1
         messages.append({"role": "assistant", "content": msg.get("content"),
                          "tool_calls": calls})
         for call in calls:
             args = json.loads(call["function"]["arguments"] or "{}")
-            result = web_search(args.get("query", ""))
+            q = args.get("query", "")
+            result = web_search(q)
+            try:
+                parsed = json.loads(result)
+                n = len(parsed.get("results", []))
+                if parsed.get("error"):
+                    trace.append(f"**Step {step} — Research.** The model "
+                                 f"wanted to know: *\"{q}\"* → ❌ search "
+                                 f"failed ({parsed['error'][:120]})")
+                else:
+                    trace.append(f"**Step {step} — Research.** The model "
+                                 f"wanted to know: *\"{q}\"* → got {n} "
+                                 f"results (via {parsed.get('backend', '?')})")
+                    for it in parsed.get("results", [])[:3]:
+                        trace.append(f"  - {it.get('title', '?')} "
+                                     f"({it.get('url', '')})")
+            except ValueError:
+                trace.append(f"**Step {step} — Research.** searched "
+                             f"*\"{q}\"* (unparsed result)")
+            step += 1
             messages.append({"role": "tool", "tool_call_id": call["id"],
                              "content": result})
     if final is None:
         # tool budget exhausted -> one final no-tool answer
+        trace.append(f"**Step {step + 1} — Search budget exhausted.** Forced "
+                     "to conclude with what it already gathered.")
         payload.pop("tools", None)
         payload.pop("tool_choice", None)
         resp = _post(payload)
@@ -139,4 +179,11 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                           indent=2, ensure_ascii=False, default=str)
         except OSError as e:
             print(f"[transcript] save failed: {e}")
+    if trace_path:
+        try:
+            os.makedirs(os.path.dirname(trace_path), exist_ok=True)
+            with open(trace_path, "w", encoding="utf-8") as fh:
+                fh.write("\n\n".join(trace) + "\n")
+        except OSError as e:
+            print(f"[trace] save failed: {e}")
     return final
