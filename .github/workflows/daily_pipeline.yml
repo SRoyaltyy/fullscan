@@ -3,7 +3,7 @@ name: Autonomous Daily Market Pipeline
 on:
   schedule:
     # 8:17 PM HKT (12:17 UTC) - prediction - runs every day (0-6 = Sun-Sat)
-    - cron: '17 12 * * 0-6'
+    - cron: '34 11 * * 0-6'
     # 5:03 AM HKT (21:03 UTC previous day) - outcome - runs every day (0-6 = Sun-Sat)
     - cron: '3 21 * * 0-6'
   workflow_dispatch:
