@@ -88,14 +88,18 @@ def fetch_fred_block() -> dict:
 
 
 def fetch_vix() -> dict:
-    vix, vix3m = _yf_history("^VIX"), _yf_history("^VIX3M")
+    vix = _yf_history("^VIX")
+    vix3m, vix3m_src = _yf_history("^VIX3M"), "^VIX3M"
+    if not vix3m:  # ^VIX3M is frequently unavailable/stale on Yahoo
+        vix3m, vix3m_src = _yf_history("^VXV"), "^VXV (fallback)"
     out = {"vix": {}, "vix3m": {}, "ratio": None}
     if vix:
         out["vix"] = {"date": vix[-1]["date"], "current": round(vix[-1]["close"], 2),
                       "delta_1d": round(vix[-1]["close"] - vix[-2]["close"], 2) if len(vix) > 1 else None,
                       "delta_1w": round(vix[-1]["close"] - vix[-6]["close"], 2) if len(vix) > 5 else None}
     if vix3m:
-        out["vix3m"] = {"date": vix3m[-1]["date"], "current": round(vix3m[-1]["close"], 2)}
+        out["vix3m"] = {"date": vix3m[-1]["date"], "current": round(vix3m[-1]["close"], 2),
+                        "source": vix3m_src}
     if vix and vix3m and vix3m[-1]["close"]:
         try:
             gap = abs((datetime.fromisoformat(vix[-1]["date"])
@@ -123,8 +127,17 @@ def _pct_block(symbol: str) -> dict:
 
 def fetch_commodities_fx() -> dict:
     dxy = _yf_history("DX-Y.NYB", days=45)
+    gold = _pct_block("GC=F")
+    if not gold.get("available"):  # Yahoo fallback: Supabase GOLD series
+        rows = db.macro_series("GOLD", limit=3)
+        if len(rows) >= 2:
+            gold = {"available": True, "date": rows[-1][0],
+                    "last": round(rows[-1][1], 2),
+                    "pct_1d": _pct(rows[-1][1], rows[-2][1]),
+                    "note": "from Supabase macro_indicators"}
     return {
         "CL=F": _pct_block("CL=F"), "BZ=F": _pct_block("BZ=F"),
+        "GC=F": gold,
         "DXY": ({"available": True, "date": dxy[-1]["date"],
                  "pct_1d": _pct(dxy[-1]["close"], dxy[-2]["close"]),
                  "pct_1m": _pct(dxy[-1]["close"], dxy[-22]["close"])}
@@ -179,8 +192,22 @@ def fetch_yield_spx_corr() -> dict:
             "window": f"{common[0]}..{common[-1]}"}
 
 
+_FG_LABELS = [(25, "Extreme Fear"), (45, "Fear"), (55, "Neutral"),
+              (75, "Greed"), (101, "Extreme Greed")]
+
+
+def _fg_label(v: float) -> str:
+    for hi, lab in _FG_LABELS:
+        if v < hi:
+            return lab
+    return "Extreme Greed"
+
+
 def fetch_fear_greed() -> dict:
-    """CNN Fear & Greed — always flagged as prior-close snapshot."""
+    """CNN Fear & Greed direct first; Supabase macro_indicators fallback
+    (the macro_sentiment collector writes cnn_fg daily), since CNN blocks
+    GitHub runner IPs with HTTP 418."""
+    err = None
     try:
         r = requests.get(
             "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
@@ -191,7 +218,16 @@ def fetch_fear_greed() -> dict:
                 "label": fg.get("rating"),
                 "note": "prior-close snapshot, not live"}
     except Exception as e:  # noqa: BLE001
-        return {"available": False, "note": f"fetch failed: {e}"}
+        err = e
+    rows = db.macro_series("FEAR_GREED", limit=3)
+    if rows:
+        d, v = rows[-1]
+        return {"available": True, "value": round(v, 1),
+                "label": _fg_label(v),
+                "note": f"from Supabase macro_indicators as of {d} "
+                        f"(CNN direct blocked: {err})"}
+    return {"available": False,
+            "note": f"fetch failed: {err}; no Supabase fallback data"}
 
 
 def fetch_actual_close(date_str: str | None = None) -> dict:
@@ -277,7 +313,7 @@ def to_markdown(data: dict) -> str:
     else:
         lines.append("[SOFR-IORB spread: UNAVAILABLE]")
     cf = data["commodities_fx"]
-    for sym in ("CL=F", "BZ=F"):
+    for sym in ("CL=F", "BZ=F", "GC=F"):
         b = cf.get(sym, {})
         lines.append(f"[{sym}: {b.get('pct_1d')}% 1d]" if b.get("available")
                      else f"[{sym}: UNAVAILABLE]")
@@ -331,7 +367,7 @@ def main():
     ap.add_argument("--date", default=None)
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
-    data = build(args.stage)
+    data = build(args.stage, args.date)
     path = save(data, date_str, args.stage)
     print(to_markdown(data))
     print(f"\n[saved] {path}")
