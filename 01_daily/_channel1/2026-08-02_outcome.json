@@ -1,0 +1,232 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-02T18:04:42.029031-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 5.21,
+      "delta_1d": 0.01,
+      "delta_1w": 0.04,
+      "delta_1m": 0.3
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 4.68,
+      "delta_1d": 0.01,
+      "delta_1w": -0.03,
+      "delta_1m": 0.24
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 2.41,
+      "delta_1d": 0.0,
+      "delta_1w": -0.02,
+      "delta_1m": 0.21
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 2.84,
+      "delta_1d": -0.03,
+      "delta_1w": 0.07,
+      "delta_1m": 0.1
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.01,
+      "delta_1m": -0.03
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-07-31",
+      "current": 2.151,
+      "delta_1d": 1.075,
+      "delta_1w": 1.476,
+      "delta_1m": 1.15
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 310.2,
+      "delta_1d": 88.87,
+      "delta_1w": 16.43,
+      "delta_1m": 26.76
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-07-31",
+      "current": 15.99,
+      "delta_1d": -1.1,
+      "delta_1w": -2.59
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 14 days older than VIX (2026-07-17 vs 2026-07-31); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 84.67,
+      "pct_1d": 1.29
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 90.12,
+      "pct_1d": 1.22
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 4107.0,
+      "pct_1d": 0.17
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-07-31",
+      "pct_1d": -0.21,
+      "pct_1m": -1.57
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 7519.25,
+      "pct_1d": 0.63
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-07-31",
+      "last": 28404.25,
+      "pct_1d": 0.59
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 64362.02,
+          "pct_1d": 4.03
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 25884.43,
+          "pct_1d": 0.1
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 3832.26,
+          "pct_1d": 0.72
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 6595.45,
+          "pct_1d": 17.91
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 8976.8,
+          "pct_1d": 0.1
+        }
+      },
+      "composite_avg": 4.57
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 10868.1,
+          "pct_1d": -0.27
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 25629.24,
+          "pct_1d": 0.07
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 8509.64,
+          "pct_1d": 0.28
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-07-31",
+          "last": 6358.01,
+          "pct_1d": 0.21
+        }
+      },
+      "composite_avg": 0.07
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": 0.316,
+    "window": "2026-07-24..2026-07-31"
+  },
+  "fear_greed": {
+    "available": false,
+    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": false,
+    "count": 0,
+    "items": []
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-07-31",
+      "open": 7462.13,
+      "close": 7489.72,
+      "pct_change": 0.7,
+      "prev_close": 7437.63
+    },
+    "DOW": {
+      "date": "2026-07-31",
+      "open": 52235.03,
+      "close": 52485.03,
+      "pct_change": 0.53,
+      "prev_close": 52208.06
+    },
+    "NDX": {
+      "date": "2026-07-31",
+      "open": 25340.71,
+      "close": 25373.85,
+      "pct_change": 1.0,
+      "prev_close": 25122.18
+    }
+  }
+}

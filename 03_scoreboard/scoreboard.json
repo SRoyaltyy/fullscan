@@ -121,6 +121,78 @@
           "verification": "http_401"
         }
       ]
+    },
+    {
+      "date": "2026-08-02",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7462.13,
+      "actual_close": 7489.72,
+      "actual_pct_change": 0.7,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-02_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html",
+          "date_accessed": "2026-08-02",
+          "summary": "Amazon's blowout earnings, driven by accelerating AWS growth and massive AI capex commitment, powered a historic single-day stock surge that lifted the entire market.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/07/30/stock-market-today-live-updates.html",
+          "date_accessed": "2026-08-02",
+          "summary": "CNBC confirmed the exact closing figures, noting the market finished the final session of July in the green despite a volatile month.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-july-31-dow-sp-500-nasdaq-081227738.html",
+          "date_accessed": "2026-08-02",
+          "summary": "Apple's disappointing Services and China performance triggered a 7% selloff, but the Amazon surge more than offset the drag.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/07/31/treasury-yields-inflation-interest-rates-federal-reserve.html",
+          "date_accessed": "2026-08-02",
+          "summary": "Rising oil prices from renewed Middle East tensions pushed Treasury yields to multi-month highs, yet equities shrugged off the bond-market pressure.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-july-31-dow-sp-500-nasdaq-081227738.html",
+          "date_accessed": "2026-08-02",
+          "summary": "Unprecedented AI capital expenditure commitments across Big Tech validated the AI trade and drove the tech-led rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/07/30/stock-market-today-live-updates.html",
+          "date_accessed": "2026-08-02",
+          "summary": "Despite intra-month turbulence, the Dow extended its winning streak to four months while the Nasdaq's monthly decline highlighted the rotation dynamics within the market.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://watcher.guru/news/amazon-amzn-stock-surges-15-aws-drives-quarterly-growth",
+          "date_accessed": "2026-08-02",
+          "summary": "Amazon's massive AI-driven backlog and record operating income provided the fundamental justification for the stock's historic surge.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://infiniteunknown.net/2026/07/31/5-279-all-hell-is-breaking-loose-in-the-bond-market-as-30-year-treasury-yields-explode-72-basis-points-to-nearly-quarter-century-highs/",
+          "date_accessed": "2026-08-02",
+          "summary": "The 30-year yield's surge to multi-decade highs signaled severe bond-market stress, yet equities managed to rally through the headwind.",
+          "verification": "http_403"
+        }
+      ]
     }
   ]
 }
