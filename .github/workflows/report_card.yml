@@ -1,0 +1,32 @@
+name: Weekly Engine Report Card
+
+on:
+  schedule:
+    # Sundays 6:13 PM ET (22:13 UTC in EDT) — after the week's reflections
+    - cron: '13 22 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  report-card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate report card (pure arithmetic, no API keys needed)
+        run: python -m src.report_card
+
+      - name: Commit report card
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 03_scoreboard/report_card.md
+          git commit -m "auto: weekly report card [$(date -u +%F)]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
