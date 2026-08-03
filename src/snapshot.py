@@ -154,6 +154,22 @@ def outcome_snapshot(entry: dict, ob: dict, claims: list[dict]) -> str:
     lines.append(f"> - Magnitude call: {'✅ CORRECT' if mh else '❌ WRONG'}")
     if ob.get("DOMINANT_DRIVER"):
         lines.append(f"> - What actually drove the day: {ob['DOMINANT_DRIVER']}")
+    if entry.get("path_shape") or ob.get("PATH_SHAPE"):
+        lines.append(f"> - Intraday path: "
+                     f"{entry.get('path_shape') or ob.get('PATH_SHAPE')}")
+    if ob.get("KEY_INTERACTION"):
+        lines.append(f"> - Key interaction: {ob['KEY_INTERACTION']}")
+    if ob.get("KNOWABLE_AT_9AM"):
+        know = ob["KNOWABLE_AT_9AM"].lower()
+        tag = ("⚠️ not foreseeable premarket" if know.startswith("no")
+               else "partly foreseeable" if know.startswith("part")
+               else "foreseeable premarket")
+        lines.append(f"> - 9AM foreseeability: {tag}")
+    if (ob.get("ATTRIBUTION_CONTESTED") or "").lower().startswith("yes"):
+        lines.append("> - ⚠️ Attribution contested: major outlets disagree "
+                     "on what drove the day — treat the driver story as uncertain")
+    if ob.get("OUTLIER_WATCH"):
+        lines.append(f"> - What didn't fit: {ob['OUTLIER_WATCH']}")
     if ob.get("MORNING_READ_VERDICT"):
         lines.append(f"> - Verdict on the morning read: "
                      f"{ob['MORNING_READ_VERDICT']}")
@@ -170,8 +186,8 @@ def outcome_snapshot(entry: dict, ob: dict, claims: list[dict]) -> str:
 CATEGORY_PLAIN = {
     "A": "Missing evidence — the data needed was not fetched or not found",
     "B": "Misweighted evidence — the facts were seen but given the wrong weight",
-    "C": "Wrong regime call — the market-regime classification was off",
-    "D": "Timing/execution issue — right idea, wrong moment or stale data",
+    "C": "Miscalibrated confidence — scores were right, uncertainty multiplier was off",
+    "D": "Upstream data/tool failure — reasoning was fine, inputs were missing/stale/wrong",
     "NONE": "No error — the call was essentially right",
 }
 
@@ -191,6 +207,17 @@ def reflect_snapshot(lb: dict, entry: dict) -> str:
         lines.append(">")
         lines.append(f"> **What the engine should do instead:** "
                      f"{lb['CORRECTED_BEHAVIOR']}")
+    if lb.get("FALSIFIER"):
+        lines.append(">")
+        lines.append(f"> **This lesson is wrong if:** {lb['FALSIFIER']}")
+    if lb.get("BACKWARD_CHECK"):
+        lines.append(">")
+        lines.append(f"> **Would have helped on recent similar days?** "
+                     f"{lb['BACKWARD_CHECK']}")
+    if lb.get("LESSON_MATCH_CHECK") and \
+            not lb["LESSON_MATCH_CHECK"].lower().startswith("no match"):
+        lines.append(">")
+        lines.append(f"> **⚠️ Lesson retrieval check:** {lb['LESSON_MATCH_CHECK']}")
     lines.append("")
     lines.append("---")
     lines.append("")
