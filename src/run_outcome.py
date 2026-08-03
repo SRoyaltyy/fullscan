@@ -69,7 +69,7 @@ def main() -> None:
     text = deepseek_client.chat(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_OUTCOME, tools=True, max_tokens=8000,
+        model=config.MODEL_OUTCOME, tools=True, max_tokens=12000,
         transcript_path=os.path.join("01_daily/_transcripts",
                                      f"{date_str}_outcome.json"),
         trace_path=os.path.join(config.DAILY_GENERAL,
@@ -99,6 +99,7 @@ def main() -> None:
             "direction_hit": grade["direction_hit"],
             "magnitude_hit": grade["magnitude_hit"],
         })
+    snap_entry["path_shape"] = (actual.get("SPX", {}).get("path", {}) or {}).get("shape")
     path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Post-Market Outcome — {date_str}\n\n")
@@ -116,6 +117,12 @@ def main() -> None:
             "actual_magnitude_band": grade["actual_magnitude_band"],
             "direction_hit": grade["direction_hit"],
             "magnitude_hit": grade["magnitude_hit"],
+            "path_shape": (actual.get("SPX", {}).get("path", {}) or {}).get("shape"),
+            "primary_driver": ob.get("PRIMARY_DRIVER") or ob.get("DOMINANT_DRIVER"),
+            "key_interaction": ob.get("KEY_INTERACTION"),
+            "knowable_at_9am": ob.get("KNOWABLE_AT_9AM"),
+            "attribution_contested": ob.get("ATTRIBUTION_CONTESTED"),
+            "outlier_watch": ob.get("OUTLIER_WATCH"),
             "per_factor_breakdown": compute_scores.per_factor_breakdown(
                 entry.get("components") or {}, spx_pct),
             "sources_used": [{"url": c["url"], "date_accessed": date_str,

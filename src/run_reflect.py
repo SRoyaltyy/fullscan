@@ -7,6 +7,7 @@ CLI: python -m src.run_reflect [--date YYYY-MM-DD]
 from __future__ import annotations
 
 import argparse
+import glob
 import os
 import re
 from datetime import datetime
@@ -32,6 +33,22 @@ def _parse_lesson_block(text: str) -> dict:
             k, v = line.split(":", 1)
             out[k.strip()] = v.strip()
     return out
+
+
+def _candidate_lesson_triggers(limit: int = 12) -> str:
+    """Trigger patterns + categories of recent candidate lessons — injected so
+    CHECK 1 (lesson match) and CHECK 2 (backward test) have real material."""
+    files = sorted(glob.glob(os.path.join(config.LESSONS_CANDIDATE, "*.md")))
+    rows = []
+    for p in files[-limit:]:
+        head = _read(p)[:800]
+        trig = re.search(r'trigger_pattern:\s*"(.*?)"', head)
+        cat = re.search(r'error_category:\s*"(.*?)"', head)
+        date = re.search(r'date:\s*"(.*?)"', head)
+        rows.append(f"- {date.group(1) if date else os.path.basename(p)} "
+                    f"[{cat.group(1) if cat else '?'}]: "
+                    f"{trig.group(1) if trig else '(no trigger recorded)'}")
+    return "\n".join(rows) or "(no candidate lessons yet)"
 
 
 def main() -> None:
@@ -68,13 +85,18 @@ def main() -> None:
         f"{entry['actual_pct_change']}% ({entry['actual_direction']}/"
         f"{entry['actual_magnitude_band']}) | divergence_flagged: "
         f"{entry['divergence_flagged']}\n\n"
+        f"=== RECENT SCOREBOARD HISTORY (for CHECK 2 backward test) ===\n"
+        f"{memory.scoreboard_summary()}\n\n"
+        f"=== RECENT CANDIDATE LESSON TRIGGERS (for CHECK 1 lesson match) ===\n"
+        f"{_candidate_lesson_triggers()}\n\n"
         f"=== STANDING ACTIVE LESSONS ===\n{memory.active_lessons()}\n\n"
-        "Execute the diagnostic now.")
+        "Execute the diagnostic now. Answer all five mandatory checks "
+        "explicitly, in order.")
 
     text = deepseek_client.chat(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_REFLECT, tools=False, max_tokens=8000,
+        model=config.MODEL_REFLECT, tools=False, max_tokens=12000,
         transcript_path=os.path.join("01_daily/_transcripts",
                                      f"{date_str}_reflect.json"),
         trace_path=os.path.join(config.DAILY_GENERAL,
@@ -94,6 +116,10 @@ def main() -> None:
         fh.write(f"corrected_behavior: \"{lb.get('CORRECTED_BEHAVIOR', '')}\"\n")
         fh.write(f"evidence_cited: \"{lb.get('EVIDENCE', '')}\"\n")
         fh.write(f"error_category: \"{lb.get('ERROR_CATEGORY', 'NONE')}\"\n")
+        fh.write(f"falsifier: \"{lb.get('FALSIFIER', '')}\"\n")
+        fh.write(f"backward_check: \"{lb.get('BACKWARD_CHECK', '')}\"\n")
+        fh.write(f"conflict_check: \"{lb.get('CONFLICT_CHECK', '')}\"\n")
+        fh.write(f"lesson_match_check: \"{lb.get('LESSON_MATCH_CHECK', '')}\"\n")
         fh.write(f"date: \"{date_str}\"\n")
         fh.write("status: \"candidate\"\n---\n\n")
         fh.write(f"# Reflection — {date_str}\n\n")
