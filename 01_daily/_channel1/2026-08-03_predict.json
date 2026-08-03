@@ -1,0 +1,392 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-03T09:41:40.311855-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 5.21,
+      "delta_1d": 0.01,
+      "delta_1w": 0.04,
+      "delta_1m": 0.3
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 4.68,
+      "delta_1d": 0.01,
+      "delta_1w": -0.03,
+      "delta_1m": 0.24
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 2.41,
+      "delta_1d": 0.0,
+      "delta_1w": -0.02,
+      "delta_1m": 0.21
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-07-30",
+      "current": 2.84,
+      "delta_1d": -0.03,
+      "delta_1w": 0.07,
+      "delta_1m": 0.1
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-07-31",
+      "current": 3.66,
+      "delta_1d": 0.01,
+      "delta_1w": 0.02,
+      "delta_1m": 0.0
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-07-31",
+      "current": 2.151,
+      "delta_1d": 1.075,
+      "delta_1w": 1.476,
+      "delta_1m": 1.15
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-02",
+      "current": 452.78,
+      "delta_1d": 211.68,
+      "delta_1w": 184.48,
+      "delta_1m": 124.73
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-03",
+      "current": 16.02,
+      "delta_1d": 0.03,
+      "delta_1w": -2.65
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 17 days older than VIX (2026-07-17 vs 2026-08-03); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-03",
+      "last": 78.97,
+      "pct_1d": -6.73
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-03",
+      "last": 83.28,
+      "pct_1d": -7.59
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-03",
+      "last": 4088.6,
+      "pct_1d": 0.98
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-03",
+      "pct_1d": -0.07,
+      "pct_1m": -1.12
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-03",
+      "last": 7548.25,
+      "pct_1d": 0.39
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-03",
+      "last": 28345.25,
+      "pct_1d": -0.21
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 63754.9,
+          "pct_1d": -0.94
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 26009.4,
+          "pct_1d": 0.48
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 3809.66,
+          "pct_1d": -0.59
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 6257.45,
+          "pct_1d": -5.12
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 9019.3,
+          "pct_1d": 0.47
+        }
+      },
+      "composite_avg": -1.14
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 10863.72,
+          "pct_1d": -0.04
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 25988.21,
+          "pct_1d": 1.4
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 8609.99,
+          "pct_1d": 1.18
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 6411.93,
+          "pct_1d": 0.85
+        }
+      },
+      "composite_avg": 0.85
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": 0.143,
+    "window": "2026-07-27..2026-08-03"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 42.5,
+    "label": "Fear",
+    "note": "from Supabase macro_indicators as of 2026-08-01 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Why genocide keeps repeating in Sudan",
+        "url": "https://www.aljazeera.com/opinions/2026/8/3/why-genocide-keeps-repeating-in-sudan?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 13:00:40 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Weekly Stock List",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_47803_StockPicks_1785758464000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-03T12:01:04Z"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending",
+        "url": "https://www.cnbc.com/2026/08/03/china-price-demand-tourism-hotel.html",
+        "published_at": "Mon, 03 Aug 2026 10:32:09 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Private credit has dodged public scrutiny for too long — and regulators need to step in",
+        "url": "https://www.marketwatch.com/story/private-credit-has-dodged-public-scrutiny-for-too-long-and-regulators-need-to-step-in-9ebb1d8c?mod=mw_rss_topstories",
+        "published_at": "Mon, 03 Aug 2026 11:00:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Israel defies Trump’s peace plan as it escalates deadly attacks on Gaza",
+        "url": "https://www.aljazeera.com/news/2026/8/3/israel-defies-trumps-peace-plan-as-it-escalates-deadly-attacks-on-gaza?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 10:53:47 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Shopify (SHOP): Evolution from E-Commerce Platform to AI Operating System",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/shopify-shop-evolution-e-commerce-130323593.html",
+        "published_at": "2026-08-03T13:03:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: Moody's Corp",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_3648_AnalystReport_1785755814000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-03T11:16:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "MakeMyTrip Q1 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/makemytrip-q1-earnings-call-highlights-130210788.html",
+        "published_at": "2026-08-03T13:02:10Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Gold is still in its ‘explosive phase,’ says Deutsche Bank, as it sticks to year-end target",
+        "url": "https://www.marketwatch.com/story/gold-is-still-in-its-explosive-phase-says-deutsche-bank-as-it-sticks-to-year-end-target-fc5bc13a?mod=mw_rss_topstories",
+        "published_at": "Mon, 03 Aug 2026 12:36:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "SpaceX’s first-ever earnings report is a big deal — but not because of the numbers",
+        "url": "https://www.marketwatch.com/story/spacexs-first-ever-earnings-report-is-a-big-deal-but-not-because-of-the-numbers-9e53bc43?mod=mw_rss_topstories",
+        "published_at": "Mon, 03 Aug 2026 11:54:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Who will shape post-war Iran?",
+        "url": "https://www.aljazeera.com/opinions/2026/8/3/who-will-shape-post-war-iran?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 12:11:03 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Ukraine strikes Russia’s biggest retailer again",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/3/08-03-2026-ukraine-strikes-wildberies-russia?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 11:03:23 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "BofA crowns monitoring platform top software pick before earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bofa-crowns-monitoring-platform-top-130300143.html",
+        "published_at": "2026-08-03T13:03:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Earnings live updates: Marriott stock falls as Middle East drags, Trump brothers-backed American Bitcoin swings to loss",
+        "url": "https://finance.yahoo.com/markets/live/earnings-live-updates-130425228.html",
+        "published_at": "2026-08-03T13:04:25Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Exploring Unmatched Scale of GE Vernova (GEV)",
+        "url": "https://finance.yahoo.com/energy/articles/exploring-unmatched-scale-ge-vernova-115925359.html",
+        "published_at": "2026-08-03T11:59:25Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What Makes Veeva Systems (VEEV) the Picks and Shovels of Drug Development?",
+        "url": "https://finance.yahoo.com/healthcare/articles/makes-veeva-systems-veev-picks-115815746.html",
+        "published_at": "2026-08-03T11:58:15Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Agnico Eagle Mines Eyes 20%-30% Gold Production Growth Through Organic Expansion",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/agnico-eagle-mines-eyes-20-130210578.html",
+        "published_at": "2026-08-03T13:02:10Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Market Digest: CME, FHI, MCO, NEM, SO, MDLZ, HOOD",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_47793_MarketSummary_1785755814000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-03T11:16:54Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "JPMorgan says Warsh failure to buttress Fed credibility may force a rate hike before year-end",
+        "url": "https://www.marketwatch.com/story/jpmorgan-says-warsh-failure-to-buttress-fed-credibility-may-force-a-rate-hike-before-year-end-e14e5821?mod=mw_rss_topstories",
+        "published_at": "Mon, 03 Aug 2026 13:06:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: Southern Co/The",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_3398_AnalystReport_1785755814000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-03T11:16:54Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "An AstraZeneca, Bristol Myers Squibb merger could create a cancer-drug giant, but analysts call it ‘odd’",
+        "url": "https://www.marketwatch.com/story/astrazeneca-tie-up-talks-with-bristol-myers-squibb-are-moving-stocks-analysts-are-puzzled-7ae60fef?mod=mw_rss_topstories",
+        "published_at": "Mon, 03 Aug 2026 12:13:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The gap between big tech and the rest of the market just vanished. Here’s what it means for investors.",
+        "url": "https://www.marketwatch.com/story/the-gap-between-big-tech-and-the-rest-of-the-market-just-vanished-heres-what-it-means-for-investors-e783d2dc?mod=mw_rss_topstories",
+        "published_at": "Mon, 03 Aug 2026 12:10:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Detained Myanmar leader Suu Kyi  has first foreign visitor in five years",
+        "url": "https://www.aljazeera.com/news/2026/8/3/detained-myanmar-leader-suu-kyi-has-first-foreign-visitor-in-five-years?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 12:56:43 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Protests, boycott cast shadow on Pakistan-administered Kashmir election",
+        "url": "https://www.aljazeera.com/news/2026/8/3/protests-boycott-cast-shadow-on-pakistan-administered-kashmir-election?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 12:27:27 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Palestine’s new ambassador to Spain calls for deeper friendship",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/3/palestines-new-ambassador-to-spain-calls-for-deeper-friendship?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 12:09:19 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Pakistan-administered Kashmir elections and protests – all you need to know",
+        "url": "https://www.aljazeera.com/news/2026/8/3/pakistan-administered-kashmir-elections-and-protests-all-you-need-to-know?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 11:51:30 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US cricket player Reddy receives eight-year ban for match-fixing",
+        "url": "https://www.aljazeera.com/sports/2026/8/3/us-cricket-player-reddy-receives-eight-year-ban-for-match-fixing?traffic_source=rss",
+        "published_at": "Mon, 03 Aug 2026 10:52:17 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AstraZeneca Stock Nosedives On Mega-Merger Rumor",
+        "url": "https://www.investors.com/news/technology/astrazeneca-stock-bristol-myers-squibb-rumored-deal/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-03T13:14:31Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bitcoin and ethereum prices today, Monday, August 3, 2026: Prices pulling back this morning despite de-escalation with Iran",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-august-3-2026-prices-pulling-back-this-morning-despite-de-escalation-with-iran-131220661.html",
+        "published_at": "2026-08-03T13:12:20Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Do you own America's most stolen car? What your insurance won't cover.",
+        "url": "https://finance.yahoo.com/personal-finance/insurance/article/most-stolen-car-in-the-us-130000998.html",
+        "published_at": "2026-08-03T13:00:00Z"
+      }
+    ]
+  }
+}

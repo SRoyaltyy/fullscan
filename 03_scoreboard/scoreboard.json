@@ -193,6 +193,39 @@
           "verification": "http_403"
         }
       ]
+    },
+    {
+      "date": "2026-08-03",
+      "topic": "general",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.65,
+      "total_score": 3.75,
+      "multiplier": 1.0,
+      "components": {
+        "B0_ASIA": -1.0,
+        "B0_EUROPE": 0.5,
+        "B1_CATALYSTS": 2.0,
+        "B2_BONDS": -0.5,
+        "B3_FEDPATH": -0.5,
+        "B4_VIX": 0.0,
+        "B5_SENTIMENT": -0.5,
+        "B6_FUTURES": 0.5,
+        "B7_OIL_DOLLAR": 1.0
+      },
+      "leading_sum": 4.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": []
     }
   ]
 }
