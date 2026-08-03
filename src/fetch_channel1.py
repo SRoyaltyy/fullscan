@@ -26,11 +26,12 @@ FRED_SERIES = ["DGS30", "DGS10", "DFII10", "BAMLH0A0HYM2", "SOFR", "IORB",
 
 # ------------------------------------------------------------------ helpers
 def _yf_history(symbol: str, days: int = 45) -> list[dict]:
-    """[(date, open, close)] ascending via yfinance; [] on failure."""
+    """[(date, open, high, low, close)] ascending via yfinance; [] on failure."""
     try:
         import yfinance as yf
         hist = yf.Ticker(symbol).history(period=f"{days}d", interval="1d")
         out = [{"date": str(idx.date()), "open": float(row["Open"]),
+                "high": float(row["High"]), "low": float(row["Low"]),
                 "close": float(row["Close"])}
                for idx, row in hist.iterrows()
                if row["Open"] == row["Open"] and row["Close"] == row["Close"]]
@@ -230,6 +231,37 @@ def fetch_fear_greed() -> dict:
             "note": f"fetch failed: {err}; no Supabase fallback data"}
 
 
+def _path_shape(row: dict, prev_close: float) -> dict:
+    """Deterministic intraday path classification from OHLC — no LLM.
+    Catches V-shapes / reversals that an open-to-close % hides."""
+    o, h, l, c = row["open"], row["high"], row["low"], row["close"]
+    if not prev_close:
+        return {"shape": "unknown"}
+    rng = h - l
+    if rng <= 0:
+        return {"shape": "flat", "range_pct": 0.0}
+    low_pct = _pct(l, prev_close)
+    high_pct = _pct(h, prev_close)
+    # position of close within the day's range: 0 = closed at low, 1 = at high
+    pos = (c - l) / rng
+    dipped = low_pct is not None and low_pct < -0.4
+    spiked = high_pct is not None and high_pct > 0.4
+    if dipped and pos > 0.7:
+        shape = "V-shape (deep intraday drop, closed near high)"
+    elif spiked and pos < 0.3:
+        shape = "reversal down (intraday spike faded, closed near low)"
+    elif pos > 0.8:
+        shape = "trend up (closed near day high)"
+    elif pos < 0.2:
+        shape = "trend down (closed near day low)"
+    else:
+        shape = "choppy / range-bound"
+    return {"shape": shape,
+            "range_pct": round(_pct(h, l) or 0.0, 2),
+            "intraday_low_pct": low_pct, "intraday_high_pct": high_pct,
+            "close_position_in_range": round(pos, 2)}
+
+
 def fetch_actual_close(date_str: str | None = None) -> dict:
     """Outcome stage: actual index results. If date_str is given, pin to that
     trading day so past outcomes can be re-graded correctly; otherwise use
@@ -245,10 +277,14 @@ def fetch_actual_close(date_str: str | None = None) -> dict:
         if idx is None:
             idx = len(h) - 1  # fallback: latest session
         if idx >= 1:
+            prev = h[idx - 1]["close"]
             out[name] = {"date": h[idx]["date"], "open": round(h[idx]["open"], 2),
+                         "high": round(h[idx]["high"], 2),
+                         "low": round(h[idx]["low"], 2),
                          "close": round(h[idx]["close"], 2),
-                         "pct_change": _pct(h[idx]["close"], h[idx - 1]["close"]),
-                         "prev_close": round(h[idx - 1]["close"], 2)}
+                         "pct_change": _pct(h[idx]["close"], prev),
+                         "prev_close": round(prev, 2),
+                         "path": _path_shape(h[idx], prev)}
         else:
             out[name] = {"available": False}
     return out
@@ -347,9 +383,18 @@ def to_markdown(data: dict) -> str:
     if "actual_close" in data:
         lines.append("\n=== ACTUAL CLOSE DATA ===")
         for name, b in data["actual_close"].items():
-            lines.append(f"[{name}: open {b.get('open')}, close {b.get('close')}, "
-                         f"{b.get('pct_change')}% vs prev close {b.get('prev_close')}]"
-                         if b.get("open") else f"[{name}: UNAVAILABLE]")
+            if b.get("open"):
+                p = b.get("path", {})
+                lines.append(f"[{name}: open {b.get('open')}, high {b.get('high')}, "
+                             f"low {b.get('low')}, close {b.get('close')}, "
+                             f"{b.get('pct_change')}% vs prev close {b.get('prev_close')}]")
+                if p:
+                    lines.append(f"[{name} PATH: {p.get('shape')} | day range "
+                                 f"{p.get('range_pct')}% | intraday low "
+                                 f"{p.get('intraday_low_pct')}% | intraday high "
+                                 f"{p.get('intraday_high_pct')}%]")
+            else:
+                lines.append(f"[{name}: UNAVAILABLE]")
     return "\n".join(lines)
 
 
