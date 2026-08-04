@@ -348,18 +348,119 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 6.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7630.62,
+      "actual_close": 7736.52,
+      "actual_pct_change": 1.79,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": []
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 2.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-04_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-08-04/bessent-suggests-us-iran-hormuz-deal-possible-in-coming-days",
+          "date_accessed": "2026-08-04",
+          "summary": "Bessent's mid-session CNBC comment was the day's dominant intraday catalyst.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/equities/26/08/60920438/tocks-hit-records-palantir-earnings-oil-sink-hormuz-deal-hopes-markets-tuesday",
+          "date_accessed": "2026-08-04",
+          "summary": "Palantir's blowout was a major same-day tech catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08042026-12033322",
+          "date_accessed": "2026-08-04",
+          "summary": "CAT's beat was a major Dow driver.",
+          "verification": "http_402"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/04/oil-rises-after-selloff-as-talks-to-end-us-iran-war-remain-uncertain.html",
+          "date_accessed": "2026-08-04",
+          "summary": "The oil collapse was the direct manifestation of the Hormuz deal hopes.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://phemex.com/blogs/oil-crashes-5-percent-trump-cancels-strikes-iran-talks",
+          "date_accessed": "2026-08-04",
+          "summary": "The oil crash reduced Fed hike pressure, supporting the rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/tech/26/08/60929876/semiconductor-best-four-day-rally-since-2020-five-stocks-driving-the-move",
+          "date_accessed": "2026-08-04",
+          "summary": "The chip comeback powered the Nasdaq's record-setting rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.businessinsider.com/big-short-michael-burry-stock-market-selloff-prediction-volatility-2026-8",
+          "date_accessed": "2026-08-04",
+          "summary": "A contrarian bearish voice that had no market impact on a record-rally day.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.aljazeera.com/news/liveblog/2026/8/4/iran-war-live-tehran-denies-us-talks-as-trump-warns-of-last-chance",
+          "date_accessed": "2026-08-04",
+          "summary": "The tanker hit was a minor negative that the deal optimism swamped.",
+          "verification": "quote_not_found"
+        }
+      ],
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "Bessent's mid-session CNBC comment that a US-Iran Hormuz deal could come \"today or tomorrow,\" sending oil -6% and stocks to record highs",
+      "key_interaction": "Bessent Hormuz comment → oil -6% → Fed hike odds compression → bond rally → equity record close — one geopolitical catalyst amplified through the disinflationary/Fed channel",
+      "knowable_at_9am": "no — the dominant intraday catalyst (Bessent's ~12:20 PM ET Hormuz comment) was unforeseeable premarket",
+      "attribution_contested": "no — outlets agree on Hormuz deal hopes + strong earnings, though they weight earnings vs geopolitics differently",
+      "outlier_watch": "Amazon fell -2.18% and Chevron -2.08% on a record-rally day; gold +2.48% rose alongside stocks (mild safe-haven divergence); Dow PATH was choppy while SPX/NDX trended up"
     }
   ]
 }

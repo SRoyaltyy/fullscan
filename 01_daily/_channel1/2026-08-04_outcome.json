@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-04T18:19:20.293978-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 5.23,
+      "delta_1d": -0.04,
+      "delta_1w": 0.11,
+      "delta_1m": 0.25
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 4.7,
+      "delta_1d": -0.05,
+      "delta_1w": 0.05,
+      "delta_1m": 0.21
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 2.43,
+      "delta_1d": -0.04,
+      "delta_1w": -0.01,
+      "delta_1m": 0.17
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 2.78,
+      "delta_1d": -0.07,
+      "delta_1w": -0.03,
+      "delta_1m": 0.04
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 3.65,
+      "delta_1d": -0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 2.251,
+      "delta_1d": 0.124,
+      "delta_1w": 1.125,
+      "delta_1m": -0.468
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 213.26,
+      "delta_1d": -165.16,
+      "delta_1w": -26.66,
+      "delta_1m": -11.83
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-04",
+      "current": 16.5,
+      "delta_1d": 0.64,
+      "delta_1w": -1.71
+    },
+    "vix3m": {
+      "date": "2026-08-04",
+      "current": 19.34,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.853
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-04",
+      "last": 75.3,
+      "pct_1d": -6.27
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-04",
+      "last": 78.86,
+      "pct_1d": -5.86
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-04",
+      "last": 4133.9,
+      "pct_1d": 2.48
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-04",
+      "pct_1d": -0.08,
+      "pct_1m": -0.96
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-04",
+      "last": 7776.0,
+      "pct_1d": 1.94
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-04",
+      "last": 29820.5,
+      "pct_1d": 3.21
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 63754.9,
+          "pct_1d": -0.94
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 26009.4,
+          "pct_1d": 0.48
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 3809.66,
+          "pct_1d": -0.59
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 6257.45,
+          "pct_1d": -5.12
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 9019.3,
+          "pct_1d": 0.47
+        }
+      },
+      "composite_avg": -1.14
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 10879.38,
+          "pct_1d": 0.2
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 26001.31,
+          "pct_1d": 1.45
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 8613.82,
+          "pct_1d": 1.22
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-03",
+          "last": 6426.5,
+          "pct_1d": 1.08
+        }
+      },
+      "composite_avg": 0.99
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.331,
+    "window": "2026-07-28..2026-08-04"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 57.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-04 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Meta CEO Zuckerberg’s AI Gamble Just Got Dirtier",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/meta-stock-just-got-hammered-130944661.html",
+        "published_at": "2026-08-03T13:09:44Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Indian Oil Subsidiary CPCL Plans 280,000 Bpd Manali Refinery",
+        "url": "https://finance.yahoo.com/energy/articles/indian-oil-subsidiary-cpcl-plans-133000950.html",
+        "published_at": "2026-08-03T13:30:00Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Death toll rises to 87 in India’s flood-stricken Assam",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/aje-onl-nf_death-toll-rises-to-87-in-assam-040826?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 21:03:17 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Argentina grain exports halt as maritime pilots strike over Milei decree",
+        "url": "https://www.aljazeera.com/news/2026/8/4/argentina-grain-exports-halt-as-maritime-pilots-strike-over-milei-decree?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:20:11 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: Huntington Bancshares Inc/OH",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_4046_AnalystReport_1785868186000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-04T18:29:46Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "A $65,000 401(k) projects just $4,300 in annual retirement income — here's why that number is wildly misleading",
+        "url": "https://finance.yahoo.com/markets/options/articles/65-000-401-k-projects-133000640.html",
+        "published_at": "2026-08-03T13:30:00Z"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Michael Burry bets against rally: 'We are near a major top, and possible a 1987-type fall'",
+        "url": "https://www.cnbc.com/2026/08/04/michael-burry-bets-against-rally-we-are-near-a-major-top.html",
+        "published_at": "Tue, 04 Aug 2026 20:43:15 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Funeral for family killed in US strike on Iran’s Qeshm Island",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/funeral-for-family-killed-in-us-strike-on-irans-qeshm-island?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 21:11:50 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "How much of a challenge are wildfires to Europe?",
+        "url": "https://www.aljazeera.com/video/inside-story/2026/8/4/how-much-of-a-challenge-are-wildfires-to-europe?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:34:38 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Shop owners dismantle businesses after Israeli demolition orders",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/shop-owners-dismantle-businesses-after-israeli-demolition-orders?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:26:56 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Do Wall Street Analysts Like Emerson Electric Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-emerson-electric-124937923.html",
+        "published_at": "2026-08-03T12:49:37Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Visa beefs up cybersecurity offerings with $2.4 billion BioCatch deal",
+        "url": "https://finance.yahoo.com/technology/articles/visa-buy-fraud-intelligence-provider-123438441.html",
+        "published_at": "2026-08-03T12:34:38Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Cotton Slipping Back on Monday Morning",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/cotton-slipping-back-monday-morning-123405438.html",
+        "published_at": "2026-08-03T12:34:05Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: Ventas Inc",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_3678_AnalystReport_1785868186000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-04T18:29:46Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "National Guard deployment to Washington, DC will cost US roughly $1.4bn",
+        "url": "https://www.aljazeera.com/news/2026/8/4/national-guard-deployment-to-washington-dc-will-cost-us-roughly-1-4bn?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:59:33 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US says deal on reopening Hormuz close as Iran, Oman hold ‘positive’ talks",
+        "url": "https://www.aljazeera.com/news/2026/8/4/us-says-deal-on-reopening-hormuz-close-as-iran-oman-hold-positive-talks?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:59:32 +0000"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Stocks face their weakest seasonal stretch. Why extreme investor pessimism could limit any selling.",
+        "url": "https://www.marketwatch.com/story/stocks-face-their-weakest-seasonal-stretch-why-extreme-investor-pessimism-could-limit-any-selling-768261e9?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 21:25:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Traders are using options to chase a runaway rebound in stocks, pushing the market even higher",
+        "url": "https://www.marketwatch.com/story/traders-are-using-options-to-chase-a-runaway-rebound-in-stocks-pushing-the-market-even-higher-9b08d4ab?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 21:00:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Six years on, Beirut blast families still await justice",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/six-years-on-beirut-blast-families-still-await-justice?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 21:03:15 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US court deals blow to Trump’s bid to scrap climate grant programme",
+        "url": "https://www.aljazeera.com/news/2026/8/4/us-court-deals-blow-to-trumps-bid-to-scrap-climate-grant-programme?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:35:56 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "‘I wanted to hug whatever remained’: Gaza families’ 3-year wait for funeral",
+        "url": "https://www.aljazeera.com/news/2026/8/4/i-wanted-to-hug-whatever-remained-gaza-families-3-year-wait-for-funeral?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:32:51 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Kosovo finds third wartime mass grave site as officials widen search",
+        "url": "https://www.aljazeera.com/news/2026/8/4/kosovo-finds-third-wartime-mass-grave-site-as-officials-widen-search?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 20:29:02 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "3 Humanoid Robot ETFs to Ride a Speculative Trend",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/3-humanoid-robot-etfs-ride-131000920.html",
+        "published_at": "2026-08-03T13:10:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analyst Report: Nasdaq Inc",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_3821_AnalystReport_1785868186000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-04T18:29:46Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Chevron Stock Moves Higher on Strong Results -Shorting CVX Puts and Calls Works Here",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-stock-moves-higher-strong-131501317.html",
+        "published_at": "2026-08-03T13:15:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "APi Group Corporation (APG): Powering Infrastructure with Precision",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/api-group-corporation-apg-powering-131801377.html",
+        "published_at": "2026-08-03T13:18:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Wheat Starting August with Slight Losses",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/wheat-starting-august-slight-losses-123405953.html",
+        "published_at": "2026-08-03T12:34:05Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Soybeans Falling on Monday Morning",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/soybeans-falling-monday-morning-123405581.html",
+        "published_at": "2026-08-03T12:34:05Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Corn Starting August Trade with Weakness",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/corn-starting-august-trade-weakness-123405096.html",
+        "published_at": "2026-08-03T12:34:05Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Market Update: NDAQ, HBAN, MAS, NOV, TROW, VTR, SNAP, GEHC, RDDT",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_47818_MarketUpdate_1785868186000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-04T18:29:46Z"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-04",
+      "open": 7630.62,
+      "high": 7758.21,
+      "low": 7629.1,
+      "close": 7736.52,
+      "pct_change": 1.79,
+      "prev_close": 7600.5,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 1.69,
+        "intraday_low_pct": 0.38,
+        "intraday_high_pct": 2.07,
+        "close_position_in_range": 0.83
+      }
+    },
+    "DOW": {
+      "date": "2026-08-04",
+      "open": 53641.21,
+      "high": 54272.6,
+      "low": 53641.21,
+      "close": 54085.88,
+      "pct_change": 1.71,
+      "prev_close": 53178.41,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 1.18,
+        "intraday_low_pct": 0.87,
+        "intraday_high_pct": 2.06,
+        "close_position_in_range": 0.7
+      }
+    },
+    "NDX": {
+      "date": "2026-08-04",
+      "open": 26088.04,
+      "high": 26679.91,
+      "low": 26088.04,
+      "close": 26584.99,
+      "pct_change": 2.59,
+      "prev_close": 25913.9,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 2.27,
+        "intraday_low_pct": 0.67,
+        "intraday_high_pct": 2.96,
+        "close_position_in_range": 0.84
+      }
+    }
+  }
+}
