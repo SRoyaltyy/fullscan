@@ -271,13 +271,62 @@
         }
       ],
       "reflection_lesson_ref": "02_lessons/candidate/2026-08-03_lesson.md",
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.theguardian.com/business/2026/aug/03/oil-prices-fall-europe-stock-markets-donald-trump-iran-us-brent-crude",
+          "date_accessed": "2026-08-03",
+          "summary": "The Iran de-escalation was the dominant overnight catalyst driving oil down and equities up.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.theguardian.com/business/2026/aug/03/oil-prices-fall-europe-stock-markets-donald-trump-iran-us-brent-crude",
+          "date_accessed": "2026-08-03",
+          "summary": "Oil's sharp decline was the direct market manifestation of the Iran de-escalation.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://features.financialjuice.com/2026/08/03/stocks-bonds-rise-as-oil-drop-eases-inflation-fears-us-market-wrap/",
+          "date_accessed": "2026-08-03",
+          "summary": "Falling yields and falling oil combined to drive a broad risk-on session.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/03/yen-intervention-us-japan-trump-bessent-katayama.html",
+          "date_accessed": "2026-08-03",
+          "summary": "US-Japan coordinated yen support removed a source of global bond-market stress.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://m-en.yna.co.kr/view/AEN20260803008352320?section=economy-finance/economy",
+          "date_accessed": "2026-08-03",
+          "summary": "The Korean chip unwind was a notable negative but did not spill into US tech.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.morningstar.com/news/marketwatch/2026080342/jpmorgan-says-warsh-failure-to-buttress-fed-credibility-may-force-a-rate-hike-before-year-end",
+          "date_accessed": "2026-08-03",
+          "summary": "The hawkish Fed backdrop was a persistent negative but was overshadowed today by the de-escalation rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/palantir-lifts-annual-outlook-q2-204213785.html",
+          "date_accessed": "2026-08-03",
+          "summary": "Palantir's beat-and-raise was a positive but landed after the close, so it did not drive today's session.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/02/stock-market-today-live-updates.html",
+          "date_accessed": "2026-08-03",
+          "summary": "Tech led the rally, diverging from the Korean chip selloff.",
+          "verification": "quote_not_found"
+        }
+      ],
       "path_shape": "trend up (closed near day high)",
-      "primary_driver": null,
-      "key_interaction": null,
-      "knowable_at_9am": null,
-      "attribution_contested": null,
-      "outlier_watch": null
+      "primary_driver": "Iran de-escalation — Trump called off Iran strikes, oil plunged ~5-7%, triggering a broad disinflationary risk-on rally",
+      "key_interaction": "Iran de-escalation → oil plunge → falling yields → equity relief rally (one geopolitical root driving oil, bonds, and equities in the same direction — classic shared-root amplification)",
+      "knowable_at_9am": "yes — the Iran de-escalation and oil plunge were fully priced premarket (ES +0.69% to +1.51%); direction was foreseeable, though the strength (NDX +2.13%, Dow record) was not",
+      "attribution_contested": "no — every major outlet (Reuters, CNBC, Bloomberg, Guardian) leads with the Iran/oil de-escalation as the driver; secondary framing (durable AI-trade recovery vs. rotation bounce) is contested",
+      "outlier_watch": "US tech rallied +2.13% while Korean chips crashed (Kospi -5.12%, Samsung -8.6%) — the chip unwind did NOT spill into US tech; gold rose +1.6% despite de-escalation; Bitcoin pulled back despite risk-on"
     }
   ]
 }
