@@ -334,11 +334,11 @@
       "predicted_direction": "up",
       "predicted_magnitude_band": "mild",
       "confidence_score": 0.7,
-      "total_score": 5.25,
+      "total_score": 6.25,
       "multiplier": 1.0,
       "components": {
-        "B0_ASIA": -0.5,
-        "B0_EUROPE": 0.5,
+        "B0_ASIA": 0.5,
+        "B0_EUROPE": 0.0,
         "B1_CATALYSTS": 2.0,
         "B2_BONDS": -0.5,
         "B3_FEDPATH": -0.5,
@@ -347,7 +347,7 @@
         "B6_FUTURES": 0.5,
         "B7_OIL_DOLLAR": 1.0
       },
-      "leading_sum": 5.0,
+      "leading_sum": 6.0,
       "actual_open": null,
       "actual_close": null,
       "actual_pct_change": null,

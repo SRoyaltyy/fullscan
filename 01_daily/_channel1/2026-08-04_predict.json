@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-08-04T07:10:00.224766-04:00",
+  "fetched_at": "2026-08-04T09:15:43.517577-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -36,11 +36,11 @@
     },
     "SOFR": {
       "available": true,
-      "date": "2026-07-31",
-      "current": 3.66,
-      "delta_1d": 0.01,
-      "delta_1w": 0.02,
-      "delta_1m": 0.0
+      "date": "2026-08-03",
+      "current": 3.65,
+      "delta_1d": -0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.01
     },
     "IORB": {
       "available": true,
@@ -60,19 +60,19 @@
     },
     "USEPUINDXD": {
       "available": true,
-      "date": "2026-08-02",
-      "current": 452.78,
-      "delta_1d": 211.68,
-      "delta_1w": 184.48,
-      "delta_1m": 124.73
+      "date": "2026-08-03",
+      "current": 213.26,
+      "delta_1d": -165.16,
+      "delta_1w": -26.66,
+      "delta_1m": -11.83
     }
   },
   "vix": {
     "vix": {
       "date": "2026-08-04",
-      "current": 15.61,
-      "delta_1d": -0.38,
-      "delta_1w": -3.06
+      "current": 15.6,
+      "delta_1d": -0.26,
+      "delta_1w": -2.61
     },
     "vix3m": {
       "date": "2026-07-17",
@@ -86,25 +86,25 @@
     "CL=F": {
       "available": true,
       "date": "2026-08-04",
-      "last": 80.83,
-      "pct_1d": -4.54
+      "last": 77.68,
+      "pct_1d": -3.31
     },
     "BZ=F": {
       "available": true,
       "date": "2026-08-04",
-      "last": 84.63,
-      "pct_1d": -6.09
+      "last": 81.62,
+      "pct_1d": -2.57
     },
     "GC=F": {
       "available": true,
       "date": "2026-08-04",
-      "last": 4110.0,
-      "pct_1d": 1.5
+      "last": 4120.3,
+      "pct_1d": 2.15
     },
     "DXY": {
       "available": true,
       "date": "2026-08-04",
-      "pct_1d": 0.18,
+      "pct_1d": 0.02,
       "pct_1m": -0.87
     }
   },
@@ -112,14 +112,14 @@
     "ES=F": {
       "available": true,
       "date": "2026-08-04",
-      "last": 7644.75,
-      "pct_1d": 1.67
+      "last": 7653.25,
+      "pct_1d": 0.33
     },
     "NQ=F": {
       "available": true,
       "date": "2026-08-04",
-      "last": 29130.0,
-      "pct_1d": 2.56
+      "last": 29220.5,
+      "pct_1d": 1.14
     }
   },
   "global_sessions": {
@@ -129,69 +129,69 @@
           "available": true,
           "date": "2026-08-04",
           "last": 63957.53,
-          "pct_1d": -0.63
+          "pct_1d": 0.32
         },
         "Hang Seng": {
           "available": true,
           "date": "2026-08-04",
           "last": 25852.92,
-          "pct_1d": -0.12
+          "pct_1d": -0.6
         },
         "Shanghai": {
           "available": true,
           "date": "2026-08-04",
           "last": 3822.28,
-          "pct_1d": -0.26
+          "pct_1d": 0.33
         },
         "Kospi": {
           "available": true,
           "date": "2026-08-04",
           "last": 6358.95,
-          "pct_1d": -3.59
+          "pct_1d": 1.62
         },
         "ASX200": {
           "available": true,
           "date": "2026-08-04",
           "last": 9145.8,
-          "pct_1d": 1.88
+          "pct_1d": 1.4
         }
       },
-      "composite_avg": -0.54
+      "composite_avg": 0.61
     },
     "europe": {
       "per_index": {
         "FTSE": {
           "available": true,
           "date": "2026-08-04",
-          "last": 10899.33,
-          "pct_1d": 0.29
+          "last": 10893.46,
+          "pct_1d": 0.33
         },
         "DAX": {
           "available": true,
           "date": "2026-08-04",
-          "last": 26160.34,
-          "pct_1d": 2.07
+          "last": 26148.21,
+          "pct_1d": 0.56
         },
         "CAC": {
           "available": true,
           "date": "2026-08-04",
-          "last": 8625.9,
-          "pct_1d": 1.37
+          "last": 8631.31,
+          "pct_1d": 0.2
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-08-04",
-          "last": 6467.81,
-          "pct_1d": 1.73
+          "last": 6469.83,
+          "pct_1d": 0.67
         }
       },
-      "composite_avg": 1.36
+      "composite_avg": 0.44
     }
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": 0.316,
-    "window": "2026-07-24..2026-07-31"
+    "corr_5d": -0.067,
+    "window": "2026-07-27..2026-08-03"
   },
   "fear_greed": {
     "available": true,
@@ -208,184 +208,184 @@
     "count": 30,
     "items": [
       {
-        "source": "rss_google_business",
-        "title": "China’s AI Blitz Creates ‘Death Zone’ for Rival US Model Makers - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOYTNSMlpYc01vYXl0SENzTVVTYThoYjA1ZDlkOGtyb1djUlBfV3MxbTR6MjZXUGc4bmN5anFzRXF1UXZNMlhEeFRidDN0ejg0MnoyM3dwSlR6bTNOUy15dG9JTm9semZVYXI5QkNaUlRhNXNtaXEyQmVLYldKdHpjeVRLTEVoU1FudTdZcWZaX09aUC1wQlpxLXhxc1kwQVNGYTJpVnZESjBxYVZBQXdXQjNn?oc=5",
-        "published_at": "Tue, 04 Aug 2026 04:47:06 GMT"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "US stocks rally near a record as falling oil prices ease Wall Street's worries about inflation",
-        "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-mixed-yen-jumps-042218113.html",
-        "published_at": "2026-08-03T04:22:18Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Warren Buffett Pays a Lower Tax Rate Than His Secretary. The Bracket That Makes It Possible Is Open to Anyone With a Brokerage Account",
-        "url": "https://finance.yahoo.com/markets/currencies/articles/warren-buffett-pays-lower-tax-213105729.html",
-        "published_at": "2026-08-02T21:31:05Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "CXMT’s blockbuster IPO will test whether China’s memory makers are ready for the spotlight: ‘It does not yet mean China is broadly catching up’",
-        "url": "https://finance.yahoo.com/technology/articles/cxmt-blockbuster-ipo-test-whether-213000950.html",
-        "published_at": "2026-08-02T21:30:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Can Palantir’s Sizzling Growth Win Over Market Bears?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-sizzling-growth-win-over-040100637.html",
-        "published_at": "2026-08-03T04:01:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Freight Market Update: 5 Signals Capacity Is Tight",
-        "url": "https://finance.yahoo.com/markets/articles/freight-market-5-signals-capacity-041055064.html",
-        "published_at": "2026-08-03T04:10:55Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Analysis-Big investors think it might be time to buy in South Korea",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/analysis-big-investors-think-might-052016359.html",
-        "published_at": "2026-08-03T05:20:16Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "SpaceX vs. the \"Magnificent Seven\": How the New Nasdaq-100 Member Stacks Up",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-vs-magnificent-seven-nasdaq-213900951.html",
-        "published_at": "2026-08-02T21:39:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "SkyWest Is Buying Back Stock While Its Executives Sell. Here's How to Read It",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/skywest-buying-back-stock-while-214752900.html",
-        "published_at": "2026-08-02T21:47:52Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Three SkyWest Executives Sold Stock in Three Days. Here's What Long-Term Investors Should Know",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/three-skywest-executives-sold-stock-215312011.html",
-        "published_at": "2026-08-02T21:53:12Z"
-      },
-      {
         "source": "rss_aljazeera_economy",
-        "title": "Nascimento: UFC fighter dead at 34 after apparent heart attack",
-        "url": "https://www.aljazeera.com/sports/2026/8/4/ufcs-allan-nascimento-dead-aged-34-after-apparent-heart-attack?traffic_source=rss",
-        "published_at": "Tue, 04 Aug 2026 07:19:29 +0000"
+        "title": "Who is behind settler violence in the occupied West Bank?",
+        "url": "https://www.aljazeera.com/news/2026/8/4/who-is-behind-settler-violence-in-the-occupied-west-bank?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 11:04:03 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "How Corgi Funds Plans to Chase Down Wall Street’s Top Dogs",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/corgi-funds-plans-chase-down-040100979.html",
-        "published_at": "2026-08-03T04:01:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Green Funds Go From Red to Black",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/green-funds-red-black-040200989.html",
-        "published_at": "2026-08-03T04:02:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Warsh Raises Rethink on Fed's Policy Meeting Frequency, Timing",
-        "url": "https://finance.yahoo.com/economy/policy/articles/warsh-raises-rethink-on-feds-policy-meeting-frequency-timing-213617291.html",
-        "published_at": "2026-08-02T21:36:17Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Bitcoin Price Prediction: What Price Will BTC Hit in August?",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-price-prediction-price-btc-213925687.html",
-        "published_at": "2026-08-02T21:39:25Z"
+        "title": "Spotify Stock Falls After Music Streamer Misses Earnings Goal",
+        "url": "https://www.investors.com/news/technology/spotify-stock-q2-2026-earnings/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-04T10:54:12Z"
       },
       {
         "source": "rss_marketwatch_top",
-        "title": "Meg Ryan finds a buyer for picturesque $15.25 million Hamptons property",
-        "url": "https://www.marketwatch.com/story/meg-ryan-finds-a-buyer-for-picturesque-15-25-million-hamptons-property-7d40dda5?mod=mw_rss_topstories",
-        "published_at": "Tue, 04 Aug 2026 09:01:00 GMT"
+        "title": "The ‘Magnificent Seven’ companies just did something they haven’t since ChatGPT was first released",
+        "url": "https://www.marketwatch.com/story/the-magnificent-seven-companies-just-did-something-they-havent-since-chatgpt-was-first-released-d8aa609f?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 10:43:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "The Gulf can no longer outsource its security",
+        "url": "https://www.aljazeera.com/opinions/2026/8/4/the-gulf-can-no-longer-outsource-its-security?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 11:05:58 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "UEFA confirms legal letter served to FIFA after Infantino’s World Cup plan",
+        "url": "https://www.aljazeera.com/sports/2026/8/4/uefa-confirm-legal-letter-served-to-fifa-after-infantino-world-cup-plan?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 08:37:44 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Shein proposes cash payouts, more shares for late-stage investors ahead of IPO",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/shein-weighs-cost-reset-stage-053237486.html",
-        "published_at": "2026-08-03T05:32:37Z"
+        "title": "Pfizer beats quarterly profit estimates on strong demand for blood thinner Eliquis",
+        "url": "https://finance.yahoo.com/healthcare/articles/pfizer-beats-quarterly-profit-estimates-105839529.html",
+        "published_at": "2026-08-04T10:58:39Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Shein weighs cost reset for late-stage investors ahead of Hong Kong IPO, Bloomberg News reports",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/shein-weighs-cost-reset-stage-053237706.html",
-        "published_at": "2026-08-03T05:44:03Z"
+        "title": "The “Postnup”: Married Without a Prenup? There’s a Second Document That Can Do the Same Job, If It’s Done Right",
+        "url": "https://finance.yahoo.com/small-business/articles/postnup-married-without-prenup-second-110806610.html",
+        "published_at": "2026-08-04T11:08:06Z"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "Apple Soared 15% in July, but GPIQ Holders Lost 6%: The Hidden Options Tax on Covered-Call ETFs",
-        "url": "https://finance.yahoo.com/markets/options/articles/apple-soared-15-july-gpiq-214055622.html",
-        "published_at": "2026-08-02T21:40:55Z"
+        "source": "rss_marketwatch_top",
+        "title": "The trade-off of graduating college early: No debt, but no job?",
+        "url": "https://www.marketwatch.com/story/the-trade-off-of-graduating-college-early-no-debt-but-no-job-7c81784b?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 11:00:00 GMT"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "SoundHound AI's Next Earnings Report on Aug. 5 Could Send the Stock Soaring. Here's Why.",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/soundhound-ais-next-earnings-report-214501723.html",
-        "published_at": "2026-08-02T21:45:01Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "I Won't Let RMDs Ruin My Retirement. Here's My Plan to Manage Them.",
-        "url": "https://finance.yahoo.com/markets/articles/wont-let-rmds-ruin-retirement-214700624.html",
-        "published_at": "2026-08-02T21:47:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Is Meta Platforms Stock a Buy on the Dip as Revenue Surges?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/meta-platforms-stock-buy-dip-212000574.html",
-        "published_at": "2026-08-02T21:20:00Z"
+        "source": "rss_marketwatch_top",
+        "title": "If I marry my girlfriend, 67, will she lose her Supplemental Security Income and divorced spouse benefits?",
+        "url": "https://www.marketwatch.com/story/if-i-marry-my-girlfriend-67-will-she-lose-her-supplemental-security-income-and-divorced-spouse-benefits-9340bab9?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 10:15:00 GMT"
       },
       {
         "source": "rss_bbc_business",
-        "title": "BP profits highest in four years as Iran war pushes up oil price",
-        "url": "https://www.bbc.co.uk/news/articles/cg5l11m02j3o?at_medium=RSS&at_campaign=rss",
-        "published_at": "Tue, 04 Aug 2026 09:04:46 GMT"
+        "title": "Assignment",
+        "url": "https://www.bbc.co.uk/sounds/play/w3ct8h1h?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 04 Aug 2026 02:00:00 GMT"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "US arrests suspect over Spokane wildfire as tens of thousands flee blaze",
-        "url": "https://www.aljazeera.com/news/2026/8/4/us-arrests-suspect-over-spokane-wildfire-as-tens-of-thousands-flee-blaze?traffic_source=rss",
-        "published_at": "Tue, 04 Aug 2026 08:32:49 +0000"
+        "title": "Tech giant Palantir posts ‘otherworldly’ growth despite criticism over Gaza",
+        "url": "https://www.aljazeera.com/news/2026/8/4/tech-giant-palantir-posts-otherworldly-growth-despite-criticism-over-gaza?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 10:11:06 +0000"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "Palestine weekly: Israel kills dozens in Gaza after Hamas disarmament deal",
-        "url": "https://www.aljazeera.com/news/2026/8/4/palestine-weekly-israel-kills-dozens-in-gaza-after-hamas-disarmament-deal?traffic_source=rss",
-        "published_at": "Tue, 04 Aug 2026 06:00:10 +0000"
+        "title": "Cars burn in reported settler attack in occupied West Bank",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/cars-burn-in-reported-settler-attack-in-occupied-west-bank?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 08:51:47 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Trader Joe's has one advantage over Walmart and Target",
-        "url": "https://finance.yahoo.com/small-business/articles/trader-joes-one-advantage-over-003700727.html",
-        "published_at": "2026-08-04T00:37:00Z"
+        "title": "McDonald's sales growth slows as budget-conscious consumers remain under stress",
+        "url": "https://finance.yahoo.com/markets/stocks/article/mcdonalds-sales-growth-slows-as-budget-conscious-consumers-remain-under-stress-194507295.html",
+        "published_at": "2026-08-03T19:45:07Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "SkyWest's CEO Just Sold $5.7 Million in Stock. Here's What Long-Term Investors Should Know",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/skywests-ceo-just-sold-5-213246539.html",
-        "published_at": "2026-08-02T21:32:46Z"
+        "title": "Stock market today: Dow, S&P 500, Nasdaq futures coast higher as earnings roll in, Palantir stock soars",
+        "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-4-dow-sp-500-nasdaq-100140227.html",
+        "published_at": "2026-08-04T10:01:40Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Wall Street Looks to Zillow, Rocket Mortgage Earnings for Clues on K-Shaped Housing Market",
-        "url": "https://finance.yahoo.com/real-estate/articles/wall-street-looks-zillow-rocket-040100835.html",
-        "published_at": "2026-08-03T04:01:00Z"
+        "title": "Yari Resources signs SPA for Arcadia Coal Project acquisition",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/yari-resources-signs-spa-arcadia-111120613.html",
+        "published_at": "2026-08-04T11:11:20Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Why Highly Leveraged ETFs Are Still in Limbo at SEC",
-        "url": "https://finance.yahoo.com/markets/options/articles/why-highly-leveraged-etfs-still-040300563.html",
-        "published_at": "2026-08-03T04:03:00Z"
+        "title": "Palantir Q2 2026 earnings: revenue up 93%, guidance raised",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-q2-2026-earnings-revenue-111006525.html",
+        "published_at": "2026-08-04T11:10:06Z"
       },
       {
-        "source": "rss_google_business",
-        "title": "Asia stocks struggle for direction, oil moves higher - Reuters",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9FbUhCcDNQSE1IQ3dnM055RTJNZ0N1WHYtTUswbUtjZmRTS3FwbEtKZkd5Ti1WT0JndWtUSEJJTktud19OQzRELW93em1SMFdjcnphTVBMQ1BPMzBJLTdEYmxMbnJ2bFB4NVN4ZVlKYjIyZUlFZGx3RUljSQ?oc=5",
-        "published_at": "Tue, 04 Aug 2026 00:38:00 GMT"
+        "source": "rss_aljazeera_economy",
+        "title": "We demand accountability for the Beirut blast",
+        "url": "https://www.aljazeera.com/opinions/2026/8/4/we-demand-accountability-for-the-beirut-blast?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 08:51:46 +0000"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The stock market’s brutal summer reset is finally over. Here is why Citadel Securities says it is time to buy again.",
+        "url": "https://www.marketwatch.com/story/the-stock-markets-brutal-summer-reset-is-finally-over-here-is-why-citadel-securities-says-it-is-time-to-buy-again-f6a8d101?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 11:24:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Oil prices rise after vessel reports being hit in Strait of Hormuz",
+        "url": "https://www.marketwatch.com/story/oil-prices-rise-after-vessel-reports-being-hit-in-strait-of-hormuz-db6ce867?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 10:39:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "I got two email invitations from friends. Is this a phishing scam — or am I suddenly popular?",
+        "url": "https://www.marketwatch.com/story/i-got-two-email-invitations-from-friends-is-this-a-phishing-scam-or-am-i-suddenly-popular-d9680aa8?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 10:30:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "AI displacement in the workplace is increasing – and affecting young people most",
+        "url": "https://www.marketwatch.com/story/ai-displacement-in-the-workplace-is-increasing-and-affecting-young-people-most-22ab61cc?mod=mw_rss_topstories",
+        "published_at": "Tue, 04 Aug 2026 09:39:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Apple issues new challenge against UK order for access to private user data",
+        "url": "https://www.bbc.co.uk/news/articles/cvg0kk3ek2vo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 04 Aug 2026 10:22:40 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "‘One last chance’: The times Trump threatened Iran, said deal imminent",
+        "url": "https://www.aljazeera.com/features/2026/8/4/one-last-chance-the-times-trump-threatened-iran-said-deal-imminent?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 10:53:33 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Italy suspends free movement with Spain: Is Schengen in crisis after Ceuta?",
+        "url": "https://www.aljazeera.com/news/2026/8/4/italy-suspends-free-movement-with-spain-is-schengen-in-crisis-after-ceuta?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 10:40:08 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Palestinian patients return to Gaza as thousands still await evacuation",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/palestinian-patients-return-to-gaza-as-thousands-still-await-evacuation?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 10:04:49 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US primaries: What to watch in Kansas, Missouri, Virginia, Washington",
+        "url": "https://www.aljazeera.com/news/2026/8/4/us-primaries-what-to-watch-in-kansas-missouri-virginia-washington?traffic_source=rss",
+        "published_at": "Tue, 04 Aug 2026 09:47:40 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "McDonald's posts strong second quarter profit, names new chief of US operations",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonalds-posts-strong-second-quarter-112203456.html",
+        "published_at": "2026-08-04T11:22:03Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CAT Stock Lifts Dow Jones With Massive Earnings Beat",
+        "url": "https://www.investors.com/news/cat-stock-dow-jones-caterpillar-q2-earnings/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-04T11:16:52Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Want to Buy SpaceX? Why You May Be Better Off Just Buying Alphabet's Stock",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/want-buy-spacex-why-may-112000900.html",
+        "published_at": "2026-08-04T11:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "India paves way for return of merchant fees on digital payments",
+        "url": "https://finance.yahoo.com/economy/policy/articles/india-paves-way-return-merchant-105401136.html",
+        "published_at": "2026-08-04T10:54:01Z"
       }
     ]
   }
