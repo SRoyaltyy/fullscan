@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-05T18:17:42.357567-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 5.18,
+      "delta_1d": -0.05,
+      "delta_1w": 0.09,
+      "delta_1m": 0.19
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 4.63,
+      "delta_1d": -0.07,
+      "delta_1w": 0.02,
+      "delta_1m": 0.15
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 2.4,
+      "delta_1d": -0.03,
+      "delta_1w": -0.01,
+      "delta_1m": 0.16
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 2.73,
+      "delta_1d": -0.05,
+      "delta_1w": -0.11,
+      "delta_1m": 0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 3.66,
+      "delta_1d": 0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.03
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 1.65,
+      "delta_1d": -0.601,
+      "delta_1w": -0.926,
+      "delta_1m": -2.834
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 537.87,
+      "delta_1d": 351.66,
+      "delta_1w": 205.67,
+      "delta_1m": 236.83
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-05",
+      "current": 15.81,
+      "delta_1d": -0.69,
+      "delta_1w": -4.85
+    },
+    "vix3m": {
+      "date": "2026-08-05",
+      "current": 18.95,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.834
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 75.12,
+      "pct_1d": -0.86
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 79.4,
+      "pct_1d": 0.05
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 4306.6,
+      "pct_1d": 5.16
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-05",
+      "pct_1d": -0.2,
+      "pct_1m": -1.43
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 7758.0,
+      "pct_1d": -0.1
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 29586.25,
+      "pct_1d": -0.93
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 63957.53,
+          "pct_1d": 0.32
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 25852.92,
+          "pct_1d": -0.6
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 3822.28,
+          "pct_1d": 0.33
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 6358.95,
+          "pct_1d": 1.62
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 9145.8,
+          "pct_1d": 1.4
+        }
+      },
+      "composite_avg": 0.61
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 10888.3,
+          "pct_1d": 0.08
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 26202.35,
+          "pct_1d": 0.77
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 8666.63,
+          "pct_1d": 0.61
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-04",
+          "last": 6486.7,
+          "pct_1d": 0.94
+        }
+      },
+      "composite_avg": 0.6
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.295,
+    "window": "2026-07-29..2026-08-05"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 60.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-05 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "India moves to give its instant payments network a business model",
+        "url": "https://finance.yahoo.com/economy/policy/articles/india-moves-instant-payments-network-133117026.html",
+        "published_at": "2026-08-04T13:31:17Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bitmine Accelerates Stock Buybacks And Continues Buying Ethereum",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bitmine-accelerates-stock-buybacks-continues-133000732.html",
+        "published_at": "2026-08-04T13:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Reddit's Tumble Has Been Overdone After It Produced Strong FCF - RDDT Could be 40% Too Cheap",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/reddits-tumble-overdone-produced-strong-131502277.html",
+        "published_at": "2026-08-04T13:15:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What SCHD's Own History Suggests About Its Price Today",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/schds-own-history-suggests-price-133213552.html",
+        "published_at": "2026-08-04T13:32:13Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Aggressive options trading helped drive the S&P 500’s latest rally. What that means for investors.",
+        "url": "https://www.marketwatch.com/story/aggressive-options-trading-helped-drive-the-s-p-500s-latest-rally-what-that-means-for-investors-623fe41c?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 20:51:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why Wall Street Is Panicking About Apple’s Services Business",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/why-wall-street-panicking-apple-133001776.html",
+        "published_at": "2026-08-04T13:30:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Snap stock jumps 13% on improved advertising, World Cup boost",
+        "url": "https://finance.yahoo.com/markets/stocks/article/snap-stock-jumps-13-on-improved-advertising-world-cup-boost-130259116.html",
+        "published_at": "2026-08-04T13:02:59Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Earn 14% On SCCO Stock Now, For Capping Your Upside At 18%",
+        "url": "https://finance.yahoo.com/markets/options/articles/earn-14-scco-stock-now-132814035.html",
+        "published_at": "2026-08-04T13:28:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CoreWeave expands into Indonesia, announces first data center in Asia-Pacific",
+        "url": "https://finance.yahoo.com/technology/ai/articles/coreweave-expands-indonesia-announces-first-130550234.html",
+        "published_at": "2026-08-04T13:05:50Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Sonic Automotive (SAH) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sonic-automotive-sah-q2-2026-133423343.html",
+        "published_at": "2026-08-04T13:34:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Spotify stock sinks as streaming giant's monthly active users forecast misses estimates",
+        "url": "https://finance.yahoo.com/markets/stocks/article/spotify-stock-sinks-as-streaming-giants-monthly-active-users-forecast-misses-estimates-133728671.html",
+        "published_at": "2026-08-04T13:37:28Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Sandisk’s stock falls as the company’s forecast doesn’t live up to high expectations",
+        "url": "https://www.marketwatch.com/story/sandisks-stock-falls-as-the-companys-forecast-doesnt-live-up-to-high-expectations-8fd13d9b?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 21:18:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US announces more than $100m in rewards for eight Jalisco cartel leaders",
+        "url": "https://www.aljazeera.com/news/2026/8/5/us-announces-more-than-100m-in-rewards-for-eight-jalisco-cartel-leaders?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 21:07:03 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "What’s behind US Representative Massie’s claims over crisis at Ceuta?",
+        "url": "https://www.aljazeera.com/news/2026/8/5/whats-behind-us-representative-massies-claims-over-crisis-at-ceuta?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 20:55:12 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "First U.S. Bitcoin ETF To Close",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/first-u-bitcoin-etf-close-132500973.html",
+        "published_at": "2026-08-04T13:25:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Exclusive: Dinari, founded by Stripe and Apple alums, partners with Circle to offer tokenized stocks to U.S. investors",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/exclusive-dinari-founded-stripe-apple-133000489.html",
+        "published_at": "2026-08-04T13:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Could Revolution Medicines (RVMD) Become a $20 Billion Cancer Drug Story?",
+        "url": "https://finance.yahoo.com/healthcare/articles/could-revolution-medicines-rvmd-become-131956736.html",
+        "published_at": "2026-08-04T13:19:56Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why AMD is a Yahoo Finance AlphaSpace rockstar",
+        "url": "https://finance.yahoo.com/markets/article/why-amd-is-a-yahoo-finance-alphaspace-rockstar-131746048.html",
+        "published_at": "2026-08-04T13:17:46Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Fed's Paulson keeps 'open mind' on rate policy outlook amid high inflation",
+        "url": "https://finance.yahoo.com/economy/policy/articles/feds-paulson-keeps-open-mind-120134252.html",
+        "published_at": "2026-08-04T13:41:36Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What Could Push Broadcom Stock Higher Is Already Sitting In Its Order Book",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/could-push-broadcom-stock-higher-132952296.html",
+        "published_at": "2026-08-04T13:29:52Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Transportation capacity falls faster in July, rates remain high",
+        "url": "https://finance.yahoo.com/economy/articles/transportation-capacity-falls-faster-july-130441608.html",
+        "published_at": "2026-08-04T13:04:41Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Baron Capital Sees Years of Mid-Teens Growth for Intuitive Surgical (ISRG)",
+        "url": "https://finance.yahoo.com/healthcare/articles/baron-capital-sees-years-mid-134545821.html",
+        "published_at": "2026-08-04T13:45:45Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "1 Reason Wall Street Is Obsessed With This Tech Stock",
+        "url": "https://finance.yahoo.com/technology/articles/1-reason-wall-street-obsessed-133036749.html",
+        "published_at": "2026-08-04T13:30:36Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "McDonald’s Slowest Quarter in a Year Costs Its US President His Job",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-slowest-quarter-costs-us-133317148.html",
+        "published_at": "2026-08-04T13:33:17Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Trucking coalition says 194,000 non-domiciled CDLs affected by carrier reforms",
+        "url": "https://finance.yahoo.com/economy/policy/articles/trucking-coalition-says-194-000-133821021.html",
+        "published_at": "2026-08-04T13:38:21Z"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Fed Governor Cook says she's 'prepared to act' on rate hike to address inflation",
+        "url": "https://www.cnbc.com/2026/08/05/fed-governor-cook-says-shes-prepared-to-act-on-rate-hike-to-address-inflation.html",
+        "published_at": "Wed, 05 Aug 2026 20:36:16 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Clashes on anniversary of Imran Khan imprisonment",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/5-8-clip-teargas-ik-protests-pk?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 21:28:14 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "El-Sayed wins Michigan Democratic Senate primary",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/el-sayed-wins-michigan-democratic-senate-primary-2?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 21:15:35 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Iran says Hormuz talks with Oman in ‘final’ stages as route approved",
+        "url": "https://www.aljazeera.com/news/2026/8/5/iran-says-hormuz-talks-with-oman-in-final-stages-as-route-approved?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 20:55:52 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Investor Cathie Wood Buys Coinbase And Circle Stocks",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/investor-cathie-wood-buys-coinbase-133100414.html",
+        "published_at": "2026-08-04T13:31:00Z"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-05",
+      "open": 7771.62,
+      "high": 7793.68,
+      "low": 7720.17,
+      "close": 7723.55,
+      "pct_change": -0.17,
+      "prev_close": 7736.52,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.95,
+        "intraday_low_pct": -0.21,
+        "intraday_high_pct": 0.74,
+        "close_position_in_range": 0.05
+      }
+    },
+    "DOW": {
+      "date": "2026-08-05",
+      "open": 54266.12,
+      "high": 54744.33,
+      "low": 54266.12,
+      "close": 54349.12,
+      "pct_change": 0.49,
+      "prev_close": 54085.88,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.88,
+        "intraday_low_pct": 0.33,
+        "intraday_high_pct": 1.22,
+        "close_position_in_range": 0.17
+      }
+    },
+    "NDX": {
+      "date": "2026-08-05",
+      "open": 26698.02,
+      "high": 26739.0,
+      "low": 26348.51,
+      "close": 26363.44,
+      "pct_change": -0.83,
+      "prev_close": 26584.99,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 1.48,
+        "intraday_low_pct": -0.89,
+        "intraday_high_pct": 0.58,
+        "close_position_in_range": 0.04
+      }
+    }
+  }
+}
