@@ -1,0 +1,392 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-05T08:22:15.284232-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 5.23,
+      "delta_1d": -0.04,
+      "delta_1w": 0.11,
+      "delta_1m": 0.25
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 4.7,
+      "delta_1d": -0.05,
+      "delta_1w": 0.05,
+      "delta_1m": 0.21
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 2.43,
+      "delta_1d": -0.04,
+      "delta_1w": -0.01,
+      "delta_1m": 0.17
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 2.78,
+      "delta_1d": -0.07,
+      "delta_1w": -0.03,
+      "delta_1m": 0.04
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 3.66,
+      "delta_1d": 0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.03
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 2.251,
+      "delta_1d": 0.124,
+      "delta_1w": 1.125,
+      "delta_1m": -0.468
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-03",
+      "current": 213.26,
+      "delta_1d": -165.16,
+      "delta_1w": -26.66,
+      "delta_1m": -11.83
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-05",
+      "current": 16.74,
+      "delta_1d": 0.24,
+      "delta_1w": -3.92
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 19 days older than VIX (2026-07-17 vs 2026-08-05); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 76.09,
+      "pct_1d": 0.42
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 80.11,
+      "pct_1d": 0.95
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 4257.8,
+      "pct_1d": 3.97
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-05",
+      "pct_1d": -0.19,
+      "pct_1m": -1.42
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 7799.5,
+      "pct_1d": 0.44
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-05",
+      "last": 29904.0,
+      "pct_1d": 0.14
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 66300.44,
+          "pct_1d": 3.66
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 25915.82,
+          "pct_1d": 0.24
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 3878.43,
+          "pct_1d": 1.47
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 6598.26,
+          "pct_1d": 3.76
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 9227.8,
+          "pct_1d": 0.9
+        }
+      },
+      "composite_avg": 2.01
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 10898.44,
+          "pct_1d": 0.18
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 26238.39,
+          "pct_1d": 0.14
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 8670.98,
+          "pct_1d": 0.05
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 6491.85,
+          "pct_1d": 0.08
+        }
+      },
+      "composite_avg": 0.11
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.331,
+    "window": "2026-07-28..2026-08-04"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 57.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-04 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Ex-Liverpool star Salah arrives in Turkiye before move to Trabzonspor",
+        "url": "https://www.aljazeera.com/sports/2026/8/5/ex-liverpool-star-salah-arrives-in-turkiye-ahead-of-move-to-trabzonspor?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 11:38:51 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "9 Stocks' Cash Flow Seen Blowing The Doors Off The S&P 500",
+        "url": "https://www.investors.com/etfs-and-funds/sectors/sp500-stocks-cash-flow-seen-blowing-the-doors-off/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-05T11:35:41Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The S&P 500 just hit a new high. ‘Big Short’ investor Michael Burry thinks it could bring a 1987-style fall.",
+        "url": "https://www.marketwatch.com/story/the-s-p-500-just-hit-a-new-high-big-short-investor-michael-burry-thinks-it-could-bring-a-1987-style-fall-775c3b95?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 11:41:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "How a social media campaign triggered huge migrant surge on Ceuta",
+        "url": "https://www.aljazeera.com/features/2026/8/5/how-a-social-media-campaign-triggered-huge-migrant-surge-on-ceuta?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 11:48:55 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "How Israeli restrictions on Palestinians’ movement break up the West Bank",
+        "url": "https://www.aljazeera.com/opinions/2026/8/5/how-israeli-restrictions-on-palestinians-movement-break-up-the-west-bank?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 10:09:22 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Glencore's energy trading profits soar on Iran war",
+        "url": "https://finance.yahoo.com/energy/articles/glencores-energy-trading-profits-soar-114012391.html",
+        "published_at": "2026-08-05T11:40:12Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Peter Schiff says a ‘much bigger selloff’ in Bitcoin is coming. Here’s why — and how investors can prepare",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/peter-schiff-says-much-bigger-105000780.html",
+        "published_at": "2026-08-05T10:50:00Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Walt Disney’s stock climbs as company cites ‘Toy Story 5’ for earnings growth",
+        "url": "https://www.marketwatch.com/story/walt-disneys-stock-climbs-as-company-cites-toy-story-5-for-earnings-growth-fe0c86c1?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 11:42:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Is it a bad time to buy a home? Buyers say yes, data shows.",
+        "url": "https://www.marketwatch.com/story/is-it-a-bad-time-to-buy-a-home-buyers-say-yes-data-show-ffa599d1?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 11:00:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Turkish cargo ship catches fire after Black Sea drone attack",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/08-05-2026-drone-attacks-turkish-ship-sv?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 11:49:25 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Morning Bid: Outer SpaceX",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/morning-bid-outer-spacex-104035545.html",
+        "published_at": "2026-08-05T10:40:35Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "India’s severe monsoon season causes more than 100 deaths since July",
+        "url": "https://www.aljazeera.com/news/2026/8/5/indias-severe-monsoon-season-causes-more-than-100-deaths-since-july?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 10:10:07 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "South Africa’s le Clos says home destroyed during Commonwealth record run",
+        "url": "https://www.aljazeera.com/sports/2026/8/5/south-africas-le-clos-says-home-destroyed-during-commonwealth-record-run?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 09:53:33 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Michigan primary election and what it means for the US midterms",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/michigan-primary-election-and-what-it-means-for-the-us-midterms?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 08:25:33 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Wall Street warms to healthcare stocks as tech trade faces turbulence",
+        "url": "https://finance.yahoo.com/news/wall-street-warms-healthcare-stocks-103857604.html",
+        "published_at": "2026-08-05T10:38:57Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Shipper liability takes another Texas setback; CHRW plays offense",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/shipper-liability-takes-another-texas-110000813.html",
+        "published_at": "2026-08-05T11:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Eli Lilly Q2 2026 earnings beat, raises full-year revenue forecast",
+        "url": "https://finance.yahoo.com/healthcare/articles/eli-lilly-q2-2026-earnings-113218604.html",
+        "published_at": "2026-08-05T11:32:18Z"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Ken Griffin's Citadel posts best month in years after scooping up Situational Awareness stocks",
+        "url": "https://www.cnbc.com/2026/08/05/ken-griffins-citadel-posts-best-month-in-years-after-scooping-up-situational-awareness-stocks.html",
+        "published_at": "Wed, 05 Aug 2026 11:13:46 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Reports of the 60/40 portfolio’s demise are proving to be premature",
+        "url": "https://www.marketwatch.com/story/reports-of-the-60-40-portfolios-demise-are-proving-to-be-premature-e339679f?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 11:30:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Lilly’s revenue soars 48%, driven by demand for its GLP-1s",
+        "url": "https://www.marketwatch.com/story/lillys-revenue-soars-48-driven-by-demand-of-its-glp-1s-7361c223?mod=mw_rss_topstories",
+        "published_at": "Wed, 05 Aug 2026 11:17:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Government to prioritise job creation in awarding public contracts under new rules",
+        "url": "https://www.bbc.co.uk/news/articles/ckgdmv7elg8o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 05 Aug 2026 10:10:02 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "What happened to the internet?",
+        "url": "https://www.bbc.co.uk/videos/cvgwvkn84ggo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 05 Aug 2026 09:59:33 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Israeli forces detain Palestinians during raid in occupied West Bank",
+        "url": "https://www.aljazeera.com/news/2026/8/5/israeli-forces-detain-palestinians-during-raid-in-occupied-west-bank?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 11:31:32 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Lebanon and Israel still split over disarming Hezbollah at Rome talks",
+        "url": "https://www.aljazeera.com/news/2026/8/5/lebanon-and-israel-still-split-over-disarming-hezbollah-at-rome-talks?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 11:01:32 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Vozinha moves on from World Cup, says ‘Colo-Colo is the best moment’",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/vozinha-moves-on-from-world-cup-says-colo-colo-is-the-best?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 10:50:34 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Israeli raid deepens fears across West Bank refugee camps",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/israeli-raid-deepens-fears-across-west-bank-refugee-camps?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 10:30:17 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Reform UK plan to return asylum seekers using navy ‘dangerous in practice’",
+        "url": "https://www.aljazeera.com/news/2026/8/5/reform-uk-plan-to-return-asylum-seekers-using-navy-dangerous-in-practice?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 10:07:20 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Football star Mohamed Salah sends first message to Trabzonspor fans",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/08-05-2026-mo-salah-trabzon-clip?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 10:07:04 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Government is ‘for the people’ says Michigan primary candidate",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/government-is-for-the-people-says-michigan-primary-candidate?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 09:25:31 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Absa updates credit risk systems with SAS",
+        "url": "https://finance.yahoo.com/technology/articles/absa-updates-credit-risk-systems-114237927.html",
+        "published_at": "2026-08-05T11:42:37Z"
+      }
+    ]
+  }
+}
