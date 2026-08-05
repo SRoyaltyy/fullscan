@@ -2,35 +2,35 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (46,473 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (59,129 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Iran war de-escalation Strait of Hormuz oil August 5 2026"* → got 6 results (via ddg_fallback)
+**Step 1 — Research.** The model wanted to know: *"Iran Hormuz Strait oil tanker news August 5 2026"* → got 6 results (via ddg_fallback)
 
-  - Trump says Iran will be 'hit very hard' if Hormuz Strait not open soon... (https://www.the-star.co.ke/news/world/2026-08-05-trump-says-iran-will-be-hit-very-hard-if-hormuz-strait-not-open-soon)
+  - 2026 Strait of Hormuz crisis - Wikipedia (https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
 
-  - Trump Halts Iran Attack, Oil Drops With Negotiations... - Bloomberg (https://www.bloomberg.com/news/articles/2026-08-03/oil-slips-as-trump-holds-off-iran-attack-says-talks-to-resume-msdeau9b)
+  - Strait of Hormuz Closed, Day 157 | Live Tracker & Monitor (https://straits.live/)
 
-  - Iran Plotted Wider War With Help of Its Proxies - The New York Times (https://www.nytimes.com/2026/08/01/world/middleeast/iran-proxies-war-oil.html)
+  - Iran Conflict and the Strait of Hormuz: Impacts on Oil, Gas, and Other Commodities | Congress.gov | Library of Congress (https://www.congress.gov/crs-product/R45281)
 
-**Step 2 — Research.** The model wanted to know: *"Federal Reserve Warsh rate hike August 2026 FedWatch"* → got 6 results (via ddg_fallback)
+**Step 2 — Research.** The model wanted to know: *"Fed Warsh rate hike August 2026 JPMorgan December"* → got 6 results (via ddg_fallback)
 
-  - FedWatch - CME Group (https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html)
+  - J.P. Morgan Shifts Fed Rate Outlook Over Warsh, inflation - TheStreet (https://www.thestreet.com/fed/markets-fed-interest-rate-forecast-jpmorgan-warsh-inflation)
 
-  - investopedia.com/cme-fedwatch-tool-7559817 (https://www.investopedia.com/cme-fedwatch-tool-7559817)
+  - JPMorgan Says Fed Chair Kevin Warsh's Shaky Press Conference Could Force a Rate Hike Before Year-End: 'Th - Benzinga (https://www.benzinga.com/markets/macro-economic-events/26/08/60901924/jpmorgan-says-fed-chair-kevin-warshs-shaky-press-conference-could-force-a-rate-hike-before-year-end-the-market-didnt-like-what-it-heard)
 
-  - The Federal Reserve Board of Governors in Washington DC. (https://www.federalreserve.gov/newsevents/calendar.htm)
+  - US Stock Market: JP Morgan brings forward Fed rate hike call to December after July policy meeting - The Economic Times (https://economictimes.indiatimes.com/markets/us-stocks/news/us-stock-market-jp-morgan-brings-forward-fed-rate-hike-call-to-december-after-july-policy-meeting/articleshow/132734118.cms)
 
-**Step 3 — Research.** The model wanted to know: *"stock market earnings overnight August 5 2026"* → got 6 results (via ddg_fallback)
+**Step 4 — Research.** The model wanted to know: *"SpaceX earnings AI capex stock drop August 5 2026"* → got 6 results (via ddg_fallback)
 
-  - Company Earnings Calendar - Yahoo Finance (https://finance.yahoo.com/calendar/earnings/)
+  - SpaceX's stock drops as AI capex costs jump in Q2 (https://finance.yahoo.com/technology/article/spacexs-stock-drops-as-ai-capex-costs-jump-in-q2-132323178.html)
 
-  - Earnings Calendar - Investing.com (https://www.investing.com/earnings-calendar)
+  - SpaceX Earnings Recap: Stock Drops 7% As AI Capex Tops... (https://www.businessinsider.com/spacex-first-earnings-report-spcx-stock-lockup-period-expiration-2026-8)
 
-  - Earnings Blitz, Peace Hopes Provide Early Boost | Charles Schwab (https://www.schwab.com/learn/story/stock-market-update-open)
+  - Morning Bid: Semis fly again as AI capex shoots the moon - AOL (https://www.aol.com/articles/morning-bid-semis-fly-again-043158000.html)
 
-**Step 4 — Research.** The model wanted to know: *"sovereign credit rating action downgrade August 2026"* → got 6 results (via ddg_fallback)
+**Step 5 — Research.** The model wanted to know: *"sovereign credit rating action downgrade August 2026"* → got 6 results (via ddg_fallback)
 
   - Sovereigns Ratings List 2026 | countryeconomy.com (https://countryeconomy.com/ratings)
 
@@ -38,44 +38,28 @@
 
   - Moody's Downgrades New Zealand Credit Rating Outlook: What It... (https://www.world-today-news.com/moodys-downgrades-new-zealand-credit-rating-outlook-what-it-means-for-the-economy/)
 
-**Step 5 — Research.** The model wanted to know: *"China economic data policy announcement August 2026"* → got 6 results (via ddg_fallback)
+**Step 6 — Research.** The model wanted to know: *"China economic data policy announcement August 2026 stimulus"* → got 6 results (via ddg_fallback)
 
-  - No major politburo announcement, Beijing sticks to implementing existing policy tools: Economist (https://www.cnbc.com/video/2026/08/01/beijing-sticks-to-implementing-existing-policy-tools.html)
+  - Economic Calendar (https://tradingeconomics.com/calendar)
 
-  - National Bureau of Statistics of China >> Release Calendar (https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/)
+  - Trump's Stimulus Plan & Bernie's $3,000 August 2026... - YouTube (https://www.youtube.com/watch?v=H6cDXlnrNu0)
 
-  - China Announces Key Economic Policies and Market Updates for 2026 | KuCoin (https://www.kucoin.com/news/flash/china-announces-key-economic-policies-and-market-updates-for-2026)
+  - Amid U.S. Trade Challenges, China Faces Economic Growth... (https://www.chinaretailnews.com/2026/01/19/17855-amid-u-s-trade-challenges-china-faces-economic-growth-slowdown-in-q4-with-hope-for-2026-stimulus/)
 
-**Step 6 — Research.** The model wanted to know: *"stock market futures premarket August 5 2026 S&P 500"* → got 6 results (via ddg_fallback)
+**Step 8 — Research.** The model wanted to know: *"stock market futures August 5 2026 premarket S&P record"* → got 6 results (via ddg_fallback)
 
   - Premarket | Futures | Pre-market Trading | Markets Insider (https://markets.businessinsider.com/premarket)
 
-  - S&P 500, Dow futures inch up as MidEast hopes offset SpaceX... - AOL (https://www.aol.com/articles/p-500-dow-futures-inch-093215000.html)
+  - S&P 500 Futures - Investing.com (https://www.investing.com/indices/us-spx-500-futures)
 
-  - Stock Market Today: Dow, S&P Live Updates for August 5 - Bloomberg (https://www.bloomberg.com/news/articles/2026-08-04/stock-market-today-dow-s-p-live-updates)
+  - Pre-market Stock Trading | CNN (https://edition.cnn.com/markets/premarkets)
 
-**Step 8 — Research.** The model wanted to know: *"SpaceX earnings stock drop August 5 2026"* → got 6 results (via ddg_fallback)
+**Step 9 — Research.** The model wanted to know: *"Michael Burry 1987 crash warning AI stocks August 2026"* → got 6 results (via ddg_fallback)
 
-  - SpaceX (SPCX) Q2 2026 Earnings Report: Live updates (https://www.cnbc.com/2026/08/04/spacex-spcx-earnings-live-updates-q2-2026.html)
+  - Michael Burry - Wikipedia (https://en.wikipedia.org/wiki/Michael_Burry)
 
-  - SpaceX Stock Down 11% On $18.4 Billion Capex Forecast (https://www.forbes.com/sites/petercohan/2026/08/05/spacex-stock-down-9-on-184-billion-capex-forecast/)
+  - Michael Burry warns of 1987-style crash even as... | Seeking Alpha (https://seekingalpha.com/news/4625599-michael-burry-warns-of-1987-style-crash-even-as-sp-500-hits-new-high)
 
-  - SpaceX earnings recap: Stock drops 7% after first post-IPO report reveals higher than expected AI capex (https://www.businessinsider.com/spacex-first-earnings-report-spcx-stock-lockup-period-expiration-2026-8)
+  - It looks like ‘Big Short’ investor Michael Burry nailed his bet against AI... (https://dnyuz.com/2026/08/04/it-looks-like-big-short-investor-michael-burry-nailed-his-bet-against-ai-chip-stocks/)
 
-**Step 9 — Research.** The model wanted to know: *"Eli Lilly Disney earnings August 5 2026 stock"* → got 6 results (via ddg_fallback)
-
-  - Eli Lilly Could Swing $65.9 Billion After Earnings (https://d33gy59ovltp76.cloudfront.net/news/eli-lilly-could-swing-65-9-billion-after-earnings)
-
-  - Eli Lilly's $13 Billion Quarter: Enough to Lift LLY Stock? (https://stocksdownunder.com/eli-lilly-lly-weight-loss-drugs-earnings/)
-
-  - United States Stock Market Index - Quote - Chart... | Trading Economics (https://tradingeconomics.com/united-states/stock-market)
-
-**Step 10 — Research.** The model wanted to know: *"Michael Burry 1987 style fall S&P 500 warning August 2026"* → got 6 results (via ddg_fallback)
-
-  - Michael Burry bets against rally: 'We are near a major top, and possible a 1987-type fall' (https://www.cnbc.com/2026/08/04/michael-burry-bets-against-rally-we-are-near-a-major-top.html)
-
-  - Michael Burry warns of 1987-style crash even as S&P 500 hits new high | Seeking Alpha (https://seekingalpha.com/news/4625599-michael-burry-warns-of-1987-style-crash-even-as-sp-500-hits-new-high)
-
-  - Michael Burry Says ‘We Are Near A Major Top, And A Possible 1987-Type Fall’ — Why Record Highs Aren’t Changing His Bearish View (https://stocktwits.com/news-articles/markets/equity/michael-burry-says-market-near-major-top-1987-style-crash-possible-record-highs-not-changing-his-bearish-view/cZo5CwoRJ4l)
-
-**Step 12 — Done researching.** The model stopped searching and wrote its full analysis (10,839 characters).
+**Step 11 — Done researching.** The model stopped searching and wrote its full analysis (11,218 characters).
