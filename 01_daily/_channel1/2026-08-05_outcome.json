@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-08-05T18:17:42.357567-04:00",
+  "fetched_at": "2026-08-05T22:55:34.012075-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -85,40 +85,40 @@
     "CL=F": {
       "available": true,
       "date": "2026-08-05",
-      "last": 75.12,
-      "pct_1d": -0.86
+      "last": 75.51,
+      "pct_1d": -0.34
     },
     "BZ=F": {
       "available": true,
       "date": "2026-08-05",
-      "last": 79.4,
-      "pct_1d": 0.05
+      "last": 79.88,
+      "pct_1d": 0.66
     },
     "GC=F": {
       "available": true,
       "date": "2026-08-05",
-      "last": 4306.6,
-      "pct_1d": 5.16
+      "last": 4342.1,
+      "pct_1d": 6.02
     },
     "DXY": {
       "available": true,
       "date": "2026-08-05",
-      "pct_1d": -0.2,
-      "pct_1m": -1.43
+      "pct_1d": -0.24,
+      "pct_1m": -1.47
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-08-05",
-      "last": 7758.0,
-      "pct_1d": -0.1
+      "last": 7767.0,
+      "pct_1d": 0.02
     },
     "NQ=F": {
       "available": true,
       "date": "2026-08-05",
-      "last": 29586.25,
-      "pct_1d": -0.93
+      "last": 29613.0,
+      "pct_1d": -0.84
     }
   },
   "global_sessions": {
@@ -126,36 +126,36 @@
       "per_index": {
         "Nikkei": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 63957.53,
-          "pct_1d": 0.32
+          "date": "2026-08-06",
+          "last": 65266.67,
+          "pct_1d": -1.56
         },
         "Hang Seng": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 25852.92,
-          "pct_1d": -0.6
+          "date": "2026-08-06",
+          "last": 25454.17,
+          "pct_1d": -1.78
         },
         "Shanghai": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 3822.28,
-          "pct_1d": 0.33
+          "date": "2026-08-06",
+          "last": 3887.32,
+          "pct_1d": 0.23
         },
         "Kospi": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 6358.95,
-          "pct_1d": 1.62
+          "date": "2026-08-06",
+          "last": 6342.97,
+          "pct_1d": -3.87
         },
         "ASX200": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 9145.8,
-          "pct_1d": 1.4
+          "date": "2026-08-06",
+          "last": 9252.8,
+          "pct_1d": 0.27
         }
       },
-      "composite_avg": 0.61
+      "composite_avg": -1.34
     },
     "europe": {
       "per_index": {
@@ -167,24 +167,24 @@
         },
         "DAX": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 26202.35,
-          "pct_1d": 0.77
+          "date": "2026-08-05",
+          "last": 26126.3,
+          "pct_1d": -0.29
         },
         "CAC": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 8666.63,
-          "pct_1d": 0.61
+          "date": "2026-08-05",
+          "last": 8669.3,
+          "pct_1d": 0.03
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-08-04",
-          "last": 6486.7,
-          "pct_1d": 0.94
+          "date": "2026-08-05",
+          "last": 6476.98,
+          "pct_1d": -0.15
         }
       },
-      "composite_avg": 0.6
+      "composite_avg": -0.08
     }
   },
   "yield_spx_corr": {
@@ -207,184 +207,184 @@
     "count": 30,
     "items": [
       {
-        "source": "rss_yahoo_finance",
-        "title": "India moves to give its instant payments network a business model",
-        "url": "https://finance.yahoo.com/economy/policy/articles/india-moves-instant-payments-network-133117026.html",
-        "published_at": "2026-08-04T13:31:17Z"
+        "source": "newsapi_Business Insider",
+        "title": "AMD executives say the chip company has a key advantage over Nvidia: being more open",
+        "url": "https://www.businessinsider.com/amd-q2-2026-earnings-open-source-key-advantage-nvidia-2026-8#article",
+        "published_at": "2026-08-05T00:44:52Z"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "Bitmine Accelerates Stock Buybacks And Continues Buying Ethereum",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/bitmine-accelerates-stock-buybacks-continues-133000732.html",
-        "published_at": "2026-08-04T13:30:00Z"
+        "source": "newsapi_Financial Post",
+        "title": "SoftBank Earnings to Test Appetite for AI Bets Beyond ChatGPT",
+        "url": "https://financialpost.com/pmn/business-pmn/softbank-earnings-to-test-appetite-for-ai-bets-beyond-chatgpt",
+        "published_at": "2026-08-04T23:19:05Z"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "Reddit's Tumble Has Been Overdone After It Produced Strong FCF - RDDT Could be 40% Too Cheap",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/reddits-tumble-overdone-produced-strong-131502277.html",
-        "published_at": "2026-08-04T13:15:02Z"
+        "source": "newsapi_Financial Post",
+        "title": "PHX Energy Announces Highest Second Quarter Revenue in its History and Continued Record RSS Activity",
+        "url": "https://financialpost.com/globe-newswire/phx-energy-announces-highest-second-quarter-revenue-in-its-history-and-continued-record-rss-activity",
+        "published_at": "2026-08-04T21:11:03Z"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "What SCHD's Own History Suggests About Its Price Today",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/schds-own-history-suggests-price-133213552.html",
-        "published_at": "2026-08-04T13:32:13Z"
+        "source": "newsapi_Financial Post",
+        "title": "SpaceX falls after higher AI spending in post-IPO earnings",
+        "url": "https://financialpost.com/investing/spacex-falls-higher-ai-spending-post-ipo-earnings",
+        "published_at": "2026-08-04T21:17:03Z"
       },
       {
-        "source": "rss_marketwatch_top",
-        "title": "Aggressive options trading helped drive the S&P 500’s latest rally. What that means for investors.",
-        "url": "https://www.marketwatch.com/story/aggressive-options-trading-helped-drive-the-s-p-500s-latest-rally-what-that-means-for-investors-623fe41c?mod=mw_rss_topstories",
-        "published_at": "Wed, 05 Aug 2026 20:51:00 GMT"
+        "source": "newsapi_Financial Post",
+        "title": "SpaceX Falls After Higher AI Spending in Post-IPO Earnings",
+        "url": "https://financialpost.com/pmn/business-pmn/spacex-falls-after-higher-ai-spending-in-post-ipo-earnings",
+        "published_at": "2026-08-04T21:17:03Z"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "Why Wall Street Is Panicking About Apple’s Services Business",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/why-wall-street-panicking-apple-133001776.html",
-        "published_at": "2026-08-04T13:30:01Z"
+        "source": "newsapi_CNBC",
+        "title": "AMD's revenue climbs 50% and data center sales doubled, but the stock is down",
+        "url": "https://www.cnbc.com/2026/08/04/amd-earnings-report-q2-2026.html",
+        "published_at": "2026-08-04T20:34:30Z"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "Snap stock jumps 13% on improved advertising, World Cup boost",
-        "url": "https://finance.yahoo.com/markets/stocks/article/snap-stock-jumps-13-on-improved-advertising-world-cup-boost-130259116.html",
-        "published_at": "2026-08-04T13:02:59Z"
+        "source": "rss_google_markets",
+        "title": "AppLovin (NASDAQ:APP) Misses Q2 CY2026 Revenue Estimates, Stock Drops 21% - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQT1lzYmc1M1RqVVV0RkY3NUVHVkpzSDlPcFU2NERjQUlrRHc1VnNtdjBHendSV0JuY1hxOXU0VjdmbURvZ2prbjM3ZDZHV3BweWgwNjZVVmFjRjBPcFhxUGFFVGFDbXBwLXB4SkJjWkQtdHItUzdZLTVNenctcGpiYmU5YnljeTlfZktsLUVac3k4a2RUUVJDb2VB?oc=5",
+        "published_at": "Wed, 05 Aug 2026 20:38:26 GMT"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "Earn 14% On SCCO Stock Now, For Capping Your Upside At 18%",
-        "url": "https://finance.yahoo.com/markets/options/articles/earn-14-scco-stock-now-132814035.html",
-        "published_at": "2026-08-04T13:28:14Z"
+        "source": "rss_google_business",
+        "title": "Figma Stock Falls Despite Beat-and-Raise Quarter - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZFByekVnWHhPTjNuNENBSVRyWUdRUGk4YWhMYV9tZk1SaDhxTjlCNEtTdmppcm5SelRTZHFVZ05nY2Y5X0hmUjZJQk1hTlNWajlEeWE5bXhQakhvM3RvRXlBNTdqMEJsZ0oybDI1Mk55LUlWQ2poeE9jWUY2dXhNNXE1dXRvbWxJeGE0RlBEbUZQYU5pV1lRVktwQU1vUFBfQWtlbVFXeE4?oc=5",
+        "published_at": "Wed, 05 Aug 2026 21:10:31 GMT"
       },
       {
-        "source": "rss_yahoo_finance",
-        "title": "CoreWeave expands into Indonesia, announces first data center in Asia-Pacific",
-        "url": "https://finance.yahoo.com/technology/ai/articles/coreweave-expands-indonesia-announces-first-130550234.html",
-        "published_at": "2026-08-04T13:05:50Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Sonic Automotive (SAH) Q2 2026 Earnings Call Transcript",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/sonic-automotive-sah-q2-2026-133423343.html",
-        "published_at": "2026-08-04T13:34:23Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Spotify stock sinks as streaming giant's monthly active users forecast misses estimates",
-        "url": "https://finance.yahoo.com/markets/stocks/article/spotify-stock-sinks-as-streaming-giants-monthly-active-users-forecast-misses-estimates-133728671.html",
-        "published_at": "2026-08-04T13:37:28Z"
-      },
-      {
-        "source": "rss_marketwatch_top",
-        "title": "Sandisk’s stock falls as the company’s forecast doesn’t live up to high expectations",
-        "url": "https://www.marketwatch.com/story/sandisks-stock-falls-as-the-companys-forecast-doesnt-live-up-to-high-expectations-8fd13d9b?mod=mw_rss_topstories",
-        "published_at": "Wed, 05 Aug 2026 21:18:00 GMT"
+        "source": "rss_google_markets",
+        "title": "Michael Burry sends loud signal to stock market investors - thestreet.com",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTGh3Q3AwSXJmclhfam5vX0FZdVQzaS10Sy0xUVh2Q3NXdFNRM3hjYnBRaXNFYWpnRUpobzN1eVFvaDF1S196R09WbUhKWnRpMlVIRG5TOUtyX1AwVklFQnkzX2VLMGVwQ25nbTV4aU9DRlR1eVZLRUE1UThESWNwcnlBTEstcU5RNzRrem5pejBnckI4VGFBcHZzTEI2ai0xd3JQMU15Q2Z4VjVPOXctOWQySzdQNW1HUEZOV2hpVy16aWJFa3NtU0Etbw?oc=5",
+        "published_at": "Wed, 05 Aug 2026 23:33:00 GMT"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "US announces more than $100m in rewards for eight Jalisco cartel leaders",
-        "url": "https://www.aljazeera.com/news/2026/8/5/us-announces-more-than-100m-in-rewards-for-eight-jalisco-cartel-leaders?traffic_source=rss",
-        "published_at": "Wed, 05 Aug 2026 21:07:03 +0000"
+        "title": "Iran war live: Tehran, Oman close in on Hormuz deal; Houthis attack tankers",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/8/6/iran-war-live-tehran-oman-close-in-on-hormuz-deal-houthis-attack-tankers?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 00:00:00 +0000"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Cyclospora Outbreak 2026: Map, Foods to Avoid, States Most Impacted as US Hits 22,000 Cases - TODAY.com",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRDdObzN5X3RBNzRMemowMDZBMWpjYlZZRkd0dlgtdGNDTnB1TGFIZjRzRTZUOEtrcmNOZy0zR0FsRVJ3MnZoM0lrRC0yUElROWxZVFhEQ2tfTXVYTzlGSEVnUzU5U2hnakpXcDhZQ3pTV0hXVHpSRmpOMFpVbzZxNVpPVkJBajJGN0N2RTBDeFdNcDRwbWZCWE5iMjY3Z1dvVEZHckxWdnREZjVIUHdGbGZ2bjg4dk0t?oc=5",
+        "published_at": "Wed, 05 Aug 2026 20:45:29 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Anthropic AI used fake profiles to target people in hack then hid the evidence - BBC",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05cW1FRW5ELW1tV0ZySExSZG4zek5yT3BaZVBJMDdBYms0Wk4ySEQ1YjVNVnp6X2RGR29ERG9OakpRQlpRT1JvTXhtZVdMTWVIV1JxUFdUQU9GUQ?oc=5",
+        "published_at": "Wed, 05 Aug 2026 09:24:18 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "EXCLUSIVE: US weighs polysilicon price floor, tariffs to counter China in solar and chips - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZHMyc0hjQmFKeG1UQ240cmpVNmxXMFV2QUlvOTQ3MGhsaDJzRFAtS0E2QmJxWk4xNDFCTThDZlNqeGhfYjFsc2lqV1dOa2lNUmxHWHdDRUlnSFE3UExGN1hQbnZSc0Ytd3ljRnNIVFM0RTYwZTAybjg2blg3QmkwdHFicjc3LVlua2VEUW94ODdBeXlmc0NEeFA5c1FQcWtCLTJmb3RmaW1uS0ZqYk11UnpCWFRiQQ?oc=5",
+        "published_at": "Tue, 04 Aug 2026 22:07:29 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Never Have Investors Paid So Much for So Little Corporate Output - Haver Analytics",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZVN4a2lEZGp4dm5fbWtKTHdfSGNQOXJQMGg1bGgwT3BZSGc3di1SNmRJbDAwbjdWdXlwTlFraU5DTjhmS0hTYnVkWU5MSi1MMk5LSWtySy1mODNlZVZhTjdkanNEYnVEeUczbzktRkNBRGJhZllDQmNIZnUxZ3Z3MFBlTEVrVG9DMDBzeWZNa1J5aC1MS3Q5eTFsSQ?oc=5",
+        "published_at": "Wed, 05 Aug 2026 23:57:55 GMT"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "What’s behind US Representative Massie’s claims over crisis at Ceuta?",
-        "url": "https://www.aljazeera.com/news/2026/8/5/whats-behind-us-representative-massies-claims-over-crisis-at-ceuta?traffic_source=rss",
-        "published_at": "Wed, 05 Aug 2026 20:55:12 +0000"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "First U.S. Bitcoin ETF To Close",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/first-u-bitcoin-etf-close-132500973.html",
-        "published_at": "2026-08-04T13:25:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Exclusive: Dinari, founded by Stripe and Apple alums, partners with Circle to offer tokenized stocks to U.S. investors",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/exclusive-dinari-founded-stripe-apple-133000489.html",
-        "published_at": "2026-08-04T13:30:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Could Revolution Medicines (RVMD) Become a $20 Billion Cancer Drug Story?",
-        "url": "https://finance.yahoo.com/healthcare/articles/could-revolution-medicines-rvmd-become-131956736.html",
-        "published_at": "2026-08-04T13:19:56Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Why AMD is a Yahoo Finance AlphaSpace rockstar",
-        "url": "https://finance.yahoo.com/markets/article/why-amd-is-a-yahoo-finance-alphaspace-rockstar-131746048.html",
-        "published_at": "2026-08-04T13:17:46Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Fed's Paulson keeps 'open mind' on rate policy outlook amid high inflation",
-        "url": "https://finance.yahoo.com/economy/policy/articles/feds-paulson-keeps-open-mind-120134252.html",
-        "published_at": "2026-08-04T13:41:36Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "What Could Push Broadcom Stock Higher Is Already Sitting In Its Order Book",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/could-push-broadcom-stock-higher-132952296.html",
-        "published_at": "2026-08-04T13:29:52Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Transportation capacity falls faster in July, rates remain high",
-        "url": "https://finance.yahoo.com/economy/articles/transportation-capacity-falls-faster-july-130441608.html",
-        "published_at": "2026-08-04T13:04:41Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Baron Capital Sees Years of Mid-Teens Growth for Intuitive Surgical (ISRG)",
-        "url": "https://finance.yahoo.com/healthcare/articles/baron-capital-sees-years-mid-134545821.html",
-        "published_at": "2026-08-04T13:45:45Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "1 Reason Wall Street Is Obsessed With This Tech Stock",
-        "url": "https://finance.yahoo.com/technology/articles/1-reason-wall-street-obsessed-133036749.html",
-        "published_at": "2026-08-04T13:30:36Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "McDonald’s Slowest Quarter in a Year Costs Its US President His Job",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-slowest-quarter-costs-us-133317148.html",
-        "published_at": "2026-08-04T13:33:17Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Trucking coalition says 194,000 non-domiciled CDLs affected by carrier reforms",
-        "url": "https://finance.yahoo.com/economy/policy/articles/trucking-coalition-says-194-000-133821021.html",
-        "published_at": "2026-08-04T13:38:21Z"
-      },
-      {
-        "source": "rss_cnbc_finance",
-        "title": "Fed Governor Cook says she's 'prepared to act' on rate hike to address inflation",
-        "url": "https://www.cnbc.com/2026/08/05/fed-governor-cook-says-shes-prepared-to-act-on-rate-hike-to-address-inflation.html",
-        "published_at": "Wed, 05 Aug 2026 20:36:16 GMT"
+        "title": "Meta’s AI model follows rivals in revealing hacks of outside systems",
+        "url": "https://www.aljazeera.com/news/2026/8/6/metas-ai-model-follows-rivals-in-revealing-hacks-of-outside-systems?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 00:40:28 +0000"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "Clashes on anniversary of Imran Khan imprisonment",
-        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/5-8-clip-teargas-ik-protests-pk?traffic_source=rss",
-        "published_at": "Wed, 05 Aug 2026 21:28:14 +0000"
-      },
-      {
-        "source": "rss_aljazeera_economy",
-        "title": "El-Sayed wins Michigan Democratic Senate primary",
-        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/5/el-sayed-wins-michigan-democratic-senate-primary-2?traffic_source=rss",
-        "published_at": "Wed, 05 Aug 2026 21:15:35 +0000"
-      },
-      {
-        "source": "rss_aljazeera_economy",
-        "title": "Iran says Hormuz talks with Oman in ‘final’ stages as route approved",
-        "url": "https://www.aljazeera.com/news/2026/8/5/iran-says-hormuz-talks-with-oman-in-final-stages-as-route-approved?traffic_source=rss",
-        "published_at": "Wed, 05 Aug 2026 20:55:52 +0000"
+        "title": "Mexican influencer shot dead during TikTok livestream",
+        "url": "https://www.aljazeera.com/news/2026/8/5/mexican-influencer-shot-dead-during-livestream?traffic_source=rss",
+        "published_at": "Wed, 05 Aug 2026 23:51:31 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Investor Cathie Wood Buys Coinbase And Circle Stocks",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/investor-cathie-wood-buys-coinbase-133100414.html",
-        "published_at": "2026-08-04T13:31:00Z"
+        "title": "Airbus Partner Designing Starlab Space Station Soars 25% On Earnings",
+        "url": "https://www.investors.com/news/space-stock-voyager-airbus-starlab-earnings/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-04T13:59:25Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Just How Wide Is the Potential Swing in Micron Stock?",
+        "url": "https://finance.yahoo.com/markets/options/articles/just-wide-potential-swing-micron-133929633.html",
+        "published_at": "2026-08-04T13:39:29Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "This Netflix VP Confessed to Ketamine Therapy at a Company ‘Trust’ Retreat. He Was Fired a Few Months Later.",
+        "url": "https://finance.yahoo.com/media-advertising/articles/netflix-vp-confessed-ketamine-therapy-134500335.html",
+        "published_at": "2026-08-04T13:45:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Saudi Aramco Q2 2026 earnings beat as Iran war lifts oil prices",
+        "url": "https://finance.yahoo.com/energy/articles/saudi-aramco-q2-2026-earnings-134448132.html",
+        "published_at": "2026-08-04T13:44:48Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "FAA says Trump’s Marine One briefly flew too close to passenger jet",
+        "url": "https://www.aljazeera.com/news/2026/8/6/faa-says-trumps-marine-one-briefly-flew-too-close-to-passenger-jet?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 00:31:07 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Mamdani praises El-Sayed’s victory, rejects ‘mini Mamdani’ trope",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/6/mamdani-praises-el-sayeds-victory-rejects-mini-mamdani-trope?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 00:01:24 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SpaceX Stock Rises in Early Trading",
+        "url": "https://www.barrons.com/livecoverage/spacex-earnings-stock-price-ipo-elon-musk/card/spacex-stock-rises-in-early-trading--rVAfDJsKpPxUIipnNMG2?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-04T13:40:50Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Exclusive / Demis Hassabis was shifting away from DeepMind CEO duties for a year - Semafor",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQWJRSzBheW5KelZNbmt1RHpoM3Jza1R3ZVNQR2xodXBkdnoxWHZISEFZR2s4RjdJeDlnN0k3c0tDT0VlYTh5bTBMcElfUy1TWGlzYlRGeV9ZazJ2UTlyaTZYYVowWXhIQmtFWEszalowN0tNRVBfNzNSaE02NUZLd0tBQ3FITzRlSUlSWHNEM01ILWlnYmN3MXRvRXg4WTY0V2xEcW1PSEMzTVg2WVBqQw?oc=5",
+        "published_at": "Wed, 05 Aug 2026 22:33:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Court filings: Dutch Bros to buy Salad And Go locations in Arizona, Nevada - AZ Family",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWVhjMXFqdlZzN1NxZWZ4SE5jSDk1MDdDLXAxTENMRFBwN2lkLXo5ZWxETFhudzI5VzFsUWRNQ2pWRElfN3k3X1lVaWl6ZG9uaW85ZkdMalJ5bDNvYUM0WURZckZhRkJZUDM0YVpOZk4xNVo3WWUwX1hVZnhjQ2Yxa2tuWmJwTy0tQ25DaEJvOVpMV29UV1cyWVp3Um5lcXpH0gG0AUFVX3lxTE9qQzFTX1BadE14ejRoN21HWmRfT0EwQXh4Y3RzVUduVHdzZWRyOWRzVnJRMFpRVDVOTDFSUmhWcm9yYVNmZGoxMk9IUC1aU0lTNkwtOTBTTTh0VGVSblpUZXVyRzZ2bExPVTJQX0s2X0FFd1I4MXV2VVR3WkRvU1A5VnA5cmlfaEtBdVNQbkw2OENJMEpWcVlaaTBOSXFvRE9fYU52WnRabUE0Vng2QUlYUTJzZw?oc=5",
+        "published_at": "Wed, 05 Aug 2026 18:07:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "KFC responds to man who said his popcorn chicken bucket was shorted - Yahoo",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUhhUkRPZ2hYbDdlX1ZScXhJUENyN1VFZ3N6RGxwbHFZMzJwZXlKOUwwb1pkUUtHODV5UmVNRkpWa3V2Y19zNV9WVDlXQ0diZkJHdHlPbmZUdkMtckd1QkpSeFFOd0M3TUJWODFqbXVDXzczemRQZjlEWVZKTEpfd2FOLU5PQkNWQjRaUm13?oc=5",
+        "published_at": "Wed, 05 Aug 2026 21:28:10 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Vault: Clarity talks in overdrive as cloture slips - Punchbowl News",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KeVBFSjFjVU1qbl8tYU1fZEtpRlpaay1uemVlMXlIN3BtTVpJOFNhTVJpZVZxMXdyQXhRbHdKd1hHdmNONk12YVdpUzdsODJ0RFZQQ2dPV3ppcGgycktEeU1ZeVJ0UEtwMmhHMmFObHp5YlItcEN2Tg?oc=5",
+        "published_at": "Wed, 05 Aug 2026 16:50:25 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Meta debuts first AI coding agent to take on Anthropic and OpenAI - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcXpCdFJVQk9lTzZ1WFk5cENzSWRNa3hkYVRfMy1vZXMxekkzQXRja2xKX0E5dzRFQXVRUDgwWDFOSWEwRWJnQU55UjVQUms0b2NuOGl1NlpUT2FqUVFPMm9WWkRqZkhWX3lyQnIxck5vZDU0RE5zdXBUalY0THd1dm5qLS1VSG1FVzh4dWNFYWQ5SFlXM2fSAZsBQVVfeXFMUDRqYXFzVEpSNHM5N24zTDBlYmd6bDRlM0FmUnB2dldBNGRIMlo2cHd3Zm5kZXVaS1k4NVFZb1hUOXhuRnh4cFlabUFmQ0NDdmE2U0F0ZHBfdnJSajBWcXowZnE1a1RhMmsydzZ2YmoyMUpyYTdlRVRBSnBxX3haUkRWOVEzOFY5aDhmVUhYNzZJdDJjdWtaRXpJNUk?oc=5",
+        "published_at": "Wed, 05 Aug 2026 19:00:17 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "It’s getting too hot to fly: climate‑driven heat waves are forcing airlines to dump passengers and cargo - Fortune",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1wVVdCYTBZcldwY3NOTjZlTjRKZVlxQlhHOGsyaXhWQjNOVHpJQmtPdkJtUTh3SWoxNloyTUFDVkFIRFhEMThtSDNIS3E0ZFRKb2VpeU16Z0dfN0U5Ym9vUGcyejR1R1kzUmVxa3J0MVBBVUtBTVNJ?oc=5",
+        "published_at": "Wed, 05 Aug 2026 13:14:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Walmart Shares Slip After Oppenheimer Downgrades Stock Ahead of Earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/walmart-shares-slip-oppenheimer-downgrades-134421895.html",
+        "published_at": "2026-08-04T13:44:21Z"
       }
     ]
   },
