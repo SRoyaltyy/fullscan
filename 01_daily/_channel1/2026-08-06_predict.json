@@ -1,0 +1,392 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-06T09:10:08.577106-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 5.18,
+      "delta_1d": -0.05,
+      "delta_1w": 0.09,
+      "delta_1m": 0.19
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 4.63,
+      "delta_1d": -0.07,
+      "delta_1w": 0.02,
+      "delta_1m": 0.15
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 2.4,
+      "delta_1d": -0.03,
+      "delta_1w": -0.01,
+      "delta_1m": 0.16
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-04",
+      "current": 2.73,
+      "delta_1d": -0.05,
+      "delta_1w": -0.11,
+      "delta_1m": 0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 3.64,
+      "delta_1d": -0.02,
+      "delta_1w": -0.01,
+      "delta_1m": 0.02
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 1.65,
+      "delta_1d": -0.601,
+      "delta_1w": -0.926,
+      "delta_1m": -2.834
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 436.38,
+      "delta_1d": 31.43,
+      "delta_1w": 181.49,
+      "delta_1m": 141.36
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-06",
+      "current": 15.95,
+      "delta_1d": 0.14,
+      "delta_1w": -1.14
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 20 days older than VIX (2026-07-17 vs 2026-08-06); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 76.23,
+      "pct_1d": 1.34
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 80.74,
+      "pct_1d": 1.62
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 4310.9,
+      "pct_1d": 1.53
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-06",
+      "pct_1d": 0.08,
+      "pct_1m": -1.27
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 7754.0,
+      "pct_1d": 0.06
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 29537.25,
+      "pct_1d": -0.26
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 65683.26,
+          "pct_1d": -0.93
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 25530.28,
+          "pct_1d": -1.49
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 3900.35,
+          "pct_1d": 0.57
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 6296.38,
+          "pct_1d": -4.58
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 9271.6,
+          "pct_1d": 0.47
+        }
+      },
+      "composite_avg": -1.19
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 10902.63,
+          "pct_1d": 0.13
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 26141.13,
+          "pct_1d": 0.06
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 8729.39,
+          "pct_1d": 0.69
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-06",
+          "last": 6508.58,
+          "pct_1d": 0.49
+        }
+      },
+      "composite_avg": 0.34
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.295,
+    "window": "2026-07-29..2026-08-05"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 60.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-05 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "What the CJP protests reveal about India’s next generation",
+        "url": "https://www.aljazeera.com/opinions/2026/8/6/what-the-cjp-protests-reveal-about-indias-next-generation?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 10:55:54 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stevanato Group S.p.A. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/healthcare/articles/stevanato-group-p-q2-2026-013847079.html",
+        "published_at": "2026-08-05T01:38:47Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "33 stocks to bet on foreign markets continuing to beat the S&P 500",
+        "url": "https://www.marketwatch.com/story/33-stocks-to-bet-on-foreign-markets-continuing-to-beat-the-s-p-500-7d63dabc?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 11:30:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Who was Cesar Gastelum, Mexican TikToker shot dead mid-livestream?",
+        "url": "https://www.aljazeera.com/news/2026/8/6/who-was-cesar-gastelum-mexican-tiktoker-shot-dead-mid-livestream?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 11:00:07 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stock market today: Nasdaq futures slip, Dow and S&P 500 futures inch up as earnings roll on",
+        "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-august-6-dow-sp-nasdaq-091620000.html",
+        "published_at": "2026-08-06T09:16:20Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Quantum Computing Stocks: D-Wave Earnings, Revenue Miss",
+        "url": "https://www.investors.com/news/technology/quantum-computing-stocks-dwave-stock-dwave-earnings-q22026/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T11:44:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Chinese optical module makers slump after report on planned US import ban",
+        "url": "https://finance.yahoo.com/technology/ai/articles/china-ai-hardware-stocks-slump-014228211.html",
+        "published_at": "2026-08-05T01:42:28Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Revvity, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/revvity-inc-q2-2026-earnings-013347249.html",
+        "published_at": "2026-08-05T01:33:47Z"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Hospital staff work in pubs to balance cost pressure",
+        "url": "https://www.bbc.co.uk/news/articles/cx2dp10gpndo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Thu, 06 Aug 2026 11:46:36 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Ebola outbreak accelerates as healthcare workers strike over pay",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/6/ebola-outbreak-accelerates-as-healthcare-workers-strike-over-pay?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 11:20:41 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Uganda football star Owori killed, weeks after death of rugby’s Gongodyo",
+        "url": "https://www.aljazeera.com/sports/2026/8/6/uganda-football-star-owori-killed-weeks-after-death-of-rugbys-gongodyo?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 10:13:26 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Wall Street set for mixed open after sentiment rebounds in European trading",
+        "url": "https://finance.yahoo.com/markets/world-indices/articles/asia-shares-ease-tech-pullback-012838047.html",
+        "published_at": "2026-08-06T11:53:29Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "US Fed clears Santander’s $12.2bn purchase of Webster",
+        "url": "https://finance.yahoo.com/economy/policy/articles/us-fed-clears-santander-12-120107186.html",
+        "published_at": "2026-08-06T12:01:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Cathie Wood invests a combined $28.7 million in TSMC, SpaceX after trimming investments in Amazon, Alphabet and Shopify",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-invests-combined-28-114500645.html",
+        "published_at": "2026-08-06T11:45:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Trex Company, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/trex-company-inc-q2-2026-015007890.html",
+        "published_at": "2026-08-05T01:50:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Coca-Cola Europacific Partners PLC Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-europacific-partners-plc-020539810.html",
+        "published_at": "2026-08-05T02:05:39Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Hedge funds forced out of tech stocks may leave the market at the mercy of retail traders",
+        "url": "https://www.marketwatch.com/story/hedge-funds-forced-out-of-tech-stocks-may-leave-the-market-at-the-mercy-of-retail-traders-bfb0a867?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 12:17:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "This mom spent $2,000 on her kindergartner as viral ‘back-to-school hauls’ on TikTok and YouTube spin out of control",
+        "url": "https://www.marketwatch.com/story/this-mom-spent-2-000-on-her-kindergartner-as-viral-back-to-school-hauls-on-tiktok-and-youtube-spin-out-of-control-0be2949d?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 12:00:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "SoftBank earnings exceed expectations, even without an OpenAI boost. This U.S. chip company saved the day.",
+        "url": "https://www.marketwatch.com/story/softbank-earnings-exceed-expectations-even-without-an-openai-boost-this-u-s-chip-company-saved-the-day-2223845e?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 11:03:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Dog days of summer? July jobs report likely to show soft pace of hiring.",
+        "url": "https://www.marketwatch.com/story/dogs-days-of-summer-july-jobs-report-likely-to-show-soft-pace-of-hiring-39f6eed4?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 11:00:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Video: Wildfires in Washington state force thousands to evacuate homes",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/6/video-wildfires-in-washington-state-force-thousands-to-evacuate-homes?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 11:59:30 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Can the US slow China’s robotics and tech rise?",
+        "url": "https://www.aljazeera.com/video/counting-the-cost/2026/8/6/can-the-us-slow-chinas-robotics-and-tech-rise?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 11:35:47 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Cambridge professor Jason Arday quits amid plagiarism allegations",
+        "url": "https://www.aljazeera.com/news/2026/8/6/cambridge-professor-jason-arday-quits-amid-plagiarism-allegations?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 10:24:59 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Hormuz deal ‘close’: What’s the latest on each side’s positions?",
+        "url": "https://www.aljazeera.com/news/2026/8/6/hormuz-deal-close-whats-the-latest-on-each-sides-positions?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 10:20:57 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Lessons from the Iran war: China’s oil buffer and energy resilience, tested",
+        "url": "https://finance.yahoo.com/energy/articles/lessons-iran-war-china-oil-120614862.html",
+        "published_at": "2026-08-06T12:06:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Antipodes Exited Sanofi (SNY) After Repeated Pipeline Setbacks",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/antipodes-exited-sanofi-sny-repeated-115825269.html",
+        "published_at": "2026-08-06T11:58:25Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dow Jones Futures Rise But Techs Fall As Sandisk, Western Digital, Datadog Lead Earnings Losers",
+        "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-google-spacex-skid-sandisk-western-digital-earnings/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T11:48:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Daily – Vickers Top Insider Picks for 08/06/2026",
+        "url": "https://finance.yahoo.com/research/reports/ARGUS_47835_InsiderActivity_1786013938000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei",
+        "published_at": "2026-08-06T10:58:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Kenvue misses quarterly estimates as inflation, tariffs squeeze margins",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/kenvue-misses-quarterly-estimates-inflation-114707391.html",
+        "published_at": "2026-08-06T11:47:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Toyota targets 10.5 million vehicles in 2027 – report",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/toyota-targets-10-5-million-115927161.html",
+        "published_at": "2026-08-06T11:59:27Z"
+      }
+    ]
+  }
+}
