@@ -1,0 +1,438 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-06T21:02:13.793672-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 5.17,
+      "delta_1d": -0.01,
+      "delta_1w": -0.03,
+      "delta_1m": 0.12
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 4.63,
+      "delta_1d": 0.0,
+      "delta_1w": -0.04,
+      "delta_1m": 0.08
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 2.41,
+      "delta_1d": 0.01,
+      "delta_1w": 0.0,
+      "delta_1m": 0.11
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 2.75,
+      "delta_1d": 0.02,
+      "delta_1w": -0.12,
+      "delta_1m": 0.08
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 3.64,
+      "delta_1d": -0.02,
+      "delta_1w": -0.01,
+      "delta_1m": 0.02
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-07",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 1.429,
+      "delta_1d": -0.221,
+      "delta_1w": 0.353,
+      "delta_1m": -1.918
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 436.38,
+      "delta_1d": 31.43,
+      "delta_1w": 181.49,
+      "delta_1m": 141.36
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-06",
+      "current": 15.15,
+      "delta_1d": -0.66,
+      "delta_1w": -1.94
+    },
+    "vix3m": {
+      "date": "2026-08-06",
+      "current": 18.69,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.811
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 78.11,
+      "pct_1d": 3.84
+    },
+    "BZ=F": {
+      "available": false
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 4292.2,
+      "pct_1d": 1.09
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-06",
+      "pct_1d": 0.29,
+      "pct_1m": -1.06
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 7735.5,
+      "pct_1d": -0.18
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-06",
+      "last": 29544.0,
+      "pct_1d": -0.24
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 65219.07,
+          "pct_1d": -1.63
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 25915.82,
+          "pct_1d": 0.24
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 3878.43,
+          "pct_1d": 1.47
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6281.59,
+          "pct_1d": -4.8
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 9226.9,
+          "pct_1d": -0.01
+        }
+      },
+      "composite_avg": -0.95
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 10888.3,
+          "pct_1d": 0.08
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 26126.3,
+          "pct_1d": -0.29
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 8669.3,
+          "pct_1d": 0.03
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-05",
+          "last": 6476.98,
+          "pct_1d": -0.15
+        }
+      },
+      "composite_avg": -0.08
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.632,
+    "window": "2026-07-30..2026-08-06"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 60.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-05 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump signs executive orders banning so-called ‘birth tourism’",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/6/trump-signs-executive-orders-banning-so-called-birth?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 23:42:47 +0000"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "How to wish Social Security a happy 91st birthday",
+        "url": "https://www.marketwatch.com/story/how-to-wish-social-security-a-happy-91st-birthday-865d71a8?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 20:56:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Why airlines are warning over lithium-ion batteries",
+        "url": "https://www.bbc.co.uk/news/articles/cwyl6yz719jo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Thu, 06 Aug 2026 23:04:40 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "‘No red line’: South Lebanon residents outraged as Israel resumes strikes",
+        "url": "https://www.aljazeera.com/news/2026/8/6/south-lebanon-people-speak-out-as-israel-launches-attacks-ceasefire?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 23:46:37 +0000"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Copper jumps to its highest level ever. What the metal is telling us",
+        "url": "https://www.cnbc.com/2026/08/06/copper-jumps-to-its-highest-level-ever-what-the-metal-is-telling-us-.html",
+        "published_at": "Thu, 06 Aug 2026 20:07:51 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Gold prices are breaking higher after a tough stretch. Could fresh records be within reach?",
+        "url": "https://www.marketwatch.com/story/gold-prices-are-breaking-higher-after-a-tough-stretch-could-fresh-records-be-within-reach-1e1a872f?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 20:57:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "How to use options to trade stocks around an earnings announcement",
+        "url": "https://www.marketwatch.com/story/how-to-use-options-to-trade-stocks-around-an-earnings-announcement-e1ba7920?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 20:37:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "First OpenAI, now Meta - why do AI hacks keep happening?",
+        "url": "https://www.bbc.co.uk/news/articles/cp30989ee1wo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Thu, 06 Aug 2026 15:59:34 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Travel restrictions – from Israel and Europe – trap students in Gaza",
+        "url": "https://www.aljazeera.com/features/2026/8/6/travel-restrictions-from-israel-and-europe-trap-students-in-gaza?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 23:49:21 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bed Bath & Beyond Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bed-bath-beyond-inc-q2-123000531.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Celanese Corporation Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/celanese-corporation-q2-2026-earnings-123000071.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_cnbc_economy",
+        "title": "The July jobs numbers are due out Friday. Here's what to expect",
+        "url": "https://www.cnbc.com/2026/08/06/the-july-jobs-numbers-are-due-out-friday-heres-what-to-expect.html",
+        "published_at": "Thu, 06 Aug 2026 20:15:22 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "As Alphabet burns through cash on AI, it’s turning back to the bond market",
+        "url": "https://www.marketwatch.com/story/as-alphabet-burns-through-cash-on-ai-its-turning-back-to-the-bond-market-04e85f31?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 23:14:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Sweetgreen recalls jalapenos, details how cyclospora outbreak will weigh on sales",
+        "url": "https://www.marketwatch.com/story/sweetgreen-recalls-jalapenos-details-how-cyclospora-outbreak-will-weigh-on-sales-c52435bf?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 22:58:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Hinge Health, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/healthcare/articles/hinge-health-inc-q2-2026-123000920.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Honeywell Aerospace lands in Wall Street’s ‘penalty box’ after gloomy guidance triggers 23% stock selloff",
+        "url": "https://www.marketwatch.com/story/honeywell-aerospace-lands-in-wall-streets-penalty-box-after-gloomy-guidance-triggers-21-stock-selloff-ea8b032c?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 20:41:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The last time value stocks beat growth by this much was 2022 — the year of the last major bear market",
+        "url": "https://www.marketwatch.com/story/the-last-time-value-stocks-beat-growth-by-this-much-was-2022-the-year-of-the-last-major-bear-market-93851a5f?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 19:57:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Argos is getting a makeover - but can it attract new shoppers?",
+        "url": "https://www.bbc.co.uk/news/articles/c2lqvwewgp2o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Thu, 06 Aug 2026 23:03:48 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Palomar Holdings, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/palomar-holdings-inc-q2-2026-123000464.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump says war can’t ‘go much longer’, Hormuz deal close",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/8/7/trump-says-war-cant-go-much-longer-hormuz-deal-close?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 00:00:00 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nasdaq ends four-day rally as Wall Street takes a breather",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/dow-jones-p-500-set-121600314.html",
+        "published_at": "2026-08-05T12:10:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Lumen Technologies, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/lumen-technologies-inc-q2-2026-123000190.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Factorial and SK On sign MoU for SSB manufacturing",
+        "url": "https://finance.yahoo.com/technology/articles/factorial-sk-sign-mou-ssb-121026652.html",
+        "published_at": "2026-08-05T12:10:26Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The Macerich Company Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/macerich-company-q2-2026-earnings-123000799.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "TrueBlue, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/trueblue-inc-q2-2026-earnings-123000159.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Latham Group, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/latham-group-inc-q2-2026-123000925.html",
+        "published_at": "2026-08-05T12:30:00Z"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "United Wholesale Mortgage plunges 35% after suspending dividend and raising capital",
+        "url": "https://www.cnbc.com/2026/08/06/united-wholesale-mortgage-plunges-40percent-suspends-dividend-raises-capital-.html",
+        "published_at": "Thu, 06 Aug 2026 20:37:51 GMT"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Traders on Kalshi now think it's likely that the S&P 500 will hit 8,000 in 2026",
+        "url": "https://www.cnbc.com/2026/08/06/traders-on-kalshi-say-its-likely-sp-500-will-hit-8000-in-2026.html",
+        "published_at": "Thu, 06 Aug 2026 14:48:42 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Trade Desk shares tumble on earnings miss and weak outlook",
+        "url": "https://www.marketwatch.com/story/trade-desk-shares-tumble-on-earnings-miss-and-weak-outlook-9f4640e9?mod=mw_rss_topstories",
+        "published_at": "Thu, 06 Aug 2026 22:59:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Iran’s Ghalibaf accuses Trump of conducting show diplomacy ‘on loop’",
+        "url": "https://www.aljazeera.com/news/2026/8/6/irans-ghalibaf-accuses-trump-of-conducting-show-diplomacy-on-loop?traffic_source=rss",
+        "published_at": "Thu, 06 Aug 2026 23:34:47 +0000"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-06",
+      "open": 7713.79,
+      "high": 7742.85,
+      "low": 7698.15,
+      "close": 7709.96,
+      "pct_change": -0.18,
+      "prev_close": 7723.55,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.58,
+        "intraday_low_pct": -0.33,
+        "intraday_high_pct": 0.25,
+        "close_position_in_range": 0.26
+      }
+    },
+    "DOW": {
+      "date": "2026-08-06",
+      "open": 54426.85,
+      "high": 54502.87,
+      "low": 53835.02,
+      "close": 53885.1,
+      "pct_change": -0.85,
+      "prev_close": 54349.12,
+      "path": {
+        "shape": "trend down (closed near day low)",
+        "range_pct": 1.24,
+        "intraday_low_pct": -0.95,
+        "intraday_high_pct": 0.28,
+        "close_position_in_range": 0.07
+      }
+    },
+    "NDX": {
+      "date": "2026-08-06",
+      "open": 26268.84,
+      "high": 26499.42,
+      "low": 26208.43,
+      "close": 26348.35,
+      "pct_change": -0.06,
+      "prev_close": 26363.44,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 1.11,
+        "intraday_low_pct": -0.59,
+        "intraday_high_pct": 0.52,
+        "close_position_in_range": 0.48
+      }
+    }
+  }
+}
