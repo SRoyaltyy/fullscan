@@ -1,0 +1,392 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-07T08:08:15.690070-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 5.17,
+      "delta_1d": -0.01,
+      "delta_1w": -0.03,
+      "delta_1m": 0.12
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 4.63,
+      "delta_1d": 0.0,
+      "delta_1w": -0.04,
+      "delta_1m": 0.08
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 2.41,
+      "delta_1d": 0.01,
+      "delta_1w": 0.0,
+      "delta_1m": 0.11
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 2.75,
+      "delta_1d": 0.02,
+      "delta_1w": -0.12,
+      "delta_1m": 0.08
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 3.65,
+      "delta_1d": 0.01,
+      "delta_1w": 0.0,
+      "delta_1m": 0.07
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-07",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 1.429,
+      "delta_1d": -0.221,
+      "delta_1w": 0.353,
+      "delta_1m": -1.918
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-05",
+      "current": 436.38,
+      "delta_1d": 31.43,
+      "delta_1w": 181.49,
+      "delta_1m": 141.36
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-07",
+      "current": 15.18,
+      "delta_1d": 0.03,
+      "delta_1w": -0.81
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 21 days older than VIX (2026-07-17 vs 2026-08-07); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 76.72,
+      "pct_1d": -0.74
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 81.83,
+      "pct_1d": -0.8
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 4381.8,
+      "pct_1d": 3.3
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-07",
+      "pct_1d": -0.09,
+      "pct_1m": -1.05
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 7750.0,
+      "pct_1d": 0.2
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 29624.0,
+      "pct_1d": 0.46
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 65606.71,
+          "pct_1d": -0.12
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 25668.03,
+          "pct_1d": 0.54
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 3940.04,
+          "pct_1d": 1.02
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6258.77,
+          "pct_1d": -0.6
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 9263.6,
+          "pct_1d": -0.09
+        }
+      },
+      "composite_avg": 0.15
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 10949.68,
+          "pct_1d": 0.75
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 26349.36,
+          "pct_1d": 0.8
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 8734.01,
+          "pct_1d": 0.39
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6545.17,
+          "pct_1d": 0.66
+        }
+      },
+      "composite_avg": 0.65
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.632,
+    "window": "2026-07-30..2026-08-06"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 60.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-05 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Eli Lilly and Company Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/eli-lilly-company-q2-2026-021336003.html",
+        "published_at": "2026-08-06T02:13:36Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Gold prices are breaking higher after a tough stretch. Could fresh records be within reach? - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPaGJhQXJvU1BwX1h1VWEyUERQWnR5N25hR1ZfbzBwWmw1aVNrRHpmSExJZUdRalpaX1lGZ0R5aFN6OTdfaEZnMk82bFhDaDhFbUNIQi1aSzVZcm5zUkl3cURhZjI0LWIxSHE4M0hDbk14YWlIN0NMOGFlOTBid1JVaU0ta2tjN1hrQWZ6M3BDWVpDMG93Zk1vZjZRbEtWTlM1Q1U3N3d4RjhvYnE2alQ4eWFqX3BJUFFOQWsta1FBMm9PMlpldm9LS0ZPY1A?oc=5",
+        "published_at": "Thu, 06 Aug 2026 20:57:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Saudi ⁠Arabia, Pakistan and Turkiye sign defence deal amid regional turmoil",
+        "url": "https://www.aljazeera.com/news/2026/8/7/saudi-%e2%81%a0arabia-pakistan-and-turkiye-sign-defence-deal-amid-regional-turmoil?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 11:03:07 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Lineage, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/lineage-inc-q2-2026-earnings-021034823.html",
+        "published_at": "2026-08-06T02:10:34Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Chimera Investment Corporation Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/chimera-investment-corporation-q2-2026-023050596.html",
+        "published_at": "2026-08-06T02:30:50Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "The Trump administration has refunded $100 billion in tariffs. Will you get any of the money? - The Washington Post",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZk5ONW9MdjlDN0o1NS14VzIwR0dTT1UzNk9kTmttZkpEeW9TVVBGQTFRckE0cDhfT01IQTlleXk1eUVjOFdoVG5pUUctc3dERVdsWTJHU3NIRFFKOHcwT2ZBakJ5cF84eFB5S3BkS1hPdUdvRkRyTW1BT3oxQ1NlLUIwWVQ?oc=5",
+        "published_at": "Fri, 07 Aug 2026 10:33:02 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "How S&P 500 options action may help explain the rising volatility in memory stocks",
+        "url": "https://www.marketwatch.com/story/how-s-p-500-options-action-may-help-explain-volatility-in-memory-stocks-58d95beb?mod=mw_rss_topstories",
+        "published_at": "Fri, 07 Aug 2026 10:56:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Houthi attacks on gov’t forces hint that a major battle in Yemen is brewing",
+        "url": "https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 11:11:10 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nike stock could suffer because of JPMorgan verdict",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nike-stock-could-suffer-because-231700415.html",
+        "published_at": "2026-08-05T23:17:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "LCI Industries Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/lci-industries-q2-2026-earnings-021030268.html",
+        "published_at": "2026-08-06T02:10:30Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Phillips 66 Profit Jumps as Refining Margins More Than Double",
+        "url": "https://finance.yahoo.com/energy/articles/phillips-66-profit-jumps-refining-021800484.html",
+        "published_at": "2026-08-06T02:18:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Oaktree Specialty Lending Corporation Q3 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/oaktree-specialty-lending-corporation-q3-023040113.html",
+        "published_at": "2026-08-06T02:30:40Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AppLovin Says Second-Quarter Results Fell Short of Its Standards",
+        "url": "https://www.wsj.com/business/earnings/applovin-second-quarter-sales-gain-gives-soft-third-quarter-outlook-202082a6?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-05T23:39:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "US strikes $1.2bn deal to pay German firm to halt offshore wind projects - BBC",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Ea2JGMWFDRGVjQy1Lc3o5ZW44OWVvODlkc05aWElPSHFCQlRkclI2ZzJnQkdpSE9mckE0TzFQRnlrdWR6VEVORExUek1oM21jREtjbGc0WFNudw?oc=5",
+        "published_at": "Fri, 07 Aug 2026 09:50:54 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Kevin O’Leary, aka ‘Mr. Wonderful,’ on crypto, winning in AI and 3 things all business owners must know",
+        "url": "https://www.marketwatch.com/story/kevin-oleary-aka-mr-wonderful-on-crypto-winning-in-ai-and-3-things-all-business-owners-must-know-5339ff6c?mod=mw_rss_topstories",
+        "published_at": "Fri, 07 Aug 2026 11:00:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Optical stocks have a China problem that most investors are missing",
+        "url": "https://www.marketwatch.com/story/optical-stocks-have-a-china-problem-that-most-investors-are-missing-45523981?mod=mw_rss_topstories",
+        "published_at": "Fri, 07 Aug 2026 11:00:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Northern Ethiopia’s shifting alliances explained",
+        "url": "https://www.aljazeera.com/news/2026/8/7/northern-ethiopias-shifting-alliances-explained?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 11:19:01 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump says war ‘can’t go much longer’ – what’s the latest on talks?",
+        "url": "https://www.aljazeera.com/news/2026/8/7/trump-says-war-cant-go-much-longer-whats-the-latest-on?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 11:15:44 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Why Trump is caught in an ‘escalation trap’ with Iran",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/7/why-trump-is-caught-in-an-escalation-trap-with-iran?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 11:03:01 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Houthi strikes in Yemen as Saudi Arabia braces for attacks: What we know",
+        "url": "https://www.aljazeera.com/news/2026/8/7/houthi-strikes-hit-yemen-as-saudi-arabia-braces-for-attacks-what-we-know?traffic_source=rss",
+        "published_at": "Fri, 07 Aug 2026 10:52:34 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Amazon and Alphabet Just Crushed Expectations. Which Is the Better Buy Now?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-alphabet-just-crushed-expectations-232000337.html",
+        "published_at": "2026-08-05T23:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Here's How to Read Super Group Insider Sales After the Firm Beat and Raised Guidance",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/heres-read-super-group-insider-232107683.html",
+        "published_at": "2026-08-05T23:21:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why Rivian Is Poised to Soar. Hint: It's Not All R2 Hype.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/why-rivian-poised-soar-hint-232500285.html",
+        "published_at": "2026-08-05T23:25:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dorian LPG Ltd. Q1 2027 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/dorian-lpg-ltd-q1-2027-021704360.html",
+        "published_at": "2026-08-06T02:17:04Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Outfront Media Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/media-advertising/articles/outfront-media-inc-q2-2026-022818380.html",
+        "published_at": "2026-08-06T02:28:18Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Jamie Dimon Says Margin Debt Is Highest Ever: And Here’s the Risks",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/jamie-dimon-says-margin-debt-233000283.html",
+        "published_at": "2026-08-05T23:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Southwest Gas Holdings, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/southwest-gas-holdings-inc-q2-024034722.html",
+        "published_at": "2026-08-06T02:40:34Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Here's How to Read Super Group Insider Moves as Shares Slipped 6% After Earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/heres-read-super-group-insider-233122352.html",
+        "published_at": "2026-08-05T23:31:22Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CD rates are going up. Here's why — and how to find the best rates.",
+        "url": "https://finance.yahoo.com/personal-finance/banking/article/are-cd-rates-going-up-225830260.html",
+        "published_at": "2025-02-26T22:58:30Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Jim Cramer highlights 5 investing themes — and the stocks to buy for each - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0M3YXhGbEQ1a2owUHBYMHpPX1FkYzhYNjVnRWRLNWRUb19aVHg0dkt6NWw1NXlPSU5WNExwMUV3TG00TmhrV3dtTEJLQmF4OW5vNUNQb2FINGJ5UkdUSkFuSnJHeWVDMzF4ZzJKTURLUll1czNWVHlkNVUzRjU3RFR4WlRVYk3SAYwBQVVfeXFMTlRmdmppRkx3N093a09OaHhBQkNDU25GREtvejFfaktNQkVhamZVUDlneWwxQ05PUXN4S2I2VHhMaGNtVFRoVzM2TEwxM0V0SjE1NE91V1I1RWZsZVNwVFRGY3hIbHZqTTVQMFJOb1g4Y2ttaUxZSkxpTVlVbWVLX3NvNGFyQVQ2bzVLcHk?oc=5",
+        "published_at": "Thu, 06 Aug 2026 22:23:25 GMT"
+      }
+    ]
+  }
+}
