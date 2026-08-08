@@ -1,8 +1,10 @@
-"""Sector PREDICT — one sector = one independent LLM run (same method as general).
+"""Sector PREDICT — general method + per-sector specialized rubric.
+
+System prompt = sector_method.md (shared machine) + 00_grounding/sectors/<slug>.md
+User prompt   = sector memory + full Channel 1 (same as general) + ETF tape + search seeds
 
 CLI:
   python -m src.run_sector_predict [--date YYYY-MM-DD] [--sectors Technology,Energy]
-  python -m src.run_sector_predict --date 2026-08-11          # all 11, sequential
 """
 from __future__ import annotations
 
@@ -12,37 +14,57 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import compute_sector_scores, config, deepseek_client, scoreboard
+from . import compute_sector_scores, config, deepseek_client, fetch_channel1, scoreboard
 from .sector_engine import etf_relative_snapshot, search_query_bundle
 from .sector_memory import prediction_context, topic_for
-from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, validate
+from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, amp_damp_table, taxonomy_list, validate
 
 
 def _slug(sector: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", sector.lower()).strip("_")
 
 
-def run_one(sector: str, date_str: str) -> dict:
+def _load_system_prompt(sector: str) -> str:
+    method_path = os.path.join(config.GROUNDING, "sector_method.md")
+    sector_path = os.path.join(config.GROUNDING, "sectors", f"{_slug(sector)}.md")
+    with open(method_path, encoding="utf-8") as fh:
+        method = fh.read()
+    if not os.path.exists(sector_path):
+        raise SystemExit(f"missing sector rubric: {sector_path}")
+    with open(sector_path, encoding="utf-8") as fh:
+        specialized = fh.read()
+    # Machine taxonomy appendix (labels stay stable for lessons)
+    labs = taxonomy_list(sector)
+    checklist = "\n".join(f"  - {x}" for x in labs)
+    appendix = (
+        "\n\n=== FULL TAXONOMY LABEL LIST (use exact strings in HIT_GRID) ===\n"
+        f"{checklist}\n\n"
+        f"=== AMP/DAMP ONE-LINERS ===\n{amp_damp_table(sector)}\n"
+    )
+    return method + "\n\n" + specialized + appendix
+
+
+def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
     if not config.DEEPSEEK_API_KEY:
         raise SystemExit("DEEPSEEK_API_KEY not set")
 
-    with open(os.path.join(config.GROUNDING, "sector_rubric.md"),
-              encoding="utf-8") as fh:
-        rubric = fh.read()
-
+    rubric = _load_system_prompt(sector)
     etf_ctx = etf_relative_snapshot(sector)
-    seeds = search_query_bundle(sector, limit=14)
+    seeds = search_query_bundle(sector, limit=16)
+
     user_msg = (
         f"TODAY: {date_str} (America/New_York)\n"
         f"SECTOR UNDER ANALYSIS (ONLY THIS ONE): {sector}\n"
-        f"ETF: {SECTOR_ETFS.get(sector)}\n\n"
+        f"ETF TO GRADE LATER: {SECTOR_ETFS.get(sector)}\n\n"
         f"{prediction_context(sector)}\n\n"
-        f"=== CHANNEL 1 ETF CONTEXT ===\n{etf_ctx or '(unavailable)'}\n\n"
-        "Suggested web_search seeds (use tools; expand as needed):\n"
+        f"{ch1_md}\n\n"
+        f"=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\n"
+        f"{etf_ctx or '(unavailable)'}\n\n"
+        "Suggested web_search seeds (expand; cover all Channel 2 categories):\n"
         + "\n".join(f"- {q}" for q in seeds)
-        + "\n\nExecute the full sector rubric now. "
-          "Research thoroughly. Take as long as needed. "
-          "Output MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block."
+        + "\n\nExecute the shared method + THIS sector layer now. "
+          "Specialize S1 to the spine factors. "
+          "MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block."
     )
 
     slug = _slug(sector)
@@ -68,13 +90,15 @@ def run_one(sector: str, date_str: str) -> dict:
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Sector Prediction — {sector} — {date_str}\n\n")
         fh.write(f"- ETF: **{SECTOR_ETFS.get(sector)}**\n")
+        fh.write(f"- rubric: `00_grounding/sectors/{slug}.md`\n")
         fh.write(f"- predicted_direction: **{decision['predicted_direction']}**\n")
         fh.write(f"- predicted_magnitude_band: **{decision['predicted_magnitude_band']}**\n")
         fh.write(f"- total_score: **{decision['total_score']}** "
                  f"(mult {decision['multiplier']})\n")
         fh.write(f"- regime: {decision.get('regime')}\n")
         fh.write(f"- divergence_flagged: **{decision['divergence_flagged']}**\n\n")
-        fh.write("## Channel 1 ETF context\n\n```\n" + (etf_ctx or "") + "\n```\n\n")
+        fh.write("## Channel 1 sector ETF tape\n\n```\n"
+                 + (etf_ctx or "") + "\n```\n\n")
         fh.write(text)
         fh.write("\n\n---\n## Pipeline-computed decision (deterministic)\n\n")
         fh.write(f"```json\n{decision}\n```\n")
@@ -93,6 +117,7 @@ def run_one(sector: str, date_str: str) -> dict:
         "divergence_flagged": decision["divergence_flagged"],
         "sector": sector,
         "etf": SECTOR_ETFS.get(sector),
+        "rubric": f"00_grounding/sectors/{slug}.md",
     })
     scoreboard.save(board)
     print(f"[sector-predict] {sector}: {decision['predicted_direction']}/"
@@ -120,9 +145,20 @@ def main() -> None:
     else:
         sectors = list(FINVIZ_SECTORS)
 
+    # Same Channel 1 build as general predict — once per batch
+    try:
+        ch1 = fetch_channel1.build("predict")
+        fetch_channel1.save(ch1, date_str, "sector_predict")
+        ch1_md = fetch_channel1.to_markdown(ch1)
+    except Exception as e:  # noqa: BLE001
+        print(f"[sector-predict] Channel 1 build failed ({e}); continuing with stub")
+        ch1_md = ("=== CHANNEL 1: PRE-FETCHED DATA ===\n"
+                  "(unavailable this run — do not invent precise levels; "
+                  "use web_search cautiously for macro and state uncertainty)\n")
+
     for sector in sectors:
         print(f"\n======== SECTOR PREDICT: {sector} ========\n")
-        run_one(sector, date_str)
+        run_one(sector, date_str, ch1_md)
 
 
 if __name__ == "__main__":
