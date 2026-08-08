@@ -1,33 +1,34 @@
-name: Sector Environment Predict
+name: Sector Predict
+
+# One independent DeepSeek run per sector (never mashed into one prompt).
+# sectors empty  → all 11 Finviz sectors, sequential
+# sectors filled → only those names
 
 on:
   workflow_dispatch:
     inputs:
-      run_date:
-        description: "YYYY-MM-DD (default today ET)"
-        required: false
-        default: ""
       sectors:
-        description: "Comma-separated subset or empty for all 11"
+        description: >
+          Comma-separated Finviz sector names, or EMPTY for all 11.
+          Examples: Technology | Energy,Utilities | Basic Materials,Healthcare,Financial
+        required: false
+        default: "Technology"
+      run_date:
+        description: "YYYY-MM-DD (default = today America/New_York)"
         required: false
         default: ""
-      no_llm:
-        description: "true = ETF channel only (no DeepSeek)"
-        required: false
-        default: "false"
-        type: choice
-        options: ["false", "true"]
-  schedule:
-    # After general predict window — weekdays 14:30 UTC (~10:30 ET)
-    - cron: "30 14 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: sector-predict
+  cancel-in-progress: false
+
 jobs:
-  sector:
+  predict:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 
@@ -35,39 +36,60 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install deps
+      - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install yfinance || true
+          pip install yfinance pandas requests ddgs openai || true
+
+      - name: Show plan
+        run: |
+          echo "run_date: '${{ github.event.inputs.run_date }}'"
+          echo "sectors:  '${{ github.event.inputs.sectors }}'"
+          if [ -z "${{ github.event.inputs.sectors }}" ]; then
+            echo "Mode: ALL 11 (sequential, one LLM session each)"
+          else
+            echo "Mode: SELECTED → ${{ github.event.inputs.sectors }}"
+          fi
 
       - name: Run sector predict
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           set -e
           DATE="${{ github.event.inputs.run_date }}"
           SECTORS="${{ github.event.inputs.sectors }}"
-          NO_LLM="${{ github.event.inputs.no_llm }}"
           ARGS=()
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
-          [ "$NO_LLM" = "true" ] && ARGS+=(--no-llm)
-          echo "python -m src.run_sector_predict ${ARGS[*]}"
+          echo "CMD: python -m src.run_sector_predict ${ARGS[*]}"
           python -m src.run_sector_predict "${ARGS[@]}"
 
-      - name: Show summary
+      - name: Print outputs
+        if: always()
         run: |
-          ls -la 01_daily/sectors/ || true
-          for d in 01_daily/sectors/*/; do
-            [ -f "${d}_summary.md" ] && echo "===== ${d}_summary.md =====" && cat "${d}_summary.md"
+          echo "=== files under 01_daily/sectors ==="
+          find 01_daily/sectors -type f 2>/dev/null | sort || true
+          for f in 01_daily/sectors/*/*_predict.md; do
+            [ -f "$f" ] || continue
+            echo ""
+            echo "========== $f =========="
+            head -50 "$f"
+            echo "..."
+            grep -A 25 "SECTOR_SCORES_BEGIN" "$f" || true
           done
 
-      - name: Commit
+      - name: Commit results
+        if: always()
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/sectors/ 01_daily/_transcripts/ || true
-          git commit -m "auto: sector environment predict" || echo "No changes"
+          git add 01_daily/sectors/ 01_daily/_transcripts/ 03_scoreboard/ || true
+          MSG="auto: sector predict"
+          [ -n "${{ github.event.inputs.sectors }}" ] && MSG="auto: sector predict ${{ github.event.inputs.sectors }}"
+          [ -z "${{ github.event.inputs.sectors }}" ] && MSG="auto: sector predict ALL"
+          git commit -m "$MSG" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main
