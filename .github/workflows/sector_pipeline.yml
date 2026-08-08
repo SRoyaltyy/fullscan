@@ -1,0 +1,96 @@
+name: Sector Pipeline (per-sector sequential)
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "predict | outcome | reflect | all"
+        required: true
+        default: "predict"
+      run_date:
+        description: "YYYY-MM-DD (default today ET)"
+        required: false
+        default: ""
+      sectors:
+        description: "Comma-separated subset, or empty for all 11 (one LLM run each)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sector-pipeline
+  cancel-in-progress: false
+
+jobs:
+  sector-loop:
+    runs-on: ubuntu-latest
+    # 11 sectors × long tool loops; allow hours
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install yfinance pandas requests ddgs openai || true
+
+      - name: Predict (one sector at a time)
+        if: ${{ github.event.inputs.stage == 'predict' || github.event.inputs.stage == 'all' }}
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          SECTORS="${{ github.event.inputs.sectors }}"
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
+          echo "=== sector PREDICT sequential ==="
+          python -m src.run_sector_predict "${ARGS[@]}"
+
+      - name: Outcome (one sector at a time)
+        if: ${{ github.event.inputs.stage == 'outcome' || github.event.inputs.stage == 'all' }}
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          SECTORS="${{ github.event.inputs.sectors }}"
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
+          echo "=== sector OUTCOME sequential ==="
+          python -m src.run_sector_outcome "${ARGS[@]}"
+
+      - name: Reflect (one sector at a time)
+        if: ${{ github.event.inputs.stage == 'reflect' || github.event.inputs.stage == 'all' }}
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          SECTORS="${{ github.event.inputs.sectors }}"
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
+          echo "=== sector REFLECT sequential ==="
+          python -m src.run_sector_reflect "${ARGS[@]}"
+
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ || true
+          git commit -m "auto: sector pipeline ${{ github.event.inputs.stage }}" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main

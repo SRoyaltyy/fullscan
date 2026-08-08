@@ -1,0 +1,148 @@
+"""Sector REFLECT — one sector diagnostic → candidate lesson.
+
+CLI:
+  python -m src.run_sector_reflect [--date YYYY-MM-DD] [--sectors Technology]
+"""
+from __future__ import annotations
+
+import argparse
+import glob
+import os
+import re
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+from . import config, deepseek_client, scoreboard
+from .sector_memory import scoreboard_summary, topic_for
+from .sector_taxonomy import FINVIZ_SECTORS
+
+
+def _slug(sector: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", sector.lower()).strip("_")
+
+
+def _read(path: str) -> str:
+    try:
+        with open(path, encoding="utf-8") as fh:
+            return fh.read()
+    except OSError:
+        return "(missing)"
+
+
+def _parse_lesson_block(text: str) -> dict:
+    m = re.search(r"LESSON_BEGIN(.*?)LESSON_END", text, re.S)
+    block = m.group(1) if m else ""
+    out = {}
+    for line in block.splitlines():
+        if ":" in line:
+            k, v = line.split(":", 1)
+            out[k.strip()] = v.strip()
+    return out
+
+
+def _candidate_triggers(limit: int = 12) -> str:
+    files = sorted(glob.glob(os.path.join(config.LESSONS_CANDIDATE, "*.md")))
+    rows = []
+    for p in files[-limit:]:
+        head = _read(p)[:800]
+        trig = re.search(r'trigger_pattern:\s*"(.*?)"', head)
+        cat = re.search(r'error_category:\s*"(.*?)"', head)
+        date = re.search(r'date:\s*"(.*?)"', head)
+        rows.append(
+            f"- {date.group(1) if date else os.path.basename(p)} "
+            f"[{cat.group(1) if cat else '?'}]: "
+            f"{trig.group(1) if trig else '(no trigger)'}")
+    return "\n".join(rows) or "(no candidate lessons yet)"
+
+
+def run_one(sector: str, date_str: str) -> None:
+    if not config.DEEPSEEK_API_KEY:
+        raise SystemExit("DEEPSEEK_API_KEY not set")
+
+    topic = topic_for(sector)
+    board = scoreboard.load()
+    entry = scoreboard.get_or_create(board, date_str, topic)
+    if entry.get("actual_pct_change") is None:
+        print(f"[sector-reflect] skip {sector}: no graded outcome")
+        return
+
+    slug = _slug(sector)
+    out_dir = os.path.join(config.DAILY_SECTORS, date_str)
+    predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
+    outcome_md = _read(os.path.join(out_dir, f"{slug}_outcome.md"))
+
+    with open(os.path.join(config.GROUNDING, "sector_reflect_prompt.md"),
+              encoding="utf-8") as fh:
+        prompt = fh.read()
+
+    user_msg = (
+        f"DATE: {date_str}\nSECTOR: {sector}\n\n"
+        f"=== PREDICT ===\n{predict_md}\n\n"
+        f"=== OUTCOME ===\n{outcome_md}\n\n"
+        f"=== SCOREBOARD ENTRY ===\n"
+        f"direction_hit: {entry.get('direction_hit')} | magnitude_hit: "
+        f"{entry.get('magnitude_hit')} | predicted "
+        f"{entry.get('predicted_direction')}/{entry.get('predicted_magnitude_band')} "
+        f"vs actual {entry.get('actual_pct_change')}%\n\n"
+        f"=== SECTOR SCOREBOARD HISTORY ===\n{scoreboard_summary(sector)}\n\n"
+        f"=== RECENT CANDIDATE TRIGGERS ===\n{_candidate_triggers()}\n\n"
+        "Execute the diagnostic. Answer all five checks."
+    )
+
+    text = deepseek_client.chat(
+        [{"role": "system", "content": prompt},
+         {"role": "user", "content": user_msg}],
+        model=config.MODEL_REFLECT,
+        tools=False,
+        max_tokens=8000,
+        transcript_path=os.path.join(
+            "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json"),
+        trace_path=os.path.join(out_dir, f"{slug}_reflect_trace.md"),
+        stage_label=f"SECTOR REFLECT {sector} {date_str}",
+    )
+
+    lb = _parse_lesson_block(text)
+    os.makedirs(config.LESSONS_CANDIDATE, exist_ok=True)
+    lesson_path = os.path.join(
+        config.LESSONS_CANDIDATE, f"{date_str}_sector_{slug}_lesson.md")
+    with open(lesson_path, "w", encoding="utf-8") as fh:
+        fh.write("---\n")
+        fh.write(f"trigger_pattern: \"{lb.get('TRIGGER_PATTERN', '')}\"\n")
+        fh.write(f"current_behavior: \"{lb.get('CURRENT_BEHAVIOR', '')}\"\n")
+        fh.write(f"corrected_behavior: \"{lb.get('CORRECTED_BEHAVIOR', '')}\"\n")
+        fh.write(f"evidence_cited: \"{lb.get('EVIDENCE', '')}\"\n")
+        fh.write(f"error_category: \"{lb.get('ERROR_CATEGORY', 'NONE')}\"\n")
+        fh.write(f"falsifier: \"{lb.get('FALSIFIER', '')}\"\n")
+        fh.write(f"sector: \"{sector}\"\n")
+        fh.write(f"date: \"{date_str}\"\n")
+        fh.write("status: \"candidate\"\n---\n\n")
+        fh.write(f"# Sector Reflection — {sector} — {date_str}\n\n")
+        fh.write(text + "\n")
+
+    reflect_md = os.path.join(out_dir, f"{slug}_reflect.md")
+    with open(reflect_md, "w", encoding="utf-8") as fh:
+        fh.write(f"# Sector Reflect — {sector} — {date_str}\n\n")
+        fh.write(text + "\n")
+
+    entry["reflection_lesson_ref"] = lesson_path
+    scoreboard.save(board)
+    print(f"[sector-reflect] {sector}: {lb.get('ERROR_CATEGORY')} -> {lesson_path}")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date", default=None)
+    ap.add_argument("--sectors", default=None)
+    args = ap.parse_args()
+    date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    sectors = ([s.strip() for s in args.sectors.split(",") if s.strip()]
+               if args.sectors else list(FINVIZ_SECTORS))
+    for sector in sectors:
+        if sector not in FINVIZ_SECTORS:
+            raise SystemExit(f"unknown sector {sector}")
+        print(f"\n======== SECTOR REFLECT: {sector} ========\n")
+        run_one(sector, date_str)
+
+
+if __name__ == "__main__":
+    main()
