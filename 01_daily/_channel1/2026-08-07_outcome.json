@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-07T23:01:21.090153-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 5.22,
+      "delta_1d": 0.05,
+      "delta_1w": 0.01,
+      "delta_1m": 0.16
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 4.69,
+      "delta_1d": 0.06,
+      "delta_1w": 0.01,
+      "delta_1m": 0.13
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 2.43,
+      "delta_1d": 0.02,
+      "delta_1w": 0.02,
+      "delta_1m": 0.12
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 2.71,
+      "delta_1d": -0.04,
+      "delta_1w": -0.13,
+      "delta_1m": 0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 3.65,
+      "delta_1d": 0.01,
+      "delta_1w": 0.0,
+      "delta_1m": 0.07
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-07",
+      "current": 1.45,
+      "delta_1d": 0.021,
+      "delta_1w": -0.701,
+      "delta_1m": -4.322
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 173.93,
+      "delta_1d": -120.66,
+      "delta_1w": -50.77,
+      "delta_1m": -110.35
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-07",
+      "current": 14.9,
+      "delta_1d": -0.25,
+      "delta_1w": -1.09
+    },
+    "vix3m": {
+      "date": "2026-08-07",
+      "current": 18.72,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.796
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 77.08,
+      "pct_1d": -0.27
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 82.27,
+      "pct_1d": -0.27
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 4401.3,
+      "pct_1d": 3.76
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-07",
+      "pct_1d": -0.37,
+      "pct_1m": -1.32
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 7777.25,
+      "pct_1d": 0.55
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 29839.5,
+      "pct_1d": 1.19
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 65606.71,
+          "pct_1d": -0.12
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 25668.03,
+          "pct_1d": 0.54
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 3940.04,
+          "pct_1d": 1.02
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6258.77,
+          "pct_1d": -0.6
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 9263.6,
+          "pct_1d": -0.09
+        }
+      },
+      "composite_avg": 0.15
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 10901.1,
+          "pct_1d": 0.31
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 26319.45,
+          "pct_1d": 0.69
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 8714.93,
+          "pct_1d": 0.17
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6523.86,
+          "pct_1d": 0.33
+        }
+      },
+      "composite_avg": 0.38
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.87,
+    "window": "2026-07-31..2026-08-07"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 64.1,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-07 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Cyberattack on Ceva Logistics warehouses in Europe impacts retailers",
+        "url": "https://finance.yahoo.com/technology/articles/cyberattack-ceva-logistics-warehouses-europe-195745471.html",
+        "published_at": "2026-08-06T19:57:45Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Can Birkenstock Maintain Its Brand Heat? Analysts Are Divided",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/birkenstock-maintain-brand-heat-analysts-202048536.html",
+        "published_at": "2026-08-06T20:20:48Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Uber Freight still unprofitable after big revenue jump",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/uber-freight-still-unprofitable-big-205131742.html",
+        "published_at": "2026-08-06T20:51:31Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Three Defense Plays Spike On Earnings, One Breaks Out. Howmet Tops Views.",
+        "url": "https://www.investors.com/news/howmet-aerospace-hwm-stock-breakout-ati-stock-redwire-rdw-caci-international-earnings-rally-defense-stocks/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T20:27:31Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stocks Settle Lower as Middle East Tensions Rise",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-settle-lower-middle-east-203353121.html",
+        "published_at": "2026-08-06T20:33:53Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Becton, Dickinson and Company Q3 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/healthcare/articles/becton-dickinson-company-q3-2026-204612056.html",
+        "published_at": "2026-08-06T20:46:12Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SpaceX And Tesla Announce Terafab Location, $16.8 Billion Investment",
+        "url": "https://www.investors.com/news/tesla-spacex-terafab-elon-musk-megapack-robotaxi-ai-artificial-intelligence/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T20:04:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Corning Shares Pop on Proposed Solar Tariffs. What This Means for GLW Stock.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/corning-shares-pop-proposed-solar-200207677.html",
+        "published_at": "2026-08-06T20:02:07Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Puerto Rico rations water as severe drought leaves reservoirs depleted",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/8/puerto-rico-rations-water-as-severe-drought-leaves-reservoirs-depleted?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 00:13:53 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Iovance Biotherapeutics (IOVA) Pops 43% on Stellar Q2. Here’s What Comes Next",
+        "url": "https://finance.yahoo.com/healthcare/articles/iovance-biotherapeutics-iova-pops-43-202047364.html",
+        "published_at": "2026-08-06T20:20:47Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SpaceX lockup expires today, with stock bucking higher",
+        "url": "https://finance.yahoo.com/markets/stocks/article/spacex-lockup-expires-today-with-stock-bucking-higher-100000039.html",
+        "published_at": "2026-08-06T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why the CFTC and States Like Utah Are Fighting Over Event Contracts — ‘You Can't Rebrand Illegal Gambling’",
+        "url": "https://finance.yahoo.com/markets/options/articles/why-cftc-states-utah-fighting-203423214.html",
+        "published_at": "2026-08-06T20:34:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why This Top-Ranked IBD 50 Stock Just Tumbled On Its Earnings",
+        "url": "https://www.investors.com/news/technology/exelixis-stock-exelixis-earnings-q2-2026/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T20:10:39Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "A $50 Million Reason Why ELF Stock Is Up Today",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/50-million-reason-why-elf-204238875.html",
+        "published_at": "2026-08-06T20:42:38Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Colombia’s new president takes office vowing to ‘crush’ narco-terrorism",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/8/08-08-sv-de-la-espriella-co?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 01:15:53 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "2 Analysts Just Upped Their Price Targets on Fastly Stock. Here's Why.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/2-analysts-just-upped-price-202736147.html",
+        "published_at": "2026-08-06T20:27:36Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump shifts blame to Republicans for waning support from public",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/8/trump-shifts-blame-to-republicans-for-waning-support-from-public?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 01:28:39 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "What could the Mecca defence pact mean for the US role in the Middle East?",
+        "url": "https://www.aljazeera.com/news/2026/8/8/what-could-the-mecca-defence-pact-mean-for-the-us-role-in-the-middle-east?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 01:29:14 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "De la Espriella sworn in as Colombia’s leader, vows armed group crackdown",
+        "url": "https://www.aljazeera.com/news/2026/8/8/de-la-espriella-sworn-in-as-colombia-leader-vows-crackdown-on-armed-groups?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 00:31:52 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Sudan’s war threatens an ‘entire generation’s’ future, UN warns",
+        "url": "https://www.aljazeera.com/news/2026/8/8/sudans-war-threatens-an-entire-generations-future-un-warns?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 00:24:42 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US Senate passes sweeping Russian energy sanctions bill amid Ukraine war",
+        "url": "https://www.aljazeera.com/economy/2026/8/8/us-senate-passes-sweeping-russian-energy-sanctions-bill-amid-ukraine-war?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 00:06:22 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Iran war live: Trilateral Mecca defence pact signed, as Hormuz deal looms",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/8/8/iran-war-live-trilateral-mecca-defence-pact-signed-as-hormuz-deal-looms?traffic_source=rss",
+        "published_at": "Sat, 08 Aug 2026 00:00:00 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Microsoft’s AI Revenue is 70% OpenAI",
+        "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-ai-revenue-70-openai-203000803.html",
+        "published_at": "2026-08-06T20:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why BillionToOne Plummeted 38%, Leading A Medtech Sell-Off",
+        "url": "https://www.investors.com/news/technology/billiontoone-stock-billiontoone-earnings-q2-2026/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T20:14:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dear JD.com Stock Fans, Mark Your Calendars for August 13",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/dear-jd-com-stock-fans-201301332.html",
+        "published_at": "2026-08-06T20:13:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Airbnb raises 2026 outlook after Q2 earnings top estimates",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/airbnb-raises-2026-outlook-q2-202300314.html",
+        "published_at": "2026-08-06T20:23:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Insmed Catapults 34%, Leading A Biotech Rally. But Mirum Takes A Bath.",
+        "url": "https://www.investors.com/news/technology/insmed-stock-insmed-earnings-mirum-stock-praxis-stock/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T20:12:06Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Hertz Stock Soars. Why Earnings Might Be a Problem for Short Sellers.",
+        "url": "https://www.barrons.com/articles/hertz-earnings-stock-price-short-sellers-22fa91d1?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-06T20:23:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "This Biotech Dealmaker — Tied To Merck, Travere — Is In A Profit-Taking Zone",
+        "url": "https://www.investors.com/news/technology/ligand-stock-ligand-pharmaceuticals-earnings-q2-2026/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-06T20:08:21Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Appian Corporation Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/appian-corporation-q2-2026-earnings-205603343.html",
+        "published_at": "2026-08-06T20:56:03Z"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-07",
+      "open": 7735.18,
+      "high": 7763.08,
+      "low": 7719.19,
+      "close": 7757.64,
+      "pct_change": 0.62,
+      "prev_close": 7709.96,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 0.57,
+        "intraday_low_pct": 0.12,
+        "intraday_high_pct": 0.69,
+        "close_position_in_range": 0.88
+      }
+    },
+    "DOW": {
+      "date": "2026-08-07",
+      "open": 53849.26,
+      "high": 54094.65,
+      "low": 53807.94,
+      "close": 54036.93,
+      "pct_change": 0.28,
+      "prev_close": 53885.1,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.53,
+        "intraday_low_pct": -0.14,
+        "intraday_high_pct": 0.39,
+        "close_position_in_range": 0.8
+      }
+    },
+    "NDX": {
+      "date": "2026-08-07",
+      "open": 26534.66,
+      "high": 26712.62,
+      "low": 26478.01,
+      "close": 26690.62,
+      "pct_change": 1.3,
+      "prev_close": 26348.35,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 0.89,
+        "intraday_low_pct": 0.49,
+        "intraday_high_pct": 1.38,
+        "close_position_in_range": 0.91
+      }
+    }
+  }
+}

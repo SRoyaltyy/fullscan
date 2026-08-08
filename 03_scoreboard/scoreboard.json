@@ -652,18 +652,70 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 5.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7735.18,
+      "actual_close": 7757.64,
+      "actual_pct_change": 0.62,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": []
+      "sources_used": [],
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "July jobs report shock — NFP -23,000 vs +80,000 expected (plus 103,000 downward revisions), collapsing September rate-hike odds and driving a broad risk-on rally",
+      "key_interaction": "Weak jobs report × Fed-hike-odds collapse — one data point cascaded through every asset class (bonds rallied, dollar fell, gold surged, tech/software bid), amplified by the \"bad news = good news\" regime that made a weak print bullish",
+      "knowable_at_9am": "partially — the soft-jobs direction was knowable (morning flagged it as event risk under bad-news-good), but the -23,000 magnitude and 103,000 revisions were a genuine shock; the oil reversal and software/SpaceX surges were not foreseeable",
+      "attribution_contested": "no — major outlets uniformly lead with the jobs report; only secondary attribution differs (some add software earnings as co-driver, AP notes oil's 1.3% rise)",
+      "outlier_watch": "Oil rose ~1.2-1.3% (Hormuz doubts) while stocks hit records — the market stopped caring about oil and focused on the Fed; Dow (+0.28%) badly lagged Nasdaq (+1.30%) as energy-heavy Dow absorbed the oil headwind while tech/software led"
     }
   ]
 }
