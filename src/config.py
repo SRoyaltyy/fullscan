@@ -20,6 +20,7 @@ DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL",
 # --- repo paths ---
 GROUNDING = "00_grounding"
 DAILY_GENERAL = "01_daily/general"
+DAILY_SECTORS = "01_daily/sectors"
 CHANNEL1_DIR = "01_daily/_channel1"
 LESSONS_CANDIDATE = "02_lessons/candidate"
 LESSONS_ACTIVE = "02_lessons/active"
