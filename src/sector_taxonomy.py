@@ -45,15 +45,6 @@ SECTOR_ETFS = {
 
 HORIZONS = ("1d", "3d", "1w", "1m")
 
-# Net → label thresholds (same spirit as catalyst Strong Bullish bands)
-NET_BANDS = [
-    (20, "Strong Lead"),
-    (8, "Lead"),
-    (-8, "Neutral"),
-    (-20, "Lag"),
-    (None, "Strong Lag"),
-]
-
 
 def net_to_label(net: float) -> str:
     if net >= 20:
@@ -136,6 +127,7 @@ SHARED: list[dict] = [
 ]
 
 # ── Per-sector mandatory checklists (v1) ─────────────────────────────────
+# Do NOT repeat SHARED label strings here (validate will fail).
 SECTORS: dict[str, list[dict]] = {
     "Basic Materials": [
         _L("Industrial metal price surge (copper/aluminum/iron ore)", "+", 9,
@@ -201,11 +193,9 @@ SECTORS: dict[str, list[dict]] = {
            ["app store fee regulation antitrust"],
            "amplify structural remedy risk"),
         _L("Engagement deceleration / platform fatigue", "-", 7,
-           ["social platform engagement decline"],
-           ""),
+           ["social platform engagement decline"], ""),
         _L("Telecom price war / churn spike", "-", 7,
-           ["wireless price war churn"],
-           ""),
+           ["wireless price war churn"], ""),
         _L("Sector rotation into communication services", "+", 5,
            ["XLC sector rotation flows"], ""),
         _L("Sector rotation out of communication services", "-", 6,
@@ -219,23 +209,17 @@ SECTORS: dict[str, list[dict]] = {
            ["consumer confidence Conference Board"],
            "amplify when spend data confirms"),
         _L("Employment / wage support for discretionary", "+", 7,
-           ["wage growth employment consumer discretionary"],
-           ""),
+           ["wage growth employment consumer discretionary"], ""),
         _L("Credit conditions easing for consumers", "+", 8,
-           ["consumer credit conditions easing"],
-           ""),
+           ["consumer credit conditions easing"], ""),
         _L("Auto SAAR / dealer inventory healthy", "+", 7,
-           ["auto SAAR inventory"],
-           ""),
+           ["auto SAAR inventory"], ""),
         _L("Travel / hotel RevPAR beat", "+", 7,
-           ["hotel RevPAR travel demand"],
-           ""),
+           ["hotel RevPAR travel demand"], ""),
         _L("Retail miss / traffic down", "-", 8,
-           ["retail sales miss traffic decline"],
-           ""),
+           ["retail sales miss traffic decline"], ""),
         _L("Consumer confidence collapse", "-", 8,
-           ["consumer confidence plunge"],
-           ""),
+           ["consumer confidence plunge"], ""),
         _L("Jobless claims / unemployment spike", "-", 9,
            ["jobless claims unemployment spike"],
            "hard kill for discretionary"),
@@ -243,8 +227,7 @@ SECTORS: dict[str, list[dict]] = {
            ["credit card delinquency rate auto"],
            "[+] luxury cash buyers dampen [−] subprime retail"),
         _L("Gasoline spike crushing discretionary", "-", 6,
-           ["gasoline prices consumer spending"],
-           ""),
+           ["gasoline prices consumer spending"], ""),
         _L("Sector rotation into discretionary", "+", 6,
            ["XLY sector rotation"], ""),
         _L("Sector rotation out of discretionary", "-", 6,
@@ -256,32 +239,23 @@ SECTORS: dict[str, list[dict]] = {
            "PRIMARY regime signal; amp when cyclicals breadth fails; "
            "dampen if only 1–2 mega names"),
         _L("Input cost relief (ag, packaging, freight)", "+", 8,
-           ["food packaging freight costs producers"],
-           ""),
+           ["food packaging freight costs producers"], ""),
         _L("Pricing power held without volume collapse", "+", 7,
-           ["consumer staples volume pricing power"],
-           ""),
+           ["consumer staples volume pricing power"], ""),
         _L("Volume stabilization / sequential improvement", "+", 7,
-           ["staples volume sequential improvement"],
-           ""),
+           ["staples volume sequential improvement"], ""),
         _L("Staples earnings beat stable margins", "+", 6,
-           ["consumer staples earnings margins"],
-           ""),
+           ["consumer staples earnings margins"], ""),
         _L("Volume decline accelerating", "-", 8,
-           ["staples volume decline"],
-           ""),
+           ["staples volume decline"], ""),
         _L("Elasticity break (price up, volume down hard)", "-", 8,
-           ["staples price elasticity volume"],
-           ""),
+           ["staples price elasticity volume"], ""),
         _L("Input cost spike without pricing power", "-", 8,
-           ["food CPI input costs producers"],
-           ""),
+           ["food CPI input costs producers"], ""),
         _L("Risk-on rotation away from defensives", "-", 7,
-           ["risk on rotation away staples XLP"],
-           ""),
+           ["risk on rotation away staples XLP"], ""),
         _L("Private-label share gain against brands", "-", 6,
-           ["private label share food brands"],
-           ""),
+           ["private label share food brands"], ""),
         _L("Sector rotation into defensives", "+", 6,
            ["XLP defensive sector flows"], ""),
         _L("Sector rotation out of defensives", "-", 6,
@@ -295,32 +269,24 @@ SECTORS: dict[str, list[dict]] = {
            ["Henry Hub natural gas price"],
            "[+] pure gas [−] pure oil names N/A"),
         _L("Inventory draw (EIA crude/products)", "+", 8,
-           ["EIA crude inventory draw"],
-           ""),
+           ["EIA crude inventory draw"], ""),
         _L("OPEC+ cut / supply discipline", "+", 9,
            ["OPEC+ production decision cut"],
            "[+] credible compliance, low spare capacity [−] cheating expected"),
         _L("Crack spread / refining margin expansion", "+", 7,
-           ["crack spread refining margin"],
-           "refiner sub-industry"),
+           ["crack spread refining margin"], "refiner sub-industry"),
         _L("Geopolitical supply risk premium", "+", 8,
-           ["geopolitical oil supply risk"],
-           "temporary premium fades fast"),
+           ["geopolitical oil supply risk"], "temporary premium fades fast"),
         _L("Crude price collapse", "-", 9,
-           ["crude oil price collapse"],
-           ""),
+           ["crude oil price collapse"], ""),
         _L("OPEC+ production increase / quota break", "-", 9,
-           ["OPEC+ production increase"],
-           ""),
+           ["OPEC+ production increase"], ""),
         _L("Demand destruction (recession/China weak)", "-", 8,
-           ["oil demand destruction China recession"],
-           ""),
+           ["oil demand destruction China recession"], ""),
         _L("Inventory build", "-", 8,
-           ["EIA crude inventory build"],
-           ""),
+           ["EIA crude inventory build"], ""),
         _L("Crack spread collapse", "-", 7,
-           ["refining crack spread collapse"],
-           ""),
+           ["refining crack spread collapse"], ""),
         _L("Sector rotation into energy", "+", 6,
            ["XLE sector rotation flows"], ""),
         _L("Sector rotation out of energy", "-", 6,
@@ -331,35 +297,26 @@ SECTORS: dict[str, list[dict]] = {
            ["US yield curve 2s10s steepening"],
            "[+] money-center banks [−] already priced"),
         _L("Credit spreads tightening", "+", 8,
-           ["HY IG credit spreads tightening"],
-           ""),
+           ["HY IG credit spreads tightening"], ""),
         _L("Bank NII / NIM beat", "+", 8,
-           ["bank net interest margin beat"],
-           ""),
+           ["bank net interest margin beat"], ""),
         _L("Credit quality stable or improving", "+", 8,
-           ["bank credit quality charge-offs"],
-           ""),
+           ["bank credit quality charge-offs"], ""),
         _L("Regional bank stress easing", "+", 8,
-           ["regional bank stress easing"],
-           ""),
+           ["regional bank stress easing"], ""),
         _L("Capital markets / IB / trading surge", "+", 7,
-           ["investment banking trading revenue banks"],
-           ""),
+           ["investment banking trading revenue banks"], ""),
         _L("Credit spreads blowing out", "-", 9,
-           ["HY credit spreads blow out"],
-           "hard risk-off for financials"),
+           ["HY credit spreads blow out"], "hard risk-off for financials"),
         _L("Charge-off / delinquency spike", "-", 9,
-           ["credit card delinquency banks charge-off"],
-           ""),
+           ["credit card delinquency banks charge-off"], ""),
         _L("CRE concentration stress", "-", 9,
            ["commercial real estate bank exposure"],
            "[+] regionals with office books"),
         _L("Deposit flight / funding stress", "-", 9,
-           ["bank deposit flight funding stress"],
-           ""),
+           ["bank deposit flight funding stress"], ""),
         _L("Yield curve inversion / flattening hurting NIM", "-", 8,
-           ["yield curve inversion bank NIM"],
-           ""),
+           ["yield curve inversion bank NIM"], ""),
         _L("Sector rotation into financials", "+", 6,
            ["XLF sector rotation"], ""),
         _L("Sector rotation out of financials", "-", 6,
@@ -371,32 +328,23 @@ SECTORS: dict[str, list[dict]] = {
            "amplify only when biotech breadth or policy-wide; "
            "single-ticker FDA must NOT dominate sector Net alone"),
         _L("Positive late-stage trial readout (breadth)", "+", 9,
-           ["Phase 3 trial readout biotech sector"],
-           "same breadth rule"),
+           ["Phase 3 trial readout biotech sector"], "same breadth rule"),
         _L("CMS / Medicare Advantage rate upside", "+", 8,
-           ["CMS Medicare Advantage rates"],
-           "managed care / providers"),
+           ["CMS Medicare Advantage rates"], "managed care / providers"),
         _L("Biotech risk-on / XBI leadership", "+", 7,
-           ["biotech ETF flows XBI leadership"],
-           ""),
+           ["biotech ETF flows XBI leadership"], ""),
         _L("Drug pricing policy relief", "+", 8,
-           ["IRA drug pricing relief"],
-           ""),
+           ["IRA drug pricing relief"], ""),
         _L("FDA rejection / CRL / trial failure (breadth)", "-", 9,
-           ["FDA CRL rejection biotech"],
-           "sector-relevant only if cluster"),
+           ["FDA CRL rejection biotech"], "sector-relevant only if cluster"),
         _L("Medicare rate cut / reimbursement pressure", "-", 8,
-           ["Medicare rate cut reimbursement"],
-           ""),
+           ["Medicare rate cut reimbursement"], ""),
         _L("Drug pricing crackdown / IRA expansion risk", "-", 8,
-           ["IRA drug pricing expansion"],
-           ""),
+           ["IRA drug pricing expansion"], ""),
         _L("Biotech risk-off / funding winter", "-", 7,
-           ["biotech funding winter risk off"],
-           ""),
+           ["biotech funding winter risk off"], ""),
         _L("Utilization spike hurting insurers", "-", 8,
-           ["medical utilization spike insurers"],
-           ""),
+           ["medical utilization spike insurers"], ""),
         _L("Sector rotation into healthcare", "+", 5,
            ["XLV sector rotation"], ""),
         _L("Sector rotation out of healthcare", "-", 6,
@@ -407,8 +355,7 @@ SECTORS: dict[str, list[dict]] = {
            ["ISM manufacturing PMI new orders"],
            "SECTOR SPINE — amp machinery/transports"),
         _L("Durable goods / CapEx upside", "+", 8,
-           ["durable goods orders CapEx"],
-           ""),
+           ["durable goods orders CapEx"], ""),
         _L("Grid / electrical equipment backlog (AI power)", "+", 8,
            ["electrical equipment data center backlog"],
            "semi-independent of classic ISM"),
@@ -416,23 +363,17 @@ SECTORS: dict[str, list[dict]] = {
            ["defense budget appropriations orders"],
            "do not cancel ISM weakness with one award"),
         _L("Freight / trucking / rail volume recovery", "+", 7,
-           ["trucking freight rates volume"],
-           ""),
+           ["trucking freight rates volume"], ""),
         _L("Reshoring / industrial policy funding", "+", 7,
-           ["reshoring industrial policy funding"],
-           ""),
+           ["reshoring industrial policy funding"], ""),
         _L("ISM contraction", "-", 9,
-           ["ISM manufacturing contraction"],
-           "spine negative"),
+           ["ISM manufacturing contraction"], "spine negative"),
         _L("CapEx cuts / order cancellation", "-", 8,
-           ["CapEx cuts order cancellations industrials"],
-           ""),
+           ["CapEx cuts order cancellations industrials"], ""),
         _L("Freight recession", "-", 7,
-           ["freight recession trucking"],
-           ""),
+           ["freight recession trucking"], ""),
         _L("Construction slowdown", "-", 7,
-           ["nonresidential construction spending slowdown"],
-           ""),
+           ["nonresidential construction spending slowdown"], ""),
         _L("Sector rotation into industrials", "+", 6,
            ["XLI sector rotation"], ""),
         _L("Sector rotation out of industrials", "-", 6,
@@ -446,65 +387,47 @@ SECTORS: dict[str, list[dict]] = {
            ["data center REIT occupancy rent"],
            "property-type dispersion 1w–1m"),
         _L("Industrial REIT occupancy / rent growth", "+", 7,
-           ["industrial warehouse rent growth"],
-           ""),
+           ["industrial warehouse rent growth"], ""),
         _L("Refinancing window opening", "+", 7,
-           ["REIT refinancing window"],
-           ""),
+           ["REIT refinancing window"], ""),
         _L("Cap-rate compression", "+", 7,
-           ["cap rates commercial real estate compression"],
-           ""),
+           ["cap rates commercial real estate compression"], ""),
         _L("Rates rising / REIT selloff", "-", 9,
-           ["rising yields REIT selloff"],
-           "spine negative short horizon"),
+           ["rising yields REIT selloff"], "spine negative short horizon"),
         _L("Office vacancy / mark-to-market stress", "-", 9,
-           ["office vacancy rates US REIT"],
-           "office sub-type"),
+           ["office vacancy rates US REIT"], "office sub-type"),
         _L("Refinancing wall stress", "-", 8,
-           ["REIT refinancing wall"],
-           ""),
+           ["REIT refinancing wall"], ""),
         _L("Cap-rate expansion", "-", 7,
-           ["cap rate expansion commercial"],
-           ""),
+           ["cap rate expansion commercial"], ""),
         _L("Sector rotation into REITs", "+", 6,
            ["XLRE sector rotation"], ""),
         _L("Sector rotation out of real estate", "-", 6,
            ["XLRE sector rotation out"], ""),
     ],
+    # Real yields live only in SHARED — do not re-list here.
     "Technology": [
         _L("Hyperscaler CapEx raise / AI infra spend upside", "+", 9,
            ["hyperscaler CapEx guidance Microsoft Amazon Google Meta"],
            "[+] semis/hardware [−] pure software until consumption confirms"),
         _L("Semiconductor demand / foundry utilization up", "+", 9,
-           ["foundry utilization TSMC", "semiconductor demand"],
-           ""),
+           ["foundry utilization TSMC", "semiconductor demand"], ""),
         _L("HBM / advanced packaging shortage pricing power", "+", 8,
-           ["HBM supply demand shortage"],
-           ""),
+           ["HBM supply demand shortage"], ""),
         _L("Cloud consumption growth acceleration", "+", 8,
-           ["cloud revenue growth Azure AWS"],
-           ""),
-        _L("Real yields falling (duration tailwind)", "+", 7,
-           ["real yields technology valuations"],
-           "cross-cutting duration"),
+           ["cloud revenue growth Azure AWS"], ""),
+        _L("Software net retention / large deal upside", "+", 7,
+           ["software net retention large deals"], ""),
         _L("Hyperscaler CapEx cut / AI spend peak narrative", "-", 9,
-           ["hyperscaler CapEx cut AI spend peak"],
-           "hard sector kill"),
+           ["hyperscaler CapEx cut AI spend peak"], "hard sector kill"),
         _L("Semi downturn / inventory correction", "-", 9,
-           ["semiconductor inventory correction downturn"],
-           ""),
+           ["semiconductor inventory correction downturn"], ""),
         _L("Cloud growth deceleration", "-", 8,
-           ["cloud growth deceleration Azure AWS"],
-           ""),
+           ["cloud growth deceleration Azure AWS"], ""),
         _L("Export controls tightening", "-", 8,
-           ["chip export controls China"],
-           ""),
-        _L("Real yields rising", "-", 8,
-           ["real yields rising technology"],
-           ""),
+           ["chip export controls China"], ""),
         _L("Software multiple compression / growth scare", "-", 7,
-           ["software multiple compression growth scare"],
-           ""),
+           ["software multiple compression growth scare"], ""),
         _L("Sector rotation into technology", "+", 6,
            ["XLK sector rotation"], ""),
         _L("Sector rotation out of technology", "-", 6,
@@ -515,32 +438,24 @@ SECTORS: dict[str, list[dict]] = {
            ["data center electricity demand utilities"],
            "NEW regime: can override mild rate moves when AI power active"),
         _L("Rates falling (bond-proxy bid)", "+", 8,
-           ["10 year yield utilities performance"],
-           "classic regime"),
+           ["10 year yield utilities performance"], "classic regime"),
         _L("Favorable rate case / allowed ROE", "+", 8,
-           ["utility rate case decision ROE"],
-           ""),
+           ["utility rate case decision ROE"], ""),
         _L("Nuclear / gas generation policy support", "+", 7,
-           ["nuclear power policy SMR utilities"],
-           ""),
+           ["nuclear power policy SMR utilities"], ""),
         _L("Grid CapEx approval / recovery", "+", 7,
-           ["grid interconnection queue CapEx utilities"],
-           ""),
+           ["grid interconnection queue CapEx utilities"], ""),
         _L("Rates rising (bond-proxy selloff)", "-", 8,
            ["rising yields utilities selloff"],
            "dampen if load-growth narrative dominates"),
         _L("Adverse rate case", "-", 8,
-           ["utility adverse rate case"],
-           ""),
+           ["utility adverse rate case"], ""),
         _L("Load growth disappointment", "-", 7,
-           ["utility load growth disappointment"],
-           ""),
+           ["utility load growth disappointment"], ""),
         _L("Regulatory disallowance / project cancel", "-", 7,
-           ["utility project cancel disallowance"],
-           ""),
+           ["utility project cancel disallowance"], ""),
         _L("Risk-on rotation away from utilities", "-", 7,
-           ["risk on rotation away utilities XLU"],
-           ""),
+           ["risk on rotation away utilities XLU"], ""),
         _L("Sector rotation into utilities", "+", 6,
            ["XLU sector rotation"], ""),
         _L("Sector rotation out of utilities", "-", 6,
@@ -550,8 +465,25 @@ SECTORS: dict[str, list[dict]] = {
 
 
 def all_labels(sector: str) -> list[dict]:
-    """SHARED + sector-specific mandatory labels."""
-    return list(SHARED) + list(SECTORS.get(sector, []))
+    """SHARED + sector-specific; sector entry wins on duplicate label."""
+    by_label: dict[str, dict] = {}
+    for x in SHARED:
+        by_label[x["label"]] = x
+    for x in SECTORS.get(sector, []):
+        by_label[x["label"]] = x
+    # stable order: SHARED order first, then sector-only
+    ordered: list[dict] = []
+    seen: set[str] = set()
+    for x in SHARED:
+        lab = x["label"]
+        ordered.append(by_label[lab])
+        seen.add(lab)
+    for x in SECTORS.get(sector, []):
+        lab = x["label"]
+        if lab not in seen:
+            ordered.append(by_label[lab])
+            seen.add(lab)
+    return ordered
 
 
 def taxonomy_list(sector: str) -> list[str]:
@@ -567,14 +499,10 @@ def polarity_map(sector: str) -> dict[str, str]:
 
 
 def amp_damp_table(sector: str) -> str:
-    lines = []
-    for x in all_labels(sector):
-        lines.append(f"{x['label']}: {x['amp_damp']}")
-    return "\n".join(lines)
+    return "\n".join(f"{x['label']}: {x['amp_damp']}" for x in all_labels(sector))
 
 
 def make_search_templates(sector: str, year: str = "2026") -> list[str]:
-    """Concrete queries — parallel to _make_catalyst_templates."""
     qs: list[str] = []
     for x in all_labels(sector):
         for phrase in x["searches"]:
@@ -586,9 +514,8 @@ def make_search_templates(sector: str, year: str = "2026") -> list[str]:
     etf = SECTOR_ETFS.get(sector)
     if etf:
         qs.append(f"{etf} ETF performance flows {year}")
-    # dedupe preserve order
-    seen = set()
-    out = []
+    seen: set[str] = set()
+    out: list[str] = []
     for q in qs:
         if q not in seen:
             seen.add(q)
@@ -597,14 +524,23 @@ def make_search_templates(sector: str, year: str = "2026") -> list[str]:
 
 
 def validate() -> list[str]:
-    errs = []
+    errs: list[str] = []
+    shared_labs = [x["label"] for x in SHARED]
+    if len(shared_labs) != len(set(shared_labs)):
+        errs.append("duplicate labels in SHARED")
     for s in FINVIZ_SECTORS:
         if s not in SECTORS:
             errs.append(f"missing sector block: {s}")
             continue
+        sec_labs = [x["label"] for x in SECTORS[s]]
+        if len(sec_labs) != len(set(sec_labs)):
+            errs.append(f"duplicate labels inside sector list: {s}")
+        overlap = set(sec_labs) & set(shared_labs)
+        if overlap:
+            errs.append(f"sector {s} overlaps SHARED labels: {sorted(overlap)}")
         labs = taxonomy_list(s)
         if len(labs) != len(set(labs)):
-            errs.append(f"duplicate labels in {s}")
+            errs.append(f"duplicate labels after merge: {s}")
         for x in SECTORS[s]:
             if x["weight"] < 1 or x["weight"] > 10:
                 errs.append(f"bad weight {s} {x['label']}")
@@ -618,4 +554,5 @@ if __name__ == "__main__":
     print("errors:", e or "none")
     for s in FINVIZ_SECTORS:
         print(f"{s}: {len(taxonomy_list(s))} labels, "
-              f"{len(make_search_templates(s))} search templates, ETF={SECTOR_ETFS[s]}")
+              f"{len(make_search_templates(s))} search templates, "
+              f"ETF={SECTOR_ETFS[s]}")
