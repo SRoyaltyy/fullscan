@@ -660,7 +660,7 @@
       "direction_hit": true,
       "magnitude_hit": true,
       "divergence_flagged": false,
-      "divergence_verdict": null,
+      "divergence_verdict": "none_flagged — leading (+5) and futures (+0.5) both positive and in agreement; futures confirmation strengthened through the day (ES +0.2%→+0.55%, NQ +0.46%→+1.19%), so both were directionally right with no divergence to adjudicate.",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -708,7 +708,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-07_lesson.md",
       "sources_used": [],
       "path_shape": "trend up (closed near day high)",
       "primary_driver": "July jobs report shock — NFP -23,000 vs +80,000 expected (plus 103,000 downward revisions), collapsing September rate-hike odds and driving a broad risk-on rally",
