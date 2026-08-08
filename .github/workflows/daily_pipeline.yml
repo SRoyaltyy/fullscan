@@ -2,9 +2,9 @@ name: Autonomous Daily Market Pipeline
 
 on:
   schedule:
-    # 8:17 PM HKT (12:17 UTC) - prediction - runs every day (0-6 = Sun-Sat)
+    # 8:17 PM HKT (12:17 UTC) - prediction - runs every day
     - cron: '34 11 * * 0-6'
-    # 5:03 AM HKT (21:03 UTC previous day) - outcome - runs every day (0-6 = Sun-Sat)
+    # 5:03 AM HKT (21:03 UTC previous day) - outcome - runs every day
     - cron: '3 21 * * 0-6'
   workflow_dispatch:
     inputs:
@@ -41,30 +41,29 @@ jobs:
         id: stage
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            # --- Weekend heartbeat check (skip actual execution on Sat/Sun) ---
-            DOW=$(TZ=Asia/Hong_Kong date +%u)  # 1=Mon ... 6=Sat, 7=Sun
-            if [ "$DOW" -ge 6 ]; then
-              echo "plan=none" >> "$GITHUB_OUTPUT"
-              echo "Weekend detected — skipping execution (heartbeat only)."
-              exit 0
-            fi
-            # --- End weekend check ---
-
+            DOW=$(TZ=Asia/Hong_Kong date +%u)      # 1=Mon ... 6=Sat, 7=Sun
             HKT_HOUR=$(TZ=Asia/Hong_Kong date +%H)
-            # Prediction window: 7:00 PM to 11:59 PM HKT
+            PLAN="none"
+
+            # Determine base plan by time window
             if [ "$HKT_HOUR" -ge 19 ] && [ "$HKT_HOUR" -lt 24 ]; then
-              echo "plan=predict" >> "$GITHUB_OUTPUT"
-            # Outcome/Reflection window: 3:00 AM to 9:59 AM HKT
+              PLAN="predict"
             elif [ "$HKT_HOUR" -ge 3 ] && [ "$HKT_HOUR" -lt 10 ]; then
-              echo "plan=outcome_reflect" >> "$GITHUB_OUTPUT"
-            else
-              echo "plan=none" >> "$GITHUB_OUTPUT"
+              PLAN="outcome_reflect"
             fi
+
+            # --- Weekend rule: skip ONLY prediction, allow outcome/reflection ---
+            if [ "$PLAN" = "predict" ] && [ "$DOW" -ge 6 ]; then
+              PLAN="none"
+              echo "Weekend — prediction skipped (heartbeat only)."
+            fi
+
+            echo "plan=$PLAN" >> "$GITHUB_OUTPUT"
           else
             echo "plan=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Heartbeat (weekend or idle)
+      - name: Heartbeat (idle or weekend prediction skip)
         if: steps.stage.outputs.plan == 'none'
         run: echo "✅ Pipeline cron fired at $(TZ=Asia/Hong_Kong date) — no execution scheduled."
 
