@@ -1,0 +1,442 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-08T17:39:53.967146-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 5.22,
+      "delta_1d": 0.05,
+      "delta_1w": 0.01,
+      "delta_1m": 0.16
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 4.69,
+      "delta_1d": 0.06,
+      "delta_1w": 0.01,
+      "delta_1m": 0.13
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 2.43,
+      "delta_1d": 0.02,
+      "delta_1w": 0.02,
+      "delta_1m": 0.12
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 2.71,
+      "delta_1d": -0.04,
+      "delta_1w": -0.13,
+      "delta_1m": 0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 3.65,
+      "delta_1d": 0.01,
+      "delta_1w": 0.0,
+      "delta_1m": 0.07
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-07",
+      "current": 1.45,
+      "delta_1d": 0.021,
+      "delta_1w": -0.701,
+      "delta_1m": -4.322
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-06",
+      "current": 173.93,
+      "delta_1d": -120.66,
+      "delta_1w": -50.77,
+      "delta_1m": -110.35
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-07",
+      "current": 14.9,
+      "delta_1d": -0.25,
+      "delta_1w": -1.09
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 21 days older than VIX (2026-07-17 vs 2026-08-07); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 78.18,
+      "pct_1d": 1.15
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 83.55,
+      "pct_1d": 1.29
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 4340.7,
+      "pct_1d": 2.33
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-07",
+      "pct_1d": -0.37,
+      "pct_1m": -1.33
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 7779.75,
+      "pct_1d": 0.58
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-07",
+      "last": 29834.75,
+      "pct_1d": 1.18
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 65606.71,
+          "pct_1d": -0.12
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 25668.03,
+          "pct_1d": 0.54
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 3940.04,
+          "pct_1d": 1.02
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6258.77,
+          "pct_1d": -0.6
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 9263.6,
+          "pct_1d": -0.09
+        }
+      },
+      "composite_avg": 0.15
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 10901.1,
+          "pct_1d": 0.31
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 26319.45,
+          "pct_1d": 0.69
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 8714.93,
+          "pct_1d": 0.17
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-07",
+          "last": 6523.86,
+          "pct_1d": 0.33
+        }
+      },
+      "composite_avg": 0.38
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.87,
+    "window": "2026-07-31..2026-08-07"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 63.7,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-08 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_markets",
+        "title": "Next week on the stock market - Hargreaves Lansdown",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPa2dpNnQ4ZTNtRVBIc3piUVlEZkREWTlQa1ByTEVqR2lZZElNZjBzOVVSR3I3dTI5YjJ0T0lWS3FPaGhpeWFqSGxLSy0yUEtEbG50R29QLXV5RW82T2dTVG1GdXY1QWl4T0hYc2gwWTBOZkp5UHp6UU1mTjh1MWJjZE9zT2NjWFpNRzJj?oc=5",
+        "published_at": "Sat, 08 Aug 2026 20:58:07 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "US Declared An Energy Emergency, Then Paid $4 Billion For Less Energy - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQY01nWEh6UEhZQ0VibUVSSlVJdlRSMU5NaE5qS3czc2hMUjh4YjY1QkZkMEVUMEM5N2lUQzRiN0p0UDJaODJHbVlnY1hMLVd0bTl2VlRLNHBHRDR1U2tiOHVUZ2tjV0FlTDg2c2tOWmxfLV8tU2pHSUgwblZEQmMzWEtaNnFBS2xkd1dzTFFldVFaZWNaVEI4WHBsRUFIcFVoSTlseHBFQzY4ZlFsQUFJSjlkcmdpRldCZ2ViQVpCMXM5WVow?oc=5",
+        "published_at": "Sat, 08 Aug 2026 15:13:10 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Microsoft Shows the \"Magnificent Seven\" What AI Investment Looks Like",
+        "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-shows-magnificent-seven-ai-210102010.html",
+        "published_at": "2026-08-08T21:01:02Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "'Moneymaxxing' isn't a trend, it's a 'cultural shift,' financial advisor says — here's how to get started - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd1VPOE5XNnNZS1RQaVc3MW90ZlRTRUlOQWV6NTdzWXpBVko3MnR4NVAyODlNb0hscmJiZFZWME1ndVNYNi1NYkpWajhrbEVJYXhYeExWakx2QzBVRTVUUjVsNS02VGMydWlzd0Vwa3NnMEJxVW9DaWQxaTZBMmFCNHJKVGwwT3PSAYwBQVVfeXFMTWtfbExJWDlfZ2JTNnJwUWUwWlJOMjROa1BjQjBpbGFjbUxfaTZHSHhXUzlPTmI4MU9GMTlSNkV1cTI4dFNVa19yNFJldko1YzNQU0lSTWdtNVNzQUNfdVJjZVZQSTBSejNOVHJ6aWd2NWVSQVI1XzgyTS1nRXBfTy1OVU9rVXhSNWhfQnU?oc=5",
+        "published_at": "Sat, 08 Aug 2026 13:30:01 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Broadcom (AVGO) Pairs AI Chip Boom With A Software Security Push",
+        "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-pairs-ai-chip-204234966.html",
+        "published_at": "2026-08-08T20:42:34Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NNN REIT Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/real-estate/articles/nnn-reit-q2-earnings-call-210353568.html",
+        "published_at": "2026-08-08T21:03:53Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nutrien Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nutrien-q2-earnings-call-highlights-210354995.html",
+        "published_at": "2026-08-08T21:03:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NiSource Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/energy/articles/nisource-q2-earnings-call-highlights-210352310.html",
+        "published_at": "2026-08-08T21:03:52Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "US Senate advances landmark crypto bill before heading on August recess - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMVhmVXltaDhxQW1BeWtBZktQbmNhUGI1Y0s5X2xJSDVaSkZPLXZlckdUMWRoSmcwX0NvUmtERjBrc3dRc1lPQXMxZzVlVmFVMnpXMjEwTGZzaEs0anJPdzJ4UU9RMFRpVjFHMWJKekFNaThIZjA4cUZZMm85MVhfbGt2YlNKV2d3SHY5TGI5UjdXOWlocTdiQ1RqMUtQMXBDZHlzTUdTZDNGbW5yeWtwWl81TTZ0ZTNSeHNlTTdB?oc=5",
+        "published_at": "Sat, 08 Aug 2026 20:24:41 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Cursor Maps Out Branding, Other Changes as SpaceX Acquisition Nears - The Information",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUGwyenNSQ3V4VTJ1Wkx2aEQxN2FJMTlFZGlGRmphRHpaX01VdDl0RnNsMWZaSEZXMlNySnRYb04yYXdBY0hYdjNvQ3dkVUhyRGxBRjlObExlTGZ2VXBFZEgtLXdhZmFGdXJaWVRBRzZ1TjhwbVhETm9BUV9COTc1VTFZckFwT0ozSlpPaWFDX09Ra2xvakFJag?oc=5",
+        "published_at": "Fri, 07 Aug 2026 19:17:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Noritz (TSE:5943) Stock Price Masks A One Off Earnings Boost - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOLS1XNTRQSjgwMEtSc0dqUkowWktqaVhuN0k2TlNMNm9XaDJWemJMLWszRGtGRFlkQXdRUXNrOWZRMGpLckR1dTUzZjI4RlMzY3pJd3dGbk9LVFJKdmRZaG1mdGZNNFBuQWlCWkNKbWJJdGx1WlgxajVuM2ZlYUZTamg4d2VQQld4NEZ3UjJuM2tUUWgtdVY3Tm40aTA5UWlIVmZFRUJOTmsxazh0Mmc3QzA0YUpZOXljbWRHTEJJMjZESldSYUY3QkREcUtVR29T0gHWAUFVX3lxTE5kZ0hVWnZPcWpaUXotQ19yWjc2SDZ4TFphZk5DLXRfRkV2MHhwMmFRMUE2dGYyaW41d01iaTJ3WnFST1h4dUdGaFM1OFZoZndvQ0JpNlc4b3hCRTVGeGluMGRXUFJ5ank5azJoSHZyWEpyUGlGOTdNM3N1OTI2RGFYSFRlN3ZTejVqdU9iSzktVy12TFc5WkhwcE8xLXUtUDN6dXhZblM3RE9EQXZDX25JUzRzVVhFVW83ZmxpUEloNER6bEh0cXRZbkxyRDFGMHFfdlF6Q3c?oc=5",
+        "published_at": "Sat, 08 Aug 2026 21:04:07 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Northern Oil and Gas Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/energy/articles/northern-oil-gas-q2-earnings-210353210.html",
+        "published_at": "2026-08-08T21:03:53Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "What to Know About SentinelOne's Insider Transactions Ahead of Earnings - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRkFsRTA1Q0lOVW9mTHFOVThENjJZVGZ4S25tb2trZGR0X2w4WnJFSkVXclZQcmZZa3VNMm5MMDBZRlAyNmxzeVJHX0E0TnN4LURsNEVMM2RkOXNkUUN6ZmRMTWZRaW1tNUNLVmxXOW9lcUg5YVd1RUhQd1ZxLVU3UzVIdTJzUXlTcEpLNHJLY2tmeGs2RHAxSXRTSi1uNExzbHFsZjg2UFZpUUMySExRUzFwaUNlZ3VDeG5MYlB3?oc=5",
+        "published_at": "Sat, 08 Aug 2026 20:51:44 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Navigator Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/navigator-q2-earnings-call-highlights-210355500.html",
+        "published_at": "2026-08-08T21:03:55Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NexPoint Real Estate Finance Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/real-estate/articles/nexpoint-real-estate-finance-q2-210354759.html",
+        "published_at": "2026-08-08T21:03:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nuvation Bio Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/healthcare/articles/nuvation-bio-q2-earnings-call-210354900.html",
+        "published_at": "2026-08-08T21:03:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nerdy Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nerdy-q2-earnings-call-highlights-210353763.html",
+        "published_at": "2026-08-08T21:03:53Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Natural Resource Partners Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/natural-partners-q2-earnings-call-210354695.html",
+        "published_at": "2026-08-08T21:03:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What to Know About SentinelOne's Insider Transactions Ahead of Earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/know-sentinelones-insider-transactions-ahead-204936173.html",
+        "published_at": "2026-08-08T20:49:36Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SentinelOne's Chief Accountant Sold Shares. Here's What Investors Should Know",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sentinelones-chief-accountant-sold-shares-203843953.html",
+        "published_at": "2026-08-08T20:38:43Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Two drivers of Mercedes AMG cars file class action lawsuit over an alleged burn hazard in its logo - AP News",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNRGNIY1BsR0JoQzRvbEZaeTRhYlNWZ20ySllCS2JCWTdza20wRFJ3Z3NSRUYzdmVONVBnMzJyUFh2NUs3THpxdGpoWVhPbTZQYUZocWZfUndLR3NZTllMNGtHTkFQTTlKa3R0SVQzMTlaUEdHVGpramp6T3dEdS1fWVM0SlpaLW82TVJWSjBtOG5BSmRsSEE?oc=5",
+        "published_at": "Sat, 08 Aug 2026 18:53:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Cursor says SpaceX deal could be done by end of next week - report - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONGtZckdfenJiRng1SklKQzJ5Nmh1SzhpUEZOcEFXQ2lxQV9mUGJ0UG9BbFZaYkdXYWtzMVAwUEw5WnJsanpqbGxhb1F4UVF1clhXbWNxZnNiajV6OGpTUXdMaDFHNUZraG5wcnhpbW1WS3pncHhJdXB0azhRemxaZnJ3c3o3OTN1WG1aQ2luWWRmcVJmdVo5Q1N6UTNYS3RWRVRWRHN6dw?oc=5",
+        "published_at": "Fri, 07 Aug 2026 19:49:55 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Fujikura Kasei (TSE:4620) Stock Looks Cheap But One Off Clouds Earnings - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWlRtRHpMOTdpaXZwR1VMQnFhY0gxT0Q4X2VwRlpiN2FhRU9va09DLTBic1BEN3UzUXhkMVNUbGVJTzk2MTcwWXNWZVgzTzU0b3RlOS1zX0NYelMyZ3ROOWRrSnVMWVRlcnJTTktha0dyY3dYd2JzQWZwOUM3YWpPMVp3b2lkM3JOYVdMZmY2bGQ2MW5MXzJ4SXlTYmxIMnNpbWxNYWRyeVlpaktzaVlNMlFiNmo1RjBNMHFETkk0TGJVRzhyeGZnUW0xNU5nUG11Rmg00gHYAUFVX3lxTE5ZWFNKVEY3OFQyTXRMaFNHZ1lISi1IQ1hDbzliTXpIQ1Z0cS1uX0k2OVI2dnBhbXpNeGlWRndyUzlSYVJkWmkzYzdTcVBTV2xwVE9JSEpJOXo4NjQ3QWdjRW1hcmMyOGhFd0hZZGxoREhteEhuVHozTlRFd3lBWERvRTFXblZlQm5ndjd2M2pTZmhGN0VIaG0zWGdhQnA4YUN0NGRZa1YxbVR0RjRQWTNnT1MzekxpUFp1aC1nME91MGo4NmNWWWlQeDItbV91R25lMXQzLVZyag?oc=5",
+        "published_at": "Sat, 08 Aug 2026 20:21:55 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Local $150k winning Powerball ticket still unclaimed - FOX 8 News",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4tcXk2QmZid2hSNnlMd252ZTVTcFNRVklzdklhMG1vcko3MFAwaWtMUlM3dldSUnRrdXJFQkh3RXhBS1ExTFp6TkxQbGpabnF2d2oyZXMzM3lnMno0NmdxSlhpUUlRbUVEUVI1eTB0a2s4alpjWDNmam9pcmZ6N0HSAYQBQVVfeXFMT2gxWUhfc0dRaUJWREwzLVpYLUJDVC0wSTlPd0RFMERaU016SjI1a0c1dk5ZSURFSFZfbUdZcW1pUTVHTHk4Mk1wX0I1WGNEYUpXNE5NMGFtYkpXSDNlbzhnLVNfRmhqUTJXcVFuaEttWXl0UWY5WnYwaVZfcFJ0N0RYVEZ5?oc=5",
+        "published_at": "Sat, 08 Aug 2026 16:18:10 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Jewel-Osco food recall: Store recalls fresh salsa products with jalapenos amid salmonella outbreak - ABC7 Chicago",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQeWk0X0Z0N09seUpRSU9DdzA2a3pwSmpiakZvM1RnX0RfaGRqektZQ2FoMnNQMmk2TkhtbHpHNHlySmdyNVRuMlQzTUJzRWhDU1RablVxVW9GS2FEa1VCRW1wTXRLS2k0ak4zdzVqQkNENmc1Q0ZVQVhGNndrNjh5TnI0eFEyNnpDSGEzcmdTbmFQNm54Q1JfejZKVXBDYlhmU2VWT1Etb2kycHhzNVFLWktBemYxcWpncF9WOWpGeW1jS2ZUeXlmaEZyVdIB0AFBVV95cUxPMUhTV1UzemZhTmRaX3RNVlBjdU9wLTZKZDVsZFB3OGpjQjA2MEc3TFNBTU1EbkpIU3dfRHBsWVp4ZDFmVkZaMVJEdS1xNy0xVzRXMzgtLWFCZ1NoeGphLWh5bzhEaWMtRGlHOUtPZnhYZEgwbWZqV3o3T3FhZHlkVDlsTjI1cFhMcy12VWtLTTFZWkdoTkM4cEs0enRpNEswMTdRNFF2VnpHT1JudW84QUtBUVlXNE5qWVNRTEZOU1dGZ080djh2S19lY1B5d2dF?oc=5",
+        "published_at": "Sat, 08 Aug 2026 15:16:54 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Two drivers of Mercedes AMG cars file lawsuit, saying seat logo burned them - The Seattle Times",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWE9oVXV6cmdnYXdsZFFEZmdLalVKc182TDFxbnFVLV9XLWk1eFgwcHdrbGE5TUpkLTlQbGRJRDB6QTNMZnhuSl9VXzNGQzRSRnBpTVowSC1NQm1vVVFPanJ4dlYzUkRVNEZUY1VDNXFiejlBRGxyQWI1SFFyeDdvVHpLRzVHaGVRakN2X0RhVUxrTDB0NHZWUUw1cmFQUnBqY2U2VFlpY0E2Uy13dTdFREpPWDd3TUV3SjlsVzZXYUVsLW1KS0VWV1NiT1I2VlJ4bUxv?oc=5",
+        "published_at": "Sat, 08 Aug 2026 18:23:06 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Mueller Water Products Q3 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mueller-water-products-q3-earnings-200352788.html",
+        "published_at": "2026-08-08T20:03:52Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Jim Cramer Names 5 Investing Themes and 13 Stocks to Buy for 2026 - beincrypto.com",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1RVEktbk9jMVNNZHNTbk5pMXNPdDZndms2b19pQ3JzNXRvVWp6UzJQR2dUbUk0eGM2OC1DLXJraWVTeHhiUVBhdW95N2tzdXZSVmhxLWlfckQxNDRtZFFzcQ?oc=5",
+        "published_at": "Sat, 08 Aug 2026 09:19:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "McEwen Q2 Earnings Call Highlights",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mcewen-q2-earnings-call-highlights-200352099.html",
+        "published_at": "2026-08-08T20:03:52Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "AI is changing work faster than the data can keep up - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcms1emhsUnBQbldFN01pVzRETE5ldThjSWtLaDZJNDdPTEZ0R1J3dDgzU2RQUk1aczlFM2d6OHRTQ25iUmwzN29RYWlOaHhPQTYxZTlmTDFad3lFcDFWZHZMdjBJSy1YYnNKMWY0Q3pzZVBlTFI4a1lvN3ZRdk9penFnV2FRT0N2UTdjLWVrbU9LNnhEVXhj?oc=5",
+        "published_at": "Sat, 08 Aug 2026 12:00:00 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-07",
+      "open": 7735.18,
+      "high": 7763.08,
+      "low": 7719.19,
+      "close": 7757.64,
+      "pct_change": 0.62,
+      "prev_close": 7709.96,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 0.57,
+        "intraday_low_pct": 0.12,
+        "intraday_high_pct": 0.69,
+        "close_position_in_range": 0.88
+      }
+    },
+    "DOW": {
+      "date": "2026-08-07",
+      "open": 53849.26,
+      "high": 54094.65,
+      "low": 53807.94,
+      "close": 54036.93,
+      "pct_change": 0.28,
+      "prev_close": 53885.1,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.53,
+        "intraday_low_pct": -0.14,
+        "intraday_high_pct": 0.39,
+        "close_position_in_range": 0.8
+      }
+    },
+    "NDX": {
+      "date": "2026-08-07",
+      "open": 26534.66,
+      "high": 26712.62,
+      "low": 26478.01,
+      "close": 26690.62,
+      "pct_change": 1.3,
+      "prev_close": 26348.35,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 0.89,
+        "intraday_low_pct": 0.49,
+        "intraday_high_pct": 1.38,
+        "close_position_in_range": 0.91
+      }
+    }
+  }
+}
