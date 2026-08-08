@@ -1,0 +1,71 @@
+name: News Parse (Supabase)
+
+on:
+  schedule:
+    # Several times on weekdays — keep parsed news fresh for predict
+    - cron: "15 10,12,14 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Lookback hours"
+        required: false
+        default: "24"
+      limit:
+        description: "Max rows"
+        required: false
+        default: "200"
+      run_date:
+        description: "YYYY-MM-DD label for output files"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-parse
+  cancel-in-progress: true
+
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary || true
+      - name: Run news parse
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set -e
+          HOURS="${{ github.event.inputs.hours }}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          DATE="${{ github.event.inputs.run_date }}"
+          HOURS=${HOURS:-24}
+          LIMIT=${LIMIT:-200}
+          ARGS=(--hours "$HOURS" --limit "$LIMIT")
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          python -m src.news_parse "${ARGS[@]}"
+      - name: Show summary
+        if: always()
+        run: |
+          ls -la 01_daily/news/ || true
+          latest=$(ls -1t 01_daily/news/*_parsed.md 2>/dev/null | head -1)
+          if [ -n "$latest" ]; then
+            echo "===== $latest ====="
+            head -80 "$latest"
+          fi
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/news/ || true
+          git commit -m "auto: news parse" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
