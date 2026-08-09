@@ -1,0 +1,80 @@
+name: News Actions (event edges → tickers)
+
+on:
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Lookback hours"
+        required: false
+        default: "48"
+      limit:
+        description: "Max news rows"
+        required: false
+        default: "300"
+      run_date:
+        description: "YYYY-MM-DD"
+        required: false
+        default: ""
+  schedule:
+    - cron: "20 11,14 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-actions
+  cancel-in-progress: true
+
+jobs:
+  actions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary pandas || true
+      - name: Ensure finviz csv
+        env:
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          mkdir -p data/finviz
+          if [ -n "$FINVIZ_EXPORT" ]; then
+            # Reuse elite export URL if present (same secret theme-radar uses)
+            curl -fsSL -o data/finviz/latest.csv "$FINVIZ_EXPORT" || true
+          fi
+          if [ ! -f data/finviz/latest.csv ]; then
+            # fallback: copy any committed csv
+            ls data/finviz/*.csv 2>/dev/null | head -1 | xargs -I{} cp {} data/finviz/latest.csv || true
+          fi
+          ls -la data/finviz/ || true
+          wc -l data/finviz/latest.csv 2>/dev/null || echo "NO FINVIZ CSV — ticker expand will be empty"
+      - name: Run news actions
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FINVIZ_CSV: data/finviz/latest.csv
+        run: |
+          set -e
+          HOURS="${{ github.event.inputs.hours }}"; HOURS=${HOURS:-48}
+          LIMIT="${{ github.event.inputs.limit }}"; LIMIT=${LIMIT:-300}
+          DATE="${{ github.event.inputs.run_date }}"
+          ARGS=(--hours "$HOURS" --limit "$LIMIT")
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          python -m src.news_actions "${ARGS[@]}"
+      - name: Preview
+        if: always()
+        run: |
+          latest=$(ls -1t 01_daily/news/*_actions.md 2>/dev/null | head -1)
+          if [ -n "$latest" ]; then head -100 "$latest"; fi
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/news/ data/finviz/latest.csv 2>/dev/null || true
+          git commit -m "auto: news actions" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
