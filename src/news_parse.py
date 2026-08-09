@@ -1,19 +1,18 @@
-"""Dedicated news parsing over Supabase `news` table.
+"""Dedicated news parsing over Supabase `news` table — v2.
 
-Goal: turn the piled RSS/NewsAPI rows into structured market objects that
-general + sector predictors can consume — not another free-form web search.
+v1 failure mode (observed): 200 Yahoo/Cramer/single-name earnings rows,
+~192 neutral, "earnings" macro inflated, geopolitics false positives.
+Useless for general B1 or sector S1.
 
-Pipeline (deterministic first; optional LLM enrichment later):
-  1. Pull last N hours from db.recent_news (or wider window)
-  2. Dedupe by normalized title
-  3. Tag: sector(s), macro theme, polarity hint, catalyst family
-  4. Cluster near-duplicate stories
-  5. Rank by market-source weight × recency × tag richness
-  6. Write 01_daily/news/<date>_parsed.json + .md
-  7. Expose to_markdown_for_channel1() for inject into predict
+v2 goals:
+  1. DROP noise (Cramer, clickbait, pure "Q2 Earnings Call Highlights")
+  2. Classify: noise | single_name | sector_relevant | macro_relevant
+  3. Only macro/sector_relevant enter "usable" sets for predictors
+  4. single_name kept in a side bucket (earnings calendar), not sector spine
+  5. Polarity is secondary; presence of a real macro event matters more
 
 CLI:
-  python -m src.news_parse [--hours 24] [--limit 200] [--date YYYY-MM-DD]
+  python -m src.news_parse [--hours 48] [--limit 300] [--date YYYY-MM-DD]
 """
 from __future__ import annotations
 
@@ -29,59 +28,112 @@ from . import config, db
 
 NEWS_DIR = "01_daily/news"
 
-# Source reliability weights (substring match on lower(source))
-SOURCE_WEIGHTS = [
-    (r"bloomberg|reuters|wsj|ft\.com|financial times", 1.0),
-    (r"cnbc|marketwatch|barron|economist", 0.85),
-    (r"ap news|afp|nikkei|scmp", 0.75),
-    (r"yahoo|investing\.com|seeking alpha|benzinga", 0.55),
-    (r".*", 0.35),
-]
+# ── noise: drop entirely from usable sets ─────────────────────────────
+NOISE_TITLE = re.compile(
+    r"(?i)("
+    r"jim cramer|cramer (believes|reveals|shares|says|didn)|"
+    r"earnings call highlights$|"
+    r"here'?s how much the stock could move|"
+    r"turn a \$\d+ profit trading|"
+    r"is it the smarter .{0,40} to buy|"
+    r"what comes next\.?$|"
+    r"here'?s what to know$|"
+    r"stock of the day|top stocks to|stocks to watch|"
+    r"should you buy|is it too late to buy"
+    r")"
+)
 
-# Sector keyword → Finviz sector name
-SECTOR_RULES: list[tuple[str, str]] = [
-    (r"\b(crude|wti|brent|opec|oil inventory|natural gas|xle|refiner)\b", "Energy"),
-    (r"\b(semiconductor|foundry|tsmc|hbm|nvidia|hyperscaler|capex|xlk|chip)\b", "Technology"),
-    (r"\b(bank|nim|yield curve|credit spread|jpmorgan|goldman|xlf|regional bank)\b", "Financial"),
-    (r"\b(copper|aluminum|iron ore|lme|gold price|silver price|xlb|mining)\b", "Basic Materials"),
-    (r"\b(fda|biotech|medicare|cms|drug pricing|xlv|pharma|trial)\b", "Healthcare"),
-    (r"\b(ism|manufacturing|freight|defense order|ge vernova|xli|industrial)\b", "Industrials"),
-    (r"\b(utility|utilities|xlu|rate case|data.?center power|grid capex)\b", "Utilities"),
-    (r"\b(reit|xlre|office vacancy|cap rate|data.?center reit)\b", "Real Estate"),
-    (r"\b(retail sales|consumer discretionary|xly|revpar|auto saar)\b", "Consumer Cyclical"),
-    (r"\b(staples|xlp|defensive rotation|walmart|procter)\b", "Consumer Defensive"),
-    (r"\b(advertising|meta platforms|alphabet|antitrust|xlc|ad spend)\b", "Communication Services"),
-]
+NOISE_SOURCE = re.compile(
+    r"(?i)(seeking.?alpha|benzinga|motley|fool\.com|tipranks|zacks)"
+)
 
-MACRO_RULES: list[tuple[str, str]] = [
-    (r"\b(fed|fomc|powell|rate cut|rate hike|fedwatch)\b", "fed_path"),
-    (r"\b(cpi|pce|inflation|core inflation)\b", "inflation"),
-    (r"\b(payroll|nfp|jobless claims|unemployment|jobs report)\b", "labor"),
-    (r"\b(vix|risk.?off|risk.?on|selloff|rally)\b", "risk_regime"),
-    (r"\b(treasury|yields|10-year|10 year|real yield|tips)\b", "rates"),
-    (r"\b(dollar|dxy|usd)\b", "usd"),
-    (r"\b(china|pmi|pboc)\b", "china"),
-    (r"\b(geopolit|sanction|strait|conflict|war)\b", "geopolitics"),
-    (r"\b(earnings|guidance|eps)\b", "earnings"),
-]
-
-BULLISH_HINTS = re.compile(
-    r"\b(surge|soar|jump|beat|upside|record high|raises guidance|cut rates|"
-    r"easing|drawdown in inventory|inventory draw|ceasefire)\b",
+# Single-name / ticker-ish patterns (not automatically noise — side bucket)
+TICKER_HINT = re.compile(
+    r"\b([A-Z]{1,5})\b(?:\s+Stock)?\s+(?:Q[1-4]|Earnings|EPS|Revenue)|"
+    r"\b(?:NASDAQ|NYSE|NYSEARCA):[A-Z]{1,5}\b|"
+    r"\b(Nvidia|Apple|Microsoft|Tesla|Meta Platforms|Alphabet|Google|"
+    r"Amazon|Broadcom|AMD|Palantir|Walmart|Home Depot|Vertex)\b",
     re.I,
 )
-BEARISH_HINTS = re.compile(
-    r"\b(plunge|crash|miss|downside|layoff|hike|tightening|inventory build|"
-    r"default|recession|war premium|selloff|slump)\b",
-    re.I,
+
+SINGLE_EARNINGS = re.compile(
+    r"(?i)(\bQ[1-4]\b.{0,30}\bearnings\b|\bearnings\b.{0,20}\b(call|report|beat|miss)\b)"
+)
+
+# ── source tiers ──────────────────────────────────────────────────────
+SOURCE_WEIGHTS = [
+    (r"bloomberg|reuters|wsj|ft\.com|financial times", 1.0),
+    (r"cnbc|marketwatch|barron|economist|aljazeera", 0.9),
+    (r"ap news|afp|nikkei|scmp|fed\b|ecb", 0.8),
+    (r"google_macro|google_business|newsapi", 0.65),
+    (r"yahoo", 0.35),  # demoted — mostly retail single-name
+    (r".*", 0.4),
+]
+
+# Macro themes — tight patterns (no bare "earnings", no bare "war")
+MACRO_RULES: list[tuple[str, str]] = [
+    (r"(?i)\b(fomc|federal reserve|powell|fed chair|fed officials?|"
+     r"rate (cut|hike|hold)|fed funds|dot plot|fedwatch)\b", "fed_path"),
+    (r"(?i)\b(cpi|pce|core inflation|inflation (data|print|report))\b", "inflation"),
+    (r"(?i)\b(non-?farm|payrolls|nfp|jobless claims|unemployment rate|"
+     r"jobs report)\b", "labor"),
+    (r"(?i)\b(10-?year (yield|treasury)|real yield|tips yield|"
+     r"treasury yields?)\b", "rates"),
+    (r"(?i)\b(dxy|us dollar index|dollar (index|retreats|surges|weakens))\b", "usd"),
+    (r"(?i)\b(china pmi|pboc|china (property|stimulus|exports?))\b", "china"),
+    (r"(?i)\b(strait of hormuz|opec\+?|sanctions on|missile|"
+     r"geopolitical|military strike)\b", "geopolitics"),
+    (r"(?i)\b(vix\b|risk-?off|risk-?on|flight to safety)\b", "risk_regime"),
+    (r"(?i)\b(ism manufacturing|ism services|durable goods orders)\b", "activity"),
+]
+
+# Sector — require substance, not just a ticker name when possible
+SECTOR_RULES: list[tuple[str, str]] = [
+    (r"(?i)\b(crude oil|wti\b|brent\b|opec\+?|oil inventories|eia crude|"
+     r"natural gas price|henry hub)\b", "Energy"),
+    (r"(?i)\b(semiconductor(?!s?:)|foundry|tsmc|hbm\b|hyperscaler capex|"
+     r"chip export control|ai chip demand)\b", "Technology"),
+    (r"(?i)\b(yield curve|net interest margin|\bnim\b|credit spreads?|"
+     r"regional banks?|bank (earnings|lending)|commercial real estate bank)\b",
+     "Financial"),
+    (r"(?i)\b(copper price|lme copper|iron ore|aluminum price|gold price|"
+     r"silver price|critical minerals)\b", "Basic Materials"),
+    (r"(?i)\b(medicare advantage|cms rate|drug pricing|ira drug|"
+     r"biotech etf|xbi\b|fda (approval|panel|crl))\b", "Healthcare"),
+    (r"(?i)\b(ism manufacturing|durable goods|freight rates|truck tonnage|"
+     r"defense (budget|orders)|grid (capex|transformer))\b", "Industrials"),
+    (r"(?i)\b(utility (sector|stocks)|rate case|data center (power|electricity)|"
+     r"power demand utilities)\b", "Utilities"),
+    (r"(?i)\b(reit (sector|index)|office vacancy|cap rates?|"
+     r"data center reit)\b", "Real Estate"),
+    (r"(?i)\b(retail sales|consumer discretionary|card spend|revpar|"
+     r"auto saar)\b", "Consumer Cyclical"),
+    (r"(?i)\b(consumer staples|defensive (sector|rotation)|staples sector)\b",
+     "Consumer Defensive"),
+    (r"(?i)\b(digital ad spend|ad revenue|app store (fee|antitrust)|"
+     r"search monopoly)\b", "Communication Services"),
+]
+
+# Mega-cap names that can still be sector_relevant if + sector language
+MEGA = re.compile(
+    r"(?i)\b(nvidia|microsoft|apple|amazon|meta|alphabet|google|"
+    r"jpmorgan|jpmorgan chase|exxon|chevron)\b"
+)
+
+BULLISH = re.compile(
+    r"(?i)\b(surge|soar|jump|rally|record high|beats? estimates|"
+    r"raises? guidance|rate cut|easing|inventory draw|ceasefire)\b"
+)
+BEARISH = re.compile(
+    r"(?i)\b(plunge|crash|slump|selloff|misses? estimates|cuts? guidance|"
+    r"rate hike|tightening|inventory build|recession|default|layoff)\b"
 )
 
 
 def _norm_title(t: str) -> str:
     t = (t or "").lower()
     t = re.sub(r"[^a-z0-9\s]", " ", t)
-    t = re.sub(r"\s+", " ", t).strip()
-    return t[:120]
+    return re.sub(r"\s+", " ", t).strip()[:120]
 
 
 def _source_weight(source: str) -> float:
@@ -89,42 +141,59 @@ def _source_weight(source: str) -> float:
     for pat, w in SOURCE_WEIGHTS:
         if re.search(pat, s):
             return w
-    return 0.35
-
-
-def _tag_sectors(title: str) -> list[str]:
-    t = title or ""
-    out = []
-    for pat, sec in SECTOR_RULES:
-        if re.search(pat, t, re.I):
-            out.append(sec)
-    return out
+    return 0.4
 
 
 def _tag_macro(title: str) -> list[str]:
-    t = title or ""
-    out = []
-    for pat, theme in MACRO_RULES:
-        if re.search(pat, t, re.I):
-            out.append(theme)
-    return out
+    return [theme for pat, theme in MACRO_RULES if re.search(pat, title or "")]
+
+
+def _tag_sectors(title: str) -> list[str]:
+    return [sec for pat, sec in SECTOR_RULES if re.search(pat, title or "")]
 
 
 def _polarity(title: str) -> str:
-    b = len(BULLISH_HINTS.findall(title or ""))
-    e = len(BEARISH_HINTS.findall(title or ""))
-    if b > e and b > 0:
+    b = len(BULLISH.findall(title or ""))
+    e = len(BEARISH.findall(title or ""))
+    if b > e and b:
         return "+"
-    if e > b and e > 0:
+    if e > b and e:
         return "-"
     if b and e:
         return "mixed"
     return "neutral"
 
 
+def _is_noise(title: str, source: str) -> bool:
+    if NOISE_TITLE.search(title or ""):
+        return True
+    if NOISE_SOURCE.search(source or ""):
+        return True
+    return False
+
+
+def classify(title: str, source: str) -> str:
+    """noise | single_name | sector_relevant | macro_relevant"""
+    if _is_noise(title, source):
+        return "noise"
+    macros = _tag_macro(title)
+    sectors = _tag_sectors(title)
+    if macros:
+        return "macro_relevant"
+    if sectors:
+        return "sector_relevant"
+    # pure single-name earnings / ticker story
+    if SINGLE_EARNINGS.search(title or "") or TICKER_HINT.search(title or ""):
+        return "single_name"
+    # yahoo with no tags → usually noise
+    if re.search(r"(?i)yahoo", source or "") and not macros and not sectors:
+        return "noise"
+    return "noise"
+
+
 def parse_rows(rows: list[dict]) -> list[dict]:
     seen: set[str] = set()
-    parsed: list[dict] = []
+    out: list[dict] = []
     for r in rows:
         title = (r.get("title") or "").strip()
         if not title:
@@ -133,49 +202,53 @@ def parse_rows(rows: list[dict]) -> list[dict]:
         if key in seen:
             continue
         seen.add(key)
-        sectors = _tag_sectors(title)
+        source = r.get("source") or ""
+        kind = classify(title, source)
         macros = _tag_macro(title)
+        sectors = _tag_sectors(title)
+        # mega-cap + no sector rule: still single_name unless macro
+        if kind == "noise" and MEGA.search(title) and macros:
+            kind = "macro_relevant"
         pol = _polarity(title)
-        sw = _source_weight(r.get("source") or "")
-        richness = 0.15 * len(sectors) + 0.1 * len(macros)
-        score = sw + richness
+        sw = _source_weight(source)
+        usable = kind in ("macro_relevant", "sector_relevant")
+        rank = sw
+        if usable:
+            rank += 0.4
+        rank += 0.15 * len(macros) + 0.1 * len(sectors)
         if pol in ("+", "-"):
-            score += 0.1
-        parsed.append({
-            "source": r.get("source"),
+            rank += 0.05
+        if kind == "single_name":
+            rank -= 0.2
+        if kind == "noise":
+            rank -= 0.5
+        out.append({
+            "source": source,
             "title": title,
             "url": r.get("url"),
             "published_at": r.get("published_at"),
+            "class": kind,
+            "usable": usable,
             "sectors": sectors,
             "macro_themes": macros,
             "polarity": pol,
             "source_weight": sw,
-            "rank_score": round(score, 3),
+            "rank_score": round(rank, 3),
         })
-    parsed.sort(key=lambda x: -x["rank_score"])
-    return parsed
+    out.sort(key=lambda x: -x["rank_score"])
+    return out
 
 
-def cluster_by_sector(parsed: list[dict]) -> dict[str, list[dict]]:
-    buckets: dict[str, list[dict]] = defaultdict(list)
-    for p in parsed:
-        if not p["sectors"]:
-            buckets["_untagged"].append(p)
+def _bucket(items: list[dict], key: str) -> dict[str, list[dict]]:
+    b: dict[str, list[dict]] = defaultdict(list)
+    for it in items:
+        vals = it.get(key) or []
+        if not vals:
+            b["_none"].append(it)
             continue
-        for s in p["sectors"]:
-            buckets[s].append(p)
-    return dict(buckets)
-
-
-def cluster_by_macro(parsed: list[dict]) -> dict[str, list[dict]]:
-    buckets: dict[str, list[dict]] = defaultdict(list)
-    for p in parsed:
-        if not p["macro_themes"]:
-            buckets["_untagged"].append(p)
-            continue
-        for m in p["macro_themes"]:
-            buckets[m].append(p)
-    return dict(buckets)
+        for v in vals:
+            b[v].append(it)
+    return dict(b)
 
 
 def polarity_counts(items: list[dict]) -> dict[str, int]:
@@ -185,90 +258,106 @@ def polarity_counts(items: list[dict]) -> dict[str, int]:
     return c
 
 
-def build_report(hours: int = 24, limit: int = 200) -> dict:
+def build_report(hours: int = 48, limit: int = 300) -> dict:
     rows = db.recent_news(hours=hours, limit=limit)
-    # If hours filter empty, try unlimited recent
     if not rows:
         rows = db.recent_news(hours=24 * 7, limit=limit)
     parsed = parse_rows(rows)
-    by_sector = cluster_by_sector(parsed)
-    by_macro = cluster_by_macro(parsed)
+    usable = [p for p in parsed if p["usable"]]
+    single = [p for p in parsed if p["class"] == "single_name"]
+    noise = [p for p in parsed if p["class"] == "noise"]
+    by_sector = _bucket(usable, "sectors")
+    by_macro = _bucket(usable, "macro_themes")
+
+    def pack(bucket: dict[str, list[dict]]) -> dict:
+        return {
+            k: polarity_counts(v) | {"n": len(v), "top": v[:8]}
+            for k, v in bucket.items() if k != "_none"
+        }
+
     return {
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "hours": hours,
         "raw_count": len(rows),
         "parsed_count": len(parsed),
-        "polarity_total": polarity_counts(parsed),
-        "by_sector": {k: polarity_counts(v) | {"n": len(v),
-                      "top": v[:8]} for k, v in by_sector.items()},
-        "by_macro": {k: polarity_counts(v) | {"n": len(v),
-                     "top": v[:8]} for k, v in by_macro.items()},
-        "top_items": parsed[:40],
+        "usable_count": len(usable),
+        "single_name_count": len(single),
+        "noise_count": len(noise),
+        "polarity_usable": polarity_counts(usable),
+        "by_macro_usable": pack(by_macro),
+        "by_sector_usable": pack(by_sector),
+        "usable_top": usable[:30],
+        "single_name_top": single[:15],
+        "noise_sample": noise[:10],
         "all_items": parsed,
     }
 
 
 def to_markdown(report: dict) -> str:
     lines = [
-        f"# News Parse — {report.get('generated_at', '')}",
+        f"# News Parse v2 — {report.get('generated_at', '')}",
         "",
         f"Window≈{report.get('hours')}h | raw={report.get('raw_count')} | "
-        f"deduped={report.get('parsed_count')} | "
-        f"polarity={report.get('polarity_total')}",
+        f"usable={report.get('usable_count')} | "
+        f"single_name={report.get('single_name_count')} | "
+        f"noise_dropped={report.get('noise_count')}",
+        f"usable polarity={report.get('polarity_usable')}",
         "",
-        "## By sector",
+        "## USABLE — macro themes (for general B1)",
     ]
-    for sec, blob in sorted(
-            ((k, v) for k, v in report.get("by_sector", {}).items()
-             if k != "_untagged"),
+    for theme, blob in sorted(
+            report.get("by_macro_usable", {}).items(),
             key=lambda kv: -kv[1].get("n", 0)):
-        lines.append(f"### {sec} (n={blob.get('n')}, +{blob.get('+')} "
-                     f"/-{blob.get('-')} /neu={blob.get('neutral')})")
+        lines.append(f"### {theme} (n={blob.get('n')})")
         for it in blob.get("top", [])[:6]:
             lines.append(
                 f"- [{it.get('polarity')}] {it.get('title')} "
                 f"({it.get('source')})")
         lines.append("")
-    lines.append("## By macro theme")
-    for theme, blob in sorted(
-            ((k, v) for k, v in report.get("by_macro", {}).items()
-             if k != "_untagged"),
+    lines.append("## USABLE — sectors (for sector S1)")
+    for sec, blob in sorted(
+            report.get("by_sector_usable", {}).items(),
             key=lambda kv: -kv[1].get("n", 0)):
-        lines.append(f"### {theme} (n={blob.get('n')})")
-        for it in blob.get("top", [])[:5]:
+        lines.append(f"### {sec} (n={blob.get('n')})")
+        for it in blob.get("top", [])[:6]:
             lines.append(
                 f"- [{it.get('polarity')}] {it.get('title')} "
                 f"({it.get('source')})")
         lines.append("")
-    lines.append("## Top ranked items")
-    for it in report.get("top_items", [])[:25]:
-        lines.append(
-            f"- ({it.get('rank_score')}) [{it.get('polarity')}] "
-            f"{it.get('title')} | {it.get('source')} | "
-            f"sectors={it.get('sectors')} macros={it.get('macro_themes')}")
+    lines.append("## Single-name side bucket (not sector spine)")
+    for it in report.get("single_name_top", [])[:12]:
+        lines.append(f"- {it.get('title')} ({it.get('source')})")
+    lines.append("")
+    lines.append("## Noise sample (dropped)")
+    for it in report.get("noise_sample", [])[:8]:
+        lines.append(f"- {it.get('title')} ({it.get('source')})")
     return "\n".join(lines) + "\n"
 
-def to_markdown_for_channel1(report: dict, max_per_sector: int = 4) -> str:
-    """Compact block safe to inject into general/sector Channel 1."""
+def to_markdown_for_channel1(report: dict) -> str:
+    """Only usable macro + sector lines — safe for predict inject."""
     lines = [
-        f"[PARSED NEWS from Supabase — deduped={report.get('parsed_count')} "
-        f"polarity={report.get('polarity_total')}]",
+        f"[PARSED NEWS v2 usable={report.get('usable_count')} "
+        f"noise_dropped={report.get('noise_count')} "
+        f"single_name={report.get('single_name_count')}]",
     ]
-    for sec, blob in sorted(
-            ((k, v) for k, v in report.get("by_sector", {}).items()
-             if k != "_untagged"),
-            key=lambda kv: -kv[1].get("n", 0))[:11]:
-        tops = blob.get("top", [])[:max_per_sector]
-        if not tops:
-            continue
-        lines.append(f"  {sec}: +{blob.get('+')}/-{blob.get('-')} n={blob.get('n')}")
-        for it in tops:
-            lines.append(f"    [{it.get('polarity')}] {it.get('title')[:120]}")
+    mac = report.get("by_macro_usable") or {}
+    if not mac:
+        lines.append("  macro: (none tagged in window)")
+    for theme, blob in sorted(mac.items(), key=lambda kv: -kv[1].get("n", 0)):
+        lines.append(f"  MACRO {theme} n={blob.get('n')}")
+        for it in blob.get("top", [])[:3]:
+            lines.append(f"    [{it.get('polarity')}] {it.get('title')[:130]}")
+    sec = report.get("by_sector_usable") or {}
+    for name, blob in sorted(sec.items(), key=lambda kv: -kv[1].get("n", 0))[:8]:
+        lines.append(f"  SECTOR {name} n={blob.get('n')}")
+        for it in blob.get("top", [])[:2]:
+            lines.append(f"    [{it.get('polarity')}] {it.get('title')[:130]}")
     return "\n".join(lines)
 
 
 def save_report(report: dict, date_str: str) -> tuple[str, str]:
     os.makedirs(NEWS_DIR, exist_ok=True)
+    # strip all_items from md-facing size if huge — keep full in json
     jp = os.path.join(NEWS_DIR, f"{date_str}_parsed.json")
     mp = os.path.join(NEWS_DIR, f"{date_str}_parsed.md")
     with open(jp, "w", encoding="utf-8") as fh:
@@ -280,26 +369,25 @@ def save_report(report: dict, date_str: str) -> tuple[str, str]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--hours", type=int, default=24)
-    ap.add_argument("--limit", type=int, default=200)
+    ap.add_argument("--hours", type=int, default=48)
+    ap.add_argument("--limit", type=int, default=300)
     ap.add_argument("--date", default=None)
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
-
     if not config.DATABASE_URL:
-        raise SystemExit("DATABASE_URL not set — cannot reach Supabase news")
-
+        raise SystemExit("DATABASE_URL not set")
     report = build_report(hours=args.hours, limit=args.limit)
     jp, mp = save_report(report, date_str)
-    print(f"[news_parse] raw={report['raw_count']} parsed={report['parsed_count']}")
-    print(f"[news_parse] wrote {jp}")
-    print(f"[news_parse] wrote {mp}")
-    # sector coverage summary
-    for sec, blob in sorted(report.get("by_sector", {}).items(),
-                            key=lambda kv: -kv[1].get("n", 0)):
-        if sec == "_untagged":
-            continue
-        print(f"  {sec}: n={blob.get('n')} +{blob.get('+')} -{blob.get('-')}")
+    print(
+        f"[news_parse v2] raw={report['raw_count']} "
+        f"usable={report['usable_count']} "
+        f"single={report['single_name_count']} "
+        f"noise={report['noise_count']}"
+    )
+    print(f"[news_parse] {jp}")
+    print(f"[news_parse] {mp}")
+    print("--- channel1 preview ---")
+    print(to_markdown_for_channel1(report))
 
 
 if __name__ == "__main__":
