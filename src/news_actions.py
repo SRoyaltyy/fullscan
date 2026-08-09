@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 from . import config, db
 from .event_edges import EVENT_FAMILIES, EventFamily
 from .finviz_universe import load_universe, tickers_for_bucket
-from .news_framework import apply_interactions, fed_polarity_compat, score_event
+from .news_framework import apply_interactions, score_event
 from .news_parse import _is_noise, _norm_title, _tag_macro
 
 OUT_DIR = "01_daily/news"
@@ -30,11 +30,8 @@ def match_families(title: str) -> list[EventFamily]:
 
 
 def _fed_side(side: str, polarity: str) -> str:
-    """Template sides assume hawkish pressure on duration; invert if dovish."""
     if polarity == "dovish":
         return "buy" if side == "sell" else "sell"
-    if polarity == "hawkish":
-        return side
     return side
 
 
@@ -74,7 +71,6 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             _add(fam, title, source, r.get("url") or "",
                  str(r.get("published_at") or ""))
 
-    # theme bridge
     theme_to_fams: dict[str, list[EventFamily]] = {}
     for fam in EVENT_FAMILIES:
         for th in fam.parse_themes:
@@ -116,40 +112,33 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             "evidence": blob["evidence"],
         })
 
-        # Hard gate: drop events don't get a ticker book
         if fw.keep == "drop":
             continue
-        # Low confidence + unknown rates polarity → edges recorded at tiny weight, no tickers
-        soft = fw.confidence < 0.35 or (
-            key == "fed_rate_path" and fw.polarity not in ("dovish", "hawkish", "mixed")
-            and "dovish" not in fw.polarity_why
-        )
 
-        # rates polarity for side flip: prefer framework polarity
         rates_pol = fw.polarity if key in ("fed_rate_path", "weak_labor_print") else ""
-        if rates_pol not in ("dovish", "hawkish"):
-            # weak labor evidence almost always dovish for Fed path in practice
-            if key == "weak_labor_print":
-                rates_pol = "dovish"
+        if key == "weak_labor_print" and rates_pol not in ("dovish", "hawkish"):
+            rates_pol = "dovish"
+        if key == "fed_rate_path" and rates_pol not in ("dovish", "hawkish"):
+            # try evidence blob already scored; if still neutral, soft-book
+            rates_pol = rates_pol if rates_pol in ("dovish", "hawkish") else "unknown"
+
+        soft = fw.confidence < 0.35 or (
+            key == "fed_rate_path" and rates_pol == "unknown"
+        )
 
         for edge in list(fam.primary) + list(fam.substitute):
             role = "primary" if edge in fam.primary else "substitute"
             side = edge.side
-            if key in ("fed_rate_path", "weak_labor_print"):
-                # weak_labor template already encodes growth-scare sides; only flip
-                # duration-like buckets when dovish dominates software buy conflict
-                if key == "fed_rate_path":
-                    side = _fed_side(edge.side, rates_pol if rates_pol in ("dovish", "hawkish") else "hawkish")
+            if key == "fed_rate_path" and rates_pol in ("dovish", "hawkish"):
+                side = _fed_side(edge.side, rates_pol)
 
             weight = fam.base_weight * edge.weight * max(fw.confidence, 0.2)
-            # Interaction: suppress software BUY from weak_labor if SaaS compression present
+
             if (key == "weak_labor_print" and edge.bucket == "software_app"
                     and side == "buy" and "saas_multiple_compression" in event_hits):
                 continue
-            # Interaction: offshore wind should not short broad AI power names as primary
             if key == "offshore_wind_cancel" and edge.bucket in (
                     "utilities_power", "utilities_renewable"):
-                # keep edge but shrink if AI power also live
                 if "ai_power_demand" in event_hits:
                     weight *= 0.35
 
@@ -235,7 +224,9 @@ def to_markdown(report: dict) -> str:
     lines.append("## Events scored on full framework")
     for ev in report.get("reasoned_events") or []:
         fw = ev.get("framework") or {}
-        lines.append(f"### `{ev['event']}` ×{ev['headline_count']} — **{fw.get('keep', '?').upper()}**")
+        lines.append(
+            f"### `{ev['event']}` ×{ev['headline_count']} — **{str(fw.get('keep', '?')).upper()}**"
+        )
         lines.append(
             f"- **US relevance:** {fw.get('us_relevance')} — {fw.get('us_relevance_why')}"
         )
