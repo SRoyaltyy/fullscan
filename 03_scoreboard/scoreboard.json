@@ -1171,6 +1171,35 @@
       "knowable_at_9am": "yes — jobs report released at 8:30 AM ET, before the open; market reaction was direct and foreseeable",
       "attribution_contested": "no — major outlets consistently attribute the rally to the jobs report and Fed implications",
       "outlier_watch": "Dow's choppy path and modest +0.28% gain vs. S&P/Nasdaq trend-up — rally was tech-led, not broad; oil rose despite weak jobs data (Hormuz supply concerns dominate demand signals)"
+    },
+    {
+      "date": "2026-08-09",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7735.18,
+      "actual_close": 7757.64,
+      "actual_pct_change": 0.62,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-09_lesson.md",
+      "sources_used": [],
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": null,
+      "key_interaction": null,
+      "knowable_at_9am": null,
+      "attribution_contested": null,
+      "outlier_watch": null
     }
   ]
 }
