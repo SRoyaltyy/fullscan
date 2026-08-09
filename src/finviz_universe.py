@@ -1,10 +1,4 @@
-"""Load Finviz export (with Industry + Finviz_Description) → ticker expand.
-
-Looks for, in order:
-  1) FINVIZ_CSV env path
-  2) data/finviz/latest.csv
-  3) newest data/finviz/*.csv
-"""
+"""Load Finviz export → ticker expand with preferred liquid sets."""
 from __future__ import annotations
 
 import glob
@@ -14,7 +8,7 @@ from functools import lru_cache
 
 import pandas as pd
 
-from .event_edges import BUCKET_DESC_KEYWORDS, BUCKET_TO_INDUSTRIES
+from .event_edges import BUCKET_DESC_KEYWORDS, BUCKET_PREFERRED, BUCKET_TO_INDUSTRIES
 
 
 def _find_csv() -> str | None:
@@ -34,18 +28,20 @@ def load_universe(path: str | None = None) -> pd.DataFrame:
     if not p:
         return pd.DataFrame()
     df = pd.read_csv(p, low_memory=False)
-    # normalize columns
     cols = {c.lower().strip(): c for c in df.columns}
+
     def col(*names):
         for n in names:
             if n.lower() in cols:
                 return cols[n.lower()]
         return None
+
     tcol = col("Ticker", "ticker")
     icol = col("Industry", "industry")
     scol = col("Sector", "sector")
     dcol = col("Finviz_Description", "Description", "description")
     mcol = col("Market Cap", "Market Cap")
+    ccol = col("Country", "country")
     if not tcol or not icol:
         return pd.DataFrame()
     out = pd.DataFrame({
@@ -54,41 +50,49 @@ def load_universe(path: str | None = None) -> pd.DataFrame:
         "sector": df[scol].astype(str).str.strip() if scol else "",
         "description": df[dcol].fillna("").astype(str) if dcol else "",
         "market_cap": pd.to_numeric(df[mcol], errors="coerce") if mcol else float("nan"),
+        "country": df[ccol].astype(str).str.strip() if ccol else "",
     })
-    out = out[out["ticker"].str.len() > 0]
-    out = out[~out["ticker"].str.startswith("nan", na=False)]
+    out = out[out["ticker"].str.len().gt(0)]
     return out.reset_index(drop=True)
 
 
 def tickers_for_bucket(
     bucket: str,
     universe: pd.DataFrame | None = None,
-    max_names: int = 40,
-    min_mcap: float | None = None,
+    max_names: int = 6,
+    min_mcap: float | None = 1000,
+    prefer_us: bool = True,
 ) -> list[str]:
-    """Expand edge bucket → ticker list using Industry (+ optional desc keywords)."""
+    """Preferred liquid list first; fall back to industry (US-biased)."""
     u = universe if universe is not None else load_universe()
+    preferred = list(BUCKET_PREFERRED.get(bucket, ()))
+    if not u.empty and preferred:
+        have = set(u["ticker"])
+        hit = [t for t in preferred if t in have]
+        if hit:
+            return hit[:max_names]
+        # preferred not in this snapshot — still return preferred as soft list
+        if preferred:
+            return preferred[:max_names]
+
     if u.empty:
-        return []
+        return preferred[:max_names]
+
     industries = BUCKET_TO_INDUSTRIES.get(bucket, ())
     if not industries:
-        return []
+        return preferred[:max_names]
     sub = u[u["industry"].isin(industries)].copy()
+    if prefer_us and "country" in sub.columns and sub["country"].notna().any():
+        us = sub[sub["country"].str.upper().isin(["USA", "UNITED STATES", "US"])]
+        if len(us) >= 2:
+            sub = us
     kws = BUCKET_DESC_KEYWORDS.get(bucket)
-    if kws and len(sub) > 0:
+    if kws is not None and len(sub) > 0:
         pat = re.compile("|".join(re.escape(k) for k in kws), re.I)
         mask = sub["description"].str.contains(pat, na=False)
-        # if keywords match anyone, prefer them; else keep industry set
         if mask.any():
             sub = sub[mask]
-    if min_mcap is not None and "market_cap" in sub.columns:
+    if min_mcap is not None:
         sub = sub[sub["market_cap"].fillna(0) >= min_mcap]
     sub = sub.sort_values("market_cap", ascending=False, na_position="last")
     return sub["ticker"].head(max_names).tolist()
-
-
-def industry_counts(universe: pd.DataFrame | None = None) -> dict[str, int]:
-    u = universe if universe is not None else load_universe()
-    if u.empty:
-        return {}
-    return u["industry"].value_counts().to_dict()

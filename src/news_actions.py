@@ -1,11 +1,13 @@
-"""News → event family → primary/substitute edges → buy/sell tickers.
+"""News → event family → edges → compact buy/sell book (v2).
 
-Borrows catalyst_analysis ideas (taxonomy labels, weights, amp/damp) but is
-event-first and cheap enough for hundreds of headlines/day.
+v1 failure: 2 Hormuz headlines × full E&P industry = 85 identical oil scores;
+Fed matched a gold blog and applied hike-default sides while text was dovish.
 
-CLI:
-  python -m src.news_actions [--hours 48] [--limit 300] [--date YYYY-MM-DD]
-  FINVIZ_CSV=/path/to/finviz_with_descriptions.csv python -m src.news_actions
+v2:
+  - one score per event family (headline evidence listed, not double-counted)
+  - preferred liquid tickers (not entire industry)
+  - Fed polarity: dovish inverts duration sides; hawkish keeps defaults
+  - report is EVENT-FIRST, then a short ticker book
 """
 from __future__ import annotations
 
@@ -19,92 +21,52 @@ from zoneinfo import ZoneInfo
 from . import config, db
 from .event_edges import EVENT_FAMILIES, EventFamily
 from .finviz_universe import load_universe, tickers_for_bucket
-from .news_parse import classify as coarse_classify  # noise filter reuse
 from .news_parse import _is_noise, _norm_title
 
 OUT_DIR = "01_daily/news"
 
+_COMPILED = [
+    (fam, [re.compile(p, re.I) for p in fam.patterns]) for fam in EVENT_FAMILIES
+]
 
-def _compile_family(fam: EventFamily):
-    return [re.compile(p, re.I) for p in fam.patterns]
-
-
-_COMPILED = [(fam, _compile_family(fam)) for fam in EVENT_FAMILIES]
+DOVISH = re.compile(
+    r"(?i)(rate\s+cut|cuts?\s+rates?|cooling\s+(fed\s+)?rate\s+hike|"
+    r"hike\s+expectations?\s+(cool|fall|ease)|dovish|"
+    r"odds\s+of\s+(a\s+)?(rate\s+)?hike\s+(fall|drop|cut)|"
+    r"fewer\s+hikes|no\s+hike|pause)"
+)
+HAWKISH = re.compile(
+    r"(?i)(rate\s+hike|hikes?\s+rates?|hawkish|hotter\s+inflation|"
+    r"higher\s+for\s+longer|reaccelerate)"
+)
 
 
 def match_families(title: str) -> list[EventFamily]:
-    hits = []
-    for fam, regs in _COMPILED:
-        if any(r.search(title or "") for r in regs):
-            hits.append(fam)
-    return hits
+    return [fam for fam, regs in _COMPILED if any(r.search(title or "") for r in regs)]
 
 
-def relevance_gate(title: str, source: str) -> bool:
-    """Drop obvious non-US-equity noise before edge matching."""
-    if _is_noise(title, source):
-        return False
-    # pure foreign diplomacy without market channel keywords → drop later if no family
-    return True
+def fed_polarity(title: str) -> str:
+    """dovish | hawkish | unknown"""
+    d = bool(DOVISH.search(title or ""))
+    h = bool(HAWKISH.search(title or ""))
+    if d and not h:
+        return "dovish"
+    if h and not d:
+        return "hawkish"
+    if d and h:
+        return "unknown"
+    return "unknown"
 
 
-def actions_for_headline(
-    title: str,
-    source: str = "",
-    url: str = "",
-    published_at: str = "",
-    universe=None,
-    max_per_edge: int = 15,
-) -> list[dict]:
-    if not relevance_gate(title, source):
-        return []
-    families = match_families(title)
-    if not families:
-        return []
-    rows = []
-    for fam in families:
-        for edge in list(fam.primary) + list(fam.substitute):
-            role = "primary" if edge in fam.primary else "substitute"
-            tickers = tickers_for_bucket(
-                edge.bucket, universe=universe, max_names=max_per_edge,
-                min_mcap=200,  # skip micro junk by default
-            )
-            if not tickers:
-                # still emit bucket-level action for debugging
-                rows.append({
-                    "event": fam.key,
-                    "taxonomy": list(fam.taxonomy_labels),
-                    "role": role,
-                    "bucket": edge.bucket,
-                    "side": edge.side,
-                    "weight": round(fam.base_weight * edge.weight, 2),
-                    "tickers": [],
-                    "note": edge.note,
-                    "amp_damp": fam.amp_damp,
-                    "mean_revert": fam.mean_revert,
-                    "title": title,
-                    "source": source,
-                    "url": url,
-                    "published_at": published_at,
-                })
-                continue
-            rows.append({
-                "event": fam.key,
-                "taxonomy": list(fam.taxonomy_labels),
-                "role": role,
-                "bucket": edge.bucket,
-                "side": edge.side,
-                "weight": round(fam.base_weight * edge.weight, 2),
-                "tickers": tickers,
-                "note": edge.note,
-                "amp_damp": fam.amp_damp,
-                "mean_revert": fam.mean_revert,
-                "title": title,
-                "source": source,
-                "url": url,
-                "published_at": published_at,
-            })
-    return rows
+def _adjust_side(event_key: str, side: str, title: str) -> str:
+    if event_key != "fed_rate_path":
+        return side
+    pol = fed_polarity(title)
+    if pol == "unknown":
+        return side  # keep template default but caller may down-weight
+    if pol == "dovish":
+        return "buy" if side == "sell" else "sell"
+    return side  # hawkish: template assumes hike pressure on duration
 
 
 def build_from_db(hours: int = 48, limit: int = 300) -> dict:
@@ -112,102 +74,161 @@ def build_from_db(hours: int = 48, limit: int = 300) -> dict:
     if not rows:
         rows = db.recent_news(hours=24 * 7, limit=limit)
     universe = load_universe()
-    seen = set()
-    all_actions: list[dict] = []
-    matched_headlines = 0
+
+    # title dedupe
+    seen_titles: set[str] = set()
+    # event_key -> best evidence (first / highest source weight later)
+    event_hits: dict[str, dict] = {}
+
     for r in rows:
         title = (r.get("title") or "").strip()
-        key = _norm_title(title)
-        if not title or key in seen:
+        source = r.get("source") or ""
+        if not title or _is_noise(title, source):
             continue
-        seen.add(key)
-        acts = actions_for_headline(
-            title,
-            source=r.get("source") or "",
-            url=r.get("url") or "",
-            published_at=str(r.get("published_at") or ""),
-            universe=universe,
-        )
-        if acts:
-            matched_headlines += 1
-            all_actions.extend(acts)
+        tkey = _norm_title(title)
+        if tkey in seen_titles:
+            continue
+        seen_titles.add(tkey)
+        for fam in match_families(title):
+            rec = event_hits.get(fam.key)
+            evidence = {
+                "title": title,
+                "source": source,
+                "url": r.get("url") or "",
+                "published_at": str(r.get("published_at") or ""),
+            }
+            if rec is None:
+                event_hits[fam.key] = {
+                    "family": fam,
+                    "evidence": [evidence],
+                    "headline_count": 1,
+                }
+            else:
+                rec["headline_count"] += 1
+                if len(rec["evidence"]) < 5:
+                    rec["evidence"].append(evidence)
 
-    # Aggregate ticker-level book
+    edge_actions: list[dict] = []
+    for key, blob in event_hits.items():
+        fam: EventFamily = blob["family"]
+        # representative title = first evidence
+        rep_title = blob["evidence"][0]["title"]
+        pol = fed_polarity(rep_title) if key == "fed_rate_path" else None
+        # unknown Fed polarity → skip directional book (still note the hit)
+        skip_book = key == "fed_rate_path" and pol == "unknown"
+
+        for edge in list(fam.primary) + list(fam.substitute):
+            role = "primary" if edge in fam.primary else "substitute"
+            side = _adjust_side(key, edge.side, rep_title)
+            weight = fam.base_weight * edge.weight
+            if key == "fed_rate_path" and pol == "unknown":
+                weight *= 0.25
+            tickers = [] if skip_book else tickers_for_bucket(
+                edge.bucket, universe=universe, max_names=6, min_mcap=1000,
+            )
+            edge_actions.append({
+                "event": key,
+                "taxonomy": list(fam.taxonomy_labels),
+                "role": role,
+                "bucket": edge.bucket,
+                "side": side,
+                "weight": round(weight, 2),
+                "tickers": tickers,
+                "note": edge.note,
+                "amp_damp": fam.amp_damp,
+                "mean_revert": fam.mean_revert,
+                "fed_polarity": pol,
+                "headline_count": blob["headline_count"],
+                "evidence": blob["evidence"],
+            })
+
+    # ticker book from deduped edges only
     book: dict[str, dict] = {}
-    for a in all_actions:
+    for a in edge_actions:
         for t in a.get("tickers") or []:
             rec = book.setdefault(t, {
-                "ticker": t,
-                "buy_score": 0.0,
-                "sell_score": 0.0,
-                "events": [],
+                "ticker": t, "buy_score": 0.0, "sell_score": 0.0, "events": [],
             })
             if a["side"] == "buy":
                 rec["buy_score"] += a["weight"]
             else:
                 rec["sell_score"] += a["weight"]
             rec["events"].append({
-                "event": a["event"],
-                "role": a["role"],
-                "side": a["side"],
-                "weight": a["weight"],
-                "title": a["title"][:160],
+                "event": a["event"], "role": a["role"], "side": a["side"],
+                "weight": a["weight"], "bucket": a["bucket"],
             })
 
     ranked = []
     for t, rec in book.items():
         net = rec["buy_score"] - rec["sell_score"]
-        side = "buy" if net > 0 else ("sell" if net < 0 else "flat")
         ranked.append({
             **rec,
             "net": round(net, 2),
-            "side": side,
+            "side": "buy" if net > 0 else ("sell" if net < 0 else "flat"),
             "buy_score": round(rec["buy_score"], 2),
             "sell_score": round(rec["sell_score"], 2),
         })
     ranked.sort(key=lambda x: -abs(x["net"]))
 
+    events_summary = []
+    for key, blob in event_hits.items():
+        events_summary.append({
+            "event": key,
+            "headline_count": blob["headline_count"],
+            "evidence": blob["evidence"],
+            "mean_revert": blob["family"].mean_revert,
+            "amp_damp": blob["family"].amp_damp,
+        })
+
     return {
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "hours": hours,
         "raw_headlines": len(rows),
-        "deduped": len(seen),
-        "matched_headlines": matched_headlines,
+        "deduped_titles": len(seen_titles),
+        "unique_events": len(event_hits),
         "universe_rows": int(len(universe)),
-        "action_rows": len(all_actions),
+        "events": events_summary,
+        "edge_actions": edge_actions,
         "ticker_actions": ranked,
-        "edge_actions": all_actions,
     }
 
 
 def to_markdown(report: dict) -> str:
     lines = [
-        f"# News → Actions — {report.get('generated_at', '')}",
+        f"# News → Actions v2 — {report.get('generated_at', '')}",
         "",
-        f"raw={report.get('raw_headlines')} matched_headlines={report.get('matched_headlines')} "
-        f"universe={report.get('universe_rows')} ticker_rows={len(report.get('ticker_actions') or [])}",
+        f"raw={report.get('raw_headlines')} unique_events={report.get('unique_events')} "
+        f"universe={report.get('universe_rows')} "
+        f"tickers_in_book={len(report.get('ticker_actions') or [])}",
         "",
-        "## Ticker book (net = buy_score − sell_score)",
+        "## Events (deduped — score once even if many headlines)",
     ]
-    for rec in (report.get("ticker_actions") or [])[:40]:
-        lines.append(
-            f"- **{rec['ticker']}** {rec['side']} net={rec['net']} "
-            f"(buy={rec['buy_score']} sell={rec['sell_score']})"
-        )
-        for e in rec.get("events", [])[:3]:
-            lines.append(
-                f"  - [{e['side']}/{e['role']}] {e['event']} w={e['weight']}: "
-                f"{e['title']}"
-            )
-    lines.append("")
-    lines.append("## Edge-level detail")
-    for a in (report.get("edge_actions") or [])[:30]:
-        tshow = ",".join((a.get("tickers") or [])[:8]) or "(no ticker map)"
+    for ev in report.get("events") or []:
+        lines.append(f"### `{ev['event']}` (headlines×{ev['headline_count']})")
+        for e in ev.get("evidence") or []:
+            lines.append(f"- {e.get('title')} _{e.get('source')}_")
+        if ev.get("mean_revert"):
+            lines.append(f"  - mean-revert: {ev['mean_revert']}")
+        lines.append("")
+
+    lines.append("## Edges (bucket → side → liquid tickers)")
+    for a in report.get("edge_actions") or []:
+        tshow = ",".join(a.get("tickers") or []) or "(none)"
+        extra = f" fed_polarity={a['fed_polarity']}" if a.get("fed_polarity") else ""
         lines.append(
             f"- **{a['event']}** {a['role']} `{a['bucket']}` → **{a['side']}** "
-            f"w={a['weight']} | {tshow}"
+            f"w={a['weight']}{extra}"
         )
-        lines.append(f"  _{a.get('title', '')[:140]}_")
+        lines.append(f"  tickers: {tshow}")
+        lines.append(f"  note: {a.get('note')}")
+    lines.append("")
+    lines.append("## Compact ticker book")
+    for rec in (report.get("ticker_actions") or [])[:25]:
+        evs = ",".join(sorted({e["event"] for e in rec.get("events") or []}))
+        lines.append(
+            f"- **{rec['ticker']}** {rec['side']} net={rec['net']} "
+            f"({evs})"
+        )
     return "\n".join(lines) + "\n"
 
 def main() -> None:
@@ -215,10 +236,9 @@ def main() -> None:
     ap.add_argument("--hours", type=int, default=48)
     ap.add_argument("--limit", type=int, default=300)
     ap.add_argument("--date", default=None)
-    ap.add_argument("--finviz", default=None, help="Path to finviz_with_descriptions.csv")
+    ap.add_argument("--finviz", default=None)
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
-
     if args.finviz:
         os.environ["FINVIZ_CSV"] = args.finviz
     if not config.DATABASE_URL:
@@ -232,11 +252,9 @@ def main() -> None:
         json.dump(report, fh, indent=2, ensure_ascii=False, default=str)
     with open(mp, "w", encoding="utf-8") as fh:
         fh.write(to_markdown(report))
-    print(f"[news_actions] matched_headlines={report['matched_headlines']} "
-          f"tickers={len(report['ticker_actions'])} universe={report['universe_rows']}")
-    print(f"[news_actions] wrote {mp}")
-    for rec in report["ticker_actions"][:15]:
-        print(f"  {rec['ticker']:6} {rec['side']:4} net={rec['net']}")
+    print(f"[news_actions v2] unique_events={report['unique_events']} "
+          f"tickers={len(report['ticker_actions'])}")
+    print(to_markdown(report)[:2500])
 
 
 if __name__ == "__main__":
