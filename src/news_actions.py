@@ -1,10 +1,7 @@
-"""News → events → reasoned edges → compact ticker book (v3).
+"""News → framework score → edges → tickers (v4).
 
-Adds:
-  - broader event catalog (Fed/labor/SaaS/AI power/chips…)
-  - bridge from news_parse theme tags when regex alone is thin
-  - explicit mechanism / channel / horizon / amp_damp / mean_revert per event
-  - why-these-tickers line (preferred liquid list + bucket role)
+Every event runs through news_framework.score_event (keep/channel/geography/
+severity/horizon/object/polarity/confidence) before any ticker book is built.
 """
 from __future__ import annotations
 
@@ -18,7 +15,8 @@ from zoneinfo import ZoneInfo
 from . import config, db
 from .event_edges import EVENT_FAMILIES, EventFamily
 from .finviz_universe import load_universe, tickers_for_bucket
-from .news_parse import _is_noise, _norm_title, _tag_macro, build_report as parse_build
+from .news_framework import apply_interactions, fed_polarity_compat, score_event
+from .news_parse import _is_noise, _norm_title, _tag_macro
 
 OUT_DIR = "01_daily/news"
 
@@ -26,57 +24,18 @@ _COMPILED = [
     (fam, [re.compile(p, re.I) for p in fam.patterns]) for fam in EVENT_FAMILIES
 ]
 
-DOVISH = re.compile(
-    r"(?i)(rate\s+cut|cuts?\s+rates?|cooling\s+(fed\s+)?rate\s+hike|"
-    r"hike\s+expectations?\s+(cool|fall|ease)|dovish|"
-    r"odds\s+of\s+(a\s+)?(rate\s+)?hike\s+(fall|drop|cut)|"
-    r"cut\s+chances\s+of\s+.{0,20}hike|fewer\s+hikes|no\s+hike|pause)"
-)
-HAWKISH = re.compile(
-    r"(?i)(rate\s+hike|hikes?\s+rates?|hawkish|hotter\s+inflation|"
-    r"higher\s+for\s+longer|reaccelerate)"
-)
-
 
 def match_families(title: str) -> list[EventFamily]:
     return [fam for fam, regs in _COMPILED if any(r.search(title or "") for r in regs)]
 
 
-def fed_polarity(title: str) -> str:
-    d, h = bool(DOVISH.search(title or "")), bool(HAWKISH.search(title or ""))
-    if d and not h:
-        return "dovish"
-    if h and not d:
-        return "hawkish"
-    return "unknown"
-
-
-def _adjust_side(event_key: str, side: str, title: str) -> str:
-    if event_key != "fed_rate_path":
-        return side
-    pol = fed_polarity(title)
-    if pol == "dovish":
+def _fed_side(side: str, polarity: str) -> str:
+    """Template sides assume hawkish pressure on duration; invert if dovish."""
+    if polarity == "dovish":
         return "buy" if side == "sell" else "sell"
+    if polarity == "hawkish":
+        return side
     return side
-
-
-def _reason_block(fam: EventFamily, evidence: list[dict], pol: str | None) -> str:
-    lines = [
-        f"**Channel:** {fam.channel or 'n/a'} | **Horizon:** {fam.horizon}",
-        f"**Mechanism:** {fam.mechanism or fam.amp_damp or 'n/a'}",
-    ]
-    if pol:
-        lines.append(f"**Fed polarity inferred:** {pol} (duration sides adjusted if dovish/hawkish)")
-    if fam.amp_damp:
-        lines.append(f"**Amp/damp:** {fam.amp_damp}")
-    if fam.mean_revert:
-        lines.append(f"**Mean-revert when:** {fam.mean_revert}")
-    if fam.taxonomy_labels:
-        lines.append("**Taxonomy:** " + "; ".join(fam.taxonomy_labels[:3]))
-    lines.append("**Evidence:**")
-    for e in evidence[:4]:
-        lines.append(f"  - {e.get('title')} ({e.get('source')})")
-    return "\n".join(lines)
 
 
 def build_from_db(hours: int = 48, limit: int = 500) -> dict:
@@ -98,8 +57,9 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             }
         else:
             event_hits[fam.key]["headline_count"] += 1
-            if len(event_hits[fam.key]["evidence"]) < 6:
-                event_hits[fam.key]["evidence"].append(evidence)
+            if len(event_hits[fam.key]["evidence"]) < 8:
+                if not any(e["title"] == title for e in event_hits[fam.key]["evidence"]):
+                    event_hits[fam.key]["evidence"].append(evidence)
 
     for r in rows:
         title = (r.get("title") or "").strip()
@@ -114,74 +74,91 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             _add(fam, title, source, r.get("url") or "",
                  str(r.get("published_at") or ""))
 
-    # Bridge: if parse themes fire but regex event missing, attach representative headlines
-    # by re-scanning titles for theme keywords already captured in parse_themes linkage.
+    # theme bridge
     theme_to_fams: dict[str, list[EventFamily]] = {}
     for fam in EVENT_FAMILIES:
         for th in fam.parse_themes:
             theme_to_fams.setdefault(th, []).append(fam)
-
     for r in rows:
         title = (r.get("title") or "").strip()
         source = r.get("source") or ""
         if not title or _is_noise(title, source):
             continue
-        macros = _tag_macro(title)
-        for th in macros:
+        for th in _tag_macro(title):
             for fam in theme_to_fams.get(th, []):
-                if fam.key in event_hits:
-                    # already have event; still add evidence if new
-                    if not any(e["title"] == title for e in event_hits[fam.key]["evidence"]):
-                        _add(fam, title, source, r.get("url") or "",
-                             str(r.get("published_at") or ""))
-                else:
-                    # only auto-bridge if title still matches family patterns OR theme is strong
-                    if match_families(title) or th in ("fed_path", "labor", "geopolitics"):
-                        _add(fam, title, source, r.get("url") or "",
-                             str(r.get("published_at") or ""))
+                _add(fam, title, source, r.get("url") or "",
+                     str(r.get("published_at") or ""))
 
+    reasoned: list[dict] = []
     edge_actions: list[dict] = []
-    reasoned_events: list[dict] = []
 
     for key, blob in event_hits.items():
         fam: EventFamily = blob["family"]
-        rep_title = blob["evidence"][0]["title"]
-        pol = fed_polarity(rep_title) if key in ("fed_rate_path", "weak_labor_print") else None
-        # For weak_labor, treat as dovish-leaning growth scare
-        if key == "weak_labor_print":
-            pol = pol or "dovish"
+        titles = [e["title"] for e in blob["evidence"]]
+        fw = score_event(
+            event_key=key,
+            channel=fam.channel,
+            horizon_default=fam.horizon,
+            titles=titles,
+            headline_count=blob["headline_count"],
+            mechanism=fam.mechanism,
+        )
+        fw_d = fw.to_dict()
 
-        skip_book = key == "fed_rate_path" and fed_polarity(rep_title) == "unknown"
-
-        reasoned_events.append({
+        reasoned.append({
             "event": key,
             "headline_count": blob["headline_count"],
-            "channel": fam.channel,
-            "horizon": fam.horizon,
+            "framework": fw_d,
             "mechanism": fam.mechanism,
             "amp_damp": fam.amp_damp,
             "mean_revert": fam.mean_revert,
             "taxonomy": list(fam.taxonomy_labels),
-            "fed_polarity": pol,
-            "reasoning_md": _reason_block(fam, blob["evidence"], pol),
             "evidence": blob["evidence"],
         })
+
+        # Hard gate: drop events don't get a ticker book
+        if fw.keep == "drop":
+            continue
+        # Low confidence + unknown rates polarity → edges recorded at tiny weight, no tickers
+        soft = fw.confidence < 0.35 or (
+            key == "fed_rate_path" and fw.polarity not in ("dovish", "hawkish", "mixed")
+            and "dovish" not in fw.polarity_why
+        )
+
+        # rates polarity for side flip: prefer framework polarity
+        rates_pol = fw.polarity if key in ("fed_rate_path", "weak_labor_print") else ""
+        if rates_pol not in ("dovish", "hawkish"):
+            # weak labor evidence almost always dovish for Fed path in practice
+            if key == "weak_labor_print":
+                rates_pol = "dovish"
 
         for edge in list(fam.primary) + list(fam.substitute):
             role = "primary" if edge in fam.primary else "substitute"
             side = edge.side
-            if key == "fed_rate_path":
-                side = _adjust_side(key, edge.side, rep_title)
-            weight = fam.base_weight * edge.weight
-            if key == "fed_rate_path" and fed_polarity(rep_title) == "unknown":
-                weight *= 0.2
-            tickers = [] if skip_book else tickers_for_bucket(
-                edge.bucket, universe=universe, max_names=6, min_mcap=1000,
-            )
-            why = (
-                f"{role} edge on `{edge.bucket}` because: {edge.note}. "
-                f"Tickers = liquid preferred set for that bucket (not full industry dump)."
-            )
+            if key in ("fed_rate_path", "weak_labor_print"):
+                # weak_labor template already encodes growth-scare sides; only flip
+                # duration-like buckets when dovish dominates software buy conflict
+                if key == "fed_rate_path":
+                    side = _fed_side(edge.side, rates_pol if rates_pol in ("dovish", "hawkish") else "hawkish")
+
+            weight = fam.base_weight * edge.weight * max(fw.confidence, 0.2)
+            # Interaction: suppress software BUY from weak_labor if SaaS compression present
+            if (key == "weak_labor_print" and edge.bucket == "software_app"
+                    and side == "buy" and "saas_multiple_compression" in event_hits):
+                continue
+            # Interaction: offshore wind should not short broad AI power names as primary
+            if key == "offshore_wind_cancel" and edge.bucket in (
+                    "utilities_power", "utilities_renewable"):
+                # keep edge but shrink if AI power also live
+                if "ai_power_demand" in event_hits:
+                    weight *= 0.35
+
+            tickers = []
+            if not soft and fw.keep in ("keep", "conditional"):
+                tickers = tickers_for_bucket(
+                    edge.bucket, universe=universe, max_names=6, min_mcap=1000,
+                )
+
             edge_actions.append({
                 "event": key,
                 "role": role,
@@ -190,11 +167,16 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
                 "weight": round(weight, 2),
                 "tickers": tickers,
                 "note": edge.note,
-                "why_tickers": why,
-                "channel": fam.channel,
-                "horizon": fam.horizon,
-                "fed_polarity": pol,
+                "why": (
+                    f"Framework keep={fw.keep} channel={fw.channel} "
+                    f"object={fw.action_object}:{fw.action_object_detail} "
+                    f"horizon={fw.horizon} severity={fw.severity} conf={fw.confidence}. "
+                    f"Edge={role} {side} `{edge.bucket}` because {edge.note}."
+                ),
+                "framework_polarity": fw.polarity,
             })
+
+    interactions = apply_interactions(reasoned)
 
     book: dict[str, dict] = {}
     for a in edge_actions:
@@ -208,7 +190,7 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
                 rec["sell_score"] += a["weight"]
             rec["events"].append({
                 "event": a["event"], "side": a["side"], "weight": a["weight"],
-                "bucket": a["bucket"], "channel": a["channel"],
+                "bucket": a["bucket"],
             })
 
     ranked = []
@@ -227,10 +209,10 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "hours": hours,
         "raw_headlines": len(rows),
-        "deduped_titles": len(seen_titles),
         "unique_events": len(event_hits),
         "universe_rows": int(len(universe)),
-        "reasoned_events": reasoned_events,
+        "interactions": interactions,
+        "reasoned_events": reasoned,
         "edge_actions": edge_actions,
         "ticker_actions": ranked,
     }
@@ -238,31 +220,61 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
 
 def to_markdown(report: dict) -> str:
     lines = [
-        f"# News → Actions v3 — {report.get('generated_at', '')}",
+        f"# News → Actions v4 (full framework) — {report.get('generated_at', '')}",
         "",
         f"raw={report.get('raw_headlines')} unique_events={report.get('unique_events')} "
-        f"universe={report.get('universe_rows')} "
         f"tickers={len(report.get('ticker_actions') or [])}",
         "",
-        "## Reasoned events (framework)",
     ]
-    for ev in report.get("reasoned_events") or []:
-        lines.append(f"### `{ev['event']}` ×{ev['headline_count']}")
-        lines.append(ev.get("reasoning_md") or "")
+    if report.get("interactions"):
+        lines.append("## Cross-event interactions (catalyst-style)")
+        for m in report["interactions"]:
+            lines.append(f"- {m}")
         lines.append("")
 
-    lines.append("## Edges → tickers (with why)")
-    for a in report.get("edge_actions") or []:
-        tshow = ",".join(a.get("tickers") or []) or "(none)"
+    lines.append("## Events scored on full framework")
+    for ev in report.get("reasoned_events") or []:
+        fw = ev.get("framework") or {}
+        lines.append(f"### `{ev['event']}` ×{ev['headline_count']} — **{fw.get('keep', '?').upper()}**")
         lines.append(
-            f"- **{a['event']}** | {a['role']} | `{a['bucket']}` → **{a['side']}** "
-            f"w={a['weight']} | channel={a.get('channel')} horizon={a.get('horizon')}"
+            f"- **US relevance:** {fw.get('us_relevance')} — {fw.get('us_relevance_why')}"
         )
-        lines.append(f"  tickers: {tshow}")
-        lines.append(f"  {a.get('why_tickers')}")
+        lines.append(
+            f"- **Channel:** {fw.get('channel')} | **Geography:** {fw.get('geography')} | "
+            f"**Severity:** {fw.get('severity')} | **Horizon:** {fw.get('horizon')}"
+        )
+        lines.append(
+            f"- **Action object:** {fw.get('action_object')} — {fw.get('action_object_detail')}"
+        )
+        lines.append(
+            f"- **Polarity:** {fw.get('polarity')} ({fw.get('polarity_why')}) | "
+            f"**Confidence:** {fw.get('confidence')}"
+        )
+        if fw.get("notes"):
+            lines.append(f"- **Notes:** {'; '.join(fw['notes'])}")
+        if ev.get("mechanism"):
+            lines.append(f"- **Mechanism:** {ev['mechanism']}")
+        if ev.get("mean_revert"):
+            lines.append(f"- **Mean-revert:** {ev['mean_revert']}")
+        lines.append("- **Evidence:**")
+        for e in (ev.get("evidence") or [])[:4]:
+            lines.append(f"  - {e.get('title')}")
+        lines.append("")
+
+    lines.append("## Edges (only keep/conditional with confidence)")
+    for a in report.get("edge_actions") or []:
+        if not a.get("tickers") and a.get("weight", 0) < 1:
+            continue
+        tshow = ",".join(a.get("tickers") or []) or "(no tickers — soft/unknown)"
+        lines.append(
+            f"- **{a['event']}** {a['role']} `{a['bucket']}` → **{a['side']}** "
+            f"w={a['weight']}"
+        )
+        lines.append(f"  {tshow}")
+        lines.append(f"  _{a.get('why')}_")
     lines.append("")
     lines.append("## Compact ticker book")
-    for rec in (report.get("ticker_actions") or [])[:30]:
+    for rec in (report.get("ticker_actions") or [])[:35]:
         evs = ",".join(sorted({e["event"] for e in rec.get("events") or []}))
         lines.append(f"- **{rec['ticker']}** {rec['side']} net={rec['net']} ({evs})")
     return "\n".join(lines) + "\n"
@@ -288,9 +300,9 @@ def main() -> None:
         json.dump(report, fh, indent=2, ensure_ascii=False, default=str)
     with open(mp, "w", encoding="utf-8") as fh:
         fh.write(to_markdown(report))
-    print(f"[news_actions v3] unique_events={report['unique_events']} "
+    print(f"[news_actions v4] events={report['unique_events']} "
           f"tickers={len(report['ticker_actions'])}")
-    print(to_markdown(report)[:3500])
+    print(to_markdown(report)[:4000])
 
 
 if __name__ == "__main__":
