@@ -1,15 +1,302 @@
 {
-  "generated_at": "2026-08-09T01:30:14.219835-04:00",
+  "generated_at": "2026-08-09T01:43:03.645972-04:00",
   "hours": 48,
-  "raw_headlines": 300,
-  "deduped": 299,
-  "matched_headlines": 3,
+  "raw_headlines": 500,
+  "deduped_titles": 401,
+  "unique_events": 2,
   "universe_rows": 5961,
-  "action_rows": 9,
+  "events": [
+    {
+      "event": "hormuz_energy_risk",
+      "headline_count": 4,
+      "evidence": [
+        {
+          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
+          "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
+        },
+        {
+          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
+          "published_at": "2026-08-08T19:00:00Z"
+        },
+        {
+          "title": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/uae-says-iran-targeted-adnoc-tanker-in-hormuz-no-casualties-2?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 15:01:29 +0000"
+        },
+        {
+          "title": "Iran deliberates Hormuz arrangement amid uncertain prospects with US",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/iran-deliberates-hormuz-arrangement-amid-uncertain-prospects-with-us?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 13:52:40 +0000"
+        }
+      ],
+      "mean_revert": "de-escalation / oil giveback",
+      "amp_damp": "Hormuz risk: [+] transit threat + oil up [−] rhetoric only / oil flat. Do not expand to pure natural-gas E&P as oil proxies."
+    },
+    {
+      "event": "tariff_semis_solar",
+      "headline_count": 1,
+      "evidence": [
+        {
+          "title": "Trump launched big new solar tariffs. Here’s what it means. - Canary Media",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ScW42VWQwdF9ncXZsdDJxdEU1TWU2RjExTjVyS3U2aUVlYndueFc4ZFBENlgzU1lQQm1LMVVkc3YwS3padGx2N0N6N0JNTHlRRzNWdEgya1RYTGN5a2k0d21mWEVBazhVbFh6a0NqbEhwSmdy?oc=5",
+          "published_at": "Fri, 07 Aug 2026 22:30:00 GMT"
+        }
+      ],
+      "mean_revert": "policy walk-back",
+      "amp_damp": ""
+    }
+  ],
+  "edge_actions": [
+    {
+      "event": "hormuz_energy_risk",
+      "taxonomy": [
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Commodity price move favorable to the company"
+      ],
+      "role": "primary",
+      "bucket": "oil_ep",
+      "side": "buy",
+      "weight": 8.0,
+      "tickers": [
+        "COP",
+        "EOG",
+        "OXY",
+        "FANG",
+        "DVN",
+        "APA"
+      ],
+      "note": "oil risk premium",
+      "amp_damp": "Hormuz risk: [+] transit threat + oil up [−] rhetoric only / oil flat. Do not expand to pure natural-gas E&P as oil proxies.",
+      "mean_revert": "de-escalation / oil giveback",
+      "fed_polarity": null,
+      "headline_count": 4,
+      "evidence": [
+        {
+          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
+          "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
+        },
+        {
+          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
+          "published_at": "2026-08-08T19:00:00Z"
+        },
+        {
+          "title": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/uae-says-iran-targeted-adnoc-tanker-in-hormuz-no-casualties-2?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 15:01:29 +0000"
+        },
+        {
+          "title": "Iran deliberates Hormuz arrangement amid uncertain prospects with US",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/iran-deliberates-hormuz-arrangement-amid-uncertain-prospects-with-us?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 13:52:40 +0000"
+        }
+      ]
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "taxonomy": [
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Commodity price move favorable to the company"
+      ],
+      "role": "primary",
+      "bucket": "oil_integrated",
+      "side": "buy",
+      "weight": 5.6,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "note": "US integrated oil leverage",
+      "amp_damp": "Hormuz risk: [+] transit threat + oil up [−] rhetoric only / oil flat. Do not expand to pure natural-gas E&P as oil proxies.",
+      "mean_revert": "de-escalation / oil giveback",
+      "fed_polarity": null,
+      "headline_count": 4,
+      "evidence": [
+        {
+          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
+          "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
+        },
+        {
+          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
+          "published_at": "2026-08-08T19:00:00Z"
+        },
+        {
+          "title": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/uae-says-iran-targeted-adnoc-tanker-in-hormuz-no-casualties-2?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 15:01:29 +0000"
+        },
+        {
+          "title": "Iran deliberates Hormuz arrangement amid uncertain prospects with US",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/iran-deliberates-hormuz-arrangement-amid-uncertain-prospects-with-us?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 13:52:40 +0000"
+        }
+      ]
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "taxonomy": [
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Commodity price move favorable to the company"
+      ],
+      "role": "primary",
+      "bucket": "airlines",
+      "side": "sell",
+      "weight": 5.6,
+      "tickers": [
+        "DAL",
+        "UAL",
+        "AAL",
+        "LUV",
+        "ALK"
+      ],
+      "note": "jet fuel cost",
+      "amp_damp": "Hormuz risk: [+] transit threat + oil up [−] rhetoric only / oil flat. Do not expand to pure natural-gas E&P as oil proxies.",
+      "mean_revert": "de-escalation / oil giveback",
+      "fed_polarity": null,
+      "headline_count": 4,
+      "evidence": [
+        {
+          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
+          "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
+        },
+        {
+          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
+          "published_at": "2026-08-08T19:00:00Z"
+        },
+        {
+          "title": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/uae-says-iran-targeted-adnoc-tanker-in-hormuz-no-casualties-2?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 15:01:29 +0000"
+        },
+        {
+          "title": "Iran deliberates Hormuz arrangement amid uncertain prospects with US",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/8/iran-deliberates-hormuz-arrangement-amid-uncertain-prospects-with-us?traffic_source=rss",
+          "published_at": "Sat, 08 Aug 2026 13:52:40 +0000"
+        }
+      ]
+    },
+    {
+      "event": "tariff_semis_solar",
+      "taxonomy": [
+        "Government policy (tariffs, subsidies, mandates)",
+        "Policy reversal/new regulation/tax increase"
+      ],
+      "role": "primary",
+      "bucket": "semiconductors",
+      "side": "sell",
+      "weight": 4.2,
+      "tickers": [
+        "NVDA",
+        "AVGO",
+        "AMD",
+        "QCOM",
+        "MU",
+        "INTC"
+      ],
+      "note": "cost/uncertainty",
+      "amp_damp": "",
+      "mean_revert": "policy walk-back",
+      "fed_polarity": null,
+      "headline_count": 1,
+      "evidence": [
+        {
+          "title": "Trump launched big new solar tariffs. Here’s what it means. - Canary Media",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ScW42VWQwdF9ncXZsdDJxdEU1TWU2RjExTjVyS3U2aUVlYndueFc4ZFBENlgzU1lQQm1LMVVkc3YwS3padGx2N0N6N0JNTHlRRzNWdEgya1RYTGN5a2k0d21mWEVBazhVbFh6a0NqbEhwSmdy?oc=5",
+          "published_at": "Fri, 07 Aug 2026 22:30:00 GMT"
+        }
+      ]
+    },
+    {
+      "event": "tariff_semis_solar",
+      "taxonomy": [
+        "Government policy (tariffs, subsidies, mandates)",
+        "Policy reversal/new regulation/tax increase"
+      ],
+      "role": "primary",
+      "bucket": "semi_equipment",
+      "side": "sell",
+      "weight": 3.5,
+      "tickers": [
+        "ASML",
+        "AMAT",
+        "LRCX",
+        "KLAC",
+        "AMKR"
+      ],
+      "note": "capex risk",
+      "amp_damp": "",
+      "mean_revert": "policy walk-back",
+      "fed_polarity": null,
+      "headline_count": 1,
+      "evidence": [
+        {
+          "title": "Trump launched big new solar tariffs. Here’s what it means. - Canary Media",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ScW42VWQwdF9ncXZsdDJxdEU1TWU2RjExTjVyS3U2aUVlYndueFc4ZFBENlgzU1lQQm1LMVVkc3YwS3padGx2N0N6N0JNTHlRRzNWdEgya1RYTGN5a2k0d21mWEVBazhVbFh6a0NqbEhwSmdy?oc=5",
+          "published_at": "Fri, 07 Aug 2026 22:30:00 GMT"
+        }
+      ]
+    },
+    {
+      "event": "tariff_semis_solar",
+      "taxonomy": [
+        "Government policy (tariffs, subsidies, mandates)",
+        "Policy reversal/new regulation/tax increase"
+      ],
+      "role": "primary",
+      "bucket": "solar",
+      "side": "sell",
+      "weight": 5.6,
+      "tickers": [
+        "FSLR",
+        "ENPH",
+        "SEDG",
+        "RUN"
+      ],
+      "note": "import cost hit",
+      "amp_damp": "",
+      "mean_revert": "policy walk-back",
+      "fed_polarity": null,
+      "headline_count": 1,
+      "evidence": [
+        {
+          "title": "Trump launched big new solar tariffs. Here’s what it means. - Canary Media",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ScW42VWQwdF9ncXZsdDJxdEU1TWU2RjExTjVyS3U2aUVlYndueFc4ZFBENlgzU1lQQm1LMVVkc3YwS3padGx2N0N6N0JNTHlRRzNWdEgya1RYTGN5a2k0d21mWEVBazhVbFh6a0NqbEhwSmdy?oc=5",
+          "published_at": "Fri, 07 Aug 2026 22:30:00 GMT"
+        }
+      ]
+    }
+  ],
   "ticker_actions": [
     {
       "ticker": "COP",
-      "buy_score": 16.0,
+      "buy_score": 8.0,
       "sell_score": 0.0,
       "events": [
         {
@@ -17,45 +304,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_ep"
         }
       ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "CNQ",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
+      "net": 8.0,
       "side": "buy"
     },
     {
       "ticker": "EOG",
-      "buy_score": 16.0,
+      "buy_score": 8.0,
       "sell_score": 0.0,
       "events": [
         {
@@ -63,22 +320,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_ep"
         }
       ],
-      "net": 16.0,
+      "net": 8.0,
       "side": "buy"
     },
     {
       "ticker": "OXY",
-      "buy_score": 16.0,
+      "buy_score": 8.0,
       "sell_score": 0.0,
       "events": [
         {
@@ -86,22 +336,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_ep"
         }
       ],
-      "net": 16.0,
+      "net": 8.0,
       "side": "buy"
     },
     {
       "ticker": "FANG",
-      "buy_score": 16.0,
+      "buy_score": 8.0,
       "sell_score": 0.0,
       "events": [
         {
@@ -109,22 +352,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_ep"
         }
       ],
-      "net": 16.0,
+      "net": 8.0,
       "side": "buy"
     },
     {
       "ticker": "DVN",
-      "buy_score": 16.0,
+      "buy_score": 8.0,
       "sell_score": 0.0,
       "events": [
         {
@@ -132,160 +368,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_ep"
         }
       ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "WDS",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "EQT",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "TPL",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "EXE",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "PR",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "OVV",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
+      "net": 8.0,
       "side": "buy"
     },
     {
       "ticker": "APA",
-      "buy_score": 16.0,
+      "buy_score": 8.0,
       "sell_score": 0.0,
       "events": [
         {
@@ -293,68 +384,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_ep"
         }
       ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "AR",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "RRC",
-      "buy_score": 16.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 8.0,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 16.0,
+      "net": 8.0,
       "side": "buy"
     },
     {
       "ticker": "XOM",
-      "buy_score": 11.2,
+      "buy_score": 5.6,
       "sell_score": 0.0,
       "events": [
         {
@@ -362,22 +400,15 @@
           "role": "primary",
           "side": "buy",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_integrated"
         }
       ],
-      "net": 11.2,
+      "net": 5.6,
       "side": "buy"
     },
     {
       "ticker": "CVX",
-      "buy_score": 11.2,
+      "buy_score": 5.6,
       "sell_score": 0.0,
       "events": [
         {
@@ -385,1574 +416,331 @@
           "role": "primary",
           "side": "buy",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "oil_integrated"
         }
       ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "SHEL",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "TTE",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "BP",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "EQNR",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "E",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "SU",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "PBR",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "IMO",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "CVE",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "PBR-A",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "EC",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "YPF",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
-      "side": "buy"
-    },
-    {
-      "ticker": "NFG",
-      "buy_score": 11.2,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "buy",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": 11.2,
+      "net": 5.6,
       "side": "buy"
     },
     {
       "ticker": "DAL",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 5.6,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "airlines"
         }
       ],
-      "net": -11.2,
+      "net": -5.6,
       "side": "sell"
     },
     {
       "ticker": "UAL",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 5.6,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "airlines"
         }
       ],
-      "net": -11.2,
-      "side": "sell"
-    },
-    {
-      "ticker": "RYAAY",
-      "buy_score": 0.0,
-      "sell_score": 11.2,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": -11.2,
-      "side": "sell"
-    },
-    {
-      "ticker": "LUV",
-      "buy_score": 0.0,
-      "sell_score": 11.2,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": -11.2,
-      "side": "sell"
-    },
-    {
-      "ticker": "LTM",
-      "buy_score": 0.0,
-      "sell_score": 11.2,
-      "events": [
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
-        }
-      ],
-      "net": -11.2,
+      "net": -5.6,
       "side": "sell"
     },
     {
       "ticker": "AAL",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 5.6,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
+          "bucket": "airlines"
+        }
+      ],
+      "net": -5.6,
+      "side": "sell"
+    },
+    {
+      "ticker": "LUV",
+      "buy_score": 0.0,
+      "sell_score": 5.6,
+      "events": [
         {
           "event": "hormuz_energy_risk",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "airlines"
         }
       ],
-      "net": -11.2,
+      "net": -5.6,
       "side": "sell"
     },
     {
       "ticker": "ALK",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 5.6,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
+          "bucket": "airlines"
+        }
+      ],
+      "net": -5.6,
+      "side": "sell"
+    },
+    {
+      "ticker": "FSLR",
+      "buy_score": 0.0,
+      "sell_score": 5.6,
+      "events": [
         {
-          "event": "hormuz_energy_risk",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "solar"
         }
       ],
-      "net": -11.2,
+      "net": -5.6,
       "side": "sell"
     },
     {
-      "ticker": "SKYW",
+      "ticker": "ENPH",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 5.6,
       "events": [
         {
-          "event": "hormuz_energy_risk",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
+          "bucket": "solar"
+        }
+      ],
+      "net": -5.6,
+      "side": "sell"
+    },
+    {
+      "ticker": "SEDG",
+      "buy_score": 0.0,
+      "sell_score": 5.6,
+      "events": [
         {
-          "event": "hormuz_energy_risk",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "solar"
         }
       ],
-      "net": -11.2,
+      "net": -5.6,
       "side": "sell"
     },
     {
-      "ticker": "ALGT",
+      "ticker": "RUN",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 5.6,
       "events": [
         {
-          "event": "hormuz_energy_risk",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
           "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "bucket": "solar"
         }
       ],
-      "net": -11.2,
+      "net": -5.6,
       "side": "sell"
     },
     {
-      "ticker": "RJET",
+      "ticker": "NVDA",
       "buy_score": 0.0,
-      "sell_score": 11.2,
+      "sell_score": 4.2,
       "events": [
         {
-          "event": "hormuz_energy_risk",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 5.6,
-          "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz"
-        },
-        {
-          "event": "hormuz_energy_risk",
-          "role": "primary",
-          "side": "sell",
-          "weight": 5.6,
-          "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On"
+          "weight": 4.2,
+          "bucket": "semiconductors"
         }
       ],
-      "net": -11.2,
+      "net": -4.2,
       "side": "sell"
     },
     {
-      "ticker": "HDB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "MFG",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "IBN",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "PNC",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "USB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "LYG",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "NWG",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "TFC",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "DB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "NU",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "FITB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "ITUB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "KB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "HBAN",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "MTB",
-      "buy_score": 2.7,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "buy",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": 2.7,
-      "side": "buy"
-    },
-    {
-      "ticker": "BXP",
+      "ticker": "AVGO",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 4.2,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 4.2,
+          "bucket": "semiconductors"
         }
       ],
-      "net": -2.7,
+      "net": -4.2,
       "side": "sell"
     },
     {
-      "ticker": "ARE",
+      "ticker": "AMD",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 4.2,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 4.2,
+          "bucket": "semiconductors"
         }
       ],
-      "net": -2.7,
+      "net": -4.2,
       "side": "sell"
     },
     {
-      "ticker": "VNO",
+      "ticker": "QCOM",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 4.2,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 4.2,
+          "bucket": "semiconductors"
         }
       ],
-      "net": -2.7,
+      "net": -4.2,
       "side": "sell"
     },
     {
-      "ticker": "CDP",
+      "ticker": "MU",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 4.2,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 4.2,
+          "bucket": "semiconductors"
         }
       ],
-      "net": -2.7,
+      "net": -4.2,
       "side": "sell"
     },
     {
-      "ticker": "CUZ",
+      "ticker": "INTC",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 4.2,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 4.2,
+          "bucket": "semiconductors"
         }
       ],
-      "net": -2.7,
+      "net": -4.2,
       "side": "sell"
     },
     {
-      "ticker": "KRC",
+      "ticker": "ASML",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 3.5,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 3.5,
+          "bucket": "semi_equipment"
         }
       ],
-      "net": -2.7,
+      "net": -3.5,
       "side": "sell"
     },
     {
-      "ticker": "SLG",
+      "ticker": "AMAT",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 3.5,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 3.5,
+          "bucket": "semi_equipment"
         }
       ],
-      "net": -2.7,
+      "net": -3.5,
       "side": "sell"
     },
     {
-      "ticker": "HIW",
+      "ticker": "LRCX",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 3.5,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 3.5,
+          "bucket": "semi_equipment"
         }
       ],
-      "net": -2.7,
+      "net": -3.5,
       "side": "sell"
     },
     {
-      "ticker": "DEI",
+      "ticker": "KLAC",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 3.5,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 3.5,
+          "bucket": "semi_equipment"
         }
       ],
-      "net": -2.7,
+      "net": -3.5,
       "side": "sell"
     },
     {
-      "ticker": "ESBA",
+      "ticker": "AMKR",
       "buy_score": 0.0,
-      "sell_score": 2.7,
+      "sell_score": 3.5,
       "events": [
         {
-          "event": "fed_rate_path",
+          "event": "tariff_semis_solar",
           "role": "primary",
           "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
+          "weight": 3.5,
+          "bucket": "semi_equipment"
         }
       ],
-      "net": -2.7,
+      "net": -3.5,
       "side": "sell"
-    },
-    {
-      "ticker": "PDM",
-      "buy_score": 0.0,
-      "sell_score": 2.7,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -2.7,
-      "side": "sell"
-    },
-    {
-      "ticker": "DEA",
-      "buy_score": 0.0,
-      "sell_score": 2.7,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -2.7,
-      "side": "sell"
-    },
-    {
-      "ticker": "HPP",
-      "buy_score": 0.0,
-      "sell_score": 2.7,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -2.7,
-      "side": "sell"
-    },
-    {
-      "ticker": "PSTL",
-      "buy_score": 0.0,
-      "sell_score": 2.7,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -2.7,
-      "side": "sell"
-    },
-    {
-      "ticker": "BDN",
-      "buy_score": 0.0,
-      "sell_score": 2.7,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 2.7,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -2.7,
-      "side": "sell"
-    },
-    {
-      "ticker": "SAP",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "SHOP",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "UBER",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "CRM",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "CDNS",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "NOW",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "ADP",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "ADBE",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "DDOG",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "SNOW",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "INTU",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "MSTR",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "STRC",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "ADSK",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    },
-    {
-      "ticker": "PAYX",
-      "buy_score": 0.0,
-      "sell_score": 1.8,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "role": "primary",
-          "side": "sell",
-          "weight": 1.8,
-          "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey"
-        }
-      ],
-      "net": -1.8,
-      "side": "sell"
-    }
-  ],
-  "edge_actions": [
-    {
-      "event": "fed_rate_path",
-      "taxonomy": [
-        "Institutional policy (Fed rate cut, QE, stimulus)",
-        "Rate hike/monetary tightening/liquidity withdrawal"
-      ],
-      "role": "primary",
-      "bucket": "banks_regional",
-      "side": "buy",
-      "weight": 2.7,
-      "tickers": [
-        "HDB",
-        "MFG",
-        "IBN",
-        "PNC",
-        "USB",
-        "LYG",
-        "NWG",
-        "TFC",
-        "DB",
-        "NU",
-        "FITB",
-        "ITUB",
-        "KB",
-        "HBAN",
-        "MTB"
-      ],
-      "note": "curve/NIM — direction needs cut vs hike disambiguation",
-      "amp_damp": "Fed path: disambiguate CUT vs HIKE in classifier; duration assets opposite to hikes",
-      "mean_revert": "after decision + press conference digested",
-      "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey",
-      "source": "rss_google_macro",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTkhYR1d0X2dPRUdkalFvNHhHNHhQWDd6SGFhWXBpUnRaTUlFNFhta3BqTzJmbnYtVWJFQXE4V3FFQUJGWXJSWDhqRExOSzNlajdCcHcxNFVOZkVxS3V6M2VweU9vOHh2a0V4b1NhVlQ4cE1tVDcyZ3ZrSHdUV3BHSi16b2FwU01YbzBXa0xSUnZSU0o2NHBwd0M1cDU0eS1ZcllIRzZRTXNrUDlWTmMtbnF1MFJfNnI5Sk9UeWZDalZTaFdqejZtYnJn?oc=5",
-      "published_at": "Sun, 09 Aug 2026 00:06:04 GMT"
-    },
-    {
-      "event": "fed_rate_path",
-      "taxonomy": [
-        "Institutional policy (Fed rate cut, QE, stimulus)",
-        "Rate hike/monetary tightening/liquidity withdrawal"
-      ],
-      "role": "primary",
-      "bucket": "reit_office",
-      "side": "sell",
-      "weight": 2.7,
-      "tickers": [
-        "BXP",
-        "ARE",
-        "VNO",
-        "CDP",
-        "CUZ",
-        "KRC",
-        "SLG",
-        "HIW",
-        "DEI",
-        "ESBA",
-        "PDM",
-        "DEA",
-        "HPP",
-        "PSTL",
-        "BDN"
-      ],
-      "note": "duration — if hikes; invert if cuts",
-      "amp_damp": "Fed path: disambiguate CUT vs HIKE in classifier; duration assets opposite to hikes",
-      "mean_revert": "after decision + press conference digested",
-      "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey",
-      "source": "rss_google_macro",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTkhYR1d0X2dPRUdkalFvNHhHNHhQWDd6SGFhWXBpUnRaTUlFNFhta3BqTzJmbnYtVWJFQXE4V3FFQUJGWXJSWDhqRExOSzNlajdCcHcxNFVOZkVxS3V6M2VweU9vOHh2a0V4b1NhVlQ4cE1tVDcyZ3ZrSHdUV3BHSi16b2FwU01YbzBXa0xSUnZSU0o2NHBwd0M1cDU0eS1ZcllIRzZRTXNrUDlWTmMtbnF1MFJfNnI5Sk9UeWZDalZTaFdqejZtYnJn?oc=5",
-      "published_at": "Sun, 09 Aug 2026 00:06:04 GMT"
-    },
-    {
-      "event": "fed_rate_path",
-      "taxonomy": [
-        "Institutional policy (Fed rate cut, QE, stimulus)",
-        "Rate hike/monetary tightening/liquidity withdrawal"
-      ],
-      "role": "primary",
-      "bucket": "software_app",
-      "side": "sell",
-      "weight": 1.8,
-      "tickers": [
-        "SAP",
-        "SHOP",
-        "UBER",
-        "CRM",
-        "CDNS",
-        "NOW",
-        "ADP",
-        "ADBE",
-        "DDOG",
-        "SNOW",
-        "INTU",
-        "MSTR",
-        "STRC",
-        "ADSK",
-        "PAYX"
-      ],
-      "note": "duration — if hikes; invert if cuts",
-      "amp_damp": "Fed path: disambiguate CUT vs HIKE in classifier; duration assets opposite to hikes",
-      "mean_revert": "after decision + press conference digested",
-      "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey",
-      "source": "rss_google_macro",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTkhYR1d0X2dPRUdkalFvNHhHNHhQWDd6SGFhWXBpUnRaTUlFNFhta3BqTzJmbnYtVWJFQXE4V3FFQUJGWXJSWDhqRExOSzNlajdCcHcxNFVOZkVxS3V6M2VweU9vOHh2a0V4b1NhVlQ4cE1tVDcyZ3ZrSHdUV3BHSi16b2FwU01YbzBXa0xSUnZSU0o2NHBwd0M1cDU0eS1ZcllIRzZRTXNrUDlWTmMtbnF1MFJfNnI5Sk9UeWZDalZTaFdqejZtYnJn?oc=5",
-      "published_at": "Sun, 09 Aug 2026 00:06:04 GMT"
-    },
-    {
-      "event": "hormuz_energy_risk",
-      "taxonomy": [
-        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-        "Commodity price move favorable to the company"
-      ],
-      "role": "primary",
-      "bucket": "oil_ep",
-      "side": "buy",
-      "weight": 8.0,
-      "tickers": [
-        "COP",
-        "CNQ",
-        "EOG",
-        "OXY",
-        "FANG",
-        "DVN",
-        "WDS",
-        "EQT",
-        "TPL",
-        "EXE",
-        "PR",
-        "OVV",
-        "APA",
-        "AR",
-        "RRC"
-      ],
-      "note": "oil risk premium",
-      "amp_damp": "Hormuz/Red Sea energy risk: [+] actual transit threat, oil jumps [−] rhetoric only, oil unchanged",
-      "mean_revert": "de-escalation / oil giveback",
-      "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
-      "source": "rss_aljazeera_economy",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
-      "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
-    },
-    {
-      "event": "hormuz_energy_risk",
-      "taxonomy": [
-        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-        "Commodity price move favorable to the company"
-      ],
-      "role": "primary",
-      "bucket": "oil_integrated",
-      "side": "buy",
-      "weight": 5.6,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "SHEL",
-        "TTE",
-        "BP",
-        "EQNR",
-        "E",
-        "SU",
-        "PBR",
-        "IMO",
-        "CVE",
-        "PBR-A",
-        "EC",
-        "YPF",
-        "NFG"
-      ],
-      "note": "oil leverage",
-      "amp_damp": "Hormuz/Red Sea energy risk: [+] actual transit threat, oil jumps [−] rhetoric only, oil unchanged",
-      "mean_revert": "de-escalation / oil giveback",
-      "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
-      "source": "rss_aljazeera_economy",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
-      "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
-    },
-    {
-      "event": "hormuz_energy_risk",
-      "taxonomy": [
-        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-        "Commodity price move favorable to the company"
-      ],
-      "role": "primary",
-      "bucket": "airlines",
-      "side": "sell",
-      "weight": 5.6,
-      "tickers": [
-        "DAL",
-        "UAL",
-        "RYAAY",
-        "LUV",
-        "LTM",
-        "AAL",
-        "ALK",
-        "SKYW",
-        "ALGT",
-        "RJET"
-      ],
-      "note": "fuel cost",
-      "amp_damp": "Hormuz/Red Sea energy risk: [+] actual transit threat, oil jumps [−] rhetoric only, oil unchanged",
-      "mean_revert": "de-escalation / oil giveback",
-      "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
-      "source": "rss_aljazeera_economy",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz?traffic_source=rss",
-      "published_at": "Sun, 09 Aug 2026 00:00:00 +0000"
-    },
-    {
-      "event": "hormuz_energy_risk",
-      "taxonomy": [
-        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-        "Commodity price move favorable to the company"
-      ],
-      "role": "primary",
-      "bucket": "oil_ep",
-      "side": "buy",
-      "weight": 8.0,
-      "tickers": [
-        "COP",
-        "CNQ",
-        "EOG",
-        "OXY",
-        "FANG",
-        "DVN",
-        "WDS",
-        "EQT",
-        "TPL",
-        "EXE",
-        "PR",
-        "OVV",
-        "APA",
-        "AR",
-        "RRC"
-      ],
-      "note": "oil risk premium",
-      "amp_damp": "Hormuz/Red Sea energy risk: [+] actual transit threat, oil jumps [−] rhetoric only, oil unchanged",
-      "mean_revert": "de-escalation / oil giveback",
-      "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
-      "source": "rss_yahoo_finance",
-      "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
-      "published_at": "2026-08-08T19:00:00Z"
-    },
-    {
-      "event": "hormuz_energy_risk",
-      "taxonomy": [
-        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-        "Commodity price move favorable to the company"
-      ],
-      "role": "primary",
-      "bucket": "oil_integrated",
-      "side": "buy",
-      "weight": 5.6,
-      "tickers": [
-        "XOM",
-        "CVX",
-        "SHEL",
-        "TTE",
-        "BP",
-        "EQNR",
-        "E",
-        "SU",
-        "PBR",
-        "IMO",
-        "CVE",
-        "PBR-A",
-        "EC",
-        "YPF",
-        "NFG"
-      ],
-      "note": "oil leverage",
-      "amp_damp": "Hormuz/Red Sea energy risk: [+] actual transit threat, oil jumps [−] rhetoric only, oil unchanged",
-      "mean_revert": "de-escalation / oil giveback",
-      "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
-      "source": "rss_yahoo_finance",
-      "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
-      "published_at": "2026-08-08T19:00:00Z"
-    },
-    {
-      "event": "hormuz_energy_risk",
-      "taxonomy": [
-        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-        "Commodity price move favorable to the company"
-      ],
-      "role": "primary",
-      "bucket": "airlines",
-      "side": "sell",
-      "weight": 5.6,
-      "tickers": [
-        "DAL",
-        "UAL",
-        "RYAAY",
-        "LUV",
-        "LTM",
-        "AAL",
-        "ALK",
-        "SKYW",
-        "ALGT",
-        "RJET"
-      ],
-      "note": "fuel cost",
-      "amp_damp": "Hormuz/Red Sea energy risk: [+] actual transit threat, oil jumps [−] rhetoric only, oil unchanged",
-      "mean_revert": "de-escalation / oil giveback",
-      "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
-      "source": "rss_yahoo_finance",
-      "url": "https://finance.yahoo.com/energy/articles/airlines-scramble-jet-fuel-hormuz-190000182.html",
-      "published_at": "2026-08-08T19:00:00Z"
     }
   ]
 }
