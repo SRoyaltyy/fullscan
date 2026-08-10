@@ -11,8 +11,8 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import (compute_scores, config, deepseek_client, fetch_channel1,
-               memory, scoreboard, snapshot)
+from . import (compute_scores, config, deepseek_client, event_context,
+               fetch_channel1, memory, scoreboard, snapshot)
 
 
 def main() -> None:
@@ -29,11 +29,12 @@ def main() -> None:
     fetch_channel1.save(ch1, date_str, "predict")
     ch1_md = fetch_channel1.to_markdown(ch1)
 
-    # 2. Assemble prompt: rubric + memory + channel 1
+    # 2. Assemble prompt: rubric + event scan + memory + channel 1
     with open(os.path.join(config.GROUNDING, "master_rubric.md"),
               encoding="utf-8") as fh:
         rubric = fh.read()
     user_msg = (f"TODAY: {date_str} (America/New_York)\n\n"
+                f"{event_context.block()}\n\n"
                 f"{memory.prediction_context()}\n\n{ch1_md}\n\n"
                 "Execute the full rubric now. Remember: use web_search for "
                 "ALL six Channel 2 categories before scoring.\n"
