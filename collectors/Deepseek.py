@@ -14,6 +14,15 @@ import os, json, time, re, asyncio, aiohttp
 from datetime import datetime, date, timedelta, timezone
 from openai import OpenAI
 
+# ── Multi-backend web-search fallback (shared chain in src/websearch.py) ──
+try:
+    from src.websearch import search_results as _chain_search
+except ImportError:
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent.parent))
+    from src.websearch import search_results as _chain_search
+
 # ── Config ──────────────────────────────────────────────
 SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
@@ -23,8 +32,22 @@ MODEL                = "deepseek-chat"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
-# ── SearXNG async executor ─────────────────────────────
+# ── SearXNG async executor (with multi-backend fallback) ──
+def _format_items(backend, items, limit):
+    """Format chain results identically to the SearXNG output so every
+    downstream prompt/parser sees the exact same shape."""
+    formatted = []
+    for r in items[:limit]:
+        formatted.append(
+            f"[{backend}] {r.get('title','')}\n"
+            f"Date: {r.get('date','')}\n"
+            f"Snippet: {(r.get('snippet') or '')[:400]}\n"
+            f"URL: {r.get('url','')}"
+        )
+    return "\n\n".join(formatted)
+
 async def search_single(session, query, searxng_url, categories="general,news"):
+    # 1) fast path: own SearXNG (empty result set = broken -> fall back)
     try:
         async with session.get(
             f"{searxng_url}/search",
@@ -34,6 +57,9 @@ async def search_single(session, query, searxng_url, categories="general,news"):
         ) as resp:
             data = await resp.json()
             results = data.get("results", [])
+            if not results:
+                raise RuntimeError("searxng returned 0 results "
+                                   "(upstream engines likely blocked)")
             formatted = []
             for r in results[:6]:
                 formatted.append(
@@ -42,9 +68,19 @@ async def search_single(session, query, searxng_url, categories="general,news"):
                     f"Snippet: {r.get('content','')[:400]}\n"
                     f"URL: {r.get('url','')}"
                 )
-            return query, "\n\n".join(formatted) if formatted else f"NO_RESULTS: {query}"
+            return query, "\n\n".join(formatted)
+    except Exception as e:
+        print(f"  ⚠️  searxng failed for {query[:60]!r}: {str(e)[:100]} "
+              f"— trying fallback backends")
+    # 2) fallback chain (blocking I/O -> thread), same output format
+    try:
+        backend, items, _errors = await asyncio.to_thread(
+            _chain_search, query, 6, True)
     except Exception as e:
         return query, f"SEARCH_ERROR: {e}"
+    if not items:
+        return query, f"NO_RESULTS: {query}"
+    return query, _format_items(backend, items, 6)
 
 async def batch_search(queries, searxng_url, concurrency=SEARCH_CONCURRENCY):
     semaphore = asyncio.Semaphore(concurrency)
