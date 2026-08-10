@@ -1,119 +1,77 @@
 {
-  "scan_date": "2026-08-10",
+  "scan_date": "2026-08-14",
   "events": [
     {
-      "title": "US-Iran talks resume on Hormuz reopening",
-      "category": "geopolitical",
-      "timing": "today",
-      "date_or_window": "2026-08-10",
+      "title": "Alphabet AI capex guidance update",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "Q3 2026 earnings (late October)",
       "regions": [
         "US",
-        "Middle East"
+        "Global"
       ],
       "sectors": [
-        "Energy",
-        "BROAD"
+        "Technology",
+        "Cloud",
+        "AI Infrastructure"
       ],
       "expected_direction": "mixed",
-      "impact": 5,
+      "impact": 4,
       "confidence": "medium",
-      "why_it_matters": "Strait of Hormuz remains closed to commercial shipping; outcome determines oil price trajectory and global inflation path.",
-      "what_to_watch": "Whether talks produce a concrete reopening timeline or collapse.",
-      "status": "carried",
+      "why_it_matters": "Alphabet's AI infrastructure spending is a bellwether for the entire AI capex cycle, influencing suppliers, cloud pricing, and tech valuations.",
+      "what_to_watch": "Capex guidance vs. consensus, cloud growth acceleration, AI monetization signals, and any commentary on data center utilization.",
+      "status": "new",
       "sources": [
-        "https://www.cnbc.com",
-        "https://www.cnn.com",
-        "https://www.aljazeera.com"
+        "Web search: Alphabet AI capex 2026 guidance"
       ]
     },
     {
-      "title": "China July CPI/PPI released (cooling)",
-      "category": "macro_data",
-      "timing": "today",
-      "date_or_window": "2026-08-10",
+      "title": "Walmart Q2 FY2027 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "August 20, 2026",
       "regions": [
-        "China"
+        "US",
+        "Global"
       ],
       "sectors": [
-        "BROAD"
+        "Consumer Staples",
+        "Retail"
       ],
       "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Cooling Chinese inflation gives PBoC room for stimulus but signals weak domestic demand.",
-      "what_to_watch": "Whether PBoC signals further easing.",
-      "status": "carried",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Walmart's results provide a key read on US consumer health, inflation pass-through, and e-commerce growth, with broad market implications.",
+      "what_to_watch": "Same-store sales growth, e-commerce growth rate, gross margin, inventory levels, and FY2027 guidance.",
+      "status": "new",
       "sources": [
-        "https://www.reuters.com"
+        "Web search: Walmart Target earnings August 2026"
       ]
     },
     {
-      "title": "Rocket Lab and AST Space Mobile earnings",
+      "title": "Target Q2 FY2026 earnings",
       "category": "earnings",
-      "timing": "today",
-      "date_or_window": "2026-08-10",
+      "timing": "upcoming",
+      "date_or_window": "August 19, 2026",
       "regions": [
         "US"
       ],
       "sectors": [
-        "Technology",
-        "Industrials"
+        "Consumer Discretionary",
+        "Retail"
       ],
       "expected_direction": "mixed",
       "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Bellwethers for space economy and satellite communications.",
-      "what_to_watch": "Guidance on launch cadence and satellite demand.",
-      "status": "carried",
+      "why_it_matters": "Target's earnings will signal discretionary spending trends and the health of the US middle-class consumer, a key driver of economic momentum.",
+      "what_to_watch": "Comparable sales, traffic trends, margin recovery, inventory management, and any updates on tariff-related cost pressures.",
+      "status": "new",
       "sources": [
-        "https://www.earningswhispers.com"
+        "Web search: Walmart Target earnings August 2026"
       ]
     },
     {
-      "title": "BOJ Summary of Opinions from July meeting",
-      "category": "macro_data",
-      "timing": "today",
-      "date_or_window": "2026-08-10",
-      "regions": [
-        "Japan"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "bearish",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Signals BOJ may hike at September 17 meeting; affects yen and global carry trade.",
-      "what_to_watch": "Yen reaction and carry trade implications.",
-      "status": "carried",
-      "sources": [
-        "https://www.japantimes.co.jp",
-        "https://asia.nikkei.com"
-      ]
-    },
-    {
-      "title": "South Korea semiconductor fund announced",
-      "category": "government",
-      "timing": "today",
-      "date_or_window": "2026-08-10",
-      "regions": [
-        "South Korea"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "5 trillion won ($3.52B) government fund for chip materials, parts, and equipment.",
-      "what_to_watch": "Details on fund deployment and which companies benefit.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com"
-      ]
-    },
-    {
-      "title": "US CPI (July) release",
+      "title": "July CPI report",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-12",
@@ -123,20 +81,17 @@
       "sectors": [
         "BROAD"
       ],
-      "expected_direction": "bearish",
+      "expected_direction": "unclear",
       "impact": 5,
       "confidence": "medium",
-      "why_it_matters": "Cleveland Fed nowcast ~3.4% YoY, up from 3.2% in June; hot print could cement September rate hike odds.",
-      "what_to_watch": "Core CPI ex-energy; whether tariff pass-through is broadening.",
-      "status": "carried",
-      "sources": [
-        "https://www.bls.gov",
-        "https://www.clevelandfed.org",
-        "https://piptheory.com"
-      ]
+      "why_it_matters": "The single most market-moving scheduled data point in the window, directly shaping Fed rate expectations and inflation narrative.",
+      "what_to_watch": "Headline and core CPI prints versus consensus, and the market's implied Fed path reaction.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "US PPI (July) release",
+      "title": "July PPI report",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-13",
@@ -146,18 +101,17 @@
       "sectors": [
         "BROAD"
       ],
-      "expected_direction": "bearish",
+      "expected_direction": "unclear",
       "impact": 3,
       "confidence": "medium",
-      "why_it_matters": "Pipeline inflation pressures feed into CPI expectations.",
-      "what_to_watch": "Producer energy costs and margin compression signals.",
-      "status": "carried",
-      "sources": [
-        "https://www.bls.gov"
-      ]
+      "why_it_matters": "Producer inflation feeds into Fed policy expectations and margin outlooks.",
+      "what_to_watch": "Core PPI and pipeline price pressures feeding into CPI.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "US Retail Sales (July) release",
+      "title": "July Retail Sales",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-14",
@@ -165,440 +119,164 @@
         "US"
       ],
       "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive",
+        "Consumer Discretionary",
         "BROAD"
       ],
-      "expected_direction": "mixed",
+      "expected_direction": "unclear",
       "impact": 3,
       "confidence": "medium",
-      "why_it_matters": "Consumer resilience test amid energy price shock and weak jobs.",
-      "what_to_watch": "Whether high gas prices are crowding out discretionary spending.",
-      "status": "carried",
-      "sources": [
-        "https://www.census.gov",
-        "https://www.rbc.com"
-      ]
+      "why_it_matters": "Key read on US consumer health ahead of Walmart and Target earnings.",
+      "what_to_watch": "Control-group sales and whether consumer spending is holding up.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "FOMC Minutes (July 28-29 meeting)",
+      "title": "University of Michigan sentiment (Aug prelim)",
       "category": "macro_data",
       "timing": "upcoming",
-      "date_or_window": "2026-08-19",
+      "date_or_window": "2026-08-14",
       "regions": [
         "US"
       ],
       "sectors": [
         "BROAD"
       ],
-      "expected_direction": "mixed",
-      "impact": 4,
+      "expected_direction": "unclear",
+      "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Will reveal depth of division on rate hike debate after 3 dissents at July meeting.",
-      "what_to_watch": "Language on energy shock, inflation persistence, and labor market softening.",
-      "status": "carried",
-      "sources": [
-        "https://www.federalreserve.gov"
-      ]
+      "why_it_matters": "Inflation-expectations component is a closely watched Fed input.",
+      "what_to_watch": "1-year and 5-year inflation expectations prints.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "Jackson Hole Symposium",
+      "title": "Weekly jobless claims",
       "category": "macro_data",
       "timing": "upcoming",
-      "date_or_window": "2026-08-27..2026-08-29",
+      "date_or_window": "2026-08-13",
       "regions": [
         "US"
       ],
       "sectors": [
         "BROAD"
       ],
-      "expected_direction": "mixed",
-      "impact": 4,
+      "expected_direction": "unclear",
+      "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "First Jackson Hole under Chair Warsh; likely to set policy framework for September.",
-      "what_to_watch": "Warsh's speech on inflation regime change.",
-      "status": "carried",
-      "sources": [
-        "https://www.kansascityfed.org",
-        "https://cowboystatedaily.com"
-      ]
+      "why_it_matters": "High-frequency labor market signal feeding Fed policy expectations.",
+      "what_to_watch": "Trend in initial and continuing claims for labor softening.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "Fed September meeting (rate decision)",
+      "title": "JOLTS (June)",
       "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-09-15..2026-09-16",
+      "timing": "past",
+      "date_or_window": "2026-08-04",
       "regions": [
         "US"
       ],
       "sectors": [
         "BROAD"
       ],
-      "expected_direction": "bearish",
-      "impact": 5,
+      "expected_direction": "unclear",
+      "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Market pricing ~44% odds of 25bp hike after weak July jobs report; single biggest macro event near-term.",
-      "what_to_watch": "CPI, jobs, and retail data between now and then.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com",
-        "https://www.cnbc.com",
-        "https://www.cbsnews.com"
-      ]
+      "why_it_matters": "Labor demand indicator watched by the Fed for wage and tightness signals.",
+      "what_to_watch": "Job openings and quits rate for labor market cooling.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "Cisco (CSCO) earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-12",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Networking bellwether; AI infrastructure demand signal.",
-      "what_to_watch": "Guidance on enterprise networking and AI-related orders.",
-      "status": "carried",
-      "sources": [
-        "https://www.kiplinger.com"
-      ]
-    },
-    {
-      "title": "Supermicro, Nebius, CoreWeave, Lumentum earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-10..2026-08-14",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "AI infrastructure names will confirm or challenge AI capex narrative after Alphabet's $195-205B guidance.",
-      "what_to_watch": "Whether AI compute demand justifies massive hyperscaler spending.",
-      "status": "carried",
-      "sources": [
-        "https://www.earningswhispers.com"
-      ]
-    },
-    {
-      "title": "Home Depot (HD) earnings",
-      "category": "earnings",
+      "title": "Housing starts/permits (July)",
+      "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-18",
       "regions": [
         "US"
       ],
       "sectors": [
-        "Consumer Cyclical",
-        "Real Estate"
+        "Real Estate",
+        "Financial"
       ],
-      "expected_direction": "mixed",
-      "impact": 3,
+      "expected_direction": "unclear",
+      "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Housing and consumer spending bellwether amid high rates.",
-      "what_to_watch": "Same-store sales and housing market commentary.",
-      "status": "carried",
-      "sources": [
-        "https://www.kiplinger.com"
-      ]
+      "why_it_matters": "Housing sector health and rate sensitivity signal.",
+      "what_to_watch": "Permit and start trends amid mortgage rate environment.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "Walmart (WMT) earnings",
-      "category": "earnings",
+      "title": "Existing home sales (July)",
+      "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-20",
       "regions": [
         "US"
       ],
       "sectors": [
-        "Consumer Defensive",
-        "Consumer Cyclical"
+        "Real Estate",
+        "Financial"
       ],
-      "expected_direction": "mixed",
-      "impact": 3,
+      "expected_direction": "unclear",
+      "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Consumer health barometer; inflation pass-through.",
-      "what_to_watch": "Guidance on margins amid energy-driven cost pressures.",
-      "status": "carried",
-      "sources": [
-        "https://www.kiplinger.com"
-      ]
+      "why_it_matters": "Housing turnover and affordability read.",
+      "what_to_watch": "Sales volume and inventory levels.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     },
     {
-      "title": "Nvidia (NVDA) earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-26",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 5,
-      "confidence": "medium",
-      "why_it_matters": "Single most important earnings report for AI trade; will set tone for tech into year-end.",
-      "what_to_watch": "Blackwell demand, China export restrictions impact, guidance.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com",
-        "https://www.cnbc.com"
-      ]
-    },
-    {
-      "title": "Birthright citizenship executive orders",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-08-06",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Trump rolled out orders to narrow birthright citizenship and target 'birth tourism' after Supreme Court overturned his earlier attempt.",
-      "what_to_watch": "Legal challenges and court rulings on the new orders.",
-      "status": "resolved",
-      "sources": [
-        "https://www.politico.com",
-        "https://www.whitehouse.gov"
-      ]
-    },
-    {
-      "title": "US-China trade tensions ahead of September Xi summit",
-      "category": "geopolitical",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-11..2026-09-15",
-      "regions": [
-        "US",
-        "China"
-      ],
-      "sectors": [
-        "Technology",
-        "Industrials",
-        "Consumer Cyclical",
-        "BROAD"
-      ],
-      "expected_direction": "bearish",
-      "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "Tariff escalation risk on top of AI export controls; September summit is key de-escalation checkpoint.",
-      "what_to_watch": "Any new tariff announcements or export control expansions before the summit.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com",
-        "https://www.cnbc.com"
-      ]
-    },
-    {
-      "title": "July jobs report (weak)",
+      "title": "EIA weekly crude inventories",
       "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-08-07",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "bearish",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Weak payrolls raised recession concerns and complicated Fed's rate path.",
-      "what_to_watch": "Whether subsequent data confirms labor market deterioration.",
-      "status": "resolved",
-      "sources": [
-        "https://www.bls.gov",
-        "https://www.reuters.com",
-        "https://www.cnbc.com"
-      ]
-    },
-    {
-      "title": "FOMC July 28-29 meeting (divided hold)",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-07-28..2026-07-29",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "3 dissents on hold decision show Fed deeply split between inflation fight and growth concerns.",
-      "what_to_watch": "Minutes on Aug 19 for detail on the debate.",
-      "status": "resolved",
-      "sources": [
-        "https://www.federalreserve.gov"
-      ]
-    },
-    {
-      "title": "Alphabet AI capex guidance ($195-205B)",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-07-28",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Sets the bar for hyperscaler AI spending; validates AI infrastructure trade.",
-      "what_to_watch": "Whether other hyperscalers match or exceed.",
-      "status": "resolved",
-      "sources": [
-        "https://www.reuters.com"
-      ]
-    },
-    {
-      "title": "Supreme Court birthright citizenship ruling",
-      "category": "judicial",
-      "timing": "past",
-      "date_or_window": "2026-07-01..2026-07-31",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Overturned Trump's earlier attempt; Trump responded with new EOs on Aug 6.",
-      "what_to_watch": "Court challenges to new EOs.",
-      "status": "resolved",
-      "sources": [
-        "https://www.politico.com"
-      ]
-    },
-    {
-      "title": "Ukraine-Russia conflict dynamics",
-      "category": "geopolitical",
       "timing": "upcoming",
-      "date_or_window": "2026-08-11..2026-08-24",
+      "date_or_window": "2026-08-12",
       "regions": [
-        "Europe",
-        "US",
-        "Russia"
-      ],
-      "sectors": [
-        "Energy",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Front-line dynamics and Western support decisions affect European energy security and defense spending.",
-      "what_to_watch": "Any ceasefire breakthroughs or escalation.",
-      "status": "carried",
-      "sources": [
-        "https://www.politico.com"
-      ]
-    },
-    {
-      "title": "OPEC+ production policy watch",
-      "category": "geopolitical",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-11..2026-08-24",
-      "regions": [
-        "Middle East",
-        "Global"
+        "US"
       ],
       "sectors": [
         "Energy"
       ],
-      "expected_direction": "mixed",
-      "impact": 4,
+      "expected_direction": "unclear",
+      "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "With Hormuz closed and oil elevated, OPEC+ spare capacity decisions are critical.",
-      "what_to_watch": "Any emergency meeting announcements.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com"
-      ]
-    },
-    {
-      "title": "AI infrastructure capex cycle",
-      "category": "ongoing",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-11..2026-08-24",
-      "regions": [
-        "US",
-        "Global"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "Determines whether AI infrastructure names can sustain valuations.",
-      "what_to_watch": "SMCI, Nebius, CoreWeave earnings this week.",
-      "status": "carried",
-      "sources": [
-        "https://www.earningswhispers.com"
-      ]
-    },
-    {
-      "title": "2028 Olympics task force",
-      "category": "ongoing",
-      "timing": "upcoming",
-      "date_or_window": "2026-08-11..2026-08-24",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Industrials"
-      ],
-      "expected_direction": "bullish",
-      "impact": 1,
-      "confidence": "medium",
-      "why_it_matters": "Infrastructure and tourism spending implications for LA 2028.",
-      "what_to_watch": "Major contract announcements.",
-      "status": "carried",
-      "sources": [
-        "https://www.whitehouse.gov"
-      ]
+      "why_it_matters": "Weekly crude and product inventory data moves oil prices.",
+      "what_to_watch": "Crude stock build/draw versus expectations.",
+      "status": "new",
+      "sources": [],
+      "origin": "catcher"
     }
   ],
   "top_risks": [
-    "US-Iran talks collapse → oil spike well above $86 Brent, feeding inflation and forcing Fed to hike into weakness",
-    "Hot CPI Wednesday (Aug 12) could cement September hike odds and trigger broad risk-off",
-    "US-China trade escalation before September summit could hit tech and industrials hard",
-    "AI capex disappointment if SMCI/Nebius/CoreWeave earnings disappoint this week",
-    "Fed policy error: hiking into a weakening labor market risks recession"
+    "AI capex overbuild leading to a sharp correction in tech valuations if Alphabet signals reduced returns on investment",
+    "US consumer slowdown if Walmart or Target report weak guidance, suggesting broader economic deceleration",
+    "Tariff-driven margin compression in retail sector, potentially triggering earnings downgrades"
   ],
   "top_opportunities": [
-    "US-Iran deal → oil downside, easing inflation pressure and boosting consumer/cyclical sectors",
-    "Cooling China inflation → PBoC stimulus room could support China-exposed names and commodities",
-    "AI infrastructure earnings beat could renew momentum in the AI trade",
-    "Walmart/Home Depot earnings could confirm consumer resilience despite energy shock",
-    "Jackson Hole positioning if Warsh signals more dovish path than priced"
+    "AI infrastructure suppliers and semiconductor names if Alphabet raises capex guidance above expectations",
+    "Retail sector value plays if Walmart/Target beat and raise, indicating resilient consumer spending",
+    "Cloud and AI software names on positive monetization commentary from Alphabet"
   ],
-  "uncertainty": "high",
-  "summary": "Multiple regime-defining variables are in play simultaneously: US-Iran negotiations could either reopen the Strait of Hormuz or trigger an oil spike; CPI Wednesday could cement or kill September rate hike odds; and US-China trade tensions are escalating ahead of the September Xi summit. Key data releases this week include US CPI, PPI, and Retail Sales, alongside AI infrastructure earnings from Supermicro, Nebius, CoreWeave, and Lumentum. The Fed's divided hold and weak July jobs report have set up a critical September decision, while ongoing geopolitical risks in the Middle East and US-China tensions keep uncertainty elevated.",
+  "uncertainty": "moderate",
+  "summary": "The near-term event landscape is dominated by upcoming retail earnings from Walmart and Target, which will provide critical signals on US consumer health and tariff impacts, and by Alphabet's AI capex guidance, a key driver for tech sector sentiment. Markets face moderate uncertainty as these data points could either reinforce or challenge current growth and inflation narratives.",
   "windows": {
     "past": "2026-07-27..2026-08-09",
     "today": "2026-08-10",
     "upcoming": "2026-08-11..2026-08-24"
   },
-  "repaired": false
+  "repaired": true,
+  "catcher": {
+    "ran": true,
+    "found": 9,
+    "duplicates_dropped": 0,
+    "coverage_assessment": "The primary scan covered only three mega-cap earnings events and completely omitted the entire macro data calendar, the FOMC cycle, and all government/regulatory actions. Its coverage is extremely narrow for a two-week window.",
+    "biggest_gap": "The July CPI report (expected ~Aug 12) — the most market-moving scheduled event in the window, entirely absent from the primary scan. Government actions could not be assessed because the web search tool returned empty results for all queries."
+  }
 }
