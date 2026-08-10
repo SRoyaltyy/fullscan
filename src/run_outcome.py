@@ -1,6 +1,7 @@
-"""Stage OUTCOME (5:00 PM ET): fetch actual close, DeepSeek reviews the day
-with cited sources, verify citations, write <date>_outcome.md, grade the
-morning prediction in the scoreboard.
+"""Stage OUTCOME (5:00 PM ET): fetch actual close, review day, grade prediction.
+
+Null / missing morning predicts are OPS_FAIL — recorded but NOT counted as
+direction/magnitude misses.
 
 CLI: python -m src.run_outcome [--date YYYY-MM-DD]
 """
@@ -8,7 +9,6 @@ from __future__ import annotations
 
 import argparse
 import os
-import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -33,14 +33,11 @@ def main() -> None:
     if not config.DEEPSEEK_API_KEY:
         raise SystemExit("DEEPSEEK_API_KEY not set")
 
-    # 1. Actual close (deterministic) — pinned to the target date
     ch1 = fetch_channel1.build("outcome", date_str)
     fetch_channel1.save(ch1, date_str, "outcome")
     actual = ch1["actual_close"]
     spx_pct = actual.get("SPX", {}).get("pct_change")
 
-    # 1b. Archived MORNING channel1 — the LLM must grade B-scores against
-    # these numbers, never against the fresh post-close data above.
     morning_md = "(archived morning Channel 1 not found)"
     try:
         import json
@@ -51,21 +48,23 @@ def main() -> None:
     except (OSError, ValueError) as e:
         print(f"[outcome] morning channel1 load failed: {e}")
 
-    # 2. LLM review
-    predict_md = _read(os.path.join(config.DAILY_GENERAL,
-                                    f"{date_str}_predict.md"))
+    predict_path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md")
+    predict_md = _read(predict_path)
+    predict_missing = (
+        predict_md.strip() in ("", "(missing)")
+        or not os.path.isfile(predict_path)
+    )
+
     with open(os.path.join(config.GROUNDING, "outcome_prompt.md"),
               encoding="utf-8") as fh:
         prompt = fh.read()
-    user_msg = (f"TODAY: {date_str}\n\n"
-                f"=== MORNING PREDICTION ===\n{predict_md}\n\n"
-                f"=== MORNING CHANNEL 1 (archived premarket data — when judging "
-                f"whether each morning B-score was right, quote THESE numbers; "
-                f"the fresh data below is post-close and must NOT be used to "
-                f"re-describe the morning readings) ===\n{morning_md}\n\n"
-                f"{fetch_channel1.to_markdown(ch1)}\n\n"
-                "Execute the post-market review now. Every factual claim MUST "
-                "use the CLAIM/URL/PUBLISHED/QUOTE/SUMMARY format.")
+    user_msg = (
+        f"TODAY: {date_str}\n\n"
+        f"=== MORNING PREDICTION ===\n{predict_md}\n\n"
+        f"=== MORNING CHANNEL 1 (archived premarket) ===\n{morning_md}\n\n"
+        f"{fetch_channel1.to_markdown(ch1)}\n\n"
+        "Review the day. Cite sources in URL/PUBLISHED/QUOTE/SUMMARY format."
+    )
     text = deepseek_client.chat(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
@@ -74,21 +73,40 @@ def main() -> None:
                                      f"{date_str}_outcome.json"),
         trace_path=os.path.join(config.DAILY_GENERAL,
                                 f"{date_str}_outcome_trace.md"),
-        stage_label=f"OUTCOME {date_str}")
+        stage_label=f"OUTCOME {date_str}",
+    )
 
-    # 3. Verify citations
     claims, verify_md = verifier.verify_outcome(text)
 
-    # 4. Grade prediction (needed for the snapshot, so before writing)
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
-    grade = None
-    if spx_pct is not None:
-        grade = compute_scores.grade(entry.get("predicted_direction") or "flat",
-                                     entry.get("predicted_magnitude_band")
-                                     or "flat", spx_pct)
 
-    # 5. Write outcome file (human-readable snapshot first)
+    pred_dir = entry.get("predicted_direction")
+    pred_mag = entry.get("predicted_magnitude_band")
+    ops_fail = predict_missing or pred_dir is None
+
+    grade = None
+    if spx_pct is not None and not ops_fail:
+        grade = compute_scores.grade(pred_dir, pred_mag or "flat", spx_pct)
+    elif spx_pct is not None and ops_fail:
+        # still record actuals; do not set direction_hit False
+        ad = "up" if spx_pct > 0.05 else ("down" if spx_pct < -0.05 else "flat")
+        grade = {
+            "actual_direction": ad,
+            "actual_magnitude_band": compute_scores.actual_band(spx_pct)
+            if hasattr(compute_scores, "actual_band") else "flat",
+            "direction_hit": None,
+            "magnitude_hit": None,
+        }
+        # fallback band if helper missing
+        if grade["actual_magnitude_band"] == "flat" and abs(spx_pct) >= 0.3:
+            if abs(spx_pct) >= 2:
+                grade["actual_magnitude_band"] = "severe"
+            elif abs(spx_pct) >= 1:
+                grade["actual_magnitude_band"] = "notable"
+            else:
+                grade["actual_magnitude_band"] = "mild"
+
     ob = snapshot.parse_kv_block(text, "OUTCOME_BEGIN", "OUTCOME_END")
     snap_entry = dict(entry)
     if grade is not None:
@@ -98,44 +116,52 @@ def main() -> None:
             "actual_magnitude_band": grade["actual_magnitude_band"],
             "direction_hit": grade["direction_hit"],
             "magnitude_hit": grade["magnitude_hit"],
+            "ops_fail": ops_fail,
         })
     snap_entry["path_shape"] = (actual.get("SPX", {}).get("path", {}) or {}).get("shape")
     path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Post-Market Outcome — {date_str}\n\n")
+        if ops_fail:
+            fh.write("**OPS_FAIL:** morning predict missing or null — "
+                     "not counted as direction/magnitude miss.\n\n")
         fh.write(snapshot.outcome_snapshot(snap_entry, ob, claims))
         fh.write(text)
         fh.write(verify_md + "\n")
 
-    # 6. Scoreboard
-    if grade is not None:
+    if spx_pct is not None:
         entry.update({
             "actual_open": actual["SPX"].get("open"),
             "actual_close": actual["SPX"].get("close"),
             "actual_pct_change": spx_pct,
-            "actual_direction": grade["actual_direction"],
-            "actual_magnitude_band": grade["actual_magnitude_band"],
-            "direction_hit": grade["direction_hit"],
-            "magnitude_hit": grade["magnitude_hit"],
+            "actual_direction": grade["actual_direction"] if grade else None,
+            "actual_magnitude_band": grade["actual_magnitude_band"] if grade else None,
+            "direction_hit": None if ops_fail else (grade["direction_hit"] if grade else None),
+            "magnitude_hit": None if ops_fail else (grade["magnitude_hit"] if grade else None),
+            "ops_fail": ops_fail,
             "path_shape": (actual.get("SPX", {}).get("path", {}) or {}).get("shape"),
             "primary_driver": ob.get("PRIMARY_DRIVER") or ob.get("DOMINANT_DRIVER"),
             "key_interaction": ob.get("KEY_INTERACTION"),
             "knowable_at_9am": ob.get("KNOWABLE_AT_9AM"),
             "attribution_contested": ob.get("ATTRIBUTION_CONTESTED"),
             "outlier_watch": ob.get("OUTLIER_WATCH"),
-            "per_factor_breakdown": compute_scores.per_factor_breakdown(
-                entry.get("components") or {}, spx_pct),
-            "sources_used": [{"url": c["url"], "date_accessed": date_str,
-                              "summary": c["summary"][:200],
-                              "verification": c["status"]}
-                             for c in claims],
+            "per_factor_breakdown": (
+                [] if ops_fail else
+                compute_scores.per_factor_breakdown(
+                    entry.get("components") or {}, spx_pct)
+            ),
+            "sources_used": [{
+                "url": c["url"], "date_accessed": date_str,
+                "summary": c["summary"][:200], "verification": c["status"],
+            } for c in claims],
         })
         scoreboard.save(board)
-        print(f"[outcome] {date_str}: SPX {spx_pct}% | "
-              f"dir_hit={grade['direction_hit']} mag_hit={grade['magnitude_hit']}")
+        print(
+            f"[outcome] {date_str}: SPX {spx_pct}% | ops_fail={ops_fail} | "
+            f"dir_hit={entry.get('direction_hit')} mag_hit={entry.get('magnitude_hit')}"
+        )
     else:
-        print(f"[outcome] {date_str}: SPX actuals unavailable — "
-              "scoreboard not graded")
+        print(f"[outcome] {date_str}: SPX actuals unavailable — not graded")
 
 
 if __name__ == "__main__":
