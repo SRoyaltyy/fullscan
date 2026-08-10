@@ -2,328 +2,440 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (5,786 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (6,894 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"White House executive order August 2026"* → got 6 results (via ddg_fallback)
+**Step 1 — Research.** The model wanted to know: *"White House executive orders August 2026"* → got 6 results (via searxng)
 
-  - Executive Orders – The White House (https://www.whitehouse.gov/presidential-actions/executive-orders/)
+  - Executive Orders - The White House (https://www.whitehouse.gov/presidential-actions/executive-orders/)
 
-  - Executive Orders - Federal Register (https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026)
+  - Continuing to Protect the Meaning and Value of American Citizenship (https://www.whitehouse.gov/presidential-actions/2026/08/continuing-to-protect-the-meaning-and-value-of-american-citizenship/)
 
-  - Executive Orders - Federal Register (https://www.federalregister.gov/presidential-documents/executive-orders)
+  - Fact Sheet: President Donald J. Trump Ends Birth Tourism and ... (https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-ends-birth-tourism-and-protects-the-meaning-and-value-of-american-citizenship/)
 
-**Step 2 — Research.** The model wanted to know: *"Congress legislation August 2026 budget debt ceiling"* → got 6 results (via ddg_fallback)
+**Step 2 — Research.** The model wanted to know: *"Congress legislation August 2026 budget debt ceiling"* → got 6 results (via searxng)
 
-  - Debt Ceiling - Committee for a Responsible Federal Budget (https://www.crfb.org/issue-area/debt-ceiling)
+  - Debt Ceiling Q&A - Committee for a Responsible Federal Budget (https://www.crfb.org/papers/qa-everything-you-should-know-about-debt-ceiling)
 
-  - Under House Budget Plan, Debt Limit Would Likely Be Reached ...Upcoming Congressional Fiscal Policy Deadlines-2026-07-28Commonly Searched for Legislation (119th Congress) - U.S. SenateHR4634 | US Congress 2025-2026 | Debt Ceiling Reform Act ...US Debt Ceiling August 2026: Current Status, X-Date & What ...Budget | Congressional Budget Office (https://www.cbpp.org/research/federal-budget/under-house-budget-plan-debt-limit-would-likely-be-reached-by-fall-2026)
+  - House Budget Resolution Forecasts Higher Debt (https://www.conference-board.org/research/policy-backgrounders/house-budget-resolution-forecasts-higher-debt)
 
-  - Upcoming Congressional Fiscal Policy Deadlines-2026-07-28 (https://www.crfb.org/blogs/upcoming-congressional-fiscal-policy-deadlines)
+  - What is the federal debt ceiling? - Brookings Institution (https://www.brookings.edu/articles/the-hutchins-center-explains-the-debt-limit/)
 
-**Step 3 — Research.** The model wanted to know: *"Federal Reserve meeting August 2026 rate decision"* → got 6 results (via ddg_fallback)
+**Step 3 — Research.** The model wanted to know: *"Federal Reserve meeting August 2026 rate decision"* → got 6 results (via searxng)
 
-  - The Fed - Meeting calendars and information (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+  - What's The Fed's Next Move? | J.P. Morgan Global Research (https://www.jpmorgan.com/insights/global-research/economy/fed-rate-cuts)
 
-  - Federal Reserve Board - Calendar: August 2026 (https://www.federalreserve.gov/newsevents/2026-august.htm)
+  - The Fed - Meeting calendars and information - Federal Reserve (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
 
-  - Fed rate decision July 2026: Divided Fed holds interest rates ... (https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html)
+  - What 2026 Fed Rate Decisions Mean for CDs - NerdWallet (https://www.nerdwallet.com/banking/news/cds-fed-rate-announcement)
 
-**Step 4 — Research.** The model wanted to know: *"US CPI inflation report August 2026"* → got 6 results (via ddg_fallback)
+**Step 4 — Research.** The model wanted to know: *"US CPI inflation data August 2026 release"* → got 6 results (via searxng)
 
-  - United States Consumer Price Index (CPI) YoY (https://www.investing.com/economic-calendar/cpi-733)
+  - Schedule of Releases for the Consumer Price Index (https://www.bls.gov/schedule/news_release/cpi.htm)
 
-  - United States Inflation Rate (https://tradingeconomics.com/united-states/inflation-cpi)
+  - Inflation Nowcasting - Federal Reserve Bank of Cleveland (https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting)
 
-  - Consumer Price Index Summary - 2026 M06 Results (https://www.bls.gov/news.release/cpi.nr0.htm)
+  - Consumer Price Index - June 2026 - Bureau of Labor Statistics (https://www.bls.gov/news.release/PDF/cpi.PDF)
 
-**Step 6 — Research.** The model wanted to know: *"earnings calendar week August 10 2026 mega cap"* → got 6 results (via ddg_fallback)
+**Step 6 — Research.** The model wanted to know: *"earnings calendar week August 10 2026 major companies"* → got 6 results (via searxng)
 
-  - Earnings Calendar This Week: Aug 10 - 14, 2026 | EarningSpike (https://www.earningspike.com/earnings-calendar)
+  - The most anticipated earnings releases for the week of August 10 ... (https://x.com/eWhispers/status/2086660683651834252)
 
-  - August 2026 Earnings Calendar: The Visual Guide to Every Ma… (https://earningscompass.app/blog/august-2026-earnings-calendar-visual)
+  - Earnings to Watch This Week – August 10-14, 2026 - TipRanks.com (https://www.tipranks.com/news/earnings-to-watch-this-week-august-10-14-2026)
 
-  - Large-cap earnings calendar: 10 reports in the next 3 days (https://investlog.ai/article/large-cap-earnings-calendar-2026-08-10-to-2026-08-13)
+  - Earnings Calendar and Analysis for This Week (August 10-14) (https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks)
 
-**Step 7 — Research.** The model wanted to know: *"China economic policy data August 2026 stimulus"* → got 6 results (via ddg_fallback)
+**Step 7 — Research.** The model wanted to know: *"China economic policy stimulus August 2026"* → got 6 results (via searxng)
 
-  - China’s 2026 stimulus plan isn’t exports, it’s economic... - Asia Times (https://asiatimes.com/2025/12/chinas-2026-stimulus-plan-isnt-exports-its-economic-reform/)
+  - China's leaders pledge to support economy without big new ... (https://www.reuters.com/world/asia-pacific/chinas-top-leaders-pledge-incremental-measures-support-economy-2026-07-30/)
 
-  - TRADING ECONOMICS | 20 million INDICATORS FROM 196... (https://tradingeconomics.com/)
+  - China Signals Little Appetite for Major Stimulus Despite Growth ... (https://www.wsj.com/economy/china-signals-little-appetite-for-major-stimulus-despite-growth-headwinds-835e635e)
 
-  - National Bureau of Statistics of China (https://www.stats.gov.cn/english/)
+  - Why Is China Avoiding Major Economic Stimulus Despite Slowing ... (https://moderndiplomacy.eu/2026/07/30/why-is-china-avoiding-major-economic-stimulus-despite-slowing-growth/)
 
-**Step 8 — Research.** The model wanted to know: *"ECB rate decision August 2026"* → got 6 results (via ddg_fallback)
+**Step 8 — Research.** The model wanted to know: *"European Central Bank ECB meeting August 2026 rate decision"* → got 6 results (via searxng)
+
+  - Monetary policy decisions - European Central Bank (https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260723~29f24d99bc.en.html)
+
+  - Will the ECB Raise Interest Rates Again in 2026, But Cut Them in ... (https://global.morningstar.com/en-eu/economy/will-ecb-raise-interest-rates-again-2026-cut-them-2027)
 
   - Monetary policy decisions - European Central Bank (https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html)
 
-  - ECB Interest Rate & Meeting Calendar 2026 (https://www.newtrading.io/ecb-interest-rate/)
+**Step 9 — Research.** The model wanted to know: *"Bank of Japan rate decision August 2026"* → got 6 results (via searxng)
 
-  - Key ECB interest rates (https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)
-
-**Step 9 — Research.** The model wanted to know: *"Bank of Japan rate decision August 2026"* → got 6 results (via ddg_fallback)
+  - BOJ summary flags upside price risks and possible faster hike pace (https://www.japantimes.co.jp/business/2026/08/10/economy/boj-summary-opinions-july/)
 
   - Monetary Policy Releases 2026 : 日本銀行 Bank of Japan (https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/index.htm)
 
-  - Monetary Policy Releases : 日本銀行 Bank of Japan (https://www.boj.or.jp/en/mopo/mpmdeci/index.htm)
+  - Nudge from Bessent firms case for BOJ rate hike in September (https://www.reuters.com/world/asia-pacific/boj-debated-mounting-price-risks-even-upon-hiking-rates-june-minutes-show-2026-08-05/)
 
-  - BoJ Interest Rate Decision 2026 - economic news from Japan (https://www.metatrader.com/en/economic-calendar/japan/boj-interest-rate-decision)
+**Step 11 — Research.** The model wanted to know: *"OPEC oil production meeting August 2026"* → got 6 results (via searxng)
 
-**Step 11 — Research.** The model wanted to know: *"OPEC meeting August 2026 oil production"* → got 6 results (via ddg_fallback)
+  - Organization of the Petroleum Exporting Countries - OPEC.org (https://www.opec.org/pr-detail/1854611-2-august-2026.html)
 
-  - Global Oil Prices Surge on Geopolitical Tensions, OPEC+ Meeting... (https://en.webangah.ir/2026-08-08/news=383801/)
+  - Press Releases - OPEC.org (https://opec.org/pr-detail/611-2-august-2026.html)
 
-  - OPEC+ Struggles To Pump More Oil To Meet Rising... | Naija247news (https://naija247news.com/opec-struggles-to-pump-more-oil-to-meet-rising-demand/)
+  - Organization of the Petroleum Exporting Countries - OPEC.org (https://www.opec.org/pr-detail/1835609-5-july-2026.html)
 
-  - 10 Top Oil-producing Countries | INN (https://investingnews.com/daily/resource-investing/energy-investing/oil-and-gas-investing/top-oil-producing-countries/)
+**Step 12 — Research.** The model wanted to know: *"US China trade tariffs August 2026 news"* → got 6 results (via searxng)
 
-**Step 12 — Research.** The model wanted to know: *"geopolitical conflict August 2026 Middle East oil"* → got 6 results (via ddg_fallback)
+  - Trump unveils trade actions to compete with China on solar and chips (https://www.reuters.com/world/asia-pacific/trump-signs-executive-order-protect-us-polysilicon-industry-2026-08-06/)
 
-  - 2026 Iran war fuel crisis - Wikipedia (https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis)
+  - Trump orders new 15% tariff on key material for solar panels and ... (https://www.theguardian.com/us-news/2026/aug/07/trump-orders-tariff-solar-panels-microchips-manufacturing-ingredient)
 
-  - 2026 Oil Price Outlook: Geopolitics, Supply Risks, and the ... (https://www.gate.com/learn/articles/2026-oil-price-outlook-geopolitics-supply-risks-and-the-global-economic-tug-of-war)
+  - Solar stocks shine after Trump extends China tariffs to polysilicon (https://www.cnbc.com/2026/08/07/polysilicon-solar-tariffs-donald-trump-us-china-trade-war-energy-semiconductors.html)
 
-  - The Oil Storm: How the 2026 Iran-US/Israel War is Reshaping ... (https://www.cervicornconsulting.com/blog/war-impact-on-oil)
+**Step 13 — Research.** The model wanted to know: *"geopolitical conflict Middle East oil August 2026"* → got 6 results (via searxng)
 
-**Step 13 — Research.** The model wanted to know: *"IPO calendar August 2026"* → got 6 results (via ddg_fallback)
+  - Oil prices seen gaining as Middle East supply disruptions persist (https://www.reuters.com/business/energy/oil-prices-seen-gaining-middle-east-supply-disruptions-persist-2026-07-31/)
 
-  - Financial Calendars - Yahoo Finance (https://finance.yahoo.com/calendar/)
+  - The Strait of Hormuz: Security Developments and Impacts on Oil ... (https://www.congress.gov/crs-product/R45281)
 
-  - IPO Calendar | IPOScoop (https://www.iposcoop.com/ipo-calendar/)
+  - Oil rises as Middle East conflict fears overshadow peace talks (https://www.aa.com.tr/en/energy/oil/oil-rises-as-middle-east-conflict-fears-overshadow-peace-talks/58771)
 
-  - August 2026 Calendar (https://www.timeanddate.com/calendar/monthly.html?month=8)
+**Step 14 — Research.** The model wanted to know: *"Supreme Court rulings August 2026 antitrust"* → got 6 results (via searxng)
 
-**Step 14 — Research.** The model wanted to know: *"South Korea Taiwan semiconductor August 2026"* → got 6 results (via ddg_fallback)
+  - Epic, Apple, and the Futureproofing of Antitrust Enforcement (https://www.naag.org/attorney-general-journal/epic-apple-and-the-futureproofing-of-antitrust-enforcement/)
 
-  - U.S. Pressures South Korea to Match Taiwan's Semiconductor Investments (https://www.chosun.com/english/industry-en/2026/01/17/LZ72X5ENTZG77CRFODHQF5WI5Y/)
+  - Court turns down Apple's request to pause order holding it in contempt (https://www.scotusblog.com/2026/05/court-tuns-down-apples-request-to-pause-order-holding-it-in-contempt/)
 
-  - How Taiwan and South Korea Safeguard Semiconductor Supply Chains Amid US-Iranian Tensions | Global Taiwan Institute (https://globaltaiwan.org/2026/07/taiwan-south-korea-safeguard-semiconductor-supply-chains/)
+  - Antitrust Case Filings | United States Department of Justice (https://www.justice.gov/atr/antitrust-case-filings)
 
-  - South Korea, Taiwan top Japan in exports for first time on AI boom - Nikkei Asia (https://asia.nikkei.com/business/tech/semiconductors/south-korea-taiwan-top-japan-in-exports-for-first-time-on-ai-boom)
+**Step 16 — Research.** The model wanted to know: *"US jobs report nonfarm payrolls August 2026"* → got 6 results (via searxng)
 
-**Step 16 — Research.** The model wanted to know: *"Iran war ceasefire August 2026 status Strait of Hormuz"* → got 6 results (via ddg_fallback)
+  - Employment Situation Summary - 2026 M07 Results (https://www.bls.gov/news.release/empsit.nr0.htm)
 
-  - Iran Issues List of Demands, Dampening Hopes of Reopening ... (https://www.nytimes.com/2026/08/08/world/middleeast/iran-us-oman-strait-of-hormuz.html)
+  - Jobs report July 2026: - CNBC (https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html)
 
-  - Iran Update Special Report, August 3, 2026 | ISW (https://www.understandingwar.org/research/middle-east/iran-update-special-report-august-3-2026/)
+  - US suffers unexpected job losses in July, markets dial back rate hike ... (https://www.reuters.com/business/us-nonfarm-payrolls-fall-july-unemployment-rate-eases-41-2026-08-07/)
 
-  - August 8, 2026 – Iran demands concessions from US as it nears ... (https://www.cnn.com/2026/08/08/world/live-news/iran-war-trump)
+**Step 17 — Research.** The model wanted to know: *"retail sales housing data August 2026 economic calendar"* → got 6 results (via searxng)
 
-**Step 17 — Research.** The model wanted to know: *"Fed Jackson Hole symposium August 2026"* → got 6 results (via ddg_fallback)
+  - Housing - Calendar - Trading Economics (https://tradingeconomics.com/calendar/housing)
 
-  - Jackson Hole Economic Symposium - Wikipedia (https://en.wikipedia.org/wiki/Jackson_Hole_Economic_Symposium)
+  - Economic Indicator Release Schedule: List View - US Census Bureau (https://www.census.gov/economic-indicators/calendar-listview.html)
 
-  - Jackson Hole Economic Symposium - Federal Reserve Bank of Kansas City (https://www.kansascityfed.org/research/jackson-hole-economic-symposium/)
+  - United States Economic Calendar for August 8, 2026 - TradingCharts (https://forex.tradingcharts.com/economic_calendar/2026-08-08.html?code=USD)
 
-  - About the Jackson Hole Economic Policy Symposium - Federal Reserve Bank of Kansas City (https://www.kansascityfed.org/research/jackson-hole-economic-symposium/about-jackson-hole-economic-symposium/)
+**Step 18 — Research.** The model wanted to know: *"IPO calendar August 2026 upcoming listings"* → got 6 results (via searxng)
 
-**Step 18 — Research.** The model wanted to know: *"US jobs report nonfarm payrolls August 2026"* → got 6 results (via ddg_fallback)
+  - Upcoming & Recent IPO's - IPOs Calendar - Yahoo Finance (https://finance.yahoo.com/calendar/ipo/)
 
-  - Staffing Industry Analysts August 2026 US Jobs Report... | LinkedIn (https://www.linkedin.com/posts/mee-derby_august-2026-us-jobs-report-activity-7491503517271085056-j2S5)
+  - IPO Calendar - IPOScoop (https://www.iposcoop.com/ipo-calendar/)
 
-  - August Jobs Report: Fed Likely to Pause Rate Hikes As... | Morningstar (https://kessler-prod.reta52d8.eas.morningstar.com/markets/august-jobs-report-fed-likely-pause-rate-hikes-hiring-frenzy-cools)
+  - IPOs Filed, Upcoming & Listed | IPO Calendar / Notice.co (https://notice.co/ipo-calendar)
 
-  - Nonfarm Payrolls Forecast (https://www.fxstreet.com/macroeconomics/economic-indicator/nfp)
+**Step 19 — Research.** The model wanted to know: *"South Korea semiconductor export August 2026 Samsung SK Hynix"* → got 6 results (via searxng)
 
-**Step 19 — Research.** The model wanted to know: *"Nvidia earnings August 2026 date"* → got 6 results (via ddg_fallback)
+  - Samsung, SK Hynix Semiconductors Power South Korea's $44.8B ... (https://www.chosun.com/english/industry-en/2026/08/01/UYEVQ26MQVCZHM7PZCLBME2X4A/)
 
-  - NVIDIA Corporation (NVDA) Stock Price, News... - Yahoo Finance (https://finance.yahoo.com/quote/NVDA/)
+  - Foreign Investors Dump $4.3 Billion in Korean Chip Stocks in One ... (https://en.sedaily.com/markets/2026/08/09/foreign-investors-dump-43-billion-in-korean-chip-stocks-in)
 
-  - NVIDIA Corporation - Financial Reports (https://investor.nvidia.com/financial-info/financial-reports/default.aspx)
+  - Samsung, SK Hynix test Chinese chip tools as hedge against US risks (https://www.reuters.com/world/china/samsung-sk-hynix-test-chinese-chip-tools-hedge-against-us-risks-2026-08-05/)
 
-  - NVIDIA Stock Chart — NASDAQ:NVDA Stock Price — TradingView (https://www.tradingview.com/symbols/NASDAQ-NVDA/)
+**Step 21 — Research.** The model wanted to know: *"US Iran nuclear talks August 2026 status"* → got 6 results (via searxng)
 
-**Step 21 — Research.** The model wanted to know: *"FOMC September 2026 meeting rate cut expectations"* → got 6 results (via ddg_fallback)
+  - Iran war updates: Trump says US 'only semi-negotiating' ⁠with Tehran (https://www.aljazeera.com/news/liveblog/2026/8/9/iran-war-live-tehran-demands-end-to-us-blockade-to-reopen-strait-of-hormuz)
 
-  - Fed Rate Cut Expectations September 2026: Market Impact... (https://intellectia.ai/blog/fed-rate-cut-expectations-september-2026-analysis)
+  - Trump 'low-keying it' with Iran as Tehran demands compensation to ... (https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-hormuz-nuclear-deal-netanyahu-b3030133.html)
 
-  - The Fed - Meeting calendars and information (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+  - Trump says Iran talks set for Monday as Tehran and Oman discuss ... (https://www.theguardian.com/world/2026/aug/03/trump-us-iran-talks-strait-of-hormuz-nuclear-programme)
 
-  - Fed Decision in September? Peluang Trading & Prediksi 2026 (https://polymarket.com/id/event/fed-decision-in-september-762/will-the-fed-increase-interest-rates-by-50-bps-after-the-september-2026-meeting-664)
+**Step 22 — Research.** The model wanted to know: *"hurricane tropical storm August 2026 Atlantic"* → got 6 results (via searxng)
 
-**Step 22 — Research.** The model wanted to know: *"US retail sales July 2026 report date"* → got 6 results (via ddg_fallback)
+  - NOAA maintains prediction for below-normal Atlantic hurricane season (https://www.noaa.gov/news-release/noaa-maintains-prediction-for-below-normal-atlantic-hurricane-season)
 
-  - Earnings Reports | Nasdaq (https://www.nasdaq.com/market-activity/earnings)
+  - Bryan Norcross: Tropical development increasingly likely in the ... (https://www.foxweather.com/weather-news/bryan-norcross-exclusive-analysis-tropical-update-august-9-2026)
 
-  - US Retail Gas Price (Weekly) - United States - Historical D (https://ycharts.com/indicators/us_gas_price)
+  - Hurricane center now tracking 3 Atlantic systems with chances to ... (https://www.orlandosentinel.com/2026/08/09/hurricane-center-tracks-2-new-atlantic-systems-that-could-develop/)
 
-  - July 2026 Calendar UK - No Region (https://www.calendar-uk.co.uk/year-calendars/july/2026/)
+**Step 23 — Research.** The model wanted to know: *"Fed Jackson Hole symposium August 2026"* → got 6 results (via searxng)
 
-**Step 23 — Research.** The model wanted to know: *"Iran war oil price impact stock market August 2026"* → got 6 results (via ddg_fallback)
+  - Jackson Hole Economic Policy Symposium (https://www.kansascityfed.org/research/jackson-hole-economic-symposium/)
 
-  - Economic impact of the 2026 Iran war - Wikipedia (https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war)
+  - About the Jackson Hole Economic Policy Symposium (https://www.kansascityfed.org/research/jackson-hole-economic-symposium/about-jackson-hole-economic-symposium/)
 
-  - Market scored on Iran war oil price boom. Staying long may ... (https://www.cnbc.com/2026/08/02/oil-prices-iran-war-energy-market.html)
+  - Jackson Hole Economic Policy Symposium Through the Years (https://www.kansascityfed.org/research/jackson-hole-economic-symposium/jackson-hole-economic-policy-symposium-through-years/)
 
-  - US-Iran War Oil Price Impact 2026: Energy Markets Face ... (https://intellectia.ai/blog/us-iran-war-oil-price-impact-2026)
+**Step 24 — Research.** The model wanted to know: *"Nvidia earnings date August 2026"* → got 6 results (via searxng)
 
-**Step 24 — Research.** The model wanted to know: *"tariffs trade deal August 2026 US China"* → got 6 results (via ddg_fallback)
+  - NVIDIA 2nd Quarter FY27 Financial Results (https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-2nd-Quarter-FY27-Financial-Results/default.aspx)
 
-  - China–United States trade war - Wikipedia (https://en.wikipedia.org/wiki/China–United_States_trade_war)
+  - NVDA - Company Earnings Calendar - Yahoo Finance (https://finance.yahoo.com/calendar/earnings?symbol=NVDA)
 
-  - US x China tariff agreement by August 31? Trading Odds & Predictions 2026 | Polymarket (https://polymarket.com/event/us-x-china-tariff-agreement-by-august-31-20260730193605176)
+  - Events & Presentations - NVIDIA Investor Relations (https://investor.nvidia.com/events-and-presentations/events-and-presentations/default.aspx)
 
-  - US-China Trade Deal 2026 | Tariffs & Supply Chain Impact (https://www.freightamigo.com/en/blog/logistics/us-china-trade-deal-2026-supply-chain/)
+**Step 26 — Research.** The model wanted to know: *"US China Xi meeting August 2026 trade talks"* → got 6 results (via searxng)
 
-**Step 26 — Research.** The model wanted to know: *"Kevin Warsh Fed chair August 2026 policy"* → got 6 results (via ddg_fallback)
+  - Beijing launches its broadest trade retaliation since Busan truce (https://www.cnbc.com/2026/08/06/us-china-trump-xi-summit-trade-technology-restrictions.html)
 
-  - New Fed Chair Kevin Warsh Promised a Policy "Regime Change ... (https://finance.yahoo.com/economy/policy/articles/fed-chair-kevin-warsh-promised-145000068.html?fr=sycsrp_catchall)
+  - Trump-Xi 2026 Summit - CSIS (https://www.csis.org/programs/trump-xi-2026-summit)
 
-  - Federal Reserve Board - Kevin Warsh, Chairman (https://www.federalreserve.gov/aboutthefed/bios/board/warsh.htm)
+  - US and China Hold First Direct Trade Talks Since Trump-Xi Meeting (https://www.taiwanplus.com/news/world-news/us-china-relations/260731005/us-and-china-hold-first-direct-trade-talks-since-trump-xi-meeting)
 
-  - As Warsh and the Fed contemplate fewer meetings, markets ... (https://www.cnbc.com/2026/08/05/as-warsh-and-the-fed-contemplate-fewer-meetings-markets-brace-for-potential-volatility-ahead.html)
+**Step 27 — Research.** The model wanted to know: *"China trade data July 2026 exports imports"* → got 6 results (via searxng)
 
-**Step 27 — Research.** The model wanted to know: *"hurricane weather August 2026 Atlantic"* → got 6 results (via ddg_fallback)
+  - China's exports growth beats estimates in July, as AI-driven ... - CNBC (https://www.cnbc.com/2026/08/07/china-july-trade-exports-imports-surplus-imbalance-tariffs-.html)
 
-  - 2026 Atlantic hurricane season - Wikipedia (https://en.wikipedia.org/wiki/2026_Atlantic_hurricane_season)
+  - China's exports slow slightly in July despite robust demand for high ... (https://www.washingtonpost.com/business/2026/08/07/china-trade-exports-imports-iran-oil/33429454-9221-11f1-9fdc-0a725c989a7b_story.html)
 
-  - 2026 Atlantic Hurricane Season - National Hurricane Center (https://www.nhc.noaa.gov/data/tcr/index.php?season=2026&basin=atl)
+  - China's July exports growth likely cooled but still robust - Reuters (https://www.reuters.com/world/china/chinas-july-exports-growth-likely-cooled-still-robust-2026-08-06/)
 
-  - Climate Prediction Center - Atlantic Hurricane Outlook (https://www.cpc.ncep.noaa.gov/products/outlooks/hurricane.shtml)
+**Step 28 — Research.** The model wanted to know: *"Walmart Target Home Depot earnings August 2026"* → got 6 results (via searxng)
 
-**Step 28 — Research.** The model wanted to know: *"US China trade truce October 2026 extension tariff deal"* → got 6 results (via ddg_fallback)
+  - Home Depot Has Raised Its Dividend for 17 Consecutive Years and ... (https://finance.yahoo.com/markets/stocks/articles/home-depot-raised-dividend-17-214000795.html)
 
-  - Trade, Truces and Tariffs-- Beijing Review (http://www.bjreview.com.cn/Opinion/Voice/202608/t20260804_800443488.html)
+  - Dear Home Depot Stock Fans, Mark Your Calendars for August 18 (https://finance.yahoo.com/markets/stocks/articles/dear-home-depot-stock-fans-130002400.html)
 
-  - US-China Trade Truce Extended: Breathing Room for Tense... (https://rationalright.org/2025/08/us-china-trade-truce-extended-breathing-room-for-tense-negotiations/)
+  - Earnings Preview: What To Expect From The Home Depot's Report (https://finance.yahoo.com/markets/stocks/articles/earnings-preview-expect-home-depot-115920268.html)
 
-  - Trump orders 15% tariff on key chip material to challenge China (https://www.rt.com/business/643990-trump-tariffs-chips-china/)
+**Step 29 — Research.** The model wanted to know: *"oil price WTI Brent August 2026 energy shock"* → got 6 results (via searxng)
 
-**Step 29 — Research.** The model wanted to know: *"Supreme Court rulings August 2026"* → got 6 results (via ddg_fallback)
+  - Current price of oil as of Aug. 7, 2026 - Fortune (https://fortune.com/article/price-of-oil-08-07-2026/)
 
-  - Category:United States Supreme Court cases in 2026 - Wikipedia (https://en.wikipedia.org/wiki/Category:United_States_Supreme_Court_cases_in_2026)
+  - Current price of oil as of August 7, 2026 - Yahoo Finance (https://finance.yahoo.com/energy/articles/current-price-oil-august-7-092206331.html)
 
-  - Orders of the Court: Term Year 2026 (https://www.supremecourt.gov/orders/ordersofthecourt/26)
+  - Oil Prices Forecast | J.P. Morgan Global Research (https://www.jpmorgan.com/insights/global-research/commodities/oil-prices)
 
-  - Opinions from 2026 | Justia U.S. Supreme Court Center (https://supreme.justia.com/cases/federal/us/year/2026.html)
+**Step 31 — Research.** The model wanted to know: *"Fed rate hike September 2026 energy shock inflation expectations"* → got 6 results (via searxng)
 
-**Step 31 — Research.** The model wanted to know: *"FOMC meeting September 15-16 2026"* → got 6 results (via ddg_fallback)
+  - Will the Fed Hike Rates in September? A 25-Basis-Point Move Is ... (https://www.chase.com/personal/investments/learning-and-insights/article/september-2026-rate-hike-now-expected-amid-energy-shocks)
 
-  - The Fed - Meeting calendars and information (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+  - The Warsh era begins at the Federal Reserve | RSM US (https://rsmus.com/insights/economics/warsh-era-begins-federal-reserve.html)
 
-  - Why Three Fed Officials Voted to Hike and What the July FOMC... (https://www.mexc.com/crypto-pulse/article/why-three-fed-officials-voted-to-hike-and-what-the-july-fomc-minutes-could-reveal-134469)
+  - What's The Fed's Next Move? | J.P. Morgan Global Research (https://www.jpmorgan.com/insights/global-research/economy/fed-rate-cuts)
 
-  - Fed Decision in September? Peluang Trading & Prediksi 2026 (https://polymarket.com/id/event/fed-decision-in-september-762/will-the-fed-increase-interest-rates-by-50-bps-after-the-september-2026-meeting-664)
+**Step 32 — Research.** The model wanted to know: *"US retail sales July 2026 release August 14"* → got 6 results (via searxng)
 
-**Step 32 — Research.** The model wanted to know: *"China retaliation US companies August 2026 trade"* → got 6 results (via ddg_fallback)
+  - U.S. retail sales rose 0.2% in June 2026, up 6.7% year over year (https://finance.yahoo.com/economy/articles/u-retail-sales-rose-0-125121200.html)
 
-  - China retaliates with sanctions on US firms as tariff... | Fox News Video (https://www.foxnews.com/video/6403071842112)
+  - July: Sales excluding automobiles are expected to rise 0.2% MoM ... (https://x.com/marketsday/status/2086435767212196273)
 
-  - China Retaliation Intensifies Before Xi-Trump Summit (https://theazb.com/china-retaliation-measures-escalate-as-us-trade-tensions-deepen-before-xi-trump-summit/)
+  - Monthly Retail Trade - Sales Report - Census Bureau (https://www.census.gov/retail/sales.html)
+
+**Step 33 — Research.** The model wanted to know: *"Xi Jinping visit US August 2026 date"* → got 6 results (via searxng)
+
+  - Trump says Xi will visit US on September 24 - Reuters (https://www.reuters.com/world/asia-pacific/trump-says-xi-will-visit-us-september-24-2026-07-23/)
+
+  - Will Xi Jinping visit US before 2027? Predictions & Odds | Polymarket (https://polymarket.com/event/will-xi-jinping-visit-us-before-2027)
+
+  - Trump announces Xi Jinping's US visit and reveals date (https://newsukraine.rbc.ua/news/trump-announces-xi-jinping-s-us-visit-and-1784835951.html)
+
+**Step 34 — Research.** The model wanted to know: *"strikes labor disputes August 2026 US"* → got 6 results (via searxng)
+
+  - KEYT news crews to strike in escalating labor dispute, on eve of Old ... (https://www.newspress.com/2026/08/04/keyt-news-to-strike-amid-escalating-labor-dispute-on-the-eve-of-old-spanish-days-fiesta/)
+
+  - 5 largest healthcare strikes in 2026, involving 76,000 workers (https://www.beckershospitalreview.com/hr/5-largest-healthcare-strikes-in-2026-involving-76000-workers/)
+
+  - United States Transport Strikes (August 2026) - Strike Tracker (https://striketracker.app/strikes-in-united-states)
+
+**Step 36 — Research.** The model wanted to know: *"China rare earth export controls August 2026"* → got 6 results (via searxng)
+
+  - China targets US rare earth and other firms with export controls (https://www.reuters.com/world/asia-pacific/china-targets-us-rare-earth-other-firms-with-export-controls-2026-06-22/)
+
+  - China tightens rare earth export curbs on 10 US companies (https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947)
+
+  - China Wields Its Rare Earth Leverage Over Europe With New Export ... (https://www.nytimes.com/2026/07/24/business/china-europe-rare-earths.html)
+
+**Step 37 — Research.** The model wanted to know: *"US stock market selloff August 2026 tech"* → got 6 results (via searxng)
+
+  - Tech Selloff Creates an Opportunity - BlackRock (https://www.blackrock.com/us/individual/insights/tech-sell-off)
+
+  - U.S. Stocks Fall as Tech Selloff Deepens, Oil Prices Hit $100 a Barrel (https://www.wsj.com/finance/stocks/oil-tops-98-a-barrel-tech-earnings-worry-markets-8b5adb27)
+
+  - Tech selloff stirs bubble fears in US stock market - Reuters (https://www.reuters.com/legal/transactional/tech-selloff-stirs-bubble-fears-us-stock-market-2026-06-30/)
+
+**Step 38 — Research.** The model wanted to know: *"SEC crypto regulation August 2026"* → got 6 results (via searxng)
+
+  - Statement on Crypto Vaults and Lending Strategies - Freewritings Law (https://www.freewritings.law/2026/08/statement-on-crypto-vaults-and-lending-strategies/)
+
+  - Crypto Task Force Written Input - SEC.gov (https://www.sec.gov/featured-topics/crypto-task-force/crypto-task-force-written-input)
+
+  - What Is the SEC Crypto Rule Proposal? Everything You Need to ... (https://bitcoinfoundation.org/news/regulation/what-is-the-sec-crypto-rule-proposal/)
+
+**Step 39 — Research.** The model wanted to know: *"UK economy Bank of England rate August 2026"* → got 6 results (via searxng)
+
+  - Interest rates and Bank Rate: our latest decision | Bank of England (https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
+
+  - Economic overview for August 2026 | Opus Business Advisory Group (https://opusllp.com/economic-overview-for-august-2026/)
+
+  - United Kingdom Interest Rate - Trading Economics (https://tradingeconomics.com/united-kingdom/interest-rate)
+
+**Step 41 — Research.** The model wanted to know: *""August 10 2026" earnings today companies reporting"* → got 6 results (via searxng)
+
+  - Earnings to Watch This Week – August 10-14, 2026 - TipRanks.com (https://www.tipranks.com/news/earnings-to-watch-this-week-august-10-14-2026)
+
+  - Earnings Scheduled for Monday, August 10, 2026 - Earnings Whispers (https://www.earningswhispers.com/calendar)
+
+  - Earnings Calendar - Investing.com (https://www.investing.com/earnings-calendar)
+
+**Step 42 — Research.** The model wanted to know: *"Cisco earnings August 2026 date"* → got 6 results (via searxng)
+
+  - Cisco Schedules Conference Call for Q4 Fiscal Year 2026 Financial ... (https://investor.cisco.com/news/news-details/2026/Cisco-Schedules-Conference-Call-for-Q4-Fiscal-Year-2026-Financial-Results/default.aspx)
+
+  - Cisco Schedules Conference Call for Q4 Fiscal Year 2026 Financial ... (https://www.khq.com/online_features/press_releases/cisco-schedules-conference-call-for-q4-fiscal-year-2026-financial-results/article_792a0189-f34d-5cd5-b39b-3402c5e4c6fa.html)
+
+  - Cisco Systems Inc. - Investor Relations (https://investor.cisco.com/overview/default.aspx)
+
+**Step 43 — Research.** The model wanted to know: *"Taiwan semiconductor TSMC August 2026 export"* → got 6 results (via searxng)
+
+  - Taiwan's exports could top US$850 billion in 2026: MOF (https://focustaiwan.tw/business/202608080008)
+
+  - Taiwan Sets Third-Best Export Month; Semiconductor Probe Targets ... (https://www.techtimes.com/articles/323530/20260807/taiwan-sets-third-best-export-month-semiconductor-probe-targets-its-core-categories.htm)
+
+  - Taiwan computer chipmaker TSMC pledges another $100 billion to ... (https://canada.constructconnect.com/dcn/news/usa/2026/07/taiwan-computer-chipmaker-tsmc-pledges-another-100-billion-to-expand-u-s-chipmaking-capacity)
+
+**Step 44 — Research.** The model wanted to know: *"World Cup 2026 final August markets"* → got 6 results (via searxng)
+
+  - FIFA World Cup Prediction Markets & Live Odds 2026 | Polymarket (https://polymarket.com/fifa-world-cup)
+
+  - World Cup Final Half Time Show Markets: Performers and Songs ... (https://www.goal.com/en-us/betting/world-cup/world-cup-final-half-time-show-markets-kalshi/A%3Abltb62832ab20d9605d)
+
+  - World Cup 2026 prediction markets topped $20 billion, with Ronaldo ... (https://www.theblock.co/post/410295/world-cup-2026-prediction-markets-topped-20-billion-ronaldo-tears-biggest-wagers)
+
+**Step 46 — Research.** The model wanted to know: *"China retaliatory export controls August 6 2026 rare earth gallium"* → got 6 results (via searxng)
+
+  - Gallium Export Ban Suspended by China Until 2026 - Fastmarkets (https://www.fastmarkets.com/insights/china-suspends-export-prohibition-on-superhard-materials-us/)
+
+  - China announced a series of economic measures against the U.S. ... (https://www.facebook.com/wlkynews/posts/china-announced-a-series-of-economic-measures-against-the-us-wednesday-including/1049673630769905/)
+
+  - China Wields Its Rare Earth Leverage Over Europe With New Export ... (https://www.nytimes.com/2026/07/24/business/china-europe-rare-earths.html)
+
+**Step 47 — Research.** The model wanted to know: *"US Iran ceasefire talks Monday August 10 2026"* → got 6 results (via searxng)
+
+  - Trump emphasizes economic pressure on Iran over negotiations (https://www.cnn.com/2026/08/10/world/live-news/iran-war-trump)
+
+  - Iran war live: US 'semi-negotiating' with Tehran; Israel rejects Gaza ... (https://www.aljazeera.com/news/liveblog/2026/8/10/iran-war-live-us-semi-negotiating-with-tehran-israel-rejects-gaza-plan)
+
+  - Trump 'low-keying it' with Iran as Tehran demands compensation to ... (https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-hormuz-nuclear-deal-netanyahu-b3030133.html)
+
+**Step 48 — Research.** The model wanted to know: *"Berkshire Hathaway earnings August 2026"* → got 6 results (via searxng)
+
+  - August 8, 2026 - BERKSHIRE HATHAWAY INC. (https://www.berkshirehathaway.com/news/aug0826.pdf)
+
+  - Berkshire Hathaway Inc. News Release - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-inc-news-release-120000250.html)
+
+  - 2026 News Releases - BERKSHIRE HATHAWAY INC. (https://www.berkshirehathaway.com/news/2026news.html)
+
+**Step 49 — Research.** The model wanted to know: *"Fed Chair Warsh speech August 2026"* → got 6 results (via searxng)
+
+  - Transcript of Chairman Warsh's Press Conference - July 29, 2026 (https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260729.pdf)
+
+  - New Fed Chair Kevin Warsh Promised a Policy "Regime Change" to ... (https://finance.yahoo.com/economy/policy/articles/fed-chair-kevin-warsh-promised-145000068.html)
+
+  - Watch: Fed Chair Kevin Warsh Full News Conference | WSJ (https://www.youtube.com/watch?v=mmHKyc8p0FU)
+
+**Step 51 — Research.** The model wanted to know: *"China export controls August 6 2026 rare earth retaliation polysilicon"* → got 6 results (via searxng)
+
+  - As US and China throw up tit-for-tat sanctions, is Trump's Xi ... - CNN (https://www.cnn.com/2026/08/06/china/us-china-trump-xi-trade-tensions-analysis-hnk-intl)
+
+  - Trump to impose 15% tariff on polysilicon amid push against China ... (https://www.facebook.com/arirangtvnews/posts/trump-to-impose-15-tariff-on-polysilicon-amid-push-against-chinadonaldtrump-poly/1526478112855928/)
 
   - China Retaliates With New Trade Steps Ahead of Xi Meeting (https://www.briefs.co/news/china-retaliates-with-new-economic-steps-ahead-of-xi-trump-m/)
 
-**Step 33 — Research.** The model wanted to know: *"Walmart Home Depot Cisco earnings August 2026"* → got 6 results (via ddg_fallback)
+**Step 52 — Research.** The model wanted to know: *"US CPI July 2026 forecast consensus August 12"* → got 6 results (via searxng)
 
-  - Quarterly Earnings 2026 | The Home Depot (https://ir.homedepot.com/financial-reports/quarterly-earnings/2026)
+  - CPI Home : U.S. Bureau of Labor Statistics (https://www.bls.gov/cpi/)
 
-  - WMT Q2 2027 Earnings Report on 8/20/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-8-20-walmart-inc-stock/)
+  - How high will inflation get in 2026? Predictions & Odds | Polymarket (https://polymarket.com/event/how-high-will-inflation-get-in-2026)
 
-  - Walmart Inc (WMT) Q2 2026 Earnings Report - Quarter Results (https://quarter-results.com/financial-reports/NASDAQ/WMT/Q2/2026/wmt-q2-2026-earnings-report/)
+  - US CPI Preview (August 12, 2026): Pump Prices Rose 8.1 ... (https://www.piptheory.com/research/us-cpi-july-2026-preview-dollar)
 
-**Step 34 — Research.** The model wanted to know: *"Iran Oman Hormuz deal August 2026 oil reopening"* → got 6 results (via ddg_fallback)
-
-  - Iran-Oman Hormuz Deal and What It Means for Oil, Bitcoin (https://phemex.com/academy/iran-oman-hormuz-route-oil-bitcoin)
-
-  - Watch Oil Rises as Market Awaits Iran-Oman Hormuz Deal Details (https://www.bloomberg.com/news/videos/2026-08-06/oil-rises-as-market-awaits-iran-oman-hormuz-deal-details-video)
-
-  - Iran war updates: IRGC says Hormuz to open after US... | Al Jazeera (https://www.aljazeera.com/news/liveblog/2026/8/8/iran-war-live-trilateral-mecca-defence-pact-signed-as-hormuz-deal-looms)
-
-**Step 36 — Research.** The model wanted to know: *"Xi Trump summit August 2026 date"* → got 6 results (via ddg_fallback)
-
-  - 2026 state visit by Donald Trump to China - Wikipedia (https://en.wikipedia.org/wiki/2026_state_visit_by_Donald_Trump_to_China)
-
-  - Trump-Xi 2026 Summit | CSIS (https://www.csis.org/programs/trump-xi-2026-summit)
-
-  - 2026 Xi-Trump summits: Latest News and Updates | South China Morning Post (https://www.scmp.com/topics/2026-xi-trump-summits)
-
-**Step 37 — Research.** The model wanted to know: *"Mecca defense pact August 2026 trilateral"* → got 6 results (via ddg_fallback)
-
-  - Mecca Joint Defence Agreement - Wikipedia (https://en.wikipedia.org/wiki/Mecca_Joint_Defence_Agreement)
-
-  - Iranian lawmaker blasts Saudi-led defense pact... — RT World News (https://www.rt.com/news/644000-saudi-pakistan-turkiye-pact/)
-
-  - What is Mecca Agreement? | Explained - YouTube (https://www.youtube.com/watch?v=YFghUw4_3ls)
-
-**Step 38 — Research.** The model wanted to know: *"FOMC minutes July 2026 release date"* → got 6 results (via ddg_fallback)
-
-  - Why Three Fed Officials Voted to Hike and What the July FOMC... (https://www.mexc.com/crypto-pulse/article/why-three-fed-officials-voted-to-hike-and-what-the-july-fomc-minutes-could-reveal-134469)
-
-  - FOMC Press Conference, July 29, 2026 - YouTube (https://www.youtube.com/watch?v=cyexh4Ikrp4)
-
-  - FOMC & Fed Meeting | News & Analysis (https://www.fxstreet.com/macroeconomics/central-banks/fed)
-
-**Step 39 — Research.** The model wanted to know: *"PPI producer price index July 2026 release date"* → got 6 results (via ddg_fallback)
+**Step 53 — Research.** The model wanted to know: *"PPI July 2026 release date August"* → got 6 results (via searxng)
 
   - Producer Price Index Home : U.S. Bureau of Labor Statistics (https://www.bls.gov/ppi/)
 
-  - Producer Price Index News Release - 2026 M06 Results (https://www.bls.gov/news.release/archives/ppi_07152026.htm)
+  - Schedule of Releases for the Producer Price Index (https://www.bls.gov/schedule/news_release/ppi.htm)
 
-  - United States Producer Price Index (PPI) YoY (https://www.investing.com/economic-calendar/ppi-734)
+  - United States Producer Price Index (PPI) MoM - Investing.com (https://www.investing.com/economic-calendar/united-states-producer-price-index-(ppi)-mom-238)
 
-**Step 41 — Research.** The model wanted to know: *"US China tariff truce deadline August 2026 extension"* → got 6 results (via ddg_fallback)
+**Step 54 — Research.** The model wanted to know: *"FOMC minutes July 2026 release date August"* → got 6 results (via searxng)
 
-  - US, China Extend Tariff Truce Deadline By 90 Days - News18 (https://www.news18.com/videos/breaking-news/us-china-extend-tariff-truce-deadline-by-90-days-9500800.html)
+  - The Fed - Meeting calendars and information - Federal Reserve (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
 
-  - US, China resume trade talks in Stockholm as tariff truce deadline... (https://www.observerbd.com/news/536486)
+  - Calendar - Federal Reserve Board (https://www.federalreserve.gov/newsevents/calendar.htm)
 
-  - US And China Resume High-Stakes Talks In Stockholm As Tariff... (https://news.abplive.com/business/us-china-trade-talks-tariff-truce-donald-trump-xi-jinping-stockholm-1791251)
+  - Fed meeting recap: July 2026 - CNBC (https://www.cnbc.com/2026/07/29/fed-meeting-today-live-updates.html)
 
-**Step 42 — Research.** The model wanted to know: *"earnings this week August 10-14 2026 major companies"* → got 6 results (via ddg_fallback)
+**Step 56 — Research.** The model wanted to know: *"China blacklist US companies August 6 2026 trade retaliation"* → got 6 results (via searxng)
 
-  - Earnings Calendar This Week: Aug 10 - 14, 2026 | EarningSpike (https://www.earningspike.com/earnings-calendar)
+  - China hits US with sanctions, drone export curbs ahead of Xi visit (https://www.cnn.com/2026/08/05/china/china-us-sanctions-intl-hnk)
 
-  - Earnings Calendar August 3–7, 2026: Stock Expected Moves ... (https://earnings-watcher.com/earnings-this-week)
+  - China announces new trade sanctions against United States ... (https://www.facebook.com/KCBDNewsChannel11/posts/china-announces-new-trade-sanctions-against-united-states-/1523659753128012/)
 
-  - Company Earnings Calendar - Yahoo Finance (https://finance.yahoo.com/calendar/earnings/?fr=sycsrp_catchall)
+  - China imposed new sanctions on several U.S. companies and ... (https://www.instagram.com/p/DbuZelMoCFP/)
 
-**Step 43 — Research.** The model wanted to know: *"inflation war-driven price pressures August 2026 US"* → got 6 results (via ddg_fallback)
+**Step 57 — Research.** The model wanted to know: *"US Iran Strait of Hormuz blockade oil shipping August 2026"* → got 6 results (via searxng)
 
-  - Inflation Seen Easing as US Consumer Price Index Rises 0.1% ... (https://www.bloomberg.com/news/articles/2026-08-08/us-cpi-to-show-inflationary-pressures-cooling-some)
+  - U.S. cements Iran blockade, redirecting 55 ships as talks drag on (https://www.cnbc.com/2026/08/10/us-iran-war-trump-hormuz-oman-ships-blockade-shipping.html)
 
-  - The Federal Reserve's Initial August Inflation Forecast Has ... (https://www.fool.com/investing/2026/08/06/fed-august-inflation-forecast-arrived-wall-street/)
+  - Iran says Oman deal is in 'final stages' but US must act to ... - Reuters (https://www.reuters.com/world/asia-pacific/iran-says-oman-deal-is-final-stages-us-must-act-open-hormuz-2026-08-09/)
 
-  - The Iran War Is Fueling Inflation. Are Markets Concerned? (https://www.forbes.com/sites/chrisgunster/2026/03/30/what-the-iran-conflict-means-for-inflation-expectations-and-fed-policy/)
+  - The Strait of Hormuz: Security Developments and Impacts on Oil ... (https://www.congress.gov/crs-product/R45281)
 
-**Step 44 — Research.** The model wanted to know: *"OPEC+ September 2026 production increase meeting"* → got 6 results (via ddg_fallback)
+**Step 58 — Research.** The model wanted to know: *"Fed September 2026 rate hike odds market probability"* → got 6 results (via searxng)
 
-  - OPEC+ September 2026 Oil Production Adjustment (https://discoveryalert.com.au/opec-oil-production-adjustment-september-2026-market-outlook/)
+  - Odds the Fed hikes in September tumble following big July jobs miss (https://www.cnbc.com/2026/08/07/odds-the-fed-hikes-in-september-tumble-following-big-july-jobs-miss.html)
 
-  - OPEC+ may increase oil output in September | Report.az (https://report.az/en/energy/opec-may-increase-oil-output-in-september/)
+  - Market cuts odds of Fed hike after jobs data, but economists still see ... (https://www.reuters.com/business/us-rate-futures-cut-chances-september-rate-hike-after-jobs-data-2026-08-07/)
 
-  - OPEC+ Sept meeting unlikely to advocate deeper oil output cuts... (https://finance.yahoo.com/news/opec-sept-meeting-unlikely-advocate-152434607.html)
+  - Fed decision in September? Odds & Predictions 2026 - Kalshi (https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26sep)
 
-**Step 46 — Research.** The model wanted to know: *""August 12" US China tariff truce deadline 2026"* → got 6 results (via ddg_fallback)
+**Step 59 — Research.** The model wanted to know: *"US GDP Q2 2026 second estimate August release"* → got 6 results (via searxng)
 
-  - U.S. and China extend tariff truce deadline for another 3 months : NPR (https://www.npr.org/2025/08/12/nx-s1-5500039/us-china-tariffs-trade-truce)
+  - GDP (Advance Estimate), 2nd Quarter 2026 (https://www.bea.gov/news/2026/gdp-advance-estimate-2nd-quarter-2026)
 
-  - US–China tariff talks: Three potential outcomes ahead of truce... (https://www.equiti.com/sc-en/news/market-news/us-china-tariff-talks-three-potential-outcomes-ahead-of-truce-deadline/)
+  - Gross Domestic Product | U.S. Bureau of Economic Analysis (BEA) (https://www.bea.gov/data/gdp/gross-domestic-product)
 
-  - Trump Pushes China to Quadruple U.S. Soybean Buys -- Markets... (https://finance.yahoo.com/news/trump-pushes-china-quadruple-u-151711418.html)
+  - Q2 GDP Advance Estimate: Real GDP at 1.5%, Lower Than Expected (https://www.advisorperspectives.com/dshort/updates/2026/07/30/gdp-gross-domestic-product-q2-2026-advance-estimate)
 
-**Step 47 — Research.** The model wanted to know: *"Xi Jinping visit US September 24 2026"* → got 6 results (via ddg_fallback)
+**Step 61 — Research.** The model wanted to know: *"China drone export controls August 2026 US sanctions"* → got 6 results (via searxng)
 
-  - Trump meets Xi Jinping again in 2026? | Manifold (https://manifold.markets/predyx_markets/trump-meets-xi-jinping-again-in-202)
+  - China bans trade with 6 US companies, adds controls on drone ... (https://apnews.com/article/china-us-sanctions-drone-forced-labor-ad0b637298e9608c5351bca84debeb25)
 
-  - Wooing Trump, Xi Jinping Seeks Great Power Status for China - The... (https://www.nytimes.com/2017/11/06/world/asia/trump-xi-jinping-visit-china.html)
+  - China hits US with sanctions, drone export curbs ahead of Xi visit (https://www.cnn.com/2026/08/05/china/china-us-sanctions-intl-hnk)
 
-  - Xi Jinping San Francisco Newsom | TikTok (https://www.tiktok.com/discover/xi-jinping-san-francisco-newsom)
+  - China announces countermeasures against Washington, including ... (https://www.washingtonpost.com/business/2026/08/05/china-us-sanctions-drone-forced-labor/6af3afa2-90b2-11f1-9fdc-0a725c989a7b_story.html)
 
-**Step 48 — Research.** The model wanted to know: *"Strait of Hormuz closure oil price Brent August 2026"* → got 6 results (via ddg_fallback)
+**Step 62 — Research.** The model wanted to know: *"US jobs report July 2026 unemployment rate 4.1"* → got 6 results (via searxng)
 
-  - Oil Prices Climb on Stalemate in Strait of Hormuz - The New York... (https://www.nytimes.com/2026/08/09/business/oil-stocks-iran-war.html)
+  - US suffers unexpected job losses in July, markets dial back rate hike ... (https://www.reuters.com/business/us-nonfarm-payrolls-fall-july-unemployment-rate-eases-41-2026-08-07/)
 
-  - Oil prices climb as Iranian demands cloud outlook for Strait of Hormuz (https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz)
+  - The Employment Situation - July 2026 - Bureau of Labor Statistics (https://www.bls.gov/news.release/pdf/empsit.pdf)
 
-  - Brent crude oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/brent-crude-oil)
+  - July jobs report: US economy shed 23,000 jobs, a sudden reversal (https://www.nbcnews.com/business/economy/july-2026-jobs-report-rcna591138)
 
-**Step 49 — Research.** The model wanted to know: *"China PBoC rate cut August 2026"* → got 6 results (via ddg_fallback)
+**Step 63 — Research.** The model wanted to know: *"Apple earnings July 2026 results AI spending"* → got 6 results (via searxng)
 
-  - China can evade a balance sheet recession (https://www.ubp.com/en/news-insights/newsroom/china-can-evade-a-balance-sheet-recession)
+  - Apple's Profit Is Up 27%, but Expectations for Current Quarter ... (https://www.nytimes.com/2026/07/30/technology/apple-earnings.html)
 
-  - China's trade surplus could take the pressure off PBOC to loosen (https://www.chinabankingnews.com/p/what-the-chinese-politburos-latest)
+  - Apple Expects Slower Growth After AI Boom Drives Up Costs - WSJ (https://www.wsj.com/tech/apple-aapl-q3-earnings-report-2026-stock-a2eed24e)
 
-  - People's Bank of China Interest Rate (https://www.investing.com/economic-calendar/pboc-interest-rate-decision-1083)
+  - Apple (AAPL) Q3 2026 earnings report: Live updates - CNBC (https://www.cnbc.com/2026/07/30/apple-earnings-live-updates.html)
 
-**Step 51 — Search budget exhausted.** Forced to conclude with what it already gathered.
+**Step 64 — Research.** The model wanted to know: *"Alphabet Google earnings July 2026 AI capex"* → got 6 results (via searxng)
+
+  - Google increases capex forecast again after cloud-driven quarterly ... (https://www.reuters.com/business/google-quarterly-cloud-revenue-growth-beats-expectations-2026-07-22/)
+
+  - Google (GOOG) Q2 2026 earnings report: Live updates - CNBC (https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html)
+
+  - Google Boosts 2026 Spending Estimate to as Much as $205 Billion (https://www.bloomberg.com/news/articles/2026-07-22/google-boosts-2026-spending-estimate-to-as-much-as-205-billion)
+
+**Step 66 — Research.** The model wanted to know: *"FOMC minutes August 19 2026 release"* → got 6 results (via searxng)
+
+  - The Fed - Meeting calendars and information - Federal Reserve (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+
+  - When Is the Next FOMC Meeting? FOMC Meeting Schedule 2026 (https://www.mitrade.com/ae-en/insights/others/trading-basics/FOMC-meetings-and-2026-FOMC-meetings-schedule)
+
+  - Fed FOMC Meeting Calendar — 2026 Schedule & Release Dates (https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar)
+
+**Step 67 — Research.** The model wanted to know: *"China July CPI PPI data August 2026 release"* → got 6 results (via searxng)
+
+  - China July factory-gate inflation eases to 3-month low, CPI slows (https://www.reuters.com/world/china/chinas-producer-inflation-eases-july-below-expectations-2026-08-09/)
+
+  - China's PPI up 3.5% in July | english.scio.gov.cn (http://english.scio.gov.cn/pressroom/2026-08/10/content_118640597.html)
+
+  - China's consumer prices remain on moderate rise in July - Qiushi (https://en.qstheory.cn/2026-08/10/c_1204331.htm)
+
+**Step 69 — Search budget exhausted.** Forced to conclude with what it already gathered.
