@@ -1,20 +1,25 @@
 """DeepSeek API client (OpenAI-compatible) with a web_search tool loop.
 
-Search backend: SearXNG if SEARXNG_URL is set, else DuckDuckGo (ddgs package).
+Search backend chain (every step logged with result counts):
+  1. own SearXNG (SEARXNG_URL)        — 2 attempts, 25s timeout;
+                                        EMPTY result set counts as failure
+                                        (instance up but engines blocked)
+  2. ddgs package (DuckDuckGo API-ish)
+  3. DuckDuckGo HTML endpoint scrape  — no key, verified working
+  4. Google News RSS                  — no key, verified working; great for
+                                        event/news queries
+
 Stages needing tools must run on deepseek-chat (deepseek-reasoner has no
 function-calling support).
-
-Resilience notes (2026-08-10):
-- SearXNG timeout raised to 25s with one retry (Railway cold starts and
-  transient 502s used to kill every query at 10s).
-- DDG fallback now logs its result count so silent search failure is
-  visible in workflow logs.
-- chat() accepts max_rounds to give search-heavy stages a bigger budget.
 """
 from __future__ import annotations
 
 import json
+import re
 import time
+import xml.etree.ElementTree as ET
+from html import unescape
+from urllib.parse import quote_plus, unquote
 
 import requests
 
@@ -37,6 +42,8 @@ SEARCH_TOOL = {
 
 SEARXNG_TIMEOUT = 25
 SEARXNG_ATTEMPTS = 2
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 
 
 def _searxng(query: str, max_results: int) -> list[dict]:
@@ -57,38 +64,109 @@ def _ddg(query: str, max_results: int) -> list[dict]:
                 for x in ddgs.text(query, max_results=max_results)]
 
 
+def _strip_tags(s: str) -> str:
+    return unescape(re.sub(r"<[^>]+>", "", s or "")).strip()
+
+
+def _ddg_html(query: str, max_results: int) -> list[dict]:
+    """DuckDuckGo HTML endpoint — no key, no library."""
+    r = requests.get("https://html.duckduckgo.com/html/",
+                     params={"q": query}, headers={"User-Agent": UA},
+                     timeout=20)
+    r.raise_for_status()
+    doc = r.text
+    links = re.findall(
+        r'<a[^>]*class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', doc)
+    snips = re.findall(r'class="result__snippet"[^>]*>(.*?)</a>', doc)
+    out = []
+    for i, (u, t) in enumerate(links[:max_results]):
+        m = re.search(r"uddg=([^&]+)", u)
+        url = unquote(m.group(1)) if m else u
+        snippet = _strip_tags(snips[i]) if i < len(snips) else ""
+        out.append({"title": _strip_tags(t), "url": url, "snippet": snippet})
+    if not out:
+        raise RuntimeError("ddg_html: no results parsed (possible block page)")
+    return out
+
+
+def _gnews_rss(query: str, max_results: int) -> list[dict]:
+    """Google News RSS — no key. News-flavoured results."""
+    url = ("https://news.google.com/rss/search?q=" + quote_plus(query)
+           + "&hl=en-US&gl=US&ceid=US:en")
+    r = requests.get(url, headers={"User-Agent": UA}, timeout=20)
+    r.raise_for_status()
+    root = ET.fromstring(r.content)
+    out = []
+    for it in root.findall(".//item")[:max_results]:
+        out.append({
+            "title": it.findtext("title", ""),
+            "url": it.findtext("link", ""),
+            "snippet": f"{it.findtext('pubDate', '')} — "
+                       f"{_strip_tags(it.findtext('description', ''))[:300]}",
+        })
+    if not out:
+        raise RuntimeError("gnews_rss: no items parsed")
+    return out
+
+
 def web_search(query: str, max_results: int = 6) -> str:
-    """Return JSON string of results; never raises. SearXNG first (if
-    configured, with retry), DuckDuckGo as automatic fallback."""
-    backend = "searxng" if config.SEARXNG_URL else "ddg"
+    """Return JSON string of results; never raises. Walks the backend chain,
+    logging which backend served (or failed) each query."""
+    errors = []
+
+    # 1. own SearXNG (empty result set = broken upstream engines -> fail over)
     if config.SEARXNG_URL:
-        last_err = None
         for attempt in range(SEARXNG_ATTEMPTS):
             try:
                 items = _searxng(query, max_results)
-                return json.dumps({"query": query, "backend": backend,
+                if not items:
+                    raise RuntimeError("searxng returned 0 results "
+                                       "(upstream engines likely blocked)")
+                print(f"[search] searxng OK ({len(items)} results)")
+                return json.dumps({"query": query, "backend": "searxng",
                                    "results": items}, ensure_ascii=False)
             except Exception as e:  # noqa: BLE001
-                last_err = e
+                errors.append(f"searxng#{attempt + 1}: {e}")
                 if attempt < SEARXNG_ATTEMPTS - 1:
                     time.sleep(3)
-        print(f"[search] searxng failed x{SEARXNG_ATTEMPTS} ({last_err}); "
-              f"falling back to DDG")
-        try:
-            items = _ddg(query, max_results)
-            print(f"[search] ddg fallback returned {len(items)} results")
-            return json.dumps({"query": query, "backend": "ddg_fallback",
-                               "results": items}, ensure_ascii=False)
-        except Exception as e2:  # noqa: BLE001
-            print(f"[search] ddg fallback ALSO failed: {e2}")
-            return json.dumps({"query": query,
-                               "error": f"searxng: {last_err}; ddg: {e2}"})
+        print(f"[search] searxng failed x{SEARXNG_ATTEMPTS} "
+              f"({errors[-1][:100]})")
+
+    # 2. ddgs package
     try:
         items = _ddg(query, max_results)
-        return json.dumps({"query": query, "backend": backend,
+        if not items:
+            raise RuntimeError("ddgs returned 0 results")
+        print(f"[search] ddg(lib) OK ({len(items)} results)")
+        return json.dumps({"query": query, "backend": "ddg",
                            "results": items}, ensure_ascii=False)
     except Exception as e:  # noqa: BLE001
-        return json.dumps({"query": query, "error": str(e)})
+        errors.append(f"ddgs: {e}")
+        print(f"[search] ddg(lib) failed: {str(e)[:100]}")
+
+    # 3. DDG HTML scrape
+    try:
+        items = _ddg_html(query, max_results)
+        print(f"[search] ddg_html OK ({len(items)} results)")
+        return json.dumps({"query": query, "backend": "ddg_html",
+                           "results": items}, ensure_ascii=False)
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"ddg_html: {e}")
+        print(f"[search] ddg_html failed: {str(e)[:100]}")
+
+    # 4. Google News RSS
+    try:
+        items = _gnews_rss(query, max_results)
+        print(f"[search] gnews_rss OK ({len(items)} results)")
+        return json.dumps({"query": query, "backend": "gnews_rss",
+                           "results": items}, ensure_ascii=False)
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"gnews_rss: {e}")
+        print(f"[search] gnews_rss failed: {str(e)[:100]}")
+
+    print(f"[search] ALL BACKENDS FAILED for query: {query!r}")
+    return json.dumps({"query": query,
+                       "error": " | ".join(str(e)[:120] for e in errors)})
 
 
 def _post(payload: dict, retries: int = 4) -> dict:
