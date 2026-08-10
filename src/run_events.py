@@ -9,6 +9,10 @@ Uses the standard DeepSeek + web_search tool loop. Writes:
   01_daily/events/<date>_events_trace.md readable research trace
   01_daily/_transcripts/<date>_events.json full conversation audit
 
+If the model's JSON block fails to parse (or comes back empty), a no-tools
+REPAIR pass re-asks for just the JSON from the report it already wrote, so
+a formatting slip never costs a whole day's scan.
+
 CLI: python -m src.run_events [--date YYYY-MM-DD]
 """
 from __future__ import annotations
@@ -24,6 +28,7 @@ from . import config, deepseek_client
 from .event_context import EVENTS_DIR
 
 RUBRIC_PATH = os.path.join(config.GROUNDING, "event_scanner_rubric.md")
+SEARCH_ROUNDS = 14  # events stage needs more search budget than predict
 
 
 def _windows(today) -> dict:
@@ -72,6 +77,30 @@ def _previous_scan() -> str:
             + prev)
 
 
+def _repair_json(report: str) -> dict | None:
+    """No-tools second chance: reformat the report into the JSON schema."""
+    print("[events] JSON parse failed/empty — attempting repair pass")
+    prompt = (
+        "Below is an event scan report. Re-express it as ONE fenced "
+        "```json block and NOTHING else, using exactly this schema:\n"
+        '{"scan_date": "YYYY-MM-DD", "events": [{"title": str, '
+        '"category": "government|legislative|judicial|macro_data|earnings|'
+        'ipo|geopolitical|ongoing", "timing": "past|today|upcoming", '
+        '"date_or_window": str, "regions": [str], "sectors": [str], '
+        '"expected_direction": "bullish|bearish|mixed|unclear", '
+        '"impact": 1-5, "confidence": "low|medium|high", '
+        '"why_it_matters": str, "what_to_watch": str, '
+        '"status": "new|carried|resolved", "sources": [str]}], '
+        '"top_risks": [str], "top_opportunities": [str], '
+        '"uncertainty": "low|moderate|elevated|high", "summary": str}\n\n'
+        "REPORT:\n\n" + report[:14000]
+    )
+    out = deepseek_client.chat(
+        [{"role": "user", "content": prompt}],
+        model=config.MODEL_PREDICT, tools=False, max_tokens=6000)
+    return extract_json(out)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -105,35 +134,43 @@ def main() -> None:
         transcript_path=os.path.join("01_daily/_transcripts",
                                      f"{date_str}_events.json"),
         trace_path=os.path.join(EVENTS_DIR, f"{date_str}_events_trace.md"),
-        stage_label=f"EVENTS {date_str}")
+        stage_label=f"EVENTS {date_str}", max_rounds=SEARCH_ROUNDS)
 
     data = extract_json(text)
+    repaired = False
+    if not data or not data.get("events"):
+        fixed = _repair_json(text)
+        if fixed and fixed.get("events"):
+            data, repaired = fixed, True
+
     md_body = strip_json_block(text)
 
     os.makedirs(EVENTS_DIR, exist_ok=True)
 
     header = [f"# Event Scan — {date_str}", ""]
-    if data:
-        n = len(data.get("events", []))
+    if data and data.get("events"):
+        n = len(data["events"])
         header += [
-            f"- events tracked: **{n}**",
+            f"- events tracked: **{n}**" + (" (via repair pass)" if repaired else ""),
             f"- uncertainty: **{data.get('uncertainty', '?')}**",
             f"- summary: {data.get('summary', '')}".rstrip(),
             "",
         ]
     else:
-        header += ["⚠️ JSON block failed to parse — raw model output below, "
-                   "no machine-readable events today.", ""]
+        header += ["⚠️ JSON block failed to parse even after the repair "
+                   "pass — raw model output below, no machine-readable "
+                   "events today.", ""]
 
     md_path = os.path.join(EVENTS_DIR, f"{date_str}_events.md")
     with open(md_path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(header) + md_body + "\n")
 
     json_path = os.path.join(EVENTS_DIR, f"{date_str}_events.json")
-    payload = data or {"scan_date": date_str, "error": "parse_failed",
-                       "events": []}
+    payload = (data if data and data.get("events") else
+               {"scan_date": date_str, "error": "parse_failed", "events": []})
     payload.setdefault("scan_date", date_str)
     payload["windows"] = win
+    payload["repaired"] = repaired
     with open(json_path, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2, ensure_ascii=False)
 
@@ -146,7 +183,8 @@ def main() -> None:
 
     n = len(payload.get("events", []))
     print(f"[events] {date_str}: {n} events "
-          f"({'parse OK' if data else 'PARSE FAILED'}) -> {md_path}")
+          f"({'parse OK' if n else 'PARSE FAILED'}"
+          f"{', repaired' if repaired else ''}) -> {md_path}")
 
 
 if __name__ == "__main__":

@@ -3,6 +3,13 @@
 Search backend: SearXNG if SEARXNG_URL is set, else DuckDuckGo (ddgs package).
 Stages needing tools must run on deepseek-chat (deepseek-reasoner has no
 function-calling support).
+
+Resilience notes (2026-08-10):
+- SearXNG timeout raised to 25s with one retry (Railway cold starts and
+  transient 502s used to kill every query at 10s).
+- DDG fallback now logs its result count so silent search failure is
+  visible in workflow logs.
+- chat() accepts max_rounds to give search-heavy stages a bigger budget.
 """
 from __future__ import annotations
 
@@ -28,11 +35,14 @@ SEARCH_TOOL = {
     },
 }
 
+SEARXNG_TIMEOUT = 25
+SEARXNG_ATTEMPTS = 2
+
 
 def _searxng(query: str, max_results: int) -> list[dict]:
     r = requests.get(f"{config.SEARXNG_URL}/search",
                      params={"q": query, "format": "json"},
-                     timeout=10)
+                     timeout=SEARXNG_TIMEOUT)
     r.raise_for_status()
     return [{"title": x.get("title"), "url": x.get("url"),
              "snippet": x.get("content")}
@@ -49,23 +59,35 @@ def _ddg(query: str, max_results: int) -> list[dict]:
 
 def web_search(query: str, max_results: int = 6) -> str:
     """Return JSON string of results; never raises. SearXNG first (if
-    configured), DuckDuckGo as automatic fallback when SearXNG errors."""
+    configured, with retry), DuckDuckGo as automatic fallback."""
     backend = "searxng" if config.SEARXNG_URL else "ddg"
+    if config.SEARXNG_URL:
+        last_err = None
+        for attempt in range(SEARXNG_ATTEMPTS):
+            try:
+                items = _searxng(query, max_results)
+                return json.dumps({"query": query, "backend": backend,
+                                   "results": items}, ensure_ascii=False)
+            except Exception as e:  # noqa: BLE001
+                last_err = e
+                if attempt < SEARXNG_ATTEMPTS - 1:
+                    time.sleep(3)
+        print(f"[search] searxng failed x{SEARXNG_ATTEMPTS} ({last_err}); "
+              f"falling back to DDG")
+        try:
+            items = _ddg(query, max_results)
+            print(f"[search] ddg fallback returned {len(items)} results")
+            return json.dumps({"query": query, "backend": "ddg_fallback",
+                               "results": items}, ensure_ascii=False)
+        except Exception as e2:  # noqa: BLE001
+            print(f"[search] ddg fallback ALSO failed: {e2}")
+            return json.dumps({"query": query,
+                               "error": f"searxng: {last_err}; ddg: {e2}"})
     try:
-        items = (_searxng(query, max_results) if config.SEARXNG_URL
-                 else _ddg(query, max_results))
+        items = _ddg(query, max_results)
         return json.dumps({"query": query, "backend": backend,
                            "results": items}, ensure_ascii=False)
     except Exception as e:  # noqa: BLE001
-        if config.SEARXNG_URL:  # searxng failed -> transparent DDG fallback
-            print(f"[search] searxng failed ({e}); falling back to DDG")
-            try:
-                items = _ddg(query, max_results)
-                return json.dumps({"query": query, "backend": "ddg_fallback",
-                                   "results": items}, ensure_ascii=False)
-            except Exception as e2:  # noqa: BLE001
-                return json.dumps({"query": query,
-                                   "error": f"searxng: {e}; ddg: {e2}"})
         return json.dumps({"query": query, "error": str(e)})
 
 
@@ -92,12 +114,14 @@ def _post(payload: dict, retries: int = 4) -> dict:
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
-         trace_path: str | None = None, stage_label: str = "") -> str:
+         trace_path: str | None = None, stage_label: str = "",
+         max_rounds: int | None = None) -> str:
     """Chat completion; if tools=True, runs a web_search tool loop and
     returns the final assistant text. If transcript_path is set, the FULL
     conversation (every tool call + every search result + final answer) is
     dumped there as JSON for audit. If trace_path is set, a human-readable
-    step-by-step reasoning log is written there as Markdown."""
+    step-by-step reasoning log is written there as Markdown. max_rounds
+    overrides config.MAX_TOOL_ROUNDS for search-heavy stages."""
     import copy
     import os
 
@@ -118,9 +142,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                     "only from the documents it was given."))
     trace.append("")
 
+    rounds = (max_rounds or config.MAX_TOOL_ROUNDS) if tools else 1
     step = 0
     final = None
-    for _round in range(config.MAX_TOOL_ROUNDS if tools else 1):
+    for _round in range(rounds):
         payload["messages"] = messages
         resp = _post(payload)
         msg = resp["choices"][0]["message"]
