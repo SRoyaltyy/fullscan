@@ -1,0 +1,52 @@
+name: Event Scanner
+
+# Daily scan of market-moving events (past 2 weeks / today / next 2 weeks)
+# across all major regions and sectors. Runs BEFORE the predict stage
+# (predict fires 11:34 UTC) so 01_daily/events/latest.md is fresh.
+# Outputs are committed to 01_daily/events/ for all other workflows to read.
+
+on:
+  schedule:
+    - cron: "43 10 * * *"   # 10:43 UTC daily (~06:43 ET), ~50 min before predict
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (default: today ET)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: event-scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests ddgs
+
+      - name: Run event scan
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.run_events ${DATE:+--date "$DATE"}
+
+      - name: Commit event scan outputs
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/events 01_daily/_transcripts
+          git commit -m "auto: event scan [$(date -u +%F)]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
