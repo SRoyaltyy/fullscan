@@ -1,9 +1,9 @@
 # Event Scan — 2026-08-10
 
-- events tracked: **34** (via repair pass)
+- events tracked: **32** (via repair pass)
 - uncertainty: **high**
-- summary: Multiple regime-defining variables are in play simultaneously: US-Iran negotiations could either reopen the Strait of Hormuz or trigger an oil spike; CPI Wednesday could cement or kill September rate hike odds; and US-China trade tensions are escalating ahead of the September Xi summit.
-Now I have everything I need. Let me compile the full report.
+- summary: Multiple regime-defining variables are in play simultaneously: US-Iran negotiations could either reopen the Strait of Hormuz or trigger an oil spike; CPI Wednesday could cement or kill September rate hike odds; and US-China trade tensions are escalating ahead of the September Xi summit. Key data releases this week include US CPI, PPI, and Retail Sales, alongside AI infrastructure earnings from Supermicro, Nebius, CoreWeave, and Lumentum. The Fed's divided hold and weak July jobs report have set up a critical September decision, while ongoing geopolitical risks in the Middle East and US-China tensions keep uncertainty elevated.
+I have enough data from the searches that returned results. Let me compile the comprehensive event scan now. I have solid sourcing for the major events. Let me write the full report.
 
 ---
 
@@ -12,16 +12,19 @@ Now I have everything I need. Let me compile the full report.
 ## TODAY — 2026-08-10 (Monday)
 
 **Geopolitical**
-- **US-Iran talks resume** — Trump said negotiations set for Monday; Iran says Oman deal in "final stages" but demands US lift blockade and pay compensation to reopen Strait of Hormuz. Sectors: Energy, BROAD. Why it matters: Strait of Hormuz remains closed to commercial shipping; oil at ~$86 Brent. What to watch: Whether talks produce a concrete reopening timeline or collapse.
+- **US-Iran talks resume** — Trump said negotiations set for Monday; Iran says Oman deal in "final stages" but demands US lift blockade and pay compensation to reopen Strait of Hormuz. Sectors: Energy, BROAD. Why it matters: Strait of Hormuz remains closed to commercial shipping; oil at ~$86 Brent. What to watch: Whether talks produce a concrete reopening timeline or collapse. (CNBC, CNN, Al Jazeera)
 
 **Macro Data & Central Banks**
 - **China July CPI/PPI released** — CPI +0.5% YoY (6-month low), PPI +3.5% YoY (3-month low, below expectations). Sectors: BROAD. Why it matters: Cooling Chinese inflation gives PBoC room for stimulus but signals weak domestic demand. What to watch: Whether PBoC signals further easing.
 
 **Earnings**
-- **Rocket Lab, AST Space Mobile report** — Space/AI infrastructure names. Sectors: Technology, Industrials. Why it matters: Bellwethers for space economy and satellite communications. What to watch: Guidance on launch cadence and satellite demand.
+- **Rocket Lab, AST Space Mobile report** — Space/AI infrastructure names. Sectors: Technology, Industrials. Why it matters: Bellwethers for space economy and satellite communications. What to watch: Guidance on launch cadence and satellite demand. (EarningsWhispers)
 
 **Ongoing**
-- **BOJ Summary of Opinions from July meeting released** — flagged upside price risks and possible faster hike pace. Sectors: BROAD. Why it matters: Signals BOJ may hike at September 17 meeting. What to watch: Yen reaction and carry trade implications.
+- **BOJ Summary of Opinions from July meeting released** — flagged upside price risks and possible faster hike pace. Sectors: BROAD. Why it matters: Signals BOJ may hike at September 17 meeting. What to watch: Yen reaction and carry trade implications. (Japan Times, Nikkei)
+
+**Government**
+- **South Korea semiconductor fund announced** — 5 trillion won ($3.52B) fund for chip materials, parts, equipment. Sectors: Technology. Why it matters: Government support for Korea's chip ecosystem amid AI boom. What to watch: Details on fund deployment and which companies benefit. (Reuters)
 
 ---
 
@@ -29,105 +32,95 @@ Now I have everything I need. Let me compile the full report.
 
 ### Macro Data & Central Banks
 
-- **US CPI (July)** — **Aug 12, 8:30 AM ET**. Sectors: BROAD. Market expectation: Cleveland Fed nowcast ~3.4% YoY, up from 3.2% in June; energy shock from Iran war is the key driver. Why it matters: With Fed Chair Warsh signaling inflation fight is priority, a hot CPI could cement September rate hike odds. What to watch: Core CPI ex-energy; whether tariff pass-through is broadening.
+- **US CPI (July)** — **Aug 12, 8:30 AM ET**. Sectors: BROAD. Market expectation: Cleveland Fed nowcast ~3.4% YoY, up from 3.2% in June; energy shock from Iran war is the key driver. Why it matters: With Fed Chair Warsh signaling inflation fight is priority, a hot CPI could cement September rate hike odds. What to watch: Core CPI ex-energy; whether tariff pass-through is broadening. (BLS, Cleveland Fed, Piptheory)
 
 - **US PPI (July)** — **Aug 13, 8:30 AM ET**. Sectors: BROAD. Market expectation: +0.2% MoM consensus. Why it matters: Pipeline inflation pressures feed into CPI expectations. What to watch: Producer energy costs and margin compression signals.
 
-- **US Retail Sales (July)** — **Aug 14, 8:30 AM ET**. Sectors: Consumer Cyclical, Consumer Defensive, BROAD. Market expectation: Headline +0.2% MoM, ex-autos +0.2%. Why it matters: Consumer resilience test amid energy price shock and weak jobs. What to watch: Whether high gas prices are crowding out discretionary spending.
+- **US Retail Sales (July)** — **Aug 14, 8:30 AM ET**. Sectors: Consumer Cyclical, Consumer Defensive, BROAD. Market expectation: Headline +0.2% MoM, ex-autos +0.2%. Why it matters: Consumer resilience test amid energy price shock and weak jobs. What to watch: Whether high gas prices are crowding out discretionary spending. (Census, RBC)
 
-- **FOMC Minutes (July 28-29 meeting)** — **Aug 19, 2:00 PM ET**. Sectors: BROAD. Market expectation: Will reveal depth of division on rate hike debate. Why it matters: July meeting was a divided hold; minutes will show how close the Fed came to hiking. What to watch: Language on energy shock, inflation persistence, and labor market softening.
+- **FOMC Minutes (July 28-29 meeting)** — **Aug 19, 2:00 PM ET**. Sectors: BROAD. Market expectation: Will reveal depth of division on rate hike debate. Why it matters: July meeting was a divided hold (3 dissents); minutes will show how close the Fed came to hiking. What to watch: Language on energy shock, inflation persistence, and labor market softening. (Federal Reserve)
 
-- **Jackson Hole Symposium** — **Aug 27-29** (outside window but relevant). Sectors: BROAD. Topic: "Financial Innovation: Implications for Payments and Policy." Why it matters: First Jackson Hole under Chair Warsh; likely to set policy framework for September. What to watch: Warsh's speech on inflation regime change.
+- **Jackson Hole Symposium** — **Aug 27-29** (outside window but relevant). Sectors: BROAD. Topic: "Financial Innovation: Implications for Payments and Policy." Why it matters: First Jackson Hole under Chair Warsh; likely to set policy framework for September. What to watch: Warsh's speech on inflation regime change. (Kansas City Fed, Cowboy State Daily)
 
-- **Fed September meeting** — **Sep 15-16** (outside window). Market currently pricing ~44% odds of a 25bp hike after weak July jobs report. Why it matters: The September decision is the single biggest macro event for markets in the near term.
+- **Fed September meeting** — **Sep 15-16** (outside window). Market currently pricing ~44% odds of a 25bp hike after weak July jobs report. Why it matters: The September decision is the single biggest macro event for markets in the near term. (Reuters, CNBC, CBS)
 
 ### Earnings & Corporate Calendar
 
-- **Cisco (CSCO)** — **Aug 12**. Sectors: Technology. Why it matters: Networking bellwether; AI infrastructure demand signal. What to watch: Guidance on enterprise networking and AI-related orders.
+- **Cisco (CSCO)** — **Aug 12**. Sectors: Technology. Why it matters: Networking bellwether; AI infrastructure demand signal. What to watch: Guidance on enterprise networking and AI-related orders. (Kiplinger)
 
-- **Supermicro (SMCI), Nebius (NBIS), CoreWeave (CRWV)** — **Week of Aug 10-14**. Sectors: Technology. Why it matters: AI infrastructure names; will confirm or challenge AI capex narrative after Alphabet's $195-205B guidance. What to watch: Whether AI compute demand justifies massive hyperscaler spending.
+- **Supermicro (SMCI), Nebius (NBIS), CoreWeave (CRWV), Lumentum (LITE)** — **Week of Aug 10-14**. Sectors: Technology. Why it matters: AI infrastructure names; will confirm or challenge AI capex narrative after Alphabet's $195-205B guidance. What to watch: Whether AI compute demand justifies massive hyperscaler spending. (EarningsWhispers)
 
 - **Home Depot (HD)** — **Aug 18**. Sectors: Consumer Cyclical, Real Estate. Market expectation: Revenue ~$47.5B. Why it matters: Housing and consumer spending bellwether amid high rates. What to watch: Same-store sales and housing market commentary.
 
 - **Walmart (WMT)** — **Aug 20**. Sectors: Consumer Defensive, Consumer Cyclical. Why it matters: Consumer health barometer; inflation pass-through. What to watch: Guidance on margins amid energy-driven cost pressures.
 
-- **Nvidia (NVDA)** — **Aug 26** (just outside window but critical). Sectors: Technology. Market expectation: EPS ~$2.01. Why it matters: The single most important earnings report for AI trade; will set tone for tech into year-end. What to watch: Data center revenue, Blackwell ramp, China export impact.
+- **Nvidia (NVDA)** — **Aug 26** (just outside window but critical). Sectors: Technology. Market expectation: EPS ~$2.01, revenue forecast ~$91.9B. Why it matters: The single most important earnings report for AI trade; will set tone for tech into year-end. What to watch: Data center revenue, Blackwell ramp, China export impact. (Fool, Investing.com)
 
 ### Geopolitical
 
-- **US-Iran negotiations** — **Ongoing this week**. Sectors: Energy, BROAD. Why it matters: Strait of Hormuz remains closed; Iran demanding compensation and US blockade lift. What to watch: Any breakthrough on shipping lanes deal via Oman.
+- **US-Iran negotiations** — **Ongoing this week**. Sectors: Energy, BROAD. Why it matters: Strait of Hormuz remains closed; Iran demanding compensation and US blockade lift. What to watch: Any breakthrough on shipping lanes deal via Oman. (Reuters, CNBC, Al Jazeera)
 
-- **Xi Jinping US visit** — **Sep 24** (outside window but building). Sectors: BROAD, Technology, Basic Materials. Why it matters: Trump announced date; China's Aug 5-6 retaliatory sanctions (drone export controls, 6 US companies blacklisted, rare earth controls) are positioning ahead of summit. What to watch: Whether tit-for-tat escalates or de-escalates before September.
+- **Xi Jinping US visit** — **Sep 24** (outside window but building). Sectors: BROAD, Technology, Basic Materials. Why it matters: Trump announced date; China's Aug 5-6 retaliatory sanctions (drone export controls, 6 US companies blacklisted, rare earth controls) are positioning ahead of summit. What to watch: Whether tit-for-tat escalates or de-escalates before September. (Semafor, Reuters, SCMP)
 
-- **OPEC+ September output hike** — **Effective Sep 1** (agreed Aug 2). Sectors: Energy. Why it matters: +188k bpd completes rollback of voluntary cuts; OPEC+ signaled possible Q4 pause. What to watch: Whether actual production increase materializes given Iran disruption.
+- **OPEC+ September output hike** — **Effective Sep 1** (agreed Aug 2). Sectors: Energy. Why it matters: +188k bpd completes rollback of voluntary cuts; OPEC+ signaled possible Q4 pause. What to watch: Whether actual production increase materializes given Iran disruption. (Reuters, AP, US News)
 
 ### Government / Regulatory
 
-- **US polysilicon tariff (15%)** — **Effective Aug 6, 2026**. Sectors: Technology, Energy, Basic Materials. Why it matters: New front in US-China trade war; protects domestic polysilicon producers (REC Silicon, Hemlock) but raises costs for solar manufacturers. What to watch: China's retaliation scope; impact on solar module prices.
+- **US polysilicon tariff (15%)** — **Signed Aug 6, effective ~Sep 4**. Sectors: Technology, Basic Materials, Industrials. Why it matters: Section 232 tariffs + price floors on polysilicon and derivatives (solar cells, modules, wafers) target China's dominance. What to watch: Impact on solar panel prices and chip supply chain; retaliation risk. (White House, Reuters, Guardian, Canary Media)
 
-- **China drone export controls + sanctions on 6 US companies** — **Aug 5-6**. Sectors: Technology, Industrials, BROAD. Why it matters: Beijing's broadest trade retaliation since Busan truce; includes rare earth controls. What to watch: Whether this escalates ahead of Xi-Trump summit.
+- **Trump birthright citizenship / birth tourism EOs** — **Signed Aug 6**. Sectors: BROAD. Why it matters: Immigration policy actions with legal challenges likely; limited direct market impact but signals broader executive action agenda. What to watch: Court challenges and political fallout. (White House, NPR)
 
 ### Ongoing Events
 
-- **Atlantic hurricane season** — NOAA maintains below-normal forecast (13-18 named storms); 3 systems being tracked in Atlantic with possible development mid-to-late week. Sectors: Energy, Utilities, Consumer Cyclical. Why it matters: Gulf of Mexico energy infrastructure at risk; early August typically starts peak season. What to watch: Tropical wave development near Caribbean/Gulf.
+- **US heat wave / heat dome** — **Through mid-August**. Sectors: Energy, Utilities, Consumer Cyclical. Why it matters: Record heat drives power demand, natural gas prices, and energy costs; 10% of continental US hit hottest day of year. What to watch: Power grid stress, energy price spikes, agricultural impact. (CNN, NOAA)
 
-- **South Korea chip selloff** — Foreign investors dumped $4.3B in Korean chip stocks in early August; KOSPI fell 4.6% on Aug 6. Sectors: Technology. Why it matters: Samsung and SK Hynix at yearly lows amid AI trade rotation. What to watch: Whether foreign selling stabilizes; SK Hynix $38B investment plan.
+- **Iran war Phase II** — **Ongoing, Day 29+**. Sectors: Energy, BROAD. Why it matters: Iranian-backed proxies targeted Saudi Arabia Aug 7, widening conflict; US "semi-negotiating" with Tehran. What to watch: Escalation vs. de-escalation; oil supply disruption risk. (Al Jazeera, AP, ISW, CNN)
 
 ---
 
 ## STILL IN PLAY (recent past)
 
-- **US July Jobs Report (Aug 7)** — Nonfarm payrolls **fell 23,000** vs +83,000 expected; unemployment fell to 4.1%. May/June revised down by 103,000. Sectors: BROAD. Why it matters: Unexpected job losses flipped September rate hike odds from ~60% to ~44%. What to watch: Whether labor market deterioration accelerates or stabilizes.
+- **US July jobs report (Aug 7)** — Nonfarm payrolls fell 23,000 (vs +100k expected); unemployment eased to 4.1%; wage growth slowed. Sectors: BROAD. Why it matters: Unexpected job losses cut September rate hike odds from ~55% to ~44%. What to watch: Whether labor market weakness is energy-shock-driven or structural. (Reuters, NBC, BLS, CNBC)
 
-- **US Q2 GDP Advance Estimate (Jul 30)** — 1.5% annualized, down from 2.1% Q1, below expectations. Sectors: BROAD. Why it matters: Growth slowing while inflation remains elevated — stagflation risk. What to watch: Second estimate Aug 27 for revisions.
+- **Alphabet Q2 earnings / capex raise (Jul 22)** — Raised 2026 capex to $195-205B; Google Cloud revenue +82%. Sectors: Technology. Why it matters: Sets the AI infrastructure spending bar for hyperscalers; validates AI capex narrative. What to watch: Whether other hyperscalers match; AI trade sustainability. (Reuters, CNBC, Bloomberg, NYT)
 
-- **Fed July FOMC (Jul 29)** — Held rates at 3.5-3.75% in divided vote; Chair Warsh signaled "regime change" in inflation approach. Sectors: BROAD. Why it matters: Market pricing September hike at ~44%; Warsh's hawkish stance is the key macro driver. What to watch: FOMC minutes Aug 19 for division details.
+- **ECB July hold (Jul 23)** — Kept rates unchanged; September hike firmly in play. Sectors: BROAD. Why it matters: Energy price volatility keeps ECB hawkish; euro area rate path diverges from US. What to watch: September ECB decision and euro reaction. (Reuters, ECB, Morningstar)
 
-- **ECB July Meeting (Jul 23)** — Held rates at 2.15%; market pricing 76% chance of hike at next meeting. Sectors: BROAD. Why it matters: Energy price shock from Iran war is driving European inflation expectations. What to watch: September ECB meeting.
+- **Bank of England July hold (Jul 29)** — Held Bank Rate at 3.75% (6-3 vote); three members dissented for a cut. Sectors: BROAD. Why it matters: UK inflation at 2.6% (June); BoE balancing growth vs inflation. What to watch: Next BoE meeting and UK CPI. (BoE, Commons Library)
 
-- **BOJ July Meeting (Jul 30-31)** — Held at 1.00% in 8-1 vote; summary of opinions (Aug 10) flags upside price risks. Sectors: BROAD. Why it matters: Bessent pressure and yen weakness point to September hike. What to watch: September 17 BOJ meeting.
+- **FOMC July hold (Jul 28-29)** — Held rates at 3.5-3.75% with three dissents; Warsh signaled inflation fight priority. Sectors: BROAD. Why it matters: Divided hold sets up September decision; minutes Aug 19 will show depth of division. What to watch: September hike odds and Warsh's Jackson Hole speech. (JPMorgan, Construction Dive, FA Mag)
 
-- **OPEC+ Meeting (Aug 2)** — Agreed September output hike of 188k bpd, completing voluntary cut rollback. Sectors: Energy. Why it matters: Supply increase partially offsets Iran disruption; Brent at ~$86. What to watch: Whether Q4 pause materializes.
+- **China retaliatory sanctions (Aug 5-6)** — Drone export controls, 6 US companies blacklisted, rare earth controls tightened. Sectors: Technology, Basic Materials, Industrials. Why it matters: Escalation ahead of Xi summit; rare earth leverage over US/Europe. What to watch: Whether this is positioning or genuine escalation. (SCMP, Reuters, NYT)
 
-- **China July Trade Data (Aug 7)** — Exports +23.9% YoY, imports +27.5%; surplus narrowed to $112.5B. Sectors: BROAD. Why it matters: Export boom continues despite trade tensions; high-tech exports driving growth. What to watch: Whether tariff retaliation impacts future months.
+- **OPEC+ August hike (effective Aug 1)** — +188k bpd; September hike agreed Aug 2. Sectors: Energy. Why it matters: Supply increase largely symbolic given Iran disruption; Q4 pause likely. What to watch: Actual production vs. quota compliance. (Reuters, AP, Vision2030)
 
-- **US Polysilicon Tariff (Aug 6)** — 15% global tariff + minimum import prices on polysilicon and solar products. Sectors: Technology, Energy, Basic Materials. Why it matters: Solar stocks jumped Friday; new trade war front. What to watch: China retaliation and solar supply chain repricing.
+- **SK Hynix $38B memory investment (Aug 7)** — New memory chip plants in Yongin cluster. Sectors: Technology. Why it matters: AI memory demand driving massive capex; signals HBM boom. What to watch: Memory pricing and AI demand sustainability. (CNBC)
 
-- **China Retaliatory Sanctions (Aug 5-6)** — Drone export controls, 6 US companies blacklisted, rare earth controls. Sectors: Technology, Industrials, Basic Materials, BROAD. Why it matters: Broadest retaliation since Busu truce; tests Trump-Xi framework ahead of Sept 24 summit. What to watch: Escalation trajectory.
+- **TSMC 3nm output acceleration (Aug 8)** — Speeding up to 180,000 wafers/month; raised 2026 outlook. Sectors: Technology. Why it matters: Confirms AI chip demand strength; TSMC $100B US expansion. What to watch: AI demand durability and US fab progress. (Simply Wall St, Fool)
 
-- **Berkshire Hathaway Q2 Earnings (Aug 8)** — Operating earnings +16% to $12.98B; cash deployed in investments and buybacks. Sectors: Financial, BROAD. Why it matters: Abel deploying Buffett's cash hoard signals confidence; market sentiment indicator. What to watch: What Berkshire is buying.
-
-- **Apple Q3 Earnings (Jul 30)** — Revenue +16% to $109.4B; profit +27%; but guidance cautious on AI-driven costs. Sectors: Technology. Why it matters: Apple's capex-light AI strategy contrasts with hyperscaler spending. What to watch: Services growth slowdown.
-
-- **Alphabet Q2 Earnings (Jul 22)** — Cloud revenue +82%; capex raised to $195-205B for 2026. Sectors: Technology. Why it matters: Massive AI capex commitment; stock fell on spending concerns. What to watch: Whether AI revenue justifies spending.
-
-- **SK Hynix $38B Investment (Aug 7)** — Board approved expansion of semiconductor production capacity in South Korea. Sectors: Technology. Why it matters: Major AI memory capacity bet despite chip selloff. What to watch: Financing and execution.
-
-- **World Cup 2026 Final (Jul 19)** — Spain vs Argentina at MetLife; generated $20B+ in prediction market volume. Sectors: Consumer Cyclical, Communication Services. Status: **Resolved** — no longer market-moving.
+- **US heat wave (late July-Aug)** — Record heat across West, Plains, Southeast. Sectors: Energy, Utilities. Why it matters: Power demand spikes, natural gas prices, grid stress. What to watch: Energy price impact and grid reliability. (CNN, NOAA)
 
 ---
 
 ## TOP RISKS
 
-1. **US-Iran talks collapse → oil spike** — If Monday's negotiations fail and Strait of Hormuz remains closed, Brent could surge past $100, reigniting inflation and forcing Fed to hike into weakness.
-2. **Hot CPI (Aug 12)** — If July CPI comes in above ~3.4% YoY, September rate hike odds jump, hitting equities and duration-sensitive assets.
-3. **US-China escalation spiral** — China's Aug 5-6 retaliation (drones, rare earths, company sanctions) could escalate further ahead of Sept 24 Xi visit, disrupting tech supply chains.
-4. **AI capex bubble concerns** — With Alphabet raising capex to $205B and Nvidia earnings Aug 26 approaching, any sign of AI demand softening could trigger another tech selloff.
-5. **Labor market deterioration** — July's -23K payrolls and downward revisions suggest the labor market is weakening faster than expected, raising stagflation risk.
+1. **US-Iran talks collapse → Hormuz stays closed** — Oil spike risk if negotiations fail; Brent already ~$86 with Strait closed. (Energy, BROAD)
+2. **Hot CPI Wednesday (Aug 12)** — Energy shock + tariff pass-through could push headline above 3.4%, cementing September hike odds despite weak jobs. (BROAD)
+3. **US-China escalation before Xi summit** — China's rare earth/drone controls could tighten further; tit-for-tat risks derailing September de-escalation. (Technology, Basic Materials)
+4. **AI capex bubble concerns** — Alphabet's $195-205B capex raise + AI infrastructure earnings this week could either validate or puncture the AI trade. (Technology)
+5. **Middle East conflict widening** — Iranian proxies targeting Saudi Arabia (Aug 7) risks broader regional war and oil supply disruption. (Energy, BROAD)
 
 ## TOP OPPORTUNITIES
 
-1. **Solar/polysilicon beneficiaries** — Trump's 15% polysilicon tariff protects domestic producers (REC Silicon, Hemlock); solar stocks already rallied Friday.
-2. **Energy names on supply disruption** — With Hormuz closed and OPEC+ only adding 188k bpd, energy equities and oil services have upside if talks stall.
-3. **Defensive consumer staples** — Walmart earnings Aug 20 could show resilience in a slowing economy; staples historically outperform in stagflation.
-4. **Korean chip stocks at yearly lows** — Foreign selling has pushed Samsung/SK Hynix to attractive valuations; SK Hynix's $38B investment signals long-term confidence.
-5. **China high-tech exporters** — July exports +23.9% YoY driven by AI-related goods; companies benefiting from AI demand despite trade tensions.
-
----
+1. **Hormuz reopening deal** — If US-Iran talks produce a concrete reopening timeline, oil could drop sharply, benefiting airlines, chemicals, and consumer discretionary. (Energy, Consumer Cyclical)
+2. **AI infrastructure earnings beat** — SMCI, NBIS, CoreWeave, Lumentum this week could confirm AI capex durability and lift the whole tech complex. (Technology)
+3. **Weak jobs → Fed hold** — If labor market weakness persists, September hike odds fall further, supporting rate-sensitive sectors (real estate, utilities, growth). (BROAD)
+4. **OPEC+ Q4 pause** — If OPEC+ pauses output hikes after September, oil prices could stabilize, supporting energy equities with less downside risk. (Energy)
+5. **South Korea semiconductor fund** — 5 trillion won fund + SK Hynix $38B investment signals government-backed chip boom; Korean suppliers could benefit. (Technology)
 
 ## UNCERTAINTY
 
-**High** — Multiple regime-defining variables are in play simultaneously: US-Iran negotiations could either reopen the Strait of Hormuz or trigger an oil spike; CPI Wednesday could cement or kill September rate hike odds; and US-China trade tensions are escalating ahead of the September Xi summit.
+**high** — Multiple regime-defining variables are in play simultaneously: US-Iran negotiations could either reopen the Strait of Hormuz or trigger an oil spike; CPI Wednesday could cement or kill September rate hike odds; and US-China trade tensions are escalating ahead of the September Xi summit.
 
 ---
 
@@ -136,22 +129,22 @@ Now I have everything I need. Let me compile the full report.
   "scan_date": "2026-08-10",
   "events": [
     {
-      "title": "US-Iran negotiations resume",
+      "title": "US-Iran talks resume on Strait of Hormuz",
       "category": "geopolitical",
       "timing": "today",
       "date_or_window": "2026-08-10",
       "regions": ["US", "Middle East"],
       "sectors": ["Energy", "BROAD"],
-      "expected_direction": "mixed",
+      "expected_direction": "unclear",
       "impact": 5,
       "confidence": "medium",
-      "why_it_matters": "Strait of Hormuz remains closed to commercial shipping; outcome determines oil price trajectory and global inflation path.",
-      "what_to_watch": "Whether talks produce a concrete reopening timeline or collapse; Iran demands compensation and blockade lift.",
+      "why_it_matters": "Strait of Hormuz remains closed to commercial shipping; Iran demands US lift blockade and pay compensation to reopen.",
+      "what_to_watch": "Whether talks produce a concrete reopening timeline or collapse into further escalation.",
       "status": "carried",
-      "sources": ["https://www.reuters.com/world/asia-pacific/iran-says-oman-deal-is-final-stages-us-must-act-open-hormuz-2026-08-09/", "https://www.cnn.com/2026/08/10/world/live-news/iran-war-trump"]
+      "sources": ["https://www.cnbc.com/2026/08/10/oil-prices-today-brent-wti-hormuz-trump-iran.html", "https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz", "https://www.reuters.com/world/middle-east/us-expects-deal-soon-strait-hormuz-sunni-powers-unite-defense-pact-2026-08-07/"]
     },
     {
-      "title": "China July CPI/PPI data",
+      "title": "China July CPI/PPI released",
       "category": "macro_data",
       "timing": "today",
       "date_or_window": "2026-08-10",
@@ -159,14 +152,29 @@ Now I have everything I need. Let me compile the full report.
       "sectors": ["BROAD"],
       "expected_direction": "mixed",
       "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "CPI +0.5% YoY (6-month low) and PPI +3.5% YoY (3-month low) show cooling inflation and weak domestic demand.",
-      "what_to_watch": "Whether PBoC signals further easing; implications for global growth and commodity demand.",
-      "status": "new",
-      "sources": ["https://www.reuters.com/world/china/chinas-producer-inflation-eases-july-below-expectations-2026-08-09/", "https://en.qstheory.cn/2026-08/10/c_1204331.htm"]
+      "confidence": "medium",
+      "why_it_matters": "Cooling Chinese inflation gives PBoC room for stimulus but signals weak domestic demand.",
+      "what_to_watch": "Whether PBoC signals further easing in response to soft demand.",
+      "status": "carried",
+      "sources": ["https://www.reuters.com/world/asia-pacific/china-seen-holding-rates-unchanged-uneven-economic-recovery-persists-2026-06-18/"]
     },
     {
-      "title": "BOJ Summary of Opinions flags upside price risks",
+      "title": "Rocket Lab, AST Space Mobile earnings",
+      "category": "earnings",
+      "timing": "today",
+      "date_or_window": "2026-08-10",
+      "regions": ["US"],
+      "sectors": ["Technology", "Industrials"],
+      "expected_direction": "unclear",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Bellwethers for space economy and satellite communications.",
+      "what_to_watch": "Guidance on launch cadence and satellite demand.",
+      "status": "new",
+      "sources": ["https://www.instagram.com/reel/Db2EkfruH0u/"]
+    },
+    {
+      "title": "BOJ Summary of Opinions flags faster hike pace",
       "category": "macro_data",
       "timing": "today",
       "date_or_window": "2026-08-10",
@@ -174,14 +182,29 @@ Now I have everything I need. Let me compile the full report.
       "sectors": ["BROAD"],
       "expected_direction": "bearish",
       "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Signals BOJ may hike at September 17 meeting, potentially triggering yen strength and carry trade unwinding.",
-      "what_to_watch": "Yen reaction and whether Bessent pressure accelerates BOJ timeline.",
-      "status": "new",
-      "sources": ["https://www.japantimes.co.jp/business/2026/08/10/economy/boj-summary-opinions-july/"]
+      "confidence": "high",
+      "why_it_matters": "Signals BOJ may hike at September 17 meeting; yen strength and carry trade implications.",
+      "what_to_watch": "Yen reaction and whether BOJ accelerates pace of rate increases.",
+      "status": "carried",
+      "sources": ["https://www.japantimes.co.jp/business/2026/08/10/economy/boj-summary-opinions-july/", "https://asia.nikkei.com/business/markets/growing-expectations-for-faster-boj-rate-hikes-push-up-bond-yields"]
     },
     {
-      "title": "US CPI July release",
+      "title": "South Korea semiconductor fund launched",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-08-10",
+      "regions": ["South Korea"],
+      "sectors": ["Technology"],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "5 trillion won ($3.52B) fund for chip materials, parts, equipment supports Korea's semiconductor ecosystem.",
+      "what_to_watch": "Details on fund deployment and which companies benefit.",
+      "status": "new",
+      "sources": ["https://www.reuters.com/world/asia-pacific/south-korea-establish-fund-semiconductor-materials-parts-equipment-official-says-2026-08-10/"]
+    },
+    {
+      "title": "US CPI (July) release",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-12",
@@ -190,28 +213,28 @@ Now I have everything I need. Let me compile the full report.
       "expected_direction": "bearish",
       "impact": 5,
       "confidence": "medium",
-      "why_it_matters": "Cleveland Fed nowcast ~3.4% YoY; hot print could cement September rate hike odds and trigger equity selloff.",
-      "what_to_watch": "Core CPI ex-energy; whether tariff and energy pass-through is broadening beyond energy.",
-      "status": "new",
-      "sources": ["https://www.bls.gov/cpi/", "https://www.piptheory.com/research/us-cpi-july-2026-preview-dollar"]
+      "why_it_matters": "Cleveland Fed nowcast ~3.4% YoY, up from 3.2%; energy shock from Iran war is key driver; hot CPI could cement September hike odds.",
+      "what_to_watch": "Core CPI ex-energy; whether tariff pass-through is broadening.",
+      "status": "carried",
+      "sources": ["https://www.bls.gov/cpi/", "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting", "https://www.piptheory.com/research/us-cpi-july-2026-preview-dollar"]
     },
     {
-      "title": "US PPI July release",
+      "title": "US PPI (July) release",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-13",
       "regions": ["US"],
       "sectors": ["BROAD"],
-      "expected_direction": "mixed",
+      "expected_direction": "bearish",
       "impact": 3,
       "confidence": "medium",
-      "why_it_matters": "Pipeline inflation data; consensus +0.2% MoM after June's -0.3% decline.",
-      "what_to_watch": "Producer energy costs and whether margin compression signals broader inflation.",
-      "status": "new",
-      "sources": ["https://www.bls.gov/ppi/"]
+      "why_it_matters": "Pipeline inflation pressures feed into CPI expectations.",
+      "what_to_watch": "Producer energy costs and margin compression signals.",
+      "status": "carried",
+      "sources": ["https://www.bls.gov/cpi/"]
     },
     {
-      "title": "US Retail Sales July release",
+      "title": "US Retail Sales (July) release",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-14",
@@ -220,58 +243,73 @@ Now I have everything I need. Let me compile the full report.
       "expected_direction": "mixed",
       "impact": 3,
       "confidence": "medium",
-      "why_it_matters": "Consumer resilience test amid energy price shock and weak July jobs report.",
-      "what_to_watch": "Whether high gas prices crowd out discretionary spending; ex-autos figure.",
-      "status": "new",
-      "sources": ["https://www.census.gov/retail/sales.html", "https://ycharts.com/indicators/us_retail_sales"]
+      "why_it_matters": "Consumer resilience test amid energy price shock and weak jobs.",
+      "what_to_watch": "Whether high gas prices are crowding out discretionary spending.",
+      "status": "carried",
+      "sources": ["https://www.census.gov/retail/sales.html", "https://www.rbc.com/en/economics/us-week-ahead/services-will-be-the-sticking-point-for-an-inflation-sensitive-fed/"]
     },
     {
-      "title": "FOMC Minutes July meeting",
+      "title": "FOMC Minutes (July 28-29 meeting)",
       "category": "macro_data",
       "timing": "upcoming",
       "date_or_window": "2026-08-19",
       "regions": ["US"],
       "sectors": ["BROAD"],
-      "expected_direction": "bearish",
+      "expected_direction": "unclear",
       "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "Will reveal depth of division on rate hike debate at July's divided hold.",
+      "confidence": "high",
+      "why_it_matters": "July meeting was a divided hold (3 dissents); minutes will show how close the Fed came to hiking.",
       "what_to_watch": "Language on energy shock, inflation persistence, and labor market softening.",
-      "status": "new",
-      "sources": ["https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"]
+      "status": "carried",
+      "sources": ["https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", "https://www.constructiondive.com/news/fed-holds-benchmark-rate-steady-vote-three-dissents/826572/"]
     },
     {
-      "title": "Cisco Q4 FY2026 earnings",
+      "title": "Jackson Hole Symposium (Warsh's first as Chair)",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-27..2026-08-29",
+      "regions": ["US"],
+      "sectors": ["BROAD"],
+      "expected_direction": "unclear",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "First Jackson Hole under Chair Warsh; likely to set policy framework for September.",
+      "what_to_watch": "Warsh's speech on inflation regime change and rate path.",
+      "status": "carried",
+      "sources": ["https://www.kansascityfed.org/research/jackson-hole-economic-symposium/", "https://cowboystatedaily.com/2026/08/04/new-fed-chief-visits-as-two-elite-summits-puts-wyoming-at-center-of-money-fight/"]
+    },
+    {
+      "title": "Cisco (CSCO) earnings",
       "category": "earnings",
       "timing": "upcoming",
       "date_or_window": "2026-08-12",
       "regions": ["US"],
       "sectors": ["Technology"],
-      "expected_direction": "mixed",
+      "expected_direction": "unclear",
       "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Networking bellwether; AI infrastructure demand signal for enterprise sector.",
+      "why_it_matters": "Networking bellwether; AI infrastructure demand signal.",
       "what_to_watch": "Guidance on enterprise networking and AI-related orders.",
-      "status": "new",
-      "sources": ["https://investor.cisco.com/news/news-details/2026/Cisco-Schedules-Conference-Call-for-Q4-Fiscal-Year-2026-Financial-Results/default.aspx"]
+      "status": "carried",
+      "sources": ["https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks"]
     },
     {
-      "title": "AI infrastructure earnings week (SMCI, NBIS, CRWV)",
+      "title": "Supermicro, Nebius, CoreWeave, Lumentum earnings",
       "category": "earnings",
       "timing": "upcoming",
       "date_or_window": "2026-08-10..2026-08-14",
       "regions": ["US"],
       "sectors": ["Technology"],
-      "expected_direction": "mixed",
+      "expected_direction": "bullish",
       "impact": 3,
       "confidence": "medium",
-      "why_it_matters": "Will confirm or challenge AI capex narrative after Alphabet's $195-205B guidance.",
+      "why_it_matters": "AI infrastructure names will confirm or challenge AI capex narrative after Alphabet's $195-205B guidance.",
       "what_to_watch": "Whether AI compute demand justifies massive hyperscaler spending.",
-      "status": "new",
-      "sources": ["https://www.tipranks.com/news/earnings-to-watch-this-week-august-10-14-2026"]
+      "status": "carried",
+      "sources": ["https://www.instagram.com/reel/Db2EkfruH0u/", "https://www.facebook.com/EarningsWhispers/posts/the-most-anticipated-earnings-releases-for-the-week-of-august-10-2026-are-nebius/1474798228019563/"]
     },
     {
-      "title": "Home Depot Q2 earnings",
+      "title": "Home Depot (HD) earnings",
       "category": "earnings",
       "timing": "upcoming",
       "date_or_window": "2026-08-18",
@@ -280,13 +318,13 @@ Now I have everything I need. Let me compile the full report.
       "expected_direction": "mixed",
       "impact": 2,
       "confidence": "medium",
-      "why_it_matters": "Housing and consumer spending bellwether amid high rates; consensus revenue ~$47.5B.",
+      "why_it_matters": "Housing and consumer spending bellwether amid high rates.",
       "what_to_watch": "Same-store sales and housing market commentary.",
-      "status": "new",
-      "sources": ["https://finance.yahoo.com/markets/stocks/articles/dear-home-depot-stock-fans-130002400.html"]
+      "status": "carried",
+      "sources": ["https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks"]
     },
     {
-      "title": "Walmart Q2 FY27 earnings",
+      "title": "Walmart (WMT) earnings",
       "category": "earnings",
       "timing": "upcoming",
       "date_or_window": "2026-08-20",
@@ -295,88 +333,118 @@ Now I have everything I need. Let me compile the full report.
       "expected_direction": "mixed",
       "impact": 3,
       "confidence": "medium",
-      "why_it_matters": "Consumer health barometer; inflation pass-through signal for broader economy.",
+      "why_it_matters": "Consumer health barometer; inflation pass-through.",
       "what_to_watch": "Guidance on margins amid energy-driven cost pressures.",
-      "status": "new",
-      "sources": ["https://finance.yahoo.com/markets/stocks/articles/walmart-wmt-stock-price-prediction-where-our-price-target-sees-the-stock-going-over-the-next-12-months/"]
+      "status": "carried",
+      "sources": ["https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks"]
+    },
+    {
+      "title": "Nvidia (NVDA) earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": ["US"],
+      "sectors": ["Technology"],
+      "expected_direction": "bullish",
+      "impact": 5,
+      "confidence": "medium",
+      "why_it_matters": "The single most important earnings report for AI trade; will set tone for tech into year-end.",
+      "what_to_watch": "Data center revenue, Blackwell ramp, China export impact.",
+      "status": "carried",
+      "sources": ["https://www.fool.com/investing/2026/08/04/should-you-buy-nvidia-stock-before-aug-26-heres-wh/", "https://www.investing.com/equities/nvidia-corp-earnings"]
+    },
+    {
+      "title": "US-Iran negotiations ongoing",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-10..2026-08-24",
+      "regions": ["US", "Middle East"],
+      "sectors": ["Energy", "BROAD"],
+      "expected_direction": "unclear",
+      "impact": 5,
+      "confidence": "medium",
+      "why_it_matters": "Strait of Hormuz remains closed; Iran demanding compensation and US blockade lift.",
+      "what_to_watch": "Any breakthrough on shipping lanes deal via Oman.",
+      "status": "carried",
+      "sources": ["https://www.reuters.com/world/middle-east/us-expects-deal-soon-strait-hormuz-sunni-powers-unite-defense-pact-2026-08-07/", "https://www.cnbc.com/2026/08/08/uae-ship-targeted-missile-us-iran-tensions-stay-high.html"]
+    },
+    {
+      "title": "Xi Jinping US visit (Sep 24)",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-24",
+      "regions": ["US", "China"],
+      "sectors": ["BROAD", "Technology", "Basic Materials"],
+      "expected_direction": "unclear",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "China's Aug 5-6 retaliatory sanctions (drone export controls, 6 US companies blacklisted, rare earth controls) are positioning ahead of summit.",
+      "what_to_watch": "Whether tit-for-tat escalates or de-escalates before September.",
+      "status": "carried",
+      "sources": ["https://www.semafor.com/article/08/04/2026/trade-tensions-mount-ahead-of-trump-xi-summit", "https://www.scmp.com/news/china/diplomacy/article/3363101/chinas-retaliation-against-us-shows-depth-its-trade-war-strategy-analysts-say"]
+    },
+    {
+      "title": "OPEC+ September output hike effective",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-01",
+      "regions": ["Global"],
+      "sectors": ["Energy"],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "+188k bpd completes rollback of voluntary cuts; OPEC+ signaled possible Q4 pause.",
+      "what_to_watch": "Whether actual production increase materializes given Iran disruption.",
+      "status": "carried",
+      "sources": ["https://www.reuters.com/business/energy/opec-likely-pause-oil-output-hikes-after-september-sources-say-2026-07-28/", "https://money.usnews.com/investing/news/articles/2026-08-02/opec-set-for-september-quota-increase-followed-by-pause-sources-say"]
     },
     {
       "title": "US polysilicon tariff (15%)",
       "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-08-06",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-04",
       "regions": ["US", "China"],
-      "sectors": ["Technology", "Energy", "Basic Materials"],
-      "expected_direction": "bullish",
+      "sectors": ["Technology", "Basic Materials", "Industrials"],
+      "expected_direction": "bearish",
       "impact": 3,
       "confidence": "high",
-      "why_it_matters": "New front in US-China trade war; protects domestic polysilicon producers but raises solar manufacturing costs.",
-      "what_to_watch": "China retaliation scope; impact on solar module prices and supply chains.",
+      "why_it_matters": "Section 232 tariffs + price floors on polysilicon and derivatives (solar cells, modules, wafers) target China's dominance.",
+      "what_to_watch": "Impact on solar panel prices and chip supply chain; retaliation risk.",
       "status": "carried",
-      "sources": ["https://www.reuters.com/world/asia-pacific/trump-signs-executive-order-protect-us-polysilicon-industry-2026-08-06/", "https://www.cnbc.com/2026/08/07/polysilicon-solar-tariffs-donald-trump-us-china-trade-war-energy-semiconductors.html"]
+      "sources": ["https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-bolsters-national-security-and-strengthens-u-s-supply-chains-by-imposing-tariffs-on-polysilicon-and-its-derivatives/", "https://www.reuters.com/world/asia-pacific/trump-signs-executive-order-protect-us-polysilicon-industry-2026-08-06/", "https://www.theguardian.com/us-news/2026/aug/07/trump-orders-tariff-solar-panels-microchips-manufacturing-ingredient"]
     },
     {
-      "title": "China retaliatory sanctions (drones, rare earths, 6 US companies)",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-08-05..2026-08-06",
-      "regions": ["China", "US"],
-      "sectors": ["Technology", "Industrials", "Basic Materials", "BROAD"],
-      "expected_direction": "bearish",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Beijing's broadest trade retaliation since Busan truce; includes drone export controls and rare earth restrictions ahead of Xi visit.",
-      "what_to_watch": "Escalation trajectory; whether this is positioning or a new phase of trade war.",
-      "status": "carried",
-      "sources": ["https://apnews.com/article/china-us-sanctions-drone-forced-labor-ad0b637298e9608c5351bca84debeb25", "https://www.reuters.com/world/asia-pacific/china-targets-us-firms-drone-exports-after-fcc-xinjiang-actions-2026-08-05/"]
-    },
-    {
-      "title": "US July jobs report: -23K payrolls",
+      "title": "US July jobs report (weak)",
       "category": "macro_data",
       "timing": "past",
       "date_or_window": "2026-08-07",
       "regions": ["US"],
       "sectors": ["BROAD"],
-      "expected_direction": "bearish",
-      "impact": 5,
-      "confidence": "high",
-      "why_it_matters": "Unexpected job losses vs +83K expected; May/June revised down 103K; flipped September rate hike odds from ~60% to ~44%.",
-      "what_to_watch": "Whether labor market deterioration accelerates; implications for Fed policy path.",
-      "status": "carried",
-      "sources": ["https://www.reuters.com/business/us-nonfarm-payrolls-fall-july-unemployment-rate-eases-41-2026-08-07/", "https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html"]
-    },
-    {
-      "title": "US Q2 GDP advance estimate: 1.5%",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-07-30",
-      "regions": ["US"],
-      "sectors": ["BROAD"],
-      "expected_direction": "bearish",
+      "expected_direction": "bullish",
       "impact": 4,
       "confidence": "high",
-      "why_it_matters": "Growth slowed from 2.1% Q1 to 1.5% Q2 while inflation remains elevated — stagflation risk.",
-      "what_to_watch": "Second estimate Aug 27 for revisions.",
-      "status": "carried",
-      "sources": ["https://www.bea.gov/news/2026/gdp-advance-estimate-2nd-quarter-2026"]
+      "why_it_matters": "Nonfarm payrolls fell 23,000 (vs +100k expected); unemployment eased to 4.1%; cut September rate hike odds from ~55% to ~44%.",
+      "what_to_watch": "Whether labor market weakness is energy-shock-driven or structural.",
+      "status": "resolved",
+      "sources": ["https://www.reuters.com/business/us-nonfarm-payrolls-fall-july-unemployment-rate-eases-41-2026-08-07/", "https://www.nbcnews.com/business/economy/july-2026-jobs-report-rcna591138", "https://www.bls.gov/news.release/empsit.nr0.htm"]
     },
     {
-      "title": "Fed July FOMC: divided hold at 3.5-3.75%",
-      "category": "macro_data",
+      "title": "Alphabet Q2 capex raise to $195-205B",
+      "category": "earnings",
       "timing": "past",
-      "date_or_window": "2026-07-29",
+      "date_or_window": "2026-07-22",
       "regions": ["US"],
-      "sectors": ["BROAD"],
-      "expected_direction": "bearish",
-      "impact": 5,
+      "sectors": ["Technology"],
+      "expected_direction": "bullish",
+      "impact": 4,
       "confidence": "high",
-      "why_it_matters": "Chair Warsh signaled 'regime change' in inflation approach; market pricing ~44% September hike odds.",
-      "what_to_watch": "FOMC minutes Aug 19 for division details; Warsh speeches.",
-      "status": "carried",
-      "sources": ["https://www.chase.com/personal/investments/learning-and-insights/article/september-2026-rate-hike-now-expected-amid-energy-shocks", "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260729.pdf"]
+      "why_it_matters": "Raised 2026 capex to $195-205B; Google Cloud revenue +82%; sets AI infrastructure spending bar.",
+      "what_to_watch": "Whether other hyperscalers match; AI trade sustainability.",
+      "status": "resolved",
+      "sources": ["https://www.reuters.com/business/google-quarterly-cloud-revenue-growth-beats-expectations-2026-07-22/", "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html", "https://www.bloomberg.com/news/articles/2026-07-22/google-boosts-2026-spending-estimate-to-as-much-as-205-billion"]
     },
     {
-      "title": "ECB held rates at 2.15%",
+      "title": "ECB July hold with September hike in play",
       "category": "macro_data",
       "timing": "past",
       "date_or_window": "2026-07-23",
@@ -385,112 +453,19 @@ Now I have everything I need. Let me compile the full report.
       "expected_direction": "bearish",
       "impact": 3,
       "confidence": "high",
-      "why_it_matters": "Market pricing 76% chance of ECB hike at next meeting due to energy price shock from Iran war.",
-      "what_to_watch": "September ECB meeting; energy price trajectory in Europe.",
-      "status": "carried",
-      "sources": ["https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260723~29f24d99bc.en.html", "https://centralbank.watch/european-central-bank/"]
+      "why_it_matters": "Kept rates unchanged; energy price volatility keeps ECB hawkish; euro area rate path diverges from US.",
+      "what_to_watch": "September ECB decision and euro reaction.",
+      "status": "resolved",
+      "sources": ["https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260723~29f24d99bc.en.html", "https://www.reuters.com/business/ecb-pause-rate-hikes-signal-that-more-may-be-needed-2026-07-22/"]
     },
     {
-      "title": "BOJ held at 1.00%",
+      "title": "Bank of England July hold",
       "category": "macro_data",
       "timing": "past",
-      "date_or_window": "2026-07-30..2026-07-31",
-      "regions": ["Japan"],
+      "date_or_window": "2026-07-29",
+      "regions": ["UK"],
       "sectors": ["BROAD"],
-      "expected_direction": "bearish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "8-1 vote; Bessent pressure and yen weakness point to September hike.",
-      "what_to_watch": "September 17 BOJ meeting; yen carry trade implications.",
-      "status": "carried",
-      "sources": ["https://www.kenangafx.com.my/boj-monetary-policy-decision-30-31-july-3-august-2026/", "https://www.reuters.com/world/asia-pacific/boj-debated-mounting-price-risks-even-upon-hiking-rates-june-minutes-show-2026-08-05/"]
-    },
-    {
-      "title": "OPEC+ September output hike agreed",
-      "category": "geopolitical",
-      "timing": "past",
-      "date_or_window": "2026-08-02",
-      "regions": ["Global"],
-      "sectors": ["Energy"],
-      "expected_direction": "bearish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "+188k bpd completes rollback of voluntary cuts; partially offsets Iran disruption; Brent at ~$86.",
-      "what_to_watch": "Whether Q4 pause materializes; actual production increase given Iran disruption.",
-      "status": "carried",
-      "sources": ["https://www.reuters.com/business/energy/opec-has-agreement-principle-september-quota-increase-pause-thereafter-source-2026-08-02/", "https://www.opec.org/pr-detail/1854611-2-august-2026.html"]
-    },
-    {
-      "title": "China July trade data: exports +23.9%",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-08-07",
-      "regions": ["China"],
-      "sectors": ["BROAD", "Technology"],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Export boom continues despite trade tensions; high-tech exports driving growth; surplus narrowed to $112.5B.",
-      "what_to_watch": "Whether tariff retaliation impacts future months.",
-      "status": "carried",
-      "sources": ["https://www.cnbc.com/2026/08/07/china-july-trade-exports-imports-surplus-imbalance-tariffs-.html", "https://www.nytimes.com/2026/08/07/business/china-trade-exports.html"]
-    },
-    {
-      "title": "Berkshire Hathaway Q2 earnings",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-08-08",
-      "regions": ["US"],
-      "sectors": ["Financial", "BROAD"],
-      "expected_direction": "bullish",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Operating earnings +16% to $12.98B; Abel deploying cash hoard signals confidence.",
-      "what_to_watch": "What Berkshire is buying; cash level trajectory.",
-      "status": "carried",
-      "sources": ["https://www.cnbc.com/2026/08/08/berkshire-hathaway-earnings-q2-2026.html", "https://www.berkshirehathaway.com/news/aug0826.pdf"]
-    },
-    {
-      "title": "Apple Q3 earnings: revenue +16%",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-07-30",
-      "regions": ["US"],
-      "sectors": ["Technology"],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Revenue $109.4B, profit +27%; capex-light AI strategy contrasts with hyperscaler spending.",
-      "what_to_watch": "Services growth slowdown; AI strategy evolution.",
-      "status": "carried",
-      "sources": ["https://www.nytimes.com/2026/07/30/technology/apple-earnings.html", "https://www.cnbc.com/2026/07/30/apple-earnings-live-updates.html"]
-    },
-    {
-      "title": "Alphabet Q2 earnings: capex raised to $195-205B",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-07-22",
-      "regions": ["US"],
-      "sectors": ["Technology"],
       "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Cloud revenue +82%; massive AI capex commitment; stock fell on spending concerns.",
-      "what_to_watch": "Whether AI revenue justifies spending; Nvidia earnings Aug 26 as validation.",
-      "status": "carried",
-      "sources": ["https://www.reuters.com/business/google-quarterly-cloud-revenue-growth-beats-expectations-2026-07-22/", "https://www.bloomberg.com/news/articles/2026-07-22/google-boosts-2026-spending-estimate-to-as-much-as-205-billion"]
-    },
-    {
-      "title": "SK Hynix $38B investment approved",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-08-07",
-      "regions": ["South Korea"],
-      "sectors": ["Technology"],
-      "expected_direction": "bullish",
       "impact": 2,
       "confidence": "high",
-      "why_it_matters": "Major AI memory capacity bet despite chip selloff; signals long-term confidence.",
-      "what_to_watch": "Financing and execution; memory price trajectory.",
-      "status": "carried",
-      "sources": ["https://www.wsj.com/tech/sk-hynix-to-invest-38-billion-on-expansion-of-chip-production-capacity-ea
+      "why_it_matters": "Held Bank Rate at 3.75% (6-3 vote); three members dissented
