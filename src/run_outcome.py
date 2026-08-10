@@ -1,7 +1,4 @@
-"""Stage OUTCOME (5:00 PM ET): fetch actual close, review day, grade prediction.
-
-Null / missing morning predicts are OPS_FAIL — recorded but NOT counted as
-direction/magnitude misses.
+"""Stage OUTCOME: grade morning prediction. Missing predict = ops_fail, not a miss.
 
 CLI: python -m src.run_outcome [--date YYYY-MM-DD]
 """
@@ -24,6 +21,17 @@ def _read(path: str) -> str:
         return "(missing)"
 
 
+def _actual_band(spx_pct: float) -> str:
+    a = abs(spx_pct)
+    if a >= 2.0:
+        return "severe"
+    if a >= 1.0:
+        return "notable"
+    if a >= 0.3:
+        return "mild"
+    return "flat"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -41,8 +49,7 @@ def main() -> None:
     morning_md = "(archived morning Channel 1 not found)"
     try:
         import json
-        with open(os.path.join(config.CHANNEL1_DIR,
-                               f"{date_str}_predict.json"),
+        with open(os.path.join(config.CHANNEL1_DIR, f"{date_str}_predict.json"),
                   encoding="utf-8") as fh:
             morning_md = fetch_channel1.to_markdown(json.load(fh))
     except (OSError, ValueError) as e:
@@ -50,18 +57,14 @@ def main() -> None:
 
     predict_path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md")
     predict_md = _read(predict_path)
-    predict_missing = (
-        predict_md.strip() in ("", "(missing)")
-        or not os.path.isfile(predict_path)
-    )
+    predict_missing = predict_md.strip() in ("", "(missing)") or not os.path.isfile(predict_path)
 
-    with open(os.path.join(config.GROUNDING, "outcome_prompt.md"),
-              encoding="utf-8") as fh:
+    with open(os.path.join(config.GROUNDING, "outcome_prompt.md"), encoding="utf-8") as fh:
         prompt = fh.read()
     user_msg = (
         f"TODAY: {date_str}\n\n"
         f"=== MORNING PREDICTION ===\n{predict_md}\n\n"
-        f"=== MORNING CHANNEL 1 (archived premarket) ===\n{morning_md}\n\n"
+        f"=== MORNING CHANNEL 1 ===\n{morning_md}\n\n"
         f"{fetch_channel1.to_markdown(ch1)}\n\n"
         "Review the day. Cite sources in URL/PUBLISHED/QUOTE/SUMMARY format."
     )
@@ -69,10 +72,8 @@ def main() -> None:
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
         model=config.MODEL_OUTCOME, tools=True, max_tokens=12000,
-        transcript_path=os.path.join("01_daily/_transcripts",
-                                     f"{date_str}_outcome.json"),
-        trace_path=os.path.join(config.DAILY_GENERAL,
-                                f"{date_str}_outcome_trace.md"),
+        transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_outcome.json"),
+        trace_path=os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome_trace.md"),
         stage_label=f"OUTCOME {date_str}",
     )
 
@@ -80,7 +81,6 @@ def main() -> None:
 
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
-
     pred_dir = entry.get("predicted_direction")
     pred_mag = entry.get("predicted_magnitude_band")
     ops_fail = predict_missing or pred_dir is None
@@ -89,23 +89,13 @@ def main() -> None:
     if spx_pct is not None and not ops_fail:
         grade = compute_scores.grade(pred_dir, pred_mag or "flat", spx_pct)
     elif spx_pct is not None and ops_fail:
-        # still record actuals; do not set direction_hit False
         ad = "up" if spx_pct > 0.05 else ("down" if spx_pct < -0.05 else "flat")
         grade = {
             "actual_direction": ad,
-            "actual_magnitude_band": compute_scores.actual_band(spx_pct)
-            if hasattr(compute_scores, "actual_band") else "flat",
+            "actual_magnitude_band": _actual_band(spx_pct),
             "direction_hit": None,
             "magnitude_hit": None,
         }
-        # fallback band if helper missing
-        if grade["actual_magnitude_band"] == "flat" and abs(spx_pct) >= 0.3:
-            if abs(spx_pct) >= 2:
-                grade["actual_magnitude_band"] = "severe"
-            elif abs(spx_pct) >= 1:
-                grade["actual_magnitude_band"] = "notable"
-            else:
-                grade["actual_magnitude_band"] = "mild"
 
     ob = snapshot.parse_kv_block(text, "OUTCOME_BEGIN", "OUTCOME_END")
     snap_entry = dict(entry)
@@ -119,12 +109,12 @@ def main() -> None:
             "ops_fail": ops_fail,
         })
     snap_entry["path_shape"] = (actual.get("SPX", {}).get("path", {}) or {}).get("shape")
+
     path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Post-Market Outcome — {date_str}\n\n")
         if ops_fail:
-            fh.write("**OPS_FAIL:** morning predict missing or null — "
-                     "not counted as direction/magnitude miss.\n\n")
+            fh.write("**OPS_FAIL:** morning predict missing/null — not a market miss.\n\n")
         fh.write(snapshot.outcome_snapshot(snap_entry, ob, claims))
         fh.write(text)
         fh.write(verify_md + "\n")
@@ -147,8 +137,7 @@ def main() -> None:
             "outlier_watch": ob.get("OUTLIER_WATCH"),
             "per_factor_breakdown": (
                 [] if ops_fail else
-                compute_scores.per_factor_breakdown(
-                    entry.get("components") or {}, spx_pct)
+                compute_scores.per_factor_breakdown(entry.get("components") or {}, spx_pct)
             ),
             "sources_used": [{
                 "url": c["url"], "date_accessed": date_str,
@@ -156,12 +145,10 @@ def main() -> None:
             } for c in claims],
         })
         scoreboard.save(board)
-        print(
-            f"[outcome] {date_str}: SPX {spx_pct}% | ops_fail={ops_fail} | "
-            f"dir_hit={entry.get('direction_hit')} mag_hit={entry.get('magnitude_hit')}"
-        )
+        print(f"[outcome] {date_str}: SPX {spx_pct}% ops_fail={ops_fail} "
+              f"dir_hit={entry.get('direction_hit')} mag_hit={entry.get('magnitude_hit')}")
     else:
-        print(f"[outcome] {date_str}: SPX actuals unavailable — not graded")
+        print(f"[outcome] {date_str}: SPX actuals unavailable")
 
 
 if __name__ == "__main__":

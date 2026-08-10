@@ -1,4 +1,4 @@
-"""Stage REFLECT: diagnostic engine → schema-gated candidate lesson.
+"""Stage REFLECT → schema-gated candidate lesson.
 
 CLI: python -m src.run_reflect [--date YYYY-MM-DD]
 """
@@ -61,62 +61,48 @@ def main() -> None:
 
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
-    if entry.get("actual_pct_change") is None and not entry.get("ops_fail"):
-        # allow reflect on ops_fail rows that still have actuals from a bad grade
-        if entry.get("direction_hit") is None:
-            raise SystemExit(
-                f"[reflect] {date_str}: no graded outcome yet — run outcome first"
-            )
+    if entry.get("actual_pct_change") is None and entry.get("direction_hit") is None and not entry.get("ops_fail"):
+        raise SystemExit(f"[reflect] {date_str}: no graded outcome yet — run outcome first")
 
     predict_md = _read(os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md"))
     outcome_md = _read(os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md"))
-    with open(os.path.join(config.GROUNDING, "reflect_prompt.md"),
-              encoding="utf-8") as fh:
+    with open(os.path.join(config.GROUNDING, "reflect_prompt.md"), encoding="utf-8") as fh:
         prompt = fh.read()
 
     schema_instructions = (
-        "\n\n## CANDIDATE LESSON SCHEMA (MANDATORY)\n"
-        "Inside LESSON_BEGIN...LESSON_END you MUST emit:\n"
+        "\n## CANDIDATE LESSON SCHEMA (MANDATORY)\n"
+        "Inside LESSON_BEGIN...LESSON_END emit:\n"
         "ERROR_CATEGORY: A|B|C|D|E|NONE\n"
-        "TRIGGER_PATTERN: <when — observable before the open, max 2 sentences>\n"
-        "CURRENT_BEHAVIOR: <what the system did wrong>\n"
-        "CORRECTED_BEHAVIOR: <do_instead — must name B0-B7, direction, futures, "
-        "weight cap, gate, or ops step>\n"
-        "FALSIFIER: <wrong_if — one sentence; when is this lesson wrong?>\n"
+        "TRIGGER_PATTERN: <when — before the open, max 2 sentences>\n"
+        "CURRENT_BEHAVIOR: <what went wrong>\n"
+        "CORRECTED_BEHAVIOR: <do_instead — must name B0-B7, direction, futures, weight, gate, or ops step>\n"
+        "FALSIFIER: <wrong_if — one sentence>\n"
         "EVIDENCE: <date + predicted vs actual>\n"
-        "If ERROR_CATEGORY is NONE, still close the block but leave patterns empty.\n"
-        "Incomplete lessons (missing TRIGGER/CORRECTED/FALSIFIER when category "
-        "is not NONE) are rejected by the pipeline.\n"
+        "Incomplete lessons (missing TRIGGER/CORRECTED/FALSIFIER when category != NONE) are rejected.\n"
     )
 
     user_msg = (
         f"TODAY: {date_str}\n\n"
         f"=== PREMARKET PREDICTION ===\n{predict_md}\n\n"
         f"=== POST-MARKET OUTCOME ===\n{outcome_md}\n\n"
-        f"=== SCOREBOARD ENTRY (pipeline-graded) ===\n"
-        f"direction_hit: {entry.get('direction_hit')} | magnitude_hit: "
-        f"{entry.get('magnitude_hit')} | ops_fail: {entry.get('ops_fail')} | "
-        f"predicted {entry.get('predicted_direction')}/"
-        f"{entry.get('predicted_magnitude_band')} vs actual "
-        f"{entry.get('actual_pct_change')}% ({entry.get('actual_direction')}/"
-        f"{entry.get('actual_magnitude_band')}) | divergence_flagged: "
-        f"{entry.get('divergence_flagged')}\n\n"
-        f"=== RECENT SCOREBOARD HISTORY ===\n{memory.scoreboard_summary()}\n\n"
-        f"=== RECENT CANDIDATE LESSON TRIGGERS ===\n"
-        f"{_candidate_lesson_triggers()}\n\n"
+        f"=== SCOREBOARD ENTRY ===\n"
+        f"direction_hit: {entry.get('direction_hit')} | magnitude_hit: {entry.get('magnitude_hit')} | "
+        f"ops_fail: {entry.get('ops_fail')} | predicted {entry.get('predicted_direction')}/"
+        f"{entry.get('predicted_magnitude_band')} vs actual {entry.get('actual_pct_change')}% "
+        f"({entry.get('actual_direction')}/{entry.get('actual_magnitude_band')})\n\n"
+        f"=== SCOREBOARD HISTORY ===\n{memory.scoreboard_summary()}\n\n"
+        f"=== CANDIDATE TRIGGERS ===\n{_candidate_lesson_triggers()}\n\n"
         f"=== STANDING ACTIVE LESSONS ===\n{memory.active_lessons()}\n\n"
         f"{schema_instructions}\n"
-        "Execute the diagnostic now. Answer all mandatory checks explicitly."
+        "Execute the diagnostic. Answer mandatory checks explicitly."
     )
 
     text = deepseek_client.chat(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
         model=config.MODEL_REFLECT, tools=False, max_tokens=12000,
-        transcript_path=os.path.join("01_daily/_transcripts",
-                                     f"{date_str}_reflect.json"),
-        trace_path=os.path.join(config.DAILY_GENERAL,
-                                f"{date_str}_reflect_trace.md"),
+        transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_reflect.json"),
+        trace_path=os.path.join(config.DAILY_GENERAL, f"{date_str}_reflect_trace.md"),
         stage_label=f"REFLECT {date_str}",
     )
 
@@ -152,10 +138,7 @@ def main() -> None:
     if dv and dv != "none_flagged":
         entry["divergence_verdict"] = dv
     scoreboard.save(board)
-    print(
-        f"[reflect] {date_str}: category={norm.get('error_category')} "
-        f"schema_ok={complete} -> {lesson_path}"
-    )
+    print(f"[reflect] {date_str}: category={norm.get('error_category')} schema_ok={complete} -> {lesson_path}")
 
 
 if __name__ == "__main__":

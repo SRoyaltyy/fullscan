@@ -1,12 +1,10 @@
 """Lesson promotion: candidate → active standing rules.
 
-Rules:
-  - Market lessons (A/B/C): need >=2 similar candidates (Jaccard on `when`)
-    AND each must have schema_ok / falsifier.
-  - Ops lessons (D): promote on >=1 complete candidate.
-  - Incomplete (no when/do_instead/wrong_if): never promote.
+Market (A/B/C): need >=2 complete similar candidates.
+Ops (D): promote on >=1 complete candidate.
+Incomplete schema: never promote.
 
-CLI: python -m src.promote_lessons [--force-path PATH]  # seed one candidate
+CLI: python -m src.promote_lessons [--force-path PATH]
 """
 from __future__ import annotations
 
@@ -68,18 +66,13 @@ def _slug(text: str) -> str:
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", text.lower()))[:60].strip("-")
 
 
-def _write_active(cl: list[dict], merged_body: str | None = None) -> str:
+def _write_active(cl: list[dict], merged_body: str = "") -> str:
     today = datetime.now(ZoneInfo(config.TZ)).date().isoformat()
     os.makedirs(config.LESSONS_ACTIVE, exist_ok=True)
     n0 = cl[0]["_norm"]
     slug = _slug(n0.get("when") or "rule") or "rule"
     apath = os.path.join(config.LESSONS_ACTIVE, f"{slug}.md")
-    # prefer structured rule from best candidate
-    body = lesson_schema.active_rule_markdown(
-        {**n0, "status": "active"},
-        extra_body=merged_body or "",
-    )
-    # prepend promotion meta into frontmatter via rewrite
+    body = lesson_schema.active_rule_markdown({**n0, "status": "active"}, extra_body=merged_body)
     sources = [os.path.basename(c["path"]) for c in cl]
     body = body.replace(
         'status: "active"',
@@ -90,6 +83,7 @@ def _write_active(cl: list[dict], merged_body: str | None = None) -> str:
         fh.write(body)
     for c in cl:
         new_body = c["body"].replace('status: "candidate"', 'status: "promoted"', 1)
+        new_body = new_body.replace('status: "candidate_incomplete"', 'status: "promoted"', 1)
         with open(c["path"], "w", encoding="utf-8") as fh:
             fh.write(new_body)
     return apath
@@ -97,43 +91,40 @@ def _write_active(cl: list[dict], merged_body: str | None = None) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--force-path", default=None,
-                    help="Promote a single complete candidate even if n=1 (seed)")
+    ap.add_argument("--force-path", default=None)
     args = ap.parse_args()
 
     if args.force_path:
         c = _parse_candidate(args.force_path)
         if not c["_complete"]:
-            raise SystemExit(f"incomplete schema: {lesson_schema.validation_errors(c['_norm'])}")
+            raise SystemExit(f"incomplete: {lesson_schema.validation_errors(c['_norm'])}")
         path = _write_active([c], merged_body="(seeded via --force-path)")
         print(f"[promote] force-seeded -> {path}")
         return
 
     paths = sorted(glob.glob(os.path.join(config.LESSONS_CANDIDATE, "*.md")))
     cands = [_parse_candidate(p) for p in paths]
-    cands = [c for c in cands if c.get("status", "candidate") == "candidate"]
+    cands = [c for c in cands if c.get("status", "candidate") in ("candidate", "candidate_incomplete")]
+    # only complete ones promote
     print(f"[promote] {len(cands)} open candidates")
 
     promoted = 0
-    skipped_incomplete = 0
     for cl in _cluster(cands):
         complete = [c for c in cl if c["_complete"]]
         if not complete:
-            skipped_incomplete += len(cl)
-            print(f"[promote] skip cluster size={len(cl)} — incomplete schema")
+            print(f"[promote] skip incomplete cluster size={len(cl)}")
             continue
         cat = complete[0]["_norm"].get("error_category", "E")
         need = MIN_OCCURRENCES_OPS if cat == "D" else MIN_OCCURRENCES_MARKET
         if len(complete) < need:
-            print(f"[promote] cluster cat={cat} complete={len(complete)} "
-                  f"need={need} — hold")
+            print(f"[promote] hold cat={cat} complete={len(complete)} need={need}")
             continue
 
         digest = "\n\n".join(
             f"- when: {c['_norm'].get('when')}\n"
-            f"  do_instead: {c['_norm'].get('do_instead')}\n"
+            f"  do: {c['_norm'].get('do_instead')}\n"
             f"  wrong_if: {c['_norm'].get('wrong_if')}\n"
-            f"  evidence: {c['_norm'].get('evidence')} ({c['_norm'].get('date')})"
+            f"  evidence: {c['_norm'].get('evidence')}"
             for c in complete
         )
         merged = ""
@@ -141,21 +132,18 @@ def main() -> None:
             try:
                 merged = deepseek_client.chat(
                     [{"role": "system", "content":
-                      "Merge repeated lessons into ONE standing rule. "
-                      "Keep WHEN / DO / WRONG IF operational and short."},
+                      "Merge into ONE standing rule. Keep WHEN/DO/WRONG IF short."},
                      {"role": "user", "content": digest}],
                     model=config.MODEL_REFLECT, tools=False, max_tokens=800,
                 )
             except Exception as e:
-                print(f"[promote] LLM merge skipped: {e}")
-                merged = ""
+                print(f"[promote] merge skip: {e}")
 
         apath = _write_active(complete, merged_body=merged)
         promoted += 1
-        print(f"[promote] cluster of {len(complete)} cat={cat} -> {apath}")
+        print(f"[promote] -> {apath}")
 
-    print(f"[promote] done: {promoted} rules promoted; "
-          f"incomplete_skipped={skipped_incomplete}")
+    print(f"[promote] done: {promoted} rules")
 
 
 if __name__ == "__main__":

@@ -1,11 +1,6 @@
-"""Memory-tier context assembly (Section IV of the spec).
+"""Memory-tier context assembly.
 
-Every prediction run reads EXACTLY:
-  00_grounding/master_rubric.md          (handled by caller)
-  04_consolidated_memory.md              (full)
-  02_lessons/active/*                    (full — standing rules)
-  03_scoreboard/scoreboard.json          (summarized: last 10 runs + rolling acc)
-  last 10 trading days of 01_daily/general predict + reflect files
+Predict injects standing rules from 02_lessons/active/* every run.
 """
 from __future__ import annotations
 
@@ -28,18 +23,6 @@ def consolidated_memory() -> str:
     return _read(config.CONSOLIDATED_MEMORY).strip() or "(empty — first month)"
 
 
-def active_lessons() -> str:
-    """Full text of every active standing rule (for inject + reflect)."""
-    parts = []
-    for p in sorted(glob.glob(os.path.join(config.LESSONS_ACTIVE, "*.md"))):
-        if os.path.basename(p).startswith("."):
-            continue
-        text = _read(p).strip()
-        if text:
-            parts.append(f"### {os.path.basename(p)}\n{text}")
-    return lesson_schema.standing_rules_block(parts)
-
-
 def active_lesson_count() -> int:
     n = 0
     for p in glob.glob(os.path.join(config.LESSONS_ACTIVE, "*.md")):
@@ -50,10 +33,20 @@ def active_lesson_count() -> int:
     return n
 
 
+def active_lessons() -> str:
+    parts = []
+    for p in sorted(glob.glob(os.path.join(config.LESSONS_ACTIVE, "*.md"))):
+        if os.path.basename(p).startswith("."):
+            continue
+        text = _read(p).strip()
+        if text:
+            parts.append(f"### {os.path.basename(p)}\n{text}")
+    return lesson_schema.standing_rules_block(parts)
+
+
 def scoreboard_summary() -> str:
     board = scoreboard.load()
     runs = board.get("runs", [])
-    # Prefer graded runs that had a real prediction
     graded = [
         r for r in runs
         if r.get("topic", "general") == "general"
@@ -91,28 +84,25 @@ def scoreboard_summary() -> str:
 
 
 def recent_daily_logs() -> str:
-    preds = sorted(glob.glob(os.path.join(config.DAILY_GENERAL,
-                                          "*_predict.md")))
+    preds = sorted(glob.glob(os.path.join(config.DAILY_GENERAL, "*_predict.md")))
     dates = [re.sub(r"_predict\.md$", "", os.path.basename(p)) for p in preds]
     dates = dates[-config.MEMORY_WINDOW_DAYS:]
     parts = []
     for d in dates:
         pp = os.path.join(config.DAILY_GENERAL, f"{d}_predict.md")
         rp = os.path.join(config.DAILY_GENERAL, f"{d}_outcome.md")
-        # prefer outcome; reflect file naming varies
-        body_p = _read(pp)[:2500]
-        body_o = _read(rp)[:1500]
-        parts.append(f"### {d} predict (excerpt)\n{body_p}\n")
-        if body_o:
-            parts.append(f"### {d} outcome (excerpt)\n{body_o}\n")
-    return "\n".join(parts) or "(no recent daily logs)"
+        parts.append(f"===== {d} PREDICT =====\n{_read(pp)[:4000]}")
+        if os.path.exists(rp):
+            parts.append(f"===== {d} OUTCOME =====\n{_read(rp)[:2000]}")
+    return "\n\n".join(parts) or "(no prior daily logs — this is the first run)"
 
 
-def build_memory_block() -> str:
+def prediction_context() -> str:
     """Full memory block injected into the premarket prompt."""
     return (
+        "=== MEMORY CONTEXT ===\n\n"
+        f"[SCOREBOARD]\n{scoreboard_summary()}\n\n"
         f"[CONSOLIDATED MEMORY]\n{consolidated_memory()}\n\n"
         f"{active_lessons()}\n\n"
-        f"[SCOREBOARD SUMMARY]\n{scoreboard_summary()}\n\n"
-        f"[RECENT DAILY LOGS]\n{recent_daily_logs()}\n"
+        f"[LAST {config.MEMORY_WINDOW_DAYS} TRADING DAYS]\n{recent_daily_logs()}\n"
     )
