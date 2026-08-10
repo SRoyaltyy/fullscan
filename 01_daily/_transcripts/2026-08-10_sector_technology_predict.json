@@ -1,0 +1,271 @@
+{
+  "model": "deepseek-chat",
+  "messages": [
+    {
+      "role": "system",
+      "content": "SYSTEM LAYER — SHARED METHOD (same machine as general premarket predictor)\n\nThis layer is IDENTICAL in spirit to master_rubric for general:\n  - MEMORY_CONFIRM first line (scoped to THIS sector topic only)\n  - CHANNEL 1 is pre-fetched numbers: do not re-derive, do not alter\n  - CHANNEL 2 is live web_search: required categories, say \"checked, nothing material\" if empty\n  - You emit component scores only; the PIPELINE owns weighted totals, direction, magnitude\n  - Divergence: when leading factor sum fights the tape confirmation score, flag it; trust factors over tape\n  - Self-audit: lens, band, skew, same-shock double-count, single-ticker must not drive the sector ETF call\n\nOBJECT OF THE CALL\n  Predict the near-session environment for the SECTOR ETF named in the sector layer\n  (direction up/down/flat + magnitude band). This is NOT an SPX call and NOT a stock picker.\n\nCHANNEL 1 (injected by pipeline — trust these numbers)\n  Full general macro panel when present (VIX, yields, USD, oil, Asia/Europe, FedWatch, Fear&Greed, news).\n  Plus sector ETF vs SPY relative returns (1d/3d/1w/1m).\n\nCHANNEL 2 (your job — always cover before scoring)\n  1. Shared macro regime as it hits THIS sector (risk-on/off, real yields, USD)\n  2. Sector SPINE factors (defined in the sector layer — mandatory)\n  3. Sector secondary factors (taxonomy checklist)\n  4. Breadth / leadership inside the sector\n  5. Flows / positioning / crowding for the sector ETF or peers\n  6. Earnings/guidance or policy catalysts for the sector\n\nCOMPONENT SCORES (pipeline parses SECTOR_SCORES block)\n  S0_SHARED_MACRO (−2..+2): macro only as it maps to THIS sector\n  S1_SECTOR_FACTORS (−3..+3): net of spine + secondary HITs (specialized list in sector layer)\n  S2_BREADTH (−2..+2): expansion vs ETF-only / mega-name carry\n  S3_FLOWS_POSITIONING (−2..+2): inflows, outflows, crowding, forced flows\n  S4_ETF_TAPE (−1..+1): CONFIRMATION ONLY from Channel 1 relative returns — never the main thesis\n  MULTIPLIER (0.5–2.0), CONFIDENCE (0–1), REGIME (risk_on|risk_off|mixed)\n\nOUTPUT\n  Line 1: MEMORY_CONFIRM: ...\n  Free analysis Markdown\n  SECTOR_SCORES_BEGIN ... SECTOR_SCORES_END (exact keys)\n  Optional HIT_GRID_BEGIN ... END with label|status|confidence|date|url\n\n\nSECTOR LAYER — Technology (ETF: XLK)\n\nSPINE\n  + Hyperscaler CapEx raise / AI infra spend upside\n  + Semiconductor demand / foundry utilization up\n  + HBM / advanced packaging shortage / pricing power\n  + Cloud consumption growth acceleration\n  − Hyperscaler CapEx cut / AI spend peak narrative\n  − Semi downturn / inventory correction\n  − Cloud growth deceleration\n  − Export controls tightening\n\nSECONDARY\n  + Software net retention / large deals\n  − Software multiple compression / growth scare\n  +/− Sector rotation into/out of technology\n  SHARED: real yields rising/falling (duration), crowded long in AI/semis\n\nMACRO MAP (S0)\n  Real yields up: − duration/growth | Risk-on: + | USD: secondary for mega-cap domestic mix\n\nSEARCH PRIORITY (1d)\n  CapEx guidance, TSMC/foundry util, HBM, cloud growth, export rules, crowding/FMS\n\nDO NOT\n  Count CapEx + semis + HBM as three independent spines without noting one AI-infra cluster\n  Let NVDA alone define the sector call\n\n\n=== FULL TAXONOMY LABEL LIST (use exact strings in HIT_GRID) ===\n  - Risk-on tape / equity beta expansion\n  - Risk-off tape / flight to safety\n  - Real yields rising\n  - Real yields falling\n  - USD strengthening\n  - USD weakening\n  - Sector breadth expansion (% names up)\n  - Sector breadth failure (ETF up, names flat)\n  - Large-cap leadership inside sector\n  - Small/mid leadership inside sector\n  - High-beta leadership inside sector\n  - Low-beta leadership inside sector\n  - Sector ETF inflow / relative volume spike\n  - Sector ETF outflow / volume dry-up\n  - Crowded long (extreme relative performance + valuation)\n  - Index rebalance / inclusion tailwind\n  - Index exclusion / forced selling\n  - Hyperscaler CapEx raise / AI infra spend upside\n  - Semiconductor demand / foundry utilization up\n  - HBM / advanced packaging shortage pricing power\n  - Cloud consumption growth acceleration\n  - Software net retention / large deal upside\n  - Hyperscaler CapEx cut / AI spend peak narrative\n  - Semi downturn / inventory correction\n  - Cloud growth deceleration\n  - Export controls tightening\n  - Software multiple compression / growth scare\n  - Sector rotation into technology\n  - Sector rotation out of technology\n\n=== AMP/DAMP ONE-LINERS ===\nRisk-on tape / equity beta expansion: [+] cyclicals/tech/financials [−] defensives if pure flight-from-safety\nRisk-off tape / flight to safety: [+] utilities/staples/REITs as relative winners [−] cyclicals; polarity for cyclicals is negative, for defensives treat as regime context\nReal yields rising: [+] some banks/floaters [−] duration/growth/tech/REITs\nReal yields falling: [+] duration/growth [−] if driven by recession scare without easing\nUSD strengthening: [+] importers [−] commodity producers / EM-linked / exporters\nUSD weakening: [+] commodities / exporters [−] pure domestic if no other catalyst\nSector breadth expansion (% names up): [+] healthy leadership [−] if only 1–2 mega names carry ETF\nSector breadth failure (ETF up, names flat): [+] fade extension [−] if mega-cap IS the sector thesis (e.g. Mag7)\nLarge-cap leadership inside sector: context: quality bid; not always bullish for small-cap basket\nSmall/mid leadership inside sector: context: risk appetite inside sector\nHigh-beta leadership inside sector: [+] risk-on confirmation [−] late-cycle chase\nLow-beta leadership inside sector: [+] defensive regime [−] for cyclical sector scores\nSector ETF inflow / relative volume spike: [+] attention/positioning [−] already extended on flows\nSector ETF outflow / volume dry-up: [+] washout setup later [−] near-term demand\nCrowded long (extreme relative performance + valuation): [+] mean-reversion risk [−] structural multi-year compounder exceptions\nIndex rebalance / inclusion tailwind: [+] mechanical demand [−] one-day noise\nIndex exclusion / forced selling: [+] temporary [−] if fundamental too\nHyperscaler CapEx raise / AI infra spend upside: [+] semis/hardware [−] pure software until consumption confirms\nSemiconductor demand / foundry utilization up: \nHBM / advanced packaging shortage pricing power: \nCloud consumption growth acceleration: \nSoftware net retention / large deal upside: \nHyperscaler CapEx cut / AI spend peak narrative: hard sector kill\nSemi downturn / inventory correction: \nCloud growth deceleration: \nExport controls tightening: \nSoftware multiple compression / growth scare: \nSector rotation into technology: \nSector rotation out of technology: \n"
+    },
+    {
+      "role": "user",
+      "content": "TODAY: 2026-08-10 (America/New_York)\nSECTOR UNDER ANALYSIS (ONLY THIS ONE): Technology\nETF TO GRADE LATER: XLK\n\n=== MEMORY CONTEXT (THIS SECTOR ONLY) ===\n\n[SCOREBOARD]\nSector topic: sector:Technology\nRolling accuracy last 10 graded: dir=None mag=None (n=0)\nRolling accuracy last 30 graded: dir=None mag=None (n=0)\nLast runs:\n- 2026-08-08: predicted up/notable, actual pending% (ungraded)\n\n[STANDING ACTIVE LESSONS]\n### mega-cap-earnings-over-macro-drag.md\n---\ntrigger_pattern: \"Strong positive mega-cap earnings/AI momentum coincides with negative macro/geopolitical headlines (oil spike, China PMI miss, hawkish Fed) — market follows earnings unless futures independently confirm weakness.\"\ncorrected_behavior: \"When Channel 2 has an index-relevant positive mega-cap earnings catalyst and B6 futures are not negative: set B1 at least 0; cap B2/B3/B7 combined drag; FORBID predicted_direction=down unless futures or leading internals independently confirm weakness.\"\nfalsifier: \"Wrong if mega-cap earnings green but SPX still falls that day while futures were non-negative at the open.\"\ncurrent_behavior: \"Over-weight oil/China/Fed negatives vs Amazon/MSFT-type prints; call down.\"\nevidence_cited: \"2026-07-31 predicted down/mild; actual SPX +0.70%; Amazon +10% / Mag7 led.\"\nerror_category: \"B\"\nscope: \"general\"\ndate: \"2026-07-31\"\nstatus: \"active\"\nschema_ok: \"true\"\n---\n\n## RULE\nWhen Channel 2 has an index-relevant positive mega-cap earnings catalyst and B6 futures are not negative: set B1 at least 0; cap B2/B3/B7 combined drag; FORBID predicted_direction=down unless futures or leading internals independently confirm weakness.\n\n## WHEN IT FIRES\nStrong positive mega-cap earnings/AI momentum coincides with negative macro/geopolitical headlines — market follows earnings unless futures independently confirm weakness.\n\n## WRONG IF\nWrong if mega-cap earnings green but SPX still falls that day while futures were non-negative at the open.\n\n## EVIDENCE\n2026-07-31 predicted down/mild; actual SPX +0.70%; Amazon +10% / Mag7 led.\n\n### ops-missing-predict-file.md\n---\ntrigger_pattern: \"Scheduled trading day where premarket YYYY-MM-DD_predict.md is absent or empty at open/grading time.\"\ncorrected_behavior: \"OPS: verify predict.md exists with SCORES_BEGIN before 09:30 ET; retry if missing. At grading mark ops_fail=true and leave direction_hit/magnitude_hit null — never score as a market miss.\"\nfalsifier: \"Wrong if a present predict.md is marked ops_fail, or a missing file is still counted direction_hit=false.\"\ncurrent_behavior: \"Outcome grades null prediction as miss.\"\nevidence_cited: \"2026-08-02 and 2026-08-08 missing predict files.\"\nerror_category: \"D\"\nscope: \"ops\"\ndate: \"2026-08-08\"\nstatus: \"active\"\nschema_ok: \"true\"\n---\n\n## RULE\nOPS: verify predict.md exists with SCORES_BEGIN before 09:30 ET; retry if missing. At grading mark ops_fail=true and leave direction_hit/magnitude_hit null — never score as a market miss.\n\n## WHEN IT FIRES\nScheduled trading day where premarket predict.md is absent or empty.\n\n## WRONG IF\nWrong if a present predict.md is marked ops_fail, or a missing file is still counted direction_hit=false.\n\n## EVIDENCE\n2026-08-02 and 2026-08-08 missing predict files.\n\n[LAST 10 SECTOR LOGS]\n===== 2026-08-08 PREDICT =====\n# Sector Prediction — Technology — 2026-08-08\n\n- ETF: **XLK**\n- predicted_direction: **up**\n- predicted_magnitude_band: **notable**\n- total_score: **11.7** (mult 1.3)\n- regime: risk_on\n- divergence_flagged: **False**\n\n## Channel 1 ETF context\n\n```\nETF XLK vs SPY (yfinance, through 2026-08-07):\n  1d: XLK +1.42% | SPY +0.61% | rel +0.81%\n  3d: XLK +0.57% | SPY +0.25% | rel +0.32%\n  1w: XLK +7.20% | SPY +3.51% | rel +3.69%\n  1m: XLK +1.41% | SPY +2.87% | rel -1.45%\n```\n\nI have comprehensive data. Let me finalize the analysis and scores.\n\n**Synthesis:**\n\n**Regime**: Risk-on with improving breadth. Pictet \"pro-risk\", equal-weight S&P at all-time high. But 10Y at 4.69% (elevated real yields — negative for duration/growth), DXY weakening mildly. VIX ticked up on the rally day (unusual divergence). Mixed-to-risk-on for tech specifically.\n\n**Sector factors** (strongly positive):\n- Hyperscaler CapEx raise: $710-725B 2026, +89% YoY — strong HIT\n- Semi demand/foundry utilization: 94.1% surge forecast, TSMC full utilization — HIT\n- HBM/advanced packaging shortage: full utilization, pricing power — HIT\n- Cloud consumption acceleration: Dynatrace re-acceleration, cloud-native consumption — HIT\n- Export controls tightening: Jan 2026 BIS rule — negative HIT\n- Crowded long: BofA FMS 80% most crowded trade in 12 years — negative HIT\n\n**Breadth**: Equal-weight outperforming mega-caps through 2026 (rotation away from tech), but last week tech snapped back hard. XLK is mega-cap heavy (39% in NVDA/AAPL/MSFT). Mixed.\n\n**Flows/positioning**: Extreme crowding is the dominant risk. Inflows present but positioning stretched.\n\n**Tape**: 1w +3.69% rel, 1d +0.81% rel (strong snap-back), but 1m -1.45% rel (recent lag). Confirms fresh rotation back into tech.\n\n**Divergence**: 1m negative vs 1w strongly positive — the tape is confirming a fresh rotation back into tech after a month of lag. Factors and tape now align (both positive), so no major divergence, but the crowding factor is a dampener.\n\nLet me finalize scores.\n\n- S0_SHARED_MACRO: +1 (risk-on, USD weak, but elevated real yields dampen)\n- S1_SECTOR_FACTORS: +2 (strong AI/semi/cloud positives, offset by crowding + export controls)\n- S2_BREADTH: +1 (broad market breadth good, but tech-specific breadth is mega-cap heavy)\n- S3_FLOWS_POSITIONING: -1 (extreme crowding is a real risk)\n- S4_ETF_TAPE: +1 (1w/1d confirm, 1m lag)\n- MULTIPLIER: 1.3\n- CONFIDENCE: 0.7\n\nMEMORY_CONFIRM: No prior runs for sector Technology — establishing baseline. Rolling accuracy N/A (n=0). No standing lessons yet.\n\n---\n\n**MEMORY_CONFIRM:** Reviewed prior runs for sector Technology from (no prior runs — establishing baseline); rolling accuracy N/A (n=0); key standing lesson: none yet — first run for this sector.\n\n## Technology (XLK) — Sector Environment Analysis — 2026-08-08\n\n### Channel 2 Research Summary\n\n**1. Shared macro regime:** Risk-on with genuinely improving breadth. Pictet's August barometer remains \"pro-risk,\" citing resilient growth, AI-driven corporate spending, and \"improved market breadth\"; the equal-weight S&P 500 quietly hit an all-time high in July (\"a sign of genuine breadth\"). However, the 10Y nominal yield sits elevated at ~4.69% (above the post-2008 norm), implying real yields are not falling — a mild headwind for long-duration growth/tech. The DXY weakened ~0.93% over the past month (~99.9), mildly supportive for tech exporters. Notably, VIX ticked UP on the Aug 7 tech-led rally day — an unusual divergence worth flagging.\n\n**2. Sector factor taxonomy (dated evidence):**\n- **Hyperscaler CapEx raise / AI infra spend upside — HIT** (high confidence): Meta/MSFT/AMZN/GOOG expected to spend ~$710–725B in 2026, up ~89% YoY (LinkedIn/CFA/Dell'Oro, July 2026). Goldman consensus ~$527B. This is the core driver.\n- **Semiconductor demand / foundry utilization up — HIT** (high): IDC forecasts semis to reach $1.29T in 2026 (+52.8%); GlobalWafers reports high utilization and new LTA talks (Aug 5, 2026); Samsung foundry utilization strong.\n- **HBM / advanced packaging shortage pricing power — HIT** (high): TSMC advanced-packaging lines at full utilization; Omdia cites HBM supply strain and packaging as a bottleneck (94.1% forecast surge).\n- **Cloud consumption growth acceleration — HIT** (medium): Dynatrace re-accelerated with organic net-new ARR +41% and cloud-native logs consumption +100% YoY (Q1 FY27).\n- **Export controls tightening — HIT** (medium, dampening): Jan 2026 BIS rule revised export license review for advanced computing semis (new TPP thresholds); Chip Security Act context. A structural overhang.\n- **Crowded long — HIT** (high, dampening): BofA June 2026 FMS: 80% of managers named long global semis the most crowded trade in the survey's 12-year history; UBS/Citi warned June 22, 2026 of structural downside fragility from crowded positioning. This is the single biggest risk to the sector's near-term tape.\n\n**3. Sector breadth / leadership:** Through 2026, equal-weight has been outperforming mega-caps — a rotation AWAY from tech dominance (FXCM, March 2026). XLK is heavily mega-cap concentrated (~39% in NVDA/AAPL/MSFT, ~40% with AVGO). The last week saw a sharp snap-back led by the Mag7 (\"return of the Magnificent 7,\" Aug 7). So tech breadth is narrow/mega-cap-led even as the broad market breadth is healthy.\n\n**4. Flows / positioning / crowding:** Extreme crowding in AI/semis (see above). XLK saw some inflows but positioning is stretched; the crowding factor dominates the flow picture.\n\n**5. Earnings / policy catalysts:** Q2 earnings season showed mega-cap tech capex strength; hyperscaler capex guidance continues to rise. Policy overhang from export controls.\n\n### Section A: Regime\n**A1.** Risk-on (with a crowding caveat)\n**A2.** Multiplier 1.3 — risk-on tape + strong AI/semi fundamentals, but extreme crowding and elevated real yields cap conviction.\n\n### Section B: Component Scores\n- **S0_SHARED_MACRO (+1):** Risk-on, USD weak, improving breadth — but elevated real yields (4.69\n\n=== SECTOR FACTOR TAXONOMY (exact labels) ===\n- Risk-on tape / equity beta expansion\n- Risk-off tape / flight to safety\n- Real yields rising\n- Real yields falling\n- USD strengthening\n- USD weakening\n- Sector breadth expansion (% names up)\n- Sector breadth failure (ETF up, names flat)\n- Large-cap leadership inside sector\n- Small/mid leadership inside sector\n- High-beta leadership inside sector\n- Low-beta leadership inside sector\n- Sector ETF inflow / relative volume spike\n- Sector ETF outflow / volume dry-up\n- Crowded long (extreme relative performance + valuation)\n- Index rebalance / inclusion tailwind\n- Index exclusion / forced selling\n- Hyperscaler CapEx raise / AI infra spend upside\n- Semiconductor demand / foundry utilization up\n- HBM / advanced packaging shortage pricing power\n- Cloud consumption growth acceleration\n- Software net retention / large deal upside\n- Hyperscaler CapEx cut / AI spend peak narrative\n- Semi downturn / inventory correction\n- Cloud growth deceleration\n- Export controls tightening\n- Software multiple compression / growth scare\n- Sector rotation into technology\n- Sector rotation out of technology\n\n=== AMP/DAMP ===\nRisk-on tape / equity beta expansion: [+] cyclicals/tech/financials [−] defensives if pure flight-from-safety\nRisk-off tape / flight to safety: [+] utilities/staples/REITs as relative winners [−] cyclicals; polarity for cyclicals is negative, for defensives treat as regime context\nReal yields rising: [+] some banks/floaters [−] duration/growth/tech/REITs\nReal yields falling: [+] duration/growth [−] if driven by recession scare without easing\nUSD strengthening: [+] importers [−] commodity producers / EM-linked / exporters\nUSD weakening: [+] commodities / exporters [−] pure domestic if no other catalyst\nSector breadth expansion (% names up): [+] healthy leadership [−] if only 1–2 mega names carry ETF\nSector breadth failure (ETF up, names flat): [+] fade extension [−] if mega-cap IS the sector thesis (e.g. Mag7)\nLarge-cap leadership inside sector: context: quality bid; not always bullish for small-cap basket\nSmall/mid leadership inside sector: context: risk appetite inside sector\nHigh-beta leadership inside sector: [+] risk-on confirmation [−] late-cycle chase\nLow-beta leadership inside sector: [+] defensive regime [−] for cyclical sector scores\nSector ETF inflow / relative volume spike: [+] attention/positioning [−] already extended on flows\nSector ETF outflow / volume dry-up: [+] washout setup later [−] near-term demand\nCrowded long (extreme relative performance + valuation): [+] mean-reversion risk [−] structural multi-year compounder exceptions\nIndex rebalance / inclusion tailwind: [+] mechanical demand [−] one-day noise\nIndex exclusion / forced selling: [+] temporary [−] if fundamental too\nHyperscaler CapEx raise / AI infra spend upside: [+] semis/hardware [−] pure software until consumption confirms\nSemiconductor demand / foundry utilization up: \nHBM / advanced packaging shortage pricing power: \nCloud consumption growth acceleration: \nSoftware net retention / large deal upside: \nHyperscaler CapEx cut / AI spend peak narrative: hard sector kill\nSemi downturn / inventory correction: \nCloud growth deceleration: \nExport controls tightening: \nSoftware multiple compression / growth scare: \nSector rotation into technology: \nSector rotation out of technology: \n\nETF proxy: XLK\n\n\n=== CHANNEL 1: PRE-FETCHED DATA (exact, do not alter) ===\n[VIX: 15.16 as of 2026-08-10 | 1d +0.26 | 1w -0.7]\n[VIX3M: 18.86 | ratio VIX/VIX3M: 0.804]\n[DGS30: 5.22 as of 2026-08-06 | 1d +0.05 | 1w +0.01 | 1m +0.16]\n[DGS10: 4.69 as of 2026-08-06 | 1d +0.06 | 1w +0.01 | 1m +0.13]\n[DFII10: 2.43 as of 2026-08-06 | 1d +0.02 | 1w +0.02 | 1m +0.12]\n[BAMLH0A0HYM2: 2.71 as of 2026-08-06 | 1d -0.04 | 1w -0.13 | 1m +0.01]\n[RRPONTSYD: 1.45 as of 2026-08-07 | 1d +0.021 | 1w -0.701 | 1m -4.322]\n[USEPUINDXD: 234.17 as of 2026-08-09 | 1d +97.21 | 1w -154.27 | 1m +37.34]\n[SOFR-IORB spread: -0.03 (SOFR 3.62, IORB 3.65)]\n[CL=F: 3.16% 1d]\n[BZ=F: 3.05% 1d]\n[GC=F: 0.98% 1d]\n[DXY: 1d 0.21% | 1m -1.15%]\n[ES=F premarket: -0.02% vs prev close]\n[NQ=F premarket: -0.17% vs prev close]\n[ASIA (final): Nikkei 2.08%, Hang Seng 1.05%, Shanghai 0.67%, Kospi 0.65%, ASX200 -0.09% — composite avg 0.87%]\n[EUROPE (in progress (partial)): FTSE -0.47%, DAX 0.06%, CAC -0.09%, EuroStoxx50 0.15% — composite avg -0.09%]\n[CME FedWatch: CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search]\n[Fear & Greed: 63.7 (Greed) — from Supabase macro_indicators as of 2026-08-09 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)]\n[5-day corr 10Y yield vs SPX: -0.842 (2026-08-03..2026-08-10)]\n[NEWS last 24h (30 items from Supabase):\n  - (rss_yahoo_finance) Progressive (PGR) Is Winning Market Share. Can It Keep Growing?\n  - (rss_yahoo_finance) Hedge Funds Start To Bet On A Bitcoin Rally\n  - (rss_yahoo_finance) Why This Investor Sold Autodesk (ADSK) Over AI Risks\n  - (rss_yahoo_finance) Zoetis (ZTS) Looked Like a Winner. What Went Wrong?\n  - (rss_yahoo_finance) Daily – Vickers Top Buyers & Sellers for 08/10/2026\n  - (rss_yahoo_finance) Sumitomo buys 33.3% equity in UK’s Gwynt Glas wind farm project\n  - (rss_aljazeera_economy) Jeff Bezos consortium nears deal to buy stake in Liverpool FC: Reports\n  - (rss_marketwatch_top) Intel plans to sell $15 billion worth of stock after it has risen 400% in a year\n  - (rss_aljazeera_economy) Gaza honours Al Jazeera’s Anas al-Sharif and Mohammed Qraiqea\n  - (rss_aljazeera_economy) One million evacuated as Typhoon Dolphin pummels east China: What we know\n  - (rss_aljazeera_economy) ‘Long-range sanctions’: Ukraine hopes strikes cause Russia fear and losses\n  - (rss_yahoo_finance) SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock\n  - (rss_yahoo_finance) Strategy Continues To Sell Bitcoin And Common Stock\n  - (rss_yahoo_finance) Daily – Vickers Top Insider Picks for 08/10/2026\n  - (rss_yahoo_finance) Technical Assessment: Bullish in the Intermediate-Term\n  - (rss_bbc_business) Consortium advances talks for stake in Liverpool\n  - (rss_aljazeera_economy) Has the army turned the page on control of western Sudan?\n  - (rss_marketwatch_top) Apple’s stock could underperform, especially without an ‘all-glass’ iPhone, this analyst warns\n  - (rss_bbc_business) Water outage forces Chessington theme park to close\n  - (rss_bbc_business) New school uniform rules won't cut costs, says mum\n  - (rss_aljazeera_economy) Why choosing low-fat dairy is not necessarily better for your health\n  - (rss_aljazeera_economy) Nigel Farage vows to deport foreign criminals from UK prisons\n  - (rss_aljazeera_economy) Taiwan holds military drills to prepare for invasion by China\n  - (rss_aljazeera_economy) Former MP opens fire in Thailand’s second shooting within days\n  - (rss_yahoo_finance) Ex-chief winemaker at Australia’s Chapel Hill takes Haselgrove CEO post\n  - (rss_yahoo_finance) Chip equipment stocks rise after Taiwan Semiconductor revenue surges 45%\n  - (rss_yahoo_finance) ADNOC Gas reports net income of $665m in Q2 2026\n  - (rss_yahoo_finance) American Airlines (AAL) Posted Record Revenue, but is the Stock too Risky Amid Rising Fuel Costs?\n  - (rss_yahoo_finance) T. Rowe Price Defends Meme Inclusion in Active Crypto ETF\n  - (rss_yahoo_finance) Daily Spotlight: GARP Sectors\n\n=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\nETF XLK vs SPY (yfinance, through 2026-08-10):\n  1d: XLK +0.26% | SPY +0.08% | rel +0.18%\n  3d: XLK +1.37% | SPY +0.53% | rel +0.84%\n  1w: XLK +5.85% | SPY +2.14% | rel +3.71%\n  1m: XLK +1.44% | SPY +2.51% | rel -1.06%\n\nSuggested web_search seeds (expand; cover all Channel 2 categories):\n- risk on equity market breadth 2026\n- Technology risk on equity market breadth\n- high beta leadership stocks 2026\n- Technology high beta leadership stocks\n- risk off flight to safety stocks 2026\n- Technology risk off flight to safety stocks\n- defensive rotation equities 2026\n- Technology defensive rotation equities\n- real yields rising TIPS 2026\n- Technology real yields rising TIPS\n- 10 year real yield technology duration 2026\n- Technology 10 year real yield technology duration\n- real yields falling 2026\n- Technology real yields falling\n- TIPS real yield decline growth stocks 2026\n- Technology TIPS real yield decline growth stocks\n\nExecute the shared method + THIS sector layer now. Specialize S1 to the spine factors. MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_zfiv6IUfG5c4Ai646t4y0263",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"hyperscaler capex 2026 AI infrastructure spending guidance\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_V1lv8EHS9zODPREeQ21d5834",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"TSMC foundry utilization semiconductor demand August 2026\"}"
+          }
+        },
+        {
+          "index": 2,
+          "id": "call_02_ZKHniB9IDCnR3C383w8E4553",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"HBM advanced packaging shortage pricing power 2026\"}"
+          }
+        },
+        {
+          "index": 3,
+          "id": "call_03_OEs41jctpBwlqrc2EFBV9984",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"cloud consumption growth acceleration hyperscaler earnings 2026\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_zfiv6IUfG5c4Ai646t4y0263",
+      "content": "{\"query\": \"hyperscaler capex 2026 AI infrastructure spending guidance\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_V1lv8EHS9zODPREeQ21d5834",
+      "content": "{\"query\": \"TSMC foundry utilization semiconductor demand August 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_02_ZKHniB9IDCnR3C383w8E4553",
+      "content": "{\"query\": \"HBM advanced packaging shortage pricing power 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_03_OEs41jctpBwlqrc2EFBV9984",
+      "content": "{\"query\": \"cloud consumption growth acceleration hyperscaler earnings 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The searches returned empty. Let me try different queries.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_Fjq9LK8GUJHMZkrNE8pw3201",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"hyperscaler capex 2026 AI spending\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_afLJuYeT7Lt1UtRug4409670",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"TSMC revenue surge chip equipment stocks\"}"
+          }
+        },
+        {
+          "index": 2,
+          "id": "call_02_4dEbefN3ppADioSgBFbo5851",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"semiconductor demand foundry utilization 2026\"}"
+          }
+        },
+        {
+          "index": 3,
+          "id": "call_03_dRKX2xmP4qnaGYXD2Y5W9344",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"tech sector crowding positioning AI semis August 2026\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_Fjq9LK8GUJHMZkrNE8pw3201",
+      "content": "{\"query\": \"hyperscaler capex 2026 AI spending\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_afLJuYeT7Lt1UtRug4409670",
+      "content": "{\"query\": \"TSMC revenue surge chip equipment stocks\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_02_4dEbefN3ppADioSgBFbo5851",
+      "content": "{\"query\": \"semiconductor demand foundry utilization 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_03_dRKX2xmP4qnaGYXD2Y5W9344",
+      "content": "{\"query\": \"tech sector crowding positioning AI semis August 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The search backend is returning empty results. Let me try a few more targeted queries.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_ddpLVoOOWQX9SARS0hAh2318",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"Taiwan Semiconductor revenue surge 45% chip equipment\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_KpQcK6Qi5anq2byrxFPL9249",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"Intel stock sale $15 billion AI\"}"
+          }
+        },
+        {
+          "index": 2,
+          "id": "call_02_vUmZJI3Ro4bOvwsVy9U61954",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"Apple stock underperform analyst warning\"}"
+          }
+        },
+        {
+          "index": 3,
+          "id": "call_03_27BnlQbatUF9cx9Qrbxx3488",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"technology sector rotation August 2026\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_ddpLVoOOWQX9SARS0hAh2318",
+      "content": "{\"query\": \"Taiwan Semiconductor revenue surge 45% chip equipment\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_KpQcK6Qi5anq2byrxFPL9249",
+      "content": "{\"query\": \"Intel stock sale $15 billion AI\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_02_vUmZJI3Ro4bOvwsVy9U61954",
+      "content": "{\"query\": \"Apple stock underperform analyst warning\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_03_27BnlQbatUF9cx9Qrbxx3488",
+      "content": "{\"query\": \"technology sector rotation August 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The search backend is returning empty results across all queries. I'll rely on the pre-fetched Channel 1 data and the news items provided, plus the memory context from the prior run. Let me note the available news items that are relevant:\n\nFrom the NEWS feed:\n- \"Chip equipment stocks rise after Taiwan Semiconductor revenue surges 45%\" — confirms TSMC strength\n- \"Intel plans to sell $15 billion worth of stock after it has risen 400% in a year\" — Intel strength\n- \"Apple's stock could underperform, especially without an 'all-glass' iPhone, this analyst warns\" — Apple caution\n- \"Why This Investor Sold Autodesk (ADSK) Over AI Risks\" — software caution\n\nLet me do a couple more searches to try to get live data.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_4m0J9id9xjuYSzeN4rLp6379",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"semiconductor stocks rally\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_cox7jrqwc36AlnEhaVgu7458",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"AI capex spending peak narrative\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_4m0J9id9xjuYSzeN4rLp6379",
+      "content": "{\"query\": \"semiconductor stocks rally\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_cox7jrqwc36AlnEhaVgu7458",
+      "content": "{\"query\": \"AI capex spending peak narrative\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The search backend is consistently returning empty results. I'll proceed with the analysis using the pre-fetched Channel 1 data, the news feed items, and the memory context from the prior run (2026-08-08). I'll note that live search returned empty and rely on the available data.\n\nLet me compile the analysis.\n\n**MEMORY_CONFIRM:** Reviewed prior runs for sector Technology: last run 2026-08-08 predicted up/notable (ungraded). Rolling accuracy N/A (n=0). Standing lessons: mega-cap-earnings-over-macro-drag (active) — when strong positive mega-cap/AI momentum coincides with negative macro, market follows earnings unless futures independently confirm weakness. Also ops lesson about missing predict files.\n\nNow let me analyze the data.\n\n**Channel 1 data:**\n- VIX 15.16, low, 1w -0.7 (calm)\n- 10Y at 4.69%, 30Y 5.22%, real yield (DFII10) 2.43% — all rising 1m, elevated real yields = negative for duration/growth\n- HY spread 2.71, tightening 1w (-0.13) — risk-on credit\n- DXY 1m -1.15% (weakening) — supportive for tech exporters\n- ES premarket -0.02%, NQ premarket -0.17% — flat to slightly negative\n- Asia strong (+0.87% avg), Europe slightly negative (-0.09%)\n- Fear & Greed 63.7 (Greed)\n- 5-day corr 10Y vs SPX: -0.842 (strong negative — yields up = SPX down)\n- News: TSMC revenue surges 45%, chip equipment stocks rise; Intel up 400% in a year selling $15B stock; Apple analyst warns underperformance; Autodesk sold over AI risks\n\n**Sector ETF tape (Channel 1):**\n- 1d: XLK +0.26% | SPY +0.08% | rel +0.18%\n- 3d: XLK +1.37% | SPY +0.53% | rel +0.84%\n- 1w: XLK +5.85% | SPY +2.14% | rel +3.71%\n- 1m: XLK +1.44% | SPY +2.51% | rel -1.06%\n\nThe tape confirms strong 1w relative outperformance (+3.71%), 3d +0.84%, 1d +0.18%. But 1m still negative (-1.06%) — recent lag being recovered.\n\n**Analysis:**\n\nThe AI/semi spine remains strongly positive:\n- TSMC revenue surges 45% (news) — confirms semi demand\n- Chip equipment stocks rising — confirms foundry/capex\n- Intel up 400% in a year — AI momentum\n- Hyperscaler capex $710-725B 2026 (+89% YoY) from prior run context\n\nDampeners:\n- Elevated real yields (2.43%, rising) — negative for duration/growth\n- Crowded long in AI/semis (from prior run, BofA FMS 80%)\n- Apple analyst warning (underperformance risk)\n- Autodesk sold over AI risks (software caution)\n- 5-day corr 10Y vs SPX strongly negative (-0.842) — yields are the macro driver\n- NQ premarket slightly negative (-0.17%)\n\nThe mega-cap-earnings-over-macro-drag lesson: strong positive mega-cap/AI momentum (TSMC 45% surge, chip equipment rally) with futures not negative (ES -0.02%, NQ -0.17% — essentially flat, not negative). Per the lesson, set B1 at least 0, cap macro drag, don't call down unless futures independently confirm weakness. Futures are flat, not negative.\n\n**Scores:**\n- S0_SHARED_MACRO: +1 (risk-on, USD weak, HY tightening, but elevated real yields dampen)\n- S1_SECTOR_FACTORS: +2 (strong AI/semi/cloud positives — TSMC 45%, chip equipment rally, capex raise; offset by crowding + Apple/software caution)\n- S2_BREADTH: +1 (broad market healthy, tech is mega-cap heavy but 1w snap-back broad)\n- S3_FLOWS_POSITIONING: -1 (extreme crowding remains the dominant risk)\n- S4_ETF_TAPE: +1 (1w +3.71% rel confirms, 1d +0.18% mild)\n- MULTIPLIER: 1.2\n- CONFIDENCE: 0.65\n\nDirection: up. Magnitude: notable (given strong 1w momentum but crowding + yields cap).\n\nLet me finalize.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_3Q62uM008juhzFP721Ur4418",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"XLK technology ETF flows inflows\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_NBBzCaR7oUWKMlcPvUa24044",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"semiconductor export controls BIS 2026\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_3Q62uM008juhzFP721Ur4418",
+      "content": "{\"query\": \"XLK technology ETF flows inflows\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_NBBzCaR7oUWKMlcPvUa24044",
+      "content": "{\"query\": \"semiconductor export controls BIS 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "Search backend continues to return empty. I'll proceed with the analysis based on available data.\n\n**MEMORY_CONFIRM:** Reviewed prior runs for sector Technology: last run 2026-08-08 predicted up/notable (ungraded). Rolling accuracy N/A (n=0). Standing lessons: mega-cap-earnings-over-macro-drag (active) — strong positive mega-cap/AI momentum with non-negative futures means don't call down; ops-missing-predict-file (ops scope).\n\n## Technology (XLK) — Sector Environment Analysis — 2026-08-10\n\n### Channel 2 Research Summary\n\n**Live web_search note:** Search backend returned empty results across all queries (hyperscaler capex, TSMC/foundry, HBM, cloud, crowding, flows, export controls). Relying on pre-fetched Channel 1 data, the 24h news feed, and prior-run memory context. Flagging lower confidence on fresh Channel 2 evidence.\n\n**1. Shared macro regime (as it maps to tech):** Risk-on with a duration headwind. VIX at 15.16 (calm, 1w -0.7), HY spread tightening (-0.13 1w to 2.71), Fear & Greed 63.7 (Greed), DXY weakening 1m (-1.15%) — all supportive for tech beta. BUT the 10Y at 4.69% and real yield (DFII10) at 2.43% are both elevated and rising 1m (+0.12 real), and the 5-day correlation of 10Y vs SPX is strongly negative (-0.842) — meaning yields are the dominant macro driver and rising real yields are a genuine headwind for long-duration growth/tech. This is the key macro tension: risk-on tape vs elevated real yields.\n\n**2. Sector spine factors (from news feed + prior context):**\n- **Hyperscaler CapEx raise / AI infra spend upside — HIT** (high, from prior run): $710–725B 2026, +89% YoY. Core driver intact.\n- **Semiconductor demand / foundry utilization up — HIT** (high, fresh): News feed confirms \"Chip equipment stocks rise after Taiwan Semiconductor revenue surges 45%\" — TSMC strength is live and fresh. Intel up 400% in a year, selling $15B stock (AI momentum). IDC semis to $1.29T 2026 (+52.8%).\n- **HBM / advanced packaging shortage pricing power — HIT** (high, prior context): TSMC advanced-packaging at full utilization; Omdia HBM supply strain.\n- **Cloud consumption growth acceleration — HIT** (medium, prior context): Dynatrace re-acceleration, cloud-native consumption +100% YoY.\n- **Export controls tightening — HIT** (medium, dampening): Jan 2026 BIS rule overhang.\n- **Crowded long — HIT** (high, dampening): BofA FMS 80% most crowded trade in 12 years.\n- **Software caution — HIT** (medium, dampening): News feed \"Why This Investor Sold Autodesk (ADSK) Over AI Risks\" and \"Apple's stock could underperform... this analyst warns\" — software/mega-cap caution signals.\n\n**3. Sector breadth / leadership:** XLK is mega-cap heavy (~39% NVDA/AAPL/MSFT). The 1w tape shows a strong snap-back (+3.71% rel), suggesting broad tech participation in the rally. But Apple analyst warning and Autodesk AI-risk selling suggest some software/mega-cap caution. Breadth is decent but mega-cap-led.\n\n**4. Flows / positioning / crowding:** Extreme crowding in AI/semis remains the dominant structural risk (BofA FMS 80%). No fresh flow data available from search. Positioning stretched.\n\n**5. Earnings / policy catalysts:** TSMC revenue surge 45% is the freshest catalyst (news). Hyperscaler capex guidance continues to rise. Export control policy overhang persists.\n\n### Section A: Regime\n**A1.** Risk-on (with crowding + real-yield caveats)\n**A2.** Multiplier 1.2 — risk-on tape + strong AI/semi fundamentals (TSMC 45% fresh), but extreme crowding, elevated real yields, and software caution cap conviction.\n\n### Section B: Component Scores\n- **S0_SHARED_MACRO (+1):** Risk-on, USD weak, HY tightening, VIX calm — but elevated/rising real yields (2.43%) and strong negative 10Y-SPX correlation are a genuine duration headwind for tech. Net mildly positive.\n- **S1_SECTOR_FACTORS (+2):** Strong AI/semi/cloud positives (TSMC 45% surge, chip equipment rally, capex raise, HBM shortage) offset by crowding, export controls, and software/mega-cap caution (Apple, Autodesk). Net solidly positive.\n- **S2_BREADTH (+1):** Broad market healthy, 1w tech snap-back broad, but XLK mega-cap heavy and some software caution.\n- **S3_FLOWS_POSITIONING (-1):** Extreme crowding in AI/semis remains the dominant risk; no fresh inflow catalyst to offset.\n- **S4_ETF_TAPE (+1):** 1w +3.71% rel strongly confirms fresh rotation into tech; 1d +0.18% mild; 1m still -1.06% (recent lag being recovered). Confirmation only.\n- **MULTIPLIER:** 1.2\n- **CONFIDENCE:** 0.65\n\n**Divergence check:** Leading factors (S0+S1+S2+S3 = +3) vs tape confirmation (S4 = +1). Factors and tape align positive. No divergence. The crowding dampener (S3) is the main offset but doesn't flip direction.\n\n**Direction:** up. **Magnitude:** notable (strong 1w momentum + fresh TSMC catalyst, but crowding + real yields cap the magnitude).\n\nPer the mega-cap-earnings-over-macro-drag lesson: TSMC 45% surge is a strong index-relevant positive mega-cap catalyst, futures are non-negative (ES -0.02%, NQ -0.17% — essentially flat), so direction must not be down. Confirmed up.\n\n---\n\n**MEMORY_CONFIRM:** Reviewed prior runs for sector Technology: last run 2026-08-08 predicted up/notable (ungraded). Rolling accuracy N/A (n=0). Standing lessons: mega-cap-earnings-over-macro-drag (active — applies here: TSMC 45% surge + non-negative futures → forbid down); ops-missing-predict-file (ops scope).\n\n## Technology (XLK) — Sector Environment Analysis — 2026-08-10\n\n### Channel 2 Research Summary\n\n**Live web_search note:** Search backend returned empty results across all queries (hyperscaler capex, TSMC/foundry, HBM, cloud, crowding, flows, export controls). Relying on pre-fetched Channel 1 data, the 24h news feed, and prior-run memory context. Flagging lower confidence on fresh Channel 2 evidence.\n\n**1. Shared macro regime (as it maps to tech):** Risk-on with a duration headwind. VIX 15.16 (calm, 1w -0.7), HY spread tightening (-0.13 1w to 2.71), Fear & Greed 63.7 (Greed), DXY weakening 1m (-1.15%) — all supportive for tech beta. BUT 10Y at 4.69% and real yield (DFII10) at 2.43% are elevated and rising 1m, and the 5-day 10Y-vs-SPX correlation is strongly negative (-0.842) — yields are the dominant macro driver and rising real yields are a genuine headwind for long-duration growth/tech. Key tension: risk-on tape vs elevated real yields.\n\n**2. Sector spine factors:**\n- **Hyperscaler CapEx raise / AI infra spend upside — HIT** (high): $710–725B 2026, +89% YoY (prior context). Core driver intact.\n- **Semiconductor demand / foundry utilization up — HIT** (high, fresh): News confirms \"Chip equipment stocks rise after Taiwan Semiconductor revenue surges 45%.\" Intel up 400% in a year, selling $15B stock. IDC semis to $1.29T 2026 (+52.8%).\n- **HBM / advanced packaging shortage pricing power — HIT** (high): TSMC advanced-packaging at full utilization; Omdia HBM supply strain.\n- **Cloud consumption growth acceleration — HIT** (medium): Dynatrace re-acceleration, cloud-native consumption +100% YoY.\n- **Export controls tightening — HIT** (medium, dampening): Jan 2026 BIS rule overhang.\n- **Crowded long — HIT** (high, dampening): BofA FMS 80% most crowded trade in 12 years.\n- **Software caution — HIT** (medium, dampening): News \"Why This Investor Sold Autodesk (ADSK) Over AI Risks\" and \"Apple's stock could underperform... this analyst warns.\"\n\n**3. Sector breadth / leadership:** XLK mega-cap heavy (~39% NVDA/AAPL/MSFT). 1w tape shows strong snap-back (+3.71% rel) suggesting broad tech participation, but Apple warning + Autodesk AI-risk selling signal some software/mega-cap caution. Breadth decent but mega-cap-led.\n\n**4. Flows / positioning / crowding:** Extreme crowding in AI/semis remains dominant structural risk (BofA FMS 80%). No fresh flow data. Positioning stretched.\n\n**5. Earnings / policy catalysts:** TSMC revenue surge 45% is freshest catalyst. Hyperscaler capex guidance rising. Export control overhang persists.\n\n### Section A: Regime\n**A1.** Risk-on (with crowding + real-yield caveats)\n**A2.** Multiplier 1.2 — risk-on tape + strong AI/semi fundamentals (TSMC 45% fresh), but extreme crowding, elevated real yields, and software caution cap conviction.\n\n### Section B: Component Scores\n- **S0_SHARED_MACRO (+1):** Risk-on, USD weak, HY tightening, VIX calm — but elevated/rising real yields (2.43%) and strong negative 10Y-SPX correlation are a genuine duration headwind for tech. Net mildly positive.\n- **S1_SECTOR_FACTORS (+2):** Strong AI/semi/cloud positives (TSMC 45% surge, chip equipment rally, capex raise, HBM shortage) offset by crowding, export controls, and software/mega-cap caution (Apple, Autodesk). Net solidly positive.\n- **S2_BREADTH (+1):** Broad market healthy, 1w tech snap-back broad, but XLK mega-cap heavy and some software caution.\n- **S3_FLOWS_POSITIONING (-1):** Extreme crowding in AI/semis remains dominant risk; no fresh inflow catalyst to offset.\n- **S4_ETF_TAPE (+1):** 1w +3.71% rel strongly confirms fresh rotation into tech; 1d +0.18% mild; 1m still -1.06% (recent lag being recovered). Confirmation only.\n- **MULTIPLIER:** 1.2\n- **CONFIDENCE:** 0.65\n\n**Divergence check:** Leading factors (S0+S1+S2+S3 = +3) vs tape confirmation (S4 = +1). Factors and tape align positive. No divergence. Crowding dampener (S3) is the main offset but doesn't flip direction.\n\n**Direction:** up. **Magnitude:** notable (strong 1w momentum + fresh TSMC catalyst, but crowding + real yields cap magnitude).\n\nPer mega-cap-earnings-over-macro-drag lesson: TSMC 45% surge is a strong index-relevant positive mega-cap catalyst, futures non-negative (ES -0.02%, NQ -0.17% — essentially flat), so direction must not be down. Confirmed up.\n\nSECTOR_SCORES_BEGIN\nS0_SHARED_MACRO: 1\nS1_SECTOR_FACTORS: 2\nS2_BREADTH: 1\nS3_FLOWS_POSITIONING: -1\nS4_ETF_TAPE: 1\nMULTIPLIER: 1.2\nCONFIDENCE: 0.65\nREGIME: risk_on\nSECTOR_SCORES_END\n\nHIT_GRID_BEGIN\nHyperscaler CapEx raise / AI infra spend upside|HIT|high|2026-08-10|prior-run context ($710-725B 2026, +89% YoY)\nSemiconductor demand / foundry utilization up|HIT|high|2026-08-10|news: TSMC revenue surges 45%, chip equipment stocks rise\nHBM / advanced packaging shortage pricing power|HIT|high|2026-08-10|TSMC advanced-packaging full utilization, Omdia HBM strain\nCloud consumption growth acceleration|HIT|medium|2026-08-10|Dynatrace re-acceleration, cloud-native +100% YoY\nExport controls tightening|HIT|medium|2026-08-10|Jan 2026 BIS rule overhang\nCrowded long (extreme relative performance + valuation)|HIT|high|2026-08-10|BofA FMS 80% most crowded trade in 12 years\nSoftware multiple compression / growth scare|HIT|medium|2026-08-10|news: Autodesk sold over AI risks, Apple underperform warning\nReal yields rising|HIT|medium|2026-08-10|DFII10 2.43%, +0.12 1m; 5d 10Y-SPX corr -0.842\nSector rotation into technology|HIT|high|2026-08-10|1w XLK rel +3.71% snap-back\nHIT_GRID_END"
+    }
+  ]
+}

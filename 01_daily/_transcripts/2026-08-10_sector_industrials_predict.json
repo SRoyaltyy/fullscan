@@ -1,0 +1,237 @@
+{
+  "model": "deepseek-chat",
+  "messages": [
+    {
+      "role": "system",
+      "content": "SYSTEM LAYER — SHARED METHOD (same machine as general premarket predictor)\n\nThis layer is IDENTICAL in spirit to master_rubric for general:\n  - MEMORY_CONFIRM first line (scoped to THIS sector topic only)\n  - CHANNEL 1 is pre-fetched numbers: do not re-derive, do not alter\n  - CHANNEL 2 is live web_search: required categories, say \"checked, nothing material\" if empty\n  - You emit component scores only; the PIPELINE owns weighted totals, direction, magnitude\n  - Divergence: when leading factor sum fights the tape confirmation score, flag it; trust factors over tape\n  - Self-audit: lens, band, skew, same-shock double-count, single-ticker must not drive the sector ETF call\n\nOBJECT OF THE CALL\n  Predict the near-session environment for the SECTOR ETF named in the sector layer\n  (direction up/down/flat + magnitude band). This is NOT an SPX call and NOT a stock picker.\n\nCHANNEL 1 (injected by pipeline — trust these numbers)\n  Full general macro panel when present (VIX, yields, USD, oil, Asia/Europe, FedWatch, Fear&Greed, news).\n  Plus sector ETF vs SPY relative returns (1d/3d/1w/1m).\n\nCHANNEL 2 (your job — always cover before scoring)\n  1. Shared macro regime as it hits THIS sector (risk-on/off, real yields, USD)\n  2. Sector SPINE factors (defined in the sector layer — mandatory)\n  3. Sector secondary factors (taxonomy checklist)\n  4. Breadth / leadership inside the sector\n  5. Flows / positioning / crowding for the sector ETF or peers\n  6. Earnings/guidance or policy catalysts for the sector\n\nCOMPONENT SCORES (pipeline parses SECTOR_SCORES block)\n  S0_SHARED_MACRO (−2..+2): macro only as it maps to THIS sector\n  S1_SECTOR_FACTORS (−3..+3): net of spine + secondary HITs (specialized list in sector layer)\n  S2_BREADTH (−2..+2): expansion vs ETF-only / mega-name carry\n  S3_FLOWS_POSITIONING (−2..+2): inflows, outflows, crowding, forced flows\n  S4_ETF_TAPE (−1..+1): CONFIRMATION ONLY from Channel 1 relative returns — never the main thesis\n  MULTIPLIER (0.5–2.0), CONFIDENCE (0–1), REGIME (risk_on|risk_off|mixed)\n\nOUTPUT\n  Line 1: MEMORY_CONFIRM: ...\n  Free analysis Markdown\n  SECTOR_SCORES_BEGIN ... SECTOR_SCORES_END (exact keys)\n  Optional HIT_GRID_BEGIN ... END with label|status|confidence|date|url\n\n\nSECTOR LAYER — Industrials (ETF: XLI)\n\nSPINE\n  + ISM manufacturing / new orders expansion\n  + Durable goods / CapEx upside\n  − ISM contraction\n  − CapEx cuts / order cancellation\n\nSECONDARY\n  + Grid / electrical equipment backlog (AI power) — can be semi-independent of ISM\n  + Aerospace & defense orders / budget\n  + Freight / trucking / rail recovery\n  + Reshoring / industrial policy funding\n  − Freight recession\n  − Construction slowdown (note AI/nonres vs residential split)\n  +/− Rotation into/out of industrials\n\nMACRO MAP (S0)\n  Cyclical: risk-on + | rates secondary vs ISM/CapEx\n\nSEARCH PRIORITY\n  ISM, durable goods, GE Vernova/grid backlog, defense, freight, XLI flows\n\nDO NOT\n  Cancel ISM weakness with a single defense award\n\n\n=== FULL TAXONOMY LABEL LIST (use exact strings in HIT_GRID) ===\n  - Risk-on tape / equity beta expansion\n  - Risk-off tape / flight to safety\n  - Real yields rising\n  - Real yields falling\n  - USD strengthening\n  - USD weakening\n  - Sector breadth expansion (% names up)\n  - Sector breadth failure (ETF up, names flat)\n  - Large-cap leadership inside sector\n  - Small/mid leadership inside sector\n  - High-beta leadership inside sector\n  - Low-beta leadership inside sector\n  - Sector ETF inflow / relative volume spike\n  - Sector ETF outflow / volume dry-up\n  - Crowded long (extreme relative performance + valuation)\n  - Index rebalance / inclusion tailwind\n  - Index exclusion / forced selling\n  - ISM manufacturing / new orders expansion\n  - Durable goods / CapEx upside\n  - Grid / electrical equipment backlog (AI power)\n  - Aerospace & defense order / budget upside\n  - Freight / trucking / rail volume recovery\n  - Reshoring / industrial policy funding\n  - ISM contraction\n  - CapEx cuts / order cancellation\n  - Freight recession\n  - Construction slowdown\n  - Sector rotation into industrials\n  - Sector rotation out of industrials\n\n=== AMP/DAMP ONE-LINERS ===\nRisk-on tape / equity beta expansion: [+] cyclicals/tech/financials [−] defensives if pure flight-from-safety\nRisk-off tape / flight to safety: [+] utilities/staples/REITs as relative winners [−] cyclicals; polarity for cyclicals is negative, for defensives treat as regime context\nReal yields rising: [+] some banks/floaters [−] duration/growth/tech/REITs\nReal yields falling: [+] duration/growth [−] if driven by recession scare without easing\nUSD strengthening: [+] importers [−] commodity producers / EM-linked / exporters\nUSD weakening: [+] commodities / exporters [−] pure domestic if no other catalyst\nSector breadth expansion (% names up): [+] healthy leadership [−] if only 1–2 mega names carry ETF\nSector breadth failure (ETF up, names flat): [+] fade extension [−] if mega-cap IS the sector thesis (e.g. Mag7)\nLarge-cap leadership inside sector: context: quality bid; not always bullish for small-cap basket\nSmall/mid leadership inside sector: context: risk appetite inside sector\nHigh-beta leadership inside sector: [+] risk-on confirmation [−] late-cycle chase\nLow-beta leadership inside sector: [+] defensive regime [−] for cyclical sector scores\nSector ETF inflow / relative volume spike: [+] attention/positioning [−] already extended on flows\nSector ETF outflow / volume dry-up: [+] washout setup later [−] near-term demand\nCrowded long (extreme relative performance + valuation): [+] mean-reversion risk [−] structural multi-year compounder exceptions\nIndex rebalance / inclusion tailwind: [+] mechanical demand [−] one-day noise\nIndex exclusion / forced selling: [+] temporary [−] if fundamental too\nISM manufacturing / new orders expansion: SECTOR SPINE — amp machinery/transports\nDurable goods / CapEx upside: \nGrid / electrical equipment backlog (AI power): semi-independent of classic ISM\nAerospace & defense order / budget upside: do not cancel ISM weakness with one award\nFreight / trucking / rail volume recovery: \nReshoring / industrial policy funding: \nISM contraction: spine negative\nCapEx cuts / order cancellation: \nFreight recession: \nConstruction slowdown: \nSector rotation into industrials: \nSector rotation out of industrials: \n"
+    },
+    {
+      "role": "user",
+      "content": "TODAY: 2026-08-10 (America/New_York)\nSECTOR UNDER ANALYSIS (ONLY THIS ONE): Industrials\nETF TO GRADE LATER: XLI\n\n=== MEMORY CONTEXT (THIS SECTOR ONLY) ===\n\n[SCOREBOARD]\nSector topic: sector:Industrials\nRolling accuracy last 10 graded: dir=None mag=None (n=0)\nRolling accuracy last 30 graded: dir=None mag=None (n=0)\nLast runs:\n- 2026-08-08: predicted up/severe, actual pending% (ungraded)\n\n[STANDING ACTIVE LESSONS]\n### mega-cap-earnings-over-macro-drag.md\n---\ntrigger_pattern: \"Strong positive mega-cap earnings/AI momentum coincides with negative macro/geopolitical headlines (oil spike, China PMI miss, hawkish Fed) — market follows earnings unless futures independently confirm weakness.\"\ncorrected_behavior: \"When Channel 2 has an index-relevant positive mega-cap earnings catalyst and B6 futures are not negative: set B1 at least 0; cap B2/B3/B7 combined drag; FORBID predicted_direction=down unless futures or leading internals independently confirm weakness.\"\nfalsifier: \"Wrong if mega-cap earnings green but SPX still falls that day while futures were non-negative at the open.\"\ncurrent_behavior: \"Over-weight oil/China/Fed negatives vs Amazon/MSFT-type prints; call down.\"\nevidence_cited: \"2026-07-31 predicted down/mild; actual SPX +0.70%; Amazon +10% / Mag7 led.\"\nerror_category: \"B\"\nscope: \"general\"\ndate: \"2026-07-31\"\nstatus: \"active\"\nschema_ok: \"true\"\n---\n\n## RULE\nWhen Channel 2 has an index-relevant positive mega-cap earnings catalyst and B6 futures are not negative: set B1 at least 0; cap B2/B3/B7 combined drag; FORBID predicted_direction=down unless futures or leading internals independently confirm weakness.\n\n## WHEN IT FIRES\nStrong positive mega-cap earnings/AI momentum coincides with negative macro/geopolitical headlines — market follows earnings unless futures independently confirm weakness.\n\n## WRONG IF\nWrong if mega-cap earnings green but SPX still falls that day while futures were non-negative at the open.\n\n## EVIDENCE\n2026-07-31 predicted down/mild; actual SPX +0.70%; Amazon +10% / Mag7 led.\n\n### ops-missing-predict-file.md\n---\ntrigger_pattern: \"Scheduled trading day where premarket YYYY-MM-DD_predict.md is absent or empty at open/grading time.\"\ncorrected_behavior: \"OPS: verify predict.md exists with SCORES_BEGIN before 09:30 ET; retry if missing. At grading mark ops_fail=true and leave direction_hit/magnitude_hit null — never score as a market miss.\"\nfalsifier: \"Wrong if a present predict.md is marked ops_fail, or a missing file is still counted direction_hit=false.\"\ncurrent_behavior: \"Outcome grades null prediction as miss.\"\nevidence_cited: \"2026-08-02 and 2026-08-08 missing predict files.\"\nerror_category: \"D\"\nscope: \"ops\"\ndate: \"2026-08-08\"\nstatus: \"active\"\nschema_ok: \"true\"\n---\n\n## RULE\nOPS: verify predict.md exists with SCORES_BEGIN before 09:30 ET; retry if missing. At grading mark ops_fail=true and leave direction_hit/magnitude_hit null — never score as a market miss.\n\n## WHEN IT FIRES\nScheduled trading day where premarket predict.md is absent or empty.\n\n## WRONG IF\nWrong if a present predict.md is marked ops_fail, or a missing file is still counted direction_hit=false.\n\n## EVIDENCE\n2026-08-02 and 2026-08-08 missing predict files.\n\n[LAST 10 SECTOR LOGS]\n===== 2026-08-08 PREDICT =====\n# Sector Prediction — Industrials — 2026-08-08\n\n- ETF: **XLI**\n- predicted_direction: **up**\n- predicted_magnitude_band: **severe**\n- total_score: **12.35** (mult 1.3)\n- regime: risk_on\n- divergence_flagged: **True**\n\n## Channel 1 ETF context\n\n```\nETF XLI vs SPY (yfinance, through 2026-08-07):\n  1d: XLI +0.23% | SPY +0.61% | rel -0.38%\n  3d: XLI -0.65% | SPY +0.25% | rel -0.90%\n  1w: XLI +2.97% | SPY +3.51% | rel -0.54%\n  1m: XLI +2.25% | SPY +2.87% | rel -0.62%\n```\n\nI have sufficient research across all required categories. Let me compile the final output.\n\n**Research coverage check:**\n1. ✅ Shared macro regime — risk-on, high-beta crowded, USD weakening, 10Y ~4.69%\n2. ✅ Sector factor taxonomy — ISM expansion, grid/AI power, aero/defense, construction, freight, reshoring\n3. ✅ Sector breadth/leadership — narrow market breadth, AI power names leading within industrials\n4. ✅ Flows/positioning — XLI +$438M inflows, high-beta crowded\n5. ✅ Earnings/guidance — Q2 earnings season, HNI 20-25% EPS growth guidance, mixed\n\nNow finalizing the output.\n\n---\n\nMEMORY_CONFIRM: Reviewed prior runs for sector Industrials from (no prior runs — establishing baseline); rolling accuracy n=0; key standing lesson: none yet — first run, establishing baseline.\n\n## Sector Environment Analysis: Industrials (XLI)\n\n### Channel 2 Research Findings\n\n**1. Shared Macro Regime (risk-on/off, yields, USD):**\n- Risk-on tape confirmed. High-beta stocks at the 100th percentile of crowding (JPMorgan, ainvest.com), risk appetite surged in 2026 (MSN). However, S&P 500 breadth is historically narrow — near 1985 lows per Goldman (LinkedIn/stonemj). This is a \"narrow risk-on\" regime where AI/tech mega-caps lead.\n- USD weakening: DXY ~99.6 on Aug 7, down 1.37% over the past month, softening bias into 2H26 (tradingeconomics, cambridgecurrencies). Mildly positive for exporters/commodity-linked industrials.\n- 10Y nominal yield ~4.69% (tradingeconomics). Real yields elevated but not spiking — moderate headwind for duration, but industrials are value/cyclical so impact is muted.\n\n**2. Sector Factor Taxonomy HITs:**\n- **ISM manufacturing / new orders expansion — HIT (high confidence).** ISM Manufacturing PMI at 55.6% (July 2026, expansion); New Orders at 56.7, 89th percentile of trailing 24-month range, well above 12-mo average of 51.4 (sigmanomics, prnewswire). This is the sector spine — strongly positive.\n- **Grid / electrical equipment backlog (AI power) — HIT (high confidence).** GE Vernova gas equipment backlog/reservations reached 116 GW; transformer lead times and book-to-bill re-rating; AI data-center demand doubling electricity demand forecasts (arkolith, marketxls, arstechnica). Semi-independent of classic ISM — strong structural tailwind.\n- **Aerospace & defense order / budget upside — HIT (medium-high).** NATO defense spending at 2%+ GDP thresholds, global demand surging (Saab doubling Gripen production), trilateral defense pacts amid Middle East war (armyrecognition, washingtontimes). Note: don't let one award cancel ISM weakness — but ISM is strong here anyway.\n- **Reshoring / industrial policy funding — HIT (medium).** $1.6T in reshoring announcements, CHIPS Act manufacturing investment, tariff-driven supply-chain reconfiguration (americanindustrialmagazine, wifitalents). Caveat: manufacturing jobs down 82K — timeline gap between announcements and hiring.\n- **Durable goods / CapEx upside — MIXED.** June durable goods +0.3% (below 1.6% expected), but core nondefense CapEx ex-aircraft strong in May (advisorperspectives, LinkedIn). Net neutral-to-slightly-positive.\n- **Construction slowdown — PARTIAL HIT (negative).** Residential construction spending down 11.1% SAAR in H1 2026, two consecutive monthly declines (LinkedIn/dutta-neil). BUT AI/data-center construction booming (United Rentals upgrade on construction rebound, binance/SMBC). Mixed — nonresidential/AI construction offsets residential weakness.\n- **Freight / trucking / rail volume recovery — MIXED.** Q2 2026 freight demand tracker shows intermodal volumes and rail pricing framing demand; parcel margin recovery (marketxls). Modest recovery, not a strong HIT.\n\n**3. Sector Breadth / Leadership:**\n- Market-wide breadth is narrow (S&P 500 near 1985 lows). Within industrials, the AI-power names (GE Vernova, electrical equipment) are the clear leaders. XLI lagging SPY across all timeframes (1d -0.38%, 3d -0.90%, 1w -0.54%, 1m -0.62%) suggests industrials breadth is not leading — the sector is being carried by a subset of AI-power/defense names while the broader basket lags.\n\n**4. Flows / Positioning:**\n- XLI net inflows +$438M (+1.3% of assets) over the past month (trefis) — positive but modest.\n- High-beta crowded at 100th percentile (JPMorgan) — market-wide risk, but industrials contain high-beta AI-power names that are part of this crowding.\n\n**5. Earnings / Guidance:**\n- Q2 2026 earnings season underway. HNI guided 20-25% non-GAAP EPS growth for FY2026 (fool.com). Industrials earnings generally constructive, supported by AI power and defense backlogs.\n\n### Divergence Assessment\nStrong sector fundamentals (S1 = +2) vs. lagging tape (S4 = -1). XLI consistently underperforming SPY across 1d/3d/1w/1m despite ISM expansion, AI-power backlog, and defense demand. This is a **LEADING/LAGGING DIVERGENCE** — the sector factors point to relative strength that the tape has not yet confirmed. Trust factors over tape; cap S4.\n\n### Self-Audit\n- No single-ticker distortion: the AI-power leadership (GE Vernova) is a genuine sector-wide theme (transformer lead times, grid backlogs across multiple names), not a one-off.\n- No same-shock double-count: ISM expansion and AI-power backlog are distinct drivers (macro cycle vs. structural electrification).\n- Lens check: I'm scoring the sector's environment relative to the broad market, not making an absolute SPX call.\n\n---\n\nSECTOR_SCORES_BEGIN\nSECTOR: Industrials\nETF: XLI\nREGIME: risk_on\nMULTIPLIER: 1.3\nS0_SHARED_MACRO: 1\nS1_SECTOR_FACTORS: 2\nS2_BRE\n\n=== SECTOR FACTOR TAXONOMY (exact labels) ===\n- Risk-on tape / equity beta expansion\n- Risk-off tape / flight to safety\n- Real yields rising\n- Real yields falling\n- USD strengthening\n- USD weakening\n- Sector breadth expansion (% names up)\n- Sector breadth failure (ETF up, names flat)\n- Large-cap leadership inside sector\n- Small/mid leadership inside sector\n- High-beta leadership inside sector\n- Low-beta leadership inside sector\n- Sector ETF inflow / relative volume spike\n- Sector ETF outflow / volume dry-up\n- Crowded long (extreme relative performance + valuation)\n- Index rebalance / inclusion tailwind\n- Index exclusion / forced selling\n- ISM manufacturing / new orders expansion\n- Durable goods / CapEx upside\n- Grid / electrical equipment backlog (AI power)\n- Aerospace & defense order / budget upside\n- Freight / trucking / rail volume recovery\n- Reshoring / industrial policy funding\n- ISM contraction\n- CapEx cuts / order cancellation\n- Freight recession\n- Construction slowdown\n- Sector rotation into industrials\n- Sector rotation out of industrials\n\n=== AMP/DAMP ===\nRisk-on tape / equity beta expansion: [+] cyclicals/tech/financials [−] defensives if pure flight-from-safety\nRisk-off tape / flight to safety: [+] utilities/staples/REITs as relative winners [−] cyclicals; polarity for cyclicals is negative, for defensives treat as regime context\nReal yields rising: [+] some banks/floaters [−] duration/growth/tech/REITs\nReal yields falling: [+] duration/growth [−] if driven by recession scare without easing\nUSD strengthening: [+] importers [−] commodity producers / EM-linked / exporters\nUSD weakening: [+] commodities / exporters [−] pure domestic if no other catalyst\nSector breadth expansion (% names up): [+] healthy leadership [−] if only 1–2 mega names carry ETF\nSector breadth failure (ETF up, names flat): [+] fade extension [−] if mega-cap IS the sector thesis (e.g. Mag7)\nLarge-cap leadership inside sector: context: quality bid; not always bullish for small-cap basket\nSmall/mid leadership inside sector: context: risk appetite inside sector\nHigh-beta leadership inside sector: [+] risk-on confirmation [−] late-cycle chase\nLow-beta leadership inside sector: [+] defensive regime [−] for cyclical sector scores\nSector ETF inflow / relative volume spike: [+] attention/positioning [−] already extended on flows\nSector ETF outflow / volume dry-up: [+] washout setup later [−] near-term demand\nCrowded long (extreme relative performance + valuation): [+] mean-reversion risk [−] structural multi-year compounder exceptions\nIndex rebalance / inclusion tailwind: [+] mechanical demand [−] one-day noise\nIndex exclusion / forced selling: [+] temporary [−] if fundamental too\nISM manufacturing / new orders expansion: SECTOR SPINE — amp machinery/transports\nDurable goods / CapEx upside: \nGrid / electrical equipment backlog (AI power): semi-independent of classic ISM\nAerospace & defense order / budget upside: do not cancel ISM weakness with one award\nFreight / trucking / rail volume recovery: \nReshoring / industrial policy funding: \nISM contraction: spine negative\nCapEx cuts / order cancellation: \nFreight recession: \nConstruction slowdown: \nSector rotation into industrials: \nSector rotation out of industrials: \n\nETF proxy: XLI\n\n\n=== CHANNEL 1: PRE-FETCHED DATA (exact, do not alter) ===\n[VIX: 15.16 as of 2026-08-10 | 1d +0.26 | 1w -0.7]\n[VIX3M: 18.86 | ratio VIX/VIX3M: 0.804]\n[DGS30: 5.22 as of 2026-08-06 | 1d +0.05 | 1w +0.01 | 1m +0.16]\n[DGS10: 4.69 as of 2026-08-06 | 1d +0.06 | 1w +0.01 | 1m +0.13]\n[DFII10: 2.43 as of 2026-08-06 | 1d +0.02 | 1w +0.02 | 1m +0.12]\n[BAMLH0A0HYM2: 2.71 as of 2026-08-06 | 1d -0.04 | 1w -0.13 | 1m +0.01]\n[RRPONTSYD: 1.45 as of 2026-08-07 | 1d +0.021 | 1w -0.701 | 1m -4.322]\n[USEPUINDXD: 234.17 as of 2026-08-09 | 1d +97.21 | 1w -154.27 | 1m +37.34]\n[SOFR-IORB spread: -0.03 (SOFR 3.62, IORB 3.65)]\n[CL=F: 3.16% 1d]\n[BZ=F: 3.05% 1d]\n[GC=F: 0.98% 1d]\n[DXY: 1d 0.21% | 1m -1.15%]\n[ES=F premarket: -0.02% vs prev close]\n[NQ=F premarket: -0.17% vs prev close]\n[ASIA (final): Nikkei 2.08%, Hang Seng 1.05%, Shanghai 0.67%, Kospi 0.65%, ASX200 -0.09% — composite avg 0.87%]\n[EUROPE (in progress (partial)): FTSE -0.47%, DAX 0.06%, CAC -0.09%, EuroStoxx50 0.15% — composite avg -0.09%]\n[CME FedWatch: CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search]\n[Fear & Greed: 63.7 (Greed) — from Supabase macro_indicators as of 2026-08-09 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)]\n[5-day corr 10Y yield vs SPX: -0.842 (2026-08-03..2026-08-10)]\n[NEWS last 24h (30 items from Supabase):\n  - (rss_yahoo_finance) Progressive (PGR) Is Winning Market Share. Can It Keep Growing?\n  - (rss_yahoo_finance) Hedge Funds Start To Bet On A Bitcoin Rally\n  - (rss_yahoo_finance) Why This Investor Sold Autodesk (ADSK) Over AI Risks\n  - (rss_yahoo_finance) Zoetis (ZTS) Looked Like a Winner. What Went Wrong?\n  - (rss_yahoo_finance) Daily – Vickers Top Buyers & Sellers for 08/10/2026\n  - (rss_yahoo_finance) Sumitomo buys 33.3% equity in UK’s Gwynt Glas wind farm project\n  - (rss_aljazeera_economy) Jeff Bezos consortium nears deal to buy stake in Liverpool FC: Reports\n  - (rss_marketwatch_top) Intel plans to sell $15 billion worth of stock after it has risen 400% in a year\n  - (rss_aljazeera_economy) Gaza honours Al Jazeera’s Anas al-Sharif and Mohammed Qraiqea\n  - (rss_aljazeera_economy) One million evacuated as Typhoon Dolphin pummels east China: What we know\n  - (rss_aljazeera_economy) ‘Long-range sanctions’: Ukraine hopes strikes cause Russia fear and losses\n  - (rss_yahoo_finance) SpaceX Stock Looks To Reclaim IPO Price After Earnings, Share Unlock\n  - (rss_yahoo_finance) Strategy Continues To Sell Bitcoin And Common Stock\n  - (rss_yahoo_finance) Daily – Vickers Top Insider Picks for 08/10/2026\n  - (rss_yahoo_finance) Technical Assessment: Bullish in the Intermediate-Term\n  - (rss_bbc_business) Consortium advances talks for stake in Liverpool\n  - (rss_aljazeera_economy) Has the army turned the page on control of western Sudan?\n  - (rss_marketwatch_top) Apple’s stock could underperform, especially without an ‘all-glass’ iPhone, this analyst warns\n  - (rss_bbc_business) Water outage forces Chessington theme park to close\n  - (rss_bbc_business) New school uniform rules won't cut costs, says mum\n  - (rss_aljazeera_economy) Why choosing low-fat dairy is not necessarily better for your health\n  - (rss_aljazeera_economy) Nigel Farage vows to deport foreign criminals from UK prisons\n  - (rss_aljazeera_economy) Taiwan holds military drills to prepare for invasion by China\n  - (rss_aljazeera_economy) Former MP opens fire in Thailand’s second shooting within days\n  - (rss_yahoo_finance) Ex-chief winemaker at Australia’s Chapel Hill takes Haselgrove CEO post\n  - (rss_yahoo_finance) Chip equipment stocks rise after Taiwan Semiconductor revenue surges 45%\n  - (rss_yahoo_finance) ADNOC Gas reports net income of $665m in Q2 2026\n  - (rss_yahoo_finance) American Airlines (AAL) Posted Record Revenue, but is the Stock too Risky Amid Rising Fuel Costs?\n  - (rss_yahoo_finance) T. Rowe Price Defends Meme Inclusion in Active Crypto ETF\n  - (rss_yahoo_finance) Daily Spotlight: GARP Sectors\n\n=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\nETF XLI vs SPY (yfinance, through 2026-08-10):\n  1d: XLI +0.02% | SPY +0.07% | rel -0.05%\n  3d: XLI -0.61% | SPY +0.52% | rel -1.13%\n  1w: XLI +1.12% | SPY +2.13% | rel -1.01%\n  1m: XLI +1.81% | SPY +2.50% | rel -0.69%\n\nSuggested web_search seeds (expand; cover all Channel 2 categories):\n- risk on equity market breadth 2026\n- Industrials risk on equity market breadth\n- high beta leadership stocks 2026\n- Industrials high beta leadership stocks\n- risk off flight to safety stocks 2026\n- Industrials risk off flight to safety stocks\n- defensive rotation equities 2026\n- Industrials defensive rotation equities\n- real yields rising TIPS 2026\n- Industrials real yields rising TIPS\n- 10 year real yield technology duration 2026\n- Industrials 10 year real yield technology duration\n- real yields falling 2026\n- Industrials real yields falling\n- TIPS real yield decline growth stocks 2026\n- Industrials TIPS real yield decline growth stocks\n\nExecute the shared method + THIS sector layer now. Specialize S1 to the spine factors. MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block."
+    },
+    {
+      "role": "assistant",
+      "content": "I'll execute the shared method for the Industrials sector (XLI). Let me start with the required Channel 2 research.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_IBd9JsEQ6R3tr6JyjWRN0842",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"ISM manufacturing PMI new orders August 2026\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_tAXJwb6W7bnEVY0HS4Ez0795",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"GE Vernova grid electrical equipment backlog AI power 2026\"}"
+          }
+        },
+        {
+          "index": 2,
+          "id": "call_02_EJnxNYmlYNHngCWNCjJ73083",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"XLI industrials ETF flows positioning 2026\"}"
+          }
+        },
+        {
+          "index": 3,
+          "id": "call_03_PoxAXYZ7nn7dylenwZTt7822",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"defense aerospace orders budget 2026 industrials\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_IBd9JsEQ6R3tr6JyjWRN0842",
+      "content": "{\"query\": \"ISM manufacturing PMI new orders August 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_tAXJwb6W7bnEVY0HS4Ez0795",
+      "content": "{\"query\": \"GE Vernova grid electrical equipment backlog AI power 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_02_EJnxNYmlYNHngCWNCjJ73083",
+      "content": "{\"query\": \"XLI industrials ETF flows positioning 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_03_PoxAXYZ7nn7dylenwZTt7822",
+      "content": "{\"query\": \"defense aerospace orders budget 2026 industrials\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The searches returned empty. Let me try broader queries.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_d7E6waPEq2mqxTNwcQKf2777",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"ISM manufacturing PMI July 2026 new orders expansion\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_kMJxlhrG6kVnxb8AAyHo2338",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"GE Vernova grid backlog AI data center power demand\"}"
+          }
+        },
+        {
+          "index": 2,
+          "id": "call_02_BO7RBKxFFhRpQcWE2nZj3023",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"XLI industrials ETF inflows outflows\"}"
+          }
+        },
+        {
+          "index": 3,
+          "id": "call_03_nQyfRNUTUrvQHhuDeUc85417",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"defense spending budget aerospace orders 2026\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_d7E6waPEq2mqxTNwcQKf2777",
+      "content": "{\"query\": \"ISM manufacturing PMI July 2026 new orders expansion\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_kMJxlhrG6kVnxb8AAyHo2338",
+      "content": "{\"query\": \"GE Vernova grid backlog AI data center power demand\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_02_BO7RBKxFFhRpQcWE2nZj3023",
+      "content": "{\"query\": \"XLI industrials ETF inflows outflows\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_03_nQyfRNUTUrvQHhuDeUc85417",
+      "content": "{\"query\": \"defense spending budget aerospace orders 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The search backend is returning empty results. Let me try a few more variations to see if I can get any data.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_pLMQ8T5fWuDyAgGYdhRC8232",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"manufacturing PMI new orders August 2026\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_RpOrxe9zSXITz8f1IvRe3210",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"industrials sector outlook 2026\"}"
+          }
+        },
+        {
+          "index": 2,
+          "id": "call_02_LrpkqytdxplP66n4t8cU0817",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"XLI ETF performance\"}"
+          }
+        },
+        {
+          "index": 3,
+          "id": "call_03_luhB7MibUm9GedOcj7ND7069",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"freight trucking rail volumes 2026 recovery\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_pLMQ8T5fWuDyAgGYdhRC8232",
+      "content": "{\"query\": \"manufacturing PMI new orders August 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_RpOrxe9zSXITz8f1IvRe3210",
+      "content": "{\"query\": \"industrials sector outlook 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_02_LrpkqytdxplP66n4t8cU0817",
+      "content": "{\"query\": \"XLI ETF performance\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_03_luhB7MibUm9GedOcj7ND7069",
+      "content": "{\"query\": \"freight trucking rail volumes 2026 recovery\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The web search backend is returning empty results across all queries. I'll proceed with the analysis using the pre-fetched Channel 1 data and the memory context from prior runs, noting the search limitation. Let me try a couple more targeted searches before finalizing.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "call_00_7Rx75BfNcea9D5SBe0D16740",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"stock market today August 10 2026\"}"
+          }
+        },
+        {
+          "index": 1,
+          "id": "call_01_P0huy1Bzew8vbA8SOGhw2847",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\": \"industrials manufacturing capex durable goods 2026\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_7Rx75BfNcea9D5SBe0D16740",
+      "content": "{\"query\": \"stock market today August 10 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_01_P0huy1Bzew8vbA8SOGhw2847",
+      "content": "{\"query\": \"industrials manufacturing capex durable goods 2026\", \"backend\": \"searxng\", \"results\": []}"
+    },
+    {
+      "role": "assistant",
+      "content": "The web search backend is consistently returning empty results. I'll proceed with the analysis based on the pre-fetched Channel 1 data and the memory context from the prior 2026-08-08 run, which contains detailed sector research. I'll note the search limitation and rely on the established baseline from the prior run's research.\n\nLet me compile the analysis.\n\n---\n\nMEMORY_CONFIRM: Reviewed prior runs for sector Industrials — last run 2026-08-08 predicted up/severe (ungraded); rolling accuracy n=0. Standing active lesson: mega-cap-earnings-over-macro-drag (general scope, not directly sector-specific). No sector-specific lessons yet — establishing baseline. Note: web_search backend returned empty results across all queries today; relying on pre-fetched Channel 1 data + prior run's research baseline.\n\n## Sector Environment Analysis: Industrials (XLI)\n\n### Channel 2 Research Findings\n\n**Search note:** All web_search queries returned empty results today (backend limitation). I'm relying on the pre-fetched Channel 1 macro panel and the detailed research baseline established in the 2026-08-08 run, cross-checked against today's pre-fetched data.\n\n**1. Shared Macro Regime (risk-on/off, yields, USD):**\n- **Risk-on tape confirmed but cooling.** VIX at 15.16 (low, 1w -0.7), Fear & Greed at 63.7 (Greed). However, ES premarket -0.02%, NQ -0.17% — futures flat-to-slightly-negative at the open. Asia composite +0.87% (strong), Europe composite -0.09% (flat). Mixed overnight signal.\n- **Real yields elevated.** DFII10 (10Y real yield) at 2.43%, up +0.12 over 1m. DGS10 at 4.69%, up +0.13 over 1m. Rising real yields are a mild headwind for duration/growth but muted for value/cyclical industrials.\n- **USD weakening.** DXY -1.15% over 1m, +0.21% 1d. Mildly positive for exporters/commodity-linked industrials.\n- **5-day corr 10Y yield vs SPX: -0.842** — strongly negative correlation, meaning rising yields are pressuring equities. This is a notable macro headwind signal.\n\n**2. Sector Factor Taxonomy HITs (from prior-run baseline + today's data):**\n- **ISM manufacturing / new orders expansion — HIT (high confidence).** ISM Manufacturing PMI at 55.6% (July 2026, expansion), New Orders at 56.7, 89th percentile. This is the sector spine — strongly positive. No new data to contradict.\n- **Grid / electrical equipment backlog (AI power) — HIT (high confidence).** GE Vernova gas equipment backlog 116 GW; transformer lead times extended; AI data-center demand doubling electricity forecasts. Semi-independent structural tailwind.\n- **Aerospace & defense order / budget upside — HIT (medium-high).** NATO 2%+ GDP defense spending, global demand surging. Note: don't let one award cancel ISM weakness — but ISM is strong here.\n- **Reshoring / industrial policy funding — HIT (medium).** $1.6T reshoring announcements, CHIPS Act manufacturing investment.\n- **Durable goods / CapEx — MIXED.** June durable goods +0.3% (below 1.6% expected), but core nondefense CapEx ex-aircraft strong. Net neutral-to-slightly-positive.\n- **Construction — MIXED.** Residential down 11.1% SAAR in H1 2026, but AI/data-center construction booming. Nonresidential/AI offsets residential weakness.\n- **Freight / trucking / rail — MIXED.** Modest Q2 recovery, not a strong HIT.\n\n**3. Sector Breadth / Leadership:**\n- **XLI consistently lagging SPY across all timeframes** (1d -0.05%, 3d -1.13%, 1w -1.01%, 1m -0.69%). This is a persistent relative underperformance — the sector is being carried by a subset of AI-power/defense names (GE Vernova, electrical equipment) while the broader basket lags. **Sector breadth failure** pattern: ETF up but names flat/narrow.\n- Market-wide breadth historically narrow (S&P 500 near 1985 lows per prior-run research).\n\n**4. Flows / Positioning:**\n- XLI net inflows +$438M (+1.3% of assets) over past month (prior-run baseline). Positive but modest.\n- High-beta crowded at 100th percentile (JPMorgan) — market-wide risk, but industrials contain high-beta AI-power names in this crowding.\n\n**5. Earnings / Guidance:**\n- Q2 2026 earnings season constructive; HNI guided 20-25% non-GAAP EPS growth. AI power and defense backlogs supportive.\n\n### Divergence Assessment\nStrong sector fundamentals (S1 = +2) vs. lagging tape (S4 = -1). XLI consistently underperforming SPY across 1d/3d/1w/1m despite ISM expansion, AI-power backlog, and defense demand. This is a **LEADING/LAGGING DIVERGENCE** — sector factors point to relative strength the tape has not confirmed. Trust factors over tape; cap S4.\n\n**Macro overlay:** The 5-day corr of 10Y yield vs SPX at -0.842 is a notable risk-off signal — rising yields pressuring equities. Combined with flat-to-negative futures (ES -0.02%, NQ -0.17%), this tempers the risk-on read. However, VIX is low (15.16) and Fear&Greed is in Greed territory, so the regime is still broadly risk-on with a cooling bias.\n\n### Self-Audit\n- No single-ticker distortion: AI-power leadership (GE Vernova) is a genuine sector-wide theme (transformer lead times, grid backlogs across multiple names).\n- No same-shock double-count: ISM expansion and AI-power backlog are distinct drivers (macro cycle vs. structural electrification).\n- Lens check: scoring the sector's environment relative to broad market, not an absolute SPX call.\n- The persistent XLI underperformance vs SPY (all timeframes negative) is a real tape signal that must be respected — this is not a one-day artifact.\n\n### Scoring Rationale\n- **S0_SHARED_MACRO (+1):** Risk-on regime (VIX low, F&G Greed) but cooling — flat futures, rising real yields, negative yield/SPX correlation. Mildly positive for cyclical industrials but not a strong tailwind.\n- **S1_SECTOR_FACTORS (+2):** ISM expansion (spine), AI-power grid backlog, defense orders, reshoring all HIT. Durable goods, construction, freight mixed. Strong net positive.\n- **S2_BREADTH (-1):** XLI lagging SPY across all timeframes; narrow leadership (AI-power/defense names carrying the basket). Sector breadth failure pattern.\n- **S3_FLOWS_POSITIONING (+1):** Modest XLI inflows (+$438M), but high-beta crowding risk. Net mildly positive.\n- **S4_ETF_TAPE (-1):** Confirmation only — XLI underperforming SPY across all timeframes. Negative confirmation, capped.\n- **MULTIPLIER (1.1):** Moderate conviction given the leading/lagging divergence and cooling macro.\n- **REGIME: risk_on** (with cooling bias).\n\n---\n\nSECTOR_SCORES_BEGIN\nSECTOR: Industrials\nETF: XLI\nREGIME: risk_on\nMULTIPLIER: 1.1\nS0_SHARED_MACRO: 1\nS1_SECTOR_FACTORS: 2\nS2_BREADTH: -1\nS3_FLOWS_POSITIONING: 1\nS4_ETF_TAPE: -1\nCONFIDENCE: 0.6\nDIVERGENCE_FLAGGED: True\nSECTOR_SCORES_END\n\nHIT_GRID_BEGIN\nISM manufacturing / new orders expansion|HIT|high|2026-08-10|prior-run baseline (PMI 55.6, New Orders 56.7)\nGrid / electrical equipment backlog (AI power)|HIT|high|2026-08-10|GE Vernova 116 GW backlog, transformer lead times\nAerospace & defense order / budget upside|HIT|medium-high|2026-08-10|NATO 2%+ GDP defense spending\nReshoring / industrial policy funding|HIT|medium|2026-08-10|$1.6T reshoring announcements\nDurable goods / CapEx upside|MIXED|medium|2026-08-10|June durable goods +0.3% below expectations\nConstruction slowdown|MIXED|medium|2026-08-10|Residential -11.1% SAAR, AI/data-center offsets\nFreight / trucking / rail volume recovery|MIXED|medium|2026-08-10|Modest Q2 recovery\nSector breadth failure (ETF up, names flat)|HIT|medium|2026-08-10|XLI lagging SPY all timeframes\nSector ETF inflow / relative volume spike|HIT|medium|2026-08-10|XLI +$438M inflows\nCrowded long (extreme relative performance + valuation)|HIT|medium|2026-08-10|High-beta 100th percentile crowding\nRisk-on tape / equity beta expansion|HIT|medium|2026-08-10|VIX 15.16, F&G 63.7 Greed\nReal yields rising|HIT|medium|2026-08-10|DFII10 2.43%, +0.12 1m\nUSD weakening|HIT|medium|2026-08-10|DXY -1.15% 1m\nHIT_GRID_END"
+    }
+  ]
+}
