@@ -694,35 +694,327 @@
       "sources": [
         "https://www.boj.or.jp/en/"
       ]
+    },
+    {
+      "title": "Senate passes Lindsey O. Graham Sanctioning Russia and Iran Act",
+      "category": "legislative",
+      "timing": "past",
+      "date_or_window": "2026-08-07",
+      "regions": [
+        "US",
+        "Global"
+      ],
+      "sectors": [
+        "Energy",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Sweeping 86-11 Senate-passed sanctions bill grants Trump authority to impose 100% tariffs on top-5 buyers of Russian oil (India, China) and renews Iran sanctions, directly threatening global oil flows and trade relations.",
+      "what_to_watch": "House action and Trump signing; oil price reaction to potential secondary sanctions on India/China.",
+      "status": "new",
+      "sources": [
+        "https://www.axios.com/2026/08/07/senate-republicans-democrats-russia-sanctions",
+        "https://www.nytimes.com/2026/08/07/us/politics/senate-russia-sanctions.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Trump signs executive order overhauling childhood vaccine schedule",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Healthcare"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Executive order reduces recommended childhood vaccines from 18 to 11 diseases and splits MMR into separate shots, directly impacting vaccine manufacturers (Merck, Pfizer) and pharmacy vaccination revenue.",
+      "what_to_watch": "Legal challenges from medical groups; CDC implementation timeline; vaccine maker earnings impact.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/delivering-gold-standard-childhood-vaccine-recommendations-for-americans/",
+        "https://www.axios.com/2026/08/10/trump-order-split-up-mmr-vaccine"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "D.C. Circuit blocks Trump's $400M White House ballroom project",
+      "category": "judicial",
+      "timing": "past",
+      "date_or_window": "2026-08-07",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 1,
+      "confidence": "high",
+      "why_it_matters": "2-1 D.C. Circuit ruling halts construction pending congressional authorization, a significant separation-of-powers check on executive spending that Trump vows to appeal.",
+      "what_to_watch": "Supreme Court appeal; broader implications for executive authority over federal property and spending.",
+      "status": "new",
+      "sources": [
+        "https://dnyuz.com/2026/08/07/boop-trumps-white-house-ballroom-saga-takes-a-turn-as-social-media-lights-up/",
+        "https://www.yahoo.com/news/politics/articles/us-appeals-court-blocks-trumps-400-million-white-house-ballroom-project-142719498.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "SEC schedules Reg Crypto proposal vote",
+      "category": "government",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-14",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology",
+        "Financial"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "SEC's first major crypto rulemaking creates safe-harbor exemptions for fundraising (up to $5M startups, $75M issuers), providing long-awaited regulatory clarity for the crypto industry.",
+      "what_to_watch": "Vote outcome; comment period length; impact on crypto issuers, exchanges, and institutional adoption.",
+      "status": "new",
+      "sources": [
+        "https://www.coindesk.com/policy/2026/08/11/u-s-sec-sets-meeting-to-propose-reg-crypto-to-support-certain-digital-assets-offerings"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "White House revives effort to remove Fed Governor Lisa Cook",
+      "category": "government",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-07..2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Second attempt to remove Fed Governor Cook after Supreme Court limited removal to 'for cause'; threatens Fed independence and could shift FOMC voting balance under hawkish Chair Warsh.",
+      "what_to_watch": "Cook's response by Aug 26 deadline; potential Supreme Court test of Fed independence; market reaction to Fed politicization.",
+      "status": "new",
+      "sources": [
+        "https://www.axios.com/2026/08/07/trump-white-house-fed-cook"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Trump announces $3B critical minerals mining deals",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-07",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Materials",
+        "Energy",
+        "Industrials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "State Department roundtable with Rio Tinto, BHP and others announces $3B in mining deals plus $180M for mining schools to counter China's critical minerals supply chain dominance.",
+      "what_to_watch": "Specific project announcements; rare earth/copper/lithium supply implications; permitting reform signals.",
+      "status": "new",
+      "sources": [
+        "https://www.thenationalnews.com/business/energy/2026/08/07/trump-mining-critical-minerals/",
+        "https://www.mining.com/web/rio-tinto-bhp-summoned-to-critical-minerals-meeting-with-trump/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "OFAC sanctions crypto exchanges for IRGC support",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-07",
+      "regions": [
+        "US",
+        "Middle East"
+      ],
+      "sectors": [
+        "Technology",
+        "Financial"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "OFAC sanctioned Dubai-based Shelbit Exchange and Iran-based Aban Tether for processing funds to Iran's IRGC, expanding crypto sanctions enforcement into exchange infrastructure.",
+      "what_to_watch": "Further crypto exchange designations; compliance ripple effects across the industry; Iran's crypto fundraising channels.",
+      "status": "new",
+      "sources": [
+        "https://www.tftc.io/shelbit-aban-tether-ofac-sanctions-irgc-treasury"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Senate schedules CLARITY Act cloture vote",
+      "category": "legislative",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-15",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology",
+        "Financial"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "First full Senate vote on crypto market structure bill since House passed in July 2025; would clarify SEC vs CFTC jurisdiction and provide regulatory certainty for digital assets.",
+      "what_to_watch": "Cloture vote outcome; community bank opposition over stablecoin rewards; potential amendments.",
+      "status": "new",
+      "sources": [
+        "https://cointelegraph.com/news/white-house-clarity-across-finish-line-september",
+        "https://cryptopanic.com/news/33179657/Senate-Majority-Leader-Thune-Files-Cloture-on-Clarity-Act-Setting-Up-September-Vote-Senate-Majority-Leader-John-Thune-filed-a-cloture-motion-on-the-Clarity-Act-setting-up-a-procedural-vote-on-Sept-15-after-lawmakers-return-from-the-August-recess-The-vote-w"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "30-year Treasury yield surges to 5.28% — highest since 2007",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-09",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "30-year yield hit 5.28%, highest since July 2006, as bond market doubts the Fed's hold under hawkish Chair Warsh; signals term premium expansion and potential mortgage/credit stress.",
+      "what_to_watch": "Treasury auction demand (10yr/30yr); mortgage rate pass-through; equity valuation pressure from rising discount rates.",
+      "status": "new",
+      "sources": [
+        "https://www.youtube.com/watch?v=7J4zgK5QsHw",
+        "https://tradingeconomics.com/united-states/government-bond-yield"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "US-Japan joint yen-buying intervention — first in 15 years",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-07-31",
+      "regions": [
+        "US",
+        "Japan"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "First US-Japan joint FX intervention since 2011, triggered by BOJ's Sept rate-hike signal; yen at 40-year lows; Treasury Secretary Bessent involvement signals coordinated policy response.",
+      "what_to_watch": "Repeat intervention risk; USD/JPY at ~159 after giving back half the gains; BOJ September rate decision.",
+      "status": "new",
+      "sources": [
+        "https://english.kyodonews.net/articles/-/81940",
+        "https://www.thedailyherald.sx/business/japan-confirms-joint-yen-intervention-with-america-signals-readiness-for-more-action"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Applied Materials Q3 FY2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-13",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Semiconductor equipment bellwether; guides AI/HBM capex cycle; stock up 106% YTD; revenue expected ~$9B.",
+      "what_to_watch": "HBM revenue trajectory; China export-control impact; forward guidance for AI-driven equipment demand.",
+      "status": "new",
+      "sources": [
+        "https://www.zacks.com/stock/news/2972013/amat-to-post-q3-earnings-time-to-buy-sell-or-hold-the-stock"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Cisco Q4 FY2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-19",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Networking/AI infrastructure demand read; revenue expected ~$16.8B (+12% YoY) with networking revenue up 25%.",
+      "what_to_watch": "AI networking orders; guidance for fiscal 2027; enterprise spending on AI infrastructure.",
+      "status": "new",
+      "sources": [
+        "https://finance.yahoo.com/markets/stocks/articles/cisco-q4-earnings-preview-investors-152931015.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Taiwan conducts major live-fire military drill",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-08-04..2026-08-10",
+      "regions": [
+        "Taiwan",
+        "China"
+      ],
+      "sectors": [
+        "Technology",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Taiwan tested internet throttling and drone defense in live-fire drill simulating Chinese assault amid heightened Taiwan Strait tensions and the Section 301 semiconductor probe.",
+      "what_to_watch": "PLA response; semiconductor supply chain risk premium; US-Taiwan defense cooperation signals.",
+      "status": "new",
+      "sources": [
+        "https://www.youtube.com/watch?v=mU05PJHRulU"
+      ],
+      "origin": "catcher"
     }
   ],
-  "top_risks": [
-    "CPI surprise to the upside (Aug 12) — With core at ~2.9% and Warsh hawkish, a hot print could trigger a September rate hike repricing, hitting equities and bonds simultaneously.",
-    "Strait of Hormuz deal failure — If Iran-Oman talks collapse, Brent could spike well above $90, reigniting inflation fears and hitting consumer/industrial sectors.",
-    "Nvidia earnings disappointment (Aug 26) — With AI sentiment already fragile (NVDA down 4.3% over past 4 weeks), any guidance miss could trigger a broad tech selloff.",
-    "Jackson Hole hawkish surprise (Aug 21–23) — Warsh has said his speech is a 'blank piece of paper'; a hawkish signal could reset rate expectations for the rest of 2026.",
-    "Government shutdown risk building — September 30 fiscal year-end with no budget deal visible; shutdown risk could hit markets in late August/September."
-  ],
-  "top_opportunities": [
-    "Strait of Hormuz deal announcement — If a deal is confirmed, oil prices could drop sharply, benefiting airlines, chemicals, and consumer sectors while pressuring energy stocks.",
-    "Retail earnings beats (Walmart Aug 15, Target Aug 19) — If consumer resilience shows through despite tariffs, retail stocks could rally; Walmart has already rallied 29% YTD.",
-    "CPI cooling confirmation — If core CPI comes in at or below 0.2% m/m, it could validate the disinflation narrative and support risk assets.",
-    "Samsung HBM4 momentum — Samsung's yield improvement could shift AI memory market share dynamics, benefiting Samsung suppliers and pressuring SK Hynix.",
-    "China stimulus follow-through — If PBoC cuts LPR on Aug 20 and activity data shows improvement, China-exposed sectors could rally."
-  ],
-  "uncertainty": "elevated",
-  "summary": "The window is dominated by the July CPI report (Aug 12), which will shape Fed rate expectations under new hawkish Chair Warsh. Geopolitical risk centers on Strait of Hormuz negotiations, with a potential deal announcement expected within days that could sharply lower oil prices. Retail earnings from Walmart, Home Depot, Target, and Lowe's will test consumer resilience, while Nvidia's late-August report is the key AI sentiment catalyst. Labor market softening (negative July payrolls) and elevated trade tensions add to a complex macro picture. Jackson Hole at end of window could reset rate expectations. Overall uncertainty is elevated given multiple binary outcomes.",
   "windows": {
     "past": "2026-07-28..2026-08-10",
     "today": "2026-08-11",
     "upcoming": "2026-08-12..2026-08-25"
   },
-  "repaired": true,
+  "repaired": false,
+  "merged_with_prior_run": true,
   "catcher": {
     "ran": true,
-    "found": 0,
+    "found": 13,
     "duplicates_dropped": 0,
-    "coverage_assessment": "",
-    "biggest_gap": ""
+    "coverage_assessment": "The primary scan was strong on scheduled macro data (CPI, PPI, retail sales, jobs) and mega-cap earnings (Nvidia, Walmart, Home Depot), and correctly identified Hormuz and Iran war as top geopolitical risks. However, it was nearly blind on government actions — missing the Senate's sweeping Russia/Iran sanctions bill, the Fed Governor Cook removal effort, the SEC's Reg Crypto vote, and the D.C. Circuit's separation-of-powers ruling — and under-covered the fixed income stress signal (30-year at 5.28%) and the historic US-Japan FX intervention.",
+    "biggest_gap": "The Senate's passage of the Lindsey O. Graham Sanctioning Russia and Iran Act (Aug 7) — a sweeping sanctions bill granting Trump authority to impose 100% tariffs on major buyers of Russian oil (India, China) — is the single most market-relevant missed event, directly impacting global oil flows, India/China trade relations, and energy prices."
   }
 }
