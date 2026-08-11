@@ -1278,14 +1278,75 @@
         }
       ],
       "reflection_lesson_ref": "02_lessons/candidate/2026-08-10_lesson.md",
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.bbntimes.com/financial/s-p-500-today-wall-street-benchmark-slips-to-7-753-11-as-oil-prices-rise-on-strait-of-hormuz-uncertainty",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the flat close and the record-close context.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/10/oil-prices-today-brent-wti-hormuz-trump-iran.html",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the oil spike and its Hormuz root cause.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/10/oil-prices-today-brent-wti-hormuz-trump-iran.html",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the same-day geopolitical trigger for the oil spike.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/10/oil-prices-today-brent-wti-hormuz-trump-iran.html",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the overnight de-escalation reversal that set Monday's tone.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-08-10/intel-selling-15-billion-in-common-stock-to-fund-growth",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the Intel dilution event that dragged chips lower.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-08102026-12037267",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms Intel's decline and its role in the chip-sector drag.",
+          "verification": "http_402"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-08-09/stock-market-today-dow-s-p-live-updates",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the oil→inflation→Fed-hike transmission and the negative breadth.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the record-close setup and the jobs-driven dovish repricing.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/news/asia-stocks-edge-higher-oil-002532883.html",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the CPI event risk framing and that oil raises its stakes.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/08/10/stock-market-today-aug-10-markets-slip-as-oil-gains-fuel-inflation-fears/",
+          "date_accessed": "2026-08-10",
+          "summary": "Confirms the energy/tech rotation divergence that defined the day's internals.",
+          "verification": "verified"
+        }
+      ],
       "ops_fail": false,
       "path_shape": "choppy / range-bound",
-      "primary_driver": null,
-      "key_interaction": null,
-      "knowable_at_9am": null,
-      "attribution_contested": null,
-      "outlier_watch": null,
+      "primary_driver": "Hormuz deal stall → oil +5% spike → inflation/Fed-hike concern, capping the market near flat after Friday's record close",
+      "key_interaction": "The weak-jobs dovish repricing (bullish) offset the oil-driven hawkish repricing (bearish), producing a flat tape that masked a genuine tug-of-war; oil amplified through inflation→Fed-hike→tech-selloff chain",
+      "knowable_at_9am": "yes",
+      "attribution_contested": "no",
+      "outlier_watch": "Energy stocks rose while the broad market fell; gold +3.29% signaled an inflation/safe-haven undercurrent the flat equity tape masked; NDX (-0.32%) underperformed SPX (-0.06%) on the Intel/chip drag",
       "lesson_schema_ok": true
     },
     {
