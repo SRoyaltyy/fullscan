@@ -2,64 +2,56 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (30,166 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (36,294 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"10 year real yield TIPS rising 2026 REIT duration"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"real yields TIPS 10 year August 2026 REIT duration"* → got 6 results (via ddg)
 
-  - Market Yield on U.S. Treasury Securities at 10-Year Constant ...10-Year Real Interest Rate — TIPS Yield Chart & History10Y Real Yield (TIPS): 2.40% (Aug 7, 2026) | ConvexTIPS Yield Curve - Treasury Inflation Protected Securities ...10-Year Real Yield (TIPS) Today: 2.40% +0.00% (August 7, 2026)10-Year Real Interest Rate (REAINTRATREARAT10Y) - FRED10-Year TIPS Yield (2000-2026) - Macrotrends (https://fred.stlouisfed.org/series/DFII10)
+  - 10 Year Treasury Yield (US10Y) Price and Chart — TradingView (https://www.tradingview.com/symbols/TVC-US10Y/)
 
-  - 10-Year Real Interest Rate — TIPS Yield Chart & History (https://www.macroradar.io/real-interest-rate)
+  - 5 Best Data Center REITs to Invest in Digital Infrastructure | U.S. News (https://money.usnews.com/investing/articles/best-data-center-reits-to-invest-in-digital-infrastructure)
 
-  - 10Y Real Yield (TIPS): 2.40% (Aug 7, 2026) | Convex (https://convextrade.com/metrics/dfii10)
+  - Состояние рынка REIT — Часть 2: Обзор рынка REIT на... - YouTube (https://www.youtube.com/watch?v=xn9VvOYF_7E)
 
 **Step 2 — Research.** The model wanted to know: *"data center REIT demand rent growth 2026"* → got 6 results (via ddg)
 
+  - 7 Best Data Center Stocks, ETFs and REITs | Investing | U.S. News (https://money.usnews.com/investing/articles/best-data-center-stocks)
+
+  - Prediction: This Data Center REIT Could Double as AI Demand Soars (https://www.fool.com/investing/2025/12/21/prediction-this-data-center-reit-could-double-as-a/)
+
   - 5 Best Data Center REITs to Invest in Digital... - WTOP News (https://wtop.com/news/2026/08/5-best-data-center-reits-to-invest-in-digital-infrastructure/)
-
-  - 3 REITs Built to Get Paid From the AI Data Center Boom (https://behindthemarkets.com/market-updates/3-reits-built-to-get-paid-from-the-ai-data-center-boom)
-
-  - Blackstone data center REIT Q2 slides show trillion-dollar market... (https://www.investing.com/news/company-news/blackstone-data-center-reit-q2-slides-show-trilliondollar-market-ahead-93CH-4835049)
 
 **Step 3 — Research.** The model wanted to know: *"XLRE real estate ETF flows positioning 2026"* → got 6 results (via ddg)
 
-  - Real Estate Stocks 2026: XLRE, VNQ ETFs and Strategies (https://dailymozaic.com/en/finance-investment/real-estate-stocks-2026-etf-forecasts-and-post-crisis-strategies)
+  - Real Estate Select Sector SPDR Fund - XLRE Stock Price, Holdings... (https://www.etf.com/XLRE)
 
-  - State Street Real Estate Select Sector SPDR ETF (XLRE) (https://koalagains.com/etfs/NYSEARCA/XLRE/future-performance-outlook)
+  - A Real Opportunity For Real Estate: XLRE's Investment Case (https://www.etftrends.com/sector-investing-content-hub/real-opportunity-for-real-estate-xlres-investment-case/)
 
-  - XLRE ETF Forecast & Price Target (2026) - clearank.com (https://clearank.com/etf/real-estate-select-sector-xlre/)
+  - XLRE: State Street® Real Estate Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-real-estate-select-sector-spdr-etf-xlre)
 
-**Step 4 — Research.** The model wanted to know: *"office vacancy commercial real estate refinancing wall 2026"* → got 6 results (via ddg)
+**Step 4 — Research.** The model wanted to know: *"REIT earnings season 2026 guidance office vacancy"* → got 6 results (via ddg)
 
-  - Commercial Real Estate's Slow-Motion Reckoning: Office Distress... (https://www.vaasblock.com/news/commercial-real-estate-office-distress-regional-banks-2026/)
+  - REIT Earnings Season Delivers Broad Upside as Real Estate... | citybiz (https://www.citybiz.co/article/846886/reit-earnings-season-delivers-broad-upside-as-real-estate-sector-regains-momentum/)
 
-  - Real Estate Financing France | Global Law Experts (https://globallawexperts.com/real-estate-financing-france/)
-
-  - What Does the Future Hold For Commercial Real Estate and Office... (https://framinghamsource.com/index.php/2021/05/30/what-does-the-future-hold-for-commercial-real-estate-and-office-buildings-in-metrowest/)
-
-**Step 6 — Research.** The model wanted to know: *"Fed rate cut December 2026 probability REIT rates"* → got 6 results (via ddg)
-
-  - United States Fed Funds Interest Rate (https://tradingeconomics.com/united-states/interest-rate)
-
-  - Fed Rate Monitor Tool - Investing.com (https://www.investing.com/central-banks/fed-rate-monitor)
-
-  - Federal Reserve rates | Polymarket (https://polymarket.com/dashboards/fed-rates)
-
-**Step 7 — Research.** The model wanted to know: *"REIT earnings season 2026 results broad upside"* → got 6 results (via ddg)
-
-  - REIT Earnings Season Delivers Broad Upside as Real... | citybiz (https://www.citybiz.co/article/846886/reit-earnings-season-delivers-broad-upside-as-real-estate-sector-regains-momentum/)
+  - US earnings season - Q2 2026 - ii (https://www.ii.co.uk/investing-with-ii/international-investing/us-earnings-season)
 
   - Hoya Capital 2Q'26 REIT Earnings Halftime Report (https://www.linkedin.com/pulse/hoya-capital-2q26-reit-earnings-halftime-report-david-auerbach-7a9me)
 
-  - Orion Office Reit earnings beat by $0.53, revenue fell short of... (https://www.investing.com/news/earnings/orion-office-reit-earnings-beat-by-053-revenue-fell-short-of-estimates-4844415)
+**Step 6 — Research.** The model wanted to know: *"REITs outperform S&P 500 2026 first half rate cuts"* → got 6 results (via ddg)
 
-**Step 8 — Research.** The model wanted to know: *"10 year treasury yield August 11 2026 direction"* → got 6 results (via ddg)
+  - REITs Outperform Broader Market in First Half Of 2026 (https://therealdeal.com/data/national/2026/reits-outperform-broader-market-in-first-half-of-2026/)
 
-  - Market Yield on U.S. Treasury Securities at 10-Year Constant ... (https://fred.stlouisfed.org/series/DGS10/)
+  - REITs Outperform S&P 500: High-Yield Leaders + Low-Cost... | NAI 500 (https://nai500.com/blog/2026/05/reits-outperform-sp-500-high-yield-leaders-low-cost-etfs-for-2026-portfolios/)
 
-  - 10-YEAR TREASURY YIELD FORECAST 2026, 2027, 2028 (https://longforecast.com/10y-treasury)
+  - REITs vs. Stocks: What Does the Data Say? | The Motley Fool (https://www.fool.com/research/reits-vs-stocks/)
 
-  - Daily Treasury Rates | U.S. Department of the Treasury (https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldAll)
+**Step 7 — Research.** The model wanted to know: *"office vacancy rate 2026 commercial real estate refinancing wall"* → got 6 results (via ddg)
 
-**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (10,186 characters).
+  - Commercial Real Estate's Slow-Motion Reckoning: Office Distress... (https://www.vaasblock.com/news/commercial-real-estate-office-distress-regional-banks-2026/)
+
+  - Commercial Real Estate in 2026: Where the... | PeterSkelly.com (https://www.peterskelly.com/2026/03/12/commercial-real-estate-in-2026-where-the-pressure-is-building-and-where-opportunity-is-quietly-emerging/)
+
+  - #8220;Urban Doom Loop” of Vacant Offices: How far will it go? (https://www.schiffgold.com/commentaries/urban-doom-loop-of-vacant-offices-how-far-will-it-go)
+
+**Step 9 — Done researching.** The model stopped searching and wrote its full analysis (9,125 characters).

@@ -2,88 +2,80 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (31,922 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (38,050 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"copper price LME August 2026 industrial metals"* → got 6 results (via searxng)
+**Step 1 — Research.** The model wanted to know: *"copper price LME August 2026 record high"* → got 6 results (via ddg)
 
-  - westmetall . market data . prices/lme stocks . copper, tin, lead, zinc, aluminium, nickel, gold, fine silver (https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash)
+  - westmetall . market data . prices/lme stocks . copper, tin, lead, zinc... (https://www.westmetall.com/en/markdaten.php)
 
-  - LME Copper Price Today | Live London Metal Exchange Copper (2026) (https://metalcharts.org/lme-copper-price)
+  - Copper - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/copper)
 
-  - LME Copper - Metals (https://www.lme.com/metals/non-ferrous/lme-copper)
+  - LME Copper | London Metal Exchange (https://www.lme.com/metals/non-ferrous/lme-copper)
 
-**Step 2 — Research.** The model wanted to know: *"China PMI property demand August 2026 copper demand"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"China PMI manufacturing August 2026 property sector"* → got 6 results (via ddg)
 
-  - Copper - Wikipedia (https://en.wikipedia.org/wiki/Copper)
+  - China’s July PMI points to a weaker second half of 2026 absent... (https://www.icis.com/asian-chemical-connections/2026/08/chinas-july-pmi-points-to-a-weaker-second-half-of-2026-absent-increased-stimulus/)
+
+  - China’s Weak Domestic Demand Raises Fresh... - HIT AND HOT NEWS (https://hitandhotnews.com/china-economy-domestic-demand-inflation-july-2026/)
+
+  - China’s Gold Buying Is Not Simply A Bet... | Armstrong Economics (https://www.armstrongeconomics.com/armstrongeconomics101/economics/chinas-gold-buying-is-not-simply-a-bet-against-the-dollar/)
+
+**Step 3 — Research.** The model wanted to know: *"XLB basic materials ETF flows breadth August 2026"* → got 6 results (via ddg)
+
+  - XLB State Street Materials Select Sector SPDR ETF (https://etfdb.com/etf/XLB/)
+
+  - State Street Materials Select Sector SPDR ETF (XLB) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLB/)
+
+  - State Street Materials Select Sector SPDR ETF (XLB) (https://stockanalysis.com/etf/xlb/)
+
+**Step 4 — Research.** The model wanted to know: *"gold silver price surge August 2026 Iran"* → got 6 results (via ddg)
+
+  - Silver prices today, Tuesday, August 11, 2026: Silver prices keep... (https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-tuesday-august-11-2026-silver-prices-keep-rising-on-jobs-iran-news-120655913.html)
+
+  - Silver Rate Today (7 August 2026), Silver Price in India - Goodreturns (https://www.goodreturns.in/silver-rates/)
+
+  - Gold Rate Today in India: ₹14,591/g (24K) | Upstox (https://upstox.com/gold-rates/)
+
+**Step 6 — Research.** The model wanted to know: *"DRC Congo copper cobalt export ban August 2026"* → got 6 results (via ddg)
+
+  - TRT Afrika - DRC bans exports of copper, cobalt concentrates (https://www.trtafrika.com/article/036746287c5b)
+
+  - Congo Bans Copper and Cobalt Concentrate Exports | africa.com (https://www.africa.com/top-10-news/congo-bans-copper-and-cobalt-concentrate-exports)
+
+  - DR Congo: Government bans export of copper and cobalt concentrates | Africanews (https://www.africanews.com/2026/08/06/dr-congo-government-bans-export-of-copper-and-cobalt-concentrates/)
+
+**Step 7 — Research.** The model wanted to know: *"LME aluminum inventory lowest century 2026 supply disruption"* → got 6 results (via ddg)
+
+  - LME aluminium stocks fall to lowest this century (https://www.miningweekly.com/article/lme-aluminium-stocks-fall-to-lowest-this-century-2026-07-27)
+
+  - LME aluminium stocks hit the lowest level this century amid... | Mysteel (https://www.mysteel.net/news/5134443-lme-aluminium-stocks-hit-the-lowest-level-this-century-amid-middle-east-supply-constraints)
+
+  - LME Aluminium Stocks Hit 13-Month Low on Indian... | LinkedIn (https://www.linkedin.com/posts/metal-intelligence-centre-mic_aluminium-lme-stocks-activity-7470800416373432320-fwx_)
+
+**Step 8 — Research.** The model wanted to know: *"XLB redemption outflow materials sector rotation August 2026"* → got 6 results (via ddg)
+
+  - Take a Look at This Overlooked Sector - The Opportunistic Trader (https://www.opportunistictrader.com/trading-with-larry-benedict/take-a-look-at-this-overlooked-sector/)
+
+  - Rust Store Rotation (August 6 2026) - YouTube (https://www.youtube.com/watch?v=a-S8IXpQWyg)
+
+  - Chicken Farm codes (August 2026) - Dexerto (https://www.dexerto.com/roblox/chicken-farm-codes-3395955/)
+
+**Step 10 — Research.** The model wanted to know: *"XLB materials sector breadth participation August 11 2026"* → got 6 results (via ddg)
+
+  - XLB State Street Materials Select Sector SPDR ETF (https://etfdb.com/etf/XLB/)
+
+  - XLB: State Street® Materials Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb)
+
+  - State Street Materials Select Sector SPDR ETF (XLB) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLB/)
+
+**Step 11 — Research.** The model wanted to know: *"copper price today August 11 2026"* → got 6 results (via ddg)
 
   - Copper - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/copper)
 
   - Current and historical Copper prices, stocks and monthly averages. (https://www.lme.com/metals/non-ferrous/lme-copper)
 
-**Step 3 — Research.** The model wanted to know: *"gold silver price surge August 2026 monetary metals"* → got 6 results (via ddg)
+  - Copper price today | LME copper & aluminium | by Top Cable (https://www.topcable.com/metalprices/)
 
-  - Where will silver and gold prices head this August? Experts weigh in - CBS News (http://www.cbsnews.com/news/silver-and-gold-prices-forecast-august-2026-experts/)
-
-  - Silver Surges 2.5% To $59 As The Gold-Silver Ratio Compresses Below 69; Physical Gold Holds $4,060 | USAGOLD (https://www.usagold.com/daily-precious-metals-market-report-august-4-2026/)
-
-  - How Will Silver Prices Fare in 2026? I J.P. Morgan Global Research (https://www.jpmorgan.com/insights/global-research/commodities/silver-prices)
-
-**Step 4 — Research.** The model wanted to know: *"XLB basic materials ETF flows breadth August 2026"* → got 6 results (via ddg)
-
-  - Materials Sector (XLB) ETF Forecast & Price Target (2026) (https://clearank.com/etf/materials-select-sector-xlb/)
-
-  - XLB: State Street® Materials Select Sector SPDR® ETF - SSGA (https://www.ssga.com/us/en/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb)
-
-  - XLB ETF Stock Price & Overview (https://stockanalysis.com/etf/xlb/)
-
-**Step 6 — Research.** The model wanted to know: *"copper Congo export ban supply disruption August 2026"* → got 6 results (via ddg)
-
-  - Copper Hits All-Time Record as Congo Bans Exports and Acid Supply Collapses (https://www.techtimes.com/articles/323370/20260806/copper-hits-all-time-record-congo-bans-exports-acid-supply-collapses.htm)
-
-  - Congo Bans Copper and Cobalt Concentrate Exports as Copper Prices Spike - Startup Fortune (https://startupfortune.com/congo-bans-copper-and-cobalt-concentrate-exports-as-copper-prices-spike/)
-
-  - Congo bans copper and cobalt concentrates exports in push for local processing | Yoopya News (https://www.yoopya.com/business/congo-bans-copper-cobalt-concentrates-exports-2026)
-
-**Step 7 — Research.** The model wanted to know: *"China manufacturing PMI July 2026 contraction property sector"* → got 6 results (via ddg)
-
-  - China’s July PMI points to a weaker second half of 2026 absent... (https://www.icis.com/asian-chemical-connections/2026/08/chinas-july-pmi-points-to-a-weaker-second-half-of-2026-absent-increased-stimulus/)
-
-  - 5th August 2026: July PMI – European Chamber Podcasts (https://podcast.europeanchamber.com.cn/2026/08/05/july-pmi-2/)
-
-  - China's manufacturing PMI falls below 50 in July as orders shrink (https://asianbusinessreview.com/manufacturing/news/chinas-manufacturing-pmi-falls-below-50-in-july-orders-shrink)
-
-**Step 8 — Research.** The model wanted to know: *"Iran situation gold silver safe haven August 11 2026"* → got 6 results (via ddg)
-
-  - How US-Iran War Affects Gold Price: The Safe Haven Rush of 2026 (https://intellectia.ai/blog/us-iran-war-affect-gold-price-2026-analysis)
-
-  - Why Gold Failed to Act as a Safe Haven in 2026 Crisis: Know ... (https://www.venturasecurities.com/blog/gold-prices-fell-despite-the-2026-us-iran-conflict-learn-how-rising-yields-a-stronger-dollar-slowing-central-bank-demand-and-inflation-concerns-pressured-gold-prices/)
-
-  - A Test for Gold’s Safe-Haven Status | Morgan Stanley (https://www.morganstanley.com/insights/articles/gold-prices-safe-haven-status-reality-check-iran-conflict)
-
-**Step 9 — Research.** The model wanted to know: *"materials sector rotation leadership 2026 XLB relative strength"* → got 6 results (via ddg)
-
-  - Materials Sector Relative Strength (XLB) · TickerStance (https://tickerstance.com/sectors/materials)
-
-  - US Sector Momentum Update: Materials and Industrials Lead ... (https://www.kalkine.com/news/premium/us-sector-momentum-update-materials-and-industrials-lead-while-technology-and-consumer-discretionary-improve-on-10-august-2026)
-
-  - US Sector Momentum Analysis: Leadership Broadens as Materials ... (https://www.kalkine.com/news/premium/us-sector-momentum-analysis-leadership-broadens-as-materials-enters-leading-and-energy-improves)
-
-**Step 11 — Research.** The model wanted to know: *"XLB ETF redemption outflow August 2026 materials rally breadth"* → got 6 results (via ddg)
-
-  - State Street Materials Select Sector SPDR ETF (XLB) | Trefis (https://www.trefis.com/data/etfs/XLB)
-
-  - XLB: State Street® Materials Select Sector SPDR® ETF - SSGAMaterials Rally Needs Wider Footing - thestreetbrief.comState Street Materials Select Sector SPDR ETF (XLB)ETF Fund Flows Tool: Search Top Inflows and OutflowsMaterials Sector (XLB) ETF Forecast & Price Target (2026)State Street Materials Select Sector SPDR ETF (XLB) (https://www.ssga.com/us/en/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb)
-
-  - Materials Rally Needs Wider Footing - thestreetbrief.com (https://thestreetbrief.com/articles/4885552/materials-rally-needs-wider-footing)
-
-**Step 12 — Research.** The model wanted to know: *"copper aluminum record high August 2026 LME inventory draw"* → got 6 results (via ddg)
-
-  - westmetall . market data . prices/lme stocks . copper, tin, lead, zinc, aluminium, nickel, gold, fine silver (https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash)
-
-  - Aluminium climbs for 6th straight session as inventory draw continues - Markets - Business Recorder (https://www.brecorder.com/news/40434141/aluminium-climbs-for-6th-straight-session-as-inventory-draw-continues)
-
-  - LME Copper Hits All-Time High - ADM Investor Services (https://www.admis.com/lme-copper-hits-all-time-high/)
-
-**Step 14 — Done researching.** The model stopped searching and wrote its full analysis (10,107 characters).
+**Step 13 — Done researching.** The model stopped searching and wrote its full analysis (9,376 characters).
