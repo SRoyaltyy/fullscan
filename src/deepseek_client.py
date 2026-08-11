@@ -172,3 +172,33 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         except OSError as e:
             print(f"[trace] save failed: {e}")
     return final
+
+
+def chat_nonempty(messages: list[dict], ladder: list[tuple[str, int]],
+                  tools: bool = False, temperature: float = 0.2,
+                  transcript_path: str | None = None,
+                  trace_path: str | None = None,
+                  stage_label: str = "") -> str:
+    """Call chat() down a (model, max_tokens) ladder until a NON-EMPTY answer
+    comes back; returns '' if every rung fails.
+
+    Guards against deepseek-reasoner burning its entire max_tokens budget on
+    hidden reasoning and returning content='' — which previously produced
+    blank reflect files and junk empty lessons. Typical ladder:
+        [(config.MODEL_REFLECT, 12000),
+         (config.MODEL_REFLECT, 16000),
+         (config.MODEL_PREDICT, 8000)]
+    """
+    for i, (model, max_tokens) in enumerate(ladder):
+        text = chat([dict(m) for m in messages], model=model, tools=tools,
+                    max_tokens=max_tokens, temperature=temperature,
+                    transcript_path=transcript_path, trace_path=trace_path,
+                    stage_label=stage_label)
+        if text and text.strip():
+            if i:
+                print(f"[deepseek] recovered on attempt {i + 1} "
+                      f"(model={model}, max_tokens={max_tokens})")
+            return text
+        print(f"[deepseek] EMPTY answer on attempt {i + 1} "
+              f"(model={model}, max_tokens={max_tokens}) — trying next rung")
+    return ""

@@ -1,0 +1,51 @@
+name: News Actions Grader
+
+# Backtests every buy/sell suggestion from the News Actions stage.
+# Entry = open of the first trading day at/after the signal timestamp inside
+# each actions JSON; tracks up to 14 trading days; a buy is profitable if
+# any High > entry, a sell if any Low < entry. Recomputes the full board
+# every run, so partially-elapsed windows keep updating until complete.
+
+on:
+  schedule:
+    - cron: "45 21 * * 1-6"   # 21:45 UTC Mon–Sat (~17:45 ET, after close)
+  workflow_dispatch:
+    inputs:
+      max_days:
+        description: "Only grade newest N signal dates (blank = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-grader
+  cancel-in-progress: true
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install yfinance pandas
+      - name: Grade news actions
+        env:
+          MAX_DAYS: ${{ github.event.inputs.max_days }}
+        run: python -m src.news_grade ${MAX_DAYS:+--max-days "$MAX_DAYS"}
+      - name: Preview report
+        if: always()
+        run: head -80 03_scoreboard/news_actions_report.md || true
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/news/grades 03_scoreboard/news_actions_scoreboard.json 03_scoreboard/news_actions_report.md
+          git commit -m "auto: news actions grades [$(date -u +%F)]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main

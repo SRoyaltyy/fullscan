@@ -89,17 +89,26 @@ def run_one(sector: str, date_str: str) -> None:
         "Execute the diagnostic. Answer all five checks."
     )
 
-    text = deepseek_client.chat(
+    text = deepseek_client.chat_nonempty(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_REFLECT,
+        ladder=[(config.MODEL_REFLECT, 12000),
+                (config.MODEL_REFLECT, 16000),
+                (config.MODEL_PREDICT, 8000)],
         tools=False,
-        max_tokens=8000,
         transcript_path=os.path.join(
             "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json"),
         trace_path=os.path.join(out_dir, f"{slug}_reflect_trace.md"),
         stage_label=f"SECTOR REFLECT {sector} {date_str}",
     )
+
+    if not text.strip():
+        # deepseek-reasoner exhausted its budget on every rung — writing the
+        # empty text would produce a blank reflect md AND a junk empty
+        # candidate lesson. Skip both; the scoreboard entry keeps no ref.
+        print(f"[sector-reflect] {sector}: EMPTY after all retries — "
+              f"not writing reflect md or lesson")
+        return
 
     lb = _parse_lesson_block(text)
     os.makedirs(config.LESSONS_CANDIDATE, exist_ok=True)

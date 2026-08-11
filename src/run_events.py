@@ -61,6 +61,78 @@ def strip_json_block(text: str) -> str:
     return re.sub(r"```json\s*.*?```\s*$", "", text, flags=re.S).rstrip()
 
 
+def strip_model_markup(text: str) -> str:
+    """Remove leaked DeepSeek DSML tool-call markup (full-width OR half-width
+    vertical bars) that sometimes ends up in the prose body."""
+    text = re.sub(r"<[｜|][｜|]DSML[｜|][｜|]tool_calls>.*?</[｜|][｜|]DSML[｜|][｜|]tool_calls>",
+                  "", text, flags=re.S)
+    text = re.sub(r"</?[｜|][｜|]DSML[｜|][｜|][^>]*>", "", text)
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def _event_key(ev: dict) -> str:
+    return re.sub(r"[^a-z0-9]+", " ",
+                  str(ev.get("title", "")).lower()).strip()
+
+
+def merge_with_existing(json_path: str, payload: dict) -> dict:
+    """Same-day re-runs must NEVER shrink the event list: union events from
+    the existing file with the new run, keyed by normalized title (new run
+    wins on duplicates). Rescues the list even if this run's parse failed."""
+    try:
+        with open(json_path, encoding="utf-8") as fh:
+            old = json.load(fh)
+    except (OSError, ValueError):
+        return payload
+    old_events = old.get("events") or []
+    new_events = payload.get("events") or []
+    if not old_events:
+        return payload
+    merged: dict[str, dict] = {}
+    for ev in old_events:
+        k = _event_key(ev)
+        if k:
+            merged[k] = ev
+    for ev in new_events:
+        k = _event_key(ev)
+        if k:
+            merged[k] = ev  # newer run overwrites same-title duplicates
+    if len(merged) <= len(new_events):
+        return payload
+    out = dict(payload)
+    out["events"] = list(merged.values())
+    out["merged_with_prior_run"] = True
+    print(f"[events] merged with earlier same-day scan: "
+          f"{len(new_events)} new + {len(old_events)} prior -> "
+          f"{len(merged)} unique")
+    return out
+
+
+def events_section(events: list[dict]) -> str:
+    """Human-readable numbered list of every tracked event — always rendered
+    from the JSON, so pass-1 events stay visible even if the prose is thin."""
+    if not events:
+        return ""
+    lines = ["", f"## Events tracked ({len(events)})", ""]
+    for i, ev in enumerate(events, 1):
+        origin = ev.get("origin", "")
+        tag = f"  *({origin})*" if origin else ""
+        lines.append(f"{i}. **{ev.get('title', '(untitled)')}**{tag}")
+        lines.append(
+            f"   - {ev.get('category', '?')} | {ev.get('timing', '?')} | "
+            f"{ev.get('date_or_window', '?')} | impact "
+            f"{ev.get('impact', '?')}/5 | {ev.get('expected_direction', '?')}")
+        regions = ", ".join(ev.get("regions") or [])
+        sectors = ", ".join(ev.get("sectors") or [])
+        if regions or sectors:
+            lines.append(f"   - regions: {regions or '—'} | sectors: "
+                         f"{sectors or '—'}")
+        why = (ev.get("why_it_matters") or "").strip()
+        if why:
+            lines.append(f"   - {why}")
+    return "\n".join(lines)
+
+
 def _previous_scan() -> str:
     path = os.path.join(EVENTS_DIR, "latest.md")
     if not os.path.exists(path):
@@ -143,17 +215,34 @@ def main() -> None:
         if fixed and fixed.get("events"):
             data, repaired = fixed, True
 
-    md_body = strip_json_block(text)
-
     os.makedirs(EVENTS_DIR, exist_ok=True)
+    json_path = os.path.join(EVENTS_DIR, f"{date_str}_events.json")
+
+    payload = (data if data and data.get("events") else
+               {"scan_date": date_str, "error": "parse_failed", "events": []})
+    payload.setdefault("scan_date", date_str)
+    payload["windows"] = win
+    payload["repaired"] = repaired
+    # Never let a same-day re-run clobber a richer earlier scan.
+    payload = merge_with_existing(json_path, payload)
+    events = payload.get("events", [])
+    if events:
+        payload.pop("error", None)
+
+    with open(json_path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, indent=2, ensure_ascii=False)
+
+    md_body = strip_model_markup(strip_json_block(text))
 
     header = [f"# Event Scan — {date_str}", ""]
-    if data and data.get("events"):
-        n = len(data["events"])
+    if events:
         header += [
-            f"- events tracked: **{n}**" + (" (via repair pass)" if repaired else ""),
-            f"- uncertainty: **{data.get('uncertainty', '?')}**",
-            f"- summary: {data.get('summary', '')}".rstrip(),
+            f"- events tracked: **{len(events)}**"
+            + (" (via repair pass)" if repaired else "")
+            + (" (merged with earlier same-day scan)"
+               if payload.get("merged_with_prior_run") else ""),
+            f"- uncertainty: **{payload.get('uncertainty', '?')}**",
+            f"- summary: {payload.get('summary', '')}".rstrip(),
             "",
         ]
     else:
@@ -163,16 +252,10 @@ def main() -> None:
 
     md_path = os.path.join(EVENTS_DIR, f"{date_str}_events.md")
     with open(md_path, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(header) + md_body + "\n")
-
-    json_path = os.path.join(EVENTS_DIR, f"{date_str}_events.json")
-    payload = (data if data and data.get("events") else
-               {"scan_date": date_str, "error": "parse_failed", "events": []})
-    payload.setdefault("scan_date", date_str)
-    payload["windows"] = win
-    payload["repaired"] = repaired
-    with open(json_path, "w", encoding="utf-8") as fh:
-        json.dump(payload, fh, indent=2, ensure_ascii=False)
+        fh.write("\n".join(header))
+        fh.write(events_section(events))
+        fh.write("\n\n---\n\n## Model narrative\n\n")
+        fh.write(md_body + "\n")
 
     # stable pointers for other workflows
     for src, dst in ((md_path, "latest.md"), (json_path, "latest.json")):

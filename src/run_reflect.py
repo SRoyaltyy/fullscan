@@ -97,14 +97,23 @@ def main() -> None:
         "Execute the diagnostic. Answer mandatory checks explicitly."
     )
 
-    text = deepseek_client.chat(
+    text = deepseek_client.chat_nonempty(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        model=config.MODEL_REFLECT, tools=False, max_tokens=12000,
+        ladder=[(config.MODEL_REFLECT, 12000),
+                (config.MODEL_REFLECT, 16000),
+                (config.MODEL_PREDICT, 8000)],
+        tools=False,
         transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_reflect.json"),
         trace_path=os.path.join(config.DAILY_GENERAL, f"{date_str}_reflect_trace.md"),
         stage_label=f"REFLECT {date_str}",
     )
+
+    if not text.strip():
+        # Model returned empty on every rung — abort WITHOUT writing a
+        # lesson file (an empty lesson would pollute the candidate pool).
+        raise SystemExit(f"[reflect] {date_str}: model returned EMPTY after "
+                         f"all retries — no reflect/lesson written")
 
     lb = _parse_lesson_block(text)
     norm = lesson_schema.normalize(lb, date_str)
