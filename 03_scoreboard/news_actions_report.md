@@ -1,6 +1,6 @@
 # News Actions — Backtest Report
 
-_Generated 2026-08-11 03:43 EDT_
+_Generated 2026-08-11 03:50 EDT_
 
 How to read this: each section is one prediction day. **Entry** is the open of the first trading day at/after the signal timestamp (same day if the signal ran pre-market, next day otherwise). A buy is `ever ✓` if price traded ABOVE the entry open at any point within the tracked window (up to 14 trading days); a sell/short is `ever ✓` if price traded BELOW it. `now%` is the return at the latest close in the window.
 
