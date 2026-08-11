@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-11T17:58:35.260602-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 5.25,
+      "delta_1d": 0.06,
+      "delta_1w": 0.02,
+      "delta_1m": 0.19
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 4.72,
+      "delta_1d": 0.07,
+      "delta_1w": 0.02,
+      "delta_1m": 0.16
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 2.43,
+      "delta_1d": 0.03,
+      "delta_1w": 0.0,
+      "delta_1m": 0.11
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 2.7,
+      "delta_1d": 0.0,
+      "delta_1w": -0.08,
+      "delta_1m": 0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 3.63,
+      "delta_1d": 0.01,
+      "delta_1w": -0.02,
+      "delta_1m": 0.08
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 1.25,
+      "delta_1d": 0.275,
+      "delta_1w": -1.001,
+      "delta_1m": 0.455
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 253.38,
+      "delta_1d": -62.52,
+      "delta_1w": -58.0,
+      "delta_1m": -126.65
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-11",
+      "current": 15.28,
+      "delta_1d": -0.18,
+      "delta_1w": -1.22
+    },
+    "vix3m": {
+      "date": "2026-08-11",
+      "current": 18.91,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.808
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-11",
+      "last": 83.23,
+      "pct_1d": 1.34
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-11",
+      "last": 88.95,
+      "pct_1d": 1.4
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-11",
+      "last": 4427.8,
+      "pct_1d": 1.51
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-11",
+      "pct_1d": 0.02,
+      "pct_1m": -1.43
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-11",
+      "last": 7753.25,
+      "pct_1d": -0.3
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-11",
+      "last": 29646.75,
+      "pct_1d": -0.3
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-10",
+          "last": 66970.22,
+          "pct_1d": 2.08
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-10",
+          "last": 25937.49,
+          "pct_1d": 1.05
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-10",
+          "last": 3966.59,
+          "pct_1d": 0.67
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-10",
+          "last": 6299.66,
+          "pct_1d": 0.65
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-10",
+          "last": 9232.6,
+          "pct_1d": -0.33
+        }
+      },
+      "composite_avg": 0.82
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-11",
+          "last": 10844.19,
+          "pct_1d": -0.17
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-11",
+          "last": 26391.42,
+          "pct_1d": 0.26
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-11",
+          "last": 8714.94,
+          "pct_1d": -0.13
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-11",
+          "last": 6551.22,
+          "pct_1d": 0.24
+        }
+      },
+      "composite_avg": 0.05
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.213,
+    "window": "2026-08-04..2026-08-11"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 63.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-11 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Wheat Posting Monday Morning Strength",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/wheat-posting-monday-morning-strength-122503108.html",
+        "published_at": "2026-08-10T12:25:03Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "CoreWeave stock pops 10% as revenue doubles on accelerating AI infrastructure demand - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPclpXaXMyMThmdzRpVzZvNlpmNEVBLUMtOGlDTXEtdGxxTnJHQkttQl9RanRkOXZBS1VqTnNOS2ktTTdGZXI1YzliTDFQYU5rekpWaUtEUmpCMG5PcFc3RFE4Z0JLaHhHeUZPbWIySVZiZUJHc0pkRXc0ekpsME9HddIBhgFBVV95cUxQZ3p0QWgxUlZWaFVJM21SenVENE1QT0NWSUhKZVM0Zzd5QVhnblI5SWVqUHZwM0JWYnRId2FfSk9kUVpHbWlhYkIzczQ3RFNhdGZGMHFFZXVqaE5HVWdTNUZic2ZROW1HYlZIdk13YXBaalRwUXlzTmcyMEdxZnpJRGNzd2xmdw?oc=5",
+        "published_at": "Tue, 11 Aug 2026 20:22:56 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "In Gaza’s tents, widows face war’s harshest realities alone",
+        "url": "https://www.aljazeera.com/news/2026/8/11/in-gazas-tents-widows-face-wars-harshest-realities-alone?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:30:11 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Soybeans Pushing Higher to Begin the Week",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/soybeans-pushing-higher-begin-week-122503103.html",
+        "published_at": "2026-08-10T12:25:03Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "First Brands urges approval of restructuring plan",
+        "url": "https://finance.yahoo.com/small-business/articles/first-brands-urges-approval-restructuring-121958907.html",
+        "published_at": "2026-08-10T12:19:58Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Nvidia Credit Risk Eases After CEO Clarifies $500 Billion Plan - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZ1dlbk4wckNTdmJzTGpYcldjVGFUczdWb3Q3VXlTbGprZEtqVEJoV3RBSlRLYXVlZzZUeDZkNmsyOUdkT3p2MUtUS3B4S2ktaXl6M1Btek5NSVNrdDhTUnNIdDV4aDVGbE5BMFZIYkJGS1RoR1htRDBhZ0NIcmhxRmNqbUgtWnlEc0pSbHNBRkp1eGlUalV2VzI2Ynhtc2xFR204ekdJX2VOaER0WnJIUFF3?oc=5",
+        "published_at": "Tue, 11 Aug 2026 16:09:37 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Cava reports sales growth even as some customers steer clear of lettuce",
+        "url": "https://www.marketwatch.com/story/cava-reports-sales-growth-even-as-some-customers-steer-clear-of-lettuce-044b7f51?mod=mw_rss_topstories",
+        "published_at": "Tue, 11 Aug 2026 20:41:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Pakistan interior minister in Tehran amid talks to reopen Hormuz",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/11/pakistan-interior-minister-in-tehran-amid-talks-to-reopen-hormuz?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:35:50 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "DR Congo Ebola death toll surpasses 2,000",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/11/dr-congo-ebola-death-toll-surpasses-2000?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:15:26 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US military fires on cargo vessel it said sought to break Iran blockade",
+        "url": "https://www.aljazeera.com/news/2026/8/11/us-military-fires-on-cargo-vessel-it-said-sought-to-break-iran-blockade?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 19:58:12 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "A 26-year-old owes $45K in debt but insists on keeping an $800 monthly entertainment budget — Reddit didn't hold back",
+        "url": "https://finance.yahoo.com/markets/articles/26-old-owes-45k-debt-120000267.html",
+        "published_at": "2026-08-10T12:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Interest Rates Could Still Rise in September: 5 High-Yield Passive Income Stocks Will Benefit",
+        "url": "https://finance.yahoo.com/economy/policy/articles/interest-rates-could-still-rise-121506723.html",
+        "published_at": "2026-08-10T12:15:06Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "How Much of the S&P 500's Return Actually Came From Dividends vs. Price Appreciation, by Decade",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/much-p-500s-return-actually-122000181.html",
+        "published_at": "2026-08-10T12:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Amazon Stock Hits a New All-Time High: Is It Still a Buy?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-stock-hits-time-high-121433063.html",
+        "published_at": "2026-08-10T12:14:33Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "PE-backed UK companies shirk IPOs while delistings mount",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/pe-backed-uk-companies-shirk-115733577.html",
+        "published_at": "2026-08-10T11:57:33Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "GameStop weighing withdrawal of eBay bid, Bloomberg News reports",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/gamestop-weighing-withdrawal-ebay-bid-120023965.html",
+        "published_at": "2026-08-10T12:00:23Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Oracle’s stock has taken a hit as AI spending concerns resurface",
+        "url": "https://www.marketwatch.com/story/oracles-stock-has-taken-a-hit-as-ai-spending-concerns-resurface-bdb9bf09?mod=mw_rss_topstories",
+        "published_at": "Tue, 11 Aug 2026 20:32:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Tributes to co-founder of John Pye auction house",
+        "url": "https://www.bbc.co.uk/news/articles/c8xn7k2ldzxo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 11 Aug 2026 20:22:40 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Fishermen face deadly dangers as Yemen’s Red Sea becomes a warzone",
+        "url": "https://www.aljazeera.com/features/2026/8/11/yemen-red-sea-fishermen?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:29:34 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Israel demolishes home of Palestinian killed during settler attack",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/11/israel-demolishes-home-of-palestinian-killed-during-settler-attack?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:18:51 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump warns of ‘jihadists’ ruling in Washington as Democrats show momentum",
+        "url": "https://www.aljazeera.com/news/2026/8/11/trump-warns-of-jihadists-ruling-in-washington-as-democrats-show-momentum?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:11:53 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Search for survivors underway in Colombia’s earthquake aftermath",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/11/search-for-survivors-underway-in-colombias-earthquake-aftermath?traffic_source=rss",
+        "published_at": "Tue, 11 Aug 2026 20:06:54 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Corn Ticking Higher on Monday Morning",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/corn-ticking-higher-monday-morning-122503479.html",
+        "published_at": "2026-08-10T12:25:03Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Mariner Logistics taps Flock Freight veteran as CEO",
+        "url": "https://finance.yahoo.com/small-business/articles/mariner-logistics-taps-flock-freight-120000711.html",
+        "published_at": "2026-08-10T12:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Intel raises $20 billion from upsized share sale",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/intel-launches-15-billion-share-120506693.html",
+        "published_at": "2026-08-10T12:05:06Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "EXCLUSIVE: Aspire Biopharma Buys Its Way Into Global Auto Market With $30 Million DCS Deal",
+        "url": "https://finance.yahoo.com/healthcare/articles/exclusive-aspire-biopharma-buys-way-121602572.html",
+        "published_at": "2026-08-10T12:16:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What Are Wall Street Analysts' Target Price for GoDaddy Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-target-price-124855338.html",
+        "published_at": "2026-08-10T12:48:55Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bitcoin News Today: BlackRock IBIT Drives Five-Day BTC ETF Inflow Streak",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-news-today-blackrock-ibit-121944657.html",
+        "published_at": "2026-08-10T12:19:44Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "BlackRock Inks Union Pact to Support Data-Center Boom",
+        "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-10-2026/card/blackrock-inks-union-pact-to-support-data-center-boom-cLxuNUAhWTqWsD6BOVSJ?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-10T12:20:19Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "GM reaches up to $4.5 billion parts deal designed to avoid supply chain troubles - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZURUZ0RGUkJMYk10RlZTVGI3Q19JU1JIejJXV1ZSeHhEVTYxNkRFZTF4bWhENDlLWkhhRVFlS2d4djVkTm5qM0R5ODFqVGRNdGJFWW92ZUlmTkNZWlFKSG1SMzM5MVZMbmhOeHlrM3BkMWlJN3dSeHRmUmwtQThJTXY1WGtvWG82ZG0wVC10eWhyT21vZFBQQk5DMUHSAaIBQVVfeXFMUFhIZzJ2V1pEam5wamdma0J0MjdDZ01UTUJ3cjBNVFRheEdlUmRCV2xmRFJ3aDBjZHNGeWFJY3NLaTQ4LXNEWTAzdV90d2h1Q2t0VjlYcUpsUE44dWRtS0VpSUlqTWVJTzdEcDh4WkVZaXA0ekMzYVBsdENTUVBOTVE1VEFnNlRUbV91dDZYd1Z0dnVKTUtBakhsaklXRzlBWnFR?oc=5",
+        "published_at": "Tue, 11 Aug 2026 20:26:43 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-11",
+      "open": 7767.51,
+      "high": 7767.51,
+      "low": 7717.25,
+      "close": 7728.2,
+      "pct_change": -0.32,
+      "prev_close": 7753.11,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.65,
+        "intraday_low_pct": -0.46,
+        "intraday_high_pct": 0.19,
+        "close_position_in_range": 0.22
+      }
+    },
+    "DOW": {
+      "date": "2026-08-11",
+      "open": 53961.6,
+      "high": 54222.85,
+      "low": 53746.43,
+      "close": 53791.85,
+      "pct_change": -0.34,
+      "prev_close": 53975.98,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.89,
+        "intraday_low_pct": -0.43,
+        "intraday_high_pct": 0.46,
+        "close_position_in_range": 0.1
+      }
+    },
+    "NDX": {
+      "date": "2026-08-11",
+      "open": 26672.17,
+      "high": 26679.26,
+      "low": 26372.31,
+      "close": 26445.45,
+      "pct_change": -0.6,
+      "prev_close": 26605.36,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 1.16,
+        "intraday_low_pct": -0.88,
+        "intraday_high_pct": 0.28,
+        "close_position_in_range": 0.24
+      }
+    }
+  }
+}
