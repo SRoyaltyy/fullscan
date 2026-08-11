@@ -1722,6 +1722,39 @@
       "rubric": "00_grounding/sectors/utilities.md",
       "spy_pct_change": -0.029741673673222557,
       "rel_pct_change": -1.070922246341477
+    },
+    {
+      "date": "2026-08-11",
+      "topic": "general",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": -2.475,
+      "multiplier": 0.9,
+      "components": {
+        "B0_ASIA": 0.0,
+        "B0_EUROPE": 0.0,
+        "B1_CATALYSTS": -1.0,
+        "B2_BONDS": 0.5,
+        "B3_FEDPATH": -0.5,
+        "B4_VIX": 0.0,
+        "B5_SENTIMENT": 0.5,
+        "B6_FUTURES": 0.5,
+        "B7_OIL_DOLLAR": -0.5
+      },
+      "leading_sum": -2.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": []
     }
   ]
 }
