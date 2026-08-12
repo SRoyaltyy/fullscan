@@ -61,7 +61,6 @@ def build() -> dict:
     by_date_general = {r["date"]: r for r in general if r.get("date")}
 
     sector_runs = [r for r in runs if str(r.get("topic", "")).startswith("sector:")]
-    # date -> sector -> row
     by_date_sector: dict[str, dict[str, dict]] = defaultdict(dict)
     for r in sector_runs:
         topic = r.get("topic") or ""
@@ -70,18 +69,14 @@ def build() -> dict:
         if d and sector:
             by_date_sector[d][sector] = r
 
-    all_dates = sorted(
-        set(by_date_general.keys()) | set(by_date_sector.keys())
-    )
+    all_dates = sorted(set(by_date_general.keys()) | set(by_date_sector.keys()))
 
-    # Per-date sector rollup
     sector_by_date = []
     for d in all_dates:
         rows = list(by_date_sector.get(d, {}).values())
         st = _hit_stats(rows)
         sector_by_date.append({"date": d, **st, "n_sectors": len(rows)})
 
-    # Per-sector across dates
     per_sector = []
     for sector in FINVIZ_SECTORS:
         rows = []
@@ -197,7 +192,6 @@ def to_markdown(payload: dict) -> str:
             f"{r.get('dir_hits')}/{r.get('n_graded')} | {_pct(r.get('mag_hit_pct'))} |"
         )
 
-    # Compact matrix last few dates only if many
     dates = payload["dates"]
     show = dates[-10:] if len(dates) > 10 else dates
     L += [
@@ -207,7 +201,6 @@ def to_markdown(payload: dict) -> str:
         "HIT / MISS / — (no grade). Actual % in parentheses when graded.",
         "",
     ]
-    # header
     hdr = "| Sector | " + " | ".join(show) + " |"
     sep = "|--------|" + "|".join(["------" for _ in show]) + "|"
     L.append(hdr)
@@ -220,8 +213,8 @@ def to_markdown(payload: dict) -> str:
             h = cell.get("hit")
             pct = cell.get("pct")
             mark = _hit_cell(h)
-            if h is not None and pct is not None:
-                cells.append(f"{mark} ({pct:+.1f}%)" if isinstance(pct, (int, float)) else mark)
+            if h is not None and isinstance(pct, (int, float)):
+                cells.append(f"{mark} ({pct:+.1f}%)")
             else:
                 pred = cell.get("dir")
                 cells.append(mark if mark != "—" else (pred or "—"))
@@ -241,9 +234,7 @@ def to_markdown(payload: dict) -> str:
 
 def write() -> tuple[str, str]:
     payload = build()
-    out_dir = config.SCOREBOARD_DIR if hasattr(config, "SCOREBOARD_DIR") else os.path.join(
-        config.ROOT, "03_scoreboard"
-    )
+    out_dir = os.path.dirname(config.SCOREBOARD_JSON) or "03_scoreboard"
     os.makedirs(out_dir, exist_ok=True)
     md_path = os.path.join(out_dir, "HIT_BOARD.md")
     js_path = os.path.join(out_dir, "hit_board.json")
