@@ -1,16 +1,61 @@
 {
-  "generated_at": "2026-08-12T07:59:57.773776-04:00",
+  "generated_at": "2026-08-12T11:16:10.259328-04:00",
   "hours": 48,
   "raw_headlines": 300,
   "unique_events": 3,
   "universe_rows": 5961,
-  "interactions": [
-    "INTERACTION: Weak labor is the driver of Fed path this window — treat as one rates cluster, not two independent scores."
-  ],
+  "interactions": [],
   "reasoned_events": [
     {
+      "event": "ai_power_demand",
+      "headline_count": 3,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "US data-center load → US generation/utilities cash-flow narrative",
+        "channel": "sector_fundamental",
+        "geography": "us_domestic",
+        "severity": "session",
+        "horizon": "1w-1m",
+        "action_object": "basket",
+        "action_object_detail": "CEG/VST/NRG-type power; not pollution pure-plays",
+        "polarity": "bullish",
+        "polarity_why": "load growth narrative for generation/power scarcity names",
+        "confidence": 0.65,
+        "drop_reason": "",
+        "notes": []
+      },
+      "mechanism": "Hyperscale/AI data centers raise electricity load expectations → independent power and some utilities with generation leverage are the listed US expression. Headline pollution angle is secondary; the equity channel is power demand and capacity.",
+      "amp_damp": "",
+      "mean_revert": "if projects delayed / power deals disappoint",
+      "taxonomy": [
+        "Sector tailwind/index inclusion",
+        "Capacity expansion announced (new factory, satellite constellation)"
+      ],
+      "evidence": [
+        {
+          "title": "Visa Inc. (V) vs. Mastercard Incorporated (MA): Visa Bets $2.4 Billion on Stopping AI-Powered Fraud",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/visa-inc-v-vs-mastercard-140953343.html",
+          "published_at": "2026-08-12T14:09:53Z"
+        },
+        {
+          "title": "Navigating Liberty Energy’s (LBRT) Journey From Oilfield Services to Data Center Power",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/navigating-liberty-energy-lbrt-journey-141347774.html",
+          "published_at": "2026-08-12T14:13:47Z"
+        },
+        {
+          "title": "Most Power Sought for US Data Centers Will Never Materialize - Bloomberg.com",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZ1N2M2FjUUxQSHQ3dV9BSThiaVBTVGFVY1c2TjgxckthRktRSzBfU2Y0NlgtUTY0ZzR4emdSa1NaTld3ZV94Vnd0dHJGZFBjOFRwVU9UUGpxLXFwaUF4eGZjZ3lfV1VGczRNR3dkLTBQMlQxbHBDeFJUcDktZExMZ2t2QnZmbVh2NVJNOUFSbkNKS0EyTVRPTkJiQ2tZUmRESHd1d2hVRkRkLWNScnhMb2tFRWVWU1o2MWI5N292VU4?oc=5",
+          "published_at": "Wed, 12 Aug 2026 09:30:00 GMT"
+        }
+      ]
+    },
+    {
       "event": "hormuz_energy_risk",
-      "headline_count": 9,
+      "headline_count": 8,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -26,7 +71,7 @@
         "confidence": 0.85,
         "drop_reason": "",
         "notes": [
-          "headline_count=9 supports non-noise severity"
+          "headline_count=8 supports non-noise severity"
         ]
       },
       "mechanism": "Hormuz/Red Sea transit risk → oil risk premium → upstream producers benefit if price holds; airlines and other fuel-intensive transport are cost-shocked. Geography is global oil, but US E&P still price to WTI/Brent. Not a pure-gas trade.",
@@ -37,6 +82,18 @@
         "Commodity price move favorable to the company"
       ],
       "evidence": [
+        {
+          "title": "Global 2026 oil supply shortfall to deepen as Hormuz reopening remains elusive, IEA says - Reuters",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUm5jZkFKN2RpUWZWbG9rSXctekpyeml5UDgwTENteGwtSmFWbHd0cGFjYV9LRVBXeHRENktmbWVKNVZCeFp0U0YxeTFQcFdqZTJ5Z0sxWjg1TGUwRm13Mm5rSWRoUWw2MzZhNlhFeUV2Wk9mRFNFWDB6QWhSckZDbUtlZ3pzSWQyU0pjS0Q1d2dRT1EtcWt0SVhuQXlPTHZiZlhZTzFWSUoxcXVDdl9qUnA0SnJWR1Zf?oc=5",
+          "published_at": "Wed, 12 Aug 2026 13:45:33 GMT"
+        },
+        {
+          "title": "Iran war live: Oil stockpiles ‘rapidly depleting’ despite Trump’s claim about Hormuz - The Independent",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZ2F3clFsWkJBdzRUVmZNZFM0MHJQR1IwdGtaR3pGOENQdDZFYnptMDJnckY2WnZLWTJEdk1tMEVCcUtiaUZhRDZkaE44WmxGX0FnWGp2M2l1OGNvdllVMUpnUjJ3NExJb1M3c0xzMG9XYVU4OXpneFI0WUcwbmtLNkFXVmNfRjFFRkwwbUJrM05laWlFT1FCUV9oa1VySkRZQ0Y1NTBUck9MRjhOSWh3bXE4UVlURkF1?oc=5",
+          "published_at": "Wed, 12 Aug 2026 13:46:55 GMT"
+        },
         {
           "title": "Live Updates: Strait of Hormuz traffic falls to new low as Iran-backed Houthis kill 6 in Red Sea, authorities say - CBS News",
           "source": "rss_google_business",
@@ -56,28 +113,16 @@
           "published_at": "Wed, 12 Aug 2026 08:04:35 GMT"
         },
         {
-          "title": "Asian stocks rise as KOSPI surges; CPI, Hormuz risks temper tech rally - Investing.com",
-          "source": "rss_google_business",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMi1zOThraDc3N0ZkemJVMUI3TV9OZHRXSnVfU3Zrbk9UeVJ4ZTJ3SGpleTdXMzBIYjQ0ZVhOMjhuVXlsRFVSTlVrZzNibWVUbkwyeVNnY2piZEc5NnRJTEdEVzdJV3UzQXNRTHNLZmRpc2lNa1BaMkdhalBnLWEyaVVweTZFVFhRY3RLR0N0WUYxc0tYQklUQ0JOd3puMDRvMnNLSGt3eGFkcFFSUVFoWVdEZUxCUktOODByTDUzUXZtR2c?oc=5",
-          "published_at": "Wed, 12 Aug 2026 04:18:45 GMT"
-        },
-        {
-          "title": "Crude Prices Soar as Strait of Hormuz Reopening in Doubt",
-          "source": "rss_yahoo_finance",
-          "url": "https://finance.yahoo.com/energy/articles/crude-prices-soar-strait-hormuz-191642970.html",
-          "published_at": "2026-08-10T19:16:42Z"
+          "title": "Why has North Korea fired a missile ahead of US-South Korea drills?",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/12/why-has-north-korea-fired-a-missile-ahead-of-us-south-korea-drills?traffic_source=rss",
+          "published_at": "Wed, 12 Aug 2026 13:10:14 +0000"
         },
         {
           "title": "Market Wrap: Are Geopolitical Sentiments Shifting Again? European Stocks Await CPI 🚨 - XTB.com",
           "source": "rss_google_markets",
           "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPUWN1TzVJS3BXVkdmVXFpdXpjUzBBZldHS244b1F6QkVnTFNmMEZGRXhJZm93eXFpTjVQd0hZbTltRi01Qi1yYjJnZjM0Tk1WdnJwQmR5VzNNSnpBR1JJd2RrRjFuaXNMR183V1ZZSmd3Vl9RdkdBUkhEVGJPTjhQczRvZ1pCQzZGSmxrVkhLS1hTWGtDV2ZOZk44VjRQcHNMMlRTYTZxeEpDems2R0Z5eE9kVzVRRE9yTTZZQ0VRZDBrZ1lRU3dBNWVzNGl0WnlEeGk3aA?oc=5",
           "published_at": "Wed, 12 Aug 2026 11:19:56 GMT"
-        },
-        {
-          "title": "Oil and Gold Rise as Geopolitical Tensions Mount Ahead of US CPI - Modern Diplomacy",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPN0tGdEpWU3ZkTkJfMGdNcWk1MGg5czJFclVscTVSc1RUcWh4aVJxcFVVajBLalJfR292Skkya1AxYjJsQ2JtRXlnLW5UMTdCUk04eFVlU0RpOUJaX0xDZjFzWUd6RWZaNVp5RDhSQzFfMzE0eVh5MVZlZzUwblUxeDlBRnF4bExlbnFFUjVuWC1SRUZ6U0luTjJUN3VwNDE0OFFOWll3?oc=5",
-          "published_at": "Wed, 12 Aug 2026 06:07:35 GMT"
         }
       ]
     },
@@ -112,94 +157,74 @@
       ],
       "evidence": [
         {
-          "title": "Stock Market Record Highs 2026: Fed Rate Hike Odds Drop After Weak Jobs Report - News and Statistics - IndexBox",
-          "source": "rss_google_markets",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNDVZRjJWb0dvYnFOT1BtamsxUkVsYjZ0Q3NySkRxTmtURVdIV3o5bEYtQXduVnJJcXNHSGNkQlYyUVZTSjlVSHg2LWdIZkpXaElERzVsM1RzWVVYYmJsZlRGVUFOU3BVd1Z3b1czLVh4R3RXa1c4RzRKZktPZFg0bmZ0TnV0Y2xOXzllOA?oc=5",
-          "published_at": "Wed, 12 Aug 2026 09:02:00 GMT"
-        },
-        {
-          "title": "Cleveland Fed's Beth Hammack warns one rate hike won't cut it as inflation swallows workers' wage gains",
-          "source": "rss_yahoo_finance",
-          "url": "https://finance.yahoo.com/economy/policy/articles/cleveland-feds-beth-hammack-warns-100000049.html",
-          "published_at": "2026-08-12T10:00:00Z"
-        },
-        {
-          "title": "‘Now is the time to act’: Cleveland Fed president says it will take more than one interest rate hike to quash inflation - moneywise.com",
+          "title": "Will US Consumer Price Index data reshape September Fed rate hike expectations? - FXStreet",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSk92VnJrX2ZQTmpIRXBmWENGeXIteVpSMFpqZmFXWW8yUWROSHoyT2tXckQwdVhFY3dyQVpfTEd0dVVNZUJ4MThycW9qQWtxMWVkcDBtYXFUM3NlZnFwTWZrRlVUUFlBRDB6Q0pzQzNZbkVYMncyMW1yQlVJcXdYOU5yY2RNNGc4OTgwdnhmVQ?oc=5",
-          "published_at": "Wed, 12 Aug 2026 09:01:20 GMT"
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRUVTTmZfYmhYMnNrVzRybXplN21YX3BrVHRlUVl2UmNGMUJGczRFb2sxaG5oY2w2SnQ3cGhZYUhndTBGNS1Vc1FQMWgzSDVlTmdjdWVaSVNLdGRsbTdreHdTX2JXZXZHb3lkMHVhRGNzZGZwSzR6RUswakVKT2dObFByblhKVWc4bjBzdUd6eWdocWRwWkZfdWp3SjdodV9BSXBsSVVDSU5CeG9RSDFqSnpLeTlXUEszTkc2MExNQzk3WEdtclJsOFhn?oc=5",
+          "published_at": "Wed, 12 Aug 2026 11:00:00 GMT"
         },
         {
-          "title": "The Odds of a September Rate Hike Have Plunged, but the Federal Reserve's Job Just Became Infinitely More Challenging - The Globe and Mail",
+          "title": "What the latest CPI data means for the Federal Reserve & rate hikes - Yahoo Finance UK",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQR1dKblBxZFphaVFjSlY4NFBFTjNLYm1sbnozV0FnVVJ3VmpsdkY4OWtZemg2MldqeHJBeHFZaklqcm9nUVQxTlZfY3dQMzhCVHlZTjVGREI4SHNpMnBoMG5heHgtWWUwb2dCX2M4NmR4UmlkWmR5YThBNWYwVTIyUmZ0VlVCQkFLN0FxbzU0cEEtZ0xYZHZiYmJmZFVicldSQktoRWdJZjBBajNKcGhwTTMteXVNTjVrVl9zdFQxaTdqeEtoTGdXZHl5ZlhNZl9tVG5Janljc2hyYkdtUWJQMnhDbVBjbEstV2VXUUtJOHg2LWdaLXZZU0xyTmJ6RUp4alh1QlEtY2lZMnhPZ2xYX0h3OUpvaXJMeG1yUTM2V1M2dkYyb3hRT1Fn?oc=5",
-          "published_at": "Wed, 12 Aug 2026 08:44:03 GMT"
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPWm0zTG1GQjRTcU9fWFViamdMbTY5VkNfbjVDZGFJLUJkY1YwRDNPZkVUTDBHSGhKcF8zenFteTJsVVBfTjRVb015alh2Sm9pTHI4U3ppSG5MTzVFcm9TZG9tMlR3X05KaGtpM21jeTlSM3VFdTN4dDdpYm9QeDRCTzZ2YzJiUQ?oc=5",
+          "published_at": "Wed, 12 Aug 2026 14:31:17 GMT"
         },
         {
-          "title": "The Odds of a September Rate Hike Have Plunged, but the Federal Reserve's Job Just Became Infinitely More Challenging - Yahoo Finance",
+          "title": "JPMorgan expects the Federal Reserve to keep interest rates unchanged, citing eased concerns as inflation appears non-sticky - newsquawk.com",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVm9vaE1jVEdITDBZV2tFNEIwaXdMX1RSWVV0NEZnOE9hZkpZU2JVdTNTNWtkTmFEdHllaWVBOWl2WDlEZlNQQUxxdTdWQk44WGdWNGYyWWpybWdiSGg3czNDVkNxMkJ4YTBVS3NDQTh3UGZheWJETG16ZFRGZmt1S2VpdENUX2NzckhaQXIwRzVYeVRwMzE0VHY2QUVVQQ?oc=5",
-          "published_at": "Wed, 12 Aug 2026 08:26:00 GMT"
+          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFpX1ZrQnkxZExUNU4yTzZwM1lTZlVHMGNtYndVamZIUkZvSUxueFh6SnFkbUttWW9jMEhSVkR5cWx3UWkzbnQtUXYwdE5CcklaMVdGcDk2cllZbmVuWjUwQWpCaUpkQkMxTWpGQS1pX0FKZW8yTmdUX2tTSDZhQ18wTzVZVE5tVHFEczBIUGM3LWN3RXNnUUY1WnlMa3N6MUc3VXpFUk1oR3BvTDFKLXo5WlVGclk4N3pPaGFhb29TbHJPSW9yUElnNUYzd1VuUTlPamw2V1VCY19Hak41cWZfbFV6Z1JHZVktTk9HejU?oc=5",
+          "published_at": "Wed, 12 Aug 2026 13:53:40 GMT"
         },
         {
-          "title": "The Odds of a September Rate Hike Have Plunged, but the Federal Reserve's Job Just Became Infinitely More Challenging - The Motley Fool",
+          "title": "July Inflation Was In Line With Expectations. Expectations For a Fed Rate Hike Decreased. - International Business Times",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOLWVWZzFxQkEzX2FwUUtScHVpYlFNbFZSYl9lR0FzbENsWXJXLWpBVzRGSzdCV2VxTFhud1ZJQ1NaNlBXYlhLTWFVYmV5aUVMeVZlQUZhTEJxci13Mm9KcVlHUTBpT2p3WGdxQjJ2WlNsR3ZVUzFRU2t0eDJhOEpFSmY1dkRIRktsLVk0NmtGTEx3b0x0T3Bj?oc=5",
-          "published_at": "Wed, 12 Aug 2026 08:12:44 GMT"
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORi1lRUxUcjVOOU9ROWF1VENHTG1jNXltMUpST0E4WWlMNHJBUVY2azE5RFczUVZZTUNrc0ZyUWhOM00xZ3ZSbDhteTFLUHBtQzg5X3dXSXhFVFZsUjY1eGhyY0pYblVfbjVvNkZQblhQdXBpYV82YnJORnpOa1o4SmFBb0phMHlTNWxXZUM1bEtWVFp2U0Y2WXYzWDl4MVM2cVlPN0lMT2s?oc=5",
+          "published_at": "Wed, 12 Aug 2026 13:04:06 GMT"
         },
         {
-          "title": "Treasury yields are little changed as investors await key inflation data - CNBC",
+          "title": "July Inflation Rose As Expected—Here’s Why A Fed Rate Hike Is Now Unlikely - Forbes",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBVZU05OFlMTWFkQ3pGaFJHcVluOUQwU3N0MnRXTnMtQy1IRk1MaTM5eDFaRXd4dTlaN3JYdEpHaGJRX1BidkkyLUpNcVAxbGNVdUstcXR0aFpTRk9QeUMxRUJfb2Q1R3ExT2hDUC1SSXlPdE51TzJQVm5ld9IBgAFBVV95cUxPY25OZmh2SnFmQjRFLThpTlB1MVU3dkxXbWtHUng2VWdQN3AwQ29rQWZiSXlLeTU5QlVRaHZfTkxnaGRCS1Y1TUE2Z0RTNFNPMjN3ajFWNmlibkFIZ2VsQ0dBd3lwRXdHb1BfZ3JKU2ZDUURTa2daRUw5bUpQbVpsVA?oc=5",
-          "published_at": "Wed, 12 Aug 2026 08:31:12 GMT"
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPLUg3aVRGR0Q0OXI5Y21EX0pYZENOaVpTYnl0NE9FTnk1OG9MQl9zZ1FlMlZENTNIeHpxWlVCbEk4d2NTNk9XTFBSdWE4RVk1Y3FPUXdhblhneFNXNTR6ZmVzRVRTeTUxSjdqck9rZ0puaUlobXl5VzVqMkk5bjJzbkVwVjNMdVZodmZtVE54WjFrTWc0dklGOFdvakhxQVdybzd0OWJzVTFzd2pZZmdLcnAtaWpLZHFKRTVHcUl4N1NwTzN0bVc0YkREbDZlYlJrNHFDbkU2ajk4bzhrYWc?oc=5",
+          "published_at": "Wed, 12 Aug 2026 12:52:40 GMT"
         },
         {
-          "title": "U.S. Consumer Prices May Modestly Rise, Impacting Federal Reserve Plans - Devdiscourse",
+          "title": "U.S. core inflation in July matched its lowest level in over five years, temporarily easing the Federal Reserve's rate-hike alarm. However, are oil price volatility and wage declines brewing the next storm? - moomoo.com",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZ2dxX3B3RTU4STJUeV9ieWJLcWVzZmp3b3lUenNVNW10d1JnTXVvUnRzQjZUMjcxbHZfZ3pXSlFaTUpIVTl3OTZZOElSbnlsNXl0RzRaUGk4cjRPX0xSeUxvUVZSMEVhT09tb0tLVHhyeU85Nm1PbFdwX0JEVnc1Z1Y1SmNSVk1BdTVPNk84WUlFZXI4RTFJRF8xRWZsZnJxQmFHbnRJZ2hEOWkxaGxoVmttaFVDNFpLMUdhbndvQdIBxAFBVV95cUxQUUxfN1lXUVJqa1pWT19IaWpMcmptc282cGNGcDZ1UWo5WVJmOGdRd0NFeUJTejVnTkZQWFRXOWRCamZHdENiNllyWFBCbUprV291MGpHbjlHcFgzWWRZOHV4emp4X3o4R1RRdWVHV0RPLWJvaHdTdlJkV2xzN3ZwaTBOZXI1b3A3OVhVNjZfcVRpa2RTMTBqazg3cHJHNTBPWXIta1NvU0txdjR4UWFkQkJYaFFCOGZXem42WjVDczBjWWdL?oc=5",
-          "published_at": "Wed, 12 Aug 2026 04:00:29 GMT"
-        }
-      ]
-    },
-    {
-      "event": "weak_labor_print",
-      "headline_count": 2,
-      "framework": {
-        "keep": "keep",
-        "us_relevance": "high",
-        "us_relevance_why": "Hard US macro print that moves Fed path and risk appetite",
-        "channel": "rates",
-        "geography": "us_domestic",
-        "severity": "session",
-        "horizon": "1d-1w",
-        "action_object": "spx",
-        "action_object_detail": "SPX/rates path; gold; not ‘jobs ETF’",
-        "polarity": "hawkish",
-        "polarity_why": "hawkish language dominant",
-        "confidence": 0.85,
-        "drop_reason": "",
-        "notes": [
-          "rates polarity=hawkish"
-        ]
-      },
-      "mechanism": "Weak US labor print → growth scare + higher cut odds. Near-term: risk assets can wobble while duration/gold catch a bid if the Fed path dominates. Not automatic risk-off for every name — check whether rates or recession narrative wins the day.",
-      "amp_damp": "",
-      "mean_revert": "next labor/CPI or Fed speak",
-      "taxonomy": [
-        "Macro headwinds (inflation spike, recession, unemployment surge)",
-        "Institutional policy (Fed rate cut, QE, stimulus)"
-      ],
-      "evidence": [
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNkdIcVQ1bEMwbmpCeEx6SHA4QWJWbnQ5UHJMZng3WjJWXzVTeXlKVDZ4RnFHS2VZR3ltYlJhVHVDRFNzNENVQ24xWjFhQi1IRTdHd29pMk1vYzJMOTAzbjBQVkNBZG9tTFFVUHd4Q291MVhRVTFxS2VRZ0NybTVxN05IOUF0WU1uUDJtMmlEUTZ4SmRleHQxYlJFSQ?oc=5",
+          "published_at": "Wed, 12 Aug 2026 13:42:08 GMT"
+        },
         {
-          "title": "Stock Market Record Highs 2026: Fed Rate Hike Odds Drop After Weak Jobs Report - News and Statistics - IndexBox",
-          "source": "rss_google_markets",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNDVZRjJWb0dvYnFOT1BtamsxUkVsYjZ0Q3NySkRxTmtURVdIV3o5bEYtQXduVnJJcXNHSGNkQlYyUVZTSjlVSHg2LWdIZkpXaElERzVsM1RzWVVYYmJsZlRGVUFOU3BVd1Z3b1czLVh4R3RXa1c4RzRKZktPZFg0bmZ0TnV0Y2xOXzllOA?oc=5",
-          "published_at": "Wed, 12 Aug 2026 09:02:00 GMT"
+          "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - KTVF Fairbanks",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeHMzdDZKVnlYMFl2ZmRVNFEyX1FySXZjcGJQcUZOMDFScU1Yem5TcDczWEJVQVVoeDE5VDJUWTA3NjJwZmc4emhQSTFpRTFCclVWWDlvU0JONTlDMmpsQ295dE1hTUk4d2kyRkZtay1CaUxPOVI1a1FtQkpkdnl3c2ZZOFB2ZTdybWc4S25LekhESHVZNGhmajJjeC1FSll4S0NMVGdHWTlxNlVHazFRXzVURFU4b3Q5WjFsN3g4SG50RjFuSzZsVtIB3AFBVV95cUxNWUpPN0ljM1RfUzFKbGpocFJFdHp3QUxVSTYta3JFZnNTb0ZoTVlBbjhEQ3FjaWZkTUFDdElUbGVwY1VhN3ZfLWhzS2FVMGxVM2RnUmh1OXdEcExTck84NWw0VU1fZ0x6WloxOTFTRWNnZl9vWV9rUzdHeWxoTlE2enlqdHN6eU1ZNEJ5cFVhcTlTWnZqeDVFU09tT29XdEM0LThhemY0SURQNldJeHl6M2N2NVNPUXVHLUl4bmtVQkhXWTdwdHdWWTJHWHBCZHZKVlRXekFwSzJzZ0lO?oc=5",
+          "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
+        },
+        {
+          "title": "Inflation Rose As Expected In July—But Not Enough To Force An Interest Rate Hike, Analysts Say - Yahoo! Finance Canada",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaDZ1WFpMT05IWnhJUHowblpqdVBZZmNMSkVZTTExT2VndjlNdTJ5b1ktMi1QRzJHaGU4M1JiWDU0QnhxQzJiMkFsd1J5V3lTMk5hYXBvVEVFck5sbTZ6T0RfMWxWdWw4QUd3YzAyQXVmYmtfVHRXRjRsNmZXZ2ZtOGlpbFB1VTJC?oc=5",
+          "published_at": "Wed, 12 Aug 2026 12:52:40 GMT"
         }
       ]
     }
   ],
   "edge_actions": [
+    {
+      "event": "ai_power_demand",
+      "role": "primary",
+      "bucket": "utilities_power",
+      "side": "buy",
+      "weight": 3.51,
+      "tickers": [
+        "CEG",
+        "VST",
+        "NRG",
+        "TLN",
+        "NEE"
+      ],
+      "note": "load growth / power scarcity narrative",
+      "why": "Framework keep=keep channel=sector_fundamental object=basket:CEG/VST/NRG-type power; not pollution pure-plays horizon=1w-1m severity=session conf=0.65. Edge=primary buy `utilities_power` because load growth / power scarcity narrative.",
+      "framework_polarity": "bullish"
+    },
     {
       "event": "hormuz_energy_risk",
       "role": "primary",
@@ -311,55 +336,6 @@
       ],
       "note": "real rate — polarity adjusted",
       "why": "Framework keep=keep channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.9. Edge=primary sell `gold` because real rate — polarity adjusted.",
-      "framework_polarity": "hawkish"
-    },
-    {
-      "event": "weak_labor_print",
-      "role": "primary",
-      "bucket": "banks_diversified",
-      "side": "sell",
-      "weight": 1.78,
-      "tickers": [
-        "JPM",
-        "BAC",
-        "WFC",
-        "C"
-      ],
-      "note": "growth scare / credit cycle fear",
-      "why": "Framework keep=keep channel=rates object=spx:SPX/rates path; gold; not ‘jobs ETF’ horizon=1d-1w severity=session conf=0.85. Edge=primary sell `banks_diversified` because growth scare / credit cycle fear.",
-      "framework_polarity": "hawkish"
-    },
-    {
-      "event": "weak_labor_print",
-      "role": "primary",
-      "bucket": "software_app",
-      "side": "buy",
-      "weight": 1.49,
-      "tickers": [
-        "CRM",
-        "NOW",
-        "ADBE",
-        "WDAY",
-        "TEAM",
-        "SNOW"
-      ],
-      "note": "if rates path dovish dominates — soft",
-      "why": "Framework keep=keep channel=rates object=spx:SPX/rates path; gold; not ‘jobs ETF’ horizon=1d-1w severity=session conf=0.85. Edge=primary buy `software_app` because if rates path dovish dominates — soft.",
-      "framework_polarity": "hawkish"
-    },
-    {
-      "event": "weak_labor_print",
-      "role": "primary",
-      "bucket": "gold",
-      "side": "buy",
-      "weight": 2.38,
-      "tickers": [
-        "NEM",
-        "GOLD",
-        "AEM"
-      ],
-      "note": "growth scare + cut odds",
-      "why": "Framework keep=keep channel=rates object=spx:SPX/rates path; gold; not ‘jobs ETF’ horizon=1d-1w severity=session conf=0.85. Edge=primary buy `gold` because growth scare + cut odds.",
       "framework_polarity": "hawkish"
     }
   ],
@@ -605,218 +581,233 @@
       "side": "sell"
     },
     {
-      "ticker": "CRM",
-      "buy_score": 1.49,
-      "sell_score": 2.83,
+      "ticker": "CEG",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
       "events": [
         {
-          "event": "fed_rate_path",
-          "side": "sell",
-          "weight": 2.83,
-          "bucket": "software_app"
-        },
-        {
-          "event": "weak_labor_print",
+          "event": "ai_power_demand",
           "side": "buy",
-          "weight": 1.49,
-          "bucket": "software_app"
+          "weight": 3.51,
+          "bucket": "utilities_power"
         }
       ],
-      "net": -1.34,
-      "side": "sell"
+      "net": 3.51,
+      "side": "buy"
     },
     {
-      "ticker": "NOW",
-      "buy_score": 1.49,
-      "sell_score": 2.83,
+      "ticker": "VST",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
       "events": [
         {
-          "event": "fed_rate_path",
-          "side": "sell",
-          "weight": 2.83,
-          "bucket": "software_app"
-        },
-        {
-          "event": "weak_labor_print",
+          "event": "ai_power_demand",
           "side": "buy",
-          "weight": 1.49,
-          "bucket": "software_app"
+          "weight": 3.51,
+          "bucket": "utilities_power"
         }
       ],
-      "net": -1.34,
-      "side": "sell"
+      "net": 3.51,
+      "side": "buy"
     },
     {
-      "ticker": "ADBE",
-      "buy_score": 1.49,
-      "sell_score": 2.83,
+      "ticker": "NRG",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
       "events": [
         {
-          "event": "fed_rate_path",
-          "side": "sell",
-          "weight": 2.83,
-          "bucket": "software_app"
-        },
-        {
-          "event": "weak_labor_print",
+          "event": "ai_power_demand",
           "side": "buy",
-          "weight": 1.49,
-          "bucket": "software_app"
+          "weight": 3.51,
+          "bucket": "utilities_power"
         }
       ],
-      "net": -1.34,
-      "side": "sell"
+      "net": 3.51,
+      "side": "buy"
     },
     {
-      "ticker": "WDAY",
-      "buy_score": 1.49,
-      "sell_score": 2.83,
+      "ticker": "TLN",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
       "events": [
         {
-          "event": "fed_rate_path",
-          "side": "sell",
-          "weight": 2.83,
-          "bucket": "software_app"
-        },
-        {
-          "event": "weak_labor_print",
+          "event": "ai_power_demand",
           "side": "buy",
-          "weight": 1.49,
-          "bucket": "software_app"
+          "weight": 3.51,
+          "bucket": "utilities_power"
         }
       ],
-      "net": -1.34,
-      "side": "sell"
+      "net": 3.51,
+      "side": "buy"
     },
     {
-      "ticker": "TEAM",
-      "buy_score": 1.49,
-      "sell_score": 2.83,
+      "ticker": "NEE",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
       "events": [
         {
-          "event": "fed_rate_path",
-          "side": "sell",
-          "weight": 2.83,
-          "bucket": "software_app"
-        },
-        {
-          "event": "weak_labor_print",
+          "event": "ai_power_demand",
           "side": "buy",
-          "weight": 1.49,
-          "bucket": "software_app"
+          "weight": 3.51,
+          "bucket": "utilities_power"
         }
       ],
-      "net": -1.34,
-      "side": "sell"
-    },
-    {
-      "ticker": "SNOW",
-      "buy_score": 1.49,
-      "sell_score": 2.83,
-      "events": [
-        {
-          "event": "fed_rate_path",
-          "side": "sell",
-          "weight": 2.83,
-          "bucket": "software_app"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "buy",
-          "weight": 1.49,
-          "bucket": "software_app"
-        }
-      ],
-      "net": -1.34,
-      "side": "sell"
+      "net": 3.51,
+      "side": "buy"
     },
     {
       "ticker": "JPM",
       "buy_score": 2.83,
-      "sell_score": 1.78,
+      "sell_score": 0.0,
       "events": [
         {
           "event": "fed_rate_path",
           "side": "buy",
           "weight": 2.83,
           "bucket": "banks_diversified"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "sell",
-          "weight": 1.78,
-          "bucket": "banks_diversified"
         }
       ],
-      "net": 1.05,
+      "net": 2.83,
       "side": "buy"
     },
     {
       "ticker": "BAC",
       "buy_score": 2.83,
-      "sell_score": 1.78,
+      "sell_score": 0.0,
       "events": [
         {
           "event": "fed_rate_path",
           "side": "buy",
           "weight": 2.83,
           "bucket": "banks_diversified"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "sell",
-          "weight": 1.78,
-          "bucket": "banks_diversified"
         }
       ],
-      "net": 1.05,
+      "net": 2.83,
       "side": "buy"
     },
     {
       "ticker": "WFC",
       "buy_score": 2.83,
-      "sell_score": 1.78,
+      "sell_score": 0.0,
       "events": [
         {
           "event": "fed_rate_path",
           "side": "buy",
           "weight": 2.83,
           "bucket": "banks_diversified"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "sell",
-          "weight": 1.78,
-          "bucket": "banks_diversified"
         }
       ],
-      "net": 1.05,
+      "net": 2.83,
       "side": "buy"
     },
     {
       "ticker": "C",
       "buy_score": 2.83,
-      "sell_score": 1.78,
+      "sell_score": 0.0,
       "events": [
         {
           "event": "fed_rate_path",
           "side": "buy",
           "weight": 2.83,
           "bucket": "banks_diversified"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "sell",
-          "weight": 1.78,
-          "bucket": "banks_diversified"
         }
       ],
-      "net": 1.05,
+      "net": 2.83,
       "side": "buy"
     },
     {
+      "ticker": "CRM",
+      "buy_score": 0.0,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -2.83,
+      "side": "sell"
+    },
+    {
+      "ticker": "NOW",
+      "buy_score": 0.0,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -2.83,
+      "side": "sell"
+    },
+    {
+      "ticker": "ADBE",
+      "buy_score": 0.0,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -2.83,
+      "side": "sell"
+    },
+    {
+      "ticker": "WDAY",
+      "buy_score": 0.0,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -2.83,
+      "side": "sell"
+    },
+    {
+      "ticker": "TEAM",
+      "buy_score": 0.0,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -2.83,
+      "side": "sell"
+    },
+    {
+      "ticker": "SNOW",
+      "buy_score": 0.0,
+      "sell_score": 2.83,
+      "events": [
+        {
+          "event": "fed_rate_path",
+          "side": "sell",
+          "weight": 2.83,
+          "bucket": "software_app"
+        }
+      ],
+      "net": -2.83,
+      "side": "sell"
+    },
+    {
       "ticker": "NEM",
-      "buy_score": 2.38,
+      "buy_score": 0.0,
       "sell_score": 2.83,
       "events": [
         {
@@ -824,20 +815,14 @@
           "side": "sell",
           "weight": 2.83,
           "bucket": "gold"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "buy",
-          "weight": 2.38,
-          "bucket": "gold"
         }
       ],
-      "net": -0.45,
+      "net": -2.83,
       "side": "sell"
     },
     {
       "ticker": "GOLD",
-      "buy_score": 2.38,
+      "buy_score": 0.0,
       "sell_score": 2.83,
       "events": [
         {
@@ -845,20 +830,14 @@
           "side": "sell",
           "weight": 2.83,
           "bucket": "gold"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "buy",
-          "weight": 2.38,
-          "bucket": "gold"
         }
       ],
-      "net": -0.45,
+      "net": -2.83,
       "side": "sell"
     },
     {
       "ticker": "AEM",
-      "buy_score": 2.38,
+      "buy_score": 0.0,
       "sell_score": 2.83,
       "events": [
         {
@@ -866,15 +845,9 @@
           "side": "sell",
           "weight": 2.83,
           "bucket": "gold"
-        },
-        {
-          "event": "weak_labor_print",
-          "side": "buy",
-          "weight": 2.38,
-          "bucket": "gold"
         }
       ],
-      "net": -0.45,
+      "net": -2.83,
       "side": "sell"
     }
   ]
