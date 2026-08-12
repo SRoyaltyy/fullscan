@@ -1,0 +1,391 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-12T08:09:08.931414-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 5.25,
+      "delta_1d": 0.06,
+      "delta_1w": 0.02,
+      "delta_1m": 0.19
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 4.72,
+      "delta_1d": 0.07,
+      "delta_1w": 0.02,
+      "delta_1m": 0.16
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 2.43,
+      "delta_1d": 0.03,
+      "delta_1w": 0.0,
+      "delta_1m": 0.11
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 2.7,
+      "delta_1d": 0.0,
+      "delta_1w": -0.08,
+      "delta_1m": 0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 3.64,
+      "delta_1d": 0.01,
+      "delta_1w": -0.02,
+      "delta_1m": 0.04
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 1.25,
+      "delta_1d": 0.275,
+      "delta_1w": -1.001,
+      "delta_1m": 0.455
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-10",
+      "current": 253.38,
+      "delta_1d": -62.52,
+      "delta_1w": -58.0,
+      "delta_1m": -126.65
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-12",
+      "current": 15.37,
+      "delta_1d": 0.09,
+      "delta_1w": -0.44
+    },
+    "vix3m": {
+      "date": "2026-08-11",
+      "current": 18.91,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.813
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-12",
+      "last": 83.73,
+      "pct_1d": 0.64
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-12",
+      "last": 89.23,
+      "pct_1d": 0.36
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-12",
+      "last": 4473.5,
+      "pct_1d": 2.06
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-12",
+      "pct_1d": -0.05,
+      "pct_1m": -1.15
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-12",
+      "last": 7770.75,
+      "pct_1d": 0.3
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-12",
+      "last": 29844.0,
+      "pct_1d": 0.74
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 67524.06,
+          "pct_1d": 0.83
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 25440.17,
+          "pct_1d": -0.83
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 3946.68,
+          "pct_1d": 0.32
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 6579.04,
+          "pct_1d": 3.68
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 9209.4,
+          "pct_1d": -0.45
+        }
+      },
+      "composite_avg": 0.71
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 10845.79,
+          "pct_1d": 0.01
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 26507.7,
+          "pct_1d": 0.44
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 8705.12,
+          "pct_1d": -0.11
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 6564.08,
+          "pct_1d": 0.2
+        }
+      },
+      "composite_avg": 0.14
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.213,
+    "window": "2026-08-04..2026-08-11"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 63.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-11 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "IBD 50 Stock Mines New Buy Zone. Mother Lode In Sight?",
+        "url": "https://www.investors.com/research/breakout-stocks-technical-analysis/southern-copper-mines-buy-zone-ai-data-centers-fuel-demand/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-12T11:00:55Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Live Updates: Strait of Hormuz traffic falls to new low as Iran-backed Houthis kill 6 in Red Sea, authorities say - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQLTNOYzlIQUFzd2ZmNXU5eEJzS0g1ZHNwcVo0Nm1HeUExa2RJQzNQSGJpSWFfZWdoSmxYLVZBMlkzMG10T0R0WWN1dWM1VG5fbjFkcGlBQUZtSWxzVTd4dEJtVUwzdVBRTTNMZWhURWF1Ry1SLW93aGxVX25kcFZtNldkV1REcW91ZGZ3YzZkak9wZTJWOG9HVEx3UUg0RURheVZyZWpFZkpFV1dqUmdWZQ?oc=5",
+        "published_at": "Wed, 12 Aug 2026 10:01:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Iran refutes Trump’s claim to ‘control’ Hormuz: What’s the latest in talks?",
+        "url": "https://www.aljazeera.com/news/2026/8/12/iran-refutes-trumps-claim-to-control-hormuz-whats-the-latest-in-talks?traffic_source=rss",
+        "published_at": "Wed, 12 Aug 2026 10:27:22 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Here’s the average 401(k) balance by age in 2026 — are you ahead or behind your fellow Americans?",
+        "url": "https://finance.yahoo.com/markets/articles/average-401-k-balance-age-110500010.html",
+        "published_at": "2026-08-12T11:05:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Experts say putting every dollar toward $35,000 in credit card debt could backfire — here's another approach",
+        "url": "https://finance.yahoo.com/markets/articles/experts-putting-every-dollar-toward-103500069.html",
+        "published_at": "2026-08-12T10:35:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The First Spot Bitcoin ETF Is Closing Down. Here's Why I'm Not Concerned About Bitcoin Right Now.",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/first-spot-bitcoin-etf-closing-110500813.html",
+        "published_at": "2026-08-12T11:05:00Z"
+      },
+      {
+        "source": "rss_cnbc_economy",
+        "title": "AI’s costly buildout complicates the Fed’s inflation fight",
+        "url": "https://www.cnbc.com/2026/08/12/ais-costly-buildout-complicates-the-feds-inflation-fight.html",
+        "published_at": "Wed, 12 Aug 2026 11:00:01 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Woman rescued after 36 hours under rubble in Colombia",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/12/12-08-sv-colombia-earthquake-rescue-co?traffic_source=rss",
+        "published_at": "Wed, 12 Aug 2026 10:37:42 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Oil prices rise after ship attacks, US-Iran talks deadlock",
+        "url": "https://finance.yahoo.com/news/oil-rises-doubts-over-us-063114070.html",
+        "published_at": "2026-08-12T11:23:13Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Global stocks inch up, oil steady before US CPI",
+        "url": "https://finance.yahoo.com/news/oil-gold-prices-rise-geopolitical-021926510.html",
+        "published_at": "2026-08-12T11:19:10Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "India July inflation accelerates to 4.45%, unlikely to alter RBI rate outlook",
+        "url": "https://finance.yahoo.com/news/indias-july-retail-inflation-4-104308940.html",
+        "published_at": "2026-08-12T10:47:29Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Tesla Just Isn’t Worth It, Even Now at $333",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-just-isn-t-worth-111645199.html",
+        "published_at": "2026-08-12T11:16:45Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "US unveils $2bn boost for domestic mining initiatives",
+        "url": "https://finance.yahoo.com/economy/policy/articles/us-unveils-2bn-boost-domestic-123915963.html",
+        "published_at": "2026-08-12T11:10:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Musinsa enters Philippine offline retail via Ayala distribution deal",
+        "url": "https://finance.yahoo.com/small-business/articles/musinsa-enters-philippine-offline-retail-110646615.html",
+        "published_at": "2026-08-12T11:06:46Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "This week’s solar eclipse could make stocks go down. No, really. Here’s why.",
+        "url": "https://www.marketwatch.com/story/this-weeks-solar-eclipse-could-make-stocks-go-down-no-really-heres-why-76121065?mod=mw_rss_topstories",
+        "published_at": "Wed, 12 Aug 2026 11:30:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Citadel Securities called the stock-market reset. Now it sees a leverage buildup on the horizon.",
+        "url": "https://www.marketwatch.com/story/citadel-securities-called-the-stock-market-reset-now-it-says-leverage-may-build-up-again-988eec86?mod=mw_rss_topstories",
+        "published_at": "Wed, 12 Aug 2026 10:57:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Spotify to add label for AI-generated artists and remove them from recommendations",
+        "url": "https://www.bbc.co.uk/news/articles/cvgxzmgejd5o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 12 Aug 2026 10:53:54 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Lebanon ends executions: Where does the death penalty still exist in 2026?",
+        "url": "https://www.aljazeera.com/news/2026/8/12/lebanon-ends-executions-where-does-the-death-penalty-still-exist-in-2026?traffic_source=rss",
+        "published_at": "Wed, 12 Aug 2026 10:40:57 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CoreWeave Earnings Beat Amid Operating Margin Upside. AI Stock Jumps.",
+        "url": "https://www.investors.com/news/technology/coreweave-stock-crwv-coreweave-earnings-q22026/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-12T11:24:43Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dow Jones Futures Rise With CPI Inflation Due; AI Stocks Rally As 3 Nvidia Partners Lead Earnings Movers",
+        "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-cpi-inflation-nvidia-partners-super-micro-earnings/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-12T11:24:37Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dollar ticks up on Iran tension, with US data in focus",
+        "url": "https://finance.yahoo.com/news/dollar-drifts-markets-await-us-014351710.html",
+        "published_at": "2026-08-12T11:20:50Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AppLovin Is Down Over 50% in 2026: Falling Knife or Fire Sale?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/applovin-down-over-50-2026-112031396.html",
+        "published_at": "2026-08-12T11:20:31Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Which Long-Term Bond ETF Is the Better Buy: Vanguard's VCLT or Schwab's SCHQ?",
+        "url": "https://finance.yahoo.com/markets/options/articles/long-term-bond-etf-better-111838017.html",
+        "published_at": "2026-08-12T11:18:38Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CPI Inflation Data May Keep Fed Rate Hikes On Hold (Live Coverage)",
+        "url": "https://www.investors.com/news/cpi-inflation-july-federal-reserve-rate-hike-apple-sp-500/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-12T10:53:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Morning Bid: Inflation obscures all",
+        "url": "https://finance.yahoo.com/economy/policy/articles/morning-bid-inflation-obscures-104502792.html",
+        "published_at": "2026-08-12T10:45:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Marc Benioff says experts are wrong about tech job deaths to AI, but backs startup replacing workers with AI",
+        "url": "https://finance.yahoo.com/technology/ai/articles/marc-benioff-says-experts-wrong-104500039.html",
+        "published_at": "2026-08-12T10:45:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "S&P 500 dividend yield hits record low near 1% and it has some retirees rethinking their strategies",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-dividend-yield-hits-103000153.html",
+        "published_at": "2026-08-12T10:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Wall Street’s Favorite Tesla Rumor Could Unlock $824 Billion Pay Day For Elon Musk",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-favorite-tesla-rumor-111319571.html",
+        "published_at": "2026-08-12T11:13:19Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The currency of the AI age",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/currency-ai-age-111011231.html",
+        "published_at": "2026-08-12T11:10:11Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Here's how gyms, salons and ice cream are changing America's Main Streets - NPR",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMFRzeXU3YWd6cjRYZ3lJUGYwb3p1WEEyc2ZrWER3RERxQmxvSjBWeXpjS0NUcFh4cEJ3UUJKd0xwSGR1T3g0UkVZSUhtN2dpMUtzNTFDM28zOGxxVTVCWVpLZkpaOWJNME1tR1JfbkdhUm03UnE3YjJyN1FOMEFibGIyUGNVdUVWZDMzandjSFM3Z3lFa1JrZU5VN2ZhZGV3YWhQQjllY2g?oc=5",
+        "published_at": "Wed, 12 Aug 2026 09:00:00 GMT"
+      }
+    ]
+  }
+}
