@@ -2204,18 +2204,72 @@
         "B7_OIL_DOLLAR": -0.5
       },
       "leading_sum": 3.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7765.46,
+      "actual_close": 7748.5,
+      "actual_pct_change": 0.26,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
-      "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": []
+      "divergence_verdict": "none_flagged (leading sum +3.0 and B6 +0.25 agreed positive; market rose as indicated).",
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -0.5,
+          "status": "miss"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-12_lesson.md",
+      "sources_used": [],
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": null,
+      "key_interaction": null,
+      "knowable_at_9am": null,
+      "attribution_contested": null,
+      "outlier_watch": null,
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-08-12",
