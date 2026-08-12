@@ -6,52 +6,52 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLB basic materials sector August 11 2026 copper gold performance"* → got 6 results (via searxng)
+**Step 1 — Research.** The model wanted to know: *"XLB basic materials sector August 11 2026 copper gold performance"* → got 6 results (via ddg)
 
-  - State Street Materials Select Sector SPDR ETF (XLB) - Yahoo Finance (https://finance.yahoo.com/quote/XLB/)
+  - Materials Sector (XLB) ETF Forecast & Price Target (2026) (https://clearank.com/etf/materials-select-sector-xlb/)
 
-  - Basic Materials Stock Performance - Yahoo Finance (https://finance.yahoo.com/sectors/basic-materials/)
+  - State Street Materials Select Sector SPDR ETF (XLB) (https://finance.yahoo.com/quote/XLB/performance/?fr=sycsrp_catchall)
 
-  - XLB ETF: Materials Sector SPDR Fund Overview - SumGrowth (https://www.sumgrowth.com/etf-profile/invest-in-XLB-etf.html)
+  - State Street Materials Select Sector SPDR ETF (XLB) (https://finance.yahoo.com/quote/XLB/?fr=sycsrp_catchall)
 
-**Step 2 — Research.** The model wanted to know: *"copper price August 11 2026 DRC Congo export ban"* → got 6 results (via searxng)
+**Step 2 — Research.** The model wanted to know: *"copper price August 11 2026 DRC Congo export ban"* → got 6 results (via ddg)
 
-  - Congo bans copper and cobalt concentrates exports, official order ... (https://www.reuters.com/world/africa/congo-bans-exports-copper-cobalt-concentrates-official-order-says-2026-08-06/)
+  - Congo bans copper and cobalt concentrates exports, official ... (https://www.reuters.com/world/africa/congo-bans-exports-copper-cobalt-concentrates-official-order-says-2026-08-06/)
 
-  - Copper's Congo panic says more about copper than Congo - Reuters (https://www.reuters.com/commentary/reuters-open-interest/coppers-congo-panic-says-more-about-copper-than-congo-2026-08-11/)
+  - Congo bans copper and cobalt concentrates exports, official ... (https://www.business-standard.com/world-news/congo-bans-copper-and-cobalt-concentrates-exports-official-order-says-126080602248_1.html)
 
-  - DR Congo: Government bans export of copper and cobalt ... (https://www.africanews.com/2026/08/06/dr-congo-government-bans-export-of-copper-and-cobalt-concentrates/)
+  - Congo bans exports of copper, cobalt concentrates, official ... (https://www.miningweekly.com/article/congo-bans-exports-of-copper-cobalt-concentrates-official-order-says-2026-08-06)
 
-**Step 4 — Research.** The model wanted to know: *"XLB materials sector August 11 2026 market close SPY down"* → got 6 results (via searxng)
+**Step 4 — Research.** The model wanted to know: *"stock market August 11 2026 SPY down materials sector performance"* → got 6 results (via ddg)
 
-  - Sector tracker - State Street Global Advisors (https://www.ssga.com/us/en/intermediary/resources/sector-tracker)
+  - Stock market news for Aug. 11, 2026 - CNBC (https://www.cnbc.com/2026/08/10/stock-market-today-live-updates.html)
 
-  - State Street Materials Select Sector SPDR ETF (XLB) - Yahoo Finance (https://finance.yahoo.com/quote/XLB/)
+  - Stock Market Recap August 11, 2026: Tech Divergence as ... (https://tradingstrategyguides.com/stock-market-recap-august-11-2026-tech-divergence-as-indices-slip/)
 
-  - Surging Oil Prices Fuel Commodity Rally, Pressure Equities and ... (https://www.etfaction.com/surging-oil-prices-fuel-commodity-rally-pressure-equities-and-bonds/)
+  - Sector Performance: All 11 GICS Sector ETFs vs SPY, Rebased (https://www.thetrading.tools/sector-performance)
 
-**Step 5 — Research.** The model wanted to know: *"gold silver price August 11 2026 Iran peace deal stocks"* → got 6 results (via searxng)
+**Step 5 — Research.** The model wanted to know: *"gold silver price August 11 2026 Iran peace deal"* → got 6 results (via ddg)
 
-  - Gold steadies after scaling two-month high; markets await inflation ... (https://www.cnbc.com/2026/08/11/gold-gains-for-third-session-inflation-reports-in-focus.html)
+  - Current price of gold: August 11, 2026 | Fortune (https://fortune.com/article/current-price-of-gold-08-11-2026/)
 
-  - Lower bonds yields, Iran talks set gold on track for largest ... - Reuters (https://www.reuters.com/world/india/gold-ticks-up-softer-dollar-focus-us-jobs-data-2026-08-05/)
+  - Gold & Silver Surge on Iran Peace Deal — Then Pull Back (https://goldsilver.com/industry-news/goldsilver-news/gold-silver-surge-on-iran-peace-deal-then-pull-back/)
 
-  - Gold & Silver Prices Surge As Trump Derails US-Iran Peace Talks ... (https://www.instagram.com/p/Db5ItHEmxSZ/)
+  - Gold Prices Surge on US-Iran Peace Deal 2026 (https://discoveryalert.com.au/gold-prices-us-iran-peace-deal-dollar-rates-2026/)
 
-**Step 7 — Research.** The model wanted to know: *""August 11 2026" stock market oil prices rally equities pressure"* → got 6 results (via searxng)
+**Step 7 — Research.** The model wanted to know: *""August 11 2026" stock market Iran geopolitical tensions selloff sectors"* → got 6 results (via ddg)
 
-  - U.S. stocks fall after Iran says Strait of Hormuz will remain shut (https://fortune.com/2026/08/11/u-s-stocks-fall-after-iran-says-strait-of-hormuz-will-remain-shut/)
+  - Stock market today: Dow, S&P 500, Nasdaq slip amid US-Iran... (https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-11-dow-sp-500-nasdaq-102827503.html)
 
-  - Oil prices add more than 2%, while world shares are mostly lower (https://abcnews.com/Business/wireStory/oil-prices-hold-steady-after-jumping-5-asian-135536821)
+  - Stock Market Today: August 11, 2026 - YouTube (https://www.youtube.com/watch?v=dy-iluR2mzQ)
 
-  - Oil prices rally, Wall Street retreats with Hormuz, inflation in focus (https://www.reuters.com/world/china/global-markets-global-markets-2026-08-10/)
+  - Stock Market Today: Dow, S&P Live Updates for August 11 (https://www.bloomberg.com/news/articles/2026-08-10/stock-market-today-dow-s-p-live-updates)
 
-**Step 8 — Research.** The model wanted to know: *"XLB top holdings Linde Freeport Newmont performance August 11 2026"* → got 6 results (via searxng)
+**Step 8 — Research.** The model wanted to know: *"XLB top holdings Linde Freeport Newmont August 11 2026"* → got 6 results (via ddg)
 
-  - XLB: State Street® Materials Select Sector SPDR® ETF (https://www.ssga.com/se/en_gb/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb)
+  - XLB Holdings List - State Street Materials Select Sector SPDR ETF (https://stockanalysis.com/etf/xlb/holdings/)
 
-  - XLB: State Street® Materials Select Sector SPDR® ETF (https://www.ssga.com/ch/en_gb/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb)
+  - XLB Top Holdings List & Exposure (Materials Select Sector SPDR Fund) | MarketBeat $XLB (https://www.marketbeat.com/stocks/NYSEARCA/XLB/holdings/)
 
-  - XLB ETF: Materials Sector SPDR Fund Overview - SumGrowth (https://www.sumgrowth.com/etf-profile/invest-in-XLB-etf.html)
+  - State Street Materials Se…: XLB Stock Price Quote & News | Robinhood (https://robinhood.com/us/en/stocks/XLB/)
 
-**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (8,562 characters).
+**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (6,002 characters).

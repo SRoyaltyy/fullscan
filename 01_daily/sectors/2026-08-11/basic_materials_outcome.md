@@ -2,95 +2,71 @@
 
 Actuals: {'etf': 'XLB', 'pct': 0.11282695176135782, 'spy_pct': -0.31952597501651026, 'rel': 0.4323529267778681, 'open': 53.06999969482422, 'close': 53.2400016784668}
 
-I have enough context. Let me compile the review.
+I have enough context now. Let me analyze the actuals against the morning prediction.
 
-Key facts from research:
-- SPY fell -0.32% on Aug 11, 2026. The market was pressured by Iran saying Strait of Hormuz will remain shut, oil prices spiking (oil +2%+), and inflation data in focus. This is a risk-OFF day for equities broadly.
-- XLB rose +0.11% (ETF_PCT 0.1128), a modest gain while SPY fell -0.32%. Relative return +0.43%.
-- Copper was actually DOWN -0.88% on the day (per Yahoo sector page), gold +0.72%, specialty chemicals +0.65%.
-- The DRC copper export ban (Aug 6) was the dominant supply story, but Reuters commentary on Aug 11 ("Copper's Congo panic says more about copper than Congo") suggests the copper surge was moderating/being questioned.
-- Gold gained modestly (+0.72%), silver surged on Iran news derailing peace talks.
-- Oil spiked on Hormuz closure — this is a cost-input negative for materials producers, and a risk-off driver for equities.
+**FACTS:**
+- ETF_PCT: +0.113% (XLB closed $53.24, opened $53.07)
+- SPY_PCT: -0.320%
+- REL_PCT: +0.432%
+- Actual direction: **up** (barely)
+- Actual magnitude: **flat/mild** (only +0.11%)
 
-Let me now write the review.
+The morning predicted **up/severe** (total_score 18.2, mult 1.4). Direction HIT, magnitude MISS badly — the sector only gained +0.11%, essentially flat, while SPY fell -0.32%. So XLB outperformed by +0.43% but in absolute terms it was a flat day.
 
----
+Key context: The market fell on August 11 due to US-Iran standoff intensifying, fading hopes of a Hormuz deal, and ahead of a key inflation report. Oil rose. This is a risk-off-ish tape for the broad market, but materials held up due to the copper/gold supply story.
 
-## SECTOR POST-SESSION REVIEW — Basic Materials (XLB) — 2026-08-11
-
-### STEP 0: FACTS
-- **ETF_PCT:** +0.11% (XLB 53.07 open → 53.24 close)
-- **SPY_PCT:** -0.32%
-- **REL_PCT:** +0.43% (XLB outperformed SPY by ~43bp)
-- **Path:** Opened 53.07, traded range 53.00–53.60, closed 53.24. Modest intraday drift higher into a down tape.
-- **ACTUAL_DIRECTION:** up (XLB positive while SPY negative)
-- **ACTUAL_MAGNITUDE:** flat-to-mild (only +0.11% absolute; the "up" is mostly relative outperformance)
-
-### STEP 1: WHAT DROVE THE SECTOR TODAY
-
-The dominant macro event on 2026-08-11 was **Iran announcing the Strait of Hormuz will remain shut**, which spiked oil prices (+2%+) and pressured global equities into a risk-off session (SPY -0.32%). This is the key context: the broad market fell, but XLB held up and closed slightly positive.
-
-Within the sector, the drivers were mixed:
-- **Gold/silver (monetary metals):** Gold +0.72%, silver surging on the Iran peace-talk derailment (safe-haven bid). Positive for NEM, the #2 XLB holding (~6.6-7% weight).
-- **Copper:** Actually **down -0.88%** on the day. The DRC export-ban supply story (Aug 6) was being questioned — Reuters' Andy Home commentary "Copper's Congo panic says more about copper than Congo" (published Aug 11) framed the spike as overdone. This is a negative for FCX (~5.8% weight).
-- **Chemicals:** Specialty chemicals +0.65% (positive for Linde, the #1 holding at ~13% weight).
-- **Oil spike:** Rising energy costs are a cost-input headwind for materials producers, but also a relative tailwind for energy-heavy sectors vs materials.
-
-Net: XLB's modest gain was driven by **defensive/relative strength** — gold/silver and chemicals holding up while the broad market fell on the Hormuz/oil shock. It was NOT a copper-led rally (copper fell).
-
-### STEP 2: AUDIT MORNING S0–S4 READS
-
-| Score | Morning read | Reality | Verdict |
-|---|---|---|---|
-| **S0 Shared Macro** | 1 (risk_on) | **WRONG.** The tape was risk-OFF — Iran said Hormuz stays shut, oil spiked, SPY -0.32%. The morning read of "risk_on, no macro shock" missed the Hormuz escalation that dominated the session. | **MISS** |
-| **S1 Sector Factors** | 3 (strong positive) | **PARTIALLY WRONG.** Copper fell -0.88% (the "record copper" spine driver reversed intraday); gold/silver held up (+0.72%); chemicals positive. The supply-driven copper surge was moderating/questioned. Net sector factors were mixed, not strongly positive. | **PARTIAL** |
-| **S2 Breadth** | 0 (neutral) | **CORRECT-ish.** Breadth was narrow — gold/chemicals led, copper lagged. The morning's "mild breadth caution" was validated. | **HIT** |
-| **S3 Flows/Positioning** | 1 (positive) | **NEUTRAL.** Inflows were real but the day was driven by macro (Hormuz/oil), not flows. | **NEUTRAL** |
-| **S4 ETF Tape** | 1 (positive) | **PARTIAL.** The 1d rel was +0.27% in the morning; actual rel was +0.43% (slightly better). But the tape was read as confirming "up" — which it did, but only as relative outperformance on a down day, not an absolute rally. | **PARTIAL** |
-
-**Direction verdict:** The morning predicted **up** — XLB did close up (+0.11%), so direction **HIT**. But the magnitude prediction of **severe** was badly wrong — actual magnitude was flat-to-mild (+0.11% absolute). The "severe" call was based on a risk-on macro read that never materialized.
-
-### STEP 3: INTERACTIONS / DOUBLE-COUNT / KNOWABLE-AT-OPEN TEST
-
-**Interactions:**
-- The morning treated the **Iran/Hormuz geopolitical story as a positive** for materials (safe-haven gold/silver bid). But on Aug 11, Iran's "Hormuz stays shut" announcement was a **risk-off shock** that spiked oil and dragged equities down. The same geopolitical event was a tailwind for gold/silver but a headwind for the broad equity tape — the morning captured the gold side but missed the equity-risk side. This is the key interaction miss.
-- **Oil spike vs materials:** Rising oil is a cost-input negative for materials producers. The morning noted oil was "slightly lower" (-0.66%) as a tailwind — but oil actually spiked +2%+ on the Hormuz news. This reversed a stated tailwind into a headwind.
-
-**Double-count check:** The morning correctly separated copper (supply) from gold (monetary/geopolitical) as distinct drivers. No same-shock double-counting there. However, the Iran/Hormuz story was double-counted as a *positive* (gold safe-haven) without accounting for its *negative* equity-risk dimension.
-
-**Knowable at open?** **Partially.** The Hormuz escalation and oil spike were developing through the session. The morning's premarket data showed ES flat, NQ slightly negative — the risk-off turn was not fully knowable at the open. However, the morning's "severe" magnitude call was always aggressive given the moderating 1d tape (+0.27% rel) and China PMI drag it itself flagged. The magnitude overreach was knowable; the direction was not the problem.
-
-### STEP 4: OUTLIERS INSIDE THE SECTOR
-
-- **Gold/silver miners (NEM, etc.):** Outperformed on the safe-haven bid (gold +0.72%, silver surging). Positive outlier.
-- **Copper miners (FCX):** Underperformed as copper fell -0.88% and the DRC-supply narrative was questioned (Reuters "Congo panic" commentary). Negative outlier within the sector.
-- **Chemicals (Linde, specialty chemicals +0.65%):** Held up well, supporting the #1 holding and cushioning the ETF.
-- **Iron ore / steel:** Continued weak on China property stress (as the morning flagged).
-
-The sector's modest gain was essentially a **defensive/relative-strength** outcome — gold and chemicals offsetting copper weakness — rather than a broad materials rally.
-
----
+Let me write the review.
 
 OUTCOME_BEGIN
 SECTOR: Basic Materials
 ETF: XLB
-ETF_PCT: 0.11
-SPY_PCT: -0.32
-REL_PCT: 0.43
+ETF_PCT: 0.113
+SPY_PCT: -0.320
+REL_PCT: 0.432
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: flat
-PRIMARY_DRIVER: Defensive relative strength — gold/silver safe-haven bid and chemicals holding up while the broad market fell on Iran's Hormuz-shutdown/oil-spike risk-off shock; copper actually fell -0.88%.
-KEY_INTERACTION: The Iran/Hormuz geopolitical event was a tailwind for gold/silver (safe-haven) but a risk-off headwind for the broad equity tape and a cost-input negative via the oil spike — the morning captured only the gold side.
+PRIMARY_DRIVER: Supply-driven metals bid (DRC copper/cobalt export ban + record copper + gold/silver surge) held XLB positive while the broad market sold off on US-Iran/Hormuz standoff and pre-CPI caution.
+KEY_INTERACTION: Geopolitical risk-off (Iran/Hormuz, oil up, SPY -0.32%) was offset within materials by the same geopolitical tension feeding the precious-metals safe-haven bid and the ongoing copper supply shock — a two-sided geopolitical effect that netted to a flat-but-outperforming sector.
 KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction HIT (up) but magnitude badly overcalled — "severe" vs actual flat; the risk_on macro read missed the Hormuz/oil risk-off turn that dominated the session.
+MORNING_READ_VERDICT: Direction correct (up, +0.11%) and relative outperformance confirmed (+0.43% rel), but the "severe" magnitude call badly overshot — the day was flat, not severe, because the Iran/Hormuz risk-off tape and pre-CPI caution capped upside.
 OUTCOME_END
 
 ---
 
-### Summary
+## Sector Post-Session Review — Basic Materials (XLB) — 2026-08-11
 
-The morning call got the **direction right** (XLB closed up +0.11% while SPY fell -0.32%, a +0.43% relative outperformance) but **badly overcalled the magnitude** — "severe" vs an actual flat-to-mild +0.11% absolute move.
+### 0. FACTS
+- **XLB:** +0.113% (open $53.07 → close $53.24)
+- **SPY:** -0.320%
+- **Relative:** +0.432%
+- **Path:** Opened near flat, drifted modestly higher into the close; held green while SPY sold off.
 
-The core miss was the **macro regime read (S0)**. The morning scored S0 as risk_on ("no macro shock"), but the session was dominated by Iran announcing the Strait of Hormuz stays shut, spiking oil +2%+ and dragging SPY down -0.32%. The same geopolitical event that the morning correctly identified as a gold/silver tailwind was simultaneously a broad-equity risk-off shock and an oil-cost headwind for materials — an interaction the morning missed.
+### 1. What drove the sector today
+The dominant tape was **geopolitical risk-off for the broad market** — the US-Iran standoff intensified, hopes for a Strait of Hormuz deal faded (Trump demanding compensation), oil rose to one-week highs, and traders refrained from risk ahead of a key inflation report. SPY fell -0.32%.
 
-The sector's gain was **defensive relative strength**, not a copper-led rally. Copper actually fell -0.88% (the DRC supply narrative was being questioned per Reuters' "Congo panic" commentary), while gold (+0.72%) and specialty chemicals (+0.65%) carried the ETF. The morning's "severe" magnitude call was never well-supported given the moderating 1d tape (+0.27% rel) and China PMI drag it itself flagged — that overreach was knowable at the open even if the Hormuz turn was not.
+Within that, **materials were the defensive/outperforming pocket** for two reasons:
+- **Precious metals safe-haven bid:** The same Iran/Hormuz tension that pressured equities lifted gold/silver (gold ~$4,385/oz, silver rising on jobs + Iran news). This is a *positive* for the materials complex in a risk-off tape.
+- **Industrial-metals supply shock:** The DRC copper/cobalt concentrate export ban (8/6) kept copper at/near record highs (~$6.46-6.55/lb, LME above $14,000/t), with aluminum inventories at century lows. Supply-driven strength is largely insulated from the equity risk-off.
+
+Net: XLB's +0.11% vs SPY's -0.32% = +0.43% relative outperformance, but absolute move was essentially flat.
+
+### 2. Audit of morning S0–S4 reads
+- **S0_SHARED_MACRO (1):** Morning called "risk_on" with VIX 15.57, F&G 66.3 Greed, ES flat. **MISS.** The actual tape was risk-off for equities — Iran/Hormuz standoff intensified, oil up, SPY -0.32%. The morning's "no macro shock" read was wrong; the geopolitical shock was the day's defining feature.
+- **S1_SECTOR_FACTORS (3):** Strongly positive. **HIT.** Copper record (DRC ban), gold/silver surge, tight inventories all confirmed and were precisely what kept XLB green. The China PMI drag was real but overwhelmed, as predicted.
+- **S2_BREADTH (0):** Neutral. **HIT.** Breadth was indeed narrow — metals miners led while chemicals lagged; the sector's flat absolute move reflects that narrowness.
+- **S3_FLOWS_POSITIONING (1):** Positive inflows. **HIT** (neutral-to-mild; no evidence of reversal).
+- **S4_ETF_TAPE (1):** Positive. **HIT** on relative strength (rel +0.43% today, +2.33% 1w), but the 1d absolute was flat.
+
+### 3. Interactions / double-count / knowable-at-open test
+- **Two-sided geopolitical effect:** The Iran/Hormuz tension was simultaneously a *negative* for equities (risk-off, oil up) and a *positive* for precious metals (safe-haven). The morning treated the geopolitical story as a positive for materials via gold/silver but did not weigh its negative equity-tape consequence. This is the key interaction that capped the magnitude.
+- **No double-count:** Copper (supply) and gold (monetary/geopolitical) remained distinct drivers, correctly separated.
+- **Knowable at open?** Partially. The Iran/Hormuz standoff and pre-CPI caution were knowable at the open (oil at one-week highs, news flow). But the magnitude of the equity risk-off and the degree to which it would cap materials upside was not fully knowable — the morning's own 1d rel (+0.27%) already hinted at moderating momentum, which the model noted but did not act on.
+
+### 4. Outliers inside the sector
+- **Precious-metals miners (NEM, ~6% weight):** Likely the strongest contributors, riding the gold/silver safe-haven surge.
+- **Copper miners (FCX, ~5.5% weight):** Supported by record copper / DRC ban.
+- **Linde (LIN, ~13% weight):** The largest holding is a chemicals/industrial-gas name — likely a laggard given narrow breadth, dampening the ETF's absolute move.
+- **Chemicals/forest-products:** Lagged, consistent with the morning's narrow-breadth caution.
+
+### Verdict
+Direction was correct (up, +0.11%) and relative outperformance was confirmed (+0.43% rel vs SPY -0.32%). But the **"severe" magnitude call badly overshot** — the day was flat, not severe. The miss stems from S0: the morning called risk_on when the actual tape was geopolitical risk-off (Iran/Hormuz standoff, oil up, pre-CPI caution), which capped materials' absolute upside even as the supply-driven metals bid kept the sector green and outperforming. The model even flagged the moderating 1d tape (+0.27% rel) but kept the severe band anyway.

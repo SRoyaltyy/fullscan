@@ -8,50 +8,50 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLU utilities sector August 11 2026 performance drivers"* → got 6 results (via ddg)
 
+  - XLU Stock - Utilities Select Sector SPDR® Fund (XLU): Charts ... (https://www.financecharts.com/etfs/XLU)
+
+  - Utilities Select (XLU) ETF Forecast & Price Target (2026) (https://clearank.com/etf/utilities-xlu/)
+
+  - XLU: Utilities Select Sector SPDR Fund - Report - Zacks.com (https://www.zacks.com/funds/etf/XLU/report)
+
+**Step 2 — Research.** The model wanted to know: *"utilities stocks rally August 11 2026 bond yields"* → got 6 results (via ddg)
+
+  - Stocks Churn as Hormuz Standoff Spurs Rally in Oil... - Bloomberg (https://www.bloomberg.com/news/articles/2026-08-09/stock-market-today-dow-s-p-live-updates)
+
+  - cnbc.com/markets/bonds (https://www.cnbc.com/markets/bonds/)
+
+  - reuters.com/markets/rates-bonds (https://www.reuters.com/markets/rates-bonds/)
+
+**Step 4 — Research.** The model wanted to know: *"XLU utilities August 11 2026 why up 1.16%"* → got 6 results (via ddg)
+
   - XLU: Utilities Sector Outperforms S 500 in August (https://finance.yahoo.com/news/xlu-utilities-sector-outperforms-500-160000720.html)
 
   - State Street Utilities Select Sector SPDR ETF (XLU) Latest... | Nasdaq (https://www.nasdaq.com/market-activity/etf/xlu)
 
-  - Utilities Select (XLU) ETF Analysis 2026 (https://clearank.com/etf/utilities-xlu/)
+  - XLU Stock Price | Utilities Select Sector SPDR ETF - Investing.com (https://www.investing.com/etfs/spdr-select-sector---utilities)
 
-**Step 2 — Research.** The model wanted to know: *"utilities stocks rally August 11 2026 treasury yields"* → got 6 results (via ddg)
+**Step 5 — Research.** The model wanted to know: *""August 11 2026" utilities sector outperformance defensive stocks"* → got 6 results (via ddg)
 
-  - Utilities Up as Treasury Yields Give Back Some Gains ... (https://www.morningstar.com/news/dow-jones/2026081110599/utilities-up-as-treasury-yields-give-back-some-gains-utilities-roundup)
+  - Stock Market Today: August 11, 2026 - YouTube (https://www.youtube.com/watch?v=dy-iluR2mzQ)
 
-  - US Stock Market Today Aug 11, 2026 — S&P 500, Dow & Nasdaq Close (https://vittarthi.com/markets/us)
-
-  - Utilities Up as Treasury Yields Fall — Utilities Roundup (https://dotcom-edge-prod.ind7f52b.eas.morningstar.com/news/dow-jones/2026080711693/utilities-up-as-treasury-yields-fall-utilities-roundup)
-
-**Step 4 — Research.** The model wanted to know: *"utilities roundup August 11 2026 power producers rally"* → got 6 results (via ddg)
-
-  - Utilities Stock Performance - Yahoo Finance (https://finance.yahoo.com/sectors/utilities/)
-
-  - The Largest Utilities Companies by Market Cap in August 2026 | The Motley Fool (https://www.fool.com/research/largest-utilities-companies/)
-
-  - Utilities - U.S. Outlook (https://gabelli.com/research/utilities-u-s-outlook/)
-
-**Step 5 — Research.** The model wanted to know: *"XLU top holdings gainers August 11 2026"* → got 6 results (via ddg)
-
-  - Utilities Select Sector SPDR Fund - XLU Stock Price, Holdings, Quote... (https://www.etf.com/XLU)
-
-  - Utilities Sector ETF XLU Top Holdings | Yahoo Finance (https://finance.yahoo.com/news/utilities-sector-etf-xlu-top-164500762.html)
+  - Stock Market Today: Dow, S&P Live Updates for August 11 (https://www.bloomberg.com/news/articles/2026-08-10/stock-market-today-dow-s-p-live-updates)
 
   - Light Pollution Map 2026 | Bortle Scale & Dark Sky (https://lightpollutionmap.app/)
 
-**Step 7 — Research.** The model wanted to know: *""utilities" "August 11" 2026 CPI inflation data treasury yields power producers"* → got 6 results (via ddg)
+**Step 7 — Research.** The model wanted to know: *"stock market August 11 2026 risk-off defensive rally oil Hormuz"* → got 6 results (via ddg)
 
-  - United States Consumer Price Index (CPI) YoY (https://www.investing.com/economic-calendar/cpi-733)
+  - Stocks Churn as Hormuz Standoff Spurs Rally in Oil: Markets Wrap (https://www.bloomberg.com/news/articles/2026-08-09/stock-market-today-dow-s-p-live-updates)
 
-  - Morning Preview: August 11, 2026 - Investrade (https://investrade.com/morning-preview-august-11-2026/)
+  - Stocks Retreat as Hormuz Uncertainty Lifts Oil Ahead... - FinancialJuice (https://features.financialjuice.com/2026/08/11/stocks-retreat-as-hormuz-uncertainty-lifts-oil-ahead-of-inflation-data-us-market-wrap/)
 
-  - The Week Ahead: US CPI and PPI in Focus as Market Eyes CRWV and AMAT Earnings (https://www.tradingkey.com/analysis/stocks/us-stocks/262090642-weekly-preview-us-cpi-ppi-data-market-focus-crwv-amat-earnings-reports-tradingkey)
+  - Oil Prices Climb on Stalemate in Strait of Hormuz - The New York Times (https://www.nytimes.com/2026/08/09/business/oil-stocks-iran-war.html)
 
-**Step 9 — Research.** The model wanted to know: *"utilities up treasury yields give back gains August 11 2026 Morningstar roundup"* → got 6 results (via ddg)
+**Step 8 — Research.** The model wanted to know: *"10 year treasury yield August 11 2026 fell"* → got 6 results (via ddg)
 
-  - Utilities Up as Treasury Yields Give Back Some Gains ... (https://www.morningstar.com/news/dow-jones/2026081110599/utilities-up-as-treasury-yields-give-back-some-gains-utilities-roundup)
+  - US 10 Year Treasury Note Yield - Quote - Chart - Historical Data - News (https://tradingeconomics.com/united-states/government-bond-yield)
 
-  - Utilities Up as Treasury Yields Fall — Utilities Roundup (https://www.morningstar.com/news/dow-jones/2026080711693/utilities-up-as-treasury-yields-fall-utilities-roundup)
+  - 10 Year Treasury Yield (US10Y) Price and Chart — TradingView (https://www.tradingview.com/symbols/TVC-US10Y/)
 
-  - Utilities Up as Treasury Yields Fall — Utilities Roundup (https://kessler-prod.reta52d8.eas.morningstar.com/news/dow-jones/2026080711693/utilities-up-as-treasury-yields-fall-utilities-roundup)
+  - Market Yield on U.S. Treasury Securities at 10-Year... | St. Louis Fed (https://fred.stlouisfed.org/series/DGS10)
 
-**Step 11 — Done researching.** The model stopped searching and wrote its full analysis (6,728 characters).
+**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (6,356 characters).

@@ -2,85 +2,96 @@
 
 Actuals: {'etf': 'XLI', 'pct': 0.5958780110276507, 'spy_pct': -0.31952597501651026, 'rel': 0.915403986044161, 'open': 185.0800018310547, 'close': 185.6999969482422}
 
-I have enough context. Let me compile the review. The key facts:
+This is a critical finding. The morning prediction's macro read was **wrong on oil direction**. The morning said "Oil down -0.66% 1d (despite Iran/Hormuz tensions, peace deal hopes)" and treated the geopolitical risk as "leaning constructive." But the actual market context on Aug 11 was that **oil ROSE** (Brent to ~$90, +0.4% to $88.1, WTI to $82.52) because the Hormuz deal remained elusive and Trump hardened his stance. This is a risk-off macro backdrop, not risk-on.
 
-**Actuals:**
-- XLI: +0.60% (open 185.08 → close 185.70)
-- SPY: -0.32%
-- Relative: +0.92%
-- Direction: UP (predicted up ✓)
-- Magnitude: +0.60% is mild, not "severe" as predicted
-
-**Key day driver:** The morning predicted risk-on on peace-deal hopes (oil down). But the actual day saw Iran say the Strait of Hormuz would REMAIN SHUT, pushing oil UP and global shares DOWN. This was a risk-off reversal from the morning's peace-deal optimism. Despite this, XLI still rose +0.60% while SPY fell -0.32%, driven by defense/aerospace (Hormuz escalation = defense bid) and AI-power names.
+Yet despite this, XLI still rose +0.60% and outperformed SPY by +0.92%. This is notable — the sector held up despite a risk-off macro day (oil up, stocks down, gold at two-month high, inflation fears).
 
 Let me finalize the review.
 
 ---
 
-# Sector Post-Session Review — Industrials (XLI) — 2026-08-11
+# Sector Post-Session Review — Industrials (XLI)
 
-## STEP 0: FACTS
-- **ETF_PCT:** +0.60% (open 185.08 → close 185.70)
-- **SPY_PCT:** -0.32%
-- **REL_PCT:** +0.92%
-- **Path:** Opened near flat, rose through the session to close +0.60% while SPY faded to -0.32%. XLI decoupled from the broad market and finished firmly green.
+## Step 0: FACTS
+- **ETF_PCT:** +0.596% (open 185.08 → close 185.70)
+- **SPY_PCT:** -0.320%
+- **REL_PCT:** +0.915%
+- **Path:** Opened 185.08, traded up to 187.26 intraday high, closed 185.70. Positive day, closed near mid-range (day range 185.03–187.26).
 
-## STEP 1: What drove the sector today
+## Step 1: What drove the sector today
 
-The dominant macro event of the day was a **geopolitical reversal**. The morning's peace-deal optimism (oil down -0.66%, futures flat) was **overturned intraday when Iran said the Strait of Hormuz would remain shut until its conditions were met** — pushing oil prices UP and global equities DOWN.
+The dominant macro backdrop on 2026-08-11 was **risk-off**, not risk-on:
+- **Oil ROSE** (Brent to ~$90, +0.4% to $88.1; WTI to $82.52, highest since July 31) as the **Hormuz deal remained elusive** and Trump hardened his stance toward Iran with new compensation demands.
+- **Stocks fell** (SPY -0.32%) ahead of key inflation data, with traders refraining from riskier bets.
+- **Gold hit a two-month high** (flight-to-safety bid).
+- Inflation fears ramped up, with bets on at least one US rate hike this year.
+
+**Yet XLI rose +0.60% and outperformed SPY by +0.92%.** This is the key story: the sector was resilient/defensive-relative in a risk-off tape. The drivers:
+- **Defense/aerospace strength** (RTX, GE Aerospace) — a defensive bid in a geopolitical escalation environment. Rising oil/Hormuz tensions and defense budget upside (Golden Dome, NATO 2% GDP) support defense names.
+- **AI-power structural tailwind** (GE Vernova, Eaton) — grid/electrification backlog continues to carry the sector independent of the macro tape.
+- **Sector tape momentum** — XLI had turned positive vs SPY across all timeframes (1d +1.26%, 3d +0.59%, 1w +0.06%, 1m +0.45% rel), and the $1.2B weekly inflow supported continued relative strength.
 
 Evidence:
-- CLAIM: Iran said Strait of Hormuz would remain closed until conditions met, pushing oil prices up and US stocks lower.
-  URL: https://fortune.com/2026/08/11/u-s-stocks-fall-after-iran-says-strait-of-hormuz-will-remain-shut/
-  PUBLISHED: 2026-08-11
-  QUOTE: "US stocks turned lower Tuesday after Iran said the Strait of Hormuz would remain closed until its conditions were met, pushing oil prices..."
-- CLAIM: Oil prices gained and global shares retreated as traders assessed talks over reopening the Strait of Hormuz.
-  URL: https://www.reuters.com/world/china/global-markets-global-markets-2026-08-11/
-  PUBLISHED: 2026-08-11
-  QUOTE: "Oil prices gained and global shares retreated on Tuesday as traders assessed talks over reopening the Strait of Hormuz."
-- CLAIM: Wall Street fell as US-Iran peace optimism faded.
-  URL: https://www.reuters.com/business/wall-st-futures-muted-us-iran-impasse-lifts-oil-prices-2026-08-11/
-  PUBLISHED: 2026-08-11
+- CLAIM: Oil rose to ~$90 Brent on Hormuz stalemate / URL: https://www.nytimes.com/2026/08/11/business/oil-prices-iran-war-hormuz.html / PUBLISHED: 2026-08-11 / QUOTE: "The price of oil continued to climb on Tuesday, reaching $90 a barrel for the first time in two weeks as the stalemate over the Iran war hardens" / SUMMARY: Oil up, not down.
+- CLAIM: Stocks fell on Hormuz deadlock + inflation data / URL: https://www.bloomberg.com/news/articles/2026-08-11/us-stock-futures-rise-as-oil-erases-gains-on-iran-optimism / PUBLISHED: 2026-08-11 / QUOTE: "US stocks continued to fall into Tuesday's market close after Pakistan said a US and Iran deal... was close, while negotiations... remain at an impasse, pushing oil prices higher" / SUMMARY: Risk-off tape.
+- CLAIM: Gold hit two-month high / URL: https://www.theguardian.com/business/live/2026/aug/11/... / PUBLISHED: 2026-08-11 / SUMMARY: Flight-to-safety bid confirmed.
 
-**Why XLI rose anyway:** Despite the risk-off macro tape, XLI gained +0.60% because of its **defense/aerospace and AI-power composition**. Escalation in the Hormuz standoff is a direct bid for defense names (RTX, GE Aerospace, Golden Dome program), and the AI-power/electrification theme (GE Vernova, Eaton) remained structurally supportive. The sector's relative strength (+0.92% vs SPY) reflects these structural winners decoupling from the broad-market risk-off move.
+## Step 2: Audit morning S0–S4 reads against reality
 
-## STEP 2: Audit morning S0–S4 reads against reality
+**S0_SHARED_MACRO (+1) — WRONG on oil direction, partially wrong on regime.**
+- Morning claimed "Oil down -0.66% 1d... peace deal hopes" and "geopolitical risk... currently leaning constructive." **Reality: oil ROSE ~5% on Monday and continued up Tuesday to ~$90 Brent; no deal; Trump hardened stance.** The macro backdrop was risk-off, not risk-on. The morning's S0 read was based on a stale/incorrect oil print. This is a genuine miss on the macro overlay.
+- However, the morning did correctly flag the two-sided nature of the risk and noted gold +1.93% (flight-to-safety bid) — which was actually the correct tell. The morning underweighted the gold signal.
 
-| Component | Morning Read | Reality | Verdict |
-|---|---|---|---|
-| **S0 Shared Macro** | +1 (risk-on, peace-deal hopes, oil down) | **WRONG DIRECTION** — Iran reversed to "Hormuz stays shut," oil UP, risk-off. The morning's core macro premise (peace optimism) was invalidated intraday. | **MISS** |
-| **S1 Sector Factors** | +2 (ISM expansion, AI-power, defense) | **CONFIRMED** — defense bid on escalation + AI-power structural strength carried the sector. | **HIT** |
-| **S2 Breadth** | +1 (XLI leading SPY across timeframes) | **CONFIRMED** — XLI +0.60% vs SPY -0.32%, +0.92% rel. Sector led decisively. | **HIT** |
-| **S3 Flows/Positioning** | +1 ($1.2B weekly inflow) | **CONFIRMED** — inflow thesis consistent with relative strength. | **HIT** |
-| **S4 ETF Tape** | +1 (XLI outperforming SPY) | **CONFIRMED** — tape continued to confirm. | **HIT** |
+**S1_SECTOR_FACTORS (+2) — CORRECT.**
+- ISM expansion, AI-power grid backlog, defense budgets, durable goods/CapEx all held. These structural factors are what carried the sector through a risk-off day. The defense bid was actually amplified by the geopolitical escalation (Hormuz stalemate), which the morning underweighted.
 
-**Direction call: HIT** (predicted up, actual up). **Magnitude call: MISS** (predicted "severe," actual +0.60% = mild).
+**S2_BREADTH (+1) — CORRECT.**
+- XLI leading SPY across timeframes was confirmed. The sector outperformed by +0.92% on a down SPY day.
 
-## STEP 3: Interactions / double-count / knowable-at-open test
+**S3_FLOWS_POSITIONING (+1) — CORRECT.**
+- $1.2B weekly inflow supported the sector's relative strength.
 
-- **Double-count check:** S1 (defense + AI-power) and S2 (tape leadership) are distinct — fundamentals vs. price confirmation. No double-count.
-- **Knowable-at-open test:** The morning's macro read (S0 = +1, risk-on on peace hopes) was **NOT knowable at open** — it was invalidated intraday by Iran's Hormuz statement. However, the **defense/AI-power structural bid** that actually drove XLI's outperformance WAS knowable at open (it was the core of S1). So the sector's relative strength was knowable; the specific macro overlay was not.
-- **Key interaction:** The macro risk-off (Hormuz escalation) actually *helped* XLI's defense-heavy composition while hurting SPY — a sector-specific positive interaction that the morning's "risk-on" framing missed. The morning treated the geopolitical risk as two-sided but leaned constructive; in reality the escalation was a net positive for industrials' defense names specifically.
+**S4_ETF_TAPE (+1) — CORRECT.**
+- The positive tape reversal was confirmed; XLI outperformed SPY again.
 
-## STEP 4: Outliers inside the sector
+**Direction call (up): CORRECT.** XLI rose +0.60% while SPY fell.
+**Magnitude call (severe): WRONG.** XLI +0.60% is **mild**, not severe. The morning predicted "severe" (total_score 14.4, mult 1.2). The risk-off macro backdrop (oil up, inflation fears, rate-hike bets) capped the sector's upside — the sector was resilient but not explosive.
 
-- **Defense/aerospace names** (RTX, GE Aerospace, Lockheed) likely the standout gainers on Hormuz escalation — direct beneficiaries of the "Hormuz stays shut" headline.
-- **AI-power names** (GE Vernova, Eaton) continued their structural leadership.
-- **Energy-linked industrials** (oilfield equipment, etc.) likely benefited from the oil price jump.
-- **Freight/transport/consumer-cyclical industrials** likely lagged given the risk-off tape — the drag within the sector.
+## Step 3: Interactions / double-count / knowable-at-open test
+
+- **Double-count check:** The morning counted ISM expansion (S1) and AI-power backlog (S1) as distinct drivers — correct, they are distinct (macro cycle vs. structural electrification). No double-count.
+- **Interaction:** The key interaction was **defense bid × geopolitical escalation**. The morning treated the Iran/Hormuz situation as "leaning constructive" (peace-deal optimism → oil down → risk-on). But the actual escalation (no deal, Trump hardening) produced a **risk-off tape that paradoxically supported defense-heavy industrials** while pressuring the broad market. This interaction — geopolitical escalation helping defense names within XLI while hurting SPY — is what produced the +0.92% relative outperformance on a down day. The morning's S0 misread of oil direction was the root cause of the magnitude miss.
+- **Knowable at open?** **Partially.** The oil direction was knowable — oil had already surged ~5% on Monday (Aug 10) and the Hormuz deal was clearly elusive before Tuesday's open. The morning's claim of "oil down -0.66% on peace-deal hopes" appears to have been based on a stale or misread print. A correct oil read would have flagged the risk-off backdrop and tempered the "severe" magnitude call. However, the sector's resilience (outperforming on a down day) was not fully predictable.
+
+## Step 4: Outliers inside the sector
+
+- **Defense/aerospace names (RTX, GE Aerospace, LMT)** likely led — the geopolitical escalation (Hormuz stalemate, Trump hardening) is a direct tailwind for defense. This is the sector's defensive/geopolitical bid.
+- **AI-power names (GE Vernova, Eaton)** continued their structural leadership (GEV ~$271B market cap, Guggenheim raised PT to $1,450).
+- **Oil-linked/energy-transport industrials** may have been mixed — rising oil is a cost input for some industrials but a tailwind for energy-equipment names.
+- The sector's resilience despite a risk-off tape suggests **broad participation** rather than single-ticker distortion — consistent with the morning's breadth read.
 
 ---
 
 OUTCOME_BEGIN
 SECTOR: Industrials
 ETF: XLI
-ETF_PCT: 0.60
-SPY_PCT: -0.32
-REL_PCT: 0.92
+ETF_PCT: 0.596
+SPY_PCT: -0.320
+REL_PCT: 0.915
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: Defense/aerospace and AI-power names decoupled from a risk-off tape after Iran said the Strait of Hormuz would remain shut, pushing oil up and SPY down while XLI's structural winners carried the sector higher.
-KEY_INTERACTION: The Hormuz escalation that hurt the broad market (SPY -0.32%) was a net positive for XLI's defense-heavy composition — a sector-specific positive interaction the morning's risk-on framing missed.
+PRIMARY_DRIVER: Defense/aerospace + AI-power structural strength carried XLI to outperform SPY by +0.92% on a risk-off day (oil up to ~$90 on Hormuz stalemate, stocks down ahead of inflation data).
+KEY_INTERACTION: Geopolitical escalation (no Hormuz deal, Trump hardening) produced a risk-off tape that paradoxically boosted defense-heavy industrials while pressuring SPY — driving the relative outperformance.
 KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction HIT (up), but magnitude MISS (predicted severe, actual mild) — the S0 macro premise (peace optimism) was invalidated intraday by Iran's Hormuz reversal, yet the S1 defense/AI-power thesis correctly identified the sector's relative strength driver.
+MORNING_READ_VERDICT: Direction correct (up), but magnitude overcalled (predicted severe, actual mild) because S0 misread oil direction — morning claimed oil down on peace-deal hopes, but oil actually rose ~5% on Hormuz deadlock, capping sector upside.
 OUTCOME_END
+
+---
+
+## Summary
+
+The morning prediction got the **direction right** (XLI up, and it outperformed SPY by +0.92% on a down market day) but **overcalled the magnitude** (predicted "severe," actual "mild" at +0.60%).
+
+The core error was in **S0_SHARED_MACRO**: the morning claimed oil was down -0.66% on "peace-deal hopes" and treated the geopolitical risk as "leaning constructive." In reality, oil **rose ~5%** (Brent to ~$90) because the Hormuz deal remained elusive and Trump hardened his stance — a **risk-off** backdrop with stocks falling ahead of inflation data and gold at a two-month high. This macro misread was knowable at open (oil had already surged Monday), and it explains why the sector's upside was capped at mild rather than severe.
+
+The sector's resilience is the notable positive: despite a risk-off tape, defense/aerospace and AI-power structural strength carried XLI to a +0.92% relative outperformance. The S1 (sector factors), S2 (breadth), S3 (flows), and S4 (tape) reads were all correct — the miss was isolated to the macro overlay.

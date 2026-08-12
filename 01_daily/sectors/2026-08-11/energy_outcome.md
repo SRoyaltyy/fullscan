@@ -2,77 +2,108 @@
 
 Actuals: {'etf': 'XLE', 'pct': 1.2462612100310855, 'spy_pct': -0.31952597501651026, 'rel': 1.5657871850475957, 'open': 59.9900016784668, 'close': 60.93000030517578}
 
-I now have a clear picture. The actual reality on Aug 11, 2026 was the OPPOSITE of what the morning prediction assumed. The morning prediction was based on Channel 1 data showing CL=F -0.66% and BZ=F -0.65% (oil DOWN), and a Hormuz deal appearing closer. But the actual reality was that oil EXTENDED gains (WTI +1.3% to settle at $83.20, a fourth straight session of gains) as Hormuz reopening hopes FADED — US-Iran compensation demands dimmed hopes for reopening the Strait. XLE rose +1.25% to close at $60.93.
+I have enough evidence. The key facts are clear:
 
-Let me verify the actual numbers. The actuals given: ETF_PCT +1.246%, SPY_PCT -0.32%, REL +1.566%. XLE closed at 60.93, opened at 59.99. So XLE was UP +1.25% while SPY was DOWN -0.32%. This is a strong relative outperformance.
+- On Aug 11, 2026, oil prices ROSE (touched one-week high, Brent reached ~$90/bbl intraday), driven by FADING hopes of a US-Iran Hormuz deal.
+- The morning prediction assumed the OPPOSITE — that the Hormuz deal was progressing and oil was DOWN (CL=F -0.66%, BZ=F -0.65%).
+- XLE actually rallied +1.25% while SPY fell -0.32%, giving a strong relative return of +1.57%.
+- The morning prediction was "flat/flat" — this was a MISS on both direction and magnitude.
 
-The morning prediction said "flat" — this was WRONG. XLE was up +1.25% (notable magnitude given SPY was down). The morning read was based on a flawed premise (oil down, Hormuz deal closer) that was contradicted by reality (oil up, Hormuz deal NOT progressing).
+The critical issue: the morning's Channel 1 data (oil DOWN) was contradicted by the actual tape (oil UP). The morning prediction trusted a data feed that appears to have been wrong or stale, and built the entire thesis on the wrong premise.
 
-Let me write the review.
-
----
-
-## SECTOR POST-SESSION REVIEW — ENERGY (XLE)
-
-### 0. FACTS
-- **ETF_PCT:** +1.25% (XLE 59.99 → 60.93)
-- **SPY_PCT:** -0.32%
-- **REL_PCT:** +1.57% (strong relative outperformance)
-- **Path:** Opened 59.99, closed 60.93 — steady climb, closed near highs. XLE was the clear sector leader while SPX was red.
-
-### 1. What drove the sector today
-
-The dominant driver was **oil extending gains on Hormuz supply-risk persistence** — the exact OPPOSITE of the morning's premise.
-
-- **WTI settled +1.3% at $83.20/bbl** — a fourth straight session of gains (Rigzone, Aug 11).
-- **Brent neared $89/bbl** (Polyestertime).
-- **Hormuz reopening hopes FADED, not advanced.** US and Iran traded compensation demands, dimming prospects for a deal to reopen the Strait (Reuters, Sprague Energy). The blockade/supply-disruption risk premium was REINFORCED, not deflated.
-- **Supply disruptions through the Strait and Red Sea** kept crude at one-week highs (Global Banking & Finance).
-- **Inflation worry revived** as oil rallied ahead of CPI — higher energy costs stoked Fed-rate concerns, which pressured the broad market (SPY -0.32%) while energy itself benefited (Saxo).
-
-So the sector was driven by a **persistent geopolitical supply shock** (sector_shock regime) that the broad market treated as a risk-off/inflation headwind — energy outperformed SPY by +1.57% precisely because the shock was sector-specific and bullish for energy.
-
-### 2. Audit of morning S0–S4 reads
-
-| Score | Morning read | Reality | Verdict |
-|---|---|---|---|
-| **S0 macro (+0.5)** | Flat/mixed tape, USD weak, gold up | Correct that tape was flat/red; SPY -0.32% confirms. USD/gold secondary. | **HIT** (neutral, fine) |
-| **S1 sector factors (-1.0)** | Oil DOWN, Hormuz deal closer, premium FADING | **WRONG.** Oil UP +1.3%, Hormuz deal NOT progressing, premium REINFORCED. This was the fatal error. | **MISS (directionally inverted)** |
-| **S2 breadth (+0.5)** | Positive but cooling | Correct that breadth positive; but it was STRONGER than expected (XLE +1.25% vs SPY -0.32%). | **HIT** (understated) |
-| **S3 flows (+0.0)** | Crowding, profit-taking risk | No evidence of profit-taking; flows continued to support. | **MISS** (should have been positive) |
-| **S4 tape (+0.0)** | Confirming cooling | Tape was actually confirming a fresh surge, not a cooling. | **MISS** |
-
-**Root cause of the miss:** The morning prediction trusted the Channel 1 pre-fetched tape (CL=F -0.66%, BZ=F -0.65%) and the "Iran and Oman agree route" headline as authoritative. But the actual day's news flow showed the deal was NOT agreed — US and Iran traded compensation demands, hopes for reopening dimmed, and oil rose. The morning read inverted the geopolitical direction.
-
-### 3. Interactions / double-count / knowable-at-open test
-
-- **Double-count:** The morning counted "oil down" and "premium fading" as two separate negative factors (S1 -1.0), but they were the same underlying event (the presumed Hormuz deal). This double-counted a single (incorrect) premise.
-- **Knowable at open:** **Partially.** The morning had access to conflicting headlines — some said "oil falls 5% after Trump calls off strikes, Hormuz deal agreed" while others said "oil rose ~5% Monday on Hormuz deal doubts." The morning chose to trust the Channel 1 tape (oil down) over the conflicting news. But the actual tape on Aug 11 showed oil RISING (WTI +1.3% to $83.20). The Channel 1 pre-fetched data appears to have been stale or mislabeled (possibly reflecting a prior day or a different timestamp). A cross-check of the live oil tape at open would have revealed oil was up, not down. So this was **partially knowable** — the conflicting news should have triggered a re-verification of the oil tape rather than a blind trust of the pre-fetched number.
-
-### 4. Outliers inside the sector
-
-- **XLE +1.25% vs SPY -0.32%** — a +1.57% relative move is a notable outlier on a day when the broad market was red. Energy was the undisputed leader.
-- **Refiners** likely outperformed further given record crack spreads (positive sub-industry factor that the morning correctly identified but underweighted).
-- The sector's move was broad-based (XLE, not just a single name), consistent with a sector-wide supply-shock rally rather than idiosyncratic.
+Let me now write the post-session review.
 
 ---
 
 OUTCOME_BEGIN
 SECTOR: Energy
 ETF: XLE
-ETF_PCT: 1.25
-SPY_PCT: -0.32
-REL_PCT: 1.57
+ETF_PCT: 1.246
+SPY_PCT: -0.320
+REL_PCT: 1.566
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: notable
-PRIMARY_DRIVER: Oil extended gains (WTI +1.3% to $83.20, 4th straight session) as Hormuz reopening hopes FADED — US-Iran compensation demands dimmed deal prospects, reinforcing the supply-risk premium.
-KEY_INTERACTION: Sector-specific geopolitical supply shock (bullish energy) acted as a risk-off/inflation headwind for the broad market (SPY -0.32%), producing a +1.57% relative outperformance.
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: MISS — the morning inverted the geopolitical direction (assumed Hormuz deal closer, oil down) when reality was the opposite (deal stalled, oil up); the Channel 1 oil tape was stale/mislabeled and should have been re-verified against conflicting live headlines.
+PRIMARY_DRIVER: Oil rallied to a one-week high (~$90/bbl Brent intraday) as US-Iran Hormuz deal hopes FADED — Trump demanded compensation and hardened his stance, keeping the Strait of Hormuz restricted and re-inflating the geopolitical supply risk premium.
+KEY_INTERACTION: The geopolitical supply premium (which the morning assumed was deflating) actually RE-EXPANDED, driving XLE up +1.25% while the broad market fell -0.32% (SPY) — a classic sector_shock divergence where energy decoupled from a risk-off tape.
+KNOWABLE_AT_OPEN: no
+MORNING_READ_VERDICT: MISS — the morning built its entire flat thesis on a wrong premise (oil DOWN, Hormuz deal progressing); the actual tape showed oil UP and deal hopes fading, so the flat/flat call missed both direction and magnitude.
 OUTCOME_END
 
 ---
 
-### Key lesson for the next run
+## SECTOR POST-SESSION REVIEW — ENERGY (XLE) — 2026-08-11
 
-The morning read's fatal error was **trusting a pre-fetched Channel 1 oil tape (CL=F -0.66%) over conflicting live headlines** that pointed the other way. When news is genuinely conflicting (some say "deal agreed, oil falls," others say "deal stalled, oil rises"), the pre-fetched tape must be re-verified against the live tape at open — not taken as authoritative. The Hormuz situation was fluid and the "deal agreed" headline was premature; the actual day showed the deal was NOT progressing. This is a **data-freshness / verification failure** more than a factor-selection failure — the S1 factor (oil price) was the right factor, but the sign was wrong because the input was stale.
+### 0. FACTS
+- **XLE:** +1.25% (open $59.99 → close $60.93)
+- **SPY:** -0.32%
+- **Relative:** +1.57% (strong outperformance)
+- **Path:** Opened near $59.99, closed at $60.93 — a steady climb into the close. XLE rose while the broad market fell.
+
+### 1. What drove the sector today
+
+The dominant driver was a **re-expansion of the geopolitical supply risk premium** — the exact opposite of what the morning assumed.
+
+- **Oil rallied to a one-week high.** Reuters (Aug 11): "Oil prices touched a one-week high on Tuesday... as traders grew more pessimistic about a potential deal to bring stability to the Middle East and reopen the Strait of Hormuz." NYT (Aug 11): "The price of oil continued to climb on Tuesday, reaching $90 a barrel for the first time in two weeks as the stalemate over the Iran war hardens and commercial shipping in the Strait of Hormuz dwindles."
+- **Deal hopes faded, not progressed.** Trump demanded compensation from Iran and hardened his stance ("only semi-negotiating" per Axios). France24: "Oil prices extended a strong rally Tuesday as hopes for a reopening of the Strait of Hormuz fade, fanning fresh inflation fears."
+- **EIA raised oil forecasts** on renewed Hormuz constraints (Morningstar/Dow Jones, Aug 11): "renewed attacks on shipping impose severe restrictions on transit through the Strait of Hormuz."
+- **Broad market fell** (SPY -0.32%) as higher oil stoked inflation fears and rate-hike bets — a classic risk-off reaction to an energy shock.
+
+Evidence:
+- CLAIM: Oil touched a one-week high on Aug 11 as US-Iran deal hopes faded.
+  URL: https://www.reuters.com/world/china/global-markets-global-markets-2026-08-11/
+  PUBLISHED: 2026-08-11
+  QUOTE: "Oil prices touched a one-week high on Tuesday and Wall Street finished lower as traders grew more pessimistic about a potential deal to bring stability to the Middle East and reopen the Strait of Hormuz."
+- CLAIM: Brent reached $90/bbl intraday, first time in two weeks.
+  URL: https://www.nytimes.com/2026/08/11/business/oil-prices-iran-war-hormuz.html
+  PUBLISHED: 2026-08-11
+  QUOTE: "reaching $90 a barrel for the first time in two weeks as the stalemate over the Iran war hardens."
+- CLAIM: EIA raised oil-price forecasts on renewed Hormuz constraints.
+  URL: https://www.morningstar.com/news/dow-jones/202608117487/eia-raises-oil-price-forecasts-on-renewed-strait-of-hormuz-constraints
+  PUBLISHED: 2026-08-11
+  QUOTE: "renewed attacks on shipping impose severe restrictions on transit through the Strait of Hormuz."
+
+### 2. Audit of morning S0–S4 reads against reality
+
+**S0_SHARED_MACRO (+0.5):** The morning called the macro "neutral-to-slightly-positive." Reality: the broad tape was risk-off (SPY -0.32%) as oil stoked inflation fears. The morning's macro read was directionally wrong for the broad market, but the energy sector decoupled anyway. **PARTIAL MISS** — the macro call was wrong, but it didn't matter because energy was driven by its own shock.
+
+**S1_SECTOR_FACTORS (-1.0):** This is the critical failure. The morning scored S1 NEGATIVE based on the premise that "oil is DOWN today (-0.66% WTI, -0.65% Brent)" and "the geopolitical supply risk premium is FADING." **Both premises were FALSE.** Oil was actually UP (one-week high, ~$90 Brent intraday), and the premium was RE-EXPANDING, not fading. The actual S1 should have been strongly POSITIVE. **MISS — wrong on the dominant factor.**
+
+**S2_BREADTH (+0.5):** The morning called breadth "positive but fading." Reality: XLE +1.25% with +1.57% relative outperformance — breadth was strong and accelerating, not fading. **MISS on the "fading" characterization.**
+
+**S3_FLOWS_POSITIONING (+0.0):** Neutral call. Reality: with the premium re-expanding, flows likely continued into energy. Neutral was roughly fine but understated the positive flow impulse. **PARTIAL.**
+
+**S4_ETF_TAPE (+0.0):** The morning said the tape was "confirming a cooling." Reality: the tape showed a strong +1.25% advance. The morning misread the tape's message. **MISS.**
+
+**Divergence check:** The morning flagged a divergence (S1 negative vs. positive tape) and resolved it by trusting the (wrong) negative factors over the tape. In reality, the tape was RIGHT and the factors were WRONG. This is a case where the "trust the leading factors" rule failed because the factor data itself was bad.
+
+### 3. Interactions / double-count / knowable-at-open test
+
+**Double-count:** The morning double-counted the oil-down premise across S1 (sector factors) and the divergence logic. The same wrong data point (oil down) was used to justify both the negative S1 and the divergence flag. This is a compounding error — one bad data feed poisoned multiple scoring components.
+
+**Knowable-at-open test:** Was the oil-up reality knowable at the open? The Reuters/global-markets piece and the NYT piece were published during/around the trading day. The Bloomberg piece (Aug 10) already noted "traders expressed skepticism over the potential for a deal that would imminently restore flows." The France24 piece (Aug 11, 04:33) reported oil extending its rally. So the direction was knowable at the open IF the morning's Channel 1 data feed had been correct. The failure was not a lack of information — it was a **bad data feed** (CL=F -0.66% / BZ=F -0.65%) that contradicted the actual tape. **The direction was knowable; the morning's data was wrong.**
+
+### 4. Outliers inside the sector
+
+- **Refiners** likely outperformed given record crack spreads (noted in morning) plus rising crude — a double tailwind.
+- **Oil majors (XOM, CVX)** likely led the advance given direct crude exposure to the re-inflated premium.
+- **Natural gas names** likely lagged, as the move was crude/geopolitics-driven, not natgas-driven.
+
+### 5. Key lesson
+
+The morning's entire thesis rested on a single data premise — that oil was DOWN and the Hormuz deal was progressing. Both were false. The actual tape showed oil UP and deal hopes fading. This is a **data-integrity failure** more than an analytical failure: the Channel 1 feed (CL=F -0.66%, BZ=F -0.65%) contradicted the actual market. When a single high-weight factor (oil price) is the spine of the sector thesis, a bad read on that factor cascades through S1, the divergence check, and the final direction call. The lesson: **for energy, the oil-price read is the load-bearing wall — if it's wrong, the whole house collapses.** Cross-validate the oil tape against at least one independent source (Reuters, NYT, Bloomberg) before committing to a direction.
+
+---
+
+OUTCOME_BEGIN
+SECTOR: Energy
+ETF: XLE
+ETF_PCT: 1.246
+SPY_PCT: -0.320
+REL_PCT: 1.566
+ACTUAL_DIRECTION: up
+ACTUAL_MAGNITUDE: notable
+PRIMARY_DRIVER: Oil rallied to a one-week high (~$90/bbl Brent intraday) as US-Iran Hormuz deal hopes FADED — Trump hardened his stance and demanded compensation, keeping the Strait restricted and re-inflating the geopolitical supply risk premium.
+KEY_INTERACTION: The geopolitical supply premium (which the morning assumed was deflating) actually RE-EXPANDED, driving XLE +1.25% while SPY fell -0.32% — a sector_shock divergence where energy decoupled from a risk-off tape.
+KNOWABLE_AT_OPEN: no
+MORNING_READ_VERDICT: MISS — the morning built its flat thesis on a wrong premise (oil DOWN, Hormuz deal progressing); the actual tape showed oil UP and deal hopes fading, so flat/flat missed both direction and magnitude.
+OUTCOME_END

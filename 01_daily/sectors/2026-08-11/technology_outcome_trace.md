@@ -8,66 +8,50 @@
 
 **Step 1 — Research.** The model wanted to know: *"technology stocks XLK August 11 2026 sector performance drivers"* → got 6 results (via ddg)
 
-  - Technology Select Sector SPDR Fund - XLK Stock Price ... (https://www.etf.com/XLK)
+  - State Street Technology Select Sector SPDR ETF (XLK) Stock Price... (https://finance.yahoo.com/quote/XLK/)
 
-  - XLK Stock - Technology Select Sector SPDR® Fund (XLK): Charts ... (https://www.financecharts.com/etfs/XLK)
+  - Technology Select Sector SPDR Fund (XLK) Stock... - TipRanks.com (https://www.tipranks.com/etf/xlk)
 
-  - Sector Performance: All 11 GICS Sector ETFs vs SPY, Rebased (https://www.thetrading.tools/sector-performance)
+  - State Street Technology Select Sector SPDR ETF (https://etfdb.com/etf/XLK/)
 
 **Step 2 — Research.** The model wanted to know: *"Supermicro Q4 earnings August 11 2026 results"* → got 6 results (via ddg)
 
-  - Supermicro tops Q4 earnings expectations, offers strong Q1 guidance, stock jumps (https://finance.yahoo.com/technology/article/supermicro-tops-q4-earnings-expectations-offers-strong-q1-guidance-stock-jumps-210004983.html)
+  - Super Micro Computer, Inc. - Supermicro Announces Fourth ... (https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Financial-Results/default.aspx)
 
-  - Live: Can Super Micro's Q4 Earnings Tonight Spark a Rebound After 30% 1-Year Decline? - 24/7 Wall St. (https://247wallst.com/investing/2026/08/11/live-can-super-micros-q4-earnings-tonight-spark-a-rebound-after-30-1-year-decline/)
+  - Supermicro Announces Fourth Quarter and Full Fiscal Year 2026 ... (https://www.supermicro.com/en/pressreleases/supermicro-announces-fourth-quarter-and-full-fiscal-year-2026-financial-results)
 
-  - Supermicro tops Q4 sales expectations, offers strong Q1 guidance, stock jumps (https://finance.yahoo.com/technology/article/supermicro-to-report-q4-results-in-latest-test-for-ai-infrastructure-company-210004983.html)
+  - SMCI Q4 2026 Earnings Report on 8/11/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-8-11-super-micro-computer-inc-stock/)
 
-**Step 4 — Research.** The model wanted to know: *"stock market August 11 2026 tech sector Nasdaq close Hormuz oil"* → got 6 results (via ddg)
+**Step 4 — Research.** The model wanted to know: *"stock market August 11 2026 tech sector Hormuz oil inflation"* → got 6 results (via ddg)
 
-  - Stock market news for Aug. 11, 2026 (https://www.cnbc.com/2026/08/10/stock-market-today-live-updates.html)
+  - Stock market news for Aug. 11, 2026 - CNBC (https://www.cnbc.com/2026/08/10/stock-market-today-live-updates.html)
 
-  - Markets News, Aug. 11, 2026: U.S. Indexes End Lower for Second Straight Day; Oil Prices Extend Gains; CPI Report On Deck (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08112026-12056881)
+  - Stock Market Today, Aug. 11: Markets Slip as Oil Prices Rise ... (https://www.fool.com/coverage/stock-market-today/2026/08/11/stock-market-today-aug-11-markets-slip-as-oil-prices-rise-upwork-tumbles-on-mixed-earnings/)
 
-  - Stock market news for Aug. 6, 2026 (https://www.cnbc.com/2026/08/05/stock-market-today-live-updates.html)
+  - Markets News, Aug. 11, 2026: U.S. Indexes End Lower for ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08112026-12056881)
 
 **Step 5 — Research.** The model wanted to know: *"semiconductor stocks August 11 2026 Nvidia AMD performance"* → got 6 results (via ddg)
 
-  - Semiconductor Stocks Q4 Overview: AI Gains Heat Up (https://io-fund.com/semiconductors/semiconductors/semiconductor-stocks-q4-overview-ai-gains-heat-up)
-
   - NVIDIA & AMD Graphics Cards Are Here! Best GPU Deals... - YouTube (https://www.youtube.com/watch?v=xjZZS0MXZ3k)
 
-  - World Leader in Artificial Intelligence Computing | NVIDIA (https://www.nvidia.com/en-us/)
+  - AMD Stock Price and Chart — TradingView (https://www.tradingview.com/symbols/NASDAQ-AMD/)
 
-**Step 7 — Research.** The model wanted to know: *""August 11 2026" tech stocks relative outperformance SPY XLK"* → got 6 results (via ddg)
+  - PHLX Semiconductor (^SOX) Charts, Data & News - Yahoo Finance (https://finance.yahoo.com/quote/^SOX/)
 
-  - Stock Market Recap August 11, 2026: Tech Divergence as ... (https://tradingstrategyguides.com/stock-market-recap-august-11-2026-tech-divergence-as-indices-slip/)
+**Step 7 — Research.** The model wanted to know: *"Supermicro SMCI stock reaction August 11 2026 earnings after hours"* → got 6 results (via ddg)
 
-  - [Data] Market Brief -- Tue August 11, 2026 - by mphinance (https://mphinance.substack.com/p/data-market-brief-tue-august-11-2026)
+  - SMCI Q4 2026 Earnings Report on 8/11/2026 (https://www.marketbeat.com/earnings/reports/2026-8-11-super-micro-computer-inc-stock/)
 
-  - The Daily Report | Tuesday, August 11, 2026 (https://asleepace.com/daily-report/)
+  - Supermicro Stock Jumps 10% on Doubled Margins and Record AI... (https://beincrypto.com/supermicro-stock-margins-record-backlog/)
 
-**Step 8 — Research.** The model wanted to know: *"Nasdaq 100 August 11 2026 mega cap tech Apple Microsoft Nvidia"* → got 6 results (via ddg)
+  - Super Micro Computer (SMCI) Stock Jumps 6% As $60... - CoinCentral (https://coincentral.com/super-micro-computer-smci-stock-jumps-6-as-60-billion-ai-order-book-turns-heads/)
 
-  - List of public corporations by market capitalization - Wikipedia (https://en.wikipedia.org/wiki/List_of_public_corporations_by_market_capitalization)
+**Step 8 — Research.** The model wanted to know: *""August 11 2026" tech stocks Nasdaq CPI inflation data ahead"* → got 6 results (via ddg)
 
-  - Largest Companies by Market Cap in 2026 | The Motley Fool (https://www.fool.com/research/largest-companies-by-market-cap/)
+  - US Stocks End Down as Hormuz Deadlock Sends Oil Up Ahead of CPI (https://www.bloomberg.com/news/articles/2026-08-11/us-stock-futures-rise-as-oil-erases-gains-on-iran-optimism)
 
-  - AT&T Inc. (T) Stock Price, Quote, News & History | Nasdaq (https://www.nasdaq.com/market-activity/stocks/t)
+  - Stock market today: Dow, S&P 500, Nasdaq slip amid US-Iran... (https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-11-dow-sp-500-nasdaq-102827503.html)
 
-**Step 10 — Research.** The model wanted to know: *"tradingstrategyguides stock market recap August 11 2026 tech divergence"* → got 6 results (via ddg)
+  - Stocks Retreat as Hormuz Uncertainty Lifts Oil Ahead of Inflation... (https://features.financialjuice.com/2026/08/11/stocks-retreat-as-hormuz-uncertainty-lifts-oil-ahead-of-inflation-data-us-market-wrap/)
 
-  - US Stock Market Technical Analysis | August 11, 2026 (https://fxdailyreport.com/us-stock-market-technical-analysis-august-11-2026/)
-
-  - US Stocks Kick Off August with a Stark Divergence: Tech Giants' Mixed Earnings Drive Capital into Defensive Sectors (https://www.aguinfo.cn/us-stock-august-first-week-tech-defense-rotation-2026)
-
-  - Stock market news for Aug. 11, 2026 (https://www.cnbc.com/2026/08/10/stock-market-today-live-updates.html)
-
-**Step 11 — Research.** The model wanted to know: *"CoreWeave Super Micro after bell August 11 2026 CPI eve"* → got 6 results (via ddg)
-
-  - Form 8K CoreWeave Inc For: 11 August By Investing.com (https://ca.investing.com/news/stock-market-news/form-8k-coreweave-inc-for-11-august-93CH-4792935)
-
-  - Forex Signals August 11: CoreWeave, Super Micro SMCI, and Cardinal Health Earnings Preview Tuesday - Forex News by FX Leaders (https://www.fxleaders.com/news/2026/08/10/forex-signals-august-11-coreweave-super-micro-smci-and-cardinal-health-earnings-preview-tuesday/)
-
-  - What to Expect in the Week Ahead (CPI, PPI; Earnings from CoreWeave, Super Micro, Lumentum) (https://www.moomoo.com/community/feed/what-to-expect-in-the-week-ahead-cpi-ppi-earnings-117064261435402)
-
-**Step 13 — Done researching.** The model stopped searching and wrote its full analysis (6,840 characters).
+**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (7,116 characters).

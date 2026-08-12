@@ -2,61 +2,66 @@
 
 Actuals: {'etf': 'XLK', 'pct': -0.12344942962989602, 'spy_pct': -0.31952597501651026, 'rel': 0.19607654538661423, 'open': 187.69000244140625, 'close': 186.08999633789062}
 
-I have enough information to execute the post-session review. Let me synthesize the facts.
-
-**FACTS:**
-- XLK: -0.12% (open 187.69, close 186.09)
-- SPY: -0.32%
-- REL: +0.20% (XLK outperformed SPY)
-- Direction: down (mildly), but relative outperformance positive
-
-The morning prediction was **up/flat** (direction up, magnitude flat). Actual was **down** (mildly, -0.12%) but with positive relative return (+0.20%). So direction was a MISS (predicted up, actual down), but magnitude was flat (correct band).
-
-Let me now write the review.
+I have enough evidence to execute the post-session review. Let me compile the analysis.
 
 ---
 
-# SECTOR POST-SESSION REVIEW — Technology (XLK)
+## Sector Post-Session Review — Technology (XLK) — 2026-08-11
 
-## 0. FACTS
-- **XLK:** -0.12% (open 187.69 → close 186.09)
-- **SPY:** -0.32%
-- **REL:** +0.20% (XLK outperformed SPY by ~20bp)
-- **Path:** Opened near flat, drifted lower through the session, closed down ~0.12%. Tech was the biggest drag on the S&P in absolute terms (per Fortune/CNBC), but XLK still beat SPY on relative basis because the broad market was hit harder by the Hormuz/oil shock.
+### Step 0: FACTS
+- **ETF_PCT:** -0.12% (XLK closed 186.09, opened 187.69)
+- **SPY_PCT:** -0.32%
+- **REL_PCT:** +0.20% (XLK outperformed SPY by ~20bps)
+- **Path:** Opened at 187.69, closed at 186.09 — drifted lower through the session, but held up better than the broad market.
 
-## 1. What drove the sector today
+### Step 1: What drove the sector today
 
-**Primary driver: Hormuz/oil macro shock + CPI-eve positioning, but tech's relative resilience came from AI-infra earnings catalysts.**
+The dominant driver was the **shared macro risk-off tape** — the Hormuz/Iran standoff and elevated oil ahead of CPI data. Evidence:
 
-- **Macro drag (negative):** Iran reiterated the Strait of Hormuz would remain shut until its demands were met; US crude topped $83. This is the same fresh inflation/geopolitical shock identified at the open. It pressured all equities, with tech the biggest absolute drag on the S&P (Fortune: "technology shares were the biggest drag on the index"). Nasdaq Composite fell -0.60% to 26,445; Nasdaq 100 fell ~-0.4%.
-- **CPI-eve caution (negative):** Markets closed lower for a second straight day as investors awaited the key inflation reading (CPI on deck). This suppressed risk appetite broadly.
-- **AI-infra earnings catalysts (positive, relative):** Supermicro (SMCI) and CoreWeave (CRWV) reported after the bell. SMCI beat EPS ($1.70 vs $1.59 est) but missed on revenue ($11.1B vs $11.55B est) — yet offered strong Q1 guidance and the stock jumped ~9%. CoreWeave narrowed losses and climbed ~8%. These after-hours AI-infra beats supported the AI complex and helped XLK's relative outperformance during the session.
-- **Cloud/semi fundamentals (supportive, stale):** Hyperscaler capex, TSMC +45% July revenue, HBM shortage — all intact but not fresh intraday catalysts.
+- **CLAIM:** US stocks fell for a second consecutive day as Hormuz uncertainty lifted oil ahead of a key inflation reading.
+  **URL:** https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08112026-12056881
+  **PUBLISHED:** 2026-08-11
+  **QUOTE:** "Major U.S. stock indexes closed lower for a second consecutive day Tuesday, a day before a key inflation reading. Meanwhile, oil prices rose as investors awaited news about a possible deal..."
+  **SUMMARY:** Broad market down on Hormuz deadlock + oil + CPI anticipation.
 
-## 2. Audit of morning S0–S4 reads
+- **CLAIM:** Tech stocks specifically dragged the Nasdaq lower.
+  **URL:** https://invezz.com/news/2026/08/11/dow-falls-180-pts-as-oil-rises-on-hormuz-fears-nasdaq-slips-before-cpi-data/
+  **PUBLISHED:** 2026-08-11
+  **QUOTE:** "Tech stocks drag Nasdaq ahead of key US inflation reports. Oil surge and Fed uncertainty keep investors on the defensive."
+  **SUMMARY:** Tech was a drag on the index, consistent with the risk-off macro setup.
+
+- **CLAIM:** Oil settled near $83 after Iran reiterated the strait stays closed until demands met.
+  **URL:** https://features.financialjuice.com/2026/08/11/stocks-retreat-as-hormuz-uncertainty-lifts-oil-ahead-of-inflation-data-us-market-wrap/
+  **PUBLISHED:** 2026-08-11
+  **SUMMARY:** Hormuz uncertainty was the live macro factor all session.
+
+**Sector-specific offset:** Supermicro reported Q4 after the close (5pm ET), so its beat (margins doubled to 17.5%, record backlog, up to $72B FY27 sales) was **after-hours** and did NOT drive the regular session. The fresh catalyst the morning flagged was therefore not a same-session driver.
+
+### Step 2: Audit morning S0–S4 reads against reality
 
 | Component | Morning read | Reality | Verdict |
 |---|---|---|---|
-| **S0_SHARED_MACRO (-1)** | Hormuz inflation shock, negative futures, rate-hike fears | Correct — Hormuz stayed shut, oil topped $83, market fell 2nd day | ✅ **HIT** |
-| **S1_SECTOR_FACTORS (+2)** | Strong but stale AI/semi positives + fresh SMCI catalyst | Correct — SMCI/CRWV after-hours beats supported AI complex; stale positives held | ✅ **HIT** |
-| **S2_BREADTH (0)** | Narrow/mega-cap-led, no expansion | Correct — tech was the biggest drag, no breadth expansion | ✅ **HIT** |
-| **S3_FLOWS_POSITIONING (-1)** | Extreme crowding in AI/semis | Correct — crowding was a dampener; no fresh inflow catalyst | ✅ **HIT** |
-| **S4_ETF_TAPE (0)** | 1d +0.17% rel, essentially flat | Actual rel +0.20% — tape correctly read as mildly positive relative | ✅ **HIT** |
+| **S0_SHARED_MACRO** | -1 (Hormuz inflation shock, negative futures, rate-hike fears) | **Correct.** SPY -0.32%, oil up, Hormuz deadlock, CPI ahead. Risk-off confirmed. | ✅ HIT |
+| **S1_SECTOR_FACTORS** | +2 (strong but stale AI/semi positives; fresh SMCI catalyst) | **Partially correct.** Fundamentals were indeed stale; SMCI catalyst was after-hours, not a same-session driver. XLK still outperformed SPY (+0.20% rel) on relative strength. | ⚠️ PARTIAL |
+| **S2_BREADTH** | 0 (narrow/mega-cap-led) | **Correct.** Tech was a drag on Nasdaq; no breadth expansion. | ✅ HIT |
+| **S3_FLOWS_POSITIONING** | -1 (crowded long) | **Correct.** Crowding + risk-off = downside pressure on tech. | ✅ HIT |
+| **S4_ETF_TAPE** | 0 (flat rel) | **Correct-ish.** 1d rel was +0.17% at morning; actual rel +0.20%. Tape was a good predictor of relative outperformance. | ✅ HIT |
 
-**Direction call audit:** Morning predicted **up/flat**. Actual was **down** (-0.12%) but with **positive relative** (+0.20%). The direction call was a **MISS** on absolute direction, but the relative call (tech outperforming SPY) was correct. The magnitude band (flat) was correct.
+**Direction verdict:** Morning predicted **up/flat** (total_score 2.0, mult 0.8). Actual was **down/flat** (-0.12%). The direction call was a **MISS** (predicted up, actual down). However, the magnitude band (flat) was correct, and the relative call (XLK outperforming SPY) was correct.
 
-## 3. Interactions / double-count / knowable-at-open test
+The pipeline's deterministic output said `predicted_direction: up` while the narrative text said "Direction: flat." This is an internal inconsistency — the narrative correctly leaned flat/down per the reflect lesson, but the deterministic pipeline emitted "up." The actual (-0.12%) is closer to the narrative's flat call than the pipeline's up call.
 
-- **Interaction:** The Hormuz macro shock (S0) and the AI-infra earnings catalysts (S1) were the two opposing forces. The macro shock dominated the absolute tape (market down), but the AI-infra earnings narrative (SMCI/CRWV after-hours) provided relative support. This is the classic "macro drag vs. sector catalyst" interaction the morning analysis correctly identified.
-- **Double-count check:** The morning counted the SMCI catalyst in both S1 (fresh catalyst) and the reflect-lesson dampener (crowding). This is legitimate — the catalyst was fresh and real, but the crowding dampener was also real. No problematic double-count.
-- **Knowable-at-open test:** The Hormuz shock was fully knowable at open (Iran's stance was public). The negative futures (ES -0.02%, NQ -0.26%) were knowable. The SMCI/CRWV earnings were scheduled for after the bell — their *outcome* was not knowable at open, but the *event* was. The direction of the absolute move (down) was knowable at open given the macro setup. **Verdict: yes** — the macro-driven down tape was knowable at open.
+### Step 3: Interactions / double-count / knowable-at-open test
 
-## 4. Outliers inside the sector
+- **Double-count check:** S0 (macro -1) and S3 (crowding -1) both capture downside pressure, but they are distinct mechanisms (macro shock vs. positioning risk). No meaningful double-count.
+- **Interaction:** The Hormuz macro shock (S0) interacted with the stale positive sector factors (S1) — the stale fundamentals couldn't overcome the macro drag intraday, but did provide relative outperformance (+0.20% rel). This is the classic "macro drags everything, but strong relative fundamentals cushion the sector vs. the market" pattern.
+- **Knowable at open:** **Yes.** The Hormuz deadlock, elevated oil, negative futures (ES -0.02%, NQ -0.26%), and CPI-ahead caution were all knowable at the open. The morning correctly identified the risk-off regime. The only thing NOT knowable at open was that SMCI's beat would come after-hours (not a same-session driver).
 
-- **Supermicro (SMCI):** +0.45% during regular session, then jumped ~9% after-hours on strong Q1 guidance despite revenue miss. The revenue miss ($11.1B vs $11.55B) was a notable outlier vs. the strong EPS beat.
-- **CoreWeave (CRWV):** Climbed ~8% after narrowing Q2 losses and meeting revenue expectations (~$2.56B, roughly doubled YoY). AI-infra names were the relative winners.
-- **Intel:** Upsized a stock sale — a capital-raising outlier within the sector.
-- **Broad tech drag:** Mega-cap tech (NVDA/AAPL/MSFT, ~39% of XLK) were the biggest absolute drag on the S&P, consistent with the crowded-long unwind in a risk-off tape.
+### Step 4: Outliers inside the sector
+
+- **Supermicro (SMCI):** Reported Q4 after the close — net sales $11.1B (+93% YoY), GAAP EPS $1.62 (vs $0.31), gross margin 17.5% (vs 9.5%), record backlog, up to $72B FY27 sales. Stock jumped ~9% after-hours. This was the fresh catalyst the morning flagged, but it landed after the session — so it did not contribute to intraday XLK performance.
+- **Riot Platforms / Anthropic $9.1B data center deal:** Noted in morning; no evidence it moved XLK materially intraday.
+- No other notable single-name outliers within XLK's mega-cap core (NVDA/AAPL/MSFT) were identified as diverging from the sector tape.
 
 ---
 
@@ -68,12 +73,16 @@ SPY_PCT: -0.32
 REL_PCT: +0.20
 ACTUAL_DIRECTION: down
 ACTUAL_MAGNITUDE: flat
-PRIMARY_DRIVER: Hormuz/oil macro shock (Iran keeps strait shut, crude >$83) pressured all equities, with tech the biggest absolute drag; but AI-infra earnings catalysts (SMCI/CRWV after-hours beats) supported relative outperformance vs SPY.
-KEY_INTERACTION: Macro drag (S0) vs. AI-infra earnings catalyst (S1) — macro dominated the absolute tape (market down 2nd day), but the SMCI/CRWV after-hours beats gave XLK +0.20% relative outperformance.
+PRIMARY_DRIVER: Hormuz/Iran standoff + elevated oil + CPI-ahead caution drove broad risk-off; XLK cushioned by relative strength in AI/semi fundamentals but still closed lower.
+KEY_INTERACTION: Stale-but-strong sector fundamentals (S1) could not overcome the fresh macro shock (S0) intraday, but delivered +0.20% relative outperformance vs SPY.
 KNOWABLE_AT_OPEN: yes
-MORNING_READ_VERDICT: Direction MISS (predicted up, actual down) but magnitude band correct (flat) and relative call correct (+0.20% rel); S0–S4 component reads all validated.
+MORNING_READ_VERDICT: Direction MISS (pipeline said up, actual down) but magnitude (flat) and relative call correct; narrative text correctly leaned flat/down per reflect lesson — internal pipeline/narrative inconsistency.
 OUTCOME_END
 
 ---
 
-**Reviewer's note:** The morning analysis correctly identified the Hormuz macro shock as the dominant live factor and correctly read the tape as flat/mildly-positive relative. The direction miss (up vs. down) came from overweighting the stale-but-positive AI/semi fundamentals against the fresh macro shock — the exact tension the 8/10 reflect lesson warned about. The lesson held: when a fresh inflation/geopolitical shock + crowded tech + negative futures are present, prefer flat/down over up. The magnitude band (flat) was correct, and the relative call was correct. The main improvement opportunity: the morning's "up" direction leaned on stale catalysts; the fresh SMCI/CRWV catalysts were after-hours events that could not drive the regular session higher.
+**Key takeaways for the next run:**
+1. The reflect lesson (fresh inflation/geopolitical shock + crowded tech + stale catalysts → prefer flat/down) was **validated** — the narrative's flat/down lean was closer to reality than the pipeline's deterministic "up."
+2. The pipeline's `predicted_direction: up` (from leading_sum 4.0) conflicts with the narrative's flat call. This is a **system inconsistency** worth flagging — the deterministic output should be reconciled with the reflect-lesson override.
+3. SMCI's after-hours beat confirms the AI-infra fundamentals are real, but they land **after** the session — a fresh catalyst that arrives post-close does not help the same-day call. This is a timing lesson.
+4. Relative outperformance (+0.20% rel) despite a down day confirms the "mega-cap-earnings-over-macro-drag" standing lesson remains active — tech holds up better than the broad market even in risk-off, as long as fundamentals are intact.

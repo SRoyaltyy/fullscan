@@ -6,52 +6,76 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLE energy sector August 11 2026 oil price close"* → got 6 results (via searxng)
+**Step 1 — Research.** The model wanted to know: *"XLE energy sector August 11 2026 oil price close"* → got 6 results (via ddg)
 
-  - Stock Market News for Aug 11, 2026 - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-11-095100311.html)
+  - State Street Energy Select Sector SPDR ETF (XLE) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLE/)
 
-  - XLE: State Street® Energy Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle)
+  - State Street Energy Select Sector SPDR ETF (XLE) (https://stockanalysis.com/etf/xle/)
 
-  - Surging Oil Prices Fuel Commodity Rally, Pressure Equities and ... (https://www.etfaction.com/surging-oil-prices-fuel-commodity-rally-pressure-equities-and-bonds/)
+  - XLE ETF Stock Price History - Investing.com (https://www.investing.com/etfs/spdr-energy-select-sector-fund-historical-data)
 
-**Step 2 — Research.** The model wanted to know: *"oil price August 11 2026 WTI Brent close"* → got 6 results (via searxng)
+**Step 2 — Research.** The model wanted to know: *"oil price August 11 2026 WTI Brent close"* → got 6 results (via ddg)
 
-  - Current price of oil as of August 11, 2026 - Fortune (https://fortune.com/article/price-of-oil-08-11-2026/)
+  - Crude Oil Price Today: August 11, 2026 – Forbes Advisor (https://www.forbes.com/advisor/investing/oil-prices-today/)
 
-  - Oil prices today: U.S. crude hovers at $82 - CNBC (https://www.cnbc.com/2026/08/11/oil-prices-today-us-crude-84.html)
+  - Current price of oil as of August 11, 2026 - Yahoo Finance (https://finance.yahoo.com/energy/articles/current-price-oil-august-11-102036031.html?fr=sycsrp_catchall)
 
-  - Current price of oil as of August 11, 2026 - Yahoo Finance (https://finance.yahoo.com/energy/articles/current-price-oil-august-11-102036031.html)
+  - Price of Oil Today Per Barrel: WTI & Brent Live | PriceOfOil.com (https://priceofoil.com/oil-prices-today)
 
-**Step 4 — Research.** The model wanted to know: *"oil extends gains Hormuz uncertainty August 11 2026 WTI settle"* → got 6 results (via searxng)
+**Step 4 — Research.** The model wanted to know: *"oil price August 11 2026 closed higher lower Hormuz"* → got 6 results (via ddg)
 
-  - Oil Extends Gains on Hormuz Uncertainty - Rigzone (https://www.rigzone.com/news/wire/oil_extends_gains_on_hormuz_uncertainty-11-aug-2026-184351-article/)
+  - Oil prices continue climb on US-Iran deal doubts; stocks ... (https://www.reuters.com/world/china/global-markets-global-markets-2026-08-11/)
 
-  - Oil Futures Gain As Market Looks for Hormuz Agreement - WSJ (https://www.wsj.com/finance/commodities-futures/oil-futures-edge-lower-on-likely-technical-correction-f9200cf7)
+  - US Raises 2026 Oil Forecast To $87 A Barrel Amid Hormuz ... (https://finance.yahoo.com/energy/articles/us-raises-2026-oil-forecast-175834190.html?fr=sycsrp_catchall)
 
-  - Oil climbs 5% as Iran, US both demand compensation and Hormuz ... (https://www.reuters.com/business/energy/oil-rises-uncertainty-continues-over-reopening-strait-2026-08-09/)
+  - Oil Prices Settle More Than 1% Higher, Log Strongest Month ... (https://energynow.com/2026/08/oil-price-rises-after-iran-says-it-stops-ships-in-hormuz/)
 
-**Step 5 — Research.** The model wanted to know: *"XLE energy sector August 11 2026 4.66% surge oil rally"* → got 6 results (via searxng)
+**Step 5 — Research.** The model wanted to know: *"XLE energy stocks August 11 2026 rally oil rebound"* → got 6 results (via ddg)
 
-  - Surging Oil Prices Fuel Commodity Rally, Pressure Equities and ... (https://www.etfaction.com/surging-oil-prices-fuel-commodity-rally-pressure-equities-and-bonds/)
+  - State Street Energy Select Sector SPDR ETF (XLE) (https://stockanalysis.com/etf/xle/)
 
-  - State of the Market: Oil Stabilises, Oman-Iran Talks Advance, 11 ... (https://forextechtalk.com/state-of-the-market-oil-stabilises-oman-iran-talks-advance-11-august-2026/)
+  - Yields Surge as Oil Explodes Higher—Can Stocks Fight Through the Pressure? (https://stockchartistry.substack.com/p/yields-surge-as-oil-explodes-highercan)
 
-  - The #SP500 is retracing from its highs as higher oil prices add ... (https://www.facebook.com/primexbt/posts/-the-sp500-is-retracing-from-its-highs-as-higher-oil-prices-add-pressure-to-risk/1464012185762251/)
+  - Energy ETF XLE Soars 21.6% in 2026 as Investors Bet on Oil Majors' Resilience — BigGo Finance (https://finance.biggo.com/news/4b7Ib5wByH9TLH6978yE)
 
-**Step 7 — Research.** The model wanted to know: *""August 11 2026" oil WTI settle $83 Hormuz blockade supply risk"* → got 6 results (via searxng)
+**Step 7 — Research.** The model wanted to know: *"Reuters August 11 2026 oil prices one-week high US-Iran deal doubts Wall Street lower"* → got 6 results (via ddg)
 
-  - Hormuz Risk Returns US-Iran oil prices 11-08 - Polyestertime (https://www.polyestertime.com/us-iran-oil-prices-outlook-2/)
+  - Oil prices continue climb on US-Iran deal doubts; stocks ... (https://www.reuters.com/world/china/global-markets-global-markets-2026-08-11/)
 
-  - Oil Rises on Supply Disruptions Despite Strait of Hormuz Negotiations (https://www.globalbankingandfinance.com/oil-steadies-near-one-week-highs-us-iran-peace-deal-hopes/)
+  - Wall Street Ends Down as US-Iran Peace Optimism Fades (https://money.usnews.com/investing/news/articles/2026-08-11/wall-st-futures-muted-as-us-iran-impasse-lifts-oil-prices)
 
-  - Oil prices remain below their recent peaks even as prospects for a ... (https://www.instagram.com/p/Db5JH7xGx7g/)
+  - Oil Prices Rise As Hope for US-Iran Deal Fades. What Happens ... (https://www.businessinsider.com/oil-price-today-brent-wti-outlook-us-iran-war-deal-hormuz-2026-8)
 
-**Step 8 — Research.** The model wanted to know: *"XLE August 11 2026 close 60.93 energy stocks rally"* → got 6 results (via searxng)
+**Step 8 — Research.** The model wanted to know: *"oil August 11 2026 WTI settled higher Hormuz deal doubts traders pessimistic"* → got 6 results (via ddg)
 
-  - State Street Energy Select Sector SPDR ETF (XLE) - Yahoo Finance (https://finance.yahoo.com/quote/XLE/)
+  - EM Assets Retreat as Iran Deal Doubts Push Oil Prices Higher (https://www.bloomberg.com/news/articles/2026-08-11/emerging-assets-pressured-as-higher-oil-stokes-inflation-worries)
 
-  - First Trust Nasdaq Semiconductor ETF (FTXL) - Yahoo Finance (https://finance.yahoo.com/quote/FTXL/)
+  - Oil Prices Rise as Hormuz Deal Doubts Deepen (https://ozarab.media/oil-prices-rise-as-hormuz-deal-doubts-deepen/)
 
-  - US Strategy Weekly - Wellington Shields (https://www.wellingtonshields.com/wp-content/uploads/2026/07/7-8-2026-Raising-Estimates.pdf)
+  - Oil prices rise as traders assess US-Iran talks on Strait of Hormuz deal (https://www.euronews.com/business/2026/08/10/oil-prices-rise-as-traders-assess-us-iran-talks-on-strait-of-hormuz-deal)
 
-**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (6,879 characters).
+**Step 10 — Research.** The model wanted to know: *""August 11" 2026 WTI crude settled close price barrel"* → got 6 results (via ddg)
+
+  - Brent crude settled up 4.99% at $87.72, WTI rose 5.05% to $82.13 (https://www.brecorder.com/news/40434242)
+
+  - US Stock Market Today 10 August 2026: Oil-Led Rotation (https://miracoup.com/us-market-wrap-20260810/)
+
+  - Oil Prices Rise as Hormuz Deal Doubts Deepen (https://ozarab.media/oil-prices-rise-as-hormuz-deal-doubts-deepen/)
+
+**Step 11 — Research.** The model wanted to know: *"oil prices Tuesday August 11 2026 settled higher one-week high Strait Hormuz"* → got 6 results (via ddg)
+
+  - Oil Prices Rise to $90 a Barrel Over U.S.-Iran Stalemate (https://www.nytimes.com/2026/08/11/business/oil-prices-iran-war-hormuz.html)
+
+  - Oil steadies near one-week highs as US-Iran peace deal... | Arab News (https://www.arabnews.com/node/2654185/business-economy)
+
+  - Oil prices jump further as hopes for Hormuz deal fade (https://www.france24.com/en/live-news/20260811-oil-prices-rise-further-as-hopes-for-hormuz-deal-fade)
+
+**Step 13 — Research.** The model wanted to know: *"oil settled Tuesday August 11 2026 WTI Brent close price percent"* → got 6 results (via ddg)
+
+  - Crude Oil Price Today: August 11, 2026 – Forbes Advisor (https://www.forbes.com/advisor/investing/oil-prices-today/)
+
+  - Current price of oil as of August 11, 2026 - Yahoo Finance (https://finance.yahoo.com/energy/articles/current-price-oil-august-11-102036031.html?fr=sycsrp_catchall)
+
+  - Brent Crude Oil Futures Settlements - CME Group (https://www.cmegroup.com/markets/energy/crude-oil/brent-crude-oil.settlements.html)
+
+**Step 15 — Done researching.** The model stopped searching and wrote its full analysis (9,166 characters).
