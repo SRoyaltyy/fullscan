@@ -2,6 +2,10 @@
 
 Reads 03_scoreboard/scoreboard.json (no LLM).
 
+Headline direction HIT% counts only runs that made a real prediction
+(predicted_direction set). Pipeline blanks (no predict file) are listed
+separately and do not dilute model accuracy.
+
 CLI:
   python -m src.hit_board
 
@@ -22,20 +26,47 @@ from . import config, scoreboard
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS
 
 
-def _hit_stats(rows: list[dict]) -> dict:
-    graded = [r for r in rows if r.get("direction_hit") is not None]
+def _has_predict(r: dict) -> bool:
+    d = r.get("predicted_direction")
+    return bool(d) and str(d).strip().lower() not in ("", "none", "null")
+
+
+def _hit_stats(rows: list[dict], *, require_predict: bool = True) -> dict:
+    """Direction/mag accuracy.
+
+    require_predict=True (default): only rows with a real predicted_direction
+    and direction_hit set. Pipeline blanks excluded from HIT%.
+    """
+    if require_predict:
+        pool = [r for r in rows if _has_predict(r)]
+    else:
+        pool = list(rows)
+
+    graded = [r for r in pool if r.get("direction_hit") is not None]
     dir_hits = sum(1 for r in graded if r.get("direction_hit") is True)
     mag_graded = [r for r in graded if r.get("magnitude_hit") is not None]
     mag_hits = sum(1 for r in mag_graded if r.get("magnitude_hit") is True)
     n = len(graded)
+
+    blanks = [r for r in rows if not _has_predict(r) and r.get("date")]
+    # graded-without-predict (legacy auto-MISS)
+    auto_miss = [
+        r for r in rows
+        if not _has_predict(r) and r.get("direction_hit") is False
+    ]
+
     return {
         "n_graded": n,
-        "n_predicts": sum(1 for r in rows if r.get("predicted_direction")),
+        "n_predicts": sum(1 for r in rows if _has_predict(r)),
         "dir_hits": dir_hits,
         "dir_hit_pct": (100.0 * dir_hits / n) if n else None,
         "mag_hits": mag_hits,
         "mag_n": len(mag_graded),
         "mag_hit_pct": (100.0 * mag_hits / len(mag_graded)) if mag_graded else None,
+        "n_pipeline_blank": len(blanks),
+        "pipeline_blank_dates": sorted({r["date"] for r in blanks if r.get("date")}),
+        "n_auto_miss_no_predict": len(auto_miss),
+        "auto_miss_dates": sorted({r["date"] for r in auto_miss if r.get("date")}),
     }
 
 
@@ -45,7 +76,9 @@ def _pct(v) -> str:
     return f"{v:.1f}%"
 
 
-def _hit_cell(v) -> str:
+def _hit_cell(v, *, has_pred: bool = True) -> str:
+    if not has_pred:
+        return "NO_PRED"
     if v is True:
         return "HIT"
     if v is False:
@@ -74,7 +107,7 @@ def build() -> dict:
     sector_by_date = []
     for d in all_dates:
         rows = list(by_date_sector.get(d, {}).values())
-        st = _hit_stats(rows)
+        st = _hit_stats(rows, require_predict=True)
         sector_by_date.append({"date": d, **st, "n_sectors": len(rows)})
 
     per_sector = []
@@ -84,24 +117,27 @@ def build() -> dict:
             r = by_date_sector.get(d, {}).get(sector)
             if r:
                 rows.append(r)
-        st = _hit_stats(rows)
+        st = _hit_stats(rows, require_predict=True)
         per_sector.append({
             "sector": sector,
             "etf": SECTOR_ETFS.get(sector, ""),
             **st,
         })
 
-    general_stats = _hit_stats(general)
-    sector_all_stats = _hit_stats(sector_runs)
+    general_stats = _hit_stats(general, require_predict=True)
+    general_legacy = _hit_stats(general, require_predict=False)
+    sector_all_stats = _hit_stats(sector_runs, require_predict=True)
 
     return {
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "dates": all_dates,
         "general": {
             "overall": general_stats,
+            "legacy_all_graded": general_legacy,
             "by_date": [
                 {
                     "date": d,
+                    "has_predict": _has_predict(by_date_general.get(d) or {}),
                     "predicted_direction": (by_date_general.get(d) or {}).get("predicted_direction"),
                     "predicted_magnitude_band": (by_date_general.get(d) or {}).get("predicted_magnitude_band"),
                     "total_score": (by_date_general.get(d) or {}).get("total_score"),
@@ -123,6 +159,7 @@ def build() -> dict:
                         "dir": (by_date_sector.get(d, {}).get(s) or {}).get("predicted_direction"),
                         "hit": (by_date_sector.get(d, {}).get(s) or {}).get("direction_hit"),
                         "pct": (by_date_sector.get(d, {}).get(s) or {}).get("actual_pct_change"),
+                        "has_predict": _has_predict(by_date_sector.get(d, {}).get(s) or {}),
                     }
                     for s in FINVIZ_SECTORS
                 }
@@ -134,22 +171,56 @@ def build() -> dict:
 
 def to_markdown(payload: dict) -> str:
     g = payload["general"]["overall"]
+    g_legacy = payload["general"].get("legacy_all_graded") or {}
     s = payload["sectors"]["overall"]
+
+    blank_dates = g.get("pipeline_blank_dates") or []
+    auto_miss = g.get("auto_miss_dates") or []
+
     L = [
         "# HIT Board — general + sectors (all dates)",
         "",
         f"Generated: **{payload['generated_at']}**",
         "",
-        "Source: `03_scoreboard/scoreboard.json` (graded runs only count when `direction_hit` is set).",
+        "Source: `03_scoreboard/scoreboard.json`.",
         "",
-        "## Overall HIT%",
+        "**HIT% rule:** only runs with a real `predicted_direction` count. "
+        "Days with no predict file are **pipeline blanks** — listed separately, "
+        "not counted as model MISS.",
         "",
-        "| Book | Direction HIT% | n graded | Mag HIT% | n mag |",
-        "|------|----------------|----------|----------|-------|",
-        f"| **General (SPX-style)** | **{_pct(g.get('dir_hit_pct'))}** | {g.get('n_graded')} | "
+        "## Overall HIT% (model calls only)",
+        "",
+        "| Book | Direction HIT% | hits / graded | Mag HIT% | n mag |",
+        "|------|----------------|---------------|----------|-------|",
+        f"| **General (SPX-style)** | **{_pct(g.get('dir_hit_pct'))}** | "
+        f"{g.get('dir_hits')}/{g.get('n_graded')} | "
         f"{_pct(g.get('mag_hit_pct'))} | {g.get('mag_n')} |",
-        f"| **All sector calls** | **{_pct(s.get('dir_hit_pct'))}** | {s.get('n_graded')} | "
+        f"| **All sector calls** | **{_pct(s.get('dir_hit_pct'))}** | "
+        f"{s.get('dir_hits')}/{s.get('n_graded')} | "
         f"{_pct(s.get('mag_hit_pct'))} | {s.get('mag_n')} |",
+        "",
+        "### Pipeline blanks (general) — excluded from HIT%",
+        "",
+    ]
+    if blank_dates:
+        L.append(
+            f"- No `predicted_direction`: **{', '.join(blank_dates)}** "
+            f"(n={len(blank_dates)})"
+        )
+        if auto_miss:
+            L.append(
+                f"- Of those, legacy scoreboard still marked direction_hit=false: "
+                f"**{', '.join(auto_miss)}** — ops failure, not model error"
+            )
+        L.append(
+            f"- If blanks were counted as MISS (old method): "
+            f"**{_pct(g_legacy.get('dir_hit_pct'))}** "
+            f"({g_legacy.get('dir_hits')}/{g_legacy.get('n_graded')})"
+        )
+    else:
+        L.append("- None — every general row has a prediction.")
+
+    L += [
         "",
         "## General market — by date",
         "",
@@ -157,18 +228,20 @@ def to_markdown(payload: dict) -> str:
         "|------|----------|-----|-------|----------|------------|-----|-----|",
     ]
     for r in payload["general"]["by_date"]:
+        hp = r.get("has_predict", True)
         L.append(
             f"| {r['date']} | {r.get('predicted_direction') or '—'} | "
             f"{r.get('predicted_magnitude_band') or '—'} | "
             f"{r.get('total_score') if r.get('total_score') is not None else '—'} | "
             f"{r.get('actual_pct_change') if r.get('actual_pct_change') is not None else '—'} | "
             f"{r.get('actual_direction') or '—'} | "
-            f"{_hit_cell(r.get('direction_hit'))} | {_hit_cell(r.get('magnitude_hit'))} |"
+            f"{_hit_cell(r.get('direction_hit'), has_pred=hp)} | "
+            f"{_hit_cell(r.get('magnitude_hit'), has_pred=hp)} |"
         )
 
     L += [
         "",
-        "## Sectors — HIT% by date (11 names rolled up)",
+        "## Sectors — HIT% by date (model calls only)",
         "",
         "| Date | n sectors | Dir HIT% | hits/graded | Mag HIT% |",
         "|------|-----------|----------|-------------|----------|",
@@ -198,7 +271,7 @@ def to_markdown(payload: dict) -> str:
         "",
         f"## Sector matrix (dir hit) — last {len(show)} dates",
         "",
-        "HIT / MISS / — (no grade). Actual % in parentheses when graded.",
+        "HIT / MISS / NO_PRED / — . Actual % when graded.",
         "",
     ]
     hdr = "| Sector | " + " | ".join(show) + " |"
@@ -210,14 +283,15 @@ def to_markdown(payload: dict) -> str:
         cells = []
         for d in show:
             cell = matrix.get(d, {}).get(sector) or {}
+            hp = cell.get("has_predict", True)
             h = cell.get("hit")
             pct = cell.get("pct")
-            mark = _hit_cell(h)
-            if h is not None and isinstance(pct, (int, float)):
+            mark = _hit_cell(h, has_pred=hp)
+            if hp and h is not None and isinstance(pct, (int, float)):
                 cells.append(f"{mark} ({pct:+.1f}%)")
             else:
                 pred = cell.get("dir")
-                cells.append(mark if mark != "—" else (pred or "—"))
+                cells.append(mark if mark not in ("—",) else (pred or "—"))
         L.append(f"| {sector} | " + " | ".join(cells) + " |")
 
     L += [
@@ -243,6 +317,12 @@ def write() -> tuple[str, str]:
     with open(js_path, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2, ensure_ascii=False)
     print(f"[hit-board] {md_path}")
+    g = payload["general"]["overall"]
+    print(
+        f"[hit-board] general model HIT%={_pct(g.get('dir_hit_pct'))} "
+        f"({g.get('dir_hits')}/{g.get('n_graded')}); "
+        f"pipeline blanks={g.get('n_pipeline_blank')}"
+    )
     return md_path, js_path
 
 
