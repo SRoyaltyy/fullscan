@@ -4,13 +4,11 @@ name: Sector Daily (auto)
 #   PREDICT  ~ evening HKT before US open window (skip Sat/Sun predict)
 #   OUTCOME+REFLECT ~ early HKT morning after US session graded
 # Each sector = independent LLM run (sequential).
+# After predict and after outcome: birds-eye _BOARD.md
 
 on:
   schedule:
-    # Predict: ~20:40 HKT = 12:40 UTC (weekdays only enforced in job)
     - cron: "40 12 * * 1-5"
-    # Outcome+reflect: ~06:10 HKT = 22:10 UTC previous calendar day → fires Tue–Sat UTC
-    # covering Mon–Fri US sessions
     - cron: "10 22 * * 1-5"
   workflow_dispatch:
     inputs:
@@ -54,19 +52,9 @@ jobs:
         id: stage
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            HKT_HOUR=$(TZ=Asia/Hong_Kong date +%H)
-            DOW=$(TZ=Asia/Hong_Kong date +%u)  # 1=Mon..7=Sun
             PLAN="none"
-            if [ "$HKT_HOUR" -ge 19 ] && [ "$HKT_HOUR" -lt 24 ]; then
-              PLAN="predict"
-            elif [ "$HKT_HOUR" -ge 5 ] && [ "$HKT_HOUR" -lt 12 ]; then
-              PLAN="outcome_reflect"
-            elif [ "$HKT_HOUR" -ge 0 ] && [ "$HKT_HOUR" -lt 5 ]; then
-              # late-night UTC slot for outcome (22 UTC = 06 HKT)
-              PLAN="outcome_reflect"
-            fi
-            # Also treat 22 UTC window as outcome (hour in HKT is morning)
             UTC_HOUR=$(date -u +%H)
+            DOW=$(TZ=Asia/Hong_Kong date +%u)
             if [ "$UTC_HOUR" = "22" ]; then
               PLAN="outcome_reflect"
             fi
@@ -81,11 +69,6 @@ jobs:
           else
             echo "plan=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"
           fi
-          echo "Decided plan=$(cat $GITHUB_OUTPUT | grep plan)"
-
-      - name: Heartbeat
-        if: steps.stage.outputs.plan == 'none'
-        run: echo "Sector daily idle at $(TZ=Asia/Hong_Kong date)"
 
       - name: Sector PREDICT (sequential)
         if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
@@ -102,6 +85,13 @@ jobs:
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
           python -m src.run_sector_predict "${ARGS[@]}"
+
+      - name: Sector board (after predict)
+        if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
+        env:
+          DATE: ${{ github.event.inputs.run_date }}
+        run: |
+          python -m src.sector_board ${DATE:+--date "$DATE"}
 
       - name: Sector OUTCOME (sequential)
         if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all'
@@ -129,6 +119,13 @@ jobs:
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
           python -m src.run_sector_reflect "${ARGS[@]}"
+
+      - name: Sector board (after outcome)
+        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all'
+        env:
+          DATE: ${{ github.event.inputs.run_date }}
+        run: |
+          python -m src.sector_board ${DATE:+--date "$DATE"}
 
       - name: Commit
         if: steps.stage.outputs.plan != 'none'
