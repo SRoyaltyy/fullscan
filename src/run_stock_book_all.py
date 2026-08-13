@@ -1,19 +1,9 @@
-"""One-shot orchestrator: ensure prereqs → stock book → backtest.
+"""One-shot orchestrator: ensure THIS trading day's prereqs → stock book → backtest.
 
-Checks artifacts for the target date (default: today America/New_York).
-Runs only what is missing (unless --force).
+All "already done?" checks are for the target trading day only.
+Yesterday's files do not count as done for today.
 
-Order
------
-  1. Finviz Elite export (if no membership/export)
-  2. segments (labels)
-  3. weather
-  4. join (match rank)
-  5. news_parse + news_actions (if no actions json)
-  6. general predict (if no predict md and DEEPSEEK set)
-  7. sector predicts (if no recent sector bias and DEEPSEEK set)
-  8. stock_book (always)
-  9. stock_book_backtest (always)
+At start, prints a clear status table by workflow *name* (not yml file).
 
 CLI:
   python -m src.run_stock_book_all [--date YYYY-MM-DD] [--force] [--skip-llm] [--top 25]
@@ -24,11 +14,11 @@ import argparse
 import os
 import subprocess
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, scoreboard
+from . import config
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -38,80 +28,131 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
-def _run(cmd: list[str], env: dict | None = None, check: bool = True) -> int:
+def _run(cmd: list[str], check: bool = True) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
-    e = os.environ.copy()
-    if env:
-        e.update(env)
-    r = subprocess.run(cmd, cwd=str(ROOT), env=e)
+    r = subprocess.run(cmd, cwd=str(ROOT), env=os.environ.copy())
     if check and r.returncode != 0:
         raise SystemExit(f"step failed ({r.returncode}): {' '.join(cmd)}")
     return r.returncode
 
 
+def _p(*parts: str) -> Path:
+    return ROOT.joinpath(*parts)
+
+
 def _exists(*parts: str) -> bool:
-    return (ROOT.joinpath(*parts)).exists()
+    return _p(*parts).exists()
 
 
-def _any_glob(*parts_and_pattern: str) -> bool:
-    parent = ROOT.joinpath(*parts_and_pattern[:-1])
-    pat = parts_and_pattern[-1]
-    if not parent.exists():
-        return False
-    return any(parent.glob(pat))
+def _status_for_day(date: str) -> list[dict]:
+    """One row per logical workflow. done = artifact for THIS date exists."""
+    # sector: any predict md under 01_daily/sectors/<date>/
+    sector_dir = _p("01_daily", "sectors", date)
+    sector_n = 0
+    if sector_dir.is_dir():
+        sector_n = len(list(sector_dir.glob("*_predict.md")))
+    sector_done = sector_n >= 11  # all Finviz sectors
+    sector_partial = sector_n > 0 and not sector_done
+
+    rows = [
+        {
+            "name": "Finviz universe export",
+            "key": "finviz",
+            "done": _exists("data", "exports", f"finviz_{date}.csv"),
+            "artifact": f"data/exports/finviz_{date}.csv",
+            "required": False,  # can label from older export if forced path, but prefer today
+        },
+        {
+            "name": "Stock labeling (segments)",
+            "key": "segments",
+            "done": _exists("data", "universe", f"{date}_membership.csv"),
+            "artifact": f"data/universe/{date}_membership.csv",
+            "required": True,
+        },
+        {
+            "name": "Weather / regime",
+            "key": "weather",
+            "done": _exists("01_daily", "weather", f"{date}_weather.json"),
+            "artifact": f"01_daily/weather/{date}_weather.json",
+            "required": True,
+        },
+        {
+            "name": "Join / match rank",
+            "key": "join",
+            "done": _exists("data", "join", f"{date}_ranked.csv"),
+            "artifact": f"data/join/{date}_ranked.csv",
+            "required": True,
+        },
+        {
+            "name": "News parse",
+            "key": "news_parse",
+            "done": _exists("01_daily", "news", f"{date}_parsed.json")
+            or _exists("01_daily", "news", f"{date}_parsed.md"),
+            "artifact": f"01_daily/news/{date}_parsed.*",
+            "required": False,
+        },
+        {
+            "name": "News actions (ticker edges)",
+            "key": "news_actions",
+            "done": _exists("01_daily", "news", f"{date}_actions.json"),
+            "artifact": f"01_daily/news/{date}_actions.json",
+            "required": False,
+        },
+        {
+            "name": "General market predict",
+            "key": "general_predict",
+            "done": _exists("01_daily", "general", f"{date}_predict.md"),
+            "artifact": f"01_daily/general/{date}_predict.md",
+            "required": False,
+        },
+        {
+            "name": "Per-sector predict (all 11)",
+            "key": "sector_predict",
+            "done": sector_done,
+            "partial": sector_partial,
+            "detail": f"{sector_n}/11 sector predict files",
+            "artifact": f"01_daily/sectors/{date}/*_predict.md",
+            "required": False,
+        },
+        {
+            "name": "Stock book (suggestions)",
+            "key": "stock_book",
+            "done": _exists("data", "stock_book", f"{date}_stock_book.json"),
+            "artifact": f"data/stock_book/{date}_stock_book.json",
+            "required": True,  # we always rebuild at end, but status is honest
+        },
+        {
+            "name": "Stock book backtest",
+            "key": "backtest",
+            "done": _exists("03_scoreboard", "STOCK_BOOK_BACKTEST.md"),
+            "artifact": "03_scoreboard/STOCK_BOOK_BACKTEST.md (repo-level, re-run daily)",
+            "required": True,
+        },
+    ]
+    return rows
 
 
-def _has_membership(date: str) -> bool:
-    return (
-        _exists("data", "universe", f"{date}_membership.csv")
-        or _any_glob("data", "universe", "*_membership.csv")
-    )
-
-
-def _has_weather(date: str) -> bool:
-    return (
-        _exists("01_daily", "weather", f"{date}_weather.json")
-        or _exists("01_daily", "weather", "latest.json")
-    )
-
-
-def _has_join(date: str) -> bool:
-    return (
-        _exists("data", "join", f"{date}_ranked.csv")
-        or _any_glob("data", "join", "*_ranked.csv")
-    )
-
-
-def _has_news_actions(date: str) -> bool:
-    return (
-        _exists("01_daily", "news", f"{date}_actions.json")
-        or _any_glob("01_daily", "news", "*_actions.json")
-    )
-
-
-def _has_general_predict(date: str) -> bool:
-    return _exists("01_daily", "general", f"{date}_predict.md")
-
-
-def _has_recent_sector_bias(max_age_days: int = 5) -> bool:
-    board = scoreboard.load()
-    cutoff = (datetime.now(ET).date() - timedelta(days=max_age_days)).isoformat()
-    for r in board.get("runs", []):
-        t = r.get("topic") or ""
-        if t.startswith("sector:") and r.get("predicted_direction") and r.get("date", "") >= cutoff:
-            return True
-    # also check files
-    sec_root = ROOT / "01_daily" / "sectors"
-    if sec_root.exists():
-        for d in sec_root.iterdir():
-            if d.is_dir() and d.name >= cutoff:
-                if any(d.glob("*_predict.md")):
-                    return True
-    return False
-
-
-def _has_stock_book(date: str) -> bool:
-    return _exists("data", "stock_book", f"{date}_stock_book.json")
+def _print_status(date: str, rows: list[dict]) -> None:
+    print("")
+    print("=" * 72)
+    print(f"  TRADING DAY STATUS — {date} (America/New_York)")
+    print("  Only artifacts dated this day count as DONE.")
+    print("=" * 72)
+    print(f"{'Workflow':<36} {'Status':<14} Artifact")
+    print("-" * 72)
+    for r in rows:
+        if r.get("partial"):
+            st = f"PARTIAL ({r.get('detail', '')})"
+        elif r["done"]:
+            st = "DONE"
+        else:
+            st = "NOT RUN"
+        print(f"{r['name']:<36} {st:<14} {r['artifact']}")
+    print("-" * 72)
+    done_n = sum(1 for r in rows if r["done"] and not r.get("partial"))
+    print(f"  {done_n}/{len(rows)} workflows complete for {date}")
+    print("=" * 72)
+    print("")
 
 
 def run(
@@ -122,95 +163,140 @@ def run(
     force_sectors: bool = False,
 ) -> None:
     date = date or _today()
-    print(f"[all] target date={date} force={force} skip_llm={skip_llm}")
+    rows = _status_for_day(date)
+    by_key = {r["key"]: r for r in rows}
+    _print_status(date, rows)
 
-    # ---- 1–2 labels ----
-    if force or not _has_membership(date):
-        # try finviz export (needs secrets in env); non-fatal if fails and old membership exists
-        if force or not _any_glob("data", "universe", "*_membership.csv"):
+    print(f"[all] plan force={force} skip_llm={skip_llm} force_sectors={force_sectors}")
+
+    def need(key: str) -> bool:
+        if force:
+            return True
+        r = by_key[key]
+        if r.get("partial"):
+            return True  # finish incomplete sector set
+        return not r["done"]
+
+    # ---- Finviz (prefer today; only required if no membership for today) ----
+    if need("finviz") or need("segments"):
+        if need("finviz"):
+            print("[all] → Finviz universe export (this trading day)")
             code = _run([sys.executable, "-m", "collectors.finviz_financials"], check=False)
             if code != 0:
-                print("[all] finviz export failed/skipped — will use existing membership if any")
-        _run([sys.executable, "-m", "src.segments", "--date", date], check=False)
-        if not _has_membership(date) and not _any_glob("data", "universe", "*_membership.csv"):
-            raise SystemExit("[all] no membership csv — cannot continue")
-    else:
-        print("[all] membership OK")
+                print("[all] WARN: Finviz export failed — labeling may fail without today's file")
+        else:
+            print("[all] skip Finviz universe export (DONE for this day)")
 
-    # ---- 3 weather ----
-    if force or not _has_weather(date):
+        if need("segments"):
+            print("[all] → Stock labeling / segments")
+            _run([sys.executable, "-m", "src.segments", "--date", date], check=False)
+            if not _exists("data", "universe", f"{date}_membership.csv"):
+                raise SystemExit(
+                    f"[all] FATAL: no membership for {date}. "
+                    "Cannot use yesterday's labels as today's."
+                )
+        else:
+            print("[all] skip Stock labeling (DONE for this day)")
+    else:
+        print("[all] skip Finviz + labeling (DONE for this day)")
+
+    # ---- Weather ----
+    if need("weather"):
+        print("[all] → Weather / regime")
         _run([sys.executable, "-m", "src.weather"], check=False)
-        if not _has_weather(date):
-            print("[all] WARN: weather missing — join may degrade")
+        # weather module may write latest.json and/or date file — require date file ideally
+        if not _exists("01_daily", "weather", f"{date}_weather.json"):
+            # accept latest only if weather script always updates latest for "today"
+            if _exists("01_daily", "weather", "latest.json"):
+                print("[all] WARN: only weather/latest.json present — expected dated file for", date)
+            else:
+                print("[all] WARN: weather missing for", date)
     else:
-        print("[all] weather OK")
+        print("[all] skip Weather / regime (DONE for this day)")
 
-    # ---- 4 join ----
-    if force or not _has_join(date):
+    # ---- Join ----
+    if need("join"):
+        print("[all] → Join / match rank")
         _run([sys.executable, "-m", "src.join", "--date", date], check=False)
-        if not _has_join(date) and not _any_glob("data", "join", "*_ranked.csv"):
-            raise SystemExit("[all] no join ranked csv — cannot build stock book")
+        if not _exists("data", "join", f"{date}_ranked.csv"):
+            raise SystemExit(
+                f"[all] FATAL: no join ranked file for {date}. "
+                "Yesterday's rank cannot substitute."
+            )
     else:
-        print("[all] join OK")
+        print("[all] skip Join / match rank (DONE for this day)")
 
-    # ---- 5 news ----
-    if force or not _has_news_actions(date):
-        _run(
-            [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "300", "--date", date],
-            check=False,
-        )
-        _run(
-            [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "300", "--date", date],
-            check=False,
-        )
-        if not _has_news_actions(date):
-            print("[all] WARN: news actions missing — 1d book will be join/sector only")
+    # ---- News ----
+    if need("news_parse") or need("news_actions"):
+        if need("news_parse"):
+            print("[all] → News parse")
+            _run(
+                [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "300", "--date", date],
+                check=False,
+            )
+        else:
+            print("[all] skip News parse (DONE for this day)")
+        if need("news_actions"):
+            print("[all] → News actions (ticker edges)")
+            _run(
+                [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "300", "--date", date],
+                check=False,
+            )
+            if not _exists("01_daily", "news", f"{date}_actions.json"):
+                print("[all] WARN: news actions missing for", date, "— 1d book weaker")
+        else:
+            print("[all] skip News actions (DONE for this day)")
     else:
-        print("[all] news actions OK")
+        print("[all] skip News parse + actions (DONE for this day)")
 
-    # ---- 6 general LLM ----
-    if not skip_llm and (force or not _has_general_predict(date)):
+    # ---- General predict ----
+    if not skip_llm and need("general_predict"):
         if config.DEEPSEEK_API_KEY:
+            print("[all] → General market predict")
             _run([sys.executable, "-m", "src.run_predict", "--date", date], check=False)
         else:
-            print("[all] skip general predict — no DEEPSEEK_API_KEY")
+            print("[all] skip General market predict (no DEEPSEEK_API_KEY)")
+    elif skip_llm:
+        print("[all] skip General market predict (--skip-llm)")
     else:
-        if _has_general_predict(date):
-            print("[all] general predict OK")
-        else:
-            print("[all] general predict skipped")
+        print("[all] skip General market predict (DONE for this day)")
 
-    # ---- 7 sectors LLM (expensive) ----
-    need_sectors = force_sectors or force or not _has_recent_sector_bias(5)
-    if not skip_llm and need_sectors:
+    # ---- Sector predicts: must be THIS day's folder ----
+    if not skip_llm and (force_sectors or need("sector_predict")):
         if config.DEEPSEEK_API_KEY:
-            print("[all] running ALL sector predicts (can take a long time)…")
+            print("[all] → Per-sector predict (all 11 for this trading day)")
             _run([sys.executable, "-m", "src.run_sector_predict", "--date", date], check=False)
         else:
-            print("[all] skip sector predict — no DEEPSEEK_API_KEY")
+            print("[all] skip Per-sector predict (no DEEPSEEK_API_KEY)")
+    elif skip_llm:
+        print("[all] skip Per-sector predict (--skip-llm)")
     else:
-        print("[all] sector bias OK (recent) — not re-running 11 sector LLMs")
+        print("[all] skip Per-sector predict (DONE for this day — 11/11)")
 
-    # ---- 8 stock book (always) ----
+    # ---- Stock book always for this day ----
+    print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)], check=True)
 
-    # ---- 9 backtest (always) ----
+    # ---- Backtest always ----
+    print("[all] → Stock book backtest")
     _run(
         [sys.executable, "-m", "src.stock_book_backtest", "--top", str(top), "--max-books", "30"],
         check=False,
     )
 
-    print("\n[all] DONE")
-    print(f"  book:     01_daily/{date}_stock_book.md")
-    print("  backtest: 03_scoreboard/STOCK_BOOK_BACKTEST.md")
+    # final status
+    print("\n[all] FINAL STATUS after run:")
+    _print_status(date, _status_for_day(date))
+    print(f"[all] book → 01_daily/{date}_stock_book.md")
+    print("[all] backtest → 03_scoreboard/STOCK_BOOK_BACKTEST.md")
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="One workflow: prereqs + stock book + backtest")
-    ap.add_argument("--date", default=None)
-    ap.add_argument("--force", action="store_true", help="Re-run all steps even if artifacts exist")
-    ap.add_argument("--skip-llm", action="store_true", help="Skip general/sector DeepSeek calls")
-    ap.add_argument("--force-sectors", action="store_true", help="Always re-run all 11 sector predicts")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date", default=None, help="Trading day YYYY-MM-DD (default today ET)")
+    ap.add_argument("--force", action="store_true")
+    ap.add_argument("--skip-llm", action="store_true")
+    ap.add_argument("--force-sectors", action="store_true")
     ap.add_argument("--top", type=int, default=25)
     args = ap.parse_args()
     run(
