@@ -1,6 +1,6 @@
 # Learnings report — 2026-08-13
 
-Generated: **2026-08-13T04:40:35.950738-04:00** by `src/learn_cycle.py`.
+Generated: **2026-08-13T18:11:06.874158-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -12,17 +12,17 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 
 | Item | Value |
 |------|-------|
-| Graded runs mined | 42 |
-| Hypotheses written | 43 (wins=26, losses=17) |
+| Graded runs mined | 43 |
+| Hypotheses written | 44 (wins=27, losses=17) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 0 |
-| Active lesson files now | 34 |
+| Lessons promoted to active | 1 |
+| Active lesson files now | 35 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
 | Topic | Direction HIT% | hits/n | Read |
 |-------|----------------|--------|------|
-| general | 78% | 7/9 | ok |
+| general | 80% | 8/10 | ok |
 | sector:Basic Materials | 67% | 2/3 | ok |
 | sector:Communication Services | 33% | 1/3 | thin/weak |
 | sector:Consumer Cyclical | 67% | 2/3 | ok |
@@ -39,14 +39,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 
 Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the **experiment** to run next, and the **policy candidate** (do instead).
 
-### `general` — 7 wins, 2 losses
-
-#### WIN — 2026-08-06
-- **When:** [general] Predicted down, market/sector went down (pct=-0.18, score=-2.0, sector=).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `general` — 8 wins, 2 losses
 
 #### WIN — 2026-08-07
 - **When:** [general] Predicted up, market/sector went up (pct=0.62, score=5.75, sector=).
@@ -71,6 +64,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 #### WIN — 2026-08-12
 - **When:** [general] Predicted up, market/sector went up (pct=0.26, score=2.25, sector=).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+
+#### WIN — 2026-08-13
+- **When:** [general] Predicted up, market/sector went up (pct=0.65, score=8.525, sector=).
 - **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
 - **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
 - **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
@@ -340,7 +340,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-_No new promotions this cycle (candidates incomplete or already active)._
+- `a-follow-through-session-where-the-dominant-catalyst-is-a-pr.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 

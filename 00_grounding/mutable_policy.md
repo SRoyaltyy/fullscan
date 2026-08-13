@@ -9,11 +9,11 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-08-13**. Promoted: 0. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-08-13**. Promoted: 1. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 78% (7/9)
+- **general**: 80% (8/10)
 - **sector:Basic Materials**: 67% (2/3)
 - **sector:Communication Services**: 33% (1/3)
 - **sector:Consumer Cyclical**: 67% (2/3)
@@ -62,6 +62,11 @@ corrected_behavior: "When an active geopolitical/oil/CPI risk-off catalyst is pr
 ---
 trigger_pattern: "A Financials sector call has strongly positive structural factor scores (curve steepening, credit tightening, capital-markets/trading strength) and a positive shared-macro score taken from pre-market risk-on indicators, but the sector ETF tape at open is flat/neutral (S4_ETF_TAPE ≈ 0.0) and divergence_flagged is True. A live geopolitical/oil supply-shock headline (e.g., Iran/Hormuz) and/or a high-impact CPI print is knowable at open. The analysis text explicitly says “damp/mild,” but the deterministic score still emits up/severe because the multiplier and component scores are left unchanged. Financials may still outperform SPY relatively, but that does not make the absolute move up or severe."
 corrected_behavior: "When S4 is flat/neutral and divergence_flagged=True, c
+
+### a-follow-through-session-where-the-dominant-catalyst-is-a-pr.md
+---
+trigger_pattern: "A follow-through session where the dominant catalyst is a prior-day macro print (e.g., benign CPI) that already drove the prior session's rally, overnight catalysts are positive but US index futures (B6) are flat within ±0.5% (zero futures confirmation), and a scheduled 8:30 ET data release (PPI/jobless claims) is pending — the pipeline emits NOTABLE from the carried catalyst alone, but the already-traded setup plus flat futures cap the day at MILD."
+corrected_behavior: "When the dominant catalyst is a prior-day macro print and B6 is flat (within ±0.5%), treat the catalyst as partially priced: cap the final magnitude band at MILD and use multiplier ≤1.0 unless (a) a fresh same-day catalyst is known premarket (e.g., an 8:30 release direction, a dominant |B1|≥2 event), 
 
 ### a-healthcare-xlv-call-after-a-strong-multi-week-relative-run.md
 ---
@@ -260,10 +265,10 @@ corrected_behavior: "When an Iran/Hormuz-style two-sided geopolitical headline i
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=7 losses=2
-- **loss 2026-08-10:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `general` — wins=8 losses=2
 - **win 2026-08-11:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-08-12:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-08-13:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=1 losses=0
 - **win news:** [news] Rank event families by 1d close, not ever-touch MFE.
