@@ -90,6 +90,16 @@ def load_export(path: Path) -> pd.DataFrame:
     for c in num_cols:
         if c in df.columns:
             df[c] = df[c].map(_to_float)
+    # Business descriptions are static text — when the fresh export lacks
+    # them (the automated views don't serve Finviz_Description), graft the
+    # column from the committed full export by Ticker.
+    if "Finviz_Description" not in df.columns and FALLBACK_CSV.exists():
+        try:
+            desc = pd.read_csv(FALLBACK_CSV, usecols=["Ticker", "Finviz_Description"])
+            desc["Ticker"] = desc["Ticker"].astype(str).str.upper().str.strip()
+            df = df.merge(desc.drop_duplicates("Ticker"), on="Ticker", how="left")
+        except Exception:
+            pass
     return df
 
 

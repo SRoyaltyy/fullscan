@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "purpose": "Join engine rules — how a stock's labels and today's weather stances combine into one total score per stock. WEIGHTS AND GATE SEMANTICS LIVE HERE so lessons/backtests can retune without touching src/join.py. Design guards: ONE VOTE PER FAMILY (correlated labels in the same family never stack), unknown scores 0 (missing data is never a vote), gates are flags/vetoes not silent score edits.",
+  "vote_map": {"favorable": 1, "neutral": 0, "hostile": -1, "unknown": 0},
+  "display_map": {"favorable": "bull", "neutral": "neutral", "hostile": "bear", "unknown": "—"},
+  "weather_family_weights": {
+    "sector": 1.0,
+    "size": 1.0,
+    "index": 1.0,
+    "geo": 1.0,
+    "beta": 1.0,
+    "short": 1.0,
+    "vol": 1.0,
+    "profit": 1.0,
+    "lev": 1.0,
+    "style": 1.0,
+    "mom": 1.0,
+    "ext": 1.0,
+    "range": 1.0
+  },
+  "intrinsic_votes": {
+    "_note": "stock-intrinsic labels that need no weather; smaller fixed weights so environment dominates",
+    "earnsurp": {"weight": 0.5, "map": {"big_beat": 1, "beat": 0.5, "inline": 0, "miss": -0.5, "big_miss": -1, "unknown": 0}},
+    "analyst": {"weight": 0.5, "map": {"strong_buy": 1, "buy": 0.5, "hold": 0, "sell": -1, "unknown": 0}}
+  },
+  "multi_tag_families": {
+    "_note": "pipe-joined families vote as the MEAN of their member tags, still one family vote total",
+    "index": true,
+    "themes": true
+  },
+  "gates": {
+    "veto_when": [
+      "earn:today — reports today, event risk not segment bet",
+      "ext:extreme AND weather risk=off — parabolic into hostile tape"
+    ],
+    "flag_when": [
+      "earn:this_week — reports within a week",
+      "liq:low — thin dollar volume, hard to exit",
+      "ext:extreme — parabolic, size down",
+      "short:extreme AND weather short:extreme=favorable — squeeze candidate, expect violence"
+    ]
+  }
+}

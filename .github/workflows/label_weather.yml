@@ -40,12 +40,15 @@ jobs:
       - name: Score the weather (Step B)
         run: python -m src.weather
 
+      - name: Match stocks to weather (Step C)
+        run: python -m src.join
+
       - name: Commit outputs
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add data/universe data/exports 01_daily/weather
-          git add "01_daily/*_universe.md" || true
-          git commit -m "auto: universe labels + weather [$(date -u +%F)]" || echo "No changes"
+          git add data/universe data/exports data/join 01_daily/weather
+          git add "01_daily/*_universe.md" "01_daily/*_match.md" || true
+          git commit -m "auto: universe labels + weather + match [$(date -u +%F)]" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main
