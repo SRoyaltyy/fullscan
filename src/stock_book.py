@@ -78,50 +78,91 @@ def _load_weather(date: str) -> dict:
         return {}
 
 
-def _sector_bias_map() -> dict[str, float]:
-    board = scoreboard.load()
-    latest: dict[str, dict] = {}
-    for r in board.get("runs", []):
-        t = r.get("topic") or ""
-        if not t.startswith("sector:"):
-            continue
-        if not r.get("predicted_direction"):
-            continue
-        sec = t.split(":", 1)[1]
-        prev = latest.get(sec)
-        if prev is None or r.get("date", "") >= prev.get("date", ""):
-            latest[sec] = r
-    out = {}
-    for sec, r in latest.items():
-        d = str(r.get("predicted_direction", "")).lower()
-        conf = float(r.get("confidence_score") or 0.5)
-        conf = max(0.3, min(1.0, conf))
-        if d == "up":
-            out[sec] = conf
-        elif d == "down":
-            out[sec] = -conf
-        else:
-            out[sec] = 0.0
-    return out
+# Map book horizon -> multi-timeframe call key stored on scoreboard runs.
+# 1d uses the run's headline predicted_direction; longer horizons prefer the
+# LLM's explicit HORIZON_* call and fall back to the 1d direction when absent.
+HORIZON_CALL_KEY = {
+    "1d": None,
+    "3d": "HORIZON_3D",
+    "1w": "HORIZON_1W",
+    "2w": "HORIZON_2W",
+    "1m": "HORIZON_1M",
+}
 
 
-def _general_bias() -> float:
-    board = scoreboard.load()
-    gens = [
-        r for r in board.get("runs", [])
-        if r.get("topic") == "general" and r.get("predicted_direction")
-    ]
-    if not gens:
-        return 0.0
-    r = sorted(gens, key=lambda x: x.get("date", ""))[-1]
-    d = str(r.get("predicted_direction", "")).lower()
-    conf = float(r.get("confidence_score") or 0.5)
-    conf = max(0.3, min(1.0, conf))
+def _dir_conf_to_bias(direction: str, conf: float) -> float:
+    conf = max(0.3, min(1.0, float(conf or 0.5)))
+    d = str(direction or "").lower()
     if d == "up":
         return conf
     if d == "down":
         return -conf
     return 0.0
+
+
+def _latest_runs_by_topic() -> dict[str, dict]:
+    board = scoreboard.load()
+    latest: dict[str, dict] = {}
+    for r in board.get("runs", []):
+        t = r.get("topic") or ""
+        if not r.get("predicted_direction"):
+            continue
+        prev = latest.get(t)
+        if prev is None or r.get("date", "") >= prev.get("date", ""):
+            latest[t] = r
+    return latest
+
+
+def _bias_for(run: dict | None, horizon: str) -> float:
+    """Signed bias for one topic at one horizon (uses horizon_calls when stored)."""
+    if not run:
+        return 0.0
+    key = HORIZON_CALL_KEY.get(horizon)
+    if key:
+        hc = (run.get("horizon_calls") or {}).get(key)
+        if hc and hc.get("direction"):
+            return _dir_conf_to_bias(hc["direction"], hc.get("confidence"))
+    return _dir_conf_to_bias(run.get("predicted_direction"), run.get("confidence_score"))
+
+
+def _accuracy_gates() -> tuple[dict[str, float], dict[str, dict]]:
+    """Learning gate: graded outcomes scale how much a topic's bias is trusted.
+
+    Reads direction_hit over all graded scoreboard runs per topic.
+    n>=3 and hit rate <45%  -> bias halved (the loop was losing here)
+    n>=3 and hit rate <55%  -> bias trimmed to 0.85
+    otherwise                 -> full weight
+    Returns (gates, stats) where stats[topic] = {hit_rate, n, gate}."""
+    board = scoreboard.load()
+    hits: dict[str, list[float]] = {}
+    for r in board.get("runs", []):
+        t = r.get("topic") or ""
+        h = r.get("direction_hit")
+        if h is None:
+            continue
+        hits.setdefault(t, []).append(1.0 if h else 0.0)
+    gates: dict[str, float] = {}
+    stats: dict[str, dict] = {}
+    for t, arr in hits.items():
+        n = len(arr)
+        hr = sum(arr) / n
+        if n >= 3 and hr < 0.45:
+            g = 0.5
+        elif n >= 3 and hr < 0.55:
+            g = 0.85
+        else:
+            g = 1.0
+        gates[t] = g
+        stats[t] = {"hit_rate": round(hr, 3), "n": n, "gate": g}
+    return gates, stats
+
+
+# Size buckets for guaranteed small/mid representation in the book.
+SIZE_BUCKETS = {
+    "large+": {"mega", "large"},
+    "mid": {"mid"},
+    "small/micro": {"small", "micro"},
+}
 
 
 def _load_news_actions(date: str) -> dict[str, dict]:
@@ -195,9 +236,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             join = join.merge(memb[["Ticker"] + extra], on="Ticker", how="left")
 
     weather = _load_weather(date)
-    sector_bias = _sector_bias_map()
-    gen_bias = _general_bias()
     news = _load_news_actions(date)
+    latest_runs = _latest_runs_by_topic()
+    gates, gate_stats = _accuracy_gates()
 
     if "score_norm" in join.columns:
         join["s_join"] = pd.to_numeric(join["score_norm"], errors="coerce").fillna(0.0)
@@ -206,8 +247,6 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         sd = s.std()
         join["s_join"] = ((s - s.mean()) / sd) if sd and sd == sd and sd != 0 else 0.0
     join["s_join"] = np.tanh(join["s_join"].astype(float))
-
-    join["s_sector"] = join["sector"].map(lambda s: float(sector_bias.get(s, 0.0))).fillna(0.0)
 
     def beta_load(v):
         s = str(v).lower() if v == v else ""
@@ -220,7 +259,6 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         return 0.4
 
     bl = join["beta"].map(beta_load) if "beta" in join.columns else pd.Series(0.4, index=join.index)
-    join["s_general"] = float(gen_bias) * bl
 
     def news_score(t):
         row = news.get(str(t).upper())
@@ -234,11 +272,34 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         veto = join["veto"].astype(str).str.lower().isin(["true", "1", "yes"])
         join.loc[veto, "s_join"] = join.loc[veto, "s_join"] * 0.2
 
+    # Per-horizon biases: longer horizons use the predictors' explicit
+    # HORIZON_* calls (when the LLM stored them), gated by graded accuracy.
+    gen_run = latest_runs.get("general")
+    gen_gate = gates.get("general", 1.0)
+    sector_runs = {t.split(":", 1)[1]: r for t, r in latest_runs.items() if t.startswith("sector:")}
+    sectors_present = [s for s in join["sector"].dropna().unique()] if "sector" in join.columns else []
+
+    for h in HORIZONS:
+        sec_bias_h = {
+            sec: _bias_for(sector_runs.get(sec), h) * gates.get(f"sector:{sec}", 1.0)
+            for sec in sectors_present
+        }
+        join[f"s_sector_{h}"] = join["sector"].map(sec_bias_h).fillna(0.0) if "sector" in join.columns else 0.0
+        join[f"s_general_{h}"] = float(_bias_for(gen_run, h) * gen_gate) * bl
+
+    # Representative 1d columns kept for CSV readability / downstream tools.
+    join["s_sector"] = join["s_sector_1d"]
+    join["s_general"] = join["s_general_1d"]
+    gen_bias = float(_bias_for(gen_run, "1d") * gen_gate)
+    sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
+                   for sec, r in sector_runs.items()}
+
     meta = {
         "date": date,
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "general_bias": gen_bias,
         "sector_bias": sector_bias,
+        "accuracy_gates": gate_stats,
         "n_news_tickers": len(news),
         "weather_risk": (weather.get("signals") or {}).get("risk")
         if isinstance(weather.get("signals"), dict)
@@ -253,8 +314,8 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         wj, ws, wg, wn = WEIGHTS[h]
         join[f"score_{h}"] = (
             wj * join["s_join"]
-            + ws * join["s_sector"]
-            + wg * join["s_general"]
+            + ws * join[f"s_sector_{h}"]
+            + wg * join[f"s_general_{h}"]
             + wn * join["s_news"]
         )
 
@@ -285,6 +346,27 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int):
     return buys, sells
 
 
+def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8):
+    """Top/bottom n within one size bucket — guarantees small/mid visibility."""
+    if "size" not in df.columns:
+        return None, None
+    sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
+    if sub.empty:
+        return None, None
+    return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)))
+
+
+def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
+    return {
+        "ticker": r["Ticker"],
+        "score": float(r[f"score_{horizon}"]),
+        "sector": r.get("sector"),
+        "size": r.get("size"),
+        "side": side,
+        "reasons": r.get("reasons"),
+    }
+
+
 def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     date = meta["date"]
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -303,18 +385,18 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     books = {}
     for h in HORIZONS:
         b, s = _book_side(df, h, top_n)
-        books[h] = {
-            "buy": [
-                {"ticker": r["Ticker"], "score": float(r[f"score_{h}"]), "sector": r.get("sector"),
-                 "side": "buy", "reasons": r.get("reasons")}
-                for _, r in b.iterrows()
-            ],
-            "sell": [
-                {"ticker": r["Ticker"], "score": float(r[f"score_{h}"]), "sector": r.get("sector"),
-                 "side": "sell", "reasons": r.get("reasons")}
-                for _, r in s.iterrows()
-            ],
+        entry = {
+            "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
+            "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
+            "buy_by_size": {},
+            "sell_by_size": {},
         }
+        for bucket in SIZE_BUCKETS:
+            bb, ss = _bucket_side(df, h, bucket)
+            if bb is not None:
+                entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
+                entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
+        books[h] = entry
 
     json_path = OUT_DIR / f"{date}_stock_book.json"
     json_path.write_text(
@@ -343,6 +425,20 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     ]
     for sec, b in sorted(meta["sector_bias"].items(), key=lambda x: -abs(x[1])):
         L.append(f"| {sec} | {b:+.2f} |")
+
+    gates = meta.get("accuracy_gates") or {}
+    if gates:
+        L += [
+            "",
+            "### Learning gate (graded accuracy → how much each predictor is trusted)",
+            "",
+            "Bias from a topic with a weak graded track record is scaled down before it can move scores.",
+            "",
+            "| Topic | hit rate | graded runs | weight applied |",
+            "|-------|----------|-------------|----------------|",
+        ]
+        for t, st in sorted(gates.items()):
+            L.append(f"| {t} | {st['hit_rate']:.0%} | {st['n']} | ×{st['gate']:.2f} |")
 
     L += [
         "",
@@ -380,11 +476,32 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                 f"| {r['Ticker']} | {r[f'score_{h}']:+.3f} | {r.get('sector','')} | {r.get('reasons','')} |"
             )
 
+        # Guaranteed small/mid-cap visibility: best buys inside each size bucket.
+        L += [
+            "",
+            f"### {h} — BUY by size bucket",
+            "",
+        ]
+        for bucket in SIZE_BUCKETS:
+            bb, _ss = _bucket_side(df, h, bucket)
+            L += ["", f"**{bucket}**", "",
+                  "| Ticker | Score | Sector | Reasons |",
+                  "|--------|-------|--------|---------|"]
+            if bb is None:
+                L.append("| — | — | — | no labelled names in bucket |")
+            else:
+                for _, r in bb.iterrows():
+                    L.append(
+                        f"| {r['Ticker']} | {r[f'score_{h}']:+.3f} | {r.get('sector','')} | {r.get('reasons','')} |"
+                    )
+
     L += [
         "",
         "## Read",
         "",
         "- **1d** news-heavy; **1m** structural join + sector.",
+        "- Longer horizons use the predictors' explicit 3d/1w/2w/1m calls when stored, else fall back to the 1d call.",
+        "- Predictor bias is scaled by its graded hit rate (learning gate) — weak topics move scores less.",
         "- Backtest: `python -m src.stock_book_backtest` (or Stock Book Backtest action).",
         "",
         f"CSV: `data/stock_book/{date}_stock_book.csv`",
