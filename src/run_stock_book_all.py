@@ -127,6 +127,13 @@ def _status_for_day(date: str) -> list[dict]:
             "artifact": "03_scoreboard/STOCK_BOOK_BACKTEST.md (repo-level, re-run daily)",
             "required": True,
         },
+        {
+            "name": "Paper trading dashboard",
+            "key": "paper",
+            "done": _exists("03_scoreboard", "PAPER_TRADING.md"),
+            "artifact": "dashboard/index.html + 03_scoreboard/PAPER_TRADING.md (repo-level, re-run daily)",
+            "required": True,
+        },
     ]
     return rows
 
@@ -281,10 +288,18 @@ def run(
         check=False,
     )
 
+    # ---- Paper trading always (rebuilds from all books; idempotent) ----
+    print("[all] → Paper trading (Futubull-fee simulation + dashboard)")
+    _run(
+        [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+        check=False,
+    )
+
     print("\n[all] FINAL STATUS after run:")
     _print_status(date, _status_for_day(date))
     print(f"[all] book → 01_daily/{date}_stock_book.md")
     print("[all] backtest → 03_scoreboard/STOCK_BOOK_BACKTEST.md")
+    print("[all] paper trading → dashboard/index.html + 03_scoreboard/PAPER_TRADING.md")
 
 
 def main() -> None:

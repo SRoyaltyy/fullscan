@@ -1,0 +1,21 @@
+{
+  "_comment": "Futubull US-stock fee schedule (per Futubull Help Center, paper-trading rules). Edit here if Futu changes pricing; paper_trade.py reads this file only.",
+  "_source": "https://support.futunn.com/en/topic814/h5",
+  "currency": "USD",
+  "commission_per_share": 0.0049,
+  "commission_min_per_order": 0.99,
+  "commission_max_pct_of_amount": 0.005,
+  "platform_per_share": 0.005,
+  "platform_min_per_order": 1.00,
+  "platform_max_pct_of_amount": 0.005,
+  "settlement_per_share": 0.003,
+  "regulatory_pct_of_amount_sell_only": 0.000008,
+  "regulatory_min_per_order": 0.01,
+  "taf_per_share_sell_only": 0.000166,
+  "taf_min_per_order": 0.01,
+  "taf_max_per_order": 8.30,
+  "paper_account": {
+    "starting_capital_per_sleeve": 10000,
+    "fractional_shares": false
+  }
+}
