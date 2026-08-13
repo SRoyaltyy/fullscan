@@ -1,0 +1,392 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-13T08:09:21.551571-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 5.24,
+      "delta_1d": -0.01,
+      "delta_1w": 0.06,
+      "delta_1m": 0.14
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 4.7,
+      "delta_1d": -0.02,
+      "delta_1w": 0.07,
+      "delta_1m": 0.08
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 2.43,
+      "delta_1d": 0.0,
+      "delta_1w": 0.03,
+      "delta_1m": 0.07
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 2.72,
+      "delta_1d": 0.02,
+      "delta_1w": -0.01,
+      "delta_1m": 0.03
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 3.62,
+      "delta_1d": -0.02,
+      "delta_1w": -0.02,
+      "delta_1m": -0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 0.725,
+      "delta_1d": -0.525,
+      "delta_1w": -0.925,
+      "delta_1m": 0.447
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-11",
+      "current": 159.13,
+      "delta_1d": -139.64,
+      "delta_1w": -103.38,
+      "delta_1m": -203.86
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-13",
+      "current": 14.54,
+      "delta_1d": -0.01,
+      "delta_1w": -0.61
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 27 days older than VIX (2026-07-17 vs 2026-08-13); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 81.6,
+      "pct_1d": -2.01
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 87.43,
+      "pct_1d": -1.74
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 4443.5,
+      "pct_1d": 0.78
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-13",
+      "pct_1d": -0.09,
+      "pct_1m": -0.58
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 7785.0,
+      "pct_1d": 0.19
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 29876.25,
+      "pct_1d": 0.08
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 68308.59,
+          "pct_1d": 1.16
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 25396.51,
+          "pct_1d": -0.17
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 3926.96,
+          "pct_1d": -0.5
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 6813.34,
+          "pct_1d": 3.56
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 9188.5,
+          "pct_1d": -0.23
+        }
+      },
+      "composite_avg": 0.76
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 10804.2,
+          "pct_1d": -0.27
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 26440.33,
+          "pct_1d": 0.41
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 8686.46,
+          "pct_1d": 0.13
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 6564.52,
+          "pct_1d": 0.47
+        }
+      },
+      "composite_avg": 0.18
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.381,
+    "window": "2026-08-05..2026-08-12"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 62.8,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-12 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Ardent Health (ARDT) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/healthcare/articles/ardent-health-ardt-q2-2026-232859272.html",
+        "published_at": "2026-08-11T23:28:59Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "If the Fed's Next Move Shakes Up the Market, History Says Investments in This 1 Type of Stock Usually Hold Up Best During Times of Volatility - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVmo4VTlIZ3RhMG1xVFlGNEJWWmdWb1p3N1lFVUdJSnFjTnlQMndURGV3VUxBSTlUaGJqcGxLLWJ6UXVMLTYycmc4SjBkaE1SRnZoX0JNVEtrSGNaUWtsLTF4SkQ2YW5oZ0szOE5WOU41dzdrUnQ1OXhhMTlzZS1kVVBxWG1qbVN1Rm5rVFRzMHl2OGk4UG5Ceg?oc=5",
+        "published_at": "Thu, 13 Aug 2026 11:10:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Arista (ANET) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/arista-anet-q2-2026-earnings-232859288.html",
+        "published_at": "2026-08-11T23:28:59Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Equitable Holdings (EQH) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/equitable-holdings-eqh-q2-2026-232859514.html",
+        "published_at": "2026-08-11T23:28:59Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Oil slips on weaker demand outlook and higher US stocks amid supply disruptions - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRHRqOVFPR196RlJ0WTVZajZ6NHRpdmhmZ0EtSDMwTDVZVk5mX2JnVm9LVnFDQ2M4c08ybExVeldFQk9BdG9HVldTbnJFRDVjdTc3MF8wZmc4ck41bWd6Wng2SFowYjZrNW1UVzJuMDR4cnBUT0c2TXUteFR0cTFiVVY5bm5Da09NSDI4akNIcFY4NHRBRzkzNXNuZ1luQjNGUHFFdnVhT1RCNGlKMWx4MkgzdzhLdw?oc=5",
+        "published_at": "Thu, 13 Aug 2026 01:08:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Markets Beware: AI Funding Plans Have Shades of the Financial Crisis and 5 Other Things to Know Today - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbWhnRW1tNkNLb0YwcDJWUTloZXYzSUE1SG5wd3RQZXBXTGdZcEdRUzNuSzdrQnI1cWJuMHpjaWhTbjlKUnFEbDJCTGxvQ1dfeWhuTkx0SExqSXRVMUNzYlJ3MlJjaHVXa2lOYWdjOVZwS3ladFNtYXhJbkFDejJpU0JTYUhSNTlwRWU2Z29sYw?oc=5",
+        "published_at": "Thu, 13 Aug 2026 11:11:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Neuronetics, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/healthcare/articles/neuronetics-inc-q2-2026-earnings-005138005.html",
+        "published_at": "2026-08-12T00:51:38Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Draganfly Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/draganfly-inc-q2-2026-earnings-011057607.html",
+        "published_at": "2026-08-12T01:10:57Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Fulham walk off in Malaga in friendly repeat of Senegal AFCON final protest",
+        "url": "https://www.aljazeera.com/sports/2026/8/13/fulham-march-off-in-malaga-in-friendly-repeat-of-senegal-afcon-protest?traffic_source=rss",
+        "published_at": "Thu, 13 Aug 2026 11:16:29 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NIQ Global (NIQ) Soars 42% After Earnings. What’s Next?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/niq-global-niq-soars-42-004758638.html",
+        "published_at": "2026-08-12T00:47:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "EVERTEC (EVTC) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/evertec-evtc-q2-2026-earnings-233042194.html",
+        "published_at": "2026-08-11T23:30:42Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Home Depot (HD) CEO Ted Decker Takes Temporary Medical Leave - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbXVHSkFDemlPM3hBQlBaVC00Y2MwM0thT1lSVU14M3JlOW9pY3NQN2NJa2VzUEpqQXdibi1RTTMwMWE1VzFUX0RVSTd0N1ZXRWlhSjJTeXkxbUdiRE1UQ0VFSFY3VjF3dEVndVJsM0lwb0trRFVpNVpIbk9xeG0yVlpHYXM1QTUyYTRGWFNJbw?oc=5",
+        "published_at": "Thu, 13 Aug 2026 01:12:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Korea’s Stock Market Surges Another 3.5% Overnight. Intel, Coherent, and Micron Among Most Active Premarket Stocks in US Trading. - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOTJKSllTT2lYUE1yYnlIY0R0SXdYS2dxTUhZYnJ4SmllM0NEUGhsZkV6a3ZJeDIxNTE2LUpqT3JqYndlX2ZTMEozMTdHcnJ6d0JkSzhqY1JGaGp0WkVpWVJDWDBvVklxTjBidEptWU96X0tSQ3pNWGFVa0MtcFdsMlZyNUZwbFZuUjgxamRZTWxHSE41alBRb29KRjRESjQ?oc=5",
+        "published_at": "Thu, 13 Aug 2026 11:17:58 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Korea's Stock Market Surges Another 3.5% Overnight. Intel, Coherent, and Micron Among Most Active Premarket Stocks in US Trading. - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOMlpWVTdaSlk5TmYxazhoUF9Sb3UwZThteDltb2dUTG15YWxla2VYcXNBMTdST3hCN0ppMDA2S2dmYnQwN2l5ZXJRNVlCLWh1ZXhSUVZnNzgyWWhJZ3gwTnZhY1VwUVBvYjMxWW5IbS12UzZ1cXl0QzVaTERUbUxtanNHelM5WUxMMVhZT0k1UVUyWnJ0MGpfSjFPcE1YUTRvY09HVTBEZFlhd3QzNHNna3hxZS1nUzNpU255MEswWG9XeC1aNldCcTM4Zm9FWXc2bW5OMm92anlBVFJ3amd6LUVhSGdpaWlSNUF3S2VJLUJpUFJWU1RtXzBFcw?oc=5",
+        "published_at": "Thu, 13 Aug 2026 11:17:58 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "TON Strategy Co. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/ton-strategy-co-q2-2026-005630524.html",
+        "published_at": "2026-08-12T00:56:30Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AMD (AMD) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amd-amd-q2-2026-earnings-232859641.html",
+        "published_at": "2026-08-11T23:28:59Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Mobile Infrastructure Corporation Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mobile-infrastructure-corporation-q2-2026-005054474.html",
+        "published_at": "2026-08-12T00:50:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why Apollo backed a small Appalachian beverage manufacturer",
+        "url": "https://finance.yahoo.com/small-business/articles/why-apollo-backed-small-appalachian-005112966.html",
+        "published_at": "2026-08-12T00:51:12Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Evolv Technologies Holdings, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/evolv-technologies-holdings-inc-q2-004120765.html",
+        "published_at": "2026-08-12T00:41:20Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Bill Ackman once exited his Netflix stake in a huff. He’s buying the streaming giant again, as well as these five stocks.",
+        "url": "https://www.marketwatch.com/story/bill-ackman-once-exited-netflix-stake-in-a-huff-why-hes-buying-the-streaming-giant-again-as-well-as-these-five-stocks-ae0d9220?mod=mw_rss_topstories",
+        "published_at": "Thu, 13 Aug 2026 10:54:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Civilian deaths in Ukraine in July hit highest level since May 2022: UN",
+        "url": "https://www.aljazeera.com/news/2026/8/13/civilian-deaths-in-ukraine-in-july-hit-highest-level-since-may-2022-un?traffic_source=rss",
+        "published_at": "Thu, 13 Aug 2026 11:14:35 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Eurovision to bar countries at war from hosting: What that means",
+        "url": "https://www.aljazeera.com/news/2026/8/13/eurovision-to-bar-countries-at-war-from-hosting-what-that-means?traffic_source=rss",
+        "published_at": "Thu, 13 Aug 2026 10:41:47 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Revolve (RVLV) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/revolve-rvlv-q2-2026-earnings-232859503.html",
+        "published_at": "2026-08-11T23:28:59Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Callaway Golf (CALY) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/callaway-golf-caly-q2-2026-233027405.html",
+        "published_at": "2026-08-11T23:30:27Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Global shares mostly rise after buying of AI-related shares and oil prices fall - AP News",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWVotZ0lJOWNnZjE3MXRvdkM2MXJuY2dScktoRFRXSnk0UWg3M3B4ck5UWWM1NHFmcDRXaldfeVFSbDN4QU04bkkwNlBZaXNQN0s1c3pCZDlUT041R2lfUlROU2Q1bzF3V08tbXRrYXVURzJaeXpwNG1URkdPWnRHeW5Dd2t4ZXVUaHpmUDlVZU5RekxSNVU3ckxySk1WOE1QdWV1Sg?oc=5",
+        "published_at": "Thu, 13 Aug 2026 08:38:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Ackman’s Pershing Square takes new stake in Netflix, five more companies - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZzJBUTA0YVQ0cXh2TkRpR0RwVXdOUW1zWnYwOTdKVllwUnQ4WHZTSDZKR1RWekR6cHlnTWQwaFo3VU5nUE1XVVNRMlYtbFFWd2Q2NFF2SXg4YkhLa1dmcGxpVHlPbS1oNmNfNEpoaHQ3MWlCQWRRczJyUVFqU0VrUGl4MlhsTjBrN2VRbWwyWmRsSHVSRTRxeGc0ekc2Wk9IREVIbjlzcVRoeHJaNklvSFJOdmFibmxONGpCWHE1RHJuWkUtQ1E?oc=5",
+        "published_at": "Thu, 13 Aug 2026 06:41:40 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Social Security 2027 COLA estimate is shrinking as inflation cools. Here's what to know. - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4VjRPeE9UMGt5WERxSkJ3dGdJZHZKRkYwQkZMUEY2M19XSVBHN1FDRTZtVVVYWWhDaHQtYWNkQnk1Sk8tbi13a2ZES2xCcFhJTzE1WG5qOTJ1V0QwaTlRYXZidHpIQThIa1E2RkFsdFQyQQ?oc=5",
+        "published_at": "Wed, 12 Aug 2026 15:41:28 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "This Chinese firm has topped Micron and Kioxia in shipments of crucial NAND memory chips - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPcnVIcnVwNEw5T0g1WHhVMEg5M2dLRGh0YzhCd05CWHh6MTBjNkk3d24zZXRveHpibjlKNG0xZm5URWRCUjA2Zm13U1llbFZkdHUzaWtYM3VHNmRFZDZYZmRvenQtV2E5bVVNbW9mY3RpbEl6eHp5MklYUUFBRTMtVGpQRE52RHhCQmM1WXhLQkxiZ1dkc2RnWlJaRTXSAaIBQVVfeXFMUGdTdTNkU1hPYnRJTFZUcERZdDVLZjN0ZGMzUW40ZDdTd1BYMXJXNDhJMzNQUm1aQldLOUlVNVpnUjlYd2Jyb3FRcFp6cXNBS2tDZjRrVTRuS3ZhVkVkVnVJUEcxSmNSbTFSdURWMmUtQ1JtWVRQaEpBWnd1ZzJMRC1FcGF3WDBnZ28yNl9UNjNUR2JjRloydGdmOHd3UHh2dk13?oc=5",
+        "published_at": "Thu, 13 Aug 2026 02:59:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today: S&P 500, Dow Futures Rise as July Inflation Cools—Cisco Systems, Netflix, Applied Materials in Focus - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOUHBobnM1dmhjU0xRVTZPenlVbE9VTHU3RlRkMkI5bHFYaFdZRWNnbUFuWURHdjU5SXBRMG9ZSEZRekcyT2FCb1lVVFRDR3RhQjM1X250NjJqdDVwbGxOSzlSYVBCaFkteVBhMURoQ3BrNzZzejEzZS0wMHZDTmRzS1c5YlkzeUNrZmdKM1VOdFVvZGlqektIdW8zY281eFY1U1UtWWFwWE52SzJRM0xGdkVSTGlsRjRFUHZLSHI0M0hXdk1pUm12OENfWXU5bW9sUzBNR3Y2Z0x5VFhveTJWa1VrTTdwU0dvR2dROXR2WDNGeW5fS1BDWFkzS050d3ltV3EtWEhn?oc=5",
+        "published_at": "Thu, 13 Aug 2026 09:30:27 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "BNY (BNY) Stock Looks Fully Priced As Earnings Hold Up Better - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRnNRZTdCOUZPTV9Lc0pLZWg1V1Y2U2hteDJRcnBtR25Rc3hiU0tFOUxhRDNCYXRjYmxwdkFWek9UVE5hZUxGUWtENEF4NVpyX2duNTMtTzE0YmgwQks5NC1YTFlYdWtXVkZSMUVKRDJYNVFWWVVaVFhqeWxzNEh5Z2Zoc2NVMDRybnM1eGJ2d1pMLTBS?oc=5",
+        "published_at": "Thu, 13 Aug 2026 10:11:00 GMT"
+      }
+    ]
+  }
+}
