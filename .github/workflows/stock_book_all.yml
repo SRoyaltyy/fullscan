@@ -1,0 +1,118 @@
+name: Stock Book ALL (one-shot)
+
+# Single entrypoint:
+#   check prereqs → run missing (labels/weather/join/news/optional LLM) →
+#   build 1d/3d/1w/2w/1m stock book → backtest suggestions.
+#
+# Default is smart: skips steps whose artifacts already exist.
+# force=true rebuilds everything; skip_llm=true stays on deterministic path only.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      top:
+        description: "Top N buy/sell per horizon"
+        required: false
+        default: "25"
+      force:
+        description: "true = re-run all prereqs even if files exist"
+        required: false
+        default: "false"
+      skip_llm:
+        description: "true = skip general + sector DeepSeek (faster)"
+        required: false
+        default: "false"
+      force_sectors:
+        description: "true = always run all 11 sector predicts"
+        required: false
+        default: "false"
+  schedule:
+    # Weekdays after typical data/news windows (UTC)
+    - cron: "0 17 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock-book-all
+  cancel-in-progress: false
+
+jobs:
+  all:
+    runs-on: ubuntu-latest
+    # sectors LLM can be slow if forced/missing
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary yfinance pandas requests openai ddgs || true
+
+      - name: Run Stock Book ALL
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          TOP="${{ github.event.inputs.top }}"
+          FORCE="${{ github.event.inputs.force }}"
+          SKIP="${{ github.event.inputs.skip_llm }}"
+          FSEC="${{ github.event.inputs.force_sectors }}"
+          TOP="${TOP:-25}"
+          FORCE="${FORCE:-false}"
+          SKIP="${SKIP:-false}"
+          FSEC="${FSEC:-false}"
+
+          ARGS=(--top "$TOP")
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          [ "$SKIP" = "true" ] && ARGS+=(--skip-llm)
+          [ "$FSEC" = "true" ] && ARGS+=(--force-sectors)
+
+          echo "CMD: python -m src.run_stock_book_all ${ARGS[*]}"
+          python -m src.run_stock_book_all "${ARGS[@]}"
+
+      - name: Show outputs
+        if: always()
+        run: |
+          echo "======== stock book ========"
+          f=$(ls -1t 01_daily/*_stock_book.md 2>/dev/null | head -1)
+          [ -n "$f" ] && head -120 "$f" || true
+          echo "======== backtest ========"
+          head -80 03_scoreboard/STOCK_BOOK_BACKTEST.md 2>/dev/null || true
+
+      - name: Commit everything
+        if: always()
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add \
+            data/universe data/exports data/join data/stock_book \
+            01_daily/weather 01_daily/news 01_daily/general 01_daily/sectors \
+            01_daily/*_universe.md 01_daily/*_match.md \
+            01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \
+            03_scoreboard/STOCK_BOOK_BACKTEST.md \
+            03_scoreboard/stock_book_backtest.json \
+            03_scoreboard/scoreboard.json \
+            00_grounding/mutable_policy.md \
+            02_lessons/ || true
+          git commit -m "auto: stock book ALL (prereqs + suggestions + backtest)" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main || true
