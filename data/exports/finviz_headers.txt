@@ -1,0 +1,150 @@
+[0] Ticker
+[1] Company
+[2] Sector
+[3] Industry
+[4] Country
+[5] Market Cap
+[6] P/E
+[7] Price
+[8] Change
+[9] Volume
+[10] Forward P/E
+[11] PEG
+[12] P/S
+[13] P/B
+[14] P/Cash
+[15] P/Free Cash Flow
+[16] EPS Growth This Year
+[17] EPS Growth Next Year
+[18] EPS Growth Past 5 Years
+[19] EPS Growth Next 5 Years
+[20] Sales Growth Past 5 Years
+[21] Shares Outstanding
+[22] Shares Float
+[23] Insider Ownership
+[24] Insider Transactions
+[25] Institutional Ownership
+[26] Institutional Transactions
+[27] Short Float
+[28] Short Ratio
+[29] Average Volume
+[30] Performance (Week)
+[31] Performance (Month)
+[32] Performance (Quarter)
+[33] Performance (Half Year)
+[34] Performance (YTD)
+[35] Performance (Year)
+[36] Performance (3 Years)
+[37] Performance (5 Years)
+[38] Performance (10 Years)
+[39] Volatility (Week)
+[40] Volatility (Month)
+[41] Relative Volume
+[42] Dividend Yield
+[43] Return on Assets
+[44] Return on Equity
+[45] Return on Invested Capital
+[46] Current Ratio
+[47] Quick Ratio
+[48] LT Debt/Equity
+[49] Total Debt/Equity
+[50] Gross Margin
+[51] Operating Margin
+[52] Profit Margin
+[53] Earnings Date
+[54] Beta
+[55] Average True Range
+[56] 20-Day Simple Moving Average
+[57] 50-Day Simple Moving Average
+[58] 200-Day Simple Moving Average
+[59] 52-Week High
+[60] 52-Week Low
+[61] Relative Strength Index (14)
+[62] Change from Open
+[63] Gap
+[64] EPS (ttm)
+[65] Sales Year Over Year TTM
+[66] EPS Surprise
+[67] Revenue Surprise
+[68] Short Interest
+[69] Analyst Recom
+[70] Target Price
+[71] News Time
+[72] News Title
+[73] Daily Digest
+[74] Index
+[75] Exchange
+[76] IPO Date
+[77] Optionable
+[78] Shortable
+[79] Employees
+[80] Enterprise Value
+[81] EV/EBITDA
+[82] EV/Sales
+[83] Book/sh
+[84] Cash/sh
+[85] Dividend
+[86] Dividend TTM
+[87] Dividend Ex Date
+[88] Dividend Growth 1 Year
+[89] Dividend Growth 3 Years
+[90] Dividend Growth 5 Years
+[91] Payout Ratio
+[92] EPS Next Q
+[93] EPS Growth Past 3 Years
+[94] Sales Growth Past 3 Years
+[95] Sales Growth Quarter Over Quarter
+[96] EPS Growth Quarter Over Quarter
+[97] EPS Year Over Year TTM
+[98] Sales
+[99] Income
+[100] Float %
+[101] Performance (1 Minute)
+[102] Performance (2 Minutes)
+[103] Performance (3 Minutes)
+[104] Performance (5 Minutes)
+[105] Performance (10 Minutes)
+[106] Performance (15 Minutes)
+[107] Performance (30 Minutes)
+[108] Performance (1 Hour)
+[109] Performance (2 Hours)
+[110] Performance (4 Hours)
+[111] 50-Day High
+[112] 50-Day Low
+[113] 52-Week Range
+[114] All-Time High
+[115] All-Time Low
+[116] Trades
+[117] Prev Close
+[118] Open
+[119] High
+[120] Low
+[121] After-Hours Close
+[122] After-Hours Change
+[123] After-Hours Volume
+[124] News URL
+[125] Single Category
+[126] Asset Type
+[127] ETF Type
+[128] Sector/Theme
+[129] Region
+[130] Active/Passive
+[131] Net Expense Ratio
+[132] Total Holdings
+[133] Assets Under Management
+[134] Net Asset Value
+[135] Net Asset Value %
+[136] Net Flows (1 Month)
+[137] Net Flows % (1 Month)
+[138] Net Flows (3 Month)
+[139] Net Flows % (3 Month)
+[140] Net Flows (YTD)
+[141] Net Flows % (YTD)
+[142] Net Flows (1 Year)
+[143] Net Flows % (1 Year)
+[144] Return 1 Year
+[145] Return 3 Year
+[146] Return 5 Year
+[147] Return 10 Year
+[148] Return Since Inception
+[149] Tags
