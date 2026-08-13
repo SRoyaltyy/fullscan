@@ -1,14 +1,21 @@
 """Memory-tier context assembly.
 
-Predict injects standing rules from 02_lessons/active/* every run.
+Predict injects:
+  - scoreboard summary
+  - consolidated memory
+  - standing rules from 02_lessons/active/*
+  - mutable_policy.md (learn_cycle output — the living prompt policy)
+  - recent daily logs
 """
 from __future__ import annotations
 
 import glob
 import os
-import re
+from pathlib import Path
 
 from . import compute_scores, config, lesson_schema, scoreboard
+
+MUTABLE_POLICY = Path(config.GROUNDING) / "mutable_policy.md"
 
 
 def _read(path: str) -> str:
@@ -44,6 +51,17 @@ def active_lessons() -> str:
     return lesson_schema.standing_rules_block(parts)
 
 
+def mutable_policy() -> str:
+    """Living policy rewritten by learn_cycle — safe prompt edits only."""
+    text = _read(str(MUTABLE_POLICY)).strip()
+    if not text:
+        return (
+            "=== MUTABLE POLICY ===\n"
+            "(empty — run python -m src.learn_cycle after outcomes)\n"
+        )
+    return f"=== MUTABLE POLICY (follow these adjustments; core SCORES format unchanged) ===\n{text}\n"
+
+
 def scoreboard_summary() -> str:
     board = scoreboard.load()
     runs = board.get("runs", [])
@@ -62,30 +80,17 @@ def scoreboard_summary() -> str:
         f"Rolling accuracy last 30 graded runs (ex-OPS): {acc30['direction_acc']} direction / "
         f"{acc30['magnitude_acc']} magnitude (n={acc30['n']})",
         f"Active standing lessons injected: {active_lesson_count()}",
-        "Last 10 general runs:",
     ]
-    general = [r for r in runs if r.get("topic", "general") == "general"][-10:]
-    for r in general:
-        pct = r.get("actual_pct_change")
-        if r.get("ops_fail") or r.get("predicted_direction") is None:
-            status = "OPS/ungraded"
-        elif r.get("direction_hit") is True:
-            status = "dir HIT"
-        elif r.get("direction_hit") is False:
-            status = "dir MISS"
-        else:
-            status = "ungraded"
-        lines.append(
-            f"- {r['date']}: predicted {r.get('predicted_direction')}/"
-            f"{r.get('predicted_magnitude_band')}, actual "
-            f"{pct if pct is not None else 'pending'}% ({status})"
-        )
     return "\n".join(lines)
 
 
 def recent_daily_logs() -> str:
-    preds = sorted(glob.glob(os.path.join(config.DAILY_GENERAL, "*_predict.md")))
-    dates = [re.sub(r"_predict\.md$", "", os.path.basename(p)) for p in preds]
+    files = sorted(glob.glob(os.path.join(config.DAILY_GENERAL, "*_predict.md")))
+    dates = []
+    for f in files:
+        base = os.path.basename(f)
+        if base.endswith("_predict.md"):
+            dates.append(base.replace("_predict.md", ""))
     dates = dates[-config.MEMORY_WINDOW_DAYS:]
     parts = []
     for d in dates:
@@ -104,5 +109,6 @@ def prediction_context() -> str:
         f"[SCOREBOARD]\n{scoreboard_summary()}\n\n"
         f"[CONSOLIDATED MEMORY]\n{consolidated_memory()}\n\n"
         f"{active_lessons()}\n\n"
+        f"{mutable_policy()}\n\n"
         f"[LAST {config.MEMORY_WINDOW_DAYS} TRADING DAYS]\n{recent_daily_logs()}\n"
     )
