@@ -1,35 +1,25 @@
 """Closed learning cycle: outcomes → lessons → policy that predict actually reads.
 
-Problems this solves:
-  - Candidate MD files accumulate but never become behavior.
-  - Reflect only fires hard on losses; wins are not mined for "could have been better".
-  - Active lessons are rare; weather_rules / prompt policy almost never change.
+  1. Mine recent graded general runs (wins AND losses).
+  2. Write structured HYPOTHESIS files.
+  3. Promote complete candidate lessons into 02_lessons/active (1 complete enough).
+  4. Rewrite 00_grounding/mutable_policy.md (injected every predict via memory).
+  5. Propose weather_rules threshold patches (proposals only).
 
-What this does (deterministic + optional LLM merge):
-  1. Read recent graded general runs (wins AND losses).
-  2. Write structured HYPOTHESIS files for both.
-  3. Promote complete candidate lessons into 02_lessons/active (looser gate).
-  4. Rewrite 00_grounding/mutable_policy.md (injected every predict).
-  5. Optionally propose weather_rules threshold patches into
-     00_grounding/weather_rules_proposals.json (human/bot can accept later).
+Core outputs UNCHANGED: SCORES_BEGIN, B0–B7 names, pipeline arithmetic.
 
-Core outputs UNCHANGED: SCORES_BEGIN format, B0–B7 names, pipeline arithmetic.
-
-CLI:
-  python -m src.learn_cycle [--lookback 15]
+CLI: python -m src.learn_cycle [--lookback 15]
 """
 from __future__ import annotations
 
 import argparse
 import glob
 import json
-import os
-import re
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, lesson_schema, scoreboard
+from . import config, scoreboard
 
 ROOT = Path(__file__).resolve().parent.parent
 MUTABLE = ROOT / "00_grounding" / "mutable_policy.md"
@@ -60,7 +50,6 @@ def _graded_general(lookback: int = 20) -> list[dict]:
 
 
 def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
-    """Rule-based hypotheses so we always learn something without LLM."""
     hypos = []
     for r in runs:
         d = r.get("date")
@@ -72,7 +61,6 @@ def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
         mag_hit = r.get("magnitude_hit")
 
         if hit:
-            # WIN — still ask: could weighting have been better?
             hypos.append({
                 "date": d,
                 "kind": "win",
@@ -106,8 +94,7 @@ def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
                 "when": f"Predicted {pred} but market went {act} (pct={pct}, score={score}).",
                 "ask": (
                     "Which factor family drove the score? "
-                    "Was this a missing Channel-2 source, misweighted macro print, "
-                    "or regime misread (risk-on/off)?"
+                    "Missing Channel-2 source, misweighted macro print, or regime misread?"
                 ),
                 "experiment": (
                     "Next time score sign agrees with this failed day, require one "
@@ -150,11 +137,6 @@ def _write_hypotheses(hypos: list[dict]) -> list[Path]:
 
 
 def _promote_complete_candidates(min_market: int = 1) -> list[str]:
-    """Promote complete candidates with a lower bar so policy can move.
-
-    Market lessons: 1 complete candidate is enough to become active *draft*
-    (was 2). Ops stays 1. Incomplete never promote.
-    """
     from .promote_lessons import _parse_candidate, _write_active, _cluster
 
     paths = sorted(glob.glob(str(CAND_DIR / "*.md")))
@@ -173,7 +155,6 @@ def _promote_complete_candidates(min_market: int = 1) -> list[str]:
         need = 1 if cat == "D" else min_market
         if len(complete) < need:
             continue
-        # skip if an active file already covers same slug-ish when
         apath = _write_active(complete, merged_body="(learn_cycle promote)")
         promoted.append(apath)
     return promoted
@@ -186,27 +167,20 @@ def _rebuild_mutable_policy(runs: list[dict], hypos: list[dict], promoted: list[
         if p.name.startswith("."):
             continue
         text = _read(p).strip()
-        if not text:
-            continue
-        # compress to WHEN/DO/WRONG IF if possible
-        when = re.search(r"WHEN[^\n]*\n(.*?)(?:\n##|\n---|
-)", text, re.S | re.I)
-        do = re.search(r"(?:RULE|DO INSTEAD|corrected)[^\n]*\n(.*?)(?:\n##|\n---|
-)", text, re.S | re.I)
-        active_parts.append(f"### {p.name}\n{text[:1200]}")
+        if text:
+            active_parts.append(f"### {p.name}\n{text[:1200]}")
 
     wins = [h for h in hypos if h["kind"] == "win"]
     losses = [h for h in hypos if h["kind"] == "loss"]
-    open_exp = []
-    for h in hypos[-8:]:
-        open_exp.append(
-            f"- **{h['kind']} {h['date']}:** {h['experiment']}"
-        )
+    open_exp = [f"- **{h['kind']} {h['date']}:** {h['experiment']}" for h in hypos[-8:]]
 
     graded = [r for r in runs if r.get("direction_hit") is not None]
     n = len(graded)
     hits = sum(1 for r in graded if r.get("direction_hit") is True)
     acc = f"{100 * hits / n:.0f}%" if n else "n/a"
+
+    active_block = "\n\n".join(active_parts) if active_parts else "_(no active lessons)_"
+    exp_block = "\n".join(open_exp) if open_exp else "_(none)_"
 
     body = f"""---
 status: living_policy
@@ -222,18 +196,18 @@ Promoted this cycle: {len(promoted)} lesson file(s).
 
 ## Active adjustments (from promoted lessons)
 
-{chr(10).join(active_parts) if active_parts else "_(no active lessons)_"}
+{active_block}
 
 ## Open experiments (test on next sessions)
 
-{chr(10).join(open_exp) if open_exp else "_(none)_"}
+{exp_block}
 
 ## Win mining (do not only learn from losses)
 
-Wins in window: **{len(wins)}**. For each win with magnitude miss, prefer milder bands when |score|<4.
+Wins in window: **{len(wins)}**. For wins with magnitude miss, prefer milder bands when |score|<4.
 Losses in window: **{len(losses)}**. Prefer confirmation hedge when score sign conflicts with breadth/futures.
 
-## Methodology checklist (bot must answer in MEMORY_CONFIRM)
+## Methodology checklist (answer in MEMORY_CONFIRM)
 
 1. Did any open experiment apply today?
 2. Are we missing a factor that would have flipped a recent loss?
@@ -242,14 +216,13 @@ Losses in window: **{len(losses)}**. Prefer confirmation hedge when score sign c
 
 ## Retired / falsified
 
-_(append here when a falsifier triggers; learn_cycle does not auto-delete active files yet)_
+_(append when a falsifier triggers)_
 """
     MUTABLE.write_text(body, encoding="utf-8")
     print(f"[learn] wrote {MUTABLE}")
 
 
 def _weather_proposals(runs: list[dict]) -> None:
-    """Propose threshold nudges from recent accuracy — stored as proposals only."""
     graded = [r for r in runs if r.get("direction_hit") is not None]
     if len(graded) < 5:
         return
@@ -264,16 +237,15 @@ def _weather_proposals(runs: list[dict]) -> None:
     }
     if acc < 0.5:
         proposals["notes"].append(
-            "Accuracy <50%: propose wider neutral band — raise risk_on_score and "
-            "lower risk_off_score magnitude so fewer strong risk stances."
+            "Accuracy <50%: propose wider neutral band on risk_on/off thresholds."
         )
         proposals["threshold_deltas"] = {
-            "risk_on_score": +1.0,
+            "risk_on_score": 1.0,
             "risk_off_score": -1.0,
         }
     elif acc >= 0.65:
         proposals["notes"].append(
-            "Accuracy healthy: no forced threshold change; keep experiments running."
+            "Accuracy healthy: no forced threshold change."
         )
     PROPOSALS.write_text(json.dumps(proposals, indent=2), encoding="utf-8")
     print(f"[learn] weather proposals -> {PROPOSALS}")
@@ -291,7 +263,7 @@ def run(lookback: int = 15) -> None:
         print(f"  -> {p}")
     _rebuild_mutable_policy(runs, hypos, promoted)
     _weather_proposals(runs)
-    print("[learn] done — next PREDICT will load mutable_policy.md via memory")
+    print("[learn] done — next PREDICT loads mutable_policy.md via memory")
 
 
 def main() -> None:
