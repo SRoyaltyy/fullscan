@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-13T17:56:20.582445-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 5.24,
+      "delta_1d": 0.0,
+      "delta_1w": 0.07,
+      "delta_1m": 0.16
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 4.68,
+      "delta_1d": -0.02,
+      "delta_1w": 0.05,
+      "delta_1m": 0.1
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 2.42,
+      "delta_1d": -0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.09
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 2.71,
+      "delta_1d": -0.01,
+      "delta_1w": -0.04,
+      "delta_1m": -0.01
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 3.62,
+      "delta_1d": -0.02,
+      "delta_1w": -0.02,
+      "delta_1m": -0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 0.45,
+      "delta_1d": -0.275,
+      "delta_1w": -0.979,
+      "delta_1m": 0.299
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-12",
+      "current": 273.78,
+      "delta_1d": 55.08,
+      "delta_1w": -64.74,
+      "delta_1m": 121.78
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-13",
+      "current": 14.63,
+      "delta_1d": 0.08,
+      "delta_1w": -0.52
+    },
+    "vix3m": {
+      "date": "2026-08-13",
+      "current": 18.61,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.786
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 81.21,
+      "pct_1d": -2.47
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 86.96,
+      "pct_1d": -2.27
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 4407.1,
+      "pct_1d": -0.04
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-13",
+      "pct_1d": -0.05,
+      "pct_1m": -1.0
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 7825.25,
+      "pct_1d": 0.7
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-13",
+      "last": 30214.25,
+      "pct_1d": 1.21
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 67524.06,
+          "pct_1d": 0.83
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 25440.17,
+          "pct_1d": -0.83
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 3946.68,
+          "pct_1d": 0.32
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 6579.04,
+          "pct_1d": 3.68
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-12",
+          "last": 9209.4,
+          "pct_1d": -0.45
+        }
+      },
+      "composite_avg": 0.71
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 10772.67,
+          "pct_1d": -0.56
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 26299.74,
+          "pct_1d": -0.12
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 8650.56,
+          "pct_1d": -0.28
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-13",
+          "last": 6545.47,
+          "pct_1d": 0.18
+        }
+      },
+      "composite_avg": -0.2
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.493,
+    "window": "2026-08-06..2026-08-13"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 66.7,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-13 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The $30 trillion Treasury market is facing a painful reckoning. How rising yields could squeeze your portfolio.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/30-trillion-treasury-market-facing-125800586.html",
+        "published_at": "2026-08-12T12:58:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Reese's Halloween pumpkins return to store shelves unchanged after Hershey won lawsuit - cbsnews.com",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5RbGticUlvenBmMHJmRFVWX3pJY1hvT0c3bHJ4ZTAtbjZrZEZ0RWpEcGJscHZvT1QyYUFHZUhkdjg0RU1leUFhXzlxamVGbEY5YUM2cTZpWk8tR2ZXVnN4QWRFbGh3eS0tSFdKMVN5a2ZZRFV2WlRRRldoaXF3dw?oc=5",
+        "published_at": "Thu, 13 Aug 2026 14:26:44 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Commvault Systems, Inc. (CVLT) A Good Investment Right Now?",
+        "url": "https://finance.yahoo.com/technology/articles/commvault-systems-inc-cvlt-good-200030397.html",
+        "published_at": "2026-08-12T12:50:30Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Aquestive Therapeutics, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/healthcare/articles/aquestive-therapeutics-inc-q2-2026-123000897.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "TransAct Technologies Incorporated Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/transact-technologies-incorporated-q2-2026-123000405.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "El Pollo Loco’s Turnaround Plan Was Supposed to Take 3 Years. It’s Already Ahead of Schedule.",
+        "url": "https://finance.yahoo.com/small-business/articles/el-pollo-loco-turnaround-plan-130700813.html",
+        "published_at": "2026-08-12T13:07:00Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Are We in the Singularity?",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/13/are-we-in-the-singularity?traffic_source=rss",
+        "published_at": "Thu, 13 Aug 2026 20:07:29 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Marvell Technology (MRVL) Stock Might Offer a Quick Bounce Before Earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-mrvl-stock-might-131502420.html",
+        "published_at": "2026-08-12T13:15:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "American Resources’ ReElement CTO named recipient of Purdue Engineering 38 by 38 Award",
+        "url": "https://finance.yahoo.com/technology/articles/american-resources-reelement-cto-named-130100004.html",
+        "published_at": "2026-08-12T13:01:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Chicago Atlantic Real Estate Finance, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/real-estate/articles/chicago-atlantic-real-estate-finance-123000206.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stran & Company, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stran-company-inc-q2-2026-123000818.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stereotaxis, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stereotaxis-inc-q2-2026-earnings-123000743.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "OPEC Cuts Oil-Demand Forecast Again as Hormuz Talks Stall",
+        "url": "https://www.wsj.com/business/energy-oil/opec-cuts-oil-demand-forecast-again-as-hormuz-talks-stall-3f55c76c?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-12T13:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Intercorp Financial Services Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/intercorp-financial-services-inc-q2-123000396.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "These charts show why stocks keep rallying. Profit margins are the highest on record",
+        "url": "https://www.cnbc.com/2026/08/13/these-charts-show-why-stocks-keep-rallying-profit-margins-are-highest-on-record.html",
+        "published_at": "Thu, 13 Aug 2026 20:21:51 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "SpaceX set an IPO record. Now there’s hope that Anthropic could shatter it.",
+        "url": "https://www.marketwatch.com/story/spacex-set-an-ipo-record-now-theres-hope-that-anthropic-could-shatter-it-ea44b12a?mod=mw_rss_topstories",
+        "published_at": "Thu, 13 Aug 2026 20:20:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Goldman Sachs to Acquire ETF Provider Neos in $2.3B Deal",
+        "url": "https://finance.yahoo.com/markets/options/articles/goldman-sachs-acquire-etf-provider-130635763.html",
+        "published_at": "2026-08-12T13:06:35Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Wall Street Bullish or Bearish on Edwards Lifesciences Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bullish-bearish-edwards-130114969.html",
+        "published_at": "2026-08-12T13:01:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Disney Stopped Leading With Its Own Headline Growth Number",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/disney-stopped-leading-own-headline-130647001.html",
+        "published_at": "2026-08-12T13:06:47Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Soybeans Bouncing Ahead of USDA Data",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/soybeans-bouncing-ahead-usda-data-123458008.html",
+        "published_at": "2026-08-12T12:34:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Corn Popping Higher on Wednesday with Spillover from Wheat",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/corn-popping-higher-wednesday-spillover-123458332.html",
+        "published_at": "2026-08-12T12:34:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Wheat Rallying on Black Sea Strikes",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/wheat-rallying-black-sea-strikes-123458998.html",
+        "published_at": "2026-08-12T12:34:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Lumentum Holdings Inc. Q4 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-holdings-inc-q4-2026-123000875.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "PagSeguro Digital Ltd. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/pagseguro-digital-ltd-q2-2026-123000405.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "M-tron Industries, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/m-tron-industries-inc-q2-123000117.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Texas hits new peak demand record, but supply constraints will limit growth",
+        "url": "https://finance.yahoo.com/energy/articles/texas-hits-peak-demand-record-130000283.html",
+        "published_at": "2026-08-12T13:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Sintx Technologies, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sintx-technologies-inc-q2-2026-123000700.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Intrusion Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/intrusion-inc-q2-2026-earnings-123000468.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "WhiteHorse Finance, Inc. Q2 2026 Earnings Call Summary",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/whitehorse-finance-inc-q2-2026-123000392.html",
+        "published_at": "2026-08-12T12:30:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Broken engine parts shattered the Ryanair plane window that a passenger's head got sucked into: NTSB - AP News",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNX0dMUWR0N1NCdC1lR3hzYVI3UG9ZUFRVWWdEMEpXV1RzLWZrWTN5VjI1dVFKYmo3YzRvUU5YYVkwTjZXdTdUU0FyamN2cTZvUmRqLWwtc2NnYzFoUDNZczRqSEUxc1hjZlJfbGZZcTZOSXRzMWYybzhaQjFjWmZ1NkhLa3hrRGNqallzZlY0cHVkMmo3alZnb3dyb0ZpMzU0cVE?oc=5",
+        "published_at": "Thu, 13 Aug 2026 19:01:00 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-13",
+      "open": 7763.18,
+      "high": 7816.7,
+      "low": 7763.18,
+      "close": 7798.99,
+      "pct_change": 0.65,
+      "prev_close": 7748.5,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.69,
+        "intraday_low_pct": 0.19,
+        "intraday_high_pct": 0.88,
+        "close_position_in_range": 0.67
+      }
+    },
+    "DOW": {
+      "date": "2026-08-13",
+      "open": 53828.55,
+      "high": 54049.14,
+      "low": 53622.46,
+      "close": 53839.99,
+      "pct_change": 0.13,
+      "prev_close": 53770.27,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.8,
+        "intraday_low_pct": -0.27,
+        "intraday_high_pct": 0.52,
+        "close_position_in_range": 0.51
+      }
+    },
+    "NDX": {
+      "date": "2026-08-13",
+      "open": 26631.34,
+      "high": 26875.52,
+      "low": 26612.85,
+      "close": 26803.03,
+      "pct_change": 0.81,
+      "prev_close": 26588.49,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.99,
+        "intraday_low_pct": 0.09,
+        "intraday_high_pct": 1.08,
+        "close_position_in_range": 0.72
+      }
+    }
+  }
+}

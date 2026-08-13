@@ -2665,17 +2665,63 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 5.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7763.18,
+      "actual_close": 7798.99,
+      "actual_pct_change": 0.65,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
-      "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "divergence_verdict": "none_flagged — but post-hoc the flat futures were the better magnitude signal (0.65% mild vs leading sum's notable implication); treat strong positive leading_sum + flat B6 as a magnitude cap going forward.",
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-13_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -2702,7 +2748,16 @@
           "magnitude_band": "mild",
           "confidence": 0.4
         }
-      }
+      },
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Two-day disinflation cluster (benign CPI Aug 12 + flat PPI Aug 13) easing September rate-hike odds to ~67.6% hold, driving record close",
+      "key_interaction": "PPI × CPI amplification — two-day disinflation cluster repriced the Fed to a September hold, amplified by AI/chip momentum so the Nasdaq (+0.81%) led while Cisco -9% masked the Dow (+0.13%)",
+      "knowable_at_9am": "partially — direction (soft inflation → no-hike) was foreseeable from yesterday's CPI, but the flat PPI surprise (released 8:30 AM) that sealed the record close was not in premarket data",
+      "attribution_contested": "no — Reuters/CNBC/Bloomberg all lead with inflation/rate-hike easing; only secondary framing differs (Cisco Dow drag vs AI chip momentum)",
+      "outlier_watch": "Cisco -9% on record revenue/$4B AI orders (margin concern) held Dow to +0.13% while S&P/Nasdaq hit records; gold bid toward $4,400 alongside record equities; oil fell despite Hormuz closure (demand destruction > supply risk)",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-08-13",

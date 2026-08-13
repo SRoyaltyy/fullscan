@@ -12,5 +12,5 @@ Updated: 2026-08-13. Calls are graded at T+h trading days using the scoreboard's
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
 
-*0 calls still maturing (T+h close not recorded yet).*
+*48 calls still maturing (T+h close not recorded yet).*
 
