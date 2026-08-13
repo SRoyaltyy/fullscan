@@ -4,9 +4,12 @@ from __future__ import annotations
 import glob
 import os
 import re
+from pathlib import Path
 
 from . import compute_sector_scores, config, scoreboard
 from .sector_taxonomy import SECTOR_ETFS, amp_damp_table, taxonomy_list
+
+MUTABLE_POLICY = Path(config.GROUNDING) / "mutable_policy.md"
 
 
 def topic_for(sector: str) -> str:
@@ -42,7 +45,8 @@ def scoreboard_summary(sector: str) -> str:
             f"- {r['date']}: predicted {r.get('predicted_direction')}/"
             f"{r.get('predicted_magnitude_band')}, actual "
             f"{pct if pct is not None else 'pending'}% "
-            f"({'dir HIT' if r.get('direction_hit') else 'dir MISS' if r.get('direction_hit') is False else 'ungraded'})")
+            f"({'dir HIT' if r.get('direction_hit') else 'dir MISS' if r.get('direction_hit') is False else 'ungraded'})"
+        )
     if len(runs) == 0:
         lines.append("(no prior runs — establishing baseline)")
     return "\n".join(lines)
@@ -54,8 +58,11 @@ def _acc(runs: list, n: int) -> dict:
         return {"n": 0, "direction_acc": None, "magnitude_acc": None}
     d = sum(1 for r in graded if r.get("direction_hit"))
     m = sum(1 for r in graded if r.get("magnitude_hit"))
-    return {"n": len(graded), "direction_acc": round(d / len(graded), 3),
-            "magnitude_acc": round(m / len(graded), 3)}
+    return {
+        "n": len(graded),
+        "direction_acc": round(d / len(graded), 3),
+        "magnitude_acc": round(m / len(graded), 3),
+    }
 
 
 def recent_sector_logs(sector: str) -> str:
@@ -84,6 +91,20 @@ def active_lessons_block() -> str:
     return "\n\n".join(parts) or "(no standing lessons yet)"
 
 
+def mutable_policy_block() -> str:
+    text = _read(str(MUTABLE_POLICY)).strip()
+    if not text:
+        return (
+            "=== MUTABLE POLICY ===\n"
+            "(empty — run python -m src.learn_cycle after outcomes)\n"
+        )
+    # Prefer this sector's scope lines if present; still pass full file
+    return (
+        "=== MUTABLE POLICY (all workflows; apply lines for this sector + general) ===\n"
+        f"{text}\n"
+    )
+
+
 def prediction_context(sector: str) -> str:
     labs = taxonomy_list(sector)
     checklist = "\n".join(f"- {x}" for x in labs)
@@ -91,6 +112,7 @@ def prediction_context(sector: str) -> str:
         "=== MEMORY CONTEXT (THIS SECTOR ONLY) ===\n\n"
         f"[SCOREBOARD]\n{scoreboard_summary(sector)}\n\n"
         f"[STANDING ACTIVE LESSONS]\n{active_lessons_block()}\n\n"
+        f"{mutable_policy_block()}\n\n"
         f"[LAST {config.MEMORY_WINDOW_DAYS} SECTOR LOGS]\n{recent_sector_logs(sector)}\n\n"
         f"=== SECTOR FACTOR TAXONOMY (exact labels) ===\n{checklist}\n\n"
         f"=== AMP/DAMP ===\n{amp_damp_table(sector)}\n\n"
