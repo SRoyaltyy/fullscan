@@ -46,12 +46,11 @@ def _exists(*parts: str) -> bool:
 
 def _status_for_day(date: str) -> list[dict]:
     """One row per logical workflow. done = artifact for THIS date exists."""
-    # sector: any predict md under 01_daily/sectors/<date>/
     sector_dir = _p("01_daily", "sectors", date)
     sector_n = 0
     if sector_dir.is_dir():
         sector_n = len(list(sector_dir.glob("*_predict.md")))
-    sector_done = sector_n >= 11  # all Finviz sectors
+    sector_done = sector_n >= 11
     sector_partial = sector_n > 0 and not sector_done
 
     rows = [
@@ -60,7 +59,7 @@ def _status_for_day(date: str) -> list[dict]:
             "key": "finviz",
             "done": _exists("data", "exports", f"finviz_{date}.csv"),
             "artifact": f"data/exports/finviz_{date}.csv",
-            "required": False,  # can label from older export if forced path, but prefer today
+            "required": False,
         },
         {
             "name": "Stock labeling (segments)",
@@ -119,7 +118,7 @@ def _status_for_day(date: str) -> list[dict]:
             "key": "stock_book",
             "done": _exists("data", "stock_book", f"{date}_stock_book.json"),
             "artifact": f"data/stock_book/{date}_stock_book.json",
-            "required": True,  # we always rebuild at end, but status is honest
+            "required": True,
         },
         {
             "name": "Stock book backtest",
@@ -174,10 +173,10 @@ def run(
             return True
         r = by_key[key]
         if r.get("partial"):
-            return True  # finish incomplete sector set
+            return True
         return not r["done"]
 
-    # ---- Finviz (prefer today; only required if no membership for today) ----
+    # ---- Finviz + labels ----
     if need("finviz") or need("segments"):
         if need("finviz"):
             print("[all] → Finviz universe export (this trading day)")
@@ -200,21 +199,19 @@ def run(
     else:
         print("[all] skip Finviz + labeling (DONE for this day)")
 
-    # ---- Weather ----
+    # ---- Weather (MUST pass --date) ----
     if need("weather"):
         print("[all] → Weather / regime")
-        _run([sys.executable, "-m", "src.weather"], check=False)
-        # weather module may write latest.json and/or date file — require date file ideally
+        _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
         if not _exists("01_daily", "weather", f"{date}_weather.json"):
-            # accept latest only if weather script always updates latest for "today"
-            if _exists("01_daily", "weather", "latest.json"):
-                print("[all] WARN: only weather/latest.json present — expected dated file for", date)
-            else:
-                print("[all] WARN: weather missing for", date)
+            raise SystemExit(
+                f"[all] FATAL: weather did not write 01_daily/weather/{date}_weather.json. "
+                f"Cannot join without this trading day's weather."
+            )
     else:
         print("[all] skip Weather / regime (DONE for this day)")
 
-    # ---- Join ----
+    # ---- Join (strict for this date) ----
     if need("join"):
         print("[all] → Join / match rank")
         _run([sys.executable, "-m", "src.join", "--date", date], check=False)
@@ -261,7 +258,7 @@ def run(
     else:
         print("[all] skip General market predict (DONE for this day)")
 
-    # ---- Sector predicts: must be THIS day's folder ----
+    # ---- Sector predicts ----
     if not skip_llm and (force_sectors or need("sector_predict")):
         if config.DEEPSEEK_API_KEY:
             print("[all] → Per-sector predict (all 11 for this trading day)")
@@ -273,7 +270,7 @@ def run(
     else:
         print("[all] skip Per-sector predict (DONE for this day — 11/11)")
 
-    # ---- Stock book always for this day ----
+    # ---- Stock book always ----
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)], check=True)
 
@@ -284,7 +281,6 @@ def run(
         check=False,
     )
 
-    # final status
     print("\n[all] FINAL STATUS after run:")
     _print_status(date, _status_for_day(date))
     print(f"[all] book → 01_daily/{date}_stock_book.md")
