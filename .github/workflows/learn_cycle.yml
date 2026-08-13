@@ -1,17 +1,17 @@
 name: Learn Cycle
 
 # After outcomes exist: mine wins+losses → hypotheses → promote lessons →
-# rewrite mutable_policy.md (injected into every PREDICT).
+# rewrite mutable_policy.md + LEARNINGS.md (human digest of what changed
+# for every daily workflow).
 
 on:
   workflow_dispatch:
     inputs:
       lookback:
-        description: "How many graded general runs to mine"
+        description: "Graded runs per topic to mine"
         required: false
         default: "15"
   schedule:
-    # After typical outcome/reflect window (UTC)
     - cron: "30 21 * * 1-5"
 
 permissions:
@@ -39,20 +39,22 @@ jobs:
           LB="${{ github.event.inputs.lookback }}"
           LB="${LB:-15}"
           python -m src.learn_cycle --lookback "$LB"
-          echo "======== mutable_policy ========"
-          head -120 00_grounding/mutable_policy.md || true
-          echo "======== hypotheses (latest) ========"
-          ls -lt 02_lessons/hypotheses 2>/dev/null | head -15 || true
+          echo "======== LEARNINGS.md (digest) ========"
+          head -160 03_scoreboard/LEARNINGS.md || true
+          echo "======== mutable_policy (head) ========"
+          head -80 00_grounding/mutable_policy.md || true
 
-      - name: Commit policy + hypotheses
+      - name: Commit policy + learnings + hypotheses
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           git add 00_grounding/mutable_policy.md \
                   00_grounding/weather_rules_proposals.json \
+                  03_scoreboard/LEARNINGS.md \
+                  01_daily/*_learnings.md \
                   02_lessons/hypotheses/ \
                   02_lessons/active/ \
                   02_lessons/candidate/ || true
-          git commit -m "auto: learn_cycle (hypotheses + mutable policy)" || echo "No changes"
+          git commit -m "auto: learn_cycle (LEARNINGS + policy + hypotheses)" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main
