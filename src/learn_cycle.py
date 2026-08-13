@@ -1,12 +1,12 @@
-"""Closed learning cycle: outcomes → lessons → policy that predict actually reads.
+"""Closed learning cycle: outcomes to lessons to policy that predict reads.
 
-  1. Mine recent graded general runs (wins AND losses).
-  2. Write structured HYPOTHESIS files.
-  3. Promote complete candidate lessons into 02_lessons/active (1 complete enough).
-  4. Rewrite 00_grounding/mutable_policy.md (injected every predict via memory).
-  5. Propose weather_rules threshold patches (proposals only).
+1. Mine recent graded general runs (wins AND losses).
+2. Write structured HYPOTHESIS files.
+3. Promote complete candidate lessons into 02_lessons/active.
+4. Rewrite 00_grounding/mutable_policy.md (injected every predict).
+5. Propose weather_rules threshold patches (proposals only).
 
-Core outputs UNCHANGED: SCORES_BEGIN, B0–B7 names, pipeline arithmetic.
+Core outputs UNCHANGED: SCORES_BEGIN, B0-B7 names, pipeline arithmetic.
 
 CLI: python -m src.learn_cycle [--lookback 15]
 """
@@ -69,19 +69,18 @@ def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
                 "ask": (
                     "Could magnitude band have been tighter/looser? "
                     "Was any factor double-counted? "
-                    "Would a different B6 vs leading-indicator weight have improved mag hit?"
+                    "Would different B6 vs leading weight have improved mag hit?"
                 ),
                 "experiment": (
-                    "On next similar setup, log factor contribution order and test "
-                    "whether capping lagging futures (B6) when leading sum is strong "
-                    "improves magnitude_hit without hurting direction_hit."
+                    "On next similar setup, test capping lagging futures (B6) when "
+                    "leading sum is strong — improve magnitude_hit without hurting direction."
                 ),
                 "do_instead": (
                     "Keep direction rule; for wins with magnitude MISS, shrink magnitude "
                     "confidence when |total_score| is modest (|score|<4)."
                 ),
                 "wrong_if": (
-                    "Wrong if magnitude_hit stays low even after shrinking confidence "
+                    "Wrong if magnitude_hit stays low after shrinking confidence "
                     "on modest scores across 5+ wins."
                 ),
                 "mag_hit": mag_hit,
@@ -94,7 +93,7 @@ def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
                 "when": f"Predicted {pred} but market went {act} (pct={pct}, score={score}).",
                 "ask": (
                     "Which factor family drove the score? "
-                    "Missing Channel-2 source, misweighted macro print, or regime misread?"
+                    "Missing source, misweighted macro, or regime misread?"
                 ),
                 "experiment": (
                     "Next time score sign agrees with this failed day, require one "
@@ -105,8 +104,8 @@ def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
                     "cut conviction and prefer flat/mild over strong direction."
                 ),
                 "wrong_if": (
-                    "Wrong if applying this hedge reduces direction accuracy over the "
-                    "next 10 graded runs."
+                    "Wrong if applying this hedge reduces direction accuracy over "
+                    "the next 10 graded runs."
                 ),
                 "mag_hit": mag_hit,
             })
@@ -182,42 +181,31 @@ def _rebuild_mutable_policy(runs: list[dict], hypos: list[dict], promoted: list[
     active_block = "\n\n".join(active_parts) if active_parts else "_(no active lessons)_"
     exp_block = "\n".join(open_exp) if open_exp else "_(none)_"
 
-    body = f"""---
-status: living_policy
-updated: {today}
-source: src/learn_cycle.py
-note: Injected into PREDICT via memory. Core SCORES format unchanged.
----
-
-# Mutable policy (standing adjustments)
-
-Last learn_cycle: **{today}**. Graded window direction accuracy: **{acc}** (n={n}).
-Promoted this cycle: {len(promoted)} lesson file(s).
-
-## Active adjustments (from promoted lessons)
-
-{active_block}
-
-## Open experiments (test on next sessions)
-
-{exp_block}
-
-## Win mining (do not only learn from losses)
-
-Wins in window: **{len(wins)}**. For wins with magnitude miss, prefer milder bands when |score|<4.
-Losses in window: **{len(losses)}**. Prefer confirmation hedge when score sign conflicts with breadth/futures.
-
-## Methodology checklist (answer in MEMORY_CONFIRM)
-
-1. Did any open experiment apply today?
-2. Are we missing a factor that would have flipped a recent loss?
-3. Are we overweighting one bucket (double-count risk)?
-4. Should weather stance for beta/short/size change after the last 5 days?
-
-## Retired / falsified
-
-_(append when a falsifier triggers)_
-"""
+    body = (
+        f"---\n"
+        f"status: living_policy\n"
+        f"updated: {today}\n"
+        f"source: src/learn_cycle.py\n"
+        f"note: Injected into PREDICT via memory. Core SCORES format unchanged.\n"
+        f"---\n\n"
+        f"# Mutable policy (standing adjustments)\n\n"
+        f"Last learn_cycle: **{today}**. Graded window direction accuracy: **{acc}** (n={n}).\n"
+        f"Promoted this cycle: {len(promoted)} lesson file(s).\n\n"
+        f"## Active adjustments (from promoted lessons)\n\n"
+        f"{active_block}\n\n"
+        f"## Open experiments (test on next sessions)\n\n"
+        f"{exp_block}\n\n"
+        f"## Win mining (do not only learn from losses)\n\n"
+        f"Wins in window: **{len(wins)}**. For wins with magnitude miss, prefer milder bands when |score|<4.\n"
+        f"Losses in window: **{len(losses)}**. Prefer confirmation hedge when score conflicts with breadth/futures.\n\n"
+        f"## Methodology checklist (answer in MEMORY_CONFIRM)\n\n"
+        f"1. Did any open experiment apply today?\n"
+        f"2. Are we missing a factor that would have flipped a recent loss?\n"
+        f"3. Are we overweighting one bucket (double-count risk)?\n"
+        f"4. Should weather stance for beta/short/size change after the last 5 days?\n\n"
+        f"## Retired / falsified\n\n"
+        f"_(append when a falsifier triggers)_\n"
+    )
     MUTABLE.write_text(body, encoding="utf-8")
     print(f"[learn] wrote {MUTABLE}")
 
@@ -244,9 +232,7 @@ def _weather_proposals(runs: list[dict]) -> None:
             "risk_off_score": -1.0,
         }
     elif acc >= 0.65:
-        proposals["notes"].append(
-            "Accuracy healthy: no forced threshold change."
-        )
+        proposals["notes"].append("Accuracy healthy: no forced threshold change.")
     PROPOSALS.write_text(json.dumps(proposals, indent=2), encoding="utf-8")
     print(f"[learn] weather proposals -> {PROPOSALS}")
 
