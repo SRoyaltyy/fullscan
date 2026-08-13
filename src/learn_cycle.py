@@ -4,15 +4,14 @@ Sources mined:
   - 03_scoreboard/scoreboard.json     general + every sector:* topic
   - 03_scoreboard/news_actions_scoreboard.json
   - 02_lessons/candidate/*            general + sector_* lessons
-  - 01_daily/general + sectors reflects (light scan for open issues)
 
 Writes:
   - 02_lessons/hypotheses/<scope>_*.md
   - 02_lessons/active/ (promote complete candidates)
-  - 00_grounding/mutable_policy.md   (injected by general + sector predict)
+  - 00_grounding/mutable_policy.md
   - 00_grounding/weather_rules_proposals.json
-
-Core SCORES / sector output formats UNCHANGED.
+  - 03_scoreboard/LEARNINGS.md              (human digest, always latest)
+  - 01_daily/<date>_learnings.md            (dated copy)
 
 CLI: python -m src.learn_cycle [--lookback 15]
 """
@@ -36,6 +35,7 @@ HYPO_DIR = ROOT / "02_lessons" / "hypotheses"
 CAND_DIR = Path(config.LESSONS_CANDIDATE)
 ACTIVE_DIR = Path(config.LESSONS_ACTIVE)
 NEWS_SB = ROOT / "03_scoreboard" / "news_actions_scoreboard.json"
+LEARNINGS = ROOT / "03_scoreboard" / "LEARNINGS.md"
 DAILY = ROOT / "01_daily"
 
 
@@ -47,7 +47,6 @@ def _read(p: Path | str) -> str:
 
 
 def _all_graded(lookback_per_topic: int = 15) -> list[dict]:
-    """Graded runs from scoreboard: general + every sector topic."""
     board = scoreboard.load()
     by_topic: dict[str, list] = defaultdict(list)
     for r in board.get("runs", []):
@@ -143,7 +142,6 @@ def _hypotheses_from_runs(runs: list[dict]) -> list[dict]:
 
 
 def _hypotheses_from_news() -> list[dict]:
-    """Mine news_actions_scoreboard for weak event families / sides."""
     if not NEWS_SB.exists():
         return []
     try:
@@ -156,7 +154,6 @@ def _hypotheses_from_news() -> list[dict]:
     close_1d = summary.get("close_1d") or {}
     suggestions = data.get("suggestions") or []
 
-    # Aggregate by event family
     by_event: dict[str, list] = defaultdict(list)
     for s in suggestions:
         events = s.get("events") or ["unknown"]
@@ -167,7 +164,6 @@ def _hypotheses_from_news() -> list[dict]:
 
     for ev, rows in sorted(by_event.items(), key=lambda x: -len(x[1])):
         n = len(rows)
-        # prefer close_1d style if fields present
         rets = []
         for s in rows:
             r = s.get("ret_1d")
@@ -180,7 +176,6 @@ def _hypotheses_from_news() -> list[dict]:
                     pass
         avg = sum(rets) / len(rets) if rets else None
         buys = [s for s in rows if str(s.get("side", "")).lower() == "buy"]
-        sells = [s for s in rows if str(s.get("side", "")).lower() in ("sell", "short")]
 
         if avg is not None and avg < 0 and len(buys) >= 3:
             hypos.append({
@@ -225,7 +220,6 @@ def _hypotheses_from_news() -> list[dict]:
                 ),
             })
 
-    # Global news quality
     wr = close_1d.get("win_rate")
     if wr is not None and wr < 55 and close_1d.get("n", 0) >= 20:
         hypos.append({
@@ -304,7 +298,6 @@ def _promote_complete_candidates(min_market: int = 1) -> list[str]:
 
 
 def _topic_accuracy(runs: list[dict]) -> list[tuple[str, int, int, str]]:
-    """Return list of (topic, hits, n, acc_str)."""
     by: dict[str, list] = defaultdict(list)
     for r in runs:
         by[r.get("topic") or "general"].append(r)
@@ -317,6 +310,157 @@ def _topic_accuracy(runs: list[dict]) -> list[tuple[str, int, int, str]]:
     return rows
 
 
+def _workflow_impact_map() -> str:
+    """How learnings touch each daily workflow."""
+    return (
+        "### General market predict (`run_predict` / daily pipeline)\n"
+        "- Loads `mutable_policy.md` + `02_lessons/active/*` via `memory.prediction_context()`.\n"
+        "- Must answer methodology checklist in MEMORY_CONFIRM.\n"
+        "- Ops lessons (missing predict file) change grading, not B0–B7 math.\n"
+        "- Macro / geo / regime lessons change how Channel-2 evidence is weighted in narrative.\n\n"
+        "### Per-sector predict (`run_sector_predict` / sector daily)\n"
+        "- Loads the **same** `mutable_policy.md` via `sector_memory` (filter lines for this sector + general).\n"
+        "- Sector-specific active lessons (XLB temper, XLK geo, XLE Hormuz, staples/CPI) apply to S0–S4 scoring judgment.\n"
+        "- Weak sectors in accuracy table → extra caution, milder bands, demand confirming tape.\n\n"
+        "### Sector / general outcome + reflect\n"
+        "- Outcomes grade hits; reflect writes new candidates.\n"
+        "- Next learn_cycle mines those candidates again (promote if complete).\n\n"
+        "### News parse + news actions\n"
+        "- Hypotheses under scope `news` steer event-family conviction and ticker mapping.\n"
+        "- Prefer 1d close quality over ever-touch MFE when ranking event edges.\n"
+        "- Does not change SCORES format; changes which edges deserve size.\n\n"
+        "### Label + Weather + Join\n"
+        "- `weather_rules_proposals.json` may suggest threshold nudges (not auto-applied).\n"
+        "- Label membership unchanged; weather stances may tighten if proposals are accepted later.\n"
+        "- Join/match inherits weather; better weather → cleaner favorable/hostile books.\n\n"
+        "### HIT board / report card\n"
+        "- Still pure arithmetic over scoreboard; learn_cycle does not rewrite history.\n"
+        "- Accuracy-by-topic in this file should match HIT board trends over time.\n"
+    )
+
+
+def _write_learnings_report(
+    runs: list[dict],
+    hypos: list[dict],
+    promoted: list[str],
+    news_n: int,
+) -> Path:
+    today = datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    now = datetime.now(ZoneInfo(config.TZ)).isoformat()
+
+    by_scope: dict[str, list] = defaultdict(list)
+    for h in hypos:
+        by_scope[h["scope"]].append(h)
+
+    wins = sum(1 for h in hypos if h["kind"] == "win")
+    losses = sum(1 for h in hypos if h["kind"] == "loss")
+
+    L = [
+        f"# Learnings report — {today}",
+        "",
+        f"Generated: **{now}** by `src/learn_cycle.py`.",
+        "",
+        "This is the human-readable digest of what the bot **actually learned** this cycle: "
+        "graded evidence, hypotheses (wins and losses), promoted standing rules, and "
+        "**how that changes every daily workflow**.",
+        "",
+        "Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.",
+        "",
+        "---",
+        "",
+        "## 1. Snapshot",
+        "",
+        f"| Item | Value |",
+        f"|------|-------|",
+        f"| Graded runs mined | {len(runs)} |",
+        f"| Hypotheses written | {len(hypos)} (wins={wins}, losses={losses}) |",
+        f"| News hypotheses | {news_n} |",
+        f"| Lessons promoted to active | {len(promoted)} |",
+        f"| Active lesson files now | {len(list(ACTIVE_DIR.glob('*.md')))} |",
+        "",
+        "## 2. Accuracy by topic (evidence this cycle learned from)",
+        "",
+        "| Topic | Direction HIT% | hits/n | Read |",
+        "|-------|----------------|--------|------|",
+    ]
+    for topic, hits, n, acc in _topic_accuracy(runs):
+        rate = hits / n if n else 0
+        read = "ok" if rate >= 0.6 else ("thin/weak" if n < 5 else "weak — priority")
+        L.append(f"| {topic} | {acc} | {hits}/{n} | {read} |")
+
+    L += [
+        "",
+        "## 3. What we learned (by scope)",
+        "",
+        "Each scope lists recent win and loss hypotheses: the **counterfactual ask**, "
+        "the **experiment** to run next, and the **policy candidate** (do instead).",
+        "",
+    ]
+    for scope, hs in sorted(by_scope.items()):
+        w = sum(1 for h in hs if h["kind"] == "win")
+        lo = sum(1 for h in hs if h["kind"] == "loss")
+        L.append(f"### `{scope}` — {w} wins, {lo} losses")
+        L.append("")
+        for h in hs[-5:]:
+            L.append(f"#### {h['kind'].upper()} — {h['date']}")
+            L.append(f"- **When:** {h['when']}")
+            L.append(f"- **Ask:** {h['ask']}")
+            L.append(f"- **Experiment:** {h['experiment']}")
+            L.append(f"- **Do instead:** {h['do_instead']}")
+            L.append(f"- **Wrong if:** {h['wrong_if']}")
+            L.append("")
+
+    L += [
+        "## 4. Promoted standing rules (this cycle)",
+        "",
+    ]
+    if promoted:
+        for p in promoted[:40]:
+            L.append(f"- `{Path(p).name}`")
+        if len(promoted) > 40:
+            L.append(f"- … and {len(promoted) - 40} more")
+    else:
+        L.append("_No new promotions this cycle (candidates incomplete or already active)._")
+
+    L += [
+        "",
+        "Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.",
+        "",
+        "## 5. How these learnings affect daily workflows",
+        "",
+        _workflow_impact_map(),
+        "## 6. Concrete operating rules for tomorrow",
+        "",
+        "1. **General:** Follow active ops + macro lessons; apply open experiments when setup matches.\n"
+        "2. **Weak sectors** (HIT% soft in §2): default to milder magnitude; demand ETF tape confirmation.\n"
+        "3. **Strong general / solid sectors:** Do not loosen risk controls only because recent hits look good.\n"
+        "4. **News:** Prefer event families with clean 1d close evidence; do not size on MFE alone.\n"
+        "5. **Weather/join:** Review `weather_rules_proposals.json` before accepting threshold changes.\n"
+        "6. **All predicts:** Core output blocks stay fixed; only judgment/weights/search emphasis change.\n",
+        "",
+        "## 7. Files touched",
+        "",
+        "| File | Role |",
+        "|------|------|",
+        "| `03_scoreboard/LEARNINGS.md` | This digest (latest) |",
+        f"| `01_daily/{today}_learnings.md` | Dated copy |",
+        "| `00_grounding/mutable_policy.md` | Injected into general + sector predict |",
+        "| `02_lessons/hypotheses/*` | Per-event experiments |",
+        "| `02_lessons/active/*` | Standing rules |",
+        "| `00_grounding/weather_rules_proposals.json` | Optional weather threshold deltas |",
+        "",
+    ]
+    text = "\n".join(L)
+    LEARNINGS.parent.mkdir(parents=True, exist_ok=True)
+    LEARNINGS.write_text(text, encoding="utf-8")
+    DAILY.mkdir(parents=True, exist_ok=True)
+    dated = DAILY / f"{today}_learnings.md"
+    dated.write_text(text, encoding="utf-8")
+    print(f"[learn] wrote {LEARNINGS}")
+    print(f"[learn] wrote {dated}")
+    return LEARNINGS
+
+
 def _rebuild_mutable_policy(
     runs: list[dict], hypos: list[dict], promoted: list[str]
 ) -> None:
@@ -327,7 +471,8 @@ def _rebuild_mutable_policy(
             continue
         text = _read(p).strip()
         if text:
-            active_parts.append(f"### {p.name}\n{text[:1000]}")
+            # compress for prompt: keep front matter + first rule chunk only
+            active_parts.append(f"### {p.name}\n{text[:800]}")
 
     by_scope: dict[str, list] = defaultdict(list)
     for h in hypos:
@@ -337,9 +482,8 @@ def _rebuild_mutable_policy(
     for scope, hs in sorted(by_scope.items()):
         wins = sum(1 for h in hs if h["kind"] == "win")
         losses = sum(1 for h in hs if h["kind"] == "loss")
-        recent = hs[-3:]
         lines = [f"### scope `{scope}` — wins={wins} losses={losses}"]
-        for h in recent:
+        for h in hs[-3:]:
             lines.append(f"- **{h['kind']} {h['date']}:** {h['do_instead']}")
         scope_blocks.append("\n".join(lines))
 
@@ -364,23 +508,25 @@ def _rebuild_mutable_policy(
         f"source: src/learn_cycle.py\n"
         f"covers: general, sectors, news\n"
         f"note: Injected into general + sector PREDICT. Core output formats unchanged.\n"
+        f"see_also: 03_scoreboard/LEARNINGS.md\n"
         f"---\n\n"
         f"# Mutable policy (all workflows)\n\n"
-        f"Last learn_cycle: **{today}**. Promoted: {len(promoted)} lesson file(s).\n\n"
+        f"Last learn_cycle: **{today}**. Promoted: {len(promoted)}. "
+        f"Human digest: `03_scoreboard/LEARNINGS.md`.\n\n"
         f"## Accuracy by topic (graded window)\n\n"
         f"{acc_block}\n\n"
-        f"## Active adjustments (promoted lessons)\n\n"
+        f"## Active adjustments (promoted lessons, truncated)\n\n"
         f"{active_block}\n\n"
-        f"## Per-scope DO-INSTEAD (from hypotheses)\n\n"
+        f"## Per-scope DO-INSTEAD\n\n"
         f"{scope_block}\n\n"
         f"## Open experiments\n\n"
         f"{exp_block}\n\n"
         f"## Methodology checklist (MEMORY_CONFIRM)\n\n"
-        f"1. Did any open experiment for THIS scope (general/sector/news) apply today?\n"
-        f"2. Missing factor that would have flipped a recent loss in this scope?\n"
+        f"1. Did any open experiment for THIS scope apply today?\n"
+        f"2. Missing factor that would have flipped a recent loss?\n"
         f"3. Overweighting one bucket / double-counting one headline?\n"
-        f"4. For sectors: was S0 shared macro right but S1 sector factors wrong (or vice versa)?\n"
-        f"5. For news: is event family still earning its weight on 1d close, not only MFE?\n\n"
+        f"4. Sectors: S0 macro vs S1 sector factors — which failed?\n"
+        f"5. News: event family still earning weight on 1d close?\n\n"
         f"## Retired / falsified\n\n"
         f"_(append when a falsifier triggers)_\n"
     )
@@ -442,7 +588,8 @@ def run(lookback: int = 15) -> None:
 
     _rebuild_mutable_policy(runs, hypos, promoted)
     _weather_proposals(runs)
-    print("[learn] done — general + sector predict load mutable_policy via memory")
+    _write_learnings_report(runs, hypos, promoted, news_n=len(news_hypos))
+    print("[learn] done — see 03_scoreboard/LEARNINGS.md")
 
 
 def main() -> None:
