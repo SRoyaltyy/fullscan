@@ -1,0 +1,216 @@
+{
+  "version": 2,
+  "purpose": "Deep labeling registry — every stock in the Finviz universe is decomposed into stable segment tags ('what is it?'). Bin edges live HERE, not in code, so lessons/Deepthink can retune thresholds without touching src/segments.py. Backtesting is out of scope at this stage: LABELS ONLY. Labels are consumed by the weather engine (src/weather.py + 00_grounding/weather_rules.json) and later by the join/backtest.",
+  "segment_id_format": "<family>:<value>   e.g. sector:Technology, size:mid, beta:high",
+  "data_source": "newest data/exports/finviz_<date>.csv (Finviz Elite weekday export), fallback data/finviz/latest.csv",
+  "families": {
+    "sector": {
+      "kind": "categorical",
+      "source": "Sector",
+      "speed": "slow",
+      "note": "11 Finviz sectors, exact strings"
+    },
+    "industry": {
+      "kind": "categorical",
+      "source": "Industry",
+      "speed": "slow",
+      "note": "Finviz industry, exact strings (~150)"
+    },
+    "size": {
+      "kind": "bins",
+      "source": "Market Cap",
+      "source_unit": "millions USD",
+      "scale": 1000000,
+      "speed": "slow",
+      "bins": [
+        ["micro", null, 300000000],
+        ["small", 300000000, 2000000000],
+        ["mid", 2000000000, 10000000000],
+        ["large", 10000000000, 200000000000],
+        ["mega", 200000000000, null]
+      ],
+      "note": "standard cap bands; micro/small ~ Russell 2000 territory"
+    },
+    "index": {
+      "kind": "index_tags",
+      "source": "Index",
+      "speed": "slow",
+      "map": {"S&P 500": "sp500", "NDX": "ndx", "DJIA": "djia", "RUT": "rut"},
+      "none_value": "none",
+      "note": "multi-membership allowed (e.g. 'NDX, S&P 500'); pipe-joined"
+    },
+    "geo": {
+      "kind": "geo",
+      "source": "Country",
+      "speed": "slow",
+      "domestic": "USA",
+      "note": "USA -> geo:US; anything else -> geo:ADR-<Country>"
+    },
+    "beta": {
+      "kind": "bins",
+      "source": "Beta",
+      "speed": "slow",
+      "bins": [
+        ["low", null, 0.8],
+        ["mid", 0.8, 1.3],
+        ["high", 1.3, null]
+      ],
+      "note": "market-mechanical sensitivity; NaN -> unknown"
+    },
+    "short": {
+      "kind": "bins",
+      "source": "Short Float",
+      "speed": "slow",
+      "bins": [
+        ["low", null, 5.0],
+        ["mid", 5.0, 15.0],
+        ["high", 15.0, 25.0],
+        ["extreme", 25.0, null]
+      ],
+      "note": "crowding; high/extreme are REGIME MULTIPLIERS (squeeze vs stress), never a flat bullish tag"
+    },
+    "liq": {
+      "kind": "computed_bins",
+      "source": "Price * Average Volume",
+      "source_unit": "Average Volume is thousands of shares",
+      "avg_volume_scale": 1000,
+      "speed": "slow",
+      "bins": [
+        ["low", null, 10000000],
+        ["mid", 10000000, 100000000],
+        ["high", 100000000, null]
+      ],
+      "note": "dollar average daily volume; low-liquidity names gap on news"
+    },
+    "rvol": {
+      "kind": "bins",
+      "source": "Relative Volume",
+      "speed": "fast",
+      "bins": [
+        ["quiet", null, 0.8],
+        ["normal", 0.8, 1.5],
+        ["hot", 1.5, null]
+      ],
+      "note": "participation TODAY vs its own norm; fast-moving label"
+    },
+    "vol": {
+      "kind": "computed_bins",
+      "source": "Average True Range / Price * 100",
+      "speed": "slow",
+      "bins": [
+        ["low", null, 2.0],
+        ["mid", 2.0, 5.0],
+        ["high", 5.0, null]
+      ],
+      "note": "ATR% of price = the name's own volatility regime"
+    },
+    "profit": {
+      "kind": "bins",
+      "source": "Profit Margin",
+      "speed": "slow",
+      "bins": [
+        ["no", null, 0.0],
+        ["thin", 0.0, 10.0],
+        ["yes", 10.0, null]
+      ],
+      "note": "profitability; unprofitable names are a different animal in risk-off"
+    },
+    "lev": {
+      "kind": "bins_signed",
+      "source": "Total Debt/Equity",
+      "speed": "slow",
+      "negative_value": "neg_equity",
+      "bins": [
+        ["low", null, 0.3],
+        ["mid", 0.3, 1.0],
+        ["high", 1.0, null]
+      ],
+      "note": "leverage amplifies whatever regime is running"
+    },
+    "style": {
+      "kind": "style_rule",
+      "speed": "slow",
+      "growth_when": "Sales Year Over Year TTM >= 15 OR EPS Growth Next Year >= 20",
+      "value_when": "Forward P/E <= 15 AND Sales Year Over Year TTM < 10",
+      "else_value": "blend",
+      "note": "coarse growth/value/blend proxy from Finviz fields only"
+    },
+    "mom": {
+      "kind": "trend_rule",
+      "speed": "fast",
+      "rule": "above 50DMA and above 200DMA -> uptrend; below both -> downtrend; else mixed",
+      "note": "SMA columns are % distance from the average, so sign is the test"
+    },
+    "ext": {
+      "kind": "extension_rule",
+      "speed": "fast",
+      "extreme_when": "Performance (Week) >= 100 OR 50-Day Simple Moving Average >= 40",
+      "extended_when": "Performance (Week) >= 40 OR Relative Strength Index (14) >= 75",
+      "washed_when": "Performance (Month) <= -25 OR Relative Strength Index (14) <= 30",
+      "else_value": "neutral",
+      "note": "parabolic / overbought / washed-out state; precedence extreme > extended > washed"
+    },
+    "range": {
+      "kind": "fib_52w",
+      "source": "52-Week High, 52-Week Low",
+      "speed": "slow",
+      "zones": [
+        ["deep_low", null, 0.236],
+        ["low", 0.236, 0.382],
+        ["mid", 0.382, 0.618],
+        ["high", 0.618, 0.786],
+        ["top", 0.786, null]
+      ],
+      "breakout_value": "breakout",
+      "note": "x = (P - L52)/(H52 - L52); Finviz stores 52w fields as % distances so L52=P/(1+lo), H52=P/(1+hi); breakout when price >= H52"
+    },
+    "earn": {
+      "kind": "earnings_proximity",
+      "source": "Earnings Date",
+      "speed": "fast",
+      "values": ["past", "today", "this_week", "later"],
+      "note": "earnings proximity GATE, not a direction tag; past = reported >1 day ago (see earnsurp for how it went)"
+    },
+    "earnsurp": {
+      "kind": "bins",
+      "source": "EPS Surprise",
+      "speed": "slow",
+      "bins": [
+        ["big_miss", null, -20.0],
+        ["miss", -20.0, -5.0],
+        ["inline", -5.0, 5.0],
+        ["beat", 5.0, 20.0],
+        ["big_beat", 20.0, null]
+      ],
+      "note": "most recent earnings performance vs consensus; post-earnings drift candidate"
+    },
+    "analyst": {
+      "kind": "bins",
+      "source": "Analyst Recom",
+      "speed": "slow",
+      "bins": [
+        ["strong_buy", null, 2.0],
+        ["buy", 2.0, 2.5],
+        ["hold", 2.5, 3.5],
+        ["sell", 3.5, null]
+      ],
+      "note": "Finviz 1-5 scale (1=strong buy .. 5=sell); level only, upgrades/downgrades need day-over-day deltas"
+    },
+    "themes": {
+      "kind": "keyword_flags",
+      "source": "regex over Industry + Finviz_Description + News Title",
+      "speed": "fast",
+      "patterns": {
+        "nuclear_smr": "nuclear|smr|small modular|uranium|reactor|\\boklo\\b|cameco",
+        "optics_transceiver": "optical|transceiver|photonic|coherent optics|lumentum|fiber.?optic|laser diode",
+        "data_center_power": "data.?center|datacenter|transformer|grid congestion|electrification|ge vernova|vertiv|power shortage",
+        "hbm_memory": "\\bhbm\\b|high.?bandwidth|dram|nand|memory shortage|sk hynix",
+        "copper_metals": "\\bcopper\\b|lithium|rare earth|critical mineral|cobalt",
+        "ai_capex": "ai capex|hyperscaler|ai infrastructure|gpu cluster|nvidia.*order|broadcom.*ai|artificial intelligence",
+        "defense": "\\bdefense\\b|missile|naval nuclear|pentagon|rearmament|munition",
+        "semiconductor_equip": "wafer|euv|lithography|semiconductor equipment|asml|applied materials"
+      },
+      "note": "theme:<name> tags; v0 keyword overlay — Deepthink proposes new patterns, they land HERE"
+    }
+  }
+}

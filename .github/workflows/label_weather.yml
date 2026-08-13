@@ -1,0 +1,51 @@
+name: "Label + Weather (daily)"
+
+# Phase A + B of the label → regime → join design.
+#   src/segments.py — labels every stock in the Finviz Elite export
+#                     ("what is it?") into data/universe/
+#   src/weather.py  — scores today's regime for every label family
+#                     ("is today good for that kind of thing?") into
+#                     01_daily/weather/, the daily backtestable record.
+# Runs after Collect: ALL (14:00 UTC weekdays) and the daily predict
+# pipeline (11:34 UTC) so both the fresh Finviz export and the day's
+# general/sector predicts exist.
+
+on:
+  schedule:
+    - cron: "17 15 * * 1-5"   # weekdays 15:17 UTC
+  workflow_dispatch:
+
+jobs:
+  label-weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch fresh Finviz Elite export
+        env:
+          DATABASE_URL:    ${{ secrets.DATABASE_URL }}
+          FINVIZ_EMAIL:    ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+        run: python -m collectors.finviz_financials
+
+      - name: Label the universe (Step A)
+        run: python -m src.segments
+
+      - name: Score the weather (Step B)
+        run: python -m src.weather
+
+      - name: Commit outputs
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/universe data/exports 01_daily/weather
+          git add "01_daily/*_universe.md" || true
+          git commit -m "auto: universe labels + weather [$(date -u +%F)]" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main

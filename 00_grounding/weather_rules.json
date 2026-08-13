@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "purpose": "Weather engine rule table — maps daily market signals (general predict, sector board, Channel 1, event scanner) to a stance for every label family: favorable | neutral | hostile | unknown. THRESHOLDS AND RATIONALE TEXT LIVE HERE, so lessons can retune the weather without touching src/weather.py. Rule logic (which signals combine how) lives in code and should change rarely.",
+  "stance_vocabulary": ["favorable", "neutral", "hostile", "unknown"],
+  "thresholds": {
+    "risk_on_score": 4.0,
+    "risk_off_score": -4.0,
+    "sector_favorable_score": 8.0,
+    "sector_hostile_score": -8.0,
+    "dollar_strong_score": -0.5,
+    "vix_spike_ratio": 1.10,
+    "vix_falling_ratio": 0.90,
+    "extreme_greed": 75,
+    "extreme_fear": 25,
+    "event_min_impact": 3,
+    "china_event_min_impact": 4
+  },
+  "signal_notes": {
+    "risk": "general predict total_score vs risk_on/off thresholds",
+    "yields": "'Bond yields' factor score from general predict md: negative = yields rising = hostile for duration/junk, positive = yields falling",
+    "dollar_oil": "'Oil & dollar' factor score: negative = dollar and/or oil bid = tight conditions, bad for small caps and EM-ish beta",
+    "vix_ratio": "Channel 1 vix.ratio (spot vs its own recent norm): > spike threshold = vol shock, < falling threshold = vol bleeding lower",
+    "fear_greed": "Channel 1 fear_greed.value: extreme greed = speculative froth (junk rallies, reversal risk), extreme fear = washout",
+    "regime_corr": "Channel 1 yield_spx_corr.corr_5d: negative = 'bad news is good news' regime (weak data rallies), positive = 'good news is good news'"
+  },
+  "family_notes": {
+    "short": "short:high and short:extreme are REGIME MULTIPLIERS — favorable means 'squeeze fuel if tape rises', hostile means 'stress amplifier if tape falls', never a flat bullish tag",
+    "lev": "leverage amplifies the running regime in both directions",
+    "earn": "proximity is a GATE (event risk), not a direction — the weather file lists it under gates, not stances",
+    "industry_themes_geo": "industry and theme stances are not scored daily in v1 (no per-industry predict exists yet); geo is only scored when the event scanner flags a region"
+  }
+}
