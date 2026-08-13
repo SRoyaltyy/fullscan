@@ -1,21 +1,17 @@
 name: Stock Book (unified)
 
-# Compose join + sector bias + general regime + news actions into
-# multi-horizon BUY/SELL ticker lists.
-
 on:
   workflow_dispatch:
     inputs:
       date:
-        description: "Join/weather date YYYY-MM-DD (empty = latest)"
+        description: "Join date YYYY-MM-DD (empty = latest)"
         required: false
         default: ""
       top:
-        description: "Top N buys and sells per horizon"
+        description: "Top N buys/sells per horizon"
         required: false
         default: "25"
   schedule:
-    # After label_weather (~15:17) and sector/news typically available
     - cron: "45 16 * * 1-5"
 
 permissions:
@@ -27,15 +23,12 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install
         run: pip install -r requirements.txt
-
-      - name: Build stock book
+      - name: Build stock book (1d 3d 1w 2w 1m)
         run: |
           set -e
           DATE="${{ github.event.inputs.date }}"
@@ -46,15 +39,12 @@ jobs:
           else
             python -m src.stock_book --top "$TOP"
           fi
-          echo "======== stock book ========"
-          f=$(ls -1t 01_daily/*_stock_book.md 2>/dev/null | head -1)
-          if [ -n "$f" ]; then head -100 "$f"; fi
-
-      - name: Commit
+          head -80 01_daily/*_stock_book.md 2>/dev/null | tail -80 || true
+      - name: Commit book
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           git add 01_daily/*_stock_book.md data/stock_book/ || true
-          git commit -m "auto: unified stock book" || echo "No changes"
+          git commit -m "auto: stock book (1d/3d/1w/2w/1m)" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main
