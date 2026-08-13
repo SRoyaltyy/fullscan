@@ -127,6 +127,13 @@ jobs:
         run: |
           python -m src.sector_board ${DATE:+--date "$DATE"}
 
+      - name: Horizon grader (grade matured sector horizon calls)
+        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all'
+        env:
+          DATE: ${{ github.event.inputs.run_date }}
+        run: |
+          python -m src.horizon_grade ${DATE:+--date "$DATE"}
+
       - name: Commit
         if: steps.stage.outputs.plan != 'none'
         run: |

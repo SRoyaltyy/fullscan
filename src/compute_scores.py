@@ -54,6 +54,44 @@ def parse_scores(text: str) -> dict:
     return out
 
 
+HORIZON_KEYS = {"HORIZON_3D": 3, "HORIZON_1W": 5, "HORIZON_2W": 10,
+                "HORIZON_1M": 21}
+
+_HORIZON_RE = re.compile(
+    r"^\s*(up|down|flat)\s*[:|/]\s*(flat|mild|notable|severe)\s*[:|/]\s*"
+    r"(\d(?:\.\d+)?|0?\.\d+|1\.0)\s*$", re.I)
+
+
+def parse_horizon_calls(scores: dict) -> dict:
+    """Read multi-timeframe calls from a parsed SCORES block.
+
+    Expected lines inside the block:
+        HORIZON_3D: up:mild:0.55
+        HORIZON_1W: down:notable:0.60
+        HORIZON_2W: flat:flat:0.50
+        HORIZON_1M: up:notable:0.55
+    Returns {key: {"trading_days": n, "direction": ..., "magnitude_band": ...,
+    "confidence": float}}; missing/malformed lines are skipped (never block
+    the daily decision — horizons are recorded, not graded today)."""
+    out = {}
+    for key, days in HORIZON_KEYS.items():
+        raw = scores.get(key)
+        if not isinstance(raw, str):
+            continue
+        m = _HORIZON_RE.match(raw.strip())
+        if not m:
+            continue
+        try:
+            conf = max(0.0, min(1.0, float(m.group(3))))
+        except ValueError:
+            conf = None
+        out[key] = {"trading_days": days,
+                    "direction": m.group(1).lower(),
+                    "magnitude_band": m.group(2).lower(),
+                    "confidence": conf}
+    return out
+
+
 def compute(scores: dict) -> dict:
     """Deterministic final scoring. Returns full decision record."""
     comps = {}

@@ -14,7 +14,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import compute_sector_scores, config, deepseek_client, fetch_channel1, scoreboard
+from . import compute_scores, compute_sector_scores, config, deepseek_client, fetch_channel1, scoreboard
 from .sector_engine import etf_relative_snapshot, search_query_bundle
 from .sector_memory import prediction_context, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, amp_damp_table, taxonomy_list, validate
@@ -64,7 +64,14 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
         + "\n".join(f"- {q}" for q in seeds)
         + "\n\nExecute the shared method + THIS sector layer now. "
           "Specialize S1 to the spine factors. "
-          "MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block."
+          "MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block. "
+          "In the SECTOR_SCORES block, also include these four "
+          "multi-timeframe outlook lines for THIS sector's ETF "
+          "(format dir:band:confidence):\n"
+          "HORIZON_3D: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
+          "HORIZON_1W: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
+          "HORIZON_2W: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
+          "HORIZON_1M: <up|down|flat>:<flat|mild|notable|severe>:<0-1>"
     )
 
     slug = _slug(sector)
@@ -85,6 +92,7 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
 
     scores = compute_sector_scores.parse_scores(text)
     decision = compute_sector_scores.compute(scores)
+    horizon_calls = compute_scores.parse_horizon_calls(scores)
 
     path = os.path.join(out_dir, f"{slug}_predict.md")
     with open(path, "w", encoding="utf-8") as fh:
@@ -115,6 +123,7 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
         "components": decision["components"],
         "leading_sum": decision["leading_sum"],
         "divergence_flagged": decision["divergence_flagged"],
+        "horizon_calls": horizon_calls,
         "sector": sector,
         "etf": SECTOR_ETFS.get(sector),
         "rubric": f"00_grounding/sectors/{slug}.md",

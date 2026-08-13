@@ -94,5 +94,20 @@ def tickers_for_bucket(
             sub = sub[mask]
     if min_mcap is not None:
         sub = sub[sub["market_cap"].fillna(0) >= min_mcap]
+    # Mixed-size selection: large caps carry liquidity, but smaller names
+    # carry the actual moves. Take the top of each cohort instead of purely
+    # the biggest tickers (the old behaviour — every event book ended up
+    # mega-cap only). Market Cap is in $M: big >= $10B, mid $1B-$10B,
+    # small $300M-$1B (Russell 2000 territory).
     sub = sub.sort_values("market_cap", ascending=False, na_position="last")
-    return sub["ticker"].head(max_names).tolist()
+    mc = sub["market_cap"].fillna(0)
+    cohorts = [sub[mc >= 10000], sub[(mc >= 1000) & (mc < 10000)],
+               sub[(mc >= 300) & (mc < 1000)]]
+    per = max(1, max_names // len(cohorts))
+    picked: list[str] = []
+    for c in cohorts:
+        picked += c["ticker"].head(per).tolist()
+    if len(picked) < max_names:  # backfill from the remaining pool, biggest first
+        rest = sub[~sub["ticker"].isin(picked)]["ticker"].tolist()
+        picked += rest[: max_names - len(picked)]
+    return picked[:max_names]

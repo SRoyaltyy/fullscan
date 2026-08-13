@@ -89,6 +89,7 @@ def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFram
         detail: dict[str, dict] = {}
         total = 0.0
         n_bull = n_bear = 0
+        n_known = 0
 
         for fam in WEATHER_FAMILIES:
             fst = stances.get(fam, {})
@@ -101,6 +102,7 @@ def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFram
                 if not votes or not fst:
                     detail[fam] = {"labels": raw, "stance": "unknown", "vote": 0}
                     continue
+                n_known += 1
                 vote = sum(votes) / len(votes)
                 stance = ("favorable" if vote > 0.25 else "hostile" if vote < -0.25
                           else "neutral")
@@ -110,6 +112,7 @@ def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFram
                     detail[fam] = {"labels": raw or "unknown", "stance": "unknown",
                                    "vote": 0}
                     continue
+                n_known += 1
                 st = fst.get(raw, {}).get("stance", "unknown")
                 vote = float(vote_map.get(st, 0))
                 detail[fam] = {"labels": raw, "stance": st, "vote": vote}
@@ -159,7 +162,11 @@ def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFram
             "sector": r.get("sector", ""),
             "industry": r.get("industry", ""),
             "size": r.get("size", ""),
+            "vol": r.get("vol", ""),
+            "beta": r.get("beta", ""),
             "total_score": round(total, 2),
+            "families_known": n_known,
+            "score_norm": round(total / n_known, 2) if n_known else 0.0,
             "bulls": n_bull,
             "bears": n_bear,
             "flags": "|".join(flags),
@@ -209,13 +216,49 @@ def write_report(date_str: str, ranked: pd.DataFrame, weather: dict,
          ""]
 
     L += ["## Top 30 — best fit for this environment", "",
-          "| # | Ticker | Score | Sector | Industry | Size | Bulls | Bears | Flags |",
-          "|---|---|---|---|---|---|---|---|---|"]
+          "(*Norm* = score ÷ families with known data — fairer comparison "
+          "for names Finviz covers poorly; the full CSV has both.)", "",
+          "| # | Ticker | Score | Norm | Sector | Industry | Size | Bulls | Bears | Flags |",
+          "|---|---|---|---|---|---|---|---|---|---|"]
     for i, (_, r) in enumerate(longs.head(30).iterrows(), 1):
-        L.append(f"| {i} | {r['Ticker']} | {r['total_score']:+.1f} | {r['sector']} "
+        L.append(f"| {i} | {r['Ticker']} | {r['total_score']:+.1f} | "
+                 f"{r['score_norm']:+.2f} | {r['sector']} "
                  f"| {r['industry']} | {r['size']} | {r['bulls']} | {r['bears']} "
                  f"| {r['flags'] or '—'} |")
     L.append("")
+
+    L += ["## Top 10 per size bucket — small caps compete with small caps", "",
+          "Large caps dominate the overall table because their data coverage "
+          "is complete (more families can vote). These cohort tables rank "
+          "names **within their own size class**, so a Russell-2000-style "
+          "small cap is compared to its actual peers.", ""]
+    for bucket in ("micro", "small", "mid", "large", "mega", "unknown"):
+        cohort = longs[longs["size"] == bucket].head(10)
+        if cohort.empty:
+            continue
+        L += [f"### size:{bucket}", "",
+              "| # | Ticker | Score | Norm | Industry | Bulls | Bears | Flags |",
+              "|---|---|---|---|---|---|---|---|"]
+        for i, (_, r) in enumerate(cohort.iterrows(), 1):
+            L.append(f"| {i} | {r['Ticker']} | {r['total_score']:+.1f} | "
+                     f"{r['score_norm']:+.2f} | {r['industry']} | {r['bulls']} "
+                     f"| {r['bears']} | {r['flags'] or '—'} |")
+        L.append("")
+
+    movers = longs[(longs["total_score"] >= 2)
+                   & ((longs["vol"] == "high") | (longs["beta"] == "high"))].head(15)
+    if not movers.empty:
+        L += ["## Movers — good fit AND actually moves", "",
+              "High score *and* high own-volatility (vol:high) or high market "
+              "sensitivity (beta:high). These are the names where a correct "
+              "environment call translates into real P&L.", "",
+              "| # | Ticker | Score | Size | vol | beta | Industry | Flags |",
+              "|---|---|---|---|---|---|---|---|"]
+        for i, (_, r) in enumerate(movers.iterrows(), 1):
+            L.append(f"| {i} | {r['Ticker']} | {r['total_score']:+.1f} | "
+                     f"{r['size']} | {r['vol']} | {r['beta']} | {r['industry']} "
+                     f"| {r['flags'] or '—'} |")
+        L.append("")
 
     L += ["## Bottom 15 — worst fit for this environment", "",
           "| # | Ticker | Score | Sector | Industry | Size | Bulls | Bears | Flags |",

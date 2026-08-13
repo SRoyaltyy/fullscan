@@ -25,6 +25,23 @@ _COMPILED = [
 ]
 
 
+def _load_size_map() -> dict[str, str]:
+    """Ticker -> size bucket from the newest universe membership file
+    (Step A labels). Empty dict when no membership exists yet."""
+    import glob as _glob
+
+    paths = sorted(_glob.glob("data/universe/????-??-??_membership.csv"))
+    if not paths:
+        return {}
+    try:
+        import pandas as pd
+
+        df = pd.read_csv(paths[-1], usecols=["Ticker", "size"])
+        return dict(zip(df["Ticker"].astype(str), df["size"].astype(str)))
+    except Exception:
+        return {}
+
+
 def match_families(title: str) -> list[EventFamily]:
     return [fam for fam, regs in _COMPILED if any(r.search(title or "") for r in regs)]
 
@@ -145,7 +162,7 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             tickers = []
             if not soft and fw.keep in ("keep", "conditional"):
                 tickers = tickers_for_bucket(
-                    edge.bucket, universe=universe, max_names=6, min_mcap=1000,
+                    edge.bucket, universe=universe, max_names=6, min_mcap=300,
                 )
 
             edge_actions.append({
@@ -193,6 +210,12 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             "sell_score": round(rec["sell_score"], 2),
         })
     ranked.sort(key=lambda x: -abs(x["net"]))
+
+    # Annotate with size labels from the universe membership (Step A labels)
+    # so the book shows which suggestions are small caps vs mega caps.
+    sizes = _load_size_map()
+    for rec in ranked:
+        rec["size"] = sizes.get(rec["ticker"], "?")
 
     return {
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
@@ -267,7 +290,8 @@ def to_markdown(report: dict) -> str:
     lines.append("## Compact ticker book")
     for rec in (report.get("ticker_actions") or [])[:35]:
         evs = ",".join(sorted({e["event"] for e in rec.get("events") or []}))
-        lines.append(f"- **{rec['ticker']}** {rec['side']} net={rec['net']} ({evs})")
+        lines.append(f"- **{rec['ticker']}** ({rec.get('size', '?')}) "
+                     f"{rec['side']} net={rec['net']} ({evs})")
     return "\n".join(lines) + "\n"
 
 def main() -> None:

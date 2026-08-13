@@ -41,7 +41,13 @@ def main() -> None:
                 "In the SCORES block, also include these three lines:\n"
                 "GOOD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
                 "BAD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
-                "UNCERTAINTY_LEVEL: <low|moderate|elevated|high>")
+                "UNCERTAINTY_LEVEL: <low|moderate|elevated|high>\n"
+                "And these four multi-timeframe outlook lines (your call for "
+                "SPX over each horizon, format dir:band:confidence):\n"
+                "HORIZON_3D: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
+                "HORIZON_1W: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
+                "HORIZON_2W: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
+                "HORIZON_1M: <up|down|flat>:<flat|mild|notable|severe>:<0-1>")
 
     # 3. LLM with tool loop (full transcript + readable trace saved)
     text = deepseek_client.chat(
@@ -57,6 +63,7 @@ def main() -> None:
     # 4. Deterministic scoring
     scores = compute_scores.parse_scores(text)
     decision = compute_scores.compute(scores)
+    horizon_calls = compute_scores.parse_horizon_calls(scores)
 
     # 5. Write prediction file (human-readable snapshot first)
     os.makedirs(config.DAILY_GENERAL, exist_ok=True)
@@ -74,6 +81,12 @@ def main() -> None:
         fh.write(f"- predicted_magnitude_band: "
                  f"**{decision['predicted_magnitude_band']}**\n")
         fh.write(f"- confidence_score: {decision['confidence_score']}\n")
+        if horizon_calls:
+            fh.write("\n### Multi-timeframe outlook (LLM call, graded at "
+                     "T+h by src.horizon_grade)\n\n")
+            for key, hc in horizon_calls.items():
+                fh.write(f"- {key}: **{hc['direction']}** / "
+                         f"{hc['magnitude_band']} (conf {hc['confidence']})\n")
 
     # 6. Scoreboard
     board = scoreboard.load()
@@ -87,11 +100,13 @@ def main() -> None:
         "components": decision["components"],
         "leading_sum": decision["leading_sum"],
         "divergence_flagged": decision["divergence_flagged"],
+        "horizon_calls": horizon_calls,
     })
     scoreboard.save(board)
     print(f"[predict] {date_str}: {decision['predicted_direction']}/"
           f"{decision['predicted_magnitude_band']} "
-          f"(total {decision['total_score']}, div={decision['divergence_flagged']})"
+          f"(total {decision['total_score']}, div={decision['divergence_flagged']}, "
+          f"horizons={len(horizon_calls)})"
           f" -> {path}")
 
 
