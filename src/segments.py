@@ -233,9 +233,15 @@ def assign_membership(df: pd.DataFrame, registry: dict) -> pd.DataFrame:
 
     # --- theme keyword overlay (v0) ---
     patterns = fam["themes"]["patterns"]
-    blob = (df.get("Industry", "").fillna("").astype(str) + " "
-            + df.get("Finviz_Description", "").fillna("").astype(str) + " "
-            + df.get("News Title", "").fillna("").astype(str)).str.lower()
+
+    def _text_col(name: str) -> pd.Series:
+        if name in df.columns:
+            return df[name].fillna("").astype(str)
+        return pd.Series("", index=df.index)
+
+    blob = (_text_col("Industry") + " "
+            + _text_col("Finviz_Description") + " "
+            + _text_col("News Title")).str.lower()
     theme_cols = {}
     for name, pat in patterns.items():
         theme_cols[f"theme:{name}"] = blob.str.contains(pat, regex=True, na=False)

@@ -42,6 +42,10 @@ VIEWS = {
     141: "Performance",
     161: "Financial",
     171: "Technical",
+    151: "Custom",   # account's saved custom view — supplies Earnings Date,
+                     # EPS/Revenue Surprise, Analyst Recom, Target Price,
+                     # Finviz_Description, News Title when ticked there;
+                     # skipped gracefully if the account has no custom view
 }
 
 # ── Column mapping (every field Finviz serves) ──────────────────
