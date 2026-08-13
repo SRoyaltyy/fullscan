@@ -1,6 +1,6 @@
 # Stock book — **2026-08-13** (1d / 3d / 1w / 2w / 1m)
 
-Generated: 2026-08-13T06:35:54.417642-04:00
+Generated: 2026-08-13T07:32:06.290739-04:00
 
 Layers: join (labels×weather) + sector predict + general regime + news actions.
 
@@ -62,29 +62,29 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 |--------|-------|--------|---------|
 | WFC | +0.317 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | BAC | +0.317 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| JPM | +0.317 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | C | +0.317 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| FANG | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
+| JPM | +0.317 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
+| DVN | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
 | COP | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
 | OXY | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
+| FANG | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
 | EOG | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
-| DVN | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
 | APA | +0.260 | Energy | sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'} |
 | XOM | +0.201 | Energy | sector=-0.55; gen=+0.09; news=+0.69; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 4.2, 'bucket': 'oil_integrated'} |
 | CVX | +0.201 | Energy | sector=-0.55; gen=+0.09; news=+0.69; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 4.2, 'bucket': 'oil_integrated'} |
-| PPCB | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| ABSI | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| FDMT | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| PMVP | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| CCCC | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| ZJYL | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| FEED | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| FHTX | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| ABCL | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| ABEO | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| PRME | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| PROK | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
-| PRPO | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| DFTX | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| VYGR | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| VVOS | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| AIRS | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| GYRE | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| TARA | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| AVBP | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| TEM | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| TELA | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| AVAH | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| LFMD | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| LCTX | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
+| STXS | +0.158 | Healthcare | sector=+0.65; gen=+0.60 |
 
 ## 1d — SELL / avoid (bottom 25)
 
@@ -162,31 +162,31 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| C | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| WFC | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| BAC | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | JPM | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| ABEO | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| HIMS | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| ZNTL | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| PYXS | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| EYPT | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| GOSS | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| MNPR | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| PULM | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| IDXX | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| WGS | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| PTGX | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| PTHS | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| CTMX | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| CTOR | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| CTSO | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| CUE | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| PYPD | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| AARD | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| JSPR | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| FTRE | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
-| TNXP | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| C | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
+| BAC | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
+| WFC | +0.293 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
+| RMTI | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| RNTX | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| CLOV | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| INGN | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| INFU | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| ARCT | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| CLLS | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| CLDI | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| RPID | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| IBO | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| FDMT | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| XCUR | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| XGN | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| MTNB | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| VCYT | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| INO | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| INMD | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| MBRX | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| FEED | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| IBIO | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
+| COCH | +0.205 | Healthcare | sector=+0.65; gen=+0.60 |
 
 ## 3d — SELL / avoid (bottom 25)
 
@@ -266,29 +266,29 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 |--------|-------|--------|---------|
 | BAC | +0.252 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | JPM | +0.252 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| WFC | +0.252 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | C | +0.252 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| IMNN | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| IFRX | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| IBIO | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| DFTX | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| BNGO | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| TLRY | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| QSI | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| RDNT | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| BNR | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| RDHL | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| TIL | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| QUCY | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| IMUX | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| IMDX | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| IMMP | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| IMNM | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| CCLD | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| PTHS | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| TNYA | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| PULM | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
-| BLFS | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| WFC | +0.252 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
+| GUTS | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| GYRE | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NGNE | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| VCYT | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| CRBU | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| CRBP | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| ATAI | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NEPH | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| RYTM | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| RVMD | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NCNA | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NBP | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NAGE | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| MYO | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| AGL | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NRSN | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NRIX | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| FEED | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NPCE | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| NEOG | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
+| VRCA | +0.230 | Healthcare | sector=+0.65; gen=+0.60 |
 
 ## 1w — SELL / avoid (bottom 25)
 
@@ -366,31 +366,31 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| JPM | +0.193 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | BAC | +0.193 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
+| JPM | +0.193 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | C | +0.193 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
 | WFC | +0.193 | Financial | sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'} |
-| ZYME | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| ZYBT | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
-| ZVRA | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| ZURA | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
-| ZTS | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
-| RGNX | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| RGNT | +0.193 | Healthcare | sector=+0.65; gen=+0.24 |
-| RGEN | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| RGC | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
-| RCEL | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
-| RCKT | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
-| RCUS | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| RDGT | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
-| RDHL | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
-| RDNT | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
-| ABBV | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
-| ABVX | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| ACAD | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
-| ABCL | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
-| ABEO | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
-| RDY | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| FLGT | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
+| GENB | +0.193 | Healthcare | sector=+0.65; gen=+0.24 |
+| GELS | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| GEHC | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
+| TNYA | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
+| GDTC | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| GDRX | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
+| ATHE | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| ATYR | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| ATTO | +0.193 | Healthcare | sector=+0.65; gen=+0.24 |
+| ATRC | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
+| GCTK | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| GANX | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| TOVX | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
+| TNDM | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
+| EXOZ | +0.193 | Healthcare | sector=+0.65; gen=+0.60 |
+| TRVI | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
+| FMS | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| FOCL | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| FRNM | +0.193 | Healthcare | sector=+0.65; gen=+0.09 |
+| TRIB | +0.193 | Healthcare | sector=+0.65; gen=+0.30 |
 
 ## 2w — SELL / avoid (bottom 25)
 
@@ -401,26 +401,26 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 | BXP | -0.044 | Real Estate | sector=+0.60; gen=+0.30; news=-0.62; ev={'event': 'fed_rate_path', 'side': 'sell', 'weight': 3.65, 'bucket': 'reit_office'} |
 | NEM | -0.036 | Basic Materials | sector=-0.60; gen=+0.09; news=-0.51; ev={'event': 'fed_rate_path', 'side': 'sell', 'weight': 2.83, 'bucket': 'gold'} |
 | AEM | -0.036 | Basic Materials | sector=-0.60; gen=+0.09; news=-0.51; ev={'event': 'fed_rate_path', 'side': 'sell', 'weight': 2.83, 'bucket': 'gold'} |
-| RGCO | +0.000 | Utilities | sector=+0.55; gen=+0.09 |
-| NEN | +0.000 | Real Estate | sector=+0.60; gen=+0.09 |
-| GEL | +0.000 | Energy | sector=-0.55; gen=+0.09 |
-| GDEV | +0.000 | Communication Services | sector=-0.30; gen=+0.60 |
-| AACG | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.30 |
-| RHP | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
-| RFL | +0.000 | Real Estate | sector=+0.60; gen=+0.09 |
-| AAT | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
-| AAUC | +0.000 | Basic Materials | sector=-0.60; gen=+0.09 |
-| REX | +0.000 | Basic Materials | sector=-0.60; gen=+0.09 |
-| ZNB | +0.000 | Communication Services | sector=-0.30; gen=+0.60 |
-| RITM | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
-| REPX | +0.000 | Energy | sector=-0.55; gen=+0.30 |
-| ABR | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
-| ABEV | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
-| ADV | +0.000 | Communication Services | sector=-0.30; gen=+0.60 |
-| NEE | +0.000 | Utilities | sector=+0.55; gen=+0.09 |
-| RKDA | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
-| ACR | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
-| ACRE | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
+| DOC | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
+| HST | +0.000 | Real Estate | sector=+0.60; gen=+0.30 |
+| HSLV | +0.000 | Basic Materials | sector=-0.60; gen=+0.09 |
+| TECK | +0.000 | Basic Materials | sector=-0.60; gen=+0.30 |
+| TEAD | +0.000 | Communication Services | sector=-0.30; gen=+0.60 |
+| DRCT | +0.000 | Communication Services | sector=-0.30; gen=+0.60 |
+| USNA | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
+| DMLP | +0.000 | Energy | sector=-0.55; gen=+0.09 |
+| DMC | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
+| DLXY | +0.000 | Energy | sector=-0.55; gen=+0.60 |
+| DLTR | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
+| HWKN | +0.000 | Basic Materials | sector=-0.60; gen=+0.09 |
+| DNUT | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.30 |
+| DNN | +0.000 | Energy | sector=-0.55; gen=+0.30 |
+| DOLE | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
+| DIBS | +0.000 | Communication Services | sector=-0.30; gen=+0.30 |
+| UTL | +0.000 | Utilities | sector=+0.55; gen=+0.09 |
+| UTI | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.30 |
+| DIT | +0.000 | Consumer Defensive | sector=+0.28; gen=+0.09 |
+| DIS | +0.000 | Communication Services | sector=-0.30; gen=+0.60 |
 
 ### 2w — BUY by size bucket
 

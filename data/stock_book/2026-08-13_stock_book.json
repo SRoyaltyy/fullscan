@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-08-13",
-    "generated_at": "2026-08-13T06:35:54.417642-04:00",
+    "generated_at": "2026-08-13T07:32:06.290739-04:00",
     "general_bias": 0.6,
     "sector_bias": {
       "Basic Materials": -0.6,
@@ -142,14 +142,6 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "JPM",
-          "score": 0.3174662425017968,
-          "sector": "Financial",
-          "size": "mega",
-          "side": "buy",
-          "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
-        },
-        {
           "ticker": "C",
           "score": 0.3174662425017968,
           "sector": "Financial",
@@ -158,7 +150,15 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "FANG",
+          "ticker": "JPM",
+          "score": 0.3174662425017968,
+          "sector": "Financial",
+          "size": "mega",
+          "side": "buy",
+          "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
+        },
+        {
+          "ticker": "DVN",
           "score": 0.2599618428048621,
           "sector": "Energy",
           "size": "large",
@@ -182,7 +182,7 @@
           "reasons": "sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'}"
         },
         {
-          "ticker": "EOG",
+          "ticker": "FANG",
           "score": 0.2599618428048621,
           "sector": "Energy",
           "size": "large",
@@ -190,7 +190,7 @@
           "reasons": "sector=-0.55; gen=+0.09; news=+0.83; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.0, 'bucket': 'oil_ep'}"
         },
         {
-          "ticker": "DVN",
+          "ticker": "EOG",
           "score": 0.2599618428048621,
           "sector": "Energy",
           "size": "large",
@@ -222,71 +222,7 @@
           "reasons": "sector=-0.55; gen=+0.09; news=+0.69; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 4.2, 'bucket': 'oil_integrated'}"
         },
         {
-          "ticker": "PPCB",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "ABSI",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "FDMT",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "PMVP",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "CCCC",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "ZJYL",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "FEED",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "FHTX",
-          "score": 0.1575,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "ABCL",
+          "ticker": "DFTX",
           "score": 0.1575,
           "sector": "Healthcare",
           "size": "mid",
@@ -294,7 +230,31 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "ABEO",
+          "ticker": "VYGR",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "VVOS",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "AIRS",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "GYRE",
           "score": 0.1575,
           "sector": "Healthcare",
           "size": "small",
@@ -302,7 +262,15 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "PRME",
+          "ticker": "TARA",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "AVBP",
           "score": 0.1575,
           "sector": "Healthcare",
           "size": "small",
@@ -310,7 +278,23 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "PROK",
+          "ticker": "TEM",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "TELA",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "AVAH",
           "score": 0.1575,
           "sector": "Healthcare",
           "size": "small",
@@ -318,7 +302,23 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "PRPO",
+          "ticker": "LFMD",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "LCTX",
+          "score": 0.1575,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "STXS",
           "score": 0.1575,
           "sector": "Healthcare",
           "size": "micro",
@@ -932,7 +932,7 @@
     "3d": {
       "buy": [
         {
-          "ticker": "C",
+          "ticker": "JPM",
           "score": 0.293103901563623,
           "sector": "Financial",
           "size": "mega",
@@ -940,7 +940,7 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "WFC",
+          "ticker": "C",
           "score": 0.293103901563623,
           "sector": "Financial",
           "size": "mega",
@@ -956,7 +956,7 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "JPM",
+          "ticker": "WFC",
           "score": 0.293103901563623,
           "sector": "Financial",
           "size": "mega",
@@ -964,15 +964,23 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "ABEO",
+          "ticker": "RMTI",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
-          "size": "small",
+          "size": "micro",
           "side": "buy",
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "HIMS",
+          "ticker": "RNTX",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "CLOV",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "mid",
@@ -980,15 +988,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "ZNTL",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "PYXS",
+          "ticker": "INGN",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -996,15 +996,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "EYPT",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "GOSS",
+          "ticker": "INFU",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1012,15 +1004,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "MNPR",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "PULM",
+          "ticker": "ARCT",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1028,15 +1012,71 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "IDXX",
+          "ticker": "CLLS",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
-          "size": "large",
+          "size": "micro",
           "side": "buy",
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "WGS",
+          "ticker": "CLDI",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "RPID",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "IBO",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "FDMT",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "XCUR",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "XGN",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "MTNB",
+          "score": 0.20500000000000002,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "VCYT",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "mid",
@@ -1044,15 +1084,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "PTGX",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "PTHS",
+          "ticker": "INO",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1060,7 +1092,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "CTMX",
+          "ticker": "INMD",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "small",
@@ -1068,7 +1100,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "CTOR",
+          "ticker": "MBRX",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1076,7 +1108,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "CTSO",
+          "ticker": "FEED",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1084,7 +1116,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "CUE",
+          "ticker": "IBIO",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1092,39 +1124,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "PYPD",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "AARD",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "JSPR",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "FTRE",
-          "score": 0.20500000000000002,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "TNXP",
+          "ticker": "COCH",
           "score": 0.20500000000000002,
           "sector": "Healthcare",
           "size": "micro",
@@ -1754,14 +1754,6 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "WFC",
-          "score": 0.2518623409381738,
-          "sector": "Financial",
-          "size": "mega",
-          "side": "buy",
-          "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
-        },
-        {
           "ticker": "C",
           "score": 0.2518623409381738,
           "sector": "Financial",
@@ -1770,7 +1762,15 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "IMNN",
+          "ticker": "WFC",
+          "score": 0.2518623409381738,
+          "sector": "Financial",
+          "size": "mega",
+          "side": "buy",
+          "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
+        },
+        {
+          "ticker": "GUTS",
           "score": 0.22999999999999998,
           "sector": "Healthcare",
           "size": "micro",
@@ -1778,39 +1778,7 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "IFRX",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "IBIO",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "DFTX",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "BNGO",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "TLRY",
+          "ticker": "GYRE",
           "score": 0.22999999999999998,
           "sector": "Healthcare",
           "size": "small",
@@ -1818,122 +1786,154 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "QSI",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "RDNT",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "BNR",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "RDHL",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "TIL",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "QUCY",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "IMUX",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "IMDX",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "IMMP",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "IMNM",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "CCLD",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "PTHS",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "TNYA",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "PULM",
-          "score": 0.22999999999999998,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "BLFS",
+          "ticker": "NGNE",
           "score": 0.22999999999999998,
           "sector": "Healthcare",
           "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "VCYT",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "CRBU",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "CRBP",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "ATAI",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NEPH",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "RYTM",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "RVMD",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NCNA",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NBP",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NAGE",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "MYO",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "AGL",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NRSN",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NRIX",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "FEED",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NPCE",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "NEOG",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "VRCA",
+          "score": 0.22999999999999998,
+          "sector": "Healthcare",
+          "size": "micro",
           "side": "buy",
           "reasons": "sector=+0.65; gen=+0.60"
         }
@@ -2544,7 +2544,7 @@
     "2w": {
       "buy": [
         {
-          "ticker": "JPM",
+          "ticker": "BAC",
           "score": 0.19336909243781444,
           "sector": "Financial",
           "size": "mega",
@@ -2552,7 +2552,7 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "BAC",
+          "ticker": "JPM",
           "score": 0.19336909243781444,
           "sector": "Financial",
           "size": "mega",
@@ -2576,7 +2576,7 @@
           "reasons": "sector=+0.55; gen=+0.30; news=+0.51; ev={'event': 'fed_rate_path', 'side': 'buy', 'weight': 2.83, 'bucket': 'banks_diversified'}"
         },
         {
-          "ticker": "ZYME",
+          "ticker": "FLGT",
           "score": 0.1925,
           "sector": "Healthcare",
           "size": "small",
@@ -2584,95 +2584,15 @@
           "reasons": "sector=+0.65; gen=+0.30"
         },
         {
-          "ticker": "ZYBT",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.09"
-        },
-        {
-          "ticker": "ZVRA",
+          "ticker": "GENB",
           "score": 0.1925,
           "sector": "Healthcare",
           "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.30"
-        },
-        {
-          "ticker": "ZURA",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.09"
-        },
-        {
-          "ticker": "ZTS",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "large",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.09"
-        },
-        {
-          "ticker": "RGNX",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.30"
-        },
-        {
-          "ticker": "RGNT",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "micro",
           "side": "buy",
           "reasons": "sector=+0.65; gen=+0.24"
         },
         {
-          "ticker": "RGEN",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.30"
-        },
-        {
-          "ticker": "RGC",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "RCEL",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "RCKT",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "small",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.09"
-        },
-        {
-          "ticker": "RCUS",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.30"
-        },
-        {
-          "ticker": "RDGT",
+          "ticker": "GELS",
           "score": 0.1925,
           "sector": "Healthcare",
           "size": "micro",
@@ -2680,31 +2600,7 @@
           "reasons": "sector=+0.65; gen=+0.09"
         },
         {
-          "ticker": "RDHL",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "micro",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "RDNT",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.60"
-        },
-        {
-          "ticker": "ABBV",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "mega",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.09"
-        },
-        {
-          "ticker": "ABVX",
+          "ticker": "GEHC",
           "score": 0.1925,
           "sector": "Healthcare",
           "size": "large",
@@ -2712,23 +2608,23 @@
           "reasons": "sector=+0.65; gen=+0.30"
         },
         {
-          "ticker": "ACAD",
+          "ticker": "TNYA",
           "score": 0.1925,
           "sector": "Healthcare",
-          "size": "mid",
-          "side": "buy",
-          "reasons": "sector=+0.65; gen=+0.30"
-        },
-        {
-          "ticker": "ABCL",
-          "score": 0.1925,
-          "sector": "Healthcare",
-          "size": "mid",
+          "size": "micro",
           "side": "buy",
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "ABEO",
+          "ticker": "GDTC",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "GDRX",
           "score": 0.1925,
           "sector": "Healthcare",
           "size": "small",
@@ -2736,12 +2632,116 @@
           "reasons": "sector=+0.65; gen=+0.60"
         },
         {
-          "ticker": "RDY",
+          "ticker": "ATHE",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "ATYR",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "ATTO",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.24"
+        },
+        {
+          "ticker": "ATRC",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.30"
+        },
+        {
+          "ticker": "GCTK",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "GANX",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "TOVX",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.30"
+        },
+        {
+          "ticker": "TNDM",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "EXOZ",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.60"
+        },
+        {
+          "ticker": "TRVI",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.30"
+        },
+        {
+          "ticker": "FMS",
           "score": 0.1925,
           "sector": "Healthcare",
           "size": "large",
           "side": "buy",
           "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "FOCL",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "FRNM",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.09"
+        },
+        {
+          "ticker": "TRIB",
+          "score": 0.1925,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "sector=+0.65; gen=+0.30"
         }
       ],
       "sell": [
@@ -2786,23 +2786,63 @@
           "reasons": "sector=-0.60; gen=+0.09; news=-0.51; ev={'event': 'fed_rate_path', 'side': 'sell', 'weight': 2.83, 'bucket': 'gold'}"
         },
         {
-          "ticker": "RGCO",
-          "score": 0.0,
-          "sector": "Utilities",
-          "size": "micro",
-          "side": "sell",
-          "reasons": "sector=+0.55; gen=+0.09"
-        },
-        {
-          "ticker": "NEN",
+          "ticker": "DOC",
           "score": 0.0,
           "sector": "Real Estate",
-          "size": "micro",
+          "size": "large",
           "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.09"
+          "reasons": "sector=+0.60; gen=+0.30"
         },
         {
-          "ticker": "GEL",
+          "ticker": "HST",
+          "score": 0.0,
+          "sector": "Real Estate",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.30"
+        },
+        {
+          "ticker": "HSLV",
+          "score": 0.0,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.09"
+        },
+        {
+          "ticker": "TECK",
+          "score": 0.0,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.30"
+        },
+        {
+          "ticker": "TEAD",
+          "score": 0.0,
+          "sector": "Communication Services",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.30; gen=+0.60"
+        },
+        {
+          "ticker": "DRCT",
+          "score": 0.0,
+          "sector": "Communication Services",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.30; gen=+0.60"
+        },
+        {
+          "ticker": "USNA",
+          "score": 0.0,
+          "sector": "Consumer Defensive",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.09"
+        },
+        {
+          "ticker": "DMLP",
           "score": 0.0,
           "sector": "Energy",
           "size": "small",
@@ -2810,119 +2850,87 @@
           "reasons": "sector=-0.55; gen=+0.09"
         },
         {
-          "ticker": "GDEV",
-          "score": 0.0,
-          "sector": "Communication Services",
-          "size": "micro",
-          "side": "sell",
-          "reasons": "sector=-0.30; gen=+0.60"
-        },
-        {
-          "ticker": "AACG",
+          "ticker": "DMC",
           "score": 0.0,
           "sector": "Consumer Defensive",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.09"
+        },
+        {
+          "ticker": "DLXY",
+          "score": 0.0,
+          "sector": "Energy",
           "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.55; gen=+0.60"
+        },
+        {
+          "ticker": "DLTR",
+          "score": 0.0,
+          "sector": "Consumer Defensive",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.09"
+        },
+        {
+          "ticker": "HWKN",
+          "score": 0.0,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.09"
+        },
+        {
+          "ticker": "DNUT",
+          "score": 0.0,
+          "sector": "Consumer Defensive",
+          "size": "small",
           "side": "sell",
           "reasons": "sector=+0.28; gen=+0.30"
         },
         {
-          "ticker": "RHP",
-          "score": 0.0,
-          "sector": "Real Estate",
-          "size": "mid",
-          "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.30"
-        },
-        {
-          "ticker": "RFL",
-          "score": 0.0,
-          "sector": "Real Estate",
-          "size": "micro",
-          "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.09"
-        },
-        {
-          "ticker": "AAT",
-          "score": 0.0,
-          "sector": "Real Estate",
-          "size": "small",
-          "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.30"
-        },
-        {
-          "ticker": "AAUC",
-          "score": 0.0,
-          "sector": "Basic Materials",
-          "size": "mid",
-          "side": "sell",
-          "reasons": "sector=-0.60; gen=+0.09"
-        },
-        {
-          "ticker": "REX",
-          "score": 0.0,
-          "sector": "Basic Materials",
-          "size": "small",
-          "side": "sell",
-          "reasons": "sector=-0.60; gen=+0.09"
-        },
-        {
-          "ticker": "ZNB",
-          "score": 0.0,
-          "sector": "Communication Services",
-          "size": "micro",
-          "side": "sell",
-          "reasons": "sector=-0.30; gen=+0.60"
-        },
-        {
-          "ticker": "RITM",
-          "score": 0.0,
-          "sector": "Real Estate",
-          "size": "mid",
-          "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.30"
-        },
-        {
-          "ticker": "REPX",
+          "ticker": "DNN",
           "score": 0.0,
           "sector": "Energy",
-          "size": "small",
+          "size": "mid",
           "side": "sell",
           "reasons": "sector=-0.55; gen=+0.30"
         },
         {
-          "ticker": "ABR",
-          "score": 0.0,
-          "sector": "Real Estate",
-          "size": "small",
-          "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.30"
-        },
-        {
-          "ticker": "ABEV",
+          "ticker": "DOLE",
           "score": 0.0,
           "sector": "Consumer Defensive",
-          "size": "large",
+          "size": "small",
           "side": "sell",
           "reasons": "sector=+0.28; gen=+0.09"
         },
         {
-          "ticker": "ADV",
+          "ticker": "DIBS",
           "score": 0.0,
           "sector": "Communication Services",
-          "size": "small",
+          "size": "micro",
           "side": "sell",
-          "reasons": "sector=-0.30; gen=+0.60"
+          "reasons": "sector=-0.30; gen=+0.30"
         },
         {
-          "ticker": "NEE",
+          "ticker": "UTL",
           "score": 0.0,
           "sector": "Utilities",
-          "size": "large",
+          "size": "small",
           "side": "sell",
           "reasons": "sector=+0.55; gen=+0.09"
         },
         {
-          "ticker": "RKDA",
+          "ticker": "UTI",
+          "score": 0.0,
+          "sector": "Consumer Defensive",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.30"
+        },
+        {
+          "ticker": "DIT",
           "score": 0.0,
           "sector": "Consumer Defensive",
           "size": "micro",
@@ -2930,20 +2938,12 @@
           "reasons": "sector=+0.28; gen=+0.09"
         },
         {
-          "ticker": "ACR",
+          "ticker": "DIS",
           "score": 0.0,
-          "sector": "Real Estate",
-          "size": "micro",
+          "sector": "Communication Services",
+          "size": "large",
           "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.30"
-        },
-        {
-          "ticker": "ACRE",
-          "score": 0.0,
-          "sector": "Real Estate",
-          "size": "micro",
-          "side": "sell",
-          "reasons": "sector=+0.60; gen=+0.30"
+          "reasons": "sector=-0.30; gen=+0.60"
         }
       ],
       "buy_by_size": {
@@ -3173,23 +3173,23 @@
             "reasons": "sector=-0.60; gen=+0.09; news=-0.51; ev={'event': 'fed_rate_path', 'side': 'sell', 'weight': 2.83, 'bucket': 'gold'}"
           },
           {
-            "ticker": "BF-B",
+            "ticker": "SCCO",
             "score": 0.0,
-            "sector": "Consumer Defensive",
+            "sector": "Basic Materials",
             "size": "large",
             "side": "sell",
-            "reasons": "sector=+0.28; gen=+0.09"
+            "reasons": "sector=-0.60; gen=+0.30"
           },
           {
-            "ticker": "LNT",
+            "ticker": "RS",
             "score": 0.0,
-            "sector": "Utilities",
+            "sector": "Basic Materials",
             "size": "large",
             "side": "sell",
-            "reasons": "sector=+0.55; gen=+0.09"
+            "reasons": "sector=-0.60; gen=+0.30"
           },
           {
-            "ticker": "LNG",
+            "ticker": "E",
             "score": 0.0,
             "sector": "Energy",
             "size": "large",
@@ -3197,20 +3197,20 @@
             "reasons": "sector=-0.55; gen=+0.09"
           },
           {
-            "ticker": "LIN",
+            "ticker": "EA",
             "score": 0.0,
-            "sector": "Basic Materials",
-            "size": "mega",
+            "sector": "Communication Services",
+            "size": "large",
             "side": "sell",
-            "reasons": "sector=-0.60; gen=+0.09"
+            "reasons": "sector=-0.30; gen=+0.09"
           },
           {
-            "ticker": "YPF",
+            "ticker": "EC",
             "score": 0.0,
             "sector": "Energy",
             "size": "large",
             "side": "sell",
-            "reasons": "sector=-0.55; gen=+0.30"
+            "reasons": "sector=-0.55; gen=+0.09"
           }
         ],
         "mid": [
@@ -3231,47 +3231,47 @@
             "reasons": "sector=+0.60; gen=+0.60; news=-0.62; ev={'event': 'fed_rate_path', 'side': 'sell', 'weight': 3.65, 'bucket': 'reit_office'}"
           },
           {
-            "ticker": "ZG",
+            "ticker": "RITM",
             "score": 0.0,
-            "sector": "Communication Services",
+            "sector": "Real Estate",
             "size": "mid",
             "side": "sell",
-            "reasons": "sector=-0.30; gen=+0.60"
+            "reasons": "sector=+0.60; gen=+0.30"
           },
           {
-            "ticker": "AMR",
+            "ticker": "NOV",
+            "score": 0.0,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.30"
+          },
+          {
+            "ticker": "RYN",
+            "score": 0.0,
+            "sector": "Real Estate",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.30"
+          },
+          {
+            "ticker": "SA",
             "score": 0.0,
             "sector": "Basic Materials",
             "size": "mid",
             "side": "sell",
-            "reasons": "sector=-0.60; gen=+0.09"
+            "reasons": "sector=-0.60; gen=+0.30"
           },
           {
-            "ticker": "AMC",
+            "ticker": "CRK",
             "score": 0.0,
-            "sector": "Communication Services",
+            "sector": "Energy",
             "size": "mid",
             "side": "sell",
-            "reasons": "sector=-0.30; gen=+0.60"
+            "reasons": "sector=-0.55; gen=+0.09"
           },
           {
-            "ticker": "ALM",
-            "score": 0.0,
-            "sector": "Basic Materials",
-            "size": "mid",
-            "side": "sell",
-            "reasons": "sector=-0.60; gen=+0.60"
-          },
-          {
-            "ticker": "VSNT",
-            "score": 0.0,
-            "sector": "Communication Services",
-            "size": "mid",
-            "side": "sell",
-            "reasons": "sector=-0.30; gen=+0.24"
-          },
-          {
-            "ticker": "VIST",
+            "ticker": "CSAN",
             "score": 0.0,
             "sector": "Energy",
             "size": "mid",
