@@ -1,6 +1,6 @@
 # Stock book backtest — 2026-08-13
 
-Generated: **2026-08-13T07:32:18.799468-04:00**
+Generated: **2026-08-13T14:00:31.372815-04:00**
 Books graded: **1** (top 25 buy + sell per horizon)
 
 Entry proxy: first yfinance close on/after signal date; exit ≈ N trading days later.
