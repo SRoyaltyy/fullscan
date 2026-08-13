@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "The lesson would be falsified if, in repeated episodes with S4≈0, divergence_flagged=True, and an active geopolitical/oil risk-off headline at open, XLF still closes up by more than ~0.5% absolute more often than not. A single counterexample is insufficient; relative outperformance alone does not falsify the lesson."
 sector: "Financial"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-11

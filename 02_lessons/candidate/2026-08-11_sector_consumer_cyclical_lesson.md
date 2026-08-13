@@ -7,7 +7,7 @@ error_category: "B (REASONING/WEIGHTING failure; not tool/data)"
 falsifier: "This lesson is falsified if, under the same trigger (active geopolitical/oil supply shock + elevated oil + flat-to-negative futures), a corrected down/mild Consumer Cyclical call repeatedly misses upward because XLY closes positive or meaningfully outperforms. It is also falsified if an identical macro-risk-off setup with no oil/consumer interaction still produces a down outcome, which would indicate the lesson is overfit to this particular date/catalyst."
 sector: "Consumer Cyclical"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-11

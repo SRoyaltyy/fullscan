@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Fails if a future XLV setup has a negative 1d tape and negative policy shock but a larger same-day positive catalyst — e.g., a mega-cap healthcare earnings blowout — drives XLV up. The lesson must require the fresh negative catalyst to be the dominant same-day signal."
 sector: "Healthcare"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-11

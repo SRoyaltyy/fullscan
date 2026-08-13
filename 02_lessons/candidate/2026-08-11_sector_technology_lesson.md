@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "This lesson fails if a similar setup — narrative flat/down, pipeline up, negative macro, crowded tech, stale catalysts — is overridden to flat/down but XLK closes solidly up on a genuinely fresh same-session catalyst or a macro reversal. The override should be conditional: it must be based on signed component scores, not automatic narrative preference."
 sector: "Technology"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-11

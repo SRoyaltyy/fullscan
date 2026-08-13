@@ -7,7 +7,7 @@ error_category: "A — active-lesson non-enforcement / aggregation failure"
 falsifier: "This corrective lesson would be falsified if a future XLB call with the same trigger — modest 1d rel, China PMI contraction, live scheduled CPI — produced a strong confirmed up day (e.g., XLB > +1% with 1d relative strength > +1% and high volume). That would show the flat/down default is too bearish; the lesson should then be narrowed to “never emit severe; direction requires same-day material confirmation.”"
 sector: "Basic Materials"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-12

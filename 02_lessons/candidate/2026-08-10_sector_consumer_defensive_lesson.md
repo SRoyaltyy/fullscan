@@ -7,7 +7,7 @@ error_category: "C — calibration/magnitude overcall (reasoning failure, not to
 falsifier: "If a future Consumer Defensive prediction with flat futures/no tape confirmation nonetheless produces a notable move (e.g., ≥0.75% in the predicted direction), the “cap magnitude at mild when tape shows no confirmation” rule would be weakened. One occurrence would not fully falsify it, but repeated notable moves under flat tape would invalidate the rule."
 sector: "Consumer Defensive"
 date: "2026-08-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-10

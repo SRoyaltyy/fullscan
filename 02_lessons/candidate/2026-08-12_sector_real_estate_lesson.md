@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "This corrected behavior would be wrong if the pre-CPI 2Y easing tell is present but CPI still prints hot, yields rise, and the rate-sensitive sector falls. It would also be falsified if CPI prints cool but REITs fall anyway due to an independent sector-specific shock (e.g., data-center capex cut, refinancing crisis). Therefore the lesson should be scoped to setups where the rate spine is the dominant driver."
 sector: "Real Estate"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-12

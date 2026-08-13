@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If a later morning has the same active geopolitical/oil/CPI-risk signature and XLP closes positive, or rises more than ~0.2% absolutely, or outperforms SPY by more than ~0.5%, this lesson is overcorrecting; the defensive-bid signal would then be strong enough to justify flat/up, and the rule should be revised."
 sector: "Consumer Defensive"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-11

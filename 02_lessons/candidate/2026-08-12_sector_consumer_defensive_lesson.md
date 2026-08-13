@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If, under the same conditions (risk-on premarket futures, positive defensive inflows/rotation signals, scheduled CPI, XLP already underperforming SPY), the CPI comes in hot, real yields rise further, and XLP falls notably while the corrected behavior emits up/mild or flat/mild, the rule would be falsified. Conversely, repeated in-line/cool CPI prints causing bond-proxy staples to outperform supports the rule."
 sector: "Consumer Defensive"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-12

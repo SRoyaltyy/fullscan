@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If a future day has confirmed rising oil, active shipping attacks, and a live Hormuz overhang, but XLI nevertheless rallies > roughly 1% and leads SPY, then capping to up/notable would be too conservative. The rule would then need to distinguish defense/AI-power-heavy XLI composition from broad oil-sensitive cyclical drag."
 sector: "Industrials"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-12

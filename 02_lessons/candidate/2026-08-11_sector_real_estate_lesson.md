@@ -7,7 +7,7 @@ error_category: "D (reasoning/scoring failure; not TOOL/DATA)"
 falsifier: "A session with the same setup — active oil/Hormuz risk-off and CPI imminent — but where the 1m real-yield trend has already turned down and/or 10Y TIPS real yields fall on the day, while XLRE closes positive or outperforms SPY, would falsify the claim that S0 must be negative and that 1m real-yield elevation should override 1d/1w easing."
 sector: "Real Estate"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-11

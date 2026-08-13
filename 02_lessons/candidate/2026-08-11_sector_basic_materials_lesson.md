@@ -7,7 +7,7 @@ error_category: "C (REASONING / score-calibration failure; not a data/tool failu
 falsifier: "The lesson is falsified if, with the same trigger conditions (1d rel <0.5%, China PMI contraction, active Iran/Hormuz-style risk-off headline), XLB still produces a severe absolute gain on the same structural factors, e.g. ≥1.5%. In that case tempering would be wrong and severe would remain justified."
 sector: "Basic Materials"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-11

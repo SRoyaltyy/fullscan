@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "The pattern would be falsified if XLC rose or matched SPY in a future setup where Alphabet and Meta are both under fresh AI-capex/FCF scrutiny, Hormuz/oil risk is active, and real yields are rising. It would also need re-examination if the scoreboard classified the same setup as a magnitude miss rather than a mild hit."
 sector: "Communication Services"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-12

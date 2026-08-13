@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This no-error pattern is falsified if XLK declines despite an in-line CPI, fresh index-relevant AI-infra earnings beats, and strongly positive NQ futures at the open. It is also falsified if XLK rallies on stale catalysts or weak futures. Future calls must require all three conditions — fresh catalysts, benign/encouraging macro, and positive futures confirmation — before emitting up/notable."
 sector: "Technology"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-12

@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future Consumer Cyclical call with the same concentration and no pre-open idiosyncratic catalyst that closes flat/mild would falsify any rule that automatically scores down/notable on concentration alone. The correct implication is that today's miss is idiosyncratic and non-systematic."
 sector: "Consumer Cyclical"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-12

@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The rule would be falsified if a future session contains a fresh, knowable oil/geopolitical inflation shock, rising real yields, strongly negative 10Y-SPX correlation, extreme crowding in tech, and only stale positive catalysts from prior context — yet XLK still closes up with notable relative strength. It would also be weakened if the supposedly stale TSMC catalyst is later shown to have been genuinely market-moving on the session itself."
 sector: "Technology"
 date: "2026-08-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-10

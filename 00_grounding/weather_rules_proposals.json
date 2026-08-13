@@ -1,0 +1,13 @@
+{
+  "updated": "2026-08-13T04:14:04.444457-04:00",
+  "window_n": 9,
+  "direction_acc": 0.7777777777777778,
+  "notes": [],
+  "threshold_deltas": {},
+  "sector_notes": [
+    "sector:Communication Services weak (33%): review sector taxonomy weights / search templates.",
+    "sector:Consumer Defensive weak (33%): review sector taxonomy weights / search templates.",
+    "sector:Industrials weak (33%): review sector taxonomy weights / search templates.",
+    "sector:Technology weak (33%): review sector taxonomy weights / search templates."
+  ]
+}

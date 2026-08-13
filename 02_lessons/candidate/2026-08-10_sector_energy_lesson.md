@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "Same setup producing XLE not severe or negative would falsify the crude-surge ⇒ XLE severe-up pattern."
 sector: "Energy"
 date: "2026-08-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-10

@@ -7,7 +7,7 @@ error_category: "B — REASONING / SIGNAL-WEIGHTING. (Not a pure tool/data failu
 falsifier: "The rule would be falsified if an identical setup — live Hormuz-style geopolitical/oil risk, flat futures, positive ad/AI fundamentals, prior-week inflows — still produced an XLC up/notable close. It would also be weakened if prior-week flows were shown to reliably protect a two-stock sector on same-day risk-off opens."
 sector: "Communication Services"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-11

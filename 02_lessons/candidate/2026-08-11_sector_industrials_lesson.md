@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The lesson is false if, with the same active Hormuz impasse and a stale/oil-down S0 read, XLI actually delivers a severe up day (e.g., >2%) in a broad risk-off tape. A confirmed severe XLI gain despite a risk-off macro day would show defense/AI-power concentration can justify severe even when the macro overlay is negative."
 sector: "Industrials"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-11

@@ -7,7 +7,7 @@ error_category: "A — tool/data failure (primary), with a reasoning component: 
 falsifier: "The corrected behavior is falsified if, on a future Energy day, live independent sources clearly show oil DOWN and Hormuz deal progress real, yet XLE still rallies >1% with strong relative outperformance driven by a non-oil factor (e.g., refiners/crack spreads alone), because then live oil-sign verification alone would not be sufficient to avoid the miss. It is also weakened if live-verified oil-up signs still produce flat/down outcomes at high frequency intraday."
 sector: "Energy"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-11

@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If on a later occurrence yields tick down and XLU shows 1d relative strength, but the next session has no risk-off/geopolitical driver, equities rally strongly, and XLU still falls or underperforms SPY, then the automatic positive re-score would be wrong. The lesson should therefore require either continued rate relief that persists through the session or an actual defensive/risk-off bid, not just the morning yield tick plus short-term relative tape strength."
 sector: "Utilities"
 date: "2026-08-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-11

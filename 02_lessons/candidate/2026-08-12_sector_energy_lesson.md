@@ -7,7 +7,7 @@ error_category: "B (reasoning/magnitude-calibration failure; no tool/data failur
 falsifier: "On a future Energy session, if XLE enters with 1w rel > +4%, oil rises >2% on a continuing-but-not-new Hormuz headline, a same-day IEA/EIA demand-cut report is published, yet XLE closes up >2% (severe), then this lesson's magnitude cap would be falsified. It would also be falsified if applying it systematically made Energy calls too conservative and caused repeated missed severe upside in fresh oil shocks."
 sector: "Energy"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-12

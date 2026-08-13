@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "This lesson would be falsified if, under the same conditions — risk-on tech-led tape plus a same-day data-center-demand skepticism report — XLU still posts a notable gain (>1% absolute or strong relative outperformance) with broad sector participation. That would show the structural AI-power bid can overpower the rotation cap, and magnitude should remain notable."
 sector: "Utilities"
 date: "2026-08-12"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-12
