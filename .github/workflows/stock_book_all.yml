@@ -116,3 +116,9 @@ jobs:
           git commit -m "auto: stock book ALL (prereqs + suggestions + backtest)" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main || true
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard
+          path: dashboard
