@@ -1,14 +1,14 @@
 # Stock book — **2026-08-14** (1d / 3d / 1w / 2w / 1m)
 
-Generated: 2026-08-14T06:54:38.186278-04:00
+Generated: 2026-08-14T13:37:12.421708-04:00
 
 Layers: join (labels×weather) + sector predict + general regime + news actions.
 
 ## Regime snapshot
 
 - **General bias:** +0.55
-- **Weather risk:** unknown
-- **News tickers:** 32
+- **Weather risk:** on
+- **News tickers:** 18
 - **Universe:** 11586
 
 ### Sector bias
@@ -60,61 +60,61 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| COP | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| OXY | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| FANG | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| EOG | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| APA | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| DVN | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| DUO | +0.412 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| PETZ | +0.412 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| AIOS | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| KC | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YAAS | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LGCL | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| JZ | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YIBO | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WETO | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| NXTT | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| BIYA | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| EBON | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YXT | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HKIT | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIXI | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YMT | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WRD | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
+| TLN | +0.516 | Utilities | join=+0.37; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| VST | +0.492 | Utilities | join=+0.30; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| DVN | +0.487 | Energy | join=+0.17; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| FANG | +0.482 | Energy | join=+0.15; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| EOG | +0.482 | Energy | join=+0.15; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| OXY | +0.458 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| COP | +0.456 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| APA | +0.456 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| NRG | +0.439 | Utilities | join=+0.23; sector=+0.60; gen=+0.28; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| CEG | +0.413 | Utilities | join=+0.15; sector=+0.60; gen=+0.28; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| XOM | +0.404 | Energy | sector=+0.47; gen=+0.08; news=+0.74; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 4.76, 'bucket': 'oil_integrated'} |
+| CVX | +0.402 | Energy | sector=+0.47; gen=+0.08; news=+0.74; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 4.76, 'bucket': 'oil_integrated'} |
+| NEE | +0.394 | Utilities | join=+0.15; sector=+0.60; gen=+0.08; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| PHAXU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SKAIU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| LEDRU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SCATU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| IDIAU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BCACU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| APNAU | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BEMD | +0.371 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| CLRS | +0.337 | Financial | join=+0.66; sector=+0.55; gen=+0.22 |
+| TBCH | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| WOLF | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
 
 ## 1d — SELL / avoid (bottom 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| UAL | -0.228 | Industrials | sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| ALK | -0.228 | Industrials | sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| LUV | -0.228 | Industrials | sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| DAL | -0.200 | Industrials | sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| AAL | -0.200 | Industrials | sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| SEDG | -0.145 | Technology | sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'} |
-| ENPH | -0.145 | Technology | sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'} |
-| FSLR | -0.145 | Technology | sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'} |
-| RUN | -0.145 | Technology | sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'} |
-| TFPM | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| SNES | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NAK | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| TROX | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| TII | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FNV | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FNUC | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NB | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| TRX | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ORLA | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NEU | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| OR | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| COPR | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| AUGO | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PPTA | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
-| SXT | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LUV | -0.174 | Industrials | join=+0.15; sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
+| UAL | -0.142 | Industrials | join=+0.24; sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
+| ALK | -0.123 | Industrials | join=+0.30; sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
+| DAL | -0.121 | Industrials | join=+0.23; sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
+| LIN | -0.111 | Basic Materials | sector=-0.60; gen=+0.08 |
+| AAL | -0.088 | Industrials | join=+0.32; sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
+| VALE | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SSL | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| CTVA | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| RIO | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| NTR | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LYB | -0.082 | Basic Materials | sector=-0.60; gen=+0.08 |
+| MDT | -0.068 | Healthcare | sector=-0.51; gen=+0.08 |
+| NICM | -0.068 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIND | -0.068 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIM | -0.068 | Basic Materials | sector=-0.60; gen=+0.22 |
+| PHOS | -0.068 | Basic Materials | sector=-0.60; gen=+0.22 |
+| PPG | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| MLM | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| IFF | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| BHP | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| CRH | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| VMC | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| ICL | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TTAM | -0.062 | Basic Materials | sector=-0.60; gen=+0.28 |
 
 ### 1d — BUY by size bucket
 
@@ -123,100 +123,100 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| OXY | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| FANG | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| APA | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| EOG | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| COP | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| DVN | +0.429 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| VST | +0.387 | Utilities | sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
-| TLN | +0.387 | Utilities | sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| TLN | +0.516 | Utilities | join=+0.37; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| VST | +0.492 | Utilities | join=+0.30; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| DVN | +0.487 | Energy | join=+0.17; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| FANG | +0.482 | Energy | join=+0.15; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| EOG | +0.482 | Energy | join=+0.15; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| OXY | +0.458 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| COP | +0.456 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| APA | +0.456 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
 
 **mid**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| KC | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| GDS | +0.358 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| VNET | +0.358 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| YMM | +0.358 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| MAAS | +0.357 | Financial | join=+0.76; sector=+0.55; gen=+0.08 |
-| EDU | +0.351 | Consumer Defensive | join=+0.76; sector=+0.51; gen=+0.08 |
-| TAL | +0.351 | Consumer Defensive | join=+0.76; sector=+0.51; gen=+0.08 |
+| DAVE | +0.322 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| RUN | +0.310 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| FOUR | +0.310 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| KEEL | +0.310 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| CIFR | +0.310 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| APLD | +0.310 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| UWMC | +0.310 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| WULF | +0.310 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
 
 **small/micro**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| PETZ | +0.412 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| DUO | +0.412 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| LGCL | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YAAS | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MASK | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIXI | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HKIT | +0.404 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
+| WOLF | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| INDI | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| TBCH | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| CRNC | +0.330 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| LDI | +0.329 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BETR | +0.329 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
 
 ## 3d — BUY (top 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| DUO | +0.510 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| PETZ | +0.510 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| NCTY | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| RDAC | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DXF | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DPU | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| ZBAO | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SNTG | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SOS | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| EBON | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| JZ | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LGCL | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YAAS | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIXI | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIOS | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WETO | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YXT | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MASK | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| BIYA | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| NXTT | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| KC | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YIBO | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HOLO | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
+| TLN | +0.503 | Utilities | join=+0.37; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| VST | +0.476 | Utilities | join=+0.30; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| LEDRU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| PHAXU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SCATU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BEMD | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BCACU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| APNAU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SKAIU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| IDIAU | +0.464 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| CLRS | +0.425 | Financial | join=+0.66; sector=+0.55; gen=+0.22 |
+| NRG | +0.420 | Utilities | join=+0.23; sector=+0.60; gen=+0.28; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| BETR | +0.412 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BTBT | +0.412 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| LDI | +0.412 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| PRCH | +0.403 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| ATLC | +0.403 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| RC | +0.402 | Real Estate | join=+0.49; sector=+0.60; gen=+0.55 |
+| CRNC | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| TBCH | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| WOLF | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| INDI | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| DVN | +0.400 | Energy | join=+0.17; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
 
 ## 3d — SELL / avoid (bottom 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| ALK | -0.158 | Industrials | sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| LUV | -0.158 | Industrials | sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| UAL | -0.158 | Industrials | sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| AAL | -0.130 | Industrials | sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| DAL | -0.130 | Industrials | sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'} |
-| BMM | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FNV | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FNUC | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ATLX | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| WLK | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| WDFC | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| WPM | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| B | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| BIOX | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| AGI | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PAAS | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| WLKP | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| SLVM | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| SGML | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LIN | -0.162 | Basic Materials | sector=-0.60; gen=+0.08 |
+| RIO | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
+| VALE | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SSL | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LYB | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
 | NTR | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NTIC | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| AEM | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| AUGO | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NAMM | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
-| OGG | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
+| CTVA | -0.129 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SIM | -0.116 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIND | -0.116 | Basic Materials | sector=-0.60; gen=+0.22 |
+| NICM | -0.116 | Basic Materials | sector=-0.60; gen=+0.22 |
+| PHOS | -0.116 | Basic Materials | sector=-0.60; gen=+0.22 |
+| DD | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| PPG | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| VMC | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| CRH | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| SA | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TX | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TTAM | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| IFF | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| ICL | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| MLM | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| BHP | -0.110 | Basic Materials | sector=-0.60; gen=+0.28 |
+| DOW | -0.099 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SXT | -0.099 | Basic Materials | sector=-0.60; gen=+0.08 |
+| WLK | -0.099 | Basic Materials | sector=-0.60; gen=+0.08 |
 
 ### 3d — BUY by size bucket
 
@@ -225,100 +225,100 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| BEKE | +0.463 | Real Estate | join=+0.76; sector=+0.60; gen=+0.08 |
-| QH | +0.460 | Technology | join=+0.76; sector=+0.55; gen=+0.28 |
-| NTES | +0.382 | Communication Services | join=+0.76; sector=+0.30; gen=+0.08 |
-| BIDU | +0.382 | Communication Services | join=+0.76; sector=+0.30; gen=+0.08 |
-| TLN | +0.356 | Utilities | sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
-| VST | +0.356 | Utilities | sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
-| OXY | +0.334 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
-| FANG | +0.334 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| TLN | +0.503 | Utilities | join=+0.37; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| VST | +0.476 | Utilities | join=+0.30; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| NRG | +0.420 | Utilities | join=+0.23; sector=+0.60; gen=+0.28; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| DVN | +0.400 | Energy | join=+0.17; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| FANG | +0.395 | Energy | join=+0.15; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| EOG | +0.395 | Energy | join=+0.15; sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| CEG | +0.390 | Utilities | join=+0.15; sector=+0.60; gen=+0.28; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| ASTS | +0.379 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
 
 **mid**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| KC | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.487 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MAAS | +0.450 | Financial | join=+0.76; sector=+0.55; gen=+0.08 |
-| YMM | +0.440 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| VNET | +0.440 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| GDS | +0.440 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| EDU | +0.430 | Consumer Defensive | join=+0.76; sector=+0.51; gen=+0.08 |
-| TAL | +0.430 | Consumer Defensive | join=+0.76; sector=+0.51; gen=+0.08 |
+| DAVE | +0.393 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| SLG | +0.390 | Real Estate | join=+0.46; sector=+0.60; gen=+0.55 |
+| MARA | +0.389 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| UWMC | +0.389 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| UPST | +0.389 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| GLXY | +0.389 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| WULF | +0.389 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| CLSK | +0.389 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
 
 **small/micro**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| PETZ | +0.510 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| DUO | +0.510 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| SOS | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SNTG | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| ZBAO | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| NCTY | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DXF | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DPU | +0.497 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
+| LDI | +0.412 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BTBT | +0.412 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BETR | +0.412 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| PRCH | +0.403 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| ATLC | +0.403 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| RC | +0.402 | Real Estate | join=+0.49; sector=+0.60; gen=+0.55 |
+| TBCH | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.402 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
 
 ## 1w — BUY (top 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| LGCL | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIXI | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YAAS | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIOS | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HOLO | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YXT | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| EBON | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YIBO | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HKIT | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MASK | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| BIYA | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| JZ | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YMT | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| NXTT | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WETO | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| KC | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WRD | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PETZ | +0.558 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| DUO | +0.558 | Real Estate | join=+0.76; sector=+0.60; gen=+0.55 |
-| SOS | +0.543 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| ZBAO | +0.543 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DXF | +0.543 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SNTG | +0.543 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
+| BCACU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SKAIU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| IDIAU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| LEDRU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| APNAU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BEMD | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| PHAXU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SCATU | +0.513 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| TLN | +0.471 | Utilities | join=+0.37; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| CLRS | +0.469 | Financial | join=+0.66; sector=+0.55; gen=+0.22 |
+| TBCH | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| CRNC | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| INDI | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| WOLF | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| APPS | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| KOPN | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| DAVE | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| CSIQ | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| BAND | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| GPRO | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| AEVA | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| RXT | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| SKYT | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
 
 ## 1w — SELL / avoid (bottom 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| AAUC | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NAMM | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LIN | -0.180 | Basic Materials | sector=-0.60; gen=+0.08 |
 | VALE | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PAAS | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| B | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| TROX | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| OMEX | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| NAK | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ACNT | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ARIS | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| TFPM | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PPTA | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| MERC | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| MEOH | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| OR | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FMC | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ALTO | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| APD | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| AUGO | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ORLA | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| ASH | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| IONR | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| VOXR | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| MSB | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
-| WPM | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LYB | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| NTR | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SSL | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| CTVA | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| RIO | -0.142 | Basic Materials | sector=-0.60; gen=+0.08 |
+| PHOS | -0.130 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIND | -0.130 | Basic Materials | sector=-0.60; gen=+0.22 |
+| NICM | -0.130 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIM | -0.130 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SA | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| DD | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| PPG | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| CRH | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TX | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| BHP | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| ICL | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| IFF | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| MLM | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| VMC | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TTAM | -0.125 | Basic Materials | sector=-0.60; gen=+0.28 |
+| AU | -0.108 | Basic Materials | sector=-0.60; gen=+0.08 |
+| AMRZ | -0.108 | Basic Materials | sector=-0.60; gen=+0.08 |
+| APD | -0.108 | Basic Materials | sector=-0.60; gen=+0.08 |
 
 ### 1w — BUY by size bucket
 
@@ -327,100 +327,100 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| QH | +0.533 | Technology | join=+0.76; sector=+0.55; gen=+0.28 |
-| BEKE | +0.515 | Real Estate | join=+0.76; sector=+0.60; gen=+0.08 |
-| NTES | +0.425 | Communication Services | join=+0.76; sector=+0.30; gen=+0.08 |
-| BIDU | +0.425 | Communication Services | join=+0.76; sector=+0.30; gen=+0.08 |
-| ZTO | +0.425 | Industrials | join=+0.76; sector=+0.28; gen=+0.08 |
-| HSAI | +0.393 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.55 |
-| NIO | +0.368 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.28 |
-| YUMC | +0.350 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.08 |
+| TLN | +0.471 | Utilities | join=+0.37; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| VST | +0.440 | Utilities | join=+0.30; sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'} |
+| ASTS | +0.437 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| DOCN | +0.424 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| SAIL | +0.424 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| SITM | +0.424 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| CRWV | +0.410 | Technology | join=+0.43; sector=+0.55; gen=+0.55 |
+| NET | +0.410 | Technology | join=+0.43; sector=+0.55; gen=+0.55 |
 
 **mid**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| PONY | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| KC | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| VNET | +0.516 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| YMM | +0.516 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| GDS | +0.516 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| MAAS | +0.500 | Financial | join=+0.76; sector=+0.55; gen=+0.08 |
-| TAL | +0.478 | Consumer Defensive | join=+0.76; sector=+0.51; gen=+0.08 |
-| EDU | +0.478 | Consumer Defensive | join=+0.76; sector=+0.51; gen=+0.08 |
+| DAVE | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| FOUR | +0.437 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| KEEL | +0.437 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| APLD | +0.437 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| CIFR | +0.437 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| RUN | +0.437 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| BTDR | +0.424 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| CORZ | +0.424 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
 
 **small/micro**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| MASK | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| EBON | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YXT | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YMT | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WRD | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIXI | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIOS | +0.558 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
+| WOLF | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| INDI | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| TBCH | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| CRNC | +0.462 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| CSIQ | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| LPTH | +0.452 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
 
 ## 2w — BUY (top 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| NXTT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| BIYA | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LGCL | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YXT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIOS | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| JZ | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HOLO | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WRD | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YAAS | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| AIXI | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YMT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| EBON | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MASK | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YIBO | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HKIT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| KC | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WETO | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| RDAC | +0.586 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| ZBAO | +0.586 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| NCTY | +0.586 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DXF | +0.586 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SNTG | +0.586 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SOS | +0.586 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
+| IDIAU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| LEDRU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| PHAXU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SKAIU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SCATU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BEMD | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| APNAU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BCACU | +0.559 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| CLRS | +0.512 | Financial | join=+0.66; sector=+0.55; gen=+0.22 |
+| CRNC | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| INDI | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| TBCH | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| WOLF | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| BTBT | +0.483 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BETR | +0.483 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| LDI | +0.483 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| KOPN | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| CSIQ | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| APPS | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| RXT | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| SKYT | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| BAND | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| LPTH | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
 
 ## 2w — SELL / avoid (bottom 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| AIIR | +0.007 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| ASH | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
-| SSP | +0.007 | Communication Services | sector=+0.30; gen=+0.08 |
-| RGCO | +0.007 | Utilities | sector=+0.60; gen=+0.08 |
-| RGLD | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
-| CPB | +0.007 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| WALD | +0.007 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| DMLP | +0.007 | Energy | sector=+0.47; gen=+0.08 |
-| PRTS | +0.007 | Consumer Cyclical | sector=-0.55; gen=+0.08 |
-| PBR-A | +0.007 | Energy | sector=+0.47; gen=+0.08 |
-| VNOM | +0.007 | Energy | sector=+0.47; gen=+0.08 |
-| VOC | +0.007 | Energy | sector=+0.47; gen=+0.08 |
-| VOXR | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LIN | -0.033 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SSL | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
+| VALE | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
+| CTVA | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
 | LYB | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FTRK | +0.007 | Communication Services | sector=+0.30; gen=+0.08 |
-| FTW | +0.007 | Energy | sector=+0.47; gen=+0.08 |
-| WAVE | +0.007 | Utilities | sector=+0.60; gen=+0.08 |
-| NLOP | +0.007 | Real Estate | sector=+0.60; gen=+0.08 |
-| FTS | +0.007 | Utilities | sector=+0.60; gen=+0.08 |
-| FTI | +0.007 | Energy | sector=+0.47; gen=+0.08 |
-| FTLF | +0.007 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| VZ | +0.007 | Communication Services | sector=+0.30; gen=+0.08 |
-| DRD | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
-| LAUR | +0.007 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| RFL | +0.007 | Real Estate | sector=+0.60; gen=+0.08 |
+| NTR | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
+| RIO | +0.007 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SIM | +0.018 | Basic Materials | sector=-0.60; gen=+0.22 |
+| NICM | +0.018 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIND | +0.018 | Basic Materials | sector=-0.60; gen=+0.22 |
+| PHOS | +0.018 | Basic Materials | sector=-0.60; gen=+0.22 |
+| TTAM | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| CRH | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TX | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| PPG | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| DD | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| ICL | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| IFF | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| SA | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| VMC | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| BHP | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| LULU | +0.023 | Consumer Cyclical | sector=-0.55; gen=+0.28 |
+| MLM | +0.023 | Basic Materials | sector=-0.60; gen=+0.28 |
+| MDLZ | +0.044 | Consumer Defensive | sector=+0.51; gen=+0.08 |
+| CHD | +0.044 | Consumer Defensive | sector=+0.51; gen=+0.08 |
 
 ### 2w — BUY by size bucket
 
@@ -429,100 +429,100 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| QH | +0.567 | Technology | join=+0.76; sector=+0.55; gen=+0.28 |
-| ZTO | +0.469 | Industrials | join=+0.76; sector=+0.28; gen=+0.08 |
-| HSAI | +0.411 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.55 |
-| NIO | +0.388 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.28 |
-| NTES | +0.372 | Communication Services | join=+0.76; sector=+0.30; gen=+0.08 |
-| LI | +0.372 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.08 |
-| HTHT | +0.372 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.08 |
-| BEKE | +0.372 | Real Estate | join=+0.76; sector=+0.60; gen=+0.08 |
+| ASTS | +0.460 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| SITM | +0.445 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| DOCN | +0.445 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| SAIL | +0.445 | Technology | join=+0.46; sector=+0.55; gen=+0.55 |
+| IREN | +0.442 | Financial | join=+0.46; sector=+0.55; gen=+0.55 |
+| AFRM | +0.442 | Financial | join=+0.46; sector=+0.55; gen=+0.55 |
+| MKSI | +0.431 | Technology | join=+0.43; sector=+0.55; gen=+0.55 |
+| SNOW | +0.431 | Technology | join=+0.43; sector=+0.55; gen=+0.55 |
 
 **mid**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| PONY | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| KC | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| VNET | +0.551 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| GDS | +0.551 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| YMM | +0.551 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| MAAS | +0.547 | Financial | join=+0.76; sector=+0.55; gen=+0.08 |
-| ZLAB | +0.537 | Healthcare | join=+0.76; sector=-0.51; gen=+0.28 |
-| XPEV | +0.388 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.28 |
+| DAVE | +0.476 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
+| APLD | +0.460 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| FOUR | +0.460 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| RUN | +0.460 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| KEEL | +0.460 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| CIFR | +0.460 | Technology | join=+0.49; sector=+0.55; gen=+0.55 |
+| GLXY | +0.456 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| WULF | +0.456 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
 
 **small/micro**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| JZ | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YAAS | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YMT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| HKIT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| EBON | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| BIYA | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| NXTT | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| YIBO | +0.589 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
+| TBCH | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| WOLF | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| VERI | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| INDI | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| PGY | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| CRNC | +0.487 | Technology | join=+0.55; sector=+0.55; gen=+0.55 |
+| BETR | +0.483 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| LDI | +0.483 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
 
 ## 1m — BUY (top 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| RDAC | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DPU | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SOS | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| NCTY | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DXF | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SNTG | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| ZBAO | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| HTT | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| CANG | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| JF | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| LX | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| NOAH | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| YRD | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| JFIN | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| AIFU | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| HUIZ | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| LU | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
-| SRL | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
-| PONY | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| NXTT | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| LHSW | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MASK | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| WOK | +0.608 | Healthcare | join=+0.76; sector=-0.51; gen=+0.55 |
-| ZJYL | +0.608 | Healthcare | join=+0.76; sector=-0.51; gen=+0.55 |
-| WRD | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
+| SKAIU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| APNAU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| SCATU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BCACU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| IDIAU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| BEMD | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| PHAXU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| LEDRU | +0.617 | Financial | join=+0.76; sector=+0.55; gen=+0.22 |
+| CLRS | +0.568 | Financial | join=+0.66; sector=+0.55; gen=+0.22 |
+| BTBT | +0.534 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BETR | +0.534 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| LDI | +0.534 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| PRCH | +0.523 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| ATLC | +0.523 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| FCUS | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| DRN | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| HECO | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| VERS | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| BOBP | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| IBAT | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| ARKX | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| SMHX | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| CHAT | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| AIS | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
+| EWY | +0.518 | Financial | join=+0.52; sector=+0.55; gen=+0.55 |
 
 ## 1m — SELL / avoid (bottom 25)
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| PAAS | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| FNUC | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PPC | +0.006 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| ASH | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| EMPD | +0.006 | Consumer Cyclical | sector=-0.55; gen=+0.08 |
-| ELPC | +0.006 | Utilities | sector=+0.60; gen=+0.08 |
-| ELS | +0.006 | Real Estate | sector=+0.60; gen=+0.08 |
-| BMM | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PPL | +0.006 | Utilities | sector=+0.60; gen=+0.08 |
-| TWG | +0.006 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| EP | +0.006 | Energy | sector=+0.47; gen=+0.08 |
-| EPC | +0.006 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| EPD | +0.006 | Energy | sector=+0.47; gen=+0.08 |
-| EPSN | +0.006 | Energy | sector=+0.47; gen=+0.08 |
-| EPM | +0.006 | Energy | sector=+0.47; gen=+0.08 |
-| TU | +0.006 | Communication Services | sector=+0.30; gen=+0.08 |
-| GRO | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| BSM | +0.006 | Energy | sector=+0.47; gen=+0.08 |
-| CCEP | +0.006 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| BTBD | +0.006 | Consumer Cyclical | sector=-0.55; gen=+0.08 |
-| NC | +0.006 | Energy | sector=+0.47; gen=+0.08 |
-| FNV | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| PRMB | +0.006 | Consumer Defensive | sector=+0.51; gen=+0.08 |
-| BTG | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
-| BTI | +0.006 | Consumer Defensive | sector=+0.51; gen=+0.08 |
+| LIN | -0.036 | Basic Materials | sector=-0.60; gen=+0.08 |
+| VALE | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SSL | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
+| CTVA | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
+| NTR | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
+| RIO | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
+| LYB | +0.006 | Basic Materials | sector=-0.60; gen=+0.08 |
+| SIM | +0.016 | Basic Materials | sector=-0.60; gen=+0.22 |
+| SIND | +0.016 | Basic Materials | sector=-0.60; gen=+0.22 |
+| NICM | +0.016 | Basic Materials | sector=-0.60; gen=+0.22 |
+| PHOS | +0.016 | Basic Materials | sector=-0.60; gen=+0.22 |
+| CRH | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TX | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| DD | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| TTAM | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| PPG | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| IFF | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| SA | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| LULU | +0.020 | Consumer Cyclical | sector=-0.55; gen=+0.28 |
+| MLM | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| ICL | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| VMC | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| BHP | +0.020 | Basic Materials | sector=-0.60; gen=+0.28 |
+| COP | +0.044 | Energy | sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'} |
+| USLM | +0.044 | Basic Materials | sector=-0.60; gen=+0.08 |
 
 ### 1m — BUY by size bucket
 
@@ -531,40 +531,40 @@ Bias from a topic with a weak graded track record is scaled down before it can m
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| QH | +0.588 | Technology | join=+0.76; sector=+0.55; gen=+0.28 |
-| ZTO | +0.497 | Industrials | join=+0.76; sector=+0.28; gen=+0.08 |
-| HSAI | +0.421 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.55 |
-| NIO | +0.401 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.28 |
-| BEKE | +0.387 | Real Estate | join=+0.76; sector=+0.60; gen=+0.08 |
-| JD | +0.387 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.08 |
-| HTHT | +0.387 | Consumer Cyclical | join=+0.76; sector=-0.55; gen=+0.08 |
-| NTES | +0.387 | Communication Services | join=+0.76; sector=+0.30; gen=+0.08 |
+| IREN | +0.491 | Financial | join=+0.46; sector=+0.55; gen=+0.55 |
+| AFRM | +0.491 | Financial | join=+0.46; sector=+0.55; gen=+0.55 |
+| RKT | +0.476 | Financial | join=+0.43; sector=+0.55; gen=+0.55 |
+| SOFI | +0.476 | Financial | join=+0.43; sector=+0.55; gen=+0.55 |
+| TPG | +0.476 | Financial | join=+0.43; sector=+0.55; gen=+0.55 |
+| HUT | +0.476 | Financial | join=+0.43; sector=+0.55; gen=+0.55 |
+| CG | +0.476 | Financial | join=+0.43; sector=+0.55; gen=+0.55 |
+| JEF | +0.476 | Financial | join=+0.43; sector=+0.55; gen=+0.55 |
 
 **mid**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| KC | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| PONY | +0.608 | Technology | join=+0.76; sector=+0.55; gen=+0.55 |
-| MAAS | +0.607 | Financial | join=+0.76; sector=+0.55; gen=+0.08 |
-| ZLAB | +0.588 | Healthcare | join=+0.76; sector=-0.51; gen=+0.28 |
-| GDS | +0.574 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| VNET | +0.574 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| YMM | +0.574 | Technology | join=+0.76; sector=+0.55; gen=+0.08 |
-| TME | +0.401 | Communication Services | join=+0.76; sector=+0.30; gen=+0.28 |
+| UWMC | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| MARA | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| UPST | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| WULF | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| CLSK | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| GLXY | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
+| CACC | +0.491 | Financial | join=+0.46; sector=+0.55; gen=+0.55 |
+| DAVE | +0.490 | Technology | join=+0.53; sector=+0.55; gen=+0.55 |
 
 **small/micro**
 
 | Ticker | Score | Sector | Reasons |
 |--------|-------|--------|---------|
-| RDAC | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SNTG | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| SOS | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DXF | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| NCTY | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| DPU | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| ZBAO | +0.641 | Financial | join=+0.76; sector=+0.55; gen=+0.55 |
-| LU | +0.621 | Financial | join=+0.76; sector=+0.55; gen=+0.28 |
+| BETR | +0.534 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| LDI | +0.534 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| BTBT | +0.534 | Financial | join=+0.55; sector=+0.55; gen=+0.55 |
+| ATLC | +0.523 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| PRCH | +0.523 | Financial | join=+0.53; sector=+0.55; gen=+0.55 |
+| FDMM | +0.513 | Financial | join=+0.55; sector=+0.55; gen=+0.22 |
+| KF | +0.512 | Financial | join=+0.50; sector=+0.55; gen=+0.55 |
+| ZBAO | +0.506 | Financial | join=+0.49; sector=+0.55; gen=+0.55 |
 
 ## Read
 
