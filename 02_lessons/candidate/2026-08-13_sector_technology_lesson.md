@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "The rule is falsified if a later Technology session has the same setup — fresh carried AI-infra catalyst, NQ futures flat at 0.0%, PPI pending, strong prior-day tape — and XLK still delivers relative return ≥0.8% or an absolute gain >1.5% against a flat/negative SPY. That would show flat NQ futures do not cap XLK magnitude in the AI-infra regime. Also, if the formal scoreboard band defines +1.01% absolute as notable, then the disagreement between scoreboard and the MILD label must be resolved first; otherwise the lesson is unfalsifiable."
 sector: "Technology"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-13

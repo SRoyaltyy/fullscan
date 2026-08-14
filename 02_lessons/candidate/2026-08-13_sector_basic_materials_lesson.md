@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "If the same negative-tape + China-drag setup closes up or notable, the rule would need revision."
 sector: "Basic Materials"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-13

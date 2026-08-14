@@ -7,7 +7,7 @@ error_category: "B (TOOL/DATA failure: scoreboard magnitude flag inconsistent wi
 falsifier: "If the official Consumer Cyclical rubric defines the flat band as |m| <= 0.40%, then 0.475% is actually mild, the scoreboard False flag would be legitimate, and this data-error lesson should be discarded in favor of a mild-magnitude-miss lesson. Absent such rubric evidence, the scoreboard line is a data error."
 sector: "Consumer Cyclical"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-13

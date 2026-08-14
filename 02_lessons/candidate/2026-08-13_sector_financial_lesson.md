@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If on a similar setup XLF 1d relative tape is already clearly positive (>+0.3% vs SPY) or futures are strongly positive (>+0.5%) and a fresh same-day sector catalyst exists, then up/notable can be correct. Also, a much cooler-than-expected inflation print could produce a broad risk-on day, but sector-specific magnitude should still require evidence that financials are leading, not merely beta-following."
 sector: "Financial"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-13

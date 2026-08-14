@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "If XLU in this same macro setup (soft CPI/PPI, risk-on tech tape, no fresh Wood Mackenzie/Texas-style headwind, confirmed inflows) outperforms SPY by >0.3%, the “do not expect relative outperformance” refinement would be too broad and should be scoped to the presence of sector-specific headwinds."
 sector: "Utilities"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-13

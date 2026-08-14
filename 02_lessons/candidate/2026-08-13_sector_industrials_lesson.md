@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "This rule would be falsified if a future session has an active Hormuz-type headline, a fresh OPEC/API demand-side selloff signal, pre-fetched oil down, and a negative XLI 1d relative tape, yet XLI closes positive and outperforms SPY. Alternatively, if Brent actually holds its prior level and oil rises, then up/mild would be correct and the “demand-side flip” reading would be wrong."
 sector: "Industrials"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-13

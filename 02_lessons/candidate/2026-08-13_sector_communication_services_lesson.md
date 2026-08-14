@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If a future XLC session has all the reversal signals present — oil falling, Hormuz exports reported near normal, benign inflation, positive futures, and a fresh positive top-holding catalyst — yet XLC still closes down or materially underperforms SPY, then the reversal checklist is too weak and must also weight unresolved company-specific negatives (antitrust, Alphabet/Meta FCF, etc.) before relaxing the old cap."
 sector: "Communication Services"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-13

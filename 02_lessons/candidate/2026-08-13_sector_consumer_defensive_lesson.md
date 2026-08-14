@@ -7,7 +7,7 @@ error_category: "B — magnitude/calibration reasoning error (not tool/data fail
 falsifier: "If a similar setup occurs — prior CPI benign, positive staples flows, pending same-day PPI — but PPI prints hot or core inflation surprises upward, rates rise, and XLP falls/flat/underperforms, then the S0-positive/notable rule would be wrong. Also, if the 10Y/real yields do not actually fall at the open despite a cool print, magnitude should be capped at mild."
 sector: "Consumer Defensive"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-13

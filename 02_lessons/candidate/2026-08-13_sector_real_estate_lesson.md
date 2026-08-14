@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: ""
 sector: "Real Estate"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-13

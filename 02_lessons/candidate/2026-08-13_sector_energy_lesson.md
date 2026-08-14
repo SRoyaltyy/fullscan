@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This pattern would be falsified if, despite oil falling, EIA inventory building, IEA/OPEC demand cuts, a flat 1d tape, and a prior >4% 1w relative run, XLE still closed strongly positive both absolutely and relative to SPY. That did not happen; the active lesson is not falsified."
 sector: "Energy"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-13

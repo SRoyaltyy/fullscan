@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If XLV shows the exact trigger setup — 3d/1w/1m leadership, flat 1d rel, no fresh healthcare catalyst, tech-led premarket — and still closes with strong positive relative performance (e.g., XLV rel > +0.3% on a tech-led SPY day), then the reversal rule is wrong for that case and continuation remains possible."
 sector: "Healthcare"
 date: "2026-08-13"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-13
