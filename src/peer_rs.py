@@ -65,11 +65,38 @@ def _resolve_export(date: str | None) -> tuple[str, Path]:
 
 
 def _load_correlations() -> dict[str, list[str]]:
-    if not CORR_PATH.exists():
-        raise SystemExit(f"[peer_rs] missing {CORR_PATH}")
-    df = pd.read_csv(CORR_PATH)
+    """Load ticker→peers from csv, parts, gz, or Correlations.xlsx."""
+    parts_dir = CORR_PATH.parent / "parts"
+    gz = Path(str(CORR_PATH) + ".gz")
+    xlsx = CORR_PATH.parent / "Correlations.xlsx"
+
+    if CORR_PATH.exists():
+        df = pd.read_csv(CORR_PATH)
+    elif parts_dir.is_dir() and list(parts_dir.glob("correlations_*.csv")):
+        frames = [pd.read_csv(f) for f in sorted(parts_dir.glob("correlations_*.csv"))]
+        df = pd.concat(frames, ignore_index=True)
+    elif gz.exists():
+        df = pd.read_csv(gz, compression="gzip")
+    elif xlsx.exists():
+        raw = pd.read_excel(xlsx, header=None)
+        raw = raw.iloc[1:].copy()
+        raw.columns = [f"peer_{i}" for i in range(1, 11)] + ["ticker"]
+        df = raw
+        try:
+            CORR_PATH.parent.mkdir(parents=True, exist_ok=True)
+            df.to_csv(CORR_PATH, index=False)
+        except Exception:
+            pass
+    else:
+        raise SystemExit(
+            "[peer_rs] missing peers file. Put Correlations.xlsx or correlations.csv under data/peers/"
+        )
+
+    if "ticker" not in df.columns and "Ticker" in df.columns:
+        df = df.rename(columns={"Ticker": "ticker"})
+
     out: dict[str, list[str]] = {}
-    peer_cols = [c for c in df.columns if c.startswith("peer_")]
+    peer_cols = [c for c in df.columns if str(c).startswith("peer_")]
     for _, r in df.iterrows():
         t = str(r.get("ticker", "")).strip().upper()
         if not t or t == "NAN":
@@ -174,7 +201,7 @@ def run(date: str | None = None) -> Path:
         f"# Peer relative strength — {date}",
         "",
         "Finviz Compare-style: stock Performance − median(peer Performance).",
-        f"Source: `{export_path.name}` × `data/peers/correlations.csv`.",
+        f"Source: `{export_path.name}` × peers map.",
         "",
         f"- Universe with peers scored: **{len(out):,}**",
         f"- With usable week RS: **{ranked.shape[0]:,}**",
@@ -187,7 +214,7 @@ def run(date: str | None = None) -> Path:
     for _, r in ranked.head(20).iterrows():
         L.append(
             f"| {r['Ticker']} | {r['rs_week']:+.1f} | {r['perf_week']:+.1f} | "
-            f"{r['peer_med_week']:+.1f} | {100*(r['beat_week_pct'] or 0):.0f}% | "
+            f"{r['peer_med_week']:+.1f} | {100 * (r['beat_week_pct'] or 0):.0f}% | "
             f"{str(r['peers_used'])[:40]} |"
         )
     L += [
@@ -200,7 +227,7 @@ def run(date: str | None = None) -> Path:
     for _, r in ranked.tail(20).iloc[::-1].iterrows():
         L.append(
             f"| {r['Ticker']} | {r['rs_week']:+.1f} | {r['perf_week']:+.1f} | "
-            f"{r['peer_med_week']:+.1f} | {100*(r['beat_week_pct'] or 0):.0f}% | "
+            f"{r['peer_med_week']:+.1f} | {100 * (r['beat_week_pct'] or 0):.0f}% | "
             f"{str(r['peers_used'])[:40]} |"
         )
     md = DAILY / f"{date}_peer_rs.md"
