@@ -83,6 +83,13 @@ def _status_for_day(date: str) -> list[dict]:
             "required": True,
         },
         {
+            "name": "Peer relative strength",
+            "key": "peer_rs",
+            "done": _exists("data", "peers", f"{date}_peer_rs.csv"),
+            "artifact": f"data/peers/{date}_peer_rs.csv",
+            "required": False,
+        },
+        {
             "name": "News parse",
             "key": "news_parse",
             "done": _exists("01_daily", "news", f"{date}_parsed.json")
@@ -229,6 +236,15 @@ def run(
             )
     else:
         print("[all] skip Join / match rank (DONE for this day)")
+
+    # ---- Peer RS (Finviz Compare-style) ----
+    if need("peer_rs"):
+        print("[all] → Peer relative strength")
+        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
+        if not _exists("data", "peers", f"{date}_peer_rs.csv"):
+            print("[all] WARN: peer_rs missing for", date, "— stock book runs without peer layer")
+    else:
+        print("[all] skip Peer relative strength (DONE for this day)")
 
     # ---- News ----
     if need("news_parse") or need("news_actions"):
