@@ -1,0 +1,29 @@
+---
+trigger_pattern: "A sector prediction’s stated magnitude band equals the outcome’s stated actual magnitude (e.g., predicted down/mild, actual magnitude = mild), but the scoreboard line records magnitude_hit False. This scoreboard/accounting inconsistency repeats across runs and can cause a false magnitude lesson to be learned from a correct call."
+current_behavior: "The scoreboard marks magnitude_hit False for Consumer Cyclical even though the OUTCOME block explicitly says ACTUAL_MAGNITUDE: mild and the predicted band was mild. Taken at face value, this would teach the model a false magnitude miss and understate rolling magnitude accuracy."
+corrected_behavior: "Before writing a magnitude/reasoning lesson, cross-check the scoreboard magnitude flag against the OUTCOME block’s ACTUAL_MAGNITUDE and the predicted magnitude band. If predicted band == actual magnitude, treat the scoreboard False as a scoreboard/accounting flag error, flag the line for correction, and do not create a magnitude-threshold reasoning lesson."
+evidence_cited: "2026-08-14 XLY predicted down/mild; OUTCOME says ACTUAL_MAGNITUDE: mild; scoreboard says direction_hit True, magnitude_hit False. This is the same pattern already captured in the 2026-08-13 sector:Consumer Cyclical candidate lesson: predicted up/flat, actual +0.475% classified flat, post-session review said both HIT, but the scoreboard recorded magnitude_hit False. The current run is a second confirmation that the False flag is a scoreboard accounting problem, not a sector reasoning miss."
+error_category: "D"
+falsifier: "If a published magnitude rubric is audited and shows that -0.211% is outside the “mild” band (e.g., mild requires |pct| ≥ 0.5%), then the scoreboard False is correct and this lesson is invalid. Also, if the OUTCOME ACTUAL_MAGNITUDE field is shown to be derived from the prediction rather than independently classified, the scoreboard should be treated as authoritative instead."
+sector: "Consumer Cyclical"
+date: "2026-08-14"
+status: "candidate"
+---
+
+# Sector Reflection — Consumer Cyclical — 2026-08-14
+
+LESSON_BEGIN
+ERROR_CATEGORY: D
+TRIGGER_PATTERN: A sector prediction’s stated magnitude band equals the outcome’s stated actual magnitude (e.g., predicted down/mild, actual magnitude = mild), but the scoreboard line records magnitude_hit False. This scoreboard/accounting inconsistency repeats across runs and can cause a false magnitude lesson to be learned from a correct call.
+CURRENT_BEHAVIOR: The scoreboard marks magnitude_hit False for Consumer Cyclical even though the OUTCOME block explicitly says ACTUAL_MAGNITUDE: mild and the predicted band was mild. Taken at face value, this would teach the model a false magnitude miss and understate rolling magnitude accuracy.
+CORRECTED_BEHAVIOR: Before writing a magnitude/reasoning lesson, cross-check the scoreboard magnitude flag against the OUTCOME block’s ACTUAL_MAGNITUDE and the predicted magnitude band. If predicted band == actual magnitude, treat the scoreboard False as a scoreboard/accounting flag error, flag the line for correction, and do not create a magnitude-threshold reasoning lesson.
+EVIDENCE: 2026-08-14 XLY predicted down/mild; OUTCOME says ACTUAL_MAGNITUDE: mild; scoreboard says direction_hit True, magnitude_hit False. This is the same pattern already captured in the 2026-08-13 sector:Consumer Cyclical candidate lesson: predicted up/flat, actual +0.475% classified flat, post-session review said both HIT, but the scoreboard recorded magnitude_hit False. The current run is a second confirmation that the False flag is a scoreboard accounting problem, not a sector reasoning miss.
+LESSON_MATCH_CHECK: Direct match to the 2026-08-13 sector:Consumer Cyclical candidate lesson about scoreboard/accounting magnitude flags. This event should promote that candidate to active rather than create a duplicate or a new reasoning lesson.
+BACKWARD_CHECK: Correcting the 08-14 scoreboard flag from False to True improves rolling mag accuracy by one hit and is consistent with the 08-13 candidate’s arithmetic point. No prior prediction would be invalidated; this is an accounting correction, not a behavioral rule change.
+CONFLICT_CHECK: No conflict with active lessons. It does not affect the oil-shock trigger lesson, the macro-caution down/mild lesson, the premarket-tape flat-cap lesson, or the “cut conviction on tape conflict” DO-INSTEAD. It also does not conflict with recent sector lessons about double-counted catalysts because those concern prediction construction, while this concerns post-hoc scoreboard classification.
+APPLIED_LESSON_CHECK: The scoreboard-check lesson was not active at prediction time, so it was not applied. Had it been active, the post-session review would have immediately identified magnitude_hit False as a data/accounting error rather than risking a false magnitude lesson. It should be activated for Consumer Cyclical.
+FALSIFIER: If a published magnitude rubric is audited and shows that -0.211% is outside the “mild” band (e.g., mild requires |pct| ≥ 0.5%), then the scoreboard False is correct and this lesson is invalid. Also, if the OUTCOME ACTUAL_MAGNITUDE field is shown to be derived from the prediction rather than independently classified, the scoreboard should be treated as authoritative instead.
+DIVERGENCE_VERDICT: none_flagged — no leading/futures divergence was flagged, and the tape-confirmed down/mild call resolved correctly.
+ACTIVE_LESSON_REVIEW: Existing active lessons remain valid: (1) the oil-shock trigger did not fire today — oil was only modestly up, no Hormuz spike; (2) the macro-caution down/mild disposition was correct; (3) the premarket-tape cap kept the call at mild; (4) the tape-conflict DO-INSTEAD correctly favored restraint. Add the scoreboard-check lesson to the active set for Consumer Cyclical.
+SECTOR: Consumer Cyclical
+LESSON_END

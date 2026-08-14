@@ -1,0 +1,18 @@
+# Sector Reflect — Real Estate — 2026-08-14
+
+Triage: This is primarily a **tool/process failure**, not a new reasoning failure. The narrative and SECTOR_SCORES block said `up/mild`; the deterministic pipeline emitted `up/notable`; the scoreboard then graded the pipeline band, producing a magnitude miss even though the actual magnitude was `mild`. A secondary reasoning issue — triple-counting the same easing-yield premise across S0/S1/S4 — is already covered by existing candidate lessons.
+
+LESSON_BEGIN
+ERROR_CATEGORY: D (tool/process failure; scoreboard/pipeline mismatch)
+TRIGGER_PATTERN: A sector prediction’s written conclusion and SECTOR_SCORES horizons cap magnitude at mild, but the deterministic pipeline block prints a different `leading_sum`/`total_score` from the same components and emits the official band as NOTABLE. The scoreboard later grades the pipeline output, converting a correct mild call into a magnitude miss.
+CURRENT_BEHAVIOR: The Real Estate output contains both “I’ll go up/mild” and an official `predicted_magnitude_band: notable`; HORIZON_3D is `up:mild:0.6`; the pipeline block prints `total_score: 7.5, predicted_magnitude_band: notable`. The scoreboard records `predicted up/notable vs actual 0.3324501982044703%`, setting `magnitude_hit: False`.
+CORRECTED_BEHAVIOR: Reconcile the narrative, SECTOR_SCORES, and pipeline-computed official band before finalization. If the written call and component scores justify `mild`, the official graded band must be `mild`. If the pipeline formula cannot produce the intended band, fix the formula rather than leaving two conflicting bands in the same record. The scoreboard should grade the final intended call, not an inconsistent derived value.
+EVIDENCE: Real Estate 2026-08-14: narrative said `up/mild`, SECTOR_SCORES said `HORIZON_3D: up:mild:0.6`, actual XLRE +0.33% / SPY -0.20% / REL +0.53% => actual magnitude mild. Direction was a hit; magnitude would have been a hit if the official band had matched the narrative. The pipeline’s `notable` was the cause of the recorded miss.
+LESSON_MATCH_CHECK: Matches `2026-08-14_sector_consumer_defensive_lesson.md` and closely matches `2026-08-14_sector_financial_lesson.md`; both describe the same narrative/pipeline band mismatch and scoreboard grading problem. It also partially relates to `2026-08-14_sector_communication_services_lesson.md`, but this case is primarily a pipeline/accounting failure rather than a new reasoning error.
+BACKWARD_CHECK: Applying this lesson would preserve correct prior Real Estate calls. For example, 2026-08-13 was `up/mild` with actual +1.42%; if a pipeline mismatch had flipped that to `notable`, this lesson would correct it back to the intended mild band. No prior graded Real Estate run is harmed.
+CONFLICT_CHECK: No conflict with active 08-12 REIT/utilities lessons; they support an up/mild or capped-magnitude read. The only possible conflict would be if the pipeline’s `notable` were intentionally correcting narrative underconfidence, but the actual +0.33% confirms `mild`, so no conflict applies.
+FALSIFIER: This lesson is falsified if a future run with the same narrative/pipeline mismatch consistently produces actual `notable` magnitude when the narrative said `mild`; that would indicate the narrative/scores are the erroneous part and the pipeline band is the better signal.
+DIVERGENCE_VERDICT: none_flagged
+ACTIVE_LESSON_REVIEW: The active 08-12 REIT lesson (duration relief turning positive after cool CPI) was directionally useful and helped avoid a down call. The 08-14 sector pipeline-mismatch lessons from consumer defensives/financials should be promoted to active and applied across sectors, including Real Estate.
+SECTOR: Real Estate
+LESSON_END
