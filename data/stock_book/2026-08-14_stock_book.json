@@ -1,0 +1,4157 @@
+{
+  "meta": {
+    "date": "2026-08-14",
+    "generated_at": "2026-08-14T06:54:38.186278-04:00",
+    "general_bias": 0.55,
+    "sector_bias": {
+      "Basic Materials": -0.6,
+      "Communication Services": 0.3,
+      "Consumer Cyclical": -0.55,
+      "Consumer Defensive": 0.51,
+      "Energy": 0.4675,
+      "Financial": 0.55,
+      "Healthcare": -0.51,
+      "Industrials": 0.275,
+      "Real Estate": 0.6,
+      "Technology": 0.5525,
+      "Utilities": 0.6
+    },
+    "accuracy_gates": {
+      "general": {
+        "hit_rate": 0.615,
+        "n": 13,
+        "gate": 1.0
+      },
+      "sector:Basic Materials": {
+        "hit_rate": 0.75,
+        "n": 4,
+        "gate": 1.0
+      },
+      "sector:Communication Services": {
+        "hit_rate": 0.25,
+        "n": 4,
+        "gate": 0.5
+      },
+      "sector:Consumer Cyclical": {
+        "hit_rate": 0.75,
+        "n": 4,
+        "gate": 1.0
+      },
+      "sector:Consumer Defensive": {
+        "hit_rate": 0.5,
+        "n": 4,
+        "gate": 0.85
+      },
+      "sector:Energy": {
+        "hit_rate": 0.5,
+        "n": 4,
+        "gate": 0.85
+      },
+      "sector:Financial": {
+        "hit_rate": 0.75,
+        "n": 4,
+        "gate": 1.0
+      },
+      "sector:Healthcare": {
+        "hit_rate": 0.5,
+        "n": 4,
+        "gate": 0.85
+      },
+      "sector:Industrials": {
+        "hit_rate": 0.25,
+        "n": 4,
+        "gate": 0.5
+      },
+      "sector:Real Estate": {
+        "hit_rate": 0.75,
+        "n": 4,
+        "gate": 1.0
+      },
+      "sector:Technology": {
+        "hit_rate": 0.5,
+        "n": 4,
+        "gate": 0.85
+      },
+      "sector:Utilities": {
+        "hit_rate": 0.75,
+        "n": 4,
+        "gate": 1.0
+      }
+    },
+    "n_news_tickers": 32,
+    "weather_risk": "unknown",
+    "n_universe": 11586,
+    "weights": {
+      "1d": [
+        0.35,
+        0.15,
+        0.1,
+        0.4
+      ],
+      "3d": [
+        0.4,
+        0.25,
+        0.1,
+        0.25
+      ],
+      "1w": [
+        0.45,
+        0.3,
+        0.1,
+        0.15
+      ],
+      "2w": [
+        0.48,
+        0.35,
+        0.1,
+        0.07
+      ],
+      "1m": [
+        0.5,
+        0.4,
+        0.1,
+        0.0
+      ]
+    },
+    "horizons": [
+      "1d",
+      "3d",
+      "1w",
+      "2w",
+      "1m"
+    ],
+    "top_n": 25
+  },
+  "books": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "COP",
+          "score": 0.42893222698912914,
+          "sector": "Energy",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+        },
+        {
+          "ticker": "OXY",
+          "score": 0.42893222698912914,
+          "sector": "Energy",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+        },
+        {
+          "ticker": "FANG",
+          "score": 0.42893222698912914,
+          "sector": "Energy",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+        },
+        {
+          "ticker": "EOG",
+          "score": 0.42893222698912914,
+          "sector": "Energy",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+        },
+        {
+          "ticker": "APA",
+          "score": 0.42893222698912914,
+          "sector": "Energy",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+        },
+        {
+          "ticker": "DVN",
+          "score": 0.42893222698912914,
+          "sector": "Energy",
+          "size": "large",
+          "side": "buy",
+          "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+        },
+        {
+          "ticker": "DUO",
+          "score": 0.41155795458451766,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+        },
+        {
+          "ticker": "PETZ",
+          "score": 0.41155795458451766,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+        },
+        {
+          "ticker": "AIOS",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "KC",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YAAS",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LGCL",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "PONY",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LHSW",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "JZ",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YIBO",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WETO",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "NXTT",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "BIYA",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "EBON",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YXT",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HKIT",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIXI",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YMT",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WRD",
+          "score": 0.40443295458451767,
+          "sector": "Technology",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "UAL",
+          "score": -0.2275248617848795,
+          "sector": "Industrials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "ALK",
+          "score": -0.2275248617848795,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "LUV",
+          "score": -0.2275248617848795,
+          "sector": "Industrials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "DAL",
+          "score": -0.2000248617848795,
+          "sector": "Industrials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "AAL",
+          "score": -0.2000248617848795,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "SEDG",
+          "score": -0.1450929395861257,
+          "sector": "Technology",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+        },
+        {
+          "ticker": "ENPH",
+          "score": -0.1450929395861257,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+        },
+        {
+          "ticker": "FSLR",
+          "score": -0.1450929395861257,
+          "sector": "Technology",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+        },
+        {
+          "ticker": "RUN",
+          "score": -0.1450929395861257,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+        },
+        {
+          "ticker": "TFPM",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "SNES",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NAK",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "TII",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FNV",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FNUC",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NB",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "TRX",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ORLA",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NEU",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "OR",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "COPR",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "AUGO",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PPTA",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "SXT",
+          "score": -0.08174999999999999,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "OXY",
+            "score": 0.42893222698912914,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "FANG",
+            "score": 0.42893222698912914,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "APA",
+            "score": 0.42893222698912914,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "EOG",
+            "score": 0.42893222698912914,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "COP",
+            "score": 0.42893222698912914,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "DVN",
+            "score": 0.42893222698912914,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "VST",
+            "score": 0.3872542887985917,
+            "sector": "Utilities",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'}"
+          },
+          {
+            "ticker": "TLN",
+            "score": 0.3872542887985917,
+            "sector": "Utilities",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'}"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "KC",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "PONY",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "GDS",
+            "score": 0.35768295458451765,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "VNET",
+            "score": 0.35768295458451765,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YMM",
+            "score": 0.35768295458451765,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "MAAS",
+            "score": 0.3573079545845177,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "EDU",
+            "score": 0.3513079545845177,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "TAL",
+            "score": 0.3513079545845177,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.51; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "PETZ",
+            "score": 0.41155795458451766,
+            "sector": "Real Estate",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+          },
+          {
+            "ticker": "DUO",
+            "score": 0.41155795458451766,
+            "sector": "Real Estate",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+          },
+          {
+            "ticker": "LGCL",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "LHSW",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "YAAS",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "MASK",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "AIXI",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "HKIT",
+            "score": 0.40443295458451767,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "LUV",
+            "score": -0.2275248617848795,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "UAL",
+            "score": -0.2275248617848795,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "DAL",
+            "score": -0.2000248617848795,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "FSLR",
+            "score": -0.1450929395861257,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+          },
+          {
+            "ticker": "LIN",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "mega",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "NEM",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "NTR",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "FNV",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "ALK",
+            "score": -0.2275248617848795,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "AAL",
+            "score": -0.2000248617848795,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "ENPH",
+            "score": -0.1450929395861257,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+          },
+          {
+            "ticker": "RUN",
+            "score": -0.1450929395861257,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+          },
+          {
+            "ticker": "ORLA",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "SXT",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "SUZ",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OR",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "SEDG",
+            "score": -0.1450929395861257,
+            "sector": "Technology",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.55; gen=+0.55; news=-0.71; ev={'event': 'tariff_semis_solar', 'side': 'sell', 'weight': 4.41, 'bucket': 'solar'}"
+          },
+          {
+            "ticker": "FNUC",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "AMR",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "FMC",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "REX",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "LXU",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "TROX",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OGG",
+            "score": -0.08174999999999999,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ]
+      }
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "DUO",
+          "score": 0.509637662382306,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+        },
+        {
+          "ticker": "PETZ",
+          "score": 0.509637662382306,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+        },
+        {
+          "ticker": "NCTY",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "RDAC",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "DXF",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "DPU",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "ZBAO",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SNTG",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SOS",
+          "score": 0.49713766238230594,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "EBON",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "JZ",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LGCL",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YAAS",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIXI",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIOS",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WETO",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LHSW",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "PONY",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YXT",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "MASK",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "BIYA",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "NXTT",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "KC",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YIBO",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HOLO",
+          "score": 0.48713766238230594,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ALK",
+          "score": -0.15767178861554967,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "LUV",
+          "score": -0.15767178861554967,
+          "sector": "Industrials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "UAL",
+          "score": -0.15767178861554967,
+          "sector": "Industrials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "AAL",
+          "score": -0.13017178861554968,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "DAL",
+          "score": -0.13017178861554968,
+          "sector": "Industrials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+        },
+        {
+          "ticker": "BMM",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FNV",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FNUC",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ATLX",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "WLK",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "WDFC",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "WPM",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "B",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "BIOX",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "AGI",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PAAS",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "WLKP",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "SLVM",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "SGML",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NTR",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NTIC",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "AEM",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "AUGO",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NAMM",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "OGG",
+          "score": -0.12925,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "BEKE",
+            "score": 0.46288766238230594,
+            "sector": "Real Estate",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "QH",
+            "score": 0.45963766238230597,
+            "sector": "Technology",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+          },
+          {
+            "ticker": "NTES",
+            "score": 0.3816376623823059,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "BIDU",
+            "score": 0.3816376623823059,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "TLN",
+            "score": 0.3564089304991198,
+            "sector": "Utilities",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'}"
+          },
+          {
+            "ticker": "VST",
+            "score": 0.3564089304991198,
+            "sector": "Utilities",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.60; gen=+0.55; news=+0.61; ev={'event': 'ai_power_demand', 'side': 'buy', 'weight': 3.51, 'bucket': 'utilities_power'}"
+          },
+          {
+            "ticker": "OXY",
+            "score": 0.3335982668682057,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          },
+          {
+            "ticker": "FANG",
+            "score": 0.3335982668682057,
+            "sector": "Energy",
+            "size": "large",
+            "side": "buy",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.88; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 6.8, 'bucket': 'oil_ep'}"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "KC",
+            "score": 0.48713766238230594,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "PONY",
+            "score": 0.48713766238230594,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "MAAS",
+            "score": 0.45038766238230593,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YMM",
+            "score": 0.4403876623823059,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "VNET",
+            "score": 0.4403876623823059,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "GDS",
+            "score": 0.4403876623823059,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "EDU",
+            "score": 0.4297626623823059,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "TAL",
+            "score": 0.4297626623823059,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.51; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "PETZ",
+            "score": 0.509637662382306,
+            "sector": "Real Estate",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+          },
+          {
+            "ticker": "DUO",
+            "score": 0.509637662382306,
+            "sector": "Real Estate",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+          },
+          {
+            "ticker": "SOS",
+            "score": 0.49713766238230594,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "SNTG",
+            "score": 0.49713766238230594,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "ZBAO",
+            "score": 0.49713766238230594,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "NCTY",
+            "score": 0.49713766238230594,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "DXF",
+            "score": 0.49713766238230594,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "DPU",
+            "score": 0.49713766238230594,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "LUV",
+            "score": -0.15767178861554967,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "UAL",
+            "score": -0.15767178861554967,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "DAL",
+            "score": -0.13017178861554968,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "AMRZ",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "CTVA",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "LYB",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "DOW",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "FNV",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "ALK",
+            "score": -0.15767178861554967,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.28; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "AAL",
+            "score": -0.13017178861554968,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.28; gen=+0.55; news=-0.74; ev={'event': 'hormuz_energy_risk', 'side': 'sell', 'weight': 4.76, 'bucket': 'airlines'}"
+          },
+          {
+            "ticker": "ORLA",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OR",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "BVN",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "USLM",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "BTG",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "KNF",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "FNUC",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "BIOX",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "HUN",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "BMM",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "HSLV",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "ALOY",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "LXU",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OGG",
+            "score": -0.12925,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ]
+      }
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "LGCL",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIXI",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YAAS",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LHSW",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIOS",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HOLO",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YXT",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "EBON",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YIBO",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HKIT",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "PONY",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "MASK",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "BIYA",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "JZ",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YMT",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "NXTT",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WETO",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "KC",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WRD",
+          "score": 0.5584673701800942,
+          "sector": "Technology",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "PETZ",
+          "score": 0.5577173701800943,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+        },
+        {
+          "ticker": "DUO",
+          "score": 0.5577173701800943,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.60; gen=+0.55"
+        },
+        {
+          "ticker": "SOS",
+          "score": 0.5427173701800942,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "ZBAO",
+          "score": 0.5427173701800942,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "DXF",
+          "score": 0.5427173701800942,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SNTG",
+          "score": 0.5427173701800942,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "AAUC",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NAMM",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "VALE",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PAAS",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "B",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "OMEX",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NAK",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ACNT",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ARIS",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "TFPM",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PPTA",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "MERC",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "MEOH",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "OR",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FMC",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ALTO",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "APD",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "AUGO",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ORLA",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ASH",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "IONR",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "VOXR",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "MSB",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "WPM",
+          "score": -0.1425,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "QH",
+            "score": 0.5334673701800942,
+            "sector": "Technology",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+          },
+          {
+            "ticker": "BEKE",
+            "score": 0.5152173701800942,
+            "sector": "Real Estate",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "NTES",
+            "score": 0.4252173701800942,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "BIDU",
+            "score": 0.4252173701800942,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "ZTO",
+            "score": 0.4252173701800942,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.28; gen=+0.08"
+          },
+          {
+            "ticker": "HSAI",
+            "score": 0.39271737018009417,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.55"
+          },
+          {
+            "ticker": "NIO",
+            "score": 0.3677173701800942,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.28"
+          },
+          {
+            "ticker": "YUMC",
+            "score": 0.3502173701800942,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "PONY",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "KC",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "VNET",
+            "score": 0.5159673701800941,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YMM",
+            "score": 0.5159673701800941,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "GDS",
+            "score": 0.5159673701800941,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "MAAS",
+            "score": 0.5002173701800942,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "TAL",
+            "score": 0.4777173701800942,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "EDU",
+            "score": 0.4777173701800942,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.51; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "MASK",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "EBON",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "YXT",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "YMT",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "WRD",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "LHSW",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "AIXI",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "AIOS",
+            "score": 0.5584673701800942,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "FNV",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "PAAS",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "WPM",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "AEM",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "RIO",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "VALE",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "WLK",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "B",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "CE",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OR",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "ORLA",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "MEOH",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "USLM",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "DRD",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "TFPM",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OGC",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "ACNT",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "HSLV",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "HUN",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "CPAC",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "WLKP",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "CTGO",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "SNES",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "MNTK",
+            "score": -0.1425,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ]
+      }
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "NXTT",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LHSW",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "BIYA",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LGCL",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YXT",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIOS",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "PONY",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "JZ",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HOLO",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WRD",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YAAS",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "AIXI",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YMT",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "EBON",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "MASK",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "YIBO",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HKIT",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "KC",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WETO",
+          "score": 0.5890651948587672,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "RDAC",
+          "score": 0.5855651948587671,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "ZBAO",
+          "score": 0.5855651948587671,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "NCTY",
+          "score": 0.5855651948587671,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "DXF",
+          "score": 0.5855651948587671,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SNTG",
+          "score": 0.5855651948587671,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SOS",
+          "score": 0.5855651948587671,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "AIIR",
+          "score": 0.006750000000000001,
+          "sector": "Consumer Defensive",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "ASH",
+          "score": 0.006750000000000001,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "SSP",
+          "score": 0.006750000000000001,
+          "sector": "Communication Services",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.30; gen=+0.08"
+        },
+        {
+          "ticker": "RGCO",
+          "score": 0.006750000000000001,
+          "sector": "Utilities",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "RGLD",
+          "score": 0.006750000000000001,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "CPB",
+          "score": 0.006750000000000001,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "WALD",
+          "score": 0.006750000000000001,
+          "sector": "Consumer Defensive",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "DMLP",
+          "score": 0.006750000000000001,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "PRTS",
+          "score": 0.006750000000000001,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.55; gen=+0.08"
+        },
+        {
+          "ticker": "PBR-A",
+          "score": 0.006750000000000001,
+          "sector": "Energy",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "VNOM",
+          "score": 0.006750000000000001,
+          "sector": "Energy",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "VOC",
+          "score": 0.006750000000000001,
+          "sector": "Energy",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "VOXR",
+          "score": 0.006750000000000001,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "LYB",
+          "score": 0.006750000000000001,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FTRK",
+          "score": 0.006750000000000001,
+          "sector": "Communication Services",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.30; gen=+0.08"
+        },
+        {
+          "ticker": "FTW",
+          "score": 0.006750000000000001,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "WAVE",
+          "score": 0.006750000000000001,
+          "sector": "Utilities",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "NLOP",
+          "score": 0.006750000000000001,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FTS",
+          "score": 0.006750000000000001,
+          "sector": "Utilities",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FTI",
+          "score": 0.006750000000000001,
+          "sector": "Energy",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "FTLF",
+          "score": 0.006750000000000001,
+          "sector": "Consumer Defensive",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "VZ",
+          "score": 0.006750000000000001,
+          "sector": "Communication Services",
+          "size": "mega",
+          "side": "sell",
+          "reasons": "sector=+0.30; gen=+0.08"
+        },
+        {
+          "ticker": "DRD",
+          "score": 0.006750000000000001,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "LAUR",
+          "score": 0.006750000000000001,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "RFL",
+          "score": 0.006750000000000001,
+          "sector": "Real Estate",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "QH",
+            "score": 0.5665651948587671,
+            "sector": "Technology",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+          },
+          {
+            "ticker": "ZTO",
+            "score": 0.4685651948587671,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.28; gen=+0.08"
+          },
+          {
+            "ticker": "HSAI",
+            "score": 0.4105651948587671,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.55"
+          },
+          {
+            "ticker": "NIO",
+            "score": 0.3880651948587671,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.28"
+          },
+          {
+            "ticker": "NTES",
+            "score": 0.3723151948587671,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "LI",
+            "score": 0.3723151948587671,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "HTHT",
+            "score": 0.3723151948587671,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "BEKE",
+            "score": 0.3723151948587671,
+            "sector": "Real Estate",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "PONY",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "KC",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "VNET",
+            "score": 0.5508151948587672,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "GDS",
+            "score": 0.5508151948587672,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YMM",
+            "score": 0.5508151948587672,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "MAAS",
+            "score": 0.5473151948587671,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "ZLAB",
+            "score": 0.536815194858767,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.51; gen=+0.28"
+          },
+          {
+            "ticker": "XPEV",
+            "score": 0.3880651948587671,
+            "sector": "Consumer Cyclical",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.28"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "JZ",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "YAAS",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "YMT",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "HKIT",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "EBON",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "BIYA",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "NXTT",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "YIBO",
+            "score": 0.5890651948587672,
+            "sector": "Technology",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "FNV",
+            "score": 0.006750000000000001,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "FOX",
+            "score": 0.006750000000000001,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "FOXA",
+            "score": 0.006750000000000001,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "PBA",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "PAAS",
+            "score": 0.006750000000000001,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "PAA",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "PAGP",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "GFI",
+            "score": 0.006750000000000001,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "LOPE",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "FRO",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "PARR",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "NESR",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "NFG",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "NEU",
+            "score": 0.006750000000000001,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          },
+          {
+            "ticker": "FIZZ",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "SPB",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "TRUG",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YTRA",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YHGJ",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "XXII",
+            "score": 0.006750000000000001,
+            "sector": "Consumer Defensive",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "YELP",
+            "score": 0.006750000000000001,
+            "sector": "Communication Services",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "YORW",
+            "score": 0.006750000000000001,
+            "sector": "Utilities",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "INR",
+            "score": 0.006750000000000001,
+            "sector": "Energy",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "INHD",
+            "score": 0.006750000000000001,
+            "sector": "Basic Materials",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.60; gen=+0.08"
+          }
+        ]
+      }
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "RDAC",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "DPU",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SOS",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "NCTY",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "DXF",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "SNTG",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "ZBAO",
+          "score": 0.6407970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "HTT",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "CANG",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "JF",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "LX",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "NOAH",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "YRD",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "JFIN",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "AIFU",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "HUIZ",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "LU",
+          "score": 0.6207970779778824,
+          "sector": "Financial",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+        },
+        {
+          "ticker": "SRL",
+          "score": 0.6167970779778824,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.22"
+        },
+        {
+          "ticker": "PONY",
+          "score": 0.6077970779778825,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "NXTT",
+          "score": 0.6077970779778825,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "LHSW",
+          "score": 0.6077970779778825,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "MASK",
+          "score": 0.6077970779778825,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        },
+        {
+          "ticker": "WOK",
+          "score": 0.6077970779778825,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=-0.51; gen=+0.55"
+        },
+        {
+          "ticker": "ZJYL",
+          "score": 0.6077970779778825,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=-0.51; gen=+0.55"
+        },
+        {
+          "ticker": "WRD",
+          "score": 0.6077970779778825,
+          "sector": "Technology",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "PAAS",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "FNUC",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PPC",
+          "score": 0.006,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "ASH",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "EMPD",
+          "score": 0.006,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.55; gen=+0.08"
+        },
+        {
+          "ticker": "ELPC",
+          "score": 0.006,
+          "sector": "Utilities",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "ELS",
+          "score": 0.006,
+          "sector": "Real Estate",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "BMM",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PPL",
+          "score": 0.006,
+          "sector": "Utilities",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.60; gen=+0.08"
+        },
+        {
+          "ticker": "TWG",
+          "score": 0.006,
+          "sector": "Consumer Defensive",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "EP",
+          "score": 0.006,
+          "sector": "Energy",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "EPC",
+          "score": 0.006,
+          "sector": "Consumer Defensive",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "EPD",
+          "score": 0.006,
+          "sector": "Energy",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "EPSN",
+          "score": 0.006,
+          "sector": "Energy",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "EPM",
+          "score": 0.006,
+          "sector": "Energy",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "TU",
+          "score": 0.006,
+          "sector": "Communication Services",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.30; gen=+0.08"
+        },
+        {
+          "ticker": "GRO",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "BSM",
+          "score": 0.006,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "CCEP",
+          "score": 0.006,
+          "sector": "Consumer Defensive",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "BTBD",
+          "score": 0.006,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "sector=-0.55; gen=+0.08"
+        },
+        {
+          "ticker": "NC",
+          "score": 0.006,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "sector=+0.47; gen=+0.08"
+        },
+        {
+          "ticker": "FNV",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "PRMB",
+          "score": 0.006,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        },
+        {
+          "ticker": "BTG",
+          "score": 0.006,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "sector=-0.60; gen=+0.08"
+        },
+        {
+          "ticker": "BTI",
+          "score": 0.006,
+          "sector": "Consumer Defensive",
+          "size": "large",
+          "side": "sell",
+          "reasons": "sector=+0.51; gen=+0.08"
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "QH",
+            "score": 0.5877970779778825,
+            "sector": "Technology",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+          },
+          {
+            "ticker": "ZTO",
+            "score": 0.4967970779778824,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.28; gen=+0.08"
+          },
+          {
+            "ticker": "HSAI",
+            "score": 0.42079707797788246,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.55"
+          },
+          {
+            "ticker": "NIO",
+            "score": 0.40079707797788244,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.28"
+          },
+          {
+            "ticker": "BEKE",
+            "score": 0.38679707797788243,
+            "sector": "Real Estate",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "JD",
+            "score": 0.38679707797788243,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "HTHT",
+            "score": 0.38679707797788243,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "NTES",
+            "score": 0.38679707797788243,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "KC",
+            "score": 0.6077970779778825,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "PONY",
+            "score": 0.6077970779778825,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "MAAS",
+            "score": 0.6067970779778824,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "ZLAB",
+            "score": 0.5877970779778825,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=-0.51; gen=+0.28"
+          },
+          {
+            "ticker": "GDS",
+            "score": 0.5737970779778825,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "VNET",
+            "score": 0.5737970779778825,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "YMM",
+            "score": 0.5737970779778825,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.08"
+          },
+          {
+            "ticker": "TME",
+            "score": 0.40079707797788244,
+            "sector": "Communication Services",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.30; gen=+0.28"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "RDAC",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "SNTG",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "SOS",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "DXF",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "NCTY",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "DPU",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "ZBAO",
+            "score": 0.6407970779778824,
+            "sector": "Financial",
+            "size": "micro",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.55"
+          },
+          {
+            "ticker": "LU",
+            "score": 0.6207970779778824,
+            "sector": "Financial",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.76; sector=+0.55; gen=+0.28"
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "AMCR",
+            "score": 0.006,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "XEL",
+            "score": 0.006,
+            "sector": "Utilities",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "XOM",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "mega",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08; news=+0.74; ev={'event': 'hormuz_energy_risk', 'side': 'buy', 'weight': 4.76, 'bucket': 'oil_integrated'}"
+          },
+          {
+            "ticker": "SBS",
+            "score": 0.006,
+            "sector": "Utilities",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "VLO",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "VG",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "VICI",
+            "score": 0.006,
+            "sector": "Real Estate",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "PSX",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "large",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "PTEN",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "PSMT",
+            "score": 0.006,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "LRN",
+            "score": 0.006,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "ELPC",
+            "score": 0.006,
+            "sector": "Utilities",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "OLLI",
+            "score": 0.006,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          },
+          {
+            "ticker": "SBRA",
+            "score": 0.006,
+            "sector": "Real Estate",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "TALO",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "TAP",
+            "score": 0.006,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "sector=+0.51; gen=+0.08"
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "YHGJ",
+            "score": 0.006,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "TXO",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "CTO",
+            "score": 0.006,
+            "sector": "Real Estate",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.60; gen=+0.08"
+          },
+          {
+            "ticker": "CTW",
+            "score": 0.006,
+            "sector": "Communication Services",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=+0.30; gen=+0.08"
+          },
+          {
+            "ticker": "LVLU",
+            "score": 0.006,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "SMC",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "small",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          },
+          {
+            "ticker": "NCI",
+            "score": 0.006,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=-0.55; gen=+0.08"
+          },
+          {
+            "ticker": "SJT",
+            "score": 0.006,
+            "sector": "Energy",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "sector=+0.47; gen=+0.08"
+          }
+        ]
+      }
+    }
+  }
+}

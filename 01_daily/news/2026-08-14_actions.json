@@ -1,0 +1,879 @@
+{
+  "generated_at": "2026-08-14T06:34:37.917790-04:00",
+  "hours": 48,
+  "raw_headlines": 300,
+  "unique_events": 4,
+  "universe_rows": 5961,
+  "interactions": [],
+  "reasoned_events": [
+    {
+      "event": "fed_rate_path",
+      "headline_count": 15,
+      "framework": {
+        "keep": "conditional",
+        "us_relevance": "high",
+        "us_relevance_why": "Discount rate / risk appetite for all US duration and banks",
+        "channel": "rates",
+        "geography": "us_domestic",
+        "severity": "regime",
+        "horizon": "1d-1w",
+        "action_object": "spx",
+        "action_object_detail": "SPX beta + rate-sensitive baskets (not a single stock thesis)",
+        "polarity": "mixed",
+        "polarity_why": "both dovish and hawkish cues present",
+        "confidence": 0.55,
+        "drop_reason": "",
+        "notes": [
+          "headline_count=15 supports non-noise severity",
+          "rates polarity unclear → lower confidence / soft book"
+        ]
+      },
+      "mechanism": "Discount-rate channel: hawkish (hikes / higher-for-longer) pressures long-duration growth and rate-sensitive REITs, mixed for banks via curve; dovish (cuts / cooling hike odds) inverts those duration sides and often supports gold. Labor prints move Fed path expectations without being a ‘jobs ETF’ trade.",
+      "amp_damp": "Sides flip on dovish vs hawkish; unknown polarity → no hard book",
+      "mean_revert": "after FOMC / next print",
+      "taxonomy": [
+        "Institutional policy (Fed rate cut, QE, stimulus)",
+        "Rate hike/monetary tightening/liquidity withdrawal"
+      ],
+      "evidence": [
+        {
+          "title": "EUR/USD reacts to data: Fed rate hike expectations fall - FXStreet",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQWxaaXFKRjVKT25uRks4TmgyWmVaclFsb1JsM0U4M0ttVm83czBUQlFmMTJxQnBQT0N2cjl2RjlkV0hZU2NSaTNBV3VDNUFMaDNOXy14c09VWEUzZE9BS0F4X255dHpGaU56bFU5aENrNWRJaEhMMDNpR0d3WXRMU0hrcWFGVDRUQWlVXy16cXdTY2ZKRVFvWjktS2xFZExLZkdZ?oc=5",
+          "published_at": "Fri, 14 Aug 2026 07:59:07 GMT"
+        },
+        {
+          "title": "United States Dollar Index weakens as cooling US inflation eases Fed rate hike odds - FXStreet",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSjluaWRqZkxhSDBYbjF1U2Q2S1N1TGk0VUNDVlFkbmI1b1pzQzFfSy03dGptWFotZ2JWQVd3dy1DZk8yU1dYMFNxNExibEVpNWQwelR1VGVCZFgwTXA3SlJBN0NvdTRxTGQ2UnFmZnZxampXTHlQOFF1Z3B3ZTVaV0tqZWhUMnVZYVVpajVmQkhQVDc5MWNkZ3MtUVdTdF9Oc3hrSkxoYy0xM3R5eGRtMjNfMlF1ODhUSEhhSjdJZ05KbUVy?oc=5",
+          "published_at": "Fri, 14 Aug 2026 05:20:13 GMT"
+        },
+        {
+          "title": "Dow, S&P 500 Futures Climb, Nasdaq Futures Inch Lower After July PPI Cools Fed Rate Hike Expectations - TradingView",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOWFJQYWdzODh4RWhXdjhONXZpVkN3NEU5NV94ekxOQ1lrTGRfajFPaDNiR0JTbmFTcXpwS1plX0tRZXFNTWF4ZTkxdC1RWUJnTXdpelNDSGcwTWktUnY0WFhibHlGbHJwcjJZR1hiUjJQUmI4d0pBS2MwclpjaWI5TjBOeW52Q2NqNFh2bkpGNFIyR1ExRnRaci0xdnRvSjYzZS1EejFzRThQN0tsNmJuSHVTX0tUZG9uVUk3R29qcUl0R2ZJVzBJdzJoZ1pHX0ZUN1dud3lRdS1FTnJIMVVwWDZFVzh5RUp0UmN1MnV3czRwZw?oc=5",
+          "published_at": "Fri, 14 Aug 2026 03:29:00 GMT"
+        },
+        {
+          "title": "Don't Be Fooled: Despite Lower Odds of a September Fed Rate Hike, One Sinister Inflation Metric Remains Problematic - Yahoo Finance",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPa3ZHOFd2U0tTYXdLN1Qwd1k3amhiOXdfTnRTMVpqMEFfYnY2N0tQQ2pFcy04YmRhV2x5MTJpenFJRDNKdUR2eDNCUmRIM3RuazZ1dENvcC1Nd0IyR0c4ekhQNXhrejJpd1RQQlB2dlY5SWd1dk5ma1VNNTlnbUQzeFVFZEJPc0JORWtjanJCczZ0N1lBcHpSQWpkRQ?oc=5",
+          "published_at": "Fri, 14 Aug 2026 08:26:00 GMT"
+        },
+        {
+          "title": "Softer inflation reports may push back rate hike - Washington Examiner",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYS1KbTlYUi1EdndSSUY2bWtSeFI4M2V6QndJUkp4VThOQlVtSXFOanJ5d2tDM2ZOb3pJQXBCN2ZJcDRQZW4zN0UweGVHQThsZHBmYlZ3Mk9sLWk3alNyeDdBM2owRkxtUkJVRTlUUUw2RHZOR0NyTkxpd3gxaUZkdF9JcnJqRXZrbUhXQnZwRUJqOGYydEVUUlFRTkdVdlgtV0prczNJM1M?oc=5",
+          "published_at": "Fri, 14 Aug 2026 09:00:00 GMT"
+        },
+        {
+          "title": "Emerging-market assets rally as US inflation data suggests Fed rate hike delay - TradingView",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOaHN6RVcyUkM4Z0dRUWtIWjdxeEFNNFFxUTBLZ29pZ1IxNW1vYnI1ZGhzSzZRQzlUNER1bzd6cWFraFB2YTBVejRuTTJpTW5MbzhNR1pYQU9oTXoxN3RVU2M2V0p4TDZLbTJmTFktWWRySmI2OG1zN3BwNTB5anVtbWlBdTU1MkhRZHA5eEc3TV9BSWxxZXpJdU9EMUoyMmpjQXM1bUgyVXRBTU1pdXZPbFppRHNaS2lHWEVxU0NqLWVybGNPdVppLWhmVm1ZbHhhaTBDcEU2VzdDUlU?oc=5",
+          "published_at": "Fri, 14 Aug 2026 07:02:46 GMT"
+        },
+        {
+          "title": "Treasury Yields Slip as U.S. Inflation Meets Expectations",
+          "source": "rss_yahoo_finance",
+          "url": "https://www.wsj.com/finance/treasury-yields-dollar-stable-ahead-of-u-s-inflation-data-36220339?siteid=yhoof2&yptr=yahoo",
+          "published_at": "2026-08-12T19:55:00Z"
+        },
+        {
+          "title": "Asian stocks rise as US inflation data dents Fed's September rate hike bets",
+          "source": "newsapi_Business Standard",
+          "url": "https://www.business-standard.com/markets/news/asian-stocks-rise-as-us-inflation-data-dents-fed-s-september-rate-hike-bets-126081300063_1.html",
+          "published_at": "2026-08-13T01:59:17Z"
+        }
+      ]
+    },
+    {
+      "event": "ai_power_demand",
+      "headline_count": 1,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "US data-center load → US generation/utilities cash-flow narrative",
+        "channel": "sector_fundamental",
+        "geography": "us_domestic",
+        "severity": "session",
+        "horizon": "1w-1m",
+        "action_object": "basket",
+        "action_object_detail": "CEG/VST/NRG-type power; not pollution pure-plays",
+        "polarity": "bullish",
+        "polarity_why": "load growth narrative for generation/power scarcity names",
+        "confidence": 0.65,
+        "drop_reason": "",
+        "notes": []
+      },
+      "mechanism": "Hyperscale/AI data centers raise electricity load expectations → independent power and some utilities with generation leverage are the listed US expression. Headline pollution angle is secondary; the equity channel is power demand and capacity.",
+      "amp_damp": "",
+      "mean_revert": "if projects delayed / power deals disappoint",
+      "taxonomy": [
+        "Sector tailwind/index inclusion",
+        "Capacity expansion announced (new factory, satellite constellation)"
+      ],
+      "evidence": [
+        {
+          "title": "Europe Is More of an AI Powerhouse Than Most Think",
+          "source": "newsapi_Financial Post",
+          "url": "https://financialpost.com/pmn/business-pmn/europe-is-more-of-an-ai-powerhouse-than-most-think",
+          "published_at": "2026-08-13T06:41:19Z"
+        }
+      ]
+    },
+    {
+      "event": "tariff_semis_solar",
+      "headline_count": 1,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "US policy directly hits costs/structure of solar & semi supply chains",
+        "channel": "sector_policy",
+        "geography": "us_domestic",
+        "severity": "regime",
+        "horizon": "1w-1m",
+        "action_object": "basket",
+        "action_object_detail": "solar basket first-order; semis second-order unless chip-specific",
+        "polarity": "bearish",
+        "polarity_why": "bearish verbs/outcomes in headlines",
+        "confidence": 0.7,
+        "drop_reason": "",
+        "notes": []
+      },
+      "mechanism": "US tariff on solar/semi inputs raises cost or uncertainty for import-linked supply chains. Solar project IRRs and some module names are first-order; mega-cap semis are second-order unless the tariff text is chip-specific. Domestic producers can be relative winners — edge defaults are cautious sells pending issuer mix.",
+      "amp_damp": "",
+      "mean_revert": "walk-back / exclusions / phase-in delay",
+      "taxonomy": [
+        "Government policy (tariffs, subsidies, mandates)",
+        "Policy reversal/new regulation/tax increase"
+      ],
+      "evidence": [
+        {
+          "title": "The Tariff That Helps First Solar And Hurts Everyone Else",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/economy/policy/articles/tariff-helps-first-solar-hurts-190305191.html",
+          "published_at": "2026-08-12T19:03:05Z"
+        }
+      ]
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "headline_count": 3,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "Global oil chokepoint the US market prices daily (WTI/Brent, XLE, fuel costs)",
+        "channel": "risk",
+        "geography": "global_priced",
+        "severity": "regime",
+        "horizon": "1d-1w",
+        "action_object": "sector_etf",
+        "action_object_detail": "XLE long bias / airline basket short / optional SPX if risk-off",
+        "polarity": "mixed",
+        "polarity_why": "bullish upstream oil risk premium; bearish fuel-cost airlines",
+        "confidence": 0.85,
+        "drop_reason": "",
+        "notes": [
+          "transit/tanker/fuel language → higher severity"
+        ]
+      },
+      "mechanism": "Hormuz/Red Sea transit risk → oil risk premium → upstream producers benefit if price holds; airlines and other fuel-intensive transport are cost-shocked. Geography is global oil, but US E&P still price to WTI/Brent. Not a pure-gas trade.",
+      "amp_damp": "[+] real transit threat + oil up [−] rhetoric only, oil unchanged",
+      "mean_revert": "de-escalation / oil giveback",
+      "taxonomy": [
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Commodity price move favorable to the company"
+      ],
+      "evidence": [
+        {
+          "title": "Iran war live: US eyes indefinite Iran naval blockade",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/8/14/iran-war-live-us-eyes-indefinite-iran-naval-blockade?traffic_source=rss",
+          "published_at": "Fri, 14 Aug 2026 00:00:00 +0000"
+        },
+        {
+          "title": "UAE accuses Iran of attacks on two ADNOC vessels in Strait of Hormuz",
+          "source": "rss_aljazeera_economy",
+          "url": "https://www.aljazeera.com/news/2026/8/14/uae-accuses-iran-of-attacks-on-two-adnoc-vessels-in-strait-of-hormuz?traffic_source=rss",
+          "published_at": "Fri, 14 Aug 2026 00:33:48 +0000"
+        }
+      ]
+    }
+  ],
+  "edge_actions": [
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "banks_diversified",
+      "side": "buy",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "curve/NIM — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary buy `banks_diversified` because curve/NIM — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "reit_office",
+      "side": "sell",
+      "weight": 2.23,
+      "tickers": [],
+      "note": "duration — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `reit_office` because duration — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "software_app",
+      "side": "sell",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "duration growth — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `software_app` because duration growth — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "gold",
+      "side": "sell",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "real rate — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `gold` because real rate — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "ai_power_demand",
+      "role": "primary",
+      "bucket": "utilities_power",
+      "side": "buy",
+      "weight": 3.51,
+      "tickers": [
+        "CEG",
+        "VST",
+        "NRG",
+        "TLN",
+        "NEE"
+      ],
+      "note": "load growth / power scarcity narrative",
+      "why": "Framework keep=keep channel=sector_fundamental object=basket:CEG/VST/NRG-type power; not pollution pure-plays horizon=1w-1m severity=session conf=0.65. Edge=primary buy `utilities_power` because load growth / power scarcity narrative.",
+      "framework_polarity": "bullish"
+    },
+    {
+      "event": "tariff_semis_solar",
+      "role": "primary",
+      "bucket": "solar",
+      "side": "sell",
+      "weight": 4.41,
+      "tickers": [
+        "FSLR",
+        "ENPH",
+        "SEDG",
+        "RUN"
+      ],
+      "note": "import-heavy project economics / module cost",
+      "why": "Framework keep=keep channel=sector_policy object=basket:solar basket first-order; semis second-order unless chip-specific horizon=1w-1m severity=regime conf=0.7. Edge=primary sell `solar` because import-heavy project economics / module cost.",
+      "framework_polarity": "bearish"
+    },
+    {
+      "event": "tariff_semis_solar",
+      "role": "primary",
+      "bucket": "semiconductors",
+      "side": "sell",
+      "weight": 2.45,
+      "tickers": [
+        "NVDA",
+        "AVGO",
+        "AMD",
+        "QCOM",
+        "MU",
+        "INTC"
+      ],
+      "note": "cost & policy uncertainty — less direct if domestic",
+      "why": "Framework keep=keep channel=sector_policy object=basket:solar basket first-order; semis second-order unless chip-specific horizon=1w-1m severity=regime conf=0.7. Edge=primary sell `semiconductors` because cost & policy uncertainty — less direct if domestic.",
+      "framework_polarity": "bearish"
+    },
+    {
+      "event": "tariff_semis_solar",
+      "role": "primary",
+      "bucket": "semi_equipment",
+      "side": "sell",
+      "weight": 1.96,
+      "tickers": [
+        "ASML",
+        "AMAT",
+        "LRCX",
+        "KLAC"
+      ],
+      "note": "capex hesitation risk",
+      "why": "Framework keep=keep channel=sector_policy object=basket:solar basket first-order; semis second-order unless chip-specific horizon=1w-1m severity=regime conf=0.7. Edge=primary sell `semi_equipment` because capex hesitation risk.",
+      "framework_polarity": "bearish"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "oil_ep",
+      "side": "buy",
+      "weight": 6.8,
+      "tickers": [
+        "COP",
+        "EOG",
+        "OXY",
+        "FANG",
+        "DVN",
+        "APA"
+      ],
+      "note": "oil risk premium → producer cash flow leverage",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary buy `oil_ep` because oil risk premium → producer cash flow leverage.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "oil_integrated",
+      "side": "buy",
+      "weight": 4.76,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "note": "US integrated oil",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary buy `oil_integrated` because US integrated oil.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "airlines",
+      "side": "sell",
+      "weight": 4.76,
+      "tickers": [
+        "DAL",
+        "UAL",
+        "AAL",
+        "LUV",
+        "ALK"
+      ],
+      "note": "jet fuel is a major cost; disruption raises fuel",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary sell `airlines` because jet fuel is a major cost; disruption raises fuel.",
+      "framework_polarity": "mixed"
+    }
+  ],
+  "ticker_actions": [
+    {
+      "ticker": "COP",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "EOG",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "OXY",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "FANG",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "DVN",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "APA",
+      "buy_score": 6.8,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.8,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.8,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "XOM",
+      "buy_score": 4.76,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.76,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.76,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "CVX",
+      "buy_score": 4.76,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.76,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.76,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "DAL",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "UAL",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "AAL",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "LUV",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "ALK",
+      "buy_score": 0.0,
+      "sell_score": 4.76,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.76,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.76,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "FSLR",
+      "buy_score": 0.0,
+      "sell_score": 4.41,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 4.41,
+          "bucket": "solar"
+        }
+      ],
+      "net": -4.41,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "ENPH",
+      "buy_score": 0.0,
+      "sell_score": 4.41,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 4.41,
+          "bucket": "solar"
+        }
+      ],
+      "net": -4.41,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "SEDG",
+      "buy_score": 0.0,
+      "sell_score": 4.41,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 4.41,
+          "bucket": "solar"
+        }
+      ],
+      "net": -4.41,
+      "side": "sell",
+      "size": "small"
+    },
+    {
+      "ticker": "RUN",
+      "buy_score": 0.0,
+      "sell_score": 4.41,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 4.41,
+          "bucket": "solar"
+        }
+      ],
+      "net": -4.41,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "CEG",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "ai_power_demand",
+          "side": "buy",
+          "weight": 3.51,
+          "bucket": "utilities_power"
+        }
+      ],
+      "net": 3.51,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "VST",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "ai_power_demand",
+          "side": "buy",
+          "weight": 3.51,
+          "bucket": "utilities_power"
+        }
+      ],
+      "net": 3.51,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "NRG",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "ai_power_demand",
+          "side": "buy",
+          "weight": 3.51,
+          "bucket": "utilities_power"
+        }
+      ],
+      "net": 3.51,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "TLN",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "ai_power_demand",
+          "side": "buy",
+          "weight": 3.51,
+          "bucket": "utilities_power"
+        }
+      ],
+      "net": 3.51,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "NEE",
+      "buy_score": 3.51,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "ai_power_demand",
+          "side": "buy",
+          "weight": 3.51,
+          "bucket": "utilities_power"
+        }
+      ],
+      "net": 3.51,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "NVDA",
+      "buy_score": 0.0,
+      "sell_score": 2.45,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 2.45,
+          "bucket": "semiconductors"
+        }
+      ],
+      "net": -2.45,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "AVGO",
+      "buy_score": 0.0,
+      "sell_score": 2.45,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 2.45,
+          "bucket": "semiconductors"
+        }
+      ],
+      "net": -2.45,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "AMD",
+      "buy_score": 0.0,
+      "sell_score": 2.45,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 2.45,
+          "bucket": "semiconductors"
+        }
+      ],
+      "net": -2.45,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "QCOM",
+      "buy_score": 0.0,
+      "sell_score": 2.45,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 2.45,
+          "bucket": "semiconductors"
+        }
+      ],
+      "net": -2.45,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "MU",
+      "buy_score": 0.0,
+      "sell_score": 2.45,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 2.45,
+          "bucket": "semiconductors"
+        }
+      ],
+      "net": -2.45,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "INTC",
+      "buy_score": 0.0,
+      "sell_score": 2.45,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 2.45,
+          "bucket": "semiconductors"
+        }
+      ],
+      "net": -2.45,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "ASML",
+      "buy_score": 0.0,
+      "sell_score": 1.96,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 1.96,
+          "bucket": "semi_equipment"
+        }
+      ],
+      "net": -1.96,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "AMAT",
+      "buy_score": 0.0,
+      "sell_score": 1.96,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 1.96,
+          "bucket": "semi_equipment"
+        }
+      ],
+      "net": -1.96,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "LRCX",
+      "buy_score": 0.0,
+      "sell_score": 1.96,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 1.96,
+          "bucket": "semi_equipment"
+        }
+      ],
+      "net": -1.96,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "KLAC",
+      "buy_score": 0.0,
+      "sell_score": 1.96,
+      "events": [
+        {
+          "event": "tariff_semis_solar",
+          "side": "sell",
+          "weight": 1.96,
+          "bucket": "semi_equipment"
+        }
+      ],
+      "net": -1.96,
+      "side": "sell",
+      "size": "mega"
+    }
+  ]
+}
