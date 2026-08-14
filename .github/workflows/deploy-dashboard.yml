@@ -1,80 +1,78 @@
 name: Deploy dashboard to GitHub Pages
 
-# Trigger when the producing workflow completes. Replace the workflow name
-# below if it differs. This workflow downloads the "dashboard" artifact
-# from the completed run and publishes it to the gh-pages branch so the
-# dashboard is available at https://<user>.github.io/<repo>/dashboard/.
+# Backup path: when Stock Book ALL finishes, republish the uploaded
+# "dashboard" artifact to gh-pages. Primary publish is now inside
+# stock_book_all.yml itself; this remains for resilience.
 
 on:
   workflow_run:
     workflows: ["Stock Book ALL (one-shot)"]
     types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
 
 jobs:
   deploy:
-    # Only run when the producing workflow succeeded
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Download dashboard artifact from triggering workflow
+      - name: Download dashboard artifact (from triggering run or latest on main)
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
           REPO: ${{ github.repository }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          echo "Run ID: $RUN_ID"
+          mkdir -p pages_out/dashboard
+          touch pages_out/.nojekyll
 
-          # List artifacts for the triggering run (debug)
-          artifacts_url="https://api.github.com/repos/${REPO}/actions/runs/${RUN_ID}/artifacts"
-          echo "Listing artifacts at: $artifacts_url"
-          curl -s -H "Authorization: token ${TOKEN}" "$artifacts_url" > artifacts.json
-          jq -r '.artifacts[] | "name=\(.name) id=\(.id) url=\(.archive_download_url)"' artifacts.json || true
+          if [ -n "${RUN_ID:-}" ] && [ "$RUN_ID" != "" ]; then
+            echo "Run ID: $RUN_ID"
+            artifacts_url="https://api.github.com/repos/${REPO}/actions/runs/${RUN_ID}/artifacts"
+            curl -s -H "Authorization: token ${TOKEN}" "$artifacts_url" > artifacts.json || true
+            url=$(jq -r '.artifacts[]? | select(.name=="dashboard") | .archive_download_url' artifacts.json 2>/dev/null | head -1 || true)
+            if [ -n "${url:-}" ] && [ "$url" != "null" ]; then
+              curl -L -H "Authorization: token ${TOKEN}" -o artifact.zip "$url"
+              mkdir -p dashboard_artifact
+              unzip -o artifact.zip -d dashboard_artifact
+              if [ -f dashboard_artifact/index.html ]; then
+                cp dashboard_artifact/index.html pages_out/dashboard/index.html
+                cp dashboard_artifact/index.html pages_out/index.html
+              elif [ -f dashboard_artifact/dashboard/index.html ]; then
+                cp dashboard_artifact/dashboard/index.html pages_out/dashboard/index.html
+                cp dashboard_artifact/dashboard/index.html pages_out/index.html
+              fi
+            fi
+          fi
 
-          # Find the artifact named 'dashboard'
-          url=$(jq -r '.artifacts[] | select(.name=="dashboard") | .archive_download_url' artifacts.json)
-          if [ -z "${url}" ] || [ "${url}" = "null" ]; then
-            echo "ERROR: No artifact named 'dashboard' found in run ${RUN_ID}."
-            echo "Make sure the producing workflow (Stock Book ALL (one-shot)) uploads the dashboard directory as an artifact named 'dashboard'."
-            echo "Example producer step to add to the producing workflow:"
-            echo "  - name: Upload dashboard artifact"
-            echo "    uses: actions/upload-artifact@v4"
-            echo "    with:"
-            echo "      name: dashboard"
-            echo "      path: dashboard"
+          # Fallback: use dashboard committed on main
+          if [ ! -f pages_out/dashboard/index.html ] && [ -f dashboard/index.html ]; then
+            cp dashboard/index.html pages_out/dashboard/index.html
+            cp dashboard/index.html pages_out/index.html
+            echo "Used dashboard/index.html from main"
+          fi
+
+          if [ ! -f pages_out/dashboard/index.html ]; then
+            echo "ERROR: no dashboard index.html to publish"
             exit 1
           fi
-
-          echo "Downloading artifact archive..."
-          curl -L -H "Authorization: token ${TOKEN}" -o artifact.zip "$url"
-          mkdir -p dashboard_artifact
-          unzip -o artifact.zip -d dashboard_artifact
-
-      - name: Prepare publish directory (put dashboard under /dashboard/)
-        run: |
-          set -euo pipefail
-          mkdir -p out
-          if [ -d dashboard_artifact/dashboard ]; then
-            cp -r dashboard_artifact/dashboard out/dashboard
-          else
-            # If artifact root contains index.html (or dashboard files), copy them
-            mkdir -p out/dashboard
-            cp -r dashboard_artifact/* out/dashboard || true
-          fi
-          echo "Published files:"
-          ls -la out/dashboard || true
+          ls -la pages_out pages_out/dashboard
 
       - name: Publish to GitHub Pages (gh-pages)
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./pages_out
+          force_orphan: true
+          enable_jekyll: false
 
       - name: Show Pages URL
         run: |
-          echo "Deployed. Your dashboard should be available at:"
-          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/dashboard/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/"
+          echo "https://SRoyaltyy.github.io/fullscan/"
+          echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"
