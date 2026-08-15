@@ -4214,6 +4214,37 @@
       "spy_pct_change": -0.19797115463531245,
       "rel_pct_change": 0.8110512003908887,
       "horizon_grades": {}
+    },
+    {
+      "date": "2026-08-15",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7806.6,
+      "actual_close": 7785.76,
+      "actual_pct_change": -0.17,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-15_lesson.md",
+      "sources_used": [],
+      "ops_fail": true,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": null,
+      "key_interaction": null,
+      "knowable_at_9am": null,
+      "attribution_contested": null,
+      "outlier_watch": null,
+      "lesson_schema_ok": true
     }
   ]
 }
