@@ -41,20 +41,7 @@ jobs:
       - name: Install deps
         run: |
           pip install -r requirements.txt
-          pip install pyarrow yfinance
-
-      # Restore last successful price store if this checkout has none
-      - name: Restore price-store artifact (if missing locally)
-        if: ${{ inputs.mode != 'bootstrap' }}
-        uses: actions/download-artifact@v4
-        continue-on-error: true
-        with:
-          name: price-store
-          path: data/prices
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          # download-artifact v4 only sees artifacts from this workflow run by default;
-          # for cross-run restore we use a soft commit path instead (below).
+          pip install pyarrow yfinance openpyxl
 
       - name: Show whether price store exists
         run: |
@@ -88,7 +75,6 @@ jobs:
           set -e
           if [ ! -f data/prices/ohlc.parquet ]; then
             echo "::error::Price store empty. Bootstrap must finish AND commit data/prices/ohlc.parquet to main."
-            echo "Re-run workflow with mode=bootstrap, wait for green commit, then checklist."
             exit 1
           fi
           ARGS=()
@@ -112,17 +98,14 @@ jobs:
           set -e
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          # parquet can be large — check size
           if [ -f data/prices/ohlc.parquet ]; then
             SIZE=$(stat -c%s data/prices/ohlc.parquet)
             echo "ohlc.parquet size=${SIZE} bytes"
-            # GitHub soft limit 100MB; warn above 90MB
             if [ "$SIZE" -gt 90000000 ]; then
               echo "::warning::ohlc.parquet is large (>90MB). Commit may fail; artifact still uploaded."
             fi
           fi
           git add -f data/prices data/checklist 01_daily/*checklist* 2>/dev/null || true
-          git add -f data/prices/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No staged changes to commit"
           else
