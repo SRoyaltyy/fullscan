@@ -41,7 +41,25 @@ def _universe_tickers() -> list[str]:
         raise SystemExit("[price_store] no finviz exports under data/exports/")
     df = pd.read_csv(files[-1], low_memory=False)
     tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
-    return sorted(df[tcol].astype(str).str.strip().str.upper().unique())
+    # Finviz rows can include blank/NaN tickers; never sort mixed float+str
+    out: set[str] = set()
+    for x in df[tcol].tolist():
+        if x is None:
+            continue
+        try:
+            if isinstance(x, float) and np.isnan(x):
+                continue
+        except Exception:
+            pass
+        if isinstance(x, float) and pd.isna(x):
+            continue
+        s = str(x).strip().upper()
+        if not s or s in {"NAN", "NONE", "NAT", "NULL", "-", "—"}:
+            continue
+        out.add(s)
+    names = sorted(out)
+    print(f"[price_store] universe={len(names)} from {files[-1].name}")
+    return names
 
 
 def _load_store() -> pd.DataFrame:
@@ -206,13 +224,12 @@ def update(lookback_days: int = 7) -> None:
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:
-    if ohlc is None or ohlc.empty or not {"open", "close"}.issubset(
-            {c.lower() for c in ohlc.columns} | set(ohlc.columns)):
-        # tolerate either case
-        cols = {c.lower(): c for c in (ohlc.columns if ohlc is not None else [])}
-        if ohlc is None or ohlc.empty or "open" not in cols or "close" not in cols:
-            return {"pass": None, "detail": "no OHLC", "bull": 0, "green": np.nan, "red": np.nan}
-        ohlc = ohlc.rename(columns={cols["open"]: "open", cols["close"]: "close"})
+    if ohlc is None or ohlc.empty:
+        return {"pass": None, "detail": "no OHLC", "bull": 0, "green": np.nan, "red": np.nan}
+    cols = {c.lower(): c for c in ohlc.columns}
+    if "open" not in cols or "close" not in cols:
+        return {"pass": None, "detail": "no OHLC", "bull": 0, "green": np.nan, "red": np.nan}
+    ohlc = ohlc.rename(columns={cols["open"]: "open", cols["close"]: "close"})
     df = ohlc.dropna(subset=["open", "close"]).tail(lookback)
     if len(df) < 3:
         return {"pass": None, "detail": f"only {len(df)} bars", "bull": 0, "green": np.nan, "red": np.nan}
