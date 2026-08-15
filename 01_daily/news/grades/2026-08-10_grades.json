@@ -21,7 +21,7 @@
         "1d": 3.71,
         "3d": 3.28
       },
-      "mfe_pct": 3.77,
+      "mfe_pct": 3.79,
       "mfe_day": "2026-08-14",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
@@ -48,6 +48,31 @@
       },
       "mfe_pct": 1.65,
       "mfe_day": "2026-08-14",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-08-11"
+    },
+    {
+      "signal_date": "2026-08-10",
+      "generated_at": "2026-08-10 11:18",
+      "ticker": "OXY",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-08-11",
+      "entry_open": 58.48,
+      "window_through": "2026-08-14",
+      "trading_days_elapsed": 3,
+      "complete": false,
+      "latest_close": 58.36,
+      "current_return_pct": -0.21,
+      "horizon_returns_pct": {
+        "1d": 0.12,
+        "3d": -0.21
+      },
+      "mfe_pct": 1.83,
+      "mfe_day": "2026-08-11",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
     },
@@ -96,7 +121,7 @@
         "1d": -0.77,
         "3d": 1.42
       },
-      "mfe_pct": 1.6,
+      "mfe_pct": 1.61,
       "mfe_day": "2026-08-14",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
@@ -171,7 +196,7 @@
         "1d": 1.21,
         "3d": 2.96
       },
-      "mfe_pct": 3.79,
+      "mfe_pct": 3.8,
       "mfe_day": "2026-08-14",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
@@ -296,7 +321,7 @@
         "1d": 0.25,
         "3d": 3.33
       },
-      "mfe_pct": 3.76,
+      "mfe_pct": 3.78,
       "mfe_day": "2026-08-14",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
@@ -471,7 +496,7 @@
         "1d": -0.42,
         "3d": 1.25
       },
-      "mfe_pct": 1.96,
+      "mfe_pct": 1.97,
       "mfe_day": "2026-08-14",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
@@ -881,7 +906,7 @@
         "1d": 1.23,
         "3d": 2.52
       },
-      "mfe_pct": 3.21,
+      "mfe_pct": 3.22,
       "mfe_day": "2026-08-14",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-11"
@@ -966,34 +991,34 @@
     }
   ],
   "summary": {
-    "n_suggestions": 38,
+    "n_suggestions": 39,
     "ever_profitable": {
-      "n": 38,
-      "wins": 38,
+      "n": 39,
+      "wins": 39,
       "win_rate": 100.0
     },
     "close_1d": {
-      "n": 38,
-      "wins": 26,
-      "win_rate": 68.4,
-      "avg": 0.83
+      "n": 39,
+      "wins": 27,
+      "win_rate": 69.2,
+      "avg": 0.81
     },
     "close_3d": {
-      "n": 38,
+      "n": 39,
       "wins": 27,
-      "win_rate": 71.1,
-      "avg": 0.84
+      "win_rate": 69.2,
+      "avg": 0.81
     },
     "close_5d": null,
     "close_10d": null,
     "close_14d": null,
     "side_buy": {
-      "n": 21,
+      "n": 22,
       "ever_profitable": {
-        "n": 21,
-        "wins": 21,
+        "n": 22,
+        "wins": 22,
         "win_rate": 100.0,
-        "avg": 4.28
+        "avg": 4.17
       },
       "close_5d": null
     },
