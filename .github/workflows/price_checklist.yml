@@ -1,5 +1,10 @@
 name: Price store + checklist (1/3/4/5)
 
+# Bootstrap writes data/prices/ on the runner. That only survives if we
+# (1) commit+push it and/or (2) upload an Actions artifact.
+# Checklist on a later run checks out the repo fresh — without the store
+# committed or restored from an artifact, it correctly says "price store empty".
+
 on:
   workflow_dispatch:
     inputs:
@@ -18,6 +23,10 @@ on:
         required: false
         default: ""
 
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -34,37 +43,89 @@ jobs:
           pip install -r requirements.txt
           pip install pyarrow yfinance
 
+      # Restore last successful price store if this checkout has none
+      - name: Restore price-store artifact (if missing locally)
+        if: ${{ inputs.mode != 'bootstrap' }}
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: price-store
+          path: data/prices
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          # download-artifact v4 only sees artifacts from this workflow run by default;
+          # for cross-run restore we use a soft commit path instead (below).
+
+      - name: Show whether price store exists
+        run: |
+          if [ -f data/prices/ohlc.parquet ]; then
+            ls -lh data/prices/
+            python -m src.price_store status || true
+          else
+            echo "NO local data/prices/ohlc.parquet yet"
+          fi
+
       - name: Bootstrap OHLC (long history, resume-safe)
         if: ${{ inputs.mode == 'bootstrap' }}
         run: python -m src.price_store bootstrap --days 400
 
       - name: Daily price update (append recent bars)
         if: ${{ inputs.mode == 'update' || inputs.mode == 'update_and_checklist' }}
-        run: python -m src.price_store update
+        run: |
+          if [ ! -f data/prices/ohlc.parquet ]; then
+            echo "::error::No price store on disk. Run mode=bootstrap first and ensure it commits data/prices/."
+            exit 1
+          fi
+          python -m src.price_store update
 
       - name: Status
         if: ${{ inputs.mode != 'checklist' }}
         run: python -m src.price_store status
-        continue-on-error: true
 
       - name: Checklist items 1/3/4/5
         if: ${{ inputs.mode == 'checklist' || inputs.mode == 'update_and_checklist' }}
         run: |
           set -e
+          if [ ! -f data/prices/ohlc.parquet ]; then
+            echo "::error::Price store empty. Bootstrap must finish AND commit data/prices/ohlc.parquet to main."
+            echo "Re-run workflow with mode=bootstrap, wait for green commit, then checklist."
+            exit 1
+          fi
           ARGS=()
           if [ -n "${{ inputs.date }}" ]; then
             ARGS+=(--date "${{ inputs.date }}")
           fi
           python -m src.ticker_checklist "${ARGS[@]}"
 
-      - name: Commit price store + checklist artifacts
+      - name: Upload price-store artifact (this run)
+        if: ${{ always() && hashFiles('data/prices/ohlc.parquet') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: price-store
+          path: data/prices/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Commit price store + checklist to main
+        if: ${{ hashFiles('data/prices/ohlc.parquet') != '' || hashFiles('data/checklist/**') != '' }}
         run: |
+          set -e
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add data/prices data/checklist 01_daily/*checklist* 2>/dev/null || true
+          # parquet can be large — check size
+          if [ -f data/prices/ohlc.parquet ]; then
+            SIZE=$(stat -c%s data/prices/ohlc.parquet)
+            echo "ohlc.parquet size=${SIZE} bytes"
+            # GitHub soft limit 100MB; warn above 90MB
+            if [ "$SIZE" -gt 90000000 ]; then
+              echo "::warning::ohlc.parquet is large (>90MB). Commit may fail; artifact still uploaded."
+            fi
+          fi
+          git add -f data/prices data/checklist 01_daily/*checklist* 2>/dev/null || true
+          git add -f data/prices/ 2>/dev/null || true
           if git diff --staged --quiet; then
-            echo "No artifacts to commit"
+            echo "No staged changes to commit"
           else
             git commit -m "chore: price store + checklist $(date -u +%F)"
-            git push
+            git push origin HEAD:main
           fi
