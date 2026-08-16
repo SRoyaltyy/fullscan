@@ -41,7 +41,6 @@ def _universe_tickers() -> list[str]:
         raise SystemExit("[price_store] no finviz exports under data/exports/")
     df = pd.read_csv(files[-1], low_memory=False)
     tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
-    # Finviz rows can include blank/NaN tickers; never sort mixed float+str
     out: set[str] = set()
     for x in df[tcol].tolist():
         if x is None:
@@ -106,27 +105,18 @@ def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
         import yfinance as yf
     except ImportError as e:
         raise SystemExit(f"[price_store] yfinance required: {e}") from e
-
     if not tickers:
         return pd.DataFrame()
-
     try:
         raw = yf.download(
-            tickers=tickers,
-            start=start,
-            end=end,
-            group_by="ticker",
-            auto_adjust=True,
-            threads=True,
-            progress=False,
+            tickers=tickers, start=start, end=end, group_by="ticker",
+            auto_adjust=True, threads=True, progress=False,
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
         return pd.DataFrame()
-
     if raw is None or raw.empty:
         return pd.DataFrame()
-
     rows = []
     if len(tickers) == 1:
         sym = tickers[0]
@@ -141,10 +131,8 @@ def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
         })
         keep = [c for c in ["date", "ticker", "open", "high", "low", "close", "volume"] if c in part.columns]
         return part[keep].dropna(subset=["close"])
-
     if not isinstance(raw.columns, pd.MultiIndex):
         return pd.DataFrame()
-
     level0 = set(raw.columns.get_level_values(0))
     for sym in tickers:
         if sym not in level0:
@@ -172,7 +160,6 @@ def bootstrap(days: int = 400, tickers: list[str] | None = None, resume: bool = 
     names = tickers or _universe_tickers()
     end = datetime.now(ET).date() + timedelta(days=1)
     start = end - timedelta(days=days)
-
     existing = _load_store() if resume else pd.DataFrame()
     have = set(existing["ticker"].unique()) if len(existing) else set()
     if len(existing):
@@ -182,7 +169,6 @@ def bootstrap(days: int = 400, tickers: list[str] | None = None, resume: bool = 
         need = [t for t in names if t not in have or t in short]
     else:
         need = list(names)
-
     print(f"[price_store] bootstrap days={days} universe={len(names)} need={len(need)}")
     frames = [existing] if len(existing) else []
     for i in range(0, len(need), CHUNK):
@@ -208,7 +194,6 @@ def update(lookback_days: int = 7) -> None:
     else:
         start = end - timedelta(days=max(lookback_days, 30))
         print("[price_store] empty store — short window; run bootstrap for full history")
-
     print(f"[price_store] update {start} → {end} for {len(names)} tickers")
     frames = [existing] if len(existing) else []
     for i in range(0, len(names), CHUNK):
@@ -224,52 +209,94 @@ def update(lookback_days: int = 7) -> None:
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:
+    empty = {
+        "pass": None, "detail": "no OHLC", "bull": 0,
+        "green": np.nan, "red": np.nan,
+        "asof": None, "window_start": None, "window_end": None, "n": 0, "sessions": "",
+    }
     if ohlc is None or ohlc.empty:
-        return {"pass": None, "detail": "no OHLC", "bull": 0, "green": np.nan, "red": np.nan}
+        return empty
     cols = {c.lower(): c for c in ohlc.columns}
     if "open" not in cols or "close" not in cols:
-        return {"pass": None, "detail": "no OHLC", "bull": 0, "green": np.nan, "red": np.nan}
+        return empty
     ohlc = ohlc.rename(columns={cols["open"]: "open", cols["close"]: "close"})
-    df = ohlc.dropna(subset=["open", "close"]).tail(lookback)
+    df = ohlc.dropna(subset=["open", "close"]).copy()
+    if not isinstance(df.index, pd.DatetimeIndex):
+        df.index = pd.to_datetime(df.index)
+    df = df.sort_index().tail(lookback)
     if len(df) < 3:
-        return {"pass": None, "detail": f"only {len(df)} bars", "bull": 0, "green": np.nan, "red": np.nan}
-    body = df["close"] - df["open"]
-    green = float(body[body > 0].sum())
-    red = float((-body[body < 0]).sum())
+        empty["detail"] = f"only {len(df)} bars"
+        empty["n"] = len(df)
+        return empty
+    parts, green, red = [], 0.0, 0.0
+    for dt, row in df.iterrows():
+        o, c = float(row["open"]), float(row["close"])
+        body = c - o
+        flag = "G" if body > 0 else ("R" if body < 0 else "F")
+        if body > 0:
+            green += body
+        elif body < 0:
+            red += -body
+        parts.append(f"{dt.date()}:{o:.4f}->{c:.4f}:{body:+.4f}:{flag}")
     bias = green - red
+    asof = df.index[-1].date().isoformat()
     return {
         "pass": bias > 0,
-        "detail": f"green={green:.4f} red={red:.4f} bias={bias:.4f} n={len(df)}",
+        "detail": (
+            f"asof={asof} window={df.index[0].date()}→{df.index[-1].date()} "
+            f"n={len(df)} green={green:.4f} red={red:.4f} bias={bias:.4f}"
+        ),
         "bull": 1 if bias > 0 else -1,
-        "green": green,
-        "red": red,
+        "green": green, "red": red, "asof": asof,
+        "window_start": df.index[0].date().isoformat(),
+        "window_end": df.index[-1].date().isoformat(),
+        "n": int(len(df)), "sessions": "|".join(parts),
     }
 
 
 def consecutive_down(closes: pd.Series) -> dict:
-    s = closes.dropna()
+    s = closes.dropna().sort_index()
+    if not isinstance(s.index, pd.DatetimeIndex):
+        s.index = pd.to_datetime(s.index)
     if len(s) < 2:
-        return {"pass": False, "detail": "short history", "bull": 0, "n": 0}
-    n = 0
+        return {"pass": False, "detail": "short history", "bull": 0, "n": 0, "asof": None, "steps": ""}
+    steps, n = [], 0
     for i in range(len(s) - 1, 0, -1):
-        if float(s.iloc[i]) < float(s.iloc[i - 1]):
+        c0, c1 = float(s.iloc[i - 1]), float(s.iloc[i])
+        d0, d1 = s.index[i - 1].date().isoformat(), s.index[i].date().isoformat()
+        if c1 < c0:
             n += 1
+            steps.append(f"{d0}:{c0:.4f}->{d1}:{c1:.4f}")
         else:
             break
+    steps.reverse()
+    asof = s.index[-1].date().isoformat()
     ok = n >= 3
-    return {"pass": ok, "detail": f"{n} consecutive down sessions", "bull": 1 if ok else 0, "n": n}
+    return {
+        "pass": ok,
+        "detail": f"asof={asof} consecutive_down={n} (need≥3) steps={';'.join(steps) if steps else 'none'}",
+        "bull": 1 if ok else 0, "n": n, "asof": asof, "steps": ";".join(steps),
+    }
 
 
-def _rel_line(close: pd.Series) -> pd.Series:
-    s = close.dropna()
+def _rel_line(close: pd.Series):
+    s = close.dropna().sort_index()
+    if not isinstance(s.index, pd.DatetimeIndex):
+        s.index = pd.to_datetime(s.index)
     if s.empty:
-        return s
-    t0 = s.index[-1] - pd.Timedelta(days=365)
+        return s, np.nan, None
+    t_last = s.index[-1]
+    t0 = t_last - pd.Timedelta(days=365)
     base_c = s[s.index <= t0]
-    base = float(base_c.iloc[-1]) if len(base_c) else float(s.iloc[0])
+    if len(base_c):
+        base = float(base_c.iloc[-1])
+        base_dt = base_c.index[-1].date().isoformat()
+    else:
+        base = float(s.iloc[0])
+        base_dt = s.index[0].date().isoformat()
     if not base:
-        return s * np.nan
-    return s / base - 1.0
+        return s * np.nan, np.nan, base_dt
+    return s / base - 1.0, base, base_dt
 
 
 def peer_compare_7d(ticker: str, peers: list[str], close_panel: pd.DataFrame, horizon: int = 7) -> dict:
@@ -277,38 +304,49 @@ def peer_compare_7d(ticker: str, peers: list[str], close_panel: pd.DataFrame, ho
         "pass_outperform": None, "pass_breadth": None, "detail": "no price panel / ticker missing",
         "bull_outperform": 0, "bull_breadth": 0, "rs_7d": np.nan, "overtake_7d": False,
         "leadership_7d": False, "peer_breadth_7d": np.nan, "peers_used": "", "ret_7d": np.nan,
+        "asof": None, "d0": None, "d1": None, "px_d0": np.nan, "px_d1": np.nan,
+        "baseline_date": None, "baseline_px": np.nan, "rel_d0": np.nan, "rel_d1": np.nan,
+        "peer_med_rel_d0": np.nan, "peer_med_rel_d1": np.nan, "peer_med_ret_7d": np.nan, "peer_rets": "",
     }
     if close_panel is None or close_panel.empty or ticker not in close_panel.columns:
         return empty
-    stock = close_panel[ticker].dropna()
+    stock = close_panel[ticker].dropna().sort_index()
+    if not isinstance(stock.index, pd.DatetimeIndex):
+        stock.index = pd.to_datetime(stock.index)
     if len(stock) < horizon + 2:
         empty["detail"] = "short stock history"
         return empty
-
-    used, peer_ret7 = [], []
+    d1, d0 = stock.index[-1], stock.index[-(horizon + 1)]
+    px_d1, px_d0 = float(stock.iloc[-1]), float(stock.iloc[-(horizon + 1)])
+    ret_7 = px_d1 / px_d0 - 1.0 if px_d0 else np.nan
+    used, peer_ret7, peer_bits = [], [], []
     for p in peers:
         if p == ticker or p not in close_panel.columns:
             continue
-        series = close_panel[p].dropna()
+        series = close_panel[p].dropna().sort_index()
+        if not isinstance(series.index, pd.DatetimeIndex):
+            series.index = pd.to_datetime(series.index)
         if len(series) < horizon + 2:
             continue
+        p_d1, p_d0 = float(series.iloc[-1]), float(series.iloc[-(horizon + 1)])
+        p_ret = p_d1 / p_d0 - 1.0 if p_d0 else np.nan
         used.append(p)
-        p_now, p_7 = float(series.iloc[-1]), float(series.iloc[-(horizon + 1)])
-        peer_ret7.append(p_now / p_7 - 1.0 if p_7 else np.nan)
-
-    px_now, px_7 = float(stock.iloc[-1]), float(stock.iloc[-(horizon + 1)])
-    ret_7 = px_now / px_7 - 1.0 if px_7 else np.nan
+        peer_ret7.append(p_ret)
+        peer_bits.append(
+            f"{p}:{series.index[-(horizon+1)].date()}->{series.index[-1].date()}:"
+            f"{p_d0:.4f}->{p_d1:.4f}:{p_ret:+.2%}"
+        )
     if not used:
         return {
             **empty, "detail": "no peers with prices", "ret_7d": ret_7,
-            "pass_outperform": None, "pass_breadth": None,
+            "asof": d1.date().isoformat(), "d0": d0.date().isoformat(), "d1": d1.date().isoformat(),
+            "px_d0": px_d0, "px_d1": px_d1,
         }
-
-    stock_rel = _rel_line(close_panel[ticker])
-    peer_rels = [_rel_line(close_panel[p]) for p in used]
-    idx = stock_rel.dropna().index[-(horizon + 1):]
-    s_rel = stock_rel.reindex(idx).ffill()
-    peer_mat = pd.DataFrame({p: peer_rels[i].reindex(idx).ffill() for i, p in enumerate(used)})
+    stock_rel, base_px, base_dt = _rel_line(close_panel[ticker])
+    peer_rel_map = {p: _rel_line(close_panel[p])[0] for p in used}
+    win = stock_rel.dropna().index[-(horizon + 1):]
+    s_rel = stock_rel.reindex(win).ffill()
+    peer_mat = pd.DataFrame({p: peer_rel_map[p].reindex(win).ffill() for p in used})
     med = peer_mat.median(axis=1)
     s0, s1 = float(s_rel.iloc[0]), float(s_rel.iloc[-1])
     m0, m1 = float(med.iloc[0]), float(med.iloc[-1])
@@ -316,24 +354,26 @@ def peer_compare_7d(ticker: str, peers: list[str], close_panel: pd.DataFrame, ho
     overtake = (s0 <= m0) and (s1 > m1)
     leadership = (s1 - s0) > (m1 - m0)
     breadth = float(np.mean([1.0 if (r == r and r > 0) else 0.0 for r in peer_ret7]))
+    med_peer_ret = float(np.nanmedian(peer_ret7))
     bull_o = 2 if overtake else (1 if leadership or rs_7d > 0 else (-1 if rs_7d < -0.02 else 0))
     bull_b = 1 if breadth >= 0.6 else (-1 if breadth <= 0.3 else 0)
     detail = (
-        f"ret7={ret_7:+.1%} breadth={breadth:.0%} rs7={rs_7d:+.2%} "
-        f"overtake={overtake} lead={leadership} peers={len(used)}"
+        f"asof={d1.date()} d0={d0.date()} d1={d1.date()} "
+        f"px {px_d0:.4f}->{px_d1:.4f} ret7={ret_7:+.2%} | "
+        f"baseline@{base_dt}={base_px:.4f} rel {s0:+.2%}->{s1:+.2%} "
+        f"peerMedRel {m0:+.2%}->{m1:+.2%} rs7={rs_7d:+.2%} | "
+        f"breadth={breadth:.0%} overtake={overtake} lead={leadership}"
     )
     return {
         "pass_outperform": bool(overtake or leadership or rs_7d > 0),
-        "pass_breadth": breadth >= 0.5,
-        "detail": detail,
-        "bull_outperform": bull_o,
-        "bull_breadth": bull_b,
-        "rs_7d": rs_7d,
-        "overtake_7d": bool(overtake),
-        "leadership_7d": bool(leadership),
-        "peer_breadth_7d": breadth,
-        "peers_used": "|".join(used),
-        "ret_7d": ret_7,
+        "pass_breadth": breadth >= 0.5, "detail": detail,
+        "bull_outperform": bull_o, "bull_breadth": bull_b,
+        "rs_7d": rs_7d, "overtake_7d": bool(overtake), "leadership_7d": bool(leadership),
+        "peer_breadth_7d": breadth, "peers_used": "|".join(used), "ret_7d": ret_7,
+        "asof": d1.date().isoformat(), "d0": d0.date().isoformat(), "d1": d1.date().isoformat(),
+        "px_d0": px_d0, "px_d1": px_d1, "baseline_date": base_dt, "baseline_px": base_px,
+        "rel_d0": s0, "rel_d1": s1, "peer_med_rel_d0": m0, "peer_med_rel_d1": m1,
+        "peer_med_ret_7d": med_peer_ret, "peer_rets": "|".join(peer_bits),
     }
 
 
