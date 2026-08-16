@@ -7,7 +7,7 @@ error_category: "B (TOOL/DATA failure — pipeline inconsistency)"
 falsifier: "This lesson would be falsified if a future run with identical shape — component sum 4, multiplier 1.0, no fresh catalyst, flat futures — emits pipeline total 7 and the actual XLP move is genuinely notable (>1%), while the narrative’s mild call is the wrong one. That would suggest the nonlinear band mapping is intentional. Current evidence — actual mild and narrative consistent — strongly supports the tool-failure diagnosis."
 sector: "Consumer Defensive"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-14

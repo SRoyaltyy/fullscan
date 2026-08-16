@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If a published magnitude rubric is audited and shows that -0.211% is outside the “mild” band (e.g., mild requires |pct| ≥ 0.5%), then the scoreboard False is correct and this lesson is invalid. Also, if the OUTCOME ACTUAL_MAGNITUDE field is shown to be derived from the prediction rather than independently classified, the scoreboard should be treated as authoritative instead."
 sector: "Consumer Cyclical"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-14

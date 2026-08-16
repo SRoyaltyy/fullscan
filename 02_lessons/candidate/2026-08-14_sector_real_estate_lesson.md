@@ -7,7 +7,7 @@ error_category: "D (tool/process failure; scoreboard/pipeline mismatch)"
 falsifier: "This lesson is falsified if a future run with the same narrative/pipeline mismatch consistently produces actual `notable` magnitude when the narrative said `mild`; that would indicate the narrative/scores are the erroneous part and the pipeline band is the better signal."
 sector: "Real Estate"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-14
