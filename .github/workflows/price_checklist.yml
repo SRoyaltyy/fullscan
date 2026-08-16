@@ -104,6 +104,8 @@ jobs:
           fi
           echo "Backfill args: ${ARGS[*]}"
           python -m src.ticker_checklist "${ARGS[@]}"
+          # do NOT write the 1GB+ history CSV into git — parquet is enough
+          rm -f data/checklist/checklist_history.csv || true
 
       - name: Upload price-store artifact
         if: ${{ always() && hashFiles('data/prices/ohlc.parquet') != '' }}
@@ -123,26 +125,30 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Commit artifacts to main
+      - name: Commit compact artifacts only
         if: ${{ hashFiles('data/prices/ohlc.parquet') != '' || hashFiles('data/checklist/**') != '' }}
         run: |
           set -e
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          # history CSV can be huge — prefer parquet in git if CSV > 90MB
-          if [ -f data/checklist/checklist_history.csv ]; then
-            CSIZE=$(stat -c%s data/checklist/checklist_history.csv)
-            echo "checklist_history.csv size=$CSIZE"
-            if [ "$CSIZE" -gt 90000000 ]; then
-              echo "::warning::history CSV >90MB — committing parquet only"
-              git add -f data/checklist/checklist_history.parquet data/checklist/*_checklist.csv data/checklist/*_checklist.json 2>/dev/null || true
-            else
-              git add -f data/checklist 2>/dev/null || true
-            fi
-          else
-            git add -f data/checklist 2>/dev/null || true
+          # Price store always useful on main
+          git add -f data/prices/ 2>/dev/null || true
+          # Latest single-day CSV only (not every backfill day)
+          LATEST=$(ls -1 data/checklist/*_checklist.csv 2>/dev/null | sort | tail -1 || true)
+          if [ -n "$LATEST" ]; then
+            git add -f "$LATEST" "${LATEST%.csv}.json" 2>/dev/null || true
           fi
-          git add -f data/prices 01_daily/*checklist* 2>/dev/null || true
+          # History: parquet only (never the giant CSV / 100+ day CSVs)
+          if [ -f data/checklist/checklist_history.parquet ]; then
+            SIZE=$(stat -c%s data/checklist/checklist_history.parquet)
+            echo "history parquet size=$SIZE"
+            if [ "$SIZE" -lt 95000000 ]; then
+              git add -f data/checklist/checklist_history.parquet
+            else
+              echo "::warning::history parquet >=95MB — artifact only, skip git"
+            fi
+          fi
+          git add -f 01_daily/*checklist* 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No staged changes"
           else
