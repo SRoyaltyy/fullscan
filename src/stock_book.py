@@ -37,6 +37,87 @@ WEIGHTS = {
     "1m":      (0.50, 0.40,   0.10,    0.00),
 }
 
+# Tradeable universe gates (Finviz export units)
+# Market Cap column is in *millions* USD → 80 == $80M
+# Average Volume in export is in *thousands* of shares → 500 == 500k shares
+MIN_MARKET_CAP_M = 80.0
+MIN_AVG_VOL_K = 500.0
+REBOUND_WINDOW = 40
+REBOUND_BOOST = 0.15  # soft add to each horizon score when floor+tape fires
+
+
+def _load_finviz_liquidity(date: str) -> pd.DataFrame:
+    """Ticker → market_cap_m, avg_vol_k from dated (or latest) Finviz export."""
+    export_dir = ROOT / "data" / "exports"
+    path = export_dir / f"finviz_{date}.csv"
+    if not path.exists():
+        files = sorted(export_dir.glob("finviz_????-??-??.csv"))
+        if not files:
+            return pd.DataFrame(columns=["Ticker", "market_cap_m", "avg_vol_k"])
+        path = files[-1]
+    df = pd.read_csv(path, low_memory=False)
+    tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
+    out = pd.DataFrame()
+    out["Ticker"] = df[tcol].astype(str).str.strip().str.upper()
+    out["market_cap_m"] = pd.to_numeric(df.get("Market Cap"), errors="coerce")
+    out["avg_vol_k"] = pd.to_numeric(df.get("Average Volume"), errors="coerce")
+    return out.drop_duplicates("Ticker", keep="first")
+
+
+def _rebound_flags(date: str) -> pd.DataFrame:
+    """Stock-specific checklist score floor + tape_ok (sparse mean-reversion tag).
+
+    Prefer checklist_history.parquet; else latest daily checklist with c3 proxy.
+    Returns DataFrame[Ticker, rebound, at_low, tape_ok].
+    """
+    empty = pd.DataFrame(columns=["Ticker", "rebound", "at_low", "tape_ok"])
+    hist = ROOT / "data" / "checklist" / "checklist_history.parquet"
+    daily = ROOT / "data" / "checklist" / f"{date}_checklist.csv"
+    if not daily.exists():
+        files = sorted((ROOT / "data" / "checklist").glob("*_checklist.csv"))
+        daily = files[-1] if files else None
+
+    h = None
+    if hist.exists():
+        try:
+            h = pd.read_parquet(hist)
+        except Exception:
+            h = None
+
+    if h is not None and len(h):
+        h["asof_date"] = pd.to_datetime(h["asof_date"])
+        h["Ticker"] = h["Ticker"].astype(str).str.upper()
+        h["checklist_score"] = pd.to_numeric(h["checklist_score"], errors="coerce")
+        h = h[h["asof_date"] <= pd.Timestamp(date)].sort_values(["Ticker", "asof_date"])
+        if "c1_candle_pass" in h.columns:
+            h["tape_ok"] = h["c1_candle_pass"].astype(str).str.lower().isin(["true", "1"])
+        else:
+            h["tape_ok"] = False
+        g = h.groupby("Ticker", group_keys=False)
+        h["roll_min"] = g["checklist_score"].transform(
+            lambda s: s.rolling(REBOUND_WINDOW, min_periods=max(10, REBOUND_WINDOW // 2)).min()
+        )
+        h["at_low"] = h["checklist_score"] <= h["roll_min"]
+        last = h.groupby("Ticker", as_index=False).tail(1)
+        last["rebound"] = last["at_low"] & last["tape_ok"]
+        return last[["Ticker", "rebound", "at_low", "tape_ok"]]
+
+    if daily is not None and Path(daily).exists():
+        d = pd.read_csv(daily, low_memory=False)
+        d["Ticker"] = d["Ticker"].astype(str).str.upper()
+        if "c1_candle_pass" in d.columns:
+            tape = d["c1_candle_pass"].astype(str).str.lower().isin(["true", "1"])
+        else:
+            tape = False
+        if "c3_down_n" in d.columns:
+            at_low = pd.to_numeric(d["c3_down_n"], errors="coerce").fillna(0) >= 3
+        else:
+            at_low = False
+        out = pd.DataFrame({"Ticker": d["Ticker"], "at_low": at_low, "tape_ok": tape})
+        out["rebound"] = out["at_low"] & out["tape_ok"]
+        return out.drop_duplicates("Ticker")
+    return empty
+
 
 def _latest_file(dirpath: Path, pattern: str) -> Path | None:
     files = sorted(dirpath.glob(pattern))
@@ -78,9 +159,6 @@ def _load_weather(date: str) -> dict:
         return {}
 
 
-# Map book horizon -> multi-timeframe call key stored on scoreboard runs.
-# 1d uses the run's headline predicted_direction; longer horizons prefer the
-# LLM's explicit HORIZON_* call and fall back to the 1d direction when absent.
 HORIZON_CALL_KEY = {
     "1d": None,
     "3d": "HORIZON_3D",
@@ -114,7 +192,6 @@ def _latest_runs_by_topic() -> dict[str, dict]:
 
 
 def _bias_for(run: dict | None, horizon: str) -> float:
-    """Signed bias for one topic at one horizon (uses horizon_calls when stored)."""
     if not run:
         return 0.0
     key = HORIZON_CALL_KEY.get(horizon)
@@ -126,13 +203,6 @@ def _bias_for(run: dict | None, horizon: str) -> float:
 
 
 def _accuracy_gates() -> tuple[dict[str, float], dict[str, dict]]:
-    """Learning gate: graded outcomes scale how much a topic's bias is trusted.
-
-    Reads direction_hit over all graded scoreboard runs per topic.
-    n>=3 and hit rate <45%  -> bias halved (the loop was losing here)
-    n>=3 and hit rate <55%  -> bias trimmed to 0.85
-    otherwise                 -> full weight
-    Returns (gates, stats) where stats[topic] = {hit_rate, n, gate}."""
     board = scoreboard.load()
     hits: dict[str, list[float]] = {}
     for r in board.get("runs", []):
@@ -157,7 +227,6 @@ def _accuracy_gates() -> tuple[dict[str, float], dict[str, dict]]:
     return gates, stats
 
 
-# Size buckets for guaranteed small/mid representation in the book.
 SIZE_BUCKETS = {
     "large+": {"mega", "large"},
     "mid": {"mid"},
@@ -227,6 +296,36 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     join = join.drop_duplicates(subset=["Ticker"], keep="first").copy()
     join["Ticker"] = join["Ticker"].astype(str).str.strip().str.upper()
 
+    # Liquidity / size gates (user: avg vol >500k shares, mcap >$80M)
+    liq = _load_finviz_liquidity(date)
+    if len(liq):
+        join = join.merge(liq, on="Ticker", how="left")
+    else:
+        join["market_cap_m"] = np.nan
+        join["avg_vol_k"] = np.nan
+    n_before = len(join)
+    liquid = (
+        (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
+        & (join["avg_vol_k"].fillna(0) >= MIN_AVG_VOL_K)
+    )
+    join["liquid"] = liquid
+    join = join.loc[liquid].copy()
+    print(
+        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M vol>={MIN_AVG_VOL_K}k: "
+        f"{n_before} → {len(join)}"
+    )
+
+    reb = _rebound_flags(date)
+    join["rebound"] = False
+    join["at_low"] = False
+    if len(reb):
+        join = join.drop(columns=[c for c in ("rebound", "at_low", "tape_ok") if c in join.columns], errors="ignore")
+        join = join.merge(reb, on="Ticker", how="left")
+        join["rebound"] = join["rebound"].fillna(False).astype(bool)
+        if "at_low" in join.columns:
+            join["at_low"] = join["at_low"].fillna(False).astype(bool)
+        print(f"[stock-book] rebound flags: {int(join['rebound'].sum())} names")
+
     memb = _load_membership(date)
     if memb is not None and "Ticker" in memb.columns:
         memb = memb.drop_duplicates(subset=["Ticker"], keep="first")
@@ -272,8 +371,6 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         veto = join["veto"].astype(str).str.lower().isin(["true", "1", "yes"])
         join.loc[veto, "s_join"] = join.loc[veto, "s_join"] * 0.2
 
-    # Per-horizon biases: longer horizons use the predictors' explicit
-    # HORIZON_* calls (when the LLM stored them), gated by graded accuracy.
     gen_run = latest_runs.get("general")
     gen_gate = gates.get("general", 1.0)
     sector_runs = {t.split(":", 1)[1]: r for t, r in latest_runs.items() if t.startswith("sector:")}
@@ -287,7 +384,6 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         join[f"s_sector_{h}"] = join["sector"].map(sec_bias_h).fillna(0.0) if "sector" in join.columns else 0.0
         join[f"s_general_{h}"] = float(_bias_for(gen_run, h) * gen_gate) * bl
 
-    # Representative 1d columns kept for CSV readability / downstream tools.
     join["s_sector"] = join["s_sector_1d"]
     join["s_general"] = join["s_general_1d"]
     gen_bias = float(_bias_for(gen_run, "1d") * gen_gate)
@@ -318,6 +414,10 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             + wg * join[f"s_general_{h}"]
             + wn * join["s_news"]
         )
+        if "rebound" in join.columns:
+            join.loc[join["rebound"], f"score_{h}"] = (
+                join.loc[join["rebound"], f"score_{h}"] + REBOUND_BOOST
+            )
 
     def reasons(row):
         bits = []
@@ -332,9 +432,15 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             ev = news.get(str(row["Ticker"]).upper(), {}).get("events") or []
             if ev:
                 bits.append("ev=" + ",".join(map(str, ev[:2])))
+        if row.get("rebound"):
+            bits.append("rebound_floor")
         return "; ".join(bits)
 
     join["reasons"] = join.apply(reasons, axis=1)
+    meta["n_after_liquidity"] = int(len(join))
+    meta["min_market_cap_m"] = MIN_MARKET_CAP_M
+    meta["min_avg_vol_k"] = MIN_AVG_VOL_K
+    meta["n_rebound"] = int(join["rebound"].sum()) if "rebound" in join.columns else 0
     return join, meta
 
 
@@ -347,7 +453,6 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int):
 
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8):
-    """Top/bottom n within one size bucket — guarantees small/mid visibility."""
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
@@ -364,6 +469,9 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "size": r.get("size"),
         "side": side,
         "reasons": r.get("reasons"),
+        "rebound": bool(r.get("rebound", False)),
+        "market_cap_m": r.get("market_cap_m"),
+        "avg_vol_k": r.get("avg_vol_k"),
     }
 
 
@@ -374,6 +482,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
 
     cols_keep = [
         "Ticker", "sector", "industry", "size",
+        "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news",
         "score_1d", "score_3d", "score_1w", "score_2w", "score_1m",
         "reasons", "bulls", "bears", "flags",
@@ -416,7 +525,9 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         f"- **General bias:** {meta['general_bias']:+.2f}",
         f"- **Weather risk:** {meta.get('weather_risk')}",
         f"- **News tickers:** {meta['n_news_tickers']}",
-        f"- **Universe:** {meta['n_universe']}",
+        f"- **Universe (after liquidity):** {meta['n_universe']}",
+        f"- **Gates:** mcap ≥ ${meta.get('min_market_cap_m', 80)}M, avg vol ≥ {meta.get('min_avg_vol_k', 500)}k",
+        f"- **Rebound floor tags:** {meta.get('n_rebound', 0)}",
         "",
         "### Sector bias",
         "",
@@ -431,8 +542,6 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         L += [
             "",
             "### Learning gate (graded accuracy → how much each predictor is trusted)",
-            "",
-            "Bias from a topic with a weak graded track record is scaled down before it can move scores.",
             "",
             "| Topic | hit rate | graded runs | weight applied |",
             "|-------|----------|-------------|----------------|",
@@ -476,12 +585,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                 f"| {r['Ticker']} | {r[f'score_{h}']:+.3f} | {r.get('sector','')} | {r.get('reasons','')} |"
             )
 
-        # Guaranteed small/mid-cap visibility: best buys inside each size bucket.
-        L += [
-            "",
-            f"### {h} — BUY by size bucket",
-            "",
-        ]
+        L += ["", f"### {h} — BUY by size bucket", ""]
         for bucket in SIZE_BUCKETS:
             bb, _ss = _bucket_side(df, h, bucket)
             L += ["", f"**{bucket}**", "",
@@ -500,6 +604,9 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "## Read",
         "",
         "- **1d** news-heavy; **1m** structural join + sector.",
+        "- Universe gated: Market Cap ≥ $80M and Average Volume ≥ 500k shares (Finviz units).",
+        "- `rebound_floor` = checklist own-history score low + green-body bias (sparse; soft boost only).",
+        "- Raw checklist total score is NOT used as a buy rank (failed forward IC).",
         "- Longer horizons use the predictors' explicit 3d/1w/2w/1m calls when stored, else fall back to the 1d call.",
         "- Predictor bias is scaled by its graded hit rate (learning gate) — weak topics move scores less.",
         "- Backtest: `python -m src.stock_book_backtest` (or Stock Book Backtest action).",
