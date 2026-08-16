@@ -1,17 +1,4 @@
-"""Daily per-ticker checklist — items 1,3,4,5 from local OHLC store.
-
-  1. candle_bias      — green body sum > red over last 10 sessions
-  3. consecutive_down — ≥3 sessions close < prior close
-  4. peer_outperform  — Finviz Compare 1Y-relative lines; 7d overtake/leadership
-  5. peer_breadth     — majority of peers up over last 7 sessions
-
-Every CSV row includes ALL check pass/detail/bull columns.
-
-CLI:
-  python -m src.price_store bootstrap --days 400
-  python -m src.price_store update
-  python -m src.ticker_checklist --date 2026-08-14
-"""
+"""Daily per-ticker checklist — items 1,3,4,5 with full date/price audit trail."""
 from __future__ import annotations
 
 import argparse
@@ -58,8 +45,7 @@ def run(date: str | None = None, tickers: list[str] | None = None) -> Path:
         date = exports[-1].stem.replace("finviz_", "")
 
     finviz, date = _load_export(date)
-    names = ([t.upper() for t in tickers if t.upper() in finviz.index]
-             if tickers else list(finviz.index))
+    names = ([t.upper() for t in tickers if t.upper() in finviz.index] if tickers else list(finviz.index))
 
     store = ps._load_store()
     if not len(store):
@@ -103,29 +89,50 @@ def run(date: str | None = None, tickers: list[str] | None = None) -> Path:
 
         rows.append({
             "Ticker": t,
+            "asof_date": date,
             "sector": (meta.get("Sector") if meta is not None else ""),
             "industry": (meta.get("Industry") if meta is not None else ""),
             "price": float(closes.iloc[-1]) if len(closes) else np.nan,
             "c1_candle_pass": c1.get("pass"),
             "c1_candle_bull": c1.get("bull"),
-            "c1_candle_detail": c1.get("detail"),
+            "c1_asof": c1.get("asof"),
+            "c1_window_start": c1.get("window_start"),
+            "c1_window_end": c1.get("window_end"),
+            "c1_n_sessions": c1.get("n"),
             "c1_green_body": c1.get("green"),
             "c1_red_body": c1.get("red"),
+            "c1_sessions": c1.get("sessions"),
+            "c1_detail": c1.get("detail"),
             "c3_down_pass": c3.get("pass"),
             "c3_down_bull": c3.get("bull"),
             "c3_down_n": c3.get("n"),
-            "c3_down_detail": c3.get("detail"),
+            "c3_asof": c3.get("asof"),
+            "c3_steps": c3.get("steps"),
+            "c3_detail": c3.get("detail"),
             "c4_peer_outperform_pass": c45.get("pass_outperform"),
             "c4_peer_outperform_bull": c45.get("bull_outperform"),
+            "c4_asof": c45.get("asof"),
+            "c4_d0": c45.get("d0"),
+            "c4_d1": c45.get("d1"),
+            "c4_px_d0": c45.get("px_d0"),
+            "c4_px_d1": c45.get("px_d1"),
+            "c4_ret_7d": c45.get("ret_7d"),
+            "c4_baseline_date": c45.get("baseline_date"),
+            "c4_baseline_px": c45.get("baseline_px"),
+            "c4_rel_d0": c45.get("rel_d0"),
+            "c4_rel_d1": c45.get("rel_d1"),
+            "c4_peer_med_rel_d0": c45.get("peer_med_rel_d0"),
+            "c4_peer_med_rel_d1": c45.get("peer_med_rel_d1"),
             "c4_rs_7d": c45.get("rs_7d"),
             "c4_overtake_7d": c45.get("overtake_7d"),
             "c4_leadership_7d": c45.get("leadership_7d"),
-            "c4_ret_7d": c45.get("ret_7d"),
-            "c4_detail": c45.get("detail"),
             "c4_peers_used": c45.get("peers_used"),
+            "c4_peer_rets": c45.get("peer_rets"),
+            "c4_detail": c45.get("detail"),
             "c5_peer_breadth_pass": c45.get("pass_breadth"),
             "c5_peer_breadth_bull": c45.get("bull_breadth"),
             "c5_peer_breadth_7d": c45.get("peer_breadth_7d"),
+            "c5_peer_med_ret_7d": c45.get("peer_med_ret_7d"),
             "checklist_score": score,
             "n_pass": n_pass,
             "n_fail": n_fail,
@@ -141,52 +148,40 @@ def run(date: str | None = None, tickers: list[str] | None = None) -> Path:
     ranked = out.sort_values("checklist_score", ascending=False)
     (OUT_DIR / f"{date}_checklist.json").write_text(json.dumps({
         "date": date, "generated": datetime.now(ET).isoformat(), "n": len(out),
-        "items": ["1_candle_bias", "3_consecutive_down", "4_peer_outperform_7d", "5_peer_breadth_7d"],
-        "top": ranked.head(40).to_dict("records"),
-        "bottom": ranked.tail(20).to_dict("records"),
+        "column_legend": {
+            "c1_sessions": "date:open->close:body:G|R (last 10 sessions)",
+            "c3_steps": "prior_date:prior_close->date:close",
+            "c4_rel_*": "price/baseline_1y - 1 (Finviz Compare line)",
+            "c4_peer_rets": "PEER:d0->d1:px0->px1:ret%",
+            "c4_rs_7d": "(rel_d1-rel_d0)-(peer_med_rel_d1-peer_med_rel_d0)",
+        },
+        "top": ranked.head(30).to_dict("records"),
     }, indent=2, default=str), encoding="utf-8")
 
     L = [
         f"# Ticker checklist (1,3,4,5) — {date}", "",
-        "Source: local `data/prices/ohlc.parquet` + Correlations peers.", "",
-        "| # | Check | Bull when |", "|---|---|---|",
-        "| 1 | candle_bias | green body sum > red (last 10 sessions) |",
-        "| 3 | consecutive_down | ≥3 down closes in a row |",
-        "| 4 | peer_outperform | 1Y rel-line overtook / led peers over last 7 sessions |",
-        "| 5 | peer_breadth | ≥50% of peers up over last 7 sessions |", "",
-        f"- Names: **{len(out):,}** | with bars: **{(out['n_bars']>0).sum():,}**",
-        f"- Full detail CSV: `data/checklist/{date}_checklist.csv`", "",
-        "## Top 20", "",
-        "| Ticker | Score | c1 | c3_n | c4 overtake | c5 breadth | detail |",
-        "|---|---|---|---|---|---|---|",
+        "Every value is tied to **dates and prices** (see CSV).", "",
+        "## How numbers are built", "",
+        "### 1 candle_bias", "- Last 10 sessions in `c1_sessions`: `date:open->close:body:G|R`", "",
+        "### 3 consecutive_down", "- `c3_steps`: `prior_date:px -> date:px`", "",
+        "### 4 peer outperform", "- Baseline ~1Y: `c4_baseline_date` / `c4_baseline_px`",
+        "- `rel = price/baseline - 1` at d0/d1", "- `c4_rs_7d = (rel_d1-rel_d0) - (peer_med_rel_d1-peer_med_rel_d0)`", "",
+        "### 5 peer breadth", "- Share of peers with positive 7d return; detail in `c4_peer_rets`", "",
+        f"- Names: **{len(out):,}** | CSV: `data/checklist/{date}_checklist.csv`", "",
+        "## Top 15", "",
+        "| Ticker | Score | c1 window | c3_n | d0→d1 | rel d0→d1 | rs7 | overtake | breadth |",
+        "|---|---|---|---|---|---|---|---|---|",
     ]
-    for _, r in ranked.head(20).iterrows():
+    for _, r in ranked.head(15).iterrows():
         L.append(
-            f"| {r['Ticker']} | {r['checklist_score']:+d} | {r['c1_candle_pass']} | "
-            f"{r['c3_down_n']} | {r['c4_overtake_7d']} | {r['c5_peer_breadth_7d']} | "
-            f"{str(r['c4_detail'])[:50]} |"
+            f"| {r['Ticker']} | {r['checklist_score']:+d} | {r['c1_window_start']}→{r['c1_window_end']} | "
+            f"{r['c3_down_n']} | {r['c4_d0']}→{r['c4_d1']} | "
+            f"{r['c4_rel_d0'] if pd.notna(r['c4_rel_d0']) else '—'}→{r['c4_rel_d1'] if pd.notna(r['c4_rel_d1']) else '—'} | "
+            f"{r['c4_rs_7d'] if pd.notna(r['c4_rs_7d']) else '—'} | {r['c4_overtake_7d']} | {r['c5_peer_breadth_7d']} |"
         )
-    L += ["", "## Full check dump (sample)", ""]
-    sample = [t for t in ("XPON", "AAPL", "NVDA", "ETON") if t in set(out["Ticker"])]
-    if not sample:
-        sample = list(ranked.head(3)["Ticker"])
-    for t in sample:
-        r = out[out["Ticker"] == t].iloc[0]
-        L += [
-            f"### {t}  score={r['checklist_score']:+d}",
-            f"- **1 candle:** pass={r['c1_candle_pass']} | {r['c1_candle_detail']}",
-            f"- **3 consecutive down:** pass={r['c3_down_pass']} n={r['c3_down_n']} | {r['c3_down_detail']}",
-            f"- **4 peer outperform:** pass={r['c4_peer_outperform_pass']} overtake={r['c4_overtake_7d']} lead={r['c4_leadership_7d']} rs7={r['c4_rs_7d']}",
-            f"  - {r['c4_detail']}",
-            f"  - peers: {r['c4_peers_used']}",
-            f"- **5 peer breadth:** pass={r['c5_peer_breadth_pass']} breadth={r['c5_peer_breadth_7d']}",
-            "",
-        ]
     md = DAILY / f"{date}_checklist.md"
     md.write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"[checklist] {date}: {len(out):,} -> {csv_path.name}, {md.name}")
-    tops = ", ".join(f"{r.Ticker}({int(r.checklist_score):+d})" for _, r in ranked.head(5).iterrows())
-    print(f"[checklist] top: {tops}")
     return csv_path
 
 
