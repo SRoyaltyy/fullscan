@@ -1,0 +1,442 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-16T17:29:56.577572-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 5.21,
+      "delta_1d": -0.03,
+      "delta_1w": -0.01,
+      "delta_1m": 0.13
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 4.63,
+      "delta_1d": -0.05,
+      "delta_1w": -0.06,
+      "delta_1m": 0.08
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 2.39,
+      "delta_1d": -0.03,
+      "delta_1w": -0.04,
+      "delta_1m": 0.07
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 2.71,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 3.62,
+      "delta_1d": 0.0,
+      "delta_1w": -0.03,
+      "delta_1m": -0.02
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 0.25,
+      "delta_1d": -0.2,
+      "delta_1w": -1.2,
+      "delta_1m": 0.125
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-13",
+      "current": 219.75,
+      "delta_1d": -84.13,
+      "delta_1w": 83.58,
+      "delta_1m": 24.92
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-14",
+      "current": 14.25,
+      "delta_1d": -0.38,
+      "delta_1w": -0.65
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 28 days older than VIX (2026-07-17 vs 2026-08-14); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-14",
+      "last": 82.4,
+      "pct_1d": 1.42
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-14",
+      "last": 88.52,
+      "pct_1d": 1.67
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-14",
+      "last": 4437.3,
+      "pct_1d": 1.69
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-14",
+      "pct_1d": -0.29,
+      "pct_1m": -1.05
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-14",
+      "last": 7805.0,
+      "pct_1d": -0.22
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-14",
+      "last": 30141.75,
+      "pct_1d": -0.15
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 68713.8,
+          "pct_1d": 0.59
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 25116.85,
+          "pct_1d": -1.1
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 3927.18,
+          "pct_1d": 0.01
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 6977.94,
+          "pct_1d": 2.42
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 9115.2,
+          "pct_1d": -0.8
+        }
+      },
+      "composite_avg": 0.22
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 10750.1,
+          "pct_1d": -0.21
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 26440.31,
+          "pct_1d": 0.53
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 8636.8,
+          "pct_1d": -0.16
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 6539.59,
+          "pct_1d": -0.09
+        }
+      },
+      "composite_avg": 0.02
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.6,
+    "window": "2026-08-07..2026-08-14"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 65.0,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-16 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_macro",
+        "title": "Earnings from top retailers will give Wall Street more clues on the housing market and consumers - Fortune",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcXlTNWhiXzc2OGtxd19yNUdYUDE2XzRTY1F4Rnc1d3JGcks3LWxhU3c5UnVsU09JVW9qYnlGWFpjNEg3dFpqMTMwYmgtaFJZRm5rYU1VOHRFMlh2Rk5TV2JaZ3lYZnk5cV80QkUwbm1lc2xDalp5ZkZtdmM0YU9sVDd1dUhCMkNrbEtOWTJQeGFyRmlnUEo1QVRGWnZIX242UE44VHZ5TzdmYzhWQVh1YnZ6VFM?oc=5",
+        "published_at": "Sun, 16 Aug 2026 14:51:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "BBB Foods Shows a Net Loss but Its Cash Flow Surged. Here's How to Read an Insider's Trade Before Last Week's Earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bbb-foods-shows-net-loss-204943229.html",
+        "published_at": "2026-08-16T20:49:43Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "U.S. defense agencies tap three companies for satellite disposal study - SpaceNews",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYlp6YURuTVVsblRQeTJyWkItWTNaZFZfREJsSm9jVW9ndy1jcUQxcmt5MDJWTFU4aXFUbUs4Y2kyZmdkOVJZa0RhZnRaSng3cGtacmFRN1VjRTNBQXlRdTNPX0ZtSHphcjhONFRscElJaTVvSGdBc3pkb0IzOWhNaHo3RDRqVVhUaWhjWFN3NDdtRmo2U19J?oc=5",
+        "published_at": "Sun, 16 Aug 2026 10:50:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "This ETF Is the Most Important in the Market. You Probably Haven’t Heard of It. - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRXJVOHBhNS1GYTdyaGJFblRZVlhLTlk3dy0tdkl1cG9SOU5xRllTWU41MXZ0MnJ5eE1BeG9mZ0taNFBBdUtmX19yYWhnQ2RWRXN5Y2ZoTnRPRXltaHZmblhCTUdSTFRQQWlwbHBYblRDb296Yngyc3VZUlhOVTBrdExRQzExMl9KLVNuSURuUENHeGlsWnRVOHZhUjV6bGxv?oc=5",
+        "published_at": "Sun, 16 Aug 2026 14:00:02 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US admiral praises USS Lincoln crew amid reported mental health concerns",
+        "url": "https://www.aljazeera.com/news/2026/8/16/us-admiral-praises-uss-lincoln-crew-amid-reported-mental-health-concerns?traffic_source=rss",
+        "published_at": "Sun, 16 Aug 2026 20:46:01 +0000"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "There has never been a worse time to sell a home, survey says - NJ.com",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWU9tcFIyOHBsMFlERExyb1hiSElwdUNpcGVOc21JMV9WMVgyTE9lRko2T2szSFJlWG5zMkRPaE96WUNtWmVvTjJZbHBxMDZYNUVEZi1PSUI2VkJOOVJ5dFJGYUxzbjRyTGw0VXVvdVZVUmdLSzhHSDRaSWwwRi1rOGFHcnRQLW9zLVZCSlJyTm5JU2MzRVVRQ2ZnU2F2UdIBsgFBVV95cUxOQmpMb2pDOHB6QzY0Ml9SMGotUkx0Rm9JbjNPV1FzTVNMWVJCYkpmZ3YxYXVPb3hrVjhSanBXSFdWd2R6SWx0Q1ltRXc3YktVcU95S0JDUVN4bVgzdGdjd3RsZXotZEhfWHA2dTE2QlljazVTYjVQTE9EYXZvZkhlUTJRcWRHQ21Ca3BuMVlLb3MzajY5NndYS1FMTHg5al94b3ZKczJ1WUNVWnNhdHQxR1B3?oc=5",
+        "published_at": "Sun, 16 Aug 2026 10:00:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Warren Buffett’s Berkshire raises stake in world’s largest airline - thestreet.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeHFJd2tiUjh3YlIxWkRlQlZLc0RUS0U2cHhTdUxaWGpxaXVfZXBzMFVVSGNtYWdLb2NleHNpSG5ocE1PM2ZVWmE5V2tPcWlRRnpINkVXQW1JUnZxXy1EY3RvSkxnYTd4UTRNTzE1OUpYLXpFUFhIN1A1WkRleWgwaExKWTRraVVtN0paM1R3Y2tCbDFtaXVjMg?oc=5",
+        "published_at": "Sun, 16 Aug 2026 18:47:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "An Estate Can Pick Its Own Valuation Date. Here’s the Six-Month Do-Over That Cuts the Tax Bill When Markets Fall",
+        "url": "https://finance.yahoo.com/real-estate/articles/estate-pick-own-valuation-date-204853000.html",
+        "published_at": "2026-08-16T20:48:53Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "'Spending is leading to earnings': Wall Street strategists see payoff from Big Tech's AI investment - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOTzZ6WUlLX29vd3hjdXFjbW5IZ3ZGOWp6WWpQWFIyV1JFd1JocV9mbjZmaU50UkFzWFJ2UzMyencyZjd3Mk1QeXFGZ2VrU2piT2hJclNvVDFHeGhJMUE4SnZLRXJnT1hYc2Z1c2JhaTNZeGxjY3pSSDRLT2xwODhGVW5MejBlaU1xdEZvS0VtQnMwSVdjb3IxeUZ3YTMyWmFTTXNkR3AwSVdyeVA4UGNMM0M5MENoQUZJNFoxc1ZxU1NuVlNOcm1Kd2xQQ0xRRXRlRmJxT2E2Q3k?oc=5",
+        "published_at": "Sun, 16 Aug 2026 15:16:10 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Brazil: Lula, Bolsonaro return to strongholds to launch runs for president",
+        "url": "https://www.aljazeera.com/news/2026/8/16/brazil-lula-bolsonaro-return-to-strongholds-to-launch-runs-for-president?traffic_source=rss",
+        "published_at": "Sun, 16 Aug 2026 20:36:32 +0000"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "AeroVironment Stock Faces Key Earnings Test as Analysts Remain Divided - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZE1PdDBOTXpQWkxMWjZtUFRnWVVMQ25QWmJmM2FRNHl4Zl90ZnpaQXdaVFZkNXFfWW5HUnRYRG5iZ2QtcW85VlpZbkF3dTNGazJrQWM1SUFyMTNTSnc2NlVaUTF5M0RSOWlrclZsNXI0UXZRU2ozcWRrVG1GVmhPWmZXS2xTR0lTSnRXTGl3b2YyQ1pYNHRSUlFIdFU5azJQaG1Td09CWWRWSmNKVGdJOGlHR3Fvemd5blJCSV9GTDBRMHVqcnc?oc=5",
+        "published_at": "Sun, 16 Aug 2026 20:44:45 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US-Iran MoU is set to expire: What to know",
+        "url": "https://www.aljazeera.com/news/2026/8/16/us-iran-mou-is-set-to-expire-what-to-know?traffic_source=rss",
+        "published_at": "Sun, 16 Aug 2026 20:28:21 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Prosecutors Focus on Four Businesses Tied to Dodgers Owner Mark Walter",
+        "url": "https://www.wsj.com/finance/prosecutors-focus-on-four-businesses-tied-to-dodgers-owner-mark-walter-965e382b?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-16T20:14:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Viral Italian spritz cocktail — no, not Aperol — makes a summer splash in the US - nypost.com",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeDA1VDRPcmVNQmpoYkhHdTN6V1pLS3J4dm1IeVlNUnFaZHd6dURzU0xxS2dWckw4V1liOHl5U1ItXzFXaXk0dzROV1hVR3FOMHljQVF6WWF4SThPcG5scmJZT3h6aHBLMU1tU2NVWFlicjNocHlWWlJUQXBDQUdnWTJpbU5ydFJxaFljYVBpcG1kaW05UFVxRld3LTl2U2dY?oc=5",
+        "published_at": "Sun, 16 Aug 2026 17:38:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Wall Street slips from its record following the latest weak update on the US economy - WXXV News 25",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUjlaX1EtZ2FTeHJBclVROFUzbDBGMXBoU0M3eWg0anNVeC1qZ19TYVpqMWMzbWZ2VDYtblNuS1E4T053cXdqNGpfZnNrME81LWNxZ2I0enBMUGNOcUdDWHZsaGhrUXVkM2p1UDhmN2phV2FUbTRMcFBsVWVVZ29SOFJ6bEhYOTBYLVl5dGFxSTFLTHNPSEtQUUxsbUhwSUVXeXVZcUN6OFdWQm9P?oc=5",
+        "published_at": "Sat, 15 Aug 2026 03:24:02 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve leaves rates unchanged as Warsh faces questions on inflation - abcnews4.com",
+        "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxPNVlFWWRFSlgxLWIxMzBtZGFMTDJQb0hDUm9tZE5aWVJ1ME9HbEs1aXp3dExTT1haNnU3MThncHdtUERYaG9YY1BFd3RVeFk0bmp3cU1EWG5jX3N4d18tLUdNdlhMelB2djlKaFRWdEZHQmJtZTJJZnExR194QkVsalpMWDh5MFZrUm5ITUJyekx1dFE0Qy1JVm1fTHFkeDd5YW9Va3VnODE3SWNYMTR1T1ZvV1NiRHhvUVNuNnRKRndHUkpMLUhMSkFVRkQtSUxHVkFRMEs0NlQxZFpIdmhmdzY2UTEtZ3kwamJFV29wZU1JT1hFbHJYQW9nNDA5Y21icnpyTlhhcTFSb3hHN18tZjg3VGlUQWowZ0pVZzJqMGtmblhLZUhlQnlpeE13ZEV0RG1fWm9uME00RkgwVnM4c2NleG1NZk82UUYxVlg4S1pKdDBfeWN5a09ocS1BbzAweFU5cmVCMVdTcS1pMDRIYWZsZkJQMVFuQ0R6S2VxSlNGbEFqZzMwVS1uRkhwVkhUMGw1VkRjbXZrZ3JySWxvNXhR?oc=5",
+        "published_at": "Wed, 29 Jul 2026 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Futures to Begin Trading Ahead of Retail Earnings - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9NblZPZTluUnUtZVk0aFZCbzhwcHNWLUNlaDF0clVEMTRLSW5ycGxILXYzN0JBMldpdjluWUU0R3g0TFJudTNpTW1rRHVGWHBLNW1OQjJ1ZFJIa19SZFJCa1RuZlpVS0VCLWVzZVdiZ0dEekpGOTlsVW5n?oc=5",
+        "published_at": "Sun, 16 Aug 2026 20:29:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "(QQQX.U) Market Insights and Trading Signals (QQQX.U:CA) - Stock Traders Daily",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZnc3cmQyYkxXSGthSXdIME5wMEtGbWdodU1tMHpRbGQyRFlMQWxHcUhLWGM5bUNvTGpDT0loSTR4WEM3WFRZR1lwNVVwTHpQRUpPQVFvQzNvRGtpVXM4MENqR3k5a0l2cVVTazdCSzBPelVhNnVHVmdtRWYyNHI4dFBnYmFjY0FMUDBJakoxNXRNTGJaVUpqWFdGVndIMHFS?oc=5",
+        "published_at": "Sun, 16 Aug 2026 20:32:51 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analysts Are Upping Their Price Targets on Lumentum Stock. Here's Why.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-upping-price-targets-lumentum-140002049.html",
+        "published_at": "2026-08-16T14:00:02Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Anti-corruption raids in Baghdad as dozens of officials arrested",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/16/anti-corruption-raids-in-baghdad-as-dozens-of-officials-arrested?traffic_source=rss",
+        "published_at": "Sun, 16 Aug 2026 20:02:09 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Senegal’s Saint-Louis Regatta keeps centuries of tradition alive",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/16/16-08-sv-senegal-boat-tradition-sn?traffic_source=rss",
+        "published_at": "Sun, 16 Aug 2026 20:04:51 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NVIDIA’s $3 Billion Bet on the Power Behind AI",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-3-billion-bet-power-202314612.html",
+        "published_at": "2026-08-16T20:23:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stellantis’ (STLA) Big Turnaround Bet Hits A North American Snag",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stellantis-stla-big-turnaround-bet-200858626.html",
+        "published_at": "2026-08-16T20:08:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "1 Major Red Flag AMD Investors Can't Afford to Ignore",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/1-major-red-flag-amd-201800600.html",
+        "published_at": "2026-08-16T20:18:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "This ETF Is the Most Important in the Market. You Probably Haven’t Heard of It.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/etf-most-important-market-probably-140002357.html",
+        "published_at": "2026-08-16T14:00:02Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Texas H-E-B stores remove over 50 recalled items from shelves - Chron",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNX25CYVlNbjVCcEN5TVpoWW56Qmc0Rk5yRnB1eUdJZndFWDJEaGhyRlZkVWZSRUJmY1NpOFE1RG5meUdIanJRZHlvQUxTTUc2SWZQSndWU3N0el80SnAtaVRvcEJ2c0tMMUZ5LXpycEU5N2k0Q0hfSl9iTzNVV0pIb053MGhPSTg?oc=5",
+        "published_at": "Sun, 16 Aug 2026 16:14:18 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Oil Majors Reap $93 Billion Windfall From the Iran War",
+        "url": "https://finance.yahoo.com/energy/articles/oil-majors-reap-93-billion-190000461.html",
+        "published_at": "2026-08-16T19:00:00Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Erdogan says Israeli attacks on Lebanon are a serious concern for Türkiye",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/16/erdogan-says-israeli-attacks-on-lebanon-are-a-serious-concern-for-turkiye?traffic_source=rss",
+        "published_at": "Sun, 16 Aug 2026 19:29:31 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Google’s (GOOGL) Latest AI Model Arrives Amid A Bigger Balancing Act",
+        "url": "https://finance.yahoo.com/technology/ai/articles/google-googl-latest-ai-model-194743447.html",
+        "published_at": "2026-08-16T19:47:43Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia’s Financing Platform Will Support the AI Investment Boom",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-financing-platform-support-ai-134501906.html",
+        "published_at": "2026-08-16T13:45:01Z"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-14",
+      "open": 7806.6,
+      "high": 7810.01,
+      "low": 7776.31,
+      "close": 7785.76,
+      "pct_change": -0.17,
+      "prev_close": 7798.99,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.43,
+        "intraday_low_pct": -0.29,
+        "intraday_high_pct": 0.14,
+        "close_position_in_range": 0.28
+      }
+    },
+    "DOW": {
+      "date": "2026-08-14",
+      "open": 53842.8,
+      "high": 53890.84,
+      "low": 53673.47,
+      "close": 53732.41,
+      "pct_change": -0.2,
+      "prev_close": 53839.99,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.4,
+        "intraday_low_pct": -0.31,
+        "intraday_high_pct": 0.09,
+        "close_position_in_range": 0.27
+      }
+    },
+    "NDX": {
+      "date": "2026-08-14",
+      "open": 26851.15,
+      "high": 26862.17,
+      "low": 26661.95,
+      "close": 26729.16,
+      "pct_change": -0.28,
+      "prev_close": 26803.03,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.75,
+        "intraday_low_pct": -0.53,
+        "intraday_high_pct": 0.22,
+        "close_position_in_range": 0.34
+      }
+    }
+  }
+}
