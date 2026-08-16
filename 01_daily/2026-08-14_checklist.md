@@ -1,73 +1,41 @@
 # Ticker checklist (1,3,4,5) — 2026-08-14
 
-Source: local `data/prices/ohlc.parquet` + Correlations peers.
+Every value is tied to **dates and prices** (see CSV).
 
-| # | Check | Bull when |
-|---|---|---|
-| 1 | candle_bias | green body sum > red (last 10 sessions) |
-| 3 | consecutive_down | ≥3 down closes in a row |
-| 4 | peer_outperform | 1Y rel-line overtook / led peers over last 7 sessions |
-| 5 | peer_breadth | ≥50% of peers up over last 7 sessions |
+## How numbers are built
 
-- Names: **11,587** | with bars: **11,566**
-- Full detail CSV: `data/checklist/2026-08-14_checklist.csv`
+### 1 candle_bias
+- Last 10 sessions in `c1_sessions`: `date:open->close:body:G|R`
 
-## Top 20
+### 3 consecutive_down
+- `c3_steps`: `prior_date:px -> date:px`
 
-| Ticker | Score | c1 | c3_n | c4 overtake | c5 breadth | detail |
-|---|---|---|---|---|---|---|
-| RCEL | +5 | True | 3 | True | 1.0 | ret7=+75.6% breadth=100% rs7=+56.62% overtake=True |
-| HALO | +5 | True | 3 | True | 0.7 | ret7=+18.0% breadth=70% rs7=+21.11% overtake=True  |
-| ICFI | +5 | True | 5 | True | 0.7 | ret7=+4.2% breadth=70% rs7=+1.53% overtake=True le |
-| ORA | +4 | True | 0 | True | 1.0 | ret7=+17.1% breadth=100% rs7=+17.02% overtake=True |
-| SAIC | +4 | True | 0 | True | 0.7 | ret7=+5.3% breadth=70% rs7=+4.13% overtake=True le |
-| PMTS | +4 | True | 3 | False | 0.6 | ret7=+25.4% breadth=60% rs7=+33.34% overtake=False |
-| SLNG | +4 | True | 0 | True | 1.0 | ret7=+39.1% breadth=100% rs7=+34.03% overtake=True |
-| LXEO | +4 | True | 1 | True | 0.8571428571428571 | ret7=+8.8% breadth=86% rs7=+5.78% overtake=True le |
-| STI | +4 | True | 0 | True | 0.8 | ret7=+22.7% breadth=80% rs7=+40.90% overtake=True  |
-| RCMT | +4 | True | 0 | True | 0.6666666666666666 | ret7=+20.6% breadth=67% rs7=+27.52% overtake=True  |
-| TKO | +4 | True | 0 | True | 0.8 | ret7=+9.9% breadth=80% rs7=+2.23% overtake=True le |
-| TKNO | +4 | True | 2 | True | 0.7 | ret7=+29.9% breadth=70% rs7=+30.39% overtake=True  |
-| PIII | +4 | True | 4 | False | 0.625 | ret7=+5.1% breadth=62% rs7=+6.28% overtake=False l |
-| MASS | +4 | True | 1 | True | 0.8888888888888888 | ret7=+19.0% breadth=89% rs7=+17.79% overtake=True  |
-| GFS | +4 | True | 0 | True | 0.9 | ret7=+10.4% breadth=90% rs7=+7.41% overtake=True l |
-| GLSI | +4 | True | 0 | True | 0.8 | ret7=+16.7% breadth=80% rs7=+20.24% overtake=True  |
-| NE | +4 | True | 0 | True | 1.0 | ret7=+13.0% breadth=100% rs7=+5.58% overtake=True  |
-| RXO | +4 | True | 0 | True | 0.7 | ret7=+12.0% breadth=70% rs7=+13.37% overtake=True  |
-| NDAQ | +4 | True | 1 | True | 0.9 | ret7=+2.6% breadth=90% rs7=+1.73% overtake=True le |
-| TK | +4 | True | 0 | True | 1.0 | ret7=+14.7% breadth=100% rs7=+11.27% overtake=True |
+### 4 peer outperform
+- Baseline ~1Y: `c4_baseline_date` / `c4_baseline_px`
+- `rel = price/baseline - 1` at d0/d1
+- `c4_rs_7d = (rel_d1-rel_d0) - (peer_med_rel_d1-peer_med_rel_d0)`
 
-## Full check dump (sample)
+### 5 peer breadth
+- Share of peers with positive 7d return; detail in `c4_peer_rets`
 
-### XPON  score=+1
-- **1 candle:** pass=False | green=0.5780 red=0.7700 bias=-0.1920 n=10
-- **3 consecutive down:** pass=False n=0 | 0 consecutive down sessions
-- **4 peer outperform:** pass=True overtake=False lead=True rs7=0.04708989586458945
-  - ret7=+9.3% breadth=62% rs7=+4.71% overtake=False lead=True peers=8
-  - peers: BLDP|ENPH|FCEL|FSLR|PLUG|RUN|SEDG|TSLA
-- **5 peer breadth:** pass=True breadth=0.625
+- Names: **11,587** | CSV: `data/checklist/2026-08-14_checklist.csv`
 
-### AAPL  score=-1
-- **1 candle:** pass=False | green=12.6413 red=13.8430 bias=-1.2017 n=10
-- **3 consecutive down:** pass=False n=0 | 0 consecutive down sessions
-- **4 peer outperform:** pass=False overtake=False lead=False rs7=-0.03274390892867973
-  - ret7=-1.5% breadth=80% rs7=-3.27% overtake=False lead=False peers=10
-  - peers: AMZN|DELL|GOOGL|HPQ|IBM|META|MSFT|NFLX|NVDA|SONY
-- **5 peer breadth:** pass=True breadth=0.8
+## Top 15
 
-### NVDA  score=+1
-- **1 candle:** pass=True | green=17.6600 red=14.6700 bias=2.9900 n=10
-- **3 consecutive down:** pass=False n=1 | 1 consecutive down sessions
-- **4 peer outperform:** pass=False overtake=False lead=False rs7=-0.06210389796371474
-  - ret7=+2.7% breadth=80% rs7=-6.21% overtake=False lead=False peers=10
-  - peers: ADI|AMAT|AMD|AVGO|INTC|LRCX|MRVL|MU|QCOM|TSM
-- **5 peer breadth:** pass=True breadth=0.8
-
-### ETON  score=+1
-- **1 candle:** pass=False | green=4.6700 red=10.1500 bias=-5.4800 n=10
-- **3 consecutive down:** pass=False n=0 | 0 consecutive down sessions
-- **4 peer outperform:** pass=True overtake=False lead=True rs7=0.7588275622995384
-  - ret7=+28.0% breadth=80% rs7=+75.88% overtake=False lead=True peers=10
-  - peers: BMY|JNJ|LLY|MRK|NVS|PFE|REGN|SNY|VRTX|ZTS
-- **5 peer breadth:** pass=True breadth=0.8
-
+| Ticker | Score | c1 window | c3_n | d0→d1 | rel d0→d1 | rs7 | overtake | breadth |
+|---|---|---|---|---|---|---|---|---|
+| RCEL | +5 | 2026-08-03→2026-08-14 | 3 | 2026-08-05→2026-08-14 | -0.22931040634581445→0.3534482149108289 | 0.5662415569143132 | True | 1.0 |
+| HALO | +5 | 2026-08-03→2026-08-14 | 3 | 2026-08-05→2026-08-14 | 0.2754042595395658→0.5053402850767346 | 0.21108766417548375 | True | 0.7 |
+| ICFI | +5 | 2026-08-03→2026-08-14 | 5 | 2026-08-05→2026-08-14 | -0.13268133813215366→-0.0960700601345379 | 0.015256327852644191 | True | 0.7 |
+| ORA | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | 0.11422990970764269→0.30451980409597335 | 0.17023880035733097 | True | 1.0 |
+| SAIC | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | 0.04015346390474739→0.0953170222962656 | 0.041291887516771264 | True | 0.7 |
+| PMTS | +4 | 2026-08-03→2026-08-14 | 3 | 2026-08-05→2026-08-14 | 0.44592869949947267→0.8129770684403876 | 0.3334351760763124 | False | 0.6 |
+| SLNG | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | 0.05909085145666704→0.47272724514165265 | 0.34030357723926286 | True | 1.0 |
+| LXEO | +4 | 2026-08-03→2026-08-14 | 1 | 2026-08-05→2026-08-14 | -0.07098124327674538→0.010438453263686531 | 0.05777107074966359 | True | 0.8571428571428571 |
+| STI | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | 1.018867906138356→1.4779874053513873 | 0.4089730482176468 | True | 0.8 |
+| RCMT | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | 0.17604211018377547→0.41845408885852087 | 0.27524151756066306 | True | 0.6666666666666666 |
+| TKO | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | -0.02662406781201121→0.07019773094572046 | 0.022278932720692313 | True | 0.8 |
+| TKNO | +4 | 2026-08-03→2026-08-14 | 2 | 2026-08-05→2026-08-14 | 0.16874998137354935→0.518749931703014 | 0.3039154515657566 | True | 0.7 |
+| PIII | +4 | 2026-08-03→2026-08-14 | 4 | 2026-08-05→2026-08-14 | 0.4654178663461186→0.5396254079998022 | 0.06284553917059477 | False | 0.625 |
+| MASS | +4 | 2026-08-03→2026-08-14 | 1 | 2026-08-05→2026-08-14 | 0.18953318857357915→0.4158415821550949 | 0.1778502545978371 | True | 0.8888888888888888 |
+| GFS | +4 | 2026-08-03→2026-08-14 | 0 | 2026-08-05→2026-08-14 | 0.4964131719387661→0.6513189481653832 | 0.07411173180823061 | True | 0.9 |
