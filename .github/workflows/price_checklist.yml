@@ -1,15 +1,10 @@
 name: Price store + checklist (1/3/4/5)
 
-# Bootstrap writes data/prices/ on the runner. That only survives if we
-# (1) commit+push it and/or (2) upload an Actions artifact.
-# Checklist on a later run checks out the repo fresh — without the store
-# committed or restored from an artifact, it correctly says "price store empty".
-
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "bootstrap | update | checklist | update_and_checklist"
+        description: "bootstrap | update | checklist | update_and_checklist | backfill"
         required: true
         default: update_and_checklist
         type: choice
@@ -18,8 +13,17 @@ on:
           - update
           - checklist
           - update_and_checklist
+          - backfill
       date:
-        description: "as-of date YYYY-MM-DD for checklist (blank = latest finviz export)"
+        description: "as-of date for single-day checklist (blank = latest)"
+        required: false
+        default: ""
+      backfill_from:
+        description: "backfill start YYYY-MM-DD (mode=backfill)"
+        required: false
+        default: "2026-03-01"
+      backfill_to:
+        description: "backfill end YYYY-MM-DD (blank = last bar in price store)"
         required: false
         default: ""
 
@@ -30,7 +34,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 720
     steps:
       - uses: actions/checkout@v4
 
@@ -60,21 +64,22 @@ jobs:
         if: ${{ inputs.mode == 'update' || inputs.mode == 'update_and_checklist' }}
         run: |
           if [ ! -f data/prices/ohlc.parquet ]; then
-            echo "::error::No price store on disk. Run mode=bootstrap first and ensure it commits data/prices/."
+            echo "::error::No price store. Run bootstrap first."
             exit 1
           fi
           python -m src.price_store update
 
       - name: Status
-        if: ${{ inputs.mode != 'checklist' }}
+        if: ${{ inputs.mode != 'checklist' && inputs.mode != 'backfill' }}
         run: python -m src.price_store status
+        continue-on-error: true
 
-      - name: Checklist items 1/3/4/5
+      - name: Checklist single day
         if: ${{ inputs.mode == 'checklist' || inputs.mode == 'update_and_checklist' }}
         run: |
           set -e
           if [ ! -f data/prices/ohlc.parquet ]; then
-            echo "::error::Price store empty. Bootstrap must finish AND commit data/prices/ohlc.parquet to main."
+            echo "::error::Price store empty."
             exit 1
           fi
           ARGS=()
@@ -83,7 +88,24 @@ jobs:
           fi
           python -m src.ticker_checklist "${ARGS[@]}"
 
-      - name: Upload price-store artifact (this run)
+      - name: Checklist BACKFILL (all sessions from backfill_from)
+        if: ${{ inputs.mode == 'backfill' }}
+        run: |
+          set -e
+          if [ ! -f data/prices/ohlc.parquet ]; then
+            echo "::error::Price store empty. Run bootstrap first."
+            exit 1
+          fi
+          FROM="${{ inputs.backfill_from }}"
+          TO="${{ inputs.backfill_to }}"
+          ARGS=(--backfill-from "$FROM")
+          if [ -n "$TO" ]; then
+            ARGS+=(--backfill-to "$TO")
+          fi
+          echo "Backfill args: ${ARGS[*]}"
+          python -m src.ticker_checklist "${ARGS[@]}"
+
+      - name: Upload price-store artifact
         if: ${{ always() && hashFiles('data/prices/ohlc.parquet') != '' }}
         uses: actions/upload-artifact@v4
         with:
@@ -92,23 +114,38 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Commit price store + checklist to main
+      - name: Upload checklist history artifact
+        if: ${{ always() && hashFiles('data/checklist/**') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: checklist-history
+          path: data/checklist/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Commit artifacts to main
         if: ${{ hashFiles('data/prices/ohlc.parquet') != '' || hashFiles('data/checklist/**') != '' }}
         run: |
           set -e
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          if [ -f data/prices/ohlc.parquet ]; then
-            SIZE=$(stat -c%s data/prices/ohlc.parquet)
-            echo "ohlc.parquet size=${SIZE} bytes"
-            if [ "$SIZE" -gt 90000000 ]; then
-              echo "::warning::ohlc.parquet is large (>90MB). Commit may fail; artifact still uploaded."
+          # history CSV can be huge — prefer parquet in git if CSV > 90MB
+          if [ -f data/checklist/checklist_history.csv ]; then
+            CSIZE=$(stat -c%s data/checklist/checklist_history.csv)
+            echo "checklist_history.csv size=$CSIZE"
+            if [ "$CSIZE" -gt 90000000 ]; then
+              echo "::warning::history CSV >90MB — committing parquet only"
+              git add -f data/checklist/checklist_history.parquet data/checklist/*_checklist.csv data/checklist/*_checklist.json 2>/dev/null || true
+            else
+              git add -f data/checklist 2>/dev/null || true
             fi
-          fi
-          git add -f data/prices data/checklist 01_daily/*checklist* 2>/dev/null || true
-          if git diff --staged --quiet; then
-            echo "No staged changes to commit"
           else
-            git commit -m "chore: price store + checklist $(date -u +%F)"
+            git add -f data/checklist 2>/dev/null || true
+          fi
+          git add -f data/prices 01_daily/*checklist* 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No staged changes"
+          else
+            git commit -m "chore: price/checklist $(date -u +%F)"
             git push origin HEAD:main
           fi
