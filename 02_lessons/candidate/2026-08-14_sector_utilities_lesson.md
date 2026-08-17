@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "On a future Utilities call, if S0 is upgraded from 0 to +1 because a scheduled consumer-data miss could trigger a defensive rotation, and the data does miss, SPY fades, but XLU fails to outperform SPY on a relative basis, then the S0-positive defensive-rotation mechanism is not reliable and this lesson should be revised."
 sector: "Utilities"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-14

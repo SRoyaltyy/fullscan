@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "The lesson fails if, after reconciling pipeline/narrative and correctly ingesting the macro calendar, a flat-S4 diverged Financial call still misses a >1% XLF move caused by a fresh same-day Financial catalyst. The scoreboard portion is retired once no future pipeline/narrative mismatches occur for 20 consecutive sector calls."
 sector: "Financial"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-14

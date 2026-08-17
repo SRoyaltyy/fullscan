@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If a future Healthcare call in the exact confirmed-reversal + live drug-pricing-overhang setup closes within ±0.3% (flat) or higher, the “policy overhang ⇒ mild-down” rule will be disconfirmed and should be softened back to flat-centering."
 sector: "Healthcare"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-14

@@ -9,8 +9,8 @@ scope: "general"
 date: "2026-08-14"
 status: "active"
 occurrences: "1"
-promoted_on: "2026-08-14"
-sources: "['2026-08-14_lesson.md']"
+promoted_on: "2026-08-17"
+sources: "['2026-08-14_sector_industrials_lesson.md']"
 schema_ok: "true"
 ---
 

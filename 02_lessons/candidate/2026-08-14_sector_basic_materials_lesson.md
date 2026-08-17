@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The rule is falsified if, in a future setup with negative XLB relative tape, China demand contraction, copper off highs, but gold positive and SPY near record highs, XLB still falls or underperforms SPY by more than ~1%. That would show the risk-off rotation mechanism is not reliable enough to override the down-side industrial signals."
 sector: "Basic Materials"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-14

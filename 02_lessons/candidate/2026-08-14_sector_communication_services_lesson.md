@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If, in multiple future cases, XLC posts a > +1% relative reversal and then, with no new comparable catalyst and an extended market, still delivers a second > +1% relative day, the default-mild follow-through rule would be falsified. The rule is conditional: a fresh comparable catalyst knowable at the open may justify notable."
 sector: "Communication Services"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-14

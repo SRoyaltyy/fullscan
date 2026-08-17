@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "Future Energy day with green CL/BZ premarket and active Hormuz/Iran escalation headlines where XLE closes flat or negative would falsify the “raise S1” rule. If such days are systematically overcalled, the stale-catalyst cap should be restored."
 sector: "Energy"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-14

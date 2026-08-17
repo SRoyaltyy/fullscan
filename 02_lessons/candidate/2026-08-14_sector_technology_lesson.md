@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The lesson would be weakened if the same known-negative/stale catalyst is followed by a broad up/notable tech day with no new positive catalyst, because requiring market confirmation would have caused an undercall. Also, if scheduled consumer-data prints routinely fail to hurt crowded tech, the scheduled-data downside component should be de-weighted."
 sector: "Technology"
 date: "2026-08-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-14
