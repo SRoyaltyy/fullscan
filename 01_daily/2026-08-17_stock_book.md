@@ -1,6 +1,6 @@
 # Stock book — **2026-08-17** (1d / 3d / 1w / 2w / 1m)
 
-Generated: 2026-08-17T13:02:15.446018-04:00
+Generated: 2026-08-17T13:32:02.012791-04:00
 
 Layers: join (labels×weather) + sector predict + general regime + news actions.
 
