@@ -4433,17 +4433,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 10.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 52.349998474121094,
+      "actual_close": 52.2400016784668,
+      "actual_pct_change": -0.5709920666786439,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_basic_materials_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4473,7 +4473,10 @@
       },
       "sector": "Basic Materials",
       "etf": "XLB",
-      "rubric": "00_grounding/sectors/basic_materials.md"
+      "rubric": "00_grounding/sectors/basic_materials.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": -0.09825540254220222,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4491,17 +4494,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 112.50499725341797,
+      "actual_close": 110.81999969482422,
+      "actual_pct_change": -1.8857877919146948,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_communication_services_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4531,7 +4534,10 @@
       },
       "sector": "Communication Services",
       "etf": "XLC",
-      "rubric": "00_grounding/sectors/communication_services.md"
+      "rubric": "00_grounding/sectors/communication_services.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": -1.4130511277782531,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4549,17 +4555,17 @@
         "S4_ETF_TAPE": -1.0
       },
       "leading_sum": -10.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 117.95999908447266,
+      "actual_close": 116.75,
+      "actual_pct_change": -1.2267317983748471,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_consumer_cyclical_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4589,7 +4595,10 @@
       },
       "sector": "Consumer Cyclical",
       "etf": "XLY",
-      "rubric": "00_grounding/sectors/consumer_cyclical.md"
+      "rubric": "00_grounding/sectors/consumer_cyclical.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": -0.7539951342384055,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4607,17 +4616,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 7.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 85.36000061035156,
+      "actual_close": 84.68000030517578,
+      "actual_pct_change": -1.6378163464902618,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_consumer_defensive_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4647,7 +4656,10 @@
       },
       "sector": "Consumer Defensive",
       "etf": "XLP",
-      "rubric": "00_grounding/sectors/consumer_defensive.md"
+      "rubric": "00_grounding/sectors/consumer_defensive.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": -1.16507968235382,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4665,17 +4677,17 @@
         "S4_ETF_TAPE": 0.5
       },
       "leading_sum": 9.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 62.21500015258789,
+      "actual_close": 62.58000183105469,
+      "actual_pct_change": 1.082219326916345,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_energy_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4705,7 +4717,10 @@
       },
       "sector": "Energy",
       "etf": "XLE",
-      "rubric": "00_grounding/sectors/energy.md"
+      "rubric": "00_grounding/sectors/energy.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": 1.5549559910527866,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4723,17 +4738,17 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": 9.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 57.959999084472656,
+      "actual_close": 57.58000183105469,
+      "actual_pct_change": -0.9972455603148189,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": true,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_financial_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4763,7 +4778,10 @@
       },
       "sector": "Financial",
       "etf": "XLF",
-      "rubric": "00_grounding/sectors/financial.md"
+      "rubric": "00_grounding/sectors/financial.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": -0.5245088961783773,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4781,17 +4799,17 @@
         "S4_ETF_TAPE": -1.0
       },
       "leading_sum": -3.5,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 166.4499969482422,
+      "actual_close": 167.0500030517578,
+      "actual_pct_change": -0.19118842968576244,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_healthcare_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4821,7 +4839,10 @@
       },
       "sector": "Healthcare",
       "etf": "XLV",
-      "rubric": "00_grounding/sectors/healthcare.md"
+      "rubric": "00_grounding/sectors/healthcare.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": 0.2815482344506792,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4839,17 +4860,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 6.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 186.38999938964844,
+      "actual_close": 186.32000732421875,
+      "actual_pct_change": -0.10186434411707523,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_industrials_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4879,7 +4900,10 @@
       },
       "sector": "Industrials",
       "etf": "XLI",
-      "rubric": "00_grounding/sectors/industrials.md"
+      "rubric": "00_grounding/sectors/industrials.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": 0.37087232001936643,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4897,17 +4921,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 7.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 45.099998474121094,
+      "actual_close": 44.83000183105469,
+      "actual_pct_change": -0.9719430577861288,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_real_estate_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4937,7 +4961,10 @@
       },
       "sector": "Real Estate",
       "etf": "XLRE",
-      "rubric": "00_grounding/sectors/real_estate.md"
+      "rubric": "00_grounding/sectors/real_estate.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": -0.4992063936496871,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -4955,17 +4982,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 8.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 190.7899932861328,
+      "actual_close": 190.32000732421875,
+      "actual_pct_change": 0.16315605828389756,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_technology_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -4995,7 +5022,10 @@
       },
       "sector": "Technology",
       "etf": "XLK",
-      "rubric": "00_grounding/sectors/technology.md"
+      "rubric": "00_grounding/sectors/technology.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": 0.6358927224203392,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-17",
@@ -5013,17 +5043,17 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 7.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 44.20000076293945,
+      "actual_close": 44.18000030517578,
+      "actual_pct_change": -0.29338989863718634,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-17_sector_utilities_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -5053,7 +5083,10 @@
       },
       "sector": "Utilities",
       "etf": "XLU",
-      "rubric": "00_grounding/sectors/utilities.md"
+      "rubric": "00_grounding/sectors/utilities.md",
+      "spy_pct_change": -0.47273666413644166,
+      "rel_pct_change": 0.17934676549925532,
+      "horizon_grades": {}
     }
   ]
 }
