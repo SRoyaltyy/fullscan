@@ -8,23 +8,22 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 - **Yields:** falling | **Dollar/oil:** soft | **VIX:** falling (ratio 0.81)
 - **Fear & Greed:** 65 (Greed) | **Yield/SPX 5d corr:** -0.60
 - **High-impact events:** 2 bullish vs 2 bearish | China: bull
-- ⚠️ **Data gaps:** sector predict runs
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | ❔ unknown | low | no sector predict run found |
-| sector:Communication Services | ❔ unknown | low | no sector predict run found |
-| sector:Consumer Cyclical | ❔ unknown | low | no sector predict run found |
-| sector:Consumer Defensive | ❔ unknown | low | no sector predict run found |
-| sector:Energy | ❔ unknown | low | no sector predict run found |
-| sector:Financial | ❔ unknown | low | no sector predict run found |
-| sector:Healthcare | ❔ unknown | low | no sector predict run found |
-| sector:Industrials | ❔ unknown | low | no sector predict run found |
-| sector:Real Estate | ❔ unknown | low | no sector predict run found |
-| sector:Technology | ❔ unknown | low | no sector predict run found |
-| sector:Utilities | ❔ unknown | low | no sector predict run found |
+| sector:Basic Materials | 🌤️ favorable | high | sector predict score +13.2 dir up conf 0.62 [sector board] |
+| sector:Communication Services | ⛅ neutral | high | sector predict score +4.5 dir up conf 0.55 [sector board] |
+| sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -12.0 dir down conf 0.6 [sector board] |
+| sector:Consumer Defensive | 🌤️ favorable | high | sector predict score +9.0 dir up conf 0.6 [sector board] |
+| sector:Energy | 🌤️ favorable | high | sector predict score +11.0 dir up conf 0.65 [sector board] |
+| sector:Financial | 🌤️ favorable | high | sector predict score +8.8 dir up conf 0.55 [sector board] |
+| sector:Healthcare | ⛅ neutral | high | sector predict score -4.3 dir down conf 0.6 [sector board] |
+| sector:Industrials | ⛅ neutral | high | sector predict score +7.2 dir up conf 0.55 [sector board] |
+| sector:Real Estate | ⛅ neutral | high | sector predict score +7.5 dir up conf 0.6 [sector board] |
+| sector:Technology | ⛅ neutral | high | sector predict score +6.3 dir up conf 0.55 [sector board] |
+| sector:Utilities | ⛅ neutral | high | sector predict score +7.5 dir up conf 0.55 [sector board] |
 
 ## Size
 
