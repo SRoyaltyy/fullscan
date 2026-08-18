@@ -1,8 +1,12 @@
 """Part A (OHLC chart) + Part B1 (Finviz export snapshot/deltas) daily checklist.
 
 Universe gate (your rules):
-  Market Cap > 80e6
-  Average Volume > 500_000
+  Market Cap > $80M
+  Average Volume > 500_000 shares
+
+Finviz Elite CSV units (verified on export):
+  Market Cap  → millions of USD   (e.g. 3545.49 = $3.545B)
+  Average Volume → thousands of shares (e.g. 1663.63 = 1.663M shares)
 
 CLI:
   python -m src.ab_checklist
@@ -29,8 +33,8 @@ EXPORT_DIR = ROOT / "data" / "exports"
 OUT_DIR = ROOT / "data" / "ab_checklist"
 ET = ZoneInfo(config.TZ)
 
-MCAP_MIN = 80_000_000.0
-ADV_MIN = 500_000.0
+MCAP_MIN = 80_000_000.0   # USD
+ADV_MIN = 500_000.0       # shares
 LOOKBACK_BODY = 10
 LOOKBACK_DD = 42  # ~2 months trading sessions
 
@@ -88,6 +92,7 @@ def _prior_export(asof: str) -> pd.DataFrame | None:
 
 
 def _filter_liquid(df: pd.DataFrame) -> pd.DataFrame:
+    """Finviz Elite CSV: Market Cap in millions USD; Average Volume in thousands of shares."""
     mcap_col = "Market Cap" if "Market Cap" in df.columns else None
     vol_col = None
     for c in ("Average Volume", "Avg Volume", "Volume"):
@@ -97,10 +102,19 @@ def _filter_liquid(df: pd.DataFrame) -> pd.DataFrame:
     if not mcap_col or not vol_col:
         raise SystemExit(f"[ab] need Market Cap + Average Volume columns; have {list(df.columns)[:20]}")
     out = df.copy()
-    out["_mcap"] = out[mcap_col].map(_num)
-    out["_adv"] = out[vol_col].map(_num)
-    out = out[(out["_mcap"] > MCAP_MIN) & (out["_adv"] > ADV_MIN)].copy()
-    return out
+    raw_mcap = out[mcap_col].map(_num)
+    raw_adv = out[vol_col].map(_num)
+    # Convert export units → USD and shares
+    out["_mcap"] = raw_mcap * 1_000_000.0   # millions → USD
+    out["_adv"] = raw_adv * 1_000.0         # thousands → shares
+    out["_mcap_raw_millions"] = raw_mcap
+    out["_adv_raw_thousands"] = raw_adv
+    filtered = out[(out["_mcap"] > MCAP_MIN) & (out["_adv"] > ADV_MIN)].copy()
+    print(
+        f"[ab] units: Market Cap ×1e6 (millions→USD), Average Volume ×1e3 (thousands→shares) | "
+        f"raw rows={len(out):,} → liquid={len(filtered):,}"
+    )
+    return filtered
 
 
 def _rsi(close: pd.Series, n: int = 14) -> pd.Series:
@@ -134,9 +148,6 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
         return {"ok": False, "n_bars": len(df)}
 
     c = df["close"].astype(float)
-    o = df["open"].astype(float)
-    h = df["high"].astype(float)
-    l = df["low"].astype(float)
     v = df["volume"].astype(float) if "volume" in df.columns else pd.Series(np.nan, index=df.index)
 
     rsi = _rsi(c, 14)
@@ -174,7 +185,7 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
     c_now = float(c.iloc[-1])
     mid_n, up_n, lo_n = float(mid.iloc[-1]), float(upper.iloc[-1]), float(lower.iloc[-1])
     if np.isfinite(up_n) and np.isfinite(lo_n) and (up_n - lo_n) > 0:
-        bb_pos = (c_now - mid_n) / ((up_n - lo_n) / 2)  # 0 at mid, ~±1 at bands
+        bb_pos = (c_now - mid_n) / ((up_n - lo_n) / 2)
     else:
         bb_pos = np.nan
 
@@ -194,7 +205,6 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
     else:
         sma_stack = "unknown"
 
-    # max downside past ~2 months: peak-to-trough within window ending today
     win = c.tail(LOOKBACK_DD)
     if len(win) >= 5:
         peak = float(win.max())
@@ -208,7 +218,6 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
         max_dd = np.nan
         dd_peak_date = dd_trough_date = None
 
-    # body vs wick fractions (lookback)
     rng = (tail["high"] - tail["low"]).replace(0, np.nan)
     body_abs = (tail["close"] - tail["open"]).abs()
     upper_w = tail["high"] - tail[["open", "close"]].max(axis=1)
@@ -262,7 +271,6 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
 
 
 def _pass_a(a: dict) -> dict:
-    """Pass (+1) / fail (-1) / neutral (0) for Part A — long-biased prototype."""
     if not a.get("ok"):
         return {k: 0 for k in (
             "A1_rsi_zone", "A2_rsi_cross", "A3_body_rg", "A4_vol_rg", "A5_rvol",
@@ -270,7 +278,6 @@ def _pass_a(a: dict) -> dict:
         )}
 
     rsi = a.get("rsi")
-    # A1: not extended (>70 bad for new long; <30 oversold = opportunity flag +)
     if not np.isfinite(rsi):
         a1 = 0
     elif rsi >= 70:
@@ -280,8 +287,6 @@ def _pass_a(a: dict) -> dict:
     else:
         a1 = 0
 
-    # A2: cross up 30/50 good; cross down 70 good (cooling); cross down 30 bad
-    xs = (a.get("rsi_x30"), a.get("rsi_x50"), a.get("rsi_x70"))
     if a.get("rsi_x30") == "up" or a.get("rsi_x50") == "up":
         a2 = 1
     elif a.get("rsi_x70") == "down":
@@ -304,9 +309,9 @@ def _pass_a(a: dict) -> dict:
     if not np.isfinite(bb):
         a6 = 0
     elif bb <= -0.8:
-        a6 = 1  # near/below lower band
+        a6 = 1
     elif bb >= 0.8:
-        a6 = -1  # near/above upper
+        a6 = -1
     else:
         a6 = 0
 
@@ -316,7 +321,6 @@ def _pass_a(a: dict) -> dict:
     a8 = 1 if stack == "bull_aligned" else (-1 if stack == "bear_aligned" else 0)
 
     dd = a.get("max_dd_2m")
-    # moderate washout without total collapse
     if not np.isfinite(dd):
         a9 = 0
     elif -0.25 <= dd <= -0.08:
@@ -355,65 +359,46 @@ def _part_b1(row: pd.Series, prior: pd.Series | None) -> dict:
             return np.nan
         return _num(prior[col])
 
-    rsi_f = g("Relative Strength Index (14)")
-    rvol_f = g("Relative Volume")
-    sma50_f = g("50-Day Simple Moving Average")  # finviz is often % distance
-    short_float = g("Short Float")
-    short_ratio = g("Short Ratio")
     target = g("Target Price")
     recom = g("Analyst Recom")
     eps_surp = g("EPS Surprise")
     rev_surp = g("Revenue Surprise")
-    sales = g("Sales")
     income = g("Income")
     insider_tx = g("Insider Transactions")
     inst_tx = g("Institutional Transactions")
     profit_m = g("Profit Margin")
-    eps_ttm = g("EPS (ttm)")
+    short_float = g("Short Float")
 
     target_prev = gp("Target Price")
     insider_prev = gp("Insider Transactions")
-    recom_prev = gp("Analyst Recom")
 
     target_delta = target - target_prev if np.isfinite(target) and np.isfinite(target_prev) else np.nan
     insider_delta = insider_tx - insider_prev if np.isfinite(insider_tx) and np.isfinite(insider_prev) else np.nan
-    recom_delta = recom - recom_prev if np.isfinite(recom) and np.isfinite(recom_prev) else np.nan
 
-    # earnings date proximity
     ed = row.get("Earnings Date", "")
-    earn_soon = False
-    if isinstance(ed, str) and ed and ed not in {"-", "nan"}:
-        earn_soon = True  # presence flag; exact day parse varies
+    earn_soon = bool(isinstance(ed, str) and ed and ed not in {"-", "nan"})
 
     profitable = bool(np.isfinite(income) and income > 0) or bool(np.isfinite(profit_m) and profit_m > 0)
 
     return {
-        "fv_rsi": rsi_f,
-        "fv_rvol": rvol_f,
-        "fv_sma50_pct": sma50_f,
-        "short_float": short_float,
-        "short_ratio": short_ratio,
         "target_price": target,
         "target_delta": target_delta,
         "analyst_recom": recom,
-        "recom_delta": recom_delta,
         "eps_surprise": eps_surp,
         "rev_surprise": rev_surp,
-        "sales": sales,
         "income": income,
         "profit_margin": profit_m,
-        "eps_ttm": eps_ttm,
         "insider_tx": insider_tx,
         "insider_delta": insider_delta,
         "inst_tx": inst_tx,
         "profitable": profitable,
+        "short_float": short_float,
         "earnings_date_raw": str(ed) if ed is not None else "",
         "earn_date_present": earn_soon,
     }
 
 
 def _pass_b1(b: dict) -> dict:
-    # B1: export snapshot polarity (long-biased prototype)
     def _surp(x):
         if not np.isfinite(x):
             return 0
@@ -423,7 +408,6 @@ def _pass_b1(b: dict) -> dict:
     b_target = 1 if (np.isfinite(tdelta) and tdelta > 0) else (-1 if (np.isfinite(tdelta) and tdelta < 0) else 0)
 
     recom = b.get("analyst_recom")
-    # Finviz: 1=strong buy … 5=sell
     if not np.isfinite(recom):
         b_recom = 0
     elif recom <= 2.5:
@@ -442,14 +426,7 @@ def _pass_b1(b: dict) -> dict:
     b_prof = 1 if b.get("profitable") else -1
 
     sf = b.get("short_float")
-    b_short = 0
-    if np.isfinite(sf):
-        if sf >= 20:
-            b_short = 1  # fuel (squeeze potential) — soft +
-        elif sf >= 10:
-            b_short = 0
-        else:
-            b_short = 0
+    b_short = 1 if (np.isfinite(sf) and sf >= 20) else 0
 
     return {
         "B1_eps_surprise": _surp(b.get("eps_surprise")),
@@ -466,10 +443,19 @@ def _pass_b1(b: dict) -> dict:
 def run(date: str | None = None, top: int = 40) -> pd.DataFrame:
     finviz, asof, path = _load_export(date)
     liquid = _filter_liquid(finviz)
-    print(f"[ab] export={path.name} asof={asof} liquid={len(liquid):,} (mcap>{MCAP_MIN:.0f} adv>{ADV_MIN:.0f})")
+    print(
+        f"[ab] export={path.name} asof={asof} liquid={len(liquid):,} "
+        f"(mcap>${MCAP_MIN/1e6:.0f}M adv>{ADV_MIN:,.0f} shares)"
+    )
 
     prior_df = _prior_export(asof)
     print(f"[ab] prior export for deltas: {'yes' if prior_df is not None else 'no'}")
+
+    if liquid.empty:
+        raise SystemExit(
+            "[ab] liquid universe is empty after unit conversion — check export columns. "
+            "Expected Market Cap in millions and Average Volume in thousands."
+        )
 
     store = ps._load_store()
     if not len(store):
@@ -496,13 +482,12 @@ def run(date: str | None = None, top: int = 40) -> pd.DataFrame:
             "asof_date": asof,
             "Sector": row.get("Sector", ""),
             "Industry": row.get("Industry", ""),
-            "mcap": row.get("_mcap"),
-            "adv": row.get("_adv"),
+            "mcap_usd": row.get("_mcap"),
+            "adv_shares": row.get("_adv"),
             "price": a.get("price", _num(row.get("Price"))),
             "score": score,
             "n_pos": n_pos,
             "n_neg": n_neg,
-            # A values
             "rsi": a.get("rsi"),
             "rsi_x30": a.get("rsi_x30"),
             "rsi_x50": a.get("rsi_x50"),
@@ -517,7 +502,6 @@ def run(date: str | None = None, top: int = 40) -> pd.DataFrame:
             "max_dd_2m": a.get("max_dd_2m"),
             "g_body_frac": a.get("g_body_frac"),
             "r_body_frac": a.get("r_body_frac"),
-            # B values
             "eps_surprise": b.get("eps_surprise"),
             "rev_surprise": b.get("rev_surprise"),
             "target_price": b.get("target_price"),
@@ -534,16 +518,19 @@ def run(date: str | None = None, top: int = 40) -> pd.DataFrame:
         rec.update({f"pass_{k}": v for k, v in pb.items()})
         rows.append(rec)
 
-    out = pd.DataFrame(rows).sort_values("score", ascending=False)
+    out = pd.DataFrame(rows)
+    if out.empty:
+        raise SystemExit("[ab] no rows scored")
+    out = out.sort_values("score", ascending=False)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     csv_path = OUT_DIR / f"{asof}_ab_checklist.csv"
     out.to_csv(csv_path, index=False)
 
-    # human summary
     lines = [
         f"# A+B1 Checklist — {asof}",
         "",
-        f"- Gate: Market Cap > ${MCAP_MIN/1e6:.0f}M · ADV > {ADV_MIN:,.0f}",
+        f"- Gate: Market Cap > ${MCAP_MIN/1e6:.0f}M · ADV > {ADV_MIN:,.0f} shares",
+        f"- Finviz units applied: mcap ×1e6, ADV ×1e3",
         f"- Liquid names scored: **{len(out):,}**",
         f"- Export: `{path.name}` · prior deltas: {'yes' if prior_df is not None else 'no'}",
         "",
@@ -595,8 +582,8 @@ def run(date: str | None = None, top: int = 40) -> pd.DataFrame:
     meta = {
         "asof": asof,
         "n_liquid": int(len(out)),
-        "mcap_min": MCAP_MIN,
-        "adv_min": ADV_MIN,
+        "mcap_min_usd": MCAP_MIN,
+        "adv_min_shares": ADV_MIN,
         "generated": datetime.now(ET).isoformat(),
         "csv": str(csv_path.relative_to(ROOT)),
         "top5": out.head(5)[["Ticker", "score", "Industry"]].to_dict("records"),
