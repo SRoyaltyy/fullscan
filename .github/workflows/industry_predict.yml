@@ -167,7 +167,7 @@ on:
           - "Utilities - Renewable"
           - "Waste Management"
       as_of:
-        description: "As-of YYYY-MM-DD (required for backtest; optional for predict)"
+        description: "As-of date as YYYY-MM-DD only (e.g. 2026-06-01). Required for backtest."
         required: false
         default: ""
       lookback_days:
@@ -201,20 +201,27 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           set -e
+          AS_OF="${{ inputs.as_of }}"
+          # GitHub UI sometimes mangles 2026-06-01 → 2026+06-01
+          AS_OF="${AS_OF//+/-}"
           ARGS=(--industry "${{ inputs.industry }}" --lookback-days "${{ inputs.lookback_days }}")
-          if [ -n "${{ inputs.as_of }}" ]; then
-            ARGS+=(--as-of "${{ inputs.as_of }}")
+          if [ -n "$AS_OF" ]; then
+            ARGS+=(--as-of "$AS_OF")
           fi
+          echo "as_of=$AS_OF"
           python -m src.industry_predict "${ARGS[@]}"
       - name: Backtest only
         if: ${{ inputs.mode == 'backtest' }}
         run: |
           set -e
-          if [ -z "${{ inputs.as_of }}" ]; then
-            echo "backtest requires as_of"
+          AS_OF="${{ inputs.as_of }}"
+          AS_OF="${AS_OF//+/-}"
+          if [ -z "$AS_OF" ]; then
+            echo "backtest requires as_of (YYYY-MM-DD)"
             exit 1
           fi
-          python -m src.industry_backtest --industry "${{ inputs.industry }}" --as-of "${{ inputs.as_of }}" --horizon-days "${{ inputs.horizon_days }}"
+          echo "as_of=$AS_OF"
+          python -m src.industry_backtest --industry "${{ inputs.industry }}" --as-of "$AS_OF" --horizon-days "${{ inputs.horizon_days }}"
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
