@@ -10,6 +10,13 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
 
+# Bare tokens that cause false positives (e.g. "Gambling" → Buffett "gambling")
+GENERIC_INDUSTRY_TOKENS = {
+    "gambling", "gold", "silver", "copper", "steel", "solar", "uranium",
+    "tobacco", "leisure", "lodging", "publishing", "broadcasting", "restaurants",
+    "airlines", "trucking", "railroads", "aluminum", "chemicals", "biotechnology",
+}
+
 # Extra tokens for industries whose Finviz name alone under-matches headlines
 INDUSTRY_ALIASES: dict[str, list[str]] = {
     "Semiconductors": [
@@ -45,6 +52,9 @@ INDUSTRY_ALIASES: dict[str, list[str]] = {
     "Communication Equipment": [
         "optical transceiver", "optical networking", "coherent optics",
         "telecom equipment",
+    ],
+    "Gambling": [
+        "sports betting", "online casino", "igaming", "draftkings", "flutter",
     ],
 }
 
@@ -84,7 +94,6 @@ def list_industries(as_of: str | None = None) -> list[str]:
 
 
 def resolve_industry(query: str, as_of: str | None = None) -> str:
-    """Exact or case-insensitive substring match to a Finviz industry name."""
     inds = list_industries(as_of)
     if not inds:
         raise SystemExit("no Finviz export — cannot resolve industry")
@@ -120,13 +129,17 @@ def members(industry: str, as_of: str | None = None) -> pd.DataFrame:
 
 
 def match_patterns(industry: str, members_df: pd.DataFrame) -> list[re.Pattern]:
-    """Build title-match patterns: industry name, aliases, tickers, companies."""
     pats: list[re.Pattern] = []
     esc = re.escape(industry)
-    pats.append(re.compile(rf"(?i)\b{esc}\b"))
+    if industry.lower() not in GENERIC_INDUSTRY_TOKENS:
+        pats.append(re.compile(rf"(?i)\b{esc}\b"))
     for tok in re.split(r"[\s/&\-]+", industry):
-        if len(tok) >= 4 and tok.lower() not in {"fund", "closed", "other", "services"}:
-            pats.append(re.compile(rf"(?i)\b{re.escape(tok)}\b"))
+        tl = tok.lower()
+        if len(tok) < 4 or tl in {"fund", "closed", "other", "services"}:
+            continue
+        if tl in GENERIC_INDUSTRY_TOKENS:
+            continue
+        pats.append(re.compile(rf"(?i)\b{re.escape(tok)}\b"))
     for a in INDUSTRY_ALIASES.get(industry, []):
         pats.append(re.compile(rf"(?i){re.escape(a)}"))
     for t in members_df["Ticker"].astype(str):
