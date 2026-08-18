@@ -63,8 +63,24 @@ def _polarity(title: str) -> str:
     return "neutral"
 
 
+def _normalize_date_str(s: str) -> str:
+    """Accept YYYY-MM-DD; fix common mangling (GitHub form: 2026+06-01)."""
+    s = str(s).strip()
+    if not s:
+        raise ValueError("empty date")
+    s = s.replace("+", "-").replace("/", "-").replace(".", "-")
+    s = re.sub(r"\s+", "", s)
+    m = re.match(r"^(\d{4})-(\d{1,2})-(\d{1,2})$", s)
+    if not m:
+        raise ValueError(
+            f"invalid as-of date {s!r}; use YYYY-MM-DD (e.g. 2026-06-01)"
+        )
+    y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return f"{y:04d}-{mo:02d}-{d:02d}"
+
+
 def _parse_day(s: str) -> pd.Timestamp:
-    return pd.Timestamp(s).normalize()
+    return pd.Timestamp(_normalize_date_str(s)).normalize()
 
 
 def _window(as_of: pd.Timestamp, lookback_days: int) -> tuple[str, str]:
@@ -357,7 +373,7 @@ def main() -> None:
 
     report = analyze(
         args.industry,
-        as_of=args.as_of,
+        as_of=(args.as_of.strip() if args.as_of else None),
         lookback_days=args.lookback_days,
         news_limit=args.limit,
         backtest=args.backtest,
