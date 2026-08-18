@@ -1,0 +1,392 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-18T07:51:20.771461-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 5.25,
+      "delta_1d": 0.04,
+      "delta_1w": 0.06,
+      "delta_1m": 0.16
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 4.68,
+      "delta_1d": 0.05,
+      "delta_1w": 0.03,
+      "delta_1m": 0.11
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 2.41,
+      "delta_1d": 0.02,
+      "delta_1w": 0.01,
+      "delta_1m": 0.06
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 2.67,
+      "delta_1d": -0.04,
+      "delta_1w": -0.03,
+      "delta_1m": -0.04
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-14",
+      "current": 3.62,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 0.255,
+      "delta_1d": 0.005,
+      "delta_1w": -0.72,
+      "delta_1m": 0.155
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-16",
+      "current": 395.85,
+      "delta_1d": 220.14,
+      "delta_1w": 179.87,
+      "delta_1m": 152.47
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-18",
+      "current": 15.72,
+      "delta_1d": 1.47,
+      "delta_1w": 0.26
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": null,
+    "ratio_stale": "VIX3M quote is 32 days older than VIX (2026-07-17 vs 2026-08-18); ratio suppressed — do not use backwardation rule"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 84.11,
+      "pct_1d": -0.46
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 90.92,
+      "pct_1d": 0.06
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 4448.0,
+      "pct_1d": 0.68
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-18",
+      "pct_1d": -0.01,
+      "pct_1m": -1.27
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 7733.75,
+      "pct_1d": -0.45
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 29738.75,
+      "pct_1d": -1.19
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 67460.73,
+          "pct_1d": -1.82
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 25471.15,
+          "pct_1d": 1.41
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 3990.3,
+          "pct_1d": 1.61
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 6869.83,
+          "pct_1d": -1.55
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 9070.0,
+          "pct_1d": -0.5
+        }
+      },
+      "composite_avg": -0.17
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 10725.45,
+          "pct_1d": -0.23
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 26260.01,
+          "pct_1d": -0.68
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 8538.34,
+          "pct_1d": -1.14
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 6500.48,
+          "pct_1d": -0.6
+        }
+      },
+      "composite_avg": -0.66
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.6,
+    "window": "2026-08-07..2026-08-14"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 62.3,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-17 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The Keys to Strong Franchise Onboarding",
+        "url": "https://finance.yahoo.com/small-business/articles/keys-strong-franchise-onboarding-110702424.html",
+        "published_at": "2026-08-18T11:07:02Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "3 Market-Beating Stocks to Consider Right Now - finance.yahoo.com",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVVzOU1KTUdrLTQzNlNQQlBuU0NTcnJyNmJUR0Nzc2o3bzRYakZBaFhNYTQ0bWp3Uy1rVDFFX3JnZkdaTkNMQnQxVDV2YXM3QV9EN1RhdllrT0xUd2tyUHNEZm56cFdaSVFOMVdIeVlXQkRHZlJyYUdTUGh0UzNJU29pMjFYbFlaak9pMm52NURLdU9VODJwNktQRUYxZw?oc=5",
+        "published_at": "Tue, 18 Aug 2026 11:25:33 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Fiber Growth Collides With Legacy Revenue Pressure At Telephone & Data Systems (TDS)",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/fiber-growth-collides-legacy-revenue-112138533.html",
+        "published_at": "2026-08-18T11:21:38Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Aurinkokarhu, FEP JV aim to deliver 3GW of energy projects in Finland",
+        "url": "https://finance.yahoo.com/energy/articles/aurinkokarhu-fep-jv-aim-deliver-110712296.html",
+        "published_at": "2026-08-18T11:07:12Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Tuesday's big stock stories: What’s likely to move the market in the next trading session - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcDZGYkd1czJkZ2t0OXJLQV9XTXRIWWFwQXk1amVJSzFBX3p2OFFpSnYtRl9RbTBJYU1ZOTRwQ1AyTkxpTU9uVUpaX2IzdFdDaU1LVWRTNWF3MzRMaVRURlQ4ME55dHJ3UGFPSFFOMzk3Q0FvYUpxclBpNnVwUUtrQ1VjeThJemJnYzlZWGJzeXRSRmZrNXZFVkp5QQ?oc=5",
+        "published_at": "Mon, 17 Aug 2026 23:48:03 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "ECB warns: AI stock rally likely to trigger a stock market correction - AMWatch",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB6bmhKZTl1SGFhQmY2dzBwaFZ6V3o5dzdpMHlrR3F1T29EbUlNYTJPLTdneTRfQ09QX0xHU3VxdDZTTGpKaTBYeFRRdm1sb3pET0VHdDA2UVBoNF83c0x3NVdEMEhhc2E3UGdWcWo3VQ?oc=5",
+        "published_at": "Tue, 18 Aug 2026 11:14:09 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Why has Trump threatened to bomb Oman – for a second time?",
+        "url": "https://www.aljazeera.com/news/2026/8/18/why-has-trump-threatened-to-bomb-oman-for-a-second-time?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 11:33:15 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Tupac Shakur murder trial begins thirty years after his death",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/18/tupac-shakur-murder-trial-begins-thirty-years-after-his-death?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 10:55:16 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "FLA to issue new guidance on responsible purchasing practices",
+        "url": "https://finance.yahoo.com/small-business/articles/fla-issue-guidance-responsible-purchasing-111922349.html",
+        "published_at": "2026-08-18T11:19:22Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "World Collective, Denim Deal, and Green Story launch textile DPP pilot",
+        "url": "https://finance.yahoo.com/technology/articles/world-collective-denim-deal-green-110730111.html",
+        "published_at": "2026-08-18T11:07:30Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Homeowners face jarring change to mortgage escrow rules",
+        "url": "https://finance.yahoo.com/real-estate/articles/homeowners-face-jarring-change-mortgage-110300855.html",
+        "published_at": "2026-08-18T11:03:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Google buys crashed airline Spirit’s data at auction, because AI - The Register",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcHh3V2ZBUzVtQzVRVmlxUG1HazVQX2plazMxSGxLSEE0dW5IV3NzTFZYQjVsXzQ4ZjM0dlRYSzIwcTNLMElIdUpTNjIwWlFncXJxWjQwNS1uSVlCZFh1UzhMYXdUQVlOaGlNU1hfaGtyb2VmSDBDX3ZEd25KbmRoU2VxTnBzbTNEYjRWb0oxT0VaT3J1RUZzQ2w2aEt4Skp4b3RkaHZLVGFlczJuQW5BMVlkQUE5WGlLZHcw?oc=5",
+        "published_at": "Tue, 18 Aug 2026 06:43:06 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "The Stock Market Party Has Yet to End. But Rising Bond Yields Might Be the Unwanted Guest. - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9uREpHWUR4X2IyX2VWU2d3QWdLZXJmZEFqNHBPcGZvMmpBZkRVMk1KVDFOMGJISXVoeWFMSDZGeEFjLVRxbjZsNmpqWEVGYmEwVDV0MXJ0WGxPQWpGOGVQRlVoSVhjS0tKamJvT3A4LWl3MVNhVFRNdkVfUWt4dw?oc=5",
+        "published_at": "Tue, 18 Aug 2026 11:40:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Anthropic revenue run rate hits $65 billion ahead of IPO",
+        "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-revenue-run-rate-hits-111710007.html",
+        "published_at": "2026-08-18T11:17:10Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Stocks keep shrugging off rising Treasury yields. Here’s the level that could finally trigger a selloff.",
+        "url": "https://www.marketwatch.com/story/stocks-keep-shrugging-off-rising-treasury-yields-heres-the-level-that-could-finally-trigger-a-selloff-80c1634c?mod=mw_rss_topstories",
+        "published_at": "Tue, 18 Aug 2026 11:39:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Russia protests Japan PM’s comments after Putin’s Kuril visit",
+        "url": "https://www.aljazeera.com/news/2026/8/18/russia-protests-japan-pms-comments-after-putins-kuril-visit?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 11:39:34 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Premier League what to know: Schedule, prediction, transfers and more",
+        "url": "https://www.aljazeera.com/sports/2026/8/18/premier-league-football-what-to-know-schedule-prediction-transfers-2026-27-season?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 11:22:27 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "What to know about California’s special election to replace Eric Swalwell",
+        "url": "https://www.aljazeera.com/news/2026/8/18/what-to-know-about-californias-special-election-to-replace-eric-swalwell?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 11:09:24 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Peter Schiff says homes are 'a money pit’ which ‘depletes' your wealth. Is it still ‘crazy’ to invest in real estate?",
+        "url": "https://finance.yahoo.com/real-estate/articles/peter-schiff-says-homes-money-111500799.html",
+        "published_at": "2026-08-18T11:15:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Burq bets on the last-mile decision layer as giants retreat",
+        "url": "https://finance.yahoo.com/small-business/articles/burq-bets-last-mile-decision-110000069.html",
+        "published_at": "2026-08-18T11:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Meet the Vanguard ETF That's Crushing the S&P 500 and Nasdaq-100 Despite Not Owning Micron, Sandisk, or Any of the \"Magnificent Seven\" Stocks",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/meet-vanguard-etf-thats-crushing-111000996.html",
+        "published_at": "2026-08-18T11:10:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "MAI Capital buys Atlanta RIA Waypoint Wealth Counsel",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mai-capital-buys-atlanta-ria-110817549.html",
+        "published_at": "2026-08-18T11:08:17Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Home Depot Q2 2026 earnings beat, full-year guidance reaffirmed",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/home-depot-q2-2026-earnings-111100114.html",
+        "published_at": "2026-08-18T11:11:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Two Quantum Computing Stocks Are Starting to Pull Ahead of the Pack",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/two-quantum-computing-stocks-starting-110500912.html",
+        "published_at": "2026-08-18T11:05:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Uniti Group Eyes Fiber Growth, Hyperscaler Demand and Strategic Alternatives",
+        "url": "https://finance.yahoo.com/technology/articles/uniti-group-eyes-fiber-growth-110201270.html",
+        "published_at": "2026-08-18T11:02:01Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "US states take on Meta in pivotal trial over child social media addiction claims - theguardian.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdTdkRkVtcHNhaTRmcEp2VGRVQUgwcG9MUlJEX0xwRjVXLVljOUZjclJSbTk4Y2hYSWxnX3BDNUlUbmpLY2dRMkMtSFN0VzZTOHVabTB4MEI4RUM3NXVaTUF1OGpUOGVBWndfOGFGZEViamt1N1lrOE1lbS1sLTYyZklEME9fWXhINzV0Zm0ydXdNUEtCX1pzVg?oc=5",
+        "published_at": "Tue, 18 Aug 2026 08:31:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AuKing Mining signs agreement to acquire Green Exploration",
+        "url": "https://finance.yahoo.com/markets/commodities/articles/auking-mining-signs-agreement-acquire-111252791.html",
+        "published_at": "2026-08-18T11:12:52Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "5 Things to Know Before the Stock Market Opens on Tuesday - Investopedia",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeHZ3aUFYeWtGcjlja2Q3dHBvLUhqLTItdldSOXNmUDFZc1ZpRV9TZGVVb3RUNWQ4ampUbF9vc3h2YTF6SU12aFBrSEVZbFZiM055UjhqdmdXWnpBSlNrd2hYMGJBd2g3MU5rRFNQOS1JV0w1TkxFWC16MmxpQllWNEcwbFVBU2FTeXRpQS04bDJ1Tlg1NDJHRWpOeVF4S2pjcmhzZEEyLXVaRmlHNjBV?oc=5",
+        "published_at": "Tue, 18 Aug 2026 11:31:46 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "ICAS calls for proportionate approach to UK tax reforms",
+        "url": "https://finance.yahoo.com/economy/policy/articles/icas-calls-proportionate-approach-uk-111905077.html",
+        "published_at": "2026-08-18T11:19:05Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Is the Vanguard Morningstar Total Stock Market ETF Still the Best Long-Term Core Holding for Most Investors? - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcDNjVUxDd2hnbnozWkVIQlhURnQzVjRLaElUTmp6dC1IMkpRdTdJejJEVldOdVVwLWVLVUNvR0U4SHBGTGxXZkl5THh5dW1QTHRxT3VmLXNJbmN6dXBSOGpyWTVXdy1FTUhETkIzNWlndmpBd21sOXhhM2Yzek15Rm1MM1lpclZzd3pjX1YzTXJKN2RN?oc=5",
+        "published_at": "Tue, 18 Aug 2026 11:35:23 GMT"
+      }
+    ]
+  }
+}
