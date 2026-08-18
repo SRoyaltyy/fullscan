@@ -1,0 +1,30 @@
+{
+  "mode": "backtest_only",
+  "industry": "Gambling",
+  "as_of": "2026-06-01",
+  "horizon_sessions": 10,
+  "prior_prediction": {
+    "found": false,
+    "direction": null,
+    "confidence": null,
+    "hits_n": null,
+    "path": "01_daily/industry/2026-06-01_*.json"
+  },
+  "member_basket": {
+    "method": "equal_weight_members",
+    "n_tickers": 12,
+    "median_return": 0.04698166659512015,
+    "mean_return": 0.03387889354601115,
+    "pct_up": 0.75,
+    "pct_ge_4pct": 0.5833333333333334,
+    "pct_le_m4pct": 0.16666666666666666
+  },
+  "etf_proxy": {
+    "method": "etf_proxy",
+    "ticker": null,
+    "note": "no mapped ETF for this industry"
+  },
+  "direction_hit_vs_basket_median": null,
+  "how_industry_is_measured": "Primary: equal-weight (median/mean) of Finviz industry members with prices in the store. Secondary: mapped industry ETF if present (not all 149 have a clean ETF). Sector ETFs are coarser and not used as the grade.",
+  "generated_at": "2026-08-18T00:58:14.587305-04:00"
+}
