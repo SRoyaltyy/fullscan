@@ -1,0 +1,80 @@
+name: A+B1 Checklist (liquid universe)
+
+# Part A = OHLC chart features · Part B1 = Finviz export snapshot + day-over-day deltas
+# Gate: Market Cap > $80M and Average Volume > 500k
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "As-of YYYY-MM-DD (blank = latest finviz export date)"
+        required: false
+        default: ""
+      skip_price_update:
+        description: "Skip price_store update (use existing OHLC only)"
+        type: boolean
+        required: false
+        default: false
+  schedule:
+    # ~ after US cash close, weekdays (UTC)
+    - cron: "30 21 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  ab-checklist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install pyarrow yfinance
+
+      - name: Update price store
+        if: ${{ inputs.skip_price_update != true }}
+        run: |
+          set -e
+          python -m src.price_store update || echo "[warn] price update soft-failed"
+
+      - name: Run A+B1 checklist
+        run: |
+          set -e
+          AS_OF="${{ inputs.date }}"
+          AS_OF="${AS_OF//+/-}"
+          ARGS=()
+          if [ -n "$AS_OF" ]; then
+            ARGS+=(--date "$AS_OF")
+          fi
+          echo "CMD: python -m src.ab_checklist ${ARGS[*]}"
+          python -m src.ab_checklist "${ARGS[@]}"
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ab-checklist
+          path: data/ab_checklist/
+          if-no-files-found: warn
+
+      - name: Commit outputs
+        if: always()
+        run: |
+          set -e
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/ab_checklist/ data/prices/meta.json || true
+          # prices parquet can be huge — only meta by default
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: ab checklist $(date -u +%F)"
+            git push origin HEAD:main || true
+          fi
