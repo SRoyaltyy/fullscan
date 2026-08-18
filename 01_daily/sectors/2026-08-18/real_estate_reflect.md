@@ -1,0 +1,16 @@
+# Sector Reflect — Real Estate — 2026-08-18
+
+LESSON_BEGIN
+ERROR_CATEGORY: NONE
+TRIGGER_PATTERN: A long-duration, rate-sensitive sector (REITs) faces a live rate spine of rising long-end yields — 30Y at a multi-decade high, real yields higher, 10Y rising — on a risk-off tape, while the sector’s 1d/3d relative tape is positive/defensive. The correct output is down/mild: the leading rate shock drives absolute direction down, and the defensive relative bid caps magnitude at mild rather than allowing notable/severe.
+CURRENT_BEHAVIOR: Predicted down/mild by correctly weighting the live rate tape over any prior easing/positive default. Scored S0=-1 and S1=-1 on rising real yields and the 30Y multi-decade high, kept S2/S4 neutral because relative defensiveness is not an absolute up signal, and held the magnitude at mild despite the negative rate tape.
+CORRECTED_BEHAVIOR: No behavioral correction is needed. Continue to treat a live long-end rate shock at a multi-decade high as directionally dominant for REITs, while treating short-term positive relative tape as a magnitude cap, not an absolute up signal. Optionally reconcile the internal total-score/divergence-flag inconsistency for cleanliness, but it did not affect the emitted call.
+EVIDENCE: 2026-08-18 XLRE closed -0.446% vs SPY -0.676%, rel +0.229%. Predicted down/mild; actual down/mild. The 30Y Treasury reached ~5.30-5.33%, a 19-year high; real yields and 10Y were rising; futures were sharply negative. The defensive relative tape was confirmed by XLRE outperforming SPY, exactly capping the loss at mild.
+LESSON_MATCH_CHECK: The applicable lesson is the 2026-08-17 Real Estate lesson: live rate tape at open dominates prior CPI/easing extrapolation. This call applied that lesson correctly. No new reasoning error is exposed, and no new lesson is required.
+BACKWARD_CHECK: Reversing the call to up, or converting the positive relative tape into an absolute up signal, would have missed the -0.446% decline. The applied behavior backtests correctly; therefore no correction should be made.
+CONFLICT_CHECK: No new lesson is created, so no conflict with existing lessons. The 08-12 duration-relief lesson was correctly set aside because the live tape was negative, and the 08-11 geopolitical/oil lesson was correctly not applied because oil was flat-to-down.
+FALSIFIER: A future identical setup — 30Y at a 19-year high, rising real yields, sharply negative futures, XLRE 1d/3d relative strength — that closes up, or with a notable/severe decline, would weaken the down/mild rule. A strong up close would suggest the defensive bid was a leading signal rather than only a magnitude cap.
+DIVERGENCE_VERDICT: leading_right — the flagged divergence between negative leading rate factors and positive relative tape was resolved on the leading side for absolute direction, while the defensive side correctly capped magnitude.
+ACTIVE_LESSON_REVIEW: 08-17 REIT live-rate lesson — applied and confirmed. 08-12 REIT duration-relief lesson — correctly not applied because the live tape was negative. 08-11 REIT geopolitical risk-off lesson — not applicable because the oil/geopolitical trigger was absent. Candidate lessons from other sectors are not applicable because this sector produced a clean full hit and no analogous band/reconciliation error.
+SECTOR: Real Estate
+LESSON_END
