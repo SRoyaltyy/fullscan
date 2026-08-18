@@ -1,0 +1,90 @@
+name: Industry predict (Supabase + Finviz only)
+
+# Probe whether local news resources are enough for one Finviz industry.
+# No web search. Optional as-of backtest uses only news published before as-of.
+
+on:
+  workflow_dispatch:
+    inputs:
+      industry:
+        description: "Finviz industry (exact or substring), e.g. Semiconductors"
+        required: true
+        default: "Semiconductors"
+      as_of:
+        description: "As-of date YYYY-MM-DD (blank = today ET). News must be published before this date."
+        required: false
+        default: ""
+      lookback_days:
+        description: "Days of news before as-of"
+        required: false
+        default: "7"
+      backtest:
+        description: "Grade next-week median return of industry members"
+        type: boolean
+        required: false
+        default: false
+      list_only:
+        description: "Only list industries and exit"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install pyarrow psycopg2-binary
+
+      - name: Industry predict
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set -e
+          if [ "${{ inputs.list_only }}" = "true" ]; then
+            python -m src.industry_predict --list
+            exit 0
+          fi
+          ARGS=(--industry "${{ inputs.industry }}" --lookback-days "${{ inputs.lookback_days }}")
+          if [ -n "${{ inputs.as_of }}" ]; then
+            ARGS+=(--as-of "${{ inputs.as_of }}")
+          fi
+          if [ "${{ inputs.backtest }}" = "true" ]; then
+            ARGS+=(--backtest)
+          fi
+          echo "CMD: python -m src.industry_predict ${ARGS[*]}"
+          python -m src.industry_predict "${ARGS[@]}"
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: industry-predict
+          path: 01_daily/industry/
+          if-no-files-found: warn
+
+      - name: Commit report
+        if: hashFiles('01_daily/industry/**') != ''
+        run: |
+          set -e
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f 01_daily/industry/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: industry predict ${{ inputs.industry }} ${{ inputs.as_of }}"
+            git push origin HEAD:main
+          fi
