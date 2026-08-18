@@ -1,33 +1,183 @@
-name: Industry predict (Supabase + Finviz only)
-
-# Probe whether local news resources are enough for one Finviz industry.
-# No web search. Optional as-of backtest uses only news published before as-of.
+name: Industry predict / backtest
 
 on:
   workflow_dispatch:
     inputs:
-      industry:
-        description: "Finviz industry (exact or substring), e.g. Semiconductors"
+      mode:
+        description: "predict = news direction; backtest = grade forward only"
+        type: choice
         required: true
-        default: "Semiconductors"
+        default: predict
+        options:
+          - predict
+          - backtest
+      industry:
+        description: "Finviz granular industry"
+        type: choice
+        required: true
+        default: Semiconductors
+        options:
+          - "Advertising Agencies"
+          - "Aerospace & Defense"
+          - "Agricultural Inputs"
+          - "Airlines"
+          - "Airports & Air Services"
+          - "Aluminum"
+          - "Apparel Manufacturing"
+          - "Apparel Retail"
+          - "Asset Management"
+          - "Auto & Truck Dealerships"
+          - "Auto Manufacturers"
+          - "Auto Parts"
+          - "Banks - Diversified"
+          - "Banks - Regional"
+          - "Beverages - Brewers"
+          - "Beverages - Non-Alcoholic"
+          - "Beverages - Wineries & Distilleries"
+          - "Biotechnology"
+          - "Broadcasting"
+          - "Building Materials"
+          - "Building Products & Equipment"
+          - "Business Equipment & Supplies"
+          - "Capital Markets"
+          - "Chemicals"
+          - "Closed-End Fund - Debt"
+          - "Closed-End Fund - Equity"
+          - "Closed-End Fund - Foreign"
+          - "Coking Coal"
+          - "Communication Equipment"
+          - "Computer Hardware"
+          - "Confectioners"
+          - "Conglomerates"
+          - "Consulting Services"
+          - "Consumer Electronics"
+          - "Copper"
+          - "Credit Services"
+          - "Department Stores"
+          - "Diagnostics & Research"
+          - "Discount Stores"
+          - "Drug Manufacturers - General"
+          - "Drug Manufacturers - Specialty & Generic"
+          - "Education & Training Services"
+          - "Electrical Equipment & Parts"
+          - "Electronic Components"
+          - "Electronic Gaming & Multimedia"
+          - "Electronics & Computer Distribution"
+          - "Engineering & Construction"
+          - "Entertainment"
+          - "Exchange Traded Fund"
+          - "Farm & Heavy Construction Machinery"
+          - "Farm Products"
+          - "Financial Conglomerates"
+          - "Financial Data & Stock Exchanges"
+          - "Food Distribution"
+          - "Footwear & Accessories"
+          - "Furnishings, Fixtures & Appliances"
+          - "Gambling"
+          - "Gold"
+          - "Grocery Stores"
+          - "Health Information Services"
+          - "Healthcare Plans"
+          - "Home Improvement Retail"
+          - "Household & Personal Products"
+          - "Industrial Distribution"
+          - "Information Technology Services"
+          - "Infrastructure Operations"
+          - "Insurance - Diversified"
+          - "Insurance - Life"
+          - "Insurance - Property & Casualty"
+          - "Insurance - Reinsurance"
+          - "Insurance - Specialty"
+          - "Insurance Brokers"
+          - "Integrated Freight & Logistics"
+          - "Internet Content & Information"
+          - "Internet Retail"
+          - "Leisure"
+          - "Lodging"
+          - "Lumber & Wood Production"
+          - "Luxury Goods"
+          - "Marine Shipping"
+          - "Medical Care Facilities"
+          - "Medical Devices"
+          - "Medical Distribution"
+          - "Medical Instruments & Supplies"
+          - "Metal Fabrication"
+          - "Mortgage Finance"
+          - "Oil & Gas Drilling"
+          - "Oil & Gas E&P"
+          - "Oil & Gas Equipment & Services"
+          - "Oil & Gas Integrated"
+          - "Oil & Gas Midstream"
+          - "Oil & Gas Refining & Marketing"
+          - "Other Industrial Metals & Mining"
+          - "Other Precious Metals & Mining"
+          - "Packaged Foods"
+          - "Packaging & Containers"
+          - "Paper & Paper Products"
+          - "Personal Services"
+          - "Pharmaceutical Retailers"
+          - "Pollution & Treatment Controls"
+          - "Publishing"
+          - "REIT - Diversified"
+          - "REIT - Healthcare Facilities"
+          - "REIT - Hotel & Motel"
+          - "REIT - Industrial"
+          - "REIT - Mortgage"
+          - "REIT - Office"
+          - "REIT - Residential"
+          - "REIT - Retail"
+          - "REIT - Specialty"
+          - "Railroads"
+          - "Real Estate - Development"
+          - "Real Estate - Diversified"
+          - "Real Estate Services"
+          - "Recreational Vehicles"
+          - "Rental & Leasing Services"
+          - "Residential Construction"
+          - "Resorts & Casinos"
+          - "Restaurants"
+          - "Scientific & Technical Instruments"
+          - "Security & Protection Services"
+          - "Semiconductor Equipment & Materials"
+          - "Semiconductors"
+          - "Shell Companies"
+          - "Silver"
+          - "Software - Application"
+          - "Software - Infrastructure"
+          - "Solar"
+          - "Specialty Business Services"
+          - "Specialty Chemicals"
+          - "Specialty Industrial Machinery"
+          - "Specialty Retail"
+          - "Staffing & Employment Services"
+          - "Steel"
+          - "Telecom Services"
+          - "Textile Manufacturing"
+          - "Thermal Coal"
+          - "Tobacco"
+          - "Tools & Accessories"
+          - "Travel Services"
+          - "Trucking"
+          - "Uranium"
+          - "Utilities - Diversified"
+          - "Utilities - Independent Power Producers"
+          - "Utilities - Regulated Electric"
+          - "Utilities - Regulated Gas"
+          - "Utilities - Regulated Water"
+          - "Utilities - Renewable"
+          - "Waste Management"
       as_of:
-        description: "As-of date YYYY-MM-DD (blank = today ET). News must be published before this date."
+        description: "As-of YYYY-MM-DD (required for backtest; optional for predict)"
         required: false
         default: ""
       lookback_days:
-        description: "Days of news before as-of"
+        description: "Predict only — days of news before as-of"
         required: false
         default: "7"
-      backtest:
-        description: "Grade next-week median return of industry members"
-        type: boolean
+      horizon_days:
+        description: "Backtest only — sessions after as-of"
         required: false
-        default: false
-      list_only:
-        description: "Only list industries and exit"
-        type: boolean
-        required: false
-        default: false
+        default: "5"
 
 permissions:
   contents: write
@@ -38,53 +188,47 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Install deps
         run: |
           pip install -r requirements.txt
           pip install pyarrow psycopg2-binary
-
-      - name: Industry predict
+      - name: Predict
+        if: ${{ inputs.mode == 'predict' }}
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           set -e
-          if [ "${{ inputs.list_only }}" = "true" ]; then
-            python -m src.industry_predict --list
-            exit 0
-          fi
           ARGS=(--industry "${{ inputs.industry }}" --lookback-days "${{ inputs.lookback_days }}")
           if [ -n "${{ inputs.as_of }}" ]; then
             ARGS+=(--as-of "${{ inputs.as_of }}")
           fi
-          if [ "${{ inputs.backtest }}" = "true" ]; then
-            ARGS+=(--backtest)
-          fi
-          echo "CMD: python -m src.industry_predict ${ARGS[*]}"
           python -m src.industry_predict "${ARGS[@]}"
-
+      - name: Backtest only
+        if: ${{ inputs.mode == 'backtest' }}
+        run: |
+          set -e
+          if [ -z "${{ inputs.as_of }}" ]; then
+            echo "backtest requires as_of"
+            exit 1
+          fi
+          python -m src.industry_backtest --industry "${{ inputs.industry }}" --as-of "${{ inputs.as_of }}" --horizon-days "${{ inputs.horizon_days }}"
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: industry-predict
+          name: industry-run
           path: 01_daily/industry/
           if-no-files-found: warn
-
-      - name: Commit report
-        if: hashFiles('01_daily/industry/**') != ''
+      - name: Commit reports
+        if: always()
         run: |
-          set -e
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add -f 01_daily/industry/
-          if git diff --staged --quiet; then
-            echo "No changes"
-          else
-            git commit -m "chore: industry predict ${{ inputs.industry }} ${{ inputs.as_of }}"
-            git push origin HEAD:main
+          git add -f 01_daily/industry/ || true
+          if git diff --staged --quiet; then echo No changes; else
+            git commit -m "chore: industry ${{ inputs.mode }} ${{ inputs.industry }}"
+            git push origin HEAD:main || true
           fi
