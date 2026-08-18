@@ -202,7 +202,6 @@ jobs:
         run: |
           set -e
           AS_OF="${{ inputs.as_of }}"
-          # GitHub UI sometimes mangles 2026-06-01 → 2026+06-01
           AS_OF="${AS_OF//+/-}"
           ARGS=(--industry "${{ inputs.industry }}" --lookback-days "${{ inputs.lookback_days }}")
           if [ -n "$AS_OF" ]; then
@@ -229,13 +228,5 @@ jobs:
           name: industry-run
           path: 01_daily/industry/
           if-no-files-found: warn
-      - name: Commit reports
-        if: always()
-        run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add -f 01_daily/industry/ || true
-          if git diff --staged --quiet; then echo No changes; else
-            git commit -m "chore: industry ${{ inputs.mode }} ${{ inputs.industry }}"
-            git push origin HEAD:main || true
-          fi
+      - name: Skip daily commit
+        run: echo "Industry probe is print/artifact only — not writing into 01_daily on main yet."
