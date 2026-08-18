@@ -1,0 +1,49 @@
+{
+  "industry": "Gambling",
+  "as_of": "2026-06-01",
+  "lookback_days": 30,
+  "window": {
+    "start": "2026-05-02",
+    "end_exclusive": "2026-06-01"
+  },
+  "data_policy": "supabase_news + finviz_export only (no web search)",
+  "members_n": 13,
+  "members_sample": [
+    "ACEL",
+    "BRAG",
+    "BRSL",
+    "CDRO",
+    "CHDN",
+    "DKNG",
+    "FLUT",
+    "GAMB",
+    "INSE",
+    "ROLR",
+    "RSI",
+    "SEGG"
+  ],
+  "export_used": "finviz_2026-04-26.csv",
+  "supabase_rows_in_window": 2500,
+  "finviz_news_rows": 0,
+  "hits_n": 1,
+  "polarity_counts": {
+    "up": 0,
+    "down": 0,
+    "neutral": 1
+  },
+  "direction": "neutral",
+  "confidence": 0.15,
+  "sources": [
+    {
+      "title": "Jim Cramer says Warren Buffett is wrong about investors being addicted to 'gambling' \u2014 they're addicted to the S&P 500",
+      "source": "rss_yahoo_finance",
+      "published_at": "2026-05-28T10:15:00Z",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-warren-buffett-101500778.html",
+      "origin": "supabase_news",
+      "polarity": "neutral",
+      "ticker": null
+    }
+  ],
+  "sufficiency": "thin",
+  "generated_at": "2026-08-18T01:19:12.709750-04:00"
+}
