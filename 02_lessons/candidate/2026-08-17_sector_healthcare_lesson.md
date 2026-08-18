@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "This lesson is wrong if, during a live oil/geopolitical risk-off session with Brent up sharply and SPY down, XLV underperforms SPY by more than ~0.5% in the absence of a healthcare-specific negative catalyst. Such an outcome would show that defensive outperformance does not reliably follow oil/geopolitical risk-off."
 sector: "Healthcare"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-17

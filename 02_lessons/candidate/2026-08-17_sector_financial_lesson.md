@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The lesson is false if a Financials session with 30y at 5.2%+ and rising oil still produces positive XLF relative returns because NIM expansion and IB revenue dominate. It is also false if empirical data shows long-end-driven steepening is net-positive for XLF, e.g., banks fully pass through funding costs and insurers are duration-matched."
 sector: "Financial"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-17

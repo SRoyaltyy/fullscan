@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If in two future cases with (a) prior sector rel > +1%, (b) a fresh top-holding legal catalyst confirmed at open, and (c) no stronger offsetting catalyst, XLC closes with positive relative return both times, then the "down override" is too strong and should be relaxed to a flat cap or follow-through default. Also, if a same-themed Section 230 / parallel-litigation event fails to move sector prices after this rule predicts down, the same-day repricing assumption should be reconsidered."
 sector: "Communication Services"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-17

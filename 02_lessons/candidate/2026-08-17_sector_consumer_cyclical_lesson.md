@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "A future sector call with the same trigger conditions — hard-data macro miss, negative sector tape, scheduled sector-specific event, flat futures — that closes in the mild range (<0.5%) would falsify the “at least notable” part of the corrected rule. Also, if the relative tape is positive or S1 has only one weak hit, the corrected rule should not force notable."
 sector: "Consumer Cyclical"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-17

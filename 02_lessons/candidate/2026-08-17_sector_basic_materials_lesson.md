@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If this exact setup recurs — flat/weak US futures, prior SPY lower on oil/stagflation, same-day China hard-data miss, copper in record backwardation — and XLB still closes up with positive relative performance, then the lesson is too strong and should be narrowed to magnitude-only or discarded."
 sector: "Basic Materials"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-17

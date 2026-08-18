@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "The 08-14 refinement would be falsified by a day with green CL/BZ futures and actively escalating supply-risk headlines where XLE still closes flat/down. Today's +1.55% relative close supports it; a future contrary case would trigger a new lesson."
 sector: "Energy"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-17

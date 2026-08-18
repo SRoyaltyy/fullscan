@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "The lesson is falsified if a comparable setup — weak July retail sales + weak consumer sentiment + WMT/TGT/HD reporting within 1–5 sessions — is followed by XLP positive relative performance because investors rotate into staples as flight-to-safety, while WMT and STZ also hold or rally. A later earnings beat that reverses the pre-earnings drop would not falsify the lesson; it would only mean the de-risking was correctly anticipated."
 sector: "Consumer Defensive"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-17

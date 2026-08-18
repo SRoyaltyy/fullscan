@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Repeated cases with flat futures, no fresh catalyst, an active negative sector overhang, and only a carried defensive rotation — where XLU still closes clearly positive — would falsify the relative-only cap."
 sector: "Utilities"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-17

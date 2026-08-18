@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If XLRE still rises/outperforms SPY on a day when 10Y/30Y are rising to multi-decade highs, oil/geopolitical risk is live, and hawkish Fed repricing is firm, the rule would be falsified. A clear dovish reversal (e.g., Fed cut odds increasing) would legitimately suspend the rule. If XLRE repeatedly de-correlates from long-end rates, the lesson should be retired."
 sector: "Real Estate"
 date: "2026-08-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-17
