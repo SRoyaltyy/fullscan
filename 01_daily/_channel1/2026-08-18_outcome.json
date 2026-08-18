@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-18T17:33:25.585835-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 5.31,
+      "delta_1d": 0.06,
+      "delta_1w": 0.06,
+      "delta_1m": 0.25
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 4.72,
+      "delta_1d": 0.04,
+      "delta_1w": 0.0,
+      "delta_1m": 0.17
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 2.44,
+      "delta_1d": 0.03,
+      "delta_1w": 0.01,
+      "delta_1m": 0.13
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 2.7,
+      "delta_1d": 0.03,
+      "delta_1w": 0.0,
+      "delta_1m": -0.03
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 3.66,
+      "delta_1d": 0.04,
+      "delta_1w": 0.03,
+      "delta_1m": 0.07
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 0.155,
+      "delta_1d": -0.1,
+      "delta_1w": -1.095,
+      "delta_1m": 0.125
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 182.16,
+      "delta_1d": -159.26,
+      "delta_1w": -110.88,
+      "delta_1m": -143.78
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-18",
+      "current": 15.84,
+      "delta_1d": 0.65,
+      "delta_1w": 0.56
+    },
+    "vix3m": {
+      "date": "2026-08-18",
+      "current": 19.27,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.822
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 84.42,
+      "pct_1d": -0.09
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 91.27,
+      "pct_1d": 0.44
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 4389.5,
+      "pct_1d": -0.64
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-18",
+      "pct_1d": -0.0,
+      "pct_1m": -0.86
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 7713.25,
+      "pct_1d": -0.71
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-18",
+      "last": 29559.5,
+      "pct_1d": -1.78
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-17",
+          "last": 69220.25,
+          "pct_1d": 0.74
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-17",
+          "last": 25453.23,
+          "pct_1d": 1.34
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-17",
+          "last": 3982.65,
+          "pct_1d": 1.41
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-14",
+          "last": 6977.94,
+          "pct_1d": 2.42
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-17",
+          "last": 9073.2,
+          "pct_1d": -0.46
+        }
+      },
+      "composite_avg": 1.09
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 10728.04,
+          "pct_1d": 0.07
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 26128.36,
+          "pct_1d": -0.8
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 8509.36,
+          "pct_1d": -0.82
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 6468.17,
+          "pct_1d": -0.95
+        }
+      },
+      "composite_avg": -0.62
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.439,
+    "window": "2026-08-11..2026-08-18"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-18 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "KLA Corporation Had a Tough Month: 60% Returns Will Come According to This Wall Street Stalwart",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/kla-corporation-had-tough-month-124913813.html",
+        "published_at": "2026-08-17T12:49:13Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Zoetis Inc. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPRW9XeEp6THZWWnNxdkluMnZkc3pmaVJMZ1RBOHRpZDZPSXZsdTZNVzMwMDAyVjI0RTJ1VThvYU0zLXlEQW5qempZdWxtcTdXZm50RGJwRUFJeUkyVG1sZGxFR00tOFl3VVpVUURTTHJNNTk5aVpGeGJ3WXBxS09tbWZzbDhBeWsyYUJ1Wnp2VDNKXzd6SW1WSGxQUEZaMDd3S3BsWmJKdVdVeXBpOFRTczl0OTktWHBRdE1qbkZQMXdrNWZZZ0s2UmNxMFNlR25URF9TM1JNOA?oc=5",
+        "published_at": "Tue, 18 Aug 2026 20:59:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Russia reports Ukrainian drone strike near Zaporizhzhia nuclear plant",
+        "url": "https://www.aljazeera.com/news/2026/8/18/russia-reports-ukrainian-drone-strike-near-zaporizhzhia-nuclear-plant?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 20:45:42 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What Are Wall Street Analysts' Target Price for Lennar Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-target-price-124024144.html",
+        "published_at": "2026-08-17T12:40:24Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Here’s how to find out if you qualify for State Farm’s $5 billion cash-back payout - First Alert 4",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZVM5SFBCNXc4UDd1OXd1N3hURnZJREpvTTZFRzJFeVFBQWVNS0tncTBhcEpRb2hkSk5sY3RUTFNlZGZ6bTZ5bEpHOUlkdUk2amdGdUE0Y19ENkJkR3dqNGpjdGdpc1cxQm5sQmVNR2tSbmphT0FYNUlFU0Vvbk1fOUpNamF3cDI1MS0zWF9nb0p1WXZJV25aN29PMFVnaG5VVGFqMERROFhMenZwT2VnYzd30gHGAUFVX3lxTE95eVFHV0hxWFFQTmt4UkUwa18zdnVMbUpnRVN6UU00VkFuMHpFTUdWNU1QYVV1cWFIVy01c3BUM2dpbkQxM2EwVklfaFdUaFhILUwwbzgzdlQ5OE9FS1MtSzhfTlZCTWY1Mk5ZNERPemtNWnFsMENpNGVMVlB4SEZiVDkxY1hUV2F1bHQ2VTI4azNNOVNEZ0lBaGY4YWRyYmdMa2Fhc3NoYmFxN2l3RUxqNHhPdFdncS02di1ZQUExdFk3ZV9fZw?oc=5",
+        "published_at": "Tue, 18 Aug 2026 02:14:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Altria Group Inc. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQdm1OdDFwcTNJT00xZ0ZtN1o1N2pVemlzVnR0UGd5aUlIS1BlMkJiWS1hY1p3R2tEYmNxSFFnOGNwbl9QMGhKYnlua0VhTGRPMFZad1lVSHZ5N1lWeVJ5d1Mxemt2X18xV0FaT0NzTXVWaE94MWlmb3MzZmlKaEVtYkNPcjlsZWZWd0dja1FWbTh4MnNjdHZNLWJwemxsNktHbXFFUTNzYnJMajRVR3lKeHhZOWlxQ1daanZwWTI4YUZiVk8xM3FrWGdCNm9jY3lGWEF3UGg5SFg0ZGR5bzlF?oc=5",
+        "published_at": "Tue, 18 Aug 2026 20:39:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Reddit's Data Licensing Revenue Grew 24% to $43 Million, With OpenAI and Google as Its Two Biggest Buyers. Here's Why That Number Is So Tiny.",
+        "url": "https://finance.yahoo.com/media-advertising/articles/reddits-data-licensing-revenue-grew-125000998.html",
+        "published_at": "2026-08-17T12:50:00Z"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "American Airlines to bring back TV screens on US flights",
+        "url": "https://www.bbc.co.uk/news/articles/c70glp55y95o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 18 Aug 2026 20:17:33 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Russian missile strike kills 10 civilians in Kharkiv",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/18/russian-missile-strike-kills-10-civilians-in-kharkiv?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 20:26:01 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Targa Resources Stock Outlook: Is Wall Street Bullish or Bearish?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/targa-resources-stock-outlook-wall-124241524.html",
+        "published_at": "2026-08-17T12:42:41Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "We upgraded Home Depot and raised our price target. It made the best of a terrible hand - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOb01tNTRSWjBIbkdKQWJEVnVodVZsMTRJekt1RWRGSlhPZzIyZ3BRc1F5bVRXbVRfN0xjNnlnVzJMNWRsTDVaUDBGeUxfdmZPWU1vZmxVVWZESDVoVjAwZDBrMU1fVW9SZUlqRnloRnBHRThuS1BMMjRSb25UNkxZcS05a0ZNU3JTdExWT1Y4eThJR1JpVndXSXE2d1MzYXN1UDZKNVlZVGI2SGs2UGYxUVV6UTB5cjlVN0xmZVhMNnY?oc=5",
+        "published_at": "Tue, 18 Aug 2026 19:27:54 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Dodgers owner Mark Walter's insurer slashing up to $6.5B in investments as fraud probes intensify - nypost.com",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPa2l4VmNxcEQyWWxLVjNJNG5lYkRxYUFadWsxUnlDQ3lCd2tkcHBDNFhDWWF0cU1DS3BiR2RjQXhyVmlqQkVOelY0eFh3TU4xV2hsNjJoTkdLdThrbm5BdU5OOVpJVnlRMHhWV0FxaXRsdnk5ajRkVlZ0M085UzJZVzBBVVJhN2t5YkVDYVZoLThfVTNrYm95VEdaa3pZb3d2NmZpUFZ1Q1BNQXU1WVVubDRYOEV4dzcwcUFoUGZ1eFh4S21WYmstVmdfUXpFaWJR?oc=5",
+        "published_at": "Tue, 18 Aug 2026 15:18:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Futures: Sandisk, Micro, Credo Lead Ugly AI Rug Pull - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNLXVjWEdwME10Uld4SHBLMnFiRTlDN3QwSUo5MDYxRzQtTDdaT1g1RzRVazFSdklkMFpmd2huWGhvMGw0RWdObk1tZWVoNDNfaHlmdVpkU2QwMzBJV0laemhJUnJvZVR2dnJkeFZhV1BvOGFENWlzUFdRTDBNUFl5cGNMRVBpOWM3ZlplZzZ6by1ZMjl2ekgycXl3bktmX20yNlVzZ1pEaGFGeVFNaGoxN3RuVGdtVldpWHRMMWNSX3A?oc=5",
+        "published_at": "Tue, 18 Aug 2026 20:51:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Comcast Corp. Cl A stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeXN6Vml4RDBnZFpwNWxUVjhhTUUxSm1jMnBoeExzTjdwbnBjRXJsdkIzcGVsWmVjNlNFcEdqYWRScHhQc2hpTUdrRHgxRTdGQ1VyMEdGeGJIY1paWXpkamJSNDNhSTkwNE92dERfZ2NuOUY5TTBfTWREM3lXcERfWERqV0h0SWY1M21lZEROOG9adGhmLXFvd3IxdjF3aGRQQTczTWw2c2t3LURHQmdxV0pUWFo3WTcwUFVEQkJueDV2U05vWkl2ZDF0TVcybkJ4ckhTUUtsNEJGUlVvOGVUQg?oc=5",
+        "published_at": "Tue, 18 Aug 2026 20:42:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Alphabet Stock Has Attractive Short-Put Yields As GOOGL Stock Treads Water",
+        "url": "https://finance.yahoo.com/markets/options/articles/alphabet-stock-attractive-short-put-131502703.html",
+        "published_at": "2026-08-17T13:15:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "New Era secures key permits for Texas Critical Data Centers, sees capacity rising",
+        "url": "https://finance.yahoo.com/energy/articles/era-secures-key-permits-texas-123800424.html",
+        "published_at": "2026-08-17T12:38:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stripe acquires AI model gateway OpenRouter for $7 billion",
+        "url": "https://finance.yahoo.com/technology/ai/articles/stripe-acquires-ai-model-gateway-124818504.html",
+        "published_at": "2026-08-17T12:48:18Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Hidden Valley Ranch dressing may be a victim of this summer’s salad scare",
+        "url": "https://www.marketwatch.com/story/hidden-valley-ranch-dressing-may-be-a-victim-of-this-summers-salad-scare-f8537cd5?mod=mw_rss_topstories",
+        "published_at": "Tue, 18 Aug 2026 20:46:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Jose Mourinho returns to Real Madrid in closed-door ceremony",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/18/jose-mourinho-returns-to-real-madrid-in-closed-door-ceremony?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 20:41:50 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Liberia to take 1,200 deportees from the US",
+        "url": "https://www.aljazeera.com/news/2026/8/18/liberia-to-take-1200-deportees-from-the-us?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 20:39:15 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump and Carney speak ahead of US tariff deadline",
+        "url": "https://www.aljazeera.com/economy/2026/8/18/trump-and-carney-speak-ahead-of-us-tariff-deadline?traffic_source=rss",
+        "published_at": "Tue, 18 Aug 2026 20:19:27 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-invest-1-5-billion-124300582.html",
+        "published_at": "2026-08-17T12:43:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "OpenAI Locks In Lease for Huge Data Center in Ohio With Backing From Nvidia",
+        "url": "https://www.wsj.com/articles/openai-locks-in-lease-for-huge-data-center-in-ohio-with-backing-from-nvidia-7474bb9c?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-17T12:48:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Gas prices are rising, but drivers using this type of fuel have it worse - The Hill",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZDJxblVrOG50cnF6aThLUS1YQVoxZFFfSWpITFJ6Z0tMeEdodl80STl1Tk5ybmtPS0luWGlQdk1QbjJXRlI5cWVsaWw1ZXI5cTBZeFNTLVc0Vk01bVZqbEdXVlNQM1pUQVc1UEZKYVB3ZHh2X3VVMHg0UFpRU2NVYmR4aDAzSlhuZ2YxSUdpOTZ2SzVKRHRCNnRGTGVSdi1QNDZIM3NmVWhjN0lMS2taemRDaGQ2cmdYUnI1b1V1cE8xZFo50gHKAUFVX3lxTE1SbmJqV25fZmlPVVJqWnJkMEY2Z0V5WXZsNkhfOEFsZjlzYUFILUF6MDZjaHBhQ3k4RjhtWFFKcUdXRjZXUUx2Zm9ERzNqTWpmaS0zQkZ5NEJCYnBWaENjY2RFTWI0VWdZTVZ3RV9HRk9CXzQzTkFlTUFha0M1Ni02a24tRUV2eDB1QVVaZkZaNkJpM0dVQ2Y5Mk44ZnBBVDNVbEhiM3lvaEM4OC1QaWo4SW9kZ2NoNmxCMzRKZXgtakZFOGdvSmdrb3c?oc=5",
+        "published_at": "Tue, 18 Aug 2026 13:29:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Former Fidelity manager sends troubling SpaceX signal - thestreet.com",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOR2M1YVBicTQ2NDk4VUpqcTVtZHN1Zm4wVVJBek04OE9tRXNVN2hQR2x2M0M5VWVINmM3bWJ3TFRBaWJhZUV1Q2ExMjBjYm5vTGhFVWN0ZE41S1NMMDFDdzZMMm5QemJlMUcxYU1tOW9KRjR4TXJiN1EwSGpFYVRyc1RicTFLTFZ3WVlWMUlCMjVQa3lsYS1MZktKeUM?oc=5",
+        "published_at": "Tue, 18 Aug 2026 15:17:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Will David Ellison Say Goodbye to Hollywood? Some See Paramount’s Potential Exit From California as ‘Strategically Unwise’ — but Others Say It’s Just Smart Business - Variety",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUHZNSTZ5UkRicmQ1YnFzWjdibEVHQ3VwU3VTM25OYzVxS01QRUdJMzdhZ0FqRk1PX09HM25oOXRmZGY5TVNrdFl0a0NCRUxvSmZJTDM5WUo0SW5FNFZDMXdLSG9TQ2hjZlhiN2FhNjhnVVZJOU9leUlBUGx0eFVZZkVhMTdfNzBSY3ZXQl9ZT2Frd2F1OWVEdWY2Um5sUFZrOWtqYWhPaXBxZVk?oc=5",
+        "published_at": "Tue, 18 Aug 2026 19:00:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "California egg producer ID’d as source of salmonella outbreak: health officials - nypost.com",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMnZlbG1CMTY5ZE9pSTJNMV80ZTZCVC1aQVEtOHdMNXhXUW9XVTlIZ1p1ay16NU5rZWhuZUdrWkZCSXFwRFVsTXlQR2ZDVFBDWjEzNmJ6WUx6LVJCakdtcElYSDYxVmVtM3ZWYzQ0RmZ6bDJ6MExaNTl0UDh5Q0NkenY2MEZyOGg0S0NILWJmMnMxdENSejVIb0pyX29QZU85NGJzV2o2alZ3RThKRGc0VG93N1RRSTg?oc=5",
+        "published_at": "Tue, 18 Aug 2026 14:31:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today: Indexes Ceding Gains Amid Ugly AI Sell-Off; Credo, Targa, Eli Lilly In Focus - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQkpIa2tNaU8zaVV4Rm1XbjZYZ1RBWXNWbmhrcXQ0aDFObTdkb3RQdFNoTU1pb1FJajZWY3NBaTZqaWZYblBLenNaei1xY0tURVlSYVFfUzQ2cC15Y0NWS1J1ZGpEZ0doLXFxSGtiUHJSLVpyZXZZbUdRVXJ2SjBDNUVsWV82TVA2OG5tT0hPYmVscnBJV1pN?oc=5",
+        "published_at": "Tue, 18 Aug 2026 20:44:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today, Aug. 18: CoreWeave Falls as Debt-Financing Concerns and Capital Spending Pressures Rise With Interest Rates - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOdEFpa3NLZnRzdzJfUTktZFU1MTJsTG1Wb2dKUGpOSXY5UWRzMklZSm1TYnkwTk44NEs1S2ZSTWpya3NJdlE2UzQyRW5GYWFvc2NQeFNFRVhPZWpkNC11WTJGcWNQTTJHSWxLSGNHaUJJaTVBY1BiNFZ6b1dFMUFfdUQ5V2VMaGpBUXlGMHZWT0x3V3owa0plMTZmWEFrRG5IbXJDc0s4U3JvamN3N3Vqb3d6cjV3MTNadzJ3OE43eGR0MER1cWI1UFdadG00MnRhRWk4YzZESW9jc194WjZTREhDQndRWFk1NXVuU3ZsNXljaVl2ZDBWTmpac2ltOUZwQjY2Sk8zX2pmM3VUOGlVaFdBYw?oc=5",
+        "published_at": "Tue, 18 Aug 2026 21:05:56 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Ahead of Walmart Earnings, Here's What Barchart Data Says Comes Next for WMT Stock - barchart.com",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSWVHbHhUZmhKb3U2QUEzb1d2U01oTkVpb00xeGZndVpDZ19qU3RycUFzOV9VaGx2MzVNTTlESkFfOGtXSzlJRTVKUjhmVEtqX0NWenJ3U09GSFJaMUVMcFExTHp2c2xQOS1SVDEtQldSRmxlcngtdjE1NDBybEU4aHAtb04xUGNveWtnYjR3OE1DNEphUUFRQ1JpOUtzeWVEbzFsbDk3djZta3JNWmppYzl2NFlMSGJXenZBelV2Y201SHM?oc=5",
+        "published_at": "Tue, 18 Aug 2026 20:28:02 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-18",
+      "open": 7700.04,
+      "high": 7713.95,
+      "low": 7688.63,
+      "close": 7691.76,
+      "pct_change": -0.69,
+      "prev_close": 7745.06,
+      "path": {
+        "shape": "trend down (closed near day low)",
+        "range_pct": 0.33,
+        "intraday_low_pct": -0.73,
+        "intraday_high_pct": -0.4,
+        "close_position_in_range": 0.12
+      }
+    },
+    "DOW": {
+      "date": "2026-08-18",
+      "open": 53354.43,
+      "high": 53478.76,
+      "low": 53256.34,
+      "close": 53343.4,
+      "pct_change": -0.22,
+      "prev_close": 53459.78,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.42,
+        "intraday_low_pct": -0.38,
+        "intraday_high_pct": 0.04,
+        "close_position_in_range": 0.39
+      }
+    },
+    "NDX": {
+      "date": "2026-08-18",
+      "open": 26346.88,
+      "high": 26422.5,
+      "low": 26266.68,
+      "close": 26289.71,
+      "pct_change": -1.33,
+      "prev_close": 26644.91,
+      "path": {
+        "shape": "trend down (closed near day low)",
+        "range_pct": 0.59,
+        "intraday_low_pct": -1.42,
+        "intraday_high_pct": -0.83,
+        "close_position_in_range": 0.15
+      }
+    }
+  }
+}
