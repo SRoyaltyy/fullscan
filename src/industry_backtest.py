@@ -31,6 +31,16 @@ PRED_DIR = ROOT / "01_daily" / "industry"
 ET = ZoneInfo(config.TZ)
 
 
+def _normalize_date_str(s: str) -> str:
+    s = str(s).strip().replace("+", "-").replace("/", "-").replace(".", "-")
+    s = re.sub(r"\s+", "", s)
+    m = re.match(r"^(\d{4})-(\d{1,2})-(\d{1,2})$", s)
+    if not m:
+        raise SystemExit(f"invalid as-of {s!r}; use YYYY-MM-DD")
+    y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return f"{y:04d}-{mo:02d}-{d:02d}"
+
+
 def _load_store() -> pd.DataFrame | None:
     try:
         from . import price_store as ps
@@ -220,7 +230,7 @@ def main() -> None:
     ap.add_argument("--horizon-days", type=int, default=5)
     args = ap.parse_args()
 
-    report = run(args.industry, as_of=args.as_of, horizon_days=args.horizon_days)
+    report = run(args.industry, as_of=_normalize_date_str(args.as_of), horizon_days=args.horizon_days)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     safe = re.sub(r"[^\w\-]+", "_", report["industry"])[:60]
     stem = f"{report['as_of']}_{safe}_bt{report['horizon_sessions']}d"
