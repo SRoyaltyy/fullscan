@@ -91,8 +91,7 @@ def news_between(
 ) -> list[dict]:
     """News with published_at in [start, end) (ISO dates YYYY-MM-DD).
 
-    Used for industry predict / as-of backtests. Prefer published_at so
-    as-of filtering is honest (no look-ahead via collected_at).
+    published_at is TEXT in schema; collected_at is timestamptz.
     """
     conn = _conn()
     if conn is None:
@@ -100,20 +99,22 @@ def news_between(
     queries = [
         """SELECT source, title, url, published_at, collected_at
            FROM news
-           WHERE published_at >= %s::timestamp
-             AND published_at < %s::timestamp
-           ORDER BY published_at DESC
+           WHERE published_at IS NOT NULL AND published_at <> ''
+             AND published_at::timestamp >= %s::timestamp
+             AND published_at::timestamp < %s::timestamp
+           ORDER BY published_at::timestamp DESC
            LIMIT %s""",
-        """SELECT source, title, url, published_at, NULL as collected_at
+        """SELECT source, title, url, published_at, collected_at
            FROM news
-           WHERE published_at >= %s::timestamp
-             AND published_at < %s::timestamp
+           WHERE published_at IS NOT NULL AND published_at <> ''
+             AND published_at >= %s
+             AND published_at < %s
            ORDER BY published_at DESC
            LIMIT %s""",
         """SELECT source, title, url, published_at, collected_at
            FROM news
-           WHERE collected_at >= %s::timestamp
-             AND collected_at < %s::timestamp
+           WHERE collected_at >= %s::timestamptz
+             AND collected_at < %s::timestamptz
            ORDER BY collected_at DESC
            LIMIT %s""",
     ]
