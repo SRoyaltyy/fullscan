@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T18:52:39.737780-04:00",
+  "generated_at": "2026-08-18T18:53:47.535750-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -17,17 +17,18 @@
     "2026-08-14",
     "2026-08-15",
     "2026-08-16",
-    "2026-08-17"
+    "2026-08-17",
+    "2026-08-18"
   ],
   "general": {
     "overall": {
-      "n_graded": 12,
-      "n_predicts": 12,
-      "dir_hits": 8,
-      "dir_hit_pct": 66.66666666666667,
-      "mag_hits": 5,
-      "mag_n": 12,
-      "mag_hit_pct": 41.666666666666664,
+      "n_graded": 13,
+      "n_predicts": 13,
+      "dir_hits": 9,
+      "dir_hit_pct": 69.23076923076923,
+      "mag_hits": 6,
+      "mag_n": 13,
+      "mag_hit_pct": 46.15384615384615,
       "n_pipeline_blank": 5,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -44,13 +45,13 @@
       ]
     },
     "legacy_all_graded": {
-      "n_graded": 15,
-      "n_predicts": 12,
-      "dir_hits": 8,
-      "dir_hit_pct": 53.333333333333336,
-      "mag_hits": 5,
-      "mag_n": 15,
-      "mag_hit_pct": 33.333333333333336,
+      "n_graded": 16,
+      "n_predicts": 13,
+      "dir_hits": 9,
+      "dir_hit_pct": 56.25,
+      "mag_hits": 6,
+      "mag_n": 16,
+      "mag_hit_pct": 37.5,
       "n_pipeline_blank": 5,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -253,18 +254,29 @@
         "actual_direction": "down",
         "direction_hit": false,
         "magnitude_hit": false
+      },
+      {
+        "date": "2026-08-18",
+        "has_predict": true,
+        "predicted_direction": "down",
+        "predicted_magnitude_band": "mild",
+        "total_score": -6.2,
+        "actual_pct_change": -0.69,
+        "actual_direction": "down",
+        "direction_hit": true,
+        "magnitude_hit": true
       }
     ]
   },
   "sectors": {
     "overall": {
-      "n_graded": 55,
-      "n_predicts": 77,
-      "dir_hits": 33,
-      "dir_hit_pct": 60.0,
-      "mag_hits": 15,
-      "mag_n": 55,
-      "mag_hit_pct": 27.272727272727273,
+      "n_graded": 66,
+      "n_predicts": 88,
+      "dir_hits": 37,
+      "dir_hit_pct": 56.06060606060606,
+      "mag_hits": 17,
+      "mag_n": 66,
+      "mag_hit_pct": 25.757575757575758,
       "n_pipeline_blank": 0,
       "pipeline_blank_dates": [],
       "n_auto_miss_no_predict": 0,
@@ -513,6 +525,21 @@
       },
       {
         "date": "2026-08-17",
+        "n_graded": 11,
+        "n_predicts": 11,
+        "dir_hits": 4,
+        "dir_hit_pct": 36.36363636363637,
+        "mag_hits": 2,
+        "mag_n": 11,
+        "mag_hit_pct": 18.181818181818183,
+        "n_pipeline_blank": 0,
+        "pipeline_blank_dates": [],
+        "n_auto_miss_no_predict": 0,
+        "auto_miss_dates": [],
+        "n_sectors": 11
+      },
+      {
+        "date": "2026-08-18",
         "n_graded": 0,
         "n_predicts": 11,
         "dir_hits": 0,
@@ -531,13 +558,13 @@
       {
         "sector": "Basic Materials",
         "etf": "XLB",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 3,
-        "dir_hit_pct": 60.0,
+        "dir_hit_pct": 50.0,
         "mag_hits": 1,
-        "mag_n": 5,
-        "mag_hit_pct": 20.0,
+        "mag_n": 6,
+        "mag_hit_pct": 16.666666666666668,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -546,13 +573,13 @@
       {
         "sector": "Communication Services",
         "etf": "XLC",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 2,
-        "dir_hit_pct": 40.0,
+        "dir_hit_pct": 33.333333333333336,
         "mag_hits": 2,
-        "mag_n": 5,
-        "mag_hit_pct": 40.0,
+        "mag_n": 6,
+        "mag_hit_pct": 33.333333333333336,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -561,13 +588,13 @@
       {
         "sector": "Consumer Cyclical",
         "etf": "XLY",
-        "n_graded": 5,
-        "n_predicts": 7,
-        "dir_hits": 4,
-        "dir_hit_pct": 80.0,
+        "n_graded": 6,
+        "n_predicts": 8,
+        "dir_hits": 5,
+        "dir_hit_pct": 83.33333333333333,
         "mag_hits": 2,
-        "mag_n": 5,
-        "mag_hit_pct": 40.0,
+        "mag_n": 6,
+        "mag_hit_pct": 33.333333333333336,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -576,13 +603,13 @@
       {
         "sector": "Consumer Defensive",
         "etf": "XLP",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 3,
-        "dir_hit_pct": 60.0,
-        "mag_hits": 1,
-        "mag_n": 5,
-        "mag_hit_pct": 20.0,
+        "dir_hit_pct": 50.0,
+        "mag_hits": 2,
+        "mag_n": 6,
+        "mag_hit_pct": 33.333333333333336,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -591,13 +618,13 @@
       {
         "sector": "Energy",
         "etf": "XLE",
-        "n_graded": 5,
-        "n_predicts": 7,
-        "dir_hits": 3,
-        "dir_hit_pct": 60.0,
-        "mag_hits": 1,
-        "mag_n": 5,
-        "mag_hit_pct": 20.0,
+        "n_graded": 6,
+        "n_predicts": 8,
+        "dir_hits": 4,
+        "dir_hit_pct": 66.66666666666667,
+        "mag_hits": 2,
+        "mag_n": 6,
+        "mag_hit_pct": 33.333333333333336,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -606,12 +633,12 @@
       {
         "sector": "Financial",
         "etf": "XLF",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 3,
-        "dir_hit_pct": 60.0,
+        "dir_hit_pct": 50.0,
         "mag_hits": 0,
-        "mag_n": 5,
+        "mag_n": 6,
         "mag_hit_pct": 0.0,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
@@ -621,12 +648,12 @@
       {
         "sector": "Healthcare",
         "etf": "XLV",
-        "n_graded": 5,
-        "n_predicts": 7,
-        "dir_hits": 3,
-        "dir_hit_pct": 60.0,
+        "n_graded": 6,
+        "n_predicts": 8,
+        "dir_hits": 4,
+        "dir_hit_pct": 66.66666666666667,
         "mag_hits": 0,
-        "mag_n": 5,
+        "mag_n": 6,
         "mag_hit_pct": 0.0,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
@@ -636,13 +663,13 @@
       {
         "sector": "Industrials",
         "etf": "XLI",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 2,
-        "dir_hit_pct": 40.0,
+        "dir_hit_pct": 33.333333333333336,
         "mag_hits": 1,
-        "mag_n": 5,
-        "mag_hit_pct": 20.0,
+        "mag_n": 6,
+        "mag_hit_pct": 16.666666666666668,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -651,13 +678,13 @@
       {
         "sector": "Real Estate",
         "etf": "XLRE",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 4,
-        "dir_hit_pct": 80.0,
+        "dir_hit_pct": 66.66666666666667,
         "mag_hits": 1,
-        "mag_n": 5,
-        "mag_hit_pct": 20.0,
+        "mag_n": 6,
+        "mag_hit_pct": 16.666666666666668,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -666,13 +693,13 @@
       {
         "sector": "Technology",
         "etf": "XLK",
-        "n_graded": 5,
-        "n_predicts": 7,
-        "dir_hits": 2,
-        "dir_hit_pct": 40.0,
+        "n_graded": 6,
+        "n_predicts": 8,
+        "dir_hits": 3,
+        "dir_hit_pct": 50.0,
         "mag_hits": 3,
-        "mag_n": 5,
-        "mag_hit_pct": 60.0,
+        "mag_n": 6,
+        "mag_hit_pct": 50.0,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -681,13 +708,13 @@
       {
         "sector": "Utilities",
         "etf": "XLU",
-        "n_graded": 5,
-        "n_predicts": 7,
+        "n_graded": 6,
+        "n_predicts": 8,
         "dir_hits": 4,
-        "dir_hit_pct": 80.0,
+        "dir_hit_pct": 66.66666666666667,
         "mag_hits": 3,
-        "mag_n": 5,
-        "mag_hit_pct": 60.0,
+        "mag_n": 6,
+        "mag_hit_pct": 50.0,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -1786,12 +1813,80 @@
       "2026-08-17": {
         "Basic Materials": {
           "dir": "up",
+          "hit": false,
+          "pct": -0.5709920666786439,
+          "has_predict": true
+        },
+        "Communication Services": {
+          "dir": "up",
+          "hit": false,
+          "pct": -1.8857877919146948,
+          "has_predict": true
+        },
+        "Consumer Cyclical": {
+          "dir": "down",
+          "hit": true,
+          "pct": -1.2267317983748471,
+          "has_predict": true
+        },
+        "Consumer Defensive": {
+          "dir": "up",
+          "hit": false,
+          "pct": -1.6378163464902618,
+          "has_predict": true
+        },
+        "Energy": {
+          "dir": "up",
+          "hit": true,
+          "pct": 1.082219326916345,
+          "has_predict": true
+        },
+        "Financial": {
+          "dir": "up",
+          "hit": false,
+          "pct": -0.9972455603148189,
+          "has_predict": true
+        },
+        "Healthcare": {
+          "dir": "down",
+          "hit": true,
+          "pct": -0.19118842968576244,
+          "has_predict": true
+        },
+        "Industrials": {
+          "dir": "up",
+          "hit": false,
+          "pct": -0.10186434411707523,
+          "has_predict": true
+        },
+        "Real Estate": {
+          "dir": "up",
+          "hit": false,
+          "pct": -0.9719430577861288,
+          "has_predict": true
+        },
+        "Technology": {
+          "dir": "up",
+          "hit": true,
+          "pct": 0.16315605828389756,
+          "has_predict": true
+        },
+        "Utilities": {
+          "dir": "up",
+          "hit": false,
+          "pct": -0.29338989863718634,
+          "has_predict": true
+        }
+      },
+      "2026-08-18": {
+        "Basic Materials": {
+          "dir": "down",
           "hit": null,
           "pct": null,
           "has_predict": true
         },
         "Communication Services": {
-          "dir": "up",
+          "dir": "down",
           "hit": null,
           "pct": null,
           "has_predict": true
@@ -1815,13 +1910,13 @@
           "has_predict": true
         },
         "Financial": {
-          "dir": "up",
+          "dir": "down",
           "hit": null,
           "pct": null,
           "has_predict": true
         },
         "Healthcare": {
-          "dir": "down",
+          "dir": "up",
           "hit": null,
           "pct": null,
           "has_predict": true
@@ -1833,13 +1928,13 @@
           "has_predict": true
         },
         "Real Estate": {
-          "dir": "up",
+          "dir": "down",
           "hit": null,
           "pct": null,
           "has_predict": true
         },
         "Technology": {
-          "dir": "up",
+          "dir": "down",
           "hit": null,
           "pct": null,
           "has_predict": true
