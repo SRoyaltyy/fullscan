@@ -82,3 +82,63 @@ def macro_series(series_id: str, limit: int = 45) -> list[tuple[str, float]]:
         return []
     finally:
         conn.close()
+
+
+def news_between(
+    start: str,
+    end: str,
+    limit: int = 2000,
+) -> list[dict]:
+    """News with published_at in [start, end) (ISO dates YYYY-MM-DD).
+
+    Used for industry predict / as-of backtests. Prefer published_at so
+    as-of filtering is honest (no look-ahead via collected_at).
+    """
+    conn = _conn()
+    if conn is None:
+        return []
+    queries = [
+        """SELECT source, title, url, published_at, collected_at
+           FROM news
+           WHERE published_at >= %s::timestamp
+             AND published_at < %s::timestamp
+           ORDER BY published_at DESC
+           LIMIT %s""",
+        """SELECT source, title, url, published_at, NULL as collected_at
+           FROM news
+           WHERE published_at >= %s::timestamp
+             AND published_at < %s::timestamp
+           ORDER BY published_at DESC
+           LIMIT %s""",
+        """SELECT source, title, url, published_at, collected_at
+           FROM news
+           WHERE collected_at >= %s::timestamp
+             AND collected_at < %s::timestamp
+           ORDER BY collected_at DESC
+           LIMIT %s""",
+    ]
+    try:
+        cur = conn.cursor()
+        for i, q in enumerate(queries):
+            try:
+                cur.execute(q, (start, end, limit))
+                rows = [
+                    {
+                        "source": s,
+                        "title": t,
+                        "url": u,
+                        "published_at": str(p) if p is not None else "",
+                        "collected_at": str(c) if c is not None else "",
+                    }
+                    for s, t, u, p, c in cur.fetchall()
+                ]
+                if rows:
+                    cur.close()
+                    return rows
+            except Exception as e:  # noqa: BLE001
+                conn.rollback()
+                print(f"[db] news_between variant {i} failed: {e}")
+        cur.close()
+        return []
+    finally:
+        conn.close()
