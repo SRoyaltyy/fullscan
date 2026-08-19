@@ -1,0 +1,18 @@
+name: Patch ab_backfill interaction (one-shot)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/patch_ab_backfill_interaction.py
+      - run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/ab_backfill.py
+          git diff --staged --quiet && echo no-change && exit 0
+          git commit -m "fix: ab_backfill interaction table format"
+          git push origin HEAD:main
