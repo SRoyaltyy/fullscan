@@ -1,7 +1,6 @@
 name: AB Full Scan (all-in-one)
 
-# One button: Part A/B1 checklist → quote colors → Form4 insider → merge
-# Set `ticker` to run a single name only (fast smoke check).
+# ticker blank → full universe; ticker set → fast single-name path via src.ab_one
 on:
   workflow_dispatch:
     inputs:
@@ -14,23 +13,23 @@ on:
         required: false
         default: ""
       color_top:
-        description: "How many top ab_checklist names get quote-page colors (ignored if ticker set)"
+        description: "Top N for quote colors (full mode only)"
         required: false
         default: "80"
       form4_top:
-        description: "How many top names get Form4 refresh; 0=skip fetch (ignored if ticker set)"
+        description: "Top N Form4 refresh (full mode); 0=skip"
         required: false
         default: "40"
       form4_months:
-        description: "Form4 lookback months when refreshing"
+        description: "Form4 lookback months"
         required: false
         default: "18"
       skip_form4_fetch:
-        description: "Skip Form4 network fetch (use existing monthly_panel only)"
+        description: "Skip Form4 fetch (full mode)"
         type: boolean
         default: false
       skip_colors:
-        description: "Skip Finviz quote color scrape"
+        description: "Skip quote colors (full mode)"
         type: boolean
         default: false
   schedule:
@@ -58,7 +57,7 @@ jobs:
           pip install -r requirements.txt
           pip install beautifulsoup4 lxml edgartools pyarrow
 
-      - name: Resolve as-of date + ticker
+      - name: Resolve as-of + ticker
         id: meta
         run: |
           set -euo pipefail
@@ -78,43 +77,12 @@ jobs:
           echo "ticker=$T" >> "$GITHUB_OUTPUT"
           echo "Using asof=$D ticker=${T:-ALL}"
 
-      - name: 1) Part A + B1 checklist
-        run: |
-          set -euo pipefail
-          ASOF="${{ steps.meta.outputs.asof }}"
-          T="${{ steps.meta.outputs.ticker }}"
-          ARGS=(--date "$ASOF" --top 20)
-          if [ -n "$T" ]; then
-            ARGS+=(--ticker "$T")
-            echo "=== SINGLE TICKER MODE: $T ==="
-          fi
-          echo "=== ab_checklist ${ARGS[*]} ==="
-          python -m src.ab_checklist "${ARGS[@]}"
-          ls -la "data/ab_checklist/${ASOF}_ab_checklist.csv"
-
-      - name: 2) Quote snapshot colors
-        if: ${{ github.event_name == 'schedule' || inputs.skip_colors == false }}
+      # ── FAST PATH: one ticker ───────────────────────────────────
+      - name: Single-ticker path (ab_one)
+        if: ${{ steps.meta.outputs.ticker != '' }}
         env:
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
-        run: |
-          set -euo pipefail
-          ASOF="${{ steps.meta.outputs.asof }}"
-          T="${{ steps.meta.outputs.ticker }}"
-          if [ -n "$T" ]; then
-            echo "=== quote_colors --tickers $T --date $ASOF ==="
-            python -m src.quote_colors --tickers "$T" --date "$ASOF"
-          else
-            TOP="${{ inputs.color_top }}"
-            TOP="${TOP:-80}"
-            echo "=== quote_colors --from-ab --top $TOP --date $ASOF ==="
-            python -m src.quote_colors --from-ab --top "$TOP" --date "$ASOF"
-          fi
-          ls -la "data/quote_colors/${ASOF}_quote_colors.csv" || ls -la data/quote_colors/ | tail
-
-      - name: 3) Form4 insider history
-        if: ${{ github.event_name == 'schedule' || inputs.skip_form4_fetch == false }}
-        env:
           SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
           EDGAR_IDENTITY: ${{ secrets.EDGAR_IDENTITY }}
         run: |
@@ -123,42 +91,64 @@ jobs:
           T="${{ steps.meta.outputs.ticker }}"
           MONTHS="${{ inputs.form4_months }}"
           MONTHS="${MONTHS:-18}"
-          if [ -n "$T" ]; then
-            echo "=== insider_history --tickers $T --months $MONTHS ==="
-            python -m src.insider_history --tickers "$T" --months "$MONTHS" --resume
-            exit 0
+          ARGS=("$T" --date "$ASOF" --merge --with-colors --with-form4 --months "$MONTHS")
+          if [ "${{ inputs.skip_colors }}" = "true" ]; then
+            ARGS=("$T" --date "$ASOF" --merge)
+            if [ "${{ inputs.skip_form4_fetch }}" != "true" ]; then
+              ARGS+=(--with-form4 --months "$MONTHS")
+            fi
+          elif [ "${{ inputs.skip_form4_fetch }}" = "true" ]; then
+            ARGS=("$T" --date "$ASOF" --merge --with-colors)
           fi
-          N="${{ inputs.form4_top }}"
-          N="${N:-40}"
-          if [ "$N" = "0" ]; then
-            echo "form4_top=0 → skip fetch"
-            exit 0
-          fi
-          CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
-          if [ ! -f "$CSV" ]; then
-            echo "Missing $CSV"
-            exit 1
-          fi
-          TICKERS=$(python -c "import pandas as pd; df=pd.read_csv(r'$CSV'); df=df.sort_values('score', ascending=False); print(','.join(df['Ticker'].astype(str).str.upper().head(int('$N')).tolist()))")
-          echo "=== insider_history --tickers ($N) --months $MONTHS --resume ==="
-          echo "tickers=$TICKERS"
-          python -m src.insider_history --tickers "$TICKERS" --months "$MONTHS" --resume
-          ls -la data/insider/history/ | tail
+          echo "CMD: python -m src.ab_one ${ARGS[*]}"
+          python -m src.ab_one "${ARGS[@]}"
 
-      - name: 4) Merge B15 Form4 + B16 colors + B19 analyst
+      # ── FULL PATH ───────────────────────────────────────────────
+      - name: 1) Part A + B1 checklist (universe)
+        if: ${{ steps.meta.outputs.ticker == '' }}
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
-          T="${{ steps.meta.outputs.ticker }}"
-          echo "=== ab_merge_extras --date $ASOF ==="
+          echo "=== ab_checklist --date $ASOF ==="
+          python -m src.ab_checklist --date "$ASOF" --top 20
+          ls -la "data/ab_checklist/${ASOF}_ab_checklist.csv"
+
+      - name: 2) Quote colors (universe top)
+        if: ${{ steps.meta.outputs.ticker == '' && (github.event_name == 'schedule' || inputs.skip_colors == false) }}
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
+          TOP="${{ inputs.color_top }}"
+          TOP="${TOP:-80}"
+          python -m src.quote_colors --from-ab --top "$TOP" --date "$ASOF"
+
+      - name: 3) Form4 (universe top)
+        if: ${{ steps.meta.outputs.ticker == '' && (github.event_name == 'schedule' || inputs.skip_form4_fetch == false) }}
+        env:
+          SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
+          EDGAR_IDENTITY: ${{ secrets.EDGAR_IDENTITY }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
+          N="${{ inputs.form4_top }}"
+          N="${N:-40}"
+          MONTHS="${{ inputs.form4_months }}"
+          MONTHS="${MONTHS:-18}"
+          if [ "$N" = "0" ]; then echo skip; exit 0; fi
+          CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
+          TICKERS=$(python -c "import pandas as pd; df=pd.read_csv(r'$CSV'); df=df.sort_values('score', ascending=False); print(','.join(df['Ticker'].astype(str).str.upper().head(int('$N')).tolist()))")
+          python -m src.insider_history --tickers "$TICKERS" --months "$MONTHS" --resume
+
+      - name: 4) Merge (universe)
+        if: ${{ steps.meta.outputs.ticker == '' }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
           python -m src.ab_merge_extras --date "$ASOF"
-          ls -la "data/ab_checklist/${ASOF}_ab_checklist_merged.csv"
-          if [ -n "$T" ]; then
-            echo "-------- single ticker $T --------"
-            python -c "import pandas as pd; df=pd.read_csv('data/ab_checklist/${ASOF}_ab_checklist_merged.csv'); r=df[df['Ticker'].str.upper()=='$T']; print(r.T.to_string() if len(r) else 'NOT FOUND')"
-          else
-            head -12 "data/ab_checklist/${ASOF}_ab_checklist_merged.md" || true
-          fi
+          head -12 "data/ab_checklist/${ASOF}_ab_checklist_merged.md" || true
 
       - uses: actions/upload-artifact@v4
         if: always()
@@ -170,18 +160,14 @@ jobs:
             data/insider/history/
           if-no-files-found: warn
 
-      - name: Commit all outputs
+      - name: Commit
         if: always()
         run: |
           set -euo pipefail
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           git add -f data/ab_checklist/ data/quote_colors/ data/insider/history/ || true
-          git status
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           T="${{ steps.meta.outputs.ticker }}"
           MSG="chore: AB full scan ${{ steps.meta.outputs.asof }}"
           [ -n "$T" ] && MSG="$MSG ($T only)"
