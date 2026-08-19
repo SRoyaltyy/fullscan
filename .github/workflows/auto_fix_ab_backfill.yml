@@ -1,0 +1,47 @@
+name: Auto-fix ab_backfill MD
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/FORCE_AB_BACKFILL_RESTORE"
+      - ".github/workflows/auto_fix_ab_backfill.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore good base + apply MD patch
+        run: |
+          set -euo pipefail
+          GOOD=d1feedb21738eba35b87fd9cfb274fdd265cb2d3
+          git show "$GOOD:src/ab_backfill.py" > src/ab_backfill.py
+          echo "base bytes=$(wc -c < src/ab_backfill.py)"
+          python3 scripts/patch_ab_backfill_md_colors.py
+          python3 -m py_compile src/ab_backfill.py
+          echo "patched bytes=$(wc -c < src/ab_backfill.py)"
+          grep -n "Sector source footnote\|_label_colored\|Peer lead\|_score_cell" src/ab_backfill.py | head -15
+          rm -f src/_ab_bf.p* src/_ab_backfill.b64* || true
+
+      - name: Commit fixed file
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/ab_backfill.py
+          git add -u src/_ab_bf.p* src/_ab_backfill.b64* 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Already correct on main"
+            exit 0
+          fi
+          git commit -m "fix: ab_backfill colored scores/labels, P01-P04 legend, sector footnotes"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
