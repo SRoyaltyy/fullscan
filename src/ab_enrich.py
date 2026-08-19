@@ -1,26 +1,24 @@
 """Enrich AB checklist with peer leadership + industry/sector regime.
 
 Uses only on-disk artifacts (no LLM, no live web):
-  - data/peers/Correlations.xlsx|correlations.csv  → peer map
-  - data/exports/finviz_*.csv                       → week/month perf, Industry, Sector
-  - 01_daily/sectors/<date>/_BOARD.md               → sector Dir/Score (nearest <= asof)
-  - data/ab_checklist/<date>_ab_checklist*.csv      → base scores
+  - data/peers/correlations.csv  (preferred)
+  - data/peers/Correlations.xlsx (fallback — same map peer_rs loads)
+  - data/exports/finviz_*.csv
+  - 01_daily/sectors/<date>/_BOARD.md
+  - data/ab_checklist/<date>_ab_checklist*.csv
 
-Flags (long-biased, +1 / 0 / -1):
-  P01_peer_lead_week     rs_week > 0 and beat_week_pct >= 0.5
-  P02_peers_advancing    peer median week > 0
-  P03_industry_advancing industry median week > 0
-  P04_sector_supportive  sector board Dir == up (score>0)
+If --ticker is set and that name was filtered out of the liquid checklist
+(mcap/ADV gate), we still build a one-row enrich from Finviz export + peer map
+instead of failing.
 
 CLI:
   python -m src.ab_enrich --date 2026-08-18
-  python -m src.ab_enrich --date 2026-08-18 --ticker AAPL
+  python -m src.ab_enrich --date 2026-08-18 --ticker BB
 """
 from __future__ import annotations
 
 import argparse
 import re
-from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -34,6 +32,7 @@ ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
 AB_DIR = ROOT / "data" / "ab_checklist"
 SECTOR_DIR = ROOT / "01_daily" / "sectors"
+PEERS_DIR = ROOT / "data" / "peers"
 OUT_DIR = AB_DIR
 ET = ZoneInfo(config.TZ)
 
@@ -54,31 +53,56 @@ def _pct(x) -> float:
         return np.nan
 
 
-def _latest_ab_path(date: str | None) -> tuple[str, Path]:
+def _corr_paths_status() -> list[str]:
+    lines = []
+    for p in (
+        PEERS_DIR / "correlations.csv",
+        PEERS_DIR / "Correlations.xlsx",
+        PEERS_DIR / "correlations.csv.gz",
+        PEERS_DIR / "parts",
+    ):
+        if p.exists():
+            extra = ""
+            if p.is_file():
+                extra = f" ({p.stat().st_size:,} bytes)"
+            lines.append(f"FOUND {p.relative_to(ROOT)}{extra}")
+        else:
+            lines.append(f"missing {p.relative_to(ROOT)}")
+    return lines
+
+
+def _latest_ab_path(date: str | None) -> tuple[str, Path | None]:
+    if not AB_DIR.exists():
+        return date or "", None
     cands = sorted(AB_DIR.glob("*_ab_checklist*.csv"))
-    cands = [p for p in cands if "merged" not in p.name or True]
-    # prefer non-enriched base, then any
+    # prefer base checklist over enriched for re-runs
+    cands = [p for p in cands if "enriched" not in p.name]
     if not cands:
-        raise SystemExit("[ab_enrich] no data/ab_checklist/*_ab_checklist*.csv — run ab_checklist first")
-    if date:
-        exact = [
-            AB_DIR / f"{date}_ab_checklist.csv",
-            AB_DIR / f"{date}_ab_checklist_merged.csv",
-            AB_DIR / f"{date}_ab_checklist_enriched.csv",
-        ]
-        for p in exact:
-            if p.exists():
-                return date, p
-        raise SystemExit(f"[ab_enrich] no checklist for {date}")
-    # newest by name date prefix
+        cands = sorted(AB_DIR.glob("*_ab_checklist*.csv"))
+    if not cands:
+        return date or "", None
+
     def key(p: Path):
         m = re.match(r"(\d{4}-\d{2}-\d{2})", p.name)
         return m.group(1) if m else p.name
 
+    if date:
+        for name in (
+            f"{date}_ab_checklist.csv",
+            f"{date}_ab_checklist_merged.csv",
+        ):
+            p = AB_DIR / name
+            if p.exists():
+                return date, p
+        # any matching date prefix
+        hit = [p for p in cands if p.name.startswith(date)]
+        if hit:
+            return date, hit[0]
+        return date, None
+
     cands = sorted(cands, key=key)
     p = cands[-1]
-    d = key(p)
-    return d, p
+    return key(p), p
 
 
 def _resolve_export(date: str) -> Path:
@@ -90,21 +114,17 @@ def _resolve_export(date: str) -> Path:
 
 
 def _parse_sector_board(date: str) -> dict[str, dict]:
-    """Nearest _BOARD.md on or before date → {Sector Name: {dir, score, conf}}."""
     if not SECTOR_DIR.exists():
         return {}
     boards = sorted(SECTOR_DIR.glob("*/_BOARD.md"))
-    boards = [b for b in boards if b.parent.name <= date]
-    if not boards:
-        boards = sorted(SECTOR_DIR.glob("*/_BOARD.md"))
+    boards = [b for b in boards if b.parent.name <= date] or boards
     if not boards:
         return {}
     path = boards[-1]
     text = path.read_text(encoding="utf-8", errors="replace")
     out: dict[str, dict] = {}
-    # table rows: | Sector | ETF | Dir | Mag | Score | Conf |
     for line in text.splitlines():
-        if not line.startswith("|") or line.startswith("|-") or "Sector" in line and "ETF" in line:
+        if not line.startswith("|") or line.startswith("|-"):
             continue
         parts = [c.strip() for c in line.strip("|").split("|")]
         if len(parts) < 6:
@@ -120,9 +140,8 @@ def _parse_sector_board(date: str) -> dict[str, dict]:
             conf = float(conf_s)
         except ValueError:
             conf = np.nan
-        direction = direction.lower().strip()
         out[name] = {
-            "dir": direction,
+            "dir": direction.lower().strip(),
             "score": score,
             "conf": conf,
             "mag": mag,
@@ -132,12 +151,11 @@ def _parse_sector_board(date: str) -> dict[str, dict]:
     return out
 
 
-def _industry_sector_stats(export: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def _industry_sector_stats(export: pd.DataFrame):
     tcol = "Ticker" if "Ticker" in export.columns else export.columns[0]
     export = export.copy()
     export["Ticker"] = export[tcol].astype(str).str.strip().str.upper()
     export["_week"] = export[PERF_WEEK].map(_pct) if PERF_WEEK in export.columns else np.nan
-    export["_chg"] = export[CHANGE].map(_pct) if CHANGE in export.columns else np.nan
 
     ind = None
     if "Industry" in export.columns:
@@ -196,30 +214,103 @@ def _flags_row(r: pd.Series) -> dict:
     }
 
 
+def _stub_from_export(ticker: str, export: pd.DataFrame) -> pd.DataFrame:
+    """Minimal checklist-like row when name failed liquid gate / missing from AB CSV."""
+    t = ticker.upper()
+    hit = export[export["Ticker"] == t]
+    if hit.empty:
+        # still allow peer-only row
+        return pd.DataFrame([{"Ticker": t, "score": 0, "score_source": "stub_not_in_export"}])
+    row = hit.iloc[0]
+    return pd.DataFrame(
+        [
+            {
+                "Ticker": t,
+                "score": 0,
+                "score_source": "stub_not_in_liquid_checklist",
+                "Sector": row.get("Sector"),
+                "Industry": row.get("Industry"),
+                "Price": row.get("Price"),
+                "Market Cap": row.get("Market Cap"),
+                "Average Volume": row.get("Average Volume"),
+            }
+        ]
+    )
+
+
 def run(date: str | None = None, ticker: str | None = None) -> Path:
-    date, ab_path = _latest_ab_path(date)
-    print(f"[ab_enrich] base={ab_path.name} asof={date}")
+    print("[ab_enrich] correlations search paths:")
+    for line in _corr_paths_status():
+        print(f"  {line}")
 
-    ab = pd.read_csv(ab_path, low_memory=False)
-    if "Ticker" not in ab.columns:
-        ab = ab.rename(columns={ab.columns[0]: "Ticker"})
-    ab["Ticker"] = ab["Ticker"].astype(str).str.strip().str.upper()
+    # Load peer map early so we can confirm ticker membership
+    try:
+        corr_map = peer_rs._load_correlations()
+        print(f"[ab_enrich] peer map loaded: {len(corr_map):,} tickers")
+    except SystemExit as e:
+        print(f"[ab_enrich] WARN peer map: {e}")
+        corr_map = {}
+
     if ticker:
-        ab = ab[ab["Ticker"] == ticker.upper()].copy()
-        if ab.empty:
-            raise SystemExit(f"[ab_enrich] {ticker} not in checklist")
+        tU = ticker.upper()
+        peers = corr_map.get(tU, [])
+        print(
+            f"[ab_enrich] ticker={tU} in_correlations={tU in corr_map} "
+            f"n_peers={len(peers)} peers={peers[:8]}"
+        )
 
-    # Peer RS (Finviz week/month vs Correlations peers)
-    peer_path = ROOT / "data" / "peers" / f"{date}_peer_rs.csv"
+    date, ab_path = _latest_ab_path(date)
+    if not date:
+        raise SystemExit("[ab_enrich] could not resolve as-of date")
+
+    export_path = _resolve_export(date)
+    export = pd.read_csv(export_path, low_memory=False)
+    tcol = "Ticker" if "Ticker" in export.columns else export.columns[0]
+    export["Ticker"] = export[tcol].astype(str).str.strip().str.upper()
+    print(f"[ab_enrich] export={export_path.name} rows={len(export):,}")
+
+    if ab_path is not None:
+        print(f"[ab_enrich] base checklist={ab_path.name}")
+        ab = pd.read_csv(ab_path, low_memory=False)
+        if "Ticker" not in ab.columns:
+            ab = ab.rename(columns={ab.columns[0]: "Ticker"})
+        ab["Ticker"] = ab["Ticker"].astype(str).str.strip().str.upper()
+    else:
+        print("[ab_enrich] WARN: no checklist CSV — building from export only")
+        ab = export[["Ticker"]].copy()
+        ab["score"] = 0
+        ab["score_source"] = "export_only"
+
+    if ticker:
+        tU = ticker.upper()
+        sub = ab[ab["Ticker"] == tU].copy()
+        if sub.empty:
+            in_export = tU in set(export["Ticker"])
+            print(
+                f"[ab_enrich] WARN: {tU} not in liquid checklist "
+                f"(usually mcap/ADV gate). in_export={in_export}. "
+                f"Falling back to Finviz+Correlations stub."
+            )
+            ab = _stub_from_export(tU, export)
+        else:
+            ab = sub
+
+    # Peer RS file
+    peer_path = PEERS_DIR / f"{date}_peer_rs.csv"
     if not peer_path.exists():
         print("[ab_enrich] computing peer_rs…")
         peer_path = peer_rs.run(date)
     peer = pd.read_csv(peer_path)
     peer["Ticker"] = peer["Ticker"].astype(str).str.strip().str.upper()
 
-    export = pd.read_csv(_resolve_export(date), low_memory=False)
-    tcol = "Ticker" if "Ticker" in export.columns else export.columns[0]
-    export["Ticker"] = export[tcol].astype(str).str.strip().str.upper()
+    if ticker:
+        tU = ticker.upper()
+        if tU not in set(peer["Ticker"]):
+            print(
+                f"[ab_enrich] WARN: {tU} missing from peer_rs file — "
+                f"not in Correlations map or not in export that day"
+            )
+
     meta_cols = [c for c in ("Sector", "Industry") if c in export.columns]
     meta = export[["Ticker"] + meta_cols].drop_duplicates("Ticker")
 
@@ -228,27 +319,24 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
     print(f"[ab_enrich] sector board entries={len(board)} peer_rows={len(peer):,}")
 
     m = ab.merge(peer, on="Ticker", how="left", suffixes=("", "_peer"))
-    m = m.merge(meta, on="Ticker", how="left")
-    if ind_stats is not None and "Industry" in m.columns:
-        m = m.merge(
-            ind_stats,
-            left_on="Industry",
-            right_on="industry",
-            how="left",
-        )
-    if sec_stats is not None and "Sector" in m.columns:
-        m = m.merge(
-            sec_stats,
-            left_on="Sector",
-            right_on="sector",
-            how="left",
-        )
+    # don't duplicate Sector/Industry if already present from stub
+    for c in meta_cols:
+        if c in m.columns and m[c].notna().any():
+            meta = meta.drop(columns=[c], errors="ignore")
+    if len(meta.columns) > 1:
+        m = m.merge(meta, on="Ticker", how="left")
 
-    # map sector board
+    if ind_stats is not None and "Industry" in m.columns:
+        m = m.merge(ind_stats, left_on="Industry", right_on="industry", how="left")
+    if sec_stats is not None and "Sector" in m.columns:
+        m = m.merge(sec_stats, left_on="Sector", right_on="sector", how="left")
+
     def board_lookup(sector_name):
+        empty = pd.Series(
+            {"sector_dir": None, "sector_score": np.nan, "sector_conf": np.nan, "sector_board_date": None}
+        )
         if not isinstance(sector_name, str) or not sector_name:
-            return pd.Series({"sector_dir": None, "sector_score": np.nan, "sector_conf": np.nan, "sector_board_date": None})
-        # exact then fuzzy
+            return empty
         info = board.get(sector_name)
         if info is None:
             for k, v in board.items():
@@ -256,7 +344,7 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
                     info = v
                     break
         if not info:
-            return pd.Series({"sector_dir": None, "sector_score": np.nan, "sector_conf": np.nan, "sector_board_date": None})
+            return empty
         return pd.Series(
             {
                 "sector_dir": info.get("dir"),
@@ -278,7 +366,6 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
     flag_rows = m.apply(_flags_row, axis=1, result_type="expand")
     m = pd.concat([m, flag_rows], axis=1)
 
-    # composite: base score + peer/regime flags
     base = pd.to_numeric(m.get("score"), errors="coerce").fillna(0)
     extra = (
         m["P01_peer_lead_week"].fillna(0)
@@ -290,7 +377,6 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
     m["score_context"] = extra.astype(int)
     m["score_enriched"] = (base + extra).astype(int)
 
-    # leadership label for humans
     def lead_label(r):
         bits = []
         if r.get("P01_peer_lead_week") == 1:
@@ -314,35 +400,35 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
     m["context_label"] = m.apply(lead_label, axis=1)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    out_csv = OUT_DIR / f"{date}_ab_checklist_enriched.csv"
+    suffix = f"_{ticker.upper()}" if ticker else ""
+    out_csv = OUT_DIR / f"{date}_ab_checklist_enriched{suffix}.csv"
     m_sorted = m.sort_values("score_enriched", ascending=False)
     m_sorted.to_csv(out_csv, index=False)
 
-    # MD summary
     lines = [
-        f"# AB enriched — {date}",
+        f"# AB enriched — {date}" + (f" — {ticker.upper()}" if ticker else ""),
         "",
-        f"- Base checklist: `{ab_path.name}`",
-        f"- Peer RS: `{peer_path.name}` (Correlations × Finviz week/month)",
-        f"- Sector board: nearest `01_daily/sectors/*/ _BOARD.md` ≤ {date}",
+        f"- Base checklist: `{ab_path.name if ab_path else 'stub/export'}`",
+        f"- Peer map: `data/peers/correlations.csv` or `Correlations.xlsx` ({len(corr_map):,} names)",
+        f"- Peer RS: `{peer_path.name}`",
+        f"- Export: `{export_path.name}`",
         "",
         "## Flag legend",
         "",
         "| Flag | +1 | −1 |",
         "|------|----|----|",
-        "| P01 peer lead week | rs_week>0 and beats ≥50% of peers | lags peers |",
-        "| P02 peers advancing | peer median week > 0 | peer median week < 0 |",
-        "| P03 industry advancing | industry median week > 0 | industry median week < 0 |",
-        "| P04 sector supportive | sector board Dir=up | Dir=down |",
+        "| P01 peer lead week | rs_week>0 & beats ≥50% peers | lags |",
+        "| P02 peers advancing | peer median week > 0 | < 0 |",
+        "| P03 industry advancing | industry median week > 0 | < 0 |",
+        "| P04 sector supportive | board Dir=up | Dir=down |",
         "",
-        f"- score_enriched = score_base + sum(P01..P04)",
-        "",
-        "## Top 25 by score_enriched",
+        "## Results",
         "",
         "| Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |",
         "|--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|",
     ]
-    for _, r in m_sorted.head(25).iterrows():
+    show = m_sorted.head(25 if not ticker else 5)
+    for _, r in show.iterrows():
         rs = r.get("rs_week")
         beat = r.get("beat_week_pct")
         indm = r.get("ind_med_week")
@@ -353,21 +439,10 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
             f"{(f'{100*beat:.0f}%' if np.isfinite(beat) else '—')} | "
             f"{(f'{indm:+.1f}' if np.isfinite(indm) else '—')} | "
             f"{str(r.get('Sector') or '')[:18]} | "
-            f"{str(r.get('sector_dir') or '—')}/{r.get('sector_score') if np.isfinite(r.get('sector_score', np.nan)) else '—'} | "
-            f"{r.get('context_label')} |"
+            f"{str(r.get('sector_dir') or '—')} | {r.get('context_label')} |"
         )
 
-    # context combo rates among top half scores
-    lines += ["", "## Context combo counts (full liquid set)", ""]
-    for lab in ("LEAD,peers↑,ind↑", "LEAD", "LAG", "peers↑", "peers↓", "ind↑", "ind↓", "sec↑", "sec↓"):
-        # approximate via label contains
-        n = int(m["context_label"].astype(str).str.contains(lab.split(",")[0] if "," not in lab else lab, regex=False).sum()) if lab != "LEAD,peers↑,ind↑" else int(
-            m["context_label"].astype(str).apply(lambda s: all(x in s for x in ["LEAD", "peers↑", "ind↑"])).sum()
-        )
-        lines.append(f"- `{lab}`: **{n}**")
-
-    lines += ["", f"- csv: `{out_csv.relative_to(ROOT)}`"]
-    md = OUT_DIR / f"{date}_ab_checklist_enriched.md"
+    md = OUT_DIR / f"{date}_ab_checklist_enriched{suffix}.md"
     md.write_text("\n".join(lines), encoding="utf-8")
     print(f"[ab_enrich] wrote {out_csv.name} rows={len(m):,}")
     print(f"[ab_enrich] wrote {md.name}")
