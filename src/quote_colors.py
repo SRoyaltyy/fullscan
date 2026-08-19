@@ -1,19 +1,19 @@
-"""Finviz quote-page snapshot colors (green / red / neutral).
+"""Finviz quote-page snapshot colors (green / red / neutral) + last-2 analyst actions.
 
-Each of the ~84 snapshot fields on quote.ashx is marked in HTML as:
-  color-text is-positive  → green
-  color-text is-negative  → red
-  (else)                  → neutral
+Color rules:
+  * `is-positive` → green, `is-negative` → red, else neutral
+  * **Performance timeframe fields are EXCLUDED** from green/red counts
+    (Perf Week/Month/Quarter/Half/YTD/Year/3Y/5Y/10Y, Change %, etc.)
 
 CLI:
-  python -m src.quote_colors --tickers AAPL,AMLX,CORT
-  python -m src.quote_colors --liquid --max-tickers 200
-  python -m src.quote_colors --from-ab --top 100   # top of latest ab_checklist
+  python -m src.quote_colors --tickers AAPL,AMLX
+  python -m src.quote_colors --from-ab --top 80
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -43,7 +43,15 @@ QUOTE_URL = "https://finviz.com/quote.ashx?t={ticker}"
 MCAP_MIN = 80_000_000.0
 ADV_MIN = 500_000.0
 
-# Core fields we always surface as columns (subset of the 84)
+# Fields that must NOT affect color score (performance / tape path)
+PERF_EXCLUDE = {
+    "Perf Week", "Perf Month", "Perf Quarter", "Perf Half Y", "Perf YTD",
+    "Perf Year", "Perf 3Y", "Perf 5Y", "Perf 10Y",
+    "Change %", "Change", "Change from Open", "Gap",
+    "Prev Close", "Price", "Volume", "Avg Volume", "Rel Volume",
+    "Volatility", "ATR (14)", "Trades",
+}
+
 KEY_FIELDS = [
     "EPS Y/Y TTM",
     "EPS Q/Q",
@@ -61,31 +69,13 @@ KEY_FIELDS = [
     "SMA20",
     "SMA50",
     "SMA200",
-    "Perf Week",
-    "Perf Month",
-    "Perf Quarter",
     "RSI (14)",
     "Target Price",
-    "Change %",
     "Debt/Eq",
     "PEG",
     "P/E",
     "Forward P/E",
 ]
-
-
-def _num(x) -> float:
-    if x is None or (isinstance(x, float) and np.isnan(x)):
-        return np.nan
-    if isinstance(x, (int, float, np.integer, np.floating)):
-        return float(x)
-    s = str(x).strip().replace(",", "")
-    if not s or s in {"-", "—"}:
-        return np.nan
-    try:
-        return float(s)
-    except ValueError:
-        return np.nan
 
 
 def _session() -> requests.Session:
@@ -102,7 +92,6 @@ def _session() -> requests.Session:
 
 
 def parse_snapshot_colors(html: str) -> dict:
-    """Return {label: {value, color}} for snapshot-td2 pairs."""
     soup = BeautifulSoup(html, "html.parser")
     out = {}
     for lab_td in soup.select("td.snapshot-td2.cursor-pointer"):
@@ -124,24 +113,108 @@ def parse_snapshot_colors(html: str) -> dict:
     return out
 
 
+def parse_analyst_last2(html: str) -> list[dict]:
+    """Extract last 2 analyst actions (Upgrade/Downgrade/Initiated/…)."""
+    # Dates like Aug-17-26 glued to Action
+    pat = re.compile(
+        r"(?P<date>[A-Z][a-z]{2}-\d{1,2}-\d{2})"
+        r"(?P<action>Upgrade|Downgrade|Initiated|Reiterated|Resumed)"
+        r"(?P<rest>.{0,120}?)"
+        r"(?=(?:[A-Z][a-z]{2}-\d{1,2}-\d{2})(?:Upgrade|Downgrade|Initiated|Reiterated|Resumed)|Show Previous|$)",
+        re.DOTALL,
+    )
+    # Prefer text from body without scripts
+    soup = BeautifulSoup(html, "html.parser")
+    text = soup.get_text("", strip=True)
+    hits = []
+    for m in pat.finditer(text):
+        date_s = m.group("date")
+        action = m.group("action")
+        rest = re.sub(r"\s+", " ", m.group("rest"))[:100]
+        polarity = 0
+        al = action.lower()
+        if al == "upgrade":
+            polarity = 1
+        elif al == "downgrade":
+            polarity = -1
+        elif al == "initiated":
+            # Buy-ish words in rest → +1, Sell/Underperform → -1
+            rl = rest.lower()
+            if any(k in rl for k in ("buy", "outperform", "overweight", "positive")):
+                polarity = 1
+            elif any(k in rl for k in ("sell", "underperform", "underweight", "reduce")):
+                polarity = -1
+        hits.append({
+            "date_raw": date_s,
+            "action": action,
+            "detail": rest,
+            "polarity": polarity,
+            "status": "GOOD" if polarity > 0 else ("BAD" if polarity < 0 else "NEUTRAL"),
+        })
+        if len(hits) >= 2:
+            break
+    return hits
+
+
 def fetch_ticker(ticker: str, sess: requests.Session | None = None) -> dict:
     sess = sess or _session()
     r = sess.get(QUOTE_URL.format(ticker=ticker.upper()), timeout=45)
     r.raise_for_status()
     fields = parse_snapshot_colors(r.text)
-    n_green = sum(1 for f in fields.values() if f["color"] == "green")
-    n_red = sum(1 for f in fields.values() if f["color"] == "red")
-    n_neu = sum(1 for f in fields.values() if f["color"] == "neutral")
+    analysts = parse_analyst_last2(r.text)
+
+    # counts EXCLUDING performance timeframe labels
+    n_green = n_red = n_neu = 0
+    for lab, f in fields.items():
+        if lab in PERF_EXCLUDE or lab.startswith("Perf "):
+            continue
+        if f["color"] == "green":
+            n_green += 1
+        elif f["color"] == "red":
+            n_red += 1
+        else:
+            n_neu += 1
+
     n = max(n_green + n_red + n_neu, 1)
+    key_score = 0
+    for k in KEY_FIELDS:
+        if k in PERF_EXCLUDE:
+            continue
+        c = (fields.get(k) or {}).get("color")
+        if c == "green":
+            key_score += 1
+        elif c == "red":
+            key_score -= 1
+
+    # analyst last-2 aggregate
+    a_pol = [x["polarity"] for x in analysts]
+    while len(a_pol) < 2:
+        a_pol.append(0)
+    if a_pol[0] > 0 and a_pol[1] > 0:
+        a_flag = 1
+    elif a_pol[0] < 0 and a_pol[1] < 0:
+        a_flag = -1
+    elif a_pol[0] > 0:
+        a_flag = 1
+    elif a_pol[0] < 0:
+        a_flag = -1
+    else:
+        a_flag = 0
+
     return {
         "ticker": ticker.upper(),
-        "n_fields": len(fields),
+        "n_fields_scored": n_green + n_red + n_neu,
         "n_green": n_green,
         "n_red": n_red,
         "n_neutral": n_neu,
         "green_minus_red": n_green - n_red,
         "green_pct": n_green / n,
         "red_pct": n_red / n,
+        "key_color_score": key_score,
+        "analyst_last2": analysts,
+        "analyst_1": analysts[0] if analysts else None,
+        "analyst_2": analysts[1] if len(analysts) > 1 else None,
+        "flag_analyst_last2": a_flag,
         "fields": fields,
     }
 
@@ -185,9 +258,11 @@ def run(
         try:
             data = fetch_ticker(t, sess)
             fields = data.pop("fields")
-            detail[t] = fields
+            analysts = data.pop("analyst_last2")
+            a1 = data.pop("analyst_1")
+            a2 = data.pop("analyst_2")
+            detail[t] = {"fields": fields, "analyst_last2": analysts}
             rec = {"asof_date": asof, **data}
-            # expand key fields
             for k in KEY_FIELDS:
                 if k in fields:
                     rec[f"val_{k}"] = fields[k]["value"]
@@ -195,16 +270,21 @@ def run(
                 else:
                     rec[f"val_{k}"] = None
                     rec[f"color_{k}"] = None
-            # score: +1 green, -1 red on key fields only (cleaner signal)
-            key_score = 0
-            for k in KEY_FIELDS:
-                c = rec.get(f"color_{k}")
-                if c == "green":
-                    key_score += 1
-                elif c == "red":
-                    key_score -= 1
-            rec["key_color_score"] = key_score
-            # overall bias flag
+
+            # human-readable last-2 analyst
+            def fmt(a):
+                if not a:
+                    return "none"
+                return f"{a['date_raw']} {a['action']} [{a['status']}] {a['detail'][:60]}"
+
+            rec["val_B19_analyst_last2"] = f"#1 {fmt(a1)} || #2 {fmt(a2)}"
+            rec["flag_B19_analyst_last2"] = data["flag_analyst_last2"]
+            rec["status_B19_analyst_last2"] = (
+                "GOOD" if data["flag_analyst_last2"] > 0 else (
+                    "BAD" if data["flag_analyst_last2"] < 0 else "NEUTRAL"
+                )
+            )
+
             gm = data["green_minus_red"]
             if gm >= 5:
                 rec["flag_colors"] = 1
@@ -215,23 +295,26 @@ def run(
             else:
                 rec["flag_colors"] = 0
                 rec["status_colors"] = "NEUTRAL"
+
             rows.append(rec)
             print(
                 f"[colors] {t} green={data['n_green']} red={data['n_red']} "
-                f"Δ={gm:+d} key_score={key_score:+d} ({i}/{len(tickers)})"
+                f"Δ={gm:+d} key={data['key_color_score']:+d} "
+                f"analyst={rec['status_B19_analyst_last2']} ({i}/{len(tickers)})"
             )
         except Exception as e:
             print(f"[colors] {t} FAIL {e}")
             rows.append({
                 "asof_date": asof,
                 "ticker": t,
-                "n_fields": 0,
                 "n_green": 0,
                 "n_red": 0,
-                "n_neutral": 0,
                 "green_minus_red": 0,
                 "flag_colors": 0,
                 "status_colors": "NEUTRAL",
+                "flag_B19_analyst_last2": 0,
+                "status_B19_analyst_last2": "NEUTRAL",
+                "val_B19_analyst_last2": f"error: {e}",
                 "error": str(e),
             })
         time.sleep(sleep)
@@ -250,23 +333,21 @@ def run(
         f"# Finviz snapshot colors — {asof}",
         "",
         f"- Tickers: **{len(df)}**",
-        "- Source: `quote.ashx` snapshot-td2 (`is-positive` / `is-negative` / neutral)",
-        "- **green_minus_red** = n_green − n_red across all ~84 fields",
-        "- **key_color_score** = same idea restricted to KEY_FIELDS (margins, growth, SMA, perf…)",
+        "- **Perf* / Change % fields excluded** from green/red counts",
+        "- **B19** = last 2 analyst actions (Upgrade=GOOD, Downgrade=BAD)",
         "",
-        "| Ticker | green | red | Δ | key_score | status |",
-        "|--------|------:|----:|--:|----------:|:------:|",
+        "| Ticker | green | red | Δ | key | analyst | status |",
+        "|--------|------:|----:|--:|----:|---------|:------:|",
     ]
     for _, r in df.head(40).iterrows():
         lines.append(
             f"| {r.get('ticker')} | {int(r.get('n_green') or 0)} | {int(r.get('n_red') or 0)} | "
             f"{int(r.get('green_minus_red') or 0):+d} | {int(r.get('key_color_score') or 0):+d} | "
-            f"**{r.get('status_colors', '')}** |"
+            f"{r.get('status_B19_analyst_last2')} | **{r.get('status_colors', '')}** |"
         )
     lines += ["", f"CSV: `{csv_path.relative_to(ROOT)}`"]
     md_path = OUT_DIR / f"{asof}_quote_colors.md"
     md_path.write_text("\n".join(lines), encoding="utf-8")
-
     print(f"[colors] wrote {csv_path}")
     return df
 
@@ -290,7 +371,6 @@ def main():
         tickers = _liquid_tickers()[: args.max_tickers]
     else:
         raise SystemExit("Pass --tickers, --liquid, or --from-ab")
-
     if not tickers:
         raise SystemExit("[colors] empty ticker list")
     run(tickers=tickers, asof=args.date, sleep=args.sleep)
