@@ -8,15 +8,16 @@ if "Sector source footnote" in t and "_label_colored" in t:
     print("already patched")
     raise SystemExit(0)
 
-old_helpers = '''def _sec_dot(direction) -> str:
-    if direction == "up":
-        return "🟢"
-    if direction == "down":
-        return "🔴"
-    return "⚪"
-
-
-def _ensure_price_coverage'''
+old_helpers = (
+    "def _sec_dot(direction) -> str:\n"
+    "    if direction == \"up\":\n"
+    "        return \"🟢\"\n"
+    "    if direction == \"down\":\n"
+    "        return \"🔴\"\n"
+    "    return \"⚪\"\n"
+    "\n\n"
+    "def _ensure_price_coverage"
+)
 
 new_helpers = '''def _sec_dot(direction) -> str:
     if direction == "up":
@@ -66,16 +67,15 @@ if old_helpers not in t:
     raise SystemExit("helpers anchor missing — wrong base file")
 t = t.replace(old_helpers, new_helpers, 1)
 
-# Replace from "## Legend" construction through daily trail loop
-start = t.find('        "## Legend",
-')
-if start < 0:
-    start = t.find('        "## Legend"')
+start = t.find('        "## Legend"')
 if start < 0:
     raise SystemExit("Legend section not found")
 
-# Find the pattern audit attach after trail
-marker = "    if len(out):\n        lines.append(\"\")\n        lines.extend(_pattern_audit(out))"
+marker = (
+    "    if len(out):\n"
+    "        lines.append(\"\")\n"
+    "        lines.extend(_pattern_audit(out))"
+)
 end = t.find(marker, start)
 if end < 0:
     raise SystemExit("pattern audit marker not found")
@@ -87,19 +87,19 @@ replacement = r'''        "## Legend — scores",
         "| score | Sum of AB Part A + B1 feature flags **as of that day** |",
         "| ctx | Sum of context flags P01+P02+P03+P04 that day |",
         "| enr | score + ctx |",
-        "| color on score/enr | 🟢 if >0, 🔴 if <0, ⚪ if 0 |",
+        "| color on score/enr | green if >0, red if <0, white if 0 |",
         "| 1d 3d 1w 2m | forward max-upside vs |max-downside| from that day's close |",
         "",
-        "## Legend — P01…P04 (context flags)",
+        "## Legend — P01 to P04 (context flags)",
         "",
-        "| Flag | Name | +1 (🟢) | −1 (🔴) | Data source |",
-        "|------|------|---------|---------|-------------|",
-        "| **P01** | Peer lead / lag | stock 5d − peer-median 5d > 0 and beats ≥50% peers | lags peers | Correlations peers + price_store OHLC ≤ asof |",
+        "| Flag | Name | +1 (green) | -1 (red) | Data source |",
+        "|------|------|------------|----------|-------------|",
+        "| **P01** | Peer lead / lag | stock 5d - peer-median 5d > 0 and beats >=50% peers | lags peers | Correlations peers + price_store OHLC <= asof |",
         "| **P02** | Peers advancing | peer-basket median 5d > 0 | median 5d < 0 | same peer set |",
         "| **P03** | Industry advancing | industry median 5d > 0 | median 5d < 0 | Finviz Industry roster + price_store |",
-        "| **P04** | Sector supportive | sector board Dir=up | Dir=down | nearest `01_daily/sectors/<board_date>/_BOARD.md` with board_date ≤ asof |",
+        "| **P04** | Sector supportive | sector board Dir=up | Dir=down | nearest `01_daily/sectors/<board_date>/_BOARD.md` with board_date <= asof |",
         "",
-        "Label chips: `🟢LEAD`/`🔴LAG` · `🟢peers↑`/`🔴peers↓` · `🟢ind↑`/`🔴ind↓` · `🟢sec↑`/`🔴sec↓` (⚪ = neutral/no data).",
+        "Label chips: green LEAD / red LAG · peers up/down · ind up/down · sec up/down (white = neutral/no data).",
         "",
     ]
 
@@ -127,7 +127,7 @@ replacement = r'''        "## Legend — scores",
             "",
             f"- Ticker **{ticker}** sector **`{sector_name or '—'}`**, industry **`{industry_name or '—'}`** "
             f"(from latest Finviz export roster).",
-            "- Rule: each asof day uses the **latest** `board_date ≤ asof`. If none, sec=⚪ and P04=0.",
+            "- Rule: each asof day uses the **latest** `board_date <= asof`. If none, sec is white and P04=0.",
             "",
             "| board_date | file | sector row | Dir | Score |",
             "|------------|------|------------|-----|------:|",
@@ -140,13 +140,14 @@ replacement = r'''        "## Legend — scores",
                 if not bd or bd in seen:
                     continue
                 seen.add(bd)
+                sc = r.get("sector_score")
+                sc_s = sc if (sc is not None and __import__("numpy").isfinite(sc)) else "—"
                 lines.append(
                     f"| {bd} | `01_daily/sectors/{bd}/_BOARD.md` | **{r.get('sector') or sector_name or '—'}** | "
-                    f"{r.get('sector_dir') or '—'} | "
-                    f"{r.get('sector_score') if np.isfinite(r.get('sector_score', float('nan'))) else '—'} |"
+                    f"{r.get('sector_dir') or '—'} | {sc_s} |"
                 )
         else:
-            lines.append("| — | _(no sector board ≤ any asof)_ | — | — | — |")
+            lines.append("| — | _(no sector board <= any asof)_ | — | — | — |")
 
         lines += ["", "All sector board files on disk at run time:"]
         if board_dates:
@@ -157,20 +158,9 @@ replacement = r'''        "## Legend — scores",
 
 '''
 
-# Need to include the beginning of lines list - the replacement starts mid-list
-# Find the lines = [ block end of intro bullets before Legend
-intro = t.rfind('f"- Industry:', 0, start)
-if intro < 0:
-    raise SystemExit('industry bullet not found')
-# find end of that string line
-line_end = t.find('\n', intro)
-# after industry bullet there should be "", then ## Legend
-# Keep everything before ## Legend, replace from ## Legend to pattern audit
-
 new_t = t[:start] + replacement + "\n" + t[end:]
 p.write_text(new_t, encoding="utf-8")
 print("patched", p, "bytes", p.stat().st_size)
 assert "_label_colored" in new_t
 assert "Sector source footnote" in new_t
-assert "P01" in new_t and "Peer lead" in new_t
-'}, {
+assert "Peer lead" in new_t
