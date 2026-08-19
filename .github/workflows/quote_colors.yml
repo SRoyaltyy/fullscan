@@ -1,0 +1,91 @@
+name: Quote Colors (Finviz green/red/neutral)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "Comma tickers (optional)"
+        required: false
+        default: ""
+      mode:
+        description: "liquid | from-ab | tickers"
+        required: false
+        default: "from-ab"
+      top:
+        description: "When from-ab: top N by ab score"
+        required: false
+        default: "80"
+      max_tickers:
+        description: "When liquid: cap"
+        required: false
+        default: "150"
+      date:
+        description: "As-of YYYY-MM-DD"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  colors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml
+
+      - name: Scrape snapshot colors
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          MODE="${{ inputs.mode }}"
+          ARGS=()
+          [ -n "${{ inputs.date }}" ] && ARGS+=(--date "${{ inputs.date }}")
+          if [ -n "${{ inputs.tickers }}" ]; then
+            ARGS+=(--tickers "${{ inputs.tickers }}")
+          elif [ "$MODE" = "liquid" ]; then
+            ARGS+=(--liquid --max-tickers "${{ inputs.max_tickers }}")
+          else
+            ARGS+=(--from-ab --top "${{ inputs.top }}")
+          fi
+          echo "CMD: python -m src.quote_colors ${ARGS[*]}"
+          python -m src.quote_colors "${ARGS[@]}"
+
+      - name: Merge into ab_checklist
+        run: |
+          python -m src.ab_merge_extras ${{ inputs.date && format('--date {0}', inputs.date) || '' }} || \
+          python -m src.ab_merge_extras
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quote-colors
+          path: |
+            data/quote_colors/
+            data/ab_checklist/*_merged.*
+          if-no-files-found: warn
+
+      - name: Commit
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/quote_colors/ data/ab_checklist/ || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: quote colors + merge $(date -u +%F)"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
