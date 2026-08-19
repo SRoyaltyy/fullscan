@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-19T17:35:07.023224-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 5.28,
+      "delta_1d": -0.03,
+      "delta_1w": 0.04,
+      "delta_1m": 0.17
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 4.71,
+      "delta_1d": -0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.11
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 2.41,
+      "delta_1d": -0.03,
+      "delta_1w": -0.02,
+      "delta_1m": 0.06
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 2.75,
+      "delta_1d": 0.05,
+      "delta_1w": 0.03,
+      "delta_1m": 0.06
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 3.65,
+      "delta_1d": -0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.08
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 0.317,
+      "delta_1d": 0.162,
+      "delta_1w": -0.408,
+      "delta_1m": 0.042
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 242.73,
+      "delta_1d": 82.46,
+      "delta_1w": 48.8,
+      "delta_1m": -27.63
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-19",
+      "current": 14.89,
+      "delta_1d": -0.95,
+      "delta_1w": 0.34
+    },
+    "vix3m": {
+      "date": "2026-08-19",
+      "current": 18.57,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.802
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 84.4,
+      "pct_1d": -0.64
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 91.57,
+      "pct_1d": 0.6
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 4580.7,
+      "pct_1d": 4.92
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-19",
+      "pct_1d": -0.85,
+      "pct_1m": -2.35
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 7730.5,
+      "pct_1d": 0.21
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 29561.0,
+      "pct_1d": -0.08
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 67460.73,
+          "pct_1d": -2.54
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 25471.15,
+          "pct_1d": 0.07
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 3990.3,
+          "pct_1d": 0.19
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 6869.83,
+          "pct_1d": -1.55
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-18",
+          "last": 9070.0,
+          "pct_1d": -0.04
+        }
+      },
+      "composite_avg": -0.77
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 10743.35,
+          "pct_1d": 0.14
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 26091.33,
+          "pct_1d": -0.14
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 8501.91,
+          "pct_1d": -0.09
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 6444.46,
+          "pct_1d": -0.37
+        }
+      },
+      "composite_avg": -0.11
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.523,
+    "window": "2026-08-12..2026-08-19"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 56.7,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-19 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_markets",
+        "title": "AMD and Intel Shares Plummet, What You Need To Know - StockStory",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdGxxelNzN1V1cXJJUDBuRktnbTAxbnFOV29CTmhGZ2s4UVc1ekVINGdwMGlQLWcwXzBBMU0ySE50bVV0SUNpUEgya2stajV6ekVUQlUtcGJNNzk3dC1ZdU5DRVZYNTlYY2Q3OF9uUGxfb3BUbGd2UDY2QUVTZk93SHprR2hObzlmN0lOTzgyaU1YUF8ybU9ZY2JiWGozdFExMGxESUU3aUwyeF9EZFg5RQ?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:30:05 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Copart Inc. stock underperforms Wednesday when compared to competitors despite daily gains - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUzAwX3hwV2JlYTJIaEtJMm1TdFp5aDJXcmFTenRfQWlLUW5YZmJjVUhIci1QaFlzMmRldjNyV0lMX0hPaFVCbkhUVkpnSFgtSnZVNmkxcGMyanRnanlFOVFLWDJ4V0VVQ2RSbGFjSVZRaFZyNGVkM2EydmQ3anUzcTNWX25BdTJEMTZQM1p3UTYwN2JlX1BBTFh5bkloaGRXRUpubXZKdkNGRVZiaHdPUkNMQlFnN0JrUjR2VVJpQU41NWZlTnJQTjE5cHFlX0tGV1Mzd21sZkwtREdtSUJTRkxINA?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Incyte Stock: Is Wall Street Bullish or Bearish?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/incyte-stock-wall-street-bullish-125045528.html",
+        "published_at": "2026-08-18T12:50:45Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Johnson & Johnson Stock Runs On A Calendar The Market Does Not Set - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQY2YxXy1nOU5CV3RXalprWVF0VkJabFUzYjRPZWk4NzhNRGVxYjZQeHFwMUZpNTFJUENCdnNtbWxQYzhLUjFwcXcxYWZmbHlwMmZpNXpMZkhQMkFhNEF6THlzTF9ldWRnQTlELW1KeTJMTUYzdG41aXdaR3d1blVOUDFCUVEzQXNSazZrMEZWR1N3czFRVURTUUhpcS1IdlRKVmc?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:08:16 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "State Street Corp. stock underperforms Wednesday when compared to competitors - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOLVMwdV9DZmZjV21sbUFvaW5aU3YzN3otRGZ1d3pfLWZBZl84WndmM1FnLVFUSGZmSzh4U2pENWlzMXMtMElvcHZXMVZZRVRHYTlyc2l1SVdwal84ZmlJRjQ4TDRabHRtMWk5a0EtOEpqT20wY2tMOHd4RXpRTVJOajZFdTNtQm1QVTlnWVFKeXo2b2VMemR6dUZramhlZ1BkYkFQRWlvaGltTTloUFBnVTlYR1dpM0IxY1dhV2NHWVdLYlBSU0FlVjVDTUc2VHRDNE5veGtzWEVWRmk1WmZsMzktSVppd0hwd0E?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:49:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Steel Dynamics Inc. stock underperforms Wednesday when compared to competitors - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMVdRdzRCN29HSnprY2RkcF9tNEZwLVBWSXJjcjhmYlJEbl96b1lPWUhBMWQ0RzF3NUVSa0M3YzU2RVk2OEtkZlF5Y1NSUkMxNE1LbXRmcnUxNHdlS0d2LU9wWmY3S0JqLW5TT0V5dGJqZ3NiVHdJTEk5VEhWX19ScE4yS3RZal82OGhsUEpxVEJCa3RTa2NPLWg5cTRSYzFRd3djOHRPNHpfZWxRd3Q0Q29SYTk3MTZwQVNPVWdMWGwtcE9fU1ZqZ1lvRG9jbHFaUTFn?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Spain plans transfer of 500 migrant children from Ceuta to mainland",
+        "url": "https://www.aljazeera.com/news/2026/8/19/spain-plans-transfer-of-500-migrant-children-from-ceuta-to-mainland?traffic_source=rss",
+        "published_at": "Wed, 19 Aug 2026 20:53:55 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Supreme Court rejects Verizon effort to get $46.9M FCC fine refund in location data case",
+        "url": "https://finance.yahoo.com/technology/articles/supreme-court-rejects-verizon-effort-123220803.html",
+        "published_at": "2026-08-18T12:32:20Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stellantis confirms next-gen Jeep Cherokee will be built at Belvidere plant",
+        "url": "https://finance.yahoo.com/small-business/articles/stellantis-confirms-next-gen-jeep-123500846.html",
+        "published_at": "2026-08-18T12:35:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "National debt tops $40 trillion after doubling in less than a decade, Treasury data shows - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA4aVFRcnVzOUk4bTFLdGNYTVgyUHpFYkpia3JLMk5IU2NHaFZpN1BtaWZxYV9Zc2dTMjB0a2Q5UE5zZ1lfN0prUWlMZ0Y3cFdIWEJCTlh6c1hOZmFaWkg1YWZJTFVaaWFiMlIzV2dHZF8tblc1S1N3?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:05:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "CoStar Group Inc. stock rises Wednesday, outperforms market - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSXVjYm0yWDJkUVJVeFZJbEhucDZLTjJKekN0Z2RfYXRBX3BvYkNOdEtHT0NuRUJ1bjd5aDJvSXVSdlJBSmY5eEV3NzBvdGYxMDk5UV9YM2pCMGstdTZpTXV4UjNpeGo4M1Fhb2Z3aktFOGxkTU1TUlhBaWRrV3RnZFpJZExvZGVGVWI5UzFQWDlIcnRGREpkVXNUYl80QzZIbmY5d3hXUWRBclZfck9DMVVrcVM3T1lq?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today, Aug. 19: Moderna Skyrockets 177% on Positive Phase 3 Melanoma Data - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNdm56c1FyUUJNbmtMTUlBU2RtWDBhSDlubFV4ejJsSnRhVkJPLTQ5a1pNNFh6ZUhqeHViZE9FWHJKVmtsR1g4VTVLWXVkY2p1RXNZVjlkQzRya283X1MzTWJpYTF0c2ZWcjdJaWhzU1MwVndjTGI4WVRSZkhCX1NocGpHenJ3TEtjd1pKV19sZmZIdlgwM1N1bWNoQnhpd1NUaUJnX3IzWWF2MmxDRENZOEdoSW9rVWlQN1VvaTZZNC1MTjJvUV9XU3VkRVBoUUtEZWVSaTZBMXVVVmM?oc=5",
+        "published_at": "Wed, 19 Aug 2026 21:14:07 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Autodesk Inc. stock underperforms Wednesday when compared to competitors despite daily gains - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOMk9xTm12eGZaZ0RuMXYyNDE5SkpTNmFYTDV3TmQ5WkVObnpfMXY2UTJoeUZtQjBMMmJRUGJESGlUd1hnaEo3bnhmR0J3dXFjcm1HV0JsNXVMMF8zS0p5bUZta0xXT1ZmdmM0SkMzdTd3Zl94bjByQjBJejJuRUZpZ3czWi02Znl2VG9NR09heXppWW03TDRxSlJpMFdPMGxrRWRfakE2ay00eWFaUXVHQUdWZlZDRERERHc3Rk9MY0Ewc2NwNEJjQy1yQUZTSURCM08wcElYdm1NeTBqaDRIekgzN1gtaFhoLUd5ajYzRzN1MTlZZzBfZDJMUEN0UQ?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:49:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Jacobs Solutions Inc. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZUNsMUM2NWNkUkFxQ3NhanY1R0kzZE02VGV2THpJVXdWYnd4eUl6Q2MxTDVsT2Y2bW9DUWRaTUdEb1lFME1ONWxHU1ZWQVV5SElUM0J6Z25rRjZYTl9RZTN1Zm1BZEVqclZtTnJQeFgyMEE0QVo3SjdfS2R1ckJLMXF3d0FtbFRlc0xTaExCdGRYdVpvQWk3MHhKZzdubGE3RXc4cGh3TTJaUHQ5S25SbHRQNUVzSUJQQkRaNTBXNDlQNE11ajVvdGUwT1VsbWFYTlRSdkh3WV9TaVQyRThUSU12RWI?oc=5",
+        "published_at": "Wed, 19 Aug 2026 21:09:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "‘I brought my Super Bowl ring to the open houses’: Seahawks player shares story of getting his real-estate license",
+        "url": "https://www.marketwatch.com/story/i-brought-my-super-bowl-ring-to-the-open-houses-seahawks-player-shares-story-of-getting-his-real-estate-license-4372785a?mod=mw_rss_topstories",
+        "published_at": "Wed, 19 Aug 2026 21:00:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "USS Lincoln woes highlight US Navy limits in prolonged Iran war: Experts",
+        "url": "https://www.aljazeera.com/news/2026/8/19/uss-lincoln-woes-highlight-us-navy-limits-in-prolonged-iran-war-experts?traffic_source=rss",
+        "published_at": "Wed, 19 Aug 2026 21:01:54 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Moderna, Merck unveil mRNA-based cancer vaccine that cuts spread",
+        "url": "https://www.aljazeera.com/news/2026/8/19/moderna-merck-unveil-mrna-based-cancer-vaccine-that-cuts-spread?traffic_source=rss",
+        "published_at": "Wed, 19 Aug 2026 20:39:14 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Billionaire David Tepper’s Top 5 Holdings Just Revealed",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/billionaire-david-tepper-top-5-123610504.html",
+        "published_at": "2026-08-18T12:36:10Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Reconnaissance Energy Africa reports progress across Namibia, Gabon and Angola operations during Q2",
+        "url": "https://finance.yahoo.com/energy/articles/reconnaissance-energy-africa-reports-progress-123100128.html",
+        "published_at": "2026-08-18T12:31:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Oracle Just Raised Its Dividend for a 12th Straight Year to $2 a Share, Even as AI Spending Pressures Free Cash Flow. Is Larry Ellison's Payout Still Safe?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-just-raised-dividend-12th-123500531.html",
+        "published_at": "2026-08-18T12:35:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Novig posts $125 million in first-week sports prediction market volume",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/novig-posts-125-million-first-122815980.html",
+        "published_at": "2026-08-18T12:28:15Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Michael Saylor Says Don't Invest in Bitcoin Unless You’ll Hold It for Over 4 Years— MSTR Chair Offers No 'Useful Wisdom' for Short-Term Traders (UPDATED)",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/michael-saylor-says-dont-invest-043320815.html",
+        "published_at": "2026-08-18T12:34:25Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Bessent moves to curb Treasury yields, putting new pressure on Warsh's Fed - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNXzEwTmtqMDh4SVVSLWdwUHgzbDF6dVJST2wzY0JHVzhXX0dOZGF0ZjdRLUhfRkZ4cW16ZE5Yb0N6TEZBUC1SbzJOaDBMMDEtOWhEc0MwV1FERWlQLUVCVnZUYk5RdWNPY0J0bkRyMW9qQVFxY2F1MHNkZVU1emdnZUpCYmdzUdIBiwFBVV95cUxOT2NBRklGTmdfOE9SS1NuU3QteFQ2Y1ZvX0E4ZDRZTXpOYlE2VzVsQWRMbzlOTWRQWGVDblRYWHBUXzVKXzFuMlhrd29BWllfN25QS3RvRmgtLXR1N3plNzIxQ2RrOWFQNHlSY0tMbXFUcTN2T3BwTUlMd1ZnNmd5T0JWaEN2WHVnRFJv?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:02:32 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Market Rises On Treasury Move; Biopharma Runs On MRNA, MRK - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQSDk0WFZEcFZJOE9PeU9sR2s3R3A0VGFMdk9RbkI1d0U3RTlDUlU1bnJpTzdxZVJMSGtpYjBndFJvVkx4MXZHT0pNZWlBMlBjNHo2czlrN3ZVTEozTVgyeXd6SWxraHN5bnRiRGdMQlh6NzFqaFlJRnQ2MG16elZOVXV5bnpzVGtHNkUwS1dUUXI1c1MyOXhiT3BzWEZPN2lNUEc1NnhxNlhtMmkxRVpxYmYzTVVsTFRwS2NHM3F5M0ZhNmRoU3h1VHVDUlJJd0hicU9QOHpoc0ZTdw?oc=5",
+        "published_at": "Wed, 19 Aug 2026 21:07:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "What Advisors Should Weigh Before Buying Active ETFs - ETF Database",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeHlfdlFVbi1fSWc1RklmNjVaSGRwSy1sQmhFOTFJWkpsVElzY2VZNU5lNDRvSEY1YXJBOHVFS18zUGttdmhTUUdxeS1pQU0xbTVTcUlOOTNwU2VJdHJjNXBmT3ByX053NTY2YmcwTEdNVHNMdkVZZ2xfa184LTFmaE5qVEZCY3kw?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:50:44 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Dell Technologies Inc. Cl C stock falls Wednesday, underperforms market - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOM0pwRzRhaWVseGxodEVhSUs3SDJtNGExcnFpVTMxTkQ0MFBnOURfMFhHbnp0UXcyZ3Z4VkUyLTV4TS04eF82bUVPX0hlZ3piS0ktRDFCY0dBbkN5dF9UWEFxM0M2ZHAza2NzbHVGUHF3em50blJ2a1dJVnNnYUlZa0ZwOV9aNHdqeVJVejNYRU5QYUxRa2VGVGdWR09MZzh2TFlTNE1JQXBHbjMwYWtTZ3pCRGhyUFlzYlNXeWE0c3lWb3FrV2pkNUVKY3F4SDA1a0xtb2FrWGpQM1EtZGQ3RA?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:32:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Delta Air Lines Inc. stock underperforms Wednesday when compared to competitors - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOWTYyWU9ZTW0tR2pwWHo0V2hzcC1SNlRXS1UtT2VpQm9xR1Z1T1dDdGFyejZoVmkyRFRKMFBUSmpqVGZyNDVlZVFCZjlyVDROZ19pTWJoX1FXSWpEZjZpdFVmczNGXzh6dFNCbVdBY3lURmFxM0JITDRjMkY0Z0lsX3V5T1FSRVl0eW9vRU5qSXlTZ21PdEdXQjk3czFLemdiS3B0Y2NkNGZpaHRRWnZjSUZrN3A0bDdSaExJRWhWTUR1UDBPZF9BOWJmTDZ0N3E2MkV4RmJEUkFKQ1h6dXpMbmFpcW9FTjZkN0NFRg?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:49:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Ford Motor Co. stock underperforms Wednesday when compared to competitors despite daily gains - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOVnJGQjhtYVB6T29DZEVYZ0NEMmlFV2dFX2ZzbzBucElLZ1ZEcFRueUVyUFN6dUtkcVpfdW1Fd2tIRFJsblBoN3NZb2xsRmdsb0lHOERzRERSQWVBVXNIVmVGbUxVMkpxTHZoY1ZIZVpKNlg4YXdZamt0MWtFVWlqdDc2Z3dsR3lpRkx5NkRmRWxaMjQ0cThZdkxwOTVXV2RURmpHSkRfS01XTTZvLXFaTTlKRFVISmt5Z1RaczhZdENEdFU5LTVfcTlzN3RjUzJYaFAwakE2bF96alVMeVJFWXdTVndmNkVDNXNtYVNORnBadm1UZWdGMk9wU3pHcXc?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:49:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Omnicom Group Inc. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQZFpNeGhZcGE5dDBOaXVER2szZmRoXzVGLXpCX0dialRlbFRhdTdRb3ZpYkJTR2ZxazBSM3VJQzk2eFFoR25WMl9mODE4TVljRGNHSkl2cmJteXZDYy05Ukx1VTRHdzdoVTB0MFdYWW5tbkRVZFVTVUJqeGRoUXFtSFA5a1ZnYXUzZFFrOFc3LVdaeENiek5VUVl6V19ZWWRQOEhtandCMmh4MjB4Nlp1bndtcEtTQzJIRE0yYnExM1AtUUxQakZhdEExa1dHZ29qd09MOFFWY2Q3dGM2MEtTZQ?oc=5",
+        "published_at": "Wed, 19 Aug 2026 21:03:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Trump plays down bond market fears, pushes interest rate cuts - The Hill",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdHUzRnFVUzNDZU5MeG9GRFoyaDROOWNXTU9GQWRkX3VySDlIZjhvQkF4LVNoOE1JS1ZieWRWa2x4ZTZ4UXk3V211VFU3YXVXWDIxWVdhMzJack9NODhaOTIwMEZ5a0ZiT3puTF9VYXdqRGhkaFprMnZRRFVTQ0FjRjBwWGczM3VhU1VRRmZSQU12QdIBlwFBVV95cUxQUzNJNVVIa2w2TE9GY1lJWVNyeUhJRUs1MGJfSmhZVlJSY0dQYWpHSnZqdXZRb0FvNEpBNjIzQ2w4b2tMYmxsSThsc19DRktKbTlaVXd3dm50WFozdlVfeWpmRkRYWkt6c1VCQ2pQeFpkSkl6c3dTMXNkYlBSbERCSHFkQWhnbGdweG9YR3hWTld1NjhqSXU4?oc=5",
+        "published_at": "Wed, 19 Aug 2026 20:25:00 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-19",
+      "open": 7716.74,
+      "high": 7743.93,
+      "low": 7700.07,
+      "close": 7707.98,
+      "pct_change": 0.21,
+      "prev_close": 7691.76,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.57,
+        "intraday_low_pct": 0.11,
+        "intraday_high_pct": 0.68,
+        "close_position_in_range": 0.18
+      }
+    },
+    "DOW": {
+      "date": "2026-08-19",
+      "open": 53463.47,
+      "high": 53710.06,
+      "low": 53399.53,
+      "close": 53463.05,
+      "pct_change": 0.22,
+      "prev_close": 53343.4,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.58,
+        "intraday_low_pct": 0.11,
+        "intraday_high_pct": 0.69,
+        "close_position_in_range": 0.2
+      }
+    },
+    "NDX": {
+      "date": "2026-08-19",
+      "open": 26393.89,
+      "high": 26456.78,
+      "low": 26185.13,
+      "close": 26331.09,
+      "pct_change": 0.16,
+      "prev_close": 26289.71,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 1.04,
+        "intraday_low_pct": -0.4,
+        "intraday_high_pct": 0.64,
+        "close_position_in_range": 0.54
+      }
+    }
+  }
+}

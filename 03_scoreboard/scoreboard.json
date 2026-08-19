@@ -3721,6 +3721,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-19",
+          "actual_pct": -1.0,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -6048,17 +6060,63 @@
         "B7_OIL_DOLLAR": -0.5
       },
       "leading_sum": -9.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7716.74,
+      "actual_close": 7707.98,
+      "actual_pct_change": 0.21,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": true,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -2.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -0.5,
+          "status": "miss"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-19_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -6085,7 +6143,16 @@
           "magnitude_band": "mild",
           "confidence": 0.4
         }
-      }
+      },
+      "ops_fail": false,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": null,
+      "key_interaction": null,
+      "knowable_at_9am": null,
+      "attribution_contested": null,
+      "outlier_watch": null,
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
