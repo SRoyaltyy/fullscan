@@ -1,4 +1,17 @@
-"""Part A (OHLC) + Part B1 (Finviz export) — feature checklist with explicit session dates.
+"""Part A (OHLC) + Part B1 (Finviz export) — daily feature checklist.
+
+Framing rules (asof = one trading day, backtestable):
+
+* Body R:G and Volume R:G use **exactly two connected sessions** ending on asof
+  (prev session + asof). Never a multi-day sum window.
+
+* RSI: direction of the cross only.
+  - Cross **up** through 30 or 50 → GOOD
+  - Cross **down** through 50 or 70 → BAD
+
+* Max-downside / structure: last ~3 months split into **3 equal sections**;
+  take the **lowest low** in each section; compare highest-of-lows vs lowest-of-lows.
+  Tight span of lows or rising lows (uptrend of troughs) → GOOD.
 
 Gate: Market Cap > $80M, Average Volume > 500k shares
 Finviz units: Market Cap = millions USD; Average Volume = thousands of shares
@@ -29,8 +42,8 @@ ET = ZoneInfo(config.TZ)
 
 MCAP_MIN = 80_000_000.0
 ADV_MIN = 500_000.0
-LOOKBACK_BODY = 10
-LOOKBACK_DD = 42
+LOOKBACK_DD_BARS = 63   # ~3 months trading days → 3×21 sections
+SECTION_BARS = 21
 LOOKBACK_RVOL = 20
 
 FEATURE_ORDER = [
@@ -38,15 +51,15 @@ FEATURE_ORDER = [
     "A02_rsi_cross_30",
     "A03_rsi_cross_50",
     "A04_rsi_cross_70",
-    "A05_body_red_green_ratio",
-    "A06_volume_red_green_ratio",
+    "A05_body_red_green_2day",
+    "A06_volume_red_green_2day",
     "A07_rvol",
     "A08_bollinger_position",
     "A09_above_sma50",
     "A10_sma20_50_80_stack",
-    "A11_max_downside_2m",
-    "A12_green_body_vs_wick",
-    "A13_red_body_vs_wick",
+    "A11_three_section_lows",
+    "A12_green_body_vs_wick_2day",
+    "A13_red_body_vs_wick_2day",
     "B01_eps_surprise",
     "B02_revenue_surprise",
     "B03_sales",
@@ -61,6 +74,8 @@ FEATURE_ORDER = [
     "B12_institutional_transactions",
     "B13_short_float",
     "B14_earnings_date",
+    "B17_eps_surprise_pair",
+    "B18_rev_surprise_pair",
 ]
 
 
@@ -165,6 +180,126 @@ def _cross(prev: float, now: float, level: float) -> str:
     return "at"
 
 
+def _pair_body_vol(row_a: pd.Series, row_b: pd.Series, d_a: str, d_b: str) -> dict:
+    """Exactly two connected sessions: d_a then d_b (asof)."""
+    def one(row, d):
+        o, h, l, cl = float(row["open"]), float(row["high"]), float(row["low"]), float(row["close"])
+        vol = float(row["volume"]) if "volume" in row.index and pd.notna(row.get("volume")) else np.nan
+        body = cl - o
+        if body > 0:
+            color = "GREEN"
+        elif body < 0:
+            color = "RED"
+        else:
+            color = "DOJI"
+        rng = h - l
+        upper_w = h - max(o, cl)
+        lower_w = min(o, cl) - l
+        return {
+            "d": d, "o": o, "h": h, "l": l, "c": cl, "vol": vol,
+            "body": body, "color": color, "rng": rng,
+            "upper_w": upper_w, "lower_w": lower_w, "body_abs": abs(body),
+        }
+
+    a, b = one(row_a, d_a), one(row_b, d_b)
+    body_g = body_r = 0.0
+    vol_g = vol_r = 0.0
+    for s in (a, b):
+        if s["color"] == "GREEN":
+            body_g += s["body"]
+            if np.isfinite(s["vol"]):
+                vol_g += s["vol"]
+        elif s["color"] == "RED":
+            body_r += -s["body"]
+            if np.isfinite(s["vol"]):
+                vol_r += s["vol"]
+        else:
+            if np.isfinite(s["vol"]):
+                vol_g += s["vol"] * 0.5
+                vol_r += s["vol"] * 0.5
+
+    body_rg = body_g / body_r if body_r > 1e-12 else (99.0 if body_g > 0 else 1.0)
+    vol_rg = vol_g / vol_r if vol_r > 1e-12 else (99.0 if vol_g > 0 else np.nan)
+
+    # wick fractions only on the colored candle(s) inside the pair
+    def frac_body_wick(s):
+        if s["rng"] <= 0:
+            return np.nan, np.nan
+        return s["body_abs"] / s["rng"], (s["upper_w"] + s["lower_w"]) / s["rng"]
+
+    g_body = g_wick = r_body = r_wick = np.nan
+    g_parts_b, g_parts_w, r_parts_b, r_parts_w = [], [], [], []
+    for s in (a, b):
+        bf, wf = frac_body_wick(s)
+        if s["color"] == "GREEN" and np.isfinite(bf):
+            g_parts_b.append(bf)
+            g_parts_w.append(wf)
+        if s["color"] == "RED" and np.isfinite(bf):
+            r_parts_b.append(bf)
+            r_parts_w.append(wf)
+    if g_parts_b:
+        g_body, g_wick = float(np.mean(g_parts_b)), float(np.mean(g_parts_w))
+    if r_parts_b:
+        r_body, r_wick = float(np.mean(r_parts_b)), float(np.mean(r_parts_w))
+
+    trail = (
+        f"{a['d']}:{a['color']}:O={a['o']:.4f},C={a['c']:.4f},body={a['body']:+.4f},vol={a['vol']}; "
+        f"{b['d']}:{b['color']}:O={b['o']:.4f},C={b['c']:.4f},body={b['body']:+.4f},vol={b['vol']}"
+    )
+    return {
+        "d_a": d_a, "d_b": d_b,
+        "a": a, "b": b,
+        "body_rg": body_rg, "body_g": body_g, "body_r": body_r,
+        "vol_rg": vol_rg, "vol_g": vol_g, "vol_r": vol_r,
+        "g_body_frac": g_body, "g_wick_frac": g_wick,
+        "r_body_frac": r_body, "r_wick_frac": r_wick,
+        "trail": trail,
+    }
+
+
+def _three_section_lows(df: pd.DataFrame) -> dict:
+    """Last LOOKBACK_DD_BARS bars → 3 equal sections; lowest low in each."""
+    if "low" not in df.columns:
+        return {"ok": False}
+    win = df.tail(LOOKBACK_DD_BARS)
+    if len(win) < SECTION_BARS * 2:
+        return {"ok": False, "n": len(win)}
+    # use as many bars as possible, split into 3 contiguous thirds
+    n = len(win)
+    n = n - (n % 3)
+    win = win.iloc[-n:]
+    size = n // 3
+    sections = []
+    for i in range(3):
+        part = win.iloc[i * size:(i + 1) * size]
+        idx = part["low"].astype(float).idxmin()
+        low_px = float(part.loc[idx, "low"])
+        sections.append({
+            "i": i + 1,
+            "start": part.index[0].date().isoformat(),
+            "end": part.index[-1].date().isoformat(),
+            "low_date": idx.date().isoformat() if hasattr(idx, "date") else str(idx)[:10],
+            "low_px": low_px,
+        })
+    lows = [s["low_px"] for s in sections]
+    lo_min, lo_max = min(lows), max(lows)
+    span = (lo_max - lo_min) / lo_min if lo_min > 0 else np.nan
+    # rising lows: section3 low >= section2 >= section1
+    rising = lows[2] >= lows[1] >= lows[0]
+    flatish = np.isfinite(span) and span <= 0.12  # ≤12% between highest & lowest trough
+    return {
+        "ok": True,
+        "sections": sections,
+        "lows": lows,
+        "span": span,
+        "rising_lows": rising,
+        "flatish": flatish,
+        "window_start": win.index[0].date().isoformat(),
+        "window_end": win.index[-1].date().isoformat(),
+        "n_bars": n,
+    }
+
+
 def _part_a(ohlc: pd.DataFrame) -> dict:
     empty = {"ok": False}
     if ohlc is None or ohlc.empty:
@@ -187,59 +322,9 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
     d_now = df.index[-1].date().isoformat()
     d_prev = df.index[-2].date().isoformat() if len(df) > 1 else None
 
-    # ---- last N sessions: per-candle audit trail ----
-    tail = df.tail(LOOKBACK_BODY)
-    body_sessions = []   # dated list for A05
-    vol_sessions = []    # dated list for A06
-    wick_sessions = []   # dated list for A12/A13
-    body_g = body_r = 0.0
-    vol_g = vol_r = 0.0
-    green_dates = []
-    red_dates = []
-    doji_dates = []
+    pair = _pair_body_vol(df.iloc[-2], df.iloc[-1], d_prev, d_now)
 
-    for dt, row in tail.iterrows():
-        d = dt.date().isoformat()
-        o, h, l, cl = float(row["open"]), float(row["high"]), float(row["low"]), float(row["close"])
-        vol = float(row["volume"]) if "volume" in tail.columns and pd.notna(row.get("volume")) else np.nan
-        body = cl - o
-        rng = h - l
-        body_abs = abs(body)
-        upper_w = h - max(o, cl)
-        lower_w = min(o, cl) - l
-        if body > 0:
-            color = "GREEN"
-            body_g += body
-            green_dates.append(d)
-            if np.isfinite(vol):
-                vol_g += vol
-        elif body < 0:
-            color = "RED"
-            body_r += -body
-            red_dates.append(d)
-            if np.isfinite(vol):
-                vol_r += vol
-        else:
-            color = "DOJI"
-            doji_dates.append(d)
-            if np.isfinite(vol):
-                vol_g += vol * 0.5
-                vol_r += vol * 0.5
-
-        body_sessions.append(
-            f"{d}:{color}:O={o:.4f},C={cl:.4f},body={body:+.4f}"
-        )
-        vol_sessions.append(
-            f"{d}:{color}:vol={vol:.0f}" if np.isfinite(vol) else f"{d}:{color}:vol=n/a"
-        )
-        wick_sessions.append(
-            f"{d}:{color}:body={body_abs:.4f},upperW={upper_w:.4f},lowerW={lower_w:.4f},range={rng:.4f}"
-        )
-
-    body_rg = body_g / body_r if body_r > 1e-12 else (99.0 if body_g > 0 else 1.0)
-    vol_rg = vol_g / vol_r if vol_r > 1e-12 else (99.0 if vol_g > 0 else np.nan)
-
-    # RVOL: today vs prior 20 sessions average volume (exclude today from avg)
+    # RVOL: asof vol / mean of prior 20 (exclude asof)
     if v.notna().sum() >= LOOKBACK_RVOL + 1:
         today_vol = float(v.iloc[-1])
         avg20 = float(v.iloc[-(LOOKBACK_RVOL + 1):-1].mean())
@@ -248,8 +333,7 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
         rvol_window_end = v.index[-2].date().isoformat()
     else:
         today_vol = float(v.iloc[-1]) if len(v) else np.nan
-        avg20 = np.nan
-        rvol = np.nan
+        avg20 = rvol = np.nan
         rvol_window_start = rvol_window_end = None
 
     sma20 = _sma(c, 20)
@@ -276,44 +360,7 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
     else:
         stack = "unknown"
 
-    # max DD window: last LOOKBACK_DD sessions
-    win = c.tail(LOOKBACK_DD)
-    dd_window_start = win.index[0].date().isoformat()
-    dd_window_end = win.index[-1].date().isoformat()
-    if len(win) >= 5:
-        peak_i = int(win.values.argmax())
-        peak = float(win.iloc[peak_i])
-        after = win.iloc[peak_i:]
-        trough_i = int(after.values.argmin())
-        trough = float(after.iloc[trough_i])
-        max_dd = trough / peak - 1.0 if peak > 0 else np.nan
-        dd_peak = win.index[peak_i].date().isoformat()
-        dd_trough = after.index[trough_i].date().isoformat()
-        dd_peak_px = peak
-        dd_trough_px = trough
-    else:
-        max_dd = np.nan
-        dd_peak = dd_trough = None
-        dd_peak_px = dd_trough_px = np.nan
-
-    # body/wick fractions over same LOOKBACK_BODY window
-    rng_s = (tail["high"] - tail["low"]).replace(0, np.nan)
-    body_abs_s = (tail["close"] - tail["open"]).abs()
-    upper_w_s = tail["high"] - tail[["open", "close"]].max(axis=1)
-    lower_w_s = tail[["open", "close"]].min(axis=1) - tail["low"]
-    gmask = tail["close"] > tail["open"]
-    rmask = tail["close"] < tail["open"]
-
-    def frac(mask, num, den):
-        if mask.sum() == 0:
-            return np.nan
-        n, d = float(num[mask].sum()), float(den[mask].sum())
-        return n / d if d > 0 else np.nan
-
-    g_body = frac(gmask, body_abs_s, rng_s)
-    r_body = frac(rmask, body_abs_s, rng_s)
-    g_wick = frac(gmask, upper_w_s + lower_w_s, rng_s)
-    r_wick = frac(rmask, upper_w_s + lower_w_s, rng_s)
+    sec = _three_section_lows(df)
 
     return {
         "ok": True,
@@ -326,20 +373,7 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
         "cross_30": _cross(rsi_prev, rsi_now, 30),
         "cross_50": _cross(rsi_prev, rsi_now, 50),
         "cross_70": _cross(rsi_prev, rsi_now, 70),
-        "body_rg": body_rg,
-        "body_g": body_g,
-        "body_r": body_r,
-        "body_sessions": body_sessions,          # list[str] dated
-        "green_dates": green_dates,
-        "red_dates": red_dates,
-        "doji_dates": doji_dates,
-        "vol_rg": vol_rg,
-        "vol_g": vol_g,
-        "vol_r": vol_r,
-        "vol_sessions": vol_sessions,
-        "wick_sessions": wick_sessions,
-        "window_start": tail.index[0].date().isoformat(),
-        "window_end": tail.index[-1].date().isoformat(),
+        "pair": pair,
         "rvol": rvol,
         "rvol_today_vol": today_vol,
         "rvol_avg20": avg20,
@@ -355,17 +389,7 @@ def _part_a(ohlc: pd.DataFrame) -> dict:
         "sma50": s50,
         "sma80": s80,
         "sma_stack": stack,
-        "max_dd_2m": max_dd,
-        "dd_window_start": dd_window_start,
-        "dd_window_end": dd_window_end,
-        "dd_peak_date": dd_peak,
-        "dd_trough_date": dd_trough,
-        "dd_peak_px": dd_peak_px,
-        "dd_trough_px": dd_trough_px,
-        "g_body_frac": g_body,
-        "g_wick_frac": g_wick,
-        "r_body_frac": r_body,
-        "r_wick_frac": r_wick,
+        "sections": sec,
     }
 
 
@@ -381,24 +405,25 @@ def _pass_a(a: dict) -> dict:
         elif rsi >= 70:
             z["A01_rsi_value"] = -1
 
-    def cross_score(state: str, level: int) -> int:
-        if state == "cross_up":
-            return 1
-        if state == "cross_down":
-            return -1 if level in (30, 50) else 1
-        return 0
+    # Directional crosses only (user rule)
+    c30, c50, c70 = a["cross_30"], a["cross_50"], a["cross_70"]
+    z["A02_rsi_cross_30"] = 1 if c30 == "cross_up" else 0
+    if c50 == "cross_up":
+        z["A03_rsi_cross_50"] = 1
+    elif c50 == "cross_down":
+        z["A03_rsi_cross_50"] = -1
+    if c70 == "cross_down":
+        z["A04_rsi_cross_70"] = -1
+    elif c70 == "cross_up":
+        z["A04_rsi_cross_70"] = -1  # entering overbought from below — caution
 
-    z["A02_rsi_cross_30"] = cross_score(a["cross_30"], 30)
-    z["A03_rsi_cross_50"] = cross_score(a["cross_50"], 50)
-    z["A04_rsi_cross_70"] = cross_score(a["cross_70"], 70)
-
-    br = a["body_rg"]
+    pair = a["pair"]
+    br = pair["body_rg"]
     if np.isfinite(br):
-        z["A05_body_red_green_ratio"] = 1 if br > 1.0 else (-1 if br < 0.8 else 0)
-
-    vr = a["vol_rg"]
+        z["A05_body_red_green_2day"] = 1 if br > 1.0 else (-1 if br < 1.0 else 0)
+    vr = pair["vol_rg"]
     if np.isfinite(vr):
-        z["A06_volume_red_green_ratio"] = 1 if vr > 1.0 else (-1 if vr < 0.8 else 0)
+        z["A06_volume_red_green_2day"] = 1 if vr > 1.0 else (-1 if vr < 1.0 else 0)
 
     rv = a["rvol"]
     if np.isfinite(rv):
@@ -419,20 +444,19 @@ def _pass_a(a: dict) -> dict:
     elif st.startswith("bear_aligned"):
         z["A10_sma20_50_80_stack"] = -1
 
-    dd = a["max_dd_2m"]
-    if np.isfinite(dd):
-        if -0.25 <= dd <= -0.08:
-            z["A11_max_downside_2m"] = 1
-        elif dd < -0.40:
-            z["A11_max_downside_2m"] = -1
+    sec = a.get("sections") or {}
+    if sec.get("ok"):
+        if sec.get("rising_lows") or sec.get("flatish"):
+            z["A11_three_section_lows"] = 1
+        elif np.isfinite(sec.get("span", np.nan)) and sec["span"] > 0.25:
+            z["A11_three_section_lows"] = -1  # troughs far apart / unstable floor
 
-    gb, gw = a["g_body_frac"], a["g_wick_frac"]
+    gb, gw = pair.get("g_body_frac"), pair.get("g_wick_frac")
     if np.isfinite(gb) and np.isfinite(gw):
-        z["A12_green_body_vs_wick"] = 1 if gb >= gw else -1
-
-    rb, rw = a["r_body_frac"], a["r_wick_frac"]
+        z["A12_green_body_vs_wick_2day"] = 1 if gb >= gw else -1
+    rb, rw = pair.get("r_body_frac"), pair.get("r_wick_frac")
     if np.isfinite(rb) and np.isfinite(rw):
-        z["A13_red_body_vs_wick"] = -1 if rb >= rw else 1
+        z["A13_red_body_vs_wick_2day"] = -1 if rb >= rw else 1
 
     return z
 
@@ -453,10 +477,16 @@ def _part_b1(row: pd.Series, prior, prior_date: str | None) -> dict:
     income = g("Income")
     profit_m = g("Profit Margin")
     ed = row.get("Earnings Date", "")
+    eps = g("EPS Surprise")
+    rev = g("Revenue Surprise")
+    eps_p = gp("EPS Surprise")
+    rev_p = gp("Revenue Surprise")
 
     return {
-        "eps_surprise": g("EPS Surprise"),
-        "rev_surprise": g("Revenue Surprise"),
+        "eps_surprise": eps,
+        "rev_surprise": rev,
+        "eps_surprise_prev": eps_p,
+        "rev_surprise_prev": rev_p,
         "sales": g("Sales"),
         "income": income,
         "profit_margin": profit_m,
@@ -502,6 +532,24 @@ def _pass_b1(b: dict) -> dict:
     if np.isfinite(sf) and sf >= 20:
         z["B13_short_float"] = 1
     z["B14_earnings_date"] = 0
+
+    # Last-2 revenue/EPS surprises when prior export has a different print
+    def pair_flag(now, prev):
+        s_now, s_prev = signed(now), signed(prev)
+        if s_now == 0 and s_prev == 0:
+            return 0
+        if s_now > 0 and s_prev > 0:
+            return 1
+        if s_now < 0 and s_prev < 0:
+            return -1
+        if s_now > 0:
+            return 1
+        if s_now < 0:
+            return -1
+        return s_prev
+
+    z["B17_eps_surprise_pair"] = pair_flag(b["eps_surprise"], b["eps_surprise_prev"])
+    z["B18_rev_surprise_pair"] = pair_flag(b["rev_surprise"], b["rev_surprise_prev"])
     return z
 
 
@@ -509,12 +557,20 @@ def _value_map(a: dict, b: dict) -> dict:
     if not a.get("ok"):
         a_vals = {k: "no_ohlc" for k in FEATURE_ORDER if k.startswith("A")}
     else:
-        green = ",".join(a["green_dates"]) or "none"
-        red = ",".join(a["red_dates"]) or "none"
-        doji = ",".join(a["doji_dates"]) or "none"
-        body_trail = " | ".join(a["body_sessions"])
-        vol_trail = " | ".join(a["vol_sessions"])
-        wick_trail = " | ".join(a["wick_sessions"])
+        p = a["pair"]
+        sec = a.get("sections") or {}
+        sec_txt = "n/a"
+        if sec.get("ok"):
+            bits = [
+                f"S{s['i']}[{s['start']}→{s['end']}] low={s['low_date']}@{s['low_px']:.4f}"
+                for s in sec["sections"]
+            ]
+            sec_txt = (
+                f"window={sec['window_start']}→{sec['window_end']} ({sec['n_bars']} bars); "
+                + "; ".join(bits)
+                + f" | lows={sec['lows']} span={(sec['span'] if np.isfinite(sec['span']) else float('nan')):.2%} "
+                + f"rising_lows={sec['rising_lows']} flatish(≤12%)={sec['flatish']}"
+            )
 
         a_vals = {
             "A01_rsi_value": (
@@ -523,35 +579,32 @@ def _value_map(a: dict, b: dict) -> dict:
             ),
             "A02_rsi_cross_30": (
                 f"{a['cross_30']} | RSI {a['rsi_prev']:.2f}@{a['prev_session']} → "
-                f"{a['rsi']:.2f}@{a['asof_session']} vs level 30"
+                f"{a['rsi']:.2f}@{a['asof_session']} vs 30 | rule: cross_up=GOOD"
             ),
             "A03_rsi_cross_50": (
                 f"{a['cross_50']} | RSI {a['rsi_prev']:.2f}@{a['prev_session']} → "
-                f"{a['rsi']:.2f}@{a['asof_session']} vs level 50"
+                f"{a['rsi']:.2f}@{a['asof_session']} vs 50 | rule: cross_up=GOOD cross_down=BAD"
             ),
             "A04_rsi_cross_70": (
                 f"{a['cross_70']} | RSI {a['rsi_prev']:.2f}@{a['prev_session']} → "
-                f"{a['rsi']:.2f}@{a['asof_session']} vs level 70"
+                f"{a['rsi']:.2f}@{a['asof_session']} vs 70 | rule: cross_down=BAD"
             ),
-            "A05_body_red_green_ratio": (
-                f"ratio={a['body_rg']:.3f} (= sum GREEN bodies / sum RED bodies); "
-                f"GREEN_sum={a['body_g']:.4f} dates=[{green}]; "
-                f"RED_sum={a['body_r']:.4f} dates=[{red}]; "
-                f"DOJI=[{doji}]; window={a['window_start']}→{a['window_end']} ({LOOKBACK_BODY} sessions); "
-                f"sessions: {body_trail}"
+            "A05_body_red_green_2day": (
+                f"STRICT 2-day pair only: {p['d_a']} + {p['d_b']}; "
+                f"ratio=GREEN_body_sum/RED_body_sum={p['body_rg']:.3f} "
+                f"(G={p['body_g']:.4f} R={p['body_r']:.4f}); {p['trail']}"
             ),
-            "A06_volume_red_green_ratio": (
-                f"ratio={a['vol_rg']:.3f} if finite else n/a; "
-                f"GREEN_vol_sum={a['vol_g']:.0f} dates=[{green}]; "
-                f"RED_vol_sum={a['vol_r']:.0f} dates=[{red}]; "
-                f"window={a['window_start']}→{a['window_end']}; sessions: {vol_trail}"
-                if np.isfinite(a["vol_rg"]) else
-                f"n/a; window={a['window_start']}→{a['window_end']}; sessions: {vol_trail}"
+            "A06_volume_red_green_2day": (
+                f"STRICT 2-day pair only: {p['d_a']} + {p['d_b']}; "
+                f"ratio=GREEN_vol/RED_vol={p['vol_rg']:.3f} "
+                f"(Gvol={p['vol_g']:.0f} Rvol={p['vol_r']:.0f}); {p['trail']}"
+                if np.isfinite(p["vol_rg"]) else
+                f"n/a vol; pair {p['d_a']}+{p['d_b']}; {p['trail']}"
             ),
             "A07_rvol": (
                 f"RVOL={a['rvol']:.3f} on {a['asof_session']}: "
                 f"today_vol={a['rvol_today_vol']:.0f} / avg20={a['rvol_avg20']:.0f} "
-                f"(avg window {a['rvol_window_start']}→{a['rvol_window_end']}, excludes today)"
+                f"(avg window {a['rvol_window_start']}→{a['rvol_window_end']}, excludes asof)"
                 if np.isfinite(a["rvol"]) else "n/a"
             ),
             "A08_bollinger_position": (
@@ -569,30 +622,23 @@ def _value_map(a: dict, b: dict) -> dict:
                 f"{a['sma_stack']} on {a['asof_session']}: "
                 f"SMA20={a['sma20']:.4f} SMA50={a['sma50']:.4f} SMA80={a['sma80']:.4f}"
             ),
-            "A11_max_downside_2m": (
-                f"maxDD={a['max_dd_2m']:+.2%} inside window {a['dd_window_start']}→{a['dd_window_end']} "
-                f"({LOOKBACK_DD} sessions): peak {a['dd_peak_date']} @ {a['dd_peak_px']:.4f} → "
-                f"trough {a['dd_trough_date']} @ {a['dd_trough_px']:.4f}"
-                if np.isfinite(a["max_dd_2m"]) else "n/a"
+            "A11_three_section_lows": sec_txt,
+            "A12_green_body_vs_wick_2day": (
+                f"pair {p['d_a']}+{p['d_b']}: GREEN body_frac={p['g_body_frac']} wick_frac={p['g_wick_frac']}"
             ),
-            "A12_green_body_vs_wick": (
-                f"GREEN dates=[{green}] body_frac={a['g_body_frac']:.3f} wick_frac={a['g_wick_frac']:.3f}; "
-                f"window={a['window_start']}→{a['window_end']}; sessions: {wick_trail}"
-                if np.isfinite(a.get("g_body_frac", np.nan)) else
-                f"no GREEN candles in window {a['window_start']}→{a['window_end']}"
-            ),
-            "A13_red_body_vs_wick": (
-                f"RED dates=[{red}] body_frac={a['r_body_frac']:.3f} wick_frac={a['r_wick_frac']:.3f}; "
-                f"window={a['window_start']}→{a['window_end']}; sessions: {wick_trail}"
-                if np.isfinite(a.get("r_body_frac", np.nan)) else
-                f"no RED candles in window {a['window_start']}→{a['window_end']}"
+            "A13_red_body_vs_wick_2day": (
+                f"pair {p['d_a']}+{p['d_b']}: RED body_frac={p['r_body_frac']} wick_frac={p['r_wick_frac']}"
             ),
         }
 
     prior_d = b.get("prior_export_date") or "none"
     b_vals = {
-        "B01_eps_surprise": b["eps_surprise"],
-        "B02_revenue_surprise": b["rev_surprise"],
+        "B01_eps_surprise": (
+            f"EPS surprise={b['eps_surprise']} (current export asof; earnings_date={b['earnings_date'] or 'n/a'})"
+        ),
+        "B02_revenue_surprise": (
+            f"Revenue surprise={b['rev_surprise']} (current export; earnings_date={b['earnings_date'] or 'n/a'})"
+        ),
         "B03_sales": b["sales"],
         "B04_income": b["income"],
         "B05_profit_margin": b["profit_margin"],
@@ -615,6 +661,16 @@ def _value_map(a: dict, b: dict) -> dict:
         "B12_institutional_transactions": b["inst_tx"],
         "B13_short_float": b["short_float"],
         "B14_earnings_date": b["earnings_date"] or "none",
+        "B17_eps_surprise_pair": (
+            f"last2 EPS surprises: current={b['eps_surprise']} (this export) | "
+            f"prior_export={b['eps_surprise_prev']} (finviz_{prior_d}) | "
+            f"GOOD if latest beat (and better if both beat)"
+        ),
+        "B18_rev_surprise_pair": (
+            f"last2 Revenue surprises: current={b['rev_surprise']} (this export) | "
+            f"prior_export={b['rev_surprise_prev']} (finviz_{prior_d}) | "
+            f"GOOD if latest beat (and better if both beat)"
+        ),
     }
     return {**a_vals, **b_vals}
 
@@ -651,6 +707,7 @@ def run(date: str | None = None, top: int = 15) -> pd.DataFrame:
         n_good = sum(1 for x in flags.values() if x > 0)
         n_bad = sum(1 for x in flags.values() if x < 0)
 
+        pair = (a.get("pair") or {}) if a.get("ok") else {}
         rec = {
             "Ticker": t,
             "asof_date": asof,
@@ -662,10 +719,8 @@ def run(date: str | None = None, top: int = 15) -> pd.DataFrame:
             "score": score,
             "n_good": n_good,
             "n_bad": n_bad,
-            # compact helpers (still dated in val_*)
-            "green_dates": ",".join(a.get("green_dates") or []),
-            "red_dates": ",".join(a.get("red_dates") or []),
-            "body_window": f"{a.get('window_start')}→{a.get('window_end')}" if a.get("ok") else "",
+            "pair_day_a": pair.get("d_a", ""),
+            "pair_day_b": pair.get("d_b", ""),
         }
         for k in FEATURE_ORDER:
             rec[f"val_{k}"] = vals.get(k)
@@ -689,34 +744,35 @@ def run(date: str | None = None, top: int = 15) -> pd.DataFrame:
         f"- Export: `{path.name}` · prior export for Δ: `{prior_date or 'none'}`",
         f"- score = sum of flags over **{len(FEATURE_ORDER)}** features",
         "",
-        "## How dates work",
+        "## Framing (per asof trading day)",
         "",
-        f"- **A05/A06/A12/A13** use the last **{LOOKBACK_BODY} trading sessions** ending on the latest OHLC bar on/before `{asof}`.",
-        "- Each session is listed as `YYYY-MM-DD:COLOR:O=…,C=…,body=±…` (body) or with volume/wicks.",
-        "- **GREEN dates** / **RED dates** are the exact session dates that entered the ratio numerator/denominator.",
-        f"- **A07 RVOL** = volume on as-of session / mean volume of the prior **{LOOKBACK_RVOL}** sessions (excludes today).",
-        f"- **A11 max DD** scans the last **{LOOKBACK_DD}** sessions and reports peak date+price and trough date+price.",
-        "- **B08/B11 deltas** compare current Finviz export vs the previous dated export file.",
+        "- **A05/A06/A12/A13** use **exactly two connected sessions**: `pair_day_a` (prev) + `pair_day_b` (asof).",
+        "  No multi-day green/red sums.",
+        "- **RSI crosses**: cross **up** through 30 or 50 → GOOD; cross **down** through 50 or 70 → BAD.",
+        "- **A11 downside structure**: last ~63 sessions split into 3 equal sections; lowest **low** in each;",
+        "  GOOD if rising lows or span(highest low − lowest low)/lowest ≤ 12%.",
+        "- **B17/B18**: current export EPS/Rev surprise vs **prior export** snapshot (proxy for last 2 prints).",
+        "- Analyst last-2 rating actions (upgrade/downgrade) come from quote scrape → merge step (B19).",
         "",
         f"## Ranked (top {top})",
         "",
-        "| Rank | Ticker | score | good | bad | Industry |",
-        "|-----:|--------|------:|-----:|----:|----------|",
+        "| Rank | Ticker | score | good | bad | pair | Industry |",
+        "|-----:|--------|------:|-----:|----:|------|----------|",
     ]
     for i, r in out.head(top).iterrows():
         lines.append(
-            f"| {i+1} | {r['Ticker']} | {int(r['score']):+d} | {int(r['n_good'])} | {int(r['n_bad'])} | {str(r['Industry'])[:40]} |"
+            f"| {i+1} | {r['Ticker']} | {int(r['score']):+d} | {int(r['n_good'])} | {int(r['n_bad'])} | "
+            f"{r.get('pair_day_a','')}→{r.get('pair_day_b','')} | {str(r['Industry'])[:36]} |"
         )
 
     by_t = {r["Ticker"]: r for r in rows}
-    lines += ["", f"## Full checklist with dates — top {top}", ""]
+    lines += ["", f"## Full checklist — top {top}", ""]
     for _, r in out.head(top).iterrows():
         t = r["Ticker"]
         src = by_t[t]
         lines += [
             f"### {t}  ·  score **{int(r['score']):+d}**  ·  {r['Industry']}",
-            f"price={r['price']}  mcap=${r['mcap_usd']/1e9:.2f}B  ADV={r['adv_shares']:,.0f}",
-            f"body window: `{r['body_window']}`  GREEN=[{r['green_dates']}]  RED=[{r['red_dates']}]",
+            f"price={r['price']}  pair=`{r.get('pair_day_a')}→{r.get('pair_day_b')}`",
             "",
             "| Feature | Value (with dates) | Status |",
             "|---------|--------------------|:------:|",
@@ -729,7 +785,7 @@ def run(date: str | None = None, top: int = 15) -> pd.DataFrame:
 
     lines += [
         f"CSV: `data/ab_checklist/{asof}_ab_checklist.csv`",
-        "Columns: `val_*` (full dated string), `flag_*` (+1/0/-1), `status_*`, plus `green_dates` / `red_dates` / `body_window`.",
+        "Columns: `val_*`, `flag_*`, `status_*`, `pair_day_a`, `pair_day_b`.",
     ]
     md_path = OUT_DIR / f"{asof}_ab_checklist.md"
     md_path.write_text("\n".join(lines), encoding="utf-8")
@@ -739,8 +795,8 @@ def run(date: str | None = None, top: int = 15) -> pd.DataFrame:
         "prior_export": prior_date,
         "n_liquid": int(len(out)),
         "features": FEATURE_ORDER,
-        "lookback_body": LOOKBACK_BODY,
-        "lookback_dd": LOOKBACK_DD,
+        "pair_rule": "exactly_two_connected_sessions",
+        "section_bars": SECTION_BARS,
         "generated": datetime.now(ET).isoformat(),
         "csv": str(csv_path.relative_to(ROOT)),
     }
@@ -748,7 +804,7 @@ def run(date: str | None = None, top: int = 15) -> pd.DataFrame:
 
     print(f"[ab] wrote {csv_path}")
     print(f"[ab] wrote {md_path}")
-    print("Top 5:", out.head(5)[["Ticker", "score", "green_dates", "red_dates"]].to_string(index=False))
+    print("Top 5:", out.head(5)[["Ticker", "score", "pair_day_a", "pair_day_b"]].to_string(index=False))
     return out
 
 
