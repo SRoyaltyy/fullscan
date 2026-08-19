@@ -1,0 +1,161 @@
+name: Restore ab_checklist + A15
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore known-good ab_checklist and apply A15
+        run: |
+          set -euo pipefail
+          # Last known good full source before accidental PLACEHOLDER overwrite
+          git show 01d6380c8ed6dfff34afc78feed675386b26bf68:src/ab_checklist.py > src/ab_checklist.py
+          python3 <<'PY'
+          from pathlib import Path
+          p = Path("src/ab_checklist.py")
+          t = p.read_text()
+          assert "def _part_a" in t and len(t) > 10000
+
+          # FEATURE_ORDER
+          old = '    "A13_red_body_vs_wick_2day",\n    "B01_eps_surprise",'
+          new = '    "A13_red_body_vs_wick_2day",\n    "A15_tape_recovery_setup",\n    "B01_eps_surprise",'
+          if "A15_tape_recovery_setup" not in t:
+              if old not in t:
+                  raise SystemExit("FEATURE_ORDER anchor missing")
+              t = t.replace(old, new, 1)
+
+          helper = '''
+def _five_day_tape(df: pd.DataFrame) -> dict:
+    """Last 5 sessions: max green body vs max red; avg wick red vs green; 2d body_rg."""
+    win = df.tail(5)
+    if len(win) < 2:
+        return {"ok": False}
+    sessions = []
+    for idx, row in win.iterrows():
+        o, h, l, c = float(row["open"]), float(row["high"]), float(row["low"]), float(row["close"])
+        body = c - o
+        color = "GREEN" if body > 0 else ("RED" if body < 0 else "DOJI")
+        wick = (h - max(o, c)) + (min(o, c) - l)
+        sessions.append({
+            "d": idx.date().isoformat() if hasattr(idx, "date") else str(idx)[:10],
+            "body": body,
+            "body_abs": abs(body),
+            "color": color,
+            "wick": wick,
+        })
+    greens = [s for s in sessions if s["color"] == "GREEN"]
+    reds = [s for s in sessions if s["color"] == "RED"]
+    max_g = max((s["body_abs"] for s in greens), default=0.0)
+    max_r = max((s["body_abs"] for s in reds), default=0.0)
+    avg_wick_g = float(np.mean([s["wick"] for s in greens])) if greens else np.nan
+    avg_wick_r = float(np.mean([s["wick"] for s in reds])) if reds else np.nan
+    last2 = sessions[-2:]
+    bg = sum(s["body"] for s in last2 if s["color"] == "GREEN")
+    br = sum(-s["body"] for s in last2 if s["color"] == "RED")
+    body_rg_2 = (bg / br) if br > 1e-12 else (99.0 if bg > 0 else 1.0)
+    return {
+        "ok": True,
+        "n": len(sessions),
+        "start": sessions[0]["d"],
+        "end": sessions[-1]["d"],
+        "sessions": sessions,
+        "max_green_body": max_g,
+        "max_red_body": max_r,
+        "max_green_gt_max_red": max_g > max_r,
+        "avg_wick_green": avg_wick_g,
+        "avg_wick_red": avg_wick_r,
+        "red_wick_gt_green": (
+            np.isfinite(avg_wick_r) and np.isfinite(avg_wick_g) and avg_wick_r > avg_wick_g * 1.15
+        ),
+        "body_rg_2day": body_rg_2,
+        "trail": "; ".join(
+            f"{s['d']}:{s['color']}:body={s['body']:+.4f}:wick={s['wick']:.4f}" for s in sessions
+        ),
+    }
+
+'''
+          if "_five_day_tape" not in t:
+              t = t.replace("def _part_a(ohlc: pd.DataFrame) -> dict:", helper + "def _part_a(ohlc: pd.DataFrame) -> dict:", 1)
+
+          if "five = _five_day_tape" not in t:
+              t = t.replace(
+                  "    pair = _pair_body_vol(df.iloc[-2], df.iloc[-1], d_prev, d_now)\n\n    # RVOL:",
+                  "    pair = _pair_body_vol(df.iloc[-2], df.iloc[-1], d_prev, d_now)\n    five = _five_day_tape(df)\n\n    # RVOL:",
+                  1,
+              )
+          if '"five_day": five' not in t:
+              t = t.replace('"pair": pair,\n', '"pair": pair,\n        "five_day": five,\n', 1)
+
+          a15 = '''
+    five = a.get("five_day") or {}
+    br = (a.get("pair") or {}).get("body_rg", np.nan)
+    # GOOD: body R:G > 1.4 AND red wick significantly longer than green AND max green body > max red over 5d
+    if (
+        five.get("ok")
+        and np.isfinite(br)
+        and br > 1.4
+        and five.get("red_wick_gt_green")
+        and five.get("max_green_gt_max_red")
+    ):
+        z["A15_tape_recovery_setup"] = 1
+    else:
+        z["A15_tape_recovery_setup"] = 0
+
+'''
+          if 'z["A15_tape_recovery_setup"]' not in t:
+              anchor = '        z["A13_red_body_vs_wick_2day"] = -1 if rb >= rw else 1\n\n    return z\n'
+              if anchor not in t:
+                  raise SystemExit("pass_a anchor missing")
+              t = t.replace(anchor, '        z["A13_red_body_vs_wick_2day"] = -1 if rb >= rw else 1\n' + a15 + '    return z\n', 1)
+
+          val = '''            "A15_tape_recovery_setup": (
+                "n/a" if not (a.get("five_day") or {}).get("ok") else (
+                    f"body_rg_2d={(a.get('five_day') or {}).get('body_rg_2day', p.get('body_rg'))} need>1.4; "
+                    f"red_wick_gt_green={(a.get('five_day') or {}).get('red_wick_gt_green')} "
+                    f"(avg_w_r={(a.get('five_day') or {}).get('avg_wick_red')} avg_w_g={(a.get('five_day') or {}).get('avg_wick_green')}); "
+                    f"maxG={(a.get('five_day') or {}).get('max_green_body')} maxR={(a.get('five_day') or {}).get('max_red_body')} "
+                    f"maxG>maxR={(a.get('five_day') or {}).get('max_green_gt_max_red')}; "
+                    f"5d[{(a.get('five_day') or {}).get('start')}→{(a.get('five_day') or {}).get('end')}]; "
+                    f"{(a.get('five_day') or {}).get('trail')}"
+                )
+            ),
+'''
+          if '"A15_tape_recovery_setup"' not in t.split('def _value_map')[-1]:
+              v_anchor = '''            "A13_red_body_vs_wick_2day": (
+                f"pair {p['d_a']}+{p['d_b']}: RED body_frac={p['r_body_frac']} wick_frac={p['r_wick_frac']}"
+            ),
+        }'''
+              if v_anchor not in t:
+                  raise SystemExit("value_map anchor missing")
+              t = t.replace(
+                  v_anchor,
+                  '''            "A13_red_body_vs_wick_2day": (
+                f"pair {p['d_a']}+{p['d_b']}: RED body_frac={p['r_body_frac']} wick_frac={p['r_wick_frac']}"
+            ),
+''' + val + "        }",
+                  1,
+              )
+
+          compile(t, "ab_checklist.py", "exec")
+          p.write_text(t)
+          print("patched ok", len(t), "A15" in t)
+          PY
+
+      - name: Commit
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/ab_checklist.py
+          git status
+          git commit -m "fix: restore ab_checklist + A15 tape recovery setup" || echo "no change"
+          git push origin HEAD:main
