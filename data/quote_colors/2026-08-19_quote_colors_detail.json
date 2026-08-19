@@ -1,0 +1,354 @@
+{
+  "BBAI": {
+    "fields": {
+      "Index": {
+        "value": "RUT",
+        "color": "neutral"
+      },
+      "Market Cap": {
+        "value": "1.49B",
+        "color": "neutral"
+      },
+      "Enterprise Value": {
+        "value": "1.19B",
+        "color": "neutral"
+      },
+      "Income": {
+        "value": "-85.82M",
+        "color": "red"
+      },
+      "Sales": {
+        "value": "131.63M",
+        "color": "neutral"
+      },
+      "Book/sh": {
+        "value": "1.61",
+        "color": "neutral"
+      },
+      "Cash/sh": {
+        "value": "0.67",
+        "color": "neutral"
+      },
+      "Dividend Est.": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "Dividend TTM": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "Dividend Ex-Date": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "Dividend Gr. 3/5Y": {
+        "value": "- -",
+        "color": "neutral"
+      },
+      "Payout": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "Employees": {
+        "value": "579",
+        "color": "neutral"
+      },
+      "IPO": {
+        "value": "Apr 05, 2021",
+        "color": "neutral"
+      },
+      "P/E": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "Forward P/E": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "PEG": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "P/S": {
+        "value": "11.29",
+        "color": "red"
+      },
+      "P/B": {
+        "value": "1.93",
+        "color": "neutral"
+      },
+      "P/C": {
+        "value": "4.63",
+        "color": "neutral"
+      },
+      "P/FCF": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "EV/EBITDA": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "EV/Sales": {
+        "value": "9.03",
+        "color": "neutral"
+      },
+      "Quick Ratio": {
+        "value": "5.67",
+        "color": "green"
+      },
+      "Current Ratio": {
+        "value": "5.67",
+        "color": "green"
+      },
+      "Debt/Eq": {
+        "value": "0.03",
+        "color": "green"
+      },
+      "LT Debt/Eq": {
+        "value": "0.01",
+        "color": "green"
+      },
+      "Option/Short": {
+        "value": "Yes / Yes",
+        "color": "neutral"
+      },
+      "EPS (ttm)": {
+        "value": "-0.22",
+        "color": "red"
+      },
+      "EPS next Y": {
+        "value": "40.74%",
+        "color": "green"
+      },
+      "EPS next Q": {
+        "value": "-0.06",
+        "color": "red"
+      },
+      "EPS this Y": {
+        "value": "67.07%",
+        "color": "green"
+      },
+      "EPS next 5Y": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "EPS past 3/5Y": {
+        "value": "4.91%-310.83%",
+        "color": "red"
+      },
+      "Sales past 3/5Y": {
+        "value": "-6.26%-",
+        "color": "red"
+      },
+      "EPS Y/Y TTM": {
+        "value": "87.44%",
+        "color": "green"
+      },
+      "Sales Y/Y TTM": {
+        "value": "-13.72%",
+        "color": "red"
+      },
+      "EPS Q/Q": {
+        "value": "92.47%",
+        "color": "green"
+      },
+      "Sales Q/Q": {
+        "value": "13.17%",
+        "color": "neutral"
+      },
+      "Earnings": {
+        "value": "Jul 30 AMC",
+        "color": "neutral"
+      },
+      "EPS/Sales Surpr.": {
+        "value": "-11.11%1.04%",
+        "color": "red"
+      },
+      "Insider Own": {
+        "value": "1.20%",
+        "color": "neutral"
+      },
+      "Insider Trans": {
+        "value": "-2.08%",
+        "color": "neutral"
+      },
+      "Inst Own": {
+        "value": "39.64%",
+        "color": "neutral"
+      },
+      "Inst Trans": {
+        "value": "-0.99%",
+        "color": "neutral"
+      },
+      "ROA": {
+        "value": "-11.91%",
+        "color": "red"
+      },
+      "ROE": {
+        "value": "-16.55%",
+        "color": "red"
+      },
+      "ROIC": {
+        "value": "-11.07%",
+        "color": "red"
+      },
+      "Gross Margin": {
+        "value": "27.92%",
+        "color": "neutral"
+      },
+      "Oper. Margin": {
+        "value": "-71.17%",
+        "color": "red"
+      },
+      "Profit Margin": {
+        "value": "-65.20%",
+        "color": "red"
+      },
+      "SMA20": {
+        "value": "2.33%",
+        "color": "green"
+      },
+      "SMA50": {
+        "value": "-6.43%",
+        "color": "red"
+      },
+      "SMA200": {
+        "value": "-30.75%",
+        "color": "red"
+      },
+      "Trades": {
+        "value": "",
+        "color": "neutral"
+      },
+      "Shs Outstand": {
+        "value": "479.49M",
+        "color": "neutral"
+      },
+      "Shs Float": {
+        "value": "473.75M",
+        "color": "neutral"
+      },
+      "Short Float": {
+        "value": "31.12%",
+        "color": "red"
+      },
+      "Short Ratio": {
+        "value": "4.46",
+        "color": "neutral"
+      },
+      "Short Interest": {
+        "value": "147.45M",
+        "color": "neutral"
+      },
+      "52W High": {
+        "value": "9.39-66.99%",
+        "color": "red"
+      },
+      "52W Low": {
+        "value": "2.5919.69%",
+        "color": "green"
+      },
+      "Volatility": {
+        "value": "4.49% 6.10%",
+        "color": "neutral"
+      },
+      "ATR (14)": {
+        "value": "0.17",
+        "color": "neutral"
+      },
+      "RSI (14)": {
+        "value": "47.36",
+        "color": "neutral"
+      },
+      "Beta": {
+        "value": "3.18",
+        "color": "neutral"
+      },
+      "Rel Volume": {
+        "value": "0.01",
+        "color": "neutral"
+      },
+      "Avg Volume": {
+        "value": "33.10M",
+        "color": "neutral"
+      },
+      "Volume": {
+        "value": "21,439",
+        "color": "neutral"
+      },
+      "Perf Week": {
+        "value": "-4.91%",
+        "color": "red"
+      },
+      "Perf Month": {
+        "value": "5.44%",
+        "color": "green"
+      },
+      "Perf Quarter": {
+        "value": "-19.27%",
+        "color": "red"
+      },
+      "Perf Half Y": {
+        "value": "-24.21%",
+        "color": "red"
+      },
+      "Perf YTD": {
+        "value": "-42.59%",
+        "color": "red"
+      },
+      "Perf Year": {
+        "value": "-43.64%",
+        "color": "red"
+      },
+      "Perf 3Y": {
+        "value": "118.31%",
+        "color": "green"
+      },
+      "Perf 5Y": {
+        "value": "-68.43%",
+        "color": "red"
+      },
+      "Perf 10Y": {
+        "value": "-",
+        "color": "neutral"
+      },
+      "Recom": {
+        "value": "3.00",
+        "color": "neutral"
+      },
+      "Target Price": {
+        "value": "4.00",
+        "color": "green"
+      },
+      "Prev Close": {
+        "value": "3.12",
+        "color": "neutral"
+      },
+      "Price": {
+        "value": "3.10",
+        "color": "neutral"
+      },
+      "Change %": {
+        "value": "-0.64%",
+        "color": "red"
+      }
+    },
+    "analyst_last2": [
+      {
+        "date_raw": "Jan-07-26",
+        "action": "Downgrade",
+        "detail": "Cantor FitzgeraldOverweight \u2192 Neutral$6",
+        "polarity": -1,
+        "status": "BAD"
+      },
+      {
+        "date_raw": "Mar-07-25",
+        "action": "Downgrade",
+        "detail": "Northland CapitalOutperform \u2192 Market Perform$2.50 \u2192 $4",
+        "polarity": -1,
+        "status": "BAD"
+      }
+    ]
+  }
+}
