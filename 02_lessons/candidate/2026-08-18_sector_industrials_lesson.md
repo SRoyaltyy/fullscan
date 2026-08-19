@@ -7,7 +7,7 @@ error_category: "B (REASONING failure — not tool/data; all inputs were knowabl
 falsifier: "This lesson would be falsified if a same-morning hard-data miss (e.g., G.17 IP at 0%) plus negative futures/risk-off tape were followed by XLI closing positive or near flat because AI-power/defense names rallied strongly and inflows overwhelmed the macro drag. A second falsifier would be if the deterministic pipeline’s up/flat output outperformed the down-biased narrative over a meaningful sample of similar events."
 sector: "Industrials"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-18

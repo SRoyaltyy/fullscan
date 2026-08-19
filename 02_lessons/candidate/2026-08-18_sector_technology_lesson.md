@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future Technology case with the same setup — S0/S1 strongly negative, NQ futures ≤ -1.5%, broad foundry/semi selloff, pipeline severe — would be falsified if XLK closed at or above -1% or materially outperformed SPY on the day."
 sector: "Technology"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-18

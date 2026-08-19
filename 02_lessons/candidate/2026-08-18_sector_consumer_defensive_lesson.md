@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future identical setup — risk-off tape, Walmart premarket strength ahead of earnings, HD/consumer bellwether beat, S3/S4 confirming, weak macro data — that still produces an XLP absolute decline or SPY-relative underperformance would falsify the maintained weighting. Also, if weak consumer data is shown to be a dominant negative despite top-holding confirmation, the two-sided treatment would need revision."
 sector: "Consumer Defensive"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-18

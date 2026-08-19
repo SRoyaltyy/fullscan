@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A future geopolitical/oil risk-off day where copper and gold hold firm (do NOT reverse lower), XLB outperforms SPY relatively, and the decline is milder than SPY — that would falsify the claim that commodity bids co-move with equities on geopolitical/oil risk-off days. Also falsifiable if a day with oil >$90 + Hormuz escalation shows metals rallying as safe-havens while equities fall."
 sector: "Basic Materials"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-18

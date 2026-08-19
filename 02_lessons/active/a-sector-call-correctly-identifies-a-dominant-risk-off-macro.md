@@ -1,0 +1,29 @@
+---
+trigger_pattern: "A sector call correctly identifies a dominant risk-off macro overlay (S0 negative) but leans on a commodity-specific supply-squeeze bid (copper record backwardation, firm gold/silver) as a 'floor' that will keep the sector's decline mild and produce relative outperformance vs SPY. On a geopolitical/oil-driven risk-off day, the commodity bid co-moves with equities — copper and precious metals reverse lower with the tape rather than acting as a hedge — so the floor inverts into a drag, and the sector underperforms SPY. The model double-counts the same commodity positive as both an S1 positive AND a magnitude floor (S4 0), so when the commodity reverses, both the component score and the magnitude cushion are removed simultaneously."
+corrected_behavior: "When the macro risk-off is driven by geopolitical/oil escalation (Hormuz, Iran, oil >$90), do NOT assume the commodity bid (copper, gold, silver) provides a floor or relative outperformance. Score S1 as 0 or negative when the commodity spine is the SAME commodity complex that is the source of the macro shock (oil-driven risk-off often drags the entire commodity complex, including metals, as risk assets are liquidated). Do not double-count a commodity positive as both an S1 component AND a magnitude floor — if the commodity is the floor, it must be reflected in S1 only, and if S1 is capped by macro, the floor does not exist. On geopolitical/oil risk-off days, expect metals to co-move with equities (correlation rises toward +1), so XLB can underperform SPY even when the prior session showed copper at records and gold firm."
+falsifier: "A future geopolitical/oil risk-off day where copper and gold hold firm (do NOT reverse lower), XLB outperforms SPY relatively, and the decline is milder than SPY — that would falsify the claim that commodity bids co-move with equities on geopolitical/oil risk-off days. Also falsifiable if a day with oil >$90 + Hormuz escalation shows metals rallying as safe-havens while equities fall."
+current_behavior: "When S0 is clearly negative (risk-off macro, geopolitical/oil escalation) but S1 is positive on a real supply squeeze (copper backwardation, LME emergency measures), the model scores S1 positive and uses the commodity bid as a magnitude floor (predicting mild decline + relative outperformance vs SPY). It treats the commodity bid as independent of the macro tape rather than recognizing that on geopolitical/oil-driven risk-off days, industrial and precious metals often co-move DOWN with equities (risk-asset liquidation) rather than acting as a hedge."
+evidence_cited: "2026-08-18: Predicted down/mild with S1 +1 (copper squeeze, gold/silver firm) and S4 0 (1d rel +0.24% = relative defensiveness). Actual: XLB -0.88% vs SPY -0.68% (rel -0.20%, underperformed). Copper FELL 2.07% to $6.47/lb, gold FELL 1.29% to $4,358.91 — the 'floor' reversed into a drag. The morning's self-audit even flagged copper was 'largely priced in' and 8/17 proved copper at records doesn't move XLB up on risk-off, but it still used the commodity bid as a magnitude floor and relative-outperformance note."
+error_category: "B"
+scope: "general"
+date: "2026-08-18"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-08-19"
+sources: "['2026-08-18_sector_basic_materials_lesson.md']"
+schema_ok: "true"
+---
+
+## RULE
+When the macro risk-off is driven by geopolitical/oil escalation (Hormuz, Iran, oil >$90), do NOT assume the commodity bid (copper, gold, silver) provides a floor or relative outperformance. Score S1 as 0 or negative when the commodity spine is the SAME commodity complex that is the source of the macro shock (oil-driven risk-off often drags the entire commodity complex, including metals, as risk assets are liquidated). Do not double-count a commodity positive as both an S1 component AND a magnitude floor — if the commodity is the floor, it must be reflected in S1 only, and if S1 is capped by macro, the floor does not exist. On geopolitical/oil risk-off days, expect metals to co-move with equities (correlation rises toward +1), so XLB can underperform SPY even when the prior session showed copper at records and gold firm.
+
+## WHEN IT FIRES
+A sector call correctly identifies a dominant risk-off macro overlay (S0 negative) but leans on a commodity-specific supply-squeeze bid (copper record backwardation, firm gold/silver) as a "floor" that will keep the sector's decline mild and produce relative outperformance vs SPY. On a geopolitical/oil-driven risk-off day, the commodity bid co-moves with equities — copper and precious metals reverse lower with the tape rather than acting as a hedge — so the floor inverts into a drag, and the sector underperforms SPY. The model double-counts the same commodity positive as both an S1 positive AND a magnitude floor (S4 0), so when the commodity reverses, both the component score and the magnitude cushion are removed simultaneously.
+
+## WRONG IF
+A future geopolitical/oil risk-off day where copper and gold hold firm (do NOT reverse lower), XLB outperforms SPY relatively, and the decline is milder than SPY — that would falsify the claim that commodity bids co-move with equities on geopolitical/oil risk-off days. Also falsifiable if a day with oil >$90 + Hormuz escalation shows metals rallying as safe-havens while equities fall.
+
+## EVIDENCE
+2026-08-18: Predicted down/mild with S1 +1 (copper squeeze, gold/silver firm) and S4 0 (1d rel +0.24% = relative defensiveness). Actual: XLB -0.88% vs SPY -0.68% (rel -0.20%, underperformed). Copper FELL 2.07% to $6.47/lb, gold FELL 1.29% to $4,358.91 — the "floor" reversed into a drag. The morning's self-audit even flagged copper was "largely priced in" and 8/17 proved copper at records doesn't move XLB up on risk-off, but it still used the commodity bid as a magnitude floor and relative-outperformance note.
+
+(learn_cycle promote)

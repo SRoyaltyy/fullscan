@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This pattern would be falsified if live oil were rising with an actively escalating geopolitical supply-risk catalyst, yet XLE closed down or materially underperformed SPY. The “cap at notable” part would be falsified if XLE delivered a severe absolute gain (>3%) under the same extended/overbought conditions. Neither occurred today."
 sector: "Energy"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-18

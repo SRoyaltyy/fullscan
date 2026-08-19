@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If XLF shows the full trigger set — strong premarket relative strength, positive 3d/1w, KBW multi-day uptrend, tech-specific yield-driven risk-off, tight credit spreads — and repeatedly closes flat-to-down in absolute terms, this correction should be reverted. The rule also fails if credit stress is systemic rather than a tech-specific rotation."
 sector: "Financial"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-18

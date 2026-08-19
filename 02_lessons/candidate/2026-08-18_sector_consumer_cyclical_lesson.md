@@ -7,7 +7,7 @@ error_category: "B — REASONING failure (not tool/data); direction correct, abs
 falsifier: "If, on a future trigger day with a positive pre-market top-holding beat (HD/WMT/TGT), a tech-led selloff, and AMZN/TSLA flat at the open, XLY still closes at or below roughly -1.2% (severe), the offset/composition check would be falsified. Conversely, if XLY only reaches severe when the selloff is broad-based and its top holdings are also down, the rule is confirmed."
 sector: "Consumer Cyclical"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-18

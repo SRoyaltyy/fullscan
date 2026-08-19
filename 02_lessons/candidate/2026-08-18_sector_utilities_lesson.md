@@ -7,7 +7,7 @@ error_category: "D (reasoning/lesson-adherence failure; not tool/data — the 10
 falsifier: "If on a day with 10Y yields clearly rising, XLU closes > +0.5% absolute while SPY is flat/down, the blanket “rising yields => flat-to-negative absolute” rule would be too rigid. It should then be narrowed to cases without an exceptional offset — e.g., a >1% AUM inflow, a sector-specific earnings catalyst, or a VIX spike >20 forcing outright flight-to-quality into bond-proxies."
 sector: "Utilities"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-18

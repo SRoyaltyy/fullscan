@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Find a future case where a fresh legal/regulatory catalyst hits only one of the two mega-cap leaders, no offsetting positive catalysts are knowable in the other top holdings, and XLC still drops only mildly or outperforms SPY despite the broad market being risk-off. That would weaken the rule that severe requires both leaders hit or no offsets. Conversely, if a one-leader legal shock ever produces an XLC relative lag of -3% or worse with no offsetting positives, the severe cap should be loosened."
 sector: "Communication Services"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-18

@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future identical setup — 30Y at a 19-year high, rising real yields, sharply negative futures, XLRE 1d/3d relative strength — that closes up, or with a notable/severe decline, would weaken the down/mild rule. A strong up close would suggest the defensive bid was a leading signal rather than only a magnitude cap."
 sector: "Real Estate"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-18

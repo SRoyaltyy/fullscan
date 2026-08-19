@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "The lesson is falsified if a future Healthcare call with the same setup — confirmed risk-off, SPY only about -0.5% to -0.8%, no fresh broad sector catalyst — produces a scoreboard-confirmed severe absolute XLV move (e.g., +2.5% or more). It is also falsified if the scoring rubric treats +1.6% absolute as severe, but the scoreboard's magnitude_hit=False indicates it does not."
 sector: "Healthcare"
 date: "2026-08-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-18
