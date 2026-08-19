@@ -1,0 +1,173 @@
+name: AB One Button (checklist + peers + backfill)
+
+# One dispatch:
+#   1) Part A/B1 checklist (as-of)
+#   2) Peer RS + industry breadth + sector-board enrich
+#   3) PIT backfill with 1d/3d/1w/2m 🟢🔴 + pattern audit
+#
+# Recommended first run: set ticker (e.g. AAPL), months=24
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Ticker (recommended). Blank = full liquid (heavy)"
+        required: false
+        default: "AAPL"
+      date:
+        description: "As-of YYYY-MM-DD (blank = latest finviz export)"
+        required: false
+        default: ""
+      months:
+        description: "Backfill lookback months"
+        required: false
+        default: "24"
+      bootstrap_days:
+        description: "Price history calendar days"
+        required: false
+        default: "900"
+      skip_checklist:
+        description: "Skip checklist (reuse existing CSV)"
+        type: boolean
+        default: false
+      skip_enrich:
+        description: "Skip peer/industry/sector enrich"
+        type: boolean
+        default: false
+      skip_backfill:
+        description: "Skip PIT backfill"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          set -euo pipefail
+          pip install -r requirements.txt
+          pip install openpyxl pyarrow beautifulsoup4 lxml
+
+      - name: Resolve asof + ticker
+        id: meta
+        run: |
+          set -euo pipefail
+          D="${{ inputs.date }}"
+          D="${D//+/-}"
+          if [ -z "$D" ]; then
+            LATEST=$(ls -1 data/exports/finviz_????-??-??.csv 2>/dev/null | sort | tail -1 || true)
+            if [ -n "$LATEST" ]; then
+              D=$(basename "$LATEST" | sed 's/finviz_//;s/.csv//')
+            else
+              D=$(TZ=America/New_York date +%F)
+            fi
+          fi
+          T="${{ inputs.ticker }}"
+          T=$(echo "$T" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
+          echo "asof=$D" >> "$GITHUB_OUTPUT"
+          echo "ticker=$T" >> "$GITHUB_OUTPUT"
+          echo "========================================"
+          echo "  AB ONE BUTTON"
+          echo "  asof=$D  ticker=${T:-FULL_LIQUID}"
+          echo "  months=${{ inputs.months }}  bootstrap_days=${{ inputs.bootstrap_days }}"
+          echo "  skip_checklist=${{ inputs.skip_checklist }} skip_enrich=${{ inputs.skip_enrich }} skip_backfill=${{ inputs.skip_backfill }}"
+          echo "========================================"
+
+      - name: 0) Price history
+        run: |
+          set -euo pipefail
+          DAYS="${{ inputs.bootstrap_days }}"
+          DAYS="${DAYS:-900}"
+          T="${{ steps.meta.outputs.ticker }}"
+          if [ -n "$T" ]; then
+            echo "=== price_store bootstrap --days $DAYS --tickers $T ==="
+            python -m src.price_store bootstrap --days "$DAYS" --tickers "$T"
+          else
+            echo "=== price_store bootstrap --days $DAYS (universe) ==="
+            python -m src.price_store bootstrap --days "$DAYS"
+          fi
+
+      - name: 1) AB checklist
+        if: ${{ inputs.skip_checklist != true && inputs.skip_checklist != 'true' }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
+          T="${{ steps.meta.outputs.ticker }}"
+          if [ -n "$T" ]; then
+            echo "=== ab_one / checklist ticker=$T date=$ASOF ==="
+            if python -c "import importlib; importlib.import_module('src.ab_one')" 2>/dev/null; then
+              python -m src.ab_one --date "$ASOF" --ticker "$T" || python -m src.ab_checklist --date "$ASOF" --ticker "$T"
+            else
+              python -m src.ab_checklist --date "$ASOF" --ticker "$T" 2>/dev/null || python -m src.ab_checklist --date "$ASOF"
+            fi
+          else
+            echo "=== ab_checklist date=$ASOF ==="
+            python -m src.ab_checklist --date "$ASOF"
+          fi
+          ls -la data/ab_checklist/ | tail
+
+      - name: 2) Peer RS + industry/sector enrich
+        if: ${{ inputs.skip_enrich != true && inputs.skip_enrich != 'true' }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
+          T="${{ steps.meta.outputs.ticker }}"
+          echo "=== peer_rs --date $ASOF ==="
+          python -m src.peer_rs --date "$ASOF" || true
+          ARGS=(--date "$ASOF")
+          [ -n "$T" ] && ARGS+=(--ticker "$T")
+          echo "=== ab_enrich ${ARGS[*]} ==="
+          python -m src.ab_enrich "${ARGS[@]}"
+          echo "==== enriched head ===="
+          head -40 data/ab_checklist/${ASOF}_ab_checklist_enriched.md 2>/dev/null || head -40 data/ab_checklist/*_ab_checklist_enriched.md 2>/dev/null || true
+
+      - name: 3) PIT backfill (1d/3d/1w/2m + pattern audit)
+        if: ${{ inputs.skip_backfill != true && inputs.skip_backfill != 'true' }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
+          T="${{ steps.meta.outputs.ticker }}"
+          M="${{ inputs.months }}"
+          M="${M:-24}"
+          ARGS=(--months "$M" --end "$ASOF")
+          [ -n "$T" ] && ARGS+=(--ticker "$T")
+          echo "=== ab_backfill ${ARGS[*]} ==="
+          python -m src.ab_backfill "${ARGS[@]}"
+          echo "==== backfill md head ===="
+          ls -la data/ab_backfill/ | tail
+          head -50 data/ab_backfill/*_${T:-universe}.md 2>/dev/null || head -50 data/ab_backfill/*.md 2>/dev/null || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ab-one-button-${{ steps.meta.outputs.asof }}-${{ steps.meta.outputs.ticker || 'universe' }}
+          path: |
+            data/ab_checklist/
+            data/ab_backfill/
+            data/peers/
+          if-no-files-found: warn
+
+      - name: Commit outputs
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/ab_checklist/ data/ab_backfill/ data/peers/ data/prices/ 01_daily/*peer_rs* || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: AB one-button ${{ steps.meta.outputs.asof }} ${{ steps.meta.outputs.ticker }}"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
