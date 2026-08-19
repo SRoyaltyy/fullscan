@@ -1,0 +1,87 @@
+name: AB One Ticker (quick check)
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Ticker e.g. AAPL"
+        required: true
+        default: "AAPL"
+      date:
+        description: "As-of YYYY-MM-DD (blank = latest export)"
+        required: false
+        default: ""
+      with_colors:
+        description: "Also scrape Finviz quote colors + last-2 analyst"
+        type: boolean
+        default: true
+      with_form4:
+        description: "Also pull SEC Form4 monthly history for this name"
+        type: boolean
+        default: true
+      form4_months:
+        description: "Form4 months"
+        required: false
+        default: "18"
+
+permissions:
+  contents: write
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml edgartools pyarrow
+
+      - name: Run single ticker
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
+          EDGAR_IDENTITY: ${{ secrets.EDGAR_IDENTITY }}
+        run: |
+          set -euo pipefail
+          T=$(echo "${{ inputs.ticker }}" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
+          ARGS=("$T")
+          [ -n "${{ inputs.date }}" ] && ARGS+=(--date "${{ inputs.date }}")
+          ARGS+=(--merge)
+          if [ "${{ inputs.with_colors }}" = "true" ]; then ARGS+=(--with-colors); fi
+          if [ "${{ inputs.with_form4 }}" = "true" ]; then
+            ARGS+=(--with-form4 --months "${{ inputs.form4_months }}")
+          fi
+          echo "CMD: python -m src.ab_one ${ARGS[*]}"
+          python -m src.ab_one "${ARGS[@]}"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ab-one-${{ inputs.ticker }}
+          path: |
+            data/ab_checklist/
+            data/quote_colors/
+            data/insider/history/
+          if-no-files-found: warn
+
+      - name: Commit
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/ab_checklist/ data/quote_colors/ data/insider/history/ || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: AB one ${{ inputs.ticker }} $(date -u +%F)"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
