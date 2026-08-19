@@ -1,0 +1,391 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-19T07:50:51.044431-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 5.31,
+      "delta_1d": 0.06,
+      "delta_1w": 0.06,
+      "delta_1m": 0.25
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 4.72,
+      "delta_1d": 0.04,
+      "delta_1w": 0.0,
+      "delta_1m": 0.17
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 2.44,
+      "delta_1d": 0.03,
+      "delta_1w": 0.01,
+      "delta_1m": 0.13
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 2.7,
+      "delta_1d": 0.03,
+      "delta_1w": 0.0,
+      "delta_1m": -0.03
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 3.66,
+      "delta_1d": 0.04,
+      "delta_1w": 0.03,
+      "delta_1m": 0.07
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-18",
+      "current": 0.155,
+      "delta_1d": -0.1,
+      "delta_1w": -1.095,
+      "delta_1m": 0.125
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-17",
+      "current": 182.16,
+      "delta_1d": -159.26,
+      "delta_1w": -110.88,
+      "delta_1m": -143.78
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-19",
+      "current": 15.77,
+      "delta_1d": -0.07,
+      "delta_1w": 1.22
+    },
+    "vix3m": {
+      "date": "2026-08-18",
+      "current": 19.27,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.818
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 84.97,
+      "pct_1d": 0.04
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 91.88,
+      "pct_1d": 0.94
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 4421.3,
+      "pct_1d": 1.27
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-19",
+      "pct_1d": -0.22,
+      "pct_1m": -1.73
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 7715.75,
+      "pct_1d": 0.02
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-19",
+      "last": 29527.5,
+      "pct_1d": -0.2
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 65326.42,
+          "pct_1d": -3.16
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 25495.07,
+          "pct_1d": 0.09
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 3894.42,
+          "pct_1d": -2.4
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 6471.17,
+          "pct_1d": -5.8
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 9053.8,
+          "pct_1d": -0.18
+        }
+      },
+      "composite_avg": -2.29
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 10725.57,
+          "pct_1d": -0.02
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 26115.56,
+          "pct_1d": -0.05
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 8544.16,
+          "pct_1d": 0.41
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 6478.39,
+          "pct_1d": 0.16
+        }
+      },
+      "composite_avg": 0.12
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.439,
+    "window": "2026-08-11..2026-08-18"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-18 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Unitree Robotics stock soars 460% in Shanghai IPO debut",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/unitree-robotics-stock-soars-460-111514463.html",
+        "published_at": "2026-08-19T11:15:14Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Kung fu robot maker soars 600pc on stock market listing - The Telegraph",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOXNaSWxueG9yV2RpOUVjRUlIWjVFY2hfdUZ1S2tzUWRaWU9UM0UyaWZpaWt0T1ZvUi1qaWdNaVh5TVR2MFJBc2NKdnRfV1VLcExlblZnaGI4eDJjcm54WXA2cWg4ZWVnRVhQSnhyaHY0UU15SmFtamNvVkNlVEFYbjl6RFVkOUVoMGtTVTFxWTJCSHI4N0toZzJnQ214NVB1TFpuMA?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:14:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Oklo Vs. X-Energy: Is the New Nuclear IPO the Better Buy?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/oklo-vs-x-energy-nuclear-113000730.html",
+        "published_at": "2026-08-19T11:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "What Every 65-Year-Old Should Know About Social Security",
+        "url": "https://finance.yahoo.com/healthcare/articles/every-65-old-know-social-112000626.html",
+        "published_at": "2026-08-19T11:20:00Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Unitree Robotics stock soars 460% in Shanghai IPO debut - qz.com",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9EemdmZHpsQUVVQjVyb2kzRV9RQ0haaHRlaWtSeUViTmtrbUdpcGcwR3lkZW1YNUpRMF9ORDZuS0R2cjJxTU9ETDNxVlV5c2ZiajRRTkNpbGpNQWg0ek1jbjF0MGFlYmFC?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:15:33 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Alibaba or NetEase: Which Stock Could Soar After Earnings? - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUFZXUVRPcE5ERWdDRDhadmNCMlI4NFluUkFVc3ZrWWs5RnNhQlBfcDltTE5kTEN1WFRIdjRZQmpYaFkwd1ItejZLazR4Q0Ftc1RWdVpzWVluMGltTjBENmhSQUV5SjBGei12bXJqVXBTMnNBbG5zeDk2OF9aRjdfbmQydEU2YkR0dFVoUEZpekdCTkxyTXJuaFI2QWI0TV9tbkE?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:35:51 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Analog Devices Tops Views On Strong Data Center, Industrial Chip Sales",
+        "url": "https://www.investors.com/news/technology/adi-stock-analog-devices-fiscal-q3-2026-earnings/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-19T11:16:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Shaq revealed the 1 concept he used to preserve his fortune as an NBA player",
+        "url": "https://finance.yahoo.com/small-business/articles/shaq-revealed-1-concept-used-110500873.html",
+        "published_at": "2026-08-19T11:05:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Amazon's AI Business Passed a $25 Billion Run Rate. Where Does That Put the Stock in 5 Years?",
+        "url": "https://finance.yahoo.com/technology/ai/articles/amazons-ai-business-passed-25-112801312.html",
+        "published_at": "2026-08-19T11:28:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Sea Limited Director Heng Chen Seng Sells 20,000 Shares for $2.4 Million",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sea-limited-director-heng-chen-112001571.html",
+        "published_at": "2026-08-19T11:20:01Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Target Bets Shoppers Want to Buy Trendy Snacks and Drinks in Grocery Revamp - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxObHRFSVJ6YmpUZ2QxMWZZc0tIZ3ZxcDVBdi0wRUgybFZ3UFZCRUt1YkNaczlWeGxJVmJsbkh6Ymw3TV9IdmZ5UHloQ3h3ZWFMdDh1aXFfdU1jVHRLM0x2LTVDeGhOZmJ1RTl4SVc0aWVXN21xSXJmVGxHZ09ra0N6bnhjZGlsVUgteU9COTlBY3dTZWxVbmo4YzQ0bFZyeURQYzJtRTJOUzJDZUJUb0d2Q3hSdmE3QUJn?oc=5",
+        "published_at": "Tue, 18 Aug 2026 10:15:01 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Musk Robot Rival Soars 460% in China Stock Market Debut - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFByM1d2TTdUUGRsTnVROUpQd3ZpeTRYcUdIcUpnWEVrVFYtemxZdGxGR1JISjg0c2c0TjFBc3JoNmJzTGY4dDNLbThhS2Z5Rjd4U0NXM196TUQxamxEcUpsMENWNGJkZW5pa1V1TklvcVNCX28yOUhzWjAyVG4?oc=5",
+        "published_at": "Wed, 19 Aug 2026 10:45:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "SoFi Technologies Just Reported Earnings. Here's the One Number That Matters Most for the Next Year. - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObWIyeEljX0lKWUF6a21JZldFTHh5NGJ3QWpGZng5Y1h6cnE0WkhiNG1BWF9HMDVSMURIYmJUY0I0TXNSUW9NSDBQV2trWFBmT1k2LW1yUnQ1X1VTMVVudUQ2NGFHQkc3OVJaekpFZGpyYUFlaHMtRlZ3ZmtrcHVqXzdZS2FUM3FWTXhld09BN1dsbWs?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:20:21 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "FOMC interest-rate minutes come into focus as BTC price holds steady, bond yields surge: Crypto Daily - CoinDesk",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMEstMHl5U0twNG5RNGpTa0lNQXVTU3ktQWdaVk40QTJpZHoyaTRjN1drOFRtWm1HclY2RjFrNnlXQ0Q5bnA0T2hoaHF2OWVnYkZaV2IxR2hobXYyNXNZcTdaOVA4c3o0M0FyM1JjbVphRWNuVlZtczZyNm1EbzZIa0VlRU9SYUV0SDJxTlREMDExWmFHeDhXamxZZ2pHYXpyYVlIWVRMaXVsV3BFRDd4c2hic2UwUXNrejdUanBBNnN0ZmM?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:14:50 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The bond selloff is rattling investors, but here’s why they shouldn’t expect a deeper stock downturn",
+        "url": "https://www.marketwatch.com/story/the-bond-selloff-is-rattling-investors-but-heres-why-they-shouldnt-expect-a-deeper-stock-downturn-43139350?mod=mw_rss_topstories",
+        "published_at": "Wed, 19 Aug 2026 11:22:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Inflation is heating up but don't expect another crisis",
+        "url": "https://www.bbc.co.uk/news/articles/cj63jr5r09zo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 19 Aug 2026 11:27:39 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dave Ramseys explains 3 serious retirement mistakes Americans make after 55. How many are you making?",
+        "url": "https://finance.yahoo.com/markets/articles/dave-ramseys-explains-3-serious-111500132.html",
+        "published_at": "2026-08-19T11:15:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Dollar softens as bond market steadies ahead of Fed minutes",
+        "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-drifts-near-multi-month-013146327.html",
+        "published_at": "2026-08-19T11:05:56Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Valens Semiconductor (VLN) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/valens-semiconductor-vln-q2-2026-112816586.html",
+        "published_at": "2026-08-19T11:28:16Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "India Turns to Piped Gas as Iran War Drives Up LPG Costs",
+        "url": "https://finance.yahoo.com/energy/articles/india-turns-piped-gas-iran-103000064.html",
+        "published_at": "2026-08-19T10:30:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Personetics integrates Plaid open banking data",
+        "url": "https://finance.yahoo.com/technology/ai/articles/personetics-integrates-plaid-open-banking-112241523.html",
+        "published_at": "2026-08-19T11:22:41Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "5 of JP Morgan’s Top Stock Picks Pay Big Dividends and One Yields Over 12%",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/5-jp-morgan-top-stock-112055146.html",
+        "published_at": "2026-08-19T11:20:55Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Cancer treatment could face landmark moment with promising vaccine - The Washington Post",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMWdlVzZuZWlXalBPN1IzRnpmWDZGeDdPOEFzdkZlRWNyY3EtajQ5aW55SFl0VVZYc2hlRXBtRG85dzdONHNlTWd2eHlqUVBRTUlmNEprVnJFOHpQbGRsSl9wYUFYZ1lFVGxNeXNmc1doR3c0Mm1YMGlLVzI5Qlo4TnRZRTBaV0JoUFh6MHZfWE9Ha2RhV2k0T2N3Rkhld1RqNkk3MWVFVzJCUHhVbnoyd3dXNmZheTg?oc=5",
+        "published_at": "Wed, 19 Aug 2026 10:46:48 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Touchdown! Private Chinese rocket aces landing on 2nd-ever flight - Space",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPS28yNjlXMldORG11T2c0N2xvMDdpc1IxMUFOcm1VWFJaUENnOWQ5TTc4UUk4bDBoSHNlMUZxaUZDYlpWQzZ1RVprWVpJQVQ3RmphbkdNVzMzQnNLdTFDRkQ0TFF5TzlrNmVweDV1ZDNLMkEta3J4UXFnNWFWZ0FGTnFwMl83ZzRuZXZWZlhob19HOHpuZWpSVERCSlk1LVVDVlJrdzkwaGIzcF96SHdIbjhpaldHZkFsZHIxaXlEMVpPUQ?oc=5",
+        "published_at": "Wed, 19 Aug 2026 01:29:44 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Google's bid for Spirit's data is a reminder that your work emails aren't really yours - Business Insider",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUmVjdXJFSUpMT09kaGZ4QXNNazdiVVpDd0JCQWFuLVFKMzJNRzVsNElVR21qQ1dDUWRfamo3ejVXaHExQnYyakl6SFV0VXc5S09fYjVhYXM1Vk1BY0h2WVl3RXdCQWwtR0NKaVZTVk5nTUd6T3Z1WGZsQTNFaWZFeHBpclpVYmV2N1hhQmlNel9oV0hENlgzRHRtdFdIV0NU?oc=5",
+        "published_at": "Tue, 18 Aug 2026 15:38:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock market calm hides the churn underneath - Axios",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0wSTd6Vm95Y0RBOGxfLUhlT01QRWx2bktpS2h2eFF4WFY5ZmNCU1JXeWtJcFB4aGtCMXlucVJSQVVlQlF4M0x5RjMwazdpSC1BYm9xTDdULUJOenRmd1lpNHVMY0FFUEFib3E0Zndqbw?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:21:15 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "The bond selloff is rattling investors, but here’s why they shouldn’t expect a deeper stock downturn - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPb1p0bWthd2o0YXVKR2QwSW4zbXRXZ0dmV2VPaFN4ak1CQ2tMUkRkZlNoS2ZMZ1MwY2FrRHNIaEhUNEt4SlJaMnY2Q2hnZmljb3Vnbk5uSThwZjB3Nm1Va0d6djV6U1QtbkRPa184QWJqSWhySEo0cUJHRVhYcWpVckpseE9nSmtHaFAyYzM4R3o0SldzYUptMWpYc2NZRkJHUThYbjRLSFRwWXN4RjZOSV9MczRsbzVORFZybi0xVnVZalVVWU1JbHE4WWd6TlF1WWM4SWgzYw?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:22:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Radical California Energy Commissioner to Restrict Car Tires Because They Can’t Ban Cars - California Globe",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVU1rQmRHS2RqdEJQLU0yV2dSNXgwYnFvQTRmTVNKR196WkV2S2JEMUFybUxHQ0NleV9WY1dqWlhPdDcyZ2t0ZldIb3JrS1hjXzJYZ2ZtOW54VXpUTVRJdThQMnZnTHJobFhfRUFTaFV3TDg3U09vcnJ4WlU4b0FyNWdraV81MlljdENiY05QZ19pUGNtMWZCb01FOENyeDdsUTZXSXF6aHlmeTNYdVFsc3Y1bkNmQ2RyQmxZ?oc=5",
+        "published_at": "Wed, 19 Aug 2026 03:05:17 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Has Broader Stock Market Participation Changed How Interest Rates Affect the Economy? - Liberty Street Economics",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOVmRkbElMU1FXQjRfTUQzVldXNVQ1TktDekgtT2Q1cThUQWJzZno2OHc1dDY2Z2JVdDl0N3pRX0JiZFVlUW8wSENySUtRTk9zT2huMlVPMGlVRzltaV9wZmp4QjI5MnFhbDR5bFIwV0NpWUFwQkxLRmZ0OGFXUzZTM0xaMmVYVnd0anQ1bG1zRFVfODZHdGp1RmpFZDVyODdmZF93UVVBT0tKZTA4Wkk2WHpURE8zSU5wUUNkV09wd0ZYV2lFZ2pkLXdFTlZ2N042NTNzc3RR?oc=5",
+        "published_at": "Wed, 19 Aug 2026 11:04:09 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Sam Altman ChatGPT AI Predicts Solana Could Challenge Its All-Time High Again",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/sam-altman-chatgpt-ai-predicts-103255487.html",
+        "published_at": "2026-08-19T10:32:55Z"
+      }
+    ]
+  }
+}
