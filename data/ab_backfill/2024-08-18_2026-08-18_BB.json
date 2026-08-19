@@ -1,0 +1,20 @@
+{
+  "start": "2024-08-18",
+  "end": "2026-08-18",
+  "months_arg": 24,
+  "ticker": "BB",
+  "n_rows": 251,
+  "n_with_export": 77,
+  "n_ohlc_only": 174,
+  "export_first": "2026-04-26",
+  "export_last": "2026-08-18",
+  "horizons": {
+    "1d": 1,
+    "3d": 3,
+    "1w": 5,
+    "2m": 42
+  },
+  "actual_first": "2025-08-15",
+  "actual_last": "2026-08-14",
+  "generated": "2026-08-19T08:04:59.168634-04:00"
+}
