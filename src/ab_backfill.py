@@ -1,12 +1,11 @@
 """Point-in-time daily AB checklist backfill (no look-ahead on features).
 
-Forward labels (for checking, not used in score):
-  * max_profit_2m / max_loss_2m from asof close over the next ~42 trading days
-    (or until last available bar if shorter)
+Window: any length via --months or --start/--end (no 6-month cap).
+Forward labels: max_profit_2m / max_loss_2m over next ~42 sessions (or until data ends).
 
 CLI:
-  python -m src.ab_backfill --months 6 --ticker AAPL
-  python -m src.ab_backfill --months 6
+  python -m src.ab_backfill --months 24 --ticker AAPL
+  python -m src.ab_backfill --start 2024-08-01 --end 2026-08-18 --ticker AAPL
 """
 from __future__ import annotations
 
@@ -121,17 +120,7 @@ def _setup_flag(a: dict, b: dict) -> tuple[int, str]:
     return 0, f"SETUP_NO {parts}"
 
 
-def _forward_extrema(
-    ohlc: pd.DataFrame | None,
-    asof: str,
-    entry: float,
-    max_bars: int = FORWARD_BARS,
-) -> dict:
-    """Max profit / max loss from asof close over next max_bars sessions (or until data ends).
-
-    max_profit = max(high / entry - 1) over (asof, asof+N]
-    max_loss   = min(low  / entry - 1) over (asof, asof+N]
-    """
+def _forward_extrema(ohlc, asof: str, entry: float, max_bars: int = FORWARD_BARS) -> dict:
     empty = {
         "max_profit_2m": np.nan,
         "max_loss_2m": np.nan,
@@ -146,11 +135,9 @@ def _forward_extrema(
     if not isinstance(df.index, pd.DatetimeIndex):
         df.index = pd.to_datetime(df.index)
     df.columns = [c.lower() for c in df.columns]
-    asof_ts = pd.Timestamp(asof)
-    fut = df[df.index > asof_ts].head(max_bars)
+    fut = df[df.index > pd.Timestamp(asof)].head(max_bars)
     if fut.empty:
         return {**empty, "fwd_window": "no_future_bars"}
-
     high = fut["high"].astype(float) if "high" in fut.columns else fut["close"].astype(float)
     low = fut["low"].astype(float) if "low" in fut.columns else fut["close"].astype(float)
     mx = float(high.max() / entry - 1.0)
@@ -172,14 +159,7 @@ def _forward_extrema(
 
 
 def _score_one(
-    ticker: str,
-    asof: str,
-    ohlc_to_asof: pd.DataFrame | None,
-    ohlc_full: pd.DataFrame | None,
-    row: pd.Series,
-    prior_row,
-    prior_date: str | None,
-    form4_panel: pd.DataFrame | None,
+    ticker, asof, ohlc_to_asof, ohlc_full, row, prior_row, prior_date, form4_panel
 ) -> dict:
     a = ab._part_a(ohlc_to_asof)
     b = ab._part_b1(row, prior_row, prior_date)
@@ -220,31 +200,66 @@ def _score_one(
     }
 
 
+def _ensure_price_coverage(start: str, end: str, ticker: str | None) -> None:
+    """If store does not reach start, bootstrap more history (calendar days ≈ 1.5× span)."""
+    store = ps._load_store()
+    need_days = (pd.Timestamp(end) - pd.Timestamp(start)).days + 120  # buffer for indicators
+    need_days = max(need_days, 400)
+    if len(store):
+        dmin = pd.to_datetime(store["date"]).min()
+        if dmin.date().isoformat() <= start:
+            print(f"[backfill] price store covers from {dmin.date()} — ok")
+            return
+        print(f"[backfill] price store starts {dmin.date()} > requested {start} — extending bootstrap")
+    else:
+        print("[backfill] empty price store — bootstrap")
+    tickers = [ticker.upper()] if ticker else None
+    ps.bootstrap(days=int(need_days), tickers=tickers, resume=True)
+
+
 def run(
     start: str | None = None,
     end: str | None = None,
-    months: int = 6,
+    months: int | None = None,
     ticker: str | None = None,
 ) -> pd.DataFrame:
     exports = _load_exports()
     if not exports:
         raise SystemExit("[backfill] no finviz exports")
 
-    store = ps._load_store()
-    if not len(store):
-        raise SystemExit("[backfill] empty price store — bootstrap first")
-
     end = end or exports[-1][0]
     if start is None:
-        start = (pd.Timestamp(end) - pd.DateOffset(months=months)).date().isoformat()
+        m = 6 if months is None else int(months)
+        if m < 1:
+            raise SystemExit("[backfill] months must be >= 1")
+        start = (pd.Timestamp(end) - pd.DateOffset(months=m)).date().isoformat()
 
-    days = sorted(
+    print(f"[backfill] requested window {start} → {end} (months_arg={months})")
+    _ensure_price_coverage(start, end, ticker)
+
+    store = ps._load_store()
+    if not len(store):
+        raise SystemExit("[backfill] empty price store after bootstrap")
+
+    all_days = sorted(pd.to_datetime(store["date"]).unique())
+    days = [
         d.date().isoformat()
-        for d in pd.to_datetime(store["date"]).unique()
+        for d in all_days
         if start <= d.date().isoformat() <= end
-    )
+    ]
     if not days:
-        raise SystemExit(f"[backfill] no price days in {start}..{end}")
+        d0 = pd.to_datetime(store["date"]).min().date().isoformat()
+        d1 = pd.to_datetime(store["date"]).max().date().isoformat()
+        raise SystemExit(
+            f"[backfill] no price days in {start}..{end}. Store covers {d0}..{d1}. "
+            f"Re-run with bootstrap --days covering the window."
+        )
+
+    if days[0] > start:
+        print(
+            f"[backfill] WARN: first scored day {days[0]} > requested start {start} "
+            f"(limited by price store / exports)"
+        )
 
     form4 = None
     if INS_PANEL.exists():
@@ -253,8 +268,8 @@ def run(
         form4 = pd.read_csv(INS_PANEL_CSV)
 
     print(
-        f"[backfill] {start} → {end}  days={len(days)}  exports={len(exports)}  "
-        f"ticker={ticker or 'LIQUID'}  fwd_bars={FORWARD_BARS}"
+        f"[backfill] scoring days={len(days)} ({days[0]}→{days[-1]}) exports={len(exports)} "
+        f"ticker={ticker or 'LIQUID'} fwd_bars={FORWARD_BARS}"
     )
 
     store = store.copy()
@@ -266,7 +281,7 @@ def run(
     for i, asof in enumerate(days, 1):
         exp_date, exp_df = _export_asof(exports, asof)
         if exp_df is None:
-            print(f"[backfill] skip {asof}: no export")
+            print(f"[backfill] skip {asof}: no export <= date")
             continue
         liquid = ab._filter_liquid(exp_df)
         if ticker:
@@ -295,13 +310,13 @@ def run(
                 ohlc_full = None
             else:
                 ohlc_to = g[g.index <= pd.Timestamp(asof)]
-                ohlc_full = g  # full history for forward extrema (future only used in label)
+                ohlc_full = g
             prior_row, prior_d = _prior_export_row(exports, exp_date or asof, t)
             rec = _score_one(t, asof, ohlc_to, ohlc_full, row, prior_row, prior_d, form4)
             rec["export_used"] = exp_date
             rows.append(rec)
 
-        if i % 5 == 0 or i == len(days):
+        if i % 10 == 0 or i == len(days):
             print(f"[backfill] {asof} ({i}/{len(days)}) rows_so_far={len(rows):,}")
 
     out = pd.DataFrame(rows)
@@ -324,12 +339,16 @@ def run(
         "",
         f"- Rows: **{len(out):,}** · days={out['asof_date'].nunique() if len(out) else 0} · "
         f"tickers={out['Ticker'].nunique() if len(out) else 0}",
+        f"- Actual score span: "
+        + (
+            f"{out['asof_date'].min()} → {out['asof_date'].max()}"
+            if len(out)
+            else "empty"
+        ),
         "- Features: OHLC≤D, export≤D, Form4 month≤prior (no look-ahead)",
-        f"- **Forward check** (not in score): from asof **close**, next **{FORWARD_BARS}** sessions "
-        f"(~2 months) or until last available bar if shorter:",
-        "  - `max_profit_2m` = max(high/entry − 1)",
-        "  - `max_loss_2m` = min(low/entry − 1)",
-        "- **A14 setup**: profitable + RSI<30 + near 3m lows + 2-day ratios ≥1 → GOOD",
+        f"- Forward check: next {FORWARD_BARS} sessions (~2m) or until last bar",
+        "- A14: profitable + RSI<30 + near 3m lows + 2d ratios",
+        "- A15: body_rg>1.4 + red_wick>green_wick + maxG>maxR (5d)",
         "",
     ]
     if len(out):
@@ -352,34 +371,6 @@ def run(
                 f"{pct(r['mean_max_profit'])} | {pct(r['mean_max_loss'])} |"
             )
 
-        # score-bucket outcomes
-        tmp = out.dropna(subset=["max_profit_2m", "max_loss_2m"]).copy()
-        if len(tmp):
-            tmp["bucket"] = pd.cut(
-                tmp["score"],
-                bins=[-99, -1, 2, 5, 99],
-                labels=["≤-1", "0–2", "3–5", "≥6"],
-            )
-            g = tmp.groupby("bucket", observed=False).agg(
-                n=("score", "count"),
-                mean_profit=("max_profit_2m", "mean"),
-                mean_loss=("max_loss_2m", "mean"),
-                med_profit=("max_profit_2m", "median"),
-                med_loss=("max_loss_2m", "median"),
-            )
-            lines += [
-                "",
-                "## Outcomes by score bucket (forward 2m)",
-                "",
-                "| score | n | mean max_profit | median max_profit | mean max_loss | median max_loss |",
-                "|------|--:|----------------:|------------------:|--------------:|----------------:|",
-            ]
-            for bkt, r in g.iterrows():
-                lines.append(
-                    f"| {bkt} | {int(r['n'])} | {pct(r['mean_profit'])} | {pct(r['med_profit'])} | "
-                    f"{pct(r['mean_loss'])} | {pct(r['med_loss'])} |"
-                )
-
         if ticker:
             lines += [
                 "",
@@ -397,11 +388,7 @@ def run(
                     f"{r.get('fwd_window')} | {r.get('pair_day_a')}→{r.get('pair_day_b')} |"
                 )
 
-    lines += [
-        "",
-        f"- parquet: `{parquet.relative_to(ROOT)}`",
-        f"- CSV: `{csv.name}` (if written)",
-    ]
+    lines += ["", f"- parquet: `{parquet.relative_to(ROOT)}`"]
     md = OUT_DIR / f"{stem}.md"
     md.write_text("\n".join(lines), encoding="utf-8")
     (OUT_DIR / f"{stem}.json").write_text(
@@ -409,8 +396,11 @@ def run(
             {
                 "start": start,
                 "end": end,
+                "months_arg": months,
                 "ticker": ticker,
                 "n_rows": int(len(out)),
+                "actual_first": out["asof_date"].min() if len(out) else None,
+                "actual_last": out["asof_date"].max() if len(out) else None,
                 "forward_bars": FORWARD_BARS,
                 "generated": datetime.now(ET).isoformat(),
             },
@@ -425,9 +415,14 @@ def run(
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--start", default=None)
-    ap.add_argument("--end", default=None)
-    ap.add_argument("--months", type=int, default=6)
+    ap.add_argument("--start", default=None, help="YYYY-MM-DD (overrides months)")
+    ap.add_argument("--end", default=None, help="YYYY-MM-DD")
+    ap.add_argument(
+        "--months",
+        type=int,
+        default=None,
+        help="Lookback months from end (any integer, e.g. 24). Default 6 if start omitted.",
+    )
     ap.add_argument("--ticker", default=None)
     args = ap.parse_args()
     run(start=args.start, end=args.end, months=args.months, ticker=args.ticker)

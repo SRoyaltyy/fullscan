@@ -1,10 +1,196 @@
-"""Part A+B1 checklist with A15 — zlib parts on disk."""
+"""Part A (OHLC) + Part B1 checklist — loads known-good source + A15 tape recovery.
+
+A15 GOOD when ALL of:
+  * 2-day body R:G > 1.4
+  * red wick avg > 1.15 × green wick avg over last 5 sessions
+  * max green body > max red body over last 5 sessions
+"""
 from __future__ import annotations
-import base64
-import zlib
+
+import re
+import urllib.request
 from pathlib import Path
 
-_dir = Path(__file__).resolve().parent
-_b64 = (_dir / "_ab_z1.txt").read_text() + (_dir / "_ab_z2.txt").read_text()
-_src = zlib.decompress(base64.b64decode(_b64)).decode()
+_GOOD_SHA = "01d6380c8ed6dfff34afc78feed675386b26bf68"
+_RAW = (
+    f"https://raw.githubusercontent.com/SRoyaltyy/fullscan/{_GOOD_SHA}/src/ab_checklist.py"
+)
+_CACHE = Path(__file__).resolve().parent / "_ab_checklist_cached.py"
+
+
+def _fetch_good() -> str:
+    if _CACHE.exists() and _CACHE.stat().st_size > 10_000:
+        return _CACHE.read_text(encoding="utf-8")
+    # Prefer git object if full history present
+    try:
+        import subprocess
+
+        root = Path(__file__).resolve().parent.parent
+        src = subprocess.check_output(
+            ["git", "show", f"{_GOOD_SHA}:src/ab_checklist.py"],
+            cwd=root,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+        if len(src) > 10_000:
+            _CACHE.write_text(src, encoding="utf-8")
+            return src
+    except Exception:
+        pass
+    with urllib.request.urlopen(_RAW, timeout=60) as r:
+        src = r.read().decode("utf-8")
+    if len(src) < 10_000:
+        raise RuntimeError("failed to load known-good ab_checklist source")
+    _CACHE.write_text(src, encoding="utf-8")
+    return src
+
+
+def _apply_a15(t: str) -> str:
+    if "A15_tape_recovery_setup" in t and "_five_day_tape" in t:
+        return t
+
+    old = '    "A13_red_body_vs_wick_2day",\n    "B01_eps_surprise",'
+    new = (
+        '    "A13_red_body_vs_wick_2day",\n'
+        '    "A15_tape_recovery_setup",\n'
+        '    "B01_eps_surprise",'
+    )
+    if "A15_tape_recovery_setup" not in t:
+        if old not in t:
+            raise RuntimeError("FEATURE_ORDER anchor missing in base ab_checklist")
+        t = t.replace(old, new, 1)
+
+    helper = '''
+def _five_day_tape(df: pd.DataFrame) -> dict:
+    """Last 5 sessions: max green body vs max red; avg wick red vs green; 2d body_rg."""
+    win = df.tail(5)
+    if len(win) < 2:
+        return {"ok": False}
+    sessions = []
+    for idx, row in win.iterrows():
+        o, h, l, c = float(row["open"]), float(row["high"]), float(row["low"]), float(row["close"])
+        body = c - o
+        color = "GREEN" if body > 0 else ("RED" if body < 0 else "DOJI")
+        wick = (h - max(o, c)) + (min(o, c) - l)
+        sessions.append({
+            "d": idx.date().isoformat() if hasattr(idx, "date") else str(idx)[:10],
+            "body": body,
+            "body_abs": abs(body),
+            "color": color,
+            "wick": wick,
+        })
+    greens = [s for s in sessions if s["color"] == "GREEN"]
+    reds = [s for s in sessions if s["color"] == "RED"]
+    max_g = max((s["body_abs"] for s in greens), default=0.0)
+    max_r = max((s["body_abs"] for s in reds), default=0.0)
+    avg_wick_g = float(np.mean([s["wick"] for s in greens])) if greens else np.nan
+    avg_wick_r = float(np.mean([s["wick"] for s in reds])) if reds else np.nan
+    last2 = sessions[-2:]
+    bg = sum(s["body"] for s in last2 if s["color"] == "GREEN")
+    br = sum(-s["body"] for s in last2 if s["color"] == "RED")
+    body_rg_2 = (bg / br) if br > 1e-12 else (99.0 if bg > 0 else 1.0)
+    return {
+        "ok": True,
+        "n": len(sessions),
+        "start": sessions[0]["d"],
+        "end": sessions[-1]["d"],
+        "sessions": sessions,
+        "max_green_body": max_g,
+        "max_red_body": max_r,
+        "max_green_gt_max_red": max_g > max_r,
+        "avg_wick_green": avg_wick_g,
+        "avg_wick_red": avg_wick_r,
+        "red_wick_gt_green": (
+            np.isfinite(avg_wick_r) and np.isfinite(avg_wick_g) and avg_wick_r > avg_wick_g * 1.15
+        ),
+        "body_rg_2day": body_rg_2,
+        "trail": "; ".join(
+            f"{s['d']}:{s['color']}:body={s['body']:+.4f}:wick={s['wick']:.4f}" for s in sessions
+        ),
+    }
+
+'''
+    if "_five_day_tape" not in t:
+        t = t.replace(
+            "def _part_a(ohlc: pd.DataFrame) -> dict:",
+            helper + "def _part_a(ohlc: pd.DataFrame) -> dict:",
+            1,
+        )
+
+    if "five = _five_day_tape" not in t:
+        t = t.replace(
+            "    pair = _pair_body_vol(df.iloc[-2], df.iloc[-1], d_prev, d_now)\n\n    # RVOL:",
+            "    pair = _pair_body_vol(df.iloc[-2], df.iloc[-1], d_prev, d_now)\n"
+            "    five = _five_day_tape(df)\n\n    # RVOL:",
+            1,
+        )
+    if '"five_day": five' not in t:
+        t = t.replace('"pair": pair,\n', '"pair": pair,\n        "five_day": five,\n', 1)
+
+    if 'z["A15_tape_recovery_setup"]' not in t:
+        a15 = '''
+    five = a.get("five_day") or {}
+    br = (a.get("pair") or {}).get("body_rg", np.nan)
+    if (
+        five.get("ok")
+        and np.isfinite(br)
+        and br > 1.4
+        and five.get("red_wick_gt_green")
+        and five.get("max_green_gt_max_red")
+    ):
+        z["A15_tape_recovery_setup"] = 1
+    else:
+        z["A15_tape_recovery_setup"] = 0
+
+'''
+        anchor = (
+            '        z["A13_red_body_vs_wick_2day"] = -1 if rb >= rw else 1\n\n    return z\n'
+        )
+        if anchor not in t:
+            raise RuntimeError("pass_a A13 anchor missing")
+        t = t.replace(
+            anchor,
+            '        z["A13_red_body_vs_wick_2day"] = -1 if rb >= rw else 1\n'
+            + a15
+            + "    return z\n",
+            1,
+        )
+
+    if re.search(r'"A15_tape_recovery_setup"', t) and t.count("A15_tape_recovery_setup") < 2:
+        v_anchor = (
+            '            "A13_red_body_vs_wick_2day": (\n'
+            '                f"pair {p[\'d_a\']}+{p[\'d_b\']}: RED body_frac={p[\'r_body_frac\']} '
+            'wick_frac={p[\'r_wick_frac\']}"\n'
+            "            ),\n        }"
+        )
+        # softer insert: after A13 value line
+        marker = '"A13_red_body_vs_wick_2day":'
+        if marker in t and '"A15_tape_recovery_setup":' not in t.split("def _value_map")[-1]:
+            # find closing of A13 value tuple inside _value_map
+            idx = t.find('"A13_red_body_vs_wick_2day"')
+            # find the next "        }" after that in value map
+            close = t.find("        }", idx)
+            if close != -1:
+                insert = (
+                    '            "A15_tape_recovery_setup": (\n'
+                    '                "n/a" if not (a.get("five_day") or {}).get("ok") else (\n'
+                    "                    f\"body_rg_2d={(a.get('five_day') or {}).get('body_rg_2day', p.get('body_rg'))} need>1.4; \"\n"
+                    "                    f\"red_wick_gt_green={(a.get('five_day') or {}).get('red_wick_gt_green')} \"\n"
+                    "                    f\"(avg_w_r={(a.get('five_day') or {}).get('avg_wick_red')} "
+                    "avg_w_g={(a.get('five_day') or {}).get('avg_wick_green')}); \"\n"
+                    "                    f\"maxG={(a.get('five_day') or {}).get('max_green_body')} "
+                    "maxR={(a.get('five_day') or {}).get('max_red_body')} \"\n"
+                    "                    f\"maxG>maxR={(a.get('five_day') or {}).get('max_green_gt_max_red')}; \"\n"
+                    "                    f\"5d[{(a.get('five_day') or {}).get('start')}→{(a.get('five_day') or {}).get('end')}]; \"\n"
+                    "                    f\"{(a.get('five_day') or {}).get('trail')}\"\n"
+                    "                )\n"
+                    "            ),\n"
+                )
+                t = t[:close] + insert + t[close:]
+
+    compile(t, "ab_checklist.py", "exec")
+    return t
+
+
+_src = _apply_a15(_fetch_good())
 exec(compile(_src, __file__, "exec"), globals())
