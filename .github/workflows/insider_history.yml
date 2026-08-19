@@ -1,0 +1,88 @@
+name: Insider History (SEC Form 4 months)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "Comma tickers (blank if using liquid)"
+        required: false
+        default: ""
+      liquid:
+        description: "Use liquid Finviz universe"
+        type: boolean
+        default: true
+      months:
+        description: "How many months of history"
+        required: false
+        default: "18"
+      max_tickers:
+        description: "Cap when liquid=true"
+        required: false
+        default: "150"
+      resume:
+        description: "Skip tickers already in today's trades file"
+        type: boolean
+        default: true
+      codes:
+        description: "Form4 codes (P,S = open market). ALL = every code"
+        required: false
+        default: "P,S"
+
+permissions:
+  contents: write
+
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install edgartools pyarrow
+
+      - name: Pull Form 4 history
+        env:
+          SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
+          EDGAR_IDENTITY: ${{ secrets.EDGAR_IDENTITY }}
+        run: |
+          set -euo pipefail
+          ARGS=(--months "${{ inputs.months }}" --max-tickers "${{ inputs.max_tickers }}" --codes "${{ inputs.codes }}")
+          if [ "${{ inputs.resume }}" = "true" ]; then ARGS+=(--resume); fi
+          if [ -n "${{ inputs.tickers }}" ]; then
+            ARGS+=(--tickers "${{ inputs.tickers }}")
+          elif [ "${{ inputs.liquid }}" = "true" ]; then
+            ARGS+=(--liquid)
+          else
+            echo "Need tickers or liquid=true"; exit 1
+          fi
+          echo "CMD: python -m src.insider_history ${ARGS[*]}"
+          python -m src.insider_history "${ARGS[@]}"
+          ls -la data/insider/history/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: insider-history
+          path: data/insider/history/
+          if-no-files-found: warn
+
+      - name: Commit
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/insider/history/ || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: insider Form4 history $(date -u +%F)"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
