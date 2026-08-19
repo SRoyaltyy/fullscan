@@ -1,0 +1,82 @@
+name: Insider Fetch (Finviz B2)
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "As-of YYYY-MM-DD (blank = today ET)"
+        required: false
+        default: ""
+      quotes:
+        description: "Quote scrape mode: blank=market-only | liquid | TICKER,TICKER"
+        required: false
+        default: ""
+      max_quotes:
+        description: "Max quote pages when quotes=liquid"
+        required: false
+        default: "300"
+  schedule:
+    # after US close weekdays
+    - cron: "0 22 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  insider:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml
+
+      - name: Fetch insiders
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          AS_OF="${{ inputs.date }}"
+          AS_OF="${AS_OF//+/-}"
+          QUOTES="${{ inputs.quotes }}"
+          MAXQ="${{ inputs.max_quotes }}"
+          ARGS=()
+          [ -n "$AS_OF" ] && ARGS+=(--date "$AS_OF")
+          [ -n "$QUOTES" ] && ARGS+=(--quotes "$QUOTES")
+          [ -n "$MAXQ" ] && ARGS+=(--max-quotes "$MAXQ")
+          echo "CMD: python -m src.insider_fetch ${ARGS[*]}"
+          python -m src.insider_fetch "${ARGS[@]}"
+          ls -la data/insider/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: insider-fetch
+          path: data/insider/
+          if-no-files-found: warn
+
+      - name: Commit outputs
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/insider/ || true
+          git status
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "chore: insider fetch $(date -u +%F)"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
