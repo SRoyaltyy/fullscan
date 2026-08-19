@@ -1,0 +1,436 @@
+{
+  "generated_at": "2026-08-19T07:42:44.064148-04:00",
+  "hours": 48,
+  "raw_headlines": 300,
+  "unique_events": 2,
+  "universe_rows": 5961,
+  "interactions": [],
+  "reasoned_events": [
+    {
+      "event": "fed_rate_path",
+      "headline_count": 12,
+      "framework": {
+        "keep": "conditional",
+        "us_relevance": "high",
+        "us_relevance_why": "Discount rate / risk appetite for all US duration and banks",
+        "channel": "rates",
+        "geography": "us_domestic",
+        "severity": "regime",
+        "horizon": "1d-1w",
+        "action_object": "spx",
+        "action_object_detail": "SPX beta + rate-sensitive baskets (not a single stock thesis)",
+        "polarity": "mixed",
+        "polarity_why": "both dovish and hawkish cues present",
+        "confidence": 0.55,
+        "drop_reason": "",
+        "notes": [
+          "headline_count=12 supports non-noise severity",
+          "rates polarity unclear → lower confidence / soft book"
+        ]
+      },
+      "mechanism": "Discount-rate channel: hawkish (hikes / higher-for-longer) pressures long-duration growth and rate-sensitive REITs, mixed for banks via curve; dovish (cuts / cooling hike odds) inverts those duration sides and often supports gold. Labor prints move Fed path expectations without being a ‘jobs ETF’ trade.",
+      "amp_damp": "Sides flip on dovish vs hawkish; unknown polarity → no hard book",
+      "mean_revert": "after FOMC / next print",
+      "taxonomy": [
+        "Institutional policy (Fed rate cut, QE, stimulus)",
+        "Rate hike/monetary tightening/liquidity withdrawal"
+      ],
+      "evidence": [
+        {
+          "title": "Treasury yields pull back from multi-decade highs ahead of FOMC minutes - CNBC",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOS3pqSU0xNlBxTzEzTmJqWl9YSnpVaUtnUmRHUzFyZTdsbWw0aVMwT1dfRkhQZjd5c3BnRmdiQWliYWxDbERsY2xpLXlsZW13N0x2LXRrNUYzaHJ3N3loR0FhTXhEeUp4WHk1S2toeVh5aW1xdDdmZ05PWFdwYXVmOEF2SlB2X0J6Y3JqaDVFc1jSAZYBQVVfeXFMTzBXRjRROG0wcS1uOTZCUXBHVVFna2VNSXdLcEE5MGpSUXpwUXk1TUVjTmJncThKY1RMOFpkNXZycW9HWnRIRjY3bkdzOUQ5SjFPc1doWThpU2lrY0NyTWtibWFzQ1p2dFJ4TjFBZlBqYWY1aTZRTWEyNnFBaktnclNvYXhNMmZlSFZYbllqclBWRnJMRkhR?oc=5",
+          "published_at": "Wed, 19 Aug 2026 08:33:21 GMT"
+        },
+        {
+          "title": "Reduced Fed Rate Hike Expectations Undercut the Dollar",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/markets/currencies/articles/reduced-fed-rate-hike-expectations-193809337.html",
+          "published_at": "2026-08-17T19:38:09Z"
+        },
+        {
+          "title": "30-Year Treasury Yield Hits 19-Year High as Borrowing Costs Rise: What It Means for Consumers - TradingView",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQeGhBSnB4dUp6bjdqSHg0eVloV0UwWUp1MlFiXzB2RGxYZVF0dVRNQzdFZzlkN1RuNGJCeFMzblBlMm96Z1dfWTg5Z0lsSjRJS19ZWFNlS2h1VnVPcmlaWGhVY09SVUhZbGVRWHdBTGFiWDRGOGNpVDAxU1JaTmduSjJsQjNTVjdlNkdyVzB5NEQ5VlZralZkUGNtUzZqcGNPc0ItUEFRYkJ0SUltendCSjJsbWtRTTBmZURlSU8xNVJmQUxLWDhmVDl5RnJ2NV9NZENLWERnbXZNMEJ6QzQwbGpMdk5ZZw?oc=5",
+          "published_at": "Wed, 19 Aug 2026 08:53:15 GMT"
+        },
+        {
+          "title": "Federal Reserve leaves rates unchanged as Warsh faces questions on inflation - turnto10.com",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxOV3lYTU00RWVTdERfbUhUUlItNDEtZkYwQ21nSlBNc0NsYnJOLV9FTVY0WExNU0RtTENsSlVKcjkwcy05Zm1hc1ZvNkJoYzg2U2RXSlJCdzgzd2huTnBnZVpFSVYwWXFvZXJRa01hUnF4U3pFUmF6c1lVTzNrTzRLWUJfQVd1RjM1Z3VfSzF5Zlh0ZnNIajE4QXpIamxGSHk0NlVWdklnWHBZNnlnVTZFVUdzNTVmdTgzbk9NRHpPUzMtcWp3NzhPd0t6VFZHd2MyemJDbXlyTGlmUXkwVHFfc21wYzN3ZGt1WDlQRHpPM3JlSi15dHFXTUEzWmJLLVJFUloxVEZtWkdSME1CaUpfd1ZBOTNxQ3BvUjBlNWlDbGE2MWxyeUd2cnlFcTVyWjZZQkpCeUVPTkhBcmo2SklCdDhpT2dCM2h1Yl9qR0ZaTUk5OXE4WnBsUEx2T2xhX1VGUUMzTTlMcjh4MEh0U2NFakxyR2ltQU9qTmR4SWFERGF6Z2IxZmF2VGlGM1JkTThzN0hCTU9BWUtraG8zS203N3Zn?oc=5",
+          "published_at": "Wed, 29 Jul 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Dollar hovers near multi-month lows as Treasury yields slip; Fed minutes awaited - Global Banking & Finance Review",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMGxQZ2JxcXROYjlFOThJXzF2a1FwcWtvNU9xZXZlWGQ1Y2VHY0I4amNXZF9jaUlZUUFVTzYtMElvUDhTSHdGd3YydEZQcnh1NzI4bm9GRFdMU044YjdBS2FTSGt4TW80Z2c2U3NUTm9hcktMeEpyTEpnZVpLQ1puVlZKV0NreWhUc0x0eUdSeml6SFF1Tmh5SG9hYnV6aV9fRHUw?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:17:49 GMT"
+        },
+        {
+          "title": "Treasury Yields Rise, Curve Steepens Amid War Concerns",
+          "source": "rss_yahoo_finance",
+          "url": "https://www.wsj.com/finance/jgb-yield-curve-steepens-slightly-tracking-treasury-yield-curves-steepening-419f9803?siteid=yhoof2&yptr=yahoo",
+          "published_at": "2026-08-17T19:57:00Z"
+        },
+        {
+          "title": "Gold firms as Treasury yields ease; Fed minutes in focus - cnbc.com",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNzdOMnFJTHdQd25aQjl5NkU2TVhaR2VGeXQ3eWhsNmRTUmNNNVJiemN3Umlob1dUQWtRVlVaWVNNajlPdDFwQzV3Z2lvUXVhMnhzQlZyVkNGT1doNHo3TkM1NmM2U1Y2dkJld2FKVmhiUEgydlJxcXpGbEV4YTN0aFJ2QzdtcC0wTlNIelZyQWhaS1FnckdN0gGcAUFVX3lxTFAzV2hHUHN5MUNmNnYyWFBrMVEtRTdkYkE0TW81ZlZOM2NERXl0cEd5WXk2VVE1d0t5WXNkQkVnOUVHUGxsZm5Qa05QSFNNdldCYkxZWGRJNjlqcnZyaUhCMUdUX2FiNXpLR2EwVk5RaU5scV9YVE00aE5qRkZMLTBSYTZZMlNsSjFUN0pzX3hSVzhOZlg5aFZuT0RsZQ?oc=5",
+          "published_at": "Wed, 19 Aug 2026 04:21:47 GMT"
+        },
+        {
+          "title": "Won surges to 1,300 range as Fed rate hike bets fade; further gains seen limited - KED Global",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE44VE5UM1EyTU5oVjAtd3NjY3JQRHdwM21zRk1EczRoX3FyMms2LTBKNEdXeFVCUVpTbjdVMDdWS01GWXZyYVRtQ3MtLXp0bllrR1oyVWRfSWlzN2ZHRU43NUxJWGNvQXctbzBJLUlOWm9iekdHVWc?oc=5",
+          "published_at": "Wed, 19 Aug 2026 06:56:50 GMT"
+        }
+      ]
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "headline_count": 2,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "Global oil chokepoint the US market prices daily (WTI/Brent, XLE, fuel costs)",
+        "channel": "risk",
+        "geography": "global_priced",
+        "severity": "session",
+        "horizon": "1d-1w",
+        "action_object": "sector_etf",
+        "action_object_detail": "XLE long bias / airline basket short / optional SPX if risk-off",
+        "polarity": "mixed",
+        "polarity_why": "bullish upstream oil risk premium; bearish fuel-cost airlines",
+        "confidence": 0.75,
+        "drop_reason": "",
+        "notes": []
+      },
+      "mechanism": "Hormuz/Red Sea transit risk → oil risk premium → upstream producers benefit if price holds; airlines and other fuel-intensive transport are cost-shocked. Geography is global oil, but US E&P still price to WTI/Brent. Not a pure-gas trade.",
+      "amp_damp": "[+] real transit threat + oil up [−] rhetoric only, oil unchanged",
+      "mean_revert": "de-escalation / oil giveback",
+      "taxonomy": [
+        "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+        "Commodity price move favorable to the company"
+      ],
+      "evidence": [
+        {
+          "title": "Oil hits three-week high on uncertainty over Hormuz - Reuters",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkdUVWxmeFlpYXd4VjhyeHhvNjBmaVlPbVdFemxvNTJHaExLNWhQbzNXeTN5QkVkWVh4aVU4ODJCWnFGazJnQklMejNuVnpPaHFUN1JEM1lFZ3FZaG96ME00QWdZN1JmYW5fN1lXNmV6dDVZUWxFWlJYc05BaEtzbEpGbXlqSHoxRnB3dTQ2NnZXX0tzRENESXFhRDlGSmxNT01LMWhSWQ?oc=5",
+          "published_at": "Wed, 19 Aug 2026 00:39:00 GMT"
+        },
+        {
+          "title": "Why Libya’s Next Oil Pipeline Could Be a Geopolitical Game-Changer",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/why-libya-next-oil-pipeline-210000945.html",
+          "published_at": "2026-08-17T21:00:00Z"
+        }
+      ]
+    }
+  ],
+  "edge_actions": [
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "banks_diversified",
+      "side": "buy",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "curve/NIM — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary buy `banks_diversified` because curve/NIM — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "reit_office",
+      "side": "sell",
+      "weight": 2.23,
+      "tickers": [],
+      "note": "duration — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `reit_office` because duration — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "software_app",
+      "side": "sell",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "duration growth — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `software_app` because duration growth — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "gold",
+      "side": "sell",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "real rate — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `gold` because real rate — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "oil_ep",
+      "side": "buy",
+      "weight": 6.0,
+      "tickers": [
+        "COP",
+        "EOG",
+        "OXY",
+        "FANG",
+        "DVN",
+        "APA"
+      ],
+      "note": "oil risk premium → producer cash flow leverage",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=session conf=0.75. Edge=primary buy `oil_ep` because oil risk premium → producer cash flow leverage.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "oil_integrated",
+      "side": "buy",
+      "weight": 4.2,
+      "tickers": [
+        "XOM",
+        "CVX"
+      ],
+      "note": "US integrated oil",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=session conf=0.75. Edge=primary buy `oil_integrated` because US integrated oil.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "hormuz_energy_risk",
+      "role": "primary",
+      "bucket": "airlines",
+      "side": "sell",
+      "weight": 4.2,
+      "tickers": [
+        "DAL",
+        "UAL",
+        "AAL",
+        "LUV",
+        "ALK"
+      ],
+      "note": "jet fuel is a major cost; disruption raises fuel",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=session conf=0.75. Edge=primary sell `airlines` because jet fuel is a major cost; disruption raises fuel.",
+      "framework_polarity": "mixed"
+    }
+  ],
+  "ticker_actions": [
+    {
+      "ticker": "COP",
+      "buy_score": 6.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.0,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.0,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "EOG",
+      "buy_score": 6.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.0,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.0,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "OXY",
+      "buy_score": 6.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.0,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.0,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "FANG",
+      "buy_score": 6.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.0,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.0,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "DVN",
+      "buy_score": 6.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.0,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.0,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "APA",
+      "buy_score": 6.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 6.0,
+          "bucket": "oil_ep"
+        }
+      ],
+      "net": 6.0,
+      "side": "buy",
+      "size": "large"
+    },
+    {
+      "ticker": "XOM",
+      "buy_score": 4.2,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.2,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.2,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "CVX",
+      "buy_score": 4.2,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "buy",
+          "weight": 4.2,
+          "bucket": "oil_integrated"
+        }
+      ],
+      "net": 4.2,
+      "side": "buy",
+      "size": "mega"
+    },
+    {
+      "ticker": "DAL",
+      "buy_score": 0.0,
+      "sell_score": 4.2,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.2,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.2,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "UAL",
+      "buy_score": 0.0,
+      "sell_score": 4.2,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.2,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.2,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "AAL",
+      "buy_score": 0.0,
+      "sell_score": 4.2,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.2,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.2,
+      "side": "sell",
+      "size": "mid"
+    },
+    {
+      "ticker": "LUV",
+      "buy_score": 0.0,
+      "sell_score": 4.2,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.2,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.2,
+      "side": "sell",
+      "size": "large"
+    },
+    {
+      "ticker": "ALK",
+      "buy_score": 0.0,
+      "sell_score": 4.2,
+      "events": [
+        {
+          "event": "hormuz_energy_risk",
+          "side": "sell",
+          "weight": 4.2,
+          "bucket": "airlines"
+        }
+      ],
+      "net": -4.2,
+      "side": "sell",
+      "size": "mid"
+    }
+  ]
+}
