@@ -1,0 +1,36 @@
+{
+  "asof": "2026-08-19",
+  "months_window": 18,
+  "since": "2025-02-19",
+  "codes": [
+    "P",
+    "S"
+  ],
+  "n_tickers_requested": 300,
+  "n_trade_rows": 18982,
+  "n_panel_rows": 2054,
+  "panel_months": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "trades_path": "data/insider/history/trades_2026-08-19.parquet",
+  "panel_path": "data/insider/history/monthly_panel.parquet",
+  "generated": "2026-08-19T01:47:46.556760-04:00"
+}

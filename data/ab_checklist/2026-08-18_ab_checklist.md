@@ -13,149 +13,324 @@
 - **A11 max DD** scans the last **42** sessions and reports peak date+price and trough date+price.
 - **B08/B11 deltas** compare current Finviz export vs the previous dated export file.
 
-## Ranked (top 15)
+## Ranked (top 20)
 
 | Rank | Ticker | score | good | bad | Industry |
 |-----:|--------|------:|-----:|----:|----------|
-| 1 | ERO | +13 | 14 | 1 | Copper |
-| 2 | ET | +13 | 15 | 2 | Oil & Gas Midstream |
-| 3 | OKE | +13 | 15 | 2 | Oil & Gas Midstream |
-| 4 | DCTH | +12 | 14 | 2 | Medical Devices |
-| 5 | FTI | +12 | 14 | 2 | Oil & Gas Equipment & Services |
-| 6 | DHT | +12 | 14 | 2 | Oil & Gas Midstream |
-| 7 | ELV | +12 | 14 | 2 | Healthcare Plans |
-| 8 | BBDC | +12 | 13 | 1 | Asset Management |
-| 9 | WTTR | +12 | 14 | 2 | Oil & Gas Equipment & Services |
-| 10 | RHI | +12 | 13 | 1 | Staffing & Employment Services |
-| 11 | FA | +12 | 14 | 2 | Specialty Business Services |
-| 12 | NOMD | +12 | 14 | 2 | Packaged Foods |
-| 13 | EBC | +12 | 13 | 1 | Banks - Regional |
-| 14 | DUOL | +12 | 14 | 2 | Software - Application |
-| 15 | HAE | +12 | 15 | 3 | Medical Devices |
+| 1 | FLS | +16 | 16 | 0 | Specialty Industrial Machinery |
+| 2 | BNL | +15 | 15 | 0 | REIT - Diversified |
+| 3 | CLX | +14 | 14 | 0 | Household & Personal Products |
+| 4 | HRI | +14 | 15 | 1 | Rental & Leasing Services |
+| 5 | LIVN | +13 | 14 | 1 | Medical Devices |
+| 6 | AMGN | +13 | 15 | 2 | Drug Manufacturers - General |
+| 7 | EVTC | +13 | 14 | 1 | Software - Infrastructure |
+| 8 | GAU | +13 | 14 | 1 | Gold |
+| 9 | DCTH | +13 | 14 | 1 | Medical Devices |
+| 10 | MH | +13 | 14 | 1 | Education & Training Services |
+| 11 | EPD | +13 | 14 | 1 | Oil & Gas Midstream |
+| 12 | SONO | +13 | 14 | 1 | Consumer Electronics |
+| 13 | RPM | +13 | 13 | 0 | Specialty Chemicals |
+| 14 | DSGX | +12 | 12 | 0 | Software - Application |
+| 15 | SN | +12 | 14 | 2 | Furnishings, Fixtures & Appliances |
+| 16 | BLK | +12 | 13 | 1 | Asset Management |
+| 17 | KBR | +12 | 13 | 1 | Engineering & Construction |
+| 18 | PHR | +12 | 13 | 1 | Health Information Services |
+| 19 | WTTR | +12 | 14 | 2 | Oil & Gas Equipment & Services |
+| 20 | BKR | +12 | 13 | 1 | Oil & Gas Equipment & Services |
 
-## Full checklist with dates — top 15
+## Full checklist with dates — top 20
 
-### ERO  ·  score **+13**  ·  Copper
-price=32.93000030517578  mcap=$3.47B  ADV=1,195,000
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-05,2026-08-06,2026-08-07,2026-08-10,2026-08-17]  RED=[2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-18]
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=58.40 on 2026-08-18; prev RSI=66.97 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 66.97@2026-08-17 → 58.40@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 66.97@2026-08-17 → 58.40@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 66.97@2026-08-17 → 58.40@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=1.812 (= sum GREEN bodies / sum RED bodies); GREEN_sum=6.8500 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-10,2026-08-17]; RED_sum=3.7800 dates=[2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-18]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:GREEN:O=29.9300,C=30.4300,body=+0.5000 | 2026-08-06:GREEN:O=29.9100,C=31.1000,body=+1.1900 | 2026-08-07:GREEN:O=32.0000,C=34.3100,body=+2.3100 | 2026-08-10:GREEN:O=34.3100,C=36.5400,body=+2.2300 | 2026-08-11:RED:O=36.5000,C=36.3000,body=-0.2000 | 2026-08-12:RED:O=36.6900,C=36.0700,body=-0.6200 | 2026-08-13:RED:O=35.3700,C=34.3700,body=-1.0000 | 2026-08-14:RED:O=34.7100,C=33.8000,body=-0.9100 | 2026-08-17:GREEN:O=34.2900,C=34.9100,body=+0.6200 | 2026-08-18:RED:O=33.9800,C=32.9300,body=-1.0500 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.541 if finite else n/a; GREEN_vol_sum=9966100 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-10,2026-08-17]; RED_vol_sum=6466775 dates=[2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-18]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:vol=1271500 | 2026-08-06:GREEN:vol=1389400 | 2026-08-07:GREEN:vol=2753000 | 2026-08-10:GREEN:vol=3557800 | 2026-08-11:RED:vol=1769000 | 2026-08-12:RED:vol=1315700 | 2026-08-13:RED:vol=1528400 | 2026-08-14:RED:vol=992600 | 2026-08-17:GREEN:vol=994400 | 2026-08-18:RED:vol=861075 | **GOOD** |
-| `A07_rvol` | RVOL=0.691 on 2026-08-18: today_vol=861075 / avg20=1246460 (avg window 2026-07-17→2026-08-17, excludes today) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.313 on 2026-08-18 (price=32.9300, mid=30.2790, upper=38.7369, lower=21.8211; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=32.9300 vs SMA50=28.2334 dist=+16.63% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=30.2790 SMA50=28.2334 SMA80=28.1559 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-9.88% inside window 2026-06-16→2026-08-18 (42 sessions): peak 2026-08-10 @ 36.5400 → trough 2026-08-18 @ 32.9300 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-10,2026-08-17] body_frac=0.723 wick_frac=0.277; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:body=0.5000,upperW=0.2700,lowerW=0.3200,range=1.0900 | 2026-08-06:GREEN:body=1.1900,upperW=0.3850,lowerW=0.5500,range=2.1250 | 2026-08-07:GREEN:body=2.3100,upperW=0.0350,lowerW=0.3600,range=2.7050 | 2026-08-10:GREEN:body=2.2300,upperW=0.0800,lowerW=0.0000,range=2.3100 | 2026-08-11:RED:body=0.2000,upperW=0.0700,lowerW=0.8800,range=1.1500 | 2026-08-12:RED:body=0.6200,upperW=0.1650,lowerW=0.2200,range=1.0050 | 2026-08-13:RED:body=1.0000,upperW=0.1600,lowerW=0.3000,range=1.4600 | 2026-08-14:RED:body=0.9100,upperW=0.3100,lowerW=0.2000,range=1.4200 | 2026-08-17:GREEN:body=0.6200,upperW=0.2900,lowerW=0.3400,range=1.2500 | 2026-08-18:RED:body=1.0500,upperW=0.4416,lowerW=0.0594,range=1.5510 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-18] body_frac=0.574 wick_frac=0.426; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:body=0.5000,upperW=0.2700,lowerW=0.3200,range=1.0900 | 2026-08-06:GREEN:body=1.1900,upperW=0.3850,lowerW=0.5500,range=2.1250 | 2026-08-07:GREEN:body=2.3100,upperW=0.0350,lowerW=0.3600,range=2.7050 | 2026-08-10:GREEN:body=2.2300,upperW=0.0800,lowerW=0.0000,range=2.3100 | 2026-08-11:RED:body=0.2000,upperW=0.0700,lowerW=0.8800,range=1.1500 | 2026-08-12:RED:body=0.6200,upperW=0.1650,lowerW=0.2200,range=1.0050 | 2026-08-13:RED:body=1.0000,upperW=0.1600,lowerW=0.3000,range=1.4600 | 2026-08-14:RED:body=0.9100,upperW=0.3100,lowerW=0.2000,range=1.4200 | 2026-08-17:GREEN:body=0.6200,upperW=0.2900,lowerW=0.3400,range=1.2500 | 2026-08-18:RED:body=1.0500,upperW=0.4416,lowerW=0.0594,range=1.5510 | **BAD** |
-| `B01_eps_surprise` | 12.7 | **GOOD** |
-| `B02_revenue_surprise` | 2.4 | **GOOD** |
-| `B03_sales` | 1044.73 | **NEUTRAL** |
-| `B04_income` | 311.26 | **GOOD** |
-| `B05_profit_margin` | 29.79 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 36.31 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.020000000000003126 (now=36.31 vs prior_export=36.29 on finviz_2026-08-17) | **GOOD** |
-| `B09_analyst_recom` | 1.72 | **GOOD** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 2.21 | **GOOD** |
-| `B13_short_float` | 5.07 | **NEUTRAL** |
-| `B14_earnings_date` | 8/5/2026 4:30:00 PM | **NEUTRAL** |
-
-### ET  ·  score **+13**  ·  Oil & Gas Midstream
-price=21.350099563598633  mcap=$73.33B  ADV=9,092,490
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-14,2026-08-18]  RED=[2026-08-05,2026-08-07,2026-08-13,2026-08-17]
+### FLS  ·  score **+16**  ·  Specialty Industrial Machinery
+price=80.87000274658203  mcap=$10.07B  ADV=1,963,300
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-07,2026-08-11,2026-08-13]  RED=[2026-08-05,2026-08-06,2026-08-10,2026-08-12,2026-08-14]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=72.21 on 2026-08-18; prev RSI=67.22 on 2026-08-17 | **BAD** |
-| `A02_rsi_cross_30` | above | RSI 67.22@2026-08-17 → 72.21@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 67.22@2026-08-17 → 72.21@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | cross_up | RSI 67.22@2026-08-17 → 72.21@2026-08-18 vs level 70 | **GOOD** |
-| `A05_body_red_green_ratio` | ratio=2.944 (= sum GREEN bodies / sum RED bodies); GREEN_sum=1.3483 dates=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-14,2026-08-18]; RED_sum=0.4580 dates=[2026-08-05,2026-08-07,2026-08-13,2026-08-17]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=20.1235,C=20.0054,body=-0.1180 | 2026-08-06:GREEN:O=20.2218,C=20.3300,body=+0.1082 | 2026-08-07:RED:O=20.2000,C=20.1300,body=-0.0700 | 2026-08-10:GREEN:O=20.2400,C=20.5900,body=+0.3500 | 2026-08-11:GREEN:O=20.5800,C=20.7800,body=+0.2000 | 2026-08-12:GREEN:O=20.7800,C=20.9500,body=+0.1700 | 2026-08-13:RED:O=20.9300,C=20.7600,body=-0.1700 | 2026-08-14:GREEN:O=20.7800,C=21.0500,body=+0.2700 | 2026-08-17:RED:O=21.0400,C=20.9400,body=-0.1000 | 2026-08-18:GREEN:O=21.1000,C=21.3501,body=+0.2501 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.451 if finite else n/a; GREEN_vol_sum=56105184 dates=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-14,2026-08-18]; RED_vol_sum=38663900 dates=[2026-08-05,2026-08-07,2026-08-13,2026-08-17]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=14107400 | 2026-08-06:GREEN:vol=12519300 | 2026-08-07:RED:vol=11093000 | 2026-08-10:GREEN:vol=11743800 | 2026-08-11:GREEN:vol=8357200 | 2026-08-12:GREEN:vol=9004700 | 2026-08-13:RED:vol=8122500 | 2026-08-14:GREEN:vol=6945200 | 2026-08-17:RED:vol=5341000 | 2026-08-18:GREEN:vol=7534984 | **GOOD** |
-| `A07_rvol` | RVOL=0.778 on 2026-08-18: today_vol=7534984 / avg20=9686995 (avg window 2026-07-21→2026-08-17, excludes today) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=1.048 on 2026-08-18 (price=21.3501, mid=20.3111, upper=21.3022, lower=19.3200; 20d BB) | **BAD** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=21.3501 vs SMA50=19.5755 dist=+9.07% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=20.3111 SMA50=19.5755 SMA80=19.4835 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-18→2026-08-18 (42 sessions): peak 2026-08-18 @ 21.3501 → trough 2026-08-18 @ 21.3501 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-14,2026-08-18] body_frac=0.715 wick_frac=0.285; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.1180,upperW=0.1377,lowerW=0.1475,range=0.4033 | 2026-08-06:GREEN:body=0.1082,upperW=0.1377,lowerW=0.0688,range=0.3147 | 2026-08-07:RED:body=0.0700,upperW=0.2400,lowerW=0.0200,range=0.3300 | 2026-08-10:GREEN:body=0.3500,upperW=0.0400,lowerW=0.0400,range=0.4300 | 2026-08-11:GREEN:body=0.2000,upperW=0.1000,lowerW=0.0000,range=0.3000 | 2026-08-12:GREEN:body=0.1700,upperW=0.0100,lowerW=0.0600,range=0.2400 | 2026-08-13:RED:body=0.1700,upperW=0.1900,lowerW=0.0100,range=0.3700 | 2026-08-14:GREEN:body=0.2700,upperW=0.0500,lowerW=0.0000,range=0.3200 | 2026-08-17:RED:body=0.1000,upperW=0.0300,lowerW=0.0800,range=0.2100 | 2026-08-18:GREEN:body=0.2501,upperW=0.0099,lowerW=0.0200,range=0.2800 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-07,2026-08-13,2026-08-17] body_frac=0.349 wick_frac=0.651; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.1180,upperW=0.1377,lowerW=0.1475,range=0.4033 | 2026-08-06:GREEN:body=0.1082,upperW=0.1377,lowerW=0.0688,range=0.3147 | 2026-08-07:RED:body=0.0700,upperW=0.2400,lowerW=0.0200,range=0.3300 | 2026-08-10:GREEN:body=0.3500,upperW=0.0400,lowerW=0.0400,range=0.4300 | 2026-08-11:GREEN:body=0.2000,upperW=0.1000,lowerW=0.0000,range=0.3000 | 2026-08-12:GREEN:body=0.1700,upperW=0.0100,lowerW=0.0600,range=0.2400 | 2026-08-13:RED:body=0.1700,upperW=0.1900,lowerW=0.0100,range=0.3700 | 2026-08-14:GREEN:body=0.2700,upperW=0.0500,lowerW=0.0000,range=0.3200 | 2026-08-17:RED:body=0.1000,upperW=0.0300,lowerW=0.0800,range=0.2100 | 2026-08-18:GREEN:body=0.2501,upperW=0.0099,lowerW=0.0200,range=0.2800 | **GOOD** |
-| `B01_eps_surprise` | 55.43 | **GOOD** |
-| `B02_revenue_surprise` | 23.9 | **GOOD** |
-| `B03_sales` | 107379.0 | **NEUTRAL** |
-| `B04_income` | 5048.0 | **GOOD** |
-| `B05_profit_margin` | 4.7 | **GOOD** |
+| `A01_rsi_value` | RSI=63.43 on 2026-08-14; prev RSI=64.40 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 64.40@2026-08-13 → 63.43@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 64.40@2026-08-13 → 63.43@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 64.40@2026-08-13 → 63.43@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.657 (= sum GREEN bodies / sum RED bodies); GREEN_sum=5.5500 dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-11,2026-08-13]; RED_sum=3.3500 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-12,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=74.9800,C=76.5400,body=+1.5600 | 2026-08-04:GREEN:O=77.7500,C=79.5500,body=+1.8000 | 2026-08-05:RED:O=79.3500,C=78.6700,body=-0.6800 | 2026-08-06:RED:O=79.5700,C=78.6400,body=-0.9300 | 2026-08-07:GREEN:O=79.2000,C=79.9500,body=+0.7500 | 2026-08-10:RED:O=79.9700,C=79.4900,body=-0.4800 | 2026-08-11:GREEN:O=79.8100,C=80.8600,body=+1.0500 | 2026-08-12:RED:O=81.7000,C=80.9500,body=-0.7500 | 2026-08-13:GREEN:O=80.7600,C=81.1500,body=+0.3900 | 2026-08-14:RED:O=81.3800,C=80.8700,body=-0.5100 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.115 if finite else n/a; GREEN_vol_sum=7816500 dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-11,2026-08-13]; RED_vol_sum=7011500 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-12,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=2123900 | 2026-08-04:GREEN:vol=2270400 | 2026-08-05:RED:vol=1615100 | 2026-08-06:RED:vol=1605600 | 2026-08-07:GREEN:vol=1121200 | 2026-08-10:RED:vol=1020100 | 2026-08-11:GREEN:vol=999700 | 2026-08-12:RED:vol=1425800 | 2026-08-13:GREEN:vol=1301300 | 2026-08-14:RED:vol=1344900 | **GOOD** |
+| `A07_rvol` | RVOL=0.739 on 2026-08-14: today_vol=1344900 / avg20=1820275 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.564 on 2026-08-14 (price=80.8700, mid=75.2755, upper=85.1912, lower=65.3598; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=80.8700 vs SMA50=74.9115 dist=+7.95% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=75.2755 SMA50=74.9115 SMA80=74.6133 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-18.07% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-06-18 @ 81.4603 → trough 2026-07-20 @ 66.7400 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-11,2026-08-13] body_frac=0.515 wick_frac=0.485; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=1.5600,upperW=0.4800,lowerW=0.0000,range=2.0400 | 2026-08-04:GREEN:body=1.8000,upperW=0.4700,lowerW=1.0900,range=3.3600 | 2026-08-05:RED:body=0.6800,upperW=0.6500,lowerW=0.0500,range=1.3800 | 2026-08-06:RED:body=0.9300,upperW=2.7700,lowerW=0.3800,range=4.0800 | 2026-08-07:GREEN:body=0.7500,upperW=0.3000,lowerW=0.7200,range=1.7700 | 2026-08-10:RED:body=0.4800,upperW=0.0200,lowerW=0.3200,range=0.8200 | 2026-08-11:GREEN:body=1.0500,upperW=0.5600,lowerW=0.0500,range=1.6600 | 2026-08-12:RED:body=0.7500,upperW=0.0500,lowerW=1.5100,range=2.3100 | 2026-08-13:GREEN:body=0.3900,upperW=0.2500,lowerW=1.3100,range=1.9500 | 2026-08-14:RED:body=0.5100,upperW=0.7200,lowerW=0.9800,range=2.2100 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-12,2026-08-14] body_frac=0.310 wick_frac=0.690; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=1.5600,upperW=0.4800,lowerW=0.0000,range=2.0400 | 2026-08-04:GREEN:body=1.8000,upperW=0.4700,lowerW=1.0900,range=3.3600 | 2026-08-05:RED:body=0.6800,upperW=0.6500,lowerW=0.0500,range=1.3800 | 2026-08-06:RED:body=0.9300,upperW=2.7700,lowerW=0.3800,range=4.0800 | 2026-08-07:GREEN:body=0.7500,upperW=0.3000,lowerW=0.7200,range=1.7700 | 2026-08-10:RED:body=0.4800,upperW=0.0200,lowerW=0.3200,range=0.8200 | 2026-08-11:GREEN:body=1.0500,upperW=0.5600,lowerW=0.0500,range=1.6600 | 2026-08-12:RED:body=0.7500,upperW=0.0500,lowerW=1.5100,range=2.3100 | 2026-08-13:GREEN:body=0.3900,upperW=0.2500,lowerW=1.3100,range=1.9500 | 2026-08-14:RED:body=0.5100,upperW=0.7200,lowerW=0.9800,range=2.2100 | **GOOD** |
+| `B01_eps_surprise` | 10.45 | **GOOD** |
+| `B02_revenue_surprise` | 0.91 | **GOOD** |
+| `B03_sales` | 4634.07 | **NEUTRAL** |
+| `B04_income` | 371.27 | **GOOD** |
+| `B05_profit_margin` | 8.01 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 24.51 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.120000000000001 (now=24.51 vs prior_export=24.39 on finviz_2026-08-17) | **GOOD** |
-| `B09_analyst_recom` | 1.45 | **GOOD** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 0.64 | **GOOD** |
-| `B13_short_float` | 0.86 | **NEUTRAL** |
-| `B14_earnings_date` | 8/4/2026 8:30:00 AM | **NEUTRAL** |
+| `B07_target_price` | 89.1 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=89.1 vs prior_export=89.1 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.86 | **GOOD** |
+| `B10_insider_transactions` | 0.43 | **GOOD** |
+| `B11_insider_tx_delta` | delta=1.34 (now=0.43 vs prior=-0.91 on finviz_2026-08-17) | **GOOD** |
+| `B12_institutional_transactions` | 4.34 | **GOOD** |
+| `B13_short_float` | 6.39 | **NEUTRAL** |
+| `B14_earnings_date` | 7/29/2026 4:30:00 PM | **NEUTRAL** |
 
-### OKE  ·  score **+13**  ·  Oil & Gas Midstream
-price=97.625  mcap=$61.27B  ADV=3,757,950
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18]  RED=[2026-08-05,2026-08-06,2026-08-07]
+### BNL  ·  score **+15**  ·  REIT - Diversified
+price=21.389999389648438  mcap=$4.03B  ADV=2,015,940
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-07,2026-08-11,2026-08-12,2026-08-13,2026-08-14]  RED=[2026-08-03,2026-08-04,2026-08-05,2026-08-06,2026-08-10]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=70.40 on 2026-08-18; prev RSI=66.10 on 2026-08-17 | **BAD** |
-| `A02_rsi_cross_30` | above | RSI 66.10@2026-08-17 → 70.40@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 66.10@2026-08-17 → 70.40@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | cross_up | RSI 66.10@2026-08-17 → 70.40@2026-08-18 vs level 70 | **GOOD** |
-| `A05_body_red_green_ratio` | ratio=4.720 (= sum GREEN bodies / sum RED bodies); GREEN_sum=9.2050 dates=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18]; RED_sum=1.9500 dates=[2026-08-05,2026-08-06,2026-08-07]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=87.8500,C=87.2400,body=-0.6100 | 2026-08-06:RED:O=88.8200,C=87.9300,body=-0.8900 | 2026-08-07:RED:O=86.8700,C=86.4200,body=-0.4500 | 2026-08-10:GREEN:O=87.3200,C=90.3400,body=+3.0200 | 2026-08-11:GREEN:O=90.2800,C=91.5200,body=+1.2400 | 2026-08-12:GREEN:O=90.9300,C=92.4700,body=+1.5400 | 2026-08-13:GREEN:O=91.9600,C=92.6400,body=+0.6800 | 2026-08-14:GREEN:O=93.5000,C=94.9900,body=+1.4900 | 2026-08-17:GREEN:O=95.1700,C=95.3200,body=+0.1500 | 2026-08-18:GREEN:O=96.5400,C=97.6250,body=+1.0850 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.866 if finite else n/a; GREEN_vol_sum=22267007 dates=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18]; RED_vol_sum=11933700 dates=[2026-08-05,2026-08-06,2026-08-07]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=3984400 | 2026-08-06:RED:vol=5208400 | 2026-08-07:RED:vol=2740900 | 2026-08-10:GREEN:vol=3091800 | 2026-08-11:GREEN:vol=3344400 | 2026-08-12:GREEN:vol=3418500 | 2026-08-13:GREEN:vol=3476400 | 2026-08-14:GREEN:vol=2479100 | 2026-08-17:GREEN:vol=3815700 | 2026-08-18:GREEN:vol=2641107 | **GOOD** |
-| `A07_rvol` | RVOL=0.688 on 2026-08-18: today_vol=2641107 / avg20=3836240 (avg window 2026-07-17→2026-08-17, excludes today) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=1.140 on 2026-08-18 (price=97.6250, mid=90.5948, upper=96.7615, lower=84.4281; 20d BB) | **BAD** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=97.6250 vs SMA50=88.9656 dist=+9.73% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=90.5948 SMA50=88.9656 SMA80=88.5051 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-16→2026-08-18 (42 sessions): peak 2026-08-18 @ 97.6250 → trough 2026-08-18 @ 97.6250 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18] body_frac=0.692 wick_frac=0.308; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.6100,upperW=0.1100,lowerW=1.9600,range=2.6800 | 2026-08-06:RED:body=0.8900,upperW=0.1900,lowerW=1.1900,range=2.2700 | 2026-08-07:RED:body=0.4500,upperW=1.3600,lowerW=0.2200,range=2.0300 | 2026-08-10:GREEN:body=3.0200,upperW=0.0300,lowerW=0.0000,range=3.0500 | 2026-08-11:GREEN:body=1.2400,upperW=0.3400,lowerW=0.3500,range=1.9300 | 2026-08-12:GREEN:body=1.5400,upperW=0.0200,lowerW=0.0900,range=1.6500 | 2026-08-13:GREEN:body=0.6800,upperW=0.8100,lowerW=0.3000,range=1.7900 | 2026-08-14:GREEN:body=1.4900,upperW=0.0600,lowerW=0.6800,range=2.2300 | 2026-08-17:GREEN:body=0.1500,upperW=0.1600,lowerW=0.8500,range=1.1600 | 2026-08-18:GREEN:body=1.0850,upperW=0.2750,lowerW=0.1400,range=1.5000 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-07] body_frac=0.279 wick_frac=0.721; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.6100,upperW=0.1100,lowerW=1.9600,range=2.6800 | 2026-08-06:RED:body=0.8900,upperW=0.1900,lowerW=1.1900,range=2.2700 | 2026-08-07:RED:body=0.4500,upperW=1.3600,lowerW=0.2200,range=2.0300 | 2026-08-10:GREEN:body=3.0200,upperW=0.0300,lowerW=0.0000,range=3.0500 | 2026-08-11:GREEN:body=1.2400,upperW=0.3400,lowerW=0.3500,range=1.9300 | 2026-08-12:GREEN:body=1.5400,upperW=0.0200,lowerW=0.0900,range=1.6500 | 2026-08-13:GREEN:body=0.6800,upperW=0.8100,lowerW=0.3000,range=1.7900 | 2026-08-14:GREEN:body=1.4900,upperW=0.0600,lowerW=0.6800,range=2.2300 | 2026-08-17:GREEN:body=0.1500,upperW=0.1600,lowerW=0.8500,range=1.1600 | 2026-08-18:GREEN:body=1.0850,upperW=0.2750,lowerW=0.1400,range=1.5000 | **GOOD** |
-| `B01_eps_surprise` | 5.1 | **GOOD** |
-| `B02_revenue_surprise` | 34.63 | **GOOD** |
-| `B03_sales` | 39646.0 | **NEUTRAL** |
-| `B04_income` | 3656.0 | **GOOD** |
-| `B05_profit_margin` | 9.22 | **GOOD** |
+| `A01_rsi_value` | RSI=50.85 on 2026-08-14; prev RSI=48.30 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 48.30@2026-08-13 → 50.85@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | cross_up | RSI 48.30@2026-08-13 → 50.85@2026-08-14 vs level 50 | **GOOD** |
+| `A04_rsi_cross_70` | below | RSI 48.30@2026-08-13 → 50.85@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=0.989 (= sum GREEN bodies / sum RED bodies); GREEN_sum=0.8800 dates=[2026-08-07,2026-08-11,2026-08-12,2026-08-13,2026-08-14]; RED_sum=0.8900 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-06,2026-08-10]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:RED:O=21.3900,C=21.2600,body=-0.1300 | 2026-08-04:RED:O=21.2300,C=21.1600,body=-0.0700 | 2026-08-05:RED:O=21.2200,C=21.2000,body=-0.0200 | 2026-08-06:RED:O=21.4600,C=21.1600,body=-0.3000 | 2026-08-07:GREEN:O=20.8800,C=20.9300,body=+0.0500 | 2026-08-10:RED:O=20.8300,C=20.4600,body=-0.3700 | 2026-08-11:GREEN:O=20.5400,C=20.6500,body=+0.1100 | 2026-08-12:GREEN:O=20.6800,C=21.0700,body=+0.3900 | 2026-08-13:GREEN:O=21.0600,C=21.2400,body=+0.1800 | 2026-08-14:GREEN:O=21.2400,C=21.3900,body=+0.1500 | **NEUTRAL** |
+| `A06_volume_red_green_ratio` | ratio=1.304 if finite else n/a; GREEN_vol_sum=15594000 dates=[2026-08-07,2026-08-11,2026-08-12,2026-08-13,2026-08-14]; RED_vol_sum=11960700 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-06,2026-08-10]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:vol=1783700 | 2026-08-04:RED:vol=2063100 | 2026-08-05:RED:vol=2299900 | 2026-08-06:RED:vol=1440100 | 2026-08-07:GREEN:vol=6807200 | 2026-08-10:RED:vol=4373900 | 2026-08-11:GREEN:vol=2285400 | 2026-08-12:GREEN:vol=3443800 | 2026-08-13:GREEN:vol=1317600 | 2026-08-14:GREEN:vol=1740000 | **GOOD** |
+| `A07_rvol` | RVOL=0.762 on 2026-08-14: today_vol=1740000 / avg20=2284320 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=-0.202 on 2026-08-14 (price=21.3900, mid=21.6905, upper=23.1770, lower=20.2040; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=21.3900 vs SMA50=21.1398 dist=+1.18% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=21.6905 SMA50=21.1398 SMA80=20.6293 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-10.26% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-07-17 @ 22.8000 → trough 2026-08-10 @ 20.4600 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-07,2026-08-11,2026-08-12,2026-08-13,2026-08-14] body_frac=0.511 wick_frac=0.489; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=0.1300,upperW=0.2300,lowerW=0.1500,range=0.5100 | 2026-08-04:RED:body=0.0700,upperW=0.0550,lowerW=0.2200,range=0.3450 | 2026-08-05:RED:body=0.0200,upperW=0.1550,lowerW=0.1600,range=0.3350 | 2026-08-06:RED:body=0.3000,upperW=0.0700,lowerW=0.0850,range=0.4550 | 2026-08-07:GREEN:body=0.0500,upperW=0.0100,lowerW=0.3300,range=0.3900 | 2026-08-10:RED:body=0.3700,upperW=0.0550,lowerW=0.0100,range=0.4350 | 2026-08-11:GREEN:body=0.1100,upperW=0.1300,lowerW=0.1800,range=0.4200 | 2026-08-12:GREEN:body=0.3900,upperW=0.0000,lowerW=0.0000,range=0.3900 | 2026-08-13:GREEN:body=0.1800,upperW=0.1050,lowerW=0.0000,range=0.2850 | 2026-08-14:GREEN:body=0.1500,upperW=0.0700,lowerW=0.0180,range=0.2380 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-06,2026-08-10] body_frac=0.428 wick_frac=0.572; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=0.1300,upperW=0.2300,lowerW=0.1500,range=0.5100 | 2026-08-04:RED:body=0.0700,upperW=0.0550,lowerW=0.2200,range=0.3450 | 2026-08-05:RED:body=0.0200,upperW=0.1550,lowerW=0.1600,range=0.3350 | 2026-08-06:RED:body=0.3000,upperW=0.0700,lowerW=0.0850,range=0.4550 | 2026-08-07:GREEN:body=0.0500,upperW=0.0100,lowerW=0.3300,range=0.3900 | 2026-08-10:RED:body=0.3700,upperW=0.0550,lowerW=0.0100,range=0.4350 | 2026-08-11:GREEN:body=0.1100,upperW=0.1300,lowerW=0.1800,range=0.4200 | 2026-08-12:GREEN:body=0.3900,upperW=0.0000,lowerW=0.0000,range=0.3900 | 2026-08-13:GREEN:body=0.1800,upperW=0.1050,lowerW=0.0000,range=0.2850 | 2026-08-14:GREEN:body=0.1500,upperW=0.0700,lowerW=0.0180,range=0.2380 | **GOOD** |
+| `B01_eps_surprise` | 9.66 | **GOOD** |
+| `B02_revenue_surprise` | 0.56 | **GOOD** |
+| `B03_sales` | 477.57 | **NEUTRAL** |
+| `B04_income` | 140.69 | **GOOD** |
+| `B05_profit_margin` | 29.46 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 96.26 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.10000000000000853 (now=96.26 vs prior_export=96.16 on finviz_2026-08-17) | **GOOD** |
-| `B09_analyst_recom` | 2.29 | **GOOD** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 2.08 | **GOOD** |
-| `B13_short_float` | 4.72 | **NEUTRAL** |
+| `B07_target_price` | 23.7 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=23.7 vs prior_export=23.7 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.73 | **GOOD** |
+| `B10_insider_transactions` | 0.04 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.04 vs prior=0.04 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 10.57 | **GOOD** |
+| `B13_short_float` | 6.1 | **NEUTRAL** |
+| `B14_earnings_date` | 7/29/2026 4:30:00 PM | **NEUTRAL** |
+
+### CLX  ·  score **+14**  ·  Household & Personal Products
+price=105.69999694824219  mcap=$12.92B  ADV=2,574,980
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-13]  RED=[2026-08-06,2026-08-07,2026-08-12,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=63.16 on 2026-08-14; prev RSI=65.64 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 65.64@2026-08-13 → 63.16@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 65.64@2026-08-13 → 63.16@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 65.64@2026-08-13 → 63.16@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=5.829 (= sum GREEN bodies / sum RED bodies); GREEN_sum=12.7854 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-13]; RED_sum=2.1934 dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=96.1962,C=97.1254,body=+0.9291 | 2026-08-04:GREEN:O=96.8881,C=103.4613,body=+6.5732 | 2026-08-05:GREEN:O=104.1038,C=104.6178,body=+0.5140 | 2026-08-06:RED:O=105.0330,C=104.3806,body=-0.6524 | 2026-08-07:RED:O=104.7068,C=103.9358,body=-0.7710 | 2026-08-10:GREEN:O=103.6294,C=106.4564,body=+2.8270 | 2026-08-11:GREEN:O=105.4679,C=107.0000,body=+1.5321 | 2026-08-12:RED:O=106.0000,C=105.7600,body=-0.2400 | 2026-08-13:GREEN:O=106.1300,C=106.5400,body=+0.4100 | 2026-08-14:RED:O=106.2300,C=105.7000,body=-0.5300 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=2.811 if finite else n/a; GREEN_vol_sum=22511800 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-13]; RED_vol_sum=8008300 dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=3982600 | 2026-08-04:GREEN:vol=5292700 | 2026-08-05:GREEN:vol=3281900 | 2026-08-06:RED:vol=2014900 | 2026-08-07:RED:vol=2044100 | 2026-08-10:GREEN:vol=3553600 | 2026-08-11:GREEN:vol=2554300 | 2026-08-12:RED:vol=2013100 | 2026-08-13:GREEN:vol=3846700 | 2026-08-14:RED:vol=1936200 | **GOOD** |
+| `A07_rvol` | RVOL=0.700 on 2026-08-14: today_vol=1936200 / avg20=2766115 (avg window 2026-07-15→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.548 on 2026-08-14 (price=105.7000, mid=100.2032, upper=110.2312, lower=90.1751; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=105.7000 vs SMA50=96.5587 dist=+9.47% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=100.2032 SMA50=96.5587 SMA80=94.9590 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-1.21% inside window 2026-06-12→2026-08-14 (42 sessions): peak 2026-08-11 @ 107.0000 → trough 2026-08-14 @ 105.7000 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-13] body_frac=0.576 wick_frac=0.424; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.9291,upperW=1.5222,lowerW=0.7315,range=3.1828 | 2026-08-04:GREEN:body=6.5732,upperW=0.1680,lowerW=0.0000,range=6.7412 | 2026-08-05:GREEN:body=0.5140,upperW=0.2570,lowerW=2.5008,range=3.2718 | 2026-08-06:RED:body=0.6524,upperW=1.4135,lowerW=0.4151,range=2.4810 | 2026-08-07:RED:body=0.7710,upperW=1.1466,lowerW=0.3756,range=2.2932 | 2026-08-10:GREEN:body=2.8270,upperW=0.3558,lowerW=0.6820,range=3.8648 | 2026-08-11:GREEN:body=1.5321,upperW=0.3460,lowerW=0.2570,range=2.1351 | 2026-08-12:RED:body=0.2400,upperW=1.0200,lowerW=0.4200,range=1.6800 | 2026-08-13:GREEN:body=0.4100,upperW=0.9100,lowerW=1.6800,range=3.0000 | 2026-08-14:RED:body=0.5300,upperW=0.3000,lowerW=1.0300,range=1.8600 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-14] body_frac=0.264 wick_frac=0.736; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.9291,upperW=1.5222,lowerW=0.7315,range=3.1828 | 2026-08-04:GREEN:body=6.5732,upperW=0.1680,lowerW=0.0000,range=6.7412 | 2026-08-05:GREEN:body=0.5140,upperW=0.2570,lowerW=2.5008,range=3.2718 | 2026-08-06:RED:body=0.6524,upperW=1.4135,lowerW=0.4151,range=2.4810 | 2026-08-07:RED:body=0.7710,upperW=1.1466,lowerW=0.3756,range=2.2932 | 2026-08-10:GREEN:body=2.8270,upperW=0.3558,lowerW=0.6820,range=3.8648 | 2026-08-11:GREEN:body=1.5321,upperW=0.3460,lowerW=0.2570,range=2.1351 | 2026-08-12:RED:body=0.2400,upperW=1.0200,lowerW=0.4200,range=1.6800 | 2026-08-13:GREEN:body=0.4100,upperW=0.9100,lowerW=1.6800,range=3.0000 | 2026-08-14:RED:body=0.5300,upperW=0.3000,lowerW=1.0300,range=1.8600 | **GOOD** |
+| `B01_eps_surprise` | 1.18 | **GOOD** |
+| `B02_revenue_surprise` | 1.73 | **GOOD** |
+| `B03_sales` | 6720.0 | **NEUTRAL** |
+| `B04_income` | 587.0 | **GOOD** |
+| `B05_profit_margin` | 8.74 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 97.13 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=97.13 vs prior_export=97.13 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 3.19 | **NEUTRAL** |
+| `B10_insider_transactions` | 0.68 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.13 (now=0.68 vs prior=0.55 on finviz_2026-08-17) | **GOOD** |
+| `B12_institutional_transactions` | 0.92 | **GOOD** |
+| `B13_short_float` | 11.25 | **NEUTRAL** |
 | `B14_earnings_date` | 8/3/2026 4:30:00 PM | **NEUTRAL** |
 
-### DCTH  ·  score **+12**  ·  Medical Devices
-price=16.68000030517578  mcap=$0.58B  ADV=564,320
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-17]  RED=[2026-08-05,2026-08-07,2026-08-14,2026-08-18]
+### HRI  ·  score **+14**  ·  Rental & Leasing Services
+price=173.50999450683594  mcap=$5.58B  ADV=541,870
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-14]  RED=[2026-08-05,2026-08-06,2026-08-07,2026-08-12,2026-08-13]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=67.16 on 2026-08-18; prev RSI=71.01 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 71.01@2026-08-17 → 67.16@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 71.01@2026-08-17 → 67.16@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | cross_down | RSI 71.01@2026-08-17 → 67.16@2026-08-18 vs level 70 | **GOOD** |
-| `A05_body_red_green_ratio` | ratio=2.055 (= sum GREEN bodies / sum RED bodies); GREEN_sum=4.0800 dates=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-17]; RED_sum=1.9850 dates=[2026-08-05,2026-08-07,2026-08-14,2026-08-18]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=13.2100,C=12.6300,body=-0.5800 | 2026-08-06:GREEN:O=14.0300,C=15.4700,body=+1.4400 | 2026-08-07:RED:O=15.6700,C=15.1100,body=-0.5600 | 2026-08-10:GREEN:O=15.0000,C=16.6700,body=+1.6700 | 2026-08-11:GREEN:O=16.8800,C=17.2200,body=+0.3400 | 2026-08-12:GREEN:O=17.1000,C=17.1100,body=+0.0100 | 2026-08-13:GREEN:O=17.1100,C=17.3600,body=+0.2500 | 2026-08-14:RED:O=17.3000,C=16.7300,body=-0.5700 | 2026-08-17:GREEN:O=16.6800,C=17.0500,body=+0.3700 | 2026-08-18:RED:O=16.9550,C=16.6800,body=-0.2750 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=3.188 if finite else n/a; GREEN_vol_sum=7820800 dates=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-17]; RED_vol_sum=2453184 dates=[2026-08-05,2026-08-07,2026-08-14,2026-08-18]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=432600 | 2026-08-06:GREEN:vol=2986700 | 2026-08-07:RED:vol=1212800 | 2026-08-10:GREEN:vol=1483200 | 2026-08-11:GREEN:vol=1228800 | 2026-08-12:GREEN:vol=774700 | 2026-08-13:GREEN:vol=814800 | 2026-08-14:RED:vol=529500 | 2026-08-17:GREEN:vol=532600 | 2026-08-18:RED:vol=278284 | **GOOD** |
-| `A07_rvol` | RVOL=0.391 on 2026-08-18: today_vol=278284 / avg20=712240 (avg window 2026-07-20→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=0.534 on 2026-08-18 (price=16.6800, mid=14.2500, upper=18.7978, lower=9.7022; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=16.6800 vs SMA50=13.1373 dist=+26.97% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=14.2500 SMA50=13.1373 SMA80=12.3194 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-3.92% inside window 2026-06-17→2026-08-18 (42 sessions): peak 2026-08-13 @ 17.3600 → trough 2026-08-18 @ 16.6800 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-17] body_frac=0.682 wick_frac=0.318; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.5800,upperW=0.0390,lowerW=0.2000,range=0.8190 | 2026-08-06:GREEN:body=1.4400,upperW=0.1500,lowerW=0.0300,range=1.6200 | 2026-08-07:RED:body=0.5600,upperW=0.7050,lowerW=0.1450,range=1.4100 | 2026-08-10:GREEN:body=1.6700,upperW=0.0200,lowerW=0.0000,range=1.6900 | 2026-08-11:GREEN:body=0.3400,upperW=0.2000,lowerW=0.3950,range=0.9350 | 2026-08-12:GREEN:body=0.0100,upperW=0.1700,lowerW=0.4700,range=0.6500 | 2026-08-13:GREEN:body=0.2500,upperW=0.0400,lowerW=0.2500,range=0.5400 | 2026-08-14:RED:body=0.5700,upperW=0.1000,lowerW=0.0550,range=0.7250 | 2026-08-17:GREEN:body=0.3700,upperW=0.0100,lowerW=0.1700,range=0.5500 | 2026-08-18:RED:body=0.2750,upperW=0.2150,lowerW=0.0600,range=0.5500 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-07,2026-08-14,2026-08-18] body_frac=0.566 wick_frac=0.434; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.5800,upperW=0.0390,lowerW=0.2000,range=0.8190 | 2026-08-06:GREEN:body=1.4400,upperW=0.1500,lowerW=0.0300,range=1.6200 | 2026-08-07:RED:body=0.5600,upperW=0.7050,lowerW=0.1450,range=1.4100 | 2026-08-10:GREEN:body=1.6700,upperW=0.0200,lowerW=0.0000,range=1.6900 | 2026-08-11:GREEN:body=0.3400,upperW=0.2000,lowerW=0.3950,range=0.9350 | 2026-08-12:GREEN:body=0.0100,upperW=0.1700,lowerW=0.4700,range=0.6500 | 2026-08-13:GREEN:body=0.2500,upperW=0.0400,lowerW=0.2500,range=0.5400 | 2026-08-14:RED:body=0.5700,upperW=0.1000,lowerW=0.0550,range=0.7250 | 2026-08-17:GREEN:body=0.3700,upperW=0.0100,lowerW=0.1700,range=0.5500 | 2026-08-18:RED:body=0.2750,upperW=0.2150,lowerW=0.0600,range=0.5500 | **BAD** |
+| `A01_rsi_value` | RSI=64.53 on 2026-08-14; prev RSI=61.04 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 61.04@2026-08-13 → 64.53@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 61.04@2026-08-13 → 64.53@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 61.04@2026-08-13 → 64.53@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=3.389 (= sum GREEN bodies / sum RED bodies); GREEN_sum=30.2300 dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-14]; RED_sum=8.9200 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-12,2026-08-13]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=152.3900,C=163.9300,body=+11.5400 | 2026-08-04:GREEN:O=165.9500,C=170.8000,body=+4.8500 | 2026-08-05:RED:O=171.4900,C=168.8300,body=-2.6600 | 2026-08-06:RED:O=168.1900,C=168.1400,body=-0.0500 | 2026-08-07:RED:O=169.2900,C=167.9000,body=-1.3900 | 2026-08-10:GREEN:O=167.1600,C=169.7600,body=+2.6000 | 2026-08-11:GREEN:O=165.0200,C=171.0300,body=+6.0100 | 2026-08-12:RED:O=172.5900,C=168.5400,body=-4.0500 | 2026-08-13:RED:O=169.4800,C=168.7100,body=-0.7700 | 2026-08-14:GREEN:O=168.2800,C=173.5100,body=+5.2300 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.221 if finite else n/a; GREEN_vol_sum=2138600 dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-14]; RED_vol_sum=1751400 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-12,2026-08-13]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=655300 | 2026-08-04:GREEN:vol=654700 | 2026-08-05:RED:vol=580200 | 2026-08-06:RED:vol=306500 | 2026-08-07:RED:vol=311200 | 2026-08-10:GREEN:vol=335900 | 2026-08-11:GREEN:vol=285700 | 2026-08-12:RED:vol=289200 | 2026-08-13:RED:vol=264300 | 2026-08-14:GREEN:vol=207000 | **GOOD** |
+| `A07_rvol` | RVOL=0.385 on 2026-08-14: today_vol=207000 / avg20=538100 (avg window 2026-07-15→2026-08-13, excludes today) | **BAD** |
+| `A08_bollinger_position` | pos=0.635 on 2026-08-14 (price=173.5100, mid=160.7590, upper=180.8407, lower=140.6773; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=173.5100 vs SMA50=150.6740 dist=+15.16% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=160.7590 SMA50=150.6740 SMA80=142.6217 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-12→2026-08-14 (42 sessions): peak 2026-08-14 @ 173.5100 → trough 2026-08-14 @ 173.5100 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-14] body_frac=0.630 wick_frac=0.370; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=11.5400,upperW=0.1500,lowerW=5.3300,range=17.0200 | 2026-08-04:GREEN:body=4.8500,upperW=1.7000,lowerW=3.0200,range=9.5700 | 2026-08-05:RED:body=2.6600,upperW=1.4800,lowerW=0.8100,range=4.9500 | 2026-08-06:RED:body=0.0500,upperW=1.5500,lowerW=2.2800,range=3.8800 | 2026-08-07:RED:body=1.3900,upperW=2.9200,lowerW=3.6800,range=7.9900 | 2026-08-10:GREEN:body=2.6000,upperW=1.4500,lowerW=0.6700,range=4.7200 | 2026-08-11:GREEN:body=6.0100,upperW=4.9600,lowerW=0.0000,range=10.9700 | 2026-08-12:RED:body=4.0500,upperW=0.0000,lowerW=1.5000,range=5.5500 | 2026-08-13:RED:body=0.7700,upperW=1.5200,lowerW=3.1500,range=5.4400 | 2026-08-14:GREEN:body=5.2300,upperW=0.5100,lowerW=0.0000,range=5.7400 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-12,2026-08-13] body_frac=0.321 wick_frac=0.679; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=11.5400,upperW=0.1500,lowerW=5.3300,range=17.0200 | 2026-08-04:GREEN:body=4.8500,upperW=1.7000,lowerW=3.0200,range=9.5700 | 2026-08-05:RED:body=2.6600,upperW=1.4800,lowerW=0.8100,range=4.9500 | 2026-08-06:RED:body=0.0500,upperW=1.5500,lowerW=2.2800,range=3.8800 | 2026-08-07:RED:body=1.3900,upperW=2.9200,lowerW=3.6800,range=7.9900 | 2026-08-10:GREEN:body=2.6000,upperW=1.4500,lowerW=0.6700,range=4.7200 | 2026-08-11:GREEN:body=6.0100,upperW=4.9600,lowerW=0.0000,range=10.9700 | 2026-08-12:RED:body=4.0500,upperW=0.0000,lowerW=1.5000,range=5.5500 | 2026-08-13:RED:body=0.7700,upperW=1.5200,lowerW=3.1500,range=5.4400 | 2026-08-14:GREEN:body=5.2300,upperW=0.5100,lowerW=0.0000,range=5.7400 | **GOOD** |
+| `B01_eps_surprise` | 87.15 | **GOOD** |
+| `B02_revenue_surprise` | 4.15 | **GOOD** |
+| `B03_sales` | 4856.0 | **NEUTRAL** |
+| `B04_income` | 49.0 | **GOOD** |
+| `B05_profit_margin` | 1.01 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 196.3 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=196.3 vs prior_export=196.3 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.83 | **GOOD** |
+| `B10_insider_transactions` | 0.43 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.010000000000000009 (now=0.43 vs prior=0.42 on finviz_2026-08-17) | **GOOD** |
+| `B12_institutional_transactions` | 8.21 | **GOOD** |
+| `B13_short_float` | 6.17 | **NEUTRAL** |
+| `B14_earnings_date` | 7/28/2026 8:30:00 AM | **NEUTRAL** |
+
+### LIVN  ·  score **+13**  ·  Medical Devices
+price=82.22000122070312  mcap=$4.40B  ADV=718,320
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14]  RED=[2026-08-05,2026-08-06]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=55.89 on 2026-08-14; prev RSI=55.84 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 55.84@2026-08-13 → 55.89@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 55.84@2026-08-13 → 55.89@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 55.84@2026-08-13 → 55.89@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=3.609 (= sum GREEN bodies / sum RED bodies); GREEN_sum=12.6500 dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14]; RED_sum=3.5050 dates=[2026-08-05,2026-08-06]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=80.4350,C=82.4600,body=+2.0250 | 2026-08-04:GREEN:O=82.9500,C=85.3250,body=+2.3750 | 2026-08-05:RED:O=79.8800,C=78.1450,body=-1.7350 | 2026-08-06:RED:O=77.5500,C=75.7800,body=-1.7700 | 2026-08-07:GREEN:O=75.4300,C=76.2200,body=+0.7900 | 2026-08-10:GREEN:O=75.0400,C=76.4800,body=+1.4400 | 2026-08-11:GREEN:O=76.5500,C=78.5800,body=+2.0300 | 2026-08-12:GREEN:O=77.9500,C=80.7800,body=+2.8300 | 2026-08-13:GREEN:O=81.6700,C=82.2000,body=+0.5300 | 2026-08-14:GREEN:O=81.5900,C=82.2200,body=+0.6300 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=2.166 if finite else n/a; GREEN_vol_sum=6053100 dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14]; RED_vol_sum=2795000 dates=[2026-08-05,2026-08-06]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=660600 | 2026-08-04:GREEN:vol=1284900 | 2026-08-05:RED:vol=1862500 | 2026-08-06:RED:vol=932500 | 2026-08-07:GREEN:vol=745000 | 2026-08-10:GREEN:vol=473200 | 2026-08-11:GREEN:vol=673300 | 2026-08-12:GREEN:vol=979100 | 2026-08-13:GREEN:vol=677600 | 2026-08-14:GREEN:vol=559400 | **GOOD** |
+| `A07_rvol` | RVOL=0.755 on 2026-08-14: today_vol=559400 / avg20=740495 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.444 on 2026-08-14 (price=82.2200, mid=80.0625, upper=84.9265, lower=75.1985; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=82.2200 vs SMA50=79.6434 dist=+3.24% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=80.0625 SMA50=79.6434 SMA80=75.2878 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-11.19% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-04 @ 85.3250 → trough 2026-08-06 @ 75.7800 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14] body_frac=0.570 wick_frac=0.430; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=2.0250,upperW=0.0800,lowerW=0.0000,range=2.1050 | 2026-08-04:GREEN:body=2.3750,upperW=0.4350,lowerW=0.8700,range=3.6800 | 2026-08-05:RED:body=1.7350,upperW=1.9750,lowerW=3.0750,range=6.7850 | 2026-08-06:RED:body=1.7700,upperW=0.6300,lowerW=0.5000,range=2.9000 | 2026-08-07:GREEN:body=0.7900,upperW=0.1200,lowerW=0.7600,range=1.6700 | 2026-08-10:GREEN:body=1.4400,upperW=0.5150,lowerW=0.0000,range=1.9550 | 2026-08-11:GREEN:body=2.0300,upperW=0.5600,lowerW=0.8650,range=3.4550 | 2026-08-12:GREEN:body=2.8300,upperW=0.7750,lowerW=1.2300,range=4.8350 | 2026-08-13:GREEN:body=0.5300,upperW=0.5000,lowerW=1.0900,range=2.1200 | 2026-08-14:GREEN:body=0.6300,upperW=0.1200,lowerW=1.6100,range=2.3600 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06] body_frac=0.362 wick_frac=0.638; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=2.0250,upperW=0.0800,lowerW=0.0000,range=2.1050 | 2026-08-04:GREEN:body=2.3750,upperW=0.4350,lowerW=0.8700,range=3.6800 | 2026-08-05:RED:body=1.7350,upperW=1.9750,lowerW=3.0750,range=6.7850 | 2026-08-06:RED:body=1.7700,upperW=0.6300,lowerW=0.5000,range=2.9000 | 2026-08-07:GREEN:body=0.7900,upperW=0.1200,lowerW=0.7600,range=1.6700 | 2026-08-10:GREEN:body=1.4400,upperW=0.5150,lowerW=0.0000,range=1.9550 | 2026-08-11:GREEN:body=2.0300,upperW=0.5600,lowerW=0.8650,range=3.4550 | 2026-08-12:GREEN:body=2.8300,upperW=0.7750,lowerW=1.2300,range=4.8350 | 2026-08-13:GREEN:body=0.5300,upperW=0.5000,lowerW=1.0900,range=2.1200 | 2026-08-14:GREEN:body=0.6300,upperW=0.1200,lowerW=1.6100,range=2.3600 | **GOOD** |
+| `B01_eps_surprise` | 15.12 | **GOOD** |
+| `B02_revenue_surprise` | 2.65 | **GOOD** |
+| `B03_sales` | 1471.5 | **NEUTRAL** |
+| `B04_income` | 188.54 | **GOOD** |
+| `B05_profit_margin` | 12.81 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 91.0 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=91.0 vs prior_export=91.0 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.64 | **GOOD** |
+| `B10_insider_transactions` | -2.39 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=-2.39 vs prior=-2.39 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 2.41 | **GOOD** |
+| `B13_short_float` | 7.55 | **NEUTRAL** |
+| `B14_earnings_date` | 8/5/2026 8:30:00 AM | **NEUTRAL** |
+
+### AMGN  ·  score **+13**  ·  Drug Manufacturers - General
+price=415.2099914550781  mcap=$229.53B  ADV=2,703,750
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14]  RED=[2026-08-03,2026-08-06,2026-08-11,2026-08-13]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=69.86 on 2026-08-14; prev RSI=72.63 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 72.63@2026-08-13 → 69.86@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 72.63@2026-08-13 → 69.86@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | cross_down | RSI 72.63@2026-08-13 → 69.86@2026-08-14 vs level 70 | **GOOD** |
+| `A05_body_red_green_ratio` | ratio=2.002 (= sum GREEN bodies / sum RED bodies); GREEN_sum=43.6500 dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14]; RED_sum=21.8000 dates=[2026-08-03,2026-08-06,2026-08-11,2026-08-13]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:RED:O=388.5000,C=378.8700,body=-9.6300 | 2026-08-04:GREEN:O=380.7600,C=390.0200,body=+9.2600 | 2026-08-05:GREEN:O=393.3600,C=407.8300,body=+14.4700 | 2026-08-06:RED:O=413.7200,C=404.8500,body=-8.8700 | 2026-08-07:GREEN:O=404.0900,C=410.9500,body=+6.8600 | 2026-08-10:GREEN:O=408.4600,C=417.2000,body=+8.7400 | 2026-08-11:RED:O=415.5200,C=414.3000,body=-1.2200 | 2026-08-12:GREEN:O=413.3100,C=416.1800,body=+2.8700 | 2026-08-13:RED:O=419.9200,C=417.8400,body=-2.0800 | 2026-08-14:GREEN:O=413.7600,C=415.2100,body=+1.4500 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.589 if finite else n/a; GREEN_vol_sum=17256300 dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14]; RED_vol_sum=10859700 dates=[2026-08-03,2026-08-06,2026-08-11,2026-08-13]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:vol=3443100 | 2026-08-04:GREEN:vol=3622700 | 2026-08-05:GREEN:vol=5750700 | 2026-08-06:RED:vol=2609000 | 2026-08-07:GREEN:vol=1821500 | 2026-08-10:GREEN:vol=1959700 | 2026-08-11:RED:vol=2029700 | 2026-08-12:GREEN:vol=2065500 | 2026-08-13:RED:vol=2777900 | 2026-08-14:GREEN:vol=2036200 | **GOOD** |
+| `A07_rvol` | RVOL=0.748 on 2026-08-14: today_vol=2036200 / avg20=2723570 (avg window 2026-07-16→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.596 on 2026-08-14 (price=415.2100, mid=392.3550, upper=430.7153, lower=353.9947; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=415.2100 vs SMA50=369.6604 dist=+12.32% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=392.3550 SMA50=369.6604 SMA80=356.1460 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-0.63% inside window 2026-06-15→2026-08-14 (42 sessions): peak 2026-08-13 @ 417.8400 → trough 2026-08-14 @ 415.2100 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14] body_frac=0.572 wick_frac=0.428; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=9.6300,upperW=2.5300,lowerW=2.9100,range=15.0700 | 2026-08-04:GREEN:body=9.2600,upperW=0.9000,lowerW=4.7400,range=14.9000 | 2026-08-05:GREEN:body=14.4700,upperW=8.4100,lowerW=2.3600,range=25.2400 | 2026-08-06:RED:body=8.8700,upperW=4.6800,lowerW=3.6500,range=17.2000 | 2026-08-07:GREEN:body=6.8600,upperW=0.6500,lowerW=3.0200,range=10.5300 | 2026-08-10:GREEN:body=8.7400,upperW=0.1600,lowerW=2.0400,range=10.9400 | 2026-08-11:RED:body=1.2200,upperW=6.2700,lowerW=2.1000,range=9.5900 | 2026-08-12:GREEN:body=2.8700,upperW=2.0100,lowerW=4.3100,range=9.1900 | 2026-08-13:RED:body=2.0800,upperW=0.3400,lowerW=2.0600,range=4.4800 | 2026-08-14:GREEN:body=1.4500,upperW=0.8200,lowerW=3.2600,range=5.5300 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-03,2026-08-06,2026-08-11,2026-08-13] body_frac=0.470 wick_frac=0.530; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=9.6300,upperW=2.5300,lowerW=2.9100,range=15.0700 | 2026-08-04:GREEN:body=9.2600,upperW=0.9000,lowerW=4.7400,range=14.9000 | 2026-08-05:GREEN:body=14.4700,upperW=8.4100,lowerW=2.3600,range=25.2400 | 2026-08-06:RED:body=8.8700,upperW=4.6800,lowerW=3.6500,range=17.2000 | 2026-08-07:GREEN:body=6.8600,upperW=0.6500,lowerW=3.0200,range=10.5300 | 2026-08-10:GREEN:body=8.7400,upperW=0.1600,lowerW=2.0400,range=10.9400 | 2026-08-11:RED:body=1.2200,upperW=6.2700,lowerW=2.1000,range=9.5900 | 2026-08-12:GREEN:body=2.8700,upperW=2.0100,lowerW=4.3100,range=9.1900 | 2026-08-13:RED:body=2.0800,upperW=0.3400,lowerW=2.0600,range=4.4800 | 2026-08-14:GREEN:body=1.4500,upperW=0.8200,lowerW=3.2600,range=5.5300 | **GOOD** |
+| `B01_eps_surprise` | 11.97 | **GOOD** |
+| `B02_revenue_surprise` | 6.66 | **GOOD** |
+| `B03_sales` | 38202.0 | **NEUTRAL** |
+| `B04_income` | 8743.0 | **GOOD** |
+| `B05_profit_margin` | 22.89 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 389.74 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=3.670000000000016 (now=389.74 vs prior_export=386.07 on finviz_2026-08-17) | **GOOD** |
+| `B09_analyst_recom` | 2.46 | **GOOD** |
+| `B10_insider_transactions` | -4.92 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.20000000000000018 (now=-4.92 vs prior=-5.12 on finviz_2026-08-17) | **GOOD** |
+| `B12_institutional_transactions` | -2.99 | **BAD** |
+| `B13_short_float` | 2.46 | **NEUTRAL** |
+| `B14_earnings_date` | 8/4/2026 4:30:00 PM | **NEUTRAL** |
+
+### EVTC  ·  score **+13**  ·  Software - Infrastructure
+price=31.56999969482422  mcap=$1.82B  ADV=578,130
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13]  RED=[2026-08-05,2026-08-06,2026-08-07,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=58.17 on 2026-08-14; prev RSI=60.64 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 60.64@2026-08-13 → 58.17@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 60.64@2026-08-13 → 58.17@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 60.64@2026-08-13 → 58.17@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.259 (= sum GREEN bodies / sum RED bodies); GREEN_sum=5.1600 dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13]; RED_sum=4.1000 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=30.5800,C=31.1100,body=+0.5300 | 2026-08-04:GREEN:O=30.6100,C=32.5500,body=+1.9400 | 2026-08-05:RED:O=33.9900,C=31.3100,body=-2.6800 | 2026-08-06:RED:O=31.1700,C=30.9400,body=-0.2300 | 2026-08-07:RED:O=30.8800,C=29.8500,body=-1.0300 | 2026-08-10:GREEN:O=29.4900,C=29.6400,body=+0.1500 | 2026-08-11:GREEN:O=29.5000,C=29.5100,body=+0.0100 | 2026-08-12:GREEN:O=29.4500,C=30.4100,body=+0.9600 | 2026-08-13:GREEN:O=30.4100,C=31.9800,body=+1.5700 | 2026-08-14:RED:O=31.7300,C=31.5700,body=-0.1600 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.470 if finite else n/a; GREEN_vol_sum=2628900 dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13]; RED_vol_sum=1788600 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=387000 | 2026-08-04:GREEN:vol=616000 | 2026-08-05:RED:vol=707400 | 2026-08-06:RED:vol=271300 | 2026-08-07:RED:vol=334900 | 2026-08-10:GREEN:vol=322900 | 2026-08-11:GREEN:vol=252600 | 2026-08-12:GREEN:vol=588600 | 2026-08-13:GREEN:vol=461800 | 2026-08-14:RED:vol=475000 | **GOOD** |
+| `A07_rvol` | RVOL=1.164 on 2026-08-14: today_vol=475000 / avg20=407905 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.435 on 2026-08-14 (price=31.5700, mid=30.7550, upper=32.6286, lower=28.8814; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=31.5700 vs SMA50=28.1554 dist=+12.13% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=30.7550 SMA50=28.1554 SMA80=27.5883 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-9.34% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-04 @ 32.5500 → trough 2026-08-11 @ 29.5100 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13] body_frac=0.654 wick_frac=0.346; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.5300,upperW=0.5600,lowerW=0.0000,range=1.0900 | 2026-08-04:GREEN:body=1.9400,upperW=0.1700,lowerW=0.0000,range=2.1100 | 2026-08-05:RED:body=2.6800,upperW=0.4200,lowerW=0.5300,range=3.6300 | 2026-08-06:RED:body=0.2300,upperW=0.0800,lowerW=0.2600,range=0.5700 | 2026-08-07:RED:body=1.0300,upperW=0.1900,lowerW=0.1400,range=1.3600 | 2026-08-10:GREEN:body=0.1500,upperW=0.4700,lowerW=0.3100,range=0.9300 | 2026-08-11:GREEN:body=0.0100,upperW=0.4000,lowerW=0.2400,range=0.6500 | 2026-08-12:GREEN:body=0.9600,upperW=0.1700,lowerW=0.3600,range=1.4900 | 2026-08-13:GREEN:body=1.5700,upperW=0.0500,lowerW=0.0000,range=1.6200 | 2026-08-14:RED:body=0.1600,upperW=0.2500,lowerW=0.1000,range=0.5100 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-14] body_frac=0.675 wick_frac=0.325; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.5300,upperW=0.5600,lowerW=0.0000,range=1.0900 | 2026-08-04:GREEN:body=1.9400,upperW=0.1700,lowerW=0.0000,range=2.1100 | 2026-08-05:RED:body=2.6800,upperW=0.4200,lowerW=0.5300,range=3.6300 | 2026-08-06:RED:body=0.2300,upperW=0.0800,lowerW=0.2600,range=0.5700 | 2026-08-07:RED:body=1.0300,upperW=0.1900,lowerW=0.1400,range=1.3600 | 2026-08-10:GREEN:body=0.1500,upperW=0.4700,lowerW=0.3100,range=0.9300 | 2026-08-11:GREEN:body=0.0100,upperW=0.4000,lowerW=0.2400,range=0.6500 | 2026-08-12:GREEN:body=0.9600,upperW=0.1700,lowerW=0.3600,range=1.4900 | 2026-08-13:GREEN:body=1.5700,upperW=0.0500,lowerW=0.0000,range=1.6200 | 2026-08-14:RED:body=0.1600,upperW=0.2500,lowerW=0.1000,range=0.5100 | **BAD** |
+| `B01_eps_surprise` | 10.53 | **GOOD** |
+| `B02_revenue_surprise` | 4.8 | **GOOD** |
+| `B03_sales` | 996.16 | **NEUTRAL** |
+| `B04_income` | 97.58 | **GOOD** |
+| `B05_profit_margin` | 9.8 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 35.6 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=35.6 vs prior_export=35.6 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 2.17 | **GOOD** |
+| `B10_insider_transactions` | 3.44 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=3.44 vs prior=3.44 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.34 | **GOOD** |
+| `B13_short_float` | 4.11 | **NEUTRAL** |
+| `B14_earnings_date` | 8/4/2026 4:30:00 PM | **NEUTRAL** |
+
+### GAU  ·  score **+13**  ·  Gold
+price=2.0899999141693115  mcap=$0.53B  ADV=3,223,980
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-05,2026-08-06,2026-08-07,2026-08-11]  RED=[2026-08-10,2026-08-12,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=61.73 on 2026-08-14; prev RSI=61.73 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 61.73@2026-08-13 → 61.73@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 61.73@2026-08-13 → 61.73@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 61.73@2026-08-13 → 61.73@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.467 (= sum GREEN bodies / sum RED bodies); GREEN_sum=0.2200 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-11]; RED_sum=0.1500 dates=[2026-08-10,2026-08-12,2026-08-14]; DOJI=[2026-08-03,2026-08-04,2026-08-13]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:DOJI:O=1.7700,C=1.7700,body=+0.0000 | 2026-08-04:DOJI:O=1.8000,C=1.8000,body=+0.0000 | 2026-08-05:GREEN:O=1.8800,C=1.9300,body=+0.0500 | 2026-08-06:GREEN:O=1.9200,C=1.9500,body=+0.0300 | 2026-08-07:GREEN:O=2.0200,C=2.0600,body=+0.0400 | 2026-08-10:RED:O=2.0600,C=2.0000,body=-0.0600 | 2026-08-11:GREEN:O=2.0000,C=2.1000,body=+0.1000 | 2026-08-12:RED:O=2.1500,C=2.0900,body=-0.0600 | 2026-08-13:DOJI:O=2.0900,C=2.0900,body=+0.0000 | 2026-08-14:RED:O=2.1200,C=2.0900,body=-0.0300 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.026 if finite else n/a; GREEN_vol_sum=15059250 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-11]; RED_vol_sum=14679650 dates=[2026-08-10,2026-08-12,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:DOJI:vol=1142900 | 2026-08-04:DOJI:vol=2453900 | 2026-08-05:GREEN:vol=3132800 | 2026-08-06:GREEN:vol=2371300 | 2026-08-07:GREEN:vol=2934400 | 2026-08-10:RED:vol=3276600 | 2026-08-11:GREEN:vol=3316000 | 2026-08-12:RED:vol=5237300 | 2026-08-13:DOJI:vol=3012700 | 2026-08-14:RED:vol=2861000 | **GOOD** |
+| `A07_rvol` | RVOL=0.914 on 2026-08-14: today_vol=2861000 / avg20=3130225 (avg window 2026-07-17→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.728 on 2026-08-14 (price=2.0900, mid=1.8975, upper=2.1619, lower=1.6331; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=2.0900 vs SMA50=1.9372 dist=+7.89% | **GOOD** |
+| `A10_sma20_50_80_stack` | bear_aligned_20<50<80 on 2026-08-14: SMA20=1.8975 SMA50=1.9372 SMA80=2.0956 | **BAD** |
+| `A11_max_downside_2m` | maxDD=-24.23% inside window 2026-06-16→2026-08-14 (42 sessions): peak 2026-06-16 @ 2.2700 → trough 2026-07-17 @ 1.7200 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-11] body_frac=0.537 wick_frac=0.463; window=2026-08-03→2026-08-14; sessions: 2026-08-03:DOJI:body=0.0000,upperW=0.0100,lowerW=0.0300,range=0.0400 | 2026-08-04:DOJI:body=0.0000,upperW=0.0400,lowerW=0.0100,range=0.0500 | 2026-08-05:GREEN:body=0.0500,upperW=0.0200,lowerW=0.0100,range=0.0800 | 2026-08-06:GREEN:body=0.0300,upperW=0.0200,lowerW=0.0200,range=0.0700 | 2026-08-07:GREEN:body=0.0400,upperW=0.0600,lowerW=0.0300,range=0.1300 | 2026-08-10:RED:body=0.0600,upperW=0.0000,lowerW=0.0600,range=0.1200 | 2026-08-11:GREEN:body=0.1000,upperW=0.0100,lowerW=0.0200,range=0.1300 | 2026-08-12:RED:body=0.0600,upperW=0.0100,lowerW=0.0300,range=0.1000 | 2026-08-13:DOJI:body=0.0000,upperW=0.0500,lowerW=0.0400,range=0.0900 | 2026-08-14:RED:body=0.0300,upperW=0.0800,lowerW=0.0000,range=0.1100 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-10,2026-08-12,2026-08-14] body_frac=0.455 wick_frac=0.545; window=2026-08-03→2026-08-14; sessions: 2026-08-03:DOJI:body=0.0000,upperW=0.0100,lowerW=0.0300,range=0.0400 | 2026-08-04:DOJI:body=0.0000,upperW=0.0400,lowerW=0.0100,range=0.0500 | 2026-08-05:GREEN:body=0.0500,upperW=0.0200,lowerW=0.0100,range=0.0800 | 2026-08-06:GREEN:body=0.0300,upperW=0.0200,lowerW=0.0200,range=0.0700 | 2026-08-07:GREEN:body=0.0400,upperW=0.0600,lowerW=0.0300,range=0.1300 | 2026-08-10:RED:body=0.0600,upperW=0.0000,lowerW=0.0600,range=0.1200 | 2026-08-11:GREEN:body=0.1000,upperW=0.0100,lowerW=0.0200,range=0.1300 | 2026-08-12:RED:body=0.0600,upperW=0.0100,lowerW=0.0300,range=0.1000 | 2026-08-13:DOJI:body=0.0000,upperW=0.0500,lowerW=0.0400,range=0.0900 | 2026-08-14:RED:body=0.0300,upperW=0.0800,lowerW=0.0000,range=0.1100 | **GOOD** |
+| `B01_eps_surprise` | 135.9 | **GOOD** |
+| `B02_revenue_surprise` | 21.01 | **GOOD** |
+| `B03_sales` | 596.97 | **NEUTRAL** |
+| `B04_income` | 72.76 | **GOOD** |
+| `B05_profit_margin` | 12.19 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 4.11 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.010000000000000675 (now=4.11 vs prior_export=4.1 on finviz_2026-08-17) | **GOOD** |
+| `B09_analyst_recom` | 1.33 | **GOOD** |
+| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 2.83 | **GOOD** |
+| `B13_short_float` | 1.36 | **NEUTRAL** |
+| `B14_earnings_date` | 8/6/2026 4:30:00 PM | **NEUTRAL** |
+
+### DCTH  ·  score **+13**  ·  Medical Devices
+price=16.729999542236328  mcap=$0.58B  ADV=564,320
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13]  RED=[2026-08-04,2026-08-05,2026-08-07,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=69.61 on 2026-08-14; prev RSI=76.35 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 76.35@2026-08-13 → 69.61@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 76.35@2026-08-13 → 69.61@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | cross_down | RSI 76.35@2026-08-13 → 69.61@2026-08-14 vs level 70 | **GOOD** |
+| `A05_body_red_green_ratio` | ratio=2.558 (= sum GREEN bodies / sum RED bodies); GREEN_sum=4.4000 dates=[2026-08-03,2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13]; RED_sum=1.7200 dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=12.3500,C=13.0400,body=+0.6900 | 2026-08-04:RED:O=13.1500,C=13.1400,body=-0.0100 | 2026-08-05:RED:O=13.2100,C=12.6300,body=-0.5800 | 2026-08-06:GREEN:O=14.0300,C=15.4700,body=+1.4400 | 2026-08-07:RED:O=15.6700,C=15.1100,body=-0.5600 | 2026-08-10:GREEN:O=15.0000,C=16.6700,body=+1.6700 | 2026-08-11:GREEN:O=16.8800,C=17.2200,body=+0.3400 | 2026-08-12:GREEN:O=17.1000,C=17.1100,body=+0.0100 | 2026-08-13:GREEN:O=17.1100,C=17.3600,body=+0.2500 | 2026-08-14:RED:O=17.3000,C=16.7300,body=-0.5700 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=3.007 if finite else n/a; GREEN_vol_sum=7868100 dates=[2026-08-03,2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13]; RED_vol_sum=2616200 dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=579900 | 2026-08-04:RED:vol=441300 | 2026-08-05:RED:vol=432600 | 2026-08-06:GREEN:vol=2986700 | 2026-08-07:RED:vol=1212800 | 2026-08-10:GREEN:vol=1483200 | 2026-08-11:GREEN:vol=1228800 | 2026-08-12:GREEN:vol=774700 | 2026-08-13:GREEN:vol=814800 | 2026-08-14:RED:vol=529500 | **GOOD** |
+| `A07_rvol` | RVOL=0.760 on 2026-08-14: today_vol=529500 / avg20=696520 (avg window 2026-07-16→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.681 on 2026-08-14 (price=16.7300, mid=13.8335, upper=18.0849, lower=9.5821; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=16.7300 vs SMA50=12.8851 dist=+29.84% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=13.8335 SMA50=12.8851 SMA80=12.1709 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-3.63% inside window 2026-06-15→2026-08-14 (42 sessions): peak 2026-08-13 @ 17.3600 → trough 2026-08-14 @ 16.7300 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-06,2026-08-10,2026-08-11,2026-08-12,2026-08-13] body_frac=0.714 wick_frac=0.286; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.6900,upperW=0.0400,lowerW=0.0000,range=0.7300 | 2026-08-04:RED:body=0.0100,upperW=0.1800,lowerW=0.1000,range=0.2900 | 2026-08-05:RED:body=0.5800,upperW=0.0390,lowerW=0.2000,range=0.8190 | 2026-08-06:GREEN:body=1.4400,upperW=0.1500,lowerW=0.0300,range=1.6200 | 2026-08-07:RED:body=0.5600,upperW=0.7050,lowerW=0.1450,range=1.4100 | 2026-08-10:GREEN:body=1.6700,upperW=0.0200,lowerW=0.0000,range=1.6900 | 2026-08-11:GREEN:body=0.3400,upperW=0.2000,lowerW=0.3950,range=0.9350 | 2026-08-12:GREEN:body=0.0100,upperW=0.1700,lowerW=0.4700,range=0.6500 | 2026-08-13:GREEN:body=0.2500,upperW=0.0400,lowerW=0.2500,range=0.5400 | 2026-08-14:RED:body=0.5700,upperW=0.1000,lowerW=0.0550,range=0.7250 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-14] body_frac=0.530 wick_frac=0.470; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.6900,upperW=0.0400,lowerW=0.0000,range=0.7300 | 2026-08-04:RED:body=0.0100,upperW=0.1800,lowerW=0.1000,range=0.2900 | 2026-08-05:RED:body=0.5800,upperW=0.0390,lowerW=0.2000,range=0.8190 | 2026-08-06:GREEN:body=1.4400,upperW=0.1500,lowerW=0.0300,range=1.6200 | 2026-08-07:RED:body=0.5600,upperW=0.7050,lowerW=0.1450,range=1.4100 | 2026-08-10:GREEN:body=1.6700,upperW=0.0200,lowerW=0.0000,range=1.6900 | 2026-08-11:GREEN:body=0.3400,upperW=0.2000,lowerW=0.3950,range=0.9350 | 2026-08-12:GREEN:body=0.0100,upperW=0.1700,lowerW=0.4700,range=0.6500 | 2026-08-13:GREEN:body=0.2500,upperW=0.0400,lowerW=0.2500,range=0.5400 | 2026-08-14:RED:body=0.5700,upperW=0.1000,lowerW=0.0550,range=0.7250 | **BAD** |
 | `B01_eps_surprise` | 178.56 | **GOOD** |
 | `B02_revenue_surprise` | 10.97 | **GOOD** |
 | `B03_sales` | 95.42 | **NEUTRAL** |
@@ -171,161 +346,331 @@ body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-06,2026-08-10,2026-08-11,
 | `B13_short_float` | 7.9 | **NEUTRAL** |
 | `B14_earnings_date` | 8/6/2026 8:30:00 AM | **NEUTRAL** |
 
-### FTI  ·  score **+12**  ·  Oil & Gas Equipment & Services
-price=79.12999725341797  mcap=$31.02B  ADV=4,714,260
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-07,2026-08-10,2026-08-11,2026-08-13,2026-08-14,2026-08-17]  RED=[2026-08-05,2026-08-06,2026-08-12,2026-08-18]
+### MH  ·  score **+13**  ·  Education & Training Services
+price=13.100000381469727  mcap=$2.52B  ADV=783,520
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-13]  RED=[2026-08-06,2026-08-11,2026-08-14]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=67.66 on 2026-08-18; prev RSI=70.35 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 70.35@2026-08-17 → 67.66@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 70.35@2026-08-17 → 67.66@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | cross_down | RSI 70.35@2026-08-17 → 67.66@2026-08-18 vs level 70 | **GOOD** |
-| `A05_body_red_green_ratio` | ratio=3.956 (= sum GREEN bodies / sum RED bodies); GREEN_sum=10.8400 dates=[2026-08-07,2026-08-10,2026-08-11,2026-08-13,2026-08-14,2026-08-17]; RED_sum=2.7400 dates=[2026-08-05,2026-08-06,2026-08-12,2026-08-18]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=70.6000,C=69.2700,body=-1.3300 | 2026-08-06:RED:O=70.3400,C=69.6200,body=-0.7200 | 2026-08-07:GREEN:O=68.5700,C=69.6200,body=+1.0500 | 2026-08-10:GREEN:O=70.4300,C=74.1300,body=+3.7000 | 2026-08-11:GREEN:O=74.0000,C=75.3200,body=+1.3200 | 2026-08-12:RED:O=75.4700,C=75.2700,body=-0.2000 | 2026-08-13:GREEN:O=74.6500,C=76.6700,body=+2.0200 | 2026-08-14:GREEN:O=76.9500,C=78.6100,body=+1.6600 | 2026-08-17:GREEN:O=78.7200,C=79.8100,body=+1.0900 | 2026-08-18:RED:O=79.6200,C=79.1300,body=-0.4900 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=2.200 if finite else n/a; GREEN_vol_sum=21715400 dates=[2026-08-07,2026-08-10,2026-08-11,2026-08-13,2026-08-14,2026-08-17]; RED_vol_sum=9869738 dates=[2026-08-05,2026-08-06,2026-08-12,2026-08-18]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=3364100 | 2026-08-06:RED:vol=2988500 | 2026-08-07:GREEN:vol=3377400 | 2026-08-10:GREEN:vol=4986300 | 2026-08-11:GREEN:vol=3011400 | 2026-08-12:RED:vol=2454900 | 2026-08-13:GREEN:vol=2690900 | 2026-08-14:GREEN:vol=3748900 | 2026-08-17:GREEN:vol=3900500 | 2026-08-18:RED:vol=1062238 | **GOOD** |
-| `A07_rvol` | RVOL=0.312 on 2026-08-18: today_vol=1062238 / avg20=3400680 (avg window 2026-07-16→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=0.778 on 2026-08-18 (price=79.1300, mid=73.5815, upper=80.7170, lower=66.4460; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=79.1300 vs SMA50=70.4856 dist=+12.26% | **GOOD** |
-| `A10_sma20_50_80_stack` | mixed_20=73.58_50=70.49_80=71.19 on 2026-08-18: SMA20=73.5815 SMA50=70.4856 SMA80=71.1859 | **NEUTRAL** |
-| `A11_max_downside_2m` | maxDD=-0.85% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-08-17 @ 79.8100 → trough 2026-08-18 @ 79.1300 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-07,2026-08-10,2026-08-11,2026-08-13,2026-08-14,2026-08-17] body_frac=0.655 wick_frac=0.345; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=1.3300,upperW=0.4800,lowerW=0.2400,range=2.0500 | 2026-08-06:RED:body=0.7200,upperW=0.4600,lowerW=0.0500,range=1.2300 | 2026-08-07:GREEN:body=1.0500,upperW=0.4900,lowerW=0.8100,range=2.3500 | 2026-08-10:GREEN:body=3.7000,upperW=0.3400,lowerW=0.8100,range=4.8500 | 2026-08-11:GREEN:body=1.3200,upperW=0.1500,lowerW=0.4000,range=1.8700 | 2026-08-12:RED:body=0.2000,upperW=1.0700,lowerW=0.3300,range=1.6000 | 2026-08-13:GREEN:body=2.0200,upperW=0.1400,lowerW=0.6600,range=2.8200 | 2026-08-14:GREEN:body=1.6600,upperW=0.6200,lowerW=0.3500,range=2.6300 | 2026-08-17:GREEN:body=1.0900,upperW=0.6100,lowerW=0.3400,range=2.0400 | 2026-08-18:RED:body=0.4900,upperW=0.6900,lowerW=0.5450,range=1.7250 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-12,2026-08-18] body_frac=0.415 wick_frac=0.585; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=1.3300,upperW=0.4800,lowerW=0.2400,range=2.0500 | 2026-08-06:RED:body=0.7200,upperW=0.4600,lowerW=0.0500,range=1.2300 | 2026-08-07:GREEN:body=1.0500,upperW=0.4900,lowerW=0.8100,range=2.3500 | 2026-08-10:GREEN:body=3.7000,upperW=0.3400,lowerW=0.8100,range=4.8500 | 2026-08-11:GREEN:body=1.3200,upperW=0.1500,lowerW=0.4000,range=1.8700 | 2026-08-12:RED:body=0.2000,upperW=1.0700,lowerW=0.3300,range=1.6000 | 2026-08-13:GREEN:body=2.0200,upperW=0.1400,lowerW=0.6600,range=2.8200 | 2026-08-14:GREEN:body=1.6600,upperW=0.6200,lowerW=0.3500,range=2.6300 | 2026-08-17:GREEN:body=1.0900,upperW=0.6100,lowerW=0.3400,range=2.0400 | 2026-08-18:RED:body=0.4900,upperW=0.6900,lowerW=0.5450,range=1.7250 | **GOOD** |
-| `B01_eps_surprise` | 13.68 | **GOOD** |
-| `B02_revenue_surprise` | 3.49 | **GOOD** |
-| `B03_sales` | 10343.7 | **NEUTRAL** |
-| `B04_income` | 1175.6 | **GOOD** |
-| `B05_profit_margin` | 11.37 | **GOOD** |
+| `A01_rsi_value` | RSI=68.99 on 2026-08-14; prev RSI=75.74 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 75.74@2026-08-13 → 68.99@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 75.74@2026-08-13 → 68.99@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | cross_down | RSI 75.74@2026-08-13 → 68.99@2026-08-14 vs level 70 | **GOOD** |
+| `A05_body_red_green_ratio` | ratio=3.952 (= sum GREEN bodies / sum RED bodies); GREEN_sum=2.4500 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-13]; RED_sum=0.6200 dates=[2026-08-06,2026-08-11,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=11.1400,C=11.4900,body=+0.3500 | 2026-08-04:GREEN:O=11.3400,C=11.5600,body=+0.2200 | 2026-08-05:GREEN:O=11.6000,C=11.6700,body=+0.0700 | 2026-08-06:RED:O=11.6500,C=11.5500,body=-0.1000 | 2026-08-07:GREEN:O=11.3800,C=11.6000,body=+0.2200 | 2026-08-10:GREEN:O=11.4500,C=11.6200,body=+0.1700 | 2026-08-11:RED:O=11.5700,C=11.5000,body=-0.0700 | 2026-08-12:GREEN:O=11.3000,C=11.6000,body=+0.3000 | 2026-08-13:GREEN:O=12.4500,C=13.5700,body=+1.1200 | 2026-08-14:RED:O=13.5500,C=13.1000,body=-0.4500 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.916 if finite else n/a; GREEN_vol_sum=4767800 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-13]; RED_vol_sum=2488000 dates=[2026-08-06,2026-08-11,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=511200 | 2026-08-04:GREEN:vol=514000 | 2026-08-05:GREEN:vol=297800 | 2026-08-06:RED:vol=321500 | 2026-08-07:GREEN:vol=363300 | 2026-08-10:GREEN:vol=509300 | 2026-08-11:RED:vol=683700 | 2026-08-12:GREEN:vol=719800 | 2026-08-13:GREEN:vol=1852400 | 2026-08-14:RED:vol=1482800 | **GOOD** |
+| `A07_rvol` | RVOL=2.340 on 2026-08-14: today_vol=1482800 / avg20=633755 (avg window 2026-07-14→2026-08-13, excludes today) | **GOOD** |
+| `A08_bollinger_position` | pos=0.906 on 2026-08-14 (price=13.1000, mid=11.0340, upper=13.3132, lower=8.7548; 20d BB) | **BAD** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=13.1000 vs SMA50=10.8260 dist=+21.00% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=11.03_50=10.83_80=11.37 on 2026-08-14: SMA20=11.0340 SMA50=10.8260 SMA80=11.3730 | **NEUTRAL** |
+| `A11_max_downside_2m` | maxDD=-3.46% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-13 @ 13.5700 → trough 2026-08-14 @ 13.1000 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-13] body_frac=0.564 wick_frac=0.436; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.3500,upperW=0.0500,lowerW=0.1800,range=0.5800 | 2026-08-04:GREEN:body=0.2200,upperW=0.0200,lowerW=0.2350,range=0.4750 | 2026-08-05:GREEN:body=0.0700,upperW=0.0600,lowerW=0.3000,range=0.4300 | 2026-08-06:RED:body=0.1000,upperW=0.0900,lowerW=0.1650,range=0.3550 | 2026-08-07:GREEN:body=0.2200,upperW=0.3200,lowerW=0.0000,range=0.5400 | 2026-08-10:GREEN:body=0.1700,upperW=0.2290,lowerW=0.0300,range=0.4290 | 2026-08-11:RED:body=0.0700,upperW=0.1950,lowerW=0.2900,range=0.5550 | 2026-08-12:GREEN:body=0.3000,upperW=0.1600,lowerW=0.0900,range=0.5500 | 2026-08-13:GREEN:body=1.1200,upperW=0.0000,lowerW=0.2220,range=1.3420 | 2026-08-14:RED:body=0.4500,upperW=0.1200,lowerW=0.9100,range=1.4800 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-06,2026-08-11,2026-08-14] body_frac=0.259 wick_frac=0.741; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.3500,upperW=0.0500,lowerW=0.1800,range=0.5800 | 2026-08-04:GREEN:body=0.2200,upperW=0.0200,lowerW=0.2350,range=0.4750 | 2026-08-05:GREEN:body=0.0700,upperW=0.0600,lowerW=0.3000,range=0.4300 | 2026-08-06:RED:body=0.1000,upperW=0.0900,lowerW=0.1650,range=0.3550 | 2026-08-07:GREEN:body=0.2200,upperW=0.3200,lowerW=0.0000,range=0.5400 | 2026-08-10:GREEN:body=0.1700,upperW=0.2290,lowerW=0.0300,range=0.4290 | 2026-08-11:RED:body=0.0700,upperW=0.1950,lowerW=0.2900,range=0.5550 | 2026-08-12:GREEN:body=0.3000,upperW=0.1600,lowerW=0.0900,range=0.5500 | 2026-08-13:GREEN:body=1.1200,upperW=0.0000,lowerW=0.2220,range=1.3420 | 2026-08-14:RED:body=0.4500,upperW=0.1200,lowerW=0.9100,range=1.4800 | **GOOD** |
+| `B01_eps_surprise` | 23.59 | **GOOD** |
+| `B02_revenue_surprise` | 3.36 | **GOOD** |
+| `B03_sales` | 2116.97 | **NEUTRAL** |
+| `B04_income` | 92.68 | **GOOD** |
+| `B05_profit_margin` | 4.38 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 76.25 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.15000000000000568 (now=76.25 vs prior_export=76.1 on finviz_2026-08-17) | **GOOD** |
-| `B09_analyst_recom` | 2.0 | **GOOD** |
-| `B10_insider_transactions` | -16.8 | **BAD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=-16.8 vs prior=-16.8 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 1.55 | **GOOD** |
-| `B13_short_float` | 3.46 | **NEUTRAL** |
+| `B07_target_price` | 17.92 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=17.92 vs prior_export=17.92 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.23 | **GOOD** |
+| `B10_insider_transactions` | 0.05 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.05 vs prior=0.05 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.0 | **NEUTRAL** |
+| `B13_short_float` | 8.52 | **NEUTRAL** |
+| `B14_earnings_date` | 8/13/2026 8:30:00 AM | **NEUTRAL** |
+
+### EPD  ·  score **+13**  ·  Oil & Gas Midstream
+price=38.900001525878906  mcap=$83.69B  ADV=3,203,860
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14]  RED=[2026-08-05,2026-08-06,2026-08-07]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=62.96 on 2026-08-14; prev RSI=54.41 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 54.41@2026-08-13 → 62.96@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 54.41@2026-08-13 → 62.96@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 54.41@2026-08-13 → 62.96@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=5.744 (= sum GREEN bodies / sum RED bodies); GREEN_sum=2.2400 dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14]; RED_sum=0.3900 dates=[2026-08-05,2026-08-06,2026-08-07]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=37.4700,C=37.8700,body=+0.4000 | 2026-08-04:GREEN:O=37.7000,C=38.1200,body=+0.4200 | 2026-08-05:RED:O=38.0000,C=37.7200,body=-0.2800 | 2026-08-06:RED:O=38.1000,C=38.0500,body=-0.0500 | 2026-08-07:RED:O=37.8100,C=37.7500,body=-0.0600 | 2026-08-10:GREEN:O=37.7600,C=37.9900,body=+0.2300 | 2026-08-11:GREEN:O=37.7700,C=37.8600,body=+0.0900 | 2026-08-12:GREEN:O=37.7500,C=37.9200,body=+0.1700 | 2026-08-13:GREEN:O=37.7600,C=38.0200,body=+0.2600 | 2026-08-14:GREEN:O=38.2300,C=38.9000,body=+0.6700 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=3.209 if finite else n/a; GREEN_vol_sum=25217400 dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14]; RED_vol_sum=7857400 dates=[2026-08-05,2026-08-06,2026-08-07]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=2840400 | 2026-08-04:GREEN:vol=4108300 | 2026-08-05:RED:vol=3043300 | 2026-08-06:RED:vol=2321200 | 2026-08-07:RED:vol=2492900 | 2026-08-10:GREEN:vol=3302000 | 2026-08-11:GREEN:vol=2812400 | 2026-08-12:GREEN:vol=2417500 | 2026-08-13:GREEN:vol=2358000 | 2026-08-14:GREEN:vol=7378800 | **GOOD** |
+| `A07_rvol` | RVOL=2.239 on 2026-08-14: today_vol=7378800 / avg20=3294990 (avg window 2026-07-17→2026-08-13, excludes today) | **GOOD** |
+| `A08_bollinger_position` | pos=1.498 on 2026-08-14 (price=38.9000, mid=38.0224, upper=38.6082, lower=37.4366; 20d BB) | **BAD** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=38.9000 vs SMA50=37.1873 dist=+4.61% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=38.02_50=37.19_80=37.36 on 2026-08-14: SMA20=38.0224 SMA50=37.1873 SMA80=37.3608 | **NEUTRAL** |
+| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-16→2026-08-14 (42 sessions): peak 2026-08-14 @ 38.9000 → trough 2026-08-14 @ 38.9000 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14] body_frac=0.557 wick_frac=0.443; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.4000,upperW=0.2300,lowerW=0.0800,range=0.7100 | 2026-08-04:GREEN:body=0.4200,upperW=0.1400,lowerW=0.2600,range=0.8200 | 2026-08-05:RED:body=0.2800,upperW=0.0700,lowerW=0.3000,range=0.6500 | 2026-08-06:RED:body=0.0500,upperW=0.0500,lowerW=0.3800,range=0.4800 | 2026-08-07:RED:body=0.0600,upperW=0.3800,lowerW=0.0000,range=0.4400 | 2026-08-10:GREEN:body=0.2300,upperW=0.2000,lowerW=0.0000,range=0.4300 | 2026-08-11:GREEN:body=0.0900,upperW=0.3000,lowerW=0.0900,range=0.4800 | 2026-08-12:GREEN:body=0.1700,upperW=0.2000,lowerW=0.0000,range=0.3700 | 2026-08-13:GREEN:body=0.2600,upperW=0.1600,lowerW=0.0000,range=0.4200 | 2026-08-14:GREEN:body=0.6700,upperW=0.0000,lowerW=0.1200,range=0.7900 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-07] body_frac=0.248 wick_frac=0.752; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.4000,upperW=0.2300,lowerW=0.0800,range=0.7100 | 2026-08-04:GREEN:body=0.4200,upperW=0.1400,lowerW=0.2600,range=0.8200 | 2026-08-05:RED:body=0.2800,upperW=0.0700,lowerW=0.3000,range=0.6500 | 2026-08-06:RED:body=0.0500,upperW=0.0500,lowerW=0.3800,range=0.4800 | 2026-08-07:RED:body=0.0600,upperW=0.3800,lowerW=0.0000,range=0.4400 | 2026-08-10:GREEN:body=0.2300,upperW=0.2000,lowerW=0.0000,range=0.4300 | 2026-08-11:GREEN:body=0.0900,upperW=0.3000,lowerW=0.0900,range=0.4800 | 2026-08-12:GREEN:body=0.1700,upperW=0.2000,lowerW=0.0000,range=0.3700 | 2026-08-13:GREEN:body=0.2600,upperW=0.1600,lowerW=0.0000,range=0.4200 | 2026-08-14:GREEN:body=0.6700,upperW=0.0000,lowerW=0.1200,range=0.7900 | **GOOD** |
+| `B01_eps_surprise` | 12.24 | **GOOD** |
+| `B02_revenue_surprise` | 33.47 | **GOOD** |
+| `B03_sales` | 58217.0 | **NEUTRAL** |
+| `B04_income` | 6244.0 | **GOOD** |
+| `B05_profit_margin` | 10.73 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 41.61 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.04999999999999716 (now=41.61 vs prior_export=41.56 on finviz_2026-08-17) | **GOOD** |
+| `B09_analyst_recom` | 2.22 | **GOOD** |
+| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.42 | **GOOD** |
+| `B13_short_float` | 1.2 | **NEUTRAL** |
 | `B14_earnings_date` | 7/30/2026 8:30:00 AM | **NEUTRAL** |
 
-### DHT  ·  score **+12**  ·  Oil & Gas Midstream
-price=19.139999389648438  mcap=$3.07B  ADV=3,236,820
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-07,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18]  RED=[2026-08-05,2026-08-06,2026-08-10,2026-08-11]
+### SONO  ·  score **+13**  ·  Consumer Electronics
+price=16.309999465942383  mcap=$1.83B  ADV=1,978,070
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-07,2026-08-12,2026-08-13]  RED=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=59.95 on 2026-08-18; prev RSI=57.89 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 57.89@2026-08-17 → 59.95@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 57.89@2026-08-17 → 59.95@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 57.89@2026-08-17 → 59.95@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=1.964 (= sum GREEN bodies / sum RED bodies); GREEN_sum=2.0819 dates=[2026-08-07,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18]; RED_sum=1.0600 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=18.2500,C=17.8700,body=-0.3800 | 2026-08-06:RED:O=18.4800,C=18.3500,body=-0.1300 | 2026-08-07:GREEN:O=18.3800,C=18.7600,body=+0.3800 | 2026-08-10:RED:O=18.7600,C=18.3300,body=-0.4300 | 2026-08-11:RED:O=18.3200,C=18.2000,body=-0.1200 | 2026-08-12:GREEN:O=17.0156,C=17.5500,body=+0.5344 | 2026-08-13:GREEN:O=17.6344,C=18.0000,body=+0.3656 | 2026-08-14:GREEN:O=18.1781,C=18.3000,body=+0.1219 | 2026-08-17:GREEN:O=18.4200,C=18.9000,body=+0.4800 | 2026-08-18:GREEN:O=18.9400,C=19.1400,body=+0.2000 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.355 if finite else n/a; GREEN_vol_sum=18459546 dates=[2026-08-07,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18]; RED_vol_sum=13621300 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=4307900 | 2026-08-06:RED:vol=3689600 | 2026-08-07:GREEN:vol=3122000 | 2026-08-10:RED:vol=2443900 | 2026-08-11:RED:vol=3179900 | 2026-08-12:GREEN:vol=4073700 | 2026-08-13:GREEN:vol=2981100 | 2026-08-14:GREEN:vol=3314000 | 2026-08-17:GREEN:vol=3506600 | 2026-08-18:GREEN:vol=1462146 | **GOOD** |
-| `A07_rvol` | RVOL=0.511 on 2026-08-18: today_vol=1462146 / avg20=2863185 (avg window 2026-07-21→2026-08-17, excludes today) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=1.064 on 2026-08-18 (price=19.1400, mid=18.3805, upper=19.0946, lower=17.6664; 20d BB) | **BAD** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=19.1400 vs SMA50=17.9922 dist=+6.38% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=18.3805 SMA50=17.9922 SMA80=17.7681 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-17.18% inside window 2026-06-18→2026-08-18 (42 sessions): peak 2026-06-23 @ 19.9600 → trough 2026-06-30 @ 16.5300 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-07,2026-08-12,2026-08-13,2026-08-14,2026-08-17,2026-08-18] body_frac=0.601 wick_frac=0.399; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.3800,upperW=0.2400,lowerW=0.1000,range=0.7200 | 2026-08-06:RED:body=0.1300,upperW=0.3200,lowerW=0.2400,range=0.6900 | 2026-08-07:GREEN:body=0.3800,upperW=0.0700,lowerW=0.2500,range=0.7000 | 2026-08-10:RED:body=0.4300,upperW=0.1000,lowerW=0.0400,range=0.5700 | 2026-08-11:RED:body=0.1200,upperW=0.0800,lowerW=0.4400,range=0.6400 | 2026-08-12:GREEN:body=0.5344,upperW=0.1406,lowerW=0.0000,range=0.6750 | 2026-08-13:GREEN:body=0.3656,upperW=0.2062,lowerW=0.0000,range=0.5719 | 2026-08-14:GREEN:body=0.1219,upperW=0.1781,lowerW=0.1500,range=0.4500 | 2026-08-17:GREEN:body=0.4800,upperW=0.0200,lowerW=0.1500,range=0.6500 | 2026-08-18:GREEN:body=0.2000,upperW=0.0800,lowerW=0.1400,range=0.4200 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11] body_frac=0.405 wick_frac=0.595; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.3800,upperW=0.2400,lowerW=0.1000,range=0.7200 | 2026-08-06:RED:body=0.1300,upperW=0.3200,lowerW=0.2400,range=0.6900 | 2026-08-07:GREEN:body=0.3800,upperW=0.0700,lowerW=0.2500,range=0.7000 | 2026-08-10:RED:body=0.4300,upperW=0.1000,lowerW=0.0400,range=0.5700 | 2026-08-11:RED:body=0.1200,upperW=0.0800,lowerW=0.4400,range=0.6400 | 2026-08-12:GREEN:body=0.5344,upperW=0.1406,lowerW=0.0000,range=0.6750 | 2026-08-13:GREEN:body=0.3656,upperW=0.2062,lowerW=0.0000,range=0.5719 | 2026-08-14:GREEN:body=0.1219,upperW=0.1781,lowerW=0.1500,range=0.4500 | 2026-08-17:GREEN:body=0.4800,upperW=0.0200,lowerW=0.1500,range=0.6500 | 2026-08-18:GREEN:body=0.2000,upperW=0.0800,lowerW=0.1400,range=0.4200 | **GOOD** |
-| `B01_eps_surprise` | 4.02 | **GOOD** |
-| `B02_revenue_surprise` | 3.15 | **GOOD** |
-| `B03_sales` | 722.19 | **NEUTRAL** |
-| `B04_income` | 473.73 | **GOOD** |
-| `B05_profit_margin` | 65.6 | **GOOD** |
+| `A01_rsi_value` | RSI=55.85 on 2026-08-14; prev RSI=57.80 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 57.80@2026-08-13 → 55.85@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 57.80@2026-08-13 → 55.85@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 57.80@2026-08-13 → 55.85@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.565 (= sum GREEN bodies / sum RED bodies); GREEN_sum=3.0200 dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-12,2026-08-13]; RED_sum=1.9300 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=15.0700,C=15.7700,body=+0.7000 | 2026-08-04:GREEN:O=16.0000,C=16.4200,body=+0.4200 | 2026-08-05:RED:O=16.4300,C=15.9200,body=-0.5100 | 2026-08-06:RED:O=15.7600,C=15.4500,body=-0.3100 | 2026-08-07:GREEN:O=15.3600,C=15.6400,body=+0.2800 | 2026-08-10:RED:O=15.6600,C=15.4400,body=-0.2200 | 2026-08-11:RED:O=15.4400,C=15.0700,body=-0.3700 | 2026-08-12:GREEN:O=14.9000,C=15.7500,body=+0.8500 | 2026-08-13:GREEN:O=15.8200,C=16.5900,body=+0.7700 | 2026-08-14:RED:O=16.8300,C=16.3100,body=-0.5200 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.264 if finite else n/a; GREEN_vol_sum=8699300 dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-12,2026-08-13]; RED_vol_sum=6879900 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=2007800 | 2026-08-04:GREEN:vol=1795500 | 2026-08-05:RED:vol=1665800 | 2026-08-06:RED:vol=1544500 | 2026-08-07:GREEN:vol=1189800 | 2026-08-10:RED:vol=1203900 | 2026-08-11:RED:vol=984000 | 2026-08-12:GREEN:vol=2055800 | 2026-08-13:GREEN:vol=1650400 | 2026-08-14:RED:vol=1481700 | **GOOD** |
+| `A07_rvol` | RVOL=0.681 on 2026-08-14: today_vol=1481700 / avg20=2174835 (avg window 2026-07-15→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.434 on 2026-08-14 (price=16.3100, mid=15.5615, upper=17.2866, lower=13.8364; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=16.3100 vs SMA50=14.9488 dist=+9.11% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=15.56_50=14.95_80=14.96 on 2026-08-14: SMA20=15.5615 SMA50=14.9488 SMA80=14.9592 | **NEUTRAL** |
+| `A11_max_downside_2m` | maxDD=-17.64% inside window 2026-06-12→2026-08-14 (42 sessions): peak 2026-07-29 @ 17.5200 → trough 2026-07-30 @ 14.4300 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-07,2026-08-12,2026-08-13] body_frac=0.744 wick_frac=0.256; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.7000,upperW=0.0500,lowerW=0.0000,range=0.7500 | 2026-08-04:GREEN:body=0.4200,upperW=0.0500,lowerW=0.3800,range=0.8500 | 2026-08-05:RED:body=0.5100,upperW=0.0000,lowerW=0.0500,range=0.5600 | 2026-08-06:RED:body=0.3100,upperW=0.0700,lowerW=0.2600,range=0.6400 | 2026-08-07:GREEN:body=0.2800,upperW=0.1400,lowerW=0.0000,range=0.4200 | 2026-08-10:RED:body=0.2200,upperW=0.2100,lowerW=0.0300,range=0.4600 | 2026-08-11:RED:body=0.3700,upperW=0.1300,lowerW=0.0300,range=0.5300 | 2026-08-12:GREEN:body=0.8500,upperW=0.2200,lowerW=0.0000,range=1.0700 | 2026-08-13:GREEN:body=0.7700,upperW=0.0300,lowerW=0.1700,range=0.9700 | 2026-08-14:RED:body=0.5200,upperW=0.1800,lowerW=0.0200,range=0.7200 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14] body_frac=0.663 wick_frac=0.337; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.7000,upperW=0.0500,lowerW=0.0000,range=0.7500 | 2026-08-04:GREEN:body=0.4200,upperW=0.0500,lowerW=0.3800,range=0.8500 | 2026-08-05:RED:body=0.5100,upperW=0.0000,lowerW=0.0500,range=0.5600 | 2026-08-06:RED:body=0.3100,upperW=0.0700,lowerW=0.2600,range=0.6400 | 2026-08-07:GREEN:body=0.2800,upperW=0.1400,lowerW=0.0000,range=0.4200 | 2026-08-10:RED:body=0.2200,upperW=0.2100,lowerW=0.0300,range=0.4600 | 2026-08-11:RED:body=0.3700,upperW=0.1300,lowerW=0.0300,range=0.5300 | 2026-08-12:GREEN:body=0.8500,upperW=0.2200,lowerW=0.0000,range=1.0700 | 2026-08-13:GREEN:body=0.7700,upperW=0.0300,lowerW=0.1700,range=0.9700 | 2026-08-14:RED:body=0.5200,upperW=0.1800,lowerW=0.0200,range=0.7200 | **BAD** |
+| `B01_eps_surprise` | 525.0 | **GOOD** |
+| `B02_revenue_surprise` | 2.63 | **GOOD** |
+| `B03_sales` | 1490.35 | **NEUTRAL** |
+| `B04_income` | 56.91 | **GOOD** |
+| `B05_profit_margin` | 3.82 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 21.34 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=21.34 vs prior_export=21.34 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.67 | **GOOD** |
-| `B10_insider_transactions` | -0.16 | **BAD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=-0.16 vs prior=-0.16 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 14.32 | **GOOD** |
-| `B13_short_float` | 7.37 | **NEUTRAL** |
-| `B14_earnings_date` | 8/5/2026 4:30:00 PM | **NEUTRAL** |
+| `B07_target_price` | 19.67 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=19.67 vs prior_export=19.67 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.6 | **GOOD** |
+| `B10_insider_transactions` | 409.09 | **GOOD** |
+| `B11_insider_tx_delta` | delta=297.27 (now=409.09 vs prior=111.82 on finviz_2026-08-17) | **GOOD** |
+| `B12_institutional_transactions` | 3.32 | **GOOD** |
+| `B13_short_float` | 8.35 | **NEUTRAL** |
+| `B14_earnings_date` | 7/29/2026 4:30:00 PM | **NEUTRAL** |
 
-### ELV  ·  score **+12**  ·  Healthcare Plans
-price=399.9200134277344  mcap=$86.06B  ADV=1,527,970
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-18]  RED=[2026-08-06,2026-08-11,2026-08-13,2026-08-17]
+### RPM  ·  score **+13**  ·  Specialty Chemicals
+price=113.81999969482422  mcap=$14.23B  ADV=913,360
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-11,2026-08-14]  RED=[2026-08-06,2026-08-10,2026-08-12,2026-08-13]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=54.28 on 2026-08-18; prev RSI=48.70 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 48.70@2026-08-17 → 54.28@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 48.70@2026-08-17 → 54.28@2026-08-18 vs level 50 | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 48.70@2026-08-17 → 54.28@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=2.399 (= sum GREEN bodies / sum RED bodies); GREEN_sum=41.8300 dates=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-18]; RED_sum=17.4400 dates=[2026-08-06,2026-08-11,2026-08-13,2026-08-17]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:GREEN:O=375.2000,C=391.2400,body=+16.0400 | 2026-08-06:RED:O=391.8300,C=391.4000,body=-0.4300 | 2026-08-07:GREEN:O=390.3900,C=394.2000,body=+3.8100 | 2026-08-10:GREEN:O=395.3100,C=397.7000,body=+2.3900 | 2026-08-11:RED:O=398.2200,C=390.3700,body=-7.8500 | 2026-08-12:GREEN:O=386.9400,C=399.1400,body=+12.2000 | 2026-08-13:RED:O=400.8000,C=398.2200,body=-2.5800 | 2026-08-14:GREEN:O=398.3900,C=400.3200,body=+1.9300 | 2026-08-17:RED:O=396.8200,C=390.2400,body=-6.5800 | 2026-08-18:GREEN:O=394.4600,C=399.9200,body=+5.4600 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.449 if finite else n/a; GREEN_vol_sum=4885588 dates=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-18]; RED_vol_sum=3371100 dates=[2026-08-06,2026-08-11,2026-08-13,2026-08-17]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:vol=1165300 | 2026-08-06:RED:vol=910900 | 2026-08-07:GREEN:vol=941900 | 2026-08-10:GREEN:vol=854600 | 2026-08-11:RED:vol=907300 | 2026-08-12:GREEN:vol=786700 | 2026-08-13:RED:vol=652300 | 2026-08-14:GREEN:vol=730800 | 2026-08-17:RED:vol=900600 | 2026-08-18:GREEN:vol=406288 | **GOOD** |
-| `A07_rvol` | RVOL=0.340 on 2026-08-18: today_vol=406288 / avg20=1195105 (avg window 2026-07-16→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=0.695 on 2026-08-18 (price=399.9200, mid=387.1160, upper=405.5466, lower=368.6854; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=399.9200 vs SMA50=396.8037 dist=+0.79% | **GOOD** |
-| `A10_sma20_50_80_stack` | mixed_20=387.12_50=396.80_80=389.39 on 2026-08-18: SMA20=387.1160 SMA50=396.8037 SMA80=389.3860 | **NEUTRAL** |
-| `A11_max_downside_2m` | maxDD=-12.64% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-07-14 @ 426.7900 → trough 2026-07-16 @ 372.8500 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-18] body_frac=0.650 wick_frac=0.350; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:body=16.0400,upperW=1.1900,lowerW=4.7300,range=21.9600 | 2026-08-06:RED:body=0.4300,upperW=0.9100,lowerW=4.7100,range=6.0500 | 2026-08-07:GREEN:body=3.8100,upperW=1.5000,lowerW=3.0800,range=8.3900 | 2026-08-10:GREEN:body=2.3900,upperW=3.2300,lowerW=0.2900,range=5.9100 | 2026-08-11:RED:body=7.8500,upperW=5.1100,lowerW=2.2100,range=15.1700 | 2026-08-12:GREEN:body=12.2000,upperW=0.0200,lowerW=1.1000,range=13.3200 | 2026-08-13:RED:body=2.5800,upperW=3.9200,lowerW=0.5900,range=7.0900 | 2026-08-14:GREEN:body=1.9300,upperW=1.9800,lowerW=1.1600,range=5.0700 | 2026-08-17:RED:body=6.5800,upperW=3.3500,lowerW=2.1200,range=12.0500 | 2026-08-18:GREEN:body=5.4600,upperW=1.5950,lowerW=2.6887,range=9.7437 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-06,2026-08-11,2026-08-13,2026-08-17] body_frac=0.432 wick_frac=0.568; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:body=16.0400,upperW=1.1900,lowerW=4.7300,range=21.9600 | 2026-08-06:RED:body=0.4300,upperW=0.9100,lowerW=4.7100,range=6.0500 | 2026-08-07:GREEN:body=3.8100,upperW=1.5000,lowerW=3.0800,range=8.3900 | 2026-08-10:GREEN:body=2.3900,upperW=3.2300,lowerW=0.2900,range=5.9100 | 2026-08-11:RED:body=7.8500,upperW=5.1100,lowerW=2.2100,range=15.1700 | 2026-08-12:GREEN:body=12.2000,upperW=0.0200,lowerW=1.1000,range=13.3200 | 2026-08-13:RED:body=2.5800,upperW=3.9200,lowerW=0.5900,range=7.0900 | 2026-08-14:GREEN:body=1.9300,upperW=1.9800,lowerW=1.1600,range=5.0700 | 2026-08-17:RED:body=6.5800,upperW=3.3500,lowerW=2.1200,range=12.0500 | 2026-08-18:GREEN:body=5.4600,upperW=1.5950,lowerW=2.6887,range=9.7437 | **GOOD** |
-| `B01_eps_surprise` | 19.94 | **GOOD** |
-| `B02_revenue_surprise` | 1.94 | **GOOD** |
-| `B03_sales` | 201113.0 | **NEUTRAL** |
-| `B04_income` | 4963.0 | **GOOD** |
-| `B05_profit_margin` | 2.47 | **GOOD** |
+| `A01_rsi_value` | RSI=56.28 on 2026-08-14; prev RSI=55.40 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 55.40@2026-08-13 → 56.28@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 55.40@2026-08-13 → 56.28@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 55.40@2026-08-13 → 56.28@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.528 (= sum GREEN bodies / sum RED bodies); GREEN_sum=9.2600 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-11,2026-08-14]; RED_sum=6.0600 dates=[2026-08-06,2026-08-10,2026-08-12,2026-08-13]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=110.5000,C=111.4900,body=+0.9900 | 2026-08-04:GREEN:O=112.6500,C=115.0900,body=+2.4400 | 2026-08-05:GREEN:O=115.2900,C=116.7200,body=+1.4300 | 2026-08-06:RED:O=116.9900,C=115.6500,body=-1.3400 | 2026-08-07:GREEN:O=114.8900,C=117.3600,body=+2.4700 | 2026-08-10:RED:O=117.0500,C=115.9300,body=-1.1200 | 2026-08-11:GREEN:O=115.7000,C=116.6600,body=+0.9600 | 2026-08-12:RED:O=115.9300,C=115.0700,body=-0.8600 | 2026-08-13:RED:O=116.0700,C=113.3300,body=-2.7400 | 2026-08-14:GREEN:O=112.8500,C=113.8200,body=+0.9700 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.219 if finite else n/a; GREEN_vol_sum=4946800 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-11,2026-08-14]; RED_vol_sum=4059700 dates=[2026-08-06,2026-08-10,2026-08-12,2026-08-13]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=868900 | 2026-08-04:GREEN:vol=1059000 | 2026-08-05:GREEN:vol=802600 | 2026-08-06:RED:vol=1123500 | 2026-08-07:GREEN:vol=812000 | 2026-08-10:RED:vol=947500 | 2026-08-11:GREEN:vol=604400 | 2026-08-12:RED:vol=735700 | 2026-08-13:RED:vol=1253000 | 2026-08-14:GREEN:vol=799900 | **GOOD** |
+| `A07_rvol` | RVOL=0.792 on 2026-08-14: today_vol=799900 / avg20=1010080 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.305 on 2026-08-14 (price=113.8200, mid=110.7345, upper=120.8667, lower=100.6023; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=113.8200 vs SMA50=108.2452 dist=+5.15% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=110.7345 SMA50=108.2452 SMA80=105.7044 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-3.43% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-07 @ 117.3600 → trough 2026-08-13 @ 113.3300 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-07,2026-08-11,2026-08-14] body_frac=0.514 wick_frac=0.486; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.9900,upperW=0.0300,lowerW=2.7500,range=3.7700 | 2026-08-04:GREEN:body=2.4400,upperW=0.1700,lowerW=1.0500,range=3.6600 | 2026-08-05:GREEN:body=1.4300,upperW=0.0300,lowerW=0.5400,range=2.0000 | 2026-08-06:RED:body=1.3400,upperW=0.7000,lowerW=0.5600,range=2.6000 | 2026-08-07:GREEN:body=2.4700,upperW=0.3900,lowerW=0.8800,range=3.7400 | 2026-08-10:RED:body=1.1200,upperW=0.7200,lowerW=1.4700,range=3.3100 | 2026-08-11:GREEN:body=0.9600,upperW=1.2700,lowerW=0.0000,range=2.2300 | 2026-08-12:RED:body=0.8600,upperW=1.5600,lowerW=0.8400,range=3.2600 | 2026-08-13:RED:body=2.7400,upperW=0.7400,lowerW=0.6000,range=4.0800 | 2026-08-14:GREEN:body=0.9700,upperW=0.2100,lowerW=1.4400,range=2.6200 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-06,2026-08-10,2026-08-12,2026-08-13] body_frac=0.457 wick_frac=0.543; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.9900,upperW=0.0300,lowerW=2.7500,range=3.7700 | 2026-08-04:GREEN:body=2.4400,upperW=0.1700,lowerW=1.0500,range=3.6600 | 2026-08-05:GREEN:body=1.4300,upperW=0.0300,lowerW=0.5400,range=2.0000 | 2026-08-06:RED:body=1.3400,upperW=0.7000,lowerW=0.5600,range=2.6000 | 2026-08-07:GREEN:body=2.4700,upperW=0.3900,lowerW=0.8800,range=3.7400 | 2026-08-10:RED:body=1.1200,upperW=0.7200,lowerW=1.4700,range=3.3100 | 2026-08-11:GREEN:body=0.9600,upperW=1.2700,lowerW=0.0000,range=2.2300 | 2026-08-12:RED:body=0.8600,upperW=1.5600,lowerW=0.8400,range=3.2600 | 2026-08-13:RED:body=2.7400,upperW=0.7400,lowerW=0.6000,range=4.0800 | 2026-08-14:GREEN:body=0.9700,upperW=0.2100,lowerW=1.4400,range=2.6200 | **GOOD** |
+| `B01_eps_surprise` | 3.3 | **GOOD** |
+| `B02_revenue_surprise` | 2.3 | **GOOD** |
+| `B03_sales` | 7863.42 | **NEUTRAL** |
+| `B04_income` | 658.68 | **GOOD** |
+| `B05_profit_margin` | 8.38 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 445.57 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=445.57 vs prior_export=445.57 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.88 | **GOOD** |
-| `B10_insider_transactions` | 0.23 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.23 vs prior=0.23 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | -0.63 | **BAD** |
-| `B13_short_float` | 2.58 | **NEUTRAL** |
+| `B07_target_price` | 130.07 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=130.07 vs prior_export=130.07 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.29 | **GOOD** |
+| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.58 | **GOOD** |
+| `B13_short_float` | 3.07 | **NEUTRAL** |
+| `B14_earnings_date` | 7/22/2026 8:30:00 AM | **NEUTRAL** |
+
+### DSGX  ·  score **+12**  ·  Software - Application
+price=77.23999786376953  mcap=$6.49B  ADV=539,980
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-04,2026-08-06,2026-08-07,2026-08-10]  RED=[2026-08-03,2026-08-05,2026-08-11,2026-08-12,2026-08-13]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=55.02 on 2026-08-14; prev RSI=55.02 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 55.02@2026-08-13 → 55.02@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 55.02@2026-08-13 → 55.02@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 55.02@2026-08-13 → 55.02@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.418 (= sum GREEN bodies / sum RED bodies); GREEN_sum=6.3800 dates=[2026-08-04,2026-08-06,2026-08-07,2026-08-10]; RED_sum=4.5000 dates=[2026-08-03,2026-08-05,2026-08-11,2026-08-12,2026-08-13]; DOJI=[2026-08-14]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:RED:O=76.9800,C=76.5900,body=-0.3900 | 2026-08-04:GREEN:O=75.3100,C=77.4200,body=+2.1100 | 2026-08-05:RED:O=78.6500,C=76.6200,body=-2.0300 | 2026-08-06:GREEN:O=75.5200,C=77.7800,body=+2.2600 | 2026-08-07:GREEN:O=78.1800,C=79.5700,body=+1.3900 | 2026-08-10:GREEN:O=79.3800,C=80.0000,body=+0.6200 | 2026-08-11:RED:O=80.0000,C=79.1800,body=-0.8200 | 2026-08-12:RED:O=78.2400,C=77.6200,body=-0.6200 | 2026-08-13:RED:O=77.8800,C=77.2400,body=-0.6400 | 2026-08-14:DOJI:O=77.2400,C=77.2400,body=+0.0000 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=0.895 if finite else n/a; GREEN_vol_sum=1952450 dates=[2026-08-04,2026-08-06,2026-08-07,2026-08-10]; RED_vol_sum=2181750 dates=[2026-08-03,2026-08-05,2026-08-11,2026-08-12,2026-08-13]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:vol=236300 | 2026-08-04:GREEN:vol=567100 | 2026-08-05:RED:vol=451300 | 2026-08-06:GREEN:vol=306700 | 2026-08-07:GREEN:vol=363700 | 2026-08-10:GREEN:vol=498800 | 2026-08-11:RED:vol=250700 | 2026-08-12:RED:vol=426500 | 2026-08-13:RED:vol=600800 | 2026-08-14:DOJI:vol=432300 | **NEUTRAL** |
+| `A07_rvol` | RVOL=0.893 on 2026-08-14: today_vol=432300 / avg20=483925 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.247 on 2026-08-14 (price=77.2400, mid=75.3735, upper=82.9172, lower=67.8298; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=77.2400 vs SMA50=73.4176 dist=+5.21% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=75.3735 SMA50=73.4176 SMA80=72.7700 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-3.45% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-10 @ 80.0000 → trough 2026-08-13 @ 77.2400 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-04,2026-08-06,2026-08-07,2026-08-10] body_frac=0.696 wick_frac=0.304; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=0.3900,upperW=2.1300,lowerW=1.0900,range=3.6100 | 2026-08-04:GREEN:body=2.1100,upperW=0.2200,lowerW=0.0000,range=2.3300 | 2026-08-05:RED:body=2.0300,upperW=0.5200,lowerW=0.4800,range=3.0300 | 2026-08-06:GREEN:body=2.2600,upperW=0.0200,lowerW=0.7900,range=3.0700 | 2026-08-07:GREEN:body=1.3900,upperW=0.1500,lowerW=0.6500,range=2.1900 | 2026-08-10:GREEN:body=0.6200,upperW=0.5700,lowerW=0.3900,range=1.5800 | 2026-08-11:RED:body=0.8200,upperW=0.3700,lowerW=0.2900,range=1.4800 | 2026-08-12:RED:body=0.6200,upperW=0.2800,lowerW=1.3800,range=2.2800 | 2026-08-13:RED:body=0.6400,upperW=0.0000,lowerW=3.5000,range=4.1400 | 2026-08-14:DOJI:body=0.0000,upperW=0.1900,lowerW=2.1300,range=2.3200 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-03,2026-08-05,2026-08-11,2026-08-12,2026-08-13] body_frac=0.309 wick_frac=0.691; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=0.3900,upperW=2.1300,lowerW=1.0900,range=3.6100 | 2026-08-04:GREEN:body=2.1100,upperW=0.2200,lowerW=0.0000,range=2.3300 | 2026-08-05:RED:body=2.0300,upperW=0.5200,lowerW=0.4800,range=3.0300 | 2026-08-06:GREEN:body=2.2600,upperW=0.0200,lowerW=0.7900,range=3.0700 | 2026-08-07:GREEN:body=1.3900,upperW=0.1500,lowerW=0.6500,range=2.1900 | 2026-08-10:GREEN:body=0.6200,upperW=0.5700,lowerW=0.3900,range=1.5800 | 2026-08-11:RED:body=0.8200,upperW=0.3700,lowerW=0.2900,range=1.4800 | 2026-08-12:RED:body=0.6200,upperW=0.2800,lowerW=1.3800,range=2.2800 | 2026-08-13:RED:body=0.6400,upperW=0.0000,lowerW=3.5000,range=4.1400 | 2026-08-14:DOJI:body=0.0000,upperW=0.1900,lowerW=2.1300,range=2.3200 | **GOOD** |
+| `B01_eps_surprise` | 5.99 | **GOOD** |
+| `B02_revenue_surprise` | 1.04 | **GOOD** |
+| `B03_sales` | 753.87 | **NEUTRAL** |
+| `B04_income` | 176.0 | **GOOD** |
+| `B05_profit_margin` | 23.35 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 100.23 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=100.23 vs prior_export=100.23 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.41 | **GOOD** |
+| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 4.93 | **GOOD** |
+| `B13_short_float` | 3.21 | **NEUTRAL** |
+| `B14_earnings_date` | 9/10/2026 4:30:00 PM | **NEUTRAL** |
+
+### SN  ·  score **+12**  ·  Furnishings, Fixtures & Appliances
+price=185.10000610351562  mcap=$25.72B  ADV=1,867,440
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-13]  RED=[2026-08-03,2026-08-06,2026-08-11,2026-08-12,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=71.21 on 2026-08-14; prev RSI=76.76 on 2026-08-13 | **BAD** |
+| `A02_rsi_cross_30` | above | RSI 76.76@2026-08-13 → 71.21@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 76.76@2026-08-13 → 71.21@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | above | RSI 76.76@2026-08-13 → 71.21@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.891 (= sum GREEN bodies / sum RED bodies); GREEN_sum=24.8500 dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-13]; RED_sum=13.1400 dates=[2026-08-03,2026-08-06,2026-08-11,2026-08-12,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:RED:O=163.9200,C=160.5700,body=-3.3500 | 2026-08-04:GREEN:O=162.5000,C=168.1900,body=+5.6900 | 2026-08-05:GREEN:O=169.3000,C=182.1100,body=+12.8100 | 2026-08-06:RED:O=184.1400,C=179.9300,body=-4.2100 | 2026-08-07:GREEN:O=181.7300,C=185.5200,body=+3.7900 | 2026-08-10:GREEN:O=185.6000,C=186.1700,body=+0.5700 | 2026-08-11:RED:O=188.0000,C=187.6800,body=-0.3200 | 2026-08-12:RED:O=188.9700,C=186.1300,body=-2.8400 | 2026-08-13:GREEN:O=186.6000,C=188.5900,body=+1.9900 | 2026-08-14:RED:O=187.5200,C=185.1000,body=-2.4200 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.206 if finite else n/a; GREEN_vol_sum=12421500 dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-13]; RED_vol_sum=10301400 dates=[2026-08-03,2026-08-06,2026-08-11,2026-08-12,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:vol=2156900 | 2026-08-04:GREEN:vol=3445200 | 2026-08-05:GREEN:vol=3710400 | 2026-08-06:RED:vol=2659000 | 2026-08-07:GREEN:vol=1476000 | 2026-08-10:GREEN:vol=2327400 | 2026-08-11:RED:vol=1828100 | 2026-08-12:RED:vol=2268000 | 2026-08-13:GREEN:vol=1462500 | 2026-08-14:RED:vol=1389400 | **GOOD** |
+| `A07_rvol` | RVOL=0.768 on 2026-08-14: today_vol=1389400 / avg20=1809410 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.561 on 2026-08-14 (price=185.1000, mid=167.5810, upper=198.8329, lower=136.3291; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=185.1000 vs SMA50=150.0060 dist=+23.40% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=167.5810 SMA50=150.0060 SMA80=136.2513 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-1.85% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-13 @ 188.5900 → trough 2026-08-14 @ 185.1000 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-04,2026-08-05,2026-08-07,2026-08-10,2026-08-13] body_frac=0.577 wick_frac=0.423; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=3.3500,upperW=0.7800,lowerW=1.9000,range=6.0300 | 2026-08-04:GREEN:body=5.6900,upperW=1.5000,lowerW=0.8400,range=8.0300 | 2026-08-05:GREEN:body=12.8100,upperW=0.7400,lowerW=2.6400,range=16.1900 | 2026-08-06:RED:body=4.2100,upperW=2.9000,lowerW=1.8700,range=8.9800 | 2026-08-07:GREEN:body=3.7900,upperW=2.1100,lowerW=2.5500,range=8.4500 | 2026-08-10:GREEN:body=0.5700,upperW=1.3360,lowerW=2.6300,range=4.5360 | 2026-08-11:RED:body=0.3200,upperW=3.2200,lowerW=4.1990,range=7.7390 | 2026-08-12:RED:body=2.8400,upperW=1.0300,lowerW=3.2100,range=7.0800 | 2026-08-13:GREEN:body=1.9900,upperW=1.6200,lowerW=2.2600,range=5.8700 | 2026-08-14:RED:body=2.4200,upperW=2.7600,lowerW=2.3200,range=7.5000 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-03,2026-08-06,2026-08-11,2026-08-12,2026-08-14] body_frac=0.352 wick_frac=0.648; window=2026-08-03→2026-08-14; sessions: 2026-08-03:RED:body=3.3500,upperW=0.7800,lowerW=1.9000,range=6.0300 | 2026-08-04:GREEN:body=5.6900,upperW=1.5000,lowerW=0.8400,range=8.0300 | 2026-08-05:GREEN:body=12.8100,upperW=0.7400,lowerW=2.6400,range=16.1900 | 2026-08-06:RED:body=4.2100,upperW=2.9000,lowerW=1.8700,range=8.9800 | 2026-08-07:GREEN:body=3.7900,upperW=2.1100,lowerW=2.5500,range=8.4500 | 2026-08-10:GREEN:body=0.5700,upperW=1.3360,lowerW=2.6300,range=4.5360 | 2026-08-11:RED:body=0.3200,upperW=3.2200,lowerW=4.1990,range=7.7390 | 2026-08-12:RED:body=2.8400,upperW=1.0300,lowerW=3.2100,range=7.0800 | 2026-08-13:GREEN:body=1.9900,upperW=1.6200,lowerW=2.2600,range=5.8700 | 2026-08-14:RED:body=2.4200,upperW=2.7600,lowerW=2.3200,range=7.5000 | **GOOD** |
+| `B01_eps_surprise` | 13.45 | **GOOD** |
+| `B02_revenue_surprise` | 6.82 | **GOOD** |
+| `B03_sales` | 6909.96 | **NEUTRAL** |
+| `B04_income` | 695.22 | **GOOD** |
+| `B05_profit_margin` | 10.06 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 209.56 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=209.56 vs prior_export=209.56 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.0 | **GOOD** |
+| `B10_insider_transactions` | -6.42 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.16000000000000014 (now=-6.42 vs prior=-6.58 on finviz_2026-08-17) | **GOOD** |
+| `B12_institutional_transactions` | 8.76 | **GOOD** |
+| `B13_short_float` | 9.31 | **NEUTRAL** |
+| `B14_earnings_date` | 8/5/2026 8:30:00 AM | **NEUTRAL** |
+
+### BLK  ·  score **+12**  ·  Asset Management
+price=1173.72998046875  mcap=$187.69B  ADV=769,020
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13]  RED=[2026-08-04,2026-08-05,2026-08-06,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=69.77 on 2026-08-14; prev RSI=73.08 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 73.08@2026-08-13 → 69.77@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 73.08@2026-08-13 → 69.77@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | cross_down | RSI 73.08@2026-08-13 → 69.77@2026-08-14 vs level 70 | **GOOD** |
+| `A05_body_red_green_ratio` | ratio=2.987 (= sum GREEN bodies / sum RED bodies); GREEN_sum=71.1700 dates=[2026-08-03,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13]; RED_sum=23.8300 dates=[2026-08-04,2026-08-05,2026-08-06,2026-08-14]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=1100.0699,C=1126.6300,body=+26.5601 | 2026-08-04:RED:O=1138.5000,C=1131.1300,body=-7.3700 | 2026-08-05:RED:O=1138.5000,C=1133.5800,body=-4.9200 | 2026-08-06:RED:O=1135.5699,C=1129.3000,body=-6.2699 | 2026-08-07:GREEN:O=1132.5300,C=1136.3900,body=+3.8600 | 2026-08-10:GREEN:O=1129.8199,C=1131.4000,body=+1.5801 | 2026-08-11:GREEN:O=1130.6500,C=1148.8400,body=+18.1899 | 2026-08-12:GREEN:O=1157.0000,C=1160.9100,body=+3.9100 | 2026-08-13:GREEN:O=1165.7700,C=1182.8400,body=+17.0699 | 2026-08-14:RED:O=1179.0000,C=1173.7300,body=-5.2700 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.224 if finite else n/a; GREEN_vol_sum=3186600 dates=[2026-08-03,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13]; RED_vol_sum=2603300 dates=[2026-08-04,2026-08-05,2026-08-06,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=745900 | 2026-08-04:RED:vol=625000 | 2026-08-05:RED:vol=761600 | 2026-08-06:RED:vol=701800 | 2026-08-07:GREEN:vol=588800 | 2026-08-10:GREEN:vol=656200 | 2026-08-11:GREEN:vol=438100 | 2026-08-12:GREEN:vol=378400 | 2026-08-13:GREEN:vol=379200 | 2026-08-14:RED:vol=514900 | **GOOD** |
+| `A07_rvol` | RVOL=0.694 on 2026-08-14: today_vol=514900 / avg20=742330 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.765 on 2026-08-14 (price=1173.7300, mid=1109.5795, upper=1193.4494, lower=1025.7096; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=1173.7300 vs SMA50=1049.6814 dist=+11.82% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=1109.58_50=1049.68_80=1052.70 on 2026-08-14: SMA20=1109.5795 SMA50=1049.6814 SMA80=1052.6952 | **NEUTRAL** |
+| `A11_max_downside_2m` | maxDD=-0.77% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-13 @ 1182.8400 → trough 2026-08-14 @ 1173.7300 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13] body_frac=0.564 wick_frac=0.436; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=26.5601,upperW=2.6100,lowerW=3.8800,range=33.0500 | 2026-08-04:RED:body=7.3700,upperW=11.8000,lowerW=0.2800,range=19.4501 | 2026-08-05:RED:body=4.9200,upperW=4.3900,lowerW=12.4099,range=21.7200 | 2026-08-06:RED:body=6.2699,upperW=4.0601,lowerW=9.0200,range=19.3500 | 2026-08-07:GREEN:body=3.8600,upperW=7.1300,lowerW=3.8800,range=14.8700 | 2026-08-10:GREEN:body=1.5801,upperW=8.5800,lowerW=3.8199,range=13.9800 | 2026-08-11:GREEN:body=18.1899,upperW=3.9601,lowerW=2.2001,range=24.3501 | 2026-08-12:GREEN:body=3.9100,upperW=1.7300,lowerW=11.9200,range=17.5601 | 2026-08-13:GREEN:body=17.0699,upperW=3.9000,lowerW=1.4600,range=22.4299 | 2026-08-14:RED:body=5.2700,upperW=1.0000,lowerW=5.2300,range=11.5000 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-04,2026-08-05,2026-08-06,2026-08-14] body_frac=0.331 wick_frac=0.669; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=26.5601,upperW=2.6100,lowerW=3.8800,range=33.0500 | 2026-08-04:RED:body=7.3700,upperW=11.8000,lowerW=0.2800,range=19.4501 | 2026-08-05:RED:body=4.9200,upperW=4.3900,lowerW=12.4099,range=21.7200 | 2026-08-06:RED:body=6.2699,upperW=4.0601,lowerW=9.0200,range=19.3500 | 2026-08-07:GREEN:body=3.8600,upperW=7.1300,lowerW=3.8800,range=14.8700 | 2026-08-10:GREEN:body=1.5801,upperW=8.5800,lowerW=3.8199,range=13.9800 | 2026-08-11:GREEN:body=18.1899,upperW=3.9601,lowerW=2.2001,range=24.3501 | 2026-08-12:GREEN:body=3.9100,upperW=1.7300,lowerW=11.9200,range=17.5601 | 2026-08-13:GREEN:body=17.0699,upperW=3.9000,lowerW=1.4600,range=22.4299 | 2026-08-14:RED:body=5.2700,upperW=1.0000,lowerW=5.2300,range=11.5000 | **GOOD** |
+| `B01_eps_surprise` | 9.6 | **GOOD** |
+| `B02_revenue_surprise` | 5.3 | **GOOD** |
+| `B03_sales` | 27627.0 | **NEUTRAL** |
+| `B04_income` | 6576.0 | **GOOD** |
+| `B05_profit_margin` | 23.8 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 1324.69 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=1324.69 vs prior_export=1324.69 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.35 | **GOOD** |
+| `B10_insider_transactions` | -0.35 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=-0.35 vs prior=-0.35 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.37 | **GOOD** |
+| `B13_short_float` | 1.51 | **NEUTRAL** |
 | `B14_earnings_date` | 7/15/2026 8:30:00 AM | **NEUTRAL** |
 
-### BBDC  ·  score **+12**  ·  Asset Management
-price=9.449999809265137  mcap=$0.99B  ADV=738,370
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-06,2026-08-07,2026-08-10,2026-08-13,2026-08-17,2026-08-18]  RED=[2026-08-05,2026-08-11,2026-08-12,2026-08-14]
+### KBR  ·  score **+12**  ·  Engineering & Construction
+price=38.369998931884766  mcap=$4.78B  ADV=1,801,170
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-06,2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-14]  RED=[2026-08-05,2026-08-11]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=67.60 on 2026-08-18; prev RSI=66.49 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 66.49@2026-08-17 → 67.60@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 66.49@2026-08-17 → 67.60@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 66.49@2026-08-17 → 67.60@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=3.515 (= sum GREEN bodies / sum RED bodies); GREEN_sum=1.1600 dates=[2026-08-06,2026-08-07,2026-08-10,2026-08-13,2026-08-17,2026-08-18]; RED_sum=0.3300 dates=[2026-08-05,2026-08-11,2026-08-12,2026-08-14]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=8.5800,C=8.4200,body=-0.1600 | 2026-08-06:GREEN:O=8.5100,C=9.2000,body=+0.6900 | 2026-08-07:GREEN:O=9.2000,C=9.2200,body=+0.0200 | 2026-08-10:GREEN:O=9.2400,C=9.3600,body=+0.1200 | 2026-08-11:RED:O=9.4000,C=9.3100,body=-0.0900 | 2026-08-12:RED:O=9.3000,C=9.2300,body=-0.0700 | 2026-08-13:GREEN:O=9.2900,C=9.4300,body=+0.1400 | 2026-08-14:RED:O=9.3200,C=9.3100,body=-0.0100 | 2026-08-17:GREEN:O=9.3500,C=9.3900,body=+0.0400 | 2026-08-18:GREEN:O=9.3000,C=9.4500,body=+0.1500 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=3.821 if finite else n/a; GREEN_vol_sum=7840154 dates=[2026-08-06,2026-08-07,2026-08-10,2026-08-13,2026-08-17,2026-08-18]; RED_vol_sum=2052000 dates=[2026-08-05,2026-08-11,2026-08-12,2026-08-14]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=646800 | 2026-08-06:GREEN:vol=1803500 | 2026-08-07:GREEN:vol=1471800 | 2026-08-10:GREEN:vol=1411400 | 2026-08-11:RED:vol=438100 | 2026-08-12:RED:vol=373500 | 2026-08-13:GREEN:vol=1041900 | 2026-08-14:RED:vol=593600 | 2026-08-17:GREEN:vol=988600 | 2026-08-18:GREEN:vol=1122954 | **GOOD** |
-| `A07_rvol` | RVOL=1.551 on 2026-08-18: today_vol=1122954 / avg20=724090 (avg window 2026-07-16→2026-08-17, excludes today) | **GOOD** |
-| `A08_bollinger_position` | pos=0.654 on 2026-08-18 (price=9.4500, mid=8.7955, upper=9.7956, lower=7.7954; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=9.4500 vs SMA50=8.5516 dist=+10.51% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=8.7955 SMA50=8.5516 SMA80=8.5406 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-08-18 @ 9.4500 → trough 2026-08-18 @ 9.4500 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-06,2026-08-07,2026-08-10,2026-08-13,2026-08-17,2026-08-18] body_frac=0.705 wick_frac=0.295; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.1600,upperW=0.0000,lowerW=0.0300,range=0.1900 | 2026-08-06:GREEN:body=0.6900,upperW=0.0100,lowerW=0.0000,range=0.7000 | 2026-08-07:GREEN:body=0.0200,upperW=0.0800,lowerW=0.0700,range=0.1700 | 2026-08-10:GREEN:body=0.1200,upperW=0.0400,lowerW=0.1100,range=0.2700 | 2026-08-11:RED:body=0.0900,upperW=0.0000,lowerW=0.0300,range=0.1200 | 2026-08-12:RED:body=0.0700,upperW=0.0100,lowerW=0.0600,range=0.1400 | 2026-08-13:GREEN:body=0.1400,upperW=0.0200,lowerW=0.0100,range=0.1700 | 2026-08-14:RED:body=0.0100,upperW=0.1000,lowerW=0.0500,range=0.1600 | 2026-08-17:GREEN:body=0.0400,upperW=0.0600,lowerW=0.0900,range=0.1900 | 2026-08-18:GREEN:body=0.1500,upperW=0.0650,lowerW=-0.0700,range=0.1450 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-11,2026-08-12,2026-08-14] body_frac=0.541 wick_frac=0.459; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.1600,upperW=0.0000,lowerW=0.0300,range=0.1900 | 2026-08-06:GREEN:body=0.6900,upperW=0.0100,lowerW=0.0000,range=0.7000 | 2026-08-07:GREEN:body=0.0200,upperW=0.0800,lowerW=0.0700,range=0.1700 | 2026-08-10:GREEN:body=0.1200,upperW=0.0400,lowerW=0.1100,range=0.2700 | 2026-08-11:RED:body=0.0900,upperW=0.0000,lowerW=0.0300,range=0.1200 | 2026-08-12:RED:body=0.0700,upperW=0.0100,lowerW=0.0600,range=0.1400 | 2026-08-13:GREEN:body=0.1400,upperW=0.0200,lowerW=0.0100,range=0.1700 | 2026-08-14:RED:body=0.0100,upperW=0.1000,lowerW=0.0500,range=0.1600 | 2026-08-17:GREEN:body=0.0400,upperW=0.0600,lowerW=0.0900,range=0.1900 | 2026-08-18:GREEN:body=0.1500,upperW=0.0650,lowerW=-0.0700,range=0.1450 | **BAD** |
-| `B01_eps_surprise` | 12.68 | **GOOD** |
-| `B02_revenue_surprise` | 8.49 | **GOOD** |
-| `B03_sales` | 264.4 | **NEUTRAL** |
-| `B04_income` | 87.11 | **GOOD** |
-| `B05_profit_margin` | 32.95 | **GOOD** |
+| `A01_rsi_value` | RSI=58.62 on 2026-08-14; prev RSI=57.77 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 57.77@2026-08-13 → 58.62@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 57.77@2026-08-13 → 58.62@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 57.77@2026-08-13 → 58.62@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=2.029 (= sum GREEN bodies / sum RED bodies); GREEN_sum=4.8500 dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-14]; RED_sum=2.3900 dates=[2026-08-05,2026-08-11]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=36.6700,C=37.0900,body=+0.4200 | 2026-08-04:GREEN:O=36.9500,C=37.8300,body=+0.8800 | 2026-08-05:RED:O=38.0000,C=36.3300,body=-1.6700 | 2026-08-06:GREEN:O=36.5900,C=37.5700,body=+0.9800 | 2026-08-07:GREEN:O=37.5000,C=38.0400,body=+0.5400 | 2026-08-10:GREEN:O=37.7500,C=38.2900,body=+0.5400 | 2026-08-11:RED:O=38.2800,C=37.5600,body=-0.7200 | 2026-08-12:GREEN:O=36.8300,C=38.1000,body=+1.2700 | 2026-08-13:GREEN:O=38.0500,C=38.1600,body=+0.1100 | 2026-08-14:GREEN:O=38.2600,C=38.3700,body=+0.1100 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=3.860 if finite else n/a; GREEN_vol_sum=10134500 dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-14]; RED_vol_sum=2625600 dates=[2026-08-05,2026-08-11]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=1645200 | 2026-08-04:GREEN:vol=1171700 | 2026-08-05:RED:vol=1364000 | 2026-08-06:GREEN:vol=1768900 | 2026-08-07:GREEN:vol=1096200 | 2026-08-10:GREEN:vol=1103800 | 2026-08-11:RED:vol=1261600 | 2026-08-12:GREEN:vol=1157800 | 2026-08-13:GREEN:vol=880100 | 2026-08-14:GREEN:vol=1310800 | **GOOD** |
+| `A07_rvol` | RVOL=0.820 on 2026-08-14: today_vol=1310800 / avg20=1598935 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.622 on 2026-08-14 (price=38.3700, mid=36.8470, upper=39.2973, lower=34.3967; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=38.3700 vs SMA50=35.6599 dist=+7.60% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=36.8470 SMA50=35.6599 SMA80=35.0819 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-14 @ 38.3700 → trough 2026-08-14 @ 38.3700 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-14] body_frac=0.563 wick_frac=0.437; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.4200,upperW=0.2900,lowerW=0.1100,range=0.8200 | 2026-08-04:GREEN:body=0.8800,upperW=0.2100,lowerW=0.4300,range=1.5200 | 2026-08-05:RED:body=1.6700,upperW=0.1400,lowerW=0.1100,range=1.9200 | 2026-08-06:GREEN:body=0.9800,upperW=0.3400,lowerW=0.0400,range=1.3600 | 2026-08-07:GREEN:body=0.5400,upperW=0.0500,lowerW=0.2300,range=0.8200 | 2026-08-10:GREEN:body=0.5400,upperW=0.2800,lowerW=0.0000,range=0.8200 | 2026-08-11:RED:body=0.7200,upperW=0.0000,lowerW=0.1800,range=0.9000 | 2026-08-12:GREEN:body=1.2700,upperW=0.0400,lowerW=0.1300,range=1.4400 | 2026-08-13:GREEN:body=0.1100,upperW=0.3400,lowerW=0.7300,range=1.1800 | 2026-08-14:GREEN:body=0.1100,upperW=0.1400,lowerW=0.4100,range=0.6600 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-11] body_frac=0.848 wick_frac=0.152; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.4200,upperW=0.2900,lowerW=0.1100,range=0.8200 | 2026-08-04:GREEN:body=0.8800,upperW=0.2100,lowerW=0.4300,range=1.5200 | 2026-08-05:RED:body=1.6700,upperW=0.1400,lowerW=0.1100,range=1.9200 | 2026-08-06:GREEN:body=0.9800,upperW=0.3400,lowerW=0.0400,range=1.3600 | 2026-08-07:GREEN:body=0.5400,upperW=0.0500,lowerW=0.2300,range=0.8200 | 2026-08-10:GREEN:body=0.5400,upperW=0.2800,lowerW=0.0000,range=0.8200 | 2026-08-11:RED:body=0.7200,upperW=0.0000,lowerW=0.1800,range=0.9000 | 2026-08-12:GREEN:body=1.2700,upperW=0.0400,lowerW=0.1300,range=1.4400 | 2026-08-13:GREEN:body=0.1100,upperW=0.3400,lowerW=0.7300,range=1.1800 | 2026-08-14:GREEN:body=0.1100,upperW=0.1400,lowerW=0.4100,range=0.6600 | **BAD** |
+| `B01_eps_surprise` | 10.44 | **GOOD** |
+| `B02_revenue_surprise` | 5.97 | **GOOD** |
+| `B03_sales` | 7723.0 | **NEUTRAL** |
+| `B04_income` | 422.0 | **GOOD** |
+| `B05_profit_margin` | 5.46 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 9.96 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=9.96 vs prior_export=9.96 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.83 | **GOOD** |
-| `B10_insider_transactions` | 1.56 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=1.56 vs prior=1.56 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | nan | **NEUTRAL** |
-| `B13_short_float` | 2.87 | **NEUTRAL** |
-| `B14_earnings_date` | 8/5/2026 4:30:00 PM | **NEUTRAL** |
+| `B07_target_price` | 45.83 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=45.83 vs prior_export=45.83 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 2.0 | **GOOD** |
+| `B10_insider_transactions` | 1.55 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=1.55 vs prior=1.55 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.14 | **GOOD** |
+| `B13_short_float` | 7.22 | **NEUTRAL** |
+| `B14_earnings_date` | 7/30/2026 8:30:00 AM | **NEUTRAL** |
+
+### PHR  ·  score **+12**  ·  Health Information Services
+price=12.279999732971191  mcap=$0.72B  ADV=1,151,880
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-12,2026-08-13]  RED=[2026-08-07,2026-08-11,2026-08-14]
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=63.01 on 2026-08-14; prev RSI=68.71 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 68.71@2026-08-13 → 63.01@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 68.71@2026-08-13 → 63.01@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 68.71@2026-08-13 → 63.01@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=2.481 (= sum GREEN bodies / sum RED bodies); GREEN_sum=1.2900 dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-12,2026-08-13]; RED_sum=0.5200 dates=[2026-08-07,2026-08-11,2026-08-14]; DOJI=[2026-08-05]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=10.9900,C=11.3000,body=+0.3100 | 2026-08-04:GREEN:O=11.0800,C=11.4400,body=+0.3600 | 2026-08-05:DOJI:O=11.4900,C=11.4900,body=+0.0000 | 2026-08-06:GREEN:O=11.3200,C=11.4200,body=+0.1000 | 2026-08-07:RED:O=12.6000,C=12.5100,body=-0.0900 | 2026-08-10:GREEN:O=12.3500,C=12.4400,body=+0.0900 | 2026-08-11:RED:O=12.2900,C=12.2700,body=-0.0200 | 2026-08-12:GREEN:O=12.1100,C=12.2600,body=+0.1500 | 2026-08-13:GREEN:O=12.3400,C=12.6200,body=+0.2800 | 2026-08-14:RED:O=12.6900,C=12.2800,body=-0.4100 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.680 if finite else n/a; GREEN_vol_sum=4407500 dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-12,2026-08-13]; RED_vol_sum=2624200 dates=[2026-08-07,2026-08-11,2026-08-14]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=1035400 | 2026-08-04:GREEN:vol=784200 | 2026-08-05:DOJI:vol=627200 | 2026-08-06:GREEN:vol=788700 | 2026-08-07:RED:vol=1126100 | 2026-08-10:GREEN:vol=543500 | 2026-08-11:RED:vol=747800 | 2026-08-12:GREEN:vol=450600 | 2026-08-13:GREEN:vol=491500 | 2026-08-14:RED:vol=436700 | **GOOD** |
+| `A07_rvol` | RVOL=0.606 on 2026-08-14: today_vol=436700 / avg20=720680 (avg window 2026-07-14→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.579 on 2026-08-14 (price=12.2800, mid=11.3165, upper=12.9801, lower=9.6529; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=12.2800 vs SMA50=10.4910 dist=+17.05% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=11.3165 SMA50=10.4910 SMA80=10.0557 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-2.69% inside window 2026-06-11→2026-08-14 (42 sessions): peak 2026-08-13 @ 12.6200 → trough 2026-08-14 @ 12.2800 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-12,2026-08-13] body_frac=0.576 wick_frac=0.424; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.3100,upperW=0.0900,lowerW=0.0450,range=0.4450 | 2026-08-04:GREEN:body=0.3600,upperW=0.0550,lowerW=0.0000,range=0.4150 | 2026-08-05:DOJI:body=0.0000,upperW=0.0300,lowerW=0.2800,range=0.3100 | 2026-08-06:GREEN:body=0.1000,upperW=0.0750,lowerW=0.1060,range=0.2810 | 2026-08-07:RED:body=0.0900,upperW=0.4100,lowerW=0.1050,range=0.6050 | 2026-08-10:GREEN:body=0.0900,upperW=0.0800,lowerW=0.1200,range=0.2900 | 2026-08-11:RED:body=0.0200,upperW=0.3550,lowerW=0.0800,range=0.4550 | 2026-08-12:GREEN:body=0.1500,upperW=0.0100,lowerW=0.2000,range=0.3600 | 2026-08-13:GREEN:body=0.2800,upperW=0.0500,lowerW=0.1200,range=0.4500 | 2026-08-14:RED:body=0.4100,upperW=0.0000,lowerW=0.0200,range=0.4300 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-07,2026-08-11,2026-08-14] body_frac=0.349 wick_frac=0.651; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.3100,upperW=0.0900,lowerW=0.0450,range=0.4450 | 2026-08-04:GREEN:body=0.3600,upperW=0.0550,lowerW=0.0000,range=0.4150 | 2026-08-05:DOJI:body=0.0000,upperW=0.0300,lowerW=0.2800,range=0.3100 | 2026-08-06:GREEN:body=0.1000,upperW=0.0750,lowerW=0.1060,range=0.2810 | 2026-08-07:RED:body=0.0900,upperW=0.4100,lowerW=0.1050,range=0.6050 | 2026-08-10:GREEN:body=0.0900,upperW=0.0800,lowerW=0.1200,range=0.2900 | 2026-08-11:RED:body=0.0200,upperW=0.3550,lowerW=0.0800,range=0.4550 | 2026-08-12:GREEN:body=0.1500,upperW=0.0100,lowerW=0.2000,range=0.3600 | 2026-08-13:GREEN:body=0.2800,upperW=0.0500,lowerW=0.1200,range=0.4500 | 2026-08-14:RED:body=0.4100,upperW=0.0000,lowerW=0.0200,range=0.4300 | **GOOD** |
+| `B01_eps_surprise` | 338.6 | **GOOD** |
+| `B02_revenue_surprise` | 0.66 | **GOOD** |
+| `B03_sales` | 495.59 | **NEUTRAL** |
+| `B04_income` | 9.18 | **GOOD** |
+| `B05_profit_margin` | 1.85 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 13.94 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=13.94 vs prior_export=13.94 on finviz_2026-08-17) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.89 | **GOOD** |
+| `B10_insider_transactions` | 29.27 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=29.27 vs prior=29.27 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | -12.26 | **BAD** |
+| `B13_short_float` | 5.89 | **NEUTRAL** |
+| `B14_earnings_date` | 9/2/2026 4:30:00 PM | **NEUTRAL** |
 
 ### WTTR  ·  score **+12**  ·  Oil & Gas Equipment & Services
-price=21.174999237060547  mcap=$2.74B  ADV=1,830,100
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-05,2026-08-10,2026-08-11,2026-08-14,2026-08-17]  RED=[2026-08-06,2026-08-07,2026-08-12,2026-08-13,2026-08-18]
+price=20.860000610351562  mcap=$2.74B  ADV=1,830,100
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-14]  RED=[2026-08-06,2026-08-07,2026-08-12,2026-08-13]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=57.38 on 2026-08-18; prev RSI=58.41 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 58.41@2026-08-17 → 57.38@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 58.41@2026-08-17 → 57.38@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 58.41@2026-08-17 → 57.38@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=1.433 (= sum GREEN bodies / sum RED bodies); GREEN_sum=3.2124 dates=[2026-08-05,2026-08-10,2026-08-11,2026-08-14,2026-08-17]; RED_sum=2.2418 dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-13,2026-08-18]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:GREEN:O=19.9324,C=22.1847,body=+2.2524 | 2026-08-06:RED:O=21.5868,C=20.6300,body=-0.9568 | 2026-08-07:RED:O=20.5200,C=20.2300,body=-0.2900 | 2026-08-10:GREEN:O=20.6100,C=20.8900,body=+0.2800 | 2026-08-11:GREEN:O=21.0300,C=21.1100,body=+0.0800 | 2026-08-12:RED:O=21.2300,C=21.2100,body=-0.0200 | 2026-08-13:RED:O=21.0700,C=20.3700,body=-0.7000 | 2026-08-14:GREEN:O=20.5200,C=20.8600,body=+0.3400 | 2026-08-17:GREEN:O=21.0600,C=21.3200,body=+0.2600 | 2026-08-18:RED:O=21.4500,C=21.1750,body=-0.2750 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.575 if finite else n/a; GREEN_vol_sum=12008400 dates=[2026-08-05,2026-08-10,2026-08-11,2026-08-14,2026-08-17]; RED_vol_sum=7624045 dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-13,2026-08-18]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:vol=6975500 | 2026-08-06:RED:vol=2875500 | 2026-08-07:RED:vol=1759400 | 2026-08-10:GREEN:vol=1714300 | 2026-08-11:GREEN:vol=1582100 | 2026-08-12:RED:vol=1187200 | 2026-08-13:RED:vol=1273900 | 2026-08-14:GREEN:vol=694900 | 2026-08-17:GREEN:vol=1041600 | 2026-08-18:RED:vol=528045 | **GOOD** |
-| `A07_rvol` | RVOL=0.273 on 2026-08-18: today_vol=528045 / avg20=1934985 (avg window 2026-07-17→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=0.403 on 2026-08-18 (price=21.1750, mid=20.0904, upper=22.7833, lower=17.3975; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=21.1750 vs SMA50=19.3466 dist=+9.45% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=20.0904 SMA50=19.3466 SMA80=18.7927 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-8.81% inside window 2026-06-16→2026-08-18 (42 sessions): peak 2026-08-05 @ 22.1847 → trough 2026-08-07 @ 20.2300 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-05,2026-08-10,2026-08-11,2026-08-14,2026-08-17] body_frac=0.523 wick_frac=0.477; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:body=2.2524,upperW=0.2890,lowerW=0.7973,range=3.3387 | 2026-08-06:RED:body=0.9568,upperW=0.0000,lowerW=0.2392,range=1.1959 | 2026-08-07:RED:body=0.2900,upperW=1.0840,lowerW=0.0850,range=1.4590 | 2026-08-10:GREEN:body=0.2800,upperW=0.3250,lowerW=0.0000,range=0.6050 | 2026-08-11:GREEN:body=0.0800,upperW=0.7180,lowerW=0.1450,range=0.9430 | 2026-08-12:RED:body=0.0200,upperW=0.2200,lowerW=0.1700,range=0.4100 | 2026-08-13:RED:body=0.7000,upperW=0.2200,lowerW=0.0300,range=0.9500 | 2026-08-14:GREEN:body=0.3400,upperW=0.2400,lowerW=0.1100,range=0.6900 | 2026-08-17:GREEN:body=0.2600,upperW=0.0500,lowerW=0.2500,range=0.5600 | 2026-08-18:RED:body=0.2750,upperW=0.1600,lowerW=0.1426,range=0.5776 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-13,2026-08-18] body_frac=0.488 wick_frac=0.512; window=2026-08-05→2026-08-18; sessions: 2026-08-05:GREEN:body=2.2524,upperW=0.2890,lowerW=0.7973,range=3.3387 | 2026-08-06:RED:body=0.9568,upperW=0.0000,lowerW=0.2392,range=1.1959 | 2026-08-07:RED:body=0.2900,upperW=1.0840,lowerW=0.0850,range=1.4590 | 2026-08-10:GREEN:body=0.2800,upperW=0.3250,lowerW=0.0000,range=0.6050 | 2026-08-11:GREEN:body=0.0800,upperW=0.7180,lowerW=0.1450,range=0.9430 | 2026-08-12:RED:body=0.0200,upperW=0.2200,lowerW=0.1700,range=0.4100 | 2026-08-13:RED:body=0.7000,upperW=0.2200,lowerW=0.0300,range=0.9500 | 2026-08-14:GREEN:body=0.3400,upperW=0.2400,lowerW=0.1100,range=0.6900 | 2026-08-17:GREEN:body=0.2600,upperW=0.0500,lowerW=0.2500,range=0.5600 | 2026-08-18:RED:body=0.2750,upperW=0.1600,lowerW=0.1426,range=0.5776 | **GOOD** |
+| `A01_rsi_value` | RSI=56.09 on 2026-08-14; prev RSI=53.53 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 53.53@2026-08-13 → 56.09@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 53.53@2026-08-13 → 56.09@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 53.53@2026-08-13 → 56.09@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=1.805 (= sum GREEN bodies / sum RED bodies); GREEN_sum=3.5503 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-14]; RED_sum=1.9668 dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-13]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=18.1385,C=18.3178,body=+0.1794 | 2026-08-04:GREEN:O=18.0189,C=18.4374,body=+0.4186 | 2026-08-05:GREEN:O=19.9324,C=22.1847,body=+2.2524 | 2026-08-06:RED:O=21.5868,C=20.6300,body=-0.9568 | 2026-08-07:RED:O=20.5200,C=20.2300,body=-0.2900 | 2026-08-10:GREEN:O=20.6100,C=20.8900,body=+0.2800 | 2026-08-11:GREEN:O=21.0300,C=21.1100,body=+0.0800 | 2026-08-12:RED:O=21.2300,C=21.2100,body=-0.0200 | 2026-08-13:RED:O=21.0700,C=20.3700,body=-0.7000 | 2026-08-14:GREEN:O=20.5200,C=20.8600,body=+0.3400 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=2.118 if finite else n/a; GREEN_vol_sum=15030000 dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-14]; RED_vol_sum=7096000 dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-13]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=947400 | 2026-08-04:GREEN:vol=3115800 | 2026-08-05:GREEN:vol=6975500 | 2026-08-06:RED:vol=2875500 | 2026-08-07:RED:vol=1759400 | 2026-08-10:GREEN:vol=1714300 | 2026-08-11:GREEN:vol=1582100 | 2026-08-12:RED:vol=1187200 | 2026-08-13:RED:vol=1273900 | 2026-08-14:GREEN:vol=694900 | **GOOD** |
+| `A07_rvol` | RVOL=0.350 on 2026-08-14: today_vol=694900 / avg20=1984050 (avg window 2026-07-15→2026-08-13, excludes today) | **BAD** |
+| `A08_bollinger_position` | pos=0.346 on 2026-08-14 (price=20.8600, mid=19.9674, upper=22.5460, lower=17.3887; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=20.8600 vs SMA50=19.2509 dist=+8.36% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-14: SMA20=19.9674 SMA50=19.2509 SMA80=18.6398 | **GOOD** |
+| `A11_max_downside_2m` | maxDD=-8.81% inside window 2026-06-12→2026-08-14 (42 sessions): peak 2026-08-05 @ 22.1847 → trough 2026-08-07 @ 20.2300 | **GOOD** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-05,2026-08-10,2026-08-11,2026-08-14] body_frac=0.503 wick_frac=0.497; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.1794,upperW=0.3488,lowerW=0.3488,range=0.8770 | 2026-08-04:GREEN:body=0.4186,upperW=0.1794,lowerW=0.0000,range=0.5980 | 2026-08-05:GREEN:body=2.2524,upperW=0.2890,lowerW=0.7973,range=3.3387 | 2026-08-06:RED:body=0.9568,upperW=0.0000,lowerW=0.2392,range=1.1959 | 2026-08-07:RED:body=0.2900,upperW=1.0840,lowerW=0.0850,range=1.4590 | 2026-08-10:GREEN:body=0.2800,upperW=0.3250,lowerW=0.0000,range=0.6050 | 2026-08-11:GREEN:body=0.0800,upperW=0.7180,lowerW=0.1450,range=0.9430 | 2026-08-12:RED:body=0.0200,upperW=0.2200,lowerW=0.1700,range=0.4100 | 2026-08-13:RED:body=0.7000,upperW=0.2200,lowerW=0.0300,range=0.9500 | 2026-08-14:GREEN:body=0.3400,upperW=0.2400,lowerW=0.1100,range=0.6900 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-06,2026-08-07,2026-08-12,2026-08-13] body_frac=0.490 wick_frac=0.510; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.1794,upperW=0.3488,lowerW=0.3488,range=0.8770 | 2026-08-04:GREEN:body=0.4186,upperW=0.1794,lowerW=0.0000,range=0.5980 | 2026-08-05:GREEN:body=2.2524,upperW=0.2890,lowerW=0.7973,range=3.3387 | 2026-08-06:RED:body=0.9568,upperW=0.0000,lowerW=0.2392,range=1.1959 | 2026-08-07:RED:body=0.2900,upperW=1.0840,lowerW=0.0850,range=1.4590 | 2026-08-10:GREEN:body=0.2800,upperW=0.3250,lowerW=0.0000,range=0.6050 | 2026-08-11:GREEN:body=0.0800,upperW=0.7180,lowerW=0.1450,range=0.9430 | 2026-08-12:RED:body=0.0200,upperW=0.2200,lowerW=0.1700,range=0.4100 | 2026-08-13:RED:body=0.7000,upperW=0.2200,lowerW=0.0300,range=0.9500 | 2026-08-14:GREEN:body=0.3400,upperW=0.2400,lowerW=0.1100,range=0.6900 | **GOOD** |
 | `B01_eps_surprise` | 78.15 | **GOOD** |
 | `B02_revenue_surprise` | 6.02 | **GOOD** |
 | `B03_sales` | 1430.51 | **NEUTRAL** |
@@ -341,209 +686,39 @@ body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-05,2026-08-10,2026-08-11,
 | `B13_short_float` | 4.63 | **NEUTRAL** |
 | `B14_earnings_date` | 8/4/2026 4:30:00 PM | **NEUTRAL** |
 
-### RHI  ·  score **+12**  ·  Staffing & Employment Services
-price=43.845001220703125  mcap=$4.45B  ADV=2,288,780
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-06,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-18]  RED=[2026-08-05,2026-08-14,2026-08-17]
+### BKR  ·  score **+12**  ·  Oil & Gas Equipment & Services
+price=64.81999969482422  mcap=$63.96B  ADV=8,641,470
+body window: `2026-08-03→2026-08-14`  GREEN=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-11,2026-08-14]  RED=[2026-08-05,2026-08-07,2026-08-12,2026-08-13]
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=63.32 on 2026-08-18; prev RSI=60.18 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 60.18@2026-08-17 → 63.32@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 60.18@2026-08-17 → 63.32@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 60.18@2026-08-17 → 63.32@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=3.266 (= sum GREEN bodies / sum RED bodies); GREEN_sum=6.0750 dates=[2026-08-06,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-18]; RED_sum=1.8600 dates=[2026-08-05,2026-08-14,2026-08-17]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=41.0600,C=40.5500,body=-0.5100 | 2026-08-06:GREEN:O=40.4000,C=40.6800,body=+0.2800 | 2026-08-07:GREEN:O=40.9200,C=42.7400,body=+1.8200 | 2026-08-10:GREEN:O=41.8900,C=42.6800,body=+0.7900 | 2026-08-11:GREEN:O=42.0200,C=42.1400,body=+0.1200 | 2026-08-12:GREEN:O=41.3900,C=41.5500,body=+0.1600 | 2026-08-13:GREEN:O=41.8400,C=43.7800,body=+1.9400 | 2026-08-14:RED:O=44.3500,C=43.2200,body=-1.1300 | 2026-08-17:RED:O=42.6900,C=42.4700,body=-0.2200 | 2026-08-18:GREEN:O=42.8800,C=43.8450,body=+0.9650 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.887 if finite else n/a; GREEN_vol_sum=9596107 dates=[2026-08-06,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-18]; RED_vol_sum=5085300 dates=[2026-08-05,2026-08-14,2026-08-17]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=1249100 | 2026-08-06:GREEN:vol=1784200 | 2026-08-07:GREEN:vol=1971500 | 2026-08-10:GREEN:vol=1119900 | 2026-08-11:GREEN:vol=1137600 | 2026-08-12:GREEN:vol=939400 | 2026-08-13:GREEN:vol=1923700 | 2026-08-14:RED:vol=1817100 | 2026-08-17:RED:vol=2019100 | 2026-08-18:GREEN:vol=719807 | **GOOD** |
-| `A07_rvol` | RVOL=0.301 on 2026-08-18: today_vol=719807 / avg20=2388680 (avg window 2026-07-16→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=0.662 on 2026-08-18 (price=43.8450, mid=40.8373, upper=45.3774, lower=36.2971; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=43.8450 vs SMA50=35.8123 dist=+22.43% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=40.8373 SMA50=35.8123 SMA80=32.3707 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-08-18 @ 43.8450 → trough 2026-08-18 @ 43.8450 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-06,2026-08-07,2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-18] body_frac=0.512 wick_frac=0.488; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.5100,upperW=0.1100,lowerW=0.5800,range=1.2000 | 2026-08-06:GREEN:body=0.2800,upperW=0.6800,lowerW=0.4000,range=1.3600 | 2026-08-07:GREEN:body=1.8200,upperW=1.4400,lowerW=0.3500,range=3.6100 | 2026-08-10:GREEN:body=0.7900,upperW=0.0100,lowerW=0.1700,range=0.9700 | 2026-08-11:GREEN:body=0.1200,upperW=0.7800,lowerW=0.4000,range=1.3000 | 2026-08-12:GREEN:body=0.1600,upperW=0.3300,lowerW=0.5700,range=1.0600 | 2026-08-13:GREEN:body=1.9400,upperW=0.0800,lowerW=0.2700,range=2.2900 | 2026-08-14:RED:body=1.1300,upperW=0.1200,lowerW=0.5800,range=1.8300 | 2026-08-17:RED:body=0.2200,upperW=0.3400,lowerW=0.2900,range=0.8500 | 2026-08-18:GREEN:body=0.9650,upperW=0.1150,lowerW=0.1900,range=1.2700 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-14,2026-08-17] body_frac=0.479 wick_frac=0.521; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.5100,upperW=0.1100,lowerW=0.5800,range=1.2000 | 2026-08-06:GREEN:body=0.2800,upperW=0.6800,lowerW=0.4000,range=1.3600 | 2026-08-07:GREEN:body=1.8200,upperW=1.4400,lowerW=0.3500,range=3.6100 | 2026-08-10:GREEN:body=0.7900,upperW=0.0100,lowerW=0.1700,range=0.9700 | 2026-08-11:GREEN:body=0.1200,upperW=0.7800,lowerW=0.4000,range=1.3000 | 2026-08-12:GREEN:body=0.1600,upperW=0.3300,lowerW=0.5700,range=1.0600 | 2026-08-13:GREEN:body=1.9400,upperW=0.0800,lowerW=0.2700,range=2.2900 | 2026-08-14:RED:body=1.1300,upperW=0.1200,lowerW=0.5800,range=1.8300 | 2026-08-17:RED:body=0.2200,upperW=0.3400,lowerW=0.2900,range=0.8500 | 2026-08-18:GREEN:body=0.9650,upperW=0.1150,lowerW=0.1900,range=1.2700 | **GOOD** |
-| `B01_eps_surprise` | 0.93 | **GOOD** |
-| `B02_revenue_surprise` | 0.91 | **GOOD** |
-| `B03_sales` | 5293.4 | **NEUTRAL** |
-| `B04_income` | 114.78 | **GOOD** |
-| `B05_profit_margin` | 2.17 | **GOOD** |
+| `A01_rsi_value` | RSI=65.90 on 2026-08-14; prev RSI=62.15 on 2026-08-13 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 62.15@2026-08-13 → 65.90@2026-08-14 vs level 30 | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 62.15@2026-08-13 → 65.90@2026-08-14 vs level 50 | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 62.15@2026-08-13 → 65.90@2026-08-14 vs level 70 | **NEUTRAL** |
+| `A05_body_red_green_ratio` | ratio=2.589 (= sum GREEN bodies / sum RED bodies); GREEN_sum=6.3609 dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-11,2026-08-14]; RED_sum=2.4568 dates=[2026-08-05,2026-08-07,2026-08-12,2026-08-13]; DOJI=[none]; window=2026-08-03→2026-08-14 (10 sessions); sessions: 2026-08-03:GREEN:O=59.8000,C=60.5871,body=+0.7871 | 2026-08-04:GREEN:O=60.2185,C=61.5037,body=+1.2853 | 2026-08-05:RED:O=62.3108,C=61.4440,body=-0.8668 | 2026-08-06:GREEN:O=62.1115,C=62.5200,body=+0.4085 | 2026-08-07:RED:O=62.0900,C=61.5500,body=-0.5400 | 2026-08-10:GREEN:O=62.0500,C=64.0700,body=+2.0200 | 2026-08-11:GREEN:O=64.2300,C=64.8100,body=+0.5800 | 2026-08-12:RED:O=64.8100,C=64.2800,body=-0.5300 | 2026-08-13:RED:O=63.9600,C=63.4400,body=-0.5200 | 2026-08-14:GREEN:O=63.5400,C=64.8200,body=+1.2800 | **GOOD** |
+| `A06_volume_red_green_ratio` | ratio=1.283 if finite else n/a; GREEN_vol_sum=36538900 dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-11,2026-08-14]; RED_vol_sum=28483700 dates=[2026-08-05,2026-08-07,2026-08-12,2026-08-13]; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:vol=6714000 | 2026-08-04:GREEN:vol=7363400 | 2026-08-05:RED:vol=5791700 | 2026-08-06:GREEN:vol=4996400 | 2026-08-07:RED:vol=7322500 | 2026-08-10:GREEN:vol=5273500 | 2026-08-11:GREEN:vol=5499100 | 2026-08-12:RED:vol=7498700 | 2026-08-13:RED:vol=7870800 | 2026-08-14:GREEN:vol=6692500 | **GOOD** |
+| `A07_rvol` | RVOL=0.745 on 2026-08-14: today_vol=6692500 / avg20=8977230 (avg window 2026-07-17→2026-08-13, excludes today) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.713 on 2026-08-14 (price=64.8200, mid=60.3265, upper=66.6327, lower=54.0203; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-08-14: price=64.8200 vs SMA50=59.2125 dist=+9.47% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=60.33_50=59.21_80=61.58 on 2026-08-14: SMA20=60.3265 SMA50=59.2125 SMA80=61.5810 | **NEUTRAL** |
+| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-16→2026-08-14 (42 sessions): peak 2026-08-14 @ 64.8200 → trough 2026-08-14 @ 64.8200 | **NEUTRAL** |
+| `A12_green_body_vs_wick` | GREEN dates=[2026-08-03,2026-08-04,2026-08-06,2026-08-10,2026-08-11,2026-08-14] body_frac=0.668 wick_frac=0.332; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.7871,upperW=0.1694,lowerW=0.9366,range=1.8930 | 2026-08-04:GREEN:body=1.2853,upperW=0.1196,lowerW=0.2590,range=1.6639 | 2026-08-05:RED:body=0.8668,upperW=0.0000,lowerW=0.5480,range=1.4148 | 2026-08-06:GREEN:body=0.4085,upperW=0.5579,lowerW=0.2491,range=1.2155 | 2026-08-07:RED:body=0.5400,upperW=0.7500,lowerW=0.0100,range=1.3000 | 2026-08-10:GREEN:body=2.0200,upperW=0.2000,lowerW=0.0500,range=2.2700 | 2026-08-11:GREEN:body=0.5800,upperW=0.0400,lowerW=0.1600,range=0.7800 | 2026-08-12:RED:body=0.5300,upperW=0.2900,lowerW=0.0400,range=0.8600 | 2026-08-13:RED:body=0.5200,upperW=0.0700,lowerW=0.9400,range=1.5300 | 2026-08-14:GREEN:body=1.2800,upperW=0.3500,lowerW=0.0700,range=1.7000 | **GOOD** |
+| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-07,2026-08-12,2026-08-13] body_frac=0.481 wick_frac=0.519; window=2026-08-03→2026-08-14; sessions: 2026-08-03:GREEN:body=0.7871,upperW=0.1694,lowerW=0.9366,range=1.8930 | 2026-08-04:GREEN:body=1.2853,upperW=0.1196,lowerW=0.2590,range=1.6639 | 2026-08-05:RED:body=0.8668,upperW=0.0000,lowerW=0.5480,range=1.4148 | 2026-08-06:GREEN:body=0.4085,upperW=0.5579,lowerW=0.2491,range=1.2155 | 2026-08-07:RED:body=0.5400,upperW=0.7500,lowerW=0.0100,range=1.3000 | 2026-08-10:GREEN:body=2.0200,upperW=0.2000,lowerW=0.0500,range=2.2700 | 2026-08-11:GREEN:body=0.5800,upperW=0.0400,lowerW=0.1600,range=0.7800 | 2026-08-12:RED:body=0.5300,upperW=0.2900,lowerW=0.0400,range=0.8600 | 2026-08-13:RED:body=0.5200,upperW=0.0700,lowerW=0.9400,range=1.5300 | 2026-08-14:GREEN:body=1.2800,upperW=0.3500,lowerW=0.0700,range=1.7000 | **GOOD** |
+| `B01_eps_surprise` | 27.57 | **GOOD** |
+| `B02_revenue_surprise` | 3.35 | **GOOD** |
+| `B03_sales` | 27725.0 | **NEUTRAL** |
+| `B04_income` | 3096.0 | **GOOD** |
+| `B05_profit_margin` | 11.17 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 34.78 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=34.78 vs prior_export=34.78 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 3.25 | **NEUTRAL** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 10.65 | **GOOD** |
-| `B13_short_float` | 23.76 | **GOOD** |
-| `B14_earnings_date` | 7/23/2026 4:30:00 PM | **NEUTRAL** |
-
-### FA  ·  score **+12**  ·  Specialty Business Services
-price=20.760000228881836  mcap=$3.58B  ADV=2,052,310
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-06,2026-08-11,2026-08-13,2026-08-18]  RED=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-17]
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=49.95 on 2026-08-18; prev RSI=47.86 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 47.86@2026-08-17 → 49.95@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | below | RSI 47.86@2026-08-17 → 49.95@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 47.86@2026-08-17 → 49.95@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=1.417 (= sum GREEN bodies / sum RED bodies); GREEN_sum=3.3450 dates=[2026-08-06,2026-08-11,2026-08-13,2026-08-18]; RED_sum=2.3600 dates=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-17]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=20.6500,C=20.5600,body=-0.0900 | 2026-08-06:GREEN:O=22.1550,C=24.1200,body=+1.9650 | 2026-08-07:RED:O=24.4500,C=24.0100,body=-0.4400 | 2026-08-10:RED:O=23.7700,C=23.5900,body=-0.1800 | 2026-08-11:GREEN:O=21.1400,C=21.1700,body=+0.0300 | 2026-08-12:RED:O=21.0200,C=20.9900,body=-0.0300 | 2026-08-13:GREEN:O=21.2200,C=22.2000,body=+0.9800 | 2026-08-14:RED:O=22.1500,C=21.5800,body=-0.5700 | 2026-08-17:RED:O=21.3500,C=20.3000,body=-1.0500 | 2026-08-18:GREEN:O=20.3900,C=20.7600,body=+0.3700 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.398 if finite else n/a; GREEN_vol_sum=21233081 dates=[2026-08-06,2026-08-11,2026-08-13,2026-08-18]; RED_vol_sum=15183900 dates=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-17]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=1599300 | 2026-08-06:GREEN:vol=4725700 | 2026-08-07:RED:vol=2577900 | 2026-08-10:RED:vol=2955000 | 2026-08-11:GREEN:vol=9086700 | 2026-08-12:RED:vol=1987700 | 2026-08-13:GREEN:vol=6795100 | 2026-08-14:RED:vol=3465200 | 2026-08-17:RED:vol=2598800 | 2026-08-18:GREEN:vol=625581 | **GOOD** |
-| `A07_rvol` | RVOL=0.226 on 2026-08-18: today_vol=625581 / avg20=2762960 (avg window 2026-07-16→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=-0.196 on 2026-08-18 (price=20.7600, mid=21.3115, upper=24.1191, lower=18.5039; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=20.7600 vs SMA50=19.2533 dist=+7.83% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=21.3115 SMA50=19.2533 SMA80=17.4616 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-15.84% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-08-06 @ 24.1200 → trough 2026-08-17 @ 20.3000 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-06,2026-08-11,2026-08-13,2026-08-18] body_frac=0.526 wick_frac=0.474; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.0900,upperW=0.2100,lowerW=0.4590,range=0.7590 | 2026-08-06:GREEN:body=1.9650,upperW=0.4600,lowerW=0.6950,range=3.1200 | 2026-08-07:RED:body=0.4400,upperW=0.7000,lowerW=0.0200,range=1.1600 | 2026-08-10:RED:body=0.1800,upperW=0.1800,lowerW=0.5900,range=0.9500 | 2026-08-11:GREEN:body=0.0300,upperW=0.3450,lowerW=1.0800,range=1.4550 | 2026-08-12:RED:body=0.0300,upperW=0.3500,lowerW=0.2350,range=0.6150 | 2026-08-13:GREEN:body=0.9800,upperW=0.0600,lowerW=0.0800,range=1.1200 | 2026-08-14:RED:body=0.5700,upperW=0.1900,lowerW=0.1600,range=0.9200 | 2026-08-17:RED:body=1.0500,upperW=0.3200,lowerW=0.2000,range=1.5700 | 2026-08-18:GREEN:body=0.3700,upperW=0.2800,lowerW=0.0088,range=0.6588 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-07,2026-08-10,2026-08-12,2026-08-14,2026-08-17] body_frac=0.395 wick_frac=0.605; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.0900,upperW=0.2100,lowerW=0.4590,range=0.7590 | 2026-08-06:GREEN:body=1.9650,upperW=0.4600,lowerW=0.6950,range=3.1200 | 2026-08-07:RED:body=0.4400,upperW=0.7000,lowerW=0.0200,range=1.1600 | 2026-08-10:RED:body=0.1800,upperW=0.1800,lowerW=0.5900,range=0.9500 | 2026-08-11:GREEN:body=0.0300,upperW=0.3450,lowerW=1.0800,range=1.4550 | 2026-08-12:RED:body=0.0300,upperW=0.3500,lowerW=0.2350,range=0.6150 | 2026-08-13:GREEN:body=0.9800,upperW=0.0600,lowerW=0.0800,range=1.1200 | 2026-08-14:RED:body=0.5700,upperW=0.1900,lowerW=0.1600,range=0.9200 | 2026-08-17:RED:body=1.0500,upperW=0.3200,lowerW=0.2000,range=1.5700 | 2026-08-18:GREEN:body=0.3700,upperW=0.2800,lowerW=0.0088,range=0.6588 | **GOOD** |
-| `B01_eps_surprise` | 20.07 | **GOOD** |
-| `B02_revenue_surprise` | 8.13 | **GOOD** |
-| `B03_sales` | 1663.13 | **NEUTRAL** |
-| `B04_income` | 25.14 | **GOOD** |
-| `B05_profit_margin` | 1.51 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 26.25 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=26.25 vs prior_export=26.25 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.9 | **GOOD** |
-| `B10_insider_transactions` | -11.77 | **BAD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=-11.77 vs prior=-11.77 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 8.68 | **GOOD** |
-| `B13_short_float` | 15.14 | **NEUTRAL** |
-| `B14_earnings_date` | 8/6/2026 8:30:00 AM | **NEUTRAL** |
-
-### NOMD  ·  score **+12**  ·  Packaged Foods
-price=11.574999809265137  mcap=$1.61B  ADV=1,437,030
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-07,2026-08-12,2026-08-13,2026-08-18]  RED=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14,2026-08-17]
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=51.58 on 2026-08-18; prev RSI=48.37 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 48.37@2026-08-17 → 51.58@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 48.37@2026-08-17 → 51.58@2026-08-18 vs level 50 | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 48.37@2026-08-17 → 51.58@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=1.232 (= sum GREEN bodies / sum RED bodies); GREEN_sum=1.6265 dates=[2026-08-07,2026-08-12,2026-08-13,2026-08-18]; RED_sum=1.3198 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14,2026-08-17]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=11.9037,C=11.6377,body=-0.2661 | 2026-08-06:RED:O=11.7362,C=11.6081,body=-0.1281 | 2026-08-07:GREEN:O=11.5785,C=11.8150,body=+0.2365 | 2026-08-10:RED:O=11.7756,C=11.4800,body=-0.2956 | 2026-08-11:RED:O=11.5000,C=11.3700,body=-0.1300 | 2026-08-12:GREEN:O=11.2200,C=11.4000,body=+0.1800 | 2026-08-13:GREEN:O=10.9300,C=12.0400,body=+1.1100 | 2026-08-14:RED:O=12.0100,C=11.7300,body=-0.2800 | 2026-08-17:RED:O=11.6000,C=11.3800,body=-0.2200 | 2026-08-18:GREEN:O=11.4750,C=11.5750,body=+0.1000 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.176 if finite else n/a; GREEN_vol_sum=9782893 dates=[2026-08-07,2026-08-12,2026-08-13,2026-08-18]; RED_vol_sum=8316000 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14,2026-08-17]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=771600 | 2026-08-06:RED:vol=689000 | 2026-08-07:GREEN:vol=745600 | 2026-08-10:RED:vol=1114000 | 2026-08-11:RED:vol=1654900 | 2026-08-12:GREEN:vol=3927700 | 2026-08-13:GREEN:vol=3866400 | 2026-08-14:RED:vol=1405800 | 2026-08-17:RED:vol=2680700 | 2026-08-18:GREEN:vol=1243193 | **GOOD** |
-| `A07_rvol` | RVOL=0.781 on 2026-08-18: today_vol=1243193 / avg20=1592605 (avg window 2026-07-16→2026-08-17, excludes today) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=-0.220 on 2026-08-18 (price=11.5750, mid=11.7093, upper=12.3187, lower=11.0999; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=11.5750 vs SMA50=11.0270 dist=+4.97% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=11.7093 SMA50=11.0270 SMA80=10.4885 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-9.08% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-07-29 @ 12.5048 → trough 2026-08-11 @ 11.3700 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-07,2026-08-12,2026-08-13,2026-08-18] body_frac=0.719 wick_frac=0.281; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.2661,upperW=0.0069,lowerW=0.0591,range=0.3321 | 2026-08-06:RED:body=0.1281,upperW=0.0049,lowerW=0.1360,range=0.2690 | 2026-08-07:GREEN:body=0.2365,upperW=0.0099,lowerW=0.0493,range=0.2956 | 2026-08-10:RED:body=0.2956,upperW=0.0000,lowerW=0.0296,range=0.3252 | 2026-08-11:RED:body=0.1300,upperW=0.1550,lowerW=0.0200,range=0.3050 | 2026-08-12:GREEN:body=0.1800,upperW=0.2600,lowerW=0.0700,range=0.5100 | 2026-08-13:GREEN:body=1.1100,upperW=0.0800,lowerW=0.0000,range=1.1900 | 2026-08-14:RED:body=0.2800,upperW=0.0000,lowerW=0.2300,range=0.5100 | 2026-08-17:RED:body=0.2200,upperW=0.0550,lowerW=0.0250,range=0.3000 | 2026-08-18:GREEN:body=0.1000,upperW=0.0450,lowerW=0.1200,range=0.2650 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-11,2026-08-14,2026-08-17] body_frac=0.647 wick_frac=0.353; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.2661,upperW=0.0069,lowerW=0.0591,range=0.3321 | 2026-08-06:RED:body=0.1281,upperW=0.0049,lowerW=0.1360,range=0.2690 | 2026-08-07:GREEN:body=0.2365,upperW=0.0099,lowerW=0.0493,range=0.2956 | 2026-08-10:RED:body=0.2956,upperW=0.0000,lowerW=0.0296,range=0.3252 | 2026-08-11:RED:body=0.1300,upperW=0.1550,lowerW=0.0200,range=0.3050 | 2026-08-12:GREEN:body=0.1800,upperW=0.2600,lowerW=0.0700,range=0.5100 | 2026-08-13:GREEN:body=1.1100,upperW=0.0800,lowerW=0.0000,range=1.1900 | 2026-08-14:RED:body=0.2800,upperW=0.0000,lowerW=0.2300,range=0.5100 | 2026-08-17:RED:body=0.2200,upperW=0.0550,lowerW=0.0250,range=0.3000 | 2026-08-18:GREEN:body=0.1000,upperW=0.0450,lowerW=0.1200,range=0.2650 | **BAD** |
-| `B01_eps_surprise` | 2.0 | **GOOD** |
-| `B02_revenue_surprise` | 0.04 | **GOOD** |
-| `B03_sales` | 3457.3 | **NEUTRAL** |
-| `B04_income` | 145.06 | **GOOD** |
-| `B05_profit_margin` | 4.2 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 13.58 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=13.58 vs prior_export=13.58 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.5 | **GOOD** |
-| `B10_insider_transactions` | 3.5 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=3.5 vs prior=3.5 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | -6.23 | **BAD** |
-| `B13_short_float` | 2.68 | **NEUTRAL** |
-| `B14_earnings_date` | 8/13/2026 8:30:00 AM | **NEUTRAL** |
-
-### EBC  ·  score **+12**  ·  Banks - Regional
-price=23.459999084472656  mcap=$5.35B  ADV=3,232,110
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17]  RED=[2026-08-05,2026-08-06,2026-08-07,2026-08-18]
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=60.07 on 2026-08-18; prev RSI=64.13 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 64.13@2026-08-17 → 60.07@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 64.13@2026-08-17 → 60.07@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 64.13@2026-08-17 → 60.07@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=0.956 (= sum GREEN bodies / sum RED bodies); GREEN_sum=0.7550 dates=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17]; RED_sum=0.7900 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-18]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=23.4700,C=23.2000,body=-0.2700 | 2026-08-06:RED:O=23.3100,C=23.0100,body=-0.3000 | 2026-08-07:RED:O=22.9000,C=22.8400,body=-0.0600 | 2026-08-10:GREEN:O=22.7300,C=22.9400,body=+0.2100 | 2026-08-11:GREEN:O=22.9400,C=23.1300,body=+0.1900 | 2026-08-12:GREEN:O=23.2000,C=23.3500,body=+0.1500 | 2026-08-13:GREEN:O=23.5000,C=23.5200,body=+0.0200 | 2026-08-14:GREEN:O=23.5100,C=23.6250,body=+0.1150 | 2026-08-17:GREEN:O=23.5800,C=23.6500,body=+0.0700 | 2026-08-18:RED:O=23.6200,C=23.4600,body=-0.1600 | **NEUTRAL** |
-| `A06_volume_red_green_ratio` | ratio=1.544 if finite else n/a; GREEN_vol_sum=9782300 dates=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17]; RED_vol_sum=6337376 dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-18]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=3210000 | 2026-08-06:RED:vol=1388800 | 2026-08-07:RED:vol=983700 | 2026-08-10:GREEN:vol=1952300 | 2026-08-11:GREEN:vol=2116400 | 2026-08-12:GREEN:vol=1178700 | 2026-08-13:GREEN:vol=1055900 | 2026-08-14:GREEN:vol=1299200 | 2026-08-17:GREEN:vol=2179800 | 2026-08-18:RED:vol=754876 | **GOOD** |
-| `A07_rvol` | RVOL=0.283 on 2026-08-18: today_vol=754876 / avg20=2665965 (avg window 2026-07-16→2026-08-17, excludes today) | **BAD** |
-| `A08_bollinger_position` | pos=0.494 on 2026-08-18 (price=23.4600, mid=23.1598, upper=23.7673, lower=22.5522; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=23.4600 vs SMA50=22.1092 dist=+6.11% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=23.1598 SMA50=22.1092 SMA80=21.2141 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-0.80% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-08-17 @ 23.6500 → trough 2026-08-18 @ 23.4600 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-10,2026-08-11,2026-08-12,2026-08-13,2026-08-14,2026-08-17] body_frac=0.501 wick_frac=0.499; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.2700,upperW=0.0550,lowerW=0.0500,range=0.3750 | 2026-08-06:RED:body=0.3000,upperW=0.0550,lowerW=0.0390,range=0.3940 | 2026-08-07:RED:body=0.0600,upperW=0.1400,lowerW=0.0250,range=0.2250 | 2026-08-10:GREEN:body=0.2100,upperW=0.0180,lowerW=0.0900,range=0.3180 | 2026-08-11:GREEN:body=0.1900,upperW=0.0100,lowerW=0.0300,range=0.2300 | 2026-08-12:GREEN:body=0.1500,upperW=0.0350,lowerW=0.0700,range=0.2550 | 2026-08-13:GREEN:body=0.0200,upperW=0.0800,lowerW=0.0900,range=0.1900 | 2026-08-14:GREEN:body=0.1150,upperW=0.1050,lowerW=0.0900,range=0.3100 | 2026-08-17:GREEN:body=0.0700,upperW=0.1250,lowerW=0.0100,range=0.2050 | 2026-08-18:RED:body=0.1600,upperW=0.1200,lowerW=0.9250,range=1.2050 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-07,2026-08-18] body_frac=0.359 wick_frac=0.641; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=0.2700,upperW=0.0550,lowerW=0.0500,range=0.3750 | 2026-08-06:RED:body=0.3000,upperW=0.0550,lowerW=0.0390,range=0.3940 | 2026-08-07:RED:body=0.0600,upperW=0.1400,lowerW=0.0250,range=0.2250 | 2026-08-10:GREEN:body=0.2100,upperW=0.0180,lowerW=0.0900,range=0.3180 | 2026-08-11:GREEN:body=0.1900,upperW=0.0100,lowerW=0.0300,range=0.2300 | 2026-08-12:GREEN:body=0.1500,upperW=0.0350,lowerW=0.0700,range=0.2550 | 2026-08-13:GREEN:body=0.0200,upperW=0.0800,lowerW=0.0900,range=0.1900 | 2026-08-14:GREEN:body=0.1150,upperW=0.1050,lowerW=0.0900,range=0.3100 | 2026-08-17:GREEN:body=0.0700,upperW=0.1250,lowerW=0.0100,range=0.2050 | 2026-08-18:RED:body=0.1600,upperW=0.1200,lowerW=0.9250,range=1.2050 | **GOOD** |
-| `B01_eps_surprise` | 6.01 | **GOOD** |
-| `B02_revenue_surprise` | 2.53 | **GOOD** |
-| `B03_sales` | 1491.93 | **NEUTRAL** |
-| `B04_income` | 376.12 | **GOOD** |
-| `B05_profit_margin` | 25.21 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 25.13 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=25.13 vs prior_export=25.13 on finviz_2026-08-17) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.5 | **GOOD** |
-| `B10_insider_transactions` | 0.04 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.04 vs prior=0.04 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 5.3 | **GOOD** |
-| `B13_short_float` | 7.88 | **NEUTRAL** |
-| `B14_earnings_date` | 7/23/2026 4:30:00 PM | **NEUTRAL** |
-
-### DUOL  ·  score **+12**  ·  Software - Application
-price=140.1999969482422  mcap=$6.53B  ADV=1,349,470
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-18]  RED=[2026-08-05,2026-08-06,2026-08-11,2026-08-14,2026-08-17]
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=55.84 on 2026-08-18; prev RSI=49.08 on 2026-08-17 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 49.08@2026-08-17 → 55.84@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 49.08@2026-08-17 → 55.84@2026-08-18 vs level 50 | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 49.08@2026-08-17 → 55.84@2026-08-18 vs level 70 | **NEUTRAL** |
-| `A05_body_red_green_ratio` | ratio=1.280 (= sum GREEN bodies / sum RED bodies); GREEN_sum=29.3350 dates=[2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-18]; RED_sum=22.9150 dates=[2026-08-05,2026-08-06,2026-08-11,2026-08-14,2026-08-17]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=138.2100,C=135.3200,body=-2.8900 | 2026-08-06:RED:O=130.1100,C=122.5800,body=-7.5300 | 2026-08-07:GREEN:O=122.9800,C=130.9000,body=+7.9200 | 2026-08-10:GREEN:O=129.8000,C=137.1900,body=+7.3900 | 2026-08-11:RED:O=136.0250,C=135.4400,body=-0.5850 | 2026-08-12:GREEN:O=132.8400,C=134.6300,body=+1.7900 | 2026-08-13:GREEN:O=136.5000,C=144.1000,body=+7.6000 | 2026-08-14:RED:O=143.4000,C=132.8300,body=-10.5700 | 2026-08-17:RED:O=131.5000,C=130.1600,body=-1.3400 | 2026-08-18:GREEN:O=135.5650,C=140.2000,body=+4.6350 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=0.705 if finite else n/a; GREEN_vol_sum=6421674 dates=[2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-18]; RED_vol_sum=9105300 dates=[2026-08-05,2026-08-06,2026-08-11,2026-08-14,2026-08-17]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=1871000 | 2026-08-06:RED:vol=3824400 | 2026-08-07:GREEN:vol=1499600 | 2026-08-10:GREEN:vol=1447000 | 2026-08-11:RED:vol=860000 | 2026-08-12:GREEN:vol=966100 | 2026-08-13:GREEN:vol=1643600 | 2026-08-14:RED:vol=1065300 | 2026-08-17:RED:vol=1484600 | 2026-08-18:GREEN:vol=865374 | **BAD** |
-| `A07_rvol` | RVOL=0.644 on 2026-08-18: today_vol=865374 / avg20=1343650 (avg window 2026-07-20→2026-08-17, excludes today) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.530 on 2026-08-18 (price=140.2000, mid=132.5675, upper=146.9635, lower=118.1715; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=140.2000 vs SMA50=128.2450 dist=+9.32% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=132.5675 SMA50=128.2450 SMA80=120.7143 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=-9.67% inside window 2026-06-17→2026-08-18 (42 sessions): peak 2026-08-13 @ 144.1000 → trough 2026-08-17 @ 130.1600 | **GOOD** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-07,2026-08-10,2026-08-12,2026-08-13,2026-08-18] body_frac=0.678 wick_frac=0.322; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=2.8900,upperW=0.7900,lowerW=1.8700,range=5.5500 | 2026-08-06:RED:body=7.5300,upperW=5.0300,lowerW=10.5590,range=23.1190 | 2026-08-07:GREEN:body=7.9200,upperW=0.2050,lowerW=0.0000,range=8.1250 | 2026-08-10:GREEN:body=7.3900,upperW=0.2100,lowerW=1.3000,range=8.9000 | 2026-08-11:RED:body=0.5850,upperW=2.4650,lowerW=1.4400,range=4.4900 | 2026-08-12:GREEN:body=1.7900,upperW=1.6000,lowerW=4.6600,range=8.0500 | 2026-08-13:GREEN:body=7.6000,upperW=2.7500,lowerW=1.5000,range=11.8500 | 2026-08-14:RED:body=10.5700,upperW=0.5300,lowerW=0.2600,range=11.3600 | 2026-08-17:RED:body=1.3400,upperW=1.4900,lowerW=1.6950,range=4.5250 | 2026-08-18:GREEN:body=4.6350,upperW=0.2100,lowerW=1.4958,range=6.3408 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-11,2026-08-14,2026-08-17] body_frac=0.467 wick_frac=0.533; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=2.8900,upperW=0.7900,lowerW=1.8700,range=5.5500 | 2026-08-06:RED:body=7.5300,upperW=5.0300,lowerW=10.5590,range=23.1190 | 2026-08-07:GREEN:body=7.9200,upperW=0.2050,lowerW=0.0000,range=8.1250 | 2026-08-10:GREEN:body=7.3900,upperW=0.2100,lowerW=1.3000,range=8.9000 | 2026-08-11:RED:body=0.5850,upperW=2.4650,lowerW=1.4400,range=4.4900 | 2026-08-12:GREEN:body=1.7900,upperW=1.6000,lowerW=4.6600,range=8.0500 | 2026-08-13:GREEN:body=7.6000,upperW=2.7500,lowerW=1.5000,range=11.8500 | 2026-08-14:RED:body=10.5700,upperW=0.5300,lowerW=0.2600,range=11.3600 | 2026-08-17:RED:body=1.3400,upperW=1.4900,lowerW=1.6950,range=4.5250 | 2026-08-18:GREEN:body=4.6350,upperW=0.2100,lowerW=1.4958,range=6.3408 | **GOOD** |
-| `B01_eps_surprise` | 9.31 | **GOOD** |
-| `B02_revenue_surprise` | 0.97 | **GOOD** |
-| `B03_sales` | 1145.0 | **NEUTRAL** |
-| `B04_income` | 410.77 | **GOOD** |
-| `B05_profit_margin` | 35.87 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 126.46 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=1.6699999999999875 (now=126.46 vs prior_export=124.79 on finviz_2026-08-17) | **GOOD** |
-| `B09_analyst_recom` | 2.78 | **NEUTRAL** |
-| `B10_insider_transactions` | -0.27 | **BAD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=-0.27 vs prior=-0.27 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | 0.49 | **GOOD** |
-| `B13_short_float` | 18.31 | **NEUTRAL** |
-| `B14_earnings_date` | 8/5/2026 4:30:00 PM | **NEUTRAL** |
-
-### HAE  ·  score **+12**  ·  Medical Devices
-price=105.19000244140625  mcap=$4.79B  ADV=851,130
-body window: `2026-08-05→2026-08-18`  GREEN=[2026-08-07,2026-08-11,2026-08-12,2026-08-14,2026-08-17,2026-08-18]  RED=[2026-08-05,2026-08-06,2026-08-10,2026-08-13]
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=82.65 on 2026-08-18; prev RSI=68.71 on 2026-08-17 | **BAD** |
-| `A02_rsi_cross_30` | above | RSI 68.71@2026-08-17 → 82.65@2026-08-18 vs level 30 | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 68.71@2026-08-17 → 82.65@2026-08-18 vs level 50 | **NEUTRAL** |
-| `A04_rsi_cross_70` | cross_up | RSI 68.71@2026-08-17 → 82.65@2026-08-18 vs level 70 | **GOOD** |
-| `A05_body_red_green_ratio` | ratio=2.065 (= sum GREEN bodies / sum RED bodies); GREEN_sum=10.7400 dates=[2026-08-07,2026-08-11,2026-08-12,2026-08-14,2026-08-17,2026-08-18]; RED_sum=5.2000 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-13]; DOJI=[none]; window=2026-08-05→2026-08-18 (10 sessions); sessions: 2026-08-05:RED:O=86.0200,C=83.6000,body=-2.4200 | 2026-08-06:RED:O=85.7700,C=85.0200,body=-0.7500 | 2026-08-07:GREEN:O=85.5500,C=87.8400,body=+2.2900 | 2026-08-10:RED:O=87.3900,C=86.6100,body=-0.7800 | 2026-08-11:GREEN:O=86.7900,C=87.2200,body=+0.4300 | 2026-08-12:GREEN:O=86.3800,C=91.3400,body=+4.9600 | 2026-08-13:RED:O=91.6300,C=90.3800,body=-1.2500 | 2026-08-14:GREEN:O=90.6100,C=90.8000,body=+0.1900 | 2026-08-17:GREEN:O=90.0900,C=90.2700,body=+0.1800 | 2026-08-18:GREEN:O=102.5000,C=105.1900,body=+2.6900 | **GOOD** |
-| `A06_volume_red_green_ratio` | ratio=1.176 if finite else n/a; GREEN_vol_sum=4468567 dates=[2026-08-07,2026-08-11,2026-08-12,2026-08-14,2026-08-17,2026-08-18]; RED_vol_sum=3798500 dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-13]; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:vol=1140300 | 2026-08-06:RED:vol=1275200 | 2026-08-07:GREEN:vol=657100 | 2026-08-10:RED:vol=571100 | 2026-08-11:GREEN:vol=745400 | 2026-08-12:GREEN:vol=823000 | 2026-08-13:RED:vol=811900 | 2026-08-14:GREEN:vol=533300 | 2026-08-17:GREEN:vol=467900 | 2026-08-18:GREEN:vol=1241867 | **GOOD** |
-| `A07_rvol` | RVOL=1.603 on 2026-08-18: today_vol=1241867 / avg20=774680 (avg window 2026-07-16→2026-08-17, excludes today) | **GOOD** |
-| `A08_bollinger_position` | pos=1.522 on 2026-08-18 (price=105.1900, mid=85.7670, upper=98.5285, lower=73.0055; 20d BB) | **BAD** |
-| `A09_above_sma50` | above=True on 2026-08-18: price=105.1900 vs SMA50=79.3108 dist=+32.63% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-08-18: SMA20=85.7670 SMA50=79.3108 SMA80=71.9805 | **GOOD** |
-| `A11_max_downside_2m` | maxDD=+0.00% inside window 2026-06-15→2026-08-18 (42 sessions): peak 2026-08-18 @ 105.1900 → trough 2026-08-18 @ 105.1900 | **NEUTRAL** |
-| `A12_green_body_vs_wick` | GREEN dates=[2026-08-07,2026-08-11,2026-08-12,2026-08-14,2026-08-17,2026-08-18] body_frac=0.546 wick_frac=0.454; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=2.4200,upperW=0.9200,lowerW=0.2800,range=3.6200 | 2026-08-06:RED:body=0.7500,upperW=2.2300,lowerW=4.1900,range=7.1700 | 2026-08-07:GREEN:body=2.2900,upperW=0.0300,lowerW=0.6700,range=2.9900 | 2026-08-10:RED:body=0.7800,upperW=0.5800,lowerW=0.6400,range=2.0000 | 2026-08-11:GREEN:body=0.4300,upperW=1.6600,lowerW=0.6900,range=2.7800 | 2026-08-12:GREEN:body=4.9600,upperW=0.0500,lowerW=0.2400,range=5.2500 | 2026-08-13:RED:body=1.2500,upperW=0.6200,lowerW=0.4700,range=2.3400 | 2026-08-14:GREEN:body=0.1900,upperW=0.6900,lowerW=0.7900,range=1.6700 | 2026-08-17:GREEN:body=0.1800,upperW=1.0900,lowerW=1.0300,range=2.3000 | 2026-08-18:GREEN:body=2.6900,upperW=1.4800,lowerW=0.4999,range=4.6699 | **GOOD** |
-| `A13_red_body_vs_wick` | RED dates=[2026-08-05,2026-08-06,2026-08-10,2026-08-13] body_frac=0.344 wick_frac=0.656; window=2026-08-05→2026-08-18; sessions: 2026-08-05:RED:body=2.4200,upperW=0.9200,lowerW=0.2800,range=3.6200 | 2026-08-06:RED:body=0.7500,upperW=2.2300,lowerW=4.1900,range=7.1700 | 2026-08-07:GREEN:body=2.2900,upperW=0.0300,lowerW=0.6700,range=2.9900 | 2026-08-10:RED:body=0.7800,upperW=0.5800,lowerW=0.6400,range=2.0000 | 2026-08-11:GREEN:body=0.4300,upperW=1.6600,lowerW=0.6900,range=2.7800 | 2026-08-12:GREEN:body=4.9600,upperW=0.0500,lowerW=0.2400,range=5.2500 | 2026-08-13:RED:body=1.2500,upperW=0.6200,lowerW=0.4700,range=2.3400 | 2026-08-14:GREEN:body=0.1900,upperW=0.6900,lowerW=0.7900,range=1.6700 | 2026-08-17:GREEN:body=0.1800,upperW=1.0900,lowerW=1.0300,range=2.3000 | 2026-08-18:GREEN:body=2.6900,upperW=1.4800,lowerW=0.4999,range=4.6699 | **GOOD** |
-| `B01_eps_surprise` | 5.87 | **GOOD** |
-| `B02_revenue_surprise` | 3.51 | **GOOD** |
-| `B03_sales` | 1352.01 | **NEUTRAL** |
-| `B04_income` | 96.29 | **GOOD** |
-| `B05_profit_margin` | 7.12 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 98.9 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=2.0 (now=98.9 vs prior_export=96.9 on finviz_2026-08-17) | **GOOD** |
-| `B09_analyst_recom` | 1.83 | **GOOD** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-08-17) | **NEUTRAL** |
-| `B12_institutional_transactions` | -5.02 | **BAD** |
-| `B13_short_float` | 6.55 | **NEUTRAL** |
-| `B14_earnings_date` | 8/6/2026 8:30:00 AM | **NEUTRAL** |
+| `B07_target_price` | 71.86 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.3100000000000023 (now=71.86 vs prior_export=71.55 on finviz_2026-08-17) | **GOOD** |
+| `B09_analyst_recom` | 1.64 | **GOOD** |
+| `B10_insider_transactions` | -31.32 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=-31.32 vs prior=-31.32 on finviz_2026-08-17) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.87 | **GOOD** |
+| `B13_short_float` | 2.48 | **NEUTRAL** |
+| `B14_earnings_date` | 7/26/2026 4:30:00 PM | **NEUTRAL** |
 
 CSV: `data/ab_checklist/2026-08-18_ab_checklist.csv`
 Columns: `val_*` (full dated string), `flag_*` (+1/0/-1), `status_*`, plus `green_dates` / `red_dates` / `body_window`.
