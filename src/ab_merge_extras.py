@@ -1,8 +1,8 @@
-"""Merge Form-4 insider monthly panel + Finviz quote colors into latest ab_checklist.
+"""Merge Form-4 insider + Finviz quote colors + last-2 analyst into ab_checklist.
 
-Does not recompute Part A/B1 — only enriches the existing CSV/MD with:
-  B15 Form4 net_value / net_delta (completed prior month)
-  B16 quote snapshot green−red / key_color_score
+  B15 Form4 net / net_delta (completed prior month)
+  B16 quote snapshot green−red (Perf* excluded upstream)
+  B19 last 2 analyst actions from quote page
 
 CLI:
   python -m src.ab_merge_extras
@@ -38,7 +38,6 @@ def _load_panel() -> pd.DataFrame:
 
 
 def _latest_completed_month(asof: str) -> str:
-    # prior calendar month relative to asof (avoid partial current month)
     return (pd.Timestamp(asof).to_period("M") - 1).strftime("%Y-%m")
 
 
@@ -50,17 +49,15 @@ def _insider_features(panel: pd.DataFrame, asof: str) -> pd.DataFrame:
     p["ticker"] = p["ticker"].astype(str).str.upper()
     cur = p[p["month"] == month].copy()
     if cur.empty:
-        # fall back to max month ≤ target
         p = p[p["month"] <= month]
         if p.empty:
             return pd.DataFrame()
         idx = p.groupby("ticker")["month"].idxmax()
         cur = p.loc[idx].copy()
-        month = "mixed"
 
     out = pd.DataFrame({
         "Ticker": cur["ticker"].values,
-        "B15_form4_month": cur["month"].values if "month" in cur else month,
+        "B15_form4_month": cur["month"].values,
         "B15_form4_net": cur["net_value"].values,
         "B15_form4_net_prev": cur["net_prev"].values if "net_prev" in cur else np.nan,
         "B15_form4_net_delta": cur["net_delta"].values if "net_delta" in cur else np.nan,
@@ -69,8 +66,7 @@ def _insider_features(panel: pd.DataFrame, asof: str) -> pd.DataFrame:
     })
 
     def flag_row(r):
-        d = r["B15_form4_net_delta"]
-        n = r["B15_form4_net"]
+        d, n = r["B15_form4_net_delta"], r["B15_form4_net"]
         if np.isfinite(d):
             if d > 0 and (not np.isfinite(n) or n >= 0):
                 return 1
@@ -96,7 +92,6 @@ def _insider_features(panel: pd.DataFrame, asof: str) -> pd.DataFrame:
 
 
 def _color_features(asof: str) -> pd.DataFrame:
-    # prefer same-date file, else latest
     exact = COLORS_DIR / f"{asof}_quote_colors.csv"
     files = sorted(COLORS_DIR.glob("????-??-??_quote_colors.csv"))
     path = exact if exact.exists() else (files[-1] if files else None)
@@ -112,17 +107,20 @@ def _color_features(asof: str) -> pd.DataFrame:
         "B16_key_color_score": df.get("key_color_score"),
         "flag_B16_quote_colors": df.get("flag_colors", 0),
         "status_B16_quote_colors": df.get("status_colors", "NEUTRAL"),
+        "val_B16_quote_colors": None,
+        "val_B19_analyst_last2": df.get("val_B19_analyst_last2"),
+        "flag_B19_analyst_last2": df.get("flag_B19_analyst_last2", 0),
+        "status_B19_analyst_last2": df.get("status_B19_analyst_last2", "NEUTRAL"),
     })
     out["val_B16_quote_colors"] = out.apply(
         lambda r: (
             f"green={r['B16_n_green']} red={r['B16_n_red']} "
             f"Δ={r['B16_green_minus_red']} key_score={r['B16_key_color_score']} "
-            f"(source={path.name})"
+            f"(Perf* excluded; source={path.name})"
         ),
         axis=1,
     )
-    # recompute flag if missing
-    if out["flag_B16_quote_colors"].isna().all():
+    if out["flag_B16_quote_colors"].isna().all() or out["flag_B16_quote_colors"].isna().any():
         def f(x):
             try:
                 v = float(x)
@@ -137,6 +135,11 @@ def _color_features(asof: str) -> pd.DataFrame:
         out["status_B16_quote_colors"] = out["flag_B16_quote_colors"].map(
             {1: "GOOD", 0: "NEUTRAL", -1: "BAD"}
         )
+    out["flag_B19_analyst_last2"] = pd.to_numeric(
+        out["flag_B19_analyst_last2"], errors="coerce"
+    ).fillna(0).astype(int)
+    out["status_B19_analyst_last2"] = out["status_B19_analyst_last2"].fillna("NEUTRAL")
+    out["val_B19_analyst_last2"] = out["val_B19_analyst_last2"].fillna("none")
     return out
 
 
@@ -153,90 +156,93 @@ def run(date: str | None = None) -> pd.DataFrame:
     ab = pd.read_csv(path)
     ab["Ticker"] = ab["Ticker"].astype(str).str.upper()
 
-    panel = _load_panel()
-    ins = _insider_features(panel, asof)
+    ins = _insider_features(_load_panel(), asof)
     cols = _color_features(asof)
 
     print(f"[merge] ab={path.name} rows={len(ab)}")
-    print(f"[merge] insider panel rows matched prep={len(ins)}")
-    print(f"[merge] colors rows={len(cols)}")
+    print(f"[merge] insider={len(ins)} colors={len(cols)}")
 
     out = ab.copy()
-    if len(ins):
-        # drop prior merge cols if re-run
-        drop = [c for c in out.columns if c.startswith("B15_") or c.startswith("flag_B15") or c.startswith("status_B15") or c.startswith("val_B15")]
+    for prefix in ("B15_", "flag_B15", "status_B15", "val_B15",
+                   "B16_", "flag_B16", "status_B16", "val_B16",
+                   "flag_B19", "status_B19", "val_B19"):
+        drop = [c for c in out.columns if c.startswith(prefix)]
         out = out.drop(columns=drop, errors="ignore")
+
+    if len(ins):
         out = out.merge(ins, on="Ticker", how="left")
         out["flag_B15_form4_insider"] = out["flag_B15_form4_insider"].fillna(0).astype(int)
         out["status_B15_form4_insider"] = out["status_B15_form4_insider"].fillna("NEUTRAL")
     else:
         out["flag_B15_form4_insider"] = 0
         out["status_B15_form4_insider"] = "NEUTRAL"
-        out["val_B15_form4_insider"] = "no Form4 panel yet — run insider_history"
+        out["val_B15_form4_insider"] = "no Form4 panel yet"
 
     if len(cols):
-        drop = [c for c in out.columns if c.startswith("B16_") or c.startswith("flag_B16") or c.startswith("status_B16") or c.startswith("val_B16")]
-        out = out.drop(columns=drop, errors="ignore")
         out = out.merge(cols, on="Ticker", how="left")
-        out["flag_B16_quote_colors"] = pd.to_numeric(out["flag_B16_quote_colors"], errors="coerce").fillna(0).astype(int)
+        out["flag_B16_quote_colors"] = pd.to_numeric(
+            out["flag_B16_quote_colors"], errors="coerce"
+        ).fillna(0).astype(int)
         out["status_B16_quote_colors"] = out["status_B16_quote_colors"].fillna("NEUTRAL")
+        out["flag_B19_analyst_last2"] = pd.to_numeric(
+            out["flag_B19_analyst_last2"], errors="coerce"
+        ).fillna(0).astype(int)
+        out["status_B19_analyst_last2"] = out["status_B19_analyst_last2"].fillna("NEUTRAL")
+        out["val_B19_analyst_last2"] = out["val_B19_analyst_last2"].fillna("none")
     else:
         out["flag_B16_quote_colors"] = 0
         out["status_B16_quote_colors"] = "NEUTRAL"
-        out["val_B16_quote_colors"] = "no quote_colors file — run quote_colors"
+        out["val_B16_quote_colors"] = "no quote_colors file"
+        out["flag_B19_analyst_last2"] = 0
+        out["status_B19_analyst_last2"] = "NEUTRAL"
+        out["val_B19_analyst_last2"] = "no quote scrape"
 
-    # recompute total score if base score present
     if "score" in out.columns:
         base = out["score"].astype(float)
-        # avoid double-counting if already merged once: use flag columns only as add-on tracked separately
-        out["score_with_b15_b16"] = (
+        out["score_merged"] = (
             base
             + out["flag_B15_form4_insider"].astype(float)
             + out["flag_B16_quote_colors"].astype(float)
+            + out["flag_B19_analyst_last2"].astype(float)
         )
-        out = out.sort_values("score_with_b15_b16", ascending=False)
+        out = out.sort_values("score_merged", ascending=False)
 
     out_path = AB_DIR / f"{asof}_ab_checklist_merged.csv"
     out.to_csv(out_path, index=False)
 
     lines = [
-        f"# A+B1 + B15 Form4 + B16 colors — {asof}",
+        f"# Checklist merged — {asof}",
         "",
-        f"- Base checklist: `{path.name}`",
-        f"- Form4 panel: `{'yes' if len(ins) else 'no'}`",
-        f"- Quote colors: `{'yes' if len(cols) else 'no'}`",
+        f"- Base: `{path.name}`",
+        f"- Form4 B15: `{'yes' if len(ins) else 'no'}` · Colors B16 + Analyst B19: `{'yes' if len(cols) else 'no'}`",
         "",
-        "| Ticker | score | +B15/B16 | Form4 Δ | colors Δ | Industry |",
-        "|--------|------:|---------:|--------:|---------:|----------|",
+        "| Ticker | score | merged | Form4Δ | colorsΔ | analyst | Industry |",
+        "|--------|------:|-------:|-------:|--------:|---------|----------|",
     ]
     for _, r in out.head(25).iterrows():
         lines.append(
-            f"| {r['Ticker']} | {r.get('score')} | {r.get('score_with_b15_b16')} | "
+            f"| {r['Ticker']} | {r.get('score')} | {r.get('score_merged')} | "
             f"{r.get('B15_form4_net_delta', '')} | {r.get('B16_green_minus_red', '')} | "
-            f"{str(r.get('Industry', ''))[:36]} |"
+            f"{r.get('status_B19_analyst_last2', '')} | {str(r.get('Industry', ''))[:32]} |"
         )
     lines += [
         "",
-        "### B15 (Form 4)",
-        "Completed prior calendar month net open-market P/S from SEC. "
-        "GOOD if net_delta>0 (or net>0).",
-        "",
-        "### B16 (Finviz colors)",
-        "green_minus_red across ~84 snapshot fields; flag GOOD if Δ≥5, BAD if Δ≤−5.",
-        f"",
-        f"CSV: `{out_path.relative_to(ROOT)}`",
+        "- **B15** Form4 prior-month net open-market P/S",
+        "- **B16** snapshot green−red (**Perf* excluded**)",
+        "- **B19** last 2 analyst actions (Upgrade=GOOD, Downgrade=BAD)",
+        f"- CSV: `{out_path.relative_to(ROOT)}`",
     ]
-    md_path = AB_DIR / f"{asof}_ab_checklist_merged.md"
-    md_path.write_text("\n".join(lines), encoding="utf-8")
-
-    meta = {
-        "asof": asof,
-        "n": int(len(out)),
-        "has_form4": bool(len(ins)),
-        "has_colors": bool(len(cols)),
-        "generated": datetime.now(ET).isoformat(),
-    }
-    (AB_DIR / f"{asof}_ab_checklist_merged.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    (AB_DIR / f"{asof}_ab_checklist_merged.md").write_text("\n".join(lines), encoding="utf-8")
+    (AB_DIR / f"{asof}_ab_checklist_merged.json").write_text(
+        json.dumps({
+            "asof": asof,
+            "n": int(len(out)),
+            "has_form4": bool(len(ins)),
+            "has_colors": bool(len(cols)),
+            "generated": datetime.now(ET).isoformat(),
+        }, indent=2),
+        encoding="utf-8",
+    )
     print(f"[merge] wrote {out_path}")
     return out
 
