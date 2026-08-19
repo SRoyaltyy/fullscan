@@ -8,6 +8,7 @@ A15 GOOD when ALL of:
 from __future__ import annotations
 
 import re
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -15,20 +16,24 @@ _GOOD_SHA = "01d6380c8ed6dfff34afc78feed675386b26bf68"
 _RAW = (
     f"https://raw.githubusercontent.com/SRoyaltyy/fullscan/{_GOOD_SHA}/src/ab_checklist.py"
 )
-_CACHE = Path(__file__).resolve().parent / "_ab_checklist_cached.py"
+_HERE = Path(__file__).resolve().parent
+_CACHE = _HERE / "_ab_checklist_cached.py"
+
+# Ensure repo root on path for package imports
+_ROOT = _HERE.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
 
 
 def _fetch_good() -> str:
     if _CACHE.exists() and _CACHE.stat().st_size > 10_000:
         return _CACHE.read_text(encoding="utf-8")
-    # Prefer git object if full history present
     try:
         import subprocess
 
-        root = Path(__file__).resolve().parent.parent
         src = subprocess.check_output(
             ["git", "show", f"{_GOOD_SHA}:src/ab_checklist.py"],
-            cwd=root,
+            cwd=_ROOT,
             text=True,
             stderr=subprocess.DEVNULL,
         )
@@ -156,19 +161,11 @@ def _five_day_tape(df: pd.DataFrame) -> dict:
             1,
         )
 
-    if re.search(r'"A15_tape_recovery_setup"', t) and t.count("A15_tape_recovery_setup") < 2:
-        v_anchor = (
-            '            "A13_red_body_vs_wick_2day": (\n'
-            '                f"pair {p[\'d_a\']}+{p[\'d_b\']}: RED body_frac={p[\'r_body_frac\']} '
-            'wick_frac={p[\'r_wick_frac\']}"\n'
-            "            ),\n        }"
-        )
-        # softer insert: after A13 value line
+    # value map line for A15 (best-effort)
+    if '"A15_tape_recovery_setup":' not in t.split("def _value_map")[-1]:
         marker = '"A13_red_body_vs_wick_2day":'
-        if marker in t and '"A15_tape_recovery_setup":' not in t.split("def _value_map")[-1]:
-            # find closing of A13 value tuple inside _value_map
-            idx = t.find('"A13_red_body_vs_wick_2day"')
-            # find the next "        }" after that in value map
+        if marker in t:
+            idx = t.find(marker)
             close = t.find("        }", idx)
             if close != -1:
                 insert = (
@@ -176,13 +173,7 @@ def _five_day_tape(df: pd.DataFrame) -> dict:
                     '                "n/a" if not (a.get("five_day") or {}).get("ok") else (\n'
                     "                    f\"body_rg_2d={(a.get('five_day') or {}).get('body_rg_2day', p.get('body_rg'))} need>1.4; \"\n"
                     "                    f\"red_wick_gt_green={(a.get('five_day') or {}).get('red_wick_gt_green')} \"\n"
-                    "                    f\"(avg_w_r={(a.get('five_day') or {}).get('avg_wick_red')} "
-                    "avg_w_g={(a.get('five_day') or {}).get('avg_wick_green')}); \"\n"
-                    "                    f\"maxG={(a.get('five_day') or {}).get('max_green_body')} "
-                    "maxR={(a.get('five_day') or {}).get('max_red_body')} \"\n"
-                    "                    f\"maxG>maxR={(a.get('five_day') or {}).get('max_green_gt_max_red')}; \"\n"
-                    "                    f\"5d[{(a.get('five_day') or {}).get('start')}→{(a.get('five_day') or {}).get('end')}]; \"\n"
-                    "                    f\"{(a.get('five_day') or {}).get('trail')}\"\n"
+                    "                    f\"5d trail={(a.get('five_day') or {}).get('trail')}\"\n"
                     "                )\n"
                     "            ),\n"
                 )
@@ -192,5 +183,13 @@ def _five_day_tape(df: pd.DataFrame) -> dict:
     return t
 
 
+# Rewrite relative imports so this works under python -m src.*
 _src = _apply_a15(_fetch_good())
-exec(compile(_src, __file__, "exec"), globals())
+_src = _src.replace("from . import config", "from src import config")
+_src = _src.replace("from . import price_store as ps", "from src import price_store as ps")
+
+_g = globals()
+_g["__name__"] = "src.ab_checklist"
+_g["__package__"] = "src"
+_g["__file__"] = str(Path(__file__).resolve())
+exec(compile(_src, __file__, "exec"), _g)
