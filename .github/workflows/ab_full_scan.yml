@@ -61,7 +61,6 @@ jobs:
           D="${{ inputs.date }}"
           D="${D//+/-}"
           if [ -z "$D" ]; then
-            # prefer latest finviz export date
             LATEST=$(ls -1 data/exports/finviz_????-??-??.csv 2>/dev/null | sort | tail -1 || true)
             if [ -n "$LATEST" ]; then
               D=$(basename "$LATEST" | sed 's/finviz_//;s/.csv//')
@@ -78,10 +77,10 @@ jobs:
           ASOF="${{ steps.meta.outputs.asof }}"
           echo "=== ab_checklist --date $ASOF ==="
           python -m src.ab_checklist --date "$ASOF" --top 20
-          ls -la data/ab_checklist/${ASOF}_ab_checklist.csv
+          ls -la "data/ab_checklist/${ASOF}_ab_checklist.csv"
 
       - name: 2) Quote snapshot colors (top names)
-        if: ${{ inputs.skip_colors != true && inputs.skip_colors != 'true' }}
+        if: ${{ github.event_name == 'schedule' || inputs.skip_colors == false }}
         env:
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
@@ -92,10 +91,10 @@ jobs:
           TOP="${TOP:-80}"
           echo "=== quote_colors --from-ab --top $TOP --date $ASOF ==="
           python -m src.quote_colors --from-ab --top "$TOP" --date "$ASOF"
-          ls -la data/quote_colors/${ASOF}_quote_colors.csv || ls -la data/quote_colors/ | tail
+          ls -la "data/quote_colors/${ASOF}_quote_colors.csv" || ls -la data/quote_colors/ | tail
 
       - name: 3) Form4 insider history (top names only)
-        if: ${{ inputs.skip_form4_fetch != true && inputs.skip_form4_fetch != 'true' }}
+        if: ${{ github.event_name == 'schedule' || inputs.skip_form4_fetch == false }}
         env:
           SEC_IDENTITY: ${{ secrets.SEC_IDENTITY }}
           EDGAR_IDENTITY: ${{ secrets.EDGAR_IDENTITY }}
@@ -112,16 +111,10 @@ jobs:
           fi
           CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
           if [ ! -f "$CSV" ]; then
-            echo "Missing $CSV"; exit 1
+            echo "Missing $CSV"
+            exit 1
           fi
-          # top N by score
-          TICKERS=$(python - <<PY
-import pandas as pd
-df = pd.read_csv("$CSV")
-df = df.sort_values("score", ascending=False)
-print(",".join(df["Ticker"].astype(str).str.upper().head(int("$N")).tolist()))
-PY
-)
+          TICKERS=$(python -c "import pandas as pd; df=pd.read_csv(r'$CSV'); df=df.sort_values('score', ascending=False); print(','.join(df['Ticker'].astype(str).str.upper().head(int('$N')).tolist()))")
           echo "=== insider_history --tickers ($N) --months $MONTHS --resume ==="
           echo "tickers=$TICKERS"
           python -m src.insider_history --tickers "$TICKERS" --months "$MONTHS" --resume
@@ -133,9 +126,9 @@ PY
           ASOF="${{ steps.meta.outputs.asof }}"
           echo "=== ab_merge_extras --date $ASOF ==="
           python -m src.ab_merge_extras --date "$ASOF"
-          ls -la data/ab_checklist/${ASOF}_ab_checklist_merged.csv
+          ls -la "data/ab_checklist/${ASOF}_ab_checklist_merged.csv"
           echo "-------- merged head --------"
-          head -5 data/ab_checklist/${ASOF}_ab_checklist_merged.md || true
+          head -8 "data/ab_checklist/${ASOF}_ab_checklist_merged.md" || true
 
       - uses: actions/upload-artifact@v4
         if: always()
