@@ -8,7 +8,7 @@ on:
         required: false
         default: "AAPL"
       months:
-        description: "Lookback months from end (any number, e.g. 24)"
+        description: "Lookback months from end (e.g. 24) — OHLC covers full window"
         required: false
         default: "24"
       start:
@@ -20,9 +20,9 @@ on:
         required: false
         default: ""
       bootstrap_days:
-        description: "Price history calendar days to ensure before scoring (e.g. 800 for ~26m)"
+        description: "yfinance history calendar days (800≈26m, 1000≈33m)"
         required: false
-        default: "800"
+        default: "900"
 
 permissions:
   contents: write
@@ -45,18 +45,16 @@ jobs:
           pip install -r requirements.txt
           pip install pyarrow
 
-      - name: Ensure price history window
+      - name: Ensure price history
         run: |
           set -euo pipefail
           DAYS="${{ inputs.bootstrap_days }}"
-          DAYS="${DAYS:-800}"
+          DAYS="${DAYS:-900}"
           T="${{ inputs.ticker }}"
           T=$(echo "$T" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
           if [ -n "$T" ]; then
-            echo "bootstrap --days $DAYS --tickers $T"
             python -m src.price_store bootstrap --days "$DAYS" --tickers "$T"
           else
-            echo "bootstrap --days $DAYS (full universe — slow)"
             python -m src.price_store bootstrap --days "$DAYS"
           fi
 
@@ -64,9 +62,8 @@ jobs:
         run: |
           set -euo pipefail
           ARGS=()
-          if [ -n "${{ inputs.months }}" ]; then
-            ARGS+=(--months "${{ inputs.months }}")
-          fi
+          M="${{ inputs.months }}"
+          if [ -n "$M" ]; then ARGS+=(--months "$M"); fi
           [ -n "${{ inputs.start }}" ] && ARGS+=(--start "${{ inputs.start }}")
           [ -n "${{ inputs.end }}" ] && ARGS+=(--end "${{ inputs.end }}")
           T="${{ inputs.ticker }}"
@@ -74,7 +71,9 @@ jobs:
           if [ -n "$T" ]; then ARGS+=(--ticker "$T"); fi
           echo "CMD: python -m src.ab_backfill ${ARGS[*]}"
           python -m src.ab_backfill "${ARGS[@]}"
-          ls -la data/ab_backfill/ | tail
+          echo "==== MD head ===="
+          ls -la data/ab_backfill/
+          head -30 data/ab_backfill/*.md 2>/dev/null | head -40 || true
 
       - uses: actions/upload-artifact@v4
         if: always()
