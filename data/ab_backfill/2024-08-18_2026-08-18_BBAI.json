@@ -1,8 +1,11 @@
 {
   "start": "2024-08-18",
   "end": "2026-08-18",
+  "months_arg": 24,
   "ticker": "BBAI",
   "n_rows": 77,
+  "actual_first": "2026-04-27",
+  "actual_last": "2026-08-14",
   "forward_bars": 42,
-  "generated": "2026-08-19T07:15:10.243804-04:00"
+  "generated": "2026-08-19T07:40:35.815280-04:00"
 }
