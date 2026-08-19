@@ -1,15 +1,12 @@
-"""Point-in-time daily AB checklist backfill (no look-ahead).
+"""Point-in-time daily AB checklist backfill (no look-ahead on features).
 
-For each trading day D in [start, end]:
-  * OHLC features use bars with date <= D only
-  * Finviz B1 fields come from the latest export with export_date <= D
-  * Form4 monthly nets use months fully completed before D
-  * Live quote colors / analyst scrape are NOT used historically (would leak)
+Forward labels (for checking, not used in score):
+  * max_profit_2m / max_loss_2m from asof close over the next ~42 trading days
+    (or until last available bar if shorter)
 
 CLI:
-  python -m src.ab_backfill --months 6
   python -m src.ab_backfill --months 6 --ticker AAPL
-  python -m src.ab_backfill --start 2026-02-19 --end 2026-08-18 --ticker AMLX
+  python -m src.ab_backfill --months 6
 """
 from __future__ import annotations
 
@@ -33,6 +30,8 @@ INS_PANEL = ROOT / "data" / "insider" / "history" / "monthly_panel.parquet"
 INS_PANEL_CSV = ROOT / "data" / "insider" / "history" / "monthly_panel.csv"
 ET = ZoneInfo(config.TZ)
 
+FORWARD_BARS = 42  # ~2 months of trading sessions
+
 
 def _load_exports() -> list[tuple[str, pd.DataFrame]]:
     files = sorted(EXPORT_DIR.glob("finviz_????-??-??.csv"))
@@ -48,7 +47,6 @@ def _load_exports() -> list[tuple[str, pd.DataFrame]]:
 
 
 def _export_asof(exports: list[tuple[str, pd.DataFrame]], asof: str):
-    """Latest export with date <= asof."""
     cand = [(d, df) for d, df in exports if d <= asof]
     if not cand:
         return None, None
@@ -90,15 +88,13 @@ def _form4_asof(panel: pd.DataFrame, ticker: str, asof: str) -> dict:
     }
 
 
-def _setup_flag(a: dict, b: dict, pa: dict) -> tuple[int, str]:
-    """Profitable + RSI<30 + near 3m lows + positive 2-day body ratio → GOOD setup."""
+def _setup_flag(a: dict, b: dict) -> tuple[int, str]:
     if not a.get("ok"):
         return 0, "no_ohlc"
     prof = bool(b.get("profitable"))
     rsi = a.get("rsi")
     sec = a.get("sections") or {}
     near_floor = bool(sec.get("ok") and (sec.get("rising_lows") or sec.get("flatish")))
-    # also near if last price close to the lowest of the three section lows
     near_low_px = False
     if sec.get("ok") and sec.get("lows"):
         floor = min(sec["lows"])
@@ -109,43 +105,94 @@ def _setup_flag(a: dict, b: dict, pa: dict) -> tuple[int, str]:
     body_ok = np.isfinite(pair.get("body_rg", np.nan)) and pair["body_rg"] >= 1.0
     vol_ok = (not np.isfinite(pair.get("vol_rg", np.nan))) or pair["vol_rg"] >= 1.0
     oversold = np.isfinite(rsi) and rsi < 30
-
     parts = {
         "profitable": prof,
         "rsi": rsi,
         "oversold": oversold,
-        "near_floor_structure": near_floor,
-        "near_low_px_8pct": near_low_px,
-        "body_rg_2day_ge1": body_ok,
-        "vol_rg_ok": vol_ok,
+        "near_floor": near_floor,
+        "near_low_px": near_low_px,
+        "body_ok": body_ok,
+        "vol_ok": vol_ok,
     }
     if prof and oversold and (near_floor or near_low_px) and body_ok and vol_ok:
         return 1, f"SETUP_GOOD {parts}"
     if prof and oversold and (near_floor or near_low_px):
-        return 0, f"SETUP_PARTIAL {parts}"  # missing ratio confirmation
+        return 0, f"SETUP_PARTIAL {parts}"
     return 0, f"SETUP_NO {parts}"
+
+
+def _forward_extrema(
+    ohlc: pd.DataFrame | None,
+    asof: str,
+    entry: float,
+    max_bars: int = FORWARD_BARS,
+) -> dict:
+    """Max profit / max loss from asof close over next max_bars sessions (or until data ends).
+
+    max_profit = max(high / entry - 1) over (asof, asof+N]
+    max_loss   = min(low  / entry - 1) over (asof, asof+N]
+    """
+    empty = {
+        "max_profit_2m": np.nan,
+        "max_loss_2m": np.nan,
+        "fwd_bars": 0,
+        "fwd_last_date": None,
+        "fwd_window": "none",
+        "entry_px": entry,
+    }
+    if ohlc is None or ohlc.empty or not np.isfinite(entry) or entry <= 0:
+        return empty
+    df = ohlc.copy()
+    if not isinstance(df.index, pd.DatetimeIndex):
+        df.index = pd.to_datetime(df.index)
+    df.columns = [c.lower() for c in df.columns]
+    asof_ts = pd.Timestamp(asof)
+    fut = df[df.index > asof_ts].head(max_bars)
+    if fut.empty:
+        return {**empty, "fwd_window": "no_future_bars"}
+
+    high = fut["high"].astype(float) if "high" in fut.columns else fut["close"].astype(float)
+    low = fut["low"].astype(float) if "low" in fut.columns else fut["close"].astype(float)
+    mx = float(high.max() / entry - 1.0)
+    mn = float(low.min() / entry - 1.0)
+    last_d = fut.index[-1].date().isoformat()
+    first_d = fut.index[0].date().isoformat()
+    n = len(fut)
+    note = f"{first_d}→{last_d} ({n} sessions)"
+    if n < max_bars:
+        note += f" truncated_vs_{max_bars}"
+    return {
+        "max_profit_2m": mx,
+        "max_loss_2m": mn,
+        "fwd_bars": n,
+        "fwd_last_date": last_d,
+        "fwd_window": note,
+        "entry_px": entry,
+    }
 
 
 def _score_one(
     ticker: str,
     asof: str,
-    ohlc: pd.DataFrame | None,
+    ohlc_to_asof: pd.DataFrame | None,
+    ohlc_full: pd.DataFrame | None,
     row: pd.Series,
     prior_row,
     prior_date: str | None,
     form4_panel: pd.DataFrame | None,
 ) -> dict:
-    a = ab._part_a(ohlc)
+    a = ab._part_a(ohlc_to_asof)
     b = ab._part_b1(row, prior_row, prior_date)
     pa = ab._pass_a(a)
     pb = ab._pass_b1(b)
-    # strengthen A01 when profitable oversold (already +1 if RSI<=30; keep)
-    setup_flag, setup_val = _setup_flag(a, b, pa)
+    setup_flag, setup_val = _setup_flag(a, b)
     flags = {**pa, **pb, "A14_profitable_oversold_setup": setup_flag}
     f4 = _form4_asof(form4_panel, ticker, asof)
     flags["B15_form4_insider"] = f4["flag"]
     score = int(sum(int(v) for v in flags.values()))
     pair = (a.get("pair") or {}) if a.get("ok") else {}
+    entry = a.get("price") if a.get("ok") else ab._num(row.get("Price"))
+    fwd = _forward_extrema(ohlc_full, asof, float(entry) if np.isfinite(entry) else np.nan)
     return {
         "Ticker": ticker,
         "asof_date": asof,
@@ -155,7 +202,7 @@ def _score_one(
         "pair_day_a": pair.get("d_a"),
         "pair_day_b": pair.get("d_b"),
         "rsi": a.get("rsi") if a.get("ok") else np.nan,
-        "price": a.get("price") if a.get("ok") else ab._num(row.get("Price")),
+        "price": entry,
         "profitable": b.get("profitable"),
         "body_rg_2day": pair.get("body_rg"),
         "vol_rg_2day": pair.get("vol_rg"),
@@ -164,6 +211,11 @@ def _score_one(
         "form4_val": f4["val"],
         "form4_flag": f4["flag"],
         "export_prior": prior_date,
+        "max_profit_2m": fwd["max_profit_2m"],
+        "max_loss_2m": fwd["max_loss_2m"],
+        "fwd_bars": fwd["fwd_bars"],
+        "fwd_last_date": fwd["fwd_last_date"],
+        "fwd_window": fwd["fwd_window"],
         **{f"flag_{k}": flags[k] for k in flags},
     }
 
@@ -186,7 +238,6 @@ def run(
     if start is None:
         start = (pd.Timestamp(end) - pd.DateOffset(months=months)).date().isoformat()
 
-    # trading days from price store
     days = sorted(
         d.date().isoformat()
         for d in pd.to_datetime(store["date"]).unique()
@@ -201,9 +252,11 @@ def run(
     elif INS_PANEL_CSV.exists():
         form4 = pd.read_csv(INS_PANEL_CSV)
 
-    print(f"[backfill] {start} → {end}  days={len(days)}  exports={len(exports)}  ticker={ticker or 'LIQUID'}")
+    print(
+        f"[backfill] {start} → {end}  days={len(days)}  exports={len(exports)}  "
+        f"ticker={ticker or 'LIQUID'}  fwd_bars={FORWARD_BARS}"
+    )
 
-    # pre-group OHLC
     store = store.copy()
     store["date"] = pd.to_datetime(store["date"])
     store["ticker"] = store["ticker"].astype(str).str.upper()
@@ -224,19 +277,27 @@ def run(
                 if hit.empty:
                     continue
                 if "_mcap" not in hit.columns:
-                    hit["_mcap"] = hit["Market Cap"].map(ab._num) * 1e6 if "Market Cap" in hit.columns else 0.0
-                    hit["_adv"] = hit["Average Volume"].map(ab._num) * 1e3 if "Average Volume" in hit.columns else 0.0
+                    hit["_mcap"] = (
+                        hit["Market Cap"].map(ab._num) * 1e6 if "Market Cap" in hit.columns else 0.0
+                    )
+                    hit["_adv"] = (
+                        hit["Average Volume"].map(ab._num) * 1e3
+                        if "Average Volume" in hit.columns
+                        else 0.0
+                    )
             liquid = hit
 
         for _, row in liquid.iterrows():
             t = row["Ticker"]
             g = groups.get(t)
             if g is None:
-                ohlc = None
+                ohlc_to = None
+                ohlc_full = None
             else:
-                ohlc = g[g.index <= pd.Timestamp(asof)]
+                ohlc_to = g[g.index <= pd.Timestamp(asof)]
+                ohlc_full = g  # full history for forward extrema (future only used in label)
             prior_row, prior_d = _prior_export_row(exports, exp_date or asof, t)
-            rec = _score_one(t, asof, ohlc, row, prior_row, prior_d, form4)
+            rec = _score_one(t, asof, ohlc_to, ohlc_full, row, prior_row, prior_d, form4)
             rec["export_used"] = exp_date
             rows.append(rec)
 
@@ -250,17 +311,25 @@ def run(
     parquet = OUT_DIR / f"{stem}.parquet"
     csv = OUT_DIR / f"{stem}.csv"
     out.to_parquet(parquet, index=False)
-    # CSV can be huge for universe — write always for single ticker; sample for universe
     if ticker or len(out) < 500_000:
         out.to_csv(csv, index=False)
 
-    # compact MD summary
+    def pct(x):
+        if x is None or (isinstance(x, float) and not np.isfinite(x)):
+            return "n/a"
+        return f"{100.0 * float(x):+.2f}%"
+
     lines = [
         f"# AB PIT backfill — {start} → {end} — {tag}",
         "",
-        f"- Rows: **{len(out):,}** · days={out['asof_date'].nunique() if len(out) else 0} · tickers={out['Ticker'].nunique() if len(out) else 0}",
-        "- Point-in-time: OHLC≤D, export≤D, Form4 month≤prior month",
-        "- **A14 setup**: profitable + RSI<30 + near 3m lows + 2-day body/vol ratios ≥1 → GOOD",
+        f"- Rows: **{len(out):,}** · days={out['asof_date'].nunique() if len(out) else 0} · "
+        f"tickers={out['Ticker'].nunique() if len(out) else 0}",
+        "- Features: OHLC≤D, export≤D, Form4 month≤prior (no look-ahead)",
+        f"- **Forward check** (not in score): from asof **close**, next **{FORWARD_BARS}** sessions "
+        f"(~2 months) or until last available bar if shorter:",
+        "  - `max_profit_2m` = max(high/entry − 1)",
+        "  - `max_loss_2m` = min(low/entry − 1)",
+        "- **A14 setup**: profitable + RSI<30 + near 3m lows + 2-day ratios ≥1 → GOOD",
         "",
     ]
     if len(out):
@@ -268,32 +337,89 @@ def run(
             mean_score=("score", "mean"),
             n=("Ticker", "count"),
             n_setup=("setup_flag", lambda s: int((s > 0).sum())),
+            mean_max_profit=("max_profit_2m", "mean"),
+            mean_max_loss=("max_loss_2m", "mean"),
         )
-        lines += ["## Daily mean score (last 15)", "", "| date | mean_score | n | setups |", "|------|----------:|--:|-------:|"]
+        lines += [
+            "## Daily aggregates (last 15)",
+            "",
+            "| date | mean_score | n | setups | mean max_profit | mean max_loss |",
+            "|------|----------:|--:|-------:|----------------:|--------------:|",
+        ]
         for d, r in by.tail(15).iterrows():
-            lines.append(f"| {d} | {r['mean_score']:.2f} | {int(r['n'])} | {int(r['n_setup'])} |")
+            lines.append(
+                f"| {d} | {r['mean_score']:.2f} | {int(r['n'])} | {int(r['n_setup'])} | "
+                f"{pct(r['mean_max_profit'])} | {pct(r['mean_max_loss'])} |"
+            )
+
+        # score-bucket outcomes
+        tmp = out.dropna(subset=["max_profit_2m", "max_loss_2m"]).copy()
+        if len(tmp):
+            tmp["bucket"] = pd.cut(
+                tmp["score"],
+                bins=[-99, -1, 2, 5, 99],
+                labels=["≤-1", "0–2", "3–5", "≥6"],
+            )
+            g = tmp.groupby("bucket", observed=False).agg(
+                n=("score", "count"),
+                mean_profit=("max_profit_2m", "mean"),
+                mean_loss=("max_loss_2m", "mean"),
+                med_profit=("max_profit_2m", "median"),
+                med_loss=("max_loss_2m", "median"),
+            )
+            lines += [
+                "",
+                "## Outcomes by score bucket (forward 2m)",
+                "",
+                "| score | n | mean max_profit | median max_profit | mean max_loss | median max_loss |",
+                "|------|--:|----------------:|------------------:|--------------:|----------------:|",
+            ]
+            for bkt, r in g.iterrows():
+                lines.append(
+                    f"| {bkt} | {int(r['n'])} | {pct(r['mean_profit'])} | {pct(r['med_profit'])} | "
+                    f"{pct(r['mean_loss'])} | {pct(r['med_loss'])} |"
+                )
+
         if ticker:
-            lines += ["", f"## {ticker} path", "", "| date | score | RSI | setup | pair |", "|------|------:|----:|:-----:|------|"]
+            lines += [
+                "",
+                f"## {ticker} — every asof day",
+                "",
+                "| date | score | RSI | setup | max_profit_2m | max_loss_2m | fwd_window | pair |",
+                "|------|------:|----:|:-----:|--------------:|------------:|-----------|------|",
+            ]
             sub = out.sort_values("asof_date")
             for _, r in sub.iterrows():
                 lines.append(
-                    f"| {r['asof_date']} | {int(r['score']):+d} | {r['rsi']:.1f} | "
-                    f"{int(r['setup_flag'])} | {r.get('pair_day_a')}→{r.get('pair_day_b')} |"
+                    f"| {r['asof_date']} | {int(r['score']):+d} | "
+                    f"{r['rsi'] if np.isfinite(r.get('rsi', np.nan)) else float('nan'):.1f} | "
+                    f"{int(r['setup_flag'])} | {pct(r['max_profit_2m'])} | {pct(r['max_loss_2m'])} | "
+                    f"{r.get('fwd_window')} | {r.get('pair_day_a')}→{r.get('pair_day_b')} |"
                 )
-    lines += ["", f"- parquet: `{parquet.relative_to(ROOT)}`"]
+
+    lines += [
+        "",
+        f"- parquet: `{parquet.relative_to(ROOT)}`",
+        f"- CSV: `{csv.name}` (if written)",
+    ]
     md = OUT_DIR / f"{stem}.md"
     md.write_text("\n".join(lines), encoding="utf-8")
     (OUT_DIR / f"{stem}.json").write_text(
-        json.dumps({
-            "start": start,
-            "end": end,
-            "ticker": ticker,
-            "n_rows": int(len(out)),
-            "generated": datetime.now(ET).isoformat(),
-        }, indent=2),
+        json.dumps(
+            {
+                "start": start,
+                "end": end,
+                "ticker": ticker,
+                "n_rows": int(len(out)),
+                "forward_bars": FORWARD_BARS,
+                "generated": datetime.now(ET).isoformat(),
+            },
+            indent=2,
+        ),
         encoding="utf-8",
     )
     print(f"[backfill] wrote {parquet} rows={len(out):,}")
+    print(f"[backfill] wrote {md}")
     return out
 
 
