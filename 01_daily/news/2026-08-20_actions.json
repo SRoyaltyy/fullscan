@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T07:45:00.575393-04:00",
+  "generated_at": "2026-08-20T10:56:59.647420-04:00",
   "hours": 48,
   "raw_headlines": 300,
   "unique_events": 3,
@@ -34,39 +34,37 @@
       ],
       "evidence": [
         {
+          "title": "Could EQT (EQT) Be a Major Winner From LNG and Data Center Power Demand?",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/energy/articles/could-eqt-eqt-major-winner-125543750.html",
+          "published_at": "2026-08-20T12:55:43Z"
+        },
+        {
           "title": "Why Procter & Gamble Remains a Dividend Powerhouse After 70 Years",
           "source": "rss_yahoo_finance",
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-procter-gamble-remains-dividend-010918881.html",
           "published_at": "2026-08-19T01:09:18Z"
-        },
-        {
-          "title": "Applied Materials Rockets 98% in 2026: How Does AMAT Compare to Lam Research and KLA as AI Capex Powers Chip Gear Stocks?",
-          "source": "rss_yahoo_finance",
-          "url": "https://finance.yahoo.com/technology/articles/applied-materials-rockets-98-2026-192238941.html",
-          "published_at": "2026-08-18T19:22:38Z"
         }
       ]
     },
     {
       "event": "hormuz_energy_risk",
-      "headline_count": 5,
+      "headline_count": 2,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
         "us_relevance_why": "Global oil chokepoint the US market prices daily (WTI/Brent, XLE, fuel costs)",
         "channel": "risk",
         "geography": "global_priced",
-        "severity": "regime",
+        "severity": "session",
         "horizon": "1d-1w",
         "action_object": "sector_etf",
         "action_object_detail": "XLE long bias / airline basket short / optional SPX if risk-off",
         "polarity": "mixed",
         "polarity_why": "bullish upstream oil risk premium; bearish fuel-cost airlines",
-        "confidence": 0.85,
+        "confidence": 0.75,
         "drop_reason": "",
-        "notes": [
-          "headline_count=5 supports non-noise severity"
-        ]
+        "notes": []
       },
       "mechanism": "Hormuz/Red Sea transit risk → oil risk premium → upstream producers benefit if price holds; airlines and other fuel-intensive transport are cost-shocked. Geography is global oil, but US E&P still price to WTI/Brent. Not a pure-gas trade.",
       "amp_damp": "[+] real transit threat + oil up [−] rhetoric only, oil unchanged",
@@ -83,28 +81,16 @@
           "published_at": "Thu, 20 Aug 2026 08:43:17 +0000"
         },
         {
-          "title": "Oil Posts Modest Gains With Strait of Hormuz Situation Unclear",
-          "source": "rss_yahoo_finance",
-          "url": "https://www.wsj.com/finance/commodities-futures/oil-rises-amid-lack-of-progress-in-u-s-iran-talks-to-reopen-strait-of-hormuz-df55d861?siteid=yhoof2&yptr=yahoo",
-          "published_at": "2026-08-18T19:07:00Z"
-        },
-        {
-          "title": "Video shows Russian missile strike on Ukrainian capital",
-          "source": "rss_aljazeera_economy",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/8/20/video-shows-russian-missile-strike-on-ukrainian-capital?traffic_source=rss",
-          "published_at": "Thu, 20 Aug 2026 08:18:15 +0000"
-        },
-        {
-          "title": "At least 6 killed in multiple Russian missile strikes across Ukraine",
-          "source": "rss_aljazeera_economy",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/8/20/at-least-6-killed-in-multiple-russian-missile-strikes-across-ukraine?traffic_source=rss",
-          "published_at": "Thu, 20 Aug 2026 04:59:22 +0000"
+          "title": "Hypersonic missile startup Castelion raises $1 billion - SpaceNews",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxORWI2SGh1aUt0X2hXRFBPaG9qQk9seEVsa1hrMjVZclRIdnNNT08xZm1NYUl5QzdTNFZ2UlYzd2dIRllWV0RHekZTbmt4NEptdEN0aU9pWEJGWEctVnI3TzNsdWVMcGJNOXh4ai14VlVGazAzZGI0d1VRZjh5V1Vfa0RR?oc=5",
+          "published_at": "Wed, 19 Aug 2026 23:12:41 GMT"
         }
       ]
     },
     {
       "event": "fed_rate_path",
-      "headline_count": 6,
+      "headline_count": 8,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -120,7 +106,7 @@
         "confidence": 0.9,
         "drop_reason": "",
         "notes": [
-          "headline_count=6 supports non-noise severity",
+          "headline_count=8 supports non-noise severity",
           "rates polarity=hawkish"
         ]
       },
@@ -133,6 +119,42 @@
       ],
       "evidence": [
         {
+          "title": "Trump calls for lower interest rates as Fed officials watch inflation - USA Today",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTlZoeTJUZXZOQTg4VGlyOEVEVkh0ZE5seFRKcVp0NWN1UzNSbDVISUF6cC05c0I1bGNFV3h6MGs5eGFCdWVieDlKay1rcmxQaERnQTNBQTJyVWd3TFpkRjRPdnZIV3NUbmI5UTBWN3hnaFNuakVpRVpIT0dtRzEzbld0dHFpemZkQlZCSnBnSURQc0lSaVFOcHE3YmJwQlV2cFZVUm1RMGVZYjA5Z2FqU0pvZFc?oc=5",
+          "published_at": "Thu, 20 Aug 2026 13:53:00 GMT"
+        },
+        {
+          "title": "Fed officials say rate hike necessary if inflation doesn’t cool, minutes show - Baltimore Sun",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMW50ZnUwSWtURkF4Z0M1ekdZaW95bTZqOGk2NUlTR0FtbW83SGdqcHFmZE8wSHNUdkxPTmRDdzlnOFlLVVpkbFo3djZ0OUVoeEI5UkE4a2IwY0h0eFRReDNfMXZEREQxbzlWOF9vb1dFemlCMDNROFdCTzJwalNQUFljTnhNbmJBZUx3Rm5nN1NVQUxUMTdIazNKVml4SkY4WFI3aUpFSVY4OUNjM1Q1N3JmZFFOdUU?oc=5",
+          "published_at": "Thu, 20 Aug 2026 12:11:15 GMT"
+        },
+        {
+          "title": "Fed minutes show September rate hike still on the table - Reuters",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSVRUSV8yamU0TV9KS0l6VjdObHdFelZjd2QxY2ZhWXBJTjN5b3hRbzZGekxuNWVQUHFVSXNHdFFscG1LTTVMX2xKZkx2Nk1GNzRBY3E4RGlGcXpUSkVxUnRaQllXeFlrT2lFd0UycUpVV1Q2MHpYQzU2TFBaM3JYTW50dHFKTlJtd2Y3QzViUWpRRklDSU13VzlHUjRHMmRrSlFibHM3Rzlsa0NNcHh1Tm9XdG1qRTdZ?oc=5",
+          "published_at": "Thu, 20 Aug 2026 13:04:07 GMT"
+        },
+        {
+          "title": "Dow futures drop 400 points as Treasury yields reverse Bessent-driven decline, Walmart tumbles: Live updates - CNBC",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8teUxWQ1hsU240emRnZElJWExIWnE4UDEyV2xEWEVmZTZYVklUeWU3YlU5NUhaMGNOemdRdXJOOHFSb2ZVeXh6SmVjQUNLMmhzRHRrczZLYUhieVdxSGxPWEs0OFFyR2RoTlNaYnFUbWsxQ00tRjQ00gF8QVVfeXFMUEVDcDhJU2RrSk9PdEwySEhJTUZLdFdXNHFLeUhrRjJPLW1yTk05MmJpTTU2WndPbjlYeXJkVERRLU8tbHNHQnp0eVJwdWV3ZzBoejI2UVVmMEtic3psYS1vbWFwc0RHU2Z1VGRHdUQ2UEN1STl5cGJWQkVCTQ?oc=5",
+          "published_at": "Thu, 20 Aug 2026 13:16:12 GMT"
+        },
+        {
+          "title": "Stock Market Today: Futures Little Changed After Major Indexes Snap 3-Day Skids; Oil Prices, Treasury Yields, Bitcoin Rise; Walmart Stock Drops - Yahoo Finance",
+          "source": "rss_google_markets",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOd3NROVpzWGhkMFlqcHJWV1M3bGJxSURJZ1I5QXFqY2N4SWF0c2Jfa09NMUJCcVdWTGpFQnZZXzY4cHZjcS1zc3hyUnpDWXFCWkt5d3VkYkYyR3UzbnYzdWlOY2w3TkU5enlCRGFZNzBtSkFDeWtkbTQ0b3d4SklDb0FwZW1XQ1JrT1I0cmJXajdIQjEzZ0xrSktyZ3NiMzg?oc=5",
+          "published_at": "Thu, 20 Aug 2026 10:42:36 GMT"
+        },
+        {
+          "title": "Bond Market Drives Long-Term Treasury Yields to 19-Year High, Shrugging Off Hesitant Fed",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/markets/articles/bond-market-drives-long-term-040100921.html",
+          "published_at": "2026-08-19T04:01:00Z"
+        },
+        {
           "title": "Federal Reserve: AI, inflation risks and limited FX impact – MUFG - FXStreet",
           "source": "rss_google_macro",
           "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWFpHNGxZc0h1SkE4bXhBNldRZ3JkbjNZcXU4bFo4dTlFNjFvUVR5aFdaOWdabDY3YVBneDg0b2Nsc0d5QjZtZnhneU5VYWk5STZ3eTZHZWd0bF9JVjUtQXdfXzl0czg1aThiUXFwXzRkLWhaUUlBb2FfT2h6SUFPNmF4a2MzMjkwbXVVTHVZQWlTeFMzd2h3Z3dUbmRXOElrSUV1cVdTcw?oc=5",
@@ -143,30 +165,6 @@
           "source": "rss_yahoo_finance",
           "url": "https://finance.yahoo.com/economy/policy/articles/30-treasury-yield-touches-19-234522949.html",
           "published_at": "2026-08-18T23:45:22Z"
-        },
-        {
-          "title": "Federal Reserve: Divided hawks shape late-2026 hike risks – Societe Generale - FXStreet",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZlVmc0VEb2ZrZUd4MkhSN0J3MHdjSWhDT1V3cEV1WUFtLVdQLWRvUE9ydXdXMkhLdDJYWkdxeldENHVXTUJHSmR5TUFQLXhaNS1iajhYeVE2MVRYVkVkUkhWbmNHMVNrUkdhellUSEhFdUxmYmMyQUFrSWFBQmktRU5KNGQ0NHR6aDNxV2J4MDNZU2tGVG5BeW0wdU1Kak5iU3JZZVFuLWtENWpLQ1Jaby1IWUJTX28?oc=5",
-          "published_at": "Thu, 20 Aug 2026 08:33:48 GMT"
-        },
-        {
-          "title": "BofA Survey Shows Record Expectations for ‘No Landing’ as Fed Chair Kevin Warsh Preps for Jackson Hole Debut",
-          "source": "rss_yahoo_finance",
-          "url": "https://finance.yahoo.com/economy/policy/articles/bofa-survey-shows-record-expectations-210720440.html",
-          "published_at": "2026-08-18T21:07:20Z"
-        },
-        {
-          "title": "Latest Federal Reserve minutes show more support for rate hikes as inflation fears mount - nypost.com",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPenZvUUNSSTA5SkRUODJzV3NYa3NObWhqc2RQVi05Z2dvUERGTGN2cEVVbVFKeFNFS0VsellpNWhEZ0d1dmtINEFRVFlwRHZUT0I4Vl9aNW1lQVZDSzgzLVZPUXVsaldFa1cxM29jUlBnNlpIYmRKaWJGdmh6b0l5WUdUVl91NUpyRlBja0pmRXZWMy1LTTNxNXQ4MHh4UDltNDlQQTlyYVUxTGM3a3plbTlWakxZblp3eGJJYkM0WUpkVVRWN3NV?oc=5",
-          "published_at": "Wed, 19 Aug 2026 19:27:00 GMT"
-        },
-        {
-          "title": "Federal Reserve policymakers are becoming more hawkish - Financial Times",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBOQ1FNckJkZV95SGRZWUU1eG9iSy1paGJkbDRJT0liZVhwUUVvQ3VkdEdLeVNQamVKdkt6OVBaNnVzY2J0TENzWjIwVndpb25JclRqakFCTndUaFR6QVhBM1UzX041emRQc2REelpla3E?oc=5",
-          "published_at": "Thu, 20 Aug 2026 04:34:28 GMT"
         }
       ]
     }
@@ -194,7 +192,7 @@
       "role": "primary",
       "bucket": "oil_ep",
       "side": "buy",
-      "weight": 6.8,
+      "weight": 6.0,
       "tickers": [
         "COP",
         "EOG",
@@ -204,7 +202,7 @@
         "APA"
       ],
       "note": "oil risk premium → producer cash flow leverage",
-      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary buy `oil_ep` because oil risk premium → producer cash flow leverage.",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=session conf=0.75. Edge=primary buy `oil_ep` because oil risk premium → producer cash flow leverage.",
       "framework_polarity": "mixed"
     },
     {
@@ -212,13 +210,13 @@
       "role": "primary",
       "bucket": "oil_integrated",
       "side": "buy",
-      "weight": 4.76,
+      "weight": 4.2,
       "tickers": [
         "XOM",
         "CVX"
       ],
       "note": "US integrated oil",
-      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary buy `oil_integrated` because US integrated oil.",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=session conf=0.75. Edge=primary buy `oil_integrated` because US integrated oil.",
       "framework_polarity": "mixed"
     },
     {
@@ -226,7 +224,7 @@
       "role": "primary",
       "bucket": "airlines",
       "side": "sell",
-      "weight": 4.76,
+      "weight": 4.2,
       "tickers": [
         "DAL",
         "UAL",
@@ -235,7 +233,7 @@
         "ALK"
       ],
       "note": "jet fuel is a major cost; disruption raises fuel",
-      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=regime conf=0.85. Edge=primary sell `airlines` because jet fuel is a major cost; disruption raises fuel.",
+      "why": "Framework keep=keep channel=risk object=sector_etf:XLE long bias / airline basket short / optional SPX if risk-off horizon=1d-1w severity=session conf=0.75. Edge=primary sell `airlines` because jet fuel is a major cost; disruption raises fuel.",
       "framework_polarity": "mixed"
     },
     {
@@ -306,209 +304,209 @@
   "ticker_actions": [
     {
       "ticker": "COP",
-      "buy_score": 6.8,
+      "buy_score": 6.0,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 6.8,
+          "weight": 6.0,
           "bucket": "oil_ep"
         }
       ],
-      "net": 6.8,
+      "net": 6.0,
       "side": "buy",
       "size": "large"
     },
     {
       "ticker": "EOG",
-      "buy_score": 6.8,
+      "buy_score": 6.0,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 6.8,
+          "weight": 6.0,
           "bucket": "oil_ep"
         }
       ],
-      "net": 6.8,
+      "net": 6.0,
       "side": "buy",
       "size": "large"
     },
     {
       "ticker": "OXY",
-      "buy_score": 6.8,
+      "buy_score": 6.0,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 6.8,
+          "weight": 6.0,
           "bucket": "oil_ep"
         }
       ],
-      "net": 6.8,
+      "net": 6.0,
       "side": "buy",
       "size": "large"
     },
     {
       "ticker": "FANG",
-      "buy_score": 6.8,
+      "buy_score": 6.0,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 6.8,
+          "weight": 6.0,
           "bucket": "oil_ep"
         }
       ],
-      "net": 6.8,
+      "net": 6.0,
       "side": "buy",
       "size": "large"
     },
     {
       "ticker": "DVN",
-      "buy_score": 6.8,
+      "buy_score": 6.0,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 6.8,
+          "weight": 6.0,
           "bucket": "oil_ep"
         }
       ],
-      "net": 6.8,
+      "net": 6.0,
       "side": "buy",
       "size": "large"
     },
     {
       "ticker": "APA",
-      "buy_score": 6.8,
+      "buy_score": 6.0,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 6.8,
+          "weight": 6.0,
           "bucket": "oil_ep"
         }
       ],
-      "net": 6.8,
+      "net": 6.0,
       "side": "buy",
       "size": "large"
     },
     {
       "ticker": "XOM",
-      "buy_score": 4.76,
+      "buy_score": 4.2,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "oil_integrated"
         }
       ],
-      "net": 4.76,
+      "net": 4.2,
       "side": "buy",
       "size": "mega"
     },
     {
       "ticker": "CVX",
-      "buy_score": 4.76,
+      "buy_score": 4.2,
       "sell_score": 0.0,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "buy",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "oil_integrated"
         }
       ],
-      "net": 4.76,
+      "net": 4.2,
       "side": "buy",
       "size": "mega"
     },
     {
       "ticker": "DAL",
       "buy_score": 0.0,
-      "sell_score": 4.76,
+      "sell_score": 4.2,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "sell",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "airlines"
         }
       ],
-      "net": -4.76,
+      "net": -4.2,
       "side": "sell",
       "size": "large"
     },
     {
       "ticker": "UAL",
       "buy_score": 0.0,
-      "sell_score": 4.76,
+      "sell_score": 4.2,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "sell",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "airlines"
         }
       ],
-      "net": -4.76,
+      "net": -4.2,
       "side": "sell",
       "size": "large"
     },
     {
       "ticker": "AAL",
       "buy_score": 0.0,
-      "sell_score": 4.76,
+      "sell_score": 4.2,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "sell",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "airlines"
         }
       ],
-      "net": -4.76,
+      "net": -4.2,
       "side": "sell",
       "size": "mid"
     },
     {
       "ticker": "LUV",
       "buy_score": 0.0,
-      "sell_score": 4.76,
+      "sell_score": 4.2,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "sell",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "airlines"
         }
       ],
-      "net": -4.76,
+      "net": -4.2,
       "side": "sell",
       "size": "large"
     },
     {
       "ticker": "ALK",
       "buy_score": 0.0,
-      "sell_score": 4.76,
+      "sell_score": 4.2,
       "events": [
         {
           "event": "hormuz_energy_risk",
           "side": "sell",
-          "weight": 4.76,
+          "weight": 4.2,
           "bucket": "airlines"
         }
       ],
-      "net": -4.76,
+      "net": -4.2,
       "side": "sell",
       "size": "mid"
     },
