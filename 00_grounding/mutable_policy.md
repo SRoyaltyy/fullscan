@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-08-19
+updated: 2026-08-20
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,11 +9,11 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-08-19**. Promoted: 12. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-08-20**. Promoted: 1. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 64% (9/14)
+- **general**: 60% (9/15)
 - **sector:Basic Materials**: 57% (4/7)
 - **sector:Communication Services**: 43% (3/7)
 - **sector:Consumer Cyclical**: 86% (6/7)
@@ -118,6 +118,11 @@ corrected_behavior: "When the dominant catalyst is a prior-day macro print and B
 ---
 trigger_pattern: "A fresh same-morning hard-data macro miss (e.g., China IP/retail) is released while a stagflation/oil narrative has already dragged US stocks lower the prior session; US futures are only flat-to-mildly positive (ES within ±0.5%); the strongest positive component is a carried, LOW-confidence Fed-easing repricing from the prior week; and there is no fresh index-relevant mega-cap earnings catalyst. Asia rallies but is led by non-China-demand sectors (e.g., Korean chip rebound) and is misread as confirmation that the market embraces the bad-news-good channel."
 corrected_behavior: "When the fresh same-morning catalyst is a hard-data growth miss feeding an existing stagflation/down tape and the main positive is a carried repricing (not a fresh catalyst), score B1 at -2 for 
+
+### a-fresh-same-morning-negative-mega-cap-bellwether-earnings-m.md
+---
+trigger_pattern: "A fresh same-morning negative mega-cap/bellwether earnings miss (Walmart-type) or hard-data macro miss coincides with an active geopolitical/oil supply shock (Hormuz-type, Brent up sharply), while US index futures are flat-to-mildly-negative (ES/NQ within ±0.5% and not confirming up) and the main positives are carried (prior-day Treasury-buyback yield relief, Asia/Kospi chip rebound, low-confidence dovish Fed repricing)."
+corrected_behavior: "When a fresh same-morning negative mega-cap/bellwether earnings miss or hard-data miss is present together with an active geopolitical/oil supply shock, and ES/NQ do not independently confirm up (net ≥ +0.5%), score B1 at -2 (or at least -1.5) for the negative cluster, B7 at -1 when oil is spiking, cap carried positives (B3 at +0
 
 ### a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md
 ---
@@ -479,10 +484,10 @@ corrected_behavior: "If gold/silver futures are green and USD is weakening, do n
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=9 losses=5
-- **loss 2026-08-17:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `general` — wins=9 losses=6
 - **win 2026-08-18:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-08-19:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-08-20:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `news` — wins=1 losses=0
 - **win news:** [news] Rank event families by 1d close, not ever-touch MFE.
