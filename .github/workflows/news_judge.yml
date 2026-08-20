@@ -1,0 +1,62 @@
+name: News Judge (LLM priority)
+
+on:
+  # After mechanical news_parse cron slots (those fire at :15 past 10/12/14 UTC)
+  schedule:
+    - cron: "25 10,12,14 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD of mechanical parse to judge (blank = latest)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-judge
+  cancel-in-progress: true
+
+jobs:
+  judge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary openai requests || true
+      - name: Run news judge
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          if [ -n "$DATE" ]; then
+            python -m src.run_news_judge --date "$DATE"
+          else
+            python -m src.run_news_judge
+          fi
+      - name: Show B1 inject
+        if: always()
+        run: |
+          ls -la 01_daily/news/*judge* 2>/dev/null || true
+          latest=$(ls -1t 01_daily/news/*_judge.md 2>/dev/null | head -1)
+          if [ -n "$latest" ]; then
+            echo "===== $latest ====="
+            head -120 "$latest"
+          fi
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/news/ 01_daily/_transcripts/ || true
+          git commit -m "auto: news judge" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
