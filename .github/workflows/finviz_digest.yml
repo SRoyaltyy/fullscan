@@ -1,0 +1,70 @@
+name: Finviz Daily Digest
+
+# Pulls AI Daily Digest column from latest Finviz export + live index
+# narratives (SPY/QQQ/DIA/IWM). Feeds news_judge and predictors so
+# elevated themes actually reach B1 / sector S1 instead of raw noise.
+
+on:
+  schedule:
+    # Just before news_parse slots (those fire at :15 past 10/12/14 UTC)
+    - cron: "5 10,12,14 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (default: today ET)"
+        required: false
+        default: ""
+      skip_scrape:
+        description: "true = export only, skip live index quote scrape"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: finviz-digest
+  cancel-in-progress: true
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml pandas requests || true
+      - name: Run Finviz Daily Digest
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          SKIP="${{ github.event.inputs.skip_scrape }}"
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$SKIP" = "true" ] && ARGS+=(--skip-scrape)
+          python -m src.finviz_digest "${ARGS[@]}"
+      - name: Preview
+        if: always()
+        run: |
+          ls -la 01_daily/news/*finviz* 2>/dev/null || true
+          latest=$(ls -1t 01_daily/news/*_finviz_digest.md 2>/dev/null | head -1)
+          if [ -n "$latest" ]; then
+            echo "===== $latest ====="
+            head -80 "$latest"
+          fi
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/news/ || true
+          git commit -m "auto: finviz daily digest" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main
