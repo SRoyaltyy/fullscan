@@ -1,1 +1,114 @@
-PLACEHOLDER
+name: Daily Orchestrator (pre-market guard)
+
+# Watches the critical pre-US-open workflows and re-dispatches any that
+# missed their cron or failed. GitHub schedule jitter + upstream search
+# blocks make events_daily especially unreliable; this is the safety net.
+#
+# Targets (predict-side only — outcome/reflect have their own windows):
+#   finviz_digest   ~10:05 / 12:05 / 14:05 UTC
+#   events_daily    ~10:43 UTC (most failure-prone)
+#   news_parse      10/12/14:15 UTC (weekdays)
+#   news_judge      10/12/14:25 UTC (weekdays)
+#   daily_pipeline  predict window ~11:34 UTC
+#   sector_daily    predict ~12:40 UTC (weekdays)
+#
+# Runs several times in the pre-market window so a single delayed cron
+# does not leave the day without inputs. Force=true re-dispatches all.
+
+on:
+  schedule:
+    # ~06:50 ET, ~07:50 ET, ~08:50 ET (catch early misses + late drift)
+    - cron: "50 10 * * 1-5"
+    - cron: "50 11 * * 1-5"
+    - cron: "50 12 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force re-dispatch even if a successful run already exists today"
+        required: false
+        default: "false"
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: daily-orchestrator
+  cancel-in-progress: false
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check + re-dispatch missing/failed daily workflows
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+        run: |
+          set -euo pipefail
+
+          # ET calendar date (predict day)
+          TODAY=$(TZ=America/New_York date +%F)
+          echo "Orchestrator date (ET): $TODAY  force=$FORCE"
+
+          # workflow file → (optional) workflow_dispatch inputs
+          # Only the predict-side stages; outcome/reflect have their own windows.
+          declare -A DISPATCH_INPUTS
+          DISPATCH_INPUTS[finviz_digest.yml]="{}"
+          DISPATCH_INPUTS[events_daily.yml]="{}"
+          DISPATCH_INPUTS[news_parse.yml]="{}"
+          DISPATCH_INPUTS[news_judge.yml]="{}"
+          DISPATCH_INPUTS[daily_pipeline.yml]='{"stage":"predict"}'
+          DISPATCH_INPUTS[sector_daily.yml]='{"stage":"predict"}'
+
+          for WF in "${!DISPATCH_INPUTS[@]}"; do
+            echo ""
+            echo "======== $WF ========"
+
+            # Recent runs (last ~2 days of activity is plenty)
+            RAW=$(gh api "repos/${{ github.repository }}/actions/workflows/$WF/runs?per_page=15" \
+              --jq '.workflow_runs[] | {id, status, conclusion, event, created_at, html_url}' || echo "")
+
+            if [ -z "$RAW" ]; then
+              echo "WARN: could not list runs for $WF — will attempt dispatch"
+              HAS_OK=""
+            else
+              # Did we already get a successful (or still-running) run whose
+              # created_at falls on TODAY in America/New_York?
+              HAS_OK=$(echo "$RAW" | jq -r --arg today "$TODAY" '
+                select(
+                  (.status == "in_progress" or .status == "queued" or .conclusion == "success")
+                  and (
+                    ((.created_at | fromdateiso8601 | strftime("%Y-%m-%d")) == $today)
+                    or (((.created_at | fromdateiso8601) + 3600*4) | strftime("%Y-%m-%d")) == $today
+                  )
+                ) | .id' | head -1)
+            fi
+
+            # Surface the most recent conclusion for logging
+            LATEST=$(echo "$RAW" | jq -s -r '.[0] // empty | "\(.status)/\(.conclusion // "-") @ \(.created_at) \(.html_url)"' 2>/dev/null || true)
+            echo "latest: ${LATEST:-none}"
+
+            if [ -n "$HAS_OK" ] && [ "$FORCE" != "true" ]; then
+              echo "OK — successful or active run already present for $TODAY (id=$HAS_OK). Skipping."
+              continue
+            fi
+
+            echo "MISSING or FAILED for $TODAY → dispatching workflow_dispatch"
+            case "$WF" in
+              daily_pipeline.yml)
+                gh workflow run "$WF" --ref main -f stage=predict
+                ;;
+              sector_daily.yml)
+                gh workflow run "$WF" --ref main -f stage=predict
+                ;;
+              *)
+                gh workflow run "$WF" --ref main
+                ;;
+            esac
+            echo "Dispatched $WF"
+          done
+
+          echo ""
+          echo "Orchestrator pass complete at $(date -u +%F_%H%M) UTC"
