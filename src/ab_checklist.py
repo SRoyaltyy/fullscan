@@ -4,6 +4,11 @@ A15 GOOD when ALL of:
   * 2-day body R:G > 1.4
   * red wick avg > 1.15 × green wick avg over last 5 sessions
   * max green body > max red body over last 5 sessions
+
+IMPORTANT: this file is a thin loader. It fetches the known-good implementation,
+patches A15, then execs it. When run as `python -m src.ab_checklist`, it MUST
+call main() explicitly — the exec'd source sees __name__ == 'src.ab_checklist',
+so its own `if __name__ == "__main__"` block never fires.
 """
 from __future__ import annotations
 
@@ -193,3 +198,10 @@ _g["__name__"] = "src.ab_checklist"
 _g["__package__"] = "src"
 _g["__file__"] = str(Path(__file__).resolve())
 exec(compile(_src, __file__, "exec"), _g)
+
+# The exec'd body defines main()/run() but its `if __name__ == "__main__"`
+# never fires because we forced __name__ = "src.ab_checklist" above.
+# Without this call, `python -m src.ab_checklist` is a no-op and leaves
+# whatever stale CSV is already on disk (often a 1-row AAPL ab_one output).
+if __name__ == "__main__":
+    main()  # noqa: F821  — injected by exec above

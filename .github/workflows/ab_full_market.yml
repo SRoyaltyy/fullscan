@@ -4,15 +4,13 @@ name: AB Full Market (checklist + peers + backfill)
 # Always runs the complete pipeline across every name that passes
 # Market Cap > 80M USD and ADV > 500k shares — no single-ticker default trap.
 #
-# Steps (same as One Button, universe-wide):
+# Steps:
 #   0) price_store bootstrap
 #   1) ab_checklist          (liquid gate ON)
 #   2) peer_rs + ab_enrich   (P01–P04 context)
 #   3) ab_backfill           (PIT 1d/3d/1w/2m green/red + score-bucket audit)
 #
 # Heavy: expect 1–6 hours depending on months / price coverage.
-# Note: do NOT run AB One Button with a single ticker on the same asof while this
-# is running — ab_one overwrites {asof}_ab_checklist.csv with a 1-row file.
 
 on:
   workflow_dispatch:
@@ -104,7 +102,7 @@ jobs:
           import pandas as pd
           df = pd.read_csv("$EXP", low_memory=False)
           print(f"export={ '$EXP' } rows={len(df):,} cols={len(df.columns)}")
-          print("sample tickers:", df.iloc[:5,0].tolist() if len(df) else [])
+          print("sample tickers:", df.iloc[:5, 0].tolist() if len(df) else [])
           PY
           else
             echo "WARN: $EXP missing — will use latest available"
@@ -117,7 +115,7 @@ jobs:
           set -euo pipefail
           DAYS="${{ inputs.bootstrap_days }}"
           DAYS="${DAYS:-900}"
-          echo "=== price_store bootstrap --days $DAYS (FULL UNIVERSE — not AAPL-only) ==="
+          echo "=== price_store bootstrap --days $DAYS (FULL UNIVERSE) ==="
           python -m src.price_store bootstrap --days "$DAYS"
           python -m src.price_store status || true
 
@@ -126,15 +124,19 @@ jobs:
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
-          echo "=== ab_checklist --date $ASOF  (liquid gate ON: mcap>80M USD, adv>500k) ==="
-          python -m src.ab_checklist --date "$ASOF" --top 30
           CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
+          # Drop stale single-ticker leftovers so a no-op checklist cannot pass
+          rm -f "$CSV" \
+                "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
+                "data/ab_checklist/${ASOF}_ab_checklist.md" \
+                "data/ab_checklist/${ASOF}_ab_checklist.json" || true
+          echo "=== ab_checklist --date $ASOF  (liquid gate ON) ==="
+          python -u -m src.ab_checklist --date "$ASOF" --top 30
           if [ ! -f "$CSV" ]; then
-            echo "ERROR: checklist CSV not written"
+            echo "ERROR: checklist CSV not written — ab_checklist main() did not run"
             ls -la data/ab_checklist/ || true
             exit 1
           fi
-          # Snapshot universe copy so a later single-ticker ab_one cannot erase evidence
           cp -f "$CSV" "data/ab_checklist/${ASOF}_ab_checklist_universe.csv"
           python - <<PY
           import pandas as pd
@@ -142,13 +144,13 @@ jobs:
           n = len(df)
           print(f"liquid_names={n:,}  score_range={df['score'].min():+d}..{df['score'].max():+d}")
           print(df.sort_values("score", ascending=False)[["Ticker","score","n_good","n_bad"]].head(20).to_string(index=False))
+          # Hard fail: real liquid universe is thousands; 1-row AAPL means loader no-op / stale CSV
           if n < 50:
-              print("WARNING: liquid universe is suspiciously small (<50).")
-              print("If you expected full market, check: (1) finviz export row count,")
-              print(" (2) whether ab_one overwrote this CSV after a prior full run,")
-              print(" (3) liquid gate logs above for mcap/ADV parse failures.")
-          else:
-              print(f"OK: full-market checklist has {n:,} liquid names")
+              raise SystemExit(
+                  f"FATAL: liquid universe only {n} names (expected ~2000+). "
+                  "ab_checklist did not rebuild the universe — check loader main() call."
+              )
+          print(f"OK: full-market checklist has {n:,} liquid names")
           PY
 
       - name: 2) Peer RS + industry/sector enrich (universe)
@@ -156,7 +158,6 @@ jobs:
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
-          # Prefer universe snapshot if present
           if [ -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" ]; then
             cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
                   "data/ab_checklist/${ASOF}_ab_checklist.csv"
@@ -172,11 +173,12 @@ jobs:
           from pathlib import Path
           import pandas as pd
           p = Path("data/ab_checklist/${ASOF}_ab_checklist_enriched.csv")
-          if p.exists():
-              df = pd.read_csv(p)
-              print(f"enriched_rows={len(df):,}")
-          else:
-              print("WARN: enriched CSV missing")
+          if not p.exists():
+              raise SystemExit("enriched CSV missing")
+          df = pd.read_csv(p)
+          print(f"enriched_rows={len(df):,}")
+          if len(df) < 50:
+              raise SystemExit(f"FATAL: enriched only {len(df)} rows — universe checklist still wrong")
           PY
 
       - name: 3) PIT backfill — liquid universe (1d/3d/1w/2m + pattern audit)
@@ -186,7 +188,6 @@ jobs:
           ASOF="${{ steps.meta.outputs.asof }}"
           M="${{ inputs.months }}"
           M="${M:-24}"
-          # Ensure universe checklist is the one backfill sees
           if [ -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" ]; then
             cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
                   "data/ab_checklist/${ASOF}_ab_checklist.csv"
