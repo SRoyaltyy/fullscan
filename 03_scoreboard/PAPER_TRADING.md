@@ -19,4 +19,4 @@ Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size
 | 1m_size | $9,774.07 | -2.26% | -0.56% | -1.52% | -2.56pp | $226.35 | 61 | 38.5% |
 | 1m_top | $9,753.55 | -2.46% | -0.62% | -1.94% | -2.62pp | $95.34 | 36 | 30.8% |
 
-Equity curves + positions: `dashboard/index.html`
+Live page: `dashboard/index.html` (equity + per-sleeve daily after-fee vs +2%/day + buy/sell blotter + existing stock-book backtest).

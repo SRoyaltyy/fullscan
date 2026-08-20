@@ -7,7 +7,7 @@ Structured tables also live in Supabase/Postgres via `DATABASE_URL`.
 `src/` **reads** `news` and `macro_indicators` only — it never writes the DB.
 `DATABASE_KEY` is unused.
 
-Dashboard: https://SRoyaltyy.github.io/fullscan/dashboard/
+Dashboard: https://SRoyaltyy.github.io/fullscan/dashboard/ — paper equity, per-sleeve daily after-fee vs +2%/day, buy/sell blotter, and the existing stock-book backtest. Fills are signal-day close, not live.
 
 ## Two machines (do not collapse)
 
@@ -67,7 +67,7 @@ python -m src.weather
 python -m src.join
 python -m src.run_stock_book_all --date 2026-08-19 --skip-llm
 
-# Paper P&L (after Futubull fees) — rebuild scoreboard from saved curve
+# Paper P&L (after Futubull fees) — rebuild scoreboard + dashboard from saved curve
 python -m src.paper_trade --from-store
 ```
 

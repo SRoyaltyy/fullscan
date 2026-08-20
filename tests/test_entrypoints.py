@@ -349,6 +349,40 @@ class ImportSmokeTests(unittest.TestCase):
         self.assertEqual(stats[0]["last_day_after_fee_pct"], 0.74)  # 10275/10200-1
         self.assertEqual(stats[0]["vs_2pct_gap"], -1.31)
 
+    def test_dashboard_loads_existing_blotter_and_backtest(self) -> None:
+        import json
+        from src.paper_trade import (
+            _DASH_TEMPLATE,
+            load_backtest_summary,
+            load_trades,
+        )
+
+        trades = load_trades()
+        self.assertGreaterEqual(len(trades), 50, "data/paper/trades.csv should already exist")
+        self.assertTrue(all(k in trades[0] for k in (
+            "date", "sleeve", "ticker", "side", "shares", "price", "fees", "realized_pnl"
+        )))
+        sides = {t["side"] for t in trades}
+        self.assertTrue({"buy", "sell"} <= sides)
+
+        bt = load_backtest_summary()
+        self.assertIsNotNone(bt)
+        self.assertIn("1d", bt["aggregate"])
+        dumped = json.dumps(bt)
+        self.assertNotIn("detail_buy", dumped)
+        self.assertNotIn("detail_sell", dumped)
+
+        for needle in (
+            'id="blotter"',
+            'id="blotterSleeve"',
+            'id="sleeveCards"',
+            'id="btAgg"',
+            "vs +2%/day",
+            "Buy / sell blotter",
+            "Stock-book backtest",
+        ):
+            self.assertIn(needle, _DASH_TEMPLATE)
+
     def test_industry_predict_members_is_callable(self) -> None:
         from src.industry_predict import members
 
