@@ -47,6 +47,7 @@ python -m unittest tests.test_entrypoints -v
 # Predict / outcome / reflect (needs secrets)
 export DEEPSEEK_API_KEY=... FRED_API_KEY=... DATABASE_URL=...
 python -m src.run_predict --date 2026-08-19
+python -m src.run_sector_predict --date 2026-08-19 --sectors Technology
 python -m src.run_outcome --date 2026-08-19
 python -m src.run_reflect --date 2026-08-19
 
@@ -80,7 +81,7 @@ Critical weekday chain (orchestrator re-dispatches misses):
 | `15 10,12,14 * * 1-5` | `news_parse.yml` | Mechanical news parse |
 | `25 10,12,14 * * 1-5` | `news_judge.yml` | LLM news judge → B1 inject |
 | `34 11 * * 0-6` / `3 21 * * 0-6` | `daily_pipeline.yml` | General predict / outcome / reflect |
-| `40 12 * * 1-5` / `10 22 * * 1-5` | `sector_daily.yml` | 11-sector mirror |
+| `40 12 * * 1-5` / `10 22 * * 1-5` | `sector_daily.yml` | 11-sector mirror (same news_judge + finviz_digest inject as general predict) |
 | `50 10,11,12 * * 1-5` | `daily_orchestrator.yml` | Re-dispatch missed predict-side jobs |
 
 Evening (staggered so they do not all push `main` at 22:30 UTC):

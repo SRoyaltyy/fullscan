@@ -28,7 +28,7 @@ CUTOFF_DATE = "2026-06-22"          # e.g. "2026-03-15" — discard events after
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
-SEARXNG_URL          = os.environ.get("SEARXNG_URL", "")
+SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 6
 MODEL                = "deepseek-chat"
@@ -221,11 +221,7 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
-# Placeholder key lets the module import without secrets; live workflows set DEEPSEEK_API_KEY.
-client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY") or "missing",
-    base_url="https://api.deepseek.com",
-)
+client = OpenAI(api_key=os.environ.get("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
 
 def safe_create(**kwargs):
     for attempt in range(3):

@@ -34,6 +34,7 @@ CRITICAL_MODULES = [
     "src.ab_merge_extras",
     "src.hit_board",
     "src.run_predict",
+    "src.run_sector_predict",
     "src.run_outcome",
     "src.run_reflect",
     "src.run_news_judge",
@@ -66,6 +67,7 @@ HELP_MODULES = [
     "src.ab_enrich",
     "src.hit_board",
     "src.run_predict",
+    "src.run_sector_predict",
     "src.run_outcome",
     "src.run_reflect",
     "src.run_news_judge",
@@ -191,6 +193,16 @@ class EntrypointContractTests(unittest.TestCase):
                     continue
                 dead.append(f"{path.name}: __main__ does not call main()/run()/collect()")
         self.assertEqual(dead, [], "dead entrypoints:\n" + "\n".join(dead))
+
+    def test_sector_predict_wires_same_news_injects_as_general(self) -> None:
+        """General B1 predict injects news_judge + finviz_digest; sector must too."""
+        general = (ROOT / "src" / "run_predict.py").read_text(encoding="utf-8")
+        sector = (ROOT / "src" / "run_sector_predict.py").read_text(encoding="utf-8")
+        for src, label in ((general, "run_predict"), (sector, "run_sector_predict")):
+            self.assertIn("news_judge_block", src, f"{label} missing news_judge inject")
+            self.assertIn("finviz_digest_block", src, f"{label} missing finviz_digest inject")
+            self.assertIn("When NEWS JUDGE is present", src, f"{label} missing judge instruction")
+            self.assertIn("When FINVIZ DAILY DIGEST is present", src, f"{label} missing digest instruction")
 
     def test_industry_predict_imports_members_from_industry_map(self) -> None:
         src = (ROOT / "src" / "industry_predict.py").read_text(encoding="utf-8")
