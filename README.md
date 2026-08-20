@@ -103,11 +103,16 @@ Also live: collectors (`collect-*`, RSS/Reddit/NewsAPI/FRED/yfinance/SEC),
 Manual-only (kept): `ab_one`, `ab_one_button`, `ab_backfill`, `ab_enrich`,
 `catalyst_*`, `industry_predict`, `price_checklist`, `run_migration`.
 
-**Removed** (they could overwrite source on `main`): `restore_*`,
+Manual leftover workflows **remain in the tree** (not deleted): `restore_*`,
 `patch_ab_backfill`, `auto_fix_ab_backfill`, `apply_finviz_wiring`,
-`gemini-catcher`, `grok-test-harvest`. Root `grok_test_harvester.py` (Sheets
-experiment) is gone. `gemini_catcher.py` stays — `collect-catalyst` still
-uses `GEMINI_BROWSER_STATE`; it is not on the daily LLM or stock-book chain.
+`gemini-catcher`, `grok-test-harvest`. Do not dispatch them casually —
+`restore_*` / `auto_fix_ab_backfill` / `apply_finviz_wiring` can overwrite
+source on `main`. `restore_catalyst_analysis.yml` also runs if that YAML
+itself is pushed. `gemini_catcher.py` stays for `collect-catalyst`
+(`GEMINI_BROWSER_STATE`); it is not on the daily LLM or stock-book chain.
+
+Obvious junk removed only: `src/_ab_backfill.b64.p0`–`p3`, `src/_ab_src.p0`
+(PLACEHOLDER* split dumps).
 
 New: `smoke.yml` runs entrypoint tests on pull requests only.
 
@@ -124,7 +129,7 @@ data/             live bot CSVs the Actions still publish; see .gitignore
 .github/workflows live Actions
 ```
 
-**No longer committed** (still generated locally; last copies stay in git until a later cleanup, history is not rewritten):
+**Future growth (gitignore only — current tracked files were not purged):**
 
 | Path | Why | Workflows that used to add them |
 |---|---|---|

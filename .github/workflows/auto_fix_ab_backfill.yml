@@ -1,0 +1,50 @@
+name: Auto-fix ab_backfill MD + E/R
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/FORCE_AB_BACKFILL_RESTORE"
+      - "scripts/FORCE_AB_BACKFILL_ER"
+      - ".github/workflows/auto_fix_ab_backfill.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore good base + MD colors + E/R
+        run: |
+          set -euo pipefail
+          GOOD=d1feedb21738eba35b87fd9cfb274fdd265cb2d3
+          git show "$GOOD:src/ab_backfill.py" > src/ab_backfill.py
+          echo "base=$(wc -c < src/ab_backfill.py)"
+          # drop broken loader payloads if present
+          rm -f src/_ab_er.p* src/_ab_bf.p* src/_ab_backfill.b64* || true
+          python3 scripts/patch_ab_backfill_md_colors.py
+          python3 scripts/patch_ab_backfill_er.py
+          python3 -m py_compile src/ab_backfill.py
+          echo "final=$(wc -c < src/ab_backfill.py)"
+          grep -n "event_markers\|flag_E\|_er_chip\|Sector source\|Peer lead" src/ab_backfill.py | head -20
+
+      - name: Commit
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/ab_backfill.py scripts/patch_ab_backfill_er.py scripts/patch_ab_backfill_md_colors.py
+          git add -u src/_ab_er.p* src/_ab_bf.p* src/_ab_backfill.b64* 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Already correct"
+            exit 0
+          fi
+          git commit -m "fix: ab_backfill colored MD + PIT E/R chart markers"
+          git pull --rebase origin main || true
+          git push origin HEAD:main

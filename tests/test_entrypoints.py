@@ -267,20 +267,23 @@ class EntrypointContractTests(unittest.TestCase):
         self.assertEqual(loaders, ["src/ab_checklist.py"], f"unexpected loaders: {loaders}")
         self.assertEqual(offenders, [], "loader contract failures:\n" + "\n".join(offenders))
 
-    def test_dead_leftovers_are_gone(self) -> None:
+    def test_placeholder_split_dumps_are_gone(self) -> None:
         banned = [
             ROOT / "src" / "_ab_backfill.b64.p0",
             ROOT / "src" / "_ab_backfill.b64.p1",
             ROOT / "src" / "_ab_backfill.b64.p2",
             ROOT / "src" / "_ab_backfill.b64.p3",
             ROOT / "src" / "_ab_src.p0",
-            ROOT / "grok_test_harvester.py",
         ]
         present = [str(p.relative_to(ROOT)) for p in banned if p.exists()]
-        self.assertEqual(present, [], f"leftover junk still on disk: {present}")
+        self.assertEqual(present, [], f"PLACEHOLDER split dumps still on disk: {present}")
         self.assertTrue(
             (ROOT / "gemini_catcher.py").exists(),
             "gemini_catcher.py is used by collect-catalyst — keep the module",
+        )
+        self.assertTrue(
+            (ROOT / ".github" / "workflows" / "restore_catalyst_analysis.yml").exists(),
+            "restore workflows stay in the tree (do not delete)",
         )
 
     def test_src_db_is_read_only(self) -> None:
