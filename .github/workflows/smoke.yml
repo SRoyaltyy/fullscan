@@ -27,10 +27,9 @@ jobs:
 
       - name: Install import deps
         run: |
-          # Smoke imports predict/sector/news/events modules; those pull
-          # deepseek_client → requests. Do not install the full
-          # requirements.txt (playwright / cloakbrowser / genai).
-          pip install pandas numpy pyarrow requests
+          # Import-time deps for CRITICAL_MODULES / HELP_MODULES only.
+          # Do not install the full requirements.txt (playwright / cloakbrowser / genai).
+          pip install pandas numpy pyarrow requests beautifulsoup4
 
       - name: Run entrypoint smoke tests
         run: python -m unittest tests.test_entrypoints -v
