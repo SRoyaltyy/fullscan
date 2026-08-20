@@ -1,0 +1,441 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-20T17:37:24.704207-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 5.19,
+      "delta_1d": -0.09,
+      "delta_1w": -0.05,
+      "delta_1m": 0.06
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 4.65,
+      "delta_1d": -0.06,
+      "delta_1w": -0.03,
+      "delta_1m": 0.02
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 2.35,
+      "delta_1d": -0.06,
+      "delta_1w": -0.07,
+      "delta_1m": -0.02
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 2.73,
+      "delta_1d": -0.02,
+      "delta_1w": 0.02,
+      "delta_1m": 0.04
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 3.62,
+      "delta_1d": -0.03,
+      "delta_1w": 0.0,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 0.225,
+      "delta_1d": -0.092,
+      "delta_1w": -0.225,
+      "delta_1m": -0.151
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 151.65,
+      "delta_1d": -58.55,
+      "delta_1w": -66.96,
+      "delta_1m": -83.71
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-20",
+      "current": 16.01,
+      "delta_1d": 1.12,
+      "delta_1w": 1.38
+    },
+    "vix3m": {
+      "date": "2026-08-20",
+      "current": 19.06,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.84
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-20",
+      "last": 86.21,
+      "pct_1d": 0.44
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-20",
+      "last": 93.15,
+      "pct_1d": 1.67
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-20",
+      "last": 4575.1,
+      "pct_1d": 1.91
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-20",
+      "pct_1d": 0.04,
+      "pct_1m": -1.87
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-20",
+      "last": 7667.75,
+      "pct_1d": -0.79
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-20",
+      "last": 29317.25,
+      "pct_1d": -0.66
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 65326.42,
+          "pct_1d": -3.16
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 25495.07,
+          "pct_1d": 0.09
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 3894.42,
+          "pct_1d": -2.4
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 6471.17,
+          "pct_1d": -5.8
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-19",
+          "last": 9053.8,
+          "pct_1d": -0.18
+        }
+      },
+      "composite_avg": -2.29
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-20",
+          "last": 10748.16,
+          "pct_1d": 0.04
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-20",
+          "last": 25983.04,
+          "pct_1d": -0.42
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-20",
+          "last": 8453.09,
+          "pct_1d": -0.57
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-20",
+          "last": 6422.06,
+          "pct_1d": -0.35
+        }
+      },
+      "composite_avg": -0.32
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.483,
+    "window": "2026-08-13..2026-08-20"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.0,
+    "label": "Neutral",
+    "note": "from Supabase macro_indicators as of 2026-08-20 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_business",
+        "title": "‘Rearranging deckchairs on the Titanic’: Bonds erase the impact of Treasury’s intervention - NBC News",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYk5HaF9CbFJDaHhhY2JrOVlfeC1nRXVRS3NqYm5UU2Q2YmFQdmhXeVBHYWlLSHV2bF80Nl80eWU1MHhSOUloUU1FSDBXN1ItYXRZa0dnM25keVVkWE0ySlVpcWZtWnBTZkV3bkZkNWc0S0NUZWs0WkFWVFo1QzVqZzgxdHVMOFlm?oc=5",
+        "published_at": "Thu, 20 Aug 2026 18:59:39 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Cboe Global Markets Inc. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObzFGTG1IRUdPWVNrVUxncEZ4WWwzcEZ4QnZqWGM2TmpOQWlub2ZwdHBpbnhfaGRLYVRRdUg3UGR0RTB4MnBpUF8ya1kyMUxDX0FmcHlGd1ZYRUpjdUhpdVdOdXBtblNFcVlmUjJUOVc0Umk0NWYzeG50UW9tOG9VRGQzd25URThnYVNpV19vejNqTWdqZ0dRYTZSYWE2UzZTYVBPWGR5RDBtZ1BtZkl4NFowbk9nM09icVhhMTQ1bjAyZmpQSEpRbEh0aEcyakZB?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Are Wall Street Analysts Bullish on Simon Property Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-bullish-simon-125205425.html",
+        "published_at": "2026-08-19T12:52:05Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Walmart Is Using Its $2.9B Tariff Refund to Benefit You - Newser",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYXNGVnE3TDVtV2JtLWppVDFUTTZWelNkR0hWLVBHd2NTQmszMHRVWXBSdjZQbTJlakVnWkNKazdXZXVRR29LTkUybncxSUZvbjNRUEJMUnhvcW1lcXJKbW5SUkJsUTF4dWstWmgwcGUxdUNrenVIdlA4eFdjN1l5bWhDTVVETTl3ZWJ6RXlGeDNJNlJ0c2kxRnZn?oc=5",
+        "published_at": "Thu, 20 Aug 2026 18:45:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today, Aug. 20: Webull Initially Surges 14%, Ends 2% Higher After Record Q2 Revenue and Earnings Beat - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNZkdtWFZrTUxlY0tMMnA1VXJ5MUpidWZhbjB3WmtSX1psdUdEMGkyWnJTSzdPazF3aER1V016alA1Qmtta1c4VlNUNWFZa0xDaXJrSjAzV0xuZm11bW1Ga1pUdV96R3dzbzJhME4tc2NYM2ljUXdsZzRKSGEwUGcxWGdwemdmdFdWWUpveXhaWFhuT3g1NWJFODg1Q1hNSUd1a0hqeW5GUFA4NnFoYnoycmMxc1B5WFRES3FadFhONmVTMk12eS1lRkRWUHlQNkJoZFBIRHBFUF96QUllbnNzVWhvclBxUGFZanprd2ZKUDgya2dGWG5tbG1CdUpxdw?oc=5",
+        "published_at": "Thu, 20 Aug 2026 21:11:15 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Deere & Co. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaVk3RVNBY3ZQOGRlY214d1hoM1k3NWRLVEg0MDlxVWVLeHM3MHFqR1ZzdENiMklsTjYxSWxYS2hRQTMxbDdsVEptZmdTMXU3TlJfSTlMaTBCbG1WM3lMazA5NEdDN3B3WmsxZUZIc3hETHVSYVkxcURsRDFuN0dmMVgya1hycnJPU0JqUVZQT3FieG9JWUZySGFGNlZQZUhWM1Z3Z1g2T3hUVnR6aTRBQWFBRmw2TUxfcTliNA?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Hundreds of Tibetans protest China’s ethnic unity law by shaving heads",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/20/hundreds-of-tibetans-protest-chinas-ethnic-unity-law-by-shaving-heads?traffic_source=rss",
+        "published_at": "Thu, 20 Aug 2026 20:32:13 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Do Wall Street Analysts Like Dover Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-dover-stock-133600053.html",
+        "published_at": "2026-08-19T13:36:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "RingCentral CFO Sells 3,437 Shares After Stock's 116% Rise",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/ringcentral-cfo-sells-3-437-131201521.html",
+        "published_at": "2026-08-19T13:12:01Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Why Treasury Secretary Bessent’s moves to calm the bond market haven’t worked so far - AP News",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcTFKeWNDNjZRdV9IUElSMUtWNnpmbExuUjFfM19VTDJ6emozODk1dGJoMGNHZk1rWkpiTmNkRjJ1Mll5d3Y1UzZzc2FqMG9oVmlwT2txUjlpY2VFRjdwTnVtNWt4QkROWXpNN3IwWTVQX1c5RzZXT3VTc3pNYWNpcDlmWWFoVUxrVDdzRjFtR2ZndGYtcEpCVTE3dw?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:25:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Where Is the AI Jobs Apocalypse? - The Free Press",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBoQlhEWUhuT0tIOW14Um5leTlUVEZaN1hPTm1oX2RMU3hRaDVHM095enNYbmlMeFduNDNwWF83TTFocE9taHN6SUVSX005NHp1bVFBcHhYZ2pqbzRxWTkzemVn?oc=5",
+        "published_at": "Wed, 19 Aug 2026 22:22:32 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today, Aug. 20: Walmart Stock Drops on Disappointing Comparable Sales Growth - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxONFZjX1lmT1RVY0RvRlFFQjZQdEwyMmJ0aDVObUFDbjV1SkFmd0xwX1hXWkFvaGZSOThNUG1IVUlhb28wNUNuS3dZQXowX2Q2M2xobzY0d0NFZjAycXlzVGlVNEx5Z18zV1Y1UUxqbFg3dUt5RmFPLXhrbDJzaWItRm9mWWlIUHk2dzYyaTdrZnBYREFUUFZFa1VKNWpGVDlYTE1qeTR6TnJoNk9oN2NwR1Z5Sjd4VlV2cF85V2Z1aFgxNGRHeDR4MmhHT3AxVkI0dzRpNzVtZV8tNEl5RnVlVw?oc=5",
+        "published_at": "Thu, 20 Aug 2026 21:14:28 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "NRG Energy Inc. stock underperforms Thursday when compared to competitors - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcVVQa01aU3YzTk5CYkdaLWItTVVLSERnWEJ2alFrSkRTM0VYcF9yb1VoNTlWRW9GWXFzZ2s3UG43dWhYYmdFQVYxTVF1UWFJRzRSRjJhRks0TU1wZFlieVpsc2ZpdldNZm5fcFd2X1ZHRy1MSUhYSV96dXp1ODdIcmZhWEdYQ0hwWDNGOXc5S2hXYnB0cVNWS0xuTzF5YVZqYjYxeVZfeUxtUW8wb1dudmNYUFJwaE1BdkZGbXBscDFRNDFSXzdEMHpBVF8?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Mosaic Co. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTVNvSVZlY1JXY0NpWU9SWkpoby1MU0hlNTAycjJZSHVSc1hjQVI4ellmSjR6NzFnVnRYTDhZQ054a3l6V0twdU1kbGNKRjV6Vkt0eEZ1b0J3Y3ozeUE1TlFuNmFXUU9ReDd0N3RPWEgyZDI5RmlfQWc2cU9iVmlXaGdwalNGbDVpNko0X3ZwbHdXMk96T2otX0pXS1kzemFMeW9jNUlWc201cnlIRWRHY1VGQXRoMjE0UmdjcWRB?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:30:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US pummels Cuban economy with new sanctions on mining, construction",
+        "url": "https://www.aljazeera.com/news/2026/8/20/us-pummels-cuban-economy-with-new-sanctions-on-mining-construction?traffic_source=rss",
+        "published_at": "Thu, 20 Aug 2026 20:37:25 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Landslide at illegal gold mine kills 13 people in Colombia",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/20/landslide-at-illegal-gold-mine-kills-13-people-in-colombia-2?traffic_source=rss",
+        "published_at": "Thu, 20 Aug 2026 20:36:51 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Wall Street Bullish or Bearish on CoStar Group Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bullish-bearish-costar-130528497.html",
+        "published_at": "2026-08-19T13:05:28Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why the S&P 500’s Path to 9,000 Runs Into Trouble in 2027",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/why-p-500-path-9-131251105.html",
+        "published_at": "2026-08-19T13:12:51Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Amentum (AMTM) Q3 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amentum-amtm-q3-2026-earnings-132204177.html",
+        "published_at": "2026-08-19T13:22:04Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Where Will Chipotle Mexican Grill's Stock Be in 5 Years?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/where-chipotle-mexican-grills-stock-131400656.html",
+        "published_at": "2026-08-19T13:14:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Pony AI Stock Gains Traction as Robotaxi Fleet Expands Globally",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/pony-ai-stock-gains-traction-131500596.html",
+        "published_at": "2026-08-19T13:15:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Woman, 68, Wants to Use Her Self-Directed IRA to Back Her Nephew's Startup—Here's What IRS Rules Say",
+        "url": "https://finance.yahoo.com/small-business/articles/woman-68-wants-her-self-131600787.html",
+        "published_at": "2026-08-19T13:16:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "The Genesis GV90 blows the bloody doors off what’s possible in EV design - The Verge",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxORGoyVUFuLVdTdFU3V2ZHVXZVWHdEaFp2ZGdNUVo2RE52c2d0ZFU4SVhMb1FJbTRPVV94Ym9oNEE0a2JMUlZSNTBrblRUVFlKeElvWlpYR0RHZVA5cEhVZ1FaTnlTa21WWkhwVFBvT3ZVb2xEYmxPQVFHTWFNUW1lLS1SalhGdDlYOGloU1JvOGNrWk1B?oc=5",
+        "published_at": "Thu, 20 Aug 2026 19:52:57 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Clear Eyes eye drops recalled nationwide over contamination risk, FDA says - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9wQWtCaUJaeXRvQ1lYZC0yLVl3ZnNfeGNDbzFXZTl1dWNzVjVHZUxCZFUwRVdEUlFnQXllME40Mkc0QU9RVVdlZVF1c2JvTHZTNmxvX3VNWG9tTlhTT19IelZjMk9RSWFUQXNXUTJDNzlJWDBCekV5ODFXdw?oc=5",
+        "published_at": "Thu, 20 Aug 2026 17:04:03 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "KB Home, Meritage Homes, and LGI Homes Shares Plummet, What You Need To Know - StockStory",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVkpmc1FTSDEwbk9TaHF2NkZvSk5KV1RfNFp3YWVQQldFLUZDWVJIRnBoOFZodFlGcmdaaTlCNlI3c05QcllLcFRpMEF4SmdzS1k4elRNdlYyUUtHU1Q4RmZQaHRIbDE4Zm5LNWRrRHBjSFliTGJNdnAtLU8tckNQS1dGUjgycnpXblZFRFdTZVp2X3RaeXpDN3d5VDdtQkJIRVdMcC1OMmpnWmJSQ1hCdGFnNG1JMml2OEprbkhCeWFpYmY2SjF1Q3l2OEQ?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:44:19 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Dow Jones Futures: Market Triggers Bearish Signal As Walmart, SpaceX, CrowdStrike Tumble - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTE82UjI2b0NfeUZEalU4LVdDWWNvNW1oVjd6Ri0zMm5iU3JsMzJFODNGc0phMG1tcEphYkpCTE9xc2VQQkV3WGZZM0tsWmlZbW9aVV83a2JQa0ZOU0w5dUJfdHo4U0UteHhpdmw1RmlGNGhFSzVyWVRFck84bVdsS2Jlek9Ta2hFQnhHLVNqMEg3M1Jwb2RyekFadkpLWW40bnJSbXQycG8xbUI0a0Z2aVM2VjN3b2FHOWRZeWQ4Wnl0NEM3X3F0SG9nUlY1Rkk?oc=5",
+        "published_at": "Thu, 20 Aug 2026 21:12:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Dow Sinks 703 Points as Treasury Yields Spike, Walmart Slumps: Stock Market Today - Kiplinger",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNEpJc0NnX3Yxa2RrelVseGpqUU1QYjlNbFlLSEVkQzFDc3A2MDdXSDJmM01CX1AyM3ZySHdjMUZPc19sN1ZMYTdfdU00WXM1Uzg2QnJQM3Z6VVllYVJXWTd0LUI0VXhNdTBKd2I2Vk9jbEtqLUlpYm5nMmJfdFFKRHVOYWlRMGJYMEdaNUZRNlJmMjFQZmp4R3RGd2F2RlZSR2wzVTNKclk3TEQyOVhjdjh3?oc=5",
+        "published_at": "Thu, 20 Aug 2026 20:10:17 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Pressure builds anew in the bond market as Walmart drags the US stock market lower - The Killeen Daily Herald",
+        "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPU2hQeXIzOUpIQUVwRW44enUtVVZ5dTFIcVpGRG9HRG9aS2dyY0FUaXVVS216ckV0NHdIZDdWWkpwTXFFaE5tb0FfUS1LSEd3eXFLTU1faTZFN3ppbGxsazJpQ0lIOFI1ci1mVzU0TXlXWTRVNjlxcVNCUGJhSGFuaUw4czNrQ0w0eVpzOVVNVE50cGZ2aFAxaDlHVjM4OVE5cVBXRlJsWllFdnNyaGhqZUNhQVFfTTl6dEp3cjh6NWIxeW55M282ZzhKdUh3dG9lRUxMTWlaUjB3bTduMzVxdXhaZHlXZXZtQ3piaVRnMncxRExFNUMw?oc=5",
+        "published_at": "Thu, 20 Aug 2026 18:32:38 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "China's New 'Superman' Robot Is A Back-Flipping, Record-Breaking Powerhouse - bgr.com",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWjBtVk9CNk1iMmpCRFd0TzdGOVcwNGVSLTh6dERSM0R6eENJaW5oZy0xaEJSR2J4LUM1NTI1VHNfN2p2azZDNk05OUF4MzhHeHNnWWUyZmxXZF9nRjFxRUZaYWRnT1djYjRjWFNuRzZnbWRCTi1JVENxcGtQRXBQaWxBaG5iVXVhM1E?oc=5",
+        "published_at": "Thu, 20 Aug 2026 12:45:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Bitcoin surges 12% in two days as Trump, crypto execs lead last ditch effort for Clarity Act - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYW5ydk13NmdWaS1wZXd0MC1KQnpxOUdGY3R6SFpYMDVIZFNfMW5RQTU2b1dfYXVtMDhiWERTMXdwdjlEQWl5V2dsSm00NE5pY2phS0I1R015QWJ3cEVHaG0wUjZXYU5oUm1LWFl2bVZuNmF2WUZRZlI5LUItQVZNdjF1X0VKeW50b2l4WG5SWWdEN25oajl0bi1qU0ZabEh2c1owQV9jSVDSAa4BQVVfeXFMT3lZRHR0SU5wSjZla2VFbldPbk04ejJ3UUJjLVNaUndRQlgyR2F0SnJsOXltSVV0NTVDemd6VzhyOTlidWNwUXp2WjctTkNRYS1rTjdRblRHcTdVQ05KNXVrdFM5Ulk1NjgtOC1lNWlobUp6NWhXNzNoNlBEWWpnUXVuSy0tTm05VDBIT0JaOTJ4X3BKaW5scUNQYUFIRTR1OG9TQzM5ZFYyUTFhWmln?oc=5",
+        "published_at": "Thu, 20 Aug 2026 13:06:30 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-20",
+      "open": 7690.49,
+      "high": 7699.96,
+      "low": 7639.01,
+      "close": 7641.16,
+      "pct_change": -0.87,
+      "prev_close": 7707.98,
+      "path": {
+        "shape": "trend down (closed near day low)",
+        "range_pct": 0.8,
+        "intraday_low_pct": -0.89,
+        "intraday_high_pct": -0.1,
+        "close_position_in_range": 0.04
+      }
+    },
+    "DOW": {
+      "date": "2026-08-20",
+      "open": 53381.22,
+      "high": 53381.22,
+      "low": 52754.9,
+      "close": 52759.21,
+      "pct_change": -1.32,
+      "prev_close": 53463.05,
+      "path": {
+        "shape": "trend down (closed near day low)",
+        "range_pct": 1.19,
+        "intraday_low_pct": -1.32,
+        "intraday_high_pct": -0.15,
+        "close_position_in_range": 0.01
+      }
+    },
+    "NDX": {
+      "date": "2026-08-20",
+      "open": 26211.52,
+      "high": 26263.47,
+      "low": 26023.12,
+      "close": 26067.17,
+      "pct_change": -1.0,
+      "prev_close": 26331.09,
+      "path": {
+        "shape": "trend down (closed near day low)",
+        "range_pct": 0.92,
+        "intraday_low_pct": -1.17,
+        "intraday_high_pct": -0.26,
+        "close_position_in_range": 0.18
+      }
+    }
+  }
+}
