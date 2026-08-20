@@ -2,13 +2,13 @@ name: AB Full Market (checklist + peers + backfill)
 
 # Full liquid-universe version of AB One Button.
 # Always runs the complete pipeline across every name that passes
-# Market Cap > $80M and ADV > 500k shares — no single-ticker default trap.
+# Market Cap > 80M USD and ADV > 500k shares — no single-ticker default trap.
 #
 # Steps (same as One Button, universe-wide):
 #   0) price_store bootstrap
 #   1) ab_checklist          (liquid gate ON)
 #   2) peer_rs + ab_enrich   (P01–P04 context)
-#   3) ab_backfill           (PIT 1d/3d/1w/2m 🟢🔴 + score-bucket audit)
+#   3) ab_backfill           (PIT 1d/3d/1w/2m green/red + score-bucket audit)
 #
 # Heavy: expect 1–6 hours depending on months / price coverage.
 
@@ -110,7 +110,7 @@ jobs:
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
-          echo "=== ab_checklist --date $ASOF  (liquid gate ON: mcap>$80M adv>500k) ==="
+          echo "=== ab_checklist --date $ASOF  (liquid gate ON: mcap>80M USD, adv>500k) ==="
           python -m src.ab_checklist --date "$ASOF" --top 30
           CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
           if [ ! -f "$CSV" ]; then
@@ -148,11 +148,9 @@ jobs:
           python -m src.ab_backfill --months "$M" --end "$ASOF"
           echo "==== backfill outputs ===="
           ls -lah data/ab_backfill/ | tail -20
-          # surface the pattern-audit section if present
           LATEST_MD=$(ls -1t data/ab_backfill/*universe*.md data/ab_backfill/*.md 2>/dev/null | head -1 || true)
           if [ -n "$LATEST_MD" ]; then
             echo "===== $LATEST_MD (audit tail) ====="
-            # print from Pattern correlation audit onward if present
             awk '/^## Pattern correlation audit/{p=1} p' "$LATEST_MD" | head -80 || head -60 "$LATEST_MD"
           fi
 
