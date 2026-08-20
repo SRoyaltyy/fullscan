@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "scripts/catalyst_b64/**"
       - ".github/workflows/restore_catalyst_analysis.yml"
 
 permissions:
@@ -18,48 +17,56 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Assemble catalyst_analysis.py from b64 parts (or git history)
+      - name: Restore from known-good commit + JSON save patch
         run: |
           set -euo pipefail
-          if ls scripts/catalyst_b64/part_*.b64 >/dev/null 2>&1; then
-            echo "Assembling from scripts/catalyst_b64/"
-            cat scripts/catalyst_b64/part_*.b64 | tr -d '\n' | base64 -d > collectors/catalyst_analysis.py
-          else
-            echo "Falling back to git history"
-            git show 7cbf1a9842e107957b6a2cdca5b4f7ed82c86c49:collectors/catalyst_analysis.py > collectors/catalyst_analysis.py
-            python3 << 'PY'
+          # Known-good full file (before accidental placeholder overwrite)
+          GOOD=7cbf1a9842e107957b6a2cdca5b4f7ed82c86c49
+          git show "$GOOD:collectors/catalyst_analysis.py" > collectors/catalyst_analysis.py
+          SIZE=$(wc -c < collectors/catalyst_analysis.py)
+          echo "restored bytes=$SIZE from $GOOD"
+          if [ "$SIZE" -lt 10000 ]; then
+            echo "ERROR: restore too small"
+            exit 1
+          fi
+          python3 << 'PY'
           from pathlib import Path
           p = Path("collectors/catalyst_analysis.py")
           text = p.read_text()
-          needle = '            grid = result.get("catalyst_grid", [])'
-          insert = '''            # Persist for catalyst_chart overlays
-            try:
-                from pathlib import Path as _P
-                from datetime import date as _date
-                out_dir = _P("data/catalyst")
-                out_dir.mkdir(parents=True, exist_ok=True)
-                stamp = _date.today().isoformat()
-                out_path = out_dir / f"{ticker.upper()}_{stamp}.json"
-                payload = dict(result)
-                payload["ticker"] = ticker.upper()
-                payload["generated_at"] = stamp
-                payload["cutoff_date"] = CUTOFF_DATE
-                out_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
-                print(f"Saved catalyst JSON -> {out_path}")
-            except Exception as _e:
-                print(f"  warn: could not save catalyst JSON: {_e}")
-            grid = result.get("catalyst_grid", [])'''
-          if "Saved catalyst JSON" not in text:
+          if "Saved catalyst JSON" in text:
+              print("JSON save already present")
+          else:
+              needle = '            grid = result.get("catalyst_grid", [])'
+              insert = (
+                  '            # Persist for catalyst_chart overlays\n'
+                  '            try:\n'
+                  '                from pathlib import Path as _P\n'
+                  '                from datetime import date as _date\n'
+                  '                out_dir = _P("data/catalyst")\n'
+                  '                out_dir.mkdir(parents=True, exist_ok=True)\n'
+                  '                stamp = _date.today().isoformat()\n'
+                  '                out_path = out_dir / f"{ticker.upper()}_{stamp}.json"\n'
+                  '                payload = dict(result)\n'
+                  '                payload["ticker"] = ticker.upper()\n'
+                  '                payload["generated_at"] = stamp\n'
+                  '                payload["cutoff_date"] = CUTOFF_DATE\n'
+                  '                out_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")\n'
+                  '                print(f"Saved catalyst JSON -> {out_path}")\n'
+                  '            except Exception as _e:\n'
+                  '                print(f"  warn: could not save catalyst JSON: {_e}")\n'
+                  '            grid = result.get("catalyst_grid", [])'
+              )
               pos = text.rfind(needle)
               if pos < 0:
-                  raise SystemExit("needle not found")
-              text = text[:pos] + insert + text[pos+len(needle):]
+                  raise SystemExit("needle not found for JSON save patch")
+              text = text[:pos] + insert + text[pos + len(needle):]
               p.write_text(text)
-          print("size", p.stat().st_size)
+              print("patched JSON save, size", p.stat().st_size)
+          head = p.read_text()[:80]
+          print("head:", repr(head))
+          assert "Catalyst Analysis Engine" in p.read_text()
           PY
-          fi
           wc -l collectors/catalyst_analysis.py
-          head -3 collectors/catalyst_analysis.py
           grep -n "Saved catalyst JSON\|Catalyst Analysis Engine" collectors/catalyst_analysis.py | head
 
       - name: Commit restore
