@@ -1,0 +1,187 @@
+name: Catalyst One Button (analyze + chart)
+
+# Single dispatch for catalyst backtest overlay:
+#   1) Run catalyst analysis for one ticker (company + macro events)
+#   2) Persist data/catalyst/{TICKER}_{date}.json
+#   3) Build interactive price chart with vertical lines + markers at event dates
+#
+# Catalyst search is independent of subsequent price moves — chart is an overlay only.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Ticker (e.g. BB, ALB)"
+        required: true
+        default: "BB"
+      cutoff_date:
+        description: "Backtest cutoff YYYY-MM-DD (blank = live / no cutoff)"
+        required: false
+        default: ""
+      chart_days:
+        description: "Price history calendar days for chart"
+        required: false
+        default: "400"
+      include_earnings:
+        description: "Also overlay E/R earnings+analyst markers on chart"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalyst-one-${{ github.event.inputs.ticker || 'x' }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system deps (Chromium for Gemini catcher)
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 \
+            libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 \
+            libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libxshmfence1 \
+            fonts-liberation xvfb
+
+      - name: Install Python deps
+        run: |
+          set -euo pipefail
+          pip install -r requirements.txt
+          pip install plotly yfinance pyarrow openpyxl
+
+      - name: CloakBrowser + virtual display
+        run: |
+          set -euo pipefail
+          python -m cloakbrowser install || true
+          Xvfb :99 -screen 0 1920x1080x24 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+
+      - name: Resolve inputs
+        id: meta
+        run: |
+          set -euo pipefail
+          T=$(echo "${{ inputs.ticker }}" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
+          C="${{ inputs.cutoff_date }}"
+          C="${C//+/-}"
+          DAYS="${{ inputs.chart_days }}"
+          DAYS="${DAYS:-400}"
+          echo "ticker=$T" >> "$GITHUB_OUTPUT"
+          echo "cutoff=$C" >> "$GITHUB_OUTPUT"
+          echo "days=$DAYS" >> "$GITHUB_OUTPUT"
+          echo "========================================"
+          echo "  CATALYST ONE BUTTON"
+          echo "  ticker=$T  cutoff=${C:-LIVE}  chart_days=$DAYS"
+          echo "========================================"
+
+      - name: 1) Patch ticker + cutoff into catalyst_analysis and run
+        env:
+          GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          set -euo pipefail
+          T="${{ steps.meta.outputs.ticker }}"
+          C="${{ steps.meta.outputs.cutoff }}"
+          # Override hardcoded TICKERS / CUTOFF_DATE at top of module
+          python3 << PY
+          from pathlib import Path
+          p = Path("collectors/catalyst_analysis.py")
+          text = p.read_text(encoding="utf-8")
+          import re
+          text2, n1 = re.subn(
+              r'^TICKERS\s*=\s*\[[^\]]*\]',
+              f'TICKERS = ["{ "$T" }"]',
+              text,
+              count=1,
+              flags=re.M,
+          )
+          if n1 != 1:
+              raise SystemExit(f"failed to patch TICKERS (n={n1})")
+          if "{ "$C" }":
+              text2, n2 = re.subn(
+                  r'^CUTOFF_DATE\s*=\s*["\'][^"\']*["\']',
+                  f'CUTOFF_DATE = "{ "$C" }"',
+                  text2,
+                  count=1,
+                  flags=re.M,
+              )
+          else:
+              text2, n2 = re.subn(
+                  r'^CUTOFF_DATE\s*=\s*["\'][^"\']*["\']',
+                  'CUTOFF_DATE = None',
+                  text2,
+                  count=1,
+                  flags=re.M,
+              )
+          if n2 != 1:
+              raise SystemExit(f"failed to patch CUTOFF_DATE (n={n2})")
+          p.write_text(text2, encoding="utf-8")
+          print(f"patched TICKERS=[\"{ "$T" }\"] CUTOFF_DATE={ "$C" or None!r}")
+          PY
+          echo "=== running catalyst analysis ==="
+          python -u -m collectors.catalyst_analysis
+          echo "=== catalyst JSON files ==="
+          ls -la data/catalyst/ 2>/dev/null || echo "(no data/catalyst yet)"
+
+      - name: 2) Price history for chart
+        run: |
+          set -euo pipefail
+          T="${{ steps.meta.outputs.ticker }}"
+          DAYS="${{ steps.meta.outputs.days }}"
+          echo "=== price_store bootstrap --days $DAYS --tickers $T ==="
+          python -m src.price_store bootstrap --days "$DAYS" --tickers "$T" || true
+
+      - name: 3) Interactive chart overlay
+        run: |
+          set -euo pipefail
+          T="${{ steps.meta.outputs.ticker }}"
+          DAYS="${{ steps.meta.outputs.days }}"
+          ARGS=("$T" --days "$DAYS")
+          if [ "${{ inputs.include_earnings }}" = "true" ]; then ARGS+=(--earnings); fi
+          # Prefer today's catalyst JSON if present
+          LATEST=$(ls -1t data/catalyst/${T}_*.json 2>/dev/null | head -1 || true)
+          if [ -n "$LATEST" ]; then
+            ARGS+=(--events "$LATEST")
+            echo "using events file: $LATEST"
+          fi
+          echo "=== python -m src.catalyst_chart ${ARGS[*]} ==="
+          python -m src.catalyst_chart "${ARGS[@]}"
+          ls -la data/charts/
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalyst-one-${{ steps.meta.outputs.ticker }}
+          path: |
+            data/catalyst/
+            data/charts/
+          if-no-files-found: warn
+
+      - name: Commit JSON + chart
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/catalyst/ data/charts/ data/prices/meta.json || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: catalyst one-button ${{ steps.meta.outputs.ticker }} cutoff=${{ steps.meta.outputs.cutoff }}"
+          git pull --rebase origin main || true
+          git push origin HEAD:main

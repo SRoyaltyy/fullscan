@@ -11,6 +11,8 @@ name: AB Full Market (checklist + peers + backfill)
 #   3) ab_backfill           (PIT 1d/3d/1w/2m green/red + score-bucket audit)
 #
 # Heavy: expect 1–6 hours depending on months / price coverage.
+# Note: do NOT run AB One Button with a single ticker on the same asof while this
+# is running — ab_one overwrites {asof}_ab_checklist.csv with a 1-row file.
 
 on:
   workflow_dispatch:
@@ -44,7 +46,6 @@ on:
         type: boolean
         default: false
   schedule:
-    # After US close — full liquid audit once on weekdays
     - cron: "30 22 * * 1-5"
 
 permissions:
@@ -53,6 +54,9 @@ permissions:
 concurrency:
   group: ab-full-market
   cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: "1"
 
 jobs:
   market:
@@ -90,11 +94,22 @@ jobs:
           echo "asof=$D" >> "$GITHUB_OUTPUT"
           echo "========================================"
           echo "  AB FULL MARKET"
-          echo "  asof=$D  mode=LIQUID_UNIVERSE"
+          echo "  asof=$D  mode=LIQUID_UNIVERSE (NOT single-ticker)"
           echo "  months=${{ inputs.months || '24' }}"
           echo "  bootstrap_days=${{ inputs.bootstrap_days || '900' }}"
           echo "========================================"
-          ls -la data/exports/finviz_????-??-??.csv 2>/dev/null | tail -5 || echo "(no exports yet)"
+          EXP="data/exports/finviz_${D}.csv"
+          if [ -f "$EXP" ]; then
+            python3 - <<PY
+          import pandas as pd
+          df = pd.read_csv("$EXP", low_memory=False)
+          print(f"export={ '$EXP' } rows={len(df):,} cols={len(df.columns)}")
+          print("sample tickers:", df.iloc[:5,0].tolist() if len(df) else [])
+          PY
+          else
+            echo "WARN: $EXP missing — will use latest available"
+            ls -la data/exports/finviz_????-??-??.csv 2>/dev/null | tail -5 || true
+          fi
 
       - name: 0) Price history (universe)
         if: ${{ github.event_name == 'schedule' || (inputs.skip_bootstrap != true && inputs.skip_bootstrap != 'true') }}
@@ -102,8 +117,9 @@ jobs:
           set -euo pipefail
           DAYS="${{ inputs.bootstrap_days }}"
           DAYS="${DAYS:-900}"
-          echo "=== price_store bootstrap --days $DAYS (full universe) ==="
+          echo "=== price_store bootstrap --days $DAYS (FULL UNIVERSE — not AAPL-only) ==="
           python -m src.price_store bootstrap --days "$DAYS"
+          python -m src.price_store status || true
 
       - name: 1) AB checklist — liquid universe
         if: ${{ github.event_name == 'schedule' || (inputs.skip_checklist != true && inputs.skip_checklist != 'true') }}
@@ -118,11 +134,21 @@ jobs:
             ls -la data/ab_checklist/ || true
             exit 1
           fi
+          # Snapshot universe copy so a later single-ticker ab_one cannot erase evidence
+          cp -f "$CSV" "data/ab_checklist/${ASOF}_ab_checklist_universe.csv"
           python - <<PY
           import pandas as pd
           df = pd.read_csv("$CSV")
-          print(f"liquid_names={len(df):,}  score_range={df['score'].min():+d}..{df['score'].max():+d}")
-          print(df.sort_values("score", ascending=False)[["Ticker","score","n_good","n_bad"]].head(15).to_string(index=False))
+          n = len(df)
+          print(f"liquid_names={n:,}  score_range={df['score'].min():+d}..{df['score'].max():+d}")
+          print(df.sort_values("score", ascending=False)[["Ticker","score","n_good","n_bad"]].head(20).to_string(index=False))
+          if n < 50:
+              print("WARNING: liquid universe is suspiciously small (<50).")
+              print("If you expected full market, check: (1) finviz export row count,")
+              print(" (2) whether ab_one overwrote this CSV after a prior full run,")
+              print(" (3) liquid gate logs above for mcap/ADV parse failures.")
+          else:
+              print(f"OK: full-market checklist has {n:,} liquid names")
           PY
 
       - name: 2) Peer RS + industry/sector enrich (universe)
@@ -130,12 +156,28 @@ jobs:
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
+          # Prefer universe snapshot if present
+          if [ -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" ]; then
+            cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
+                  "data/ab_checklist/${ASOF}_ab_checklist.csv"
+            echo "restored universe checklist before enrich"
+          fi
           echo "=== peer_rs --date $ASOF ==="
           python -m src.peer_rs --date "$ASOF" || true
           echo "=== ab_enrich --date $ASOF  (no --ticker → full checklist) ==="
           python -m src.ab_enrich --date "$ASOF"
           echo "==== enriched top ===="
           head -40 "data/ab_checklist/${ASOF}_ab_checklist_enriched.md" 2>/dev/null || true
+          python - <<PY
+          from pathlib import Path
+          import pandas as pd
+          p = Path("data/ab_checklist/${ASOF}_ab_checklist_enriched.csv")
+          if p.exists():
+              df = pd.read_csv(p)
+              print(f"enriched_rows={len(df):,}")
+          else:
+              print("WARN: enriched CSV missing")
+          PY
 
       - name: 3) PIT backfill — liquid universe (1d/3d/1w/2m + pattern audit)
         if: ${{ github.event_name == 'schedule' || (inputs.skip_backfill != true && inputs.skip_backfill != 'true') }}
@@ -144,8 +186,15 @@ jobs:
           ASOF="${{ steps.meta.outputs.asof }}"
           M="${{ inputs.months }}"
           M="${M:-24}"
+          # Ensure universe checklist is the one backfill sees
+          if [ -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" ]; then
+            cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
+                  "data/ab_checklist/${ASOF}_ab_checklist.csv"
+          fi
           echo "=== ab_backfill --months $M --end $ASOF  (no --ticker → liquid universe) ==="
-          python -m src.ab_backfill --months "$M" --end "$ASOF"
+          echo "NOTE: after the last asof day log, pattern-audit + parquet write can take"
+          echo "      several more minutes with no new lines — that is not a hang."
+          python -u -m src.ab_backfill --months "$M" --end "$ASOF"
           echo "==== backfill outputs ===="
           ls -lah data/ab_backfill/ | tail -20
           LATEST_MD=$(ls -1t data/ab_backfill/*universe*.md data/ab_backfill/*.md 2>/dev/null | head -1 || true)
