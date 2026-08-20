@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 
 from . import (compute_scores, config, deepseek_client, event_context,
                fetch_channel1, memory, scoreboard, snapshot)
+from .run_news_judge import inject_block as news_judge_block
 
 
 def main() -> None:
@@ -29,15 +30,24 @@ def main() -> None:
     fetch_channel1.save(ch1, date_str, "predict")
     ch1_md = fetch_channel1.to_markdown(ch1)
 
-    # 2. Assemble prompt: rubric + event scan + memory + channel 1
+    # 1b. Ranked news judge (LLM layer on mechanical parse) — preferred B1 input
+    nj = news_judge_block(date_str)
+    if not nj:
+        nj = news_judge_block()  # fall back to latest_judge.md
+
+    # 2. Assemble prompt: rubric + event scan + news judge + memory + channel 1
     with open(os.path.join(config.GROUNDING, "master_rubric.md"),
               encoding="utf-8") as fh:
         rubric = fh.read()
     user_msg = (f"TODAY: {date_str} (America/New_York)\n\n"
                 f"{event_context.block()}\n\n"
+                f"{nj}"
                 f"{memory.prediction_context()}\n\n{ch1_md}\n\n"
                 "Execute the full rubric now. Remember: use web_search for "
                 "ALL six Channel 2 categories before scoring.\n"
+                "When NEWS JUDGE is present, treat its ranked MACRO/SECTOR "
+                "lines as the primary B1 catalyst input; raw Channel 1 news "
+                "is secondary corroboration only.\n"
                 "In the SCORES block, also include these three lines:\n"
                 "GOOD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
                 "BAD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
@@ -101,12 +111,13 @@ def main() -> None:
         "leading_sum": decision["leading_sum"],
         "divergence_flagged": decision["divergence_flagged"],
         "horizon_calls": horizon_calls,
+        "news_judge_present": bool(nj),
     })
     scoreboard.save(board)
     print(f"[predict] {date_str}: {decision['predicted_direction']}/"
           f"{decision['predicted_magnitude_band']} "
           f"(total {decision['total_score']}, div={decision['divergence_flagged']}, "
-          f"horizons={len(horizon_calls)})"
+          f"horizons={len(horizon_calls)}, news_judge={'yes' if nj else 'no'})"
           f" -> {path}")
 
 
