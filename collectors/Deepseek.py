@@ -117,8 +117,9 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
+# Placeholder key lets the module import without secrets; live workflows set DEEPSEEK_API_KEY.
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
+    api_key=os.environ.get("DEEPSEEK_API_KEY") or "missing",
     base_url="https://api.deepseek.com",
 )
 
