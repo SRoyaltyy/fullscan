@@ -24,7 +24,7 @@ except ImportError:
     from src.websearch import search_results as _chain_search
 
 # ── Config ──────────────────────────────────────────────
-SEARXNG_URL          = os.environ["SEARXNG_URL"]
+SEARXNG_URL          = os.environ.get("SEARXNG_URL", "")
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 8          # simultaneous SearXNG requests
 SEARCH_DELAY         = 0.2        # between batches (if any)

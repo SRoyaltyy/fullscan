@@ -7,3 +7,16 @@ dist/
 build/
 .venv/
 venv/
+
+# Loader / one-shot AI restore leftovers (do not commit)
+src/_ab_checklist_cached.py
+src/_ab_backfill.b64*
+src/_ab_src.*
+*.b64
+scripts/_patch_*.b64
+scripts/FORCE_AB_BACKFILL_*
+
+# Runtime secrets written by experimental harvest/catcher scripts
+service_account.json
+gemini_browser_state.json
+*_browser_state.json

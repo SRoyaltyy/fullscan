@@ -28,7 +28,7 @@ CUTOFF_DATE = "2026-06-22"          # e.g. "2026-03-15" — discard events after
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
-SEARXNG_URL          = os.environ["SEARXNG_URL"]
+SEARXNG_URL          = os.environ.get("SEARXNG_URL", "")
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 6
 MODEL                = "deepseek-chat"

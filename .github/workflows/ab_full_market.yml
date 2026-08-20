@@ -43,6 +43,8 @@ on:
         type: boolean
         default: false
   schedule:
+    # Primary evening liquid-universe AB job. hit_board is 23:00;
+    # ab_full_scan is 05:00 UTC Tue–Sat. Do not move these back together.
     - cron: "30 22 * * 1-5"
 
 permissions:

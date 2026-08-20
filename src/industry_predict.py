@@ -21,7 +21,7 @@ import numpy as np
 import pandas as pd
 
 from . import config, db
-from .finviz_universe import members, load_export
+from .industry_map import members
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)

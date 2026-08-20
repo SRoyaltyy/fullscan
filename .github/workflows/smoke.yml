@@ -1,0 +1,33 @@
+name: Entrypoint smoke
+
+# PR/manual only — does not write bot outputs and does not push to main.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  entrypoints:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install import deps
+        run: |
+          pip install pandas numpy pyarrow
+
+      - name: Run entrypoint smoke tests
+        run: python -m unittest tests.test_entrypoints -v

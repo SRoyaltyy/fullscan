@@ -6,8 +6,9 @@ name: HIT Board (all dates)
 on:
   workflow_dispatch:
   schedule:
-    # After typical US session grade window (early HKT morning weekdays)
-    - cron: "30 22 * * 1-5"
+    # After sector_daily outcome/reflect (~22:10 UTC). Staggered off
+    # ab_full_market at 22:30 so three jobs do not push main at once.
+    - cron: "0 23 * * 1-5"
 
 permissions:
   contents: write
