@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T18:53:30.174899-04:00",
+  "generated_at": "2026-08-20T18:57:59.142940-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -19,17 +19,18 @@
     "2026-08-16",
     "2026-08-17",
     "2026-08-18",
-    "2026-08-19"
+    "2026-08-19",
+    "2026-08-20"
   ],
   "general": {
     "overall": {
-      "n_graded": 14,
-      "n_predicts": 14,
+      "n_graded": 15,
+      "n_predicts": 15,
       "dir_hits": 9,
-      "dir_hit_pct": 64.28571428571429,
+      "dir_hit_pct": 60.0,
       "mag_hits": 6,
-      "mag_n": 14,
-      "mag_hit_pct": 42.857142857142854,
+      "mag_n": 15,
+      "mag_hit_pct": 40.0,
       "n_pipeline_blank": 5,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -46,13 +47,13 @@
       ]
     },
     "legacy_all_graded": {
-      "n_graded": 17,
-      "n_predicts": 14,
+      "n_graded": 18,
+      "n_predicts": 15,
       "dir_hits": 9,
-      "dir_hit_pct": 52.94117647058823,
+      "dir_hit_pct": 50.0,
       "mag_hits": 6,
-      "mag_n": 17,
-      "mag_hit_pct": 35.294117647058826,
+      "mag_n": 18,
+      "mag_hit_pct": 33.333333333333336,
       "n_pipeline_blank": 5,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -275,6 +276,17 @@
         "total_score": -7.2,
         "actual_pct_change": 0.21,
         "actual_direction": "up",
+        "direction_hit": false,
+        "magnitude_hit": false
+      },
+      {
+        "date": "2026-08-20",
+        "has_predict": true,
+        "predicted_direction": "up",
+        "predicted_magnitude_band": "flat",
+        "total_score": 1.125,
+        "actual_pct_change": -0.87,
+        "actual_direction": "down",
         "direction_hit": false,
         "magnitude_hit": false
       }
@@ -567,6 +579,21 @@
       },
       {
         "date": "2026-08-19",
+        "n_graded": 0,
+        "n_predicts": 0,
+        "dir_hits": 0,
+        "dir_hit_pct": null,
+        "mag_hits": 0,
+        "mag_n": 0,
+        "mag_hit_pct": null,
+        "n_pipeline_blank": 0,
+        "pipeline_blank_dates": [],
+        "n_auto_miss_no_predict": 0,
+        "auto_miss_dates": [],
+        "n_sectors": 0
+      },
+      {
+        "date": "2026-08-20",
         "n_graded": 0,
         "n_predicts": 0,
         "dir_hits": 0,
@@ -1974,6 +2001,74 @@
         }
       },
       "2026-08-19": {
+        "Basic Materials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Communication Services": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Cyclical": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Defensive": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Energy": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Financial": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Healthcare": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Industrials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Real Estate": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Technology": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Utilities": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        }
+      },
+      "2026-08-20": {
         "Basic Materials": {
           "dir": null,
           "hit": null,
