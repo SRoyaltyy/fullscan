@@ -59,7 +59,21 @@ jobs:
           python -m src.ab_checklist "${ARGS[@]}"
           echo "=== outputs ==="
           ls -la data/ab_checklist/ || true
-          wc -l data/ab_checklist/*_ab_checklist.csv || true
+          CSV=$(ls -1t data/ab_checklist/*_ab_checklist.csv 2>/dev/null | head -1 || true)
+          if [ -z "$CSV" ]; then
+            echo "FATAL: ab_checklist wrote no CSV (entrypoint no-op?)"
+            exit 1
+          fi
+          python - <<PY
+          import pandas as pd
+          df = pd.read_csv("$CSV")
+          print(f"checklist_rows={len(df):,} file=$CSV")
+          if len(df) < 50:
+              raise SystemExit(
+                  f"FATAL: liquid universe only {len(df)} names (expected ~2000+). "
+                  "entrypoint may have no-op'd or export is stale."
+              )
+          PY
 
       - name: Upload artifact
         if: always()

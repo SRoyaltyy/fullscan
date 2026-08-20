@@ -6,7 +6,7 @@ DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 SEARXNG_URL = os.environ.get("SEARXNG_URL", "").rstrip("/")
 FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
 DATABASE_URL = os.environ.get("DATABASE_URL", "")
-DATABASE_KEY = os.environ.get("DATABASE_KEY", "")  # reserved (REST fallback)
+DATABASE_KEY = os.environ.get("DATABASE_KEY", "")  # unused; src/ never writes the DB
 
 # --- DeepSeek models (function-calling stages must use deepseek-chat;
 #     deepseek-reasoner does not support tools) ---

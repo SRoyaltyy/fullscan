@@ -88,7 +88,7 @@ jobs:
           set -euo pipefail
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add -f data/ab_backfill/ data/prices/ || true
+          git add -f data/ab_backfill/ data/prices/meta.json || true
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "chore: AB PIT backfill $(date -u +%F)"
           git pull --rebase origin main || true

@@ -29,6 +29,7 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           git add -A
+          bash scripts/unstage_growth_blobs.sh
           git commit -m "auto: monthly memory distillation [$(date -u +%F)]" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main

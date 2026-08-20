@@ -24,7 +24,7 @@ except ImportError:
     from src.websearch import search_results as _chain_search
 
 # ── Config ──────────────────────────────────────────────
-SEARXNG_URL          = os.environ["SEARXNG_URL"]
+SEARXNG_URL          = os.environ.get("SEARXNG_URL", "")
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 8          # simultaneous SearXNG requests
 SEARCH_DELAY         = 0.2        # between batches (if any)
@@ -117,8 +117,9 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
+# Placeholder key lets the module import without secrets; live workflows set DEEPSEEK_API_KEY.
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
+    api_key=os.environ.get("DEEPSEEK_API_KEY") or "missing",
     base_url="https://api.deepseek.com",
 )
 

@@ -33,10 +33,17 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "30 22 * * 1-5"
+    # After AB Full Market's 360-min window (22:30–04:30 UTC).
+    # Tue–Sat 05:00 UTC = 01:00 ET after each Mon–Fri session.
+    # Do not share 22:30 UTC with ab_full_market or hit_board (git race on main).
+    - cron: "0 5 * * 2-6"
 
 permissions:
   contents: write
+
+concurrency:
+  group: ab-full-scan
+  cancel-in-progress: false
 
 jobs:
   full:

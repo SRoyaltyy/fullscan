@@ -15,9 +15,15 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import compute_scores, compute_sector_scores, config, deepseek_client, fetch_channel1, scoreboard
+from .run_news_judge import inject_block as news_judge_block
 from .sector_engine import etf_relative_snapshot, search_query_bundle
 from .sector_memory import prediction_context, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, amp_damp_table, taxonomy_list, validate
+try:
+    from .finviz_digest import inject_block as finviz_digest_block
+except Exception:  # module may not exist on very old checkouts
+    def finviz_digest_block(*_a, **_k):
+        return ""
 
 
 def _slug(sector: str) -> str:
@@ -44,7 +50,8 @@ def _load_system_prompt(sector: str) -> str:
     return method + "\n\n" + specialized + appendix
 
 
-def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
+def run_one(sector: str, date_str: str, ch1_md: str,
+            news_judge: str = "", finviz_digest: str = "") -> dict:
     if not config.DEEPSEEK_API_KEY:
         raise SystemExit("DEEPSEEK_API_KEY not set")
 
@@ -56,6 +63,8 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
         f"TODAY: {date_str} (America/New_York)\n"
         f"SECTOR UNDER ANALYSIS (ONLY THIS ONE): {sector}\n"
         f"ETF TO GRADE LATER: {SECTOR_ETFS.get(sector)}\n\n"
+        f"{news_judge}"
+        f"{finviz_digest}"
         f"{prediction_context(sector)}\n\n"
         f"{ch1_md}\n\n"
         f"=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\n"
@@ -65,6 +74,13 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
         + "\n\nExecute the shared method + THIS sector layer now. "
           "Specialize S1 to the spine factors. "
           "MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block. "
+          "When NEWS JUDGE is present, treat its ranked MACRO/SECTOR "
+          "lines that apply to THIS sector as the primary S1/B1 catalyst "
+          "input; raw Channel 1 news is secondary corroboration only. "
+          "When FINVIZ DAILY DIGEST is present, treat its index narratives "
+          "and high-signal ticker digests as pre-validated elevated themes "
+          "— use them to reinforce or correct thin/noisy mechanical parses. "
+          "Do not invent a new scoring scheme; same SECTOR_SCORES block. "
           "In the SECTOR_SCORES block, also include these four "
           "multi-timeframe outlook lines for THIS sector's ETF "
           "(format dir:band:confidence):\n"
@@ -127,10 +143,13 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
         "sector": sector,
         "etf": SECTOR_ETFS.get(sector),
         "rubric": f"00_grounding/sectors/{slug}.md",
+        "news_judge_present": bool(news_judge),
     })
     scoreboard.save(board)
     print(f"[sector-predict] {sector}: {decision['predicted_direction']}/"
-          f"{decision['predicted_magnitude_band']} total={decision['total_score']} -> {path}")
+          f"{decision['predicted_magnitude_band']} total={decision['total_score']} "
+          f"news_judge={'yes' if news_judge else 'no'} "
+          f"finviz_digest={'yes' if finviz_digest else 'no'} -> {path}")
     return decision
 
 
@@ -165,9 +184,15 @@ def main() -> None:
                   "(unavailable this run — do not invent precise levels; "
                   "use web_search cautiously for macro and state uncertainty)\n")
 
+    # Same B1 injects as general predict (src.run_predict) — once per batch.
+    nj = news_judge_block(date_str) or news_judge_block()
+    fv = finviz_digest_block(date_str) or finviz_digest_block()
+    print(f"[sector-predict] news_judge={'yes' if nj else 'no'} "
+          f"finviz_digest={'yes' if fv else 'no'}")
+
     for sector in sectors:
         print(f"\n======== SECTOR PREDICT: {sector} ========\n")
-        run_one(sector, date_str, ch1_md)
+        run_one(sector, date_str, ch1_md, news_judge=nj, finviz_digest=fv)
 
 
 if __name__ == "__main__":

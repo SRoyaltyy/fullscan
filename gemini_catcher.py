@@ -29,8 +29,8 @@ def load_state():
 
 
 def _compact_prompt(text: str) -> str:
-    """Collapse whitespace to avoid extra paragraph gaps.
-    If you want a single‑line prompt, replace with:
+    r"""Collapse whitespace to avoid extra paragraph gaps.
+    If you want a single-line prompt, replace with:
         text = re.sub(r'\s+', ' ', text.strip())
     """
     text = text.strip()
