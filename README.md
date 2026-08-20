@@ -111,11 +111,21 @@ New: `smoke.yml` runs entrypoint tests on pull requests only.
 
 ```
 00_grounding/     rubrics, prompts, segment registry  (strategy — leave alone)
-01_daily/         bot predict/outcome/reflect artifacts
+01_daily/         bot predict/outcome/reflect markdown (not _transcripts/)
 02_lessons/       candidate / active / archive
 03_scoreboard/    HIT board + scoreboard.json
 src/              prediction + AB + news + sector engines
 collectors/       news / macro / SEC / Finviz / catalyst
-data/             Finviz exports, prices, AB outputs, paper book
+data/             live bot CSVs the Actions still publish; see .gitignore
 .github/workflows live Actions
 ```
+
+**No longer committed** (still generated locally; last copies stay in git until a later cleanup, history is not rewritten):
+
+| Path | Why | Workflows that used to add them |
+|---|---|---|
+| `01_daily/_transcripts/` | raw LLM JSON | `daily_pipeline` (`git add -A`), `sector_*`, `news_judge`, `events_daily` |
+| `data/prices/ohlc.parquet` | ~75MB OHLC store | `ab_full_market`, `ab_one_button`, `ab_backfill`, `price_checklist` |
+| `data/exports/finviz_YYYY-MM-DD.csv` | ~11MB/day Elite dumps | `label_weather`, `stock_book_all` |
+
+Rolling Finviz snapshot remains `data/finviz/latest.csv`. `git add -A` jobs run `scripts/unstage_growth_blobs.sh`. Dated join/universe/insider/checklist CSVs are gitignored for accidental adds; the stock-book / AB / insider jobs still `git add -f` the files they publish.

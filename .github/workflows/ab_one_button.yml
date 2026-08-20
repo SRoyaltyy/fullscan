@@ -181,7 +181,7 @@ jobs:
           set -euo pipefail
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add -f data/ab_checklist/ data/ab_backfill/ data/peers/ data/prices/ 01_daily/*peer_rs* || true
+          git add -f data/ab_checklist/ data/ab_backfill/ data/peers/ data/prices/meta.json 01_daily/*peer_rs* || true
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "chore: AB one-button ${{ steps.meta.outputs.asof }} ${{ steps.meta.outputs.ticker }}"
           git pull --rebase origin main || true

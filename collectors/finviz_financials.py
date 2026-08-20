@@ -368,6 +368,11 @@ def main():
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
     df.to_csv(archive_path, index=False)
     print(f"  Archived to {archive_path}", flush=True)
+    # Rolling snapshot committed to git; dated archives are gitignored.
+    latest_path = Path(__file__).resolve().parent.parent / "data" / "finviz" / "latest.csv"
+    latest_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(latest_path, index=False)
+    print(f"  Rolling snapshot {latest_path}", flush=True)
 
     count = store(conn, cur, df, snapshot_date)
     duration = time.time() - start_time

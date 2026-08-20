@@ -100,8 +100,14 @@ jobs:
           EXP="data/exports/finviz_${D}.csv"
           if [ ! -f "$EXP" ]; then
             LATEST=$(ls -1 data/exports/finviz_????-??-??.csv 2>/dev/null | sort | tail -1 || true)
+            if [ -z "$LATEST" ] && [ -f data/finviz/latest.csv ]; then
+              echo "WARN: no dated exports; using data/finviz/latest.csv"
+              mkdir -p data/exports
+              cp -f data/finviz/latest.csv "data/exports/finviz_${D}.csv"
+              LATEST="data/exports/finviz_${D}.csv"
+            fi
             if [ -z "$LATEST" ]; then
-              echo "FATAL: no finviz exports under data/exports/ — run collect-finviz / Finviz Digest first"
+              echo "FATAL: no finviz exports under data/exports/ and no data/finviz/latest.csv"
               exit 1
             fi
             echo "WARN: $EXP missing, falling back to $LATEST"
@@ -245,7 +251,7 @@ jobs:
           set -euo pipefail
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add -f data/ab_checklist/ data/ab_backfill/ data/peers/ data/prices/ 01_daily/*peer_rs* || true
+          git add -f data/ab_checklist/ data/ab_backfill/ data/peers/ data/prices/meta.json 01_daily/*peer_rs* || true
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "chore: AB full market ${{ steps.meta.outputs.asof }} (checklist+peers+backfill)"
           git pull --rebase origin main || true

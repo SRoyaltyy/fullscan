@@ -101,8 +101,9 @@ jobs:
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add \
-            data/universe data/exports data/join data/stock_book data/paper \
+          git add -f \
+            data/universe data/join data/stock_book data/paper \
+            data/finviz/latest.csv \
             01_daily/weather 01_daily/news 01_daily/general 01_daily/sectors \
             01_daily/*_universe.md 01_daily/*_match.md \
             01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \

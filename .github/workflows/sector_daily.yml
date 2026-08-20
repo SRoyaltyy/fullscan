@@ -139,7 +139,7 @@ jobs:
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ || true
+          git add 01_daily/sectors/ 02_lessons/ 03_scoreboard/ || true
           git commit -m "auto: sector daily ${{ steps.stage.outputs.plan }}" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main

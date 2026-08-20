@@ -276,6 +276,20 @@ class EntrypointContractTests(unittest.TestCase):
         for banned in ("INSERT ", "UPDATE ", "DELETE ", "TRUNCATE ", "DROP "):
             self.assertNotIn(banned, src.upper().replace("\n", " "))
 
+    def test_gitignore_covers_growth_blobs(self) -> None:
+        gi = (ROOT / ".gitignore").read_text(encoding="utf-8")
+        for needle in (
+            "01_daily/_transcripts/",
+            "data/prices/ohlc.parquet",
+            "data/exports/finviz_",
+        ):
+            self.assertIn(needle, gi)
+        unstage = ROOT / "scripts" / "unstage_growth_blobs.sh"
+        self.assertTrue(unstage.exists())
+        text = unstage.read_text(encoding="utf-8")
+        self.assertIn("_transcripts", text)
+        self.assertIn("ohlc.parquet", text)
+
 
 class ImportSmokeTests(unittest.TestCase):
     @classmethod

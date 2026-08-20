@@ -132,7 +132,7 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           # Price store always useful on main
-          git add -f data/prices/ 2>/dev/null || true
+          git add -f data/prices/meta.json 2>/dev/null || true
           # Latest single-day CSV only (not every backfill day)
           LATEST=$(ls -1 data/checklist/*_checklist.csv 2>/dev/null | sort | tail -1 || true)
           if [ -n "$LATEST" ]; then
