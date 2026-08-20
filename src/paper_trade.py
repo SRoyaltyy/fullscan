@@ -270,6 +270,50 @@ def sleeve_stats(sleeve: str, S: dict, prices: pd.DataFrame, capital: float) -> 
             "win_rate": round(100 * S["wins"] / S["closed"], 1) if S["closed"] else None}
 
 
+def attach_session_pnl(stats: list[dict], curve: pd.DataFrame,
+                       capital: float) -> int:
+    """Add after-fee daily / last-session % from the equity curve.
+
+    Daily after-fee = total return / N sessions (simple average, not CAGR).
+    Last day = close-to-close on the curve (already net of Futubull fees).
+    North-star 2%/day is display-only — this does not change sleeve logic.
+    """
+    if curve is None or curve.empty:
+        for s in stats:
+            s.setdefault("n_sessions", 0)
+            s.setdefault("daily_after_fee_pct", None)
+            s.setdefault("last_day_after_fee_pct", None)
+            s.setdefault("vs_2pct_gap", None)
+        return 0
+    c = curve.copy()
+    c["date"] = c["date"].astype(str).str.slice(0, 10)
+    dates = sorted(c["date"].unique())
+    n = len(dates)
+    for s in stats:
+        sub = c[c["sleeve"] == s["sleeve"]].sort_values("date")
+        if sub.empty:
+            s["n_sessions"] = n
+            s["daily_after_fee_pct"] = None
+            s["last_day_after_fee_pct"] = None
+            s["vs_2pct_gap"] = None
+            continue
+        eq_last = float(sub.iloc[-1]["equity"])
+        total = 100.0 * (eq_last / capital - 1.0)
+        s["return_pct"] = round(total, 2)
+        s["n_sessions"] = n
+        daily = round(total / n, 2) if n else None
+        s["daily_after_fee_pct"] = daily
+        if len(sub) >= 2:
+            eq_prev = float(sub.iloc[-2]["equity"])
+            s["last_day_after_fee_pct"] = (
+                round(100.0 * (eq_last / eq_prev - 1.0), 2) if eq_prev else None
+            )
+        else:
+            s["last_day_after_fee_pct"] = daily
+        s["vs_2pct_gap"] = round(daily - 2.0, 2) if daily is not None else None
+    return n
+
+
 def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                     prices: pd.DataFrame, date: str, capital: float,
                     fees: dict) -> None:
@@ -280,16 +324,21 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                               aggfunc="last").sort_index()
     series = {c: [None if (v != v) else v for v in pivot[c].tolist()]
               for c in pivot.columns}
+    n_sess = 0
+    if stats:
+        n_sess = int(stats[0].get("n_sessions") or 0)
     payload = {
         "generated": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "dates": [str(d.date()) for d in pivot.index],
         "series": series,
         "stats": stats,
         "capital": capital,
+        "n_sessions": n_sess,
+        "north_star_daily_pct": 2.0,
         "fees": {k: fees[k] for k in fees if not k.startswith("_")},
     }
     positions = []
-    px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
+    px = prices.iloc[-1] if prices is not None and len(prices) else pd.Series(dtype=float)
     for sleeve, S in st.items():
         for t, pos in S["pos"].items():
             cur = px.get(t)
@@ -307,24 +356,41 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
 
 def write_report(stats: list[dict], date: str, capital: float) -> None:
     SCOREBOARD.mkdir(parents=True, exist_ok=True)
+    n = int(stats[0]["n_sessions"]) if stats and stats[0].get("n_sessions") else 0
     L = [
         "# Paper trading — Futubull-fee simulation",
         "",
         f"As of **{date}** · ${capital:,.0f} starting capital per sleeve · "
-        "fees per `00_grounding/futubull_fees.json`",
+        "fees per `00_grounding/futubull_fees.json` · "
+        f"**{n} trading session(s)**",
+        "",
+        "All returns are **after Futubull fees**. "
+        "`Daily after-fee` = total return / N sessions (simple average, not CAGR). "
+        "`Last day` = close-to-close on the equity curve. "
+        "Owner north star is ~2%/day after fees — that is a target, not a result. "
+        "No sleeve is claimed to hit 2%.",
         "",
         "Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 "
         "per size bucket. Entries/exits at signal-day close; hold while the book "
         "keeps recommending.",
         "",
-        "| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Win rate |",
-        "|--------|--------|--------|------|----------|--------|-----------|--------------|----------|",
+        "| Sleeve | Equity | Total | Daily after-fee | Last day | vs +2%/day | Fees | Trades | Win rate |",
+        "|--------|--------|-------|-----------------|----------|------------|------|--------|----------|",
     ]
-    for s in stats:
+    ranked = sorted(stats, key=lambda s: (s.get("daily_after_fee_pct") is None,
+                                          -(s.get("daily_after_fee_pct") or 0)))
+    for s in ranked:
         wr = f"{s['win_rate']}%" if s["win_rate"] is not None else "—"
-        L.append(f"| {s['sleeve']} | ${s['equity']:,.2f} | {s['return_pct']:+.2f}% | "
-                 f"${s['cash']:,.2f} | {s['open']} | {s['trades']} | "
-                 f"${s['fees']:,.2f} | ${s['realized']:+,.2f} | {wr} |")
+        daily = s.get("daily_after_fee_pct")
+        last = s.get("last_day_after_fee_pct")
+        gap = s.get("vs_2pct_gap")
+        ds = f"{daily:+.2f}%" if daily is not None else "—"
+        ls = f"{last:+.2f}%" if last is not None else "—"
+        gs = f"{gap:+.2f}pp" if gap is not None else "—"
+        L.append(
+            f"| {s['sleeve']} | ${s['equity']:,.2f} | {s['return_pct']:+.2f}% | "
+            f"{ds} | {ls} | {gs} | ${s['fees']:,.2f} | {s['trades']} | {wr} |"
+        )
     L += ["", "Equity curves + positions: `dashboard/index.html`", ""]
     (SCOREBOARD / "PAPER_TRADING.md").write_text("\n".join(L), encoding="utf-8")
 
@@ -363,11 +429,62 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
                                           encoding="utf-8")
 
     stats = [sleeve_stats(s, st[s], prices, capital) for s in st]
+    attach_session_pnl(stats, curve, capital)
     last = books[-1][0]
     write_report(stats, last, capital)
     write_dashboard(curve, stats, st, prices, last, capital, fees)
+    _print_daily_summary(stats, last)
     print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades, "
           f"curves → dashboard/index.html, summary → 03_scoreboard/PAPER_TRADING.md")
+
+
+def run_from_store() -> None:
+    """Rebuild scoreboard + dashboard from saved curve/state (no yfinance)."""
+    fees = load_fees()
+    capital = float(fees["paper_account"]["starting_capital_per_sleeve"])
+    curve_path = PAPER_DIR / "equity_curve.csv"
+    state_path = PAPER_DIR / "state.json"
+    if not curve_path.exists() or not state_path.exists():
+        raise SystemExit("[paper] data/paper/equity_curve.csv + state.json required")
+    curve = pd.read_csv(curve_path)
+    st = json.loads(state_path.read_text(encoding="utf-8"))
+    last = str(curve["date"].astype(str).max())[:10]
+    last_rows = curve[curve["date"].astype(str).str.slice(0, 10) == last]
+    stats = []
+    for sleeve, S in st.items():
+        row = last_rows[last_rows["sleeve"] == sleeve]
+        equity = float(row["equity"].iloc[0]) if len(row) else capital
+        closed = S.get("closed") or 0
+        stats.append({
+            "sleeve": sleeve,
+            "equity": round(equity, 2),
+            "return_pct": round(100 * (equity / capital - 1), 2),
+            "cash": round(float(S.get("cash") or 0), 2),
+            "open": len(S.get("pos") or {}),
+            "trades": S.get("trades") or 0,
+            "fees": round(float(S.get("fees") or 0), 2),
+            "realized": round(float(S.get("realized") or 0), 2),
+            "win_rate": round(100 * S["wins"] / closed, 1) if closed else None,
+        })
+    attach_session_pnl(stats, curve, capital)
+    write_report(stats, last, capital)
+    write_dashboard(curve, stats, st, None, last, capital, fees)
+    _print_daily_summary(stats, last)
+    print("[paper] refreshed reports from data/paper/ (no resim)")
+
+
+def _print_daily_summary(stats: list[dict], date: str) -> None:
+    if not stats:
+        return
+    best = max(stats, key=lambda s: s.get("daily_after_fee_pct") if s.get("daily_after_fee_pct") is not None else -999)
+    n = best.get("n_sessions") or 0
+    print(
+        f"[paper] {date}: {n} session(s) after fees · "
+        f"best {best['sleeve']} total {best['return_pct']:+.2f}% "
+        f"daily {best.get('daily_after_fee_pct')}%/day "
+        f"last {best.get('last_day_after_fee_pct')}% "
+        f"(north star +2%/day, gap {best.get('vs_2pct_gap')}pp)"
+    )
 
 
 def main() -> None:
@@ -375,7 +492,12 @@ def main() -> None:
     ap.add_argument("--date", default=None)
     ap.add_argument("--top", type=int, default=10)
     ap.add_argument("--capital", type=float, default=None)
+    ap.add_argument("--from-store", action="store_true",
+                    help="Rebuild markdown/dashboard from data/paper/ (no yfinance)")
     args = ap.parse_args()
+    if args.from_store:
+        run_from_store()
+        return
     run(date=args.date, top_n=args.top, capital=args.capital)
 
 
@@ -418,18 +540,18 @@ const COLORS = ["#60a5fa","#34d399","#fbbf24","#f472b6","#a78bfa","#f87171","#22
 const keys = Object.keys(D.series);
 const hidden = new Set();
 document.getElementById('gen').textContent =
-  "Generated "+D.generated.slice(0,16).replace('T',' ')+" · "+D.dates.length+" trading day(s) · $"+
-  D.capital.toLocaleString()+" per sleeve · long-only, whole shares, signal-day close fills";
-// cards: best/worst/median sleeve + SPY
-const sorted=[...D.stats].sort((a,b)=>b.return_pct-a.return_pct);
-const cards=[["Best sleeve",sorted[0]],["Worst sleeve",sorted[sorted.length-1]]];
-const spy=D.series["SPY (benchmark)"]; 
-if(spy){const r=100*(spy[spy.length-1]/spy[0]-1);cards.push(["SPY benchmark",{sleeve:"SPY",return_pct:r.toFixed(2)}]);}
-const tot=D.stats.reduce((a,s)=>a+s.equity,0);
-cards.push(["Total equity",{sleeve:D.stats.length+" sleeves",return_pct:(100*(tot/(D.capital*D.stats.length)-1)).toFixed(2)}]);
+  "Generated "+D.generated.slice(0,16).replace('T',' ')+" · "+(D.n_sessions||D.dates.length)+" trading day(s) · $"+
+  D.capital.toLocaleString()+" per sleeve · after Futubull fees · north star +2%/day is a target, not a result";
+// cards: best/worst daily after-fee + SPY
+const sorted=[...D.stats].sort((a,b)=>(b.daily_after_fee_pct??-999)-(a.daily_after_fee_pct??-999));
+function cardVal(s, key){const v=s&&s[key];return (v==null||v==='')?'—':((v>=0?'+':'')+Number(v).toFixed(2));}
+const cards=[["Best daily after-fee",sorted[0]],["Worst daily after-fee",sorted[sorted.length-1]]];
+const spy=D.series["SPY (benchmark)"];
+if(spy&&spy.length){const r=100*(spy[spy.length-1]/spy[0]-1);const d=r/(D.dates.length||1);
+ cards.push(["SPY daily (no sleeve fees)",{sleeve:"SPY",daily_after_fee_pct:d}]);}
 document.getElementById('cards').innerHTML=cards.map(c=>{
-  const cls=c[1].return_pct>=0?'pos':'neg';
-  return `<div class="card"><span class="mut">${c[0]}</span><b>${c[1].sleeve}</b><span class="${cls}">${c[1].return_pct}%</span></div>`;}).join('');
+  const v=c[1].daily_after_fee_pct;const cls=v>=0?'pos':'neg';
+  return `<div class="card"><span class="mut">${c[0]}</span><b>${c[1].sleeve}</b><span class="${cls}">${cardVal(c[1],'daily_after_fee_pct')}%/day</span></div>`;}).join('');
 // legend
 const leg=document.getElementById('legend');
 keys.forEach((k,i)=>{const s=document.createElement('span');s.textContent=k;
@@ -460,11 +582,13 @@ function draw(){
 draw();addEventListener('resize',draw);
 // stats table
 document.getElementById('stats').innerHTML=
- "<tr><th>Sleeve</th><th>Equity</th><th>Return</th><th>Cash</th><th>Open</th><th>Trades</th><th>Fees</th><th>Realized P/L</th><th>Win rate</th></tr>"+
+ "<tr><th>Sleeve</th><th>Equity</th><th>Total</th><th>Daily after-fee</th><th>Last day</th><th>vs +2%/day</th><th>Fees</th><th>Trades</th><th>Win rate</th></tr>"+
  D.stats.map(s=>`<tr><td>${s.sleeve}</td><td>$${s.equity.toLocaleString()}</td>
-  <td class="${s.return_pct>=0?'pos':'neg'}">${s.return_pct}%</td><td>$${s.cash.toLocaleString()}</td>
-  <td>${s.open}</td><td>${s.trades}</td><td>$${s.fees.toLocaleString()}</td>
-  <td class="${s.realized>=0?'pos':'neg'}">$${s.realized.toLocaleString()}</td>
+  <td class="${s.return_pct>=0?'pos':'neg'}">${s.return_pct}%</td>
+  <td class="${(s.daily_after_fee_pct||0)>=0?'pos':'neg'}">${s.daily_after_fee_pct==null?'—':s.daily_after_fee_pct+'%/d'}</td>
+  <td class="${(s.last_day_after_fee_pct||0)>=0?'pos':'neg'}">${s.last_day_after_fee_pct==null?'—':s.last_day_after_fee_pct+'%'}</td>
+  <td>${s.vs_2pct_gap==null?'—':s.vs_2pct_gap+'pp'}</td>
+  <td>$${s.fees.toLocaleString()}</td><td>${s.trades}</td>
   <td>${s.win_rate==null?'—':s.win_rate+'%'}</td></tr>`).join('');
 // positions
 document.getElementById('pos').innerHTML=

@@ -66,6 +66,9 @@ python -m src.segments
 python -m src.weather
 python -m src.join
 python -m src.run_stock_book_all --date 2026-08-19 --skip-llm
+
+# Paper P&L (after Futubull fees) — rebuild scoreboard from saved curve
+python -m src.paper_trade --from-store
 ```
 
 Copy secrets from GitHub Actions — **never commit `.env` or keys**.

@@ -328,6 +328,24 @@ class ImportSmokeTests(unittest.TestCase):
                 missing.append(f"{name}: imported but has no main()/run()/collect()")
         self.assertEqual(missing, [], "import/entrypoint failures:\n" + "\n".join(missing))
 
+    def test_paper_daily_after_fee_is_total_over_sessions(self) -> None:
+        import pandas as pd
+        from src.paper_trade import attach_session_pnl
+
+        curve = pd.DataFrame([
+            {"date": "2026-08-13", "sleeve": "1d_top", "equity": 10000.0},
+            {"date": "2026-08-14", "sleeve": "1d_top", "equity": 10100.0},
+            {"date": "2026-08-17", "sleeve": "1d_top", "equity": 10200.0},
+            {"date": "2026-08-18", "sleeve": "1d_top", "equity": 10275.0},
+        ])
+        stats = [{"sleeve": "1d_top", "equity": 10275.0, "return_pct": 2.75}]
+        n = attach_session_pnl(stats, curve, 10000.0)
+        self.assertEqual(n, 4)
+        self.assertEqual(stats[0]["return_pct"], 2.75)
+        self.assertEqual(stats[0]["daily_after_fee_pct"], 0.69)  # 2.75 / 4
+        self.assertEqual(stats[0]["last_day_after_fee_pct"], 0.74)  # 10275/10200-1
+        self.assertEqual(stats[0]["vs_2pct_gap"], -1.31)
+
     def test_industry_predict_members_is_callable(self) -> None:
         from src.industry_predict import members
 
