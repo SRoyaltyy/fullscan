@@ -4,14 +4,18 @@ name: AB One Button (checklist + peers + backfill)
 #   1) Part A/B1 checklist (as-of) — single ticker BYPASSES liquid gate
 #   2) Peer RS + industry breadth + sector-board enrich
 #   3) PIT backfill with 1d/3d/1w/2m 🟢🔴 + pattern audit
+#
+# For FULL MARKET (all liquid names) use workflow:
+#   "AB Full Market (checklist + peers + backfill)"
+# Blank ticker here now correctly means full liquid (default cleared).
 
 on:
   workflow_dispatch:
     inputs:
       ticker:
-        description: "Ticker (recommended). Blank = full liquid (heavy, gate ON)"
+        description: "Ticker (e.g. BB). Leave EMPTY for full liquid universe (heavy)"
         required: false
-        default: "AAPL"
+        default: ""
       date:
         description: "As-of YYYY-MM-DD (blank = latest finviz export)"
         required: false
@@ -111,7 +115,6 @@ jobs:
             python -m src.ab_checklist --date "$ASOF"
           fi
           ls -la data/ab_checklist/ | tail
-          # show whether ticker is in the written checklist
           if [ -n "$T" ]; then
             python - <<PY
           import pandas as pd
