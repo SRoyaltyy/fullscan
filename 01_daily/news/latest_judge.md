@@ -2,182 +2,191 @@
 
 ### IMPORTANT NEWS (my ranking)
 
-1.  **30-Year Treasury Yield Touches a 19-Year High as US Debt Approaches $40 Trillion** — This is the dominant macro driver; a long-end yield spike at multi-decade highs is a regime-level repricing that pressures long-duration equities and supports value/financials rotation.
-2.  **US Stock Index Futures Climb As Yields Cool Off Amid Treasury Support** — This is the key offsetting signal; Treasury support/buybacks cooling yields is a direct rates catalyst that can flip the tape risk-on and support cyclicals/small-caps.
-3.  **BofA Survey Shows Record Expectations for 'No Landing' as Fed Chair Kevin Warsh Preps for Jackson Hole Debut** — This sets the macro narrative for the session and next week; a "no landing" regime with a hawkish Fed chair is a critical context for rate-sensitive and growth sectors.
-4.  **Why The Direxion Daily Semiconductor Bull 3X ETF Plunged Nearly 20% Today** — This is a high-signal sector event; a 20% drop in a leveraged semi ETF signals a major de-risking in the AI/chip trade, likely due to the AVGO/Marvell competitive concerns and broader yield pressure.
-5.  **Adobe shares fall in after-hours trading as Figma’s earnings highlight surging AI costs and trigger a broader software-sector selloff.** — This is a sector_fundamental catalyst; a software selloff on AI cost concerns is a direct negative for the crowded SaaS basket and can spill over into the broader tech trade.
-6.  **Marvell-Google AI chip agreement raises competitive concerns for Broadcom's data-center chip business** — This is a sector_fundamental catalyst; a shift in the AI chip competitive landscape is a major driver for the semiconductor sector and can move the entire AI complex.
-7.  **Gold price surge on softer data and FOMC anticipation drives AU up 8.5%** — This is a substitution/sentiment signal; a gold surge on FOMC anticipation indicates a bid for safety and a hedge against policy uncertainty, which can be a leading indicator for risk-off in equities.
-8.  **Ocean Freight Rates Surge +400% — But Demand Isn’t Driving It** — This is a sector_policy/supply-chain signal; a supply-driven freight rate surge is an inflationary pressure and a negative for global trade and consumer cyclicals, echoing the Hormuz/oil supply-shock lessons.
+1. **Treasury's buyback blitz may drive bond yields higher (JPMorgan warning)** — This is the dominant macro driver: it directly challenges the current "yields cool off" narrative and has regime-level implications for all rate-sensitive sectors and equity risk appetite.
+2. **Bessent's Treasury operations breathe life back into the gold trade** — This is a rescued item from noise; it explains the gold surge (AU +8.5%) and signals a potential regime shift in monetary policy that supports precious metals and materials.
+3. **Long-term Treasury yields hit 19-year high as US debt approaches $40 trillion** — This is the structural backdrop that has been crushing long-duration tech and supporting the value/defensive rotation; it remains the key risk-off driver.
+4. **US Stock Index Futures Climb As Yields Cool Off Amid Treasury Support** — This is the immediate session driver: if yields are indeed cooling, it supports a risk-on open and potential breadth rally into cyclicals/small-caps.
+5. **Oil prices jump after Trump declares economic war on Iran** — This is a fresh geopolitical escalation that can flip the tape risk-off and is a direct positive for energy (XLE) and a negative for consumer cyclicals/industrials.
+6. **Adobe shares fall as Figma's earnings highlight surging AI costs, triggering broader software-sector selloff** — This is a sector-level fundamental catalyst: it signals SaaS multiple compression and a potential rotation out of software, which has index-level implications.
+7. **Analog Devices record Q3, guides above on AI data center demand** — This is a positive sector fundamental for semis, partially offsetting the software weakness and the AVGO/Marvell competitive concerns; it supports a mixed tech tape.
+8. **Marvell-Google AI chip agreement raises competitive concerns for Broadcom** — This is a single-name catalyst with sector-level implications for the AI chip complex, adding to the mixed picture in semis.
 
 ---
+
 ### STEP 1 — FRAMEWORK SCORE
 
-1.  **30-Year Treasury Yield Touches a 19-Year High**
-    - **keep**: keep
-    - **us_relevance**: high — Directly impacts US equity valuations and the discount rate for all long-duration assets.
-    - **channel**: rates
-    - **geography**: us_domestic
-    - **severity**: regime
-    - **horizon**: 1w-1m
-    - **action_object**: spx
-    - **action_object_detail**: SPX beta, long-duration growth (XLK, XLU, XLRE)
-    - **polarity**: bearish
-    - **polarity_why**: Higher long-end yields compress multiples, particularly for growth and rate-sensitive sectors.
-    - **confidence**: 0.9
+**1. Treasury's buyback blitz may drive bond yields higher (JPMorgan warning)**
+- keep: **keep**
+- us_relevance: **high** — Directly impacts US Treasury market, the anchor for global risk assets.
+- channel: **rates**
+- geography: **us_domestic**
+- severity: **regime**
+- horizon: **1w-1m**
+- action_object: **spx**
+- action_object_detail: SPX beta, long-duration tech (XLK), rate-sensitive sectors (XLRE, XLU)
+- polarity: **bearish**
+- polarity_why: If buybacks fail to cap yields and instead signal supply indigestion, the 19-year high in long-end yields persists, pressuring equity multiples.
+- confidence: **0.7**
 
-2.  **US Stock Index Futures Climb As Yields Cool Off Amid Treasury Support**
-    - **keep**: keep
-    - **us_relevance**: high — Directly signals a reversal of the primary bearish driver (yields) and supports risk appetite.
-    - **channel**: rates
-    - **geography**: us_domestic
-    - **severity**: session
-    - **horizon**: 1d
-    - **action_object**: spx
-    - **action_object_detail**: SPX beta, cyclicals (XLI, XLF), small-caps (IWM)
-    - **polarity**: bullish
-    - **polarity_why**: Treasury support/buybacks cooling yields is a direct positive catalyst for equities, especially rate-sensitive and cyclical sectors.
-    - **confidence**: 0.8
+**2. Bessent's Treasury operations have breathed life back into the gold trade**
+- keep: **keep**
+- us_relevance: **high** — Treasury operations are a US policy lever; the gold reaction signals a loss of confidence in fiscal discipline.
+- channel: **rates**
+- geography: **us_domestic**
+- severity: **regime**
+- horizon: **1w-1m**
+- action_object: **sector_etf**
+- action_object_detail: XLB (materials), GDX (gold miners), AU (single name)
+- polarity: **bullish**
+- polarity_why: A weaker dollar and/or real-yield concerns from Treasury operations are a direct tailwind for gold and precious metals.
+- confidence: **0.75**
 
-3.  **BofA Survey Shows Record Expectations for 'No Landing'**
-    - **keep**: keep
-    - **us_relevance**: high — Sets the macro regime for the session and next week's Jackson Hole event.
-    - **channel**: rates
-    - **geography**: us_domestic
-    - **severity**: regime
-    - **horizon**: 1w
-    - **action_object**: spx
-    - **action_object_detail**: SPX beta, rate-sensitive sectors
-    - **polarity**: mixed
-    - **polarity_why**: "No landing" implies strong growth but also sticky inflation and higher-for-longer rates, a mixed bag for equities.
-    - **confidence**: 0.7
+**3. Long-term Treasury yields hit 19-year high as US debt approaches $40 trillion**
+- keep: **keep**
+- us_relevance: **high** — This is the core macro condition driving the current market regime.
+- channel: **rates**
+- geography: **us_domestic**
+- severity: **regime**
+- horizon: **1w-1m**
+- action_object: **spx**
+- action_object_detail: SPX beta, long-duration tech (XLK), REITs (XLRE), Utilities (XLU)
+- polarity: **bearish**
+- polarity_why: Sustained high long-end yields are a headwind for equity valuations, particularly for long-duration growth.
+- confidence: **0.8**
 
-4.  **Direxion Daily Semiconductor Bull 3X ETF Plunged Nearly 20%**
-    - **keep**: keep
-    - **us_relevance**: high — A major de-risking event in the most crowded trade (AI/semis) has broad market implications.
-    - **channel**: sector_fundamental
-    - **geography**: us_domestic
-    - **severity**: session
-    - **horizon**: 1d-1w
-    - **action_object**: sector_etf
-    - **action_object_detail**: SMH, SOXX, XLK
-    - **polarity**: bearish
-    - **polarity_why**: Indicates a sharp selloff in the semiconductor complex, likely on competitive and valuation concerns.
-    - **confidence**: 0.8
+**4. US Stock Index Futures Climb As Yields Cool Off Amid Treasury Support**
+- keep: **conditional**
+- us_relevance: **high** — This is the immediate session driver for the broad market.
+- channel: **risk**
+- geography: **us_domestic**
+- severity: **session**
+- horizon: **1d**
+- action_object: **spx**
+- action_object_detail: SPX, IWM (small caps)
+- polarity: **bullish**
+- polarity_why: Cooling yields are a direct positive for equities, especially rate-sensitive cyclicals and small caps.
+- confidence: **0.6**
 
-5.  **Adobe shares fall as Figma’s earnings highlight surging AI costs**
-    - **keep**: keep
-    - **us_relevance**: high — A direct negative catalyst for the software sector, a major component of the tech trade.
-    - **channel**: sector_fundamental
-    - **geography**: us_domestic
-    - **severity**: session
-    - **horizon**: 1d-1w
-    - **action_object**: sector_etf
-    - **action_object_detail**: IGV, XLK
-    - **polarity**: bearish
-    - **polarity_why**: Surging AI costs without commensurate revenue is a negative for high-multiple software names.
-    - **confidence**: 0.7
+**5. Oil prices jump after Trump declares economic war on Iran**
+- keep: **keep**
+- us_relevance: **high** — Geopolitical escalation with direct impact on oil prices and risk sentiment.
+- channel: **risk**
+- geography: **global_priced**
+- severity: **session**
+- horizon: **1d-1w**
+- action_object: **sector_etf**
+- action_object_detail: XLE (energy), XLY (consumer cyclicals), XLI (industrials)
+- polarity: **mixed**
+- polarity_why: Bullish for energy, bearish for consumer cyclicals and industrials on input costs and risk-off sentiment.
+- confidence: **0.7**
 
-6.  **Marvell-Google AI chip agreement raises competitive concerns for Broadcom**
-    - **keep**: keep
-    - **us_relevance**: high — A major competitive shift in the AI chip market, directly impacting a top-10 SPX component (AVGO).
-    - **channel**: sector_fundamental
-    - **geography**: us_domestic
-    - **severity**: session
-    - **horizon**: 1d-1w
-    - **action_object**: sector_etf
-    - **action_object_detail**: SMH, SOXX, XLK
-    - **polarity**: bearish
-    - **polarity_why**: Raises competitive risk for AVGO and suggests a potential re-rating of the AI chip oligopoly.
-    - **confidence**: 0.7
+**6. Adobe shares fall as Figma's earnings highlight surging AI costs, triggering broader software-sector selloff**
+- keep: **keep**
+- us_relevance: **high** — A sector-level catalyst for software, a major component of the tech-heavy indices.
+- channel: **sector_fundamental**
+- geography: **us_domestic**
+- severity: **session**
+- horizon: **1d-1w**
+- action_object: **sector_etf**
+- action_object_detail: XLK (technology), IGV (software)
+- polarity: **bearish**
+- polarity_why: Rising AI costs pressure software margins and multiples, triggering a selloff in the sub-sector.
+- confidence: **0.65**
 
-7.  **Gold price surge on softer data and FOMC anticipation drives AU up 8.5%**
-    - **keep**: keep
-    - **us_relevance**: medium — A signal of risk-off sentiment and hedging against policy uncertainty, though not a direct US equity driver.
-    - **channel**: substitution
-    - **geography**: global_priced
-    - **severity**: session
-    - **horizon**: 1d-1w
-    - **action_object**: sector_etf
-    - **action_object_detail**: GDX, XLB (as a hedge)
-    - **polarity**: mixed
-    - **polarity_why**: Gold strength can indicate a flight to safety, but also a hedge against inflation and a weak dollar.
-    - **confidence**: 0.6
+**7. Analog Devices record Q3, guides above on AI data center demand**
+- keep: **conditional**
+- us_relevance: **high** — A positive fundamental signal for the semiconductor complex.
+- channel: **sector_fundamental**
+- geography: **us_supply_chain**
+- severity: **session**
+- horizon: **1d-1w**
+- action_object: **sector_etf**
+- action_object_detail: XLK (technology), SMH (semiconductors)
+- polarity: **bullish**
+- polarity_why: Strong AI demand is a direct tailwind for analog chipmakers, offsetting some software weakness.
+- confidence: **0.6**
 
-8.  **Ocean Freight Rates Surge +400% — But Demand Isn’t Driving It**
-    - **keep**: keep
-    - **us_relevance**: medium — A supply-side inflationary shock that can pressure margins and consumer spending.
-    - **channel**: sector_policy
-    - **geography**: us_supply_chain
-    - **severity**: session
-    - **horizon**: 1w
-    - **action_object**: sector_etf
-    - **action_object_detail**: XLY, XLP, IYT
-    - **polarity**: bearish
-    - **polarity_why**: Supply-driven cost increases are a negative for consumer and industrial sectors, echoing the oil-shock playbook.
-    - **confidence**: 0.6
+**8. Marvell-Google AI chip agreement raises competitive concerns for Broadcom**
+- keep: **single_name**
+- us_relevance: **medium** — Primarily a single-name story, but with implications for the AI chip competitive landscape.
+- channel: **sector_fundamental**
+- geography: **us_supply_chain**
+- severity: **session**
+- horizon: **1d**
+- action_object: **single_name**
+- action_object_detail: AVGO, MRVL
+- polarity: **bearish**
+- polarity_why: Increased competition for Broadcom's data-center chip business is a negative for AVGO.
+- confidence: **0.6**
 
 ---
+
 ### STEP 2 — INTERACTIONS
 
-- **Yields down (Treasury support) + cyclicals/small-caps**: This is the key interaction. If the Treasury support is credible and yields cool, it should provide a strong bid to risk-on breadth, supporting XLI, XLF, and IWM.
-- **AI chip demand + semi/solar tariff**: The AVGO/Marvell news and the semi ETF plunge are a clear negative for the AI complex. Do not double-count this as a positive for semis on any "AI demand" narrative. The sector is mixed-to-bearish.
-- **Fed path + weak labor**: The BofA "no landing" survey and the FOMC anticipation should be treated as ONE rates cluster. The market is pricing a hawkish hold, and any data that challenges this will move the entire complex.
-- **Single-name biotech Phase 3 success + sector sympathy**: None present in the input set.
-- **SaaS multiple compression + weak labor**: The Adobe/Figma news is a clear negative for software. Do not buy software on dovish-rates hope if the fundamental driver is AI cost inflation.
+- **Yields down (buybacks / auction / dovish) + cyclicals/small-caps → risk-on breadth support**: If the "yields cool off" narrative holds, expect IWM and XLI to outperform, supporting a broad risk-on day.
+- **AI chip demand + semi/solar tariff → semis mixed; do not double-count**: ADI's positive guide is offset by AVGO's competitive concerns and the software selloff; do not treat the entire tech complex as uniformly bullish or bearish.
+- **Fed path + weak labor → treat as ONE rates cluster**: The MUFG and SocGen Fed headlines, combined with the 19-year high in yields, should be treated as a single hawkish/rates-pressure cluster, not separate events.
+- **Single-name biotech Phase 3 success + sector sympathy → Healthcare basket, not only the name**: While not explicitly in the top items, the AMGN beat and broader healthcare strength suggest any positive single-name catalyst should be viewed through a sector lens.
+- **Oil spike (Iran) + consumer cyclicals → do not buy XLY on rate-relief hope**: The oil shock is a direct negative for consumer cyclicals and can offset the positive from cooling yields.
 
 ---
+
 ### STEP 3 — RECLASSIFY AUDIT
 
-- **DROPPED_FROM_USABLE**:
-    - `Video shows Russian missile strike on Ukrainian capital` — Geopolitical noise, not a new market driver.
-    - `The WSJ Dollar Index Rises 0.10% to 96.07` — Low-signal, no directional impact.
-    - `Oil Posts Modest Gains With Strait of Hormuz Situation Unclear` — "Unclear" is not a tradeable signal; the freight rate surge is the more actionable supply-chain story.
-    - `From toilets, textiles, and MSG to AI semiconductor chips` — Generic, low-signal.
-    - `Famous Billionaires Were Rushing to Buy Taiwan Semiconductor (TSM). Here’s Why` — Stale, single-name color, not a fresh catalyst.
-    - `Klarna stock plunges 22% on trimmed guidance as German retail sales slow` — Single-name, not a US equity driver.
+**DROPPED_FROM_USABLE:**
+- [neutral] (rss_aljazeera_economy) Video shows Russian missile strike on Ukrainian capital — **DROP**: Geopolitical background noise, not a fresh market-moving catalyst for US equities.
+- [neutral] (rss_google_macro) Federal Reserve: AI, inflation risks and limited FX impact – MUFG - FXStreet — **DROP**: Low-signal commentary, no new information.
+- [neutral] (rss_google_macro) Federal Reserve: Divided hawks shape late-2026 hike risks – Societe Generale - FXStreet — **DROP**: Low-signal commentary, no new information.
+- [neutral] (rss_yahoo_finance) The WSJ Dollar Index Rises 0.10% to 96.07 — **DROP**: Minor FX move, not a market driver.
+- [neutral] (rss_yahoo_finance) From toilets, textiles, and MSG to AI semiconductor chips — **DROP**: General interest, no market relevance.
 
-- **RESCUED_FROM_NOISE**:
-    - `More SpaceX stock is about to hit the market. Here’s what to know.` — Rescued as a **conditional** single_name. A large secondary from SpaceX could have a meaningful impact on the private markets and related ETFs, but it's not a direct SPX driver.
-    - `Heatwaves and energy crunch: Can Europe withstand a double shock?` — Rescued as a **conditional** sector_policy. This is a potential catalyst for European energy prices and could have a spillover effect on US energy names (XLE) and inflation expectations.
+**RESCUED_FROM_NOISE:**
+- [neutral] (rss_marketwatch_top) Treasury's buyback blitz may end up driving bond yields higher, warns JPMorgan. Here's its advice for investors. — **RESCUE**: This is a critical rates-market driver that the mechanical filter missed.
+- [neutral] (rss_marketwatch_top) Why Bessent's Treasury operations have breathed life back into the gold trade — **RESCUE**: This explains the gold surge and is a regime-level signal for materials.
+- [+] (rss_marketwatch_top) Oil prices jump after Trump declares economic war on Iran — **RESCUE**: This is a fresh geopolitical escalation with immediate market impact.
 
 ---
+
 ### STEP 4 — B1 / SECTOR INJECT
 
 ```
-NEWS_JUDGE: n=8 rescued=2
-MACRO rates: [bearish] 30Y at 19-yr high, term premium expanding on deficits (regime/1w-1m)
-MACRO rates: [bullish] Treasury support/buybacks cooling yields, futures climb (session/1d)
-MACRO policy: [mixed] BofA survey shows record 'no landing' expectations ahead of Jackson Hole (regime/1w)
-SECTOR technology: [bearish] Semi 3x ETF -20%, AVGO/Marvell competitive shift, Adobe/Figma AI cost selloff (object: SMH, IGV, XLK)
-SECTOR materials: [mixed] Gold surge on FOMC anticipation, but freight rate +400% is a supply-side cost shock (object: GDX, XLB)
-INTERACTION: Yields down + cyclicals/small-caps = risk-on breadth support; do not buy software on dovish hopes
-WATCH: Ranking is contested on rates direction; Treasury support vs 19-yr high yields is the key swing factor
+NEWS_JUDGE: n=8 rescued=3
+MACRO rates: [bearish] Treasury buyback blitz may fail to cap yields; 19-yr high persists (regime/1w-1m)
+MACRO risk: [bullish] Yields cool off on Treasury support, futures climb (session/1d)
+MACRO risk: [mixed] Oil jumps on Trump-Iran "economic war" declaration (session/1d-1w)
+SECTOR energy: [bullish] Oil spike on geopolitical escalation is a direct tailwind (XLE)
+SECTOR tech: [bearish] Software selloff on AI cost concerns (IGV, XLK)
+SECTOR tech: [mixed] ADI beats on AI demand, but AVGO faces Marvell-Google competition (SMH)
+SECTOR materials: [bullish] Gold trade revived by Bessent Treasury ops (XLB, GDX)
+INTERACTION: Yields down + cyclicals/small-caps = risk-on breadth; Oil spike + XLY = do not buy on rate relief
+WATCH: If buyback warning proves correct, yields re-spike and risk-on open fades
 ```
 
 ---
+
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- 30-Year Treasury Yield Touches a 19-Year High | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta, long-duration growth | pol=bearish | conf=0.9
-- US Stock Index Futures Climb As Yields Cool Off Amid Treasury Support | keep=keep | channel=rates | severity=session | horizon=1d | object=spx:SPX beta, cyclicals, small-caps | pol=bullish | conf=0.8
-- BofA Survey Shows Record Expectations for 'No Landing' | keep=keep | channel=rates | severity=regime | horizon=1w | object=spx:SPX beta, rate-sensitive sectors | pol=mixed | conf=0.7
-- Direxion Daily Semiconductor Bull 3X ETF Plunged Nearly 20% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH, SOXX, XLK | pol=bearish | conf=0.8
-- Adobe shares fall as Figma’s earnings highlight surging AI costs | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:IGV, XLK | pol=bearish | conf=0.7
-- Marvell-Google AI chip agreement raises competitive concerns for Broadcom | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH, SOXX, XLK | pol=bearish | conf=0.7
-- Gold price surge on softer data and FOMC anticipation drives AU up 8.5% | keep=keep | channel=substitution | severity=session | horizon=1d-1w | object=sector_etf:GDX, XLB | pol=mixed | conf=0.6
-- Ocean Freight Rates Surge +400% — But Demand Isn’t Driving It | keep=keep | channel=sector_policy | severity=session | horizon=1w | object=sector_etf:XLY, XLP, IYT | pol=bearish | conf=0.6
-INTERACTIONS: Yields down (Treasury support) + cyclicals/small-caps = risk-on breadth support; AI chip demand + semi/solar tariff = semis mixed, do not double-count; Fed path + weak labor = ONE rates cluster; SaaS multiple compression + weak labor = do not buy software on dovish-rates hope
-RESCUED_FROM_NOISE: More SpaceX stock is about to hit the market; Heatwaves and energy crunch: Can Europe withstand a double shock?
-DROPPED_FROM_USABLE: Video shows Russian missile strike on Ukrainian capital; The WSJ Dollar Index Rises 0.10% to 96.07; Oil Posts Modest Gains With Strait of Hormuz Situation Unclear; From toilets, textiles, and MSG to AI semiconductor chips; Famous Billionaires Were Rushing to Buy Taiwan Semiconductor (TSM). Here’s Why; Klarna stock plunges 22% on trimmed guidance as German retail sales slow
+- Treasury buyback blitz may drive yields higher (JPMorgan) | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta, long-duration tech | pol=bearish | conf=0.7
+- Bessent Treasury ops revive gold trade | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=sector_etf:XLB, GDX | pol=bullish | conf=0.75
+- Long-term Treasury yields hit 19-year high, debt near $40T | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta, XLRE, XLU | pol=bearish | conf=0.8
+- US futures climb as yields cool off on Treasury support | keep=conditional | channel=risk | severity=session | horizon=1d | object=spx:SPX, IWM | pol=bullish | conf=0.6
+- Oil jumps after Trump declares economic war on Iran | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:XLE, XLY, XLI | pol=mixed | conf=0.7
+- Adobe falls as Figma earnings highlight surging AI costs, software selloff | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLK, IGV | pol=bearish | conf=0.65
+- Analog Devices record Q3, guides above on AI data center demand | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLK, SMH | pol=bullish | conf=0.6
+- Marvell-Google AI chip agreement raises competitive concerns for Broadcom | keep=single_name | channel=sector_fundamental | severity=session | horizon=1d | object=single_name:AVGO, MRVL | pol=bearish | conf=0.6
+INTERACTIONS: Yields down + cyclicals/small-caps = risk-on breadth support; Oil spike + XLY = do not buy on rate relief; AI chip demand + AVGO competitive concerns = semis mixed
+RESCUED_FROM_NOISE: Treasury's buyback blitz may end up driving bond yields higher; Why Bessent's Treasury operations have breathed life back into the gold trade; Oil prices jump after Trump declares economic war on Iran
+DROPPED_FROM_USABLE: Video shows Russian missile strike on Ukrainian capital; Federal Reserve: AI, inflation risks and limited FX impact – MUFG; Federal Reserve: Divided hawks shape late-2026 hike risks – Societe Generale; The WSJ Dollar Index Rises 0.10% to 96.07; From toilets, textiles, and MSG to AI semiconductor chips
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=2
-MACRO rates: [bearish] 30Y at 19-yr high, term premium expanding on deficits (regime/1w-1m)
-MACRO rates: [bullish] Treasury support/buybacks cooling yields, futures climb (session/1d)
-MACRO policy: [mixed] BofA survey shows record 'no landing' expectations ahead of Jackson Hole (regime/1w)
-SECTOR technology: [bearish] Semi 3x ETF -20%, AVGO/Marvell competitive shift, Adobe/Figma AI cost selloff (object: SMH, IGV, XLK)
-SECTOR materials: [mixed] Gold surge on FOMC anticipation, but freight rate +400% is a supply-side cost shock (object: GDX, XLB)
-INTERACTION: Yields down + cyclicals/small-caps = risk-on breadth support; do not buy software on dovish hopes
-WATCH: Ranking is contested on rates direction; Treasury support vs 19-yr high yields is the key swing factor
+NEWS_JUDGE: n=8 rescued=3
+MACRO rates: [bearish] Treasury buyback blitz may fail to cap yields; 19-yr high persists (regime/1w-1m)
+MACRO risk: [bullish] Yields cool off on Treasury support, futures climb (session/1d)
+MACRO risk: [mixed] Oil jumps on Trump-Iran "economic war" declaration (session/1d-1w)
+SECTOR energy: [bullish] Oil spike on geopolitical escalation is a direct tailwind (XLE)
+SECTOR tech: [bearish] Software selloff on AI cost concerns (IGV, XLK)
+SECTOR tech: [mixed] ADI beats on AI demand, but AVGO faces Marvell-Google competition (SMH)
+SECTOR materials: [bullish] Gold trade revived by Bessent Treasury ops (XLB, GDX)
+INTERACTION: Yields down + cyclicals/small-caps = risk-on breadth; Oil spike + XLY = do not buy on rate relief
+WATCH: If buyback warning proves correct, yields re-spike and risk-on open fades
 NEWS_PARSE_END
