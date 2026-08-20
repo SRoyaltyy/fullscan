@@ -1,15 +1,18 @@
 name: AB Full Market (checklist + peers + backfill)
 
 # Full liquid-universe version of AB One Button.
-# Prerequisites (auto-run if missing):
-#   - data/exports/finviz_*.csv
+# Prerequisites (auto-run if missing; auto-reuse if already present):
+#   - data/exports/finviz_*.csv or data/finviz/latest.csv
 #   - data/prices/ohlc.parquet (price_store bootstrap)
 #
 # Steps:
-#   0) price_store bootstrap (always unless skip_bootstrap)
-#   1) ab_checklist          (liquid gate ON)
-#   2) peer_rs + ab_enrich   (P01–P04 context)
-#   3) ab_backfill           (PIT 1d/3d/1w/2m + pattern audit)
+#   0) price_store bootstrap  — skip if parquet has enough history
+#   1) ab_checklist           — skip if as-of CSV has ≥50 liquid rows
+#   2) peer_rs + ab_enrich    — skip if enriched CSV has ≥50 rows
+#   3) ab_backfill            — skip if a *universe* PIT file covers asof+months
+#                               (AAPL/BB/BBAI single-ticker files do NOT count)
+#
+# skip_* inputs: true = force skip; false/schedule = auto-reuse if present.
 
 on:
   workflow_dispatch:
@@ -21,25 +24,25 @@ on:
       months:
         description: "PIT backfill lookback months"
         required: false
-        default: "24"
+        default: "12"
       bootstrap_days:
         description: "Price history calendar days to ensure"
         required: false
-        default: "900"
+        default: "400"
       skip_bootstrap:
-        description: "Skip price bootstrap (use existing store)"
+        description: "Force skip price bootstrap (true) or auto-reuse (false)"
         type: boolean
         default: false
       skip_checklist:
-        description: "Skip checklist (reuse existing CSV for as-of)"
+        description: "Force skip checklist (true) or auto-reuse if CSV exists (false)"
         type: boolean
         default: false
       skip_enrich:
-        description: "Skip peer RS + enrich"
+        description: "Force skip enrich (true) or auto-reuse if enriched CSV exists (false)"
         type: boolean
         default: false
       skip_backfill:
-        description: "Skip PIT backfill"
+        description: "Force skip PIT backfill (true) or auto-reuse universe file (false)"
         type: boolean
         default: false
   schedule:
@@ -94,8 +97,8 @@ jobs:
           echo "========================================"
           echo "  AB FULL MARKET"
           echo "  asof=$D  mode=LIQUID_UNIVERSE"
-          echo "  months=${{ inputs.months || '24' }}"
-          echo "  bootstrap_days=${{ inputs.bootstrap_days || '900' }}"
+          echo "  months=${{ inputs.months || '12' }}"
+          echo "  bootstrap_days=${{ inputs.bootstrap_days || '400' }}"
           echo "========================================"
           EXP="data/exports/finviz_${D}.csv"
           if [ ! -f "$EXP" ]; then
@@ -124,43 +127,179 @@ jobs:
           print("sample tickers:", df.iloc[:5, 0].tolist())
           PY
 
+      - name: Decide auto-reuse
+        id: reuse
+        env:
+          ASOF: ${{ steps.meta.outputs.asof }}
+          MONTHS: ${{ inputs.months || '12' }}
+          BOOT_DAYS: ${{ inputs.bootstrap_days || '400' }}
+          SKIP_BOOT: ${{ inputs.skip_bootstrap }}
+          SKIP_CHECK: ${{ inputs.skip_checklist }}
+          SKIP_ENR: ${{ inputs.skip_enrich }}
+          SKIP_BF: ${{ inputs.skip_backfill }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, re
+          from datetime import date, timedelta
+          from pathlib import Path
+
+          import pandas as pd
+
+          asof = os.environ["ASOF"].strip()
+          months = int(os.environ.get("MONTHS") or "12")
+          boot_days = int(os.environ.get("BOOT_DAYS") or "400")
+
+          def force_skip(raw: str) -> bool:
+              return str(raw).strip().lower() in {"true", "1", "yes"}
+
+          def csv_rows(path: Path) -> int:
+              if not path.exists() or path.stat().st_size < 200:
+                  return 0
+              try:
+                  return int(len(pd.read_csv(path, usecols=[0], low_memory=False)))
+              except Exception as e:
+                  print(f"warn: pandas read {path}: {e}")
+              try:
+                  with path.open("rb") as fh:
+                      return max(sum(1 for _ in fh) - 1, 0)
+              except Exception as e:
+                  print(f"warn: could not read {path}: {e}")
+                  return 0
+
+          def decide(force: bool, reusable: bool, label: str) -> str:
+              if force:
+                  print(f"{label}: FORCE skip")
+                  return "skip"
+              if reusable:
+                  print(f"{label}: REUSE existing artifact")
+                  return "reuse"
+              print(f"{label}: RUN")
+              return "run"
+
+          asof_d = date.fromisoformat(asof)
+          need_start = (pd.Timestamp(asof_d) - pd.DateOffset(months=months)).date()
+          need_px_start = (pd.Timestamp(asof_d) - pd.Timedelta(days=max(boot_days, months * 31))).date()
+
+          # --- parquet ---
+          meta_p = Path("data/prices/meta.json")
+          pq = Path("data/prices/ohlc.parquet")
+          px_ok = False
+          first = last = None
+          n_tickers = 0
+          if pq.exists() and pq.stat().st_size > 1_000_000:
+              if meta_p.exists():
+                  try:
+                      meta = json.loads(meta_p.read_text())
+                      first = date.fromisoformat(str(meta.get("first_date"))[:10])
+                      last = date.fromisoformat(str(meta.get("last_date"))[:10])
+                      n_tickers = int(meta.get("n_tickers") or 0)
+                  except Exception as e:
+                      print(f"warn: meta.json: {e}")
+              if not (first and last and n_tickers >= 50):
+                  try:
+                      import pyarrow.parquet as papq
+                      names = set(papq.read_schema(pq).names)
+                      cols = [c for c in ("date", "ticker") if c in names]
+                      pdf = papq.read_table(pq, columns=cols).to_pandas()
+                      first = pd.to_datetime(pdf["date"]).min().date()
+                      last = pd.to_datetime(pdf["date"]).max().date()
+                      n_tickers = int(pdf["ticker"].nunique()) if "ticker" in pdf.columns else 0
+                      print(f"parquet inspected via pyarrow tickers={n_tickers}")
+                  except Exception as e:
+                      print(f"warn: parquet inspect: {e}")
+              # last may trail asof by a session; bootstrap is the expensive full rebuild
+              last_ok = bool(last) and last >= (asof_d - timedelta(days=7))
+              if first and last and n_tickers >= 50 and first <= need_px_start and last_ok:
+                  px_ok = True
+                  print(f"parquet OK {first}→{last} tickers={n_tickers} size={pq.stat().st_size/1e6:.1f}MB")
+              else:
+                  print(f"parquet present but not enough history (first={first} last={last} n={n_tickers} need_start={need_px_start})")
+          else:
+              print("parquet missing or tiny")
+
+          # --- checklist ---
+          chk = Path(f"data/ab_checklist/{asof}_ab_checklist.csv")
+          uni = Path(f"data/ab_checklist/{asof}_ab_checklist_universe.csv")
+          n_chk = csv_rows(chk)
+          n_uni = csv_rows(uni)
+          chk_ok = max(n_chk, n_uni) >= 50
+          print(f"checklist rows csv={n_chk} universe={n_uni} reusable={chk_ok}")
+
+          # --- enrich ---
+          enr = Path(f"data/ab_checklist/{asof}_ab_checklist_enriched.csv")
+          n_enr = csv_rows(enr)
+          enr_ok = n_enr >= 50
+          print(f"enriched rows={n_enr} reusable={enr_ok}")
+
+          # --- universe PIT backfill (single-ticker AAPL/BB/BBAI do NOT count) ---
+          bf_ok = False
+          pat = re.compile(r"^(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})_universe\.(parquet|csv)$")
+          for p in sorted(Path("data/ab_backfill").glob("*_universe.*")):
+              m = pat.match(p.name)
+              if not m:
+                  continue
+              start_d = date.fromisoformat(m.group(1))
+              end_d = date.fromisoformat(m.group(2))
+              if start_d <= need_start and end_d >= asof_d and p.stat().st_size > 100_000:
+                  bf_ok = True
+                  print(f"universe backfill OK {p.name} {p.stat().st_size/1e6:.1f}MB")
+                  break
+          if not bf_ok:
+              singles = [p.name for p in Path("data/ab_backfill").glob("*") if p.is_file()]
+              print(f"no covering *_universe backfill (asof={asof} months={months} need_start={need_start})")
+              print("existing backfill files:", singles[:20])
+
+          out = {
+              "bootstrap": decide(force_skip(os.environ.get("SKIP_BOOT", "")), px_ok, "bootstrap"),
+              "checklist": decide(force_skip(os.environ.get("SKIP_CHECK", "")), chk_ok, "checklist"),
+              "enrich": decide(force_skip(os.environ.get("SKIP_ENR", "")), enr_ok, "enrich"),
+              "backfill": decide(force_skip(os.environ.get("SKIP_BF", "")), bf_ok, "backfill"),
+          }
+          github = os.environ.get("GITHUB_OUTPUT")
+          if github:
+              with open(github, "a", encoding="utf-8") as fh:
+                  for k, v in out.items():
+                      fh.write(f"{k}={v}\n")
+          print("DECISION", out)
+          PY
+
       - name: 0) Price history prerequisite (universe bootstrap)
-        if: ${{ github.event_name == 'schedule' || (inputs.skip_bootstrap != true && inputs.skip_bootstrap != 'true') }}
+        if: ${{ steps.reuse.outputs.bootstrap == 'run' }}
         run: |
           set -euo pipefail
           DAYS="${{ inputs.bootstrap_days }}"
-          DAYS="${DAYS:-900}"
+          DAYS="${DAYS:-400}"
           echo "=== prerequisite: price_store bootstrap --days $DAYS ==="
           python -m src.price_store bootstrap --days "$DAYS"
           python -m src.price_store status
 
-      - name: 0b) Ensure price store non-empty even if bootstrap skipped
+      - name: 0b) Price store status (honor force-skip)
         run: |
           set -euo pipefail
           if [ ! -f data/prices/ohlc.parquet ]; then
+            if [ "${{ steps.reuse.outputs.bootstrap }}" = "skip" ]; then
+              echo "parquet missing and skip_bootstrap=true — not rebuilding"
+              python -m src.price_store status || true
+              exit 1
+            fi
             DAYS="${{ inputs.bootstrap_days }}"
-            DAYS="${DAYS:-900}"
+            DAYS="${DAYS:-400}"
             echo "price store missing — auto bootstrap --days $DAYS"
             python -m src.price_store bootstrap --days "$DAYS"
           fi
           python -m src.price_store status
 
       - name: 1) AB checklist — liquid universe
-        if: ${{ github.event_name == 'schedule' || (inputs.skip_checklist != true && inputs.skip_checklist != 'true') }}
+        if: ${{ steps.reuse.outputs.checklist == 'run' }}
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
           CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
-          rm -f "$CSV" \
-                "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
-                "data/ab_checklist/${ASOF}_ab_checklist.md" \
-                "data/ab_checklist/${ASOF}_ab_checklist.json" || true
-          # Drop stale loader cache so patches always apply
+          # Do NOT rm existing checklist CSVs — reuse logic lives in Decide auto-reuse.
           rm -f src/_ab_checklist_cached.py || true
           echo "=== ab_checklist --date $ASOF ==="
-          # Prefer explicit run() call so loader __name__ bugs cannot no-op
           python -u - <<PY
-          import sys
           from src import ab_checklist as ab
           print(f"ab_checklist loaded: has_run={hasattr(ab, 'run')} has_main={hasattr(ab, 'main')}")
           if not hasattr(ab, "run"):
@@ -187,8 +326,24 @@ jobs:
           print(f"OK: full-market checklist has {n:,} liquid names")
           PY
 
+      - name: 1b) Keep universe checklist copy when reusing
+        if: ${{ steps.reuse.outputs.checklist != 'run' }}
+        run: |
+          set -euo pipefail
+          ASOF="${{ steps.meta.outputs.asof }}"
+          CSV="data/ab_checklist/${ASOF}_ab_checklist.csv"
+          UNI="data/ab_checklist/${ASOF}_ab_checklist_universe.csv"
+          if [ -f "$CSV" ] && [ ! -f "$UNI" ]; then
+            cp -f "$CSV" "$UNI"
+            echo "copied $CSV → $UNI"
+          elif [ -f "$UNI" ] && [ ! -f "$CSV" ]; then
+            cp -f "$UNI" "$CSV"
+            echo "copied $UNI → $CSV"
+          fi
+          ls -lah "$CSV" "$UNI" 2>/dev/null || true
+
       - name: 2) Peer RS + industry/sector enrich (universe)
-        if: ${{ github.event_name == 'schedule' || (inputs.skip_enrich != true && inputs.skip_enrich != 'true') }}
+        if: ${{ steps.reuse.outputs.enrich == 'run' }}
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
@@ -215,12 +370,12 @@ jobs:
           PY
 
       - name: 3) PIT backfill — liquid universe
-        if: ${{ github.event_name == 'schedule' || (inputs.skip_backfill != true && inputs.skip_backfill != 'true') }}
+        if: ${{ steps.reuse.outputs.backfill == 'run' }}
         run: |
           set -euo pipefail
           ASOF="${{ steps.meta.outputs.asof }}"
           M="${{ inputs.months }}"
-          M="${M:-24}"
+          M="${M:-12}"
           if [ -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" ]; then
             cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
                   "data/ab_checklist/${ASOF}_ab_checklist.csv"
@@ -252,6 +407,11 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           git add -f data/ab_checklist/ data/ab_backfill/ data/peers/ data/prices/meta.json 01_daily/*peer_rs* || true
+          # Persist a rebuilt store so the next run can auto-reuse. Skip the 77MB
+          # blob when bootstrap was reused or force-skipped.
+          if [ "${{ steps.reuse.outputs.bootstrap }}" = "run" ]; then
+            git add -f data/prices/ohlc.parquet || true
+          fi
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "chore: AB full market ${{ steps.meta.outputs.asof }} (checklist+peers+backfill)"
           git pull --rebase origin main || true

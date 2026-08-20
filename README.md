@@ -92,7 +92,7 @@ Evening (staggered so they do not all push `main` at 22:30 UTC):
 | UTC cron | Workflow |
 |---|---|
 | `30 21 * * 1-5` | `ab_checklist.yml` |
-| `30 22 * * 1-5` | `ab_full_market.yml` (checklist + peers + PIT backfill) |
+| `30 22 * * 1-5` | `ab_full_market.yml` (12-month PIT; auto-reuse parquet / checklist / enrich / universe backfill) |
 | `0 23 * * 1-5` | `hit_board.yml` |
 | `0 5 * * 2-6` | `ab_full_scan.yml` (colors + Form4 + merge; after full-market window) |
 
