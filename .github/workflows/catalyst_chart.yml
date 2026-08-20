@@ -1,0 +1,88 @@
+name: Catalyst Chart (interactive overlay)
+
+# Build an interactive HTML price chart with catalyst event lines/markers.
+# Requires a prior catalyst JSON under data/catalyst/{TICKER}_*.json
+# (produced by Catalyst Analysis Engine) OR pass --events via regenerating
+# catalyst first.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Ticker (e.g. BB)"
+        required: true
+        default: "BB"
+      days:
+        description: "Price history calendar days"
+        required: false
+        default: "400"
+      events_path:
+        description: "Optional path to catalyst JSON (blank = latest for ticker)"
+        required: false
+        default: ""
+      include_earnings:
+        description: "Also overlay E/R earnings+analyst markers"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  chart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          set -euo pipefail
+          pip install -r requirements.txt
+          pip install plotly yfinance pyarrow
+
+      - name: Ensure price history for ticker
+        run: |
+          set -euo pipefail
+          T=$(echo "${{ inputs.ticker }}" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
+          DAYS="${{ inputs.days }}"
+          DAYS="${DAYS:-400}"
+          echo "=== price_store bootstrap --days $DAYS --tickers $T ==="
+          python -m src.price_store bootstrap --days "$DAYS" --tickers "$T" || true
+
+      - name: Build interactive chart
+        run: |
+          set -euo pipefail
+          T=$(echo "${{ inputs.ticker }}" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
+          DAYS="${{ inputs.days }}"
+          DAYS="${DAYS:-400}"
+          EP="${{ inputs.events_path }}"
+          ARGS=("$T" --days "$DAYS")
+          if [ -n "$EP" ]; then ARGS+=(--events "$EP"); fi
+          if [ "${{ inputs.include_earnings }}" = "true" ]; then ARGS+=(--earnings); fi
+          echo "=== python -m src.catalyst_chart ${ARGS[*]} ==="
+          python -m src.catalyst_chart "${ARGS[@]}"
+          ls -la data/charts/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalyst-chart-${{ inputs.ticker }}
+          path: data/charts/
+          if-no-files-found: warn
+
+      - name: Commit chart HTML
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f data/charts/ data/prices/meta.json || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "chore: catalyst chart ${{ inputs.ticker }}"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
