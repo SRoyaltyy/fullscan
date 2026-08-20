@@ -5,10 +5,10 @@ A15 GOOD when ALL of:
   * red wick avg > 1.15 × green wick avg over last 5 sessions
   * max green body > max red body over last 5 sessions
 
-IMPORTANT: this file is a thin loader. It fetches the known-good implementation,
-patches A15, then execs it. When run as `python -m src.ab_checklist`, it MUST
-call main() explicitly — the exec'd source sees __name__ == 'src.ab_checklist',
-so its own `if __name__ == "__main__"` block never fires.
+This file is a thin loader: fetch known-good implementation, patch A15, exec.
+When run as `python -m src.ab_checklist`, main() must be invoked via a saved
+`_WAS_MAIN` flag — assigning `__name__ = "src.ab_checklist"` for the exec'd
+source would otherwise make the module-level `__main__` check always false.
 """
 from __future__ import annotations
 
@@ -23,6 +23,9 @@ _RAW = (
 )
 _HERE = Path(__file__).resolve().parent
 _CACHE = _HERE / "_ab_checklist_cached.py"
+
+# Capture BEFORE any globals() mutation — exec will overwrite __name__.
+_WAS_MAIN = __name__ == "__main__"
 
 # Ensure repo root on path for package imports
 _ROOT = _HERE.parent
@@ -166,7 +169,6 @@ def _five_day_tape(df: pd.DataFrame) -> dict:
             1,
         )
 
-    # value map line for A15 (best-effort)
     if '"A15_tape_recovery_setup":' not in t.split("def _value_map")[-1]:
         marker = '"A13_red_body_vs_wick_2day":'
         if marker in t:
@@ -194,14 +196,18 @@ _src = _src.replace("from . import config", "from src import config")
 _src = _src.replace("from . import price_store as ps", "from src import price_store as ps")
 
 _g = globals()
+# Package identity for imports inside the exec'd source. Do NOT use this for
+# the outer `if __name__ == "__main__"` gate — that is decided by _WAS_MAIN.
 _g["__name__"] = "src.ab_checklist"
 _g["__package__"] = "src"
 _g["__file__"] = str(Path(__file__).resolve())
 exec(compile(_src, __file__, "exec"), _g)
 
-# The exec'd body defines main()/run() but its `if __name__ == "__main__"`
-# never fires because we forced __name__ = "src.ab_checklist" above.
-# Without this call, `python -m src.ab_checklist` is a no-op and leaves
-# whatever stale CSV is already on disk (often a 1-row AAPL ab_one output).
-if __name__ == "__main__":
-    main()  # noqa: F821  — injected by exec above
+if "run" not in _g or "main" not in _g:
+    raise RuntimeError(
+        "ab_checklist loader: exec did not inject run()/main() — cache corrupt? "
+        f"delete {_CACHE} and retry"
+    )
+
+if _WAS_MAIN:
+    main()  # noqa: F821 — injected by exec
