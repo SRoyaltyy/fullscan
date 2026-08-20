@@ -8,12 +8,23 @@ Each asof day includes:
   - Forward 1d/3d/1w/2m 🟢🔴 favorability
 
 CLI:
-  python -m src.ab_backfill --months 24 --ticker BB
+  python -m src.ab_backfill --months 12 --end 2026-08-19
+  python -m src.ab_backfill --months 12 --end 2026-08-19 --checkpoint-every 10
+
+Universe PIT is expensive (~2.5k liquid names × ~252 sessions). The table used
+to live only in memory and was written once at the end — GitHub's 6h job cap
+on run 32397798646 cancelled at 220/252 with no file on disk. Checkpoints
+now land as ``{start}_{end}_{tag}.resume.parquet`` every N asof days (and on
+SIGTERM/SIGINT). A later run with the same window loads that file and skips
+completed asof dates. This does not invent a 1d/3d/1w verdict — there is
+still no finished universe file to score.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
+import signal
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -35,6 +46,126 @@ INS_PANEL_CSV = ROOT / "data" / "insider" / "history" / "monthly_panel.csv"
 ET = ZoneInfo(config.TZ)
 
 HORIZONS = {"1d": 1, "3d": 3, "1w": 5, "2m": 42}
+
+# Final universe artifacts only. `*.resume.parquet` is a mid-run checkpoint
+# and must not be treated as a completed liquid-universe backfill.
+UNIVERSE_FINAL_RE = re.compile(
+    r"^(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})_universe\.(parquet|csv)$"
+)
+RESUME_SUFFIX = ".resume"
+DEFAULT_CHECKPOINT_EVERY = 10
+
+
+class _StopFlag:
+    """Set by SIGTERM/SIGINT so the current asof can finish, then we flush."""
+
+    def __init__(self) -> None:
+        self.requested = False
+
+    def request(self, signum=None, frame=None) -> None:
+        self.requested = True
+        print(
+            f"[backfill] signal {signum} — checkpoint after this asof, then stop",
+            flush=True,
+        )
+
+
+def install_stop_handlers(stop: _StopFlag) -> _StopFlag:
+    for name in ("SIGTERM", "SIGINT"):
+        sig = getattr(signal, name, None)
+        if sig is None:
+            continue
+        try:
+            signal.signal(sig, stop.request)
+        except (ValueError, OSError):
+            pass
+    return stop
+
+
+def artifact_stem(start: str, end: str, tag: str) -> str:
+    return f"{start}_{end}_{tag}"
+
+
+def resume_stem(start: str, end: str, tag: str) -> str:
+    return f"{artifact_stem(start, end, tag)}{RESUME_SUFFIX}"
+
+
+def resume_paths(start: str, end: str, tag: str) -> tuple[Path, Path]:
+    stem = resume_stem(start, end, tag)
+    return OUT_DIR / f"{stem}.parquet", OUT_DIR / f"{stem}.json"
+
+
+def remaining_days(days: list[str], last_asof: str | None) -> list[str]:
+    if not last_asof:
+        return list(days)
+    return [d for d in days if d > last_asof]
+
+
+def load_resume_checkpoint(
+    start: str, end: str, tag: str,
+) -> tuple[pd.DataFrame, dict | None]:
+    pq, meta_p = resume_paths(start, end, tag)
+    if not pq.exists() or pq.stat().st_size < 1000:
+        return pd.DataFrame(), None
+    df = pd.read_parquet(pq)
+    info: dict = {}
+    if meta_p.exists():
+        try:
+            info = json.loads(meta_p.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as e:
+            print(f"[backfill] resume json unreadable: {e}", flush=True)
+    last = None
+    if len(df) and "asof_date" in df.columns:
+        last = str(df["asof_date"].max())[:10]
+    if not last:
+        last = str(info.get("last_asof") or "")[:10] or None
+    info["last_asof"] = last
+    info["n_rows"] = int(len(df))
+    return df, info
+
+
+def write_resume_checkpoint(
+    rows: list[dict],
+    start: str,
+    end: str,
+    tag: str,
+    last_asof: str,
+    days_done: int,
+    days_total: int,
+) -> Path:
+    """Atomic parquet + json sidecar. Not a finished universe file."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    pq, meta_p = resume_paths(start, end, tag)
+    df = pd.DataFrame(rows)
+    tmp = pq.with_suffix(pq.suffix + ".tmp")
+    df.to_parquet(tmp, index=False)
+    tmp.replace(pq)
+    meta = {
+        "start": start,
+        "end": end,
+        "tag": tag,
+        "last_asof": last_asof,
+        "days_done": int(days_done),
+        "days_total": int(days_total),
+        "n_rows": int(len(df)),
+        "status": "in_progress",
+        "resume": True,
+        "generated": datetime.now(ET).isoformat(),
+    }
+    meta_p.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    print(
+        f"[backfill] checkpoint {last_asof} ({days_done}/{days_total}) "
+        f"rows={len(df):,} → {pq.name}",
+        flush=True,
+    )
+    return pq
+
+
+def clear_resume_checkpoint(start: str, end: str, tag: str) -> None:
+    for p in resume_paths(start, end, tag):
+        if p.exists():
+            p.unlink()
+            print(f"[backfill] removed {p.name}", flush=True)
 
 
 def _load_exports() -> list[tuple[str, pd.DataFrame]]:
@@ -323,6 +454,7 @@ def run(
     end: str | None = None,
     months: int | None = None,
     ticker: str | None = None,
+    checkpoint_every: int = DEFAULT_CHECKPOINT_EVERY,
 ) -> pd.DataFrame:
     exports = _load_exports()
     exp_dates = [d for d, _ in exports]
@@ -382,7 +514,21 @@ def run(
         else:
             tickers = sorted(groups.keys())
 
+    tag = ticker.upper() if ticker else "universe"
+    stop = install_stop_handlers(_StopFlag())
+    prior, resume_info = load_resume_checkpoint(start, end, tag)
+    last_asof = (resume_info or {}).get("last_asof") if resume_info else None
+    days_todo = remaining_days(days, last_asof)
+    rows: list[dict] = prior.to_dict("records") if len(prior) else []
     print(f"[backfill] sessions={len(days)} ({days[0]}→{days[-1]}) names={len(tickers)}")
+    if last_asof:
+        print(
+            f"[backfill] RESUME after {last_asof} kept_rows={len(rows):,} "
+            f"remaining={len(days_todo)}/{len(days)} "
+            f"(file {resume_stem(start, end, tag)}.parquet)"
+        )
+    else:
+        print("[backfill] no resume checkpoint — starting at day 1")
     if ticker:
         print(f"[backfill] {ticker}: sector={sector_name} industry={industry_name} peers={len(peer_list)}")
 
@@ -400,10 +546,11 @@ def run(
             print(f"[backfill] events {_t} skip: {e}")
             events_by_ticker[_t] = pd.DataFrame()
 
-    rows = []
     n_ohlc_only = 0
     n_with_export = 0
-    for i, asof in enumerate(days, 1):
+    done_before = len(days) - len(days_todo)
+    for j, asof in enumerate(days_todo, 1):
+        i = done_before + j
         exp_date, exp_df = _export_asof(exports, asof)
         exp_idx = exp_df.set_index("Ticker") if exp_df is not None else None
 
@@ -505,12 +652,25 @@ def run(
             })
 
         if i % 20 == 0 or i == len(days):
-            print(f"[backfill] {asof} ({i}/{len(days)}) rows={len(rows):,}")
+            print(f"[backfill] {asof} ({i}/{len(days)}) rows={len(rows):,}", flush=True)
+        should_ckpt = bool(checkpoint_every) and (
+            j % int(checkpoint_every) == 0 or stop.requested
+        )
+        if should_ckpt and rows:
+            write_resume_checkpoint(
+                rows, start, end, tag, asof, i, len(days),
+            )
+        if stop.requested:
+            print(
+                "[backfill] stopped with resume checkpoint — "
+                "re-run the same --months/--end to continue",
+                flush=True,
+            )
+            return pd.DataFrame(rows)
 
     out = pd.DataFrame(rows)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    tag = ticker.upper() if ticker else "universe"
-    stem = f"{start}_{end}_{tag}"
+    stem = artifact_stem(start, end, tag)
     parquet = OUT_DIR / f"{stem}.parquet"
     out.to_parquet(parquet, index=False)
     if ticker or len(out) < 500_000:
@@ -639,6 +799,7 @@ def run(
     )
     print(f"[backfill] wrote {parquet} rows={len(out):,}")
     print(f"[backfill] wrote {md}")
+    clear_resume_checkpoint(start, end, tag)
     return out
 
 
@@ -648,8 +809,21 @@ def main():
     ap.add_argument("--end", default=None)
     ap.add_argument("--months", type=int, default=None)
     ap.add_argument("--ticker", default=None)
+    ap.add_argument(
+        "--checkpoint-every",
+        type=int,
+        default=DEFAULT_CHECKPOINT_EVERY,
+        help="Write {start}_{end}_{tag}.resume.parquet every N asof days "
+             "(0 = only on SIGTERM). Default 10.",
+    )
     args = ap.parse_args()
-    run(start=args.start, end=args.end, months=args.months, ticker=args.ticker)
+    run(
+        start=args.start,
+        end=args.end,
+        months=args.months,
+        ticker=args.ticker,
+        checkpoint_every=args.checkpoint_every,
+    )
 
 
 if __name__ == "__main__":

@@ -9,8 +9,10 @@ name: AB Full Market (checklist + peers + backfill)
 #   0) price_store bootstrap  — skip if parquet has enough history
 #   1) ab_checklist           — skip if as-of CSV has ≥50 liquid rows
 #   2) peer_rs + ab_enrich    — skip if enriched CSV has ≥50 rows
-#   3) ab_backfill            — skip if a *universe* PIT file covers asof+months
-#                               (AAPL/BB/BBAI single-ticker files do NOT count)
+#   3) ab_backfill            — skip if a *finished* *_universe.parquet/csv
+#                               covers asof+months. `*.resume.parquet` is a
+#                               mid-run checkpoint (not finished). AAPL/BB/BBAI
+#                               single-ticker files do NOT count.
 #
 # skip_* inputs: true = force skip; false/schedule = auto-reuse if present.
 
@@ -380,9 +382,11 @@ jobs:
             cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
                   "data/ab_checklist/${ASOF}_ab_checklist.csv"
           fi
-          echo "=== ab_backfill --months $M --end $ASOF ==="
-          echo "NOTE: after last asof day log, pattern-audit + parquet write can take minutes."
-          python -u -m src.ab_backfill --months "$M" --end "$ASOF"
+          echo "=== ab_backfill --months $M --end $ASOF --checkpoint-every 10 ==="
+          echo "NOTE: writes {start}_{end}_universe.resume.parquet every 10 asof days"
+          echo "      (and on SIGTERM). A 6h cancel used to drop 220/252 days because"
+          echo "      the table lived only in memory until the final write."
+          python -u -m src.ab_backfill --months "$M" --end "$ASOF" --checkpoint-every 10
           ls -lah data/ab_backfill/ | tail -20
           LATEST_MD=$(ls -1t data/ab_backfill/*universe*.md data/ab_backfill/*.md 2>/dev/null | head -1 || true)
           if [ -n "$LATEST_MD" ]; then
@@ -414,5 +418,14 @@ jobs:
           fi
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "chore: AB full market ${{ steps.meta.outputs.asof }} (checklist+peers+backfill)"
-          git pull --rebase origin main || true
-          git push origin HEAD:main
+          # Push back to the branch that ran this job. Never push a PR branch
+          # to main (that would merge this cleanup PR via the bot).
+          REF="${{ github.ref_name }}"
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            git pull --rebase origin main || true
+            git push origin HEAD:main
+          else
+            echo "Not on main (ref=$REF) — pushing outputs to that branch only"
+            git pull --rebase origin "$REF" || true
+            git push origin "HEAD:$REF"
+          fi

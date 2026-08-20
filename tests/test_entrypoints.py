@@ -349,6 +349,52 @@ class ImportSmokeTests(unittest.TestCase):
         self.assertEqual(stats[0]["last_day_after_fee_pct"], 0.74)  # 10275/10200-1
         self.assertEqual(stats[0]["vs_2pct_gap"], -1.31)
 
+    def test_ab_backfill_resume_is_not_final_universe(self) -> None:
+        import tempfile
+        from pathlib import Path
+        from src import ab_backfill as bf
+
+        name = bf.resume_stem("2025-08-19", "2026-08-19", "universe") + ".parquet"
+        self.assertEqual(name, "2025-08-19_2026-08-19_universe.resume.parquet")
+        self.assertIsNone(bf.UNIVERSE_FINAL_RE.match(name))
+        self.assertIsNotNone(
+            bf.UNIVERSE_FINAL_RE.match("2025-08-19_2026-08-19_universe.parquet")
+        )
+        self.assertEqual(
+            bf.remaining_days(["2026-07-05", "2026-07-06", "2026-07-07"], "2026-07-06"),
+            ["2026-07-07"],
+        )
+        self.assertEqual(bf.remaining_days(["2026-07-06"], None), ["2026-07-06"])
+
+        tmp = Path(tempfile.mkdtemp())
+        old = bf.OUT_DIR
+        bf.OUT_DIR = tmp
+        try:
+            rows = [
+                {"Ticker": "AAA", "asof_date": "2026-07-06", "score": 1},
+                {"Ticker": "BBB", "asof_date": "2026-07-06", "score": 2},
+            ]
+            pq = bf.write_resume_checkpoint(
+                rows, "2025-08-19", "2026-08-19", "universe",
+                "2026-07-06", 220, 252,
+            )
+            self.assertTrue(pq.exists())
+            self.assertTrue(pq.name.endswith(".resume.parquet"))
+            loaded, info = bf.load_resume_checkpoint(
+                "2025-08-19", "2026-08-19", "universe"
+            )
+            self.assertEqual(len(loaded), 2)
+            self.assertEqual(info["last_asof"], "2026-07-06")
+            self.assertEqual(info["n_rows"], 2)
+            self.assertEqual(
+                bf.remaining_days(
+                    ["2026-07-06", "2026-07-07", "2026-07-08"], info["last_asof"]
+                ),
+                ["2026-07-07", "2026-07-08"],
+            )
+        finally:
+            bf.OUT_DIR = old
+
     def test_dashboard_loads_existing_blotter_and_backtest(self) -> None:
         import json
         from src.paper_trade import (

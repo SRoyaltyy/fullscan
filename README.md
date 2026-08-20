@@ -92,7 +92,7 @@ Evening (staggered so they do not all push `main` at 22:30 UTC):
 | UTC cron | Workflow |
 |---|---|
 | `30 21 * * 1-5` | `ab_checklist.yml` |
-| `30 22 * * 1-5` | `ab_full_market.yml` (12-month PIT; auto-reuse parquet / checklist / enrich / universe backfill) |
+| `30 22 * * 1-5` | `ab_full_market.yml` (12-month PIT; auto-reuse parquet / checklist / enrich / finished universe backfill; `*.resume.parquet` checkpoints every 10 asof days) |
 | `0 23 * * 1-5` | `hit_board.yml` |
 | `0 5 * * 2-6` | `ab_full_scan.yml` (colors + Form4 + merge; after full-market window) |
 
@@ -138,3 +138,11 @@ data/             live bot CSVs the Actions still publish; see .gitignore
 | `data/exports/finviz_YYYY-MM-DD.csv` | ~11MB/day Elite dumps | `label_weather`, `stock_book_all` |
 
 Rolling Finviz snapshot remains `data/finviz/latest.csv`. `git add -A` jobs run `scripts/unstage_growth_blobs.sh`. Dated join/universe/insider/checklist CSVs are gitignored for accidental adds; the stock-book / AB / insider jobs still `git add -f` the files they publish.
+
+## AB Full Market 6h timeout (2026-08-20)
+
+[Run 32397798646](https://github.com/SRoyaltyy/fullscan/actions/runs/32397798646) was a `workflow_dispatch` on **main**: 12-month liquid-universe PIT, as-of 2026-08-19, skip bootstrap/checklist/enrich. GitHub cancelled the job at the 6h cap (`2026-08-20T23:28:46Z`). Last line: `[backfill] 2026-07-06 (220/252) rows=576,020`. `Commit outputs` then printed `No changes`. Main still has only AAPL/BB/BBAI single-ticker files under `data/ab_backfill/`. The artifact had those same old files plus checklist/peers — **no** universe parquet/csv/md/json.
+
+Cause: `src/ab_backfill.py` appended every asof into an in-memory list and called `to_parquet` only after the last day. There was no mid-run write and no SIGTERM handler. Cancelling the step discarded 220/252 days. That work is gone; this change cannot resurrect it.
+
+Now: every 10 asof days (and on SIGTERM/SIGINT after the current asof) the runner writes `{start}_{end}_universe.resume.parquet` + `.json`. `Commit outputs` is `if: always()`, so a 6h cancel can still push that resume file. The next run with the same `--months/--end` loads it and skips completed asof dates. `*.resume.parquet` is **not** a finished universe backfill (auto-reuse still requires `{start}_{end}_universe.parquet` / `.csv`). There is still no finished universe PIT file, so do not claim anything about 1d/3d/1w forwards.
