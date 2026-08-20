@@ -2,6 +2,10 @@ name: Restore catalyst_analysis.py
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "scripts/catalyst_b64/**"
+      - ".github/workflows/restore_catalyst_analysis.yml"
 
 permissions:
   contents: write
@@ -14,53 +18,49 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Restore file from known-good commit and patch JSON save
+      - name: Assemble catalyst_analysis.py from b64 parts (or git history)
         run: |
           set -euo pipefail
-          # Last known good full file before placeholder overwrite
-          git show 7cbf1a9842e107957b6a2cdca5b4f7ed82c86c49:collectors/catalyst_analysis.py > collectors/catalyst_analysis.py
-          python3 << 'PY'
+          if ls scripts/catalyst_b64/part_*.b64 >/dev/null 2>&1; then
+            echo "Assembling from scripts/catalyst_b64/"
+            cat scripts/catalyst_b64/part_*.b64 | tr -d '\n' | base64 -d > collectors/catalyst_analysis.py
+          else
+            echo "Falling back to git history"
+            git show 7cbf1a9842e107957b6a2cdca5b4f7ed82c86c49:collectors/catalyst_analysis.py > collectors/catalyst_analysis.py
+            python3 << 'PY'
           from pathlib import Path
           p = Path("collectors/catalyst_analysis.py")
           text = p.read_text()
-          if "Saved catalyst JSON" in text:
-              print("already patched")
-          else:
-              old = '''        if "error" in result:
-            print(f"\u274c Error: {result['error']}")
-        else:
-            grid = result.get("catalyst_grid", [])
-            positive_hits = [c for c in grid if c.get("status")=="HIT" and c.get("type")=="positive"]
-            negative_hits = [c for c in grid if c.get("status")=="HIT" and c.get("type")=="negative"]
-            print(f"\u2705 Net signal: {result.get('net_signal')} (conviction {result.get('conviction')})")
-'''
-              # Use actual emoji-free anchors matching file
-              old = (
-                  '        if "error" in result:\n'
-                  '            print(f"\u274c Error: {result[\'error\']}")\n'
-                  '        else:\n'
-                  '            grid = result.get("catalyst_grid", [])\n'
-              )
-              # Simpler unique anchor
-              anchor = '        if "error" in result:\n            print(f"\u274c Error: {result[\'error\']}")\n        else:\n            grid = result.get("catalyst_grid", [])'
-              # File uses emoji - read exact bytes
-              print("file has error block", 'if "error" in result' in text)
-              idx = text.find('if "error" in result:')
-              print("idx", idx)
-              # Find the else: grid = result.get block and insert before grid =
-              needle = '            grid = result.get("catalyst_grid", [])'
-              insert = '''            # Persist for catalyst_chart overlays\n            try:\n                from pathlib import Path as _P\n                from datetime import date as _date\n                out_dir = _P("data/catalyst")\n                out_dir.mkdir(parents=True, exist_ok=True)\n                stamp = _date.today().isoformat()\n                out_path = out_dir / f"{ticker.upper()}_{stamp}.json"\n                payload = dict(result)\n                payload["ticker"] = ticker.upper()\n                payload["generated_at"] = stamp\n                payload["cutoff_date"] = CUTOFF_DATE\n                out_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")\n                print(f"Saved catalyst JSON -> {out_path}")\n            except Exception as _e:\n                print(f"  warn: could not save catalyst JSON: {_e}")\n            grid = result.get("catalyst_grid", [])'''
-              if needle not in text:
-                  raise SystemExit("needle not found")
-              # only replace the first occurrence in main block (last occurrence is safer)
+          needle = '            grid = result.get("catalyst_grid", [])'
+          insert = '''            # Persist for catalyst_chart overlays
+            try:
+                from pathlib import Path as _P
+                from datetime import date as _date
+                out_dir = _P("data/catalyst")
+                out_dir.mkdir(parents=True, exist_ok=True)
+                stamp = _date.today().isoformat()
+                out_path = out_dir / f"{ticker.upper()}_{stamp}.json"
+                payload = dict(result)
+                payload["ticker"] = ticker.upper()
+                payload["generated_at"] = stamp
+                payload["cutoff_date"] = CUTOFF_DATE
+                out_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+                print(f"Saved catalyst JSON -> {out_path}")
+            except Exception as _e:
+                print(f"  warn: could not save catalyst JSON: {_e}")
+            grid = result.get("catalyst_grid", [])'''
+          if "Saved catalyst JSON" not in text:
               pos = text.rfind(needle)
+              if pos < 0:
+                  raise SystemExit("needle not found")
               text = text[:pos] + insert + text[pos+len(needle):]
               p.write_text(text)
-              print("patched ok", p.stat().st_size)
+          print("size", p.stat().st_size)
           PY
+          fi
           wc -l collectors/catalyst_analysis.py
-          head -5 collectors/catalyst_analysis.py
-          rg -n "Saved catalyst JSON|catalyst_grid" collectors/catalyst_analysis.py | head
+          head -3 collectors/catalyst_analysis.py
+          grep -n "Saved catalyst JSON\|Catalyst Analysis Engine" collectors/catalyst_analysis.py | head
 
       - name: Commit restore
         run: |
@@ -68,6 +68,7 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           git add collectors/catalyst_analysis.py
-          git commit -m "fix: restore catalyst_analysis.py + persist JSON for charts"
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "fix: restore catalyst_analysis.py + JSON persistence for charts"
           git pull --rebase origin main || true
           git push origin HEAD:main
