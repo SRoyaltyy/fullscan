@@ -95,37 +95,38 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED: "1"
+          TICKER: ${{ steps.meta.outputs.ticker }}
+          CUTOFF: ${{ steps.meta.outputs.cutoff }}
         run: |
           set -euo pipefail
-          T="${{ steps.meta.outputs.ticker }}"
-          C="${{ steps.meta.outputs.cutoff }}"
-          # Override hardcoded TICKERS / CUTOFF_DATE at top of module
-          python3 << PY
+          python3 << 'PY'
+          import os, re
           from pathlib import Path
+          T = os.environ["TICKER"].strip().upper()
+          C = (os.environ.get("CUTOFF") or "").strip()
           p = Path("collectors/catalyst_analysis.py")
           text = p.read_text(encoding="utf-8")
-          import re
           text2, n1 = re.subn(
-              r'^TICKERS\s*=\s*\[[^\]]*\]',
-              f'TICKERS = ["{ "$T" }"]',
+              r"^TICKERS\s*=\s*\[[^\]]*\]",
+              f'TICKERS = ["{T}"]',
               text,
               count=1,
               flags=re.M,
           )
           if n1 != 1:
               raise SystemExit(f"failed to patch TICKERS (n={n1})")
-          if "{ "$C" }":
+          if C:
               text2, n2 = re.subn(
-                  r'^CUTOFF_DATE\s*=\s*["\'][^"\']*["\']',
-                  f'CUTOFF_DATE = "{ "$C" }"',
+                  r"^CUTOFF_DATE\s*=\s*[\"'][^\"']*[\"']",
+                  f'CUTOFF_DATE = "{C}"',
                   text2,
                   count=1,
                   flags=re.M,
               )
           else:
               text2, n2 = re.subn(
-                  r'^CUTOFF_DATE\s*=\s*["\'][^"\']*["\']',
-                  'CUTOFF_DATE = None',
+                  r"^CUTOFF_DATE\s*=\s*.*$",
+                  "CUTOFF_DATE = None",
                   text2,
                   count=1,
                   flags=re.M,
@@ -133,7 +134,7 @@ jobs:
           if n2 != 1:
               raise SystemExit(f"failed to patch CUTOFF_DATE (n={n2})")
           p.write_text(text2, encoding="utf-8")
-          print(f"patched TICKERS=[\"{ "$T" }\"] CUTOFF_DATE={ "$C" or None!r}")
+          print(f"patched TICKERS=[\"{T}\"] CUTOFF_DATE={C or None!r}")
           PY
           echo "=== running catalyst analysis ==="
           python -u -m collectors.catalyst_analysis
@@ -155,7 +156,6 @@ jobs:
           DAYS="${{ steps.meta.outputs.days }}"
           ARGS=("$T" --days "$DAYS")
           if [ "${{ inputs.include_earnings }}" = "true" ]; then ARGS+=(--earnings); fi
-          # Prefer today's catalyst JSON if present
           LATEST=$(ls -1t data/catalyst/${T}_*.json 2>/dev/null | head -1 || true)
           if [ -n "$LATEST" ]; then
             ARGS+=(--events "$LATEST")
