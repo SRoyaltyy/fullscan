@@ -1,4 +1,8 @@
-"""Optional Supabase (Postgres) access. Degrades gracefully if unavailable."""
+"""Optional Supabase (Postgres) access. Degrades gracefully if unavailable.
+
+src/ is read-only: news + macro_indicators SELECTs only. Collectors write.
+DATABASE_KEY is unused — connections use DATABASE_URL.
+"""
 from __future__ import annotations
 
 from . import config

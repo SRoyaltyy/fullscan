@@ -4,8 +4,22 @@ Live **US-market prediction + news + event + Finviz + paper-trade** system.
 The daily bot (`Market-Bot-Automaton`) commits outputs to `main`. This repo is
 both the engine **and** a git data lake (`01_daily/`, `data/`, scoreboards).
 Structured tables also live in Supabase/Postgres via `DATABASE_URL`.
+`src/` **reads** `news` and `macro_indicators` only — it never writes the DB.
+`DATABASE_KEY` is unused.
 
 Dashboard: https://SRoyaltyy.github.io/fullscan/dashboard/
+
+## Two machines (do not collapse)
+
+**A — Daily LLM loop** (general market + 11-sector twin). Channel 1 fetch →
+DeepSeek predict → outcome → reflect → distill / promote / `learn_cycle`.
+Scoreboard: `03_scoreboard/scoreboard.json`. The LLM does **not** score 6,000
+names.
+
+**B — Stock book** (mechanical). `segments` × `weather` × `join` → news edges →
+`stock_book` → paper dashboard via `run_stock_book_all`. Design thesis:
+**label → regime → join**. Rubric weights stay in `00_grounding/` — do not
+retune them here.
 
 ## vs [theme-radar](https://github.com/SRoyaltyy/theme-radar)
 
@@ -45,6 +59,12 @@ python -m src.run_events
 # Liquid-universe AB checklist (needs Finviz export + price store)
 python -m src.ab_checklist --date 2026-08-19 --top 20
 python -m src.price_store status
+
+# Stock book (machine B) — label → regime → join
+python -m src.segments
+python -m src.weather
+python -m src.join
+python -m src.run_stock_book_all --date 2026-08-19 --skip-llm
 ```
 
 Copy secrets from GitHub Actions — **never commit `.env` or keys**.
@@ -81,7 +101,9 @@ Manual-only (kept): `ab_one`, `ab_one_button`, `ab_backfill`, `ab_enrich`,
 
 **Removed** (they could overwrite source on `main`): `restore_*`,
 `patch_ab_backfill`, `auto_fix_ab_backfill`, `apply_finviz_wiring`,
-`gemini-catcher`, `grok-test-harvest`.
+`gemini-catcher`, `grok-test-harvest`. Root `grok_test_harvester.py` (Sheets
+experiment) is gone. `gemini_catcher.py` stays — `collect-catalyst` still
+uses `GEMINI_BROWSER_STATE`; it is not on the daily LLM or stock-book chain.
 
 New: `smoke.yml` runs entrypoint tests on pull requests only.
 

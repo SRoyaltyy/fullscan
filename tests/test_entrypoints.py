@@ -44,6 +44,18 @@ CRITICAL_MODULES = [
     "src.finviz_universe",
     "src.price_store",
     "src.peer_rs",
+    # Machine B — label → regime → join → book
+    "src.segments",
+    "src.weather",
+    "src.join",
+    "src.stock_book",
+    "src.run_stock_book_all",
+    "src.learn_cycle",
+    "src.fetch_channel1",
+    "src.promote_lessons",
+    "src.distill_memory",
+    "src.paper_trade",
+    "src.db",
 ]
 
 # ``python -m <mod> --help`` must reach argparse (exit 0), not no-op.
@@ -61,6 +73,11 @@ HELP_MODULES = [
     "src.finviz_digest",
     "src.industry_predict",
     "src.price_store",
+    "src.segments",
+    "src.weather",
+    "src.join",
+    "src.stock_book",
+    "src.run_stock_book_all",
 ]
 
 # Names that count as a real entrypoint when called from ``__main__``.
@@ -180,6 +197,85 @@ class EntrypointContractTests(unittest.TestCase):
         self.assertIn("from .industry_map import members", src)
         self.assertNotIn("from .finviz_universe import members", src)
 
+    def test_every_exec_name_loader_uses_was_main(self) -> None:
+        """Hunt every module that exec-loads after mutating ``__name__``."""
+        skip = {"_ab_checklist_cached.py"}
+        offenders: list[str] = []
+        loaders: list[str] = []
+        roots = [ROOT / "src", ROOT / "collectors", ROOT / "scripts", ROOT]
+        seen: set[Path] = set()
+        files: list[Path] = []
+        for root in roots:
+            if not root.exists():
+                continue
+            if root == ROOT:
+                files.extend(root.glob("*.py"))
+            else:
+                files.extend(root.rglob("*.py"))
+        for path in files:
+            if path in seen or path.name in skip or "tests" in path.parts:
+                continue
+            seen.add(path)
+            text = path.read_text(encoding="utf-8")
+            try:
+                tree = ast.parse(text, filename=str(path))
+            except SyntaxError:
+                continue
+            mutates_name = False
+            has_exec = False
+            was_main_lineno: int | None = None
+            name_assign_lineno: int | None = None
+            for node in ast.walk(tree):
+                if isinstance(node, ast.Call) and _call_name(node.func) == "exec":
+                    has_exec = True
+                if isinstance(node, ast.Assign):
+                    for tgt in node.targets:
+                        if isinstance(tgt, ast.Name) and tgt.id == "_WAS_MAIN":
+                            was_main_lineno = node.lineno
+                        if isinstance(tgt, ast.Name) and tgt.id == "__name__":
+                            mutates_name = True
+                            name_assign_lineno = node.lineno
+                        if isinstance(tgt, ast.Subscript):
+                            sl = tgt.slice
+                            key = sl.value if isinstance(sl, ast.Constant) else None
+                            if key == "__name__":
+                                mutates_name = True
+                                name_assign_lineno = node.lineno
+            if has_exec and mutates_name:
+                rel = str(path.relative_to(ROOT))
+                loaders.append(rel)
+                if was_main_lineno is None:
+                    offenders.append(f"{rel}: exec+__name__ mutation without _WAS_MAIN")
+                elif name_assign_lineno is not None and was_main_lineno > name_assign_lineno:
+                    offenders.append(
+                        f"{rel}: _WAS_MAIN must be captured BEFORE __name__ mutation"
+                    )
+                if "if _WAS_MAIN:" not in text or "main()" not in text.split("if _WAS_MAIN:")[-1]:
+                    offenders.append(f"{rel}: missing `if _WAS_MAIN: main()`")
+        self.assertEqual(loaders, ["src/ab_checklist.py"], f"unexpected loaders: {loaders}")
+        self.assertEqual(offenders, [], "loader contract failures:\n" + "\n".join(offenders))
+
+    def test_dead_leftovers_are_gone(self) -> None:
+        banned = [
+            ROOT / "src" / "_ab_backfill.b64.p0",
+            ROOT / "src" / "_ab_backfill.b64.p1",
+            ROOT / "src" / "_ab_backfill.b64.p2",
+            ROOT / "src" / "_ab_backfill.b64.p3",
+            ROOT / "src" / "_ab_src.p0",
+            ROOT / "grok_test_harvester.py",
+        ]
+        present = [str(p.relative_to(ROOT)) for p in banned if p.exists()]
+        self.assertEqual(present, [], f"leftover junk still on disk: {present}")
+        self.assertTrue(
+            (ROOT / "gemini_catcher.py").exists(),
+            "gemini_catcher.py is used by collect-catalyst — keep the module",
+        )
+
+    def test_src_db_is_read_only(self) -> None:
+        src = (ROOT / "src" / "db.py").read_text(encoding="utf-8")
+        for banned in ("INSERT ", "UPDATE ", "DELETE ", "TRUNCATE ", "DROP "):
+            self.assertNotIn(banned, src.upper().replace("\n", " "))
+
 
 class ImportSmokeTests(unittest.TestCase):
     @classmethod
@@ -199,6 +295,7 @@ class ImportSmokeTests(unittest.TestCase):
                 "src.config",
                 "src.industry_map",
                 "src.finviz_universe",
+                "src.db",
             }:
                 continue
             if not (hasattr(mod, "main") or hasattr(mod, "run") or hasattr(mod, "collect")):
