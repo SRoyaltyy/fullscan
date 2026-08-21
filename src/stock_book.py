@@ -396,6 +396,17 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
 
     weather = _load_weather(date)
     news = _load_news_actions(date)
+    try:
+        from .judge_apply import load_or_parse
+        jt = (load_or_parse(date).get("tickers") or {})
+        for t, net in jt.items():
+            rec = news.setdefault(t.upper(), {"net": 0.0, "events": []})
+            rec["net"] = float(rec.get("net") or 0) + float(net)
+            rec.setdefault("events", []).append({"event": "news_judge", "weight": net})
+        if jt:
+            print(f"[stock-book] elevated {len(jt)} news-judge tickers into s_news")
+    except Exception as e:
+        print(f"[stock-book] judge overlay skipped: {e}")
     ab = _load_ab_enriched(date)
     peer = _load_peer_rs(date)
     same_day_runs = _runs_for_date(date)

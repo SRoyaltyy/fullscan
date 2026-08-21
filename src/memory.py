@@ -62,6 +62,40 @@ def mutable_policy() -> str:
     return f"=== MUTABLE POLICY (follow these adjustments; core SCORES format unchanged) ===\n{text}\n"
 
 
+def recent_misses(n: int = 8) -> str:
+    """Explicit 'you were wrong' list so the LLM cannot ignore its own tape."""
+    board = scoreboard.load()
+    rows = []
+    for r in reversed(board.get("runs", [])):
+        if r.get("topic", "general") != "general":
+            continue
+        if r.get("direction_hit") is None or r.get("ops_fail"):
+            continue
+        rows.append(r)
+        if len(rows) >= n:
+            break
+    if not rows:
+        return "(no graded general runs yet)"
+    lines = ["HARD GRADE TAPE — treat these as constraints, not flavour:"]
+    for r in rows:
+        hit = "HIT" if r.get("direction_hit") else "MISS"
+        lines.append(
+            f"- {r.get('date')} predicted {r.get('predicted_direction')} "
+            f"(score {r.get('total_score')}) vs actual {r.get('actual_direction') or r.get('actual_move')} "
+            f"→ {hit}"
+        )
+    misses = [r for r in rows if not r.get("direction_hit")]
+    if misses:
+        last = misses[0]
+        lines.append(
+            "CONSTRAINT: the most recent miss was "
+            f"{last.get('date')} {last.get('predicted_direction')} vs "
+            f"{last.get('actual_direction')}. Do NOT let a 1-day FRED tick "
+            "override a 1-week yield/regime signal the way that miss did."
+        )
+    return "\n".join(lines)
+
+
 def scoreboard_summary() -> str:
     board = scoreboard.load()
     runs = board.get("runs", [])
@@ -107,6 +141,7 @@ def prediction_context() -> str:
     return (
         "=== MEMORY CONTEXT ===\n\n"
         f"[SCOREBOARD]\n{scoreboard_summary()}\n\n"
+        f"[RECENT GRADED MISSES — OBEY THESE]\n{recent_misses()}\n\n"
         f"[CONSOLIDATED MEMORY]\n{consolidated_memory()}\n\n"
         f"{active_lessons()}\n\n"
         f"{mutable_policy()}\n\n"

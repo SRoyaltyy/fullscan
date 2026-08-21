@@ -1,27 +1,42 @@
 {
-  "version": 1,
-  "purpose": "Join engine rules — how a stock's labels and today's weather stances combine into one total score per stock. WEIGHTS AND GATE SEMANTICS LIVE HERE so lessons/backtests can retune without touching src/join.py. Design guards: ONE VOTE PER FAMILY (correlated labels in the same family never stack), unknown scores 0 (missing data is never a vote), gates are flags/vetoes not silent score edits.",
+  "version": 2,
+  "purpose": "Join engine rules — labels × weather + stock-intrinsic priors. Unknown weather is NOT a zero universe: label_priors still rank names. Sector tape from Finviz week is a real vote.",
   "vote_map": {"favorable": 1, "neutral": 0, "hostile": -1, "unknown": 0},
   "display_map": {"favorable": "bull", "neutral": "neutral", "hostile": "bear", "unknown": "—"},
   "weather_family_weights": {
-    "sector": 1.0,
-    "size": 1.0,
+    "sector": 2.5,
+    "size": 0.8,
     "index": 0.0,
-    "geo": 1.0,
-    "beta": 1.0,
-    "short": 1.0,
-    "vol": 1.0,
-    "profit": 1.0,
-    "lev": 1.0,
-    "style": 1.0,
+    "geo": 0.6,
+    "beta": 0.8,
+    "short": 0.5,
+    "vol": 0.5,
+    "profit": 0.7,
+    "lev": 0.5,
+    "style": 0.5,
     "mom": 1.0,
-    "ext": 1.0,
-    "range": 1.0
+    "ext": 0.9,
+    "range": 0.7,
+    "themes": 0.8
+  },
+  "label_priors": {
+    "_note": "Stock-shape votes that fire even when weather is unknown/neutral. These are why join is not a flat zero.",
+    "mom": {"uptrend": 0.50, "downtrend": -0.50, "mixed": 0.0},
+    "ext": {"washed": 0.40, "extreme": -0.55, "extended": -0.25, "neutral": 0.0},
+    "range": {"deep_low": 0.30, "low": 0.15, "mid": 0.0, "high": 0.05, "top": -0.10, "breakout": 0.20},
+    "profit": {"yes": 0.25, "thin": 0.0, "no": -0.30},
+    "rsi": {"oversold": 0.35, "mid": 0.0, "overbought": -0.35},
+    "sma20": {"above": 0.15, "below": -0.15},
+    "q_mom": {"up": 0.20, "flat": 0.0, "down": -0.20}
   },
   "intrinsic_votes": {
-    "_note": "stock-intrinsic labels that need no weather; smaller fixed weights so environment dominates",
-    "earnsurp": {"weight": 0.5, "map": {"big_beat": 1, "beat": 0.5, "inline": 0, "miss": -0.5, "big_miss": -1, "unknown": 0}},
-    "analyst": {"weight": 0.5, "map": {"strong_buy": 1, "buy": 0.5, "hold": 0, "sell": -1, "unknown": 0}}
+    "_note": "stock-intrinsic labels that need no weather",
+    "earnsurp": {"weight": 0.6, "map": {"big_beat": 1, "beat": 0.5, "inline": 0, "miss": -0.5, "big_miss": -1, "unknown": 0}},
+    "analyst": {"weight": 0.5, "map": {"strong_buy": 1, "buy": 0.5, "hold": 0, "sell": -1, "unknown": 0}},
+    "peg": {"weight": 0.35, "map": {"cheap": 1, "fair": 0, "rich": -0.5, "unknown": 0}},
+    "instown": {"weight": 0.25, "map": {"high": 0.5, "mid": 0, "low": -0.5, "unknown": 0}},
+    "sales_g": {"weight": 0.35, "map": {"fast": 1, "slow": 0, "shrink": -1, "unknown": 0}},
+    "roe": {"weight": 0.25, "map": {"good": 1, "thin": 0, "none": -0.5, "unknown": 0}}
   },
   "multi_tag_families": {
     "_note": "pipe-joined families vote as the MEAN of their member tags, still one family vote total",

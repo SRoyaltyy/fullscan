@@ -89,15 +89,22 @@ def fetch_fred_block() -> dict:
 
 
 def fetch_vix() -> dict:
-    vix = _yf_history("^VIX")
+    vix = _yf_history("^VIX", days=45)
     vix3m, vix3m_src = _yf_history("^VIX3M"), "^VIX3M"
-    if not vix3m:  # ^VIX3M is frequently unavailable/stale on Yahoo
+    if not vix3m:
         vix3m, vix3m_src = _yf_history("^VXV"), "^VXV (fallback)"
-    out = {"vix": {}, "vix3m": {}, "ratio": None}
+    out = {"vix": {}, "vix3m": {}, "ratio": None, "ratio_source": None}
     if vix:
         out["vix"] = {"date": vix[-1]["date"], "current": round(vix[-1]["close"], 2),
                       "delta_1d": round(vix[-1]["close"] - vix[-2]["close"], 2) if len(vix) > 1 else None,
                       "delta_1w": round(vix[-1]["close"] - vix[-6]["close"], 2) if len(vix) > 5 else None}
+        # Always have a usable vol regime: VIX vs its own 20d mean
+        closes = [x["close"] for x in vix[-20:]]
+        if len(closes) >= 10:
+            ma = sum(closes) / len(closes)
+            if ma:
+                out["vix_ma20"] = round(ma, 2)
+                out["ratio_ma20"] = round(vix[-1]["close"] / ma, 3)
     if vix3m:
         out["vix3m"] = {"date": vix3m[-1]["date"], "current": round(vix3m[-1]["close"], 2),
                         "source": vix3m_src}
@@ -109,11 +116,15 @@ def fetch_vix() -> dict:
             gap = 999
         if gap <= 7:
             out["ratio"] = round(vix[-1]["close"] / vix3m[-1]["close"], 3)
+            out["ratio_source"] = "vix/vix3m"
         else:
-            out["ratio"] = None
-            out["ratio_stale"] = (f"VIX3M quote is {gap} days older than VIX "
-                                  f"({vix3m[-1]['date']} vs {vix[-1]['date']}); "
-                                  "ratio suppressed — do not use backwardation rule")
+            out["ratio_stale"] = (
+                f"VIX3M quote is {gap} days older than VIX "
+                f"({vix3m[-1]['date']} vs {vix[-1]['date']})"
+            )
+    if out.get("ratio") is None and out.get("ratio_ma20"):
+        out["ratio"] = out["ratio_ma20"]
+        out["ratio_source"] = "vix/ma20"
     return out
 
 
@@ -127,22 +138,34 @@ def _pct_block(symbol: str) -> dict:
 
 
 def fetch_commodities_fx() -> dict:
-    dxy = _yf_history("DX-Y.NYB", days=45)
+    dxy = None
+    dxy_src = None
+    for sym in ("DX-Y.NYB", "DX=F", "UUP"):
+        h = _yf_history(sym, days=45)
+        if len(h) >= 5:
+            dxy, dxy_src = h, sym
+            break
     gold = _pct_block("GC=F")
-    if not gold.get("available"):  # Yahoo fallback: Supabase GOLD series
+    if not gold.get("available"):
         rows = db.macro_series("GOLD", limit=3)
         if len(rows) >= 2:
             gold = {"available": True, "date": rows[-1][0],
                     "last": round(rows[-1][1], 2),
                     "pct_1d": _pct(rows[-1][1], rows[-2][1]),
                     "note": "from Supabase macro_indicators"}
+    dxy_block = {"available": False}
+    if dxy and len(dxy) >= 2:
+        dxy_block = {
+            "available": True,
+            "date": dxy[-1]["date"],
+            "source": dxy_src,
+            "pct_1d": _pct(dxy[-1]["close"], dxy[-2]["close"]),
+            "pct_1m": _pct(dxy[-1]["close"], dxy[-22]["close"]) if len(dxy) >= 22 else None,
+        }
     return {
         "CL=F": _pct_block("CL=F"), "BZ=F": _pct_block("BZ=F"),
         "GC=F": gold,
-        "DXY": ({"available": True, "date": dxy[-1]["date"],
-                 "pct_1d": _pct(dxy[-1]["close"], dxy[-2]["close"]),
-                 "pct_1m": _pct(dxy[-1]["close"], dxy[-22]["close"])}
-                if len(dxy) >= 22 else {"available": False}),
+        "DXY": dxy_block,
     }
 
 

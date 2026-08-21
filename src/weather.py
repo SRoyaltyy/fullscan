@@ -94,8 +94,62 @@ def load_factors(date_str: str) -> dict[str, float]:
     return out
 
 
-def load_channel1(date_str: str) -> dict:
-    return _load_json(DAILY / "_channel1" / f"{date_str}_predict.json") or {}
+def load_channel1(date_str: str, live: bool = True) -> dict:
+    """Live fetch when yfinance is installed; otherwise dated JSON. Merge
+    so a half-failed live call cannot wipe a good VIX/DXY cache."""
+    disk = _load_json(DAILY / "_channel1" / f"{date_str}_predict.json") or {}
+    try:
+        import yfinance  # noqa: F401
+    except ImportError:
+        live = False
+    if not live:
+        return disk
+    try:
+        from . import fetch_channel1
+        data = fetch_channel1.build("predict")
+        fetch_channel1.save(data, date_str, "predict")
+        # fill holes from disk so a Yahoo outage doesn't blank VIX
+        if disk:
+            if not (data.get("vix") or {}).get("vix"):
+                data["vix"] = disk.get("vix") or data.get("vix")
+            fx = data.setdefault("commodities_fx", {})
+            disk_fx = disk.get("commodities_fx") or {}
+            for k, v in disk_fx.items():
+                if not (fx.get(k) or {}).get("available"):
+                    fx[k] = v
+            if not (data.get("fred") or {}):
+                data["fred"] = disk.get("fred") or {}
+        print(f"[weather] live Channel 1 fetched for {date_str}")
+        return data
+    except Exception as e:
+        print(f"[weather] live Channel 1 failed ({e}); using on-disk cache")
+        return disk
+
+
+def _finviz_sector_tape(date_str: str) -> dict[str, float]:
+    """Median Performance (Week) by Finviz sector — always available, no LLM."""
+    export = ROOT / "data" / "exports" / f"finviz_{date_str}.csv"
+    if not export.exists():
+        files = sorted((ROOT / "data" / "exports").glob("finviz_????-??-??.csv"))
+        export = files[-1] if files else None
+    if not export or not export.exists():
+        return {}
+    try:
+        import pandas as pd
+        df = pd.read_csv(export, usecols=["Sector", "Performance (Week)"], low_memory=False)
+        def _pct(x):
+            try:
+                return float(str(x).replace("%", "").replace(",", ""))
+            except Exception:
+                return None
+        df["pw"] = df["Performance (Week)"].map(_pct)
+        out = {}
+        for sec, g in df.dropna(subset=["pw"]).groupby("Sector"):
+            out[str(sec)] = float(g["pw"].median())
+        return out
+    except Exception as e:
+        print(f"[weather] sector tape failed: {e}")
+        return {}
 
 
 def load_events(date_str: str) -> dict:
@@ -120,7 +174,7 @@ def derive_signals(date_str: str, th: dict) -> tuple[dict, list[str]]:
     gaps: list[str] = []
     general, sectors = load_runs(date_str)
     factors = load_factors(date_str)
-    ch1 = load_channel1(date_str)
+    ch1 = load_channel1(date_str, live=True)
     events = load_events(date_str)
 
     sig: dict = {"date": date_str}
@@ -174,12 +228,37 @@ def derive_signals(date_str: str, th: dict) -> tuple[dict, list[str]]:
         sig["dollar"] = "unknown"
         sig["dollar_source"] = "missing_dxy"
 
-    # -- channel 1 --
-    vix_ratio = (ch1.get("vix") or {}).get("ratio")
+    # -- channel 1 vol: ratio, else VIX 1d delta, else VIX level --
+    vix_blk = ch1.get("vix") or {}
+    vix_ratio = vix_blk.get("ratio")
+    vix_spot = (vix_blk.get("vix") or {}).get("current")
+    vix_d1 = (vix_blk.get("vix") or {}).get("delta_1d")
     sig["vix_ratio"] = vix_ratio
-    sig["vix"] = ("spiking" if vix_ratio is not None and vix_ratio >= th["vix_spike_ratio"]
-                  else "falling" if vix_ratio is not None and vix_ratio <= th["vix_falling_ratio"]
-                  else "calm" if vix_ratio is not None else "unknown")
+    sig["vix_spot"] = vix_spot
+    sig["vix_delta_1d"] = vix_d1
+    sig["vix_ratio_source"] = vix_blk.get("ratio_source")
+    if vix_ratio is not None and vix_ratio >= th["vix_spike_ratio"]:
+        sig["vix"] = "spiking"
+    elif vix_ratio is not None and vix_ratio <= th["vix_falling_ratio"]:
+        sig["vix"] = "falling"
+    elif vix_d1 is not None and vix_d1 >= 1.5:
+        sig["vix"] = "spiking"
+    elif vix_d1 is not None and vix_d1 <= -1.5:
+        sig["vix"] = "falling"
+    elif vix_spot is not None and vix_spot >= 25:
+        sig["vix"] = "spiking"
+    elif vix_spot is not None:
+        sig["vix"] = "calm"
+    else:
+        sig["vix"] = "unknown"
+
+    cl = (ch1.get("commodities_fx") or {}).get("CL=F") or {}
+    oil_1d = cl.get("pct_1d")
+    sig["oil_pct_1d"] = oil_1d
+    if oil_1d is not None:
+        sig["oil"] = ("rising" if oil_1d >= 1.0 else "falling" if oil_1d <= -1.0 else "flat")
+    else:
+        sig["oil"] = "unknown"
     fg = (ch1.get("fear_greed") or {})
     sig["fear_greed"] = fg.get("value") if fg.get("available") else None
     sig["fear_greed_label"] = fg.get("label") if fg.get("available") else None
@@ -188,14 +267,24 @@ def derive_signals(date_str: str, th: dict) -> tuple[dict, list[str]]:
     if not ch1:
         gaps.append("channel 1 predict json")
 
-    # -- sector board --
+    # -- sector board (LLM) + Finviz tape (always) --
     sig["sectors"] = {
         name: {"score": r.get("total_score"), "dir": r.get("predicted_direction"),
-               "conf": r.get("confidence_score")}
+               "conf": r.get("confidence_score"), "source": "llm"}
         for name, r in sectors.items()
     }
-    if not sectors:
+    tape = _finviz_sector_tape(date_str)
+    sig["sector_tape"] = tape
+    for name, med in tape.items():
+        if name not in sig["sectors"]:
+            stance_hint = ("up" if med >= 1.5 else "down" if med <= -1.5 else "flat")
+            sig["sectors"][name] = {
+                "score": med, "dir": stance_hint, "conf": 0.4, "source": "finviz_week",
+            }
+    if not sig["sectors"]:
         gaps.append("sector predict runs")
+    if not tape:
+        gaps.append("finviz sector tape")
 
     # -- events --
     ev = events.get("events", [])
@@ -232,19 +321,24 @@ def build_stances(sig: dict, th: dict) -> dict[str, dict[str, dict]]:
         ["sector", "size", "index", "geo", "beta", "short", "vol", "profit",
          "lev", "style", "mom", "ext", "range"]}
 
-    # -- sectors: straight from the sector board --
+    # -- sectors: LLM board if present, else Finviz week tape --
     for name in SECTORS:
         s = sig["sectors"].get(name)
         if not s or s.get("score") is None:
-            out["sector"][name] = _s("unknown", "low", "no sector predict run found")
+            out["sector"][name] = _s("unknown", "low", "no sector predict or tape")
             continue
         sc = float(s["score"])
-        stance = ("favorable" if sc >= th["sector_favorable_score"]
-                  else "hostile" if sc <= th["sector_hostile_score"] else "neutral")
-        out["sector"][name] = _s(
-            stance, "high",
-            f"sector predict score {sc:+.1f} dir {s.get('dir')} "
-            f"conf {s.get('conf')} [sector board]")
+        src = s.get("source") or "llm"
+        fav_th = 1.5 if src == "finviz_week" else th.get("sector_favorable_score", 3.0)
+        host_th = -1.5 if src == "finviz_week" else th.get("sector_hostile_score", -3.0)
+        stance = ("favorable" if sc >= fav_th
+                  else "hostile" if sc <= host_th else "neutral")
+        why = (
+            f"finviz sector median week {sc:+.2f}% [tape]"
+            if src == "finviz_week"
+            else f"sector predict score {sc:+.1f} dir {s.get('dir')} conf {s.get('conf')} [sector board]"
+        )
+        out["sector"][name] = _s(stance, "medium" if src == "finviz_week" else "high", why)
 
     # -- size --
     if risk_known:
@@ -490,9 +584,12 @@ def write_outputs(date_str: str, sig: dict, stances: dict,
                 f"score {sig.get('general_score'):+.1f}, "
                 f"conf {sig.get('general_confidence')})"
                 if sig.get("general_score") is not None else ""))
-    L.append(f"- **Yields:** {sig['yields']} | **Dollar/oil:** {sig['dollar']} "
-             f"| **VIX:** {sig['vix']}"
-             + (f" (ratio {sig['vix_ratio']:.2f})" if sig.get("vix_ratio") else ""))
+    L.append(f"- **Yields:** {sig['yields']} ({sig.get('yields_source')}) | "
+             f"**Dollar:** {sig['dollar']} ({sig.get('dollar_source')}) | "
+             f"**Oil:** {sig.get('oil')} | **VIX:** {sig['vix']}"
+             + (f" (ratio {sig['vix_ratio']:.2f} via {sig.get('vix_ratio_source')})"
+                if sig.get("vix_ratio") else "")
+             + (f" spot {sig.get('vix_spot')}" if sig.get("vix_spot") else ""))
     L.append(f"- **Fear & Greed:** " + (f"{fg:.0f} ({sig.get('fear_greed_label')})"
                                         if fg is not None else "n/a")
              + f" | **Yield/SPX 5d corr:** "
@@ -553,6 +650,25 @@ def main() -> None:
     th = rules.get("thresholds", {})
     sig, gaps = derive_signals(date_str, th)
     stances = build_stances(sig, th)
+    try:
+        from .judge_apply import load_or_parse
+        j = load_or_parse(date_str)
+        for sec, pol in (j.get("sector_tilts") or {}).items():
+            if sec not in stances.get("sector", {}):
+                continue
+            if pol in ("bearish", "hawkish"):
+                stances["sector"][sec] = _s("hostile", "medium", f"news_judge SECTOR {sec} [{pol}]")
+            elif pol == "bullish":
+                stances["sector"][sec] = _s("favorable", "medium", f"news_judge SECTOR {sec} [{pol}]")
+        if j.get("risk_tilt") == "off" and sig.get("risk") == "mixed":
+            sig["risk"] = "off"
+            sig["risk_source"] = "news_judge"
+            gaps.append("risk tilted off by news_judge")
+        elif j.get("risk_tilt") == "on" and sig.get("risk") == "mixed":
+            sig["risk"] = "on"
+            sig["risk_source"] = "news_judge"
+    except Exception as e:
+        print(f"[weather] judge overlay skipped: {e}")
     gates = build_gates(sig)
     js, md = write_outputs(date_str, sig, stances, gates, gaps)
     n_fav = sum(1 for f in stances.values() for s in f.values()

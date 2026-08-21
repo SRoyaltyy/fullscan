@@ -51,7 +51,8 @@ ET = ZoneInfo("America/New_York")
 
 FAMILY_COLS = ["sector", "industry", "size", "index", "geo", "beta", "short",
                "liq", "rvol", "vol", "profit", "lev", "style", "mom", "ext",
-               "range", "earn", "earnsurp", "analyst"]
+               "range", "earn", "earnsurp", "analyst", "themes",
+               "rsi", "sma20", "q_mom", "instown", "peg", "sales_g", "roe", "div"]
 
 
 # ---------------------------------------------------------------- loading
@@ -86,7 +87,10 @@ def load_export(path: Path) -> pd.DataFrame:
                 "200-Day Simple Moving Average",
                 "52-Week High", "52-Week Low", "EPS Surprise",
                 "Revenue Surprise", "Analyst Recom", "Target Price",
-                "Volatility (Week)", "Volatility (Month)"]
+                "Volatility (Week)", "Volatility (Month)",
+                "PEG", "Institutional Ownership", "Insider Ownership",
+                "Dividend Yield", "Return on Equity",
+                "Performance (Quarter)"]
     for c in num_cols:
         if c in df.columns:
             df[c] = df[c].map(_to_float)
@@ -140,7 +144,10 @@ def _bin(value: pd.Series, bins: list) -> pd.Series:
 
 
 def _col(df: pd.DataFrame, name: str) -> pd.Series:
-    return df.get(name, pd.Series(np.nan, index=df.index))
+    s = df.get(name, pd.Series(np.nan, index=df.index))
+    if getattr(s, "dtype", None) == object:
+        s = s.map(_to_float)
+    return s
 
 
 def assign_membership(df: pd.DataFrame, registry: dict, asof_date: str | None = None) -> pd.DataFrame:
@@ -255,7 +262,9 @@ def assign_membership(df: pd.DataFrame, registry: dict, asof_date: str | None = 
 
     blob = (_text_col("Industry") + " "
             + _text_col("Finviz_Description") + " "
-            + _text_col("News Title")).str.lower()
+            + _text_col("News Title") + " "
+            + _text_col("Tags") + " "
+            + _text_col("Company")).str.lower()
     theme_cols = {}
     for name, pat in patterns.items():
         theme_cols[f"theme:{name}"] = blob.str.contains(pat, regex=True, na=False)
@@ -265,6 +274,17 @@ def assign_membership(df: pd.DataFrame, registry: dict, asof_date: str | None = 
 
     m["themes"] = [_themes(i) for i in range(len(df))]
     m["n_themes"] = m["themes"].map(lambda s: 0 if not s else s.count("|") + 1)
+
+    m["rsi"] = _bin(_col(df, "Relative Strength Index (14)"), fam.get("rsi", {}).get("bins") or [["oversold", None, 35], ["mid", 35, 65], ["overbought", 65, None]])
+    sma20 = _col(df, "20-Day Simple Moving Average")
+    m["sma20"] = np.where(sma20 > 0, "above", np.where(sma20 < 0, "below", "unknown"))
+    m["sma20"] = pd.Series(m["sma20"], index=df.index).where(sma20.notna(), "unknown")
+    m["q_mom"] = _bin(_col(df, "Performance (Quarter)"), fam.get("q_mom", {}).get("bins") or [["down", None, -5], ["flat", -5, 5], ["up", 5, None]])
+    m["instown"] = _bin(_col(df, "Institutional Ownership"), fam.get("instown", {}).get("bins") or [["low", None, 20], ["mid", 20, 70], ["high", 70, None]])
+    m["peg"] = _bin(_col(df, "PEG"), fam.get("peg", {}).get("bins") or [["cheap", None, 1], ["fair", 1, 2], ["rich", 2, None]])
+    m["sales_g"] = _bin(_col(df, "Sales Year Over Year TTM"), fam.get("sales_g", {}).get("bins") or [["shrink", None, 0], ["slow", 0, 15], ["fast", 15, None]])
+    m["roe"] = _bin(_col(df, "Return on Equity"), fam.get("roe", {}).get("bins") or [["none", None, 0], ["thin", 0, 10], ["good", 10, None]])
+    m["div"] = _bin(_col(df, "Dividend Yield"), fam.get("div", {}).get("bins") or [["none", None, 0.01], ["some", 0.01, 3], ["high", 3, None]])
 
     return m
 

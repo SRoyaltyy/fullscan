@@ -206,11 +206,94 @@
         "data_center_power": "data.?center|datacenter|transformer|grid congestion|electrification|ge vernova|vertiv|power shortage",
         "hbm_memory": "\\bhbm\\b|high.?bandwidth|dram|nand|memory shortage|sk hynix",
         "copper_metals": "\\bcopper\\b|lithium|rare earth|critical mineral|cobalt",
-        "ai_capex": "ai capex|hyperscaler|ai infrastructure|gpu cluster|nvidia.*order|broadcom.*ai|artificial intelligence",
+        "ai_capex": "ai capex|hyperscaler|ai infrastructure|gpu cluster|nvidia.*order|broadcom.*ai|artificial intelligence|\\bai\\b",
         "defense": "\\bdefense\\b|missile|naval nuclear|pentagon|rearmament|munition",
-        "semiconductor_equip": "wafer|euv|lithography|semiconductor equipment|asml|applied materials"
+        "semiconductor_equip": "wafer|euv|lithography|semiconductor equipment|asml|applied materials",
+        "glp1_obesity": "glp-?1|semaglutide|tirzepatide|obesity|wegovy|ozempic|mounjaro",
+        "biotech": "biotech|biologics|gene therap|crispr|antibody|oncology drug",
+        "regional_bank": "regional bank|community bank|credit union|\\bnpl\\b",
+        "crypto": "bitcoin|ethereum|crypto|digital asset|stablecoin",
+        "solar_renewable": "solar|photovoltaic|wind farm|renewable|inverter",
+        "housing": "homebuilder|mortgage|housing start|apartment reit",
+        "oil_gas": "oil.?gas|e&p|upstream|lng|refiner|permian"
       },
-      "note": "theme:<name> tags; v0 keyword overlay — Deepthink proposes new patterns, they land HERE"
+      "note": "theme:<name> tags; keyword overlay over Industry + description + News Title + Tags"
+    },
+    "rsi": {
+      "kind": "bins",
+      "source": "Relative Strength Index (14)",
+      "speed": "fast",
+      "bins": [
+        ["oversold", null, 35.0],
+        ["mid", 35.0, 65.0],
+        ["overbought", 65.0, null]
+      ]
+    },
+    "sma20": {
+      "kind": "sign",
+      "source": "20-Day Simple Moving Average",
+      "speed": "fast",
+      "note": "Finviz SMA is % distance; >0 above, <0 below"
+    },
+    "q_mom": {
+      "kind": "bins",
+      "source": "Performance (Quarter)",
+      "speed": "slow",
+      "bins": [
+        ["down", null, -5.0],
+        ["flat", -5.0, 5.0],
+        ["up", 5.0, null]
+      ]
+    },
+    "instown": {
+      "kind": "bins",
+      "source": "Institutional Ownership",
+      "speed": "slow",
+      "bins": [
+        ["low", null, 20.0],
+        ["mid", 20.0, 70.0],
+        ["high", 70.0, null]
+      ]
+    },
+    "peg": {
+      "kind": "bins",
+      "source": "PEG",
+      "speed": "slow",
+      "bins": [
+        ["cheap", null, 1.0],
+        ["fair", 1.0, 2.0],
+        ["rich", 2.0, null]
+      ]
+    },
+    "sales_g": {
+      "kind": "bins",
+      "source": "Sales Year Over Year TTM",
+      "speed": "slow",
+      "bins": [
+        ["shrink", null, 0.0],
+        ["slow", 0.0, 15.0],
+        ["fast", 15.0, null]
+      ]
+    },
+    "roe": {
+      "kind": "bins",
+      "source": "Return on Equity",
+      "speed": "slow",
+      "bins": [
+        ["none", null, 0.0],
+        ["thin", 0.0, 10.0],
+        ["good", 10.0, null]
+      ]
+    },
+    "div": {
+      "kind": "bins",
+      "source": "Dividend Yield",
+      "speed": "slow",
+      "bins": [
+        ["none", null, 0.01],
+        ["some", 0.01, 3.0],
+        ["high", 3.0, null]
+      ]
     }
   }
 }

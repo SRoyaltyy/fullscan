@@ -214,6 +214,38 @@ def _flags_row(r: pd.Series) -> dict:
     }
 
 
+def _finviz_ab_proxy(export: pd.DataFrame) -> pd.DataFrame:
+    """OHLC-free AB-like base score from the Elite export so the book always has AB."""
+    tcol = "Ticker" if "Ticker" in export.columns else export.columns[0]
+    out = pd.DataFrame({"Ticker": export[tcol].astype(str).str.strip().str.upper()})
+
+    def num(col):
+        if col not in export.columns:
+            return pd.Series(np.nan, index=export.index)
+        return pd.to_numeric(
+            export[col].astype(str).str.replace("%", "", regex=False).str.replace(",", "", regex=False),
+            errors="coerce",
+        )
+
+    s = pd.Series(0, index=export.index, dtype=int)
+    eps = num("EPS Surprise")
+    s += np.where(eps >= 20, 2, np.where(eps >= 5, 1, np.where(eps <= -20, -2, np.where(eps <= -5, -1, 0))))
+    rec = num("Analyst Recom")
+    s += np.where(rec <= 2.0, 2, np.where(rec <= 2.5, 1, np.where(rec >= 3.5, -1, 0)))
+    sma50 = num("50-Day Simple Moving Average")
+    sma200 = num("200-Day Simple Moving Average")
+    s += np.where((sma50 > 0) & (sma200 > 0), 1, np.where((sma50 < 0) & (sma200 < 0), -1, 0))
+    rsi = num("Relative Strength Index (14)")
+    s += np.where((rsi >= 40) & (rsi <= 65), 1, np.where(rsi >= 75, -1, np.where(rsi <= 30, 1, 0)))
+    pw = num("Performance (Week)")
+    s += np.where(pw > 2, 1, np.where(pw < -2, -1, 0))
+    pm = num("Profit Margin")
+    s += np.where(pm > 10, 1, np.where(pm < 0, -1, 0))
+    out["score"] = s.astype(int).values
+    out["score_source"] = "finviz_ab_proxy"
+    return out
+
+
 def _stub_from_export(ticker: str, export: pd.DataFrame) -> pd.DataFrame:
     """Minimal checklist-like row when name failed liquid gate / missing from AB CSV."""
     t = ticker.upper()
@@ -276,10 +308,15 @@ def run(date: str | None = None, ticker: str | None = None) -> Path:
             ab = ab.rename(columns={ab.columns[0]: "Ticker"})
         ab["Ticker"] = ab["Ticker"].astype(str).str.strip().str.upper()
     else:
-        print("[ab_enrich] WARN: no checklist CSV — building from export only")
-        ab = export[["Ticker"]].copy()
-        ab["score"] = 0
-        ab["score_source"] = "export_only"
+        print("[ab_enrich] WARN: no checklist CSV — scoring from Finviz AB proxy")
+        ab = _finviz_ab_proxy(export)
+
+    # If checklist exists but scores are all ~0, still add the Finviz proxy
+    if "score" in ab.columns and pd.to_numeric(ab["score"], errors="coerce").fillna(0).abs().sum() == 0:
+        print("[ab_enrich] checklist scores empty — overlay Finviz AB proxy")
+        proxy = _finviz_ab_proxy(export)
+        ab = ab.drop(columns=["score"], errors="ignore").merge(proxy[["Ticker", "score", "score_source"]], on="Ticker", how="left")
+        ab["score"] = ab["score"].fillna(0)
 
     if ticker:
         tU = ticker.upper()

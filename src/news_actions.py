@@ -330,6 +330,34 @@ def main() -> None:
         raise SystemExit("DATABASE_URL not set")
 
     report = build_from_db(hours=args.hours, limit=args.limit)
+    try:
+        from .judge_apply import load_or_parse
+        j = load_or_parse(date_str)
+        tilts = j.get("tickers") or {}
+        if tilts:
+            book = {r["ticker"]: r for r in report.get("ticker_actions") or []}
+            for t, net_add in tilts.items():
+                rec = book.setdefault(t, {
+                    "ticker": t, "buy_score": 0.0, "sell_score": 0.0,
+                    "events": [], "net": 0.0, "side": "flat",
+                })
+                if net_add > 0:
+                    rec["buy_score"] = rec.get("buy_score", 0) + net_add
+                else:
+                    rec["sell_score"] = rec.get("sell_score", 0) + abs(net_add)
+                rec["net"] = round(rec["buy_score"] - rec["sell_score"], 2)
+                rec["side"] = "buy" if rec["net"] > 0 else ("sell" if rec["net"] < 0 else "flat")
+                rec.setdefault("events", []).append({
+                    "event": "news_judge", "side": rec["side"],
+                    "weight": round(abs(net_add), 2), "bucket": "judge",
+                })
+            report["ticker_actions"] = sorted(
+                book.values(), key=lambda x: -abs(x.get("net") or 0)
+            )
+            report["judge_tickers"] = tilts
+            print(f"[news_actions] elevated {len(tilts)} judge tickers")
+    except Exception as e:
+        print(f"[news_actions] judge apply skipped: {e}")
     os.makedirs(OUT_DIR, exist_ok=True)
     jp = os.path.join(OUT_DIR, f"{date_str}_actions.json")
     mp = os.path.join(OUT_DIR, f"{date_str}_actions.md")

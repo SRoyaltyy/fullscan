@@ -69,124 +69,171 @@ def resolve_inputs(date_str: str | None) -> tuple[str, Path, Path]:
 
 
 def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFrame:
-    stances = weather.get("stances", {})
-    risk = weather.get("signals", {}).get("risk", "unknown")
+    """Vectorized labels × weather + priors + intrinsincs.
+
+    Unknown weather does not zero the universe — label_priors still rank.
+    """
+    import numpy as np
+
+    df = mem.copy()
+    df["Ticker"] = df["Ticker"].astype(str).str.strip()
+    df = df[df["Ticker"].ne("") & df["Ticker"].ne("nan")].copy()
+    n = len(df)
+    if n == 0:
+        return pd.DataFrame()
+
+    stances = weather.get("stances") or {}
+    risk = (weather.get("signals") or {}).get("risk", "unknown")
     vote_map = rules["vote_map"]
-    weights = rules["weather_family_weights"]
-    families = rules.get("families") or list(weights.keys())
+    weights = rules.get("weather_family_weights") or {}
+    priors = {k: v for k, v in (rules.get("label_priors") or {}).items()
+              if isinstance(v, dict) and not k.startswith("_")}
+    intrins = {k: v for k, v in (rules.get("intrinsic_votes") or {}).items()
+               if isinstance(v, dict) and not k.startswith("_")}
+    gates = weather.get("gates") or {}
 
-    rows = []
-    for _, r in mem.iterrows():
-        ticker = str(r.get("Ticker", "")).strip()
-        if not ticker:
+    total = np.zeros(n, dtype=float)
+    known = np.zeros(n, dtype=float)
+    bulls = np.zeros(n, dtype=int)
+    bears = np.zeros(n, dtype=int)
+    details: list[list[str]] = [[] for _ in range(n)]
+
+    def _add(votes: np.ndarray, labels: list[str] | None = None) -> None:
+        nonlocal total, known, bulls, bears
+        total += votes
+        nz = votes != 0
+        known += nz.astype(float)
+        bulls += (votes > 0).astype(int)
+        bears += (votes < 0).astype(int)
+        if labels:
+            for i, lab in enumerate(labels):
+                if lab and votes[i] != 0:
+                    details[i].append(lab)
+
+    # weather-family votes
+    for fam, w in weights.items():
+        w = float(w or 0)
+        if w == 0 or fam not in df.columns:
             continue
-        total = 0.0
-        known = 0
-        bulls = 0
-        bears = 0
-        detail_parts = []
-        flags = []
-        veto = False
-
-        for fam in families:
-            w = float(weights.get(fam, 1.0))
-            if w == 0:
-                continue
-            raw = r.get(fam)
-            if raw is None or (isinstance(raw, float) and pd.isna(raw)):
-                continue
-            values = str(raw).split("|") if fam in ("themes", "index") else [str(raw)]
-            votes = []
-            for v in values:
-                v = v.strip()
-                if not v or v in ("nan", "None", "unknown"):
+        fam_st = stances.get(fam) or {}
+        mapping = {}
+        for k, st in fam_st.items():
+            mapping[str(k)] = vote_map.get((st or {}).get("stance", "unknown"), 0) * w
+        raw = df[fam].astype(str)
+        if fam in ("themes", "index"):
+            votes = np.zeros(n, dtype=float)
+            labs = [""] * n
+            for i, cell in enumerate(raw.tolist()):
+                parts = [p.strip() for p in str(cell).split("|") if p.strip() and p.strip() not in ("nan", "None", "unknown", "")]
+                if not parts:
                     continue
-                st = (stances.get(fam) or {}).get(v) or (stances.get(fam) or {}).get(v.lower())
-                if not st:
-                    continue
-                stance = st.get("stance", "unknown")
-                if stance == "unknown":
-                    continue
-                sign = vote_map.get(stance, 0)
-                votes.append(sign * w)
-                if sign > 0:
-                    bulls += 1
-                    detail_parts.append(f"{fam}:{v}=bull")
-                elif sign < 0:
-                    bears += 1
-                    detail_parts.append(f"{fam}:{v}=bear")
-            if votes:
-                total += sum(votes) / len(votes)
-                known += 1
+                vs = []
+                tags = []
+                for p in parts:
+                    key = p.split(":", 1)[-1] if fam == "themes" and ":" in p else p
+                    # themes stored as "theme:ai_capex" or "ai_capex"
+                    v = mapping.get(p, mapping.get(key, mapping.get(f"theme:{key}", 0)))
+                    if fam == "themes":
+                        # theme weather may be missing; small prior if tagged at all
+                        if v == 0:
+                            v = 0.25 * w
+                    vs.append(v)
+                    if v:
+                        tags.append(f"{fam}:{key}={'bull' if v>0 else 'bear'}")
+                if vs:
+                    votes[i] = sum(vs) / len(vs)
+                    labs[i] = ",".join(tags[:3])
+            _add(votes, labs)
+        else:
+            votes = raw.map(mapping).fillna(0.0).to_numpy(dtype=float)
+            labs = [f"{fam}:{v}=bull" if votes[i] > 0 else (f"{fam}:{v}=bear" if votes[i] < 0 else "")
+                    for i, v in enumerate(raw.tolist())]
+            _add(votes, labs)
 
-        # stock-intrinsic votes (earnings surprise, analyst) — no weather needed
-        for fam, spec in (rules.get("intrinsic_votes") or {}).items():
-            if not isinstance(spec, dict) or fam.startswith("_"):
-                continue
-            raw = r.get(fam)
-            if raw is None or (isinstance(raw, float) and pd.isna(raw)):
-                continue
-            v = str(raw).strip().lower()
-            if not v or v in ("nan", "none", "unknown"):
-                continue
-            w = float(spec.get("weight") or 0)
-            mapped = (spec.get("map") or {}).get(v)
-            if mapped is None:
-                continue
-            total += w * float(mapped)
-            known += 1
-            if mapped > 0:
-                bulls += 1
-                detail_parts.append(f"{fam}:{v}=bull")
-            elif mapped < 0:
-                bears += 1
-                detail_parts.append(f"{fam}:{v}=bear")
+    # label priors (always — this is the join engine when weather is mixed)
+    for fam, pmap in priors.items():
+        if fam not in df.columns:
+            continue
+        raw = df[fam].astype(str)
+        votes = raw.map(pmap).fillna(0.0).to_numpy(dtype=float)
+        labs = [f"prior:{fam}:{v}={votes[i]:+.2f}" if votes[i] else ""
+                for i, v in enumerate(raw.tolist())]
+        _add(votes, labs)
 
-        # gates — keys written by weather.build_gates
-        gates = weather.get("gates") or {}
-        short_v = str(r.get("short", "")).lower()
-        earn_v = str(r.get("earn", "")).lower()
-        ext_v = str(r.get("ext", "")).lower()
-        liq_v = str(r.get("liq", "")).lower()
-        if gates.get("elevated_short_caution") and short_v in ("high", "extreme", "very_high"):
-            flags.append("short_caution")
-        if gates.get("earnings_proximity") and earn_v in ("this_week", "today"):
-            flags.append("earn_gate")
-        if earn_v == "today" and gates.get("veto_earn_today"):
-            flags.append("earn_today")
-            veto = True
-        if liq_v == "low":
-            flags.append("liq_low")
-        if ext_v == "extreme" and gates.get("veto_extreme_risk_off"):
-            flags.append("ext_riskoff")
-            veto = True
+    # intrinsic votes
+    for fam, spec in intrins.items():
+        if fam not in df.columns:
+            continue
+        raw = df[fam].astype(str).str.lower()
+        w = float(spec.get("weight") or 0)
+        mmap = spec.get("map") or {}
+        mapped = raw.map(mmap).fillna(0.0).to_numpy(dtype=float) * w
+        labs = [f"{fam}:{v}={'bull' if mapped[i]>0 else 'bear'}" if mapped[i] else ""
+                for i, v in enumerate(raw.tolist())]
+        _add(mapped, labs)
 
-        # squeeze flag — weather risk is on/off/mixed, not "risk_on"
-        if short_v in ("high", "extreme", "very_high") and risk in ("on", "risk_on"):
-            flags.append("squeeze_candidate")
+    # gates
+    earn = df["earn"].astype(str).str.lower() if "earn" in df.columns else pd.Series([""] * n, index=df.index)
+    ext = df["ext"].astype(str).str.lower() if "ext" in df.columns else pd.Series([""] * n, index=df.index)
+    liq = df["liq"].astype(str).str.lower() if "liq" in df.columns else pd.Series([""] * n, index=df.index)
+    short = df["short"].astype(str).str.lower() if "short" in df.columns else pd.Series([""] * n, index=df.index)
+    flags = []
+    veto = np.zeros(n, dtype=bool)
+    earn_l = earn.tolist()
+    ext_l = ext.tolist()
+    liq_l = liq.tolist()
+    short_l = short.tolist()
+    for i in range(n):
+        f = []
+        if gates.get("elevated_short_caution") and short_l[i] in ("high", "extreme", "very_high"):
+            f.append("short_caution")
+        if gates.get("earnings_proximity") and earn_l[i] in ("this_week", "today"):
+            f.append("earn_gate")
+        if earn_l[i] == "today" and gates.get("veto_earn_today"):
+            f.append("earn_today")
+            veto[i] = True
+        if liq_l[i] == "low":
+            f.append("liq_low")
+            total[i] *= 0.5
+        if ext_l[i] == "extreme" and gates.get("veto_extreme_risk_off"):
+            f.append("ext_riskoff")
+            veto[i] = True
+        if short_l[i] in ("high", "extreme", "very_high") and risk in ("on", "risk_on"):
+            f.append("squeeze_candidate")
+        flags.append("|".join(f))
 
-        score_norm = total / known if known else 0.0
-        rows.append({
-            "Ticker": ticker,
-            "sector": r.get("sector", ""),
-            "industry": r.get("industry", ""),
-            "size": r.get("size", ""),
-            "vol": r.get("vol", ""),
-            "beta": r.get("beta", ""),
-            "total_score": round(total, 4),
-            "families_known": known,
-            "score_norm": round(score_norm, 4),
-            "bulls": bulls,
-            "bears": bears,
-            "flags": "|".join(flags) if flags else "",
-            "veto": veto,
-            "detail": "; ".join(detail_parts[:12]),
-        })
+    # z-score so stock_book tanh(s_join) has real spread
+    mu, sd = float(np.mean(total)), float(np.std(total))
+    if sd and sd == sd and sd > 1e-9:
+        z = (total - mu) / sd
+    else:
+        z = total.copy()
+    z = np.clip(z, -2.5, 2.5)
 
-    df = pd.DataFrame(rows)
-    if df.empty:
-        return df
-    return df.sort_values("total_score", ascending=False).reset_index(drop=True)
+    extra_cols = [c for c in (
+        "mom", "ext", "range", "profit", "themes", "earn", "earnsurp", "analyst",
+        "rsi", "sma20", "instown", "peg", "sales_g", "q_mom", "liq", "rvol", "roe",
+    ) if c in df.columns]
+
+    out = pd.DataFrame({
+        "Ticker": df["Ticker"].values,
+        "sector": df["sector"].values if "sector" in df.columns else "",
+        "industry": df["industry"].values if "industry" in df.columns else "",
+        "size": df["size"].values if "size" in df.columns else "",
+        "vol": df["vol"].values if "vol" in df.columns else "",
+        "beta": df["beta"].values if "beta" in df.columns else "",
+        "total_score": np.round(total, 4),
+        "families_known": known.astype(int),
+        "score_norm": np.round(z, 4),
+        "bulls": bulls,
+        "bears": bears,
+        "flags": flags,
+        "veto": veto,
+        "detail": ["; ".join(d[:10]) for d in details],
+    })
+    for c in extra_cols:
+        out[c] = df[c].values
+    return out.sort_values("total_score", ascending=False).reset_index(drop=True)
 
 
 def write_report(date_str: str, ranked: pd.DataFrame, weather: dict, rules: dict) -> Path:

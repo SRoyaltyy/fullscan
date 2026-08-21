@@ -5,8 +5,8 @@
   "thresholds": {
     "risk_on_score": 4.0,
     "risk_off_score": -4.0,
-    "sector_favorable_score": 8.0,
-    "sector_hostile_score": -8.0,
+    "sector_favorable_score": 3.0,
+    "sector_hostile_score": -3.0,
     "dollar_strong_score": -0.5,
     "vix_spike_ratio": 1.10,
     "vix_falling_ratio": 0.90,

@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "bearish",
+  "bearish",
+  "bearish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "bearish",
+  "Basic Materials": "bullish"
+ },
+ "tickers": {
+  "ADBE": -5.5,
+  "XLK": -4.0,
+  "ADI": 1.5,
+  "AU": 5.5,
+  "WMT": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [bearish] Long-end yields at 19-yr high, hawkish Fed minutes reinforce higher-for-longer (regime/1w)\nMACRO risk: [bearish] Dow futures -400 on yield reversal, WMT tumbles, risk-off open (session/1d)\nSECTOR tech: [bearish] ADBE-led software selloff on AI costs, compounds yield pressure on XLK (sector_etf)\nSECTOR semis: [mixed] ADI beats on AI DC demand, but software weakness and yields cap upside (sector_etf)\nSECTOR materials: [bullish] Gold surge on FOMC anticipation, AU +8.5%, monetary-metals bid (sector_etf)\nINTERACTION: Rates cluster (Fed minutes + yield spike) is ONE bearish driver; do not double-count.\nWATCH: Target earnings and Canada tariffs are scheduled events that could shift consumer/industrial sectors intraday.",
+ "date": "2026-08-20"
+}

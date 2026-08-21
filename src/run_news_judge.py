@@ -163,6 +163,15 @@ def main() -> None:
         fh.write("\n")
     latest = Path(NEWS_DIR) / "latest_judge.md"
     latest.write_text(Path(path).read_text(encoding="utf-8"), encoding="utf-8")
+    try:
+        from .judge_apply import parse_judge_md
+        parsed = parse_judge_md(text)
+        parsed["date"] = date_str
+        jp = Path(NEWS_DIR) / f"{date_str}_judge.json"
+        jp.write_text(json.dumps(parsed, indent=1), encoding="utf-8")
+        print(f"[news_judge] structured -> {jp} tickers={list((parsed.get('tickers') or {}).keys())}")
+    except Exception as e:
+        print(f"[news_judge] structured parse failed: {e}")
     print(f"[news_judge] {date_str} -> {path}")
 
 
