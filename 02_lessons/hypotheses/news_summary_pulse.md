@@ -8,7 +8,7 @@ status: open
 # Hypothesis — news / WIN news
 
 ## WHEN
-[news] summary={"n_suggestions": 247, "ever_profitable": {"n": 247, "wins": 241, "win_rate": 97.6}, "close_1d": {"n": 216, "wins": 131, "win_rate": 60.6, "avg": 0.43}, "close_3d": {"n": 170, "wins": 120, "win_rate": 70.6, "avg": 1.78}, "close_5d": {"n": 123, "wins": 87, "win_rate": 70.7, "avg": 2.26}, "close_10d":
+[news] summary={"n_suggestions": 252, "ever_profitable": {"n": 252, "wins": 248, "win_rate": 98.4}, "close_1d": {"n": 247, "wins": 148, "win_rate": 59.9, "avg": 0.35}, "close_3d": {"n": 188, "wins": 133, "win_rate": 70.7, "avg": 1.99}, "close_5d": {"n": 157, "wins": 100, "win_rate": 63.7, "avg": 1.83}, "close_10d"
 
 ## ASK (counterfactual)
 Which event families drive ever-profitable vs 1d close?

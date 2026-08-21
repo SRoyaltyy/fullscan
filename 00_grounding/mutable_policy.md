@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-08-20
+updated: 2026-08-21
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,11 +9,11 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-08-20**. Promoted: 1. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-08-21**. Promoted: 1. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 60% (9/15)
+- **general**: 67% (10/15)
 - **sector:Basic Materials**: 57% (4/7)
 - **sector:Communication Services**: 43% (3/7)
 - **sector:Consumer Cyclical**: 86% (6/7)
@@ -298,6 +298,12 @@ evidence_cited: "2026-08-13 XLB actual -0.51%, SPY +0.70
 trigger_pattern: "Fresh same-morning hard-data macro miss (China IP/retail) plus an active geopolitical/oil risk-off escalation (Trump/Oman threat, Hormuz ceasefire expiry), a carried low-confidence Fed-easing repricing as the only strong positive, and clearly negative US index futures (NQ ≤ −1%, ES < −0.4%); no fresh index-relevant mega-cap earnings catalyst. The correct output is down/mild — full confirmation of the 08-17 fresh-hard-data-miss lesson."
 corrected_behavior: "No change. Continue enforcing a-fresh-same-morning-hard-data-macro-miss at predict time: score B1 at −2 for the miss+geopolitical cluster, cap B3 at +0.5 when the repricing is carried and low-confidence, score B0/B6 from raw session/futures strength without importing regime confirmation, and emit DOWN capped at MILD
 
+### fresh-same-morning-positive-catalyst-cluster-china-fiscal-su.md
+---
+trigger_pattern: "Fresh same-morning positive catalyst cluster (China fiscal support pledge, positive premarket earnings beat like BJ's) with confirming US index futures (ES/NQ net ≥ +0.5%) and falling EPU, while oil is elevated but not spiking and a scheduled two-sided event (Jackson Hole) remains pending."
+corrected_behavior: "No change required. Continue gating the 08-20 fresh-negative-cluster lesson on its own trigger: without a fresh negative mega-cap/hard-data miss AND with futures confirming up (net ≥ +0.5%), fresh positives plus confirming futures justify up/mild. Do not let elevated-but-stable oil or two-sided event risk alone suppress a futures-confirmed positive call."
+falsifier: "If this setup recurs (fresh positives + futures confirming + oil elevated-but-stable) and SPX c
+
 ### in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md
 ---
 trigger_pattern: "In a Utilities/XLU call, a second soft inflation print has already produced yield relief, but the broad tape is risk-on with growth/tech leading and a fresh data-center load-growth disappointment is present. Direction/magnitude can be up/mild and correct even when XLU underperforms SPY on a relative basis; the relative underperformance is not the graded target."
@@ -484,10 +490,10 @@ corrected_behavior: "If gold/silver futures are green and USD is weakening, do n
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=9 losses=6
-- **win 2026-08-18:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `general` — wins=10 losses=5
 - **loss 2026-08-19:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-08-20:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-08-21:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=1 losses=0
 - **win news:** [news] Rank event families by 1d close, not ever-touch MFE.

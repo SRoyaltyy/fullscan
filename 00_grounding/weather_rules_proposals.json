@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-20T17:54:28.715145-04:00",
+  "updated": "2026-08-21T17:50:06.860188-04:00",
   "window_n": 15,
-  "direction_acc": 0.6,
+  "direction_acc": 0.6666666666666666,
   "notes": [],
   "threshold_deltas": {},
   "sector_notes": [
