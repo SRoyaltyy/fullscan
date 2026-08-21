@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       ticker:
-        description: "Ticker (blank = full liquid — heavy)"
+        description: "Ticker (blank = full liquid universe)"
         required: false
-        default: "AAPL"
+        default: ""
       months:
-        description: "Lookback months from end (e.g. 24) — OHLC covers full window"
+        description: "Lookback months from end (12 matches the universe resume checkpoint)"
         required: false
-        default: "24"
+        default: "12"
       start:
         description: "Optional start YYYY-MM-DD (overrides months)"
         required: false
@@ -23,6 +23,16 @@ on:
         description: "yfinance history calendar days (800≈26m, 1000≈33m)"
         required: false
         default: "900"
+      skip_bootstrap:
+        description: "Skip price_store bootstrap (use data/prices/ohlc.parquet as-is)"
+        type: boolean
+        required: false
+        default: false
+      skip_events:
+        description: "Skip yfinance E/R prefetch (required for universe to finish in 6h)"
+        type: boolean
+        required: false
+        default: true
 
 permissions:
   contents: write
@@ -46,6 +56,7 @@ jobs:
           pip install pyarrow
 
       - name: Ensure price history
+        if: ${{ inputs.skip_bootstrap != true }}
         run: |
           set -euo pipefail
           DAYS="${{ inputs.bootstrap_days }}"
@@ -58,6 +69,9 @@ jobs:
             python -m src.price_store bootstrap --days "$DAYS"
           fi
 
+      - name: Price store status
+        run: python -m src.price_store status || true
+
       - name: PIT backfill
         run: |
           set -euo pipefail
@@ -69,11 +83,20 @@ jobs:
           T="${{ inputs.ticker }}"
           T=$(echo "$T" | tr '[:lower:]' '[:upper:]' | tr -d ' ')
           if [ -n "$T" ]; then ARGS+=(--ticker "$T"); fi
-          echo "CMD: python -m src.ab_backfill ${ARGS[*]}"
-          python -m src.ab_backfill "${ARGS[@]}"
-          echo "==== MD head ===="
-          ls -la data/ab_backfill/
-          head -30 data/ab_backfill/*.md 2>/dev/null | head -40 || true
+          if [ "${{ inputs.skip_events }}" != "false" ]; then
+            ARGS+=(--skip-events)
+          else
+            ARGS+=(--events)
+          fi
+          echo "CMD: python -u -m src.ab_backfill ${ARGS[*]}"
+          python -u -m src.ab_backfill "${ARGS[@]}"
+          echo "==== outputs ===="
+          ls -lah data/ab_backfill/ | tail -30
+          LATEST_MD=$(ls -1t data/ab_backfill/*universe*.md data/ab_backfill/*.md 2>/dev/null | head -1 || true)
+          if [ -n "$LATEST_MD" ]; then
+            echo "===== $LATEST_MD ====="
+            head -80 "$LATEST_MD"
+          fi
 
       - uses: actions/upload-artifact@v4
         if: always()
