@@ -51,6 +51,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # Checkout is required: `gh workflow run` needs a local git repo.
+      # Without it the guard dies with "fatal: not a git repository" the
+      # moment it tries to re-dispatch (2026-08-21 x3 failures).
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
       - name: Check artifacts + re-dispatch missing/failed/green-empty
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -134,21 +141,43 @@ jobs:
             esac
           }
 
+          # Prefer REST dispatches (works without local git). Fall back to
+          # `gh workflow run`. Never abort the guard loop on one bad dispatch.
           dispatch_wf() {
             local WF="$1"
             echo "MISSING/FAILED/GREEN-EMPTY for $TODAY → dispatching $WF"
+            local ok=0
             case "$WF" in
               daily_pipeline.yml)
-                gh workflow run "$WF" --ref main -f stage=predict
+                if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
+                    -f ref=main -f "inputs[stage]=predict" 2>/dev/null; then
+                  ok=1
+                elif gh workflow run "$WF" --ref main -f stage=predict 2>/dev/null; then
+                  ok=1
+                fi
                 ;;
               sector_daily.yml)
-                gh workflow run "$WF" --ref main -f stage=predict
+                if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
+                    -f ref=main -f "inputs[stage]=predict" 2>/dev/null; then
+                  ok=1
+                elif gh workflow run "$WF" --ref main -f stage=predict 2>/dev/null; then
+                  ok=1
+                fi
                 ;;
               *)
-                gh workflow run "$WF" --ref main
+                if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
+                    -f ref=main 2>/dev/null; then
+                  ok=1
+                elif gh workflow run "$WF" --ref main 2>/dev/null; then
+                  ok=1
+                fi
                 ;;
             esac
-            echo "Dispatched $WF"
+            if [ "$ok" -eq 1 ]; then
+              echo "Dispatched $WF"
+            else
+              echo "WARN: failed to dispatch $WF — continuing"
+            fi
           }
 
           # Ordered: light prereqs first, book last.
