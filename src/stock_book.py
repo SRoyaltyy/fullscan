@@ -657,6 +657,117 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
     }
 
 
+def _usd(mcap) -> str:
+    try:
+        m = float(mcap)
+        if m != m:
+            return "?"
+        if m >= 1000:
+            return f"${m/1000:.1f}B"
+        return f"${m:.0f}M"
+    except (TypeError, ValueError):
+        return "?"
+
+
+def _label_plain(lab: str) -> str:
+    lab = str(lab or "")
+    if not lab or lab in ("—", "nan", "None"):
+        return ""
+    bits = []
+    if "LEAD" in lab:
+        bits.append("this name **beat most of its own correlated peers** this week")
+    elif "LAG" in lab:
+        bits.append("this name **lagged its own correlated peers** this week")
+    if "peers↑" in lab:
+        bits.append("the peer basket itself was **up**")
+    elif "peers↓" in lab:
+        bits.append("the peer basket itself was **down** (name-specific, not a sector tide)")
+    if "ind↑" in lab:
+        bits.append("the Finviz industry was **advancing**")
+    elif "ind↓" in lab:
+        bits.append("the Finviz industry was **down**")
+    return "; ".join(bits)
+
+
+def _why(row) -> str:
+    """One readable paragraph: why this name is on the list today."""
+    t = row.get("Ticker")
+    size = str(row.get("size") or "?").lower()
+    sec = row.get("sector") or "?"
+    ind = row.get("industry") or "?"
+    parts = [
+        f"**{t}** is a liquid **{size}-cap** {sec} name ({ind}) at "
+        f"{_usd(row.get('market_cap_m'))}, ADV ~{float(row.get('avg_vol_k') or 0):.0f}k shares/day."
+    ]
+    rng = str(row.get("range") or "")
+    mom = str(row.get("mom") or "")
+    ext = str(row.get("ext") or "")
+    setup = []
+    if rng in ("deep_low", "low", "mid"):
+        setup.append(f"still in the **{rng.replace('_', ' ')}** of its 52-week range (room left)")
+    elif rng in ("top", "breakout"):
+        setup.append(f"already at the **{rng}** of the 52-week range (less upside left)")
+    if mom in ("uptrend", "mixed", "downtrend"):
+        setup.append(f"tape is **{mom}** (50/200DMA)")
+    if ext in ("washed", "neutral", "extended", "extreme"):
+        setup.append(f"extension **{ext}**")
+    if setup:
+        parts.append("Setup: " + ", ".join(setup) + ".")
+    surp = str(row.get("earnsurp") or "")
+    if surp in ("beat", "big_beat", "miss", "big_miss"):
+        parts.append(f"Last earnings were a **{surp.replace('_', ' ')}**.")
+    lab = _label_plain(row.get("context_label"))
+    if lab:
+        parts.append("AB/peer context: " + lab + ".")
+    news = float(row.get("s_news") or 0)
+    if news > 0.15:
+        parts.append("Today's **news/judge** is a tailwind for this ticker.")
+    elif news < -0.15:
+        parts.append("Today's **news/judge** is a headwind for this ticker.")
+    sj = float(row.get("s_join") or 0)
+    if sj > 0.4:
+        parts.append("Labels × today's weather **fit** this environment.")
+    elif sj < -0.2:
+        parts.append("Labels × today's weather are a **headwind** (sector stamp or hostile tape).")
+    if row.get("rebound"):
+        parts.append("Checklist marks it as a **rebound-from-own-lows** candidate.")
+    opp = float(row.get("s_opp") or 0)
+    if opp > 0.2:
+        parts.append("Opportunity tilt applies: this is the **BB-class** bucket (liquid small/mid, not a mega clone).")
+    return " ".join(parts)
+
+
+def _layer_lines(row, horizon: str) -> list[str]:
+    wj, ws, wg, wn, wa, wp = WEIGHTS[horizon]
+    rows = [
+        ("join × weather", wj, float(row.get("s_join") or 0),
+         "does this *kind* of stock fit today's regime?"),
+        ("sector predict", ws, float(row.get(f"s_sector_{horizon}", row.get("s_sector") or 0) or 0),
+         "same-day sector LLM, 0 if that file is missing"),
+        ("general predict", wg, float(row.get(f"s_general_{horizon}", row.get("s_general") or 0) or 0),
+         "same-day SPX call × this stock's beta"),
+        ("news / judge", wn, float(row.get("s_news") or 0),
+         "headlines + news-judge ticker tilts"),
+        ("AB checklist", wa, float(row.get("s_ab") or 0),
+         "structure + P01–P04 peer/industry/sector"),
+        ("peer RS", wp, float(row.get("s_peer") or 0),
+         "this week vs its correlated basket"),
+    ]
+    out = [
+        "| Layer | Weight | Signal | Contribution | Means |",
+        "|-------|-------:|-------:|-------------:|-------|",
+    ]
+    for name, w, s, mean in rows:
+        out.append(f"| {name} | {w:.2f} | {s:+.2f} | {w*s:+.3f} | {mean} |")
+    opp = float(row.get("s_opp") or 0)
+    reb = REBOUND_BOOST if row.get("rebound") else 0.0
+    out.append(f"| mid-cap opportunity | add | {opp:+.2f} | {opp:+.3f} | liquid small/mid, room to run |")
+    if reb:
+        out.append(f"| rebound floor | add | {reb:+.2f} | {reb:+.3f} | tape at own-history low |")
+    out.append(f"| **{horizon} total** | | | **{float(row.get(f'score_{horizon}') or 0):+.3f}** | |")
+    return out
+
+
 def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     date = meta["date"]
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -695,43 +806,59 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         encoding="utf-8",
     )
 
+    wr = meta.get("weather_risk")
     L = [
-        f"# Stock book — **{date}** (1d / 3d / 1w / 2w / 1m)",
+        f"# Stock book — {date}",
         "",
-        f"Generated: {meta['generated_at']}",
+        f"_Generated {meta['generated_at']}_",
         "",
-        "Layers: join + same-day sector/general + news + AB + peer RS "
-        "+ mid-cap opportunity (liquid small/mid with room to run). "
-        "Max 4 large/mega, 4/sector, 3/industry. Micros under $400M skipped on BUY.",
+        "This file is the **human read** of one run. CSV/JSON next to it are the machine files.",
         "",
-        "## Regime snapshot",
+        "## How today's rank is built",
         "",
-        f"- **General bias (same-day):** {meta['general_bias']:+.2f} "
-        f"({'yes' if meta.get('same_day_general') else 'MISSING — treated as 0'})",
-        f"- **Sector predicts this date:** {meta.get('same_day_sectors', 0)}/11",
-        f"- **Weather risk:** {meta.get('weather_risk')}",
-        f"- **News tickers:** {meta['n_news_tickers']}",
-        f"- **AB names:** {meta.get('n_ab', 0)} · **peer RS names:** {meta.get('n_peer', 0)}",
-        f"- **Universe (after liquidity):** {meta['n_universe']}",
-        f"- **Gates:** mcap ≥ ${meta.get('min_market_cap_m', 80)}M, avg vol ≥ {meta.get('min_avg_vol_k', 500)}k",
-        f"- **Rebound floor tags:** {meta.get('n_rebound', 0)}",
+        "Every liquid name ($80M+ mcap, 500k+ ADV) gets six signals, then a mid-cap opportunity add-on:",
         "",
-        "### Sector bias",
+        "1. **Join × weather** — do this *kind* of stock (sector, size, trend, leverage, earnings) fit today's tape?",
+        "2. **Sector / general predict** — same-day LLM calls only. Missing file = 0, never yesterday's leftover.",
+        "3. **News / judge** — headlines plus the news-judge ticker list (AU/ADBE-style).",
+        "4. **AB checklist** — structure score + P01–P04 (beats peers? peers up? industry up? sector board up?).",
+        "5. **Peer RS** — this week's return vs that name's own correlated basket. Kills XLE clones.",
+        "6. **Mid-cap opportunity** — extra points for liquid small/mid ($400M–$20B) that are not jammed at the 52-week high. Micros skipped. Max 4 large/mega.",
+        "",
+        "**1d** leans on news + AB + peers. **1m** drops news and leans on AB + peers + join.",
+        "A sector headline (e.g. ADBE) cannot zero a mid-cap that just beat earnings or is leading its own peers.",
+        "",
+        "## Today's regime",
+        "",
+        f"- Weather risk: **{wr}**",
+        f"- General predict (same-day): {meta['general_bias']:+.2f} "
+        f"({'present' if meta.get('same_day_general') else 'MISSING → 0'})",
+        f"- Sector predicts this date: {meta.get('same_day_sectors', 0)}/11 "
+        f"({'ok' if meta.get('same_day_sectors') else 'missing → sector layer is 0; Finviz week tape still sits in join'})",
+        f"- News tickers in play: {meta['n_news_tickers']}",
+        f"- AB coverage: {meta.get('n_ab', 0)} names · peer RS: {meta.get('n_peer', 0)}",
+        f"- Universe after liquidity: {meta['n_universe']}",
+        f"- BUY window: ${meta.get('min_market_cap_m', 80):.0f}M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega",
+        "",
+        "### Sector LLM bias (1d) — 0 means that essay was not run today",
         "",
         "| Sector | bias |",
         "|--------|------|",
     ]
-    for sec, b in sorted(meta["sector_bias"].items(), key=lambda x: -abs(x[1])):
-        L.append(f"| {sec} | {b:+.2f} |")
+    if meta.get("sector_bias"):
+        for sec, b in sorted(meta["sector_bias"].items(), key=lambda x: -abs(x[1])):
+            L.append(f"| {sec} | {b:+.2f} |")
+    else:
+        L.append("| — | none today |")
 
     gates = meta.get("accuracy_gates") or {}
     if gates:
         L += [
             "",
-            "### Learning gate (graded accuracy → how much each predictor is trusted)",
+            "### How much each predictor is trusted (graded hit rate)",
             "",
-            "| Topic | hit rate | graded runs | weight applied |",
-            "|-------|----------|-------------|----------------|",
+            "| Topic | hit rate | n | weight |",
+            "|-------|----------|---|--------|",
         ]
         for t, st in sorted(gates.items()):
             L.append(f"| {t} | {st['hit_rate']:.0%} | {st['n']} | ×{st['gate']:.2f} |")
@@ -740,75 +867,73 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "",
         "## Horizon weights",
         "",
-        "| Horizon | join | sector | general | news | AB | peer |",
-        "|---------|------|--------|---------|------|----|------|",
+        "| Horizon | join | sector | general | news | AB | peer | + opportunity |",
+        "|---------|------|--------|---------|------|----|------|----------------|",
     ]
     for h in HORIZONS:
         w = WEIGHTS[h]
-        L.append(f"| {h} | {w[0]:.2f} | {w[1]:.2f} | {w[2]:.2f} | {w[3]:.2f} | {w[4]:.2f} | {w[5]:.2f} |")
+        L.append(
+            f"| {h} | {w[0]:.2f} | {w[1]:.2f} | {w[2]:.2f} | {w[3]:.2f} | {w[4]:.2f} | {w[5]:.2f} | additive |"
+        )
 
+    # Full rationale for 1d and 1m (the two sleeves that matter). Other horizons: compact table.
+    detail_h = ("1d", "1m")
     for h in HORIZONS:
         buys, sells = _book_side(df, h, top_n)
-        L += [
-            "",
-            f"## {h} — BUY (top {top_n})",
-            "",
-            "| Ticker | Score | Sector | Reasons |",
-            "|--------|-------|--------|---------|",
-        ]
-        for _, r in buys.iterrows():
-            L.append(
-                f"| {r['Ticker']} | {r[f'score_{h}']:+.3f} | {r.get('sector','')} | {r.get('reasons','')} |"
-            )
-        L += [
-            "",
-            f"## {h} — SELL / avoid (bottom {top_n})",
-            "",
-            "| Ticker | Score | Sector | Reasons |",
-            "|--------|-------|--------|---------|",
-        ]
-        for _, r in sells.iterrows():
-            L.append(
-                f"| {r['Ticker']} | {r[f'score_{h}']:+.3f} | {r.get('sector','')} | {r.get('reasons','')} |"
-            )
-
-        L += ["", f"### {h} — BUY by size bucket", ""]
-        for bucket in SIZE_BUCKETS:
-            bb, _ss = _bucket_side(df, h, bucket)
-            L += ["", f"**{bucket}**", "",
-                  "| Ticker | Score | Sector | Reasons |",
-                  "|--------|-------|--------|---------|"]
-            if bb is None:
-                L.append("| — | — | — | no labelled names in bucket |")
-            else:
-                for _, r in bb.iterrows():
-                    L.append(
-                        f"| {r['Ticker']} | {r[f'score_{h}']:+.3f} | {r.get('sector','')} | {r.get('reasons','')} |"
-                    )
+        if h in detail_h:
+            L += ["", f"## {h} BUY — why these names", ""]
+            for i, (_, r) in enumerate(buys.iterrows(), 1):
+                L += [
+                    f"### {i}. {r['Ticker']} · {_usd(r.get('market_cap_m'))} {r.get('size')} · {r.get('sector')}",
+                    "",
+                    f"**{h} score {float(r[f'score_{h}']):+.3f}**",
+                    "",
+                    _why(r),
+                    "",
+                    *_layer_lines(r, h),
+                    "",
+                ]
+            L += ["", f"## {h} AVOID — bottom of the same rank", ""]
+            for _, r in sells.iterrows():
+                lab = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")
+                L.append(
+                    f"- **{r['Ticker']}** ({r.get('size')}, {r.get('sector')}, {_usd(r.get('market_cap_m'))}) "
+                    f"score {float(r[f'score_{h}']):+.3f}. {lab}"
+                )
+        else:
+            L += [
+                "",
+                f"## {h} BUY (compact — same names, different weights)",
+                "",
+                "| # | Ticker | Score | Size | Sector | Why in short |",
+                "|---|--------|------:|------|--------|--------------|",
+            ]
+            for i, (_, r) in enumerate(buys.iterrows(), 1):
+                short = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")[:80]
+                L.append(
+                    f"| {i} | {r['Ticker']} | {float(r[f'score_{h}']):+.3f} | {r.get('size')} | "
+                    f"{r.get('sector')} | {short} |"
+                )
 
     L += [
         "",
-        "## Read",
+        "## Files for this run",
         "",
-        "- **1d** news + AB + peer; **1m** AB + peer + join + same-day sector.",
-        "- Universe gated: Market Cap ≥ $80M and Average Volume ≥ 500k shares (Finviz units).",
-        "- AB score (checklist + P01–P04 peer/industry/sector context) is a first-class rank, not a footnote.",
-        "- Opportunity tilt: liquid **small/mid** ($400M–$20B) with room to run (not 52w top, not parabolic). Mega-caps are capped at 4 names.",
-        "- A sector-weather stamp cannot bury a mid-cap that just beat earnings or is leading its own peers (BB-class).",
-        "- Peer RS (`rs_week` vs correlated basket) breaks ties inside a sector so the book is not 8 clones of XLE.",
-        "- Diversify: max 4 names per sector, 3 per industry. Persistence penalty if already on yesterday's list without fresh evidence.",
-        "- Same-day sector/general only — stale Monday calls are not reused on Wednesday.",
-        "- `rebound_floor` is a small boost from today's ticker checklist (tape at own-history low).",
-        "- Predictor bias is scaled by graded 1d hit rate. Weak topics move scores less.",
-        "- Backtest: `python -m src.stock_book_backtest` (or Stock Book Backtest action).",
-        "",
-        f"CSV: `data/stock_book/{date}_stock_book.csv`",
-        f"JSON: `data/stock_book/{date}_stock_book.json`",
+        f"- This rationale: `01_daily/{date}_stock_book.md`",
+        f"- Machine table: `data/stock_book/{date}_stock_book.csv`",
+        f"- Machine book: `data/stock_book/{date}_stock_book.json`",
+        f"- Join rank: `data/join/{date}_ranked.csv`",
+        f"- Weather: `01_daily/weather/{date}_weather.md`",
+        f"- AB enrich: `data/ab_checklist/{date}_ab_checklist_enriched.md`",
+        f"- Peer RS: `01_daily/{date}_peer_rs.md`",
         "",
     ]
     md_path = DAILY / f"{date}_stock_book.md"
     md_path.write_text("\n".join(L), encoding="utf-8")
+    copy = OUT_DIR / f"{date}_stock_book.md"
+    copy.write_text(md_path.read_text(encoding="utf-8"), encoding="utf-8")
     print(f"[stock-book] {md_path}")
+    print(f"[stock-book] {copy}")
 
 
 def main() -> None:
