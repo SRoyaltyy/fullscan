@@ -7,15 +7,16 @@
   "bearish"
  ],
  "sector_tilts": {
-  "Basic Materials": "bullish",
-  "Technology": "mixed",
-  "Consumer Cyclical": "bearish"
+  "Technology": "bearish",
+  "Energy": "bullish"
  },
  "tickers": {
-  "XLY": -4.0,
-  "XLU": -1.5,
-  "AU": 1.5
+  "ADSK": -4.0,
+  "XLK": -4.0,
+  "XLE": 8.0,
+  "AU": 1.5,
+  "BHP": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [hawkish] Fed minutes show growing support for a hike; buyback rally fizzles, keeping long-end yields elevated (regime/1w-1m)\nMACRO risk: [bearish] Trump economic-warfare threats push yields and oil higher, driving a risk-off tape (session/1d-1w)\nSECTOR materials: [bullish] Gold surge on rate-cut bets lifts miners; copper's strength over iron ore supports a re-rating (GDX, XLB)\nSECTOR tech: [mixed] Marvell-Google deal creates dispersion in AI chips; software rotation (ADSK) offers relative strength (SMH, IGV)\nSECTOR consumer: [bearish] Retail reality check on bargain-hunting confirms weak consumer spending, pressuring discretionary (XLY)\nINTERACTION: Hawkish Fed + fizzled buyback = one negative rates cluster; do not offset with gold's \"softer data\" narrative.\nWATCH: Ranking is thin on fresh, high-impact catalysts; the Fed minutes are the dominant driver and could be repriced further.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [hawkish] Fed minutes show growing support for a hike, confirming a hawkish repricing (regime/1w-1m)\nMACRO risk: [bearish] Trump economic-warfare threats push yields and oil higher, extending the risk-off tape (session/1d)\nSECTOR basic_materials: [bullish] Gold surge on rate-cut bets and copper strength create a firm metals bid (XLB, GDX)\nSECTOR technology: [bearish] Fabrinet weakness and rising yields hit semis; software rotation (ADSK) is the only bright spot (XLK, SMH)\nSECTOR energy: [bullish] Geopolitical supply risk and higher oil are the dominant drivers (XLE)\nINTERACTION: Fed hawkishness + risk-off tape = one rates/risk cluster; do not double-count.\nWATCH: Ranking is contested on tech; the software rotation could cushion XLK vs. the semis-led selloff.",
  "date": "2026-08-21"
 }
