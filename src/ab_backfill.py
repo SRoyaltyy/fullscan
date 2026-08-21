@@ -538,10 +538,126 @@ def _pattern_audit(out: pd.DataFrame) -> list[str]:
 
     lines.append("")
     lines.append(
+        "### G. The cut that matters — score>3 + context good, red chips, streaks"
+    )
+    lines.append("")
+    lines.append(
+        "Not the median (score ≈ +1). **Score > 3** and **context good** = "
+        "LEAD + peers↑ + ind↑. Red circles = 🔴 chips in the context column "
+        "(LAG / peers↓ / ind↓ / sec↓). A day with **≤1 red chip** is the "
+        "“clean” day. Consecutive = consecutive sessions of that for the same ticker."
+    )
+    lines.append("")
+    p01 = pd.to_numeric(df["P01"], errors="coerce").fillna(0)
+    p02 = pd.to_numeric(df["P02"], errors="coerce").fillna(0)
+    p03 = pd.to_numeric(df["P03"], errors="coerce").fillna(0)
+    p04 = pd.to_numeric(df["P04"], errors="coerce").fillna(0)
+    n_red_ctx = (
+        (p01 < 0).astype(int)
+        + (p02 < 0).astype(int)
+        + (p03 < 0).astype(int)
+        + (p04 < 0).astype(int)
+    )
+    hi = df["score"] > 3
+    allgreen = (p01 == 1) & (p02 == 1) & (p03 == 1)
+    ctx_ok = (p01 == 1) & (p02 == 1) & (p03 != -1)
+    clean = n_red_ctx <= 1
+    dirty = n_red_ctx >= 3
+
+    def _streak_len(pos_mask: pd.Series) -> pd.Series:
+        tmp = pd.DataFrame(
+            {
+                "Ticker": df["Ticker"].astype(str).to_numpy(),
+                "asof": df["asof_date"].astype(str).str[:10].to_numpy(),
+                "pos": pos_mask.astype(bool).to_numpy(),
+            },
+            index=df.index,
+        )
+        tmp = tmp.sort_values(["Ticker", "asof"])
+        t = tmp["Ticker"].to_numpy()
+        pos = tmp["pos"].to_numpy()
+        prev = np.empty(len(tmp), dtype=object)
+        prev[0] = None
+        prev[1:] = t[:-1]
+        tmp["_rid"] = np.cumsum((t != prev) | (~pos))
+        tmp["_p"] = pos.astype(int)
+        return tmp.groupby("_rid", sort=False)["_p"].cumsum().reindex(df.index).fillna(0).astype(int)
+
+    streak_clean = _streak_len(clean)
+    streak_dirty = _streak_len(dirty)
+    streak_setup = _streak_len(hi & allgreen)
+
+    lines += [
+        "| slice | n | 1d | 3d | 1w | 2m |",
+        "|-------|--:|---:|---:|---:|---:|",
+    ]
+    for name, m in (
+        ("score>3 (context ignored)", hi),
+        ("LEAD+peers↑+ind↑", allgreen),
+        ("**score>3 ∧ LEAD+peers↑+ind↑**", hi & allgreen),
+        ("score>3 ∧ LEAD+peers↑ ∧ not-ind↓", hi & ctx_ok),
+        ("score>3 ∧ n_red_ctx=0", hi & (n_red_ctx == 0)),
+        ("score>3 ∧ n_red_ctx≤1", hi & clean),
+        ("score≤-1 ∧ LAG+peers↓+ind↓ (opposite)", (df["score"] <= -1) & dirty),
+    ):
+        lines.append(
+            f"| {name} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines += [
+        "",
+        "Red chips that day (context column only; white does not count):",
+        "",
+        "| n_red_ctx | n | 1d | 3d | 1w | 2m |",
+        "|-----------|--:|---:|---:|---:|---:|",
+    ]
+    for name, m in (
+        ("0 (all green/white)", n_red_ctx == 0),
+        ("1", n_red_ctx == 1),
+        ("**≤1 (the cut)**", clean),
+        ("2", n_red_ctx == 2),
+        ("≥3 (LAG+peers↓+ind↓)", dirty),
+    ):
+        lines.append(
+            f"| {name} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines += [
+        "",
+        "Consecutive sessions of the same ticker:",
+        "",
+        "| streak | n | 1d | 3d | 1w | 2m |",
+        "|--------|--:|---:|---:|---:|---:|",
+    ]
+    for name, m in (
+        ("clean (≤1 red) = 1", streak_clean == 1),
+        ("clean = 2", streak_clean == 2),
+        ("clean = 3", streak_clean == 3),
+        ("clean = 4", streak_clean == 4),
+        ("clean ≥ 5", streak_clean >= 5),
+        ("clean ≥ 3", streak_clean >= 3),
+        ("score>3∧allgreen streak = 1", streak_setup == 1),
+        ("score>3∧allgreen streak = 2", streak_setup == 2),
+        ("score>3∧allgreen streak ≥ 3", streak_setup >= 3),
+        ("dirty (≥3 red) streak ≥ 3", streak_dirty >= 3),
+    ):
+        lines.append(
+            f"| {name} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines.append("")
+    lines.append(
         "Read the (pp) as lift vs that base. Near 0 = no edge. "
         "2m requires 42 bars so the last ~8 weeks of asof are dropped. "
         "B1 fundamentals only exist on/after a Finviz export. "
-        "P04 (sec↑/sec↓) is ⚪ until the first sector board."
+        "P04 (sec↑/sec↓) is ⚪ until the first sector board. "
+        "n_red_ctx≥3 needs P03, so it only exists after the first Finviz export."
     )
     lines.append("")
     return lines
@@ -558,6 +674,7 @@ def _universe_daily_trail(out: pd.DataFrame) -> list[str]:
         "",
         "Same table as a single-ticker trail, rolled up: **median score / ctx / enr** "
         "and % of names with LEAD / peers↑ / ind↑ that day. "
+        "Median score is market weather, not the cut — see audit G for score>3 + context. "
         "1d 3d 1w 2m dots are the universe-wide 🟢 rate that day (🟢 if ≥50%). "
         "Per-ticker rows live in the parquet — markdown cannot hold ~2,500 × N sessions.",
         "",
