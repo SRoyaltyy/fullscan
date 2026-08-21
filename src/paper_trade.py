@@ -272,7 +272,7 @@ def sleeve_stats(sleeve: str, S: dict, prices: pd.DataFrame, capital: float) -> 
 
 def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                     prices: pd.DataFrame, date: str, capital: float,
-                    fees: dict) -> None:
+                    fees: dict, trade_rows: list[dict] | None = None) -> None:
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     curve = curve.copy()
     curve["date"] = pd.to_datetime(curve["date"])
@@ -300,6 +300,23 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                 "last": round(cur, 2),
                 "unrealized": round(pos["shares"] * cur - pos["cost"], 2)})
     payload["positions"] = positions
+    fills = []
+    for r in trade_rows or []:
+        pnl = r.get("realized_pnl")
+        if pnl == "" or pnl is None:
+            pnl = None
+        else:
+            try:
+                pnl = round(float(pnl), 2)
+            except (TypeError, ValueError):
+                pnl = None
+        fills.append({
+            "date": r["date"], "sleeve": r["sleeve"], "ticker": r["ticker"],
+            "side": r["side"], "shares": int(r["shares"]),
+            "price": float(r["price"]), "fees": float(r.get("fees") or 0),
+            "amount": float(r.get("amount") or 0), "realized_pnl": pnl,
+        })
+    payload["trades"] = fills
 
     html = _DASH_TEMPLATE.replace("__DATA__", json.dumps(payload))
     (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
@@ -365,7 +382,7 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     stats = [sleeve_stats(s, st[s], prices, capital) for s in st]
     last = books[-1][0]
     write_report(stats, last, capital)
-    write_dashboard(curve, stats, st, prices, last, capital, fees)
+    write_dashboard(curve, stats, st, prices, last, capital, fees, trade_rows)
     print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades, "
           f"curves → dashboard/index.html, summary → 03_scoreboard/PAPER_TRADING.md")
 
@@ -399,10 +416,27 @@ _DASH_TEMPLATE = """<!DOCTYPE html>
  th{color:#8b96ab;font-weight:600;text-align:right} td:first-child,th:first-child{text-align:left}
  h2{font-size:15px;margin:26px 0 6px;color:#aeb9cf}
  .note{color:#66708a;font-size:11.5px;margin-top:8px}
+ .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 10px}
+ .bar input,.bar select{background:#171e2e;color:#dfe6f2;border:1px solid #262f45;border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace}
+ td.side-buy{color:#4ade80;font-weight:700;text-align:left}
+ td.side-sell{color:#f87171;font-weight:700;text-align:left}
+ td.tick{text-align:left;font-weight:700}
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
 <div class="cards" id="cards"></div>
+<h2>Fills — bought / sold at price</h2>
+<p class="mut" style="margin:0 0 6px">One row = one order. Price is the signal-day close. Newest first.</p>
+<div class="bar">
+ <select id="fillSide" aria-label="Side">
+  <option value="all">All sides</option>
+  <option value="buy">Buys only</option>
+  <option value="sell">Sells only</option>
+ </select>
+ <input id="fillQ" placeholder="Ticker (e.g. CEG)" aria-label="Filter ticker">
+ <span class="mut" id="fillCount"></span>
+</div>
+<table id="fills"></table>
 <h2>Equity curves (per sleeve, Futubull fees applied)</h2>
 <div class="legend" id="legend"></div>
 <canvas id="chart" height="380"></canvas>
@@ -430,6 +464,40 @@ cards.push(["Total equity",{sleeve:D.stats.length+" sleeves",return_pct:(100*(to
 document.getElementById('cards').innerHTML=cards.map(c=>{
   const cls=c[1].return_pct>=0?'pos':'neg';
   return `<div class="card"><span class="mut">${c[0]}</span><b>${c[1].sleeve}</b><span class="${cls}">${c[1].return_pct}%</span></div>`;}).join('');
+function money(n){return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
+function px(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:4});}
+function renderFills(){
+  const side=document.getElementById('fillSide').value;
+  const q=document.getElementById('fillQ').value.trim().toUpperCase();
+  const rows=(D.trades||[]).slice().reverse().filter(t=>{
+    if(side!=='all' && t.side!==side) return false;
+    if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+  document.getElementById('fillCount').textContent=rows.length+' of '+(D.trades||[]).length+' fills';
+  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th><th>Sleeve</th><th>Amount</th><th>Realized P/L</th></tr>';
+  if(!rows.length){
+    document.getElementById('fills').innerHTML=head+'<tr><td colspan="7" class="mut">No fills match.</td></tr>';
+    return;
+  }
+  document.getElementById('fills').innerHTML=head+rows.map(t=>{
+    const sideCls=t.side==='sell'?'side-sell':'side-buy';
+    const pnl=t.realized_pnl;
+    const pnlCell=pnl==null||pnl===''?'<td class="mut">—</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
+    return `<tr>
+      <td>${t.date}</td>
+      <td class="${sideCls}">${t.side.toUpperCase()}</td>
+      <td class="tick">${t.ticker}</td>
+      <td>${t.shares} sh @ ${px(t.price)}</td>
+      <td>${t.sleeve}</td>
+      <td>${money(t.amount)}</td>
+      ${pnlCell}
+    </tr>`;
+  }).join('');
+}
+document.getElementById('fillSide').onchange=renderFills;
+document.getElementById('fillQ').oninput=renderFills;
+renderFills();
 // legend
 const leg=document.getElementById('legend');
 keys.forEach((k,i)=>{const s=document.createElement('span');s.textContent=k;
