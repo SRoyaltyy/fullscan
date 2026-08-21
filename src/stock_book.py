@@ -46,7 +46,16 @@ REBOUND_WINDOW = 40
 REBOUND_BOOST = 0.08  # smaller than AB/peer so it cannot clone a sector
 MAX_PER_INDUSTRY = 3
 MAX_PER_SECTOR = 4
-PERSIST_PENALTY = 0.10  # already-on-yesterday-book without fresh evidence
+MAX_LARGE_MEGA = 4          # rest of the book is small/mid
+MIN_OPP_MCAP_M = 400.0      # skip sub-$400M "lottery" micros in BUY
+MAX_OPP_MCAP_M = 20000.0    # above this is large/mega for the cap
+PERSIST_PENALTY = 0.10
+# Liquid mid/small with room to run (BB-class). Additive, not a 7th weight.
+SIZE_OPP = {"micro": 0.00, "small": 0.16, "mid": 0.32, "large": -0.05, "mega": -0.22}
+RANGE_OPP = {
+    "deep_low": 0.16, "low": 0.12, "mid": 0.08,
+    "high": 0.0, "top": -0.12, "breakout": -0.06,
+}
 
 
 def _load_finviz_liquidity(date: str) -> pd.DataFrame:
@@ -455,6 +464,27 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     else:
         join["s_peer"] = 0.0
 
+    # --- opportunity: liquid mid/small with room to run (BB-class) ---
+    sz = join["size"].astype(str).str.lower() if "size" in join.columns else pd.Series("", index=join.index)
+    rng = join["range"].astype(str).str.lower() if "range" in join.columns else pd.Series("", index=join.index)
+    ext = join["ext"].astype(str).str.lower() if "ext" in join.columns else pd.Series("", index=join.index)
+    surp = join["earnsurp"].astype(str).str.lower() if "earnsurp" in join.columns else pd.Series("", index=join.index)
+    join["s_opp"] = (
+        sz.map(SIZE_OPP).fillna(0.0) + rng.map(RANGE_OPP).fillna(0.0)
+    )
+    midish = sz.isin(["small", "mid"])
+    join.loc[midish & ext.isin(["washed", "neutral", ""]), "s_opp"] += 0.08
+    join.loc[midish & surp.isin(["beat", "big_beat"]), "s_opp"] += 0.12
+    # A sector-weather stamp (e.g. ADBE → all Tech hostile) must not bury a
+    # mid-cap that is beating peers / just beat earnings.
+    spec = midish & (
+        (join["s_ab"] > 0.10) | (join["s_peer"] > 0.20) | surp.isin(["beat", "big_beat"])
+    )
+    clipped = spec & (join["s_join"] < -0.15)
+    if clipped.any():
+        print(f"[stock-book] clipped sector-join nuke on {int(clipped.sum())} mid/small names with stock-specific evidence")
+        join.loc[clipped, "s_join"] = -0.15
+
     if "veto" in join.columns:
         veto = join["veto"].astype(str).str.lower().isin(["true", "1", "yes"])
         join.loc[veto, "s_join"] = join.loc[veto, "s_join"] * 0.2
@@ -512,6 +542,7 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             + wn * join["s_news"]
             + wa * join["s_ab"]
             + wp * join["s_peer"]
+            + join["s_opp"]
         )
         if "rebound" in join.columns:
             join.loc[join["rebound"], f"score_{h}"] = (
@@ -548,6 +579,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
                 bits.append(lab)
         if abs(row.get("s_peer", 0) or 0) > 0.05:
             bits.append(f"peer={row['s_peer']:+.2f}")
+        opp = float(row.get("s_opp") or 0)
+        if opp > 0.05:
+            bits.append(f"mid_opp={opp:+.2f}")
         if row.get("rebound"):
             bits.append("rebound_floor")
         return "; ".join(bits)
@@ -561,19 +595,34 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
 
 
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int):
+    """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side."""
     col = f"score_{horizon}"
     ranked = df.sort_values(col, ascending=False)
     picks = []
     sec_n: dict[str, int] = {}
     ind_n: dict[str, int] = {}
+    large_n = 0
     for _, r in ranked.iterrows():
         sec = str(r.get("sector") or "")
         ind = str(r.get("industry") or "")
+        size = str(r.get("size") or "").lower()
+        mcap = r.get("market_cap_m")
+        try:
+            mcap_f = float(mcap) if mcap == mcap else 0.0
+        except (TypeError, ValueError):
+            mcap_f = 0.0
+        if size == "micro" or mcap_f < MIN_OPP_MCAP_M:
+            continue
+        if size in ("large", "mega") or mcap_f > MAX_OPP_MCAP_M:
+            if large_n >= MAX_LARGE_MEGA:
+                continue
         if sec and sec_n.get(sec, 0) >= MAX_PER_SECTOR:
             continue
         if ind and ind not in ("", "nan", "None") and ind_n.get(ind, 0) >= MAX_PER_INDUSTRY:
             continue
         picks.append(r)
+        if size in ("large", "mega") or mcap_f > MAX_OPP_MCAP_M:
+            large_n += 1
         if sec:
             sec_n[sec] = sec_n.get(sec, 0) + 1
         if ind and ind not in ("", "nan", "None"):
@@ -616,7 +665,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     cols_keep = [
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
-        "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer",
+        "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
         "score_1d", "score_3d", "score_1w", "score_2w", "score_1m",
         "reasons", "bulls", "bears", "flags",
     ]
@@ -651,9 +700,9 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "",
         f"Generated: {meta['generated_at']}",
         "",
-        "Layers: join (labels×weather) + same-day sector/general + news "
-        "+ AB checklist + peer RS. Max 4 names/sector, 3/industry. "
-        "Names already on yesterday's book are penalized unless AB/peer/news is fresh.",
+        "Layers: join + same-day sector/general + news + AB + peer RS "
+        "+ mid-cap opportunity (liquid small/mid with room to run). "
+        "Max 4 large/mega, 4/sector, 3/industry. Micros under $400M skipped on BUY.",
         "",
         "## Regime snapshot",
         "",
@@ -744,6 +793,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "- **1d** news + AB + peer; **1m** AB + peer + join + same-day sector.",
         "- Universe gated: Market Cap ≥ $80M and Average Volume ≥ 500k shares (Finviz units).",
         "- AB score (checklist + P01–P04 peer/industry/sector context) is a first-class rank, not a footnote.",
+        "- Opportunity tilt: liquid **small/mid** ($400M–$20B) with room to run (not 52w top, not parabolic). Mega-caps are capped at 4 names.",
+        "- A sector-weather stamp cannot bury a mid-cap that just beat earnings or is leading its own peers (BB-class).",
         "- Peer RS (`rs_week` vs correlated basket) breaks ties inside a sector so the book is not 8 clones of XLE.",
         "- Diversify: max 4 names per sector, 3 per industry. Persistence penalty if already on yesterday's list without fresh evidence.",
         "- Same-day sector/general only — stale Monday calls are not reused on Wednesday.",
