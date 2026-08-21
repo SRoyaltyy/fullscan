@@ -16,6 +16,9 @@ on:
         required: false
         default: false
   schedule:
+    # 11:00 ET — before Stock Book ALL (17:00 UTC / 13:00 ET) so s_ab is on disk
+    - cron: "0 15 * * 1-5"
+    # 17:30 ET — post-close refresh (full tape for the day)
     - cron: "30 21 * * 1-5"
 
 permissions:
@@ -38,7 +41,7 @@ jobs:
       - name: Install deps
         run: |
           pip install -r requirements.txt
-          pip install pyarrow yfinance
+          pip install pyarrow yfinance openpyxl
 
       - name: Update price store
         if: ${{ inputs.skip_price_update != true }}
@@ -60,6 +63,20 @@ jobs:
           echo "=== outputs ==="
           ls -la data/ab_checklist/ || true
           wc -l data/ab_checklist/*_ab_checklist.csv || true
+
+      - name: Enrich (P01–P04 peers + industry/sector)
+        if: always()
+        run: |
+          set -euo pipefail
+          AS_OF="${{ inputs.date }}"
+          AS_OF="${AS_OF//+/-}"
+          ARGS=()
+          if [ -n "$AS_OF" ]; then
+            ARGS+=(--date "$AS_OF")
+          fi
+          echo "CMD: python -m src.ab_enrich ${ARGS[*]}"
+          python -m src.ab_enrich "${ARGS[@]}" || echo "[warn] enrich soft-failed — raw checklist still usable"
+          ls -la data/ab_checklist/*enriched* 2>/dev/null || true
 
       - name: Upload artifact
         if: always()

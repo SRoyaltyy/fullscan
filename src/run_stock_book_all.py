@@ -57,6 +57,34 @@ def _weather_has_sectors(date: str) -> bool:
         return False
 
 
+def _events_n(date: str) -> int:
+    import json
+    for name in (f"{date}_events.json", "latest.json"):
+        p = _p("01_daily", "events", name)
+        if not p.exists():
+            continue
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if name == "latest.json":
+            sd = str(d.get("scan_date") or "")
+            if sd and sd != date:
+                continue
+        n = len(d.get("events") or [])
+        if n:
+            return n
+    return 0
+
+
+def _ab_raw(date: str) -> bool:
+    return _exists("data", "ab_checklist", f"{date}_ab_checklist.csv")
+
+
+def _ab_enriched(date: str) -> bool:
+    return _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv")
+
+
 def _status_for_day(date: str) -> list[dict]:
     """One row per logical workflow. done = artifact for THIS date exists."""
     sector_dir = _p("01_daily", "sectors", date)
@@ -111,10 +139,11 @@ def _status_for_day(date: str) -> list[dict]:
             "required": False,
         },
         {
-            "name": "News actions (ticker edges)",
-            "key": "news_actions",
-            "done": _exists("01_daily", "news", f"{date}_actions.json"),
-            "artifact": f"01_daily/news/{date}_actions.json",
+            "name": "Finviz daily digest",
+            "key": "finviz_digest",
+            "done": _exists("01_daily", "news", f"{date}_finviz_digest.json")
+            or _exists("01_daily", "news", f"{date}_finviz_digest.md"),
+            "artifact": f"01_daily/news/{date}_finviz_digest.*",
             "required": False,
         },
         {
@@ -122,6 +151,20 @@ def _status_for_day(date: str) -> list[dict]:
             "key": "news_judge",
             "done": _exists("01_daily", "news", f"{date}_judge.md"),
             "artifact": f"01_daily/news/{date}_judge.md",
+            "required": True,
+        },
+        {
+            "name": "News actions (ticker edges)",
+            "key": "news_actions",
+            "done": _exists("01_daily", "news", f"{date}_actions.json"),
+            "artifact": f"01_daily/news/{date}_actions.json",
+            "required": False,
+        },
+        {
+            "name": "Event scanner",
+            "key": "events",
+            "done": _events_n(date) > 0,
+            "artifact": f"01_daily/events/{date}_events.json",
             "required": False,
         },
         {
@@ -150,9 +193,11 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "AB checklist + peer enrich",
             "key": "ab",
-            "done": _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv"),
+            "done": _ab_enriched(date),
+            "partial": _ab_raw(date) and not _ab_enriched(date),
+            "detail": "raw only, enrich missing" if (_ab_raw(date) and not _ab_enriched(date)) else "",
             "artifact": f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
-            "required": False,
+            "required": True,
         },
         {
             "name": "Stock book (suggestions)",
@@ -247,7 +292,20 @@ def run(
     else:
         print("[all] skip Finviz + labeling (DONE for this day)")
 
-    # ---- News (before LLM so judge/actions feed predict + book) ----
+    # ---- Events (weather + book sector tilt). Catcher replaces empty primary. ----
+    if skip_llm:
+        print("[all] skip Event scanner (--skip-llm)")
+    elif need("events"):
+        print("[all] → Event scanner (primary)")
+        _run([sys.executable, "-m", "src.run_events", "--date", date], check=False)
+        print("[all] → Event catcher (gap hunt / replacement if primary empty)")
+        _run([sys.executable, "-m", "src.run_events_catcher", "--date", date], check=False)
+        if _events_n(date) == 0:
+            print("[all] WARN: events still empty for", date, "— weather/book sector tilt missing")
+    else:
+        print("[all] skip Event scanner (DONE for this day)")
+
+    # ---- News: parse → digest → judge → actions so judge tilts land in actions.json ----
     if need("news_parse"):
         print("[all] → News parse")
         _run(
@@ -256,6 +314,22 @@ def run(
         )
     else:
         print("[all] skip News parse (DONE for this day)")
+    if need("finviz_digest"):
+        print("[all] → Finviz daily digest")
+        _run([sys.executable, "-m", "src.finviz_digest", "--date", date], check=False)
+    else:
+        print("[all] skip Finviz daily digest (DONE for this day)")
+    if need("news_judge") and not skip_llm and config.DEEPSEEK_API_KEY:
+        print("[all] → News judge")
+        _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
+        if not _exists("01_daily", "news", f"{date}_judge.md"):
+            print("[all] WARN: news judge missing for", date, "— s_news will lack LLM tilts")
+    elif skip_llm:
+        print("[all] skip News judge (--skip-llm)")
+    elif not config.DEEPSEEK_API_KEY:
+        print("[all] skip News judge (no DEEPSEEK_API_KEY)")
+    else:
+        print("[all] skip News judge (DONE for this day)")
     if need("news_actions"):
         print("[all] → News actions (ticker edges)")
         _run(
@@ -266,13 +340,6 @@ def run(
             print("[all] WARN: news actions missing for", date, "— 1d book weaker")
     else:
         print("[all] skip News actions (DONE for this day)")
-    if need("news_judge") and not skip_llm and config.DEEPSEEK_API_KEY:
-        print("[all] → News judge")
-        _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
-    elif skip_llm:
-        print("[all] skip News judge (--skip-llm)")
-    else:
-        print("[all] skip News judge (DONE or no key)")
 
     # ---- General predict ----
     if not skip_llm and need("general_predict"):
@@ -328,14 +395,19 @@ def run(
     else:
         print("[all] skip Ticker checklist (DONE for this day)")
 
-    # ---- AB + enrich (stock-specific rank) ----
+    # ---- AB + enrich (stock-specific rank). Goldmine — always attempt. ----
     if need("ab"):
-        print("[all] → AB checklist (one day, liquid universe)")
-        _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
+        if not _ab_raw(date):
+            print("[all] → AB checklist (one day, liquid universe)")
+            _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
+        else:
+            print("[all] skip AB checklist raw (DONE) — will enrich")
         print("[all] → AB enrich (peers + industry + sector)")
         _run([sys.executable, "-m", "src.ab_enrich", "--date", date], check=False)
-        if not _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv"):
-            print("[all] WARN: AB enrich missing — book ranks without AB layer")
+        if not _ab_enriched(date) and not _ab_raw(date):
+            print("[all] WARN: AB missing — book ranks without s_ab (goldmine unused)")
+        elif not _ab_enriched(date):
+            print("[all] WARN: AB enrich missing — book will use raw checklist score")
     else:
         print("[all] skip AB checklist + enrich (DONE for this day)")
 

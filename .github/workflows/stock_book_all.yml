@@ -105,6 +105,7 @@ jobs:
             data/universe data/exports data/join data/stock_book data/paper \
             data/peers data/checklist data/ab_checklist \
             01_daily/weather 01_daily/news 01_daily/general 01_daily/sectors \
+            01_daily/events \
             01_daily/*_universe.md 01_daily/*_match.md \
             01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \
             03_scoreboard/STOCK_BOOK_BACKTEST.md \

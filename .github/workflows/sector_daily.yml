@@ -54,17 +54,21 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             PLAN="none"
             UTC_HOUR=$(date -u +%H)
+            HOUR=$((10#$UTC_HOUR))
             DOW=$(TZ=Asia/Hong_Kong date +%u)
-            if [ "$UTC_HOUR" = "22" ]; then
+            # GitHub cron jitter is routinely +15–70 min. Exact-hour match
+            # (UTC_HOUR == 12 / 22) is why 08-19 printed green in ~1 min
+            # with 0/11 essays (ran 13:28 UTC, PLAN=none).
+            if [ "$HOUR" -ge 18 ]; then
               PLAN="outcome_reflect"
-            fi
-            if [ "$UTC_HOUR" = "12" ]; then
+            elif [ "$HOUR" -ge 11 ]; then
               PLAN="predict"
             fi
             if [ "$PLAN" = "predict" ] && [ "$DOW" -ge 6 ]; then
               PLAN="none"
               echo "Weekend — sector predict skipped."
             fi
+            echo "UTC_HOUR=$UTC_HOUR PLAN=$PLAN"
             echo "plan=$PLAN" >> "$GITHUB_OUTPUT"
           else
             echo "plan=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"

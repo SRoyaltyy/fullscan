@@ -1,19 +1,27 @@
 name: Daily Orchestrator (pre-market guard)
 
 # Watches the critical pre-US-open workflows and re-dispatches any that
-# missed their cron or failed. GitHub schedule jitter + upstream search
-# blocks make events_daily especially unreliable; this is the safety net.
+# missed their cron, failed, OR went green without writing today's artifact.
+# GitHub `conclusion=success` is NOT enough: sector_daily 08-19 was a 1-min
+# green with 0/11 essays because the hour gate didn't fire. This guard
+# checks the files on main for TODAY ET.
 #
-# Targets (predict-side only — outcome/reflect have their own windows):
+# Targets (predict-side — outcome/reflect have their own windows):
 #   finviz_digest   ~10:05 / 12:05 / 14:05 UTC
 #   events_daily    ~10:43 UTC (most failure-prone)
-#   news_parse      10/12/14:15 UTC (weekdays)
-#   news_judge      10/12/14:25 UTC (weekdays)
-#   daily_pipeline  predict window ~11:34 UTC
+#   news_parse      10/12/14:15 UTC
+#   news_judge      10/12/14:25 UTC
+#   news_actions    after judge
+#   daily_pipeline  predict ~11:34 UTC
 #   sector_daily    predict ~12:40 UTC (weekdays)
+#   label_weather   ~15:17 UTC
+#   ab_checklist    15:00 UTC (before Stock Book ALL) + 21:30 post-close
+#   stock_book_all  17:00 UTC — only dispatched after 16:00 UTC unless force
 #
 # Runs several times in the pre-market window so a single delayed cron
 # does not leave the day without inputs. Force=true re-dispatches all.
+# 18:15 UTC pass: if the book exists but AB is missing, re-dispatch ALL
+# so s_ab actually scores.
 
 on:
   schedule:
@@ -21,7 +29,7 @@ on:
     - cron: "50 10 * * 1-5"
     - cron: "50 11 * * 1-5"
     - cron: "50 12 * * 1-5"
-    # after Stock Book ALL (17:00 UTC) — catch a missed book
+    # after Stock Book ALL (17:00 UTC) — catch a missed book / book-without-AB
     - cron: "15 18 * * 1-5"
   workflow_dispatch:
     inputs:
@@ -41,65 +49,94 @@ concurrency:
 jobs:
   guard:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
-      - name: Check + re-dispatch missing/failed daily workflows
+      - name: Check artifacts + re-dispatch missing/failed/green-empty
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
           set -euo pipefail
 
-          # ET calendar date (predict day)
+          REPO="${{ github.repository }}"
           TODAY=$(TZ=America/New_York date +%F)
-          echo "Orchestrator date (ET): $TODAY  force=$FORCE"
+          HOUR=$((10#$(date -u +%H)))
+          echo "Orchestrator date (ET): $TODAY  utc_hour=$HOUR  force=$FORCE"
 
-          # workflow file → (optional) workflow_dispatch inputs
-          # Only the predict-side stages; outcome/reflect have their own windows.
-          declare -A DISPATCH_INPUTS
-          DISPATCH_INPUTS[finviz_digest.yml]="{}"
-          DISPATCH_INPUTS[events_daily.yml]="{}"
-          DISPATCH_INPUTS[news_parse.yml]="{}"
-          DISPATCH_INPUTS[news_judge.yml]="{}"
-          DISPATCH_INPUTS[news_actions.yml]="{}"
-          DISPATCH_INPUTS[daily_pipeline.yml]='{"stage":"predict"}'
-          DISPATCH_INPUTS[sector_daily.yml]='{"stage":"predict"}'
-          DISPATCH_INPUTS[stock_book_all.yml]="{}"
+          repo_file() {
+            gh api "repos/${REPO}/contents/${1}?ref=main" --jq .sha >/dev/null 2>&1
+          }
+          repo_file_size() {
+            gh api "repos/${REPO}/contents/${1}?ref=main" --jq '.size // 0' 2>/dev/null || echo 0
+          }
+          repo_predict_n() {
+            gh api "repos/${REPO}/contents/${1}?ref=main" \
+              --jq '[.[]? | select(.type=="file" and (.name | endswith("_predict.md")))] | length' \
+              2>/dev/null || echo 0
+          }
+          repo_events_n() {
+            local raw
+            raw=$(gh api "repos/${REPO}/contents/${1}?ref=main" --jq .content 2>/dev/null) || { echo 0; return; }
+            echo "$raw" | tr -d '\n' | base64 -d 2>/dev/null | jq '.events | length' 2>/dev/null || echo 0
+          }
 
-          for WF in "${!DISPATCH_INPUTS[@]}"; do
-            echo ""
-            echo "======== $WF ========"
+          artifact_ok() {
+            local WF="$1"
+            case "$WF" in
+              finviz_digest.yml)
+                repo_file "01_daily/news/${TODAY}_finviz_digest.json" \
+                  || repo_file "01_daily/news/${TODAY}_finviz_digest.md"
+                ;;
+              events_daily.yml)
+                local n
+                n=$(repo_events_n "01_daily/events/${TODAY}_events.json")
+                echo "    events n=$n"
+                [ "${n:-0}" -gt 0 ]
+                ;;
+              news_parse.yml)
+                repo_file "01_daily/news/${TODAY}_parsed.json" \
+                  || repo_file "01_daily/news/${TODAY}_parsed.md"
+                ;;
+              news_judge.yml)
+                repo_file "01_daily/news/${TODAY}_judge.md"
+                ;;
+              news_actions.yml)
+                repo_file "01_daily/news/${TODAY}_actions.json"
+                ;;
+              daily_pipeline.yml)
+                repo_file "01_daily/general/${TODAY}_predict.md"
+                ;;
+              sector_daily.yml)
+                local n
+                n=$(repo_predict_n "01_daily/sectors/${TODAY}")
+                echo "    sector predict files=$n/11"
+                [ "${n:-0}" -ge 8 ]
+                ;;
+              label_weather.yml)
+                repo_file "01_daily/weather/${TODAY}_weather.json"
+                ;;
+              ab_checklist.yml)
+                local sz
+                if repo_file "data/ab_checklist/${TODAY}_ab_checklist_enriched.csv"; then
+                  return 0
+                fi
+                sz=$(repo_file_size "data/ab_checklist/${TODAY}_ab_checklist.csv")
+                echo "    ab raw size=$sz"
+                [ "${sz:-0}" -gt 10000 ]
+                ;;
+              stock_book_all.yml)
+                repo_file "data/stock_book/${TODAY}_stock_book.json" \
+                  || repo_file "01_daily/${TODAY}_stock_book.md"
+                ;;
+              *)
+                return 1
+                ;;
+            esac
+          }
 
-            # Recent runs (last ~2 days of activity is plenty)
-            RAW=$(gh api "repos/${{ github.repository }}/actions/workflows/$WF/runs?per_page=15" \
-              --jq '.workflow_runs[] | {id, status, conclusion, event, created_at, html_url}' || echo "")
-
-            if [ -z "$RAW" ]; then
-              echo "WARN: could not list runs for $WF — will attempt dispatch"
-              HAS_OK=""
-            else
-              # Did we already get a successful (or still-running) run whose
-              # created_at falls on TODAY in America/New_York?
-              HAS_OK=$(echo "$RAW" | jq -r --arg today "$TODAY" '
-                select(
-                  (.status == "in_progress" or .status == "queued" or .conclusion == "success")
-                  and (
-                    ((.created_at | fromdateiso8601 | strftime("%Y-%m-%d")) == $today)
-                    or (((.created_at | fromdateiso8601) + 3600*4) | strftime("%Y-%m-%d")) == $today
-                  )
-                ) | .id' | head -1)
-            fi
-
-            # Surface the most recent conclusion for logging
-            LATEST=$(echo "$RAW" | jq -s -r '.[0] // empty | "\(.status)/\(.conclusion // "-") @ \(.created_at) \(.html_url)"' 2>/dev/null || true)
-            echo "latest: ${LATEST:-none}"
-
-            if [ -n "$HAS_OK" ] && [ "$FORCE" != "true" ]; then
-              echo "OK — successful or active run already present for $TODAY (id=$HAS_OK). Skipping."
-              continue
-            fi
-
-            echo "MISSING or FAILED for $TODAY → dispatching workflow_dispatch"
+          dispatch_wf() {
+            local WF="$1"
+            echo "MISSING/FAILED/GREEN-EMPTY for $TODAY → dispatching $WF"
             case "$WF" in
               daily_pipeline.yml)
                 gh workflow run "$WF" --ref main -f stage=predict
@@ -112,6 +149,94 @@ jobs:
                 ;;
             esac
             echo "Dispatched $WF"
+          }
+
+          # Ordered: light prereqs first, book last.
+          WORKFLOWS=(
+            finviz_digest.yml
+            events_daily.yml
+            news_parse.yml
+            news_judge.yml
+            news_actions.yml
+            daily_pipeline.yml
+            sector_daily.yml
+            label_weather.yml
+            ab_checklist.yml
+            stock_book_all.yml
+          )
+
+          for WF in "${WORKFLOWS[@]}"; do
+            echo ""
+            echo "======== $WF ========"
+
+            RAW=$(gh api "repos/${REPO}/actions/workflows/$WF/runs?per_page=20" \
+              --jq '.workflow_runs[] | {id, status, conclusion, event, created_at, html_url}' || echo "")
+
+            HAS_ACTIVE=""
+            HAS_SUCCESS=""
+            LATEST="none"
+            if [ -n "$RAW" ]; then
+              LATEST=$(echo "$RAW" | jq -s -r '.[0] // empty | "\(.status)/\(.conclusion // "-") @ \(.created_at) \(.html_url)"' 2>/dev/null || true)
+              while IFS=$'\t' read -r id status conclusion created url; do
+                [ -n "$id" ] || continue
+                et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
+                [ "$et" = "$TODAY" ] || continue
+                if [ "$status" = "in_progress" ] || [ "$status" = "queued" ] || [ "$status" = "waiting" ] || [ "$status" = "pending" ]; then
+                  HAS_ACTIVE="$id"
+                elif [ "$conclusion" = "success" ]; then
+                  HAS_SUCCESS="$id"
+                fi
+              done < <(echo "$RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at, .html_url] | @tsv')
+            fi
+            echo "latest: ${LATEST:-none}"
+            echo "today active=${HAS_ACTIVE:--} success=${HAS_SUCCESS:--}"
+
+            ART_OK="no"
+            if artifact_ok "$WF"; then
+              ART_OK="yes"
+            fi
+            echo "artifact_ok=$ART_OK"
+
+            # Stock Book ALL waits until 16:00 UTC so prereqs can land, unless forced.
+            if [ "$WF" = "stock_book_all.yml" ] && [ "$FORCE" != "true" ] && [ "$HOUR" -lt 16 ]; then
+              echo "skip ALL until 16:00 UTC (prereqs still landing)"
+              continue
+            fi
+
+            # Book exists but AB missing after 16:00 → rebuild so s_ab scores.
+            if [ "$WF" = "stock_book_all.yml" ] && [ "$ART_OK" = "yes" ] && [ "$FORCE" != "true" ]; then
+              AB_OK="no"
+              if artifact_ok "ab_checklist.yml"; then AB_OK="yes"; fi
+              echo "book present; ab_ok=$AB_OK"
+              if [ "$AB_OK" = "no" ] && [ "$HOUR" -ge 16 ]; then
+                if [ -n "$HAS_ACTIVE" ]; then
+                  echo "ALL already running — let it pick up AB"
+                  continue
+                fi
+                echo "book exists but AB missing → re-dispatch ALL so s_ab is scored"
+                dispatch_wf "$WF"
+                continue
+              fi
+            fi
+
+            if [ "$FORCE" = "true" ]; then
+              dispatch_wf "$WF"
+              continue
+            fi
+            if [ -n "$HAS_ACTIVE" ]; then
+              echo "OK — in progress/queued (id=$HAS_ACTIVE). Skipping."
+              continue
+            fi
+            if [ "$ART_OK" = "yes" ]; then
+              echo "OK — today's artifact is on main. Skipping."
+              continue
+            fi
+            if [ -n "$HAS_SUCCESS" ]; then
+              echo "GREEN-EMPTY — GH success id=$HAS_SUCCESS but artifact missing. Re-dispatching."
+            else
+              echo "MISSING or FAILED for $TODAY."
+            fi
+            dispatch_wf "$WF"
           done
 
           echo ""

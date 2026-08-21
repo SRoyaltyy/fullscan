@@ -44,11 +44,18 @@ SECTOR_ALIAS = {
     "industrial": "Industrials",
     "consumer": "Consumer Cyclical",
     "discretionary": "Consumer Cyclical",
+    "consumer-discretionary": "Consumer Cyclical",
+    "consumer discretionary": "Consumer Cyclical",
+    "consumer cyclical": "Consumer Cyclical",
+    "consumer-cyclical": "Consumer Cyclical",
     "staples": "Consumer Defensive",
     "defensive": "Consumer Defensive",
+    "consumer defensive": "Consumer Defensive",
+    "consumer-defensive": "Consumer Defensive",
     "real estate": "Real Estate",
     "reit": "Real Estate",
     "communication": "Communication Services",
+    "communication services": "Communication Services",
     "comms": "Communication Services",
 }
 
@@ -60,6 +67,9 @@ KNOWN_NAMES = {
     "BAC": "BAC", "GS": "GS", "XLE": "XLE", "XLK": "XLK", "XLU": "XLU",
     "Adobe": "ADBE", "Walmart": "WMT", "Target": "TGT",
     "American Airlines": "AAL", "Analog Devices": "ADI",
+    "Moderna": "MRNA", "Merck": "MRK",
+    "BlackBerry": "BB", "Blackberry": "BB",
+    "NextEra": "NEE", "Constellation": "CEG", "Vistra": "VST",
 }
 
 

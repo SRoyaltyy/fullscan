@@ -47,6 +47,7 @@ jobs:
         run: python -m src.run_events ${DATE:+--date "$DATE"}
 
       - name: Pass 2 — catcher (gap hunt, government emphasis)
+        continue-on-error: true
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
@@ -54,6 +55,7 @@ jobs:
         run: python -m src.run_events_catcher ${DATE:+--date "$DATE"}
 
       - name: Commit event scan outputs
+        if: always()
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
