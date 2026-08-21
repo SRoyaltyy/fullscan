@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+from collections import defaultdict, deque
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -269,6 +270,99 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
     return st, curve_rows, trade_rows
 
 
+def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]:
+    """FIFO: pair each buy lot with later sells of the same ticker in the same sleeve.
+
+    One row per closed round-trip (bought then sold) and one row per leftover
+    open lot. This is what the dashboard shows as 'closed' vs 'open'.
+    """
+    lots: dict[tuple[str, str], deque] = defaultdict(deque)
+    closed: list[dict] = []
+
+    def _held(buy: str, sell: str) -> int:
+        try:
+            return max(0, (pd.Timestamp(sell) - pd.Timestamp(buy)).days)
+        except Exception:
+            return 0
+
+    for r in trade_rows:
+        key = (r["sleeve"], str(r["ticker"]).upper())
+        if r["side"] == "buy":
+            lots[key].append({
+                "buy_date": r["date"],
+                "buy_px": float(r["price"]),
+                "buy_fees": float(r.get("fees") or 0),
+                "shares": int(r["shares"]),
+                "buy_amount": float(r.get("amount") or 0),
+            })
+            continue
+        if r["side"] != "sell":
+            continue
+        remaining = int(r["shares"])
+        sold_total = remaining or 1
+        sell_px = float(r["price"])
+        sell_fees = float(r.get("fees") or 0)
+        sell_amount = float(r.get("amount") or 0)
+        sell_date = r["date"]
+        while remaining > 0 and lots[key]:
+            lot = lots[key][0]
+            take = min(lot["shares"], remaining)
+            frac_sell = take / sold_total
+            frac_lot = take / lot["shares"] if lot["shares"] else 1.0
+            buy_cost = lot["buy_amount"] * frac_lot
+            sell_net = sell_amount * frac_sell
+            pnl = sell_net - buy_cost
+            closed.append({
+                "status": "closed",
+                "sleeve": r["sleeve"],
+                "ticker": key[1],
+                "shares": take,
+                "buy_date": lot["buy_date"],
+                "buy_px": round(lot["buy_px"], 4),
+                "sell_date": sell_date,
+                "sell_px": round(sell_px, 4),
+                "last": None,
+                "held_cal_days": _held(lot["buy_date"], sell_date),
+                "realized_pnl": round(pnl, 2),
+                "unrealized_pnl": None,
+                "buy_fees": round(lot["buy_fees"] * frac_lot, 4),
+                "sell_fees": round(sell_fees * frac_sell, 4),
+            })
+            lot["shares"] -= take
+            lot["buy_amount"] -= buy_cost
+            lot["buy_fees"] = lot["buy_fees"] * (1.0 - frac_lot)
+            remaining -= take
+            if lot["shares"] <= 0:
+                lots[key].popleft()
+
+    last_px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
+    open_rows: list[dict] = []
+    for (sleeve, ticker), q in lots.items():
+        for lot in q:
+            if lot["shares"] <= 0:
+                continue
+            cur = last_px.get(ticker)
+            last = float(cur) if cur == cur and cur else lot["buy_px"]
+            mtm = lot["shares"] * last - lot["buy_amount"]
+            open_rows.append({
+                "status": "open",
+                "sleeve": sleeve,
+                "ticker": ticker,
+                "shares": lot["shares"],
+                "buy_date": lot["buy_date"],
+                "buy_px": round(lot["buy_px"], 4),
+                "sell_date": None,
+                "sell_px": None,
+                "last": round(last, 4),
+                "held_cal_days": None,
+                "realized_pnl": None,
+                "unrealized_pnl": round(mtm, 2),
+                "buy_fees": round(lot["buy_fees"], 4),
+                "sell_fees": 0.0,
+            })
+    return closed + open_rows
+
+
 # ------------------------------------------------------------ outputs -----
 
 def sleeve_stats(sleeve: str, S: dict, prices: pd.DataFrame, capital: float) -> dict:
@@ -304,7 +398,8 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                     prices: pd.DataFrame, date: str, capital: float,
                     fees: dict, trade_rows: list[dict] | None = None,
                     last_picks: dict[str, list[str]] | None = None,
-                    book_dates: list[str] | None = None) -> None:
+                    book_dates: list[str] | None = None,
+                    roundtrips: list[dict] | None = None) -> None:
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     curve = curve.copy()
     curve["date"] = pd.to_datetime(curve["date"])
@@ -367,6 +462,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
             "reason": r.get("reason") or "",
         })
     payload["trades"] = fills
+    payload["roundtrips"] = roundtrips or []
 
     shell = Path(__file__).with_name("paper_dash.html").read_text(encoding="utf-8")
     html = shell.replace("__DATA__", json.dumps(payload))
@@ -425,10 +521,13 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
             f"[paper] no price data on/before {books[0][0]} — cannot simulate. "
             "Check yfinance connectivity.")
 
+    trips = match_roundtrips(trade_rows, prices)
     PAPER_DIR.mkdir(parents=True, exist_ok=True)
     curve = pd.DataFrame(curve_rows)
     curve.to_csv(PAPER_DIR / "equity_curve.csv", index=False)
     pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
+    if trips:
+        pd.DataFrame(trips).to_csv(PAPER_DIR / "roundtrips.csv", index=False)
     (PAPER_DIR / "state.json").write_text(json.dumps(st, indent=2, default=str),
                                           encoding="utf-8")
 
@@ -437,8 +536,12 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     last_picks = picks_from_book(json.loads(books[-1][1].read_text(encoding="utf-8")), top_n)
     write_report(stats, last, capital)
     write_dashboard(curve, stats, st, prices, last, capital, fees, trade_rows,
-                    last_picks=last_picks, book_dates=[d for d, _ in books])
-    print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades, "
+                    last_picks=last_picks, book_dates=[d for d, _ in books],
+                    roundtrips=trips)
+    n_closed = sum(1 for t in trips if t["status"] == "closed")
+    n_open = sum(1 for t in trips if t["status"] == "open")
+    print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades "
+          f"({n_closed} closed pairs, {n_open} open lots), "
           f"curves → dashboard/index.html, summary → 03_scoreboard/PAPER_TRADING.md")
 
 

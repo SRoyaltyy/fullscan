@@ -33,6 +33,9 @@
  .how li{margin:0 0 6px}
  .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#fbbf24}
  h3.sleeve-head{font-size:13px;margin:18px 0 4px;color:#dfe6f2;font-family:ui-monospace,Menlo,Consolas,monospace}
+ details.raw-fills{margin:4px 0 18px}
+ details.raw-fills summary{cursor:pointer;font-size:12px}
+ h3.pair-head{font-size:12px;margin:10px 0 4px;color:#8b96ab;text-transform:uppercase;letter-spacing:.04em}
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
@@ -45,18 +48,22 @@
 
 <section class="how" id="how"></section>
 
-<h2 id="fillsTitle">Fills — bought / sold at price</h2>
+<h2 id="fillsTitle">Round-trips — closed vs still open</h2>
 <p class="mut" id="fillsHint" style="margin:0 0 6px"></p>
 <div class="bar">
- <select id="fillSide" aria-label="Side">
-  <option value="all">All sides</option>
-  <option value="buy">Buys only</option>
-  <option value="sell">Sells only</option>
+ <select id="pairMode" aria-label="Status">
+  <option value="all">Closed + open</option>
+  <option value="closed">Closed only (bought then sold)</option>
+  <option value="open">Open only (bought, not sold)</option>
  </select>
- <input id="fillQ" placeholder="Ticker (e.g. CEG)" aria-label="Filter ticker">
+ <input id="fillQ" placeholder="Ticker (e.g. CVX)" aria-label="Filter ticker">
  <span class="mut" id="fillCount"></span>
 </div>
 <div id="fillsHost"></div>
+<details class="raw-fills">
+ <summary class="mut">Raw order tape (every fill, not paired)</summary>
+ <div id="rawFills"></div>
+</details>
 
 <h2>Sleeve statistics</h2>
 <table id="stats"></table>
@@ -205,15 +212,80 @@ function renderHow(){
     </ol>`;
 }
 
+function pairRows(){
+  const mode=document.getElementById('pairMode').value;
+  const q=document.getElementById('fillQ').value.trim().toUpperCase();
+  return (D.roundtrips||[]).filter(r=>{
+    if(sleeveFilter!=='all' && r.sleeve!==sleeveFilter) return false;
+    if(mode==='closed' && r.status!=='closed') return false;
+    if(mode==='open' && r.status!=='open') return false;
+    if(q && !(r.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function closedTable(rows){
+  const list=rows.filter(r=>r.status==='closed')
+    .sort((a,b)=>(b.sell_date||'').localeCompare(a.sell_date||'') || a.ticker.localeCompare(b.ticker));
+  const head='<tr><th>Ticker</th><th>Shares</th><th>Bought</th><th>Sold</th><th>Held</th><th>Realized P/L</th></tr>';
+  if(!list.length){
+    return '<p class="mut" style="margin:4px 0 10px">No closed round-trips in this view.</p>';
+  }
+  return '<table>'+head+list.map(r=>{
+    const pnl=r.realized_pnl;
+    return `<tr>
+      <td class="tick"><b>${r.ticker}</b></td>
+      <td>${r.shares}</td>
+      <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
+      <td class="left">${r.sell_date} @ ${px(r.sell_px)}</td>
+      <td>${r.held_cal_days!=null?r.held_cal_days+'d':'—'}</td>
+      <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
+    </tr>`;
+  }).join('')+'</table>';
+}
+
+function openTable(rows){
+  const list=rows.filter(r=>r.status==='open')
+    .sort((a,b)=>(b.buy_date||'').localeCompare(a.buy_date||'') || a.ticker.localeCompare(b.ticker));
+  const head='<tr><th>Ticker</th><th>Shares</th><th>Bought</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>';
+  if(!list.length){
+    return '<p class="mut" style="margin:4px 0 10px">No open lots in this view.</p>';
+  }
+  return '<table>'+head+list.map(r=>{
+    const pnl=r.unrealized_pnl;
+    return `<tr>
+      <td class="tick"><b>${r.ticker}</b></td>
+      <td>${r.shares}</td>
+      <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
+      <td>${px(r.last)}</td>
+      <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
+      <td class="mut">still holding</td>
+    </tr>`;
+  }).join('')+'</table>';
+}
+
+function sleevePairBlock(sleeve, rows){
+  const closed=rows.filter(r=>r.status==='closed');
+  const opened=rows.filter(r=>r.status==='open');
+  const real=closed.reduce((a,r)=>a+(r.realized_pnl||0),0);
+  const unrl=opened.reduce((a,r)=>a+(r.unrealized_pnl||0),0);
+  const title=sleeve?`<h3 class="sleeve-head">${sleeve} · ${closed.length} closed · ${opened.length} open · realized ${money(real)} · unrealized ${money(unrl)}</h3>`:'';
+  const mode=document.getElementById('pairMode').value;
+  let body='';
+  if(mode!=='open') body+=`<h3 class="pair-head">Closed — bought, then sold</h3>`+closedTable(rows);
+  if(mode!=='closed') body+=`<h3 class="pair-head">Open — bought, not sold yet</h3>`+openTable(rows);
+  return title+body;
+}
+
 function fillRowsHtml(rows){
-  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th><th>Why</th><th>Amount</th><th>Realized P/L</th></tr>';
+  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th><th>Why</th><th>Amount</th><th>P/L on this fill</th></tr>';
   if(!rows.length){
     return '<table>'+head+'<tr><td colspan="7" class="mut">No fills in this sleeve.</td></tr></table>';
   }
   return '<table>'+head+rows.map(t=>{
     const sideCls=t.side==='sell'?'side-sell':'side-buy';
     const pnl=t.realized_pnl;
-    const pnlCell=pnl==null||pnl===''?'<td class="mut">open</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
+    const pnlCell=pnl==null||pnl===''?'<td class="mut">—</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
     const why=t.reason || (t.side==='buy'?'entered book':'dropped from book');
     return `<tr>
       <td>${t.date}</td>
@@ -228,11 +300,9 @@ function fillRowsHtml(rows){
 }
 
 function matchedFills(sleeve){
-  const side=document.getElementById('fillSide').value;
   const q=document.getElementById('fillQ').value.trim().toUpperCase();
   return (D.trades||[]).slice().reverse().filter(t=>{
     if(sleeve && t.sleeve!==sleeve) return false;
-    if(side!=='all' && t.side!==side) return false;
     if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
     return true;
   });
@@ -240,26 +310,27 @@ function matchedFills(sleeve){
 
 function renderFills(){
   const host=document.getElementById('fillsHost');
+  const raw=document.getElementById('rawFills');
   document.getElementById('curveTitle').textContent=
     sleeveFilter==='all' ? 'Equity curves (all sleeves)' : 'Equity curve — '+sleeveFilter+' vs SPY';
+  const rows=pairRows();
+  const nC=rows.filter(r=>r.status==='closed').length;
+  const nO=rows.filter(r=>r.status==='open').length;
+  document.getElementById('fillCount').textContent=nC+' closed · '+nO+' open';
+  document.getElementById('fillsTitle').textContent=
+    sleeveFilter==='all' ? 'Round-trips — each sleeve separately' : 'Round-trips — '+sleeveFilter;
+  document.getElementById('fillsHint').textContent=
+    'Closed = bought then sold the same lot (FIFO). Open = bought and still holding. Same ticker can appear twice if it was sold and bought back.';
   if(sleeveFilter==='all'){
-    const all=matchedFills(null);
-    document.getElementById('fillCount').textContent=all.length+' of '+(D.trades||[]).length+' fills';
-    document.getElementById('fillsTitle').textContent='Fills — one blotter per sleeve';
-    document.getElementById('fillsHint').textContent='Not mashed. Each sleeve is its own tape. Click a chip above the chart to isolate one book.';
     host.innerHTML=sleeveNames.map(s=>{
-      const rows=matchedFills(s);
-      const st=(D.stats||[]).find(x=>x.sleeve===s) || {};
-      const r=st.realized||0, u=st.unrealized||0;
-      return `<h3 class="sleeve-head">${s} · ${rows.length} fills · realized ${money(r)} · unrealized ${money(u)}</h3>`+fillRowsHtml(rows);
+      const sub=rows.filter(r=>r.sleeve===s);
+      return sleevePairBlock(s, sub);
     }).join('');
+    raw.innerHTML=sleeveNames.map(s=>'<h3 class="sleeve-head">'+s+'</h3>'+fillRowsHtml(matchedFills(s))).join('');
     return;
   }
-  const rows=matchedFills(sleeveFilter);
-  document.getElementById('fillCount').textContent=rows.length+' of '+(D.trades||[]).length+' fills';
-  document.getElementById('fillsTitle').textContent='Fills — '+sleeveFilter;
-  document.getElementById('fillsHint').textContent='One row = one order in '+sleeveFilter+'. SELL realized P/L is closed. BUY shows “open” until sold. Newest first.';
-  host.innerHTML=fillRowsHtml(rows);
+  host.innerHTML=sleevePairBlock('', rows);
+  raw.innerHTML=fillRowsHtml(matchedFills(sleeveFilter));
 }
 
 function renderStats(){
@@ -318,7 +389,7 @@ function renderAll(){
   renderStats();
   renderPos();
 }
-document.getElementById('fillSide').onchange=renderFills;
+document.getElementById('pairMode').onchange=renderFills;
 document.getElementById('fillQ').oninput=renderFills;
 addEventListener('resize',draw);
 renderAll();
