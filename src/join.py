@@ -90,6 +90,8 @@ def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFram
 
         for fam in families:
             w = float(weights.get(fam, 1.0))
+            if w == 0:
+                continue
             raw = r.get(fam)
             if raw is None or (isinstance(raw, float) and pd.isna(raw)):
                 continue
@@ -117,16 +119,50 @@ def score_universe(mem: pd.DataFrame, weather: dict, rules: dict) -> pd.DataFram
                 total += sum(votes) / len(votes)
                 known += 1
 
-        # gates
+        # stock-intrinsic votes (earnings surprise, analyst) — no weather needed
+        for fam, spec in (rules.get("intrinsic_votes") or {}).items():
+            if not isinstance(spec, dict) or fam.startswith("_"):
+                continue
+            raw = r.get(fam)
+            if raw is None or (isinstance(raw, float) and pd.isna(raw)):
+                continue
+            v = str(raw).strip().lower()
+            if not v or v in ("nan", "none", "unknown"):
+                continue
+            w = float(spec.get("weight") or 0)
+            mapped = (spec.get("map") or {}).get(v)
+            if mapped is None:
+                continue
+            total += w * float(mapped)
+            known += 1
+            if mapped > 0:
+                bulls += 1
+                detail_parts.append(f"{fam}:{v}=bull")
+            elif mapped < 0:
+                bears += 1
+                detail_parts.append(f"{fam}:{v}=bear")
+
+        # gates — keys written by weather.build_gates
         gates = weather.get("gates") or {}
         short_v = str(r.get("short", "")).lower()
+        earn_v = str(r.get("earn", "")).lower()
+        ext_v = str(r.get("ext", "")).lower()
+        liq_v = str(r.get("liq", "")).lower()
         if gates.get("elevated_short_caution") and short_v in ("high", "extreme", "very_high"):
             flags.append("short_caution")
-        if gates.get("earnings_proximity") and str(r.get("earn", "")).lower() in ("this_week", "soon", "yes"):
+        if gates.get("earnings_proximity") and earn_v in ("this_week", "today"):
             flags.append("earn_gate")
+        if earn_v == "today" and gates.get("veto_earn_today"):
+            flags.append("earn_today")
+            veto = True
+        if liq_v == "low":
+            flags.append("liq_low")
+        if ext_v == "extreme" and gates.get("veto_extreme_risk_off"):
+            flags.append("ext_riskoff")
+            veto = True
 
-        # squeeze flag
-        if short_v in ("high", "extreme", "very_high") and risk == "risk_on":
+        # squeeze flag — weather risk is on/off/mixed, not "risk_on"
+        if short_v in ("high", "extreme", "very_high") and risk in ("on", "risk_on"):
             flags.append("squeeze_candidate")
 
         score_norm = total / known if known else 0.0
@@ -215,6 +251,14 @@ def main() -> None:
     date_str, mem_path, weather_path = resolve_inputs(args.date)
     mem = pd.read_csv(mem_path, low_memory=False)
     weather = _load_json(weather_path) or {}
+
+    # Drop funds / unlabeled size so join is a stock universe, not ETFs
+    if "size" in mem.columns:
+        before = len(mem)
+        mem = mem[mem["size"].astype(str).str.lower().isin(
+            ["micro", "small", "mid", "large", "mega"]
+        )].copy()
+        print(f"[join] drop unlabeled size: {before:,} → {len(mem):,}")
 
     ranked = score_universe(mem, weather, rules)
 

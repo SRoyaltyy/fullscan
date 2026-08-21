@@ -44,6 +44,19 @@ def _exists(*parts: str) -> bool:
     return _p(*parts).exists()
 
 
+def _weather_has_sectors(date: str) -> bool:
+    p = _p("01_daily", "weather", f"{date}_weather.json")
+    if not p.exists():
+        return False
+    try:
+        import json
+        d = json.loads(p.read_text(encoding="utf-8"))
+        secs = (d.get("signals") or {}).get("sectors") or {}
+        return len(secs) >= 5
+    except Exception:
+        return False
+
+
 def _status_for_day(date: str) -> list[dict]:
     """One row per logical workflow. done = artifact for THIS date exists."""
     sector_dir = _p("01_daily", "sectors", date)
@@ -71,7 +84,7 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Weather / regime",
             "key": "weather",
-            "done": _exists("01_daily", "weather", f"{date}_weather.json"),
+            "done": _weather_has_sectors(date),
             "artifact": f"01_daily/weather/{date}_weather.json",
             "required": True,
         },
@@ -105,6 +118,13 @@ def _status_for_day(date: str) -> list[dict]:
             "required": False,
         },
         {
+            "name": "News judge (LLM rank)",
+            "key": "news_judge",
+            "done": _exists("01_daily", "news", f"{date}_judge.md"),
+            "artifact": f"01_daily/news/{date}_judge.md",
+            "required": False,
+        },
+        {
             "name": "General market predict",
             "key": "general_predict",
             "done": _exists("01_daily", "general", f"{date}_predict.md"),
@@ -118,6 +138,20 @@ def _status_for_day(date: str) -> list[dict]:
             "partial": sector_partial,
             "detail": f"{sector_n}/11 sector predict files",
             "artifact": f"01_daily/sectors/{date}/*_predict.md",
+            "required": False,
+        },
+        {
+            "name": "Ticker checklist (rebound)",
+            "key": "ticker_checklist",
+            "done": _exists("data", "checklist", f"{date}_checklist.csv"),
+            "artifact": f"data/checklist/{date}_checklist.csv",
+            "required": False,
+        },
+        {
+            "name": "AB checklist + peer enrich",
+            "key": "ab",
+            "done": _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv"),
+            "artifact": f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
             "required": False,
         },
         {
@@ -213,61 +247,32 @@ def run(
     else:
         print("[all] skip Finviz + labeling (DONE for this day)")
 
-    # ---- Weather (MUST pass --date) ----
-    if need("weather"):
-        print("[all] → Weather / regime")
-        _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
-        if not _exists("01_daily", "weather", f"{date}_weather.json"):
-            raise SystemExit(
-                f"[all] FATAL: weather did not write 01_daily/weather/{date}_weather.json. "
-                f"Cannot join without this trading day's weather."
-            )
+    # ---- News (before LLM so judge/actions feed predict + book) ----
+    if need("news_parse"):
+        print("[all] → News parse")
+        _run(
+            [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "400", "--date", date],
+            check=False,
+        )
     else:
-        print("[all] skip Weather / regime (DONE for this day)")
-
-    # ---- Join (strict for this date) ----
-    if need("join"):
-        print("[all] → Join / match rank")
-        _run([sys.executable, "-m", "src.join", "--date", date], check=False)
-        if not _exists("data", "join", f"{date}_ranked.csv"):
-            raise SystemExit(
-                f"[all] FATAL: no join ranked file for {date}. "
-                "Yesterday's rank cannot substitute."
-            )
+        print("[all] skip News parse (DONE for this day)")
+    if need("news_actions"):
+        print("[all] → News actions (ticker edges)")
+        _run(
+            [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "400", "--date", date],
+            check=False,
+        )
+        if not _exists("01_daily", "news", f"{date}_actions.json"):
+            print("[all] WARN: news actions missing for", date, "— 1d book weaker")
     else:
-        print("[all] skip Join / match rank (DONE for this day)")
-
-    # ---- Peer RS (Finviz Compare-style) ----
-    if need("peer_rs"):
-        print("[all] → Peer relative strength")
-        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
-        if not _exists("data", "peers", f"{date}_peer_rs.csv"):
-            print("[all] WARN: peer_rs missing for", date, "— stock book runs without peer layer")
+        print("[all] skip News actions (DONE for this day)")
+    if need("news_judge") and not skip_llm and config.DEEPSEEK_API_KEY:
+        print("[all] → News judge")
+        _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
+    elif skip_llm:
+        print("[all] skip News judge (--skip-llm)")
     else:
-        print("[all] skip Peer relative strength (DONE for this day)")
-
-    # ---- News ----
-    if need("news_parse") or need("news_actions"):
-        if need("news_parse"):
-            print("[all] → News parse")
-            _run(
-                [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "300", "--date", date],
-                check=False,
-            )
-        else:
-            print("[all] skip News parse (DONE for this day)")
-        if need("news_actions"):
-            print("[all] → News actions (ticker edges)")
-            _run(
-                [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "300", "--date", date],
-                check=False,
-            )
-            if not _exists("01_daily", "news", f"{date}_actions.json"):
-                print("[all] WARN: news actions missing for", date, "— 1d book weaker")
-        else:
-            print("[all] skip News actions (DONE for this day)")
-    else:
-        print("[all] skip News parse + actions (DONE for this day)")
+        print("[all] skip News judge (DONE or no key)")
 
     # ---- General predict ----
     if not skip_llm and need("general_predict"):
@@ -292,6 +297,47 @@ def run(
         print("[all] skip Per-sector predict (--skip-llm)")
     else:
         print("[all] skip Per-sector predict (DONE for this day — 11/11)")
+
+    # ---- Weather AFTER predicts so sector stances exist ----
+    print("[all] → Weather / regime (after same-day predicts)")
+    _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
+    if not _exists("01_daily", "weather", f"{date}_weather.json"):
+        raise SystemExit(
+            f"[all] FATAL: weather did not write 01_daily/weather/{date}_weather.json."
+        )
+
+    # ---- Join (strict for this date, after weather) ----
+    print("[all] → Join / match rank")
+    _run([sys.executable, "-m", "src.join", "--date", date], check=False)
+    if not _exists("data", "join", f"{date}_ranked.csv"):
+        raise SystemExit(f"[all] FATAL: no join ranked file for {date}.")
+
+    # ---- Peer RS ----
+    if need("peer_rs"):
+        print("[all] → Peer relative strength")
+        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
+        if not _exists("data", "peers", f"{date}_peer_rs.csv"):
+            print("[all] WARN: peer_rs missing for", date)
+    else:
+        print("[all] skip Peer relative strength (DONE for this day)")
+
+    # ---- Ticker checklist (today's rebound) ----
+    if need("ticker_checklist"):
+        print("[all] → Ticker checklist")
+        _run([sys.executable, "-m", "src.ticker_checklist", "--date", date], check=False)
+    else:
+        print("[all] skip Ticker checklist (DONE for this day)")
+
+    # ---- AB + enrich (stock-specific rank) ----
+    if need("ab"):
+        print("[all] → AB checklist (one day, liquid universe)")
+        _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
+        print("[all] → AB enrich (peers + industry + sector)")
+        _run([sys.executable, "-m", "src.ab_enrich", "--date", date], check=False)
+        if not _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv"):
+            print("[all] WARN: AB enrich missing — book ranks without AB layer")
+    else:
+        print("[all] skip AB checklist + enrich (DONE for this day)")
 
     # ---- Stock book always ----
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")

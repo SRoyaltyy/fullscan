@@ -151,6 +151,8 @@ def run(date=None, tickers=None):
     print(f"[checklist] single day {date}: {len(names):,} names")
     out = _score_universe(date, names, finviz, store, close_panel, corr)
     _write_day_outputs(date, out)
+    if not out.empty:
+        _append_history([out])
     return OUT_DIR / f"{date}_checklist.csv"
 
 

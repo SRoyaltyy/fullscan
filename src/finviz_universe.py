@@ -63,20 +63,16 @@ def tickers_for_bucket(
     min_mcap: float | None = 1000,
     prefer_us: bool = True,
 ) -> list[str]:
-    """Preferred liquid list first; fall back to industry (US-biased)."""
+    """Preferred liquid names mixed with industry scan (not preferred-only)."""
     u = universe if universe is not None else load_universe()
     preferred = list(BUCKET_PREFERRED.get(bucket, ()))
+    picked: list[str] = []
     if not u.empty and preferred:
         have = set(u["ticker"])
-        hit = [t for t in preferred if t in have]
-        if hit:
-            return hit[:max_names]
-        # preferred not in this snapshot — still return preferred as soft list
-        if preferred:
-            return preferred[:max_names]
+        picked = [t for t in preferred if t in have][: max(2, max_names // 3)]
 
     if u.empty:
-        return preferred[:max_names]
+        return (picked or preferred)[:max_names]
 
     industries = BUCKET_TO_INDUSTRIES.get(bucket, ())
     if not industries:
@@ -104,10 +100,13 @@ def tickers_for_bucket(
     cohorts = [sub[mc >= 10000], sub[(mc >= 1000) & (mc < 10000)],
                sub[(mc >= 300) & (mc < 1000)]]
     per = max(1, max_names // len(cohorts))
-    picked: list[str] = []
+    seen = set(picked)
     for c in cohorts:
-        picked += c["ticker"].head(per).tolist()
-    if len(picked) < max_names:  # backfill from the remaining pool, biggest first
-        rest = sub[~sub["ticker"].isin(picked)]["ticker"].tolist()
+        for t in c["ticker"].head(per).tolist():
+            if t not in seen:
+                picked.append(t)
+                seen.add(t)
+    if len(picked) < max_names:
+        rest = sub[~sub["ticker"].isin(seen)]["ticker"].tolist()
         picked += rest[: max_names - len(picked)]
     return picked[:max_names]

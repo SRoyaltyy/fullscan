@@ -35,13 +35,13 @@ jobs:
         run: python -m collectors.finviz_financials
 
       - name: Label the universe (Step A)
-        run: python -m src.segments
+        run: python -m src.segments --date "$(TZ=America/New_York date +%F)"
 
       - name: Score the weather (Step B)
-        run: python -m src.weather
+        run: python -m src.weather --date "$(TZ=America/New_York date +%F)"
 
       - name: Match stocks to weather (Step C)
-        run: python -m src.join
+        run: python -m src.join --date "$(TZ=America/New_York date +%F)"
 
       - name: Commit outputs
         run: |

@@ -143,7 +143,7 @@ def _col(df: pd.DataFrame, name: str) -> pd.Series:
     return df.get(name, pd.Series(np.nan, index=df.index))
 
 
-def assign_membership(df: pd.DataFrame, registry: dict) -> pd.DataFrame:
+def assign_membership(df: pd.DataFrame, registry: dict, asof_date: str | None = None) -> pd.DataFrame:
     fam = registry["families"]
     m = pd.DataFrame(index=df.index)
     m["Ticker"] = df["Ticker"]
@@ -228,7 +228,11 @@ def assign_membership(df: pd.DataFrame, registry: dict) -> pd.DataFrame:
     # --- earnings proximity (past dates are NOT "today"; see earnsurp) ---
     ed = pd.to_datetime(df.get("Earnings Date"), errors="coerce",
                         format="mixed")
-    today = pd.Timestamp.now(tz="America/New_York").normalize().tz_localize(None)
+    today = pd.Timestamp(asof_date).normalize() if asof_date else (
+        pd.Timestamp.now(tz="America/New_York").normalize().tz_localize(None)
+    )
+    if getattr(today, "tzinfo", None) is not None:
+        today = today.tz_localize(None)
     delta = (ed.dt.normalize() - today).dt.days
     earn = np.where(delta < -1, "past",
                     np.where(delta <= 0, "today",
@@ -391,7 +395,13 @@ def write_report(date_str: str, mem: pd.DataFrame,
 
 def run(csv_path: Path, date_str: str, registry: dict) -> None:
     df = load_export(csv_path)
-    mem = assign_membership(df, registry)
+    if "Market Cap" in df.columns:
+        mcap = pd.to_numeric(df["Market Cap"], errors="coerce")
+        n_drop = int(mcap.isna().sum())
+        df = df.loc[mcap.notna()].copy()
+        if n_drop:
+            print(f"[segments] drop {n_drop:,} rows with no Market Cap (ETFs/funds)")
+    mem = assign_membership(df, registry, asof_date=date_str)
     stats = segment_stats(df, mem)
 
     UNIVERSE_DIR.mkdir(parents=True, exist_ok=True)

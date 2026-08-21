@@ -21,6 +21,8 @@ on:
     - cron: "50 10 * * 1-5"
     - cron: "50 11 * * 1-5"
     - cron: "50 12 * * 1-5"
+    # after Stock Book ALL (17:00 UTC) — catch a missed book
+    - cron: "15 18 * * 1-5"
   workflow_dispatch:
     inputs:
       force:
@@ -59,8 +61,10 @@ jobs:
           DISPATCH_INPUTS[events_daily.yml]="{}"
           DISPATCH_INPUTS[news_parse.yml]="{}"
           DISPATCH_INPUTS[news_judge.yml]="{}"
+          DISPATCH_INPUTS[news_actions.yml]="{}"
           DISPATCH_INPUTS[daily_pipeline.yml]='{"stage":"predict"}'
           DISPATCH_INPUTS[sector_daily.yml]='{"stage":"predict"}'
+          DISPATCH_INPUTS[stock_book_all.yml]="{}"
 
           for WF in "${!DISPATCH_INPUTS[@]}"; do
             echo ""

@@ -91,6 +91,8 @@ jobs:
 
       - name: Run horizon grader (multi-timeframe T+h grades)
         if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all'
+        env:
+          DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.horizon_grade ${DATE:+--date "$DATE"}
 
       - name: Wait 5 minutes before reflection (if outcome/reflect is planned)

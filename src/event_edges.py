@@ -302,7 +302,8 @@ EVENT_FAMILIES: list[EventFamily] = [
         patterns=(
             r"data\s*center.{0,40}(power|electric|grid|pollut)",
             r"(power|electric).{0,40}data\s*center",
-            r"AI.{0,20}(power|electricity|energy\s+demand)",
+            r"\bAI\b.{0,20}(power|electricity|energy\s+demand)",
+            r"\bA\.?I\.?\b.{0,20}(power|electricity|energy\s+demand)",
         ),
         primary=(
             Edge("utilities_power", "buy", 0.9, "load growth / power scarcity narrative"),

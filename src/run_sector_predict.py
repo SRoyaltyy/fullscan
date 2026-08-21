@@ -18,6 +18,12 @@ from . import compute_scores, compute_sector_scores, config, deepseek_client, fe
 from .sector_engine import etf_relative_snapshot, search_query_bundle
 from .sector_memory import prediction_context, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, amp_damp_table, taxonomy_list, validate
+from .run_news_judge import inject_block as news_judge_block
+try:
+    from .finviz_digest import inject_block as finviz_digest_block
+except Exception:
+    def finviz_digest_block(*_a, **_k):
+        return ""
 
 
 def _slug(sector: str) -> str:
@@ -51,18 +57,24 @@ def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
     rubric = _load_system_prompt(sector)
     etf_ctx = etf_relative_snapshot(sector)
     seeds = search_query_bundle(sector, limit=16)
+    nj = news_judge_block(date_str) or news_judge_block()
+    fv = finviz_digest_block(date_str) or finviz_digest_block()
 
     user_msg = (
         f"TODAY: {date_str} (America/New_York)\n"
         f"SECTOR UNDER ANALYSIS (ONLY THIS ONE): {sector}\n"
         f"ETF TO GRADE LATER: {SECTOR_ETFS.get(sector)}\n\n"
         f"{prediction_context(sector)}\n\n"
+        f"{nj}"
+        f"{fv}"
         f"{ch1_md}\n\n"
         f"=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\n"
         f"{etf_ctx or '(unavailable)'}\n\n"
         "Suggested web_search seeds (expand; cover all Channel 2 categories):\n"
         + "\n".join(f"- {q}" for q in seeds)
-        + "\n\nExecute the shared method + THIS sector layer now. "
+        + "\n\nWhen NEWS JUDGE / FINVIZ DIGEST is present, treat ranked "
+          "MACRO/SECTOR lines that mention THIS sector as primary S1 input.\n"
+          "Execute the shared method + THIS sector layer now. "
           "Specialize S1 to the spine factors. "
           "MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block. "
           "In the SECTOR_SCORES block, also include these four "

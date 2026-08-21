@@ -23,6 +23,7 @@ OUT_DIR = "01_daily/news"
 _COMPILED = [
     (fam, [re.compile(p, re.I) for p in fam.patterns]) for fam in EVENT_FAMILIES
 ]
+_TITLE_TICKER = re.compile(r"\(([A-Z]{1,5})\)")
 
 
 def _load_size_map() -> dict[str, str]:
@@ -44,6 +45,23 @@ def _load_size_map() -> dict[str, str]:
 
 def match_families(title: str) -> list[EventFamily]:
     return [fam for fam, regs in _COMPILED if any(r.search(title or "") for r in regs)]
+
+
+def _tickers_in_titles(titles: list[str], universe) -> list[str]:
+    """Company tickers written as (EOG) / (ADBE) in the headline, if in universe."""
+    have = set()
+    if universe is not None and getattr(universe, "empty", True) is False:
+        col = "ticker" if "ticker" in universe.columns else "Ticker"
+        have = set(universe[col].astype(str).str.upper())
+    out: list[str] = []
+    for title in titles:
+        for m in _TITLE_TICKER.findall(title or ""):
+            t = m.upper()
+            if have and t not in have:
+                continue
+            if t not in out:
+                out.append(t)
+    return out
 
 
 def _fed_side(side: str, polarity: str) -> str:
@@ -162,8 +180,12 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
             tickers = []
             if not soft and fw.keep in ("keep", "conditional"):
                 tickers = tickers_for_bucket(
-                    edge.bucket, universe=universe, max_names=6, min_mcap=300,
+                    edge.bucket, universe=universe, max_names=8, min_mcap=300,
                 )
+                for t in _tickers_in_titles(titles, universe):
+                    if t not in tickers:
+                        tickers.append(t)
+                tickers = tickers[:10]
 
             edge_actions.append({
                 "event": key,

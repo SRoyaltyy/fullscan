@@ -1,5 +1,9 @@
 name: Stock Book (unified)
 
+# Do NOT schedule this. The thin `python -m src.stock_book` job used to
+# race Stock Book ALL (17:00 UTC) and overwrite a complete book with a
+# list that skipped news/AB/peers/predict. Use Stock Book ALL instead.
+
 on:
   workflow_dispatch:
     inputs:
@@ -11,8 +15,6 @@ on:
         description: "Top N buys/sells per horizon"
         required: false
         default: "25"
-  schedule:
-    - cron: "45 16 * * 1-5"
 
 permissions:
   contents: write

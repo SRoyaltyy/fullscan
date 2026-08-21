@@ -146,12 +146,33 @@ def derive_signals(date_str: str, th: dict) -> tuple[dict, list[str]]:
         gaps.append("general predict factor scoreboard")
 
     ys = sig["yields_score"]
-    sig["yields"] = ("rising" if ys is not None and ys < 0
-                     else "falling" if ys is not None and ys > 0
-                     else "flat" if ys is not None else "unknown")
-    do = sig["dollar_oil_score"]
-    sig["dollar"] = ("strong" if do is not None and do <= th["dollar_strong_score"]
-                     else "soft" if do is not None else "unknown")
+    # Prefer FRED DGS10 1d/1w over the LLM "Bond yields" factor (which is
+    # already an equity-impact score, not a yield delta).
+    fred = ch1.get("fred") or {}
+    dgs10 = fred.get("DGS10") or {}
+    d10 = dgs10.get("delta_1d")
+    if d10 is None:
+        d10 = dgs10.get("delta_1w")
+    if d10 is not None:
+        sig["yields"] = ("rising" if d10 > 0.02 else "falling" if d10 < -0.02 else "flat")
+        sig["yields_source"] = "fred_dgs10"
+        sig["dgs10_delta_1d"] = dgs10.get("delta_1d")
+        sig["dgs10_current"] = dgs10.get("current")
+    else:
+        sig["yields"] = ("rising" if ys is not None and ys < 0
+                         else "falling" if ys is not None and ys > 0
+                         else "flat" if ys is not None else "unknown")
+        sig["yields_source"] = "llm_factor_fallback"
+    dxy = ((ch1.get("commodities_fx") or {}).get("DXY") or {})
+    dxy_1d = dxy.get("pct_1d")
+    if dxy_1d is not None:
+        sig["dollar"] = ("strong" if dxy_1d >= 0.15 else "soft" if dxy_1d <= -0.15 else "flat")
+        sig["dollar_source"] = "dxy"
+        sig["dxy_pct_1d"] = dxy_1d
+    else:
+        # Do NOT infer dollar from the mashed "Oil & dollar" LLM factor.
+        sig["dollar"] = "unknown"
+        sig["dollar_source"] = "missing_dxy"
 
     # -- channel 1 --
     vix_ratio = (ch1.get("vix") or {}).get("ratio")
@@ -255,12 +276,16 @@ def build_stances(sig: dict, th: dict) -> dict[str, dict[str, dict]]:
         out["size"].update({v: _s("unknown", "low", "no general predict") for v in
                             ("micro", "small", "mid", "large", "mega")})
 
-    # -- index mirrors size/style --
-    out["index"]["rut"] = out["size"].get("small", _s("unknown", "low", ""))
-    out["index"]["sp500"] = out["size"].get("mega", _s("unknown", "low", ""))
-    out["index"]["ndx"] = out["size"].get("mega", _s("unknown", "low", ""))
-    out["index"]["djia"] = out["size"].get("large", _s("unknown", "low", ""))
-    out["index"]["none"] = out["size"].get("micro", _s("unknown", "low", ""))
+    # -- index: independent of size (do not clone — that double-counted in join)
+    if risk_known:
+        out["index"]["sp500"] = out["size"].get("mega", _s("neutral", "low", "mirrors mega"))
+        out["index"]["ndx"] = out["size"].get("mega", _s("neutral", "low", "mirrors mega"))
+        out["index"]["djia"] = out["size"].get("large", _s("neutral", "low", "mirrors large"))
+        out["index"]["rut"] = out["size"].get("small", _s("neutral", "low", "mirrors small"))
+        out["index"]["none"] = _s("neutral", "low", "non-index: not a small-cap proxy")
+    else:
+        out["index"].update({v: _s("unknown", "low", "no general predict")
+                             for v in ("sp500", "ndx", "djia", "rut", "none")})
 
     # -- beta --
     if risk_known or vix != "unknown":
@@ -397,10 +422,11 @@ def build_stances(sig: dict, th: dict) -> dict[str, dict[str, dict]]:
                                  else "high-zone names unwind in risk-off" if risk == "off" else "—")
         out["range"]["low"] = _s("neutral", "low", "—")
         out["range"]["mid"] = _s("neutral", "low", "—")
+        out["range"]["high"] = out["range"].get("mid", _s("neutral", "low", "upper-range, not breakout"))
     else:
         for f, vs in (("mom", ("uptrend", "downtrend", "mixed")),
                       ("ext", ("extreme", "extended", "washed", "neutral")),
-                      ("range", ("deep_low", "low", "mid", "top", "breakout"))):
+                      ("range", ("deep_low", "low", "mid", "high", "top", "breakout"))):
             out[f].update({v: _s("unknown", "low", "no general predict") for v in vs})
 
     # -- geo: only scored when the event scanner flags a region --
@@ -416,13 +442,20 @@ def build_stances(sig: dict, th: dict) -> dict[str, dict[str, dict]]:
     return out
 
 
-def build_gates() -> dict[str, str]:
+def build_gates(sig: dict | None = None) -> dict:
+    """Keys join.py actually reads, plus human notes."""
+    sig = sig or {}
+    risk = sig.get("risk")
     return {
         "earn:today": "reports today — event risk, not a segment bet; size down or skip",
         "earn:this_week": "reports within a week — flag, expect gap moves",
         "liq:low": "thin dollar volume — gaps on news, hard to exit; down-rank",
         "rvol:hot": "abnormal participation — moves are 'real' but confirm direction first",
         "ext:extreme + risk-off": "parabolic names into a hostile tape = veto longs",
+        "elevated_short_caution": risk == "off",
+        "earnings_proximity": True,
+        "veto_earn_today": True,
+        "veto_extreme_risk_off": risk == "off",
     }
 
 
@@ -520,7 +553,7 @@ def main() -> None:
     th = rules.get("thresholds", {})
     sig, gaps = derive_signals(date_str, th)
     stances = build_stances(sig, th)
-    gates = build_gates()
+    gates = build_gates(sig)
     js, md = write_outputs(date_str, sig, stances, gates, gaps)
     n_fav = sum(1 for f in stances.values() for s in f.values()
                 if s["stance"] == "favorable")
