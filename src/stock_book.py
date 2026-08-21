@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -246,6 +247,129 @@ SIZE_BUCKETS = {
 }
 
 
+def _digest_polarity(text: str) -> float:
+    t = (text or "").lower()
+    pos = len(re.findall(
+        r"\b(beat|beats|upgrade|upgrades|raises|surge|surges|record|climbs|guides? above|buyback)\b", t))
+    neg = len(re.findall(
+        r"\b(miss|misses|downgrade|downgrades|fall|falls|plunge|selloff|cut|cuts|lowers|bankruptcy)\b", t))
+    if pos == neg:
+        return 0.0
+    return 1.6 if pos > neg else -1.6
+
+
+def _load_finviz_digest(date: str) -> dict[str, dict]:
+    """Per-ticker Daily Digest from Elite export — company news the judge may have skipped."""
+    path = NEWS_DIR / f"{date}_finviz_digest.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out: dict[str, dict] = {}
+    rows = []
+    for key in ("top_signal", "all_ticker_digests_sample"):
+        rows.extend(data.get(key) or [])
+    for sec_rows in (data.get("by_sector") or {}).values():
+        rows.extend(sec_rows or [])
+    seen = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        t = str(row.get("ticker") or "").strip().upper()
+        if not t or t in seen or t in ("SPY", "QQQ", "DIA", "IWM"):
+            continue
+        if row.get("is_dividend"):
+            continue
+        digest = row.get("digest") or row.get("news_title") or ""
+        pol = _digest_polarity(digest)
+        if not pol:
+            continue
+        seen.add(t)
+        out[t] = {
+            "net": pol,
+            "events": [{"event": "finviz_digest", "digest": str(digest)[:160]}],
+            "source": "digest",
+        }
+    if out:
+        print(f"[stock-book] finviz digest elevated {len(out)} tickers")
+    return out
+
+
+def _merge_news(*books: dict[str, dict]) -> dict[str, dict]:
+    out: dict[str, dict] = {}
+    for book in books:
+        for t, rec in (book or {}).items():
+            cur = out.setdefault(t, {"ticker": t, "net": 0.0, "events": []})
+            cur["net"] = float(cur.get("net") or 0) + float(rec.get("net") or 0)
+            for e in rec.get("events") or []:
+                cur.setdefault("events", []).append(e)
+    return out
+
+
+def _load_events_sector_tilt(date: str) -> dict[str, float]:
+    path = ROOT / "01_daily" / "events" / "latest.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    sd = data.get("scan_date")
+    if sd:
+        try:
+            delta = abs((datetime.fromisoformat(sd) - datetime.fromisoformat(date)).days)
+        except ValueError:
+            delta = 99
+        if delta > 3:
+            return {}
+    tilt: dict[str, float] = {}
+    for e in data.get("events") or []:
+        impact = float(e.get("impact") or 0)
+        if impact < 3:
+            continue
+        direc = str(e.get("expected_direction") or "").lower()
+        sign = 1.0 if direc.startswith(("bull", "pos")) else -1.0 if direc.startswith(("bear", "neg")) else 0.0
+        if not sign:
+            continue
+        for sec in e.get("sectors") or []:
+            if str(sec).upper() in ("BROAD", "SPX", "ALL"):
+                continue
+            tilt[str(sec)] = tilt.get(str(sec), 0.0) + sign * min(impact, 5) * 0.08
+    return tilt
+
+
+def _inputs_status(date: str) -> list[dict]:
+    def exists(*parts):
+        return ROOT.joinpath(*parts).exists()
+
+    rows = [
+        ("Finviz Elite export", exists("data", "exports", f"finviz_{date}.csv"), "liquidity + labels + AB proxy + digest"),
+        ("Labels / membership", exists("data", "universe", f"{date}_membership.csv"), "join + mid_opp + earnings/range"),
+        ("Weather (tape + FRED/DXY/VIX)", exists("01_daily", "weather", f"{date}_weather.json"), "join × weather"),
+        ("Channel 1 raw", exists("01_daily", "_channel1", f"{date}_predict.json"), "via weather"),
+        ("Join ranked universe", exists("data", "join", f"{date}_ranked.csv"), "s_join"),
+        ("News parse + actions", exists("01_daily", "news", f"{date}_actions.json"), "s_news"),
+        ("News judge", exists("01_daily", "news", f"{date}_judge.json") or exists("01_daily", "news", f"{date}_judge.md"), "s_news ticker tilts"),
+        ("Finviz daily digest", exists("01_daily", "news", f"{date}_finviz_digest.json"), "s_news company headlines"),
+        ("General predict", exists("01_daily", "general", f"{date}_predict.md"), "s_general × beta"),
+        ("Sector LLM essays", exists("01_daily", "sectors", date, "_board.json"), "s_sector (0 if essays missing)"),
+        ("AB checklist + P01–P04", exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv"), "s_ab"),
+        ("Peer RS", exists("data", "peers", f"{date}_peer_rs.csv"), "s_peer"),
+        ("Ticker checklist (rebound)",
+         exists("data", "checklist", f"{date}_checklist.csv")
+         or any((ROOT / "data" / "checklist").glob("*_checklist.csv")),
+         "rebound_floor (dated file, else latest — can be stale)"),
+        ("Event scanner", exists("01_daily", "events", "latest.json"), "sector tilt + weather"),
+        ("Catalyst overlays", False, "not in ranker — separate chart workflow"),
+        ("Insider / politician flow", False, "no daily file in repo"),
+        ("Industry predict", exists("01_daily", "industry"), "not scored (ad-hoc only)"),
+        ("Learnings / mutable policy", exists("01_daily", f"{date}_learnings.md"), "next predict prompt, not a ticker score"),
+    ]
+    return [{"name": n, "found": bool(f), "used_as": u} for n, f, u in rows]
+
+
 def _load_news_actions(date: str) -> dict[str, dict]:
     candidates = [NEWS_DIR / f"{date}_actions.json"]
     data = None
@@ -404,7 +528,10 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             join = join.merge(memb[["Ticker"] + extra], on="Ticker", how="left")
 
     weather = _load_weather(date)
-    news = _load_news_actions(date)
+    news = _merge_news(
+        _load_news_actions(date),
+        _load_finviz_digest(date),
+    )
     try:
         from .judge_apply import load_or_parse
         jt = (load_or_parse(date).get("tickers") or {})
@@ -508,6 +635,14 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
 
     join["s_sector"] = join["s_sector_1d"]
     join["s_general"] = join["s_general_1d"]
+
+    ev_tilt = _load_events_sector_tilt(date)
+    if ev_tilt and "sector" in join.columns:
+        extra = join["sector"].map(ev_tilt).fillna(0.0)
+        for h in HORIZONS:
+            join[f"s_sector_{h}"] = join[f"s_sector_{h}"] + extra
+        join["s_sector"] = join["s_sector_1d"]
+        print(f"[stock-book] event-scanner sector tilt on {len(ev_tilt)} sectors")
     gen_bias = float(_bias_for(gen_run, "1d") * gen_gate)
     sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
                    for sec, r in sector_runs.items()}
@@ -530,6 +665,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "weights": WEIGHTS,
         "horizons": list(HORIZONS),
         "top_n": top_n,
+        "inputs": _inputs_status(date),
+        "n_news_after_digest": int((join["s_news"].abs() > 0).sum()) if "s_news" in join.columns else 0,
+        "event_sector_tilt": ev_tilt,
     }
 
     fresh = (join["s_news"].abs() > 0.15) | (join["s_ab"] > 0.20) | (join["s_peer"] > 0.20)
@@ -839,8 +977,21 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         f"- AB coverage: {meta.get('n_ab', 0)} names · peer RS: {meta.get('n_peer', 0)}",
         f"- Universe after liquidity: {meta['n_universe']}",
         f"- BUY window: ${meta.get('min_market_cap_m', 80):.0f}M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega",
+        f"- News names after digest+judge: {meta.get('n_news_after_digest', meta.get('n_news_tickers'))}",
         "",
-        "### Sector LLM bias (1d) — 0 means that essay was not run today",
+        "## Inputs this run — every resource",
+        "",
+        "If a row says **missing**, that layer scored 0 today. If it says **found**, it moved the rank.",
+        "",
+        "| Resource | This run | Where it lands in the score |",
+        "|----------|----------|-----------------------------|",
+    ]
+    for row in meta.get("inputs") or []:
+        mark = "found" if row.get("found") else "missing / not in ranker"
+        L.append(f"| {row['name']} | **{mark}** | {row['used_as']} |")
+    L += [
+        "",
+        "### Sector LLM bias (1d) — 0 / empty means that essay was not run today",
         "",
         "| Sector | bias |",
         "|--------|------|",
