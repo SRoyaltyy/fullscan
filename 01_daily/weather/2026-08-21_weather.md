@@ -5,9 +5,9 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict up score +3.2, conf 0.55)
-- **Yields:** falling (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.83 via vix/vix3m) spot 15.36
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.26
-- **High-impact events:** 2 bullish vs 10 bearish | China: bull
+- **Yields:** falling (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** falling (ratio 0.82 via vix/vix3m) spot 15.26
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.17
+- **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** risk tilted off by news_judge
 
 ## Sectors
@@ -111,7 +111,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
 | geo:US | ⛅ neutral | low | mirrors general risk-mixed [general predict] |
-| geo:ADR-China | 🌤️ favorable | medium | high-impact China event(s) lean bull [event scanner] |
+| geo:ADR-China | ⛅ neutral | low | no high-impact China event flagged |
 
 ## Gates (always-on cautions)
 

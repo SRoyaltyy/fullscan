@@ -1,6 +1,6 @@
 {
  "date": "2026-08-21",
- "generated_at": "2026-08-21T11:17:06.639267-04:00",
+ "generated_at": "2026-08-21T11:50:44.482987-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,17 +21,17 @@
   "yields_source": "llm_factor_fallback",
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.03,
-  "vix_ratio": 0.826,
-  "vix_spot": 15.36,
-  "vix_delta_1d": -0.65,
+  "dxy_pct_1d": -0.05,
+  "vix_ratio": 0.822,
+  "vix_spot": 15.26,
+  "vix_delta_1d": -0.75,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -1.83,
-  "oil": "falling",
+  "oil_pct_1d": -0.95,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.261,
+  "regime_corr": -0.169,
   "sectors": {
    "Basic Materials": {
     "score": 13.2,
@@ -101,21 +101,21 @@
    }
   },
   "sector_tape": {
-   "Basic Materials": 1.7650000000000001,
-   "Communication Services": -1.435,
-   "Consumer Cyclical": -1.28,
-   "Consumer Defensive": -0.02,
-   "Energy": 1.5750000000000002,
-   "Financial": -0.38,
-   "Healthcare": 1.08,
-   "Industrials": -3.165,
-   "Real Estate": -0.26,
-   "Technology": -3.54,
-   "Utilities": -2.33
+   "Basic Materials": 2.165,
+   "Communication Services": -1.4449999999999998,
+   "Consumer Cyclical": -1.29,
+   "Consumer Defensive": -0.005,
+   "Energy": 2.05,
+   "Financial": -0.34,
+   "Healthcare": 1.3,
+   "Industrials": -3.02,
+   "Real Estate": -0.11,
+   "Technology": -3.15,
+   "Utilities": -2.22
   },
-  "events_bull": 2,
-  "events_bear": 10,
-  "china_event_dir": "bull",
+  "events_bull": 0,
+  "events_bear": 0,
+  "china_event_dir": null,
   "risk_source": "news_judge"
  },
  "stances": {
@@ -237,9 +237,9 @@
     "why": "mirrors general risk-mixed [general predict]"
    },
    "ADR-China": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "high-impact China event(s) lean bull [event scanner]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no high-impact China event flagged"
    }
   },
   "beta": {
