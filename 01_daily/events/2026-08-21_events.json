@@ -1,15 +1,758 @@
 {
   "scan_date": "2026-08-21",
-  "events": [],
+  "events": [
+    {
+      "title": "US-Iran war — Day 175; 'crushing economic operation' announced",
+      "category": "geopolitical",
+      "timing": "today",
+      "date_or_window": "2026-08-21",
+      "regions": [
+        "US",
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Treasury Secretary Bessent announced 'the toughest sanctions in history' on Iran, with details on Aug 24; Brent near $95/bbl, WTI ~$88. Oil is the single biggest macro variable, and escalation threatens supply and inflation.",
+      "what_to_watch": "Monday's Bessent press conference and any Iranian retaliation.",
+      "status": "carried",
+      "sources": [
+        "Reuters",
+        "CNN",
+        "GlobalSecurity"
+      ]
+    },
+    {
+      "title": "China unveils new consumption stimulus measures",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-08-21",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "Consumer Cyclical",
+        "BROAD"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "NDRC and Finance Ministry announced credit subsidies for cars and home renovations, plus county-level consumption programs, effective Aug 1, to counter weak July data (GDP 4.7% H1).",
+      "what_to_watch": "Whether measures are big enough to lift the slowing economy.",
+      "status": "new",
+      "sources": [
+        "SCMP",
+        "Reuters",
+        "Xinhua"
+      ]
+    },
+    {
+      "title": "US PCE inflation (July) release",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Fed's preferred gauge; consensus expects core PCE ~2.9-3.0% YoY given the energy shock, shaping whether the Fed hikes or holds at Sept 16 FOMC.",
+      "what_to_watch": "Core PCE vs consensus and any upward revision.",
+      "status": "new",
+      "sources": [
+        "financecalendar.com",
+        "BEA"
+      ]
+    },
+    {
+      "title": "US Q2 GDP second estimate",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Advance showed 1.5% annualized (down from 2.1% Q1), confirming a growth slowdown amid the energy shock.",
+      "what_to_watch": "Revision direction.",
+      "status": "new",
+      "sources": [
+        "BEA",
+        "financecalendar.com"
+      ]
+    },
+    {
+      "title": "Jackson Hole Economic Symposium",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-27 to 2026-08-29",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Fed Chair Kevin Warsh's first keynote as chair on Aug 28; markets are pricing a possible 25bp HIKE at Sept FOMC.",
+      "what_to_watch": "Any hawkish signal on rates or inflation.",
+      "status": "new",
+      "sources": [
+        "Kansas City Fed",
+        "regardsofwallstreet.com"
+      ]
+    },
+    {
+      "title": "US jobs report (August)",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Final labor reading before Sept FOMC; July showed -23,000 payrolls (first negative print of cycle) vs +80k consensus, signaling stagflation risk.",
+      "what_to_watch": "Whether August confirms the slowdown.",
+      "status": "new",
+      "sources": [
+        "BLS",
+        "financecalendar.com"
+      ]
+    },
+    {
+      "title": "FOMC meeting",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-15 to 2026-09-16",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 5,
+      "confidence": "medium",
+      "why_it_matters": "Markets now pricing a ~25bp HIKE (not cut) after July's 9-3 hold at 3.50-3.75%; Warsh's Fed has shifted hawkish due to energy-driven inflation.",
+      "what_to_watch": "SEP projections and Warsh's press conference.",
+      "status": "new",
+      "sources": [
+        "Fed",
+        "Forbes",
+        "Chase"
+      ]
+    },
+    {
+      "title": "ECB meeting",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "Europe"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "ECB raised rates 25bp in June citing Middle East war inflation; a September move is 'almost fully priced in.'",
+      "what_to_watch": "Whether ECB hikes again and messaging on pace.",
+      "status": "new",
+      "sources": [
+        "ECB",
+        "TradingEconomics"
+      ]
+    },
+    {
+      "title": "Bank of Japan meeting",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-17 to 2026-09-18",
+      "regions": [
+        "Japan"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Sources say BoJ set to hike as soon as September, possibly more aggressively than the current ~2x/year pace; rates currently 0.75%.",
+      "what_to_watch": "BoJ's decision and any guidance on faster tightening.",
+      "status": "new",
+      "sources": [
+        "Reuters",
+        "financecalendar.com"
+      ]
+    },
+    {
+      "title": "China PMI (August)",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-31 to 2026-09-01",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "July official PMI fell to 50.9 (below 51.5 consensus); confirms China slowdown and pressure for more stimulus.",
+      "what_to_watch": "Whether PMI stays above 50.",
+      "status": "new",
+      "sources": [
+        "TradingEconomics",
+        "TrendForce"
+      ]
+    },
+    {
+      "title": "Nvidia Q2 FY2027 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology",
+        "BROAD"
+      ],
+      "expected_direction": "bullish",
+      "impact": 5,
+      "confidence": "medium",
+      "why_it_matters": "The AI bellwether; revenue guidance ~$91B. A miss or weak guidance could hit the entire tech complex.",
+      "what_to_watch": "Data center revenue, Rubin chip ramp, guidance.",
+      "status": "new",
+      "sources": [
+        "MarketBeat",
+        "financecalendar.com"
+      ]
+    },
+    {
+      "title": "Salesforce earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-24 to 2026-08-28",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Cloud/software bellwether.",
+      "what_to_watch": "AI monetization and guidance.",
+      "status": "new",
+      "sources": [
+        "MarketBeat",
+        "Kiplinger"
+      ]
+    },
+    {
+      "title": "PDD Holdings, XPeng, Tuya earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-24",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "Consumer Cyclical",
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "China consumption and EV demand signals.",
+      "what_to_watch": "China demand commentary.",
+      "status": "new",
+      "sources": [
+        "EarningsWhispers"
+      ]
+    },
+    {
+      "title": "US-Iran sanctions details press conference",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-24",
+      "regions": [
+        "US",
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Bessent to outline sanctions campaign; 'you're either with us or against us' on allies. Could push oil higher and hit global trade.",
+      "what_to_watch": "Scope of sanctions, China cooperation.",
+      "status": "new",
+      "sources": [
+        "Reuters",
+        "NY Post",
+        "Critical Threats"
+      ]
+    },
+    {
+      "title": "OPEC+ meeting",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-06",
+      "regions": [
+        "Middle East",
+        "Global"
+      ],
+      "sectors": [
+        "Energy"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Group approved 188k bpd September hike (completing rollback of voluntary cuts); expected to PAUSE further hikes after September.",
+      "what_to_watch": "Whether they pause or continue hikes.",
+      "status": "new",
+      "sources": [
+        "CNBC",
+        "Bloomberg",
+        "EnergyConnects"
+      ]
+    },
+    {
+      "title": "US midterm elections building",
+      "category": "government",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-03",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "low",
+      "why_it_matters": "Markets expect limited near-term impact but divided-government risk rising.",
+      "what_to_watch": "Polling and campaign headlines.",
+      "status": "new",
+      "sources": [
+        "Morgan Stanley",
+        "Schwab"
+      ]
+    },
+    {
+      "title": "Drone Section 232 tariffs effective",
+      "category": "government",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-03",
+      "regions": [
+        "US",
+        "China"
+      ],
+      "sectors": [
+        "Industrials",
+        "Technology"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Trump imposed 25-100% tariffs on imported drones/components (Aug 13 proclamation); hits DJI (70-90% US market share) and drone supply chains.",
+      "what_to_watch": "Implementation and exemptions.",
+      "status": "new",
+      "sources": [
+        "White House",
+        "KPMG",
+        "Greenberg Traurig"
+      ]
+    },
+    {
+      "title": "Atlantic hurricane season active",
+      "category": "ongoing",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-06 to 2026-11-30",
+      "regions": [
+        "US",
+        "Gulf of Mexico"
+      ],
+      "sectors": [
+        "Energy",
+        "Utilities",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "NOAA updated outlook calls for above-normal activity; Gulf energy infrastructure risk.",
+      "what_to_watch": "Tropical storm tracks.",
+      "status": "carried",
+      "sources": [
+        "NOAA",
+        "Weather.com"
+      ]
+    },
+    {
+      "title": "US-Iran ceasefire expired",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-08-17",
+      "regions": [
+        "US",
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Trump said US won't extend the 60-day MOU; talks at standstill. War continues (Day 175). Oil supply risk persists; Strait of Hormuz remains contested.",
+      "what_to_watch": "Any new diplomatic track.",
+      "status": "carried",
+      "sources": [
+        "Politico",
+        "CNN",
+        "NY Post"
+      ]
+    },
+    {
+      "title": "US national debt crossed $40 trillion",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-18",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Treasury reported $432B July deficit (highest monthly in years); fiscal sustainability concerns; Treasury buyback announcement followed.",
+      "what_to_watch": "Bond market reaction and Treasury issuance plans.",
+      "status": "carried",
+      "sources": [
+        "CNBC",
+        "Treasury",
+        "NPR"
+      ]
+    },
+    {
+      "title": "Treasury doubled long-dated bond buybacks",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-19",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Surprise move after 10-yr yields hit ~4.68% (highest in ~2 decades); administration acting to cap yields; bond vigilante pressure.",
+      "what_to_watch": "Whether buybacks stabilize the long end.",
+      "status": "carried",
+      "sources": [
+        "NYT",
+        "Politico",
+        "Axios"
+      ]
+    },
+    {
+      "title": "US CPI (July) release",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-12",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "+0.1% MoM, +3.4% YoY, matching consensus; core 0.22% MoM. Downward trend from 3.8% peak but energy shock looms.",
+      "what_to_watch": "Next CPI (Sep 11).",
+      "status": "resolved",
+      "sources": [
+        "BLS",
+        "CNBC"
+      ]
+    },
+    {
+      "title": "US jobs report (July) release",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-07",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "-23,000 payrolls vs +80k consensus; unemployment 4.1%. First negative print of cycle; labor market weakening.",
+      "what_to_watch": "August report Sep 4.",
+      "status": "resolved",
+      "sources": [
+        "BLS",
+        "SIA"
+      ]
+    },
+    {
+      "title": "China LPR held",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-20",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "1-yr at 3.0%, 5-yr at 3.5% for 15th straight month; no monetary easing; fiscal measures taking precedence.",
+      "what_to_watch": "Whether LPR cuts come later.",
+      "status": "resolved",
+      "sources": [
+        "Reuters",
+        "chinamoney.com"
+      ]
+    },
+    {
+      "title": "Senate passed stopgap funding bill",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Extends government funding to Dec 11, averting Sept 30 shutdown.",
+      "what_to_watch": "December deadline.",
+      "status": "resolved",
+      "sources": [
+        "CNN",
+        "NYT"
+      ]
+    },
+    {
+      "title": "South Korea chip exports record",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-01 to 2026-08-20",
+      "regions": [
+        "South Korea"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "$26B in first 20 days of August, up 199% YoY; memory up 277%; confirms AI memory supercycle.",
+      "what_to_watch": "Whether prices stay elevated.",
+      "status": "carried",
+      "sources": [
+        "Sedaily",
+        "TechTimes"
+      ]
+    },
+    {
+      "title": "TSMC raised 2026 CapEx to $60-64B",
+      "category": "earnings",
+      "timing": "past",
+      "date_or_window": "2026-08-06",
+      "regions": [
+        "Taiwan",
+        "Global"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "AI demand strong; 45% sales surge; confirms AI capex boom.",
+      "what_to_watch": "Monthly sales Sep 10.",
+      "status": "carried",
+      "sources": [
+        "CNBC",
+        "Zacks"
+      ]
+    },
+    {
+      "title": "China July data weak",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-17",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "GDP 4.7% H1; extreme weather disrupted supply/demand; pressure for more stimulus.",
+      "what_to_watch": "Policy response.",
+      "status": "carried",
+      "sources": [
+        "Guardian",
+        "KuCoin"
+      ]
+    },
+    {
+      "title": "ECB raised rates 25bp",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-06-11",
+      "regions": [
+        "Europe"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Middle East war inflation; global tightening.",
+      "what_to_watch": "Sep 10 decision.",
+      "status": "carried",
+      "sources": [
+        "ECB"
+      ]
+    },
+    {
+      "title": "BoJ held at 1%",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-07-31",
+      "regions": [
+        "Japan"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Warned core inflation likely to exceed 2% target from September; sets up September hike.",
+      "what_to_watch": "Sep 17-18 meeting.",
+      "status": "carried",
+      "sources": [
+        "CNBC"
+      ]
+    },
+    {
+      "title": "Fed held at 3.50-3.75%",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-07-29",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "9-3 vote; three members voted to hike; hawkish shift under Warsh.",
+      "what_to_watch": "Sept 16 decision.",
+      "status": "carried",
+      "sources": [
+        "CNBC",
+        "Forbes"
+      ]
+    },
+    {
+      "title": "World Cup 2026 final",
+      "category": "ongoing",
+      "timing": "past",
+      "date_or_window": "2026-07-19",
+      "regions": [
+        "Global"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 1,
+      "confidence": "high",
+      "why_it_matters": "Spain beat Argentina 1-0; no longer market-relevant.",
+      "what_to_watch": "None.",
+      "status": "resolved",
+      "sources": [
+        "Wikipedia"
+      ]
+    }
+  ],
+  "top_risks": [
+    "US-Iran war escalation / sanctions blowback — Bessent's 'toughest sanctions in history' could push Brent above $100 and reignite global inflation, forcing more aggressive Fed tightening.",
+    "Fed rate HIKE at Sept 16 — Markets now pricing a hike, not a cut; Warsh's hawkish debut at Jackson Hole could confirm. A hike amid weakening jobs (-23k) risks a policy error.",
+    "Bond market stress — 10-yr yields near 2-decade highs; Treasury buybacks are a stopgap, not a fix. $40T debt and $432B monthly deficit raise fiscal sustainability questions.",
+    "China slowdown without adequate stimulus — LPR held for 15 months; new consumption measures may be too small. Weak PMI and GDP could drag global growth.",
+    "Stagflation mix — Negative payrolls + 3.4% CPI + oil near $95 = classic stagflation setup that's hard for any central bank to manage."
+  ],
+  "top_opportunities": [
+    "AI/semiconductor supercycle — Nvidia earnings Aug 26, TSMC $60-64B capex, Korea chip exports +199%, memory +277%. AI demand is the strongest growth story.",
+    "Energy producers — Oil near $95 with supply risk from Iran war and OPEC+ pausing hikes after September.",
+    "Treasury buyback support — Administration's willingness to intervene in bond market could stabilize long-end yields, supporting duration-sensitive assets.",
+    "China consumption stimulus — New credit subsidies for cars/home renovations could lift consumer cyclicals if measures prove meaningful.",
+    "Post-midterm seasonality — Historically markets perform better after midterms as uncertainty clears; positioning for Nov 3 could start building."
+  ],
+  "uncertainty": "high",
+  "summary": "The global macro landscape is dominated by the US-Iran war (Day 175) with oil near $95 and a 'crushing economic operation' of sanctions announced, threatening supply and inflation. The Fed under Warsh has turned hawkish, with markets pricing a potential September HIKE despite a weakening labor market (-23k July payrolls), creating stagflation risk. Bond markets are under stress with 10-yr yields near 2-decade highs, prompting Treasury buyback intervention. China's slowdown persists with new consumption stimulus measures unveiled, while the AI/semiconductor supercycle remains the strongest growth story ahead of Nvidia earnings. Multiple interacting risk factors—geopolitical, monetary, fiscal, and economic—create a high-uncertainty environment with no clear resolution path.",
   "windows": {
     "past": "2026-08-07..2026-08-20",
     "today": "2026-08-21",
     "upcoming": "2026-08-22..2026-09-04"
   },
-  "repaired": false,
+  "repaired": true,
   "catcher": {
     "ran": true,
-    "replaced_primary": true,
+    "replaced_primary": false,
     "found": 0,
     "duplicates_dropped": 0,
     "coverage_assessment": "",
