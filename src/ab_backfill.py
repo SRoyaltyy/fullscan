@@ -373,6 +373,43 @@ def _ensure_price_coverage(start: str, end: str, ticker: str | None, peer_ticker
         ps.bootstrap(days=need_days, tickers=None, resume=True)
 
 
+def _join_above_sma50(df: pd.DataFrame) -> tuple[pd.Series | None, pd.Series | None]:
+    """PIT close >= SMA50 from the price store. (None, None) if store missing."""
+    try:
+        store = ps._load_store()
+    except Exception:
+        return None, None
+    if store is None or len(store) == 0 or "Ticker" not in df.columns:
+        return None, None
+    want = set(df["Ticker"].astype(str).str.upper())
+    ohlc = store.loc[store["ticker"].astype(str).str.upper().isin(want), ["date", "ticker", "close"]].copy()
+    if ohlc.empty:
+        return None, None
+    ohlc["asof"] = pd.to_datetime(ohlc["date"]).dt.strftime("%Y-%m-%d")
+    ohlc["Ticker"] = ohlc["ticker"].astype(str).str.upper()
+    ohlc = ohlc.sort_values(["Ticker", "asof"])
+    ohlc["sma50"] = ohlc.groupby("Ticker", sort=False)["close"].transform(
+        lambda s: s.rolling(50, min_periods=50).mean()
+    )
+    key = pd.DataFrame(
+        {
+            "Ticker": df["Ticker"].astype(str).str.upper().to_numpy(),
+            "asof": df["asof_date"].astype(str).str[:10].to_numpy(),
+        },
+        index=df.index,
+    )
+    m = key.merge(
+        ohlc[["Ticker", "asof", "close", "sma50"]],
+        on=["Ticker", "asof"],
+        how="left",
+    )
+    m.index = df.index
+    px = pd.to_numeric(df["price"], errors="coerce") if "price" in df.columns else pd.Series(np.nan, index=df.index)
+    px = px.where(px.notna(), pd.to_numeric(m["close"], errors="coerce"))
+    sma = pd.to_numeric(m["sma50"], errors="coerce")
+    return px >= sma, px / sma - 1.0
+
+
 def _pattern_audit(out: pd.DataFrame) -> list[str]:
     """Does AB score / P01–P04 actually line up with forward 🟢?
 
@@ -650,6 +687,77 @@ def _pattern_audit(out: pd.DataFrame) -> list[str]:
             + " | ".join(cell(m, h) for h in horizons)
             + " |"
         )
+
+    sorted_ix = df.sort_values(["Ticker", "asof_date"]).index
+    tmp = df.loc[sorted_ix]
+    score_ma5 = (
+        tmp.groupby("Ticker", sort=False)["score"]
+        .transform(lambda s: s.rolling(5, min_periods=5).mean())
+        .reindex(df.index)
+    )
+    nred_ma5 = (
+        tmp.assign(_nr=n_red_ctx.reindex(tmp.index))
+        .groupby("Ticker", sort=False)["_nr"]
+        .transform(lambda s: s.rolling(5, min_periods=5).mean())
+        .reindex(df.index)
+    )
+    rsi = pd.to_numeric(df["rsi"], errors="coerce") if "rsi" in df.columns else pd.Series(np.nan, index=df.index)
+
+    lines += [
+        "",
+        "### H. SMA50 and 5-day mean score — does 'looks good' help?",
+        "",
+        "A09_above_sma50 is **already ±1 inside `score`**, and A10 is the 20/50/80 stack. "
+        "Score>3 names are ~85% already above SMA50 — that is why the chart looks clean. "
+        "This section splits that flag out, and replaces a single day's score with the "
+        "**mean score over the past 5 sessions** of the same ticker.",
+        "",
+        "| slice | n | 1d | 3d | 1w | 2m |",
+        "|-------|--:|---:|---:|---:|---:|",
+    ]
+    for name, m in (
+        ("score_ma5 > 3", score_ma5 > 3),
+        ("score_ma5 > 3 ∧ nred_ma5 ≤ 1", (score_ma5 > 3) & (nred_ma5 <= 1)),
+        ("score_ma5 ≤ -1", score_ma5 <= -1),
+        ("nred_ma5 ≤ 1", nred_ma5 <= 1),
+        ("nred_ma5 ≥ 2", nred_ma5 >= 2),
+        ("nred_ma5 ≥ 2.4 (persistently dirty)", nred_ma5 >= 2.4),
+        ("score>3 ∧ RSI≥60 (looks strong)", hi & (rsi >= 60)),
+        ("score≤-1 ∧ RSI<40", (df["score"] <= -1) & (rsi < 40)),
+    ):
+        lines.append(
+            f"| {name} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    above, dist = _join_above_sma50(df)
+    if above is not None:
+        above_b = above.fillna(False)
+        lines += [
+            "",
+            "SMA50 reconstructed PIT from `data/prices/ohlc.parquet` (same rule as A09):",
+            "",
+            "| slice | n | 1d | 3d | 1w | 2m |",
+            "|-------|--:|---:|---:|---:|---:|",
+        ]
+        for name, m in (
+            ("above SMA50 (any score)", above_b),
+            ("below SMA50 (any score)", ~above_b & dist.notna()),
+            ("score>3 ∧ above SMA50", hi & above_b),
+            ("score>3 ∧ below SMA50", hi & ~above_b & dist.notna()),
+            ("score>3 ∧ allgreen ∧ above50", hi & allgreen & above_b),
+            ("dist50 < -8% (well below)", dist < -0.08),
+            ("dist50 ≥ 8% (extended / looks best)", dist >= 0.08),
+            ("score>3 ∧ dist50 ≥ 8%", hi & (dist >= 0.08)),
+            ("score_ma5 > 3 ∧ above50", (score_ma5 > 3) & above_b),
+            ("score_ma5 ≤ -1 ∧ below50", (score_ma5 <= -1) & ~above_b & dist.notna()),
+        ):
+            lines.append(
+                f"| {name} | {int(m.sum()):,} | "
+                + " | ".join(cell(m, h) for h in horizons)
+                + " |"
+            )
 
     lines.append("")
     lines.append(
