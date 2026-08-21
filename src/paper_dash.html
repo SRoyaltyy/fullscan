@@ -32,7 +32,7 @@
  .how ol{margin:0;padding-left:18px}
  .how li{margin:0 0 6px}
  .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#fbbf24}
- .lock{color:#fbbf24}
+ h3.sleeve-head{font-size:13px;margin:18px 0 4px;color:#dfe6f2;font-family:ui-monospace,Menlo,Consolas,monospace}
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
@@ -56,7 +56,7 @@
  <input id="fillQ" placeholder="Ticker (e.g. CEG)" aria-label="Filter ticker">
  <span class="mut" id="fillCount"></span>
 </div>
-<table id="fills"></table>
+<div id="fillsHost"></div>
 
 <h2>Sleeve statistics</h2>
 <table id="stats"></table>
@@ -94,24 +94,38 @@ function cardSet(){
   const spyR=spy?100*(spy[spy.length-1]/spy[0]-1):null;
   if(sleeveFilter==="all"){
     const tot=D.stats.reduce((a,s)=>a+s.equity,0);
+    const real=D.stats.reduce((a,s)=>a+(s.realized||0),0);
+    const unrl=D.stats.reduce((a,s)=>a+(s.unrealized||0),0);
     const cards=[["Best sleeve",sorted[0]],["Worst sleeve",sorted[sorted.length-1]]];
     if(spyR!=null) cards.push(["SPY benchmark",{sleeve:"SPY",return_pct:+spyR.toFixed(2)}]);
     cards.push(["Total equity",{sleeve:D.stats.length+" sleeves",return_pct:+(100*(tot/(D.capital*D.stats.length)-1)).toFixed(2)}]);
+    cards.push(["Realized P/L",{sleeve:"closed trades",return_pct:real,money:true}]);
+    cards.push(["Unrealized P/L",{sleeve:"open marks",return_pct:unrl,money:true}]);
     return cards;
   }
   const s=D.stats.find(x=>x.sleeve===sleeveFilter);
   const cards=[["This sleeve",s||{sleeve:sleeveFilter,return_pct:0}]];
   if(spyR!=null) cards.push(["SPY benchmark",{sleeve:"SPY",return_pct:+spyR.toFixed(2)}]);
-  if(s) cards.push(["Trades / win",{sleeve:s.trades+" fills",return_pct:s.win_rate}]);
-  cards.push(["Min hold",{sleeve:horizonOf(sleeveFilter),return_pct:minHold(sleeveFilter)}]);
+  if(s){
+    cards.push(["Realized P/L",{sleeve:(s.closed||0)+" closed",return_pct:s.realized,money:true}]);
+    cards.push(["Unrealized P/L",{sleeve:(s.open||0)+" open",return_pct:s.unrealized,money:true}]);
+    cards.push(["Closed win %",{sleeve:(s.closed_wins||0)+"/"+(s.closed||0),return_pct:s.win_rate}]);
+    cards.push(["Open win %",{sleeve:(s.open_wins||0)+"/"+(s.open||0),return_pct:s.open_win_rate}]);
+  }
+  cards.push(["Min hold",{sleeve:horizonOf(sleeveFilter),return_pct:minHold(sleeveFilter),hold:true}]);
   return cards;
 }
 function renderCards(){
-  document.getElementById('cards').innerHTML=cardSet().map((c,i)=>{
+  document.getElementById('cards').innerHTML=cardSet().map((c)=>{
     const val=c[1].return_pct;
-    const isHold=c[0]==="Min hold";
+    const isHold=c[1].hold || c[0]==="Min hold";
+    const isMoney=!!c[1].money;
     const cls=isHold?'mut':(val>=0?'pos':'neg');
-    const shown=isHold?(val+' session'+(val===1?'':'s')):(c[0]==="Trades / win"?(val==null?'—':val+'% win'):(val+'%'));
+    let shown;
+    if(isHold) shown = val+' session'+(val===1?'':'s');
+    else if(isMoney) shown = money(val||0);
+    else if(c[0].indexOf("win")>=0) shown = (val==null?'—':val+'%');
+    else shown = val+'%';
     return `<div class="card"><span class="mut">${c[0]}</span><b>${c[1].sleeve}</b><span class="${cls}">${shown}</span></div>`;
   }).join('');
 }
@@ -191,80 +205,107 @@ function renderHow(){
     </ol>`;
 }
 
-function renderFills(){
-  const side=document.getElementById('fillSide').value;
-  const q=document.getElementById('fillQ').value.trim().toUpperCase();
-  const rows=(D.trades||[]).slice().reverse().filter(t=>{
-    if(sleeveFilter!=='all' && t.sleeve!==sleeveFilter) return false;
-    if(side!=='all' && t.side!==side) return false;
-    if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
-    return true;
-  });
-  document.getElementById('fillCount').textContent=rows.length+' of '+(D.trades||[]).length+' fills';
-  document.getElementById('fillsTitle').textContent=
-    sleeveFilter==='all' ? 'Fills — all sleeves (pick a sleeve to unstack)' : 'Fills — '+sleeveFilter;
-  document.getElementById('fillsHint').textContent=
-    sleeveFilter==='all'
-      ? 'Mashed view. Click a sleeve chip above the chart to see only that book’s orders.'
-      : 'One row = one order in '+sleeveFilter+'. Price is the signal-day close. Newest first.';
-  document.getElementById('curveTitle').textContent=
-    sleeveFilter==='all' ? 'Equity curves (all sleeves)' : 'Equity curve — '+sleeveFilter+' vs SPY';
-  const showSleeve=sleeveFilter==='all';
-  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th>'+(showSleeve?'<th>Sleeve</th>':'')+'<th>Why</th><th>Amount</th><th>Realized P/L</th></tr>';
+function fillRowsHtml(rows){
+  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th><th>Why</th><th>Amount</th><th>Realized P/L</th></tr>';
   if(!rows.length){
-    document.getElementById('fills').innerHTML=head+'<tr><td colspan="'+(showSleeve?8:7)+'" class="mut">No fills match.</td></tr>';
-    return;
+    return '<table>'+head+'<tr><td colspan="7" class="mut">No fills in this sleeve.</td></tr></table>';
   }
-  document.getElementById('fills').innerHTML=head+rows.map(t=>{
+  return '<table>'+head+rows.map(t=>{
     const sideCls=t.side==='sell'?'side-sell':'side-buy';
     const pnl=t.realized_pnl;
-    const pnlCell=pnl==null||pnl===''?'<td class="mut">—</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
+    const pnlCell=pnl==null||pnl===''?'<td class="mut">open</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
     const why=t.reason || (t.side==='buy'?'entered book':'dropped from book');
     return `<tr>
       <td>${t.date}</td>
       <td class="${sideCls}">${t.side.toUpperCase()}</td>
       <td class="tick">${t.ticker}</td>
       <td>${t.shares} sh @ ${px(t.price)}</td>
-      ${showSleeve?`<td>${t.sleeve}</td>`:''}
       <td class="left mut">${why}</td>
       <td>${money(t.amount)}</td>
       ${pnlCell}
     </tr>`;
-  }).join('');
+  }).join('')+'</table>';
+}
+
+function matchedFills(sleeve){
+  const side=document.getElementById('fillSide').value;
+  const q=document.getElementById('fillQ').value.trim().toUpperCase();
+  return (D.trades||[]).slice().reverse().filter(t=>{
+    if(sleeve && t.sleeve!==sleeve) return false;
+    if(side!=='all' && t.side!==side) return false;
+    if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function renderFills(){
+  const host=document.getElementById('fillsHost');
+  document.getElementById('curveTitle').textContent=
+    sleeveFilter==='all' ? 'Equity curves (all sleeves)' : 'Equity curve — '+sleeveFilter+' vs SPY';
+  if(sleeveFilter==='all'){
+    const all=matchedFills(null);
+    document.getElementById('fillCount').textContent=all.length+' of '+(D.trades||[]).length+' fills';
+    document.getElementById('fillsTitle').textContent='Fills — one blotter per sleeve';
+    document.getElementById('fillsHint').textContent='Not mashed. Each sleeve is its own tape. Click a chip above the chart to isolate one book.';
+    host.innerHTML=sleeveNames.map(s=>{
+      const rows=matchedFills(s);
+      const st=(D.stats||[]).find(x=>x.sleeve===s) || {};
+      const r=st.realized||0, u=st.unrealized||0;
+      return `<h3 class="sleeve-head">${s} · ${rows.length} fills · realized ${money(r)} · unrealized ${money(u)}</h3>`+fillRowsHtml(rows);
+    }).join('');
+    return;
+  }
+  const rows=matchedFills(sleeveFilter);
+  document.getElementById('fillCount').textContent=rows.length+' of '+(D.trades||[]).length+' fills';
+  document.getElementById('fillsTitle').textContent='Fills — '+sleeveFilter;
+  document.getElementById('fillsHint').textContent='One row = one order in '+sleeveFilter+'. SELL realized P/L is closed. BUY shows “open” until sold. Newest first.';
+  host.innerHTML=fillRowsHtml(rows);
 }
 
 function renderStats(){
   const rows=sleeveFilter==='all'?D.stats:D.stats.filter(s=>s.sleeve===sleeveFilter);
   document.getElementById('stats').innerHTML=
-   "<tr><th>Sleeve</th><th>Equity</th><th>Return</th><th>Cash</th><th>Open</th><th>Trades</th><th>Fees</th><th>Realized P/L</th><th>Win rate</th><th>Min hold</th></tr>"+
+   "<tr><th>Sleeve</th><th>Equity</th><th>Return</th><th>Cash</th><th>Open</th><th>Trades</th><th>Fees</th><th>Realized P/L</th><th>Unrealized P/L</th><th>Closed win</th><th>Open win</th><th>Min hold</th></tr>"+
    rows.map(s=>`<tr><td>${s.sleeve}</td><td>$${s.equity.toLocaleString()}</td>
     <td class="${s.return_pct>=0?'pos':'neg'}">${s.return_pct}%</td><td>$${s.cash.toLocaleString()}</td>
     <td>${s.open}</td><td>${s.trades}</td><td>$${s.fees.toLocaleString()}</td>
-    <td class="${s.realized>=0?'pos':'neg'}">$${s.realized.toLocaleString()}</td>
-    <td>${s.win_rate==null?'—':s.win_rate+'%'}</td>
+    <td class="${s.realized>=0?'pos':'neg'}">${money(s.realized||0)}</td>
+    <td class="${(s.unrealized||0)>=0?'pos':'neg'}">${money(s.unrealized||0)}</td>
+    <td>${s.win_rate==null?'—':s.win_rate+'%'} <span class="mut">(${s.closed_wins||0}/${s.closed||0})</span></td>
+    <td>${s.open_win_rate==null?'—':s.open_win_rate+'%'} <span class="mut">(${s.open_wins||0}/${s.open||0})</span></td>
     <td>${minHold(s.sleeve)}d</td></tr>`).join('');
 }
 
 function renderPos(){
-  const rows=(D.positions||[]).filter(p=>sleeveFilter==='all'||p.sleeve===sleeveFilter);
-  document.getElementById('pos').innerHTML=
-   "<tr><th>Sleeve</th><th>Ticker</th><th>Shares</th><th>Entry date</th><th>Entry px</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>"+
-   (rows.length?rows.map(p=>{
-     const held=p.held_sessions!=null?p.held_sessions:sessionsBetween(p.entry_date, D.dates[D.dates.length-1]);
-     const mh=p.min_hold!=null?p.min_hold:minHold(p.sleeve);
-     let status='on book';
-     if(p.on_book===false){
-       status = (HOLD_ON && held!=null && held<mh) ? `min-hold lock ${held}/${mh}d` : 'dropped — waiting sell';
-     } else if(held!=null){
-       status = `on book · held ${held}d`;
-     }
-     const lock=status.indexOf('lock')>=0?'lock':'mut';
-     return `<tr><td>${p.sleeve}</td><td><b>${p.ticker}</b></td><td>${p.shares}</td>
-      <td>${p.entry_date}</td><td>$${p.entry_px}</td><td>$${p.last}</td>
-      <td class="${p.unrealized>=0?'pos':'neg'}">$${p.unrealized.toLocaleString()}</td>
-      <td class="${lock}">${status}</td></tr>`;
-   }).join('')
-    :'<tr><td colspan="8" class="mut">No open positions in this sleeve.</td></tr>');
+  const hostId='pos';
+  function tableFor(rows){
+    return "<tr><th>Sleeve</th><th>Ticker</th><th>Shares</th><th>Entry date</th><th>Entry px</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>"+
+     (rows.length?rows.map(p=>{
+       const held=p.held_sessions!=null?p.held_sessions:sessionsBetween(p.entry_date, D.dates[D.dates.length-1]);
+       const mh=p.min_hold!=null?p.min_hold:minHold(p.sleeve);
+       let status='on book';
+       if(p.on_book===false){
+         status = (HOLD_ON && held!=null && held<mh) ? `min-hold lock ${held}/${mh}d` : 'dropped — waiting sell';
+       } else if(held!=null){
+         status = `on book · held ${held}d`;
+       }
+       const lock=status.indexOf('lock')>=0?'lock':'mut';
+       return `<tr><td>${p.sleeve}</td><td><b>${p.ticker}</b></td><td>${p.shares}</td>
+        <td>${p.entry_date}</td><td>$${p.entry_px}</td><td>$${p.last}</td>
+        <td class="${p.unrealized>=0?'pos':'neg'}">$${Number(p.unrealized).toLocaleString()}</td>
+        <td class="${lock}">${status}</td></tr>`;
+     }).join('')
+      :'<tr><td colspan="8" class="mut">No open positions in this sleeve.</td></tr>');
+  }
+  const all=(D.positions||[]);
+  if(sleeveFilter==='all'){
+    // keep one table but grouped: sort by sleeve so they aren't mashed randomly
+    const order=sleeveNames;
+    const sorted=[...all].sort((a,b)=>order.indexOf(a.sleeve)-order.indexOf(b.sleeve) || a.ticker.localeCompare(b.ticker));
+    document.getElementById(hostId).innerHTML=tableFor(sorted);
+    return;
+  }
+  document.getElementById(hostId).innerHTML=tableFor(all.filter(p=>p.sleeve===sleeveFilter));
 }
 
 function renderAll(){

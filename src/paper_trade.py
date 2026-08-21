@@ -274,16 +274,30 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
 def sleeve_stats(sleeve: str, S: dict, prices: pd.DataFrame, capital: float) -> dict:
     px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
     invested = 0.0
+    unrealized = 0.0
+    open_wins = 0
     for t, pos in S["pos"].items():
         v = px.get(t)
-        invested += pos["shares"] * (float(v) if v == v and v else pos["entry_px"])
+        last = float(v) if v == v and v else pos["entry_px"]
+        invested += pos["shares"] * last
+        mtm = pos["shares"] * last - pos["cost"]
+        unrealized += mtm
+        if mtm > 0:
+            open_wins += 1
     equity = S["cash"] + invested
+    closed = S["closed"]
+    opened = len(S["pos"])
     return {"sleeve": sleeve, "equity": round(equity, 2),
             "return_pct": round(100 * (equity / capital - 1), 2),
-            "cash": round(S["cash"], 2), "open": len(S["pos"]),
+            "cash": round(S["cash"], 2), "open": opened,
             "trades": S["trades"], "fees": round(S["fees"], 2),
             "realized": round(S["realized"], 2),
-            "win_rate": round(100 * S["wins"] / S["closed"], 1) if S["closed"] else None}
+            "unrealized": round(unrealized, 2),
+            "closed": closed,
+            "closed_wins": S["wins"],
+            "open_wins": open_wins,
+            "win_rate": round(100 * S["wins"] / closed, 1) if closed else None,
+            "open_win_rate": round(100 * open_wins / opened, 1) if opened else None}
 
 
 def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
@@ -371,14 +385,16 @@ def write_report(stats: list[dict], date: str, capital: float) -> None:
         "per size bucket. Fill at signal-day close. Sell only after min-hold "
         "(1d=1, 3d=3, 1w=5, 2w=10, 1m=21 sessions) AND the name has left the book.",
         "",
-        "| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Win rate |",
-        "|--------|--------|--------|------|----------|--------|-----------|--------------|----------|",
+        "| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |",
+        "|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|",
     ]
     for s in stats:
         wr = f"{s['win_rate']}%" if s["win_rate"] is not None else "—"
+        ow = f"{s.get('open_win_rate')}%" if s.get("open_win_rate") is not None else "—"
         L.append(f"| {s['sleeve']} | ${s['equity']:,.2f} | {s['return_pct']:+.2f}% | "
                  f"${s['cash']:,.2f} | {s['open']} | {s['trades']} | "
-                 f"${s['fees']:,.2f} | ${s['realized']:+,.2f} | {wr} |")
+                 f"${s['fees']:,.2f} | ${s['realized']:+,.2f} | "
+                 f"${s.get('unrealized', 0):+,.2f} | {wr} | {ow} |")
     L += ["", "Equity curves + positions: `dashboard/index.html`", ""]
     (SCOREBOARD / "PAPER_TRADING.md").write_text("\n".join(L), encoding="utf-8")
 
