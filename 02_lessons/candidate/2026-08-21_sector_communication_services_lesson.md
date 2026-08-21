@@ -1,0 +1,30 @@
+---
+trigger_pattern: "A macro headwind (hawkish Fed minutes, rate-hike risk) was released 1–2 sessions earlier and is already reflected in the prior week tape, while the same-morning reversal checklist is positive: US index futures ≥ +0.3%, real yields easing, oil off highs. The model runs the reversal checklist but still lets the stale macro headline keep S0 negative, producing down/flat and missing a rebound."
+current_behavior: "The reversal signals are acknowledged in the narrative but treated only as magnitude caps, not as direction-flip evidence. The deterministic pipeline then emits a down direction because S0 remains negative from a macro catalyst that is no longer fresh."
+corrected_behavior: "When a macro headwind is already priced over the prior 1–2 sessions AND the morning reversal checklist is positive, score S0 at 0 or positive, not -1, unless a fresh same-morning shock has appeared. A non-fresh legal/regulatory overhang should keep S1 at 0 and must not convert the call to down. The output should be flat/up, not down/flat."
+evidence_cited: "2026-08-21 Communication Services: official pipeline predicted down/flat; actual XLC +0.65% vs SPY +0.41%, rel +0.24%. The morning itself cited ES +0.35%, NQ +0.49%, DFII10 -0.06 1d, CL=F -1.15%, and “partially priced” hawkish minutes, yet scored S0 = -1. Outcome was a broad rebound; Meta rose as investors looked past the trial overhang."
+error_category: "A (reasoning/weighting; not tool/data)"
+falsifier: "If the same setup occurs — positive futures, easing real yields, priced macro headwind — but a fresh same-morning negative data point (hot CPI, negative mega-cap premarket move, new adverse ruling) drives the sector down, the corrected behavior would fail. Also, repeated positive-reversal mornings that resolve lower without a fresh shock would invalidate the rule."
+sector: "Communication Services"
+date: "2026-08-21"
+status: "candidate"
+---
+
+# Sector Reflection — Communication Services — 2026-08-21
+
+Triage: **REASONING failure**, not tool/data failure. The morning had the reversal signals in its own notes (positive ES/NQ futures, easing real yields, oil off highs) and even said the hawkish Fed minutes were “partially priced,” but it still scored S0 = -1 and let the pipeline emit down/flat. The actual day was a broad rebound; XLC closed +0.65%, SPY +0.41%, rel +0.24%.
+
+LESSON_BEGIN  
+ERROR_CATEGORY: A (reasoning/weighting; not tool/data)  
+TRIGGER_PATTERN: A macro headwind (hawkish Fed minutes, rate-hike risk) was released 1–2 sessions earlier and is already reflected in the prior week tape, while the same-morning reversal checklist is positive: US index futures ≥ +0.3%, real yields easing, oil off highs. The model runs the reversal checklist but still lets the stale macro headline keep S0 negative, producing down/flat and missing a rebound.  
+CURRENT_BEHAVIOR: The reversal signals are acknowledged in the narrative but treated only as magnitude caps, not as direction-flip evidence. The deterministic pipeline then emits a down direction because S0 remains negative from a macro catalyst that is no longer fresh.  
+CORRECTED_BEHAVIOR: When a macro headwind is already priced over the prior 1–2 sessions AND the morning reversal checklist is positive, score S0 at 0 or positive, not -1, unless a fresh same-morning shock has appeared. A non-fresh legal/regulatory overhang should keep S1 at 0 and must not convert the call to down. The output should be flat/up, not down/flat.  
+EVIDENCE: 2026-08-21 Communication Services: official pipeline predicted down/flat; actual XLC +0.65% vs SPY +0.41%, rel +0.24%. The morning itself cited ES +0.35%, NQ +0.49%, DFII10 -0.06 1d, CL=F -1.15%, and “partially priced” hawkish minutes, yet scored S0 = -1. Outcome was a broad rebound; Meta rose as investors looked past the trial overhang.  
+LESSON_MATCH_CHECK: Closest active lesson is the 08-13 reversal lesson, and it was invoked but under-applied: the checklist was used to cap magnitude, not to flip direction. No recent candidate lesson specifically covers “priced macro headwind + positive same-morning reversal cluster ⇒ flip S0 to flat/up.”  
+BACKWARD_CHECK: Applying the corrected rule to recent Communication Services history would improve 08-13 (predicted down/notable, actual +2.07%) and would not worsen 08-18 (predicted down/severe, actual -0.31%, dir HIT) because that day was not a positive-futures reversal setup. No prior graded run in the last 10 would be hurt.  
+CONFLICT_CHECK: No conflict with the 08-18 offset-scan lesson; this rule still prevents severe when only one mega-cap is legally shocked. No conflict with the 08-17 legal-catalyst lesson because the Meta trial was explicitly non-fresh/priced; a fresh top-holding catalyst would still be scored as an S1 negative exception.  
+FALSIFIER: If the same setup occurs — positive futures, easing real yields, priced macro headwind — but a fresh same-morning negative data point (hot CPI, negative mega-cap premarket move, new adverse ruling) drives the sector down, the corrected behavior would fail. Also, repeated positive-reversal mornings that resolve lower without a fresh shock would invalidate the rule.  
+DIVERGENCE_VERDICT: futures_right — divergence_flagged was False, but the un-flagged divergence between the leading macro lean (down) and the positive futures/reversal tape (up) resolved in favor of the futures/reversal side.  
+ACTIVE_LESSON_REVIEW: 08-13 reversal lesson should be strengthened with a “priced-catalyst” clause. 08-18 offset-scan and 08-17 legal-catalyst lessons were applied correctly and remain active. New addition: do not let a non-fresh macro headline keep S0 negative when the morning’s own reversal checklist is positive.  
+SECTOR: Communication Services  
+LESSON_END
