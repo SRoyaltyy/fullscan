@@ -1,13 +1,21 @@
 {
  "risk_tilt": "off",
  "macros": [
+  "hawkish",
   "bearish",
+  "hawkish",
   "bearish"
  ],
- "sector_tilts": {},
+ "sector_tilts": {
+  "Basic Materials": "bullish",
+  "Technology": "mixed",
+  "Consumer Cyclical": "bearish"
+ },
  "tickers": {
+  "XLY": -4.0,
+  "XLU": -1.5,
   "AU": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=7 rescued=3\nMACRO risk-off: [bearish] Trump economic-warfare threats push yields and oil higher, indices close lower (session/1d-1w)\nMACRO rates: [bearish] Higher yields on geopolitical risk and tight oil market pressure equity valuations (session/1d-1w)\nSECTOR Energy (XLE): [bullish] Tight diesel cracks and Middle East tensions signal a much tighter oil market (sector_etf)\nSECTOR Materials (XLB): [mixed] Gold surge on Fed-cut bets is a substitution trade, not a broad commodity bid; copper/industrial metals likely to co-move with risk-off tape (sector_etf)\nSECTOR Technology (XLK): [bearish] Crowded hedge fund longs vulnerable to risk-off tape and rising yields; Samsung buyback is a partial offset (sector_etf)\nINTERACTION: Risk-off tape + oil spike + higher yields = stagflationary signal; do not buy cyclicals, prefer energy and defensives.\nWATCH: If oil reverses sharply lower on de-escalation headlines, the risk-off trade unwinds quickly; monitor for a potential sharp bounce in tech and cyclicals.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [hawkish] Fed minutes show growing support for a hike; buyback rally fizzles, keeping long-end yields elevated (regime/1w-1m)\nMACRO risk: [bearish] Trump economic-warfare threats push yields and oil higher, driving a risk-off tape (session/1d-1w)\nSECTOR materials: [bullish] Gold surge on rate-cut bets lifts miners; copper's strength over iron ore supports a re-rating (GDX, XLB)\nSECTOR tech: [mixed] Marvell-Google deal creates dispersion in AI chips; software rotation (ADSK) offers relative strength (SMH, IGV)\nSECTOR consumer: [bearish] Retail reality check on bargain-hunting confirms weak consumer spending, pressuring discretionary (XLY)\nINTERACTION: Hawkish Fed + fizzled buyback = one negative rates cluster; do not offset with gold's \"softer data\" narrative.\nWATCH: Ranking is thin on fresh, high-impact catalysts; the Fed minutes are the dominant driver and could be repriced further.",
  "date": "2026-08-21"
 }
