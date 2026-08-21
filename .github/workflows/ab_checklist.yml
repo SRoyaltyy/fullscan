@@ -89,20 +89,47 @@ jobs:
       - name: Commit + push outputs to main
         if: always()
         run: |
-          set -euo pipefail
+          set -uo pipefail
           if [ ! -d data/ab_checklist ]; then
             echo "No data/ab_checklist directory — nothing to commit"
             exit 0
           fi
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          # Always force-add checklist outputs (md + json + csv)
+
+          # price_store dirties ohlc.parquet / meta.json. Unstaged changes
+          # block `git pull --rebase` and then the push fails the whole job
+          # even though the checklist already succeeded (2026-08-20 failure).
+          git checkout -- data/prices 2>/dev/null || true
+          git clean -fd data/prices 2>/dev/null || true
+          git clean -fd --exclude=data/ab_checklist 2>/dev/null || true
+
           git add -f data/ab_checklist/*.csv data/ab_checklist/*.md data/ab_checklist/*.json || true
           git status
           if git diff --staged --quiet; then
             echo "Nothing staged — outputs may already be on main"
             exit 0
           fi
-          git commit -m "chore: ab checklist $(date -u +%F)"
-          git pull --rebase origin main || true
-          git push origin HEAD:main
+          git commit -m "chore: ab checklist $(date -u +%F)" || {
+            echo "[warn] commit failed (nothing to commit?)"
+            exit 0
+          }
+
+          # Rebase + push with one retry. Never fail the job on push races —
+          # the artifact upload already preserved the CSV.
+          if ! git pull --rebase origin main; then
+            echo "[warn] pull --rebase failed; trying pull --no-rebase"
+            git pull origin main || true
+          fi
+          if git push origin HEAD:main; then
+            echo "Pushed checklist outputs to main"
+          else
+            echo "[warn] first push rejected — rebase and retry"
+            git pull --rebase origin main || git pull origin main || true
+            if git push origin HEAD:main; then
+              echo "Pushed checklist outputs to main (retry)"
+            else
+              echo "[warn] push still failed — artifact is uploaded; orchestrator can re-dispatch if needed"
+            fi
+          fi
+          exit 0
