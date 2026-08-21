@@ -39,15 +39,21 @@ jobs:
       - name: Install dependencies
         run: pip install requests ddgs
 
+      # continue-on-error: catcher must still run as REPLACEMENT if primary
+      # dies or returns empty. Primary Python already exits 0 on parse-fail;
+      # this covers unexpected exceptions / API outages.
       - name: Pass 1 — primary event scan
+        continue-on-error: true
+        id: primary
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.run_events ${DATE:+--date "$DATE"}
 
-      - name: Pass 2 — catcher (gap hunt, government emphasis)
+      - name: Pass 2 — catcher (gap hunt / replacement)
         continue-on-error: true
+        id: catcher
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
@@ -57,9 +63,27 @@ jobs:
       - name: Commit event scan outputs
         if: always()
         run: |
+          set -uo pipefail
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/events 01_daily/_transcripts
-          git commit -m "auto: event scan + catcher [$(date -u +%F)]" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          git add 01_daily/events 01_daily/_transcripts || true
+          if git diff --staged --quiet; then
+            echo "No event output changes to commit"
+            exit 0
+          fi
+          git commit -m "auto: event scan + catcher [$(date -u +%F)]" || {
+            echo "No changes to commit"
+            exit 0
+          }
+          # Soft-fail push so a concurrent bot push cannot red the whole day
+          if ! git pull --rebase origin main; then
+            git pull origin main || true
+          fi
+          if git push origin main; then
+            echo "Pushed event scan outputs"
+          else
+            echo "[warn] first push rejected — rebase and retry"
+            git pull --rebase origin main || git pull origin main || true
+            git push origin main || echo "[warn] push failed — files exist on runner; orchestrator may re-dispatch"
+          fi
+          exit 0
