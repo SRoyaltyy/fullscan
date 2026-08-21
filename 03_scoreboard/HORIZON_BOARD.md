@@ -1,12 +1,12 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-08-20. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-08-21. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 3 | 0% (0/3) | 67% (2/3) | -0.68% |
+| general | 3d | 4 | 0% (0/4) | 50% (2/4) | -0.57% |
 | general | 1w | 2 | 0% (0/2) | 100% (2/2) | -1.19% |
 | sector:Basic Materials | 3d | 1 | 100% (1/1) | 100% (1/1) | -1.01% |
 | sector:Communication Services | 3d | 1 | 100% (1/1) | 0% (0/1) | -1.84% |
@@ -24,6 +24,7 @@ Updated: 2026-08-20. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-08-18 | general | 3d | down/mild | -0.23% (flat/flat) | ❌ | ❌ |
 | 2026-08-17 | general | 3d | up/mild | -1.34% (down/mild) | ❌ | ✅ |
 | 2026-08-14 | general | 1w | up/mild | -1.00% (down/mild) | ❌ | ✅ |
 | 2026-08-13 | sector:Utilities | 3d | up/mild | -0.05% (flat/flat) | ❌ | ❌ |
@@ -41,5 +42,5 @@ Updated: 2026-08-20. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-14 | general | 3d | up/mild | -0.52% (down/mild) | ❌ | ✅ |
 | 2026-08-13 | general | 3d | up/mild | -0.17% (flat/flat) | ❌ | ❌ |
 
-*184 calls still maturing (T+h close not recorded yet).*
+*231 calls still maturing (T+h close not recorded yet).*
 
