@@ -1,10 +1,10 @@
 # Finviz Daily Digest — 2026-08-21
 
-_Generated 2026-08-21T09:06:40.098899-04:00 · export=data/exports/finviz_2026-08-20.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-08-21T10:49:13.096463-04:00 · export=data/exports/finviz_2026-08-20.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: US Stock Indices End Lower As Trumps Economic Warfare Threats Push Yields, Oil Higher  WMT, CRWV, SBUX, DE, RKLB In Focus
+- **S&P 500 (SPY)**: UBS Sees S&P 500 at 8,100 but Prediction Markets Don't Buy It
 - **Nasdaq-100 (QQQ)**: US Stock Indices End Lower As Trumps Economic Warfare Threats Push Yields, Oil Higher  WMT, CRWV, SBUX, DE, RKLB In Focus
 - **Dow Jones (DIA)**: US Stock Indices End Lower As Trumps Economic Warfare Threats Push Yields, Oil Higher  WMT, CRWV, SBUX, DE, RKLB In Focus
 - **Russell 2000 (IWM)**: What SCHD's Own History Suggests About Its Price Today
