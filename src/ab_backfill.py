@@ -10,14 +10,14 @@ Each asof day includes:
 CLI:
   python -m src.ab_backfill --months 12 --end 2026-08-19
   python -m src.ab_backfill --months 12 --end 2026-08-19 --checkpoint-every 10
+  python -m src.ab_backfill --md-only data/ab_backfill/2025-08-19_2026-08-19_universe.parquet
 
-Universe PIT is expensive (~2.5k liquid names × ~252 sessions). The table used
-to live only in memory and was written once at the end — GitHub's 6h job cap
-on run 32397798646 cancelled at 220/252 with no file on disk. Checkpoints
-now land as ``{start}_{end}_{tag}.resume.parquet`` every N asof days (and on
+Universe PIT is expensive (~2.5k liquid names × ~252 sessions). Checkpoints
+land as ``{start}_{end}_{tag}.resume.parquet`` every N asof days (and on
 SIGTERM/SIGINT). A later run with the same window loads that file and skips
-completed asof dates. This does not invent a 1d/3d/1w verdict — there is
-still no finished universe file to score.
+completed asof dates. ``--md-only`` rebuilds the BB-style markdown (daily
+trail + score/context effectiveness audit) from an existing parquet without
+rescoring.
 """
 from __future__ import annotations
 
@@ -373,92 +373,238 @@ def _ensure_price_coverage(start: str, end: str, ticker: str | None, peer_ticker
         ps.bootstrap(days=need_days, tickers=None, resume=True)
 
 
-def _streaks(series: pd.Series) -> pd.Series:
-    sign = (series > 0).astype(int)
-    out, run, prev = [], 0, None
-    for s in sign:
-        if prev is None or s != prev:
-            run = 1
-        else:
-            run += 1
-        out.append(run if s == 1 else -run)
-        prev = s
-    return pd.Series(out, index=series.index)
-
-
 def _pattern_audit(out: pd.DataFrame) -> list[str]:
+    """Does AB score / P01–P04 actually line up with forward 🟢?
+
+    🟢 = max upside > |max downside| from that day's close.
+    Incomplete horizons dropped (need 1/3/5/20 bars for 1d/3d/1w/2m).
+    Cells are hit-rate and percentage-points vs the universe base rate.
+    """
     lines = [
         "## Pattern correlation audit",
         "",
-        "🟢 = max upside > |max downside| over horizon (long from asof close).",
+        "Test: from that day's close, was max upside > |max downside| (🟢).",
+        "Each cell is **hit rate (pp vs base rate)**. Incomplete forward windows are dropped.",
         "",
     ]
     if out is None or out.empty:
         lines.append("_no rows_")
         return lines
-    df = out.copy().sort_values(["Ticker", "asof_date"]).reset_index(drop=True)
-    parts = []
-    for t, g in df.groupby("Ticker", sort=False):
-        g = g.copy()
-        g["score_delta"] = g["score"].diff()
-        g["streak"] = _streaks(g["score"])
-        parts.append(g)
-    df = pd.concat(parts, ignore_index=True)
+    df = out.copy()
     horizons = ["1d", "3d", "1w", "2m"]
+    need = {h: int(HORIZONS[h]) for h in horizons}
 
-    def rate(mask, h):
-        col = f"fav_{h}"
-        sub = df.loc[mask, col].dropna()
-        if len(sub) < 5:
-            return None, len(sub)
-        return float((sub >= 0.5).mean()), len(sub)
+    def hit(mask, h):
+        col, bars = f"fav_{h}", f"bars_{h}"
+        sub = df.loc[mask]
+        if bars in sub.columns:
+            b = pd.to_numeric(sub[bars], errors="coerce").fillna(0)
+            sub = sub[b >= need[h]]
+        v = pd.to_numeric(sub[col], errors="coerce").dropna()
+        if len(v) < 5:
+            return None, int(len(v))
+        return float((v >= 0.5).mean()), int(len(v))
 
-    lines += ["### A. Score level", "", "| bucket | n | 1d | 3d | 1w | 2m |", "|--------|--:|---:|---:|---:|---:|"]
-    for (lo, hi), lab in zip([(-99, -1), (0, 2), (3, 5), (6, 99)], ["≤-1", "0-2", "3-5", "≥6"]):
-        m = (df["score"] >= lo) & (df["score"] <= hi)
-        cells = []
-        for h in horizons:
-            r, _ = rate(m, h)
-            cells.append(f"{100*r:.0f}%" if r is not None else "—")
-        lines.append(f"| {lab} | {int(m.sum())} | " + " | ".join(cells) + " |")
-
-    lines += ["", "### B. Context labels vs 1w/2m favorability", "",
-              "| label contains | n | 1w 🟢% | 2m 🟢% |",
-              "|----------------|--:|-------:|-------:|"]
-    for lab in ("LEAD", "LAG", "peers↑", "peers↓", "ind↑", "ind↓", "sec↑", "sec↓"):
-        m = df["context_label"].astype(str).str.contains(lab, regex=False)
-        r1, _ = rate(m, "1w")
-        r2, _ = rate(m, "2m")
-        lines.append(
-            f"| {lab} | {int(m.sum())} | "
-            f"{100*r1:.0f}%" if r1 is not None else f"| {lab} | {int(m.sum())} | — | — |"
-        )
-        if r1 is not None:
-            lines[-1] = (
-                f"| {lab} | {int(m.sum())} | "
-                f"{100*r1:.0f}% | {100*r2:.0f}% |" if r2 is not None else
-                f"| {lab} | {int(m.sum())} | {100*r1:.0f}% | — |"
-            )
-
-    lines += ["", "### C. Base rates", ""]
-    cells = []
+    bases: dict[str, float | None] = {}
+    base_n: dict[str, int] = {}
     for h in horizons:
-        r, n = rate(pd.Series(True, index=df.index), h)
-        cells.append(f"{h}:{100*r:.0f}%(n={n})" if r is not None else f"{h}:—")
-    lines.append("- " + " · ".join(cells))
+        r, n = hit(pd.Series(True, index=df.index), h)
+        bases[h] = r
+        base_n[h] = n
+
+    def cell(mask, h) -> str:
+        r, _ = hit(mask, h)
+        if r is None:
+            return "—"
+        b = bases[h]
+        if b is None:
+            return f"{100 * r:.0f}%"
+        return f"{100 * r:.0f}% ({100 * (r - b):+.0f})"
+
+    lines += [
+        "### A. Score level (Part A + B1 flags that day)",
+        "",
+        "| bucket | n | 1d | 3d | 1w | 2m |",
+        "|--------|--:|---:|---:|---:|---:|",
+    ]
+    for (lo, hi), lab in zip(
+        [(-99, -1), (0, 2), (3, 5), (6, 99)], ["≤-1", "0-2", "3-5", "≥6"]
+    ):
+        m = (df["score"] >= lo) & (df["score"] <= hi)
+        lines.append(
+            f"| {lab} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines += [
+        "",
+        "### B. Context flags vs forward 🟢 (this is the P01–P04 test)",
+        "",
+        "| flag | n | 1d | 3d | 1w | 2m |",
+        "|------|--:|---:|---:|---:|---:|",
+    ]
+    lab_col = df["context_label"].astype(str)
+    for lab in ("LEAD", "LAG", "peers↑", "peers↓", "ind↑", "ind↓", "sec↑", "sec↓"):
+        m = lab_col.str.contains(lab, regex=False)
+        lines.append(
+            f"| {lab} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines += [
+        "",
+        "### C. Enriched score (score + context) buckets",
+        "",
+        "| enr | n | 1d | 3d | 1w | 2m |",
+        "|-----|--:|---:|---:|---:|---:|",
+    ]
+    for (lo, hi), lab in zip(
+        [(-99, -2), (-1, 1), (2, 5), (6, 99)], ["≤-2", "-1..+1", "2-5", "≥6"]
+    ):
+        m = (df["score_enriched"] >= lo) & (df["score_enriched"] <= hi)
+        lines.append(
+            f"| {lab} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines += [
+        "",
+        "### D. Score × context — does P01–P04 add anything on top of AB?",
+        "",
+        "If context is real, `score≥3 ∧ LEAD` should beat `score≥3 ∧ LAG` on 1w/2m.",
+        "",
+        "| combo | n | 1d | 3d | 1w | 2m |",
+        "|-------|--:|---:|---:|---:|---:|",
+    ]
+    lead = lab_col.str.contains("LEAD", regex=False)
+    lag = lab_col.str.contains("LAG", regex=False)
+    hi = df["score"] >= 3
+    lo = df["score"] <= -1
+    for name, m in (
+        ("score≥3 ∧ LEAD", hi & lead),
+        ("score≥3 ∧ LAG", hi & lag),
+        ("score≤-1 ∧ LEAD", lo & lead),
+        ("score≤-1 ∧ LAG", lo & lag),
+        ("enr≥6", df["score_enriched"] >= 6),
+        ("enr≤-2", df["score_enriched"] <= -2),
+    ):
+        lines.append(
+            f"| {name} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines += ["", "### E. Base rates (all names × sessions with a complete window)", ""]
+    bits = []
+    for h in horizons:
+        r, n = bases[h], base_n[h]
+        bits.append(f"{h}:{100 * r:.0f}%(n={n:,})" if r is not None else f"{h}:—")
+    lines.append("- " + " · ".join(bits))
+    lines.append("")
+
+    lines += [
+        "### F. Within-day rank — does AB pick the right names *that session*?",
+        "",
+        "Pooled lift (A–E) can sit on the market base (~52% 🟢) even if the ranker works. "
+        "This is the ranking test: on each asof, top vs bottom quartile of that day's universe.",
+        "",
+        "| slice | n | 1d | 3d | 1w | 2m |",
+        "|-------|--:|---:|---:|---:|---:|",
+    ]
+    asof_key = df["asof_date"].astype(str).str[:10]
+
+    def qmask(col: str, top: bool, q: float = 0.75):
+        rnk = df.groupby(asof_key)[col].rank(pct=True, method="average")
+        return (rnk >= q) if top else (rnk <= (1.0 - q))
+
+    for name, m in (
+        ("top 25% enr that day", qmask("score_enriched", True)),
+        ("bot 25% enr that day", qmask("score_enriched", False)),
+        ("top 10% enr that day", qmask("score_enriched", True, 0.90)),
+        ("bot 10% enr that day", qmask("score_enriched", False, 0.90)),
+        ("top 25% score that day", qmask("score", True)),
+        ("bot 25% score that day", qmask("score", False)),
+        ("LEAD that day", lead),
+        ("LAG that day", lag),
+    ):
+        lines.append(
+            f"| {name} | {int(m.sum()):,} | "
+            + " | ".join(cell(m, h) for h in horizons)
+            + " |"
+        )
+
+    lines.append("")
+    lines.append(
+        "Read the (pp) as lift vs that base. Near 0 = no edge. "
+        "2m requires 42 bars so the last ~8 weeks of asof are dropped. "
+        "B1 fundamentals only exist on/after a Finviz export. "
+        "P04 (sec↑/sec↓) is ⚪ until the first sector board."
+    )
+    lines.append("")
+    return lines
+
+
+def _universe_daily_trail(out: pd.DataFrame) -> list[str]:
+    """BB-style daily trail, one row per session across the liquid universe."""
+    if out is None or out.empty:
+        return ["## Universe — daily trail (every session)", "", "_no rows_", ""]
+    df = out.copy()
+    df["_asof"] = df["asof_date"].astype(str).str[:10]
+    lines = [
+        "## Universe — daily trail (every session)",
+        "",
+        "Same table as a single-ticker trail, rolled up: **median score / ctx / enr** "
+        "and % of names with LEAD / peers↑ / ind↑ that day. "
+        "1d 3d 1w 2m dots are the universe-wide 🟢 rate that day (🟢 if ≥50%). "
+        "Per-ticker rows live in the parquet — markdown cannot hold ~2,500 × N sessions.",
+        "",
+        "| date | n | score | ctx | enr | LEAD | peers↑ | ind↑ | 1d | 3d | 1w | 2m |",
+        "|------|--:|------:|----:|----:|-----:|-------:|-----:|:--:|:--:|:--:|:--:|",
+    ]
+    for date, day in df.groupby("_asof", sort=True):
+        n = len(day)
+        sc = day["score"].median()
+        cx = day["score_context"].median()
+        en = day["score_enriched"].median()
+        lead = (day["P01"] == 1).mean()
+        p2 = (day["P02"] == 1).mean()
+        p3 = (day["P03"] == 1).mean()
+        cells = []
+        for h in ("1d", "3d", "1w", "2m"):
+            sub = day
+            bars_col = f"bars_{h}"
+            if bars_col in day.columns:
+                b = pd.to_numeric(day[bars_col], errors="coerce").fillna(0)
+                sub = day[b >= HORIZONS[h]]
+            v = pd.to_numeric(sub[f"fav_{h}"], errors="coerce").dropna()
+            if len(v) < 5:
+                cells.append("⚪")
+            else:
+                r = float(v.mean())
+                cells.append(f"{_dot(r)} {100 * r:.0f}%")
+        lines.append(
+            f"| {date} | {n:,} | {_score_cell(sc)} | {int(round(cx)):+d} | "
+            f"{_score_cell(en)} | {100 * lead:.0f}% | {100 * p2:.0f}% | {100 * p3:.0f}% | "
+            + " | ".join(cells)
+            + " |"
+        )
+    lines.append("")
     return lines
 
 
 def _universe_scoreboard(out: pd.DataFrame) -> list[str]:
-    """Readable 'what the scores say' for a liquid-universe PIT table."""
+    """Latest-session who (the BB trail is one name; universe needs a snapshot)."""
     if out is None or out.empty:
-        return ["## Universe scoreboard", "", "_no rows_", ""]
+        return ["## Latest session snapshot", "", "_no rows_", ""]
     asof_s = out["asof_date"].astype(str).str[:10]
     latest = asof_s.max()
     day = out.loc[asof_s == latest].copy()
     n = len(day)
     lines = [
-        f"## Latest session `{latest}` — what the scores say",
+        f"## Latest session `{latest}` — who (top / bottom enriched)",
         "",
         f"- names: **{n:,}**",
         f"- score median **{day['score'].median():.0f}** "
@@ -496,22 +642,215 @@ def _universe_scoreboard(out: pd.DataFrame) -> list[str]:
             f"{_score_cell(r['score_enriched'])} | {r.get('context_label') or ''} | "
             f"{r.get('sector') or '—'} |"
         )
-    tmp = out.copy()
-    tmp["_m"] = asof_s.str[:7]
-    g = tmp.groupby("_m", sort=True)["score_enriched"].agg(["median", "mean", "count"])
-    lines += [
-        "",
-        "### Enriched score by month (all names × sessions)",
-        "",
-        "| month | n | median | mean |",
-        "|-------|--:|-------:|-----:|",
-    ]
-    for m, row in g.iterrows():
-        lines.append(
-            f"| {m} | {int(row['count']):,} | {row['median']:.2f} | {row['mean']:.2f} |"
-        )
     lines.append("")
     return lines
+
+
+def write_report(
+    out: pd.DataFrame,
+    start: str,
+    end: str,
+    tag: str,
+    *,
+    ticker: str | None = None,
+    first_exp: str | None = None,
+    last_exp: str | None = None,
+    board_dates: list | None = None,
+    sector_name: str | None = None,
+    industry_name: str | None = None,
+    extra_bullets: list[str] | None = None,
+) -> Path:
+    """Write the BB-style markdown + json next to the parquet. Returns md path."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    stem = artifact_stem(start, end, tag)
+    parquet = OUT_DIR / f"{stem}.parquet"
+    board_dates = board_dates or []
+    lines = [
+        f"# AB PIT backfill — {start} → {end} — {tag}",
+        "",
+        f"- Rows: **{len(out):,}** · actual `{out['asof_date'].min() if len(out) else '—'}` → `{out['asof_date'].max() if len(out) else '—'}`",
+        f"- Finviz exports: `{first_exp or '—'}` → `{last_exp or '—'}` (B1 only when export ≤ asof)",
+        f"- Sector boards on disk: **{len(board_dates)}** "
+        f"({board_dates[0] if board_dates else '—'} → {board_dates[-1] if board_dates else '—'}; P04=⚪ before first board)",
+        f"- Peers: Correlations map × price_store 5d returns (PIT)",
+        f"- Industry: 5d median of industry roster (from latest export membership)",
+    ]
+    if extra_bullets:
+        lines.extend(extra_bullets)
+    lines += [
+        "",
+        "## Legend — scores",
+        "",
+        "| col | meaning |",
+        "|-----|---------|",
+        "| score | Sum of AB Part A + B1 feature flags **as of that day** |",
+        "| ctx | Sum of context flags P01+P02+P03+P04 that day |",
+        "| enr | score + ctx |",
+        "| color on score/enr | green if >0, red if <0, white if 0 |",
+        "| 1d 3d 1w 2m | forward max-upside vs |max-downside| from that day's close |",
+        "",
+        "## Legend — P01 to P04 (context flags)",
+        "",
+        "| Flag | Name | +1 (green) | -1 (red) | Data source |",
+        "|------|------|------------|----------|-------------|",
+        "| **P01** | Peer lead / lag | stock 5d - peer-median 5d > 0 and beats >=50% peers | lags peers | Correlations peers + price_store OHLC <= asof |",
+        "| **P02** | Peers advancing | peer-basket median 5d > 0 | median 5d < 0 | same peer set |",
+        "| **P03** | Industry advancing | industry median 5d > 0 | median 5d < 0 | Finviz Industry roster + price_store |",
+        "| **P04** | Sector supportive | sector board Dir=up | Dir=down | nearest `01_daily/sectors/<board_date>/_BOARD.md` with board_date <= asof |",
+        "",
+        "## Legend — Finviz chart E / R markers",
+        "",
+        "| Marker | Meaning | Green | Red | Source |",
+        "|--------|---------|-------|-----|--------|",
+        "| **E** | Earnings (chart E) | EPS beat | EPS miss | yfinance earnings dates, PIT <= asof |",
+        "| **R** | Analyst action (chart R) | Upgrade | Downgrade | yfinance recommendations |",
+        "",
+        "Trail shows the most recent E and R on or before that day.",
+    ]
+    if not ticker:
+        lines.append("Universe runs skip E/R prefetch (too slow); those columns are ⚪.")
+    lines += [
+        "",
+        "Label chips: green LEAD / red LAG · peers up/down · ind up/down · sec up/down (white = neutral/no data).",
+        "",
+    ]
+
+    if len(out) and not ticker:
+        lines.extend(_universe_daily_trail(out))
+        lines.extend(_universe_scoreboard(out))
+
+    if len(out) and ticker:
+        lines += [
+            f"## {ticker} — daily trail (every session)",
+            "",
+            "| date | score | ctx | enr | context | E | R | rs5d | sec | board_date | 1d | 3d | 1w | 2m |",
+            "|------|-------|----:|-----|---------|---|---|------|-----|------------|:--:|:--:|:--:|:--:|",
+        ]
+        for _, r in out.sort_values("asof_date").iterrows():
+            rs = r.get("rs_5d")
+            bd = r.get("sector_board_date")
+            if bd is None or (isinstance(bd, float) and not np.isfinite(bd)):
+                bd = "—"
+            lines.append(
+                f"| {r['asof_date']} | {_score_cell(r['score'])} | {int(r['score_context']):+d} | "
+                f"{_score_cell(r['score_enriched'])} | {_label_colored(r)} | "
+                f"{_er_chip('E', r.get('last_E_color'), r.get('last_E_label'), r.get('last_E_surprise'), r.get('days_since_E'))} | "
+                f"{_er_chip('R', r.get('last_R_color'), r.get('last_R_label'), None, r.get('days_since_R'))} | "
+                f"{(f'{float(rs):+.1%}' if rs is not None and np.isfinite(rs) else '—')} | "
+                f"{_sec_dot(r.get('sector_dir'))} | {bd} | "
+                f"{_dot(r.get('fav_1d'))} | {_dot(r.get('fav_3d'))} | "
+                f"{_dot(r.get('fav_1w'))} | {_dot(r.get('fav_2m'))} |"
+            )
+        lines += [
+            "",
+            "### Sector source footnote (P04)",
+            "",
+            f"- Ticker **{ticker}** sector **`{sector_name or '—'}`**, industry **`{industry_name or '—'}`** "
+            f"(from latest Finviz export roster).",
+            "- Rule: each asof day uses the **latest** `board_date <= asof`. If none, sec is white and P04=0.",
+            "",
+            "| board_date | file | sector row | Dir | Score |",
+            "|------------|------|------------|-----|------:|",
+        ]
+        used = out.dropna(subset=["sector_board_date"]) if "sector_board_date" in out.columns else out.iloc[0:0]
+        if len(used):
+            seen = set()
+            for _, r in used.sort_values("sector_board_date").iterrows():
+                bd = r.get("sector_board_date")
+                if not bd or bd in seen:
+                    continue
+                seen.add(bd)
+                sc = r.get("sector_score")
+                sc_s = sc if (sc is not None and np.isfinite(sc)) else "—"
+                lines.append(
+                    f"| {bd} | `01_daily/sectors/{bd}/_BOARD.md` | **{r.get('sector') or sector_name or '—'}** | "
+                    f"{r.get('sector_dir') or '—'} | {sc_s} |"
+                )
+        else:
+            lines.append("| — | _(no sector board <= any asof)_ | — | — | — |")
+        lines += ["", "All sector board files on disk at run time:"]
+        if board_dates:
+            for bd in board_dates:
+                lines.append(f"- `01_daily/sectors/{bd}/_BOARD.md`")
+        else:
+            lines.append("- _(none found)_")
+
+    if len(out):
+        lines.append("")
+        lines.extend(_pattern_audit(out))
+
+    lines += ["", f"- parquet: `{parquet.relative_to(ROOT)}`"]
+    md = OUT_DIR / f"{stem}.md"
+    md.write_text("\n".join(lines), encoding="utf-8")
+    (OUT_DIR / f"{stem}.json").write_text(
+        json.dumps(
+            {
+                "start": start,
+                "end": end,
+                "ticker": ticker,
+                "n_rows": int(len(out)),
+                "sector_boards": board_dates,
+                "export_first": first_exp,
+                "export_last": last_exp,
+                "generated": datetime.now(ET).isoformat(),
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    print(f"[backfill] wrote {md} ({len(out):,} rows)", flush=True)
+    return md
+
+
+def rebuild_md_from_parquet(path: str) -> None:
+    """Rebuild BB-style MD from an existing PIT parquet (no rescoring)."""
+    p = Path(path)
+    if not p.is_file():
+        p = ROOT / path
+    if not p.is_file():
+        raise SystemExit(f"[backfill] parquet not found: {path}")
+    out = pd.read_parquet(p)
+    name = p.name.replace(".resume.parquet", ".parquet").replace(".parquet", "")
+    m = re.match(r"^(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})_(.+)$", name)
+    if not m:
+        raise SystemExit(f"[backfill] cannot parse start/end/tag from {p.name}")
+    start, end, tag = m.group(1), m.group(2), m.group(3)
+    ticker = None if tag == "universe" else tag
+    boards = ctx.load_sector_boards()
+    board_dates = [d for d, _ in boards]
+    exports = _load_exports()
+    exp_dates = [d for d, _ in exports]
+    try:
+        rel = str(p.resolve().relative_to(ROOT))
+    except Exception:
+        rel = str(p)
+    extra = [f"- rebuilt MD from `{rel}` (no rescoring)"]
+    if ".resume." in p.name:
+        extra.append("- source is a **resume checkpoint** (PIT still in progress; last asof may be short of `end`)")
+    write_report(
+        out, start, end, tag,
+        ticker=ticker,
+        first_exp=exp_dates[0] if exp_dates else None,
+        last_exp=exp_dates[-1] if exp_dates else None,
+        board_dates=board_dates,
+        extra_bullets=extra,
+    )
+    if tag == "universe" and len(out):
+        cut = (pd.Timestamp(end) - pd.DateOffset(months=6)).date().isoformat()
+        asof_s = out["asof_date"].astype(str).str[:10]
+        six = out.loc[asof_s >= cut].copy()
+        if len(six) and str(asof_s.min())[:10] < cut:
+            six_pq = OUT_DIR / f"{cut}_{end}_universe.parquet"
+            six.to_parquet(six_pq, index=False)
+            write_report(
+                six, cut, end, "universe",
+                ticker=None,
+                first_exp=exp_dates[0] if exp_dates else None,
+                last_exp=exp_dates[-1] if exp_dates else None,
+                board_dates=board_dates,
+                extra_bullets=[f"- 6-month slice of `{name}.parquet`"],
+            )
+
 
 
 def run(
@@ -748,132 +1087,16 @@ def run(
     if ticker or len(out) < 500_000:
         out.to_csv(OUT_DIR / f"{stem}.csv", index=False)
 
-    lines = [
-        f"# AB PIT backfill — {start} → {end} — {tag}",
-        "",
-        f"- Rows: **{len(out):,}** · actual `{out['asof_date'].min() if len(out) else '—'}` → `{out['asof_date'].max() if len(out) else '—'}`",
-        f"- Finviz exports: `{first_exp}` → `{last_exp}` (B1 only when export ≤ asof)",
-        f"- Sector boards on disk: **{len(boards)}** "
-        f"({board_dates[0] if board_dates else '—'} → {board_dates[-1] if board_dates else '—'}; P04=⚪ before first board)",
-        f"- Peers: Correlations map × price_store 5d returns (PIT)",
-        f"- Industry: 5d median of industry roster (from latest export membership)",
-        "",
-        "## Legend — scores",
-        "",
-        "| col | meaning |",
-        "|-----|---------|",
-        "| score | Sum of AB Part A + B1 feature flags **as of that day** |",
-        "| ctx | Sum of context flags P01+P02+P03+P04 that day |",
-        "| enr | score + ctx |",
-        "| color on score/enr | green if >0, red if <0, white if 0 |",
-        "| 1d 3d 1w 2m | forward max-upside vs |max-downside| from that day's close |",
-        "",
-        "## Legend — P01 to P04 (context flags)",
-        "",
-        "| Flag | Name | +1 (green) | -1 (red) | Data source |",
-        "|------|------|------------|----------|-------------|",
-        "| **P01** | Peer lead / lag | stock 5d - peer-median 5d > 0 and beats >=50% peers | lags peers | Correlations peers + price_store OHLC <= asof |",
-        "| **P02** | Peers advancing | peer-basket median 5d > 0 | median 5d < 0 | same peer set |",
-        "| **P03** | Industry advancing | industry median 5d > 0 | median 5d < 0 | Finviz Industry roster + price_store |",
-        "| **P04** | Sector supportive | sector board Dir=up | Dir=down | nearest `01_daily/sectors/<board_date>/_BOARD.md` with board_date <= asof |",
-        "",
-        "## Legend — Finviz chart E / R markers",
-        "",
-        "| Marker | Meaning | Green | Red | Source |",
-        "|--------|---------|-------|-----|--------|",
-        "| **E** | Earnings (chart E) | EPS beat | EPS miss | yfinance earnings dates, PIT <= asof |",
-        "| **R** | Analyst action (chart R) | Upgrade | Downgrade | yfinance recommendations |",
-        "",
-        "Trail shows the most recent E and R on or before that day.",
-        "",
-        "Label chips: green LEAD / red LAG · peers up/down · ind up/down · sec up/down (white = neutral/no data).",
-        "",
-    ]
-
-    if len(out) and not ticker:
-        lines.extend(_universe_scoreboard(out))
-
-    if len(out) and ticker:
-        lines += [
-            f"## {ticker} — daily trail (every session)",
-            "",
-            "| date | score | ctx | enr | context | E | R | rs5d | sec | board_date | 1d | 3d | 1w | 2m |",
-            "|------|-------|----:|-----|---------|---|---|------|-----|------------|:--:|:--:|:--:|:--:|",
-        ]
-        for _, r in out.sort_values("asof_date").iterrows():
-            rs = r.get("rs_5d")
-            lines.append(
-                f"| {r['asof_date']} | {_score_cell(r['score'])} | {int(r['score_context']):+d} | "
-                f"{_score_cell(r['score_enriched'])} | {_label_colored(r)} | "
-                f"{_er_chip('E', r.get('last_E_color'), r.get('last_E_label'), r.get('last_E_surprise'), r.get('days_since_E'))} | "
-                f"{_er_chip('R', r.get('last_R_color'), r.get('last_R_label'), None, r.get('days_since_R'))} | "
-                f"{(f'{rs:+.1%}' if np.isfinite(rs) else '—')} | "
-                f"{_sec_dot(r.get('sector_dir'))} | {r.get('sector_board_date') or '—'} | "
-                f"{_dot(r.get('fav_1d'))} | {_dot(r.get('fav_3d'))} | "
-                f"{_dot(r.get('fav_1w'))} | {_dot(r.get('fav_2m'))} |"
-            )
-
-        lines += [
-            "",
-            "### Sector source footnote (P04)",
-            "",
-            f"- Ticker **{ticker}** sector **`{sector_name or '—'}`**, industry **`{industry_name or '—'}`** "
-            f"(from latest Finviz export roster).",
-            "- Rule: each asof day uses the **latest** `board_date <= asof`. If none, sec is white and P04=0.",
-            "",
-            "| board_date | file | sector row | Dir | Score |",
-            "|------------|------|------------|-----|------:|",
-        ]
-        used = out.dropna(subset=["sector_board_date"]) if "sector_board_date" in out.columns else out.iloc[0:0]
-        if len(used):
-            seen = set()
-            for _, r in used.sort_values("sector_board_date").iterrows():
-                bd = r.get("sector_board_date")
-                if not bd or bd in seen:
-                    continue
-                seen.add(bd)
-                sc = r.get("sector_score")
-                sc_s = sc if (sc is not None and __import__("numpy").isfinite(sc)) else "—"
-                lines.append(
-                    f"| {bd} | `01_daily/sectors/{bd}/_BOARD.md` | **{r.get('sector') or sector_name or '—'}** | "
-                    f"{r.get('sector_dir') or '—'} | {sc_s} |"
-                )
-        else:
-            lines.append("| — | _(no sector board <= any asof)_ | — | — | — |")
-
-        lines += ["", "All sector board files on disk at run time:"]
-        if board_dates:
-            for bd in board_dates:
-                lines.append(f"- `01_daily/sectors/{bd}/_BOARD.md`")
-        else:
-            lines.append("- _(none found)_")
-
-
-    if len(out):
-        lines.append("")
-        lines.extend(_pattern_audit(out))
-
-    lines += ["", f"- parquet: `{parquet.relative_to(ROOT)}`"]
-    md = OUT_DIR / f"{stem}.md"
-    md.write_text("\n".join(lines), encoding="utf-8")
-    (OUT_DIR / f"{stem}.json").write_text(
-        json.dumps(
-            {
-                "start": start,
-                "end": end,
-                "ticker": ticker,
-                "n_rows": int(len(out)),
-                "sector_boards": board_dates,
-                "export_first": first_exp,
-                "export_last": last_exp,
-                "generated": datetime.now(ET).isoformat(),
-            },
-            indent=2,
-        ),
-        encoding="utf-8",
+    write_report(
+        out, start, end, tag,
+        ticker=ticker,
+        first_exp=first_exp,
+        last_exp=last_exp,
+        board_dates=board_dates,
+        sector_name=sector_name,
+        industry_name=industry_name,
     )
     print(f"[backfill] wrote {parquet} rows={len(out):,}")
-    print(f"[backfill] wrote {md}")
 
     # Always emit a 6-month slice so the "past 6 months" view exists even when
     # we resumed a 12-month checkpoint (stem 2025-08-19_2026-08-19_universe).
@@ -882,33 +1105,15 @@ def run(
         asof_s = out["asof_date"].astype(str).str[:10]
         six = out.loc[asof_s >= cut].copy()
         if len(six) and str(asof_s.min())[:10] < cut:
-            six_stem = f"{cut}_{end}_universe"
-            six_pq = OUT_DIR / f"{six_stem}.parquet"
+            six_pq = OUT_DIR / f"{cut}_{end}_universe.parquet"
             six.to_parquet(six_pq, index=False)
-            six_lines = [
-                f"# AB PIT backfill — {cut} → {end} — universe (6-month slice)",
-                "",
-                f"- Rows: **{len(six):,}** · `{six['asof_date'].min()}` → `{six['asof_date'].max()}`",
-                f"- Sliced from `{stem}.parquet` (full window {start} → {end}).",
-                "",
-            ]
-            six_lines.extend(_universe_scoreboard(six))
-            six_lines.extend(_pattern_audit(six))
-            six_md = OUT_DIR / f"{six_stem}.md"
-            six_md.write_text("\n".join(six_lines), encoding="utf-8")
-            (OUT_DIR / f"{six_stem}.json").write_text(
-                json.dumps(
-                    {
-                        "start": cut,
-                        "end": end,
-                        "ticker": None,
-                        "slice_of": stem,
-                        "n_rows": int(len(six)),
-                        "generated": datetime.now(ET).isoformat(),
-                    },
-                    indent=2,
-                ),
-                encoding="utf-8",
+            write_report(
+                six, cut, end, "universe",
+                ticker=None,
+                first_exp=first_exp,
+                last_exp=last_exp,
+                board_dates=board_dates,
+                extra_bullets=[f"- 6-month slice of `{stem}.parquet`"],
             )
             print(f"[backfill] wrote 6m slice {six_pq} rows={len(six):,}")
 
@@ -940,7 +1145,16 @@ def main():
         action="store_true",
         help="Force E/R prefetch even on universe (slow).",
     )
+    ap.add_argument(
+        "--md-only",
+        default=None,
+        metavar="PARQUET",
+        help="Rebuild BB-style MD + 6m slice from an existing parquet (no rescoring).",
+    )
     args = ap.parse_args()
+    if args.md_only:
+        rebuild_md_from_parquet(args.md_only)
+        return
     skip_events = True if args.skip_events else (False if args.events else None)
     run(
         start=args.start,

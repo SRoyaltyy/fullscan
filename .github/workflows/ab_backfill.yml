@@ -33,6 +33,15 @@ on:
         type: boolean
         required: false
         default: true
+      md_only:
+        description: "Skip PIT scoring; rebuild BB-style MD from existing parquet"
+        type: boolean
+        required: false
+        default: false
+      md_path:
+        description: "Parquet for md_only (blank = newest *_universe.parquet, not resume)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -56,7 +65,7 @@ jobs:
           pip install pyarrow
 
       - name: Ensure price history
-        if: ${{ inputs.skip_bootstrap != true }}
+        if: ${{ inputs.skip_bootstrap != true && inputs.md_only != true }}
         run: |
           set -euo pipefail
           DAYS="${{ inputs.bootstrap_days }}"
@@ -70,9 +79,11 @@ jobs:
           fi
 
       - name: Price store status
+        if: ${{ inputs.md_only != true }}
         run: python -m src.price_store status || true
 
       - name: PIT backfill
+        if: ${{ inputs.md_only != true }}
         run: |
           set -euo pipefail
           ARGS=()
@@ -97,6 +108,35 @@ jobs:
             echo "===== $LATEST_MD ====="
             head -80 "$LATEST_MD"
           fi
+
+      - name: Rebuild MD from parquet
+        if: ${{ inputs.md_only == true }}
+        run: |
+          set -euo pipefail
+          P="${{ inputs.md_path }}"
+          if [ -z "$P" ]; then
+            # largest non-resume universe parquet (12m > 6m slice); else resume checkpoint
+            P=$(ls -1S data/ab_backfill/*_universe.parquet 2>/dev/null | head -1 || true)
+          fi
+          if [ -z "$P" ]; then
+            P=$(ls -1t data/ab_backfill/*universe*.resume.parquet 2>/dev/null | head -1 || true)
+          fi
+          if [ -z "$P" ] || [ ! -f "$P" ]; then
+            echo "No universe parquet found for --md-only"
+            ls -lah data/ab_backfill/ || true
+            exit 1
+          fi
+          echo "CMD: python -u -m src.ab_backfill --md-only $P"
+          python -u -m src.ab_backfill --md-only "$P"
+          echo "==== outputs ===="
+          ls -lah data/ab_backfill/*.md | tail -20
+          for f in data/ab_backfill/*universe*.md; do
+            [ -f "$f" ] || continue
+            echo "===== $f ====="
+            head -40 "$f"
+            echo "----- audit -----"
+            grep -A 80 '^## Pattern correlation audit' "$f" | head -90
+          done
 
       - uses: actions/upload-artifact@v4
         if: always()
