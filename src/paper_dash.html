@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paper Trading — Stock Book Simulation</title>
+<style>
+ body{margin:0;background:#0f1420;color:#dfe6f2;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 20px 40px}
+ h1{font-size:20px;margin:0 0 4px}
+ .sub{color:#8b96ab;font-size:12px;margin:0 0 12px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:#171e2e;border:1px solid #262f45;border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:17px;margin-top:2px}
+ .pos{color:#4ade80}.neg{color:#f87171}.mut{color:#8b96ab}
+ canvas{width:100%;height:380px;background:#171e2e;border:1px solid #262f45;border-radius:10px}
+ .legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+ .legend span{cursor:pointer;padding:2px 10px;border-radius:12px;border:1px solid #333;font-size:12px;user-select:none}
+ table{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:12.5px}
+ th,td{padding:6px 8px;border-bottom:1px solid #232c42;text-align:right;white-space:nowrap}
+ th{color:#8b96ab;font-weight:600;text-align:right} td:first-child,th:first-child{text-align:left}
+ h2{font-size:15px;margin:18px 0 6px;color:#aeb9cf}
+ .note{color:#66708a;font-size:11.5px;margin-top:8px}
+ .bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+ .bar input,.bar select{background:#171e2e;color:#dfe6f2;border:1px solid #262f45;border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace}
+ .chip{cursor:pointer;padding:7px 12px;border-radius:999px;border:1px solid #2a3450;background:#171e2e;color:#aeb9cf;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .chip.on{background:#dfe6f2;color:#0f1420;border-color:#dfe6f2}
+ .chip.spy{opacity:.85}
+ td.side-buy{color:#4ade80;font-weight:700;text-align:left}
+ td.side-sell{color:#f87171;font-weight:700;text-align:left}
+ td.tick,td.left{text-align:left}
+ .how{background:#171e2e;border:1px solid #262f45;border-radius:10px;padding:12px 14px;margin:16px 0 8px}
+ .how h2{margin:0 0 8px}
+ .how ol{margin:0;padding-left:18px}
+ .how li{margin:0 0 6px}
+ .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#fbbf24}
+ .lock{color:#fbbf24}
+</style></head><body><div class="wrap">
+<h1>Paper Trading — Stock Book Simulation</h1>
+<div class="sub" id="gen"></div>
+<div class="cards" id="cards"></div>
+
+<h2 id="curveTitle">Equity curve</h2>
+<div class="bar" id="sleeveBar"></div>
+<canvas id="chart" height="380"></canvas>
+<div class="legend" id="legend"></div>
+
+<section class="how" id="how"></section>
+
+<h2 id="fillsTitle">Fills — bought / sold at price</h2>
+<p class="mut" id="fillsHint" style="margin:0 0 6px"></p>
+<div class="bar">
+ <select id="fillSide" aria-label="Side">
+  <option value="all">All sides</option>
+  <option value="buy">Buys only</option>
+  <option value="sell">Sells only</option>
+ </select>
+ <input id="fillQ" placeholder="Ticker (e.g. CEG)" aria-label="Filter ticker">
+ <span class="mut" id="fillCount"></span>
+</div>
+<table id="fills"></table>
+
+<h2>Sleeve statistics</h2>
+<table id="stats"></table>
+<h2>Open positions</h2>
+<table id="pos"></table>
+<div class="note" id="fees"></div>
+</div>
+<script>
+const D = __DATA__;
+const COLORS = ["#60a5fa","#34d399","#fbbf24","#f472b6","#a78bfa","#f87171","#22d3ee","#fb923c","#4ade80","#e879f9","#94a3b8"];
+const keys = Object.keys(D.series);
+const sleeveNames = (D.stats||[]).map(s=>s.sleeve);
+const HOLD = (D.rules && D.rules.hold_days) || { "1d":1,"3d":3,"1w":5,"2w":10,"1m":21 };
+const HOLD_ON = !!(D.rules && D.rules.hold_applied);
+const hidden = new Set();
+let sleeveFilter = "all";
+
+function money(n){return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
+function px(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:4});}
+function horizonOf(s){return (s||"").split("_")[0];}
+function minHold(s){return HOLD[horizonOf(s)] ?? 1;}
+function sessionsBetween(a,b){
+  const ia=D.dates.indexOf(a), ib=D.dates.indexOf(b);
+  if(ia<0||ib<0) return null;
+  return ib-ia;
+}
+
+document.getElementById('gen').textContent =
+  "Generated "+D.generated.slice(0,16).replace('T',' ')+" · "+D.dates.length+" trading day(s) · $"+
+  D.capital.toLocaleString()+" per sleeve · long-only, whole shares, signal-day close fills";
+
+function cardSet(){
+  const sorted=[...D.stats].sort((a,b)=>b.return_pct-a.return_pct);
+  const spy=D.series["SPY (benchmark)"];
+  const spyR=spy?100*(spy[spy.length-1]/spy[0]-1):null;
+  if(sleeveFilter==="all"){
+    const tot=D.stats.reduce((a,s)=>a+s.equity,0);
+    const cards=[["Best sleeve",sorted[0]],["Worst sleeve",sorted[sorted.length-1]]];
+    if(spyR!=null) cards.push(["SPY benchmark",{sleeve:"SPY",return_pct:+spyR.toFixed(2)}]);
+    cards.push(["Total equity",{sleeve:D.stats.length+" sleeves",return_pct:+(100*(tot/(D.capital*D.stats.length)-1)).toFixed(2)}]);
+    return cards;
+  }
+  const s=D.stats.find(x=>x.sleeve===sleeveFilter);
+  const cards=[["This sleeve",s||{sleeve:sleeveFilter,return_pct:0}]];
+  if(spyR!=null) cards.push(["SPY benchmark",{sleeve:"SPY",return_pct:+spyR.toFixed(2)}]);
+  if(s) cards.push(["Trades / win",{sleeve:s.trades+" fills",return_pct:s.win_rate}]);
+  cards.push(["Min hold",{sleeve:horizonOf(sleeveFilter),return_pct:minHold(sleeveFilter)}]);
+  return cards;
+}
+function renderCards(){
+  document.getElementById('cards').innerHTML=cardSet().map((c,i)=>{
+    const val=c[1].return_pct;
+    const isHold=c[0]==="Min hold";
+    const cls=isHold?'mut':(val>=0?'pos':'neg');
+    const shown=isHold?(val+' session'+(val===1?'':'s')):(c[0]==="Trades / win"?(val==null?'—':val+'% win'):(val+'%'));
+    return `<div class="card"><span class="mut">${c[0]}</span><b>${c[1].sleeve}</b><span class="${cls}">${shown}</span></div>`;
+  }).join('');
+}
+
+function renderSleeveBar(){
+  const bar=document.getElementById('sleeveBar');
+  const chips=[["all","All sleeves"], ...sleeveNames.map(s=>[s,s])];
+  bar.innerHTML=chips.map(([id,label])=>{
+    const on=sleeveFilter===id?'on':'';
+    return `<button type="button" class="chip ${on}" data-sleeve="${id}">${label}</button>`;
+  }).join('');
+  bar.querySelectorAll('.chip').forEach(b=>{
+    b.onclick=()=>{sleeveFilter=b.dataset.sleeve; renderAll();};
+  });
+}
+
+function visibleKeys(){
+  if(sleeveFilter==="all") return keys.filter(k=>!hidden.has(k));
+  return keys.filter(k=>k===sleeveFilter || k.includes("SPY"));
+}
+
+function draw(){
+ const cv=document.getElementById('chart'),ctx=cv.getContext('2d');
+ const W=cv.width=cv.clientWidth*2,H=cv.height=760;ctx.scale(1,1);
+ ctx.clearRect(0,0,W,H);
+ const vis=visibleKeys();
+ let lo=Infinity,hi=-Infinity;
+ vis.forEach(k=>(D.series[k]||[]).forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));
+ if(lo===Infinity)return;const pad=(hi-lo)*0.06||1;lo-=pad;hi+=pad;
+ const X=i=>40+i/(Math.max(1,D.dates.length-1))*(W-70);
+ const Y=v=>H-30-(v-lo)/(hi-lo)*(H-60);
+ ctx.strokeStyle='#2a3450';ctx.fillStyle='#66708a';ctx.font='20px sans-serif';
+ for(let g=0;g<=4;g++){const v=lo+(hi-lo)*g/4;ctx.beginPath();ctx.moveTo(40,Y(v));ctx.lineTo(W-30,Y(v));ctx.stroke();
+  ctx.fillText('$'+(v/1000).toFixed(1)+'k',2,Y(v)+6);}
+ D.dates.forEach((d,i)=>{if(i%Math.ceil(D.dates.length/6)===0)ctx.fillText(d.slice(5),X(i)-18,H-8);});
+ vis.forEach((k)=>{const i=keys.indexOf(k);ctx.strokeStyle=COLORS[i%COLORS.length];
+  ctx.lineWidth=k.includes('SPY')?2.5:1.8;ctx.setLineDash(k.includes('SPY')?[6,4]:[]);
+  ctx.beginPath();let started=false;
+  D.series[k].forEach((v,j)=>{if(v==null)return;started?ctx.lineTo(X(j),Y(v)):ctx.moveTo(X(j),Y(v));started=true;});
+  ctx.stroke();ctx.setLineDash([]);});
+}
+
+function renderLegend(){
+  const vis=sleeveFilter==="all"?keys:[sleeveFilter,"SPY (benchmark)"].filter(k=>D.series[k]);
+  const leg=document.getElementById('legend');
+  leg.innerHTML="";
+  vis.forEach((k)=>{
+    const i=keys.indexOf(k);
+    const s=document.createElement('span');
+    s.textContent=k;
+    s.style.borderColor=COLORS[i%COLORS.length];
+    s.style.color=COLORS[i%COLORS.length];
+    if(sleeveFilter==="all"){
+      s.style.opacity=hidden.has(k)?0.3:1;
+      s.onclick=()=>{hidden.has(k)?hidden.delete(k):hidden.add(k);s.style.opacity=hidden.has(k)?0.3:1;draw();};
+    }
+    leg.appendChild(s);
+  });
+}
+
+function renderHow(){
+  const h=minHold(sleeveFilter==="all"?"1d_top":sleeveFilter);
+  const sleeveBit=sleeveFilter==="all"
+    ? "Each sleeve has its own $10k and its own book."
+    : `<code>${sleeveFilter}</code> follows the <code>${horizonOf(sleeveFilter)}</code> book, min hold <code>${h}</code> session${h===1?'':'s'}.`;
+  const holdLine=HOLD_ON
+    ? `A name is <b>not</b> sold until it has been held for that horizon’s minimum sessions (1d=1, 3d=3, 1w=5, 2w=10, 1m=21), even if it already dropped off the book.`
+    : `<b>Min-hold was not applied on this run</b> — every sleeve rebalanced every book day, which is why 1m looked like 1d. Next replay uses the session floors above.`;
+  document.getElementById('how').innerHTML=`
+    <h2>How a buy / sell is decided</h2>
+    <p class="mut" style="margin:0 0 8px">${sleeveBit} Long-only. Fill = that book date’s close (or last close on/before it). Futubull fees on every order.</p>
+    <ol>
+      <li><b>Pick the list.</b> <code>_top</code> = first 10 BUY names on that horizon’s stock book. <code>_size</code> = top 3 from each bucket (large+ / mid / small-micro). Horizon is the forecast window of the ranking, not a calendar rebalance.</li>
+      <li><b>Buy</b> when a name <em>enters</em> this sleeve’s list and we don’t already hold it. New names split leftover cash equally; whole shares only. Same-day round-trip of the same ticker does not happen — exits run first, then entries.</li>
+      <li><b>Sell</b> when a name <em>drops off</em> the list. ${holdLine}</li>
+      <li><b>Why sleeves used to trade on the same day:</b> the engine followed “still on the list?” every book date and ignored the hold floor. 1d and 1m lists both churn daily, so the blotter printed buys/sells on every date for every sleeve. Isolation + the hold floor is how you tell them apart.</li>
+    </ol>`;
+}
+
+function renderFills(){
+  const side=document.getElementById('fillSide').value;
+  const q=document.getElementById('fillQ').value.trim().toUpperCase();
+  const rows=(D.trades||[]).slice().reverse().filter(t=>{
+    if(sleeveFilter!=='all' && t.sleeve!==sleeveFilter) return false;
+    if(side!=='all' && t.side!==side) return false;
+    if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+  document.getElementById('fillCount').textContent=rows.length+' of '+(D.trades||[]).length+' fills';
+  document.getElementById('fillsTitle').textContent=
+    sleeveFilter==='all' ? 'Fills — all sleeves (pick a sleeve to unstack)' : 'Fills — '+sleeveFilter;
+  document.getElementById('fillsHint').textContent=
+    sleeveFilter==='all'
+      ? 'Mashed view. Click a sleeve chip above the chart to see only that book’s orders.'
+      : 'One row = one order in '+sleeveFilter+'. Price is the signal-day close. Newest first.';
+  document.getElementById('curveTitle').textContent=
+    sleeveFilter==='all' ? 'Equity curves (all sleeves)' : 'Equity curve — '+sleeveFilter+' vs SPY';
+  const showSleeve=sleeveFilter==='all';
+  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th>'+(showSleeve?'<th>Sleeve</th>':'')+'<th>Why</th><th>Amount</th><th>Realized P/L</th></tr>';
+  if(!rows.length){
+    document.getElementById('fills').innerHTML=head+'<tr><td colspan="'+(showSleeve?8:7)+'" class="mut">No fills match.</td></tr>';
+    return;
+  }
+  document.getElementById('fills').innerHTML=head+rows.map(t=>{
+    const sideCls=t.side==='sell'?'side-sell':'side-buy';
+    const pnl=t.realized_pnl;
+    const pnlCell=pnl==null||pnl===''?'<td class="mut">—</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
+    const why=t.reason || (t.side==='buy'?'entered book':'dropped from book');
+    return `<tr>
+      <td>${t.date}</td>
+      <td class="${sideCls}">${t.side.toUpperCase()}</td>
+      <td class="tick">${t.ticker}</td>
+      <td>${t.shares} sh @ ${px(t.price)}</td>
+      ${showSleeve?`<td>${t.sleeve}</td>`:''}
+      <td class="left mut">${why}</td>
+      <td>${money(t.amount)}</td>
+      ${pnlCell}
+    </tr>`;
+  }).join('');
+}
+
+function renderStats(){
+  const rows=sleeveFilter==='all'?D.stats:D.stats.filter(s=>s.sleeve===sleeveFilter);
+  document.getElementById('stats').innerHTML=
+   "<tr><th>Sleeve</th><th>Equity</th><th>Return</th><th>Cash</th><th>Open</th><th>Trades</th><th>Fees</th><th>Realized P/L</th><th>Win rate</th><th>Min hold</th></tr>"+
+   rows.map(s=>`<tr><td>${s.sleeve}</td><td>$${s.equity.toLocaleString()}</td>
+    <td class="${s.return_pct>=0?'pos':'neg'}">${s.return_pct}%</td><td>$${s.cash.toLocaleString()}</td>
+    <td>${s.open}</td><td>${s.trades}</td><td>$${s.fees.toLocaleString()}</td>
+    <td class="${s.realized>=0?'pos':'neg'}">$${s.realized.toLocaleString()}</td>
+    <td>${s.win_rate==null?'—':s.win_rate+'%'}</td>
+    <td>${minHold(s.sleeve)}d</td></tr>`).join('');
+}
+
+function renderPos(){
+  const rows=(D.positions||[]).filter(p=>sleeveFilter==='all'||p.sleeve===sleeveFilter);
+  document.getElementById('pos').innerHTML=
+   "<tr><th>Sleeve</th><th>Ticker</th><th>Shares</th><th>Entry date</th><th>Entry px</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>"+
+   (rows.length?rows.map(p=>{
+     const held=p.held_sessions!=null?p.held_sessions:sessionsBetween(p.entry_date, D.dates[D.dates.length-1]);
+     const mh=p.min_hold!=null?p.min_hold:minHold(p.sleeve);
+     let status='on book';
+     if(p.on_book===false){
+       status = (HOLD_ON && held!=null && held<mh) ? `min-hold lock ${held}/${mh}d` : 'dropped — waiting sell';
+     } else if(held!=null){
+       status = `on book · held ${held}d`;
+     }
+     const lock=status.indexOf('lock')>=0?'lock':'mut';
+     return `<tr><td>${p.sleeve}</td><td><b>${p.ticker}</b></td><td>${p.shares}</td>
+      <td>${p.entry_date}</td><td>$${p.entry_px}</td><td>$${p.last}</td>
+      <td class="${p.unrealized>=0?'pos':'neg'}">$${p.unrealized.toLocaleString()}</td>
+      <td class="${lock}">${status}</td></tr>`;
+   }).join('')
+    :'<tr><td colspan="8" class="mut">No open positions in this sleeve.</td></tr>');
+}
+
+function renderAll(){
+  renderSleeveBar();
+  renderCards();
+  renderLegend();
+  draw();
+  renderHow();
+  renderFills();
+  renderStats();
+  renderPos();
+}
+document.getElementById('fillSide').onchange=renderFills;
+document.getElementById('fillQ').oninput=renderFills;
+addEventListener('resize',draw);
+renderAll();
+const F=D.fees||{};
+document.getElementById('fees').textContent=
+ `Fee model (Futubull US stocks): commission $${F.commission_per_share}/sh (min $${F.commission_min_per_order}, cap 0.5%) + platform $${F.platform_per_share}/sh (min $${F.platform_min_per_order}, cap 0.5%) + settlement $${F.settlement_per_share}/sh; sells add regulatory ${(F.regulatory_pct_of_amount_sell_only||0)*100}% of amount + TAF $${F.taf_per_share_sell_only}/sh (max $${F.taf_max_per_order}).`;
+</script></body></html>
