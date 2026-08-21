@@ -1,0 +1,395 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-21T07:53:14.583902-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 5.19,
+      "delta_1d": -0.09,
+      "delta_1w": -0.05,
+      "delta_1m": 0.06
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 4.65,
+      "delta_1d": -0.06,
+      "delta_1w": -0.03,
+      "delta_1m": 0.02
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 2.35,
+      "delta_1d": -0.06,
+      "delta_1w": -0.07,
+      "delta_1m": -0.02
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 2.73,
+      "delta_1d": -0.02,
+      "delta_1w": 0.02,
+      "delta_1m": 0.04
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 3.62,
+      "delta_1d": -0.03,
+      "delta_1w": 0.0,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 0.225,
+      "delta_1d": -0.092,
+      "delta_1w": -0.225,
+      "delta_1m": -0.151
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-19",
+      "current": 151.65,
+      "delta_1d": -58.55,
+      "delta_1w": -66.96,
+      "delta_1m": -83.71
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-21",
+      "current": 15.45,
+      "delta_1d": -0.56,
+      "delta_1w": 1.2
+    },
+    "vix3m": {
+      "date": "2026-08-20",
+      "current": 19.06,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.811,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 16.02,
+    "ratio_ma20": 0.964
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 86.49,
+      "pct_1d": -1.53
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 93.33,
+      "pct_1d": -0.48
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 4651.0,
+      "pct_1d": 2.98
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-21",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.23,
+      "pct_1m": -2.72
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 7696.75,
+      "pct_1d": 0.45
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 29516.75,
+      "pct_1d": 0.74
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 66016.36,
+          "pct_1d": -0.3
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26009.46,
+          "pct_1d": 1.21
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 3905.2,
+          "pct_1d": 0.04
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6912.95,
+          "pct_1d": 0.88
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 9058.9,
+          "pct_1d": -0.27
+        }
+      },
+      "composite_avg": 0.31
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 10773.64,
+          "pct_1d": 0.24
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26075.81,
+          "pct_1d": 0.36
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 8466.47,
+          "pct_1d": 0.16
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6446.18,
+          "pct_1d": 0.38
+        }
+      },
+      "composite_avg": 0.28
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.483,
+    "window": "2026-08-13..2026-08-20"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.0,
+    "label": "Neutral",
+    "note": "from Supabase macro_indicators as of 2026-08-20 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "LG Energy Solution Starts Production at 35-GWh Michigan Battery Plant",
+        "url": "https://finance.yahoo.com/energy/articles/lg-energy-solution-starts-production-021921915.html",
+        "published_at": "2026-08-20T02:19:21Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Treasury Makes a Surprise Move to Bring Down Borrowing Costs",
+        "url": "https://finance.yahoo.com/economy/policy/articles/treasury-makes-surprise-move-bring-020819303.html",
+        "published_at": "2026-08-20T02:08:19Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "How Will Dick’s Sporting Goods Stock React To Its Upcoming Earnings? - Trefis",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOWd1ZGhhOG9sdmEyWFZkX2lnaWVmdk5vRWZ1NG5oVXhTUU1OYmpqV2ZQOGtXX1RpUzZPNUJhYzRLRkRUZVN5V0dOdi1ON1k2Q0Faa0J4YVN2SUJTWnZPSF8xQzBieHRlTFIwemgxaUlxdF9OamVZQlpYY3YzNF9tZUhNdElSa2ZPLXVTa3hfdjFicWVKNUNXLTBLM2hmZzkxVDMzQVJUbzI3dGtfQjFDSUU1QUlyVGxKa3ZGaGFrMnpJSEhSeTE0?oc=5",
+        "published_at": "Fri, 21 Aug 2026 11:04:38 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Diesel Engines Meet the AI Boom: Inside Caterpillar and Cummins’ Record Quarters",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/diesel-engines-meet-ai-boom-030015033.html",
+        "published_at": "2026-08-20T03:00:15Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Moderna Soars as Vaccine-Drug Combo Slows Recurrence of Melanoma",
+        "url": "https://finance.yahoo.com/healthcare/articles/moderna-soars-vaccine-drug-combo-040100258.html",
+        "published_at": "2026-08-20T04:01:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "BBB Foods (TBBB) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bbb-foods-tbbb-q2-2026-234407593.html",
+        "published_at": "2026-08-19T23:44:07Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Anthropic wants to match or beat SpaceX’s record IPO size - report - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNb1lZY3N0M21JNWRFVnZBMU5LakFESDR3dVE0TUoxZk02S3VVcDF2dkNKUTBsYjdSRDFicWVpcHYtWmxCdmpVX3IzVVFEZmItVkpMbk0zWW9oUU5xQV9yLVp1VnVmaW5nOUNmdmJ6VnQ5eExJR1ZpMDJIaUo3T1dBalluWjhrVFRkYTNhQXdjWWd1dzNlSnVEdW1HZG56cFdSejhVSDRpUmJUY1BRaXZIaWowVW85aDgyS2lNTjRn?oc=5",
+        "published_at": "Fri, 21 Aug 2026 03:25:22 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Nvidia Reports Earnings Wednesday. Here’s How Much the Stock Is Expected to Move - Investopedia",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcTBUUUJ3M2ZqLVRfUnFNMEh2cHZzSTdPOU53RElNcGctejByU3hMZ2g1REh6WVhCSEpCZVZ1aUNNNkVrV1BGUklpUDMtY2Vtb3hyTGRBcTJoTW5GcXA0TDZwMGhWT0tsMXEtX1JuZ20wM3FtQUtsYTM5dW9DVkxWMjNjSDVBNWw3RVYxZEZQbEZiVU9CczRoUzB0eGZnLWV1cF9lYXJwT0RtNDRHbVEyQ3JERGhZUU5rc0JKeUIwbU1kYVBWWlN0cE5Md3M1ZWRnNWc?oc=5",
+        "published_at": "Fri, 21 Aug 2026 11:15:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Are Wall Street Analysts Bullish on Textron Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-bullish-textron-033226964.html",
+        "published_at": "2026-08-20T03:32:26Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nielsen’s $2.15 Billion Bet on DoubleVerify: What It Means for Ad-Tech",
+        "url": "https://finance.yahoo.com/media-advertising/articles/nielsen-2-15-billion-bet-031046577.html",
+        "published_at": "2026-08-20T03:10:46Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Citi, HSBC, StanChart adopt Ant International’s forex AI tool",
+        "url": "https://finance.yahoo.com/technology/ai/articles/citi-hsbc-stanchart-adopt-ant-020535308.html",
+        "published_at": "2026-08-20T02:19:17Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Intellinetics (INLX) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/intellinetics-inlx-q2-2026-earnings-234407193.html",
+        "published_at": "2026-08-19T23:44:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "EnerSys (ENS) Q1 2027 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/enersys-ens-q1-2027-earnings-234407128.html",
+        "published_at": "2026-08-19T23:44:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Just How Useful Are Human-Looking Robots? Very, Unitree Robotics Investors Hope",
+        "url": "https://finance.yahoo.com/technology/ai/articles/just-useful-human-looking-robots-040100158.html",
+        "published_at": "2026-08-20T04:01:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stantec (STN) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stantec-stn-q2-2026-earnings-234408900.html",
+        "published_at": "2026-08-19T23:44:08Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Bitcoin surges over 25% on short squeeze and crypto optimism - Euronews.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeEprdllOMklkdndMYjJEcTRfcnN1dF9WUno1eUh5ZkRPTW41bkZFQ050R18wb2FJdExid2ZLUTNrUkRlM2RJbFVhZ0E0NzFxY19kQ2NSSk5iSmhRSEdSSG1nYjZyd3ZUY0NFUWFkWF9IcjVjbzFtS1VUVHJMWWplT2RzUUdfZlNRN0g1YlM4eVBOdDhLbVdiS2lOMzJGOFRGUEFSakU2TnMtbHpuOVlXajloUEFjN2h5dGVRMVhTUGI?oc=5",
+        "published_at": "Fri, 21 Aug 2026 10:42:23 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "NOAA releases fall weather predictions for all 50 states as El Niño grows stronger - The Hill",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPXzduYzZVQXlrVTAzakFUOWhTang3bzNqY1lZdXdCMzFCczFXOTlTMEpfWDNlclZyRXRuOVI5TnZXOGR5NktKaUVlQ1lzbm1VUHlNZWxRQnJ1RWZUR2tmV2JrNVVvTUpfdHRnWUdBQUZUUDVPVDFfVG1QdGwwUVJFODdyZEpBUGREQ2FNTlVBY0duaEhKZWFOQ3FZa21DSzM1c05XN2JGOF9GZElUUlNVaDk3MWhyREZZYjBBd0dtQnZJNDFUNGhZdUQ2b181VDA0NHFZ0gHYAUFVX3lxTE85WHFrRGZILTc4MmswaDh2OC1IQk5MN0xIaEZzQ2hHb0QwVTZHd2RpdUhkVnZMVlk5QkZUYXI5VVozMzljS2p6d3dZYmdCMkNmcllYLXJJVUtPOVRHNzlhX0pnVlEtdXY0TF9ENFAtV1kyMHpxUHROekZ5a3FNRmctT09NM1hZMDRpZUwzWEhsWnBZNmZ4SHA0T2oycmkwVVI2emV1eXVCeFA3djR0Szlka1VuT0VlT09ISDNJQ2gtQThjLTdJeHU5NXRMZVh5ekM3QzhpX2d4Ug?oc=5",
+        "published_at": "Thu, 20 Aug 2026 17:08:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "BP (LSE:BP.) Stock Looks Fairly Valued With Strong Returns But Rich Earnings - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdDdoZDluNExXeFdZZDh0d3RSVEdkRWJfa1daRHdkQ0JUM2dMMFpteE9JdmdTRzB1aEFOOG1FN25fbDZlUGpMR1ZiaGlDV1R2MndjVmFVSTVLSUlwdWZPOUxfcGh2eDFVNE9EVTN6a19IQnV2M2U4Q3pELWY0YjJFaG0yT1VMSy1zS2hVVDlraw?oc=5",
+        "published_at": "Fri, 21 Aug 2026 08:09:33 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Standard Chartered makes new Bitcoin prediction on Treasury news",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/standard-chartered-makes-bitcoin-prediction-234000438.html",
+        "published_at": "2026-08-19T23:40:00Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "The bond market swings back to worries and helps knock US stocks lower - FOX4KC.com",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTVhPdVU1cFY0Y2NjNEthc3BNSURlT2ZwYXJqemVObk51R2loMlg5YWw4QkNkQUg1cTNVSUl1T1g5Q3V4ZW5fc3JGMnVkVm0yYmU0blJyLXhQNzhDRzJXVHhTY0taN1NjcE1PSGpRVWxuVExwaHI5UkE4LTFLRzhJRTI2RkFPb3QyZ1RjcUstZXFrOUR4eVUwcjVmOXl0QnBzS1dZb3ZXZjlSWmNVckFKT1BEMVVlTlBzRG1iOS1JUEJFZlpP0gHKAUFVX3lxTE9xU1djc1l5bktDVDN3NFRETlU2dDZncGtGMFZRRWpRU2Jwb0Z6VnF6OUNkNm5KalJmbFVNRnNwRklybGlRemRTNFlISnZhQzFSRDFxNGczaWpETG5ZRG43dGhrbXp0RnVUNmtraHltZkJzY2R5TVNyVXl0SnZtQVI3eEJOMzd1SmpheUdtUElwRTNhV2tIaG90WjB5a1NfS09yOHlyUVhqMEJ0V1N2VWR1VDB5T0lucEluRUpGdVphY2t4ZUlWTS1DVVE?oc=5",
+        "published_at": "Thu, 20 Aug 2026 19:28:13 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Who does the law serve in the occupied West Bank?",
+        "url": "https://www.aljazeera.com/video/by-the-numbers-3/2026/8/21/who-does-the-law-serve-in-the-occupied-west-bank?traffic_source=rss",
+        "published_at": "Fri, 21 Aug 2026 11:12:32 +0000"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Royal Mail misses delivery targets again but hails 'encouraging' signs",
+        "url": "https://www.bbc.co.uk/news/articles/c1w1rg208xdo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Fri, 21 Aug 2026 11:20:57 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CAE (CAE) Q1 2027 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/cae-cae-q1-2027-earnings-234407773.html",
+        "published_at": "2026-08-19T23:44:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Crown Crafts (CRWS) Q1 2027 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/crown-crafts-crws-q1-2027-234407978.html",
+        "published_at": "2026-08-19T23:44:07Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "The U.S. government plans to crack down on its $40 trillion debt — but brace for a ‘wrenching time’ ahead",
+        "url": "https://www.marketwatch.com/story/the-u-s-government-plans-to-crack-down-on-its-40-trillion-debt-but-brace-for-a-wrenching-time-ahead-b3fb76a8?mod=mw_rss_topstories",
+        "published_at": "Fri, 21 Aug 2026 11:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Fed Minutes Show Growing Support for Interest Rate Hike as Inflation Concerns Persist - NBC Palm Springs",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPLV9LVFhVN05jZnlQNHZpLVkzMlV4SEc3eFcxM1JPNVVRYjFWWUhUTE5YYjFuSEppWHdFNWJkWGJNR1Z3LVNUdUswQ0FLVGNTRG84Vzlwc3ctOG9nazlpV1h6SGpKZjVsaEpiaXdUeWY0Z3JVMkZYNXdSRUVUck1nOHFNemdfVDJKT1E4WkVsNHBmeWtnM2Zjbkt5MDI5TkwwemFldkM3LTV0Qmd4dHlMRzNkbXpLZUdRYUVhOUlSeVRhTndxcHc?oc=5",
+        "published_at": "Thu, 20 Aug 2026 19:12:36 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Nvidia earnings could rescue a stalling stock market — if the AI chip maker breaks this trend - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTHRVWnJjOW1hbVRiazRtZjhjTDdsc0ZsMmc4RmcyMDIzUkZpekRNUGR4bktHQlZkeS1FSi1VNHVSRVExU0JEM3dUMmZtNE5YZzl2UzZpQ2pEZktqTDFzTTVCRDNaTFVSc2pQaUYwQ1N4UkFReWdnR0U1ckFidENwUXpqMU9SSXI4QmpvcmJubnlCWVJhNFQzX2wwWGhYUG5sS2hDdTdveUZLOEV6aGRNVmJTRTBvR1Q3MkNPVUd2SGx4SHZkMXZNTEo3WUJGbkE?oc=5",
+        "published_at": "Fri, 21 Aug 2026 10:54:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Nvidia might go Hulk mode, as Jefferies expects Q2 revenue to smash estimate by $3B - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY1BVVnRqcWI5SU1LZWpOT0xhaDJwRDA0X3ZVcURDbEhjNHlXRWlmODVrRGxYdjJJdGVNNlRfUGFQdjZiOHVMVmhkUHViRUNCQ29jUXVZMkhuRFdjbzhteFNwSHZ5YlIxeE1ndEl1NWpyOEROa2ZsWHlqdVllUzl2YUtFUEtJZUVsbEwyXzNHRy1EWlNaN3BGTDlFRzI3RHlGV29jSzU2VmhFVlhOa1FidHBPSHB6Wi00dDVr?oc=5",
+        "published_at": "Thu, 20 Aug 2026 18:31:52 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Trump’s Fed pick faces Jackson Hole test as US debt hits $40trn - The Times",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOc3ZTRE1SQlhJNWlWOFdsYURxQmhkQXQ4SDhqNHBmVmdfWm9aVkp1VE55TlF5X0lqbTN2bGF4eWlhaEtmdHo5d3ZLTTJVZ0RBU2RxVXA5NXR6Yjl6XzRzWVlrQmpmT20tTzBxalAxU3M4aXc1czZDbDVXVUpEa1JuSC1GMnRKMWU3WTlscXlEZkZMMjVJbk9pYWxDSENUc1NMZThQZ3FOTHByRlBSMUZHaXI3Znh3OWk5YnNnc01maUJYUS1T?oc=5",
+        "published_at": "Fri, 21 Aug 2026 09:26:15 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Your 2028 Medicare Premium Is Being Written Now by the Income You Create Before December 31.",
+        "url": "https://finance.yahoo.com/healthcare/articles/2028-medicare-premium-being-written-230339716.html",
+        "published_at": "2026-08-19T23:03:39Z"
+      }
+    ]
+  }
+}
