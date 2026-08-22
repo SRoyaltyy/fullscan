@@ -1,0 +1,115 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-08-22T13:20:27.462920-04:00",
+  "inputs": [
+    {
+      "name": "finviz_export",
+      "family": "join",
+      "status": "ok",
+      "n": 11624,
+      "detail": "finviz_2026-08-21.csv"
+    },
+    {
+      "name": "membership",
+      "family": "join",
+      "status": "ok",
+      "n": 5909,
+      "detail": ""
+    },
+    {
+      "name": "join_ranked",
+      "family": "join",
+      "status": "ok",
+      "n": 5909,
+      "detail": "std=0.999"
+    },
+    {
+      "name": "news_actions",
+      "family": "news",
+      "status": "ok",
+      "n": 32,
+      "detail": ""
+    },
+    {
+      "name": "news_judge",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "finviz_digest",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "ab_checklist",
+      "family": "ab",
+      "status": "ok",
+      "n": 2707,
+      "detail": "2026-08-21_ab_checklist_enriched.csv"
+    },
+    {
+      "name": "peer_rs",
+      "family": "peer",
+      "status": "ok",
+      "n": 5146,
+      "detail": ""
+    },
+    {
+      "name": "ticker_checklist",
+      "family": "addon",
+      "status": "ok",
+      "n": 11606,
+      "detail": ""
+    },
+    {
+      "name": "events",
+      "family": "addon",
+      "status": "ok",
+      "n": null,
+      "detail": "32 events, scan_date=2026-08-21"
+    },
+    {
+      "name": "general_predict",
+      "family": "general",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "sector_predicts",
+      "family": "sector",
+      "status": "ok",
+      "n": 11,
+      "detail": "11/11"
+    },
+    {
+      "name": "price_store",
+      "family": "learn",
+      "status": "ok",
+      "n": null,
+      "detail": "last_date=2026-08-19"
+    }
+  ],
+  "family_status": {
+    "join": "ok",
+    "news": "ok",
+    "ab": "ok",
+    "peer": "ok",
+    "general": "ok",
+    "sector": "ok"
+  },
+  "families_present": {
+    "join": true,
+    "news": true,
+    "ab": true,
+    "peer": true,
+    "general": true,
+    "sector": true
+  },
+  "learn_grade": true,
+  "worst": "ok"
+}
