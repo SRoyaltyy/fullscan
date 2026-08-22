@@ -411,6 +411,11 @@ def run(
     else:
         print("[all] skip AB checklist + enrich (DONE for this day)")
 
+    # ---- Input health preflight (records degraded/stale/missing inputs;
+    #      stock_book uses it to renormalize weights over present families) ----
+    print("[all] → Input health preflight")
+    _run([sys.executable, "-m", "src.input_health", "--date", date], check=False)
+
     # ---- Stock book always ----
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)], check=True)
@@ -428,6 +433,21 @@ def run(
         [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
         check=False,
     )
+
+    # ---- Book learn: closed-loop weight tuner (policy applies to the NEXT
+    #      book run — never the one that just wrote today's picks) ----
+    print("[all] → Book learn (weight tuner from realized forward returns)")
+    _run(
+        [sys.executable, "-m", "src.book_learn", "--date", date, "--update-prices"],
+        check=False,
+    )
+
+    # ---- Book reflect: gap scan (missed movers / blind spots) + LLM lessons ----
+    print("[all] → Book reflect (gap scan + missing-input hypotheses)")
+    reflect_cmd = [sys.executable, "-m", "src.book_reflect", "--date", date]
+    if skip_llm:
+        reflect_cmd.append("--skip-llm")
+    _run(reflect_cmd, check=False)
 
     print("\n[all] FINAL STATUS after run:")
     _print_status(date, _status_for_day(date))
