@@ -1,0 +1,445 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-22T17:31:28.432120-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 5.23,
+      "delta_1d": 0.04,
+      "delta_1w": 0.02,
+      "delta_1m": 0.08
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 4.69,
+      "delta_1d": 0.04,
+      "delta_1w": 0.06,
+      "delta_1m": 0.02
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 2.35,
+      "delta_1d": 0.0,
+      "delta_1w": -0.04,
+      "delta_1m": -0.04
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 2.75,
+      "delta_1d": 0.02,
+      "delta_1w": 0.04,
+      "delta_1m": 0.07
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 3.63,
+      "delta_1d": 0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 0.2,
+      "delta_1d": -0.025,
+      "delta_1w": -0.05,
+      "delta_1m": -0.704
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 301.86,
+      "delta_1d": 161.88,
+      "delta_1w": 132.89,
+      "delta_1m": -36.5
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-21",
+      "current": 15.13,
+      "delta_1d": -0.88,
+      "delta_1w": 0.88
+    },
+    "vix3m": {
+      "date": "2026-08-21",
+      "current": 18.5,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.818,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 16.0,
+    "ratio_ma20": 0.945
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 87.06,
+      "pct_1d": -0.88
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 94.39,
+      "pct_1d": 0.65
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 4624.1,
+      "pct_1d": 2.39
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-21",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.1,
+      "pct_1m": -2.59
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 7691.25,
+      "pct_1d": 0.38
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 29387.75,
+      "pct_1d": 0.3
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 66016.36,
+          "pct_1d": -0.3
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26009.46,
+          "pct_1d": 1.21
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 3905.2,
+          "pct_1d": 0.04
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6912.95,
+          "pct_1d": 0.88
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 9058.9,
+          "pct_1d": -0.27
+        }
+      },
+      "composite_avg": 0.31
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 10816.6,
+          "pct_1d": 0.64
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26136.56,
+          "pct_1d": 0.59
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 8484.43,
+          "pct_1d": 0.37
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6462.22,
+          "pct_1d": 0.63
+        }
+      },
+      "composite_avg": 0.56
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.21,
+    "window": "2026-08-14..2026-08-21"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-22 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_business",
+        "title": "Trump Sparks Mockery After Suggesting Baffling New Use For The Military - Yahoo News Singapore",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMVNDc0VpdE43XzhhNTdtRVhTZDVhVkFQamkxeHYzaGJwZUoySmZqS0YxcnJXZ1hnUTkzYm1QeERpNVA2MGhUM3RBWUJ5S2g2SVpWeUk3RWE3XzVEYUt0WEFhWmxBN2p1TF8tUGhQX01RcHlaaE9UcHhBODRMWHpOY2k2Z2tBSGtU?oc=5",
+        "published_at": "Sat, 22 Aug 2026 01:11:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US Postal Service shares mail-in ballot restrictions despite court ruling",
+        "url": "https://www.aljazeera.com/news/2026/8/22/us-postal-service-shares-mail-in-ballot-restrictions-despite-court-ruling?traffic_source=rss",
+        "published_at": "Sat, 22 Aug 2026 20:49:17 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "A $28.7 Billion Reason to Buy SK hynix Stock Now",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/28-7-billion-reason-buy-150002570.html",
+        "published_at": "2026-08-22T15:00:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "American Assets Trust Executive Chairman Rady Buys $1. Million Shares. Is This a Sign for Investors to Buy?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/american-assets-trust-executive-chairman-204801823.html",
+        "published_at": "2026-08-22T20:48:01Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Meta is the latest tech giant to land in her courtroom. Meet Judge Yvonne Gonzalez Rogers - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUjE5VURUUWpjenJuVXNyV2ZYMU9aVEpqSkFxNEdud3FIMFgxNS01TG1JNG9kbTBNdUtLUGk4dWdzalhsOUJRTEJoQzdWWmdnU2JLdFZ2bkhVcnoyZ2xYSDlkYmR1NlY1MnJ2ZTJSZWlCNWxrbTZRU2FYUG9uckM2MER5aUlxbnl5dnBOLWpR0gGTAUFVX3lxTE5EcWRXNm5UZGdzc2RQWmRhQnZyYWJMZGpSMUREb2J4MjNzVWNIcXBmQWVpQU5Fa3dsOXpFbEVITWRtSlhmVldqZmxZSE05dGN0OTNwOUlYQURadU5rLV9pVEJ5V0RWMGhucUpfUnlpSmtIZWhDdVd0aUtLTGtJNjFMWTljXzZqMDk5Zml5VGk0Q2NvVQ?oc=5",
+        "published_at": "Sat, 22 Aug 2026 12:00:01 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Alfalfa Sprouts Linked to Illnesses in 15 States, F.D.A. Says - The New York Times",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdHh3VmRDaU9TYXRNYmVrSnhNcTM5Q2VSWHNIeDBVcWpFcm1NN1RTWlVCQUZ6VDFJS1p6alhuSHdQbHhxNlRZWVpjd0JXN1JCdzJtSFBXM08tdi1YckZDOHNTSlVrbGotQ3lVNTZOZ1liRERfcDFyZzFIOEdVWHhxRW9BLWtBZ3JIY0E?oc=5",
+        "published_at": "Sat, 22 Aug 2026 02:07:23 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Education Department May Reinstate Forgiven Student Loans, Advocates Warn, But Risk Is Unclear - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQSklNSkN6UExFLXVaUlJnM0tJOVZTZVdZYVFVTi1fZUZkSzJHeE9OYWhBRHpRd2tYZ2tCVE45T3I2U0phdWIxWG52UjZGLXg4eWs4UDNnQnZvclpsQ0dsOEVwbTZ3aTlqOTlLZE5ZQXVOd255dEFPQ3VXQi1zVnVpMWJFLXJJbWlEMWdKNGZ1aHdRa2lZanhkTW9NUG5qVUQ5WS1sUGI3aU5INUU0UHQ5VmVxRDZiX2lOZk5BdmI5ZkNSdWJ3WHpiXzBvNnJqWTh0RDVjaTQtdXRBeUk4QW1mVDRLcXVtenc0?oc=5",
+        "published_at": "Fri, 21 Aug 2026 15:19:28 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Kevin O'Leary Says If You’re Dating, You’ll Want to Talk About Money on the 3rd Date — That’s How You’ll Know If There’s a Future",
+        "url": "https://finance.yahoo.com/small-business/articles/kevin-oleary-says-dating-ll-200102445.html",
+        "published_at": "2026-08-22T20:01:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "At 59½ Your 401(k) Quietly Unlocks While You’re Still Working. The In-Service Rollover Nobody in HR Will Ever Mention to You.",
+        "url": "https://finance.yahoo.com/markets/options/articles/59-401-k-quietly-unlocks-204058001.html",
+        "published_at": "2026-08-22T20:40:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Active ETFs Now Take 42% of Every Dollar Flowing Into ETFs, Up From 26% in 2024",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/active-etfs-now-42-every-205000491.html",
+        "published_at": "2026-08-22T20:50:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Paramount Prepares to Begin Early Settlement Talks With California Officials",
+        "url": "https://www.wsj.com/business/media/paramount-prepares-to-begin-early-settlement-talks-with-california-officials-462f68e2?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-22T19:37:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Ross Stores Grew Comparable Sales 10%. TJX Grew 4%. Only One Stock Went Up.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/ross-stores-grew-comparable-sales-204301377.html",
+        "published_at": "2026-08-22T20:43:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Most Tech Stocks Are More Correlated Than You Think. Don’t Let That Wreck Your Trading Plan.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/most-tech-stocks-more-correlated-143002635.html",
+        "published_at": "2026-08-22T14:30:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Grant Cardone Says If He Were Down to His Last $5K, He’d Flip It Into $200,000 and Live Rent-Free for a Year With One Purchase",
+        "url": "https://finance.yahoo.com/real-estate/articles/grant-cardone-says-were-down-190016389.html",
+        "published_at": "2026-08-22T19:00:16Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Billionaire Stanley Druckenmiller Just Sold Some Sandisk Stock and Bought These 3 Unstoppable Artificial Intelligence (AI) Stocks",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/billionaire-stanley-druckenmiller-just-sold-200400662.html",
+        "published_at": "2026-08-22T20:04:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "In off price, Ross is the new boss - Retail Dive",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTGtUUU0tN3dqRm5SSV9PTXF1aF9QOWxKdXhvUHhGSmFvOExHVXN3YVdRWFlqMXJSSHdTZ2FFcDBkWldQVXpxQld2MmZwQjhrY3JrZ2VhZ29ZcGFhNEF0cVZpazcwOTNJc3dDcnhuZEJocTktN21jQk5VUzREV2R6M21OQU8tSTI2QlpEeFZhY2xjVC0zdXVJ?oc=5",
+        "published_at": "Fri, 21 Aug 2026 16:23:03 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Iran grants permission for some Iraqi oil tankers to pass through Hormuz",
+        "url": "https://www.aljazeera.com/news/2026/8/22/iran-grants-permission-for-some-iraqi-oil-tankers-to-pass-through-hormuz?traffic_source=rss",
+        "published_at": "Sat, 22 Aug 2026 20:05:52 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Alphabet’s Search Risk Really Priced In? Stress-Testing Rosenblatt’s $410 Thesis",
+        "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-search-risk-really-priced-195602365.html",
+        "published_at": "2026-08-22T19:56:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Alpha Metallurgical Resources Director Courtis Buys $2.9 Million Shares. What Does This Mean for Investors?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/alpha-metallurgical-resources-director-courtis-201901011.html",
+        "published_at": "2026-08-22T20:19:01Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The Overtime Tax Break Only Counts the “Half,” Not the “Time-and-a-Half.” Most Workers Are Overestimating It by Double",
+        "url": "https://finance.yahoo.com/economy/policy/articles/overtime-tax-break-only-counts-201822251.html",
+        "published_at": "2026-08-22T20:18:22Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Apple vs. Meta Platforms: Which \"Magnificent Seven\" Giant Has the Stronger Artificial Intelligence (AI) Growth Engine?",
+        "url": "https://finance.yahoo.com/technology/ai/articles/apple-vs-meta-platforms-magnificent-195900118.html",
+        "published_at": "2026-08-22T19:59:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Does Greg Abel Know Something Wall Street Doesn't? New Berkshire Hathaway CEO Doubles Down On a Legacy Department Store Stock With a 3.3% Dividend Yield",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/does-greg-abel-know-something-195300161.html",
+        "published_at": "2026-08-22T19:53:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Delek Logistics CFO Buys 1,500 Shares for $75,000. Here's a Closer Look at the Transaction.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/delek-logistics-cfo-buys-1-202142466.html",
+        "published_at": "2026-08-22T20:21:42Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Halliburton (HAL) Stock Looks Cheap On Earnings While Its 89% Run Raises Questions - simplywall.st",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOWVTOEo5NDF3XzdhSGVVNEJDdHpLMlpaU2xIdHJ3ZVUwOWdSamlZem1hejFsS0xPemIzWjBZMWowRENqZlQtNEVjeG82bkM5cE5TdnBieU1Eb2hwSFdpc1VrTDJCbG04YkNxWTVJYmJaSGZkYTZGaXpRWnAyMXNydExwTDZKb0VKcEVab3NUeWtjdXJJckRXTU16X1J0RnF1ZUl5eVoyWmtuSGJoZXIyS0QtbThjUTU5bTBfMTctSDRBd03SAcgBQVVfeXFMTkc4Z2RLbHZaSGRxcm5wejZldDBneGc5aEZlb0JxNzR4eUZnM1FBQ2tkY01sRHpFcnhwemlSUVVMWC03ZG5lRTltUnpqWEtDZFVuS2ZSZ2JveWxWby1zRU10Szc0cHA3Q3VrbnhMY2s5UHFxOXZxNU1CME44LVAxZzRKM2poeE91RWN4Nkh2LVJYaC1oTTlON3lOTUw2R19paVNfeFlselFzOHhKLXNoSF9UNlFoX1RoMXJNTUQxNEVIU3NJWm9FSjk?oc=5",
+        "published_at": "Sat, 22 Aug 2026 20:29:09 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Snowflake (SNOW) Stock: AI Growth Is Real, But Is the Valuation Already Priced In?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-stock-ai-growth-194107701.html",
+        "published_at": "2026-08-22T19:41:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Clean Energy Spending Tracking Toward Record $180 Billion in 2026",
+        "url": "https://finance.yahoo.com/energy/articles/clean-energy-spending-tracking-toward-190000970.html",
+        "published_at": "2026-08-22T19:00:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Paramount and California to Hold Preliminary Talks on Warner Bros. Deal - The New York Times",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTVk5MElQLUN3NWNfbDM1VjhtbTVJaWF5RTl3MzlEakRRdGhoa0Z5MG1nS25KeUNXVWJuZFFENlpxX0hXbjM5ekhNcFpfV1hKVUFfQ09hZllxcl95dUtkMUdoVHI1THBrRVlsUGdkQ0xrNmU2WXZ2YmRRU2hBR2paV3BvR0xIZGIy?oc=5",
+        "published_at": "Sat, 22 Aug 2026 17:07:26 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "How a 56-Year-Old Turned a $735,000 401(k) Rollover Into a $4,300 Monthly Paycheck Without Buying an Annuity",
+        "url": "https://finance.yahoo.com/markets/options/articles/56-old-turned-735-000-193815853.html",
+        "published_at": "2026-08-22T19:38:15Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Why is Israel building new illegal settlements?",
+        "url": "https://www.aljazeera.com/video/inside-story/2026/8/22/why-is-israel-building-new-illegal-settlements?traffic_source=rss",
+        "published_at": "Sat, 22 Aug 2026 19:40:58 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Can This 6.3% Yield Survive if Oil Crashes Again?",
+        "url": "https://finance.yahoo.com/energy/articles/6-3-yield-survive-oil-193501585.html",
+        "published_at": "2026-08-22T19:35:01Z"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-21",
+      "open": 7665.68,
+      "high": 7697.11,
+      "low": 7660.06,
+      "close": 7674.37,
+      "pct_change": 0.43,
+      "prev_close": 7641.16,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.48,
+        "intraday_low_pct": 0.25,
+        "intraday_high_pct": 0.73,
+        "close_position_in_range": 0.39
+      }
+    },
+    "DOW": {
+      "date": "2026-08-21",
+      "open": 52768.87,
+      "high": 53355.92,
+      "low": 52768.87,
+      "close": 53277.01,
+      "pct_change": 0.98,
+      "prev_close": 52759.21,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 1.11,
+        "intraday_low_pct": 0.02,
+        "intraday_high_pct": 1.13,
+        "close_position_in_range": 0.87
+      }
+    },
+    "NDX": {
+      "date": "2026-08-21",
+      "open": 26198.84,
+      "high": 26269.85,
+      "low": 26049.29,
+      "close": 26180.46,
+      "pct_change": 0.43,
+      "prev_close": 26067.17,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.85,
+        "intraday_low_pct": -0.07,
+        "intraday_high_pct": 0.78,
+        "close_position_in_range": 0.59
+      }
+    }
+  }
+}
