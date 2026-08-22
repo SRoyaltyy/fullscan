@@ -356,7 +356,7 @@
       "horizon_returns_pct": {
         "1d": -1.45
       },
-      "mfe_pct": 0.99,
+      "mfe_pct": 1.01,
       "mfe_day": "2026-08-21",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-20"
