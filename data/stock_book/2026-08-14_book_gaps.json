@@ -1,0 +1,411 @@
+{
+  "signal_date": "2026-08-14",
+  "horizon": "1w",
+  "generated_at": "2026-08-22T13:34:23.748308-04:00",
+  "missed_movers": [
+    {
+      "ticker": "NRDY",
+      "fwd_pct": 1393.64,
+      "class": "gated_out",
+      "sector": "Technology",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.492,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "MRNA",
+      "fwd_pct": 129.2,
+      "class": "blind",
+      "sector": "Healthcare",
+      "size": "large",
+      "signals": {
+        "s_join": 0.165,
+        "s_sector": -0.51,
+        "s_general": 0.275,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": -0.05
+      }
+    },
+    {
+      "ticker": "AMLX",
+      "fwd_pct": 78.73,
+      "class": "blind",
+      "sector": "Healthcare",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.165,
+        "s_sector": -0.51,
+        "s_general": 0.083,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.28
+      }
+    },
+    {
+      "ticker": "PURR",
+      "fwd_pct": 58.38,
+      "class": "blind",
+      "sector": "Financial",
+      "size": "small",
+      "signals": {
+        "s_join": 0.38,
+        "s_sector": 0.55,
+        "s_general": 0.22,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.32
+      }
+    },
+    {
+      "ticker": "CAN",
+      "fwd_pct": 54.35,
+      "class": "gated_out",
+      "sector": "Technology",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.394,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "ASST",
+      "fwd_pct": 47.95,
+      "class": "blind",
+      "sector": "Financial",
+      "size": "small",
+      "signals": {
+        "s_join": 0.492,
+        "s_sector": 0.55,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.4
+      }
+    },
+    {
+      "ticker": "TEM",
+      "fwd_pct": 39.52,
+      "class": "blind",
+      "sector": "Healthcare",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.431,
+        "s_sector": -0.51,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.68
+      }
+    },
+    {
+      "ticker": "IVVD",
+      "fwd_pct": 38.28,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.298,
+        "s_sector": -0.51,
+        "s_general": 0.083,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "XXI",
+      "fwd_pct": 35.77,
+      "class": "blind",
+      "sector": "Consumer Defensive",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.18,
+        "s_sector": 0.51,
+        "s_general": 0.083,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.56
+      }
+    },
+    {
+      "ticker": "WEAV",
+      "fwd_pct": 33.52,
+      "class": "blind",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": 0.367,
+        "s_sector": -0.51,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.48
+      }
+    },
+    {
+      "ticker": "TRON",
+      "fwd_pct": 32.24,
+      "class": "blind",
+      "sector": "Consumer Cyclical",
+      "size": "small",
+      "signals": {
+        "s_join": 0.431,
+        "s_sector": -0.55,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.4
+      }
+    },
+    {
+      "ticker": "PSNL",
+      "fwd_pct": 30.91,
+      "class": "blind",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": 0.298,
+        "s_sector": -0.51,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.12
+      }
+    },
+    {
+      "ticker": "FDMT",
+      "fwd_pct": 29.86,
+      "class": "blind",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": 0.462,
+        "s_sector": -0.51,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.24
+      }
+    },
+    {
+      "ticker": "DFDV",
+      "fwd_pct": 28.34,
+      "class": "gated_out",
+      "sector": "Financial",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.462,
+        "s_sector": 0.55,
+        "s_general": 0.083,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "MSTR",
+      "fwd_pct": 28.17,
+      "class": "blind",
+      "sector": "Technology",
+      "size": "large",
+      "signals": {
+        "s_join": 0.298,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.11
+      }
+    }
+  ],
+  "n_blind": 11,
+  "worst_buys": [
+    {
+      "ticker": "VERI",
+      "fwd_pct": -25.3,
+      "sector": "Technology",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.548,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "AEVA",
+      "fwd_pct": -21.43,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.525,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.24
+      }
+    },
+    {
+      "ticker": "RXT",
+      "fwd_pct": -21.14,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.525,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.44
+      }
+    },
+    {
+      "ticker": "WOLF",
+      "fwd_pct": -18.97,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.548,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.52
+      }
+    },
+    {
+      "ticker": "TLN",
+      "fwd_pct": -13.31,
+      "sector": "Utilities",
+      "size": "large",
+      "signals": {
+        "s_join": 0.367,
+        "s_sector": 0.6,
+        "s_general": 0.55,
+        "s_news": 0.606,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.03
+      }
+    },
+    {
+      "ticker": "APPS",
+      "fwd_pct": -12.62,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.525,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.36
+      }
+    },
+    {
+      "ticker": "BAND",
+      "fwd_pct": -11.95,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.525,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.24
+      }
+    },
+    {
+      "ticker": "INDI",
+      "fwd_pct": -11.89,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.548,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.32
+      }
+    },
+    {
+      "ticker": "NRG",
+      "fwd_pct": -10.4,
+      "sector": "Utilities",
+      "size": "large",
+      "signals": {
+        "s_join": 0.227,
+        "s_sector": 0.6,
+        "s_general": 0.275,
+        "s_news": 0.606,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.11
+      }
+    },
+    {
+      "ticker": "CRNC",
+      "fwd_pct": -10.34,
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.548,
+        "s_sector": 0.552,
+        "s_general": 0.55,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.44
+      }
+    }
+  ],
+  "input_silence_on_movers": {
+    "s_join": 0.0,
+    "s_sector": 0.0,
+    "s_general": 0.0,
+    "s_news": 1.0
+  },
+  "absent_inputs": [
+    "s_ab",
+    "s_peer"
+  ],
+  "universe_median_fwd_pct": -0.83
+}
