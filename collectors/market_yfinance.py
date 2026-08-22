@@ -12,7 +12,23 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yfinance as yf
+import psycopg2
 from db.connection import get_connection
+
+
+def _connect(attempts: int = 4, base_delay: float = 8.0):
+    """Retry pooler timeouts (weekend Supabase blips)."""
+    last = None
+    for i in range(1, attempts + 1):
+        try:
+            return get_connection()
+        except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
+            last = e
+            print(f"[yfinance] db connect {i}/{attempts} failed: {e}")
+            if i == attempts:
+                break
+            time.sleep(base_delay * i)
+    raise last
 
 COMMODITIES = {
     "CL=F":     "Crude Oil WTI Futures",
@@ -57,7 +73,7 @@ def collect():
     start_time = time.time()
     print("[yfinance] Collecting commodity, index, and currency data...")
 
-    conn = get_connection()
+    conn = _connect()
     cur = conn.cursor()
 
     all_symbols = {**COMMODITIES, **INDICES, **CURRENCIES}

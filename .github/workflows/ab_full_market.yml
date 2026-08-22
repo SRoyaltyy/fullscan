@@ -42,6 +42,10 @@ on:
         description: "Skip PIT backfill"
         type: boolean
         default: false
+      append_only:
+        description: "true = score only new asof days onto existing *_universe.parquet (do not rebuild 24 months)"
+        type: boolean
+        default: true
   schedule:
     - cron: "30 22 * * 1-5"
 
@@ -116,14 +120,28 @@ jobs:
           print("sample tickers:", df.iloc[:5, 0].tolist())
           PY
 
-      - name: 0) Price history prerequisite (universe bootstrap)
+      - name: 0) Price history prerequisite
         if: ${{ github.event_name == 'schedule' || (inputs.skip_bootstrap != true && inputs.skip_bootstrap != 'true') }}
         run: |
           set -euo pipefail
+          EVENT="${{ github.event_name }}"
+          SKIP="${{ inputs.skip_bootstrap }}"
+          APPEND="${{ inputs.append_only }}"
           DAYS="${{ inputs.bootstrap_days }}"
           DAYS="${DAYS:-900}"
-          echo "=== prerequisite: price_store bootstrap --days $DAYS ==="
-          python -m src.price_store bootstrap --days "$DAYS"
+          # Full 900-day bootstrap only on an explicit non-append dispatch.
+          # Schedule and default dispatch (append_only=true) just update.
+          DO_BOOTSTRAP=0
+          if [ "$EVENT" = "workflow_dispatch" ] && [ "$SKIP" != "true" ] && [ "$APPEND" = "false" ]; then
+            DO_BOOTSTRAP=1
+          fi
+          if [ "$DO_BOOTSTRAP" = "1" ]; then
+            echo "=== prerequisite: price_store bootstrap --days $DAYS ==="
+            python -m src.price_store bootstrap --days "$DAYS"
+          else
+            echo "=== price_store update (append / schedule; skip 900-day bootstrap) ==="
+            python -m src.price_store update || echo "[warn] price update soft-failed"
+          fi
           python -m src.price_store status
 
       - name: 0b) Ensure price store non-empty even if bootstrap skipped
@@ -217,9 +235,20 @@ jobs:
             cp -f "data/ab_checklist/${ASOF}_ab_checklist_universe.csv" \
                   "data/ab_checklist/${ASOF}_ab_checklist.csv"
           fi
-          echo "=== ab_backfill --months $M --end $ASOF ==="
-          echo "NOTE: after last asof day log, pattern-audit + parquet write can take minutes."
-          python -u -m src.ab_backfill --months "$M" --end "$ASOF"
+          APPEND="${{ inputs.append_only }}"
+          WANT_APPEND=1
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && { [ "$APPEND" = "false" ] || [ "$APPEND" = "False" ]; }; then
+            WANT_APPEND=0
+          fi
+          if [ "$WANT_APPEND" = "1" ] && ls data/ab_backfill/*_universe.parquet >/dev/null 2>&1; then
+            echo "=== ab_backfill --append --end $ASOF ==="
+            echo "NOTE: scores only asof days after the latest *_universe.parquet. Does not rebuild 24 months."
+            python -u -m src.ab_backfill --append --end "$ASOF"
+          else
+            echo "=== ab_backfill --months $M --end $ASOF ==="
+            echo "NOTE: after last asof day log, pattern-audit + parquet write can take minutes."
+            python -u -m src.ab_backfill --months "$M" --end "$ASOF"
+          fi
           ls -lah data/ab_backfill/ | tail -20
           LATEST_MD=$(ls -1t data/ab_backfill/*universe*.md data/ab_backfill/*.md 2>/dev/null | head -1 || true)
           if [ -n "$LATEST_MD" ]; then

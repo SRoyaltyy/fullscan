@@ -10,14 +10,18 @@ Each asof day includes:
 CLI:
   python -m src.ab_backfill --months 12 --end 2026-08-19
   python -m src.ab_backfill --months 12 --end 2026-08-19 --checkpoint-every 10
+  python -m src.ab_backfill --append --end 2026-08-21
   python -m src.ab_backfill --md-only data/ab_backfill/2025-08-19_2026-08-19_universe.parquet
 
 Universe PIT is expensive (~2.5k liquid names × ~252 sessions). Checkpoints
 land as ``{start}_{end}_{tag}.resume.parquet`` every N asof days (and on
 SIGTERM/SIGINT). A later run with the same window loads that file and skips
-completed asof dates. ``--md-only`` rebuilds the BB-style markdown (daily
-trail + score/context effectiveness audit) from an existing parquet without
-rescoring.
+completed asof dates. ``--append`` loads the latest finished
+``*_universe.parquet`` (not the date-keyed resume) and scores only asof days
+after max(asof_date), then writes ``{orig_start}_{end}_universe.parquet``.
+Nightly Full Market should use ``--append`` so it never rebuilds 24 months.
+``--md-only`` rebuilds the BB-style markdown (daily trail + score/context
+effectiveness audit) from an existing parquet without rescoring.
 """
 from __future__ import annotations
 
@@ -54,6 +58,50 @@ UNIVERSE_FINAL_RE = re.compile(
 )
 RESUME_SUFFIX = ".resume"
 DEFAULT_CHECKPOINT_EVERY = 10
+GITHUB_BLOB_WARN_BYTES = 95 * 1024 * 1024
+
+
+def latest_universe_parquet() -> Path | None:
+    """Newest finished liquid-universe parquet by window end, then start.
+
+    Ignores ``*.resume.parquet`` (mid-run checkpoints).
+    """
+    if not OUT_DIR.exists():
+        return None
+    cands: list[tuple[str, str, Path]] = []
+    for p in OUT_DIR.iterdir():
+        m = UNIVERSE_FINAL_RE.match(p.name)
+        if not m or p.suffix != ".parquet":
+            continue
+        if p.stat().st_size < 1000:
+            continue
+        cands.append((m.group(2), m.group(1), p))  # end, start, path
+    if not cands:
+        return None
+    cands.sort()
+    return cands[-1][2]
+
+
+def prune_superseded_universe(keep: Path) -> None:
+    """Drop older universe parquet/md/json whose window is a subset of `keep`."""
+    m = UNIVERSE_FINAL_RE.match(keep.name)
+    if not m:
+        return
+    keep_start, keep_end = m.group(1), m.group(2)
+    for p in OUT_DIR.glob("*_universe.parquet"):
+        if p.resolve() == keep.resolve():
+            continue
+        mm = UNIVERSE_FINAL_RE.match(p.name)
+        if not mm:
+            continue
+        s, e = mm.group(1), mm.group(2)
+        if s >= keep_start and e <= keep_end:
+            print(f"[backfill] removing superseded {p.name}", flush=True)
+            p.unlink(missing_ok=True)
+            for ext in (".md", ".json", ".csv"):
+                q = p.with_name(p.name.replace(".parquet", ext))
+                if q.exists():
+                    q.unlink()
 
 
 class _StopFlag:
@@ -1085,6 +1133,7 @@ def run(
     ticker: str | None = None,
     checkpoint_every: int = DEFAULT_CHECKPOINT_EVERY,
     skip_events: bool | None = None,
+    append: bool = False,
 ) -> pd.DataFrame:
     exports = _load_exports()
     exp_dates = [d for d, _ in exports]
@@ -1092,6 +1141,33 @@ def run(
     last_exp = exp_dates[-1] if exp_dates else None
 
     end = end or (last_exp or datetime.now(ET).date().isoformat())
+    append_base: pd.DataFrame | None = None
+    orig_start: str | None = None
+    append_last: str | None = None
+    if append:
+        if ticker:
+            raise SystemExit("[backfill] --append is universe-only (drop --ticker)")
+        pq = latest_universe_parquet()
+        if pq is None:
+            raise SystemExit(
+                "[backfill] --append needs an existing *_universe.parquet "
+                "under data/ab_backfill/"
+            )
+        append_base = pd.read_parquet(pq)
+        if append_base.empty or "asof_date" not in append_base.columns:
+            raise SystemExit(f"[backfill] {pq.name} has no asof_date rows")
+        asof_s = append_base["asof_date"].astype(str).str[:10]
+        append_last = str(asof_s.max())[:10]
+        orig_start = str(asof_s.min())[:10]
+        m_name = UNIVERSE_FINAL_RE.match(pq.name)
+        if m_name:
+            orig_start = m_name.group(1)
+        start = orig_start
+        print(
+            f"[backfill] APPEND {pq.name} last_asof={append_last} "
+            f"kept_rows={len(append_base):,} → score asof > {append_last} through {end}",
+            flush=True,
+        )
     if start is None:
         m = 6 if months is None else int(months)
         start = (pd.Timestamp(end) - pd.DateOffset(months=m)).date().isoformat()
@@ -1148,19 +1224,54 @@ def run(
 
     tag = ticker.upper() if ticker else "universe"
     stop = install_stop_handlers(_StopFlag())
-    prior, resume_info = load_resume_checkpoint(start, end, tag)
-    last_asof = (resume_info or {}).get("last_asof") if resume_info else None
-    days_todo = remaining_days(days, last_asof)
-    rows: list[dict] = prior.to_dict("records") if len(prior) else []
-    print(f"[backfill] sessions={len(days)} ({days[0]}→{days[-1]}) names={len(tickers)}")
-    if last_asof:
+    if append and append_base is not None:
+        prior = append_base
+        last_asof = append_last
+        days_todo = remaining_days(days, last_asof)
+        rows: list[dict] = prior.to_dict("records") if len(prior) else []
+        print(f"[backfill] sessions={len(days)} ({days[0]}→{days[-1]}) names={len(tickers)}")
         print(
-            f"[backfill] RESUME after {last_asof} kept_rows={len(rows):,} "
-            f"remaining={len(days_todo)}/{len(days)} "
-            f"(file {resume_stem(start, end, tag)}.parquet)"
+            f"[backfill] APPEND after {last_asof} kept_rows={len(rows):,} "
+            f"remaining={len(days_todo)}/{len(days)}"
         )
+        if not days_todo:
+            print(
+                f"[backfill] already complete through {last_asof} "
+                f"(requested end={end}); rebuild MD only",
+                flush=True,
+            )
+            out = prior.copy()
+            write_end = max(str(last_asof), str(end))
+            write_start = orig_start or start
+            stem = artifact_stem(write_start, write_end, tag)
+            parquet = OUT_DIR / f"{stem}.parquet"
+            if parquet.resolve() != latest_universe_parquet().resolve():
+                out.to_parquet(parquet, index=False)
+            write_report(
+                out, write_start, write_end, tag,
+                ticker=None,
+                first_exp=first_exp,
+                last_exp=last_exp,
+                board_dates=board_dates,
+                extra_bullets=[
+                    f"- --append: no new sessions after {last_asof}",
+                ],
+            )
+            return out
     else:
-        print("[backfill] no resume checkpoint — starting at day 1")
+        prior, resume_info = load_resume_checkpoint(start, end, tag)
+        last_asof = (resume_info or {}).get("last_asof") if resume_info else None
+        days_todo = remaining_days(days, last_asof)
+        rows = prior.to_dict("records") if len(prior) else []
+        print(f"[backfill] sessions={len(days)} ({days[0]}→{days[-1]}) names={len(tickers)}")
+        if last_asof:
+            print(
+                f"[backfill] RESUME after {last_asof} kept_rows={len(rows):,} "
+                f"remaining={len(days_todo)}/{len(days)} "
+                f"(file {resume_stem(start, end, tag)}.parquet)"
+            )
+        else:
+            print("[backfill] no resume checkpoint — starting at day 1")
     if ticker:
         print(f"[backfill] {ticker}: sector={sector_name} industry={industry_name} peers={len(peer_list)}")
 
@@ -1296,6 +1407,13 @@ def run(
             write_resume_checkpoint(
                 rows, start, end, tag, asof, i, len(days),
             )
+            if append and orig_start:
+                # Land a finished-looking parquet keyed by last scored asof
+                # so tomorrow's --append (different --end) does not start over.
+                ck_stem = artifact_stem(orig_start, asof, tag)
+                ck_pq = OUT_DIR / f"{ck_stem}.parquet"
+                pd.DataFrame(rows).to_parquet(ck_pq, index=False)
+                print(f"[backfill] append snapshot → {ck_pq.name}", flush=True)
         if stop.requested:
             print(
                 "[backfill] stopped with resume checkpoint — "
@@ -1306,22 +1424,39 @@ def run(
 
     out = pd.DataFrame(rows)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    stem = artifact_stem(start, end, tag)
+    write_start = orig_start or start
+    stem = artifact_stem(write_start, end, tag)
     parquet = OUT_DIR / f"{stem}.parquet"
     out.to_parquet(parquet, index=False)
+    nbytes = parquet.stat().st_size
+    if nbytes >= GITHUB_BLOB_WARN_BYTES:
+        print(
+            f"[backfill] WARN {parquet.name} is {nbytes / 1e6:.1f} MB "
+            f"(GitHub blob limit 100 MB) — commit may fail; artifact still uploaded",
+            flush=True,
+        )
     if ticker or len(out) < 500_000:
         out.to_csv(OUT_DIR / f"{stem}.csv", index=False)
 
+    extra = None
+    if append:
+        extra = [
+            f"- --append onto existing universe through {append_last}; "
+            f"new sessions scored through {end}",
+        ]
     write_report(
-        out, start, end, tag,
+        out, write_start, end, tag,
         ticker=ticker,
         first_exp=first_exp,
         last_exp=last_exp,
         board_dates=board_dates,
         sector_name=sector_name,
         industry_name=industry_name,
+        extra_bullets=extra,
     )
     print(f"[backfill] wrote {parquet} rows={len(out):,}")
+    if tag == "universe":
+        prune_superseded_universe(parquet)
 
     # Always emit a 6-month slice so the "past 6 months" view exists even when
     # we resumed a 12-month checkpoint (stem 2025-08-19_2026-08-19_universe).
@@ -1376,6 +1511,12 @@ def main():
         metavar="PARQUET",
         help="Rebuild BB-style MD + 6m slice from an existing parquet (no rescoring).",
     )
+    ap.add_argument(
+        "--append",
+        action="store_true",
+        help="Score only asof days after max(asof_date) on the latest "
+             "*_universe.parquet and concat. Nightly Full Market path.",
+    )
     args = ap.parse_args()
     if args.md_only:
         rebuild_md_from_parquet(args.md_only)
@@ -1388,6 +1529,7 @@ def main():
         ticker=args.ticker,
         checkpoint_every=args.checkpoint_every,
         skip_events=skip_events,
+        append=bool(args.append),
     )
 
 

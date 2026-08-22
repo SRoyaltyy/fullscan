@@ -96,11 +96,33 @@ jobs:
           head -40 03_scoreboard/PAPER_TRADING.md 2>/dev/null || true
           ls -la dashboard/ 2>/dev/null || true
 
+      - name: Upload book + dashboard artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-book-all
+          path: |
+            data/stock_book/
+            data/peers/
+            01_daily/*_stock_book.md
+            01_daily/*_peer_rs.md
+            03_scoreboard/
+            dashboard/
+          if-no-files-found: warn
+
       - name: Commit everything (incl. dashboard + paper)
         if: always()
         run: |
+          set -uo pipefail
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
+
+          # price_store dirties ohlc.parquet / meta.json. Unstaged files
+          # block `git pull --rebase` then `|| true` swallows the push
+          # (ALL 13/14 on 2026-08-21 — book written, never landed).
+          git checkout -- data/prices 2>/dev/null || true
+          git clean -fd data/prices 2>/dev/null || true
+
           git add \
             data/universe data/exports data/join data/stock_book data/paper \
             data/peers data/checklist data/ab_checklist \
@@ -108,6 +130,7 @@ jobs:
             01_daily/events \
             01_daily/*_universe.md 01_daily/*_match.md \
             01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \
+            01_daily/*_peer_rs.md \
             03_scoreboard/STOCK_BOOK_BACKTEST.md \
             03_scoreboard/stock_book_backtest.json \
             03_scoreboard/scoreboard.json \
@@ -115,17 +138,64 @@ jobs:
             00_grounding/mutable_policy.md \
             02_lessons/ \
             dashboard/ || true
-          git commit -m "auto: stock book ALL + paper dashboard" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main || true
 
-      - name: Upload dashboard artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: dashboard
-          path: dashboard
-          if-no-files-found: warn
+          # leftover unstaged (peer_rs.md used to be the leftover) still
+          # blocks rebase. Keep the index; stash the rest.
+          git stash push --keep-index --include-untracked -m "all-unstaged" || true
+
+          git status
+          BOOK_PENDING=0
+          if git diff --cached --name-only | grep -E 'stock_book|peer_rs' >/dev/null; then
+            BOOK_PENDING=1
+          fi
+          if git status --porcelain -- data/stock_book data/peers 01_daily | grep -E 'stock_book|peer_rs' >/dev/null; then
+            BOOK_PENDING=1
+          fi
+
+          if git diff --staged --quiet; then
+            echo "Nothing staged — outputs may already be on main"
+            git stash pop || true
+            exit 0
+          fi
+          git commit -m "auto: stock book ALL + paper dashboard" || {
+            echo "[warn] commit failed"
+            git stash pop || true
+            if [ "$BOOK_PENDING" = "1" ]; then
+              echo "FATAL: book/peer_rs exists locally but commit failed"
+              exit 1
+            fi
+            exit 0
+          }
+
+          PUSH_OK=0
+          if ! git pull --rebase origin main; then
+            echo "[warn] pull --rebase failed; trying pull --no-rebase"
+            git pull origin main || true
+          fi
+          if git push origin HEAD:main; then
+            PUSH_OK=1
+            echo "Pushed stock book ALL outputs to main"
+          else
+            echo "[warn] first push rejected — rebase and retry"
+            git pull --rebase origin main || git pull origin main || true
+            if git push origin HEAD:main; then
+              PUSH_OK=1
+              echo "Pushed stock book ALL outputs to main (retry)"
+            fi
+          fi
+          git stash pop || true
+
+          if [ "$PUSH_OK" != "1" ]; then
+            PENDING=$(git log origin/main..HEAD --name-only --pretty=format: 2>/dev/null | grep -E 'stock_book|peer_rs' || true)
+            UNSTAGED=$(git status --porcelain -- data/stock_book data/peers 01_daily | grep -E 'stock_book|peer_rs' || true)
+            if [ "$BOOK_PENDING" = "1" ] || [ -n "$PENDING" ] || [ -n "$UNSTAGED" ]; then
+              echo "FATAL: book/peer_rs produced but push failed. Artifact is the safety net."
+              echo "$PENDING"
+              echo "$UNSTAGED"
+              exit 1
+            fi
+            echo "[warn] push failed but no local book to lose"
+          fi
 
       # Publish fixed Chrome URL: https://SRoyaltyy.github.io/fullscan/dashboard/
       - name: Prepare Pages publish dir
