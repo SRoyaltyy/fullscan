@@ -1,6 +1,6 @@
 {
  "date": "2026-08-21",
- "generated_at": "2026-08-21T11:50:44.482987-04:00",
+ "generated_at": "2026-08-22T03:37:39.159334-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.5,
   "dollar_oil_score": -0.5,
   "futures_score": 0.5,
-  "yields": "falling",
-  "yields_source": "llm_factor_fallback",
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.04,
+  "dgs10_current": 4.69,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.05,
-  "vix_ratio": 0.822,
-  "vix_spot": 15.26,
-  "vix_delta_1d": -0.75,
-  "vix_ratio_source": "vix/vix3m",
-  "vix": "falling",
-  "oil_pct_1d": -0.95,
+  "dxy_pct_1d": -0.1,
+  "vix_ratio": 0.945,
+  "vix_spot": 15.13,
+  "vix_delta_1d": -0.88,
+  "vix_ratio_source": "vix/ma20",
+  "vix": "calm",
+  "oil_pct_1d": -0.88,
   "oil": "flat",
-  "fear_greed": null,
-  "fear_greed_label": null,
-  "regime_corr": -0.169,
+  "fear_greed": 55.9,
+  "fear_greed_label": "Greed",
+  "regime_corr": -0.21,
   "sectors": {
    "Basic Materials": {
     "score": 13.2,
@@ -113,8 +115,8 @@
    "Technology": -3.15,
    "Utilities": -2.22
   },
-  "events_bull": 0,
-  "events_bear": 0,
+  "events_bull": 6,
+  "events_bear": 17,
   "china_event_dir": null,
   "risk_source": "news_judge"
  },
@@ -246,12 +248,12 @@
    "high": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, VIX falling"
+    "why": "risk-mixed, VIX calm"
    },
    "low": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, VIX falling"
+    "why": "risk-mixed, VIX calm"
    },
    "mid": {
     "stance": "neutral",
@@ -302,7 +304,7 @@
    "no": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, F&G None"
+    "why": "risk-mixed, F&G Greed"
    },
    "yes": {
     "stance": "neutral",
@@ -317,14 +319,14 @@
   },
   "lev": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "—"
+    "why": "balance-sheet strength preferred in stress"
    },
    "mid": {
     "stance": "neutral",
@@ -339,14 +341,14 @@
   },
   "style": {
    "growth": {
-    "stance": "favorable",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "value lags duration rallies"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",

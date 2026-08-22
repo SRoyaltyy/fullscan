@@ -1,49 +1,49 @@
 {
-  "generated_at": "2026-08-21T13:50:17.998058-04:00",
+  "generated_at": "2026-08-22T03:40:17.615257-04:00",
   "aggregate": {
     "1d": {
-      "n_books": 6,
-      "buy_hits": 67,
+      "n_books": 7,
+      "buy_hits": 65,
       "buy_n": 124,
-      "sell_hits": 70,
+      "sell_hits": 71,
       "sell_n": 140,
-      "pnl_sum": 2.102,
+      "pnl_sum": 2.054,
       "pnl_n": 6
     },
     "3d": {
-      "n_books": 6,
-      "buy_hits": 64,
+      "n_books": 7,
+      "buy_hits": 62,
       "buy_n": 123,
-      "sell_hits": 60,
+      "sell_hits": 62,
       "sell_n": 140,
-      "pnl_sum": -0.46799999999999986,
+      "pnl_sum": -1.0759999999999996,
       "pnl_n": 6
     },
     "1w": {
-      "n_books": 6,
-      "buy_hits": 74,
+      "n_books": 7,
+      "buy_hits": 73,
       "buy_n": 122,
-      "sell_hits": 58,
+      "sell_hits": 57,
       "sell_n": 139,
-      "pnl_sum": -1.639000000000001,
+      "pnl_sum": -2.416,
       "pnl_n": 6
     },
     "2w": {
-      "n_books": 6,
-      "buy_hits": 73,
+      "n_books": 7,
+      "buy_hits": 70,
       "buy_n": 122,
-      "sell_hits": 59,
+      "sell_hits": 56,
       "sell_n": 140,
-      "pnl_sum": 1.9800000000000004,
+      "pnl_sum": 0.11999999999999977,
       "pnl_n": 6
     },
     "1m": {
-      "n_books": 6,
-      "buy_hits": 71,
+      "n_books": 7,
+      "buy_hits": 70,
       "buy_n": 123,
-      "sell_hits": 47,
+      "sell_hits": 44,
       "sell_n": 140,
-      "pnl_sum": 2.521,
+      "pnl_sum": 0.25400000000000017,
       "pnl_n": 6
     }
   },
@@ -720,17 +720,17 @@
           "trading_days": 10,
           "buy": {
             "n": 16,
-            "hits": 13,
-            "hit_rate": 0.812,
-            "avg_pnl_pct": 6.665
+            "hits": 12,
+            "hit_rate": 0.75,
+            "avg_pnl_pct": 6.926
           },
           "sell": {
             "n": 25,
             "hits": 6,
             "hit_rate": 0.24,
-            "avg_pnl_pct": -2.071
+            "avg_pnl_pct": -1.715
           },
-          "avg_pnl_pct_both": 2.297,
+          "avg_pnl_pct_both": 2.606,
           "detail_buy": [
             {
               "ticker": "TKVA",
@@ -789,43 +789,43 @@
             {
               "ticker": "INO",
               "side": "buy",
-              "fwd": 30.0,
-              "pnl": 30.0,
+              "fwd": 31.111,
+              "pnl": 31.111,
               "hit": true
             },
             {
               "ticker": "TNDM",
               "side": "buy",
-              "fwd": -1.167,
-              "pnl": -1.167,
+              "fwd": -3.502,
+              "pnl": -3.502,
               "hit": false
             },
             {
               "ticker": "AGEN",
               "side": "buy",
-              "fwd": 11.429,
-              "pnl": 11.429,
+              "fwd": 15.571,
+              "pnl": 15.571,
               "hit": true
             },
             {
               "ticker": "ACHV",
               "side": "buy",
-              "fwd": 9.793,
-              "pnl": 9.793,
+              "fwd": 10.207,
+              "pnl": 10.207,
               "hit": true
             },
             {
               "ticker": "VOR",
               "side": "buy",
-              "fwd": 1.503,
-              "pnl": 1.503,
+              "fwd": 0.301,
+              "pnl": 0.301,
               "hit": true
             },
             {
               "ticker": "WW",
               "side": "buy",
-              "fwd": 10.865,
-              "pnl": 10.865,
+              "fwd": 8.72,
+              "pnl": 8.72,
               "hit": true
             }
           ],
@@ -833,106 +833,106 @@
             {
               "ticker": "TIMB",
               "side": "sell",
-              "fwd": 2.773,
-              "pnl": -2.773,
+              "fwd": 3.062,
+              "pnl": -3.062,
               "hit": false
             },
             {
               "ticker": "TLK",
               "side": "sell",
-              "fwd": 2.11,
-              "pnl": -2.11,
+              "fwd": 2.042,
+              "pnl": -2.042,
               "hit": false
             },
             {
               "ticker": "SKM",
               "side": "sell",
-              "fwd": 10.161,
-              "pnl": -10.161,
+              "fwd": 9.752,
+              "pnl": -9.752,
               "hit": false
             },
             {
               "ticker": "ATHM",
               "side": "sell",
-              "fwd": -1.198,
-              "pnl": 1.198,
+              "fwd": -1.42,
+              "pnl": 1.42,
               "hit": true
             },
             {
               "ticker": "PSO",
               "side": "sell",
-              "fwd": 0.651,
-              "pnl": -0.651,
+              "fwd": 0.867,
+              "pnl": -0.867,
               "hit": false
             },
             {
               "ticker": "NWSA",
               "side": "sell",
-              "fwd": 4.216,
-              "pnl": -4.216,
+              "fwd": 4.976,
+              "pnl": -4.976,
               "hit": false
             },
             {
               "ticker": "LBTYA",
               "side": "sell",
-              "fwd": 0.429,
-              "pnl": -0.429,
+              "fwd": 1.525,
+              "pnl": -1.525,
               "hit": false
             },
             {
               "ticker": "NTES",
               "side": "sell",
-              "fwd": 4.55,
-              "pnl": -4.55,
+              "fwd": 4.501,
+              "pnl": -4.501,
               "hit": false
             },
             {
               "ticker": "NWS",
               "side": "sell",
-              "fwd": 4.464,
-              "pnl": -4.464,
+              "fwd": 4.92,
+              "pnl": -4.92,
               "hit": false
             },
             {
               "ticker": "BIDU",
               "side": "sell",
-              "fwd": -9.916,
-              "pnl": 9.916,
+              "fwd": -10.957,
+              "pnl": 10.957,
               "hit": true
             },
             {
               "ticker": "LBTYK",
               "side": "sell",
-              "fwd": 0.343,
-              "pnl": -0.343,
+              "fwd": 2.059,
+              "pnl": -2.059,
               "hit": false
             },
             {
               "ticker": "JOYY",
               "side": "sell",
-              "fwd": 0.873,
-              "pnl": -0.873,
+              "fwd": 1.995,
+              "pnl": -1.995,
               "hit": false
             },
             {
               "ticker": "KYIV",
               "side": "sell",
-              "fwd": -0.152,
-              "pnl": 0.152,
-              "hit": true
+              "fwd": 0.607,
+              "pnl": -0.607,
+              "hit": false
             },
             {
               "ticker": "CHT",
               "side": "sell",
-              "fwd": 2.708,
-              "pnl": -2.708,
+              "fwd": 2.602,
+              "pnl": -2.602,
               "hit": false
             },
             {
               "ticker": "BZ",
               "side": "sell",
-              "fwd": 2.821,
-              "pnl": -2.821,
+              "fwd": 3.437,
+              "pnl": -3.437,
               "hit": false
             }
           ]
@@ -941,17 +941,17 @@
           "trading_days": 21,
           "buy": {
             "n": 16,
-            "hits": 13,
-            "hit_rate": 0.812,
-            "avg_pnl_pct": 7.939
+            "hits": 12,
+            "hit_rate": 0.75,
+            "avg_pnl_pct": 8.294
           },
           "sell": {
             "n": 25,
             "hits": 6,
             "hit_rate": 0.24,
-            "avg_pnl_pct": -1.52
+            "avg_pnl_pct": -1.812
           },
-          "avg_pnl_pct_both": 3.21,
+          "avg_pnl_pct_both": 3.241,
           "detail_buy": [
             {
               "ticker": "TKVA",
@@ -1010,43 +1010,43 @@
             {
               "ticker": "TNDM",
               "side": "buy",
-              "fwd": -1.167,
-              "pnl": -1.167,
+              "fwd": -3.502,
+              "pnl": -3.502,
               "hit": false
             },
             {
               "ticker": "INO",
               "side": "buy",
-              "fwd": 30.0,
-              "pnl": 30.0,
+              "fwd": 31.111,
+              "pnl": 31.111,
               "hit": true
             },
             {
               "ticker": "ACHV",
               "side": "buy",
-              "fwd": 9.793,
-              "pnl": 9.793,
+              "fwd": 10.207,
+              "pnl": 10.207,
               "hit": true
             },
             {
               "ticker": "AGEN",
               "side": "buy",
-              "fwd": 11.429,
-              "pnl": 11.429,
+              "fwd": 15.571,
+              "pnl": 15.571,
               "hit": true
             },
             {
               "ticker": "VOR",
               "side": "buy",
-              "fwd": 1.503,
-              "pnl": 1.503,
+              "fwd": 0.301,
+              "pnl": 0.301,
               "hit": true
             },
             {
               "ticker": "SGRY",
               "side": "buy",
-              "fwd": -8.229,
-              "pnl": -8.229,
+              "fwd": -4.411,
+              "pnl": -4.411,
               "hit": false
             }
           ],
@@ -1054,106 +1054,106 @@
             {
               "ticker": "KYIV",
               "side": "sell",
-              "fwd": -0.152,
-              "pnl": 0.152,
-              "hit": true
+              "fwd": 0.607,
+              "pnl": -0.607,
+              "hit": false
             },
             {
               "ticker": "BZ",
               "side": "sell",
-              "fwd": 2.821,
-              "pnl": -2.821,
+              "fwd": 3.437,
+              "pnl": -3.437,
               "hit": false
             },
             {
               "ticker": "CHT",
               "side": "sell",
-              "fwd": 2.708,
-              "pnl": -2.708,
+              "fwd": 2.602,
+              "pnl": -2.602,
               "hit": false
             },
             {
               "ticker": "JOYY",
               "side": "sell",
-              "fwd": 0.873,
-              "pnl": -0.873,
+              "fwd": 1.995,
+              "pnl": -1.995,
               "hit": false
             },
             {
               "ticker": "KT",
               "side": "sell",
-              "fwd": 0.026,
-              "pnl": -0.026,
-              "hit": false
+              "fwd": -0.316,
+              "pnl": 0.316,
+              "hit": true
             },
             {
               "ticker": "FOX",
               "side": "sell",
-              "fwd": 5.947,
-              "pnl": -5.947,
+              "fwd": 5.077,
+              "pnl": -5.077,
               "hit": false
             },
             {
               "ticker": "NTES",
               "side": "sell",
-              "fwd": 4.55,
-              "pnl": -4.55,
+              "fwd": 4.501,
+              "pnl": -4.501,
               "hit": false
             },
             {
               "ticker": "LBTYA",
               "side": "sell",
-              "fwd": 0.429,
-              "pnl": -0.429,
+              "fwd": 1.525,
+              "pnl": -1.525,
               "hit": false
             },
             {
               "ticker": "PSO",
               "side": "sell",
-              "fwd": 0.651,
-              "pnl": -0.651,
+              "fwd": 0.867,
+              "pnl": -0.867,
               "hit": false
             },
             {
               "ticker": "NWSA",
               "side": "sell",
-              "fwd": 4.216,
-              "pnl": -4.216,
+              "fwd": 4.976,
+              "pnl": -4.976,
               "hit": false
             },
             {
               "ticker": "NWS",
               "side": "sell",
-              "fwd": 4.464,
-              "pnl": -4.464,
+              "fwd": 4.92,
+              "pnl": -4.92,
               "hit": false
             },
             {
               "ticker": "BIDU",
               "side": "sell",
-              "fwd": -9.916,
-              "pnl": 9.916,
+              "fwd": -10.957,
+              "pnl": 10.957,
               "hit": true
             },
             {
               "ticker": "TLK",
               "side": "sell",
-              "fwd": 2.11,
-              "pnl": -2.11,
+              "fwd": 2.042,
+              "pnl": -2.042,
               "hit": false
             },
             {
               "ticker": "ATHM",
               "side": "sell",
-              "fwd": -1.198,
-              "pnl": 1.198,
+              "fwd": -1.42,
+              "pnl": 1.42,
               "hit": true
             },
             {
               "ticker": "SKM",
               "side": "sell",
-              "fwd": 10.161,
-              "pnl": -10.161,
+              "fwd": 9.752,
+              "pnl": -9.752,
               "hit": false
             }
           ]
@@ -1620,15 +1620,15 @@
             "n": 16,
             "hits": 3,
             "hit_rate": 0.188,
-            "avg_pnl_pct": -9.229
+            "avg_pnl_pct": -9.264
           },
           "sell": {
             "n": 25,
-            "hits": 11,
-            "hit_rate": 0.44,
-            "avg_pnl_pct": -3.337
+            "hits": 10,
+            "hit_rate": 0.4,
+            "avg_pnl_pct": -3.351
           },
-          "avg_pnl_pct_both": -6.283,
+          "avg_pnl_pct_both": -6.307,
           "detail_buy": [
             {
               "ticker": "BCACU",
@@ -1663,8 +1663,8 @@
             {
               "ticker": "BEMD",
               "side": "buy",
-              "fwd": -0.62,
-              "pnl": -0.62,
+              "fwd": -0.759,
+              "pnl": -0.759,
               "hit": false
             },
             {
@@ -1682,8 +1682,8 @@
             {
               "ticker": "TLN",
               "side": "buy",
-              "fwd": -12.47,
-              "pnl": -12.47,
+              "fwd": -13.31,
+              "pnl": -13.31,
               "hit": false
             },
             {
@@ -1695,29 +1695,29 @@
             {
               "ticker": "TBCH",
               "side": "buy",
-              "fwd": -1.176,
-              "pnl": -1.176,
+              "fwd": -0.706,
+              "pnl": -0.706,
               "hit": false
             },
             {
               "ticker": "CRNC",
               "side": "buy",
-              "fwd": -10.234,
-              "pnl": -10.234,
+              "fwd": -10.345,
+              "pnl": -10.345,
               "hit": false
             },
             {
               "ticker": "INDI",
               "side": "buy",
-              "fwd": -9.556,
-              "pnl": -9.556,
+              "fwd": -11.89,
+              "pnl": -11.89,
               "hit": false
             },
             {
               "ticker": "VERI",
               "side": "buy",
-              "fwd": -27.104,
-              "pnl": -27.104,
+              "fwd": -25.304,
+              "pnl": -25.304,
               "hit": false
             },
             {
@@ -1732,64 +1732,64 @@
             {
               "ticker": "LIN",
               "side": "sell",
-              "fwd": 0.887,
-              "pnl": -0.887,
+              "fwd": 1.001,
+              "pnl": -1.001,
               "hit": false
             },
             {
               "ticker": "VALE",
               "side": "sell",
-              "fwd": 6.75,
-              "pnl": -6.75,
+              "fwd": 7.043,
+              "pnl": -7.043,
               "hit": false
             },
             {
               "ticker": "LYB",
               "side": "sell",
-              "fwd": 6.901,
-              "pnl": -6.901,
+              "fwd": 5.913,
+              "pnl": -5.913,
               "hit": false
             },
             {
               "ticker": "NTR",
               "side": "sell",
-              "fwd": 9.921,
-              "pnl": -9.921,
+              "fwd": 10.302,
+              "pnl": -10.302,
               "hit": false
             },
             {
               "ticker": "SSL",
               "side": "sell",
-              "fwd": 8.369,
-              "pnl": -8.369,
+              "fwd": 8.326,
+              "pnl": -8.326,
               "hit": false
             },
             {
               "ticker": "CTVA",
               "side": "sell",
-              "fwd": 6.266,
-              "pnl": -6.266,
+              "fwd": 6.664,
+              "pnl": -6.664,
               "hit": false
             },
             {
               "ticker": "RIO",
               "side": "sell",
-              "fwd": 9.72,
-              "pnl": -9.72,
+              "fwd": 10.054,
+              "pnl": -10.054,
               "hit": false
             },
             {
               "ticker": "PHOS",
               "side": "sell",
-              "fwd": 7.414,
-              "pnl": -7.414,
+              "fwd": 6.379,
+              "pnl": -6.379,
               "hit": false
             },
             {
               "ticker": "SIND",
               "side": "sell",
-              "fwd": 2.051,
-              "pnl": -2.051,
+              "fwd": 2.533,
+              "pnl": -2.533,
               "hit": false
             },
             {
@@ -1802,36 +1802,36 @@
             {
               "ticker": "SIM",
               "side": "sell",
-              "fwd": -2.459,
-              "pnl": 2.459,
+              "fwd": -3.279,
+              "pnl": 3.279,
               "hit": true
             },
             {
               "ticker": "SA",
               "side": "sell",
-              "fwd": -9.453,
-              "pnl": 9.453,
+              "fwd": -10.024,
+              "pnl": 10.024,
               "hit": true
             },
             {
               "ticker": "DD",
               "side": "sell",
-              "fwd": -4.793,
-              "pnl": 4.793,
+              "fwd": -5.422,
+              "pnl": 5.422,
               "hit": true
             },
             {
               "ticker": "PPG",
               "side": "sell",
-              "fwd": -0.648,
-              "pnl": 0.648,
+              "fwd": -0.421,
+              "pnl": 0.421,
               "hit": true
             },
             {
               "ticker": "CRH",
               "side": "sell",
-              "fwd": -1.647,
-              "pnl": 1.647,
+              "fwd": -2.141,
+              "pnl": 2.141,
               "hit": true
             }
           ]
@@ -1842,15 +1842,15 @@
             "n": 16,
             "hits": 1,
             "hit_rate": 0.062,
-            "avg_pnl_pct": -9.385
+            "avg_pnl_pct": -9.266
           },
           "sell": {
             "n": 25,
-            "hits": 10,
-            "hit_rate": 0.4,
-            "avg_pnl_pct": -2.421
+            "hits": 9,
+            "hit_rate": 0.36,
+            "avg_pnl_pct": -2.416
           },
-          "avg_pnl_pct_both": -5.903,
+          "avg_pnl_pct_both": -5.841,
           "detail_buy": [
             {
               "ticker": "IDIAU",
@@ -1885,8 +1885,8 @@
             {
               "ticker": "BEMD",
               "side": "buy",
-              "fwd": -0.62,
-              "pnl": -0.62,
+              "fwd": -0.759,
+              "pnl": -0.759,
               "hit": false
             },
             {
@@ -1910,15 +1910,15 @@
             {
               "ticker": "CRNC",
               "side": "buy",
-              "fwd": -10.178,
-              "pnl": -10.178,
+              "fwd": -10.345,
+              "pnl": -10.345,
               "hit": false
             },
             {
               "ticker": "INDI",
               "side": "buy",
-              "fwd": -9.556,
-              "pnl": -9.556,
+              "fwd": -11.89,
+              "pnl": -11.89,
               "hit": false
             },
             {
@@ -1931,22 +1931,22 @@
             {
               "ticker": "TBCH",
               "side": "buy",
-              "fwd": -1.176,
-              "pnl": -1.176,
+              "fwd": -0.706,
+              "pnl": -0.706,
               "hit": false
             },
             {
               "ticker": "WOLF",
               "side": "buy",
-              "fwd": -18.622,
-              "pnl": -18.622,
+              "fwd": -18.968,
+              "pnl": -18.968,
               "hit": false
             },
             {
               "ticker": "VERI",
               "side": "buy",
-              "fwd": -27.104,
-              "pnl": -27.104,
+              "fwd": -25.304,
+              "pnl": -25.304,
               "hit": false
             }
           ],
@@ -1954,57 +1954,57 @@
             {
               "ticker": "LIN",
               "side": "sell",
-              "fwd": 0.887,
-              "pnl": -0.887,
+              "fwd": 1.001,
+              "pnl": -1.001,
               "hit": false
             },
             {
               "ticker": "SSL",
               "side": "sell",
-              "fwd": 8.369,
-              "pnl": -8.369,
+              "fwd": 8.326,
+              "pnl": -8.326,
               "hit": false
             },
             {
               "ticker": "VALE",
               "side": "sell",
-              "fwd": 6.75,
-              "pnl": -6.75,
+              "fwd": 7.043,
+              "pnl": -7.043,
               "hit": false
             },
             {
               "ticker": "CTVA",
               "side": "sell",
-              "fwd": 6.266,
-              "pnl": -6.266,
+              "fwd": 6.664,
+              "pnl": -6.664,
               "hit": false
             },
             {
               "ticker": "LYB",
               "side": "sell",
-              "fwd": 6.901,
-              "pnl": -6.901,
+              "fwd": 5.913,
+              "pnl": -5.913,
               "hit": false
             },
             {
               "ticker": "NTR",
               "side": "sell",
-              "fwd": 9.921,
-              "pnl": -9.921,
+              "fwd": 10.302,
+              "pnl": -10.302,
               "hit": false
             },
             {
               "ticker": "RIO",
               "side": "sell",
-              "fwd": 9.72,
-              "pnl": -9.72,
+              "fwd": 10.054,
+              "pnl": -10.054,
               "hit": false
             },
             {
               "ticker": "SIM",
               "side": "sell",
-              "fwd": -2.459,
-              "pnl": 2.459,
+              "fwd": -3.279,
+              "pnl": 3.279,
               "hit": true
             },
             {
@@ -2017,43 +2017,43 @@
             {
               "ticker": "SIND",
               "side": "sell",
-              "fwd": 2.051,
-              "pnl": -2.051,
+              "fwd": 2.533,
+              "pnl": -2.533,
               "hit": false
             },
             {
               "ticker": "PHOS",
               "side": "sell",
-              "fwd": 7.414,
-              "pnl": -7.414,
+              "fwd": 6.379,
+              "pnl": -6.379,
               "hit": false
             },
             {
               "ticker": "TTAM",
               "side": "sell",
-              "fwd": -5.611,
-              "pnl": 5.611,
+              "fwd": -5.424,
+              "pnl": 5.424,
               "hit": true
             },
             {
               "ticker": "CRH",
               "side": "sell",
-              "fwd": -1.647,
-              "pnl": 1.647,
+              "fwd": -2.141,
+              "pnl": 2.141,
               "hit": true
             },
             {
               "ticker": "TX",
               "side": "sell",
-              "fwd": 2.62,
-              "pnl": -2.62,
+              "fwd": 3.048,
+              "pnl": -3.048,
               "hit": false
             },
             {
               "ticker": "PPG",
               "side": "sell",
-              "fwd": -0.648,
-              "pnl": 0.648,
+              "fwd": -0.421,
+              "pnl": 0.421,
               "hit": true
             }
           ]
@@ -2062,17 +2062,17 @@
           "trading_days": 21,
           "buy": {
             "n": 17,
-            "hits": 1,
-            "hit_rate": 0.059,
-            "avg_pnl_pct": -4.01
+            "hits": 0,
+            "hit_rate": 0.0,
+            "avg_pnl_pct": -4.042
           },
           "sell": {
             "n": 25,
-            "hits": 9,
-            "hit_rate": 0.36,
-            "avg_pnl_pct": -2.833
+            "hits": 8,
+            "hit_rate": 0.32,
+            "avg_pnl_pct": -2.798
           },
-          "avg_pnl_pct_both": -3.421,
+          "avg_pnl_pct_both": -3.42,
           "detail_buy": [
             {
               "ticker": "SKAIU",
@@ -2107,8 +2107,8 @@
             {
               "ticker": "BEMD",
               "side": "buy",
-              "fwd": -0.62,
-              "pnl": -0.62,
+              "fwd": -0.759,
+              "pnl": -0.759,
               "hit": false
             },
             {
@@ -2132,43 +2132,43 @@
             {
               "ticker": "BTBT",
               "side": "buy",
-              "fwd": -1.592,
-              "pnl": -1.592,
+              "fwd": -2.548,
+              "pnl": -2.548,
               "hit": false
             },
             {
               "ticker": "BETR",
               "side": "buy",
-              "fwd": -15.586,
-              "pnl": -15.586,
+              "fwd": -14.931,
+              "pnl": -14.931,
               "hit": false
             },
             {
               "ticker": "LDI",
               "side": "buy",
-              "fwd": -1.271,
-              "pnl": -1.271,
+              "fwd": -0.446,
+              "pnl": -0.446,
               "hit": false
             },
             {
               "ticker": "PRCH",
               "side": "buy",
-              "fwd": -2.071,
-              "pnl": -2.071,
+              "fwd": -1.669,
+              "pnl": -1.669,
               "hit": false
             },
             {
               "ticker": "ATLC",
               "side": "buy",
-              "fwd": -7.419,
-              "pnl": -7.419,
+              "fwd": -6.327,
+              "pnl": -6.327,
               "hit": false
             },
             {
               "ticker": "FCUS",
               "side": "buy",
-              "fwd": -5.703,
-              "pnl": -5.703,
+              "fwd": -5.476,
+              "pnl": -5.476,
               "hit": false
             }
           ],
@@ -2176,64 +2176,64 @@
             {
               "ticker": "LIN",
               "side": "sell",
-              "fwd": 0.887,
-              "pnl": -0.887,
+              "fwd": 1.001,
+              "pnl": -1.001,
               "hit": false
             },
             {
               "ticker": "VALE",
               "side": "sell",
-              "fwd": 6.75,
-              "pnl": -6.75,
+              "fwd": 7.043,
+              "pnl": -7.043,
               "hit": false
             },
             {
               "ticker": "SSL",
               "side": "sell",
-              "fwd": 8.369,
-              "pnl": -8.369,
+              "fwd": 8.326,
+              "pnl": -8.326,
               "hit": false
             },
             {
               "ticker": "CTVA",
               "side": "sell",
-              "fwd": 6.273,
-              "pnl": -6.273,
+              "fwd": 6.664,
+              "pnl": -6.664,
               "hit": false
             },
             {
               "ticker": "NTR",
               "side": "sell",
-              "fwd": 9.921,
-              "pnl": -9.921,
+              "fwd": 10.302,
+              "pnl": -10.302,
               "hit": false
             },
             {
               "ticker": "RIO",
               "side": "sell",
-              "fwd": 9.72,
-              "pnl": -9.72,
+              "fwd": 10.054,
+              "pnl": -10.054,
               "hit": false
             },
             {
               "ticker": "LYB",
               "side": "sell",
-              "fwd": 6.901,
-              "pnl": -6.901,
+              "fwd": 5.913,
+              "pnl": -5.913,
               "hit": false
             },
             {
               "ticker": "SIM",
               "side": "sell",
-              "fwd": -2.459,
-              "pnl": 2.459,
+              "fwd": -3.279,
+              "pnl": 3.279,
               "hit": true
             },
             {
               "ticker": "SIND",
               "side": "sell",
-              "fwd": 2.051,
-              "pnl": -2.051,
+              "fwd": 2.533,
+              "pnl": -2.533,
               "hit": false
             },
             {
@@ -2246,36 +2246,36 @@
             {
               "ticker": "PHOS",
               "side": "sell",
-              "fwd": 7.414,
-              "pnl": -7.414,
+              "fwd": 6.379,
+              "pnl": -6.379,
               "hit": false
             },
             {
               "ticker": "CRH",
               "side": "sell",
-              "fwd": -1.647,
-              "pnl": 1.647,
+              "fwd": -2.141,
+              "pnl": 2.141,
               "hit": true
             },
             {
               "ticker": "TX",
               "side": "sell",
-              "fwd": 2.62,
-              "pnl": -2.62,
+              "fwd": 3.048,
+              "pnl": -3.048,
               "hit": false
             },
             {
               "ticker": "DD",
               "side": "sell",
-              "fwd": -4.793,
-              "pnl": 4.793,
+              "fwd": -5.422,
+              "pnl": 5.422,
               "hit": true
             },
             {
               "ticker": "TTAM",
               "side": "sell",
-              "fwd": -5.611,
-              "pnl": 5.611,
+              "fwd": -5.424,
+              "pnl": 5.424,
               "hit": true
             }
           ]
@@ -2752,119 +2752,119 @@
             "n": 25,
             "hits": 19,
             "hit_rate": 0.76,
-            "avg_pnl_pct": 4.501
+            "avg_pnl_pct": 4.889
           },
           "sell": {
             "n": 25,
-            "hits": 9,
-            "hit_rate": 0.36,
-            "avg_pnl_pct": -0.504
+            "hits": 8,
+            "hit_rate": 0.32,
+            "avg_pnl_pct": -0.945
           },
-          "avg_pnl_pct_both": 1.999,
+          "avg_pnl_pct_both": 1.972,
           "detail_buy": [
             {
               "ticker": "TMC",
               "side": "buy",
-              "fwd": 26.127,
-              "pnl": 26.127,
+              "fwd": 27.056,
+              "pnl": 27.056,
               "hit": true
             },
             {
               "ticker": "DNN",
               "side": "buy",
-              "fwd": 8.934,
-              "pnl": 8.934,
+              "fwd": 9.718,
+              "pnl": 9.718,
               "hit": true
             },
             {
               "ticker": "TGB",
               "side": "buy",
-              "fwd": 3.82,
-              "pnl": 3.82,
+              "fwd": 4.789,
+              "pnl": 4.789,
               "hit": true
             },
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 7.057,
-              "pnl": 7.057,
+              "fwd": 8.84,
+              "pnl": 8.84,
               "hit": true
             },
             {
               "ticker": "ERO",
               "side": "buy",
-              "fwd": 10.971,
-              "pnl": 10.971,
+              "fwd": 12.919,
+              "pnl": 12.919,
               "hit": true
             },
             {
               "ticker": "EL",
               "side": "buy",
-              "fwd": 19.089,
-              "pnl": 19.089,
+              "fwd": 20.868,
+              "pnl": 20.868,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 15.261,
-              "pnl": 15.261,
+              "fwd": 14.979,
+              "pnl": 14.979,
               "hit": true
             },
             {
               "ticker": "HNST",
               "side": "buy",
-              "fwd": 6.915,
-              "pnl": 6.915,
+              "fwd": 7.447,
+              "pnl": 7.447,
               "hit": true
             },
             {
               "ticker": "DVN",
               "side": "buy",
-              "fwd": 3.363,
-              "pnl": 3.363,
+              "fwd": 3.216,
+              "pnl": 3.216,
               "hit": true
             },
             {
               "ticker": "NB",
               "side": "buy",
-              "fwd": -4.366,
-              "pnl": -4.366,
+              "fwd": -3.534,
+              "pnl": -3.534,
               "hit": false
             },
             {
               "ticker": "FANG",
               "side": "buy",
-              "fwd": 2.043,
-              "pnl": 2.043,
+              "fwd": 2.147,
+              "pnl": 2.147,
               "hit": true
             },
             {
               "ticker": "EOG",
               "side": "buy",
-              "fwd": 4.085,
-              "pnl": 4.085,
+              "fwd": 4.721,
+              "pnl": 4.721,
               "hit": true
             },
             {
               "ticker": "OTF",
               "side": "buy",
-              "fwd": -1.617,
-              "pnl": -1.617,
+              "fwd": -1.527,
+              "pnl": -1.527,
               "hit": false
             },
             {
               "ticker": "OLLI",
               "side": "buy",
-              "fwd": 1.922,
-              "pnl": 1.922,
+              "fwd": 1.521,
+              "pnl": 1.521,
               "hit": true
             },
             {
               "ticker": "CWEN",
               "side": "buy",
-              "fwd": -4.963,
-              "pnl": -4.963,
+              "fwd": -4.656,
+              "pnl": -4.656,
               "hit": false
             }
           ],
@@ -2872,71 +2872,71 @@
             {
               "ticker": "AMBP",
               "side": "sell",
-              "fwd": 2.203,
-              "pnl": -2.203,
+              "fwd": 2.682,
+              "pnl": -2.682,
               "hit": false
             },
             {
               "ticker": "GTX",
               "side": "sell",
-              "fwd": -6.298,
-              "pnl": 6.298,
+              "fwd": -6.858,
+              "pnl": 6.858,
               "hit": true
             },
             {
               "ticker": "QSR",
               "side": "sell",
-              "fwd": 4.899,
-              "pnl": -4.899,
+              "fwd": 4.795,
+              "pnl": -4.795,
               "hit": false
             },
             {
               "ticker": "HRB",
               "side": "sell",
-              "fwd": 5.885,
-              "pnl": -5.885,
+              "fwd": 7.082,
+              "pnl": -7.082,
               "hit": false
             },
             {
               "ticker": "ORLY",
               "side": "sell",
-              "fwd": -1.147,
-              "pnl": 1.147,
+              "fwd": -1.241,
+              "pnl": 1.241,
               "hit": true
             },
             {
               "ticker": "YUM",
               "side": "sell",
-              "fwd": 4.527,
-              "pnl": -4.527,
+              "fwd": 5.409,
+              "pnl": -5.409,
               "hit": false
             },
             {
               "ticker": "GPC",
               "side": "sell",
-              "fwd": 0.906,
-              "pnl": -0.906,
+              "fwd": 1.087,
+              "pnl": -1.087,
               "hit": false
             },
             {
               "ticker": "MCD",
               "side": "sell",
-              "fwd": 2.002,
-              "pnl": -2.002,
+              "fwd": 2.041,
+              "pnl": -2.041,
               "hit": false
             },
             {
               "ticker": "ARCO",
               "side": "sell",
-              "fwd": 0.254,
-              "pnl": -0.254,
+              "fwd": 1.272,
+              "pnl": -1.272,
               "hit": false
             },
             {
               "ticker": "LEG",
               "side": "sell",
-              "fwd": -1.674,
-              "pnl": 1.674,
+              "fwd": -1.569,
+              "pnl": 1.569,
               "hit": true
             },
             {
@@ -2949,29 +2949,29 @@
             {
               "ticker": "CHH",
               "side": "sell",
-              "fwd": 2.85,
-              "pnl": -2.85,
+              "fwd": 4.47,
+              "pnl": -4.47,
               "hit": false
             },
             {
               "ticker": "SON",
               "side": "sell",
-              "fwd": 4.396,
-              "pnl": -4.396,
+              "fwd": 4.811,
+              "pnl": -4.811,
               "hit": false
             },
             {
               "ticker": "CHDN",
               "side": "sell",
-              "fwd": 3.891,
-              "pnl": -3.891,
+              "fwd": 4.47,
+              "pnl": -4.47,
               "hit": false
             },
             {
               "ticker": "WH",
               "side": "sell",
-              "fwd": 1.707,
-              "pnl": -1.707,
+              "fwd": 2.303,
+              "pnl": -2.303,
               "hit": false
             }
           ]
@@ -2980,121 +2980,121 @@
           "trading_days": 10,
           "buy": {
             "n": 25,
-            "hits": 17,
-            "hit_rate": 0.68,
-            "avg_pnl_pct": 4.149
+            "hits": 16,
+            "hit_rate": 0.64,
+            "avg_pnl_pct": 4.338
           },
           "sell": {
             "n": 25,
-            "hits": 14,
-            "hit_rate": 0.56,
-            "avg_pnl_pct": -0.017
+            "hits": 10,
+            "hit_rate": 0.4,
+            "avg_pnl_pct": -0.292
           },
-          "avg_pnl_pct_both": 2.066,
+          "avg_pnl_pct_both": 2.023,
           "detail_buy": [
             {
               "ticker": "TMC",
               "side": "buy",
-              "fwd": 26.127,
-              "pnl": 26.127,
+              "fwd": 27.056,
+              "pnl": 27.056,
               "hit": true
             },
             {
               "ticker": "ERO",
               "side": "buy",
-              "fwd": 10.971,
-              "pnl": 10.971,
+              "fwd": 12.919,
+              "pnl": 12.919,
               "hit": true
             },
             {
               "ticker": "TGB",
               "side": "buy",
-              "fwd": 3.82,
-              "pnl": 3.82,
+              "fwd": 4.789,
+              "pnl": 4.789,
               "hit": true
             },
             {
               "ticker": "NB",
               "side": "buy",
-              "fwd": -4.366,
-              "pnl": -4.366,
+              "fwd": -3.534,
+              "pnl": -3.534,
               "hit": false
             },
             {
               "ticker": "DNN",
               "side": "buy",
-              "fwd": 8.934,
-              "pnl": 8.934,
+              "fwd": 9.718,
+              "pnl": 9.718,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 15.261,
-              "pnl": 15.261,
+              "fwd": 14.979,
+              "pnl": 14.979,
               "hit": true
             },
             {
               "ticker": "OTF",
               "side": "buy",
-              "fwd": -1.617,
-              "pnl": -1.617,
+              "fwd": -1.527,
+              "pnl": -1.527,
               "hit": false
             },
             {
               "ticker": "EL",
               "side": "buy",
-              "fwd": 19.089,
-              "pnl": 19.089,
+              "fwd": 20.868,
+              "pnl": 20.868,
               "hit": true
             },
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 7.057,
-              "pnl": 7.057,
+              "fwd": 8.84,
+              "pnl": 8.84,
               "hit": true
             },
             {
               "ticker": "OLLI",
               "side": "buy",
-              "fwd": 1.922,
-              "pnl": 1.922,
+              "fwd": 1.521,
+              "pnl": 1.521,
               "hit": true
             },
             {
               "ticker": "GOF",
               "side": "buy",
-              "fwd": -6.893,
-              "pnl": -6.893,
+              "fwd": -5.922,
+              "pnl": -5.922,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 4.505,
-              "pnl": 4.505,
+              "fwd": 4.886,
+              "pnl": 4.886,
               "hit": true
             },
             {
               "ticker": "HNST",
               "side": "buy",
-              "fwd": 6.915,
-              "pnl": 6.915,
+              "fwd": 7.447,
+              "pnl": 7.447,
               "hit": true
             },
             {
               "ticker": "CRH",
               "side": "buy",
-              "fwd": -0.604,
-              "pnl": -0.604,
+              "fwd": -1.02,
+              "pnl": -1.02,
               "hit": false
             },
             {
               "ticker": "CWEN",
               "side": "buy",
-              "fwd": -4.963,
-              "pnl": -4.963,
+              "fwd": -4.656,
+              "pnl": -4.656,
               "hit": false
             }
           ],
@@ -3102,107 +3102,107 @@
             {
               "ticker": "ALH",
               "side": "sell",
-              "fwd": -5.123,
-              "pnl": 5.123,
+              "fwd": -5.325,
+              "pnl": 5.325,
               "hit": true
             },
             {
               "ticker": "MWC",
               "side": "sell",
-              "fwd": 16.288,
-              "pnl": -16.288,
+              "fwd": 16.667,
+              "pnl": -16.667,
               "hit": false
             },
             {
               "ticker": "JMKE",
               "side": "sell",
-              "fwd": 5.455,
-              "pnl": -5.455,
+              "fwd": 5.809,
+              "pnl": -5.809,
               "hit": false
             },
             {
               "ticker": "VGNT",
               "side": "sell",
-              "fwd": 5.002,
-              "pnl": -5.002,
+              "fwd": 5.237,
+              "pnl": -5.237,
               "hit": false
             },
             {
               "ticker": "SMJF",
               "side": "sell",
-              "fwd": 8.995,
-              "pnl": -8.995,
+              "fwd": 9.187,
+              "pnl": -9.187,
               "hit": false
             },
             {
               "ticker": "REF",
               "side": "sell",
-              "fwd": -8.562,
-              "pnl": 8.562,
+              "fwd": -9.5,
+              "pnl": 9.5,
               "hit": true
             },
             {
               "ticker": "GTX",
               "side": "sell",
-              "fwd": -6.298,
-              "pnl": 6.298,
+              "fwd": -6.858,
+              "pnl": 6.858,
               "hit": true
             },
             {
               "ticker": "HLT",
               "side": "sell",
-              "fwd": -0.077,
-              "pnl": 0.077,
-              "hit": true
+              "fwd": 0.202,
+              "pnl": -0.202,
+              "hit": false
             },
             {
               "ticker": "TNL",
               "side": "sell",
-              "fwd": -3.108,
-              "pnl": 3.108,
+              "fwd": -2.714,
+              "pnl": 2.714,
               "hit": true
             },
             {
               "ticker": "MAR",
               "side": "sell",
-              "fwd": -0.376,
-              "pnl": 0.376,
-              "hit": true
+              "fwd": 0.153,
+              "pnl": -0.153,
+              "hit": false
             },
             {
               "ticker": "ALV",
               "side": "sell",
-              "fwd": 3.726,
-              "pnl": -3.726,
+              "fwd": 3.817,
+              "pnl": -3.817,
               "hit": false
             },
             {
               "ticker": "AMBP",
               "side": "sell",
-              "fwd": 2.203,
-              "pnl": -2.203,
+              "fwd": 2.682,
+              "pnl": -2.682,
               "hit": false
             },
             {
               "ticker": "BOBS",
               "side": "sell",
-              "fwd": -5.889,
-              "pnl": 5.889,
+              "fwd": -4.526,
+              "pnl": 4.526,
               "hit": true
             },
             {
               "ticker": "BKNG",
               "side": "sell",
-              "fwd": 2.625,
-              "pnl": -2.625,
+              "fwd": 2.374,
+              "pnl": -2.374,
               "hit": false
             },
             {
               "ticker": "OSW",
               "side": "sell",
-              "fwd": -1.102,
-              "pnl": 1.102,
-              "hit": true
+              "fwd": 0.023,
+              "pnl": -0.023,
+              "hit": false
             }
           ]
         },
@@ -3210,121 +3210,121 @@
           "trading_days": 21,
           "buy": {
             "n": 25,
-            "hits": 15,
-            "hit_rate": 0.6,
-            "avg_pnl_pct": 2.614
+            "hits": 16,
+            "hit_rate": 0.64,
+            "avg_pnl_pct": 3.231
           },
           "sell": {
             "n": 25,
-            "hits": 8,
-            "hit_rate": 0.32,
-            "avg_pnl_pct": -0.92
+            "hits": 7,
+            "hit_rate": 0.28,
+            "avg_pnl_pct": -1.39
           },
-          "avg_pnl_pct_both": 0.847,
+          "avg_pnl_pct_both": 0.92,
           "detail_buy": [
             {
               "ticker": "TMC",
               "side": "buy",
-              "fwd": 26.127,
-              "pnl": 26.127,
+              "fwd": 27.056,
+              "pnl": 27.056,
               "hit": true
             },
             {
               "ticker": "TGB",
               "side": "buy",
-              "fwd": 3.82,
-              "pnl": 3.82,
+              "fwd": 4.789,
+              "pnl": 4.789,
               "hit": true
             },
             {
               "ticker": "DNN",
               "side": "buy",
-              "fwd": 8.934,
-              "pnl": 8.934,
+              "fwd": 9.718,
+              "pnl": 9.718,
               "hit": true
             },
             {
               "ticker": "ERO",
               "side": "buy",
-              "fwd": 10.971,
-              "pnl": 10.971,
+              "fwd": 12.919,
+              "pnl": 12.919,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 15.261,
-              "pnl": 15.261,
+              "fwd": 14.979,
+              "pnl": 14.979,
               "hit": true
             },
             {
               "ticker": "NB",
               "side": "buy",
-              "fwd": -4.366,
-              "pnl": -4.366,
+              "fwd": -3.534,
+              "pnl": -3.534,
               "hit": false
             },
             {
               "ticker": "OTF",
               "side": "buy",
-              "fwd": -1.617,
-              "pnl": -1.617,
+              "fwd": -1.527,
+              "pnl": -1.527,
               "hit": false
             },
             {
               "ticker": "CRH",
               "side": "buy",
-              "fwd": -0.604,
-              "pnl": -0.604,
+              "fwd": -1.02,
+              "pnl": -1.02,
               "hit": false
             },
             {
               "ticker": "CWEN",
               "side": "buy",
-              "fwd": -4.963,
-              "pnl": -4.963,
+              "fwd": -4.656,
+              "pnl": -4.656,
               "hit": false
             },
             {
               "ticker": "ECL",
               "side": "buy",
-              "fwd": 1.278,
-              "pnl": 1.278,
+              "fwd": 2.099,
+              "pnl": 2.099,
               "hit": true
             },
             {
               "ticker": "MUR",
               "side": "buy",
-              "fwd": 7.84,
-              "pnl": 7.84,
+              "fwd": 7.438,
+              "pnl": 7.438,
               "hit": true
             },
             {
               "ticker": "GOF",
               "side": "buy",
-              "fwd": -6.893,
-              "pnl": -6.893,
+              "fwd": -5.922,
+              "pnl": -5.922,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 4.505,
-              "pnl": 4.505,
+              "fwd": 4.886,
+              "pnl": 4.886,
               "hit": true
             },
             {
               "ticker": "MRSH",
               "side": "buy",
-              "fwd": 3.797,
-              "pnl": 3.797,
+              "fwd": 4.234,
+              "pnl": 4.234,
               "hit": true
             },
             {
               "ticker": "JLHL",
               "side": "buy",
-              "fwd": -11.2,
-              "pnl": -11.2,
+              "fwd": -12.0,
+              "pnl": -12.0,
               "hit": false
             }
           ],
@@ -3332,106 +3332,106 @@
             {
               "ticker": "GTX",
               "side": "sell",
-              "fwd": -6.298,
-              "pnl": 6.298,
+              "fwd": -6.858,
+              "pnl": 6.858,
               "hit": true
             },
             {
               "ticker": "AMBP",
               "side": "sell",
-              "fwd": 2.203,
-              "pnl": -2.203,
+              "fwd": 2.682,
+              "pnl": -2.682,
               "hit": false
             },
             {
               "ticker": "GPC",
               "side": "sell",
-              "fwd": 0.906,
-              "pnl": -0.906,
+              "fwd": 1.087,
+              "pnl": -1.087,
               "hit": false
             },
             {
               "ticker": "YUM",
               "side": "sell",
-              "fwd": 4.527,
-              "pnl": -4.527,
+              "fwd": 5.409,
+              "pnl": -5.409,
               "hit": false
             },
             {
               "ticker": "HRB",
               "side": "sell",
-              "fwd": 5.885,
-              "pnl": -5.885,
+              "fwd": 7.082,
+              "pnl": -7.082,
               "hit": false
             },
             {
               "ticker": "MCD",
               "side": "sell",
-              "fwd": 2.002,
-              "pnl": -2.002,
+              "fwd": 2.041,
+              "pnl": -2.041,
               "hit": false
             },
             {
               "ticker": "QSR",
               "side": "sell",
-              "fwd": 4.899,
-              "pnl": -4.899,
+              "fwd": 4.795,
+              "pnl": -4.795,
               "hit": false
             },
             {
               "ticker": "ARCO",
               "side": "sell",
-              "fwd": 0.254,
-              "pnl": -0.254,
+              "fwd": 1.272,
+              "pnl": -1.272,
               "hit": false
             },
             {
               "ticker": "ORLY",
               "side": "sell",
-              "fwd": -1.147,
-              "pnl": 1.147,
+              "fwd": -1.241,
+              "pnl": 1.241,
               "hit": true
             },
             {
               "ticker": "SLGN",
               "side": "sell",
-              "fwd": 0.084,
-              "pnl": -0.084,
+              "fwd": 1.728,
+              "pnl": -1.728,
               "hit": false
             },
             {
               "ticker": "SON",
               "side": "sell",
-              "fwd": 4.335,
-              "pnl": -4.335,
+              "fwd": 4.811,
+              "pnl": -4.811,
               "hit": false
             },
             {
               "ticker": "DRI",
               "side": "sell",
-              "fwd": -2.135,
-              "pnl": 2.135,
+              "fwd": -1.729,
+              "pnl": 1.729,
               "hit": true
             },
             {
               "ticker": "ROL",
               "side": "sell",
-              "fwd": 2.318,
-              "pnl": -2.318,
+              "fwd": 2.471,
+              "pnl": -2.471,
               "hit": false
             },
             {
               "ticker": "LEG",
               "side": "sell",
-              "fwd": -1.726,
-              "pnl": 1.726,
+              "fwd": -1.569,
+              "pnl": 1.569,
               "hit": true
             },
             {
               "ticker": "CASY",
               "side": "sell",
-              "fwd": -4.274,
-              "pnl": 4.274,
+              "fwd": -3.939,
+              "pnl": 3.939,
               "hit": true
             }
           ]
@@ -3678,119 +3678,119 @@
             "n": 25,
             "hits": 18,
             "hit_rate": 0.72,
-            "avg_pnl_pct": 2.119
+            "avg_pnl_pct": 2.062
           },
           "sell": {
             "n": 25,
-            "hits": 10,
-            "hit_rate": 0.4,
-            "avg_pnl_pct": -0.359
+            "hits": 9,
+            "hit_rate": 0.36,
+            "avg_pnl_pct": -0.945
           },
-          "avg_pnl_pct_both": 0.88,
+          "avg_pnl_pct_both": 0.558,
           "detail_buy": [
             {
               "ticker": "OXY",
               "side": "buy",
-              "fwd": 2.5,
-              "pnl": 2.5,
+              "fwd": 2.508,
+              "pnl": 2.508,
               "hit": true
             },
             {
               "ticker": "COP",
               "side": "buy",
-              "fwd": 3.789,
-              "pnl": 3.789,
+              "fwd": 3.97,
+              "pnl": 3.97,
               "hit": true
             },
             {
               "ticker": "APA",
               "side": "buy",
-              "fwd": 3.646,
-              "pnl": 3.646,
+              "fwd": 2.407,
+              "pnl": 2.407,
               "hit": true
             },
             {
               "ticker": "EOG",
               "side": "buy",
-              "fwd": 2.3,
-              "pnl": 2.3,
+              "fwd": 2.925,
+              "pnl": 2.925,
               "hit": true
             },
             {
               "ticker": "DVN",
               "side": "buy",
-              "fwd": 2.802,
-              "pnl": 2.802,
+              "fwd": 2.655,
+              "pnl": 2.655,
               "hit": true
             },
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 2.139,
-              "pnl": 2.139,
+              "fwd": 2.384,
+              "pnl": 2.384,
               "hit": true
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 9.352,
-              "pnl": 9.352,
+              "fwd": 9.655,
+              "pnl": 9.655,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -0.199,
-              "pnl": -0.199,
+              "fwd": -0.579,
+              "pnl": -0.579,
               "hit": false
             },
             {
               "ticker": "CVX",
               "side": "buy",
-              "fwd": 0.652,
-              "pnl": 0.652,
+              "fwd": 0.642,
+              "pnl": 0.642,
               "hit": true
             },
             {
               "ticker": "XOM",
               "side": "buy",
-              "fwd": -0.329,
-              "pnl": -0.329,
+              "fwd": -0.272,
+              "pnl": -0.272,
               "hit": false
             },
             {
               "ticker": "FANG",
               "side": "buy",
-              "fwd": 0.24,
-              "pnl": 0.24,
+              "fwd": 0.333,
+              "pnl": 0.333,
               "hit": true
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 6.227,
-              "pnl": 6.227,
+              "fwd": 6.83,
+              "pnl": 6.83,
               "hit": true
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -1.612,
-              "pnl": -1.612,
+              "fwd": -1.308,
+              "pnl": -1.308,
               "hit": false
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -0.378,
-              "pnl": -0.378,
+              "fwd": -0.994,
+              "pnl": -0.994,
               "hit": false
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": 0.317,
-              "pnl": 0.317,
+              "fwd": 0.607,
+              "pnl": 0.607,
               "hit": true
             }
           ],
@@ -3798,106 +3798,106 @@
             {
               "ticker": "SLG",
               "side": "sell",
-              "fwd": 1.346,
-              "pnl": -1.346,
+              "fwd": 1.073,
+              "pnl": -1.073,
               "hit": false
             },
             {
               "ticker": "VNO",
               "side": "sell",
-              "fwd": 0.834,
-              "pnl": -0.834,
+              "fwd": 0.344,
+              "pnl": -0.344,
               "hit": false
             },
             {
               "ticker": "SNOW",
               "side": "sell",
-              "fwd": 0.335,
-              "pnl": -0.335,
+              "fwd": 2.29,
+              "pnl": -2.29,
               "hit": false
             },
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -0.996,
-              "pnl": 0.996,
+              "fwd": -0.712,
+              "pnl": 0.712,
               "hit": true
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": 5.24,
-              "pnl": -5.24,
+              "fwd": 3.81,
+              "pnl": -3.81,
               "hit": false
             },
             {
               "ticker": "TEAM",
               "side": "sell",
-              "fwd": 4.5,
-              "pnl": -4.5,
+              "fwd": 5.405,
+              "pnl": -5.405,
               "hit": false
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -0.333,
-              "pnl": 0.333,
-              "hit": true
+              "fwd": 0.667,
+              "pnl": -0.667,
+              "hit": false
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 9.874,
-              "pnl": -9.874,
+              "fwd": 12.208,
+              "pnl": -12.208,
               "hit": false
             },
             {
               "ticker": "BROS",
               "side": "sell",
-              "fwd": 2.746,
-              "pnl": -2.746,
+              "fwd": 2.952,
+              "pnl": -2.952,
               "hit": false
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -1.995,
-              "pnl": 1.995,
+              "fwd": -2.582,
+              "pnl": 2.582,
               "hit": true
             },
             {
               "ticker": "VENU",
               "side": "sell",
-              "fwd": 1.075,
-              "pnl": -1.075,
+              "fwd": 1.613,
+              "pnl": -1.613,
               "hit": false
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": -3.96,
-              "pnl": 3.96,
+              "fwd": -3.226,
+              "pnl": 3.226,
               "hit": true
             },
             {
               "ticker": "INVZ",
               "side": "sell",
-              "fwd": -6.333,
-              "pnl": 6.333,
+              "fwd": -5.556,
+              "pnl": 5.556,
               "hit": true
             },
             {
               "ticker": "JMIA",
               "side": "sell",
-              "fwd": 5.079,
-              "pnl": -5.079,
+              "fwd": 6.309,
+              "pnl": -6.309,
               "hit": false
             },
             {
               "ticker": "CVGI",
               "side": "sell",
-              "fwd": -3.201,
-              "pnl": 3.201,
+              "fwd": -2.134,
+              "pnl": 2.134,
               "hit": true
             }
           ]
@@ -3908,119 +3908,119 @@
             "n": 25,
             "hits": 19,
             "hit_rate": 0.76,
-            "avg_pnl_pct": 2.366
+            "avg_pnl_pct": 2.385
           },
           "sell": {
             "n": 25,
-            "hits": 12,
-            "hit_rate": 0.48,
-            "avg_pnl_pct": -0.484
+            "hits": 10,
+            "hit_rate": 0.4,
+            "avg_pnl_pct": -1.173
           },
-          "avg_pnl_pct_both": 0.941,
+          "avg_pnl_pct_both": 0.606,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 2.139,
-              "pnl": 2.139,
+              "fwd": 2.384,
+              "pnl": 2.384,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -0.199,
-              "pnl": -0.199,
+              "fwd": -0.579,
+              "pnl": -0.579,
               "hit": false
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 9.352,
-              "pnl": 9.352,
+              "fwd": 9.655,
+              "pnl": 9.655,
               "hit": true
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 6.227,
-              "pnl": 6.227,
+              "fwd": 6.83,
+              "pnl": 6.83,
               "hit": true
             },
             {
               "ticker": "OXY",
               "side": "buy",
-              "fwd": 2.5,
-              "pnl": 2.5,
+              "fwd": 2.508,
+              "pnl": 2.508,
               "hit": true
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -1.612,
-              "pnl": -1.612,
+              "fwd": -1.308,
+              "pnl": -1.308,
               "hit": false
             },
             {
               "ticker": "APA",
               "side": "buy",
-              "fwd": 3.646,
-              "pnl": 3.646,
+              "fwd": 2.407,
+              "pnl": 2.407,
               "hit": true
             },
             {
               "ticker": "COP",
               "side": "buy",
-              "fwd": 3.789,
-              "pnl": 3.789,
+              "fwd": 3.97,
+              "pnl": 3.97,
               "hit": true
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 3.919,
-              "pnl": 3.919,
+              "fwd": 4.297,
+              "pnl": 4.297,
               "hit": true
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -0.378,
-              "pnl": -0.378,
+              "fwd": -0.994,
+              "pnl": -0.994,
               "hit": false
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": 0.317,
-              "pnl": 0.317,
+              "fwd": 0.607,
+              "pnl": 0.607,
               "hit": true
             },
             {
               "ticker": "EOG",
               "side": "buy",
-              "fwd": 2.3,
-              "pnl": 2.3,
+              "fwd": 2.925,
+              "pnl": 2.925,
               "hit": true
             },
             {
               "ticker": "DVN",
               "side": "buy",
-              "fwd": 2.802,
-              "pnl": 2.802,
+              "fwd": 2.655,
+              "pnl": 2.655,
               "hit": true
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": 0.728,
-              "pnl": 0.728,
+              "fwd": 1.368,
+              "pnl": 1.368,
               "hit": true
             },
             {
               "ticker": "XOM",
               "side": "buy",
-              "fwd": -0.335,
-              "pnl": -0.335,
+              "fwd": -0.272,
+              "pnl": -0.272,
               "hit": false
             }
           ],
@@ -4028,106 +4028,106 @@
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -0.996,
-              "pnl": 0.996,
+              "fwd": -0.712,
+              "pnl": 0.712,
               "hit": true
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": 5.24,
-              "pnl": -5.24,
+              "fwd": 3.81,
+              "pnl": -3.81,
               "hit": false
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -0.333,
-              "pnl": 0.333,
-              "hit": true
+              "fwd": 0.667,
+              "pnl": -0.667,
+              "hit": false
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 9.874,
-              "pnl": -9.874,
+              "fwd": 12.208,
+              "pnl": -12.208,
               "hit": false
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": -3.96,
-              "pnl": 3.96,
+              "fwd": -3.226,
+              "pnl": 3.226,
               "hit": true
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -1.995,
-              "pnl": 1.995,
+              "fwd": -2.582,
+              "pnl": 2.582,
               "hit": true
             },
             {
               "ticker": "BROS",
               "side": "sell",
-              "fwd": 2.746,
-              "pnl": -2.746,
+              "fwd": 2.952,
+              "pnl": -2.952,
               "hit": false
             },
             {
               "ticker": "TRIP",
               "side": "sell",
-              "fwd": -2.346,
-              "pnl": 2.346,
+              "fwd": -2.248,
+              "pnl": 2.248,
               "hit": true
             },
             {
               "ticker": "VENU",
               "side": "sell",
-              "fwd": 1.075,
-              "pnl": -1.075,
+              "fwd": 1.613,
+              "pnl": -1.613,
               "hit": false
             },
             {
               "ticker": "XPOF",
               "side": "sell",
-              "fwd": -0.197,
-              "pnl": 0.197,
-              "hit": true
+              "fwd": 2.367,
+              "pnl": -2.367,
+              "hit": false
             },
             {
               "ticker": "INVZ",
               "side": "sell",
-              "fwd": -6.333,
-              "pnl": 6.333,
+              "fwd": -5.556,
+              "pnl": 5.556,
               "hit": true
             },
             {
               "ticker": "JMIA",
               "side": "sell",
-              "fwd": 5.079,
-              "pnl": -5.079,
+              "fwd": 6.309,
+              "pnl": -6.309,
               "hit": false
             },
             {
               "ticker": "GT",
               "side": "sell",
-              "fwd": 0.253,
-              "pnl": -0.253,
+              "fwd": 0.675,
+              "pnl": -0.675,
               "hit": false
             },
             {
               "ticker": "MNRO",
               "side": "sell",
-              "fwd": 3.924,
-              "pnl": -3.924,
+              "fwd": 5.907,
+              "pnl": -5.907,
               "hit": false
             },
             {
               "ticker": "UAA",
               "side": "sell",
-              "fwd": 4.635,
-              "pnl": -4.635,
+              "fwd": 6.312,
+              "pnl": -6.312,
               "hit": false
             }
           ]
@@ -4138,119 +4138,119 @@
             "n": 25,
             "hits": 19,
             "hit_rate": 0.76,
-            "avg_pnl_pct": 2.388
+            "avg_pnl_pct": 2.404
           },
           "sell": {
             "n": 25,
-            "hits": 13,
-            "hit_rate": 0.52,
-            "avg_pnl_pct": 0.735
+            "hits": 12,
+            "hit_rate": 0.48,
+            "avg_pnl_pct": 0.441
           },
-          "avg_pnl_pct_both": 1.561,
+          "avg_pnl_pct_both": 1.422,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 2.139,
-              "pnl": 2.139,
+              "fwd": 2.384,
+              "pnl": 2.384,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -0.199,
-              "pnl": -0.199,
+              "fwd": -0.579,
+              "pnl": -0.579,
               "hit": false
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 9.352,
-              "pnl": 9.352,
+              "fwd": 9.655,
+              "pnl": 9.655,
               "hit": true
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 6.227,
-              "pnl": 6.227,
+              "fwd": 6.83,
+              "pnl": 6.83,
               "hit": true
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 3.919,
-              "pnl": 3.919,
+              "fwd": 4.297,
+              "pnl": 4.297,
               "hit": true
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -1.612,
-              "pnl": -1.612,
+              "fwd": -1.308,
+              "pnl": -1.308,
               "hit": false
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -0.378,
-              "pnl": -0.378,
+              "fwd": -0.994,
+              "pnl": -0.994,
               "hit": false
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": 0.317,
-              "pnl": 0.317,
+              "fwd": 0.607,
+              "pnl": 0.607,
               "hit": true
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": 0.728,
-              "pnl": 0.728,
+              "fwd": 1.368,
+              "pnl": 1.368,
               "hit": true
             },
             {
               "ticker": "OXY",
               "side": "buy",
-              "fwd": 2.5,
-              "pnl": 2.5,
+              "fwd": 2.508,
+              "pnl": 2.508,
               "hit": true
             },
             {
               "ticker": "ACGL",
               "side": "buy",
-              "fwd": 0.971,
-              "pnl": 0.971,
+              "fwd": 0.485,
+              "pnl": 0.485,
               "hit": true
             },
             {
               "ticker": "APA",
               "side": "buy",
-              "fwd": 3.646,
-              "pnl": 3.646,
+              "fwd": 2.407,
+              "pnl": 2.407,
               "hit": true
             },
             {
               "ticker": "COP",
               "side": "buy",
-              "fwd": 3.789,
-              "pnl": 3.789,
+              "fwd": 3.97,
+              "pnl": 3.97,
               "hit": true
             },
             {
               "ticker": "MRSH",
               "side": "buy",
-              "fwd": 2.594,
-              "pnl": 2.594,
+              "fwd": 3.026,
+              "pnl": 3.026,
               "hit": true
             },
             {
               "ticker": "HIG",
               "side": "buy",
-              "fwd": -1.508,
-              "pnl": -1.508,
+              "fwd": -2.058,
+              "pnl": -2.058,
               "hit": false
             }
           ],
@@ -4258,106 +4258,106 @@
             {
               "ticker": "VERI",
               "side": "sell",
-              "fwd": -15.769,
-              "pnl": 15.769,
+              "fwd": -13.668,
+              "pnl": 13.668,
               "hit": true
             },
             {
               "ticker": "PLAY",
               "side": "sell",
-              "fwd": 1.762,
-              "pnl": -1.762,
+              "fwd": 3.223,
+              "pnl": -3.223,
               "hit": false
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": 5.24,
-              "pnl": -5.24,
+              "fwd": 3.81,
+              "pnl": -3.81,
               "hit": false
             },
             {
               "ticker": "ANGI",
               "side": "sell",
-              "fwd": 3.888,
-              "pnl": -3.888,
+              "fwd": 6.263,
+              "pnl": -6.263,
               "hit": false
             },
             {
               "ticker": "ADTN",
               "side": "sell",
-              "fwd": -4.321,
-              "pnl": 4.321,
+              "fwd": -4.074,
+              "pnl": 4.074,
               "hit": true
             },
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -0.996,
-              "pnl": 0.996,
+              "fwd": -0.712,
+              "pnl": 0.712,
               "hit": true
             },
             {
               "ticker": "CSIQ",
               "side": "sell",
-              "fwd": -1.56,
-              "pnl": 1.56,
+              "fwd": -1.289,
+              "pnl": 1.289,
               "hit": true
             },
             {
               "ticker": "GPRO",
               "side": "sell",
-              "fwd": 4.865,
-              "pnl": -4.865,
+              "fwd": 6.419,
+              "pnl": -6.419,
               "hit": false
             },
             {
               "ticker": "IHRT",
               "side": "sell",
-              "fwd": -5.98,
-              "pnl": 5.98,
+              "fwd": -7.309,
+              "pnl": 7.309,
               "hit": true
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -0.333,
-              "pnl": 0.333,
-              "hit": true
+              "fwd": 0.667,
+              "pnl": -0.667,
+              "hit": false
             },
             {
               "ticker": "SEDG",
               "side": "sell",
-              "fwd": 3.924,
-              "pnl": -3.924,
+              "fwd": 3.387,
+              "pnl": -3.387,
               "hit": false
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 9.874,
-              "pnl": -9.874,
+              "fwd": 12.208,
+              "pnl": -12.208,
               "hit": false
             },
             {
               "ticker": "QMLS",
               "side": "sell",
-              "fwd": -11.045,
-              "pnl": 11.045,
+              "fwd": -13.056,
+              "pnl": 13.056,
               "hit": true
             },
             {
               "ticker": "VENU",
               "side": "sell",
-              "fwd": 1.075,
-              "pnl": -1.075,
+              "fwd": 1.613,
+              "pnl": -1.613,
               "hit": false
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -1.995,
-              "pnl": 1.995,
+              "fwd": -2.582,
+              "pnl": 2.582,
               "hit": true
             }
           ]
@@ -4366,121 +4366,121 @@
           "trading_days": 21,
           "buy": {
             "n": 25,
-            "hits": 17,
-            "hit_rate": 0.68,
-            "avg_pnl_pct": 1.705
+            "hits": 18,
+            "hit_rate": 0.72,
+            "avg_pnl_pct": 1.847
           },
           "sell": {
             "n": 25,
-            "hits": 10,
-            "hit_rate": 0.4,
-            "avg_pnl_pct": -1.467
+            "hits": 8,
+            "hit_rate": 0.32,
+            "avg_pnl_pct": -1.957
           },
-          "avg_pnl_pct_both": 0.119,
+          "avg_pnl_pct_both": -0.055,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 2.139,
-              "pnl": 2.139,
+              "fwd": 2.384,
+              "pnl": 2.384,
               "hit": true
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 9.352,
-              "pnl": 9.352,
+              "fwd": 9.655,
+              "pnl": 9.655,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -0.199,
-              "pnl": -0.199,
+              "fwd": -0.579,
+              "pnl": -0.579,
               "hit": false
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 6.227,
-              "pnl": 6.227,
+              "fwd": 6.83,
+              "pnl": 6.83,
               "hit": true
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -1.612,
-              "pnl": -1.612,
+              "fwd": -1.308,
+              "pnl": -1.308,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 3.919,
-              "pnl": 3.919,
+              "fwd": 4.297,
+              "pnl": 4.297,
               "hit": true
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": 0.317,
-              "pnl": 0.317,
+              "fwd": 0.607,
+              "pnl": 0.607,
               "hit": true
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -0.378,
-              "pnl": -0.378,
+              "fwd": -0.994,
+              "pnl": -0.994,
               "hit": false
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": 0.728,
-              "pnl": 0.728,
+              "fwd": 1.368,
+              "pnl": 1.368,
               "hit": true
             },
             {
               "ticker": "ACGL",
               "side": "buy",
-              "fwd": 0.971,
-              "pnl": 0.971,
+              "fwd": 0.485,
+              "pnl": 0.485,
               "hit": true
             },
             {
               "ticker": "RMD",
               "side": "buy",
-              "fwd": 5.894,
-              "pnl": 5.894,
+              "fwd": 5.548,
+              "pnl": 5.548,
               "hit": true
             },
             {
               "ticker": "HIG",
               "side": "buy",
-              "fwd": -1.508,
-              "pnl": -1.508,
+              "fwd": -2.058,
+              "pnl": -2.058,
               "hit": false
             },
             {
               "ticker": "ES",
               "side": "buy",
-              "fwd": -1.759,
-              "pnl": -1.759,
+              "fwd": -2.783,
+              "pnl": -2.783,
               "hit": false
             },
             {
               "ticker": "MRSH",
               "side": "buy",
-              "fwd": 2.594,
-              "pnl": 2.594,
+              "fwd": 3.026,
+              "pnl": 3.026,
               "hit": true
             },
             {
               "ticker": "WST",
               "side": "buy",
-              "fwd": 1.708,
-              "pnl": 1.708,
+              "fwd": 1.873,
+              "pnl": 1.873,
               "hit": true
             }
           ],
@@ -4488,106 +4488,106 @@
             {
               "ticker": "GOGO",
               "side": "sell",
-              "fwd": 5.534,
-              "pnl": -5.534,
+              "fwd": 2.29,
+              "pnl": -2.29,
               "hit": false
             },
             {
               "ticker": "TRIP",
               "side": "sell",
-              "fwd": -2.346,
-              "pnl": 2.346,
+              "fwd": -2.248,
+              "pnl": 2.248,
               "hit": true
             },
             {
               "ticker": "ANGI",
               "side": "sell",
-              "fwd": 3.888,
-              "pnl": -3.888,
+              "fwd": 6.263,
+              "pnl": -6.263,
               "hit": false
             },
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -0.996,
-              "pnl": 0.996,
+              "fwd": -0.712,
+              "pnl": 0.712,
               "hit": true
             },
             {
               "ticker": "PLAY",
               "side": "sell",
-              "fwd": 1.762,
-              "pnl": -1.762,
+              "fwd": 3.223,
+              "pnl": -3.223,
               "hit": false
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": 5.24,
-              "pnl": -5.24,
+              "fwd": 3.81,
+              "pnl": -3.81,
               "hit": false
             },
             {
               "ticker": "XPOF",
               "side": "sell",
-              "fwd": -0.197,
-              "pnl": 0.197,
-              "hit": true
+              "fwd": 2.367,
+              "pnl": -2.367,
+              "hit": false
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -0.333,
-              "pnl": 0.333,
-              "hit": true
+              "fwd": 0.667,
+              "pnl": -0.667,
+              "hit": false
             },
             {
               "ticker": "IHRT",
               "side": "sell",
-              "fwd": -5.98,
-              "pnl": 5.98,
+              "fwd": -7.309,
+              "pnl": 7.309,
               "hit": true
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 9.874,
-              "pnl": -9.874,
+              "fwd": 12.208,
+              "pnl": -12.208,
               "hit": false
             },
             {
               "ticker": "OI",
               "side": "sell",
-              "fwd": 10.77,
-              "pnl": -10.77,
+              "fwd": 12.893,
+              "pnl": -12.893,
               "hit": false
             },
             {
               "ticker": "PLTK",
               "side": "sell",
-              "fwd": 6.502,
-              "pnl": -6.502,
+              "fwd": 6.278,
+              "pnl": -6.278,
               "hit": false
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -1.995,
-              "pnl": 1.995,
+              "fwd": -2.582,
+              "pnl": 2.582,
               "hit": true
             },
             {
               "ticker": "BROS",
               "side": "sell",
-              "fwd": 2.746,
-              "pnl": -2.746,
+              "fwd": 2.952,
+              "pnl": -2.952,
               "hit": false
             },
             {
               "ticker": "GETY",
               "side": "sell",
-              "fwd": -2.657,
-              "pnl": 2.657,
+              "fwd": -2.583,
+              "pnl": 2.583,
               "hit": true
             }
           ]
@@ -4834,119 +4834,119 @@
             "n": 25,
             "hits": 12,
             "hit_rate": 0.48,
-            "avg_pnl_pct": -0.096
+            "avg_pnl_pct": -0.148
           },
           "sell": {
             "n": 25,
             "hits": 18,
             "hit_rate": 0.72,
-            "avg_pnl_pct": 1.565
+            "avg_pnl_pct": 1.1
           },
-          "avg_pnl_pct_both": 0.734,
+          "avg_pnl_pct_both": 0.476,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 0.19,
-              "pnl": 0.19,
+              "fwd": 0.431,
+              "pnl": 0.431,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -2.727,
-              "pnl": -2.727,
+              "fwd": -3.097,
+              "pnl": -3.097,
               "hit": false
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 3.189,
-              "pnl": 3.189,
+              "fwd": 3.475,
+              "pnl": 3.475,
               "hit": true
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -2.413,
-              "pnl": -2.413,
+              "fwd": -3.028,
+              "pnl": -3.028,
               "hit": false
             },
             {
               "ticker": "NEE",
               "side": "buy",
-              "fwd": -2.153,
-              "pnl": -2.153,
+              "fwd": -2.631,
+              "pnl": -2.631,
               "hit": false
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -3.034,
-              "pnl": -3.034,
+              "fwd": -2.698,
+              "pnl": -2.698,
               "hit": false
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": -1.455,
-              "pnl": -1.455,
+              "fwd": -0.829,
+              "pnl": -0.829,
               "hit": false
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": -0.951,
-              "pnl": -0.951,
+              "fwd": -0.665,
+              "pnl": -0.665,
               "hit": false
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 1.951,
-              "pnl": 1.951,
+              "fwd": 2.564,
+              "pnl": 2.564,
               "hit": true
             },
             {
               "ticker": "MUR",
               "side": "buy",
-              "fwd": 1.844,
-              "pnl": 1.844,
+              "fwd": 1.465,
+              "pnl": 1.465,
               "hit": true
             },
             {
               "ticker": "ES",
               "side": "buy",
-              "fwd": -1.445,
-              "pnl": -1.445,
+              "fwd": -2.473,
+              "pnl": -2.473,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 1.577,
-              "pnl": 1.577,
+              "fwd": 1.947,
+              "pnl": 1.947,
               "hit": true
             },
             {
               "ticker": "CEG",
               "side": "buy",
-              "fwd": 0.543,
-              "pnl": 0.543,
-              "hit": true
+              "fwd": -0.471,
+              "pnl": -0.471,
+              "hit": false
             },
             {
               "ticker": "RMD",
               "side": "buy",
-              "fwd": 0.996,
-              "pnl": 0.996,
+              "fwd": 0.665,
+              "pnl": 0.665,
               "hit": true
             },
             {
               "ticker": "HLN",
               "side": "buy",
-              "fwd": 1.266,
-              "pnl": 1.266,
+              "fwd": 1.317,
+              "pnl": 1.317,
               "hit": true
             }
           ],
@@ -4954,106 +4954,106 @@
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 4.465,
-              "pnl": -4.465,
+              "fwd": 5.263,
+              "pnl": -5.263,
               "hit": false
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": -2.499,
-              "pnl": 2.499,
+              "fwd": -3.824,
+              "pnl": 3.824,
               "hit": true
             },
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -5.695,
-              "pnl": 5.695,
+              "fwd": -5.424,
+              "pnl": 5.424,
               "hit": true
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -2.288,
-              "pnl": 2.288,
+              "fwd": -1.307,
+              "pnl": 1.307,
               "hit": true
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 4.795,
-              "pnl": -4.795,
+              "fwd": 7.021,
+              "pnl": -7.021,
               "hit": false
             },
             {
               "ticker": "WOLF",
               "side": "sell",
-              "fwd": -11.035,
-              "pnl": 11.035,
+              "fwd": -11.447,
+              "pnl": 11.447,
               "hit": true
             },
             {
               "ticker": "VERI",
               "side": "sell",
-              "fwd": -13.24,
-              "pnl": 13.24,
+              "fwd": -11.077,
+              "pnl": 11.077,
               "hit": true
             },
             {
               "ticker": "ADTN",
               "side": "sell",
-              "fwd": -3.371,
-              "pnl": 3.371,
+              "fwd": -2.996,
+              "pnl": 2.996,
               "hit": true
             },
             {
               "ticker": "SEDG",
               "side": "sell",
-              "fwd": -5.031,
-              "pnl": 5.031,
+              "fwd": -5.429,
+              "pnl": 5.429,
               "hit": true
             },
             {
               "ticker": "GPRO",
               "side": "sell",
-              "fwd": -2.236,
-              "pnl": 2.236,
+              "fwd": -0.787,
+              "pnl": 0.787,
               "hit": true
             },
             {
               "ticker": "CSIQ",
               "side": "sell",
-              "fwd": -8.048,
-              "pnl": 8.048,
+              "fwd": -7.795,
+              "pnl": 7.795,
               "hit": true
             },
             {
               "ticker": "CVGI",
               "side": "sell",
-              "fwd": 1.763,
-              "pnl": -1.763,
+              "fwd": 2.885,
+              "pnl": -2.885,
               "hit": false
             },
             {
               "ticker": "VENU",
               "side": "sell",
-              "fwd": 1.075,
-              "pnl": -1.075,
+              "fwd": 1.613,
+              "pnl": -1.613,
               "hit": false
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -2.225,
-              "pnl": 2.225,
+              "fwd": -2.81,
+              "pnl": 2.81,
               "hit": true
             },
             {
               "ticker": "INVZ",
               "side": "sell",
-              "fwd": -2.543,
-              "pnl": 2.543,
+              "fwd": -1.734,
+              "pnl": 1.734,
               "hit": true
             }
           ]
@@ -5062,121 +5062,121 @@
           "trading_days": 5,
           "buy": {
             "n": 25,
-            "hits": 12,
-            "hit_rate": 0.48,
-            "avg_pnl_pct": -0.126
+            "hits": 13,
+            "hit_rate": 0.52,
+            "avg_pnl_pct": -0.181
           },
           "sell": {
             "n": 25,
             "hits": 15,
             "hit_rate": 0.6,
-            "avg_pnl_pct": 0.783
+            "avg_pnl_pct": 0.237
           },
-          "avg_pnl_pct_both": 0.329,
+          "avg_pnl_pct_both": 0.028,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 0.19,
-              "pnl": 0.19,
+              "fwd": 0.431,
+              "pnl": 0.431,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -2.747,
-              "pnl": -2.747,
+              "fwd": -3.097,
+              "pnl": -3.097,
               "hit": false
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 3.189,
-              "pnl": 3.189,
+              "fwd": 3.475,
+              "pnl": 3.475,
               "hit": true
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -2.413,
-              "pnl": -2.413,
+              "fwd": -3.028,
+              "pnl": -3.028,
               "hit": false
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -3.034,
-              "pnl": -3.034,
+              "fwd": -2.698,
+              "pnl": -2.698,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 1.577,
-              "pnl": 1.577,
+              "fwd": 1.947,
+              "pnl": 1.947,
               "hit": true
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": -1.455,
-              "pnl": -1.455,
+              "fwd": -0.829,
+              "pnl": -0.829,
               "hit": false
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 1.951,
-              "pnl": 1.951,
+              "fwd": 2.564,
+              "pnl": 2.564,
               "hit": true
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": -0.951,
-              "pnl": -0.951,
+              "fwd": -0.665,
+              "pnl": -0.665,
               "hit": false
             },
             {
               "ticker": "NEE",
               "side": "buy",
-              "fwd": -2.136,
-              "pnl": -2.136,
+              "fwd": -2.631,
+              "pnl": -2.631,
               "hit": false
             },
             {
               "ticker": "RMD",
               "side": "buy",
-              "fwd": 0.996,
-              "pnl": 0.996,
+              "fwd": 0.665,
+              "pnl": 0.665,
               "hit": true
             },
             {
               "ticker": "ES",
               "side": "buy",
-              "fwd": -1.445,
-              "pnl": -1.445,
+              "fwd": -2.473,
+              "pnl": -2.473,
               "hit": false
             },
             {
               "ticker": "ACGL",
               "side": "buy",
-              "fwd": 1.36,
-              "pnl": 1.36,
+              "fwd": 0.873,
+              "pnl": 0.873,
               "hit": true
             },
             {
               "ticker": "CB",
               "side": "buy",
-              "fwd": 0.147,
-              "pnl": 0.147,
+              "fwd": 0.021,
+              "pnl": 0.021,
               "hit": true
             },
             {
               "ticker": "MUR",
               "side": "buy",
-              "fwd": 1.844,
-              "pnl": 1.844,
+              "fwd": 1.465,
+              "pnl": 1.465,
               "hit": true
             }
           ],
@@ -5184,106 +5184,106 @@
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -5.695,
-              "pnl": 5.695,
+              "fwd": -5.424,
+              "pnl": 5.424,
               "hit": true
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 4.465,
-              "pnl": -4.465,
+              "fwd": 5.263,
+              "pnl": -5.263,
               "hit": false
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": -2.426,
-              "pnl": 2.426,
+              "fwd": -3.824,
+              "pnl": 3.824,
               "hit": true
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -2.288,
-              "pnl": 2.288,
+              "fwd": -1.307,
+              "pnl": 1.307,
               "hit": true
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 4.795,
-              "pnl": -4.795,
+              "fwd": 7.021,
+              "pnl": -7.021,
               "hit": false
             },
             {
               "ticker": "WOLF",
               "side": "sell",
-              "fwd": -11.035,
-              "pnl": 11.035,
+              "fwd": -11.447,
+              "pnl": 11.447,
               "hit": true
             },
             {
               "ticker": "VERI",
               "side": "sell",
-              "fwd": -13.24,
-              "pnl": 13.24,
+              "fwd": -11.077,
+              "pnl": 11.077,
               "hit": true
             },
             {
               "ticker": "ADTN",
               "side": "sell",
-              "fwd": -3.371,
-              "pnl": 3.371,
+              "fwd": -2.996,
+              "pnl": 2.996,
               "hit": true
             },
             {
               "ticker": "SEDG",
               "side": "sell",
-              "fwd": -5.031,
-              "pnl": 5.031,
+              "fwd": -5.429,
+              "pnl": 5.429,
               "hit": true
             },
             {
               "ticker": "GPRO",
               "side": "sell",
-              "fwd": -2.236,
-              "pnl": 2.236,
+              "fwd": -0.787,
+              "pnl": 0.787,
               "hit": true
             },
             {
               "ticker": "CSIQ",
               "side": "sell",
-              "fwd": -8.048,
-              "pnl": 8.048,
+              "fwd": -7.795,
+              "pnl": 7.795,
               "hit": true
             },
             {
               "ticker": "CVGI",
               "side": "sell",
-              "fwd": 1.763,
-              "pnl": -1.763,
+              "fwd": 2.885,
+              "pnl": -2.885,
               "hit": false
             },
             {
               "ticker": "VENU",
               "side": "sell",
-              "fwd": 1.075,
-              "pnl": -1.075,
+              "fwd": 1.613,
+              "pnl": -1.613,
               "hit": false
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -2.225,
-              "pnl": 2.225,
+              "fwd": -2.81,
+              "pnl": 2.81,
               "hit": true
             },
             {
               "ticker": "INVZ",
               "side": "sell",
-              "fwd": -2.543,
-              "pnl": 2.543,
+              "fwd": -1.734,
+              "pnl": 1.734,
               "hit": true
             }
           ]
@@ -5292,121 +5292,121 @@
           "trading_days": 10,
           "buy": {
             "n": 25,
-            "hits": 13,
-            "hit_rate": 0.52,
-            "avg_pnl_pct": -0.128
+            "hits": 14,
+            "hit_rate": 0.56,
+            "avg_pnl_pct": -0.087
           },
           "sell": {
             "n": 25,
             "hits": 15,
             "hit_rate": 0.6,
-            "avg_pnl_pct": 4.634
+            "avg_pnl_pct": 0.478
           },
-          "avg_pnl_pct_both": 2.253,
+          "avg_pnl_pct_both": 0.196,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 0.19,
-              "pnl": 0.19,
+              "fwd": 0.431,
+              "pnl": 0.431,
               "hit": true
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 3.189,
-              "pnl": 3.189,
+              "fwd": 3.475,
+              "pnl": 3.475,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -2.747,
-              "pnl": -2.747,
+              "fwd": -3.097,
+              "pnl": -3.097,
               "hit": false
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -2.413,
-              "pnl": -2.413,
+              "fwd": -3.028,
+              "pnl": -3.028,
               "hit": false
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -3.034,
-              "pnl": -3.034,
+              "fwd": -2.698,
+              "pnl": -2.698,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 1.577,
-              "pnl": 1.577,
+              "fwd": 1.947,
+              "pnl": 1.947,
               "hit": true
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": -1.455,
-              "pnl": -1.455,
+              "fwd": -0.829,
+              "pnl": -0.829,
               "hit": false
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 1.951,
-              "pnl": 1.951,
+              "fwd": 2.564,
+              "pnl": 2.564,
               "hit": true
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": -0.951,
-              "pnl": -0.951,
+              "fwd": -0.665,
+              "pnl": -0.665,
               "hit": false
             },
             {
               "ticker": "ECL",
               "side": "buy",
-              "fwd": -2.19,
-              "pnl": -2.19,
+              "fwd": -1.397,
+              "pnl": -1.397,
               "hit": false
             },
             {
               "ticker": "FAST",
               "side": "buy",
-              "fwd": -0.525,
-              "pnl": -0.525,
+              "fwd": -0.35,
+              "pnl": -0.35,
               "hit": false
             },
             {
               "ticker": "RMD",
               "side": "buy",
-              "fwd": 0.996,
-              "pnl": 0.996,
+              "fwd": 0.665,
+              "pnl": 0.665,
               "hit": true
             },
             {
               "ticker": "CB",
               "side": "buy",
-              "fwd": 0.147,
-              "pnl": 0.147,
+              "fwd": 0.021,
+              "pnl": 0.021,
               "hit": true
             },
             {
               "ticker": "ACGL",
               "side": "buy",
-              "fwd": 1.36,
-              "pnl": 1.36,
+              "fwd": 0.873,
+              "pnl": 0.873,
               "hit": true
             },
             {
               "ticker": "LIN",
               "side": "buy",
-              "fwd": 1.284,
-              "pnl": 1.284,
+              "fwd": 1.339,
+              "pnl": 1.339,
               "hit": true
             }
           ],
@@ -5414,107 +5414,107 @@
             {
               "ticker": "GOGO",
               "side": "sell",
-              "fwd": 3.947,
-              "pnl": -3.947,
+              "fwd": 0.752,
+              "pnl": -0.752,
               "hit": false
             },
             {
               "ticker": "ADTN",
               "side": "sell",
-              "fwd": -3.371,
-              "pnl": 3.371,
+              "fwd": -2.996,
+              "pnl": 2.996,
               "hit": true
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 4.465,
-              "pnl": -4.465,
+              "fwd": 5.263,
+              "pnl": -5.263,
               "hit": false
             },
             {
               "ticker": "PLAY",
               "side": "sell",
-              "fwd": 1.354,
-              "pnl": -1.354,
+              "fwd": 2.808,
+              "pnl": -2.808,
               "hit": false
             },
             {
               "ticker": "KLC",
               "side": "sell",
-              "fwd": -5.67,
-              "pnl": 5.67,
+              "fwd": -5.498,
+              "pnl": 5.498,
               "hit": true
             },
             {
               "ticker": "WOLF",
               "side": "sell",
-              "fwd": -11.035,
-              "pnl": 11.035,
+              "fwd": -11.447,
+              "pnl": 11.447,
               "hit": true
             },
             {
               "ticker": "VERI",
               "side": "sell",
-              "fwd": -13.24,
-              "pnl": 13.24,
+              "fwd": -11.077,
+              "pnl": 11.077,
               "hit": true
             },
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -5.695,
-              "pnl": 5.695,
+              "fwd": -5.424,
+              "pnl": 5.424,
               "hit": true
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": -2.426,
-              "pnl": 2.426,
+              "fwd": -3.824,
+              "pnl": 3.824,
               "hit": true
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -2.288,
-              "pnl": 2.288,
+              "fwd": -1.307,
+              "pnl": 1.307,
               "hit": true
             },
             {
               "ticker": "GPRO",
               "side": "sell",
-              "fwd": -2.236,
-              "pnl": 2.236,
+              "fwd": -0.787,
+              "pnl": 0.787,
               "hit": true
             },
             {
               "ticker": "CSIQ",
               "side": "sell",
-              "fwd": -8.048,
-              "pnl": 8.048,
+              "fwd": -7.795,
+              "pnl": 7.795,
               "hit": true
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 4.795,
-              "pnl": -4.795,
+              "fwd": 7.021,
+              "pnl": -7.021,
               "hit": false
             },
             {
               "ticker": "SEDG",
               "side": "sell",
-              "fwd": -5.0,
-              "pnl": 5.0,
+              "fwd": -5.429,
+              "pnl": 5.429,
               "hit": true
             },
             {
               "ticker": "QMLS",
               "side": "sell",
-              "fwd": 1.448,
-              "pnl": -1.448,
-              "hit": false
+              "fwd": -0.846,
+              "pnl": 0.846,
+              "hit": true
             }
           ]
         },
@@ -5522,121 +5522,121 @@
           "trading_days": 21,
           "buy": {
             "n": 25,
-            "hits": 15,
-            "hit_rate": 0.6,
-            "avg_pnl_pct": 0.135
+            "hits": 16,
+            "hit_rate": 0.64,
+            "avg_pnl_pct": 0.24
           },
           "sell": {
             "n": 25,
-            "hits": 14,
-            "hit_rate": 0.56,
-            "avg_pnl_pct": 4.09
+            "hits": 12,
+            "hit_rate": 0.48,
+            "avg_pnl_pct": -0.2
           },
-          "avg_pnl_pct_both": 2.112,
+          "avg_pnl_pct_both": 0.02,
           "detail_buy": [
             {
               "ticker": "STE",
               "side": "buy",
-              "fwd": 0.19,
-              "pnl": 0.19,
+              "fwd": 0.431,
+              "pnl": 0.431,
               "hit": true
             },
             {
               "ticker": "DHR",
               "side": "buy",
-              "fwd": 3.189,
-              "pnl": 3.189,
+              "fwd": 3.475,
+              "pnl": 3.475,
               "hit": true
             },
             {
               "ticker": "SYK",
               "side": "buy",
-              "fwd": -2.747,
-              "pnl": -2.747,
+              "fwd": -3.097,
+              "pnl": -3.097,
               "hit": false
             },
             {
               "ticker": "UTHR",
               "side": "buy",
-              "fwd": -2.413,
-              "pnl": -2.413,
+              "fwd": -3.028,
+              "pnl": -3.028,
               "hit": false
             },
             {
               "ticker": "EW",
               "side": "buy",
-              "fwd": -3.007,
-              "pnl": -3.007,
+              "fwd": -2.698,
+              "pnl": -2.698,
               "hit": false
             },
             {
               "ticker": "MDT",
               "side": "buy",
-              "fwd": -1.455,
-              "pnl": -1.455,
+              "fwd": -0.829,
+              "pnl": -0.829,
               "hit": false
             },
             {
               "ticker": "WTW",
               "side": "buy",
-              "fwd": 1.577,
-              "pnl": 1.577,
+              "fwd": 1.947,
+              "pnl": 1.947,
               "hit": true
             },
             {
               "ticker": "ACN",
               "side": "buy",
-              "fwd": 0.704,
-              "pnl": 0.704,
+              "fwd": 1.152,
+              "pnl": 1.152,
               "hit": true
             },
             {
               "ticker": "COO",
               "side": "buy",
-              "fwd": -0.951,
-              "pnl": -0.951,
+              "fwd": -0.665,
+              "pnl": -0.665,
               "hit": false
             },
             {
               "ticker": "TMO",
               "side": "buy",
-              "fwd": 1.951,
-              "pnl": 1.951,
+              "fwd": 2.564,
+              "pnl": 2.564,
               "hit": true
             },
             {
               "ticker": "ECL",
               "side": "buy",
-              "fwd": -2.19,
-              "pnl": -2.19,
+              "fwd": -1.397,
+              "pnl": -1.397,
               "hit": false
             },
             {
               "ticker": "FAST",
               "side": "buy",
-              "fwd": -0.525,
-              "pnl": -0.525,
+              "fwd": -0.35,
+              "pnl": -0.35,
               "hit": false
             },
             {
               "ticker": "RMD",
               "side": "buy",
-              "fwd": 0.996,
-              "pnl": 0.996,
+              "fwd": 0.665,
+              "pnl": 0.665,
               "hit": true
             },
             {
               "ticker": "LIN",
               "side": "buy",
-              "fwd": 1.284,
-              "pnl": 1.284,
+              "fwd": 1.339,
+              "pnl": 1.339,
               "hit": true
             },
             {
               "ticker": "ES",
               "side": "buy",
-              "fwd": -1.445,
-              "pnl": -1.445,
+              "fwd": -2.473,
+              "pnl": -2.473,
               "hit": false
             }
           ],
@@ -5644,92 +5644,92 @@
             {
               "ticker": "TDUP",
               "side": "sell",
-              "fwd": -5.695,
-              "pnl": 5.695,
+              "fwd": -5.424,
+              "pnl": 5.424,
               "hit": true
             },
             {
               "ticker": "GOGO",
               "side": "sell",
-              "fwd": 3.947,
-              "pnl": -3.947,
+              "fwd": 0.752,
+              "pnl": -0.752,
               "hit": false
             },
             {
               "ticker": "KLC",
               "side": "sell",
-              "fwd": -5.67,
-              "pnl": 5.67,
+              "fwd": -5.498,
+              "pnl": 5.498,
               "hit": true
             },
             {
               "ticker": "CWH",
               "side": "sell",
-              "fwd": -2.426,
-              "pnl": 2.426,
+              "fwd": -3.824,
+              "pnl": 3.824,
               "hit": true
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 4.465,
-              "pnl": -4.465,
+              "fwd": 5.263,
+              "pnl": -5.263,
               "hit": false
             },
             {
               "ticker": "PLAY",
               "side": "sell",
-              "fwd": 1.354,
-              "pnl": -1.354,
+              "fwd": 2.808,
+              "pnl": -2.808,
               "hit": false
             },
             {
               "ticker": "EVGO",
               "side": "sell",
-              "fwd": -2.288,
-              "pnl": 2.288,
+              "fwd": -1.307,
+              "pnl": 1.307,
               "hit": true
             },
             {
               "ticker": "CHPT",
               "side": "sell",
-              "fwd": 4.795,
-              "pnl": -4.795,
+              "fwd": 7.021,
+              "pnl": -7.021,
               "hit": false
             },
             {
               "ticker": "NXH",
               "side": "sell",
-              "fwd": -2.225,
-              "pnl": 2.225,
+              "fwd": -2.81,
+              "pnl": 2.81,
               "hit": true
             },
             {
               "ticker": "RC",
               "side": "sell",
-              "fwd": 8.517,
-              "pnl": -8.517,
+              "fwd": 6.818,
+              "pnl": -6.818,
               "hit": false
             },
             {
               "ticker": "GETY",
               "side": "sell",
-              "fwd": -0.827,
-              "pnl": 0.827,
+              "fwd": -0.752,
+              "pnl": 0.752,
               "hit": true
             },
             {
               "ticker": "BRCC",
               "side": "sell",
-              "fwd": -89.478,
-              "pnl": 89.478,
-              "hit": true
+              "fwd": 8.642,
+              "pnl": -8.642,
+              "hit": false
             },
             {
               "ticker": "ANGI",
               "side": "sell",
-              "fwd": 0.208,
-              "pnl": -0.208,
+              "fwd": 2.5,
+              "pnl": -2.5,
               "hit": false
             },
             {
@@ -5742,8 +5742,8 @@
             {
               "ticker": "VENU",
               "side": "sell",
-              "fwd": 1.075,
-              "pnl": -1.075,
+              "fwd": 1.613,
+              "pnl": -1.613,
               "hit": false
             }
           ]
@@ -5758,121 +5758,121 @@
           "trading_days": 1,
           "buy": {
             "n": 15,
-            "hits": 10,
-            "hit_rate": 0.667,
-            "avg_pnl_pct": 1.367
+            "hits": 8,
+            "hit_rate": 0.533,
+            "avg_pnl_pct": 1.196
           },
           "sell": {
             "n": 15,
-            "hits": 3,
-            "hit_rate": 0.2,
-            "avg_pnl_pct": -0.966
+            "hits": 4,
+            "hit_rate": 0.267,
+            "avg_pnl_pct": -0.89
           },
-          "avg_pnl_pct_both": 0.201,
+          "avg_pnl_pct_both": 0.153,
           "detail_buy": [
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 1.838,
-              "pnl": 1.838,
+              "fwd": 3.534,
+              "pnl": 3.534,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 4.818,
-              "pnl": 4.818,
+              "fwd": 4.54,
+              "pnl": 4.54,
               "hit": true
             },
             {
               "ticker": "AUPH",
               "side": "buy",
-              "fwd": -2.924,
-              "pnl": -2.924,
+              "fwd": -3.59,
+              "pnl": -3.59,
               "hit": false
             },
             {
               "ticker": "CE",
               "side": "buy",
-              "fwd": 0.234,
-              "pnl": 0.234,
-              "hit": true
+              "fwd": -0.383,
+              "pnl": -0.383,
+              "hit": false
             },
             {
               "ticker": "OCUL",
               "side": "buy",
-              "fwd": 2.525,
-              "pnl": 2.525,
-              "hit": true
+              "fwd": -0.09,
+              "pnl": -0.09,
+              "hit": false
             },
             {
               "ticker": "EPAM",
               "side": "buy",
-              "fwd": 3.709,
-              "pnl": 3.709,
+              "fwd": 3.353,
+              "pnl": 3.353,
               "hit": true
             },
             {
               "ticker": "WRBY",
               "side": "buy",
-              "fwd": 0.983,
-              "pnl": 0.983,
-              "hit": true
+              "fwd": -0.073,
+              "pnl": -0.073,
+              "hit": false
             },
             {
               "ticker": "CELH",
               "side": "buy",
-              "fwd": 0.937,
-              "pnl": 0.937,
+              "fwd": 2.52,
+              "pnl": 2.52,
               "hit": true
             },
             {
               "ticker": "IRTC",
               "side": "buy",
-              "fwd": -0.086,
-              "pnl": -0.086,
-              "hit": false
+              "fwd": 0.422,
+              "pnl": 0.422,
+              "hit": true
             },
             {
               "ticker": "CALX",
               "side": "buy",
-              "fwd": -0.768,
-              "pnl": -0.768,
+              "fwd": -0.644,
+              "pnl": -0.644,
               "hit": false
             },
             {
               "ticker": "NHI",
               "side": "buy",
-              "fwd": -0.014,
-              "pnl": -0.014,
+              "fwd": -0.744,
+              "pnl": -0.744,
               "hit": false
             },
             {
               "ticker": "GSHD",
               "side": "buy",
-              "fwd": 1.909,
-              "pnl": 1.909,
+              "fwd": 2.574,
+              "pnl": 2.574,
               "hit": true
             },
             {
               "ticker": "OGS",
               "side": "buy",
-              "fwd": -1.978,
-              "pnl": -1.978,
+              "fwd": -3.145,
+              "pnl": -3.145,
               "hit": false
             },
             {
               "ticker": "FIGR",
               "side": "buy",
-              "fwd": 8.874,
-              "pnl": 8.874,
+              "fwd": 8.43,
+              "pnl": 8.43,
               "hit": true
             },
             {
               "ticker": "HLNE",
               "side": "buy",
-              "fwd": 0.447,
-              "pnl": 0.447,
+              "fwd": 1.24,
+              "pnl": 1.24,
               "hit": true
             }
           ],
@@ -5880,15 +5880,15 @@
             {
               "ticker": "GEV",
               "side": "sell",
-              "fwd": 0.064,
-              "pnl": -0.064,
-              "hit": false
+              "fwd": -0.948,
+              "pnl": 0.948,
+              "hit": true
             },
             {
               "ticker": "INTC",
               "side": "sell",
-              "fwd": -1.748,
-              "pnl": 1.748,
+              "fwd": -2.236,
+              "pnl": 2.236,
               "hit": true
             },
             {
@@ -5901,85 +5901,85 @@
             {
               "ticker": "ARM",
               "side": "sell",
-              "fwd": -2.254,
-              "pnl": 2.254,
+              "fwd": -2.951,
+              "pnl": 2.951,
               "hit": true
             },
             {
               "ticker": "META",
               "side": "sell",
-              "fwd": 0.777,
-              "pnl": -0.777,
+              "fwd": 0.746,
+              "pnl": -0.746,
               "hit": false
             },
             {
               "ticker": "SW",
               "side": "sell",
-              "fwd": 2.293,
-              "pnl": -2.293,
+              "fwd": 2.49,
+              "pnl": -2.49,
               "hit": false
             },
             {
               "ticker": "DELL",
               "side": "sell",
-              "fwd": 1.091,
-              "pnl": -1.091,
+              "fwd": 1.679,
+              "pnl": -1.679,
               "hit": false
             },
             {
               "ticker": "BWEN",
               "side": "sell",
-              "fwd": 1.109,
-              "pnl": -1.109,
-              "hit": false
+              "fwd": -1.109,
+              "pnl": 1.109,
+              "hit": true
             },
             {
               "ticker": "PKG",
               "side": "sell",
-              "fwd": 1.342,
-              "pnl": -1.342,
+              "fwd": 1.294,
+              "pnl": -1.294,
               "hit": false
             },
             {
               "ticker": "MDB",
               "side": "sell",
-              "fwd": 1.848,
-              "pnl": -1.848,
+              "fwd": 2.488,
+              "pnl": -2.488,
               "hit": false
             },
             {
               "ticker": "RY",
               "side": "sell",
-              "fwd": 0.155,
-              "pnl": -0.155,
+              "fwd": 0.01,
+              "pnl": -0.01,
               "hit": false
             },
             {
               "ticker": "PANW",
               "side": "sell",
-              "fwd": 2.269,
-              "pnl": -2.269,
+              "fwd": 2.377,
+              "pnl": -2.377,
               "hit": false
             },
             {
               "ticker": "WMT",
               "side": "sell",
-              "fwd": -0.905,
-              "pnl": 0.905,
-              "hit": true
+              "fwd": 0.104,
+              "pnl": -0.104,
+              "hit": false
             },
             {
               "ticker": "BIDU",
               "side": "sell",
-              "fwd": 2.544,
-              "pnl": -2.544,
+              "fwd": 1.348,
+              "pnl": -1.348,
               "hit": false
             },
             {
               "ticker": "SES",
               "side": "sell",
-              "fwd": 3.949,
-              "pnl": -3.949,
+              "fwd": 6.09,
+              "pnl": -6.09,
               "hit": false
             }
           ]
@@ -5988,121 +5988,121 @@
           "trading_days": 3,
           "buy": {
             "n": 15,
-            "hits": 10,
-            "hit_rate": 0.667,
-            "avg_pnl_pct": 1.385
+            "hits": 8,
+            "hit_rate": 0.533,
+            "avg_pnl_pct": 1.196
           },
           "sell": {
             "n": 15,
-            "hits": 2,
-            "hit_rate": 0.133,
-            "avg_pnl_pct": -1.416
+            "hits": 5,
+            "hit_rate": 0.333,
+            "avg_pnl_pct": -1.283
           },
-          "avg_pnl_pct_both": -0.015,
+          "avg_pnl_pct_both": -0.043,
           "detail_buy": [
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 1.838,
-              "pnl": 1.838,
+              "fwd": 3.534,
+              "pnl": 3.534,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 4.818,
-              "pnl": 4.818,
+              "fwd": 4.54,
+              "pnl": 4.54,
               "hit": true
             },
             {
               "ticker": "CE",
               "side": "buy",
-              "fwd": 0.234,
-              "pnl": 0.234,
-              "hit": true
+              "fwd": -0.383,
+              "pnl": -0.383,
+              "hit": false
             },
             {
               "ticker": "AUPH",
               "side": "buy",
-              "fwd": -2.924,
-              "pnl": -2.924,
+              "fwd": -3.59,
+              "pnl": -3.59,
               "hit": false
             },
             {
               "ticker": "OCUL",
               "side": "buy",
-              "fwd": 2.525,
-              "pnl": 2.525,
-              "hit": true
+              "fwd": -0.09,
+              "pnl": -0.09,
+              "hit": false
             },
             {
               "ticker": "CELH",
               "side": "buy",
-              "fwd": 0.937,
-              "pnl": 0.937,
+              "fwd": 2.52,
+              "pnl": 2.52,
               "hit": true
             },
             {
               "ticker": "WRBY",
               "side": "buy",
-              "fwd": 1.056,
-              "pnl": 1.056,
-              "hit": true
+              "fwd": -0.073,
+              "pnl": -0.073,
+              "hit": false
             },
             {
               "ticker": "NHI",
               "side": "buy",
-              "fwd": -0.014,
-              "pnl": -0.014,
+              "fwd": -0.744,
+              "pnl": -0.744,
               "hit": false
             },
             {
               "ticker": "IRTC",
               "side": "buy",
-              "fwd": -0.086,
-              "pnl": -0.086,
-              "hit": false
+              "fwd": 0.422,
+              "pnl": 0.422,
+              "hit": true
             },
             {
               "ticker": "EPAM",
               "side": "buy",
-              "fwd": 3.709,
-              "pnl": 3.709,
+              "fwd": 3.353,
+              "pnl": 3.353,
               "hit": true
             },
             {
               "ticker": "CALX",
               "side": "buy",
-              "fwd": -0.768,
-              "pnl": -0.768,
+              "fwd": -0.644,
+              "pnl": -0.644,
               "hit": false
             },
             {
               "ticker": "OGS",
               "side": "buy",
-              "fwd": -1.978,
-              "pnl": -1.978,
+              "fwd": -3.145,
+              "pnl": -3.145,
               "hit": false
             },
             {
               "ticker": "GSHD",
               "side": "buy",
-              "fwd": 1.909,
-              "pnl": 1.909,
+              "fwd": 2.574,
+              "pnl": 2.574,
               "hit": true
             },
             {
               "ticker": "FIGR",
               "side": "buy",
-              "fwd": 9.064,
-              "pnl": 9.064,
+              "fwd": 8.43,
+              "pnl": 8.43,
               "hit": true
             },
             {
               "ticker": "HLNE",
               "side": "buy",
-              "fwd": 0.447,
-              "pnl": 0.447,
+              "fwd": 1.24,
+              "pnl": 1.24,
               "hit": true
             }
           ],
@@ -6110,9 +6110,9 @@
             {
               "ticker": "GEV",
               "side": "sell",
-              "fwd": 0.064,
-              "pnl": -0.064,
-              "hit": false
+              "fwd": -0.948,
+              "pnl": 0.948,
+              "hit": true
             },
             {
               "ticker": "AUR",
@@ -6124,92 +6124,92 @@
             {
               "ticker": "INTC",
               "side": "sell",
-              "fwd": -1.748,
-              "pnl": 1.748,
+              "fwd": -2.236,
+              "pnl": 2.236,
               "hit": true
             },
             {
               "ticker": "SW",
               "side": "sell",
-              "fwd": 2.293,
-              "pnl": -2.293,
+              "fwd": 2.49,
+              "pnl": -2.49,
               "hit": false
             },
             {
               "ticker": "META",
               "side": "sell",
-              "fwd": 0.777,
-              "pnl": -0.777,
+              "fwd": 0.746,
+              "pnl": -0.746,
               "hit": false
             },
             {
               "ticker": "BWEN",
               "side": "sell",
-              "fwd": 1.109,
-              "pnl": -1.109,
-              "hit": false
+              "fwd": -1.109,
+              "pnl": 1.109,
+              "hit": true
             },
             {
               "ticker": "STLA",
               "side": "sell",
-              "fwd": 2.947,
-              "pnl": -2.947,
+              "fwd": 2.852,
+              "pnl": -2.852,
               "hit": false
             },
             {
               "ticker": "PKG",
               "side": "sell",
-              "fwd": 1.342,
-              "pnl": -1.342,
+              "fwd": 1.294,
+              "pnl": -1.294,
               "hit": false
             },
             {
               "ticker": "ARM",
               "side": "sell",
-              "fwd": -2.254,
-              "pnl": 2.254,
+              "fwd": -2.951,
+              "pnl": 2.951,
               "hit": true
             },
             {
               "ticker": "DELL",
               "side": "sell",
-              "fwd": 1.067,
-              "pnl": -1.067,
+              "fwd": 1.679,
+              "pnl": -1.679,
               "hit": false
             },
             {
               "ticker": "SES",
               "side": "sell",
-              "fwd": 3.949,
-              "pnl": -3.949,
+              "fwd": 6.09,
+              "pnl": -6.09,
               "hit": false
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 5.389,
-              "pnl": -5.389,
+              "fwd": 6.195,
+              "pnl": -6.195,
               "hit": false
             },
             {
               "ticker": "AVGO",
               "side": "sell",
-              "fwd": 0.576,
-              "pnl": -0.576,
+              "fwd": 1.214,
+              "pnl": -1.214,
               "hit": false
             },
             {
               "ticker": "RKLB",
               "side": "sell",
-              "fwd": 1.926,
-              "pnl": -1.926,
-              "hit": false
+              "fwd": -0.521,
+              "pnl": 0.521,
+              "hit": true
             },
             {
               "ticker": "MDB",
               "side": "sell",
-              "fwd": 1.848,
-              "pnl": -1.848,
+              "fwd": 2.488,
+              "pnl": -2.488,
               "hit": false
             }
           ]
@@ -6218,121 +6218,121 @@
           "trading_days": 5,
           "buy": {
             "n": 15,
-            "hits": 10,
-            "hit_rate": 0.667,
-            "avg_pnl_pct": 1.385
+            "hits": 8,
+            "hit_rate": 0.533,
+            "avg_pnl_pct": 1.196
           },
           "sell": {
             "n": 15,
-            "hits": 1,
-            "hit_rate": 0.067,
-            "avg_pnl_pct": -1.91
+            "hits": 4,
+            "hit_rate": 0.267,
+            "avg_pnl_pct": -1.899
           },
-          "avg_pnl_pct_both": -0.262,
+          "avg_pnl_pct_both": -0.352,
           "detail_buy": [
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 1.838,
-              "pnl": 1.838,
+              "fwd": 3.534,
+              "pnl": 3.534,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 4.818,
-              "pnl": 4.818,
+              "fwd": 4.54,
+              "pnl": 4.54,
               "hit": true
             },
             {
               "ticker": "CE",
               "side": "buy",
-              "fwd": 0.234,
-              "pnl": 0.234,
-              "hit": true
+              "fwd": -0.383,
+              "pnl": -0.383,
+              "hit": false
             },
             {
               "ticker": "AUPH",
               "side": "buy",
-              "fwd": -2.924,
-              "pnl": -2.924,
+              "fwd": -3.59,
+              "pnl": -3.59,
               "hit": false
             },
             {
               "ticker": "OCUL",
               "side": "buy",
-              "fwd": 2.525,
-              "pnl": 2.525,
-              "hit": true
+              "fwd": -0.09,
+              "pnl": -0.09,
+              "hit": false
             },
             {
               "ticker": "WRBY",
               "side": "buy",
-              "fwd": 1.056,
-              "pnl": 1.056,
-              "hit": true
+              "fwd": -0.073,
+              "pnl": -0.073,
+              "hit": false
             },
             {
               "ticker": "CELH",
               "side": "buy",
-              "fwd": 0.937,
-              "pnl": 0.937,
+              "fwd": 2.52,
+              "pnl": 2.52,
               "hit": true
             },
             {
               "ticker": "NHI",
               "side": "buy",
-              "fwd": -0.014,
-              "pnl": -0.014,
+              "fwd": -0.744,
+              "pnl": -0.744,
               "hit": false
             },
             {
               "ticker": "IRTC",
               "side": "buy",
-              "fwd": -0.086,
-              "pnl": -0.086,
-              "hit": false
+              "fwd": 0.422,
+              "pnl": 0.422,
+              "hit": true
             },
             {
               "ticker": "OGS",
               "side": "buy",
-              "fwd": -1.978,
-              "pnl": -1.978,
+              "fwd": -3.145,
+              "pnl": -3.145,
               "hit": false
             },
             {
               "ticker": "EPAM",
               "side": "buy",
-              "fwd": 3.709,
-              "pnl": 3.709,
+              "fwd": 3.353,
+              "pnl": 3.353,
               "hit": true
             },
             {
               "ticker": "GSHD",
               "side": "buy",
-              "fwd": 1.909,
-              "pnl": 1.909,
+              "fwd": 2.574,
+              "pnl": 2.574,
               "hit": true
             },
             {
               "ticker": "CALX",
               "side": "buy",
-              "fwd": -0.768,
-              "pnl": -0.768,
+              "fwd": -0.644,
+              "pnl": -0.644,
               "hit": false
             },
             {
               "ticker": "FIGR",
               "side": "buy",
-              "fwd": 9.064,
-              "pnl": 9.064,
+              "fwd": 8.43,
+              "pnl": 8.43,
               "hit": true
             },
             {
               "ticker": "HLNE",
               "side": "buy",
-              "fwd": 0.447,
-              "pnl": 0.447,
+              "fwd": 1.24,
+              "pnl": 1.24,
               "hit": true
             }
           ],
@@ -6340,9 +6340,9 @@
             {
               "ticker": "GEV",
               "side": "sell",
-              "fwd": 0.064,
-              "pnl": -0.064,
-              "hit": false
+              "fwd": -0.948,
+              "pnl": 0.948,
+              "hit": true
             },
             {
               "ticker": "AUR",
@@ -6354,92 +6354,92 @@
             {
               "ticker": "SW",
               "side": "sell",
-              "fwd": 2.293,
-              "pnl": -2.293,
+              "fwd": 2.49,
+              "pnl": -2.49,
               "hit": false
             },
             {
               "ticker": "INTC",
               "side": "sell",
-              "fwd": -1.751,
-              "pnl": 1.751,
+              "fwd": -2.236,
+              "pnl": 2.236,
               "hit": true
             },
             {
               "ticker": "STLA",
               "side": "sell",
-              "fwd": 2.947,
-              "pnl": -2.947,
+              "fwd": 2.852,
+              "pnl": -2.852,
               "hit": false
             },
             {
               "ticker": "BWEN",
               "side": "sell",
-              "fwd": 1.109,
-              "pnl": -1.109,
-              "hit": false
+              "fwd": -1.109,
+              "pnl": 1.109,
+              "hit": true
             },
             {
               "ticker": "META",
               "side": "sell",
-              "fwd": 0.777,
-              "pnl": -0.777,
+              "fwd": 0.746,
+              "pnl": -0.746,
               "hit": false
             },
             {
               "ticker": "PKG",
               "side": "sell",
-              "fwd": 1.342,
-              "pnl": -1.342,
+              "fwd": 1.294,
+              "pnl": -1.294,
               "hit": false
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 5.389,
-              "pnl": -5.389,
+              "fwd": 6.195,
+              "pnl": -6.195,
               "hit": false
             },
             {
               "ticker": "SES",
               "side": "sell",
-              "fwd": 3.949,
-              "pnl": -3.949,
+              "fwd": 6.09,
+              "pnl": -6.09,
               "hit": false
             },
             {
               "ticker": "AVGO",
               "side": "sell",
-              "fwd": 0.563,
-              "pnl": -0.563,
+              "fwd": 1.214,
+              "pnl": -1.214,
               "hit": false
             },
             {
               "ticker": "RKLB",
               "side": "sell",
-              "fwd": 1.926,
-              "pnl": -1.926,
-              "hit": false
+              "fwd": -0.521,
+              "pnl": 0.521,
+              "hit": true
             },
             {
               "ticker": "CVGI",
               "side": "sell",
-              "fwd": 1.763,
-              "pnl": -1.763,
+              "fwd": 2.885,
+              "pnl": -2.885,
               "hit": false
             },
             {
               "ticker": "BWA",
               "side": "sell",
-              "fwd": 4.259,
-              "pnl": -4.259,
+              "fwd": 4.599,
+              "pnl": -4.599,
               "hit": false
             },
             {
               "ticker": "SBUX",
               "side": "sell",
-              "fwd": 2.058,
-              "pnl": -2.058,
+              "fwd": 2.971,
+              "pnl": -2.971,
               "hit": false
             }
           ]
@@ -6448,121 +6448,121 @@
           "trading_days": 10,
           "buy": {
             "n": 15,
-            "hits": 10,
-            "hit_rate": 0.667,
-            "avg_pnl_pct": 1.378
+            "hits": 8,
+            "hit_rate": 0.533,
+            "avg_pnl_pct": 1.196
           },
           "sell": {
             "n": 15,
-            "hits": 1,
-            "hit_rate": 0.067,
-            "avg_pnl_pct": -1.965
+            "hits": 4,
+            "hit_rate": 0.267,
+            "avg_pnl_pct": -1.768
           },
-          "avg_pnl_pct_both": -0.294,
+          "avg_pnl_pct_both": -0.286,
           "detail_buy": [
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 1.838,
-              "pnl": 1.838,
+              "fwd": 3.534,
+              "pnl": 3.534,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 4.818,
-              "pnl": 4.818,
+              "fwd": 4.54,
+              "pnl": 4.54,
               "hit": true
             },
             {
               "ticker": "AUPH",
               "side": "buy",
-              "fwd": -2.924,
-              "pnl": -2.924,
+              "fwd": -3.59,
+              "pnl": -3.59,
               "hit": false
             },
             {
               "ticker": "CE",
               "side": "buy",
-              "fwd": 0.234,
-              "pnl": 0.234,
-              "hit": true
+              "fwd": -0.383,
+              "pnl": -0.383,
+              "hit": false
             },
             {
               "ticker": "WRBY",
               "side": "buy",
-              "fwd": 1.056,
-              "pnl": 1.056,
-              "hit": true
+              "fwd": -0.073,
+              "pnl": -0.073,
+              "hit": false
             },
             {
               "ticker": "OCUL",
               "side": "buy",
-              "fwd": 2.525,
-              "pnl": 2.525,
-              "hit": true
+              "fwd": -0.09,
+              "pnl": -0.09,
+              "hit": false
             },
             {
               "ticker": "CELH",
               "side": "buy",
-              "fwd": 0.937,
-              "pnl": 0.937,
+              "fwd": 2.52,
+              "pnl": 2.52,
               "hit": true
             },
             {
               "ticker": "IRTC",
               "side": "buy",
-              "fwd": -0.086,
-              "pnl": -0.086,
-              "hit": false
+              "fwd": 0.422,
+              "pnl": 0.422,
+              "hit": true
             },
             {
               "ticker": "GSHD",
               "side": "buy",
-              "fwd": 1.909,
-              "pnl": 1.909,
+              "fwd": 2.574,
+              "pnl": 2.574,
               "hit": true
             },
             {
               "ticker": "EPAM",
               "side": "buy",
-              "fwd": 3.709,
-              "pnl": 3.709,
+              "fwd": 3.353,
+              "pnl": 3.353,
               "hit": true
             },
             {
               "ticker": "NHI",
               "side": "buy",
-              "fwd": -0.014,
-              "pnl": -0.014,
+              "fwd": -0.744,
+              "pnl": -0.744,
               "hit": false
             },
             {
               "ticker": "OGS",
               "side": "buy",
-              "fwd": -1.978,
-              "pnl": -1.978,
+              "fwd": -3.145,
+              "pnl": -3.145,
               "hit": false
             },
             {
               "ticker": "CALX",
               "side": "buy",
-              "fwd": -0.768,
-              "pnl": -0.768,
+              "fwd": -0.644,
+              "pnl": -0.644,
               "hit": false
             },
             {
               "ticker": "FIGR",
               "side": "buy",
-              "fwd": 8.971,
-              "pnl": 8.971,
+              "fwd": 8.43,
+              "pnl": 8.43,
               "hit": true
             },
             {
               "ticker": "HLNE",
               "side": "buy",
-              "fwd": 0.447,
-              "pnl": 0.447,
+              "fwd": 1.24,
+              "pnl": 1.24,
               "hit": true
             }
           ],
@@ -6570,9 +6570,9 @@
             {
               "ticker": "GEV",
               "side": "sell",
-              "fwd": 0.064,
-              "pnl": -0.064,
-              "hit": false
+              "fwd": -0.948,
+              "pnl": 0.948,
+              "hit": true
             },
             {
               "ticker": "AUR",
@@ -6584,92 +6584,92 @@
             {
               "ticker": "SW",
               "side": "sell",
-              "fwd": 2.293,
-              "pnl": -2.293,
+              "fwd": 2.49,
+              "pnl": -2.49,
               "hit": false
             },
             {
               "ticker": "STLA",
               "side": "sell",
-              "fwd": 2.947,
-              "pnl": -2.947,
+              "fwd": 2.852,
+              "pnl": -2.852,
               "hit": false
             },
             {
               "ticker": "PKG",
               "side": "sell",
-              "fwd": 1.342,
-              "pnl": -1.342,
+              "fwd": 1.294,
+              "pnl": -1.294,
               "hit": false
             },
             {
               "ticker": "META",
+              "side": "sell",
+              "fwd": 0.746,
+              "pnl": -0.746,
+              "hit": false
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": 6.09,
+              "pnl": -6.09,
+              "hit": false
+            },
+            {
+              "ticker": "BWEN",
+              "side": "sell",
+              "fwd": -1.109,
+              "pnl": 1.109,
+              "hit": true
+            },
+            {
+              "ticker": "INTC",
+              "side": "sell",
+              "fwd": -2.236,
+              "pnl": 2.236,
+              "hit": true
+            },
+            {
+              "ticker": "LVWR",
+              "side": "sell",
+              "fwd": 6.195,
+              "pnl": -6.195,
+              "hit": false
+            },
+            {
+              "ticker": "BWA",
+              "side": "sell",
+              "fwd": 4.599,
+              "pnl": -4.599,
+              "hit": false
+            },
+            {
+              "ticker": "GPC",
               "side": "sell",
               "fwd": 0.782,
               "pnl": -0.782,
               "hit": false
             },
             {
-              "ticker": "SES",
-              "side": "sell",
-              "fwd": 3.949,
-              "pnl": -3.949,
-              "hit": false
-            },
-            {
-              "ticker": "BWEN",
-              "side": "sell",
-              "fwd": 1.109,
-              "pnl": -1.109,
-              "hit": false
-            },
-            {
-              "ticker": "INTC",
-              "side": "sell",
-              "fwd": -1.753,
-              "pnl": 1.753,
-              "hit": true
-            },
-            {
-              "ticker": "LVWR",
-              "side": "sell",
-              "fwd": 5.389,
-              "pnl": -5.389,
-              "hit": false
-            },
-            {
-              "ticker": "BWA",
-              "side": "sell",
-              "fwd": 4.259,
-              "pnl": -4.259,
-              "hit": false
-            },
-            {
-              "ticker": "GPC",
-              "side": "sell",
-              "fwd": 0.602,
-              "pnl": -0.602,
-              "hit": false
-            },
-            {
               "ticker": "SBUX",
               "side": "sell",
-              "fwd": 2.058,
-              "pnl": -2.058,
+              "fwd": 2.971,
+              "pnl": -2.971,
               "hit": false
             },
             {
               "ticker": "RKLB",
               "side": "sell",
-              "fwd": 1.926,
-              "pnl": -1.926,
-              "hit": false
+              "fwd": -0.521,
+              "pnl": 0.521,
+              "hit": true
             },
             {
               "ticker": "BIDU",
               "side": "sell",
-              "fwd": 2.544,
-              "pnl": -2.544,
+              "fwd": 1.348,
+              "pnl": -1.348,
               "hit": false
             }
           ]
@@ -6678,121 +6678,121 @@
           "trading_days": 21,
           "buy": {
             "n": 15,
-            "hits": 10,
-            "hit_rate": 0.667,
-            "avg_pnl_pct": 1.381
+            "hits": 8,
+            "hit_rate": 0.533,
+            "avg_pnl_pct": 1.196
           },
           "sell": {
             "n": 15,
-            "hits": 0,
-            "hit_rate": 0.0,
-            "avg_pnl_pct": -2.072
+            "hits": 3,
+            "hit_rate": 0.2,
+            "avg_pnl_pct": -2.1
           },
-          "avg_pnl_pct_both": -0.346,
+          "avg_pnl_pct_both": -0.452,
           "detail_buy": [
             {
               "ticker": "ELF",
               "side": "buy",
-              "fwd": 1.838,
-              "pnl": 1.838,
+              "fwd": 3.534,
+              "pnl": 3.534,
               "hit": true
             },
             {
               "ticker": "MOS",
               "side": "buy",
-              "fwd": 4.818,
-              "pnl": 4.818,
+              "fwd": 4.54,
+              "pnl": 4.54,
               "hit": true
             },
             {
               "ticker": "AUPH",
               "side": "buy",
-              "fwd": -2.924,
-              "pnl": -2.924,
+              "fwd": -3.59,
+              "pnl": -3.59,
               "hit": false
             },
             {
               "ticker": "CE",
               "side": "buy",
-              "fwd": 0.234,
-              "pnl": 0.234,
-              "hit": true
+              "fwd": -0.383,
+              "pnl": -0.383,
+              "hit": false
             },
             {
               "ticker": "WRBY",
               "side": "buy",
-              "fwd": 1.056,
-              "pnl": 1.056,
-              "hit": true
+              "fwd": -0.073,
+              "pnl": -0.073,
+              "hit": false
             },
             {
               "ticker": "OCUL",
               "side": "buy",
-              "fwd": 2.57,
-              "pnl": 2.57,
-              "hit": true
+              "fwd": -0.09,
+              "pnl": -0.09,
+              "hit": false
             },
             {
               "ticker": "CELH",
               "side": "buy",
-              "fwd": 0.937,
-              "pnl": 0.937,
+              "fwd": 2.52,
+              "pnl": 2.52,
               "hit": true
             },
             {
               "ticker": "IRTC",
               "side": "buy",
-              "fwd": -0.086,
-              "pnl": -0.086,
-              "hit": false
+              "fwd": 0.422,
+              "pnl": 0.422,
+              "hit": true
             },
             {
               "ticker": "GSHD",
               "side": "buy",
-              "fwd": 1.909,
-              "pnl": 1.909,
+              "fwd": 2.574,
+              "pnl": 2.574,
               "hit": true
             },
             {
               "ticker": "OGS",
               "side": "buy",
-              "fwd": -1.978,
-              "pnl": -1.978,
+              "fwd": -3.145,
+              "pnl": -3.145,
               "hit": false
             },
             {
               "ticker": "NHI",
               "side": "buy",
-              "fwd": -0.014,
-              "pnl": -0.014,
+              "fwd": -0.744,
+              "pnl": -0.744,
               "hit": false
             },
             {
               "ticker": "EPAM",
               "side": "buy",
-              "fwd": 3.709,
-              "pnl": 3.709,
+              "fwd": 3.353,
+              "pnl": 3.353,
               "hit": true
             },
             {
               "ticker": "FIGR",
               "side": "buy",
-              "fwd": 8.971,
-              "pnl": 8.971,
+              "fwd": 8.43,
+              "pnl": 8.43,
               "hit": true
             },
             {
               "ticker": "HLNE",
               "side": "buy",
-              "fwd": 0.447,
-              "pnl": 0.447,
+              "fwd": 1.24,
+              "pnl": 1.24,
               "hit": true
             },
             {
               "ticker": "CALX",
               "side": "buy",
-              "fwd": -0.768,
-              "pnl": -0.768,
+              "fwd": -0.644,
+              "pnl": -0.644,
               "hit": false
             }
           ],
@@ -6800,112 +6800,1118 @@
             {
               "ticker": "GEV",
               "side": "sell",
-              "fwd": 0.064,
-              "pnl": -0.064,
-              "hit": false
+              "fwd": -0.948,
+              "pnl": 0.948,
+              "hit": true
             },
             {
               "ticker": "AUR",
               "side": "sell",
-              "fwd": 2.042,
-              "pnl": -2.042,
+              "fwd": 1.961,
+              "pnl": -1.961,
               "hit": false
             },
             {
               "ticker": "SW",
               "side": "sell",
-              "fwd": 2.293,
-              "pnl": -2.293,
+              "fwd": 2.49,
+              "pnl": -2.49,
               "hit": false
             },
             {
               "ticker": "STLA",
               "side": "sell",
-              "fwd": 2.947,
-              "pnl": -2.947,
+              "fwd": 2.852,
+              "pnl": -2.852,
               "hit": false
             },
             {
               "ticker": "SES",
               "side": "sell",
-              "fwd": 3.949,
-              "pnl": -3.949,
+              "fwd": 6.09,
+              "pnl": -6.09,
               "hit": false
             },
             {
               "ticker": "PKG",
               "side": "sell",
-              "fwd": 1.342,
-              "pnl": -1.342,
+              "fwd": 1.294,
+              "pnl": -1.294,
               "hit": false
             },
             {
               "ticker": "META",
               "side": "sell",
-              "fwd": 0.771,
-              "pnl": -0.771,
+              "fwd": 0.746,
+              "pnl": -0.746,
               "hit": false
             },
             {
               "ticker": "LVWR",
               "side": "sell",
-              "fwd": 5.389,
-              "pnl": -5.389,
+              "fwd": 6.195,
+              "pnl": -6.195,
               "hit": false
             },
             {
               "ticker": "BWEN",
               "side": "sell",
-              "fwd": 1.109,
-              "pnl": -1.109,
-              "hit": false
+              "fwd": -1.109,
+              "pnl": 1.109,
+              "hit": true
             },
             {
               "ticker": "CVGI",
               "side": "sell",
-              "fwd": 1.763,
-              "pnl": -1.763,
+              "fwd": 2.885,
+              "pnl": -2.885,
               "hit": false
             },
             {
               "ticker": "GPC",
               "side": "sell",
-              "fwd": 0.602,
-              "pnl": -0.602,
+              "fwd": 0.782,
+              "pnl": -0.782,
               "hit": false
             },
             {
               "ticker": "RKLB",
               "side": "sell",
-              "fwd": 1.926,
-              "pnl": -1.926,
-              "hit": false
+              "fwd": -0.521,
+              "pnl": 0.521,
+              "hit": true
             },
             {
               "ticker": "BWA",
               "side": "sell",
-              "fwd": 4.259,
-              "pnl": -4.259,
+              "fwd": 4.599,
+              "pnl": -4.599,
               "hit": false
             },
             {
               "ticker": "SBUX",
               "side": "sell",
-              "fwd": 2.048,
-              "pnl": -2.048,
+              "fwd": 2.971,
+              "pnl": -2.971,
               "hit": false
             },
             {
               "ticker": "AVGO",
               "side": "sell",
-              "fwd": 0.58,
-              "pnl": -0.58,
+              "fwd": 1.214,
+              "pnl": -1.214,
               "hit": false
             }
           ]
         }
       },
       "generated_at": "2026-08-21T02:08:20.480699-04:00"
+    },
+    {
+      "signal_date": "2026-08-21",
+      "horizons": {
+        "1d": {
+          "trading_days": 1,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "MOS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OCUL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSHD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CRSP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OPCH",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "WGS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HLNE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FIGR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "EPAM",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CALX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NHI",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ZG",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "INTC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GEV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ARM",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BWEN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VOD",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MDB",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LYV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BIDU",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AUR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VRT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "3d": {
+          "trading_days": 3,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "MOS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSHD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OCUL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CRSP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OPCH",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HLNE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "WGS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FIGR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NHI",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "EPAM",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CALX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ZG",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "INTC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GEV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BWEN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ARM",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VOD",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AUR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MDB",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VRT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CODI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TLN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BIDU",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "1w": {
+          "trading_days": 5,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "GSHD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OCUL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MOS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CRSP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OPCH",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HLNE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FIGR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "WGS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NHI",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "EPAM",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CALX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NMRK",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "GEV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "INTC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BWEN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VOD",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AUR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BIDU",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VRT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CODI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ARM",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MDB",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "2w": {
+          "trading_days": 10,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "GSHD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OCUL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MOS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CRSP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OPCH",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HLNE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FIGR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "WGS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "EPAM",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CALX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ZG",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "GEV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "INTC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BWEN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VOD",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BIDU",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CODI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VRT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AUR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AREC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GETY",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LYV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "1m": {
+          "trading_days": 21,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSHD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OCUL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OPCH",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MOS",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HLNE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CRSP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FIGR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "INSP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CALX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "EPAM",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GPK",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "GEV",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BWEN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "INTC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VRT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CODI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AREC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "RKLB",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NFE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MTZ",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "GNRC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TLN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VSAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        }
+      },
+      "generated_at": "2026-08-22T03:38:49.879333-04:00"
     }
   ]
 }

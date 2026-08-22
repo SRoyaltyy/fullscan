@@ -63,7 +63,7 @@ date,sleeve,ticker,side,shares,price,fees,amount,realized_pnl,reason
 2026-08-14,1d_top,COP,buy,8,125.94,2.014,1009.53,,entered 1d_top book
 2026-08-14,1d_top,APA,buy,25,40.47,2.065,1013.82,,entered 1d_top book
 2026-08-14,1d_top,NRG,buy,8,126.24,2.014,1011.93,,entered 1d_top book
-2026-08-14,1d_top,CEG,buy,3,282.5,1.999,849.5,,entered 1d_top book
+2026-08-14,1d_top,CEG,buy,3,282.0664,1.999,848.2,,entered 1d_top book
 2026-08-14,1d_size,BTSG,sell,18,61.71,2.064,1108.72,22.53,dropped from 1d_size after 1d (min 1d)
 2026-08-14,1d_size,EOG,sell,7,142.61,2.031,996.24,4.36,dropped from 1d_size after 1d (min 1d)
 2026-08-14,1d_size,TGTX,sell,23,48.74,2.079,1118.94,14.26,dropped from 1d_size after 1d (min 1d)
@@ -105,9 +105,9 @@ date,sleeve,ticker,side,shares,price,fees,amount,realized_pnl,reason
 2026-08-14,1m_size,LDI,buy,34,0.897,0.407,30.91,,entered 1m_size book
 2026-08-14,1m_size,BTBT,buy,19,1.57,0.3553,30.19,,entered 1m_size book
 2026-08-17,1d_top,NRG,sell,8,122.37,2.034,976.93,-35.01,dropped from 1d_top after 1d (min 1d)
-2026-08-17,1d_top,CEG,sell,3,278.2,2.019,832.58,-16.92,dropped from 1d_top after 1d (min 1d)
+2026-08-17,1d_top,CEG,sell,3,277.773,2.019,831.3,-16.9,dropped from 1d_top after 1d (min 1d)
 2026-08-17,1d_top,XOM,buy,7,161.46,2.011,1132.23,,entered 1d_top book
-2026-08-17,1d_top,CVX,buy,6,202.7,2.008,1218.21,,entered 1d_top book
+2026-08-17,1d_top,CVX,buy,6,200.9463,2.008,1207.69,,entered 1d_top book
 2026-08-17,1d_size,TLN,sell,3,356.92,2.019,1068.74,-21.48,dropped from 1d_size after 1d (min 1d)
 2026-08-17,1d_size,VST,sell,7,146.11,2.031,1020.74,-18.18,dropped from 1d_size after 1d (min 1d)
 2026-08-17,1d_size,DAVE,sell,3,341.43,2.019,1022.27,16.56,dropped from 1d_size after 1d (min 1d)
@@ -180,151 +180,271 @@ date,sleeve,ticker,side,shares,price,fees,amount,realized_pnl,reason
 2026-08-17,1m_top,ECL,buy,2,275.84,1.996,553.68,,entered 1m_top book
 2026-08-17,1m_size,DNN,buy,1,3.19,0.0349,3.22,,entered 1m_size book
 2026-08-17,1m_size,TMC,buy,1,3.77,0.0407,3.81,,entered 1m_size book
-2026-08-18,1d_top,TLN,sell,2,347.705,2.016,693.39,-34.08,dropped from 1d_top after 2d (min 1d)
-2026-08-18,1d_top,VST,sell,6,143.83,2.028,860.95,-29.84,dropped from 1d_top after 2d (min 1d)
-2026-08-18,1d_top,STE,buy,3,233.08,1.999,701.24,,entered 1d_top book
-2026-08-18,1d_top,SYK,buy,2,335.52,1.996,673.04,,entered 1d_top book
-2026-08-18,1d_size,DVN,sell,25,48.0251,2.085,1198.54,86.73,dropped from 1d_size after 3d (min 1d)
-2026-08-18,1d_size,EOG,sell,7,148.395,2.031,1036.73,11.67,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,FANG,sell,5,209.57,2.025,1045.83,12.37,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,TGB,sell,129,8.375,2.4084,1077.97,-55.74,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,ELF,sell,12,93.04,2.046,1114.43,-11.51,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,DNN,sell,355,3.105,4.6484,1097.63,-39.4,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,TMC,sell,300,3.96,3.9298,1184.07,49.2,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,HNST,sell,240,4.735,3.1458,1133.25,2.16,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,NB,sell,235,4.585,3.0805,1074.39,-58.99,dropped from 1d_size after 1d (min 1d)
-2026-08-18,1d_size,OXY,buy,19,59.445,2.047,1131.5,,entered 1d_size book
-2026-08-18,1d_size,COP,buy,8,130.0,2.014,1042.01,,entered 1d_size book
-2026-08-18,1d_size,APA,buy,26,41.91,2.068,1091.73,,entered 1d_size book
-2026-08-18,1d_size,MUR,buy,32,34.93,2.086,1119.85,,entered 1d_size book
-2026-08-18,1d_size,AOS,buy,18,61.3,2.044,1105.44,,entered 1d_size book
-2026-08-18,1d_size,MLYS,buy,42,26.565,2.116,1117.85,,entered 1d_size book
-2026-08-18,1d_size,CYPH,buy,1419,0.7963,15.5565,1145.51,,entered 1d_size book
-2026-08-18,1d_size,OBE,buy,97,11.56,2.281,1123.6,,entered 1d_size book
-2026-08-18,1d_size,AVXL,buy,362,3.115,4.6698,1132.3,,entered 1d_size book
-2026-08-18,3d_top,INO,sell,1111,1.165,14.5267,1279.79,266.56,dropped from 3d_top after 3d (min 3d)
-2026-08-18,3d_top,TNDM,sell,43,22.94,2.139,984.28,-12.43,dropped from 3d_top after 3d (min 3d)
-2026-08-18,3d_top,STE,buy,2,233.08,1.996,468.16,,entered 3d_top book
-2026-08-18,3d_top,DHR,buy,2,200.8,1.996,403.6,,entered 3d_top book
-2026-08-18,3d_top,SYK,buy,1,335.52,1.993,337.51,,entered 3d_top book
-2026-08-18,3d_top,CVX,buy,2,205.1,1.996,412.2,,entered 3d_top book
-2026-08-18,3d_top,XOM,buy,3,164.92,1.999,496.76,,entered 3d_top book
-2026-08-18,3d_size,BTSG,sell,18,59.62,2.064,1071.1,-15.09,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,IREN,sell,24,42.25,2.082,1011.92,-64.38,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,TPG,sell,20,51.67,2.07,1031.33,-63.12,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,TGTX,sell,23,49.78,2.079,1142.86,38.18,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,SLS,sell,89,13.1313,2.2818,1166.4,64.11,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,HIMS,sell,38,27.8756,2.124,1057.15,-38.22,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,INO,sell,1234,1.165,16.1349,1421.48,296.07,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,TNDM,sell,48,22.94,2.154,1098.97,-13.41,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,VOR,sell,47,23.33,2.151,1094.36,-2.4,dropped from 3d_size after 3d (min 3d)
-2026-08-18,3d_size,OXY,buy,18,59.445,2.044,1072.05,,entered 3d_size book
-2026-08-18,3d_size,APA,buy,26,41.91,2.068,1091.73,,entered 3d_size book
-2026-08-18,3d_size,COP,buy,8,130.0,2.014,1042.01,,entered 3d_size book
-2026-08-18,3d_size,MUR,buy,32,34.93,2.086,1119.85,,entered 3d_size book
-2026-08-18,3d_size,MLYS,buy,42,26.565,2.116,1117.85,,entered 3d_size book
-2026-08-18,3d_size,TRMD,buy,37,30.23,2.101,1120.61,,entered 3d_size book
-2026-08-18,3d_size,OBE,buy,97,11.56,2.281,1123.6,,entered 3d_size book
-2026-08-18,3d_size,CYPH,buy,1415,0.7963,15.5126,1142.28,,entered 3d_size book
-2026-08-18,3d_size,TBPH,buy,66,16.945,2.188,1120.56,,entered 3d_size book
-2026-08-18,1w_size,SEER,buy,4,2.03,0.0932,8.21,,entered 1w_size book
-2026-08-18,2w_size,SEER,buy,4,2.03,0.0932,8.21,,entered 2w_size book
-2026-08-18,1m_size,SEER,buy,1,2.03,0.0233,2.05,,entered 1m_size book
-2026-08-19,1d_top,DVN,sell,22,48.0251,2.076,1054.48,43.72,dropped from 1d_top after 3d (min 1d)
-2026-08-19,1d_top,FANG,sell,5,209.57,2.025,1045.83,31.47,dropped from 1d_top after 3d (min 1d)
-2026-08-19,1d_top,EOG,sell,7,148.395,2.031,1036.73,36.45,dropped from 1d_top after 3d (min 1d)
-2026-08-19,1d_top,OXY,sell,17,59.445,2.061,1008.5,14.34,dropped from 1d_top after 3d (min 1d)
-2026-08-19,1d_top,COP,sell,8,130.0,2.034,1037.97,28.43,dropped from 1d_top after 3d (min 1d)
-2026-08-19,1d_top,APA,sell,25,41.91,2.085,1045.66,31.85,dropped from 1d_top after 3d (min 1d)
-2026-08-19,1d_top,XOM,sell,7,164.92,2.031,1152.41,20.18,dropped from 1d_top after 2d (min 1d)
-2026-08-19,1d_top,CVX,sell,6,205.1,2.028,1228.57,10.36,dropped from 1d_top after 2d (min 1d)
-2026-08-19,1d_top,DHR,buy,5,200.8,2.005,1006.01,,entered 1d_top book
-2026-08-19,1d_top,UTHR,buy,2,515.465,1.996,1032.93,,entered 1d_top book
-2026-08-19,1d_top,CEG,buy,4,276.54,2.002,1108.16,,entered 1d_top book
-2026-08-19,1d_top,EW,buy,12,91.485,2.026,1099.85,,entered 1d_top book
-2026-08-19,1d_top,TMO,buy,1,587.54,1.993,589.53,,entered 1d_top book
-2026-08-19,1d_top,COO,buy,14,76.2,2.032,1068.83,,entered 1d_top book
-2026-08-19,1d_size,OXY,sell,19,59.445,2.067,1127.39,-4.11,dropped from 1d_size after 1d (min 1d)
-2026-08-19,1d_size,COP,sell,8,130.0,2.034,1037.97,-4.05,dropped from 1d_size after 1d (min 1d)
-2026-08-19,1d_size,APA,sell,26,41.91,2.088,1087.57,-4.16,dropped from 1d_size after 1d (min 1d)
-2026-08-19,1d_size,AVXL,sell,362,3.115,4.7399,1122.89,-9.41,dropped from 1d_size after 1d (min 1d)
-2026-08-19,1d_size,STE,buy,4,233.08,2.002,934.32,,entered 1d_size book
-2026-08-19,1d_size,SYK,buy,3,335.52,1.999,1008.56,,entered 1d_size book
-2026-08-19,1d_size,TBPH,buy,66,16.945,2.188,1120.56,,entered 1d_size book
-2026-08-19,3d_top,TLN,sell,2,347.705,2.016,693.39,-34.08,dropped from 3d_top after 3d (min 3d)
-2026-08-19,3d_top,VST,sell,5,143.83,2.025,717.13,-25.53,dropped from 3d_top after 3d (min 3d)
-2026-08-19,3d_top,BEMD,sell,31,24.885,2.103,769.33,-8.37,dropped from 3d_top after 3d (min 3d)
-2026-08-19,3d_top,EW,buy,4,91.485,2.002,367.94,,entered 3d_top book
-2026-08-19,3d_top,MDT,buy,4,92.535,2.002,372.14,,entered 3d_top book
-2026-08-19,3d_top,COO,buy,5,76.2,2.005,383.0,,entered 3d_top book
-2026-08-19,3d_top,MUR,buy,11,34.93,2.023,386.25,,entered 3d_top book
-2026-08-19,3d_size,MARA,sell,1,9.079,0.1138,8.97,-0.33,dropped from 3d_size after 3d (min 3d)
-2026-08-19,3d_size,LDI,sell,13,0.8607,0.1709,11.02,-0.8,dropped from 3d_size after 3d (min 3d)
-2026-08-19,3d_size,BTBT,sell,7,1.465,0.1436,10.11,-1.01,dropped from 3d_size after 3d (min 3d)
-2026-08-19,3d_size,INMD,buy,3,15.02,0.4596,45.52,,entered 3d_size book
-2026-08-20,1d_top,STE,sell,3,233.08,2.019,697.22,-4.02,dropped from 1d_top after 2d (min 1d)
-2026-08-20,1d_top,SYK,sell,2,335.52,2.016,669.02,-4.01,dropped from 1d_top after 2d (min 1d)
-2026-08-20,1d_top,DHR,sell,5,200.8,2.025,1001.98,-4.03,dropped from 1d_top after 1d (min 1d)
-2026-08-20,1d_top,UTHR,sell,2,515.465,2.016,1028.91,-4.01,dropped from 1d_top after 1d (min 1d)
-2026-08-20,1d_top,EW,sell,12,91.485,2.046,1095.77,-4.07,dropped from 1d_top after 1d (min 1d)
-2026-08-20,1d_top,TMO,sell,1,587.54,2.013,585.53,-4.01,dropped from 1d_top after 1d (min 1d)
-2026-08-20,1d_top,COO,sell,14,76.2,2.052,1064.75,-4.08,dropped from 1d_top after 1d (min 1d)
-2026-08-20,1d_top,EOG,buy,6,148.395,2.008,892.38,,entered 1d_top book
-2026-08-20,1d_top,DVN,buy,21,48.0251,2.053,1010.58,,entered 1d_top book
-2026-08-20,1d_top,FANG,buy,4,209.57,2.002,840.28,,entered 1d_top book
-2026-08-20,1d_top,OXY,buy,17,59.445,2.041,1012.61,,entered 1d_top book
-2026-08-20,1d_top,APA,buy,24,41.91,2.062,1007.9,,entered 1d_top book
-2026-08-20,1d_top,COP,buy,7,130.0,2.011,912.01,,entered 1d_top book
-2026-08-20,1d_top,NRG,buy,8,120.2399,2.014,963.93,,entered 1d_top book
-2026-08-20,1d_top,VST,buy,7,143.83,2.011,1008.82,,entered 1d_top book
-2026-08-20,1d_top,TLN,buy,2,347.705,1.996,697.41,,entered 1d_top book
-2026-08-20,1d_size,MUR,sell,32,34.93,2.106,1115.65,-4.19,dropped from 1d_size after 2d (min 1d)
-2026-08-20,1d_size,AOS,sell,18,61.3,2.064,1101.34,-4.11,dropped from 1d_size after 2d (min 1d)
-2026-08-20,1d_size,MLYS,sell,42,26.565,2.136,1113.59,-4.25,dropped from 1d_size after 2d (min 1d)
-2026-08-20,1d_size,CYPH,sell,1419,0.7963,15.8021,1114.15,-31.36,dropped from 1d_size after 2d (min 1d)
-2026-08-20,1d_size,OBE,sell,97,11.56,2.3071,1119.01,-4.59,dropped from 1d_size after 2d (min 1d)
-2026-08-20,1d_size,STE,sell,4,233.08,2.022,930.3,-4.02,dropped from 1d_size after 1d (min 1d)
-2026-08-20,1d_size,SYK,sell,3,335.52,2.019,1004.54,-4.02,dropped from 1d_size after 1d (min 1d)
-2026-08-20,1d_size,TBPH,sell,66,16.945,2.209,1116.16,-4.4,dropped from 1d_size after 1d (min 1d)
-2026-08-20,1d_size,DVN,buy,23,48.0251,2.059,1106.64,,entered 1d_size book
-2026-08-20,1d_size,FANG,buy,5,209.57,2.005,1049.86,,entered 1d_size book
-2026-08-20,1d_size,EOG,buy,7,148.395,2.011,1040.78,,entered 1d_size book
-2026-08-20,1d_size,HIMS,buy,40,27.8756,2.11,1117.13,,entered 1d_size book
-2026-08-20,1d_size,GRAL,buy,16,68.73,2.038,1101.72,,entered 1d_size book
-2026-08-20,1d_size,NEO,buy,70,15.84,2.2,1111.0,,entered 1d_size book
-2026-08-20,1d_size,SEER,buy,552,2.03,7.1208,1127.68,,entered 1d_size book
-2026-08-20,1d_size,SANA,buy,310,3.615,3.999,1124.65,,entered 1d_size book
-2026-08-20,3d_top,TMC,sell,152,3.96,2.4812,599.44,23.95,dropped from 3d_top after 3d (min 3d)
-2026-08-20,3d_top,TGB,sell,65,8.375,2.2058,542.17,-30.07,dropped from 3d_top after 3d (min 3d)
-2026-08-20,3d_top,ELF,sell,6,93.04,2.028,556.21,-7.76,dropped from 3d_top after 3d (min 3d)
-2026-08-20,3d_top,DNN,sell,180,3.105,2.5699,556.33,-20.4,dropped from 3d_top after 3d (min 3d)
-2026-08-20,3d_top,CEG,buy,6,276.54,2.008,1661.25,,entered 3d_top book
-2026-08-20,3d_top,NRG,buy,14,120.2399,2.032,1685.39,,entered 3d_top book
-2026-08-20,3d_size,DNN,sell,2,3.105,0.0881,6.12,-0.33,dropped from 3d_size after 3d (min 3d)
-2026-08-20,3d_size,TMC,sell,2,3.96,0.1052,7.81,0.19,dropped from 3d_size after 3d (min 3d)
-2026-08-20,3d_size,HNST,sell,1,4.735,0.0704,4.66,-0.09,dropped from 3d_size after 3d (min 3d)
-2026-08-20,3d_size,NB,sell,1,4.585,0.0689,4.52,-0.34,dropped from 3d_size after 3d (min 3d)
-2026-08-20,1w_top,TNDM,sell,43,22.94,2.139,984.28,-12.43,dropped from 1w_top after 5d (min 5d)
-2026-08-20,1w_top,INO,sell,1111,1.165,14.5267,1279.79,266.56,dropped from 1w_top after 5d (min 5d)
-2026-08-20,1w_top,MLYS,buy,9,26.565,2.017,241.1,,entered 1w_top book
-2026-08-20,1w_top,DHR,buy,1,200.8,1.993,202.79,,entered 1w_top book
-2026-08-20,1w_top,EW,buy,2,91.485,1.8357,184.81,,entered 1w_top book
-2026-08-20,1w_top,TEM,buy,4,49.65,1.995,200.6,,entered 1w_top book
-2026-08-20,1w_top,HIMS,buy,8,27.8756,2.014,225.02,,entered 1w_top book
-2026-08-20,1w_top,COO,buy,3,76.2,1.999,230.6,,entered 1w_top book
-2026-08-20,1w_size,BTSG,sell,18,59.62,2.064,1071.1,-15.09,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,IREN,sell,24,42.25,2.082,1011.92,-64.38,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,GH,sell,6,161.35,2.028,966.07,6.82,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,TGTX,sell,23,49.78,2.079,1142.86,38.18,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,SLS,sell,89,13.1313,2.2818,1166.4,64.11,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,INO,sell,1234,1.165,16.1349,1421.48,296.07,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,TNDM,sell,48,22.94,2.154,1098.97,-13.41,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,ACHV,sell,153,7.365,2.4844,1124.36,12.66,dropped from 1w_size after 5d (min 5d)
-2026-08-20,1w_size,TMO,buy,1,587.54,1.993,589.53,,entered 1w_size book
-2026-08-20,1w_size,GRAL,buy,16,68.73,2.038,1101.72,,entered 1w_size book
-2026-08-20,1w_size,HIMS,buy,40,27.8756,2.11,1117.13,,entered 1w_size book
-2026-08-20,1w_size,MLYS,buy,42,26.565,2.116,1117.85,,entered 1w_size book
-2026-08-20,1w_size,CYPH,buy,1425,0.7963,15.6223,1150.35,,entered 1w_size book
-2026-08-20,2w_top,NEO,buy,1,15.84,0.1614,16.0,,entered 2w_top book
-2026-08-20,1m_top,HIMS,buy,1,27.8756,0.2818,28.16,,entered 1m_top book
-2026-08-20,1m_top,NEO,buy,1,15.84,0.1614,16.0,,entered 1m_top book
+2026-08-18,1d_top,TLN,sell,2,317.66,2.016,633.3,-94.17,dropped from 1d_top after 2d (min 1d)
+2026-08-18,1d_top,VST,sell,6,140.52,2.028,841.09,-49.7,dropped from 1d_top after 2d (min 1d)
+2026-08-18,1d_top,STE,buy,3,232.39,1.999,699.17,,entered 1d_top book
+2026-08-18,1d_top,SYK,buy,2,331.37,1.996,664.74,,entered 1d_top book
+2026-08-18,1d_size,DVN,sell,25,47.83,2.085,1193.67,81.85,dropped from 1d_size after 3d (min 1d)
+2026-08-18,1d_size,EOG,sell,7,148.7,2.031,1038.87,13.81,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,FANG,sell,5,210.02,2.025,1048.08,14.62,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,TGB,sell,129,8.36,2.4084,1076.03,-57.68,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,ELF,sell,12,92.51,2.046,1108.07,-17.87,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,DNN,sell,355,3.15,4.6484,1113.6,-23.43,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,TMC,sell,300,3.92,3.9298,1172.07,37.2,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,HNST,sell,240,4.75,3.1458,1136.85,5.76,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,NB,sell,235,4.53,3.0805,1061.47,-71.91,dropped from 1d_size after 1d (min 1d)
+2026-08-18,1d_size,OXY,buy,18,59.8,2.044,1078.44,,entered 1d_size book
+2026-08-18,1d_size,COP,buy,8,129.72,2.014,1039.77,,entered 1d_size book
+2026-08-18,1d_size,APA,buy,26,42.37,2.068,1103.69,,entered 1d_size book
+2026-08-18,1d_size,MUR,buy,32,35.18,2.086,1127.85,,entered 1d_size book
+2026-08-18,1d_size,AOS,buy,18,60.86,2.044,1097.52,,entered 1d_size book
+2026-08-18,1d_size,MLYS,buy,42,26.61,2.116,1119.74,,entered 1d_size book
+2026-08-18,1d_size,CYPH,buy,1401,0.805,15.4811,1143.29,,entered 1d_size book
+2026-08-18,1d_size,OBE,buy,97,11.61,2.281,1128.45,,entered 1d_size book
+2026-08-18,1d_size,AVXL,buy,352,3.2,4.5408,1130.94,,entered 1d_size book
+2026-08-18,3d_top,INO,sell,1111,1.2,14.527,1318.67,305.44,dropped from 3d_top after 3d (min 3d)
+2026-08-18,3d_top,TNDM,sell,43,23.73,2.139,1018.25,21.54,dropped from 3d_top after 3d (min 3d)
+2026-08-18,3d_top,STE,buy,2,232.39,1.996,466.78,,entered 3d_top book
+2026-08-18,3d_top,DHR,buy,2,199.58,1.996,401.16,,entered 3d_top book
+2026-08-18,3d_top,SYK,buy,1,331.37,1.993,333.36,,entered 3d_top book
+2026-08-18,3d_top,CVX,buy,2,203.96,1.996,409.92,,entered 3d_top book
+2026-08-18,3d_top,XOM,buy,3,165.56,1.999,498.68,,entered 3d_top book
+2026-08-18,3d_size,BTSG,sell,18,59.5,2.064,1068.94,-17.25,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,IREN,sell,24,42.0,2.082,1005.92,-70.38,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,TPG,sell,20,52.02,2.07,1038.33,-56.12,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,TGTX,sell,23,50.26,2.079,1153.9,49.22,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,SLS,sell,89,13.1,2.2818,1163.62,61.32,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,HIMS,sell,38,27.39,2.124,1038.7,-56.67,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,INO,sell,1234,1.2,16.1353,1464.66,339.26,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,TNDM,sell,48,23.73,2.154,1136.89,24.51,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,VOR,sell,47,23.28,2.151,1092.01,-4.75,dropped from 3d_size after 3d (min 3d)
+2026-08-18,3d_size,OXY,buy,18,59.8,2.044,1078.44,,entered 3d_size book
+2026-08-18,3d_size,APA,buy,26,42.37,2.068,1103.69,,entered 3d_size book
+2026-08-18,3d_size,COP,buy,8,129.72,2.014,1039.77,,entered 3d_size book
+2026-08-18,3d_size,MUR,buy,32,35.18,2.086,1127.85,,entered 3d_size book
+2026-08-18,3d_size,MLYS,buy,42,26.61,2.116,1119.74,,entered 3d_size book
+2026-08-18,3d_size,TRMD,buy,37,30.2,2.101,1119.5,,entered 3d_size book
+2026-08-18,3d_size,OBE,buy,97,11.61,2.281,1128.45,,entered 3d_size book
+2026-08-18,3d_size,CYPH,buy,1409,0.805,15.5695,1149.81,,entered 3d_size book
+2026-08-18,3d_size,TBPH,buy,66,16.95,2.188,1120.89,,entered 3d_size book
+2026-08-18,1w_size,SEER,buy,4,2.02,0.0928,8.17,,entered 1w_size book
+2026-08-18,2w_size,SEER,buy,4,2.02,0.0928,8.17,,entered 2w_size book
+2026-08-18,1m_size,SEER,buy,1,2.02,0.0232,2.04,,entered 1m_size book
+2026-08-19,1d_top,DVN,sell,22,48.19,2.076,1058.1,47.35,dropped from 1d_top after 3d (min 1d)
+2026-08-19,1d_top,FANG,sell,5,208.55,2.025,1040.73,26.37,dropped from 1d_top after 3d (min 1d)
+2026-08-19,1d_top,EOG,sell,7,149.48,2.031,1044.33,44.05,dropped from 1d_top after 3d (min 1d)
+2026-08-19,1d_top,OXY,sell,17,60.09,2.061,1019.47,25.31,dropped from 1d_top after 3d (min 1d)
+2026-08-19,1d_top,COP,sell,8,130.58,2.034,1042.61,33.07,dropped from 1d_top after 3d (min 1d)
+2026-08-19,1d_top,APA,sell,25,43.45,2.085,1084.17,70.35,dropped from 1d_top after 3d (min 1d)
+2026-08-19,1d_top,XOM,sell,7,164.77,2.031,1151.36,19.13,dropped from 1d_top after 2d (min 1d)
+2026-08-19,1d_top,CVX,sell,6,205.76,2.028,1232.53,24.85,dropped from 1d_top after 2d (min 1d)
+2026-08-19,1d_top,NEE,buy,12,85.91,2.026,1032.95,,entered 1d_top book
+2026-08-19,1d_top,DHR,buy,5,211.5,2.005,1059.51,,entered 1d_top book
+2026-08-19,1d_top,UTHR,buy,2,529.14,1.996,1060.28,,entered 1d_top book
+2026-08-19,1d_top,CEG,buy,4,274.17,2.002,1098.68,,entered 1d_top book
+2026-08-19,1d_top,EW,buy,12,92.28,2.026,1109.39,,entered 1d_top book
+2026-08-19,1d_top,FAST,buy,21,51.44,2.053,1082.29,,entered 1d_top book
+2026-08-19,1d_top,TMO,buy,1,613.54,1.993,615.53,,entered 1d_top book
+2026-08-19,1d_top,COO,buy,14,76.73,2.032,1076.25,,entered 1d_top book
+2026-08-19,1d_size,OXY,sell,18,60.09,2.064,1079.56,1.11,dropped from 1d_size after 1d (min 1d)
+2026-08-19,1d_size,COP,sell,8,130.58,2.034,1042.61,2.83,dropped from 1d_size after 1d (min 1d)
+2026-08-19,1d_size,APA,sell,26,43.45,2.088,1127.61,23.92,dropped from 1d_size after 1d (min 1d)
+2026-08-19,1d_size,AVXL,sell,352,3.39,4.6092,1188.67,57.73,dropped from 1d_size after 1d (min 1d)
+2026-08-19,1d_size,NEE,buy,13,85.91,2.029,1118.86,,entered 1d_size book
+2026-08-19,1d_size,STE,buy,4,236.91,2.002,949.64,,entered 1d_size book
+2026-08-19,1d_size,SYK,buy,3,339.98,1.999,1021.94,,entered 1d_size book
+2026-08-19,1d_size,TBPH,buy,68,16.99,2.194,1157.51,,entered 1d_size book
+2026-08-19,3d_top,TLN,sell,2,322.35,2.016,642.68,-84.79,dropped from 3d_top after 3d (min 3d)
+2026-08-19,3d_top,VST,sell,5,142.7,2.025,711.47,-31.18,dropped from 3d_top after 3d (min 3d)
+2026-08-19,3d_top,BEMD,sell,31,24.93,2.103,770.73,-6.98,dropped from 3d_top after 3d (min 3d)
+2026-08-19,3d_top,NEE,buy,4,85.91,2.002,345.64,,entered 3d_top book
+2026-08-19,3d_top,EW,buy,4,92.28,2.002,371.12,,entered 3d_top book
+2026-08-19,3d_top,MDT,buy,4,94.13,2.002,378.52,,entered 3d_top book
+2026-08-19,3d_top,COO,buy,5,76.73,2.005,385.66,,entered 3d_top book
+2026-08-19,3d_top,MUR,buy,10,36.87,2.02,370.72,,entered 3d_top book
+2026-08-19,3d_size,MARA,sell,1,9.65,0.1195,9.53,0.24,dropped from 3d_size after 3d (min 3d)
+2026-08-19,3d_size,LDI,sell,13,0.876,0.1729,11.22,-0.6,dropped from 3d_size after 3d (min 3d)
+2026-08-19,3d_size,BTBT,sell,7,1.4,0.139,9.66,-1.46,dropped from 3d_size after 3d (min 3d)
+2026-08-19,3d_size,INMD,buy,4,15.04,0.6136,60.77,,entered 3d_size book
+2026-08-19,1m_size,TUYA,buy,1,1.8,0.021,1.82,,entered 1m_size book
+2026-08-20,1d_top,STE,sell,3,235.74,2.019,705.2,6.03,dropped from 1d_top after 2d (min 1d)
+2026-08-20,1d_top,SYK,sell,2,327.7,2.016,653.38,-11.35,dropped from 1d_top after 2d (min 1d)
+2026-08-20,1d_top,NEE,sell,12,85.03,2.046,1018.31,-14.63,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,DHR,sell,5,215.91,2.025,1077.53,18.02,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,UTHR,sell,2,521.0,2.016,1039.98,-20.29,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,CEG,sell,4,272.92,2.022,1089.66,-9.02,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,EW,sell,12,89.83,2.046,1075.91,-33.47,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,FAST,sell,21,50.66,2.073,1061.79,-20.51,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,TMO,sell,1,627.55,2.013,625.54,10.0,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,COO,sell,14,76.16,2.052,1064.19,-12.06,dropped from 1d_top after 1d (min 1d)
+2026-08-20,1d_top,ELF,buy,10,98.46,2.02,986.62,,entered 1d_top book
+2026-08-20,1d_top,MOS,buy,43,23.35,2.119,1006.17,,entered 1d_top book
+2026-08-20,1d_top,AUPH,buy,58,17.27,2.164,1003.82,,entered 1d_top book
+2026-08-20,1d_top,CE,buy,21,46.98,2.053,988.63,,entered 1d_top book
+2026-08-20,1d_top,OCUL,buy,91,11.09,2.263,1011.45,,entered 1d_top book
+2026-08-20,1d_top,EPAM,buy,9,106.76,2.017,962.86,,entered 1d_top book
+2026-08-20,1d_top,WRBY,buy,37,27.46,2.101,1018.12,,entered 1d_top book
+2026-08-20,1d_top,CELH,buy,31,32.54,2.083,1010.82,,entered 1d_top book
+2026-08-20,1d_top,IRTC,buy,7,127.98,2.011,897.87,,entered 1d_top book
+2026-08-20,1d_top,CALX,buy,25,40.38,2.065,1011.57,,entered 1d_top book
+2026-08-20,1d_size,MUR,sell,32,38.28,2.106,1222.85,95.01,dropped from 1d_size after 2d (min 1d)
+2026-08-20,1d_size,AOS,sell,18,62.43,2.064,1121.68,24.15,dropped from 1d_size after 2d (min 1d)
+2026-08-20,1d_size,MLYS,sell,42,25.75,2.136,1079.36,-40.37,dropped from 1d_size after 2d (min 1d)
+2026-08-20,1d_size,CYPH,sell,1401,1.19,18.3188,1648.87,505.59,dropped from 1d_size after 2d (min 1d)
+2026-08-20,1d_size,OBE,sell,97,12.11,2.3071,1172.36,43.91,dropped from 1d_size after 2d (min 1d)
+2026-08-20,1d_size,NEE,sell,13,85.03,2.049,1103.34,-15.52,dropped from 1d_size after 1d (min 1d)
+2026-08-20,1d_size,STE,sell,4,235.74,2.022,940.94,-8.7,dropped from 1d_size after 1d (min 1d)
+2026-08-20,1d_size,SYK,sell,3,327.7,2.019,981.08,-40.86,dropped from 1d_size after 1d (min 1d)
+2026-08-20,1d_size,TBPH,sell,68,16.95,2.2153,1150.38,-7.13,dropped from 1d_size after 1d (min 1d)
+2026-08-20,1d_size,TEM,buy,18,66.65,2.044,1201.74,,entered 1d_size book
+2026-08-20,1d_size,HL,buy,57,20.82,2.161,1188.9,,entered 1d_size book
+2026-08-20,1d_size,SUZ,buy,141,8.5,2.413,1200.91,,entered 1d_size book
+2026-08-20,1d_size,ELF,buy,12,98.46,2.026,1183.55,,entered 1d_size book
+2026-08-20,1d_size,MOS,buy,51,23.35,2.143,1192.99,,entered 1d_size book
+2026-08-20,1d_size,AUPH,buy,69,17.27,2.197,1193.83,,entered 1d_size book
+2026-08-20,1d_size,CABA,buy,376,3.19,4.8504,1204.29,,entered 1d_size book
+2026-08-20,1d_size,EDIT,buy,408,2.94,5.2632,1204.78,,entered 1d_size book
+2026-08-20,1d_size,CRMD,buy,145,8.23,2.425,1195.77,,entered 1d_size book
+2026-08-20,3d_top,DVN,sell,12,49.3,2.046,589.55,16.69,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,EOG,sell,3,152.19,2.019,454.55,14.1,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,FANG,sell,2,211.02,2.016,420.02,5.45,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,TMC,sell,152,3.97,2.4812,600.96,25.47,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,TGB,sell,65,8.69,2.2058,562.64,-9.59,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,OXY,sell,9,61.52,2.037,551.64,18.27,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,APA,sell,13,44.39,2.049,575.02,32.45,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,COP,sell,4,134.89,2.022,537.54,25.3,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,DNN,sell,180,3.14,2.5699,562.63,-14.1,dropped from 3d_top after 3d (min 3d)
+2026-08-20,3d_top,MOS,buy,27,23.35,2.071,632.52,,entered 3d_top book
+2026-08-20,3d_top,CE,buy,13,46.98,2.029,612.77,,entered 3d_top book
+2026-08-20,3d_top,AUPH,buy,37,17.27,2.101,641.09,,entered 3d_top book
+2026-08-20,3d_top,OCUL,buy,58,11.09,2.164,645.38,,entered 3d_top book
+2026-08-20,3d_top,CELH,buy,19,32.54,2.047,620.31,,entered 3d_top book
+2026-08-20,3d_top,WRBY,buy,23,27.46,2.059,633.64,,entered 3d_top book
+2026-08-20,3d_top,NHI,buy,8,73.91,2.014,593.29,,entered 3d_top book
+2026-08-20,3d_top,IRTC,buy,5,127.98,2.005,641.91,,entered 3d_top book
+2026-08-20,3d_top,EPAM,buy,6,106.76,2.008,642.57,,entered 3d_top book
+2026-08-20,3d_size,DNN,sell,2,3.14,0.0888,6.19,-0.26,dropped from 3d_size after 3d (min 3d)
+2026-08-20,3d_size,TMC,sell,2,3.97,0.1054,7.83,0.21,dropped from 3d_size after 3d (min 3d)
+2026-08-20,3d_size,HNST,sell,1,4.96,0.0726,4.89,0.14,dropped from 3d_size after 3d (min 3d)
+2026-08-20,3d_size,NB,sell,1,4.29,0.0659,4.22,-0.64,dropped from 3d_size after 3d (min 3d)
+2026-08-20,3d_size,SUZ,buy,2,8.5,0.176,17.18,,entered 3d_size book
+2026-08-20,3d_size,MOS,buy,1,23.35,0.2365,23.59,,entered 3d_size book
+2026-08-20,3d_size,CABA,buy,7,3.19,0.2443,22.57,,entered 3d_size book
+2026-08-20,3d_size,CRMD,buy,2,8.23,0.1706,16.63,,entered 3d_size book
+2026-08-20,1w_top,TNDM,sell,43,22.57,2.139,968.37,-28.34,dropped from 1w_top after 5d (min 5d)
+2026-08-20,1w_top,INO,sell,1111,1.21,14.5271,1329.78,316.55,dropped from 1w_top after 5d (min 5d)
+2026-08-20,1w_top,CE,buy,6,46.98,2.008,283.89,,entered 1w_top book
+2026-08-20,1w_top,AUPH,buy,18,17.27,2.044,312.9,,entered 1w_top book
+2026-08-20,1w_top,OCUL,buy,28,11.09,2.074,312.59,,entered 1w_top book
+2026-08-20,1w_top,WRBY,buy,11,27.46,2.023,304.08,,entered 1w_top book
+2026-08-20,1w_top,CELH,buy,9,32.54,2.017,294.88,,entered 1w_top book
+2026-08-20,1w_top,NHI,buy,4,73.91,2.002,297.64,,entered 1w_top book
+2026-08-20,1w_top,IRTC,buy,2,127.98,1.996,257.96,,entered 1w_top book
+2026-08-20,1w_top,OGS,buy,3,81.39,1.999,246.17,,entered 1w_top book
+2026-08-20,1w_size,BTSG,sell,18,59.53,2.064,1069.48,-16.71,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,IREN,sell,24,42.6,2.082,1020.32,-55.98,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,GH,sell,6,167.88,2.028,1005.25,46.0,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,TGTX,sell,23,50.56,2.079,1160.8,56.12,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,SLS,sell,89,13.4,2.2818,1190.32,88.02,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,INO,sell,1234,1.21,16.1354,1477.0,351.6,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,TNDM,sell,48,22.57,2.154,1081.21,-31.17,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,ACHV,sell,153,8.02,2.4844,1224.58,112.88,dropped from 1w_size after 5d (min 5d)
+2026-08-20,1w_size,HL,buy,55,20.82,2.155,1147.25,,entered 1w_size book
+2026-08-20,1w_size,DOW,buy,35,32.9,2.095,1153.6,,entered 1w_size book
+2026-08-20,1w_size,ELF,buy,11,98.46,2.023,1085.08,,entered 1w_size book
+2026-08-20,1w_size,MOS,buy,49,23.35,2.137,1146.29,,entered 1w_size book
+2026-08-20,1w_size,CE,buy,24,46.98,2.062,1129.58,,entered 1w_size book
+2026-08-20,1w_size,INSP,buy,18,61.27,2.044,1104.9,,entered 1w_size book
+2026-08-20,1w_size,CABA,buy,364,3.19,4.6956,1165.86,,entered 1w_size book
+2026-08-20,1w_size,CRMD,buy,141,8.23,2.413,1162.84,,entered 1w_size book
+2026-08-20,2w_top,AUPH,buy,1,17.27,0.1757,17.45,,entered 2w_top book
+2026-08-20,2w_top,OCUL,buy,2,11.09,0.2278,22.41,,entered 2w_top book
+2026-08-20,2w_size,CABA,buy,2,3.19,0.0698,6.45,,entered 2w_size book
+2026-08-20,2w_size,CRMD,buy,1,8.23,0.0853,8.32,,entered 2w_size book
+2026-08-20,1m_top,AUPH,buy,1,17.27,0.1757,17.45,,entered 1m_top book
+2026-08-20,1m_top,OCUL,buy,2,11.09,0.2278,22.41,,entered 1m_top book
+2026-08-20,1m_size,CABA,buy,1,3.19,0.0349,3.22,,entered 1m_size book
+2026-08-21,1d_top,ELF,sell,10,101.94,2.04,1017.36,30.74,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,AUPH,sell,58,16.65,2.184,963.52,-40.31,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,CE,sell,21,46.8,2.073,980.73,-7.91,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,EPAM,sell,9,110.34,2.037,991.02,28.17,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,WRBY,sell,37,27.44,2.121,1013.16,-4.96,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,CELH,sell,31,33.36,2.103,1032.06,21.23,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,IRTC,sell,7,128.52,2.031,897.61,-0.26,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,CALX,sell,25,40.12,2.085,1000.91,-10.65,dropped from 1d_top after 1d (min 1d)
+2026-08-21,1d_top,GSHD,buy,14,72.52,2.032,1017.31,,entered 1d_top book
+2026-08-21,1d_top,DUOL,buy,6,146.13,2.008,878.79,,entered 1d_top book
+2026-08-21,1d_top,CRSP,buy,17,59.5,2.041,1013.54,,entered 1d_top book
+2026-08-21,1d_top,XP,buy,60,16.81,2.17,1010.77,,entered 1d_top book
+2026-08-21,1d_top,OPCH,buy,43,23.7,2.119,1021.22,,entered 1d_top book
+2026-08-21,1d_top,WGS,buy,11,87.065,2.023,959.74,,entered 1d_top book
+2026-08-21,1d_top,HLNE,buy,9,105.35,2.017,950.17,,entered 1d_top book
+2026-08-21,1d_top,FIGR,buy,26,39.1,2.068,1018.67,,entered 1d_top book
+2026-08-21,1d_size,TEM,sell,18,72.69,2.0645,1306.36,104.61,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,HL,sell,57,20.72,2.181,1178.86,-10.04,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,SUZ,sell,141,8.78,2.4464,1235.53,34.62,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,ELF,sell,12,101.94,2.046,1221.23,37.69,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,AUPH,sell,69,16.65,2.2185,1146.63,-47.2,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,CABA,sell,376,3.13,4.9228,1171.96,-32.33,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,EDIT,sell,408,3.11,5.3411,1263.54,58.76,dropped from 1d_size after 1d (min 1d)
+2026-08-21,1d_size,SOFI,buy,64,18.91,2.182,1212.42,,entered 1d_size book
+2026-08-21,1d_size,HOOD,buy,11,108.13,2.023,1191.45,,entered 1d_size book
+2026-08-21,1d_size,HCA,buy,2,429.19,1.996,860.38,,entered 1d_size book
+2026-08-21,1d_size,OCUL,buy,110,11.08,2.32,1221.12,,entered 1d_size book
+2026-08-21,1d_size,GSHD,buy,16,72.52,2.038,1162.36,,entered 1d_size book
+2026-08-21,1d_size,INSP,buy,19,62.36,2.047,1186.89,,entered 1d_size book
+2026-08-21,1d_size,RZLT,buy,240,5.09,3.096,1224.7,,entered 1d_size book
+2026-08-21,3d_top,ELF,sell,6,101.94,2.028,609.61,45.64,dropped from 3d_top after 4d (min 3d)
+2026-08-21,3d_top,STE,sell,2,237.93,2.016,473.84,7.07,dropped from 3d_top after 3d (min 3d)
+2026-08-21,3d_top,DHR,sell,2,218.85,2.016,435.68,34.53,dropped from 3d_top after 3d (min 3d)
+2026-08-21,3d_top,SYK,sell,1,329.45,2.013,327.44,-5.93,dropped from 3d_top after 3d (min 3d)
+2026-08-21,3d_top,CVX,sell,2,205.27,2.016,408.52,-1.39,dropped from 3d_top after 3d (min 3d)
+2026-08-21,3d_top,XOM,sell,3,165.11,2.019,493.31,-5.37,dropped from 3d_top after 3d (min 3d)
+2026-08-21,3d_top,GSHD,buy,4,72.52,2.002,292.08,,entered 3d_top book
+2026-08-21,3d_top,XP,buy,21,16.81,2.053,355.06,,entered 3d_top book
+2026-08-21,3d_top,CRSP,buy,6,59.5,2.008,359.01,,entered 3d_top book
+2026-08-21,3d_top,OPCH,buy,15,23.7,2.035,357.54,,entered 3d_top book
+2026-08-21,3d_top,DUOL,buy,2,146.13,1.996,294.26,,entered 3d_top book
+2026-08-21,3d_top,HLNE,buy,3,105.35,1.999,318.05,,entered 3d_top book
+2026-08-21,3d_top,WGS,buy,4,87.065,2.002,350.26,,entered 3d_top book
+2026-08-21,3d_top,FIGR,buy,9,39.1,2.017,353.92,,entered 3d_top book
+2026-08-21,3d_size,OXY,sell,18,61.3,2.064,1101.34,22.89,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,APA,sell,26,43.39,2.088,1126.05,22.36,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,COP,sell,8,134.87,2.034,1076.93,37.15,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,MUR,sell,32,37.41,2.106,1195.01,67.17,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,MLYS,sell,42,25.65,2.136,1075.16,-44.57,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,TRMD,sell,37,31.8,2.121,1174.48,54.98,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,OBE,sell,97,11.95,2.3071,1156.84,28.39,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,CYPH,sell,1409,1.42,18.426,1982.35,832.54,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,TBPH,sell,66,17.01,2.209,1120.45,-0.44,dropped from 3d_size after 3d (min 3d)
+2026-08-21,3d_size,SOFI,buy,84,18.91,2.242,1590.68,,entered 3d_size book
+2026-08-21,3d_size,HOOD,buy,14,108.13,2.032,1515.85,,entered 3d_size book
+2026-08-21,3d_size,HCA,buy,3,429.19,1.999,1289.57,,entered 3d_size book
+2026-08-21,3d_size,GSHD,buy,21,72.52,2.053,1524.97,,entered 3d_size book
+2026-08-21,3d_size,OCUL,buy,143,11.08,2.419,1586.86,,entered 3d_size book
+2026-08-21,3d_size,INSP,buy,25,62.36,2.065,1561.07,,entered 3d_size book
+2026-08-21,3d_size,RZLT,buy,312,5.09,4.0248,1592.1,,entered 3d_size book
+2026-08-21,1w_top,BEMD,sell,31,24.83,2.103,767.63,-10.08,dropped from 1w_top after 5d (min 5d)
+2026-08-21,1w_top,TLN,sell,2,314.46,2.016,626.9,-100.57,dropped from 1w_top after 5d (min 5d)
+2026-08-21,1w_top,GSHD,buy,2,72.52,1.4564,146.5,,entered 1w_top book
+2026-08-21,1w_top,XP,buy,11,16.81,1.8821,186.79,,entered 1w_top book
+2026-08-21,1w_top,CRSP,buy,3,59.5,1.794,180.29,,entered 1w_top book
+2026-08-21,1w_top,OPCH,buy,8,23.7,1.92,191.52,,entered 1w_top book
+2026-08-21,1w_top,HLNE,buy,1,105.35,1.0565,106.41,,entered 1w_top book
+2026-08-21,1w_top,FIGR,buy,5,39.1,1.97,197.47,,entered 1w_top book
+2026-08-21,1w_top,WGS,buy,2,87.065,1.7473,175.88,,entered 1w_top book
+2026-08-21,1w_top,DUOL,buy,1,146.13,1.4643,147.59,,entered 1w_top book
+2026-08-21,1w_size,TEM,sell,20,72.69,2.0716,1451.73,363.88,dropped from 1w_size after 6d (min 5d)
+2026-08-21,1w_size,KEEL,sell,7,3.32,0.2734,22.97,-1.87,dropped from 1w_size after 5d (min 5d)
+2026-08-21,1w_size,PGY,sell,1,21.68,0.2398,21.44,-0.34,dropped from 1w_size after 5d (min 5d)
+2026-08-21,1w_size,INDI,sell,5,4.15,0.2425,20.51,-3.29,dropped from 1w_size after 5d (min 5d)
+2026-08-21,1w_size,SOFI,buy,13,18.91,2.029,247.86,,entered 1w_size book
+2026-08-21,1w_size,HOOD,buy,2,108.13,1.996,218.26,,entered 1w_size book
+2026-08-21,1w_size,GSHD,buy,3,72.52,1.999,219.56,,entered 1w_size book
+2026-08-21,1w_size,XP,buy,14,16.81,2.032,237.37,,entered 1w_size book
+2026-08-21,1w_size,OCUL,buy,22,11.08,2.056,245.82,,entered 1w_size book
+2026-08-21,1w_size,RZLT,buy,48,5.09,2.134,246.45,,entered 1w_size book
+2026-08-21,2w_top,XP,buy,1,16.81,0.1711,16.98,,entered 2w_top book
+2026-08-21,2w_size,RZLT,buy,1,5.09,0.0539,5.14,,entered 2w_size book
+2026-08-21,1m_top,XP,buy,1,16.81,0.1711,16.98,,entered 1m_top book
+2026-08-21,1m_top,OPCH,buy,1,23.7,0.24,23.94,,entered 1m_top book
