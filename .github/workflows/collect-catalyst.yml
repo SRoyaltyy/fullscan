@@ -1,8 +1,7 @@
 name: "Catalyst Analysis Engine"
 
+# On-demand only. Gemini/DeepSeek browsing burns credits; do not reschedule.
 on:
-  schedule:
-    - cron: "0 15 * * 1-5"
   workflow_dispatch:
 
 jobs:
