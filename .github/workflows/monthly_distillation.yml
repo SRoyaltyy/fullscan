@@ -23,6 +23,8 @@ jobs:
       - name: Rewrite consolidated memory + archive stale lessons
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
         run: python -m src.distill_memory
       - name: Commit
         run: |

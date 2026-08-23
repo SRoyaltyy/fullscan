@@ -56,8 +56,7 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm()
 
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, config.TOPIC)

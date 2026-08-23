@@ -117,21 +117,44 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
-client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com",
-)
+# Primary: OpenClaw gateway (Grok 4.6) when configured. Fallback: DeepSeek.
+_OC_URL = os.environ.get("OPENCLAW_GATEWAY_URL", "").rstrip("/")
+_PROVIDERS = []
+if _OC_URL:
+    _PROVIDERS.append((
+        "openclaw",
+        OpenAI(api_key=os.environ.get("OPENCLAW_TOKEN") or "openclaw",
+               base_url=_OC_URL + "/v1",
+               default_headers={"x-openclaw-model": os.environ.get(
+                   "OPENCLAW_BACKEND_MODEL", "xai/grok-4.6")}),
+        os.environ.get("OPENCLAW_AGENT", "openclaw/default"),
+    ))
+if os.environ.get("DEEPSEEK_API_KEY"):
+    _PROVIDERS.append((
+        "deepseek",
+        OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"],
+               base_url="https://api.deepseek.com"),
+        "deepseek-chat",
+    ))
+if not _PROVIDERS:
+    raise SystemExit("No LLM configured: set OPENCLAW_GATEWAY_URL and/or "
+                     "DEEPSEEK_API_KEY")
+client = _PROVIDERS[0][1]
 
 def safe_create(**kwargs):
-    for attempt in range(3):
-        try:
-            return client.chat.completions.create(**kwargs)
-        except Exception as e:
-            print(f"  ⚠️  API error (attempt {attempt+1}/3): {e}")
-            if attempt < 2:
-                time.sleep(2 * (attempt + 1))
-            else:
-                raise
+    last = None
+    for name, cli, model in _PROVIDERS:
+        kwargs["model"] = model
+        for attempt in range(3):
+            try:
+                return cli.chat.completions.create(**kwargs)
+            except Exception as e:
+                last = e
+                print(f"  ⚠️  {name} API error (attempt {attempt+1}/3): {e}")
+                if attempt < 2:
+                    time.sleep(2 * (attempt + 1))
+        print(f"  ⚠️  {name} exhausted — trying next provider")
+    raise last
 
 # ── Pre-defined search templates ───────────────────────
 CATALYST_SEARCH_TEMPLATES = [

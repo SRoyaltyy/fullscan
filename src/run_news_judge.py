@@ -135,8 +135,7 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or _latest_parsed_date() or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm()
 
     report = _load_parsed(date_str)
     if not report:

@@ -44,6 +44,8 @@ jobs:
         if: ${{ github.event.inputs.stage == 'predict' || github.event.inputs.stage == 'all' }}
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -61,6 +63,8 @@ jobs:
         if: ${{ github.event.inputs.stage == 'outcome' || github.event.inputs.stage == 'all' }}
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
         run: |
           set -e
@@ -76,6 +80,8 @@ jobs:
         if: ${{ github.event.inputs.stage == 'reflect' || github.event.inputs.stage == 'all' }}
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
         run: |
           set -e
           DATE="${{ github.event.inputs.run_date }}"

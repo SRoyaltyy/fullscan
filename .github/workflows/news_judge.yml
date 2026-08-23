@@ -34,6 +34,8 @@ jobs:
       - name: Run news judge
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           set -e

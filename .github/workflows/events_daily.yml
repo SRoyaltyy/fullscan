@@ -47,6 +47,8 @@ jobs:
         id: primary
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.run_events ${DATE:+--date "$DATE"}
@@ -56,6 +58,8 @@ jobs:
         id: catcher
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.run_events_catcher ${DATE:+--date "$DATE"}

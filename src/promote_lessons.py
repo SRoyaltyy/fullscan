@@ -128,7 +128,7 @@ def main() -> None:
             for c in complete
         )
         merged = ""
-        if config.DEEPSEEK_API_KEY and len(complete) >= 2:
+        if config.has_llm() and len(complete) >= 2:
             try:
                 merged = deepseek_client.chat(
                     [{"role": "system", "content":
