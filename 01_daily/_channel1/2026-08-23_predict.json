@@ -1,0 +1,396 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-23T14:14:15.426368-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 5.23,
+      "delta_1d": 0.04,
+      "delta_1w": 0.02,
+      "delta_1m": 0.08
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 4.69,
+      "delta_1d": 0.04,
+      "delta_1w": 0.06,
+      "delta_1m": 0.02
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 2.35,
+      "delta_1d": 0.0,
+      "delta_1w": -0.04,
+      "delta_1m": -0.04
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 2.75,
+      "delta_1d": 0.02,
+      "delta_1w": 0.04,
+      "delta_1m": 0.07
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 3.63,
+      "delta_1d": 0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 0.2,
+      "delta_1d": -0.025,
+      "delta_1w": -0.05,
+      "delta_1m": -0.704
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 301.86,
+      "delta_1d": 161.88,
+      "delta_1w": 132.89,
+      "delta_1m": -36.5
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-21",
+      "current": 15.13,
+      "delta_1d": -0.88,
+      "delta_1w": 0.88
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.945,
+    "ratio_source": "vix/ma20",
+    "vix_ma20": 16.0,
+    "ratio_ma20": 0.945,
+    "ratio_stale": "VIX3M quote is 35 days older than VIX (2026-07-17 vs 2026-08-21)"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 87.06,
+      "pct_1d": -0.88
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 94.39,
+      "pct_1d": 0.65
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 4680.6,
+      "pct_1d": 3.64
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-21",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.1,
+      "pct_1m": -2.59
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 7691.25,
+      "pct_1d": 0.38
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 29387.75,
+      "pct_1d": 0.3
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 66016.36,
+          "pct_1d": -0.3
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26009.46,
+          "pct_1d": 1.21
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 3905.2,
+          "pct_1d": 0.04
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6912.95,
+          "pct_1d": 0.88
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 9058.9,
+          "pct_1d": -0.27
+        }
+      },
+      "composite_avg": 0.31
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 10816.6,
+          "pct_1d": 0.64
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26136.56,
+          "pct_1d": 0.59
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 8484.43,
+          "pct_1d": 0.37
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6462.22,
+          "pct_1d": 0.63
+        }
+      },
+      "composite_avg": 0.56
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.21,
+    "window": "2026-08-14..2026-08-21"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-23 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_macro",
+        "title": "Trump Renews Criticism of Fed Interest Rate Policy, Calls for Lower U.S. Borrowing Costs - Tech Earnings Analysis - vinanet.vn",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZS1VeHRkV3loM3pJWTVOR3ZDWVhpTm5ZdW1fQTAwYzJpeHozd1JDdzd5Y05CTFdtMzV1aGZGb3hUTkl1RVpjZGF4T3QxeDBEVl94RTBueUx4RGZjVWxJQV8tdGVoai1kd1lpQnFDSFVuVlFxRXlpNzZwcHFaU1dfTzhYN0Y3eEw1TE5qQXRYVjJzQkVGd0hzdDRpTmJVVkhsRWZxQTNvVDhwLUhPa2htb3g5ZGNDQVFTQUpxVU5mbWthMVYydGc?oc=5",
+        "published_at": "Thu, 20 Aug 2026 18:43:45 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Landfill collapse in Guinea kills at least 30 people",
+        "url": "https://www.aljazeera.com/news/2026/8/23/landfill-collapse-in-guinea-kills-at-least-22-people-official-says?traffic_source=rss",
+        "published_at": "Sun, 23 Aug 2026 17:35:01 +0000"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "US Yields Rise, Dollar Falls: The Divergence Explained - CryptoRank",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS0pVSE5sdU12TzFCWGM3akp3Tm1EYzVscldVUVY1MHFWZ05veExLa2pUSGdiVGQ3WTJkV1hjZS15T0ZtWjVERWtDZlpsZ0hqbHdkRndacDcwRWhabmJRTUFEZnN6NkUxMk9oQUtKMVhhdkItVEdXcE1odlJYU1VXbjdfdHlVdTBVdjZYbmt0UQ?oc=5",
+        "published_at": "Sat, 22 Aug 2026 05:03:18 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "KKR Stock Outlook: $9B UGI Bid, Integer Deal and Record Q2 Earnings - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdzIzZjM3Z19DbEhxYnJycFZFM3paWnNxLTZzUUVLdG0ya1hGaWpyLXZYd0hxNEx1cUwtVjlPZTNxSmxXUlExY0E5VUM2STJwbGRUcFJYVXZLejhmazlKNEdzUEJhdDVGYXA2akhTcmtTeG9XVTlnQkFtdjFwR0doNFlDVnNUc1FPb1NKMFoxblJIUFR3UzVwNVFNcnBlMEdYZkwtTmQ0Ujl5emM0RGhjaXc3dEt5VEpGOTNkU2JwRkRvUQ?oc=5",
+        "published_at": "Sun, 23 Aug 2026 13:04:38 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Monetary Policy Report – February 2025 - Federal Reserve (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5WLXdYMmRQcEJZUE85Um1QSmlmd01GT0NTQ0ZyRDlNX0N1dFYxWGZBWEo1d0JTTEVpTXVWVmRQelJqNUhvUEI2QnBYUjhCQTBsTWdNYVF0N3B1VUptOVBFR3hEQWVOSUFnQXNjR0FpbW16dnhEdlE?oc=5",
+        "published_at": "Tue, 25 Feb 2025 08:00:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Burry Says He Sold Alibaba, Calling It Pricey Before Share Sale",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/burry-says-sold-alibaba-calling-164915099.html",
+        "published_at": "2026-08-23T16:49:15Z"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Summary of Economic Projections - Federal Reserve (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1LVGxFT0VwOWZRdHFhS2VSNnQzam92T3NhZXJucmlFMTBHN044VDdBeDF5MWxRZDBOZjZIUGJxLTF4dzNvMFozNUJFdloxUHpXT2JyZ2xOd2hVbW14YUFWd1A1bDZKWDlmdUhjYk9sbkJvTXJjdEE?oc=5",
+        "published_at": "Thu, 27 Feb 2025 08:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Trump Renews Pressure on Fed Over Interest Rates, Alleges Political Motives at Central Bank - Annual Earnings Summary - vinanet.vn",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMUdPZ0NwY2E3SEZsQWRZNTlQUkZZeGVoMHJZZWlteXNUY2NNODRGdlFzMFI3ZXFfQ3drdkpzdW5vV3NaQkxnOXdGdHRtT3VSaTZ4Qk9FMlVSSHhkTVhZNXowd2hZaTl5ZWJjYjZtNVRjUzJEX0REa0RibDQyNVU1RW1sWlVMR2lVNk8yd0I5WTFjODBrcTN0MFB6M1lBbkV0d1dNZUF6RWdNV1BJWWJUdUR2NDhBMzNxb2lFSGdVeWR6MHlmM0U2OUMwOU0?oc=5",
+        "published_at": "Thu, 20 Aug 2026 21:03:51 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Why Unitree’s 460% IPO Stock Pop Wasn’t Unusual in China - The Information",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQzVZZlVyVXJMMXEzbDIyeVNXTGl4a2RzT0kxeld5YUVmNjZSM0NDNDJ1cUotYUNEVXFSZS0xbDJKMEpVblFISGdCT0lQcG1ySDRPR1V4Qm9fVzktMzgtVzZ0dGthUFE0cHhneFpKb1F6R1d1Y1RGTHg0cTdrcjBWbWJpZ0wzZGc?oc=5",
+        "published_at": "Sun, 23 Aug 2026 15:00:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "I created a viral AI watermark remover. I wasn't ready for all the attention. - Business Insider",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSUJTeUpSR1FiYzRDYm9Camx4amRFRWxGSWJKZ0FJeU85R0ItaE8yX1ZXNndHVHdTUkYxcUpsdjlMeXJsS21WVG1BM2NvSGNzbGF6dHVNaGg1YVdJbmZTdWNKZE1lRE5UZXl3cTVvXzVQZUhGRy1zaUxQazBuQjNQV0FPaTM0UXlybzNoX0pmNk5HaEhtMFFTVlJpNzNPa3BtN01SMDZR?oc=5",
+        "published_at": "Sun, 23 Aug 2026 11:32:15 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Monetary Policy Report – June 2025 - Federal Reserve (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBBLXp2bmc3cWZoeTNWTjlBVFRyNldjMkcxNTdvRVJKeGQxNHlaMkdTcW1WNDdiR1RmdDUxQTJXa3kyckNGbXNKOGRPOGM5dmo1b2VHZ3FfNFh1NHN0dUxTRXdZYmM3MXU5SHIxVDJZYUVYcW4zWXc?oc=5",
+        "published_at": "Wed, 11 Jun 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Best CD Rates Today: 16-Month Terms Still Offer Up to 4.30% APY Amid Fed Easing Cycle - Earnings Volatility Report - vinanet.vn",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxON2tKdFQtd29Mb3BuVjZjVXd4UHFaZW9GWG1OaUtwZGp4M2VBMmNzZldfTXB2SUQ4alFoSnJ5WnEyQmxabjhka2pmekdsa2c0d25kcnZNWjNTbm9aT0dpY0ZsbDRQRllleUNZNGJXMVdSRXdqbmhaSVdXbDRIbHFhWVVNT01oa0dPOGVkS3JrMnZhX1B3cHA0SE5hNU5EU0h0c2paZkRwVUtNTnY4WVZ3S2JpU2drcTVGazNfVnFGTlc?oc=5",
+        "published_at": "Fri, 21 Aug 2026 19:54:19 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Trump Criticizes Fed Interest Rate Policy, Calls for Lower Borrowing Costs - Earnings Season Preview - vinanet.vn",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORnczU0s0cFg3Mi12dVZOdGkyMG83Rno5MUxJVXF6OHpXTUd6bDFIQ2xXZXdVLXd3Nlp2MzM0S1J3bkpZQkdlcGZ6ekVxVmE2MU9vNktqdGNvSDFlYXJkUVlVeU0wem1Fc2h1WlBZRnk0YXprNS14SEp6a3hPNlFITGVRekdONFI5R3gyelFfX3J1X1NSbGRoazNaNFE5YVBhc1RkZXBBZDVpV1R2dm9xMmluQURodw?oc=5",
+        "published_at": "Wed, 19 Aug 2026 22:24:21 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Data centers near O’Hare win nearly $100M in local tax breaks, leaving suburban homeowners to cover the gap - Chicago Tribune",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQURCR1dYVDNDa0NCNExkRzBXM1BWdWlTdTRlS041R0wyN2c5N1cxR21fRzRscFRzR2Z4R1REWXlaY3V0czFFNzY4bzcyWkZQVWdwLUVEaWFUVXE2QkxwanY1QTlBQ2c5WlhtVFpsY1J5c2ZOb1NiSXRQSVcxcThoV3BR?oc=5",
+        "published_at": "Sun, 23 Aug 2026 11:00:37 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Innodata Stock (INOD) Opinions on Q2 Earnings Release - Quiver Quantitative",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNODE0bTExZUNVZ1VzQnlfZnhHbHBNS0FPQ3dJZDNrZkhyQ01UVGtZTlZ4WTBfd0QzTU5MN0tQMUZyZVJXcXRsclktOHlFSXlDNE1pQUY0YmF6a0lnM2JWWm9vSHhLclJMbGpkUmladl9jY1VvZnNqcnZybUlsM2ZIaEpVcEJFaWZhYUtSdS1TZUl5dnM5?oc=5",
+        "published_at": "Sun, 23 Aug 2026 17:33:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve leaves interest rate unchanged in 9-3 vote - ABC7 New York",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPLXB2cElhRVVNNExZS3VXY2FJdkNoX1ZqRU50SzJhZERrXzBvbURYaWkxQ0VWMEMyb2U2YW1tZ05DYTdRSEZmbG10aVltSV9MWndWWDNiWXp6WXZFcDRNSlR6VEljdTB1UVNNbXVpVFVwSjJ0M0tMbTliTkhEVzRGMU5IQmRvTFoxQ1l2SFozaXdoN3BsbjRMVXk1aGQ0aVlLeHFMUzRsTF84Z9IBrwFBVV95cUxPZ1oyTlBWYzVnUVBZb1paeDhjNFppNFhhZGl5UERwdEd4NjJNSVdVSl9UQVdxd0hIWWFra1RrVWNFUzJGSkxzdlp1SWZpQk54LVVlam95TC1XOHFzMEhrT0ZGaXBBSC1lYlNwekZCbU9uZlZUWTBTaDVfc3R4bC1Ea3ZhMktNS2VmWk53Vm1KS0dKWVlwSi04Y2pRTjFSRDZuOExRQk96STdWZVgxWDRz?oc=5",
+        "published_at": "Wed, 29 Jul 2026 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "PDD Holdings Stock (PDD) Opinions on Upcoming Quarterly Earnings - Quiver Quantitative",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONDB2Njd4cXZHcEZNSGlPcGdWcUl4RFc0VDY2NWJVcWY4amh2WEoxOV9Ca09GekZ4RWptVXFJQkVLN3UxR3RCUm4wajY1RUl6RnZ2eUNhaVFOMS04QnM4YnRhWUxiVFRsUHJfbEc2MHVidVR6MUJyc3djenBOYnNteF9GcE1aamNfcWFlQTRULVpObG1FQjZQRTlfcXNzM05VVmhJ?oc=5",
+        "published_at": "Sun, 23 Aug 2026 17:33:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "The Fed - The Global Transmission of Inflation Uncertainty - Federal Reserve (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObTlyRUd2QjVIY3hKX2xIM0puQmtqdFYzTGNuY3Rwa09TcktidUdVVmRWeWI2RWZVRG5tWXlJZkdITzROekN2ci1JcXBqS1pNM1UySnJqQXNSTXVGamE4RDNMRVhCVy1ici16UjNYZnN5MkpKV2U0X1pNZHAxdU9US0d0MEVXNDBPX0xBQmRTNFRXRnZMUjdRM3NVdW5sY0lHVWFHaUx6anJoR3ZBa2ZhVm12TVpSU09lcVE?oc=5",
+        "published_at": "Thu, 16 Jan 2025 08:00:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Broadcom vs. Marvell Technology: 1 Critical Metric Decides the Better Custom AI Chip Stock",
+        "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-vs-marvell-technology-1-172600511.html",
+        "published_at": "2026-08-23T17:26:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "We're Bleeding $730 a Month on a Rental Property. The Worst Part Is We Just Signed Another Lease and Now Selling May Not Be an Option",
+        "url": "https://finance.yahoo.com/real-estate/articles/were-bleeding-730-month-rental-160108652.html",
+        "published_at": "2026-08-23T16:01:08Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "An e.l.f. Beauty Insider Sells 5,718 Shares. Here's What That Means for Investors.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/e-l-f-beauty-insider-165740254.html",
+        "published_at": "2026-08-23T16:57:40Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Walmart shoppers must consider one major shift coming to prices - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPeWhoYUtmSWE5N1dtZDdBM3FIdXRadDJPWER6RUlQOG5zRkFQWmxOd1pDbWY2S1hkUTJzT19VWFdpUng0QnI0cGthSFprZDhUSV9KZW0ySS1SOTdxc2N1VWtHWVRYUzE4S2Zha05aLWNleWlfTm1SVjFfQXRZRHg2Q0tiNDBPSURfTGt1WTVvX0p3c2x6STRDMGdscmRwZDZN?oc=5",
+        "published_at": "Sat, 22 Aug 2026 12:03:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "The Gas Turbine Shortage Just Became AI’s Biggest Constraint - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQXprcW5RR1B2bEM4clAwbXNEc1o3eDAtNVgxOUJMME9XenU3TTRmVzZZeHdDTXFzSFQyT1pJa2hQaF8wUjhtd19nX1UyQVRQTWROUktmMjhHcmk0M0xBNTZrUUtnbU5mWmVfR0VJUWo1aGp3a3ZJWnlxRlA1TUxweDZ0bWtUUElqZ0RLcjBVVXVVNk0?oc=5",
+        "published_at": "Sat, 22 Aug 2026 21:00:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "The U.S. National Debt Officially Surpassed $40 Trillion in August: Here's What History Says This Means for the Stock Market - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaEF4TUM3Qi1SMENyS2RiX3pqWkRoeUZMS1pIdVN1bEZtdFBBZk9vWDdGTk9zWGE5akQ1UTVPTnNvTjhvRVFydFN0SmIyMDN1Nms2MmtxZjZ0bnNHQmxCS1NEMkE2T253aUhxaTIyMkgxeW44bHpCWEhWbTRDbndnV2w1Rm0tNHpGMjdkdEpZaWZfWjJibWtSZw?oc=5",
+        "published_at": "Sun, 23 Aug 2026 17:33:38 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Cardinal Health's Medical Segment Boss Sold $8 Million in Stock. Here's What to Know - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWGs1RUxfcHJFQWdicGZCTWtvcm1Pa2tnS1JsTDFMb0Nua2RKcXl5bldIOElkWGpsd0FEYlpyYUpzTVQxdjFfN3MxS0pRN1laRzYtcnpwZ19nUVQ3eWk1YVF5WkxNS3FmZzNCemVsdmNCWWxiNjkwU0FnY1dybkgtS3dJbXZCYWF0bVFrWF9ZYUZPUjdKSGp0amtEZFctQjEyOGVmOUlJam1GcW5IYzNnREVxXzRzVXhCLUxWVXhHcjJsRGJEcVZiWVdaTWtCR1ZH?oc=5",
+        "published_at": "Sun, 23 Aug 2026 12:22:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Photos: Ukraine celebrates National Flag Day",
+        "url": "https://www.aljazeera.com/gallery/2026/8/23/photos-ukraine-observes-national-flag-day?traffic_source=rss",
+        "published_at": "Sun, 23 Aug 2026 17:18:25 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Should You Buy Oracle Stock Before September? The Answer Might Surprise You.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/buy-oracle-stock-september-answer-171000571.html",
+        "published_at": "2026-08-23T17:10:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bill Ackman's Pershing Square invests $1.1B in fintech giant",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bill-ackmans-pershing-square-invests-170700368.html",
+        "published_at": "2026-08-23T17:07:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Your Last Chance to Buy Nvidia Stock for Cheap in 2026 May Be Near",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/last-chance-buy-nvidia-stock-165500851.html",
+        "published_at": "2026-08-23T16:55:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Rachel Cruze and George Kamel share the spending 'clues' that reveal if you're broke, average or wealthy",
+        "url": "https://finance.yahoo.com/markets/articles/rachel-cruze-george-kamel-share-170000908.html",
+        "published_at": "2026-08-23T17:00:00Z"
+      }
+    ]
+  }
+}
