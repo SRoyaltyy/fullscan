@@ -165,8 +165,8 @@ def run(date_str: str, dry_run: bool = False) -> None:
         print(dossier[:2000])
         print(f"\n[deepthink] dry run — dossier is {len(dossier):,} chars")
         return
-    if not config.DEEPSEEK_API_KEY:
-        print("[deepthink] no DEEPSEEK_API_KEY — skipping")
+    if not config.has_llm():
+        print("[deepthink] no OPENCLAW_GATEWAY_URL or DEEPSEEK_API_KEY — skipping")
         return
     from . import deepseek_client
 

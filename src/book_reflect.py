@@ -306,8 +306,9 @@ MISSING_INPUTS_END
 
 
 def llm_reflect(gaps: dict, date: str) -> None:
-    if not config.DEEPSEEK_API_KEY:
-        print("[book-reflect] no DEEPSEEK_API_KEY — LLM layer skipped")
+    if not config.has_llm():
+        print("[book-reflect] no OPENCLAW_GATEWAY_URL or DEEPSEEK_API_KEY — "
+              "LLM layer skipped")
         return
     from . import deepseek_client
 

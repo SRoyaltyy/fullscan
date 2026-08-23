@@ -78,8 +78,7 @@ def _etf_actual(etf: str, date_str: str) -> dict:
 
 
 def run_one(sector: str, date_str: str) -> None:
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm()
 
     etf = SECTOR_ETFS[sector]
     slug = _slug(sector)

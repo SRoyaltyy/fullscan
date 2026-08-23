@@ -1,6 +1,6 @@
 name: Sector Predict
 
-# One independent DeepSeek run per sector (never mashed into one prompt).
+# One independent LLM run per sector (never mashed into one prompt).
 # sectors empty  → all 11 Finviz sectors, sequential
 # sectors filled → only those names
 
@@ -27,14 +27,14 @@ concurrency:
 
 jobs:
   predict:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, ecs]
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.10"
 
       - name: Install dependencies
         run: |
@@ -54,6 +54,8 @@ jobs:
       - name: Run sector predict
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}

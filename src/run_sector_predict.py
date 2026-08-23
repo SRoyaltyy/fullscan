@@ -51,8 +51,7 @@ def _load_system_prompt(sector: str) -> str:
 
 
 def run_one(sector: str, date_str: str, ch1_md: str) -> dict:
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm()
 
     rubric = _load_system_prompt(sector)
     etf_ctx = etf_relative_snapshot(sector)

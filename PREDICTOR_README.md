@@ -35,16 +35,65 @@ that matters — the paper dashboard:
 | Learn | `src/book_learn.py` | walk-forward weight tuner on realized forward returns (local price store, no lookahead). Guardrails: ≥5 dates, ≥5bps mean improvement, wins ≥60% of dates, half-step adoption. Ledger: `03_scoreboard/BOOK_LEARN.md` |
 | Reflect | `src/book_reflect.py` | gap scan of movers the book missed, classed blind / outweighed / gated-out (`03_scoreboard/BOOK_GAPS.md`), then `deepseek-reasoner` writes book-scoped lessons into `02_lessons/candidate/` and maintains `02_lessons/hypotheses/book_missing_inputs.md` — the book's own list of what it cannot currently see |
 
-## Secrets used
+## LLM: Grok 4.6 primary (OpenClaw), DeepSeek fallback
 
-`DEEPSEEK_API_KEY`, `FRED_API_KEY`, `DATABASE_URL`, `DATABASE_KEY`,
-`SEARXNG_URL` (optional — falls back to DuckDuckGo search).
+Every LLM stage (predict, outcome, sector ×11, news judge, events +
+catcher, reflect, book-reflect, deepthink, promote merge, distill,
+catalyst) routes through **one client** (`src/deepseek_client.chat`),
+which tries providers in order:
 
-## Models
+1. **OpenClaw gateway** — Grok 4.6 (`x-openclaw-model: xai/grok-4.6`)
+   running on the always-on box (Alibaba ECS, Singapore) under the
+   SuperGrok OAuth login. On research stages Grok uses its **own native
+   web/X search** inside the agent turn — no SearXNG — and appends a
+   RESEARCH APPENDIX (queries, sources, facts) to keep output auditable.
+2. **DeepSeek API** — the original client, unchanged, including the
+   SearXNG → ddgs → DDG HTML → Google News RSS tool loop. Fires only
+   when the gateway is unreachable, errors, or answers empty.
 
-Predict/outcome stages: `deepseek-chat` (tool-calling). Reflect/distill:
-`deepseek-reasoner`. Override via env vars `MODEL_PREDICT` etc. in the
-workflow files.
+### Wiring the gateway (one-time, on the ECS)
+
+```bash
+openclaw models auth login --provider xai --method oauth   # SuperGrok login
+openclaw config set tools.web.search.provider grok         # native Grok search
+# enable the OpenAI-compatible surface:
+#   gateway.http.endpoints.chatCompletions.enabled = true
+```
+
+Then give GitHub Actions a way to reach it — either:
+
+- **Expose the gateway** (simplest): open the gateway port on the ECS
+  security group, keep a strong shared-secret bearer token, and set the
+  repo secrets `OPENCLAW_GATEWAY_URL=http://<ecs-public-ip>:18789` and
+  `OPENCLAW_TOKEN=<token>` (Settings → Secrets and variables → Actions).
+  Put it behind TLS (Caddy/nginx) if possible. GitHub-hosted runners
+  have no fixed IPs, so the token is the perimeter.
+- **Self-hosted runner**: install a GitHub Actions runner on the same
+  ECS, set `OPENCLAW_GATEWAY_URL=http://127.0.0.1:18789`, and switch
+  `runs-on` in the workflows to the self-hosted label. Nothing is
+  exposed to the internet, but the runner must stay up.
+
+With neither secret set, everything runs on DeepSeek exactly as before.
+
+### Env knobs
+
+| Var | Default | Meaning |
+|---|---|---|
+| `OPENCLAW_GATEWAY_URL` | — | gateway base URL; setting it makes Grok primary everywhere |
+| `OPENCLAW_TOKEN` | — | gateway shared-secret bearer token |
+| `OPENCLAW_AGENT` | `openclaw/default` | agent target sent as the OpenAI `model` field |
+| `OPENCLAW_BACKEND_MODEL` | `xai/grok-4.6` | backend model header (`x-openclaw-model`) |
+| `OPENCLAW_TIMEOUT` | `900` | per-call timeout (seconds); research turns are slow |
+| `DEEPSEEK_API_KEY` | — | fallback provider (keep it set) |
+| `MODEL_PREDICT` … `MODEL_DISTILL` | deepseek-chat / deepseek-reasoner | models used on the fallback path only |
+
+Check routing (no network): `python -m src.deepseek_client`
+Live round-trip test: `python -m src.deepseek_client --probe`
+
+## Other secrets
+
+`FRED_API_KEY`, `DATABASE_URL`, `DATABASE_KEY`, `SEARXNG_URL`
+(optional — the DeepSeek fallback search chain degrades to DuckDuckGo).
 
 ## Manual run
 

@@ -26,13 +26,13 @@ concurrency:
 
 jobs:
   run-pipeline:
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: pip install requests yfinance pandas openai ddgs psycopg2-binary
@@ -71,6 +71,8 @@ jobs:
         if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -82,6 +84,8 @@ jobs:
         if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -103,6 +107,8 @@ jobs:
         if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'reflect' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.run_reflect ${DATE:+--date "$DATE"}

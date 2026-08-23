@@ -182,8 +182,7 @@ def main() -> None:
         else datetime.strptime(args.date, "%Y-%m-%d").date()
     win = _windows(today)
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm()
 
     with open(RUBRIC_PATH, encoding="utf-8") as fh:
         rubric = fh.read()

@@ -38,8 +38,7 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm()
 
     ch1 = fetch_channel1.build("outcome", date_str)
     fetch_channel1.save(ch1, date_str, "outcome")
