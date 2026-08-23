@@ -3,6 +3,12 @@ name: Stock Book ALL (one-shot)
 # Single entrypoint:
 #   check prereqs → run missing → stock book → backtest → paper dashboard
 #   then publish dashboard/ to GitHub Pages (fixed Chrome URL).
+#
+# LLM stages (predict / 11 sectors / events / news judge / book-reflect)
+# hit Grok 4.6 via OpenClaw on the ECS. DeepSeek is fallback only.
+# Must run on [self-hosted, ecs]: ubuntu-latest cannot reach the
+# loopback gateway and used to fall back to DeepSeek every weekday.
+# One ECS runner — a 6h book run will queue other ECS jobs.
 
 on:
   workflow_dispatch:
@@ -20,7 +26,7 @@ on:
         required: false
         default: "false"
       skip_llm:
-        description: "true = skip general + sector DeepSeek (faster)"
+        description: "true = skip general + sector LLM (faster)"
         required: false
         default: "false"
       force_sectors:
@@ -41,7 +47,7 @@ concurrency:
 
 jobs:
   all:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, ecs]
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
@@ -129,7 +135,7 @@ jobs:
             data/universe data/exports data/join data/stock_book data/paper \
             data/peers data/checklist data/ab_checklist \
             01_daily/weather 01_daily/news 01_daily/general 01_daily/sectors \
-            01_daily/events \
+            01_daily/events 01_daily/_transcripts 01_daily/_channel1 \
             01_daily/*_universe.md 01_daily/*_match.md \
             01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \
             01_daily/*_peer_rs.md \
