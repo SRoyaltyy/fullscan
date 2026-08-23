@@ -29,6 +29,9 @@ DAILY = ROOT / "01_daily"
 
 HORIZONS = ("1d", "3d", "1w", "2w", "1m")
 
+# Code defaults. The live run prefers 00_grounding/book_policy.json, which
+# book_learn tunes from realized forward returns (bounded to ±MAX_POLICY_DRIFT
+# of these values). These constants stay the anchor and the fallback.
 WEIGHTS = {
     #           join  sector  general  news    ab     peer
     "1d":      (0.12, 0.10,   0.08,    0.25,   0.25,  0.20),
@@ -37,6 +40,80 @@ WEIGHTS = {
     "2w":      (0.20, 0.18,   0.08,    0.06,   0.28,  0.20),
     "1m":      (0.22, 0.20,   0.08,    0.00,   0.30,  0.20),
 }
+SIGNAL_FAMILIES = ("join", "sector", "general", "news", "ab", "peer")
+POLICY_PATH = ROOT / "00_grounding" / "book_policy.json"
+MAX_POLICY_DRIFT = 0.12   # per-weight bound vs code default
+MAX_POLICY_WEIGHT = 0.50
+
+
+def load_policy() -> tuple[dict[str, tuple[float, ...]], dict]:
+    """Learned weights from book_policy.json, validated against defaults.
+
+    Any malformed/out-of-bounds policy falls back to code defaults — the
+    learner can only ever nudge weights inside a bounded box, never break
+    the ranker.
+    """
+    meta = {"weights_source": "defaults", "policy_version": None,
+            "sell_excludes_addons": True}
+    if not POLICY_PATH.exists():
+        return dict(WEIGHTS), meta
+    try:
+        pol = json.loads(POLICY_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"[stock-book] WARN: unreadable book_policy.json ({e}) — defaults")
+        return dict(WEIGHTS), meta
+    weights: dict[str, tuple[float, ...]] = {}
+    pw = pol.get("weights") or {}
+    for h in HORIZONS:
+        cand = pw.get(h)
+        base = WEIGHTS[h]
+        if not isinstance(cand, (list, tuple)) or len(cand) != len(base):
+            print(f"[stock-book] WARN: policy weights malformed for {h} — defaults")
+            return dict(WEIGHTS), meta
+        try:
+            cand = tuple(float(x) for x in cand)
+        except (TypeError, ValueError):
+            print(f"[stock-book] WARN: policy weights non-numeric for {h} — defaults")
+            return dict(WEIGHTS), meta
+        for c, b in zip(cand, base):
+            if c < 0 or c > MAX_POLICY_WEIGHT or abs(c - b) > MAX_POLICY_DRIFT + 1e-9:
+                print(f"[stock-book] WARN: policy weight out of bounds for {h} — defaults")
+                return dict(WEIGHTS), meta
+        if not 0.85 * sum(base) <= sum(cand) <= 1.15 * sum(base):
+            print(f"[stock-book] WARN: policy weight sum off for {h} — defaults")
+            return dict(WEIGHTS), meta
+        weights[h] = cand
+    meta["weights_source"] = "book_policy.json"
+    meta["policy_version"] = pol.get("version")
+    meta["sell_excludes_addons"] = bool(pol.get("sell_excludes_addons", True))
+    return weights, meta
+
+
+def effective_weights(
+    weights: dict[str, tuple[float, ...]], present: dict[str, bool]
+) -> tuple[dict[str, tuple[float, ...]], list[str]]:
+    """Renormalize each horizon's weights over the signal families that are
+    actually present today.
+
+    Previously a missing input (e.g. no AB file) silently scored 0 while
+    keeping its 0.25–0.30 weight, compressing every total until the additive
+    opportunity tilt dominated the rank. Now absent families give their
+    weight back to the present ones, proportionally, and the shift is
+    recorded in the meta.
+    """
+    absent = [f for f in SIGNAL_FAMILIES if not present.get(f, True)]
+    if not absent:
+        return dict(weights), []
+    out: dict[str, tuple[float, ...]] = {}
+    for h, w in weights.items():
+        total = sum(w)
+        kept = [x if present.get(f, True) else 0.0 for f, x in zip(SIGNAL_FAMILIES, w)]
+        kept_sum = sum(kept)
+        if kept_sum <= 0:
+            out[h] = tuple(w)
+            continue
+        out[h] = tuple(round(x * total / kept_sum, 4) for x in kept)
+    return out, absent
 
 # Tradeable universe gates (Finviz export units)
 # Market Cap column is in *millions* USD → 80 == $80M
@@ -446,6 +523,11 @@ def _load_ab_enriched(date: str) -> pd.DataFrame:
                       "P03_industry_advancing", "P04_sector_supportive", "context_label"):
                 if c in df.columns:
                     out[c] = df[c]
+            # duplicate tickers here would explode rows in the later merge
+            n_dup = int(out["Ticker"].duplicated().sum())
+            if n_dup:
+                print(f"[stock-book] WARN: AB file had {n_dup} duplicate tickers — deduped")
+                out = out.drop_duplicates("Ticker", keep="first")
             print(f"[stock-book] AB loaded {p.name} rows={len(out):,} col={score_col}")
             return out
     print(f"[stock-book] WARN: no AB checklist for {date}")
@@ -485,6 +567,16 @@ def _prev_book_buys(date: str) -> dict[str, set[str]]:
 
 def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]:
     join, date = _load_join(date)
+
+    # Pre-flight integrity check — never fatal, but recorded and used to
+    # renormalize weights when whole signal families are absent.
+    health = None
+    try:
+        from . import input_health
+        health = input_health.load(date) or input_health.check(date)
+        print(input_health.render(health))
+    except Exception as e:  # noqa: BLE001 — health must never kill the book
+        print(f"[stock-book] WARN: input health check failed: {e}")
     join = join.drop_duplicates(subset=["Ticker"], keep="first").copy()
     join["Ticker"] = join["Ticker"].astype(str).str.strip().str.upper()
 
@@ -647,6 +739,22 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
                    for sec, r in sector_runs.items()}
 
+    # ---- resolve weights: learned policy (bounded) → renorm over present families ----
+    base_weights, policy_meta = load_policy()
+    present = {
+        "join": True,  # build aborts earlier without a join file
+        "sector": bool(sector_runs),
+        "general": bool(gen_run),
+        "news": bool(news),
+        "ab": bool(len(ab)) and bool(join["s_ab"].ne(0).any()),
+        "peer": bool(len(peer)) and bool(join["s_peer"].ne(0).any()),
+    }
+    weights_h, absent_families = effective_weights(base_weights, present)
+    if absent_families:
+        print(f"[stock-book] renormalized weights — absent families: {absent_families}")
+    print(f"[stock-book] weights source: {policy_meta['weights_source']}"
+          + (f" v{policy_meta['policy_version']}" if policy_meta.get("policy_version") else ""))
+
     meta = {
         "date": date,
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
@@ -662,7 +770,16 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         if isinstance(weather.get("signals"), dict)
         else weather.get("risk"),
         "n_universe": int(len(join)),
-        "weights": WEIGHTS,
+        "weights": {h: list(w) for h, w in weights_h.items()},
+        "weights_source": policy_meta["weights_source"],
+        "policy_version": policy_meta.get("policy_version"),
+        "sell_excludes_addons": policy_meta.get("sell_excludes_addons", True),
+        "absent_families": absent_families,
+        "input_health": {
+            "worst": health.get("worst"),
+            "family_status": health.get("family_status"),
+            "learn_grade": health.get("learn_grade"),
+        } if health else None,
         "horizons": list(HORIZONS),
         "top_n": top_n,
         "inputs": _inputs_status(date),
@@ -672,16 +789,20 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
 
     fresh = (join["s_news"].abs() > 0.15) | (join["s_ab"] > 0.20) | (join["s_peer"] > 0.20)
     for h in HORIZONS:
-        wj, ws, wg, wn, wa, wp = WEIGHTS[h]
-        join[f"score_{h}"] = (
+        wj, ws, wg, wn, wa, wp = weights_h[h]
+        # core = the six weighted signals only. The SELL side ranks on this:
+        # the opportunity add-on is a BUY-side tilt, and letting its negative
+        # leg (mega-cap −0.22, 52w-top −0.12) leak into the sell rank filled
+        # the sell book with structural shorts of strong mega-caps.
+        join[f"core_{h}"] = (
             wj * join["s_join"]
             + ws * join[f"s_sector_{h}"]
             + wg * join[f"s_general_{h}"]
             + wn * join["s_news"]
             + wa * join["s_ab"]
             + wp * join["s_peer"]
-            + join["s_opp"]
         )
+        join[f"score_{h}"] = join[f"core_{h}"] + join["s_opp"]
         if "rebound" in join.columns:
             join.loc[join["rebound"], f"score_{h}"] = (
                 join.loc[join["rebound"], f"score_{h}"] + REBOUND_BOOST
@@ -732,8 +853,12 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     return join, meta
 
 
-def _book_side(df: pd.DataFrame, horizon: str, top_n: int):
-    """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side."""
+def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True):
+    """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
+
+    SELL side ranks on the core weighted score (no buy-side add-ons) when
+    sell_core is set and the column exists.
+    """
     col = f"score_{horizon}"
     ranked = df.sort_values(col, ascending=False)
     picks = []
@@ -768,17 +893,22 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int):
         if len(picks) >= top_n:
             break
     buys = pd.DataFrame(picks) if picks else ranked.head(0)
-    sells = ranked.tail(top_n).iloc[::-1]
+    core_col = f"core_{horizon}"
+    if sell_core and core_col in df.columns:
+        sells = df.sort_values(core_col, ascending=True).head(top_n)
+    else:
+        sells = ranked.tail(top_n).iloc[::-1]
     return buys, sells
 
 
-def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8):
+def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
+                 sell_core: bool = True):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
     if sub.empty:
         return None, None
-    return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)))
+    return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)), sell_core=sell_core)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -875,8 +1005,9 @@ def _why(row) -> str:
     return " ".join(parts)
 
 
-def _layer_lines(row, horizon: str) -> list[str]:
-    wj, ws, wg, wn, wa, wp = WEIGHTS[horizon]
+def _layer_lines(row, horizon: str, weights: dict | None = None) -> list[str]:
+    w_h = (weights or {}).get(horizon) or WEIGHTS[horizon]
+    wj, ws, wg, wn, wa, wp = w_h
     rows = [
         ("join × weather", wj, float(row.get("s_join") or 0),
          "does this *kind* of stock fit today's regime?"),
@@ -915,6 +1046,11 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
+        # per-horizon LLM components + core scores: this CSV is the learning
+        # snapshot book_learn re-scores under candidate weights
+        *[f"s_sector_{h}" for h in HORIZONS],
+        *[f"s_general_{h}" for h in HORIZONS],
+        *[f"core_{h}" for h in HORIZONS],
         "score_1d", "score_3d", "score_1w", "score_2w", "score_1m",
         "reasons", "bulls", "bears", "flags",
     ]
@@ -922,9 +1058,10 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     csv_path = OUT_DIR / f"{date}_stock_book.csv"
     df[cols_keep].to_csv(csv_path, index=False)
 
+    sell_core = bool(meta.get("sell_excludes_addons", True))
     books = {}
     for h in HORIZONS:
-        b, s = _book_side(df, h, top_n)
+        b, s = _book_side(df, h, top_n, sell_core=sell_core)
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
@@ -932,7 +1069,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
             "sell_by_size": {},
         }
         for bucket in SIZE_BUCKETS:
-            bb, ss = _bucket_side(df, h, bucket)
+            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core)
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -1014,15 +1151,21 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         for t, st in sorted(gates.items()):
             L.append(f"| {t} | {st['hit_rate']:.0%} | {st['n']} | ×{st['gate']:.2f} |")
 
+    src_note = meta.get("weights_source", "defaults")
+    if meta.get("policy_version"):
+        src_note += f" v{meta['policy_version']}"
+    if meta.get("absent_families"):
+        src_note += f" · renormalized (absent: {', '.join(meta['absent_families'])})"
     L += [
         "",
-        "## Horizon weights",
+        f"## Horizon weights — {src_note}",
         "",
         "| Horizon | join | sector | general | news | AB | peer | + opportunity |",
         "|---------|------|--------|---------|------|----|------|----------------|",
     ]
+    w_used = meta.get("weights") or WEIGHTS
     for h in HORIZONS:
-        w = WEIGHTS[h]
+        w = w_used.get(h, WEIGHTS[h])
         L.append(
             f"| {h} | {w[0]:.2f} | {w[1]:.2f} | {w[2]:.2f} | {w[3]:.2f} | {w[4]:.2f} | {w[5]:.2f} | additive |"
         )
@@ -1030,7 +1173,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     # Full rationale for 1d and 1m (the two sleeves that matter). Other horizons: compact table.
     detail_h = ("1d", "1m")
     for h in HORIZONS:
-        buys, sells = _book_side(df, h, top_n)
+        buys, sells = _book_side(df, h, top_n, sell_core=sell_core)
         if h in detail_h:
             L += ["", f"## {h} BUY — why these names", ""]
             for i, (_, r) in enumerate(buys.iterrows(), 1):
@@ -1041,7 +1184,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                     "",
                     _why(r),
                     "",
-                    *_layer_lines(r, h),
+                    *_layer_lines(r, h, meta.get("weights")),
                     "",
                 ]
             L += ["", f"## {h} AVOID — bottom of the same rank", ""]

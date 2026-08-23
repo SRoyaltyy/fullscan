@@ -23,6 +23,18 @@ consolidated memory, all active lessons, the full scoreboard (rolling
 accuracy), and the last 10 trading days of its own predictions + reflections.
 Its first output line must confirm what it learned — otherwise it aborts.
 
+## The stock-book learning loop (closed)
+
+The daily stock book has its own feedback cycle, keyed to the one metric
+that matters — the paper dashboard:
+
+| Step | Module | Output |
+|---|---|---|
+| Preflight | `src/input_health.py` | `data/stock_book/{date}_input_health.json` — stale/degraded/missing inputs; the ranker renormalizes weights over the families actually present |
+| Rank | `src/stock_book.py` | reads learned weights from `00_grounding/book_policy.json` (bounded to ±0.12 of code defaults); sell book ranks on the core score, without buy-side add-ons |
+| Learn | `src/book_learn.py` | walk-forward weight tuner on realized forward returns (local price store, no lookahead). Guardrails: ≥5 dates, ≥5bps mean improvement, wins ≥60% of dates, half-step adoption. Ledger: `03_scoreboard/BOOK_LEARN.md` |
+| Reflect | `src/book_reflect.py` | gap scan of movers the book missed, classed blind / outweighed / gated-out (`03_scoreboard/BOOK_GAPS.md`), then `deepseek-reasoner` writes book-scoped lessons into `02_lessons/candidate/` and maintains `02_lessons/hypotheses/book_missing_inputs.md` — the book's own list of what it cannot currently see |
+
 ## Secrets used
 
 `DEEPSEEK_API_KEY`, `FRED_API_KEY`, `DATABASE_URL`, `DATABASE_KEY`,

@@ -135,7 +135,10 @@ jobs:
             03_scoreboard/stock_book_backtest.json \
             03_scoreboard/scoreboard.json \
             03_scoreboard/PAPER_TRADING.md \
+            03_scoreboard/BOOK_LEARN.md \
+            03_scoreboard/BOOK_GAPS.md \
             00_grounding/mutable_policy.md \
+            00_grounding/book_policy.json \
             02_lessons/ \
             dashboard/ || true
 
