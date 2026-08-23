@@ -25,7 +25,7 @@ concurrency:
 
 jobs:
   sector-loop:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, ecs]
     # 11 sectors × long tool loops; allow hours
     timeout-minutes: 360
     steps:
@@ -33,7 +33,7 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.10"
 
       - name: Install dependencies
         run: |
