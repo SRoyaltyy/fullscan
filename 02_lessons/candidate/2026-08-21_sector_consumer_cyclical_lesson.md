@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If a high-beta cyclical sector has this exact stale-negative vs fresh-positive pattern and still closes down more than -0.5% with no fresh catalyst, the corrected behavior would be wrong. The lesson also does not apply if a fresh same-day hard-data miss or geopolitical/oil shock appears."
 sector: "Consumer Cyclical"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-21
