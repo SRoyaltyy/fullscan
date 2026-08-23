@@ -1,6 +1,6 @@
-# Book learn — weight tuner ledger (v1)
+# Book learn — weight tuner ledger (v2)
 
-Updated: **2026-08-22T13:33:06.408300-04:00** · evaluation as of **2026-08-22**
+Updated: **2026-08-22T23:29:41.323528-04:00** · evaluation as of **2026-08-23**
 
 Objective: mean forward return of the top-10 buy book **in excess of the
 liquid-universe median**, walk-forward on fully-realized dates only.
@@ -28,6 +28,11 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 - hold True — only 2 dates (n=2)
 
+## Risk-off entry scaling (LLM weather call → sizing action)
+
+- scale: **0.5** (effective 2026-08-25) — hold scale 0.5 — only 3 realized risk-off dates (< 4)
+
 ## History
 
+- v2 @ 2026-08-23: 1d: hold — wins only 50% of dates (< 60%); 3d: observe — only 4 realized dates (< 5); 1w: observe — only 2 realized dates (< 5); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v1 @ 2026-08-22: 1d: hold — wins only 50% of dates (< 60%); 3d: observe — only 4 realized dates (< 5); 1w: observe — only 2 realized dates (< 5); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)

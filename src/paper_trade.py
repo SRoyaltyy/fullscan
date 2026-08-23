@@ -153,6 +153,26 @@ def picks_from_book(book: dict, top_n: int) -> dict[str, list[str]]:
 
 # ------------------------------------------------------------- engine -----
 
+def load_risk_policy() -> dict:
+    """Risk-off entry scaling from 00_grounding/book_policy.json.
+
+    Applied only from `risk_scaling_effective` onward so the idempotent
+    replay never rewrites history that predates the rule. book_learn
+    re-evaluates the scale nightly against realized returns.
+    """
+    path = ROOT / "00_grounding" / "book_policy.json"
+    out = {"scale": 1.0, "effective": "9999-12-31"}
+    try:
+        pol = json.loads(path.read_text(encoding="utf-8"))
+        scale = float(pol.get("risk_off_entry_scale", 1.0))
+        if 0.0 <= scale <= 1.0:
+            out["scale"] = scale
+            out["effective"] = str(pol.get("risk_scaling_effective") or "9999-12-31")
+    except (OSError, ValueError, TypeError):
+        pass
+    return out
+
+
 def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
             capital: float, top_n: int, fees: dict):
     sleeves = [f"{h}_{k}" for h in HORIZONS for k in ("top", "size")]
@@ -161,6 +181,7 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
             "trades": 0, "wins": 0, "closed": 0}
         for s in sleeves
     }
+    risk_pol = load_risk_policy()
     curve_rows: list[dict] = []
     trade_rows: list[dict] = []
     spy0 = None
@@ -180,6 +201,14 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
 
         book = json.loads(path.read_text(encoding="utf-8"))
         picks = picks_from_book(book, top_n)
+        # LLM weather call → action: on risk-off days (from the book's own
+        # meta, so replay is deterministic) scale down new-entry deployment
+        # and keep the rest in cash. Gated by effective date.
+        weather_risk = str((book.get("meta") or {}).get("weather_risk") or "")
+        entry_scale = 1.0
+        if (weather_risk == "off" and risk_pol["scale"] < 1.0
+                and date >= risk_pol["effective"]):
+            entry_scale = risk_pol["scale"]
 
         for sleeve, targets in picks.items():
             S = st[sleeve]
@@ -216,9 +245,10 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                                    "reason": f"dropped from {sleeve} after {held}d (min {min_hold}d)"})
 
             # entries: new names split available cash equally
+            # (× entry_scale on risk-off days — rest stays in cash)
             new = [t for t in targets if t not in S["pos"]]
             if new:
-                per = S["cash"] / len(new)
+                per = (S["cash"] * entry_scale) / len(new)
                 for t in new:
                     p = price_of(t)
                     if p is None or per <= 0:
@@ -239,12 +269,15 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                                    "entry_px": p, "cost": cost}
                     S["fees"] += fee
                     S["trades"] += 1
+                    reason = f"entered {sleeve} book"
+                    if entry_scale < 1.0:
+                        reason += f" (risk-off: deploying {entry_scale:.0%} of cash)"
                     trade_rows.append({"date": date, "sleeve": sleeve,
                                        "ticker": t, "side": "buy",
                                        "shares": shares, "price": round(p, 4),
                                        "fees": fee, "amount": round(cost, 2),
                                        "realized_pnl": "",
-                                       "reason": f"entered {sleeve} book"})
+                                       "reason": reason})
 
         # mark-to-market
         spy = price_of("SPY")
@@ -420,6 +453,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
             "fill": "signal-day close",
             "top": "top-N overall BUY names on that horizon's book",
             "size": "top 3 per size bucket (large+ / mid / small-micro)",
+            "risk_off_entry_scale": load_risk_policy(),
         },
     }
     positions = []
