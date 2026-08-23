@@ -402,6 +402,73 @@ def _evaluate_horizon(
     return result
 
 
+def _book_risk(date: str) -> str:
+    """weather_risk recorded in that date's book meta ('' if unknown)."""
+    p = BOOK_DIR / f"{date}_stock_book.json"
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+        return str((data.get("meta") or {}).get("weather_risk") or "")
+    except (OSError, json.JSONDecodeError):
+        return ""
+
+
+RISK_MIN_DATES = 4
+RISK_DEFAULT_SCALE = 0.5
+RISK_EFFECTIVE_DEFAULT = "2026-08-25"
+
+
+def _evaluate_risk_scale(
+    frames: dict[str, pd.DataFrame], panel: pd.DataFrame,
+    weights: dict[str, tuple[float, ...]], prev: dict, top_n: int,
+) -> dict:
+    """Should new entries be scaled down on risk-off days?
+
+    Compares the book's realized next-day return on risk-off days against
+    cash (0). If the book loses money on risk-off days, holding back cash
+    is right → keep the reduced scale; if it reliably makes money even
+    then, the scale costs returns → set back to 1.0.
+    """
+    cur_scale = float(prev.get("risk_off_entry_scale", RISK_DEFAULT_SCALE))
+    effective = str(prev.get("risk_scaling_effective") or RISK_EFFECTIVE_DEFAULT)
+    h, n_td = "1d", HORIZON_DAYS["1d"]
+    vals = []
+    for d, df in frames.items():
+        if _book_risk(d) != "off":
+            continue
+        rets = _fwd_returns(panel, d, n_td)
+        if rets is None or len(rets) < 200:
+            continue
+        comp = _components_for(df, h)
+        full, _ = _score(df, comp, weights[h], _prev_book_buys(d).get(h, set()))
+        picks = _select_buys(df, full, top_n)
+        if not picks:
+            continue
+        fr = rets.reindex(df["Ticker"].iloc[picks]).dropna()
+        if len(fr):
+            vals.append(float(fr.mean()))
+    out = {"n_risk_off_dates": len(vals), "current_scale": cur_scale,
+           "effective": effective}
+    if len(vals) < RISK_MIN_DATES:
+        out["adopted_scale"] = cur_scale
+        out["decision"] = (f"hold scale {cur_scale} — only {len(vals)} realized "
+                           f"risk-off dates (< {RISK_MIN_DATES})")
+        return out
+    mean_abs = float(np.mean(vals))
+    out["mean_abs_return_pct"] = round(mean_abs * 100, 3)
+    if mean_abs < -EPS_IMPROVE:
+        out["adopted_scale"] = RISK_DEFAULT_SCALE
+        out["decision"] = (f"book loses {100*mean_abs:.2f}% on risk-off days → "
+                           f"keep entry scale {RISK_DEFAULT_SCALE}")
+    elif mean_abs > EPS_IMPROVE:
+        out["adopted_scale"] = 1.0
+        out["decision"] = (f"book still makes {100*mean_abs:+.2f}% on risk-off "
+                           f"days → scale back to 1.0 (cash drag not justified)")
+    else:
+        out["adopted_scale"] = cur_scale
+        out["decision"] = f"inconclusive ({100*mean_abs:+.2f}%) — hold {cur_scale}"
+    return out
+
+
 def _evaluate_sell_flag(
     frames: dict[str, pd.DataFrame], panel: pd.DataFrame,
     weights: dict[str, tuple[float, ...]], current: bool,
@@ -452,7 +519,8 @@ def _evaluate_sell_flag(
 # ---------------------------------------------------------------- persistence
 
 def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
-                  results: list[dict], sell_result: dict, asof: str) -> dict:
+                  results: list[dict], sell_result: dict, asof: str,
+                  risk_result: dict | None = None) -> dict:
     prev = {}
     if POLICY_PATH.exists():
         try:
@@ -466,13 +534,19 @@ def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
         "asof": asof,
         "decisions": {r["horizon"]: r["decision"] for r in results},
         "sell": sell_result.get("decision"),
+        "risk": (risk_result or {}).get("decision"),
     })
+    risk_result = risk_result or {}
     policy = {
         "version": version,
         "updated": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "asof": asof,
         "weights": adopted,
         "sell_excludes_addons": sell_flag,
+        "risk_off_entry_scale": risk_result.get(
+            "adopted_scale", prev.get("risk_off_entry_scale", RISK_DEFAULT_SCALE)),
+        "risk_scaling_effective": prev.get(
+            "risk_scaling_effective", RISK_EFFECTIVE_DEFAULT),
         "objective": "mean top-10 buy fwd return in excess of liquid-universe median",
         "guardrails": {
             "min_dates": MIN_DATES, "eps_improve": EPS_IMPROVE,
@@ -485,7 +559,8 @@ def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
     return policy
 
 
-def _write_ledger(policy: dict, results: list[dict], sell_result: dict) -> None:
+def _write_ledger(policy: dict, results: list[dict], sell_result: dict,
+                  risk_result: dict | None = None) -> None:
     L = [
         f"# Book learn — weight tuner ledger (v{policy['version']})",
         "",
@@ -521,6 +596,12 @@ def _write_ledger(policy: dict, results: list[dict], sell_result: dict) -> None:
         "## Sell-book construction",
         "",
         f"- {sell_result.get('decision', 'n/a')} (n={sell_result.get('n_dates', 0)})",
+        "",
+        "## Risk-off entry scaling (LLM weather call → sizing action)",
+        "",
+        f"- scale: **{policy.get('risk_off_entry_scale')}** "
+        f"(effective {policy.get('risk_scaling_effective')}) — "
+        f"{(risk_result or {}).get('decision', 'not evaluated')}",
         "",
         "## History",
         "",
@@ -578,9 +659,18 @@ def run(date: str | None = None, lookback: int = 40, top_n: int = 10,
     sell_result = _evaluate_sell_flag(frames, panel, incumbent_w, current_sell)
     print(f"[book-learn] sell flag: {sell_result['decision']}")
 
+    prev_pol = {}
+    if POLICY_PATH.exists():
+        try:
+            prev_pol = json.loads(POLICY_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            prev_pol = {}
+    risk_result = _evaluate_risk_scale(frames, panel, incumbent_w, prev_pol, top_n)
+    print(f"[book-learn] risk scale: {risk_result['decision']}")
+
     policy = _write_policy(adopted, bool(sell_result["adopted"]), results,
-                           sell_result, asof)
-    _write_ledger(policy, results, sell_result)
+                           sell_result, asof, risk_result)
+    _write_ledger(policy, results, sell_result, risk_result)
     print(f"[book-learn] policy v{policy['version']} → {POLICY_PATH}")
 
 

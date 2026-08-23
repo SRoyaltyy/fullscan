@@ -1,7 +1,7 @@
 {
-  "version": 1,
-  "updated": "2026-08-22T13:33:06.408300-04:00",
-  "asof": "2026-08-22",
+  "version": 2,
+  "updated": "2026-08-22T23:29:41.323528-04:00",
+  "asof": "2026-08-23",
   "weights": {
     "1d": [
       0.12,
@@ -45,6 +45,8 @@
     ]
   },
   "sell_excludes_addons": true,
+  "risk_off_entry_scale": 0.5,
+  "risk_scaling_effective": "2026-08-25",
   "objective": "mean top-10 buy fwd return in excess of liquid-universe median",
   "guardrails": {
     "min_dates": 5,
@@ -65,6 +67,19 @@
         "1m": "observe \u2014 only 0 realized dates (< 5)"
       },
       "sell": "hold True \u2014 only 2 dates"
+    },
+    {
+      "version": 2,
+      "asof": "2026-08-23",
+      "decisions": {
+        "1d": "hold \u2014 wins only 50% of dates (< 60%)",
+        "3d": "observe \u2014 only 4 realized dates (< 5)",
+        "1w": "observe \u2014 only 2 realized dates (< 5)",
+        "2w": "observe \u2014 only 0 realized dates (< 5)",
+        "1m": "observe \u2014 only 0 realized dates (< 5)"
+      },
+      "sell": "hold True \u2014 only 2 dates",
+      "risk": "hold scale 0.5 \u2014 only 3 realized risk-off dates (< 4)"
     }
   ]
 }

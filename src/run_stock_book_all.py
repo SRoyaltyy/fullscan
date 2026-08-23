@@ -301,6 +301,9 @@ def run(
         print("[all] → Event catcher (gap hunt / replacement if primary empty)")
         _run([sys.executable, "-m", "src.run_events_catcher", "--date", date], check=False)
         if _events_n(date) == 0:
+            print("[all] → Events carry-forward fallback (both passes empty)")
+            _run([sys.executable, "-m", "src.events_fallback", "--date", date], check=False)
+        if _events_n(date) == 0:
             print("[all] WARN: events still empty for", date, "— weather/book sector tilt missing")
     else:
         print("[all] skip Event scanner (DONE for this day)")
