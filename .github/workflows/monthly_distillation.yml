@@ -11,13 +11,13 @@ permissions:
 
 jobs:
   distill:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.10'
       - name: Install dependencies
         run: pip install requests openai ddgs
       - name: Rewrite consolidated memory + archive stale lessons
