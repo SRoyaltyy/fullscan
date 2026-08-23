@@ -27,8 +27,7 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm(config.MODEL_PREDICT)
 
     # 1. Channel 1 (deterministic) — archived for auditability
     ch1 = fetch_channel1.build("predict")

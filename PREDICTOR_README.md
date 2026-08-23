@@ -33,18 +33,33 @@ that matters — the paper dashboard:
 | Preflight | `src/input_health.py` | `data/stock_book/{date}_input_health.json` — stale/degraded/missing inputs; the ranker renormalizes weights over the families actually present |
 | Rank | `src/stock_book.py` | reads learned weights from `00_grounding/book_policy.json` (bounded to ±0.12 of code defaults); sell book ranks on the core score, without buy-side add-ons |
 | Learn | `src/book_learn.py` | walk-forward weight tuner on realized forward returns (local price store, no lookahead). Guardrails: ≥5 dates, ≥5bps mean improvement, wins ≥60% of dates, half-step adoption. Ledger: `03_scoreboard/BOOK_LEARN.md` |
-| Reflect | `src/book_reflect.py` | gap scan of movers the book missed, classed blind / outweighed / gated-out (`03_scoreboard/BOOK_GAPS.md`), then `deepseek-reasoner` writes book-scoped lessons into `02_lessons/candidate/` and maintains `02_lessons/hypotheses/book_missing_inputs.md` — the book's own list of what it cannot currently see |
+| Reflect | `src/book_reflect.py` | gap scan of movers the book missed, classed blind / outweighed / gated-out (`03_scoreboard/BOOK_GAPS.md`), then the reasoner (`grok-4.6` if `XAI_API_KEY` is set, else `deepseek-reasoner`) writes book-scoped lessons into `02_lessons/candidate/` and maintains `02_lessons/hypotheses/book_missing_inputs.md` — the book's own list of what it cannot currently see |
 
 ## Secrets used
 
-`DEEPSEEK_API_KEY`, `FRED_API_KEY`, `DATABASE_URL`, `DATABASE_KEY`,
+`DEEPSEEK_API_KEY`, `XAI_API_KEY` (optional — wires Grok into the
+reasoner slots), `FRED_API_KEY`, `DATABASE_URL`, `DATABASE_KEY`,
 `SEARXNG_URL` (optional — falls back to DuckDuckGo search).
+
+**SuperGrok on grok.com and Cursor is not an API.** The nightly GitHub
+Actions bot cannot use a website or Cursor subscription. To actually run
+Grok in this repo, create a key at https://console.x.ai and add it as
+the repository secret `XAI_API_KEY` (Settings → Secrets and variables →
+Actions). Until that secret exists, every LLM stage stays on DeepSeek
+exactly as before.
 
 ## Models
 
-Predict/outcome stages: `deepseek-chat` (tool-calling). Reflect/distill:
-`deepseek-reasoner`. Override via env vars `MODEL_PREDICT` etc. in the
-workflow files.
+| Slot | Default without `XAI_API_KEY` | Default with `XAI_API_KEY` | Why |
+|---|---|---|---|
+| `MODEL_PREDICT` / `MODEL_OUTCOME` / `MODEL_JUDGE` | `deepseek-chat` | `deepseek-chat` | High volume, tool-calling, cheap |
+| `MODEL_REFLECT` / `MODEL_DISTILL` / `MODEL_DEEPTHINK` | `deepseek-reasoner` | `grok-4.6` | Few calls, hard reasoning |
+
+Override any slot via env (`MODEL_REFLECT=grok-4.6`, `MODEL_PREDICT=grok-4.6`,
+…). If Grok is requested but the xAI call fails, the client falls back
+to DeepSeek when `DEEPSEEK_API_KEY` is set.
+
+Print the live routing table (no network): `python -m src.deepseek_client`
 
 ## Manual run
 

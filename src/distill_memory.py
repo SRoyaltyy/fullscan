@@ -29,6 +29,7 @@ def _read(path: str) -> str:
 
 
 def main() -> None:
+    config.require_llm(config.MODEL_DISTILL)
     today = datetime.now(ZoneInfo(config.TZ)).date().isoformat()
     board = scoreboard.load()
     runs = board.get("runs", [])

@@ -56,8 +56,7 @@ def _candidate_triggers(limit: int = 12) -> str:
 
 
 def run_one(sector: str, date_str: str) -> None:
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm(config.MODEL_REFLECT)
 
     topic = topic_for(sector)
     board = scoreboard.load()
@@ -92,9 +91,7 @@ def run_one(sector: str, date_str: str) -> None:
     text = deepseek_client.chat_nonempty(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        ladder=[(config.MODEL_REFLECT, 12000),
-                (config.MODEL_REFLECT, 16000),
-                (config.MODEL_PREDICT, 8000)],
+        ladder=config.reflect_ladder(),
         tools=False,
         transcript_path=os.path.join(
             "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json"),

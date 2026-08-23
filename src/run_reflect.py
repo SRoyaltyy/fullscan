@@ -56,8 +56,7 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm(config.MODEL_REFLECT)
 
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
@@ -100,9 +99,7 @@ def main() -> None:
     text = deepseek_client.chat_nonempty(
         [{"role": "system", "content": prompt},
          {"role": "user", "content": user_msg}],
-        ladder=[(config.MODEL_REFLECT, 12000),
-                (config.MODEL_REFLECT, 16000),
-                (config.MODEL_PREDICT, 8000)],
+        ladder=config.reflect_ladder(),
         tools=False,
         transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_reflect.json"),
         trace_path=os.path.join(config.DAILY_GENERAL, f"{date_str}_reflect_trace.md"),

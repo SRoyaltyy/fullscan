@@ -165,8 +165,8 @@ def run(date_str: str, dry_run: bool = False) -> None:
         print(dossier[:2000])
         print(f"\n[deepthink] dry run — dossier is {len(dossier):,} chars")
         return
-    if not config.DEEPSEEK_API_KEY:
-        print("[deepthink] no DEEPSEEK_API_KEY — skipping")
+    if not config.has_key_for(config.MODEL_DEEPTHINK) and not config.has_any_llm_key():
+        print("[deepthink] no XAI_API_KEY or DEEPSEEK_API_KEY — skipping")
         return
     from . import deepseek_client
 
@@ -177,9 +177,13 @@ def run(date_str: str, dry_run: bool = False) -> None:
     rounds: list[str] = []
     for i, nxt in enumerate((ROUND2, ROUND3, None), start=1):
         print(f"[deepthink] round {i}…")
-        text = deepseek_client.chat(
-            messages, model=config.MODEL_DISTILL, tools=False,
-            max_tokens=MAX_TOKENS)
+        text = deepseek_client.chat_nonempty(
+            messages,
+            ladder=[(config.MODEL_DEEPTHINK, MAX_TOKENS),
+                    (config.MODEL_DISTILL, MAX_TOKENS),
+                    (config.MODEL_REFLECT, MAX_TOKENS),
+                    (config.MODEL_PREDICT, MAX_TOKENS)],
+            tools=False)
         if not text:
             print(f"[deepthink] round {i} came back empty — aborting session")
             return

@@ -28,7 +28,7 @@ SEARXNG_URL          = os.environ["SEARXNG_URL"]
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 8          # simultaneous SearXNG requests
 SEARCH_DELAY         = 0.2        # between batches (if any)
-MODEL                = "deepseek-chat"
+MODEL                = os.environ.get("MODEL_CATALYST", os.environ.get("MODEL", "deepseek-chat"))
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 
@@ -117,10 +117,21 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
-client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com",
-)
+# Default stays cheap DeepSeek. Set MODEL_CATALYST=grok-4.6 and
+# XAI_API_KEY to route this collector through xAI instead.
+_CATALYST_MODEL = os.environ.get("MODEL_CATALYST", os.environ.get("MODEL", "deepseek-chat"))
+if _CATALYST_MODEL.lower().startswith("grok") and os.environ.get("XAI_API_KEY"):
+    client = OpenAI(
+        api_key=os.environ["XAI_API_KEY"],
+        base_url=os.environ.get("XAI_BASE_URL", "https://api.x.ai/v1"),
+    )
+    MODEL = _CATALYST_MODEL
+else:
+    client = OpenAI(
+        api_key=os.environ.get("DEEPSEEK_API_KEY"),
+        base_url="https://api.deepseek.com",
+    )
+    MODEL = _CATALYST_MODEL if not _CATALYST_MODEL.lower().startswith("grok") else "deepseek-chat"
 
 def safe_create(**kwargs):
     for attempt in range(3):

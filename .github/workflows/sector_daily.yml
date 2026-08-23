@@ -78,6 +78,7 @@ jobs:
         if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -101,6 +102,7 @@ jobs:
         if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATE: ${{ github.event.inputs.run_date }}
           SECTORS: ${{ github.event.inputs.sectors }}
@@ -115,6 +117,7 @@ jobs:
         if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           DATE: ${{ github.event.inputs.run_date }}
           SECTORS: ${{ github.event.inputs.sectors }}
         run: |

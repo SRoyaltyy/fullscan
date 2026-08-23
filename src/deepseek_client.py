@@ -1,4 +1,11 @@
-"""DeepSeek API client (OpenAI-compatible) with a web_search tool loop.
+"""Multi-provider LLM client (OpenAI-compatible) with a web_search tool loop.
+
+Routes by model id:
+  grok-* / xai/* / x-ai/*  →  https://api.x.ai/v1   (XAI_API_KEY)
+  anything else            →  https://api.deepseek.com  (DEEPSEEK_API_KEY)
+
+If the primary provider fails (or has no key), the call falls back to the
+other provider when that key is present.
 
 The actual search backend chain lives in src/websearch.py (single source of
 truth, shared with the collectors):
@@ -10,8 +17,8 @@ truth, shared with the collectors):
   4. Google News RSS                  — no key, verified working; great for
                                         event/news queries
 
-Stages needing tools must run on deepseek-chat (deepseek-reasoner has no
-function-calling support).
+Stages needing tools should use a tool-capable model (deepseek-chat or
+grok-4.6). deepseek-reasoner has no function-calling support.
 """
 from __future__ import annotations
 
@@ -51,24 +58,73 @@ def web_search(query: str, max_results: int = 6) -> str:
                        "results": items}, ensure_ascii=False)
 
 
+def _prepare_payload(payload: dict) -> dict:
+    """Copy payload and apply provider-specific fields."""
+    out = dict(payload)
+    model = out.get("model") or ""
+    if config.is_xai_model(model):
+        # Chat Completions on xAI deprecates max_tokens in favor of
+        # max_completion_tokens (counts visible output only).
+        if "max_tokens" in out and "max_completion_tokens" not in out:
+            out["max_completion_tokens"] = out.pop("max_tokens")
+        if config.XAI_REASONING_EFFORT:
+            out["reasoning_effort"] = config.XAI_REASONING_EFFORT
+        out.setdefault("prompt_cache_key", "fullscan")
+    return out
+
+
 def _post(payload: dict, retries: int = 4) -> dict:
-    url = f"{config.DEEPSEEK_BASE_URL}/chat/completions"
-    headers = {"Authorization": f"Bearer {config.DEEPSEEK_API_KEY}",
+    model = payload.get("model") or ""
+    provider = config.provider_for(model)
+    key = config.api_key_for(model)
+    if not key:
+        raise RuntimeError(
+            f"no API key for {provider} model {model!r} "
+            f"({'XAI_API_KEY' if provider == 'xai' else 'DEEPSEEK_API_KEY'} "
+            "is empty)"
+        )
+    url = f"{config.base_url_for(model)}/chat/completions"
+    body = _prepare_payload(payload)
+    headers = {"Authorization": f"Bearer {key}",
                "Content-Type": "application/json"}
+    timeout = 600 if provider == "xai" else 300
     last = None
     for attempt in range(retries):
         try:
-            r = requests.post(url, headers=headers, json=payload, timeout=300)
+            r = requests.post(url, headers=headers, json=body, timeout=timeout)
             if r.status_code in (429, 500, 502, 503):
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 time.sleep(20 * (attempt + 1))
                 continue
-            r.raise_for_status()
+            if r.status_code >= 400:
+                last = f"HTTP {r.status_code}: {r.text[:300]}"
+                # 4xx (other than 429) will not heal by waiting
+                if r.status_code not in (408, 409):
+                    break
+                time.sleep(20 * (attempt + 1))
+                continue
             return r.json()
         except requests.RequestException as e:
             last = str(e)
             time.sleep(20 * (attempt + 1))
-    raise RuntimeError(f"DeepSeek call failed after {retries} tries: {last}")
+    raise RuntimeError(
+        f"{provider} call ({model}) failed after {retries} tries: {last}"
+    )
+
+
+def _post_resilient(payload: dict, tools: bool = False) -> dict:
+    """POST, then on hard failure retry once on the other provider."""
+    try:
+        return _post(payload)
+    except RuntimeError as exc:
+        orig = payload.get("model") or ""
+        fb = config.fallback_model(orig, tools=tools)
+        if not fb or fb == orig or not config.has_key_for(fb):
+            raise
+        print(f"[llm] {orig} failed ({exc}); falling back to {fb}")
+        retry = dict(payload)
+        retry["model"] = fb
+        return _post(retry)
 
 
 def chat(messages: list[dict], model: str, tools: bool = False,
@@ -85,6 +141,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import copy
     import os
 
+    resolved = config.resolve_model(model, tools=tools)
+    if resolved != model:
+        print(f"[llm] {model} has no key — using {resolved}")
+        model = resolved
     payload = {"model": model, "messages": messages,
                "max_tokens": max_tokens, "temperature": temperature}
     if tools:
@@ -107,7 +167,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     final = None
     for _round in range(rounds):
         payload["messages"] = messages
-        resp = _post(payload)
+        resp = _post_resilient(payload, tools=tools)
         msg = resp["choices"][0]["message"]
         calls = msg.get("tool_calls") or []
         if not calls:
@@ -151,7 +211,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                      "to conclude with what it already gathered.")
         payload.pop("tools", None)
         payload.pop("tool_choice", None)
-        resp = _post(payload)
+        resp = _post_resilient(payload, tools=False)
         final = resp["choices"][0]["message"].get("content") or ""
         messages.append({"role": "assistant", "content": final})
 
@@ -182,23 +242,70 @@ def chat_nonempty(messages: list[dict], ladder: list[tuple[str, int]],
     """Call chat() down a (model, max_tokens) ladder until a NON-EMPTY answer
     comes back; returns '' if every rung fails.
 
-    Guards against deepseek-reasoner burning its entire max_tokens budget on
+    Guards against a reasoner burning its entire max_tokens budget on
     hidden reasoning and returning content='' — which previously produced
     blank reflect files and junk empty lessons. Typical ladder:
-        [(config.MODEL_REFLECT, 12000),
-         (config.MODEL_REFLECT, 16000),
-         (config.MODEL_PREDICT, 8000)]
+        config.reflect_ladder()
+        # e.g. [(grok-4.6, 12000), (grok-4.6, 16000),
+        #       (deepseek-reasoner, 12000), (deepseek-chat, 8000)]
     """
     for i, (model, max_tokens) in enumerate(ladder):
-        text = chat([dict(m) for m in messages], model=model, tools=tools,
-                    max_tokens=max_tokens, temperature=temperature,
-                    transcript_path=transcript_path, trace_path=trace_path,
-                    stage_label=stage_label)
+        try:
+            text = chat([dict(m) for m in messages], model=model, tools=tools,
+                        max_tokens=max_tokens, temperature=temperature,
+                        transcript_path=transcript_path, trace_path=trace_path,
+                        stage_label=stage_label)
+        except Exception as exc:  # noqa: BLE001 — next rung is the recovery
+            print(f"[llm] error on attempt {i + 1} "
+                  f"(model={model}, max_tokens={max_tokens}): {exc} "
+                  "— trying next rung")
+            continue
         if text and text.strip():
             if i:
-                print(f"[deepseek] recovered on attempt {i + 1} "
+                print(f"[llm] recovered on attempt {i + 1} "
                       f"(model={model}, max_tokens={max_tokens})")
             return text
-        print(f"[deepseek] EMPTY answer on attempt {i + 1} "
+        print(f"[llm] EMPTY answer on attempt {i + 1} "
               f"(model={model}, max_tokens={max_tokens}) — trying next rung")
     return ""
+
+
+def describe_routing() -> str:
+    """Human-readable provider map. Safe to print; never dumps keys."""
+    slots = [
+        ("MODEL_PREDICT", config.MODEL_PREDICT),
+        ("MODEL_OUTCOME", config.MODEL_OUTCOME),
+        ("MODEL_JUDGE", config.MODEL_JUDGE),
+        ("MODEL_REFLECT", config.MODEL_REFLECT),
+        ("MODEL_DISTILL", config.MODEL_DISTILL),
+        ("MODEL_DEEPTHINK", config.MODEL_DEEPTHINK),
+    ]
+    lines = [
+        f"DEEPSEEK_API_KEY: {'set' if config.DEEPSEEK_API_KEY else 'MISSING'}",
+        f"XAI_API_KEY:      {'set' if config.XAI_API_KEY else 'MISSING'}",
+        f"XAI_BASE_URL:     {config.XAI_BASE_URL}",
+        "",
+        "slot              model                    provider  key",
+    ]
+    for name, model in slots:
+        resolved = config.resolve_model(model)
+        provider = config.provider_for(resolved)
+        key_ok = "yes" if config.has_key_for(resolved) else "NO"
+        note = f"  (resolved from {model})" if resolved != model else ""
+        lines.append(
+            f"{name:<18}{resolved:<25}{provider:<10}{key_ok}{note}"
+        )
+    lines.append("")
+    lines.append("reflect ladder: " + ", ".join(
+        f"{m}@{n}" for m, n in config.reflect_ladder()
+    ))
+    if not config.XAI_API_KEY:
+        lines.append(
+            "NOTE: SuperGrok on grok.com/Cursor is not an API. "
+            "Add XAI_API_KEY from https://console.x.ai to use Grok."
+        )
+    return "\n".join(lines)
+
+
+if __name__ == "__main__":
+    print(describe_routing())

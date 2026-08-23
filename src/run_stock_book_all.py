@@ -322,15 +322,15 @@ def run(
         _run([sys.executable, "-m", "src.finviz_digest", "--date", date], check=False)
     else:
         print("[all] skip Finviz daily digest (DONE for this day)")
-    if need("news_judge") and not skip_llm and config.DEEPSEEK_API_KEY:
+    if need("news_judge") and not skip_llm and config.has_key_for(config.MODEL_JUDGE):
         print("[all] → News judge")
         _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
         if not _exists("01_daily", "news", f"{date}_judge.md"):
             print("[all] WARN: news judge missing for", date, "— s_news will lack LLM tilts")
     elif skip_llm:
         print("[all] skip News judge (--skip-llm)")
-    elif not config.DEEPSEEK_API_KEY:
-        print("[all] skip News judge (no DEEPSEEK_API_KEY)")
+    elif not config.has_key_for(config.MODEL_JUDGE):
+        print("[all] skip News judge (no API key for", config.MODEL_JUDGE, ")")
     else:
         print("[all] skip News judge (DONE for this day)")
     if need("news_actions"):
@@ -346,11 +346,12 @@ def run(
 
     # ---- General predict ----
     if not skip_llm and need("general_predict"):
-        if config.DEEPSEEK_API_KEY:
+        if config.has_key_for(config.MODEL_PREDICT):
             print("[all] → General market predict")
             _run([sys.executable, "-m", "src.run_predict", "--date", date], check=False)
         else:
-            print("[all] skip General market predict (no DEEPSEEK_API_KEY)")
+            print("[all] skip General market predict (no API key for",
+                  config.MODEL_PREDICT, ")")
     elif skip_llm:
         print("[all] skip General market predict (--skip-llm)")
     else:
@@ -358,11 +359,12 @@ def run(
 
     # ---- Sector predicts ----
     if not skip_llm and (force_sectors or need("sector_predict")):
-        if config.DEEPSEEK_API_KEY:
+        if config.has_key_for(config.MODEL_PREDICT):
             print("[all] → Per-sector predict (all 11 for this trading day)")
             _run([sys.executable, "-m", "src.run_sector_predict", "--date", date], check=False)
         else:
-            print("[all] skip Per-sector predict (no DEEPSEEK_API_KEY)")
+            print("[all] skip Per-sector predict (no API key for",
+                  config.MODEL_PREDICT, ")")
     elif skip_llm:
         print("[all] skip Per-sector predict (--skip-llm)")
     else:

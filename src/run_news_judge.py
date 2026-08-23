@@ -135,8 +135,7 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or _latest_parsed_date() or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    if not config.DEEPSEEK_API_KEY:
-        raise SystemExit("DEEPSEEK_API_KEY not set")
+    config.require_llm(getattr(config, "MODEL_JUDGE", config.MODEL_PREDICT))
 
     report = _load_parsed(date_str)
     if not report:
@@ -149,7 +148,7 @@ def main() -> None:
     text = deepseek_client.chat(
         [{"role": "system", "content": system},
          {"role": "user", "content": user_msg}],
-        model=getattr(config, "MODEL_JUDGE", config.MODEL_PREDICT),
+        model=config.MODEL_JUDGE,
         tools=False, max_tokens=4000,
         transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_judge.json"),
         stage_label=f"NEWS_JUDGE {date_str}",
