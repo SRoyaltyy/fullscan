@@ -1,0 +1,446 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-23T17:30:28.753977-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 5.23,
+      "delta_1d": 0.04,
+      "delta_1w": 0.02,
+      "delta_1m": 0.08
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 4.69,
+      "delta_1d": 0.04,
+      "delta_1w": 0.06,
+      "delta_1m": 0.02
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 2.35,
+      "delta_1d": 0.0,
+      "delta_1w": -0.04,
+      "delta_1m": -0.04
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 2.75,
+      "delta_1d": 0.02,
+      "delta_1w": 0.04,
+      "delta_1m": 0.07
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 3.63,
+      "delta_1d": 0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 0.2,
+      "delta_1d": -0.025,
+      "delta_1w": -0.05,
+      "delta_1m": -0.704
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-20",
+      "current": 301.86,
+      "delta_1d": 161.88,
+      "delta_1w": 132.89,
+      "delta_1m": -36.5
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-21",
+      "current": 15.13,
+      "delta_1d": -0.88,
+      "delta_1w": 0.88
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.945,
+    "ratio_source": "vix/ma20",
+    "vix_ma20": 16.0,
+    "ratio_ma20": 0.945,
+    "ratio_stale": "VIX3M quote is 35 days older than VIX (2026-07-17 vs 2026-08-21)"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 87.06,
+      "pct_1d": -0.88
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 94.39,
+      "pct_1d": 0.65
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 4680.6,
+      "pct_1d": 3.64
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-21",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.1,
+      "pct_1m": -2.59
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 7691.25,
+      "pct_1d": 0.38
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-21",
+      "last": 29387.75,
+      "pct_1d": 0.3
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 66016.36,
+          "pct_1d": -0.3
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26009.46,
+          "pct_1d": 1.21
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 3905.2,
+          "pct_1d": 0.04
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6912.95,
+          "pct_1d": 0.88
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 9058.9,
+          "pct_1d": -0.27
+        }
+      },
+      "composite_avg": 0.31
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 10816.6,
+          "pct_1d": 0.64
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 26136.56,
+          "pct_1d": 0.59
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 8484.43,
+          "pct_1d": 0.37
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-21",
+          "last": 6462.22,
+          "pct_1d": 0.63
+        }
+      },
+      "composite_avg": 0.56
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.21,
+    "window": "2026-08-14..2026-08-21"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-23 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SK Hynix Is Buying Back 3.3% of Its Shares and Canceling Every One",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-buying-back-3-205701464.html",
+        "published_at": "2026-08-23T20:57:01Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Kevin Warsh seeks to soothe investors’ nerves as signs of economic strain mount - Financial Times",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSm00MzZFZ2FTbnZydXJHVzZBSW9GMXYwTF9OREg4d0VleVdtcVhpRWoyUjQxNE1XTENRbVV3WlpPaTlOdGFNY2RLYnJ1SXRFNWNFX1plZjRIeFNJdHlEWF9Hem92MmltZGVMNWc3U2JpSEc4S1I5d2xuYlliZkV0aFRpYXE?oc=5",
+        "published_at": "Sun, 23 Aug 2026 18:00:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The Custodial Account You Opened for Your Grandson Becomes Legally His the Day He Turns 21, and He Can Spend It on a Car. A 529 Never Does.",
+        "url": "https://finance.yahoo.com/markets/currencies/articles/custodial-account-opened-grandson-becomes-204323678.html",
+        "published_at": "2026-08-23T20:43:23Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "This Company Just Paid Out $6.8 Billion. Its AI Bill Was 4x That",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/company-just-paid-6-8-203855489.html",
+        "published_at": "2026-08-23T20:38:55Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CHAT vs. FTEC: Is Concentrated AI Exposure or Broad Tech Diversification the Better Play Right Now?",
+        "url": "https://finance.yahoo.com/technology/ai/articles/chat-vs-ftec-concentrated-ai-205433050.html",
+        "published_at": "2026-08-23T20:54:33Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "UBS revamps S&P 500 target for rest of 2026",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-revamps-p-500-target-202300404.html",
+        "published_at": "2026-08-23T20:23:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "If a Bear Market Is Coming, Here's What All of the Smartest Investors Are Doing Right Now",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/bear-market-coming-heres-smartest-203500789.html",
+        "published_at": "2026-08-23T20:35:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia Stock Is Treading Water Ahead of Earnings This Week - What's the Best NVDA Play?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-stock-treading-water-ahead-143002140.html",
+        "published_at": "2026-08-23T14:30:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Kevin O'Leary Says New York Mayor Deserves 'Real Estate Agent of the Year Award' for Driving People Out of the City — ‘Beyond Insane, But I Love It’",
+        "url": "https://finance.yahoo.com/real-estate/articles/kevin-oleary-says-york-mayor-193106711.html",
+        "published_at": "2026-08-23T19:31:06Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Is Israel about to split the occupied West Bank in half?",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/23/occupied-west-bank-division-ps?traffic_source=rss",
+        "published_at": "Sun, 23 Aug 2026 20:23:01 +0000"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Nvidia Q2 Preview: Strong Earnings and Low Valuation Set the Stage for Upside - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUXhoeG9BWG9yOWZCdHRSOG9GMHJhaUlFbjJPQUJYeFJ5ZTdkZGNDaXc0bTRBR1pJaXI5M2JDZkZKTnlzcVI0Zm1Sd1BuU1JwejJOQ05CR29nOEM1MEx1STJnRHFFWXJ4cFFpb3hvbW9ESkQycl8xbWhtN3psX1Y2cTJLX0xvb3ZyamRGaGhmVHBYWHBOUjFoSzlBRWw3QQ?oc=5",
+        "published_at": "Sat, 22 Aug 2026 20:52:08 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "A Twitch streamer is suing Amazon, alleging his broadcasts were used to train AI without his permission - Eurogamer",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQelg4Y3BmMmp1LWlDQ2FRSXEzWGZxUkpmaWc0THhlLVk0VzhJcDJoS0tmQzNCOUsxdVRjekNZUE5ENEMyX0JnY0ljYUZSZTNTaC1vUDVwN1VSMEhQZXd6cUt3LXBnajU4d2dacW1BY1Z6WVRyMVpYbklYeGwwb25mVXhFZ09GS1k?oc=5",
+        "published_at": "Sun, 23 Aug 2026 16:55:20 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Bad Food - Civil Discourse with Joyce Vance",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03akJGWF9pck5wZFp2S3lTUjdJMW5YMXp4eDdKamhNWjVvVldGTVBRRExLSm9lNHRNbGVVM2xmVkdPWDlUMGZnZzhoOUw1REhfeGoyUA?oc=5",
+        "published_at": "Sun, 23 Aug 2026 01:06:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "After Buying Circle Through a 42% Drop, Cathie Wood Says Analysts Cannot Fathom It",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/buying-circle-42-drop-cathie-200021183.html",
+        "published_at": "2026-08-23T20:00:21Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Japan’s stock market setup looks similar to late 2023. Here’s what it means - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSEp0SlZCb25jdXB5RnJSa3RlSU9icVc2bXg3MVQ3bFNVYTZpZ1JzT25lQk9weTZrNDVuTXdQb05OejFEVkp5YzgxLVZGR0d1UkdZSlJsREZUdzUxU0ltT1doVE1VQ0JtZmpRUWN5bE1qZmVoQXl4alA2Z1JPVThXUnNtcWZvcUhpOE1IYjIxVlhlWU9HakdEZEJpd0w3eGdKMHJDYVZCQ3FnNzluR3JiVmNyQTk3bVM2MUg3U1B6aHFXQm5jU0g2Vw?oc=5",
+        "published_at": "Sun, 23 Aug 2026 20:35:01 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Duolingo Stock Is Shaking Off AI Fears",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-stock-shaking-off-ai-141502170.html",
+        "published_at": "2026-08-23T14:15:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Oracle vs. Amazon: Which Is the Better AI Cloud Stock to Own for the Next 5 Years?",
+        "url": "https://finance.yahoo.com/technology/ai/articles/oracle-vs-amazon-better-ai-201300850.html",
+        "published_at": "2026-08-23T20:13:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "$22 Billion in Customer Deposits Did Not Stop This Chip CEO From Selling $37 Million",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/22-billion-customer-deposits-did-201236753.html",
+        "published_at": "2026-08-23T20:12:36Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Billionaire Druckenmiller makes cancer stock his #1 buy for a reason",
+        "url": "https://finance.yahoo.com/healthcare/articles/billionaire-druckenmiller-makes-cancer-stock-200700848.html",
+        "published_at": "2026-08-23T20:07:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Hugging Face has been fielding M&A interest for a deal worth at least $13 billion - Business Insider",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOanUzRFJXLTNSVlAwcGVTaS00WHhpY1dJNFBLazMxcVM0QVRDMWI0ZTRvS01iaUxDOHFUaW5aaHh3QXJ5aHhkbkJiX0llcGo2REZCM2hQXzlROHZOQ3lBX1hsMkFUUGo4M2JUMmpaYUt1M1h6b19yVkRla2xOS09wRzhCZ3RGc1E?oc=5",
+        "published_at": "Sun, 23 Aug 2026 19:21:51 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Better Dividend King to Buy Right Now: Abbott Labs or Johnson & Johnson?",
+        "url": "https://finance.yahoo.com/healthcare/articles/better-dividend-king-buy-now-202000465.html",
+        "published_at": "2026-08-23T20:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bond Market Won't Affect the Fed: Kashkari",
+        "url": "https://www.barrons.com/livecoverage/sunday0823/card/the-fed-s-kashkari-breaks-down-bond-moves-qFsBHVClRPH811m7ykgD?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-23T18:28:30Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Biggest beef plant in the Pacific Northwest is for sale and Washington farmers blame Olympia - Seattle Red",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaWpXOThxZTdVUEFUdHdrdzlXcEZGMUlhbmZ5ZVBmRGdBLS1mMWFaVXE1NnBHajQxMHhLa3NiV2I1OXRpQjI4bmlwTk5Ib3VwdXFlVUNKTk1yWGJMVmRkeVlIcERoaEtJMVN5UWNsQk5jdWJyRlZEMF9Vd2F3M0NlYUszazFhdHFDZzB3dnVR?oc=5",
+        "published_at": "Sun, 23 Aug 2026 12:05:27 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOY2p6b0JpNDlPNmtYUi1TUFR4OTVyMHRFTGJXQ0V5ZEpodVZYN2RYMDVuSElZMmRudjROZERtUHVKT2tTY2ZXUHYxWEZfTHRka1FlOWlKNXlGWG5tNF9tZ29MT0ZqRGFNdE1qNVpleU1Tdk1mY0VHbkRiNGttZ2R0cll3ZVZxSWhqTFo2RUU2Y202dC11SUUxdEJkek1zc1V4enc?oc=5",
+        "published_at": "Sun, 23 Aug 2026 13:44:53 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Your mortgage rate has a growing problem in the bond market",
+        "url": "https://finance.yahoo.com/real-estate/articles/mortgage-rate-growing-problem-bond-194700578.html",
+        "published_at": "2026-08-23T19:47:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Pfizer vs. Gilead: Which Drugmaker Has the Stronger Growth Story?",
+        "url": "https://finance.yahoo.com/healthcare/articles/pfizer-vs-gilead-drugmaker-stronger-195408536.html",
+        "published_at": "2026-08-23T19:54:08Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Gilead’s Revenue Is Accelerating, But are its Acquisitions Worth the Cost?",
+        "url": "https://finance.yahoo.com/healthcare/articles/gilead-revenue-accelerating-acquisitions-worth-195747159.html",
+        "published_at": "2026-08-23T19:57:47Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Zoetis Earnings Reveal a Divided Business, But Can its Pipeline Restore Growth?",
+        "url": "https://finance.yahoo.com/healthcare/articles/zoetis-earnings-reveal-divided-business-194924344.html",
+        "published_at": "2026-08-23T19:49:24Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Medtronic vs. Tenet Healthcare: Which Healthcare Stock Offers Better Long-Term Growth?",
+        "url": "https://finance.yahoo.com/healthcare/articles/medtronic-vs-tenet-healthcare-healthcare-194303713.html",
+        "published_at": "2026-08-23T19:43:03Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "The 30-Year Treasury Now Out-Yields Dividend Stocks by 2.2 Points. History Says What Followed the Last Time. - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQYzZjT09PVjQ3TTNzWXBacnN1Uk9Kd1F1QXdrbTNZeEhkOEEtSU1scm8xdUFLVmliQzhZMF9qWlc3OXRjYy1FMzhmUmxlZE5lT1FPOEk4Snd0bkh1N3JtZEk4dzJrTEJFLXYtanE1RTRiS1BBTkpIT2dZaTllUE1pa2hlSC1BYUEzZ0U5LUtfUzRkaTBtZFc5R1BNVG8?oc=5",
+        "published_at": "Sat, 22 Aug 2026 23:01:01 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-21",
+      "open": 7665.68,
+      "high": 7697.11,
+      "low": 7660.06,
+      "close": 7674.37,
+      "pct_change": 0.43,
+      "prev_close": 7641.16,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.48,
+        "intraday_low_pct": 0.25,
+        "intraday_high_pct": 0.73,
+        "close_position_in_range": 0.39
+      }
+    },
+    "DOW": {
+      "date": "2026-08-21",
+      "open": 52768.87,
+      "high": 53355.92,
+      "low": 52768.87,
+      "close": 53277.01,
+      "pct_change": 0.98,
+      "prev_close": 52759.21,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 1.11,
+        "intraday_low_pct": 0.02,
+        "intraday_high_pct": 1.13,
+        "close_position_in_range": 0.87
+      }
+    },
+    "NDX": {
+      "date": "2026-08-21",
+      "open": 26198.84,
+      "high": 26269.85,
+      "low": 26049.29,
+      "close": 26180.46,
+      "pct_change": 0.43,
+      "prev_close": 26067.17,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.85,
+        "intraday_low_pct": -0.07,
+        "intraday_high_pct": 0.78,
+        "close_position_in_range": 0.59
+      }
+    }
+  }
+}

@@ -1,13 +1,14 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-08-22. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-08-23. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 5 | 20% (1/5) | 40% (2/5) | -0.54% |
-| general | 1w | 3 | 0% (0/3) | 100% (3/3) | -1.09% |
+| general | 3d | 6 | 17% (1/6) | 33% (2/6) | -0.38% |
+| general | 1w | 4 | 25% (1/4) | 75% (3/4) | -0.88% |
+| general | 2w | 1 | 0% (0/1) | 100% (1/1) | -1.60% |
 | sector:Basic Materials | 3d | 2 | 50% (1/2) | 50% (1/2) | +0.44% |
 | sector:Communication Services | 3d | 2 | 50% (1/2) | 50% (1/2) | -1.60% |
 | sector:Consumer Cyclical | 3d | 2 | 0% (0/2) | 0% (0/2) | -0.95% |
@@ -24,6 +25,9 @@ Updated: 2026-08-22. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-08-20 | general | 3d | flat/mild | +0.43% (up/flat) | ❌ | ❌ |
+| 2026-08-18 | general | 1w | flat/mild | -0.23% (flat/flat) | ✅ | ❌ |
+| 2026-08-13 | general | 2w | flat/mild | -1.60% (down/mild) | ❌ | ✅ |
 | 2026-08-19 | general | 3d | down/mild | -0.44% (down/flat) | ✅ | ❌ |
 | 2026-08-17 | general | 1w | up/mild | -0.91% (down/mild) | ❌ | ✅ |
 | 2026-08-18 | general | 3d | down/mild | -0.23% (flat/flat) | ❌ | ❌ |
@@ -46,9 +50,6 @@ Updated: 2026-08-22. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-13 | sector:Industrials | 3d | up/mild | -1.19% (down/mild) | ❌ | ✅ |
 | 2026-08-13 | sector:Healthcare | 3d | up/mild | +0.80% (up/mild) | ✅ | ✅ |
 | 2026-08-13 | sector:Financial | 3d | up/mild | -0.72% (down/mild) | ❌ | ✅ |
-| 2026-08-13 | sector:Energy | 3d | down/mild | +4.29% (up/severe) | ❌ | ❌ |
-| 2026-08-13 | sector:Consumer Defensive | 3d | up/mild | -0.49% (down/flat) | ❌ | ❌ |
-| 2026-08-13 | sector:Consumer Cyclical | 3d | flat/mild | -1.76% (down/notable) | ❌ | ❌ |
 
-*218 calls still maturing (T+h close not recorded yet).*
+*219 calls still maturing (T+h close not recorded yet).*
 

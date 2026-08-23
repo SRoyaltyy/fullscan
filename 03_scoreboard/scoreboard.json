@@ -2780,6 +2780,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-08-23",
+          "actual_pct": -1.6,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -5546,6 +5558,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-23",
+          "actual_pct": -0.23,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -6460,7 +6484,20 @@
       "knowable_at_9am": null,
       "attribution_contested": null,
       "outlier_watch": null,
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-08-23",
+          "actual_pct": 0.43,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -7300,18 +7337,113 @@
         "B7_OIL_DOLLAR": 0.0
       },
       "leading_sum": -1.5,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7665.68,
+      "actual_close": 7674.37,
+      "actual_pct_change": 0.43,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.0,
+          "status": "neutral"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-23_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202608217662/sp-500-falls-143-this-week-to-767437-data-talk",
+          "date_accessed": "2026-08-23",
+          "summary": "Official DJ Market Data confirms the injected close and that Friday was a modest up day inside a down week.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.interactivebrokers.com/campus/traders-insight/ibkr-economic-landscape/services-pmi-jumping-to-20-month-high-drives-equity-recovery-but-lifts-yields-too-aug/",
+          "date_accessed": "2026-08-23",
+          "summary": "Services 56.8 vs ~54 consensus is the mid-session fundamental that both lifted equities and pushed the curve.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://theedgemalaysia.com/node/815488",
+          "date_accessed": "2026-08-23",
+          "summary": "Primary English-language wrap matching Reuters’ Friday recap: services vs Hormuz manufacturing, buyback calming one-way yield fear.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://theedgemalaysia.com/node/815488",
+          "date_accessed": "2026-08-23",
+          "summary": "Cross-asset fingerprint of growth/cyclical bid against a still-hostile long end and non-confirming energy stocks.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/ross-stores-reports-strong-second-quarter-sales-and-earnings-results-302856807.html",
+          "date_accessed": "2026-08-23",
+          "summary": "AMC Thursday print that was fully knowable at Friday’s open; cash recaps had the stock ~+4.4%.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://theedgemalaysia.com/node/815488",
+          "date_accessed": "2026-08-23",
+          "summary": "Light summer OpEx volume; path constraint, not the directional catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://theedgemalaysia.com/node/815488",
+          "date_accessed": "2026-08-23",
+          "summary": "Same-root geo/oil pressure persisted through the equity bounce; do not treat Friday as a Hormuz clear.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.pmi.spglobal.com/Public/Home/PressRelease/552d682e429640fcb8af7da17ad060c3",
+          "date_accessed": "2026-08-23",
+          "summary": "Primary-source color on composite 56.0 / services 56.8 that desks used to justify the bid.",
+          "verification": "http_403"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -7338,7 +7470,16 @@
           "confidence": 0.4
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "S&P Global flash services/composite PMI shock (56.8 / 56.0) authorizing a post-Thursday bid",
+      "key_interaction": "PMI growth shock amplified the Thursday bounce while simultaneously lifting yields — net SPX looked calm; utilities/energy showed the offset",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "utilities −2.3% and energy −0.2% on a green, oil-up tape; NDX lagged a trending Dow",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
