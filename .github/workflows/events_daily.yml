@@ -60,6 +60,16 @@ jobs:
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.run_events_catcher ${DATE:+--date "$DATE"}
 
+      # Pass 3 — the day must never end with zero events: if both passes
+      # failed (API outage / double parse fail), carry forward the previous
+      # still-live events, visibly marked as carried. Orchestrator still
+      # re-dispatches a real scan later.
+      - name: Pass 3 — carry-forward fallback (never zero events)
+        continue-on-error: true
+        env:
+          DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.events_fallback ${DATE:+--date "$DATE"}
+
       - name: Commit event scan outputs
         if: always()
         run: |

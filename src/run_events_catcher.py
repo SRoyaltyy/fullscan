@@ -29,7 +29,7 @@ from zoneinfo import ZoneInfo
 
 from . import config, deepseek_client
 from .event_context import EVENTS_DIR
-from .run_events import extract_json, _windows
+from .run_events import _repair_json, extract_json, _windows
 
 RUBRIC_PATH = os.path.join(config.GROUNDING, "event_catcher_rubric.md")
 SEARCH_ROUNDS = 12
@@ -186,6 +186,14 @@ def main() -> None:
     missed = []
     if data:
         missed = data.get("missed_events") or data.get("events") or []
+    if not missed and replacing:
+        # We are the day's only source — a formatting slip must not cost the
+        # whole day. Same no-tools repair pass the primary uses.
+        fixed = _repair_json(text)
+        if fixed:
+            missed = fixed.get("events") or fixed.get("missed_events") or []
+            if missed:
+                print(f"[catcher] repair pass recovered {len(missed)} events")
     if not missed:
         print("[catcher] WARN: catcher JSON parse empty — keeping primary as-is")
 
