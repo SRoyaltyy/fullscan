@@ -1,0 +1,66 @@
+name: Deepthink (weekly sauna)
+
+# Weekly slow-thinking session: deepseek-reasoner gets the whole system's
+# evidence (report card, hit board, backtest, paper, weight tuner ledger,
+# gap scan, missing-input hypotheses, lesson efficacy) with no daily
+# incident to explain, and must emerge with 3 red-teamed structural
+# proposals — each with a cheap test and a falsifier.
+#
+# Sunday 13:00 UTC: after Sunday's weekly consolidation lands (15:00 UTC
+# is promote; this runs before so its output is fresh context Monday).
+
+on:
+  schedule:
+    - cron: "0 13 * * 0"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (default: today ET)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deepthink
+  cancel-in-progress: false
+
+jobs:
+  think:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install requests
+
+      - name: Deepthink session (3 rounds)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.deepthink ${DATE:+--date "$DATE"}
+
+      - name: Commit
+        if: always()
+        run: |
+          set -uo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 02_lessons/deepthink/ 02_lessons/hypotheses/ \
+                  03_scoreboard/DEEPTHINK.md || true
+          if git diff --staged --quiet; then
+            echo "No deepthink output to commit"
+            exit 0
+          fi
+          git commit -m "auto: deepthink session [$(date -u +%F)]"
+          git pull --rebase origin main || git pull origin main || true
+          git push origin main || {
+            git pull --rebase origin main || true
+            git push origin main || echo "[warn] push failed"
+          }
+          exit 0
