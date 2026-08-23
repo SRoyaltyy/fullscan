@@ -140,8 +140,12 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
     last = None
     for attempt in range(retries):
         try:
+            # (connect, read) tuple: an unreachable gateway (e.g. a
+            # GitHub-hosted runner that can't see the ECS loopback, or a
+            # firewalled port that drops SYNs) fails in seconds instead
+            # of eating the full read timeout before DeepSeek fallback.
             r = requests.post(url, headers=headers, json=payload,
-                              timeout=config.OPENCLAW_TIMEOUT)
+                              timeout=(15, config.OPENCLAW_TIMEOUT))
             if r.status_code in (429, 500, 502, 503):
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 time.sleep(15 * (attempt + 1))

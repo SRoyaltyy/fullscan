@@ -57,7 +57,8 @@ def test_openclaw_primary_wins() -> None:
     calls = []
 
     def fake_post(url, headers=None, json=None, timeout=None):
-        calls.append({"url": url, "headers": headers, "body": json})
+        calls.append({"url": url, "headers": headers, "body": json,
+                      "timeout": timeout})
         return _fake_response(200, "GROK ANSWER")
 
     with mock.patch.object(dc.requests, "post", side_effect=fake_post):
@@ -71,6 +72,8 @@ def test_openclaw_primary_wins() -> None:
     assert c["body"]["model"] == config.OPENCLAW_AGENT
     assert c["headers"]["x-openclaw-model"] == config.OPENCLAW_BACKEND_MODEL
     assert c["headers"]["x-openclaw-session-key"].startswith("fullscan-")
+    # connect timeout must be capped (tuple), not the full read timeout
+    assert isinstance(c["timeout"], tuple) and c["timeout"][0] <= 30
 
 
 def test_native_search_note_only_when_tools() -> None:
