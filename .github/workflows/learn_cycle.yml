@@ -44,6 +44,12 @@ jobs:
           echo "======== mutable_policy (head) ========"
           head -80 00_grounding/mutable_policy.md || true
 
+      - name: Lesson efficacy (did promoted lessons change outcomes?)
+        continue-on-error: true
+        run: |
+          python -m src.lesson_efficacy
+          head -40 03_scoreboard/LESSON_EFFICACY.md || true
+
       - name: Commit policy + learnings + hypotheses
         run: |
           git config user.name "Market-Bot-Automaton"
@@ -51,6 +57,8 @@ jobs:
           git add 00_grounding/mutable_policy.md \
                   00_grounding/weather_rules_proposals.json \
                   03_scoreboard/LEARNINGS.md \
+                  03_scoreboard/LESSON_EFFICACY.md \
+                  03_scoreboard/lesson_efficacy.json \
                   01_daily/*_learnings.md \
                   02_lessons/hypotheses/ \
                   02_lessons/active/ \
