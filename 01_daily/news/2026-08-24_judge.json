@@ -1,23 +1,20 @@
 {
  "risk_tilt": "off",
  "macros": [
-  "mixed",
   "hawkish",
   "bearish",
-  "mixed",
   "hawkish",
   "bearish"
  ],
  "sector_tilts": {
-  "Precious/Xlb-Miners": "bullish",
-  "Software Vs Semis": "mixed"
+  "Energy": "bullish",
+  "Gold": "bullish",
+  "Technology": "mixed"
  },
  "tickers": {
-  "AU": 5.5,
-  "XLK": -3.0,
-  "XLU": -3.0,
-  "XLE": -1.5
+  "XLE": 8.0,
+  "GDX": 4.0
  },
- "b1_inject": "NEWS_JUDGE: n=7 rescued=4\nMACRO rates: [mixed] Warsh first JH + US inflation is the week\u2019s binary; hawkish-hold prior vs pre-speech yield dip (regime/1d-1w)\nMACRO rates: [hawkish] Officials lean higher rates if inflation stays high; last week\u2019s long-end already cut indices; MS sees more yield upside (session/1d-1w)\nMACRO risk: [bearish] Toughest US Iran sanctions; shares dip with oil lower \u2014 geo risk-off, not a crude squeeze (session/1d-1w)\nSECTOR precious/XLB-miners: [bullish] Gold 3-month high, AU/Barrick +8%; hedge into Warsh \u2014 miners basket only, not XLB severe (miners/XLB sleeve)\nSECTOR software vs semis: [mixed] ADSK/software rotation vs APH/ARM/Fabrinet yield+Asia hardware hit (IGV vs SOXX)\nINTERACTION: One rates cluster (JH+CPI+long-end); do not add Hormuz/XLE-up or XLY oil-shock while crude is down\nWATCH: Pre-speech bond bid can fade on a hawkish Warsh or hot inflation; gold is a hedge, not a cut confirmation",
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=3\nMACRO rates: [hawkish] Long-end yields already cut the week; inflation + Warsh still two-sided (session/1d-1w)\nMACRO risk: [bearish] Trump economic-warfare threats lifting yields and oil; SPX beta offered (session)\nMACRO rates: [dovish] Unconfirmed Bessent TGA ~$1T buybacks = only yield-relief offset (session)\nSECTOR energy: [bullish] Oil firmer on warfare threats (XLE)\nSECTOR gold: [bullish] 3-mo high / miners +8% is a hedge into data, not easing (GDX)\nSECTOR tech: [mixed] NVDA earnings is the XLK/SMH event; Fool notes are not a beat (XLK)\nINTERACTION: Yields+warfare+oil = one risk-off/rates cluster; gold \u2260 XLB floor; NVDA override gated on the print\nWATCH: TGA buybacks sourced only; do not one-way S0 on CPI/Warsh day",
  "date": "2026-08-24"
 }
