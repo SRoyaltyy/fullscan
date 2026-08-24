@@ -3,72 +3,123 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Paper Trading — Stock Book Simulation</title>
 <style>
- body{margin:0;background:#0f1420;color:#dfe6f2;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
- .wrap{max-width:1180px;margin:0 auto;padding:16px 20px 40px}
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --chip:#2a3450; --day:#121826; --gold:#fbbf24;
+ }
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px}
  h1{font-size:20px;margin:0 0 4px}
- .sub{color:#8b96ab;font-size:12px;margin:0 0 12px}
- .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:0 0 14px}
- .card{background:#171e2e;border:1px solid #262f45;border-radius:10px;padding:10px 12px}
- .card b{display:block;font-size:17px;margin-top:2px}
- .pos{color:#4ade80}.neg{color:#f87171}.mut{color:#8b96ab}
- canvas{width:100%;height:380px;background:#171e2e;border:1px solid #262f45;border-radius:10px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}
+ canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
  .legend span{cursor:pointer;padding:2px 10px;border-radius:12px;border:1px solid #333;font-size:12px;user-select:none}
- table{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:12.5px}
- th,td{padding:6px 8px;border-bottom:1px solid #232c42;text-align:right;white-space:nowrap}
- th{color:#8b96ab;font-weight:600;text-align:right} td:first-child,th:first-child{text-align:left}
+ table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:12.5px}
+ th,td{padding:6px 8px;border-bottom:1px solid var(--line2);text-align:right;white-space:nowrap}
+ th{color:var(--mut);font-weight:600;text-align:right} td:first-child,th:first-child{text-align:left}
  h2{font-size:15px;margin:18px 0 6px;color:#aeb9cf}
- .note{color:#66708a;font-size:11.5px;margin-top:8px}
+ .note{color:var(--dim);font-size:11.5px;margin-top:8px}
  .bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
- .bar input,.bar select{background:#171e2e;color:#dfe6f2;border:1px solid #262f45;border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace}
- .chip{cursor:pointer;padding:7px 12px;border-radius:999px;border:1px solid #2a3450;background:#171e2e;color:#aeb9cf;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
- .chip.on{background:#dfe6f2;color:#0f1420;border-color:#dfe6f2}
- .chip.spy{opacity:.85}
- td.side-buy{color:#4ade80;font-weight:700;text-align:left}
- td.side-sell{color:#f87171;font-weight:700;text-align:left}
+ .bar input,.bar select{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace}
+ .chip{cursor:pointer;padding:7px 12px;border-radius:999px;border:1px solid var(--chip);background:var(--card);color:#aeb9cf;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+ td.side-buy{color:var(--pos);font-weight:700;text-align:left}
+ td.side-sell{color:var(--neg);font-weight:700;text-align:left}
  td.tick,td.left{text-align:left}
- .how{background:#171e2e;border:1px solid #262f45;border-radius:10px;padding:12px 14px;margin:16px 0 8px}
+ .how{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:16px 0 8px}
  .how h2{margin:0 0 8px}
  .how ol{margin:0;padding-left:18px}
  .how li{margin:0 0 6px}
- .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#fbbf24}
- h3.sleeve-head{font-size:13px;margin:18px 0 4px;color:#dfe6f2;font-family:ui-monospace,Menlo,Consolas,monospace}
- details.raw-fills{margin:4px 0 18px}
- details.raw-fills summary{cursor:pointer;font-size:12px}
- h3.pair-head{font-size:12px;margin:10px 0 4px;color:#8b96ab;text-transform:uppercase;letter-spacing:.04em}
- td.ctx,th.ctx{text-align:left;white-space:normal;max-width:220px;font-size:11px;color:#8b96ab}
+ .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--gold)}
+ h3.sleeve-head{font-size:13px;margin:18px 0 4px;color:var(--fg);font-family:ui-monospace,Menlo,Consolas,monospace}
+ details{margin:14px 0}
+ details>summary{cursor:pointer;color:#aeb9cf;font-size:15px;font-weight:600}
+ details.raw-fills summary,details.curve-box summary{font-size:15px}
+ h3.pair-head{font-size:12px;margin:10px 0 4px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+ td.ctx,th.ctx{text-align:left;white-space:normal;max-width:220px;font-size:11px;color:var(--mut)}
  td.sector,th.sector{text-align:left}
  td.cash{font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
  td.ab{font-family:ui-monospace,Menlo,Consolas,monospace}
- .fill-day{margin:14px 0 6px;color:#8b96ab;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
- .cash-pill{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;color:#aeb9cf}
+
+ /* blotter layout */
+ .tape{margin:8px 0 22px}
+ .day{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 12px;overflow:hidden}
+ .day-h{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between;
+   padding:8px 12px;background:var(--day);border-bottom:1px solid var(--line);font-size:12px;color:#aeb9cf;
+   position:sticky;top:0;z-index:1}
+ .day-h b{color:var(--fg);font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .cash-pill{font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;color:var(--fg)}
+ .fill{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:2px 12px;padding:10px 12px;
+   border-bottom:1px solid var(--line2);align-items:start}
+ .fill:last-child{border-bottom:0}
+ .fill-side{font-weight:700;font-size:12px;letter-spacing:.04em;padding-top:2px}
+ .fill-top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+ .fill-top b{font-size:15px}
+ .fill-sec{color:var(--mut);font-size:12px}
+ .fill-meta{color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}
+ .fill-ab{font-size:12px;margin-top:2px}
+ .fill-ab .abn{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600;margin-right:8px}
+ .fill-cash{text-align:right;font-variant-numeric:tabular-nums}
+ .fill-cash span{display:block;color:var(--dim);font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+ .fill-cash b{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;font-weight:600}
+ .sleeve-block{margin:0 0 18px}
+ @media (max-width:640px){
+   .fill{grid-template-columns:48px minmax(0,1fr);gap:4px 10px}
+   .fill-cash{grid-column:2;text-align:left;margin-top:2px}
+   .fill-cash span{display:inline;margin-right:6px}
+   .fill-cash b{display:inline;font-size:14px}
+   canvas{height:220px}
+   .wrap{padding:12px 12px 40px}
+ }
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
 <div class="cards" id="cards"></div>
-
-<h2 id="curveTitle">Equity curve</h2>
 <div class="bar" id="sleeveBar"></div>
-<canvas id="chart" height="380"></canvas>
+
+<section id="tapeSection">
+<h2 id="tapeTitle">Order tape</h2>
+<p class="mut" id="tapeHint" style="margin:0 0 8px"></p>
+<div class="bar">
+ <select id="sideMode" aria-label="Side">
+  <option value="all">Buys + sells</option>
+  <option value="buy">Buys only</option>
+  <option value="sell">Sells only</option>
+ </select>
+ <input id="fillQ" placeholder="Ticker (e.g. CVX)" aria-label="Filter ticker">
+ <span class="mut" id="fillCount"></span>
+</div>
+<div class="tape" id="tapeHost"></div>
+</section>
+
+<details class="curve-box" open>
+<summary id="curveTitle">Equity curve</summary>
+<canvas id="chart" height="280"></canvas>
 <div class="legend" id="legend"></div>
+</details>
 
-<section class="how" id="how"></section>
-
-<h2 id="fillsTitle">Round-trips — closed vs still open</h2>
-<p class="mut" id="fillsHint" style="margin:0 0 6px"></p>
+<details>
+<summary id="fillsTitle">Round-trips — closed vs still open</summary>
+<p class="mut" id="fillsHint" style="margin:8px 0 6px"></p>
 <div class="bar">
  <select id="pairMode" aria-label="Status">
   <option value="all">Closed + open</option>
   <option value="closed">Closed only (bought then sold)</option>
   <option value="open">Open only (bought, not sold)</option>
  </select>
- <input id="fillQ" placeholder="Ticker (e.g. CVX)" aria-label="Filter ticker">
- <span class="mut" id="fillCount"></span>
 </div>
 <div id="fillsHost"></div>
-<details class="raw-fills" open>
- <summary class="mut">Raw order tape — cash left, sector, AB + context per fill</summary>
- <div id="rawFills"></div>
+</details>
+
+<details>
+<summary>How a buy / sell is decided</summary>
+<section class="how" id="how" style="margin-top:8px"></section>
 </details>
 
 <h2>Sleeve statistics</h2>
@@ -85,7 +136,7 @@ const sleeveNames = (D.stats||[]).map(s=>s.sleeve);
 const HOLD = (D.rules && D.rules.hold_days) || { "1d":1,"3d":3,"1w":5,"2w":10,"1m":21 };
 const HOLD_ON = !!(D.rules && D.rules.hold_applied);
 const hidden = new Set();
-let sleeveFilter = "all";
+let sleeveFilter = sleeveNames.includes("1d_top") ? "1d_top" : (sleeveNames[0] || "all");
 
 function money(n){if(n==null||n==='')return '—';return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
 function px(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:4});}
@@ -97,13 +148,19 @@ function fmtAb(n){
   const i=Math.round(x);
   return (i>=0?'+':'')+i;
 }
-function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({"&":"&","<":"<",">":">",'"':"""}[c]));}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&','<':'<','>':'>','"':'"'}[c]));}
 function horizonOf(s){return (s||"").split("_")[0];}
 function minHold(s){return HOLD[horizonOf(s)] ?? 1;}
 function sessionsBetween(a,b){
   const ia=D.dates.indexOf(a), ib=D.dates.indexOf(b);
   if(ia<0||ib<0) return null;
   return ib-ia;
+}
+function lastCashFor(sleeve){
+  const rows=(D.trades||[]).filter(t=>t.sleeve===sleeve);
+  if(!rows.length) return null;
+  const v=rows[rows.length-1].cash_after;
+  return v==null?null:v;
 }
 
 document.getElementById('gen').textContent =
@@ -126,13 +183,15 @@ function cardSet(){
     return cards;
   }
   const s=D.stats.find(x=>x.sleeve===sleeveFilter);
-  const cards=[["This sleeve",s||{sleeve:sleeveFilter,return_pct:0}]];
+  const cash = lastCashFor(sleeveFilter);
+  const cards=[];
+  if(s) cards.push(["This sleeve",s]);
+  cards.push(["Usable cash",{sleeve:"after last fill",return_pct:cash,money:true}]);
   if(spyR!=null) cards.push(["SPY benchmark",{sleeve:"SPY",return_pct:+spyR.toFixed(2)}]);
   if(s){
     cards.push(["Realized P/L",{sleeve:(s.closed||0)+" closed",return_pct:s.realized,money:true}]);
     cards.push(["Unrealized P/L",{sleeve:(s.open||0)+" open",return_pct:s.unrealized,money:true}]);
     cards.push(["Closed win %",{sleeve:(s.closed_wins||0)+"/"+(s.closed||0),return_pct:s.win_rate}]);
-    cards.push(["Open win %",{sleeve:(s.open_wins||0)+"/"+(s.open||0),return_pct:s.open_win_rate}]);
   }
   cards.push(["Min hold",{sleeve:horizonOf(sleeveFilter),return_pct:minHold(sleeveFilter),hold:true}]);
   return cards;
@@ -145,7 +204,7 @@ function renderCards(){
     const cls=isHold?'mut':(val>=0?'pos':'neg');
     let shown;
     if(isHold) shown = val+' session'+(val===1?'':'s');
-    else if(isMoney) shown = money(val||0);
+    else if(isMoney) shown = money(val);
     else if(c[0].indexOf("win")>=0) shown = (val==null?'—':val+'%');
     else shown = val+'%';
     return `<div class="card"><span class="mut">${c[0]}</span><b>${c[1].sleeve}</b><span class="${cls}">${shown}</span></div>`;
@@ -171,7 +230,7 @@ function visibleKeys(){
 
 function draw(){
  const cv=document.getElementById('chart'),ctx=cv.getContext('2d');
- const W=cv.width=cv.clientWidth*2,H=cv.height=760;ctx.scale(1,1);
+ const W=cv.width=cv.clientWidth*2,H=cv.height=560;ctx.scale(1,1);
  ctx.clearRect(0,0,W,H);
  const vis=visibleKeys();
  let lo=Infinity,hi=-Infinity;
@@ -223,9 +282,8 @@ function renderHow(){
       <li><b>Pick the list.</b> <code>_top</code> = first 10 BUY names on that horizon’s stock book. <code>_size</code> = top 3 from each bucket (large+ / mid / small-micro). Horizon is the forecast window of the ranking, not a calendar rebalance.</li>
       <li><b>Buy</b> when a name <em>enters</em> this sleeve’s list and we don’t already hold it. New names split leftover cash equally; whole shares only. Same-day round-trip of the same ticker does not happen — exits run first, then entries.</li>
       <li><b>Sell</b> when a name <em>drops off</em> the list. ${holdLine}</li>
-      <li><b>Not 10 opens and 10 closes.</b> Fills are that book date’s close, not the open. A sleeve does <em>not</em> always trade 10 names — leftover cash after each fill is the usable cash still in the sleeve (the number you would still have to deploy). Tiny leftovers skip the next name.</li>
+      <li><b>Not 10 opens and 10 closes.</b> Fills are that book date’s close, not the open. A sleeve does <em>not</em> always trade 10 names — leftover cash after each fill is the usable cash still in the sleeve. Tiny leftovers skip the next name.</li>
       <li><b>Sector / AB</b> are as of that fill’s book date. AB is the day’s checklist score + LEAD/LAG context when the file exists; older dates before AB was wired show —.</li>
-      <li><b>Why sleeves used to trade on the same day:</b> the engine followed “still on the list?” every book date and ignored the hold floor. 1d and 1m lists both churn daily, so the blotter printed buys/sells on every date for every sleeve. Isolation + the hold floor is how you tell them apart.</li>
     </ol>`;
 }
 
@@ -300,68 +358,106 @@ function sleevePairBlock(sleeve, rows){
   return title+body;
 }
 
-function fillRowsHtml(rows){
-  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares @ price</th><th>Cash left</th><th>Amount</th><th>P/L on this fill</th></tr>';
-  if(!rows.length){
-    return '<table>'+head+'<tr><td colspan="10" class="mut">No fills in this sleeve.</td></tr></table>';
+function fillCard(t){
+  const sideCls=t.side==='sell'?'neg':'pos';
+  const side=t.side==='sell'?'SELL':'BUY';
+  const ab=fmtAb(t.ab_score);
+  const ctx=t.ab_context || (t.ab_score==null ? 'not scored that day' : '—');
+  const ctxCls=(String(t.ab_context||'').indexOf('LEAD')>=0)?'pos':(String(t.ab_context||'').indexOf('LAG')>=0)?'neg':'mut';
+  const pnl=t.realized_pnl;
+  const pnlBit=(pnl==null||pnl==='')?'':` · P/L ${money(pnl)}`;
+  return `<article class="fill">
+    <div class="fill-side ${sideCls}">${side}</div>
+    <div>
+      <div class="fill-top"><b>${esc(t.ticker)}</b><span class="fill-sec">${esc(t.sector||'—')}</span></div>
+      <div class="fill-meta">${t.shares} sh @ ${px(t.price)} · ${money(t.amount)}${pnlBit}</div>
+      <div class="fill-ab"><span class="abn">${ab}</span><span class="${ctxCls}">${esc(ctx)}</span></div>
+    </div>
+    <div class="fill-cash"><span>cash left</span><b>${money(t.cash_after)}</b></div>
+  </article>`;
+}
+
+function tapeBlock(rows){
+  if(!rows.length) return '<p class="mut">No fills in this view.</p>';
+  const days=[];
+  let cur=null;
+  for(const t of rows){
+    if(!cur || cur.date!==t.date){
+      cur={date:t.date, fills:[], start:t.cash_before, end:t.cash_after, buys:0, sells:0};
+      days.push(cur);
+    }
+    cur.fills.push(t);
+    cur.end=t.cash_after;
+    if(t.side==='buy') cur.buys++; else cur.sells++;
   }
-  let lastDate='';
-  return '<table>'+head+rows.map(t=>{
-    const sideCls=t.side==='sell'?'side-sell':'side-buy';
-    const pnl=t.realized_pnl;
-    const pnlCell=pnl==null||pnl===''?'<td class="mut">—</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
-    const ab = fmtAb(t.ab_score);
-    const ctx = t.ab_context || (t.ab_score==null ? 'AB not scored this day' : '—');
-    const dayRow = (t.date!==lastDate) ? `<tr><td colspan="10" class="fill-day">${t.date} · leftover after this session’s last fill shown per row</td></tr>` : '';
-    lastDate=t.date;
-    return dayRow+`<tr>
-      <td>${t.date}</td>
-      <td class="${sideCls}">${t.side.toUpperCase()}</td>
-      <td class="tick">${esc(t.ticker)}</td>
-      <td class="sector">${esc(t.sector||'—')}</td>
-      <td class="ab">${ab}</td>
-      <td class="ctx">${esc(ctx)}</td>
-      <td>${t.shares} sh @ ${px(t.price)}</td>
-      <td class="cash">${money(t.cash_after)}</td>
-      <td>${money(t.amount)}</td>
-      ${pnlCell}
-    </tr>`;
-  }).join('')+'</table>';
+  return days.map(d=>`<div class="day">
+    <div class="day-h">
+      <b>${d.date}</b>
+      <span class="mut">${d.sells} sell · ${d.buys} buy</span>
+      <span class="cash-pill">${money(d.start)} → ${money(d.end)}</span>
+    </div>
+    ${d.fills.map(fillCard).join('')}
+  </div>`).join('');
 }
 
 function matchedFills(sleeve){
   const q=document.getElementById('fillQ').value.trim().toUpperCase();
-  // Chronological: leftover cash should read as a running balance, not newest-first.
+  const side=document.getElementById('sideMode').value;
   return (D.trades||[]).filter(t=>{
     if(sleeve && t.sleeve!==sleeve) return false;
+    if(side!=='all' && t.side!==side) return false;
     if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
     return true;
   });
 }
 
+function renderTape(){
+  const host=document.getElementById('tapeHost');
+  document.getElementById('tapeTitle').textContent=
+    sleeveFilter==='all' ? 'Order tape — leftover cash after each fill' : 'Order tape — '+sleeveFilter;
+  document.getElementById('tapeHint').textContent=
+    'Chronological. Sells free cash, then new names split whatever is left. Cash left is usable sleeve cash after that fill — not equity. Sector and AB are as of that book date.';
+  if(sleeveFilter==='all'){
+    host.innerHTML=sleeveNames.map(s=>{
+      const rows=matchedFills(s);
+      return `<div class="sleeve-block"><h3 class="sleeve-head">${s} · ${rows.length} fills</h3>${tapeBlock(rows)}</div>`;
+    }).join('');
+  } else {
+    host.innerHTML=tapeBlock(matchedFills(sleeveFilter));
+  }
+  const n=sleeveFilter==='all'
+    ? (D.trades||[]).filter(t=>{
+        const q=document.getElementById('fillQ').value.trim().toUpperCase();
+        const side=document.getElementById('sideMode').value;
+        if(side!=='all' && t.side!==side) return false;
+        if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
+        return true;
+      }).length
+    : matchedFills(sleeveFilter).length;
+  document.getElementById('fillCount').textContent=n+' fill'+(n===1?'':'s');
+}
+
 function renderFills(){
   const host=document.getElementById('fillsHost');
-  const raw=document.getElementById('rawFills');
   document.getElementById('curveTitle').textContent=
     sleeveFilter==='all' ? 'Equity curves (all sleeves)' : 'Equity curve — '+sleeveFilter+' vs SPY';
   const rows=pairRows();
   const nC=rows.filter(r=>r.status==='closed').length;
   const nO=rows.filter(r=>r.status==='open').length;
-  document.getElementById('fillCount').textContent=nC+' closed · '+nO+' open';
   document.getElementById('fillsTitle').textContent=
-    sleeveFilter==='all' ? 'Round-trips — each sleeve separately' : 'Round-trips — '+sleeveFilter;
+    sleeveFilter==='all'
+      ? 'Round-trips — each sleeve separately ('+nC+' closed · '+nO+' open)'
+      : 'Round-trips — '+sleeveFilter+' ('+nC+' closed · '+nO+' open)';
   document.getElementById('fillsHint').textContent=
-    'Closed = bought then sold the same lot (FIFO). Open = bought and still holding. Raw tape (below) is every fill with leftover sleeve cash, sector, and that day’s AB score + context. Fills are signal-day close, not 10 market-on-open tickets.';
+    'Closed = bought then sold the same lot (FIFO). Open = bought and still holding. Sector / AB are from the buy date.';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const sub=rows.filter(r=>r.sleeve===s);
       return sleevePairBlock(s, sub);
     }).join('');
-    raw.innerHTML=sleeveNames.map(s=>'<h3 class="sleeve-head">'+s+'</h3>'+fillRowsHtml(matchedFills(s))).join('');
     return;
   }
   host.innerHTML=sleevePairBlock('', rows);
-  raw.innerHTML=fillRowsHtml(matchedFills(sleeveFilter));
 }
 
 function renderStats(){
@@ -401,7 +497,6 @@ function renderPos(){
   }
   const all=(D.positions||[]);
   if(sleeveFilter==='all'){
-    // keep one table but grouped: sort by sleeve so they aren't mashed randomly
     const order=sleeveNames;
     const sorted=[...all].sort((a,b)=>order.indexOf(a.sleeve)-order.indexOf(b.sleeve) || a.ticker.localeCompare(b.ticker));
     document.getElementById(hostId).innerHTML=tableFor(sorted);
@@ -416,12 +511,14 @@ function renderAll(){
   renderLegend();
   draw();
   renderHow();
+  renderTape();
   renderFills();
   renderStats();
   renderPos();
 }
 document.getElementById('pairMode').onchange=renderFills;
-document.getElementById('fillQ').oninput=renderFills;
+document.getElementById('fillQ').oninput=function(){ renderTape(); renderFills(); };
+document.getElementById('sideMode').onchange=renderTape;
 addEventListener('resize',draw);
 renderAll();
 const F=D.fees||{};
