@@ -69,6 +69,14 @@
  .fill-cash{text-align:right;font-variant-numeric:tabular-nums}
  .fill-cash span{display:block;color:var(--dim);font-size:10px;letter-spacing:.04em;text-transform:uppercase}
  .fill-cash b{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;font-weight:600}
+ .pair{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
+ .pair-h{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:space-between;
+   padding:8px 12px;background:var(--day);border-bottom:1px solid var(--line);font-size:12px;color:#aeb9cf}
+ .pair-h b{color:var(--fg);font-size:15px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .pair-legs{display:grid;grid-template-columns:1fr 1fr}
+ .leg{padding:10px 12px;min-width:0}
+ .leg + .leg{border-left:1px solid var(--line2)}
+ .leg-k{font-size:10px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
  .sleeve-block{margin:0 0 18px}
  #stats,#pos{display:block;overflow-x:auto;max-width:100%}
  @media (max-width:640px){
@@ -81,6 +89,8 @@
    .bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}
    .chip,.bar input,.bar select{flex:0 0 auto}
    table{display:block;overflow-x:auto;max-width:100%}
+   .pair-legs{grid-template-columns:1fr}
+   .leg + .leg{border-left:0;border-top:1px solid var(--line2)}
  }
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
@@ -91,11 +101,17 @@
 <section id="tapeSection">
 <h2 id="tapeTitle">Order tape</h2>
 <p class="mut" id="tapeHint" style="margin:0 0 8px"></p>
+<div class="bar" id="viewBar"></div>
 <div class="bar">
  <select id="sideMode" aria-label="Side">
   <option value="all">Buys + sells</option>
   <option value="buy">Buys only</option>
   <option value="sell">Sells only</option>
+ </select>
+ <select id="pairStatus" aria-label="Pair status" style="display:none">
+  <option value="all">Closed + open</option>
+  <option value="closed">Closed only</option>
+  <option value="open">Open only (unpaired buys)</option>
  </select>
  <input id="fillQ" placeholder="Ticker (e.g. CVX)" aria-label="Filter ticker">
  <span class="mut" id="fillCount"></span>
@@ -142,6 +158,7 @@ const HOLD = (D.rules && D.rules.hold_days) || { "1d":1,"3d":3,"1w":5,"2w":10,"1
 const HOLD_ON = !!(D.rules && D.rules.hold_applied);
 const hidden = new Set();
 let sleeveFilter = sleeveNames.includes("1d_top") ? "1d_top" : (sleeveNames[0] || "all");
+let viewMode = "tape";
 
 function money(n){if(n==null||n==='')return '—';return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
 function px(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:4});}
@@ -288,7 +305,7 @@ function renderHow(){
       <li><b>Buy</b> when a name <em>enters</em> this sleeve’s list and we don’t already hold it. New names split leftover cash equally; whole shares only. Same-day round-trip of the same ticker does not happen — exits run first, then entries.</li>
       <li><b>Sell</b> when a name <em>drops off</em> the list. ${holdLine}</li>
       <li><b>Not 10 opens and 10 closes.</b> Fills are that book date’s close, not the open. A sleeve does <em>not</em> always trade 10 names — leftover cash after each fill is the usable cash still in the sleeve. Tiny leftovers skip the next name.</li>
-      <li><b>Sector / AB</b> are as of that fill’s book date. AB is the day’s checklist score + LEAD/LAG context when the file exists; older dates before AB was wired show —.</li>
+      <li><b>Sector / AB</b> are as of that fill’s book date. AB is the day’s checklist score + LEAD/LAG context when the file exists; older dates before AB was wired show —. <b>By pair</b> matches each buy to its later sell and shows that day’s AB on both sides.</li>
     </ol>`;
 }
 
@@ -307,7 +324,7 @@ function pairRows(){
 function closedTable(rows){
   const list=rows.filter(r=>r.status==='closed')
     .sort((a,b)=>(b.sell_date||'').localeCompare(a.sell_date||'') || a.ticker.localeCompare(b.ticker));
-  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Sold</th><th>Held</th><th>Realized P/L</th></tr>';
+  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>Shares</th><th>Bought</th><th>Buy AB</th><th class="ctx">Buy ctx</th><th>Sold</th><th>Sell AB</th><th class="ctx">Sell ctx</th><th>Held</th><th>Realized P/L</th></tr>';
   if(!list.length){
     return '<p class="mut" style="margin:4px 0 10px">No closed round-trips in this view.</p>';
   }
@@ -316,11 +333,13 @@ function closedTable(rows){
     return `<tr>
       <td class="tick"><b>${esc(r.ticker)}</b></td>
       <td class="sector">${esc(r.sector||'—')}</td>
-      <td class="ab">${fmtAb(r.ab_score)}</td>
-      <td class="ctx">${esc(r.ab_context||'—')}</td>
       <td>${r.shares}</td>
       <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
+      <td class="ab">${fmtAb(r.ab_score)}</td>
+      <td class="ctx">${esc(r.ab_context||'—')}</td>
       <td class="left">${r.sell_date} @ ${px(r.sell_px)}</td>
+      <td class="ab">${fmtAb(r.sell_ab_score)}</td>
+      <td class="ctx">${esc(r.sell_ab_context||'—')}</td>
       <td>${r.held_cal_days!=null?r.held_cal_days+'d':'—'}</td>
       <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
     </tr>`;
@@ -376,7 +395,7 @@ function fillCard(t){
     <div>
       <div class="fill-top"><b>${esc(t.ticker)}</b><span class="fill-sec">${esc(t.sector||'—')}</span></div>
       <div class="fill-meta">${t.shares} sh @ ${px(t.price)} · ${money(t.amount)}${pnlBit}</div>
-      <div class="fill-ab"><span class="abn">${ab}</span><span class="${ctxCls}">${esc(ctx)}</span></div>
+      <div class="fill-ab"><span class="abn">${ab}</span> <span class="${ctxCls}">${esc(ctx)}</span></div>
     </div>
     <div class="fill-cash"><span>cash left</span><b>${money(t.cash_after)}</b></div>
   </article>`;
@@ -416,12 +435,113 @@ function matchedFills(sleeve){
   });
 }
 
+function abLine(score, ctx){
+  const ab=fmtAb(score);
+  const has=!(score==null || score==='');
+  const c=ctx || (has ? '—' : 'not scored that day');
+  const s=String(ctx||'');
+  const cls=s.indexOf('LEAD')>=0?'pos':(s.indexOf('LAG')>=0?'neg':'mut');
+  return `<div class="fill-ab"><span class="abn">${ab}</span> <span class="${cls}">${esc(c)}</span></div>`;
+}
+
+function pairCard(r){
+  const closed=r.status==='closed';
+  const pnl=closed?r.realized_pnl:r.unrealized_pnl;
+  const pnlLbl=closed?'realized':'unrealized';
+  const held=r.held_cal_days!=null?r.held_cal_days+'d held':'open lot';
+  const sellInner=closed
+    ? `<div class="leg-k neg">SELL</div>
+       <div class="fill-meta">${esc(r.sell_date)} · ${r.shares} sh @ ${px(r.sell_px)}</div>
+       ${abLine(r.sell_ab_score, r.sell_ab_context)}`
+    : `<div class="leg-k mut">SELL</div>
+       <div class="fill-meta mut">still holding${r.last!=null?' · mark '+px(r.last):''}</div>
+       <div class="fill-ab mut">unpaired buy — no sell yet</div>`;
+  return `<article class="pair">
+    <div class="pair-h">
+      <b>${esc(r.ticker)}</b>
+      <span class="mut">${esc(r.sector||'—')}</span>
+      <span class="mut">${r.shares} sh · ${held}</span>
+      <span class="${(pnl||0)>=0?'pos':'neg'}">${pnlLbl} ${money(pnl)}</span>
+    </div>
+    <div class="pair-legs">
+      <div class="leg">
+        <div class="leg-k pos">BUY</div>
+        <div class="fill-meta">${esc(r.buy_date)} · ${r.shares} sh @ ${px(r.buy_px)}</div>
+        ${abLine(r.ab_score, r.ab_context)}
+      </div>
+      <div class="leg">${sellInner}</div>
+    </div>
+  </article>`;
+}
+
+function visiblePairs(sleeve){
+  const mode=document.getElementById('pairStatus').value;
+  const q=document.getElementById('fillQ').value.trim().toUpperCase();
+  const rows=(D.roundtrips||[]).filter(r=>{
+    if(sleeve && r.sleeve!==sleeve) return false;
+    if(mode==='closed' && r.status!=='closed') return false;
+    if(mode==='open' && r.status!=='open') return false;
+    if(q && !(r.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+  rows.sort((a,b)=>{
+    const ka=a.sell_date||a.buy_date||'';
+    const kb=b.sell_date||b.buy_date||'';
+    return kb.localeCompare(ka) || String(a.ticker).localeCompare(String(b.ticker));
+  });
+  return rows;
+}
+
+function pairBlock(rows){
+  if(!rows.length) return '<p class="mut">No buy/sell pairs in this view.</p>';
+  return rows.map(pairCard).join('');
+}
+
+function renderViewBar(){
+  const bar=document.getElementById('viewBar');
+  const chips=[['tape','By date'],['pairs','By pair']];
+  bar.innerHTML=chips.map(([id,label])=>{
+    const on=viewMode===id?'on':'';
+    return `<button type="button" class="chip ${on}" data-view="${id}">${label}</button>`;
+  }).join('');
+  bar.querySelectorAll('.chip').forEach(b=>{
+    b.onclick=()=>{viewMode=b.dataset.view; renderAll();};
+  });
+}
+
 function renderTape(){
   const host=document.getElementById('tapeHost');
+  const sideSel=document.getElementById('sideMode');
+  const pairSel=document.getElementById('pairStatus');
+  if(viewMode==='pairs'){
+    sideSel.style.display='none';
+    pairSel.style.display='';
+    document.getElementById('tapeTitle').textContent=
+      sleeveFilter==='all' ? 'Buy / sell pairs — each lot with both ABs' : 'Buy / sell pairs — '+sleeveFilter;
+    document.getElementById('tapeHint').textContent=
+      'One card per lot. Left = buy-day AB + context. Right = sell-day AB + context. Open lots are unpaired buys (still holding). AB is as of that book date, not later checklists.';
+    const rowsAll=sleeveFilter==='all'?visiblePairs(null):visiblePairs(sleeveFilter);
+    if(sleeveFilter==='all'){
+      host.innerHTML=sleeveNames.map(s=>{
+        const rows=visiblePairs(s);
+        const nC=rows.filter(r=>r.status==='closed').length;
+        const nO=rows.filter(r=>r.status==='open').length;
+        return `<div class="sleeve-block"><h3 class="sleeve-head">${s} · ${nC} closed · ${nO} open</h3>${pairBlock(rows)}</div>`;
+      }).join('');
+    } else {
+      host.innerHTML=pairBlock(rowsAll);
+    }
+    const nC=rowsAll.filter(r=>r.status==='closed').length;
+    const nO=rowsAll.filter(r=>r.status==='open').length;
+    document.getElementById('fillCount').textContent=nC+' closed · '+nO+' open';
+    return;
+  }
+  sideSel.style.display='';
+  pairSel.style.display='none';
   document.getElementById('tapeTitle').textContent=
     sleeveFilter==='all' ? 'Order tape — leftover cash after each fill' : 'Order tape — '+sleeveFilter;
   document.getElementById('tapeHint').textContent=
-    'Chronological. Sells free cash, then new names split whatever is left. Cash left is usable sleeve cash after that fill — not equity. Sector and AB are as of that book date.';
+    'Chronological. Sells free cash, then new names split whatever is left. Cash left is usable sleeve cash after that fill — not equity. Sector and AB are as of that book date. Switch to By pair to see each ticker’s buy and sell together.';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const rows=matchedFills(s);
@@ -454,7 +574,7 @@ function renderFills(){
       ? 'Round-trips — each sleeve separately ('+nC+' closed · '+nO+' open)'
       : 'Round-trips — '+sleeveFilter+' ('+nC+' closed · '+nO+' open)';
   document.getElementById('fillsHint').textContent=
-    'Closed = bought then sold the same lot (FIFO). Open = bought and still holding. Sector / AB are from the buy date.';
+    'Same lots as By pair above. Closed = bought then sold (FIFO). Open = still holding. Buy AB / sell AB are as of those book dates.';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const sub=rows.filter(r=>r.sleeve===s);
@@ -512,6 +632,7 @@ function renderPos(){
 
 function renderAll(){
   renderSleeveBar();
+  renderViewBar();
   renderCards();
   renderLegend();
   draw();
@@ -522,6 +643,7 @@ function renderAll(){
   renderPos();
 }
 document.getElementById('pairMode').onchange=renderFills;
+document.getElementById('pairStatus').onchange=renderTape;
 document.getElementById('fillQ').oninput=function(){ renderTape(); renderFills(); };
 document.getElementById('sideMode').onchange=renderTape;
 addEventListener('resize',draw);
