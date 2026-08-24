@@ -305,7 +305,7 @@ function renderHow(){
       <li><b>Buy</b> when a name <em>enters</em> this sleeve’s list and we don’t already hold it. New names split leftover cash equally; whole shares only. Same-day round-trip of the same ticker does not happen — exits run first, then entries.</li>
       <li><b>Sell</b> when a name <em>drops off</em> the list. ${holdLine}</li>
       <li><b>Not 10 opens and 10 closes.</b> Fills are that book date’s close, not the open. A sleeve does <em>not</em> always trade 10 names — leftover cash after each fill is the usable cash still in the sleeve. Tiny leftovers skip the next name.</li>
-      <li><b>Sector / AB</b> are as of that fill’s book date. AB is the day’s checklist score + LEAD/LAG context when the file exists; older dates before AB was wired show —. <b>By pair</b> matches each buy to its later sell and shows that day’s AB on both sides.</li>
+      <li><b>Sector / AB</b> are as of that fill’s book date. Live daily checklist wins when it exists; otherwise the 12-month PIT backfill. Names in neither show —. <b>By pair</b> matches each buy to its later sell and shows that day’s AB on both sides.</li>
     </ol>`;
 }
 
@@ -519,7 +519,7 @@ function renderTape(){
     document.getElementById('tapeTitle').textContent=
       sleeveFilter==='all' ? 'Buy / sell pairs — each lot with both ABs' : 'Buy / sell pairs — '+sleeveFilter;
     document.getElementById('tapeHint').textContent=
-      'One card per lot. Left = buy-day AB + context. Right = sell-day AB + context. Open lots are unpaired buys (still holding). AB is as of that book date, not later checklists.';
+      'One card per lot. Left = buy-day AB + context. Right = sell-day AB + context. Open lots are unpaired buys (still holding). Live checklist wins; otherwise the 12-month PIT audit for that book date.';
     const rowsAll=sleeveFilter==='all'?visiblePairs(null):visiblePairs(sleeveFilter);
     if(sleeveFilter==='all'){
       host.innerHTML=sleeveNames.map(s=>{
@@ -541,7 +541,7 @@ function renderTape(){
   document.getElementById('tapeTitle').textContent=
     sleeveFilter==='all' ? 'Order tape — leftover cash after each fill' : 'Order tape — '+sleeveFilter;
   document.getElementById('tapeHint').textContent=
-    'Chronological. Sells free cash, then new names split whatever is left. Cash left is usable sleeve cash after that fill — not equity. Sector and AB are as of that book date. Switch to By pair to see each ticker’s buy and sell together.';
+    'Chronological. Sells free cash, then new names split whatever is left. Cash left is usable sleeve cash after that fill — not equity. Sector and AB are as of that book date (live checklist, else 12-month PIT). Switch to By pair to see each ticker’s buy and sell together.';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const rows=matchedFills(s);
@@ -574,7 +574,7 @@ function renderFills(){
       ? 'Round-trips — each sleeve separately ('+nC+' closed · '+nO+' open)'
       : 'Round-trips — '+sleeveFilter+' ('+nC+' closed · '+nO+' open)';
   document.getElementById('fillsHint').textContent=
-    'Same lots as By pair above. Closed = bought then sold (FIFO). Open = still holding. Buy AB / sell AB are as of those book dates.';
+    'Same lots as By pair above. Closed = bought then sold (FIFO). Open = still holding. Buy AB / sell AB are as of those book dates (live checklist, else 12-month PIT).';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const sub=rows.filter(r=>r.sleeve===s);

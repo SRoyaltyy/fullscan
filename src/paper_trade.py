@@ -53,8 +53,13 @@ PRICE_CACHE = PAPER_DIR / "prices_cache.csv"
 HOLD_DAYS = {"1d": 1, "3d": 3, "1w": 5, "2w": 10, "1m": 21}
 HORIZONS = list(HOLD_DAYS.keys())
 AB_DIR = ROOT / "data" / "ab_checklist"
+BACKFILL_DIR = ROOT / "data" / "ab_backfill"
 _CTX_RE = re.compile(r"\b(LEAD|LAG)(?:,[^\s;]+)*")
 _AB_RE = re.compile(r"\bab=([+-]?\d+(?:\.\d+)?)", re.I)
+_UNIVERSE_PQ_RE = re.compile(
+    r"^(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})_universe\.parquet$"
+)
+_BACKFILL_BY_DATE: dict[str, dict[str, dict]] | None = None
 
 
 def _num(v):
@@ -99,13 +104,82 @@ def _score_intish(v):
     return round(n, 4)
 
 
+def _latest_backfill_parquet() -> Path | None:
+    """Newest finished liquid-universe PIT parquet (the 12-month audit)."""
+    if not BACKFILL_DIR.exists():
+        return None
+    cands: list[tuple[str, str, Path]] = []
+    for pth in BACKFILL_DIR.iterdir():
+        m = _UNIVERSE_PQ_RE.match(pth.name)
+        if not m or pth.stat().st_size < 1000:
+            continue
+        cands.append((m.group(2), m.group(1), pth))
+    if not cands:
+        return None
+    # Latest window end; if tied, widest window (earliest start) — the 12-month audit.
+    cands.sort(key=lambda x: (x[0], x[1]))
+    best_end = cands[-1][0]
+    tied = [c for c in cands if c[0] == best_end]
+    tied.sort(key=lambda x: x[1])
+    return tied[0][2]
+
+
+def _backfill_by_date() -> dict[str, dict[str, dict]]:
+    """asof_date -> ticker -> {ab_score, ab_context} from the 12-month PIT parquet."""
+    global _BACKFILL_BY_DATE
+    if _BACKFILL_BY_DATE is not None:
+        return _BACKFILL_BY_DATE
+    _BACKFILL_BY_DATE = {}
+    pq = _latest_backfill_parquet()
+    if pq is None:
+        return _BACKFILL_BY_DATE
+    try:
+        df = pd.read_parquet(
+            pq,
+            columns=["Ticker", "asof_date", "score_enriched", "score", "context_label"],
+        )
+    except Exception as e:
+        print(f"[paper] could not read backfill {pq.name}: {e}")
+        return _BACKFILL_BY_DATE
+    if df is None or df.empty or "Ticker" not in df.columns:
+        return _BACKFILL_BY_DATE
+    df["Ticker"] = df["Ticker"].astype(str).str.strip().str.upper()
+    df["asof_date"] = df["asof_date"].astype(str).str.slice(0, 10)
+    for rec in df.itertuples(index=False):
+        score = _score_intish(getattr(rec, "score_enriched", None))
+        if score is None:
+            score = _score_intish(getattr(rec, "score", None))
+        ctx = _clean_str(getattr(rec, "context_label", None))
+        if score is None and not ctx:
+            continue
+        day = _BACKFILL_BY_DATE.setdefault(str(rec.asof_date), {})
+        day[str(rec.Ticker)] = {"ab_score": score, "ab_context": ctx}
+    print(f"[paper] PIT backfill {pq.name}: {len(df):,} rows, "
+          f"{len(_BACKFILL_BY_DATE)} days")
+    return _BACKFILL_BY_DATE
+
+
+def _apply_backfill(date: str, out: dict[str, dict]) -> None:
+    """Fill missing AB from the 12-month PIT audit. Never overwrite a live checklist / s_ab."""
+    for t, rec in _backfill_by_date().get(date, {}).items():
+        slot = out.setdefault(t, {
+            "sector": None, "industry": None, "ab_score": None,
+            "ab_context": None, "ab_kind": None,
+        })
+        if slot.get("ab_score") is None and rec.get("ab_score") is not None:
+            slot["ab_score"] = rec["ab_score"]
+            slot["ab_kind"] = "backfill"
+        if not slot.get("ab_context") and rec.get("ab_context"):
+            slot["ab_context"] = rec["ab_context"]
+
+
 def load_day_meta(date: str) -> dict[str, dict]:
     """ticker -> sector / industry / AB score+context as of this book date.
 
-    Stock-book CSV is the fill's sector. AB comes from that day's checklist
-    when the file exists (score_enriched + context_label); otherwise from
-    s_ab / `ab=` in reasons. Missing file = not scored that day, never
-    yesterday's leftover.
+    Stock-book CSV is the fill's sector. AB prefers that day's live checklist
+    (score_enriched + context_label) or s_ab / `ab=` in reasons. Days before
+    the checklist was wired (or names the daily file didn't cover) fall back
+    to the 12-month PIT universe parquet — never yesterday's leftover.
     """
     out: dict[str, dict] = {}
     csv_path = BOOK_DIR / f"{date}_stock_book.csv"
@@ -144,44 +218,45 @@ def load_day_meta(date: str) -> dict[str, dict]:
         if cand.exists():
             ab_path = cand
             break
-    if ab_path is None:
-        return out
-    try:
-        want = {"Ticker", "score", "score_base", "score_enriched",
-                "context_label", "Sector", "Industry"}
-        adf = pd.read_csv(ab_path, low_memory=False,
-                          usecols=lambda c: c in want)
-    except Exception as e:
-        print(f"[paper] could not read {ab_path.name}: {e}")
-        return out
-    if "Ticker" not in adf.columns:
-        return out
-    adf["Ticker"] = adf["Ticker"].astype(str).str.strip().str.upper()
-    for rec in adf.to_dict("records"):
-        t = rec.get("Ticker") or ""
-        if not t:
-            continue
-        slot = out.setdefault(t, {
-            "sector": None, "industry": None, "ab_score": None,
-            "ab_context": None, "ab_kind": None,
-        })
-        sec = _clean_str(rec.get("Sector"))
-        ind = _clean_str(rec.get("Industry"))
-        if sec and not slot.get("sector"):
-            slot["sector"] = sec
-        if ind and not slot.get("industry"):
-            slot["industry"] = ind
-        enr = _score_intish(rec.get("score_enriched"))
-        base = _score_intish(rec.get("score_base")) or _score_intish(rec.get("score"))
-        if enr is not None:
-            slot["ab_score"] = enr
-            slot["ab_kind"] = "checklist"
-        elif base is not None:
-            slot["ab_score"] = base
-            slot["ab_kind"] = "checklist"
-        ctx = _clean_str(rec.get("context_label"))
-        if ctx:
-            slot["ab_context"] = ctx
+    if ab_path is not None:
+        try:
+            want = {"Ticker", "score", "score_base", "score_enriched",
+                    "context_label", "Sector", "Industry"}
+            adf = pd.read_csv(ab_path, low_memory=False,
+                              usecols=lambda c: c in want)
+        except Exception as e:
+            print(f"[paper] could not read {ab_path.name}: {e}")
+            adf = None
+        if adf is not None and "Ticker" in adf.columns:
+            adf["Ticker"] = adf["Ticker"].astype(str).str.strip().str.upper()
+            for rec in adf.to_dict("records"):
+                t = rec.get("Ticker") or ""
+                if not t:
+                    continue
+                slot = out.setdefault(t, {
+                    "sector": None, "industry": None, "ab_score": None,
+                    "ab_context": None, "ab_kind": None,
+                })
+                sec = _clean_str(rec.get("Sector"))
+                ind = _clean_str(rec.get("Industry"))
+                if sec and not slot.get("sector"):
+                    slot["sector"] = sec
+                if ind and not slot.get("industry"):
+                    slot["industry"] = ind
+                enr = _score_intish(rec.get("score_enriched"))
+                base = (_score_intish(rec.get("score_base"))
+                        or _score_intish(rec.get("score")))
+                if enr is not None:
+                    slot["ab_score"] = enr
+                    slot["ab_kind"] = "checklist"
+                elif base is not None:
+                    slot["ab_score"] = base
+                    slot["ab_kind"] = "checklist"
+                ctx = _clean_str(rec.get("context_label"))
+                if ctx:
+                    slot["ab_context"] = ctx
+
+    _apply_backfill(date, out)
     return out
 
 
