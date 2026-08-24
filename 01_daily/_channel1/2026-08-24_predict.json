@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-08-24T07:25:26.227150-04:00",
+  "fetched_at": "2026-08-24T10:12:27.928622-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -36,10 +36,10 @@
     },
     "SOFR": {
       "available": true,
-      "date": "2026-08-20",
-      "current": 3.63,
-      "delta_1d": 0.01,
-      "delta_1w": 0.01,
+      "date": "2026-08-21",
+      "current": 3.65,
+      "delta_1d": 0.02,
+      "delta_1w": 0.03,
       "delta_1m": 0.01
     },
     "IORB": {
@@ -60,70 +60,69 @@
     },
     "USEPUINDXD": {
       "available": true,
-      "date": "2026-08-20",
-      "current": 301.86,
-      "delta_1d": 161.88,
-      "delta_1w": 132.89,
-      "delta_1m": -36.5
+      "date": "2026-08-23",
+      "current": 248.12,
+      "delta_1d": 59.81,
+      "delta_1w": 42.58,
+      "delta_1m": -110.29
     }
   },
   "vix": {
     "vix": {
       "date": "2026-08-24",
-      "current": 16.0,
-      "delta_1d": 0.87,
-      "delta_1w": 0.81
+      "current": 15.87,
+      "delta_1d": 0.74,
+      "delta_1w": 0.68
     },
     "vix3m": {
-      "date": "2026-07-17",
-      "current": 20.54,
+      "date": "2026-08-24",
+      "current": 18.61,
       "source": "^VIX3M"
     },
-    "ratio": 1.008,
-    "ratio_source": "vix/ma20",
-    "vix_ma20": 15.87,
-    "ratio_ma20": 1.008,
-    "ratio_stale": "VIX3M quote is 38 days older than VIX (2026-07-17 vs 2026-08-24)"
+    "ratio": 0.853,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.86,
+    "ratio_ma20": 1.0
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-08-24",
-      "last": 85.22,
-      "pct_1d": -2.11
+      "last": 85.25,
+      "pct_1d": -2.08
     },
     "BZ=F": {
       "available": true,
       "date": "2026-08-24",
-      "last": 92.93,
-      "pct_1d": -1.55
+      "last": 92.91,
+      "pct_1d": -1.57
     },
     "GC=F": {
       "available": true,
       "date": "2026-08-24",
-      "last": 4700.0,
-      "pct_1d": 1.64
+      "last": 4724.3,
+      "pct_1d": 2.17
     },
     "DXY": {
       "available": true,
       "date": "2026-08-24",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.22,
-      "pct_1m": -2.42
+      "pct_1d": 0.17,
+      "pct_1m": -2.47
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-08-24",
-      "last": 7667.75,
-      "pct_1d": -0.31
+      "last": 7670.0,
+      "pct_1d": -0.28
     },
     "NQ=F": {
       "available": true,
       "date": "2026-08-24",
-      "last": 29167.75,
-      "pct_1d": -0.75
+      "last": 29003.75,
+      "pct_1d": -1.31
     }
   },
   "global_sessions": {
@@ -155,47 +154,47 @@
         },
         "ASX200": {
           "available": true,
-          "date": "2026-08-24",
-          "last": 9103.1,
-          "pct_1d": 0.49
+          "date": "2026-08-21",
+          "last": 9058.9,
+          "pct_1d": -0.27
         }
       },
-      "composite_avg": -1.17
+      "composite_avg": -1.32
     },
     "europe": {
       "per_index": {
         "FTSE": {
           "available": true,
           "date": "2026-08-24",
-          "last": 10833.67,
-          "pct_1d": 0.16
+          "last": 10851.84,
+          "pct_1d": 0.33
         },
         "DAX": {
           "available": true,
           "date": "2026-08-24",
-          "last": 26115.79,
-          "pct_1d": -0.08
+          "last": 26100.15,
+          "pct_1d": -0.14
         },
         "CAC": {
           "available": true,
           "date": "2026-08-24",
-          "last": 8475.18,
-          "pct_1d": -0.11
+          "last": 8457.76,
+          "pct_1d": -0.31
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-08-24",
-          "last": 6454.17,
-          "pct_1d": -0.12
+          "last": 6447.04,
+          "pct_1d": -0.23
         }
       },
-      "composite_avg": -0.04
+      "composite_avg": -0.09
     }
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": -0.21,
-    "window": "2026-08-14..2026-08-21"
+    "corr_5d": -0.089,
+    "window": "2026-08-17..2026-08-24"
   },
   "fear_greed": {
     "available": true,
@@ -213,183 +212,183 @@
     "items": [
       {
         "source": "rss_yahoo_finance",
-        "title": "Ross Stores raises forecast after surge in Q2 sales and store openings",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/ross-stores-raises-forecast-surge-104901428.html",
-        "published_at": "2026-08-24T10:49:01Z"
-      },
-      {
-        "source": "rss_google_macro",
-        "title": "Five Questions Kevin Warsh Must Answer This Week - Newsweek",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNbEtrT3hwZy1Pb2JNUkh5UGJ2MlRYWGRUQkJwZTJielVDS2pZa2Z4UXlMZ25JQ01saS1Fc3FDQjZpemVaY1JwMkJ5TFBlcTFmOUMtdEQxa3FjYTgzSW5JQ3VadkprZTFsTHR3RWtpX0VaSGpxejBlZ3VIa1dpRWlPUzlobklXYnNEU3c?oc=5",
-        "published_at": "Mon, 24 Aug 2026 10:58:00 GMT"
+        "title": "The Hidden Reason SPHY and SPYD Diverged So Sharply in 2026",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/hidden-reason-sphy-spyd-diverged-131049817.html",
+        "published_at": "2026-08-24T13:10:49Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "T. Rowe Price to buy fixed income fund manager F/m Investments",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/t-rowe-price-buy-fixed-105616053.html",
-        "published_at": "2026-08-24T10:56:16Z"
+        "title": "Is Adobe (ADBE) Losing Its Edge Despite Strong AI Adoption?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-adbe-losing-edge-despite-123249439.html",
+        "published_at": "2026-08-24T12:32:49Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "A Lumentum VP Just Parted With $10 Million in Stock. Here's What Long-Term Investors Should Know",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-vp-just-parted-10-104914345.html",
-        "published_at": "2026-08-24T10:49:14Z"
+        "title": "Navios Maritime (NMM) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/navios-maritime-nmm-q2-2026-131440181.html",
+        "published_at": "2026-08-24T13:14:40Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Global Steel Production Slips as Chinese Weakness Offsets Growth Elsewhere",
-        "url": "https://finance.yahoo.com/markets/commodities/articles/global-steel-production-slips-chinese-104119005.html",
-        "published_at": "2026-08-24T10:41:19Z"
+        "title": "Alibaba Stock Falls As AI Push Drives $10 Billion Share Sale",
+        "url": "https://www.investors.com/news/technology/alibaba-stock-falls-as-ai-push-drives-10-billion-share-sale/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-24T13:13:52Z"
       },
       {
-        "source": "rss_google_business",
-        "title": "Earth-Sheltered Ohio Home That Is Built Almost Entirely Underground Comes With a Roof You Have to Mow - Realtor.com",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMFdMSFpWMS1FYnlDWm1DSHBBUFA1QmJLSUtMbWowRHRuam1HdGR0eWtmSXVfUmxWVTZLSmdIcXg5aE5fMTdINGJkcGZ0a1JaNlQ4VHNIX3VUYWdKNEtkd3g5dTVCSG01VjltemhyQllydFhYc0FjblloTUdfb2JlNmZNMGd2TVdqSWktSHMxRkN0dU12SFVR?oc=5",
-        "published_at": "Sat, 22 Aug 2026 17:19:00 GMT"
+        "source": "rss_yahoo_finance",
+        "title": "Bessent Quietly Built a $950 Billion War Chest Sitting In An Account At The Fed. Now We Know What It’s For",
+        "url": "https://finance.yahoo.com/economy/policy/articles/bessent-quietly-built-950-billion-132130268.html",
+        "published_at": "2026-08-24T13:21:30Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nasdaq (NDAQ) Has Quietly Built a More Durable Business Beyond Trading",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-ndaq-quietly-built-more-123537840.html",
+        "published_at": "2026-08-24T12:35:37Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Why this analyst predicts Circle stock could surge 75%",
+        "url": "https://finance.yahoo.com/markets/stocks/article/why-this-analyst-predicts-circle-stock-could-surge-75-123017242.html",
+        "published_at": "2026-08-24T12:30:17Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Netflix (NFLX) Facing a Growth Slowdown After Its Strong First Quarter?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/netflix-nflx-facing-growth-slowdown-121811891.html",
+        "published_at": "2026-08-24T12:18:11Z"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "Dutch public broadcaster to boycott ‘no longer’ neutral Eurovision",
-        "url": "https://www.aljazeera.com/news/2026/8/24/dutch-public-broadcaster-to-boycott-no-longer-neutral-eurovision?traffic_source=rss",
-        "published_at": "Mon, 24 Aug 2026 10:42:16 +0000"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Iran reports discovery of 7.5tcf of natural gas reserves in Fars province",
-        "url": "https://finance.yahoo.com/energy/articles/iran-reports-discovery-7-5tcf-105710879.html",
-        "published_at": "2026-08-24T10:57:10Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Cleveland-Cliffs Shares Rise After $1 Billion Middletown Modernisation Plan",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/cleveland-cliffs-shares-rise-1-105231452.html",
-        "published_at": "2026-08-24T10:52:31Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "PulteGroup Shares Rise After Wolfe Research Upgrade",
-        "url": "https://finance.yahoo.com/real-estate/articles/pultegroup-shares-rise-wolfe-research-105005429.html",
-        "published_at": "2026-08-24T10:50:05Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Stock Markets Face Double Blow if Nvidia and the Fed Fail to Deliver",
-        "url": "https://www.barrons.com/articles/stock-market-nvidia-fed-things-to-know-today-319b76a3?siteid=yhoof2&yptr=yahoo",
-        "published_at": "2026-08-24T10:47:00Z"
-      },
-      {
-        "source": "rss_yahoo_finance",
-        "title": "Exxon and LyondellBasell Eye Shell’s US Chemicals Portfolio – FT",
-        "url": "https://finance.yahoo.com/energy/articles/exxon-lyondellbasell-eye-shell-us-104415211.html",
-        "published_at": "2026-08-24T10:44:15Z"
-      },
-      {
-        "source": "rss_google_business",
-        "title": "China's netizens rage against professor who said gig work was a type of 'welfare' - Reuters",
-        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObTRkMGJYTkNuWm9MM001SkIxcUV2VEFrM1JSRldWX084YlZrdm5hSnZUUW0zYXhsQ3c4LW5uZFhmX003NEd0Y1hxTjFNYVNFQmNuQnJSaE5oT3BZNVdLbHBFS3htWkh2ZTJqbkxIYnV3ZHdMZXllRlVIUWRRUGdkS2dncnI1ZFZsS2J1N19RY25CdmJweWpWX3UzeTNDMUxVNmRuQ0cxWUVWNUlxaFpGMUtmVDBqSmRIX29NTjNpTXdFck05S1BRZWJYc04?oc=5",
-        "published_at": "Mon, 24 Aug 2026 05:49:00 GMT"
-      },
-      {
-        "source": "rss_google_business",
-        "title": "China’s $119 Billion Answer to Sagging Investment Is Coming Late - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNjY5SnZtYm8weDJNaU9pT2xHVFIzeHdYV000TGNpSmVtOGN4dWdjUTdycmRHYS1ielVndzJZaWl0djZpMHhyNEJZR1hGcmlfQmVrdXZTak9QdGRTUUc3OGsweWJ1NlM3VzVsMThsSWp4SkNFV0VLS3psd1hCakdZUmN3SmtxaG4wNTNudWthOURUNWtqZzFtMTZqOGFJcnZUaHVDYUItREtYODk0VXpPbHdGRlM?oc=5",
-        "published_at": "Mon, 24 Aug 2026 02:32:00 GMT"
-      },
-      {
-        "source": "rss_bbc_business",
-        "title": "Graduate job vacancies drop by almost 50% in a year",
-        "url": "https://www.bbc.co.uk/news/articles/crerd8l3pw5o?at_medium=RSS&at_campaign=rss",
-        "published_at": "Mon, 24 Aug 2026 10:55:47 GMT"
+        "title": "South Korea says US cancelled upcoming joint marine exercises over Iran war",
+        "url": "https://www.aljazeera.com/news/2026/8/24/south-korea-says-us-cancelled-upcoming-joint-marine-exercises-over-iran-war?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 12:28:26 +0000"
       },
       {
         "source": "rss_aljazeera_economy",
-        "title": "India used pellets, grenades on Gen Z protests: What Amnesty report reveals",
-        "url": "https://www.aljazeera.com/features/2026/8/24/india-used-pellets-grenades-on-gen-z-protests-what-amnesty-report-reveals?traffic_source=rss",
-        "published_at": "Mon, 24 Aug 2026 10:53:21 +0000"
+        "title": "Israel accused of using kites as pretext to justify escalating Gaza attacks",
+        "url": "https://www.aljazeera.com/news/2026/8/24/israel-accused-of-using-kites-as-pretext-to-justify-escalating-gaza-attacks?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 11:57:26 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Vivian Tu says investors carrying credit card debt need to stop and pay it off first. The math says she's right",
-        "url": "https://finance.yahoo.com/markets/articles/vivian-tu-says-investors-carrying-103000829.html",
-        "published_at": "2026-08-24T10:30:00Z"
+        "title": "Strategy Leaves Bitcoin Holdings Unchanged As Price Rises",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/strategy-leaves-bitcoin-holdings-unchanged-130500704.html",
+        "published_at": "2026-08-24T13:05:00Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "The Clarity Act Is on Hold, but the SEC Is Picking Up the Slack. Here's the Latest Outlook on Crypto Regulation.",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/clarity-act-hold-sec-picking-110100376.html",
-        "published_at": "2026-08-24T11:01:00Z"
+        "title": "Tech stocks today: All eyes on Nvidia as Meta trial resumes",
+        "url": "https://finance.yahoo.com/technology/live/tech-stocks-today-all-eyes-on-nvidia-as-meta-trial-resumes-125406169.html",
+        "published_at": "2026-08-24T12:54:06Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "This Lumentum Insider Sold $1.6 Million in Stock. Here's What Long-Term Investors Should Know",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-insider-sold-1-6-105452714.html",
-        "published_at": "2026-08-24T10:54:52Z"
+        "title": "Silver prices today, Monday, August 24, 2026: Why silver remains on a roll, up over 18% month-over-month",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-monday-august-24-2026-why-silver-remains-on-a-roll-up-over-18-month-over-month-124600654.html",
+        "published_at": "2026-08-24T12:46:00Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "3 Things Nvidia Needs to Get Right This Week",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/3-things-nvidia-needs-week-105300336.html",
-        "published_at": "2026-08-24T10:53:00Z"
+        "title": "Gold prices today, Monday, August 24, 2026: 'Gold to stay hot through the end of the month'",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-monday-august-24-2026-gold-to-stay-hot-through-the-end-of-the-month-123911561.html",
+        "published_at": "2026-08-24T12:39:11Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "‘Barrel bomb mufti’ sentenced to life in Syria",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/24/barrel-bomb-mufti-sentenced-to-life-in-syria?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 13:02:44 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Super X AI Technology Stock Climbs on Japan Growth and Buyback Momentum",
-        "url": "https://finance.yahoo.com/technology/ai/articles/super-x-ai-technology-stock-105119915.html",
-        "published_at": "2026-08-24T10:51:19Z"
+        "title": "Can AMD (AMD) Win From the Shift Toward More CPU-Heavy AI Data Centers?",
+        "url": "https://finance.yahoo.com/technology/articles/amd-amd-win-shift-toward-131307134.html",
+        "published_at": "2026-08-24T13:13:07Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Rain and flooding from Typhoon Narra hits China and Vietnam",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/24/rain-and-flooding-from-typhoon-narra-hits-china-and-vietnam?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 13:14:48 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Market Fear Index Jumps",
-        "url": "https://www.barrons.com/livecoverage/stock-market-news-today-082426/card/market-fear-index-jumps-ywgmXCzCBiMnUPPWAsfK?siteid=yhoof2&yptr=yahoo",
-        "published_at": "2026-08-24T10:51:01Z"
+        "title": "Micron’s CEO Says Memory Is No Longer a Commodity, and He Is Betting $10 Billion On It",
+        "url": "https://finance.yahoo.com/technology/ai/articles/micron-ceo-says-memory-no-131547668.html",
+        "published_at": "2026-08-24T13:15:47Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Saudi Arabia’s MBS visits Macron in France: What to expect",
+        "url": "https://www.aljazeera.com/news/2026/8/24/saudi-arabias-mbs-visits-macron-in-france-what-to-expect?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 12:59:55 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Four arrested over fatal shooting of South African boxer Zolani Tete",
+        "url": "https://www.aljazeera.com/sports/2026/8/24/four-arrested-over-fatal-shooting-of-south-african-boxer-zolani-tete?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 12:48:53 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Activists occupy UK aircraft parts factory over Israel links",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/24/activists-occupy-uk-aircraft-parts-factory-over-israel-links?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 12:07:44 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Former NBA player Enes Kanter ejected after confrontation with WNBA’s Cloud",
+        "url": "https://www.aljazeera.com/sports/2026/8/24/former-nba-player-enes-kanter-ejected-after-confrontation-with-wnbas-cloud?traffic_source=rss",
+        "published_at": "Mon, 24 Aug 2026 12:04:46 +0000"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Bitcoin's Next Test Is $80,000 as Jackson Hole Meeting Looms",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoins-next-test-80-000-104900792.html",
-        "published_at": "2026-08-24T10:49:00Z"
+        "title": "Bitcoin and ethereum prices today, Monday, August 24, 2026: Prices rising, as investors look for more Fed clues this week",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-august-24-2026-prices-rising-as-investors-look-for-more-fed-clues-this-week-130538704.html",
+        "published_at": "2026-08-24T13:05:38Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Sadot Group Shares Surge on Debt Restructuring and AI Trading Strategy",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/sadot-group-shares-surge-debt-104756136.html",
-        "published_at": "2026-08-24T10:47:56Z"
+        "title": "AB InBev invests in New York Cutwater production",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/ab-inbev-invests-york-cutwater-132429706.html",
+        "published_at": "2026-08-24T13:24:29Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Trump Just Dumped Over $5 Million Of A Popular Dividend ETF. Here’s What It Means For VIG and SCHD",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/trump-just-dumped-over-5-104656667.html",
-        "published_at": "2026-08-24T10:46:56Z"
+        "title": "This Fund Exits Intuit (INTU) Amid Concerns of AI Disruption to TurboTax’s Moat",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/fund-exits-intuit-intu-amid-130402105.html",
+        "published_at": "2026-08-24T13:04:02Z"
       },
       {
         "source": "rss_yahoo_finance",
-        "title": "Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/picard-medical-shares-soar-quarterly-104648236.html",
-        "published_at": "2026-08-24T10:46:48Z"
+        "title": "Cathie Wood's ARK Goes On $27 Million SpaceX Shopping Spree",
+        "url": "https://www.investors.com/news/cathie-wood-spacex-tesla-ark-invest-etf/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-24T13:03:10Z"
       },
       {
-        "source": "rss_google_business",
-        "title": "California Attorney General Cancels Paramount Settlement Talks Over $111 Billion Warner Bros. Discovery Deal, Says He’ll Meet When They ‘Stop Playing Games’ - Variety",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZlNlRWdsSEdESUthckRock5iUkRyeWRDLVhWbVpibVN0SXRkQVMxUnY0eE53elh0NWRYc3RwNER0UEFOQjc2S2U0RzRwaWx3WTNiZTZlU3I5YVJKaHUxczFET1dmYUFjVGNmWjJtek1uLWdCT3RLRng1VXJ2Z0lUMVIyRC1aamloYlBXSG9ZQXB4Q0RsejhwSVhDWHF6bFV3SjRmWGtn?oc=5",
-        "published_at": "Mon, 24 Aug 2026 09:32:00 GMT"
+        "source": "rss_yahoo_finance",
+        "title": "Gemini crypto exchange review 2026: Bank-grade security comes at a price",
+        "url": "https://finance.yahoo.com/personal-finance/investing/review/gemini-crypto-review-130000290.html",
+        "published_at": "2026-08-24T13:00:00Z"
       },
       {
-        "source": "rss_google_business",
-        "title": "This Nvidia earnings fact will frustrate you - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNajcwMWRLT2pTNEYwQllDZXVDQ3VRM3FvekVxWUxJTjZidFZ1ckNhX08tU25sR1V5a3pIVVV5WXpDOXhRUnhxb0dOcjkwYXk4YV9Fa09YUlRJZFA5YmhDYlFLMXByeUVvTWFkU09rN3l5TXFfTUszUDVPNXpzVXE4bW42TFVNSngxcjI1WHNBOHBvUHhfQ2ZjelNCTjJPVUdqZDhYU29hQTZBczlV?oc=5",
-        "published_at": "Mon, 24 Aug 2026 10:32:34 GMT"
+        "source": "rss_yahoo_finance",
+        "title": "Applied Materials (AMAT) Is Positioned to Capture More of the AI Chip Manufacturing Boom",
+        "url": "https://finance.yahoo.com/technology/ai/articles/applied-materials-amat-positioned-capture-125326878.html",
+        "published_at": "2026-08-24T12:53:26Z"
       },
       {
-        "source": "rss_google_business",
-        "title": "Sleepless Trump, 80, Unravels in Deranged 1AM Posting Spree - The Daily Beast",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSmpmU25YLU5PeVZGbWFtdFFISHBkN0ZlczEzMVZuWVNnRTl6OWJLYTlvQnFJSGYyTkRWeEs2dnFHamdzV0hzbVhBcGM1ck5mbkhfdzlIUno5V3A5ODhleXRaQS04bHZseTNBWlQ5VzF2QmkxWGd0U1dPRGRHTi1NRzNQcmgwZnVRYkFDNklIUGtHendLMWpNYm56RWZaN0Uwb2M4?oc=5",
-        "published_at": "Mon, 24 Aug 2026 08:31:00 GMT"
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia raising AI server prices more than 15% amid memory costs",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-raising-ai-server-prices-131547349.html",
+        "published_at": "2026-08-24T13:15:47Z"
       },
       {
-        "source": "rss_google_macro",
-        "title": "Warsh Goes to Wyoming. Will He Bring an Inflation Plan? - The Daily Upside",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOa2FoektXMW42WUFqTEdsVmM1SkdxTWNKSU04aXdkcHE1UDdvMWNOV3dBTG5mR2N4eDV4alVmbzZzZWE4YmxiNGhWUGtpbjZUU2kwSHR3UVRORVgtbkpDZ0JfSzdBU3V2SWZQTExQUHE1T1dtTUl4by0tRDBNUTdreFJfNE9IV0hVWW1nNEJJNUdVMjVjel9wNHJxbThlVjRYZko2b094bnZTU25HSVVRNWpR?oc=5",
-        "published_at": "Mon, 24 Aug 2026 11:00:00 GMT"
+        "source": "rss_yahoo_finance",
+        "title": "First Majestic Silver vs. MP Materials: Which Metals Stock Is a Better Buy in 2026?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/first-majestic-silver-vs-mp-130957285.html",
+        "published_at": "2026-08-24T13:09:57Z"
       }
     ]
   }
