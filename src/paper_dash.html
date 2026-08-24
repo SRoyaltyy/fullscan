@@ -17,7 +17,7 @@
  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
  .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
- .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
  canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
  .legend span{cursor:pointer;padding:2px 10px;border-radius:12px;border:1px solid #333;font-size:12px;user-select:none}
@@ -77,6 +77,14 @@
  .leg{padding:10px 12px;min-width:0}
  .leg + .leg{border-left:1px solid var(--line2)}
  .leg-k{font-size:10px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
+
+ .trail{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:2px}
+ .trail-d{flex:0 0 auto;background:var(--day);border:1px solid var(--line);border-radius:8px;padding:4px 7px;min-width:70px;max-width:110px}
+ .trail-d.on{border-color:#8b96ab}
+ .trail-d .dt{display:block;font-size:10px;color:var(--dim);font-family:ui-monospace,Menlo,Consolas,monospace}
+ .trail-d .sc{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:700;font-size:13px}
+ .trail-d .cx{display:block;font-size:10px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .skip .fill-side{font-size:10px;letter-spacing:.03em;line-height:1.2}
  .sleeve-block{margin:0 0 18px}
  #stats,#pos{display:block;overflow-x:auto;max-width:100%}
  @media (max-width:640px){
@@ -112,6 +120,13 @@
   <option value="all">Closed + open</option>
   <option value="closed">Closed only</option>
   <option value="open">Open only (unpaired buys)</option>
+ </select>
+ <select id="skipKind" aria-label="Skip kind" style="display:none">
+  <option value="all">All not-taken</option>
+  <option value="beyond">Ranked out (11+ / bucket 4+)</option>
+  <option value="no_price">No close (in the 10)</option>
+  <option value="cash">Cash skip (can't buy 1 share)</option>
+  <option value="min_hold">Min-hold lock (proposed sell)</option>
  </select>
  <input id="fillQ" placeholder="Ticker (e.g. CVX)" aria-label="Filter ticker">
  <span class="mut" id="fillCount"></span>
@@ -305,7 +320,7 @@ function renderHow(){
       <li><b>Buy</b> when a name <em>enters</em> this sleeve’s list and we don’t already hold it. New names split leftover cash equally; whole shares only. Same-day round-trip of the same ticker does not happen — exits run first, then entries.</li>
       <li><b>Sell</b> when a name <em>drops off</em> the list. ${holdLine}</li>
       <li><b>Not 10 opens and 10 closes.</b> Fills are that book date’s close, not the open. A sleeve does <em>not</em> always trade 10 names — leftover cash after each fill is the usable cash still in the sleeve. Tiny leftovers skip the next name.</li>
-      <li><b>Sector / AB</b> are as of that fill’s book date. Live daily checklist wins when it exists; otherwise the 12-month PIT backfill. Names in neither show —. <b>By pair</b> matches each buy to its later sell and shows that day’s AB on both sides.</li>
+      <li><b>Sector / AB</b> are as of that fill’s book date. Each card shows the <b>5 sessions leading into the action</b> (score + LEAD/LAG each day, fill day last). Live checklist wins; otherwise the 12-month PIT audit.</li><li><b>Not taken</b> are proposed actions that never filled: ranked past the sleeve cap (book lists ~25, sleeve takes 10), in the 10 but no close (SPACs — engine does <em>not</em> roll down), leftover cash can’t buy 1 share, or dropped off the list but min-hold blocked the sell. The book’s separate SELL ranking is not traded.</li>
     </ol>`;
 }
 
@@ -395,7 +410,7 @@ function fillCard(t){
     <div>
       <div class="fill-top"><b>${esc(t.ticker)}</b><span class="fill-sec">${esc(t.sector||'—')}</span></div>
       <div class="fill-meta">${t.shares} sh @ ${px(t.price)} · ${money(t.amount)}${pnlBit}</div>
-      <div class="fill-ab"><span class="abn">${ab}</span> <span class="${ctxCls}">${esc(ctx)}</span></div>
+      ${trailHtml(t.ab_trail, t.date)}
     </div>
     <div class="fill-cash"><span>cash left</span><b>${money(t.cash_after)}</b></div>
   </article>`;
@@ -444,6 +459,30 @@ function abLine(score, ctx){
   return `<div class="fill-ab"><span class="abn">${ab}</span> <span class="${cls}">${esc(c)}</span></div>`;
 }
 
+function ctxCls(ctx){
+  const s=String(ctx||'');
+  return s.indexOf('LEAD')>=0?'pos':(s.indexOf('LAG')>=0?'neg':'mut');
+}
+function trailHtml(tr, asof){
+  const rows=tr||[];
+  if(!rows.length) return '<div class="fill-ab mut">no 5-day AB trail</div>';
+  return '<div class="trail">'+rows.map((x,i)=>{
+    const last=i===rows.length-1 || (asof && x.d===asof);
+    const cls=ctxCls(x.c);
+    const dt=String(x.d||'').slice(5);
+    const cx=x.c || (x.s==null||x.s==='' ? '—' : '—');
+    return `<div class="trail-d ${last?'on':''}" title="${esc(x.d||'')} ${fmtAb(x.s)} ${esc(x.c||'')}">
+      <span class="dt">${esc(dt)}</span>
+      <span class="sc ${cls}">${fmtAb(x.s)}</span>
+      <span class="cx ${cls}">${esc(cx)}</span>
+    </div>`;
+  }).join('')+'</div>';
+}
+function skipKindLabel(k){
+  return {beyond:['RANKED OUT','mut'], no_price:['NO CLOSE','neg'], cash:['CASH SKIP','gold'], min_hold:['MIN-HOLD','mut']}[k] || [k,'mut'];
+}
+
+
 function pairCard(r){
   const closed=r.status==='closed';
   const pnl=closed?r.realized_pnl:r.unrealized_pnl;
@@ -452,7 +491,7 @@ function pairCard(r){
   const sellInner=closed
     ? `<div class="leg-k neg">SELL</div>
        <div class="fill-meta">${esc(r.sell_date)} · ${r.shares} sh @ ${px(r.sell_px)}</div>
-       ${abLine(r.sell_ab_score, r.sell_ab_context)}`
+       ${trailHtml(r.sell_trail, r.sell_date)}`
     : `<div class="leg-k mut">SELL</div>
        <div class="fill-meta mut">still holding${r.last!=null?' · mark '+px(r.last):''}</div>
        <div class="fill-ab mut">unpaired buy — no sell yet</div>`;
@@ -467,7 +506,7 @@ function pairCard(r){
       <div class="leg">
         <div class="leg-k pos">BUY</div>
         <div class="fill-meta">${esc(r.buy_date)} · ${r.shares} sh @ ${px(r.buy_px)}</div>
-        ${abLine(r.ab_score, r.ab_context)}
+        ${trailHtml(r.buy_trail, r.buy_date)}
       </div>
       <div class="leg">${sellInner}</div>
     </div>
@@ -499,7 +538,7 @@ function pairBlock(rows){
 
 function renderViewBar(){
   const bar=document.getElementById('viewBar');
-  const chips=[['tape','By date'],['pairs','By pair']];
+  const chips=[['tape','By date'],['pairs','By pair'],['skips','Not taken']];
   bar.innerHTML=chips.map(([id,label])=>{
     const on=viewMode===id?'on':'';
     return `<button type="button" class="chip ${on}" data-view="${id}">${label}</button>`;
@@ -509,17 +548,82 @@ function renderViewBar(){
   });
 }
 
+function skipCard(s){
+  const [lab,cls]=skipKindLabel(s.kind);
+  const pxBit=s.px!=null?(' · last '+px(s.px)):'';
+  const extra=s.kind==='beyond'?('rank '+s.rank):s.kind==='cash'?('per-name '+money(s.per)):s.kind==='min_hold'?('held '+s.held+'/'+s.min_hold+'d'):'';
+  return `<article class="fill skip">
+    <div class="fill-side ${cls}">${lab}</div>
+    <div>
+      <div class="fill-top"><b>${esc(s.ticker)}</b><span class="fill-sec">${esc(s.sector||'—')}</span></div>
+      <div class="fill-meta">${esc(s.reason)}${extra?(' · '+extra):''}${pxBit}</div>
+      ${trailHtml(s.ab_trail, s.date)}
+    </div>
+  </article>`;
+}
+function matchedSkips(sleeve){
+  const q=document.getElementById('fillQ').value.trim().toUpperCase();
+  const kind=document.getElementById('skipKind').value;
+  return (D.skipped||[]).filter(s=>{
+    if(sleeve && s.sleeve!==sleeve) return false;
+    if(kind!=='all' && s.kind!==kind) return false;
+    if(q && !(s.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+}
+function skipBlock(rows){
+  if(!rows.length) return '<p class="mut">No skipped proposals in this view.</p>';
+  const days=[];
+  let cur=null;
+  for(const s of rows){
+    if(!cur || cur.date!==s.date){ cur={date:s.date, fills:[]}; days.push(cur); }
+    cur.fills.push(s);
+  }
+  return days.map(d=>{
+    const c={};
+    d.fills.forEach(s=>{c[s.kind]=(c[s.kind]||0)+1;});
+    const bits=['beyond','no_price','cash','min_hold'].filter(k=>c[k]).map(k=>c[k]+' '+k.replace('_',' '));
+    return `<div class="day">
+      <div class="day-h"><b>${d.date}</b><span class="mut">${bits.join(' · ')}</span></div>
+      ${d.fills.map(skipCard).join('')}
+    </div>`;
+  }).join('');
+}
+
 function renderTape(){
   const host=document.getElementById('tapeHost');
   const sideSel=document.getElementById('sideMode');
   const pairSel=document.getElementById('pairStatus');
+  const skipSel=document.getElementById('skipKind');
+  if(viewMode==='skips'){
+    sideSel.style.display='none';
+    pairSel.style.display='none';
+    skipSel.style.display='';
+    document.getElementById('tapeTitle').textContent=
+      sleeveFilter==='all' ? 'Not taken — proposed, never filled' : 'Not taken — '+sleeveFilter;
+    document.getElementById('tapeHint').textContent=
+      'Book lists ~25 BUY names; the sleeve takes 10 (or 3 per size bucket). Ranked out never enter. Unpriced names in the 10 do not roll down to 11+. Cash skip = leftover split could not buy 1 share. Min-hold = proposed sell locked. 5-session AB on each card.';
+    const rowsAll=sleeveFilter==='all'?matchedSkips(null):matchedSkips(sleeveFilter);
+    if(sleeveFilter==='all'){
+      host.innerHTML=sleeveNames.map(s=>{
+        const rows=matchedSkips(s);
+        if(!rows.length) return '';
+        return `<div class="sleeve-block"><h3 class="sleeve-head">${s} · ${rows.length} not taken</h3>${skipBlock(rows)}</div>`;
+      }).join('') || '<p class="mut">No skipped proposals.</p>';
+    } else {
+      host.innerHTML=skipBlock(rowsAll);
+    }
+    document.getElementById('fillCount').textContent=rowsAll.length+' not taken';
+    return;
+  }
+  skipSel.style.display='none';
   if(viewMode==='pairs'){
     sideSel.style.display='none';
     pairSel.style.display='';
     document.getElementById('tapeTitle').textContent=
       sleeveFilter==='all' ? 'Buy / sell pairs — each lot with both ABs' : 'Buy / sell pairs — '+sleeveFilter;
     document.getElementById('tapeHint').textContent=
-      'One card per lot. Left = buy-day AB + context. Right = sell-day AB + context. Open lots are unpaired buys (still holding). Live checklist wins; otherwise the 12-month PIT audit for that book date.';
+      'One card per lot. Each leg shows the 5 sessions into that fill (score + LEAD/LAG). Last pill is the fill day. Open lots are unpaired buys.';
     const rowsAll=sleeveFilter==='all'?visiblePairs(null):visiblePairs(sleeveFilter);
     if(sleeveFilter==='all'){
       host.innerHTML=sleeveNames.map(s=>{
@@ -541,7 +645,7 @@ function renderTape(){
   document.getElementById('tapeTitle').textContent=
     sleeveFilter==='all' ? 'Order tape — leftover cash after each fill' : 'Order tape — '+sleeveFilter;
   document.getElementById('tapeHint').textContent=
-    'Chronological. Sells free cash, then new names split whatever is left. Cash left is usable sleeve cash after that fill — not equity. Sector and AB are as of that book date (live checklist, else 12-month PIT). Switch to By pair to see each ticker’s buy and sell together.';
+    'Chronological fills. Each card’s AB row is 5 sessions ending on the fill (not just that day). Not taken lists names the book wanted that never became a ticket.';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const rows=matchedFills(s);
@@ -646,6 +750,7 @@ document.getElementById('pairMode').onchange=renderFills;
 document.getElementById('pairStatus').onchange=renderTape;
 document.getElementById('fillQ').oninput=function(){ renderTape(); renderFills(); };
 document.getElementById('sideMode').onchange=renderTape;
+document.getElementById('skipKind').onchange=renderTape;
 addEventListener('resize',draw);
 renderAll();
 const F=D.fees||{};

@@ -260,6 +260,239 @@ def load_day_meta(date: str) -> dict[str, dict]:
     return out
 
 
+TRAIL_N = 5
+_META_CACHE: dict[str, dict[str, dict]] = {}
+_SESSION_CAL: list[str] | None = None
+
+
+def _meta(date: str) -> dict[str, dict]:
+    if date not in _META_CACHE:
+        _META_CACHE[date] = load_day_meta(date)
+    return _META_CACHE[date]
+
+
+def session_calendar() -> list[str]:
+    """Trading sessions: PIT backfill asof dates plus any extra book dates."""
+    global _SESSION_CAL
+    if _SESSION_CAL is not None:
+        return _SESSION_CAL
+    days = set(_backfill_by_date().keys())
+    if BOOK_DIR.exists():
+        for pth in BOOK_DIR.glob("*_stock_book.json"):
+            days.add(pth.name.replace("_stock_book.json", ""))
+    _SESSION_CAL = sorted(days)
+    return _SESSION_CAL
+
+
+def sessions_ending(asof: str, n: int = TRAIL_N) -> list[str]:
+    cal = session_calendar()
+    i = -1
+    for k, d in enumerate(cal):
+        if d <= asof:
+            i = k
+    if i < 0:
+        return []
+    return cal[max(0, i - n + 1): i + 1]
+
+
+def ab_trail(ticker: str, asof: str | None, n: int = TRAIL_N) -> list[dict]:
+    """n sessions ending on asof (inclusive). Score + LEAD/LAG each day."""
+    if not asof:
+        return []
+    t = str(ticker).upper()
+    out: list[dict] = []
+    for d in sessions_ending(str(asof)[:10], n):
+        m = _meta(d).get(t) or {}
+        out.append({
+            "d": d,
+            "s": m.get("ab_score"),
+            "c": m.get("ab_context") or "",
+            "k": m.get("ab_kind") or "",
+        })
+    return out
+
+
+def attach_trails(trade_rows: list[dict], roundtrips: list[dict] | None = None) -> None:
+    for r in trade_rows:
+        r["ab_trail"] = ab_trail(r.get("ticker"), r.get("date"))
+    for r in roundtrips or []:
+        r["buy_trail"] = ab_trail(r.get("ticker"), r.get("buy_date"))
+        r["sell_trail"] = ab_trail(r.get("ticker"), r.get("sell_date")) if r.get("sell_date") else []
+
+
+def proposals_from_book(book: dict, top_n: int = 10) -> dict[str, dict]:
+    """sleeve -> {pick, beyond: [{ticker, rank, bucket}]}."""
+    books = book.get("books", {})
+    out: dict[str, dict] = {}
+    for h in HORIZONS:
+        hb = books.get(h) or {}
+        buy = [str(r.get("ticker") or "").upper() for r in (hb.get("buy") or [])]
+        buy = [t for t in buy if t]
+        pick = buy[:top_n]
+        beyond = [{"ticker": t, "rank": i, "bucket": "top"}
+                  for i, t in enumerate(buy[top_n:], start=top_n + 1)]
+        out[f"{h}_top"] = {"pick": pick, "beyond": beyond, "buy_all": buy}
+        sized: list[str] = []
+        extra: list[dict] = []
+        by_size = hb.get("buy_by_size") or {}
+        for bucket in ("large+", "mid", "small/micro"):
+            rows = [str(r.get("ticker") or "").upper() for r in (by_size.get(bucket) or [])]
+            rows = [t for t in rows if t]
+            sized += rows[:3]
+            extra += [{"ticker": t, "rank": i, "bucket": bucket}
+                      for i, t in enumerate(rows[3:], start=4)]
+        out[f"{h}_size"] = {"pick": sized, "beyond": extra, "buy_all": buy}
+    return out
+
+
+def _skip_row(date: str, sleeve: str, ticker: str, kind: str, reason: str,
+              extra: dict | None = None) -> dict:
+    t = str(ticker).upper()
+    m = _meta(date).get(t) or {}
+    row = {
+        "date": date, "sleeve": sleeve, "ticker": t,
+        "kind": kind, "reason": reason,
+        "sector": m.get("sector") or "",
+        "industry": m.get("industry") or "",
+        "ab_score": m.get("ab_score"),
+        "ab_context": m.get("ab_context") or "",
+        "ab_kind": m.get("ab_kind") or "",
+        "ab_trail": ab_trail(t, date),
+    }
+    if extra:
+        row.update(extra)
+    return row
+
+
+def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
+                  trade_rows: list[dict], top_n: int, capital: float) -> list[dict]:
+    """Proposed buys/sells that did not become fills.
+
+    beyond = on the book BUY list but past the sleeve cap (10 / 3-per-bucket).
+    no_price = in the cap, no close so the engine skipped it (does not roll down).
+    cash = in the cap, leftover split could not buy 1 whole share.
+    min_hold = held name dropped off the list but locked (first day only).
+    """
+    risk_pol = load_risk_policy()
+    date_ix = {d: i for i, (d, _) in enumerate(books)}
+    sleeves = [f"{h}_{k}" for h in HORIZONS for k in ("top", "size")]
+    held: dict[str, dict[str, str]] = {s: {} for s in sleeves}  # ticker -> entry_date
+    cash: dict[str, float] = {s: capital for s in sleeves}
+    emitted_lock: set[tuple[str, str]] = set()
+    skips: list[dict] = []
+
+    fills_by = {}
+    for r in trade_rows:
+        fills_by.setdefault((r["date"], r["sleeve"]), []).append(r)
+
+    def price_of(date: str, t: str) -> float | None:
+        day_px = prices.loc[:date] if len(prices) else prices
+        if day_px is None or getattr(day_px, "empty", True):
+            return None
+        if t not in day_px.columns:
+            return None
+        v = day_px[t].iloc[-1]
+        if v is None or (isinstance(v, float) and (v != v or v <= 0)):
+            return None
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+
+    for date, path in books:
+        book = json.loads(path.read_text(encoding="utf-8"))
+        props = proposals_from_book(book, top_n)
+        weather_risk = str((book.get("meta") or {}).get("weather_risk") or "")
+        entry_scale = 1.0
+        if (weather_risk == "off" and risk_pol["scale"] < 1.0
+                and date >= risk_pol["effective"]):
+            entry_scale = risk_pol["scale"]
+
+        for sleeve, info in props.items():
+            pick = info["pick"]
+            pset = set(pick)
+            horizon = sleeve.split("_")[0]
+            min_hold = HOLD_DAYS[horizon]
+
+            for item in info["beyond"]:
+                t = item["ticker"]
+                if t in held[sleeve]:
+                    continue
+                cap = "10" if sleeve.endswith("_top") else "3/" + str(item.get("bucket") or "bucket")
+                skips.append(_skip_row(
+                    date, sleeve, t, "beyond",
+                    f"rank {item['rank']} on {sleeve} — sleeve only takes {cap}",
+                    {"rank": item["rank"], "bucket": item.get("bucket") or "",
+                     "px": price_of(date, t)},
+                ))
+
+            day_fills = fills_by.get((date, sleeve), [])
+            sold = {r["ticker"] for r in day_fills if r["side"] == "sell"}
+            bought = {r["ticker"] for r in day_fills if r["side"] == "buy"}
+
+            # cash after exits = last sell cash_after, else current cash
+            sells = [r for r in day_fills if r["side"] == "sell"]
+            if sells:
+                cash[sleeve] = float(sells[-1].get("cash_after") or cash[sleeve])
+
+            dropped = [t for t in list(held[sleeve]) if t not in pset]
+            for t in dropped:
+                if t in sold:
+                    emitted_lock.discard((sleeve, t))
+                    continue
+                entry = held[sleeve][t]
+                held_n = date_ix[date] - date_ix.get(entry, date_ix[date])
+                key = (sleeve, t)
+                if held_n < min_hold:
+                    if key not in emitted_lock:
+                        skips.append(_skip_row(
+                            date, sleeve, t, "min_hold",
+                            f"dropped from {sleeve} but min-hold {held_n}/{min_hold}d — no sell",
+                            {"held": held_n, "min_hold": min_hold,
+                             "px": price_of(date, t)},
+                        ))
+                        emitted_lock.add(key)
+                else:
+                    emitted_lock.discard(key)
+
+            new = [t for t in pick if t not in held[sleeve]]
+            n_new = len(new) or 1
+            per = (cash[sleeve] * entry_scale) / n_new
+            for t in new:
+                if t in bought:
+                    continue
+                p = price_of(date, t)
+                if p is None:
+                    skips.append(_skip_row(
+                        date, sleeve, t, "no_price",
+                        f"in the {sleeve} cap but no close — not rolled down to rank 11+",
+                        {"per": round(per, 2)},
+                    ))
+                    continue
+                shares = int(per // p) if p else 0
+                if shares < 1:
+                    skips.append(_skip_row(
+                        date, sleeve, t, "cash",
+                        f"in the {sleeve} cap; split leftover {per:.2f} < 1 share @ {p:.2f}",
+                        {"px": p, "per": round(per, 2),
+                         "cash": round(cash[sleeve], 2)},
+                    ))
+
+            for r in day_fills:
+                if r["side"] == "sell":
+                    held[sleeve].pop(r["ticker"], None)
+                    emitted_lock.discard((sleeve, r["ticker"]))
+                else:
+                    held[sleeve][r["ticker"]] = date
+            buys = [r for r in day_fills if r["side"] == "buy"]
+            if buys:
+                cash[sleeve] = float(buys[-1].get("cash_after") or cash[sleeve])
+            elif sells:
+                cash[sleeve] = float(sells[-1].get("cash_after") or cash[sleeve])
+
+    return skips
+
+
 # ---------------------------------------------------------------- fees ----
 
 def load_fees() -> dict:
@@ -680,7 +913,8 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                     fees: dict, trade_rows: list[dict] | None = None,
                     last_picks: dict[str, list[str]] | None = None,
                     book_dates: list[str] | None = None,
-                    roundtrips: list[dict] | None = None) -> None:
+                    roundtrips: list[dict] | None = None,
+                    skipped: list[dict] | None = None) -> None:
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     curve = curve.copy()
     curve["date"] = pd.to_datetime(curve["date"])
@@ -702,6 +936,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
             "top": "top-N overall BUY names on that horizon's book",
             "size": "top 3 per size bucket (large+ / mid / small-micro)",
             "risk_off_entry_scale": load_risk_policy(),
+            "ab_trail_sessions": TRAIL_N,
         },
     }
     positions = []
@@ -749,9 +984,11 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
             "ab_score": r.get("ab_score"),
             "ab_context": r.get("ab_context") or "",
             "ab_kind": r.get("ab_kind") or "",
+            "ab_trail": r.get("ab_trail") or [],
         })
     payload["trades"] = fills
     payload["roundtrips"] = roundtrips or []
+    payload["skipped"] = skipped or []
 
     shell = Path(__file__).with_name("paper_dash.html").read_text(encoding="utf-8")
     html = shell.replace("__DATA__", json.dumps(payload))
@@ -811,12 +1048,16 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
             "Check yfinance connectivity.")
 
     trips = match_roundtrips(trade_rows, prices)
+    attach_trails(trade_rows, trips)
+    skips = collect_skips(books, prices, trade_rows, top_n, capital)
     PAPER_DIR.mkdir(parents=True, exist_ok=True)
     curve = pd.DataFrame(curve_rows)
     curve.to_csv(PAPER_DIR / "equity_curve.csv", index=False)
     pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
     if trips:
         pd.DataFrame(trips).to_csv(PAPER_DIR / "roundtrips.csv", index=False)
+    if skips:
+        pd.DataFrame(skips).to_csv(PAPER_DIR / "skipped.csv", index=False)
     (PAPER_DIR / "state.json").write_text(json.dumps(st, indent=2, default=str),
                                           encoding="utf-8")
 
@@ -826,11 +1067,11 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     write_report(stats, last, capital)
     write_dashboard(curve, stats, st, prices, last, capital, fees, trade_rows,
                     last_picks=last_picks, book_dates=[d for d, _ in books],
-                    roundtrips=trips)
+                    roundtrips=trips, skipped=skips)
     n_closed = sum(1 for t in trips if t["status"] == "closed")
     n_open = sum(1 for t in trips if t["status"] == "open")
     print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades "
-          f"({n_closed} closed pairs, {n_open} open lots), "
+          f"({n_closed} closed pairs, {n_open} open lots, {len(skips)} not taken), "
           f"curves → dashboard/index.html, summary → 03_scoreboard/PAPER_TRADING.md")
 
 
