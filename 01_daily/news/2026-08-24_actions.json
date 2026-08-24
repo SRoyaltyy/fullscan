@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T07:17:08.563417-04:00",
+  "generated_at": "2026-08-24T07:46:28.612777-04:00",
   "hours": 48,
   "raw_headlines": 300,
   "unique_events": 3,
@@ -43,7 +43,7 @@
     },
     {
       "event": "fed_rate_path",
-      "headline_count": 19,
+      "headline_count": 18,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -59,7 +59,7 @@
         "confidence": 0.9,
         "drop_reason": "",
         "notes": [
-          "headline_count=19 supports non-noise severity",
+          "headline_count=18 supports non-noise severity",
           "rates polarity=hawkish"
         ]
       },
@@ -90,10 +90,10 @@
           "published_at": "Mon, 24 Aug 2026 07:07:00 GMT"
         },
         {
-          "title": "Gold hits over 3-month high ahead of US inflation data and Fed chair speech - The Business Times",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNlUxclI3Tzc1SVRJQ0o5TzJfY2luXzU5M0pLWFFfOWRfUEFjVmxOQjR0dmlnT2RxVzUzR1A5Vi1aVW51cGJaWFEzMDF5TkpJalI3am90cXJWWEE1TWtJRUdwai04ZjN4THRUcURQanRvX0tVOW9rNTZVd2lYMmQtelB1RDk2SEhzRFFmSHpxa1pJUUtPUk1pb1BsNWdieXFBSzBJMFk3cDVmM1cyYlhUM0gxOUptVE9Ca3ZaUFYyLUFNRm5yaTRrQ0hFNE9qNm9XcHBlSjN1d3VlQQ?oc=5",
-          "published_at": "Mon, 24 Aug 2026 00:39:00 GMT"
+          "title": "One Sentence in the Fed Meeting Minutes Is Nightmare Fuel for Fed Chair Kevin Warsh and the Stock Market",
+          "source": "rss_yahoo_finance",
+          "url": "https://finance.yahoo.com/economy/policy/articles/one-sentence-fed-meeting-minutes-082600411.html",
+          "published_at": "2026-08-24T08:26:00Z"
         },
         {
           "title": "Treasury yields fall as investors brace for Warsh’s Jackson Hole keynote amid bond fears - CNBC",
@@ -102,10 +102,10 @@
           "published_at": "Mon, 24 Aug 2026 08:14:00 GMT"
         },
         {
-          "title": "One Sentence in the Fed Meeting Minutes Is Nightmare Fuel for Fed Chair Kevin Warsh and the Stock Market",
-          "source": "rss_yahoo_finance",
-          "url": "https://finance.yahoo.com/economy/policy/articles/one-sentence-fed-meeting-minutes-082600411.html",
-          "published_at": "2026-08-24T08:26:00Z"
+          "title": "Gold hits over 3-month high ahead of US inflation data and Fed chair speech - The Business Times",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNlUxclI3Tzc1SVRJQ0o5TzJfY2luXzU5M0pLWFFfOWRfUEFjVmxOQjR0dmlnT2RxVzUzR1A5Vi1aVW51cGJaWFEzMDF5TkpJalI3am90cXJWWEE1TWtJRUdwai04ZjN4THRUcURQanRvX0tVOW9rNTZVd2lYMmQtelB1RDk2SEhzRFFmSHpxa1pJUUtPUk1pb1BsNWdieXFBSzBJMFk3cDVmM1cyYlhUM0gxOUptVE9Ca3ZaUFYyLUFNRm5yaTRrQ0hFNE9qNm9XcHBlSjN1d3VlQQ?oc=5",
+          "published_at": "Mon, 24 Aug 2026 00:39:00 GMT"
         },
         {
           "title": "Is Scott Bessent the Fed chair Donald Trump always wanted? - The Economist",
