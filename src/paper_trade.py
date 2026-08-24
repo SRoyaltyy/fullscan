@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 from collections import defaultdict, deque
 from datetime import datetime
 from pathlib import Path
@@ -51,6 +52,137 @@ PRICE_CACHE = PAPER_DIR / "prices_cache.csv"
 
 HOLD_DAYS = {"1d": 1, "3d": 3, "1w": 5, "2w": 10, "1m": 21}
 HORIZONS = list(HOLD_DAYS.keys())
+AB_DIR = ROOT / "data" / "ab_checklist"
+_CTX_RE = re.compile(r"\b(LEAD|LAG)(?:,[^\s;]+)*")
+_AB_RE = re.compile(r"\bab=([+-]?\d+(?:\.\d+)?)", re.I)
+
+
+def _num(v):
+    if v is None or v == "":
+        return None
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    if math.isnan(x):
+        return None
+    return x
+
+
+def _parse_ab_context(reasons: str) -> str | None:
+    if not reasons:
+        return None
+    m = _CTX_RE.search(reasons)
+    return m.group(0) if m else None
+
+
+def _clean_str(v) -> str | None:
+    if v is None:
+        return None
+    try:
+        if v != v:  # NaN
+            return None
+    except Exception:
+        pass
+    s = str(v).strip()
+    if s in ("", "nan", "None", "—", "-"):
+        return None
+    return s
+
+
+def _score_intish(v):
+    n = _num(v)
+    if n is None:
+        return None
+    if abs(n - round(n)) < 1e-9:
+        return int(round(n))
+    return round(n, 4)
+
+
+def load_day_meta(date: str) -> dict[str, dict]:
+    """ticker -> sector / industry / AB score+context as of this book date.
+
+    Stock-book CSV is the fill's sector. AB comes from that day's checklist
+    when the file exists (score_enriched + context_label); otherwise from
+    s_ab / `ab=` in reasons. Missing file = not scored that day, never
+    yesterday's leftover.
+    """
+    out: dict[str, dict] = {}
+    csv_path = BOOK_DIR / f"{date}_stock_book.csv"
+    if csv_path.exists():
+        try:
+            df = pd.read_csv(csv_path, low_memory=False)
+        except Exception as e:
+            print(f"[paper] could not read {csv_path.name}: {e}")
+            df = None
+        if df is not None and "Ticker" in df.columns:
+            df["Ticker"] = df["Ticker"].astype(str).str.strip().str.upper()
+            for rec in df.to_dict("records"):
+                t = rec.get("Ticker") or ""
+                if not t:
+                    continue
+                reasons = str(rec.get("reasons") or "")
+                sab = _num(rec.get("s_ab"))
+                if sab is None:
+                    m = _AB_RE.search(reasons)
+                    sab = float(m.group(1)) if m else None
+                out[t] = {
+                    "sector": _clean_str(rec.get("sector")),
+                    "industry": _clean_str(rec.get("industry")),
+                    "ab_score": None if sab is None else round(sab, 4),
+                    "ab_context": _parse_ab_context(reasons),
+                    "ab_kind": "s_ab" if sab is not None else None,
+                }
+
+    ab_path = None
+    for name in (
+        f"{date}_ab_checklist_enriched.csv",
+        f"{date}_ab_checklist_merged.csv",
+        f"{date}_ab_checklist.csv",
+    ):
+        cand = AB_DIR / name
+        if cand.exists():
+            ab_path = cand
+            break
+    if ab_path is None:
+        return out
+    try:
+        want = {"Ticker", "score", "score_base", "score_enriched",
+                "context_label", "Sector", "Industry"}
+        adf = pd.read_csv(ab_path, low_memory=False,
+                          usecols=lambda c: c in want)
+    except Exception as e:
+        print(f"[paper] could not read {ab_path.name}: {e}")
+        return out
+    if "Ticker" not in adf.columns:
+        return out
+    adf["Ticker"] = adf["Ticker"].astype(str).str.strip().str.upper()
+    for rec in adf.to_dict("records"):
+        t = rec.get("Ticker") or ""
+        if not t:
+            continue
+        slot = out.setdefault(t, {
+            "sector": None, "industry": None, "ab_score": None,
+            "ab_context": None, "ab_kind": None,
+        })
+        sec = _clean_str(rec.get("Sector"))
+        ind = _clean_str(rec.get("Industry"))
+        if sec and not slot.get("sector"):
+            slot["sector"] = sec
+        if ind and not slot.get("industry"):
+            slot["industry"] = ind
+        enr = _score_intish(rec.get("score_enriched"))
+        base = _score_intish(rec.get("score_base")) or _score_intish(rec.get("score"))
+        if enr is not None:
+            slot["ab_score"] = enr
+            slot["ab_kind"] = "checklist"
+        elif base is not None:
+            slot["ab_score"] = base
+            slot["ab_kind"] = "checklist"
+        ctx = _clean_str(rec.get("context_label"))
+        if ctx:
+            slot["ab_context"] = ctx
+    return out
 
 
 # ---------------------------------------------------------------- fees ----
@@ -201,6 +333,19 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
 
         book = json.loads(path.read_text(encoding="utf-8"))
         picks = picks_from_book(book, top_n)
+        day_meta = load_day_meta(date)
+
+        def _fill_meta(ticker: str) -> dict:
+            m = day_meta.get(str(ticker).upper(), {}) or {}
+            return {
+                "cash_before": None,  # filled at call site
+                "cash_after": round(S["cash"], 2),
+                "sector": m.get("sector"),
+                "industry": m.get("industry"),
+                "ab_score": m.get("ab_score"),
+                "ab_context": m.get("ab_context"),
+                "ab_kind": m.get("ab_kind"),
+            }
         # LLM weather call → action: on risk-off days (from the book's own
         # meta, so replay is deterministic) scale down new-entry deployment
         # and keep the rest in cash. Gated by effective date.
@@ -237,12 +382,17 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                 S["trades"] += 1
                 S["closed"] += 1
                 S["wins"] += 1 if pnl > 0 else 0
+                cash_before = round(S["cash"] - proceeds, 2)
+                extra = _fill_meta(t)
+                extra["cash_before"] = cash_before
+                extra["cash_after"] = round(S["cash"], 2)
                 trade_rows.append({"date": date, "sleeve": sleeve, "ticker": t,
                                    "side": "sell", "shares": pos["shares"],
                                    "price": round(p, 4), "fees": fee,
                                    "amount": round(proceeds, 2),
                                    "realized_pnl": round(pnl, 2),
-                                   "reason": f"dropped from {sleeve} after {held}d (min {min_hold}d)"})
+                                   "reason": f"dropped from {sleeve} after {held}d (min {min_hold}d)",
+                                   **extra})
 
             # entries: new names split available cash equally
             # (× entry_scale on risk-off days — rest stays in cash)
@@ -272,12 +422,16 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                     reason = f"entered {sleeve} book"
                     if entry_scale < 1.0:
                         reason += f" (risk-off: deploying {entry_scale:.0%} of cash)"
+                    extra = _fill_meta(t)
+                    extra["cash_before"] = round(S["cash"] + cost, 2)
+                    extra["cash_after"] = round(S["cash"], 2)
                     trade_rows.append({"date": date, "sleeve": sleeve,
                                        "ticker": t, "side": "buy",
                                        "shares": shares, "price": round(p, 4),
                                        "fees": fee, "amount": round(cost, 2),
                                        "realized_pnl": "",
-                                       "reason": reason})
+                                       "reason": reason,
+                                       **extra})
 
         # mark-to-market
         spy = price_of("SPY")
@@ -327,6 +481,11 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]
                 "buy_fees": float(r.get("fees") or 0),
                 "shares": int(r["shares"]),
                 "buy_amount": float(r.get("amount") or 0),
+                "sector": r.get("sector"),
+                "industry": r.get("industry"),
+                "ab_score": r.get("ab_score"),
+                "ab_context": r.get("ab_context"),
+                "ab_kind": r.get("ab_kind"),
             })
             continue
         if r["side"] != "sell":
@@ -360,6 +519,13 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]
                 "unrealized_pnl": None,
                 "buy_fees": round(lot["buy_fees"] * frac_lot, 4),
                 "sell_fees": round(sell_fees * frac_sell, 4),
+                "sector": lot.get("sector") or r.get("sector"),
+                "industry": lot.get("industry") or r.get("industry"),
+                "ab_score": lot.get("ab_score"),
+                "ab_context": lot.get("ab_context"),
+                "ab_kind": lot.get("ab_kind"),
+                "sell_ab_score": r.get("ab_score"),
+                "sell_ab_context": r.get("ab_context"),
             })
             lot["shares"] -= take
             lot["buy_amount"] -= buy_cost
@@ -392,6 +558,13 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]
                 "unrealized_pnl": round(mtm, 2),
                 "buy_fees": round(lot["buy_fees"], 4),
                 "sell_fees": 0.0,
+                "sector": lot.get("sector"),
+                "industry": lot.get("industry"),
+                "ab_score": lot.get("ab_score"),
+                "ab_context": lot.get("ab_context"),
+                "ab_kind": lot.get("ab_kind"),
+                "sell_ab_score": None,
+                "sell_ab_context": None,
             })
     return closed + open_rows
 
@@ -494,6 +667,13 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
             "price": float(r["price"]), "fees": float(r.get("fees") or 0),
             "amount": float(r.get("amount") or 0), "realized_pnl": pnl,
             "reason": r.get("reason") or "",
+            "cash_before": r.get("cash_before"),
+            "cash_after": r.get("cash_after"),
+            "sector": r.get("sector") or "",
+            "industry": r.get("industry") or "",
+            "ab_score": r.get("ab_score"),
+            "ab_context": r.get("ab_context") or "",
+            "ab_kind": r.get("ab_kind") or "",
         })
     payload["trades"] = fills
     payload["roundtrips"] = roundtrips or []

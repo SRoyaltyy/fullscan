@@ -36,6 +36,12 @@
  details.raw-fills{margin:4px 0 18px}
  details.raw-fills summary{cursor:pointer;font-size:12px}
  h3.pair-head{font-size:12px;margin:10px 0 4px;color:#8b96ab;text-transform:uppercase;letter-spacing:.04em}
+ td.ctx,th.ctx{text-align:left;white-space:normal;max-width:220px;font-size:11px;color:#8b96ab}
+ td.sector,th.sector{text-align:left}
+ td.cash{font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+ td.ab{font-family:ui-monospace,Menlo,Consolas,monospace}
+ .fill-day{margin:14px 0 6px;color:#8b96ab;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+ .cash-pill{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;color:#aeb9cf}
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
@@ -60,8 +66,8 @@
  <span class="mut" id="fillCount"></span>
 </div>
 <div id="fillsHost"></div>
-<details class="raw-fills">
- <summary class="mut">Raw order tape (every fill, not paired)</summary>
+<details class="raw-fills" open>
+ <summary class="mut">Raw order tape — cash left, sector, AB + context per fill</summary>
  <div id="rawFills"></div>
 </details>
 
@@ -81,8 +87,17 @@ const HOLD_ON = !!(D.rules && D.rules.hold_applied);
 const hidden = new Set();
 let sleeveFilter = "all";
 
-function money(n){return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
+function money(n){if(n==null||n==='')return '—';return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
 function px(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:4});}
+function fmtAb(n){
+  if(n==null||n==='') return '—';
+  const x=Number(n);
+  if(!isFinite(x)) return '—';
+  if(Math.abs(x)<=1.5 && String(n).indexOf('.')>=0) return (x>=0?'+':'')+x.toFixed(2);
+  const i=Math.round(x);
+  return (i>=0?'+':'')+i;
+}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({"&":"&","<":"<",">":">",'"':"""}[c]));}
 function horizonOf(s){return (s||"").split("_")[0];}
 function minHold(s){return HOLD[horizonOf(s)] ?? 1;}
 function sessionsBetween(a,b){
@@ -208,6 +223,8 @@ function renderHow(){
       <li><b>Pick the list.</b> <code>_top</code> = first 10 BUY names on that horizon’s stock book. <code>_size</code> = top 3 from each bucket (large+ / mid / small-micro). Horizon is the forecast window of the ranking, not a calendar rebalance.</li>
       <li><b>Buy</b> when a name <em>enters</em> this sleeve’s list and we don’t already hold it. New names split leftover cash equally; whole shares only. Same-day round-trip of the same ticker does not happen — exits run first, then entries.</li>
       <li><b>Sell</b> when a name <em>drops off</em> the list. ${holdLine}</li>
+      <li><b>Not 10 opens and 10 closes.</b> Fills are that book date’s close, not the open. A sleeve does <em>not</em> always trade 10 names — leftover cash after each fill is the usable cash still in the sleeve (the number you would still have to deploy). Tiny leftovers skip the next name.</li>
+      <li><b>Sector / AB</b> are as of that fill’s book date. AB is the day’s checklist score + LEAD/LAG context when the file exists; older dates before AB was wired show —.</li>
       <li><b>Why sleeves used to trade on the same day:</b> the engine followed “still on the list?” every book date and ignored the hold floor. 1d and 1m lists both churn daily, so the blotter printed buys/sells on every date for every sleeve. Isolation + the hold floor is how you tell them apart.</li>
     </ol>`;
 }
@@ -227,14 +244,17 @@ function pairRows(){
 function closedTable(rows){
   const list=rows.filter(r=>r.status==='closed')
     .sort((a,b)=>(b.sell_date||'').localeCompare(a.sell_date||'') || a.ticker.localeCompare(b.ticker));
-  const head='<tr><th>Ticker</th><th>Shares</th><th>Bought</th><th>Sold</th><th>Held</th><th>Realized P/L</th></tr>';
+  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Sold</th><th>Held</th><th>Realized P/L</th></tr>';
   if(!list.length){
     return '<p class="mut" style="margin:4px 0 10px">No closed round-trips in this view.</p>';
   }
   return '<table>'+head+list.map(r=>{
     const pnl=r.realized_pnl;
     return `<tr>
-      <td class="tick"><b>${r.ticker}</b></td>
+      <td class="tick"><b>${esc(r.ticker)}</b></td>
+      <td class="sector">${esc(r.sector||'—')}</td>
+      <td class="ab">${fmtAb(r.ab_score)}</td>
+      <td class="ctx">${esc(r.ab_context||'—')}</td>
       <td>${r.shares}</td>
       <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
       <td class="left">${r.sell_date} @ ${px(r.sell_px)}</td>
@@ -247,14 +267,17 @@ function closedTable(rows){
 function openTable(rows){
   const list=rows.filter(r=>r.status==='open')
     .sort((a,b)=>(b.buy_date||'').localeCompare(a.buy_date||'') || a.ticker.localeCompare(b.ticker));
-  const head='<tr><th>Ticker</th><th>Shares</th><th>Bought</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>';
+  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>';
   if(!list.length){
     return '<p class="mut" style="margin:4px 0 10px">No open lots in this view.</p>';
   }
   return '<table>'+head+list.map(r=>{
     const pnl=r.unrealized_pnl;
     return `<tr>
-      <td class="tick"><b>${r.ticker}</b></td>
+      <td class="tick"><b>${esc(r.ticker)}</b></td>
+      <td class="sector">${esc(r.sector||'—')}</td>
+      <td class="ab">${fmtAb(r.ab_score)}</td>
+      <td class="ctx">${esc(r.ab_context||'—')}</td>
       <td>${r.shares}</td>
       <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
       <td>${px(r.last)}</td>
@@ -278,21 +301,28 @@ function sleevePairBlock(sleeve, rows){
 }
 
 function fillRowsHtml(rows){
-  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th>Shares @ price</th><th>Why</th><th>Amount</th><th>P/L on this fill</th></tr>';
+  const head='<tr><th>When</th><th>Side</th><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares @ price</th><th>Cash left</th><th>Amount</th><th>P/L on this fill</th></tr>';
   if(!rows.length){
-    return '<table>'+head+'<tr><td colspan="7" class="mut">No fills in this sleeve.</td></tr></table>';
+    return '<table>'+head+'<tr><td colspan="10" class="mut">No fills in this sleeve.</td></tr></table>';
   }
+  let lastDate='';
   return '<table>'+head+rows.map(t=>{
     const sideCls=t.side==='sell'?'side-sell':'side-buy';
     const pnl=t.realized_pnl;
     const pnlCell=pnl==null||pnl===''?'<td class="mut">—</td>':`<td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>`;
-    const why=t.reason || (t.side==='buy'?'entered book':'dropped from book');
-    return `<tr>
+    const ab = fmtAb(t.ab_score);
+    const ctx = t.ab_context || (t.ab_score==null ? 'AB not scored this day' : '—');
+    const dayRow = (t.date!==lastDate) ? `<tr><td colspan="10" class="fill-day">${t.date} · leftover after this session’s last fill shown per row</td></tr>` : '';
+    lastDate=t.date;
+    return dayRow+`<tr>
       <td>${t.date}</td>
       <td class="${sideCls}">${t.side.toUpperCase()}</td>
-      <td class="tick">${t.ticker}</td>
+      <td class="tick">${esc(t.ticker)}</td>
+      <td class="sector">${esc(t.sector||'—')}</td>
+      <td class="ab">${ab}</td>
+      <td class="ctx">${esc(ctx)}</td>
       <td>${t.shares} sh @ ${px(t.price)}</td>
-      <td class="left mut">${why}</td>
+      <td class="cash">${money(t.cash_after)}</td>
       <td>${money(t.amount)}</td>
       ${pnlCell}
     </tr>`;
@@ -301,7 +331,8 @@ function fillRowsHtml(rows){
 
 function matchedFills(sleeve){
   const q=document.getElementById('fillQ').value.trim().toUpperCase();
-  return (D.trades||[]).slice().reverse().filter(t=>{
+  // Chronological: leftover cash should read as a running balance, not newest-first.
+  return (D.trades||[]).filter(t=>{
     if(sleeve && t.sleeve!==sleeve) return false;
     if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
     return true;
@@ -320,7 +351,7 @@ function renderFills(){
   document.getElementById('fillsTitle').textContent=
     sleeveFilter==='all' ? 'Round-trips — each sleeve separately' : 'Round-trips — '+sleeveFilter;
   document.getElementById('fillsHint').textContent=
-    'Closed = bought then sold the same lot (FIFO). Open = bought and still holding. Same ticker can appear twice if it was sold and bought back.';
+    'Closed = bought then sold the same lot (FIFO). Open = bought and still holding. Raw tape (below) is every fill with leftover sleeve cash, sector, and that day’s AB score + context. Fills are signal-day close, not 10 market-on-open tickets.';
   if(sleeveFilter==='all'){
     host.innerHTML=sleeveNames.map(s=>{
       const sub=rows.filter(r=>r.sleeve===s);
