@@ -1,20 +1,23 @@
 {
  "risk_tilt": "off",
  "macros": [
-  "hawkish",
   "bearish",
-  "hawkish",
-  "bearish"
+  "bearish",
+  "mixed",
+  "bearish",
+  "bearish",
+  "mixed"
  ],
  "sector_tilts": {
-  "Energy": "bullish",
-  "Gold": "bullish",
-  "Technology": "mixed"
+  "Semis/Xlk": "bearish",
+  "Energy": "mixed",
+  "Precious": "mixed"
  },
  "tickers": {
-  "XLE": 8.0,
-  "GDX": 4.0
+  "XLK": -5.5,
+  "XLE": -1.5,
+  "NVDA": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=7 rescued=3\nMACRO rates: [hawkish] Long-end yields already cut the week; inflation + Warsh still two-sided (session/1d-1w)\nMACRO risk: [bearish] Trump economic-warfare threats lifting yields and oil; SPX beta offered (session)\nMACRO rates: [dovish] Unconfirmed Bessent TGA ~$1T buybacks = only yield-relief offset (session)\nSECTOR energy: [bullish] Oil firmer on warfare threats (XLE)\nSECTOR gold: [bullish] 3-mo high / miners +8% is a hedge into data, not easing (GDX)\nSECTOR tech: [mixed] NVDA earnings is the XLK/SMH event; Fool notes are not a beat (XLK)\nINTERACTION: Yields+warfare+oil = one risk-off/rates cluster; gold \u2260 XLB floor; NVDA override gated on the print\nWATCH: TGA buybacks sourced only; do not one-way S0 on CPI/Warsh day",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [bearish] Long-end yields already cut indices; PCE/Warsh is the next binary (session/1d)\nMACRO risk: [bearish] Trump economic-warfare + Iran/fiscal hike narrative; treat as one cluster with rates\nMACRO event: [mixed] Nvidia earnings pending \u2014 event risk, not a printed mega-cap bid (1d)\nSECTOR semis/XLK: [bearish] Semis dragging SPX/Nasdaq (ARM/APH); do not count TSM/KLAC color (SMH/XLK)\nSECTOR energy: [mixed] Bessent Iran D-Day vs oil lower \u2014 live crude sign rules XLE (XLE)\nSECTOR precious: [mixed] Gold miners bid on cut bets; conflicts hike narrative; not SPX confirmation (GDX)\nINTERACTION: Iran+PCE+long-end = one hawkish-rates cluster; pending NVDA does not override; oil-down blocks oil-shock up-call\nWATCH: Mechanical usable thin; polarity mixed until PCE/NVDA; do not upgrade AI/software on ADSK rotation",
  "date": "2026-08-24"
 }
