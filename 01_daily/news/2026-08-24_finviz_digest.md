@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-08-24
 
-_Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-08-21.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-08-24T09:10:07.567139-04:00 · export=data/exports/finviz_2026-08-24.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -11,11 +11,12 @@ _Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-0
 
 ## High-signal ticker digests (ranked)
 
+- **AAPL** [Technology]: Apple cuts over 200 jobs across Siri, Vision Pro and AI software teams in AI-focused restructuring
 - **ABNB** [Consumer Cyclical]: Phillip Securities downgrades Airbnb to Reduce from Neutral, raises price target to $158 on mature-market slowdown fears
 - **ADBE** [Technology]: Bank of America analyst Tal Liani raises Adobe price target, citing strong AI monetization potential
 - **ADI** [Technology]: Bernstein and Seaport upgrade Analog Devices on AI data center opportunity and improved risk-reward outlook
 - **ADSK** [Technology]: Sector rotation into software stocks fuels Autodesk's 8% surge
-- **AEP** [Utilities]: Q2 EPS miss and recent analyst price target cuts pressure AEP shares
+- **AEP** [Utilities]: Morgan Stanley price target cut drives 3% drop in AEP shares
 - **ALL** [Financial]: Keefe, Bruyette & Woods downgrades Allstate to Underperform from Market Perform, cuts price target to $250 from $255
 - **AMGN** [Healthcare]: Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
@@ -27,7 +28,6 @@ _Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-0
 - **AU** [Basic Materials]: Gold price surge on softer data and FOMC anticipation drives AU up 8.5%
 - **AXON** [Industrials]: Axon beats Q2 2026 estimates with EPS $1.88, 35% revenue growth to $904M, raises 2026 revenue outlook to 32%â34%
 - **B** [Basic Materials]: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%
-- **BABA** [Consumer Cyclical]: Alibaba Q1 FY27: EPS $1.27 (-39% YoY) misses, revenue $40.0B (+15% YoY) beats, sees AI cloud nearing $10B annual run-rate
 - **BAM** [Financial]: Brookfield Asset Management, partners and La Caisse close roughly $6.5bn (C$9bn including debt) acquisition of Canadian renewable company Boralex
 - **BBVA** [Financial]: BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program
 - **BCS** [Financial]: Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge
@@ -38,7 +38,7 @@ _Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-0
 - **BMO** [Financial]: CIBC Downgrade to Neutral on Overvaluation Drives 3% BMO Drop
 - **BMY** [Healthcare]: Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy
 - **BTI** [Consumer Defensive]: British American Tobacco H1 2026 adjusted EPS +7.9%, tightens FY EPS guidance to midpoint of 5%-8% range, confirms a 1.3 billion share buyback
-- **CAH** [Healthcare]: Cardinal Health posts Q4 2026 non-GAAP EPS $2.91 (+40% YoY), guides FY27 EPS above 12â14% algorithm and unveils $5B buyback
+- **CAH** [Healthcare]: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - **CDNS** [Technology]: Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook
 - **CEG** [Utilities]: Constellation lifts 2024 adjusted EPS guidance to $11.50â$12.50 after Q2 beat and agrees to sell 606MW Brazos plant for $860M
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
@@ -54,13 +54,6 @@ _Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-0
 
 ## By sector (top signal)
 
-### Healthcare (n=8)
-- AMGN: Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.
-- BDX: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72
-- BMY: Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy
-- CAH: Cardinal Health posts Q4 2026 non-GAAP EPS $2.91 (+40% YoY), guides FY27 EPS above 12â14% algorithm and unveils $5B buyback
-- CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
-
 ### Industrials (n=8)
 - AXON: Axon beats Q2 2026 estimates with EPS $1.88, 35% revenue growth to $904M, raises 2026 revenue outlook to 32%â34%
 - BE: Bloom Energy launches Power Connect system to cut onsite power installation time by over 40%
@@ -69,13 +62,20 @@ _Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-0
 - DE: Deere beats fiscal Q3 and raises full-year profit and cash guidance as Construction & Forestry offsets agricultural trough
 
 ### Technology (n=8)
+- AAPL: Apple cuts over 200 jobs across Siri, Vision Pro and AI software teams in AI-focused restructuring
 - ADBE: Bank of America analyst Tal Liani raises Adobe price target, citing strong AI monetization potential
 - ADI: Bernstein and Seaport upgrade Analog Devices on AI data center opportunity and improved risk-reward outlook
 - ADSK: Sector rotation into software stocks fuels Autodesk's 8% surge
 - APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
-- ARM: Xiaomi Q2 profit plunge on weak smartphone demand drags Arm Holdings down 6.41%
 
-### Financial (n=7)
+### Healthcare (n=8)
+- AMGN: Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.
+- BDX: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72
+- BMY: Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy
+- CAH: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+- CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
+
+### Financial (n=8)
 - ALL: Keefe, Bruyette & Woods downgrades Allstate to Underperform from Market Perform, cuts price target to $250 from $255
 - AON: Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity
 - BAM: Brookfield Asset Management, partners and La Caisse close roughly $6.5bn (C$9bn including debt) acquisition of Canadian renewable company Boralex
@@ -96,14 +96,13 @@ _Generated 2026-08-24T06:49:58.994508-04:00 · export=data/exports/finviz_2026-0
 - FCX: Copper price surge near records drives FCX 6.84% gain to new highs
 - FNV: Gold price surge drives Franco-Nevada 6.55% higher on Aug 19
 
-### Consumer Cyclical (n=4)
+### Consumer Cyclical (n=3)
 - ABNB: Phillip Securities downgrades Airbnb to Reduce from Neutral, raises price target to $158 on mature-market slowdown fears
-- BABA: Alibaba Q1 FY27: EPS $1.27 (-39% YoY) misses, revenue $40.0B (+15% YoY) beats, sees AI cloud nearing $10B annual run-rate
 - BKNG: Booking beats Q2 guidance, raises savings target to ~$650M by end 2027, trims full-year bookings outlook on weaker flights
 - HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
 
 ### Utilities (n=3)
-- AEP: Q2 EPS miss and recent analyst price target cuts pressure AEP shares
+- AEP: Morgan Stanley price target cut drives 3% drop in AEP shares
 - CEG: Constellation lifts 2024 adjusted EPS guidance to $11.50â$12.50 after Q2 beat and agrees to sell 606MW Brazos plant for $860M
 - DUKU: Dilution concerns from $10B equity raise plan hammer DUKU units
 

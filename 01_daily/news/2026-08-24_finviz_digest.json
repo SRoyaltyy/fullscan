@@ -1,7 +1,7 @@
 {
   "date": "2026-08-24",
-  "generated_at": "2026-08-24T06:49:58.994508-04:00",
-  "export_used": "data/exports/finviz_2026-08-21.csv",
+  "generated_at": "2026-08-24T09:10:07.567139-04:00",
+  "export_used": "data/exports/finviz_2026-08-24.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
   "index_digests": [
@@ -36,9 +36,20 @@
   ],
   "top_signal": [
     {
+      "ticker": "AAPL",
+      "digest": "Apple cuts over 200 jobs across Siri, Vision Pro and AI software teams in AI-focused restructuring",
+      "news_title": "AAPL Stock Ticks Up Premarket As New Foldable iPhone Details Emerge",
+      "sector": "Technology",
+      "industry": "Consumer Electronics",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "ABNB",
       "digest": "Phillip Securities downgrades Airbnb to Reduce from Neutral, raises price target to $158 on mature-market slowdown fears",
-      "news_title": "Why Airbnb stock isn't far from a record high",
+      "news_title": "HANetf's Vincent Chung on the changing opportunity set in global travel",
       "sector": "Consumer Cyclical",
       "industry": "Travel Services",
       "is_dividend": false,
@@ -49,7 +60,7 @@
     {
       "ticker": "ADBE",
       "digest": "Bank of America analyst Tal Liani raises Adobe price target, citing strong AI monetization potential",
-      "news_title": "Want ADSK Stock 30% Cheaper? Get Paid 11% A Year While You Wait",
+      "news_title": "What Adobe Stock's Low Earnings Multiple Is Actually Priced On",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -71,7 +82,7 @@
     {
       "ticker": "ADSK",
       "digest": "Sector rotation into software stocks fuels Autodesk's 8% surge",
-      "news_title": "Want ADSK Stock 30% Cheaper? Get Paid 11% A Year While You Wait",
+      "news_title": "What Adobe Stock's Low Earnings Multiple Is Actually Priced On",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -81,8 +92,8 @@
     },
     {
       "ticker": "AEP",
-      "digest": "Q2 EPS miss and recent analyst price target cuts pressure AEP shares",
-      "news_title": "AI Election Backlash Is Shaping Wall Streets Stock Market Views",
+      "digest": "Morgan Stanley price target cut drives 3% drop in AEP shares",
+      "news_title": "These 3 AI stocks are bought by both hedge funds and mutual funds",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
       "is_dividend": false,
@@ -104,7 +115,7 @@
     {
       "ticker": "AMGN",
       "digest": "Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.",
-      "news_title": "Moderna's cancer-vaccine breakthrough drives broad biopharma stock rally",
+      "news_title": "Lilly's Multiple Assumes Less Growth Than You Think",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -148,7 +159,7 @@
     {
       "ticker": "APH",
       "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-      "news_title": "7 Growth Stocks Holding Up in a Tough Market",
+      "news_title": "6 AI hardware stocks to own for the remainder of the year, according to an analyst",
       "sector": "Technology",
       "industry": "Electronic Components",
       "is_dividend": false,
@@ -159,7 +170,7 @@
     {
       "ticker": "APP",
       "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-      "news_title": "APP Stock Dips Below $300 For First Time In Over A Year  Analyst Cuts Target By $60, But Believes Business Remains High Quality",
+      "news_title": "Why Did APP, CMS, MVIS Stocks Plunge To 52-Week Lows Last Week?",
       "sector": "Communication Services",
       "industry": "Advertising Agencies",
       "is_dividend": false,
@@ -212,17 +223,6 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "BABA",
-      "digest": "Alibaba Q1 FY27: EPS $1.27 (-39% YoY) misses, revenue $40.0B (+15% YoY) beats, sees AI cloud nearing $10B annual run-rate",
-      "news_title": "Stocks trade higher, lifted by crypto, commodities: AlphaCheck",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
       "ticker": "BAM",
       "digest": "Brookfield Asset Management, partners and La Caisse close roughly $6.5bn (C$9bn including debt) acquisition of Canadian renewable company Boralex",
       "news_title": "'Bond King' Jeff Gundlach Compares Nvidia's $500 Billion AI Financing Push to Bonds Backed by Bananas: 'Will Not Age Well'",
@@ -247,7 +247,7 @@
     {
       "ticker": "BCS",
       "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
-      "news_title": "Barclays upgrades American Tower and Crown Castle on valuation, growth catalysts",
+      "news_title": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessents Fiscal Plan",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -269,7 +269,7 @@
     {
       "ticker": "BE",
       "digest": "Bloom Energy launches Power Connect system to cut onsite power installation time by over 40%",
-      "news_title": "Bloom Energy Introduces Power Connect, Cutting Onsite Power Installation Time by Over 40%",
+      "news_title": "Bloom Energy Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BE",
       "sector": "Industrials",
       "industry": "Electrical Equipment & Parts",
       "is_dividend": false,
@@ -291,7 +291,7 @@
     {
       "ticker": "BKR",
       "digest": "Baker Hughes wins multi-year Kuwait Oil Company contract as key technology collaborator for Ahmadi Innovation Valley",
-      "news_title": "US rig count up five as prices rise",
+      "news_title": "US rig count down five as prices climb",
       "sector": "Energy",
       "industry": "Oil & Gas Equipment & Services",
       "is_dividend": false,
@@ -302,7 +302,7 @@
     {
       "ticker": "BMO",
       "digest": "CIBC Downgrade to Neutral on Overvaluation Drives 3% BMO Drop",
-      "news_title": "D-Wave Quantum Stock Climbs as BMO Turns Bullish, Sees 85% Upside",
+      "news_title": "BMO Spots a Bigger Nvidia Story",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -313,7 +313,7 @@
     {
       "ticker": "BMY",
       "digest": "Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy",
-      "news_title": "Shareholder pressures Capricor; Lilly dives deeper into vaccines",
+      "news_title": "Most Of What Moves AbbVie Stock Has Nothing To Do With The Market",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -334,8 +334,8 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Cardinal Health posts Q4 2026 non-GAAP EPS $2.91 (+40% YoY), guides FY27 EPS above 12â14% algorithm and unveils $5B buyback",
-      "news_title": "Moderna upgraded, Baidu downgraded: Wall Street's top analyst calls",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
       "is_dividend": false,
@@ -346,7 +346,7 @@
     {
       "ticker": "CDNS",
       "digest": "Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
-      "news_title": "The Options Market Gives Synopsys Room To Fall Two-Fifths Or Rise Two-Thirds",
+      "news_title": "AI chip roadmaps force faster changes in data-center design, Cadence says",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -368,7 +368,7 @@
     {
       "ticker": "CI",
       "digest": "Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage",
-      "news_title": "Hims & Hers Health Stock Trades Below The Market On Revenue And Above It On Cash",
+      "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
@@ -445,7 +445,7 @@
     {
       "ticker": "CVS",
       "digest": "CVS Health beats Q2 estimates, raises 2026 EPS and cash flow guidance, pre-guides 2027 amid PBM headwinds",
-      "news_title": "CVS Health: Every Community Deserves a Healthier Heart",
+      "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
@@ -456,7 +456,7 @@
     {
       "ticker": "DB",
       "digest": "Deutsche Bank posts record H1 2026 post-tax profit â¬4.1B, plans â¬500M buyback from 2026 income, CET1 ratio 13.9%",
-      "news_title": "Dollar Risks Becoming Biggest Loser From Bessents Bond Buying",
+      "news_title": "Europes Luxury Giants Discern Green Shoots in Key China Market",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
@@ -467,7 +467,7 @@
     {
       "ticker": "DDOG",
       "digest": "Citigroup price target raise to $305 drives DDOG 8% surge",
-      "news_title": "GoDaddy's AI Will Stabilize Growth, Analyst Says. Plus, Lionsgate Studios and 3 More Stocks.",
+      "news_title": "Walmart Upgraded, Deckers Outdoor Corporation Downgraded: Updated Rankings on Top Blue-Chip Stocks",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -478,7 +478,7 @@
     {
       "ticker": "DE",
       "digest": "Deere beats fiscal Q3 and raises full-year profit and cash guidance as Construction & Forestry offsets agricultural trough",
-      "news_title": "AI Bets Send Industrials Soaring, But a Slowdow May Be Coming",
+      "news_title": "DE Stock Rises Overnight: Why One Analyst Sees 58% Upside In Tractor Maker",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
       "is_dividend": false,
@@ -500,7 +500,7 @@
     {
       "ticker": "DUKU",
       "digest": "Dilution concerns from $10B equity raise plan hammer DUKU units",
-      "news_title": "",
+      "news_title": "PG&E Stock Runs On A Legislative Calendar, Not The Market's",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
       "is_dividend": false,
@@ -522,7 +522,7 @@
     {
       "ticker": "ELV",
       "digest": "Elevance Health CEO disclosed purchasing company shares after the stockâs recent post-earnings slide, signaling insider confidence in the insurer.",
-      "news_title": "The Signs Before UnitedHealth Stock Ran Were In Its Own Exit Plan",
+      "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
@@ -531,20 +531,9 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "EMR",
-      "digest": "Raised 2026 outlook and industrial AI push fuel EMR 5.61% premarket surge",
-      "news_title": "How To Bank 13% A Year On ETN Stock Without Selling A Share",
-      "sector": "Industrials",
-      "industry": "Specialty Industrial Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
       "ticker": "ENB",
       "digest": "Analyst upgrade to Overweight sparks 3% ENB rebound on Aug 20",
-      "news_title": "Enbridge Inc (ENB) (Q2 2026) Earnings Call Highlights: Strong EBITDA Growth and $41 Billion ...",
+      "news_title": "Zephyr Energy greenlight phase of work at Paradox",
       "sector": "Energy",
       "industry": "Oil & Gas Midstream",
       "is_dividend": false,
@@ -555,7 +544,7 @@
     {
       "ticker": "EOG",
       "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
-      "news_title": "EOG Resources Inc. stock outperforms competitors on strong trading day",
+      "news_title": "Palantir, Freeport Break Out, Lead Five Stocks Near Buy Points",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
       "is_dividend": false,
@@ -588,7 +577,7 @@
     {
       "ticker": "FCX",
       "digest": "Copper price surge near records drives FCX 6.84% gain to new highs",
-      "news_title": "Strong gains for gold, silver and copper put materials sector on top",
+      "news_title": "Palantir, Freeport Break Out, Lead Five Stocks Near Buy Points",
       "sector": "Basic Materials",
       "industry": "Copper",
       "is_dividend": false,
@@ -621,7 +610,7 @@
     {
       "ticker": "GD",
       "digest": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
-      "news_title": "Boeing Stock Commands a Massive Premium: Is It Truly Earned?",
+      "news_title": "Boeing Is Delivering Airplanes Faster Than It Is Delivering Cash",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
@@ -632,20 +621,9 @@
     {
       "ticker": "GE",
       "digest": "Valuation concerns drive 4.5% drop in GE Aerospace after recent contract win",
-      "news_title": "AI Bets Send Industrials Soaring, But a Slowdow May Be Coming",
+      "news_title": "Boeing Is Delivering Airplanes Faster Than It Is Delivering Cash",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "GILD",
-      "digest": "Gilead beats Q2 2026 estimates with $7.8B revenue, raises 2026 HIV and base sales outlook on PrEP, Trodelvy strength",
-      "news_title": "Biotech Stocks Are Booming. What This Top Fund Is Buying Now.",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -687,9 +665,31 @@
     {
       "ticker": "HLT",
       "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
-      "news_title": "The palatial Beverly Hills home that Paris Hilton rented is back on the market for a whopping $169,000 a month",
+      "news_title": "History Has An Opinion On This CCL Price Level",
       "sector": "Consumer Cyclical",
       "industry": "Lodging",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "HOOD",
+      "digest": "Trump's Clarity Act push and Bitcoin rally drive HOOD's 14% surge",
+      "news_title": "The Market That Never Sleeps Is Getting Closer to Reality",
+      "sector": "Financial",
+      "industry": "Capital Markets",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "HWM",
+      "digest": "Howmet beats Q2 estimates with EPS $1.33, revenue +24% YoY, raises 2026 outlook on strong aero and gas turbine demand",
+      "news_title": "Dell Stock Is Daring You To Believe Its Numbers",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -697,96 +697,6 @@
     }
   ],
   "by_sector": {
-    "Healthcare": [
-      {
-        "ticker": "AMGN",
-        "digest": "Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.",
-        "news_title": "Moderna's cancer-vaccine breakthrough drives broad biopharma stock rally",
-        "sector": "Healthcare",
-        "industry": "Drug Manufacturers - General",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "BDX",
-        "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
-        "news_title": "BD Appoints Gary Sorsher as Chief Quality Officer; Jeff Silvestri to Retire",
-        "sector": "Healthcare",
-        "industry": "Medical Instruments & Supplies",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "BMY",
-        "digest": "Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy",
-        "news_title": "Shareholder pressures Capricor; Lilly dives deeper into vaccines",
-        "sector": "Healthcare",
-        "industry": "Drug Manufacturers - General",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CAH",
-        "digest": "Cardinal Health posts Q4 2026 non-GAAP EPS $2.91 (+40% YoY), guides FY27 EPS above 12â14% algorithm and unveils $5B buyback",
-        "news_title": "Moderna upgraded, Baidu downgraded: Wall Street's top analyst calls",
-        "sector": "Healthcare",
-        "industry": "Medical Distribution",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CI",
-        "digest": "Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage",
-        "news_title": "Hims & Hers Health Stock Trades Below The Market On Revenue And Above It On Cash",
-        "sector": "Healthcare",
-        "industry": "Healthcare Plans",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "COR",
-        "digest": "Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift",
-        "news_title": "Cencora Inc. stock underperforms Wednesday when compared to competitors",
-        "sector": "Healthcare",
-        "industry": "Medical Distribution",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CVS",
-        "digest": "CVS Health beats Q2 estimates, raises 2026 EPS and cash flow guidance, pre-guides 2027 amid PBM headwinds",
-        "news_title": "CVS Health: Every Community Deserves a Healthier Heart",
-        "sector": "Healthcare",
-        "industry": "Healthcare Plans",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "ELV",
-        "digest": "Elevance Health CEO disclosed purchasing company shares after the stockâs recent post-earnings slide, signaling insider confidence in the insurer.",
-        "news_title": "The Signs Before UnitedHealth Stock Ran Were In Its Own Exit Plan",
-        "sector": "Healthcare",
-        "industry": "Healthcare Plans",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Industrials": [
       {
         "ticker": "AXON",
@@ -802,7 +712,7 @@
       {
         "ticker": "BE",
         "digest": "Bloom Energy launches Power Connect system to cut onsite power installation time by over 40%",
-        "news_title": "Bloom Energy Introduces Power Connect, Cutting Onsite Power Installation Time by Over 40%",
+        "news_title": "Bloom Energy Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BE",
         "sector": "Industrials",
         "industry": "Electrical Equipment & Parts",
         "is_dividend": false,
@@ -835,20 +745,9 @@
       {
         "ticker": "DE",
         "digest": "Deere beats fiscal Q3 and raises full-year profit and cash guidance as Construction & Forestry offsets agricultural trough",
-        "news_title": "AI Bets Send Industrials Soaring, But a Slowdow May Be Coming",
+        "news_title": "DE Stock Rises Overnight: Why One Analyst Sees 58% Upside In Tractor Maker",
         "sector": "Industrials",
         "industry": "Farm & Heavy Construction Machinery",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "EMR",
-        "digest": "Raised 2026 outlook and industrial AI push fuel EMR 5.61% premarket surge",
-        "news_title": "How To Bank 13% A Year On ETN Stock Without Selling A Share",
-        "sector": "Industrials",
-        "industry": "Specialty Industrial Machinery",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -875,13 +774,35 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
+      },
+      {
+        "ticker": "GD",
+        "digest": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
+        "news_title": "Boeing Is Delivering Airplanes Faster Than It Is Delivering Cash",
+        "sector": "Industrials",
+        "industry": "Aerospace & Defense",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
       }
     ],
     "Technology": [
       {
+        "ticker": "AAPL",
+        "digest": "Apple cuts over 200 jobs across Siri, Vision Pro and AI software teams in AI-focused restructuring",
+        "news_title": "AAPL Stock Ticks Up Premarket As New Foldable iPhone Details Emerge",
+        "sector": "Technology",
+        "industry": "Consumer Electronics",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
         "ticker": "ADBE",
         "digest": "Bank of America analyst Tal Liani raises Adobe price target, citing strong AI monetization potential",
-        "news_title": "Want ADSK Stock 30% Cheaper? Get Paid 11% A Year While You Wait",
+        "news_title": "What Adobe Stock's Low Earnings Multiple Is Actually Priced On",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -903,7 +824,7 @@
       {
         "ticker": "ADSK",
         "digest": "Sector rotation into software stocks fuels Autodesk's 8% surge",
-        "news_title": "Want ADSK Stock 30% Cheaper? Get Paid 11% A Year While You Wait",
+        "news_title": "What Adobe Stock's Low Earnings Multiple Is Actually Priced On",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -914,7 +835,7 @@
       {
         "ticker": "APH",
         "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-        "news_title": "7 Growth Stocks Holding Up in a Tough Market",
+        "news_title": "6 AI hardware stocks to own for the remainder of the year, according to an analyst",
         "sector": "Technology",
         "industry": "Electronic Components",
         "is_dividend": false,
@@ -936,7 +857,7 @@
       {
         "ticker": "CDNS",
         "digest": "Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
-        "news_title": "The Options Market Gives Synopsys Room To Fall Two-Fifths Or Rise Two-Thirds",
+        "news_title": "AI chip roadmaps force faster changes in data-center design, Cadence says",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -954,13 +875,92 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
+      }
+    ],
+    "Healthcare": [
+      {
+        "ticker": "AMGN",
+        "digest": "Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.",
+        "news_title": "Lilly's Multiple Assumes Less Growth Than You Think",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
       },
       {
-        "ticker": "DDOG",
-        "digest": "Citigroup price target raise to $305 drives DDOG 8% surge",
-        "news_title": "GoDaddy's AI Will Stabilize Growth, Analyst Says. Plus, Lionsgate Studios and 3 More Stocks.",
-        "sector": "Technology",
-        "industry": "Software - Application",
+        "ticker": "BDX",
+        "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+        "news_title": "BD Appoints Gary Sorsher as Chief Quality Officer; Jeff Silvestri to Retire",
+        "sector": "Healthcare",
+        "industry": "Medical Instruments & Supplies",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "BMY",
+        "digest": "Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy",
+        "news_title": "Most Of What Moves AbbVie Stock Has Nothing To Do With The Market",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CAH",
+        "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+        "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
+        "sector": "Healthcare",
+        "industry": "Medical Distribution",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CI",
+        "digest": "Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage",
+        "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
+        "sector": "Healthcare",
+        "industry": "Healthcare Plans",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "COR",
+        "digest": "Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift",
+        "news_title": "Cencora Inc. stock underperforms Wednesday when compared to competitors",
+        "sector": "Healthcare",
+        "industry": "Medical Distribution",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CVS",
+        "digest": "CVS Health beats Q2 estimates, raises 2026 EPS and cash flow guidance, pre-guides 2027 amid PBM headwinds",
+        "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
+        "sector": "Healthcare",
+        "industry": "Healthcare Plans",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "ELV",
+        "digest": "Elevance Health CEO disclosed purchasing company shares after the stockâs recent post-earnings slide, signaling insider confidence in the insurer.",
+        "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
+        "sector": "Healthcare",
+        "industry": "Healthcare Plans",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1015,7 +1015,7 @@
       {
         "ticker": "BCS",
         "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
-        "news_title": "Barclays upgrades American Tower and Crown Castle on valuation, growth catalysts",
+        "news_title": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessents Fiscal Plan",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -1026,7 +1026,7 @@
       {
         "ticker": "BMO",
         "digest": "CIBC Downgrade to Neutral on Overvaluation Drives 3% BMO Drop",
-        "news_title": "D-Wave Quantum Stock Climbs as BMO Turns Bullish, Sees 85% Upside",
+        "news_title": "BMO Spots a Bigger Nvidia Story",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -1037,9 +1037,20 @@
       {
         "ticker": "DB",
         "digest": "Deutsche Bank posts record H1 2026 post-tax profit â¬4.1B, plans â¬500M buyback from 2026 income, CET1 ratio 13.9%",
-        "news_title": "Dollar Risks Becoming Biggest Loser From Bessents Bond Buying",
+        "news_title": "Europes Luxury Giants Discern Green Shoots in Key China Market",
         "sector": "Financial",
         "industry": "Banks - Regional",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "HOOD",
+        "digest": "Trump's Clarity Act push and Bitcoin rally drive HOOD's 14% surge",
+        "news_title": "The Market That Never Sleeps Is Getting Closer to Reality",
+        "sector": "Financial",
+        "industry": "Capital Markets",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1050,7 +1061,7 @@
       {
         "ticker": "BKR",
         "digest": "Baker Hughes wins multi-year Kuwait Oil Company contract as key technology collaborator for Ahmadi Innovation Valley",
-        "news_title": "US rig count up five as prices rise",
+        "news_title": "US rig count down five as prices climb",
         "sector": "Energy",
         "industry": "Oil & Gas Equipment & Services",
         "is_dividend": false,
@@ -1094,7 +1105,7 @@
       {
         "ticker": "ENB",
         "digest": "Analyst upgrade to Overweight sparks 3% ENB rebound on Aug 20",
-        "news_title": "Enbridge Inc (ENB) (Q2 2026) Earnings Call Highlights: Strong EBITDA Growth and $41 Billion ...",
+        "news_title": "Zephyr Energy greenlight phase of work at Paradox",
         "sector": "Energy",
         "industry": "Oil & Gas Midstream",
         "is_dividend": false,
@@ -1105,7 +1116,7 @@
       {
         "ticker": "EOG",
         "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
-        "news_title": "EOG Resources Inc. stock outperforms competitors on strong trading day",
+        "news_title": "Palantir, Freeport Break Out, Lead Five Stocks Near Buy Points",
         "sector": "Energy",
         "industry": "Oil & Gas E&P",
         "is_dividend": false,
@@ -1151,7 +1162,7 @@
       {
         "ticker": "FCX",
         "digest": "Copper price surge near records drives FCX 6.84% gain to new highs",
-        "news_title": "Strong gains for gold, silver and copper put materials sector on top",
+        "news_title": "Palantir, Freeport Break Out, Lead Five Stocks Near Buy Points",
         "sector": "Basic Materials",
         "industry": "Copper",
         "is_dividend": false,
@@ -1175,20 +1186,9 @@
       {
         "ticker": "ABNB",
         "digest": "Phillip Securities downgrades Airbnb to Reduce from Neutral, raises price target to $158 on mature-market slowdown fears",
-        "news_title": "Why Airbnb stock isn't far from a record high",
+        "news_title": "HANetf's Vincent Chung on the changing opportunity set in global travel",
         "sector": "Consumer Cyclical",
         "industry": "Travel Services",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "BABA",
-        "digest": "Alibaba Q1 FY27: EPS $1.27 (-39% YoY) misses, revenue $40.0B (+15% YoY) beats, sees AI cloud nearing $10B annual run-rate",
-        "news_title": "Stocks trade higher, lifted by crypto, commodities: AlphaCheck",
-        "sector": "Consumer Cyclical",
-        "industry": "Internet Retail",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1208,7 +1208,7 @@
       {
         "ticker": "HLT",
         "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
-        "news_title": "The palatial Beverly Hills home that Paris Hilton rented is back on the market for a whopping $169,000 a month",
+        "news_title": "History Has An Opinion On This CCL Price Level",
         "sector": "Consumer Cyclical",
         "industry": "Lodging",
         "is_dividend": false,
@@ -1220,8 +1220,8 @@
     "Utilities": [
       {
         "ticker": "AEP",
-        "digest": "Q2 EPS miss and recent analyst price target cuts pressure AEP shares",
-        "news_title": "AI Election Backlash Is Shaping Wall Streets Stock Market Views",
+        "digest": "Morgan Stanley price target cut drives 3% drop in AEP shares",
+        "news_title": "These 3 AI stocks are bought by both hedge funds and mutual funds",
         "sector": "Utilities",
         "industry": "Utilities - Regulated Electric",
         "is_dividend": false,
@@ -1243,7 +1243,7 @@
       {
         "ticker": "DUKU",
         "digest": "Dilution concerns from $10B equity raise plan hammer DUKU units",
-        "news_title": "",
+        "news_title": "PG&E Stock Runs On A Legislative Calendar, Not The Market's",
         "sector": "Utilities",
         "industry": "Utilities - Regulated Electric",
         "is_dividend": false,
@@ -1267,7 +1267,7 @@
       {
         "ticker": "APP",
         "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-        "news_title": "APP Stock Dips Below $300 For First Time In Over A Year  Analyst Cuts Target By $60, But Believes Business Remains High Quality",
+        "news_title": "Why Did APP, CMS, MVIS Stocks Plunge To 52-Week Lows Last Week?",
         "sector": "Communication Services",
         "industry": "Advertising Agencies",
         "is_dividend": false,
@@ -1303,9 +1303,20 @@
   },
   "all_ticker_digests_sample": [
     {
+      "ticker": "AAPL",
+      "digest": "Apple cuts over 200 jobs across Siri, Vision Pro and AI software teams in AI-focused restructuring",
+      "news_title": "AAPL Stock Ticks Up Premarket As New Foldable iPhone Details Emerge",
+      "sector": "Technology",
+      "industry": "Consumer Electronics",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "ABNB",
       "digest": "Phillip Securities downgrades Airbnb to Reduce from Neutral, raises price target to $158 on mature-market slowdown fears",
-      "news_title": "Why Airbnb stock isn't far from a record high",
+      "news_title": "HANetf's Vincent Chung on the changing opportunity set in global travel",
       "sector": "Consumer Cyclical",
       "industry": "Travel Services",
       "is_dividend": false,
@@ -1316,7 +1327,7 @@
     {
       "ticker": "ADBE",
       "digest": "Bank of America analyst Tal Liani raises Adobe price target, citing strong AI monetization potential",
-      "news_title": "Want ADSK Stock 30% Cheaper? Get Paid 11% A Year While You Wait",
+      "news_title": "What Adobe Stock's Low Earnings Multiple Is Actually Priced On",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1338,7 +1349,7 @@
     {
       "ticker": "ADSK",
       "digest": "Sector rotation into software stocks fuels Autodesk's 8% surge",
-      "news_title": "Want ADSK Stock 30% Cheaper? Get Paid 11% A Year While You Wait",
+      "news_title": "What Adobe Stock's Low Earnings Multiple Is Actually Priced On",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1348,8 +1359,8 @@
     },
     {
       "ticker": "AEP",
-      "digest": "Q2 EPS miss and recent analyst price target cuts pressure AEP shares",
-      "news_title": "AI Election Backlash Is Shaping Wall Streets Stock Market Views",
+      "digest": "Morgan Stanley price target cut drives 3% drop in AEP shares",
+      "news_title": "These 3 AI stocks are bought by both hedge funds and mutual funds",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
       "is_dividend": false,
@@ -1371,7 +1382,7 @@
     {
       "ticker": "AMGN",
       "digest": "Amgen shares rise after Argus boosts its price target to $460 and Morgan Stanley raises its target to $362, citing strong Q2 results and pipeline progress.",
-      "news_title": "Moderna's cancer-vaccine breakthrough drives broad biopharma stock rally",
+      "news_title": "Lilly's Multiple Assumes Less Growth Than You Think",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1415,7 +1426,7 @@
     {
       "ticker": "APH",
       "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-      "news_title": "7 Growth Stocks Holding Up in a Tough Market",
+      "news_title": "6 AI hardware stocks to own for the remainder of the year, according to an analyst",
       "sector": "Technology",
       "industry": "Electronic Components",
       "is_dividend": false,
@@ -1426,7 +1437,7 @@
     {
       "ticker": "APP",
       "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-      "news_title": "APP Stock Dips Below $300 For First Time In Over A Year  Analyst Cuts Target By $60, But Believes Business Remains High Quality",
+      "news_title": "Why Did APP, CMS, MVIS Stocks Plunge To 52-Week Lows Last Week?",
       "sector": "Communication Services",
       "industry": "Advertising Agencies",
       "is_dividend": false,
@@ -1479,17 +1490,6 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "BABA",
-      "digest": "Alibaba Q1 FY27: EPS $1.27 (-39% YoY) misses, revenue $40.0B (+15% YoY) beats, sees AI cloud nearing $10B annual run-rate",
-      "news_title": "Stocks trade higher, lifted by crypto, commodities: AlphaCheck",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
       "ticker": "BAM",
       "digest": "Brookfield Asset Management, partners and La Caisse close roughly $6.5bn (C$9bn including debt) acquisition of Canadian renewable company Boralex",
       "news_title": "'Bond King' Jeff Gundlach Compares Nvidia's $500 Billion AI Financing Push to Bonds Backed by Bananas: 'Will Not Age Well'",
@@ -1514,7 +1514,7 @@
     {
       "ticker": "BCS",
       "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
-      "news_title": "Barclays upgrades American Tower and Crown Castle on valuation, growth catalysts",
+      "news_title": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessents Fiscal Plan",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1536,7 +1536,7 @@
     {
       "ticker": "BE",
       "digest": "Bloom Energy launches Power Connect system to cut onsite power installation time by over 40%",
-      "news_title": "Bloom Energy Introduces Power Connect, Cutting Onsite Power Installation Time by Over 40%",
+      "news_title": "Bloom Energy Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BE",
       "sector": "Industrials",
       "industry": "Electrical Equipment & Parts",
       "is_dividend": false,
@@ -1558,7 +1558,7 @@
     {
       "ticker": "BKR",
       "digest": "Baker Hughes wins multi-year Kuwait Oil Company contract as key technology collaborator for Ahmadi Innovation Valley",
-      "news_title": "US rig count up five as prices rise",
+      "news_title": "US rig count down five as prices climb",
       "sector": "Energy",
       "industry": "Oil & Gas Equipment & Services",
       "is_dividend": false,
@@ -1569,7 +1569,7 @@
     {
       "ticker": "BMO",
       "digest": "CIBC Downgrade to Neutral on Overvaluation Drives 3% BMO Drop",
-      "news_title": "D-Wave Quantum Stock Climbs as BMO Turns Bullish, Sees 85% Upside",
+      "news_title": "BMO Spots a Bigger Nvidia Story",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1580,7 +1580,7 @@
     {
       "ticker": "BMY",
       "digest": "Bristol Myers Squibb wins FDA accelerated approval for first CELMoD therapy ZENBEXUS for adults with multiple myeloma after prior therapy",
-      "news_title": "Shareholder pressures Capricor; Lilly dives deeper into vaccines",
+      "news_title": "Most Of What Moves AbbVie Stock Has Nothing To Do With The Market",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1601,8 +1601,8 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Cardinal Health posts Q4 2026 non-GAAP EPS $2.91 (+40% YoY), guides FY27 EPS above 12â14% algorithm and unveils $5B buyback",
-      "news_title": "Moderna upgraded, Baidu downgraded: Wall Street's top analyst calls",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
       "is_dividend": false,
@@ -1613,7 +1613,7 @@
     {
       "ticker": "CDNS",
       "digest": "Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
-      "news_title": "The Options Market Gives Synopsys Room To Fall Two-Fifths Or Rise Two-Thirds",
+      "news_title": "AI chip roadmaps force faster changes in data-center design, Cadence says",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1635,7 +1635,7 @@
     {
       "ticker": "CI",
       "digest": "Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage",
-      "news_title": "Hims & Hers Health Stock Trades Below The Market On Revenue And Above It On Cash",
+      "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
@@ -1712,7 +1712,7 @@
     {
       "ticker": "CVS",
       "digest": "CVS Health beats Q2 estimates, raises 2026 EPS and cash flow guidance, pre-guides 2027 amid PBM headwinds",
-      "news_title": "CVS Health: Every Community Deserves a Healthier Heart",
+      "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
@@ -1723,7 +1723,7 @@
     {
       "ticker": "DB",
       "digest": "Deutsche Bank posts record H1 2026 post-tax profit â¬4.1B, plans â¬500M buyback from 2026 income, CET1 ratio 13.9%",
-      "news_title": "Dollar Risks Becoming Biggest Loser From Bessents Bond Buying",
+      "news_title": "Europes Luxury Giants Discern Green Shoots in Key China Market",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
@@ -1734,7 +1734,7 @@
     {
       "ticker": "DDOG",
       "digest": "Citigroup price target raise to $305 drives DDOG 8% surge",
-      "news_title": "GoDaddy's AI Will Stabilize Growth, Analyst Says. Plus, Lionsgate Studios and 3 More Stocks.",
+      "news_title": "Walmart Upgraded, Deckers Outdoor Corporation Downgraded: Updated Rankings on Top Blue-Chip Stocks",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1745,7 +1745,7 @@
     {
       "ticker": "DE",
       "digest": "Deere beats fiscal Q3 and raises full-year profit and cash guidance as Construction & Forestry offsets agricultural trough",
-      "news_title": "AI Bets Send Industrials Soaring, But a Slowdow May Be Coming",
+      "news_title": "DE Stock Rises Overnight: Why One Analyst Sees 58% Upside In Tractor Maker",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
       "is_dividend": false,
@@ -1767,7 +1767,7 @@
     {
       "ticker": "DUKU",
       "digest": "Dilution concerns from $10B equity raise plan hammer DUKU units",
-      "news_title": "",
+      "news_title": "PG&E Stock Runs On A Legislative Calendar, Not The Market's",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
       "is_dividend": false,
@@ -1789,7 +1789,7 @@
     {
       "ticker": "ELV",
       "digest": "Elevance Health CEO disclosed purchasing company shares after the stockâs recent post-earnings slide, signaling insider confidence in the insurer.",
-      "news_title": "The Signs Before UnitedHealth Stock Ran Were In Its Own Exit Plan",
+      "news_title": "Is The Pullback In UNH Stock A Glitch Or A Warning?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
@@ -1798,20 +1798,9 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "EMR",
-      "digest": "Raised 2026 outlook and industrial AI push fuel EMR 5.61% premarket surge",
-      "news_title": "How To Bank 13% A Year On ETN Stock Without Selling A Share",
-      "sector": "Industrials",
-      "industry": "Specialty Industrial Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
       "ticker": "ENB",
       "digest": "Analyst upgrade to Overweight sparks 3% ENB rebound on Aug 20",
-      "news_title": "Enbridge Inc (ENB) (Q2 2026) Earnings Call Highlights: Strong EBITDA Growth and $41 Billion ...",
+      "news_title": "Zephyr Energy greenlight phase of work at Paradox",
       "sector": "Energy",
       "industry": "Oil & Gas Midstream",
       "is_dividend": false,
@@ -1822,7 +1811,7 @@
     {
       "ticker": "EOG",
       "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
-      "news_title": "EOG Resources Inc. stock outperforms competitors on strong trading day",
+      "news_title": "Palantir, Freeport Break Out, Lead Five Stocks Near Buy Points",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
       "is_dividend": false,
@@ -1855,7 +1844,7 @@
     {
       "ticker": "FCX",
       "digest": "Copper price surge near records drives FCX 6.84% gain to new highs",
-      "news_title": "Strong gains for gold, silver and copper put materials sector on top",
+      "news_title": "Palantir, Freeport Break Out, Lead Five Stocks Near Buy Points",
       "sector": "Basic Materials",
       "industry": "Copper",
       "is_dividend": false,
@@ -1888,7 +1877,7 @@
     {
       "ticker": "GD",
       "digest": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
-      "news_title": "Boeing Stock Commands a Massive Premium: Is It Truly Earned?",
+      "news_title": "Boeing Is Delivering Airplanes Faster Than It Is Delivering Cash",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
@@ -1899,20 +1888,9 @@
     {
       "ticker": "GE",
       "digest": "Valuation concerns drive 4.5% drop in GE Aerospace after recent contract win",
-      "news_title": "AI Bets Send Industrials Soaring, But a Slowdow May Be Coming",
+      "news_title": "Boeing Is Delivering Airplanes Faster Than It Is Delivering Cash",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "GILD",
-      "digest": "Gilead beats Q2 2026 estimates with $7.8B revenue, raises 2026 HIV and base sales outlook on PrEP, Trodelvy strength",
-      "news_title": "Biotech Stocks Are Booming. What This Top Fund Is Buying Now.",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1954,7 +1932,7 @@
     {
       "ticker": "HLT",
       "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
-      "news_title": "The palatial Beverly Hills home that Paris Hilton rented is back on the market for a whopping $169,000 a month",
+      "news_title": "History Has An Opinion On This CCL Price Level",
       "sector": "Consumer Cyclical",
       "industry": "Lodging",
       "is_dividend": false,
@@ -1965,7 +1943,7 @@
     {
       "ticker": "HOOD",
       "digest": "Trump's Clarity Act push and Bitcoin rally drive HOOD's 14% surge",
-      "news_title": "Crypto Stocks Gain as Bitcoin Heads for Best Week in Over Two Years",
+      "news_title": "The Market That Never Sleeps Is Getting Closer to Reality",
       "sector": "Financial",
       "industry": "Capital Markets",
       "is_dividend": false,
@@ -1998,7 +1976,7 @@
     {
       "ticker": "ING",
       "digest": "ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates",
-      "news_title": "Dollar hits 3-month low vs euro, pares losses after Treasury move",
+      "news_title": "Bessent Has No Easy Fix for Whats Really Driving Bond Yields Up",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -2009,7 +1987,7 @@
     {
       "ticker": "INTC",
       "digest": "Intel shares fall about 7% after UBS cuts its price target to $112 from $121 while maintaining a Neutral rating.",
-      "news_title": "Is Micron a Commodity or an AI Powerhouse? The Debate Driving MU's Low Valuation.",
+      "news_title": "Alibaba shares fall 8% after $10 billion Hong Kong share sale",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -2018,9 +1996,20 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "INTU",
+      "digest": "Jefferies cuts Intuit price target to $500 from $550, reiterates Buy ahead of earnings",
+      "news_title": "INTU Stock In Focus: Jefferies Sees Recovery Opportunity Despite AI Fears Ahead Of Earnings",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "ITW",
       "digest": "Illinois Tool Works raises its annual dividend by 7% to $6.88 per share and wins board approval for a new $6 billion share repurchase authorization announced today.",
-      "news_title": "Teks launches Elite Metal-to-Metal Screws for professional trade applications",
+      "news_title": "Nordson's Order Book, Not Just Its Record Quarter, Moved The Stock",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
       "is_dividend": false,
@@ -2053,7 +2042,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "Walmart says it is using $2.9 billion in tariff refunds to lower prices",
+      "news_title": "Why Olipop's founder hasn't sold out to Pepsi or Coca-Cola",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -2075,7 +2064,7 @@
     {
       "ticker": "LITE",
       "digest": "Profit-taking and risk-off pressures drive LITE's 9.76% drop after massive post-earnings rally",
-      "news_title": "Convertible Bonds Are the New AI Bet. The High Returns Hide Bigger Risks.",
+      "news_title": "AAOI Stock Dips 10% Overnight After $600M Equity Offering Triggers Dilution Concerns",
       "sector": "Technology",
       "industry": "Communication Equipment",
       "is_dividend": false,
@@ -2097,7 +2086,7 @@
     {
       "ticker": "LOW",
       "digest": "Lowe's cuts 2026 outlook to bottom of range, sees flat comps amid DIY and construction softness",
-      "news_title": "Home Depot's Tariff Refund Never Made It To The Guide",
+      "news_title": "The Toughest Questions HD Faced On Its Latest Call",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
       "is_dividend": false,
@@ -2108,7 +2097,7 @@
     {
       "ticker": "LYG",
       "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-      "news_title": "AI Is Starting to Define Bank Internships as Much as Long Hours",
+      "news_title": "Reform UK infighting complicates Farages push to prepare party to govern",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
@@ -2177,6 +2166,17 @@
       "news_title": "A Big Risk In Coca-Cola Stock Is What Its Earnings Step-Up Is Made Of",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "MO",
+      "digest": "Altria's Philip Morris USA signs contract manufacturing agreement with Philip Morris International's non-U.S. affiliates to enhance traditional tobacco operations",
+      "news_title": "Philip Morris International Announces Contract Manufacturing Collaboration with Altria",
+      "sector": "Consumer Defensive",
+      "industry": "Tobacco",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
