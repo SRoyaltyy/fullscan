@@ -9,8 +9,9 @@
   --chip:#2a3450; --day:#121826; --gold:#fbbf24;
  }
  *{box-sizing:border-box}
+ html,body{overflow-x:hidden}
  body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
- .wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}
  h1{font-size:20px;margin:0 0 4px}
  .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
@@ -69,6 +70,7 @@
  .fill-cash span{display:block;color:var(--dim);font-size:10px;letter-spacing:.04em;text-transform:uppercase}
  .fill-cash b{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;font-weight:600}
  .sleeve-block{margin:0 0 18px}
+ #stats,#pos{display:block;overflow-x:auto;max-width:100%}
  @media (max-width:640px){
    .fill{grid-template-columns:48px minmax(0,1fr);gap:4px 10px}
    .fill-cash{grid-column:2;text-align:left;margin-top:2px}
@@ -76,6 +78,9 @@
    .fill-cash b{display:inline;font-size:14px}
    canvas{height:220px}
    .wrap{padding:12px 12px 40px}
+   .bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+   .chip,.bar input,.bar select{flex:0 0 auto}
+   table{display:block;overflow-x:auto;max-width:100%}
  }
 </style></head><body><div class="wrap">
 <h1>Paper Trading — Stock Book Simulation</h1>
