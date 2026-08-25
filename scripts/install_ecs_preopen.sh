@@ -40,7 +40,9 @@ else
     || sudo -u "$GHA_USER" git -C "$ROOT" reset --hard origin/main
 fi
 
-chmod +x "$ROOT/scripts/ecs_preopen.sh" "$ROOT/scripts/install_ecs_preopen.sh"
+chmod +x "$ROOT/scripts/ecs_preopen.sh" "$ROOT/scripts/install_ecs_preopen.sh" \
+  "$ROOT/scripts/ensure_openclaw_timeouts.sh" "$ROOT/scripts/ensure_ecs_clock.sh" \
+  "$ROOT/scripts/safe_git_push.sh"
 
 if [ ! -x "$ROOT/.venv/bin/python" ]; then
   echo "[install] creating venv"
@@ -77,14 +79,12 @@ install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.service" \
 install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.timer" \
   /etc/systemd/system/fullscan-preopen.timer
 
-# Gateway timeouts — Python waiting 3h is useless if OpenClaw dies at 30 min.
-if command -v openclaw >/dev/null 2>&1; then
-  openclaw config set agents.defaults.timeoutSeconds 10800 || true
-  openclaw config set agents.defaults.llm.idleTimeoutSeconds 10800 || true
-  openclaw config set agents.defaults.subagents.runTimeoutSeconds 10800 || true
-  echo "[install] OpenClaw timeouts set to 10800s (best-effort)"
+# Gateway timeouts — Python waiting 3h is useless if OpenClaw dies at ~9 min.
+# Use the shared patcher so models.providers.<id>.timeoutSeconds is raised too.
+if [ -x "$ROOT/scripts/ensure_openclaw_timeouts.sh" ]; then
+  sudo -u "$GHA_USER" -H bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
 else
-  echo "[install] openclaw CLI not on PATH — set timeoutSeconds 10800 yourself"
+  echo "[install] ensure_openclaw_timeouts.sh missing"
 fi
 
 systemctl daemon-reload
