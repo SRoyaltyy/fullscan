@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   deploy:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
             echo "Run ID: $RUN_ID"
             artifacts_url="https://api.github.com/repos/${REPO}/actions/runs/${RUN_ID}/artifacts"
             curl -s -H "Authorization: token ${TOKEN}" "$artifacts_url" > artifacts.json || true
-            url=$(jq -r '.artifacts[]? | select(.name=="dashboard") | .archive_download_url' artifacts.json 2>/dev/null | head -1 || true)
+            url=$(jq -r '.artifacts[]? | select(.name=="dashboard" or .name=="stock-book-all") | .archive_download_url' artifacts.json 2>/dev/null | head -1 || true)
             if [ -n "${url:-}" ] && [ "$url" != "null" ]; then
               curl -L -H "Authorization: token ${TOKEN}" -o artifact.zip "$url"
               mkdir -p dashboard_artifact

@@ -123,6 +123,9 @@ jobs:
         if: always()
         run: |
           set -uo pipefail
+          unset GIT_DIR GIT_WORK_TREE || true
+          cd "${GITHUB_WORKSPACE:-.}"
+          git config --global --add safe.directory "${GITHUB_WORKSPACE:-$(pwd)}" || true
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
 
@@ -210,15 +213,19 @@ jobs:
           fi
 
       # Publish fixed Chrome URL: https://SRoyaltyy.github.io/fullscan/dashboard/
+      # Do NOT use peaceiris on the ECS self-hosted runner: Node 24 leaves
+      # GITHUB_WORKSPACE undefined, so force_orphan publishes under
+      # undefined/actions_github_pages_*/ and the real Pages URLs 404.
       - name: Prepare Pages publish dir
         if: always()
         run: |
           set -euo pipefail
+          unset GIT_DIR GIT_WORK_TREE || true
+          cd "${GITHUB_WORKSPACE:-.}"
           mkdir -p pages_out/dashboard
           touch pages_out/.nojekyll
           if [ -f dashboard/index.html ]; then
             cp dashboard/index.html pages_out/dashboard/index.html
-            # also root so https://SRoyaltyy.github.io/fullscan/ works
             cp dashboard/index.html pages_out/index.html
             echo "Prepared pages_out with dashboard"
             ls -la pages_out pages_out/dashboard
@@ -228,12 +235,31 @@ jobs:
 
       - name: Deploy dashboard to GitHub Pages (gh-pages)
         if: always()
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./pages_out
-          force_orphan: true
-          enable_jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          unset GIT_DIR GIT_WORK_TREE || true
+          cd "${GITHUB_WORKSPACE:-.}"
+          if [ ! -f pages_out/index.html ]; then
+            echo "WARN: pages_out/index.html missing — not touching gh-pages"
+            exit 0
+          fi
+          test -f pages_out/dashboard/index.html
+          TMP=$(mktemp -d)
+          cp -a pages_out/. "$TMP/"
+          touch "$TMP/.nojekyll"
+          git -C "$TMP" init
+          git -C "$TMP" checkout -b gh-pages
+          git -C "$TMP" config user.name "Market-Bot-Automaton"
+          git -C "$TMP" config user.email "bot@users.noreply.github.com"
+          git -C "$TMP" add -A
+          git -C "$TMP" commit -m "deploy dashboard ${GITHUB_SHA}"
+          git -C "$TMP" remote add origin \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C "$TMP" push --force origin gh-pages
+          echo "Published https://SRoyaltyy.github.io/fullscan/dashboard/"
+          echo "Published https://SRoyaltyy.github.io/fullscan/"
 
       - name: Print fixed dashboard URL
         if: always()
@@ -244,3 +270,4 @@ jobs:
           echo "  https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Repo Settings → Pages → Source = Deploy from branch → gh-pages / (root)"
           echo "=============================================="
+
