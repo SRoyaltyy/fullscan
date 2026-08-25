@@ -7,7 +7,13 @@
 # conflict and the push never happened, so the next orchestrator pass
 # re-ran every sector AFTER the open.
 #
+# The 08-25 Pre-Open ALL failure: python wrote a full quality day, then
+# this script hit `fatal: not in a git directory` (stale GIT_DIR from
+# actions/checkout) plus `dubious ownership` on the self-hosted work
+# dir, `git commit` failed, and `exit 0` painted the job green.
+#
 # Strategy:
+#   0. drop GIT_DIR, mark the work dir safe
 #   1. commit the named paths
 #   2. snapshot OUR scoreboard.json
 #   3. rebase onto origin/main
@@ -15,14 +21,25 @@
 #      then union our (date, topic) entries back in via src.scoreboard
 #   5. push; one retry
 #
-# Always exits 0 so a push fight cannot red the whole workflow — the
-# files exist on the runner and the orchestrator can re-dispatch.
-#
 # Usage: bash scripts/safe_git_push.sh "commit message" path [path ...]
 set -uo pipefail
 
 MSG="${1:-auto: update}"
 shift || true
+
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE || true
+if [ -n "${GITHUB_WORKSPACE:-}" ] && [ -d "${GITHUB_WORKSPACE}/.git" ]; then
+  cd "$GITHUB_WORKSPACE"
+fi
+ROOT="$(pwd)"
+git config --global --add safe.directory "$ROOT" || true
+git config --global --add safe.directory /home/gha/actions-runner/_work/fullscan/fullscan || true
+git config --global --add safe.directory '*' || true
+
+if [ ! -d .git ] && [ ! -f .git ]; then
+  echo "[safe-push] FATAL: $ROOT is not a git checkout"
+  exit 1
+fi
 
 git config user.name "Market-Bot-Automaton"
 git config user.email "bot@users.noreply.github.com"
@@ -35,13 +52,15 @@ fi
 git add "$@" || true
 if git diff --staged --quiet; then
   echo "[safe-push] no staged changes"
+  git status -sb || true
   exit 0
 fi
 
-git commit -m "$MSG" || {
-  echo "[safe-push] commit failed / nothing to commit"
-  exit 0
-}
+if ! git commit -m "$MSG"; then
+  echo "[safe-push] FATAL: git commit failed (files are on the runner, not on GitHub)"
+  git status -sb || true
+  exit 1
+fi
 
 OURS_SB=""
 if [ -f 03_scoreboard/scoreboard.json ]; then
@@ -58,7 +77,6 @@ resolve_scoreboard() {
 }
 
 restore_ours_daily() {
-  # $LOCAL is the commit we just made — restore its daily artifacts
   git checkout "$LOCAL" -- 01_daily 02_lessons 01_daily/_transcripts 2>/dev/null || true
   git add 01_daily 02_lessons || true
 }
@@ -69,7 +87,6 @@ try_rebase() {
     return 0
   fi
   echo "[safe-push] rebase conflict — keeping our 01_daily, merging scoreboard"
-  # During rebase: --ours = upstream (origin/main), --theirs = our commit.
   git checkout --theirs -- 01_daily 02_lessons 2>/dev/null || restore_ours_daily
   git checkout --ours -- 03_scoreboard/scoreboard.json 2>/dev/null || true
   resolve_scoreboard
@@ -114,9 +131,10 @@ fi
 echo "[safe-push] first push rejected — fetch/rebase/retry"
 if try_rebase || try_merge; then
   git push origin main && echo "[safe-push] pushed on retry $(git rev-parse --short HEAD)" \
-    || echo "[safe-push] push failed after retry — files are on the runner"
+    || { echo "[safe-push] FATAL: push failed after retry — files are on the runner"; exit 1; }
 else
-  echo "[safe-push] could not rebase or merge — files are on the runner"
+  echo "[safe-push] FATAL: could not rebase or merge — files are on the runner"
+  exit 1
 fi
 [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
 exit 0

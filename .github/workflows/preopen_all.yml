@@ -139,6 +139,10 @@ jobs:
       - name: Commit predictive artifacts
         if: always() && env.skip != 'yes'
         run: |
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          git config --global --add safe.directory "$(pwd)"
+          git config --global --add safe.directory '*'
           bash scripts/safe_git_push.sh \
             "auto: pre-open ALL [$(date -u +%F_%H%M)]" \
             01_daily/general/ 01_daily/sectors/ 01_daily/events \
