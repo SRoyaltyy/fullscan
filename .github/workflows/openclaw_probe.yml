@@ -1,0 +1,51 @@
+name: OpenClaw live probe
+
+# Read-only query of the running OpenClaw gateway + both clocks.
+# Does not start Pre-Open ALL, does not bounce the gateway, does not
+# rewrite a quality day.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: openclaw-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 20
+    env:
+      FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
+      OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+      OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+      OPENCLAW_AGENT: "openclaw/default"
+      OPENCLAW_BACKEND_MODEL: "xai/grok-4.6"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+
+      - name: Probe OpenClaw timeout + cron + systemd timer
+        run: |
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          chmod +x scripts/probe_openclaw.sh scripts/safe_git_push.sh || true
+          bash scripts/probe_openclaw.sh
+
+      - name: Push probe report
+        if: always()
+        run: |
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export GIT_TERMINAL_PROMPT=0
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          git config --global --add safe.directory "$(pwd)"
+          git config --global --add safe.directory '*'
+          bash scripts/safe_git_push.sh \
+            "chore: OpenClaw live probe [$(date -u +%F_%H%M)]" \
+            01_daily/_openclaw_probe.md
