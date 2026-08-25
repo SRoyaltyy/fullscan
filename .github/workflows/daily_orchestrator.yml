@@ -337,11 +337,30 @@ jobs:
           )
 
           # Prefer Pre-Open ALL. Individual predictive jobs are last-chance
-          # fallback after 08:00 ET if ALL is not quality-ok and not running.
+          # fallback after 08:00 ET if ALL finished today and is not
+          # quality-ok. Never queue an individual while ALL is still on
+          # the single ECS runner (PREOPEN_ACTIVE was previously a dead
+          # flag and 08:20 last-chance could sit behind a 3h Grok turn).
           PREOPEN_OK="no"
           PREOPEN_ACTIVE="no"
+          PREOPEN_COMPLETED="no"
           if artifact_ok "preopen_all.yml"; then PREOPEN_OK="yes"; fi
-          echo "preopen_all artifact_ok=$PREOPEN_OK"
+          PREOPEN_RAW=$(gh api "repos/${REPO}/actions/workflows/preopen_all.yml/runs?per_page=15" \
+            --jq '.workflow_runs[] | {id, status, conclusion, created_at}' || echo "")
+          if [ -n "$PREOPEN_RAW" ]; then
+            while IFS=$'\t' read -r id status conclusion created; do
+              [ -n "$id" ] || continue
+              et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
+              [ "$et" = "$TODAY" ] || continue
+              case "$status" in
+                in_progress|queued|waiting|pending) PREOPEN_ACTIVE="yes" ;;
+              esac
+              if [ "$status" = "completed" ]; then
+                PREOPEN_COMPLETED="yes"
+              fi
+            done < <(echo "$PREOPEN_RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at] | @tsv')
+          fi
+          echo "preopen_all artifact_ok=$PREOPEN_OK active=$PREOPEN_ACTIVE completed=$PREOPEN_COMPLETED"
 
           for WF in "${WORKFLOWS[@]}"; do
             echo ""
@@ -386,11 +405,19 @@ jobs:
                       echo "skip $WF — Pre-Open ALL already quality-ok"
                       continue
                     fi
+                    if [ "$PREOPEN_ACTIVE" = "yes" ]; then
+                      echo "skip $WF — Pre-Open ALL still on the ECS runner"
+                      continue
+                    fi
                     if [ "$ET_HM" -lt 800 ]; then
                       echo "skip $WF — Pre-Open ALL is the primary path until 08:00 ET"
                       continue
                     fi
-                    echo "last-chance fallback for $WF (ALL not quality-ok, et_hm=$ET_HM)"
+                    if [ "$PREOPEN_COMPLETED" != "yes" ]; then
+                      echo "skip $WF — Pre-Open ALL has not finished today; not queueing a competitor"
+                      continue
+                    fi
+                    echo "last-chance fallback for $WF (ALL finished, not quality-ok, et_hm=$ET_HM)"
                   fi
                   ;;
               esac
