@@ -1,0 +1,445 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-25T17:37:28.011033-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 5.23,
+      "delta_1d": -0.04,
+      "delta_1w": -0.08,
+      "delta_1m": 0.07
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 4.7,
+      "delta_1d": -0.04,
+      "delta_1w": -0.02,
+      "delta_1m": 0.01
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 2.38,
+      "delta_1d": -0.02,
+      "delta_1w": -0.06,
+      "delta_1m": -0.05
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 2.69,
+      "delta_1d": -0.01,
+      "delta_1w": -0.01,
+      "delta_1m": -0.1
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": -0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 0.405,
+      "delta_1d": 0.025,
+      "delta_1w": 0.25,
+      "delta_1m": -0.975
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 234.02,
+      "delta_1d": -13.55,
+      "delta_1w": 97.84,
+      "delta_1m": 47.75
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-25",
+      "current": 15.45,
+      "delta_1d": -0.4,
+      "delta_1w": -0.39
+    },
+    "vix3m": {
+      "date": "2026-08-25",
+      "current": 18.21,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.848,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.72,
+    "ratio_ma20": 0.983
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 81.11,
+      "pct_1d": -4.59
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 85.86,
+      "pct_1d": -6.85
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 4715.9,
+      "pct_1d": 1.62
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-25",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.09,
+      "pct_1m": -2.56
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 7690.75,
+      "pct_1d": 0.27
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 29287.5,
+      "pct_1d": 0.62
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-24",
+          "last": 65528.09,
+          "pct_1d": -0.74
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-24",
+          "last": 25517.33,
+          "pct_1d": -1.89
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-24",
+          "last": 3882.01,
+          "pct_1d": -0.59
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-24",
+          "last": 6696.96,
+          "pct_1d": -3.12
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-24",
+          "last": 9103.1,
+          "pct_1d": 0.49
+        }
+      },
+      "composite_avg": -1.17
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 10886.16,
+          "pct_1d": 0.29
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 26266.14,
+          "pct_1d": 0.61
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 8439.2,
+          "pct_1d": -0.16
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 6455.63,
+          "pct_1d": 0.12
+        }
+      },
+      "composite_avg": 0.21
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.39,
+    "window": "2026-08-18..2026-08-25"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 58.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-25 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Gap Inc. taps Walmart alum in ‘fashiontainment’ push",
+        "url": "https://finance.yahoo.com/media-advertising/articles/gap-inc-taps-walmart-alum-120400656.html",
+        "published_at": "2026-08-24T12:04:00Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Starbucks Corp. stock underperforms Tuesday when compared to competitors - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxONENqWHdJeXk1eGUwZUpobC1MUkJ1RGZpWnR6eVNwWWpwUVBYSkx5QUpQZ21nWHJlM2tjM0lyOGxXZnVXMHdaVVNkdUdsTjk5cVdNQnU4bU11UlI5SXh5NzlVSXZYSEJxTGV6RmVYZllwdVBPQXc2MUNua2tNMkdIN3dob0dBVURrbW1yYU1Dc1lHRnpESHU2SURsMGF0MUluY3FNYXY3UmlzVndrQi1rZU9CazZHajJ6UGc0WVFfXzhfYTUxaGpKVkxvUWtuOFVyYjUtZnA0ZG9GUTZ4dUV3cEUyOA?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:39:00 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Are Wall Street Analysts Bullish on VeriSign Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-bullish-verisign-120318309.html",
+        "published_at": "2026-08-24T12:03:18Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Grant Cardone Says ‘Never Show The IRS I’m Making Any Money’ — If You Make $200K, The Goal Is to Get It Down to $11,000 and Pay No Taxes. Here’s How He’d Do It",
+        "url": "https://finance.yahoo.com/real-estate/articles/grant-cardone-says-never-show-120103735.html",
+        "published_at": "2026-08-24T12:01:03Z"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock market has used up a lot of capacity, says economist Jim Paulsen - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaTZhWE5KNXpaVkRweVZYX25nVlF6Vm1JR2xkUnlHa0pvaXgxa0dWUUg4Z2JMbnB1OUpwbDg1eG9PVTNXdXpBeWxITWdVejFlLWZ0RzcxcUVYRkMtTWJkVkhKVkduZnZkX3o5eWpZOUNUdGcxMXFHRi1NS2FxTnQ3SFBvYXAya0ZMWTJJQ2NnalBoLWtQVzFSWm13WUE5UXR5RmRZV1BLSmZCckdFRGxFdy1n?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:38:36 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Constellation Energy Corp. stock rises Tuesday, outperforms market - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOSDN0X21XNDdVd1M4X0pQZmtMSHBqbERhSEJBVS1RWEtXdlgtdVFRQzBudE9GaU1CUjZsc1FtODM5WVBaX1FoVFZxenEzdHRodjVTNmFfSE5Hdmo3ckxRU2Z4cEtUSUI3ZEhaOTZOS29NMHJIYUlHZ0lHa2hLMW4zZ09Fd3FiX3RYbVA3UW1FbUd5VGo2RFJsaGJCZWU1OHNvQ3RLZzM5M2VmcTBrblJKWDA5WVB6SGJqQmZpbzBDRjlJc1prMHVrb3JoTkc2Q3ZPNnhQQi1VNUVKQQ?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:41:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Trump administration: Kennedy Center may be demolished if repairs not made",
+        "url": "https://www.aljazeera.com/news/2026/8/25/trump-administration-kennedy-center-may-be-demolished-if-repairs-not-made?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 20:08:33 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Wall Street Bullish or Bearish on BXP Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bullish-bearish-bxp-115852610.html",
+        "published_at": "2026-08-24T11:58:52Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AMD CEO Lisa Su Once Said Her Parents Expected All A’s, the Best Schools and a PhD — ‘I Just Thought, Wow, That’s a Lot to Do,’ But It Helped Shape 'Who I Am'",
+        "url": "https://finance.yahoo.com/technology/articles/amd-ceo-lisa-su-once-120102520.html",
+        "published_at": "2026-08-24T12:01:02Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Are Wall Street Analysts Predicting L3Harris Technologies Stock Will Climb or Sink?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-predicting-l3harris-122033337.html",
+        "published_at": "2026-08-24T12:20:33Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Forget Iran; Bessent Gave Us 1 Trillion Reasons To Buy (NYSEARCA:GLD) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOZ1FON19oZTBJZkZhLTVlZmM3cm9BeVVjV21SbjdLZ3FFU0pvalJ3OFVsVENQSFIwejZsa3FBNV85aGlPUzV4UncwMkNLN1ljSVhOZ3BZUmFNWGRZMjFMQTVkbm92OHNWQlJZTWtNaU12OWN5d1lrQmxLQkw1SHdkaHVYa0JMLVh1TzZtSUllNmxyd19qRVB5RnZn?oc=5",
+        "published_at": "Tue, 25 Aug 2026 15:59:51 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Thyroid tablets recalled nationwide over potential ‘superpotency’: FDA - The Hill",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYy15dVhiaDFlX21ycWJEMDkyYUdzOTJkZk1JYktBOFRpcmZ4NWFJblBENjFvbVJBd0NwSWpDaFVYb21Ebjhad1E4Y3d2R2d6UU9GTkNpOVFsdUdjUkdTQURMSmYxZHZGdG1fR3UzVUdnT09fYjQtSWMtVmFSYmI5ejNtU1VLQWRhTVVZd09neHpKVTY5eENHYVdUdlV0UDZvRmZmNDNSVDZtY1NiMnfSAbMBQVVfeXFMTkVIZE1aLXEtQnI2NWhnR0FGWnFxbzFqSnBqeEtuRzVtV0NjYUgwbTU5bTBqS21OZzJxSlk0NjAzY3RpeFJXRDVxR2JTZWRjX1BNaGdQeVp1Z3VvV2VQTGM1cE9xdEt4X1pWVUZ0S3BtUjFnSkgxZWNiR1RkY2ZWdVg3ZzVDWXNGNk9Vb3RoWTZqUFkxaUIyZEUtWWZvN0wxN3RCaW03NWJxVTdTclRWZjRpUGc?oc=5",
+        "published_at": "Tue, 25 Aug 2026 16:10:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Futures: Inflation Data, Nvidia Due; Stocks Rise As Oil, Yields Fall - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQ1g0Zi1LVEZtRElWZlduNnhGaEltUXdNSWxHR1VaOWVxNzZ6MjA3eTNLU0hQdUxMUldYNHNiY0QyWk1uaHJmUWcwN09mZFBGOTRvcDR0VWpWTzlTZkVfWno5MUtuVHRzMlYxTGg5MkRuQ2E3eUNVb3RBMkpBNUx1VnlYQzFYY1hpb19hQkhIanVDQUo1OUhGLWV2Q2NpSjNrWVlNYVFNYjY1SS1ZNndWOUdyRXVncm1EMGxZMVk5dHVMVlBKcE95S0xuZG0zaXd3ZDhjamZ3?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:44:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "GE Vernova Inc. stock falls Tuesday, underperforms market - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPb1o5NkpTVTNrZEk5WmhwVUZvYTBCQ1RJNURxMHAwSkxYdW9qc1Z4SE84Sm5jRUREYkZ2eXRiYVczeWVwWG82cUhxR2dLbUF1c0NFb19TZC01elNKdzRlZ3BlR0pxa0k4SHlvNndGQWVIRlNvdlhDWkUxeEZJSTYxLV9Zd0VDa2lXMURDaFVYWng4VVRnRDFYZENmdC0xZGoyMlVreDhxRzJUcGdBZTlZZUxsUERwQXc4NFpjRW5Hay1ZUGRJRDJISkRLOHcwZw?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:34:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Dolly Parton, beloved US country music icon, dies at 80",
+        "url": "https://www.aljazeera.com/news/2026/8/25/dolly-parton-beloved-us-country-music-icon-dies-at-80?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 20:14:21 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "What challenge do ‘cockroach’ protests pose for India’s PM Modi?",
+        "url": "https://www.aljazeera.com/video/inside-story/2026/8/25/what-challenge-do-cockroach-protests-pose-for-indias-pm-modi?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 20:08:41 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Video: US country music legend Dolly Parton dies",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/25/video-us-country-music-legend-dolly-parton-dies?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 19:58:56 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Iran, Oman discuss temporary shipping lane through Strait of Hormuz",
+        "url": "https://www.aljazeera.com/news/2026/8/25/iran-oman-discuss-temporary-shipping-lane-through-strait-of-hormuz?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 19:47:51 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NYSE and Nasdaq Want 23-Hour Trading. Here Is What It Means for You.",
+        "url": "https://www.barrons.com/articles/nyse-nasdaq-new-23-hour-trading-schedule-c0cf6139?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-24T11:52:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "A 75-Day Seasonal Sell Window Is Opening in the Euro—Are You Prepared?",
+        "url": "https://finance.yahoo.com/markets/currencies/articles/75-day-seasonal-sell-window-120337880.html",
+        "published_at": "2026-08-24T12:03:37Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "AI Isn’t Bullish for Bitcoin, Peter Schiff Warns — It Could Be Its Biggest Threat Yet",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/ai-isn-t-bullish-bitcoin-120944146.html",
+        "published_at": "2026-08-24T12:09:44Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Is Wall Street Bullish or Bearish on Moody's Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bullish-bearish-moodys-121805339.html",
+        "published_at": "2026-08-24T12:18:05Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "ETF Closures Have Nearly Doubled This Year. What to Do If Your Fund Closes.",
+        "url": "https://www.barrons.com/articles/record-etf-closures-2026-bb9e107c?siteid=yhoof2&yptr=yahoo",
+        "published_at": "2026-08-24T12:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Deere Earnings: Has the Stock Outrun the Farm Cycle?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/deere-earnings-stock-outrun-farm-120000081.html",
+        "published_at": "2026-08-24T12:00:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Buyers Circle Warner Assets With Paramount Legal Fight Extended - Bloomberg",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbmJ2NXhtTGlNLV8wMHRkQUZKOEtJeWI1QWZsUnBVendyTWF4Uk5HSWZvYmJNUGJWMWY4VVYtVGVEVmxuaVJrZ1NSRnRzM201MDVaRl9jTEVXU0w5UVY2ZG9tSWhudnNxTWFPM3lCSFJoVXBfT1dxVzBEY1ptZlhFZVNwbHRTMktTeGF4Z0g4Q2ZySDQ2MUNYUzVaVHBjWjU4ZzhxVUF4VG96eTVMQ0tmR2Nycnc?oc=5",
+        "published_at": "Tue, 25 Aug 2026 19:03:53 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Poland’s Name Appears in U.S. F-15EX Deal, Warsaw Denies Procurement Plans - TWZ",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOX3dFWWd1Y3huaFc3YjJXNXlEMEhRUzVyQW5LSlczeXhJaHZKM0d0R18xWHUxVF9OaXMzN2xhVmhlaG5UM2twUUEtdlZjOHAzRlZTclZoT1c2U244QXVYVWZSTTY0bDhRUG1SSVJ1OGFuSkNvYTlINDFyQUQ3SFBKbTdOQnRTS3JCbXBYVjZtOGtubjRVTFhVZEdKNA?oc=5",
+        "published_at": "Tue, 25 Aug 2026 17:53:10 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Stock Market Today: Cautious Rally Into Nvidia Earnings; Robinhood, Interactive Brokers Flash Buy Signals - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEtCVmw1dE9yeUJkMnFiekN0cDFKLS1UdE9sWm1LS3BhVDVkclZVbHlOMWlHd29OWFlCOFpmMXR4U3BUcXZkZEdKX25KQUQ3MVRxNE5LWE1wT3ZnMGJETTEwLUdvV1dmUWJkcUNqa3Y1REl1aU1rRkl2blZtUmFxVUFNLUMxeGhjSWIyR3pSemZja210SzhYZ1JR?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:42:00 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Here's what the charts say about Nvidia's stock heading into earnings - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbFhaSEVYM3VqeDhmNmRzOUFxUXN5R2E4bjYtQnhrQzNULVNkVzRoS0FBMmZvbmh2SzZZaXVUeFpCLXBKR19meXZsOWV6eHo3d1FGSDl1a1dxckVyWWdsTTk0ZDJHSDNiWVFzUWFDZ0xaT1BxNDA1SE9mc0gxekpNS1hhNGtrSFZ4M0ZXdjdCX0V2aUF1UjlNNUJVeWZLa1RFcVZPTk1RVQ?oc=5",
+        "published_at": "Mon, 24 Aug 2026 19:51:25 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Dell (DELL) Stock Could Be Undervalued On Cash Flow And Earnings - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMUFPTkwzNFVfMGZ2UXF4b2dvTVVPTENudUpfNFlKNHJWbExmeFQ3YVcwVG5xQlJjMXRUOUFycmxzOG04Q3c1d1NLNFhyaUZjZlZfdWltZUJ0ZmFvakN5amlndm1rcnVMUTJCRzQwVWQ1ekRvdWZDekZHS1p5VUZWY2NReGI5c2U4TGFhbmVRZ3hXLUFNdzVwZDlUZVBKdjg?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:13:04 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Lowe's Cos. stock underperforms Tuesday when compared to competitors - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPbFhSSUpjbUZkNVdITkJ3NFNfWnR0T1l6bFJyOFJCZlRPU0FqY1VQZUYtZ29nX05aOTRnSkNpZkt5U1VPY1l2OU5pMk9BX0VXaUNHRjZkUlZNSTNoX3AtcW0yeXZJZWZic2RRNG9GbXd0TkpzT0xTODhTM2l1QUhjeHlfZHhlQXZ5N0tiV1BhUjVqYlo5bTJsRW9jQWNoaDkyR1JwMXNBNEg1UklfOTh0YjJGNmVfVHhhRVo5REk1QjJSbjNDQTh4SENSSEt0Nnc2bDRRejRNTjFoUk44SEE?oc=5",
+        "published_at": "Tue, 25 Aug 2026 20:39:00 GMT"
+      }
+    ]
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-25",
+      "open": 7676.66,
+      "high": 7686.11,
+      "low": 7650.92,
+      "close": 7677.28,
+      "pct_change": 0.32,
+      "prev_close": 7652.86,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.46,
+        "intraday_low_pct": -0.03,
+        "intraday_high_pct": 0.43,
+        "close_position_in_range": 0.75
+      }
+    },
+    "DOW": {
+      "date": "2026-08-25",
+      "open": 53594.92,
+      "high": 53675.32,
+      "low": 53386.37,
+      "close": 53577.4,
+      "pct_change": 0.3,
+      "prev_close": 53417.16,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.54,
+        "intraday_low_pct": -0.06,
+        "intraday_high_pct": 0.48,
+        "close_position_in_range": 0.66
+      }
+    },
+    "NDX": {
+      "date": "2026-08-25",
+      "open": 26148.71,
+      "high": 26225.83,
+      "low": 26034.35,
+      "close": 26151.3,
+      "pct_change": 0.66,
+      "prev_close": 25980.19,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.74,
+        "intraday_low_pct": 0.21,
+        "intraday_high_pct": 0.95,
+        "close_position_in_range": 0.61
+      }
+    }
+  }
+}

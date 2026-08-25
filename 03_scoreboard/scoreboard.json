@@ -3745,6 +3745,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-08-25",
+          "actual_pct": -1.39,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -6368,6 +6380,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-25",
+          "actual_pct": -0.4,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -6612,7 +6636,20 @@
       "knowable_at_9am": null,
       "attribution_contested": null,
       "outlier_watch": null,
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-08-25",
+          "actual_pct": 0.04,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -8128,6 +8165,37 @@
       "sector": "Utilities",
       "etf": "XLU",
       "rubric": "00_grounding/sectors/utilities.md"
+    },
+    {
+      "date": "2026-08-25",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7676.66,
+      "actual_close": 7677.28,
+      "actual_pct_change": 0.32,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": "none_flagged — prediction content flagged no divergence (leading +0.5, futures +0.5 agree); ungraded.",
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-25_lesson.md",
+      "sources_used": [],
+      "ops_fail": true,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": null,
+      "key_interaction": null,
+      "knowable_at_9am": null,
+      "attribution_contested": null,
+      "outlier_watch": null,
+      "lesson_schema_ok": true
     }
   ]
 }
