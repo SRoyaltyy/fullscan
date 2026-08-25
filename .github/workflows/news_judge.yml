@@ -1,10 +1,8 @@
 name: News Judge (LLM priority)
 
+# NO schedule cron: Pre-Open ALL (06:00 ET) owns the morning judge.
+# Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 on:
-  # After mechanical news_parse cron slots (those fire at :15 past 10/12 UTC)
-  # Dropped 14 UTC (10:00 ET) — that slot overwrote the pre-open copy after the bell.
-  schedule:
-    - cron: "25 10,12 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:

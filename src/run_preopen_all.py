@@ -138,6 +138,18 @@ def run(date: str | None = None, force: bool = False) -> None:
 
     preopen.refuse_if_late("preopen_all", force=force)
 
+    # Already quality-done today? (High quality = full output_qc pass, not
+    # "a file exists".) Then do NOT waste the window and do NOT touch the
+    # good copies — a re-dispatch after success must be a no-op.
+    if not force:
+        pre = output_qc.preopen_report(date)
+        if pre.get("all_ok"):
+            print(f"[preopen-all] {date}: every required predictive "
+                  f"artifact is already quality-ok "
+                  f"(sectors {pre.get('sector_n_ok')}/"
+                  f"{pre.get('sector_n_total')}) — nothing to do")
+            return
+
     attempts: list[dict] = []
 
     def step(key: str, title: str, cmd: list[str]) -> int:

@@ -8,8 +8,8 @@ reads the `news` and `macro_indicators` tables those collectors maintain.)
 
 | Time | Stage | What happens |
 |---|---|---|
-| **6:00 AM ET** | **`Pre-Open ALL`** | One ECS job: finviz digest → events+catcher → news parse/judge/actions → general predict → 11 sector predicts → **output QC + workflow check**. Fail-closed: timeout stubs and carry-forwards are trash. Must finish before 09:30 ET. |
-| 9:00 AM | (legacy fallback) | Individual predict crons still exist; orchestrator only dispatches them after 08:00 ET if Pre-Open ALL is not quality-ok. |
+| **6:00 AM ET** | **`Pre-Open ALL`** | **The ONLY predictive cron.** One ECS job: finviz digest → events+catcher (no carry) → news parse/judge/actions → general predict → 11 sector predicts → **output QC + workflow check**. Fail-closed: timeout stubs, carry-forwards, and gateway-shutdown text are trash. Skips entirely (and never overwrites) when today is already quality-ok. Must finish before 09:30 ET. |
+| 8:00+ AM | (fallback only) | The individual predictive workflows have **no schedule crons** — dispatch-only. The orchestrator fires them after 08:00 ET only if Pre-Open ALL is not quality-ok, and never after 09:25 ET. Nothing else competes for the ECS runner during the pre-open window. |
 | 5:00 PM | `outcome` | Actual close fetched → DeepSeek reviews the day with verified citations → prediction graded (direction hit, magnitude hit) → `<date>_outcome.md` |
 | 5:05 PM | `reflect` | Diagnostic engine classifies any miss (missing evidence / misweighted / miscalibrated) → candidate lesson in `02_lessons/candidate/` |
 | ~5:30 PM | `learn_cycle` | Mine wins/losses → hypotheses → LEARNINGS.md + mutable_policy. Orchestrator re-dispatches if it missed. |

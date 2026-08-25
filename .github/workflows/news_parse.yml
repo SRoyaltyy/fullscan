@@ -1,9 +1,8 @@
 name: News Parse (Supabase)
 
+# NO schedule cron: Pre-Open ALL (06:00 ET) runs the morning parse.
+# Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 on:
-  schedule:
-    # Several times on weekdays — keep parsed news fresh for predict
-    - cron: "15 10,12 * * 1-5"
   workflow_dispatch:
     inputs:
       hours:
