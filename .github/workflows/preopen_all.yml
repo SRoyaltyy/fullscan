@@ -81,6 +81,13 @@ jobs:
           pip install -r requirements.txt
           pip install psycopg2-binary yfinance pandas requests openai ddgs || true
 
+      - name: Raise OpenClaw timeouts + enable 05:55 timer if missing
+        if: env.skip != 'yes'
+        run: |
+          chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
+            scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh || true
+          bash scripts/ensure_ecs_clock.sh
+
       - name: Gate — weekend / past cutoff
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
