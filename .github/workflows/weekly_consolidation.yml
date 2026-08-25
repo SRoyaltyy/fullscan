@@ -12,7 +12,7 @@ permissions:
 jobs:
   promote:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 20
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,6 +25,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "10800"
         run: python -m src.promote_lessons
       - name: Commit
         run: |

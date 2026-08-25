@@ -8,9 +8,12 @@ reads the `news` and `macro_indicators` tables those collectors maintain.)
 
 | Time | Stage | What happens |
 |---|---|---|
-| 9:00 AM | `predict` | Channel 1 fetch (FRED/yfinance/Supabase, exact numbers, archived to `01_daily/_channel1/`) → DeepSeek with live web search → component scores → **Python computes** weighted total, divergence rule, direction + magnitude → `01_daily/general/<date>_predict.md` + scoreboard |
+| **6:00 AM ET** | **`Pre-Open ALL`** | One ECS job: finviz digest → events+catcher → news parse/judge/actions → general predict → 11 sector predicts → **output QC + workflow check**. Fail-closed: timeout stubs and carry-forwards are trash. Must finish before 09:30 ET. |
+| 9:00 AM | (legacy fallback) | Individual predict crons still exist; orchestrator only dispatches them after 08:00 ET if Pre-Open ALL is not quality-ok. |
 | 5:00 PM | `outcome` | Actual close fetched → DeepSeek reviews the day with verified citations → prediction graded (direction hit, magnitude hit) → `<date>_outcome.md` |
 | 5:05 PM | `reflect` | Diagnostic engine classifies any miss (missing evidence / misweighted / miscalibrated) → candidate lesson in `02_lessons/candidate/` |
+| ~5:30 PM | `learn_cycle` | Mine wins/losses → hypotheses → LEARNINGS.md + mutable_policy. Orchestrator re-dispatches if it missed. |
+| ~1:00 PM UTC | `stock_book_all` | Weather/AB/book/backtest/paper **dashboard**. Not predictive; runs after the open. |
 
 Sunday 11 AM: repeated candidate lessons (≥2 similar triggers) are promoted to
 standing rules in `02_lessons/active/`. 1st of month: `04_consolidated_memory.md`
@@ -83,7 +86,7 @@ With neither secret set, everything runs on DeepSeek exactly as before.
 | `OPENCLAW_TOKEN` | — | gateway shared-secret bearer token |
 | `OPENCLAW_AGENT` | `openclaw/default` | agent target sent as the OpenAI `model` field |
 | `OPENCLAW_BACKEND_MODEL` | `xai/grok-4.6` | backend model header (`x-openclaw-model`) |
-| `OPENCLAW_TIMEOUT` | `900` | per-call timeout (seconds); research turns are slow |
+| `OPENCLAW_TIMEOUT` | `10800` | per-call timeout (seconds, **3 hours**); research turns are slow. Job-level timeouts on ECS LLM workflows are ≥ this so GitHub does not kill the runner first. |
 | `DEEPSEEK_API_KEY` | — | fallback provider (keep it set) |
 | `MODEL_PREDICT` … `MODEL_DISTILL` | deepseek-chat / deepseek-reasoner | models used on the fallback path only |
 
@@ -97,5 +100,15 @@ Live round-trip test: `python -m src.deepseek_client --probe`
 
 ## Manual run
 
-Actions → "Autonomous Daily Market Pipeline" → Run workflow → pick a stage
+Actions → **"Pre-Open ALL (predictive one-shot)"** → Run workflow
+(optional date; `force=true` only as an emergency after 09:25 ET).
+
+This is the one-button for every predictive part. It self-reads every
+output (trash / timeout stub / carry-forward → fail) and checks that
+the required modules actually produced quality files.
+
+Post-close (outcome, learn, deepthink, weekly, dashboard) stay on their
+own crons. The daily orchestrator re-dispatches any that missed.
+
+Legacy: Actions → "Autonomous Daily Market Pipeline" → pick a stage
 (and optionally a date, for backfills).

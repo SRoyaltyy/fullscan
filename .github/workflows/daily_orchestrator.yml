@@ -1,39 +1,50 @@
-name: Daily Orchestrator (pre-market guard)
+name: Daily Orchestrator (pre-market + post-close guard)
 
-# Watches the critical pre-US-open workflows and re-dispatches any that
-# missed their cron, failed, OR went green without writing a QUALITY
-# artifact (existence is not enough: timeout stubs and carry-forwards
-# used to look like success).
+# Watches the critical workflows and re-dispatches any that missed their
+# cron, failed, OR went green without writing a QUALITY artifact
+# (existence is not enough: timeout stubs and carry-forwards used to
+# look like success).
 #
-# Predictive jobs (everything except weather / AB / stock-book / outcome
-# / reflect) MUST land before 09:30 ET. This guard will NOT dispatch
-# predictive workflows after 09:25 ET unless force=true.
+# PREDICTIVE (must land before 09:30 ET). Primary path is Pre-Open ALL
+# (one ECS job). Individual predictive workflows are last-chance
+# fallback after 08:00 ET if ALL is not quality-ok. This guard will
+# NOT dispatch predictive workflows after 09:25 ET unless force=true.
 #
-# Targets (predict-side — outcome/reflect have their own windows):
-#   finviz_digest   ~10:05 / 12:05 UTC
-#   events_daily    ~10:10 UTC
-#   news_parse      10/12:15 UTC
-#   news_judge      10/12:25 UTC
-#   news_actions    ~11:20 UTC
-#   daily_pipeline  predict ~10:45 UTC
-#   sector_daily    predict ~11:10 UTC (weekdays)
-#   label_weather   ~15:17 UTC          (NOT predictive)
-#   ab_checklist    15:00 UTC + 21:30   (NOT predictive)
-#   stock_book_all  17:00 UTC           (NOT predictive)
+#   preopen_all     ~10:00 UTC / 06:00 ET   PRIMARY one-button
+#   finviz_digest   ~10:05 / 12:05 UTC      fallback
+#   events_daily    ~10:10 UTC              fallback
+#   news_parse      10/12:15 UTC            fallback
+#   news_judge      10/12:25 UTC            fallback
+#   news_actions    ~11:20 UTC              fallback
+#   daily_pipeline  predict ~10:45 UTC      fallback (predict stage)
+#   sector_daily    predict ~11:10 UTC      fallback (predict stage)
 #
-# Runs several times in the pre-market window so a single delayed cron
-# does not leave the day without inputs. Force=true re-dispatches all.
-# 18:15 UTC pass: if the book exists but AB is missing, re-dispatch ALL
-# so s_ab actually scores.
+# POST-CLOSE (must still run, at their own pace):
+#   daily_pipeline  outcome_reflect ~21:03 UTC
+#   sector_daily    outcome_reflect ~22:10 UTC
+#   learn_cycle     ~21:30 UTC
+#   label_weather   ~15:17 UTC
+#   ab_checklist    15:00 UTC + 21:30
+#   stock_book_all  17:00 UTC (dashboard)
+#   deepthink       Sunday 13:00 UTC
+#   weekly_consolidation Sunday 15:00 UTC
+
 
 on:
   schedule:
-    # ~06:50 ET, ~07:50 ET, ~08:20 ET (was 12:50 UTC — jitter put it after the bell)
+    # ~06:50 ET, ~07:50 ET, ~08:20 ET
     - cron: "50 10 * * 1-5"
     - cron: "50 11 * * 1-5"
     - cron: "20 12 * * 1-5"
     # after Stock Book ALL (17:00 UTC) — catch a missed book / book-without-AB
     - cron: "15 18 * * 1-5"
+    # post-close: after pipeline outcome (~21:03) + learn_cycle (~21:30)
+    - cron: "45 21 * * 1-5"
+    # post-close: after sector outcome (~22:10)
+    - cron: "40 22 * * 1-5"
+    # Sunday: after deepthink (13:00) and weekly (15:00)
+    - cron: "30 13 * * 0"
+    - cron: "30 16 * * 0"
   workflow_dispatch:
     inputs:
       force:
@@ -87,18 +98,64 @@ jobs:
               --jq '[.[]? | select(.type=="file" and (.name | endswith("_predict.md")) and (.size >= 3000))] | length' \
               2>/dev/null || echo 0
           }
+          repo_outcome_quality_n() {
+            gh api "repos/${REPO}/contents/${1}?ref=main" \
+              --jq '[.[]? | select(.type=="file" and (.name | endswith("_outcome.md")) and (.size >= 400))] | length' \
+              2>/dev/null || echo 0
+          }
 
           is_predictive() {
             case "$1" in
-              finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml|daily_pipeline.yml|sector_daily.yml)
+              preopen_all.yml|finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml)
                 return 0 ;;
+              daily_pipeline.yml|sector_daily.yml)
+                # predict-stage only before the bell; outcome is post-close
+                [ "$ET_HM" -lt 925 ]
+                return $?
+                ;;
               *) return 1 ;;
             esac
           }
 
+          is_postclose() {
+            case "$1" in
+              learn_cycle.yml|deepthink.yml|weekly_consolidation.yml)
+                return 0 ;;
+              daily_pipeline.yml|sector_daily.yml)
+                [ "$ET_HM" -ge 1600 ]
+                return $?
+                ;;
+              *) return 1 ;;
+            esac
+          }
+
+          PREDICTIVE_INDIVIDUALS=(
+            finviz_digest.yml
+            events_daily.yml
+            news_parse.yml
+            news_judge.yml
+            news_actions.yml
+            daily_pipeline.yml
+            sector_daily.yml
+          )
+
           artifact_ok() {
             local WF="$1"
             case "$WF" in
+              preopen_all.yml)
+                local content
+                content=$(repo_decode "01_daily/${TODAY}_preopen_qc.json") || return 1
+                echo "$content" | python3 -c '
+          import json,sys
+          try:
+              d=json.load(sys.stdin)
+          except Exception:
+              sys.exit(1)
+          if d.get("date") != sys.argv[1]:
+              sys.exit(1)
+          sys.exit(0 if d.get("all_ok") else 1)
+          ' "$TODAY"
+                ;;
               finviz_digest.yml)
                 local sz
                 sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
@@ -154,9 +211,12 @@ jobs:
                 [ "${sz:-0}" -gt 200 ]
                 ;;
               daily_pipeline.yml)
-                local content
-                content=$(repo_decode "01_daily/general/${TODAY}_predict.md") || return 1
-                echo "$content" | python3 -c '
+                if [ "$ET_HM" -ge 1600 ]; then
+                  repo_file "01_daily/general/${TODAY}_outcome.md"
+                else
+                  local content
+                  content=$(repo_decode "01_daily/general/${TODAY}_predict.md") || return 1
+                  echo "$content" | python3 -c '
           import sys
           t=sys.stdin.read()
           if len(t) < 2000:
@@ -168,12 +228,20 @@ jobs:
               sys.exit(1)
           sys.exit(0)
           '
+                fi
                 ;;
               sector_daily.yml)
-                local n
-                n=$(repo_predict_quality_n "01_daily/sectors/${TODAY}")
-                echo "    sector quality-sized (>=3k) predict files=$n/11"
-                [ "${n:-0}" -ge 8 ]
+                if [ "$ET_HM" -ge 1600 ]; then
+                  local n
+                  n=$(repo_outcome_quality_n "01_daily/sectors/${TODAY}")
+                  echo "    sector quality-sized outcome files=$n/11"
+                  [ "${n:-0}" -ge 8 ]
+                else
+                  local n
+                  n=$(repo_predict_quality_n "01_daily/sectors/${TODAY}")
+                  echo "    sector quality-sized (>=3k) predict files=$n/11"
+                  [ "${n:-0}" -ge 8 ]
+                fi
                 ;;
               label_weather.yml)
                 repo_file "01_daily/weather/${TODAY}_weather.json"
@@ -191,6 +259,19 @@ jobs:
                 repo_file "data/stock_book/${TODAY}_stock_book.json" \
                   || repo_file "01_daily/${TODAY}_stock_book.md"
                 ;;
+              learn_cycle.yml)
+                repo_file "01_daily/${TODAY}_learnings.md"
+                ;;
+              deepthink.yml)
+                local sz
+                sz=$(repo_file_size "03_scoreboard/DEEPTHINK.md")
+                [ "${sz:-0}" -gt 400 ]
+                ;;
+              weekly_consolidation.yml)
+                # Promotion rewrites 02_lessons/active; treat a successful
+                # run today as ok (checked via HAS_SUCCESS in the loop).
+                return 1
+                ;;
               *)
                 return 1
                 ;;
@@ -203,18 +284,22 @@ jobs:
             local ok=0
             case "$WF" in
               daily_pipeline.yml)
+                local STAGE="predict"
+                [ "$ET_HM" -ge 1600 ] && STAGE="outcome_reflect"
                 if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                    -f ref=main -f "inputs[stage]=predict" 2>/dev/null; then
+                    -f ref=main -f "inputs[stage]=${STAGE}" 2>/dev/null; then
                   ok=1
-                elif gh workflow run "$WF" --ref main -f stage=predict 2>/dev/null; then
+                elif gh workflow run "$WF" --ref main -f stage="$STAGE" 2>/dev/null; then
                   ok=1
                 fi
                 ;;
               sector_daily.yml)
+                local STAGE="predict"
+                [ "$ET_HM" -ge 1600 ] && STAGE="outcome_reflect"
                 if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                    -f ref=main -f "inputs[stage]=predict" 2>/dev/null; then
+                    -f ref=main -f "inputs[stage]=${STAGE}" 2>/dev/null; then
                   ok=1
-                elif gh workflow run "$WF" --ref main -f stage=predict 2>/dev/null; then
+                elif gh workflow run "$WF" --ref main -f stage="$STAGE" 2>/dev/null; then
                   ok=1
                 fi
                 ;;
@@ -235,6 +320,7 @@ jobs:
           }
 
           WORKFLOWS=(
+            preopen_all.yml
             finviz_digest.yml
             events_daily.yml
             news_parse.yml
@@ -245,7 +331,17 @@ jobs:
             label_weather.yml
             ab_checklist.yml
             stock_book_all.yml
+            learn_cycle.yml
+            deepthink.yml
+            weekly_consolidation.yml
           )
+
+          # Prefer Pre-Open ALL. Individual predictive jobs are last-chance
+          # fallback after 08:00 ET if ALL is not quality-ok and not running.
+          PREOPEN_OK="no"
+          PREOPEN_ACTIVE="no"
+          if artifact_ok "preopen_all.yml"; then PREOPEN_OK="yes"; fi
+          echo "preopen_all artifact_ok=$PREOPEN_OK"
 
           for WF in "${WORKFLOWS[@]}"; do
             echo ""
@@ -255,6 +351,49 @@ jobs:
             if is_predictive "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then
               echo "skip $WF — past 09:25 ET predictive cutoff (et_hm=$ET_HM)"
               continue
+            fi
+
+            # Post-close jobs: don't nag before 16:00 ET.
+            if is_postclose "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -lt 1600 ]; then
+              echo "skip $WF — post-close window starts 16:00 ET (et_hm=$ET_HM)"
+              continue
+            fi
+
+            # Pipeline/sector are predict before the bell and outcome after
+            # close. Do not dispatch either during cash-session hours.
+            if [ "$WF" = "daily_pipeline.yml" ] || [ "$WF" = "sector_daily.yml" ]; then
+              if [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ] && [ "$ET_HM" -lt 1600 ]; then
+                echo "skip $WF — market hours (predict window closed, outcome not yet)"
+                continue
+              fi
+            fi
+
+            # Sunday-only jobs on weekdays.
+            DOW=$(TZ=America/New_York date +%u)
+            if [ "$WF" = "deepthink.yml" ] || [ "$WF" = "weekly_consolidation.yml" ]; then
+              if [ "$DOW" != "7" ] && [ "$FORCE" != "true" ]; then
+                echo "skip $WF — Sunday only (dow=$DOW)"
+                continue
+              fi
+            fi
+
+            # Individuals: let Pre-Open ALL own the window until 08:00 ET.
+            if [ "$WF" != "preopen_all.yml" ]; then
+              case "$WF" in
+                finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml|daily_pipeline.yml|sector_daily.yml)
+                  if is_predictive "$WF" && [ "$FORCE" != "true" ]; then
+                    if [ "$PREOPEN_OK" = "yes" ]; then
+                      echo "skip $WF — Pre-Open ALL already quality-ok"
+                      continue
+                    fi
+                    if [ "$ET_HM" -lt 800 ]; then
+                      echo "skip $WF — Pre-Open ALL is the primary path until 08:00 ET"
+                      continue
+                    fi
+                    echo "last-chance fallback for $WF (ALL not quality-ok, et_hm=$ET_HM)"
+                  fi
+                  ;;
+              esac
             fi
 
             RAW=$(gh api "repos/${REPO}/actions/workflows/$WF/runs?per_page=20" \
@@ -286,7 +425,7 @@ jobs:
             echo "artifact_ok=$ART_OK"
 
             if [ "$WF" = "stock_book_all.yml" ] && [ "$FORCE" != "true" ] && [ "$HOUR" -lt 16 ]; then
-              echo "skip ALL until 16:00 UTC (prereqs still landing)"
+              echo "skip book ALL until 16:00 UTC (prereqs still landing)"
               continue
             fi
 
@@ -296,10 +435,10 @@ jobs:
               echo "book present; ab_ok=$AB_OK"
               if [ "$AB_OK" = "no" ] && [ "$HOUR" -ge 16 ]; then
                 if [ -n "$HAS_ACTIVE" ]; then
-                  echo "ALL already running — let it pick up AB"
+                  echo "book ALL already running — let it pick up AB"
                   continue
                 fi
-                echo "book exists but AB missing → re-dispatch ALL so s_ab is scored"
+                echo "book exists but AB missing → re-dispatch book ALL so s_ab is scored"
                 dispatch_wf "$WF"
                 continue
               fi
@@ -315,6 +454,11 @@ jobs:
             fi
             if [ "$ART_OK" = "yes" ]; then
               echo "OK — today's quality artifact is on main. Skipping."
+              continue
+            fi
+            # weekly / deepthink: a successful run today IS the artifact
+            if [ -n "$HAS_SUCCESS" ] && { [ "$WF" = "weekly_consolidation.yml" ] || [ "$WF" = "deepthink.yml" ]; }; then
+              echo "OK — successful $WF run today (id=$HAS_SUCCESS). Skipping."
               continue
             fi
             if [ -n "$HAS_SUCCESS" ]; then

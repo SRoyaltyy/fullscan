@@ -31,7 +31,7 @@ concurrency:
 jobs:
   run-pipeline:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 90
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -76,6 +76,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "10800"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -94,6 +95,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "10800"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -117,6 +119,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "10800"
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.run_reflect ${DATE:+--date "$DATE"}

@@ -1,0 +1,123 @@
+name: Pre-Open ALL (predictive one-shot)
+
+# One button / one cron for EVERY predictive write that must land
+# before 09:30 ET. Sequential on the single ECS runner.
+#
+#   finviz digest → events + catcher (no carry) → news parse → news judge
+#   → news actions → general predict → 11 sector predicts → sector board
+#   → output_qc (trash/timeout/carry fail-closed) → workflow check
+#
+# NOT in this job (they MUST still run later on their own crons +
+# orchestrator guard): outcome/reflect, learn_cycle, deepthink, weekly,
+# weather, AB, stock book, paper dashboard.
+#
+# Skip-if-good: quality files for THIS day are not overwritten.
+# 09:25 ET cutoff: late starts refuse new predictive writes.
+#
+# OpenClaw per-call timeout is 3 hours so a long Grok research turn is
+# not killed as a 30-minute stub. Job budget is 6 hours; the pre-open
+# window itself is ~06:00–09:25 ET (~3.4h) so start on time.
+
+on:
+  schedule:
+    # ~06:00 ET weekdays — leaves ~3h25m before 09:25 cutoff
+    - cron: "0 10 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      force:
+        description: "true = ignore 09:25 ET cutoff and skip-if-good"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: preopen-all
+  cancel-in-progress: false
+
+jobs:
+  preopen:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 360
+    env:
+      OPENCLAW_TIMEOUT: "10800"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary yfinance pandas requests openai ddgs || true
+
+      - name: Gate — weekend / past cutoff (schedule only)
+        if: github.event_name == 'schedule'
+        run: |
+          DOW=$(TZ=America/New_York date +%u)
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "DOW=$DOW ET_HM=$ET_HM"
+          if [ "$DOW" -ge 6 ]; then
+            echo "Weekend — pre-open ALL skipped."
+            echo "skip=yes" >> "$GITHUB_ENV"
+          elif [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — refusing scheduled pre-open ALL"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
+      - name: Pre-Open ALL (predictive + QC + workflow check)
+        if: env.skip != 'yes'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENCLAW_TIMEOUT: "10800"
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          FORCE="${{ github.event.inputs.force }}"
+          FORCE="${FORCE:-false}"
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
+          echo "OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
+          python -m src.run_preopen_all "${ARGS[@]}"
+
+      - name: Show QC
+        if: always() && env.skip != 'yes'
+        run: |
+          D="${{ github.event.inputs.run_date }}"
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          echo "======== preopen QC $D ========"
+          python -m src.output_qc --date "$D" --preopen || true
+          echo "======== status ========"
+          cat "01_daily/${D}_preopen_status.md" 2>/dev/null || true
+
+      - name: Commit predictive artifacts
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: pre-open ALL [$(date -u +%F_%H%M)]" \
+            01_daily/general/ 01_daily/sectors/ 01_daily/events \
+            01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
+            01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json \
+            01_daily/*_preopen_status.md 02_lessons/ 03_scoreboard/

@@ -26,7 +26,7 @@ concurrency:
 jobs:
   judge:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 30
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -51,6 +51,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "10800"
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |

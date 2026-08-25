@@ -21,7 +21,9 @@ OPENCLAW_TOKEN = os.environ.get("OPENCLAW_TOKEN", "")
 OPENCLAW_AGENT = os.environ.get("OPENCLAW_AGENT", "openclaw/default")
 OPENCLAW_BACKEND_MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL",
                                         "xai/grok-4.6")
-OPENCLAW_TIMEOUT = int(os.environ.get("OPENCLAW_TIMEOUT", "900"))
+# 3h per call so a long Grok research turn is not killed as trash.
+# Job-level GitHub timeout must be >= this (see preopen_all.yml).
+OPENCLAW_TIMEOUT = int(os.environ.get("OPENCLAW_TIMEOUT", "10800"))
 
 # --- DeepSeek (FALLBACK provider; also primary if OpenClaw is unset) ---
 # Function-calling stages on the DeepSeek path must use deepseek-chat

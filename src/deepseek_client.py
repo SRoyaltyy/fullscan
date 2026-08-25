@@ -174,6 +174,10 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
                 continue
             r.raise_for_status()
             return r.json()
+        except requests.Timeout as e:
+            last = f"timeout after {config.OPENCLAW_TIMEOUT}s: {e}"
+            print(f"[openclaw] {last} — not retrying a hung {config.OPENCLAW_TIMEOUT}s call")
+            break
         except requests.RequestException as e:
             last = str(e)
             time.sleep(15 * (attempt + 1))
