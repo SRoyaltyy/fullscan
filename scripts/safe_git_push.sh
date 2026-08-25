@@ -12,8 +12,11 @@
 # actions/checkout) plus `dubious ownership` on the self-hosted work
 # dir, `git commit` failed, and `exit 0` painted the job green.
 #
+# Run #6: `git config --global` died `fatal: $HOME not set` because the
+# root self-hosted runner has no HOME. Pin it.
+#
 # Strategy:
-#   0. drop GIT_DIR, mark the work dir safe
+#   0. pin HOME, drop GIT_DIR, mark the work dir safe
 #   1. commit the named paths
 #   2. snapshot OUR scoreboard.json
 #   3. rebase onto origin/main
@@ -23,6 +26,9 @@
 #
 # Usage: bash scripts/safe_git_push.sh "commit message" path [path ...]
 set -uo pipefail
+
+export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+export GIT_TERMINAL_PROMPT=0
 
 MSG="${1:-auto: update}"
 shift || true
@@ -34,7 +40,9 @@ fi
 ROOT="$(pwd)"
 git config --global --add safe.directory "$ROOT" || true
 git config --global --add safe.directory /home/gha/actions-runner/_work/fullscan/fullscan || true
+git config --global --add safe.directory /home/gha/fullscan || true
 git config --global --add safe.directory '*' || true
+git config --local --add safe.directory "$ROOT" || true
 
 if [ ! -d .git ] && [ ! -f .git ]; then
   echo "[safe-push] FATAL: $ROOT is not a git checkout"

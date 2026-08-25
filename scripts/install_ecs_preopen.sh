@@ -51,48 +51,33 @@ chmod +x "$ROOT/scripts/ecs_preopen.sh" "$ROOT/scripts/install_ecs_preopen.sh" \
 
 if [ ! -f "$ENVF" ]; then
   cp "$ROOT/scripts/fullscan.env.example" "$ENVF"
-  chown "$GHA_USER:$GHA_USER" "$ENVF"
-  chmod 600 "$ENVF"
-  echo ""
-  echo ">>> Created $ENVF from the example."
-  echo ">>> Edit it (nano $ENVF) — at minimum:"
-  echo "      OPENCLAW_TOKEN     (if the gateway requires it)"
-  echo "      DEEPSEEK_API_KEY   (fallback)"
-  echo "      GITHUB_TOKEN       (PAT, contents:write — for git push)"
-  echo "      DATABASE_URL / DATABASE_KEY / FRED_API_KEY / Finviz"
-  echo ">>> Then:  sudo systemctl start fullscan-preopen.service"
-  echo ""
-else
-  chown "$GHA_USER:$GHA_USER" "$ENVF"
-  chmod 600 "$ENVF"
-  echo "[install] keeping existing $ENVF"
+  echo "[install] created $ENVF from example (blank keys; GH clock step fills them)"
 fi
+chown "$GHA_USER:$GHA_USER" "$ENVF"
+chmod 600 "$ENVF"
 
 install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.service" \
   /etc/systemd/system/fullscan-preopen.service
 install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.timer" \
   /etc/systemd/system/fullscan-preopen.timer
 
-# Gateway timeouts — Python waiting 3h is useless if OpenClaw dies at ~9 min.
-if [ -x "$ROOT/scripts/ensure_openclaw_timeouts.sh" ]; then
-  sudo -u "$GHA_USER" -H bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
-else
-  echo "[install] ensure_openclaw_timeouts.sh missing"
-fi
-
-# Enable the 05:55 clock BEFORE venv. Persistent=true will catch up if
-# 05:55 already passed; ecs_preopen.sh refuses python after 09:25 ET.
+# Enable the 05:55 clock BEFORE venv AND before OpenClaw CLI. Timer is
+# the thing that must not fail. Timeouts/gateway are next; pip last.
 systemctl daemon-reload
 systemctl enable --now fullscan-preopen.timer
 echo "[install] systemctl enable --now fullscan-preopen.timer done"
 systemctl is-enabled fullscan-preopen.timer
 systemctl list-timers --all fullscan-preopen.timer || true
 
-# venv is nice-to-have. Run #5: ensurepip missing, set -e aborted, timer
-# never enabled. Never let that happen again.
+if [ -x "$ROOT/scripts/ensure_openclaw_timeouts.sh" ]; then
+  # Run as root so we can chown; the script sudo -u gha for CLI.
+  HOME="$GHA_HOME" FULLSCAN_HOME="$GHA_HOME" \
+    bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
+fi
+
 set +e
-if [ ! -x "$ROOT/.venv/bin/python" ]; then
-  echo "[install] creating venv"
+if [ ! -x "$ROOT/.venv/bin/python" ] || [ ! -x "$ROOT/.venv/bin/pip" ]; then
+  echo "[install] creating venv (python or pip missing)"
   rm -rf "$ROOT/.venv"
   if ! sudo -u "$GHA_USER" python3 -m venv "$ROOT/.venv"; then
     echo "[install] venv failed (ensurepip?). installing python3-venv"

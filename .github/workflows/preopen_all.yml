@@ -64,6 +64,7 @@ jobs:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
       FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
     steps:
       - name: Wait if ECS systemd pre-open owns the box
         run: |
@@ -93,7 +94,22 @@ jobs:
 
       - name: Raise OpenClaw timeouts + enable 05:55 timer if missing
         if: env.skip != 'yes'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
           chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
             scripts/safe_git_push.sh || true
@@ -143,6 +159,7 @@ jobs:
           OPENCLAW_TIMEOUT: "10800"
         run: |
           set -e
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
           exec 9>/tmp/fullscan-preopen.lock
           if ! flock -n 9; then
             echo "ECS systemd job grabbed the lock after checkout — backing off"
@@ -172,7 +189,11 @@ jobs:
 
       - name: Commit predictive artifacts
         if: always() && env.skip != 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export GIT_TERMINAL_PROMPT=0
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
           git config --global --add safe.directory "$(pwd)"
