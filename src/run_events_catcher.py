@@ -211,6 +211,23 @@ def main() -> None:
     missed = []
     if data:
         missed = data.get("missed_events") or data.get("events") or []
+    if not missed:
+        print("[catcher] OpenClaw JSON empty — DeepSeek for this stage only "
+              "(gateway stays up)")
+        ds = deepseek_client.chat(
+            [{"role": "system", "content": rubric},
+             {"role": "user", "content": user_msg}],
+            model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
+            transcript_path=os.path.join("01_daily/_transcripts",
+                                         f"{date_str}_events_catcher.json"),
+            trace_path=os.path.join(EVENTS_DIR, f"{date_str}_catcher_trace.md"),
+            stage_label=f"EVENTS CATCHER {date_str} DEEPSEEK",
+            max_rounds=SEARCH_ROUNDS, force_deepseek=True)
+        data = extract_json(ds) or data
+        if data:
+            missed = data.get("missed_events") or data.get("events") or []
+        if ds:
+            text = ds
     if not missed and replacing:
         # We are the day's only source — a formatting slip must not cost the
         # whole day. Same no-tools repair pass the primary uses.

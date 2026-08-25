@@ -47,7 +47,10 @@ UA = {
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
 }
-QUOTE_URL = "https://finviz.com/quote.ashx?t={ticker}"
+QUOTE_URLS = (
+    "https://elite.finviz.com/quote.ashx?t={ticker}",
+    "https://finviz.com/quote.ashx?t={ticker}",
+)
 
 # Pure routine noise — keep but rank very low
 DIVIDEND_RE = re.compile(
@@ -151,48 +154,107 @@ def _load_ticker_digests(path: Path, max_rows: int = 400) -> list[dict]:
 
 
 def _scrape_index_digest(ticker: str, sess: requests.Session) -> dict | None:
-    """Pull the top narrative / Daily Digest style summary from a quote page."""
-    try:
-        r = sess.get(QUOTE_URL.format(ticker=ticker), timeout=40)
-        r.raise_for_status()
-    except Exception as e:
-        return {"ticker": ticker, "error": str(e), "digest": None}
+    """Pull the top narrative / Daily Digest style summary from a quote page.
 
-    soup = BeautifulSoup(r.text, "html.parser")
-    digest = None
+    Finviz quote.ashx 403s from the ECS box without elite auth. Try elite
+    first, then free, then yfinance so SPY/QQQ/DIA/IWM are never blank.
+    """
+    last_err = None
+    html = None
+    for tmpl in QUOTE_URLS:
+        url = tmpl.format(ticker=ticker)
+        try:
+            r = sess.get(url, timeout=40)
+            r.raise_for_status()
+            html = r.text
+            break
+        except Exception as e:
+            last_err = f"{url}: {e}"
+            print(f"[finviz_digest] {ticker} quote failed: {last_err}")
+            continue
 
-    for lab in soup.select("td.snapshot-td2"):
-        if "daily digest" in (lab.get_text(strip=True) or "").lower():
-            val = lab.find_next_sibling("td")
-            if val:
-                digest = val.get_text(" ", strip=True)
-                break
+    if html:
+        soup = BeautifulSoup(html, "html.parser")
+        digest = None
 
-    if not digest:
-        news = soup.select_one("table.news-table") or soup.select_one("#news")
-        if news:
-            first = news.select_one("a") or news.select_one("tr")
-            if first:
-                digest = first.get_text(" ", strip=True)[:280]
-
-    if not digest:
-        for sel in ("div.quote-links a", "table.fullview-links a", "h2", "h1"):
-            el = soup.select_one(sel)
-            if el:
-                t = el.get_text(" ", strip=True)
-                if len(t) > 30:
-                    digest = t[:280]
+        for lab in soup.select("td.snapshot-td2"):
+            if "daily digest" in (lab.get_text(strip=True) or "").lower():
+                val = lab.find_next_sibling("td")
+                if val:
+                    digest = val.get_text(" ", strip=True)
                     break
 
-    if not digest:
-        return {"ticker": ticker, "index": INDEX_TICKERS.get(ticker, ticker),
-                "digest": None, "error": "no digest found"}
+        if not digest:
+            news = soup.select_one("table.news-table") or soup.select_one("#news")
+            if news:
+                first = news.select_one("a") or news.select_one("tr")
+                if first:
+                    digest = first.get_text(" ", strip=True)[:280]
+
+        if not digest:
+            for sel in ("div.quote-links a", "table.fullview-links a", "h2", "h1"):
+                el = soup.select_one(sel)
+                if el:
+                    t = el.get_text(" ", strip=True)
+                    if len(t) > 30:
+                        digest = t[:280]
+                        break
+
+        if digest:
+            return {
+                "ticker": ticker,
+                "index": INDEX_TICKERS.get(ticker, ticker),
+                "digest": digest.strip(),
+                "source": "finviz_quote",
+                "error": None,
+            }
+
+    yf_row = _yf_index_digest(ticker)
+    if yf_row:
+        if last_err:
+            yf_row["finviz_error"] = last_err
+        return yf_row
 
     return {
         "ticker": ticker,
         "index": INDEX_TICKERS.get(ticker, ticker),
-        "digest": digest.strip(),
-        "source": "finviz_quote",
+        "digest": None,
+        "error": last_err or "no digest found",
+    }
+
+
+def _yf_index_digest(ticker: str) -> dict | None:
+    """Last/prev close from yfinance when Finviz quote pages 403."""
+    try:
+        import yfinance as yf
+        t = yf.Ticker(ticker)
+        fi = t.fast_info
+        last = fi.get("last_price") if hasattr(fi, "get") else getattr(fi, "last_price", None)
+        prev = fi.get("previous_close") if hasattr(fi, "get") else getattr(fi, "previous_close", None)
+        last_f = float(last) if last is not None else None
+        prev_f = float(prev) if prev is not None else None
+    except Exception as e:
+        print(f"[finviz_digest] {ticker} yfinance fallback failed: {e}")
+        return None
+    if last_f is None or last_f <= 0:
+        return None
+    chg = None
+    if prev_f and prev_f > 0:
+        chg = (last_f - prev_f) / prev_f * 100.0
+    chg_s = f"{chg:+.2f}%" if chg is not None else "n/a"
+    prev_s = f"{prev_f:.2f}" if prev_f else "n/a"
+    digest = (
+        f"{INDEX_TICKERS.get(ticker, ticker)} {last_f:.2f} ({chg_s}) "
+        f"prev close {prev_s} — yfinance (Finviz quote page unavailable)"
+    )
+    return {
+        "ticker": ticker,
+        "index": INDEX_TICKERS.get(ticker, ticker),
+        "digest": digest,
+        "source": "yfinance",
+        "last": last_f,
+        "previous_close": prev_f,
+        "change_pct": None if chg is None else round(chg, 3),
         "error": None,
     }
 

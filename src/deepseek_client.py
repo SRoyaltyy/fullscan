@@ -267,7 +267,8 @@ def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
          trace_path: str | None = None, stage_label: str = "",
-         max_rounds: int | None = None) -> str:
+         max_rounds: int | None = None,
+         force_deepseek: bool = False) -> str:
     """Chat completion. PRIMARY: OpenClaw gateway (Grok 4.6 with native
     web/X search — `model` is ignored on that path). FALLBACK: DeepSeek
     with the client-side web_search tool loop, exactly as before.
@@ -277,12 +278,18 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     set, the FULL conversation is dumped there as JSON for audit. If
     trace_path is set, a human-readable step-by-step reasoning log is
     written there as Markdown. max_rounds overrides
-    config.MAX_TOOL_ROUNDS for search-heavy DeepSeek stages."""
+    config.MAX_TOOL_ROUNDS for search-heavy DeepSeek stages.
+
+    force_deepseek=True skips OpenClaw for THIS call only and does not
+    mark the gateway down. Used when Grok returned a long unparseable
+    blob (events JSON) — that is not an idle-timeout stub, so chat()
+    would otherwise never fall through.
+    """
     import copy
     import os
 
     # ---- primary: OpenClaw / Grok ----
-    if openclaw_available():
+    if openclaw_available() and not force_deepseek:
         text = _openclaw_chat(messages, tools=tools, max_tokens=max_tokens,
                               temperature=temperature,
                               transcript_path=transcript_path,
@@ -294,6 +301,9 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             print("[llm] OpenClaw failed and no DEEPSEEK_API_KEY fallback")
             return ""
         print(f"[llm] falling back to DeepSeek (model={model})")
+    elif force_deepseek:
+        print(f"[llm] force_deepseek ({stage_label or 'llm run'}) — "
+              "OpenClaw skipped for this call only")
     elif config.openclaw_enabled() and not config.DEEPSEEK_API_KEY:
         # gateway configured but marked down, and no fallback either
         print("[llm] OpenClaw gateway down and no DEEPSEEK_API_KEY fallback")

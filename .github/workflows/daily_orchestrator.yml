@@ -375,9 +375,55 @@ jobs:
           fi
           echo "preopen_all artifact_ok=$PREOPEN_OK active=$PREOPEN_ACTIVE completed=$PREOPEN_COMPLETED"
 
+          # gh run list is the source of truth. jq date parsing on the
+          # workflow_runs payload has missed in_progress jobs (08-25 queued
+          # #3/#4 onto a running ALL). Any queued/in_progress ALL today
+          # means GitHub must not dispatch another one, or individuals.
+          RUN_STATUSES=$(gh run list --repo "$REPO" --workflow preopen_all.yml --limit 20 \
+            --json status,createdAt,databaseId 2>/dev/null || echo "[]")
+          N_ACTIVE=$(echo "$RUN_STATUSES" | python3 -c '
+          import json,sys,datetime
+          from datetime import timezone
+          try:
+              from zoneinfo import ZoneInfo
+              et = ZoneInfo("America/New_York")
+          except Exception:
+              et = timezone.utc
+          today = sys.argv[1]
+          try:
+              rows = json.load(sys.stdin)
+          except Exception:
+              rows = []
+          n = 0
+          for r in rows or []:
+              created = r.get("createdAt") or ""
+              try:
+                  dt = datetime.datetime.fromisoformat(created.replace("Z","+00:00"))
+                  day = dt.astimezone(et).date().isoformat()
+              except Exception:
+                  day = ""
+              if day != today:
+                  continue
+              if (r.get("status") or "") in ("in_progress","queued","waiting","pending"):
+                  n += 1
+          print(n)
+          ' "$TODAY" 2>/dev/null || echo 0)
+          if [ "${N_ACTIVE:-0}" -gt 0 ]; then
+            PREOPEN_ACTIVE="yes"
+            echo "preopen_all gh-run-list active=$N_ACTIVE → PREOPEN_ACTIVE=yes"
+          fi
+          echo "preopen_all artifact_ok=$PREOPEN_OK active=$PREOPEN_ACTIVE completed=$PREOPEN_COMPLETED (after run-list)"
+
           for WF in "${WORKFLOWS[@]}"; do
             echo ""
             echo "======== $WF ========"
+
+            # Do not queue a second ALL onto a running/queued one. 08-25
+            # last-chance dispatched #3/#4 while #2 still owned the runner.
+            if [ "$WF" = "preopen_all.yml" ] && [ "$FORCE" != "true" ] && [ "$PREOPEN_ACTIVE" = "yes" ]; then
+              echo "skip $WF — already queued or in_progress on the ECS runner"
+              continue
+            fi
 
             # Hard skip predictive dispatches after 09:25 ET (unless force).
             if is_predictive "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then

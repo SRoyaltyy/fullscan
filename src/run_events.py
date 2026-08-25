@@ -40,21 +40,60 @@ def _windows(today) -> dict:
 
 
 def extract_json(text: str) -> dict | None:
-    """Pull the fenced ```json block, else the outermost { ... } span."""
-    blob = None
+    """Pull a usable events payload out of messy model output.
+
+    Grok often writes 18 minutes of prose and then a truncated / unfenced
+    / trailing-comma JSON block. Treat that as parseable when we can;
+    return None when there is no events list so the caller can DeepSeek.
+    """
+    if not text or not str(text).strip():
+        return None
+    candidates: list[str] = []
     m = re.search(r"```json\s*(.*?)```", text, re.S)
     if m:
-        blob = m.group(1)
-    else:
-        i, j = text.find("{"), text.rfind("}")
-        if i != -1 and j > i:
-            blob = text[i:j + 1]
-    if not blob:
+        candidates.append(m.group(1))
+    m2 = re.search(r"```json\s*(.*)$", text, re.S)
+    if m2:
+        candidates.append(m2.group(1))
+    i, j = text.find("{"), text.rfind("}")
+    if i != -1 and j > i:
+        candidates.append(text[i:j + 1])
+    seen: set[str] = set()
+    parsed_any: dict | None = None
+    for blob in candidates:
+        key = blob[:200]
+        if key in seen:
+            continue
+        seen.add(key)
+        data = _loads_lenient(blob)
+        if not isinstance(data, dict):
+            continue
+        if data.get("events") or data.get("missed_events"):
+            return data
+        if parsed_any is None:
+            parsed_any = data
+    return parsed_any
+
+
+def _loads_lenient(blob: str) -> dict | None:
+    raw = (blob or "").strip()
+    if not raw:
         return None
-    try:
-        return json.loads(blob)
-    except ValueError:
-        return None
+    raw = (raw.replace("\u201c", '"').replace("\u201d", '"')
+           .replace("\u2018", "'").replace("\u2019", "'"))
+    raw = re.sub(r",\s*([}\]])", r"\1", raw)
+    for candidate in (raw, raw + "}", raw + "]}", raw + "]}]}"):
+        try:
+            obj = json.loads(candidate)
+            return obj if isinstance(obj, dict) else None
+        except ValueError:
+            pass
+        try:
+            obj, _ = json.JSONDecoder().raw_decode(candidate)
+            return obj if isinstance(obj, dict) else None
+        except ValueError:
+            continue
+    return None
 
 
 def strip_json_block(text: str) -> str:
@@ -175,7 +214,8 @@ def _repair_json(report: str) -> dict | None:
     )
     out = deepseek_client.chat(
         [{"role": "user", "content": prompt}],
-        model=config.MODEL_PREDICT, tools=False, max_tokens=6000)
+        model=config.MODEL_PREDICT, tools=False, max_tokens=6000,
+        force_deepseek=True, stage_label=f"EVENTS REPAIR")
     return extract_json(out)
 
 
@@ -191,8 +231,9 @@ def _one_scan(date_str: str, win: dict) -> None:
         f"WINDOW upcoming: {win['upcoming']}\n\n"
         f"{_previous_scan()}\n\n"
         "Run the full event scan now. Cover every category and every region "
-        "with explicit web_search rounds before writing. End your reply with "
-        "the fenced ```json block exactly as specified."
+        "with explicit web_search rounds before writing. Emit the fenced "
+        "```json block FIRST (the contract), then the human-readable report. "
+        "If you run out of space, truncate the prose, never the JSON."
     )
 
     text = deepseek_client.chat(
@@ -205,6 +246,28 @@ def _one_scan(date_str: str, win: dict) -> None:
         stage_label=f"EVENTS {date_str}", max_rounds=SEARCH_ROUNDS)
 
     data = extract_json(text)
+    if not data or not data.get("events"):
+        # Grok often returns a long essay that is NOT a timeout stub, so
+        # chat() will not fall through on its own. DeepSeek this stage only;
+        # leave the gateway up for judge / predict / sectors.
+        print("[events] OpenClaw JSON unusable — DeepSeek for this stage only "
+              "(gateway stays up)")
+        ds = deepseek_client.chat(
+            [{"role": "system", "content": rubric},
+             {"role": "user", "content": user_msg}],
+            model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
+            transcript_path=os.path.join("01_daily/_transcripts",
+                                         f"{date_str}_events.json"),
+            trace_path=os.path.join(EVENTS_DIR, f"{date_str}_events_trace.md"),
+            stage_label=f"EVENTS {date_str} DEEPSEEK",
+            max_rounds=SEARCH_ROUNDS, force_deepseek=True)
+        ds_data = extract_json(ds)
+        if ds_data and ds_data.get("events"):
+            text, data = ds, ds_data
+        elif ds:
+            text = ds
+            data = ds_data
+
     repaired = False
     if not data or not data.get("events"):
         fixed = _repair_json(text)

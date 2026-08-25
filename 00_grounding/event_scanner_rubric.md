@@ -68,31 +68,11 @@ Real Estate, Technology, Utilities. Use "BROAD" for market-wide events.
 
 ## Output format
 
-Write the human-readable report FIRST, then the machine-readable JSON.
+The machine-readable JSON is the CONTRACT. Emit it FIRST. Then write the
+human-readable report. If you run out of space, truncate the prose, NEVER
+the JSON. A 18-minute essay with no parseable JSON is a failed scan.
 
-### Human-readable structure
-
-```
-## TODAY — <date>
-(grouped by category; one line per event: what, when, sectors, why it matters)
-
-## THIS WEEK AND NEXT (upcoming)
-(grouped by category; include market expectation where relevant)
-
-## STILL IN PLAY (recent past)
-(events from the past 2 weeks whose market effect is not finished)
-
-## TOP RISKS / TOP OPPORTUNITIES
-(3–5 bullets each, ranked)
-
-## UNCERTAINTY
-(one of: low | moderate | elevated | high, plus one sentence why)
-```
-
-Keep each event line tight: date, title, sectors, one-sentence
-"why it matters", one-sentence "what to watch".
-
-### JSON block (mandatory, fenced ```json, LAST thing in your reply)
+### JSON block (mandatory, fenced ```json, FIRST thing in your reply)
 
 ```json
 {
@@ -126,3 +106,25 @@ Keep each event line tight: date, title, sectors, one-sentence
 prices, not its newsworthiness. 15–40 events total is the right range —
 comprehensive but not noise. Quality over quantity: if everything is
 priced in and quiet, say so rather than inventing drama.
+
+### Human-readable structure (AFTER the JSON)
+
+```
+## TODAY — <date>
+(grouped by category; one line per event: what, when, sectors, why it matters)
+
+## THIS WEEK AND NEXT (upcoming)
+(grouped by category; include market expectation where relevant)
+
+## STILL IN PLAY (recent past)
+(events from the past 2 weeks whose market effect is not finished)
+
+## TOP RISKS / TOP OPPORTUNITIES
+(3–5 bullets each, ranked)
+
+## UNCERTAINTY
+(one of: low | moderate | elevated | high, plus one sentence why)
+```
+
+Keep each event line tight: date, title, sectors, one-sentence
+"why it matters", one-sentence "what to watch".
