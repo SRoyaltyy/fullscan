@@ -45,8 +45,10 @@ export PYTHONUNBUFFERED=1
 
 cd "$ROOT"
 git config --global --add safe.directory "$ROOT" || true
+git config --global --add safe.directory '*' || true
 git config user.name "Market-Bot-Automaton"
 git config user.email "bot@users.noreply.github.com"
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE || true
 
 if [ -n "${GITHUB_TOKEN:-}" ]; then
   git config --local http.https://github.com/.extraheader \
@@ -56,6 +58,10 @@ fi
 git fetch origin main
 git checkout main
 git reset --hard origin/main
+
+# Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call,
+# and make sure the 05:55 timer is actually enabled.
+bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
 
 PY="${FULLSCAN_PYTHON:-python3}"
 if [ -x "$ROOT/.venv/bin/python" ]; then

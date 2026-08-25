@@ -13,6 +13,9 @@ Environment=TZ=America/New_York
 Environment=OPENCLAW_GATEWAY_URL=http://127.0.0.1:18789
 Environment=OPENCLAW_TIMEOUT=10800
 Environment=PYTHONUNBUFFERED=1
+# + prefix: run as root so we can patch ~/.openclaw JSON *and* bounce the
+# gateway. User=gha cannot systemctl restart openclaw.
+ExecStartPre=+/home/gha/fullscan/scripts/ensure_openclaw_timeouts.sh
 ExecStart=/home/gha/fullscan/scripts/ecs_preopen.sh
 Nice=5
 TimeoutStartSec=21600
