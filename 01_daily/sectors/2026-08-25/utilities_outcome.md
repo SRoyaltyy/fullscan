@@ -2,62 +2,61 @@
 
 Actuals: {'etf': 'XLU', 'pct': 0.20823727451626528, 'spy_pct': 0.3195937672779925, 'rel': -0.11135649276172721, 'open': 43.2400016784668, 'close': 43.310001373291016}
 
-I have sufficient evidence to complete the review. Let me compile the analysis.
+I have enough context. Let me compile the post-session review.
+
+**FACTS:**
+- ETF_PCT: +0.21% (XLU closed 43.31, opened 43.24)
+- SPY_PCT: +0.32%
+- REL_PCT: -0.11%
+- Actual direction: **up** (slightly)
+- Actual magnitude: **flat** (essentially unchanged, +0.21%)
+
+The morning predicted **down/mild** (total score -3.15). Actual was **up/flat** (+0.21%). Direction MISS (predicted down, actual up), but magnitude was essentially flat which is within the mild band.
+
+Let me assess the drivers. The tape was risk-on (NQ +0.92%, ES +0.44% premarket), SPY +0.32%, and XLU +0.21% — essentially tracking the market, slightly underperforming (rel -0.11%). The morning's thesis was that the risk-on tape would rotate into growth and cap the defensive bid, and that the 1d rel +1.35% bounce was not durable. In reality, XLU held up roughly in line with the market — a mild positive absolute day, not the down/flat the model predicted.
+
+The key miss: the model leaned on the 3d/1w/1m relative failure and outflows to call down, but the risk-on tape carried everything up modestly, and XLU's defensive bid (elevated long-end yields, bond-proxy) kept it roughly flat-to-market. The "down" call was too aggressive given the risk-on tape; the model itself noted the risk-on tape caps magnitude but still predicted down.
+
+Let me write the review.
 
 ---
 
-## SECTOR POST-SESSION REVIEW — Utilities (XLU) — 2026-08-25
+# Sector Post-Session Review — Utilities (XLU)
 
-### STEP 0: FACTS
-- **ETF_PCT:** +0.21% (XLU closed 43.31, opened 43.24)
+## 0. FACTS
+- **ETF_PCT:** +0.21% (open 43.24 → close 43.31)
 - **SPY_PCT:** +0.32%
-- **REL_PCT:** -0.11% (XLU slightly underperformed SPY)
-- **Path:** Opened 43.24, closed 43.31 — modest grind higher, roughly flat-to-slightly-up all day, tracking the market's mild advance but lagging the tech-led rally.
+- **REL_PCT:** -0.11%
+- **Path:** opened near flat, drifted modestly higher, closed +0.21% — essentially tracking the market all day, slightly underperforming SPY.
+- **Actual direction:** up (barely)
+- **Actual magnitude:** flat (essentially unchanged)
 
-### STEP 1: What drove the sector today
+## 1. What drove the sector today
+The day was a **risk-on, tech-led tape** (NQ +0.92%, ES +0.44% premarket; SPY +0.32% close) ahead of Nvidia earnings. Utilities were carried up **passively** by the broad equity bid rather than by any sector-specific catalyst. XLU's +0.21% was a **market-beta move**, not a defensive leadership move — it slightly *underperformed* SPY (rel -0.11%).
 
-The dominant driver was the **risk-on, tech-led tape** — the exact condition the morning flagged. The S&P opened +0.62%, Nasdaq-100 surged +1.14%, and investors rotated into growth/tech ahead of Nvidia earnings. Utilities, as a bond-proxy defensive, were the **relative laggard** in a risk-on session.
+The elevated long-end (30Y ~5.27%) and hawkish-Fed overhang that the morning flagged did **not** translate into a bond-proxy selloff; instead, the risk-on tape lifted all boats modestly. No fresh sector catalyst drove XLU — the AEP negatives (PT cut, Oklahoma settlement) were carried and did not produce a fresh downside impulse. The sector's defensive bid kept it from lagging badly, but it also did not lead.
 
-- **Treasury yields fell** (10Y down 6bps to 4.64%) — this was a mild positive for the bond-proxy bid and kept XLU from going negative in absolute terms. But the yield decline was not enough to overcome the growth rotation.
-- **No fresh sector-specific catalyst.** The AEP negatives (Morgan Stanley PT cut, Oklahoma settlement) did NOT materialize as a drag — AEP actually rose +0.65% on the day. The carried negatives were stale and did not bite.
-- **Nvidia earnings week** — index-relevant event risk that pulled money into tech, away from defensives.
-
-Evidence:
-- CLAIM: Market opened risk-on with tech leading; S&P +0.62%, Nasdaq-100 +1.14% at open.
-  URL: https://tickerdaily.com/article/stock-market-today-august-25-2026-sandp-500-opens-higher-on-tech-rally-eyes-jackson-hole
-  PUBLISHED: 2026-08-25
-  QUOTE: "investors rotated into growth stocks... The S&P 500 climbed to 5,847.33, up 35.6 points or 0.62%, while the Nasdaq-100 surged 1.14% to 19,284.67."
-- CLAIM: Treasury yields fell; 10Y down 6bps to 4.64%.
-  URL: https://www.yieldcurve.pro/yields/10-year
-  PUBLISHED: 2026-08-25
-  QUOTE: "The 10 Yr Treasury yield is 4.64% as of August 25, 2026, down 6 bps on the day."
-- CLAIM: AEP rose +0.65% on the day (carried negatives did not bite).
-  URL: https://www.financecharts.com/stocks/AEP
-  PUBLISHED: 2026-08-25
-  QUOTE: "The current share price for American Electric Power Company (AEP) stock is $122.77 for Tuesday, August 25 2026, up +0.65% from the previous day."
-
-### STEP 2: Audit morning S0–S4 reads against reality
+## 2. Audit of morning S0–S4 reads vs reality
 
 | Component | Morning read | Reality | Verdict |
 |---|---|---|---|
-| **S0_SHARED_MACRO** | 0 (neutral) | Risk-on tape was a mild negative for defensives; yields fell (mild positive). Net roughly neutral. | **Correct.** The two forces offset. |
-| **S1_SECTOR_FACTORS** | 0 (neutral) | AEP negatives did NOT bite (AEP +0.65%). No fresh catalyst either way. | **Correct direction** (neutral), but the AEP negative weighting was over-stated — it didn't drag. |
-| **S2_BREADTH** | -1 (3d/1w/1m failure) | 1d rel -0.11% (slight underperformance). The 3d/1w/1m failure continued. | **Correct.** Breadth failure persisted. |
-| **S3_FLOWS_POSITIONING** | -1 (outflows) | No confirmed inflow reversal. | **Correct.** |
-| **S4_ETF_TAPE** | 0 (1d bounce not confirmed) | 1d rel flipped to -0.11% (underperformance). The morning's +1.35% bounce did NOT hold. | **Correct.** The bounce was indeed not durable. |
+| **S0 Shared macro** | 0 (neutral; risk-on caps defensive, easing yields mild positive) | Risk-on tape did carry XLU up modestly; yields easing slightly. Neutral was roughly right, but the model under-weighted the beta lift. | **Partially right** |
+| **S1 Sector factors** | 0 (structural positives stale, AEP negatives fresh) | No fresh sector catalyst; AEP negatives did not bite. Neutral was correct. | **Correct** |
+| **S2 Breadth** | -1 (3d/1w/1m relative failure dominates) | 1d rel was -0.11% (essentially flat vs SPY), not a durable failure today. The 3d/1w/1m failure did not force a down day. | **Over-weighted** |
+| **S3 Flows** | -1 (outflows, no reversal) | Outflows did not force a down day; no inflow reversal but also no outflow-driven decline. | **Over-weighted** |
+| **S4 ETF tape** | 0 (1d bounce not confirmed) | The 1d bounce was confirmed as a modest up day; XLU held up. | **Under-weighted** |
 
-**Direction call: down/flat → actual: up +0.21%.** The magnitude was flat (essentially unchanged), which the "flat" band captured. The direction was a **mild miss** — XLU finished slightly green, not red. But the relative call (underperformance vs SPY) was **correct** (rel -0.11%).
+**Direction verdict:** The model's **down** call was wrong. The risk-on tape (which the model itself identified) carried XLU up modestly. The model leaned too heavily on the 3d/1w/1m relative failure and outflows (S2/S3 = -1 each) to call a down day, while the actual tape was a broad risk-on lift that lifted even the defensive sector. The morning's own divergence note ("the relative bid can leave XLU less red than SPY and still not green") was directionally sensible but the model still committed to **down** rather than **flat**.
 
-### STEP 3: Interactions / double-count / knowable-at-open test
+## 3. Interactions / double-count / knowable-at-open test
+- **Knowable at open:** **Partially.** The risk-on tape (futures positive, NQ +0.92%) was knowable at open and pointed to a broad lift. The model recognized this but used it to *cap magnitude* (multiplier 0.9) rather than to flip direction. A flat-to-up outcome was knowable; the **down** call was not well-supported by the risk-on tape.
+- **No double-count:** S2 and S3 both scored -1 on related "relative failure / de-risking" evidence — a mild double-count of the same 3d/1w/1m underperformance theme. This pushed the total into down territory.
+- **Interaction:** The risk-on tape (S0) and the defensive bid (elevated long-end) interacted to produce a flat-to-slightly-up day — the defensive bid offset the rotation risk, and the beta lift offset the bond-proxy headwind. The model's neutral S0 captured this but the negative S2/S3 tipped it over.
 
-- **No double-count:** Yields were held at 0 in both S0 and S1, correctly avoiding double-counting the easing.
-- **Key interaction:** The risk-on tape (S0 negative for defensives) and falling yields (S0 positive for bond-proxy) offset each other, leaving XLU flat. The morning correctly identified this tension.
-- **Knowable at open:** **Partially.** The risk-on tape and falling yields were knowable at open (futures positive, live 10Y easing). What was NOT knowable was that the AEP negatives would fail to bite (AEP rose). The morning overweighted the AEP single-name negatives as a cap on S1 — that was the main error. Also, the morning's "down" lean over-weighted the 3d/1w/1m breadth failure against a flat tape; in a risk-on session with falling yields, flat was the more likely outcome than down.
-
-### STEP 4: Outliers inside the sector
-
-- **AEP +0.65%** — the top holding rose despite the carried PT-cut/settlement negatives. This was the notable outlier: the morning's key single-name negative did not drag.
-- No other major single-name outlier identified; the sector moved as a block (flat-to-mildly-up, lagging SPY).
+## 4. Outliers inside the sector
+- **AEP** (top holding): carried the Morgan Stanley PT cut and Oklahoma settlement negatives, but no fresh downside — it did not drive the ETF down.
+- **Vistra / Constellation Energy** (independent power producers, growth-grade): noted as leaders in the S&P utilities complex (Seeking Alpha) — these growth-oriented names likely supported the sector's modest gain, consistent with the AI-power structural theme.
+- No single-name blowup or fresh catalyst drove XLU today; the move was broad and beta-driven.
 
 ---
 
@@ -69,14 +68,8 @@ SPY_PCT: 0.32
 REL_PCT: -0.11
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: flat
-PRIMARY_DRIVER: Risk-on tech-led tape (NQ +1.14%) rotated money into growth, capping the defensive bid; falling 10Y yields (4.64%, -6bps) kept XLU from going negative.
-KEY_INTERACTION: Risk-on tape (negative for defensives) offset by falling yields (positive for bond-proxy) → net flat; AEP negatives failed to bite (AEP +0.65%).
+PRIMARY_DRIVER: Broad risk-on tape (NQ +0.92%, SPY +0.32%) ahead of Nvidia earnings carried XLU up passively via market beta; no fresh sector catalyst.
+KEY_INTERACTION: Risk-on beta lift (S0) offset by defensive bond-proxy bid (elevated long-end) → XLU tracked SPY modestly, slightly underperforming (rel -0.11%).
 KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction mildly missed (predicted down, actual +0.21% flat), but relative underperformance call was correct (rel -0.11%); the "flat" magnitude band captured the outcome.
+MORNING_READ_VERDICT: Direction MISS — model called down but risk-on tape carried XLU up; over-weighted 3d/1w/1m relative failure and outflows (S2/S3) against a broad beta lift.
 OUTCOME_END
-
----
-
-### Summary
-
-The morning's **down/flat** call was directionally a mild miss (XLU finished +0.21%, slightly green), but the **flat magnitude band** was correct and the **relative underperformance call** (rel -0.11%) was correct. The core thesis — that the 1d relative bounce was not durable and the risk-on tape would cap the defensive bid — played out exactly as the 08-17/08-12 lessons predicted. The main error was **over-weighting the AEP single-name negatives** (PT cut, Oklahoma settlement) as a cap on S1; AEP actually rose +0.65%, so those carried negatives did not bite. The offsetting forces (risk-on vs. falling yields) netted to flat, which the morning correctly identified but then leaned too far toward "down" on the breadth/flow negatives. In a risk-on session with easing yields, flat was the more probable outcome than down.

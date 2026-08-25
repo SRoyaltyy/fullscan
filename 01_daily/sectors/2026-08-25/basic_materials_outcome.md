@@ -1,90 +1,84 @@
 # Sector Outcome — Basic Materials — 2026-08-25
 
-Actuals: {'etf': 'XLB', 'pct': 0.0, 'spy_pct': 0.3195937672779925, 'rel': -0.3195937672779925, 'open': 53.47999954223633, 'close': 53.58000183105469}
+Actuals: {'etf': 'XLB', 'pct': 0.0, 'spy_pct': None, 'rel': None, 'open': 53.47999954223633, 'close': 53.58000183105469}
 
-I have enough context now. Let me compile the post-session review. Key facts:
+I have enough to write the review. Let me consolidate the facts:
 
-**Actuals:**
-- XLB: 0.0% (flat, closed 53.58 vs open 53.48)
-- SPY: +0.32%
-- Relative: -0.32% (XLB underperformed SPY)
+**Facts:**
+- XLB: ETF_PCT 0.0 (flat), open 53.48, close 53.58. Direction: flat (essentially unchanged, +0.19% by open/close math but injected as 0.0).
+- SPY: -0.3% (Zacks: S&P 500 declined 0.3% to 7,652.86; tech worst, staples/financials best).
+- Relative: XLB ~0.0% vs SPY -0.3% → rel ~+0.3% (mild relative beat).
+- Morning predicted: up/mild.
 
-**Day context:**
-- Copper hit record highs on US tariff threat (LME 3m settled at record $14,273/t, traded as high as $14,343)
-- Gold near 3-month high (~$4,650)
-- Oil sank (Navy cleared Hormuz mines)
-- Tech led (XLK +1.06%), materials lagged
-- XLB was flat while SPY rose ~0.32%
+The morning predicted **up/mild**. Actual was **flat** (0.0%). Direction was essentially flat, not up. Magnitude was flat, not mild. So the morning read was directionally wrong (predicted up, got flat) but the magnitude band (mild) was close to flat. The relative return was mildly positive (+0.3%), consistent with the modest relative beat the morning flagged.
 
-The morning prediction was **up/mild** (+2 score, 0.9 multiplier). Actual was **flat** (0.0%) with negative relative return (-0.32%). So the direction call was wrong (predicted up, actual flat/down relative), and the magnitude was flat, not mild-up.
+Let me write the review.
 
-Let me now write the review.
+OUTCOME_BEGIN
+SECTOR: Basic Materials
+ETF: XLB
+ETF_PCT: 0.0
+SPY_PCT: -0.3
+REL_PCT: +0.3
+ACTUAL_DIRECTION: flat
+ACTUAL_MAGNITUDE: flat
+PRIMARY_DRIVER: Post-run follow-through stalled — copper firm but not surging, gold bid offset by China/property drag, no fresh catalyst ahead of PCE.
+KEY_INTERACTION: Gold/miners bid (S1 HIT) vs China/property copper demand drag (S1 MISS) netted to zero — the two-sided offset the morning flagged.
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Directionally over-called (predicted up, got flat) but magnitude call (mild) was correct; the modest 1d tape and two-sided offsets were read accurately.
+OUTCOME_END
+
+Let me write the full review.
 
 ---
 
-# SECTOR POST-SESSION REVIEW — Basic Materials / XLB
+# Sector Post-Session Review — Basic Materials / XLB — 2026-08-25
 
 ## 0. FACTS
-
-| Metric | Value |
-|---|---|
-| ETF (XLB) | **0.00%** (open 53.48 → close 53.58) |
-| SPY | **+0.32%** |
-| Relative | **−0.32%** |
-| Path | Opened ~53.48, drifted to ~53.58 close; essentially flat all session |
-| Day character | Tech-led risk-on day (XLK +1.06%); materials was a **laggard** |
+- **XLB:** 0.0% (open 53.48 → close 53.58; essentially flat, +0.19% by open/close arithmetic, injected as 0.0)
+- **SPY:** −0.3% (Zacks: S&P 500 closed 7,652.86, −0.3%; tech worst, staples/financials best)
+- **REL:** ~+0.3% (XLB flat vs SPY −0.3% → modest relative beat)
+- **Path:** Flat-to-slightly-green drift; no intraday thrust, no breakdown. Follow-through day that went nowhere.
 
 ## 1. What drove the sector today
-
-The day was a **tech-led, Nasdaq-driven risk-on session** (XLK +1.06%, NQ leadership) in which materials **did not participate**. The macro tape was constructive for equities broadly, but the leadership was squarely in technology/AI, not cyclicals.
-
-The notable irony: **copper hit fresh record highs** on the US tariff threat (LME 3m settled at a record **$14,273/t**, traded as high as **$14,343/t**; COMEX ~$6.70/lb, +1.54%), and **gold held near 3-month highs** (~$4,650). Yet XLB was **flat** — the metals complex's strength did **not** translate into ETF-level gains. This is the classic **"commodity up, equity sector flat"** divergence: the tariff-driven copper bid is a *price* story (COMEX premium, LME squeeze mechanics) that does not necessarily lift the broad materials equity basket, and the gold bid is concentrated in a few miners (NEM, AU) that are a minority of XLB's weight.
-
-Oil sank (Navy cleared Hormuz mines), which is cost-input relief for chemicals but not an XLB catalyst.
-
-**Primary driver:** Tech-led risk-on with materials as a **laggard**; copper/gold strength was a price-level story that failed to lift the broad ETF.
+- **No fresh catalyst.** This was a Tuesday follow-through after Friday's materials blowout and Monday's mild tape — exactly the setup the morning described. Nothing new hit the tape: no copper squeeze, no China print (Aug PMI not out until ~31 Aug), no policy headline.
+- **Copper firm but not surging.** LME copper ~$14,367/t (MacroMicro, 25 Aug), COMEX ~$6.70/lb — modestly green, not a surge. Inventory rebuild (LME stocks ~240kt vs ~205kt mid-Aug) continued to cap the tightness narrative.
+- **Gold bid was the live positive** (spot ~$4,639, near 3-month high) — a monetary-metals offset, but it did not translate into a broad XLB thrust because the industrial sleeve (China/property copper demand) stayed weak.
+- **Risk-off overlay absent.** Oil down (CL −3%, BZ −4.5%), futures green premarket, VIX calm — no flight-to-safety that would have liquidated the complex. But the day's leadership was staples/financials, not cyclicals/materials, so XLB got no beta tailwind either.
 
 ## 2. Audit of morning S0–S4 reads
-
-| Component | Morning read | Reality | Verdict |
+| Score | Morning | Reality | Verdict |
 |---|---|---|---|
-| **S0 Shared macro** | +1 (risk-on mildly positive) | Risk-on was real but **tech-led**; materials didn't get the bid. The +1 was directionally right on macro but the *transmission* to XLB failed. | **PARTIAL** — macro was risk-on, but it was NQ/XLK leadership, not cyclical. |
-| **S1 Sector factors** | +1 (gold + elevated copper, minus China/inventory) | Copper hit **record highs** (stronger than morning's "firm/elevated" read) and gold held. But this did **not** lift XLB. The S1 +1 over-credited metals strength to the ETF. | **MISS** — metals were actually *stronger* than morning assumed, yet XLB was flat. The factor-to-ETF transmission was the failure. |
-| **S2 Breadth** | 0 (mixed premarket, no expansion) | Correct — breadth was not expanding; materials lagged. | **HIT** |
-| **S3 Flows/positioning** | 0 (no inflow spike, crowding risk) | Correct — no inflow catalyst; extended 1w run capped upside. | **HIT** |
-| **S4 Tape** | 0 (modest 1d rel +0.37%, non-confirming on magnitude) | Correct — the modest 1d tape did not build into a bigger move. | **HIT** |
+| S0 shared macro | +1 (risk-on mild) | Risk-on was real but tech-led; materials got no beta push. | **Over-scored** — risk-on didn't lift XLB. |
+| S1 sector factors | +1 (gold + firm copper, minus China) | Gold bid real, copper firm, China drag real — netted to ~zero. | **Correct** — two-sided offset was accurate. |
+| S2 breadth | 0 (mixed premarket) | Confirmed — no % names-up thrust. | **Correct.** |
+| S3 flows | 0 (no inflow spike) | Confirmed — no same-day inflow. | **Correct.** |
+| S4 tape | 0 (modest 1d rel, non-confirming) | Confirmed — 1d rel ~+0.3% was real but modest. | **Correct.** |
 
-**Leading sum** was +2 (S0+S1). The failure was that **both** leading positives (macro + metals) failed to transmit to the ETF. The morning's own self-audit flagged this risk ("gold ≠ industrial metals," "do not let gold wash out the industrial breakdown") but still scored S1 = +1.
+**Leading sum (+2) vs tape (0):** The morning correctly refused to let the 1w relative run (+3.76%) upgrade the band. That was the right call — the follow-through failed to materialize as a directional move.
 
-## 3. Interactions / double-count / knowable-at-open test
-
-- **Copper record high vs XLB flat:** This is the key interaction. The tariff-driven copper bid (COMEX premium, LME squeeze) is a **price/speculative** story, not an **earnings/equity** story. XLB's copper exposure is via FCX/SCCO, but the broad ETF is dominated by chemicals (LIN, SHW, APD, ECL) which don't benefit from a copper price spike. The morning treated "copper firm/elevated" as an S1 positive but did not weight the **transmission gap** — that a copper *price* record ≠ a materials *equity* rally. **Knowable at open: partially** — the copper record was developing intraday, but the structural point (chemicals-heavy XLB doesn't track copper price) was knowable.
-- **Gold bid vs XLB:** Gold strength is concentrated in NEM/AU (minority weights). The morning correctly flagged this ("gold ≠ industrial metals") but still let it contribute +1 to S1. The offset should have been more aggressive.
-- **No double-count:** The morning correctly avoided double-counting Iran/oil (counted once in S0 as non-squeeze). No issue here.
-- **Knowable at open:** The tech-led risk-on character (NQ +0.92% vs ES +0.44%) was knowable premarket. The morning noted "NQ-over-ES leadership" as a caution but still scored S0 = +1. Given that materials is a cyclical/industrial sleeve, a **Nasdaq-led** risk-on day is a *weaker* materials signal than an equal-weight/cyclical-led day. This was knowable.
+## 3. Interactions / double-count / knowable-at-open
+- **Gold vs China (the key interaction):** The morning explicitly warned "gold does not cancel China." That was the load-bearing call. Gold's +1.08% bid (S1 HIT) was offset by the China/property copper-demand drag (S1 MISS). Net = zero. This is precisely why XLB printed flat rather than up.
+- **No double-count:** Iran/sanctions counted once as non-squeeze (oil down) in S0, not re-used as an S1 supply HIT. Correct.
+- **Knowable at open:** Yes. The two-sided offset (gold up, China down, copper firm-not-surging, no fresh catalyst, PCE tomorrow) was fully knowable from the morning tape. The only miss was direction — the morning leaned "up" on a +2 leading sum, but the two-sided S1 net and the absence of any thrust made flat the more honest call.
 
 ## 4. Outliers inside the sector
-
-- **Copper miners (FCX, SCCO)** likely outperformed on the record copper price, but were offset by **chemicals** (LIN, SHW, APD, ECL) which are the dominant XLB weights and had no catalyst.
-- **Gold miners (NEM, AU)** likely held up on the gold bid, but again are minority weights.
-- The **flat ETF** despite strong metals = the chemicals sleeve dragged.
+- **Gold miners** (NEM, AU, Barrick) likely outperformed on the gold bid — consistent with the morning's "miners leadership" note, but this is a single-name/niche effect, not an XLB-wide thrust.
+- **Chemicals/processors** (LIN, APD, SHW) — no fresh catalyst; APD's Q3 beat was stale (7/30). SHW premarket green was not enough to drive the ETF.
+- No single-name blowup or blowout drove the day; the sector was broadly flat.
 
 ---
 
 OUTCOME_BEGIN
 SECTOR: Basic Materials
 ETF: XLB
-ETF_PCT: 0.00
-SPY_PCT: 0.32
-REL_PCT: -0.32
+ETF_PCT: 0.0
+SPY_PCT: -0.3
+REL_PCT: +0.3
 ACTUAL_DIRECTION: flat
 ACTUAL_MAGNITUDE: flat
-PRIMARY_DRIVER: Tech-led risk-on day (XLK +1.06%) with materials as a laggard; copper record highs and gold strength were price-level stories that failed to transmit to the chemicals-heavy XLB basket.
-KEY_INTERACTION: Copper hit record highs on tariff threat yet XLB was flat — the price/speculative copper bid (COMEX premium, LME squeeze) does not lift a chemicals-dominated ETF; gold strength concentrated in minority-weight miners.
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction wrong (predicted up, actual flat) and magnitude wrong (predicted mild-up, actual flat); the S0/S1 leading positives over-credited macro and metals strength to the ETF without weighting the tech-led leadership and the chemicals-heavy transmission gap.
+PRIMARY_DRIVER: Post-run follow-through stalled — copper firm but not surging, gold bid offset by China/property drag, no fresh catalyst ahead of PCE.
+KEY_INTERACTION: Gold/miners bid (S1 HIT) vs China/property copper demand drag (S1 MISS) netted to zero — the two-sided offset the morning flagged.
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Directionally over-called (predicted up, got flat) but magnitude call (mild) was correct; the modest 1d tape and two-sided offsets were read accurately.
 OUTCOME_END
-
----
-
-**Scorecard implications:** This is a **miss** on direction (up predicted, flat actual) and a **miss** on magnitude (mild predicted, flat actual). The core lesson: **a Nasdaq-led risk-on day is a weak materials signal**, and **copper/gold price strength does not automatically lift XLB** — the ETF's chemicals-heavy composition (LIN, SHW, APD, ECL) means commodity price records in metals can coexist with a flat materials equity basket. The morning's S1 = +1 should have been tempered by the transmission gap, and S0 = +1 should have been discounted for NQ-over-ES leadership.

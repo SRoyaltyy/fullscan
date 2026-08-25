@@ -2,8 +2,8 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (27,977 characters of input). Model: `deepseek-reasoner`. Web search is disabled for this stage; the model works only from the documents it was given.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (28,378 characters of input). Model: `deepseek-reasoner`. Web search is disabled for this stage; the model works only from the documents it was given.
 
 
 
-**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (4,077 characters).
+**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (4,753 characters).

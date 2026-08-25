@@ -6,36 +6,76 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"consumer staples XLP stocks August 25 2026 Walmart Costco PG KO decline"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLP consumer staples ETF August 25 2026 decline Walmart Costco"* → got 6 results (via ddg)
 
-  - The Largest Consumer Staples Companies by Market Cap in August 2026 | The Motley Fool (https://www.fool.com/research/largest-consumer-staples-companies/)
+  - Consumer Staples Select Sector SPDR Fund (XLP) ETF Analysis ... (https://tickeron.com/ticker/XLP/)
 
-  - Stocks dip as bond yields and oil rise, Walmart earnings drag on retail: AlphaCheck (https://finance.yahoo.com/markets/article/stocks-dip-as-bond-yields-and-oil-rise-walmart-earnings-drag-on-retail-alphacheck-140142173.html)
+  - State Street Consumer Staples Select Sector SPDR ETF (XLP) (https://finance.yahoo.com/quote/XLP/history/?fr=sycsrp_catchall)
 
-  - How Much Walmart's 90-Day Slide Hit Top Consumer Staples ETFs - 24/7 Wall St. (https://247wallst.com/investing/etf/2026/08/07/how-much-walmarts-90-day-slide-hit-top-consumer-staples-etfs/)
+  - State Street Consumer Staples Select Sector SPDR ETF (XLP) (https://finance.yahoo.com/quote/XLP/?fr=sycsrp_catchall)
 
-**Step 2 — Research.** The model wanted to know: *"consumer confidence new home sales August 25 2026 market reaction"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"consumer staples stocks August 25 2026 rotation out defensives Nasdaq rally"* → got 6 results (via ddg)
 
-  - New US single-family home sales slide in July, confidence ... (https://www.reuters.com/world/us/new-us-single-family-home-sales-slide-july-2026-08-25/)
+  - Morning Briefing: NASDAQ Slides 0.77% as Defensive Rotation ... (https://finlore.io/news/nasdaq-slides-defensive-rotation-strait-of-hormuz-2026-08-25)
 
-  - Economic Uncertainty, Affordability Challenges Weigh on New ... (https://eyeonhousing.org/2026/08/economic-uncertainty-affordability-challenges-weigh-on-new-home-sales/)
+  - Stock Market News for Aug 25, 2026 - Zacks Investment Research (https://www.zacks.com/stock/news/2979589/stock-market-news-for-aug-25-2026)
 
-  - Consumer Confidence, Home Prices and Sales: Econ Data Recap (https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-25-2026/card/consumer-confidence-home-prices-and-sales-econ-data-recap-7UUPx7KSqljIiJaJohCm)
+  - The Rotation Into Consumer Staples: Defensive Strength in an ... (https://www.investing.com/analysis/the-rotation-into-consumer-staples-defensive-strength-in-an-uncertain-2026-200674622)
 
-**Step 4 — Research.** The model wanted to know: *"August 25 2026 stock market Nasdaq S&P close risk on tech rally"* → got 6 results (via ddg)
+**Step 4 — Research.** The model wanted to know: *"August 25 2026 stock market Nasdaq down consumer staples gainers defensive rotation"* → got 6 results (via ddg_html)
+
+  - Stock Market News for Aug 25, 2026 — Latest News | MetaTrader (https://www.metatrader.com/en/news/zacks/3894349-stock-market-news-for-aug-25-2026)
+
+  - Stock Market News for Aug 25, 2026 - Zacks Investment Research (https://www.zacks.com/stock/news/2979589/stock-market-news-for-aug-25-2026)
+
+  - Stock market news for Aug. 25, 2026 - CNBC (https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html)
+
+**Step 5 — Research.** The model wanted to know: *"Walmart Costco PG KO August 25 2026 close gainers defensive"* → got 6 results (via ddg)
+
+  - PG, WMT, KO & 300+ Consumer Defensive Stocks Screener (2026 ... (https://vcpscanner.com/sectors/consumer-defensive)
+
+  - WMT, COST, PG: Are Defensive Stocks Too Crowded for 2026? (https://www.marketbeat.com/articles/are-these-3-leading-defensive-stocks-too-crowded-heading-into-2026/)
+
+  - Are Defensive Stocks Like Walmart, Costco, and Procter ... (https://www.ainvest.com/news/defensive-stocks-walmart-costco-procter-gamble-overvalued-overexposed-2026-2601/)
+
+**Step 7 — Research.** The model wanted to know: *""August 25, 2026" XLP consumer staples fell relative underperformance S&P"* → got 6 results (via ddg)
+
+  - State Street Consumer Staples Select Sector SPDR ETF (XLP) (https://finance.yahoo.com/quote/XLP/history/?fr=sycsrp_catchall)
+
+  - Consumer Staples Select Sector SPDR® Fund (XLP) (https://www.financecharts.com/etfs/XLP)
+
+  - State Street Consumer Staples Select Sector SPDR ETF (XLP) (https://finance.yahoo.com/quote/XLP/?fr=sycsrp_catchall)
+
+**Step 8 — Research.** The model wanted to know: *"XLP August 25 2026 close 86.52 down 1.06%"* → got 6 results (via ddg)
+
+  - Consumer Staples Select Sector SPDR® Fund (XLP) (https://www.financecharts.com/etfs/XLP)
+
+  - XLP - State Street Consumer Staples Sel Sect SPDR ETF (https://seekingalpha.com/symbol/XLP/historical-price-quotes)
+
+  - State Street Consumer Staples Select Sector SPDR ETF (XLP) (https://finance.yahoo.com/quote/XLP/?fr=sycsrp_catchall)
+
+**Step 10 — Research.** The model wanted to know: *"August 25 2026 stock market close tech rally Nasdaq consumer staples laggards"* → got 6 results (via ddg)
 
   - Stock Market Today, August 25, 2026: S&P 500 Opens Higher on ... (https://tickerdaily.com/article/stock-market-today-august-25-2026-sandp-500-opens-higher-on-tech-rally-eyes-jackson-hole)
 
   - Stock market news for Aug. 25, 2026 - CNBC (https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html)
 
-  - Stock Market News for Aug 25, 2026 - Zacks Investment Research (https://www.zacks.com/stock/news/2979589/stock-market-news-for-aug-25-2026)
+  - US Stock Market Today Aug 25, 2026 — S&P 500, Dow & Nasdaq Close (https://vittarthi.com/markets/us)
 
-**Step 5 — Research.** The model wanted to know: *"consumer confidence 89.4 August 2026 staples defensive stocks reaction"* → got 6 results (via ddg)
+**Step 11 — Research.** The model wanted to know: *"Walmart Costco Procter Gamble August 25 2026 fell tech rally rotation"* → got 6 results (via ddg)
 
-  - U.S. consumer confidence hits seven-month low in August 2026 (https://finance.yahoo.com/economy/articles/u-consumer-confidence-hits-seven-170933631.html?fr=sycsrp_catchall)
+  - August 2026 US Stock Sector Focus: Healthcare Leads, Tech ... (https://algolabhk.com/en/blogs/august-sector-focus)
 
-  - US Consumer Confidence Falls to Lowest Level in 7 Months as ... (https://www.usnews.com/news/business/articles/2026-08-25/us-consumer-confidence-falls-to-lowest-level-in-7-months-as-gas-prices-remain-elevated)
+  - Tech Down, but Not by Much, on Rotation Out of Consumer ... (https://www.morningstar.com/news/dow-jones/2026082010293/tech-down-but-not-by-much-on-rotation-out-of-consumer-tech-roundup)
 
-  - US Consumer Confidence Edged Down Slightly in August (https://www.prnewswire.com/news-releases/us-consumer-confidence-edged-down-slightly-in-august-302859371.html)
+  - The Fortress Retailers: Walmart and Costco Defy Volatility as ... (https://markets.financialcontent.com/buffnews/article/marketminute-2026-3-30-the-fortress-retailers-walmart-and-costco-defy-volatility-as-great-rotation-deepens-in-2026)
 
-**Step 7 — Done researching.** The model stopped searching and wrote its full analysis (4,085 characters).
+**Step 13 — Research.** The model wanted to know: *"Walmart Costco stock August 25 2026 close tech rally defensive laggards"* → got 6 results (via ddg)
+
+  - Costco Wholesale (COST) Stock Price & Overview (https://stockanalysis.com/stocks/cost/)
+
+  - Walmart Inc. (WMT) Stock Price, News, Quote & History - Yahoo ... (https://finance.yahoo.com/quote/WMT/?fr=sycsrp_catchall)
+
+  - WMT Stock Price | Walmart Inc. Stock Quote (U.S.: Nasdaq ...Historical Data :: Walmart Inc. (WMT)WMT - Walmart Inc Stock Price and Quote - FINVIZ.comWalmart Drops 8% on Slowest Same-Store Sales Growth Since ...Walmart (WMT) Stock Price History 1972-2026 (https://www.marketwatch.com/investing/stock/wmt)
+
+**Step 15 — Done researching.** The model stopped searching and wrote its full analysis (4,909 characters).

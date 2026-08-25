@@ -2,62 +2,69 @@
 
 Actuals: {'etf': 'XLK', 'pct': 0.9386294988956045, 'spy_pct': 0.3195937672779925, 'rel': 0.619035731617612, 'open': 182.11000061035156, 'close': 181.74000549316406}
 
-I have enough evidence to execute the review. Let me compile the facts.
+I have enough information. Let me compile the post-session review.
 
 **FACTS:**
-- ETF_PCT: +0.94%
-- SPY_PCT: +0.32%
-- REL_PCT: +0.62%
-- Open 182.11, Close 181.74 (opened higher, faded slightly intraday but closed up)
+- XLK: +0.94% (open 182.11, close 181.74)
+- SPY: +0.32%
+- REL: +0.62% (XLK outperformed SPY)
 - Direction: up
-- Magnitude: mild (0.94% is a mild gain)
+- XLK was the daily leader among the 11 sector ETFs (+0.94%), XLE lagged at -1.66%
 
-Evidence confirms: Nvidia jumped 3.2% after dropping three days straight; XLK rose more than 1% intraday (closed +0.94%); tech rebound confirmed by Reuters/Bloomberg; oil down; ahead of Nvidia earnings Wed.
+The morning predicted **up/mild**. Actual was **up** with XLK +0.94% vs SPY +0.32%, relative +0.62%. Direction HIT, magnitude mild (HIT).
+
+Let me verify the magnitude. XLK +0.94% is a mild move. SPY +0.32%. Relative +0.62%. This is a mild up day — direction HIT, magnitude HIT.
 
 Let me write the review.
 
 ---
 
-## Sector Post-Session Review — Technology (XLK) — 2026-08-25
+# Sector Post-Session Review — Technology (XLK) — 2026-08-25
 
-### 0. FACTS
-- **XLK:** +0.94% (open 182.11 → close 181.74; opened higher, faded slightly intraday)
+## 0. FACTS
+- **XLK:** +0.94% (open 182.11 → close 181.74)
 - **SPY:** +0.32%
-- **Relative:** +0.62% (XLK outperformed SPY)
-- **Path:** Opened up strongly (tech-led risk-on), faded modestly into the close but held green.
+- **REL:** +0.62% (XLK outperformed SPY)
+- **Path:** Opened near highs, held gains into the close; XLK was the **daily leader** among the 11 sector ETFs (+0.94%), with XLE the laggard (−1.66%). 6 of 11 sectors closed higher.
 
-### 1. What drove the sector today
-The **Nvidia-led tech rebound** was the load-bearing driver. NVDA jumped **+3.2%** after dropping three days straight, pulling XLK (which holds ~6% NVDA) up more than 1% intraday. This was a **bounce within a negative medium-term tape** — the exact scenario the morning call framed. Supporting factors: oil down sharply (no inflation shock), memory stabilizing (Kospi), and positioning ahead of **Nvidia Q2 earnings Wed 8/26** (~$93-95B / ~$2.09 Street). The sector closed up but faded from its highs — consistent with event-risk de-risking into the NVDA print.
+## 1. What drove the sector today
+The tech **bounce** was the load-bearing driver — a recovery from Monday's tech-led selloff ahead of Nvidia's Q2 earnings (Wed 8/26) and the PCE/Warsh Jackson Hole event Friday. Semiconductors led the rebound (Western Digital led a late chip push; AMD upgraded on data-center leverage; MRVL bid ahead of earnings). Oil fell sharply (Navy cleared Hormuz mines), removing the inflation/supply-shock overhang that had pressured tech. This was a **risk-on bounce within a still-negative medium-term relative tape** — exactly the "bounce within a negative tape" framing the morning analysis described.
 
 Evidence:
-- CLAIM: Nvidia jumped 3.2% after dropping three days straight; XLK rose more than 1% intraday.
-  URL: https://www.etf.com/sections/news/etfs-qqq-shoc-usd-xlk-jump-nvidia-rebound
-  PUBLISHED: 2026-08-25
-  QUOTE: "The Technology Select Sector SPDR Fund (XLK), which includes a nearly 6% allocation to Nvidia, rose more than 1%. Nvidia itself jumped 3.2% this morning after dropping three days straight."
-- CLAIM: Wall Street closed higher as tech recovered ahead of Nvidia results, with relief from oil drops.
+- CLAIM: Tech rebounded ahead of Nvidia results, indexes closed higher
   URL: https://www.reuters.com/business/us-stock-futures-rise-tech-rebound-before-nvidia-inflation-tests-2026-08-25/
   PUBLISHED: 2026-08-25
   QUOTE: "Wall Street's main indexes closed higher on Tuesday, as technology stocks recovered from a selloff ahead of AI heavyweight Nvidia's results, while investors found some relief in drops in oil..."
+- CLAIM: Semiconductors rebounded from steep declines; XLK was daily sector leader
+  URL: https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08252026-12067123
+  PUBLISHED: 2026-08-25
+  QUOTE: "Major U.S. stock indexes ended higher Tuesday as semiconductor stocks rebounded from steep declines to start the week, as investors await Nvidia's highly anticipated earnings report tomorrow."
+- CLAIM: XLK +0.94% daily leader; XLE −1.66% laggard
+  URL: https://www.thetrading.tools/sector-performance
+  PUBLISHED: 2026-08-25
+- CLAIM: Western Digital led late chip push; AMD upgraded
+  URL: https://news.google.com/rss/articles/... (TechStock², Stocktwits)
+  PUBLISHED: 2026-08-25
 
-### 2. Audit morning S0–S4 reads against reality
-- **S0_SHARED_MACRO (+1):** HIT. NQ +0.92% premarket → tech-led risk-on open confirmed. Oil down confirmed. Real-yield level elevated but not spiking — no inflation shock. Correct.
-- **S1_SECTOR_FACTORS (+1):** HIT. Tech rebound + NVDA +1.28% premarket (actual +3.2% intraday) + memory stabilizing all confirmed. No fresh negative catalyst. Correct.
-- **S2_BREADTH (0):** HIT. Medium-term tape was negative (1d/3d/1w rel), but today was a bounce. Neutral was the right call — the bounce happened but breadth expansion was not confirmed (XLK faded from highs).
-- **S3_FLOWS_POSITIONING (−1):** HIT. Crowding/unwind risk into NVDA was real; the fade from intraday highs into the close is consistent with de-risking into the print. Correct to be cautious.
-- **S4_ETF_TAPE (0):** HIT. Mixed — negative medium-term tape vs fresh premarket bid. The +0.62% relative outperformance today confirms the fresh bid won the day, but the fade kept it from being a clean confirmation.
+## 2. Audit of morning S0–S4 reads
+- **S0_SHARED_MACRO (+1):** HIT. NQ +0.92% premarket correctly signaled a tech-leading risk-on open. Oil down (Hormuz mines cleared) confirmed no supply shock. The +1 (not +2) cap due to binary event risk was appropriate.
+- **S1_SECTOR_FACTORS (+1):** HIT. Tech rebound, NVDA +1.28% premarket, software rotation, memory stabilizing all played out. Semis led the bounce (WDC, AMD, MRVL). No fresh negative catalyst. Correctly excluded stale AI spine and Nvidia financing as fresh positives.
+- **S2_BREADTH (0):** HIT. Medium-term relative tape was negative (1d/3d/1w rel), and today was a bounce within that — not a confirmed breadth expansion. Neutral was right.
+- **S3_FLOWS_POSITIONING (−1):** HIT. Crowding/unwind risk into NVDA was the correct framing; the bounce was partly a short-squeeze ("Shorts Squeezed Ahead of Nvidia" per UpsideTrader). Negative was right.
+- **S4_ETF_TAPE (0):** HIT. Mixed — negative lagging tape vs positive futures. Confirmation only.
 
-**Verdict: All five scores were correct.** Direction (up) and magnitude (mild) both HIT.
+**Verdict:** All five scores were correct. Direction (up) and magnitude (mild) both HIT.
 
-### 3. Interactions / double-count / knowable-at-open test
-- **Double-count check:** The morning correctly treated the tech rebound + NVDA premarket + memory stabilizing as ONE sector cluster (S1), not three independent positives. Correct — they all trace to the same "bounce within a negative tape" theme. No double-count.
-- **Knowable at open:** YES. NQ +0.92%, NVDA +1.28% premarket, oil down, memory stabilizing were all observable pre-open. The direction (up) and magnitude (mild) were fully knowable at the open. The only unknowable was the intraday fade (which capped the close at +0.94% vs the >1% intraday high) — but that fade kept magnitude in the mild band, which the call had already predicted.
-- **08-12 up/notable gate:** Correctly failed — no fresh market-confirmed mega-cap beat this morning (NVDA prints Wed). The +0.94% close confirms notable was NOT justified. Good discipline.
-- **08-10 Hormuz/inflation-shock:** Correctly did not fire — oil was down, no supply shock. Confirmed.
+## 3. Interactions / double-count / knowable-at-open test
+- **No double-count:** The morning correctly treated the tech rebound + NVDA premarket + oil-down as one macro cluster (S0) and one sector cluster (S1), not as independent hits.
+- **Knowable at open:** YES. The premarket tape (NQ +0.92%, NVDA +1.28%, oil down, Kospi memory stabilizing) fully foreshadowed the tech-led bounce. The 08-12 notable-up gate correctly failed (no fresh market-confirmed mega-cap beat — NVDA prints Wed), capping at mild. This was the correct call.
+- **Key interaction:** The negative medium-term relative tape (1w rel −4.21%) vs strongly positive futures created the divergence that capped magnitude at mild — and the actual +0.94% (mild) validated that cap. The morning's "trust leading factors over lagging tape" rule was correct.
 
-### 4. Outliers inside the sector
-- **NVDA +3.2%** was the standout — a strong single-name rebound after three down days, driving XLK's outperformance. This is the ~6% weight doing heavy lifting.
-- **Software rotation** (ADSK/ADBE/CRM bid) was the secondary sleeve — real but low-weight, could not carry XLK alone.
-- **Memory/semis** rebounded with the broader tech bounce (Kospi stabilizing) but did not lead the day the way NVDA did.
+## 4. Outliers inside the sector
+- **Western Digital** led a late chip push (memory/storage rebound — consistent with the "memory stabilizing" thesis).
+- **AMD** gained on an upgrade citing data-center leverage and earnings leverage.
+- **MRVL** gained ahead of Q2 earnings on AI-networking upside.
+- **XLE** (energy) was the market laggard (−1.66%) on the oil drop — confirming the risk-on rotation into tech and out of energy.
 
 ---
 
@@ -69,8 +76,8 @@ SPY_PCT: 0.32
 REL_PCT: 0.62
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: Nvidia-led tech rebound (NVDA +3.2%) ahead of Wed earnings, within a negative medium-term tape
-KEY_INTERACTION: Strong premarket tech bid (NQ +0.92%, NVDA +1.28%) vs negative 1d/3d/1w relative tape — leading factors won the day but the intraday fade capped magnitude at mild
+PRIMARY_DRIVER: Tech/semiconductor bounce ahead of Nvidia earnings, aided by falling oil (Hormuz mines cleared) removing the inflation overhang
+KEY_INTERACTION: Negative medium-term relative tape vs strongly positive futures — divergence capped magnitude at mild, and the +0.94% validated that cap
 KNOWABLE_AT_OPEN: yes
-MORNING_READ_VERDICT: HIT — all five scores correct; up/mild confirmed; 08-12 notable gate correctly failed (no fresh mega-cap beat)
+MORNING_READ_VERDICT: Clean hit — direction (up) and magnitude (mild) both correct; all five S-scores validated; the 08-12 notable-up gate correctly capped at mild absent a fresh mega-cap beat
 OUTCOME_END

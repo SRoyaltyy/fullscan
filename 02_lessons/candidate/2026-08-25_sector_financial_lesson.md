@@ -1,10 +1,10 @@
 ---
-trigger_pattern: "A sector PREDICT block contains explicit `predicted_direction` and `predicted_magnitude_band`, but the scoreboard entry is later recorded as `predicted None/None` with `direction_hit: False`. The false miss corrupts rolling accuracy even when the actual market move confirms the predicted direction. This is a pipeline/grader extraction failure, not a forecasting failure."
-current_behavior: "The grader/scoreboard layer fails to parse or carry the explicit predictions from the sector PREDICT file, stores `None/None`, marks `direction_hit: False`, and decrements rolling accuracy. In this run the scoreboard even shows an internally inconsistent `magnitude_hit: True` while direction is `False`/`None`, confirming the prediction baseline was not cleanly propagated."
-corrected_behavior: "Before grading, extract `PREDICTED_DIRECTION` and `PREDICTED_MAGNITUDE_BAND` directly from the PREDICT block / SECTOR_SCORES block. If the PREDICT file exists with explicit values, `predicted None/None` is invalid; grade against the real prediction. Only if no prediction baseline exists should `None` be recorded, and that should be handled as ops/pipeline failure, not a routine direction miss. Applying this to 2026-08-25 Financial would produce `direction_hit: True` because XLF closed `+0.1546%` (up)."
-evidence_cited: "PREDICT contains `PREDICTED_DIRECTION: up` and `PREDICTED_MAGNITUDE_BAND: mild`; the deterministic pipeline block in the same file contains `predicted_direction: up`, `predicted_magnitude_band: notable`; OUTCOME reports `ETF_PCT: 0.1546`, `SPY_PCT: 0.3196`, `ACTUAL_DIRECTION: up`; SCOREBOARD ENTRY records `predicted None/None`, `direction_hit: False | magnitude_hit: True`. This matches the 2026-08-25 candidate lessons for Communication Services, Consumer Defensive, and Energy, all of which describe the same `None/None` scoreboard corruption."
-error_category: "A"
-falsifier: "If a PREDICT block exists with explicit values and the scoreboard still records `None/None` plus a false direction miss, this lesson is violated. This lesson would be falsified if a `None` scoreboard were automatically overwritten with a fabricated prediction in a case where no PREDICT file exists; true absence of a baseline remains a legitimate `None`."
+trigger_pattern: ""
+current_behavior: ""
+corrected_behavior: ""
+evidence_cited: ""
+error_category: "NONE"
+falsifier: ""
 sector: "Financial"
 date: "2026-08-25"
 status: "candidate"
@@ -12,23 +12,7 @@ status: "candidate"
 
 # Sector Reflection — Financial — 2026-08-25
 
-Triage: **TOOL/DATA failure** — the scoreboard entry records `predicted None/None` even though the sector PREDICT block contains explicit `predicted_direction: up` and `predicted_magnitude_band: mild`. The actual XLF close was `+0.1546%`, so the direction call was actually correct; the recorded direction miss is a grading/extraction failure, not a market-call failure. Secondary reasoning issue: NQ leading ES was a knowable tell that the day belonged to tech, not financials — but that does not explain the `None` scoreboard entry.
-
 LESSON_BEGIN
-ERROR_CATEGORY: A
-TRIGGER_PATTERN: A sector PREDICT block contains explicit `predicted_direction` and `predicted_magnitude_band`, but the scoreboard entry is later recorded as `predicted None/None` with `direction_hit: False`. The false miss corrupts rolling accuracy even when the actual market move confirms the predicted direction. This is a pipeline/grader extraction failure, not a forecasting failure.
-CURRENT_BEHAVIOR: The grader/scoreboard layer fails to parse or carry the explicit predictions from the sector PREDICT file, stores `None/None`, marks `direction_hit: False`, and decrements rolling accuracy. In this run the scoreboard even shows an internally inconsistent `magnitude_hit: True` while direction is `False`/`None`, confirming the prediction baseline was not cleanly propagated.
-CORRECTED_BEHAVIOR: Before grading, extract `PREDICTED_DIRECTION` and `PREDICTED_MAGNITUDE_BAND` directly from the PREDICT block / SECTOR_SCORES block. If the PREDICT file exists with explicit values, `predicted None/None` is invalid; grade against the real prediction. Only if no prediction baseline exists should `None` be recorded, and that should be handled as ops/pipeline failure, not a routine direction miss. Applying this to 2026-08-25 Financial would produce `direction_hit: True` because XLF closed `+0.1546%` (up).
-EVIDENCE: PREDICT contains `PREDICTED_DIRECTION: up` and `PREDICTED_MAGNITUDE_BAND: mild`; the deterministic pipeline block in the same file contains `predicted_direction: up`, `predicted_magnitude_band: notable`; OUTCOME reports `ETF_PCT: 0.1546`, `SPY_PCT: 0.3196`, `ACTUAL_DIRECTION: up`; SCOREBOARD ENTRY records `predicted None/None`, `direction_hit: False | magnitude_hit: True`. This matches the 2026-08-25 candidate lessons for Communication Services, Consumer Defensive, and Energy, all of which describe the same `None/None` scoreboard corruption.
-LESSON_MATCH_CHECK: Direct match to `2026-08-25_sector_communication_services_lesson`, `2026-08-25_sector_consumer_defensive_lesson`, and `2026-08-25_sector_energy_lesson`. Weakly matches `2026-08-25_sector_basic_materials_lesson` on the NQ-led risk-on tape, but the primary match is the scoreboard `None/None` corruption.
-BACKWARD_CHECK: Had this lesson been active, the grader would have used the explicit `up` prediction, recorded a direction HIT for this run, and rolling accuracy would not have been corrupted. It would also have prevented the same false miss pattern already raised in sibling sector lessons from 2026-08-25. It would not have changed the market call itself, only the grading of it.
-CONFLICT_CHECK: No conflict with active lessons. However, there is an internal inconsistency in the PREDICT file itself: the narrative/SECTOR_SCORES block says `up/mild` (total 5.5), while the pipeline-computed block says `up/notable` (total 11.25). Both agree on direction, so direction grading is unaffected. The `2026-08-21 REFLECT (B)` lesson requires the official pipeline band to reflect the narrative temper when magnitude evidence favors mild; the narrative complied, but the pipeline block did not. This mismatch needs to be resolved separately — `None` is not the correct resolution.
-FALSIFIER: If a PREDICT block exists with explicit values and the scoreboard still records `None/None` plus a false direction miss, this lesson is violated. This lesson would be falsified if a `None` scoreboard were automatically overwritten with a fabricated prediction in a case where no PREDICT file exists; true absence of a baseline remains a legitimate `None`.
-DIVERGENCE_VERDICT: none_flagged
-ACTIVE_LESSON_REVIEW:
-- `a-financials-call-treats-a-long-end-yield-spike-as-a-one-sided`: Applied; S4 strength threshold fired and drove the up/mild call. It did not catch that NQ leading ES premarket was signaling a reverse rotation into tech ahead of Nvidia earnings.
-- `a-financials-prediction-treats-any-2s10s-steepening-as-an-un`: Applied; steepening was decomposed, and long-end yields were not double-counted as both headwind and tailwind.
-- `a-financials-sector-call-has-strongly-positive-structural-fa`: Not triggered; S4 was strongly positive and `divergence_flagged` was False.
-- `2026-08-21 REFLECT (B)`: Narrative layer capped the band at mild, but the pipeline-computed block stayed at notable. The official band needs to be reconciled before grading.
-SECTOR: Financial
-LESSON_END
+ERROR_CATEGORY: D
+TRIGGER_PATTERN: A sector PREDICT block contains explicit final direction/magnitude fields, but the scoreboard/grader records predicted None/None and marks a false direction miss even when the actual close confirms the predicted direction. Often accompanies an inconsistency between a top-of-file pipeline header and the final SECTOR_SCORES block.
+CURRENT_BEHAVIOR: The grader extracts prediction fields from a stale/ambiguous source rather than the final SECTOR_SCORES block. On 2026-08-25 Financial, the final block said up/mild, actual XLF closed +0.15% (
