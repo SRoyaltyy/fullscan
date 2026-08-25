@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| RYAN | +17 | +16 | +1 | +2.8 | 70% | -0.2 | Financial | flat | LEAD,peers↑,ind↓ |
-| TGT | +17 | +13 | +4 | +9.2 | 100% | +4.2 | Consumer Defensive | up | LEAD,peers↑,ind↑,sec↑ |
-| SFM | +17 | +13 | +4 | +7.9 | 89% | +4.2 | Consumer Defensive | up | LEAD,peers↑,ind↑,sec↑ |
-| EL | +17 | +13 | +4 | +20.7 | 100% | +2.7 | Consumer Defensive | up | LEAD,peers↑,ind↑,sec↑ |
-| CMBT | +17 | +15 | +2 | +3.4 | 80% | +0.1 | Energy | down | LEAD,peers↑,ind↑,sec↓ |
-| CNK | +17 | +15 | +2 | +2.8 | 78% | +0.8 | Communication Serv | down | LEAD,peers↑,ind↑,sec↓ |
-| TRV | +17 | +14 | +3 | +0.7 | 56% | +1.1 | Financial | flat | LEAD,peers↑,ind↑ |
-| GOOD | +17 | +15 | +2 | +1.8 | 90% | +2.8 | Real Estate | flat | LEAD,peers↑,ind↑,sec↓ |
-| PLX | +17 | +14 | +3 | +4.0 | 100% | +1.0 | Healthcare | flat | LEAD,peers↑,ind↑ |
-| WTW | +17 | +14 | +3 | +1.9 | 56% | +6.1 | Financial | flat | LEAD,peers↑,ind↑ |
-| ALC | +16 | +15 | +1 | -0.6 | 40% | +1.2 | Healthcare | flat | LAG,peers↑,ind↑ |
-| HUM | +16 | +15 | +1 | -0.0 | 43% | +0.7 | Healthcare | flat | LAG,peers↑,ind↑ |
-| SGHC | +16 | +14 | +2 | +8.7 | 100% | +1.8 | Consumer Cyclical | down | LEAD,peers↑,ind↑,sec↓ |
-| EXPE | +16 | +14 | +2 | +4.3 | 90% | +0.0 | Consumer Cyclical | down | LEAD,peers↑,ind↑,sec↓ |
-| RHP | +16 | +14 | +2 | +2.9 | 90% | +2.9 | Real Estate | flat | LEAD,peers↑,ind↑,sec↓ |
-| EPAM | +16 | +14 | +2 | +6.3 | 88% | +0.6 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
-| BIIB | +16 | +13 | +3 | +0.7 | 70% | +2.0 | Healthcare | flat | LEAD,peers↑,ind↑ |
-| AMH | +16 | +14 | +2 | +1.3 | 88% | +2.6 | Real Estate | flat | LEAD,peers↑,ind↑,sec↓ |
-| TECK | +16 | +12 | +4 | +0.9 | 56% | +14.4 | Basic Materials | up | LEAD,peers↑,ind↑,sec↑ |
-| FCX | +16 | +12 | +4 | +5.2 | 100% | +14.4 | Basic Materials | up | LEAD,peers↑,ind↑,sec↑ |
-| HLNE | +16 | +13 | +3 | +4.1 | 100% | +0.8 | Financial | flat | LEAD,peers↑,ind↑ |
-| WPM | +16 | +12 | +4 | +4.0 | 89% | +14.1 | Basic Materials | up | LEAD,peers↑,ind↑,sec↑ |
-| RMD | +16 | +13 | +3 | +3.2 | 90% | +1.2 | Healthcare | flat | LEAD,peers↑,ind↑ |
-| TPG | +16 | +13 | +3 | +0.3 | 60% | +0.8 | Financial | flat | LEAD,peers↑,ind↑ |
-| RLI | +16 | +13 | +3 | +1.2 | 70% | +1.1 | Financial | flat | LEAD,peers↑,ind↑ |
+| GOOD | +20 | +18 | +2 | +1.8 | 90% | +2.8 | Real Estate | down | LEAD,peers↑,ind↑,sec↓ |
+| AMZN | +19 | +15 | +4 | +0.0 | 50% | +1.1 | Consumer Cyclical | up | LEAD,peers↑,ind↑,sec↑ |
+| BNL | +19 | +19 | +0 | -1.2 | 10% | +2.8 | Real Estate | down | LAG,peers↑,ind↑,sec↓ |
+| ROST | +19 | +15 | +4 | +1.6 | 56% | +1.9 | Consumer Cyclical | up | LEAD,peers↑,ind↑,sec↑ |
+| RSG | +19 | +16 | +3 | +2.1 | 86% | +0.0 | Industrials | flat | LEAD,peers↑,sec↑ |
+| WEN | +19 | +15 | +4 | +0.9 | 50% | +3.3 | Consumer Cyclical | up | LEAD,peers↑,ind↑,sec↑ |
+| TRV | +19 | +15 | +4 | +0.7 | 56% | +1.1 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| SGHC | +19 | +15 | +4 | +8.7 | 100% | +1.8 | Consumer Cyclical | up | LEAD,peers↑,ind↑,sec↑ |
+| RLI | +19 | +15 | +4 | +1.2 | 70% | +1.1 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| FRSH | +18 | +14 | +4 | +2.3 | 90% | +1.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
+| AMH | +18 | +16 | +2 | +1.3 | 88% | +2.6 | Real Estate | down | LEAD,peers↑,ind↑,sec↓ |
+| RHI | +18 | +16 | +2 | -2.1 | 12% | +3.2 | Industrials | flat | LAG,peers↑,ind↑,sec↑ |
+| EXPE | +18 | +14 | +4 | +4.3 | 90% | +0.0 | Consumer Cyclical | up | LEAD,peers↑,ind↑,sec↑ |
+| RYAN | +18 | +16 | +2 | +2.8 | 70% | -0.2 | Financial | up | LEAD,peers↑,ind↓,sec↑ |
+| AUPH | +18 | +15 | +3 | +6.9 | 100% | +1.0 | Healthcare | — | LEAD,peers↑,ind↑ |
+| EPAM | +18 | +14 | +4 | +6.3 | 88% | +0.6 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
+| TSLX | +18 | +16 | +2 | -0.1 | 40% | +0.8 | Financial | up | LAG,peers↑,ind↑,sec↑ |
+| TRI | +18 | +16 | +2 | +5.3 | 100% | -0.1 | Industrials | flat | LEAD,peers↑,ind↓,sec↑ |
+| VYX | +18 | +14 | +4 | +2.0 | 70% | +0.6 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
+| ETSY | +18 | +14 | +4 | +7.4 | 100% | +1.1 | Consumer Cyclical | up | LEAD,peers↑,ind↑,sec↑ |
+| HLNE | +18 | +14 | +4 | +4.1 | 100% | +0.8 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| FUTU | +18 | +14 | +4 | +9.1 | 90% | +3.3 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| MAN | +18 | +14 | +4 | +1.7 | 75% | +3.2 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
+| CNK | +18 | +14 | +4 | +2.8 | 78% | +0.8 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
+| SHW | +17 | +15 | +2 | +0.7 | 70% | -1.4 | Basic Materials | up | LEAD,peers↑,ind↓,sec↑ |
