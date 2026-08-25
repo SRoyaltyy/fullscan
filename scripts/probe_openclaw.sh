@@ -22,15 +22,23 @@ TOKEN="${OPENCLAW_TOKEN:-}"
 
 as_gha() {
   if [ "$(id -u)" -eq 0 ] && id "$GHA_USER" >/dev/null 2>&1; then
-    sudo -u "$GHA_USER" -H env HOME="$HOME" USER="$GHA_USER" "$@"
+    sudo -u "$GHA_USER" -H env HOME="$HOME" USER="$GHA_USER" \
+      OPENCLAW_GATEWAY_URL="$GW" PATH="$PATH" "$@"
   else
     "$@"
   fi
 }
 
-# Gateway RPCs can hang at 30s. Never let one stuck CLI eat the job.
+# Gateway RPCs can hang at 30s. GNU timeout cannot run a shell function
+# (`timeout 45 as_gha ...` → 'as_gha: No such file'). Wrap the real binary.
 oc() {
-  timeout 45 as_gha openclaw "$@" 2>&1
+  if [ "$(id -u)" -eq 0 ] && id "$GHA_USER" >/dev/null 2>&1; then
+    timeout 45 sudo -u "$GHA_USER" -H \
+      env HOME="$HOME" USER="$GHA_USER" OPENCLAW_GATEWAY_URL="$GW" PATH="$PATH" \
+      openclaw "$@" 2>&1
+  else
+    timeout 45 openclaw "$@" 2>&1
+  fi
   echo "[exit $?]"
 }
 
@@ -64,9 +72,10 @@ for path in /health /healthz /ready /readyz /startup; do
   curl -sS -m 8 -w "\nHTTP %{http_code} time=%{time_total}s\n" "${GW}${path}" 2>&1 | head -20 | pre
 done
 
-echo "### GET ${GW}/v1/models"
+echo "### GET ${GW}/v1/models (Accept: application/json)"
 curl -sS -m 15 -w "\nHTTP %{http_code} time=%{time_total}s\n" \
   -H "Authorization: Bearer ${TOKEN}" \
+  -H "Accept: application/json" \
   "${GW}/v1/models" 2>&1 | head -40 | pre
 
 # ---------------------------------------------------------------------------
@@ -215,8 +224,8 @@ echo "Short completion against /v1/chat/completions. 90s cap. Proves the"
 echo "running process will take a Grok turn. Does NOT soak 9 minutes."
 echo
 python3 - <<'PY' 2>&1 | pre
-import json, os, urllib.request, urllib.error
-url = os.environ.get("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789").rstrip("/") + "/v1/chat/completions"
+import json, os, urllib.request, urllib.error, time
+base = os.environ.get("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789").rstrip("/")
 token = os.environ.get("OPENCLAW_TOKEN") or ""
 body = json.dumps({
     "model": os.environ.get("OPENCLAW_AGENT", "openclaw/default"),
@@ -224,38 +233,56 @@ body = json.dumps({
     "max_tokens": 16,
     "temperature": 0,
 }).encode()
-req = urllib.request.Request(url, data=body, method="POST")
-req.add_header("Content-Type", "application/json")
-if token:
-    req.add_header("Authorization", f"Bearer {token}")
-req.add_header("x-openclaw-model", os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.6"))
-req.add_header("x-openclaw-session-key", "fullscan-openclaw-probe")
-import time
-t0 = time.time()
-try:
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        raw = resp.read()[:4000]
+paths = [
+    "/v1/chat/completions",
+    "/openai/v1/chat/completions",
+    "/api/v1/chat/completions",
+    "/chat/completions",
+]
+for path in paths:
+    url = base + path
+    req = urllib.request.Request(url, data=body, method="POST")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("Accept", "application/json")
+    if token:
+        req.add_header("Authorization", f"Bearer {token}")
+    req.add_header("x-openclaw-model", os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.6"))
+    req.add_header("x-openclaw-session-key", "fullscan-openclaw-probe")
+    t0 = time.time()
+    try:
+        with urllib.request.urlopen(req, timeout=45) as resp:
+            raw = resp.read()[:2500]
+            dt = time.time() - t0
+            print(f"{path} HTTP {resp.status} in {dt:.1f}s")
+            try:
+                data = json.loads(raw)
+            except Exception:
+                print((raw[:400]).decode("utf-8", "replace"))
+                continue
+            choice = ((data.get("choices") or [{}])[0].get("message") or {}).get("content")
+            print("content:", (choice or "")[:400])
+            print("model:", data.get("model"))
+            low = (choice or "").lower()
+            if "pong" in low:
+                print("PING_RESULT=PONG_OK")
+            elif any(n in (choice or "") for n in ("timed out", "idle timeout", "LLM request timed out")):
+                print("PING_RESULT=TIMEOUT_STUB")
+            else:
+                print("PING_RESULT=ANSWERED")
+            break
+    except urllib.error.HTTPError as e:
         dt = time.time() - t0
-        print(f"HTTP {resp.status} in {dt:.1f}s")
+        snippet = ""
         try:
-            data = json.loads(raw)
+            snippet = e.read()[:200].decode("utf-8", "replace")
         except Exception:
-            print(raw[:1500].decode("utf-8", "replace"))
-            raise SystemExit
-        choice = ((data.get("choices") or [{}])[0].get("message") or {}).get("content")
-        print("content:", (choice or "")[:500])
-        print("usage:", data.get("usage"))
-        print("model:", data.get("model"))
-        low = (choice or "").lower()
-        if "pong" in low:
-            print("PING_RESULT=PONG_OK")
-        elif any(n in (choice or "") for n in ("timed out", "idle timeout", "LLM request timed out")):
-            print("PING_RESULT=TIMEOUT_STUB")
-        else:
-            print("PING_RESULT=ANSWERED_NOT_PONG")
-except Exception as e:
-    dt = time.time() - t0
-    print(f"PING_RESULT=ERROR after {dt:.1f}s: {type(e).__name__}: {e}")
+            pass
+        print(f"{path} HTTP {e.code} in {dt:.1f}s {snippet!r}")
+    except Exception as e:
+        dt = time.time() - t0
+        print(f"{path} ERROR after {dt:.1f}s: {type(e).__name__}: {e}")
+else:
+    print("PING_RESULT=NO_CHAT_ENDPOINT")
 PY
 
 # ---------------------------------------------------------------------------
