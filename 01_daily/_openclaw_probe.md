@@ -1,6 +1,6 @@
 # OpenClaw live probe
 
-- generated: 2026-08-25T17:27:32Z UTC / 2026-08-25 13:27 EDT / 2026-08-26 01:27 CST
+- generated: 2026-08-25T17:30:28Z UTC / 2026-08-25 13:30 EDT / 2026-08-26 01:30 CST
 - uid=0 user=root home=/home/gha
 - gateway_url=http://127.0.0.1:18789
 - token_set=yes
@@ -15,22 +15,22 @@ LISTEN 0      511            [::1]:18789         [::]:*    users:(("openclaw-gat
 ### GET http://127.0.0.1:18789/health
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.002486s
+HTTP 200 time=0.002622s
 ```
 ### GET http://127.0.0.1:18789/healthz
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.002588s
+HTTP 200 time=0.001347s
 ```
 ### GET http://127.0.0.1:18789/ready
 ```
-{"ready":true,"failing":[],"uptimeMs":819566,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":34764,"delayP99Ms":20.4,"delayMaxMs":25.3,"utilization":0.004,"cpuCoreRatio":0.006}}
-HTTP 200 time=0.004173s
+{"ready":true,"failing":[],"uptimeMs":994699,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":29897,"delayP99Ms":20.3,"delayMaxMs":21.1,"utilization":0.002,"cpuCoreRatio":0.004}}
+HTTP 200 time=0.002560s
 ```
 ### GET http://127.0.0.1:18789/readyz
 ```
-{"ready":true,"failing":[],"uptimeMs":819582,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":34764,"delayP99Ms":20.4,"delayMaxMs":25.3,"utilization":0.004,"cpuCoreRatio":0.006}}
-HTTP 200 time=0.002088s
+{"ready":true,"failing":[],"uptimeMs":994715,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":29897,"delayP99Ms":20.3,"delayMaxMs":21.1,"utilization":0.002,"cpuCoreRatio":0.004}}
+HTTP 200 time=0.001961s
 ```
 ### GET http://127.0.0.1:18789/startup
 ```
@@ -148,49 +148,63 @@ models.providers.anthropic.timeoutSeconds = 10800
 
 ### openclaw health --json
 ```
-[openclaw] Could not start the CLI.
-[openclaw] Reason: gateway url override requires explicit credentials
-Fix: pass --token or --password *** --url (or gatewayToken in tools).
-Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
-Config: /home/gha/.openclaw/openclaw.json
-[openclaw] Debug: set OPENCLAW_DEBUG=1 to include the stack trace.
-[openclaw] Try: openclaw doctor
-[openclaw] Help: openclaw --help
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
+{
+  "ok": false,
+  "error": {
+    "type": "gateway_transport_error",
+    "kind": "closed",
+    "message": "gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)",
+    "code": 1008,
+    "reason": "unauthorized: gateway token mismatch (provide gateway auth token)"
+  },
+  "gateway": {
+    "url": "ws://127.0.0.1:18789",
+    "urlSource": "local loopback",
+    "bindDetail": "Bind: loopback"
+  }
+}
 [exit 1]
 ```
 ### openclaw health --verbose
 ```
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
 [openclaw] Could not start the CLI.
-[openclaw] Reason: gateway url override requires explicit credentials
-Fix: pass --token or --password *** --url (or gatewayToken in tools).
-Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
+[openclaw] Reason: gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
 Config: /home/gha/.openclaw/openclaw.json
+Bind: loopback
 [openclaw] Stack:
-[openclaw] GatewayExplicitAuthRequiredError: gateway url override requires explicit credentials
-[openclaw] Fix: pass --token or --password *** --url (or gatewayToken in tools).
-[openclaw] Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
+[openclaw] GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)
+[openclaw] Gateway target: ws://127.0.0.1:18789
+[openclaw] Source: local loopback
 [openclaw] Config: /home/gha/.openclaw/openclaw.json
-[openclaw]     at ensureExplicitGatewayAuth (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:359:8)
-[openclaw]     at callGatewayWithScopes (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:643:2)
-[openclaw]     at async callGatewayLeastPrivilege (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:744:9)
-[openclaw]     at async callGateway (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:755:9)
-[openclaw]     at async file:///usr/lib/node_modules/openclaw/dist/health-p6SutBnt.js:512:18
-[openclaw]     at async withProgress (file:///usr/lib/node_modules/openclaw/dist/progress-DXZjrYcT.js:132:10)
-[openclaw]     at async healthCommand (file:///usr/lib/node_modules/openclaw/dist/health-p6SutBnt.js:508:13)
-[openclaw]     at async Object.runParsedArgs (file:///usr/lib/node_modules/openclaw/dist/route-b75kd5c1.js:313:4)
-[openclaw]     at async Object.run (file:///usr/lib/node_modules/openclaw/dist/route-b75kd5c1.js:434:4)
-[openclaw]     at async Object.measure (file:///usr/lib/node_modules/openclaw/dist/startup-trace-Bc2ebu8Y.js:425:12)
+[openclaw] Bind: loopback
+[openclaw]     at createGatewayCloseTransportError (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:459:9)
+[openclaw]     at Object.onClose (file:///usr/lib/node_modules/openclaw/dist/call-Bj6Erfmh.js:596:10)
+[openclaw]     at GatewayClient.notifyClose (file:///usr/lib/node_modules/openclaw/dist/src-DZzKBMa7.js:728:23)
+[openclaw]     at WebSocket.<anonymous> (file:///usr/lib/node_modules/openclaw/dist/src-DZzKBMa7.js:414:10)
+[openclaw]     at WebSocket.emit (node:events:514:20)
+[openclaw]     at WebSocket.emitClose (/usr/lib/node_modules/openclaw/node_modules/ws/lib/websocket.js:279:10)
+[openclaw]     at Socket.socketOnClose (/usr/lib/node_modules/openclaw/node_modules/ws/lib/websocket.js:1360:15)
+[openclaw]     at Socket.emit (node:events:514:20)
+[openclaw]     at TCP.<anonymous> (node:net:362:12)
 [openclaw] Try: openclaw doctor
 [openclaw] Help: openclaw --help
 [exit 1]
 ```
 ### openclaw status --deep
 ```
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (provide gateway auth token)
 [openclaw] Could not start the CLI.
-[openclaw] Reason: gateway url override requires explicit credentials
-Fix: pass --token or --password *** --url (or gatewayToken in tools).
-Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
+[openclaw] Reason: gateway closed (1008): unauthorized: gateway token mismatch (provide gateway auth token)
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
 Config: /home/gha/.openclaw/openclaw.json
+Bind: loopback
 [openclaw] Debug: set OPENCLAW_DEBUG=1 to include the stack trace.
 [openclaw] Try: openclaw doctor
 [openclaw] Help: openclaw --help
@@ -209,13 +223,21 @@ Probe target: ws://127.0.0.1:18789
 Dashboard: http://127.0.0.1:18789/
 Probe note: Loopback-only gateway; only local clients can connect.
 
-CLI version: 2026.7.1-2 (/usr/bin/openclaw)
-Gateway version: 2026.7.1-2
-
 Runtime: unknown (systemctl --user unavailable: Failed to connect to bus: $DBUS_SESSION_BUS_ADDRESS and $XDG_RUNTIME_DIR not defined (consider using --machine=<user>@.host --user to connect to bus of other user))
-Connectivity probe: ok
-Capability: connected-no-operator-scope
+Connectivity probe: failed
+Probe target: ws://127.0.0.1:18789
+  unauthorized: gateway token mismatch (provide gateway auth token)
+Capability: unknown
 
+systemd user services unavailable.
+systemd user services are unavailable; install/enable systemd or run the gateway under your supervisor.
+On a headless server (SSH/no desktop session): run `sudo loginctl enable-linger $(whoami)` to persist your systemd user session across logins.
+Also ensure XDG_RUNTIME_DIR is set: `export XDG_RUNTIME_DIR=/run/user/$(id -u)`, then retry.
+If you're in a container, run the gateway in the foreground instead of `openclaw gateway`.
+
+Port 18789 is already in use.
+- pid 86268 gha: openclaw-gateway (127.0.0.1:18789)
+- pid 86268 gha: openclaw-gateway ([::1]:18789)
 Listening: 127.0.0.1:18789, [::1]:18789
 Troubles: run openclaw status
 Troubleshooting: https://docs.openclaw.ai/troubleshooting
@@ -237,7 +259,7 @@ Tip: if the gateway is remote, mDNS won’t cross networks; use Wide-Area Bonjou
 
 Targets
 Local loopback ws://127.0.0.1:18789
-  Connect: ok (49ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
+  Connect: ok (66ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
 
 [exit 0]
 ```
@@ -275,26 +297,32 @@ This is OpenClaw's own job timer, distinct from systemd fullscan-preopen.timer.
 ```
 ### openclaw cron list --all (alias)
 ```
-GatewayExplicitAuthRequiredError: gateway url override requires explicit credentials
-Fix: pass --token or --password *** --url (or gatewayToken in tools).
-Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
+GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
 Config: /home/gha/.openclaw/openclaw.json
+Bind: loopback
 [exit 1]
 ```
 ### openclaw cron status
 ```
-GatewayExplicitAuthRequiredError: gateway url override requires explicit credentials
-Fix: pass --token or --password *** --url (or gatewayToken in tools).
-Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
+GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
 Config: /home/gha/.openclaw/openclaw.json
+Bind: loopback
 [exit 1]
 ```
 ### openclaw cron status --json
 ```
-GatewayExplicitAuthRequiredError: gateway url override requires explicit credentials
-Fix: pass --token or --password *** --url (or gatewayToken in tools).
-Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD alongside OPENCLAW_GATEWAY_URL; config credentials are intentionally not reused.
+gateway connect failed: GatewayClientRequestError: unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
+GatewayTransportError: gateway closed (1008): unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token)
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
 Config: /home/gha/.openclaw/openclaw.json
+Bind: loopback
 [exit 1]
 ```
 ### cron store on disk
@@ -348,31 +376,31 @@ active
 ● fullscan-openclaw-gateway.service - /usr/bin/openclaw gateway
      Loaded: loaded (/run/systemd/transient/fullscan-openclaw-gateway.service; transient)
   Transient: yes
-     Active: active (running) since Wed 2026-08-26 01:13:27 CST; 15min ago
+     Active: active (running) since Wed 2026-08-26 01:13:27 CST; 18min ago
    Main PID: 86268 (openclaw-gatewa)
       Tasks: 12 (limit: 1789)
-     Memory: 272.2M
-        CPU: 46.080s
+     Memory: 251.6M
+        CPU: 47.591s
      CGroup: /system.slice/fullscan-openclaw-gateway.service
              └─86268 openclaw-gateway "" "" "" "" "" "" "" "" "" "" "" "" "" ""
 
-Aug 26 01:17:06 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:17:06.356+08:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
-Aug 26 01:17:19 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:17:19.724+08:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
-Aug 26 01:21:02 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:21:02.003+08:00 [diagnostic] lane task error: lane=main durationMs=386 error="ProviderAuthError: No API key found for provider "openai". Auth store: /home/gha/.openclaw/agents/main/agent/openclaw-agent.sqlite (agentDir: /home/gha/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy only portable static auth profiles from the main agentDir."
-Aug 26 01:21:02 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:21:02.009+08:00 [diagnostic] lane task error: lane=session:agent:main:main durationMs=396 error="ProviderAuthError: No API key found for provider "openai". Auth store: /home/gha/.openclaw/agents/main/agent/openclaw-agent.sqlite (agentDir: /home/gha/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy only portable static auth profiles from the main agentDir."
-Aug 26 01:21:02 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:21:02.033+08:00 [model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.5 candidate=openai/gpt-5.5 reason=auth next=none detail=No API key found for provider "openai". Auth store: /home/gha/.openclaw/agents/main/agent/openclaw-agent.sqlite (agentDir: /home/gha/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy only portable static auth profiles from the main agentDir.
-Aug 26 01:28:21 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:28:21.480+08:00 [ws] ⇄ res ✗ system-presence 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a20d3f18…1795 id=e4a41f67…3456
-Aug 26 01:28:39 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:28:39.595+08:00 [ws] ⇄ res ✗ status 243ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=fac10950…2b65 id=815e24ef…5522
-Aug 26 01:28:39 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:28:39.610+08:00 [ws] ⇄ res ✗ system-presence 258ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=fac10950…2b65 id=a7b6a71c…ae16
-Aug 26 01:28:39 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:28:39.632+08:00 [ws] ⇄ res ✗ config.get 272ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=fac10950…2b65 id=cad6c79f…e0f4
-Aug 26 01:28:39 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:28:39.736+08:00 [ws] ⇄ res ✓ health 340ms cached=true conn=fac10950…2b65 id=f9458f9c…bdc0
+Aug 26 01:31:22 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:22.438+08:00 [ws] closed before connect conn=b3d9713c-26c5-4158-970a-d31c0f8862b3 peer=127.0.0.1:38910->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (provide gateway auth token) phase=auth_credentials_received
+Aug 26 01:31:34 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:34.444+08:00 [ws] ⇄ res ✗ status 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=5e6946d5…ad87 id=a0996441…f96f
+Aug 26 01:31:34 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:34.456+08:00 [ws] ⇄ res ✗ system-presence 14ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=5e6946d5…ad87 id=56fddd4a…184a
+Aug 26 01:31:34 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:34.463+08:00 [ws] ⇄ res ✗ config.get 25ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=5e6946d5…ad87 id=ac0c203c…80f9
+Aug 26 01:31:54 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:54.605+08:00 [ws] unauthorized conn=2502a054-a0e9-4cd5-b09f-9a6183db062a peer=127.0.0.1:41592->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=a2744552-ffbf-4bb3-8e5c-a5271b3271cc host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
+Aug 26 01:31:54 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:54.696+08:00 [ws] closed before connect conn=2502a054-a0e9-4cd5-b09f-9a6183db062a peer=127.0.0.1:41592->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
+Aug 26 01:31:59 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:59.376+08:00 [ws] unauthorized conn=c17b8151-c2c1-4264-893d-64fd182149af peer=127.0.0.1:58880->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=a3cf232b-e2aa-4233-8bb6-281ce0a768fd host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
+Aug 26 01:31:59 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:31:59.463+08:00 [ws] closed before connect conn=c17b8151-c2c1-4264-893d-64fd182149af peer=127.0.0.1:58880->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
+Aug 26 01:32:04 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:32:04.100+08:00 [ws] unauthorized conn=b3eff669-236d-40fe-9388-d5fc5b86d537 peer=127.0.0.1:58894->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=a559f80e-072a-4f4e-8e2a-249617df3860 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
+Aug 26 01:32:04 iZt4nagf215582ts0wf5jcZ openclaw[86268]: 2026-08-26T01:32:04.186+08:00 [ws] closed before connect conn=b3eff669-236d-40fe-9388-d5fc5b86d537 peer=127.0.0.1:58894->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
 ```
 ### expected next 05:55 America/New_York vs systemd Next
 ```
-now ET: 2026-08-25T13:29:09.560817-04:00
+now ET: 2026-08-25T13:32:04.320172-04:00
 next weekday 05:55 ET: 2026-08-26T05:55:00-04:00
 next as CST: 2026-08-26T17:55:00+08:00
-hours until: 16.43
+hours until: 16.38
 ```
 
 ## 6. Live chat ping (gateway actually answers)
@@ -394,7 +422,7 @@ systemd NextElapseUSecRealtime: Wed 2026-08-26 17:55:00 CST
 systemd TimersCalendar: { OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York ; next_elapse=Wed 2026-08-26 17:55:00 CST }
 systemd Persistent: yes
 expect next 05:55 ET: 2026-08-26T05:55:00-04:00
-now ET: 2026-08-25T13:29:09.774139-04:00
+now ET: 2026-08-25T13:32:04.571285-04:00
 fullscan-openclaw-gateway: active
 
 OK:
