@@ -4,7 +4,7 @@ Does in one ECS job (skip-if-good, fail-closed QC):
 
   finviz digest → events (+ catcher, NEVER carry) → news parse → news judge
   → news actions → general predict → 11 sector predicts → sector board
-  → output_qc (trash / timeout stubs / carry-forwards) → workflow check
+  → output_qc (regex) → Grok reads the files as text → workflow check
 
 NOT included (those run later on their own crons, still required):
   outcome / reflect / horizon grade, learn_cycle, deepthink, weekly
@@ -26,7 +26,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, output_qc, preopen
+from . import config, grok_review, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -134,21 +134,28 @@ def run(date: str | None = None, force: bool = False) -> None:
     print("  Predictive only. Must finish before 09:30 ET.")
     print("  Skip-if-good: quality files for THIS day are not overwritten.")
     print("  Carry-forwards / timeout stubs are trash and fail the job.")
+    print("  Grok reads the actual MD/JSON once. Regex is not enough.")
     print("=" * 72)
 
-    preopen.refuse_if_late("preopen_all", force=force)
-
-    # Already quality-done today? (High quality = full output_qc pass, not
-    # "a file exists".) Then do NOT waste the window and do NOT touch the
-    # good copies — a re-dispatch after success must be a no-op.
+    skip_writes = False
     if not force:
         pre = output_qc.preopen_report(date)
-        if pre.get("all_ok"):
+        grok_ok = grok_review.prior_ok(date)
+        if pre.get("all_ok") and grok_ok:
             print(f"[preopen-all] {date}: every required predictive "
                   f"artifact is already quality-ok "
                   f"(sectors {pre.get('sector_n_ok')}/"
-                  f"{pre.get('sector_n_total')}) — nothing to do")
+                  f"{pre.get('sector_n_total')}; Grok text review passed) "
+                  f"— nothing to do")
             return
+        if pre.get("all_ok") and not grok_ok:
+            print(f"[preopen-all] {date}: mechanical QC already ok — "
+                  f"Grok will read the files as text (no rewrite)")
+            skip_writes = True
+        else:
+            preopen.refuse_if_late("preopen_all", force=force)
+    else:
+        preopen.refuse_if_late("preopen_all", force=force)
 
     attempts: list[dict] = []
 
@@ -164,33 +171,43 @@ def run(date: str | None = None, force: bool = False) -> None:
     fa = _force_args(force)
     py = sys.executable
 
-    step("news_parse", "News parse",
-         [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-          "--date", date, *fa])
-    step("finviz_digest", "Finviz daily digest",
-         [py, "-m", "src.finviz_digest", "--date", date, *fa])
-    step("events", "Event scanner (primary)",
-         [py, "-m", "src.run_events", "--date", date, *fa])
-    step("events_catcher", "Event catcher (gap hunt, no carry)",
-         [py, "-m", "src.run_events_catcher", "--date", date, *fa])
-    # Deliberately NO events_fallback — carry is trash for pre-open.
-    step("news_judge", "News judge",
-         [py, "-m", "src.run_news_judge", "--date", date, *fa])
-    step("news_actions", "News actions",
-         [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
-          "--date", date, *fa])
-    step("general_predict", "General market predict",
-         [py, "-m", "src.run_predict", "--date", date, *fa])
-    step("sector_predict", "Per-sector predict (all 11)",
-         [py, "-m", "src.run_sector_predict", "--date", date, *fa])
-    step("sector_board", "Sector board",
-         [py, "-m", "src.sector_board", "--date", date])
+    if not skip_writes:
+        step("news_parse", "News parse",
+             [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
+              "--date", date, *fa])
+        step("finviz_digest", "Finviz daily digest",
+             [py, "-m", "src.finviz_digest", "--date", date, *fa])
+        step("events", "Event scanner (primary)",
+             [py, "-m", "src.run_events", "--date", date, *fa])
+        step("events_catcher", "Event catcher (gap hunt, no carry)",
+             [py, "-m", "src.run_events_catcher", "--date", date, *fa])
+        # Deliberately NO events_fallback — carry is trash for pre-open.
+        step("news_judge", "News judge",
+             [py, "-m", "src.run_news_judge", "--date", date, *fa])
+        step("news_actions", "News actions",
+             [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
+              "--date", date, *fa])
+        step("general_predict", "General market predict",
+             [py, "-m", "src.run_predict", "--date", date, *fa])
+        step("sector_predict", "Per-sector predict (all 11)",
+             [py, "-m", "src.run_sector_predict", "--date", date, *fa])
+        step("sector_board", "Sector board",
+             [py, "-m", "src.sector_board", "--date", date])
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)
     print("")
     print(output_qc.render(report))
     print(f"[preopen-all] wrote {qc_path}")
+
+    grok = grok_review.review_preopen(date, mechanical_report=report)
+    print("")
+    print("-" * 72)
+    print("  GROK TEXT REVIEW")
+    print("-" * 72)
+    print(f"  ok={grok.get('ok')}  {grok.get('notes') or ''}")
+    for f in grok.get("fails") or []:
+        print(f"  FAIL  {f.get('path')}: {f.get('reason')}")
 
     gh_runs = _github_runs_today(date)
     missing_required = []
@@ -260,8 +277,11 @@ def run(date: str | None = None, force: bool = False) -> None:
     status = {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
-        "all_ok": bool(report.get("all_ok")) and not missing_required,
+        "all_ok": bool(report.get("all_ok")) and not missing_required
+                  and bool(grok.get("ok")),
         "qc_all_ok": bool(report.get("all_ok")),
+        "grok_ok": bool(grok.get("ok")),
+        "grok_fails": grok.get("fails") or [],
         "missing_required": missing_required,
         "attempts": [
             {"key": a["key"], "title": a["title"], "returncode": a["returncode"]}
@@ -286,7 +306,7 @@ def run(date: str | None = None, force: bool = False) -> None:
         f"# Pre-open ALL status — {date}",
         "",
         f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
-        f"missing={missing_required or 'none'}",
+        f"grok_ok={status['grok_ok']}  missing={missing_required or 'none'}",
         "",
         "Predictive modules (must land before 09:30 ET). Lessons / outcome /",
         "deepthink / weekly / dashboard run later on their own crons.",
@@ -298,12 +318,14 @@ def run(date: str | None = None, force: bool = False) -> None:
     print(f"[preopen-all] wrote {status_path}")
     print(f"[preopen-all] wrote {md_path}")
 
-    if missing_required or not report.get("all_ok"):
+    if missing_required or not report.get("all_ok") or not grok.get("ok"):
         raise SystemExit(
             f"[preopen-all] FAIL {date}: trash or missing required artifacts "
-            f"{missing_required or '(see QC)'}. Not committing as success."
+            f"{missing_required or '(see QC/Grok review)'}. "
+            f"qc_all_ok={bool(report.get('all_ok'))} grok_ok={bool(grok.get('ok'))}. "
+            f"Not committing as success."
         )
-    print(f"[preopen-all] PASS {date} — all required predictive artifacts are quality")
+    print(f"[preopen-all] PASS {date} — regex QC and Grok text review both ok")
 
 
 def main() -> None:

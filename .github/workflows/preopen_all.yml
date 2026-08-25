@@ -5,7 +5,8 @@ name: Pre-Open ALL (predictive one-shot)
 #
 #   finviz digest → events + catcher (no carry) → news parse → news judge
 #   → news actions → general predict → 11 sector predicts → sector board
-#   → output_qc (trash/timeout/carry fail-closed) → workflow check
+#   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
+#   → workflow check
 #
 # NOT in this job (they MUST still run later on their own crons +
 # orchestrator guard): outcome/reflect, learn_cycle, deepthink, weekly,

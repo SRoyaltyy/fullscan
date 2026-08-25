@@ -154,6 +154,19 @@ jobs:
           if d.get("date") != sys.argv[1]:
               sys.exit(1)
           sys.exit(0 if d.get("all_ok") else 1)
+          ' "$TODAY" || return 1
+                content=$(repo_decode "01_daily/${TODAY}_grok_review.json") || return 1
+                echo "$content" | python3 -c '
+          import json,sys
+          try:
+              d=json.load(sys.stdin)
+          except Exception:
+              sys.exit(1)
+          if d.get("date") != sys.argv[1]:
+              sys.exit(1)
+          if d.get("fails"):
+              sys.exit(1)
+          sys.exit(0 if d.get("ok") else 1)
           ' "$TODAY"
                 ;;
               finviz_digest.yml)
