@@ -1,0 +1,396 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-25T08:26:04.452254-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 5.27,
+      "delta_1d": 0.04,
+      "delta_1w": 0.02,
+      "delta_1m": 0.1
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 4.74,
+      "delta_1d": 0.05,
+      "delta_1w": 0.06,
+      "delta_1m": 0.03
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 2.4,
+      "delta_1d": 0.05,
+      "delta_1w": -0.01,
+      "delta_1m": -0.03
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-21",
+      "current": 2.7,
+      "delta_1d": -0.05,
+      "delta_1w": 0.03,
+      "delta_1m": -0.07
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": -0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 0.38,
+      "delta_1d": 0.18,
+      "delta_1w": 0.125,
+      "delta_1m": -0.295
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-23",
+      "current": 248.12,
+      "delta_1d": 59.81,
+      "delta_1w": 42.58,
+      "delta_1m": -110.29
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-25",
+      "current": 15.78,
+      "delta_1d": -0.07,
+      "delta_1w": -0.06
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": 1.002,
+    "ratio_source": "vix/ma20",
+    "vix_ma20": 15.74,
+    "ratio_ma20": 1.002,
+    "ratio_stale": "VIX3M quote is 39 days older than VIX (2026-07-17 vs 2026-08-25)"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 82.26,
+      "pct_1d": -3.23
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 87.87,
+      "pct_1d": -4.67
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 4693.9,
+      "pct_1d": 1.14
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-25",
+      "source": "DX-Y.NYB",
+      "pct_1d": 0.02,
+      "pct_1m": -2.46
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 7704.5,
+      "pct_1d": 0.45
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-25",
+      "last": 29384.75,
+      "pct_1d": 0.96
+    }
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 65856.43,
+          "pct_1d": 0.5
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 25511.1,
+          "pct_1d": -0.02
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 3889.44,
+          "pct_1d": 0.19
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 6742.74,
+          "pct_1d": 0.68
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 9164.6,
+          "pct_1d": 0.68
+        }
+      },
+      "composite_avg": 0.41
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 10865.27,
+          "pct_1d": 0.1
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 26296.21,
+          "pct_1d": 0.73
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 8477.7,
+          "pct_1d": 0.29
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-25",
+          "last": 6474.29,
+          "pct_1d": 0.41
+        }
+      },
+      "composite_avg": 0.38
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.132,
+    "window": "2026-08-17..2026-08-24"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 55.9,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-24 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Sumitomo Mitsui Trust to enter Vietnam asset management market – report",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sumitomo-mitsui-trust-enter-vietnam-115629842.html",
+        "published_at": "2026-08-25T11:56:29Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia Vs. Meta Platforms: Why Wall Street Expects Their Q3 Performance to Lead The Magnificent Seven",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-vs-meta-platforms-why-113731387.html",
+        "published_at": "2026-08-25T11:37:31Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SEC subpoenas banks over Situational Awareness hedge fund collapse",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sec-subpoenas-banks-over-situational-120604867.html",
+        "published_at": "2026-08-25T12:06:04Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Morning Minute: Coinbase Puts Tokenized Stocks on Base",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/morning-minute-coinbase-puts-tokenized-115822092.html",
+        "published_at": "2026-08-25T11:58:22Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Evogene (EVGN) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/evogene-evgn-q2-2026-earnings-114507743.html",
+        "published_at": "2026-08-25T11:45:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Intel’s Skid Continues: One of The Biggest Global Banks Says It Will Provide 130% Returns From Here",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/intel-skid-continues-one-biggest-114004162.html",
+        "published_at": "2026-08-25T11:40:04Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Palestine weekly: After Kushner departs, Israel escalates Gaza attacks",
+        "url": "https://www.aljazeera.com/news/2026/8/25/palestine-weekly-after-kushner-departs-israel-escalates-gaza-attacks?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 11:52:40 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Gold prices today, Tuesday, August 25, 2026: Gold hits 3-month high this morning",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-tuesday-august-25-2026-gold-hits-3-month-high-this-morning-120736963.html",
+        "published_at": "2026-08-25T12:07:36Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "How Much Do You Really Need Invested to Replace a $120,000 Salary With Dividends?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/much-really-invested-replace-120-120251374.html",
+        "published_at": "2026-08-25T12:02:51Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Fulfillment Leaders Brace for Peak Season Surge",
+        "url": "https://finance.yahoo.com/small-business/articles/fulfillment-leaders-brace-peak-season-120000386.html",
+        "published_at": "2026-08-25T12:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Michael Burry sold Alibaba stock before $10 billion Hong Kong share sale",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-sold-alibaba-stock-115132973.html",
+        "published_at": "2026-08-25T11:51:32Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Hesai (HSAI) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/hesai-hsai-q2-2026-earnings-114507969.html",
+        "published_at": "2026-08-25T11:45:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Home Depot (HD) Q2 2027 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/home-depot-hd-q2-2027-114342716.html",
+        "published_at": "2026-08-25T11:43:42Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Jim Cramer says data center backlash favors big tech hyperscalers",
+        "url": "https://finance.yahoo.com/technology/articles/jim-cramer-says-data-center-114048524.html",
+        "published_at": "2026-08-25T11:40:48Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Why hire a warehouse worker for $30 per hour when a robot costs $10? JPMorgan expects booming humanoid demand.",
+        "url": "https://www.marketwatch.com/story/why-hire-a-warehouse-worker-for-30-per-hour-when-a-robot-costs-10-jpmorgan-expects-booming-humanoid-demand-9cc6ddf4?mod=mw_rss_topstories",
+        "published_at": "Tue, 25 Aug 2026 11:49:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Russia mobilisation fears grow amid reports of intimidating tactics",
+        "url": "https://www.aljazeera.com/news/2026/8/25/russia-mobilisation-fears-grow-amid-reports-of-intimidating-tactics?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 11:53:03 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Why Rohingya refugees are protesting in Cox’s Bazar, 9 years after genocide",
+        "url": "https://www.aljazeera.com/news/2026/8/25/why-rohingya-refugees-are-protesting-in-coxs-bazar-9-years-after-genocide?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 11:46:13 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "How the US sanctions on Iran impact China",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/25/how-the-us-sanctions-on-iran-impact-china?traffic_source=rss",
+        "published_at": "Tue, 25 Aug 2026 11:30:08 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Google expands Gemini AI platform for law firms, lawyers",
+        "url": "https://finance.yahoo.com/technology/ai/articles/google-expands-gemini-ai-platform-120333157.html",
+        "published_at": "2026-08-25T12:03:33Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Cybersecurity Stocks Are Priced For Big AI Growth. Earnings Could Bring Fireworks.",
+        "url": "https://www.investors.com/news/technology/cybersecurity-stocks-earnings-artificial-intelligence-high-expectations/?src=A00220&yptr=yahoo",
+        "published_at": "2026-08-25T12:00:57Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Earnings live updates: Dick's Sporting Goods stock tanks after retailer slashes outlook amid 'challenging conditions'",
+        "url": "https://finance.yahoo.com/markets/live/earnings-live-updates-q2-nvidia-115314802.html",
+        "published_at": "2026-08-25T11:53:14Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "August 27 Could Be a Very Good Day for Autodesk Shareholders",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/august-27-could-very-good-120039604.html",
+        "published_at": "2026-08-25T12:00:39Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Lego H1 2026 earnings: revenue hits record $6.5 billion",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/lego-h1-2026-earnings-revenue-115542722.html",
+        "published_at": "2026-08-25T11:55:42Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Constellation Wealth buys minority stake in Confluence Financial",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/constellation-wealth-buys-minority-stake-115240742.html",
+        "published_at": "2026-08-25T11:52:40Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "For Investors in Their 30s, Here's 1 Glorious Growth ETF to Buy Hand Over Fist and Hold Forever",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/investors-30s-heres-1-glorious-115000473.html",
+        "published_at": "2026-08-25T11:50:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Here Are Tuesday’s Top Wall Street Analyst Research Calls: Advanced Micro Devices, Dynatrace, Five Below, Fortune Brands, Klarna Group, Jersey Mike’s Subs, Moderna, Sherwin-Williams, and More",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/tuesday-top-wall-street-analyst-114544489.html",
+        "published_at": "2026-08-25T11:45:44Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "ReNew Energy (RNW) Q1 2027 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/energy/articles/renew-energy-rnw-q1-2027-114507601.html",
+        "published_at": "2026-08-25T11:45:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Pony AI (PONY) Q2 2026 Earnings Call Transcript",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/pony-ai-pony-q2-2026-114342546.html",
+        "published_at": "2026-08-25T11:43:42Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Commonwealth Bank unveils payout platform ahead of cheque exit",
+        "url": "https://finance.yahoo.com/technology/articles/commonwealth-bank-unveils-payout-platform-114058630.html",
+        "published_at": "2026-08-25T11:40:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Interview: bunq’s chief evangelist Joe Wilson on absorbing rate cuts and M&A strategy",
+        "url": "https://finance.yahoo.com/technology/articles/interview-bunq-chief-evangelist-joe-113636810.html",
+        "published_at": "2026-08-25T11:36:36Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {
+  "Gold/Miners": "bullish",
+  "Semis/Ai": "mixed",
+  "Technology": "bullish"
+ },
+ "tickers": {
+  "AU": 4.0,
+  "IGV": 4.0,
+  "ADBE": 4.0,
+  "AAPL": 4.0,
+  "XLE": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO PCE/Fed: [mixed] July PCE + Fed speech is the week\u2019s rates binary; hike talk is the same cluster (regime/1d-1w)\nMACRO yields: [dovish] UST yields fall/steady into the print \u2014 relief tell, not confirmed risk-on breadth (session/1d)\nMACRO geo/oil: [bearish] Oil \u2212$2+ as tape fades Bessent/Iran sanctions \u2014 not a Hormuz supply shock (session/1d)\nSECTOR gold/miners: [bullish] Gold 3-month high, AU/B +8% on FOMC/cut bets (GDX/XLB precious)\nSECTOR semis/AI: [mixed] NVDA this week vs live SMH drag (ARM/APH); do not buy XLK on hope (XLK/SMH)\nSECTOR software: [bullish] Rotation into software (ADSK +8%, ADBE AI PT) vs AI-capex crowding/AAPL cuts (IGV)\nINTERACTION: PCE+hike-talk = one rates cluster; NVDA pending + semi drag + crowded AI = cap tech; oil-down kills Iran risk-off\nWATCH: Warsh/Fed-independence is narrative until long-end confirms; digest truncated, index quotes 403",
+ "date": "2026-08-25"
+}

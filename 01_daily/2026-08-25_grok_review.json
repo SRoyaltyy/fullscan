@@ -1,0 +1,10 @@
+{
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T09:30:16.723035-04:00",
+  "ok": true,
+  "fails": [],
+  "notes": "Required same-day packet is complete and human-usable: general predict (UP/flat, MEMORY_CONFIRM + SCORES), a live 2026-08-25 events catcher book (18 new items, not a carry), news judge/parse, and a dated finviz digest with 400 ticker signals. Ten sector predicts are closed artifacts with markers and real directions; healthcare_predict.md is absent but 10/11 clears the 8-of-11 bar, matching mechanical QC.",
+  "prompt_chars": 201817,
+  "reply_chars": 535,
+  "reviewer": "grok-4.6-text"
+}

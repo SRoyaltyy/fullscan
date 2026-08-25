@@ -1,0 +1,433 @@
+{
+  "scan_date": "2026-08-25",
+  "events": [
+    {
+      "title": "Section 232 tariffs on UAS and UAS components",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-13",
+      "regions": [
+        "US",
+        "CN"
+      ],
+      "sectors": [
+        "Industrials",
+        "Information Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "100%/25% national-security duties plus a delayed component tariff aim to onshore drones and cut foreign (esp. China) supply-chain dependence.",
+      "what_to_watch": "HTSUS annex effective dates, onshoring exemptions, and pricing at DJI-exposed commercial/defense buyers.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/adjusting-imports-of-unmanned-aircraft-systems-and-unmanned-aircraft-systems-components-into-the-united-states/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Presidential memo to rebuild Navy and U.S. shipbuilding base",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-13",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Industrials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Opens a foreign-design/U.S.-yard investment model, extra public-yard capacity, and tanker/Ro-Ro procurement that reallocates defense and maritime capex.",
+      "what_to_watch": "60–120 day War/Navy acquisition plans and which U.S. and allied yards qualify for 10 U.S.C. 8679 waivers.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/rebuilding-the-united-states-navy-and-americas-shipbuilding-industrial-base/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Canada Sec. 338 offset duties delayed then effective",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-18..2026-08-22",
+      "regions": [
+        "US",
+        "CA"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Consumer Staples",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Alcohol, dairy, and motor-vehicle offset duties on Canadian imports were paused three days for talks, then set to hit 12:01 a.m. ET Aug 22.",
+      "what_to_watch": "CBP collection/refunds and whether a further suspension or Canadian concession follows.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/temporary-suspension-of-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-alcoholic-beverages-dairy-and-motor-vehicles/",
+        "https://www.federalregister.gov/documents/2026/08/24/2026-17294/temporary-suspension-of-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "SEC proposes Regulation Crypto Assets",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-18",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Creates a tailored token-offering regime (up to $5M startup / $75M fundraising exemptions) instead of forcing full '33 Act registration.",
+      "what_to_watch": "Comment file through Oct 20 and whether exchanges/issuers treat it as a capital-formation thaw.",
+      "status": "new",
+      "sources": [
+        "https://www.sec.gov/newsroom/press-releases/2026-76-sec-proposes-new-regulation-crypto-assets",
+        "https://www.sec.gov/rules-regulations/2026/08/s7-2026-27"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "National Space Transportation Policy (NSPM-17)",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-20",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Industrials",
+        "Information Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Federal ranges, spectrum, export policy, and a 1,000-launch-by-2030 goal are a direct industrial-policy tailwind for commercial launch.",
+      "what_to_watch": "180-day range-scheduling and spectrum reports from War/NASA/DOT/FCC.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/national-security-presidential-memorandum-nspm-17/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "OFAC alert on Iranian Hormuz passage 'tolls'",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-24",
+      "regions": [
+        "US",
+        "IR",
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Treats Iranian strait fees, insurance, or in-kind payments as sanctions exposure, raising tanker/compliance risk on a chokepoint that already tightened oil balances.",
+      "what_to_watch": "Tanker fixtures, war-risk insurance, and any further SDN designations under Operation Economic Outcast.",
+      "status": "new",
+      "sources": [
+        "https://ofac.treasury.gov/media/936751/download?inline",
+        "https://home.treasury.gov/news/press-releases/sb0613"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "FTC-state settlement unwinds Zillow-Redfin rental ILS pact",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-24",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Real Estate"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Forces Redfin back into multifamily listing ads after a $100M exit payment, a housing-platform antitrust overlay rather than a demand shock.",
+      "what_to_watch": "E.D. Va. court approval and Redfin’s six-month re-entry spend.",
+      "status": "new",
+      "sources": [
+        "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-secures-order-resolving-antitrust-concerns-zillow-redfin-agreement"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "House-Senate must reconcile FY2027 continuing resolution",
+      "category": "legislative",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-31..2026-09-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Senate CR runs to Dec 11 vs. House to Dec 4; a deal after recess would push shutdown risk past October 1.",
+      "what_to_watch": "House action after ~Aug 31 return and whether anomalies/OMB-grant delay survive conference.",
+      "status": "new",
+      "sources": [
+        "https://www.naco.org/news/senate-passes-bill-fund-government-through-december-11-and-delay-omb-rule",
+        "https://www.congress.gov/bill/119th-congress/house-bill/9770"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "July CPI print",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-12",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Headline 3.4% y/y and core 2.5% cooled only a tenth, leaving Warsh little cover if he wants to sound dovish.",
+      "what_to_watch": "Shelter/core services persistence into Wednesday’s PCE.",
+      "status": "new",
+      "sources": [
+        "https://www.bls.gov/news.release/cpi.nr0.htm",
+        "https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "August refunding 10-year and 30-year auctions stop out at multi-decade highs",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-12..2026-08-13",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "10y 4.683% and 30y 5.216% high-yields confirm term-premium stress into Jackson Hole.",
+      "what_to_watch": "Sept 9–10 reopenings ($39B 10y / $22B 30y) and any Bessent buyback offset.",
+      "status": "new",
+      "sources": [
+        "https://home.treasury.gov/news/press-releases/sb0590",
+        "https://wolfstreet.com/2026/08/15/us-government-sold-742-billion-of-treasury-securities-this-week-30-year-treasury-auction-yield-highest-since-2001-10-year-auction-yield-highest-since-2007/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "China keeps 1-year and 5-year LPRs unchanged",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-08-20",
+      "regions": [
+        "CN"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "15th consecutive hold (3.00%/3.50%) signals no broad credit easing despite weak activity.",
+      "what_to_watch": "Any NDRC/PBOC targeted tools instead of LPR cuts.",
+      "status": "new",
+      "sources": [
+        "https://www.reuters.com/world/asia-pacific/china-leaves-loan-rates-steady-15th-consecutive-month-august-2026-08-20/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "S&P Case-Shiller and FHFA home-price indexes",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-08-25",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Real Estate",
+        "Financial"
+      ],
+      "expected_direction": "unclear",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Housing inflation is still a large CPI/PCE shelter input even if sales volumes are second-tier.",
+      "what_to_watch": "Year-on-year deceleration vs. sticky owners’ equivalent rent.",
+      "status": "new",
+      "sources": [
+        "https://www.marketwatch.com/economy-politics/calendar"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "July PCE, personal income, and Q2 GDP second estimate",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "unclear",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Last major inflation print before Warsh’s Jackson Hole debut.",
+      "what_to_watch": "Core PCE vs. 2% and real spending vs. income.",
+      "status": "new",
+      "sources": [
+        "https://www.bea.gov/index.php/news/schedule"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Jackson Hole symposium; Warsh keynote",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-27..2026-08-29",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "unclear",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "First Jackson Hole as Chair after a 9–3 July hold at 3.50–3.75%, with long yields already at multi-year highs.",
+      "what_to_watch": "Aug 28 ~10:00 a.m. ET speech for inflation framework and independence language, not a rate signal.",
+      "status": "new",
+      "sources": [
+        "https://www.kansascityfed.org/research/jackson-hole-economic-symposium/",
+        "https://www.reuters.com/business/bond-market-anxiety-raises-stakes-warshs-debut-jackson-hole-speech-2026-08-24/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Deere Q3 FY2026 earnings",
+      "category": "earnings",
+      "timing": "past",
+      "date_or_window": "2026-08-20",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Industrials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Ag/construction bellwether beat and raised FY net-income guide to $4.75–$5.0B.",
+      "what_to_watch": "Dealer inventories, tariff-refund commentary, and FY26 order book.",
+      "status": "new",
+      "sources": [
+        "https://www.deere.com/en-us/john-deere-news/fy26-q3-earnings",
+        "https://www.reuters.com/business/deere-raises-lower-end-2026-net-income-forecast-range-2026-08-20/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Nvidia Q2 FY2027 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Information Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Single largest AI-capex print of the window; a miss or cautious guide would hit semis, hyperscalers, and the Nasdaq together.",
+      "what_to_watch": "Data-center revenue, Blackwell ramp, gross margin, and customer capex language.",
+      "status": "new",
+      "sources": [
+        "https://ca.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/calendar/",
+        "https://www.schwab.com/learn/story/semiconductor-earnings-preview"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "CrowdStrike Q2 FY2027 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Information Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Cybersecurity sector bellwether reporting the same night as Nvidia.",
+      "what_to_watch": "Net-new ARR, competitive commentary, and operating margin.",
+      "status": "new",
+      "sources": [
+        "https://www.tipranks.com/news/earnings-to-watch-this-week-august-24-28-2026",
+        "https://www.nextearningsdate.com/crwd.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Marvell Q2 FY2027 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-08-27",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Information Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Custom AI/cloud silicon read-through one day after Nvidia.",
+      "what_to_watch": "Whether results clear ~$2.7B ±5% revenue guide and 58–59% non-GAAP GM.",
+      "status": "new",
+      "sources": [
+        "https://investor.marvell.com/news-events/press-releases/detail/1029/marvell-technology-inc-announces-conference-call-to-review-second-quarter-of-fiscal-year-2027-financial-results-announces-investor-day-on-october-6-2026"
+      ],
+      "origin": "catcher"
+    }
+  ],
+  "catcher": {
+    "ran": true,
+    "replaced_primary": true,
+    "found": 18,
+    "duplicates_dropped": 0,
+    "coverage_assessment": "Primary scan produced zero events, so this catcher is the full book. Highest-signal cluster is past-window Section 232/338 trade actions plus OFAC Hormuz, and the upcoming Warsh Jackson Hole / PCE / Nvidia cluster.",
+    "biggest_gap": "Fed Chair Kevin Warsh's first Jackson Hole speech on 2026-08-28"
+  }
+}
