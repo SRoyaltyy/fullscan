@@ -2,16 +2,14 @@
 # Raise OpenClaw PROVIDER timeouts to 3h. Python waiting 10800s is useless
 # if the gateway still kills the turn at ~9 minutes.
 #
-# Live CLI on this box (run #5 / #6):
-#   models.providers.xai.timeoutSeconds     the real 9-min stub knob
-#   agents.defaults.timeoutSeconds          works
-#   agents.defaults.llm                     LEGACY / invalid — strip, never write
-#   models.providers.grok                   not a provider id
+# Live CLI on this box (run #5 / #6 / #7):
+#   models.providers.xai.timeoutSeconds     the real 9-min stub knob = 10800
+#   agents.defaults.timeoutSeconds          10800
+#   agents.defaults.llm                     LEGACY — strip, never write
 #
-# Run #6: CLI-as-root with the leftover llm key left config invalid, then
-# a bounce to strip it killed port 18789 and root-owned files under
-# /home/gha/.openclaw so user gha got EACCES. JSON-patch first, CLI as
-# gha, chown, bounce only if a timeout value moved, always ensure 18789.
+# Run #6 bounce killed 18789. `openclaw gateway start` as gha prints
+# "Gateway service disabled" and GH kills nohup orphans. Use systemd-run
+# so the gateway outlives the Actions job.
 set +e
 
 export HOME="${FULLSCAN_HOME:-/home/gha}"
@@ -106,7 +104,6 @@ PY
 CHANGED="$(cat "$COUNT_FILE" 2>/dev/null || echo 0)"
 rm -f "$COUNT_FILE"
 
-# Root CLI / JSON writes must not leave gha unable to read its own dir.
 if [ "$(id -u)" -eq 0 ] && [ -d /home/gha/.openclaw ]; then
   chown -R "$GHA_USER:$GHA_USER" /home/gha/.openclaw 2>/dev/null || true
 fi
@@ -135,24 +132,44 @@ port_up() {
     netstat -ltn 2>/dev/null | grep -q ':18789'
     return $?
   fi
-  as_gha openclaw gateway status >/dev/null 2>&1
+  return 1
 }
 
 start_gateway() {
-  echo "[openclaw-timeouts] starting gateway"
-  as_gha openclaw gateway start
+  echo "[openclaw-timeouts] starting gateway (systemd units + systemd-run)"
   if command -v systemctl >/dev/null 2>&1; then
-    systemctl start openclaw 2>/dev/null \
-      || systemctl start openclaw-gateway 2>/dev/null \
-      || true
+    echo "[openclaw-timeouts] openclaw-related units:"
+    systemctl list-units --all --no-pager --full '*openclaw*' '*claw*' 2>/dev/null | head -40
+    for u in openclaw openclaw-gateway openclaw.service openclaw-gateway.service \
+             fullscan-openclaw-gateway; do
+      systemctl start "$u" 2>/dev/null && echo "[openclaw-timeouts] started $u"
+    done
+  fi
+  as_gha openclaw gateway install
+  as_gha openclaw gateway start
+  # GH Actions reaps orphans. systemd-run is a real unit.
+  if [ "$(id -u)" -eq 0 ] && command -v systemd-run >/dev/null 2>&1 && command -v openclaw >/dev/null 2>&1; then
+    OC="$(command -v openclaw)"
+    if ! systemctl is-active --quiet fullscan-openclaw-gateway 2>/dev/null; then
+      systemd-run --uid="$GHA_USER" --gid="$GHA_USER" \
+        --working-directory=/home/gha \
+        --unit=fullscan-openclaw-gateway \
+        --property=Restart=on-failure \
+        --property=RestartSec=5 \
+        -E HOME=/home/gha -E USER=gha \
+        "$OC" gateway \
+        && echo "[openclaw-timeouts] systemd-run fullscan-openclaw-gateway" \
+        || systemctl start fullscan-openclaw-gateway 2>/dev/null \
+        || true
+    else
+      echo "[openclaw-timeouts] fullscan-openclaw-gateway already active"
+    fi
   fi
 }
 
 if [ "${CHANGED:-0}" -gt 0 ] 2>/dev/null; then
   echo "[openclaw-timeouts] timeout values changed (${CHANGED}) — reloading gateway"
-  as_gha openclaw gateway restart \
-    || as_gha openclaw gateway reload \
-    || true
+  as_gha openclaw gateway restart || as_gha openclaw gateway reload || true
   sleep 2
 else
   echo "[openclaw-timeouts] timeout values already ${TARGET}s — not bouncing gateway"
@@ -163,11 +180,12 @@ if port_up; then
 else
   echo "[openclaw-timeouts] gateway port 18789 is DOWN — starting"
   start_gateway
-  sleep 3
+  sleep 4
   if port_up; then
     echo "[openclaw-timeouts] gateway port 18789 is up after start"
   else
     echo "[openclaw-timeouts] WARN: gateway port 18789 still down"
+    as_gha openclaw gateway status || true
   fi
 fi
 

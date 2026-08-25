@@ -79,7 +79,7 @@ LOCAL=$(git rev-parse HEAD)
 
 resolve_scoreboard() {
   if [ -n "$OURS_SB" ] && [ -f "$OURS_SB" ]; then
-    python -m src.scoreboard --merge-ours "$OURS_SB" || true
+    python3 -m src.scoreboard --merge-ours "$OURS_SB" || true
     git add 03_scoreboard/scoreboard.json || true
   fi
 }
@@ -91,7 +91,11 @@ restore_ours_daily() {
 
 try_rebase() {
   git fetch origin main || return 1
+  # Unstaged leftover files on the self-hosted work tree (clean:false)
+  # made run #7 rebase abort and then dump 60 extra files. Stash them.
+  git stash push --keep-index -u -m "safe-push-unstaged" >/dev/null 2>&1 || true
   if git rebase origin/main; then
+    git stash drop >/dev/null 2>&1 || true
     return 0
   fi
   echo "[safe-push] rebase conflict — keeping our 01_daily, merging scoreboard"
@@ -100,21 +104,26 @@ try_rebase() {
   resolve_scoreboard
   git add 01_daily 02_lessons 03_scoreboard 2>/dev/null || git add -A
   if GIT_EDITOR=true git rebase --continue; then
+    git stash drop >/dev/null 2>&1 || true
     return 0
   fi
   echo "[safe-push] rebase --continue failed; aborting"
   git rebase --abort || true
+  git stash drop >/dev/null 2>&1 || true
   return 1
 }
 
 try_merge() {
   git fetch origin main || return 1
+  git stash push --keep-index -u -m "safe-push-unstaged" >/dev/null 2>&1 || true
   if git merge origin/main --no-edit; then
     resolve_scoreboard
-    if ! git diff --staged --quiet || ! git diff --quiet; then
-      git add 03_scoreboard/scoreboard.json 01_daily 02_lessons 2>/dev/null || true
+    # Only commit if resolve_scoreboard staged something. Do NOT git-add
+    # dirty 01_daily leftovers from the self-hosted work tree.
+    if ! git diff --staged --quiet; then
       git commit -m "merge main (scoreboard union)" || true
     fi
+    git stash drop >/dev/null 2>&1 || true
     return 0
   fi
   echo "[safe-push] merge conflict — ours daily + union scoreboard"
@@ -123,8 +132,10 @@ try_merge() {
   resolve_scoreboard
   git add 01_daily 02_lessons 03_scoreboard 2>/dev/null || git add -A
   git commit -m "merge main (ours daily + merged scoreboard)" || true
+  git stash drop >/dev/null 2>&1 || true
   return 0
 }
+
 
 if ! try_rebase; then
   try_merge || true
