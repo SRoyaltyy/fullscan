@@ -22,22 +22,24 @@ TOKEN="${OPENCLAW_TOKEN:-}"
 
 as_gha() {
   if [ "$(id -u)" -eq 0 ] && id "$GHA_USER" >/dev/null 2>&1; then
-    sudo -u "$GHA_USER" -H env HOME="$HOME" USER="$GHA_USER" \
-      OPENCLAW_GATEWAY_URL="$GW" PATH="$PATH" "$@"
+    sudo -u "$GHA_USER" -H env HOME="$HOME" USER="$GHA_USER" PATH="$PATH" "$@"
   else
     "$@"
   fi
 }
 
-# Gateway RPCs can hang at 30s. GNU timeout cannot run a shell function
-# (`timeout 45 as_gha ...` → 'as_gha: No such file'). Wrap the real binary.
+# Gateway RPCs can hang at 30s. GNU timeout cannot run a shell function.
+# Do NOT export OPENCLAW_GATEWAY_URL here: this CLI treats a URL override
+# as "explicit credentials required" and then refuses config token, so
+# `cron list` / `health` die even though the gateway is up on loopback.
 oc() {
   if [ "$(id -u)" -eq 0 ] && id "$GHA_USER" >/dev/null 2>&1; then
     timeout 45 sudo -u "$GHA_USER" -H \
-      env HOME="$HOME" USER="$GHA_USER" OPENCLAW_GATEWAY_URL="$GW" PATH="$PATH" \
+      env HOME="$HOME" USER="$GHA_USER" PATH="$PATH" \
+          OPENCLAW_GATEWAY_TOKEN="${TOKEN}" \
       openclaw "$@" 2>&1
   else
-    timeout 45 openclaw "$@" 2>&1
+    timeout 45 env OPENCLAW_GATEWAY_TOKEN="${TOKEN}" openclaw "$@" 2>&1
   fi
   echo "[exit $?]"
 }
