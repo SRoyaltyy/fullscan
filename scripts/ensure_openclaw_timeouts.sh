@@ -19,17 +19,19 @@ export USER="${FULLSCAN_USER:-gha}"
 TARGET="${OPENCLAW_TIMEOUT:-10800}"
 echo "[openclaw-timeouts] want timeoutSeconds/idleTimeoutSeconds=${TARGET} home=$HOME uid=$(id -u)"
 
+# ONLY keys OpenClaw's config validator accepts (2026-08-25 run 32871268606
+# proved the others are rejected):
+#   agents.defaults: Unrecognized key: "llm"          → no llm.* here
+#   models.providers.grok.baseUrl: custom model providers must declare
+#     baseUrl                                          → only bundled `xai`
+# Writing rejected keys is worse than a short timeout: if they land in
+# openclaw.json, the gateway can refuse the whole config on restart and
+# every stage silently runs on the DeepSeek spare tire.
 if command -v openclaw >/dev/null 2>&1; then
   openclaw config set agents.defaults.timeoutSeconds "$TARGET"
-  openclaw config set agents.defaults.llm.idleTimeoutSeconds "$TARGET"
-  openclaw config set agents.defaults.subagents.runTimeoutSeconds "$TARGET"
-  # Provider ids we have actually seen. JSON patch below covers the rest.
-  for id in xai grok openai anthropic; do
-    openclaw config set "models.providers.${id}.timeoutSeconds" "$TARGET"
-  done
-  echo "[openclaw-timeouts] CLI set attempted"
+  openclaw config set models.providers.xai.timeoutSeconds "$TARGET"
+  echo "[openclaw-timeouts] CLI set attempted (agents.defaults + providers.xai)"
   openclaw config get agents.defaults.timeoutSeconds 2>/dev/null
-  openclaw config get agents.defaults.llm.idleTimeoutSeconds 2>/dev/null
   openclaw config get models.providers.xai.timeoutSeconds 2>/dev/null
 else
   echo "[openclaw-timeouts] openclaw CLI not on PATH — patching JSON if present"
@@ -64,34 +66,54 @@ for path in cands:
         continue
     agents = data.setdefault("agents", {})
     defaults = agents.setdefault("defaults", {})
-    llm = defaults.setdefault("llm", {})
-    sub = defaults.setdefault("subagents", {})
     models = data.setdefault("models", {})
     providers = models.setdefault("providers", {})
-    before = (
-        defaults.get("timeoutSeconds"),
-        llm.get("idleTimeoutSeconds"),
-        sub.get("runTimeoutSeconds"),
-        {k: (v.get("timeoutSeconds") if isinstance(v, dict) else None)
-         for k, v in providers.items()},
-    )
+
+    def snap():
+        return (
+            defaults.get("timeoutSeconds"),
+            {k: (v.get("timeoutSeconds") if isinstance(v, dict) else None)
+             for k, v in providers.items()},
+            "llm" in defaults, "subagents" in defaults,
+        )
+
+    before = snap()
+
+    # --- set the two VALID keys ---
     defaults["timeoutSeconds"] = target
-    llm["idleTimeoutSeconds"] = target
-    sub["runTimeoutSeconds"] = target
+    xai = providers.get("xai")
+    if isinstance(xai, dict):
+        xai["timeoutSeconds"] = target
+    # Do NOT invent provider entries: a providers.<id> block without
+    # baseUrl fails validation for non-bundled ids. If xai is absent the
+    # gateway is using bundled defaults; the CLI path above handles it.
+
+    # --- self-heal: REMOVE the invalid keys an earlier version of this
+    # script wrote (they can make the gateway reject the whole file) ---
+    llm = defaults.get("llm")
+    if isinstance(llm, dict):
+        llm.pop("idleTimeoutSeconds", None)
+        if not llm:
+            defaults.pop("llm", None)
+            print(f"[openclaw-timeouts] removed invalid agents.defaults.llm from {path}")
+    sub = defaults.get("subagents")
+    if isinstance(sub, dict):
+        sub.pop("runTimeoutSeconds", None)
+        if not sub:
+            defaults.pop("subagents", None)
+            print(f"[openclaw-timeouts] removed invalid agents.defaults.subagents from {path}")
+    for name in list(providers.keys()):
+        prov = providers[name]
+        # Drop provider blocks WE invented: exactly {timeoutSeconds} and no
+        # baseUrl. Never touch a block with real user config.
+        if (name != "xai" and isinstance(prov, dict)
+                and set(prov.keys()) <= {"timeoutSeconds"}):
+            providers.pop(name)
+            print(f"[openclaw-timeouts] removed invented providers.{name} from {path}")
     if not providers:
-        providers["xai"] = {}
-    for name, prov in list(providers.items()):
-        if not isinstance(prov, dict):
-            providers[name] = {"timeoutSeconds": target}
-            continue
-        prov["timeoutSeconds"] = target
-    after = (
-        defaults.get("timeoutSeconds"),
-        llm.get("idleTimeoutSeconds"),
-        sub.get("runTimeoutSeconds"),
-        {k: (v.get("timeoutSeconds") if isinstance(v, dict) else None)
-         for k, v in providers.items()},
-    )
+        models.pop("providers", None)
+
+    after = snap()
     if before != after:
         changed += 1
     try:
@@ -103,8 +125,7 @@ for path in cands:
         continue
     print(f"[openclaw-timeouts] patched {path}")
     print(f"[openclaw-timeouts]   agents.defaults.timeoutSeconds {before[0]} -> {after[0]}")
-    print(f"[openclaw-timeouts]   llm.idleTimeoutSeconds {before[1]} -> {after[1]}")
-    print(f"[openclaw-timeouts]   providers {before[3]} -> {after[3]}")
+    print(f"[openclaw-timeouts]   providers {before[1]} -> {after[1]}")
     patched += 1
 if not patched:
     print("[openclaw-timeouts] no openclaw JSON found to patch")
