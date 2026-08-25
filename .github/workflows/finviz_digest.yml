@@ -7,7 +7,7 @@ name: Finviz Daily Digest
 on:
   schedule:
     # Just before news_parse slots (those fire at :15 past 10/12/14 UTC)
-    - cron: "5 10,12,14 * * 1-5"
+    - cron: "5 10,12 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:
@@ -39,7 +39,17 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install beautifulsoup4 lxml pandas requests || true
+      - name: Skip if past 09:25 ET
+        if: github.event_name == 'schedule'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "ET_HM=$ET_HM"
+          if [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — skip finviz_digest"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
       - name: Run Finviz Daily Digest
+        if: env.skip != 'yes'
         env:
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
@@ -61,10 +71,6 @@ jobs:
             head -80 "$latest"
           fi
       - name: Commit
+        if: env.skip != 'yes'
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/news/ || true
-          git commit -m "auto: finviz daily digest" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          bash scripts/safe_git_push.sh "auto: finviz daily digest" 01_daily/news/

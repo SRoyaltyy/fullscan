@@ -94,7 +94,11 @@ def _post(payload: dict, retries: int = 4) -> dict:
 # Circuit breaker: once the gateway hard-fails (network/HTTP after retries)
 # we stop retrying it for the rest of this process, so a 22-call sector day
 # does not spend 22 × retries waiting on a dead box.
-_OPENCLAW_STATE = {"down": False, "reason": ""}
+# Consecutive idle-timeout *content* (gateway is up but returns a timeout
+# stub as the assistant message) also trips the breaker after 2 in a row
+# so the remaining sectors fall through to DeepSeek instead of burning
+# 15 minutes each.
+_OPENCLAW_STATE = {"down": False, "reason": "", "timeouts": 0}
 
 # Appended to the system prompt on research stages (tools=True). The
 # RESEARCH appendix goes at the END so output contracts (first-line
@@ -118,6 +122,28 @@ def _mark_openclaw_down(reason: str) -> None:
     _OPENCLAW_STATE["down"] = True
     _OPENCLAW_STATE["reason"] = reason[:300]
     print(f"[openclaw] gateway marked DOWN for this run: {reason[:200]}")
+
+
+def looks_like_timeout_content(text: str) -> bool:
+    """True when OpenClaw returned an idle-timeout / error stub as content.
+
+    That used to be treated as a successful answer, so parse_scores defaulted
+    every missing S0–S4 to 0.0 and the sector file landed as 0/flat. Treat
+    it as empty so the DeepSeek fallback (or the caller's QC retry) fires.
+    Imported lazily to keep this module importable without output_qc.
+    """
+    if not text or not str(text).strip():
+        return False
+    try:
+        from .output_qc import looks_like_timeout
+        return looks_like_timeout(text)
+    except Exception:
+        t = str(text)
+        needles = ("LLM request timed out", "idle timeout",
+                   "model idle timeout", "prompt too long",
+                   "The model did not produce a response")
+        return any(n.lower() in t.lower() for n in needles) and len(t) < 2500
+
 
 
 def _post_openclaw(messages: list[dict], max_tokens: int,
@@ -183,6 +209,19 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
         print(f"[openclaw] EMPTY answer ({stage_label or 'llm run'}) — "
               "will fall back to DeepSeek")
         return ""
+
+    if looks_like_timeout_content(final):
+        _OPENCLAW_STATE["timeouts"] = _OPENCLAW_STATE.get("timeouts", 0) + 1
+        n = _OPENCLAW_STATE["timeouts"]
+        print(f"[openclaw] timeout/error stub treated as empty "
+              f"({stage_label or 'llm run'}; consecutive={n}) — "
+              "will fall back to DeepSeek")
+        if n >= 2:
+            _mark_openclaw_down(
+                f"{n} consecutive idle-timeout stubs "
+                f"({stage_label or 'llm run'})")
+        return ""
+    _OPENCLAW_STATE["timeouts"] = 0
 
     if transcript_path:
         try:

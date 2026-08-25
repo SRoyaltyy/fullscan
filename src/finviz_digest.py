@@ -27,7 +27,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import config
+from . import config, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -321,9 +321,25 @@ def main() -> None:
     ap.add_argument("--date", default=None)
     ap.add_argument("--skip-scrape", action="store_true",
                     help="Skip live index quote scrape (export only)")
+    ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
+    date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    if preopen.past_predict_cutoff() and not args.force:
+        jp = NEWS_DIR / f"{date_str}_finviz_digest.json"
+        existing = output_qc.qc_finviz_digest(jp if jp.exists() else
+                                              NEWS_DIR / f"{date_str}_finviz_digest.md")
+        if existing.ok:
+            print(f"[finviz_digest] {date_str}: past 09:25 ET, keeping quality-ok")
+            return
+        print(f"[finviz_digest] {date_str}: past 09:25 ET — not writing a late copy")
+        return
     report = build_report(asof=args.date, skip_scrape=args.skip_scrape)
     jp, mp = save_report(report)
+    qc = output_qc.qc_finviz_digest(jp)
+    if not qc.ok:
+        print(f"[finviz_digest] QC FAIL ({qc.reason}) — throwing out")
+        output_qc.reject(jp, mp)
+        raise SystemExit("finviz digest produced no quality-ok file")
     print(
         f"[finviz_digest] {report['date']}: "
         f"tickers={report['ticker_digest_count']} "

@@ -24,7 +24,7 @@ from collections import defaultdict
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import config, db
+from . import config, db, output_qc, preopen
 
 NEWS_DIR = "01_daily/news"
 
@@ -372,12 +372,26 @@ def main() -> None:
     ap.add_argument("--hours", type=int, default=48)
     ap.add_argument("--limit", type=int, default=300)
     ap.add_argument("--date", default=None)
+    ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    if preopen.past_predict_cutoff() and not args.force:
+        jp = os.path.join(NEWS_DIR, f"{date_str}_parsed.json")
+        existing = output_qc.qc_news_parse(jp)
+        if existing.ok:
+            print(f"[news_parse] {date_str}: past 09:25 ET, keeping quality-ok parse")
+            return
+        print(f"[news_parse] {date_str}: past 09:25 ET — not writing a late parse")
+        return
     if not config.DATABASE_URL:
         raise SystemExit("DATABASE_URL not set")
     report = build_report(hours=args.hours, limit=args.limit)
     jp, mp = save_report(report, date_str)
+    qc = output_qc.qc_news_parse(jp)
+    if not qc.ok:
+        print(f"[news_parse] QC FAIL ({qc.reason}) — throwing out")
+        output_qc.reject(jp, mp)
+        raise SystemExit("news parse produced no quality-ok file")
     print(
         f"[news_parse v2] raw={report['raw_count']} "
         f"usable={report['usable_count']} "

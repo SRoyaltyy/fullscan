@@ -1,22 +1,25 @@
 name: Daily Orchestrator (pre-market guard)
 
 # Watches the critical pre-US-open workflows and re-dispatches any that
-# missed their cron, failed, OR went green without writing today's artifact.
-# GitHub `conclusion=success` is NOT enough: sector_daily 08-19 was a 1-min
-# green with 0/11 essays because the hour gate didn't fire. This guard
-# checks the files on main for TODAY ET.
+# missed their cron, failed, OR went green without writing a QUALITY
+# artifact (existence is not enough: timeout stubs and carry-forwards
+# used to look like success).
+#
+# Predictive jobs (everything except weather / AB / stock-book / outcome
+# / reflect) MUST land before 09:30 ET. This guard will NOT dispatch
+# predictive workflows after 09:25 ET unless force=true.
 #
 # Targets (predict-side — outcome/reflect have their own windows):
-#   finviz_digest   ~10:05 / 12:05 / 14:05 UTC
-#   events_daily    ~10:43 UTC (most failure-prone)
-#   news_parse      10/12/14:15 UTC
-#   news_judge      10/12/14:25 UTC
-#   news_actions    after judge
-#   daily_pipeline  predict ~11:34 UTC
-#   sector_daily    predict ~12:40 UTC (weekdays)
-#   label_weather   ~15:17 UTC
-#   ab_checklist    15:00 UTC (before Stock Book ALL) + 21:30 post-close
-#   stock_book_all  17:00 UTC — only dispatched after 16:00 UTC unless force
+#   finviz_digest   ~10:05 / 12:05 UTC
+#   events_daily    ~10:10 UTC
+#   news_parse      10/12:15 UTC
+#   news_judge      10/12:25 UTC
+#   news_actions    ~11:20 UTC
+#   daily_pipeline  predict ~10:45 UTC
+#   sector_daily    predict ~11:10 UTC (weekdays)
+#   label_weather   ~15:17 UTC          (NOT predictive)
+#   ab_checklist    15:00 UTC + 21:30   (NOT predictive)
+#   stock_book_all  17:00 UTC           (NOT predictive)
 #
 # Runs several times in the pre-market window so a single delayed cron
 # does not leave the day without inputs. Force=true re-dispatches all.
@@ -25,10 +28,10 @@ name: Daily Orchestrator (pre-market guard)
 
 on:
   schedule:
-    # ~06:50 ET, ~07:50 ET, ~08:50 ET (catch early misses + late drift)
+    # ~06:50 ET, ~07:50 ET, ~08:20 ET (was 12:50 UTC — jitter put it after the bell)
     - cron: "50 10 * * 1-5"
     - cron: "50 11 * * 1-5"
-    - cron: "50 12 * * 1-5"
+    - cron: "20 12 * * 1-5"
     # after Stock Book ALL (17:00 UTC) — catch a missed book / book-without-AB
     - cron: "15 18 * * 1-5"
   workflow_dispatch:
@@ -51,9 +54,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      # Checkout is required: `gh workflow run` needs a local git repo.
-      # Without it the guard dies with "fatal: not a git repository" the
-      # moment it tries to re-dispatch (2026-08-21 x3 failures).
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -68,7 +68,8 @@ jobs:
           REPO="${{ github.repository }}"
           TODAY=$(TZ=America/New_York date +%F)
           HOUR=$((10#$(date -u +%H)))
-          echo "Orchestrator date (ET): $TODAY  utc_hour=$HOUR  force=$FORCE"
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "Orchestrator date (ET): $TODAY  utc_hour=$HOUR  et_hm=$ET_HM  force=$FORCE"
 
           repo_file() {
             gh api "repos/${REPO}/contents/${1}?ref=main" --jq .sha >/dev/null 2>&1
@@ -76,47 +77,102 @@ jobs:
           repo_file_size() {
             gh api "repos/${REPO}/contents/${1}?ref=main" --jq '.size // 0' 2>/dev/null || echo 0
           }
-          repo_predict_n() {
+          repo_decode() {
+            local raw
+            raw=$(gh api "repos/${REPO}/contents/${1}?ref=main" --jq .content 2>/dev/null) || return 1
+            echo "$raw" | tr -d '\n' | base64 -d 2>/dev/null
+          }
+          repo_predict_quality_n() {
             gh api "repos/${REPO}/contents/${1}?ref=main" \
-              --jq '[.[]? | select(.type=="file" and (.name | endswith("_predict.md")))] | length' \
+              --jq '[.[]? | select(.type=="file" and (.name | endswith("_predict.md")) and (.size >= 3000))] | length' \
               2>/dev/null || echo 0
           }
-          repo_events_n() {
-            local raw
-            raw=$(gh api "repos/${REPO}/contents/${1}?ref=main" --jq .content 2>/dev/null) || { echo 0; return; }
-            echo "$raw" | tr -d '\n' | base64 -d 2>/dev/null | jq '.events | length' 2>/dev/null || echo 0
+
+          is_predictive() {
+            case "$1" in
+              finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml|daily_pipeline.yml|sector_daily.yml)
+                return 0 ;;
+              *) return 1 ;;
+            esac
           }
 
           artifact_ok() {
             local WF="$1"
             case "$WF" in
               finviz_digest.yml)
-                repo_file "01_daily/news/${TODAY}_finviz_digest.json" \
+                local sz
+                sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
+                [ "${sz:-0}" -gt 200 ] \
                   || repo_file "01_daily/news/${TODAY}_finviz_digest.md"
                 ;;
               events_daily.yml)
-                local n
-                n=$(repo_events_n "01_daily/events/${TODAY}_events.json")
-                echo "    events n=$n"
-                [ "${n:-0}" -gt 0 ]
+                local content
+                content=$(repo_decode "01_daily/events/${TODAY}_events.json") || return 1
+                echo "$content" | python3 -c '
+          import json,sys
+          try:
+              d=json.load(sys.stdin)
+          except Exception:
+              sys.exit(1)
+          ev=d.get("events") or []
+          if d.get("carried_from"):
+              print("    events CARRIED — not quality-ok")
+              sys.exit(1)
+          if not ev:
+              print("    events n=0")
+              sys.exit(1)
+          if all((e.get("status")=="carried") for e in ev if isinstance(e, dict)):
+              print("    events all status=carried — not quality-ok")
+              sys.exit(1)
+          print("    events n=%d quality-ok" % len(ev))
+          '
                 ;;
               news_parse.yml)
-                repo_file "01_daily/news/${TODAY}_parsed.json" \
-                  || repo_file "01_daily/news/${TODAY}_parsed.md"
+                local sz
+                sz=$(repo_file_size "01_daily/news/${TODAY}_parsed.json")
+                [ "${sz:-0}" -gt 200 ]
                 ;;
               news_judge.yml)
-                repo_file "01_daily/news/${TODAY}_judge.md"
+                local content
+                content=$(repo_decode "01_daily/news/${TODAY}_judge.md") || return 1
+                echo "$content" | python3 -c '
+          import sys
+          t=sys.stdin.read()
+          if len(t) < 400:
+              sys.exit(1)
+          low=t.lower()
+          if "llm request timed out" in low or "idle timeout" in low:
+              sys.exit(1)
+          if "NEWS_PARSE_BEGIN" not in t:
+              sys.exit(1)
+          sys.exit(0)
+          '
                 ;;
               news_actions.yml)
-                repo_file "01_daily/news/${TODAY}_actions.json"
+                local sz
+                sz=$(repo_file_size "01_daily/news/${TODAY}_actions.json")
+                [ "${sz:-0}" -gt 200 ]
                 ;;
               daily_pipeline.yml)
-                repo_file "01_daily/general/${TODAY}_predict.md"
+                local content
+                content=$(repo_decode "01_daily/general/${TODAY}_predict.md") || return 1
+                echo "$content" | python3 -c '
+          import sys
+          t=sys.stdin.read()
+          if len(t) < 2000:
+              sys.exit(1)
+          low=t.lower()
+          if "llm request timed out" in low or "idle timeout" in low:
+              sys.exit(1)
+          if "MEMORY_CONFIRM" not in t or "SCORES_BEGIN" not in t:
+              sys.exit(1)
+          sys.exit(0)
+          '
                 ;;
               sector_daily.yml)
                 local n
-                n=$(repo_predict_n "01_daily/sectors/${TODAY}")
-                echo "    sector predict files=$n/11"
+                n=$(repo_predict_quality_n "01_daily/sectors/${TODAY}")
+                echo "    sector quality-sized (>=3k) predict files=$n/11"
                 [ "${n:-0}" -ge 8 ]
                 ;;
               label_weather.yml)
@@ -141,8 +197,6 @@ jobs:
             esac
           }
 
-          # Prefer REST dispatches (works without local git). Fall back to
-          # `gh workflow run`. Never abort the guard loop on one bad dispatch.
           dispatch_wf() {
             local WF="$1"
             echo "MISSING/FAILED/GREEN-EMPTY for $TODAY → dispatching $WF"
@@ -180,7 +234,6 @@ jobs:
             fi
           }
 
-          # Ordered: light prereqs first, book last.
           WORKFLOWS=(
             finviz_digest.yml
             events_daily.yml
@@ -197,6 +250,12 @@ jobs:
           for WF in "${WORKFLOWS[@]}"; do
             echo ""
             echo "======== $WF ========"
+
+            # Hard skip predictive dispatches after 09:25 ET (unless force).
+            if is_predictive "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then
+              echo "skip $WF — past 09:25 ET predictive cutoff (et_hm=$ET_HM)"
+              continue
+            fi
 
             RAW=$(gh api "repos/${REPO}/actions/workflows/$WF/runs?per_page=20" \
               --jq '.workflow_runs[] | {id, status, conclusion, event, created_at, html_url}' || echo "")
@@ -226,13 +285,11 @@ jobs:
             fi
             echo "artifact_ok=$ART_OK"
 
-            # Stock Book ALL waits until 16:00 UTC so prereqs can land, unless forced.
             if [ "$WF" = "stock_book_all.yml" ] && [ "$FORCE" != "true" ] && [ "$HOUR" -lt 16 ]; then
               echo "skip ALL until 16:00 UTC (prereqs still landing)"
               continue
             fi
 
-            # Book exists but AB missing after 16:00 → rebuild so s_ab scores.
             if [ "$WF" = "stock_book_all.yml" ] && [ "$ART_OK" = "yes" ] && [ "$FORCE" != "true" ]; then
               AB_OK="no"
               if artifact_ok "ab_checklist.yml"; then AB_OK="yes"; fi
@@ -257,11 +314,11 @@ jobs:
               continue
             fi
             if [ "$ART_OK" = "yes" ]; then
-              echo "OK — today's artifact is on main. Skipping."
+              echo "OK — today's quality artifact is on main. Skipping."
               continue
             fi
             if [ -n "$HAS_SUCCESS" ]; then
-              echo "GREEN-EMPTY — GH success id=$HAS_SUCCESS but artifact missing. Re-dispatching."
+              echo "GREEN-EMPTY/GREEN-BAD — GH success id=$HAS_SUCCESS but artifact missing or low-quality. Re-dispatching."
             else
               echo "MISSING or FAILED for $TODAY."
             fi

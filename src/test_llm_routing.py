@@ -29,6 +29,7 @@ def _reset(openclaw_url: str = "", deepseek_key: str = ""):
     config.DEEPSEEK_API_KEY = deepseek_key
     dc._OPENCLAW_STATE["down"] = False
     dc._OPENCLAW_STATE["reason"] = ""
+    dc._OPENCLAW_STATE["timeouts"] = 0
 
 
 _SAVED = (config.OPENCLAW_GATEWAY_URL, config.DEEPSEEK_API_KEY,
@@ -180,6 +181,23 @@ def test_describe_routing_no_secrets() -> None:
         config.OPENCLAW_TOKEN = _SAVED[2]
 
 
+def test_timeout_content_is_empty() -> None:
+    """Idle-timeout stub must NOT be returned as a successful answer."""
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    stub = "LLM request timed out.\nThe model did not produce a response before the model idle timeout."
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        if "gw:18789" in url:
+            return _fake_response(200, stub)
+        return _fake_response(200, "DEEPSEEK ANSWER")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == "DEEPSEEK ANSWER"
+    assert not dc._OPENCLAW_STATE["down"]
+
+
 def main() -> None:
     tests = [
         test_gates,
@@ -190,6 +208,7 @@ def main() -> None:
         test_no_fallback_returns_empty,
         test_deepseek_only_unchanged,
         test_describe_routing_no_secrets,
+        test_timeout_content_is_empty,
     ]
     failed = 0
     for fn in tests:

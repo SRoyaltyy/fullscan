@@ -2,7 +2,7 @@
 write 01_daily/general/<date>_predict.md, parse scores, compute decision
 deterministically, update scoreboard.
 
-CLI: python -m src.run_predict [--date YYYY-MM-DD]
+CLI: python -m src.run_predict [--date YYYY-MM-DD] [--force] [--retries 1]
 """
 from __future__ import annotations
 
@@ -12,7 +12,8 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import (compute_scores, config, deepseek_client, event_context,
-               fetch_channel1, memory, scoreboard, snapshot)
+               fetch_channel1, memory, output_qc, preopen, scoreboard,
+               snapshot)
 from .run_news_judge import inject_block as news_judge_block
 try:
     from .finviz_digest import inject_block as finviz_digest_block
@@ -21,13 +22,72 @@ except Exception:
         return ""
 
 
+def _write(path: str, date_str: str, text: str, decision: dict, scores: dict,
+           ch1, horizon_calls: dict) -> None:
+    os.makedirs(config.DAILY_GENERAL, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(f"# Premarket Prediction — {date_str}\n\n")
+        fh.write(snapshot.predict_snapshot(decision, scores, ch1))
+        fh.write(text)
+        fh.write("\n\n---\n## Pipeline-computed decision (deterministic)\n\n")
+        fh.write(f"- total_score: **{decision['total_score']}** "
+                 f"(multiplier {decision['multiplier']})\n")
+        fh.write(f"- leading_sum: {decision['leading_sum']}\n")
+        fh.write(f"- divergence_flagged: **{decision['divergence_flagged']}**\n")
+        fh.write(f"- predicted_direction: **{decision['predicted_direction']}**\n")
+        fh.write(f"- predicted_magnitude_band: "
+                 f"**{decision['predicted_magnitude_band']}**\n")
+        fh.write(f"- confidence_score: {decision['confidence_score']}\n")
+        if horizon_calls:
+            fh.write("\n### Multi-timeframe outlook (LLM call, graded at "
+                     "T+h by src.horizon_grade)\n\n")
+            for key, hc in horizon_calls.items():
+                fh.write(f"- {key}: **{hc['direction']}** / "
+                         f"{hc['magnitude_band']} (conf {hc['confidence']})\n")
+
+
+def _update_scoreboard(date_str: str, decision: dict, horizon_calls: dict,
+                       nj: str) -> None:
+    board = scoreboard.load()
+    entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
+    entry.update({
+        "predicted_direction": decision["predicted_direction"],
+        "predicted_magnitude_band": decision["predicted_magnitude_band"],
+        "confidence_score": decision["confidence_score"],
+        "total_score": decision["total_score"],
+        "multiplier": decision["multiplier"],
+        "components": decision["components"],
+        "leading_sum": decision["leading_sum"],
+        "divergence_flagged": decision["divergence_flagged"],
+        "horizon_calls": horizon_calls,
+        "news_judge_present": bool(nj),
+    })
+    scoreboard.save(board)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
+    ap.add_argument("--force", action="store_true")
+    ap.add_argument("--retries", type=int, default=1)
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
     config.require_llm()
+    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md")
+
+    if not args.force:
+        existing = output_qc.qc_general_predict(path)
+        if existing.ok:
+            print(f"[predict] {date_str}: skip, quality-ok already on disk "
+                  f"({existing.size} chars) — not rewriting a pre-open copy")
+            return
+        if os.path.exists(path):
+            print(f"[predict] {date_str}: existing file rejected "
+                  f"({existing.reason}) — throwing out and rerunning")
+            output_qc.reject(path)
+
+    preopen.refuse_if_late("general-predict", force=args.force)
 
     # 1. Channel 1 (deterministic) — archived for auditability
     ch1 = fetch_channel1.build("predict")
@@ -59,6 +119,9 @@ def main() -> None:
                 "When FINVIZ DAILY DIGEST is present, treat its index narratives "
                 "and high-signal ticker digests as pre-validated elevated themes "
                 "— use them to reinforce or correct thin/noisy mechanical parses.\n"
+                "First line MUST be MEMORY_CONFIRM. Then analysis. Then a "
+                "SCORES_BEGIN..SCORES_END block. HIT_GRID_BEGIN is required "
+                "when the rubric asks for it.\n"
                 "In the SCORES block, also include these three lines:\n"
                 "GOOD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
                 "BAD_NEWS: <semicolon-separated list, max 5, short phrases>\n"
@@ -70,66 +133,54 @@ def main() -> None:
                 "HORIZON_2W: <up|down|flat>:<flat|mild|notable|severe>:<0-1>\n"
                 "HORIZON_1M: <up|down|flat>:<flat|mild|notable|severe>:<0-1>")
 
-    # 3. LLM with tool loop (full transcript + readable trace saved)
-    text = deepseek_client.chat(
-        [{"role": "system", "content": rubric},
-         {"role": "user", "content": user_msg}],
-        model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
-        transcript_path=os.path.join("01_daily/_transcripts",
-                                     f"{date_str}_predict.json"),
-        trace_path=os.path.join(config.DAILY_GENERAL,
-                                f"{date_str}_predict_trace.md"),
-        stage_label=f"PREDICT {date_str}")
+    last_qc = None
+    for attempt in range(args.retries + 1):
+        if attempt and preopen.past_predict_cutoff() and not args.force:
+            print("[predict] past 09:25 ET, not retrying")
+            break
+        text = deepseek_client.chat(
+            [{"role": "system", "content": rubric},
+             {"role": "user", "content": user_msg}],
+            model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
+            transcript_path=os.path.join("01_daily/_transcripts",
+                                         f"{date_str}_predict.json"),
+            trace_path=os.path.join(config.DAILY_GENERAL,
+                                    f"{date_str}_predict_trace.md"),
+            stage_label=f"PREDICT {date_str}"
+                        + (f" retry{attempt}" if attempt else ""))
 
-    # 4. Deterministic scoring
-    scores = compute_scores.parse_scores(text)
-    decision = compute_scores.compute(scores)
-    horizon_calls = compute_scores.parse_horizon_calls(scores)
+        raw_qc = output_qc.qc_text_general_predict(text or "", path)
+        if not raw_qc.ok:
+            print(f"[predict] attempt {attempt + 1} raw QC FAIL "
+                  f"({raw_qc.reason}) — not writing a stub")
+            last_qc = raw_qc
+            continue
 
-    # 5. Write prediction file (human-readable snapshot first)
-    os.makedirs(config.DAILY_GENERAL, exist_ok=True)
-    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write(f"# Premarket Prediction — {date_str}\n\n")
-        fh.write(snapshot.predict_snapshot(decision, scores, ch1))
-        fh.write(text)
-        fh.write("\n\n---\n## Pipeline-computed decision (deterministic)\n\n")
-        fh.write(f"- total_score: **{decision['total_score']}** "
-                 f"(multiplier {decision['multiplier']})\n")
-        fh.write(f"- leading_sum: {decision['leading_sum']}\n")
-        fh.write(f"- divergence_flagged: **{decision['divergence_flagged']}**\n")
-        fh.write(f"- predicted_direction: **{decision['predicted_direction']}**\n")
-        fh.write(f"- predicted_magnitude_band: "
-                 f"**{decision['predicted_magnitude_band']}**\n")
-        fh.write(f"- confidence_score: {decision['confidence_score']}\n")
-        if horizon_calls:
-            fh.write("\n### Multi-timeframe outlook (LLM call, graded at "
-                     "T+h by src.horizon_grade)\n\n")
-            for key, hc in horizon_calls.items():
-                fh.write(f"- {key}: **{hc['direction']}** / "
-                         f"{hc['magnitude_band']} (conf {hc['confidence']})\n")
+        scores = compute_scores.parse_scores(text)
+        decision = compute_scores.compute(scores)
+        horizon_calls = compute_scores.parse_horizon_calls(scores)
+        _write(path, date_str, text, decision, scores, ch1, horizon_calls)
 
-    # 6. Scoreboard
-    board = scoreboard.load()
-    entry = scoreboard.get_or_create(board, date_str, config.TOPIC)
-    entry.update({
-        "predicted_direction": decision["predicted_direction"],
-        "predicted_magnitude_band": decision["predicted_magnitude_band"],
-        "confidence_score": decision["confidence_score"],
-        "total_score": decision["total_score"],
-        "multiplier": decision["multiplier"],
-        "components": decision["components"],
-        "leading_sum": decision["leading_sum"],
-        "divergence_flagged": decision["divergence_flagged"],
-        "horizon_calls": horizon_calls,
-        "news_judge_present": bool(nj),
-    })
-    scoreboard.save(board)
-    print(f"[predict] {date_str}: {decision['predicted_direction']}/"
-          f"{decision['predicted_magnitude_band']} "
-          f"(total {decision['total_score']}, div={decision['divergence_flagged']}, "
-          f"horizons={len(horizon_calls)}, news_judge={'yes' if nj else 'no'})"
-          f" -> {path}")
+        file_qc = output_qc.qc_general_predict(path)
+        last_qc = file_qc
+        if not file_qc.ok:
+            print(f"[predict] attempt {attempt + 1} file QC FAIL "
+                  f"({file_qc.reason}) — throwing out")
+            output_qc.reject(path)
+            continue
+
+        _update_scoreboard(date_str, decision, horizon_calls, nj)
+        print(f"[predict] {date_str}: {decision['predicted_direction']}/"
+              f"{decision['predicted_magnitude_band']} "
+              f"(total {decision['total_score']}, div={decision['divergence_flagged']}, "
+              f"horizons={len(horizon_calls)}, news_judge={'yes' if nj else 'no'})"
+              f" -> {path}")
+        return
+
+    print(f"[predict] FAIL-CLOSED after {args.retries + 1} attempt(s) "
+          f"({getattr(last_qc, 'reason', 'unknown')}) — no file, no scoreboard")
+    output_qc.reject(path)
+    raise SystemExit("general predict produced no quality-ok essay")
 
 
 if __name__ == "__main__":

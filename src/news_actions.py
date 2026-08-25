@@ -12,7 +12,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import config, db
+from . import config, db, output_qc, preopen
 from .event_edges import EVENT_FAMILIES, EventFamily
 from .finviz_universe import load_universe, tickers_for_bucket
 from .news_framework import apply_interactions, score_event
@@ -322,8 +322,17 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=500)
     ap.add_argument("--date", default=None)
     ap.add_argument("--finviz", default=None)
+    ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    if preopen.past_predict_cutoff() and not args.force:
+        jp = os.path.join(OUT_DIR, f"{date_str}_actions.json")
+        existing = output_qc.qc_news_actions(jp)
+        if existing.ok:
+            print(f"[news_actions] {date_str}: past 09:25 ET, keeping quality-ok")
+            return
+        print(f"[news_actions] {date_str}: past 09:25 ET — not writing a late copy")
+        return
     if args.finviz:
         os.environ["FINVIZ_CSV"] = args.finviz
     if not config.DATABASE_URL:
@@ -368,6 +377,11 @@ def main() -> None:
     print(f"[news_actions v4] events={report['unique_events']} "
           f"tickers={len(report['ticker_actions'])}")
     print(to_markdown(report)[:4000])
+    qc = output_qc.qc_news_actions(jp)
+    if not qc.ok:
+        print(f"[news_actions] QC FAIL ({qc.reason}) — throwing out")
+        output_qc.reject(jp, mp)
+        raise SystemExit("news actions produced no quality-ok file")
 
 
 if __name__ == "__main__":

@@ -16,7 +16,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "20 11,14 * * 1-5"
+    - cron: "20 11 * * 1-5"
 
 permissions:
   contents: write
@@ -38,6 +38,15 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install psycopg2-binary pandas || true
+      - name: Skip if past 09:25 ET
+        if: github.event_name == 'schedule'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "ET_HM=$ET_HM"
+          if [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — skip news_actions"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
       - name: Ensure finviz csv
         env:
           FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
@@ -54,6 +63,7 @@ jobs:
           ls -la data/finviz/ || true
           wc -l data/finviz/latest.csv 2>/dev/null || echo "NO FINVIZ CSV — ticker expand will be empty"
       - name: Run news actions
+        if: env.skip != 'yes'
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           FINVIZ_CSV: data/finviz/latest.csv
@@ -71,10 +81,7 @@ jobs:
           latest=$(ls -1t 01_daily/news/*_actions.md 2>/dev/null | head -1)
           if [ -n "$latest" ]; then head -100 "$latest"; fi
       - name: Commit
+        if: env.skip != 'yes'
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/news/ data/finviz/latest.csv 2>/dev/null || true
-          git commit -m "auto: news actions" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          bash scripts/safe_git_push.sh "auto: news actions" \
+            01_daily/news/ data/finviz/latest.csv

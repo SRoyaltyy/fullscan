@@ -3,7 +3,7 @@ name: News Parse (Supabase)
 on:
   schedule:
     # Several times on weekdays — keep parsed news fresh for predict
-    - cron: "15 10,12,14 * * 1-5"
+    - cron: "15 10,12 * * 1-5"
   workflow_dispatch:
     inputs:
       hours:
@@ -39,7 +39,17 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install psycopg2-binary || true
+      - name: Skip if past 09:25 ET
+        if: github.event_name == 'schedule'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "ET_HM=$ET_HM"
+          if [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — skip news_parse"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
       - name: Run news parse
+        if: env.skip != 'yes'
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
@@ -62,10 +72,6 @@ jobs:
             head -80 "$latest"
           fi
       - name: Commit
+        if: env.skip != 'yes'
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/news/ || true
-          git commit -m "auto: news parse" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          bash scripts/safe_git_push.sh "auto: news parse" 01_daily/news/

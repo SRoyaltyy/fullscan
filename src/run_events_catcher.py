@@ -27,7 +27,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import config, deepseek_client
+from . import config, deepseek_client, output_qc, preopen
 from .event_context import EVENTS_DIR
 from .run_events import _repair_json, extract_json, _windows
 
@@ -106,6 +106,7 @@ def _write_md_full(md_path: str, date_str: str, events: list[dict],
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
+    ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
     today = datetime.now(ZoneInfo(config.TZ)).date() if not args.date \
@@ -115,6 +116,30 @@ def main() -> None:
     os.makedirs(EVENTS_DIR, exist_ok=True)
     json_path = os.path.join(EVENTS_DIR, f"{date_str}_events.json")
     md_path = os.path.join(EVENTS_DIR, f"{date_str}_events.md")
+
+    existing = output_qc.qc_events_date(date_str)
+    # Gap-hunt is still useful when primary is quality-ok, but not after
+    # the bell and not when the only file on disk is a carry-forward.
+    if existing.ok and not args.force and preopen.past_predict_cutoff():
+        print(f"[catcher] {date_str}: primary quality-ok and past 09:25 ET "
+              "— skip gap hunt (would rewrite a pre-open copy)")
+        return
+    if existing.carried:
+        if preopen.past_predict_cutoff() and not args.force:
+            print(f"[catcher] {date_str}: primary is a carry-forward but "
+                  "past 09:25 ET — keeping it (cannot replace after the bell)")
+            return
+        print(f"[catcher] {date_str}: primary is a carry-forward — hunting "
+              "as REPLACEMENT after throwing it out")
+        output_qc.reject_events(date_str)
+
+    try:
+        preopen.refuse_if_late("events-catcher", force=args.force)
+    except SystemExit as e:
+        if existing.ok or existing.carried:
+            print(str(e), "— keeping existing file")
+            return
+        raise
 
     primary: dict = {"scan_date": date_str, "events": []}
     primary_md = ""
@@ -280,6 +305,13 @@ def main() -> None:
 
     print(f"[catcher] {date_str}: +{len(kept)} events "
           f"(replaced_primary={replacing}, {dropped} dups dropped) -> {json_path}")
+    qc = output_qc.qc_events_date(date_str)
+    if not qc.ok:
+        print(f"[catcher] {date_str}: file QC still FAIL ({qc.reason}) — "
+              "fallback may carry; orchestrator will not treat this as success")
+        if qc.carried:
+            output_qc.reject_events(date_str)
+
 
 
 if __name__ == "__main__":

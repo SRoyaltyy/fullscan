@@ -1,15 +1,14 @@
 name: Sector Daily (auto)
 
-# Mirrors general daily_pipeline timing (HKT-aware):
-#   PREDICT  ~ evening HKT before US open window (skip Sat/Sun predict)
-#   OUTCOME+REFLECT ~ early HKT morning after US session graded
-# Each sector = independent LLM run (sequential).
-# After predict and after outcome: birds-eye _BOARD.md
+# PREDICT must finish BEFORE 09:30 ET (21:30 HKT). Sequential 11-sector
+# loop is ~70 min on the single ECS runner, so we start ~07:10 ET.
+# Hour gate + src.preopen refuse writes after 09:25 ET.
+# OUTCOME+REFLECT stay in the post-close window (not predictive).
 
 on:
   schedule:
-    - cron: "40 12 * * 1-5"
-    - cron: "10 22 * * 1-5"
+    - cron: "10 11 * * 1-5"   # ~07:10 ET predict (was 12:40 UTC / 08:40 ET — too late)
+    - cron: "10 22 * * 1-5"   # ~18:10 ET outcome+reflect
   workflow_dispatch:
     inputs:
       stage:
@@ -24,6 +23,10 @@ on:
         description: "Comma-separated or empty = all 11"
         required: false
         default: ""
+      force:
+        description: "Ignore 09:25 ET cutoff and skip-if-good"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -55,26 +58,27 @@ jobs:
             PLAN="none"
             UTC_HOUR=$(date -u +%H)
             HOUR=$((10#$UTC_HOUR))
-            DOW=$(TZ=Asia/Hong_Kong date +%u)
+            ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+            DOW=$(TZ=America/New_York date +%u)
             # GitHub cron jitter is routinely +15–70 min. Exact-hour match
             # (UTC_HOUR == 12 / 22) is why 08-19 printed green in ~1 min
             # with 0/11 essays (ran 13:28 UTC, PLAN=none).
             if [ "$HOUR" -ge 18 ]; then
               PLAN="outcome_reflect"
-            elif [ "$HOUR" -ge 11 ]; then
+            elif [ "$ET_HM" -ge 600 ] && [ "$ET_HM" -lt 925 ]; then
               PLAN="predict"
             fi
             if [ "$PLAN" = "predict" ] && [ "$DOW" -ge 6 ]; then
               PLAN="none"
               echo "Weekend — sector predict skipped."
             fi
-            echo "UTC_HOUR=$UTC_HOUR PLAN=$PLAN"
+            echo "UTC_HOUR=$UTC_HOUR ET_HM=$ET_HM PLAN=$PLAN"
             echo "plan=$PLAN" >> "$GITHUB_OUTPUT"
           else
             echo "plan=${{ github.event.inputs.stage }}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Sector PREDICT (sequential)
+      - name: Sector PREDICT (sequential, skip-if-good, QC+retry)
         if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -85,11 +89,13 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATE: ${{ github.event.inputs.run_date }}
           SECTORS: ${{ github.event.inputs.sectors }}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
           set -e
           ARGS=()
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SECTORS" ] && ARGS+=(--sectors "$SECTORS")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
           python -m src.run_sector_predict "${ARGS[@]}"
 
       - name: Sector board (after predict)
@@ -147,9 +153,7 @@ jobs:
       - name: Commit
         if: steps.stage.outputs.plan != 'none'
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ || true
-          git commit -m "auto: sector daily ${{ steps.stage.outputs.plan }}" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          bash scripts/safe_git_push.sh \
+            "auto: sector daily ${{ steps.stage.outputs.plan }}" \
+            01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ \
+            01_daily/*_preopen_qc.json

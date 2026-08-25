@@ -2,22 +2,27 @@ name: Event Scanner
 
 # Daily TWO-PASS scan of market-moving events (past 2 weeks / today /
 # next 2 weeks) across all major regions and sectors.
-#   Pass 1 (run_events):          primary scan
+#   Pass 1 (run_events):          primary scan (skip-if-good, QC+retry)
 #   Pass 2 (run_events_catcher):  gap hunt — emphasis on government
 #                                 actions (executive orders, legislation,
 #                                 judicial, agency regulatory)
-# Runs BEFORE the predict stage (predict fires 11:34 UTC) so
-# 01_daily/events/latest.md is fresh for all downstream workflows.
+#   Pass 3 (events_fallback):     last-ditch carry; NOT treated as quality-ok
+# Runs FIRST on the ECS runner (~06:10 ET) so predict/sectors are not
+# blocked, and so 01_daily/events/latest.md is fresh for downstream.
 
 on:
   schedule:
-    - cron: "43 10 * * *"   # 10:43 UTC daily (~06:43 ET), ~50 min before predict
+    - cron: "10 10 * * 1-5"   # 06:10 ET weekdays (was 10:43 UTC)
   workflow_dispatch:
     inputs:
       run_date:
         description: "YYYY-MM-DD (default: today ET)"
         required: false
         default: ""
+      force:
+        description: "Ignore 09:25 ET cutoff and skip-if-good"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -39,9 +44,6 @@ jobs:
       - name: Install dependencies
         run: pip install requests ddgs
 
-      # continue-on-error: catcher must still run as REPLACEMENT if primary
-      # dies or returns empty. Primary Python already exits 0 on parse-fail;
-      # this covers unexpected exceptions / API outages.
       - name: Pass 1 — primary event scan
         continue-on-error: true
         id: primary
@@ -51,7 +53,12 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATE: ${{ github.event.inputs.run_date }}
-        run: python -m src.run_events ${DATE:+--date "$DATE"}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+        run: |
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          python -m src.run_events "${ARGS[@]}"
 
       - name: Pass 2 — catcher (gap hunt / replacement)
         continue-on-error: true
@@ -62,42 +69,33 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATE: ${{ github.event.inputs.run_date }}
-        run: python -m src.run_events_catcher ${DATE:+--date "$DATE"}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+        run: |
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          python -m src.run_events_catcher "${ARGS[@]}"
 
-      # Pass 3 — the day must never end with zero events: if both passes
-      # failed (API outage / double parse fail), carry forward the previous
-      # still-live events, visibly marked as carried. Orchestrator still
-      # re-dispatches a real scan later.
+      # Pass 3 — last-ditch only: carry is NOT artifact_ok. Orchestrator
+      # will re-dispatch a real scan before 09:25 ET.
       - name: Pass 3 — carry-forward fallback (never zero events)
         continue-on-error: true
         env:
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.events_fallback ${DATE:+--date "$DATE"}
 
+      - name: Self-read QC
+        if: always()
+        env:
+          DATE: ${{ github.event.inputs.run_date }}
+        run: |
+          D="${DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.output_qc --kind events --path "01_daily/events/${D}_events.json" \
+            || echo "QC FAIL — orchestrator must not treat this as success"
+
       - name: Commit event scan outputs
         if: always()
         run: |
-          set -uo pipefail
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/events 01_daily/_transcripts || true
-          if git diff --staged --quiet; then
-            echo "No event output changes to commit"
-            exit 0
-          fi
-          git commit -m "auto: event scan + catcher [$(date -u +%F)]" || {
-            echo "No changes to commit"
-            exit 0
-          }
-          # Soft-fail push so a concurrent bot push cannot red the whole day
-          if ! git pull --rebase origin main; then
-            git pull origin main || true
-          fi
-          if git push origin main; then
-            echo "Pushed event scan outputs"
-          else
-            echo "[warn] first push rejected — rebase and retry"
-            git pull --rebase origin main || git pull origin main || true
-            git push origin main || echo "[warn] push failed — files exist on runner; orchestrator may re-dispatch"
-          fi
-          exit 0
+          bash scripts/safe_git_push.sh \
+            "auto: event scan + catcher [$(date -u +%F)]" \
+            01_daily/events 01_daily/_transcripts

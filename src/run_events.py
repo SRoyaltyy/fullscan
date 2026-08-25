@@ -24,7 +24,7 @@ import re
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from . import config, deepseek_client
+from . import config, deepseek_client, output_qc, preopen
 from .event_context import EVENTS_DIR
 
 RUBRIC_PATH = os.path.join(config.GROUNDING, "event_scanner_rubric.md")
@@ -78,13 +78,19 @@ def _event_key(ev: dict) -> str:
 def merge_with_existing(json_path: str, payload: dict) -> dict:
     """Same-day re-runs must NEVER shrink the event list: union events from
     the existing file with the new run, keyed by normalized title (new run
-    wins on duplicates). Rescues the list even if this run's parse failed."""
+    wins on duplicates). Rescues the list even if this run's parse failed.
+
+    Carry-forwards are NOT a real prior scan — do not union them back in.
+    """
     try:
         with open(json_path, encoding="utf-8") as fh:
             old = json.load(fh)
     except (OSError, ValueError):
         return payload
-    old_events = old.get("events") or []
+    if old.get("carried_from"):
+        return payload
+    old_events = [e for e in (old.get("events") or [])
+                  if e.get("status") != "carried"]
     new_events = payload.get("events") or []
     if not old_events:
         return payload
@@ -173,17 +179,8 @@ def _repair_json(report: str) -> dict | None:
     return extract_json(out)
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=None)
-    args = ap.parse_args()
-    date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
-    today = datetime.now(ZoneInfo(config.TZ)).date() if not args.date \
-        else datetime.strptime(args.date, "%Y-%m-%d").date()
-    win = _windows(today)
-
-    config.require_llm()
-
+def _one_scan(date_str: str, win: dict) -> None:
+    """One LLM scan + write. Caller owns skip/retry/QC."""
     with open(RUBRIC_PATH, encoding="utf-8") as fh:
         rubric = fh.read()
 
@@ -222,11 +219,15 @@ def main() -> None:
     payload.setdefault("scan_date", date_str)
     payload["windows"] = win
     payload["repaired"] = repaired
-    # Never let a same-day re-run clobber a richer earlier scan.
+    # Never let a same-day re-run clobber a richer earlier scan — unless
+    # the earlier scan is a carry-forward, which we already threw out.
     payload = merge_with_existing(json_path, payload)
     events = payload.get("events", [])
     if events:
         payload.pop("error", None)
+    # Drop carried leftovers if a real scan produced anything.
+    if events and any(e.get("status") != "carried" for e in events):
+        payload.pop("carried_from", None)
 
     with open(json_path, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2, ensure_ascii=False)
@@ -256,7 +257,6 @@ def main() -> None:
         fh.write("\n\n---\n\n## Model narrative\n\n")
         fh.write(md_body + "\n")
 
-    # stable pointers for other workflows
     for src, dst in ((md_path, "latest.md"), (json_path, "latest.json")):
         with open(src, encoding="utf-8") as fh:
             content = fh.read()
@@ -267,6 +267,54 @@ def main() -> None:
     print(f"[events] {date_str}: {n} events "
           f"({'parse OK' if n else 'PARSE FAILED'}"
           f"{', repaired' if repaired else ''}) -> {md_path}")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date", default=None)
+    ap.add_argument("--force", action="store_true")
+    ap.add_argument("--retries", type=int, default=1)
+    args = ap.parse_args()
+    date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    today = datetime.now(ZoneInfo(config.TZ)).date() if not args.date \
+        else datetime.strptime(args.date, "%Y-%m-%d").date()
+    win = _windows(today)
+
+    config.require_llm()
+
+    existing = output_qc.qc_events_date(date_str)
+    if existing.ok and not args.force:
+        print(f"[events] {date_str}: skip, quality-ok already on disk "
+              f"({existing.size} chars)")
+        return
+    if preopen.past_predict_cutoff() and not args.force:
+        print(f"[events] {date_str}: past 09:25 ET with no quality-ok scan "
+              f"(existing={existing.reason or 'missing'}) — not rewriting")
+        return
+    if existing.carried or existing.empty or existing.timeout:
+        print(f"[events] {date_str}: existing file rejected "
+              f"({existing.reason}) — throwing out and rerunning")
+        output_qc.reject_events(date_str)
+
+    preopen.refuse_if_late("events", force=args.force)
+
+    last_qc = existing
+    for attempt in range(args.retries + 1):
+        if attempt and preopen.past_predict_cutoff() and not args.force:
+            print("[events] past 09:25 ET, not retrying")
+            break
+        _one_scan(date_str, win)
+        last_qc = output_qc.qc_events_date(date_str)
+        if last_qc.ok:
+            print(f"[events] {date_str}: file QC OK after attempt {attempt + 1}")
+            return
+        print(f"[events] {date_str}: attempt {attempt + 1} QC FAIL "
+              f"({last_qc.reason}) — throwing out")
+        output_qc.reject_events(date_str)
+
+    print(f"[events] {date_str}: FAIL-CLOSED ({getattr(last_qc, 'reason', '')}) "
+          f"— catcher may still replace")
+    # Exit 0 so the catcher step still runs as replacement.
 
 
 if __name__ == "__main__":

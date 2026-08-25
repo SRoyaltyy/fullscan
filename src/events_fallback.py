@@ -106,6 +106,8 @@ def ensure(date_str: str) -> bool:
     with open(os.path.join(EVENTS_DIR, "latest.md"), "w", encoding="utf-8") as fh:
         fh.write(md_text)
     print(f"[events-fallback] {date_str}: carried {len(events)} events from {src_date}")
+    print(f"[events-fallback] NOTE: carry-forward is NOT a quality-ok scan. "
+          f"The orchestrator must re-dispatch a real scan before 09:25 ET.")
     return True
 
 

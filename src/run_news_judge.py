@@ -15,7 +15,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, deepseek_client, memory
+from . import config, deepseek_client, memory, output_qc, preopen
 try:
     from .finviz_digest import inject_block as finviz_digest_block
 except Exception:  # module may not exist on very old checkouts
@@ -132,10 +132,40 @@ def inject_block(date_str: str | None = None, max_chars: int = 3500) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
+    ap.add_argument("--force", action="store_true")
+    ap.add_argument("--retries", type=int, default=1)
     args = ap.parse_args()
     date_str = args.date or _latest_parsed_date() or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
     config.require_llm()
+
+    path = os.path.join(NEWS_DIR, f"{date_str}_judge.md")
+    existing = output_qc.qc_news_judge(path)
+    backup = None
+    if existing.ok and not args.force:
+        # Refresh is allowed before 09:00 ET (the 08:25 slot still has
+        # newer headlines). After 09:00 keep the good pre-open copy.
+        if preopen.et_hm() >= 900:
+            print(f"[news_judge] {date_str}: skip, quality-ok and "
+                  f">= 09:00 ET — not overwriting a pre-open copy")
+            return
+        print(f"[news_judge] {date_str}: quality-ok exists but still "
+              f"before 09:00 ET — refresh allowed")
+        backup = Path(path).read_text(encoding="utf-8")
+    elif os.path.exists(path) and not existing.ok:
+        print(f"[news_judge] {date_str}: existing file rejected "
+              f"({existing.reason}) — throwing out")
+        output_qc.reject(path, os.path.join(NEWS_DIR, f"{date_str}_judge.json"))
+
+    if preopen.past_predict_cutoff() and not args.force:
+        if existing.ok:
+            print(f"[news_judge] {date_str}: past 09:25 ET, keeping quality-ok")
+            return
+        print(f"[news_judge] {date_str}: past 09:25 ET with no quality-ok "
+              "judge — not writing a late copy")
+        return
+
+    preopen.refuse_if_late("news_judge", force=args.force)
 
     report = _load_parsed(date_str)
     if not report:
@@ -145,33 +175,51 @@ def main() -> None:
     system = _read(PROMPT_PATH) or "You are the news priority judge. Follow the user instructions exactly."
     user_msg = _build_user_msg(date_str, report)
 
-    text = deepseek_client.chat(
-        [{"role": "system", "content": system},
-         {"role": "user", "content": user_msg}],
-        model=getattr(config, "MODEL_JUDGE", config.MODEL_PREDICT),
-        tools=False, max_tokens=4000,
-        transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_judge.json"),
-        stage_label=f"NEWS_JUDGE {date_str}",
-    )
+    last_qc = existing
+    for attempt in range(args.retries + 1):
+        if attempt and preopen.past_predict_cutoff() and not args.force:
+            print("[news_judge] past 09:25 ET, not retrying")
+            break
+        text = deepseek_client.chat(
+            [{"role": "system", "content": system},
+             {"role": "user", "content": user_msg}],
+            model=getattr(config, "MODEL_JUDGE", config.MODEL_PREDICT),
+            tools=False, max_tokens=4000,
+            transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_judge.json"),
+            stage_label=f"NEWS_JUDGE {date_str}"
+                        + (f" retry{attempt}" if attempt else ""),
+        )
+        os.makedirs(NEWS_DIR, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(f"# News Judge — {date_str}\n\n")
+            fh.write(text or "")
+            fh.write("\n")
+        last_qc = output_qc.qc_news_judge(path)
+        if last_qc.ok:
+            latest = Path(NEWS_DIR) / "latest_judge.md"
+            latest.write_text(Path(path).read_text(encoding="utf-8"), encoding="utf-8")
+            try:
+                from .judge_apply import parse_judge_md
+                parsed = parse_judge_md(text)
+                parsed["date"] = date_str
+                jp = Path(NEWS_DIR) / f"{date_str}_judge.json"
+                jp.write_text(json.dumps(parsed, indent=1), encoding="utf-8")
+                print(f"[news_judge] structured -> {jp} tickers={list((parsed.get('tickers') or {}).keys())}")
+            except Exception as e:
+                print(f"[news_judge] structured parse failed: {e}")
+            print(f"[news_judge] {date_str} -> {path}")
+            return
+        print(f"[news_judge] attempt {attempt + 1} QC FAIL ({last_qc.reason}) "
+              "— throwing out")
+        output_qc.reject(path)
 
-    os.makedirs(NEWS_DIR, exist_ok=True)
-    path = os.path.join(NEWS_DIR, f"{date_str}_judge.md")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write(f"# News Judge — {date_str}\n\n")
-        fh.write(text)
-        fh.write("\n")
-    latest = Path(NEWS_DIR) / "latest_judge.md"
-    latest.write_text(Path(path).read_text(encoding="utf-8"), encoding="utf-8")
-    try:
-        from .judge_apply import parse_judge_md
-        parsed = parse_judge_md(text)
-        parsed["date"] = date_str
-        jp = Path(NEWS_DIR) / f"{date_str}_judge.json"
-        jp.write_text(json.dumps(parsed, indent=1), encoding="utf-8")
-        print(f"[news_judge] structured -> {jp} tickers={list((parsed.get('tickers') or {}).keys())}")
-    except Exception as e:
-        print(f"[news_judge] structured parse failed: {e}")
-    print(f"[news_judge] {date_str} -> {path}")
+    print(f"[news_judge] FAIL-CLOSED ({getattr(last_qc, 'reason', '')})")
+    if backup:
+        Path(path).write_text(backup, encoding="utf-8")
+        print(f"[news_judge] restored previous quality-ok copy")
+        return
+    output_qc.reject(path)
+    raise SystemExit("news judge produced no quality-ok file")
 
 
 if __name__ == "__main__":
