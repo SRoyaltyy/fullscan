@@ -11,8 +11,13 @@
 # Never fails the caller.
 set +e
 
+# ExecStartPre=+ runs as root. `openclaw config set` would then write
+# /root/.openclaw, which the gha-owned gateway never reads. Pin HOME.
+export HOME="${FULLSCAN_HOME:-/home/gha}"
+export USER="${FULLSCAN_USER:-gha}"
+
 TARGET="${OPENCLAW_TIMEOUT:-10800}"
-echo "[openclaw-timeouts] want timeoutSeconds/idleTimeoutSeconds=${TARGET}"
+echo "[openclaw-timeouts] want timeoutSeconds/idleTimeoutSeconds=${TARGET} home=$HOME uid=$(id -u)"
 
 if command -v openclaw >/dev/null 2>&1; then
   openclaw config set agents.defaults.timeoutSeconds "$TARGET"

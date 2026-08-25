@@ -41,6 +41,7 @@ fi
 export OPENCLAW_GATEWAY_URL="${OPENCLAW_GATEWAY_URL:-http://127.0.0.1:18789}"
 export OPENCLAW_TIMEOUT="${OPENCLAW_TIMEOUT:-10800}"
 export FULLSCAN_PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
+export FULLSCAN_HOME="${FULLSCAN_HOME:-/home/gha}"
 export PYTHONUNBUFFERED=1
 
 cd "$ROOT"
@@ -58,6 +59,9 @@ fi
 git fetch origin main
 git checkout main
 git reset --hard origin/main
+# reset --hard restores git's 100644 mode. systemd ExecStart uses bash
+# now, but keep +x so a hand-run still works.
+chmod +x "$ROOT/scripts/"*.sh || true
 
 # Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call,
 # and make sure the 05:55 timer is actually enabled.

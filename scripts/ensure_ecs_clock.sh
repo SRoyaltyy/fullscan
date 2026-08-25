@@ -4,8 +4,9 @@
 # Never fails the caller.
 set +e
 
+export HOME="${FULLSCAN_HOME:-/home/gha}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-echo "[ecs-clock] repo=$ROOT uid=$(id -u) user=$(id -un)"
+echo "[ecs-clock] repo=$ROOT uid=$(id -u) user=$(id -un) home=$HOME"
 
 bash "$ROOT/scripts/ensure_openclaw_timeouts.sh"
 
@@ -29,10 +30,11 @@ run_install() {
 if [ "$(id -u)" -eq 0 ]; then
   run_install
 elif sudo -n true 2>/dev/null; then
-  sudo bash "$ROOT/scripts/install_ecs_preopen.sh"
+  sudo -E HOME="$HOME" bash "$ROOT/scripts/install_ecs_preopen.sh"
 else
   echo "[ecs-clock] no root/sudo — cannot enable the timer from this job"
-  echo "[ecs-clock] run once on the box: sudo bash $ROOT/scripts/install_ecs_preopen.sh"
+  echo "[ecs-clock] GitHub cron 09:55 UTC is the backup clock until someone runs:"
+  echo "[ecs-clock]   sudo bash $ROOT/scripts/install_ecs_preopen.sh"
   exit 0
 fi
 

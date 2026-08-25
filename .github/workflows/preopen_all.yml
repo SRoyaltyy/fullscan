@@ -1,18 +1,25 @@
 name: Pre-Open ALL (predictive one-shot)
 
 # One-shot predictive write that must land before 09:30 ET.
-# Sequential. Backup only — the ECS systemd timer is the clock.
+# Sequential.
 #
 #   finviz digest → events + catcher (no carry) → news parse → news judge
 #   → news actions → general predict → 11 sector predicts → sector board
 #   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
 #   → workflow check
 #
-# CLOCK: the ECS systemd timer (scripts/systemd/fullscan-preopen.timer)
-# at 05:55 ET is the primary start. This workflow has NO schedule.
-# workflow_dispatch + orchestrator last-chance are backups only.
-# /tmp/fullscan-preopen.lock stops this job from running on top of
-# the systemd service.
+# CLOCK:
+#   1. ECS systemd timer at 05:55 America/New_York (DST-correct). Primary.
+#   2. This workflow's GitHub cron at 09:55 UTC = 05:55 EDT. Backup.
+#      flock /tmp/fullscan-preopen.lock: if systemd already owns the box,
+#      this job backs off. If the timer was never enabled, GitHub still
+#      starts the ECS runner on time instead of waiting for orchestrator
+#      06:50 ET.
+#   3. workflow_dispatch + orchestrator last-chance after that.
+#
+# GitHub cron is UTC and DST-blind. After US falls back to EST, 09:55 UTC
+# is 04:55 ET — too early, harmless (python still runs). systemd is the
+# DST-correct clock; this cron is insurance until the timer is proven live.
 #
 # NOT in this job (they MUST still run later on their own crons +
 # orchestrator guard): outcome/reflect, learn_cycle, deepthink, weekly,
@@ -22,9 +29,12 @@ name: Pre-Open ALL (predictive one-shot)
 # 09:25 ET cutoff: late starts refuse new predictive writes.
 #
 # OpenClaw per-call timeout is 3 hours so a long Grok research turn is
-# not killed as a 30-minute stub. Job budget is 6 hours.
+# not killed as a 9-minute stub. Job budget is 6 hours.
 
 on:
+  schedule:
+    # 05:55 EDT. Backup if systemd timer is not enabled on the box.
+    - cron: "55 9 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:
@@ -51,6 +61,7 @@ jobs:
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
+      FULLSCAN_HOME: "/home/gha"
     steps:
       - name: Back off if ECS systemd pre-open owns the box
         run: |
@@ -85,7 +96,8 @@ jobs:
         if: env.skip != 'yes'
         run: |
           chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
-            scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh || true
+            scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
+            scripts/safe_git_push.sh || true
           bash scripts/ensure_ecs_clock.sh
 
       - name: Gate — weekend / past cutoff
