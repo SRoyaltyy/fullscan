@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
 import urllib.error
@@ -30,6 +31,9 @@ from . import config, grok_review, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
+# Lives on the ECS disk, OUTSIDE the Actions work tree. checkout --clean
+# must not be able to delete a finished day's files, or skip-if-good is a lie.
+PERSIST = Path(os.environ.get("FULLSCAN_PERSIST", "/home/gha/fullscan-persist"))
 
 # Logical modules this one-button job is responsible for. Keys match
 # daily_orchestrator.yml workflow files (minus .yml) where possible.
@@ -60,6 +64,78 @@ def _p(*parts: str) -> Path:
 
 def _exists(*parts: str) -> bool:
     return _p(*parts).exists()
+
+
+def _date_paths(root: Path, date: str) -> list[Path]:
+    """Today's predictive artifacts only. Missing paths are omitted."""
+    hits: list[Path] = []
+    for folder in (
+        root / "01_daily",
+        root / "01_daily" / "general",
+        root / "01_daily" / "events",
+        root / "01_daily" / "news",
+        root / "01_daily" / "_transcripts",
+        root / "01_daily" / "_channel1",
+    ):
+        if folder.is_dir():
+            hits.extend(sorted(folder.glob(f"{date}*")))
+            hits.extend(sorted(folder.glob(f"{date}_*")))
+    sector = root / "01_daily" / "sectors" / date
+    if sector.exists():
+        hits.append(sector)
+    # unique, keep dirs
+    out: list[Path] = []
+    seen = set()
+    for p in hits:
+        rp = p.resolve() if p.exists() else p
+        if rp in seen or not p.exists():
+            continue
+        seen.add(rp)
+        out.append(p)
+    return out
+
+
+def restore_persist(date: str) -> int:
+    """Copy a finished day back into the checkout so skip-if-good can see it."""
+    if not PERSIST.is_dir():
+        return 0
+    n = 0
+    for src in _date_paths(PERSIST, date):
+        rel = src.relative_to(PERSIST)
+        dest = ROOT / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if src.is_dir():
+            shutil.copytree(src, dest, dirs_exist_ok=True)
+        else:
+            shutil.copy2(src, dest)
+        n += 1
+    if n:
+        print(f"[preopen-all] persist restore {date}: {n} paths from {PERSIST}",
+              flush=True)
+    return n
+
+
+def snapshot_persist(date: str) -> int:
+    """Mirror today's artifacts off the checkout so a later clean cannot wipe them."""
+    try:
+        PERSIST.mkdir(parents=True, exist_ok=True)
+    except OSError as e:
+        print(f"[preopen-all] persist mkdir failed: {e}", flush=True)
+        return 0
+    n = 0
+    for src in _date_paths(ROOT, date):
+        rel = src.relative_to(ROOT)
+        dest = PERSIST / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if src.is_dir():
+            shutil.copytree(src, dest, dirs_exist_ok=True)
+        else:
+            shutil.copy2(src, dest)
+        n += 1
+    if n:
+        print(f"[preopen-all] persist snapshot {date}: {n} paths → {PERSIST}",
+              flush=True)
+    return n
 
 
 def _force_args(force: bool) -> list[str]:
@@ -133,11 +209,13 @@ def run(date: str | None = None, force: bool = False) -> None:
     print(f"  PRE-OPEN ALL — {date} (America/New_York)")
     print("  Predictive only. Must finish before 09:30 ET.")
     print("  Skip-if-good: quality files for THIS day are not overwritten.")
+    print("  Persist: /home/gha/fullscan-persist survives Actions checkout.")
     print("  Carry-forwards / timeout stubs are trash and fail the job.")
     print("  Grok reads the actual MD/JSON once. Regex is not enough.")
     print("=" * 72)
 
     skip_writes = False
+    restore_persist(date)
     if not force:
         pre = output_qc.preopen_report(date)
         grok_ok = grok_review.prior_ok(date)
@@ -166,6 +244,7 @@ def run(date: str | None = None, force: bool = False) -> None:
                          "returncode": code})
         if code != 0:
             print(f"[preopen-all] WARN: {title} exited {code}")
+        snapshot_persist(date)
         return code
 
     fa = _force_args(force)
@@ -317,6 +396,7 @@ def run(date: str | None = None, force: bool = False) -> None:
     md_path.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
     print(f"[preopen-all] wrote {status_path}")
     print(f"[preopen-all] wrote {md_path}")
+    snapshot_persist(date)
 
     if missing_required or not report.get("all_ok") or not grok.get("ok"):
         raise SystemExit(

@@ -50,6 +50,7 @@ jobs:
     timeout-minutes: 360
     env:
       OPENCLAW_TIMEOUT: "10800"
+      FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
     steps:
       - name: Back off if ECS systemd pre-open owns the box
         run: |
@@ -64,6 +65,10 @@ jobs:
 
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
+        with:
+          # Do not git-clean untracked 01_daily files. Skip-if-good reads
+          # the work tree; a clean here is how a finished day gets rewritten.
+          clean: false
 
       - uses: actions/setup-python@v5
         if: env.skip != 'yes'
