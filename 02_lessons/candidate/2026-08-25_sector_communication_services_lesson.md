@@ -1,0 +1,31 @@
+---
+trigger_pattern: "A sector scorecard entry shows `predicted None/None` even though a contemporaneous sector PREDICT block exists with explicit `predicted_direction` and `predicted_magnitude_band`; the grader then records direction/magnitude misses against `None`, corrupting rolling accuracy."
+current_behavior: "When the parsed prediction baseline is missing at grading time, the scorecard writes `direction_hit: False`, `magnitude_hit: False`, and `predicted None/None` without first checking whether the PREDICT block/review still contains the actual prediction."
+corrected_behavior: "Before recording a sector miss, verify whether a prediction baseline can be recovered from the PREDICT block, the deterministic pipeline decision, or the premarket review. If the prediction exists, grade against it. Only record `predicted None/None` when no contemporaneous prediction can be recovered. Flag ingestion failures separately from reasoning misses, and do not let false `None` entries reduce rolling accuracy."
+evidence_cited: "The 2026-08-25 Communication Services PREDICT explicitly said `up/mild` with total score 3.6 and a deterministic pipeline decision. The OUTCOME said XLC +0.77%, SPY +0.32%, rel +0.45%, actual direction `up`, actual magnitude `mild`, and the review stated “Correct — up/mild call nailed both direction and magnitude.” The scoreboard nonetheless recorded `direction_hit: False | magnitude_hit: False | predicted None/None vs actual 0.7656700611540224%`. That mismatch is a grader ingestion failure, not a reasoning failure."
+error_category: "A"
+falsifier: "If an audit showed the 2026-08-25 sector PREDICT file was actually unavailable at grading time and the PREDICT block shown here is a backfill, then the scorecard’s `None/None` would be a legitimate “no baseline” and this lesson would be a false positive. Also, if a future `None` entry is caused by a prediction being withdrawn/canceled before open, the corrected behavior should not force a grade from stale data."
+sector: "Communication Services"
+date: "2026-08-25"
+status: "candidate"
+---
+
+# Sector Reflection — Communication Services — 2026-08-25
+
+Triage: **TOOL/DATA failure** — the reasoning prediction was correct; the scorecard entry was corrupted by a missing/parsed-as-`None` prediction baseline at grading time.
+
+LESSON_BEGIN  
+ERROR_CATEGORY: A  
+TRIGGER_PATTERN: A sector scorecard entry shows `predicted None/None` even though a contemporaneous sector PREDICT block exists with explicit `predicted_direction` and `predicted_magnitude_band`; the grader then records direction/magnitude misses against `None`, corrupting rolling accuracy.  
+CURRENT_BEHAVIOR: When the parsed prediction baseline is missing at grading time, the scorecard writes `direction_hit: False`, `magnitude_hit: False`, and `predicted None/None` without first checking whether the PREDICT block/review still contains the actual prediction.  
+CORRECTED_BEHAVIOR: Before recording a sector miss, verify whether a prediction baseline can be recovered from the PREDICT block, the deterministic pipeline decision, or the premarket review. If the prediction exists, grade against it. Only record `predicted None/None` when no contemporaneous prediction can be recovered. Flag ingestion failures separately from reasoning misses, and do not let false `None` entries reduce rolling accuracy.  
+EVIDENCE: The 2026-08-25 Communication Services PREDICT explicitly said `up/mild` with total score 3.6 and a deterministic pipeline decision. The OUTCOME said XLC +0.77%, SPY +0.32%, rel +0.45%, actual direction `up`, actual magnitude `mild`, and the review stated “Correct — up/mild call nailed both direction and magnitude.” The scoreboard nonetheless recorded `direction_hit: False | magnitude_hit: False | predicted None/None vs actual 0.7656700611540224%`. That mismatch is a grader ingestion failure, not a reasoning failure.  
+LESSON_MATCH_CHECK: Matches the 2026-08-25 general lesson pattern (prediction file unavailable/empty to grader) and the 2026-08-22/2026-08-23 baseline-lesson family. This is the sector-scorecard variant: a sector prediction existed, but the grader treated the baseline as `None`. It does **not** match the 2026-08-21 reasoning/weighting lessons because all S0–S4 grades were later confirmed correct.  
+BACKWARD_CHECK: Corrected behavior would flip 2026-08-25 Communication Services from a false direction/magnitude miss to a direction HIT and magnitude HIT, matching the outcome review and improving rolling accuracy. Earlier sector runs (08-10 through 08-21) all have explicit predictions in history and are unaffected; 08-24 remains pending. No other prior record changes.  
+CONFLICT_CHECK: No conflict with active reasoning lessons. The 08-21 futures/oil reversal lesson, 08-13 oil lesson, 08-14 follow-through lesson, 08-17/08-18 legal lesson, and 08-11 ad/AI dedupe lesson concern how to set the prediction; this lesson concerns how the scorecard grades it. It reinforces, rather than contradicts, the 2026-08-25 missing-prediction-file lesson.  
+APPLIED_LESSON_CHECK: The prediction correctly applied the relevant active lessons: 08-21 priced-macro+reversal, 08-13 oil-reversal checklist, 08-14 follow-through `up/mild`, stale-legal treatment, ad/AI dedupe, and the scope rule to keep the band mild. The outcome confirmed each application. The only failed step was scorecard ingestion of the prediction baseline.  
+FALSIFIER: If an audit showed the 2026-08-25 sector PREDICT file was actually unavailable at grading time and the PREDICT block shown here is a backfill, then the scorecard’s `None/None` would be a legitimate “no baseline” and this lesson would be a false positive. Also, if a future `None` entry is caused by a prediction being withdrawn/canceled before open, the corrected behavior should not force a grade from stale data.  
+DIVERGENCE_VERDICT: none_flagged  
+ACTIVE_LESSON_REVIEW: All active reasoning lessons applied in the prediction were validated by the outcome. The 2026-08-25 missing-file lesson should be extended to sector scorecards: a present sector PREDICT must not be graded as `None` merely because the parsed baseline is missing. No other active lesson needs revision.  
+SECTOR: Communication Services  
+LESSON_END
