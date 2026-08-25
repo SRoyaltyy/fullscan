@@ -25,7 +25,8 @@ from zoneinfo import ZoneInfo
 
 import pandas as pd
 
-from . import config, scoreboard
+from . import config, output_qc, scoreboard
+from .sector_taxonomy import FINVIZ_SECTORS
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "data" / "stock_book"
@@ -140,9 +141,15 @@ def check(date: str) -> dict:
         inputs.append(_mk("news_actions", "news", "missing", 0))
 
     jd = ROOT / "01_daily" / "news"
-    has_judge = (jd / f"{date}_judge.json").exists() or (jd / f"{date}_judge.md").exists()
-    inputs.append(_mk("news_judge", "news", "ok" if has_judge else "missing",
-                      None, "" if has_judge else "LLM ticker tilts absent"))
+    judge_qc = output_qc.qc_news_judge(jd / f"{date}_judge.md")
+    if judge_qc.ok:
+        inputs.append(_mk("news_judge", "news", "ok", None, ""))
+    elif (jd / f"{date}_judge.md").exists():
+        inputs.append(_mk("news_judge", "news", "degraded", None,
+                          f"file exists but QC fail: {judge_qc.reason}"))
+    else:
+        inputs.append(_mk("news_judge", "news", "missing", None,
+                          "LLM ticker tilts absent"))
     has_digest = (jd / f"{date}_finviz_digest.json").exists()
     inputs.append(_mk("finviz_digest", "news", "ok" if has_digest else "missing", None))
 
@@ -198,35 +205,81 @@ def check(date: str) -> dict:
         else:
             inputs.append(_mk("ticker_checklist", "addon", "missing", None))
 
-    # --- events freshness ---
-    ev = ROOT / "01_daily" / "events" / "latest.json"
-    ev_status, ev_det = "missing", ""
-    if ev.exists():
+    # --- events freshness + QUALITY (carry-forwards are not a real scan) ---
+    ev_qc = output_qc.qc_events_date(date)
+    if ev_qc.ok:
         try:
-            data = json.loads(ev.read_text(encoding="utf-8"))
-            sd = data.get("scan_date") or ""
-            delta = abs((datetime.fromisoformat(sd) - datetime.fromisoformat(date)).days) if sd else 99
-            n_ev = len(data.get("events") or [])
-            if delta > 3:
-                ev_status, ev_det = "stale", f"scan_date={sd} ({delta}d old — tilt ignored)"
-            elif n_ev == 0:
-                ev_status, ev_det = "degraded", "no events"
-            else:
-                ev_status, ev_det = "ok", f"{n_ev} events, scan_date={sd}"
+            n_ev = len((json.loads(
+                (ROOT / "01_daily" / "events" / f"{date}_events.json")
+                .read_text(encoding="utf-8"))).get("events") or [])
         except (OSError, json.JSONDecodeError, ValueError):
-            ev_status, ev_det = "degraded", "unparseable"
+            n_ev = 0
+        ev_status, ev_det = "ok", f"{n_ev} events, scan_date={date}"
+    elif ev_qc.carried:
+        ev_status = "degraded"
+        ev_det = (f"CARRY-FORWARD ({ev_qc.reason}) — not a real {date} "
+                  "scan; tilt suspect")
+    elif ev_qc.reason == "missing":
+        # No dated file — fall back to latest.json freshness (old behavior)
+        ev = ROOT / "01_daily" / "events" / "latest.json"
+        ev_status, ev_det = "missing", ""
+        if ev.exists():
+            try:
+                data = json.loads(ev.read_text(encoding="utf-8"))
+                sd = data.get("scan_date") or ""
+                delta = abs((datetime.fromisoformat(sd)
+                             - datetime.fromisoformat(date)).days) if sd else 99
+                n_ev = len(data.get("events") or [])
+                if data.get("carried_from"):
+                    ev_status, ev_det = "degraded", f"latest is a carry ({sd})"
+                elif delta > 3:
+                    ev_status, ev_det = "stale", (f"scan_date={sd} "
+                                                  f"({delta}d old — tilt ignored)")
+                elif n_ev == 0:
+                    ev_status, ev_det = "degraded", "no events"
+                else:
+                    ev_status, ev_det = "ok", f"{n_ev} events, scan_date={sd}"
+            except (OSError, json.JSONDecodeError, ValueError):
+                ev_status, ev_det = "degraded", "unparseable"
+    else:
+        ev_status, ev_det = "degraded", f"QC fail: {ev_qc.reason}"
     inputs.append(_mk("events", "addon", ev_status, None, ev_det))
 
-    # --- same-day LLM predicts (scoreboard) ---
+    # --- same-day LLM predicts: QUALITY files, not just scoreboard rows.
+    # A timeout stub that slipped into the scoreboard as 0/flat must not
+    # count as a healthy family.
     board = scoreboard.load()
     topics = {r.get("topic") for r in board.get("runs", [])
               if r.get("date") == date and r.get("predicted_direction")}
-    has_general = "general" in topics
-    n_sectors = len([t for t in topics if str(t).startswith("sector:")])
-    inputs.append(_mk("general_predict", "general", "ok" if has_general else "missing", None,
-                      "" if has_general else "s_general=0 — weight renormalized away"))
+    gp_qc = output_qc.qc_general_predict(
+        ROOT / "01_daily" / "general" / f"{date}_predict.md")
+    has_general = gp_qc.ok and "general" in topics
+    gp_det = ""
+    if not has_general:
+        gp_det = ("s_general=0 — weight renormalized away"
+                  if not gp_qc.ok and gp_qc.reason == "missing"
+                  else f"QC fail: {gp_qc.reason or 'not on scoreboard'}")
+    inputs.append(_mk("general_predict", "general",
+                      "ok" if has_general else
+                      ("degraded" if gp_qc.ok or
+                       (ROOT / "01_daily" / "general" / f"{date}_predict.md").exists()
+                       else "missing"), None, gp_det))
+
+    def _slug(s: str) -> str:
+        import re as _re
+        return _re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+
+    sec_dir = ROOT / "01_daily" / "sectors" / date
+    n_sectors = sum(
+        1 for s in FINVIZ_SECTORS
+        if output_qc.qc_sector_predict(sec_dir / f"{_slug(s)}_predict.md").ok
+    )
+    n_files = len(list(sec_dir.glob("*_predict.md"))) if sec_dir.is_dir() else 0
     st = "ok" if n_sectors >= 11 else ("degraded" if n_sectors else "missing")
-    inputs.append(_mk("sector_predicts", "sector", st, n_sectors, f"{n_sectors}/11"))
+    det = f"{n_sectors}/11 quality"
+    if n_files > n_sectors:
+        det += f" ({n_files - n_sectors} file(s) failed QC — stubs/truncated)"
+    inputs.append(_mk("sector_predicts", "sector", st, n_sectors, det))
 
     # --- price store staleness (learner only, not the ranker) ---
     meta_p = ROOT / "data" / "prices" / "meta.json"

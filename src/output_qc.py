@@ -32,8 +32,11 @@ from zoneinfo import ZoneInfo
 from . import config
 from .sector_taxonomy import FINVIZ_SECTORS
 
-# Timeout / gateway-error text that OpenClaw sometimes returns as the
-# "assistant" content. Short stubs of this form previously became 0/flat.
+# Timeout / gateway-error / shutdown text that OpenClaw sometimes returns
+# as the "assistant" content. Short stubs of this form previously became
+# 0/flat. Infra-specific phrasing only — "government shutdown" in a real
+# market essay must NOT trip this (looks_like_timeout additionally
+# requires missing contract markers or a short body).
 TIMEOUT_RE = re.compile(
     r"(LLM request timed out"
     r"|model idle timeout"
@@ -43,7 +46,19 @@ TIMEOUT_RE = re.compile(
     r"|prompt is too long"
     r"|context length exceeded"
     r"|maximum context length"
-    r"|The model did not produce a response)",
+    r"|The model did not produce a response"
+    r"|gateway is shutting down"
+    r"|server is shutting down"
+    r"|instance is shutting down"
+    r"|received a shutdown signal"
+    r"|agent was aborted"
+    r"|run was aborted"
+    r"|connection refused"
+    r"|ECONNREFUSED"
+    r"|ECONNRESET"
+    r"|502 Bad Gateway"
+    r"|503 Service Unavailable"
+    r"|upstream connect error)",
     re.I,
 )
 

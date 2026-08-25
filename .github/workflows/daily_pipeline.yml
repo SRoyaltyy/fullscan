@@ -2,8 +2,8 @@ name: Autonomous Daily Market Pipeline
 
 on:
   schedule:
-    # ~06:45 ET weekdays — one general predict, must finish before 09:30 ET
-    - cron: '45 10 * * 0-6'
+    # NO predict cron: Pre-Open ALL (06:00 ET) owns the morning predict.
+    # Predict here is dispatch-only (orchestrator fallback after 08:00 ET).
     # ~17:03 ET — outcome + reflect (NOT predictive; allowed after the bell)
     - cron: '3 21 * * 0-6'
   workflow_dispatch:

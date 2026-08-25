@@ -4,10 +4,9 @@ name: Finviz Daily Digest
 # narratives (SPY/QQQ/DIA/IWM). Feeds news_judge and predictors so
 # elevated themes actually reach B1 / sector S1 instead of raw noise.
 
+# NO schedule cron: Pre-Open ALL (06:00 ET) runs the morning digest.
+# Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 on:
-  schedule:
-    # Just before news_parse slots (those fire at :15 past 10/12/14 UTC)
-    - cron: "5 10,12 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:

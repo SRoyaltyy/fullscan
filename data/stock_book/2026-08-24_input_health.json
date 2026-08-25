@@ -1,0 +1,115 @@
+{
+  "date": "2026-08-24",
+  "generated_at": "2026-08-25T05:12:15.249220-04:00",
+  "inputs": [
+    {
+      "name": "finviz_export",
+      "family": "join",
+      "status": "ok",
+      "n": 11618,
+      "detail": "finviz_2026-08-24.csv"
+    },
+    {
+      "name": "membership",
+      "family": "join",
+      "status": "ok",
+      "n": 5904,
+      "detail": ""
+    },
+    {
+      "name": "join_ranked",
+      "family": "join",
+      "status": "ok",
+      "n": 5904,
+      "detail": "std=0.970"
+    },
+    {
+      "name": "news_actions",
+      "family": "news",
+      "status": "ok",
+      "n": 60,
+      "detail": ""
+    },
+    {
+      "name": "news_judge",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "finviz_digest",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "ab_checklist",
+      "family": "ab",
+      "status": "ok",
+      "n": 2702,
+      "detail": "2026-08-24_ab_checklist_enriched.csv"
+    },
+    {
+      "name": "peer_rs",
+      "family": "peer",
+      "status": "missing",
+      "n": 0,
+      "detail": ""
+    },
+    {
+      "name": "ticker_checklist",
+      "family": "addon",
+      "status": "stale",
+      "n": null,
+      "detail": "no dated file \u2014 rebound flags use latest/history (can be stale)"
+    },
+    {
+      "name": "events",
+      "family": "addon",
+      "status": "degraded",
+      "n": null,
+      "detail": "CARRY-FORWARD (carried_from=2026-08-23) \u2014 not a real 2026-08-24 scan; tilt suspect"
+    },
+    {
+      "name": "general_predict",
+      "family": "general",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "sector_predicts",
+      "family": "sector",
+      "status": "degraded",
+      "n": 9,
+      "detail": "9/11 quality (2 file(s) failed QC \u2014 stubs/truncated)"
+    },
+    {
+      "name": "price_store",
+      "family": "learn",
+      "status": "ok",
+      "n": null,
+      "detail": "last_date=2026-08-21"
+    }
+  ],
+  "family_status": {
+    "join": "ok",
+    "news": "ok",
+    "ab": "ok",
+    "peer": "missing",
+    "general": "ok",
+    "sector": "degraded"
+  },
+  "families_present": {
+    "join": true,
+    "news": true,
+    "ab": true,
+    "peer": false,
+    "general": true,
+    "sector": true
+  },
+  "learn_grade": false,
+  "worst": "missing"
+}

@@ -15,8 +15,8 @@ on:
         description: "YYYY-MM-DD"
         required: false
         default: ""
-  schedule:
-    - cron: "20 11 * * 1-5"
+  # NO schedule cron: Pre-Open ALL (06:00 ET) runs morning news actions.
+  # Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 
 permissions:
   contents: write

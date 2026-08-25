@@ -77,6 +77,38 @@ def _events_n(date: str) -> int:
     return 0
 
 
+def _events_quality_ok(date: str) -> bool:
+    """QC verdict, not existence: carry-forwards and stubs are NOT done."""
+    from . import output_qc
+    return output_qc.qc_events_date(date).ok
+
+
+def _judge_quality_ok(date: str) -> bool:
+    from . import output_qc
+    return output_qc.qc_news_judge(
+        _p("01_daily", "news", f"{date}_judge.md")).ok
+
+
+def _general_predict_quality_ok(date: str) -> bool:
+    from . import output_qc
+    return output_qc.qc_general_predict(
+        _p("01_daily", "general", f"{date}_predict.md")).ok
+
+
+def _sector_quality_n(date: str) -> int:
+    import re as _re
+
+    from . import output_qc
+    from .sector_taxonomy import FINVIZ_SECTORS
+
+    def slug(s: str) -> str:
+        return _re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+
+    d = _p("01_daily", "sectors", date)
+    return sum(1 for s in FINVIZ_SECTORS
+               if output_qc.qc_sector_predict(d / f"{slug(s)}_predict.md").ok)
+
+
 def _ab_raw(date: str) -> bool:
     return _exists("data", "ab_checklist", f"{date}_ab_checklist.csv")
 
@@ -87,10 +119,9 @@ def _ab_enriched(date: str) -> bool:
 
 def _status_for_day(date: str) -> list[dict]:
     """One row per logical workflow. done = artifact for THIS date exists."""
-    sector_dir = _p("01_daily", "sectors", date)
-    sector_n = 0
-    if sector_dir.is_dir():
-        sector_n = len(list(sector_dir.glob("*_predict.md")))
+    # QC-quality count, not file count: 11 files with 2 timeout stubs is
+    # 9/11, and the stage re-runs (skip-if-good keeps the 9 good essays).
+    sector_n = _sector_quality_n(date)
     sector_done = sector_n >= 11
     sector_partial = sector_n > 0 and not sector_done
 
@@ -149,7 +180,8 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "News judge (LLM rank)",
             "key": "news_judge",
-            "done": _exists("01_daily", "news", f"{date}_judge.md"),
+            # QC verdict, not existence: a timeout stub is NOT done.
+            "done": _judge_quality_ok(date),
             "artifact": f"01_daily/news/{date}_judge.md",
             "required": True,
         },
@@ -163,14 +195,16 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Event scanner",
             "key": "events",
-            "done": _events_n(date) > 0,
+            # QC verdict: a carry-forward or stub is NOT done, so a retry
+            # is attempted (pre-cutoff) instead of trading Sunday's tape.
+            "done": _events_quality_ok(date),
             "artifact": f"01_daily/events/{date}_events.json",
             "required": False,
         },
         {
             "name": "General market predict",
             "key": "general_predict",
-            "done": _exists("01_daily", "general", f"{date}_predict.md"),
+            "done": _general_predict_quality_ok(date),
             "artifact": f"01_daily/general/{date}_predict.md",
             "required": False,
         },
@@ -179,7 +213,7 @@ def _status_for_day(date: str) -> list[dict]:
             "key": "sector_predict",
             "done": sector_done,
             "partial": sector_partial,
-            "detail": f"{sector_n}/11 sector predict files",
+            "detail": f"{sector_n}/11 quality sector predicts",
             "artifact": f"01_daily/sectors/{date}/*_predict.md",
             "required": False,
         },
