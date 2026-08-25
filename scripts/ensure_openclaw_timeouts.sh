@@ -136,34 +136,39 @@ port_up() {
 }
 
 start_gateway() {
-  echo "[openclaw-timeouts] starting gateway (systemd units + systemd-run)"
+  echo "[openclaw-timeouts] starting gateway via linger + systemd-run"
+  if [ "$(id -u)" -eq 0 ]; then
+    loginctl enable-linger "$GHA_USER" 2>/dev/null \
+      && echo "[openclaw-timeouts] linger enabled for $GHA_USER"
+  fi
   if command -v systemctl >/dev/null 2>&1; then
     echo "[openclaw-timeouts] openclaw-related units:"
     systemctl list-units --all --no-pager --full '*openclaw*' '*claw*' 2>/dev/null | head -40
-    for u in openclaw openclaw-gateway openclaw.service openclaw-gateway.service \
-             fullscan-openclaw-gateway; do
-      systemctl start "$u" 2>/dev/null && echo "[openclaw-timeouts] started $u"
-    done
+    systemctl list-unit-files --no-pager '*openclaw*' 2>/dev/null | head -20
   fi
-  as_gha openclaw gateway install
-  as_gha openclaw gateway start
-  # GH Actions reaps orphans. systemd-run is a real unit.
+  # Do NOT `openclaw gateway install` — run #8 auto-generated a token.
   if [ "$(id -u)" -eq 0 ] && command -v systemd-run >/dev/null 2>&1 && command -v openclaw >/dev/null 2>&1; then
     OC="$(command -v openclaw)"
-    if ! systemctl is-active --quiet fullscan-openclaw-gateway 2>/dev/null; then
+    systemctl reset-failed fullscan-openclaw-gateway 2>/dev/null || true
+    if systemctl is-active --quiet fullscan-openclaw-gateway 2>/dev/null; then
+      echo "[openclaw-timeouts] fullscan-openclaw-gateway already active"
+    else
+      systemctl stop fullscan-openclaw-gateway 2>/dev/null || true
       systemd-run --uid="$GHA_USER" --gid="$GHA_USER" \
         --working-directory=/home/gha \
         --unit=fullscan-openclaw-gateway \
-        --property=Restart=on-failure \
+        --property=Restart=always \
         --property=RestartSec=5 \
         -E HOME=/home/gha -E USER=gha \
         "$OC" gateway \
         && echo "[openclaw-timeouts] systemd-run fullscan-openclaw-gateway" \
-        || systemctl start fullscan-openclaw-gateway 2>/dev/null \
-        || true
-    else
-      echo "[openclaw-timeouts] fullscan-openclaw-gateway already active"
+        || systemctl start fullscan-openclaw-gateway
     fi
+    sleep 12
+    echo "[openclaw-timeouts] unit status:"
+    systemctl status fullscan-openclaw-gateway --no-pager -l 2>/dev/null | head -40
+    echo "[openclaw-timeouts] unit journal:"
+    journalctl -u fullscan-openclaw-gateway -n 50 --no-pager 2>/dev/null
   fi
 }
 
@@ -180,12 +185,10 @@ if port_up; then
 else
   echo "[openclaw-timeouts] gateway port 18789 is DOWN — starting"
   start_gateway
-  sleep 4
   if port_up; then
     echo "[openclaw-timeouts] gateway port 18789 is up after start"
   else
     echo "[openclaw-timeouts] WARN: gateway port 18789 still down"
-    as_gha openclaw gateway status || true
   fi
 fi
 
