@@ -11,7 +11,8 @@ Rules
 - Entry/exit at the signal day's closing price (yfinance, auto-adjusted).
 - Follow-the-book: hold a name while it stays in the sleeve's pick list;
   sell when it drops out (only after the horizon min-hold: 1d=1, 3d=3,
-  1w=5, 2w=10, 1m=21 sessions). New names split leftover cash equally
+  1w=5, 2w=10, 1m=21 **trading sessions** — Fri→Mon is 1, not 3 calendar
+  days). New names split leftover cash equally
   (whole shares). Horizon chooses WHICH book to follow and the hold floor.
 - Every order is charged the Futubull US-stock fee schedule
   (00_grounding/futubull_fees.json).
@@ -50,7 +51,7 @@ DASH_DIR = ROOT / "dashboard"
 FEES_PATH = ROOT / "00_grounding" / "futubull_fees.json"
 PRICE_CACHE = PAPER_DIR / "prices_cache.csv"
 
-HOLD_DAYS = {"1d": 1, "3d": 3, "1w": 5, "2w": 10, "1m": 21}
+HOLD_DAYS = {"1d": 1, "3d": 3, "1w": 5, "2w": 10, "1m": 21}  # trading sessions, not calendar days
 HORIZONS = list(HOLD_DAYS.keys())
 AB_DIR = ROOT / "data" / "ab_checklist"
 BACKFILL_DIR = ROOT / "data" / "ab_backfill"
@@ -284,6 +285,58 @@ def session_calendar() -> list[str]:
     return _SESSION_CAL
 
 
+def trading_calendar(prices: pd.DataFrame | None = None,
+                     extra: list[str] | None = None) -> list[str]:
+    """NYSE sessions from price bars, unioned with book/asof dates.
+
+    Weekends and holidays are not sessions. A missing weekday book still
+    counts if the tape printed that day.
+    """
+    days: set[str] = set()
+    if prices is not None and len(prices):
+        for ts in prices.index:
+            days.add(pd.Timestamp(ts).date().isoformat())
+    for d in extra or []:
+        if d:
+            days.add(str(d)[:10])
+    if not days:
+        days.update(session_calendar())
+    return sorted(days)
+
+
+def session_index(cal: list[str]) -> dict[str, int]:
+    return {d: i for i, d in enumerate(cal)}
+
+
+def sessions_held(entry: str, asof: str, ix: dict[str, int] | None = None) -> int:
+    """Trading sessions elapsed from entry to asof. 0 on the entry session.
+
+    Friday → Monday is 1, not 3. A 1w floor is 5 sessions, not 7 calendar days.
+    """
+    a, b = str(entry or "")[:10], str(asof or "")[:10]
+    if not a or not b:
+        return 0
+    if ix:
+        ia, ib = ix.get(a), ix.get(b)
+        if ia is not None and ib is not None:
+            return max(0, ib - ia)
+    try:
+        return int(max(0, np.busday_count(a, b)))
+    except Exception:
+        try:
+            return max(0, (pd.Timestamp(b) - pd.Timestamp(a)).days)
+        except Exception:
+            return 0
+
+
+def calendar_days_held(entry: str, asof: str) -> int:
+    """Wall-clock days (legacy CSV field only — not used for min-hold)."""
+    try:
+        return max(0, (pd.Timestamp(asof) - pd.Timestamp(entry)).days)
+    except Exception:
+        return 0
+
+
 def sessions_ending(asof: str, n: int = TRAIL_N) -> list[str]:
     cal = session_calendar()
     i = -1
@@ -365,7 +418,8 @@ def _skip_row(date: str, sleeve: str, ticker: str, kind: str, reason: str,
 
 
 def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
-                  trade_rows: list[dict], top_n: int, capital: float) -> list[dict]:
+                  trade_rows: list[dict], top_n: int, capital: float,
+                  session_ix: dict[str, int] | None = None) -> list[dict]:
     """Proposed buys/sells that did not become fills.
 
     beyond = on the book BUY list but past the sleeve cap (10 / 3-per-bucket).
@@ -374,7 +428,7 @@ def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
     min_hold = held name dropped off the list but locked (first day only).
     """
     risk_pol = load_risk_policy()
-    date_ix = {d: i for i, (d, _) in enumerate(books)}
+    date_ix = session_ix or {d: i for i, (d, _) in enumerate(books)}
     sleeves = [f"{h}_{k}" for h in HORIZONS for k in ("top", "size")]
     held: dict[str, dict[str, str]] = {s: {} for s in sleeves}  # ticker -> entry_date
     cash: dict[str, float] = {s: capital for s in sleeves}
@@ -441,13 +495,13 @@ def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
                     emitted_lock.discard((sleeve, t))
                     continue
                 entry = held[sleeve][t]
-                held_n = date_ix[date] - date_ix.get(entry, date_ix[date])
+                held_n = sessions_held(entry, date, date_ix)
                 key = (sleeve, t)
                 if held_n < min_hold:
                     if key not in emitted_lock:
                         skips.append(_skip_row(
                             date, sleeve, t, "min_hold",
-                            f"dropped from {sleeve} but min-hold {held_n}/{min_hold}d — no sell",
+                            f"dropped from {sleeve} but min-hold {held_n}/{min_hold} sess — no sell",
                             {"held": held_n, "min_hold": min_hold,
                              "px": price_of(date, t)},
                         ))
@@ -614,7 +668,8 @@ def load_risk_policy() -> dict:
 
 
 def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
-            capital: float, top_n: int, fees: dict):
+            capital: float, top_n: int, fees: dict,
+            session_ix: dict[str, int] | None = None):
     sleeves = [f"{h}_{k}" for h in HORIZONS for k in ("top", "size")]
     st = {
         s: {"cash": capital, "pos": {}, "realized": 0.0, "fees": 0.0,
@@ -625,7 +680,7 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
     curve_rows: list[dict] = []
     trade_rows: list[dict] = []
     spy0 = None
-    date_ix = {d: i for i, (d, _) in enumerate(books)}
+    date_ix = session_ix or {d: i for i, (d, _) in enumerate(books)}
 
     for date, path in books:
         day_px = prices.loc[:date]
@@ -674,7 +729,7 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                 if t in tset:
                     continue
                 pos = S["pos"][t]
-                held = date_ix[date] - date_ix.get(pos["entry_date"], date_ix[date])
+                held = sessions_held(pos["entry_date"], date, date_ix)
                 if held < min_hold:
                     continue  # still locked
                 p = price_of(t)
@@ -699,7 +754,7 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                                    "price": round(p, 4), "fees": fee,
                                    "amount": round(proceeds, 2),
                                    "realized_pnl": round(pnl, 2),
-                                   "reason": f"dropped from {sleeve} after {held}d (min {min_hold}d)",
+                                   "reason": f"dropped from {sleeve} after {held} sess (min {min_hold} sess)",
                                    **extra})
 
             # entries: new names split available cash equally
@@ -765,20 +820,21 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
     return st, curve_rows, trade_rows
 
 
-def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]:
+def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame,
+                     session_ix: dict[str, int] | None = None,
+                     asof: str | None = None) -> list[dict]:
     """FIFO: pair each buy lot with later sells of the same ticker in the same sleeve.
 
     One row per closed round-trip (bought then sold) and one row per leftover
     open lot. This is what the dashboard shows as 'closed' vs 'open'.
+    Hold length is trading sessions (Fri→Mon = 1), not calendar days.
     """
     lots: dict[tuple[str, str], deque] = defaultdict(deque)
     closed: list[dict] = []
-
-    def _held(buy: str, sell: str) -> int:
-        try:
-            return max(0, (pd.Timestamp(sell) - pd.Timestamp(buy)).days)
-        except Exception:
-            return 0
+    ix = session_ix or session_index(trading_calendar(prices))
+    last_asof = asof or (
+        pd.Timestamp(prices.index.max()).date().isoformat() if len(prices) else ""
+    )
 
     for r in trade_rows:
         key = (r["sleeve"], str(r["ticker"]).upper())
@@ -822,7 +878,8 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]
                 "sell_date": sell_date,
                 "sell_px": round(sell_px, 4),
                 "last": None,
-                "held_cal_days": _held(lot["buy_date"], sell_date),
+                "held_sessions": sessions_held(lot["buy_date"], sell_date, ix),
+                "held_cal_days": calendar_days_held(lot["buy_date"], sell_date),
                 "realized_pnl": round(pnl, 2),
                 "unrealized_pnl": None,
                 "buy_fees": round(lot["buy_fees"] * frac_lot, 4),
@@ -861,7 +918,8 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame) -> list[dict]
                 "sell_date": None,
                 "sell_px": None,
                 "last": round(last, 4),
-                "held_cal_days": None,
+                "held_sessions": sessions_held(lot["buy_date"], last_asof, ix) if last_asof else 0,
+                "held_cal_days": calendar_days_held(lot["buy_date"], last_asof) if last_asof else None,
                 "realized_pnl": None,
                 "unrealized_pnl": round(mtm, 2),
                 "buy_fees": round(lot["buy_fees"], 4),
@@ -914,7 +972,8 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
                     last_picks: dict[str, list[str]] | None = None,
                     book_dates: list[str] | None = None,
                     roundtrips: list[dict] | None = None,
-                    skipped: list[dict] | None = None) -> None:
+                    skipped: list[dict] | None = None,
+                    session_ix: dict[str, int] | None = None) -> None:
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     curve = curve.copy()
     curve["date"] = pd.to_datetime(curve["date"])
@@ -931,6 +990,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
         "fees": {k: fees[k] for k in fees if not k.startswith("_")},
         "rules": {
             "hold_days": HOLD_DAYS,
+            "hold_unit": "trading_sessions",
             "hold_applied": True,
             "fill": "signal-day close",
             "top": "top-N overall BUY names on that horizon's book",
@@ -941,7 +1001,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
     }
     positions = []
     px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
-    date_ix = {d: i for i, d in enumerate(book_dates or [])}
+    date_ix = session_ix or {d: i for i, d in enumerate(book_dates or [])}
     last_picks = last_picks or {}
     for sleeve, S in st.items():
         horizon = sleeve.split("_")[0]
@@ -950,7 +1010,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
         for t, pos in S["pos"].items():
             cur = px.get(t)
             cur = float(cur) if cur == cur and cur else pos["entry_px"]
-            held = date_ix.get(date, 0) - date_ix.get(pos["entry_date"], date_ix.get(date, 0))
+            held = sessions_held(pos["entry_date"], date, date_ix)
             positions.append({
                 "sleeve": sleeve, "ticker": t, "shares": pos["shares"],
                 "entry_date": pos["entry_date"], "entry_px": round(pos["entry_px"], 2),
@@ -1005,7 +1065,8 @@ def write_report(stats: list[dict], date: str, capital: float) -> None:
         "",
         "Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 "
         "per size bucket. Fill at signal-day close. Sell only after min-hold "
-        "(1d=1, 3d=3, 1w=5, 2w=10, 1m=21 sessions) AND the name has left the book.",
+        "(1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** — weekends and "
+        "NYSE holidays do not count) AND the name has left the book.",
         "",
         "| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |",
         "|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|",
@@ -1040,16 +1101,19 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
             tickers.update(picks)
     start, end = books[0][0], books[-1][0]
     prices = get_prices(sorted(tickers), start, end)
+    sess_ix = session_index(trading_calendar(prices, [d for d, _ in books]))
 
-    st, curve_rows, trade_rows = run_sim(books, prices, capital, top_n, fees)
+    st, curve_rows, trade_rows = run_sim(
+        books, prices, capital, top_n, fees, session_ix=sess_ix)
     if not curve_rows:
         raise SystemExit(
             f"[paper] no price data on/before {books[0][0]} — cannot simulate. "
             "Check yfinance connectivity.")
 
-    trips = match_roundtrips(trade_rows, prices)
+    trips = match_roundtrips(trade_rows, prices, session_ix=sess_ix, asof=end)
     attach_trails(trade_rows, trips)
-    skips = collect_skips(books, prices, trade_rows, top_n, capital)
+    skips = collect_skips(books, prices, trade_rows, top_n, capital,
+                          session_ix=sess_ix)
     PAPER_DIR.mkdir(parents=True, exist_ok=True)
     curve = pd.DataFrame(curve_rows)
     curve.to_csv(PAPER_DIR / "equity_curve.csv", index=False)
@@ -1067,7 +1131,7 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     write_report(stats, last, capital)
     write_dashboard(curve, stats, st, prices, last, capital, fees, trade_rows,
                     last_picks=last_picks, book_dates=[d for d, _ in books],
-                    roundtrips=trips, skipped=skips)
+                    roundtrips=trips, skipped=skips, session_ix=sess_ix)
     n_closed = sum(1 for t in trips if t["status"] == "closed")
     n_open = sum(1 for t in trips if t["status"] == "open")
     print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades "

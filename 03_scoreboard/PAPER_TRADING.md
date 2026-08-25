@@ -2,7 +2,7 @@
 
 As of **2026-08-21** · $10,000 starting capital per sleeve · fees per `00_grounding/futubull_fees.json`
 
-Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 sessions) AND the name has left the book.
+Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** — weekends and NYSE holidays do not count) AND the name has left the book.
 
 | Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |
 |--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|

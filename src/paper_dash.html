@@ -171,6 +171,7 @@ const keys = Object.keys(D.series);
 const sleeveNames = (D.stats||[]).map(s=>s.sleeve);
 const HOLD = (D.rules && D.rules.hold_days) || { "1d":1,"3d":3,"1w":5,"2w":10,"1m":21 };
 const HOLD_ON = !!(D.rules && D.rules.hold_applied);
+const HOLD_UNIT = (D.rules && D.rules.hold_unit) || "trading_sessions";
 const hidden = new Set();
 let sleeveFilter = sleeveNames.includes("1d_top") ? "1d_top" : (sleeveNames[0] || "all");
 let viewMode = "tape";
@@ -188,6 +189,17 @@ function fmtAb(n){
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&','<':'<','>':'>','"':'"'}[c]));}
 function horizonOf(s){return (s||"").split("_")[0];}
 function minHold(s){return HOLD[horizonOf(s)] ?? 1;}
+function sessLabel(n){
+  if(n==null || n==='') return '—';
+  const x=Number(n);
+  if(!isFinite(x)) return '—';
+  return x+' sess';
+}
+function heldSess(r){
+  if(!r) return null;
+  if(r.held_sessions!=null && r.held_sessions!=='') return Number(r.held_sessions);
+  return null;
+}
 function sessionsBetween(a,b){
   const ia=D.dates.indexOf(a), ib=D.dates.indexOf(b);
   if(ia<0||ib<0) return null;
@@ -202,7 +214,7 @@ function lastCashFor(sleeve){
 
 document.getElementById('gen').textContent =
   "Generated "+D.generated.slice(0,16).replace('T',' ')+" · "+D.dates.length+" trading day(s) · $"+
-  D.capital.toLocaleString()+" per sleeve · long-only, whole shares, signal-day close fills";
+  D.capital.toLocaleString()+" per sleeve · long-only, whole shares, signal-day close fills · min-hold = trading sessions (weekends/holidays don't count)";
 
 function cardSet(){
   const sorted=[...D.stats].sort((a,b)=>b.return_pct-a.return_pct);
@@ -240,7 +252,7 @@ function renderCards(){
     const isMoney=!!c[1].money;
     const cls=isHold?'mut':(val>=0?'pos':'neg');
     let shown;
-    if(isHold) shown = val+' session'+(val===1?'':'s');
+    if(isHold) shown = val+' sess'+(val===1?'ion':'ions');
     else if(isMoney) shown = money(val);
     else if(c[0].indexOf("win")>=0) shown = (val==null?'—':val+'%');
     else shown = val+'%';
@@ -310,7 +322,7 @@ function renderHow(){
     ? "Each sleeve has its own $10k and its own book."
     : `<code>${sleeveFilter}</code> follows the <code>${horizonOf(sleeveFilter)}</code> book, min hold <code>${h}</code> session${h===1?'':'s'}.`;
   const holdLine=HOLD_ON
-    ? `A name is <b>not</b> sold until it has been held for that horizon’s minimum sessions (1d=1, 3d=3, 1w=5, 2w=10, 1m=21), even if it already dropped off the book.`
+    ? `A name is <b>not</b> sold until it has been held for that horizon’s minimum <b>trading sessions</b> (1d=1, 3d=3, 1w=5, 2w=10, 1m=21). Weekends and NYSE holidays do not count — Friday → Monday is 1 session, not 3 calendar days.`
     : `<b>Min-hold was not applied on this run</b> — every sleeve rebalanced every book day, which is why 1m looked like 1d. Next replay uses the session floors above.`;
   document.getElementById('how').innerHTML=`
     <h2>How a buy / sell is decided</h2>
@@ -355,7 +367,7 @@ function closedTable(rows){
       <td class="left">${r.sell_date} @ ${px(r.sell_px)}</td>
       <td class="ab">${fmtAb(r.sell_ab_score)}</td>
       <td class="ctx">${esc(r.sell_ab_context||'—')}</td>
-      <td>${r.held_cal_days!=null?r.held_cal_days+'d':'—'}</td>
+      <td>${heldSess(r)!=null?sessLabel(heldSess(r)):'—'}</td>
       <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
     </tr>`;
   }).join('')+'</table>';
@@ -379,7 +391,7 @@ function openTable(rows){
       <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
       <td>${px(r.last)}</td>
       <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
-      <td class="mut">still holding</td>
+      <td class="mut">${heldSess(r)!=null?sessLabel(heldSess(r))+' held':'still holding'}</td>
     </tr>`;
   }).join('')+'</table>';
 }
@@ -487,7 +499,8 @@ function pairCard(r){
   const closed=r.status==='closed';
   const pnl=closed?r.realized_pnl:r.unrealized_pnl;
   const pnlLbl=closed?'realized':'unrealized';
-  const held=r.held_cal_days!=null?r.held_cal_days+'d held':'open lot';
+  const nHeld=heldSess(r);
+  const held=nHeld!=null?sessLabel(nHeld)+' held':(r.status==='open'?'open lot':'—');
   const sellInner=closed
     ? `<div class="leg-k neg">SELL</div>
        <div class="fill-meta">${esc(r.sell_date)} · ${r.shares} sh @ ${px(r.sell_px)}</div>
@@ -551,7 +564,7 @@ function renderViewBar(){
 function skipCard(s){
   const [lab,cls]=skipKindLabel(s.kind);
   const pxBit=s.px!=null?(' · last '+px(s.px)):'';
-  const extra=s.kind==='beyond'?('rank '+s.rank):s.kind==='cash'?('per-name '+money(s.per)):s.kind==='min_hold'?('held '+s.held+'/'+s.min_hold+'d'):'';
+  const extra=s.kind==='beyond'?('rank '+s.rank):s.kind==='cash'?('per-name '+money(s.per)):s.kind==='min_hold'?('held '+s.held+'/'+s.min_hold+' sess'):'';
   return `<article class="fill skip">
     <div class="fill-side ${cls}">${lab}</div>
     <div>
@@ -700,7 +713,7 @@ function renderStats(){
     <td class="${(s.unrealized||0)>=0?'pos':'neg'}">${money(s.unrealized||0)}</td>
     <td>${s.win_rate==null?'—':s.win_rate+'%'} <span class="mut">(${s.closed_wins||0}/${s.closed||0})</span></td>
     <td>${s.open_win_rate==null?'—':s.open_win_rate+'%'} <span class="mut">(${s.open_wins||0}/${s.open||0})</span></td>
-    <td>${minHold(s.sleeve)}d</td></tr>`).join('');
+    <td>${minHold(s.sleeve)} sess</td></tr>`).join('');
 }
 
 function renderPos(){
@@ -712,9 +725,9 @@ function renderPos(){
        const mh=p.min_hold!=null?p.min_hold:minHold(p.sleeve);
        let status='on book';
        if(p.on_book===false){
-         status = (HOLD_ON && held!=null && held<mh) ? `min-hold lock ${held}/${mh}d` : 'dropped — waiting sell';
+         status = (HOLD_ON && held!=null && held<mh) ? `min-hold lock ${held}/${mh} sess` : 'dropped — waiting sell';
        } else if(held!=null){
-         status = `on book · held ${held}d`;
+         status = `on book · held ${held} sess`;
        }
        const lock=status.indexOf('lock')>=0?'lock':'mut';
        return `<tr><td>${p.sleeve}</td><td><b>${p.ticker}</b></td><td>${p.shares}</td>
