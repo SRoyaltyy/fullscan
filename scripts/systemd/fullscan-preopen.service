@@ -1,0 +1,23 @@
+[Unit]
+Description=fullscan Pre-Open ALL (ECS clock, not GitHub)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=gha
+Group=gha
+WorkingDirectory=/home/gha/fullscan
+EnvironmentFile=-/home/gha/.fullscan.env
+Environment=TZ=America/New_York
+Environment=OPENCLAW_GATEWAY_URL=http://127.0.0.1:18789
+Environment=OPENCLAW_TIMEOUT=10800
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/gha/fullscan/scripts/ecs_preopen.sh
+Nice=5
+TimeoutStartSec=21600
+StandardOutput=append:/home/gha/fullscan-logs/preopen.log
+StandardError=append:/home/gha/fullscan-logs/preopen.log
+
+[Install]
+WantedBy=multi-user.target

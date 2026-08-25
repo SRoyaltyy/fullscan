@@ -1,12 +1,18 @@
 name: Pre-Open ALL (predictive one-shot)
 
-# One button / one cron for EVERY predictive write that must land
-# before 09:30 ET. Sequential on the single ECS runner.
+# One-shot predictive write that must land before 09:30 ET.
+# Sequential. Backup only — the ECS systemd timer is the clock.
 #
 #   finviz digest → events + catcher (no carry) → news parse → news judge
 #   → news actions → general predict → 11 sector predicts → sector board
 #   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
 #   → workflow check
+#
+# CLOCK: the ECS systemd timer (scripts/systemd/fullscan-preopen.timer)
+# at 05:55 ET is the primary start. This workflow has NO schedule.
+# workflow_dispatch + orchestrator last-chance are backups only.
+# /tmp/fullscan-preopen.lock stops this job from running on top of
+# the systemd service.
 #
 # NOT in this job (they MUST still run later on their own crons +
 # orchestrator guard): outcome/reflect, learn_cycle, deepthink, weekly,
@@ -16,13 +22,9 @@ name: Pre-Open ALL (predictive one-shot)
 # 09:25 ET cutoff: late starts refuse new predictive writes.
 #
 # OpenClaw per-call timeout is 3 hours so a long Grok research turn is
-# not killed as a 30-minute stub. Job budget is 6 hours; the pre-open
-# window itself is ~06:00–09:25 ET (~3.4h) so start on time.
+# not killed as a 30-minute stub. Job budget is 6 hours.
 
 on:
-  schedule:
-    # ~06:00 ET weekdays — leaves ~3h25m before 09:25 cutoff
-    - cron: "0 10 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:
@@ -49,19 +51,33 @@ jobs:
     env:
       OPENCLAW_TIMEOUT: "10800"
     steps:
+      - name: Back off if ECS systemd pre-open owns the box
+        run: |
+          exec 9>/tmp/fullscan-preopen.lock
+          if ! flock -n 9; then
+            echo "ECS systemd job holds /tmp/fullscan-preopen.lock — GH backs off"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          else
+            echo "lock is free (this is a backup dispatch)"
+            flock -u 9 || true
+          fi
+
       - uses: actions/checkout@v4
+        if: env.skip != 'yes'
 
       - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
         with:
           python-version: "3.10"
 
       - name: Install
+        if: env.skip != 'yes'
         run: |
           pip install -r requirements.txt
           pip install psycopg2-binary yfinance pandas requests openai ddgs || true
 
-      - name: Gate — weekend / past cutoff (schedule only)
-        if: github.event_name == 'schedule'
+      - name: Gate — weekend / past cutoff
+        if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DOW=$(TZ=America/New_York date +%u)
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
@@ -93,6 +109,11 @@ jobs:
           OPENCLAW_TIMEOUT: "10800"
         run: |
           set -e
+          exec 9>/tmp/fullscan-preopen.lock
+          if ! flock -n 9; then
+            echo "ECS systemd job grabbed the lock after checkout — backing off"
+            exit 0
+          fi
           DATE="${{ github.event.inputs.run_date }}"
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
@@ -112,6 +133,8 @@ jobs:
           python -m src.output_qc --date "$D" --preopen || true
           echo "======== status ========"
           cat "01_daily/${D}_preopen_status.md" 2>/dev/null || true
+          echo "======== grok review ========"
+          cat "01_daily/${D}_grok_review.md" 2>/dev/null || true
 
       - name: Commit predictive artifacts
         if: always() && env.skip != 'yes'
@@ -121,4 +144,6 @@ jobs:
             01_daily/general/ 01_daily/sectors/ 01_daily/events \
             01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
             01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json \
-            01_daily/*_preopen_status.md 02_lessons/ 03_scoreboard/
+            01_daily/*_preopen_status.md \
+            01_daily/*_grok_review.json 01_daily/*_grok_review.md \
+            02_lessons/ 03_scoreboard/

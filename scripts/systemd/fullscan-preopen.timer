@@ -1,0 +1,15 @@
+[Unit]
+Description=fullscan Pre-Open ALL weekdays 05:55 America/New_York
+Documentation=file:///home/gha/fullscan/PREDICTOR_README.md
+
+[Timer]
+# ECS clock, not GitHub cron. 05:55 ET so Grok has ~3.5h before 09:25.
+OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York
+# If the box was down at 05:55, fire on boot (run_preopen_all still
+# refuses after 09:25 ET and skip-if-good no-ops a finished day).
+Persistent=true
+AccuracySec=30s
+Unit=fullscan-preopen.service
+
+[Install]
+WantedBy=timers.target

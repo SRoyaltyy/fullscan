@@ -8,7 +8,7 @@ reads the `news` and `macro_indicators` tables those collectors maintain.)
 
 | Time | Stage | What happens |
 |---|---|---|
-| **6:00 AM ET** | **`Pre-Open ALL`** | **The ONLY predictive cron.** One ECS job: finviz digest → events+catcher (no carry) → news parse/judge/actions → general predict → 11 sector predicts → **regex QC + Grok reads the files as text**. Fail-closed: timeout stubs, carry-forwards, gateway-shutdown text, and anything Grok flags as trash. Skips entirely (and never overwrites) when today is already quality-ok. Must finish before 09:30 ET. |
+| **5:55 AM ET** | **`Pre-Open ALL` (ECS systemd)** | **The clock is the Alibaba box, not GitHub.** `fullscan-preopen.timer` fires `scripts/ecs_preopen.sh`: git pull → finviz digest → events+catcher (no carry) → news parse/judge/actions → general predict → 11 sector predicts → **regex QC + Grok reads the files as text** → git push. Fail-closed. Skip-if-good. Must finish before 09:30 ET. GitHub Actions is backup (`workflow_dispatch` / orchestrator last-chance) and will back off if the systemd job holds `/tmp/fullscan-preopen.lock`. |
 | 8:00+ AM | (fallback only) | Individual predictive workflows have **no schedule crons**. Orchestrator fires them after 08:00 ET only if Pre-Open ALL has **finished** today and is not quality-ok — never while ALL is still on the ECS runner, and never after 09:25 ET. |
 | 5:00 PM | `outcome` | Actual close fetched → DeepSeek reviews the day with verified citations → prediction graded (direction hit, magnitude hit) → `<date>_outcome.md` |
 | 5:05 PM | `reflect` | Diagnostic engine classifies any miss (missing evidence / misweighted / miscalibrated) → candidate lesson in `02_lessons/candidate/` |
@@ -103,9 +103,11 @@ Live round-trip test: `python -m src.deepseek_client --probe`
 Actions → **"Pre-Open ALL (predictive one-shot)"** → Run workflow
 (optional date; `force=true` only as an emergency after 09:25 ET).
 
-This is the one-button for every predictive part. It self-reads every
-output (trash / timeout stub / carry-forward → fail) and checks that
-the required modules actually produced quality files.
+This is the one-button for every predictive part **as a backup**. The weekday clock is the ECS systemd timer (`scripts/install_ecs_preopen.sh`). Dispatch this workflow only if the box missed 05:55 ET.
+
+The job self-reads every
+output (trash / timeout stub / carry-forward → fail) and Grok reads the
+files as text. It backs off if `/tmp/fullscan-preopen.lock` is held.
 
 Post-close (outcome, learn, deepthink, weekly, dashboard) stay on their
 own crons. The daily orchestrator re-dispatches any that missed.
