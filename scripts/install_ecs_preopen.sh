@@ -5,6 +5,11 @@
 #
 # After this, GitHub cron is not required to start the predictive job.
 # GitHub remains the git remote we push artifacts to.
+#
+# Timer enable MUST happen before venv/pip. Run #5 died on
+# `python3 -m venv` (ensurepip missing) under `set -e` and never reached
+# `systemctl enable --now`. A missing venv is recoverable (python3
+# fallback). A disabled timer is a missed 05:55.
 set -euo pipefail
 
 if [ "$(id -u)" -ne 0 ]; then
@@ -44,17 +49,6 @@ chmod +x "$ROOT/scripts/ecs_preopen.sh" "$ROOT/scripts/install_ecs_preopen.sh" \
   "$ROOT/scripts/ensure_openclaw_timeouts.sh" "$ROOT/scripts/ensure_ecs_clock.sh" \
   "$ROOT/scripts/safe_git_push.sh"
 
-if [ ! -x "$ROOT/.venv/bin/python" ]; then
-  echo "[install] creating venv"
-  sudo -u "$GHA_USER" python3 -m venv "$ROOT/.venv"
-fi
-echo "[install] pip (this takes a minute)"
-sudo -u "$GHA_USER" "$ROOT/.venv/bin/pip" install -q --upgrade pip
-sudo -u "$GHA_USER" "$ROOT/.venv/bin/pip" install -q -r "$ROOT/requirements.txt" \
-  || true
-sudo -u "$GHA_USER" "$ROOT/.venv/bin/pip" install -q \
-  psycopg2-binary yfinance pandas requests openai ddgs || true
-
 if [ ! -f "$ENVF" ]; then
   cp "$ROOT/scripts/fullscan.env.example" "$ENVF"
   chown "$GHA_USER:$GHA_USER" "$ENVF"
@@ -80,18 +74,51 @@ install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.timer" \
   /etc/systemd/system/fullscan-preopen.timer
 
 # Gateway timeouts — Python waiting 3h is useless if OpenClaw dies at ~9 min.
-# Use the shared patcher so models.providers.<id>.timeoutSeconds is raised too.
 if [ -x "$ROOT/scripts/ensure_openclaw_timeouts.sh" ]; then
   sudo -u "$GHA_USER" -H bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
 else
   echo "[install] ensure_openclaw_timeouts.sh missing"
 fi
 
+# Enable the 05:55 clock BEFORE venv. Persistent=true will catch up if
+# 05:55 already passed; ecs_preopen.sh refuses python after 09:25 ET.
 systemctl daemon-reload
 systemctl enable --now fullscan-preopen.timer
+echo "[install] systemctl enable --now fullscan-preopen.timer done"
+systemctl is-enabled fullscan-preopen.timer
+systemctl list-timers --all fullscan-preopen.timer || true
+
+# venv is nice-to-have. Run #5: ensurepip missing, set -e aborted, timer
+# never enabled. Never let that happen again.
+set +e
+if [ ! -x "$ROOT/.venv/bin/python" ]; then
+  echo "[install] creating venv"
+  rm -rf "$ROOT/.venv"
+  if ! sudo -u "$GHA_USER" python3 -m venv "$ROOT/.venv"; then
+    echo "[install] venv failed (ensurepip?). installing python3-venv"
+    apt-get update -qq
+    apt-get install -y python3-venv python3.10-venv
+    rm -rf "$ROOT/.venv"
+    sudo -u "$GHA_USER" python3 -m venv "$ROOT/.venv" \
+      || echo "[install] WARN: venv still failed; ecs_preopen.sh will use python3"
+  fi
+fi
+if [ -x "$ROOT/.venv/bin/pip" ]; then
+  echo "[install] pip (this takes a minute)"
+  sudo -u "$GHA_USER" "$ROOT/.venv/bin/pip" install -q --upgrade pip
+  sudo -u "$GHA_USER" "$ROOT/.venv/bin/pip" install -q -r "$ROOT/requirements.txt"
+  sudo -u "$GHA_USER" "$ROOT/.venv/bin/pip" install -q \
+    psycopg2-binary yfinance pandas requests openai ddgs
+else
+  echo "[install] no venv pip — skipping; GH job and python3 still work"
+fi
+set -e
 
 echo ""
 echo "[install] timer installed. Next fire:"
+systemctl is-enabled fullscan-preopen.timer \
+  && echo "[install] fullscan-preopen.timer ENABLED" \
+  || echo "[install] WARN: timer NOT enabled"
 systemctl list-timers --all fullscan-preopen.timer || true
 echo ""
 echo "Logs:    journalctl -u fullscan-preopen.service -f"
@@ -100,4 +127,4 @@ echo "Run now: sudo systemctl start fullscan-preopen.service"
 echo ""
 echo "Persistent=true — if 05:55 ET already passed today, systemd will"
 echo "catch up and start the service as soon as the timer is enabled"
-echo "(run_preopen_all still refuses after 09:25 ET)."
+echo "(ecs_preopen.sh and run_preopen_all still refuse after 09:25 ET)."

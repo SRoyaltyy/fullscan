@@ -44,18 +44,48 @@ export FULLSCAN_PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
 export FULLSCAN_HOME="${FULLSCAN_HOME:-/home/gha}"
 export PYTHONUNBUFFERED=1
 
-cd "$ROOT"
-git config --global --add safe.directory "$ROOT" || true
-git config --global --add safe.directory '*' || true
-git config user.name "Market-Bot-Automaton"
-git config user.email "bot@users.noreply.github.com"
-unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE || true
+write_clock() {
+  mkdir -p "$ROOT/01_daily"
+  {
+    echo "# ECS clock status"
+    echo
+    echo "- generated: $(date -u +%Y-%m-%dT%H:%M:%SZ) UTC / $(TZ=America/New_York date '+%F %H:%M %Z')"
+    echo "- source: ecs_preopen.sh"
+    echo "- timer: $(systemctl is-enabled fullscan-preopen.timer 2>/dev/null || echo NOT_ENABLED)"
+    echo
+    echo '```'
+    systemctl list-timers --all fullscan-preopen.timer 2>/dev/null || echo "(no timer)"
+    echo '```'
+  } > "$ROOT/01_daily/_ecs_clock.md"
+  echo "[ecs-preopen] wrote $ROOT/01_daily/_ecs_clock.md"
+}
 
-if [ -n "${GITHUB_TOKEN:-}" ]; then
-  git config --local http.https://github.com/.extraheader \
-    "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
+git_prep() {
+  cd "$ROOT"
+  git config --global --add safe.directory "$ROOT" || true
+  git config --global --add safe.directory '*' || true
+  git config user.name "Market-Bot-Automaton"
+  git config user.email "bot@users.noreply.github.com"
+  unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE || true
+  if [ -n "${GITHUB_TOKEN:-}" ]; then
+    git config --local http.https://github.com/.extraheader \
+      "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
+  fi
+}
+
+# Persistent=true catch-up after a late enable must NOT rewrite today.
+# Timer is enabled for the next 05:55. Prove git push with the clock file.
+if [ "$ET_HM" -ge 925 ]; then
+  echo "[ecs-preopen] past 09:25 ET — not running python, not resetting the tree"
+  write_clock
+  git_prep
+  bash "$ROOT/scripts/safe_git_push.sh" \
+    "chore: ecs clock status (cutoff skip) [$DAY $(TZ=America/New_York date +%H%M)]" \
+    01_daily/_ecs_clock.md || true
+  exit 0
 fi
 
+git_prep
 git fetch origin main
 git checkout main
 git reset --hard origin/main
@@ -63,8 +93,7 @@ git reset --hard origin/main
 # now, but keep +x so a hand-run still works.
 chmod +x "$ROOT/scripts/"*.sh || true
 
-# Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call,
-# and make sure the 05:55 timer is actually enabled.
+# Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call.
 bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
 
 PY="${FULLSCAN_PYTHON:-python3}"
@@ -80,6 +109,7 @@ set +e
 code=$?
 set -e
 
+write_clock || true
 bash scripts/safe_git_push.sh \
   "auto: pre-open ALL (ECS) [$DAY $(TZ=America/New_York date +%H%M)]" \
   01_daily/general/ 01_daily/sectors/ 01_daily/events \
@@ -87,6 +117,7 @@ bash scripts/safe_git_push.sh \
   01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json \
   01_daily/*_preopen_status.md \
   01_daily/*_grok_review.json 01_daily/*_grok_review.md \
+  01_daily/_ecs_clock.md \
   02_lessons/ 03_scoreboard/
 
 echo "[ecs-preopen] python exit=$code  done $(TZ=America/New_York date '+%F %H:%M %Z')"
