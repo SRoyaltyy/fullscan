@@ -27,10 +27,15 @@ except Exception:
     def finviz_digest_block(*_a, **_k):
         return ""
 try:
-    from .map_heat_research import inject_block as map_heat_research_block
+    from .map_heat_research import (
+        decision_gate as map_heat_decision_gate,
+        inject_block as map_heat_research_block,
+    )
 except Exception:
     def map_heat_research_block(*_a, **_k):
         return ""
+    def map_heat_decision_gate(_date, decision, **_kwargs):
+        return decision
 
 
 def _slug(sector: str) -> str:
@@ -195,6 +200,7 @@ def run_one(sector: str, date_str: str, ch1_md: str,
 
         scores = compute_sector_scores.parse_scores(text)
         decision = compute_sector_scores.compute(scores)
+        decision = map_heat_decision_gate(date_str, decision, sector=sector)
         horizon_calls = compute_scores.parse_horizon_calls(scores)
         _write_essay(path, sector, date_str, slug, etf_ctx or "", text, decision)
 

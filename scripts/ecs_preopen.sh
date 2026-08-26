@@ -113,7 +113,8 @@ write_clock || true
 bash scripts/safe_git_push.sh \
   "auto: pre-open ALL (ECS) [$DAY $(TZ=America/New_York date +%H%M)]" \
   01_daily/general/ 01_daily/sectors/ 01_daily/events \
-  01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
+  01_daily/news/ 01_daily/map_heat/ \
+  01_daily/_transcripts/ 01_daily/_channel1/ \
   01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json \
   01_daily/*_preopen_status.md \
   01_daily/*_grok_review.json 01_daily/*_grok_review.md \

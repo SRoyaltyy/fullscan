@@ -232,6 +232,53 @@ def qc_news_parse(path: str | Path) -> QCResult:
     return _ok("news_parse", p, json.dumps(data)[:50])
 
 
+def qc_map_heat(path: str | Path) -> QCResult:
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("map_heat", p, "missing", empty=True)
+    data = _read_json(p)
+    if not isinstance(data, dict):
+        return _fail("map_heat", p, "unparseable_json", empty=True)
+    n_ind = len(data.get("industries") or [])
+    if n_ind < 50:
+        return _fail("map_heat", p, f"too_few_industries({n_ind})", empty=True)
+    n_sec = len(data.get("sectors") or [])
+    if n_sec < 8:
+        return _fail("map_heat", p, f"too_few_sectors({n_sec})")
+    n_caps = sum(
+        1 for r in (data.get("industries") or [])
+        if (r.get("spx_leaders") or r.get("rut_leaders"))
+    )
+    if n_caps < 20:
+        return _fail("map_heat", p, f"too_few_captains({n_caps})")
+    if not (data.get("tape") or []):
+        return _fail("map_heat", p, "empty_futures_tape")
+    return _ok("map_heat", p, f"industries={n_ind} captains={n_caps}")
+
+
+def qc_map_heat_baseline(path: str | Path) -> QCResult:
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("map_heat_baseline", p, "postclose_baseline_missing",
+                     empty=True)
+    data = _read_json(p)
+    if not isinstance(data, dict):
+        return _fail("map_heat_baseline", p, "unparseable_json", empty=True)
+    if data.get("phase") != "postclose_baseline":
+        return _fail("map_heat_baseline", p,
+                     f"not_postclose_baseline({data.get('phase')})")
+    n = len(data.get("cards") or [])
+    if n < 20:
+        return _fail("map_heat_baseline", p, f"too_few_cards({n})")
+    cov = data.get("coverage")
+    try:
+        if cov is not None and float(cov) < 0.90:
+            return _fail("map_heat_baseline", p, f"coverage_below_90({cov})")
+    except (TypeError, ValueError):
+        return _fail("map_heat_baseline", p, "coverage_unreadable")
+    return _ok("map_heat_baseline", p, f"cards={n} coverage={cov}")
+
+
 def qc_map_heat_research(path: str | Path) -> QCResult:
     p = str(path)
     if not os.path.exists(p):
@@ -246,8 +293,41 @@ def qc_map_heat_research(path: str | Path) -> QCResult:
     js = p.replace("_research.md", "_research.json")
     data = _read_json(js)
     n = len((data or {}).get("cards") or []) if isinstance(data, dict) else 0
-    if n < 3:
+    if n < 20:
         return _fail("map_heat_research", p, f"too_few_cards({n})", text)
+    bad_evidence = 0
+    invented_shape = 0
+    missing_x_record = 0
+    n_refreshed = int((data or {}).get("n_refreshed") or 0)
+    for card_i, card in enumerate((data or {}).get("cards") or []):
+        if str(card.get("subsector_dir") or "") not in ("up", "down", "flat"):
+            invented_shape += 1
+        for cap in card.get("captains") or []:
+            sent = str(cap.get("sent") or "none")
+            if sent not in ("pos", "neg", "mixed", "none"):
+                invented_shape += 1
+            ev = cap.get("evidence") or []
+            if sent != "none" and not any(
+                    isinstance(e, dict)
+                    and str(e.get("url") or "").startswith(("http://", "https://"))
+                    and e.get("published_at") and e.get("fact")
+                    for e in ev):
+                bad_evidence += 1
+            if card_i < n_refreshed and not isinstance(
+                    cap.get("x_sentiment"), dict):
+                missing_x_record += 1
+    if invented_shape:
+        return _fail("map_heat_research", p,
+                     f"invalid_card_shape({invented_shape})", text)
+    if bad_evidence:
+        return _fail("map_heat_research", p,
+                     f"sentiment_without_evidence({bad_evidence})", text)
+    if missing_x_record:
+        return _fail("map_heat_research", p,
+                     f"morning_missing_x_record({missing_x_record})", text)
+    if data.get("phase") != "morning_refresh":
+        return _fail("map_heat_research", p,
+                     f"not_morning_refresh({data.get('phase')})", text)
     return _ok("map_heat_research", p, text)
 
 
@@ -391,6 +471,11 @@ def preopen_report(date_str: str) -> dict:
                              f"{date_str}_finviz_digest.md")
     items.append(qc_finviz_digest(
         digest_json if os.path.exists(digest_json) else digest_md))
+    items.append(qc_map_heat(
+        os.path.join("01_daily", "map_heat", f"{date_str}_map_heat.json")))
+    items.append(qc_map_heat_baseline(
+        os.path.join("01_daily", "map_heat",
+                     f"{date_str}_research_baseline.json")))
     items.append(qc_map_heat_research(
         os.path.join("01_daily", "map_heat", f"{date_str}_research.md")))
 
@@ -411,8 +496,7 @@ def preopen_report(date_str: str) -> dict:
         "sectors": sector_rows,
         "sector_n_ok": n_ok,
         "sector_n_total": len(FINVIZ_SECTORS),
-        "all_ok": all(r.ok for r in items
-                      if r.kind not in ("sector_predict", "map_heat_research"))
+        "all_ok": all(r.ok for r in items if r.kind != "sector_predict")
                   and n_ok >= 8,
     }
     return report
@@ -454,7 +538,7 @@ def main() -> None:
     ap.add_argument("--preopen", action="store_true",
                     help="Scan every pre-open artifact for --date")
     ap.add_argument("--kind", default="",
-                    help="general|sector|events|judge|parse|actions|digest|heat_research")
+                    help="general|sector|events|judge|parse|actions|digest|heat|heat_baseline|heat_research")
     ap.add_argument("--path", default="")
     ap.add_argument("--write", action="store_true",
                     help="Write 01_daily/<date>_preopen_qc.json")
@@ -471,6 +555,8 @@ def main() -> None:
             "parse": qc_news_parse,
             "actions": qc_news_actions,
             "digest": qc_finviz_digest,
+            "heat": qc_map_heat,
+            "heat_baseline": qc_map_heat_baseline,
             "heat_research": qc_map_heat_research,
         }
         fn = dispatch.get(kind)

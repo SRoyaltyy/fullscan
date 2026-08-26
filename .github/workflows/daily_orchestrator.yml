@@ -119,7 +119,7 @@ jobs:
 
           is_postclose() {
             case "$1" in
-              learn_cycle.yml|deepthink.yml|weekly_consolidation.yml)
+              learn_cycle.yml|deepthink.yml|weekly_consolidation.yml|map_heat_postclose.yml)
                 return 0 ;;
               daily_pipeline.yml|sector_daily.yml)
                 [ "$ET_HM" -ge 1600 ]
@@ -285,6 +285,19 @@ jobs:
                 # run today as ok (checked via HAS_SUCCESS in the loop).
                 return 1
                 ;;
+              map_heat_postclose.yml)
+                # Baseline is labelled with the NEXT session. After 22:00 ET
+                # today, next weekday's research_baseline must exist.
+                local next
+                next=$(python3 -c "
+from datetime import datetime, timedelta
+d = datetime.strptime('$TODAY', '%Y-%m-%d').date() + timedelta(days=1)
+while d.weekday() >= 5:
+    d += timedelta(days=1)
+print(d.isoformat())
+")
+                repo_file "01_daily/map_heat/${next}_research_baseline.json"
+                ;;
               *)
                 return 1
                 ;;
@@ -347,6 +360,7 @@ jobs:
             learn_cycle.yml
             deepthink.yml
             weekly_consolidation.yml
+            map_heat_postclose.yml
           )
 
           # Prefer Pre-Open ALL. Individual predictive jobs are last-chance
@@ -435,6 +449,15 @@ jobs:
             if is_postclose "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -lt 1600 ]; then
               echo "skip $WF — post-close window starts 16:00 ET (et_hm=$ET_HM)"
               continue
+            fi
+
+            # Exhaustive captain research: 22:00–04:29 ET only. Never steal
+            # the 05:55 pre-open box.
+            if [ "$WF" = "map_heat_postclose.yml" ] && [ "$FORCE" != "true" ]; then
+              if [ "$ET_HM" -ge 430 ] && [ "$ET_HM" -lt 2200 ]; then
+                echo "skip $WF — waits for 22:00–04:29 ET (et_hm=$ET_HM)"
+                continue
+              fi
             fi
 
             # Pipeline/sector are predict before the bell and outcome after

@@ -45,7 +45,8 @@ else
     || sudo -u "$GHA_USER" git -C "$ROOT" reset --hard origin/main
 fi
 
-chmod +x "$ROOT/scripts/ecs_preopen.sh" "$ROOT/scripts/install_ecs_preopen.sh" \
+chmod +x "$ROOT/scripts/ecs_preopen.sh" "$ROOT/scripts/ecs_map_postclose.sh" \
+  "$ROOT/scripts/install_ecs_preopen.sh" \
   "$ROOT/scripts/ensure_openclaw_timeouts.sh" "$ROOT/scripts/ensure_ecs_clock.sh" \
   "$ROOT/scripts/safe_git_push.sh"
 
@@ -60,14 +61,20 @@ install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.service" \
   /etc/systemd/system/fullscan-preopen.service
 install -m 0644 "$ROOT/scripts/systemd/fullscan-preopen.timer" \
   /etc/systemd/system/fullscan-preopen.timer
+install -m 0644 "$ROOT/scripts/systemd/fullscan-map-postclose.service" \
+  /etc/systemd/system/fullscan-map-postclose.service
+install -m 0644 "$ROOT/scripts/systemd/fullscan-map-postclose.timer" \
+  /etc/systemd/system/fullscan-map-postclose.timer
 
 # Enable the 05:55 clock BEFORE venv AND before OpenClaw CLI. Timer is
 # the thing that must not fail. Timeouts/gateway are next; pip last.
 systemctl daemon-reload
 systemctl enable --now fullscan-preopen.timer
+systemctl enable --now fullscan-map-postclose.timer
 echo "[install] systemctl enable --now fullscan-preopen.timer done"
 systemctl is-enabled fullscan-preopen.timer
 systemctl list-timers --all fullscan-preopen.timer || true
+systemctl list-timers --all fullscan-map-postclose.timer || true
 
 if [ -x "$ROOT/scripts/ensure_openclaw_timeouts.sh" ]; then
   # Run as root so we can chown; the script sudo -u gha for CLI.
@@ -105,6 +112,10 @@ systemctl is-enabled fullscan-preopen.timer \
   && echo "[install] fullscan-preopen.timer ENABLED" \
   || echo "[install] WARN: timer NOT enabled"
 systemctl list-timers --all fullscan-preopen.timer || true
+systemctl is-enabled fullscan-map-postclose.timer \
+  && echo "[install] fullscan-map-postclose.timer ENABLED" \
+  || echo "[install] WARN: map post-close timer NOT enabled"
+systemctl list-timers --all fullscan-map-postclose.timer || true
 echo ""
 echo "Logs:    journalctl -u fullscan-preopen.service -f"
 echo "         tail -f $LOG_DIR/preopen.log"

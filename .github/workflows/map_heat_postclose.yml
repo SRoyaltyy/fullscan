@@ -1,0 +1,104 @@
+name: Map Heat Captain Research (post-close)
+
+# Heavy Grok research is intentionally outside the pre-open critical path.
+# One sector-batched pass researches every liquid SPX/RUT industry captain
+# for the NEXT session. The 05:55 job performs one small overnight refresh.
+
+on:
+  schedule:
+    # Backup clock. ECS systemd owns 22:00 America/New_York (DST-correct).
+    - cron: "0 2 * * 2-6"  # 22:00 EDT / 21:00 EST, Tue-Sat UTC
+  workflow_dispatch:
+    inputs:
+      source_date:
+        description: "Completed session YYYY-MM-DD (default today ET)"
+        required: false
+        default: ""
+      target_date:
+        description: "Next session YYYY-MM-DD (default next weekday)"
+        required: false
+        default: ""
+      force:
+        description: "Rebuild existing baseline"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: map-heat-postclose
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 360
+    env:
+      OPENCLAW_TIMEOUT: "1800"
+    steps:
+      - name: Back off if ECS systemd research owns the box
+        run: |
+          exec 9>/tmp/fullscan-map-postclose.lock
+          if ! flock -n 9; then
+            echo "ECS systemd job owns post-close research — GH backs off"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          else
+            flock -u 9 || true
+          fi
+      - uses: actions/checkout@v4
+        if: env.skip != 'yes'
+        with:
+          clean: false
+      - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
+        with:
+          python-version: "3.10"
+      - name: Install
+        if: env.skip != 'yes'
+        run: pip install -r requirements.txt
+      - name: Build next-session tables and exhaustive captain baseline
+        if: env.skip != 'yes'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          SOURCE: ${{ github.event.inputs.source_date }}
+          TARGET: ${{ github.event.inputs.target_date }}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+        run: |
+          set -euo pipefail
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$ET_HM" -ge 430 ] && [ "$ET_HM" -lt 2200 ]; then
+            echo "outside 22:00–04:29 ET (et_hm=$ET_HM) — abort"
+            exit 1
+          fi
+          if ! flock -n /tmp/fullscan-preopen.lock -c true; then
+            echo "preopen lock held — will not run post-close research"
+            exit 1
+          fi
+          exec 9>/tmp/fullscan-map-postclose.lock
+          flock -n 9 || { echo "systemd grabbed lock — backing off"; exit 0; }
+          SOURCE="${SOURCE:-$(TZ=America/New_York date +%F)}"
+          if [ -z "$TARGET" ]; then
+            TARGET=$(python -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
+          fi
+          echo "source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
+          python -m src.map_heat --date "$TARGET" --force
+          ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          python -m src.map_heat_postclose "${ARGS[@]}"
+          PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
+          mkdir -p "$PERSIST/01_daily/map_heat" "$PERSIST/01_daily/_transcripts"
+          cp -a 01_daily/map_heat/. "$PERSIST/01_daily/map_heat/" 2>/dev/null || true
+          cp -a 01_daily/_transcripts/. "$PERSIST/01_daily/_transcripts/" 2>/dev/null || true
+
+      - name: Commit baseline
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: post-close captain research [$(date -u +%F_%H%M)]" \
+            01_daily/map_heat/ 01_daily/_transcripts/

@@ -4,9 +4,13 @@ name: Pre-Open ALL (predictive one-shot)
 # Sequential.
 #
 #   finviz digest → events + catcher (no carry) → news parse → news judge
+#   → map heat overlay (tape/calendar only) → morning captain refresh
 #   → news actions → general predict → 11 sector predicts → sector board
 #   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
 #   → workflow check
+#
+# Industry groups + exhaustive captain research run at 22:00 ET
+# (map_heat_postclose). Missing last-night baseline FAILS this job.
 #
 # CLOCK:
 #   1. ECS systemd timer at 05:55 America/New_York (DST-correct). Primary.
@@ -112,6 +116,7 @@ jobs:
           export HOME="${FULLSCAN_HOME:-/home/gha}"
           chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
+            scripts/ecs_map_postclose.sh \
             scripts/safe_git_push.sh || true
           bash scripts/ensure_ecs_clock.sh
 
@@ -202,7 +207,8 @@ jobs:
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(
               01_daily/general/ 01_daily/sectors/ 01_daily/events
-              01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/
+              01_daily/news/ 01_daily/map_heat/
+              01_daily/_transcripts/ 01_daily/_channel1/
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
               01_daily/*_grok_review.json 01_daily/*_grok_review.md

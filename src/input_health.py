@@ -245,6 +245,22 @@ def check(date: str) -> dict:
         ev_status, ev_det = "degraded", f"QC fail: {ev_qc.reason}"
     inputs.append(_mk("events", "addon", ev_status, None, ev_det))
 
+    # --- strict morning map/captain research ---
+    heat_md = (ROOT / "01_daily" / "map_heat"
+               / f"{date}_research.md")
+    heat_qc = output_qc.qc_map_heat_research(heat_md)
+    if heat_qc.ok:
+        inputs.append(_mk("map_heat", "heat", "ok", None,
+                          "post-close baseline + morning evidence refresh"))
+    elif heat_md.exists():
+        inputs.append(_mk("map_heat", "heat", "degraded", None,
+                          f"QC fail: {heat_qc.reason}; s_heat disabled; "
+                          "preopen is not quality-ok"))
+    else:
+        inputs.append(_mk("map_heat", "heat", "missing", None,
+                          "post-close/morning research missing; "
+                          "preopen must FAIL; s_heat=0"))
+
     # --- same-day LLM predicts: QUALITY files, not just scoreboard rows.
     # A timeout stub that slipped into the scoreboard as 0/flat must not
     # count as a healthy family.
