@@ -2,7 +2,9 @@
 
 Does in one ECS job (skip-if-good, fail-closed QC):
 
-  finviz digest → events (+ catcher, NEVER carry) → news parse → news judge
+  finviz digest → map heat (industry/theme/captains/tape/calendar)
+  → events (+ catcher, NEVER carry) → news parse → news judge
+
   → news actions → general predict → 11 sector predicts → sector board
   → output_qc (regex) → Grok reads the files as text → workflow check
 
@@ -74,6 +76,7 @@ def _date_paths(root: Path, date: str) -> list[Path]:
         root / "01_daily" / "general",
         root / "01_daily" / "events",
         root / "01_daily" / "news",
+        root / "01_daily" / "map_heat",
         root / "01_daily" / "_transcripts",
         root / "01_daily" / "_channel1",
     ):
@@ -256,6 +259,8 @@ def run(date: str | None = None, force: bool = False) -> None:
               "--date", date, *fa])
         step("finviz_digest", "Finviz daily digest",
              [py, "-m", "src.finviz_digest", "--date", date, *fa])
+        step("map_heat", "Map heat (industry / captains / tape)",
+             [py, "-m", "src.map_heat", "--date", date, *fa])
         step("events", "Event scanner (primary)",
              [py, "-m", "src.run_events", "--date", date, *fa])
         step("events_catcher", "Event catcher (gap hunt, no carry)",

@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "purpose": "GICS sector/industry ↔ Finviz Themes map. Used by src.map_heat to emit nested overrides (Energy DOWN ≠ Uranium UP).",
+  "themes": [
+    {
+      "theme": "Energy Traditional",
+      "gics_parents": ["Energy"],
+      "subthemes": [
+        {
+          "id": "oil_majors",
+          "label": "Oil / Majors",
+          "industries": ["Oil & Gas Integrated", "Oil & Gas Midstream"]
+        },
+        {
+          "id": "oil_ep",
+          "label": "Oil E&P",
+          "industries": ["Oil & Gas E&P"]
+        },
+        {
+          "id": "oil_services",
+          "label": "Oil Services",
+          "industries": ["Oil & Gas Equipment & Services"]
+        },
+        {
+          "id": "nuclear",
+          "label": "Nuclear",
+          "industries": ["Uranium", "Utilities - Independent Power Producers"],
+          "keywords": ["nuclear", "smr"]
+        }
+      ]
+    },
+    {
+      "theme": "Commodities Energy",
+      "gics_parents": ["Energy", "Basic Materials"],
+      "subthemes": [
+        {
+          "id": "uranium",
+          "label": "Uranium",
+          "industries": ["Uranium"]
+        },
+        {
+          "id": "oil_cmdty",
+          "label": "Oil (commodity)",
+          "industries": ["Oil & Gas E&P", "Oil & Gas Integrated"]
+        }
+      ]
+    },
+    {
+      "theme": "Energy Renewable",
+      "gics_parents": ["Energy", "Utilities", "Technology"],
+      "subthemes": [
+        {
+          "id": "solar",
+          "label": "Solar",
+          "industries": ["Solar"]
+        },
+        {
+          "id": "renew_util",
+          "label": "Renewable utilities",
+          "industries": ["Utilities - Renewable"]
+        }
+      ]
+    },
+    {
+      "theme": "Commodities Metals",
+      "gics_parents": ["Basic Materials"],
+      "subthemes": [
+        {"id": "gold", "label": "Gold", "industries": ["Gold"]},
+        {"id": "silver", "label": "Silver", "industries": ["Silver"]},
+        {"id": "copper", "label": "Copper", "industries": ["Copper"]},
+        {
+          "id": "other_precious",
+          "label": "Other precious",
+          "industries": ["Other Precious Metals & Mining"]
+        }
+      ]
+    },
+    {
+      "theme": "Semiconductors",
+      "gics_parents": ["Technology"],
+      "subthemes": [
+        {"id": "semis", "label": "Semis", "industries": ["Semiconductors"]},
+        {
+          "id": "semi_eq",
+          "label": "Semi equipment",
+          "industries": ["Semiconductor Equipment & Materials"]
+        }
+      ]
+    },
+    {
+      "theme": "Artificial Intelligence",
+      "gics_parents": ["Technology"],
+      "subthemes": [
+        {"id": "semis_ai", "label": "AI compute / semis", "industries": ["Semiconductors"]},
+        {
+          "id": "soft_infra",
+          "label": "Software infra",
+          "industries": ["Software - Infrastructure"]
+        }
+      ]
+    },
+    {
+      "theme": "Defense & Aerospace",
+      "gics_parents": ["Industrials"],
+      "subthemes": [
+        {"id": "aero", "label": "Aero / defense", "industries": ["Aerospace & Defense"]}
+      ]
+    }
+  ]
+}
