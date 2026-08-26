@@ -3,10 +3,55 @@
 Export `finviz_2026-08-25.csv` · 11624 names · generated 2026-08-26T03:33:51.650408-04:00
 
 ## TAPE (live futures)
-_futures scrape empty_
+| Contract | Last | Change |
+|---|---:|---:|
+| S&P 500 (ES) | 7681.75 | -0.14% |
+| Nasdaq 100 (NQ) | 29172.75 | -0.36% |
+| Russell 2000 (ER2) | 3007.9 | -0.22% |
+| DJIA (YM) | 53646.0 | +0.02% |
+| VIX (VX) | 17.25 | +0.27% |
+| Crude Oil WTI (CL) | 80.29 | -2.50% |
+| Natural Gas (NG) | 2.873 | +1.84% |
+| Gold (GC) | 4673.3 | -0.45% |
+| Silver (SI) | 68.715 | +0.03% |
+| Copper (HG) | 6.6875 | -0.39% |
+| USD (DX) | 98.975 | +0.12% |
+| EUR (6E) | 1.16725 | -0.09% |
+| JPY (6J) | 0.6292500000000001 | +0.03% |
+| 10 Year Note (ZN) | 108.734375 | -0.11% |
+| 30 Year Bond (ZB) | 110.15625 | -0.09% |
+| Nikkei 225 (NKD) | 66140.0 | +0.13% |
+| DAX (DY) | 26429.0 | +0.37% |
+| Euro Stoxx 50 (EX) | 6500.0 | +0.43% |
 
 ## CALENDAR
-No high-impact print / mega-cap earnings flagged.
+**SIZE GATE on** — high-impact print and/or mega-cap earnings today.
+
+Econ (importance ≥ 2):
+- 07:00 ET  MBA 30-Year Mortgage Rate  actual 6.78%  cons —  surprise —  prev 6.77%
+- 08:30 ET  Core PCE Price Index MoM  actual 0.2%  cons 0.2%  surprise 0.0  prev 0.1%
+- 08:30 ET  Corporate Profits QoQ Prel  actual 8.2%  cons —  surprise —  prev 0.5%
+- 08:30 ET  Durable Goods Orders Ex Transp MoM  actual 0.4%  cons 0.6%  surprise -0.2  prev 1.1%
+- 08:30 ET  Durable Goods Orders MoM  actual 1.1%  cons 0.5%  surprise 0.6  prev 0.3%
+- 08:30 ET  GDP Growth Rate QoQ 2nd Est  actual 1.5%  cons 1.5%  surprise 0.0  prev 2.1%
+- 08:30 ET  GDP Price Index QoQ 2nd Est  actual 6.4%  cons 6.3%  surprise 0.1  prev 3.6%
+- 08:30 ET  PCE Price Index MoM  actual 0.2%  cons 0.1%  surprise 0.1  prev -0.1%
+- 08:30 ET  PCE Price Index YoY  actual 3.7%  cons 3.6%  surprise 0.1  prev 3.7%
+- 08:30 ET  Personal Income MoM  actual 0.4%  cons 0.2%  surprise 0.2  prev 0.2%
+- 08:30 ET  Personal Spending MoM  actual 0.2%  cons 0.1%  surprise 0.1  prev 0.3%
+- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons 0.6M  surprise —  prev 4.405M
+
+Mega-cap earnings:
+- AMC **NVDA**  EPS est 2.0936  (NVIDIA Corp)
+- AMC **CRWD**  EPS est 0.2915  (Crowdstrike Holdings Inc)
+- AMC **CRM**  EPS est 3.2689  (Salesforce Inc)
+- AMC **SNPS**  EPS est 3.6667  (Synopsys Inc)
+
+Options event-vol flags (NOT direction):
+- **NVDA** exp 2026-08-28 ATM IV 0.0039 implied move +0.0% put/call OI 0.95
+- **CRWD** exp 2026-08-28 ATM IV 0.0039 implied move +0.0% put/call OI 1.046
+- **CRM** exp 2026-08-28 ATM IV 0.0078 implied move +0.1% put/call OI 0.586
+- **SNPS** exp 2026-08-28 ATM IV 0.0039 implied move +0.0% put/call OI 0.076
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -126,6 +171,31 @@ COLD (1w):
 - **Economic Environment Themed** 0.0% 1d -1.4% 1w · THRO, SAMT, MSSS
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
+- 6 min **DARE** Dare Bioscience's Sildenafil Cream Data in Postmenopausal Women Published in Menopause - The Journal of The Menopause Society (GlobeNewswire)
+- 6 min **MU** Micron and SK Hynix Face Big Threat From China's YMTC. One Is Better Placed. (Barrons.com)
+- 6 min **TMUS,SPCX,CCI** BofA sees SpaceX wireless ambitions as positive for T-Mobile and tower operators (InvestorsHub)
+- 8 min **LLY** Lilly study associates Zepbound use with lower healthcare costs in adults over 55 (InvestorsHub)
+- 10 min **SJM** J.M. Smucker shares rise after earnings beat and upgraded annual outlook (InvestorsHub)
+- 11 min **ANF** Abercrombie & Fitch shares soar after earnings beat and upgraded outlook (InvestorsHub)
+- 13 min **PRE** Prenetics' IM8 CEO and CFO Purchase $1.0 Million of Shares in the Open Market Following Second Quarter Results (GlobeNewswire)
+- 14 min **SMMT** Summit Therapeutics shares rise after partner reports positive Phase III cancer trial results (InvestorsHub)
+- 15 min **DY** Dycom Industries beats Q2 forecasts as digital infrastructure demand accelerates (InvestorsHub)
+- 16 min **CDIO** Cardio Diagnostics Report Identifies Growing Rural Cardiovascular Care Gap Amid Ongoing Workforce Shortages and Access Challenges (Business Wire)
+- 18 min **NVDA** Nvidia Earnings Countdown Begins: What to Expect From Upcoming Report (GuruFocus.com)
+- 19 min **VCIG** VCI Global Announces Galatron AI Factory, a Modular AI Data Center Platform with Roadmap to 500MW of Compute Capacity (GlobeNewswire)
+- 19 min **SPRC** SciSparc Advances Agentic AI Strategy with Addition of Internationally Recognized AI Expert Prof. Carmel Domshlak to Scientific Advisory Board (GlobeNewswire)
+- 19 min **KSS** Kohl's Stock Slumps After Earnings. It's Turnaround Strategy May Actually Working. (Barrons.com)
+- 19 min **NAGE** Niagen Bioscience to Present at Nasdaq X LD Micro Inaugural SF Summit (Business Wire)
+- 19 min **KSS** Kohl's shares fall despite earnings beat and stronger full-year guidance (InvestorsHub)
+- 20 min **ZM** Zoom Q2 FY2027 earnings beat but profit outlook disappoints (Quartz)
+- 20 min **SPCX** Cathie Wood Just Bought $27.5 Million of Tumbling Tech Stock (GuruFocus.com)
+- 20 min **AIDX** 20/20 BioLabs to Host Investor Webinar on September 2, 2026 to Discuss OneTest Revenue and Expanding Commercial Opportunity (GlobeNewswire)
+- 20 min **JKS** JinkoSolar shares fall after second-quarter earnings and revenue miss forecasts (InvestorsHub)
+- 21 min **CLBT** Cellebrite Brings Battlefield Intelligence to the Armed Forces with Launch of Portable Tactical Extraction Kit (C-TEK) (PR Newswire)
+- 21 min **LFS** Leifras Anticipates Benefit from Expanded Trading Access as Nasdaq Plans 23-Hour Weekday Trading (PR Newswire)
+- 21 min **SMX** SMX Brings a New Layer of trust to Gold as Global Uncertainty Drives Investors Toward Physical Assets (ACCESSWIRE)
+- 21 min **FBLG** FibroBiologics Regains Compliance with Nasdaq Trading Rules (PR Newswire)
+- 21 min **HON,HONA** Honeywell Aerospace announces participation at upcoming investor conferences (PR Newswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
