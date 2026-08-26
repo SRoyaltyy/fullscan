@@ -1,0 +1,312 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T02:20:00-04:00",
+  "n_targets": 12,
+  "n_cards": 10,
+  "cards": [
+    {
+      "industry": "Uranium",
+      "sector": "Energy",
+      "action": "OVERRIDE",
+      "subsector_dir": "up",
+      "conviction": "high",
+      "captains": [
+        {
+          "ticker": "UEC",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "d1 +1.68 w1 +16.06 on uranium spot ~$90"
+        },
+        {
+          "ticker": "UUUU",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "d1 +1.14 w1 +6.81 confirms bid"
+        }
+      ],
+      "one_line": "Energy ETF oil-weak; uranium RUT captains confirm nested long vs parent.",
+      "do_not": "bury in XLE DOWN"
+    },
+    {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "action": "OVERRIDE",
+      "subsector_dir": "down",
+      "conviction": "medium",
+      "captains": [
+        {
+          "ticker": "NUE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "d1 -0.06 w1 -7.45 flat"
+        },
+        {
+          "ticker": "STLD",
+          "index": "SPX",
+          "sent": "neg",
+          "why": "d1 +0.97 w1 -7.33 pressure"
+        }
+      ],
+      "one_line": "Basic Materials residual weak; steel captains show no bid, subsector down.",
+      "do_not": "average into XLB"
+    },
+    {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "action": "OVERRIDE",
+      "subsector_dir": "down",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "DOW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "d1 -0.48 w1 +0.32 flat"
+        },
+        {
+          "ticker": "HUN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "d1 +0.52 w1 -3.98 soft"
+        }
+      ],
+      "one_line": "Basic Materials weak; chemicals captains flat-to-soft, no reversal signal.",
+      "do_not": "average into XLB"
+    },
+    {
+      "industry": "Gold",
+      "sector": "Basic Materials",
+      "action": "SPLIT",
+      "subsector_dir": "up",
+      "conviction": "medium",
+      "captains": [
+        {
+          "ticker": "NEM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "d1 -0.87 w1 +12.68"
+        },
+        {
+          "ticker": "SSRM",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "d1 -1.32 w1 +20.23 confirms bid"
+        }
+      ],
+      "one_line": "Gold residual strong; RUT captain SSRM positive while SPX captain flat.",
+      "do_not": "average into XLB"
+    },
+    {
+      "industry": "Copper",
+      "sector": "Basic Materials",
+      "action": "SPLIT",
+      "subsector_dir": "up",
+      "conviction": "medium",
+      "captains": [
+        {
+          "ticker": "FCX",
+          "index": "SPX",
+          "sent": "pos",
+          "why": "d1 -0.4 w1 +16.84 copper +0.57"
+        },
+        {
+          "ticker": "IE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "d1 +3.02 w1 +14.29"
+        }
+      ],
+      "one_line": "Copper residual strong; SPX captain FCX positive supports subsector up.",
+      "do_not": "average into XLB"
+    },
+    {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "action": "OVERRIDE",
+      "subsector_dir": "down",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "AIN",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "d1 0.0 w1 -8.67 residual weak"
+        }
+      ],
+      "one_line": "Consumer Cyclical weak; textile captain AIN shows no lift vs parent.",
+      "do_not": "average into XLY"
+    },
+    {
+      "industry": "Thermal Coal",
+      "sector": "Energy",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CNR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "d1 -1.25 w1 +3.24"
+        },
+        {
+          "ticker": "BTU",
+          "index": "RUT",
+          "sent": "none",
+          "why": "d1 -0.68 w1 +10.05"
+        }
+      ],
+      "one_line": "Energy oil-weak; thermal coal captains flat, no clear subsector move.",
+      "do_not": "bury in XLE DOWN"
+    },
+    {
+      "industry": "Consulting Services",
+      "sector": "Industrials",
+      "action": "OVERRIDE",
+      "subsector_dir": "up",
+      "conviction": "medium",
+      "captains": [
+        {
+          "ticker": "VRSK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "d1 -0.5 w1 +5.45"
+        },
+        {
+          "ticker": "HURN",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "d1 -0.37 w1 +7.02"
+        }
+      ],
+      "one_line": "Industrials mixed; consulting RUT captain HURN positive vs parent.",
+      "do_not": "average into XLI"
+    },
+    {
+      "industry": "Marine Shipping",
+      "sector": "Industrials",
+      "action": "OVERRIDE",
+      "subsector_dir": "up",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MATX",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "d1 0.0 w1 +1.24"
+        },
+        {
+          "ticker": "SFL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "d1 +4.0 w1 +2.57"
+        }
+      ],
+      "one_line": "Industrials residual positive; marine shipping captains show mild bid.",
+      "do_not": "average into XLI"
+    },
+    {
+      "industry": "Railroads",
+      "sector": "Industrials",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "UNP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "d1 +0.19 w1 +3.92"
+        },
+        {
+          "ticker": "TRN",
+          "index": "RUT",
+          "sent": "neg",
+          "why": "d1 0.0 w1 -0.6"
+        }
+      ],
+      "one_line": "Industrials positive; railroads captains mixed-to-flat, no strong signal.",
+      "do_not": "average into XLI"
+    }
+  ],
+  "size_gate": true,
+  "size_gate_reason": "PCE 08:30 + NVDA AMC",
+  "parent_splits": [
+    {
+      "sector": "Energy",
+      "long": [
+        "Uranium"
+      ],
+      "avoid": [
+        "Oil & Gas Integrated",
+        "Oil E&P"
+      ],
+      "why": "oil tape -2.02, uranium captains UEC/UUUU bid vs parent"
+    },
+    {
+      "sector": "Basic Materials",
+      "long": [
+        "Gold",
+        "Copper"
+      ],
+      "avoid": [
+        "Steel",
+        "Chemicals"
+      ],
+      "why": "gold +19.2 / copper +17.59 residuals; steel -3.07 / chemicals -2.77 captains weak"
+    },
+    {
+      "sector": "Industrials",
+      "long": [
+        "Consulting Services"
+      ],
+      "avoid": [
+        "Railroads"
+      ],
+      "why": "consulting RUT captain HURN positive vs parent mixed"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "uranium_nested",
+      "side": "long",
+      "tickers": [
+        "UEC",
+        "UUUU"
+      ],
+      "why": "OVERRIDE vs Energy; high-conviction RUT captains pos on spot bid",
+      "horizon": "1w"
+    },
+    {
+      "id": "gold_copper_split",
+      "side": "long",
+      "tickers": [
+        "SSRM",
+        "FCX"
+      ],
+      "why": "SPLIT up in Basic Materials; SSRM/FCX confirm residual strength",
+      "horizon": "1w"
+    },
+    {
+      "id": "consulting_override",
+      "side": "long",
+      "tickers": [
+        "HURN"
+      ],
+      "why": "OVERRIDE vs Industrials; RUT captain positive while parent mixed",
+      "horizon": "1w"
+    }
+  ],
+  "vetoes": [
+    {
+      "what": "broad XLK / semis",
+      "why": "NVDA AMC + size_gate"
+    },
+    {
+      "what": "XLE long",
+      "why": "oil -2.02 overrides parent residual"
+    }
+  ],
+  "one_paragraph": "Money is rotating into uranium via UEC and UUUU as an OVERRIDE inside a weak Energy parent. Gold and copper show SPLIT strength with SSRM and FCX confirming the Basic Materials residual while steel and chemicals lag. Consulting services via HURN offers a modest Industrials OVERRIDE. Size gate blocks any broad XLK or XLE exposure ahead of PCE and NVDA. These nested moves sit below the 11 sector ETFs and are visible only through the captain tape.",
+  "source": "xai-grok-4 first print (OpenClaw path used on ECS)"
+}

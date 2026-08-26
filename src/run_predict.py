@@ -20,6 +20,11 @@ try:
 except Exception:
     def finviz_digest_block(*_a, **_k):
         return ""
+try:
+    from .map_heat_research import inject_block as map_heat_research_block
+except Exception:
+    def map_heat_research_block(*_a, **_k):
+        return ""
 
 
 def _write(path: str, date_str: str, text: str, decision: dict, scores: dict,
@@ -101,6 +106,7 @@ def main() -> None:
 
     # 1c. Finviz Daily Digest (export + index narratives) — elevated themes
     fv = finviz_digest_block(date_str) or finviz_digest_block()
+    mh = map_heat_research_block(date_str)
 
     # 2. Assemble prompt: rubric + event scan + news judge + finviz digest + memory + channel 1
     with open(os.path.join(config.GROUNDING, "master_rubric.md"),
@@ -110,6 +116,7 @@ def main() -> None:
                 f"{event_context.block()}\n\n"
                 f"{nj}"
                 f"{fv}"
+                f"{mh}"
                 f"{memory.prediction_context()}\n\n{ch1_md}\n\n"
                 "Execute the full rubric now. Remember: use web_search for "
                 "ALL six Channel 2 categories before scoring.\n"
@@ -119,6 +126,9 @@ def main() -> None:
                 "When FINVIZ DAILY DIGEST is present, treat its index narratives "
                 "and high-signal ticker digests as pre-validated elevated themes "
                 "— use them to reinforce or correct thin/noisy mechanical parses.\n"
+                "When MAP HEAT RESEARCH is present, honor nested OVERRIDE/SPLIT "
+                "(do not average Uranium into Energy) and the size_gate "
+                "(do not promote XLK/SPX notable UP into a mega-cap print).\n"
                 "First line MUST be MEMORY_CONFIRM. Then analysis. Then a "
                 "SCORES_BEGIN..SCORES_END block. HIT_GRID_BEGIN is required "
                 "when the rubric asks for it.\n"

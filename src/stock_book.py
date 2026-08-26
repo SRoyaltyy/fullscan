@@ -439,6 +439,7 @@ def _inputs_status(date: str) -> list[dict]:
          or any((ROOT / "data" / "checklist").glob("*_checklist.csv")),
          "rebound_floor (dated file, else latest — can be stale)"),
         ("Event scanner", exists("01_daily", "events", "latest.json"), "sector tilt + weather"),
+        ("Map heat research", exists("01_daily", "map_heat", f"{date}_research.json"), "s_heat nested override + captains"),
         ("Catalyst overlays", False, "not in ranker — separate chart workflow"),
         ("Insider / politician flow", False, "no daily file in repo"),
         ("Industry predict", exists("01_daily", "industry"), "not scored (ad-hoc only)"),
@@ -683,6 +684,26 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     else:
         join["s_peer"] = 0.0
 
+    # Nested industry heat: captains + OVERRIDE child vs parent. Additive.
+    tboost, iboost = {}, {}
+    try:
+        from .map_heat_research import ticker_boosts
+        tboost, iboost = ticker_boosts(date)
+    except Exception as e:  # noqa: BLE001
+        print(f"[stock-book] heat research skipped: {e}")
+    if tboost or iboost:
+        def _heat_row(r):
+            t = str(r.get("Ticker") or "").upper()
+            if t in tboost:
+                return tboost[t]
+            ind = str(r.get("industry") or "")
+            return float(iboost.get(ind) or 0.0)
+        join["s_heat"] = join.apply(_heat_row, axis=1).astype(float)
+        print(f"[stock-book] s_heat on {int(join['s_heat'].ne(0).sum())} names "
+              f"({len(tboost)} captains, {len(iboost)} industries)")
+    else:
+        join["s_heat"] = 0.0
+
     # --- opportunity: liquid mid/small with room to run (BB-class) ---
     sz = join["size"].astype(str).str.lower() if "size" in join.columns else pd.Series("", index=join.index)
     rng = join["range"].astype(str).str.lower() if "range" in join.columns else pd.Series("", index=join.index)
@@ -801,6 +822,7 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             + wn * join["s_news"]
             + wa * join["s_ab"]
             + wp * join["s_peer"]
+            + join["s_heat"]
         )
         join[f"score_{h}"] = join[f"core_{h}"] + join["s_opp"]
         if "rebound" in join.columns:
@@ -838,6 +860,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
                 bits.append(lab)
         if abs(row.get("s_peer", 0) or 0) > 0.05:
             bits.append(f"peer={row['s_peer']:+.2f}")
+        heat = float(row.get("s_heat") or 0)
+        if abs(heat) > 0.04:
+            bits.append(f"heat={heat:+.2f}")
         opp = float(row.get("s_opp") or 0)
         if opp > 0.05:
             bits.append(f"mid_opp={opp:+.2f}")
@@ -1021,6 +1046,8 @@ def _layer_lines(row, horizon: str, weights: dict | None = None) -> list[str]:
          "structure + P01–P04 peer/industry/sector"),
         ("peer RS", wp, float(row.get("s_peer") or 0),
          "this week vs its correlated basket"),
+        ("map heat / captains", 1.0, float(row.get("s_heat") or 0),
+         "nested OVERRIDE + captain research (additive)"),
     ]
     out = [
         "| Layer | Weight | Signal | Contribution | Means |",
@@ -1046,6 +1073,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
+        "s_heat",
         # per-horizon LLM components + core scores: this CSV is the learning
         # snapshot book_learn re-scores under candidate weights
         *[f"s_sector_{h}" for h in HORIZONS],

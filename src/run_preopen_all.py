@@ -2,9 +2,8 @@
 
 Does in one ECS job (skip-if-good, fail-closed QC):
 
-  finviz digest → map heat (industry/theme/captains/tape/calendar)
-  → events (+ catcher, NEVER carry) → news parse → news judge
-
+  finviz digest → map heat (tables) → events (+ catcher)
+  → news parse → news judge → map heat research (captains + opportunity)
   → news actions → general predict → 11 sector predicts → sector board
   → output_qc (regex) → Grok reads the files as text → workflow check
 
@@ -44,6 +43,7 @@ REQUIRED = [
     ("events", "Event scanner", True),
     ("news_parse", "News parse", True),
     ("news_judge", "News judge", True),
+    ("map_heat_research", "Map heat research (captains)", False),
     ("news_actions", "News actions", False),
     ("general_predict", "General market predict", True),
     ("sector_predict", "Per-sector predict (11)", True),
@@ -268,6 +268,8 @@ def run(date: str | None = None, force: bool = False) -> None:
         # Deliberately NO events_fallback — carry is trash for pre-open.
         step("news_judge", "News judge",
              [py, "-m", "src.run_news_judge", "--date", date, *fa])
+        step("map_heat_research", "Map heat research (captains + opportunity)",
+             [py, "-m", "src.map_heat_research", "--date", date, *fa])
         step("news_actions", "News actions",
              [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
               "--date", date, *fa])
@@ -336,6 +338,11 @@ def run(date: str | None = None, force: bool = False) -> None:
             detail = detail or ("OK" if ok else "missing")
         elif key == "finviz_digest":
             rows = by_kind.get("finviz_digest") or []
+            ok = bool(rows) and all(r.get("ok") for r in rows)
+            detail = rows[0].get("reason") if rows and not ok else ""
+            detail = detail or ("OK" if ok else "missing")
+        elif key == "map_heat_research":
+            rows = by_kind.get("map_heat_research") or []
             ok = bool(rows) and all(r.get("ok") for r in rows)
             detail = rows[0].get("reason") if rows and not ok else ""
             detail = detail or ("OK" if ok else "missing")

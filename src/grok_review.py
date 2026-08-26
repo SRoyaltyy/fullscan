@@ -117,10 +117,11 @@ def bundle_preopen(date: str, root: Path | None = None,
         ("news_parse", f"01_daily/news/{date}_parsed.json", True),
         ("news_actions", f"01_daily/news/{date}_actions.json", True),
         ("finviz_digest", f"01_daily/news/{date}_finviz_digest.json", True),
+        ("map_heat_research", f"01_daily/map_heat/{date}_research.md", False),
     ]
     digest_json = root / "01_daily" / "news" / f"{date}_finviz_digest.json"
     if not digest_json.exists():
-        catalog[-1] = (
+        catalog[5] = (
             "finviz_digest",
             f"01_daily/news/{date}_finviz_digest.md",
             False,

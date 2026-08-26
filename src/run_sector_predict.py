@@ -26,6 +26,11 @@ try:
 except Exception:
     def finviz_digest_block(*_a, **_k):
         return ""
+try:
+    from .map_heat_research import inject_block as map_heat_research_block
+except Exception:
+    def map_heat_research_block(*_a, **_k):
+        return ""
 
 
 def _slug(sector: str) -> str:
@@ -128,6 +133,7 @@ def run_one(sector: str, date_str: str, ch1_md: str,
     seeds = search_query_bundle(sector, limit=16)
     nj = news_judge_block(date_str) or news_judge_block()
     fv = finviz_digest_block(date_str) or finviz_digest_block()
+    mh = map_heat_research_block(date_str, sector=sector)
 
     user_msg = (
         f"TODAY: {date_str} (America/New_York)\n"
@@ -136,6 +142,7 @@ def run_one(sector: str, date_str: str, ch1_md: str,
         f"{prediction_context(sector)}\n\n"
         f"{nj}"
         f"{fv}"
+        f"{mh}"
         f"{ch1_md}\n\n"
         f"=== CHANNEL 1 SECTOR ETF TAPE (also pre-fetched) ===\n"
         f"{etf_ctx or '(unavailable)'}\n\n"
@@ -143,6 +150,9 @@ def run_one(sector: str, date_str: str, ch1_md: str,
         + "\n".join(f"- {q}" for q in seeds)
         + "\n\nWhen NEWS JUDGE / FINVIZ DIGEST is present, treat ranked "
           "MACRO/SECTOR lines that mention THIS sector as primary S1 input.\n"
+          "When MAP HEAT RESEARCH is present for THIS sector, nested "
+          "OVERRIDE/SPLIT beats the parent ETF: do not bury a hot child "
+          "(e.g. Uranium) inside a weak parent (Energy), and honor size_gate.\n"
           "Execute the shared method + THIS sector layer now. "
           "Specialize S1 to the spine factors. "
           "MEMORY_CONFIRM first, then analysis, then SECTOR_SCORES block. "

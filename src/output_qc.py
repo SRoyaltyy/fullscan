@@ -232,6 +232,25 @@ def qc_news_parse(path: str | Path) -> QCResult:
     return _ok("news_parse", p, json.dumps(data)[:50])
 
 
+def qc_map_heat_research(path: str | Path) -> QCResult:
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("map_heat_research", p, "missing", empty=True)
+    text = _read(p)
+    if looks_like_timeout(text):
+        return _fail("map_heat_research", p, "timeout_stub", text, timeout=True)
+    missing = _missing(text, ["CAPTAIN_CARDS_OK", "OPPORTUNITY_OK"])
+    if missing:
+        return _fail("map_heat_research", p, "missing:" + ",".join(missing),
+                     text, missing=missing)
+    js = p.replace("_research.md", "_research.json")
+    data = _read_json(js)
+    n = len((data or {}).get("cards") or []) if isinstance(data, dict) else 0
+    if n < 3:
+        return _fail("map_heat_research", p, f"too_few_cards({n})", text)
+    return _ok("map_heat_research", p, text)
+
+
 def qc_news_actions(path: str | Path) -> QCResult:
     p = str(path)
     if not os.path.exists(p):
@@ -372,6 +391,8 @@ def preopen_report(date_str: str) -> dict:
                              f"{date_str}_finviz_digest.md")
     items.append(qc_finviz_digest(
         digest_json if os.path.exists(digest_json) else digest_md))
+    items.append(qc_map_heat_research(
+        os.path.join("01_daily", "map_heat", f"{date_str}_research.md")))
 
     sector_rows = []
     for sector in FINVIZ_SECTORS:
@@ -390,7 +411,8 @@ def preopen_report(date_str: str) -> dict:
         "sectors": sector_rows,
         "sector_n_ok": n_ok,
         "sector_n_total": len(FINVIZ_SECTORS),
-        "all_ok": all(r.ok for r in items if r.kind != "sector_predict")
+        "all_ok": all(r.ok for r in items
+                      if r.kind not in ("sector_predict", "map_heat_research"))
                   and n_ok >= 8,
     }
     return report
@@ -432,7 +454,7 @@ def main() -> None:
     ap.add_argument("--preopen", action="store_true",
                     help="Scan every pre-open artifact for --date")
     ap.add_argument("--kind", default="",
-                    help="general|sector|events|judge|parse|actions|digest")
+                    help="general|sector|events|judge|parse|actions|digest|heat_research")
     ap.add_argument("--path", default="")
     ap.add_argument("--write", action="store_true",
                     help="Write 01_daily/<date>_preopen_qc.json")
@@ -449,6 +471,7 @@ def main() -> None:
             "parse": qc_news_parse,
             "actions": qc_news_actions,
             "digest": qc_finviz_digest,
+            "heat_research": qc_map_heat_research,
         }
         fn = dispatch.get(kind)
         if not fn:
