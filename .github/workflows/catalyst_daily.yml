@@ -5,9 +5,10 @@ name: Catalyst daily (bounded dossiers)
 # mega-cap earnings, and news-action conflicts. Writes dossiers,
 # merges net_signal into that day's news actions (dashboard path).
 #
-# Not on the pre-open 09:30 clock. Stock Book ALL also runs this
-# before ranking so s_catalyst lands in the .io paper book.
-# Dispatch-only plus a weekday afternoon catch-up.
+# Primary run is INSIDE Pre-Open ALL, after map-heat + news actions
+# and before predicts, so dossiers land before 09:30 ET.
+# This workflow is last-chance (08:15 ET) plus afternoon skip-if-good
+# so Stock Book ALL can still merge if morning burned the clock.
 # Analysis is Grok-only (OpenClaw / Grok 4.6). Same prompts.
 # Search is Grok native web/X — no SearXNG.
 
@@ -31,7 +32,9 @@ on:
         required: false
         default: "false"
   schedule:
-    # 14:30 UTC = 10:30 ET — after pre-open packet, before stock-book ALL
+    # 08:15 ET last-chance if Pre-Open ALL finished without dossiers
+    - cron: "15 12 * * 1-5"
+    # 10:30 ET skip-if-good catch-up for the book path
     - cron: "30 14 * * 1-5"
 
 permissions:
