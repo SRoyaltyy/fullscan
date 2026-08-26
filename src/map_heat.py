@@ -957,20 +957,30 @@ def main() -> None:
     preopen.refuse_if_late("map_heat", force=args.force)
     js = OUT_DIR / f"{date}_map_heat.json"
     if args.overlay:
-        if not js.exists():
-            raise SystemExit(
-                f"post-close map heat missing: {js} — industry groups must be "
-                "scraped at 22:00 ET, not in the premarket"
+        payload = None
+        if js.exists():
+            try:
+                candidate = json.loads(js.read_text(encoding="utf-8"))
+                if len(candidate.get("industries") or []) >= 50:
+                    payload = candidate
+            except (OSError, json.JSONDecodeError):
+                payload = None
+        if payload is None:
+            # Bootstrap only: better to produce explicit same-day tables than
+            # fail the entire pre-open because last night's timer missed. This
+            # artifact is tagged, and captain heat remains disabled without a
+            # real post-close baseline + morning_refresh research file.
+            print(
+                f"[map_heat] WARN: post-close table missing/thin at {js}; "
+                "running full premarket bootstrap build (no s_heat)"
             )
-        try:
-            payload = json.loads(js.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as e:
-            raise SystemExit(f"post-close map heat unreadable: {js}: {e}")
-        if len(payload.get("industries") or []) < 50:
-            raise SystemExit(
-                f"post-close map heat too thin ({len(payload.get('industries') or [])} "
-                f"industries) at {js}"
-            )
+            payload = build(date)
+            payload = overlay_live(date, payload)
+            payload["phase"] = "morning_bootstrap_tables"
+            payload["bootstrap_reason"] = "postclose_map_heat_missing_or_thin"
+            write(date, payload)
+            print(render(payload))
+            return
         if (not args.force
                 and str(payload.get("overlay_at") or "")[:10] == date):
             print(f"[map_heat] overlay already applied {date}")

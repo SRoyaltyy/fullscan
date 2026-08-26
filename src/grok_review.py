@@ -49,14 +49,17 @@ Fail a file (and the day) if it is any of:
 - copy-paste: two or more sector essays that are substantially the same
 - a "predict" that never actually takes a direction
 
-Required: general predict, events JSON (real scan, not carry), news judge,
-news parse, finviz digest, map heat tables, post-close captain baseline,
-morning captain research refresh, and at least 8 of 11 sector predicts.
-News actions is optional.
+Required core: general predict, events JSON (real scan, not carry), news
+judge, news parse, finviz digest, usable map-heat tables, and at least 8
+of 11 sector predicts. News actions is optional.
 
-Fail map_heat_research if it is missing, not phase=morning_refresh, has
-fewer than 20 captain cards, or looks like a timeout stub. Last night's
-post-close baseline is mandatory — do not pass a day that skipped it.
+Captain baseline/research is an enhancement. If the post-close baseline is
+missing, `phase=morning_bootstrap` is an explicit safe no-signal artifact:
+do NOT fail the day for that. The stock book ignores it (`s_heat=0`).
+If research claims `phase=morning_refresh`, then fail it when it has fewer
+than 20 cards, unsupported sentiment, timeout text, or malformed evidence.
+Missing baseline/research may be noted, but must not fail otherwise valid
+core artifacts.
 
 
 Pass ONLY if every required file looks like a human-usable same-day packet.

@@ -32,7 +32,7 @@ def test_macro_gate_halves_book_earnings_does_not() -> None:
     assert g2["earnings_entry_tickers"] == ["NVDA"]
 
 
-def test_all_ok_requires_research() -> None:
+def test_missing_research_is_visible_but_bootstrap_is_safe() -> None:
     missing = output_qc.qc_map_heat_research(
         "01_daily/map_heat/1999-01-01_research.md")
     assert not missing.ok
@@ -44,6 +44,20 @@ def test_all_ok_requires_research() -> None:
     heat = output_qc.qc_map_heat(
         "01_daily/map_heat/1999-01-01_map_heat.json")
     assert not heat.ok
+    with tempfile.TemporaryDirectory() as d:
+        md = Path(d) / "2099-01-01_research.md"
+        js = Path(d) / "2099-01-01_research.json"
+        md.write_text(
+            "# MAP HEAT RESEARCH — 2099-01-01 (BOOTSTRAP)\n\n"
+            "No post-close baseline; no heat applied.\n\n"
+            "CAPTAIN_CARDS_OK\nOPPORTUNITY_OK\n"
+        )
+        js.write_text(json.dumps({
+            "date": "2099-01-01", "phase": "morning_bootstrap",
+            "cards": [], "calendar_entry_scale": 1.0,
+        }))
+        safe = output_qc.qc_map_heat_research(md)
+        assert safe.ok
 
 
 def test_calendar_entry_scale_ignores_legacy_earnings_mix() -> None:
@@ -80,7 +94,7 @@ def test_heat_scale_default_is_incubate() -> None:
 
 if __name__ == "__main__":
     test_macro_gate_halves_book_earnings_does_not()
-    test_all_ok_requires_research()
+    test_missing_research_is_visible_but_bootstrap_is_safe()
     test_calendar_entry_scale_ignores_legacy_earnings_mix()
     test_heat_scale_default_is_incubate()
     print("4 tests passed")

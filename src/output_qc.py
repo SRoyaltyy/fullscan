@@ -292,6 +292,11 @@ def qc_map_heat_research(path: str | Path) -> QCResult:
                      text, missing=missing)
     js = p.replace("_research.md", "_research.json")
     data = _read_json(js)
+    # First-deploy / missed-postclose bootstrap is an explicit, safe no-signal
+    # artifact. It lets the core day run while ticker_boosts/inject_block
+    # refuse to apply heat. This is not "fake research"; it is typed absence.
+    if isinstance(data, dict) and data.get("phase") == "morning_bootstrap":
+        return _ok("map_heat_research", p, text)
     n = len((data or {}).get("cards") or []) if isinstance(data, dict) else 0
     if n < 20:
         return _fail("map_heat_research", p, f"too_few_cards({n})", text)
@@ -496,7 +501,14 @@ def preopen_report(date_str: str) -> dict:
         "sectors": sector_rows,
         "sector_n_ok": n_ok,
         "sector_n_total": len(FINVIZ_SECTORS),
-        "all_ok": all(r.ok for r in items if r.kind != "sector_predict")
+        # Baseline/research enhance the day but cannot invalidate otherwise
+        # tradable core inputs. Their consumers are stricter: only a valid
+        # phase=morning_refresh can inject prompts or create s_heat.
+        "all_ok": all(
+            r.ok for r in items
+            if r.kind not in (
+                "sector_predict", "map_heat_baseline", "map_heat_research")
+        )
                   and n_ok >= 8,
     }
     return report
