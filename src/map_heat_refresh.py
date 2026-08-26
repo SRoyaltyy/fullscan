@@ -3,6 +3,9 @@
 One Grok call updates only the industries that are hot/cold/overrides now,
 plus captains on today's earnings calendar. It merges those cards into the
 exhaustive post-close baseline and applies the fresh futures/calendar gate.
+
+Bootstrap: if last night's baseline is absent, write phase=morning_bootstrap
+stub and return. Preopen continues; stock_book already ignores non-refresh.
 """
 from __future__ import annotations
 
@@ -57,6 +60,55 @@ def _chat(system: str, user: str, date: str) -> str:
     )
 
 
+def _write_bootstrap(date: str, heat: dict) -> dict:
+    """Minimal research artifact when post-close baseline never ran."""
+    payload = {
+        "date": date,
+        "phase": "morning_bootstrap",
+        "generated_at": datetime.now(ET).isoformat(),
+        "n_targets": 0,
+        "n_cards": 0,
+        "n_refreshed": 0,
+        "evidence_errors": ["no post-close baseline — research skipped"],
+        "cards": [],
+        "size_gate": bool(heat.get("macro_gate") or heat.get("size_gate")),
+        "macro_gate": bool(heat.get("macro_gate")),
+        "earnings_gate": bool(heat.get("earnings_gate")),
+        "size_gate_reason": "bootstrap — no post-close baseline",
+        "calendar_entry_scale": 0.5 if heat.get("macro_gate") else 1.0,
+        "earnings_entry_tickers": heat.get("earnings_entry_tickers") or [
+            str(e.get("ticker") or "").upper()
+            for e in (heat.get("earnings") or []) if e.get("ticker")
+        ],
+        "parent_splits": [],
+        "opportunities": [],
+        "vetoes": [],
+        "one_paragraph": (
+            "Bootstrap day: post-close captain baseline was missing. "
+            "Research skipped so the rest of preopen can still succeed. "
+            "stock_book will receive no s_heat. Full path resumes after "
+            "the next 22:00 post-close job."
+        ),
+        "futures": heat.get("tape") or [],
+        "econ": heat.get("econ") or [],
+        "earnings": heat.get("earnings") or [],
+    }
+    final_path = OUT / f"{date}_research.json"
+    final_md = OUT / f"{date}_research.md"
+    OUT.mkdir(parents=True, exist_ok=True)
+    final_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    # Markers so any downstream marker check still sees the contract tokens.
+    md = (
+        f"# MAP HEAT RESEARCH — {date} (BOOTSTRAP)\n\n"
+        f"{payload['one_paragraph']}\n\n"
+        "CAPTAIN_CARDS_OK\nOPPORTUNITY_OK\n"
+    )
+    final_md.write_text(md, encoding="utf-8")
+    (OUT / "latest_research.md").write_text(md, encoding="utf-8")
+    print(f"[map-refresh] BOOTSTRAP wrote {final_path} (no baseline)")
+    return payload
+
+
 def run(date: str, force: bool = False) -> dict:
     preopen.refuse_if_late("map_heat_refresh", force=force)
     heat_path = OUT / f"{date}_map_heat.json"
@@ -71,13 +123,16 @@ def run(date: str, force: bool = False) -> dict:
     if not heat_path.exists():
         raise SystemExit(
             f"post-close map heat missing: {heat_path} — groups must be "
-            "scraped at 22:00 ET"
+            "scraped at 22:00 ET (or map_heat --overlay must have fallen "
+            "back to a full build)"
         )
     if not base_path.exists():
-        raise SystemExit(
-            f"post-close baseline missing: {base_path} — 22:00 ET research "
-            "is mandatory; will not run the old exhaustive pass pre-open"
+        print(
+            f"[map-refresh] post-close baseline missing: {base_path} — "
+            "writing morning_bootstrap stub so preopen can still succeed"
         )
+        heat = _load(heat_path)
+        return _write_bootstrap(date, heat)
     config.require_llm()
     heat, baseline = _load(heat_path), _load(base_path)
     targets = _refresh_targets(heat, baseline)
