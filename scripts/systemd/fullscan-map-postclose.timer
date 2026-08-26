@@ -1,0 +1,12 @@
+[Unit]
+Description=Run fullscan map/captain research at 22:00 ET weekdays
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 22:00:00 America/New_York
+Persistent=true
+AccuracySec=1min
+Unit=fullscan-map-postclose.service
+
+[Install]
+WantedBy=timers.target
+

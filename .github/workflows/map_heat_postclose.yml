@@ -6,7 +6,8 @@ name: Map Heat Captain Research (post-close)
 
 on:
   schedule:
-    - cron: "45 23 * * 1-5"  # 19:45 ET during EDT; queues after sector outcome
+    # Backup clock. ECS systemd owns 22:00 America/New_York (DST-correct).
+    - cron: "0 2 * * 2-6"  # 22:00 EDT / 21:00 EST, Tue-Sat UTC
   workflow_dispatch:
     inputs:
       source_date:
@@ -36,15 +37,28 @@ jobs:
     env:
       OPENCLAW_TIMEOUT: "10800"
     steps:
+      - name: Back off if ECS systemd research owns the box
+        run: |
+          exec 9>/tmp/fullscan-map-postclose.lock
+          if ! flock -n 9; then
+            echo "ECS systemd job owns post-close research — GH backs off"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          else
+            flock -u 9 || true
+          fi
       - uses: actions/checkout@v4
+        if: env.skip != 'yes'
         with:
           clean: false
       - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
         with:
           python-version: "3.10"
       - name: Install
+        if: env.skip != 'yes'
         run: pip install -r requirements.txt
       - name: Build next-session tables and exhaustive captain baseline
+        if: env.skip != 'yes'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -57,6 +71,8 @@ jobs:
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
           set -euo pipefail
+          exec 9>/tmp/fullscan-map-postclose.lock
+          flock -n 9 || { echo "systemd grabbed lock — backing off"; exit 0; }
           SOURCE="${SOURCE:-$(TZ=America/New_York date +%F)}"
           if [ -z "$TARGET" ]; then
             TARGET=$(python -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
@@ -67,7 +83,7 @@ jobs:
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           python -m src.map_heat_postclose "${ARGS[@]}"
       - name: Commit baseline
-        if: always()
+        if: always() && env.skip != 'yes'
         run: |
           bash scripts/safe_git_push.sh \
             "auto: post-close captain research [$(date -u +%F_%H%M)]" \

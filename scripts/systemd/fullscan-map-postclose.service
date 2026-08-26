@@ -1,0 +1,14 @@
+[Unit]
+Description=Fullscan post-close exhaustive map/captain research
+After=network-online.target openclaw.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=gha
+Environment=HOME=/home/gha
+WorkingDirectory=/home/gha/fullscan
+ExecStart=/bin/bash /home/gha/fullscan/scripts/ecs_map_postclose.sh
+TimeoutStartSec=8h
+Nice=5
+

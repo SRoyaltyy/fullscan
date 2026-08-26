@@ -8,7 +8,7 @@ reads the `news` and `macro_indicators` tables those collectors maintain.)
 
 | Time | Stage | What happens |
 |---|---|---|
-| **Post-close 7:45 PM ET** | **`Map Heat Captain Research`** | ECS/Grok researches top-2 liquid SPX/RUT captains for every industry, batched by the 11 sectors. Stores tomorrow’s cited baseline plus completed economic actual-vs-consensus and sector reactions. Heavy research is outside the morning critical path. |
+| **Post-close 10:00 PM ET** | **`Map Heat Captain Research`** | ECS systemd (DST-correct; GitHub backup) researches top-2 liquid SPX/RUT captains for every industry, batched by the 11 sectors. This slot is after book/outcome/learn/sector-outcome, and leaves almost eight hours before pre-open. Stores tomorrow’s cited baseline plus completed economic actual-vs-consensus and sector reactions. |
 | **5:55 AM ET** | **`Pre-Open ALL` (ECS systemd)** | **The clock is the Alibaba box, not GitHub.** `fullscan-preopen.timer` fires `scripts/ecs_preopen.sh`: git pull → parse/digest → live Finviz groups/theme-ETF/futures/calendar/ticker-news tables → **one Grok overnight captain delta refresh** → events/judge/actions → general + 11 sector predicts → regex/Grok QC → git push. The morning never repeats the 11 post-close research batches. |
 | 8:00+ AM | (fallback only) | Individual predictive workflows have **no schedule crons**. Orchestrator fires them after 08:00 ET only if Pre-Open ALL has **finished** today and is not quality-ok — never while ALL is still on the ECS runner, and never after 09:25 ET. |
 | 5:00 PM | `outcome` | Actual close fetched → Grok (DeepSeek fallback) reviews the day with verified citations → prediction graded → `<date>_outcome.md` |

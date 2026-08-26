@@ -14,11 +14,13 @@ bash "$ROOT/scripts/ensure_openclaw_timeouts.sh"
 if ! command -v systemctl >/dev/null 2>&1; then
   echo "[ecs-clock] no systemctl on this box"
 else
-  if systemctl is-enabled fullscan-preopen.timer >/dev/null 2>&1; then
-    echo "[ecs-clock] fullscan-preopen.timer already enabled"
-    systemctl list-timers --all fullscan-preopen.timer 2>/dev/null || true
+  if (systemctl is-enabled fullscan-preopen.timer >/dev/null 2>&1
+      && systemctl is-enabled fullscan-map-postclose.timer >/dev/null 2>&1); then
+    echo "[ecs-clock] preopen + map-postclose timers already enabled"
+    systemctl list-timers --all fullscan-preopen.timer \
+      fullscan-map-postclose.timer 2>/dev/null || true
   else
-    echo "[ecs-clock] timer NOT enabled — installing so 05:55 ET is the clock"
+    echo "[ecs-clock] timer missing — installing 05:55 + 22:00 ET clocks"
 
     if [ "$(id -u)" -eq 0 ]; then
       bash "$ROOT/scripts/install_ecs_preopen.sh"
@@ -36,6 +38,12 @@ else
       echo "[ecs-clock] WARN: install ran but timer still not enabled"
     fi
     systemctl list-timers --all fullscan-preopen.timer 2>/dev/null || true
+    if systemctl is-enabled fullscan-map-postclose.timer >/dev/null 2>&1; then
+      echo "[ecs-clock] map post-close timer enabled"
+    else
+      echo "[ecs-clock] WARN: map post-close timer still not enabled"
+    fi
+    systemctl list-timers --all fullscan-map-postclose.timer 2>/dev/null || true
   fi
 fi
 

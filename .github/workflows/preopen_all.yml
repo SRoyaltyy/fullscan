@@ -112,6 +112,7 @@ jobs:
           export HOME="${FULLSCAN_HOME:-/home/gha}"
           chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
+            scripts/ecs_map_postclose.sh \
             scripts/safe_git_push.sh || true
           bash scripts/ensure_ecs_clock.sh
 
@@ -202,7 +203,8 @@ jobs:
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(
               01_daily/general/ 01_daily/sectors/ 01_daily/events
-              01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/
+              01_daily/news/ 01_daily/map_heat/
+              01_daily/_transcripts/ 01_daily/_channel1/
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
               01_daily/*_grok_review.json 01_daily/*_grok_review.md
