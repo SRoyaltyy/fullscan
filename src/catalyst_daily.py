@@ -262,7 +262,7 @@ def render(payload: dict) -> str:
     lines = [
         f"# CATALYST DAILY — {payload.get('date')}", "",
         f"{payload.get('n_ok', 0)}/{payload.get('n_targets', 0)} dossiers "
-        f"· max={payload.get('max_n')} · gemini={payload.get('gemini')}", "", "## TARGETS",
+        f"· max={payload.get('max_n')} · grok={payload.get('grok', True)}", "", "## TARGETS",
     ]
     for t in payload.get("targets") or []:
         lines.append(f"- **{t.get('ticker')}** [{t.get('role')}] {t.get('why')}")
@@ -297,21 +297,14 @@ def _reuse_saved(ticker: str, date: str) -> dict | None:
 
 def _prepare_engine(skip_gemini: bool) -> object:
     from collectors import catalyst_analysis as ca
-    if config.grok_only():
-        kept = [p for p in getattr(ca, "_PROVIDERS", []) if p[0] == "openclaw"]
-        if not kept:
-            raise SystemExit("GROK_ONLY: set OPENCLAW_GATEWAY_URL")
-        ca._PROVIDERS = kept
-        ca.client = kept[0][1]
-        print("[catalyst_daily] Grok-only — DeepSeek provider stripped")
+    if not config.openclaw_enabled():
+        raise SystemExit("GROK_ONLY: set OPENCLAW_GATEWAY_URL")
+    print("[catalyst_daily] Grok-only — OpenClaw / Grok 4.6 (same prompts)")
+    # skip_gemini kept as a no-op flag name for CLI compat. Verdict +
+    # catcher already run on Grok; do not stub them out.
     if skip_gemini:
-        async def _no_verdict(*_a, **_k):
-            return None, "skipped"
-        async def _no_catcher(full_name, ticker, cutoff, grid, *a, **k):
-            return grid
-        ca.run_verdict_pass = _no_verdict
-        ca.run_catcher_pass = _no_catcher
-        print("[catalyst_daily] Gemini verdict/catcher skipped")
+        print("[catalyst_daily] note: --gemini/--skip no longer applies; "
+              "verdict+catcher are Grok")
     return ca
 
 
@@ -408,7 +401,7 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
         skip_gemini: bool | None = None) -> dict:
     date = date or _today()
     if skip_gemini is None:
-        skip_gemini = os.environ.get("CATALYST_GEMINI", "").strip() not in ("1", "true", "yes", "on")
+        skip_gemini = False
     if already_good(date) and not force:
         print(f"[catalyst_daily] skip-if-good {date}")
         apply_to_actions(date, load_dossiers(date))
@@ -418,7 +411,7 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
     if dry_select:
         payload = {
             "date": date, "generated_at": datetime.now(ET).isoformat(),
-            "max_n": max_n, "gemini": (not skip_gemini), "n_targets": len(targets),
+            "max_n": max_n, "grok": True, "gemini": False, "n_targets": len(targets),
             "n_ok": 0, "targets": targets, "dossiers": [], "dry_select": True,
         }
         write_payload(payload)
@@ -427,7 +420,7 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
     n_ok = sum(1 for d in dossiers if d.get("net_signal") and not d.get("error"))
     payload = {
         "date": date, "generated_at": datetime.now(ET).isoformat(),
-        "max_n": max_n, "gemini": (not skip_gemini), "n_targets": len(targets),
+        "max_n": max_n, "grok": True, "gemini": False, "n_targets": len(targets),
         "n_ok": n_ok, "targets": targets, "dossiers": dossiers,
     }
     write_payload(payload)
@@ -444,11 +437,12 @@ def main() -> None:
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--tickers", default="")
     ap.add_argument("--dry-select", action="store_true")
-    ap.add_argument("--gemini", action="store_true")
+    ap.add_argument("--gemini", action="store_true",
+                    help="deprecated no-op; verdict/catcher always use Grok")
     args = ap.parse_args()
     extra = [t.strip().upper() for t in (args.tickers or "").split(",") if t.strip()]
     run(date=args.date, max_n=args.max, force=args.force, extra=extra,
-        dry_select=args.dry_select, skip_gemini=not args.gemini)
+        dry_select=args.dry_select, skip_gemini=False)
 
 
 if __name__ == "__main__":

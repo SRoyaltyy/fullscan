@@ -8,6 +8,7 @@ name: Catalyst daily (bounded dossiers)
 # Not on the pre-open 09:30 clock. Stock Book ALL also runs this
 # before ranking so s_catalyst lands in the .io paper book.
 # Dispatch-only plus a weekday afternoon catch-up.
+# Analysis is Grok-only (OpenClaw / Grok 4.6). Same prompts.
 
 on:
   workflow_dispatch:
@@ -26,10 +27,6 @@ on:
         default: ""
       force:
         description: "true = ignore skip-if-good"
-        required: false
-        default: "false"
-      gemini:
-        description: "true = also run Gemini verdict/catcher (slow)"
         required: false
         default: "false"
   schedule:
@@ -63,10 +60,10 @@ jobs:
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_TIMEOUT: "1800"
+          OPENCLAW_BACKEND_MODEL: xai/grok-4.6
+          OPENCLAW_TIMEOUT: "3600"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
           GROK_ONLY: "1"
         run: |
           set -euo pipefail
@@ -74,15 +71,12 @@ jobs:
           MAX="${{ github.event.inputs.max_tickers }}"
           TICKERS="${{ github.event.inputs.tickers }}"
           FORCE="${{ github.event.inputs.force }}"
-          GEMINI="${{ github.event.inputs.gemini }}"
           MAX="${MAX:-8}"
           FORCE="${FORCE:-false}"
-          GEMINI="${GEMINI:-false}"
           ARGS=(--max "$MAX")
           [ -n "${DATE:-}" ] && ARGS+=(--date "$DATE")
           [ -n "${TICKERS:-}" ] && ARGS+=(--tickers "$TICKERS")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
-          [ "$GEMINI" = "true" ] && ARGS+=(--gemini)
           echo "CMD: python -m src.catalyst_daily ${ARGS[*]}"
           python -m src.catalyst_daily "${ARGS[@]}"
 
