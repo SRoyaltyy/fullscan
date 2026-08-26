@@ -352,11 +352,7 @@ def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict
     if not targets:
         return []
     config.require_llm()
-    searx = config.SEARXNG_URL or os.environ.get("SEARXNG_URL") or ""
-    if not searx:
-        print("[catalyst_daily] WARN: SEARXNG_URL empty — websearch fallback")
-        os.environ.setdefault("SEARXNG_URL", "http://127.0.0.1:8888")
-        searx = os.environ["SEARXNG_URL"]
+    print("[catalyst_daily] search=Grok native web/X (no SearXNG)")
     ca = _prepare_engine(skip_gemini)
     ca.CUTOFF_DATE = None
     ca.TODAY = date
@@ -370,7 +366,7 @@ def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict
             out.append(_summarize(ticker, spec["role"], spec["why"], reused))
             continue
         try:
-            result = ca.analyze_stock(ticker, _snapshot(ticker), searx)
+            result = ca.analyze_stock(ticker, _snapshot(ticker), "")
         except Exception as e:
             print(f"[catalyst_daily] FAIL {ticker}: {e}")
             out.append({"ticker": ticker, "role": spec["role"], "why": spec["why"], "error": str(e)[:240]})
