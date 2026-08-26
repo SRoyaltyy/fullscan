@@ -76,6 +76,9 @@ jobs:
           OPENCLAW_TIMEOUT: "3600"
           GROK_ONLY: "1"
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           PYTHONUNBUFFERED: "1"
         run: |
           set -euo pipefail

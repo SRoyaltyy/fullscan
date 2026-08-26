@@ -28,10 +28,13 @@ CUTOFF_DATE = "2026-06-22"          # e.g. "2026-03-15" — discard events after
 # ═══════════════════════════════════════════════════════
 
 # ── Config ──────────────────────────────────────────────
-SEARXNG_URL          = os.environ["SEARXNG_URL"]
+# Legacy function signatures below still accept this argument, but every
+# production/direct entrypoint installs catalyst_grok_runtime before analysis.
+# No search request is ever sent to SearXNG.
+SEARXNG_URL          = "GROK_NATIVE_UNUSED"
 SEARXNG_TIMEOUT      = 15
 SEARCH_CONCURRENCY   = 6
-MODEL                = "deepseek-chat"
+MODEL                = "openclaw/default"
 TODAY                = date.today().isoformat()
 LOOKBACK_START       = (date.today() - timedelta(days=185)).isoformat()
 CUTOFF_DATE = CUTOFF_DATE.strip() if CUTOFF_DATE else None
@@ -221,8 +224,9 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
-# Primary: OpenClaw gateway (Grok 4.6, SuperGrok OAuth) when configured.
-# Fallback: DeepSeek API. safe_create walks the provider list in order.
+# Grok-only safety net. Production installs catalyst_grok_runtime, which uses
+# OpenClaw native web/X. Even if legacy safe_create is reached accidentally,
+# it cannot call DeepSeek.
 _OC_URL = os.environ.get("OPENCLAW_GATEWAY_URL", "").rstrip("/")
 _PROVIDERS = []
 if _OC_URL:
@@ -234,16 +238,8 @@ if _OC_URL:
                    "OPENCLAW_BACKEND_MODEL", "xai/grok-4.6")}),
         os.environ.get("OPENCLAW_AGENT", "openclaw/default"),
     ))
-if os.environ.get("DEEPSEEK_API_KEY"):
-    _PROVIDERS.append((
-        "deepseek",
-        OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"],
-               base_url="https://api.deepseek.com"),
-        "deepseek-chat",
-    ))
 if not _PROVIDERS:
-    raise SystemExit("No LLM configured: set OPENCLAW_GATEWAY_URL and/or "
-                     "DEEPSEEK_API_KEY")
+    raise SystemExit("GROK_ONLY: set OPENCLAW_GATEWAY_URL")
 client = _PROVIDERS[0][1]
 
 def safe_create(**kwargs):
@@ -1333,6 +1329,13 @@ def analyze_stock(ticker, snapshot, searxng_url):
     return asyncio.run(analyze_stock_async(ticker, snapshot, searxng_url))
 
 if __name__ == "__main__":
+    # Direct / one-button execution uses the exact same prompts and JSON
+    # contract, but every analysis/search/verdict/catcher call is replaced by
+    # OpenClaw Grok native web/X. Legacy DeepSeek/Gemini/SearXNG functions
+    # remain above only for prompt compatibility and are never executed.
+    import sys as _sys
+    from collectors.catalyst_grok_runtime import install as _install_grok_runtime
+    _install_grok_runtime(_sys.modules[__name__])
     try:
         from db.connection import get_connection
         HAS_DB = True

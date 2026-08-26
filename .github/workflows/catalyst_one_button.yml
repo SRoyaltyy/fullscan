@@ -76,8 +76,10 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           GROK_ONLY: "1"
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           PYTHONUNBUFFERED: "1"
           TICKER: ${{ steps.meta.outputs.ticker }}
           CUTOFF: ${{ steps.meta.outputs.cutoff }}

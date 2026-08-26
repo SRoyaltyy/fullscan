@@ -64,6 +64,9 @@ jobs:
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_TIMEOUT: "3600"
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           GROK_ONLY: "1"
         run: |
           set -euo pipefail

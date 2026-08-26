@@ -49,7 +49,3 @@ jobs:
   sec-fundamentals:
     uses: ./.github/workflows/collect_sec_fundamentals.yml
     secrets: inherit
-
-  catalyst:
-    uses: ./.github/workflows/collect-catalyst.yml
-    secrets: inherit
