@@ -15,7 +15,8 @@ NOT included (those run later on their own crons, still required):
 
 Finviz industry groups + exhaustive captain research run at 22:00 ET
 (post-close, still ECS). Premarket must not re-scrape yesterday's tape.
-Missing post-close baseline FAILS this job.
+Missing post-close baseline is WARN (bootstrap stub), not a day-fail —
+the first 22:00 job has not run yet. Empty futures tape IS a day-fail.
 
 Live Finviz HTML is NOT scraped here. Aliyun ECS 403s public finviz.com.
 GH-hosted ubuntu-latest + Elite login writes digest + overlay ~05:40 ET;
@@ -56,7 +57,7 @@ REQUIRED = [
     ("news_parse", "News parse", True),
     ("news_judge", "News judge", True),
     ("map_heat", "Map heat tables (post-close + overlay)", True),
-    ("map_heat_baseline", "Map heat post-close baseline", True),
+    ("map_heat_baseline", "Map heat post-close baseline", False),
     ("map_heat_research", "Map heat research (captains)", True),
     ("news_actions", "News actions", False),
     ("general_predict", "General market predict", True),
@@ -162,17 +163,18 @@ def _force_args(force: bool) -> list[str]:
 def _scrape_ready(date: str) -> bool:
     digest = _p("01_daily", "news", f"{date}_finviz_digest.json")
     heat = _p("01_daily", "map_heat", f"{date}_map_heat.json")
-    if not digest.exists() or digest.stat().st_size < 200:
+    # QC is the skip-if-good gate. overlay_at alone used to look "ready"
+    # after an Aliyun 403 stamped morning_overlay with an empty tape.
+    if not output_qc.qc_finviz_digest(digest).ok:
         return False
-    if not heat.exists() or heat.stat().st_size < 200:
+    if not output_qc.qc_map_heat(heat).ok:
         return False
     try:
         payload = json.loads(heat.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return False
     overlay_at = str(payload.get("overlay_at") or "")
-    phase = str(payload.get("phase") or "")
-    return overlay_at.startswith(date) or phase == "morning_overlay"
+    return overlay_at.startswith(date) and bool(payload.get("tape") or [])
 
 
 def _pull_scrape_artifacts(date: str) -> None:
@@ -208,7 +210,7 @@ def _pull_scrape_artifacts(date: str) -> None:
 
 def wait_for_gh_scrape(date: str, timeout_s: int | None = None) -> bool:
     """Wait for ubuntu-latest Elite scrape. Do not scrape Finviz on ECS."""
-    timeout_s = int(os.environ.get("FINVIZ_SCRAPE_WAIT", timeout_s or 720))
+    timeout_s = int(os.environ.get("FINVIZ_SCRAPE_WAIT", timeout_s or 900))
     if _scrape_ready(date):
         print("[preopen-all] GH Finviz scrape already on disk", flush=True)
         return True

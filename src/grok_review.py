@@ -114,8 +114,19 @@ def bundle_preopen(date: str, root: Path | None = None,
         parts.append("MECHANICAL output_qc (regex) said:")
         parts.append(output_qc.render(mechanical_report))
         parts.append(
-            "Regex is necessary but not sufficient. You may FAIL a file "
-            "the regex passed. You may NOT pass a file the regex failed."
+            "Regex is necessary but not sufficient for CORE files. "
+            "You may FAIL a file the regex passed. "
+            "You may NOT pass these CORE files if regex failed them: "
+            "general predict, events, news judge, news parse, finviz digest, "
+            "map-heat tables (empty futures tape IS a real fail). "
+            "EXCEPTIONS that must not fail the day: "
+            "(1) map_heat_baseline missing / regex FAIL when research.md is "
+            "phase=morning_bootstrap (expected until the first 22:00 post-close "
+            "job — note it, keep ok=true); "
+            "(2) map_heat_research phase=morning_bootstrap; "
+            "(3) a single missing sector if at least 8 of 11 sector essays are "
+            "quality-ok (list it in notes; ok stays true if the rest of core "
+            "is good)."
         )
         parts.append("")
 

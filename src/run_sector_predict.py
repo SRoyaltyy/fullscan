@@ -172,13 +172,14 @@ def run_one(sector: str, date_str: str, ch1_md: str,
     )
 
     last_qc = None
+    retry_extra = ""
     for attempt in range(retries + 1):
         if attempt and preopen.past_predict_cutoff() and not force:
             print(f"[sector-predict] {sector}: past 09:25 ET, not retrying")
             break
         text = deepseek_client.chat(
             [{"role": "system", "content": rubric},
-             {"role": "user", "content": user_msg}],
+             {"role": "user", "content": user_msg + retry_extra}],
             model=config.MODEL_PREDICT,
             tools=True,
             max_tokens=8000,
@@ -196,6 +197,13 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             print(f"[sector-predict] {sector}: attempt {attempt + 1} raw QC "
                   f"FAIL ({raw_qc.reason}) — not writing a stub")
             last_qc = raw_qc
+            retry_extra = (
+                "\n\nRETRY CONSTRAINT: previous attempt failed QC "
+                f"({raw_qc.reason}). The essay MUST contain MEMORY_CONFIRM, "
+                "HIT_GRID_BEGIN, and SECTOR_SCORES_BEGIN ... SECTOR_SCORES_END "
+                "with at least three S0_/S1_/S2_ numeric lines. "
+                "A long analysis without those tokens is trash.\n"
+            )
             continue
 
         scores = compute_sector_scores.parse_scores(text)

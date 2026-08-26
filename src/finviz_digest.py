@@ -371,10 +371,13 @@ def main() -> None:
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    jp = NEWS_DIR / f"{date_str}_finviz_digest.json"
+    existing = output_qc.qc_finviz_digest(
+        jp if jp.exists() else NEWS_DIR / f"{date_str}_finviz_digest.md")
+    if existing.ok and not args.force:
+        print(f"[finviz_digest] {date_str}: skip, quality-ok already on disk")
+        return
     if preopen.past_predict_cutoff() and not args.force:
-        jp = NEWS_DIR / f"{date_str}_finviz_digest.json"
-        existing = output_qc.qc_finviz_digest(jp if jp.exists() else
-                                              NEWS_DIR / f"{date_str}_finviz_digest.md")
         if existing.ok:
             print(f"[finviz_digest] {date_str}: past 09:25 ET, keeping quality-ok")
             return

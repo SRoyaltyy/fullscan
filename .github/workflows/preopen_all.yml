@@ -13,7 +13,8 @@ name: Pre-Open ALL (predictive one-shot)
 #   → workflow check
 #
 # Industry groups + exhaustive captain research run at 22:00 ET
-# (map_heat_postclose, still ECS). Missing last-night baseline FAILS this job.
+# (map_heat_postclose, still ECS). Missing last-night baseline is WARN
+# (morning_bootstrap), not a day-fail. Empty futures tape IS a day-fail.
 #
 # CLOCK:
 #   1. ECS systemd timer at 05:55 America/New_York (DST-correct). Primary.

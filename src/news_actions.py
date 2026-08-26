@@ -325,9 +325,12 @@ def main() -> None:
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    jp = os.path.join(OUT_DIR, f"{date_str}_actions.json")
+    existing = output_qc.qc_news_actions(jp)
+    if existing.ok and not args.force:
+        print(f"[news_actions] {date_str}: skip, quality-ok already on disk")
+        return
     if preopen.past_predict_cutoff() and not args.force:
-        jp = os.path.join(OUT_DIR, f"{date_str}_actions.json")
-        existing = output_qc.qc_news_actions(jp)
         if existing.ok:
             print(f"[news_actions] {date_str}: past 09:25 ET, keeping quality-ok")
             return

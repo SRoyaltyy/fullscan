@@ -87,6 +87,22 @@ def test_calendar_entry_scale_ignores_legacy_earnings_mix() -> None:
     research.OUT_DIR = orig
 
 
+def test_empty_tape_is_not_overlay_good() -> None:
+    empty = {
+        "date": "2099-01-01",
+        "phase": "morning_overlay",
+        "overlay_at": "2099-01-01T06:32:00-04:00",
+        "tape": [],
+        "industries": [{}] * 60,
+    }
+    assert mh.overlay_is_good(empty, "2099-01-01") is False
+    filled = dict(empty)
+    filled["tape"] = [{"ticker": "ES", "last": 6500, "change": 0.1}]
+    assert mh.overlay_is_good(filled, "2099-01-01") is True
+    assert mh.overlay_is_good(filled, "2099-01-02") is False
+    assert mh.overlay_is_good(None, "2099-01-01") is False
+
+
 def test_heat_scale_default_is_incubate() -> None:
     _, meta = stock_book.load_policy()
     assert float(meta["heat_scale"]) <= 0.50
@@ -96,5 +112,6 @@ if __name__ == "__main__":
     test_macro_gate_halves_book_earnings_does_not()
     test_missing_research_is_visible_but_bootstrap_is_safe()
     test_calendar_entry_scale_ignores_legacy_earnings_mix()
+    test_empty_tape_is_not_overlay_good()
     test_heat_scale_default_is_incubate()
-    print("4 tests passed")
+    print("5 tests passed")

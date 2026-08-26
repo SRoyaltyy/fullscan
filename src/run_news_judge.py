@@ -143,15 +143,9 @@ def main() -> None:
     existing = output_qc.qc_news_judge(path)
     backup = None
     if existing.ok and not args.force:
-        # Refresh is allowed before 09:00 ET (the 08:25 slot still has
-        # newer headlines). After 09:00 keep the good pre-open copy.
-        if preopen.et_hm() >= 900:
-            print(f"[news_judge] {date_str}: skip, quality-ok and "
-                  f">= 09:00 ET — not overwriting a pre-open copy")
-            return
-        print(f"[news_judge] {date_str}: quality-ok exists but still "
-              f"before 09:00 ET — refresh allowed")
-        backup = Path(path).read_text(encoding="utf-8")
+        print(f"[news_judge] {date_str}: skip, quality-ok already on disk "
+              f"({existing.size} chars)")
+        return
     elif os.path.exists(path) and not existing.ok:
         print(f"[news_judge] {date_str}: existing file rejected "
               f"({existing.reason}) — throwing out")

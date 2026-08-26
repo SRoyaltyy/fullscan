@@ -118,8 +118,14 @@ def main() -> None:
     md_path = os.path.join(EVENTS_DIR, f"{date_str}_events.md")
 
     existing = output_qc.qc_events_date(date_str)
-    # Gap-hunt is still useful when primary is quality-ok, but not after
-    # the bell and not when the only file on disk is a carry-forward.
+    catcher_ran = os.path.exists(
+        os.path.join("01_daily/_transcripts", f"{date_str}_events_catcher.json"))
+    # Gap-hunt is still useful when primary is quality-ok on the FIRST run.
+    # A same-day re-run must not rewrite a quality-ok events file.
+    if existing.ok and not args.force and catcher_ran:
+        print(f"[catcher] {date_str}: primary quality-ok and catcher already "
+              "ran — skip gap hunt (re-run must not rewrite a pre-open copy)")
+        return
     if existing.ok and not args.force and preopen.past_predict_cutoff():
         print(f"[catcher] {date_str}: primary quality-ok and past 09:25 ET "
               "— skip gap hunt (would rewrite a pre-open copy)")

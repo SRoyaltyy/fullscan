@@ -116,9 +116,13 @@ jobs:
               print('missing', p, e); sys.exit(0)
           print('phase=', d.get('phase'), 'overlay_at=', d.get('overlay_at'))
           print('industries=', len(d.get('industries') or []))
-          print('tape keys=', list((d.get('tape') or {}).keys())[:8])
+          tape=d.get('tape') or []
+          print('tape n=', len(tape), 'keys=', [t.get('ticker') for t in tape[:8]] if isinstance(tape, list) else list(tape)[:8])
           print('econ=', len(d.get('econ') or []), 'earnings=', len(d.get('earnings') or []))
           print('ticker_news=', len(d.get('ticker_news') or []))
+          if not tape:
+              print('FAIL empty_futures_tape')
+              sys.exit(1)
           "
 
       - name: Commit

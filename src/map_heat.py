@@ -924,8 +924,21 @@ def already_good(date: str) -> bool:
         return False
     # A post-close job intentionally builds tomorrow's baseline from today's
     # close. It must NOT suppress the next morning's live futures/news refresh.
+    # Empty tape is not "good" — overlay must retry (Aliyun 403 used to stamp
+    # overlay_at and then skip-if-good treated the empty scrape as success).
     return (generated_date == date and "MAP_HEAT_OK" in text
-            and "INDUSTRY_HEAT" in text and len(text) > 400)
+            and "INDUSTRY_HEAT" in text and len(text) > 400
+            and bool(payload.get("tape") or []))
+
+
+def overlay_is_good(payload: dict | None, date: str) -> bool:
+    """True when this morning's overlay actually produced a futures tape."""
+    if not isinstance(payload, dict):
+        return False
+    if not (payload.get("tape") or []):
+        return False
+    overlay_at = str(payload.get("overlay_at") or "")
+    return overlay_at[:10] == date
 
 
 def main() -> None:
@@ -955,13 +968,21 @@ def main() -> None:
                 f"post-close map heat too thin ({len(payload.get('industries') or [])} "
                 f"industries) at {js}"
             )
-        if (not args.force
-                and str(payload.get("overlay_at") or "")[:10] == date):
-            print(f"[map_heat] overlay already applied {date}")
+        if not args.force and overlay_is_good(payload, date):
+            print(f"[map_heat] overlay already applied {date} "
+                  f"(tape={len(payload.get('tape') or [])})")
             return
+        if payload.get("overlay_at") and not (payload.get("tape") or []):
+            print(f"[map_heat] prior overlay_at={payload.get('overlay_at')} "
+                  "had empty tape — retrying Elite futures scrape")
         payload = overlay_live(date, payload)
         write(date, payload)
         print(render(payload))
+        if not (payload.get("tape") or []):
+            raise SystemExit(
+                "[map_heat] overlay produced empty futures tape — "
+                "Elite scrape failed; not treating this as skip-if-good success"
+            )
         return
     if already_good(date) and not args.force:
         print(f"[map_heat] skip-if-good {date}")
