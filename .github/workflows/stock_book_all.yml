@@ -9,6 +9,8 @@ name: Stock Book ALL (one-shot)
 # Must run on [self-hosted, ecs]: ubuntu-latest cannot reach the
 # loopback gateway and used to fall back to DeepSeek every weekday.
 # One ECS runner — a 6h book run will queue other ECS jobs.
+# Catalyst daily is invoked inside src.run_stock_book_all before ranking
+# so dossiers merge into news actions and land on the .io paper book.
 
 on:
   workflow_dispatch:
@@ -74,6 +76,7 @@ jobs:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+          GROK_ONLY: "1"
         run: |
           set -e
           DATE="${{ github.event.inputs.run_date }}"
@@ -101,6 +104,8 @@ jobs:
           echo "======== stock book ========"
           f=$(ls -1t 01_daily/*_stock_book.md 2>/dev/null | head -1)
           [ -n "$f" ] && head -80 "$f" || true
+          echo "======== catalyst ========"
+          ls -1t 01_daily/catalyst/*_dossiers.md 2>/dev/null | head -3 || true
           echo "======== paper ========"
           head -40 03_scoreboard/PAPER_TRADING.md 2>/dev/null || true
           ls -la dashboard/ 2>/dev/null || true
@@ -113,8 +118,10 @@ jobs:
           path: |
             data/stock_book/
             data/peers/
+            data/catalyst/
             01_daily/*_stock_book.md
             01_daily/*_peer_rs.md
+            01_daily/catalyst/
             03_scoreboard/
             dashboard/
           if-no-files-found: warn
@@ -129,16 +136,13 @@ jobs:
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
 
-          # price_store dirties ohlc.parquet / meta.json. Unstaged files
-          # block `git pull --rebase` then `|| true` swallows the push
-          # (ALL 13/14 on 2026-08-21 — book written, never landed).
           git checkout -- data/prices 2>/dev/null || true
           git clean -fd data/prices 2>/dev/null || true
 
           git add \
             data/universe data/exports data/join data/stock_book data/paper \
-            data/peers data/checklist data/ab_checklist \
-            01_daily/weather 01_daily/news 01_daily/general 01_daily/sectors \
+            data/peers data/checklist data/ab_checklist data/catalyst \
+            01_daily/weather 01_daily/news 01_daily/catalyst 01_daily/general 01_daily/sectors \
             01_daily/events 01_daily/_transcripts 01_daily/_channel1 \
             01_daily/*_universe.md 01_daily/*_match.md \
             01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \
@@ -154,8 +158,6 @@ jobs:
             02_lessons/ \
             dashboard/ || true
 
-          # leftover unstaged (peer_rs.md used to be the leftover) still
-          # blocks rebase. Keep the index; stash the rest.
           git stash push --keep-index --include-untracked -m "all-unstaged" || true
 
           git status
@@ -212,10 +214,6 @@ jobs:
             echo "[warn] push failed but no local book to lose"
           fi
 
-      # Publish fixed Chrome URL: https://SRoyaltyy.github.io/fullscan/dashboard/
-      # Do NOT use peaceiris on the ECS self-hosted runner: Node 24 leaves
-      # GITHUB_WORKSPACE undefined, so force_orphan publishes under
-      # undefined/actions_github_pages_*/ and the real Pages URLs 404.
       - name: Prepare Pages publish dir
         if: always()
         run: |
@@ -270,4 +268,3 @@ jobs:
           echo "  https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Repo Settings → Pages → Source = Deploy from branch → gh-pages / (root)"
           echo "=============================================="
-
