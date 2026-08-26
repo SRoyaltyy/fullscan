@@ -26,7 +26,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import config, preopen
+from . import config, finviz_session, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -68,12 +68,7 @@ FUTURES_KEEP = [
 
 
 def _session() -> requests.Session:
-    s = requests.Session()
-    s.headers.update(UA)
-    token = os.environ.get("FINVIZ_AUTH") or os.environ.get("AUTH_TOKEN_FINVIZ") or ""
-    if token:
-        s.cookies.set("auth", token, domain=".finviz.com")
-    return s
+    return finviz_session.session()
 
 
 def _pct(val: Any) -> float | None:
@@ -143,12 +138,12 @@ def load_export(path: Path) -> pd.DataFrame:
 
 def fetch_groups(sess: requests.Session, g: str) -> dict[str, dict]:
     """Live Finviz groups v=140 → {name: {w1, m1, d1, rvol}}."""
-    url = f"https://finviz.com/groups?g={g}&v=140&o=name"
-    try:
-        r = sess.get(url, timeout=30)
-        r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        print(f"[map_heat] groups {g} failed: {e}")
+    r = finviz_session.get(sess, [
+        f"/groups.ashx?g={g}&v=140&o=name",
+        f"/groups?g={g}&v=140&o=name",
+    ])
+    if r is None:
+        print(f"[map_heat] groups {g} failed: Elite session empty/403")
         return {}
     soup = BeautifulSoup(r.text, "html.parser")
     table = soup.select_one("table.groups_table") or soup.select_one(
@@ -180,11 +175,9 @@ def fetch_groups(sess: requests.Session, g: str) -> dict[str, dict]:
 
 
 def fetch_futures(sess: requests.Session) -> dict[str, dict]:
-    try:
-        r = sess.get("https://finviz.com/futures", timeout=30)
-        r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        print(f"[map_heat] futures failed: {e}")
+    r = finviz_session.get(sess, ["/futures.ashx", "/futures"])
+    if r is None:
+        print("[map_heat] futures failed: Elite session empty/403")
         return {}
     m = re.search(r"var tiles = (\{.*?\});\s*\n", r.text, re.S)
     if not m:
@@ -219,13 +212,12 @@ def fetch_futures(sess: requests.Session) -> dict[str, dict]:
 
 
 def fetch_econ(sess: requests.Session, date: str) -> list[dict]:
-    try:
-        r = sess.get(
-            f"https://finviz.com/calendar/economic?dateFrom={date}", timeout=30
-        )
-        r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        print(f"[map_heat] econ calendar failed: {e}")
+    r = finviz_session.get(sess, [
+        f"/calendar/economic?dateFrom={date}",
+        f"/calendar.ashx?d={date}",
+    ])
+    if r is None:
+        print("[map_heat] econ calendar failed: Elite session empty/403")
         return []
     rows = []
     for m in re.finditer(
@@ -269,13 +261,11 @@ def fetch_econ(sess: requests.Session, date: str) -> list[dict]:
 
 
 def fetch_earnings(sess: requests.Session, date: str) -> list[dict]:
-    try:
-        r = sess.get(
-            f"https://finviz.com/calendar/earnings?dateFrom={date}", timeout=30
-        )
-        r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        print(f"[map_heat] earnings calendar failed: {e}")
+    r = finviz_session.get(sess, [
+        f"/calendar/earnings?dateFrom={date}",
+    ])
+    if r is None:
+        print("[map_heat] earnings calendar failed: Elite session empty/403")
         return []
     rows = []
     for m in re.finditer(
@@ -321,11 +311,9 @@ def _numeric_surprise(actual: Any, forecast: Any) -> float | None:
 
 def fetch_stock_news(sess: requests.Session, limit: int = 250) -> list[dict]:
     """Finviz Stocks News (v=3): ticker-tagged stories, not the wire dump."""
-    try:
-        r = sess.get("https://finviz.com/news.ashx?v=3", timeout=30)
-        r.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        print(f"[map_heat] stocks news failed: {e}")
+    r = finviz_session.get(sess, ["/news.ashx?v=3", "/news?v=3"])
+    if r is None:
+        print("[map_heat] stocks news failed: Elite session empty/403")
         return []
     soup = BeautifulSoup(r.text, "html.parser")
     out: list[dict] = []
@@ -358,28 +346,24 @@ def fetch_stock_news(sess: requests.Session, limit: int = 250) -> list[dict]:
 
 def fetch_major_news_tickers(sess: requests.Session) -> list[str]:
     """Finviz Elite `n_majornews` screener. Empty is an honest login failure."""
-    urls = [
-        "https://elite.finviz.com/screener.ashx?v=150&s=n_majornews",
-        "https://finviz.com/screener.ashx?v=150&s=n_majornews",
-    ]
-    for url in urls:
-        try:
-            r = sess.get(url, timeout=30)
-            r.raise_for_status()
-        except Exception:
-            continue
-        soup = BeautifulSoup(r.text, "html.parser")
-        found = []
-        for a in soup.select("[data-boxover-ticker], a[href*='quote.ashx?t=']"):
-            ticker = str(a.get("data-boxover-ticker") or "").strip().upper()
-            if not ticker:
-                m = re.search(r"[?&]t=([A-Za-z0-9.-]+)", a.get("href") or "")
-                ticker = m.group(1).upper() if m else ""
-            if ticker and ticker not in found:
-                found.append(ticker)
-        if found:
-            print(f"[map_heat] major-news tickers: {len(found)} via {url}")
-            return found
+    r = finviz_session.get(sess, [
+        "/screener.ashx?v=150&s=n_majornews",
+    ])
+    if r is None:
+        print("[map_heat] major-news screener unavailable/empty")
+        return []
+    soup = BeautifulSoup(r.text, "html.parser")
+    found = []
+    for a in soup.select("[data-boxover-ticker], a[href*='quote.ashx?t=']"):
+        ticker = str(a.get("data-boxover-ticker") or "").strip().upper()
+        if not ticker:
+            m = re.search(r"[?&]t=([A-Za-z0-9.-]+)", a.get("href") or "")
+            ticker = m.group(1).upper() if m else ""
+        if ticker and ticker not in found:
+            found.append(ticker)
+    if found:
+        print(f"[map_heat] major-news tickers: {len(found)}")
+        return found
     print("[map_heat] major-news screener unavailable/empty")
     return []
 
@@ -957,30 +941,20 @@ def main() -> None:
     preopen.refuse_if_late("map_heat", force=args.force)
     js = OUT_DIR / f"{date}_map_heat.json"
     if args.overlay:
-        payload = None
-        if js.exists():
-            try:
-                candidate = json.loads(js.read_text(encoding="utf-8"))
-                if len(candidate.get("industries") or []) >= 50:
-                    payload = candidate
-            except (OSError, json.JSONDecodeError):
-                payload = None
-        if payload is None:
-            # Bootstrap only: better to produce explicit same-day tables than
-            # fail the entire pre-open because last night's timer missed. This
-            # artifact is tagged, and captain heat remains disabled without a
-            # real post-close baseline + morning_refresh research file.
-            print(
-                f"[map_heat] WARN: post-close table missing/thin at {js}; "
-                "running full premarket bootstrap build (no s_heat)"
+        if not js.exists():
+            raise SystemExit(
+                f"post-close map heat missing: {js} — industry groups must be "
+                "scraped at 22:00 ET, not in the premarket"
             )
-            payload = build(date)
-            payload = overlay_live(date, payload)
-            payload["phase"] = "morning_bootstrap_tables"
-            payload["bootstrap_reason"] = "postclose_map_heat_missing_or_thin"
-            write(date, payload)
-            print(render(payload))
-            return
+        try:
+            payload = json.loads(js.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as e:
+            raise SystemExit(f"post-close map heat unreadable: {js}: {e}")
+        if len(payload.get("industries") or []) < 50:
+            raise SystemExit(
+                f"post-close map heat too thin ({len(payload.get('industries') or [])} "
+                f"industries) at {js}"
+            )
         if (not args.force
                 and str(payload.get("overlay_at") or "")[:10] == date):
             print(f"[map_heat] overlay already applied {date}")

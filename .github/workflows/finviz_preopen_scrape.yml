@@ -1,0 +1,129 @@
+name: Finviz pre-open scrape (GH-hosted Elite)
+
+# Live Finviz HTML (digest + morning overlay) from ubuntu-latest.
+# Aliyun ECS 403s public finviz.com. GitHub-hosted + Elite login works
+# (same path as collect-finviz.yml).
+#
+# ECS Pre-Open ALL no longer scrapes. It waits ~10 min, git-pulls these
+# artifacts, then runs news/events/judge/Grok research/predicts.
+#
+# CLOCK: 09:40 UTC = 05:40 EDT, 15 min before ECS 05:55 ET systemd.
+# After US falls back to EST this is 04:40 ET — early, harmless.
+# Post-close 22:00 ET captain research stays on ECS.
+
+on:
+  schedule:
+    - cron: "40 9 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      force:
+        description: "true = ignore 09:25 ET cutoff / skip-if-good overlay"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: finviz-preopen-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml pandas requests yfinance || true
+
+      - name: Skip weekend / past 09:25 ET
+        if: github.event.inputs.force != 'true'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          DOW=$(TZ=America/New_York date +%u)
+          echo "ET_HM=$ET_HM DOW=$DOW"
+          if [ "$DOW" -ge 6 ]; then
+            echo "Weekend — skip Finviz scrape"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          elif [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — skip scrape (no rewrite)"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
+      - name: Finviz daily digest (Elite)
+        if: env.skip != 'yes'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          echo "CMD: python -m src.finviz_digest --date $DATE"
+          python -m src.finviz_digest --date "$DATE"
+
+      - name: Map heat morning overlay (Elite tape/calendar)
+        if: env.skip != 'yes'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          FORCE="${{ github.event.inputs.force }}"
+          FORCE="${FORCE:-false}"
+          ARGS=(--date "$DATE" --overlay)
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.map_heat ${ARGS[*]}"
+          python -m src.map_heat "${ARGS[@]}"
+
+      - name: Preview
+        if: always() && env.skip != 'yes'
+        run: |
+          D="${{ github.event.inputs.run_date }}"
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          echo "======== digest $D ========"
+          ls -la 01_daily/news/${D}_finviz_digest.* 2>/dev/null || true
+          head -40 "01_daily/news/${D}_finviz_digest.md" 2>/dev/null || true
+          echo "======== overlay $D ========"
+          python3 -c "
+          import json,sys
+          p='01_daily/map_heat/${D}_map_heat.json'
+          try:
+              d=json.load(open(p))
+          except Exception as e:
+              print('missing', p, e); sys.exit(0)
+          print('phase=', d.get('phase'), 'overlay_at=', d.get('overlay_at'))
+          print('industries=', len(d.get('industries') or []))
+          print('tape keys=', list((d.get('tape') or {}).keys())[:8])
+          print('econ=', len(d.get('econ') or []), 'earnings=', len(d.get('earnings') or []))
+          print('ticker_news=', len(d.get('ticker_news') or []))
+          "
+
+      - name: Commit
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: finviz preopen scrape (digest + overlay) [$(date -u +%F_%H%M)]" \
+            01_daily/news/ 01_daily/map_heat/

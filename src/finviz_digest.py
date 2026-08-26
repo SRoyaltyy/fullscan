@@ -27,7 +27,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import config, output_qc, preopen
+from . import config, finviz_session, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -49,7 +49,6 @@ UA = {
 }
 QUOTE_URLS = (
     "https://elite.finviz.com/quote.ashx?t={ticker}",
-    "https://finviz.com/quote.ashx?t={ticker}",
 )
 
 # Pure routine noise — keep but rank very low
@@ -69,16 +68,7 @@ SIGNAL_RE = re.compile(
 
 
 def _session() -> requests.Session:
-    s = requests.Session()
-    s.headers.update(UA)
-    token = (
-        os.environ.get("FINVIZ_AUTH")
-        or os.environ.get("AUTH_TOKEN_FINVIZ")
-        or ""
-    )
-    if token:
-        s.cookies.set("auth", token, domain=".finviz.com")
-    return s
+    return finviz_session.session()
 
 
 def _latest_export(asof: str | None = None) -> Path | None:
@@ -156,22 +146,17 @@ def _load_ticker_digests(path: Path, max_rows: int = 400) -> list[dict]:
 def _scrape_index_digest(ticker: str, sess: requests.Session) -> dict | None:
     """Pull the top narrative / Daily Digest style summary from a quote page.
 
-    Finviz quote.ashx 403s from the ECS box without elite auth. Try elite
-    first, then free, then yfinance so SPY/QQQ/DIA/IWM are never blank.
+    Public finviz.com 403s from cloud IPs. Elite only, then yfinance so
+    SPY/QQQ/DIA/IWM are never blank.
     """
     last_err = None
     html = None
-    for tmpl in QUOTE_URLS:
-        url = tmpl.format(ticker=ticker)
-        try:
-            r = sess.get(url, timeout=40)
-            r.raise_for_status()
-            html = r.text
-            break
-        except Exception as e:
-            last_err = f"{url}: {e}"
-            print(f"[finviz_digest] {ticker} quote failed: {last_err}")
-            continue
+    r = finviz_session.get(sess, [f"/quote.ashx?t={ticker}"], timeout=40)
+    if r is not None:
+        html = r.text
+    else:
+        last_err = f"elite quote.ashx?t={ticker} empty/403"
+        print(f"[finviz_digest] {ticker} quote failed: {last_err}")
 
     if html:
         soup = BeautifulSoup(html, "html.parser")

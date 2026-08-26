@@ -10,8 +10,9 @@ name: Daily Orchestrator (pre-market + post-close guard)
 # fallback after 08:00 ET if ALL is not quality-ok. This guard will
 # NOT dispatch predictive workflows after 09:25 ET unless force=true.
 #
-#   preopen_all     ~10:00 UTC / 06:00 ET   PRIMARY one-button
-#   finviz_digest   ~10:05 / 12:05 UTC      fallback
+#   preopen_all              ~10:00 UTC / 06:00 ET   PRIMARY one-button (ECS Grok)
+#   finviz_preopen_scrape    ~09:40 UTC / 05:40 ET   GH-hosted Elite HTML
+#   finviz_digest            dispatch-only           fallback digest
 #   events_daily    ~10:10 UTC              fallback
 #   news_parse      10/12:15 UTC            fallback
 #   news_judge      10/12:25 UTC            fallback
@@ -106,7 +107,7 @@ jobs:
 
           is_predictive() {
             case "$1" in
-              preopen_all.yml|finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml)
+              preopen_all.yml|finviz_preopen_scrape.yml|finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml)
                 return 0 ;;
               daily_pipeline.yml|sector_daily.yml)
                 # predict-stage only before the bell; outcome is post-close
@@ -174,6 +175,23 @@ jobs:
                 sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
                 [ "${sz:-0}" -gt 200 ] \
                   || repo_file "01_daily/news/${TODAY}_finviz_digest.md"
+                ;;
+              finviz_preopen_scrape.yml)
+                local sz
+                sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
+                [ "${sz:-0}" -gt 200 ] || return 1
+                content=$(repo_decode "01_daily/map_heat/${TODAY}_map_heat.json") || return 1
+                echo "$content" | python3 -c '
+          import json,sys
+          try:
+              d=json.load(sys.stdin)
+          except Exception:
+              sys.exit(1)
+          day=sys.argv[1]
+          phase=str(d.get("phase") or "")
+          overlay=str(d.get("overlay_at") or "")
+          sys.exit(0 if (phase=="morning_overlay" or overlay.startswith(day)) else 1)
+          ' "$TODAY"
                 ;;
               events_daily.yml)
                 local content
@@ -347,6 +365,7 @@ print(d.isoformat())
 
           WORKFLOWS=(
             preopen_all.yml
+            finviz_preopen_scrape.yml
             finviz_digest.yml
             events_daily.yml
             news_parse.yml
@@ -478,8 +497,18 @@ print(d.isoformat())
               fi
             fi
 
+            # GH-hosted Elite scrape does not compete with ECS. Re-dispatch
+            # if digest/overlay missing, even while Pre-Open ALL is running.
+            if [ "$WF" = "finviz_preopen_scrape.yml" ] && [ "$FORCE" != "true" ]; then
+              if artifact_ok "$WF"; then
+                echo "skip $WF — digest + morning overlay already on main"
+                continue
+              fi
+              echo "GH Finviz scrape missing/thin — dispatching $WF"
+            fi
+
             # Individuals: let Pre-Open ALL own the window until 08:00 ET.
-            if [ "$WF" != "preopen_all.yml" ]; then
+            if [ "$WF" != "preopen_all.yml" ] && [ "$WF" != "finviz_preopen_scrape.yml" ]; then
               case "$WF" in
                 finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml|daily_pipeline.yml|sector_daily.yml)
                   if is_predictive "$WF" && [ "$FORCE" != "true" ]; then

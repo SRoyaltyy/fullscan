@@ -1,16 +1,19 @@
 name: Pre-Open ALL (predictive one-shot)
 
 # One-shot predictive write that must land before 09:30 ET.
-# Sequential.
+# Sequential. ECS does Grok + news/events/predicts. It does NOT scrape
+# live Finviz HTML (Aliyun 403s public finviz.com).
 #
-#   finviz digest → events + catcher (no carry) → news parse → news judge
-#   → map heat overlay (tape/calendar only) → morning captain refresh
+#   [GH-hosted ubuntu-latest finviz_preopen_scrape.yml ~05:40 ET:
+#      Elite digest + map heat overlay (tape/calendar)]
+#   → news parse → events + catcher (no carry) → news judge
+#   → morning captain refresh
 #   → news actions → general predict → 11 sector predicts → sector board
 #   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
 #   → workflow check
 #
 # Industry groups + exhaustive captain research run at 22:00 ET
-# (map_heat_postclose). Missing last-night baseline FAILS this job.
+# (map_heat_postclose, still ECS). Missing last-night baseline FAILS this job.
 #
 # CLOCK:
 #   1. ECS systemd timer at 05:55 America/New_York (DST-correct). Primary.
@@ -118,8 +121,7 @@ jobs:
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
             scripts/ecs_map_postclose.sh \
             scripts/safe_git_push.sh || true
-          # Clock/heal must never abort the predictive write.
-          bash scripts/ensure_ecs_clock.sh || true
+          bash scripts/ensure_ecs_clock.sh
 
       - name: Gate — weekend / past cutoff
         if: env.skip != 'yes' && github.event.inputs.force != 'true'

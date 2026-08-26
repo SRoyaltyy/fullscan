@@ -3,8 +3,12 @@ name: Finviz Daily Digest
 # Pulls AI Daily Digest column from latest Finviz export + live index
 # narratives (SPY/QQQ/DIA/IWM). Feeds news_judge and predictors so
 # elevated themes actually reach B1 / sector S1 instead of raw noise.
+#
+# Morning path is finviz_preopen_scrape.yml (ubuntu-latest, Elite login,
+# cron 09:40 UTC). This workflow is dispatch-only last-chance fallback
+# after 08:00 ET if the scrape missed. Do not run it on ECS.
 
-# NO schedule cron: Pre-Open ALL (06:00 ET) runs the morning digest.
+# NO schedule cron: GH-hosted finviz_preopen_scrape.yml owns 05:40 ET.
 # Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 on:
   workflow_dispatch:
@@ -37,7 +41,7 @@ jobs:
       - name: Install deps
         run: |
           pip install -r requirements.txt
-          pip install beautifulsoup4 lxml pandas requests || true
+          pip install beautifulsoup4 lxml pandas requests yfinance || true
       - name: Skip if past 09:25 ET
         if: github.event_name == 'schedule'
         run: |
@@ -50,8 +54,11 @@ jobs:
       - name: Run Finviz Daily Digest
         if: env.skip != 'yes'
         env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
         run: |
           set -e
           DATE="${{ github.event.inputs.run_date }}"

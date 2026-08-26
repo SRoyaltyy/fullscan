@@ -2,8 +2,9 @@
 
 Does in one ECS job (skip-if-good, fail-closed QC):
 
-  finviz digest → events (+ catcher)
-  → news parse → news judge → map heat overlay (tape/calendar only)
+  (Finviz digest + map-heat overlay already landed by GH-hosted
+   finviz_preopen_scrape.yml on ubuntu-latest — Elite login, not ECS)
+  → news parse → events (+ catcher) → news judge
   → map heat research (morning delta over last night's baseline)
   → news actions → general predict → 11 sector predicts → sector board
   → output_qc (regex) → Grok reads the files as text → workflow check
@@ -13,12 +14,13 @@ NOT included (those run later on their own crons, still required):
   promotion, weather, AB checklist, stock book, paper dashboard.
 
 Finviz industry groups + exhaustive captain research run at 22:00 ET
-(post-close). Premarket must not re-scrape yesterday's tape.
+(post-close, still ECS). Premarket must not re-scrape yesterday's tape.
+Missing post-close baseline FAILS this job.
 
-Bootstrap: if last night's post-close baseline is missing, map_heat_research
-writes a phase=morning_bootstrap stub and the job continues. Core paths
-(news/events/predicts/sectors/map_heat tables) remain fail-closed.
-stock_book simply receives no s_heat on bootstrap day.
+Live Finviz HTML is NOT scraped here. Aliyun ECS 403s public finviz.com.
+GH-hosted ubuntu-latest + Elite login writes digest + overlay ~05:40 ET;
+this job waits ~10 min, git-pulls those files, then runs Grok.
+
 
 CLI:
   python -m src.run_preopen_all [--date YYYY-MM-DD] [--force]
@@ -31,6 +33,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime
@@ -41,16 +44,20 @@ from . import config, grok_review, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
+# Lives on the ECS disk, OUTSIDE the Actions work tree. checkout --clean
+# must not be able to delete a finished day's files, or skip-if-good is a lie.
 PERSIST = Path(os.environ.get("FULLSCAN_PERSIST", "/home/gha/fullscan-persist"))
 
+# Logical modules this one-button job is responsible for. Keys match
+# daily_orchestrator.yml workflow files (minus .yml) where possible.
 REQUIRED = [
     ("finviz_digest", "Finviz daily digest", True),
     ("events", "Event scanner", True),
     ("news_parse", "News parse", True),
     ("news_judge", "News judge", True),
     ("map_heat", "Map heat tables (post-close + overlay)", True),
-    ("map_heat_baseline", "Map heat post-close baseline", False),
-    ("map_heat_research", "Map heat research (captains)", False),
+    ("map_heat_baseline", "Map heat post-close baseline", True),
+    ("map_heat_research", "Map heat research (captains)", True),
     ("news_actions", "News actions", False),
     ("general_predict", "General market predict", True),
     ("sector_predict", "Per-sector predict (11)", True),
@@ -76,6 +83,7 @@ def _exists(*parts: str) -> bool:
 
 
 def _date_paths(root: Path, date: str) -> list[Path]:
+    """Today's predictive artifacts only. Missing paths are omitted."""
     hits: list[Path] = []
     for folder in (
         root / "01_daily",
@@ -92,6 +100,7 @@ def _date_paths(root: Path, date: str) -> list[Path]:
     sector = root / "01_daily" / "sectors" / date
     if sector.exists():
         hits.append(sector)
+    # unique, keep dirs
     out: list[Path] = []
     seen = set()
     for p in hits:
@@ -104,6 +113,7 @@ def _date_paths(root: Path, date: str) -> list[Path]:
 
 
 def restore_persist(date: str) -> int:
+    """Copy a finished day back into the checkout so skip-if-good can see it."""
     if not PERSIST.is_dir():
         return 0
     n = 0
@@ -123,6 +133,7 @@ def restore_persist(date: str) -> int:
 
 
 def snapshot_persist(date: str) -> int:
+    """Mirror today's artifacts off the checkout so a later clean cannot wipe them."""
     try:
         PERSIST.mkdir(parents=True, exist_ok=True)
     except OSError as e:
@@ -148,13 +159,82 @@ def _force_args(force: bool) -> list[str]:
     return ["--force"] if force else []
 
 
+def _scrape_ready(date: str) -> bool:
+    digest = _p("01_daily", "news", f"{date}_finviz_digest.json")
+    heat = _p("01_daily", "map_heat", f"{date}_map_heat.json")
+    if not digest.exists() or digest.stat().st_size < 200:
+        return False
+    if not heat.exists() or heat.stat().st_size < 200:
+        return False
+    try:
+        payload = json.loads(heat.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    overlay_at = str(payload.get("overlay_at") or "")
+    phase = str(payload.get("phase") or "")
+    return overlay_at.startswith(date) or phase == "morning_overlay"
+
+
+def _pull_scrape_artifacts(date: str) -> None:
+    """Best-effort: take GH-hosted digest + overlay from origin/main."""
+    paths = [
+        f"01_daily/news/{date}_finviz_digest.json",
+        f"01_daily/news/{date}_finviz_digest.md",
+        "01_daily/news/latest_finviz_digest.md",
+        f"01_daily/map_heat/{date}_map_heat.json",
+        f"01_daily/map_heat/{date}_map_heat.md",
+    ]
+    try:
+        subprocess.run(
+            ["git", "fetch", "origin", "main"],
+            cwd=str(ROOT), capture_output=True, timeout=60, check=False,
+        )
+        listed = subprocess.run(
+            ["git", "ls-tree", "-r", "--name-only", "origin/main"],
+            cwd=str(ROOT), capture_output=True, text=True, timeout=30,
+            check=False,
+        )
+        have = set((listed.stdout or "").splitlines())
+        wanted = [p for p in paths if p in have]
+        if not wanted:
+            return
+        subprocess.run(
+            ["git", "checkout", "origin/main", "--", *wanted],
+            cwd=str(ROOT), capture_output=True, timeout=30, check=False,
+        )
+    except (OSError, subprocess.SubprocessError) as e:
+        print(f"[preopen-all] scrape pull skipped: {e}", flush=True)
+
+
+def wait_for_gh_scrape(date: str, timeout_s: int | None = None) -> bool:
+    """Wait for ubuntu-latest Elite scrape. Do not scrape Finviz on ECS."""
+    timeout_s = int(os.environ.get("FINVIZ_SCRAPE_WAIT", timeout_s or 720))
+    if _scrape_ready(date):
+        print("[preopen-all] GH Finviz scrape already on disk", flush=True)
+        return True
+    print(f"[preopen-all] waiting up to {timeout_s}s for GH-hosted "
+          f"finviz_preopen_scrape (digest + overlay)", flush=True)
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        _pull_scrape_artifacts(date)
+        if _scrape_ready(date):
+            print("[preopen-all] GH Finviz scrape landed", flush=True)
+            return True
+        time.sleep(20)
+    print("[preopen-all] WARN: GH Finviz scrape not on disk after wait — "
+          "QC will fail if digest/overlay missing", flush=True)
+    return False
+
+
 def _github_runs_today(date: str) -> list[dict]:
+    """Best-effort: which related workflows actually ran today (ET)."""
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
     if not token:
         return []
     names = [
         "preopen_all.yml",
+        "finviz_preopen_scrape.yml",
         "finviz_digest.yml",
         "events_daily.yml",
         "news_parse.yml",
@@ -222,6 +302,7 @@ def run(date: str | None = None, force: bool = False) -> None:
 
     skip_writes = False
     restore_persist(date)
+    wait_for_gh_scrape(date)
     if not force:
         pre = output_qc.preopen_report(date)
         grok_ok = grok_review.prior_ok(date)
@@ -260,16 +341,15 @@ def run(date: str | None = None, force: bool = False) -> None:
         step("news_parse", "News parse",
              [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
               "--date", date, *fa])
-        step("finviz_digest", "Finviz daily digest",
-             [py, "-m", "src.finviz_digest", "--date", date, *fa])
-        step("map_heat", "Map heat morning overlay (tape/calendar)",
-             [py, "-m", "src.map_heat", "--date", date, "--overlay", *fa])
         step("events", "Event scanner (primary)",
              [py, "-m", "src.run_events", "--date", date, *fa])
         step("events_catcher", "Event catcher (gap hunt, no carry)",
              [py, "-m", "src.run_events_catcher", "--date", date, *fa])
+        # Deliberately NO events_fallback — carry is trash for pre-open.
         step("news_judge", "News judge",
              [py, "-m", "src.run_news_judge", "--date", date, *fa])
+        # Last night's 11-sector baseline is mandatory. One overnight delta
+        # refresh only; never 11 sector batches in the time-critical window.
         prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
         os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
             "MAP_HEAT_REFRESH_TIMEOUT", "1200")

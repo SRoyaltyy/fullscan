@@ -96,6 +96,35 @@ chmod +x "$ROOT/scripts/"*.sh || true
 # Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call.
 bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
 
+# Live Finviz HTML is GH-hosted (finviz_preopen_scrape.yml, ~05:40 ET).
+# Do NOT scrape from this Aliyun box. Wait/pull digest + overlay, then Grok.
+wait_finviz_scrape() {
+  local wait_s="${FINVIZ_SCRAPE_WAIT:-720}"
+  local deadline=$((SECONDS + wait_s))
+  echo "[ecs-preopen] waiting up to ${wait_s}s for GH-hosted Finviz scrape"
+  while [ "$SECONDS" -lt "$deadline" ]; do
+    git fetch origin main >/dev/null 2>&1 || true
+    git checkout origin/main -- \
+      "01_daily/news/${DAY}_finviz_digest.json" \
+      "01_daily/news/${DAY}_finviz_digest.md" \
+      "01_daily/news/latest_finviz_digest.md" \
+      "01_daily/map_heat/${DAY}_map_heat.json" \
+      "01_daily/map_heat/${DAY}_map_heat.md" 2>/dev/null || true
+    if [ -s "01_daily/news/${DAY}_finviz_digest.json" ] \
+       && [ -s "01_daily/map_heat/${DAY}_map_heat.json" ]; then
+      if grep -q "morning_overlay" "01_daily/map_heat/${DAY}_map_heat.json" 2>/dev/null; then
+        echo "[ecs-preopen] GH Finviz scrape on disk"
+        return 0
+      fi
+    fi
+    echo "[ecs-preopen] scrape not ready — sleep 20s"
+    sleep 20
+  done
+  echo "[ecs-preopen] WARN: GH Finviz scrape not on disk after ${wait_s}s — python QC will fail if missing"
+  return 0
+}
+wait_finviz_scrape
+
 PY="${FULLSCAN_PYTHON:-python3}"
 if [ -x "$ROOT/.venv/bin/python" ]; then
   PY="$ROOT/.venv/bin/python"

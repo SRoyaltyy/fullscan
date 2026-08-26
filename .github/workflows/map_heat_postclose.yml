@@ -64,6 +64,8 @@ jobs:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
           SOURCE: ${{ github.event.inputs.source_date }}

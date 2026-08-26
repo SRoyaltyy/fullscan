@@ -24,7 +24,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import config
+from . import config, finviz_session
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -38,7 +38,7 @@ UA = {
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
 }
-QUOTE_URL = "https://finviz.com/quote.ashx?t={ticker}"
+QUOTE_URL = "https://elite.finviz.com/quote.ashx?t={ticker}"
 
 MCAP_MIN = 80_000_000.0
 ADV_MIN = 500_000.0
@@ -79,16 +79,7 @@ KEY_FIELDS = [
 
 
 def _session() -> requests.Session:
-    s = requests.Session()
-    s.headers.update(UA)
-    token = (
-        __import__("os").environ.get("FINVIZ_AUTH")
-        or __import__("os").environ.get("AUTH_TOKEN_FINVIZ")
-        or ""
-    )
-    if token:
-        s.cookies.set("auth", token, domain=".finviz.com")
-    return s
+    return finviz_session.session()
 
 
 def parse_snapshot_colors(html: str) -> dict:
@@ -158,8 +149,9 @@ def parse_analyst_last2(html: str) -> list[dict]:
 
 def fetch_ticker(ticker: str, sess: requests.Session | None = None) -> dict:
     sess = sess or _session()
-    r = sess.get(QUOTE_URL.format(ticker=ticker.upper()), timeout=45)
-    r.raise_for_status()
+    r = finviz_session.get(sess, [f"/quote.ashx?t={ticker.upper()}"], timeout=45)
+    if r is None:
+        raise RuntimeError(f"Elite quote page unavailable for {ticker}")
     fields = parse_snapshot_colors(r.text)
     analysts = parse_analyst_last2(r.text)
 
