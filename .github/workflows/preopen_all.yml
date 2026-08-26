@@ -8,7 +8,9 @@ name: Pre-Open ALL (predictive one-shot)
 #      Elite digest + map heat overlay (tape/calendar)]
 #   → news parse → events + catcher (no carry) → news judge
 #   → morning captain refresh
-#   → news actions → general predict → 11 sector predicts → sector board
+#   → news actions
+#   → catalyst dossiers (layer 3 on identified names)
+#   → general predict → 11 sector predicts → sector board
 #   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
 #   → workflow check
 #
@@ -166,6 +168,7 @@ jobs:
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
+          GROK_ONLY: "1"
         run: |
           set -e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
@@ -211,7 +214,8 @@ jobs:
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(
               01_daily/general/ 01_daily/sectors/ 01_daily/events
-              01_daily/news/ 01_daily/map_heat/
+              01_daily/news/ 01_daily/map_heat/ 01_daily/catalyst/
+              data/catalyst/
               01_daily/_transcripts/ 01_daily/_channel1/
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
