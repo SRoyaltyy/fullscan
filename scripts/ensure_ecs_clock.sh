@@ -14,8 +14,13 @@ bash "$ROOT/scripts/ensure_openclaw_timeouts.sh"
 if ! command -v systemctl >/dev/null 2>&1; then
   echo "[ecs-clock] no systemctl on this box"
 else
-  if (systemctl is-enabled fullscan-preopen.timer >/dev/null 2>&1
-      && systemctl is-enabled fullscan-map-postclose.timer >/dev/null 2>&1); then
+  # Do NOT put && after a newline inside ( ). Bash treats the newline as
+  # end-of-command and then dies with: syntax error near unexpected token `&&'
+  pre_ok=0
+  post_ok=0
+  systemctl is-enabled fullscan-preopen.timer >/dev/null 2>&1 && pre_ok=1
+  systemctl is-enabled fullscan-map-postclose.timer >/dev/null 2>&1 && post_ok=1
+  if [ "$pre_ok" -eq 1 ] && [ "$post_ok" -eq 1 ]; then
     echo "[ecs-clock] preopen + map-postclose timers already enabled"
     systemctl list-timers --all fullscan-preopen.timer \
       fullscan-map-postclose.timer 2>/dev/null || true

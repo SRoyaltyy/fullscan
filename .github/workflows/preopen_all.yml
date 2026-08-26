@@ -118,7 +118,8 @@ jobs:
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
             scripts/ecs_map_postclose.sh \
             scripts/safe_git_push.sh || true
-          bash scripts/ensure_ecs_clock.sh
+          # Clock/heal must never abort the predictive write.
+          bash scripts/ensure_ecs_clock.sh || true
 
       - name: Gate — weekend / past cutoff
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
