@@ -13,6 +13,7 @@ import json
 import math
 import os
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
@@ -318,6 +319,21 @@ def fetch_news_block() -> dict:
     return {"available": bool(rows), "count": len(rows), "items": rows}
 
 
+def fetch_finviz_tape(date_str: str | None = None) -> dict:
+    """Same-day Finviz futures board produced by map_heat.
+
+    VX is explicitly labelled VIX futures, not spot VIX.
+    """
+    date_str = date_str or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    p = Path("01_daily") / "map_heat" / f"{date_str}_map_heat.json"
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+        rows = data.get("tape") or []
+        return {"available": bool(rows), "source": str(p), "rows": rows}
+    except (OSError, json.JSONDecodeError):
+        return {"available": False, "rows": []}
+
+
 # ------------------------------------------------------------------ assembly
 def build(stage: str, date_str: str | None = None) -> dict:
     data = {
@@ -327,6 +343,7 @@ def build(stage: str, date_str: str | None = None) -> dict:
         "vix": fetch_vix(),
         "commodities_fx": fetch_commodities_fx(),
         "futures": fetch_futures(),
+        "finviz_futures_tape": fetch_finviz_tape(date_str),
         "global_sessions": fetch_global_sessions(),
         "yield_spx_corr": fetch_yield_spx_corr(),
         "fear_greed": fetch_fear_greed(),
@@ -363,6 +380,17 @@ def to_markdown(data: dict) -> str:
                      if v.get("ratio") is not None
                      else f"ratio VIX/VIX3M: STALE — {v.get('ratio_stale', 'suppressed')}")
         lines.append(f"[VIX3M: {v['vix3m']['current']} | {ratio_txt}]")
+    ft = data.get("finviz_futures_tape") or {}
+    if ft.get("available"):
+        bits = []
+        for row in ft.get("rows") or []:
+            label = row.get("label") or row.get("ticker")
+            if row.get("ticker") == "VX":
+                label = "VIX FUTURES (VX; not spot)"
+            change = row.get("change")
+            ch = f"{float(change):+.2f}%" if change is not None else "n/a"
+            bits.append(f"{label}={row.get('last')} ({ch})")
+        lines.append("[FINVIZ FUTURES TAPE: " + "; ".join(bits) + "]")
     for s in ("DGS30", "DGS10", "DFII10", "BAMLH0A0HYM2", "RRPONTSYD", "USEPUINDXD"):
         lines.append(_fmt_delta(s, f.get(s, {})))
     sofr, iorb = f.get("SOFR", {}), f.get("IORB", {})

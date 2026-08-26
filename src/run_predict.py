@@ -21,10 +21,15 @@ except Exception:
     def finviz_digest_block(*_a, **_k):
         return ""
 try:
-    from .map_heat_research import inject_block as map_heat_research_block
+    from .map_heat_research import (
+        decision_gate as map_heat_decision_gate,
+        inject_block as map_heat_research_block,
+    )
 except Exception:
     def map_heat_research_block(*_a, **_k):
         return ""
+    def map_heat_decision_gate(_date, decision, **_kwargs):
+        return decision
 
 
 def _write(path: str, date_str: str, text: str, decision: dict, scores: dict,
@@ -168,6 +173,7 @@ def main() -> None:
 
         scores = compute_scores.parse_scores(text)
         decision = compute_scores.compute(scores)
+        decision = map_heat_decision_gate(date_str, decision)
         horizon_calls = compute_scores.parse_horizon_calls(scores)
         _write(path, date_str, text, decision, scores, ch1, horizon_calls)
 

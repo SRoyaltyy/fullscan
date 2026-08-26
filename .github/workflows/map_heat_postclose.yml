@@ -1,0 +1,74 @@
+name: Map Heat Captain Research (post-close)
+
+# Heavy Grok research is intentionally outside the pre-open critical path.
+# One sector-batched pass researches every liquid SPX/RUT industry captain
+# for the NEXT session. The 05:55 job performs one small overnight refresh.
+
+on:
+  schedule:
+    - cron: "45 23 * * 1-5"  # 19:45 ET during EDT; queues after sector outcome
+  workflow_dispatch:
+    inputs:
+      source_date:
+        description: "Completed session YYYY-MM-DD (default today ET)"
+        required: false
+        default: ""
+      target_date:
+        description: "Next session YYYY-MM-DD (default next weekday)"
+        required: false
+        default: ""
+      force:
+        description: "Rebuild existing baseline"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: map-heat-postclose
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 480
+    env:
+      OPENCLAW_TIMEOUT: "10800"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Build next-session tables and exhaustive captain baseline
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          SOURCE: ${{ github.event.inputs.source_date }}
+          TARGET: ${{ github.event.inputs.target_date }}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+        run: |
+          set -euo pipefail
+          SOURCE="${SOURCE:-$(TZ=America/New_York date +%F)}"
+          if [ -z "$TARGET" ]; then
+            TARGET=$(python -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
+          fi
+          echo "source=$SOURCE target=$TARGET"
+          python -m src.map_heat --date "$TARGET" --force
+          ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          python -m src.map_heat_postclose "${ARGS[@]}"
+      - name: Commit baseline
+        if: always()
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: post-close captain research [$(date -u +%F_%H%M)]" \
+            01_daily/map_heat/ 01_daily/_transcripts/

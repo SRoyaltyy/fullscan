@@ -158,11 +158,16 @@ def load_frame(date: str) -> pd.DataFrame | None:
         df["s_opp"] = 0.0
     if "rebound" not in df.columns:
         df["rebound"] = False
+    if "s_heat_raw" not in df.columns:
+        # Old snapshots either have already-scaled s_heat or no heat at all.
+        df["s_heat_raw"] = df.get("s_heat", 0.0)
     for c in COMPONENTS:
         if c not in df.columns:
             df[c] = 0.0
         df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0.0)
     df["s_opp"] = pd.to_numeric(df["s_opp"], errors="coerce").fillna(0.0)
+    df["s_heat_raw"] = pd.to_numeric(
+        df["s_heat_raw"], errors="coerce").fillna(0.0)
     df["rebound"] = df["rebound"].astype(str).str.lower().isin(["true", "1"])
 
     # enforce the same liquidity gate as the live ranker (old frames were
@@ -253,9 +258,11 @@ def _select_buys(df: pd.DataFrame, score: np.ndarray, top_n: int) -> list[int]:
 
 
 def _score(df: pd.DataFrame, comp: np.ndarray, w: tuple[float, ...],
-           prev_held: set[str]) -> tuple[np.ndarray, np.ndarray]:
+           prev_held: set[str], heat_scale: float = 1.0
+           ) -> tuple[np.ndarray, np.ndarray]:
     """Returns (full score with add-ons, core score) under weights w."""
-    core = comp @ np.asarray(w, dtype=float)
+    heat = df.get("s_heat_raw", pd.Series(0.0, index=df.index)).to_numpy(dtype=float)
+    core = comp @ np.asarray(w, dtype=float) + heat_scale * heat
     full = core + df["s_opp"].to_numpy(dtype=float)
     full = full + np.where(df["rebound"].to_numpy(dtype=bool), REBOUND_BOOST, 0.0)
     if prev_held:
@@ -324,6 +331,7 @@ def _evaluate_horizon(
     panel: pd.DataFrame,
     incumbent: tuple[float, ...],
     top_n: int,
+    heat_scale: float = 1.0,
 ) -> dict:
     """Walk the candidate grid on all realized dates for one horizon."""
     n_td = HORIZON_DAYS[h]
@@ -349,7 +357,8 @@ def _evaluate_horizon(
     def objective(w: tuple[float, ...]) -> tuple[float, list[float]]:
         vals = []
         for x in per_date:
-            full, _ = _score(x["df"], x["comp"], w, x["prev_held"])
+            full, _ = _score(
+                x["df"], x["comp"], w, x["prev_held"], heat_scale=heat_scale)
             picks = _select_buys(x["df"], full, top_n)
             if not picks:
                 vals.append(0.0)
@@ -402,6 +411,71 @@ def _evaluate_horizon(
     return result
 
 
+HEAT_SCALES = (0.0, 0.25, 0.5, 0.75, 1.0, 1.25)
+
+
+def _evaluate_heat_scale(
+    frames: dict[str, pd.DataFrame], panel: pd.DataFrame,
+    weights: dict[str, tuple[float, ...]], current: float, top_n: int,
+) -> dict:
+    """Learn whether map/captain heat adds realized 1d excess return."""
+    h, n_td = "1d", HORIZON_DAYS["1d"]
+    rows = []
+    for d, df in frames.items():
+        if not df.get("s_heat_raw", pd.Series(0.0, index=df.index)).abs().gt(0).any():
+            continue
+        rets = _fwd_returns(panel, d, n_td)
+        if rets is None or len(rets) < 200:
+            continue
+        rows.append({
+            "date": d, "df": df, "rets": rets,
+            "bench": float(rets.reindex(df["Ticker"]).median()),
+            "comp": _components_for(df, h),
+            "held": _prev_book_buys(d).get(h, set()),
+        })
+    out = {"n_dates": len(rows), "current": current}
+    if len(rows) < MIN_DATES:
+        out["adopted"] = current
+        out["decision"] = f"hold {current:.2f} — only {len(rows)} realized heat dates"
+        return out
+
+    def objective(scale: float) -> tuple[float, list[float]]:
+        vals = []
+        for x in rows:
+            full, _ = _score(
+                x["df"], x["comp"], weights[h], x["held"], heat_scale=scale)
+            picks = _select_buys(x["df"], full, top_n)
+            fr = x["rets"].reindex(x["df"]["Ticker"].iloc[picks]).dropna()
+            vals.append(float(fr.mean() - x["bench"]) if len(fr) else 0.0)
+        return float(np.mean(vals)), vals
+
+    cur_mean, cur_vals = objective(current)
+    candidates = sorted(set(HEAT_SCALES + (round(current, 2),)))
+    scored = [(s, *objective(s)) for s in candidates]
+    best, best_mean, best_vals = max(scored, key=lambda x: x[1])
+    wins = sum(1 for a, b in zip(best_vals, cur_vals) if a > b)
+    win_frac = wins / len(cur_vals)
+    out.update({
+        "current_excess": round(cur_mean * 100, 4),
+        "best_candidate": best,
+        "best_excess": round(best_mean * 100, 4),
+        "win_frac": round(win_frac, 3),
+    })
+    if (best == current or best_mean - cur_mean < EPS_IMPROVE
+            or win_frac < WIN_FRAC):
+        adopted = current
+        decision = (f"hold {current:.2f} — best {best:.2f}, "
+                    f"improvement {(best_mean-cur_mean)*100:.3f}pp, "
+                    f"wins {win_frac:.0%}")
+    else:
+        adopted = round(current + HALF_STEP * (best - current), 3)
+        decision = (f"MOVE {current:.2f}→{adopted:.3f} toward {best:.2f}; "
+                    f"+{(best_mean-cur_mean)*100:.3f}pp, wins {win_frac:.0%}")
+    out["adopted"] = adopted
+    out["decision"] = decision
+    return out
+
+
 def _book_risk(date: str) -> str:
     """weather_risk recorded in that date's book meta ('' if unknown)."""
     p = BOOK_DIR / f"{date}_stock_book.json"
@@ -439,7 +513,9 @@ def _evaluate_risk_scale(
         if rets is None or len(rets) < 200:
             continue
         comp = _components_for(df, h)
-        full, _ = _score(df, comp, weights[h], _prev_book_buys(d).get(h, set()))
+        full, _ = _score(
+            df, comp, weights[h], _prev_book_buys(d).get(h, set()),
+            heat_scale=float(prev.get("heat_scale", 1.0)))
         picks = _select_buys(df, full, top_n)
         if not picks:
             continue
@@ -472,6 +548,7 @@ def _evaluate_risk_scale(
 def _evaluate_sell_flag(
     frames: dict[str, pd.DataFrame], panel: pd.DataFrame,
     weights: dict[str, tuple[float, ...]], current: bool,
+    heat_scale: float = 1.0,
 ) -> dict:
     """Does ranking the sell book on core score (no buy-side add-ons)
     actually produce better shorts? Evaluated on 1w (the mid horizon)."""
@@ -483,7 +560,8 @@ def _evaluate_sell_flag(
             continue
         bench = float(rets.reindex(df["Ticker"]).median())
         comp = _components_for(df, h)
-        full, core = _score(df, comp, weights[h], set())
+        full, core = _score(
+            df, comp, weights[h], set(), heat_scale=heat_scale)
 
         def sell_pnl(score: np.ndarray) -> float | None:
             order = np.argsort(score)[:SELL_TOP]
@@ -520,7 +598,8 @@ def _evaluate_sell_flag(
 
 def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
                   results: list[dict], sell_result: dict, asof: str,
-                  risk_result: dict | None = None) -> dict:
+                  risk_result: dict | None = None,
+                  heat_result: dict | None = None) -> dict:
     prev = {}
     if POLICY_PATH.exists():
         try:
@@ -535,6 +614,7 @@ def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
         "decisions": {r["horizon"]: r["decision"] for r in results},
         "sell": sell_result.get("decision"),
         "risk": (risk_result or {}).get("decision"),
+        "heat": (heat_result or {}).get("decision"),
     })
     risk_result = risk_result or {}
     policy = {
@@ -543,6 +623,8 @@ def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
         "asof": asof,
         "weights": adopted,
         "sell_excludes_addons": sell_flag,
+        "heat_scale": (heat_result or {}).get(
+            "adopted", prev.get("heat_scale", 1.0)),
         "risk_off_entry_scale": risk_result.get(
             "adopted_scale", prev.get("risk_off_entry_scale", RISK_DEFAULT_SCALE)),
         "risk_scaling_effective": prev.get(
@@ -560,7 +642,8 @@ def _write_policy(adopted: dict[str, list[float]], sell_flag: bool,
 
 
 def _write_ledger(policy: dict, results: list[dict], sell_result: dict,
-                  risk_result: dict | None = None) -> None:
+                  risk_result: dict | None = None,
+                  heat_result: dict | None = None) -> None:
     L = [
         f"# Book learn — weight tuner ledger (v{policy['version']})",
         "",
@@ -602,6 +685,11 @@ def _write_ledger(policy: dict, results: list[dict], sell_result: dict,
         f"- scale: **{policy.get('risk_off_entry_scale')}** "
         f"(effective {policy.get('risk_scaling_effective')}) — "
         f"{(risk_result or {}).get('decision', 'not evaluated')}",
+        "",
+        "## Map/captain heat scale (realized 1d excess return)",
+        "",
+        f"- scale: **{policy.get('heat_scale', 1.0)}** — "
+        f"{(heat_result or {}).get('decision', 'not evaluated')}",
         "",
         "## History",
         "",
@@ -647,16 +735,20 @@ def run(date: str | None = None, lookback: int = 40, top_n: int = 10,
 
     incumbent_w, pol_meta = load_policy()
     current_sell = bool(pol_meta.get("sell_excludes_addons", True))
+    current_heat = float(pol_meta.get("heat_scale", 1.0))
 
     results = []
     adopted: dict[str, list[float]] = {}
     for h in HORIZONS:
-        r = _evaluate_horizon(h, frames, panel, tuple(incumbent_w[h]), top_n)
+        r = _evaluate_horizon(
+            h, frames, panel, tuple(incumbent_w[h]), top_n,
+            heat_scale=current_heat)
         print(f"[book-learn] {h}: {r['decision']}")
         results.append(r)
         adopted[h] = r["adopted"]
 
-    sell_result = _evaluate_sell_flag(frames, panel, incumbent_w, current_sell)
+    sell_result = _evaluate_sell_flag(
+        frames, panel, incumbent_w, current_sell, heat_scale=current_heat)
     print(f"[book-learn] sell flag: {sell_result['decision']}")
 
     prev_pol = {}
@@ -667,10 +759,16 @@ def run(date: str | None = None, lookback: int = 40, top_n: int = 10,
             prev_pol = {}
     risk_result = _evaluate_risk_scale(frames, panel, incumbent_w, prev_pol, top_n)
     print(f"[book-learn] risk scale: {risk_result['decision']}")
+    heat_result = _evaluate_heat_scale(
+        frames, panel, incumbent_w,
+        float(prev_pol.get("heat_scale", current_heat)),
+        top_n,
+    )
+    print(f"[book-learn] heat scale: {heat_result['decision']}")
 
     policy = _write_policy(adopted, bool(sell_result["adopted"]), results,
-                           sell_result, asof, risk_result)
-    _write_ledger(policy, results, sell_result, risk_result)
+                           sell_result, asof, risk_result, heat_result)
+    _write_ledger(policy, results, sell_result, risk_result, heat_result)
     print(f"[book-learn] policy v{policy['version']} → {POLICY_PATH}")
 
 

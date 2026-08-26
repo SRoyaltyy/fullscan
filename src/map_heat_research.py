@@ -329,6 +329,8 @@ def inject_block(date_str: str | None = None, sector: str | None = None,
         data = json.loads(js.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return ""
+    if data.get("phase") != "morning_refresh":
+        return ""
     cards = data.get("cards") or []
     if sector:
         cards = [c for c in cards if (c.get("sector") or "") == sector]
@@ -373,6 +375,11 @@ def ticker_boosts(date: str) -> tuple[dict[str, float], dict[str, float]]:
         data = json.loads(js.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {}, {}
+    if (data.get("phase") != "morning_refresh"
+            or len(data.get("cards") or []) < 20
+            or data.get("evidence_errors")):
+        print("[map-heat] research not strict morning_refresh — no book boosts")
+        return {}, {}
     tboost: dict[str, float] = {}
     iboost: dict[str, float] = {}
     for c in data.get("cards") or []:
@@ -405,6 +412,80 @@ def ticker_boosts(date: str) -> tuple[dict[str, float], dict[str, float]]:
     tboost.pop("", None)
     iboost.pop("", None)
     return tboost, iboost
+
+
+def decision_gate(date: str, decision: dict, sector: str | None = None) -> dict:
+    """Deterministically enforce the calendar gate after LLM parsing.
+
+    Prompt advice is not enforcement. High-impact macro caps broad general
+    and sector magnitude; mega-cap earnings additionally caps Technology.
+    """
+    js = OUT_DIR / f"{date}_research.json"
+    try:
+        data = json.loads(js.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return decision
+    if data.get("phase") != "morning_refresh":
+        return decision
+    out = dict(decision)
+
+    # Deterministic sector-RS confirmation/veto. A sector directional call
+    # cannot remain directional when BOTH Finviz 1d and 1w tape disagree.
+    if sector:
+        heat_path = OUT_DIR / f"{date}_map_heat.json"
+        try:
+            heat = json.loads(heat_path.read_text(encoding="utf-8"))
+            row = next(
+                (x for x in heat.get("sectors") or []
+                 if x.get("sector") == sector), None)
+        except (OSError, json.JSONDecodeError):
+            row = None
+        if row:
+            d1, w1 = row.get("d1"), row.get("w1")
+            direction = str(out.get("predicted_direction") or "")
+            disagrees = (
+                direction == "up" and d1 is not None and w1 is not None
+                and d1 < 0 and w1 < 0
+            ) or (
+                direction == "down" and d1 is not None and w1 is not None
+                and d1 > 0 and w1 > 0
+            )
+            if disagrees:
+                out["predicted_direction"] = "flat"
+                out["predicted_magnitude_band"] = "flat"
+                out["confidence_score"] = min(
+                    float(out.get("confidence_score") or 0.5), 0.55)
+                out["sector_rs_veto_applied"] = True
+                out["sector_rs_tape"] = {"d1": d1, "w1": w1}
+
+    if not data.get("size_gate"):
+        return out
+    econ = data.get("econ") or []
+    earnings = data.get("earnings") or []
+    macro_gate = any(int(e.get("importance") or 0) >= 2 for e in econ)
+    tech_gate = any(str(e.get("ticker") or "").upper() in {
+        "AAPL", "MSFT", "NVDA", "AMZN", "GOOG", "GOOGL", "META", "TSLA",
+        "AVGO", "CRM", "ORCL",
+    } for e in earnings)
+    applies = macro_gate or sector is None or (sector == "Technology" and tech_gate)
+    if not applies:
+        return out
+    if str(out.get("predicted_magnitude_band")) in ("notable", "severe"):
+        out["predicted_magnitude_band"] = "mild"
+    out["confidence_score"] = min(float(out.get("confidence_score") or 0.5), 0.65)
+    out["calendar_size_gate_applied"] = True
+    out["calendar_size_gate_reason"] = data.get("size_gate_reason") or "high-impact calendar"
+    return out
+
+
+def calendar_entry_scale(date: str) -> float:
+    js = OUT_DIR / f"{date}_research.json"
+    try:
+        data = json.loads(js.read_text(encoding="utf-8"))
+        value = float(data.get("calendar_entry_scale", 1.0))
+        return min(1.0, max(0.0, value))
+    except (OSError, json.JSONDecodeError, TypeError, ValueError):
+        return 1.0
 
 
 def main() -> None:

@@ -461,6 +461,13 @@ def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
         if (weather_risk == "off" and risk_pol["scale"] < 1.0
                 and date >= risk_pol["effective"]):
             entry_scale = risk_pol["scale"]
+        try:
+            calendar_scale = float(
+                (book.get("meta") or {}).get("calendar_entry_scale", 1.0)
+            )
+            entry_scale = min(entry_scale, max(0.0, min(1.0, calendar_scale)))
+        except (TypeError, ValueError):
+            pass
 
         for sleeve, info in props.items():
             pick = info["pick"]
@@ -717,6 +724,13 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
         if (weather_risk == "off" and risk_pol["scale"] < 1.0
                 and date >= risk_pol["effective"]):
             entry_scale = risk_pol["scale"]
+        try:
+            calendar_scale = float(
+                (book.get("meta") or {}).get("calendar_entry_scale", 1.0)
+            )
+            entry_scale = min(entry_scale, max(0.0, min(1.0, calendar_scale)))
+        except (TypeError, ValueError):
+            pass
 
         for sleeve, targets in picks.items():
             S = st[sleeve]
@@ -784,7 +798,7 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                     S["trades"] += 1
                     reason = f"entered {sleeve} book"
                     if entry_scale < 1.0:
-                        reason += f" (risk-off: deploying {entry_scale:.0%} of cash)"
+                        reason += f" (risk/calendar gate: deploying {entry_scale:.0%} of cash)"
                     extra = _fill_meta(t)
                     extra["cash_before"] = round(S["cash"] + cost, 2)
                     extra["cash_after"] = round(S["cash"], 2)

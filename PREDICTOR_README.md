@@ -8,9 +8,10 @@ reads the `news` and `macro_indicators` tables those collectors maintain.)
 
 | Time | Stage | What happens |
 |---|---|---|
-| **5:55 AM ET** | **`Pre-Open ALL` (ECS systemd)** | **The clock is the Alibaba box, not GitHub.** `fullscan-preopen.timer` fires `scripts/ecs_preopen.sh`: git pull → finviz digest → events+catcher (no carry) → news parse/judge/actions → general predict → 11 sector predicts → **regex QC + Grok reads the files as text** → git push. Fail-closed. Skip-if-good. Must finish before 09:30 ET. GitHub Actions is backup (`workflow_dispatch` / orchestrator last-chance) and will back off if the systemd job holds `/tmp/fullscan-preopen.lock`. |
+| **Post-close 7:45 PM ET** | **`Map Heat Captain Research`** | ECS/Grok researches top-2 liquid SPX/RUT captains for every industry, batched by the 11 sectors. Stores tomorrow’s cited baseline plus completed economic actual-vs-consensus and sector reactions. Heavy research is outside the morning critical path. |
+| **5:55 AM ET** | **`Pre-Open ALL` (ECS systemd)** | **The clock is the Alibaba box, not GitHub.** `fullscan-preopen.timer` fires `scripts/ecs_preopen.sh`: git pull → parse/digest → live Finviz groups/theme-ETF/futures/calendar/ticker-news tables → **one Grok overnight captain delta refresh** → events/judge/actions → general + 11 sector predicts → regex/Grok QC → git push. The morning never repeats the 11 post-close research batches. |
 | 8:00+ AM | (fallback only) | Individual predictive workflows have **no schedule crons**. Orchestrator fires them after 08:00 ET only if Pre-Open ALL has **finished** today and is not quality-ok — never while ALL is still on the ECS runner, and never after 09:25 ET. |
-| 5:00 PM | `outcome` | Actual close fetched → DeepSeek reviews the day with verified citations → prediction graded (direction hit, magnitude hit) → `<date>_outcome.md` |
+| 5:00 PM | `outcome` | Actual close fetched → Grok (DeepSeek fallback) reviews the day with verified citations → prediction graded → `<date>_outcome.md` |
 | 5:05 PM | `reflect` | Diagnostic engine classifies any miss (missing evidence / misweighted / miscalibrated) → candidate lesson in `02_lessons/candidate/` |
 | ~5:30 PM | `learn_cycle` | Mine wins/losses → hypotheses → LEARNINGS.md + mutable_policy. Orchestrator re-dispatches if it missed. |
 | ~1:00 PM UTC | `stock_book_all` | Weather/AB/book/backtest/paper **dashboard**. Not predictive; runs after the open. |

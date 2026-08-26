@@ -59,7 +59,7 @@ NEG_RE = re.compile(
 
 FUTURES_KEEP = [
     ("ES", "S&P 500"), ("NQ", "Nasdaq 100"), ("ER2", "Russell 2000"),
-    ("YM", "DJIA"), ("VX", "VIX"), ("CL", "Crude WTI"), ("BZ", "Brent"),
+    ("YM", "DJIA"), ("VX", "VIX futures"), ("CL", "Crude WTI"), ("BZ", "Brent"),
     ("NG", "Nat gas"), ("GC", "Gold"), ("SI", "Silver"), ("HG", "Copper"),
     ("DX", "USD"), ("6E", "EUR"), ("6J", "JPY"), ("ZN", "10Y note"),
     ("ZB", "30Y bond"), ("NKD", "Nikkei"), ("DY", "DAX"), ("EX", "Euro Stoxx"),
@@ -130,6 +130,10 @@ def load_export(path: Path) -> pd.DataFrame:
     df["w1"] = df["Performance (Week)"].map(_pct)
     df["m1"] = df.get("Performance (Month)", pd.Series(dtype=str)).map(_pct)
     df["dollar_vol"] = df["price"] * df["avg_vol_k"] * 1000.0
+    df["asset_type"] = df.get("Asset Type", "").fillna("").astype(str)
+    df["theme"] = df.get("Sector/Theme", "").fillna("").astype(str).str.strip()
+    df["etf_category"] = df.get("Single Category", "").fillna("").astype(str)
+    df["aum"] = pd.to_numeric(df.get("Assets Under Management"), errors="coerce")
     df["spx"] = df["Index"].map(lambda v: _in_index(v, "S&P 500"))
     df["rut"] = df["Index"].map(lambda v: _in_index(v, "RUT"))
     df = df[df["Ticker"].str.len().gt(0)]
@@ -226,14 +230,18 @@ def fetch_econ(sess: requests.Session, date: str) -> list[dict]:
     rows = []
     for m in re.finditer(
         r'\{"calendarId":(\d+),.*?"event":"(.*?)".*?"date":"(.*?)".*?'
-        r'"previous":(.*?),.*?"forecast":(.*?),.*?"importance":(\d+)',
+        r'"actual":(.*?),.*?"previous":(.*?),.*?"forecast":(.*?),.*?'
+        r'"importance":(\d+)',
         r.text,
     ):
         day = m.group(3)[:10]
         if day != date:
             continue
-        prev = m.group(4).strip('"')
-        fc = m.group(5).strip('"')
+        actual = m.group(4).strip('"')
+        prev = m.group(5).strip('"')
+        fc = m.group(6).strip('"')
+        if actual == "null":
+            actual = None
         if prev == "null":
             prev = None
         if fc == "null":
@@ -241,9 +249,11 @@ def fetch_econ(sess: requests.Session, date: str) -> list[dict]:
         rows.append({
             "event": m.group(2).encode("utf-8").decode("unicode_escape"),
             "datetime": m.group(3),
+            "actual": actual,
             "previous": prev,
             "forecast": fc,
-            "importance": int(m.group(6)),
+            "surprise": _numeric_surprise(actual, fc),
+            "importance": int(m.group(7)),
         })
     # de-dupe
     seen = set()
@@ -299,6 +309,139 @@ def fetch_earnings(sess: requests.Session, date: str) -> list[dict]:
     rows.sort(key=lambda x: -x["mcap"])
     print(f"[map_heat] earnings {date}: {len(rows)}")
     return rows
+
+
+def _numeric_surprise(actual: Any, forecast: Any) -> float | None:
+    """Best-effort actual minus consensus. Units stay as displayed by Finviz."""
+    a, f = _pct(actual), _pct(forecast)
+    if a is None or f is None:
+        return None
+    return round(a - f, 4)
+
+
+def fetch_stock_news(sess: requests.Session, limit: int = 250) -> list[dict]:
+    """Finviz Stocks News (v=3): ticker-tagged stories, not the wire dump."""
+    try:
+        r = sess.get("https://finviz.com/news.ashx?v=3", timeout=30)
+        r.raise_for_status()
+    except Exception as e:  # noqa: BLE001
+        print(f"[map_heat] stocks news failed: {e}")
+        return []
+    soup = BeautifulSoup(r.text, "html.parser")
+    out: list[dict] = []
+    for tr in soup.select("tr.news_table-row"):
+        story = tr.select_one("a.nn-tab-link")
+        if story is None:
+            continue
+        tickers = []
+        for a in tr.select("a.stock-news-label[data-boxover-ticker]"):
+            ticker = str(a.get("data-boxover-ticker") or "").strip().upper()
+            if ticker and ticker not in tickers:
+                tickers.append(ticker)
+        if not tickers:
+            continue
+        tm = tr.select_one("td.news_date-cell")
+        source_nodes = tr.select("span.news_date-cell")
+        out.append({
+            "time": tm.get_text(" ", strip=True) if tm else "",
+            "title": story.get_text(" ", strip=True),
+            "url": story.get("href") or "",
+            "source": source_nodes[-1].get_text(" ", strip=True)
+            if source_nodes else "",
+            "tickers": tickers,
+        })
+        if len(out) >= limit:
+            break
+    print(f"[map_heat] ticker news: {len(out)}")
+    return out
+
+
+def fetch_major_news_tickers(sess: requests.Session) -> list[str]:
+    """Finviz Elite `n_majornews` screener. Empty is an honest login failure."""
+    urls = [
+        "https://elite.finviz.com/screener.ashx?v=150&s=n_majornews",
+        "https://finviz.com/screener.ashx?v=150&s=n_majornews",
+    ]
+    for url in urls:
+        try:
+            r = sess.get(url, timeout=30)
+            r.raise_for_status()
+        except Exception:
+            continue
+        soup = BeautifulSoup(r.text, "html.parser")
+        found = []
+        for a in soup.select("[data-boxover-ticker], a[href*='quote.ashx?t=']"):
+            ticker = str(a.get("data-boxover-ticker") or "").strip().upper()
+            if not ticker:
+                m = re.search(r"[?&]t=([A-Za-z0-9.-]+)", a.get("href") or "")
+                ticker = m.group(1).upper() if m else ""
+            if ticker and ticker not in found:
+                found.append(ticker)
+        if found:
+            print(f"[map_heat] major-news tickers: {len(found)} via {url}")
+            return found
+    print("[map_heat] major-news screener unavailable/empty")
+    return []
+
+
+def fetch_event_options(earnings: list[dict], limit: int = 8) -> list[dict]:
+    """Targeted event-vol flags for today's largest earnings names.
+
+    Uses the same chain fields Finviz exposes (IV, volume, OI), with yfinance
+    as a resilient machine-readable source. This is volatility, never direction.
+    """
+    try:
+        import yfinance as yf
+    except Exception:
+        return []
+    now = datetime.now(ET)
+    out = []
+    for event in earnings[:limit]:
+        ticker = str(event.get("ticker") or "").upper()
+        try:
+            inst = yf.Ticker(ticker)
+            expiries = list(inst.options or [])
+            if not expiries:
+                continue
+            expiry = next(
+                (x for x in expiries if x >= now.date().isoformat()),
+                expiries[0],
+            )
+            chain = inst.option_chain(expiry)
+            hist = inst.history(period="5d", auto_adjust=True)
+            if hist.empty:
+                continue
+            spot = float(hist["Close"].dropna().iloc[-1])
+            calls, puts = chain.calls.copy(), chain.puts.copy()
+            if calls.empty or puts.empty:
+                continue
+            calls["dist"] = (calls["strike"] - spot).abs()
+            puts["dist"] = (puts["strike"] - spot).abs()
+            call = calls.sort_values("dist").iloc[0]
+            put = puts.sort_values("dist").iloc[0]
+            ivs = [
+                float(x) for x in (call.get("impliedVolatility"),
+                                   put.get("impliedVolatility"))
+                if x == x and float(x) > 0
+            ]
+            iv = sum(ivs) / len(ivs) if ivs else None
+            days = max(1, (datetime.fromisoformat(expiry).date() - now.date()).days)
+            implied_move = (spot * iv * (days / 365) ** 0.5) if iv else None
+            call_oi = float(call.get("openInterest") or 0)
+            put_oi = float(put.get("openInterest") or 0)
+            out.append({
+                "ticker": ticker,
+                "expiry": expiry,
+                "spot": round(spot, 3),
+                "atm_iv": round(iv, 4) if iv else None,
+                "implied_move_pct": round(100 * implied_move / spot, 2)
+                if implied_move else None,
+                "put_call_oi": round(put_oi / call_oi, 3) if call_oi else None,
+                "meaning": "event volatility only; not direction",
+            })
+        except Exception as e:  # noqa: BLE001
+            print(f"[map_heat] options {ticker} skipped: {str(e)[:120]}")
+    return out
 
 
 def _sentiment(title: str, digest: str) -> tuple[str, str]:
@@ -369,6 +512,8 @@ def build(date: str) -> dict:
     futures = fetch_futures(sess)
     econ = fetch_econ(sess, date)
     earns = fetch_earnings(sess, date)
+    ticker_news = fetch_stock_news(sess)
+    major_news_tickers = fetch_major_news_tickers(sess)
     join = json.loads(JOIN_PATH.read_text()) if JOIN_PATH.exists() else {"themes": []}
 
     sectors: list[dict] = []
@@ -487,6 +632,33 @@ def build(date: str) -> dict:
             themes.append({"theme": theme["theme"], "gics_parents": theme.get("gics_parents"),
                            "subthemes": subs})
 
+    # Actual Finviz ETF theme taxonomy from the Elite export. This is
+    # orthogonal to the hand-maintained GICS crosswalk above and expands
+    # coverage beyond its small seed list without scraping the canvas map.
+    theme_tape = []
+    etfs = df[df["theme"].notna() & df["theme"].ne("")].copy()
+    for theme, sub in etfs.groupby("theme"):
+        d1 = sub["chg"].dropna()
+        w1 = sub["w1"].dropna()
+        leaders = sub.sort_values("aum", ascending=False, na_position="last").head(3)
+        theme_tape.append({
+            "theme": theme,
+            "n_etfs": int(len(sub)),
+            "d1": None if d1.empty else round(float(d1.median()), 2),
+            "w1": None if w1.empty else round(float(w1.median()), 2),
+            "leaders": [
+                {
+                    "ticker": str(r["Ticker"]),
+                    "aum": None if pd.isna(r["aum"]) else round(float(r["aum"]), 1),
+                    "d1": None if pd.isna(r["chg"]) else float(r["chg"]),
+                    "w1": None if pd.isna(r["w1"]) else float(r["w1"]),
+                    "tags": str(r.get("Tags") or "")[:240],
+                }
+                for _, r in leaders.iterrows()
+            ],
+        })
+    theme_tape.sort(key=lambda r: abs(r.get("w1") or 0), reverse=True)
+
     tape = []
     for ticker, label in FUTURES_KEEP:
         row = futures.get(ticker)
@@ -506,6 +678,7 @@ def build(date: str) -> dict:
     mega_earn = [e for e in earns if (e.get("mcap") or 0) >= 50_000][:12]
     high_econ = [e for e in econ if e.get("importance", 0) >= 2][:12]
     size_gate = bool(high_econ) or bool(mega_earn)
+    event_options = fetch_event_options(mega_earn)
 
     payload = {
         "date": date,
@@ -524,9 +697,13 @@ def build(date: str) -> dict:
                  for r in cold],
         "overrides": overrides[:15],
         "themes": themes,
+        "theme_tape": theme_tape,
         "tape": tape,
         "econ": high_econ,
         "earnings": mega_earn,
+        "ticker_news": ticker_news,
+        "major_news_tickers": major_news_tickers,
+        "event_options": event_options,
         "size_gate": size_gate,
     }
     return payload
@@ -586,7 +763,9 @@ def render(p: dict) -> str:
         for e in p["econ"]:
             lines.append(
                 f"- {e['datetime'][11:16]} ET  {e['event']}  "
-                f"cons {e.get('forecast') or '—'}  prev {e.get('previous') or '—'}"
+                f"actual {e.get('actual') or '—'}  cons {e.get('forecast') or '—'}  "
+                f"surprise {e.get('surprise') if e.get('surprise') is not None else '—'}  "
+                f"prev {e.get('previous') or '—'}"
             )
     if p.get("earnings"):
         lines.append("")
@@ -597,6 +776,15 @@ def render(p: dict) -> str:
             lines.append(
                 f"- {e['session']} **{e['ticker']}**  EPS est {ests}  "
                 f"({e['company']})"
+            )
+    if p.get("event_options"):
+        lines += ["", "Options event-vol flags (NOT direction):"]
+        for o in p["event_options"]:
+            lines.append(
+                f"- **{o['ticker']}** exp {o['expiry']} ATM IV "
+                f"{o.get('atm_iv') or '—'} implied move "
+                f"{_fmt(o.get('implied_move_pct'))} put/call OI "
+                f"{o.get('put_call_oi') if o.get('put_call_oi') is not None else '—'}"
             )
 
     lines += ["", "## SECTOR RS (live groups, else export median)"]
@@ -656,6 +844,21 @@ def render(p: dict) -> str:
                 f"{_fmt(st.get('parent_w1'))} → **{flag}**"
             )
 
+    lines += ["", "## FINVIZ THEME ETF TAPE"]
+    for th in (p.get("theme_tape") or [])[:20]:
+        leaders = ", ".join(x.get("ticker") or "" for x in th.get("leaders") or [])
+        lines.append(
+            f"- **{th.get('theme')}** {_fmt(th.get('d1'))} 1d "
+            f"{_fmt(th.get('w1'))} 1w · {leaders or '—'}"
+        )
+
+    lines += ["", "## TICKER-TAGGED NEWS (Finviz v=3)"]
+    for n in (p.get("ticker_news") or [])[:25]:
+        lines.append(
+            f"- {n.get('time') or '—'} **{','.join(n.get('tickers') or [])}** "
+            f"{n.get('title')} ({n.get('source') or 'source?'})"
+        )
+
     lines += [
         "",
         "## NOTES",
@@ -684,10 +887,19 @@ def write(date: str, payload: dict) -> tuple[Path, Path]:
 
 def already_good(date: str) -> bool:
     p = OUT_DIR / f"{date}_map_heat.md"
-    if not p.exists():
+    js = OUT_DIR / f"{date}_map_heat.json"
+    if not p.exists() or not js.exists():
         return False
     text = p.read_text(encoding="utf-8")
-    return "MAP_HEAT_OK" in text and "INDUSTRY_HEAT" in text and len(text) > 400
+    try:
+        payload = json.loads(js.read_text(encoding="utf-8"))
+        generated_date = str(payload.get("generated_at") or "")[:10]
+    except (OSError, json.JSONDecodeError):
+        return False
+    # A post-close job intentionally builds tomorrow's baseline from today's
+    # close. It must NOT suppress the next morning's live futures/news refresh.
+    return (generated_date == date and "MAP_HEAT_OK" in text
+            and "INDUSTRY_HEAT" in text and len(text) > 400)
 
 
 def main() -> None:

@@ -1,7 +1,9 @@
 # MAP HEAT RESEARCH
 
-You research the **top-2 captains** of industries the mechanical map-heat already
-flagged (hot / cold / OVERRIDE / SPLIT). You do **not** write 400 stock essays.
+You research the **top-2 SPX/RUT captains** supplied by the mechanical map.
+Post-close batches cover every industry with a liquid captain; the morning
+batch refreshes only hot/cold/OVERRIDE/calendar names. You do **not** write
+stock essays.
 You do **not** re-describe the heatmap.
 
 ## Job 1 — captain cards (JSON first)
@@ -9,7 +11,7 @@ You do **not** re-describe the heatmap.
 Input is a compact board: industry, parent residual, SPX captains, RUT captains,
 tape, calendar. For each industry:
 
-1. Look up current news / X on **only those tickers** (web_search / native search).
+1. Look up current ticker-tagged news and X on **only those tickers**.
 2. Decide sub-sector direction from the captains + residual, not from the parent ETF.
 3. Sentiment is pos / neg / mixed / none from **today's** evidence, not the keyword stub.
 
@@ -26,7 +28,28 @@ Return ONE fenced json block first:
       "subsector_dir": "up",
       "conviction": "medium",
       "captains": [
-        {"ticker": "UEC", "index": "RUT", "sent": "pos", "why": "one line, evidence"}
+        {
+          "ticker": "UEC",
+          "index": "RUT",
+          "sent": "pos",
+          "why": "one line",
+          "evidence": [
+            {
+              "source": "Reuters",
+              "url": "https://...",
+              "published_at": "2026-08-26T06:15:00-04:00",
+              "fact": "specific fact that changed sentiment"
+            }
+          ],
+          "x_sentiment": {
+            "used": true,
+            "label": "pos",
+            "mention_delta_24h": 1.4,
+            "sample_urls": ["https://x.com/..."],
+            "reason": ""
+          },
+          "search_note": "queries attempted; required when sent=none"
+        }
       ],
       "one_line": "Energy ETF is oil-weak; uranium captains confirm the nested long.",
       "do_not": "bury in XLE DOWN"
@@ -39,7 +62,13 @@ Rules:
 - `subsector_dir` is up / down / flat.
 - `conviction` is high / medium / low. High only if both captains agree AND news agrees with the tape residual.
 - Skip an industry if it has zero liquid captains — do not invent tickers.
-- Max ~14 cards. Prefer OVERRIDE + HOT/COLD with captains.
+- Return one card for every supplied industry. Never invent a ticker that was
+  not in the supplied SPX/RUT captain list.
+- A non-`none` sentiment without a current URL, timestamp and specific fact is
+  INVALID. Price movement alone is not sentiment.
+- `none` is honest and acceptable, but include `search_note`.
+- X is required only in the morning hot-list refresh. If unavailable, set
+  `x_sentiment.used=false`; never fake mention counts.
 - one_line ≤ 160 chars. why ≤ 120 chars.
 
 ## Job 2 — opportunity synthesis (JSON first)

@@ -268,8 +268,11 @@ def run(date: str | None = None, force: bool = False) -> None:
         # Deliberately NO events_fallback — carry is trash for pre-open.
         step("news_judge", "News judge",
              [py, "-m", "src.run_news_judge", "--date", date, *fa])
-        step("map_heat_research", "Map heat research (captains + opportunity)",
-             [py, "-m", "src.map_heat_research", "--date", date, *fa])
+        # Exhaustive captain research ran post-close. Pre-open does ONE
+        # overnight delta refresh only; never 11 sector batches in the
+        # time-critical window.
+        step("map_heat_research", "Map heat morning delta refresh",
+             [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
         step("news_actions", "News actions",
              [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
               "--date", date, *fa])

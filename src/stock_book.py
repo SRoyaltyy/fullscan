@@ -54,7 +54,7 @@ def load_policy() -> tuple[dict[str, tuple[float, ...]], dict]:
     the ranker.
     """
     meta = {"weights_source": "defaults", "policy_version": None,
-            "sell_excludes_addons": True}
+            "sell_excludes_addons": True, "heat_scale": 1.0}
     if not POLICY_PATH.exists():
         return dict(WEIGHTS), meta
     try:
@@ -86,6 +86,12 @@ def load_policy() -> tuple[dict[str, tuple[float, ...]], dict]:
     meta["weights_source"] = "book_policy.json"
     meta["policy_version"] = pol.get("version")
     meta["sell_excludes_addons"] = bool(pol.get("sell_excludes_addons", True))
+    try:
+        meta["heat_scale"] = min(
+            1.5, max(0.0, float(pol.get("heat_scale", 1.0)))
+        )
+    except (TypeError, ValueError):
+        meta["heat_scale"] = 1.0
     return weights, meta
 
 
@@ -684,6 +690,10 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     else:
         join["s_peer"] = 0.0
 
+    # Load policy before optional add-ons: heat has its own learned scalar,
+    # while the original six-family tuple stays backward-compatible.
+    base_weights, policy_meta = load_policy()
+
     # Nested industry heat: captains + OVERRIDE child vs parent. Additive.
     tboost, iboost = {}, {}
     try:
@@ -698,10 +708,14 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
                 return tboost[t]
             ind = str(r.get("industry") or "")
             return float(iboost.get(ind) or 0.0)
-        join["s_heat"] = join.apply(_heat_row, axis=1).astype(float)
+        join["s_heat_raw"] = join.apply(_heat_row, axis=1).astype(float)
+        heat_scale = float(policy_meta.get("heat_scale", 1.0))
+        join["s_heat"] = join["s_heat_raw"] * heat_scale
         print(f"[stock-book] s_heat on {int(join['s_heat'].ne(0).sum())} names "
-              f"({len(tboost)} captains, {len(iboost)} industries)")
+              f"({len(tboost)} captains, {len(iboost)} industries; "
+              f"learned scale={heat_scale:.2f})")
     else:
+        join["s_heat_raw"] = 0.0
         join["s_heat"] = 0.0
 
     # --- opportunity: liquid mid/small with room to run (BB-class) ---
@@ -761,7 +775,6 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
                    for sec, r in sector_runs.items()}
 
     # ---- resolve weights: learned policy (bounded) → renorm over present families ----
-    base_weights, policy_meta = load_policy()
     present = {
         "join": True,  # build aborts earlier without a join file
         "sector": bool(sector_runs),
@@ -794,6 +807,7 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "weights": {h: list(w) for h, w in weights_h.items()},
         "weights_source": policy_meta["weights_source"],
         "policy_version": policy_meta.get("policy_version"),
+        "heat_scale": policy_meta.get("heat_scale", 1.0),
         "sell_excludes_addons": policy_meta.get("sell_excludes_addons", True),
         "absent_families": absent_families,
         "input_health": {
@@ -807,6 +821,11 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "n_news_after_digest": int((join["s_news"].abs() > 0).sum()) if "s_news" in join.columns else 0,
         "event_sector_tilt": ev_tilt,
     }
+    try:
+        from .map_heat_research import calendar_entry_scale
+        meta["calendar_entry_scale"] = calendar_entry_scale(date)
+    except Exception:
+        meta["calendar_entry_scale"] = 1.0
 
     fresh = (join["s_news"].abs() > 0.15) | (join["s_ab"] > 0.20) | (join["s_peer"] > 0.20)
     for h in HORIZONS:
@@ -1073,7 +1092,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
-        "s_heat",
+        "s_heat_raw", "s_heat",
         # per-horizon LLM components + core scores: this CSV is the learning
         # snapshot book_learn re-scores under candidate weights
         *[f"s_sector_{h}" for h in HORIZONS],
