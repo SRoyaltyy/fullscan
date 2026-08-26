@@ -47,28 +47,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install system deps (Chromium for Gemini catcher)
-        run: |
-          set -euo pipefail
-          sudo apt-get update
-          sudo apt-get install -y \
-            libnss3 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 \
-            libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 \
-            libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libxshmfence1 \
-            fonts-liberation xvfb
-
       - name: Install Python deps
         run: |
           set -euo pipefail
           pip install -r requirements.txt
           pip install plotly yfinance pyarrow openpyxl
-
-      - name: CloakBrowser + virtual display
-        run: |
-          set -euo pipefail
-          python -m cloakbrowser install || true
-          Xvfb :99 -screen 0 1920x1080x24 &
-          echo "DISPLAY=:99" >> "$GITHUB_ENV"
 
       - name: Resolve inputs
         id: meta
@@ -89,13 +72,12 @@ jobs:
 
       - name: 1) Patch ticker + cutoff into catalyst_analysis and run
         env:
-          GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_BACKEND_MODEL: xai/grok-4.6
+          GROK_ONLY: "1"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED: "1"
           TICKER: ${{ steps.meta.outputs.ticker }}
           CUTOFF: ${{ steps.meta.outputs.cutoff }}
