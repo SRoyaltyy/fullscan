@@ -1,39 +1,15 @@
 name: Restore catalyst_analysis.py
 
+# Disabled auto-push. The collector is edited in-repo now.
+# Keep dispatch only so we do not startup-fail on every related push.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/restore_catalyst_analysis.yml"
-      - "scripts/rewire_catalyst_grok_only.py"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  restore:
+  noop:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Rewire collector onto Grok-only (same prompts)
-        run: |
-          set -euo pipefail
-          python3 scripts/rewire_catalyst_grok_only.py
-          python3 -c "import ast; ast.parse(open('collectors/catalyst_analysis.py').read())"
-          echo "--- provider leftovers ---"
-          grep -nE 'gemini_catcher|DEEPSEEK_API_KEY|GEMINI_BROWSER|_grok_via_pipeline|Grok-only' collectors/catalyst_analysis.py | head -20
-          wc -l collectors/catalyst_analysis.py
-
-      - name: Commit rewired collector
-        run: |
-          set -euo pipefail
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add collectors/catalyst_analysis.py
-          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "fix: catalyst_analysis Grok-only (same Step1/2/4 + verdict + catcher prompts)"
-          git pull --rebase origin main || true
-          git push origin HEAD:main
+      - run: echo "collector is Grok-native; no restore needed"

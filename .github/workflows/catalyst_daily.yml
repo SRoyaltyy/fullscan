@@ -9,6 +9,7 @@ name: Catalyst daily (bounded dossiers)
 # before ranking so s_catalyst lands in the .io paper book.
 # Dispatch-only plus a weekday afternoon catch-up.
 # Analysis is Grok-only (OpenClaw / Grok 4.6). Same prompts.
+# Search is Grok native web/X — no SearXNG.
 
 on:
   workflow_dispatch:
@@ -62,7 +63,6 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_TIMEOUT: "3600"
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GROK_ONLY: "1"
         run: |

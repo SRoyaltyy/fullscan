@@ -23,7 +23,6 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           GROK_ONLY: "1"
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           PYTHONUNBUFFERED: "1"
         run: python -u -m collectors.catalyst_analysis
