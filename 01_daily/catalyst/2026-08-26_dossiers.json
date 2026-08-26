@@ -1,0 +1,101 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T16:21:22.465301-04:00",
+  "max_n": 8,
+  "grok": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "NVDA",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "CRM",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "NUE",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel"
+    },
+    {
+      "ticker": "STLD",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel"
+    },
+    {
+      "ticker": "WS",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel"
+    },
+    {
+      "ticker": "NWPX",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "NVDA",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 NVDA; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "CRM",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 CRM; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 UEC; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 UUUU; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "NUE",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 NUE; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "STLD",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 STLD; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "WS",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 WS; DeepSeek/Gemini fallback is forbidden"
+    },
+    {
+      "ticker": "NWPX",
+      "role": "override_captain",
+      "why": "OVERRIDE Steel",
+      "error": "GROK_ONLY: OpenClaw returned empty for CATALYST STEP1 NWPX; DeepSeek/Gemini fallback is forbidden"
+    }
+  ]
+}
