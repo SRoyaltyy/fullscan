@@ -50,8 +50,14 @@ Fail a file (and the day) if it is any of:
 - a "predict" that never actually takes a direction
 
 Required: general predict, events JSON (real scan, not carry), news judge,
-news parse, finviz digest, and at least 8 of 11 sector predicts. News
-actions is optional.
+news parse, finviz digest, map heat tables, post-close captain baseline,
+morning captain research refresh, and at least 8 of 11 sector predicts.
+News actions is optional.
+
+Fail map_heat_research if it is missing, not phase=morning_refresh, has
+fewer than 20 captain cards, or looks like a timeout stub. Last night's
+post-close baseline is mandatory — do not pass a day that skipped it.
+
 
 Pass ONLY if every required file looks like a human-usable same-day packet.
 
@@ -117,6 +123,8 @@ def bundle_preopen(date: str, root: Path | None = None,
         ("news_parse", f"01_daily/news/{date}_parsed.json", True),
         ("news_actions", f"01_daily/news/{date}_actions.json", True),
         ("finviz_digest", f"01_daily/news/{date}_finviz_digest.json", True),
+        ("map_heat", f"01_daily/map_heat/{date}_map_heat.md", False),
+        ("map_heat_baseline", f"01_daily/map_heat/{date}_research_baseline.md", False),
         ("map_heat_research", f"01_daily/map_heat/{date}_research.md", False),
     ]
     digest_json = root / "01_daily" / "news" / f"{date}_finviz_digest.json"

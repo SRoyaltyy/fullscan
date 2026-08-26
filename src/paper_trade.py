@@ -468,6 +468,11 @@ def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
             entry_scale = min(entry_scale, max(0.0, min(1.0, calendar_scale)))
         except (TypeError, ValueError):
             pass
+        earn_half = {
+            str(t).upper()
+            for t in ((book.get("meta") or {}).get("earnings_entry_tickers") or [])
+            if t
+        }
 
         for sleeve, info in props.items():
             pick = info["pick"]
@@ -522,20 +527,21 @@ def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
             for t in new:
                 if t in bought:
                     continue
+                sized = per * (0.5 if str(t).upper() in earn_half else 1.0)
                 p = price_of(date, t)
                 if p is None:
                     skips.append(_skip_row(
                         date, sleeve, t, "no_price",
                         f"in the {sleeve} cap but no close — not rolled down to rank 11+",
-                        {"per": round(per, 2)},
+                        {"per": round(sized, 2)},
                     ))
                     continue
-                shares = int(per // p) if p else 0
+                shares = int(sized // p) if p else 0
                 if shares < 1:
                     skips.append(_skip_row(
                         date, sleeve, t, "cash",
-                        f"in the {sleeve} cap; split leftover {per:.2f} < 1 share @ {p:.2f}",
-                        {"px": p, "per": round(per, 2),
+                        f"in the {sleeve} cap; split leftover {sized:.2f} < 1 share @ {p:.2f}",
+                        {"px": p, "per": round(sized, 2),
                          "cash": round(cash[sleeve], 2)},
                     ))
 
@@ -731,6 +737,11 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
             entry_scale = min(entry_scale, max(0.0, min(1.0, calendar_scale)))
         except (TypeError, ValueError):
             pass
+        earn_half = {
+            str(t).upper()
+            for t in ((book.get("meta") or {}).get("earnings_entry_tickers") or [])
+            if t
+        }
 
         for sleeve, targets in picks.items():
             S = st[sleeve]
@@ -777,10 +788,11 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
             if new:
                 per = (S["cash"] * entry_scale) / len(new)
                 for t in new:
+                    sized = per * (0.5 if str(t).upper() in earn_half else 1.0)
                     p = price_of(t)
-                    if p is None or per <= 0:
+                    if p is None or sized <= 0:
                         continue
-                    shares = int(per // p)
+                    shares = int(sized // p)
                     if shares < 1:
                         continue
                     fee = order_fees(shares, p, "buy", fees)
@@ -799,6 +811,8 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
                     reason = f"entered {sleeve} book"
                     if entry_scale < 1.0:
                         reason += f" (risk/calendar gate: deploying {entry_scale:.0%} of cash)"
+                    if str(t).upper() in earn_half:
+                        reason += " (mega-cap earnings: half-size this name)"
                     extra = _fill_meta(t)
                     extra["cash_before"] = round(S["cash"] + cost, 2)
                     extra["cash_after"] = round(S["cash"], 2)

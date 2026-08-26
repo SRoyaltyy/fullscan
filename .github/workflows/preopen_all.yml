@@ -4,9 +4,13 @@ name: Pre-Open ALL (predictive one-shot)
 # Sequential.
 #
 #   finviz digest → events + catcher (no carry) → news parse → news judge
+#   → map heat overlay (tape/calendar only) → morning captain refresh
 #   → news actions → general predict → 11 sector predicts → sector board
 #   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
 #   → workflow check
+#
+# Industry groups + exhaustive captain research run at 22:00 ET
+# (map_heat_postclose). Missing last-night baseline FAILS this job.
 #
 # CLOCK:
 #   1. ECS systemd timer at 05:55 America/New_York (DST-correct). Primary.

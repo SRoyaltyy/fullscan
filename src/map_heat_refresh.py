@@ -69,11 +69,14 @@ def run(date: str, force: bool = False) -> dict:
             print(f"[map-refresh] quality-present: {final_path}")
             return _load(final_path)
     if not heat_path.exists():
-        raise SystemExit(f"morning map heat missing: {heat_path}")
+        raise SystemExit(
+            f"post-close map heat missing: {heat_path} — groups must be "
+            "scraped at 22:00 ET"
+        )
     if not base_path.exists():
         raise SystemExit(
-            f"post-close baseline missing: {base_path}; research is optional "
-            "today, do not run the old exhaustive pass pre-open"
+            f"post-close baseline missing: {base_path} — 22:00 ET research "
+            "is mandatory; will not run the old exhaustive pass pre-open"
         )
     config.require_llm()
     heat, baseline = _load(heat_path), _load(base_path)
@@ -115,7 +118,15 @@ def run(date: str, force: bool = False) -> dict:
         obj.get("cards") or [], targets, min_coverage=0.8,
         require_x_record=True)
     if errors or len(clean) < max(3, int(0.8 * len(targets))):
-        raise SystemExit(f"morning card validation failed: {errors[:12]}")
+        print(f"[map-refresh] first pass failed ({errors[:8]}) — retrying once")
+        obj = extract_json(_chat(system, user + "\nRETRY: previous JSON failed "
+                                 "evidence/coverage. Return only valid cards.",
+                                 date)) or {}
+        clean, errors = validate_cards(
+            obj.get("cards") or [], targets, min_coverage=0.8,
+            require_x_record=True)
+        if errors or len(clean) < max(3, int(0.8 * len(targets))):
+            raise SystemExit(f"morning card validation failed: {errors[:12]}")
     merged = dict(base_by)
     for card in clean:
         merged[card["industry"]] = card
@@ -136,11 +147,17 @@ def run(date: str, force: bool = False) -> dict:
         "n_refreshed": len(clean),
         "evidence_errors": [],
         "cards": cards,
-        "size_gate": bool(heat.get("size_gate")),
+        "size_gate": bool(heat.get("macro_gate") or heat.get("size_gate")),
+        "macro_gate": bool(heat.get("macro_gate")),
+        "earnings_gate": bool(heat.get("earnings_gate")),
         "size_gate_reason": obj.get("size_gate_reason") or (
-            "high-impact Finviz calendar / mega-cap earnings"
-            if heat.get("size_gate") else ""),
-        "calendar_entry_scale": 0.5 if heat.get("size_gate") else 1.0,
+            "high-impact Finviz economic calendar"
+            if heat.get("macro_gate") else ""),
+        "calendar_entry_scale": 0.5 if heat.get("macro_gate") else 1.0,
+        "earnings_entry_tickers": heat.get("earnings_entry_tickers") or [
+            str(e.get("ticker") or "").upper()
+            for e in (heat.get("earnings") or []) if e.get("ticker")
+        ],
         "parent_splits": obj.get("parent_splits") or baseline.get("parent_splits") or [],
         "opportunities": obj.get("opportunities") or baseline.get("opportunities") or [],
         "vetoes": obj.get("vetoes") or baseline.get("vetoes") or [],

@@ -254,10 +254,12 @@ def check(date: str) -> dict:
                           "post-close baseline + morning evidence refresh"))
     elif heat_md.exists():
         inputs.append(_mk("map_heat", "heat", "degraded", None,
-                          f"QC fail: {heat_qc.reason}; s_heat disabled"))
+                          f"QC fail: {heat_qc.reason}; s_heat disabled; "
+                          "preopen is not quality-ok"))
     else:
         inputs.append(_mk("map_heat", "heat", "missing", None,
-                          "s_heat=0; six-family ranker unchanged"))
+                          "post-close/morning research missing; "
+                          "preopen must FAIL; s_heat=0"))
 
     # --- same-day LLM predicts: QUALITY files, not just scoreboard rows.
     # A timeout stub that slipped into the scoreboard as 0/flat must not

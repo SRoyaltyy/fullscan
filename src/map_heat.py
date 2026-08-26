@@ -501,6 +501,66 @@ def _agg_from_members(sub: pd.DataFrame) -> dict:
     }
 
 
+def _tape_from_futures(futures: dict) -> list[dict]:
+    tape = []
+    for ticker, label in FUTURES_KEEP:
+        row = futures.get(ticker)
+        if not row and ticker == "VX":
+            row = futures.get("VI") or futures.get("VIX")
+        if not row:
+            continue
+        tape.append({
+            "ticker": ticker,
+            "label": row.get("label") or label,
+            "last": row.get("last"),
+            "change": row.get("change"),
+        })
+    return tape
+
+
+def _calendar_fields(econ: list[dict], earns: list[dict]) -> dict:
+    """Split macro vs mega-earnings. Only MACRO halves the whole book."""
+    mega_earn = [e for e in earns if (e.get("mcap") or 0) >= 50_000][:12]
+    high_econ = [e for e in econ if e.get("importance", 0) >= 2][:12]
+    macro_gate = bool(high_econ)
+    tickers = [
+        str(e.get("ticker") or "").upper()
+        for e in mega_earn if e.get("ticker")
+    ]
+    return {
+        "econ": high_econ,
+        "earnings": mega_earn,
+        "macro_gate": macro_gate,
+        "earnings_gate": bool(mega_earn),
+        "size_gate": macro_gate,
+        "calendar_entry_scale": 0.5 if macro_gate else 1.0,
+        "earnings_entry_tickers": tickers,
+    }
+
+
+def overlay_live(date: str, payload: dict) -> dict:
+    """Morning overlay: futures + today's calendar + ticker news.
+
+    Does NOT re-scrape industry groups / captains / residuals — premarket
+    prints distort yesterday's close. Those tables are written at 22:00 ET.
+    """
+    sess = _session()
+    futures = fetch_futures(sess)
+    econ = fetch_econ(sess, date)
+    earns = fetch_earnings(sess, date)
+    ticker_news = fetch_stock_news(sess)
+    major_news_tickers = fetch_major_news_tickers(sess)
+    out = dict(payload)
+    out.update(_calendar_fields(econ, earns))
+    out["tape"] = _tape_from_futures(futures)
+    out["event_options"] = fetch_event_options(out.get("earnings") or [])
+    out["ticker_news"] = ticker_news
+    out["major_news_tickers"] = major_news_tickers
+    out["overlay_at"] = datetime.now(ET).isoformat()
+    out["phase"] = "morning_overlay"
+    return out
+
+
 def build(date: str) -> dict:
     export_path = _latest_export(date)
     if export_path is None:
@@ -659,30 +719,14 @@ def build(date: str) -> dict:
         })
     theme_tape.sort(key=lambda r: abs(r.get("w1") or 0), reverse=True)
 
-    tape = []
-    for ticker, label in FUTURES_KEEP:
-        row = futures.get(ticker)
-        if not row:
-            # VIX sometimes VX vs VI
-            if ticker == "VX":
-                row = futures.get("VI") or futures.get("VIX")
-        if not row:
-            continue
-        tape.append({
-            "ticker": ticker,
-            "label": row.get("label") or label,
-            "last": row.get("last"),
-            "change": row.get("change"),
-        })
-
-    mega_earn = [e for e in earns if (e.get("mcap") or 0) >= 50_000][:12]
-    high_econ = [e for e in econ if e.get("importance", 0) >= 2][:12]
-    size_gate = bool(high_econ) or bool(mega_earn)
-    event_options = fetch_event_options(mega_earn)
+    tape = _tape_from_futures(futures)
+    gates = _calendar_fields(econ, earns)
+    event_options = fetch_event_options(gates["earnings"])
 
     payload = {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
+        "phase": "postclose",
         "export": export_path.name,
         "n_tickers": int(len(df)),
         "sectors": sectors,
@@ -693,18 +737,16 @@ def build(date: str) -> dict:
                 for r in hot],
         "cold": [{"industry": r["industry"], "sector": r["sector"],
                   "w1": r["w1"], "d1": r["d1"], "vs_parent_w1": r["vs_parent_w1"],
-                  "spx_leaders": r["spx_leaders"], "rut_leaders": r["rut_leaders"]}
+                 "spx_leaders": r["spx_leaders"], "rut_leaders": r["rut_leaders"]}
                  for r in cold],
         "overrides": overrides[:15],
         "themes": themes,
         "theme_tape": theme_tape,
         "tape": tape,
-        "econ": high_econ,
-        "earnings": mega_earn,
         "ticker_news": ticker_news,
         "major_news_tickers": major_news_tickers,
         "event_options": event_options,
-        "size_gate": size_gate,
+        **gates,
     }
     return payload
 
@@ -906,9 +948,37 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument(
+        "--overlay", action="store_true",
+        help="Morning only: refresh futures/calendar/news. Do not scrape groups.",
+    )
     args = ap.parse_args()
     date = args.date or datetime.now(ET).date().isoformat()
     preopen.refuse_if_late("map_heat", force=args.force)
+    js = OUT_DIR / f"{date}_map_heat.json"
+    if args.overlay:
+        if not js.exists():
+            raise SystemExit(
+                f"post-close map heat missing: {js} — industry groups must be "
+                "scraped at 22:00 ET, not in the premarket"
+            )
+        try:
+            payload = json.loads(js.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as e:
+            raise SystemExit(f"post-close map heat unreadable: {js}: {e}")
+        if len(payload.get("industries") or []) < 50:
+            raise SystemExit(
+                f"post-close map heat too thin ({len(payload.get('industries') or [])} "
+                f"industries) at {js}"
+            )
+        if (not args.force
+                and str(payload.get("overlay_at") or "")[:10] == date):
+            print(f"[map_heat] overlay already applied {date}")
+            return
+        payload = overlay_live(date, payload)
+        write(date, payload)
+        print(render(payload))
+        return
     if already_good(date) and not args.force:
         print(f"[map_heat] skip-if-good {date}")
         return

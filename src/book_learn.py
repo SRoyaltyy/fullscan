@@ -412,6 +412,9 @@ def _evaluate_horizon(
 
 
 HEAT_SCALES = (0.0, 0.25, 0.5, 0.75, 1.0, 1.25)
+HEAT_INCUBATE = 0.25
+HEAT_WARM = 0.50
+HEAT_WARM_DATES = 15
 
 
 def _evaluate_heat_scale(
@@ -435,9 +438,13 @@ def _evaluate_heat_scale(
         })
     out = {"n_dates": len(rows), "current": current}
     if len(rows) < MIN_DATES:
-        out["adopted"] = current
-        out["decision"] = f"hold {current:.2f} — only {len(rows)} realized heat dates"
+        out["adopted"] = HEAT_INCUBATE
+        out["decision"] = (
+            f"incubate {HEAT_INCUBATE:.2f} — only {len(rows)} realized "
+            f"heat dates (< {MIN_DATES})"
+        )
         return out
+    cap = HEAT_WARM if len(rows) < HEAT_WARM_DATES else 1.5
 
     def objective(scale: float) -> tuple[float, list[float]]:
         vals = []
@@ -471,6 +478,9 @@ def _evaluate_heat_scale(
         adopted = round(current + HALF_STEP * (best - current), 3)
         decision = (f"MOVE {current:.2f}→{adopted:.3f} toward {best:.2f}; "
                     f"+{(best_mean-cur_mean)*100:.3f}pp, wins {win_frac:.0%}")
+    if adopted > cap:
+        decision = f"{decision}; cap {cap:.2f} until {HEAT_WARM_DATES} heat dates"
+        adopted = cap
     out["adopted"] = adopted
     out["decision"] = decision
     return out

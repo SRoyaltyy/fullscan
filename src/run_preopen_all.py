@@ -2,14 +2,20 @@
 
 Does in one ECS job (skip-if-good, fail-closed QC):
 
-  finviz digest → map heat (tables) → events (+ catcher)
-  → news parse → news judge → map heat research (captains + opportunity)
+  finviz digest → events (+ catcher)
+  → news parse → news judge → map heat overlay (tape/calendar only)
+  → map heat research (morning delta over last night's baseline)
   → news actions → general predict → 11 sector predicts → sector board
   → output_qc (regex) → Grok reads the files as text → workflow check
 
 NOT included (those run later on their own crons, still required):
   outcome / reflect / horizon grade, learn_cycle, deepthink, weekly
   promotion, weather, AB checklist, stock book, paper dashboard.
+
+Finviz industry groups + exhaustive captain research run at 22:00 ET
+(post-close). Premarket must not re-scrape yesterday's tape. Missing
+post-close baseline FAILS this job.
+
 
 CLI:
   python -m src.run_preopen_all [--date YYYY-MM-DD] [--force]
@@ -43,7 +49,9 @@ REQUIRED = [
     ("events", "Event scanner", True),
     ("news_parse", "News parse", True),
     ("news_judge", "News judge", True),
-    ("map_heat_research", "Map heat research (captains)", False),
+    ("map_heat", "Map heat tables (post-close + overlay)", True),
+    ("map_heat_baseline", "Map heat post-close baseline", True),
+    ("map_heat_research", "Map heat research (captains)", True),
     ("news_actions", "News actions", False),
     ("general_predict", "General market predict", True),
     ("sector_predict", "Per-sector predict (11)", True),
@@ -160,6 +168,7 @@ def _github_runs_today(date: str) -> list[dict]:
         "news_actions.yml",
         "daily_pipeline.yml",
         "sector_daily.yml",
+        "map_heat_postclose.yml",
     ]
     out: list[dict] = []
     for wf in names:
@@ -259,8 +268,10 @@ def run(date: str | None = None, force: bool = False) -> None:
               "--date", date, *fa])
         step("finviz_digest", "Finviz daily digest",
              [py, "-m", "src.finviz_digest", "--date", date, *fa])
-        step("map_heat", "Map heat (industry / captains / tape)",
-             [py, "-m", "src.map_heat", "--date", date, *fa])
+        # Industry groups/captains were scraped post-close. Premarket only
+        # overlays overnight futures + today's calendar + ticker news.
+        step("map_heat", "Map heat morning overlay (tape/calendar)",
+             [py, "-m", "src.map_heat", "--date", date, "--overlay", *fa])
         step("events", "Event scanner (primary)",
              [py, "-m", "src.run_events", "--date", date, *fa])
         step("events_catcher", "Event catcher (gap hunt, no carry)",
@@ -268,11 +279,24 @@ def run(date: str | None = None, force: bool = False) -> None:
         # Deliberately NO events_fallback — carry is trash for pre-open.
         step("news_judge", "News judge",
              [py, "-m", "src.run_news_judge", "--date", date, *fa])
-        # Exhaustive captain research ran post-close. Pre-open does ONE
-        # overnight delta refresh only; never 11 sector batches in the
-        # time-critical window.
-        step("map_heat_research", "Map heat morning delta refresh",
-             [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
+        # Last night's 11-sector baseline is mandatory. One overnight delta
+        # refresh only; never 11 sector batches in the time-critical window.
+        prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
+        os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
+            "MAP_HEAT_REFRESH_TIMEOUT", "1200")
+        try:
+            rc = step("map_heat_research", "Map heat morning delta refresh",
+                      [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
+            if rc != 0:
+                print("[preopen-all] morning research failed — retrying once")
+                step("map_heat_research", "Map heat morning delta refresh (retry)",
+                     [py, "-m", "src.map_heat_refresh", "--date", date,
+                      "--force", *fa])
+        finally:
+            if prev_timeout is None:
+                os.environ.pop("OPENCLAW_TIMEOUT", None)
+            else:
+                os.environ["OPENCLAW_TIMEOUT"] = prev_timeout
         step("news_actions", "News actions",
              [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
               "--date", date, *fa])
@@ -341,6 +365,16 @@ def run(date: str | None = None, force: bool = False) -> None:
             detail = detail or ("OK" if ok else "missing")
         elif key == "finviz_digest":
             rows = by_kind.get("finviz_digest") or []
+            ok = bool(rows) and all(r.get("ok") for r in rows)
+            detail = rows[0].get("reason") if rows and not ok else ""
+            detail = detail or ("OK" if ok else "missing")
+        elif key == "map_heat":
+            rows = by_kind.get("map_heat") or []
+            ok = bool(rows) and all(r.get("ok") for r in rows)
+            detail = rows[0].get("reason") if rows and not ok else ""
+            detail = detail or ("OK" if ok else "missing")
+        elif key == "map_heat_baseline":
+            rows = by_kind.get("map_heat_baseline") or []
             ok = bool(rows) and all(r.get("ok") for r in rows)
             detail = rows[0].get("reason") if rows and not ok else ""
             detail = detail or ("OK" if ok else "missing")

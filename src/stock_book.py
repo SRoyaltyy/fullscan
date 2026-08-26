@@ -54,7 +54,7 @@ def load_policy() -> tuple[dict[str, tuple[float, ...]], dict]:
     the ranker.
     """
     meta = {"weights_source": "defaults", "policy_version": None,
-            "sell_excludes_addons": True, "heat_scale": 1.0}
+            "sell_excludes_addons": True, "heat_scale": 0.25}
     if not POLICY_PATH.exists():
         return dict(WEIGHTS), meta
     try:
@@ -88,10 +88,10 @@ def load_policy() -> tuple[dict[str, tuple[float, ...]], dict]:
     meta["sell_excludes_addons"] = bool(pol.get("sell_excludes_addons", True))
     try:
         meta["heat_scale"] = min(
-            1.5, max(0.0, float(pol.get("heat_scale", 1.0)))
+            1.5, max(0.0, float(pol.get("heat_scale", 0.25)))
         )
     except (TypeError, ValueError):
-        meta["heat_scale"] = 1.0
+        meta["heat_scale"] = 0.25
     return weights, meta
 
 
@@ -822,10 +822,12 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "event_sector_tilt": ev_tilt,
     }
     try:
-        from .map_heat_research import calendar_entry_scale
+        from .map_heat_research import calendar_entry_scale, earnings_entry_tickers
         meta["calendar_entry_scale"] = calendar_entry_scale(date)
+        meta["earnings_entry_tickers"] = earnings_entry_tickers(date)
     except Exception:
         meta["calendar_entry_scale"] = 1.0
+        meta["earnings_entry_tickers"] = []
 
     fresh = (join["s_news"].abs() > 0.15) | (join["s_ab"] > 0.20) | (join["s_peer"] > 0.20)
     for h in HORIZONS:

@@ -458,15 +458,18 @@ def decision_gate(date: str, decision: dict, sector: str | None = None) -> dict:
                 out["sector_rs_veto_applied"] = True
                 out["sector_rs_tape"] = {"d1": d1, "w1": w1}
 
-    if not data.get("size_gate"):
+    if not data.get("macro_gate") and not data.get("size_gate"):
         return out
     econ = data.get("econ") or []
     earnings = data.get("earnings") or []
-    macro_gate = any(int(e.get("importance") or 0) >= 2 for e in econ)
+    macro_gate = bool(data.get("macro_gate")) or any(
+        int(e.get("importance") or 0) >= 2 for e in econ)
     tech_gate = any(str(e.get("ticker") or "").upper() in {
         "AAPL", "MSFT", "NVDA", "AMZN", "GOOG", "GOOGL", "META", "TSLA",
         "AVGO", "CRM", "ORCL",
     } for e in earnings)
+    # Mega-cap earnings cap Technology (and general). They do NOT half the
+    # whole book — that's calendar_entry_scale / macro_gate.
     applies = macro_gate or sector is None or (sector == "Technology" and tech_gate)
     if not applies:
         return out
@@ -479,13 +482,34 @@ def decision_gate(date: str, decision: dict, sector: str | None = None) -> dict:
 
 
 def calendar_entry_scale(date: str) -> float:
+    """Broad new-entry cash scale. 0.5 only on high-impact MACRO prints."""
     js = OUT_DIR / f"{date}_research.json"
     try:
         data = json.loads(js.read_text(encoding="utf-8"))
-        value = float(data.get("calendar_entry_scale", 1.0))
-        return min(1.0, max(0.0, value))
+        if data.get("phase") != "morning_refresh":
+            return 1.0
+        if data.get("macro_gate"):
+            return 0.5
+        # Ignore legacy calendar_entry_scale=0.5 that mixed in AMC earnings.
+        return 1.0
     except (OSError, json.JSONDecodeError, TypeError, ValueError):
         return 1.0
+
+
+def earnings_entry_tickers(date: str) -> list[str]:
+    """Mega-cap names reporting today — half those names only, not the book."""
+    js = OUT_DIR / f"{date}_research.json"
+    try:
+        data = json.loads(js.read_text(encoding="utf-8"))
+        if data.get("phase") != "morning_refresh":
+            return []
+        raw = data.get("earnings_entry_tickers") or [
+            str(e.get("ticker") or "").upper()
+            for e in (data.get("earnings") or []) if e.get("ticker")
+        ]
+        return [t for t in (str(x).upper() for x in raw) if t]
+    except (OSError, json.JSONDecodeError, TypeError, ValueError):
+        return []
 
 
 def main() -> None:

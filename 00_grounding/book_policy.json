@@ -45,6 +45,7 @@
     ]
   },
   "sell_excludes_addons": true,
+  "heat_scale": 0.25,
   "risk_off_entry_scale": 0.5,
   "risk_scaling_effective": "2026-08-25",
   "objective": "mean top-10 buy fwd return in excess of liquid-universe median",

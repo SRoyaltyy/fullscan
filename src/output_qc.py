@@ -232,6 +232,53 @@ def qc_news_parse(path: str | Path) -> QCResult:
     return _ok("news_parse", p, json.dumps(data)[:50])
 
 
+def qc_map_heat(path: str | Path) -> QCResult:
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("map_heat", p, "missing", empty=True)
+    data = _read_json(p)
+    if not isinstance(data, dict):
+        return _fail("map_heat", p, "unparseable_json", empty=True)
+    n_ind = len(data.get("industries") or [])
+    if n_ind < 50:
+        return _fail("map_heat", p, f"too_few_industries({n_ind})", empty=True)
+    n_sec = len(data.get("sectors") or [])
+    if n_sec < 8:
+        return _fail("map_heat", p, f"too_few_sectors({n_sec})")
+    n_caps = sum(
+        1 for r in (data.get("industries") or [])
+        if (r.get("spx_leaders") or r.get("rut_leaders"))
+    )
+    if n_caps < 20:
+        return _fail("map_heat", p, f"too_few_captains({n_caps})")
+    if not (data.get("tape") or []):
+        return _fail("map_heat", p, "empty_futures_tape")
+    return _ok("map_heat", p, f"industries={n_ind} captains={n_caps}")
+
+
+def qc_map_heat_baseline(path: str | Path) -> QCResult:
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("map_heat_baseline", p, "postclose_baseline_missing",
+                     empty=True)
+    data = _read_json(p)
+    if not isinstance(data, dict):
+        return _fail("map_heat_baseline", p, "unparseable_json", empty=True)
+    if data.get("phase") != "postclose_baseline":
+        return _fail("map_heat_baseline", p,
+                     f"not_postclose_baseline({data.get('phase')})")
+    n = len(data.get("cards") or [])
+    if n < 20:
+        return _fail("map_heat_baseline", p, f"too_few_cards({n})")
+    cov = data.get("coverage")
+    try:
+        if cov is not None and float(cov) < 0.90:
+            return _fail("map_heat_baseline", p, f"coverage_below_90({cov})")
+    except (TypeError, ValueError):
+        return _fail("map_heat_baseline", p, "coverage_unreadable")
+    return _ok("map_heat_baseline", p, f"cards={n} coverage={cov}")
+
+
 def qc_map_heat_research(path: str | Path) -> QCResult:
     p = str(path)
     if not os.path.exists(p):
@@ -424,6 +471,11 @@ def preopen_report(date_str: str) -> dict:
                              f"{date_str}_finviz_digest.md")
     items.append(qc_finviz_digest(
         digest_json if os.path.exists(digest_json) else digest_md))
+    items.append(qc_map_heat(
+        os.path.join("01_daily", "map_heat", f"{date_str}_map_heat.json")))
+    items.append(qc_map_heat_baseline(
+        os.path.join("01_daily", "map_heat",
+                     f"{date_str}_research_baseline.json")))
     items.append(qc_map_heat_research(
         os.path.join("01_daily", "map_heat", f"{date_str}_research.md")))
 
@@ -444,8 +496,7 @@ def preopen_report(date_str: str) -> dict:
         "sectors": sector_rows,
         "sector_n_ok": n_ok,
         "sector_n_total": len(FINVIZ_SECTORS),
-        "all_ok": all(r.ok for r in items
-                      if r.kind not in ("sector_predict", "map_heat_research"))
+        "all_ok": all(r.ok for r in items if r.kind != "sector_predict")
                   and n_ok >= 8,
     }
     return report
@@ -487,7 +538,7 @@ def main() -> None:
     ap.add_argument("--preopen", action="store_true",
                     help="Scan every pre-open artifact for --date")
     ap.add_argument("--kind", default="",
-                    help="general|sector|events|judge|parse|actions|digest|heat_research")
+                    help="general|sector|events|judge|parse|actions|digest|heat|heat_baseline|heat_research")
     ap.add_argument("--path", default="")
     ap.add_argument("--write", action="store_true",
                     help="Write 01_daily/<date>_preopen_qc.json")
@@ -504,6 +555,8 @@ def main() -> None:
             "parse": qc_news_parse,
             "actions": qc_news_actions,
             "digest": qc_finviz_digest,
+            "heat": qc_map_heat,
+            "heat_baseline": qc_map_heat_baseline,
             "heat_research": qc_map_heat_research,
         }
         fn = dispatch.get(kind)
