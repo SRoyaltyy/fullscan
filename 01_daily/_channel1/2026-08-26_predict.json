@@ -1,0 +1,401 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-26T06:57:45.363780-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 5.23,
+      "delta_1d": -0.04,
+      "delta_1w": -0.08,
+      "delta_1m": 0.07
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 4.7,
+      "delta_1d": -0.04,
+      "delta_1w": -0.02,
+      "delta_1m": 0.01
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 2.38,
+      "delta_1d": -0.02,
+      "delta_1w": -0.06,
+      "delta_1m": -0.05
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 2.69,
+      "delta_1d": -0.01,
+      "delta_1w": -0.01,
+      "delta_1m": -0.1
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": -0.01,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 0.405,
+      "delta_1d": 0.025,
+      "delta_1w": 0.25,
+      "delta_1m": -0.975
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-24",
+      "current": 234.02,
+      "delta_1d": -13.55,
+      "delta_1w": 97.84,
+      "delta_1m": 47.75
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-26",
+      "current": 15.69,
+      "delta_1d": 0.24,
+      "delta_1w": 0.8
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": 1.014,
+    "ratio_source": "vix/ma20",
+    "vix_ma20": 15.48,
+    "ratio_ma20": 1.014,
+    "ratio_stale": "VIX3M quote is 40 days older than VIX (2026-07-17 vs 2026-08-26)"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-26",
+      "last": 80.23,
+      "pct_1d": -2.59
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-26",
+      "last": 85.04,
+      "pct_1d": -4.0
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-26",
+      "last": 4678.5,
+      "pct_1d": 0.87
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-26",
+      "source": "DX-Y.NYB",
+      "pct_1d": 0.1,
+      "pct_1m": -2.33
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-26",
+      "last": 7687.5,
+      "pct_1d": -0.06
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-26",
+      "last": 29229.75,
+      "pct_1d": -0.16
+    }
+  },
+  "finviz_futures_tape": {
+    "available": false,
+    "source": "01_daily/map_heat/2026-08-26_map_heat.json",
+    "rows": []
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 66262.16,
+          "pct_1d": 0.62
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 25652.97,
+          "pct_1d": 0.56
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 3912.52,
+          "pct_1d": 0.59
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 6808.21,
+          "pct_1d": 0.97
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 9127.8,
+          "pct_1d": -0.4
+        }
+      },
+      "composite_avg": 0.47
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 10870.98,
+          "pct_1d": -0.14
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 26314.41,
+          "pct_1d": 0.18
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 8475.32,
+          "pct_1d": 0.43
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 6471.77,
+          "pct_1d": 0.25
+        }
+      },
+      "composite_avg": 0.18
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.39,
+    "window": "2026-08-18..2026-08-25"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 58.6,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-25 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "JPMorgan softens stance on share-backed loans to target AI-era wealth – report",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-softens-stance-share-backed-102658689.html",
+        "published_at": "2026-08-26T10:26:58Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "China robot maker Unitree's post-listing slump sparks bubble fears",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/china-robot-maker-unitrees-post-021417581.html",
+        "published_at": "2026-08-25T02:14:17Z"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Why we should all get used to high household energy bills",
+        "url": "https://www.bbc.co.uk/news/articles/c046peqrg9xo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 26 Aug 2026 10:10:33 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Mortgage and refinance interest rates today, Wednesday, August 26, 2026: Rates down across the board",
+        "url": "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-interest-rates-today-wednesday-august-26-2026-rates-down-across-the-board-100000670.html",
+        "published_at": "2026-08-26T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "How Much Do You Need Saved to Get $10K a Month in Retirement Income?",
+        "url": "https://finance.yahoo.com/markets/articles/much-saved-10k-month-retirement-102000314.html",
+        "published_at": "2026-08-26T10:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "United Bankshares: An Underrated Dividend Stock with a 52-Year Growth Streak",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/united-bankshares-underrated-dividend-stock-020849218.html",
+        "published_at": "2026-08-25T02:08:49Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Bill Gates, alarmed by AI, has policy ideas he wants to discuss with China's Xi - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPU20ybks5N1I2aFFmNVhMWHZiRk1iMUU4dlphNHdZbEJQaVNiTFRYM1NuUjFCOUR2Y1ZsR0VJWnNRY20zVXZaQXBkbmZkNmhjOWNtLU01Zi11bHhvYnBPV2JPdTNVSkE0NldwYXJaS1FmRXUyZGZuU0tXRElwb1RUS3VSeHI4OVhnYnRSckZZd2NobnZyVE9aTGxlVkNRMkkxWGZWbFgxb2hkYWo4R0hJWUo1WU1CRUlDNHdpNHp3?oc=5",
+        "published_at": "Wed, 26 Aug 2026 08:26:52 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Does a 2% beneficiary inherit 100% if the 98% beneficiary dies in a car accident? Asking for a friend.",
+        "url": "https://www.marketwatch.com/story/does-a-2-beneficiary-inherit-100-if-the-98-beneficiary-dies-in-a-car-accident-asking-for-a-friend-67aacc06?mod=mw_rss_topstories",
+        "published_at": "Wed, 26 Aug 2026 10:16:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Is Japan trying to build bridges with China after Taiwan spat?",
+        "url": "https://www.aljazeera.com/news/2026/8/26/is-japan-trying-to-build-bridges-with-china-after-taiwan-spat?traffic_source=rss",
+        "published_at": "Wed, 26 Aug 2026 10:28:52 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stock market today: Dow, S&P 500, Nasdaq futures hold steady ahead of inflation data, Nvidia earnings",
+        "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-26-dow-sp-500-nasdaq-081834782.html",
+        "published_at": "2026-08-26T08:18:34Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Best CD rates today, Wednesday, August 26, 2026: Earn up to 4.30% APY",
+        "url": "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-wednesday-august-26-2026-earn-up-to-430-apy-100000859.html",
+        "published_at": "2026-08-26T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia earnings could reveal its fastest-growing business isn't chips: Chart of the Day",
+        "url": "https://finance.yahoo.com/markets/article/nvidia-earnings-could-reveal-its-fastest-growing-business-isnt-chips-chart-of-the-day-100000332.html",
+        "published_at": "2026-08-26T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Shell’s Chemicals Exit Attracts XOM and LYB: Capital Discipline or Missed Opportunity?",
+        "url": "https://finance.yahoo.com/energy/articles/shell-chemicals-exit-attracts-xom-014439095.html",
+        "published_at": "2026-08-25T01:44:39Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Norway’s Top Oil Producers Team Up to Hunt for Major New Fields",
+        "url": "https://finance.yahoo.com/energy/articles/norway-top-oil-producers-team-020000451.html",
+        "published_at": "2026-08-25T02:00:00Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "SpaceX Is Building A $100 Billion 'Starbase' Launch Site In Louisiana - Engadget",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQUJVd3h4dUVKU0ZSTk5pdnUxOHNxMnk2X3hnQm1DUVkwZWlfVXk2WHFWRTQ5Wjd5R2oxVHpfLUlnMHEtYlUycVZqYkVFUkNIZnpqYkJSclA2V2pqQ2Q5Z0JnbXB3NWljZEwyczk1SlUteVdhN1V5NDBYOTNqdFFDd09SbFk0TTVydHU5WFQ4cS1vaThjV1p0NW82SnlUWDlyTHc?oc=5",
+        "published_at": "Wed, 26 Aug 2026 07:05:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Stock market today: Dow, S&P 500, Nasdaq futures hold steady ahead of inflation data, Nvidia earnings - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYlhyaGhsNURhcWk5dVd6RkhyYl90SlkyajU5X05KdjE1YlpROUxDTlNOZ1BKUWdqWmxRc3JSdjlCZFhHZGRrVkU4RkdTOEFKQmd6NHNTVm9RVElJZG9Nanl4Z0lhcXRNcnZvRG5ZTVFhVTg3anhSQzl2M0t0OHZkU3ZXZ2R3VVJyOVN1bjlxX2xIWTNCRkpxSW9OcVZRWUo2cUxyYXRJM0h5SF82dDE0?oc=5",
+        "published_at": "Wed, 26 Aug 2026 08:18:34 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Soaring summer power bills spark protests — and even disconnections - NPR",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQY2Fpc0k0WnRQWUtuRWlKcy1fMnU5S2NLRGxTRmZUS3drQ0pHQ2NzMzF4V2o3dVJKSjJFcHZRSm1lc0lNWXNKSTg1R3ZacjB1NkwxZ2VUSXpFMWVjcktaaU8yQTdyQ29NamJfUnZ5TGZqbndhNWxqaHBzUW5Rb2NqZUlxaTRxUC0wYjlkSmNIVQ?oc=5",
+        "published_at": "Wed, 26 Aug 2026 09:01:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "EXCLUSIVE: China's Moonshot in talks with Microsoft, Amazon, Google over K3 revenue sharing, sources say - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPaWlQbDBkTjZOWlNxMFJUeDkxc0taQllySUkzRzJ4aHJrSzlVQTY5LVhqU2dfd2lUSGZSVjI2dVFPQnZ5X0FuRThHT0JDRkxJTTlLUVFETjM5Y0lGbzFwUkhGWFNVOUJQX1NWZ09SZDViVWNZTmI1TFY4ODUwZXl2UGh5VnRETVhhbDQ4NHh5bmU2YXZXdGZEbnlSUmVZVEZ2dUd3ampaeW94bkhBaEhhRkNKQ1E1QlJSZUFDUTZ5eGFERHlPZHo3TnFaQTJZVUdt?oc=5",
+        "published_at": "Wed, 26 Aug 2026 08:14:45 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "The Interview",
+        "url": "https://www.bbc.co.uk/sounds/play/w3ct98hb?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 25 Aug 2026 23:30:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "China’s Xi to visit Kyrgyzstan, Egypt",
+        "url": "https://www.aljazeera.com/news/2026/8/26/chinas-xi-to-visit-kyrgyzstan-egypt?traffic_source=rss",
+        "published_at": "Wed, 26 Aug 2026 10:29:46 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nearly $4.9T sits in target-date funds — Suze Orman warns you may be ‘far better off’ on your own. Diversify your mix",
+        "url": "https://finance.yahoo.com/markets/articles/nearly-4-9t-sits-target-101500674.html",
+        "published_at": "2026-08-26T10:15:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "As Cook case smolders, Trump has other paths to shape Fed policy team",
+        "url": "https://finance.yahoo.com/economy/policy/articles/cook-case-smolders-trump-other-100347841.html",
+        "published_at": "2026-08-26T10:09:43Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "HELOC and home equity loan rates today, Wednesday, August 26, 2026: Why locking in a low rate matters",
+        "url": "https://finance.yahoo.com/personal-finance/mortgages/article/heloc-and-home-equity-loan-rates-today-wednesday-august-26-2026-why-locking-in-a-low-rate-matters-100000242.html",
+        "published_at": "2026-08-24T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Investigation into Dodgers owner is a reminder that 'zombie insurers' walk among us — critics warn 'they will blow up'",
+        "url": "https://finance.yahoo.com/economy/policy/articles/investigation-dodgers-owner-reminder-zombie-100000986.html",
+        "published_at": "2026-08-26T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Best high-yield savings interest rates today, Wednesday, August 26, 2026: Earn up to 4.15% APY",
+        "url": "https://finance.yahoo.com/personal-finance/banking/article/best-high-yield-savings-interest-rates-today-wednesday-august-26-2026-earn-up-to-415-apy-100000361.html",
+        "published_at": "2026-08-24T10:00:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Bluefin and Visa launch unified card-present payment acceptance offering",
+        "url": "https://finance.yahoo.com/technology/articles/bluefin-visa-launch-unified-card-102354467.html",
+        "published_at": "2026-08-26T10:23:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "The Stock Market Is Repeating a Dangerous Pattern Not Seen in 60 Years. History Says Investors Should Buckle Up.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-repeating-dangerous-pattern-102000170.html",
+        "published_at": "2026-08-26T10:20:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "OpenAI Says Its New Chip Outperforms Nvidia’s Blackwell As Nvidia Prepares Earnings Release",
+        "url": "https://finance.yahoo.com/technology/ai/articles/openai-says-chip-outperforms-nvidia-101753747.html",
+        "published_at": "2026-08-26T10:17:53Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Hackers Just Stole $130 Million Worth of Bitcoin From Cold Storage. Here's Why That Matters for Bitcoin Investors.",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/hackers-just-stole-130-million-101400185.html",
+        "published_at": "2026-08-26T10:14:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Japan Eyes 24/7 Blockchain Settlement for Bonds and Stocks in Landmark Financial Overhaul",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/japan-eyes-24-7-blockchain-100715574.html",
+        "published_at": "2026-08-26T10:07:15Z"
+      }
+    ]
+  }
+}

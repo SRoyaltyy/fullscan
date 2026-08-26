@@ -1,0 +1,10 @@
+# Grok text review — 2026-08-26
+
+ok=False
+
+The core general predict, events, news judge, news parse, news actions, and finviz digest files are all present, same-day, and complete with the required contract markers. The 10 present sector predicts are substantive, same-day, and take clear directions. However, the day fails because the map_heat JSON is unusable (empty futures tape), the map_heat baseline is missing, and the healthcare sector predict is missing, leaving only 10 of 11 sectors. The research.md correctly identifies the bootstrap phase, but the map_heat component itself is still broken.
+
+## Fails
+- `01_daily/map_heat/2026-08-26_map_heat.json`: Regex failed: empty_futures_tape. The map_heat.md file explicitly states '_futures scrape empty_' and the JSON is missing the required futures tape data, making it unusable for a same-day packet.
+- `01_daily/map_heat/2026-08-26_research_baseline.json`: Regex failed: postclose_baseline_missing. The file is missing entirely. While the research.md claims phase=morning_bootstrap, the baseline file itself is absent, and the map_heat.json is already failed for empty futures tape, so the map-heat component is not usable.
+- `01_daily/sectors/2026-08-26/healthcare_predict.md`: Regex failed: missing. The file is missing entirely. Only 10 of 11 sector predicts are present, failing the requirement for at least 8 of 11.

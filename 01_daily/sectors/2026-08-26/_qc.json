@@ -1,0 +1,73 @@
+{
+  "date": "2026-08-26",
+  "n_ok": 10,
+  "n_total": 11,
+  "sectors": [
+    {
+      "sector": "Basic Materials",
+      "ok": true,
+      "reason": "",
+      "size": 9390
+    },
+    {
+      "sector": "Communication Services",
+      "ok": true,
+      "reason": "",
+      "size": 8529
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "ok": true,
+      "reason": "",
+      "size": 9226
+    },
+    {
+      "sector": "Consumer Defensive",
+      "ok": true,
+      "reason": "",
+      "size": 9429
+    },
+    {
+      "sector": "Energy",
+      "ok": true,
+      "reason": "",
+      "size": 7835
+    },
+    {
+      "sector": "Financial",
+      "ok": true,
+      "reason": "",
+      "size": 15757
+    },
+    {
+      "sector": "Healthcare",
+      "ok": false,
+      "reason": "missing",
+      "size": 0
+    },
+    {
+      "sector": "Industrials",
+      "ok": true,
+      "reason": "",
+      "size": 10368
+    },
+    {
+      "sector": "Real Estate",
+      "ok": true,
+      "reason": "",
+      "size": 13556
+    },
+    {
+      "sector": "Technology",
+      "ok": true,
+      "reason": "",
+      "size": 11400
+    },
+    {
+      "sector": "Utilities",
+      "ok": true,
+      "reason": "",
+      "size": 16736
+    }
+  ]
+}

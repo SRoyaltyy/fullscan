@@ -3,55 +3,10 @@
 Export `finviz_2026-08-25.csv` · 11624 names · generated 2026-08-26T03:33:51.650408-04:00
 
 ## TAPE (live futures)
-| Contract | Last | Change |
-|---|---:|---:|
-| S&P 500 (ES) | 7684.5 | -0.10% |
-| Nasdaq 100 (NQ) | 29217.5 | -0.21% |
-| Russell 2000 (ER2) | 3014.2 | -0.02% |
-| DJIA (YM) | 53653.0 | +0.00% |
-| VIX (VX) | 17.2 | -0.02% |
-| Crude Oil WTI (CL) | 80.23 | -2.59% |
-| Natural Gas (NG) | 2.862 | +1.45% |
-| Gold (GC) | 4689.7 | -0.10% |
-| Silver (SI) | 68.785 | +0.17% |
-| Copper (HG) | 6.719 | +0.10% |
-| USD (DX) | 98.905 | +0.07% |
-| EUR (6E) | 1.16785 | -0.05% |
-| JPY (6J) | 0.62975 | +0.12% |
-| 10 Year Note (ZN) | 108.8125 | -0.04% |
-| 30 Year Bond (ZB) | 110.125 | -0.09% |
-| Nikkei 225 (NKD) | 66230.0 | +0.26% |
-| DAX (DY) | 26297.0 | -0.14% |
-| Euro Stoxx 50 (EX) | 6475.0 | +0.03% |
+_futures scrape empty_
 
 ## CALENDAR
-**SIZE GATE on** — high-impact print and/or mega-cap earnings today.
-
-Econ (importance ≥ 2):
-- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 6.77%
-- 08:30 ET  Core PCE Price Index MoM  actual —  cons 0.2%  surprise —  prev 0.1%
-- 08:30 ET  Corporate Profits QoQ Prel  actual —  cons —  surprise —  prev 0.5%
-- 08:30 ET  Durable Goods Orders Ex Transp MoM  actual —  cons 0.5%  surprise —  prev 0.6%
-- 08:30 ET  Durable Goods Orders MoM  actual —  cons 0.7%  surprise —  prev 0.3%
-- 08:30 ET  GDP Growth Rate QoQ 2nd Est  actual —  cons 1.5%  surprise —  prev 2.1%
-- 08:30 ET  GDP Price Index QoQ 2nd Est  actual —  cons 6.3%  surprise —  prev 3.6%
-- 08:30 ET  PCE Price Index MoM  actual —  cons 0.1%  surprise —  prev -0.1%
-- 08:30 ET  PCE Price Index YoY  actual —  cons —  surprise —  prev 3.7%
-- 08:30 ET  Personal Income MoM  actual —  cons 0.3%  surprise —  prev 0.2%
-- 08:30 ET  Personal Spending MoM  actual —  cons 0.2%  surprise —  prev 0.3%
-- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons 1.9M  surprise —  prev 4.405M
-
-Mega-cap earnings:
-- AMC **NVDA**  EPS est 2.0936  (NVIDIA Corp)
-- AMC **CRWD**  EPS est 0.2915  (Crowdstrike Holdings Inc)
-- AMC **CRM**  EPS est 3.2689  (Salesforce Inc)
-- AMC **SNPS**  EPS est 3.6667  (Synopsys Inc)
-
-Options event-vol flags (NOT direction):
-- **NVDA** exp 2026-08-28 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **CRWD** exp 2026-08-28 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **CRM** exp 2026-08-28 ATM IV 0.0078 implied move +0.1% put/call OI —
-- **SNPS** exp 2026-08-28 ATM IV 0.0039 implied move +0.0% put/call OI —
+No high-impact print / mega-cap earnings flagged.
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -171,31 +126,6 @@ COLD (1w):
 - **Economic Environment Themed** 0.0% 1d -1.4% 1w · THRO, SAMT, MSSS
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **CRM,CRWD,NVDA** Stock Market Today: Dow, S&P 500 and Nasdaq set for steady start ahead of PCE inflation data as Nvidia, Salesforce and CrowdStrike to report after close (MarketWatch)
-- 4 min **CRM,CRWD,NVDA** Nasdaq set for steady start as all eyes on Nvidia ahead of results (MarketWatch)
-- 10 min **NVDA** Stocks edge higher as oil drops on fresh Mideast hopes (AFP)
-- 15 min **SPCX** Anthropic IPO: Five things to know before its Wall Street debut (Euronews)
-- 20 min **INTU** Intuit's earnings miss is largely an accounting illusion, but the revenue slowdown is real (Proactive)
-- 32 min **NOAH** Noah Holdings Ltd (NOAH) (Q2 2026) Earnings Call Highlights: Record Margins and AI-Driven ... (GuruFocus.com)
-- 32 min **ZM** Zoom Communications Inc (ZM) (Q2 2027) Earnings Call Highlights: AI Adoption Drives Strongest ... (GuruFocus.com)
-- 32 min **ELMD** Electromed Inc (ELMD) (Q4 2026) Earnings Call Highlights: Record Revenue and 15th Consecutive ... (GuruFocus.com)
-- 33 min **DSC** DSC Reports Second Quarter 2026 Unaudited Financial Results (GlobeNewswire)
-- 33 min **AMZN,GOOGL,MSFT,NVDA,SPCX** Nvidia's Paradox: Stellar Earnings and a Sliding Stock (Barrons.com)
-- 39 min **TRMD** TORM plc Q2 2026 Results, Dividend Distribution, and Financial Outlook 2026 (PR Newswire)
-- 55 min **AMZN,GOOG,META,MSFT,NVDA** Nvidia's Earnings Are Nearly Here. Can the Stock Break Out of Its Rut? (Barrons.com)
-- 56 min **AMZN,GOOG,META,MSFT,NVDA** Nvidia Reports Earnings Today. Will Wall Street's High Bar Spoil the Surge? (Barrons.com)
-- 57 min **BHVN** Biohaven and SK Biopharmaceuticals Enter into Strategic Global Licensing Agreement for Novel Kv7 Ion Channel Platform and Opakalim, Lead Candidate for Epilepsy (PR Newswire)
-- 1 hour **CNQ,SLB** The Oil Boom of 2026 Never Happened. What If It Comes in 2027? (Barrons.com)
-- 1 hour **META** Meta Could Pay Billions To End Teen Addiction Trial  Gary Black Says That Could Boost META Stock (Stocktwits)
-- 1 hour **VCRE** Vicore Pharma to Present at The Pareto Securities 17th Annual Healthcare Conference (ACCESSWIRE)
-- 1 hour **BIRK,DKS,NKE** Nikes Turnaround Gets Fresh Vote Of Confidence From Dicks: Is NKE Stock A Buy-The-Dip Opportunity? (Stocktwits)
-- 1 hour **CMCSA,GOOG,GOOGL,NFLX,ROKU** NFLX Stock Eyes Sixth Week Of Gains: Netflix Reportedly Mulls Adding Rival Streamers To Compete With YouTube, Roku (Stocktwits)
-- 1 hour **IHG** InterContinental Hotels Group PLC Announces Transaction in Own Shares - August 26 (ACCESSWIRE)
-- 1 hour **NVDA** Nvidia Earnings Today: What Its Earnings Will Reveal About AI Bubble Risk (BeInCrypto)
-- 1 hour **XLF** Markets May Soon Turn Rocky. Time to Trade Schwab Stock. (Barrons.com)
-- 1 hour **HPQ** Huawei and HP Inc. Sign Global Patent Cross-Licensing Agreement (TMX Newsfile)
-- 2 hours **CRM** Salesforce Reports Earnings While Disrupting Itself to Fight AI (Barrons.com)
-- 2 hours **NVDA** Asian stocks gain before Nvidia, oil slips on Hormuz hopes (Reuters)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
