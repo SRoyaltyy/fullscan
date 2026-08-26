@@ -13,9 +13,12 @@ NOT included (those run later on their own crons, still required):
   promotion, weather, AB checklist, stock book, paper dashboard.
 
 Finviz industry groups + exhaustive captain research run at 22:00 ET
-(post-close). Premarket must not re-scrape yesterday's tape. Missing
-post-close baseline FAILS this job.
+(post-close). Premarket must not re-scrape yesterday's tape.
 
+Bootstrap: if last night's post-close baseline is missing, map_heat_research
+writes a phase=morning_bootstrap stub and the job continues. Core paths
+(news/events/predicts/sectors/map_heat tables) remain fail-closed.
+stock_book simply receives no s_heat on bootstrap day.
 
 CLI:
   python -m src.run_preopen_all [--date YYYY-MM-DD] [--force]
@@ -38,20 +41,16 @@ from . import config, grok_review, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
-# Lives on the ECS disk, OUTSIDE the Actions work tree. checkout --clean
-# must not be able to delete a finished day's files, or skip-if-good is a lie.
 PERSIST = Path(os.environ.get("FULLSCAN_PERSIST", "/home/gha/fullscan-persist"))
 
-# Logical modules this one-button job is responsible for. Keys match
-# daily_orchestrator.yml workflow files (minus .yml) where possible.
 REQUIRED = [
     ("finviz_digest", "Finviz daily digest", True),
     ("events", "Event scanner", True),
     ("news_parse", "News parse", True),
     ("news_judge", "News judge", True),
     ("map_heat", "Map heat tables (post-close + overlay)", True),
-    ("map_heat_baseline", "Map heat post-close baseline", True),
-    ("map_heat_research", "Map heat research (captains)", True),
+    ("map_heat_baseline", "Map heat post-close baseline", False),
+    ("map_heat_research", "Map heat research (captains)", False),
     ("news_actions", "News actions", False),
     ("general_predict", "General market predict", True),
     ("sector_predict", "Per-sector predict (11)", True),
@@ -77,7 +76,6 @@ def _exists(*parts: str) -> bool:
 
 
 def _date_paths(root: Path, date: str) -> list[Path]:
-    """Today's predictive artifacts only. Missing paths are omitted."""
     hits: list[Path] = []
     for folder in (
         root / "01_daily",
@@ -94,7 +92,6 @@ def _date_paths(root: Path, date: str) -> list[Path]:
     sector = root / "01_daily" / "sectors" / date
     if sector.exists():
         hits.append(sector)
-    # unique, keep dirs
     out: list[Path] = []
     seen = set()
     for p in hits:
@@ -107,7 +104,6 @@ def _date_paths(root: Path, date: str) -> list[Path]:
 
 
 def restore_persist(date: str) -> int:
-    """Copy a finished day back into the checkout so skip-if-good can see it."""
     if not PERSIST.is_dir():
         return 0
     n = 0
@@ -127,7 +123,6 @@ def restore_persist(date: str) -> int:
 
 
 def snapshot_persist(date: str) -> int:
-    """Mirror today's artifacts off the checkout so a later clean cannot wipe them."""
     try:
         PERSIST.mkdir(parents=True, exist_ok=True)
     except OSError as e:
@@ -154,7 +149,6 @@ def _force_args(force: bool) -> list[str]:
 
 
 def _github_runs_today(date: str) -> list[dict]:
-    """Best-effort: which related workflows actually ran today (ET)."""
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
     if not token:
@@ -268,19 +262,14 @@ def run(date: str | None = None, force: bool = False) -> None:
               "--date", date, *fa])
         step("finviz_digest", "Finviz daily digest",
              [py, "-m", "src.finviz_digest", "--date", date, *fa])
-        # Industry groups/captains were scraped post-close. Premarket only
-        # overlays overnight futures + today's calendar + ticker news.
         step("map_heat", "Map heat morning overlay (tape/calendar)",
              [py, "-m", "src.map_heat", "--date", date, "--overlay", *fa])
         step("events", "Event scanner (primary)",
              [py, "-m", "src.run_events", "--date", date, *fa])
         step("events_catcher", "Event catcher (gap hunt, no carry)",
              [py, "-m", "src.run_events_catcher", "--date", date, *fa])
-        # Deliberately NO events_fallback — carry is trash for pre-open.
         step("news_judge", "News judge",
              [py, "-m", "src.run_news_judge", "--date", date, *fa])
-        # Last night's 11-sector baseline is mandatory. One overnight delta
-        # refresh only; never 11 sector batches in the time-critical window.
         prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
         os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
             "MAP_HEAT_REFRESH_TIMEOUT", "1200")
