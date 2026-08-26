@@ -143,7 +143,58 @@ def _load_ticker_digests(path: Path, max_rows: int = 400) -> list[dict]:
     return out
 
 
-def _scrape_index_digest(ticker: str, sess: requests.Session) -> dict | None:
+def _parse_elite_quote_html(html: str, ticker: str) -> dict | None:
+    """Parse an authenticated Elite quote page; reject login/error HTML."""
+    if not html or finviz_session.looks_like_login_html(html):
+        return None
+    soup = BeautifulSoup(html, "html.parser")
+    for lab in soup.select("td.snapshot-td2"):
+        if "daily digest" in (lab.get_text(strip=True) or "").lower():
+            val = lab.find_next_sibling("td")
+            digest = val.get_text(" ", strip=True) if val else ""
+            if digest:
+                return {
+                    "ticker": ticker, "index": INDEX_TICKERS.get(ticker, ticker),
+                    "digest": digest, "source": "finviz_elite", "error": None,
+                }
+    news = soup.select_one("table.news-table, table.fullview-news-outer, #news")
+    if news:
+        first = news.select_one("a.tab-link-news, a.nn-tab-link, a[href]")
+        if first:
+            digest = first.get_text(" ", strip=True)
+            if digest:
+                return {
+                    "ticker": ticker, "index": INDEX_TICKERS.get(ticker, ticker),
+                    "digest": digest[:500], "source": "finviz_elite_news",
+                    "error": None,
+                }
+    return None
+
+
+def _index_export_digest(ticker: str, export: Path | None) -> dict | None:
+    if export is None or not export.exists():
+        return None
+    try:
+        df = pd.read_csv(export, low_memory=False)
+        hit = df[df["Ticker"].astype(str).str.upper() == ticker.upper()]
+        if hit.empty:
+            return None
+        row = hit.iloc[0]
+        digest = str(row.get("Daily Digest") or "").strip()
+        title = str(row.get("News Title") or "").strip()
+        text = digest if digest not in ("", "nan", "-") else title
+        if text in ("", "nan", "-"):
+            return None
+        return {
+            "ticker": ticker, "index": INDEX_TICKERS.get(ticker, ticker),
+            "digest": text, "source": "finviz_export", "error": None,
+        }
+    except Exception:
+        return None
+
+
+def _scrape_index_digest(ticker: str, sess: requests.Session,
+                         export: Path | None = None) -> dict | None:
     """Pull the top narrative / Daily Digest style summary from a quote page.
 
     Public finviz.com 403s from cloud IPs. Elite only, then yfinance so
@@ -158,41 +209,13 @@ def _scrape_index_digest(ticker: str, sess: requests.Session) -> dict | None:
         last_err = f"elite quote.ashx?t={ticker} empty/403"
         print(f"[finviz_digest] {ticker} quote failed: {last_err}")
 
-    if html:
-        soup = BeautifulSoup(html, "html.parser")
-        digest = None
+    parsed = _parse_elite_quote_html(html or "", ticker)
+    if parsed:
+        return parsed
 
-        for lab in soup.select("td.snapshot-td2"):
-            if "daily digest" in (lab.get_text(strip=True) or "").lower():
-                val = lab.find_next_sibling("td")
-                if val:
-                    digest = val.get_text(" ", strip=True)
-                    break
-
-        if not digest:
-            news = soup.select_one("table.news-table") or soup.select_one("#news")
-            if news:
-                first = news.select_one("a") or news.select_one("tr")
-                if first:
-                    digest = first.get_text(" ", strip=True)[:280]
-
-        if not digest:
-            for sel in ("div.quote-links a", "table.fullview-links a", "h2", "h1"):
-                el = soup.select_one(sel)
-                if el:
-                    t = el.get_text(" ", strip=True)
-                    if len(t) > 30:
-                        digest = t[:280]
-                        break
-
-        if digest:
-            return {
-                "ticker": ticker,
-                "index": INDEX_TICKERS.get(ticker, ticker),
-                "digest": digest.strip(),
-                "source": "finviz_quote",
-                "error": None,
-            }
+    export_row = _index_export_digest(ticker, export)
+    if export_row:
+        return export_row
 
     yf_row = _yf_index_digest(ticker)
     if yf_row:
@@ -244,13 +267,13 @@ def _yf_index_digest(ticker: str) -> dict | None:
     }
 
 
-def _scrape_indices(skip: bool = False) -> list[dict]:
+def _scrape_indices(skip: bool = False, export: Path | None = None) -> list[dict]:
     if skip:
         return []
     sess = _session()
     out = []
     for t in INDEX_TICKERS:
-        row = _scrape_index_digest(t, sess)
+        row = _scrape_index_digest(t, sess, export=export)
         if row:
             out.append(row)
         time.sleep(0.55)
@@ -261,7 +284,7 @@ def build_report(asof: str | None = None, skip_scrape: bool = False) -> dict:
     asof = asof or datetime.now(ET).date().isoformat()
     export = _latest_export(asof)
     ticker_digests = _load_ticker_digests(export) if export else []
-    index_digests = _scrape_indices(skip=skip_scrape)
+    index_digests = _scrape_indices(skip=skip_scrape, export=export)
 
     signal = [d for d in ticker_digests if d["has_signal"] and not d["is_dividend"]]
     top_signal = signal[:60]

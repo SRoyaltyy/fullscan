@@ -255,7 +255,9 @@ jobs:
           if d.get("date") != sys.argv[1]:
               sys.exit(1)
           rows=d.get("dossiers") or []
-          ok=[r for r in rows if isinstance(r, dict) and r.get("net_signal") and not r.get("error")]
+          ok=[r for r in rows if isinstance(r, dict)
+              and r.get("net_signal") and not r.get("error")
+              and r.get("search_backend") == "grok_native"]
           print("    catalyst quality dossiers=%d" % len(ok))
           sys.exit(0 if len(ok) >= 2 else 1)
           ' "$TODAY"
@@ -322,13 +324,7 @@ jobs:
                 ;;
               map_heat_postclose.yml)
                 local next
-                next=$(python3 -c "
-from datetime import datetime, timedelta
-d = datetime.strptime('$TODAY', '%Y-%m-%d').date() + timedelta(days=1)
-while d.weekday() >= 5:
-    d += timedelta(days=1)
-print(d.isoformat())
-")
+                next=$(python3 -c "from datetime import datetime,timedelta; d=datetime.strptime('$TODAY','%Y-%m-%d').date()+timedelta(days=1); d += timedelta(days=(7-d.weekday()) if d.weekday()>=5 else 0); print(d.isoformat())")
                 repo_file "01_daily/map_heat/${next}_research_baseline.json"
                 ;;
               *)

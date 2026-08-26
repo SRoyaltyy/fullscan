@@ -6,6 +6,7 @@ No network: requests.post is monkeypatched. Run:
 from __future__ import annotations
 
 import json
+import os
 from unittest import mock
 
 import src.config as config
@@ -24,16 +25,21 @@ def _fake_response(status: int, content: str = "", tool_calls=None):
     return r
 
 
-def _reset(openclaw_url: str = "", deepseek_key: str = ""):
+def _reset(openclaw_url: str = "", deepseek_key: str = "",
+           grok_only: bool | None = None):
     config.OPENCLAW_GATEWAY_URL = openclaw_url
     config.DEEPSEEK_API_KEY = deepseek_key
     dc._OPENCLAW_STATE["down"] = False
     dc._OPENCLAW_STATE["reason"] = ""
     dc._OPENCLAW_STATE["timeouts"] = 0
+    if grok_only is None:
+        os.environ.pop("GROK_ONLY", None)
+    else:
+        os.environ["GROK_ONLY"] = "1" if grok_only else "0"
 
 
 _SAVED = (config.OPENCLAW_GATEWAY_URL, config.DEEPSEEK_API_KEY,
-          config.OPENCLAW_TOKEN)
+          config.OPENCLAW_TOKEN, os.environ.get("GROK_ONLY"))
 
 
 def test_gates() -> None:
@@ -99,7 +105,8 @@ def test_native_search_note_only_when_tools() -> None:
 
 
 def test_fallback_on_gateway_failure() -> None:
-    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key",
+           grok_only=False)
     urls = []
 
     def fake_post(url, headers=None, json=None, timeout=None):
@@ -126,7 +133,8 @@ def test_fallback_on_gateway_failure() -> None:
 
 
 def test_fallback_on_empty_answer() -> None:
-    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key",
+           grok_only=False)
 
     def fake_post(url, headers=None, json=None, timeout=None):
         if "gw:18789" in url:
@@ -183,7 +191,8 @@ def test_describe_routing_no_secrets() -> None:
 
 def test_timeout_content_is_empty() -> None:
     """Idle-timeout stub must NOT be returned as a successful answer."""
-    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key",
+           grok_only=False)
     stub = "LLM request timed out.\nThe model did not produce a response before the model idle timeout."
 
     def fake_post(url, headers=None, json=None, timeout=None):
@@ -198,6 +207,23 @@ def test_timeout_content_is_empty() -> None:
     assert not dc._OPENCLAW_STATE["down"]
 
 
+def test_grok_only_blocks_deepseek_and_force_flag() -> None:
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key",
+           grok_only=True)
+    urls = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        urls.append(url)
+        return _fake_response(200, "")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat(
+            [{"role": "user", "content": "hi"}],
+            model="deepseek-chat", tools=False, force_deepseek=True)
+    assert text == ""
+    assert urls == ["http://gw:18789/v1/chat/completions"]
+
+
 def main() -> None:
     tests = [
         test_gates,
@@ -209,6 +235,7 @@ def main() -> None:
         test_deepseek_only_unchanged,
         test_describe_routing_no_secrets,
         test_timeout_content_is_empty,
+        test_grok_only_blocks_deepseek_and_force_flag,
     ]
     failed = 0
     for fn in tests:
@@ -219,6 +246,10 @@ def main() -> None:
             failed += 1
             print(f"FAIL {fn.__name__}: {e}")
     config.OPENCLAW_GATEWAY_URL, config.DEEPSEEK_API_KEY = _SAVED[0], _SAVED[1]
+    if _SAVED[3] is None:
+        os.environ.pop("GROK_ONLY", None)
+    else:
+        os.environ["GROK_ONLY"] = _SAVED[3]
     if failed:
         raise SystemExit(f"{failed} test(s) failed")
     print(f"{len(tests)} tests passed")

@@ -5,8 +5,11 @@ Imported by src.catalyst_daily. Does not call SearXNG or DeepSeek.
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 import re
+from datetime import datetime
+from pathlib import Path
 
 
 def _native_search_brief(queries):
@@ -18,6 +21,87 @@ def _native_search_brief(queries):
     for q in queries:
         lines.append(f"- {q}")
     return "\n".join(lines)
+
+
+def _elite_or_export_news(ca, ticker: str) -> list[dict]:
+    """Ticker news from authenticated Elite HTML, then Elite CSV.
+
+    Never calls public finviz.com and never uses SearXNG.
+    """
+    rows = []
+    try:
+        from bs4 import BeautifulSoup
+        from src import finviz_session
+        sess = finviz_session.session()
+        if finviz_session.authed(sess):
+            resp = finviz_session.get(sess, f"/quote.ashx?t={ticker}", timeout=30)
+            if resp is not None:
+                soup = BeautifulSoup(resp.text, "html.parser")
+                year = datetime.now().year
+                last_date = None
+                for tr in soup.select("tr.news_table-row, table.fullview-news-outer tr"):
+                    cells = tr.find_all("td")
+                    link = tr.select_one("a.nn-tab-link") or tr.select_one("a[href^='http']")
+                    if not cells or link is None:
+                        continue
+                    raw_date = cells[0].get_text(" ", strip=True)
+                    if re.search(r"\d{2}-\d{2}-\d{2}", raw_date):
+                        try:
+                            last_date = datetime.strptime(
+                                raw_date.split()[0], "%b-%d-%y").date().isoformat()
+                        except ValueError:
+                            pass
+                    elif re.search(r"[A-Z][a-z]{2}-\d{2}", raw_date):
+                        try:
+                            last_date = datetime.strptime(
+                                f"{raw_date.split()[0]}-{year}", "%b-%d-%Y"
+                            ).date().isoformat()
+                        except ValueError:
+                            pass
+                    date_str = last_date or ca.TODAY
+                    if ca.CUTOFF_DATE and date_str > ca.CUTOFF_DATE:
+                        continue
+                    title = link.get_text(" ", strip=True)
+                    url = link.get("href") or ""
+                    rows.append({
+                        "event_date": date_str,
+                        "headline": title,
+                        "description": title,
+                        "evidence_excerpt": title[:150],
+                        "source_urls": [url] if url.startswith("http") else [],
+                        "confidence": 85,
+                        "source": "finviz_elite",
+                    })
+    except Exception as e:
+        print(f"  ⚠️  Elite ticker news skipped: {str(e)[:120]}")
+    if rows:
+        return rows[:80]
+
+    # Same paid export, no HTML dependency.
+    try:
+        import pandas as pd
+        files = sorted(Path("data/exports").glob("finviz_????-??-??.csv"))
+        if files:
+            df = pd.read_csv(files[-1], low_memory=False)
+            hit = df[df["Ticker"].astype(str).str.upper() == ticker.upper()]
+            if len(hit):
+                r = hit.iloc[0]
+                title = str(r.get("News Title") or "").strip()
+                url = str(r.get("News URL") or "").strip()
+                digest = str(r.get("Daily Digest") or "").strip()
+                if title and title not in ("nan", "-"):
+                    return [{
+                        "event_date": ca.TODAY,
+                        "headline": title,
+                        "description": digest if digest not in ("nan", "-") else title,
+                        "evidence_excerpt": title[:150],
+                        "source_urls": [url] if url.startswith("http") else [],
+                        "confidence": 75,
+                        "source": "finviz_elite_export",
+                    }]
+    except Exception as e:
+        print(f"  ⚠️  Elite export ticker news skipped: {str(e)[:120]}")
+    return []
 
 
 def install(ca) -> None:
@@ -42,8 +126,6 @@ def install(ca) -> None:
         )
         return (text or "").strip() or None
 
-    orig_call = ca.call_llm
-
     def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000,
                  tools=False, stage="catalyst"):
         messages = [{"role": "system", "content": prompt},
@@ -51,7 +133,10 @@ def install(ca) -> None:
         text = _grok_chat(messages, temperature, max_tokens, tools, stage)
         if text:
             return text
-        return orig_call(prompt, user_msg, temperature=temperature, max_tokens=max_tokens)
+        raise RuntimeError(
+            f"GROK_ONLY: OpenClaw returned empty for {stage}; "
+            "DeepSeek/Gemini fallback is forbidden"
+        )
 
     async def run_verdict_pass(full_name, ticker, cutoff_date):
         prompt = ca.build_verdict_prompt(full_name, ticker, cutoff_date)
@@ -148,11 +233,13 @@ def install(ca) -> None:
             aliases = []
             print(f"  🏢 Using DB company name: {official_name}")
         else:
-            official_name, aliases = ca.resolve_company_name(ticker, searxng_url or "")
+            # Do not call the legacy SearXNG company-name resolver. The
+            # ticker is sufficient; Grok resolves aliases in native search.
+            official_name, aliases = ticker, []
         full_name = f"{official_name} ({ticker})" if official_name.lower() != ticker.lower() else ticker
 
         verdict_task = asyncio.create_task(run_verdict_pass(full_name, ticker, ca.CUTOFF_DATE))
-        finviz_events = ca.scrape_finviz_news(ticker)
+        finviz_events = _elite_or_export_news(ca, ticker)
         print(f"  📰 Finviz returned {len(finviz_events)} headlines (after cutoff)")
 
         catalyst_queries = ca._make_catalyst_templates(full_name)

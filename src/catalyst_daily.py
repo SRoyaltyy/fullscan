@@ -84,18 +84,6 @@ def select_targets(date: str, max_n: int = DEFAULT_MAX,
     heat = _load_json(HEAT_DIR / f"{date}_map_heat.json")
     research = _load_json(HEAT_DIR / f"{date}_research.json")
     actions = _load_json(NEWS_DIR / f"{date}_actions.json")
-    for row in heat.get("overrides") or []:
-        industry = row.get("industry") or ""
-        for cap in (row.get("spx_leaders") or []) + (row.get("rut_leaders") or []):
-            _add(picked, seen, cap.get("ticker") if isinstance(cap, dict) else cap,
-                 "override_captain", f"OVERRIDE {industry}", max_n)
-    for card in research.get("cards") or []:
-        if str(card.get("action") or "") != "OVERRIDE":
-            continue
-        industry = card.get("industry") or ""
-        for cap in card.get("captains") or []:
-            _add(picked, seen, cap.get("ticker") if isinstance(cap, dict) else cap,
-                 "override_captain", f"OVERRIDE card {industry}", max_n)
     for opp in research.get("opportunities") or []:
         side = str(opp.get("side") or "")
         why = str(opp.get("why") or opp.get("id") or "opportunity")[:120]
@@ -108,6 +96,21 @@ def select_targets(date: str, max_n: int = DEFAULT_MAX,
         if t in MEGA:
             sess = e.get("session") if isinstance(e, dict) else ""
             _add(picked, seen, t, "earnings", f"earnings {sess or 'today'}", max_n)
+    for card in research.get("cards") or []:
+        if str(card.get("action") or "") != "OVERRIDE":
+            continue
+        industry = card.get("industry") or ""
+        for cap in card.get("captains") or []:
+            _add(picked, seen, cap.get("ticker") if isinstance(cap, dict) else cap,
+                 "override_captain", f"OVERRIDE card {industry}", max_n)
+    # Fill remaining slots with mechanically flagged captains only after
+    # researched opportunities and binary earnings names have seats. The old
+    # order let the first four override industries consume all eight slots.
+    for row in heat.get("overrides") or []:
+        industry = row.get("industry") or ""
+        for cap in (row.get("spx_leaders") or []) + (row.get("rut_leaders") or []):
+            _add(picked, seen, cap.get("ticker") if isinstance(cap, dict) else cap,
+                 "override_captain", f"OVERRIDE {industry}", max_n)
     heat_side: dict[str, str] = {}
     for card in research.get("cards") or []:
         direction = str(card.get("subsector_dir") or "").lower()
@@ -157,7 +160,11 @@ def already_good(date: str) -> bool:
         return False
     data = _load_json(js)
     rows = data.get("dossiers") or []
-    ok = [r for r in rows if isinstance(r, dict) and r.get("net_signal") and not r.get("error")]
+    ok = [
+        r for r in rows
+        if isinstance(r, dict) and r.get("net_signal") and not r.get("error")
+        and r.get("search_backend") == "grok_native"
+    ]
     return len(ok) >= 2
 
 
@@ -171,7 +178,8 @@ def ticker_boosts(date: str) -> dict[str, float]:
     out: dict[str, float] = {}
     for row in load_dossiers(date):
         t = _norm_ticker(row.get("ticker"))
-        if not t or row.get("error"):
+        if (not t or row.get("error")
+                or row.get("search_backend") != "grok_native"):
             continue
         w = signal_weight(row.get("net_signal") or "", row.get("conviction"))
         if w:
@@ -198,7 +206,8 @@ def apply_to_actions(date: str, dossiers: list[dict] | None = None) -> dict:
     applied = 0
     for row in dossiers:
         t = _norm_ticker(row.get("ticker"))
-        if not t or row.get("error"):
+        if (not t or row.get("error")
+                or row.get("search_backend") != "grok_native"):
             continue
         w = signal_weight(row.get("net_signal") or "", row.get("conviction"))
         if not w:
@@ -274,7 +283,7 @@ def render(payload: dict) -> str:
         lines.append(
             f"- **{row.get('ticker')}** {row.get('net_signal')} "
             f"conv={row.get('conviction')} +{row.get('n_pos') or 0}/-{row.get('n_neg') or 0} "
-            f"[{row.get('role')}]"
+            f"[{row.get('role')}] backend={row.get('search_backend') or '?'}"
         )
         if row.get("catalyst_stack"):
             lines.append(f"  {row['catalyst_stack']}")
@@ -292,7 +301,10 @@ def _reuse_saved(ticker: str, date: str) -> dict | None:
     if not path.exists():
         return None
     data = _load_json(path)
-    return data if data.get("net_signal") else None
+    return data if (
+        data.get("net_signal")
+        and data.get("search_backend") == "grok_native"
+    ) else None
 
 
 def _prepare_engine(skip_gemini: bool) -> object:
@@ -341,6 +353,7 @@ def _summarize(ticker: str, role: str, why: str, result: dict) -> dict:
     return {
         "ticker": ticker, "role": role, "why": why,
         "net_signal": result.get("net_signal"), "conviction": result.get("conviction"),
+        "search_backend": result.get("search_backend"),
         "catalyst_stack": result.get("catalyst_stack") or "",
         "key_assumption": result.get("key_assumption") or "",
         "n_pos": len(pos), "n_neg": len(neg),
@@ -413,7 +426,11 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
         write_payload(payload)
         return payload
     dossiers = run_dossiers(date, targets, skip_gemini=skip_gemini)
-    n_ok = sum(1 for d in dossiers if d.get("net_signal") and not d.get("error"))
+    n_ok = sum(
+        1 for d in dossiers
+        if d.get("net_signal") and not d.get("error")
+        and d.get("search_backend") == "grok_native"
+    )
     payload = {
         "date": date, "generated_at": datetime.now(ET).isoformat(),
         "max_n": max_n, "grok": True, "gemini": False, "n_targets": len(targets),

@@ -288,6 +288,12 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import copy
     import os
 
+    grok_only = config.grok_only()
+    if grok_only and force_deepseek:
+        print(f"[llm] GROK_ONLY: ignoring force_deepseek "
+              f"({stage_label or 'llm run'})")
+        force_deepseek = False
+
     # ---- primary: OpenClaw / Grok ----
     if openclaw_available() and not force_deepseek:
         text = _openclaw_chat(messages, tools=tools, max_tokens=max_tokens,
@@ -297,6 +303,9 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               stage_label=stage_label)
         if text:
             return text
+        if grok_only:
+            print("[llm] GROK_ONLY: OpenClaw failed — no DeepSeek/SearXNG fallback")
+            return ""
         if not config.DEEPSEEK_API_KEY:
             print("[llm] OpenClaw failed and no DEEPSEEK_API_KEY fallback")
             return ""
@@ -304,6 +313,9 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     elif force_deepseek:
         print(f"[llm] force_deepseek ({stage_label or 'llm run'}) — "
               "OpenClaw skipped for this call only")
+    elif grok_only:
+        print("[llm] GROK_ONLY: OpenClaw unavailable/down — no fallback")
+        return ""
     elif config.openclaw_enabled() and not config.DEEPSEEK_API_KEY:
         # gateway configured but marked down, and no fallback either
         print("[llm] OpenClaw gateway down and no DEEPSEEK_API_KEY fallback")
