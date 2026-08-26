@@ -1,0 +1,99 @@
+name: Catalyst daily (bounded dossiers)
+
+# Production hook for collectors/catalyst_analysis.py.
+# Picks ≤8 names from OVERRIDE captains, map-heat opportunities,
+# mega-cap earnings, and news-action conflicts. Writes dossiers,
+# merges net_signal into that day's news actions (dashboard path).
+#
+# Not on the pre-open 09:30 clock. Stock Book ALL also runs this
+# before ranking so s_catalyst lands in the .io paper book.
+# Dispatch-only plus a weekday afternoon catch-up.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      max_tickers:
+        description: "Max dossiers this run"
+        required: false
+        default: "8"
+      tickers:
+        description: "Optional extra tickers (comma-separated)"
+        required: false
+        default: ""
+      force:
+        description: "true = ignore skip-if-good"
+        required: false
+        default: "false"
+      gemini:
+        description: "true = also run Gemini verdict/catcher (slow)"
+        required: false
+        default: "false"
+  schedule:
+    # 14:30 UTC = 10:30 ET — after pre-open packet, before stock-book ALL
+    - cron: "30 14 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalyst-daily
+  cancel-in-progress: false
+
+jobs:
+  dossiers:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary pandas openai aiohttp yfinance || true
+
+      - name: Run catalyst daily
+        env:
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "1800"
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GEMINI_BROWSER_STATE: ${{ secrets.GEMINI_BROWSER_STATE }}
+          GROK_ONLY: "1"
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          MAX="${{ github.event.inputs.max_tickers }}"
+          TICKERS="${{ github.event.inputs.tickers }}"
+          FORCE="${{ github.event.inputs.force }}"
+          GEMINI="${{ github.event.inputs.gemini }}"
+          MAX="${MAX:-8}"
+          FORCE="${FORCE:-false}"
+          GEMINI="${GEMINI:-false}"
+          ARGS=(--max "$MAX")
+          [ -n "${DATE:-}" ] && ARGS+=(--date "$DATE")
+          [ -n "${TICKERS:-}" ] && ARGS+=(--tickers "$TICKERS")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          [ "$GEMINI" = "true" ] && ARGS+=(--gemini)
+          echo "CMD: python -m src.catalyst_daily ${ARGS[*]}"
+          python -m src.catalyst_daily "${ARGS[@]}"
+
+      - name: Preview
+        if: always()
+        run: |
+          latest=$(ls -1t 01_daily/catalyst/*_dossiers.md 2>/dev/null | head -1 || true)
+          if [ -n "${latest:-}" ]; then head -80 "$latest"; fi
+
+      - name: Commit
+        if: always()
+        run: |
+          bash scripts/safe_git_push.sh "auto: catalyst daily dossiers" \
+            01_daily/catalyst/ 01_daily/news/ data/catalyst/ || true
