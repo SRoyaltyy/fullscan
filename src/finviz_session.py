@@ -45,10 +45,7 @@ def looks_like_login_html(text: str) -> bool:
 
 def quote_urls(ticker: str) -> list[str]:
     t = (ticker or "").strip().upper()
-    return [
-        f"{ELITE}/quote.ashx?t={t}",
-        f"{PUBLIC}/quote.ashx?t={t}",
-    ]
+    return [f"{ELITE}/quote.ashx?t={t}"]
 
 
 def elite_url(path: str) -> str:
