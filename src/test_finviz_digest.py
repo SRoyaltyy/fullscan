@@ -45,7 +45,7 @@ def test_scrape_falls_to_yfinance_on_403() -> None:
 def test_scrape_keeps_finviz_when_page_works() -> None:
     html = """
     <table><tr>
-      <td class="snapshot-td2">Daily Digest</td>
+      <td class=\"snapshot-td2\">Daily Digest</td>
       <td>Jackson Hole: markets wait on Powell.</td>
     </tr></table>
     """
@@ -54,7 +54,7 @@ def test_scrape_keeps_finviz_when_page_works() -> None:
     resp.text = html
     with mock.patch("src.finviz_digest.finviz_session.get", return_value=resp):
         row = _scrape_index_digest("DIA", sess)
-    assert row["source"] == "finviz_quote"
+    assert row["source"] == "finviz_elite"
     assert "Jackson Hole" in row["digest"]
 
 
@@ -66,11 +66,31 @@ def test_session_is_elite_helper() -> None:
         sess.assert_called_once()
 
 
+def test_parse_elite_news_table() -> None:
+    from src.finviz_digest import _parse_elite_quote_html
+    html = """
+    <table class=\"news-table\">
+      <tr><td><a class=\"tab-link-news\" href=\"#\">Powell speaks at 10:00 ET</a></td></tr>
+    </table>
+    """
+    row = _parse_elite_quote_html(html, "SPY")
+    assert row and "Powell" in row["digest"]
+    assert row["source"] == "finviz_elite_news"
+
+
+def test_parse_rejects_login_html() -> None:
+    from src.finviz_digest import _parse_elite_quote_html
+    html = "<html><title>Login</title><form action=login_submit.ashx><input name=password></form></html>"
+    assert _parse_elite_quote_html(html, "SPY") is None
+
+
 def main() -> None:
     tests = [
         test_yf_index_digest,
         test_scrape_falls_to_yfinance_on_403,
         test_scrape_keeps_finviz_when_page_works,
+        test_parse_elite_news_table,
+        test_parse_rejects_login_html,
         test_session_is_elite_helper,
     ]
     failed = 0
