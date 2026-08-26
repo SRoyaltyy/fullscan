@@ -1,93 +1,33 @@
 {
   "date": "2026-08-26",
-  "generated_at": "2026-08-26T07:25:45.970765-04:00",
-  "all_ok": false,
-  "qc_all_ok": false,
-  "grok_ok": false,
-  "grok_fails": [
-    {
-      "path": "01_daily/map_heat/2026-08-26_map_heat.json",
-      "reason": "Regex failed: empty_futures_tape. The map_heat.md file explicitly states '_futures scrape empty_' and the JSON is missing the required futures tape data, making it unusable for a same-day packet."
-    },
-    {
-      "path": "01_daily/map_heat/2026-08-26_research_baseline.json",
-      "reason": "Regex failed: postclose_baseline_missing. The file is missing entirely. While the research.md claims phase=morning_bootstrap, the baseline file itself is absent, and the map_heat.json is already failed for empty futures tape, so the map-heat component is not usable."
-    },
-    {
-      "path": "01_daily/sectors/2026-08-26/healthcare_predict.md",
-      "reason": "Regex failed: missing. The file is missing entirely. Only 10 of 11 sector predicts are present, failing the requirement for at least 8 of 11."
-    }
-  ],
-  "missing_required": [
-    "map_heat"
-  ],
-  "attempts": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "returncode": 0
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz daily digest",
-      "returncode": 0
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay (tape/calendar)",
-      "returncode": 0
-    },
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "returncode": 0
-    },
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "returncode": 0
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "returncode": 0
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "returncode": 0
-    },
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "returncode": 0
-    },
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "returncode": 0
-    },
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "returncode": 0
-    },
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "returncode": 0
-    }
-  ],
+  "generated_at": "2026-08-26T08:53:08.193925-04:00",
+  "all_ok": true,
+  "qc_all_ok": true,
+  "grok_ok": true,
+  "grok_fails": [],
+  "missing_required": [],
+  "attempts": [],
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 2,
+      "n_today": 3,
       "latest": {
-        "id": 32958398826,
+        "id": 32970751278,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/32958398826"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/32970751278"
+      }
+    },
+    {
+      "workflow": "finviz_preopen_scrape.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 32970745445,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/32970745445"
       }
     },
     {
@@ -179,10 +119,10 @@
       },
       {
         "kind": "map_heat",
-        "ok": false,
-        "reason": "empty_futures_tape",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/map_heat/2026-08-26_map_heat.json",
-        "size": 0
+        "size": 27
       },
       {
         "kind": "map_heat_baseline",

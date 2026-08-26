@@ -1,6 +1,6 @@
 {
   "date": "2026-08-26",
-  "generated_at": "2026-08-26T07:25:46.406021-04:00",
+  "generated_at": "2026-08-26T08:53:08.629251-04:00",
   "items": [
     {
       "ok": true,
@@ -69,11 +69,11 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-08-26_map_heat.json",
-      "reason": "empty_futures_tape",
-      "size": 0,
+      "reason": "",
+      "size": 27,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -293,5 +293,5 @@
   ],
   "sector_n_ok": 10,
   "sector_n_total": 11,
-  "all_ok": false
+  "all_ok": true
 }
