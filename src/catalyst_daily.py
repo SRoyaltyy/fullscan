@@ -297,11 +297,11 @@ def _reuse_saved(ticker: str, date: str) -> dict | None:
 
 def _prepare_engine(skip_gemini: bool) -> object:
     from collectors import catalyst_analysis as ca
+    from collectors.catalyst_grok_runtime import install as install_grok_search
     if not config.openclaw_enabled():
         raise SystemExit("GROK_ONLY: set OPENCLAW_GATEWAY_URL")
-    print("[catalyst_daily] Grok-only — OpenClaw / Grok 4.6 (same prompts)")
-    # skip_gemini kept as a no-op flag name for CLI compat. Verdict +
-    # catcher already run on Grok; do not stub them out.
+    print("[catalyst_daily] Grok-only — OpenClaw / Grok 4.6 native search")
+    install_grok_search(ca)
     if skip_gemini:
         print("[catalyst_daily] note: --gemini/--skip no longer applies; "
               "verdict+catcher are Grok")
