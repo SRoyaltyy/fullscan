@@ -6,308 +6,290 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"CTVA Corteva seed supply news August 2026"* → got 6 results (via searxng)
+**Step 1 — Research.** The model wanted to know: *"CTVA Corteva news August 2026"* → got 6 results (via gnews_rss)
 
-  - Corteva, Inc. (CTVA) Files Form 8-K with Press Release on August (https://www.gurufocus.com/news/9045695/corteva-inc-ctva-files-form-8k-with-press-release-on-august-20-2026)
+  - Corteva (CTVA) Stock Looks Pricey Even With Cash Flow Upside - simplywall.st (https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeEd6aVFfd3gxZmVNRmlOd1BYMDdwaHozdmdmZTFCOVdaODMxWFVMcnpXRFZ6ak0teklodktHRW11R2JRTUV0VndLMXpUZklNWjBuekVIdEU5TU4zLXptUVEtRWRWQWkwR0h0QUFsTVRaSmp1RmlkSU1GUDlnUE9uMGtZNkwzX2RoejNwZnEzcS1qQ2FxUVRHUHQ3a2pYdS1BTlItMlMwd1JrWWRhN2hZbllJblZJQ1BjMjNLZnRkdHTSAcYBQVVfeXFMTS1vMTFveUNoWjZDMVVHTFBrQTAwX1hINFgtOTB5MERpOEtQbkRwZnZWNldjWU0yMlBFNWFuUGlVZTcwT3VfbDhFN1U5Z08xQXVXOXpaNngySEt6c3dHYzJ3TTNjNi1lYW10dFE2OUhWZUJtSmxUTGJvNkx2dGJUOGFmRlJWalRrR3kyWFFjWnVuaHdKMDh5ZDloNWNvcnZmN0F2REhvajdNUXMydDZKUEJlZFhlNkRIa2NGS0RFQklocF9kS0l3?oc=5)
 
-  - Corteva Split Still Pending: Own The Preferreds - Seeking Alpha (https://seekingalpha.com/article/4929637-corteva-split-still-pending-own-the-preferreds)
+  - Corteva Announces Private Exchange Offers and Consent Solicitations for EIDP's 2.300% Senior Notes Due 2030, 5.125% Senior Notes Due 2032 and 4.800% Senior Notes Due 2033 - PR Newswire (https://news.google.com/rss/articles/CBMixgJBVV95cUxPN1llcmxwVnFmYWpfVGZ1N3JBcGVrdHFWTXRra3BaXzZZUTBtZGtUaG1uUEFpTnRiUDFGbnkzbnJzMlZQbE1RdkVCMG03N0ZQMTRKdTdCdWlaeWtrU1dPVmZNNl9YSnpfR041X1VJXzJtQlQySU1Sem9oTnYxY2t6QzR1ZUR0S255eldDbmtWSERodjNIcWt2Tlg4SjhSVG1fZG5wekNhMjMxRWVrRFJ4SWdHM1R4b015NjRFVFNnWGlOMWV6SVNVVjR1VFFWamlWUURma0lqZmt3eVYyenVGQk1BVE9PbzJUMEUxNlJYSllSMkxhQjZxRm5vbWU3U294X0RBcWI4dGxweVZrcWlXaDRUMU9vSnozYWZQY095VTVwdjcxQ1ZZaEt6VEFqUFUwa1I5b1VNZ19FaTRBdURvdkc3aUI3dw?oc=5)
 
-  - Corteva Declares Quarterly Dividend (https://www.corteva.com/resources/media-center/corteva-declares-quarterly-dividend-07-24-2026.html)
+  - Corteva, Inc. (CTVA) Files Form 8-K with Press Release on August 20, 2026 - GuruFocus (https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbmMxbTNlc1NuZFlOUUdFUGg4d1NMeHlDekU4MEZyMVdLbGd4TWFuMTl4a3ktTzVYWEFoUUdFWVRlMWltSF90elZIUm1xalI1eV9NVlR0TUZ3SnAtQ0d5RHFHTnR3amNYU1pUQS1nQTZLZEsza25qbTVObEt2SzcyZlRsY1VsLVFKYlNHS3RwT0hFUnlxWTN1cDJCTHpvZE9MNllzLTZHLVRyZw?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"CF Industries Blue Point One ammonia news August 2026"* → got 6 results (via searxng)
+**Step 2 — Research.** The model wanted to know: *"CF Industries Blue Point One ammonia news August 2026"* → got 6 results (via gnews_rss)
 
-  - CF Industries, JERA and Mitsui Break Ground on Blue Point One ... (https://www.cfindustries.com/newsroom/2026/blue-point-groundbreaking)
+  - CF Industries, JERA Co., and Mitsui & Co., Ltd., Break Ground on Blue Point One, the World’s Largest Low-Carbon Ammonia Plant in Louisiana - Business Wire (https://news.google.com/rss/articles/CBMilgJBVV95cUxNWUtTZ0VaYlFvc3dpYUVZSGh6MTdSTTNjUzE5ZDBoNnhxWkw2bG1TME84cFRycDFfcG0wN3gxMGVSN2hRREJ3RDktWlA2OTJFcDlYRmxLeFVoSDhmS2ZkdXAzUmhseUt1emRvcHhGYU1GWjU1V2RhZE5NNmxnQTFBeUlIUkJzWk5pRUJUS1hoYUdKOXlaNVg4V2hfVUtuQzZvdDBQRkczbVB5eS1RNWUtNDVTdUtmTjM3N1U1cDZSR05nZ0QtN1dlS0lobnBvbHE5dFhkZFh1OHB1QVVaemF0VDQ2ODlYdW54VE1pbE5mbjBrMEpkQlhVTklPMDJVRklOUG5TNkpGT1h1N0ttT1piY0k5ZkxJQQ?oc=5)
 
-  - Mitsui & Co., Ltd. and CF Industries Announce Plans for New Blue ... (https://www.cfindustries.com/newsroom/2022/cf-mitsui-update)
+  - ICYMI: CF Industries, JERA Co., and Mitsui & Co., Ltd., Break Ground on Blue Point One, the World’s Largest Low-Carbon Ammonia Plant in Louisiana - Louisiana Economic Development - LED (.gov) (https://news.google.com/rss/articles/CBMihgJBVV95cUxPRzBtek9ST1pJT2p2dl9QaElaUW1CMWRUdXMwTnF4MGdjZ1BDRE9OWnBDdGZhUUJSUENJbkNTeFlaZFYyOW5vWmRxNFF3SkpUd3NJbUhaQnBWdE5CTmlPX1lmX1pIbmhmRUtYN2JuSVpBeFE3T2g1amJGc1Nsb2IybDdZOGotV08wdUppbk5UNVNKRlZZLVZ1MEkxNXNYZHJodC1zb29qTVczbDJfcFlteEtxRWdicHo4UXpPOXJXUURBdWEzQ2JKTnpoeUZOZkZsZHZOdlJfVThTMUZ2VDZsdkVIRmlwcFJVaDhOTlpQRS1VTE1ETV9HMzVkelZtSDVYTXAtU09n?oc=5)
 
-  - CF Industries Holdings, Inc. Reports First Half 2026 Net Earnings of ... (https://markets.ft.com/data/announce/detail?dockey=600-202608051630BIZWIRE_USPRX____20260805_BW096702-1)
+  - CF Industries and partners break ground on Louisiana ammonia plant - Donaldsonville Chief (https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWnRwM0hzN0h0dnNKMjR0cVhEb3hsMlNwX1VtUHlZOThEQkVvdFN3clZCRFBrbC1PQzFMZWhnUDdHVndKaWU3b0M0WUVUUEtJTEkwX2d3cDNrOWJYYkNfV0FKX0VObk93TW9RYXJkSVNEMV9ZeGljMF9VdndOSnpGbGJJRkRpNEpveEE5YWd2bWpjbFhBNG9rS2dqTHh4aU5QR1pOd0FTRkZ6TkNQbklqRGdqcG9oYzQwbnZ5TTNETnhyOFlqTDJxWWFvaWxPUWhtLTA0?oc=5)
 
-**Step 3 — Research.** The model wanted to know: *"FMC Corp earnings news August 2026"* → got 6 results (via searxng)
+**Step 3 — Research.** The model wanted to know: *"FMC Corp crop protection news August 2026"* → got 6 results (via ddg)
 
-  - FMC Corporation - Financials - Quarterly Results - Investor Relations (https://investors.fmc.com/financials/quarterly-results/default.aspx)
+  - Company News | FMC Corp (https://www.fmc.com/en/news-media/company-news)
 
-  - FMC Q2 Earnings Beat Estimates on Favorable Costs, Revenues Miss (https://finance.yahoo.com/markets/stocks/articles/fmc-q2-earnings-beat-estimates-172200147.html)
+  - FMC: Latest News and Updates - global-agriculture.com (https://www.global-agriculture.com/tag/fmc/)
 
-  - FMC Corp (FMC) (Q2 2026) Earnings Call Highlights - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/fmc-corp-fmc-q2-2026-210155213.html)
+  - Insights: FMC Upside | FMC Ag US (https://ag.fmc.com/us/en/insights-fmc-upside)
 
-**Step 4 — Research.** The model wanted to know: *"IPI Intrepid Potash Brazil Potash news August 2026"* → got 6 results (via searxng)
+**Step 4 — Research.** The model wanted to know: *"IPI Intrepid Potash Brazil Potash Autazes news August 2026"* → got 6 results (via ddg)
 
-  - Intrepid Potash Q2 Earnings Call Highlights - MarketBeat (https://www.marketbeat.com/instant-alerts/intrepid-potash-q2-earnings-call-highlights-2026-08-08/)
+  - Proyecto Autazes: Brazil Potash's Key Mining Update (https://discoveryalert.com.au/brazil-potash-autazes-project-trf-1-ruling-2026-amaggi/)
 
-  - Intrepid Potash, Inc. (IPI) Q2 2026 Earnings Call Transcript (https://seekingalpha.com/article/4931302-intrepid-potash-inc-ipi-q2-2026-earnings-call-transcript)
+  - Brazil's Supreme Federal Court Issues Favorable Decision for ... (https://www.sahmcapital.com/news/content/brazils-supreme-federal-court-issues-favorable-decision-for-brazil-potash-2026-08-21)
 
-  - Intrepid Potash, Inc. (IPI) Latest Stock News & Headlines (https://finance.yahoo.com/quote/IPI/news/)
+  - Brazil Potash Wins Court Ruling Clearing $2.5 Billion Autazes ... (https://tzp.news/en/news/2026-08-12-brazil-potash-autazes-mahkeme-karari-2-5-milyar-dolar-gubre/)
 
-**Step 6 — Research.** The model wanted to know: *"CENX Century Aluminum news August 2026"* → got 6 results (via searxng)
+**Step 6 — Research.** The model wanted to know: *"CENX Century Aluminum news August 2026"* → got 6 results (via gnews_rss)
 
-  - Century Aluminum Company Reports Second Quarter 2026 Results (https://investors.centuryaluminum.com/news-events/press-releases/press-release-details/2026/Century-Aluminum-Company-Reports-Second-Quarter-2026-Results/default.aspx)
+  - Century Aluminum (CENX) Stock Still Looks Like a Bargain After Pullback - simplywall.st (https://news.google.com/rss/articles/CBMi0gFBVV95cUxPLTcyQ3lJOUFTbEhOVTA3ZnNtWmp2RnNTRlA0elluTTdPdGc3QXRRRFlvZHNPYkN0US0tclNFRXRwWVh6T3hLb2pRMTBnUHFTX0lfUENRUURfM3VZUlpGaWM0dHduZHR0VzQ1SXdqZlJTZWtUaDRGdjEyZVpEM3JNUm12cDVWOEJfWV9qYndfSC1Kd2wzSlRGTTdpZHJGVWdvX1U3MWkwLWRVZm1JZHg1WGVwNzFMdTVybmNsNk50ajBqSWE2MnJDT01ianRBTEFOX2fSAdcBQVVfeXFMUGhMUk5ka0ZKWGx4NzJlMzZVaDRCWk9DLWNNSEYwMkpfYjdoS2JFS0tzdG5ZZ1lKcm5zQjNjX05rVklsTm9rUUdVTG5CVlFyeEdFZFg5RmQ4R0hqMkhMclNMR21MU09rcGlpa1duMEYxbG82eDNHWnJUbHFmV0JZTk50X1RQR2dlUzUyeWlGT0FyRktBZ3JUN081Qm9lTVJadkRuSnZraUo5U1l6NF9sQzNxX2R4QUtDdjU0X2RoZ0lKY1AzNE9zX0t5NGIyMkR6NDh5UGVRbjg?oc=5)
 
-  - Century Aluminum Company - Investor Relations (https://investors.centuryaluminum.com/overview/default.aspx)
+  - CENTURY ALUMINUM ($CENX) Releases Q2 2026 Earnings, Stock Rises - Quiver Quantitative (https://news.google.com/rss/articles/CBMipwFBVV95cUxPQUVMVm5vYzRaUkZiVkg1LWVmNWdQczQ3OEE4aWh3RUFjejQtS0FuSjBUOHpuVEdzaVNHZGd0ZWhPNk1lT1JVN1VZY2s0VzZvV3RKdnFTWHp4TGYxdnhpRFE5NVJYUmZsRlF3NDNkaGszOW1JVmJ6eXBwbGFhLXVSQmhFS05BbGlGRXRKVzBTTWxjaTdxMDlVajhwTG53V2ZKalVWRVNWNA?oc=5)
 
-  - Century Aluminum Sets Date for Second Quarter 2026 Earnings ... (https://investors.centuryaluminum.com/news-events/press-releases/press-release-details/2026/Century-Aluminum-Sets-Date-for-Second-Quarter-2026-Earnings-Announcement/default.aspx)
+  - Century Aluminum Sets Date for Second Quarter 2026 Earnings Announcement - Yahoo Finance (https://news.google.com/rss/articles/CBMinwFBVV95cUxPMkxyRlpycHFxWXZZNktaelUybXNxakF5amszZ3NJejRuaDJ4emxBNlRIRlVEam04dVoxWnQzcnZxLWpUM2lHMUQ3bnRHVWwwQU5lOGJhS3QyMzNDdm5PWFVrbEJERF9rTXMzZUV2b2lzRzh1OEJrZFdnLXIydkVDdWMxTlByUVNCUUpXOGhhRkJsaFFZR29lS1BYU1dWTkk?oc=5)
 
-**Step 7 — Research.** The model wanted to know: *"CSTM Constellium news August 2026"* → got 6 results (via searxng)
+**Step 7 — Research.** The model wanted to know: *"CSTM Constellium news August 2026"* → got 6 results (via ddg)
 
-  - Constellium Reports Strong Second Quarter and First Half 2026 ... (https://www.constellium.com/news/constellium-reports-strong-second-quarter-and-first-half-2026-results-including-record-segment-adjusted-ebitda-raises-full-year-2026-guidance)
+  - Constellium SE (CSTM) Stock Price & Overview (https://stockanalysis.com/stocks/cstm/)
 
-  - Why Constellium SE's (CSTM) Stock Is Down 6.52% | AAII (https://www.aaii.com/investingideas/article/532931-why-constellium-se8217s-cstm-stock-is-down-652)
+  - Constellium (CSTM) Q2 2026 Earnings Call Transcript (https://www.fool.com/earnings/call-transcripts/2026/08/07/constellium-cstm-q2-2026-earnings-call-transcript/)
 
-  - Constellium (CSTM) Stock May Be 4% Undervalued On Raised ... (https://simplywall.st/stocks/us/materials/nyse-cstm/constellium/news/constellium-cstm-stock-may-be-4-undervalued-on-raised-2026-o)
+  - CSTM August 2026 Options Begin Trading - Nasdaq (https://www.nasdaq.com/articles/cstm-august-2026-options-begin-trading)
 
-**Step 8 — Research.** The model wanted to know: *"CRH Pisgah Stone Products acquisition news August 2026"* → got 6 results (via searxng)
+**Step 8 — Research.** The model wanted to know: *"CRH Pisgah Stone Products Utah acquisition news August 2026"* → got 6 results (via gnews_rss)
 
-  - CRH Acquires Pisgah Stone Products in Utah - Business Wire (https://www.businesswire.com/news/home/20260804111417/en/CRH-Acquires-Pisgah-Stone-Products-in-Utah)
+  - CRH Acquires Pisgah Stone Products to Expand Northern Utah Aggregates Network - citybiz (https://news.google.com/rss/articles/CBMitwFBVV95cUxPbThRUnF5VlRzMW5mNGhPM1dMWWdVLURWYm5ZeWdSaWFJTkg2WlBkMjNaSkJVSWh5djNqRGFzNmNkSlpxeXVTOS1NMno3Q0lhUGo0Y1ZUcF9EcmdrQWVNdnJUWUs4TGdRQWdMaXhTaEFuX0RVYWJPS1UyY1ZlRXFtN0pFVkNxOEJJTnA0UUFDNnhRVXlzSDNic1UyVERVSTQ5bmNtVUJrWUNIbUFNVy1BSlNSOFNjT2M?oc=5)
 
-  - CRH Acquires Pisgah Stone Products to Expand Northern Utah ... (https://www.citybiz.co/article/883907/crh-acquires-pisgah-stone-products-to-expand-northern-utah-aggregates-network/)
+  - Can CRH's Utah Acquisition Strengthen Long-Term Aggregates Growth? - Yahoo Finance (https://news.google.com/rss/articles/CBMipAFBVV95cUxQaUlqejA2ck04ZUlkbEVGRzFVUlB0eUw2VXJMNV9PY3hKd2xUQnh5aF9icTFvZmVzNjZkSk5XSjFvOEt5dTBLeUplbHpDcG00TGkzemRIa251UlZRWlJ5OVA4WEdvX19CN2FWdUpPeGVORWVucURGc2tCNXNrNUVZUWxvRUEtd3pVMnlPQ1BLaVYtdDBEUHJxeUstaGRTcnlfamhzVw?oc=5)
 
-  - CRH Acquires Pisgah Stone Products in Utah - AOL.com (https://www.aol.com/articles/crh-acquires-pisgah-stone-products-123000000.html)
+  - CRH (CRH) Stock May Be Fairly Valued After Utah Aggregates Deal - Yahoo Finance (https://news.google.com/rss/articles/CBMikwFBVV95cUxNM2F0dDNiSy1pTVdqdGpBM2hpRHVjenRQU3JkbWRJaFd2QUJ4eURJUXNHczNONEV6WnZCVmszQ1ZVOGx4eXpvbHdoS0hRbV9fb3VRUHJjLWdjbVhEMnFtNGdfMXU5QndrcnBpRGNVZjktVy1XemlJU01aRDZIbEFCMGREaEFYQTRhODQxZm1VTlhrMjg?oc=5)
 
-**Step 9 — Research.** The model wanted to know: *"MLM Martin Marietta news August 2026"* → got 6 results (via searxng)
+**Step 9 — Research.** The model wanted to know: *"MLM Martin Marietta news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
 
-  - Martin Marietta Completes Combination With Lhoist North America (https://ir.martinmarietta.com/news-releases/news-release-details/martin-marietta-completes-combination-lhoist-north-america)
+**Step 11 — Research.** The model wanted to know: *"KNF Knife River news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
 
-  - Martin Marietta Materials (MLM) Extends Rocks and Gravel Theme (https://finance.yahoo.com/markets/stocks/articles/martin-marietta-materials-mlm-extends-144826420.html)
+**Step 12 — Research.** The model wanted to know: *"USLM United States Lime news August 2026"* → got 6 results (via ddg)
 
-  - Martin Marietta Completes Combination With Lhoist North America (https://sg.finance.yahoo.com/news/martin-marietta-completes-combination-lhoist-105500554.html)
+  - Investor Relations – United States Lime & Minerals - USLM (http://investors.uslm.com/investor-relations/)
 
-**Step 11 — Research.** The model wanted to know: *"KNF Knife River news August 2026"* → got 6 results (via searxng)
+  - United States Lime & Minerals Inc. (USLM:US) | News ... (https://money.tmx.com/en/quote/USLM:US/news)
 
-  - Knife River Corporation Reports Second Quarter 2026 Financial ... (https://www.businesswire.com/news/home/20260804756159/en/Knife-River-Corporation-Reports-Second-Quarter-2026-Financial-Results)
+  - United States Lime & Minerals (USLM) Q1 2026 Earnings Report (https://www.tipranks.com/stocks/uslm/earnings/q1-2026-report)
 
-  - The Bull Case For Knife River (KNF) Could Change Following ... (https://simplywall.st/stocks/us/materials/nyse-knf/knife-river/news/the-bull-case-for-knife-river-knf-could-change-following-rai)
+**Step 13 — Research.** The model wanted to know: *"DOW Dow Inc news August 2026"* → got 6 results (via gnews_rss)
 
-  - KNF - Knife River Corporation Stock Price - Perplexity (https://www.perplexity.ai/finance/KNF?comparing=KNF,CRH,JHX,USLM,WIE.VI,HEI.DE)
+  - Contracts for Aug. 24, 2026 - U.S. Department of War (.gov) (https://news.google.com/rss/articles/CBMijwFBVV95cUxOazNpX3ZiWDJoQ0swMkx3MVA5ZXpUaEFvc0NYYlNORTE0cTEwSEtrYlJocFhYbXZYQTVheUVRVlZfV1MtNUdaVHVpakZXSGdKUlFkcE8wVVctTElZRjNtQkh3eU50TzlXS3RWVV9WaUdtUnZVazVDeHl2Z2tHX3FSa3lpREJpLUtQcVBZbzY0cw?oc=5)
 
-**Step 12 — Research.** The model wanted to know: *"USLM United States Lime news August 2026"* → got 6 results (via searxng)
+  - Dow stock trades at $30 as investors weigh recent pullback and dividend yield - Ad-hoc-news.de (https://news.google.com/rss/articles/CBMizgFBVV95cUxNdW1oOGtBeUFtS2JCU1VfVFcwYU1hYmNMdE1ucEVOUXJ6ako1emIwV3F0UHRWbC1DeWpTR0NKMWF4bHFrS01UQjUyWVlGT1lDbkt6aWdERkZXdTZ6LUl4ZjQ4aThOV0tSTkJoTXBXS1ZwYnNORDlwMVBSZ2ROYUdoRUxGX2xLQmV1bklhUHR6ZTVibE1meUlaSl9uQ3hYbnBueXhZNXdLVXc2X2Z6alprV2V4VWdKZGlBTjVhMGxiNzhrVVd1dEVuVFhDMmQtQQ?oc=5)
 
-  - Why United States Lime & Minerals, Inc.'s (USLM) Stock Is Down ... (https://www.aaii.com/investingideas/article/521175-why-united-states-lime--minerals-inc8217s-uslm-stock-is-down-505)
+  - Dow declares quarterly dividend of 35 cents per share - PR Newswire (https://news.google.com/rss/articles/CBMirgFBVV95cUxPOFN6aUFEbkdhTlN0U1c5Wl8zdjE5QW1qQmJRR2NoZVRSVmE0azA2elNpNmxrek9QVzJFdnFmTGhFLUFQSGlaUGVMY2hsNGJ6aVdFekJNNXJQcGNxNHZVSDYwS2FUYzFaZnBGNkp5OTROcm52bEU0a3BOcFNidTFRVkM0eDN0Ty1kNnJIbUNVcVhTRkQ0WllUektESnZOUkFNbFBXakJtcEZmdDNMQmc?oc=5)
 
-  - United States Lime & Minerals To Go Ex-Dividend On August 21st ... (https://www.moomoo.com/news/post/74960027/united-states-lime-minerals-to-go-ex-dividend-on-august)
+**Step 14 — Research.** The model wanted to know: *"HUN Huntsman OLIN merger news August 2026"* → got 6 results (via ddg)
 
-  - United States Lime & Minerals (USLM) Stock Highlights Profit ... (https://simplywall.st/stocks/us/materials/nasdaq-uslm/united-states-lime-minerals/news/united-states-lime-minerals-uslm-stock-highlights-profit-str)
+  - Olin and Huntsman shareholders approve transformative merger ... (https://www.hydrocarbonprocessing.com/news/2026/08/olin-and-huntsman-shareholders-approve-transformative-merger-of-equals/)
 
-**Step 13 — Research.** The model wanted to know: *"DOW Dow Inc news August 2026"* → got 6 results (via searxng)
+  - OLIN and HUNTSMAN Shareholders Approve Transformative Merger ... (https://www.prnewswire.com/news-releases/olin-and-huntsman-shareholders-approve-transformative-merger-of-equals-302859554.html)
 
-  - Dow declares quarterly dividend of 35 cents per share (https://corporate.dow.com/en-us/news/press-releases/dow-declares-quarterly-dividend-of-35-cents-per-share2.html)
+  - Olin, Huntsman Shareholders Approve $12.5 Billion Chemicals ... (https://distributionstrategy.com/2026/08/olin-huntsman-shareholders-approve-12-5-billion-chemicals-merger/)
 
-  - Markets News, Aug. 26, 2026: Dow's Winning Streak Ends as ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08262026-12068275)
+**Step 16 — Research.** The model wanted to know: *"REX REX American Resources news August 2026"* → got 6 results (via ddg)
 
-  - Stock Market News, Aug. 25, 2026: Stocks Advance, Oil Drops ... - WSJ (https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-25-2026)
+  - News Releases - REX American Resources Corporation (https://investors.rexamerican.com/news-events/news-releases)
 
-**Step 14 — Research.** The model wanted to know: *"HUN Huntsman OLIN merger news August 2026"* → got 6 results (via searxng)
+  - REX American Resources (REX) Stock Price, News & AnalysisREX AMERICAN RESOURCES News and Stock Quote (NYSE: REX ...Investor Relations - REX American Resources CorporationREX - REX American Resources Corp News | MorningstarREX Press Releases Rex American Resources - marketchameleon.comREX American Resources Corporation (REX) Latest Press ... (https://www.marketbeat.com/stocks/NYSE/REX/)
 
-  - OLIN and HUNTSMAN Shareholders Approve Transformative ... (https://www.huntsman.com/news/media-releases/detail/631/olin-and-huntsman-shareholders-approve-transformative)
+  - REX AMERICAN RESOURCES News and Stock Quote (NYSE: REX ... (https://greenstocknews.com/market-data/stock-quote/rex-american-resources)
 
-  - OLIN and HUNTSMAN Shareholders Approve Transformative ... (https://www.prnewswire.com/news-releases/olin-and-huntsman-shareholders-approve-transformative-merger-of-equals-302859554.html)
+**Step 17 — Research.** The model wanted to know: *"HCC Alpha Metallurgical Resources news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
 
-  - Huntsman investors approve Olin all-stock merger | HUN 8-K Filing (https://www.stocktitan.net/sec-filings/HUN/8-k-huntsman-corp-reports-material-event-e93be1fe5893.html)
+**Step 18 — Research.** The model wanted to know: *"AMR Alpha Metallurgical Resources news August 2026"* → got 6 results (via gnews_rss)
 
-**Step 16 — Research.** The model wanted to know: *"REX American Resources news August 2026"* → got 6 results (via searxng)
+  - Alpha metallurgical director Kenneth Courtis buys $1.08m in stock - Investing.com (https://news.google.com/rss/articles/CBMi0gFBVV95cUxPam53TEd1Qnhod3dnTFN2Z1R5WHRiZW52bDBYQndpNkloektzQlk1RFRYcU5jdjh2RUtiUjVhdm5uRTNFeWFmUkE3bE5IT1lLOHV0VnVjdFJ4cnlaYi03YUNlbmRpWmFGTFBwREVIeUthazNqYS0tMjdsMWNmaWxsbGV4SWV2S2lNbE9aUF9WUUF6S0N5M2NMYlBoZy1EZVh0WGlzQjEweERIT082TGc1QkJBUnh2NkdDMkdYS2Q0YWVBYkpoc043RDJfc1hMN21aeWc?oc=5)
 
-  - News Releases - REX American Resources Corporation (https://investors.rexamerican.com/news-events/news-releases/)
+  - Alpha Metallurgical (AMR) director buys 5,000 shares near $216–$217 - Stock Titan (https://news.google.com/rss/articles/CBMixAFBVV95cUxQOEZFWGdEaHdrZkZuLWVlQjk0WDRFRjVaNUdmcXRKMFBFbmtrRkhETGVGQVJfTmxMbW1iMGtmQ0lGdG5CM09yMnlSSmlvVk1RNXBaMkdyN25XX2JjejhYNG5fOHVNQ1p2cFQwV3BzaExqMnhBWXhpQ05xYmY4b0RiR0JDMXB4YjFSeHN0bVJYOG5EZ21kMWV3dkhCazg4eWdiUG1BSlZocEM3by14amdVRXNUc19EMjBQWFdJcWQwck51aU1G?oc=5)
 
-  - REX American Resources to Report Fiscal Q2 2026 Results and ... (https://finance.yahoo.com/markets/stocks/articles/rex-american-resources-report-fiscal-113000959.html)
+  - Alpha Metallurgical Resources Director Courtis Buys Again, This Time $3.2 Million in Shares. Is it Time for Investors to Buy Too? - The Motley Fool (https://news.google.com/rss/articles/CBMiigJBVV95cUxNZnhwM3B2aVkzSUg2LWhneWQwSDBsREJSY3BiOFBKQ01TTWtRcDBJTmdKLXVRcXlTbzc2U0dyaDNNWXhUMHlaYU94MkFPNlBPLTVaRUgwempMOWM5QXQ4YXlEbnR5d0xkcWNOVjJCeTFENW9lTUNwTmJKM2dwczNBSzBIRmdaWFRObEVYclBDbFN3U3JzbGY0RWlOOWJRS0RMbGZSMmhlRWFvUWNxNUFfLTBYSUlacF95TVdrYkp3SmFGWGs1b25XNGxla1VBRUJFS0pScGkyRmtzekdmZUtnQzBQbXRrZXRNdEh4NFR6bjdad3RBMU9mVXM2TFcwZER4QjNidzlGbnVKdw?oc=5)
 
-  - Investor Relations - REX American Resources Corporation (https://investors.rexamerican.com/investor-relations/)
+**Step 19 — Research.** The model wanted to know: *"FCX Freeport-McMoRan copper news August 2026"* → got 6 results (via ddg)
 
-**Step 17 — Research.** The model wanted to know: *"HCC Alpha Metallurgical Resources news August 2026"* → got 6 results (via searxng)
+  - FCX Stock Powers Higher As Copper Outlook Tightens (https://stockstotrade.com/news/freeport-mcmoran-inc-fcx-news-2026_08_21/)
 
-  - Director Kenneth S. Courtis Boosts Stake in Alpha Metallurgical ... (https://intellectia.ai/news/stock/director-kenneth-s-courtis-boosts-stake-in-alpha-metallurgical-resources)
+  - Freeport-McMoRan Inc. - Investors (http://freeport2017ir.q4web.com/investors/default.aspx)
 
-  - Mohnish Pabrai's Top Q2 2026 Move: Trimming Alpha Metallurgical ... (https://finance.yahoo.com/markets/stocks/articles/mohnish-pabrais-top-q2-2026-140033116.html)
+  - Freeport-McMoRan Inc Stock (FCX) Closed Up by 3.08% on Aug 20 ... (https://www.tradingkey.com/news/market-movers/262122308-market-movers-fcx-20260820)
 
-  - Which Is a Better Investment, Alpha Metallurgical Resources Inc or ... (https://www.aaii.com/investingideas/article/35042-which-is-a-better-investment-alpha-metallurgical-resources-inc-or-warrior-met-coal-inc-stock)
+**Step 21 — Research.** The model wanted to know: *"IE Ivanhoe Electric EXIM copper project news August 2026"* → got 6 results (via ddg)
 
-**Step 18 — Research.** The model wanted to know: *"AMR Alpha Metallurgical Resources news August 2026"* → got 6 results (via searxng)
+  - Ivanhoe Electric Edges Closer to $1.1 Billion EXIM Copper… (https://energymetalnews.com/2026/08/24/ivanhoe-electric-exim-santa-cruz-copper-loan/)
 
-  - Newsroom - Alpha Metallurgical Resources (https://alphametresources.com/newsroom/)
+  - EXIM Letter Puts $1.1 Billion Behind Ivanhoe's Santa Cruz… (https://energymetalnews.com/2026/08/24/exim-letter-1-1-billion-ivanhoe-santa-cruz-copper/)
 
-  - Investors - Alpha Metallurgical Resources (https://investors.alphametresources.com/investors/default.aspx)
+  - Ivanhoe Electric Inc. | Ivanhoe Electric Receives Preliminary ... (https://ivanhoeelectric.com/news/ivanhoe-electric-receives-preliminary-project-letter-from-the-export-import-bank-of-the-united-states-for-1.1-billion-in/)
 
-  - Events & Presentations - Investors - Alpha Metallurgical Resources (https://investors.alphametresources.com/investors/events-and-presentations/default.aspx)
-
-**Step 19 — Research.** The model wanted to know: *"FCX Freeport-McMoRan copper news August 2026"* → got 6 results (via searxng)
-
-  - Freeport McMoRan (FCX) Stock Looks Stretched As Fresh Copper ... (https://finance.yahoo.com/markets/stocks/articles/freeport-mcmoran-fcx-stock-looks-200839772.html)
-
-  - FCX Investor Relations - Freeport-McMoRan (https://investors.fcx.com/investors/default.aspx)
-
-  - Freeport Reports Second-Quarter and Six-Month 2026 Results (https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Reports-Second-Quarter-and-Six-Month-2026-Results/default.aspx)
-
-**Step 21 — Research.** The model wanted to know: *"IE Ivanhoe Electric copper EXIM news August 2026"* → got 6 results (via searxng)
-
-  - Ivanhoe Electric Receives Preliminary Project Letter from the Export ... (https://www.newsfilecorp.com/release/310961/Ivanhoe-Electric-Receives-Preliminary-Project-Letter-from-the-ExportImport-Bank-of-the-United-States-for-1.1-Billion-in-Potential-Debt-Financing-for-the-Santa-Cruz-Copper-Project)
-
-  - US EXIM issues $1.1bn project letter for Ivanhoe Electric copper ... (https://finance.yahoo.com/markets/commodities/articles/us-exim-issues-1-1bn-112341375.html)
-
-  - EXIM Backs Ivanhoe Copper Mine With US$1.1 Billion Financing | INN (https://investingnews.com/ivanhoe-exim-financing-copper-mine/)
-
-**Step 22 — Research.** The model wanted to know: *"NEM Newmont news August 2026 production free cash flow"* → got 6 results (via searxng)
+**Step 22 — Research.** The model wanted to know: *"NEM Newmont news August 2026 production free cash flow"* → got 6 results (via ddg)
 
   - Newmont Shares Shine on Production, Record Free Cash Flow (https://www.fxempire.com/forecasts/article/newmont-shares-shine-on-production-record-free-cash-flow-1619148)
 
-  - Newmont Mining posts record Q2 free cash flow a... - Pluang (https://pluang.com/en/news-feed/newmont-investor-hukum-barrick-untuk-deal-ini)
+  - Newmont (NEM) Investor Relations, Earnings Summary & Outlook (https://quartr.com/companies/newmont-corporation_10964)
 
-  - Newmont (NEM) Jumped, What Is Behind The Latest Attention? (https://simplywall.st/stocks/us/materials/nyse-nem/newmont/news/newmont-nem-jumped-what-is-behind-the-latest-attention/amp)
+  - Newmont Corporation - Investors (https://investors.newmont.com/investors/default.aspx)
 
-**Step 23 — Research.** The model wanted to know: *"SSRM SSR Mining news August 2026"* → got 6 results (via searxng)
+**Step 23 — Research.** The model wanted to know: *"SSRM SSR Mining news August 2026"* → got 6 results (via ddg)
 
-  - SSR Mining Reports Second Quarter 2026 Results - Business Wire (https://www.businesswire.com/news/home/20260804518552/en/SSR-Mining-Reports-Second-Quarter-2026-Results)
+  - SSR Mining Inc. - Investors - News (https://ir.ssrmining.com/investors/news/default.aspx)
 
-  - SSR Mining Reports Second Quarter 2026 Results - Yahoo Finance (https://finance.yahoo.com/markets/commodities/articles/ssr-mining-reports-second-quarter-201000010.html)
+  - SSR Mining (SSRM) Stock Price, News & Analysis - MarketBeatSSR Mining Q2 2026 results due Aug. 4 | SSRM Stock NewsSSR Mining Inc. (SSRM) Latest Press Releases | Seeking AlphaSSR Mining Inc. (SSRM) | News & Upcoming Events | TMX MoneySSR Mining (SSRM) Q2 2026 Earnings Call TranscriptSSR Mining Inc. - Investors (https://www.marketbeat.com/stocks/TSE/SSRM/)
 
-  - Why SSR Mining Stock Popped Today | The Motley Fool (https://www.fool.com/investing/2026/08/05/why-ssr-mining-stock-popped-today/)
+  - SSR Mining Q2 2026 results due Aug. 4 | SSRM Stock News (https://www.stocktitan.net/news/SSRM/ssr-mining-to-announce-second-quarter-2026-consolidated-financial-yd9cmyt9elld.html)
 
-**Step 24 — Research.** The model wanted to know: *"NG NovaGold news August 2026"* → got 6 results (via searxng)
+**Step 24 — Research.** The model wanted to know: *"NG NovaGold news August 2026"* → got 6 results (via gnews_rss)
 
-  - Novagold & Paulson Announce the Appointment of Endeavour ... (https://novagold.com/novagold-paulson-announce-the-appointment-of-endeavour-financial-and-macquarie-capital-as-financial-advisors-to-the-donlin-gold-project/)
+  - Gold and Silver Stocks Make TSX Top Gainers as Precious Metals Gain - Investorideas.com (https://news.google.com/rss/articles/CBMilgFBVV95cUxQbnhaZk5FSmJMZnJfSXNtWEt1aXgyT0NrbE9iWGMyM2cwODhHY19QamlXVFBtZnMxRzZMbXQwV01EYVVfRGswOUd1ZVhScFpjMEIyZkd5NnNPSDNBYjlnMzVoTXg2N19temVSUEd0bWJjZWFONGZ6WXVaeUlIWFFXdjVOczFyNDRQRy1obVNCWjhxWFFHYXc?oc=5)
 
-  - Why NovaGold Resources Inc.'s (NG) Stock Is Up 7.50% | AAII (https://www.aaii.com/investingideas/article/525576-why-novagold-resources-inc8217s-ng-stock-is-up-750)
+  - NovaGold Resources (TSX:NG) Faces A Valuation Test As M And A Call Sparks Fresh Interest - Yahoo Finance (https://news.google.com/rss/articles/CBMinAFBVV95cUxQM21ESnRFSVFRclU2UWNHRzI5S054ZnJqUnFFZ25hVXFWbzVHXzFaSjF0UjVkS3ktZjljbEtYM01ldk1QeUJYTjIwaVFIYU1LYVhaRG95UkZSdTJSdzcwSUg4OUZsc3BwazM0MDhVNWdxWE5zY01qWUNiSlM1bUwybzYxMTlDanpuRzMyNE8takxkNFlHc1N0ZGh4Vlo?oc=5)
 
-  - NOVAGOLD RESOURCES INC. (TSX: NG) Makes TSX Top Gainer ... (https://www.investorideas.com/news/2026/mining/08191-novagold-ng-tsx-top-gainer-donlin-gold.asp)
+  - Backed by $294M raise, NOVAGOLD advances 40 million-ounce gold project - Stock Titan (https://news.google.com/rss/articles/CBMitAFBVV95cUxNUElPTjRwdHE2N0hKNjVWVUFFTlFjWGJZbmcxZUM5dE92VjBXVkNkNzRra1pEVVRpanY1TC1QZVhhVkFOVU1lTDF3ZGI4RlpURHhYdWkwSk82ZTBNWFZXZ21GeWVJM2luTEo3SzVBX3M0dTVpczhhbGQ2T3ZzbTdNaWRwR3o2T1d2VFlocFE0WFYzN2FUclI1WDdDd1FrOTBzaGxpTTc1aGt1WjRtbGluWGFZRWY?oc=5)
 
-**Step 26 — Research.** The model wanted to know: *"UFPI UFP Industries news August 2026"* → got 6 results (via searxng)
+**Step 26 — Research.** The model wanted to know: *"UFPI UFP Industries news August 2026"* → got 6 results (via ddg)
 
-  - UFP Industries to Expand Structural Packaging Capacity with New ... (https://www.ufpinvestor.com/news-releases/news-release-details/ufp-industries-expand-structural-packaging-capacity-new-south)
+  - News | UFP Industries (https://ufpi.com/category/news/)
 
-  - UFP Industries to Expand Structural Packaging Capacity with New ... (https://finance.yahoo.com/small-business/articles/ufp-industries-expand-structural-packaging-181500035.html)
+  - UFPI - UFP Industries Inc News | Morningstar (https://www.morningstar.com/stocks/xnas/ufpi/news)
 
   - Newsroom - UFP Industries (https://ufpi.com/about/newsroom/)
 
-**Step 27 — Research.** The model wanted to know: *"BCC Boise Cascade news August 2026"* → got 6 results (via searxng)
+**Step 27 — Research.** The model wanted to know: *"BCC Boise Cascade news August 2026"* → got 6 results (via ddg)
 
-  - Boise Cascade reports second quarterly 2026 results (https://www.bc.com/boise-cascade-reports-second-quarterly-2026-results/)
+  - Investor Relations Archives - Boise Cascade (https://www.bc.com/category/investor-relations/)
 
-  - Boise Cascade and James Hardie expand U.S. nationwide ... (https://www.bc.com/boise-cascade-and-james-hardie-expand-nationwide-distribution-partnership/)
+  - News - Boise Cascade (https://www.bc.com/news/)
 
-  - Boise Cascade Company Reports Second Quarter 2026 Results (https://www.businesswire.com/news/home/20260803523803/en/Boise-Cascade-Company-Reports-Second-Quarter-2026-Results)
+  - BCC - Boise Cascade Co News | Morningstar (https://www.morningstar.com/stocks/xnys/bcc/news)
 
-**Step 28 — Research.** The model wanted to know: *"MTRN Materion news August 2026"* → got 6 results (via searxng)
+**Step 28 — Research.** The model wanted to know: *"MTRN Materion news August 2026"* → got 6 results (via ddg)
 
-  - Wall Street Analysts Think Materion (MTRN) Could Surge 32.76% (https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-materion-135505233.html)
+  - Materion Corp (MTRN) 10-Q Quarterly Report August 2026 (https://last10k.com/sec-filings/mtrn/0001104657-26-000044.htm)
 
-  - Materion Corporation - Investor Relations (https://investor.materion.com/overview/default.aspx)
+  - Materion Corporation 2026 Q2 - Results - Earnings Call ... (https://seekingalpha.com/article/4931164-materion-corporation-2026-q2-results-earnings-call-presentation)
 
-  - Materion Corp (MTRN) (Q2 2026) Earnings Call Highlights: Record ... (https://finance.yahoo.com/markets/stocks/articles/materion-corp-mtrn-q2-2026-210235546.html)
+  - Materion Corporation - News (https://investor.materion.com/news/default.aspx)
 
-**Step 29 — Research.** The model wanted to know: *"USAR USA Rare Earth news August 2026"* → got 6 results (via searxng)
+**Step 29 — Research.** The model wanted to know: *"USAR USA Rare Earth news August 2026"* → got 6 results (via ddg)
 
-  - News Releases - Investor Relations - USA Rare Earth (https://investors.usare.com/news-events/news-releases)
+  - USAR Stock Grinds Higher As Round Top Progress Gains Traction (https://stockstotrade.com/news/usa-rare-earth-inc-usar-news-2026_08_21/)
 
-  - USA Rare Earth (Nasdaq: USAR) Announces Completion of (https://www.globenewswire.com/news-release/2026/08/24/3349611/0/en/usa-rare-earth-nasdaq-usar-announces-completion-of-upsized-1-55-billion-capitalization-of-the-u-s-government-backed-special-purpose-vehicle-spv-for-serra-verde-offtake.html)
+  - News Releases - USA Rare Earth (https://investors.usare.com/news-events/news-releases)
 
-  - USA Rare Earth (USAR) Stock Still Looks Undervalued After A 91 ... (https://simplywall.st/stocks/us/materials/nasdaq-usar/usa-rare-earth/news/usa-rare-earth-usar-stock-still-looks-undervalued-after-a-91)
+  - Newsroom - USA Rare Earth (https://www.usare.com/newsroom/)
 
-**Step 31 — Research.** The model wanted to know: *"PPTA Perpetua Resources news August 2026"* → got 6 results (via searxng)
+**Step 31 — Research.** The model wanted to know: *"PPTA Perpetua Resources news August 2026"* → got 6 results (via ddg)
 
-  - Perpetua Resources Announces Second Quarter 2026 Financial ... (https://www.prnewswire.com/news-releases/perpetua-resources-announces-second-quarter-2026-financial-results-302852455.html)
+  - Perpetua Resources Announces Second Quarter 2026 Financial ... (https://www.advfn.com/stock-market/TSX/PPTA/stock-news/99136176/perpetua-resources-announces-second-quarter-2026-f)
 
-  - Perpetua Resources Reports New High-Grade Gold and Antimony ... (https://perpetuaresources.com/perpetua-resources-reports-new-high-grade-gold-and-antimony-discoveries-and-a-new-gold-tungsten-zone-at-stibnite/)
+  - Perpetua Resources Reports New High-Grade Gold and Antimony ... (https://perpetuaresources.com/wp-content/uploads/2026-August-6-Exploration-Release.pdf)
 
-  - Investor Relations - Perpetua Resources (https://perpetuaresources.com/investors/)
+  - PPTA Press Releases Perpetua Resources Corp. - Common Shares (https://marketchameleon.com/Overview/PPTA/PressReleases/)
 
-**Step 32 — Research.** The model wanted to know: *"ELE Elemental Royalty news August 2026"* → got 6 results (via searxng)
-
-  - Elemental Royalty To Release Q2 2026 Results on August 11, 2026 (https://www.elementalroyalty.com/news/elemental-royalty-to-release-q2-2026-results-on-august-11-2026/)
+**Step 32 — Research.** The model wanted to know: *"ELE Elemental Royalty news August 2026"* → got 6 results (via ddg)
 
   - News | Elemental Royalty Corporation (https://www.elementalroyalty.com/news/)
 
-  - A Look at Elemental Royalty Corp (ELE) After 3.9% Decline -- GF (https://www.gurufocus.com/news/9055185/a-look-at-elemental-royalty-corp-ele-after-39-decline-gf-value-1640-vs-price-2191)
+  - Elemental Royalty To Release Q2 2026 Results on August 11 ... (https://www.elementalroyalty.com/news/elemental-royalty-to-release-q2-2026-results-on-august-11-2026/)
 
-**Step 33 — Research.** The model wanted to know: *"SLVM Sylvamo news August 2026"* → got 6 results (via searxng)
+  - Elemental Royalty Corporation (ELE) Latest Press Releases ... (https://seekingalpha.com/symbol/ELE/press-releases)
 
-  - Sylvamo's (SLVM) Rocky Road To A Stronger Second Half (https://finance.yahoo.com/markets/stocks/articles/sylvamo-slvm-rocky-road-stronger-082838278.html)
+**Step 33 — Research.** The model wanted to know: *"SLVM Sylvamo news August 2026"* → got 6 results (via ddg)
 
-  - Sylvamo (SLVM) Faces A Valuation Test On Its Swing To A Quarterly ... (https://simplywall.st/stocks/us/materials/nyse-slvm/sylvamo/news/sylvamo-slvm-faces-a-valuation-test-on-its-swing-to-a-quarte)
+  - FinancialContent - Latest News about Sylvamo Corporation ... (https://markets.financialcontent.com/stocks/quote/news?Symbol=NY:SLVM&Language=english)
 
-  - Sylvamo (NYSE: SLVM) posts Q2 net loss with $60M adjusted EBITDA (https://www.stocktitan.net/sec-filings/SLVM/8-k-sylvamo-corp-reports-material-event-99b1247649f9.html)
+  - Sylvamo (SLVM) Q2 2026 Preview: EPS Est. $0.07, Reports ... (https://news.alphastreet.com/sylvamo-slvm-q2-2026-preview-eps-est-0-07-reports-august-7/)
 
-**Step 34 — Research.** The model wanted to know: *"LIN Linde news August 2026"* → got 6 results (via searxng)
+  - Sylvamo - News (https://investors.sylvamo.com/news/default.aspx)
 
-  - Is Linde (LIN) Set to Benefit From a Global Industrial Recovery? (https://finance.yahoo.com/markets/stocks/articles/linde-lin-set-benefit-global-140005174.html)
+**Step 34 — Research.** The model wanted to know: *"LIN Linde news August 2026"* → got 6 results (via ddg)
 
-  - LIN Stock Forecast 2026-2027 - Linde Plc Price Targets & Predictions (https://tickernerd.com/stock/lin-forecast/)
+  - LIN News Today | Why did Linde stock go up today? - MarketBeat (https://www.marketbeat.com/stocks/NASDAQ/LIN/news/)
 
-  - Linde (LIN) Posted Record Q2 Results, Is The 12% Upside Still Real? (https://finance.yahoo.com/markets/stocks/articles/linde-lin-posted-record-q2-131137936.html)
+  - Investors - Linde (https://www.linde.com/investors)
 
-**Step 36 — Research.** The model wanted to know: *"SHW Sherwin-Williams news August 2026"* → got 6 results (via searxng)
+  - Linde (LIN) Stock Price & OverviewLIN - Linde PLC News | MorningstarLinde (LIN) Q2 2026 Earnings Call Transcript - The Motley FoolLinde Reports Second Quarter 2026 ResultsLinde (LIN), Why Is Its Latest Update Drawing Attention? (https://stockanalysis.com/stocks/lin/)
 
-  - The Sherwin-Williams Company Reports 2026 Second Quarter ... (https://investors.sherwin-williams.com/press-releases/press-release-details/2026/The-Sherwin-Williams-Company-Reports-2026-Second-Quarter-Financial-Results/default.aspx)
+**Step 36 — Research.** The model wanted to know: *"SHW Sherwin-Williams news August 2026"* → got 6 results (via ddg)
 
-  - Sherwin Williams (SHW) Unveils Water Based Spray Paint For ... (https://finance.yahoo.com/markets/stocks/articles/sherwin-williams-shw-unveils-water-031545704.html)
+  - Sherwin-Williams - Investor Relations (https://investors.sherwin-williams.com/investor-home/default.aspx)
 
-  - Sherwin-Williams to Announce Second Quarter 2026 Financial ... (https://investors.sherwin-williams.com/press-releases/press-release-details/2026/Sherwin-Williams-to-Announce-Second-Quarter-2026-Financial-Results-on-July-28-2026/default.aspx)
+  - SHW News Today | Why did Sherwin-Williams stock go down today? (https://www.marketbeat.com/stocks/NYSE/SHW/news/)
 
-**Step 37 — Research.** The model wanted to know: *"SXT Sensient Technologies news August 2026"* → got 6 results (via ddg)
+  - Sherwin-Williams - The Sherwin-Williams Company Reports 2026 ... (https://investors.sherwin-williams.com/press-releases/press-release-details/2026/The-Sherwin-Williams-Company-Reports-2026-Second-Quarter-Financial-Results/default.aspx)
 
-  - SXT News Today | Why did Sensient Technologies stock go up ... (https://www.marketbeat.com/stocks/NYSE/SXT/news/)
+**Step 37 — Research.** The model wanted to know: *"SXT Sensient Technologies news August 2026"* → got 6 results (via gnews_rss)
 
-  - Sensient Technologies (NYSE:SXT) Sets New 1-Year High - Here ... (https://www.marketbeat.com/instant-alerts/sensient-technologies-nysesxt-sets-new-1-year-high-heres-what-happened-2026-08-24/)
+  - Why Did Sensient Technologies (SXT) Move Today? - simplywall.st (https://news.google.com/rss/articles/CBMivwFBVV95cUxOSDZzS25makhNVVUwMXg0RWxxU2VWVDd6X3dVMjcwdVhpSjdmMGhIbkJRUDNKdHpIb1JmU1NFT3g4bjFkY0ExdE5zRnRzVk80Rm1seFhKXzdNUENBTDNaYU9BbHNZZGNfeTY2aFdUZ1FvN0ZiRzlhUUNVb3BqOGJic05BWEwybzhqU3lQWi12eXR0ZV9XaDg1alozSFh2Z081Yzg4RDhqS05UUVFJRjFTemVqWWM4Q2Y1alhKWGN1WdIBxAFBVV95cUxPd21TeC10bGpJT0p3blNWVHVlUUppNWRjUk1KbV9xYmp4VlpjczU2VEpjVmZ3VjJOWEo4VTlaYmFlWEd5S2lXZ1prY0hYWjRVRWFQdm5jWjRTMXdhRVdsVUs2dE5sM1JwTmtIcjVOWWk2cnB5MTh4Tm1nSnJWMTVrRmIzQkJzRWcyVG90VXdYYU1xUmRvempQaTRndVRfSENfOGk4djE1ZXZrcl9fc3VSWlk3U3BINlluNmVTeGJmNmdwOTBt?oc=5)
 
-  - Sensient Technologies Corporation - Investor Relations (https://investor.sensient.com/overview/default.aspx)
+  - Sensient Announces Conference Call - Business Wire (https://news.google.com/rss/articles/CBMilgFBVV95cUxQRlN0ZHJSOGpMS1hxZGlsay1EaDY4V2NZUFAzem5ncHlYWGc2d25qRWpnSG5QVTZfZjJlbTFZbEZ0SW5KQTI0c1hnQ1JyY0ZqcXQyUEY0aFRRSE9MYXFwOTdvMk8tOFNpV1BFMWdaTVdsajN3VU9Zc0c5UkpKVGQ2bGwyQ01xc0JmaDRBQzctM2h2eDk5NUE?oc=5)
 
-**Step 38 — Research.** The model wanted to know: *"BCPC Balchem news August 2026"* → got 6 results (via ddg)
+  - Why Sensient Technologies (SXT) Stock Is Up Today - Quiver Quantitative (https://news.google.com/rss/articles/CBMiigFBVV95cUxPeGdYZDFzTUhLYWtBc0JlcWhsTGRNOVhvNWFqcnZDZml2UDZKSDRVTmx3SHBhS3lra3dhaDNwZWx0R2FqNzExU1FucGVMQk4tYVN5MmdNR0d5OHIzWjU4a2dQNjVveWoxNHRZa083cWtDVU5NRjkwM2xsaVBXMG9VOGlzR3VVaDA3UXc?oc=5)
 
-  - BCPC Stock Quote Price and Forecast | CNN (https://www.cnn.com/markets/stocks/BCPC)
+**Step 38 — Research.** The model wanted to know: *"BCPC Balchem news August 2026"* → got 6 results (via gnews_rss)
 
-  - Balchem Corporation (BCPC) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/BCPC/)
+  - Balchem sends CEO, CFO to CJS Securities conference July 9 - Stock Titan (https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaElKeFFDVFVuOWhyWWdGd09uams1MUVUZXk5Qkk5aDNyVTUxRTdwQXIxM1c2Sml6dG9pMG9KZXdDSWpSTzdubEhhLWhWSVFJZEp6eXRzXzBtVjNsLXhwd0NORUdadEFWVHFEOWh2X3pERUNTYW9kcEdRRjJFVFl6LXB6NldQNTZDbW45Q1FBZ1QwWW5wWllMTnRSZDlUNWF0ZUN6c2k3amNScnhiVmR1SDBtc0VhTGZEemxEYkdpSzQ?oc=5)
 
-  - The Bull Case For Balchem (BCPC) Could Change Following Stronger Q2 2026 Earnings Momentum Learn Why - Simply Wall St News (https://simplywall.st/stocks/us/materials/nasdaq-bcpc/balchem/news/the-bull-case-for-balchem-bcpc-could-change-following-strong)
+  - Health-nutrition ingredient maker Balchem heads to Wells Fargo industrials event - Stock Titan (https://news.google.com/rss/articles/CBMivAFBVV95cUxOTC1PZGkwTlFTUEZzTUh4UUJPVWh5dGhSMWkwaU1nN1l1Ni1iQkQzX2h4Ukl6X2ZNZ1Z1eDM1RDhPSHFvRm9GS3RMY2pXVUxScklMX3ZmLVhOdERaVUxJQl9IcTF5UjF5SElIR1JubEFNLUxPbzdhLVdQTEpTOS1MUDdMX3E4YWtMSW5ybzRTR250VE91bE5ieWthZDdzaU9kOFNPRWIySnJKV28xbTdwTUk0bVZqeDlSRnVfSg?oc=5)
 
-**Step 39 — Research.** The model wanted to know: *"NUE Nucor news August 2026"* → got 6 results (via ddg)
+  - Balchem Corporation Schedules Second Quarter 2026 Earnings Conference Call - Quiver Quantitative (https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLUszWkpWM3dSUFNoVm5ZX2dJYmFFSmVsVk1iTnhoUS1fVGJHck5kNENDd25KeDdMMnpfWGFxQUcxd2xKNWVZNHlwYTZ0Q2k5eUNKUUdVZl9XM1FGODFhUzl4WlFmSERtVDNuVW41cXU4Skc4Rm81amtwRDdHWHB6akpRVU5Vd2NrZHM4SjhCZFp5SXhadS1Xbk0zWm1ZYXV1TmxaTjY3UVpXRFk?oc=5)
 
-  - Nucor Corporation (NUE) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/NUE/)
+**Step 39 — Research.** The model wanted to know: *"NUE Nucor news August 2026"* → got 6 results (via gnews_rss)
 
-  - Nucor stock drops double digits as analysts stick to upbeat targets (https://www.ad-hoc-news.de/boerse/news/corporate-news/nucor-stock-drops-double-digits-as-analysts-stick-to-upbeat-targets/69981813)
+  - Nucor (NUE) Stock May Be 41% Undervalued Despite Indiana Expansion News - Yahoo Finance (https://news.google.com/rss/articles/CBMikAFBVV95cUxOVm9CTkJyRURYeTNLXzRzYkl5dTRNWXl0OVIyOTJ1TlRaVlNrdlZERE5XNEJZYlFFaVY2MGpodnRIRUp4bWZRVXNJWGs5ZTllX0tYVFdTSF83d0RyQXI0V0JDNHdCY1lGS0xwaXBhN09NTG5TRHNsQXRIV3BUY05fSlpNd3ZPdHB1aVRhemE2TWw?oc=5)
 
-  - Nucor (NUE) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/NUE/)
+  - Company News for Aug 25, 2026 - The Globe and Mail (https://news.google.com/rss/articles/CBMisgFBVV95cUxPRlZTaFJuTlA0LWZsQm9jQzVuOS1Tei1SdUg0OHlkdG9KWlZpcHBpTy1pTzl4VHpWSHZFeXhIVU5RcFBjMjFjMGdyWWU2UGg5OS1zbTdOR0R2VUt2WUdNTl9kUkc5TFNuTzk0MlRhTVlsQXVEOU9BcXprdDE3R0JodmxVdnZGZTRYWTI2TVVpUVFhYVVhMWxrb0cxU1dDVURKeF9xMTNIVXQtNE5iYzhxOVBB?oc=5)
+
+  - Why Nucor (NUE) Stock Is Down Today - Quiver Quantitative (https://news.google.com/rss/articles/CBMid0FVX3lxTE11cDBrRmhYSi11QXN0NXBUSlRmUU5OLWdCa1JQV3h5VVZpSGl2WXVVRmNlT0E2eUtla3A1bjBzWlB3c1JwMGE5NnVidm9jbUpWOW1VaEJpeHhSU183N3BnQU1iUzRFQ3hGTEZVeUlSRDl0QzZsNlBn?oc=5)
 
 **Step 41 — Research.** The model wanted to know: *"STLD Steel Dynamics news August 2026"* → got 6 results (via ddg)
 
-  - Steel Dynamics (STLD) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/STLD/)
+  - Steel Dynamics (STLD) Stock Price, News & Analysis $STLDInvestors - Steel DynamicsSteel Dynamics, Inc. News and Press Releases | PR NewswirePress Releases - Steel DynamicsSTLD Technical Analysis, Signals & Chart | Steel ...Steel Dynamics (STLD) Gains As Market Dips: What You Should ...Steel Dynamics (STLD) Stock News & Updates | StockTitan (https://www.marketbeat.com/stocks/NASDAQ/STLD/)
 
-  - Steel Dynamics, Inc. (STLD) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/STLD/)
+  - Investors - Steel Dynamics (https://ir.steeldynamics.com/)
 
-  - Why Is Steel Dynamics (NASDAQ:STLD) Rising 5% Pre-Market Today? (https://kalkine.com/news/mining/why-is-steel-dynamics-nasdaqstld-rising-5-pre-market-today)
+  - Steel Dynamics, Inc. News and Press Releases | PR Newswire (https://www.prnewswire.com/news/steel-dynamics,-inc./)
 
-**Step 42 — Research.** The model wanted to know: *"WS Worthington Steel delisting tender news August 2026"* → got 6 results (via ddg)
+**Step 42 — Research.** The model wanted to know: *"WS Worthington Steel delisting tender news August 2026"* → got 6 results (via gnews_rss)
 
-  - Worthington Steel - Worthington Steel Announces Start of ... (https://ir.worthingtonsteel.com/news/news-details/2026/Worthington-Steel-Announces-Start-of-Acceptance-Period-for-Public-Delisting-Tender-Offer-for-Kloeckner--Co-SE/default.aspx)
+  - Worthington Steel Announces Start of Acceptance Period for Public Delisting Tender Offer for Kloeckner & Co SE - Business Wire (https://news.google.com/rss/articles/CBMi-AFBVV95cUxNUDFnWW1EWGN3UWUyRndpcmtyQkJrX0dnTGw0aElpbGVGRGU2SV9pRWZFTnQ5cmw4aW1ZRGJudFVPamdqSjNaWmdpQVE5SlFPUG1Gclg0QUZ3cWpvM2E3Zms0UEpVSkcxNEtBZldPbGNoekFQbm5YMWNZZDEyMEZPelNxSlNuemdZS3hyOUNvNWQzcGl2ZEY3ZmNHVmZTa0dmejRQbHZyT0UtLUcxUTU5UlhnMURrUVlDc2hjSkFsQjUxcWwtZHpHaHRxWHdOdE9TczdWOUxpVnAzb0JGNWV6aGNXV2ZmN2tvWW5VSDkwOVNCWlJxWVRHMA?oc=5)
 
-  - Worthington Steel Announces Start of Acceptance Period for ... (https://www.worthingtonsteel.com/company/news-events/worthington-steel-announces-start-of-acceptance-period-for-public-delisting-tender-offer-for-kloeckner---co-se)
+  - Worthington Steel's 62% Kloeckner stake sets up delisting offer - Stock Titan (https://news.google.com/rss/articles/CBMisgFBVV95cUxQaTN3VUp3TG9sdGtzMHEtSG9vZU9LTmVuLWl5MjlHNHk1RlA2VDZacVdBVUNlRnRwckQyRk5tUnl1amZmYVRkNDdsNk1YNHBEckEtUEtSNG1RNDZ6cno0dmRhcDlyUDhSZS1KcXU2bTVsc3dscVJfRndyREVUcFB6d2xPZDFzM1Q4dWpmSmRuZ0owM0JudWFEMnkwbHdOTlBqTF9SMHBaRkk4bk5BNl9UbDVn?oc=5)
 
-  - Worthington Steel launches Kloeckner delisting offer | WS 8-K ... (https://www.stocktitan.net/sec-filings/WS/8-k-worthington-steel-inc-reports-material-event-d6ae4e7cda60.html)
+  - Worthington Steel opens tender offer for Kloeckner shares - Investing.com (https://news.google.com/rss/articles/CBMitAFBVV95cUxPbUprbUFoeHQyQjJlTktVejVPeVU3QUpjTXREOGYwZ1J4aFBjWXNFWC04cnFzSlNCMFBtY1ZYM1N6ZEhwaTJNbGlnT3hMUS05UVlQbUJEYmhnQXNEcnpTQWwzLWMtRG42R3B5NXZXOXdGaFNxUlFkQm9meFhSbjJrOHVBdVRzNUtWVHZPR3VvdVlQdVFzcU0weWVfUVlYZDdBYzYteTVuM1NSMno0MWFzZHc2RDg?oc=5)
 
-**Step 43 — Research.** The model wanted to know: *"NWPX Northwest Pipe news August 2026"* → got 6 results (via ddg)
+**Step 43 — Research.** The model wanted to know: *"NWPX Northwest Pipe news August 2026"* → got 6 results (via gnews_rss)
 
-  - NWPX Q2 Deep Dive: Backlog Strength and Margin Gains Lead, Precast Recovery in Focus (https://finance.yahoo.com/markets/stocks/articles/nwpx-q2-deep-dive-backlog-095557573.html)
+  - NWPX Infrastructure Announces Second Quarter 2026 Financial Results - PR Newswire (https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbVUyenJtU3RRcldSY0ZxTEgyRk5qQjNUdkRzWU81WF8xUVQzZHBRSlNUU3lyVm9pQlEwQ1g2SDQySDdoSVBWbjNUMmJWOEpTb2I2ektxbTlhajY4RGltMmFCd2ZnNXRQZVVxRm1LMHh4YjRFcFJKaHNCMDVXMmlKMGZNUDlxbmQzZUdyTTd2R1B2cG1RX20yS05Zd3Q4c3NqaUc3U09ib0dpdjBjdFNJNUZ3Qm83V0FyYVNFbkRVeU4?oc=5)
 
-  - Northwest Pipe | Investors - Press Releases (https://investor.nwpx.com/press-releases)
+  - The Top 5 Analyst Questions From Northwest Pipe’s Q2 Earnings Call - StockStory (https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVTAyRnZ3TVJDeG1KRE9PeEg4UUpybUFvdmRHTFpTUTc3VHl2RDlkbUtjMTl4aWxjWjgtbkxXUDFOdl85Rm1taTZHUzVXcENCVjZSS3dWY2U1MmFNNWliNHhXZ1h0TmpZY2twU2JodmJBYkZpdmxkMUQ4N09PZzZRU20yRW45Vlh4dGk2c3VOa0hhekhIU050dHo2ak5mRXE3Y3BaNFBQTEdnQnBxQmFsYmU0dml1aTVrRUFwc1Q5d1psR0t4Snd3Yw?oc=5)
 
-  - NWPX Infrastructure, Inc. (NWPX) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/NWPX/)
+  - Northwest Pipe (NASDAQ:NWPX) Reports Bullish Q2 CY2026 - Yahoo Finance (https://news.google.com/rss/articles/CBMioAFBVV95cUxNZzZFRVRZeFVhV0pPQkh3aUpzU1p4TzBqdWs4RDBFRzBqWnRwN1pzS3I0MXNBUUlFN2s4VDBiU1lnVlNnVWhqWi1zRkNzOG5jZjFVV0VZNzQ1SkZIS2hCTTZCLWVFSUQ3Z0VrLUU5N2NkNlQ4WDVPa1VLSTFLTU5SNjJtT1pFYnBwclZwQ1A1Qk9jbC1sNHVZSnl6R3Z6VEF3?oc=5)
 
-**Step 44 — Research.** The model wanted to know: *"CF Industries CF stock news August 26 2026"* → got 6 results (via ddg)
+**Step 44 — Research.** The model wanted to know: *"CF Industries nitrogen fertilizer news August 2026"* → got 6 results (via ddg)
 
-  - 43,853 Shares in CF Industries Holdings, Inc. $CF Bought by Bank of Nova Scotia - Defense World (https://www.defenseworld.net/2026/08/26/43853-shares-in-cf-industries-holdings-inc-cf-bought-by-bank-of-nova-scotia.html)
+  - CF Industries raises mid-cycle EBITDA to $2.9 billion, sees ... (https://www.fertilizerdaily.com/20260817-cf-industries-ebitda-2026-mid-cycle-nitrogen-supply-tight/)
 
-  - CF Industries Holdings, Inc. (CF) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/CF/)
+  - CF Industries nearly doubles quarterly profit as nitrogen ... (https://www.fertilizerdaily.com/20260806-cf-industries-nearly-doubles-quarterly-profit-as-nitrogen-prices-rise/)
 
-  - CF Industries (CF) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/CF/)
+  - CF Industries (CF) Stock Price, News & Analysis - MarketBeatCF Industries (CF) Q2 2026 Earnings Call Transcript[CF Industries Holdings Q2 2026 Earnings Call] CF Industries ...CF Industries Q2 Earnings Call Highlights - MarketBeatKey Questions About Fertilizer and Its Price Answered | CF ... (https://www.marketbeat.com/stocks/NYSE/CF/)
 
-**Step 46 — Research.** The model wanted to know: *"Corteva CTVA Italian farmers seed supply news August 2026"* → got 6 results (via ddg)
+**Step 46 — Research.** The model wanted to know: *"Corteva CTVA raised guidance dropped 12% selloff August 2026"* → got 6 results (via ddg)
 
-  - Four firms control more than half of the world's seed supply. Italian farmers are fighting back and returning to the bartering system | Fortune (https://fortune.com/2026/08/25/bayer-corteva-firms-half-world-seed-supply-italian-farmers-banks/)
+  - Corteva Raised Guidance and Still Dropped 12%. Is the Selloff ... (https://www.tikr.com/blog/corteva-raised-guidance-and-still-dropped-12-is-the-selloff-overdone)
 
-  - Corteva, Inc. (CTVA) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/CTVA/)
+  - Corteva (CTVA) Stock Price, News & Analysis - MarketBeatCorteva (CTVA) Stock Price & OverviewEarnings call transcript: Corteva Q2 2026 beats EPS, stock ...Corteva (CTVA) Raised 2026 Guidance And Kept Its October ...CTVA News Today | Why did Corteva stock go up today?Corteva, Inc. (CTVA) Stock Price, News, Quote & History ... (https://www.marketbeat.com/stocks/NYSE/CTVA/)
 
-  - CTVA Stock Price, News & Analysis | Corteva (https://www.stocktitan.net/overview/CTVA/)
+  - Corteva (CTVA) Stock Price & OverviewEarnings call transcript: Corteva Q2 2026 beats EPS, stock ...Corteva (CTVA) Raised 2026 Guidance And Kept Its October ...CTVA News Today | Why did Corteva stock go up today?Corteva, Inc. (CTVA) Stock Price, News, Quote & History ... (https://stockanalysis.com/stocks/ctva/)
 
-**Step 47 — Research.** The model wanted to know: *"FMC Corp stock down August 2026 guidance cut"* → got 6 results (via ddg)
+**Step 47 — Research.** The model wanted to know: *"FMC Corp layoffs Mobile County revenue falling August 2026"* → got 6 results (via ddg)
 
-  - FMC (FMC) Cuts Outlook As Its Undervalued Narrative Faces A Fresh Test (https://finance.yahoo.com/markets/stocks/articles/fmc-fmc-cuts-outlook-undervalued-081440594.html)
+  - FMC Corp. to lay off 41 workers at Mobile County site as ... (https://we-news.com/us/fmc-corp-to-lay-off-41-workers-at-mobile-county-site-as-revenue-declines)
 
-  - Why FMC (FMC) Is Down 5.2% After Cutting 2026 Outlook And Posting Q2 Net Loss - Simply Wall St News (https://simplywall.st/stocks/us/materials/nyse-fmc/fmc/news/why-fmc-fmc-is-down-52-after-cutting-2026-outlook-and-postin/amp)
+  - FMC Corp. to lay off 41 at Mobile County site amid falling ... (https://www.al.com/business/2026/08/philadelphia-based-agricultural-science-laying-off-41-in-mobile-county-as-revenue-falls.html)
 
-  - FMC Corporation - Financials - Quarterly Results (https://investors.fmc.com/financials/quarterly-results/default.aspx)
+  - FMC Corp. Cutting 41 Jobs at Axis Plant in Mobile County (https://southalnews.com/fmc-corp-layoffs-41-axis-mobile-county-2026/)
 
 **Step 49 — Search budget exhausted.** Forced to conclude with what it already gathered.
