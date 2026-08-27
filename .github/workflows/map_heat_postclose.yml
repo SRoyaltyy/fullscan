@@ -66,6 +66,12 @@ jobs:
       - name: Install
         if: env.skip != 'yes'
         run: pip install -r requirements.txt
+      - name: Ensure OpenClaw chat classroom is open
+        if: env.skip != 'yes'
+        env:
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+        run: bash scripts/enable_openclaw_chat.sh
       - name: Build next-session tables and exhaustive captain baseline
         if: env.skip != 'yes'
         env:

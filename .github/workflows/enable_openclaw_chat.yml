@@ -9,12 +9,12 @@ permissions:
 jobs:
   enable:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           clean: false
-      - name: Enable chatCompletions and ping Grok
+      - name: Enable chatCompletions, start gateway if dead, ping Grok
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
