@@ -78,7 +78,6 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
@@ -91,6 +90,7 @@ jobs:
           set -uo pipefail
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           echo "et_hm=$ET_HM uid=$(id -u) user=$(id -un)"
+          echo "openclaw_token_set=$([ -n \"${OPENCLAW_TOKEN:-}\" ] && echo yes || echo no)"
           if command -v systemctl >/dev/null 2>&1 \
              && systemctl is-active --quiet fullscan-preopen.service; then
             echo "preopen service active — abort"
