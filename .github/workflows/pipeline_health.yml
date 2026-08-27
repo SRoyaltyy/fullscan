@@ -1,8 +1,9 @@
-name: Pipeline health (audit only)
+name: Pipeline health
 
-# Does NOT start OpenClaw, scrape, or research.
-# Reads disk + GitHub run list and grades every pre-open / post-close step:
-# missing, empty, garbled, timeout stub, carry-forward, wrong date, skipped.
+# Audits every step: missing, empty, garbled, timeout stub, carry-forward,
+# wrong date, skipped — plus book chain, outcomes, learning loop, Pages.
+# With fix=true it re-dispatches the workflow that owns each required FAIL
+# (guarded: <=1 dispatch/step/day, never when busy, never itself).
 
 on:
   schedule:
@@ -11,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: "all | runtime | preopen | postclose | scrape"
+        description: "all | runtime | preopen | postclose | scrape | afternoon"
         required: false
         default: "all"
       date:
@@ -26,10 +27,14 @@ on:
         description: "post-close file date (next session); empty = --date"
         required: false
         default: ""
+      fix:
+        description: "true = re-dispatch owning workflow for each required FAIL"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
-  actions: read
+  actions: write
 
 concurrency:
   group: pipeline-health
@@ -75,6 +80,7 @@ jobs:
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SOURCE" ] && ARGS+=(--source-date "$SOURCE")
           [ -n "$TARGET" ] && ARGS+=(--target-date "$TARGET")
+          [ "${{ github.event.inputs.fix }}" = "true" ] && ARGS+=(--fix)
           echo "CMD: python -m src.pipeline_health ${ARGS[*]}"
           python -m src.pipeline_health "${ARGS[@]}"
 
@@ -94,4 +100,5 @@ jobs:
           bash scripts/safe_git_push.sh \
             "chore: pipeline health audit [$(date -u +%F_%H%M)]" \
             01_daily/*_pipeline_health.md \
-            01_daily/*_pipeline_health.json
+            01_daily/*_pipeline_health.json \
+            data/health/

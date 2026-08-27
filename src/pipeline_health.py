@@ -48,10 +48,31 @@ LIVE_TOKEN_LEN = 48
 STALE_SECRET_LEN = 64
 
 # GitHub workflows that must have fired for a complete day.
+# (workflow file, human title, required, audit-date role)
+# role "preopen" = judged against the pre-open date; "postclose" = the night before.
 WORKFLOWS = [
-    ("finviz_preopen_scrape.yml", "Finviz pre-open scrape (GH-hosted Elite)"),
-    ("map_heat_postclose.yml", "Map heat captain research (post-close)"),
-    ("preopen_all.yml", "Pre-Open ALL"),
+    ("finviz_preopen_scrape.yml", "Finviz pre-open scrape (GH-hosted Elite)", True, "preopen"),
+    ("map_heat_postclose.yml", "Map heat captain research (post-close)", True, "postclose"),
+    ("preopen_all.yml", "Pre-Open ALL", True, "preopen"),
+    ("collect-news-rss.yml", "Collect: RSS News", False, "preopen"),
+    ("collect-news-newsapi.yml", "Collect: NewsAPI", False, "preopen"),
+    ("collect-reddit.yml", "Collect: Reddit", False, "preopen"),
+    ("collect-market-yfinance.yml", "Collect: yfinance Market Data", False, "preopen"),
+    ("collect-macro-fred.yml", "Collect: FRED Macro", False, "preopen"),
+    ("collect-catalyst.yml", "Collect: Catalyst", False, "preopen"),
+    ("insider_fetch.yml", "Insider Fetch (Finviz B2)", False, "preopen"),
+    ("events_daily.yml", "Event Scanner", True, "preopen"),
+    ("news_judge.yml", "News judge", True, "preopen"),
+    ("label_weather.yml", "Label + Weather", True, "preopen"),
+    ("ab_checklist.yml", "A+B1 Checklist", False, "preopen"),
+    ("catalyst_daily.yml", "Catalyst daily (bounded dossiers)", False, "preopen"),
+    ("daily_pipeline.yml", "Autonomous Daily Market Pipeline", True, "preopen"),
+    ("sector_daily.yml", "Sector Daily (auto)", True, "preopen"),
+    ("learn_cycle.yml", "Learn Cycle", True, "preopen"),
+    ("news_grade.yml", "News Actions Grader", True, "preopen"),
+    ("hit_board.yml", "HIT Board", False, "preopen"),
+    ("stock_book_all.yml", "Stock Book ALL (one-shot)", True, "preopen"),
+    ("deploy-dashboard.yml", "Deploy dashboard to Pages", False, "preopen"),
 ]
 
 
@@ -74,6 +95,7 @@ class Report:
     target_date: str
     generated_at: str
     checks: list[Check] = field(default_factory=list)
+    fix_actions: list[str] | None = None
 
     @property
     def n_fail(self) -> int:
@@ -338,13 +360,15 @@ def _models_status() -> str:
         return str(e)
 
 
-def _gh_runs(date: str) -> list[dict]:
+def _gh_runs(date_map: dict[str, str]) -> list[dict]:
+    """date_map: workflow file -> ET date to audit against."""
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
     if not token:
         return []
     out = []
-    for wf, title in WORKFLOWS:
+    for wf, title, _req, _role in WORKFLOWS:
+        date = date_map.get(wf, "")
         url = (f"https://api.github.com/repos/{repo}/actions/workflows/{wf}"
                f"/runs?per_page=10")
         req = urllib.request.Request(url, headers={
@@ -498,20 +522,20 @@ def check_clocks(report: Report, preopen_date: str, postclose_night: str) -> Non
     artifact(report, step="clock.ecs_clock", name="ECS clock file written",
              group="clock", path=clock, required=False, expected_date=preopen_date)
 
-    pairs = [
-        ("finviz_preopen_scrape.yml", "Finviz pre-open scrape (GH-hosted Elite)", preopen_date),
-        ("preopen_all.yml", "Pre-Open ALL", preopen_date),
-        ("map_heat_postclose.yml", "Map heat captain research (post-close)", postclose_night),
-    ]
+    pairs = [(wf, title, postclose_night if role == "postclose" else preopen_date,
+              req)
+             for wf, title, req, role in WORKFLOWS]
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     if not token:
         _add(report, step="clock.gh", name="GitHub Actions runs for this ET date",
              group="clock", status="WARN", required=False,
              detail="no GITHUB_TOKEN — cannot list runs")
         return
-    for wf, title, when in pairs:
-        rows = [r for r in _gh_runs(when) if r.get("wf") == wf]
-        row = rows[0] if rows else {"wf": wf, "title": title, "n": 0, "latest": None}
+    date_map = {wf: (postclose_night if role == "postclose" else preopen_date)
+                for wf, _t, _req, role in WORKFLOWS}
+    rows_by_wf = {r.get("wf"): r for r in _gh_runs(date_map)}
+    for wf, title, when, req in pairs:
+        row = rows_by_wf.get(wf) or {"wf": wf, "title": title, "n": 0, "latest": None}
         latest = row.get("latest") or {}
         if row.get("error"):
             _add(report, step=f"clock.{wf}", name=title, group="clock",
@@ -519,14 +543,15 @@ def check_clocks(report: Report, preopen_date: str, postclose_night: str) -> Non
             continue
         if not latest:
             _add(report, step=f"clock.{wf}", name=f"{title} ran on {when}",
-                 group="clock", status="FAIL", required=True,
+                 group="clock", status="FAIL" if req else "WARN", required=req,
                  detail=f"DID NOT RUN on {when} (n=0)")
             continue
         conc = latest.get("conclusion") or latest.get("status") or "?"
         st = "OK" if conc == "success" else (
-            "WARN" if conc in ("in_progress", "queued") else "FAIL")
+            "WARN" if conc in ("in_progress", "queued", None) else "FAIL")
         _add(report, step=f"clock.{wf}", name=f"{title} ran on {when}",
-             group="clock", status=st, required=True,
+             group="clock", status=st if req or st == "OK" else "WARN",
+             required=req,
              detail=f"n={row.get('n')} latest={conc} event={latest.get('event')}",
              path=latest.get("html_url") or "")
 
@@ -836,9 +861,270 @@ def check_preopen(report: Report, date: str) -> None:
              required=False, expected_date=date)
 
 
-def render(report: Report) -> str:
+# ---------------------------------------------------------------------------
+# F. Stock-book chain (afternoon) — the ranker and everything it eats
+# ---------------------------------------------------------------------------
+
+def _file_contains(path: Path, needle: str) -> bool:
+    try:
+        return needle in path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return False
+
+
+def check_bookchain(report: Report, date: str) -> None:
+    print(f"\n== F. STOCK BOOK CHAIN (date {date}) ==", flush=True)
+    artifact(report, step="book.finviz", name="INPUT: Finviz Elite export",
+             group="book", path=ROOT / "data" / "exports" / f"finviz_{date}.csv",
+             required=True, expected_date=date)
+    artifact(report, step="book.membership", name="Universe labels (segments)",
+             group="book",
+             path=ROOT / "data" / "universe" / f"{date}_membership.csv",
+             required=True, expected_date=date)
+    artifact(report, step="book.weather", name="Weather / regime JSON",
+             group="book",
+             path=ROOT / "01_daily" / "weather" / f"{date}_weather.json",
+             required=True, expected_date=date)
+    artifact(report, step="book.join", name="Join ranked CSV", group="book",
+             path=ROOT / "data" / "join" / f"{date}_ranked.csv",
+             required=True, expected_date=date)
+    artifact(report, step="book.input_health", name="Input-health preflight",
+             group="book",
+             path=ROOT / "data" / "stock_book" / f"{date}_input_health.json",
+             required=False, expected_date=date)
+    artifact(report, step="book.book_json", name="Stock book JSON (5 horizons)",
+             group="book",
+             path=ROOT / "data" / "stock_book" / f"{date}_stock_book.json",
+             required=True, expected_date=date)
+    artifact(report, step="book.book_md", name="Stock book MD", group="book",
+             path=ROOT / "01_daily" / f"{date}_stock_book.md",
+             required=True, expected_date=date)
+    bt = ROOT / "03_scoreboard" / "STOCK_BOOK_BACKTEST.md"
+    artifact(report, step="book.backtest", name="Stock book backtest (repo-level)",
+             group="book", path=bt, required=True, expected_date=date)
+    if bt.exists() and not _file_contains(bt, date):
+        _add(report, step="book.backtest_fresh", name="Backtest refreshed today",
+             group="book", status="WARN", required=False,
+             detail=f"no '{date}' inside backtest md")
+    artifact(report, step="book.paper_md", name="Paper trading summary",
+             group="book", path=ROOT / "03_scoreboard" / "PAPER_TRADING.md",
+             required=True, expected_date=date)
+    artifact(report, step="book.paper_curve", name="Paper equity curve CSV",
+             group="book", path=ROOT / "data" / "paper" / "equity_curve.csv",
+             required=True, expected_date=date)
+    artifact(report, step="book.dashboard", name="Dashboard HTML (Pages source)",
+             group="book", path=ROOT / "dashboard" / "index.html",
+             required=True, expected_date=date)
+    artifact(report, step="book.learn_ledger", name="BOOK_LEARN weight ledger",
+             group="book", path=ROOT / "03_scoreboard" / "BOOK_LEARN.md",
+             required=False, expected_date=date)
+    artifact(report, step="book.gaps", name="BOOK_GAPS blind-spot scan",
+             group="book", path=ROOT / "03_scoreboard" / "BOOK_GAPS.md",
+             required=False, expected_date=date)
+
+
+# ---------------------------------------------------------------------------
+# G. Outcome / reflect / grading (evening)
+# ---------------------------------------------------------------------------
+
+def check_outcomes(report: Report, date: str) -> None:
+    print(f"\n== G. OUTCOME / REFLECT / GRADING (date {date}) ==", flush=True)
+    gen = ROOT / "01_daily" / "general"
+    artifact(report, step="outcome.general", name="General outcome (graded call)",
+             group="outcome", path=gen / f"{date}_outcome.md",
+             required=True, expected_date=date)
+    artifact(report, step="outcome.reflect_trace", name="Reflect ran (trace)",
+             group="outcome", path=gen / f"{date}_reflect_trace.md",
+             required=False, expected_date=date)
+    cand_dir = ROOT / "02_lessons" / "candidate"
+    cand = list(cand_dir.glob(f"{date}*")) if cand_dir.is_dir() else []
+    _add(report, step="outcome.candidate", name="Candidate lesson filed today",
+         group="outcome", status="OK" if cand else "WARN", required=False,
+         detail=f"n={len(cand)}")
+    sec = ROOT / "01_daily" / "sectors" / date
+    n_ok = sum(1 for sector in FINVIZ_SECTORS
+               if (sec / f"{_slug(sector)}_outcome.md").exists()
+               and (sec / f"{_slug(sector)}_outcome.md").stat().st_size >= 8)
+    _add(report, step="outcome.sector_count", name="Sector outcomes graded (>=8/11)",
+         group="outcome", status="OK" if n_ok >= 8 else "FAIL", required=True,
+         detail=f"{n_ok}/11")
+    artifact(report, step="outcome.horizon_board",
+             name="HORIZON_BOARD (multi-timeframe grades)", group="outcome",
+             path=ROOT / "03_scoreboard" / "HORIZON_BOARD.md",
+             required=False, expected_date=date)
+
+
+# ---------------------------------------------------------------------------
+# H. Learning loop products
+# ---------------------------------------------------------------------------
+
+def check_learning(report: Report, date: str) -> None:
+    print(f"\n== H. LEARNING LOOP (date {date}) ==", flush=True)
+    lm = ROOT / "03_scoreboard" / "LEARNINGS.md"
+    artifact(report, step="learn.learnings", name="LEARNINGS.md digest",
+             group="learn", path=lm, required=True, expected_date=date)
+    if lm.exists() and not _file_contains(lm, date):
+        _add(report, step="learn.learnings_fresh", name="LEARNINGS.md refreshed today",
+             group="learn", status="WARN", required=False,
+             detail=f"no '{date}' inside")
+    artifact(report, step="learn.mutable_policy",
+             name="mutable_policy.md (machine injection)", group="learn",
+             path=ROOT / "00_grounding" / "mutable_policy.md",
+             required=True, expected_date=date)
+    artifact(report, step="learn.efficacy", name="LESSON_EFFICACY.md",
+             group="learn", path=ROOT / "03_scoreboard" / "LESSON_EFFICACY.md",
+             required=False, expected_date=date)
+    artifact(report, step="learn.book_policy",
+             name="book_policy.json (learned ranker weights)", group="learn",
+             path=ROOT / "00_grounding" / "book_policy.json",
+             required=False, expected_date=date)
+
+
+# ---------------------------------------------------------------------------
+# I. Live dashboard on GitHub Pages
+# ---------------------------------------------------------------------------
+
+PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/"
+
+
+def check_pages(report: Report, date: str) -> None:
+    print("\n== I. DASHBOARD ON GITHUB PAGES ==", flush=True)
+    try:
+        req = urllib.request.Request(PAGES_URL, headers={
+            "User-Agent": "fullscan-health",
+            "Cache-Control": "no-cache",
+        })
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            code = resp.getcode()
+            body = resp.read(300000).decode("utf-8", "ignore")
+        injected = "__DATA__" not in body
+        _add(report, step="pages.dashboard", name="Live dashboard reachable + data injected",
+             group="pages", status="OK" if (code == 200 and injected) else "FAIL",
+             required=True,
+             detail=f"HTTP {code}, data_injected={injected}", path=PAGES_URL)
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        _add(report, step="pages.dashboard", name="Live dashboard reachable + data injected",
+             group="pages", status="FAIL", required=True,
+             detail=str(e)[:160], path=PAGES_URL)
+
+
+# ---------------------------------------------------------------------------
+# J. FIX MODE — re-dispatch the workflow that owns each required FAIL
+# ---------------------------------------------------------------------------
+
+# step prefix -> owning workflow (None = not auto-fixable)
+FIX_MAP = [
+    ("postclose.", "map_heat_postclose.yml"),
+    ("scrape.", "finviz_preopen_scrape.yml"),
+    ("preopen.", "preopen_all.yml"),
+    ("book.", "stock_book_all.yml"),
+    ("outcome.general", "daily_pipeline.yml"),
+    ("outcome.reflect", "daily_pipeline.yml"),
+    ("outcome.candidate", "daily_pipeline.yml"),
+    ("outcome.sector", "sector_daily.yml"),
+    ("outcome.horizon", "daily_pipeline.yml"),
+    ("learn.", "learn_cycle.yml"),
+    ("pages.", "deploy-dashboard.yml"),
+]
+# clock.<workflow>.yml steps map onto themselves.
+FIX_STATE = ROOT / "data" / "health" / "fix_state.json"
+
+
+def _workflow_for_step(step: str) -> str | None:
+    if step.startswith("clock.") and step.endswith(".yml"):
+        wf = step[len("clock."):]
+        return None if wf == "pipeline_health.yml" else wf
+    for prefix, wf in FIX_MAP:
+        if step.startswith(prefix):
+            return wf
+    return None
+
+
+def _gh_request(path: str, method: str = "GET", payload: dict | None = None):
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
+    if not token:
+        return None, "no GITHUB_TOKEN"
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}{path}", method=method,
+        headers={"Authorization": f"Bearer {token}",
+                 "Accept": "application/vnd.github+json",
+                 "User-Agent": "fullscan-health"},
+        data=json.dumps(payload).encode() if payload is not None else None)
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return resp.getcode(), ""
+    except urllib.error.HTTPError as e:
+        return e.code, str(e)[:120]
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        return None, str(e)[:120]
+
+
+def _gh_workflow_busy(wf: str) -> bool:
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
+    if not token:
+        return True  # cannot verify -> do not risk a duplicate dispatch
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}/actions/workflows/{wf}/runs?per_page=5",
+        headers={"Authorization": f"Bearer {token}",
+                 "Accept": "application/vnd.github+json",
+                 "User-Agent": "fullscan-health"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            payload = json.loads(resp.read().decode())
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, OSError):
+        return True
+    return any(r.get("status") in ("queued", "in_progress")
+               for r in payload.get("workflow_runs") or [])
+
+
+def fix_failures(report: Report, date: str) -> list[str]:
+    """Guarded auto-fix: for every required FAIL with an owning workflow,
+    re-dispatch that workflow — at most once per step per day, never when
+    the workflow is already queued/running, never pipeline_health itself."""
+    actions: list[str] = []
+    state = _json(FIX_STATE) if FIX_STATE.exists() else None
+    if not isinstance(state, dict):
+        state = {}
+    today = dict(state.get(date) or {})
+    dispatched: set[str] = set()
+    for c in report.checks:
+        if c.status != "FAIL" or not c.required:
+            continue
+        wf = _workflow_for_step(c.step)
+        if not wf:
+            continue
+        if c.step in today:
+            print(f"[fix] {c.step}: already re-dispatched today — skip", flush=True)
+            continue
+        if wf in dispatched:
+            continue
+        if _gh_workflow_busy(wf):
+            print(f"[fix] {wf} queued/running — skip {c.step}", flush=True)
+            continue
+        code, err = _gh_request(f"/actions/workflows/{wf}/dispatches",
+                                method="POST", payload={"ref": "main"})
+        if code == 204:
+            dispatched.add(wf)
+            today[c.step] = datetime.now(ET).isoformat()
+            msg = f"re-dispatched {wf} (for {c.step})"
+            actions.append(msg)
+            print(f"[fix] {c.step} FAIL -> {msg}", flush=True)
+        else:
+            print(f"[fix] dispatch {wf} failed: {err or code}", flush=True)
+    state[date] = today
+    FIX_STATE.parent.mkdir(parents=True, exist_ok=True)
+    FIX_STATE.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    if not actions:
+        print("[fix] nothing actionable (no required FAIL with an owner, "
+              "or all guarded)", flush=True)
+    return actions
+
+
+def render(report: Report, fix_actions: list[str] | None = None) -> str:
     lines = [
-        f"# Pipeline health (audit only) — {report.job}",
+        f"# Pipeline health — {report.job}",
         "",
         f"pre-open date={report.date}  post-close source={report.source_date}  "
         f"post-close target={report.target_date}",
@@ -848,7 +1134,9 @@ def render(report: Report) -> str:
         "",
         "This job **does not run** research, scrape, or OpenClaw. "
         "It only checks whether each step already ran and whether the file is "
-        "empty / garbled / a timeout stub / a carry-forward / the wrong date.",
+        "empty / garbled / a timeout stub / a carry-forward / the wrong date."
+        + ("" if fix_actions is None else
+           " With `--fix`, required FAILs re-dispatch their owning workflow."),
         "",
         "| status | step | group | required | detail | path |",
         "| --- | --- | --- | --- | --- | --- |",
@@ -860,6 +1148,18 @@ def render(report: Report) -> str:
             f"| {c.status} | {c.name} | {c.group} | "
             f"{'yes' if c.required else 'no'} | {det} | `{path}` |"
         )
+    lines += [
+        "",
+        "## Fix actions",
+        "",
+    ]
+    if fix_actions is None:
+        lines.append("fix mode off (pass `--fix` to re-dispatch failing required steps)")
+    elif fix_actions:
+        lines += [f"- {a}" for a in fix_actions]
+    else:
+        lines.append("fix mode on — nothing actionable (guards: ≤1 dispatch/step/day, "
+                     "skip busy workflows, required FAILs only)")
     lines += [
         "",
         "## What each job is supposed to produce",
@@ -885,16 +1185,17 @@ def write_report(report: Report) -> None:
         "source_date": report.source_date, "target_date": report.target_date,
         "generated_at": report.generated_at, "ok": report.ok,
         "n_fail": report.n_fail, "n_warn": report.n_warn,
+        "fix_actions": report.fix_actions,
         "checks": [asdict(c) for c in report.checks],
     }
     js.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    md.write_text(render(report), encoding="utf-8")
+    md.write_text(render(report, report.fix_actions), encoding="utf-8")
     print(f"[health] wrote {md}", flush=True)
     print(f"[health] wrote {js}", flush=True)
 
 
 def run(job: str, date: str | None, source: str | None, target: str | None,
-        write: bool) -> Report:
+        write: bool, fix: bool = False) -> Report:
     today = date or _today()
     source = source or _prev_weekday(today)
     target = target or today
@@ -907,7 +1208,7 @@ def run(job: str, date: str | None, source: str | None, target: str | None,
         generated_at=datetime.now(ET).isoformat(),
     )
     print("=" * 72, flush=True)
-    print(f"  PIPELINE HEALTH (audit only)  job={job}", flush=True)
+    print(f"  PIPELINE HEALTH  job={job}  fix={'on' if fix else 'off'}", flush=True)
     print(f"  preopen={today}  postclose {source} → {target}", flush=True)
     print("=" * 72, flush=True)
     if job in ("all", "door", "runtime"):
@@ -920,9 +1221,19 @@ def run(job: str, date: str | None, source: str | None, target: str | None,
         check_postclose(report, source, target)
     if job in ("all", "preopen"):
         check_preopen(report, today)
+    if job in ("all", "afternoon"):
+        check_bookchain(report, today)
+        check_outcomes(report, today)
+        check_learning(report, today)
+        check_pages(report, today)
+    if fix:
+        report.fix_actions = fix_failures(report, today)
     print("\n== SUMMARY ==", flush=True)
     print(f"  {'PASS' if report.ok else 'FAIL'}  required_fails={report.n_fail}  "
           f"warns={report.n_warn}", flush=True)
+    if report.fix_actions:
+        for a in report.fix_actions:
+            print(f"  FIX: {a}", flush=True)
     if write:
         write_report(report)
     return report
@@ -931,14 +1242,19 @@ def run(job: str, date: str | None, source: str | None, target: str | None,
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--job", default="all",
-                    choices=["all", "runtime", "door", "preopen", "postclose", "scrape"])
+                    choices=["all", "runtime", "door", "preopen", "postclose",
+                             "scrape", "afternoon"])
     ap.add_argument("--date", default=None, help="pre-open session (ET today)")
     ap.add_argument("--source-date", default=None, help="completed session (post-close night)")
     ap.add_argument("--target-date", default=None,
                     help="next session (post-close file date); default = --date")
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--fix", action="store_true",
+                    help="re-dispatch the owning workflow for each required FAIL "
+                         "(guarded: <=1/step/day, never when busy, never self)")
     args = ap.parse_args()
-    report = run(args.job, args.date, args.source_date, args.target_date, args.write)
+    report = run(args.job, args.date, args.source_date, args.target_date,
+                 args.write, fix=args.fix)
     raise SystemExit(0 if report.ok else 1)
 
 
