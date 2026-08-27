@@ -1,6 +1,6 @@
 # Sector Board — 2026-08-26
 
-Generated: **2026-08-26T16:12:39.858108-04:00** (America/New_York)
+Generated: **2026-08-26T22:20:05.964204-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
@@ -15,17 +15,17 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 | Sector | ETF | Dir | Mag | Score | Conf | Actual% | Dir hit | Mag hit | MD |
 |--------|-----|-----|-----|-------|------|---------|---------|---------|----|
-| Basic Materials | XLB | up | flat | 2.00 | 0.45 | 0.13 | HIT | HIT | PO |
-| Communication Services | XLC | flat | flat | 0.45 | 0.45 | -0.49 | MISS | MISS | PO |
-| Consumer Cyclical | XLY | down | flat | -1.35 | 0.55 | -0.66 | HIT | MISS | PO |
-| Consumer Defensive | XLP | up | flat | 2.25 | 0.45 | -0.28 | MISS | HIT | PO |
+| Basic Materials | XLB | up | flat | 2.00 | 0.45 | 0.17 | HIT | HIT | PO |
+| Communication Services | XLC | flat | flat | 0.45 | 0.45 | -0.50 | MISS | MISS | PO |
+| Consumer Cyclical | XLY | down | flat | -1.35 | 0.55 | -0.67 | HIT | MISS | PO |
+| Consumer Defensive | XLP | up | flat | 2.25 | 0.45 | -0.29 | MISS | HIT | PO |
 | Energy | XLE | down | notable | -10.00 | 0.58 | 0.60 | MISS | MISS | PO |
-| Financial | XLF | up | mild | 4.28 | 0.50 | -0.10 | MISS | MISS | PO |
+| Financial | XLF | up | mild | 4.28 | 0.50 | -0.09 | MISS | MISS | PO |
 | Healthcare | XLV | — | — | — | — | — | — | — | — |
-| Industrials | XLI | flat | flat | 0.00 | 0.55 | 1.10 | MISS | MISS | PO |
-| Real Estate | XLRE | up | flat | 2.70 | 0.50 | -0.61 | MISS | MISS | PO |
-| Technology | XLK | down | mild | -5.85 | 0.55 | 0.63 | MISS | HIT | PO |
-| Utilities | XLU | down | mild | -3.15 | 0.50 | 0.44 | MISS | HIT | PO |
+| Industrials | XLI | flat | flat | 0.00 | 0.55 | 1.09 | MISS | MISS | PO |
+| Real Estate | XLRE | up | flat | 2.70 | 0.50 | -0.60 | MISS | MISS | PO |
+| Technology | XLK | down | mild | -5.85 | 0.55 | 0.61 | MISS | HIT | PO |
+| Utilities | XLU | down | mild | -3.15 | 0.50 | 0.46 | MISS | HIT | PO |
 
 ## Predicted leaders (up)
 
@@ -43,16 +43,16 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 ## Graded calls (post-outcome)
 
-- **Basic Materials**: pred up → actual 0.13% (up) — dir HIT, mag HIT
-- **Communication Services**: pred flat → actual -0.49% (down) — dir MISS, mag MISS
-- **Consumer Cyclical**: pred down → actual -0.66% (down) — dir HIT, mag MISS
-- **Consumer Defensive**: pred up → actual -0.28% (down) — dir MISS, mag HIT
+- **Basic Materials**: pred up → actual 0.17% (up) — dir HIT, mag HIT
+- **Communication Services**: pred flat → actual -0.50% (down) — dir MISS, mag MISS
+- **Consumer Cyclical**: pred down → actual -0.67% (down) — dir HIT, mag MISS
+- **Consumer Defensive**: pred up → actual -0.29% (down) — dir MISS, mag HIT
 - **Energy**: pred down → actual 0.60% (up) — dir MISS, mag MISS
-- **Financial**: pred up → actual -0.10% (down) — dir MISS, mag MISS
-- **Industrials**: pred flat → actual 1.10% (up) — dir MISS, mag MISS
-- **Real Estate**: pred up → actual -0.61% (down) — dir MISS, mag MISS
-- **Technology**: pred down → actual 0.63% (up) — dir MISS, mag HIT
-- **Utilities**: pred down → actual 0.44% (up) — dir MISS, mag HIT
+- **Financial**: pred up → actual -0.09% (flat) — dir MISS, mag MISS
+- **Industrials**: pred flat → actual 1.09% (up) — dir MISS, mag MISS
+- **Real Estate**: pred up → actual -0.60% (down) — dir MISS, mag MISS
+- **Technology**: pred down → actual 0.61% (up) — dir MISS, mag HIT
+- **Utilities**: pred down → actual 0.46% (up) — dir MISS, mag HIT
 
 ## Files
 
