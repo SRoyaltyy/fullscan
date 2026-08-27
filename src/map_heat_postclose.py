@@ -116,6 +116,34 @@ def _sector_prompt(target_date: str, sector: str, targets: list[dict],
     )
 
 
+def _align_openclaw_token() -> None:
+    """GitHub OPENCLAW_TOKEN is often stale vs the live gateway config."""
+    paths = [
+        os.path.expanduser("~/.openclaw/openclaw.json"),
+        "/home/gha/.openclaw/openclaw.json",
+    ]
+    token = ""
+    for path in paths:
+        try:
+            data = json.loads(Path(path).read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        gw = data.get("gateway") or {}
+        auth = gw.get("auth") if isinstance(gw.get("auth"), dict) else {}
+        token = str(auth.get("token") or gw.get("token")
+                    or auth.get("password") or "")
+        if token:
+            break
+    if token:
+        os.environ["OPENCLAW_TOKEN"] = token
+        config.OPENCLAW_TOKEN = token
+        print(f"[map-postclose] live OpenClaw token len={len(token)}")
+    if Path("/home/gha/.openclaw/openclaw.json").exists():
+        os.environ["OPENCLAW_GATEWAY_URL"] = "http://127.0.0.1:18789"
+        config.OPENCLAW_GATEWAY_URL = "http://127.0.0.1:18789"
+        print("[map-postclose] OPENCLAW_GATEWAY_URL -> http://127.0.0.1:18789")
+
+
 def _chat(system: str, user: str, target_date: str, stage: str,
           max_tokens: int = 24000) -> str:
     try:
@@ -168,6 +196,7 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
         except (OSError, json.JSONDecodeError):
             pass
 
+    _align_openclaw_token()
     config.require_llm()
     heat = load_heat(target_date)
     # Re-fetch the completed session in memory (do not overwrite its morning
@@ -196,9 +225,6 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
         obj = extract_json(raw) or {}
         clean, errs = validate_cards(
             obj.get("cards") or [], batch, min_coverage=0.75)
-        # One focused retry for omitted/invalid cards. This keeps the normal
-        # batch count at 11 but prevents a partial JSON array from silently
-        # becoming tomorrow's "exhaustive" baseline.
         done = {c["industry"] for c in clean}
         missing = [t for t in batch if t["industry"] not in done]
         if missing:
@@ -215,8 +241,6 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
         errors.extend(f"{sector}:{e}" for e in errs)
         print(f"[map-postclose] {sector}: {len(clean)}/{len(batch)} valid cards")
 
-    # Overall ≥90% coverage. Missing sectors are visible and fail the job; a
-    # three-card plausible-looking hallucination can never pass.
     required = int(len(targets) * 0.90 + 0.999)
     if len(cards) < required:
         raise SystemExit(
