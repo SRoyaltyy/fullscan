@@ -118,15 +118,19 @@ def _sector_prompt(target_date: str, sector: str, targets: list[dict],
 
 def _chat(system: str, user: str, target_date: str, stage: str,
           max_tokens: int = 24000) -> str:
-    return deepseek_client.chat(
-        [{"role": "system", "content": system},
-         {"role": "user", "content": user}],
-        model=config.MODEL_PREDICT, tools=True, max_tokens=max_tokens,
-        transcript_path=str(ROOT / "01_daily" / "_transcripts"
-                            / f"{target_date}_map_postclose_{stage}.json"),
-        trace_path=str(OUT / f"{target_date}_postclose_{stage}_trace.md"),
-        stage_label=f"MAP POSTCLOSE {stage} {target_date}",
-    )
+    try:
+        return deepseek_client.chat(
+            [{"role": "system", "content": system},
+             {"role": "user", "content": user}],
+            model=config.MODEL_PREDICT, tools=True, max_tokens=max_tokens,
+            transcript_path=str(ROOT / "01_daily" / "_transcripts"
+                                / f"{target_date}_map_postclose_{stage}.json"),
+            trace_path=str(OUT / f"{target_date}_postclose_{stage}_trace.md"),
+            stage_label=f"MAP POSTCLOSE {stage} {target_date}",
+        )
+    except Exception as e:  # noqa: BLE001 — one sector must not kill the night
+        print(f"[map-postclose] {stage} chat failed: {e}")
+        return ""
 
 
 def market_reaction(source_date: str) -> dict:
