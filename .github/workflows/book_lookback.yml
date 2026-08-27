@@ -37,7 +37,7 @@ concurrency:
 jobs:
   lookback:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -67,14 +67,14 @@ jobs:
             python -m src.lookback_picks
             python -m src.lookback_unweighted --top 15
           fi
-          echo "======== lookback head ========"
-          head -80 03_scoreboard/BOOK_LOOKBACK.md || true
-          echo "======== unweighted ========"
-          grep -n -A 80 "## Unweighted book" 03_scoreboard/BOOK_LOOKBACK.md || true
+          python -m src.lookback_unweighted --all --top 15
+          echo "======== unweighted all ========"
+          head -80 03_scoreboard/BOOK_UNWEIGHTED.md || true
       - name: Commit report
         run: |
           bash scripts/safe_git_push.sh \
             "auto: book lookback [${{ github.event.inputs.date || 'latest' }}]" \
             03_scoreboard/BOOK_LOOKBACK.md \
+            03_scoreboard/BOOK_UNWEIGHTED.md \
             data/stock_book/ \
             01_daily/

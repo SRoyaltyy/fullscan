@@ -1,4 +1,4 @@
-"""Re-rank one day's book with NO weights.
+"""Re-rank the book with NO weights.
 
 Standalone score = simple average of the six raw layers
 (join, sector, general, news, AB, peer). No mid-opp, no rebound,
@@ -9,6 +9,7 @@ Tape score = average of AB + peer only (the name-specific pair).
 Same buy gates as the live ranker so the 15-name lists are comparable.
 
   python -m src.lookback_unweighted --date 2026-08-20 --top 15
+  python -m src.lookback_unweighted --all --top 15
 """
 from __future__ import annotations
 
@@ -20,12 +21,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .book_learn import _load_panel, _select_buys, load_frame
+from .book_learn import _fwd_returns, _load_panel, _select_buys, load_frame
 from .book_lookback import BOOK_DIR, DAILY, SCORE, _jload, _parse_date, _tick
-from .stock_book import MAX_OPP_MCAP_M, MIN_OPP_MCAP_M
+from .stock_book import MIN_OPP_MCAP_M
 
 LAYERS = ("s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer")
 YF_H = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
+SUMMARY = SCORE / "BOOK_UNWEIGHTED.md"
 
 
 def _num(x, nd=2) -> str:
@@ -37,6 +39,10 @@ def _num(x, nd=2) -> str:
 
 def _fmt(v) -> str:
     return "n/a" if v is None else f"{v:+.1f}%"
+
+
+def _book_dates() -> list[str]:
+    return sorted({p.name[:10] for p in BOOK_DIR.glob("????-??-??_stock_book.csv")})
 
 
 def _yf_forwards(date: str, tickers: list[str]) -> dict[str, dict[str, float | None]]:
@@ -62,7 +68,7 @@ def _yf_forwards(date: str, tickers: list[str]) -> dict[str, dict[str, float | N
             progress=False,
         )
     except Exception as e:
-        print(f"[unweighted] yfinance failed: {e}")
+        print(f"[unweighted] yfinance failed {date}: {e}")
         return out
     if data is None or data.empty:
         return out
@@ -92,22 +98,59 @@ def _yf_forwards(date: str, tickers: list[str]) -> dict[str, dict[str, float | N
     return out
 
 
+def _panel_forwards(panel, date: str, tickers: list[str]) -> dict[str, dict[str, float | None]]:
+    tickers = [_tick(t) for t in tickers if _tick(t)]
+    out = {t: {h: None for h in YF_H} for t in tickers}
+    if panel is None:
+        return out
+    for h, n in YF_H.items():
+        try:
+            rets = _fwd_returns(panel, date, n)
+        except Exception:
+            rets = None
+        if rets is None:
+            continue
+        for t in tickers:
+            if t in rets.index and pd.notna(rets[t]):
+                out[t][h] = float(rets[t])
+    return out
+
+
+def _merge_fwd(*maps: dict) -> dict[str, dict[str, float | None]]:
+    out: dict[str, dict[str, float | None]] = {}
+    for m in maps:
+        for t, rec in (m or {}).items():
+            cur = out.setdefault(t, {h: None for h in YF_H})
+            for h in YF_H:
+                if cur[h] is None and rec.get(h) is not None:
+                    cur[h] = rec[h]
+    return out
+
+
 def _mean_fwd(rows: list[dict], h: str) -> float | None:
-    vals = []
-    for r in rows:
-        v = (r.get("fwd") or {}).get(h)
-        if v is not None:
-            vals.append(float(v))
+    vals = [float(r["fwd"][h]) for r in rows if (r.get("fwd") or {}).get(h) is not None]
     return float(np.mean(vals)) if vals else None
+
+
+def _hit_rate(rows: list[dict], h: str) -> float | None:
+    vals = [float(r["fwd"][h]) for r in rows if (r.get("fwd") or {}).get(h) is not None]
+    if not vals:
+        return None
+    return float(sum(1 for v in vals if v > 0) / len(vals))
 
 
 def _row_from_frame(df: pd.DataFrame, i: int, standalone: float, tape: float) -> dict:
     r = df.iloc[i]
+    book = r.get("score_1d")
+    try:
+        book_v = None if book is None or pd.isna(book) else round(float(book), 4)
+    except (TypeError, ValueError):
+        book_v = None
     return {
         "ticker": str(r["Ticker"]),
         "standalone": round(float(standalone), 4),
         "tape": round(float(tape), 4),
-        "book": None if pd.isna(r.get("score_1d")) else round(float(r.get("score_1d")), 4),
+        "book": book_v,
         "s_join": float(r.get("s_join") or 0),
         "s_sector": float(r.get("s_sector") or 0),
         "s_general": float(r.get("s_general") or 0),
@@ -115,13 +158,29 @@ def _row_from_frame(df: pd.DataFrame, i: int, standalone: float, tape: float) ->
         "s_ab": float(r.get("s_ab") or 0),
         "s_peer": float(r.get("s_peer") or 0),
         "s_opp": float(r.get("s_opp") or 0),
-        "size": r.get("size"),
-        "sector": r.get("sector"),
+        "size": None if pd.isna(r.get("size")) else r.get("size"),
+        "sector": None if pd.isna(r.get("sector")) else r.get("sector"),
         "fwd": {},
     }
 
 
-def run(date: str | None = None, top_n: int = 15) -> dict:
+def _live_buys(date: str, df: pd.DataFrame, top_n: int) -> list[str]:
+    book = _jload("data", "stock_book", f"{date}_stock_book.json") or {}
+    live = [
+        _tick(r.get("ticker"))
+        for r in ((book.get("books") or {}).get("1d") or {}).get("buy") or []
+    ]
+    if live:
+        return [t for t in live if t]
+    if "score_1d" in df.columns:
+        score = pd.to_numeric(df["score_1d"], errors="coerce").fillna(-999).to_numpy()
+        idx = _select_buys(df, score, top_n)
+        return [str(df.iloc[i]["Ticker"]) for i in idx]
+    return []
+
+
+def run(date: str | None = None, top_n: int = 15, write_lookback_md: bool = True,
+        panel=None) -> dict:
     date = _parse_date(date)
     df = load_frame(date)
     if df is None or df.empty:
@@ -144,19 +203,13 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
 
     stand_idx = _select_buys(df, standalone, top_n)
     tape_idx = _select_buys(df, tape, top_n)
-
-    book = _jload("data", "stock_book", f"{date}_stock_book.json") or {}
-    live_buys = [
-        _tick(r.get("ticker"))
-        for r in ((book.get("books") or {}).get("1d") or {}).get("buy") or []
-    ]
+    live_buys = _live_buys(date, df, top_n)
     live_set = set(live_buys)
 
     stand_rows = [_row_from_frame(df, i, standalone[i], tape[i]) for i in stand_idx]
     tape_rows = [_row_from_frame(df, i, standalone[i], tape[i]) for i in tape_idx]
-
-    live_rows = []
     by_t = {str(t).upper(): i for i, t in enumerate(df["Ticker"].astype(str))}
+    live_rows = []
     for t in live_buys:
         i = by_t.get(t)
         if i is None:
@@ -164,7 +217,6 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
         live_rows.append(_row_from_frame(df, i, standalone[i], tape[i]))
 
     need = [r["ticker"] for r in stand_rows + tape_rows + live_rows]
-    # also rank where SLS-like names land
     watch = ["SLS", "ARCT", "CYPH", "ASST", "BTDR", "VIRT", "FIGR", "ELF", "AUPH"]
     watch_rows = []
     for t in watch:
@@ -174,10 +226,10 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
         watch_rows.append(_row_from_frame(df, i, standalone[i], tape[i]))
         need.append(t)
 
-    yf = _yf_forwards(date, need)
+    fwd = _merge_fwd(_panel_forwards(panel, date, need), _yf_forwards(date, need))
     for rows in (stand_rows, tape_rows, live_rows, watch_rows):
         for r in rows:
-            got = yf.get(r["ticker"]) or {}
+            got = fwd.get(r["ticker"]) or {}
             r["fwd"] = {
                 h: (None if got.get(h) is None else round(float(got[h]) * 100, 2))
                 for h in YF_H
@@ -187,6 +239,7 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
     tape_set = {r["ticker"] for r in tape_rows}
     payload = {
         "date": date,
+        "n_universe": int(len(df)),
         "definition": {
             "standalone": "mean(join, sector, general, news, AB, peer) — no weights, no opp/rebound",
             "tape": "mean(AB, peer) — name-specific only",
@@ -207,14 +260,17 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
             "standalone": {h: _mean_fwd(stand_rows, h) for h in YF_H},
             "tape": {h: _mean_fwd(tape_rows, h) for h in YF_H},
         },
+        "hit_rate": {
+            "live": {h: _hit_rate(live_rows, h) for h in YF_H},
+            "standalone": {h: _hit_rate(stand_rows, h) for h in YF_H},
+            "tape": {h: _hit_rate(tape_rows, h) for h in YF_H},
+        },
     }
 
-    # universe ranks for watch names
     order_stand = np.argsort(-standalone)
     order_tape = np.argsort(-tape)
     rank_stand = {str(df.iloc[i]["Ticker"]): n for n, i in enumerate(order_stand, 1)}
     rank_tape = {str(df.iloc[i]["Ticker"]): n for n, i in enumerate(order_tape, 1)}
-    # gated rank = position among names that pass the $400M walk
     for r in watch_rows:
         r["rank_standalone_raw"] = rank_stand.get(r["ticker"])
         r["rank_tape_raw"] = rank_tape.get(r["ticker"])
@@ -232,6 +288,13 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
     BOOK_DIR.mkdir(parents=True, exist_ok=True)
     out_js.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
 
+    if write_lookback_md:
+        _write_lookback_block(date, payload)
+    print(f"[unweighted] {date} live={len(live_rows)} stand={len(stand_rows)} tape={len(tape_rows)}")
+    return payload
+
+
+def _write_lookback_block(date: str, payload: dict) -> None:
     block = render(payload)
     for path in (SCORE / "BOOK_LOOKBACK.md", DAILY / f"{date}_lookback.md"):
         if not path.exists():
@@ -249,15 +312,18 @@ def run(date: str | None = None, top_n: int = 15) -> dict:
         else:
             text = text.rstrip() + "\n\n" + block
         path.write_text(text, encoding="utf-8")
-    print(block)
-    print(f"[unweighted] wrote {out_js}")
-    return payload
 
 
 def _avg_cell(d: dict | None, h: str) -> str:
     if not d or d.get(h) is None:
         return "n/a"
     return f"{d[h]:+.2f}%"
+
+
+def _pct_cell(d: dict | None, h: str) -> str:
+    if not d or d.get(h) is None:
+        return "n/a"
+    return f"{100 * d[h]:.0f}%"
 
 
 def _table(rows: list[dict], score_key: str) -> list[str]:
@@ -327,12 +393,118 @@ def render(p: dict) -> str:
     return "\n".join(L) + "\n"
 
 
+def _grand_mean(days: list[dict], book: str, h: str) -> float | None:
+    vals = []
+    for d in days:
+        v = ((d.get("avg_fwd") or {}).get(book) or {}).get(h)
+        if v is not None:
+            vals.append(float(v))
+    return float(np.mean(vals)) if vals else None
+
+
+def render_all(days: list[dict]) -> str:
+    L = [
+        "# Unweighted ranking — every book date",
+        "",
+        "Same method as the 20 Aug experiment, run on every `*_stock_book.csv`.",
+        "",
+        "- **live** = weighted book the ranker actually printed (1d BUY, top 15, gates on)",
+        "- **standalone** = equal mean of join/sector/gen/news/AB/peer. No weights, no opp.",
+        "- **tape** = mean(AB, peer) only.",
+        "",
+        "Returns are close-to-close after the signal date. `n/a` = that horizon has not traded yet.",
+        "",
+        "## Scoreboard",
+        "",
+        "| Date | live 1d | stand 1d | tape 1d | live 1w | stand 1w | tape 1w | stand overlap | tape overlap |",
+        "|------|---------|----------|---------|---------|----------|---------|---------------|--------------|",
+    ]
+    for d in days:
+        avg = d.get("avg_fwd") or {}
+        L.append(
+            f"| {d['date']} | {_avg_cell(avg.get('live'), '1d')} | "
+            f"{_avg_cell(avg.get('standalone'), '1d')} | {_avg_cell(avg.get('tape'), '1d')} | "
+            f"{_avg_cell(avg.get('live'), '1w')} | {_avg_cell(avg.get('standalone'), '1w')} | "
+            f"{_avg_cell(avg.get('tape'), '1w')} | "
+            f"{len(d.get('overlap_standalone_vs_live') or [])}/15 | "
+            f"{len(d.get('overlap_tape_vs_live') or [])}/15 |"
+        )
+    L += [
+        "",
+        "## Mean across dates that have that horizon",
+        "",
+        "| Book | avg 1d | avg 1w | 1d win rate | 1w win rate |",
+        "|------|--------|--------|-------------|-------------|",
+    ]
+    for book, label in (("live", "live weighted"), ("standalone", "standalone equal-mean"), ("tape", "tape AB+peer")):
+        wr1 = []
+        wrw = []
+        for d in days:
+            h1 = ((d.get("hit_rate") or {}).get(book) or {}).get("1d")
+            hw = ((d.get("hit_rate") or {}).get(book) or {}).get("1w")
+            if h1 is not None:
+                wr1.append(h1)
+            if hw is not None:
+                wrw.append(hw)
+        L.append(
+            f"| {label} | {_fmt(_grand_mean(days, book, '1d'))} | "
+            f"{_fmt(_grand_mean(days, book, '1w'))} | "
+            f"{(f'{100*float(np.mean(wr1)):.0f}%' if wr1 else 'n/a')} | "
+            f"{(f'{100*float(np.mean(wrw)):.0f}%' if wrw else 'n/a')} |"
+        )
+    L += ["", "## Per-day lists", ""]
+    for d in days:
+        L += [
+            f"### {d['date']}",
+            "",
+            f"standalone entered: {', '.join(d.get('entered_standalone') or []) or '—'}",
+            f"standalone dropped: {', '.join(d.get('dropped_standalone') or []) or '—'}",
+            "",
+            "**live**",
+            "",
+            *_table(d.get("live_buy") or [], "book"),
+            "",
+            "**standalone**",
+            "",
+            *_table(d.get("standalone_buy") or [], "standalone"),
+            "",
+            "**tape**",
+            "",
+            *_table(d.get("tape_buy") or [], "tape"),
+            "",
+        ]
+    return "\n".join(L) + "\n"
+
+
+def run_all(top_n: int = 15) -> list[dict]:
+    dates = _book_dates()
+    if not dates:
+        raise SystemExit("no data/stock_book/*_stock_book.csv")
+    panel = _load_panel()
+    days = []
+    for d in dates:
+        try:
+            days.append(run(date=d, top_n=top_n, write_lookback_md=False, panel=panel))
+        except SystemExit as e:
+            print(f"[unweighted] skip {d}: {e}")
+    SCORE.mkdir(parents=True, exist_ok=True)
+    text = render_all(days)
+    SUMMARY.write_text(text, encoding="utf-8")
+    print(text[:4000])
+    print(f"[unweighted] wrote {SUMMARY} for {len(days)} dates: {dates}")
+    return days
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--top", type=int, default=15)
+    ap.add_argument("--all", action="store_true")
     args = ap.parse_args()
-    run(date=args.date, top_n=args.top)
+    if args.all:
+        run_all(top_n=args.top)
+    else:
+        run(date=args.date, top_n=args.top)
 
 
 if __name__ == "__main__":
