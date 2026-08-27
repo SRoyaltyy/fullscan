@@ -8,12 +8,13 @@ are the pre-09:30 packet; join/AB/weather/peer may land later the same day):
      whether ANY ranker input fired (news, digest, volume, AB, peers, heat,
      join, catalyst). Blind = the move happened on information the book
      did not carry.
+  3. SIGNAL BOARD — one colored box per input: good / neutral / bad / missing.
 
 No LLM. Reads committed artifacts + the local price store.
 
 CLI:
   python -m src.book_lookback --date 2026-08-20
-  python -m src.book_lookback --date 20/08 --tickers NVDA,AAPL --min-gain 3 --top 20
+  python -m src.book_lookback --date 20/08 --tickers NVDA,AAPL --min-gain 5 --top 20
 """
 from __future__ import annotations
 
@@ -40,6 +41,22 @@ LOOK_H = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
 CATCH_EPS = 0.05
 RELVOL_SPIKE = 1.5
 SPECIFIC = ("s_news", "s_ab", "s_peer", "s_heat")
+
+BOX_ICON = {"good": "🟢", "bad": "🔴", "neutral": "🟡", "missing": "⬛"}
+BOX_COLS = (
+    ("join", "join"),
+    ("sector", "sect"),
+    ("gen", "gen"),
+    ("news", "news"),
+    ("digest", "dig"),
+    ("judge", "jdg"),
+    ("ab", "AB"),
+    ("peer", "peer"),
+    ("heat", "heat"),
+    ("vol", "vol"),
+    ("catal", "cat"),
+    ("buy", "buy"),
+)
 
 
 def _parse_date(raw: str | None) -> str:
@@ -84,6 +101,94 @@ def _csv(path: Path) -> pd.DataFrame:
 
 def _tick(s) -> str:
     return str(s or "").strip().upper()
+
+
+def _polarity(x, eps: float = CATCH_EPS) -> str:
+    if x is None:
+        return "missing"
+    try:
+        v = float(x)
+    except (TypeError, ValueError):
+        return "missing"
+    if v >= eps:
+        return "good"
+    if v <= -eps:
+        return "bad"
+    return "neutral"
+
+
+def _missing_layers(inventory: list[dict] | None) -> dict[str, bool]:
+    found = {}
+    for row in inventory or []:
+        found[str(row.get("name") or "")] = bool(row.get("found"))
+    heat_ok = found.get("Map heat research") or found.get("Captain research") or found.get("Map heat tables")
+    return {
+        "news": not found.get("News parse + actions", True),
+        "judge": not found.get("News judge", True),
+        "digest": not found.get("Finviz daily digest", True),
+        "heat": not heat_ok,
+        "catalyst": not found.get("Catalyst dossiers", False),
+        "finviz": not found.get("Finviz Elite export", True),
+    }
+
+
+def _boxes(signals: dict, ev: dict | None, in_buy: bool,
+          missing: dict | None) -> dict[str, str]:
+    s = signals or {}
+    ev = ev or {}
+    miss = missing or {}
+    heat = ev.get("heat") or {}
+    cat = ev.get("catalyst")
+    fv = ev.get("finviz") or {}
+    out = {
+        "join": _polarity(s.get("s_join")),
+        "sector": _polarity(s.get("s_sector")),
+        "gen": _polarity(s.get("s_general")),
+        "news": "missing" if miss.get("news") else _polarity(s.get("s_news")),
+        "ab": _polarity(s.get("s_ab")),
+        "peer": _polarity(s.get("s_peer")),
+    }
+    if miss.get("heat"):
+        out["heat"] = "missing"
+    elif heat.get("boost") == "veto":
+        out["heat"] = "bad"
+    elif heat.get("captain") or heat.get("boost") == "opportunity":
+        out["heat"] = "good"
+    else:
+        out["heat"] = _polarity(s.get("s_heat"))
+    if miss.get("digest"):
+        out["digest"] = "missing"
+    elif ev.get("digest"):
+        out["digest"] = "good"
+    else:
+        out["digest"] = "neutral"
+    if miss.get("judge"):
+        out["judge"] = "missing"
+    else:
+        out["judge"] = _polarity(ev.get("judge_tilt")) if ev.get("judge_tilt") is not None else "neutral"
+    if miss.get("catalyst"):
+        out["catal"] = "missing"
+    elif cat:
+        out["catal"] = _polarity(cat.get("net_signal"))
+    else:
+        out["catal"] = "neutral"
+    rel = fv.get("relvol")
+    if miss.get("finviz") and rel is None:
+        out["vol"] = "missing"
+    elif rel is None:
+        out["vol"] = "neutral"
+    elif rel >= RELVOL_SPIKE:
+        out["vol"] = "good"
+    elif rel < 0.7:
+        out["vol"] = "bad"
+    else:
+        out["vol"] = "neutral"
+    out["buy"] = "good" if in_buy else "neutral"
+    return out
+
+
+def _icon(kind: str) -> str:
+    return BOX_ICON.get(kind, BOX_ICON["missing"])
 
 
 def _finviz_row(date: str, ticker: str) -> dict:
@@ -320,7 +425,8 @@ def _frame_row(frame: pd.DataFrame | None, ticker: str) -> pd.Series | None:
 
 
 def gather_card(date: str, ticker: str, frame: pd.DataFrame | None,
-                book: dict | None, fwd: dict[str, float | None]) -> dict:
+                book: dict | None, fwd: dict[str, float | None],
+                missing: dict | None = None) -> dict:
     ticker = _tick(ticker)
     row = _frame_row(frame, ticker)
     evidence = {
@@ -333,6 +439,7 @@ def gather_card(date: str, ticker: str, frame: pd.DataFrame | None,
     }
     place = _book_placement(book, ticker)
     cls = _classify(row, place, evidence)
+    sig = _signals(row)
     return {
         "ticker": ticker,
         "date": date,
@@ -341,7 +448,8 @@ def gather_card(date: str, ticker: str, frame: pd.DataFrame | None,
         "sector": None if row is None else row.get("sector"),
         "industry": None if row is None else row.get("industry"),
         "size": None if row is None else row.get("size"),
-        "signals": _signals(row),
+        "signals": sig,
+        "boxes": _boxes(sig, evidence, bool(place.get("in_buy")), missing),
         "placement": place,
         "fwd_pct": {h: (None if v is None else round(v * 100, 2)) for h, v in fwd.items()},
         "evidence": evidence,
@@ -366,7 +474,8 @@ def _fwd_map(panel, date: str, ticker: str) -> dict[str, float | None]:
 
 
 def winner_scan(date: str, frame: pd.DataFrame | None, book: dict | None,
-                panel, min_gain: float, top: int) -> dict[str, list[dict]]:
+                panel, min_gain: float, top: int,
+                missing: dict | None = None) -> dict[str, list[dict]]:
     if frame is None or panel is None:
         return {}
     buys = set()
@@ -377,6 +486,8 @@ def winner_scan(date: str, frame: pd.DataFrame | None, book: dict | None,
     out: dict[str, list[dict]] = {}
     thresh = min_gain / 100.0
     for h, n in LOOK_H.items():
+        # 5% per session: 1d=5, 2d=10, 3d=15, 1w=25 when min_gain=5
+        need = thresh * n
         rets = _fwd_returns(panel, date, n)
         if rets is None:
             out[h] = []
@@ -384,7 +495,7 @@ def winner_scan(date: str, frame: pd.DataFrame | None, book: dict | None,
         f = frame.set_index("Ticker", drop=False)
         f["fwd"] = rets.reindex(f.index)
         f = f.dropna(subset=["fwd"])
-        movers = f[f["fwd"] >= thresh].sort_values("fwd", ascending=False).head(top)
+        movers = f[f["fwd"] >= need].sort_values("fwd", ascending=False).head(top)
         rows = []
         for _, r in movers.iterrows():
             t = _tick(r["Ticker"])
@@ -398,6 +509,7 @@ def winner_scan(date: str, frame: pd.DataFrame | None, book: dict | None,
             }
             place = {"in_buy": [h] if t in buys else [], "in_sell": []}
             cls = _classify(r, place, ev)
+            sig = _signals(r)
             fired = []
             for c in SPECIFIC:
                 if abs(float(r.get(c) or 0)) >= CATCH_EPS:
@@ -422,7 +534,9 @@ def winner_scan(date: str, frame: pd.DataFrame | None, book: dict | None,
                 "size": r.get("size"),
                 "in_buy_book": t in buys,
                 "fired": fired,
-                "signals": _signals(r),
+                "signals": sig,
+                "boxes": _boxes(sig, ev, t in buys, missing),
+                "digest": (ev.get("digest") or [])[:2],
             })
         out[h] = rows
     return out
@@ -450,17 +564,39 @@ def _inventory(date: str) -> list[dict]:
     return rows
 
 
+def _md_board(rows: list[dict]) -> list[str]:
+    if not rows:
+        return []
+    heads = " | ".join(["Ticker", "fwd"] + [lab for _, lab in BOX_COLS])
+    bars = "|".join(["---"] * (2 + len(BOX_COLS)))
+    L = [
+        "| " + heads + " |",
+        "|" + bars + "|",
+    ]
+    for r in rows:
+        boxes = r.get("boxes") or {}
+        cells = [_icon(boxes.get(key, "missing")) for key, _ in BOX_COLS]
+        L.append(
+            f"| {r['ticker']} | {r['fwd_pct']:+.1f}% | " + " | ".join(cells) + " |"
+        )
+    L.append("")
+    return L
+
+
 def _md_card(c: dict) -> list[str]:
     s = c["signals"]
     ev = c["evidence"]
     fv = ev.get("finviz") or {}
     heat = ev.get("heat") or {}
     na = ev.get("news_actions")
+    boxes = c.get("boxes") or {}
     L = [
         f"### {c['ticker']} · {c.get('size') or '?'} · {c.get('sector') or '?'}",
         "",
         f"**class: `{c['class']}`** · in universe: {c['in_universe']} · "
         f"buy books: {', '.join(c['placement'].get('in_buy') or []) or '—'}",
+        "",
+        " ".join(f"{_icon(boxes.get(k, 'missing'))}{lab}" for k, lab in BOX_COLS),
         "",
         "| 1d | 2d | 3d | 1w |",
         "|----|----|----|----|",
@@ -520,11 +656,15 @@ def _md_card(c: dict) -> list[str]:
 
 
 def render(date: str, cards: list[dict], winners: dict, inventory: list[dict],
-           notes: list[str]) -> str:
+           notes: list[str], min_gain: float = 5.0) -> str:
     L = [
         f"# Book lookback — {date}",
         "",
         f"_Generated {datetime.now(ET).isoformat()}_",
+        "",
+        f"Winner bar: **{min_gain:g}% per session** "
+        f"(1d ≥ {min_gain:g}% · 2d ≥ {min_gain*2:g}% · "
+        f"3d ≥ {min_gain*3:g}% · 1w ≥ {min_gain*5:g}%).",
         "",
         "Question: **on this trading day, before 09:30 ET, what did the pipeline",
         "that feeds the Stock Book Ranker know about a name — and for names that",
@@ -539,6 +679,9 @@ def render(date: str, cards: list[dict], winners: dict, inventory: list[dict],
         "fired but the name was not in a buy book · **gated_out** = micro / <$400M",
         "· **blind** = no ticker-specific signal (news, AB, peers, heat, digest,",
         "catalyst, volume spike).",
+        "",
+        "Boxes: 🟢 good (helped / fired bullish) · 🟡 neutral (present, flat) · "
+        "🔴 bad (fired against the name) · ⬛ missing (that day's file was not there).",
         "",
     ]
     for n in notes:
@@ -561,7 +704,8 @@ def render(date: str, cards: list[dict], winners: dict, inventory: list[dict],
     L += ["", "## Winners — did the ranker see *something*?", ""]
     for h in LOOK_H:
         rows = winners.get(h) or []
-        L.append(f"### {h} (next {LOOK_H[h]} session(s))")
+        need = min_gain * LOOK_H[h]
+        L.append(f"### {h} (next {LOOK_H[h]} session(s), bar {need:g}%)")
         L.append("")
         if not rows:
             L.append("_No realized winners at this gain threshold (or prices not in yet)._")
@@ -570,10 +714,11 @@ def render(date: str, cards: list[dict], winners: dict, inventory: list[dict],
         n_blind = sum(1 for r in rows if r["class"] == "blind")
         n_buy = sum(1 for r in rows if r["in_buy_book"])
         L.append(
-            f"{len(rows)} names ≥ threshold · {n_buy} already in a buy book · "
+            f"{len(rows)} names ≥ {need:g}% · {n_buy} already in a buy book · "
             f"**{n_blind} blind**."
         )
         L.append("")
+        L += _md_board(rows)
         L.append("| Ticker | fwd% | class | size | sector | what fired |")
         L.append("|--------|------|-------|------|--------|------------|")
         for r in rows:
@@ -595,7 +740,7 @@ def render(date: str, cards: list[dict], winners: dict, inventory: list[dict],
 
 
 def run(date: str | None = None, tickers: list[str] | None = None,
-        min_gain: float = 3.0, top: int = 20) -> dict:
+        min_gain: float = 5.0, top: int = 20) -> dict:
     date = _parse_date(date)
     tickers = [_tick(t) for t in (tickers or []) if _tick(t)]
     notes = []
@@ -609,15 +754,17 @@ def run(date: str | None = None, tickers: list[str] | None = None,
     panel = _load_panel()
     if panel is None:
         notes.append("Price store missing — forward returns will be n/a.")
+    inventory = _inventory(date)
+    missing = _missing_layers(inventory)
     cards = []
     for t in tickers:
-        cards.append(gather_card(date, t, frame, book, _fwd_map(panel, date, t)))
-    winners = winner_scan(date, frame, book, panel, min_gain, top) if frame is not None else {}
-    inventory = _inventory(date)
+        cards.append(gather_card(date, t, frame, book, _fwd_map(panel, date, t), missing))
+    winners = winner_scan(date, frame, book, panel, min_gain, top, missing) if frame is not None else {}
     payload = {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
         "min_gain_pct": min_gain,
+        "per_session": True,
         "notes": notes,
         "inventory": inventory,
         "cards": cards,
@@ -632,7 +779,7 @@ def run(date: str | None = None, tickers: list[str] | None = None,
     SCORE.mkdir(parents=True, exist_ok=True)
     js = BOOK_DIR / f"{date}_lookback.json"
     js.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
-    md = render(date, cards, winners, inventory, notes)
+    md = render(date, cards, winners, inventory, notes, min_gain=min_gain)
     (DAILY / f"{date}_lookback.md").write_text(md, encoding="utf-8")
     (SCORE / "BOOK_LOOKBACK.md").write_text(md, encoding="utf-8")
     print(md[:8000])
@@ -645,8 +792,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None, help="YYYY-MM-DD or DD/MM")
     ap.add_argument("--tickers", default="", help="comma-separated, optional")
-    ap.add_argument("--min-gain", type=float, default=3.0,
-                    help="winner threshold in percent (default 3)")
+    ap.add_argument("--min-gain", type=float, default=5.0,
+                    help="winner threshold percent PER SESSION (default 5)")
     ap.add_argument("--top", type=int, default=20)
     args = ap.parse_args()
     tickers = [t.strip() for t in args.tickers.split(",") if t.strip()]
