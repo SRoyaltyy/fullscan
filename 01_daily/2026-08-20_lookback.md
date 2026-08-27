@@ -1,6 +1,6 @@
 # Book lookback — 2026-08-20
 
-_Generated 2026-08-27T02:44:57.759580-04:00_
+_Generated 2026-08-27T06:04:46.547908-04:00_
 
 Question: **on this trading day, before 09:30 ET, what did the pipeline
 that feeds the Stock Book Ranker know about a name — and for names that
@@ -43,6 +43,309 @@ catalyst, volume spike).
 | Map heat tables | NO | pre-open overlay / post-close tables |
 | Captain research | NO | s_heat captains — missing → bootstrap stub |
 | Stock book CSV | yes | ranker snapshot (usually written after the open) |
+
+## Requested tickers
+
+### SLS · mid · Healthcare
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +15.4% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | +0.45 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.64 | afternoon |
+| peer RS | +0.95 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.28 | labels |
+
+Ranker reasons: `join=+0.45; gen1d=+0.47; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.95; mid_opp=+0.28`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=0.88 spike=False (finviz_2026-08-20.csv)
+
+### HOOD · large · Financial
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +13.7% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | +0.90 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.36 | afternoon |
+| peer RS | -0.64 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.07 | labels |
+
+Ranker reasons: `join=+0.90; gen1d=+0.47; ab=+0.36; LAG,peers↑,ind↓; peer=-0.64; mid_opp=+0.07`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=1.36 spike=False (finviz_2026-08-20.csv)
+
+### ARCT · small · Healthcare
+
+**class: `gated_out`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +22.4% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | +0.04 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.64 | afternoon |
+| peer RS | +1.00 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.40 | labels |
+
+Ranker reasons: `gen1d=+0.47; ab=+0.64; LEAD,peers↑,ind↑; peer=+1.00; mid_opp=+0.40`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=4.53 spike=True (finviz_2026-08-20.csv)
+
+### CAN · micro · Technology
+
+**class: `gated_out`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +27.2% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.63 | after open (join) |
+| sector predict | +0.40 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.24 | afternoon |
+| peer RS | +1.00 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.16 | labels |
+
+Ranker reasons: `join=-0.63; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LEAD,peers↑,ind↓; peer=+1.00; mid_opp=+0.16`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=11.27 spike=True (finviz_2026-08-20.csv)
+
+### IQMX · small · Technology
+
+**class: `blind`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +14.8% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.77 | after open (join) |
+| sector predict | +0.40 | pre-09:30 |
+| general predict | +0.07 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.00 | afternoon |
+| peer RS | +0.00 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.40 | labels |
+
+Ranker reasons: `join=-0.77; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=0.2 spike=False (finviz_2026-08-20.csv)
+
+### HQ · small · Technology
+
+**class: `blind`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +14.5% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.83 | after open (join) |
+| sector predict | +0.40 | pre-09:30 |
+| general predict | +0.07 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.00 | afternoon |
+| peer RS | +0.00 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.40 | labels |
+
+Ranker reasons: `join=-0.83; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=0.32 spike=False (finviz_2026-08-20.csv)
+
+### ASST · small · Financial
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +13.0% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | +0.30 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.00 | afternoon |
+| peer RS | +1.00 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.40 | labels |
+
+Ranker reasons: `join=+0.30; gen1d=+0.47; peer=+1.00; mid_opp=+0.40`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=2.94 spike=True (finviz_2026-08-20.csv)
+
+### UEC · mid · Energy
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +14.4% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | +0.91 | after open (join) |
+| sector predict | -0.80 | pre-09:30 |
+| general predict | +0.23 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | -0.12 | afternoon |
+| peer RS | +0.18 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.56 | labels |
+
+Ranker reasons: `join=+0.91; sector1d=-0.80; gen1d=+0.23; ab=-0.12; LEAD,peers↓,ind↓; peer=+0.18; mid_opp=+0.56`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=0.52 spike=False (finviz_2026-08-20.csv)
+
+### PROK · small · Healthcare
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +13.4% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.10 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.46 | afternoon |
+| peer RS | +0.22 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.40 | labels |
+
+Ranker reasons: `gen1d=+0.47; ab=+0.46; LEAD,peers↑,ind↑; peer=+0.22; mid_opp=+0.40`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=1.62 spike=True (finviz_2026-08-20.csv)
+
+### CRML · small · Basic Materials
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +22.6% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | +0.87 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | -0.36 | afternoon |
+| peer RS | -0.96 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.40 | labels |
+
+Ranker reasons: `join=+0.87; gen1d=+0.47; ab=-0.36; LAG,peers↑,ind↓; peer=-0.96; mid_opp=+0.40`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=1.29 spike=False (finviz_2026-08-20.csv)
+
+### USDE · micro · Financial
+
+**class: `gated_out`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +85.2% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.26 | after open (join) |
+| sector predict | +0.00 | pre-09:30 |
+| general predict | +0.07 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | -0.12 | afternoon |
+| peer RS | +0.00 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.16 | labels |
+
+Ranker reasons: `join=-0.26; gen1d=+0.07; ab=-0.12; ind↓; mid_opp=+0.16`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=2.35 spike=True (finviz_2026-08-20.csv)
+
+### BKKT · small · Technology
+
+**class: `gated_out`** · in universe: True · buy books: —
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| +14.5% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.15 | after open (join) |
+| sector predict | +0.40 | pre-09:30 |
+| general predict | +0.47 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | +0.24 | afternoon |
+| peer RS | -0.08 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | +0.52 | labels |
+
+Ranker reasons: `join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LAG,peers↑,ind↓; peer=-0.08; mid_opp=+0.52`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=3.29 spike=True (finviz_2026-08-20.csv)
+
 
 ## Winners — did the ranker see *something*?
 

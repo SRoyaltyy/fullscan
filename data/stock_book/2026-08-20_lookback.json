@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
-  "generated_at": "2026-08-27T02:44:57.758663-04:00",
-  "min_gain_pct": 3.0,
+  "generated_at": "2026-08-27T06:04:46.546704-04:00",
+  "min_gain_pct": 5.0,
   "notes": [],
   "inventory": [
     {
@@ -120,7 +120,704 @@
       "used_as": "ranker snapshot (usually written after the open)"
     }
   ],
-  "cards": [],
+  "cards": [
+    {
+      "ticker": "SLS",
+      "date": "2026-08-20",
+      "class": "outweighed",
+      "in_universe": true,
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.451,
+        "s_sector": 0.0,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.635,
+        "s_peer": 0.949,
+        "s_heat": 0.0,
+        "s_opp": 0.28,
+        "score_1d": 0.72,
+        "score_3d": 0.707,
+        "score_1w": 0.729
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 15.37,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 14.19,
+          "change_pct": null,
+          "volume": 3112230.0,
+          "avg_vol_k": 9076.1,
+          "relvol": 0.88,
+          "market_cap_m": 2865.61,
+          "spike": false
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=+0.45; gen1d=+0.47; ab=+0.64; LEAD,peers\u2191,ind\u2191; peer=+0.95; mid_opp=+0.28"
+    },
+    {
+      "ticker": "HOOD",
+      "date": "2026-08-20",
+      "class": "outweighed",
+      "in_universe": true,
+      "sector": "Financial",
+      "industry": "Capital Markets",
+      "size": "large",
+      "signals": {
+        "s_join": 0.904,
+        "s_sector": 0.0,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.358,
+        "s_peer": -0.638,
+        "s_heat": 0.0,
+        "s_opp": 0.07,
+        "score_1d": 0.178,
+        "score_3d": 0.18,
+        "score_1w": 0.206
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 13.7,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 94.4,
+          "change_pct": null,
+          "volume": 13667393.0,
+          "avg_vol_k": 25709.38,
+          "relvol": 1.36,
+          "market_cap_m": 84872.02,
+          "spike": false
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=+0.90; gen1d=+0.47; ab=+0.36; LAG,peers\u2191,ind\u2193; peer=-0.64; mid_opp=+0.07"
+    },
+    {
+      "ticker": "ARCT",
+      "date": "2026-08-20",
+      "class": "gated_out",
+      "in_universe": true,
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "size": "small",
+      "signals": {
+        "s_join": 0.035,
+        "s_sector": 0.0,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.635,
+        "s_peer": 1.0,
+        "s_heat": 0.0,
+        "s_opp": 0.4,
+        "score_1d": 0.8,
+        "score_3d": 0.771,
+        "score_1w": 0.784
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 22.38,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 11.22,
+          "change_pct": null,
+          "volume": 1019031.0,
+          "avg_vol_k": 575.42,
+          "relvol": 4.53,
+          "market_cap_m": 318.88,
+          "spike": true
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "gen1d=+0.47; ab=+0.64; LEAD,peers\u2191,ind\u2191; peer=+1.00; mid_opp=+0.40"
+    },
+    {
+      "ticker": "CAN",
+      "date": "2026-08-20",
+      "class": "gated_out",
+      "in_universe": true,
+      "sector": "Technology",
+      "industry": "Computer Hardware",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.628,
+        "s_sector": 0.4,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.245,
+        "s_peer": 0.998,
+        "s_heat": 0.0,
+        "s_opp": 0.16,
+        "score_1d": 0.423,
+        "score_3d": 0.379,
+        "score_1w": 0.379
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 27.24,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 0.28,
+          "change_pct": null,
+          "volume": 46156765.0,
+          "avg_vol_k": 10472.86,
+          "relvol": 11.27,
+          "market_cap_m": 197.55,
+          "spike": true
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=-0.63; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LEAD,peers\u2191,ind\u2193; peer=+1.00; mid_opp=+0.16"
+    },
+    {
+      "ticker": "IQMX",
+      "date": "2026-08-20",
+      "class": "blind",
+      "in_universe": true,
+      "sector": "Technology",
+      "industry": "Computer Hardware",
+      "size": "small",
+      "signals": {
+        "s_join": -0.77,
+        "s_sector": 0.4,
+        "s_general": 0.07,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_heat": 0.0,
+        "s_opp": 0.4,
+        "score_1d": 0.353,
+        "score_3d": 0.333,
+        "score_1w": 0.325
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 14.77,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 9.94,
+          "change_pct": null,
+          "volume": 42594.0,
+          "avg_vol_k": 542.06,
+          "relvol": 0.2,
+          "market_cap_m": 1588.01,
+          "spike": false
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=-0.77; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40"
+    },
+    {
+      "ticker": "HQ",
+      "date": "2026-08-20",
+      "class": "blind",
+      "in_universe": true,
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "size": "small",
+      "signals": {
+        "s_join": -0.831,
+        "s_sector": 0.4,
+        "s_general": 0.07,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_heat": 0.0,
+        "s_opp": 0.4,
+        "score_1d": 0.346,
+        "score_3d": 0.323,
+        "score_1w": 0.314
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 14.54,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 16.21,
+          "change_pct": null,
+          "volume": 87512.0,
+          "avg_vol_k": 704.12,
+          "relvol": 0.32,
+          "market_cap_m": 835.98,
+          "spike": false
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=-0.83; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40"
+    },
+    {
+      "ticker": "ASST",
+      "date": "2026-08-20",
+      "class": "outweighed",
+      "in_universe": true,
+      "sector": "Financial",
+      "industry": "Asset Management",
+      "size": "small",
+      "signals": {
+        "s_join": 0.305,
+        "s_sector": 0.0,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.998,
+        "s_heat": 0.0,
+        "s_opp": 0.4,
+        "score_1d": 0.674,
+        "score_3d": 0.648,
+        "score_1w": 0.654
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 12.96,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 15.69,
+          "change_pct": null,
+          "volume": 4707338.0,
+          "avg_vol_k": 4101.13,
+          "relvol": 2.94,
+          "market_cap_m": 1340.16,
+          "spike": true
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=+0.30; gen1d=+0.47; peer=+1.00; mid_opp=+0.40"
+    },
+    {
+      "ticker": "UEC",
+      "date": "2026-08-20",
+      "class": "outweighed",
+      "in_universe": true,
+      "sector": "Energy",
+      "industry": "Uranium",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.911,
+        "s_sector": -0.8,
+        "s_general": 0.234,
+        "s_news": 0.0,
+        "s_ab": -0.124,
+        "s_peer": 0.183,
+        "s_heat": 0.0,
+        "s_opp": 0.56,
+        "score_1d": 0.613,
+        "score_3d": 0.598,
+        "score_1w": 0.598
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 14.44,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 11.06,
+          "change_pct": null,
+          "volume": 1918896.0,
+          "avg_vol_k": 9458.84,
+          "relvol": 0.52,
+          "market_cap_m": 5473.29,
+          "spike": false
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=+0.91; sector1d=-0.80; gen1d=+0.23; ab=-0.12; LEAD,peers\u2193,ind\u2193; peer=+0.18; mid_opp=+0.56"
+    },
+    {
+      "ticker": "PROK",
+      "date": "2026-08-20",
+      "class": "outweighed",
+      "in_universe": true,
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "size": "small",
+      "signals": {
+        "s_join": -0.096,
+        "s_sector": 0.0,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.462,
+        "s_peer": 0.216,
+        "s_heat": 0.0,
+        "s_opp": 0.4,
+        "score_1d": 0.585,
+        "score_3d": 0.548,
+        "score_1w": 0.555
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 13.38,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 1.43,
+          "change_pct": null,
+          "volume": 777053.0,
+          "avg_vol_k": 1223.13,
+          "relvol": 1.62,
+          "market_cap_m": 433.84,
+          "spike": true
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "gen1d=+0.47; ab=+0.46; LEAD,peers\u2191,ind\u2191; peer=+0.22; mid_opp=+0.40"
+    },
+    {
+      "ticker": "CRML",
+      "date": "2026-08-20",
+      "class": "outweighed",
+      "in_universe": true,
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "size": "small",
+      "signals": {
+        "s_join": 0.872,
+        "s_sector": 0.0,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": -0.358,
+        "s_peer": -0.962,
+        "s_heat": 0.0,
+        "s_opp": 0.4,
+        "score_1d": 0.26,
+        "score_3d": 0.254,
+        "score_1w": 0.264
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 22.59,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 5.8,
+          "change_pct": null,
+          "volume": 3179909.0,
+          "avg_vol_k": 6301.47,
+          "relvol": 1.29,
+          "market_cap_m": 851.22,
+          "spike": false
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=+0.87; gen1d=+0.47; ab=-0.36; LAG,peers\u2191,ind\u2193; peer=-0.96; mid_opp=+0.40"
+    },
+    {
+      "ticker": "USDE",
+      "date": "2026-08-20",
+      "class": "gated_out",
+      "in_universe": true,
+      "sector": "Financial",
+      "industry": "Capital Markets",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.261,
+        "s_sector": 0.0,
+        "s_general": 0.07,
+        "s_news": 0.0,
+        "s_ab": -0.124,
+        "s_peer": 0.0,
+        "s_heat": 0.0,
+        "s_opp": 0.16,
+        "score_1d": 0.103,
+        "score_3d": 0.086,
+        "score_1w": 0.078
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 85.25,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 3.67,
+          "change_pct": null,
+          "volume": 1738015.0,
+          "avg_vol_k": 1893.86,
+          "relvol": 2.35,
+          "market_cap_m": 99.78,
+          "spike": true
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=-0.26; gen1d=+0.07; ab=-0.12; ind\u2193; mid_opp=+0.16"
+    },
+    {
+      "ticker": "BKKT",
+      "date": "2026-08-20",
+      "class": "gated_out",
+      "in_universe": true,
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "size": "small",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": 0.4,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.245,
+        "s_peer": -0.078,
+        "s_heat": 0.0,
+        "s_opp": 0.52,
+        "score_1d": 0.625,
+        "score_3d": 0.6,
+        "score_1w": 0.61
+      },
+      "placement": {
+        "in_buy": [],
+        "in_sell": [],
+        "ranks": {}
+      },
+      "fwd_pct": {
+        "1d": 14.53,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      },
+      "evidence": {
+        "news_actions": null,
+        "digest": [],
+        "judge_tilt": null,
+        "finviz": {
+          "source": "finviz_2026-08-20.csv",
+          "price": 7.51,
+          "change_pct": null,
+          "volume": 1920203.0,
+          "avg_vol_k": 1493.59,
+          "relvol": 3.29,
+          "market_cap_m": 338.47,
+          "spike": true
+        },
+        "heat": {
+          "captain": false,
+          "industry": null,
+          "card_sent": null,
+          "card_dir": null,
+          "news": [],
+          "boost": null
+        },
+        "catalyst": null
+      },
+      "reasons": "join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LAG,peers\u2191,ind\u2193; peer=-0.08; mid_opp=+0.52"
+    }
+  ],
   "winners": {
     "1d": [
       {
