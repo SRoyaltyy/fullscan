@@ -1,5 +1,6 @@
 {
   "date": "2026-08-20",
+  "n_universe": 2707,
   "definition": {
     "standalone": "mean(join, sector, general, news, AB, peer) \u2014 no weights, no opp/rebound",
     "tape": "mean(AB, peer) \u2014 name-specific only",
@@ -1128,7 +1129,7 @@
         "1w": 2.83
       },
       "rank_standalone_raw": 304,
-      "rank_tape_raw": 737,
+      "rank_tape_raw": 734,
       "mcap": 8104.24,
       "gated": false
     },
@@ -1267,6 +1268,26 @@
       "2d": 0.5593333333333333,
       "3d": -0.26533333333333353,
       "1w": -0.62
+    }
+  },
+  "hit_rate": {
+    "live": {
+      "1d": 0.5333333333333333,
+      "2d": 0.4666666666666667,
+      "3d": 0.4666666666666667,
+      "1w": 0.4666666666666667
+    },
+    "standalone": {
+      "1d": 0.5333333333333333,
+      "2d": 0.6,
+      "3d": 0.7333333333333333,
+      "1w": 0.6
+    },
+    "tape": {
+      "1d": 0.4,
+      "2d": 0.5333333333333333,
+      "3d": 0.4666666666666667,
+      "1w": 0.4
     }
   }
 }
