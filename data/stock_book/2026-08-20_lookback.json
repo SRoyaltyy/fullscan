@@ -1,0 +1,634 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-27T02:44:57.758663-04:00",
+  "min_gain_pct": 3.0,
+  "notes": [],
+  "inventory": [
+    {
+      "name": "Finviz Elite export",
+      "found": true,
+      "used_as": "liquidity + labels + AB proxy + digest"
+    },
+    {
+      "name": "Labels / membership",
+      "found": true,
+      "used_as": "join + mid_opp + earnings/range"
+    },
+    {
+      "name": "Weather (tape + FRED/DXY/VIX)",
+      "found": true,
+      "used_as": "join \u00d7 weather"
+    },
+    {
+      "name": "Channel 1 raw",
+      "found": true,
+      "used_as": "via weather"
+    },
+    {
+      "name": "Join ranked universe",
+      "found": true,
+      "used_as": "s_join"
+    },
+    {
+      "name": "News parse + actions",
+      "found": true,
+      "used_as": "s_news"
+    },
+    {
+      "name": "News judge",
+      "found": true,
+      "used_as": "s_news ticker tilts"
+    },
+    {
+      "name": "Finviz daily digest",
+      "found": true,
+      "used_as": "s_news company headlines"
+    },
+    {
+      "name": "General predict",
+      "found": true,
+      "used_as": "s_general \u00d7 beta"
+    },
+    {
+      "name": "Sector LLM essays",
+      "found": true,
+      "used_as": "s_sector (0 if essays missing)"
+    },
+    {
+      "name": "AB checklist + P01\u2013P04",
+      "found": true,
+      "used_as": "s_ab"
+    },
+    {
+      "name": "Peer RS",
+      "found": true,
+      "used_as": "s_peer"
+    },
+    {
+      "name": "Ticker checklist (rebound)",
+      "found": true,
+      "used_as": "rebound_floor (dated file, else latest \u2014 can be stale)"
+    },
+    {
+      "name": "Event scanner",
+      "found": true,
+      "used_as": "sector tilt + weather"
+    },
+    {
+      "name": "Map heat research",
+      "found": false,
+      "used_as": "s_heat nested override + captains"
+    },
+    {
+      "name": "Catalyst overlays",
+      "found": false,
+      "used_as": "not in ranker \u2014 separate chart workflow"
+    },
+    {
+      "name": "Insider / politician flow",
+      "found": false,
+      "used_as": "no daily file in repo"
+    },
+    {
+      "name": "Industry predict",
+      "found": true,
+      "used_as": "not scored (ad-hoc only)"
+    },
+    {
+      "name": "Learnings / mutable policy",
+      "found": true,
+      "used_as": "next predict prompt, not a ticker score"
+    },
+    {
+      "name": "Catalyst dossiers",
+      "found": false,
+      "used_as": "pre-open layer 3; merged into news actions"
+    },
+    {
+      "name": "Map heat tables",
+      "found": false,
+      "used_as": "pre-open overlay / post-close tables"
+    },
+    {
+      "name": "Captain research",
+      "found": false,
+      "used_as": "s_heat captains \u2014 missing \u2192 bootstrap stub"
+    },
+    {
+      "name": "Stock book CSV",
+      "found": true,
+      "used_as": "ranker snapshot (usually written after the open)"
+    }
+  ],
+  "cards": [],
+  "winners": {
+    "1d": [
+      {
+        "ticker": "USDE",
+        "fwd_pct": 85.25,
+        "class": "gated_out",
+        "sector": "Financial",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.12",
+          "relvol=2.35"
+        ],
+        "signals": {
+          "s_join": -0.261,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": -0.124,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.103,
+          "score_3d": 0.086,
+          "score_1w": 0.078
+        }
+      },
+      {
+        "ticker": "CAN",
+        "fwd_pct": 27.24,
+        "class": "gated_out",
+        "sector": "Technology",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24",
+          "s_peer=+1.00",
+          "relvol=11.27"
+        ],
+        "signals": {
+          "s_join": -0.628,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": 0.998,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.423,
+          "score_3d": 0.379,
+          "score_1w": 0.379
+        }
+      },
+      {
+        "ticker": "CRML",
+        "fwd_pct": 22.59,
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.36",
+          "s_peer=-0.96"
+        ],
+        "signals": {
+          "s_join": 0.872,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.358,
+          "s_peer": -0.962,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.26,
+          "score_3d": 0.254,
+          "score_1w": 0.264
+        }
+      },
+      {
+        "ticker": "ARCT",
+        "fwd_pct": 22.38,
+        "class": "gated_out",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.64",
+          "s_peer=+1.00",
+          "relvol=4.53"
+        ],
+        "signals": {
+          "s_join": 0.035,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.635,
+          "s_peer": 1.0,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.8,
+          "score_3d": 0.771,
+          "score_1w": 0.784
+        }
+      },
+      {
+        "ticker": "TMC",
+        "fwd_pct": 20.65,
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.24",
+          "s_peer=-0.97"
+        ],
+        "signals": {
+          "s_join": 0.807,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.245,
+          "s_peer": -0.972,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.359,
+          "score_3d": 0.351,
+          "score_1w": 0.362
+        }
+      },
+      {
+        "ticker": "CYPH",
+        "fwd_pct": 19.33,
+        "class": "gated_out",
+        "sector": "Healthcare",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.76",
+          "s_peer=+1.00",
+          "relvol=2.92"
+        ],
+        "signals": {
+          "s_join": 0.076,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.762,
+          "s_peer": 1.0,
+          "s_heat": 0.0,
+          "s_opp": 0.12,
+          "score_1d": 0.605,
+          "score_3d": 0.61,
+          "score_1w": 0.627
+        }
+      },
+      {
+        "ticker": "ELMT",
+        "fwd_pct": 19.32,
+        "class": "outweighed",
+        "sector": "Industrials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46"
+        ],
+        "signals": {
+          "s_join": -0.096,
+          "s_sector": -0.24,
+          "s_general": 0.187,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.44,
+          "score_1d": 0.535,
+          "score_3d": 0.511,
+          "score_1w": 0.514
+        }
+      },
+      {
+        "ticker": "SLS",
+        "fwd_pct": 15.37,
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.64",
+          "s_peer=+0.95"
+        ],
+        "signals": {
+          "s_join": 0.451,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.635,
+          "s_peer": 0.949,
+          "s_heat": 0.0,
+          "s_opp": 0.28,
+          "score_1d": 0.72,
+          "score_3d": 0.707,
+          "score_1w": 0.729
+        }
+      },
+      {
+        "ticker": "AIFC",
+        "fwd_pct": 15.25,
+        "class": "gated_out",
+        "sector": "Technology",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12",
+          "relvol=4.11"
+        ],
+        "signals": {
+          "s_join": -0.752,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.178,
+          "score_3d": 0.128,
+          "score_1w": 0.123
+        }
+      },
+      {
+        "ticker": "IQMX",
+        "fwd_pct": 14.77,
+        "class": "blind",
+        "sector": "Technology",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [],
+        "signals": {
+          "s_join": -0.77,
+          "s_sector": 0.4,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.353,
+          "score_3d": 0.333,
+          "score_1w": 0.325
+        }
+      },
+      {
+        "ticker": "TII",
+        "fwd_pct": 14.63,
+        "class": "gated_out",
+        "sector": "Basic Materials",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24"
+        ],
+        "signals": {
+          "s_join": 0.876,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.12,
+          "score_1d": 0.292,
+          "score_3d": 0.324,
+          "score_1w": 0.346
+        }
+      },
+      {
+        "ticker": "HQ",
+        "fwd_pct": 14.54,
+        "class": "blind",
+        "sector": "Technology",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [],
+        "signals": {
+          "s_join": -0.831,
+          "s_sector": 0.4,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.346,
+          "score_3d": 0.323,
+          "score_1w": 0.314
+        }
+      },
+      {
+        "ticker": "BKKT",
+        "fwd_pct": 14.53,
+        "class": "gated_out",
+        "sector": "Technology",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24",
+          "s_peer=-0.08",
+          "relvol=3.29"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": -0.078,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.625,
+          "score_3d": 0.6,
+          "score_1w": 0.61
+        }
+      },
+      {
+        "ticker": "UEC",
+        "fwd_pct": 14.44,
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.12",
+          "s_peer=+0.18"
+        ],
+        "signals": {
+          "s_join": 0.911,
+          "s_sector": -0.8,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": -0.124,
+          "s_peer": 0.183,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.613,
+          "score_3d": 0.598,
+          "score_1w": 0.598
+        }
+      },
+      {
+        "ticker": "EU",
+        "fwd_pct": 14.29,
+        "class": "gated_out",
+        "sector": "Energy",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.64",
+          "s_peer=-0.70"
+        ],
+        "signals": {
+          "s_join": 0.43,
+          "s_sector": -0.8,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.635,
+          "s_peer": -0.703,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": -0.13,
+          "score_3d": -0.189,
+          "score_1w": -0.209
+        }
+      },
+      {
+        "ticker": "LAR",
+        "fwd_pct": 14.21,
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.55",
+          "s_peer=-0.76"
+        ],
+        "signals": {
+          "s_join": 0.845,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.555,
+          "s_peer": -0.758,
+          "s_heat": 0.0,
+          "s_opp": 0.36,
+          "score_1d": 0.209,
+          "score_3d": 0.199,
+          "score_1w": 0.205
+        }
+      },
+      {
+        "ticker": "GUTS",
+        "fwd_pct": 13.87,
+        "class": "gated_out",
+        "sector": "Healthcare",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.36",
+          "s_peer=-0.54"
+        ],
+        "signals": {
+          "s_join": -0.188,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.358,
+          "s_peer": -0.544,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.156,
+          "score_3d": 0.114,
+          "score_1w": 0.118
+        }
+      },
+      {
+        "ticker": "HOOD",
+        "fwd_pct": 13.7,
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.36",
+          "s_peer=-0.64"
+        ],
+        "signals": {
+          "s_join": 0.904,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.358,
+          "s_peer": -0.638,
+          "s_heat": 0.0,
+          "s_opp": 0.07,
+          "score_1d": 0.178,
+          "score_3d": 0.18,
+          "score_1w": 0.206
+        }
+      },
+      {
+        "ticker": "PROK",
+        "fwd_pct": 13.38,
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46",
+          "s_peer=+0.22",
+          "relvol=1.62"
+        ],
+        "signals": {
+          "s_join": -0.096,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.216,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.585,
+          "score_3d": 0.548,
+          "score_1w": 0.555
+        }
+      },
+      {
+        "ticker": "ASST",
+        "fwd_pct": 12.96,
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_peer=+1.00",
+          "relvol=2.94"
+        ],
+        "signals": {
+          "s_join": 0.305,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": 0.998,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.674,
+          "score_3d": 0.648,
+          "score_1w": 0.654
+        }
+      }
+    ],
+    "2d": [],
+    "3d": [],
+    "1w": []
+  },
+  "blind_counts": {
+    "1d": 2,
+    "2d": 0,
+    "3d": 0,
+    "1w": 0
+  }
+}
