@@ -1,0 +1,165 @@
+{
+  "job": "postclose",
+  "phase": "before",
+  "date": "2026-08-28",
+  "source_date": "2026-08-27",
+  "target_date": "2026-08-28",
+  "generated_at": "2026-08-27T12:43:01.580909-04:00",
+  "ok": false,
+  "n_fail": 3,
+  "n_warn": 0,
+  "checks": [
+    {
+      "name": "HOME for OpenClaw/git",
+      "group": "door",
+      "status": "OK",
+      "required": true,
+      "detail": "/home/gha",
+      "path": ""
+    },
+    {
+      "name": "Grok/OpenClaw token 48 vs 64",
+      "group": "bug",
+      "status": "OK",
+      "required": true,
+      "detail": "live_len=48 tail=864c",
+      "path": ""
+    },
+    {
+      "name": "OpenClaw port 18789",
+      "group": "door",
+      "status": "OK",
+      "required": true,
+      "detail": "http://127.0.0.1:18789 listening",
+      "path": ""
+    },
+    {
+      "name": "OpenClaw PONG (Grok)",
+      "group": "door",
+      "status": "FAIL",
+      "required": true,
+      "detail": "http=200 err=Hey. I just came online.\n\nWho am I? Who are you?\n\nI",
+      "path": ""
+    },
+    {
+      "name": "Chat model is Grok not DeepSeek",
+      "group": "bug",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
+      "path": ""
+    },
+    {
+      "name": "GROK_ONLY (no DeepSeek analysis)",
+      "group": "bug",
+      "status": "OK",
+      "required": true,
+      "detail": "GROK_ONLY on \u2014 DeepSeek must not write essays",
+      "path": ""
+    },
+    {
+      "name": "SearXNG is not the research path",
+      "group": "bug",
+      "status": "OK",
+      "required": true,
+      "detail": "Grok classroom answered; native web/X should be used. SEARXNG_URL=set (fallback only)",
+      "path": ""
+    },
+    {
+      "name": "xAI OAuth not expired",
+      "group": "bug",
+      "status": "FAIL",
+      "required": true,
+      "detail": "openclaw models status: xAI token expiring/expired",
+      "path": ""
+    },
+    {
+      "name": "chatCompletions.enabled",
+      "group": "door",
+      "status": "OK",
+      "required": true,
+      "detail": "/home/gha/.openclaw/openclaw.json enabled=True",
+      "path": ""
+    },
+    {
+      "name": "Default model is Grok",
+      "group": "door",
+      "status": "OK",
+      "required": false,
+      "detail": "default={'primary': 'xai/grok-4.6'}",
+      "path": ""
+    },
+    {
+      "name": "Not colliding with pre-open",
+      "group": "prereq",
+      "status": "OK",
+      "required": true,
+      "detail": "preopen=failed",
+      "path": ""
+    },
+    {
+      "name": "ECS Finviz Elite HTML (groups/tape)",
+      "group": "prereq",
+      "status": "FAIL",
+      "required": true,
+      "detail": "HTTP 403 cloudflare/403 (ECS Elite HTML is blocked) \u2014 post-close `map_heat --force` scrapes on ECS",
+      "path": ""
+    },
+    {
+      "name": "yfinance import (market reaction)",
+      "group": "prereq",
+      "status": "OK",
+      "required": false,
+      "detail": "installed",
+      "path": ""
+    },
+    {
+      "name": "Captain research prompt on disk",
+      "group": "prereq",
+      "status": "OK",
+      "required": true,
+      "detail": "ok",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/00_grounding/map_heat_research_prompt.md"
+    },
+    {
+      "name": "2026-08-28_map_heat.json (groups+captains+tape)",
+      "group": "output",
+      "status": "SKIP",
+      "required": true,
+      "detail": "not written yet (phase=before)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_map_heat.json"
+    },
+    {
+      "name": "2026-08-28_map_heat.md",
+      "group": "output",
+      "status": "SKIP",
+      "required": false,
+      "detail": "not written yet (phase=before)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_map_heat.md"
+    },
+    {
+      "name": "2026-08-28_research_baseline.json (captain cards)",
+      "group": "output",
+      "status": "SKIP",
+      "required": true,
+      "detail": "not written yet (phase=before)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_research_baseline.json"
+    },
+    {
+      "name": "2026-08-28_research_baseline.md",
+      "group": "output",
+      "status": "SKIP",
+      "required": true,
+      "detail": "not written yet (phase=before)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_research_baseline.md"
+    },
+    {
+      "name": "post-close synthesis transcript",
+      "group": "output",
+      "status": "SKIP",
+      "required": false,
+      "detail": "not written yet (phase=before)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/_transcripts/2026-08-28_map_postclose_synthesis.json"
+    }
+  ]
+}
