@@ -28,6 +28,9 @@ jobs:
     runs-on: [self-hosted, ecs]
     # 11 sectors × long tool loops; allow hours
     timeout-minutes: 360
+    env:
+      FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
     steps:
       - uses: actions/checkout@v4
 

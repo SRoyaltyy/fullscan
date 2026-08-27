@@ -303,16 +303,27 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               stage_label=stage_label)
         if text:
             return text
-        if grok_only:
+        if grok_only and not _OPENCLAW_STATE["down"]:
+            # Content-level failure (empty/stub) with the gateway still
+            # reachable: stay Grok-only; the caller's retry ladder handles it.
             print("[llm] GROK_ONLY: OpenClaw failed — no DeepSeek/SearXNG fallback")
             return ""
         if not config.DEEPSEEK_API_KEY:
             print("[llm] OpenClaw failed and no DEEPSEEK_API_KEY fallback")
             return ""
-        print(f"[llm] falling back to DeepSeek (model={model})")
+        if grok_only:
+            print(f"[llm] EMERGENCY: OpenClaw gateway is DOWN "
+                  f"({_OPENCLAW_STATE['reason'][:120]}) — GROK_ONLY suspended "
+                  f"for this run, falling back to DeepSeek (model={model})")
+        else:
+            print(f"[llm] falling back to DeepSeek (model={model})")
     elif force_deepseek:
         print(f"[llm] force_deepseek ({stage_label or 'llm run'}) — "
               "OpenClaw skipped for this call only")
+    elif grok_only and _OPENCLAW_STATE["down"] and config.DEEPSEEK_API_KEY:
+        print(f"[llm] EMERGENCY: OpenClaw gateway down "
+              f"({_OPENCLAW_STATE['reason'][:120]}) — GROK_ONLY suspended "
+              f"for this run, using DeepSeek (model={model})")
     elif grok_only:
         print("[llm] GROK_ONLY: OpenClaw unavailable/down — no fallback")
         return ""

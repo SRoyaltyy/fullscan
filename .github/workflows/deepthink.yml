@@ -30,6 +30,9 @@ jobs:
   think:
     runs-on: [self-hosted, ecs]
     timeout-minutes: 240
+    env:
+      FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

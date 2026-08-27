@@ -21,6 +21,9 @@ jobs:
   learn:
     runs-on: [self-hosted, ecs]
     timeout-minutes: 180
+    env:
+      FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
     steps:
       - uses: actions/checkout@v4
 
