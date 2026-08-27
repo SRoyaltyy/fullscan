@@ -62,13 +62,15 @@ jobs:
           python -m src.book_lookback "${ARGS[@]}"
           if [ -n "${DATE:-}" ]; then
             python -m src.lookback_picks --date "$DATE"
+            python -m src.lookback_unweighted --date "$DATE" --top 15
           else
             python -m src.lookback_picks
+            python -m src.lookback_unweighted --top 15
           fi
           echo "======== lookback head ========"
           head -80 03_scoreboard/BOOK_LOOKBACK.md || true
-          echo "======== book picks ========"
-          grep -n -A 40 "## Book picks" 03_scoreboard/BOOK_LOOKBACK.md || true
+          echo "======== unweighted ========"
+          grep -n -A 80 "## Unweighted book" 03_scoreboard/BOOK_LOOKBACK.md || true
       - name: Commit report
         run: |
           bash scripts/safe_git_push.sh \
