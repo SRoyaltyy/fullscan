@@ -1,0 +1,502 @@
+{
+  "date": "2026-08-18",
+  "n_pile": 0,
+  "n_universe": 2698,
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "OXY",
+      "book": 0.536,
+      "s_join": 0.3214828495593465,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.2705896986456141,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.48,
+        "2d": 2.88,
+        "3d": 2.51,
+        "1w": -2.32
+      }
+    },
+    {
+      "ticker": "COP",
+      "book": 0.528,
+      "s_join": 0.2983432576190168,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.06366377883244849,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.66,
+        "2d": 3.99,
+        "3d": 3.97,
+        "1w": 1.63
+      }
+    },
+    {
+      "ticker": "APA",
+      "book": 0.528,
+      "s_join": 0.2983432576190168,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.03373719138276957,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.55,
+        "2d": 4.77,
+        "3d": 2.41,
+        "1w": -2.41
+      }
+    },
+    {
+      "ticker": "DVN",
+      "book": 0.503,
+      "s_join": 0.2267873438210395,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": 0.3911228573869913,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.75,
+        "2d": 3.07,
+        "3d": 2.66,
+        "1w": -1.92
+      }
+    },
+    {
+      "ticker": "EOG",
+      "book": 0.503,
+      "s_join": 0.2267873438210395,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": 0.03311288967399398,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.52,
+        "2d": 2.35,
+        "3d": 2.93,
+        "1w": -1.26
+      }
+    },
+    {
+      "ticker": "FANG",
+      "book": 0.45,
+      "s_join": 0.0767487721745482,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": 0.061173520364161904,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.7,
+        "2d": 0.48,
+        "3d": 0.33,
+        "1w": -4.82
+      }
+    },
+    {
+      "ticker": "XOM",
+      "book": 0.444,
+      "s_join": 0.2267873438210395,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.0006249999186197793,
+      "s_opp": -0.33999999999999997,
+      "size": "mega",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.48,
+        "2d": 0.36,
+        "3d": -0.27,
+        "1w": -2.97
+      }
+    },
+    {
+      "ticker": "CVX",
+      "book": 0.444,
+      "s_join": 0.2267873438210395,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": 0.10894092992085458,
+      "s_opp": -0.33999999999999997,
+      "size": "mega",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.88,
+        "2d": 0.89,
+        "3d": 0.64,
+        "1w": -2.0
+      }
+    },
+    {
+      "ticker": "STE",
+      "book": 0.367,
+      "s_join": 0.3941467232460668,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": -0.3038447577854626,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.95,
+        "2d": 1.44,
+        "3d": 2.38,
+        "1w": 1.74
+      }
+    },
+    {
+      "ticker": "SYK",
+      "book": 0.352,
+      "s_join": 0.2983432576190168,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.42957468227361434,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.6,
+        "2d": -1.11,
+        "3d": -0.58,
+        "1w": -0.24
+      }
+    },
+    {
+      "ticker": "DHR",
+      "book": 0.352,
+      "s_join": 0.2983432576190168,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.2832849064031268,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 5.97,
+        "2d": 8.18,
+        "3d": 9.66,
+        "1w": 8.21
+      }
+    },
+    {
+      "ticker": "TMO",
+      "book": 0.315,
+      "s_join": 0.2449186624037091,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": -0.28787711193126597,
+      "s_opp": -0.22,
+      "size": "mega",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.16,
+        "2d": 6.54,
+        "3d": 6.83,
+        "1w": 6.64
+      }
+    },
+    {
+      "ticker": "EW",
+      "book": 0.309,
+      "s_join": 0.2267873438210395,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": -0.2867302913888035,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.43,
+        "2d": -1.26,
+        "3d": -1.31,
+        "1w": -0.12
+      }
+    },
+    {
+      "ticker": "UTHR",
+      "book": 0.305,
+      "s_join": 0.1651728370342669,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.41157005567402244,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.1,
+        "2d": 0.53,
+        "3d": -0.99,
+        "1w": 0.05
+      }
+    },
+    {
+      "ticker": "COO",
+      "book": 0.283,
+      "s_join": 0.152598681041233,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": 0.03373719138276957,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.28,
+        "2d": 0.53,
+        "3d": 0.61,
+        "1w": -3.59
+      }
+    },
+    {
+      "ticker": "MUR",
+      "book": 0.267,
+      "s_join": 0.0767487721745482,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.5674474753088533,
+      "s_opp": 0.48000000000000004,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.8,
+        "2d": 8.81,
+        "3d": 6.34,
+        "1w": -1.59
+      }
+    },
+    {
+      "ticker": "FAST",
+      "book": 0.263,
+      "s_join": 0.2267873438210395,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.31458418401330446,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.33,
+        "2d": -1.19,
+        "3d": -0.02,
+        "1w": -1.87
+      }
+    },
+    {
+      "ticker": "MDT",
+      "book": 0.259,
+      "s_join": 0.4621171572600097,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": 0.28270996114354063,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.22,
+        "2d": 0.23,
+        "3d": 1.37,
+        "1w": -1.03
+      }
+    },
+    {
+      "ticker": "IQV",
+      "book": 0.229,
+      "s_join": 0.0,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": -0.05494460868918741,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 3.85,
+        "2d": 6.67,
+        "3d": 8.24,
+        "1w": 8.08
+      }
+    },
+    {
+      "ticker": "RMD",
+      "book": 0.226,
+      "s_join": 0.3666956245380888,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.08231333630045613,
+      "s_opp": 0.06999999999999999,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.85,
+        "2d": 4.14,
+        "3d": 5.55,
+        "1w": 7.86
+      }
+    },
+    {
+      "ticker": "ES",
+      "book": 0.22,
+      "s_join": 0.3941467232460668,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": 0.051205176649235615,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.32,
+        "2d": -0.1,
+        "3d": -2.78,
+        "1w": -1.65
+      }
+    },
+    {
+      "ticker": "AOS",
+      "book": 0.219,
+      "s_join": 0.152598681041233,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": -0.21413397614340712,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.83,
+        "2d": 2.58,
+        "3d": 3.65,
+        "1w": 2.12
+      }
+    },
+    {
+      "ticker": "GGG",
+      "book": 0.219,
+      "s_join": 0.152598681041233,
+      "s_general": -0.255,
+      "s_ab": 0.0,
+      "s_peer": -0.01687339837579416,
+      "s_opp": 0.06999999999999999,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.07,
+        "2d": 0.86,
+        "3d": -0.46,
+        "1w": -2.85
+      }
+    },
+    {
+      "ticker": "MLYS",
+      "book": 0.218,
+      "s_join": -0.0831078634225481,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.30157384159366973,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.28,
+        "2d": -3.23,
+        "3d": -3.61,
+        "1w": -1.01
+      }
+    },
+    {
+      "ticker": "PFE",
+      "book": 0.21,
+      "s_join": 0.3214828495593465,
+      "s_general": -0.0765,
+      "s_ab": 0.0,
+      "s_peer": -0.06055083551259654,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 3.63,
+        "2d": 1.98,
+        "3d": 3.01,
+        "1w": 4.84
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "AOS",
+    "APA",
+    "COO",
+    "COP",
+    "CVX",
+    "DHR",
+    "DVN",
+    "EOG",
+    "ES",
+    "EW",
+    "FANG",
+    "FAST",
+    "GGG",
+    "IQV",
+    "MDT",
+    "MLYS",
+    "MUR",
+    "OXY",
+    "PFE",
+    "RMD",
+    "STE",
+    "SYK",
+    "TMO",
+    "UTHR",
+    "XOM"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 2.0676,
+      "2d": 2.1755999999999998,
+      "3d": 2.1228,
+      "1w": 0.38080000000000014
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
+}

@@ -1,0 +1,502 @@
+{
+  "date": "2026-08-27",
+  "n_pile": 0,
+  "n_universe": 2698,
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "RRC",
+      "book": 1.389,
+      "s_join": 0.9845386747539592,
+      "s_general": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.5963735554792423,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CRK",
+      "book": 1.221,
+      "s_join": 0.9740174268932636,
+      "s_general": 0.0,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.8383588843972601,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ACMR",
+      "book": 1.203,
+      "s_join": 0.952918497389279,
+      "s_general": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.5158181331597328,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "MOS",
+      "book": 1.179,
+      "s_join": 0.9862886606291156,
+      "s_general": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.7392166264833826,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ELF",
+      "book": 1.162,
+      "s_join": 0.9154204563159324,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.7420382957075286,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Consumer Defensive",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "EPAM",
+      "book": 1.153,
+      "s_join": 0.8387966454653977,
+      "s_general": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.4249766262641404,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CXT",
+      "book": 1.146,
+      "s_join": 0.9355589141778874,
+      "s_general": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.4849031924428391,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "XP",
+      "book": 1.136,
+      "s_join": 0.9470230535722236,
+      "s_general": 0.0,
+      "s_ab": 0.9780261147388136,
+      "s_peer": 0.7355092761365953,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "MNDY",
+      "book": 1.127,
+      "s_join": 0.9803470513265136,
+      "s_general": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.3637925291791868,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "VNT",
+      "book": 1.113,
+      "s_join": 0.8503734168441159,
+      "s_general": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.2525409472475897,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BFAM",
+      "book": 1.102,
+      "s_join": 0.8387966454653977,
+      "s_general": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.330821117493628,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "SLI",
+      "book": 1.1,
+      "s_join": 0.8357773250191383,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.864591356367123,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Basic Materials",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "SFM",
+      "book": 1.097,
+      "s_join": 0.6489021435561161,
+      "s_general": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.7851849735968707,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Consumer Defensive",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "DEC",
+      "book": 1.095,
+      "s_join": 0.6603872107040618,
+      "s_general": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.6709670742068736,
+      "s_opp": 0.44,
+      "size": "small",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "LW",
+      "book": 1.09,
+      "s_join": 0.5866219743251164,
+      "s_general": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.5580522155596244,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Consumer Defensive",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ICL",
+      "book": 1.082,
+      "s_join": 0.7327776744043385,
+      "s_general": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3589020137849207,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "WT",
+      "book": 1.079,
+      "s_join": 0.9656845451074688,
+      "s_general": 0.0,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.753065904869552,
+      "s_opp": 0.46,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ALHC",
+      "book": 1.069,
+      "s_join": -0.15,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.6743889497731511,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "KBR",
+      "book": 1.069,
+      "s_join": 0.5732162751427482,
+      "s_general": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.2230609184753447,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "TIGR",
+      "book": 1.067,
+      "s_join": 0.1843457486087997,
+      "s_general": 0.0,
+      "s_ab": 0.971872745913509,
+      "s_peer": 0.9177188801097068,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Financial",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "Z",
+      "book": 1.062,
+      "s_join": 0.9050578594228512,
+      "s_general": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.3319338535036405,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BXSL",
+      "book": 1.055,
+      "s_join": 0.6603872107040618,
+      "s_general": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.1280432748525152,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "OSK",
+      "book": 1.054,
+      "s_join": 0.959794850728579,
+      "s_general": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.42241262051788,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "GPK",
+      "book": 1.054,
+      "s_join": 0.5732162751427482,
+      "s_general": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": -0.0024999947916796,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "DNN",
+      "book": 1.054,
+      "s_join": 0.7135601799851733,
+      "s_general": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.8815098488354687,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "ACMR",
+    "ALHC",
+    "BFAM",
+    "BXSL",
+    "CRK",
+    "CXT",
+    "DEC",
+    "DNN",
+    "ELF",
+    "EPAM",
+    "GPK",
+    "ICL",
+    "KBR",
+    "LW",
+    "MNDY",
+    "MOS",
+    "OSK",
+    "RRC",
+    "SFM",
+    "SLI",
+    "TIGR",
+    "VNT",
+    "WT",
+    "XP",
+    "Z"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
+}

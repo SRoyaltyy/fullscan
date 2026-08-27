@@ -1,0 +1,322 @@
+{
+  "date": "2026-08-14",
+  "n_pile": 0,
+  "n_universe": 2703,
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "TLN",
+      "book": 0.516,
+      "s_join": 0.3666956245380888,
+      "s_general": 0.55,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.6,
+        "2d": -12.43,
+        "3d": -11.13,
+        "1w": -13.31
+      }
+    },
+    {
+      "ticker": "VST",
+      "book": 0.492,
+      "s_join": 0.2983432576190168,
+      "s_general": 0.55,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.11,
+      "size": "large",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.36,
+        "2d": -5.14,
+        "3d": -3.67,
+        "1w": -8.05
+      }
+    },
+    {
+      "ticker": "DVN",
+      "book": 0.487,
+      "s_join": 0.1651728370342669,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 3.75,
+        "2d": 4.32,
+        "3d": 5.1,
+        "1w": 7.09
+      }
+    },
+    {
+      "ticker": "FANG",
+      "book": 0.482,
+      "s_join": 0.152598681041233,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.89,
+        "2d": 3.73,
+        "3d": 3.0,
+        "1w": 4.07
+      }
+    },
+    {
+      "ticker": "EOG",
+      "book": 0.482,
+      "s_join": 0.152598681041233,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.48,
+        "2d": 4.27,
+        "3d": 4.82,
+        "1w": 7.32
+      }
+    },
+    {
+      "ticker": "OXY",
+      "book": 0.458,
+      "s_join": 0.0831078634225481,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.17,
+        "2d": 2.47,
+        "3d": 2.96,
+        "1w": 5.04
+      }
+    },
+    {
+      "ticker": "COP",
+      "book": 0.456,
+      "s_join": 0.0767487721745482,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.62,
+        "2d": 2.32,
+        "3d": 3.0,
+        "1w": 6.38
+      }
+    },
+    {
+      "ticker": "APA",
+      "book": 0.456,
+      "s_join": 0.0767487721745482,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.16999999999999998,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.74,
+        "2d": 4.69,
+        "3d": 7.36,
+        "1w": 7.22
+      }
+    },
+    {
+      "ticker": "NRG",
+      "book": 0.439,
+      "s_join": 0.2267873438210395,
+      "s_general": 0.275,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.11,
+      "size": "large",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": -3.07,
+        "2d": -8.46,
+        "3d": -4.48,
+        "1w": -10.4
+      }
+    },
+    {
+      "ticker": "CEG",
+      "book": 0.413,
+      "s_join": 0.152598681041233,
+      "s_general": 0.275,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.06999999999999999,
+      "size": "large",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.67,
+        "2d": -5.55,
+        "3d": -2.95,
+        "1w": -3.41
+      }
+    },
+    {
+      "ticker": "XOM",
+      "book": 0.404,
+      "s_join": 0.0831078634225481,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.22,
+      "size": "mega",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.85,
+        "2d": 3.41,
+        "3d": 2.92,
+        "1w": 3.13
+      }
+    },
+    {
+      "ticker": "CVX",
+      "book": 0.402,
+      "s_join": 0.0767487721745482,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": -0.33999999999999997,
+      "size": "mega",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.47,
+        "2d": 1.98,
+        "3d": 2.88,
+        "1w": 2.64
+      }
+    },
+    {
+      "ticker": "NEE",
+      "book": 0.394,
+      "s_join": 0.152598681041233,
+      "s_general": 0.0825,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.03,
+        "2d": 0.03,
+        "3d": -0.32,
+        "1w": -2.95
+      }
+    },
+    {
+      "ticker": "WOLF",
+      "book": 0.33,
+      "s_join": 0.5479171246152715,
+      "s_general": 0.55,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 9.97,
+        "2d": -1.04,
+        "3d": -8.49,
+        "1w": -18.97
+      }
+    },
+    {
+      "ticker": "PGY",
+      "book": 0.33,
+      "s_join": 0.5479171246152715,
+      "s_general": 0.55,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.48000000000000004,
+      "size": "small",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.92,
+        "2d": -5.75,
+        "3d": -5.06,
+        "1w": 0.56
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "APA",
+    "APNAU",
+    "BCACU",
+    "BEMD",
+    "CEG",
+    "CLRS",
+    "COP",
+    "CVX",
+    "DVN",
+    "EOG",
+    "FANG",
+    "IDIAU",
+    "LEDRU",
+    "NEE",
+    "NRG",
+    "OXY",
+    "PGY",
+    "PHAXU",
+    "SCATU",
+    "SKAIU",
+    "TBCH",
+    "TLN",
+    "VST",
+    "WOLF",
+    "XOM"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 0.89,
+      "2d": -0.7433333333333334,
+      "3d": -0.2706666666666668,
+      "1w": -0.9093333333333332
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
+}

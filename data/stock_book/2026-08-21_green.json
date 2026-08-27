@@ -1,0 +1,777 @@
+{
+  "date": "2026-08-21",
+  "n_pile": 351,
+  "n_universe": 2707,
+  "pile_used": true,
+  "live_buy": [
+    {
+      "ticker": "MOS",
+      "book": 1.146,
+      "s_join": 0.8423471211238963,
+      "s_general": 0.23375,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.8103765709940169,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": true,
+      "fwd": {
+        "1d": -1.68,
+        "2d": -0.57,
+        "3d": -1.02,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "OCUL",
+      "book": 1.135,
+      "s_join": 0.9097203481384653,
+      "s_general": 0.23375,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.7854245338520062,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -2.71,
+        "2d": -1.81,
+        "3d": -2.8,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "GSHD",
+      "book": 1.134,
+      "s_join": 0.911817406548036,
+      "s_general": 0.4675,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.7565616838709821,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 0.66,
+        "2d": -0.26,
+        "3d": -1.67,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "DUOL",
+      "book": 1.133,
+      "s_join": -0.15,
+      "s_general": 0.23375,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.864591356367123,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.49,
+        "2d": -0.06,
+        "3d": -3.59,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CRSP",
+      "book": 1.133,
+      "s_join": 0.8273569903733742,
+      "s_general": 0.4675,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.668208827802973,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -4.08,
+        "2d": 2.35,
+        "3d": -0.45,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "XP",
+      "book": 1.124,
+      "s_join": 0.8747125590761087,
+      "s_general": 0.23375,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.8204278895821261,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 1.55,
+        "2d": 5.89,
+        "3d": 5.95,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "OPCH",
+      "book": 1.104,
+      "s_join": 0.933712777712242,
+      "s_general": 0.070125,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.2248418786958319,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.13,
+        "2d": -0.25,
+        "3d": 1.43,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "WGS",
+      "book": 1.094,
+      "s_join": 0.8234046882869835,
+      "s_general": 0.4675,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.1913614612156944,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -2.15,
+        "2d": 0.39,
+        "3d": 3.7,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "HLNE",
+      "book": 1.085,
+      "s_join": 0.9478521688120805,
+      "s_general": 0.23375,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.325802446026999,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.14,
+        "2d": 1.4,
+        "3d": -0.08,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FIGR",
+      "book": 1.074,
+      "s_join": 0.941193164608374,
+      "s_general": 0.187,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.0,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.18,
+        "2d": 5.22,
+        "3d": -5.17,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "EPAM",
+      "book": 1.073,
+      "s_join": -0.15,
+      "s_general": 0.4675,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.7300105729856439,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.83,
+        "2d": 1.37,
+        "3d": -0.89,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CALX",
+      "book": 1.072,
+      "s_join": -0.15,
+      "s_general": 0.23375,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.7961927736702292,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.8,
+        "2d": -0.67,
+        "3d": -4.39,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NHI",
+      "book": 1.035,
+      "s_join": 0.885826258413163,
+      "s_general": 0.070125,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.0549446086891874,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.4,
+        "2d": -0.01,
+        "3d": 0.04,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ZG",
+      "book": 1.034,
+      "s_join": 0.3807187737146902,
+      "s_general": 0.4675,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.7847051472096467,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": false,
+      "fwd": {
+        "1d": 3.18,
+        "2d": 0.84,
+        "3d": -2.18,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "VNT",
+      "book": 1.019,
+      "s_join": -0.15,
+      "s_general": 0.23375,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.5849798828807287,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.79,
+        "2d": 1.24,
+        "3d": 2.15,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CE",
+      "book": 1.014,
+      "s_join": 0.8194037105941603,
+      "s_general": 0.070125,
+      "s_ab": 0.4621171572600097,
+      "s_peer": 0.4462436102487796,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": true,
+      "fwd": {
+        "1d": -3.29,
+        "2d": -4.87,
+        "3d": -4.49,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FBRT",
+      "book": 0.996,
+      "s_join": 0.7934955770400535,
+      "s_general": 0.23375,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3319338535036405,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": 0.6,
+        "2d": 1.07,
+        "3d": 0.72,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NMRK",
+      "book": 0.991,
+      "s_join": 0.9216685544064712,
+      "s_general": 0.4675,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3396970321140473,
+      "s_opp": 0.48,
+      "size": "mid",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.86,
+        "2d": -1.3,
+        "3d": -2.78,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ABR",
+      "book": 0.982,
+      "s_join": 0.6106141216068388,
+      "s_general": 0.23375,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.3927098596476682,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": 1.16,
+        "2d": -0.77,
+        "3d": -2.5,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "GPK",
+      "book": 0.978,
+      "s_join": -0.15,
+      "s_general": 0.070125,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.5125999401983707,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": -4.26,
+        "2d": -4.52,
+        "3d": -4.26,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NFG",
+      "book": 0.966,
+      "s_join": 0.9216685544064712,
+      "s_general": 0.070125,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.3291502879505368,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.02,
+        "2d": -0.41,
+        "3d": 1.26,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BZ",
+      "book": 0.959,
+      "s_join": 0.6889214614844166,
+      "s_general": 0.070125,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.4844250045245988,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": false,
+      "fwd": {
+        "1d": -3.2,
+        "2d": 2.13,
+        "3d": 18.12,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BFAM",
+      "book": 0.958,
+      "s_join": -0.15,
+      "s_general": 0.23375,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.5874412164906557,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.65,
+        "2d": 1.39,
+        "3d": 2.17,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "Z",
+      "book": 0.956,
+      "s_join": 0.4811656510074314,
+      "s_general": 0.4675,
+      "s_ab": 0.3583573983507859,
+      "s_peer": 0.5800247468527949,
+      "s_opp": 0.6799999999999999,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": false,
+      "fwd": {
+        "1d": 3.26,
+        "2d": 0.59,
+        "3d": -2.59,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "DNN",
+      "book": 0.955,
+      "s_join": 0.7888576575171622,
+      "s_general": 0.23375,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.805164255640397,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.14,
+        "2d": 6.29,
+        "3d": 3.71,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [
+    {
+      "ticker": "MOS",
+      "book": 1.146,
+      "s_join": 0.8423471211238963,
+      "s_general": 0.23375,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.8103765709940169,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": true,
+      "fwd": {
+        "1d": -1.68,
+        "2d": -0.57,
+        "3d": -1.02,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "OCUL",
+      "book": 1.135,
+      "s_join": 0.9097203481384653,
+      "s_general": 0.23375,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.7854245338520062,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -2.71,
+        "2d": -1.81,
+        "3d": -2.8,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "GSHD",
+      "book": 1.134,
+      "s_join": 0.911817406548036,
+      "s_general": 0.4675,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.7565616838709821,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 0.66,
+        "2d": -0.26,
+        "3d": -1.67,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CRSP",
+      "book": 1.133,
+      "s_join": 0.8273569903733742,
+      "s_general": 0.4675,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.668208827802973,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -4.08,
+        "2d": 2.35,
+        "3d": -0.45,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "XP",
+      "book": 1.124,
+      "s_join": 0.8747125590761087,
+      "s_general": 0.23375,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.8204278895821261,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 1.55,
+        "2d": 5.89,
+        "3d": 5.95,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "OPCH",
+      "book": 1.104,
+      "s_join": 0.933712777712242,
+      "s_general": 0.070125,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.2248418786958319,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.13,
+        "2d": -0.25,
+        "3d": 1.43,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "WGS",
+      "book": 1.094,
+      "s_join": 0.8234046882869835,
+      "s_general": 0.4675,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.1913614612156944,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": -2.15,
+        "2d": 0.39,
+        "3d": 3.7,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "HLNE",
+      "book": 1.085,
+      "s_join": 0.9478521688120805,
+      "s_general": 0.23375,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.325802446026999,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.14,
+        "2d": 1.4,
+        "3d": -0.08,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BXSL",
+      "book": 1.07,
+      "s_join": 0.9178647139240608,
+      "s_general": 0.070125,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.1378664187390931,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 0.93,
+        "2d": 0.28,
+        "3d": 0.69,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NHI",
+      "book": 1.035,
+      "s_join": 0.885826258413163,
+      "s_general": 0.070125,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.0549446086891874,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.4,
+        "2d": -0.01,
+        "3d": 0.04,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CE",
+      "book": 1.014,
+      "s_join": 0.8194037105941603,
+      "s_general": 0.070125,
+      "s_ab": 0.4621171572600097,
+      "s_peer": 0.4462436102487796,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": true,
+      "fwd": {
+        "1d": -3.29,
+        "2d": -4.87,
+        "3d": -4.49,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FBRT",
+      "book": 0.996,
+      "s_join": 0.7934955770400535,
+      "s_general": 0.23375,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3319338535036405,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": 0.6,
+        "2d": 1.07,
+        "3d": 0.72,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NMRK",
+      "book": 0.991,
+      "s_join": 0.9216685544064712,
+      "s_general": 0.4675,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3396970321140473,
+      "s_opp": 0.48,
+      "size": "mid",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.86,
+        "2d": -1.3,
+        "3d": -2.78,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ABR",
+      "book": 0.982,
+      "s_join": 0.6106141216068388,
+      "s_general": 0.23375,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.3927098596476682,
+      "s_opp": 0.52,
+      "size": "small",
+      "sector": "Real Estate",
+      "in_pile": true,
+      "fwd": {
+        "1d": 1.16,
+        "2d": -0.77,
+        "3d": -2.5,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ERO",
+      "book": 0.924,
+      "s_join": 0.9609828581271151,
+      "s_general": 0.23375,
+      "s_ab": 0.9780261147388136,
+      "s_peer": 0.4006097214500966,
+      "s_opp": 0.4,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": true,
+      "fwd": {
+        "1d": -2.21,
+        "2d": 2.49,
+        "3d": -0.46,
+        "1w": null
+      }
+    }
+  ],
+  "overlap": [
+    "ABR",
+    "CE",
+    "CRSP",
+    "FBRT",
+    "GSHD",
+    "HLNE",
+    "MOS",
+    "NHI",
+    "NMRK",
+    "OCUL",
+    "OPCH",
+    "WGS",
+    "XP"
+  ],
+  "entered": [
+    "BXSL",
+    "ERO"
+  ],
+  "dropped": [
+    "BFAM",
+    "BZ",
+    "CALX",
+    "DNN",
+    "DUOL",
+    "EPAM",
+    "FIGR",
+    "GPK",
+    "NFG",
+    "VNT",
+    "Z",
+    "ZG"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": -0.3836,
+      "2d": 0.5867999999999999,
+      "3d": 0.01560000000000013,
+      "1w": null
+    },
+    "green": {
+      "1d": -0.85,
+      "2d": 0.2686666666666667,
+      "3d": -0.24800000000000003,
+      "1w": null
+    }
+  }
+}

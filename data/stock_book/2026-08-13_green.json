@@ -1,0 +1,286 @@
+{
+  "date": "2026-08-13",
+  "n_pile": 0,
+  "n_universe": 2710,
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "INO",
+      "book": 0.361,
+      "s_join": 0.5828049570549207,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.16,
+      "size": "micro",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 21.11,
+        "2d": 27.78,
+        "3d": 33.33,
+        "1w": 34.44
+      }
+    },
+    {
+      "ticker": "TNDM",
+      "book": 0.361,
+      "s_join": 0.5828049570549207,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.24,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.77,
+        "2d": -3.78,
+        "3d": 2.59,
+        "1w": -2.42
+      }
+    },
+    {
+      "ticker": "AGEN",
+      "book": 0.354,
+      "s_join": 0.5624433698862664,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.16,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.57,
+        "2d": 2.14,
+        "3d": 7.57,
+        "1w": 7.0
+      }
+    },
+    {
+      "ticker": "ACHV",
+      "book": 0.354,
+      "s_join": 0.5624433698862664,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.18,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.69,
+        "2d": 3.45,
+        "3d": 3.72,
+        "1w": 10.62
+      }
+    },
+    {
+      "ticker": "VOR",
+      "book": 0.354,
+      "s_join": 0.5624433698862664,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.36000000000000004,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.12,
+        "2d": -1.2,
+        "3d": -0.04,
+        "1w": -0.97
+      }
+    },
+    {
+      "ticker": "SGRY",
+      "book": 0.349,
+      "s_join": 0.5479171246152715,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.48000000000000004,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.05,
+        "2d": -5.46,
+        "3d": -6.25,
+        "1w": -8.23
+      }
+    },
+    {
+      "ticker": "TGTX",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.4,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.67,
+        "2d": 2.8,
+        "3d": 4.84,
+        "1w": 5.47
+      }
+    },
+    {
+      "ticker": "PROK",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.4,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -5.34,
+        "2d": -0.36,
+        "3d": -1.78,
+        "1w": 1.07
+      }
+    },
+    {
+      "ticker": "ABEO",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.24,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -5.67,
+        "2d": -6.46,
+        "3d": -2.99,
+        "1w": -6.14
+      }
+    },
+    {
+      "ticker": "NRXP",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.08,
+      "size": "micro",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.1,
+        "2d": 2.69,
+        "3d": 2.99,
+        "1w": 5.09
+      }
+    },
+    {
+      "ticker": "FTRE",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.36,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.3,
+        "2d": 1.57,
+        "3d": -1.23,
+        "1w": 2.08
+      }
+    },
+    {
+      "ticker": "UNCY",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.12,
+      "size": "micro",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.04,
+        "2d": 3.15,
+        "3d": 4.26,
+        "1w": 0.93
+      }
+    },
+    {
+      "ticker": "FDMT",
+      "book": 0.341,
+      "s_join": 0.5250597999945458,
+      "s_general": 0.6,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.24,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.64,
+        "2d": 24.85,
+        "3d": 26.35,
+        "1w": 38.2
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "ABEO",
+    "ACHV",
+    "AGEN",
+    "APNAU",
+    "BCACU",
+    "FDMT",
+    "FTRE",
+    "IDIAU",
+    "IMNN",
+    "INO",
+    "LEDRU",
+    "MBRX",
+    "NRXP",
+    "PHAXU",
+    "PROK",
+    "SCATU",
+    "SGRY",
+    "SKAIU",
+    "SPRB",
+    "TGTX",
+    "TKVA",
+    "TNDM",
+    "UNCY",
+    "VOR",
+    "WW"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 1.4900000000000004,
+      "2d": 3.936153846153846,
+      "3d": 5.643076923076924,
+      "1w": 6.703076923076922
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
+}
