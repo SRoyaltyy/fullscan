@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # DST-correct 22:00 ET post-close map/captain research, run by systemd.
-# Hard-stop at 04:30 ET so 05:55 pre-open can own the box. Never git
-# reset --hard while pre-open holds its lock.
+# Preopen lock is the hard gate. Clock window is advisory so a missed
+# 22:00 can still be caught up before 05:55.
 set -euo pipefail
 
 ROOT="${FULLSCAN_ROOT:-/home/gha/fullscan}"
@@ -9,14 +9,21 @@ ENVF="${FULLSCAN_ENV:-/home/gha/.fullscan.env}"
 LOCK="${MAP_POSTCLOSE_LOCK:-/tmp/fullscan-map-postclose.lock}"
 PREOPEN_LOCK="${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}"
 PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
+FALLBACK="$PERSIST/locks/map-postclose.lock"
+mkdir -p "$PERSIST/locks" 2>/dev/null || true
+
+if [ -e "$LOCK" ] && [ ! -w "$LOCK" ]; then
+  chmod 0666 "$LOCK" 2>/dev/null || LOCK="$FALLBACK"
+fi
 exec 9>"$LOCK"
+chmod 0666 "$LOCK" 2>/dev/null || true
 flock -n 9 || { echo "[map-postclose] lock held — skip"; exit 0; }
 
 ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-# Allowed window: 22:00–04:29 ET. 04:30–21:59 is pre-open / cash session.
+# Preferred window: 22:00–04:29 ET. Do not start if preopen owns the box.
+# Clock abort only when preopen lock is held; otherwise catch-up is allowed.
 if [ "$ET_HM" -ge 430 ] && [ "$ET_HM" -lt 2200 ]; then
-  echo "[map-postclose] outside 22:00–04:29 ET window (et_hm=$ET_HM) — abort"
-  exit 1
+  echo "[map-postclose] outside 22:00–04:29 ET (et_hm=$ET_HM) — catch-up if preopen free"
 fi
 
 if ! flock -n "$PREOPEN_LOCK" -c true; then
@@ -63,9 +70,8 @@ SOURCE=$(TZ=America/New_York date +%F)
 TARGET=$("$PY" -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
 echo "[map-postclose] source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
 
-ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-if [ "$ET_HM" -ge 430 ] && [ "$ET_HM" -lt 2200 ]; then
-  echo "[map-postclose] hit 04:30 ET before scrape — abort"
+if ! flock -n "$PREOPEN_LOCK" -c true; then
+  echo "[map-postclose] preopen grabbed the lock before scrape — abort"
   exit 1
 fi
 
