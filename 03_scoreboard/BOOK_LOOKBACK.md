@@ -1,6 +1,6 @@
 # Book lookback — 2026-08-20
 
-_Generated 2026-08-27T06:21:45.950547-04:00_
+_Generated 2026-08-27T06:30:53.057193-04:00_
 
 Winner bar: **5% per session** (1d ≥ 5% · 2d ≥ 10% · 3d ≥ 15% · 1w ≥ 25%).
 
@@ -212,96 +212,15 @@ Ranker reasons: `join=-0.83; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
 
 - Finviz tape change=None relvol=0.32 spike=False (finviz_2026-08-20.csv)
 
-### ASST · small · Financial
+### ELF · mid · Consumer Defensive
 
-**class: `outweighed`** · in universe: True · buy books: —
+**class: `in_buy_book`** · in universe: True · buy books: 1d, 3d, 1w, 2w, 1m
 
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟡AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +13.0% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.30 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.00 | afternoon |
-| peer RS | +1.00 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.40 | labels |
-
-Ranker reasons: `join=+0.30; gen1d=+0.47; peer=+1.00; mid_opp=+0.40`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=2.94 spike=True (finviz_2026-08-20.csv)
-
-### UEC · mid · Energy
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🟢join 🔴sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🟢peer ⬛heat 🔴vol ⬛cat 🟡buy
+🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🔴vol ⬛cat 🟢buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
-| +14.4% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.91 | after open (join) |
-| sector predict | -0.80 | pre-09:30 |
-| general predict | +0.23 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | -0.12 | afternoon |
-| peer RS | +0.18 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.56 | labels |
-
-Ranker reasons: `join=+0.91; sector1d=-0.80; gen1d=+0.23; ab=-0.12; LEAD,peers↓,ind↓; peer=+0.18; mid_opp=+0.56`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.52 spike=False (finviz_2026-08-20.csv)
-
-### PROK · small · Healthcare
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🔴join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +13.4% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | -0.10 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.46 | afternoon |
-| peer RS | +0.22 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.40 | labels |
-
-Ranker reasons: `gen1d=+0.47; ab=+0.46; LEAD,peers↑,ind↑; peer=+0.22; mid_opp=+0.40`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=1.62 spike=True (finviz_2026-08-20.csv)
-
-### CRML · small · Basic Materials
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🔴peer ⬛heat 🟡vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +22.6% | n/a | n/a | n/a |
+| +3.5% | n/a | n/a | n/a |
 
 | Layer | Signal | When it lands |
 |-------|-------:|---------------|
@@ -309,70 +228,98 @@ Ranker reasons: `gen1d=+0.47; ab=+0.46; LEAD,peers↑,ind↑; peer=+0.22; mid_op
 | sector predict | +0.00 | pre-09:30 |
 | general predict | +0.47 | pre-09:30 |
 | news / judge | +0.00 | pre-09:30 |
-| AB checklist | -0.36 | afternoon |
-| peer RS | -0.96 | afternoon |
+| AB checklist | +0.56 | afternoon |
+| peer RS | +0.81 | afternoon |
 | map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.40 | labels |
+| mid-opp | +0.60 | labels |
 
-Ranker reasons: `join=+0.87; gen1d=+0.47; ab=-0.36; LAG,peers↑,ind↓; peer=-0.96; mid_opp=+0.40`
+Ranker reasons: `join=+0.87; gen1d=+0.47; ab=+0.55; LEAD,peers↓,ind↓; peer=+0.81; mid_opp=+0.60; rebound_floor`
 
 **What fired before the ranker:**
 
-- Finviz tape change=None relvol=1.29 spike=False (finviz_2026-08-20.csv)
+- Finviz tape change=None relvol=0.49 spike=False (finviz_2026-08-20.csv)
 
-### USDE · micro · Financial
+### MOS · mid · Basic Materials
 
-**class: `gated_out`** · in universe: True · buy books: —
+**class: `in_buy_book`** · in universe: True · buy books: 1d, 3d, 1w, 2w, 1m
 
-🔴join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🟡peer ⬛heat 🟢vol ⬛cat 🟡buy
+🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟢buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
-| +85.2% | n/a | n/a | n/a |
+| +4.5% | n/a | n/a | n/a |
 
 | Layer | Signal | When it lands |
 |-------|-------:|---------------|
-| join × weather | -0.26 | after open (join) |
+| join × weather | +0.98 | after open (join) |
 | sector predict | +0.00 | pre-09:30 |
-| general predict | +0.07 | pre-09:30 |
+| general predict | +0.23 | pre-09:30 |
 | news / judge | +0.00 | pre-09:30 |
-| AB checklist | -0.12 | afternoon |
-| peer RS | +0.00 | afternoon |
+| AB checklist | +0.64 | afternoon |
+| peer RS | +0.05 | afternoon |
 | map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.16 | labels |
+| mid-opp | +0.68 | labels |
 
-Ranker reasons: `join=-0.26; gen1d=+0.07; ab=-0.12; ind↓; mid_opp=+0.16`
+Ranker reasons: `join=+0.98; gen1d=+0.23; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.05; mid_opp=+0.68; rebound_floor`
 
 **What fired before the ranker:**
 
-- Finviz tape change=None relvol=2.35 spike=True (finviz_2026-08-20.csv)
+- Finviz tape change=None relvol=1.59 spike=True (finviz_2026-08-20.csv)
 
-### BKKT · small · Technology
+### INTC · mega · Technology
 
-**class: `gated_out`** · in universe: True · buy books: —
+**class: `outweighed`** · in universe: True · buy books: —
 
-🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🔴peer ⬛heat 🟢vol ⬛cat 🟡buy
+🔴join 🟢sect 🟢gen 🔴news 🟢dig 🟡jdg 🔴AB 🔴peer ⬛heat 🟡vol ⬛cat 🟡buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
-| +14.5% | n/a | n/a | n/a |
+| -2.2% | n/a | n/a | n/a |
 
 | Layer | Signal | When it lands |
 |-------|-------:|---------------|
-| join × weather | -0.15 | after open (join) |
+| join × weather | -0.89 | after open (join) |
 | sector predict | +0.40 | pre-09:30 |
 | general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.24 | afternoon |
-| peer RS | -0.08 | afternoon |
+| news / judge | -0.31 | pre-09:30 |
+| AB checklist | -0.12 | afternoon |
+| peer RS | -0.84 | afternoon |
 | map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.52 | labels |
+| mid-opp | -0.14 | labels |
 
-Ranker reasons: `join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LAG,peers↑,ind↓; peer=-0.08; mid_opp=+0.52`
+Ranker reasons: `join=-0.88; sector1d=+0.40; gen1d=+0.47; news=-0.31; ev=finviz_digest; ab=-0.12; LAG,peers↓,ind↓; peer=-0.84`
 
 **What fired before the ranker:**
 
-- Finviz tape change=None relvol=3.29 spike=True (finviz_2026-08-20.csv)
+- Finviz digest: Intel shares fall about 7% after UBS cuts its price target to $112 from $121 while maintaining a Neutral rating.
+- Finviz tape change=None relvol=0.94 spike=False (finviz_2026-08-20.csv)
+
+### GEV · mega · Industrials
+
+**class: `outweighed`** · in universe: True · buy books: —
+
+🔴join 🔴sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🔴peer ⬛heat 🔴vol ⬛cat 🟡buy
+
+| 1d | 2d | 3d | 1w |
+|----|----|----|----|
+| -0.9% | n/a | n/a | n/a |
+
+| Layer | Signal | When it lands |
+|-------|-------:|---------------|
+| join × weather | -0.89 | after open (join) |
+| sector predict | -0.24 | pre-09:30 |
+| general predict | +0.23 | pre-09:30 |
+| news / judge | +0.00 | pre-09:30 |
+| AB checklist | -0.24 | afternoon |
+| peer RS | -0.69 | afternoon |
+| map heat | +0.00 | post-close + morning delta |
+| mid-opp | -0.22 | labels |
+
+Ranker reasons: `join=-0.88; sector1d=-0.24; gen1d=+0.23; ab=-0.24; LAG,peers↓,ind↓; peer=-0.69`
+
+**What fired before the ranker:**
+
+- Finviz tape change=None relvol=0.66 spike=False (finviz_2026-08-20.csv)
 
 
 ## Winners — did the ranker see *something*?
@@ -438,6 +385,89 @@ _No realized winners at this gain threshold (or prices not in yet)._
 ### 1w (next 5 session(s), bar 25%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
+
+## Book picks — scores that day
+
+What the ranker actually put in buy/sell, with every layer score and the same color boxes.
+`book` is the combined ranker score. `1d` is what the name did *after* that session.
+
+### 1d book
+
+**BUY** (15)
+
+| # | Ticker | book | 1d | join | sect | gen | news | dig | jdg | AB | peer | heat | vol | cat | buy |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | ELF | +1.123 | +3.5% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 2 | MOS | +1.066 | +4.5% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟢 |
+| 3 | AUPH | +1.024 | -3.6% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟢 |
+| 4 | CE | +1.020 | -0.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 5 | OCUL | +1.019 | -0.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 6 | EPAM | +1.015 | +3.4% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 7 | WRBY | +1.005 | -0.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 8 | CELH | +1.000 | +2.5% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 9 | IRTC | +0.994 | +0.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 10 | CALX | +0.986 | -0.6% | 🟡 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 11 | NHI | +0.971 | -0.7% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 12 | GSHD | +0.964 | n/a | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 13 | OGS | +0.945 | -3.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+| 14 | FIGR | +0.941 | +8.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🟡 | ⬛ | 🟢 |
+| 15 | HLNE | +0.938 | +1.2% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟢 |
+
+| Ticker | size | sector | reasons |
+|--------|------|--------|---------|
+| ELF | mid | Consumer Defensive | `join=+0.87; gen1d=+0.47; ab=+0.55; LEAD,peers↓,ind↓; peer=+0.81; mid_opp=+0.60; rebound_floor` |
+| MOS | mid | Basic Materials | `join=+0.98; gen1d=+0.23; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.05; mid_opp=+0.68; rebound_floor` |
+| AUPH | mid | Healthcare | `join=+0.93; gen1d=+0.47; ab=+0.81; LEAD,peers↑,ind↑; peer=+0.76; mid_opp=+0.52` |
+| CE | mid | Basic Materials | `join=+0.95; gen1d=+0.07; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.51; mid_opp=+0.64` |
+| OCUL | mid | Healthcare | `join=+0.54; gen1d=+0.23; ab=+0.70; LEAD,peers↑,ind↑; peer=+0.80; mid_opp=+0.60` |
+| EPAM | mid | Technology | `join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.46; LEAD,peers↓,ind↓; peer=+0.80; mid_opp=+0.68` |
+| WRBY | mid | Healthcare | `join=+0.90; gen1d=+0.47; ab=+0.76; LEAD,peers↓,ind↑; peer=+0.75; mid_opp=+0.52` |
+| CELH | mid | Consumer Defensive | `join=+0.73; gen1d=+0.23; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.87; mid_opp=+0.56` |
+| IRTC | mid | Healthcare | `join=+0.82; gen1d=+0.47; ab=+0.46; LEAD,peers↓,ind↓; peer=+0.51; mid_opp=+0.64` |
+| CALX | mid | Technology | `sector1d=+0.40; gen1d=+0.23; ab=+0.36; LEAD,peers↓,ind↓; peer=+0.78; mid_opp=+0.68` |
+| NHI | mid | Real Estate | `join=+0.75; sector1d=-0.24; gen1d=+0.07; ab=+0.81; LEAD,peers↑,ind↑; peer=+0.28; mid_opp=+0.64` |
+| GSHD | mid | Financial | `join=+0.91; gen1d=+0.47; ab=+0.81; LEAD,peers↑,ind↑; peer=+0.47; mid_opp=+0.52` |
+| OGS | mid | Utilities | `join=+0.81; gen1d=+0.07; ab=+0.85; LEAD,peers↑,ind↑; peer=+0.15; mid_opp=+0.60` |
+| FIGR | mid | Financial | `join=+0.89; gen1d=+0.19; ab=+0.55; ind↓; mid_opp=+0.68` |
+| HLNE | mid | Financial | `join=+0.95; gen1d=+0.23; ab=+0.46; LEAD,peers↓,ind↓; peer=+0.25; mid_opp=+0.64` |
+
+**SELL** (15)
+
+| # | Ticker | book | 1d | join | sect | gen | news | dig | jdg | AB | peer | heat | vol | cat | buy |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | GEV | -0.531 | -0.9% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 2 | INTC | -0.446 | -2.2% | 🔴 | 🟢 | 🟢 | 🔴 | 🟢 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| 3 | AUR | -0.410 | +2.0% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| 4 | ARM | -0.381 | -3.0% | 🔴 | 🟢 | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 5 | META | -0.375 | +0.8% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| 6 | SW | -0.371 | +2.5% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 7 | DELL | -0.370 | +1.7% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 8 | BWEN | -0.349 | -1.1% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 9 | PKG | -0.340 | +1.3% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 10 | MDB | -0.326 | +2.5% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 11 | RY | -0.323 | +0.0% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 12 | PANW | -0.318 | +2.4% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| 13 | WMT | -0.312 | +0.1% | 🟢 | 🟡 | 🟢 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | ⬛ | 🟢 | ⬛ | 🟡 |
+| 14 | BIDU | -0.312 | +1.4% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟢 | ⬛ | 🟡 |
+| 15 | SES | -0.308 | +6.1% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟢 | ⬛ | 🟡 |
+
+| Ticker | size | sector | reasons |
+|--------|------|--------|---------|
+| GEV | mega | Industrials | `join=-0.88; sector1d=-0.24; gen1d=+0.23; ab=-0.24; LAG,peers↓,ind↓; peer=-0.69` |
+| INTC | mega | Technology | `join=-0.88; sector1d=+0.40; gen1d=+0.47; news=-0.31; ev=finviz_digest; ab=-0.12; LAG,peers↓,ind↓; peer=-0.84` |
+| AUR | large | Consumer Cyclical | `join=-0.96; sector1d=-0.80; gen1d=+0.47; ab=-0.46; LAG,peers↓,ind↓; peer=-0.83` |
+| ARM | mega | Technology | `join=-0.70; sector1d=+0.40; gen1d=+0.47; news=-0.31; ev=finviz_digest; peer=-0.79` |
+| META | mega | Communication Services | `join=-0.80; gen1d=+0.23; ab=-0.36; LAG,peers↓,ind↓; peer=-0.74` |
+| SW | large | Consumer Cyclical | `join=-0.61; sector1d=-0.80; gen1d=+0.23; ab=-0.12; LAG,peers↓,ind↓; peer=-0.18` |
+| DELL | mega | Technology | `join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LAG,peers↓,ind↓; peer=-0.75` |
+| BWEN | micro | Industrials | `join=-0.74; sector1d=-0.24; gen1d=+0.47; ab=-0.36; LAG,peers↓,ind↓; peer=-0.92` |
+| PKG | large | Consumer Cyclical | `join=-0.63; sector1d=-0.80; gen1d=+0.23; peer=-0.16` |
+| MDB | large | Technology | `join=-0.61; sector1d=+0.40; gen1d=+0.47; peer=-0.80` |
+| RY | mega | Financial | `join=+0.59; gen1d=+0.07; ab=-0.12; LAG,peers↓,ind↓; peer=-0.14` |
+| PANW | mega | Technology | `join=-0.45; sector1d=+0.40; gen1d=+0.23; ab=+0.12; LAG,peers↓,ind↓; peer=-0.06` |
+| WMT | mega | Consumer Defensive | `join=+0.13; gen1d=+0.07; news=-0.29; ev=news_judge; ab=-0.12; LAG,peers↓,ind↓; peer=-0.85` |
+| BIDU | large | Communication Services | `join=-0.95; gen1d=+0.07; ab=-0.55; LAG,peers↓,ind↓; peer=-0.87; mid_opp=+0.11` |
+| SES | micro | Consumer Cyclical | `join=-0.71; sector1d=-0.80; gen1d=+0.23; ab=-0.55; LAG,peers↓,ind↓; peer=-0.91; mid_opp=+0.16` |
 
 ## Files
 
