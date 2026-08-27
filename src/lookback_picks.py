@@ -1,8 +1,20 @@
-"""Book picks slice for lookback: every buy/sell name and the layer scores that day."""
+"""Book picks slice for lookback: every buy/sell name and the layer scores that day.
+
+Run after src.book_lookback so the winner report already exists:
+  python -m src.lookback_picks --date 2026-08-20
+"""
 from __future__ import annotations
 
+import argparse
+import json
+from pathlib import Path
+
+from .book_learn import _load_panel, load_frame
 from .book_lookback import (
     BOX_COLS,
+    BOOK_DIR,
+    DAILY,
+    SCORE,
     _boxes,
     _catalyst,
     _digest_hits,
@@ -11,8 +23,12 @@ from .book_lookback import (
     _fwd_map,
     _heat_hits,
     _icon,
+    _inventory,
+    _jload,
     _judge_tilt,
+    _missing_layers,
     _news_actions,
+    _parse_date,
     _signals,
     _tick,
 )
@@ -73,7 +89,6 @@ def render_picks(picks: dict) -> list[str]:
         "`book` is the combined ranker score. `1d` is what the name did *after* that session.",
         "",
     ]
-    # 1d first; other horizons only if they exist
     order = [h for h in ("1d", "3d", "1w", "2w", "1m") if h in picks]
     for extra in picks:
         if extra not in order:
@@ -113,7 +128,57 @@ def render_picks(picks: dict) -> list[str]:
                     f"| {r['ticker']} | {r.get('size') or '?'} | {r.get('sector') or '?'} | `{why}` |"
                 )
             L.append("")
-        if h != "1d":
-            # keep 3d/1w to the score board only; skip extra reason dumps to stay readable
-            break
+        break
     return L
+
+
+def run(date: str | None = None) -> dict:
+    date = _parse_date(date)
+    frame = load_frame(date)
+    book = _jload("data", "stock_book", f"{date}_stock_book.json")
+    panel = _load_panel()
+    missing = _missing_layers(_inventory(date))
+    picks = book_picks(date, frame, book, panel, missing)
+    block = "\n".join(render_picks(picks)) + "\n"
+    for path in (
+        SCORE / "BOOK_LOOKBACK.md",
+        DAILY / f"{date}_lookback.md",
+    ):
+        if path.exists():
+            text = path.read_text(encoding="utf-8")
+            if "## Book picks" in text:
+                pre, _mid, rest = text.partition("## Book picks")
+                # drop old picks through Files or end
+                cut = rest.find("\n## Files")
+                tail = rest[cut:] if cut >= 0 else ""
+                text = pre.rstrip() + "\n\n" + block + tail.lstrip("\n")
+            elif "## Files" in text:
+                text = text.replace("## Files", block + "## Files", 1)
+            else:
+                text = text.rstrip() + "\n\n" + block
+            path.write_text(text, encoding="utf-8")
+        else:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# Book lookback — " + date + "\n\n" + block, encoding="utf-8")
+    js = BOOK_DIR / f"{date}_lookback.json"
+    if js.exists():
+        try:
+            payload = json.loads(js.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            payload = {"date": date}
+        payload["picks"] = picks
+        js.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    print(block[:4000])
+    print(f"[lookback-picks] wrote picks for {date}")
+    return picks
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date", default=None)
+    args = ap.parse_args()
+    run(date=args.date)
+
+
+if __name__ == "__main__":
+    main()
