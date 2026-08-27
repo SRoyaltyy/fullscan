@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-08-28
 
-Export `finviz_2026-08-27.csv` · 11637 names · generated 2026-08-27T03:19:57.709849-04:00
+Export `finviz_2026-08-27.csv` · 11637 names · generated 2026-08-27T03:22:58.621800-04:00
 
 ## TAPE (live futures)
 _futures scrape empty_
