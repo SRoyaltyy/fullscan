@@ -1,6 +1,6 @@
 # Book lookback — 2026-08-20
 
-_Generated 2026-08-27T07:50:38.380749-04:00_
+_Generated 2026-08-27T08:44:37.209238-04:00_
 
 Winner bar: **3% per session** (1d ≥ 3% · 2d ≥ 6% · 3d ≥ 9% · 1w ≥ 15%).
 
@@ -47,307 +47,6 @@ Boxes: 🟢 good (helped / fired bullish) · 🟡 neutral (present, flat) · �
 | Map heat tables | NO | pre-open overlay / post-close tables |
 | Captain research | NO | s_heat captains — missing → bootstrap stub |
 | Stock book CSV | yes | ranker snapshot (usually written after the open) |
-
-## Requested tickers
-
-### SLS · mid · Healthcare
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟡vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +15.4% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.45 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.64 | afternoon |
-| peer RS | +0.95 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.28 | labels |
-
-Ranker reasons: `join=+0.45; gen1d=+0.47; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.95; mid_opp=+0.28`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.88 spike=False (finviz_2026-08-20.csv)
-
-### HOOD · large · Financial
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🔴peer ⬛heat 🟡vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +13.7% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.90 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.36 | afternoon |
-| peer RS | -0.64 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.07 | labels |
-
-Ranker reasons: `join=+0.90; gen1d=+0.47; ab=+0.36; LAG,peers↑,ind↓; peer=-0.64; mid_opp=+0.07`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=1.36 spike=False (finviz_2026-08-20.csv)
-
-### ARCT · small · Healthcare
-
-**class: `gated_out`** · in universe: True · buy books: —
-
-🟡join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +22.4% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.04 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.64 | afternoon |
-| peer RS | +1.00 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.40 | labels |
-
-Ranker reasons: `gen1d=+0.47; ab=+0.64; LEAD,peers↑,ind↑; peer=+1.00; mid_opp=+0.40`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=4.53 spike=True (finviz_2026-08-20.csv)
-
-### CAN · micro · Technology
-
-**class: `gated_out`** · in universe: True · buy books: —
-
-🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +27.2% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | -0.63 | after open (join) |
-| sector predict | +0.40 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.24 | afternoon |
-| peer RS | +1.00 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.16 | labels |
-
-Ranker reasons: `join=-0.63; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LEAD,peers↑,ind↓; peer=+1.00; mid_opp=+0.16`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=11.27 spike=True (finviz_2026-08-20.csv)
-
-### IQMX · small · Technology
-
-**class: `blind`** · in universe: True · buy books: —
-
-🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟡AB 🟡peer ⬛heat 🔴vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +14.8% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | -0.77 | after open (join) |
-| sector predict | +0.40 | pre-09:30 |
-| general predict | +0.07 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.00 | afternoon |
-| peer RS | +0.00 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.40 | labels |
-
-Ranker reasons: `join=-0.77; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.2 spike=False (finviz_2026-08-20.csv)
-
-### HQ · small · Technology
-
-**class: `blind`** · in universe: True · buy books: —
-
-🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟡AB 🟡peer ⬛heat 🔴vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +14.5% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | -0.83 | after open (join) |
-| sector predict | +0.40 | pre-09:30 |
-| general predict | +0.07 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.00 | afternoon |
-| peer RS | +0.00 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.40 | labels |
-
-Ranker reasons: `join=-0.83; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.32 spike=False (finviz_2026-08-20.csv)
-
-### ELF · mid · Consumer Defensive
-
-**class: `in_buy_book`** · in universe: True · buy books: 1d, 3d, 1w, 2w, 1m
-
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🔴vol ⬛cat 🟢buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +3.5% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.87 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.56 | afternoon |
-| peer RS | +0.81 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.60 | labels |
-
-Ranker reasons: `join=+0.87; gen1d=+0.47; ab=+0.55; LEAD,peers↓,ind↓; peer=+0.81; mid_opp=+0.60; rebound_floor`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.49 spike=False (finviz_2026-08-20.csv)
-
-### MOS · mid · Basic Materials
-
-**class: `in_buy_book`** · in universe: True · buy books: 1d, 3d, 1w, 2w, 1m
-
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟢buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +4.5% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.98 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.23 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.64 | afternoon |
-| peer RS | +0.05 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.68 | labels |
-
-Ranker reasons: `join=+0.98; gen1d=+0.23; ab=+0.64; LEAD,peers↑,ind↑; peer=+0.05; mid_opp=+0.68; rebound_floor`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=1.59 spike=True (finviz_2026-08-20.csv)
-
-### INTC · mega · Technology
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🔴join 🟢sect 🟢gen 🔴news 🟢dig 🟡jdg 🔴AB 🔴peer ⬛heat 🟡vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| -2.2% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | -0.89 | after open (join) |
-| sector predict | +0.40 | pre-09:30 |
-| general predict | +0.47 | pre-09:30 |
-| news / judge | -0.31 | pre-09:30 |
-| AB checklist | -0.12 | afternoon |
-| peer RS | -0.84 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | -0.14 | labels |
-
-Ranker reasons: `join=-0.88; sector1d=+0.40; gen1d=+0.47; news=-0.31; ev=finviz_digest; ab=-0.12; LAG,peers↓,ind↓; peer=-0.84`
-
-**What fired before the ranker:**
-
-- Finviz digest: Intel shares fall about 7% after UBS cuts its price target to $112 from $121 while maintaining a Neutral rating.
-- Finviz tape change=None relvol=0.94 spike=False (finviz_2026-08-20.csv)
-
-### GEV · mega · Industrials
-
-**class: `outweighed`** · in universe: True · buy books: —
-
-🔴join 🔴sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🔴peer ⬛heat 🔴vol ⬛cat 🟡buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| -0.9% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | -0.89 | after open (join) |
-| sector predict | -0.24 | pre-09:30 |
-| general predict | +0.23 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | -0.24 | afternoon |
-| peer RS | -0.69 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | -0.22 | labels |
-
-Ranker reasons: `join=-0.88; sector1d=-0.24; gen1d=+0.23; ab=-0.24; LAG,peers↓,ind↓; peer=-0.69`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.66 spike=False (finviz_2026-08-20.csv)
-
-### FIGR · mid · Financial
-
-**class: `in_buy_book`** · in universe: True · buy books: 1d, 3d, 1w, 2w, 1m
-
-🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟡peer ⬛heat 🟡vol ⬛cat 🟢buy
-
-| 1d | 2d | 3d | 1w |
-|----|----|----|----|
-| +8.4% | n/a | n/a | n/a |
-
-| Layer | Signal | When it lands |
-|-------|-------:|---------------|
-| join × weather | +0.89 | after open (join) |
-| sector predict | +0.00 | pre-09:30 |
-| general predict | +0.19 | pre-09:30 |
-| news / judge | +0.00 | pre-09:30 |
-| AB checklist | +0.56 | afternoon |
-| peer RS | +0.00 | afternoon |
-| map heat | +0.00 | post-close + morning delta |
-| mid-opp | +0.68 | labels |
-
-Ranker reasons: `join=+0.89; gen1d=+0.19; ab=+0.55; ind↓; mid_opp=+0.68`
-
-**What fired before the ranker:**
-
-- Finviz tape change=None relvol=0.93 spike=False (finviz_2026-08-20.csv)
-
 
 ## Winners — did the ranker see *something*?
 
@@ -740,6 +439,92 @@ A ripper with book +0.40 was seen and ranked too low. A ripper with book — was
 | NB | outweighed | +0.555 | +0.97 | +0.00 | +0.07 | +0.00 | +0.12 | -0.99 | +0.00 | +8.2% | -0.9% | +4.2% | +0.9% |
 | IONQ | outweighed | -0.178 | -0.96 | +0.40 | +0.47 | +0.00 | -0.56 | -0.36 | +0.00 | +8.0% | -1.1% | +1.2% | -3.6% |
 | AGEN | gated_out | +0.396 | +0.11 | +0.00 | +0.47 | +0.00 | +0.70 | +0.65 | +0.00 | +8.0% | +2.4% | +11.6% | +10.2% |
+
+## Unweighted book — same day, weights stripped
+
+mean(join, sector, general, news, AB, peer) — no weights, no opp/rebound.
+mean(AB, peer) — name-specific only.
+same as live: skip micro/<$400M, max 4 large, 4/sector, 3/industry.
+
+| Book | names kept vs live | entered | dropped | avg 1d | avg 1w |
+|------|--------------------|---------|---------|--------|--------|
+| live weighted | 15 | — | — | +1.20% | -0.30% |
+| standalone equal-mean | overlap 5 | AU, FRPT, HCC, HL, LAUR, MEOH, MGTX, NMRK, TEM, TRU | CALX, CE, EPAM, FIGR, HLNE, IRTC, MOS, NHI, OCUL, OGS | +1.61% | +0.84% |
+| tape AB+peer only | overlap 1 | CPRT, DOW, ETON, HCC, HTHT, MEOH, MGTX, MRVI, MTA, OABI, OBE, SM, TALO, TRGP | AUPH, CALX, CE, ELF, EPAM, FIGR, GSHD, HLNE, IRTC, MOS, NHI, OCUL, OGS, WRBY | +0.53% | -0.62% |
+
+### Live weighted BUY (what actually printed)
+
+| # | Ticker | stand | tape | book | join | AB | peer | opp | 1d | 1w | size |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | ELF | +0.451 | +0.684 | +1.123 | +0.87 | +0.55 | +0.81 | +0.60 | +3.5% | +8.6% | mid |
+| 2 | MOS | +0.317 | +0.344 | +1.066 | +0.98 | +0.64 | +0.05 | +0.68 | +4.5% | +3.5% | mid |
+| 3 | AUPH | +0.495 | +0.786 | +1.024 | +0.93 | +0.81 | +0.76 | +0.52 | -3.6% | -4.2% | mid |
+| 4 | CE | +0.360 | +0.572 | +1.020 | +0.95 | +0.64 | +0.51 | +0.64 | -0.4% | -4.8% | mid |
+| 5 | OCUL | +0.379 | +0.750 | +1.019 | +0.54 | +0.70 | +0.80 | +0.60 | -0.1% | -2.9% | mid |
+| 6 | EPAM | +0.330 | +0.631 | +1.015 | -0.15 | +0.46 | +0.80 | +0.68 | +3.4% | +2.4% | mid |
+| 7 | WRBY | +0.480 | +0.754 | +1.005 | +0.90 | +0.76 | +0.75 | +0.52 | -0.1% | -7.2% | mid |
+| 8 | CELH | +0.412 | +0.754 | +1.000 | +0.73 | +0.64 | +0.87 | +0.56 | +2.5% | +8.3% | mid |
+| 9 | IRTC | +0.377 | +0.487 | +0.994 | +0.82 | +0.46 | +0.51 | +0.64 | +0.4% | -6.9% | mid |
+| 10 | CALX | +0.297 | +0.572 | +0.986 | +0.01 | +0.36 | +0.78 | +0.68 | -0.6% | -5.0% | mid |
+| 11 | NHI | +0.279 | +0.546 | +0.971 | +0.75 | +0.81 | +0.28 | +0.64 | -0.7% | -0.7% | mid |
+| 12 | GSHD | +0.444 | +0.642 | +0.964 | +0.91 | +0.81 | +0.47 | +0.52 | +2.6% | +0.9% | mid |
+| 13 | OGS | +0.313 | +0.501 | +0.945 | +0.81 | +0.85 | +0.15 | +0.60 | -3.1% | -0.4% | mid |
+| 14 | FIGR | +0.272 | +0.277 | +0.941 | +0.89 | +0.55 | +0.00 | +0.68 | +8.4% | +2.8% | mid |
+| 15 | HLNE | +0.316 | +0.358 | +0.938 | +0.95 | +0.46 | +0.25 | +0.64 | +1.2% | +1.2% | mid |
+
+### Standalone BUY (equal mean of 6 layers, same gates)
+
+| # | Ticker | stand | tape | book | join | AB | peer | opp | 1d | 1w | size |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | AU | +0.548 | +0.672 | +0.480 | +0.99 | +0.70 | +0.64 | -0.17 | +5.9% | +3.2% | large |
+| 2 | AUPH | +0.495 | +0.786 | +1.024 | +0.93 | +0.81 | +0.76 | +0.52 | -3.6% | -4.2% | mid |
+| 3 | HL | +0.485 | +0.729 | +0.516 | +0.99 | +0.76 | +0.70 | +0.03 | -0.5% | -0.6% | large |
+| 4 | MGTX | +0.483 | +0.859 | +0.758 | +0.94 | +0.85 | +0.87 | +0.24 | -1.4% | +0.1% | small |
+| 5 | WRBY | +0.480 | +0.754 | +1.005 | +0.90 | +0.76 | +0.75 | +0.52 | -0.1% | -7.2% | mid |
+| 6 | TEM | +0.460 | +0.758 | +0.572 | +0.78 | +0.55 | +0.96 | +0.03 | +9.1% | +2.8% | large |
+| 7 | ELF | +0.451 | +0.684 | +1.123 | +0.87 | +0.55 | +0.81 | +0.60 | +3.5% | +8.6% | mid |
+| 8 | MEOH | +0.445 | +0.806 | +0.765 | +0.99 | +0.76 | +0.85 | +0.28 | +2.4% | -3.0% | mid |
+| 9 | GSHD | +0.444 | +0.642 | +0.964 | +0.91 | +0.81 | +0.47 | +0.52 | +2.6% | +0.9% | mid |
+| 10 | HCC | +0.441 | +0.795 | +0.883 | +0.99 | +0.81 | +0.78 | +0.40 | +3.3% | +1.8% | mid |
+| 11 | TRU | +0.426 | +0.582 | +0.373 | +0.92 | +0.85 | +0.32 | -0.05 | -0.6% | -0.7% | large |
+| 12 | CELH | +0.412 | +0.754 | +1.000 | +0.73 | +0.64 | +0.87 | +0.56 | +2.5% | +8.3% | mid |
+| 13 | LAUR | +0.402 | +0.708 | +0.708 | +0.92 | +0.55 | +0.86 | +0.28 | -0.3% | +3.0% | mid |
+| 14 | NMRK | +0.390 | +0.595 | +0.880 | +0.92 | +0.76 | +0.43 | +0.48 | +1.4% | -1.4% | mid |
+| 15 | FRPT | +0.387 | +0.467 | +0.892 | +0.92 | +0.76 | +0.17 | +0.52 | -0.2% | +1.0% | mid |
+
+### Tape BUY (mean of AB + peer only, same gates)
+
+| # | Ticker | stand | tape | book | join | AB | peer | opp | 1d | 1w | size |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | ETON | +0.377 | +0.924 | +0.613 | +0.18 | +0.85 | +1.00 | +0.16 | +5.9% | +4.5% | small |
+| 2 | TRGP | +0.337 | +0.883 | +0.270 | +0.99 | +0.85 | +0.92 | -0.17 | -1.0% | -2.7% | large |
+| 3 | HTHT | +0.133 | +0.872 | +0.237 | -0.21 | +0.76 | +0.98 | -0.05 | -0.8% | -1.0% | large |
+| 4 | MGTX | +0.483 | +0.859 | +0.758 | +0.94 | +0.85 | +0.87 | +0.24 | -1.4% | +0.1% | small |
+| 5 | MRVI | +0.404 | +0.852 | +0.840 | +0.65 | +0.70 | +1.00 | +0.38 | +4.2% | +7.4% | mid |
+| 6 | OABI | +0.310 | +0.851 | +0.612 | +0.09 | +0.70 | +1.00 | +0.22 | +0.7% | +11.9% | small |
+| 7 | MEOH | +0.445 | +0.806 | +0.765 | +0.99 | +0.76 | +0.85 | +0.28 | +2.4% | -3.0% | mid |
+| 8 | HCC | +0.441 | +0.795 | +0.883 | +0.99 | +0.81 | +0.78 | +0.40 | +3.3% | +1.8% | mid |
+| 9 | SM | +0.306 | +0.789 | +0.860 | +0.99 | +0.81 | +0.77 | +0.46 | -1.2% | -6.1% | mid |
+| 10 | TALO | +0.303 | +0.781 | +0.854 | +0.99 | +0.76 | +0.80 | +0.46 | -1.6% | -5.8% | mid |
+| 11 | OBE | +0.278 | +0.761 | +0.733 | +0.88 | +0.76 | +0.76 | +0.36 | -1.3% | -8.9% | small |
+| 12 | CPRT | +0.122 | +0.759 | +0.303 | -0.78 | +0.55 | +0.96 | +0.07 | -1.5% | -4.8% | large |
+| 13 | CELH | +0.412 | +0.754 | +1.000 | +0.73 | +0.64 | +0.87 | +0.56 | +2.5% | +8.3% | mid |
+| 14 | MTA | +0.354 | +0.750 | +0.484 | +0.16 | +0.55 | +0.95 | +0.10 | -0.5% | -3.0% | small |
+| 15 | DOW | +0.421 | +0.748 | +0.486 | +0.96 | +0.70 | +0.79 | +0.03 | -1.7% | -7.8% | large |
+
+### Watch names — where they sit with no weights
+
+| Ticker | stand | tape | book | raw stand rank | raw tape rank | gated out? | 1d | 1w |
+|---|---|---|---|---|---|---|---|---|
+| SLS | +0.417 | +0.792 | +0.720 | 34 | 22 | no | +15.4% | +2.5% |
+| ARCT | +0.356 | +0.818 | +0.800 | 97 | 16 | yes | +22.4% | +44.0% |
+| CYPH | +0.318 | +0.881 | +0.605 | 168 | 3 | yes | +19.3% | +37.0% |
+| ASST | +0.295 | +0.499 | +0.673 | 226 | 270 | no | +13.0% | +33.3% |
+| BTDR | +0.318 | +0.597 | +0.870 | 165 | 144 | no | +9.0% | +2.3% |
+| VIRT | +0.351 | +0.567 | +0.772 | 107 | 181 | no | +11.0% | +7.4% |
+| FIGR | +0.272 | +0.277 | +0.941 | 304 | 737 | no | +8.4% | +2.8% |
+| ELF | +0.451 | +0.684 | +1.123 | 8 | 76 | no | +3.5% | +8.6% |
+| AUPH | +0.495 | +0.786 | +1.024 | 2 | 24 | no | -3.6% | -4.2% |
 
 ## Files
 
