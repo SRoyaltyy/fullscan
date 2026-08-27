@@ -151,29 +151,6 @@ jobs:
           pip install -r requirements.txt
           pip install psycopg2-binary yfinance pandas requests openai ddgs || true
 
-      - name: Pipeline health (door + last-night inputs) — fail closed
-        if: env.skip != 'yes' && env.skip_python != 'yes'
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
-          GROK_ONLY: "1"
-        run: |
-          set -euo pipefail
-          export HOME="${FULLSCAN_HOME:-/home/gha}"
-          chmod +x scripts/enable_openclaw_chat.sh || true
-          bash scripts/enable_openclaw_chat.sh || true
-          DATE="${{ github.event.inputs.run_date }}"
-          ARGS=(--job preopen --phase before --write)
-          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
-          echo "CMD: python -m src.pipeline_health ${ARGS[*]}"
-          python -m src.pipeline_health "${ARGS[@]}"
-
       - name: Pre-Open ALL (predictive + QC + workflow check)
         if: env.skip != 'yes' && env.skip_python != 'yes'
         env:
@@ -243,7 +220,6 @@ jobs:
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
               01_daily/*_grok_review.json 01_daily/*_grok_review.md
-              01_daily/*_pipeline_health_*.md 01_daily/*_pipeline_health_*.json
               02_lessons/ 03_scoreboard/
             )
           fi

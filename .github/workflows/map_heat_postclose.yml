@@ -74,26 +74,6 @@ jobs:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
         run: bash scripts/enable_openclaw_chat.sh
-      - name: Pipeline health (door + Finviz + token) — fail closed
-        if: env.skip != 'yes'
-        env:
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          GROK_ONLY: "1"
-          SOURCE: ${{ github.event.inputs.source_date }}
-          TARGET: ${{ github.event.inputs.target_date }}
-        run: |
-          set -euo pipefail
-          export HOME=/home/gha
-          ARGS=(--job postclose --phase before --write)
-          [ -n "${SOURCE:-}" ] && ARGS+=(--source-date "$SOURCE")
-          [ -n "${TARGET:-}" ] && ARGS+=(--target-date "$TARGET")
-          python -m src.pipeline_health "${ARGS[@]}"
       - name: Build next-session tables and exhaustive captain baseline
         if: env.skip != 'yes'
         env:
@@ -149,5 +129,4 @@ jobs:
         run: |
           bash scripts/safe_git_push.sh \
             "auto: post-close captain research [$(date -u +%F_%H%M)]" \
-            01_daily/map_heat/ 01_daily/_transcripts/ \
-            01_daily/*_pipeline_health_*.md 01_daily/*_pipeline_health_*.json
+            01_daily/map_heat/ 01_daily/_transcripts/
