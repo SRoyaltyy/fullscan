@@ -1,12 +1,5 @@
 name: Book Lookback (ranker time machine)
 
-# Dedicated GitHub-hosted runner on purpose: does not sit behind the ECS
-# Stock Book ALL job. Reconstructs what the ranker knew on a trading day
-# (pre-09:30 packet + later same-day inputs) and checks whether names that
-# then gained 1d/2d/3d/1w had ANY signal.
-#
-# No OpenClaw. Reads committed artifacts + data/prices/ohlc.parquet.
-
 on:
   workflow_dispatch:
     inputs:
@@ -61,20 +54,22 @@ jobs:
           [ -n "${TICKERS:-}" ] && ARGS+=(--tickers "$TICKERS")
           python -m src.book_lookback "${ARGS[@]}"
           if [ -n "${DATE:-}" ]; then
-            python -m src.lookback_picks --date "$DATE"
-            python -m src.lookback_unweighted --date "$DATE" --top 15
+            python -m src.lookback_picks --date "$DATE" || true
+            python -m src.lookback_unweighted --date "$DATE" --top 15 || true
           else
-            python -m src.lookback_picks
-            python -m src.lookback_unweighted --top 15
+            python -m src.lookback_picks || true
+            python -m src.lookback_unweighted --top 15 || true
           fi
-          python -m src.lookback_unweighted --all --top 15
-          echo "======== unweighted all ========"
-          head -80 03_scoreboard/BOOK_UNWEIGHTED.md || true
+          python -m src.lookback_unweighted --all --top 15 || true
+          python -m src.lookback_green --all --top 15
+          echo "======== green pile ========"
+          head -40 03_scoreboard/BOOK_GREEN.md || true
       - name: Commit report
         run: |
           bash scripts/safe_git_push.sh \
             "auto: book lookback [${{ github.event.inputs.date || 'latest' }}]" \
             03_scoreboard/BOOK_LOOKBACK.md \
             03_scoreboard/BOOK_UNWEIGHTED.md \
+            03_scoreboard/BOOK_GREEN.md \
             data/stock_book/ \
             01_daily/
