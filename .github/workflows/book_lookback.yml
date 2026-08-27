@@ -1,0 +1,71 @@
+name: Book Lookback (ranker time machine)
+
+# Dedicated GitHub-hosted runner on purpose: does not sit behind the ECS
+# Stock Book ALL job. Reconstructs what the ranker knew on a trading day
+# (pre-09:30 packet + later same-day inputs) and checks whether names that
+# then gained 1d/2d/3d/1w had ANY signal.
+#
+# No OpenClaw. Reads committed artifacts + data/prices/ohlc.parquet.
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Trading day YYYY-MM-DD or DD/MM (default latest book CSV)"
+        required: false
+        default: ""
+      tickers:
+        description: "Optional comma-separated tickers to card (e.g. NVDA,AAPL)"
+        required: false
+        default: ""
+      min_gain:
+        description: "Winner threshold percent (default 3)"
+        required: false
+        default: "3"
+      top:
+        description: "How many winners to list per horizon"
+        required: false
+        default: "20"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: book-lookback
+  cancel-in-progress: false
+
+jobs:
+  lookback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Look back at ranker inputs vs realized winners
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.date }}"
+          TICKERS="${{ github.event.inputs.tickers }}"
+          GAIN="${{ github.event.inputs.min_gain }}"
+          TOP="${{ github.event.inputs.top }}"
+          GAIN="${GAIN:-3}"
+          TOP="${TOP:-20}"
+          ARGS=(--min-gain "$GAIN" --top "$TOP")
+          [ -n "${DATE:-}" ] && ARGS+=(--date "$DATE")
+          [ -n "${TICKERS:-}" ] && ARGS+=(--tickers "$TICKERS")
+          python -m src.book_lookback "${ARGS[@]}"
+          echo "======== lookback head ========"
+          head -160 03_scoreboard/BOOK_LOOKBACK.md || true
+      - name: Commit report
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: book lookback [${{ github.event.inputs.date || 'latest' }}]" \
+            03_scoreboard/BOOK_LOOKBACK.md \
+            data/stock_book/ \
+            01_daily/
