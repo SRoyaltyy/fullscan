@@ -45,7 +45,6 @@ YF_H = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
 
 
 def _yf_forwards(date: str, tickers: list[str]) -> dict[str, dict[str, float | None]]:
-    """Close[signal] → close[signal + n sessions]. Partial 1w uses last close."""
     tickers = sorted({_tick(t) for t in tickers if _tick(t)})
     blank = {h: None for h in YF_H}
     out = {t: dict(blank) for t in tickers}
@@ -95,20 +94,9 @@ def _yf_forwards(date: str, tickers: list[str]) -> dict[str, dict[str, float | N
             if len(close) > n:
                 out[t][h] = float(close.iloc[n]) / entry - 1.0
             elif h == "1w" and len(close) >= 2:
-                # last realized close (honest: not a full 5 sessions yet)
                 out[t][h] = float(close.iloc[-1]) / entry - 1.0
-                out[t]["1w_partial"] = True  # type: ignore[assignment]
     print(f"[lookback-picks] yfinance forwards for {sum(1 for t in out if out[t].get('1d') is not None)}/{len(tickers)} names")
     return out
-
-
-def _pct(v) -> float | None:
-    if v is None:
-        return None
-    try:
-        return round(float(v) * 100, 2) if abs(float(v)) <= 5 else round(float(v), 2)
-    except (TypeError, ValueError):
-        return None
 
 
 def _merge_fwd(dst: dict, yf: dict[str, dict], ticker: str) -> dict:
@@ -118,6 +106,35 @@ def _merge_fwd(dst: dict, yf: dict[str, dict], ticker: str) -> dict:
         if cur.get(h) is None and got.get(h) is not None:
             cur[h] = round(float(got[h]) * 100, 2)
     return cur
+
+
+def _num(x, nd=2) -> str:
+    try:
+        return f"{float(x):+.{nd}f}"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def _book_of(r: dict, h: str = "1d") -> float | None:
+    if r.get("book_score") is not None:
+        try:
+            return float(r["book_score"])
+        except (TypeError, ValueError):
+            pass
+    s = r.get("signals") or {}
+    for k in (f"score_{h}", "score_1d", "score_3d", "score_1w"):
+        if s.get(k) not in (None, 0, 0.0):
+            try:
+                return float(s[k])
+            except (TypeError, ValueError):
+                continue
+    for k in ("score_1d", "score_3d", "score_1w"):
+        if s.get(k) is not None:
+            try:
+                return float(s[k])
+            except (TypeError, ValueError):
+                continue
+    return None
 
 
 def book_picks(date, frame, book, panel, missing):
@@ -196,21 +213,27 @@ def render_picks(picks: dict) -> list[str]:
                 L.append("_empty_")
                 L.append("")
                 continue
-            heads = " | ".join(
-                ["#", "Ticker", "book", "1d", "2d", "3d", "1w"] + [lab for _, lab in BOX_COLS]
-            )
-            bars = "|".join(["---"] * (7 + len(BOX_COLS)))
-            L.append("| " + heads + " |")
-            L.append("|" + bars + "|")
+            L.append("| # | Ticker | book | join | sect | gen | news | AB | peer | heat | 1d | 2d | 3d | 1w |")
+            L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
             for r in rows:
                 fp = r.get("fwd_pct") or {}
-                cells = [_icon((r.get("boxes") or {}).get(k, "missing")) for k, _ in BOX_COLS]
+                s = r.get("signals") or {}
                 L.append(
                     f"| {r['rank']} | {r['ticker']} | {r['book_score']:+.3f} | "
+                    f"{_num(s.get('s_join'))} | {_num(s.get('s_sector'))} | "
+                    f"{_num(s.get('s_general'))} | {_num(s.get('s_news'))} | "
+                    f"{_num(s.get('s_ab'))} | {_num(s.get('s_peer'))} | "
+                    f"{_num(s.get('s_heat'))} | "
                     f"{_fmt(fp.get('1d'))} | {_fmt(fp.get('2d'))} | "
-                    f"{_fmt(fp.get('3d'))} | {_fmt(fp.get('1w'))} | "
-                    + " | ".join(cells) + " |"
+                    f"{_fmt(fp.get('3d'))} | {_fmt(fp.get('1w'))} |"
                 )
+            L.append("")
+            heads = " | ".join(["Ticker"] + [lab for _, lab in BOX_COLS])
+            L.append("| " + heads + " |")
+            L.append("|" + "|".join(["---"] * (1 + len(BOX_COLS))) + "|")
+            for r in rows:
+                cells = [_icon((r.get("boxes") or {}).get(k, "missing")) for k, _ in BOX_COLS]
+                L.append(f"| {r['ticker']} | " + " | ".join(cells) + " |")
             L.append("")
             L.append("| Ticker | size | sector | reasons |")
             L.append("|--------|------|--------|---------|")
@@ -229,23 +252,41 @@ def render_later(winners: dict) -> list[str]:
     if not rows:
         return []
     L = [
-        "## Same 1d rippers — later sessions",
+        "## Same 1d movers — book score + later sessions",
         "",
-        "Not a new hunt. These are the ≥5% next-day names, with 2d/3d/1w filled from live prices.",
+        "`book` is that day's ranker score (`score_1d` in the CSV). Buys started around +0.94.",
+        "A ripper with book +0.40 was seen and ranked too low. A ripper with book — was not scored.",
         "",
-        "| Ticker | class | 1d | 2d | 3d | 1w |",
-        "|--------|-------|----|----|----|----|",
+        "| Ticker | class | book | join | sect | gen | news | AB | peer | heat | 1d | 2d | 3d | 1w |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
-        fp = r.get("fwd_pct") or {"1d": r.get("fwd_pct_1d", r.get("fwd_pct"))}
-        if not isinstance(fp, dict):
-            fp = {"1d": fp}
+        fp = r.get("fwd_pct") if isinstance(r.get("fwd_pct"), dict) else {"1d": r.get("fwd_pct")}
+        s = r.get("signals") or {}
+        book = _book_of(r, "1d")
         L.append(
-            f"| {r['ticker']} | {r.get('class')} | {_fmt(fp.get('1d', r.get('fwd_pct')))} | "
+            f"| {r['ticker']} | {r.get('class')} | {_num(book, 3)} | "
+            f"{_num(s.get('s_join'))} | {_num(s.get('s_sector'))} | "
+            f"{_num(s.get('s_general'))} | {_num(s.get('s_news'))} | "
+            f"{_num(s.get('s_ab'))} | {_num(s.get('s_peer'))} | "
+            f"{_num(s.get('s_heat'))} | "
+            f"{_fmt(fp.get('1d', r.get('fwd_pct') if not isinstance(r.get('fwd_pct'), dict) else None))} | "
             f"{_fmt(fp.get('2d'))} | {_fmt(fp.get('3d'))} | {_fmt(fp.get('1w'))} |"
         )
     L.append("")
     return L
+
+
+def _attach_scores(rows: list, frame) -> None:
+    if frame is None:
+        return
+    for r in rows:
+        if r.get("signals"):
+            continue
+        fr = _frame_row(frame, _tick(r.get("ticker")))
+        r["signals"] = _signals(fr)
+        if r.get("book_score") is None:
+            r["book_score"] = (r["signals"] or {}).get("score_1d")
 
 
 def run(date: str | None = None) -> dict:
@@ -265,6 +306,10 @@ def run(date: str | None = None) -> dict:
             payload = {"date": date}
     winners = payload.get("winners") or {}
     cards = payload.get("cards") or []
+
+    for rows in winners.values():
+        _attach_scores(rows, frame)
+    _attach_scores(cards, frame)
 
     need = set()
     for sides in picks.values():
@@ -305,17 +350,21 @@ def run(date: str | None = None) -> dict:
                 cut = rest.find("\n## Files")
                 tail = rest[cut:] if cut >= 0 else ""
                 text = pre.rstrip() + "\n\n" + block + tail.lstrip("\n")
+            elif "## Same 1d" in text:
+                pre, _mid, rest = text.partition("## Same 1d")
+                cut = rest.find("\n## Files")
+                tail = rest[cut:] if cut >= 0 else ""
+                text = pre.rstrip() + "\n\n" + block + tail.lstrip("\n")
             elif "## Files" in text:
                 text = text.replace("## Files", block + "## Files", 1)
             else:
                 text = text.rstrip() + "\n\n" + block
-            # refresh ticker-card 2d/3d/1w cells when present
             path.write_text(text, encoding="utf-8")
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("# Book lookback — " + date + "\n\n" + block, encoding="utf-8")
     print(block[:5000])
-    print(f"[lookback-picks] wrote picks + later horizons for {date}")
+    print(f"[lookback-picks] wrote picks + ripper book scores for {date}")
     return picks
 
 
