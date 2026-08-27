@@ -1,6 +1,8 @@
 # Book lookback — 2026-08-20
 
-_Generated 2026-08-27T06:04:46.547908-04:00_
+_Generated 2026-08-27T06:21:45.950547-04:00_
+
+Winner bar: **5% per session** (1d ≥ 5% · 2d ≥ 10% · 3d ≥ 15% · 1w ≥ 25%).
 
 Question: **on this trading day, before 09:30 ET, what did the pipeline
 that feeds the Stock Book Ranker know about a name — and for names that
@@ -15,6 +17,8 @@ Classes: **in_buy_book** = ranker picked it · **outweighed** = something
 fired but the name was not in a buy book · **gated_out** = micro / <$400M
 · **blind** = no ticker-specific signal (news, AB, peers, heat, digest,
 catalyst, volume spike).
+
+Boxes: 🟢 good (helped / fired bullish) · 🟡 neutral (present, flat) · 🔴 bad (fired against the name) · ⬛ missing (that day's file was not there).
 
 ## Inputs present for this date
 
@@ -50,6 +54,8 @@ catalyst, volume spike).
 
 **class: `outweighed`** · in universe: True · buy books: —
 
+🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟡vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +15.4% | n/a | n/a | n/a |
@@ -74,6 +80,8 @@ Ranker reasons: `join=+0.45; gen1d=+0.47; ab=+0.64; LEAD,peers↑,ind↑; peer=+
 ### HOOD · large · Financial
 
 **class: `outweighed`** · in universe: True · buy books: —
+
+🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🔴peer ⬛heat 🟡vol ⬛cat 🟡buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
@@ -100,6 +108,8 @@ Ranker reasons: `join=+0.90; gen1d=+0.47; ab=+0.36; LAG,peers↑,ind↓; peer=-0
 
 **class: `gated_out`** · in universe: True · buy books: —
 
+🟡join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +22.4% | n/a | n/a | n/a |
@@ -124,6 +134,8 @@ Ranker reasons: `gen1d=+0.47; ab=+0.64; LEAD,peers↑,ind↑; peer=+1.00; mid_op
 ### CAN · micro · Technology
 
 **class: `gated_out`** · in universe: True · buy books: —
+
+🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
@@ -150,6 +162,8 @@ Ranker reasons: `join=-0.63; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LEAD,peers�
 
 **class: `blind`** · in universe: True · buy books: —
 
+🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟡AB 🟡peer ⬛heat 🔴vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +14.8% | n/a | n/a | n/a |
@@ -174,6 +188,8 @@ Ranker reasons: `join=-0.77; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
 ### HQ · small · Technology
 
 **class: `blind`** · in universe: True · buy books: —
+
+🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟡AB 🟡peer ⬛heat 🔴vol ⬛cat 🟡buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
@@ -200,6 +216,8 @@ Ranker reasons: `join=-0.83; sector1d=+0.40; gen1d=+0.07; mid_opp=+0.40`
 
 **class: `outweighed`** · in universe: True · buy books: —
 
+🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟡AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +13.0% | n/a | n/a | n/a |
@@ -224,6 +242,8 @@ Ranker reasons: `join=+0.30; gen1d=+0.47; peer=+1.00; mid_opp=+0.40`
 ### UEC · mid · Energy
 
 **class: `outweighed`** · in universe: True · buy books: —
+
+🟢join 🔴sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🟢peer ⬛heat 🔴vol ⬛cat 🟡buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
@@ -250,6 +270,8 @@ Ranker reasons: `join=+0.91; sector1d=-0.80; gen1d=+0.23; ab=-0.12; LEAD,peers�
 
 **class: `outweighed`** · in universe: True · buy books: —
 
+🔴join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🟢peer ⬛heat 🟢vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +13.4% | n/a | n/a | n/a |
@@ -274,6 +296,8 @@ Ranker reasons: `gen1d=+0.47; ab=+0.46; LEAD,peers↑,ind↑; peer=+0.22; mid_op
 ### CRML · small · Basic Materials
 
 **class: `outweighed`** · in universe: True · buy books: —
+
+🟢join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🔴peer ⬛heat 🟡vol ⬛cat 🟡buy
 
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
@@ -300,6 +324,8 @@ Ranker reasons: `join=+0.87; gen1d=+0.47; ab=-0.36; LAG,peers↑,ind↓; peer=-0
 
 **class: `gated_out`** · in universe: True · buy books: —
 
+🔴join 🟡sect 🟢gen 🟡news 🟡dig 🟡jdg 🔴AB 🟡peer ⬛heat 🟢vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +85.2% | n/a | n/a | n/a |
@@ -325,6 +351,8 @@ Ranker reasons: `join=-0.26; gen1d=+0.07; ab=-0.12; ind↓; mid_opp=+0.16`
 
 **class: `gated_out`** · in universe: True · buy books: —
 
+🔴join 🟢sect 🟢gen 🟡news 🟡dig 🟡jdg 🟢AB 🔴peer ⬛heat 🟢vol ⬛cat 🟡buy
+
 | 1d | 2d | 3d | 1w |
 |----|----|----|----|
 | +14.5% | n/a | n/a | n/a |
@@ -349,9 +377,32 @@ Ranker reasons: `join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LAG,peers↑
 
 ## Winners — did the ranker see *something*?
 
-### 1d (next 1 session(s))
+### 1d (next 1 session(s), bar 5%)
 
-20 names ≥ threshold · 0 already in a buy book · **2 blind**.
+20 names ≥ 5% · 0 already in a buy book · **2 blind**.
+
+| Ticker | fwd | join | sect | gen | news | dig | jdg | AB | peer | heat | vol | cat | buy |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| USDE | +85.2% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🟢 | ⬛ | 🟡 |
+| CAN | +27.2% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| CRML | +22.6% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| ARCT | +22.4% | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| TMC | +20.6% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| CYPH | +19.3% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| ELMT | +19.3% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| SLS | +15.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟡 | ⬛ | 🟡 |
+| AIFC | +15.2% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🟢 | ⬛ | 🟡 |
+| IQMX | +14.8% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| TII | +14.6% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| HQ | +14.5% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| BKKT | +14.5% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟢 | ⬛ | 🟡 |
+| UEC | +14.4% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| EU | +14.3% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| LAR | +14.2% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| GUTS | +13.9% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| HOOD | +13.7% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| PROK | +13.4% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| ASST | +13.0% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
 
 | Ticker | fwd% | class | size | sector | what fired |
 |--------|------|-------|------|--------|------------|
@@ -376,15 +427,15 @@ Ranker reasons: `join=-0.15; sector1d=+0.40; gen1d=+0.47; ab=+0.24; LAG,peers↑
 | PROK | +13.4 | outweighed | small | Healthcare | s_ab=+0.46, s_peer=+0.22, relvol=1.62 |
 | ASST | +13.0 | outweighed | small | Financial | s_peer=+1.00, relvol=2.94 |
 
-### 2d (next 2 session(s))
+### 2d (next 2 session(s), bar 10%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
 
-### 3d (next 3 session(s))
+### 3d (next 3 session(s), bar 15%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
 
-### 1w (next 5 session(s))
+### 1w (next 5 session(s), bar 25%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
 

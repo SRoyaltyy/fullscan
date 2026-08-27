@@ -1,7 +1,8 @@
 {
   "date": "2026-08-20",
-  "generated_at": "2026-08-27T06:04:46.546704-04:00",
+  "generated_at": "2026-08-27T06:21:45.948676-04:00",
   "min_gain_pct": 5.0,
+  "per_session": true,
   "notes": [],
   "inventory": [
     {
@@ -142,6 +143,20 @@
         "score_3d": 0.707,
         "score_1w": 0.729
       },
+      "boxes": {
+        "join": "good",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "good",
+        "peer": "good",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "neutral",
+        "buy": "neutral"
+      },
       "placement": {
         "in_buy": [],
         "in_sell": [],
@@ -199,6 +214,20 @@
         "score_1d": 0.178,
         "score_3d": 0.18,
         "score_1w": 0.206
+      },
+      "boxes": {
+        "join": "good",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "good",
+        "peer": "bad",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "neutral",
+        "buy": "neutral"
       },
       "placement": {
         "in_buy": [],
@@ -258,6 +287,20 @@
         "score_3d": 0.771,
         "score_1w": 0.784
       },
+      "boxes": {
+        "join": "neutral",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "good",
+        "peer": "good",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "good",
+        "buy": "neutral"
+      },
       "placement": {
         "in_buy": [],
         "in_sell": [],
@@ -315,6 +358,20 @@
         "score_1d": 0.423,
         "score_3d": 0.379,
         "score_1w": 0.379
+      },
+      "boxes": {
+        "join": "bad",
+        "sector": "good",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "good",
+        "peer": "good",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "good",
+        "buy": "neutral"
       },
       "placement": {
         "in_buy": [],
@@ -374,6 +431,20 @@
         "score_3d": 0.333,
         "score_1w": 0.325
       },
+      "boxes": {
+        "join": "bad",
+        "sector": "good",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "neutral",
+        "peer": "neutral",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "bad",
+        "buy": "neutral"
+      },
       "placement": {
         "in_buy": [],
         "in_sell": [],
@@ -431,6 +502,20 @@
         "score_1d": 0.346,
         "score_3d": 0.323,
         "score_1w": 0.314
+      },
+      "boxes": {
+        "join": "bad",
+        "sector": "good",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "neutral",
+        "peer": "neutral",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "bad",
+        "buy": "neutral"
       },
       "placement": {
         "in_buy": [],
@@ -490,6 +575,20 @@
         "score_3d": 0.648,
         "score_1w": 0.654
       },
+      "boxes": {
+        "join": "good",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "neutral",
+        "peer": "good",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "good",
+        "buy": "neutral"
+      },
       "placement": {
         "in_buy": [],
         "in_sell": [],
@@ -547,6 +646,20 @@
         "score_1d": 0.613,
         "score_3d": 0.598,
         "score_1w": 0.598
+      },
+      "boxes": {
+        "join": "good",
+        "sector": "bad",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "bad",
+        "peer": "good",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "bad",
+        "buy": "neutral"
       },
       "placement": {
         "in_buy": [],
@@ -606,6 +719,20 @@
         "score_3d": 0.548,
         "score_1w": 0.555
       },
+      "boxes": {
+        "join": "bad",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "good",
+        "peer": "good",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "good",
+        "buy": "neutral"
+      },
       "placement": {
         "in_buy": [],
         "in_sell": [],
@@ -663,6 +790,20 @@
         "score_1d": 0.26,
         "score_3d": 0.254,
         "score_1w": 0.264
+      },
+      "boxes": {
+        "join": "good",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "bad",
+        "peer": "bad",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "neutral",
+        "buy": "neutral"
       },
       "placement": {
         "in_buy": [],
@@ -722,6 +863,20 @@
         "score_3d": 0.086,
         "score_1w": 0.078
       },
+      "boxes": {
+        "join": "bad",
+        "sector": "neutral",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "bad",
+        "peer": "neutral",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "good",
+        "buy": "neutral"
+      },
       "placement": {
         "in_buy": [],
         "in_sell": [],
@@ -779,6 +934,20 @@
         "score_1d": 0.625,
         "score_3d": 0.6,
         "score_1w": 0.61
+      },
+      "boxes": {
+        "join": "bad",
+        "sector": "good",
+        "gen": "good",
+        "news": "neutral",
+        "ab": "good",
+        "peer": "bad",
+        "heat": "missing",
+        "digest": "neutral",
+        "judge": "neutral",
+        "catal": "missing",
+        "vol": "good",
+        "buy": "neutral"
       },
       "placement": {
         "in_buy": [],
@@ -843,7 +1012,22 @@
           "score_1d": 0.103,
           "score_3d": 0.086,
           "score_1w": 0.078
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "CAN",
@@ -869,7 +1053,22 @@
           "score_1d": 0.423,
           "score_3d": 0.379,
           "score_1w": 0.379
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "CRML",
@@ -894,7 +1093,22 @@
           "score_1d": 0.26,
           "score_3d": 0.254,
           "score_1w": 0.264
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "ARCT",
@@ -920,7 +1134,22 @@
           "score_1d": 0.8,
           "score_3d": 0.771,
           "score_1w": 0.784
-        }
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "TMC",
@@ -945,7 +1174,22 @@
           "score_1d": 0.359,
           "score_3d": 0.351,
           "score_1w": 0.362
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "CYPH",
@@ -971,7 +1215,22 @@
           "score_1d": 0.605,
           "score_3d": 0.61,
           "score_1w": 0.627
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "ELMT",
@@ -995,7 +1254,22 @@
           "score_1d": 0.535,
           "score_3d": 0.511,
           "score_1w": 0.514
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "SLS",
@@ -1020,7 +1294,22 @@
           "score_1d": 0.72,
           "score_3d": 0.707,
           "score_1w": 0.729
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "AIFC",
@@ -1045,7 +1334,22 @@
           "score_1d": 0.178,
           "score_3d": 0.128,
           "score_1w": 0.123
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "IQMX",
@@ -1067,7 +1371,22 @@
           "score_1d": 0.353,
           "score_3d": 0.333,
           "score_1w": 0.325
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "TII",
@@ -1091,7 +1410,22 @@
           "score_1d": 0.292,
           "score_3d": 0.324,
           "score_1w": 0.346
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "HQ",
@@ -1113,7 +1447,22 @@
           "score_1d": 0.346,
           "score_3d": 0.323,
           "score_1w": 0.314
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "BKKT",
@@ -1139,7 +1488,22 @@
           "score_1d": 0.625,
           "score_3d": 0.6,
           "score_1w": 0.61
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "UEC",
@@ -1164,7 +1528,22 @@
           "score_1d": 0.613,
           "score_3d": 0.598,
           "score_1w": 0.598
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "EU",
@@ -1189,7 +1568,22 @@
           "score_1d": -0.13,
           "score_3d": -0.189,
           "score_1w": -0.209
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "LAR",
@@ -1214,7 +1608,22 @@
           "score_1d": 0.209,
           "score_3d": 0.199,
           "score_1w": 0.205
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "GUTS",
@@ -1239,7 +1648,22 @@
           "score_1d": 0.156,
           "score_3d": 0.114,
           "score_1w": 0.118
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "HOOD",
@@ -1264,7 +1688,22 @@
           "score_1d": 0.178,
           "score_3d": 0.18,
           "score_1w": 0.206
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "PROK",
@@ -1290,7 +1729,22 @@
           "score_1d": 0.585,
           "score_3d": 0.548,
           "score_1w": 0.555
-        }
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       },
       {
         "ticker": "ASST",
@@ -1315,7 +1769,22 @@
           "score_1d": 0.674,
           "score_3d": 0.648,
           "score_1w": 0.654
-        }
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
       }
     ],
     "2d": [],
