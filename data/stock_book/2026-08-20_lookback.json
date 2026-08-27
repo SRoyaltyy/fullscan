@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
-  "generated_at": "2026-08-27T06:57:28.149090-04:00",
-  "min_gain_pct": 5.0,
+  "generated_at": "2026-08-27T07:17:47.994481-04:00",
+  "min_gain_pct": 3.0,
   "per_session": true,
   "notes": [],
   "inventory": [
@@ -1960,6 +1960,2692 @@
           "buy": "neutral"
         },
         "digest": []
+      },
+      {
+        "ticker": "ALOY",
+        "fwd_pct": {
+          "1d": 12.92,
+          "2d": 0.18,
+          "3d": 9.85,
+          "1w": 4.34
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.24"
+        ],
+        "signals": {
+          "s_join": 0.961,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": -0.245,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.36,
+          "score_1d": 0.42,
+          "score_3d": 0.45,
+          "score_1w": 0.464
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "USAR",
+        "fwd_pct": {
+          "1d": 12.57,
+          "2d": 6.9,
+          "3d": 13.44,
+          "1w": 10.58
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.36"
+        ],
+        "signals": {
+          "s_join": 0.813,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.358,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.605,
+          "score_3d": 0.597,
+          "score_1w": 0.606
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "OI",
+        "fwd_pct": {
+          "1d": 12.54,
+          "2d": 13.64,
+          "3d": 17.71,
+          "1w": 16.61
+        },
+        "class": "outweighed",
+        "sector": "Consumer Cyclical",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.70",
+          "s_peer=-0.68"
+        ],
+        "signals": {
+          "s_join": -0.974,
+          "s_sector": -0.8,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": -0.704,
+          "s_peer": -0.68,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": -0.103,
+          "score_3d": -0.187,
+          "score_1w": -0.236
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "INFQ",
+        "fwd_pct": {
+          "1d": 12.51,
+          "2d": 3.98,
+          "3d": 10.2,
+          "1w": 7.81
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.12"
+        ],
+        "signals": {
+          "s_join": -0.851,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.124,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.504,
+          "score_3d": 0.447,
+          "score_1w": 0.436
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "EZPW",
+        "fwd_pct": {
+          "1d": 12.03,
+          "2d": 21.87,
+          "3d": 22.5,
+          "1w": 17.87
+        },
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.36",
+          "s_peer=+0.35"
+        ],
+        "signals": {
+          "s_join": 0.789,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.358,
+          "s_peer": 0.346,
+          "s_heat": 0.0,
+          "s_opp": 0.44,
+          "score_1d": 0.699,
+          "score_3d": 0.729,
+          "score_1w": 0.752
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "DEFT",
+        "fwd_pct": {
+          "1d": 11.65,
+          "2d": 20.39,
+          "3d": 17.28,
+          "1w": 14.37
+        },
+        "class": "gated_out",
+        "sector": "Financial",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46"
+        ],
+        "signals": {
+          "s_join": 0.343,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.354,
+          "score_3d": 0.335,
+          "score_1w": 0.351
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "DK",
+        "fwd_pct": {
+          "1d": 11.6,
+          "2d": 6.31,
+          "3d": 5.54,
+          "1w": 10.62
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.64",
+          "s_peer=-0.77"
+        ],
+        "signals": {
+          "s_join": 0.987,
+          "s_sector": -0.8,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.635,
+          "s_peer": -0.767,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.449,
+          "score_3d": 0.458,
+          "score_1w": 0.474
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "SGML",
+        "fwd_pct": {
+          "1d": 11.56,
+          "2d": 13.79,
+          "3d": 14.91,
+          "1w": 13.7
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.36",
+          "s_peer=-0.65"
+        ],
+        "signals": {
+          "s_join": 0.706,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": -0.358,
+          "s_peer": -0.646,
+          "s_heat": 0.0,
+          "s_opp": 0.36,
+          "score_1d": 0.232,
+          "score_3d": 0.251,
+          "score_1w": 0.258
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "RGTI",
+        "fwd_pct": {
+          "1d": 11.48,
+          "2d": 1.9,
+          "3d": 5.45,
+          "1w": -0.78
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.46",
+          "s_peer=-0.89"
+        ],
+        "signals": {
+          "s_join": -0.963,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.462,
+          "s_peer": -0.887,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.229,
+          "score_3d": 0.164,
+          "score_1w": 0.144
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "DNN",
+        "fwd_pct": {
+          "1d": 11.46,
+          "2d": 12.74,
+          "3d": 18.47,
+          "1w": 15.61
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_peer=-0.21"
+        ],
+        "signals": {
+          "s_join": 0.976,
+          "s_sector": -0.8,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": -0.209,
+          "s_heat": 0.0,
+          "s_opp": 0.6,
+          "score_1d": 0.694,
+          "score_3d": 0.682,
+          "score_1w": 0.686
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "VIRT",
+        "fwd_pct": {
+          "1d": 11.01,
+          "2d": 8.33,
+          "3d": 6.55,
+          "1w": 7.44
+        },
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.64",
+          "s_peer=+0.50",
+          "relvol=3.82"
+        ],
+        "signals": {
+          "s_join": 0.901,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.635,
+          "s_peer": 0.498,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.772,
+          "score_3d": 0.809,
+          "score_1w": 0.84
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "BLMN",
+        "fwd_pct": {
+          "1d": 10.97,
+          "2d": 9.16,
+          "3d": 5.34,
+          "1w": 6.39
+        },
+        "class": "outweighed",
+        "sector": "Consumer Cyclical",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_peer=-0.09"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": -0.8,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": -0.095,
+          "s_heat": 0.0,
+          "s_opp": 0.36,
+          "score_1d": 0.262,
+          "score_3d": 0.205,
+          "score_1w": 0.186
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "LPTH",
+        "fwd_pct": {
+          "1d": 10.75,
+          "2d": 1.61,
+          "3d": 5.91,
+          "1w": 1.23
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.24",
+          "s_peer=+0.62"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.245,
+          "s_peer": 0.622,
+          "s_heat": 0.0,
+          "s_opp": 0.32,
+          "score_1d": 0.443,
+          "score_3d": 0.413,
+          "score_1w": 0.413
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "JELD",
+        "fwd_pct": {
+          "1d": 10.58,
+          "2d": 19.71,
+          "3d": 15.38,
+          "1w": 16.35
+        },
+        "class": "gated_out",
+        "sector": "Industrials",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12",
+          "s_peer=+0.69"
+        ],
+        "signals": {
+          "s_join": -0.591,
+          "s_sector": -0.24,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": 0.694,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.272,
+          "score_3d": 0.203,
+          "score_1w": 0.189
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "ABAT",
+        "fwd_pct": {
+          "1d": 10.3,
+          "2d": 3.0,
+          "3d": 11.16,
+          "1w": 11.59
+        },
+        "class": "gated_out",
+        "sector": "Industrials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.36",
+          "s_peer=-0.76"
+        ],
+        "signals": {
+          "s_join": -0.975,
+          "s_sector": -0.24,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": -0.358,
+          "s_peer": -0.763,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.116,
+          "score_3d": 0.045,
+          "score_1w": 0.013
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "CVI",
+        "fwd_pct": {
+          "1d": 10.27,
+          "2d": 6.14,
+          "3d": 5.75,
+          "1w": 11.72
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.70",
+          "s_peer=+0.10"
+        ],
+        "signals": {
+          "s_join": 0.987,
+          "s_sector": -0.8,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.704,
+          "s_peer": 0.103,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.774,
+          "score_3d": 0.77,
+          "score_1w": 0.787
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "EOSE",
+        "fwd_pct": {
+          "1d": 10.12,
+          "2d": 0.0,
+          "3d": 2.31,
+          "1w": -3.47
+        },
+        "class": "outweighed",
+        "sector": "Industrials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.70",
+          "s_peer=-0.95",
+          "relvol=1.5"
+        ],
+        "signals": {
+          "s_join": -0.979,
+          "s_sector": -0.24,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.704,
+          "s_peer": -0.951,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": -0.07,
+          "score_3d": -0.164,
+          "score_1w": -0.202
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "SID",
+        "fwd_pct": {
+          "1d": 10.11,
+          "2d": 15.73,
+          "3d": 14.61,
+          "1w": 15.73
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.36",
+          "s_peer=+0.74"
+        ],
+        "signals": {
+          "s_join": 0.409,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.358,
+          "s_peer": 0.744,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.666,
+          "score_3d": 0.641,
+          "score_1w": 0.642
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "SENS",
+        "fwd_pct": {
+          "1d": 10.09,
+          "2d": 6.35,
+          "3d": 7.94,
+          "1w": 5.9
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_peer=+0.97"
+        ],
+        "signals": {
+          "s_join": 0.013,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": 0.973,
+          "s_heat": 0.0,
+          "s_opp": 0.24,
+          "score_1d": 0.455,
+          "score_3d": 0.437,
+          "score_1w": 0.437
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "BCAR",
+        "fwd_pct": {
+          "1d": 9.88,
+          "2d": 7.36,
+          "3d": 6.2,
+          "1w": 11.24
+        },
+        "class": "gated_out",
+        "sector": "Financial",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.12"
+        ],
+        "signals": {
+          "s_join": -0.028,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": -0.124,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.144,
+          "score_3d": 0.123,
+          "score_1w": 0.12
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "FSLY",
+        "fwd_pct": {
+          "1d": 9.86,
+          "2d": 1.01,
+          "3d": 1.28,
+          "1w": 2.55
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_peer=-0.98"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": 0.4,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": -0.975,
+          "s_heat": 0.0,
+          "s_opp": 0.6,
+          "score_1d": 0.433,
+          "score_3d": 0.437,
+          "score_1w": 0.442
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "PACB",
+        "fwd_pct": {
+          "1d": 9.76,
+          "2d": 4.07,
+          "3d": 23.58,
+          "1w": 26.83
+        },
+        "class": "gated_out",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24",
+          "s_peer=+0.42"
+        ],
+        "signals": {
+          "s_join": 0.015,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": 0.42,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.584,
+          "score_3d": 0.55,
+          "score_1w": 0.555
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "FUTU",
+        "fwd_pct": {
+          "1d": 9.68,
+          "2d": 2.73,
+          "3d": 11.44,
+          "1w": 12.96
+        },
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.55",
+          "s_peer=+0.79",
+          "relvol=2.22"
+        ],
+        "signals": {
+          "s_join": 0.168,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.555,
+          "s_peer": 0.794,
+          "s_heat": 0.0,
+          "s_opp": 0.07,
+          "score_1d": 0.393,
+          "score_3d": 0.4,
+          "score_1w": 0.414
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "QUBT",
+        "fwd_pct": {
+          "1d": 9.58,
+          "2d": 1.23,
+          "3d": 3.93,
+          "1w": 2.58
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.55",
+          "s_peer=-0.44"
+        ],
+        "signals": {
+          "s_join": -0.975,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.555,
+          "s_peer": -0.435,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.135,
+          "score_3d": 0.069,
+          "score_1w": 0.046
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "IE",
+        "fwd_pct": {
+          "1d": 9.52,
+          "2d": 9.43,
+          "3d": 15.74,
+          "1w": 15.94
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12",
+          "s_peer=-0.63"
+        ],
+        "signals": {
+          "s_join": 0.911,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": -0.628,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.433,
+          "score_3d": 0.452,
+          "score_1w": 0.473
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "NEXA",
+        "fwd_pct": {
+          "1d": 9.45,
+          "2d": 8.17,
+          "3d": 12.44,
+          "1w": 10.73
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.12",
+          "s_peer=-0.65"
+        ],
+        "signals": {
+          "s_join": 0.987,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": -0.124,
+          "s_peer": -0.649,
+          "s_heat": 0.0,
+          "s_opp": 0.24,
+          "score_1d": 0.216,
+          "score_3d": 0.236,
+          "score_1w": 0.253
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "ERO",
+        "fwd_pct": {
+          "1d": 9.44,
+          "2d": 7.02,
+          "3d": 12.16,
+          "1w": 8.94
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.70",
+          "s_peer=-0.35"
+        ],
+        "signals": {
+          "s_join": 0.987,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.704,
+          "s_peer": -0.351,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.723,
+          "score_3d": 0.751,
+          "score_1w": 0.784
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "CHGG",
+        "fwd_pct": {
+          "1d": 9.33,
+          "2d": 6.67,
+          "3d": 5.33,
+          "1w": 5.33
+        },
+        "class": "gated_out",
+        "sector": "Consumer Defensive",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.46",
+          "s_peer=-0.63"
+        ],
+        "signals": {
+          "s_join": -0.105,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.462,
+          "s_peer": -0.633,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": -0.057,
+          "score_3d": -0.104,
+          "score_1w": -0.115
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "QMLS",
+        "fwd_pct": {
+          "1d": 9.33,
+          "2d": 9.89,
+          "3d": 16.98,
+          "1w": 13.81
+        },
+        "class": "gated_out",
+        "sector": "Technology",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [],
+        "signals": {
+          "s_join": -0.513,
+          "s_sector": 0.4,
+          "s_general": 0.187,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": 0.153,
+          "score_3d": 0.134,
+          "score_1w": 0.132
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "MB",
+        "fwd_pct": {
+          "1d": 9.31,
+          "2d": -1.52,
+          "3d": 3.25,
+          "1w": 2.6
+        },
+        "class": "gated_out",
+        "sector": "Consumer Cyclical",
+        "size": "micro",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.36"
+        ],
+        "signals": {
+          "s_join": -0.842,
+          "s_sector": -0.8,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.358,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.16,
+          "score_1d": -0.073,
+          "score_3d": -0.18,
+          "score_1w": -0.22
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "SLI",
+        "fwd_pct": {
+          "1d": 9.25,
+          "2d": 7.05,
+          "3d": 13.22,
+          "1w": 14.98
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24",
+          "s_peer=-0.36"
+        ],
+        "signals": {
+          "s_join": 0.833,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": -0.365,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.646,
+          "score_3d": 0.644,
+          "score_1w": 0.665
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "RZLT",
+        "fwd_pct": {
+          "1d": 9.23,
+          "2d": 7.51,
+          "3d": 7.51,
+          "1w": 8.15
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.76",
+          "s_peer=+0.17"
+        ],
+        "signals": {
+          "s_join": 0.409,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.762,
+          "s_peer": 0.174,
+          "s_heat": 0.0,
+          "s_opp": 0.48,
+          "score_1d": 0.76,
+          "score_3d": 0.778,
+          "score_1w": 0.802
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "ABUS",
+        "fwd_pct": {
+          "1d": 9.22,
+          "2d": 9.01,
+          "3d": 9.01,
+          "1w": 8.81
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.70",
+          "s_peer=+0.09"
+        ],
+        "signals": {
+          "s_join": 0.604,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.704,
+          "s_peer": 0.091,
+          "s_heat": 0.0,
+          "s_opp": 0.24,
+          "score_1d": 0.512,
+          "score_3d": 0.538,
+          "score_1w": 0.564
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "MP",
+        "fwd_pct": {
+          "1d": 9.1,
+          "2d": 4.32,
+          "3d": 9.32,
+          "1w": 7.76
+        },
+        "class": "blind",
+        "sector": "Basic Materials",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [],
+        "signals": {
+          "s_join": 0.981,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.675,
+          "score_3d": 0.677,
+          "score_1w": 0.697
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "TMQ",
+        "fwd_pct": {
+          "1d": 9.09,
+          "2d": 3.58,
+          "3d": 5.79,
+          "1w": 2.48
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.24",
+          "s_peer=-0.88"
+        ],
+        "signals": {
+          "s_join": 0.665,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.245,
+          "s_peer": -0.876,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.281,
+          "score_3d": 0.268,
+          "score_1w": 0.276
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "PARR",
+        "fwd_pct": {
+          "1d": 9.08,
+          "2d": 2.59,
+          "3d": 1.89,
+          "1w": 4.58
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.64",
+          "s_peer=-0.94"
+        ],
+        "signals": {
+          "s_join": 0.987,
+          "s_sector": -0.8,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.635,
+          "s_peer": -0.937,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.415,
+          "score_3d": 0.424,
+          "score_1w": 0.44
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "TEM",
+        "fwd_pct": {
+          "1d": 9.06,
+          "2d": -0.72,
+          "3d": 3.12,
+          "1w": 2.75
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.55",
+          "s_peer=+0.96",
+          "relvol=5.44"
+        ],
+        "signals": {
+          "s_join": 0.775,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.555,
+          "s_peer": 0.962,
+          "s_heat": 0.0,
+          "s_opp": 0.03,
+          "score_1d": 0.572,
+          "score_3d": 0.571,
+          "score_1w": 0.597
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "BTDR",
+        "fwd_pct": {
+          "1d": 9.01,
+          "2d": 4.6,
+          "3d": 8.25,
+          "1w": 2.3
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24",
+          "s_peer=+0.95",
+          "relvol=2.78"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": 0.948,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.87,
+          "score_3d": 0.845,
+          "score_1w": 0.855
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "UUUU",
+        "fwd_pct": {
+          "1d": 8.92,
+          "2d": 7.05,
+          "3d": 14.89,
+          "1w": 12.95
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.46",
+          "s_peer=-0.34"
+        ],
+        "signals": {
+          "s_join": 0.957,
+          "s_sector": -0.8,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.462,
+          "s_peer": -0.34,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.409,
+          "score_3d": 0.373,
+          "score_1w": 0.367
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "BGC",
+        "fwd_pct": {
+          "1d": 8.92,
+          "2d": 9.83,
+          "3d": 8.46,
+          "1w": 9.37
+        },
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46"
+        ],
+        "signals": {
+          "s_join": 0.588,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.027,
+          "s_heat": 0.0,
+          "s_opp": 0.48,
+          "score_1d": 0.69,
+          "score_3d": 0.7,
+          "score_1w": 0.721
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "PSNL",
+        "fwd_pct": {
+          "1d": 8.89,
+          "2d": 1.07,
+          "3d": 2.19,
+          "1w": 1.18
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46",
+          "s_peer=+0.81",
+          "relvol=6.42"
+        ],
+        "signals": {
+          "s_join": -0.062,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.812,
+          "s_heat": 0.0,
+          "s_opp": 0.18,
+          "score_1d": 0.488,
+          "score_3d": 0.453,
+          "score_1w": 0.461
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "MRNA",
+        "fwd_pct": {
+          "1d": 8.86,
+          "2d": 4.18,
+          "3d": 19.13,
+          "1w": 12.26
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46",
+          "s_peer=+1.00",
+          "relvol=13.48"
+        ],
+        "signals": {
+          "s_join": -0.055,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 1.0,
+          "s_heat": 0.0,
+          "s_opp": -0.05,
+          "score_1d": 0.278,
+          "score_3d": 0.261,
+          "score_1w": 0.269
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "ACDC",
+        "fwd_pct": {
+          "1d": 8.78,
+          "2d": 8.56,
+          "3d": 5.18,
+          "1w": 4.05
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.64",
+          "s_peer=-0.98"
+        ],
+        "signals": {
+          "s_join": -0.045,
+          "s_sector": -0.8,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.635,
+          "s_peer": -0.978,
+          "s_heat": 0.0,
+          "s_opp": 0.36,
+          "score_1d": -0.042,
+          "score_3d": -0.12,
+          "score_1w": -0.149
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "NMG",
+        "fwd_pct": {
+          "1d": 8.7,
+          "2d": 5.07,
+          "3d": 7.25,
+          "1w": 7.25
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24",
+          "s_peer=-0.92"
+        ],
+        "signals": {
+          "s_join": 0.754,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": -0.919,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.507,
+          "score_3d": 0.521,
+          "score_1w": 0.541
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "SCCO",
+        "fwd_pct": {
+          "1d": 8.69,
+          "2d": 7.81,
+          "3d": 10.55,
+          "1w": 7.56
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46",
+          "s_peer=-0.34"
+        ],
+        "signals": {
+          "s_join": 0.984,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": -0.344,
+          "s_heat": 0.0,
+          "s_opp": -0.17,
+          "score_1d": 0.014,
+          "score_3d": 0.039,
+          "score_1w": 0.068
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "EROC",
+        "fwd_pct": {
+          "1d": 8.61,
+          "2d": 0.85,
+          "3d": -0.46,
+          "1w": -0.15
+        },
+        "class": "outweighed",
+        "sector": "Industrials",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": -0.24,
+          "s_general": 0.187,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.6,
+          "score_1d": 0.688,
+          "score_3d": 0.663,
+          "score_1w": 0.664
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "QMCO",
+        "fwd_pct": {
+          "1d": 8.59,
+          "2d": 5.22,
+          "3d": 9.27,
+          "1w": 13.27
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12",
+          "s_peer=-0.92"
+        ],
+        "signals": {
+          "s_join": -0.03,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": -0.92,
+          "s_heat": 0.0,
+          "s_opp": 0.28,
+          "score_1d": 0.201,
+          "score_3d": 0.18,
+          "score_1w": 0.189
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "AXGN",
+        "fwd_pct": {
+          "1d": 8.53,
+          "2d": 6.01,
+          "3d": 7.52,
+          "1w": 11.07
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12",
+          "s_peer=-0.63"
+        ],
+        "signals": {
+          "s_join": 0.723,
+          "s_sector": 0.0,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": -0.628,
+          "s_heat": 0.0,
+          "s_opp": 0.28,
+          "score_1d": 0.291,
+          "score_3d": 0.302,
+          "score_1w": 0.319
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "QBTS",
+        "fwd_pct": {
+          "1d": 8.46,
+          "2d": -0.64,
+          "3d": 2.93,
+          "1w": -6.86
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.46",
+          "s_peer=-0.72"
+        ],
+        "signals": {
+          "s_join": -0.975,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.462,
+          "s_peer": -0.716,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.262,
+          "score_3d": 0.197,
+          "score_1w": 0.176
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "FIGR",
+        "fwd_pct": {
+          "1d": 8.43,
+          "2d": 7.15,
+          "3d": 14.09,
+          "1w": 2.83
+        },
+        "class": "in_buy_book",
+        "sector": "Financial",
+        "size": "mid",
+        "in_buy_book": true,
+        "fired": [
+          "s_ab=+0.55"
+        ],
+        "signals": {
+          "s_join": 0.891,
+          "s_sector": 0.0,
+          "s_general": 0.187,
+          "s_news": 0.0,
+          "s_ab": 0.555,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.68,
+          "score_1d": 0.941,
+          "score_3d": 0.967,
+          "score_1w": 0.996
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "good"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "CNH",
+        "fwd_pct": {
+          "1d": 8.4,
+          "2d": 7.4,
+          "3d": 5.57,
+          "1w": 6.12
+        },
+        "class": "outweighed",
+        "sector": "Industrials",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.55",
+          "s_peer=+0.57",
+          "relvol=2.61"
+        ],
+        "signals": {
+          "s_join": -0.324,
+          "s_sector": -0.24,
+          "s_general": 0.234,
+          "s_news": 0.0,
+          "s_ab": 0.555,
+          "s_peer": 0.566,
+          "s_heat": 0.0,
+          "s_opp": 0.03,
+          "score_1d": 0.238,
+          "score_3d": 0.202,
+          "score_1w": 0.202
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "XNDU",
+        "fwd_pct": {
+          "1d": 8.31,
+          "2d": 3.36,
+          "3d": 5.04,
+          "1w": 1.48
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12"
+        ],
+        "signals": {
+          "s_join": -0.15,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.68,
+          "score_1d": 0.77,
+          "score_3d": 0.744,
+          "score_1w": 0.752
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "TRLV",
+        "fwd_pct": {
+          "1d": 8.29,
+          "2d": 8.68,
+          "3d": 10.44,
+          "1w": 11.51
+        },
+        "class": "outweighed",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.36"
+        ],
+        "signals": {
+          "s_join": -0.045,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.358,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.24,
+          "score_1d": 0.362,
+          "score_3d": 0.326,
+          "score_1w": 0.332
+        },
+        "boxes": {
+          "join": "neutral",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "CSAN",
+        "fwd_pct": {
+          "1d": 8.27,
+          "2d": 5.51,
+          "3d": 11.42,
+          "1w": 11.02
+        },
+        "class": "outweighed",
+        "sector": "Energy",
+        "size": "mid",
+        "in_buy_book": false,
+        "fired": [
+          "s_peer=-0.41",
+          "relvol=2.92"
+        ],
+        "signals": {
+          "s_join": 0.437,
+          "s_sector": -0.8,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.0,
+          "s_peer": -0.411,
+          "s_heat": 0.0,
+          "s_opp": 0.56,
+          "score_1d": 0.456,
+          "score_3d": 0.436,
+          "score_1w": 0.428
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "neutral",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "ONT",
+        "fwd_pct": {
+          "1d": 8.25,
+          "2d": 4.57,
+          "3d": 9.14,
+          "1w": 13.1
+        },
+        "class": "outweighed",
+        "sector": "Industrials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.55"
+        ],
+        "signals": {
+          "s_join": -0.987,
+          "s_sector": -0.24,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.555,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.4,
+          "score_1d": 0.156,
+          "score_3d": 0.064,
+          "score_1w": 0.029
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "COIN",
+        "fwd_pct": {
+          "1d": 8.2,
+          "2d": 4.14,
+          "3d": 8.59,
+          "1w": 5.47
+        },
+        "class": "outweighed",
+        "sector": "Financial",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.46",
+          "s_peer=+0.85",
+          "relvol=3.1"
+        ],
+        "signals": {
+          "s_join": -0.602,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.462,
+          "s_peer": 0.855,
+          "s_heat": 0.0,
+          "s_opp": 0.11,
+          "score_1d": 0.362,
+          "score_3d": 0.305,
+          "score_1w": 0.302
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "good",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "DCH",
+        "fwd_pct": {
+          "1d": 8.18,
+          "2d": 1.57,
+          "3d": 1.1,
+          "1w": 0.63
+        },
+        "class": "outweighed",
+        "sector": "Consumer Cyclical",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.24"
+        ],
+        "signals": {
+          "s_join": -0.147,
+          "s_sector": -0.8,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.245,
+          "s_peer": 0.0,
+          "s_heat": 0.0,
+          "s_opp": 0.48,
+          "score_1d": 0.561,
+          "score_3d": 0.488,
+          "score_1w": 0.474
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "NB",
+        "fwd_pct": {
+          "1d": 8.16,
+          "2d": -0.93,
+          "3d": 4.2,
+          "1w": 0.93
+        },
+        "class": "outweighed",
+        "sector": "Basic Materials",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.12",
+          "s_peer=-0.99"
+        ],
+        "signals": {
+          "s_join": 0.974,
+          "s_sector": 0.0,
+          "s_general": 0.07,
+          "s_news": 0.0,
+          "s_ab": 0.124,
+          "s_peer": -0.992,
+          "s_heat": 0.0,
+          "s_opp": 0.52,
+          "score_1d": 0.555,
+          "score_3d": 0.59,
+          "score_1w": 0.612
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "IONQ",
+        "fwd_pct": {
+          "1d": 8.02,
+          "2d": -1.13,
+          "3d": 1.25,
+          "1w": -3.61
+        },
+        "class": "outweighed",
+        "sector": "Technology",
+        "size": "large",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=-0.55",
+          "s_peer=-0.36"
+        ],
+        "signals": {
+          "s_join": -0.96,
+          "s_sector": 0.4,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": -0.555,
+          "s_peer": -0.359,
+          "s_heat": 0.0,
+          "s_opp": 0.07,
+          "score_1d": -0.178,
+          "score_3d": -0.244,
+          "score_1w": -0.266
+        },
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "neutral",
+          "buy": "neutral"
+        },
+        "digest": []
+      },
+      {
+        "ticker": "AGEN",
+        "fwd_pct": {
+          "1d": 8.01,
+          "2d": 2.4,
+          "3d": 11.62,
+          "1w": 10.15
+        },
+        "class": "gated_out",
+        "sector": "Healthcare",
+        "size": "small",
+        "in_buy_book": false,
+        "fired": [
+          "s_ab=+0.70",
+          "s_peer=+0.65"
+        ],
+        "signals": {
+          "s_join": 0.113,
+          "s_sector": 0.0,
+          "s_general": 0.468,
+          "s_news": 0.0,
+          "s_ab": 0.704,
+          "s_peer": 0.645,
+          "s_heat": 0.0,
+          "s_opp": 0.04,
+          "score_1d": 0.396,
+          "score_3d": 0.37,
+          "score_1w": 0.387
+        },
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "good",
+          "news": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "missing",
+          "digest": "neutral",
+          "judge": "neutral",
+          "catal": "missing",
+          "vol": "bad",
+          "buy": "neutral"
+        },
+        "digest": []
       }
     ],
     "2d": [],
@@ -1967,7 +4653,7 @@
     "1w": []
   },
   "blind_counts": {
-    "1d": 2,
+    "1d": 3,
     "2d": 0,
     "3d": 0,
     "1w": 0

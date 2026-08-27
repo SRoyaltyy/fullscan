@@ -1,8 +1,8 @@
 # Book lookback — 2026-08-20
 
-_Generated 2026-08-27T06:57:28.151400-04:00_
+_Generated 2026-08-27T07:17:47.998795-04:00_
 
-Winner bar: **5% per session** (1d ≥ 5% · 2d ≥ 10% · 3d ≥ 15% · 1w ≥ 25%).
+Winner bar: **3% per session** (1d ≥ 3% · 2d ≥ 6% · 3d ≥ 9% · 1w ≥ 15%).
 
 Question: **on this trading day, before 09:30 ET, what did the pipeline
 that feeds the Stock Book Ranker know about a name — and for names that
@@ -351,9 +351,9 @@ Ranker reasons: `join=+0.89; gen1d=+0.19; ab=+0.55; ind↓; mid_opp=+0.68`
 
 ## Winners — did the ranker see *something*?
 
-### 1d (next 1 session(s), bar 5%)
+### 1d (next 1 session(s), bar 3%)
 
-20 names ≥ 5% · 0 already in a buy book · **2 blind**.
+80 names ≥ 3% · 1 already in a buy book · **3 blind**.
 
 | Ticker | fwd | join | sect | gen | news | dig | jdg | AB | peer | heat | vol | cat | buy |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -377,6 +377,66 @@ Ranker reasons: `join=+0.89; gen1d=+0.19; ab=+0.55; ind↓; mid_opp=+0.68`
 | HOOD | +13.7% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
 | PROK | +13.4% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
 | ASST | +13.0% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| ALOY | +12.9% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| USAR | +12.6% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| OI | +12.5% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| INFQ | +12.5% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| EZPW | +12.0% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| DEFT | +11.7% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| DK | +11.6% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| SGML | +11.6% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| RGTI | +11.5% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| DNN | +11.5% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| VIRT | +11.0% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| BLMN | +11.0% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| LPTH | +10.8% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| JELD | +10.6% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟡 | ⬛ | 🟡 |
+| ABAT | +10.3% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| CVI | +10.3% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| EOSE | +10.1% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟢 | ⬛ | 🟡 |
+| SID | +10.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| SENS | +10.1% | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟢 | ⬛ | 🟡 | ⬛ | 🟡 |
+| BCAR | +9.9% | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| FSLY | +9.9% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| PACB | +9.8% | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟡 | ⬛ | 🟡 |
+| FUTU | +9.7% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| QUBT | +9.6% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| IE | +9.5% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| NEXA | +9.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| ERO | +9.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| CHGG | +9.3% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| QMLS | +9.3% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| MB | +9.3% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| SLI | +9.2% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| RZLT | +9.2% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| ABUS | +9.2% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
+| MP | +9.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| TMQ | +9.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| PARR | +9.1% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| TEM | +9.1% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| BTDR | +9.0% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| UUUU | +8.9% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| BGC | +8.9% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| PSNL | +8.9% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| MRNA | +8.9% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| ACDC | +8.8% | 🟡 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| NMG | +8.7% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| SCCO | +8.7% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| EROC | +8.6% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| QMCO | +8.6% | 🟡 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| AXGN | +8.5% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| QBTS | +8.5% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🔴 | ⬛ | 🟡 |
+| FIGR | +8.4% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🟡 | ⬛ | 🟢 |
+| CNH | +8.4% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| XNDU | +8.3% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| TRLV | +8.3% | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🟡 | ⬛ | 🟡 |
+| CSAN | +8.3% | 🟢 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | ⬛ | 🟢 | ⬛ | 🟡 |
+| ONT | +8.2% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| COIN | +8.2% | 🔴 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🟢 | ⬛ | 🟡 |
+| DCH | +8.2% | 🔴 | 🔴 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟡 | ⬛ | 🔴 | ⬛ | 🟡 |
+| NB | +8.2% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| IONQ | +8.0% | 🔴 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | ⬛ | 🟡 | ⬛ | 🟡 |
+| AGEN | +8.0% | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | ⬛ | 🔴 | ⬛ | 🟡 |
 
 | Ticker | fwd% | class | size | sector | what fired |
 |--------|------|-------|------|--------|------------|
@@ -400,16 +460,76 @@ Ranker reasons: `join=+0.89; gen1d=+0.19; ab=+0.55; ind↓; mid_opp=+0.68`
 | HOOD | +13.7 | outweighed | large | Financial | s_ab=+0.36, s_peer=-0.64 |
 | PROK | +13.4 | outweighed | small | Healthcare | s_ab=+0.46, s_peer=+0.22, relvol=1.62 |
 | ASST | +13.0 | outweighed | small | Financial | s_peer=+1.00, relvol=2.94 |
+| ALOY | +12.9 | outweighed | small | Basic Materials | s_ab=-0.24 |
+| USAR | +12.6 | outweighed | mid | Basic Materials | s_ab=-0.36 |
+| OI | +12.5 | outweighed | small | Consumer Cyclical | s_ab=-0.70, s_peer=-0.68 |
+| INFQ | +12.5 | outweighed | mid | Technology | s_ab=-0.12 |
+| EZPW | +12.0 | outweighed | small | Financial | s_ab=+0.36, s_peer=+0.35 |
+| DEFT | +11.7 | gated_out | micro | Financial | s_ab=+0.46 |
+| DK | +11.6 | outweighed | mid | Energy | s_ab=+0.64, s_peer=-0.77 |
+| SGML | +11.6 | outweighed | small | Basic Materials | s_ab=-0.36, s_peer=-0.65 |
+| RGTI | +11.5 | outweighed | mid | Technology | s_ab=-0.46, s_peer=-0.89 |
+| DNN | +11.5 | outweighed | mid | Energy | s_peer=-0.21 |
+| VIRT | +11.0 | outweighed | mid | Financial | s_ab=+0.64, s_peer=+0.50, relvol=3.82 |
+| BLMN | +11.0 | outweighed | small | Consumer Cyclical | s_peer=-0.09 |
+| LPTH | +10.8 | outweighed | small | Technology | s_ab=-0.24, s_peer=+0.62 |
+| JELD | +10.6 | gated_out | micro | Industrials | s_ab=+0.12, s_peer=+0.69 |
+| ABAT | +10.3 | gated_out | small | Industrials | s_ab=-0.36, s_peer=-0.76 |
+| CVI | +10.3 | outweighed | mid | Energy | s_ab=+0.70, s_peer=+0.10 |
+| EOSE | +10.1 | outweighed | small | Industrials | s_ab=-0.70, s_peer=-0.95, relvol=1.5 |
+| SID | +10.1 | outweighed | small | Basic Materials | s_ab=-0.36, s_peer=+0.74 |
+| SENS | +10.1 | outweighed | small | Healthcare | s_peer=+0.97 |
+| BCAR | +9.9 | gated_out | micro | Financial | s_ab=-0.12 |
+| FSLY | +9.9 | outweighed | mid | Technology | s_peer=-0.98 |
+| PACB | +9.8 | gated_out | small | Healthcare | s_ab=+0.24, s_peer=+0.42 |
+| FUTU | +9.7 | outweighed | large | Financial | s_ab=+0.55, s_peer=+0.79, relvol=2.22 |
+| QUBT | +9.6 | outweighed | small | Technology | s_ab=-0.55, s_peer=-0.44 |
+| IE | +9.5 | outweighed | small | Basic Materials | s_ab=+0.12, s_peer=-0.63 |
+| NEXA | +9.4 | outweighed | small | Basic Materials | s_ab=-0.12, s_peer=-0.65 |
+| ERO | +9.4 | outweighed | mid | Basic Materials | s_ab=+0.70, s_peer=-0.35 |
+| CHGG | +9.3 | gated_out | micro | Consumer Defensive | s_ab=-0.46, s_peer=-0.63 |
+| QMLS | +9.3 | gated_out | micro | Technology | — |
+| MB | +9.3 | gated_out | micro | Consumer Cyclical | s_ab=-0.36 |
+| SLI | +9.2 | outweighed | small | Basic Materials | s_ab=+0.24, s_peer=-0.36 |
+| RZLT | +9.2 | outweighed | small | Healthcare | s_ab=+0.76, s_peer=+0.17 |
+| ABUS | +9.2 | outweighed | small | Healthcare | s_ab=+0.70, s_peer=+0.09 |
+| MP | +9.1 | blind | mid | Basic Materials | — |
+| TMQ | +9.1 | outweighed | small | Basic Materials | s_ab=-0.24, s_peer=-0.88 |
+| PARR | +9.1 | outweighed | mid | Energy | s_ab=+0.64, s_peer=-0.94 |
+| TEM | +9.1 | outweighed | large | Healthcare | s_ab=+0.55, s_peer=+0.96, relvol=5.44 |
+| BTDR | +9.0 | outweighed | mid | Technology | s_ab=+0.24, s_peer=+0.95, relvol=2.78 |
+| UUUU | +8.9 | outweighed | mid | Energy | s_ab=-0.46, s_peer=-0.34 |
+| BGC | +8.9 | outweighed | mid | Financial | s_ab=+0.46 |
+| PSNL | +8.9 | outweighed | small | Healthcare | s_ab=+0.46, s_peer=+0.81, relvol=6.42 |
+| MRNA | +8.9 | outweighed | large | Healthcare | s_ab=+0.46, s_peer=+1.00, relvol=13.48 |
+| ACDC | +8.8 | outweighed | small | Energy | s_ab=-0.64, s_peer=-0.98 |
+| NMG | +8.7 | outweighed | small | Basic Materials | s_ab=+0.24, s_peer=-0.92 |
+| SCCO | +8.7 | outweighed | large | Basic Materials | s_ab=+0.46, s_peer=-0.34 |
+| EROC | +8.6 | outweighed | mid | Industrials | s_ab=+0.46 |
+| QMCO | +8.6 | outweighed | small | Technology | s_ab=+0.12, s_peer=-0.92 |
+| AXGN | +8.5 | outweighed | mid | Healthcare | s_ab=+0.12, s_peer=-0.63 |
+| QBTS | +8.5 | outweighed | mid | Technology | s_ab=-0.46, s_peer=-0.72 |
+| FIGR | +8.4 | in_buy_book | mid | Financial | s_ab=+0.55 |
+| CNH | +8.4 | outweighed | large | Industrials | s_ab=+0.55, s_peer=+0.57, relvol=2.61 |
+| XNDU | +8.3 | outweighed | mid | Technology | s_ab=+0.12 |
+| TRLV | +8.3 | outweighed | small | Healthcare | s_ab=+0.36 |
+| CSAN | +8.3 | outweighed | mid | Energy | s_peer=-0.41, relvol=2.92 |
+| ONT | +8.2 | outweighed | small | Industrials | s_ab=-0.55 |
+| COIN | +8.2 | outweighed | large | Financial | s_ab=+0.46, s_peer=+0.85, relvol=3.1 |
+| DCH | +8.2 | outweighed | small | Consumer Cyclical | s_ab=+0.24 |
+| NB | +8.2 | outweighed | small | Basic Materials | s_ab=+0.12, s_peer=-0.99 |
+| IONQ | +8.0 | outweighed | large | Technology | s_ab=-0.55, s_peer=-0.36 |
+| AGEN | +8.0 | gated_out | small | Healthcare | s_ab=+0.70, s_peer=+0.65 |
 
-### 2d (next 2 session(s), bar 10%)
+### 2d (next 2 session(s), bar 6%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
 
-### 3d (next 3 session(s), bar 15%)
+### 3d (next 3 session(s), bar 9%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
 
-### 1w (next 5 session(s), bar 25%)
+### 1w (next 5 session(s), bar 15%)
 
 _No realized winners at this gain threshold (or prices not in yet)._
 
@@ -523,6 +643,66 @@ Not a new hunt. These are the ≥5% next-day names, with 2d/3d/1w filled from li
 | HOOD | outweighed | +13.7% | +9.0% | +17.9% | +14.1% |
 | PROK | outweighed | +13.4% | +13.4% | +21.8% | +22.5% |
 | ASST | outweighed | +13.0% | +22.3% | +32.6% | +33.3% |
+| ALOY | outweighed | +12.9% | +0.2% | +9.8% | +4.3% |
+| USAR | outweighed | +12.6% | +6.9% | +13.4% | +10.6% |
+| OI | outweighed | +12.5% | +13.6% | +17.7% | +16.6% |
+| INFQ | outweighed | +12.5% | +4.0% | +10.2% | +7.8% |
+| EZPW | outweighed | +12.0% | +21.9% | +22.5% | +17.9% |
+| DEFT | gated_out | +11.7% | +20.4% | +17.3% | +14.4% |
+| DK | outweighed | +11.6% | +6.3% | +5.5% | +10.6% |
+| SGML | outweighed | +11.6% | +13.8% | +14.9% | +13.7% |
+| RGTI | outweighed | +11.5% | +1.9% | +5.5% | -0.8% |
+| DNN | outweighed | +11.5% | +12.7% | +18.5% | +15.6% |
+| VIRT | outweighed | +11.0% | +8.3% | +6.5% | +7.4% |
+| BLMN | outweighed | +11.0% | +9.2% | +5.3% | +6.4% |
+| LPTH | outweighed | +10.8% | +1.6% | +5.9% | +1.2% |
+| JELD | gated_out | +10.6% | +19.7% | +15.4% | +16.4% |
+| ABAT | gated_out | +10.3% | +3.0% | +11.2% | +11.6% |
+| CVI | outweighed | +10.3% | +6.1% | +5.8% | +11.7% |
+| EOSE | outweighed | +10.1% | +0.0% | +2.3% | -3.5% |
+| SID | outweighed | +10.1% | +15.7% | +14.6% | +15.7% |
+| SENS | outweighed | +10.1% | +6.3% | +7.9% | +5.9% |
+| BCAR | gated_out | +9.9% | +7.4% | +6.2% | +11.2% |
+| FSLY | outweighed | +9.9% | +1.0% | +1.3% | +2.5% |
+| PACB | gated_out | +9.8% | +4.1% | +23.6% | +26.8% |
+| FUTU | outweighed | +9.7% | +2.7% | +11.4% | +13.0% |
+| QUBT | outweighed | +9.6% | +1.2% | +3.9% | +2.6% |
+| IE | outweighed | +9.5% | +9.4% | +15.7% | +15.9% |
+| NEXA | outweighed | +9.4% | +8.2% | +12.4% | +10.7% |
+| ERO | outweighed | +9.4% | +7.0% | +12.2% | +8.9% |
+| CHGG | gated_out | +9.3% | +6.7% | +5.3% | +5.3% |
+| QMLS | gated_out | +9.3% | +9.9% | +17.0% | +13.8% |
+| MB | gated_out | +9.3% | -1.5% | +3.2% | +2.6% |
+| SLI | outweighed | +9.2% | +7.0% | +13.2% | +15.0% |
+| RZLT | outweighed | +9.2% | +7.5% | +7.5% | +8.2% |
+| ABUS | outweighed | +9.2% | +9.0% | +9.0% | +8.8% |
+| MP | blind | +9.1% | +4.3% | +9.3% | +7.8% |
+| TMQ | outweighed | +9.1% | +3.6% | +5.8% | +2.5% |
+| PARR | outweighed | +9.1% | +2.6% | +1.9% | +4.6% |
+| TEM | outweighed | +9.1% | -0.7% | +3.1% | +2.8% |
+| BTDR | outweighed | +9.0% | +4.6% | +8.2% | +2.3% |
+| UUUU | outweighed | +8.9% | +7.0% | +14.9% | +12.9% |
+| BGC | outweighed | +8.9% | +9.8% | +8.5% | +9.4% |
+| PSNL | outweighed | +8.9% | +1.1% | +2.2% | +1.2% |
+| MRNA | outweighed | +8.9% | +4.2% | +19.1% | +12.3% |
+| ACDC | outweighed | +8.8% | +8.6% | +5.2% | +4.0% |
+| NMG | outweighed | +8.7% | +5.1% | +7.2% | +7.2% |
+| SCCO | outweighed | +8.7% | +7.8% | +10.6% | +7.6% |
+| EROC | outweighed | +8.6% | +0.8% | -0.5% | -0.1% |
+| QMCO | outweighed | +8.6% | +5.2% | +9.3% | +13.3% |
+| AXGN | outweighed | +8.5% | +6.0% | +7.5% | +11.1% |
+| QBTS | outweighed | +8.5% | -0.6% | +2.9% | -6.9% |
+| FIGR | in_buy_book | +8.4% | +7.2% | +14.1% | +2.8% |
+| CNH | outweighed | +8.4% | +7.4% | +5.6% | +6.1% |
+| XNDU | outweighed | +8.3% | +3.4% | +5.0% | +1.5% |
+| TRLV | outweighed | +8.3% | +8.7% | +10.4% | +11.5% |
+| CSAN | outweighed | +8.3% | +5.5% | +11.4% | +11.0% |
+| ONT | outweighed | +8.2% | +4.6% | +9.1% | +13.1% |
+| COIN | outweighed | +8.2% | +4.1% | +8.6% | +5.5% |
+| DCH | outweighed | +8.2% | +1.6% | +1.1% | +0.6% |
+| NB | outweighed | +8.2% | -0.9% | +4.2% | +0.9% |
+| IONQ | outweighed | +8.0% | -1.1% | +1.2% | -3.6% |
+| AGEN | gated_out | +8.0% | +2.4% | +11.6% | +10.2% |
 
 ## Files
 
