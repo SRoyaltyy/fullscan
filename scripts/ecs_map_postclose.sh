@@ -1,33 +1,29 @@
 #!/usr/bin/env bash
 # DST-correct 22:00 ET post-close map/captain research, run by systemd.
-# Preopen lock is the hard gate. Clock window is advisory so a missed
-# 22:00 can still be caught up before 05:55.
+# Shared lock lives under persist (gha-owned), not /tmp (root leftover).
 set -euo pipefail
 
 ROOT="${FULLSCAN_ROOT:-/home/gha/fullscan}"
 ENVF="${FULLSCAN_ENV:-/home/gha/.fullscan.env}"
-LOCK="${MAP_POSTCLOSE_LOCK:-/tmp/fullscan-map-postclose.lock}"
-PREOPEN_LOCK="${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}"
 PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
-FALLBACK="$PERSIST/locks/map-postclose.lock"
+LOCK="${MAP_POSTCLOSE_LOCK:-$PERSIST/locks/map-postclose.lock}"
+PREOPEN_LOCK="${PREOPEN_LOCK:-$PERSIST/locks/preopen.lock}"
 mkdir -p "$PERSIST/locks" 2>/dev/null || true
 
-if [ -e "$LOCK" ] && [ ! -w "$LOCK" ]; then
-  chmod 0666 "$LOCK" 2>/dev/null || LOCK="$FALLBACK"
-fi
 exec 9>"$LOCK"
 chmod 0666 "$LOCK" 2>/dev/null || true
 flock -n 9 || { echo "[map-postclose] lock held — skip"; exit 0; }
 
 ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-# Preferred window: 22:00–04:29 ET. Do not start if preopen owns the box.
-# Clock abort only when preopen lock is held; otherwise catch-up is allowed.
-if [ "$ET_HM" -ge 430 ] && [ "$ET_HM" -lt 2200 ]; then
-  echo "[map-postclose] outside 22:00–04:29 ET (et_hm=$ET_HM) — catch-up if preopen free"
-fi
+echo "[map-postclose] et_hm=$ET_HM uid=$(id -u)"
 
-if ! flock -n "$PREOPEN_LOCK" -c true; then
+if [ -e "$PREOPEN_LOCK" ] && ! flock -n "$PREOPEN_LOCK" -c true 2>/dev/null; then
   echo "[map-postclose] preopen lock held — will not git reset or run"
+  exit 1
+fi
+if command -v systemctl >/dev/null 2>&1 \
+   && systemctl is-active --quiet fullscan-preopen.service; then
+  echo "[map-postclose] preopen service active — abort"
   exit 1
 fi
 
@@ -37,7 +33,6 @@ if [ -f "$ENVF" ]; then
   . "$ENVF"
   set +a
 fi
-# 30 minutes per Grok batch. 11 sectors + retries fit in the 6h unit cap.
 export OPENCLAW_GATEWAY_URL="${OPENCLAW_GATEWAY_URL:-http://127.0.0.1:18789}"
 export OPENCLAW_TIMEOUT="${OPENCLAW_TIMEOUT:-1800}"
 export HOME="${FULLSCAN_HOME:-/home/gha}"
@@ -54,10 +49,6 @@ if [ -n "${GITHUB_TOKEN:-}" ]; then
     "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
 fi
 
-if ! flock -n "$PREOPEN_LOCK" -c true; then
-  echo "[map-postclose] preopen grabbed the lock before reset — abort"
-  exit 1
-fi
 git fetch origin main
 git checkout main
 git reset --hard origin/main
@@ -69,11 +60,6 @@ PY="${FULLSCAN_PYTHON:-python3}"
 SOURCE=$(TZ=America/New_York date +%F)
 TARGET=$("$PY" -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
 echo "[map-postclose] source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
-
-if ! flock -n "$PREOPEN_LOCK" -c true; then
-  echo "[map-postclose] preopen grabbed the lock before scrape — abort"
-  exit 1
-fi
 
 "$PY" -m src.map_heat --date "$TARGET" --force
 "$PY" -m src.map_heat_postclose \

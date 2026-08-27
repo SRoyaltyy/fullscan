@@ -3,11 +3,10 @@ name: Map Heat Captain Research (post-close)
 # Heavy Grok research is intentionally outside the pre-open critical path.
 # One sector-batched pass researches every liquid SPX/RUT industry captain
 # for the NEXT session. The 05:55 job performs one small overnight refresh.
-# No cash-session clock abort: preopen lock is the only hard gate.
+# Preopen lock / systemd active is the only hard gate. /tmp locks are not used.
 
 on:
   schedule:
-    # Backup clock. ECS systemd owns 22:00 America/New_York (DST-correct).
     - cron: "0 2 * * 2-6"  # 22:00 EDT / 21:00 EST, Tue-Sat UTC
   workflow_dispatch:
     inputs:
@@ -37,40 +36,24 @@ jobs:
     timeout-minutes: 360
     env:
       OPENCLAW_TIMEOUT: "1800"
+      MAP_POSTCLOSE_LOCK: /home/gha/fullscan-persist/locks/map-postclose.lock
     steps:
       - name: Back off if ECS systemd research owns the box
         run: |
           set +e
+          echo "uid=$(id -u) user=$(id -un)"
           if command -v systemctl >/dev/null 2>&1 \
              && systemctl is-active --quiet fullscan-map-postclose.service; then
             echo "systemd fullscan-map-postclose.service is active — GH backs off"
             echo "skip=yes" >> "$GITHUB_ENV"
             exit 0
           fi
-          LOCK="${MAP_POSTCLOSE_LOCK:-/tmp/fullscan-map-postclose.lock}"
-          FALLBACK="/home/gha/fullscan-persist/locks/map-postclose.lock"
-          mkdir -p /home/gha/fullscan-persist/locks 2>/dev/null || true
-          if [ -e "$LOCK" ] && [ ! -w "$LOCK" ]; then
-            echo "lock $LOCK exists but is not writable by $(id -un)"
-            chmod 0666 "$LOCK" 2>/dev/null || true
-          fi
-          if [ ! -e "$LOCK" ] || [ -w "$LOCK" ]; then
-            :
-          else
-            echo "using fallback lock $FALLBACK"
-            LOCK="$FALLBACK"
-          fi
-          if ! exec 9>"$LOCK"; then
-            echo "cannot open lock $LOCK — systemd not active, continuing without flock"
-            exit 0
-          fi
-          chmod 0666 "$LOCK" 2>/dev/null || true
-          if ! flock -n 9; then
-            echo "flock held on $LOCK — GH backs off"
+          if command -v systemctl >/dev/null 2>&1 \
+             && systemctl is-active --quiet fullscan-preopen.service; then
+            echo "systemd fullscan-preopen.service is active — will not collide"
             echo "skip=yes" >> "$GITHUB_ENV"
             exit 0
           fi
-          flock -u 9 || true
           exit 0
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
@@ -98,27 +81,31 @@ jobs:
           TARGET: ${{ github.event.inputs.target_date }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
-          set -euo pipefail
+          set -uo pipefail
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "et_hm=$ET_HM (clock is advisory; preopen lock is the gate)"
-          if ! flock -n /tmp/fullscan-preopen.lock -c true; then
-            echo "preopen lock held — will not run post-close research"
+          echo "et_hm=$ET_HM uid=$(id -u) user=$(id -un)"
+          if command -v systemctl >/dev/null 2>&1 \
+             && systemctl is-active --quiet fullscan-preopen.service; then
+            echo "preopen service active — abort"
             exit 1
           fi
-          LOCK="${MAP_POSTCLOSE_LOCK:-/tmp/fullscan-map-postclose.lock}"
-          FALLBACK="/home/gha/fullscan-persist/locks/map-postclose.lock"
-          mkdir -p /home/gha/fullscan-persist/locks 2>/dev/null || true
-          if [ -e "$LOCK" ] && [ ! -w "$LOCK" ]; then
-            chmod 0666 "$LOCK" 2>/dev/null || LOCK="$FALLBACK"
+          LOCK="${MAP_POSTCLOSE_LOCK}"
+          mkdir -p "$(dirname "$LOCK")" || true
+          if exec 9>"$LOCK"; then
+            chmod 0666 "$LOCK" 2>/dev/null || true
+            if ! flock -n 9; then
+              echo "persist lock held — backing off"
+              exit 0
+            fi
+          else
+            echo "WARN: cannot open $LOCK — running without flock"
           fi
-          exec 9>"$LOCK"
-          chmod 0666 "$LOCK" 2>/dev/null || true
-          flock -n 9 || { echo "systemd grabbed lock — backing off"; exit 0; }
           SOURCE="${SOURCE:-$(TZ=America/New_York date +%F)}"
-          if [ -z "$TARGET" ]; then
+          if [ -z "${TARGET:-}" ]; then
             TARGET=$(python -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
           fi
           echo "source=$SOURCE target=$TARGET FORCE=$FORCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
+          set -e
           python -m src.map_heat --date "$TARGET" --force
           ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
