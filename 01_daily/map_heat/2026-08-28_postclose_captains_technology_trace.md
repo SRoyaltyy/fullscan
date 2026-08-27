@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"CSCO Cisco stock news August 2026"* → got 6 results (via ddg)
 
-  - CSCO News Today | Why did Cisco Systems stock go up today? (https://www.marketbeat.com/stocks/NASDAQ/CSCO/news/)
-
-  - Cisco Systems Inc. - News (https://investor.cisco.com/news/default.aspx)
-
   - Cisco's stock drops despite earnings, revenue beat - CNBC (https://www.cnbc.com/2026/08/12/ciscos-stock-drops-despite-earnings-revenue-beat.html)
+
+  - Cisco (CSCO) Q4 2026 Earnings Call Transcript - The Motley Fool (https://www.fool.com/earnings/call-transcripts/2026/08/19/cisco-csco-q4-2026-earnings-call-transcript/)
+
+  - CSCO News Today | Why did Cisco Systems stock go down today? (https://www.marketbeat.com/stocks/NASDAQ/CSCO/news/)
 
 **Step 2 — Research.** The model wanted to know: *"LITE Lumentum stock news August 2026"* → got 6 results (via gnews_rss)
 
@@ -20,7 +20,7 @@
 
   - Lumentum Holdings Inc Stock (LITE) Moved Up by 5.14% on Aug 26: A Full Analysis - TradingKey (https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTXRMb3RmZlZlTE9qMVJnUXFOYi1JMTFxUldLSkhiQlhkTVBkTDQzYmFpbTRUYjkxZkxmN1Q1MDhXZWh4LXY5YXVKeW1pZklCcnZqU0Qxa2xLU1BoLV9vWHVCT0ZueUdPZk5keUJPdUh2VW9YNHZralA2eXVpLXQ1bkpFUUxiMFo5TzJN?oc=5)
 
-  - Lumentum Climbs 4% as the AI Optics Trade Extends a Second Session, Coherent and Applied Optoelectronics Drift - 24/7 Wall St. (https://news.google.com/rss/articles/CBMi5wFBVV95cUxPaHdFMUVEMWRJX2RVZVFvWk93WUJXaWRCenRYcDBDRlh4ekVsWXU2d3RZeDhxRWd4M2lLY1E4bzZ5OG1BRXhLOXV1MXRyTDdxUEVWSGhVbHZXa01ERFpDSy1FeHJVNGhLWno4UFA0T3U0WEpyRU1GWWQzTHNYalEtdTN5eUJlOFJEM091aHhkRDVhU1BFWUE0RlZJcW5jSVZ0UDdKdEFaRWxqeTJPUFJtS2hKeS1CWWE5SWtwNG5CZ0xxT3FRQUI4UjRhSGZadl9ybzVUSWM1YndiaHlPanFJNDRjM3dqLU0?oc=5)
+  - LITE Stock Jumps As Earnings Beat Fuels AI‑Driven Momentum - timothysykes.com (https://news.google.com/rss/articles/CBMigwFBVV95cUxQTmNUb2xNS3doeW9DM1FEZHc3OGxOY1RUTEZrYW9nanBWUno1V1JOUHRzOVpXMWFEakVoVVdfM3p1dXl3MjcxRDdCQ2hQMGhEQ2Uzc0ptd1RIaHpkS0NCMmNWaDVVcWt6VHdlUndieVp1eUgtRFNMclU5UFNwUndlNWhZWQ?oc=5)
 
 **Step 3 — Research.** The model wanted to know: *"VSAT Viasat stock news August 2026"* → got 6 results (via gnews_rss)
 
@@ -32,11 +32,11 @@
 
 **Step 4 — Research.** The model wanted to know: *"ONDS Ondas Holdings stock news August 2026"* → got 6 results (via ddg)
 
-  - ONDS - Ondas Holdings Inc. | Stock Quote, Technical Analysis ...Top StoriesNews | Ondas inc.Press Releases :: Ondas Inc. (ONDS)Ondas Holdings (ONDS) Stock News & Updates | StockTitanOndas Posts Record Q2 2026 Revenue of $83.8 Million on Strong ...Ondas (ONDS) Stock Price & OverviewONDS News Today | Why did Ondas stock go down today? (https://www.stoxline.com/quote.php?symbol=ONDS)
+  - ONDS - Ondas Holdings Inc. | Stock Quote, Technical Analysis ...Top StoriesOndas Holdings (ONDS) Stock News & Updates | StockTitanNews | Ondas inc.Press Releases :: Ondas Inc. (ONDS)Ondas (ONDS) Stock Price & OverviewONDS News Today | Why did Ondas stock go down today? (https://www.stoxline.com/quote.php?symbol=ONDS)
+
+  - Ondas Holdings (ONDS) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/ONDS/)
 
   - News | Ondas inc. (https://www.ondas.com/news)
-
-  - Press Releases :: Ondas Inc. (ONDS) (https://ir.ondas.com/press-releases)
 
 **Step 6 — Research.** The model wanted to know: *"DELL Dell Technologies stock news August 2026"* → got 6 results (via ddg)
 
@@ -46,61 +46,61 @@
 
   - Dell Technologies Inc. (DELL) Stock Forecast & Price Target ... (https://tickflow.io/stock/DELL/forecast)
 
-**Step 7 — Research.** The model wanted to know: *"ANET Arista Networks stock news August 2026"* → got 6 results (via ddg)
+**Step 7 — Research.** The model wanted to know: *"ANET Arista Networks stock news August 2026"* → got 6 results (via gnews_rss)
 
-  - Arista Networks, Inc. (ANET) Q2 2026 Earnings Call Transcript (https://seekingalpha.com/article/4930318-arista-networks-inc-anet-q2-2026-earnings-call-transcript)
+  - Cisco Systems (CSCO) & Arista Networks (ANET): Cisco Just Beat Every Estimate. Why Did the Stock Still Drop 8%? - Yahoo Finance (https://news.google.com/rss/articles/CBMioAFBVV95cUxOdXF1N2JjVDdrS2dTd1FZdml5RVktSDZyUzNSR1Z0U3BLOFVTV0xTVG1uaWZ3akNVWV9UODZRc2t1WjRLQ3dVeGhxdTQ3N1E4Nm1neTRocHdtcW56N3I2X2RSczlWQzlXNnBBaGh0RUtJZ0JySGdmQjZXczlDVFFpS3l1RFByNmk3Nm02TkpkVWkwblhLMFdqakpQSDJXSmtU?oc=5)
 
-  - Arista Networks (ANET) Stock: Price, Analysis & 2026 Outlook (https://explore.nemo.money/en/stocks/ANET)
+  - ANET Stock Quote Price and Forecast - CNN (https://news.google.com/rss/articles/CBMiUEFVX3lxTE9BbWlkeUcySkdqVVBlWGZMWU1TenVYc0lmT2ExN0IzUkVxamxKZUg3MFB4a2hNZV9GQ0RsbmpLeFZqaFZRVWY0dUVvNndVYWJh?oc=5)
 
-  - Arista Networks - Stock Info (https://investors.arista.com/Stock-Information/default.aspx)
+  - Arista Networks Stock Looks Strong. One Number Says Be Careful. - Trefis (https://news.google.com/rss/articles/CBMivwFBVV95cUxNaU5DUEhrNWlZRUxXbkt3ZEZwSWRMdnZwRnBrVG9RV29ROE82MXk3TFBRWW5jNFFLeWRfTXVHRmVsLVBrTDFZZjV1cXB0UUNjMVQ4S2c0Uk1pYlRoZDlSU3RYSS0yM2RybktUQ0F0SEtmYXI0Y1JuMmR2ODZ5Q1R5QlQwWWdVRDFNdnB5S09wMFRmdnV6VFRWSHdhZmdXS2R4ZXc2S2tZakpvR2ZIRVVJbDVEbEw4LUltZGJZdkktWQ?oc=5)
 
-**Step 8 — Research.** The model wanted to know: *"QBTS D-Wave Quantum stock news August 2026"* → got 6 results (via ddg)
+**Step 8 — Research.** The model wanted to know: *"QBTS D-Wave Quantum stock news August 2026 CFO"* → got 6 results (via gnews_rss)
 
-  - All News for QBTS : D-WAVE QUANTUM - Zacks.com (https://www.zacks.com/stock/research/QBTS/all-news)
+  - D-Wave Quantum Shares Slide 9.5%, Wiping Out $679 Million as CFO Steps Down - TechStock² (https://news.google.com/rss/articles/CBMilwFBVV95cUxPT2pCaVIzM1pOb3Q4RkRmQU9CcnNmeWk0UHczTC14cjFQeUVSUjZVd1ZZcGgxVTlvMHVDWlQwOEdBRkdocmJCZHI5YnFmTW1QTjdPOUYxalZTbHRvWHRxYVpEZWlrVUNVZXEwWHc2WmNqNDg5X0dGRzdFZFk3eTV0a2FBRDkzbnVuTGZIUndLbmVjYjdVcG53?oc=5)
 
-  - Why D-Wave Quantum Stock Was Plummeting Today (https://www.fool.com/investing/2026/08/26/why-d-wave-quantum-stock-was-plummeting-today/)
+  - How Investors May Respond To D-Wave Quantum (QBTS) CFO Transition To Internal Finance Leader - simplywall.st (https://news.google.com/rss/articles/CBMizgFBVV95cUxPR1NWTEswZWNlcWp0NnBYTUU4YmdhUXhQcEk5X0doandpcFF2bnltV3VlckNRYmFObE1hakJDbjhRWUVSZHZuMjlCTFlVR3FIQkdRTHUzRmFfWGlyOHYwS01ma0F0UGVDUmU2VmZMWkRBLXV2NTM4a0tkUklvVXdxckFndGpCTlFweXdoZXZ1NkVBQU43a0txR1VqSWlvYjhmdFNYd2k0aGh4dGduZ01MWEdkVUJNSC1HNmtjaENybTI4ajMweXQ0MUx5TllJQdIB0wFBVV95cUxNVUZHWlJwZ05nRnNJQ0xWeTVoOHE3a1RGZGhfOUxwSlhLdlZjM21ibm9WZFBCVXh2N0dsWF9mT2JWSjYwQlV6dUFpLUZPRGJ3YXdZUUpJUUtUQ1VKSlpiQVpVMzd5b0ZlZkw3SEdNWWdaY3RFRHVRUTdqRmlsaXZlb29iaEtHdm5iWXpfbU1CUFlYRl9xWGkzREc1UmsycUltbXhnUXpqQVZETXNrSjlxdkp1ZFBoOXRMV25CdGtpYU9VSXRBVFlCTUI2Y21VcEh6LTFB?oc=5)
 
-  - D-Wave Quantum (QBTS) Stock Price, News & Analysis (https://www.marketbeat.com/stocks/NASDAQ/QBTS/)
+  - D-Wave Sinks 8% as Its CFO Retires; Rigetti Slides 5%, IonQ Falls 3% - 24/7 Wall St. (https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUTlLaS0wbFlSa1dDaUltVE9TQllpV1RtVUhXSjVQZURFa0haOUxvUXNJZllaN2pSVmdMcjVKMFdNc2ZKTWFZb2F5U2d5SkVDLW9vLWprMDZha1N2SHdNa1dJMHM4dHlhVVZNNlRoVHNZWnVkbTNDVE9yLTBGMjFwZHp2bjh6UWtteVRWLU1YaHFPaHFhZjNtaThyMTZEYk5maHJqT0lwbzhUQWM?oc=5)
 
-**Step 9 — Research.** The model wanted to know: *"RGTI Rigetti Computing stock news August 2026"* → got 6 results (via ddg)
+**Step 9 — Research.** The model wanted to know: *"RGTI Rigetti stock news August 2026"* → got 6 results (via ddg)
+
+  - RGTI Stock Rallies As Quantum Momentum And Targets Climb (https://stockstotrade.com/news/rigetti-computing-inc-rgti-news-2026_08_21/)
 
   - News Releases - Rigetti & Co, LLC (https://investors.rigetti.com/news-events/news-releases)
 
   - RGTI Stock Price Today (August 2026) — Rigetti Computing, Inc ... (https://tickzen.app/stocks/rgti/overview)
 
-  - RGTI Stock Rallies As Quantum Momentum And Targets Climb (https://stockstotrade.com/news/rigetti-computing-inc-rgti-news-2026_08_21/)
+**Step 11 — Research.** The model wanted to know: *"AAPL Apple stock news August 26 2026"* → got 6 results (via ddg)
 
-**Step 11 — Research.** The model wanted to know: *"AAPL Apple stock news August 26 2026"* → got 6 results (via gnews_rss)
+  - All News for AAPL : Apple - Zacks.com (https://www.zacks.com/stock/research/AAPL/all-news)
 
-  - Jim Cramer says this could be the key to sending Apple shares higher - CNBC (https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT2VuWjB6TksyQ1BYZFdPeGxjWFpNREJZdGc2Si1kM202NThVTmFiXzBEU1RSYWFkcG82VEEwZE9wMWtTdVN1VThNMi1tVDcxV2tvbVJ1YkMxMDRQd0NrNzRIVUFNOFVWR1dqa1pQd1drc3FfQVEwU21FOXp1Vms2TFFYWFpwT0dmdGV5TnQzMlNGZHUyeEVwdFptQW1RRnc0eE5qX0tFTnA?oc=5)
+  - AAPL Stock Price Today (August 2026) — Apple Inc. Analysis ... (https://tickzen.app/stocks/aapl/overview)
 
-  - Apple Inc (AAPL) Shares Surge 1.1% -- What GF Score of 96 Tells Investors - GuruFocus (https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWHhnZFFXd21IQjMzb3ZBYXBBV0JyTk5kMS1DUV9oZ1JYMHpzWEdXa0J6d2JJTXFDTlQtSW5pRzlzcXI4Y1V4RzQzamljZjN2R2o1YjJ5VlMtY0pKQks5akhiclFIdU83dm9CZE80YzJwR0ZRYlhxcWhFaklnM0FIaW5KMDFRU05hWERsaFVMbXFUMUUwempfZXhXSGptYk05dzltNk8zdmY?oc=5)
+  - Apple (AAPL) Stock - Research | Financials | Charts (NASDAQ ... (https://www.financecharts.com/stocks/AAPL)
 
-  - Apple: The Winter Is Coming (NASDAQ:AAPL) - Seeking Alpha (https://news.google.com/rss/articles/CBMidkFVX3lxTFB3Y1hWWndpSmh3VjJaUmVYYmZfdXF2MG9xNWFKUUZzVGNqOUVjQ01XclZkMVQwNUZ6SDJrMEtxMThrX2xpMERrOHpyMHppeWw5MW5leGJHM05GWWRYcWhiU3NBczZNZzVNa3NtV1R0X25YdDNkMEE?oc=5)
+**Step 12 — Research.** The model wanted to know: *"SONO Sonos stock news August 2026"* → got 6 results (via gnews_rss)
 
-**Step 12 — Research.** The model wanted to know: *"SONO Sonos stock news August 2026"* → got 6 results (via ddg)
+  - EFG International AG Buys Shares of 239,688 Sonos, Inc. $SONO - MarketBeat (https://news.google.com/rss/articles/CBMiugFBVV95cUxNRktJMkdqUkFtWjNnYThkVndaQVh2S2dOa05uNnBrSlNyODZtZVZCVVpaN1phVW5NZGF5cEtlcjF1aWRITXBvWHB4U0czS2laUTJneTNVQmRGZGtqMGxoUUxydVVFeWZJcXVyM0NnakVaczFDSTFWUE9DNDVILU96SkxLT0YwV3NqR0M3bzlBdTBBY044WlhSYUJZOGZvblZtWnZqak1aaWNYWnZhMVFRRmc3cHN0Z3NubGc?oc=5)
 
-  - Sonos (SONO) Stock Price & Overview (https://stockanalysis.com/stocks/sono/)
+  - Sonos (SONO) Faces Revenue And Earnings Questions On A Fair Value That Looks Close - simplywall.st (https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZTFsOGdvRzNBNlMyZjA0d2c5eE5OVG9KMVFKbU1kRGZpbUlyOHNkSXd1VU5TcVVkMXFhSWsxSjRSUzBzN3M3bkoyMUVkZ3psNXp5TDhXR3M4QXJ4WHZFNm15Unp0Y19wZF9laXY2Z3hBSUtpWnpyc3UtWUp1Z0g2YWt2RThqTmhZVnlZd2pMWFdIUzRkZHdYa0R3TTNoZ1FjMklXUlBudlRIcXl5WUZvU3NsWWxuNmlsTFpITjRab1NZU3F0QU03WEoxTmNkaU5McDJz0gHTAUFVX3lxTE5lMWw4Z29HM0E2UzJmMDR3Zzl4Tk5Ub0oxUUptTWREZmltSXI4c2RJd3VVTlNxVWQxcWFJazFKNFJTMHM3czduSjIxRWRnemw1enlMOFdHczhBcnhYdkU2bXlSenRjX3BkX2VpdjZneEFJS2laenJzdS1ZSnVnSDZha3ZFOGpOaFlWeVl3akxYV0hTNGRkd1hrRHdNM2hnUWMySVdSUG52VEhxeXlZRm9Tc2xZbG42aWxMWkhONFpvU1lTcXRBTTdYSjFOY2RpTkxwMnM?oc=5)
 
-  - Sonos (SONO) Stock Price, News & Analysis - MarketBeatSonos (SONO) Q3 2026 Earnings Call Transcript - The Motley FoolIs Sonos Stock Worth Buying as Growth Improves but Margin ...SONO - Sonos, Inc. (NASDAQGS) - Share Price and NewsSonos (NASDAQ:SONO) Rating Increased to Strong-Buy at Wall ...Sonos - Investors (https://www.marketbeat.com/stocks/NASDAQ/SONO/)
+  - BlackRock Inc. Makes New $248.07 Million Investment in Sonos, Inc. $SONO - MarketBeat (https://news.google.com/rss/articles/CBMixgFBVV95cUxNZmxiWWRJNkZ1TlAzb1htU3NDanFvWjNyVWpTZFFhODM5NWRKcFBkZkJORzBaWWVTRzVoQzIwZkhjUi1WN2VBSU9zLTgzWWdDbXZvSVZ0RDh4d04wY2VvLTlBc3Fod1JVX0otTmxMVk5vTDl5c2ZrbzA4MGI4bzRHU1M2aGZxUEk2UnNXTlZHVzNGdldpTHhkTzM2anNzbmJqanVseHVhQTZvb09vZVllT20xaFhaNEVFWVNxNVBKb3pHeWowa2c?oc=5)
 
-  - Sonos (SONO) Q3 2026 Earnings Call Transcript - The Motley Fool (https://www.fool.com/earnings/call-transcripts/2026/08/07/sonos-sono-q3-2026-earnings-call-transcript/)
+**Step 13 — Research.** The model wanted to know: *"APH Amphenol stock news August 2026"* → got 6 results (via gnews_rss)
 
-**Step 13 — Research.** The model wanted to know: *"APH Amphenol stock news August 2026"* → got 6 results (via ddg)
+  - Amphenol Stock Split 2026: What Happens to APH Shares on September 3? - EBC Financial Group (https://news.google.com/rss/articles/CBMidkFVX3lxTE9wVFlrbHVqYmR4MXJ3bVlFOFdsVGFRMjM5ZFE5bmZRZDlLMEdMeVdRU1ZsNVUtMmJ2Z1ZiOFlGelNPeWNuWHYzZnB4YzVHMlVUczVTRkNRRWJOUjBDcFUzRWdFWktxUjRqa295S21QV3NQMEQtcUE?oc=5)
 
-  - Amphenol (APH) Stock Price & Overview (https://stockanalysis.com/stocks/aph/)
+  - Is Amphenol (APH) Still Undervalued As AI Connectivity Acquisitions Lift Expectations? - simplywall.st (https://news.google.com/rss/articles/CBMivAFBVV95cUxPV2dWSlN6M1JWYUw2ckZpOVoybGdwNEVYa3VFcFF5ZUpZTUtPY1Y5UElTWlhxUHVlUDhvb2ZXZG1iVVJIaVU0azVkTzM3WC1tYU84VFVBWnZmd3VyQWwwT0FUY3QtMVVsdFI5MmotX2xRa05ocWdqSG4wa1UtWlJTRmpwbk9qRDRVc1hGWkZaOTJIaWFzeVNFV2s4aE0wZlJhQlJfOXhfeXhVbmsxdkYtV2NYZGpHV19DRnpHetIBwgFBVV95cUxOcnRsaVRoR2NXSTNqcUpDWUVmNFZTbDNHUTJzSGJjSDN4TFRGX3Y4eVNINmRCbUc1T09EbGh4VUItT3VlUjRLSXlJcmdlR0hUVWtyaFdpQmpPUUI0Q3BNU2h1aVlMOHVLeDQwMFhQOF9DdjRNMUQ3UGsyY0xja0wyZkNReEFxMUxzSFRMSUF6cVRidVU3Y0ZGd1REQnRXR0xHWTFnX04yY0JBcHVmcWtTSXhvTDZROS1xZGFXZXlPcThaZw?oc=5)
 
-  - Amphenol (APH) Stock Price, News & Analysis - MarketBeatAmphenol Corporation - Amphenol Announces Two-for-One Stock ...Amphenol Corporation - Stock InformationAPH - Amphenol Corporation | Stock Quote, Technical Analysis ...APH News for Amphenol Corp - Barchart.comAPH Stock Forecast & Analyst Ratings - August 2026 | TECHi (https://www.marketbeat.com/stocks/NYSE/APH/)
+  - APH's Communications Growth Surges: Can Rivals Dent Its Momentum? - TradingView (https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVGhEdnh4YUhvbkltUS1oaXZITENqX1V2NUpfOHhGUUpMX253c2RRblNCRFlrQWVvOWQ3UWRXeUh4eC1rRnJqbTAxQXRmNDBUd0hTdDN2VGNoRUdYc0JucEEtajdPM3h4OFNMcDNLbDA4bnVnSDh2d3E5aEVOUGg1WGVuQUlSN0NYd1F3THBJUVlqazJFTnluNXJyNDJubm5uRkMwN3YwWk80ZkpfeUcwY2N6ZzczQXZNOVZn?oc=5)
 
-  - Amphenol Corporation - Amphenol Announces Two-for-One Stock ... (https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Announces-Two-for-One-Stock-Split-and-Third-Quarter-2026-Dividend/default.aspx)
+**Step 14 — Research.** The model wanted to know: *"GLW Corning stock news August 2026"* → got 6 results (via gnews_rss)
 
-**Step 14 — Research.** The model wanted to know: *"GLW Corning stock news August 2026"* → got 6 results (via ddg)
+  - Corning Inc Stock (GLW) Moved Up by 3.44% on Aug 26: What Investors Need To Know - TradingKey (https://news.google.com/rss/articles/CBMiigFBVV95cUxQMFJIa1dxd043RlFHOVRzN2NsZGNJVk00ZENFczNJTGlQTFI2d1RreUhxTkFrYWd1enpUUFpRamY2S1A0bkV5RG9sWk5OeDIyWkgxWVd6RGlaSTQ1WUhsbWh3RU0tbWdPZ2NCc3drTzJoZlNQanpKeG1Cek5QUUV3YlI0cmhXa3BNVlE?oc=5)
 
-  - Corning (GLW) Stock Price, News & Analysis - MarketBeat (https://www.marketbeat.com/stocks/NYSE/GLW/)
+  - Why Corning (GLW) Stock Is Trading Lower Today - Yahoo Finance (https://news.google.com/rss/articles/CBMimgFBVV95cUxQbXFVbXItUG0wblhXSWpDN2lVQXlFNTJ1R0ZxTWQyVTVZZ3d4QUJQcE1XVTl1cUhmVUZyRHJQQnJBMWxWMTBwcXVmVXBJV2h0ZVB1NS1kM2ZnNXB5am1mdGlPeThRc3NIWXlhQkwyOWRGaXVZSjdLTjF2clV0QjdxVzlJMHp6bEtxR1puM00wbXpZX2pLbjR4MjdB?oc=5)
 
-  - Corning Inc (GLW) Stock Forecast & Price Target — Aug 2026 (https://tickflow.io/stock/GLW/forecast)
-
-  - GLW Stock Forecast & Analyst Ratings - August 2026 | TECHi (https://www.techi.com/quote/GLW/forecast/)
+  - Corning (GLW) Lands Multiyear Multibillion Dollar AI Infrastructure Deals - simplywall.st (https://news.google.com/rss/articles/CBMiuwFBVV95cUxPOUx2azlLNkZsNURrNm9tVWI1a20zUmZjaUFmaHJmd2FlYjZXSmRwQTF0bEZ3azVGV200bjFkR1piNkc3M3UxLVljMXFLMHdDTWt1OHUycTY2MTZ6SVVPTnd5MHZxOUlsQ3B1a3RuRDRCWVdlSEhXOFBGeEswckJVVXhNV3M0SzFoV2l3SmRoWHk4N0xwYVIzLVhNX01hYW1SZzdHWUZoZmpYOVZVT1Bzek1ISFN6aFNlQWg40gHAAUFVX3lxTE9iV0YtYklId1J2SURaUVlGZnpna2x6MGZfbDVOQ3RSY0JNQzVYdUQwWXlyc1pyR1hGcjU2bEFQWU1QZGlUQ0tFREhhYkNrRVdaZzFlazNSYXdiaERwZWwwMmJUOFREeW51dlRQS0VJZ1RrQU03WFZKR05SaWwtdUpJUFFuX0RXNlIwRU1PT3JFblhNUi1WVGdTX1pKU3p0VzRVTThHLWlsUE9XX0RETnZkNUlMWUJHbWdnbjNmT3dtRw?oc=5)
 
 **Step 16 — Research.** The model wanted to know: *"PLXS Plexus stock news August 2026"* → got 6 results (via gnews_rss)
 
@@ -116,47 +116,47 @@
 
   - Bel Fuse Inc (BELFB) Stock Down 7.3% but Still Overvalued ... (https://www.gurufocus.com/news/9042044/bel-fuse-inc-belfb-stock-down-73-but-still-overvalued-gf-score-74100)
 
-  - BELFB Stock Price, News, Financial, Trade Ideas & Analysis ... (https://stockbuyvest.com/stock/BELFB)
+  - Bel Fuse (BELFB) Stock Price & OverviewBELFB Stock Price, News, Financial, Trade Ideas & Analysis ...BELFB | Bel Fuse, Inc. - Trade Ideas, Price, News Aug 2026Bel Fuse Stock Price Forecast. Should You Buy BELFB?Bel Fuse Cl B Stock Quote: BELFB Stock News, Quotes, Analysis ... (https://stockanalysis.com/stocks/belfb/)
 
-**Step 18 — Research.** The model wanted to know: *"NSIT Insight Enterprises stock news August 2026"* → got 6 results (via ddg)
+**Step 18 — Research.** The model wanted to know: *"NSIT Insight Enterprises stock news August 2026 Palo Alto"* → got 6 results (via ddg)
 
-  - Insight Enterprises (NSIT) Q2 2026 Earnings Call Transcript (https://www.fool.com/earnings/call-transcripts/2026/08/13/insight-enterprises-nsit-q2-2026-earnings-call-transcript/)
+  - Insight Named Palo Alto Networks North America Growth Partner ... (https://markets.financialcontent.com/wral/article/bizwire-2026-8-26-insight-named-palo-alto-networks-north-america-growth-partner-of-the-year-for-2026)
 
-  - Insight Enterprises, Inc. (NSIT) Q2 2026 Earnings Call ... (https://seekingalpha.com/article/4932385-insight-enterprises-inc-nsit-q2-2026-earnings-call-transcript)
+  - Insight Enterprises Wins 2026 Palo Alto Networks Award | NSIT ... (https://www.stocktitan.net/news/NSIT/insight-named-palo-alto-networks-north-america-growth-partner-of-the-s35vp7tbgpug.html)
 
-  - Insight Enterprises Executive Sells 4,000 Shares for $619,320 (https://www.fool.com/coverage/filings/2026/08/26/insight-enterprises-executive-sells-4-000-shares-for-usd619-320/)
+  - Insight Named Palo Alto Networks North America Growth Partner ... (https://www.tmcnet.com/usubmit/-insight-named-palo-alto-networks-north-america-growth-/2026/08/26/10435776.htm)
 
-**Step 19 — Research.** The model wanted to know: *"CNXN Connection stock news August 2026"* → got 6 results (via ddg)
+**Step 19 — Research.** The model wanted to know: *"CNXN Connection stock news August 2026 NASA SEWP"* → got 6 results (via ddg)
 
-  - Latest News about PC Connection, Inc. - Common Stock (Nasdaq ... (https://markets.financialcontent.com/wss/quote/news?Symbol=NQ:CNXN&ChannelType=PRESSRELEASES)
+  - Connection Awarded NASA SEWP VI Government-Wide Acquisition ... (https://markets.ft.com/data/announce/detail?dockey=600-202608201000BIZWIRE_USPRX____20260820_BW018694-1)
 
-  - Press Releases | Investor Relations | PC Connection, Inc (https://ir.connection.com/news-and-events/press-releases)
+  - PC Connection (CNXN) Lands NASA Contract As Valuation ... (https://simplywall.st/stocks/us/tech/nasdaq-cnxn/pc-connection/news/pc-connection-cnxn-lands-nasa-contract-as-valuation-question)
 
-  - Connection (CNXN) Reports Second Quarter 2026 Results - ADVFN (https://www.advfn.com/stock-market/NASDAQ/CNXN/stock-news/99005954/connection-cnxn-reports-second-quarter-2026-result)
+  - CNXN Press Release: Connection Awarded NASA SEWP VI ... (https://marketchameleon.com/PressReleases/i/2362043/CNXN/connection-awarded-nasa-sewp-vi-governmentwide-acquisition)
 
-**Step 21 — Research.** The model wanted to know: *"IBM stock news August 2026"* → got 6 results (via ddg)
+**Step 21 — Research.** The model wanted to know: *"IBM stock news August 2026"* → got 6 results (via gnews_rss)
 
-  - IBM - Announcements (https://newsroom.ibm.com/announcements)
+  - Is IBM Stock A Bargain After Its 28% Drawdown? - Trefis (https://news.google.com/rss/articles/CBMipwFBVV95cUxQWXFwTVdHS283RUhzNFNxVU05bTl3R19tZ3hYYUxyN1JIejlMd1lSU1BhVWJkMXZCSURqNmhtV2JLTjhfaXd3OGd4aUF5SjZvWndOenhlZ3V0U0RBVURKSy10ajU0MkpkaDQ5cXJvdEhncXBXWUh0SFZRWGVHYUkwb2NDc1FnMWN6eS1aczNrUkVfUEhmQlRKUGp4UV9Xdmh6NC1KeHRmbw?oc=5)
 
-  - IBM - International Business Machines Corp News | Morningstar (https://www.morningstar.com/stocks/xnys/ibm/news)
+  - IBM Just Hit a New Quantum Computing Milestone. How to Play IBM Stock Now. - Barchart.com (https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ3pjb05tcVhfb3JQeUtVblFpTzlONmJKa1dhTHhMcmtXbVZLSmo3QU9VN0JhazdRZlZ6RE9nUjhYN1JGbjNhRS1yNGV0MFUtOW1XdzFTdzl1UTFlQl94Z0NJTEpuNGtRN0kxdDdMNFBfQnNvV282WXpPLVNBV2lsNGl3SnI2cFJVNjFmcU5PSVhtMkVnc2xhZ3VVN2prRnhXNFotNUJYRW5MQ19nSXJ1QlpTRlFpekU?oc=5)
 
-  - IBM Newsroom (https://newsroom.ibm.com/)
+  - IBM's new AI tools for the US Open will generate roughly 1.2 billion data points - Stock Titan (https://news.google.com/rss/articles/CBMivAFBVV95cUxQNk12REIwcjlMZVBEZ01nc1FrZzBmaE1OeFJkcVdqWGNGd1pLajJLTVlKVjBJNUxEMHRqVUlESDlLRHZ6ek1NYnF5MTJGUWliSTVnb056V1d4RTRfUzFjNnpHY0c4UGFtZ3dnbUxwRTZRVkVJdHpnaUJvNXNVY1g0WDBhRkR5WGFOcGFnZ3V5eldFWTVRMmFlOEg5Ylh0NXlmQkFRSWhJSDUtV0d0VV8tdS1YeE9CZU00bGIwZw?oc=5)
 
 **Step 22 — Research.** The model wanted to know: *"ACN Accenture stock news August 2026"* → got 6 results (via gnews_rss)
 
-  - Accenture Stock And Other Dividend Payers Yielding More Than 3% - simplywall.st (https://news.google.com/rss/articles/CBMiwwFBVV95cUxQRXM4WGVCaTRlVldPWnFYRjRrSEZOSWI0YXdlVldQQlZFazVhVlhjLUNRTmY2dTdWenMyejFUWm9QQzBXd3lXR3N3dFB0bk0wQ1A0Q0w2Um1BdWlIZG1WQUxSeGpUbmxqcGxyMlpVZFBLVHAxM01oLVJ0dXRyQ1hNd2dBaFVWalhUX2RJZXIyOXZPdGY5U2VqaS02dVlEQU1tVlZrZlV3NkhWYjdPREdyYVNTWjRkRkpXUHpSOFNUZm9IaknSAcgBQVVfeXFMTmJ1SldNNGJFWnEwcEhxVjlubU82SEE0cEVOaVRTd0JqUlVjRWRJMWV5SXhkQUpFc2l0NExOWENZWlVXYkcxNXJ4QWhuT0x0SGNXQkJFaDhWLXF5Ul91V1M0d0paRmUyTmtnVW14d2dBN3d0aHlzTzB3d2lORG1Md2RDLXJ5Szk4MEkwZ2NnWE9sS29GbXpiRUlTUm9KazlXYkFpeHBrcDBIZ2NkUFRMZUdmeE15MWhSeXgybkhLR0Z5cVBwVzdtSXY?oc=5)
+  - Accenture Stock Is Down 30% This Year, Can It Still Recover in 2026? Here’s What Analysts Are Saying - TIKR.com (https://news.google.com/rss/articles/CBMivwFBVV95cUxNOTAtLVY5Qy1BM0RJYlV4eWxWUVV5ek5EWDNvNzFSSGxUWVEyeGZfYkFKTGRaWnJqMXlNTnlYNlh4Y3lvTlBRUUhkbVVxMkZvVUhZRGFzZk5CdXo4YVAxVlNwb1FoTWF2ZW1oTHZ5d2lWVDMzYkl2RG9iVHpySlhNMGtzd3k3MExjUi11TXdydTItaHAtekd2RGJzVzlza3dpUThwZnh3S0xGa1hFT1ZJcnlfWnpsR0c3VlpPU2k2TQ?oc=5)
 
-  - Recent Report Shows That Rep. Kelly Morrison Sold Up to $140K Worth of Accenture Stock - Benzinga (https://news.google.com/rss/articles/CBMivgFBVV95cUxQZWhFT1o5Q3hLOHNnakNfT2F5NTJ2QTA1WDZ4R2FWcXQ1LW1lRFR6cVBJVjhZaElBRUlxS2pSMENBRzEwZFlsbHRPVkJVYXZxcVZiRHFLMXluNll5aEZaMUkzZC1fcDNhdzZkYjBZb2xKZmV5QlJ4Yk5mQy1VckJTNGhwVWlxSUZaVUp5UmF2WnhkUmt2YkdGWlVWZy16c3U5MzJoR0dEQk5MLVNzRkdTblgxLWt2TjhnaE1sNzR3?oc=5)
+  - Accenture Stock And Other Dividend Payers Yielding More Than 3% - simplywall.st (https://news.google.com/rss/articles/CBMiwwFBVV95cUxQRXM4WGVCaTRlVldPWnFYRjRrSEZOSWI0YXdlVldQQlZFazVhVlhjLUNRTmY2dTdWenMyejFUWm9QQzBXd3lXR3N3dFB0bk0wQ1A0Q0w2Um1BdWlIZG1WQUxSeGpUbmxqcGxyMlpVZFBLVHAxM01oLVJ0dXRyQ1hNd2dBaFVWalhUX2RJZXIyOXZPdGY5U2VqaS02dVlEQU1tVlZrZlV3NkhWYjdPREdyYVNTWjRkRkpXUHpSOFNUZm9IaknSAcgBQVVfeXFMTmJ1SldNNGJFWnEwcEhxVjlubU82SEE0cEVOaVRTd0JqUlVjRWRJMWV5SXhkQUpFc2l0NExOWENZWlVXYkcxNXJ4QWhuT0x0SGNXQkJFaDhWLXF5Ul91V1M0d0paRmUyTmtnVW14d2dBN3d0aHlzTzB3d2lORG1Md2RDLXJ5Szk4MEkwZ2NnWE9sS29GbXpiRUlTUm9KazlXYkFpeHBrcDBIZ2NkUFRMZUdmeE15MWhSeXgybkhLR0Z5cVBwVzdtSXY?oc=5)
 
   - Accenture (NYSE: ACN) corrects CAO equity grant to 1,034 RSUs - Stock Titan (https://news.google.com/rss/articles/CBMitwFBVV95cUxPNTVtYjVvVDRGUGRYRUxKS3N2aVppWWFHekw4LVMtcXNoZnhwZElPTXhGUDVOQzVSRWZwU3ZZeTJwb2VYTjFJc2ZpRHQwTTlfVEFOZHhoelEtSnY4TGxGMmFLcmZYU2k4RndsdnMycUxwYjZHQzQzV3hCVTR4WlEza2s2ZmtRaURFSU12VndwdDZsRDdwaWhZSGVpR1lzTTJ6S3FtWnNlQmlVcHNJbDkzSnlZUmFHNVk?oc=5)
 
-**Step 23 — Research.** The model wanted to know: *"CIFR Cipher Mining stock news August 2026"* → got 6 results (via ddg)
+**Step 23 — Research.** The model wanted to know: *"CIFR Cipher Mining stock news August 2026"* → got 6 results (via searxng)
 
-  - Cipher Digital Stock Quote: CIFR Stock News, Quotes, Analysis ... (https://research.investors.com/stock-quotes/nasdaq-cipher-digital-cifr.htm)
+  - CIFR Stock Quote Price and Forecast | CNN (https://www.cnn.com/markets/stocks/CIFR)
 
-  - Cipher Digital (CIFR) Stock Price & OverviewCIFR Stock Rallies As Street Backs AI And HPC PivotCIFR Stock Forecast & Analyst Ratings - August 2026 | TECHiCipher Mining (CIFR) Stock Price, News & Analysis - MarketBeatCipher Digital (CIFR) Stock Forecast & Analyst Price TargetsCIFR News Today | Why did Cipher Mining stock go down today? (https://stockanalysis.com/stocks/cifr/)
+  - Cipher Mining Inc Stock Price Today | NASDAQ: CIFR Live - Investing.com (https://www.investing.com/equities/good-works-acquisition)
 
-  - CIFR Stock Rallies As Street Backs AI And HPC Pivot (https://stockstotrade.com/news/cipher-digital-inc-cifr-news-2026_08_03/)
+  - Cipher Digital Inc. (CIFR) Stock Price, Quote, News & Analysis | Seeking Alpha (https://seekingalpha.com/symbol/CIFR)
 
 **Step 24 — Research.** The model wanted to know: *"PENG Penguin Solutions stock news August 2026"* → got 6 results (via gnews_rss)
 
@@ -164,79 +164,79 @@
 
   - Does Penguin Solutions (PENG) Patent Deal Change Its Optimized LED Outlook? - simplywall.st (https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVnlrTllJQ09rOG16d1FsWnAyVzJQZ0xxWThVZExJclNxRkZTR215a0RoYXh2UFBjLWRKaFA5THI1N3duN3d6V2RLYm1vQ3lfdS1CZ0o0dXNteWp5OEJMdHBTczREUllLcVBGQi0zbXNqcmN2SDNMOXphN0twS3ZDLWVRbUhRU09MM2xXZXM1SVE2ZkRNTFFHVEZNcGFyTnpuMklITmpPcGFvLUJ0eXZVMkdPOGZraEtJZTUySnlCbmhkSHI5U0lxaUNSYmFTNzhmRzkwbDdtVkZ4QdIB3wFBVV95cUxOa2FiUE1ON1VFanlUSmRna21LRTByQWp2X0o5MjM4MFNWZVVGazFrT193ZjlaMEd1OWxzTE9fYUpUWG9Od2owTjVsOGl6ZXBzMHdpOG9MRlNmYllrNVZQQUYzSUhBQUlkZFZuTVZuYzhxeUg0UnRhaV9ya0tJa0s3SHRFVnUwNFNpTFJNY08tMV9aRGo1WkgtRjhBOHMzM2ZvRFJRVXAyTC1CT2lGQi10X3lZYm8zUkdZQ2R4SENlOVplNnZlaHBld3NXclV6Q196akFjUkZXd2lGSVY4ci1j?oc=5)
 
-  - Penguin solutions SVP Kuykendall sells $202k in stock - Investing.com (https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUEdPYTZUUEZ6VXo3eVhWUi1GZzh6Zml5b21vVWJucWFhZzNwaEYza3hMdlhpR3hXTVJ1Z1FocXBhQUpVNlhoUDZSTU5qUTJ0Y3lGS1ByUGp5VnBvbDlqcHFZU0lCZ3l0QXQ3SExkRTZuSml4ZHFZV3JZYlpCRExLVld1Sng1dTR5RnlHVVFFR2JPbEYwU0swOU9DQmpOazh5NnhDbmJiQ2JPQWU3bU1yLXA0OE03ZG9vak1KYk5zelhvYW8?oc=5)
+  - Penguin Solutions (PENG) Could Be 32% Below Fair Value As Tokenized Trading Volume Jumps - simplywall.st (https://news.google.com/rss/articles/CBMi2gFBVV95cUxPX25WNnBSNC13M29QQll6OUR6eW0xLS1YRnpRMVU0QmJyZ0NucWRmVmdDVVpzNjRKeF9hVlQ2YmQ5V2lCaUVFZ2RfQ0JLa3J1OGdGUkhqWFVMTDluaGFnd2dfb2FJSTVaNk5vNHc2T1BuUUE5emY5YTNGM3VORXAyWUc4UlFuSzBiT0VqWTF3ZGN0X2xMVjdBTUZmTnlQY2RrVWNGVm91OWJ2dlJXMjJMR3pBR1FrN0F4eFlvYzRtSTJUNE94eWpTcGxHeVhwVTlCTHFyek80aS1tZ9IB3wFBVV95cUxNNUZxc003UHYzOWRrYzU4cE9xSlVGeDYtT1p3N3pVRGNlNW9pQVhVNGdFX1UtZ3lhMU9vWnZJSjF0cTdGdEZrTnVoOVR2b1pNM0xRSy1GU1JPbjB3bnJpX21VTmhKbGRhYkZaeENZa0NJcnpRR2hiMXVhenkwUTdZX1l1OHFHd1gtSmJwWlJrbU1mY09jZ0o5V2VJeC1qamFtZHpNUDZldmJnQVFmbWRtNmRtVVgwbm9pUFJPdEl3UHRJUjRrTEZzN2pISmE4alVxSEVFckZCUnZQUzlaQUhJ?oc=5)
 
-**Step 26 — Research.** The model wanted to know: *"COHR Coherent stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 26 — Research.** The model wanted to know: *"COHR Coherent stock news August 2026"* → got 6 results (via ddg)
 
-  - Is Coherent (COHR) Reasonable After A 7x Run And AI Demand? - simplywall.st (https://news.google.com/rss/articles/CBMiuAFBVV95cUxORW0xZ2VtcGJaUTdvdE41SmpWeWNXdGh4YU9yeThtTHBjQ1Y3a2NaWDEyU2d6U1VoekxSUXNWaUZKei11eWRWTkFkNFZ5SnkzTF9iTEdUaVhfZDBPUlE5M1VOOExFY2hKUTl0UkVmSTVheC0zSzdqdUlJV1lzcjdqbjNyQUhweDFIMXUzR0tRc2RlMDZHVF9IWU00NXlMbXlKVTd5THFocXE0WEppcGNNU3dmSW9GZVdI0gG-AUFVX3lxTE5kZzQ0X2puVzRISUt6eFdvVWhVRjJ2Y1ZqX1dRWkkySG9VNktVRHlNMlRadnVvcTJFbm9QVmFLMGxKRFczTENiUlAwa2pIYU1iZW5zUEpESjJTVzVNcThTdVItYWJ3dmxBbWJWam1HRjlKbXVGNHVRWnE5d2xmOEw3bkl5aDJtTlJLbS1SUHZfR0I1NXRoMS02NE9lZUtiUDhMaG5BOVRzS3ZDRUdjRVEzY3lnUG00LWhIRF9sbUE?oc=5)
+  - Financial Press Releases and Webcasts | Coherent (https://www.coherent.com/company/investor-relations/financial-releases)
 
-  - Is COHERENT CORP (COHR) Outperforming Other Business Services Stocks This Year? - Yahoo Finance (https://news.google.com/rss/articles/CBMipgFBVV95cUxQbFV3RW84czdZWHBEZWVKSmc1VzlVTFNjWE11VkdWYXZJX3BHdGZ5MG1pWE94MTJmbk9qZC1GY3RLSWRJNnBETEZQcTc2T3RFOHctT1dha3JpVkF6QjI0aUZCbE1GVHRpNUNDVmdmTUREeC1iTk5DS0xwVHZFd0I4R0Jqb1RkSzNKU0s3bngzV2E0dGthZjlnd1dQQ3ZITGMzcW1DSnp3?oc=5)
+  - COHR Stock Price Today (August 2026) — Coherent Corp ... (https://www.tickzen.app/stocks/cohr/overview)
 
-  - COHR Stock Price Prediction 2026-2027 | Coherent Forecast - 24/7 Wall St. (https://news.google.com/rss/articles/CBMikgFBVV95cUxPbjJuaDRibHUyZkhVdWo4VGQtVjIxSDJMSGlWU0tVNWloZHVIaGFfVi16YTE3UUlNQVc4RllSR0RnTEMtUkxWbmU1WXN6bzdqWnpZNnRiem9ZbGE0YWFnMEVxMGpTWVYtckxzbXA4Q2lzaEt4WW8tcGQ2NUxvSTBhUVpmb2RnSXp1ajZqMEdDcVB5UQ?oc=5)
+  - Why Coherent Corp (COHR) Stock Is Up +16.8% in the Last 30 Days (https://tickeron.com/ticker/COHR/)
 
-**Step 27 — Research.** The model wanted to know: *"GRMN Garmin stock news August 2026"* → got 6 results (via ddg)
+**Step 27 — Research.** The model wanted to know: *"GRMN Garmin fenix 9 stock news August 2026"* → got 6 results (via ddg)
+
+  - GRMN Press Release: Garmin expands its flagship performance ... (https://marketchameleon.com/PressReleases/i/2363640/GRMN/garmin-expands-its-flagship-performance-smartwatch-lineup)
 
   - Garmin Ltd. - Stock Info - Stock Info (https://investors.garmin.com/stock-info/stock-info/default.aspx)
 
-  - Garmin (GRMN) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/GRMN/)
-
-  - Garmin (GRMN) Stock Price & OverviewGarmin (GRMN) Could Be 5% Overvalued After Q2 Beat And Raised ...GRMN - Garmin Ltd News | MorningstarGRMN - Garmin Ltd. (NYSE) - Share Price and News - FintelGarmin (GRMN) Stock - Research | Financials | Charts (NYSE: GRMN) (https://stockanalysis.com/stocks/grmn/)
+  - Garmin expands its flagship performance smartwatch lineup ... (https://finviz.com/news/385112/garmin-expands-its-flagship-performance-smartwatch-lineup-with-fnix-9-and-fnix-9-pro)
 
 **Step 28 — Research.** The model wanted to know: *"ESE ESCO Technologies stock news August 2026"* → got 6 results (via ddg)
 
-  - ESCO Technologies (ESE) Stock Price & Overview (https://stockanalysis.com/stocks/ese/)
-
   - ESCO Technologies Sets Aug. 6 Q3 Earnings Call | ESE Stock News (https://www.stocktitan.net/news/ESE/esco-technologies-announces-third-quarter-2026-earnings-release-and-rartbipl1jiy.html)
+
+  - ESCO Technologies (ESE) Stock Price & OverviewESCO Technologies (ESE) Stock Price Falls Despite Record 2026 ...ESE - ESCO Technologies Inc. (NYSE) - Share Price and NewsESCO Q3 2026 slides: record backlog, 38% EPS growth guidanceESE Press Releases Esco Technologies - marketchameleon.comESCO Technologies Inc. Common Stock (NYSE:ESE) Stock Quote (https://stockanalysis.com/stocks/ese/)
 
   - ESCO Technologies (ESE) Stock Price Falls Despite Record 2026 ... (https://www.sahmcapital.com/news/content/esco-technologies-ese-stock-price-falls-despite-record-2026-eps-outlook-2026-08-08)
 
-**Step 29 — Research.** The model wanted to know: *"NOVT Novanta stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 29 — Research.** The model wanted to know: *"NOVT Novanta stock news August 2026"* → got 6 results (via ddg)
 
-  - Is It Too Late to Buy Novanta Inc (NOVT) After 3.1% Rally? GF Va - GuruFocus (https://news.google.com/rss/articles/CBMiugFBVV95cUxPYmFpS3l3N0NjYVItc2FOUHlhN21Ob19JTHQzbGxnRjFzY2gxekIycmV3eUxXQ0xqRU5fbEJJdE9ZY2t0eUkwR0NGWUhxbWJSeEV3Z3o2cmVZdDUxTVZUcmNONXR2dER4bXItYi10alhVTk9nWVdvRWF2RkFzNDRySXlVSEIyYWh0bEFoRHhWckpWd0VyUGNxNU5nX0NYZlZ4akVuMHZJRjZyZk85MWN2WlotejJmTzlzcWc?oc=5)
+  - Novanta (NOVT) Q2 2026 Earnings Call Transcript - The Motley Fool (https://www.fool.com/earnings/call-transcripts/2026/08/13/novanta-novt-q2-2026-earnings-call-transcript/)
 
-  - Increased Bookings Reinforce Novanta’s (NOVT) Broadening Organic Momentum - Yahoo Finance (https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS2s2S0gwX2VBTnlTV1FUSWo4VVRoVnF5ZGczdkdzWkpraXdnZml6RmQwTW9wdUhtVWNJLUtCRVBuWkhxMVVZLVhVOE9Bck1uRU0tMXJpYUpQT0h2Wng2THlaTkp5OUNSOEQ4TXhYclBoQ1U0OHpYczRFTktTc3RtT2hlMjhHVElyaldpdC1NNUFBR1oxWFVlcXdWdkFyOEk5V3pJN3BrSzJ3UQ?oc=5)
+  - How Novanta’s Upgraded 2026 Outlook and Riverpoint Deal Will ... (https://simplywall.st/stocks/us/tech/nasdaq-novt/novanta/news/how-novantas-upgraded-2026-outlook-and-riverpoint-deal-will)
 
-  - Novanta (NOVT) Stock Climbs On Margin Gains And Higher 2026 Outlook - simplywall.st (https://news.google.com/rss/articles/CBMivwFBVV95cUxQYlViTzRBcXk2c2pfNnA0MnFoU1JhLWhHREdyMXBhWU95OHVGT1ZUcXY3VzdOVGI4b0o5SGl3VXZqbXFLR243WjJCTC1hUDhMcW9JZlE3RENBTDFrV2hTNXc1TG5QUDIyS0JDVFdINFVpRHBVVDZoRHJQUXBHNTgzY0JWNUVnMWFPdWxLa08yWEtEUTFaTnNCNm9VX3Y3UjJCQnpIQWNlQ196cFp6X0VCNUVqOEtmeUhrRzlfM1JIONIBxAFBVV95cUxNUmlHYU9CdnR3b3liV2ZyVHlVc2VQTWdUSEgxT2FlWTRyQmZNcXZ1RVdoREtaN21OYlNDRVdsVkJhZTBzRFVRSUdPZUZveXhrQlliekdJNEFHSHZHUW51VHJXODBrWW1ibjQ2Yk5Ta0Uzc2pjOUpjRXo1Q1BneUNlMHM3OGhWektwOVZZbUltNGNmLVpwckY5cUc5ZnZRS2JxVWl2ZHppRzZQUVFFZkk5MW5KNk9YTHFHakttZzIwTjNsMGVT?oc=5)
+  - Novanta Monthly Outlook (August 2026) | Price, Target Price ... (https://growthinvesting.net/stock/NasdaqGS-NOVT/profile)
 
-**Step 31 — Research.** The model wanted to know: *"LRCX Lam Research stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 31 — Research.** The model wanted to know: *"LRCX Lam Research stock news August 2026 Oregon lab"* → got 6 results (via ddg)
 
-  - Lam Research starts building a 120,000-square-foot lab for AI chips - Stock Titan (https://news.google.com/rss/articles/CBMivAFBVV95cUxPWWxMZ2YwUVhNeUdCTVdqSFd4Z2lDUjBSeDNpMVY3SE81b0lTNlQ1ZlZsMzNhQjBQbEJmdnppNjJmbXB2SmQyeVc3WkNTRzFNMTVWYWVrbnV4cndMTm9nLWg0eFJtUVhxY05OamhCbjdLbk1BRXZzVHRGMXllUmdXLXFyVnRLWXRZS2k3NUNjcHNobGhKaFljWmdrN191RUtGV29qWVZfbDVMLWQ1dGFuaHYtd3R3OVhLZC1yUQ?oc=5)
+  - LRCX - Lam Research Corp News | Morningstar (https://www.morningstar.com/stocks/xnas/lrcx/news)
 
-  - Applied Materials (AMAT) Beat Estimates and Investors Sold Anyway. Lam Research Corporation (LRCX) Didn’t Have That Problem - Yahoo Finance (https://news.google.com/rss/articles/CBMipAFBVV95cUxQbUdtMThvQUM2UVdURF9vTFFVQzJQM3J1WWZvdHNBbkR0SVl4WXhwZkkxY0FvT2VWTHlIbE9OLTBQSkY1V1NrRDdWY3F6OVNKczVsWGtzZm44d0xIWm5maHpfRGJMaDFhV1NkczB6Rm01b3I1My1wUE1BVjVDM2NjYXR0c3VNVGlRZDFPV05lbHduYjBiRFRjNG1zYTdqYkxyeXNGbA?oc=5)
+  - Lam Research Breaks Ground on New Oregon Lab to Accelerate AI ... (https://www.prnewswire.com/news-releases/lam-research-breaks-ground-on-new-oregon-lab-to-accelerate-ai-era-semiconductor-research--development-locally-globally-302860979.html)
 
-  - Lam Research Corp Stock (LRCX) Moved Down by 4.38% on Aug 24: A Full Analysis - TradingKey (https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZ1AtVWdYcVdrRzdYbDdybENnMGFOYkFsdm9oSmZpQmpia0RYX1paSF9ETnFIVkM3M2hCMWx5QTU2ajhDSnF0VlRWVHl5VGgyNnhVZDZwSWF3NVZBYTZNdFExcks3c3RCdHQtelVqTE1uMDRqZGVyOWV3TWdfdE1IcW9aUXlhVDRYTV9r?oc=5)
+  - Lam Research (LRCX) Stock Latest News - LRCX News Today (https://www.financecharts.com/stocks/LRCX/news)
 
-**Step 32 — Research.** The model wanted to know: *"AMAT Applied Materials stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 32 — Research.** The model wanted to know: *"AMAT Applied Materials stock news August 2026"* → got 6 results (via ddg)
 
-  - Applied Materials (AMAT) Stock Trades At A Discount To Fair Value - simplywall.st (https://news.google.com/rss/articles/CBMi3wFBVV95cUxOeWpfd0xvOHk4VVV3V3M4MEQwYUhuSFBET3BCbTdEZS1lWmxUVm5zUHFBRW04R0RPakRGSGRTbzlsakRNMnFvNUpJWXllamhfalZNLXdOZHdQcHF3cWt5WUstNjFwLVNZWWJXNDVFNVdtZURtc1YyZXdvbXJYSUszUTBtT2hfRXhXeF9nd0Q1eUkyOWdMQVlqVEtfXzlrNjRadGF2eTM5ejg1YlFxamF0UEgxbkpLQnhJYWpDT0x1TEs4ZkNkdkxYX3Z4N0FjUEFLaGJ2Y25OVWZTbm5XZ1dJ0gHfAUFVX3lxTE55al93TG84eThVVXdXczgwRDBhSG5IUERPcEJtN0RlLWVabFRWbnNQcUFFbThHRE9qREZIZFNvOWxqRE0ycW81SklZeWVqaF9qVk0td05kd1BwcXdxa3lZSy02MXAtU1lZYlc0NUU1V21lRG1zVjJld29tclhJSzNRMG1PaF9FeFd4X2d3RDV5STI5Z0xBWWpUS19fOWs2NFp0YXZ5Mzl6ODViUXFqYXRQSDFuSktCeElhakNPTHVMSzhmQ2R2TFhfdng3QWNQQUtoYnZjbk5VZlNubldnV0k?oc=5)
+  - Applied Materials (AMAT) Stock: Wall Street Sees 32% Rally ... (https://blockonomi.com/applied-materials-amat-stock-wall-street-sees-32-rally-despite-34-decline-from-peak/)
 
-  - Applied Materials’ China Problem Is Getting Worse - 24/7 Wall St. (https://news.google.com/rss/articles/CBMilwFBVV95cUxNdmYzaUZLVlA5ZVJfdU1xdzNSeDVsSWVfTVdHTC1fV0VVTWxfcjMzT3BFb1BYeE9ja0E5bkRUR084a0lxaHVWWndxX0dYMl90UG5seW45VUlNWGtEeGVEd3RZQTVhWEo3eG1fTkd2YkRwMzFqUHByQ0Q4RHZGdExlb08yVFhQOUx1ZExZOVUtU3EweFNKbjhr?oc=5)
+  - Applied Materials Guides 30% Semiconductor Equipment Growth ... (https://www.tradingkey.com/analysis/stocks/us-stocks/262098841-applied-materials-amat-q3-earnings-august-13-2026-semiconductor-equipment-ai-tradingkey)
 
-  - Applied Materials (AMAT) Beat Estimates and Investors Sold Anyway. Lam Research Corporation (LRCX) Didn’t Have That Problem - Yahoo Finance (https://news.google.com/rss/articles/CBMipAFBVV95cUxQbUdtMThvQUM2UVdURF9vTFFVQzJQM3J1WWZvdHNBbkR0SVl4WXhwZkkxY0FvT2VWTHlIbE9OLTBQSkY1V1NrRDdWY3F6OVNKczVsWGtzZm44d0xIWm5maHpfRGJMaDFhV1NkczB6Rm01b3I1My1wUE1BVjVDM2NjYXR0c3VNVGlRZDFPV05lbHduYjBiRFRjNG1zYTdqYkxyeXNGbA?oc=5)
+  - Applied Materials, Inc. (AMAT) Q3 2026 Earnings Call Transcript (https://seekingalpha.com/article/4936471-applied-materials-inc-amat-q3-2026-earnings-call-transcript)
 
-**Step 33 — Research.** The model wanted to know: *"ACMR ACM Research stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 33 — Research.** The model wanted to know: *"ACMR ACM Research stock news August 2026"* → got 6 results (via ddg)
 
-  - Nvidia AI Demand Is Lifting Chip Equipment Stocks Like ACM Research and SCREEN Holdings - simplywall.st (https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSkZuclBXUnI2cDJQVHlFZEcyWHpPOGlnSS1vOUhoRTZva1l1OXZ4R19ITGc5LVZyVTBXeE9Lc084X3FCOTFXSlZINjN1UGNKYlo4bzFWR1R6d0l4dmFYRVAxYU5TWHd1RnJHcUJHdXRhRnFHRkJsMThoZDJjQnZwaFZCRU1jTm1adXBTQWV1dkZGQ2pCM25DZTNQSEtGR3JyZW15XzNYVVZSbWxvU3Q4ZmFlemF2VlZmbWpzb3ZWZkh1TXluemRFcHhvakNUa0E0Wk1V0gHYAUFVX3lxTE93RFEyOFpMRDBPZ28wLUJSam50d2Z2UWFQTVJHVzhFY0RRUkhmX0hRcXRrQUFlaXZwU1NsOGgyY29SOHFvM210ZWRKcVpyTDVlcWhRQ1lVejBuUTBUX1JoVW1zNFhEQ0VvbG1BQmlLWGVRdWR1cjU5REhrQWh2QU5NQkwwZnBvWDNFWlJaZFp1Wms2SWM5aVNKZXZsUS12N3dYTGpVN2xkSXI4bVpTdzc4LXdsVW8wQk1yQ2hWa2tGalk2LXd6dUtaSVlVa01uekotVElQMktyaw?oc=5)
+  - How Investors Are Reacting To ACMR’s Upgraded 2026 Revenue ... (https://simplywall.st/stocks/us/semiconductors/nasdaq-acmr/acm-research/news/how-investors-are-reacting-to-acmrs-upgraded-2026-revenue-gu)
 
-  - ACM Research (ACMR) grants options and RSUs to director - Stock Titan (https://news.google.com/rss/articles/CBMirwFBVV95cUxPdzhLSmhYODRtbUkzMlZyOTNMZlJ4eUlPcnJLVGcwbng0aFc3Tl8wdW0tNndaQkxsVDNvNGZrajZNSFk0VWt5b09nbmVHb2ZyeUdTUWpwX3lXUGtlVEJCQmRxVDhPMEtqdE0zUUREbXp3WmpBbHBXaUdnSjRkb0RsYk9WV3dEdURLSHVDcVMycnBnSUJTa2FZcEdJM2p2Y3dMNUtwSUxXdGEzbFIyY0sw?oc=5)
+  - Press Releases - ACM Research, Inc. (https://ir.acmr.com/news-events/press-releases)
 
-  - ACM Research(ACMR.US) Officer Sells US$4.26 Million in Common Stock - Moomoo (https://news.google.com/rss/articles/CBMimgFBVV95cUxQVTJBbHFjMjhTZnlHNWhUMnFjMEVOUEEtcVJ1TlVHTmg0NjlsUzVfSFJ5LTczQUxWaVlGOGtuRXJjREI0VGxLekxsVTg0eHp6R1ViMWNiN1c2WUVQbnJmN1dxQ3NqZFIzcGtsaUtfdEU2MHVFQmo1NmprVVRlWnlEWnQyUEpsX2ttay1DWmVoNnJSUGxPMGRKc0ZR?oc=5)
+  - ACM Research (ACMR) Earnings Date and Reports 2026 - MarketBeat (https://www.marketbeat.com/stocks/NASDAQ/ACMR/earnings/)
 
-**Step 34 — Research.** The model wanted to know: *"KLIC Kulicke Soffa stock news August 2026"* → got 6 results (via ddg)
+**Step 34 — Research.** The model wanted to know: *"KLIC Kulicke Soffa stock news August 2026 CEO"* → got 6 results (via ddg)
 
-  - Kulicke & Soffa Reports Third Quarter 2026 Results - Aug 5, 2026 (https://investor.kns.com/2026-08-05-Kulicke-Soffa-Reports-Third-Quarter-2026-Results)
+  - Kulicke and Soffa Industries, Inc. Appoints Dr. Raj Talluri ... (https://investor.kns.com/2026-08-17-Kulicke-and-Soffa-Industries,-Inc-Appoints-Dr-Raj-Talluri-as-President-and-CEO)
 
-  - Kulicke Soffa Industries Inc (KLIC) 10-Q Quarterly Report ... (https://last10k.com/sec-filings/klic/0000056978-26-000032.htm)
+  - Kulicke & Soffa Names Raj Talluri CEO Sept. 1 | KLIC Stock News (https://www.stocktitan.net/news/KLIC/kulicke-and-soffa-industries-inc-appoints-dr-raj-talluri-as-f9pkw22gsxdo.html)
 
-  - Kulicke and Soffa Industries, Inc. 2026 Q3 - Results ... (https://seekingalpha.com/article/4932441-kulicke-and-soffa-industries-inc-2026-q3-results-earnings-call-presentation)
+  - Kulicke and Soffa Industries, Inc. Appoints Dr. Raj Talluri ... (https://www.advfn.com/stock-market/NASDAQ/KLIC/stock-news/99141232/kulicke-and-soffa-industries-inc-appoints-dr-ra)
 
-**Step 36 — Research.** The model wanted to know: *"NVDA Nvidia stock news August 26 2026 earnings"* → got 6 results (via ddg)
+**Step 36 — Research.** The model wanted to know: *"NVDA Nvidia stock news August 26 2026 earnings"* → got 6 results (via gnews_rss)
 
-  - Nvidia (NVDA) Q2 2027 earnings report: Live updates - CNBC (https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html)
+  - NVIDIA Announces Financial Results for Second Quarter Fiscal 2027 - NVIDIA Newsroom (https://news.google.com/rss/articles/CBMiogFBVV95cUxOcjZPeVV6eC01Z2tWOHlyVEhmMG9uZDgyaXdvVTV3MVVMWGdKVVhJdlNiRHBvejd0UnlSNFJfTFA4dXAxUk9fVi1RQ2h2VU1kd2FkSUoydEJheDVMNWRnYUdMa2RFcG8zcTROTl9ZX1lJQ0tRU1VZR2pkQjFRdEtkM0tpUUlOcXhsYTFGcGY5RHFQYWZyNkh6LXVCSmN0Y1J3WWc?oc=5)
 
-  - Stock Market News, Aug. 26, 2026: Nvidia Shares Climb ... (https://www.wsj.com/livecoverage/nvidia-earnings-stock-market-today-08-26-2026)
+  - Nvidia: What We Think of the Stock After Earnings - Morningstar (https://news.google.com/rss/articles/CBMijgFBVV95cUxQM3ZkbHhTRlhjekFtYkd3WEIwd3lMb3pFNXZVSmZWb21lazBvMEtFV0c4ck0tTllqZmhFX3ZsVzl1WnNnVjUtVzRfbkxBdmNwZTN6eTZDU3JKTnZpNkZVRGRDdFRYSUVLUjJtbXFOOEd5QWh3SERJRGpQZmY0RWhKMXpaZlEydkdlYVo4TjRn?oc=5)
 
-  - Nvidia (NVDA) Earnings Live: Updates on Q2 2026 Results From ... (https://www.bloomberg.com/news/live-blog/2026-08-26/nvidia-second-quarter-earnings)
+  - Nvidia doubles its sales, but investors have their eye on the future - CNN (https://news.google.com/rss/articles/CBMiYEFVX3lxTE8wVzBxZlZucnRDOWlKZlJJd3ZlcFRyT2IwSWs4b25MdWNvRFo4ZXBSU0NUeXNVS0lCWXpzTW0yQ3d6RW84NUVNdVdzWGh1RlFKcVYwVE1sOC1Kd1U3cEliTw?oc=5)
 
 **Step 37 — Research.** The model wanted to know: *"AVGO Broadcom stock news August 2026"* → got 6 results (via ddg)
 
@@ -250,57 +250,57 @@
 
   - Silicon Labs Reports Second Quarter 2026 Results - PR Newswire (https://news.google.com/rss/articles/CBMipwFBVV95cUxOX1B4OWN6aExMSGZrZzU0ZnNMWkZSdXJkVHVLN0NaQVhKWXJzUG43Qm1NMml2MzQ1T2lsNnpRaFFSLXJWNFIzWERmU1lxeDhkNWNKa2JrNFFPYm9yQ19WdWtuZVIzTjdEVkRuV2NvVi0yWUthRUcyVTF1bmdVdUdfVndRUFpaNUVhN0ZsbEFOU2x1Qi16U2hYUjJySnRpdTdfMGk0V0VqNA?oc=5)
 
+  - Is Silicon Laboratories (SLAB) Undervalued Following Earnings And Its BG2B Launch? - Yahoo Finance (https://news.google.com/rss/articles/CBMisgFBVV95cUxPcnBjUzd4OWROZ3V4RS14dnV6bkdIRkhscFplcC1xaU03WC1wLVlLOTJmdTF1Ni0wNXViSFlmVENuVV9VSEpockphYjBaSm1tUHR3bGVFcjFUamN3OXg5elgzWW10VDZHYjMxX2NNVklBQ1BKdHNsVnhjczZzUFBxUHNsTzEtV1hweG5od0tvdDBJbEJmWi1KQkFtdkZjanJOSVpzY29iTkRRZWVmXzBxNHZB?oc=5)
+
   - Silicon Labs (SLAB) Stock Carries A Premium As Losses Persist - simplywall.st (https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSkFTOHk2aklvT3JKaC1CNDA5dzEwV1J1X1hIVndHX3l3UWl1M3RFZjVsLXZSZm1CNUpEYVdVc2tWSDJtWC1RWDZBZE9OX2dNZTNNWVF5TVlZZGQtYlV6b2owbHZtbjhpWTY0V0lOMjVRczFZRkdzMGgzWi1leVl4M295bkNuRi00T3BTRFI4LVB4RUZoRTczRVhNeXlVbXBuSEk3c0pXNnJrdUFRX1JPZTZXd1dOeVU1M3F2QnBaSjVyYkk4MFNaSks5UGFwSFI2SWFzSWlhRlpVUERO0gHiAUFVX3lxTFBzdXNmUS1VTk5EMG5CcVRtVERVbzl1LVpsRGk1RkZpWFJOYTQxTWwzMU5pbkpPQlBwaE84czJ2RDN0b1lZbjVteUN5NVBPN3V2aE1FOVg1Y3lNLW9meXdwVThSZWY0b1YzUDY0LVRXUGZKOG1lb2tiamxwSkFKYzZXNEZjS3BFZm9MRGpILW9VUkNFTUpmMDBnN3RkdjlNTHdqRkJEdWJrZXpzclk2MTVWcWh0bmpWWWtuU3NVRjdTYVZPakV0dXUteWJvYWNXQVhUNEVRdHdpbWZqVGc1MXo5U2c?oc=5)
 
-  - Silicon Laboratories (SLAB) Beats Q2 Earnings Estimates - Yahoo Finance (https://news.google.com/rss/articles/CBMioAFBVV95cUxNSmlvUzlDME9RTzlGRmNjczY5R2xyUHIxU24wSDRXY2hheTQ4OTBLQ1VJbmJqTjNuOXlPYzlldXJUMldRdVV4T3RlTlJRNjFHQ245c2E0VVRqaXBNazdnUVpzcHoyUUpfbm9hamtTYWFRZUJsZ1A5blJDU19aWVNxMUZ4TVhlQU5xUXp4RHliQVp3T2RiSGZSUU5aQTExQnFG?oc=5)
+**Step 39 — Research.** The model wanted to know: *"MXL MaxLinear stock news August 2026"* → got 6 results (via ddg)
 
-**Step 39 — Research.** The model wanted to know: *"MXL MaxLinear stock news August 2026"* → got 6 results (via gnews_rss)
+  - News / Events :: MaxLinear, Inc. (MXL) (https://investors.maxlinear.com/news-events)
 
-  - Here's Why MaxLinear (MXL) Is a Great 'Buy the Bottom' Stock Now - Zacks Investment Research (https://news.google.com/rss/articles/CBMiogFBVV95cUxQdjhVcEpZcG42RWFtaGUxcjhKWnlPWmx5dTY4SDlVYmc2eUhkNkhRbktXS3lTUkk1WGtZRU9mbTlLRmhka3gtYXZsbVAwcmwzcGFRV0RWTEJlZ0tMc0kxdDJUZDBlOGVEUWVpMTdXT1NZREdSbk83NEpIMmJwaG41V3ZhSk9qdHVRNllGNG9uNUpqcXpmN2UteUVyVzB6UFZndVE?oc=5)
+  - MaxLinear, Inc. (MXL) (https://investors.maxlinear.com/)
 
-  - MaxLinear storage accelerator demonstrated ~39x faster OpenZFS writes - Stock Titan (https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWkJ3NFFKeDdhMTEtWUxqYm92THJkbDJpdTVXOUtWenJzTm5HUnprSFFvcmtJVFJmTWVlcVEtUDROdGRZcTdjMy03QjNBcW9EOTFKanAzWVk3YXdGWkZTSWY5djVxb2JUMXRMcnE4TGo4XzVKNUdTVWlLNWgzVnBmNkZVYVFvSHRvVzMtUUYtX0Ixd045LXJXSy1TX3RXOUYtY0xVaXBzdEQxOFFkV1V6V2JZeWY5YWJDVW9V?oc=5)
-
-  - MaxLinear (MXL) Jumps 5.3% to $78.30 - AlphaStreet (https://news.google.com/rss/articles/CBMib0FVX3lxTE9ZTE9PS0RHQlVhSERHcHMtUVZrdlFOaVlnM3I3T2hNSk40RERkZVpiQXUtQXlGX052RHFHcF9Qekk0WGZkZHI3OGE3NGRfc0x1ckxsLWZaS0hEUXZOeWdocVhMMTFEUHBDOVd1VmVvb9IBb0FVX3lxTE9ZTE9PS0RHQlVhSERHcHMtUVZrdlFOaVlnM3I3T2hNSk40RERkZVpiQXUtQXlGX052RHFHcF9Qekk0WGZkZHI3OGE3NGRfc0x1ckxsLWZaS0hEUXZOeWdocVhMMTFEUHBDOVd1VmVvbw?oc=5)
+  - MXL Press Releases Maxlinear - marketchameleon.com (https://marketchameleon.com/Overview/MXL/PressReleases/)
 
 **Step 41 — Research.** The model wanted to know: *"CRM Salesforce stock news August 2026"* → got 6 results (via ddg)
 
   - Salesforce.com, Inc. - Salesforce Delivers Record Second ... (https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx)
 
-  - Analyst Upgrades Keep Failing Salesforce: August 26 Earnings ... (https://www.techtimes.com/articles/325013/20260819/analyst-upgrades-keep-failing-salesforce-august-26-earnings-data-all-that-remains.htm)
+  - Salesforce (CRM) Q2 earnings report 2027 - CNBC (https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html)
 
   - Salesforce (CRM) Q2 Earnings and Revenues Top Estimates (https://www.zacks.com/stock/news/2980637/salesforce-crm-q2-earnings-and-revenues-top-estimates)
 
-**Step 42 — Research.** The model wanted to know: *"UBER stock news August 2026"* → got 6 results (via ddg)
+**Step 42 — Research.** The model wanted to know: *"UBER stock news August 2026 Taiwan"* → got 6 results (via ddg)
 
-  - Uber (UBER) Q2 2026 earnings - CNBC (https://www.cnbc.com/2026/08/05/uber-stock-q2-2026-earnings.html)
+  - 【Uber Technologies 2026年Q2法說會】Uber總預訂量飆升22%遠超財測，... (https://finance.biggo.com.tw/news/US_UBER_2026-08-05)
 
-  - Dara Khosrowshahi Just Delivered Fantastic News for Uber ... (https://www.fool.com/investing/2026/08/15/dara-khosrowshahi-just-delivered-fantastic-news-fo/)
+  - Uber completes coverage on Taiwan’s main island | Taiwan News ... (https://www.taiwannews.com.tw/en/news/6428440)
 
-  - Uber Stock Slips As Legal, Regulatory And M&A Risks Pile Up (https://www.timothysykes.com/news/uber-technologies-inc-uber-news-2026_08_05/)
+  - Uber 財測失色、股價摔 擬擴大布局自駕計程車 | TechNews 科技新報 (https://finance.technews.tw/2026/08/06/uber-announces-results-for-second-quarter-2026/)
 
 **Step 43 — Research.** The model wanted to know: *"FROG JFrog stock news August 2026"* → got 6 results (via ddg)
 
   - JFrog (FROG) Unveils SwampUP 2026 Speakers, Is The Stock ... (https://simplywall.st/stocks/us/software/nasdaq-frog/jfrog/news/jfrog-frog-unveils-swampup-2026-speakers-is-the-stock-still)
 
-  - FROG News Today | Why did JFrog stock go up today? $FROG (https://www.marketbeat.com/stocks/NASDAQ/FROG/news/)
+  - FROG Technical Analysis, Signals & Chart | JFrog ... (https://swingtradebot.com/equities/FROG)
 
-  - Jfrog Stock Price Forecast. Should You Buy FROG?Jfrog Ltd. - NewsDid JFrog's (FROG) AI‑Security swampUP 2026 Agenda Just ...FROG Technical Analysis, Signals & Chart | JFrog ...FinancialContent - Why JFrog (FROG) Stock Is Trading Up Today (https://stockinvest.us/stock/FROG)
+  - Did JFrog's (FROG) AI‑Security swampUP 2026 Agenda Just ... (https://simplywall.st/stocks/us/software/nasdaq-frog/jfrog/news/did-jfrogs-frog-aisecurity-swampup-2026-agenda-just-reframe)
 
-**Step 44 — Research.** The model wanted to know: *"IDCC InterDigital stock news August 2026"* → got 6 results (via ddg)
+**Step 44 — Research.** The model wanted to know: *"IDCC InterDigital stock news August 2026"* → got 6 results (via gnews_rss)
 
-  - InterDigital (IDCC) Stock Latest News - IDCC News Today (https://www.financecharts.com/stocks/IDCC/news)
+  - Wall Street Analysts See a 26.24% Upside in InterDigital (IDCC): Can the Stock Really Move This High? - Zacks Investment Research (https://news.google.com/rss/articles/CBMi0gFBVV95cUxOX3p5TUJoZ0ZCSHpjZEgyTjNRTUtQVXNqZi1MMkFocDFwRms4VmhFQUVuekEwSUF3MHI4MGFmMjMxMlhBNWg2Ty1wNW5wWGVCQk9fU3c0WFJjd3I1WVVwMXprYkctZ2RxQUNoZ082cmVEb0x1OW9uX3dzMkVOZ3lkNlljSlNMVE1nSkdlVW1JX2FzSzVXOEs3Ukc3MEVhYUFsN3FQdFJTYU9pSFRWQ3JadW5teGpHU1ZXLThLR1QzWHM1VDh1SnU3bW16TlEzWllfZlE?oc=5)
 
-  - InterDigital Stock Climbs 26% On A 8-Day Winning Streak (https://www.trefis.com/stock/idcc/articles/610192/interdigital-stock-climbs-26-on-a-8-day-winning-streak/2026-08-05)
+  - InterDigital (IDCC) After Raised 2026 Guidance Is The Stock Still Undervalued - simplywall.st (https://news.google.com/rss/articles/CBMiywFBVV95cUxOanJ2cWtqdjd1bWNibEVublpQUmptUVA2NDJtUFRCSll0YWdiU2JhbkFwMEcxbWlIWlo4Xy1sZE9XYWZIcThSMjdqd3ZBWEJwanhUTE1jbzVJVHFObzlvSndVU1p5dlV0TkdHdlhDTDBHUEY5RFNEbHNwNnowaVVMa3VNYUdQRWxIWXVoSlNsZWtXLWc4VVctbVBLXzFDMHpzT1JHYzNIQ1VoYlpaT3ZscEl0OUxEZUxGazJnbEhEaGpfNW0tYlRRQUVqY9IB0AFBVV95cUxOSERtLWZLQ2V4RFo2clZXM1BYSG9YdEZRUkRxWnhMOWpoRXlsZ1hZQXk3eURYYkhlQTlQRmNtelQyamtTSHB3Nk5KWGdjaGQzSEdiamJ1djIyMVB4VjlYcmdkZ1pvWEVFS0pVTjk4alQtSS0tN21QbC1GaTNTSHM0NUdGQVR5N1hsS2dEU014MnpGcUt2eGZqTUdKYmVRMVdRR0lZb2pZR2k5ZS1PdHhPb2k3cnVZUzROVlVabThzNWV5MVJ6T0RhS1E3THNaN0Ex?oc=5)
 
-  - IDCC Press Releases Interdigital - marketchameleon.com (https://marketchameleon.com/Overview/IDCC/PressReleases/)
+  - InterDigital to pay $0.70 per share dividend on July 22 - Stock Titan (https://news.google.com/rss/articles/CBMiogFBVV95cUxOMXVQWk1XZVJadExYTlJ6S2k2Yk50TU1iVnNjOFNhUkxmZTNvNHBDTnJqalpUbHFtcElId0NPRWtRR1pjR2lpX0Rsb1VTWjd3QUhZTVZRdkVIa1ZoY0E1dmJqY1FncHNwLTV4QWZIbk9Yc1NCRm95Y1JDOVNneERQRHlFSDhZZXVpRHlYZkpqWDJUWnFjbmNncTJWTnBLbXBteUE?oc=5)
 
-**Step 46 — Research.** The model wanted to know: *"MSFT Microsoft stock news August 2026"* → got 6 results (via ddg)
+**Step 46 — Research.** The model wanted to know: *"MSFT Microsoft stock news August 2026"* → got 6 results (via gnews_rss)
 
-  - MSFT Stock Price Today (August 2026) — Microsoft Corporation ... (https://tickzen.app/stocks/msft/overview)
+  - Microsoft Stock Leads 3 AI Infrastructure Picks Retail Investors Are Watching - simplywall.st (https://news.google.com/rss/articles/CBMixwFBVV95cUxPS01xVl93dWZOaDZ2dmxvcmdwVWplVFoxUnFQR3dyVF82aUQ1YzlKYkFrUUF6TDZOUjB6NkRfOHB3bGFtNU12RHRqYUJMWF9tUEdkcDBiMUtGekNmcnR4LXdMUkZlTW1CMU1oRHRoU2xEU3BTUi1MOHNQQ0VXUHBPY1g1MUxmbEdocWRCQ0dZekp3MmRMTHh1M2ZOVGNKSUQ4QmN1UkUxekF1ZjZLMEhrRjRrYkljakhWZmtqajZxS3FlR2dVbEhV0gHMAUFVX3lxTE9UekFvNDV0NG5DLWVuSTBBQ05pTjVRT2N5S1VwcE9BMF9PeEhheHR5dTlCODRKOHZRNklLd2oxNjFKZWxNeDZDMW1venJUWUZpeVN0ajN6WFVHRTNFOExmZlRvOFdVNGx3WXgtc3ZLeFc0b001eERMZTdabGlmQW1VRFFKVlpGVTlpaW1QU2h5bmdSQmNnMFBvNTVkYTdwaml0VFg3Sm1YY2dSUGo5QXN2cmhVTEhQTWpfQ25nbU93X3lZdkN1RjIxaWdYTg?oc=5)
 
-  - Microsoft Stock Quote: MSFT Stock News, Quotes, Analysis ... (https://research.investors.com/stock-quotes/nasdaq-microsoft-msft.htm)
+  - Microsoft Just Ripped 28% in a Month. What Would It Take to Get MSFT Stock Up to $600? - 24/7 Wall St. (https://news.google.com/rss/articles/CBMixAFBVV95cUxNZDVfQV9ZaDF1UnBrYnJtdGNXRVBORHc1bzNZSE5EdGZjVDBJbTNkVlVQZ04zeEFnOVd5clRHQmNfSG41TUZUemFfcnhEUUJTTE1wRnA4TUVOY0dLMnJucWZiR0kzanJQSlQ3Q05BcTUxSWtIcFkwbXFPd2hFN1VOZTBXWUl3QWhlRk01U1F1Mlh1ck5yTXF4RDVJMjlMQ2FZQXZsT05QU3RuMExaRjF1eTgyQ3dDWm5nb1lZZVBDQTFfRkM2?oc=5)
 
-  - Microsoft Just Ripped 28% in a Month. What Would It Take to ... (https://247wallst.com/investing/2026/08/25/microsoft-just-ripped-28-in-a-month-what-would-it-take-to-get-msft-stock-up-to-600/)
+  - Microsoft Stock And 2 AI Infrastructure Picks For Data Center Growth - simplywall.st (https://news.google.com/rss/articles/CBMixwFBVV95cUxQNUtELXVUTHRpLWlfZ1hBQWhfak8tMU5xcHNKSmczakQtWGlfbi1BdkgwY2xlN2JnR05SaUt3VmxWMUp6ZldfRHNrMmxGT1pJRzAtSHM1dFBnZFNwVXIxOUt0aW00S0pyNkk1RzdIN1V1cmtKS1lkVFhvelZQMUY3V25pUl9wZHNWRjNHRUVHaFJRNktsNzFUSURLcW1nRkFadzk5bmtFQ1BXVHdYNUlweG5OMHg0bjdUckxhT2lEQ085aVFRZk9V0gHMAUFVX3lxTE9wbHdzcGMybGwtSXNCZmFsWFhoeWxjeEUzMGNDeVZPeXlRZ19OVUNBZHZ4NWdIQklNaE1LOEthaktpVlpVeExhU0Z2SjdpQUJ6c2tZcldXcTZEUEFqOEVDUnZyamFQOFNPOVBvWHp3SHh0aVB3N19YdmNoMzRwQUM0MVZaRUVaV2x2UlpURl9sbFFoTlhTZHlwNGdRb29HdFpseEZ2dFRVUTVrdTVyeGtJbUExN3Z3WGIySVhzT1p1TTNPdktVR2FRU0ctUQ?oc=5)
 
 **Step 47 — Research.** The model wanted to know: *"ORCL Oracle stock news August 2026"* → got 6 results (via ddg)
 
@@ -308,22 +308,22 @@
 
   - Oracle - Investor Relations (https://investor.oracle.com/home/default.aspx)
 
-  - Oracle (ORCL) Stock Forecast: $638B Backlog, Down 28% YTD, Up ... (https://www.tradingkey.com/analysis/stocks/us-stocks/262073122-oracle-orcl-stock-forecast-august-4-2026-638b-backlog-recovery-google-tradingkey)
+  - Oracle - Stock information (https://investor.oracle.com/stock-information/default.aspx)
 
-**Step 48 — Research.** The model wanted to know: *"ZETA Zeta Global stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 48 — Research.** The model wanted to know: *"ZETA Zeta Global stock news August 2026"* → got 6 results (via ddg)
 
-  - Zeta Global schedules two investor conferences for September - Stock Titan (https://news.google.com/rss/articles/CBMipAFBVV95cUxNTVJXdmlIOVV6Qzh2UmRFS2hwOFdkMGkwSjdmVTFfSngtd2dRdE1aVDZtb3RnbEdvOXg5ZEJUVTl5QXZOLWNNWm5uTzhVY2pwWEdNQ051d1JBS19HVFdqWmhCZ3NmcDZSSXFlUnJadEdGRURUdWh1NXNhS0RNcjI1WGRETzZENGg3M2VJcFFodkxVaHlqblBITEFKbDBEOVBMdjVxSQ?oc=5)
+  - Zeta Global - News (https://investors.zetaglobal.com/news/default.aspx)
 
-  - 3 Stocks Retail Investors Are Watching In Bank Merger Software - simplywall.st (https://news.google.com/rss/articles/CBMi0wFBVV95cUxPeTcySlpMZkxlc2ZOZzVjVTZzdlpVUUxGbkdoODFDdllOV0xmUVU1bE1mTVdWODlUTXQxLTJIeTJjRHVudjdEbml0Und4RUFWUGNPNEh3WFNWbjRMZUhmbHZpT3k0OUdSdjdMN2E4WG9jSUFNUUlRN3Y2bGZFbGVSMktMOTVxMXFGVkZxb0dtTG00RkJFeGR1alllNDRVVFd1dDJRSGo3SkREbW4wOFd0c2VweFRxUl9RbVhwaTRERlppUlRvZEpPTEtKVTRUMVppV2Mw0gHYAUFVX3lxTE15TWl4Z1dGNlhQSWUzWm45REVjbkNCN2ptZkh1X3B5cWY1SW9DTms5RHJoQUk0bGR4UmpjOTBKNkZlREpkbm5Hb1dFanlaS3JlanhyRGN3WXpQR0VURHMxQnpkcFlyajF6OHNXOHN3djVCTHJJUldsVVdnTkNncEI1SE1XX0lvS0YzTG9yZ1NWTEpfQzlIOUZlZXRTc3pLUzVkdlFsaXRrcFZ5RUpFSGh1YV8yR1ljelM2NE5DY2ZSUWZSUmNLcXBjNWdKekdLWDNJbHNXSTVuNA?oc=5)
+  - Zeta Global Q2 2026 Earnings Set for Aug. 4 | ZETA Stock News (https://www.stocktitan.net/news/ZETA/zeta-global-to-announce-second-quarter-2026-results-on-august-4-n3v6irv1rxdz.html)
 
-  - Zeta Global Holdings (ZETA) Refreshes Its Leadership Team With Two Senior Roles - Yahoo Finance (https://news.google.com/rss/articles/CBMiogFBVV95cUxPU3hzS2EwZm4wUVozdXVrd2k5TFQ3SmNFYWVMS3FoQmZoYVFDcEdBdFp4dmV3Rk43WGJuX3NLZHExamNIWVZ3NlJhczB6U05SR0hPSWxMZVZ3bms1TGVDei12NFpMNEs0NlFrN3c4WWRocGdfRWZmdEFlQUExQjZNWXgwYk1kZlVtYVlHaTR3RGtJS1hud0VJZ1I5NG54M3J0RHc?oc=5)
+  - Zeta Global - Zeta Global Reports 20th Consecutive “Beat and ... (https://investors.zetaglobal.com/news/news-details/2026/Zeta-Global-Reports-20th-Consecutive-Beat-and-Raise-Quarter-Achieves-the-Rule-of-64-and-Generates-Positive-GAAP-Net-Income-in-2Q26/default.aspx)
 
-**Step 49 — Research.** The model wanted to know: *"QLYS Qualys stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 49 — Research.** The model wanted to know: *"QLYS Qualys stock news August 2026"* → got 6 results (via ddg)
 
-  - Qualys (QLYS) Stock Looks Reasonable On Its 67% Five Year Run - simplywall.st (https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQU82azFaOFdDRGw5OGxMQzJrSzljZUc0U2lQVFBCUVZMMzNncmxSYVNRQ3VNcUFPUjk5T3pQN1JYY1UteDR3bmJabHZVM0JxTzA5amJJUkxHTVNsSmtNaGdhZVNETDRoYUh6X3hMTjhlT01Ec3E0VVk4SFdTOUw3OGpIT2l4bmxPUERBUHVOamhabWVHR2w3czE3NzZZOVBzRnVHdUNKYUxUM2RIWTBiTmx6LWJUN3BiZmpLWmk1VGPSAcYBQVVfeXFMTzVKZEx0ZDlxUHVzd2tGXzNrb1lhY3cydEh0ZmRhSk14QmRqWE1uTm95NldEdUd3eElRdUJlMG9fN2NYekhCVWdhM2NYMm9TdjlpcEJNMERpRFZSRkVZVGQ3UWg5TElUaHM3Qm55dWNFS2hyZ2JtM1pBc0NIb3c1SXowZ0VrMzIyRENrUE96RzJ4UTNsLVhkcE52aWVDMENRNklnS0gzSzNvVFBocEMtZXpIZl9hMjZkc1NZRGkwdW8tSWM3U3Z3?oc=5)
+  - Qualys Announces Second Quarter 2026 Financial Results (https://www.qualys.com/company/newsroom/news-releases/usa/2026-08-04-qualys-announces-second-quarter-2026-financial-results)
 
-  - Qualys to Report Second Quarter 2026 Financial Results on August 4, 2026 - Yahoo Finance (https://news.google.com/rss/articles/CBMinwFBVV95cUxQQ1czMTM5UVRDRV9FMzdfaUR1aVBCaW1Kc3o2Z0xCdHpiZksyUkVLYzBlN3JPR2t3cHNkUHV3RTYzbkZVRjZNNURDVUh4dFJuVlZGTUhhclloU1pWWUJDT05GSGFGVDlWVzdOSVJwWFZvcUpPZ0l4Y010aFNmQUdDckNGREVWSlNxeGRDSU1xNS11d1hsVExJS2lYbkpOUTQ?oc=5)
+  - Qualys (QLYS) Soars As Earnings Beat And AI Security Push ... (https://stockstotrade.com/news/qualys-inc-qlys-news-2026_08_05/)
 
-  - 2 Profitable Stocks Worth Investigating and 1 We Brush Off - FinancialContent (https://news.google.com/rss/articles/CBMivAFBVV95cUxONlh4ajhLZkFwNTNxYXZqaWYxSDNxUzBZNXNuOHpSWnFEYkl3cHdBMFBEVjR4TzhKcnYwcnRiS2RLdmVEUjFGOEpqQjMtM1J2UDJmR21QYkNxazdXVGFmb0doSXdmQTZoa09JLVBDQXVTSlpfeDdkcjZzNzljaUJEbFZDRmtHUkQ0YmpkT2hjVks0Mzg3RlhxcFd6LUFMQlJBX1ZtbHQwcWpESnpzRnQzekJjOWdUR3hqODlEeg?oc=5)
+  - Qualys Q2 2026 Earnings Report Set for Aug. 4 | QLYS Stock News (https://www.stocktitan.net/news/QLYS/qualys-to-report-second-quarter-2026-financial-results-on-august-4-5dnjcnhj7f28.html)
 
 **Step 51 — Search budget exhausted.** Forced to conclude with what it already gathered.

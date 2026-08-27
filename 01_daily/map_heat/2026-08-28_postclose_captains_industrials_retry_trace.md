@@ -14,119 +14,111 @@
 
   - GE Aerospace Stock And 2 Defense Picks For Energy Sensitive Inflation - simplywall.st (https://news.google.com/rss/articles/CBMixgFBVV95cUxNR0wxS0ZnQ2prRWtfS2N2Sy1NV1l6VXE2R2gzY0hyZm9NZ3k3WnZMeUNTSDB6aEU2T1dCSFVTM0RmLS1WY2QwWUt0VTdNRm9uemh5MXVaYTFRZ01LV0pRb2tsNXY2bm56dEl4TUhXcXUzNmJFRWZZN0RRSmduVC1ZakFBOTdTVzhrUG1NdlRkYU5QSW1fWUVlYTlnYkFOOUQ0dUFJU01UdUlITkRORHNTQWlGQTdYb3o1MElBSXNWV0RsQWRIX0HSAcsBQVVfeXFMUDU5VUI3TVM5Y0ZOT0s0NnVCVTl1NUNYSjlCX1hfUW1NVDRPaXZFa2doWDdtX25KT0NUOG5GRmdLRk5YaXVpSFcwMkxKeTlRS2pvWGVXdGdyRWJBOWJWblNzek5wdFFOUGg2XzREWFNwWVdmanQxTktfVXRCSGpzYmRlSGIyZWhSY1BLcy0wMzRvUjlUUWV5ZV9KSW9qMGFxM0NDbndXSElyT2JZTUMwa3BWVnBpaUxMZEdkMkZ1SG9IMjFSOGRpdFkwZGs?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"RTX stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"RTX Raytheon news August 2026"* → got 6 results (via ddg)
 
-  - After more than 20 years at RTX, Chris Boynton will become Karman's CFO - Stock Titan (https://news.google.com/rss/articles/CBMinAFBVV95cUxQaHdoeE9HakQyTUk2NHZOajBYU0dhaHAwdWFudzlCczgxOHRTSUp1VHYyVG1DZDVhRVNydmRiWFN6M0NDVXQ3cWZFQXY0aE9zX0wyN0xPbzQ1eUlFVTVxZHZwSjRHcm5RYkJjNHNRLUk1V0UzUFJIYldva3ZwSjBXVnRnVHVfQkF6amZmcmFtOWp6al93MVE4RVYtTTA?oc=5)
+  - News | Raytheon - RTX (https://www.rtx.com/raytheon/news)
 
-  - Which Aerospace and Defense Stock Has Dominated in 2026: GE Aerospace, Boeing, or RTX? - 24/7 Wall St. (https://news.google.com/rss/articles/CBMixAFBVV95cUxNRzBBbUhRam55Y3hxLVAyVjh6aDJQUi1yVWlTTFdaQlBqb05oZW53VVJIc3BOX3R6a0tBOE9GLXBDSWxVdDJHUGNmTkdPcllrSEZKQjJORU1LcW5yeGNNYXpYRDNweURnNVlwZFpTRHVtQ3NUbnlmcWNjbmUxY0J4dEdJZHZKRG1JVC1peFc1bG5VeUR4aGk3Ykl3WXJ3ajNFTXZmVGJKazEwVURuUHQ4VmVDQmtCZzFJRUltNy1odVBnRTAw?oc=5)
+  - News | RTX's Raytheon and Composite Energy Technology ... (https://www.rtx.com/news/news-center/2026/08/10/rtxs-raytheon-and-composite-energy-technology-successfully-demonstrate-new-unman)
 
-  - RTX (RTX) Stock Could Be 9% Undervalued On Tomahawk Contract Win - simplywall.st (https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYkVUVmRYZEZEN1ZYaTNfNFl6TzFIVW5YdzNsZ3RvbEtWV0VDN2FPakpZdVgxd1FLZzZUR3FMeWNkbi1kOUo4NjZtak1xX0NfaTdNakdmMElldnRoMGl1QWNQOExpU1NxSHhuMWk0ajY4UXJudnJkVnJHTHhYR2lIQ1E2OE5VMnhkRXljNGlmNXZJNmlSSjVCeVlXM1hISjd2QTFxM0dHN25IV2RjQ0w0Sm1sLUFqLWtjc0dpeFhRd2xYZ9IBxwFBVV95cUxQb09OMXZBY2JqMy1hOFh0V3c1ZlBiVllCSzdJNURaeVd0Zk94Wjc2bkNrRUFFbXFXRkh0NWs2X1BHYlJMUW1EdFduQWlkMzVUcjdPN0ZJM1Y4dEVhdG5KbEhsWjBTVC03bTJVZnNlMVdjVV9JSGZsZnZCYldmVG84QTlOQTdaQXlwV0VUWENuUWRWcE5rWVJfQU5sVmNpQnR5a255ZWxhVUlMVkxBa1IxRUhDbG4tVkZ4aGZybUx3WU1BUEx3Z3ZV?oc=5)
+  - Raytheon News Monitoring Service & Press Release Distribution ... (https://military.einnews.com/news/raytheon-company)
 
-**Step 3 — Research.** The model wanted to know: *"Moog MOG-A stock news August 2026"* → got 6 results (via ddg)
+**Step 3 — Research.** The model wanted to know: *"Moog MOG-A news August 2026"* → got 6 results (via ddg)
 
-  - MOG.A - Moog Inc. (NYSE) - Share Price and News - FintelMoog (MOG.A) Stock Price Drops As One Off Gains Cloud Profit ...Moog Posts Record Quarter and Raises 2026 GuidanceAll News for MOG.A : Moog - Zacks.comMOG.A - Moog Inc Class A News | MorningstarMoog Inc. (MOG.A) Stock Financials, Chart, Sentiment & ProfileMoog Inc. (MOG.A) Stock Price & Overview (https://fintel.io/s/us/mog.a)
+  - Company News from Moog | Press, Events & Media (https://www.moog.com/news.html)
 
-  - Moog (MOG.A) Stock Price Drops As One Off Gains Cloud Profit ... (https://simplywall.st/stocks/us/capital-goods/nyse-mog.a/moog/news/moog-moga-stock-price-drops-as-one-off-gains-cloud-profit-st)
+  - MOG.A - Moog Inc Class A News | Morningstar (https://www.morningstar.com/stocks/xnys/mog.a/news)
 
-  - Moog Posts Record Quarter and Raises 2026 Guidance (https://www.tipranks.com/news/company-announcements/moog-posts-record-quarter-and-raises-2026-guidance)
+  - All News for MOG.A : Moog - Zacks.com (https://www.zacks.com/stock/research/MOG.A/all-news)
 
-**Step 4 — Research.** The model wanted to know: *"VSE Corporation VSEC stock news August 2026"* → got 6 results (via ddg)
+**Step 4 — Research.** The model wanted to know: *"VSE Corporation VSEC news August 2026"* → got 6 results (via ddg)
 
   - VSE Corporation (VSEC) (https://ir.vsecorp.com/)
 
-  - VSEC Press Releases Vse - marketchameleon.com (https://marketchameleon.com/Overview/VSEC/PressReleases/)
+  - VSE Corporation Announces August 2026 Investor Conference ... (https://ir.vsecorp.com/news/press-releases/detail/415/vse-corporation-announces-august-2026-investor-conference)
 
-  - Press Releases :: VSE Corporation (VSEC) (https://ir.vsecorp.com/news/press-releases)
+  - VSE Corporation Announces August 2026 Investor Conference ... (https://www.advfn.com/stock-market/NASDAQ/VSEC/stock-news/99118802/vse-corporation-announces-august-2026-investor-con)
 
-**Step 6 — Research.** The model wanted to know: *"Delta DAL United UAL airline stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 6 — Research.** The model wanted to know: *"Delta DAL United UAL airline news August 2026"* → got 6 results (via ddg)
 
-  - Delta Air Lines and United Airlines to resume flights to Israel (DAL:NYSE) - Seeking Alpha (https://news.google.com/rss/articles/CBMiowFBVV95cUxNWVQ0Z2x4ckFhWVdKd21Rc2J0N2dJSGpSQ3FRczVzOUZVOVllMEJuWF9xR3VDRjJFUkxTT1Atc3FtUm5lb2E4M21GaGVybWxGckpsdUlJdG00TEZEOVNPTzc1MnozV1EweWtUYy1iWHFXQkVZVkJvUGNrMFUwbkVNWjdoYlptX2dDLWpaNk5EN2Y1S3Q3V0RLQUstbHdEUFdYZWpj?oc=5)
+  - United Airlines explored merger with Delta before talks ended ... (https://seekingalpha.com/news/4618501-united-airlines-explored-merger-with-delta-before-talks-ended-wsj)
 
-  - Which Airline Stock Is Dominating in 2026: United, American, or Delta? - 24/7 Wall St. (https://news.google.com/rss/articles/CBMirwFBVV95cUxNb1JCaXhrNi1hNXMta2MyZVBZWXdfZ1ZMbXl4Vmdjc0xqVmwtbEJlTzBqdU9SVEpYS1V0SldrZkxWclZQeHFoSUV4ZUs0NnZHel9CNTFIY1VOeWZzaEdGR2hiRmpoLUtoeEUxZnAyU1h5UWJfUDVYcUowVW5oZm81aEZZdDdqMk0zS1lYcS04NGcyRGEyOG1acTVTVzZzdDIxN2VVS2QxRE1XWERPY1hr?oc=5)
+  - Delta Air Lines, Inc. - Home (https://ir.delta.com/home/default.aspx)
 
-  - United Airlines Holdings Inc. (UAL) Wanted to Merge With Delta Air Lines Inc. (DAL). Here Is Why It Never Happened. - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxNNnpmNk5wbnFpSmlVVERzSlhfSXhtUlI2TlI3dUxERWhSdUNZQU9uaTJwMTA5Y3hjX2NMUlB6WGNzVG0wZUhjMDBfWWQwQWYwQU5MU3JvaWw3enFCRVdWTjRsSmYxYWNsYWxFWHNZMWZSOFBabWdtYUtpOUFYQ0tQeFMwSHIyWTM4aUhYUlBUZXdBeHgzUGlPbVlacklWQQ?oc=5)
+  - Delta News | Delta News Hub (https://news.delta.com/news-archive)
 
-**Step 7 — Research.** The model wanted to know: *"SkyWest SKYW Allegiant ALGT stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 7 — Research.** The model wanted to know: *"SkyWest SKYW Allegiant ALGT news August 2026"* → got 6 results (via ddg)
 
-  - Here's Why Investors Should Give Global Ship Lease Stock a Miss Now - Yahoo Finance (https://news.google.com/rss/articles/CBMigwFBVV95cUxNNW5WRFU2Vk45QXJZR3dIczA5LTEwN0FpYmE1aGRhV2xQNWhTeElzS2otYkZXOUFOOG5IQXVtdmRQUXNLZkZOVVJ4ZlQ0Z3RFOWdoQUxFeHpxZzA1X0ZoS0dHblRpRVlVNFFjYkJoWjNvcmdBMTY1Q29LMWF3ekVGcWNtYw?oc=5)
+  - Allegiant Travel (ALGT) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/ALGT/)
 
-  - Allegiant Travel Co (ALGT) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTE1keEtaNmFNVmd6RUdacWVCZFNRN2FmVWRmVVp2eFNRUUhFdDUtYklaMnh0Q2V2ZDhjekZuRUhOendzbFdJa2xWX3JNajJkNWstVGFN?oc=5)
+  - Allegiant Travel Company News and Press Releases | PR Newswire (https://www.prnewswire.com/news/allegiant-travel-company/)
 
-  - Can Airlines Stocks Keep Leading The Travel Rally In 2025? - Investor's Business Daily (https://news.google.com/rss/articles/CBMimgFBVV95cUxQb0RBZzk5QVNLTnJPMEF5WjltR0pfbHNPRHotbG14djNwYkdZckhHQkVMVk9ocjc1YVR6M19jcDB3LVUwMW0xUzBNMWlEMTVna3doMkphSXJDSWtGamxHa0VqaE9ZX0RxbDdpdTJDYk9nN1BaS183MnRJNkwzV0tMYktwMDM2MDJubEp2azIxOV94bUZtUEtzSkxB?oc=5)
+  - Earnings Releases - SkyWest Airlines (https://inc.skywest.com/investor-relations/earnings-releases/)
 
-**Step 8 — Research.** The model wanted to know: *"Joby Aviation JOBY stock news August 2026"* → got 6 results (via ddg)
+**Step 8 — Research.** The model wanted to know: *"Joby Aviation JOBY news August 2026"* → got 6 results (via ddg)
 
   - Massive News for Joby Aviation Stock Investors - The Motley Fool (https://www.fool.com/investing/2026/08/15/massive-news-for-joby-aviation-stock-investors/)
 
-  - Joby Aviation (JOBY) Stock Price & OverviewInvestor Relations :: Joby Aero, Inc. (JOBY)Is Joby Aviation’s (JOBY) $750 Million ATM Offering Rewriting ...Joby Reports Second Quarter 2026 Financial ResultsJOBY Stock Climbs As Vertiport And Virgin Deals Fuel OutlookJoby Aviation (JOBY) Stock Price, News & Analysis - MarketBeat (https://stockanalysis.com/stocks/joby/)
+  - News | Joby Aviation – Press Releases & Company Updates ... (https://www.jobyaviation.com/news)
 
-  - Investor Relations :: Joby Aero, Inc. (JOBY) (https://ir.jobyaviation.com/?ref=TheNewMoney)
+  - Joby Reports Second Quarter 2026 Financial Results (https://www.jobyaviation.com/news/joby-reports-second-quarter-2026-financial-results)
 
-**Step 9 — Research.** The model wanted to know: *"Trane TT Johnson Controls JCI stock news August 2026"* → got 6 results (via ddg)
+**Step 9 — Research.** The model wanted to know: *"Trane Technologies TT Johnson Controls JCI news August 2026"* → got 6 results (via ddg)
 
   - All News for JCI : Johnson Controls International - Zacks.com (https://www.zacks.com/stock/research/JCI/all-news)
 
-  - TT vs JCI: Performance Charts & Full Comparison | PortfoliosLab (https://portfolioslab.com/tools/stock-comparison/TT/JCI)
+  - Trane Technologies (TT) Q2 2026 Earnings Call Transcript (https://www.fool.com/earnings/call-transcripts/2026/08/03/trane-technologies-tt-q2-2026-earnings-call-transcript/)
 
-  - Johnson Controls Vs Trane Technologies: Which is a Better Buy ... (https://danelfin.com/stocks/JCI-johnson-controls-vs-TT-trane-technologies-compare)
+  - News & Events - News Releases | Trane Technologies (https://investors.tranetechnologies.com/news-and-events/news-releases/default.aspx)
 
-**Step 11 — Research.** The model wanted to know: *"Griffon GFF Arlo ARLO stock news August 2026"* → got 6 results (via ddg)
-
-  - Griffon (GFF) Stock Price & Overview (https://stockanalysis.com/stocks/gff/)
+**Step 11 — Research.** The model wanted to know: *"Griffon GFF Arlo ARLO news August 2026"* → got 6 results (via ddg)
 
   - Press Releases | Investor Relations | Griffon Corporation (https://ir.griffon.com/news-releases)
 
-  - GFF | Griffon Corp. - Trade Ideas, Price, News (August 2026) (https://www.edgehound.com/stocks/GFF/)
+  - GFF Press Releases Griffon - marketchameleon.com (https://marketchameleon.com/Overview/GFF/PressReleases/)
 
-**Step 12 — Research.** The model wanted to know: *"Xerox XRX stock news August 2026"* → got 6 results (via gnews_rss)
+  - Griffon Corporation (GFF) Q3 2026 Earnings Call Transcript (https://seekingalpha.com/article/4930925-griffon-corporation-gff-q3-2026-earnings-call-transcript)
 
-  - Here's Why Investors Must Hold XRX Stock in Their Portfolios Now - TradingView (https://news.google.com/rss/articles/CBMivAFBVV95cUxQcVZvTnVXVi1ocm00aHZDQXl0bkNHMWFjRTVvcGhTa1g3a0ZjZDRKbHhjUmZNbFNxUHA5RTZzWmY5S3NvT1IyU1VUVi0yaHlicjN5Vk5JRDZ0eG1CcXhkaU84SlJhWk9kX0RIbGc3Y1Y3cUgzVERoYTJrTFc2OFZPTG43blVTMDZ4WnVSanZFMWFneTljT2syTnc1aS1yR3pUNEpUWDFxTWVOOWp0RDRfMW93SkNKWDBxV1BUYQ?oc=5)
+**Step 12 — Research.** The model wanted to know: *"Xerox XRX news August 2026"* → got 6 results (via ddg)
 
-  - Is Xerox Stock Worth Buying as Cost Savings Clash With Print Decline? - Yahoo Finance (https://news.google.com/rss/articles/CBMimgFBVV95cUxPU3NJeFQ5aWZhMFI2TE5Mc2kydVhsVUp2dGNDQW8tOFhJcmVJbW82MHRQZ2NoVHJ6UVUwNWk1MVVVUTlzUUp5ZkZ0dTNDdDRTR1hzS2M4Q2FmU0JQM3dqWWhBdW9kckczUnc1ZTM0a1ZocGJ1WHQ5WEVsSDBPcnk1blJGVDJLX3VoSFU3SjVxTXc1R2xDN25scTBR?oc=5)
+  - News & Features - Xerox Newsroom (https://www.news.xerox.com/news)
 
-  - Xerox Holdings Corporation Declares Dividend on Common and Preferred Stock - Business Wire (https://news.google.com/rss/articles/CBMiywFBVV95cUxNTnE5OUZVUzFadktkUE5wa0kybEswVTJzWHF3V0NIVHhKa1R5Y1F2OHczTTNQTGlKeEU1Y1RjY0FRbktUbmk0RzJad2YyWFU5dU1QYkdBb0ZmRFkxbjRranJvZnY3V2xMVW5WMDRZYWVFWk9DLXRJRzRKNXQ5X19oRWFfUElmYnZDZVpuYkJENWo4WW52Sk8ydXBZQmo0eFQ2YnZvY0tDQTdJVmtRSVVTVGFTaldYQ2k1TGF6XzBFNl9LZU1DWlFtdXEwRQ?oc=5)
+  - Xerox Releases Second-Quarter Results | Xerox Newsroom (https://www.news.xerox.com/news/xerox-releases-second-quarter-results-6927137)
 
-**Step 13 — Research.** The model wanted to know: *"3M MMM Honeywell HON stock news August 2026"* → got 6 results (via ddg)
+  - XRX Press Releases Xerox Holdings - marketchameleon.com (https://marketchameleon.com/Overview/XRX/PressReleases/)
 
-  - MMM - 3M Co News | Morningstar (https://www.morningstar.com/stocks/xnys/mmm/news)
+**Step 13 — Research.** The model wanted to know: *"3M MMM Honeywell HON news August 2026"* → got 6 results (via ddg)
 
-  - 3M (MMM) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/MMM/)
+  - HON vs. MMM: Honeywell vs. 3M Stock ComparisonMMM vs HON: 3M Company vs Honeywell International Inc. (2026 ...All News for MMM : 3M - Zacks.com3M News Center - Press ReleasesCan Honeywell Technologies Boost Margin Performance Amid Cost ...Honeywell Technologies Completes Sale of Productivity ...Top 3M (MMM) Competitors 2026 | MarketBeat (https://seekreturns.com/en/stock-comparisons/hon-vs-mmm)
 
-  - Press Releases :: 3M Company (MMM) (https://investors.3m.com/news-events/press-releases)
+  - MMM vs HON: 3M Company vs Honeywell International Inc. (2026 ... (https://www.brimindinvest.com/compare/mmm-vs-hon)
 
-**Step 14 — Research.** The model wanted to know: *"Brookfield Business BBUC Graham Holdings GHC stock news August 2026"* → got 6 results (via ddg)
+  - All News for MMM : 3M - Zacks.com (https://www.zacks.com/stock/research/MMM/all-news)
 
-  - BROOKFIELD BUSINESS (BBUC) Stock News & Updates (https://www.stocktitan.net/news/BBUC/)
+**Step 14 — Research.** The model wanted to know: *"Verisk VRSK Equifax EFX news August 2026"* → got 6 results (via gnews_rss)
 
-  - Brookfield Business Holdings Corp (BBUC) Stock Price & News ... (https://www.google.com/finance/quote/BBUC:NYSE)
-
-  - Brookfield Business Corporation (BBUC-T) Stock Price and News (https://www.theglobeandmail.com/investing/markets/stocks/BBUC-T/)
-
-**Step 16 — Research.** The model wanted to know: *"Verisk VRSK Equifax EFX stock news August 2026"* → got 6 results (via gnews_rss)
+  - Diamond Hill Small-Mid Cap Strategy Q2 2026 Portfolio Review - Seeking Alpha (https://news.google.com/rss/articles/CBMiowFBVV95cUxOT204dk5BMFVQVGRPY3g2bWFldk85X3RmOGV6cGpUQ1dVT1c5X1pPWVlCRGNIanFLX19EWFN4azhwTTMwT0J5MFlpWnpLU19oTkhVTDJSLXJUZllfNUpUSXYxQ1JrbnViUXk4QjAyVDh6SFctQ1BScnJ6bWo2T2pxUWdDM1lMNFJxWWJPZlpELW9ZRTkxdlQ4ZzFkVnJ3OWwtaHln?oc=5)
 
   - Is Equifax (EFX) Below Fair Value On Its $0.56 Quarterly Dividend News? - simplywall.st (https://news.google.com/rss/articles/CBMizwFBVV95cUxOSGZITjFtejg3Q3BnR19FUXRjcWlhYW9qQ29SVFFGWWZkMmZlanM1SjVBbGdmb2pSVE1YZ25wTUJ5VEhOR016eFozcEcwZE1UR2E1QU81RWVhUExRdHpzWEU4aXJRWkMwQ2c3WTBfbEgwTkFWbWNVNi1ySm45ZFR6THhZYjhuei0tUDNGcW1YQlcxWXdWaDhOR1BlZ1BHUl9qSGJhVG94aTFMem9HbVVOWnJjejAtSzY3VE9XU1Y4NVV1MWxQNkRnZHItNHFjbm_SAdQBQVVfeXFMUGswa19DU1UtbzJxalNmeUNOcDk5ZzRubm91akc0aVg2enhFZXRscno1akJXYUJSblRxZ25zXzRicG9MWFhCNElwSEpnbElVZWZJRU1HdU1IT0RRSExhYUFHS2M2U1U4VVRoWmt4aUFCOU5JeVhnbzIxaHg0VHVUdG92OHZpU1p3ZW5iQy1yWUg3blVMYmlzRzhUV0xrcEdVc3ZFTE9RRnZyTm91R0lyMks4eHo5SWpwRmxCMTIwa1M4czl1R1VHZ1AwLWxSYXNwdFBjMlM?oc=5)
 
   - Verisk Analytics (VRSK) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTE85Z2V0aTl5dndST3FpSlVhYXJ0ZE55TVprbVRzZXV6Nk9kTXV0XzltbGpucWV4UUtLUmZKc2RZZkdCeUIzUXhNNTkxTUtHYjZXUTVj?oc=5)
 
-  - Verisk Analytics Offers An Opportunity Amid Current Challenges (NASDAQ:VRSK) - Seeking Alpha (https://news.google.com/rss/articles/CBMipgFBVV95cUxPeXN3UzlfWExfZjJJNjFRNV9zSHJpU3VqbWk5aE5CRThGNjNKTmN1YmphbE1tSWluV1dJTjJ4WUo3MXRFbVVhci1ucFFfclhFOWN6SGs5ZWJXczRzWUx5c0o0cENYRklQMUtpSHdmTmVmb29WUjViS3VUbHlURFJoZE9kbmlRbkNsNmJTRGpmWkJ3SFlnMzREMV9zU3NUaHh1M19MR2dB?oc=5)
+**Step 16 — Research.** The model wanted to know: *"Huron HURN ICF International ICFI news August 2026"* → got 6 results (via ddg)
 
-**Step 17 — Research.** The model wanted to know: *"Huron HURN ICF International ICFI stock news August 2026"* → got 3 results (via gnews_rss)
+  - News and events | Investor Relations | ICF International Inc. (https://investor.icf.com/news-events)
 
-  - ICF International: New Year, 'Almost' A New ICF (NASDAQ:ICFI) - Seeking Alpha (https://news.google.com/rss/articles/CBMijAFBVV95cUxON0ctODJyZ0dyRXFHR3NlRk15cHROSVE3dENLZmRvbzQ2RXhYYmtSeDJXRWRzSU04R2FrRmJEWjQwOXlkVXhJR2tScl8zTWlLN1JRNEd5U0JpOTZuLUF6b3Q1bVNPalZWejEzeHRNMzlsZVBGUnZHNlVVTkJrTlppRVJGSU02OWVlRml2Sw?oc=5)
+  - News from ICF (https://www.icf.com/news)
 
-  - Top Consulting Stocks WarrenAI Says to Watch for 2026 After Sector Selloff - Investing.com (https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOGNFcmR2WkR2OElMOXE3emlTMmhLTG5FejZTUlpKR2thcHBoUjJ5Z3pueVdicWhkLTVQakZEQ2hoLUlDTGp0N1pmYkFhSTVNMnFHcGVZNG83Y21jdnRaTFBuVW1pUklFbHE5ZVBlTHVOXzdXNFNCSE4yb1B1NWhKVFFDMUJjOEdTU2I1c3d1Y09RRlcwdlJBUThrempTSXdnZ3AxeDVHTWhuQ2xXb2c1VGw1RnlEbGdad0V6X0FXLTFEcmcxYWltcUtSY2szZmpVaEE?oc=5)
+  - ICFI Q2 2026 Earnings Report on 8/6/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-8-6-icf-international-inc-stock/)
 
-  - Top LegalZoom.com (LZ) Competitors 2026 - MarketBeat (https://news.google.com/rss/articles/CBMifkFVX3lxTFBaeHIyd2dnRmJWQ0RNYWJYclhKSExFcTByMU5MTWRhTWtyOWZIaFRXUS1BQWx5ckw5YnprM3lkaTVkODhxWEd6TGlRenJmN0t1RjI3bXBjdWY1elBLS2o3V0hsWG8xRjhFN0EzRVpWdUtIelVacmNsbEdzM3BRUQ?oc=5)
+**Step 17 — Research.** The model wanted to know: *"Vertiv VRT Hubbell HUBB news August 2026"* → got 6 results (via ddg)
 
-**Step 18 — Research.** The model wanted to know: *"Vertiv VRT Hubbell HUBB stock news August 2026"* → got 6 results (via gnews_rss)
+  - Vertiv (VRT) Is Up 12.8% After Raised 2026 Guidance And New ... (https://www.sahmcapital.com/news/content/vertiv-vrt-is-up-128-after-raised-2026-guidance-and-new-ai-data-center-partnership-2026-08-09)
 
-  - Powell, Sterling, Vertiv, Nextpower, and Hubbell Shares Are Falling, What You Need To Know - StockStory (https://news.google.com/rss/articles/CBMi4AFBVV95cUxNZHVEMDNHT09rTm5yZVBUai1fSGoxaWw5VGZTbWZZS0dBNlFkTFU2U0lRS1VtTDhHeHdrNUtaNDNOOElKNWh0Y2tEWjNQalRVcUFyUUhTM0dLLTQxeHBHaTBZOWJwNkdMamd1S1VranozUHRZdE55bE9EdjhLaUhpaDZWQzViQnFjWC13c0dxY0JvZXpaTUxSWHhVYU5xT2EwM2dkUVphdjVtNXZCa1RHXzFBcGEzanRuM0hOcnJrZ3NEelQ0S0pHNmc5ZkNxZVMxeGI3bzNVTXhFTWRZQ05jZA?oc=5)
+  - VRT News for Vertiv Holdings - Barchart.com (https://www.barchart.com/stocks/quotes/VRT/news)
 
-  - Powell, Sterling, Vertiv, Nextpower, and Hubbell Shares Are Falling, What You Need To Know - Yahoo Finance (https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOFVKdG5uZmRjRTFIZzk0eHpNZndaZ3RWUDRUOU5nZUV5eHBrckRhOW9KTk9ZNGgxX01WRVpqaXBRdnNXQ2dkV0l5aVgyendQbVNfMDlSSmRpRW5PUHhlVWRpY1lHbzI0bGNrZFZKMnJhbzBHYVFITGd6anh3U0tGYVZobEFLOHNYMTZfNjFVM293QV9idXY2T3RpWGdVbjVFYk10MC1BQW8?oc=5)
+  - Vertiv Holdings Co Stock (VRT) Moved Up by 3.09% on Aug 26 ... (https://www.tradingkey.com/news/market-movers/262133798-market-movers-vrt-20260826)
 
-  - Is Vertiv Stock Outperforming the S&P 500? - Barchart.com (https://news.google.com/rss/articles/CBMijgFBVV95cUxOWTkybE9JYV9pLWppaXZqRFRlSC1oN2JYSGZDZThjWEJJdkIxYms1cl9GRldRNmpYaGpwU1hFUE81Mnc2bjh4Z3d6LXpydG9wTEp5b1RIZTRhQ3JiVUNsdGZVZ250MjJneGpTVzc5QmFTYm5ZN2lodXNwc25sTFhseEZmX1RvN01KYlZUQ2V3?oc=5)
-
-**Step 19 — Research.** The model wanted to know: *"EnerSys ENS Atkore ATKR stock news August 2026"* → got 5 results (via gnews_rss)
+**Step 18 — Research.** The model wanted to know: *"EnerSys ENS Atkore ATKR news August 2026"* → got 5 results (via gnews_rss)
 
   - Atkore (ATKR) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CaG5Pd29oWVhJb1BiWlhYYm5ldzQ1eG4wTzRNMHY5OE8zcFVTMkw2MjRLWWFzN3ppVzR4bDE0U0xWQnpveERpek1tWWtzbDBVZ2RV?oc=5)
 
@@ -134,180 +126,178 @@
 
   - Advanced Energy (AEIS) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTE4tOVVzMzdPNHNEYTFwanAyZm5SNWZTaGlidWRJS0lZazVkbURxUWhJMzAyR292WktKTHhRQnBsSmEtenJ3V1hSb3dxc1NTRFpZbkxv?oc=5)
 
-**Step 21 — Research.** The model wanted to know: *"Quanta PWR Fluor FLR stock news August 2026"* → got 6 results (via ddg)
+**Step 19 — Research.** The model wanted to know: *"Quanta PWR Fluor FLR news August 2026"* → got 5 results (via gnews_rss)
 
-  - Fluor (FLR) Q2 2026 Earnings Call Transcript - The Motley Fool (https://www.fool.com/earnings/call-transcripts/2026/08/14/fluor-flr-q2-2026-earnings-call-transcript/)
+  - Nuclear Power Stocks Retail Investors Are Watching After The U.S. Saudi Deal - simplywall.st (https://news.google.com/rss/articles/CBMi3wFBVV95cUxNY1lBMEY2Q0VhM2tTMnVINHJ6Q2lIMG1wNmxGWXBmekZkMm52ZklYM0FWWEZSeUI0QlhFeFRNQ2FrUmtSS1VHN0VnUHRRWF93bHZENllTMXNvdFN2Z3hQcTBjTEFpSXJwYmp2anBhZVAyZHk2bVVjN1lMQ2Ezb2V3bVV3ZUxaSVllZTBmUzZSUzdpQ0FQajgzQ1RNTjVkcTdBT2JITEpiUlhraVN2QXpZeEM5ajcxM3ptUVVHUnhDYmVqQXpTdTFuYWNIOWR5RlYzR3IxZC1TbmVaYzBSdGY40gHkAUFVX3lxTE5pVzMwejBuRlo2TWlVYlNxMXcyM0piYW1vYU1GOFdkUTVwZUZ5bUE5b0RIaUZuLW1oQXdWUGlxc05ONWxUNE52WHBNLURrcjhTeGVXRm1JcjltS1FoNGN6ekZtb3FBSWQxeENNcU0xakN1QmZQZW5uYWNNaWxHczZaRG1YLW1zajV6VXBsc1drZnRrUHVmOUUzM0ZFejd3eEp5OEtqbmxVaElFc1BfTEg3MFltaXlOcGJoVjBfQ25qZmluNFdLVnFTTDl5Vm5wd3RQVTdHRmtmTW83Q1EyV3lJRDJOZg?oc=5)
 
-  - FLR Stock Pops As Fluor Refocuses And Lands New FEED Work (https://stockstotrade.com/news/fluor-corporation-flr-news-2026_08_07/)
+  - Quanta Stock Up 16% in 6 Months: Is It Still a Hold Heading Into 2026? - Yahoo Finance (https://news.google.com/rss/articles/CBMiekFVX3lxTE9jeW9zbTZZSWo0RzBJYTR2TFVubHBONnFkTVR2alk3THF4aGdqR2ZIVkdrQUpjQ0dmWEt2cHBQaDFuR3UzdUc1QUlsSHpzeVNVcWZIYzNSVFNOaVJRN1RVU0Nra0s2X2UwMXBFOEJsb3N3WjFaUlpOMWRB?oc=5)
 
-  - News & Events :: Quanta Services, Inc. (PWR) (https://investors.quantaservices.com/news-events)
+  - Quanta Q4 Earnings & Revenues Beat Estimates on Electric Strength - Zacks Investment Research (https://news.google.com/rss/articles/CBMipwFBVV95cUxOY3hLVGw3WDlzU0NjcWUtM09DbzB6QVB4OU9mZFZLTm5pd1otRUZDVzA3VGJfWDd6MmktbUpnX3F5UzVSZUp3U2lWYjdQQnZkNnJQcVN2eW1HR0VtdjJGMnlGazFfV29SRV82YTVvV3dfUjNOaFdqYm5sN0t1ZmdVSlhUY3N2eDNVN3R4Z25fOEVPNDc3a2otMGRpRndDVnVib0tNdk1fNA?oc=5)
 
-**Step 22 — Research.** The model wanted to know: *"Arcosa ACA stock news August 2026"* → got 6 results (via ddg)
-
-  - Arcosa, Inc. to Announce Second Quarter 2026 Results on ... (https://www.businesswire.com/news/home/20260723558844/en/Arcosa-Inc.-to-Announce-Second-Quarter-2026-Results-on-August-5-2026/)
-
-  - Arcosa, Inc. (ACA) Stock Forecast & Price Target — Aug 2026 (https://tickflow.io/stock/ACA/forecast)
-
-  - Press Releases - Arcosa Inc (https://ir.arcosa.com/news-events/press-releases/default.aspx)
-
-**Step 23 — Research.** The model wanted to know: *"Caterpillar CAT Deere DE stock news August 2026"* → got 6 results (via ddg)
+**Step 21 — Research.** The model wanted to know: *"Caterpillar CAT Deere DE news August 2026"* → got 6 results (via ddg)
 
   - Caterpillar vs. Deere: Which Heavy Equipment Stock Should You ... (https://www.zacks.com/stock/news/2979699/caterpillar-vs-deere-which-heavy-equipment-stock-should-you-bet-on)
 
   - Which Heavy Machinery Stock Is Dominating in 2026 ... - 24/7 ... (https://247wallst.com/investing/2026/08/20/which-heavy-machinery-stock-has-dominated-in-2026-caterpillar-deere-or-paccar/)
 
-  - Caterpillar lifts 2026 sales growth target on strong data ... (https://www.cnbc.com/2026/08/04/caterpillar-cat-q2-2026-earnings.html)
+  - Caterpillar vs. Deere & Company: Who Wins Heavy Equipment in ... (https://usabusinesstimes.com/caterpillar-vs-deere-company-who-wins-heavy-equipment-in-2026/)
 
-**Step 24 — Research.** The model wanted to know: *"Terex TEX Federal Signal FSS stock news August 2026"* → got 6 results (via ddg)
+**Step 22 — Research.** The model wanted to know: *"Terex TEX Federal Signal FSS news August 2026"* → got 1 results (via gnews_rss)
 
-  - Federal Signal Corporation (FSS) Latest Stock News | Seeking ... (https://seekingalpha.com/symbol/FSS/news)
+  - Federal Signal (FSS) Short Interest & Short Float | Updated Aug 2026 $FSS - MarketBeat (https://news.google.com/rss/articles/CBMiakFVX3lxTFBWYWNXSi1TVmJWR2toQVAyX0RjMkg4Y0s4SlRpTU5KTzg1VzBRVkVSSWRrRVI4WXpPbXk2UWFIUC1BT3h0ZG5MV0J3Vmc5TEVFRzJVUDBvLUJDU2JSNUFSV0N1UTFxMk5yMFE?oc=5)
 
-  - FSS News Today | Why did Federal Signal stock go up today? (https://www.marketbeat.com/stocks/NYSE/FSS/news/)
+**Step 23 — Research.** The model wanted to know: *"Grainger GWW Fastenal FAST news August 2026"* → got 6 results (via gnews_rss)
 
-  - Federal Signal Corporation (FSS) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/FSS/?fr=sycsrp_catchall)
+  - Maintenance and Repair Distributors Stocks Q2 Recap: Benchmarking W.W. Grainger (NYSE:GWW) - StockStory (https://news.google.com/rss/articles/CBMi1wFBVV95cUxNUnBFeEZ1Tkl1bDNJX1dkdmtxU1pRa3c4NmtENU1Ed0ROMzY2YzhYT3pJYmlFWWVISkJ4ek1WZmtPcUIwbHpRWEJPblVvNUVvMVFTMGs1SE0tLXhfbFliVWc5bW8zMmVYdzRrZHppMmNtWmZBNFlWN01pS0xGV2FGRFpKa19mY3RMX0VCMEpSbk9tSHYxY3dQWjBCRF85YUI2Y1NpT0l1Nk45T2JCM3g0Z0JkN2ZxQWpVbEIxbTVHTDU5Y1ZKOTZjcUF1dGFLejltcExYX0lRSQ?oc=5)
 
-**Step 26 — Research.** The model wanted to know: *"Grainger GWW Fastenal FAST stock news August 2026"* → got 6 results (via ddg)
+  - Fastenal Stock Climbs 14% in a Month: Buy the High Now or Wait? - TradingView (https://news.google.com/rss/articles/CBMitwFBVV95cUxNeTZKakJzeG4wVzVqWHRleEpmRlVKb2VBVFhERGQ2UGV5UFo2S0tzVjVQSm9jNlRYNmtPNFBwNlE1Z0RIVVFGUnhNLXlqdW9fUDJoTlJrLXJ0eG01TGdHMzFaUzlLby1heE92V3ZkcVpDQnRUVEtrQVdnQ2hPMDgzS0k5ZzhxV2diQnh1d0xXWWxiTEhnRHZHVkJ4MHVKUlJ3NGR6OVVRdE81TnpLcjNaWGhzSVJRS1E?oc=5)
 
-  - W.W. Grainger, Inc. - Investor News (https://invest.grainger.com/investor-news/default.aspx)
+  - Fastenal Stock And 2 US Dividend Growth Names For Reliable Income - simplywall.st (https://news.google.com/rss/articles/CBMikgFBVV95cUxNM2hISTVjRkk5NGZsenJRVks3VXRKdVBCWTlDYTctTEFvcDk0QklPXzBBYms3VkNKaGloOXZfRzlpaTV3QWIyMVc3SkdoQnpKXzUzREZQYWtXNFVacEt4R2J1SWh3V1ctZjRENEhrT3AxNlRhTFpueEhvckRFSmpwZXJNODZGdlFfRG9lQ3FjUkJEUdIB0gFBVV95cUxQM3NGZFdpdU5VNXNnQTdKS0xva3IwYnBSYUNLTUNSak00b0RCcC1lYWFqYkNTcU1zSzZxcHFDYVUzYmF1MFIxNW1ZWG1NLTFBZEtEVzI1bnc4bGRMRkQ1N0U0OXpHeWRrcmcxSWI1bHhXdGhQZ0xadFNobzNncGZKM3V0ZktUMzhtemFZNmRzejR5U2t3YXhLZkFTVTRUcW01M2NNNDJuUDNFU0w5LVlYX3VfMFdERTJFdTZVZVFURXg1NWxlV0ZjWXVRaVZzcm10eVE?oc=5)
 
-  - W.W. Grainger, Inc. - Investor Relations (https://invest.grainger.com/home/default.aspx)
+**Step 24 — Research.** The model wanted to know: *"Xometry XMTR Resideo REZI news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
 
-  - W.W. Grainger, Inc. - News (https://pressroom.grainger.com/news/default.aspx)
+**Step 26 — Research.** The model wanted to know: *"UPS FedEx FDX news August 2026"* → got 6 results (via gnews_rss)
 
-**Step 27 — Research.** The model wanted to know: *"Xometry XMTR Resideo REZI stock news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
+  - FedEx (FDX) Stock May Be 34% Undervalued As Job Cuts Begin - simplywall.st (https://news.google.com/rss/articles/CBMixAFBVV95cUxPLWdOcnQtZVN3NF9ZSzN2WDNlbkt1YjVzb2N1ZnhxcDhHOXdDUXhFaE01bW9mVjBCTTNuQ2t1ME5RSlNpeU9ad0xTTFJlUEVfd3BVZTBhTTd6bnI5OWx1ek15b0ktVG1kYV9VUEVZNEh2V1B0eWtxM1RmU2szenBwMFNTYmRYU2J3c3oxeVBnTUwxZ09EczVnMlVUUnNvNldaZWphWUhraUZETDk0THZ0VEZHU3FrREVwSDNPUS1rd2t4dVBS0gHEAUFVX3lxTE8tZ05ydC1lU3c0X1lLM3ZYM2VuS3ViNXNvY3VmeHFwOEc5d0NReEVoTTVtb2ZWMEJNM25Da3UwTlFKU2l5T1p3TFNMUmVQRV93cFVlMGFNN3pucjk5bHV6TXlvSS1UbWRhX1VQRVk0SHZXUHR5a3EzVGZTazN6cHAwU1NiZFhTYndzejF5UGdNTDFnT0RzNWcyVVRSc282V1plamFZSGtpRkRMOTRMdnRURkdTcWtERXBIM09RLWt3a3h1UFI?oc=5)
 
-**Step 28 — Research.** The model wanted to know: *"UPS FedEx FDX stock news August 2026"* → got 6 results (via ddg)
+  - UPS and FedEx update on government delivery contracts (UPS:NYSE) - Seeking Alpha (https://news.google.com/rss/articles/CBMioAFBVV95cUxQcnBpODFRZGJjWU5yTWlQRkpaU010UGZUR1JORUI5aDNCVEJnTUhwVDljbV9rUlZtUkZFMlJGMzE0VDV3ZHYwOXB0NkpoWk9oTE5zdXV3RndOR19LVkZfMWtWQ2d4UllFNVlUbWNBWmZPcnA4V0UyWTdPa1Fsal91QTFTeGI4MUZzSnJHaXotcnlBQTZwdTQ3dTVJdmppUU92?oc=5)
 
-  - FDX - FedEx Corp News | Morningstar (https://www.morningstar.com/stocks/xnys/fdx/news)
+  - FedEx will pay shareholders a $1.22 cash dividend on Oct. 1 - Stock Titan (https://news.google.com/rss/articles/CBMilAFBVV95cUxOeHNteFpwS0ZkeVdvOVE5SXYzU3JKU2ZBLUpyMFRNMHdKcVc2Rk84Mmd1TFVXV1ZqVVJPOEJQdXJOSk5ldVVvZl9iOWw1eVU0M1pubHVzcUdoYkFxWE9QWDVpazdtNkZOOE50ZHktb1UyQlRLY1hQX3N2X2trUXk5THRkN2ZlVkt6UEFOV0pTMTlWSlZf?oc=5)
 
-  - Investor Relations | FedEx (https://investors.fedex.com/home/default.aspx)
+**Step 27 — Research.** The model wanted to know: *"Hub Group HUBG Pitney Bowes PBI news August 2026"* → got 6 results (via ddg)
 
-  - FedEx (FDX) Stock Price & OverviewFedEx, Stock Of The Day, Eyes Buy Point — And A High-Margin ...FedEx (FDX) Stock Price, News & Analysis - MarketBeatUPS and FedEx update on government delivery contractsFedEx Stock Quote: FDX Stock News, Quotes, Analysis ... (https://stockanalysis.com/stocks/fdx/)
+  - Hub Group, Inc. (HUBG) Investors: August 28, 2026 Lead ... (https://www.prnewswire.com/news-releases/hub-group-inc-hubg-investors-august-28-2026-lead-plaintiff-deadline-in-class-action-lawsuit--hagens-berman-302856070.html)
 
-**Step 29 — Research.** The model wanted to know: *"Hub Group HUBG Pitney Bowes PBI stock news August 2026"* → got 5 results (via gnews_rss)
+  - HUBG Shareholder Alert: August 28, 2026 Lead Plaintiff ... (https://www.prnewswire.com/news-releases/hubg-shareholder-alert-august-28-2026-lead-plaintiff-deadline-in-hub-group-inc-securities-class-action---contact-suewallst-302844845.html)
 
-  - Pitney Bowes (PBI) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE5vYnlGRjZpZGZhV2lua09qX0RoaFpubEl6STIyal9LSEEyN3F5QWl2MEl0R3RCeGxsS3BzTWRZWUIyOTVQaDNvQXEyRURsRzNGRGc?oc=5)
+  - Press Releases | Pitney Bowes (https://www.pitneybowes.com/us/newsroom/press-releases.html)
 
-  - Pitney Bowes - PBI - Stock Price & News - The Motley Fool (https://news.google.com/rss/articles/CBMiTEFVX3lxTFAzSWFiZlp0WnpCZlc5d3hGTE5qd3ZyR002VzQ5R2pDZDA2aHhPZGVIUHppVGcyN2lxX0ZtcG5EV0IxeDVndE9pT25ZMGE?oc=5)
+**Step 28 — Research.** The model wanted to know: *"Matson MATX Costamare CMRE news August 2026"* → got 1 results (via gnews_rss)
 
-  - Hub Group (HUBG) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTFBzbldIS011WEpQUVdZTGxVWk80STd6NlptbmltWjdHbDlVNFEzZmxfMXJYUDItOG9Dak93a2ZzM0NiLU5FbE5Kb1R5WnMzR0cwTENR?oc=5)
+  - Top Danaos (DAC) Competitors 2026 - MarketBeat (https://news.google.com/rss/articles/CBMifEFVX3lxTE1fWHQ4Y2h6ZldGWnRHcGQ2ZjNnU09XYzBfRk5MYnJfUzVPaUNKSVItUFJyV0lHaXBVSjZwTnFKaVJCZzNYVkhOcHBqemdIeHA0WFFZMkRQdXYyWm9pd0dyNGpvaGlVRnJxcVplRWxvT0pqaFdoMWItalA1SGI?oc=5)
 
-**Step 31 — Research.** The model wanted to know: *"Matson MATX Costamare CMRE stock news August 2026"* → got 6 results (via ddg)
-
-  - Why Matson (MATX) Is Up 5.1% After Raising 2026 Outlook On ... (https://simplywall.st/stocks/us/transportation/nyse-matx/matson/news/why-matson-matx-is-up-51-after-raising-2026-outlook-on-stron)
-
-  - Costamare (CMRE) Stock Price, News & Analysis - MarketBeatNews Releases - MATSONMATX Stock Forecast 2026-2027 - Matson, Inc. Price Targets ...Matson (MATX) Stock News & Updates | StockTitanMatson (MATX) Stock Price & OverviewCostamare (CMRE) Stock Price & Overview (https://www.marketbeat.com/stocks/NYSE/CMRE/)
-
-  - News Releases - MATSON (https://investor.matson.com/news-releases)
-
-**Step 32 — Research.** The model wanted to know: *"Commercial Metals CMC GPGI stock news August 2026"* → got 6 results (via ddg)
-
-  - Commercial Metals Co (CMC) Shares Surge 3.0% - GuruFocus (https://www.gurufocus.com/news/9052379/commercial-metals-co-cmc-shares-surge-30-what-gf-score-of-86-tells-investors)
-
-  - Commercial Metals (CMC) Could Be 7% Undervalued Following Its ... (https://simplywall.st/stocks/us/materials/nyse-cmc/commercial-metals/news/commercial-metals-cmc-could-be-7-undervalued-following-its-1)
+**Step 29 — Research.** The model wanted to know: *"Commercial Metals CMC GPGI news August 2026"* → got 6 results (via ddg)
 
   - CMC Press Releases Commercial Metals Company (https://marketchameleon.com/Overview/CMC/PressReleases/)
 
-**Step 33 — Research.** The model wanted to know: *"Veralto VLTO Zurn Elkay ZWS CECO stock news August 2026"* → got 6 results (via ddg)
+  - Commercial Metals Co (CMC) Shares Surge 3.0% - GuruFocus (https://www.gurufocus.com/news/9052379/commercial-metals-co-cmc-shares-surge-30-what-gf-score-of-86-tells-investors)
 
-  - Veralto (VLTO) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/VLTO/)
+  - CMC - Commercial Metals Co News | Morningstar (https://www.morningstar.com/stocks/xnys/cmc/news)
 
-  - Zurn Elkay Water Solutions (ZWS) Stock News | StockTitan (https://www.stocktitan.net/news/ZWS/)
+**Step 31 — Research.** The model wanted to know: *"Veralto VLTO Zurn Elkay ZWS CECO news August 2026"* → got 1 results (via gnews_rss)
 
-  - Veralto Corporation (VLTO) Stock Price, News, Quote & History ... (https://finance.yahoo.com/quote/VLTO/?fr=sycsrp_catchall)
+  - Zurn Elkay Water Solutions (ZWS) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTFBZY1d0RF9JOFlGbUZEb21LanQ0UXhiVHJ6TWZHbEpOYnZTdXNiM2k4aGhZQzB4ekg4VlotTFJxa1BzNl9BMzlfZEl3VzB5aUZxV1E?oc=5)
 
-**Step 34 — Research.** The model wanted to know: *"Union Pacific UNP CSX stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 32 — Research.** The model wanted to know: *"Union Pacific UNP CSX railroad news August 2026"* → got 6 results (via ddg)
 
-  - Is Union Pacific (UNP) A Bargain Following Its Run To $308.05? - simplywall.st (https://news.google.com/rss/articles/CBMizAFBVV95cUxNMVFUZVl3LTU5U3RqZUpyaEtTc08xcy1xVDNGalpwdF9DSkliQ0R2QTBXQWtfNGpzV0oybG1PMngxZ0dPX0xsLUxHLWxpcTJ1Y2JHRTdzTUFZZHlpTmdySnB0NWt2QnlJd3lSWjUwcDd1NU1Fb2hXYklBMEFienc4MDdjSGdvY0dkQUtpa0Z6MEFMOHE2dmNzbTEtVkRQMHNIWWtxT1owZmNqbWJId0pWelNDeUg0MVpZZUhFM1lXaVlMbXFnTUY1X2llV3HSAdIBQVVfeXFMUC1JQlRHMmRGblJreXFXUHFjV3FkSGFFTml1X1E5Q0k2cDhuT3N3OUN4c2Jka2RxLXpPbFgzODYzNjVpM2ZvaDREUmxRc3dqaFM4QXpyRjBzZmxWbmVsYU11d1FBUUhHVmFaTTJfbUd2UFM5US1GTzRmWDNsTmtBcERlUkphaEtLS19EUndCbVQtakJrZFJqbUVpQVVWZWZsUHliOU04THFUYVJLZkhhb2VueXVsc1pEWVVwMGQ1aXJBMktmM3RIZmdSR195WDlxQ3BB?oc=5)
+  - Press Releases - Union Pacific (https://www.up.com/press-releases)
 
-  - 5 Best Railroad Stocks for 2026 and How to Invest - The Motley Fool (https://news.google.com/rss/articles/CBMirgFBVV95cUxQSkk3QldCOGR5dDZRX3JrVW41X2N6V0p6a1VLeTd0aEJLUGR2RnRaNFFPOHM5c3daczhWZGVyYVBjaDVNMURXYXI3dk1FZTZZR25BZ3hHOGV3cDNIQnYwTE9xY012UXBuci1VNWVJYlI3Z3YyT0R6Tml0V1F3SGhOVE5MR0s5ZVJONnRJeDNFZHFvNFdhbE9QdUxFd2sybkp0LVE1NkdjdUtVWWtXcmc?oc=5)
+  - Union Pacific News | Union Pacific (https://www.up.com/news/)
 
-  - Full steam ahead: The Union Pacific-Norfolk Southern merger review is moving forward (UNP:NYSE) - Seeking Alpha (https://news.google.com/rss/articles/CBMivgFBVV95cUxPMlR0NlFiVXNTTjRzVEhZbHV5M3R3bG1KTF9KaWFUVzdfMFcyejhReTZoUUZQMFlmSy05MV9RZy1xYV91UzJBdDFXSVF5OGVqSXdRVERBekNWSEZ2Q0c2dG40eDF3ZHlwVmVNVW1sck9TZHF5em1WOFRPbWhxcUYtaEVpb0xZOVk5LVNMWWpVTkF5ZkFLNjdObmxwWDNSeU5MZTBSNmRIRnJWV2Y2Q0lxOElpMHhwYXR2UGhZTWN3?oc=5)
+  - UNP Press Releases Union Pacific - MarketChameleon.com (https://marketchameleon.com/Overview/UNP/PressReleases/)
 
-**Step 36 — Research.** The model wanted to know: *"Trinity Industries TRN Greenbrier GBX stock news August 2026"* → got 6 results (via gnews_rss)
+**Step 33 — Research.** The model wanted to know: *"Trinity Industries TRN Greenbrier GBX news August 2026"* → got 6 results (via ddg)
 
-  - Trinity Industries (TRN) Screens As Undervalued, But Is The Stock Still Cheap? - simplywall.st (https://news.google.com/rss/articles/CBMi1gFBVV95cUxNSF9hckh3UVpRZkZhZDhHQXVyOXhLYUdFbTZEQzJZaGp2YU5kaUxmcFZFUXNfdC1tcDlOT0YteE9jekdmbGxCNHIyNjEySEdQSW5fM3c1aTJvM2JjenpoRy1BN3d0LU9WaUJwcmxLT3B1U3F3alZkVnZ4WXBTUE9FMTlQaHpLT0VVNHRLY3BURHRodnhlQUt2U3htbHljUThYM3F2VEt1VGJ6d2hkV0tLYmtmOE02Q01YSzU3UlFqUmFqZm42aHhkamtrc2taQzRRMEZMRWVn0gHbAUFVX3lxTFBnVDk5M1RzQnZmUE5wZVRLa2ZsN3Fza3JDSjROUzZ4eTNDMlRyTVFMRUY2NE1PZXE5aFpSSG9pNy11RXZMVFo2UkduOFRrMG5DM1R3V19fcHBDeDBaeXBoODhJX0JoZktXYkd6Zl8yb3lqaHgtSHZxU1FOaTV5RnQ0ektEVURiVWtVYnFWb3huUTBxMU9vQVpIMWRZQlV3ZFN1aVZ6SjJzd3l5ZDFyZ0pLdEhXcGd3Z0dHcjRJU090SUdZUUlRM01EUlZlUXdsTVIyN19VWlk5OUV4MA?oc=5)
+  - Greenbrier Vs Trinity Industries: Which is a Better Buy? AI ... (https://danelfin.com/stocks/GBX-greenbrier-vs-TRN-trinity-industries-compare)
 
-  - Trinity Industri (TRN) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GVWx5OUlKNXBIdXE3bG5fSWsySFN2M0s1Unp0d3pzREg0NDVac21KR3JxM3NwaUJ4M1lQVENhd3EzUnFvLVVrTk1hd1c5VDNRWWc?oc=5)
+  - Trinity Industries, Inc. - Investor - Investor Overview (https://www.trin.net/investor/investor-overview/default.aspx)
 
-  - Cautiously Buying Greenbrier Shares On Improving External Fundamentals (Rating Upgrade) - Seeking Alpha (https://news.google.com/rss/articles/CBMixAFBVV95cUxQRS1HM1NGZlRqbjdjWGJpa0dNUWp1VDZjMEFOZlJOTmZKeUp0dmNtYzNtRnFrbE5ueWhTQ2dOZ3RLOU1fU2Z4WGFQdGFUd1dWTmgyNUd5TUwwOHU1QTRIOS1xLWI3d19iNEczdl9nNGYyS2wzRjRnVWJzSTRJNTRTZW1Qdk5CU0Rra3VjWnF6VTdZdkYwaWFaMUdlOFkyR1FmeVRXd25JVjFxMHd5QTJ6SVUzVnZybExwdTJudWNWZmtnQjg4?oc=5)
+  - Trinity Industries, Inc. - Investor - Press Releases (https://www.trin.net/investor/press-releases/default.aspx)
 
-**Step 37 — Research.** The model wanted to know: *"United Rentals URI GATX Herc HRI stock news August 2026"* → got 6 results (via ddg)
+**Step 34 — Research.** The model wanted to know: *"United Rentals URI GATX Herc HRI news August 2026"* → got 6 results (via ddg)
 
-  - United Rentals, Inc. (URI) Latest Stock News & Headlines ... (https://finance.yahoo.com/quote/URI/news/?fr=sycsrp_catchall)
+  - United Rentals, Inc. - Press releases (https://investors.unitedrentals.com/press-releases/default.aspx)
 
-  - Herc Holdings Inc. (HRI) Stock Price, News, Quote & History ... (https://finance.yahoo.com/quote/HRI/?fr=sycsrp_catchall)
+  - URI Press Releases United Rentals - marketchameleon.com (https://marketchameleon.com/Overview/URI/PressReleases/)
 
-  - United Rentals Stock Price | URI Stock Quote, News, and ... (https://markets.businessinsider.com/stocks/uri-stock)
+  - Press Releases about United Rentals (NYSE:URI) | FinancialContent (https://www.financialcontent.com/quote/NY:URI/pressReleases)
 
-**Step 38 — Research.** The model wanted to know: *"Allegion ALLE Brink's BCO GEO Group stock news August 2026"* → got 6 results (via ddg)
+**Step 36 — Research.** The model wanted to know: *"Allegion ALLE Brink's BCO GEO Group news August 2026"* → got 6 results (via ddg)
 
-  - Allegion plc (ALLE) Latest Stock News & Headlines - Yahoo Finance (https://finance.yahoo.com/quote/ALLE/news/?fr=sycsrp_catchall)
+  - Investor News - The GEO Group, Inc. (https://investors.geogroup.com/news-events-reports/investor-news)
 
-  - Allegion plc (ALLE) Stock Price, News, Quote & History ... (https://finance.yahoo.com/quote/ALLE/?fr=sycsrp_catchall)
+  - The GEO Group, Inc. (https://investors.geogroup.com/)
 
-  - Allegion Stock Price | ALLE Stock Quote, News, and History ... (https://markets.businessinsider.com/stocks/alle-stock)
+  - 2026 – Allegion (https://investor.allegion.com/news-and-events/news-releases/2026)
 
-**Step 39 — Research.** The model wanted to know: *"Cintas CTAS Copart CPRT stock news August 2026"* → got 6 results (via ddg)
-
-  - Cintas (CTAS) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/CTAS/)
-
-  - Cintas (CTAS) Stock Price & OverviewCTAS - Cintas Corp News | MorningstarCintas (Nasdaq:CTAS) - Stock Analysis - Simply Wall StCintas (CTAS) Earnings Date and Reports 2026 - MarketBeatCTAS Stock Forecast 2026-2027 - Cintas Corp. Price Targets ...CTAS Press Releases Cintas - MarketChameleon.com (https://stockanalysis.com/stocks/ctas/)
+**Step 37 — Research.** The model wanted to know: *"Cintas CTAS Copart CPRT news August 2026"* → got 6 results (via ddg)
 
   - CTAS - Cintas Corp News | Morningstar (https://www.morningstar.com/stocks/xnas/ctas/news)
 
-**Step 41 — Research.** The model wanted to know: *"UniFirst UNF AZZ Inc stock news August 2026"* → got 6 results (via ddg)
+  - CTAS News Today | Why did Cintas stock go up today? $CTAS (https://www.marketbeat.com/stocks/NASDAQ/CTAS/news/)
 
-  - News Releases - UniFirst Corp (https://investors.unifirst.com/news-releases)
+  - Car Auctions - Copart Press Releases - Copart USA (https://www.copart.com/content/us/en/press-releases/index)
 
-  - UNF News Today | Why did UniFirst stock go up today? $UNF (https://www.marketbeat.com/stocks/NYSE/UNF/news/)
+**Step 38 — Research.** The model wanted to know: *"UniFirst UNF AZZ news August 2026"* → got 4 results (via gnews_rss)
 
-  - Investors | UniFirst Corp (https://investors.unifirst.com/)
+  - Unifirst (UNF) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE0ybEVGekt1REJ5T0hZaUZPQnJ5NlZoTHdVT25wTWJQQ2laWTJLdGRueVRLbWt6dmc5dUpEd3BpWEVaam0yUm9VVm0tTEhaOWZmbGc?oc=5)
 
-**Step 42 — Research.** The model wanted to know: *"GE Vernova GEV Eaton ETN stock news August 2026"* → got 6 results (via ddg)
+  - Azz (AZZ) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTFBLeVJ4VUdlY3JaWV9BbV9kZDh6eDIzektxS1duM1UxOXFVUHFqV0VTUGJ3TGt3Z29CYTlkY2pfOUdJdjlhaktZaDlIMi1neFRNZFE?oc=5)
 
-  - AI Electricity Demand: GE Vernova and Eaton Will Capture This ... (https://247wallst.com/investing/2026/08/06/ai-electricity-demand-ge-vernova-and-eaton-will-capture-this-next-wave-of-capex/)
+  - Cbiz (CBZ) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WNHRwUHlOYVM5OGRPNkdZMWpLZU51bnpZZDEyQU1HVUh0c1dXZmVkdExGTTV2WWU0Nko4NFhmUE5ZUVMyQnd0dzNFdnpnZzdnX1E?oc=5)
 
-  - Which Industrial Machinery Stock Has Dominated in 2026: GE ... (https://247wallst.com/investing/2026/08/19/which-industrial-machinery-stock-has-dominated-in-2026-ge-vernova-cummins-or-eaton/)
+**Step 39 — Research.** The model wanted to know: *"GE Vernova GEV Eaton ETN news August 2026"* → got 6 results (via gnews_rss)
 
-  - GE Vernova (NYSE: GEV) And Eaton (NYSE: ETN) Emerge As Twin ... (https://www.foreignpolicyjournal.com/2026/08/06/ge-vernova-nyse-gev-and-eaton-nyse-etn-emerge-as-twin-plays-on-ai-power-infrastructure-spending/)
+  - Is GE Vernova Emerging as a Key Beneficiary of the AI Power Boom? - TradingView (https://news.google.com/rss/articles/CBMivAFBVV95cUxNSVV1eGtaRjBWRDJ3RXZKQ1lTSTlNamNyS1VtQjg5TTB5RkZaeWNEOWFnOVBqZ1Z3QnAyS0JxZWg3WldIY2twOXB3QzRnMmpMdHRhcDFfeWp6N1h0X29ad0p0YjFDUGRCc2kxY0dPX0s0TjZoVW43TUZBN0I4UEU5Y3pPSk5Zc2x2UHlRQ21oTDJOVFA4MDZ5X2NmNE10ZDN3eHREeEh3UEJ5UnVid05UWS1vRllzZDN2d2JvcQ?oc=5)
 
-**Step 43 — Research.** The model wanted to know: *"EnPro NPO John Bean JBTM stock news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
+  - Which Industrial Machinery Stock Has Dominated in 2026: GE Vernova, Cummins, or Eaton? - 24/7 Wall St. (https://news.google.com/rss/articles/CBMixAFBVV95cUxPdndvYUFybkNWNTZaNUZFWU96TXNSYVltVlE1UElrNVRoNGQ2b0NSb0RkYXhlbVVxQ0t4ZkQ1RFFGQV9tVGVTNDRJc0w2YnAwOEZWM3FqX21sd3E0eHFWYTM2cmltYm1nMUdFa2tKeW83Y0RpVko2aVNodFIxa0haQTNWbldrdDVDZU1BUmlmTGJPSnpHTUhUSFF2RTg2azVGTkhER1FLeXlENGxNR25acmdZc2thYTFHWllWTVB4TUlKdGFG?oc=5)
 
-**Step 44 — Research.** The model wanted to know: *"Korn Ferry KFY TriNet TNET stock news August 2026"* → got 1 results (via gnews_rss)
+  - AI Electricity Demand: GE Vernova and Eaton Will Capture This Next Wave of Capex - 24/7 Wall St. (https://news.google.com/rss/articles/CBMiwAFBVV95cUxORV80Z1JtV0VNME9rTlJyZ3FOU1JHSTZad1E5QkhuV3haaWFaR1RFRWRLWXp4cHozbHpzRzRlTHJYQ3RRZjRpcTlTOHdQamZYUTFTc1dRMk9nMENuLTltV0ItWldYcUtIMmhLUXd3UzVGZGtuTDJZY21saTZmSUZzdXFEb2dxZlB3c2lHanV3YUxkQXJvamdQbmFpZzcxRjRjd3BpcmJnaG94dkIzZGI3TmxLZVVEdVJXMUswWkw1Y04?oc=5)
 
-  - Azz - AZZ - Stock Price & News - The Motley Fool (https://news.google.com/rss/articles/CBMiTEFVX3lxTE5sSmdVcERpWTE5TlJ2akF0dmYwZkZ2NXJZeXFsNU1QTjhfdWZnTGFGbVltZkczQVNsSkNILXFDTnZESVdRR0dTdFprX20?oc=5)
+**Step 41 — Research.** The model wanted to know: *"EnPro NPO John Bean JBTM news August 2026"* → got 6 results (via ddg)
 
-**Step 46 — Research.** The model wanted to know: *"Snap-on SNA Stanley Black Decker SWK stock news August 2026"* → got 6 results (via ddg)
+  - Enpro Inc. - Investor Relations (https://www.enpro.com/for-investors/investor-overview/default.aspx)
 
-  - Stanley Black & Decker, Inc. (SWK) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/SWK/?fr=sycsrp_catchall)
+  - Enpro Inc. - For Investors - Press Releases (https://www.enpro.com/for-investors/investor-news/default.aspx)
 
-  - SWK News Today | Why did Stanley Black & Decker stock go up ... (https://www.marketbeat.com/stocks/NYSE/SWK/news/)
+  - ENPRO INDUSTRIES ($NPO) Releases Q2 2026 Earnings (https://www.quiverquant.com/news/ENPRO+INDUSTRIES+($NPO)+Releases+Q2+2026+Earnings)
 
-  - Stanley Black & Decker Stock Price | SWK Stock Quote, News ... (https://markets.businessinsider.com/stocks/swk-stock)
+**Step 42 — Research.** The model wanted to know: *"Korn Ferry KFY TriNet TNET news August 2026"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
 
-**Step 47 — Research.** The model wanted to know: *"Kennametal KMT Hillman HLMN stock news August 2026"* → got 6 results (via ddg)
+**Step 43 — Research.** The model wanted to know: *"Snap-on SNA Stanley Black Decker SWK news August 2026"* → got 6 results (via gnews_rss)
+
+  - Is Stanley Black & Decker Stock Underperforming the Dow? - Yahoo Finance (https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdGhFZU9yd0hKbC1JRzQ3cFBlOU1Xa0h0eEJxQjBBZGpNMThTQWNoQ3JsZWJFRTBHc2l6UXFKWndZNlV6SG5ITGM1VkhwNDdhU1NBek1Id2Z6eUIzdnBucnFVTGdNMGwzY1dpX1RZX0Znc3BvcmJWVkl0SGN6R0V6ckoydmhzY3VyMkUtWmhRMEZWNmRtMW1QLUNNcWQzdHMtUmRKVlluRnVhLTQ?oc=5)
+
+  - SWK News | STANLEY BLACK & DECKER INC (NYSE:SWK) - ChartMill (https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pV2lYYXl4Z2NNQ3IzTGNFZjEwOHdUb1p0cW5id21wckw3NEY1aVBFdGMyNU8wNlU1Zm44dGpUdTB3a0dkRDlDX0FOb1ZQWFhveVRCY3Uwak1LUQ?oc=5)
+
+  - Stanley Black (SWK) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE9xR18xV2JpdWE1S25fNE01XzZPX01lQXVEc2dRSWVsWlJvZDRKT0dSVkU3Q3hERmxiY29rcmMyem83ZS1uMEU0ZGdZc2t3V09ZNFE?oc=5)
+
+**Step 44 — Research.** The model wanted to know: *"Kennametal KMT Hillman HLMN news August 2026"* → got 6 results (via ddg)
 
   - Kennametal (NYSE:KMT): Strongest Q2 ... - FinancialContent (https://markets.financialcontent.com/stocks/article/stockstory-2026-8-17-kennametal-nysekmt-strongest-q2-results-from-the-professional-tools-and-equipment-group)
 
   - News - Kennametal (https://www.kennametal.com/us/en/news.html)
 
-  - Kennametal (KMT) Q4 2026 Earnings Call Transcript (https://www.fool.com/earnings/call-transcripts/2026/08/12/kennametal-kmt-q4-2026-earnings-call-transcript/)
+  - Kennametal (NYSE:KMT): Strongest Q2 Results from the ... (https://business.thepilotnews.com/thepilotnews/article/stockstory-2026-8-17-kennametal-nysekmt-strongest-q2-results-from-the-professional-tools-and-equipment-group)
 
-**Step 48 — Research.** The model wanted to know: *"Old Dominion ODFL RXO ArcBest ARCB stock news August 2026"* → got 6 results (via ddg)
+**Step 46 — Research.** The model wanted to know: *"Old Dominion ODFL RXO ArcBest ARCB news August 2026"* → got 6 results (via gnews_rss)
 
-  - ArcBest Corporation (ARCB) Stock Price, News, Quote & History ... (https://finance.yahoo.com/quote/ARCB/?fr=sycsrp_catchall)
+  - Stocks Retreat as Fed Signals Possible Higher Interest Rates - TradingView (https://news.google.com/rss/articles/CBMiuwFBVV95cUxNakZ4MjhaSzVqTWdxUHBGc1UzS0tPaGdXTHZNRFpqbzNTYUJOZHR1bFNxNkdEOUtTR0lzNXNVbThlT0hKSW5EVlEwOEliY2lrY0xMZWJNWkVkUkNMRFNCUUljaGlTWGZBVG1UOTlobjJwM09jcjJFVVJrdFBHR2ZUcWw5S1FSNGJtaElBX19NYjFjcHpsOTdBVldyRzZOcnVRVncyZHVDUVZ4bXFZeU1Kbi1iNEJwU1JPS3Jn?oc=5)
 
-  - FinancialContent - RXO, ArcBest, and Lucid Shares Plummet ... (https://markets.financialcontent.com/stocks/article/stockstory-2026-8-24-rxo-arcbest-and-lucid-shares-plummet-what-you-need-to-know)
+  - Cross Border Trade Deal Could Lift RXO Stock And Other Logistics Names - simplywall.st (https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOV9TVHNTR3FuN1QzMEF0YzNmLXZZamVkTjZTNlFpd0dENHdOeHBmaTVRSnNzU1A3ZHZienRYcHEwUDJSSmNMaHY2aTBBc0h5MVZyM05EcFEtaEE3YXJ5Qldod1llaDJERmdXNmZZTkNJbk14dGZzQlB3LXo1MkhWTUJkbHJqOUtXeUc3T01rRkZYeDVCSWYyQXFyam5hOUxEQjVwMmdCY0Z0ZzNmUTFIcEpnN044U0ZvRktWazFwaWdQOEnSAcgBQVVfeXFMT2JHc3lVSWpSUnhHOVBSVVlOMlRZYkRDZUktVjAzLWJoa2R4WUFRWlBRMV85YWMzdUZNajJscnhHcWJmUzZSdXNXNkNBS09pNlQxeVdOcDBoNkhOS2pwZDU4bGZBNjZwMTRzTW93bTJERXVTZk9rMXZKOE9yR0tJU3JMZ3VtalR2SDFhUngwZzZ5cWp2TUZuRlM2MHZoZ1BqM0dRcTgwLUNlaW1YX0lMZE05TFdnVTkyeTBEaGtaZjVLcmlkRDNGMEo?oc=5)
 
-  - ODFL News Today | Why did Old Dominion Freight Line stock go ... (https://www.marketbeat.com/stocks/NASDAQ/ODFL/news/)
+  - Amazon officially launches its freight shipping service for all (AMZN:NASDAQ) - Seeking Alpha (https://news.google.com/rss/articles/CBMiowFBVV95cUxQSEphZnI0dENkV1lXbGJiUWVTRWhFOFV0YVF3ZjhpNVdLSkNDODc1TkJUbTBHWXdWTEl2ejl5UFRGOWZFdEx4Q2lYVzlHQjZwQ0NOMkZxOUp2ZVdjZHNqc05PNFloU2t2QmFXbHA1Z2tHUXMxd0JuNTM5QnFnbzlPQUlBV0VyXzJiSWxVXzVZSVdPeUFHSVJsQ0JsVHctUllKNFFz?oc=5)
 
-**Step 49 — Research.** The model wanted to know: *"Waste Management WM Republic RSG stock news August 2026"* → got 6 results (via ddg)
-
-  - RSG vs. WM: Republic Services vs. Waste Management Stock ...Press Releases | Republic ServicesNews Releases | Investor Relations | Republic Services, Inc.Gates-Backed Cascade Sees Opportunity in Republic Services ...RSG Raises 2026 Outlook as Pricing Strength Offsets Softer ...Republic Services vs Waste Management - Danelfin AIHow Investors Are Reacting To Republic Services (RSG ... (https://seekreturns.com/en/stock-comparisons/rsg-vs-wm)
+**Step 47 — Research.** The model wanted to know: *"Waste Management WM Republic RSG news August 2026"* → got 6 results (via ddg)
 
   - Press Releases | Republic Services (https://media.republicservices.com/news-releases)
 
-  - News Releases | Investor Relations | Republic Services, Inc. (https://investor.republicservices.com/news-releases)
+  - Press Releases | Republic Services (https://media.republicservices.com/news-releases?l=25)
+
+  - Gates-Backed Cascade Sees Opportunity in Republic Services ... (https://247wallst.com/investing/2026/08/24/gates-backed-cascade-sees-opportunity-in-republic-services-that-half-of-wall-street-misses/)
+
+**Step 48 — Research.** The model wanted to know: *"Casella CWST Onterris ONT news August 2026"* → got 2 results (via gnews_rss)
+
+  - Casella Waste Systems, Inc. Class A Common Stock (CWST) News Headlines - Nasdaq (https://news.google.com/rss/articles/CBMic0FVX3lxTE80WERsTGxpb0tJNk5OT3FfMkU2eXZ5S1BkV1dfX0JNWTMyYXFyRnlCMkc3MUEwR0FiYmgwVnh6VkVZXzhieU5SMThybXZhLXRoVVBsVkdKTlQzT3k0YnQxcGd6clN6NHZoZXQtcmVkVV9UVUk?oc=5)
+
+  - Montrose Environmental Group (MEG) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTFB6bmo1Z3c1MFI3Y3JpeHB2UUg3a2lZNjBrMGNTT2Z3dHc4TllTUElpQkxIY1dzOTBGaFNDdmhLQ3hJbjlCdDFRZDFWdW9kdEs1MUE?oc=5)
+
+**Step 49 — Research.** The model wanted to know: *"Brookfield Business BBUC Graham Holdings GHC news August 2026"* → got 6 results (via ddg)
+
+  - Press Releases | Brookfield (https://www.brookfield.com/views-news/press-releases)
+
+  - Press Releases | Brookfield Business Corporation (https://bbuc.brookfield.com/news-events/press-releases)
+
+  - BROOKFIELD BUSINESS (BBUC) Stock News & Updates (https://www.stocktitan.net/news/BBUC/)
 
 **Step 51 — Search budget exhausted.** Forced to conclude with what it already gathered.

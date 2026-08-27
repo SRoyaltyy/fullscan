@@ -6,21 +6,21 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"VICI Properties news August 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"VICI Properties news August 2026"* → got 6 results (via ddg)
 
-  - VICI Properties (VICI) Stock Could Be Undervalued On Its 16% Slide - simplywall.st (https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZGl2NjVnVTE0enJJM2Y4ZGNxcEd5U1JvQ3ZFdG41T19aXzVjNzhWbkJJODcwWm8yTTNQNWtfVWZ3aElKWUVkcnFtUXk0OVBkZE9PdFlvTTFQZkMzNXZvZnp1Sjhid1AxYUQwVFo4VUFXRzFrS2NCTVE3QzNxOEhGTTVaVHV5Q2RDZ3FRSmVWamdxT2hhWG8ta3lVWUFsdV9WSzdWYmV0TDdfLWdGcE5MeVdtcTM1NUFybFZ0T25FYXh0UTN3THVmaXYxSGtiSW120gHWAUFVX3lxTE53TVNZelIyc3FpY291TGRRbVg3Z3JIMVdHUE01RVZ2UTVNWk16RGpEcXJjV1U3VWExcmZsMnRBbVdQUUtYRVdQamp1ODhnUWZsb3J5RjRCRjI5QTRmUmlaUkhfTzNaTUxjRGZUdXFPM1o3OE1TS3RTT0d6QWlyZkpvT0Y2UG1PeTJwdy0yR05RTlYxa1BXVmwwanJlcFh1X1VlUmVmdXVXcUx0Ri1LRXJkSWRtekd5WTRhaFdPRjRtZmFjc09sSXhNSmN1dm1wRHc4c3lndnc?oc=5)
+  - News Releases - VICI Properties Inc. (https://investors.viciproperties.com/news-events/news-releases)
 
-  - VICI Properties: Rising Dividend At A Deep Discount (NYSE:VICI) - Seeking Alpha (https://news.google.com/rss/articles/CBMijwFBVV95cUxPWmpUR0xSdHlqa0V4b2owbHpUd3RZeENxUW8wcFFkejNiS3poU3NhMDF6ZWcyc0VIcjJ0dzZxT2dQVkg3UTlpRl9mM21XbmpOTUNaZUo1LU53Vm1iR21NdVhIeWl5UXdBRGlZai1oQ0tMNmc3THpoYkdXbGRZcWRQM1JfREE3NVJIZVNTbWNZRQ?oc=5)
+  - VICI Properties Announces Pricing of Public Offering of $1.75 ... (https://investors.viciproperties.com/news-releases/news-release-details/vici-properties-announces-pricing-public-offering-175-billion)
 
-  - VICI Properties stock edges higher as institutions build positions ahead of Q2 2026 update - Ad-hoc-news.de (https://news.google.com/rss/articles/CBMi0AFBVV95cUxOR2Z3N3FfYXhSeDZWakllaU9qSlV2Nll2cGwxWGRvWEpHVV93MjRweE5XZHB2NUlIQ2VTcnYydWs5VmpmcC1sZ2xiOXVjZ19Qb1oxX1dmck9TQzM2QUJLbFpLdHQzbEttbzk0cjBENkVYdHBTR0xkNW1EcHZVa1N6TTlBc2lKZ2VNNU9NV1NNZ1QwRzk0R2txZ0had1A1MVo3Q0U0VUhJQ0xZMlFiV1F0VFB6ME1kTkZTZ0VCYVZ2eHdsWThLR1hFclRCYlRRUWln?oc=5)
+  - VICI Properties (VICI) Stock Price & OverviewVICI Press Releases Vici Properties - marketchameleon.comVICI Properties Announces Pricing of Public Offering of $1.75 ...VICI Properties Prices $1.75B in Bonds, Will Pay Off Near ...VICI Properties Q2 Earnings Call Highlights - MarketBeat (https://stockanalysis.com/stocks/vici/)
 
-**Step 2 — Research.** The model wanted to know: *"Broadstone Net Lease BNL news August 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Broadstone Net Lease BNL news August 2026"* → got 6 results (via gnews_rss)
 
-  - July 2026 Press Release - broadstone.com (https://broadstone.com/wp-content/uploads/2026/08/BNL-Press-Release-Launch-August-2026-Equity-Offering.pdf)
+  - Did Off‑Market Build‑to‑Suit Deals in Texas Just Shift Broadstone Net Lease's (BNL) Investment Narrative? - simplywall.st (https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZE5EeTJNci1QVERfVnFxTU1DdW9QNjladDBDSzVadU0tVjFkeTRMVWdPSWJoOE0xMEdCMTQ0bXBMbTQ4TklNVVJ1VkF2MVdiZjl2NjFDa0NwYnd3d19RRzRtSFhrOUY4XzRFZnk2V2Q3U3NPd0hjaGdVZTA0RThwcDUzdmFybmZPY0xxcGFTOWx5WlRvblFzV0ZFdEFHdHo2aHI1Rmp0c0FvM0pwME1PRDFhU09tdzRuazBhUUkxcEhlSDNkYUE4UFMyT3N1ODZMWVNQWXVR0gHbAUFVX3lxTE50T25FV3FmVTRXUHdMd3JxbjBlQ1hSZjZFd21FaVotQ0ozOEJYSnBrR0dRQkZYSmoxMVB0LUd1bTZZM21hbmNJUGxEUmJoTEl4TXVSSDBocDZEbVN2Z2FfeTZVUlQ4Nm9qTnMtUzFjMzlUUHN3Z1FveG5uWTNsbWhzR0thTHRaWkh2b0hIc0VDRVQ3RUI2VnJ4NVVmX3hfVGNhTDlyUXBxR083UjFkb2s4cUZVdFJSMU90R2xJdG1ucEE2T0Z0bjZSZ01DbEJ0YnpTd3JST2RuZ29ORQ?oc=5)
 
-  - Broadstone Net Lease, Inc. Announces Pricing of Public ... (https://broadstone.com/broadstone-net-lease-inc-announces-pricing-of-public-offering-of-common-stock-aug2026/)
+  - Broadstone Net Lease Adds $23 Million to its Committed Pipeline of Build-to-Suit Developments - Business Wire (https://news.google.com/rss/articles/CBMi5wFBVV95cUxOdE5WYzlxSW9tdzAwWEk0ZUZwYlUweTVLXzAya2N4d1dzMnM0Q3BUa0cyZWhLdU1MTVF0aHMtMVlqVUs3RU93UG1yd2xlVk5kaksybmNwWURXTVhidEJnNEVtYm9JWm1KQlozTGZnZUM5WlJuZlZic2JWNEpUV3EtWEs2Mk03RldSRm5VcW83bHB2b3lNeEJ4UWxDRFpUMTUyM2QxMUR6VkN4WEEzb2pkY2tJRWo5TTVxelQydXlCdXN2SnhnNzNlOWhnY1g1SWlQS2xLNzJ3VVVPcjgzVVhKMDVFZmgtVGs?oc=5)
 
-  - Press Releases - Broadstone Net Lease, Inc. (https://investors.bnl.broadstone.com/press-releases/default.aspx)
+  - Broadstone Net Lease (NYSE: BNL) director buys shares in open-market trades - Stock Titan (https://news.google.com/rss/articles/CBMiuAFBVV95cUxQOE0yZ3hIVjVITG05UnFLV2ZtdzI3RURlSlFkcVFfOHFDRHF5WWpTNkpNLUlTZUhyZGlESFFZcUFJSW5LTkEyMHR1a1lCNHRpZ2JodGhSWjd5cEJjaDI0MlpWcEJHODlqNkpnUmNfUHhPR2N4M0ZjX3o1dWduQU1vUWRHdl9McWlGcXV1MXhfd243UUVITFFEdGhPNkMzYVBKMmxwYnRtd1lXRk9FNC02d1VZQUxMcHFH?oc=5)
 
 **Step 3 — Research.** The model wanted to know: *"Global Net Lease GNL Modiv Industrial acquisition news"* → got 6 results (via ddg)
 
@@ -32,91 +32,91 @@
 
 **Step 4 — Research.** The model wanted to know: *"Welltower WELL stock news August 2026"* → got 6 results (via ddg)
 
-  - Welltower stock holds near a 52-week high after Q2 2026 (https://www.ad-hoc-news.de/boerse/news/corporate-news/welltower-stock-holds-near-a-52-week-high-after-q2-2026/69984940)
+  - Welltower stock trades close to record level as FY 2026 ... (https://www.ad-hoc-news.de/boerse/news/corporate-news/welltower-stock-trades-close-to-record-level-as-fy-2026-guidance-and-eps/70009011)
 
-  - Welltower (WELL) Stock Price & OverviewWelltower (WELL) Stock - Research | Financials | Charts (NYSE ...Welltower Stock Price | WELL Stock Quote, News, and History ...241.56 Welltower Inc (WELL) Stock Price History & Other ...WELL - Welltower Inc News | MorningstarWelltower Stock Extends A 7-Day Losing Streak To A 8.1% Loss (https://stockanalysis.com/stocks/well/)
+  - Welltower (WELL) Stock Price & OverviewWelltower Inc. (WELL) Stock Financials, Chart, Sentiment ...Welltower (WELL) Stock - Research | Financials | Charts (NYSE ...Welltower Stock Price | WELL Stock Quote, News, and History ...WELL - Welltower Inc News | MorningstarWelltower Director Dennis G. Lopez Acquires 73 Shares via ... (https://stockanalysis.com/stocks/well/)
 
-  - Welltower (WELL) Stock - Research | Financials | Charts (NYSE ... (https://www.financecharts.com/stocks/WELL)
+  - Welltower Inc. (WELL) Stock Financials, Chart, Sentiment ...Welltower (WELL) Stock - Research | Financials | Charts (NYSE ...Welltower Stock Price | WELL Stock Quote, News, and History ...WELL - Welltower Inc News | MorningstarWelltower Director Dennis G. Lopez Acquires 73 Shares via ... (https://wallstreetnumbers.com/stocks/well)
 
-**Step 6 — Research.** The model wanted to know: *"Ventas VTR news August 2026 sustainability report"* → got 6 results (via ddg)
-
-  - Ventas Releases 2025-2026 Corporate Sustainability Report (https://ir.ventasreit.com/news/news-details/2026/Ventas-Releases-2025-2026-Corporate-Sustainability-Report/default.aspx)
-
-  - Ventas Releases 2025-2026 Corporate Sustainability Report (https://www.financialcontent.com/article/bizwire-2026-8-17-ventas-releases-2025-2026-corporate-sustainability-report)
+**Step 6 — Research.** The model wanted to know: *"Ventas VTR news August 2026"* → got 6 results (via ddg)
 
   - News - Ventas (https://ir.ventasreit.com/news/default.aspx)
 
-**Step 7 — Research.** The model wanted to know: *"CareTrust REIT CTRE news August 2026"* → got 6 results (via gnews_rss)
+  - VTR News Today | Why did Ventas stock go down today? $VTR (https://www.marketbeat.com/stocks/NYSE/VTR/news/)
 
-  - CareTrust REIT (CTRE) Stock May Still Be A Bargain Despite $291 Million Investment News - simplywall.st (https://news.google.com/rss/articles/CBMizwFBVV95cUxQeG43V2VmMEl3YmhXWkVxVGZvWWthZEtsb1RVQWVxQVAzTEhuVlY2RWFDd1dzanRsRG5GeFh3REZNcUVUUVVsakplaXhjSjg4dXUyb1c0THVVTnE2SUlielVlektOc3FoUTZPUHVWOERWcFJuRVRrR2JkMDZuRUQxRXl4NjRwX1NScWVNTjV6N1Rscmp5OUF5bFo1T1l2MENPWmpsOE54SkVOVDZ4ZFYxcDhsYzVncUZablhwbTQtVEZ5TktaenJoZFdaZktCeE3SAdQBQVVfeXFMTXllZVVydGUzY3hBTm9FSFVZQjc2TDRsSEJYZ3FhZ3N6X0pIMGZDSHMyVk5zMUZYZFlkQ3RkMEhkYXBUQlExMWpMWDE2RlZkdG5QTmQtbklHUzRFUFZrX05TVXU1dkwxNC1iSUhMWnQzLVhydmdjMnJPcGI3cXlHZ0FiYnFid1c2aGJOeEJ1M3EzQlcxS3U5UUxFdWxBck5RNDFMbXA3TnpBcEE5VGtXSGJxRDhRYkZOc3VJQ3l2TEJOYXhtbHJ0clZKRXFralFBcXJ2VGo?oc=5)
+  - Home | Ventas, Inc. (https://www.ventasreit.com/)
 
-  - CareTrust REIT, Inc. - Common Stock (NY: CTRE - FinancialContent (https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTVZKSmtoeFF5MFNIdWtMbEZzbU52NTFxUHgxQ2ZXVk1ZRm5Ec21JTTBPS2ZnS0xmajlZM0lJNERsdjRPenZnTnhlYTNyNVdQWUJTS045ZHJXbGVtNHBWSVNXU1dRdDVZMTMxMkc3dm1JZENEOU5odVBXNGZwckl0SWN2TENWVjJYM0daWkdXMnFHaDBBXzBMZWh3c1lJaXhjclRkQmluZkRUSVk?oc=5)
+**Step 7 — Research.** The model wanted to know: *"CareTrust REIT CTRE news August 2026"* → got 6 results (via ddg)
 
-  - CareTrust REIT Announces Second Quarter 2026 Operating Results; Increases 2026 Guidance - Business Wire (https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWHpENXNJWEFfXzY5Q2pqcnQ4ZXppdnRaVWpnbm9IcmZqYUZRcmRuZWtiVEJrUVRiTjM0Rl85ajIyanFib2RzNDQ4TnR2TXpsdjRlTFNFRFZUa0RFRzVJQVZRNzE4TUFwUWE5WVA3X0tGZVpaM0E1YVRXakpaUHVVdHJUZHd6U2Fka3B5YzNTUDJwcG43MFFLdjF4X1ZYalBFQXFkNWdXNmRWNTVWNGVBWnp5d1g3Qy1DUnpiZV9IZ3QtVl9DczRWTDRyd2FIWmVON0dndnNVUTQ2aW8?oc=5)
+  - CareTrust REIT Inc (CTRE) - Sure Dividend (https://www.suredividend.com/wp-content/uploads/2026/08/CTRE-2026-08-11.pdf)
 
-**Step 8 — Research.** The model wanted to know: *"Sabra Health Care SBRA news August 2026"* → got 6 results (via ddg)
+  - CareTrust REIT, Inc. (CTRE) Q2 2026 Earnings Call Transcript (https://seekingalpha.com/article/4933263-caretrust-reit-inc-ctre-q2-2026-earnings-call-transcript)
 
-  - Sabra Health Care Reit, Inc. (SBRA) 10-Q Quarterly Report ... (https://last10k.com/sec-filings/sbra/0001492298-26-000028.htm)
+  - CareTrust Reit, Inc. - CareTrust REIT Announces Second ... (https://investor.caretrustreit.com/news/news-details/2026/CareTrust-REIT-Announces-Second-Quarter-2026-Operating-Results-Increases-2026-Guidance/default.aspx)
 
-  - Investors - News | Sabra Healthcare REIT (https://ir.sabrahealth.com/investors/news/)
+**Step 8 — Research.** The model wanted to know: *"Sabra Health Care SBRA news August 2026"* → got 6 results (via gnews_rss)
 
-  - Sabra Health Care REIT, Inc. (SBRA) Q2 2026 Earnings Call ... (https://seekingalpha.com/article/4930302-sabra-health-care-reit-inc-sbra-q2-2026-earnings-call-transcript)
+  - Sabra Health Care REIT (SBRA) Stock Looks Stretched On Earnings But Strong On Returns - simplywall.st (https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZ3lNcVJwYklnZHc3ZHVfVTctcWpDZnNrMmpSUlY5RFpFSlFPLVY3ZEF3V1ZzQXdBUmVYb2JrUmNmMzVnNFNkUjhoVzY3d3hxSklWOVNaWlJsMGlsR2k2RWJWTjUxYmo3YW9fdjBXWVhBUVpUb0RjcHkyT1BpZkhnTkt5Rk9OMnU3R0ZtQjFkVmk5Rk16Y2k1eElxdExNQ2JESnJHRlhJUE1US2c4YVptMWlndFhNek5QZHY3VGtPYmdGSGpFbHRURnJJRFVYTDdraV91WFNkbkFRZzRVR1RpZjZ30gHiAUFVX3lxTE5neU1xUnBiSWdkdzdkdV9VNy1xakNmc2syalJSVjlEWkVKUU8tVjdkQXdXVnNBd0FSZVhvYmtSY2YzNWc0U2RSOGhXNjd3eHFKSVY5U1paUmwwaWxHaTZFYlZONTFiajdhb192MFdZWEFRWlRvRGNweTJPUGlmSGdOS3lGT04ydTdHRm1CMWRWaTlGTXpjaTV4SXF0TE1DYkRKckdGWElQTVRLZzhhWm0xaWd0WE16TlBkdjdUa09iZ0ZIakVsdFRGcklEVVhMN2tpX3VYU2RuQVFnNFVHVGlmNnc?oc=5)
 
-**Step 9 — Research.** The model wanted to know: *"Host Hotels HST news August 2026"* → got 6 results (via gnews_rss)
+  - Sabra Healthcare Reit (SBRA) Q2 2026 Earnings Report - Results, Call & Slides - TipRanks (https://news.google.com/rss/articles/CBMibEFVX3lxTFAxb0NoR3hPRkdtRHVHMmVGYUlTMGVMQmVYVjdaNDhwUGJRVlVieHFoaDc4OUN5clFjMDlObHJZMVNZMUNvclZvbWtST3pWWWNHcXBhOEdIcWh0Q3NLbVhfWWc0alFPZS1iSWU5aQ?oc=5)
 
-  - Host Hotels (HST) EVP Michael Lentz sells 56,757 shares - Stock Titan (https://news.google.com/rss/articles/CBMitwFBVV95cUxPMGF4TUFJYXdsTzg2WG94dEtnOFp3bHI2RDJWcXBhdDZHNW0yX3U3Y1lLZVBtOHFWZUJKbGpiQkpldE41X3JMRGFMN3laZ1BFekoxSXNXLTFfdTNZUHNiakVIUzYySWliZWNldzE5TWM1dTB0X2VUeDVaeDBldUp4RGJpTFB3cE10Rjg2MWdXck0xTGRURWJkbGJSdnFaVWRhY3kxdVdnVlZSM09ZYndPd0FlYzBpVVU?oc=5)
+  - SABRA HEALTH CARE ($SBRA) Releases Q2 2026 Earnings | SBRA Stock News - Quiver Quantitative (https://news.google.com/rss/articles/CBMilAFBVV95cUxNV3dKT3BRZDRfSDBYaFBHQ3ZSNFhPcWxWb2JCS25McG5EME1EM2ROZ0tYa0VIWGJiQUN0YndHUkl1bU5CQ3lhb0xUNW1EcjNweXA2YkdCZGxNVXJDdE5PLURSeXNma0JHNFRncHdVSHNabkNFME1jWDRSWlhQSzFBNURkZjRlU1M3anNjd0M3M3lybExz?oc=5)
 
-  - Will Zacks’ Upgrade and Earnings Outlook Shift Host Hotels & Resorts' (HST) Value-Focused Narrative? - simplywall.st (https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTWRpS3pCcXVXX3Y4MUdJVWd1NVJpa3hNRWFVU0Q5alh3TU51bDJPRnFpb185cGFVNW5EZ1hJTU5SbDQ2SmhENEhvMHIyQXJXRThJbS0wQ3pjNGhkZkpJRkUtc2VhX1draXBWNWVnZks0aDdBOWhVaU1zTzFrUkpyY0RDMzZDOGVDdDJPblFfQmt0dXF3U1Y2TjV4Qk5EZmRvejBURmt1MVh4T1o4U3RNU0F3bmdpRWN6bEcxemRzWUZLU0JpSzJYcmU3c1ZBdkZyOFZxcmstWdIB3AFBVV95cUxNQmhzS1RqckQyMzFtV2YzcElMNVRiYWNEcUEwMXEyVnlqaUJNNW1Bdm5WSFZONVFHMU1sRFFtVkt4Q3lublFWSWtWNHNQc3BJRUVqdDBxVUJkTGpzOUtIdFFvSlUtLXN2UF92WlJlUHlYUXFZSkRqdjhjZ1plM2kzRkZxNUVyM2dvbUtETHptSlJ5VzdRbHZ2a1pyUE9UMlh2by1NNWlTNzVjbUZ6VGdSUEVKNS1TYjJzUDVnbzlHQktMTmxPblQyNnp6RHBCeTRMZEtvdE15RVRrNWNM?oc=5)
+**Step 9 — Research.** The model wanted to know: *"Host Hotels HST news August 2026"* → got 6 results (via ddg)
 
-  - Host Hotels & Resorts: Valuation Still Looks Attractive (NASDAQ:HST) - Seeking Alpha (https://news.google.com/rss/articles/CBMingFBVV95cUxQRVBBYXZzd0loTEJBZFlhdndxd3RRdUxUU0o4ei1TUjk2RWNpR3VDVU9rZjdtVjB2blFtLTBmS3hxWWlsblQyWmVZLW1NVW5ETG82S1hIakNSOW1kOVhUOTJybWlHcGIxdEgteVllX1VPSkZfZExuZTNNM0k4OENBNlFJNjJSaUFfUkN6SWxaeFRDN2RINGlBbUpqcFd0QQ?oc=5)
+  - Host Hotels & Resorts (HST) Lifted 2026 Guidance, Is It Still ... (https://simplywall.st/stocks/us/real-estate/nasdaq-hst/host-hotels-resorts/news/host-hotels-resorts-hst-lifted-2026-guidance-is-it-still-bel)
 
-**Step 11 — Research.** The model wanted to know: *"Ryman Hospitality RHP news August 2026 senior notes"* → got 6 results (via ddg)
+  - [Host Hotels & Resorts Q2 2026 Earnings Call] Host Hotels ... (https://finance.biggo.com/news/US_HST_2026-08-06)
 
-  - Ryman Hospitality Properties, Inc. Announces Proposed $700 ... (https://ir.rymanhp.com/news-releases/news-release-details/ryman-hospitality-properties-inc-announces-proposed-700-0)
+  - Investor Overview - Host Hotels & Resorts (https://www.hosthotels.com/Investor-Relations/Investor-Overview)
 
-  - Ryman Hospitality Properties, Inc. Announces Closing Of $700 ... (https://www.compuserve.com/news/story/0022/20260825/9815964.htm)
+**Step 11 — Research.** The model wanted to know: *"Ryman Hospitality RHP news August 2026"* → got 6 results (via gnews_rss)
 
-  - Ryman Hospitality Properties, Inc. Announces Proposed $700 ... (https://www.sahmcapital.com/news/content/ryman-hospitality-properties-inc-announces-proposed-700-million-senior-notes-offering-2026-08-11)
+  - Ryman Hospitality Properties, Inc. Announces Closing Of $700 Million Of 6.250% Senior Notes Due 2035 - Yahoo Finance Singapore (https://news.google.com/rss/articles/CBMilgFBVV95cUxQcDc1eTNMcG96TUJNc1hYd2loY1gxbV81dUtiOWJra0pmcVc5UThNZUNNd1BMbVd0NW41WlZYamRiOVZ5TlpaVktqaVJqXzBSd0xWcXJId0lpXzVFOVhGTVdoU3lfa3N0SGlkUEFkRTVDNVBFWUpnUDNsNkRmdnpZVHJLQjBmNFg0QzRxNXJ2eExFTkRuaVE?oc=5)
 
-**Step 12 — Research.** The model wanted to know: *"Apple Hospitality REIT APLE news August 2026"* → got 6 results (via ddg)
+  - Ryman closes $700M note sale tied to a pending $1.38B Orlando resort deal - Stock Titan (https://news.google.com/rss/articles/CBMivwFBVV95cUxOZjhUWlhvbmZnY0FxaHpCS1cyQTNrRUVYcHk4SEhFLXVyd01YUExLUDdKT1p4QnREN3ZZbGJiMHFvR2VrcGVDR2pFckt1M2lHU29ydXg5amltN1BHX24yeDdWcDY0ck52Zm9TMjdHbkZ1NEM1dUhHRXBadEdKQ1VGTkZsSlduRVh5bUY3YktsRjZUUFN1aUFkZW55VHlkSzFBa2xjbGMySFV1QjQ2X1lpNUF0QmZrRnB0clRLS1J2Zw?oc=5)
+
+  - symbol__ Stock Quote Price and Forecast - CNN (https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGaG92Y0VDSlhfQmxydW1rcmt3dWJWbS1CU1JacnFxaU00R29zcGtZRGYtX3ZFSGZ6OWZMRTNhSldQVGlITnUwVnVtWFp5aUE?oc=5)
+
+**Step 12 — Research.** The model wanted to know: *"Apple Hospitality APLE news August 2026"* → got 6 results (via ddg)
 
   - News, Presentations & Events - Apple Hospitality REIT (https://ir.applehospitalityreit.com/News/)
 
   - Apple Hospitality REIT Announces Monthly Distribution (https://www.tmcnet.com/usubmit/2026/08/20/10433352.htm)
 
-  - Corporate Overview - Apple Hospitality REIT (https://ir.applehospitalityreit.com/CorporateProfile/default.aspx)
+  - Apple Hospitality REIT (APLE) Q2 2026 Earnings Call Transcript (https://www.fool.com/earnings/call-transcripts/2026/08/12/apple-hospitality-reit-aple-q2-2026-earnings-call-transcript/)
 
-**Step 13 — Research.** The model wanted to know: *"Prologis PLD news August 2026"* → got 6 results (via gnews_rss)
+**Step 13 — Research.** The model wanted to know: *"Prologis PLD news August 2026"* → got 6 results (via ddg)
 
-  - REG - Franklin Templeton Prologis, Inc. - Form 8.3 - Prologis, Inc - TradingView (https://news.google.com/rss/articles/CBMizgFBVV95cUxPMVk0OHRWd3NOS0I4clVtOUJzQmxxWFh6b192X0g1d3E0MkFlMElCU1J2YXFpaTNLV1lFTUZJWmI1MFlNVjR1Zk9IYkpweVNISUJWcjdjdnB3c0hSeFBYcDJ2M0s5aFdGdXdlNjFXT2dERDMycEdJSkV3aGhTUjZERWpxUEFVY3d6MmJfSTFTdXk4V1JUelZsdlRpR0ktZV9DdFdVT0JNeWdSZnlsaGQ0cjI4MUZvZXMyTFp1TTBzVVgtRDZZc2gwNXk1dW1iZw?oc=5)
+  - PROLOGIS ANNOUNCES PRICING OF COMMON STOCK OFFERING - Aug 4, 2026 (https://www.prologis.com/sites/corporate/files/documents/2026/08/2026-08-04-PROLOGIS-ANNOUNCES-PRICING-OF-COMMON-STOCK-OFFERING.pdf)
 
-  - Prologis Reports Second Quarter 2026 Results - Prologis (https://news.google.com/rss/articles/CBMinwFBVV95cUxNRGswQ01RWThDNjZsdTFvRlQ1V0ltel9qTHVvSm1SNHV0VW1MXy1ObUlJaW9vS2l2eFVLUEFIMU80cjVYMlI5TVZoQ2VEYTA4ZVc0MUljSWt1cEdTZTdUVGZ6S3dUUXRyb1pBX1lKTXNMZ24yazh0NmxGNXhraVloemVxVHE5aVBDbFl6UzdKTHY5ODB6d0NuaGdDSHZNWU0?oc=5)
+  - PROLOGIS ANNOUNCES COMMON STOCK OFFERING (https://www.tmcnet.com/usubmit/2026/08/04/10424505.htm)
 
-  - Prologis Announces Recommended Acquisition of SEGRO plc - PR Newswire (https://news.google.com/rss/articles/CBMisAFBVV95cUxNMFVIclYtMUJUM0VVUEdlN3h5LWVqT3hPRmN3U2NIV0VNc19ldlVVLVFtQy0tTkg3dllhSDJuUDYtTkJhMHBueVJLLW1ha1RsNS1iZ1BYMTVyMk1LYXYxbTR4T1FxMUFrNDBUdndkVFFLcWk1WF9NZWE4YTl6bWI3Y0NkNnNuYXktQkJ5QVJWQ1ZEUGp1WjN6aHJWWUFiSlJnSUxIV2t0MF9vLXpRU25MQg?oc=5)
+  - Prologis Announces Recommended Acquisition of SEGRO plc (https://www.prologis.com/insights-news/press-releases/prologis-announces-recommended-acquisition-segro-plc)
 
-**Step 14 — Research.** The model wanted to know: *"Public Storage PSA news August 2026"* → got 6 results (via ddg)
+**Step 14 — Research.** The model wanted to know: *"Public Storage PSA news August 2026"* → got 6 results (via gnews_rss)
 
-  - Public Storage Declares Third Quarter 2026 Dividends (https://finance.yahoo.com/real-estate/articles/public-storage-declares-third-quarter-200500117.html?fr=sycsrp_catchall)
+  - Adelante Capital Management LLC Buys New Position in Public Storage $PSA - MarketBeat (https://news.google.com/rss/articles/CBMizAFBVV95cUxNaFBuNXVPNVVrZXQzUVBBeHlVaC1kUGJremlDT01MMWtTa3MteklZdzhrT3E3UC13YnZrdWVqeXh4N19aNk41MGJaUWF0M2NObUtnMG5qUHc4d1hTSjIwaXQ1a1l5a25kYU9fZW5fbU1RSWVRREdkUE1RVTlBTHFNSW9XSEN6YV94UTJaU05QQzd6SzZkUDNSSVZsRVFyNHZVYTY3N3R0NEY3cmJjTkpPVFMySzZtSmRQd1RuT2lhdWlpVUZTRGI4Y3hxZUY?oc=5)
 
-  - Public Storage Declares Third Quarter 2026 Dividends (https://investors.publicstorage.com/news-events/press-releases/news-details/2026/Public-Storage-Declares-Third-Quarter-2026-Dividends/default.aspx)
+  - Bamco Inc. NY Makes New Investment in Public Storage $PSA - MarketBeat (https://news.google.com/rss/articles/CBMitwFBVV95cUxQZ2VpcW9ERnhjQ3dZYXVFZmxEVDkwWU10Nm9yVDM2YkRfU0llMjZHa0xzOF9SeG5ZT0RER1gteks4d0lMOWtadENiUkhCZDZkcWhuTjZhNmFfc0o2SGd5TnVWVVo5bnF3MXpXVnFzcFRTVGtuZjhFZU1mclhNOEhabkMwSVgwcmRYWm5wSWlQWWtFQk51SEltT1gtWGFMVVhLQ0lodF9fN0NXeHNoaV9yVms3R1lrQnM?oc=5)
 
-  - Public Storage - Home (https://investors.publicstorage.com/investor-relations/default.aspx)
+  - Public Storage (PSA) Raises 2026 Guidance, Is The Stock Still Cheap? - Yahoo Finance (https://news.google.com/rss/articles/CBMimwFBVV95cUxQdU1id3poWXowOWJ6Z0VHaE1leUktbHZpODE2WXdhak9TU1BSRnc0N1p5MnYtbjl3ZjkxbHl4dWxYTlQ3a25CNUFQeHJ3LWNOLTRSQ0IxbC1UNXBsS01Va3hhNkJwdXBxTkY4MHpXZEtNSGI2T01GazlaTVRqb3BLaGtueEZYWFgtVnpEVXgtSUpERlRmUVNjQ0F6NA?oc=5)
 
-**Step 16 — Research.** The model wanted to know: *"Terreno Realty TRNO news August 2026 Redmond acquisition"* → got 6 results (via gnews_rss)
+**Step 16 — Research.** The model wanted to know: *"Terreno Realty TRNO news August 2026"* → got 6 results (via ddg)
 
-  - Terreno Realty Corporation Acquires Property in Redmond, WA for $8.0 Million - Business Wire (https://news.google.com/rss/articles/CBMizwFBVV95cUxOcWMtV0NBUGlSOXJycms4aHM3TTVPMGo2MERrZDlGTlo0ZXI4R2N3RXo3WWV6bTk4T1B6R044M2p2UmhOZXdxVUtKOWZuTmxHU1J0OTR2ZG43UkVLajRFY1hXeVdPMFhibzY1VWN3YVNtSUY4ay1KMTZhTHZBUGtMb25VQ0dBMzAzX2JoVk9hVjBvWDFONmJUTWJQQkpMd2tvZERfb1gwZmdsYXFWNjRqUW1IQWZnUVBqai03emVkS3hJZkIxTXhPWlFzVjZGNFE?oc=5)
+  - TRNO - Terreno Realty Corp News | Morningstar (https://www.morningstar.com/stocks/xnys/trno/news)
 
-  - Terreno Realty expands Eastside portfolio with $8 million acquisition - The Business Journals (https://news.google.com/rss/articles/CBMipwFBVV95cUxPUWE2VUFIaUpYWnBNNGMxNXdPWGpVYmxMT1dLZ3JIQmY2dzVrZjJnQWRVMVJmNHo1SHVqbHRYcXF2djBmUHhyVk5MZDJBcHJlZVc3WldGSDN0VDJUUDhIMGIwbEQtb2x6dS1DWjdFeURZYTBfT1FBcE9sM055cnpsNldqQmdraHMwVmVoaWNRTEdRbVMxOU1PajE4cUg3cTR0YjMzOWpNYw?oc=5)
+  - Terreno Realty Corporation Acquires Property in Brooklyn, NY ... (https://investors.terreno.com/news-presentations/press-releases/press-release/2026/Terreno-Realty-Corporation-Acquires-Property-in-Brooklyn-NY-for-26-3-Million/default.aspx)
 
-  - Terreno Realty (TRNO) Adds A Redmond Asset, Is The Stock Still Cheap? - simplywall.st (https://news.google.com/rss/articles/CBMizgFBVV95cUxQSGJvQXpES3ZCNDQwcDFBWnJ1ZHNRRWNlZS1laUNldG5LcDNhd1ZwdEdZd281RGNEQmJPUzI3RVRtNHRhY1R3bHR3OVhWVnpYeWtodGVmZ3VZTV9aNVliSUNGY3NrXzJkZGRqSWhweVlEUUNNNnlZaXlacnoydnVjQjBOX3l4Q3F5aXRRUjl6eEFJcnBsMkNHZ1VKVG1uVWU0OGo1RjRuaFpscmVpUWtsUDF1cGFmQkV5RGxrR0JTX3ZEWkhvMV9Bd1AxanpoUdIB0wFBVV95cUxPRmZ0Qy03Zmw1U2JES3Z0dlc3aDVpOUYzXzRGNDBjeHlLMnJkUDJTdEFYNDZVazRZX3RwTmRQcVVqOHdWRjdxeGdJU214RHBmZU5GV0NwdVhxLTZzSXZORS1oOC00RXpaMzZLS0JDNDhTZ3o1UGQzRUhvd2t4NDB6UmVGdnpZRVNJeXF5MVhORmxLSjJMNVhaQkZKbmR2ZDBuNDEwc2tGNmZiaXhqdWRJa2pad2lsWDg0S1RvVXY4QzBJRlZNNXpTaVB0RUlpbVJvZWw4?oc=5)
+  - TERRENO - Terreno (https://terreno.com/)
 
-**Step 17 — Research.** The model wanted to know: *"LXP Industrial Trust news August 2026"* → got 6 results (via ddg)
+**Step 17 — Research.** The model wanted to know: *"LXP Industrial REIT news August 2026"* → got 6 results (via ddg)
 
   - LXP Industrial Trust - Investor Relations (https://ir.lxp.com/overview/default.aspx)
 
-  - LXP Industrial Trust - News - Press Releases (https://ir.lxp.com/News-1/news/default.aspx)
+  - LXP Industrial Trust Earnings Q2 2026 - Report | LXP News ... (https://www.panabee.com/news/lxp-industrial-trust-earnings-q2-2026-report)
 
-  - LXP Industrial Trust to be bought for $5.2B cash | LXP 8-K Filing (https://www.stocktitan.net/sec-filings/LXP/8-k-lxp-industrial-trust-reports-material-event-153aceb17e06.html)
+  - LXP Press Releases LXP Industrial Trust Common (Maryland Reit) (https://marketchameleon.com/Overview/LXP/PressReleases/)
 
 **Step 18 — Research.** The model wanted to know: *"Dynex Capital DX news August 2026"* → got 6 results (via ddg)
 
@@ -124,17 +124,23 @@
 
   - Investors :: Dynex Capital, Inc. (DX) (https://www.dynexcapital.com/investors)
 
-  - DX News Today | Why did Dynex Capital stock go down today? (https://www.marketbeat.com/stocks/NYSE/DX/news/)
+  - DX - Dynex Capital Inc News | Morningstar (https://www.morningstar.com/stocks/xnys/dx/news)
 
-**Step 19 — Research.** The model wanted to know: *"Blackstone Mortgage Trust BXMT news August 2026 office loan"* → got 6 results (via ddg)
+**Step 19 — Research.** The model wanted to know: *"Blackstone Mortgage Trust BXMT office loan news August 2026"* → got 6 results (via gnews_rss)
 
-  - Blackstone Mortgage Trust Inc. - Press Releases & News (https://ir.blackstonemortgagetrust.com/press-releases-and-news/default.aspx)
+  - Blackstone Mortgage Trust (BXMT) Stock Looks Above Fair Value But Sales Look Weak - simplywall.st (https://news.google.com/rss/articles/CBMi6wFBVV95cUxNSzR4Zk9oRDIwaHhWOWc4NHFzSHVnYnFNWmNyRl9BX3hsWEtubVJVZTlUSGNDTEF0aW45N29tNkZXUTk3ODRFTEMyanpsOFpWaEtWZXBPM2NUR2FlS19HZldhTDFHS0VTT2dkMXBBZjR2TXZlSVhRZkZINHFOV3VPMmxJbUNmekNIVHc3cEtZV0lCUHR5Ty1EbW1NeWxZaEdLQXp5ZFFFVW9obmtqVGFGcTRJenJ3aGZyOUFWdm1vaXI3RzB0YzFTUUxDRHJIUDRVNDhaM0RIMVBOQUoyOVJwdHBPajdvMDZaUDJr0gHwAUFVX3lxTE5kenhTTlJiQW5abmhnb01xNlpTUTBoY2lmVEp5aVdTZGRHb3hQekI3dENZWE9acFBUQVZVV09yd2VuVGtpYTZ1NHlmaHllUVl2UEtjdXg2NFcxbDhjZUFZUlRSWC1laUN6YlRNejlJOG1sS3d1RFJxY0VOSndhem9qWWc5cE5lTll6X29oMlZGWFRuY3Ntc0pkVEJaNmowWnNMSldfR0ZtTEowZ1VfMndMTTZHallfVDNENGk5MXRac2hlM1l5a1RlS2hodFVqUjIycEJMczNfVEdQSUd4STZJekZpcDVheGZRSkdrWWFWSA?oc=5)
 
-  - Blackstone Mortgage Trust Inc. - Shareholders (https://ir.blackstonemortgagetrust.com/shareholders/default.aspx)
+  - Blackstone Mortgage Trust: Unjustified 25% BV Discount (NYSE:BXMT) - Seeking Alpha (https://news.google.com/rss/articles/CBMivgFBVV95cUxOaW45eHZDZ0plMVNzbGRkZl9JZG9hOEdEVk0wYVFuNjdlX0JfVlhpWXN2QnlUV2ZkNGdJTmRNdXByY1pka1ZMVkVHaHRLUlkyajFnMkh3NE9zcHRHZFZrWlMzbms3SDJJd21HS01VcVZ3MHlGZTdmZVQ0WlgzUm1KZ1JSS1NXbXVoMUpWU0hUYUFWSWRfS1JPWVdvcm4wM1EyZVN3Sm9CSnQzOFVVZE5oQzRfVXhId0lpZ3B0RElB?oc=5)
 
-  - Blackstone Mortgage Trust (BXMT) Q2 2026 Earnings Call ... (https://www.fool.com/earnings/call-transcripts/2026/08/03/blackstone-mortgage-trust-bxmt-q2-2026-earnings-call-transcript/)
+  - Blackstone Mortgage Trust (BXMT) Q2 2026 Earnings Call Transcript - The Globe and Mail (https://news.google.com/rss/articles/CBMi4gFBVV95cUxQVnVvY2hDNjBUUFRESUdZLTM5ZGxyc3hwMGw1UkNZSmVSb21LbFhwalJFMmZXTVpyUmZ3TDQtVjVVZGUwNHk2RklzU3hwOERrOEdHNHpqUXpHVDJBS25idHZkSXJjQmp3Y1ZhSExRNklYT01DUlV5UzFYRUxycDFOQ1ZTSWI1OGtzbVJfdUVrNDBiMXBzWkFkM2lGak9GMlN1UFI5UGtCRDJkNjhjdEJqNWtGS3Rtb3ZLdDhfQUxjSEJDY2ZhQzdYd0tWZVFZakJ4Q3dIY1k3dk9tM285NXJZNWF3?oc=5)
 
-**Step 21 — Research.** The model wanted to know: *"BXP Boston Properties news August 2026 senior notes offering"* → ❌ search failed (searxng#1: searxng returned 0 results (upstream engines likely blocked) | searxng#2: searxng returned 0 results (upstrea)
+**Step 21 — Research.** The model wanted to know: *"BXP Boston Properties news August 2026"* → got 6 results (via ddg)
+
+  - Latest News - BXP (http://ir.bostonproperties.com/newsroom/latest-news)
+
+  - Press Releases - BXP (http://ir.bostonproperties.com/press-releases)
+
+  - Investor Overview | BXP (https://investors.bxp.com/)
 
 **Step 22 — Research.** The model wanted to know: *"Alexandria Real Estate ARE news August 2026"* → got 6 results (via ddg)
 
@@ -144,101 +150,101 @@
 
   - Alexandria Real Estate Equities, Inc. to Hold Its Second ... (https://finance.yahoo.com/markets/stocks/articles/alexandria-real-estate-equities-inc-123000537.html?fr=sycsrp_catchall)
 
-**Step 23 — Research.** The model wanted to know: *"COPT Defense CDP news August 2026 dividend"* → got 6 results (via ddg)
+**Step 23 — Research.** The model wanted to know: *"COPT Defense CDP news August 2026"* → got 6 results (via ddg)
 
-  - COPT Defense Declares Third Quarter 2026 Common Dividend (https://www.nasdaq.com/press-release/copt-defense-declares-third-quarter-2026-common-dividend-2026-08-13)
+  - COPT Defense Properties (CDP) (https://investors.copt.com/)
 
-  - COPT Defense Declares Third Quarter 2026 Common Dividend (https://finance.yahoo.com/real-estate/articles/copt-defense-declares-third-quarter-201600846.html?fr=sycsrp_catchall)
+  - Press Releases :: COPT Defense Properties (CDP) (https://investors.copt.com/news-events/press-releases)
 
-  - COPT Defense Declares Third Quarter 2026 Common Dividend (https://investors.copt.com/news-events/press-releases/detail/559/copt-defense-declares-third-quarter-2026-common-dividend)
+  - CDP News Today | Why did COPT Defense Properties stock go ... (https://www.marketbeat.com/stocks/NYSE/CDP/news/)
 
-**Step 24 — Research.** The model wanted to know: *"SL Green SLG news August 2026 BofA conference"* → got 6 results (via gnews_rss)
+**Step 24 — Research.** The model wanted to know: *"SL Green SLG news August 2026"* → got 6 results (via gnews_rss)
+
+  - Adelante Capital Management LLC Invests $5.50 Million in SL Green Realty Corporation $SLG - MarketBeat (https://news.google.com/rss/articles/CBMi4AFBVV95cUxPcnZ5aC1pdW5WbE9iZE1nMUo4TTNXS3ZGZXZjbFpLbXo2bXBocXJ6MmNHWVBrTlZxanVJZ0dWV1R2T0IxbHpzZF8zaURwTXNtSTJTS1l5RGpibWFNcGRBeEJxajRrX0pjcms4b1o3SExSazRpNWNFQ05YSWw4QU1mVzJFWmRLd2x3QVNXT2RsT085X3RKQTg1V19XWU44WUVyN25XbVVvSjl4VDJpMERPTzhVeDNsVlBoQUFJVDlrT0hMcWozS2Rhak5QdFV5RnJPZDJFQUxOMGgwWldTWVRXSQ?oc=5)
 
   - SL Green Realty Corp. to Present at the BofA Securities 2026 Global Real Estate Conference on September 15, 2026 - Yahoo Finance (https://news.google.com/rss/articles/CBMilAFBVV95cUxNWk5FbjBqWXNYZjFqeV9CWWctdkJVZkp0bUJzNldMT1BFa0dQWEFDdEV0a3lqR2YyT3BOQzFWTW9PLVpYcGY5aDVmQ2RHRGdlQ2ttWEpSXzhScTc5eU1oVXhXQnJ2OFZhUmpQaWpaeUFPM3lHY1IwM0J4aWVyZmlUZWlBejZ5OUJOVjBIeWd1b3k1cHdV?oc=5)
 
   - Manhattan's largest office landlord, SL Green, will webcast a Sept. 15 roundtable - Stock Titan (https://news.google.com/rss/articles/CBMivgFBVV95cUxPOGxtUDVvUTNpOXJzQ2RqSnl0a3ZVWkNIZlI4ZC1IMWpKa1U4NjFJZWpTUWloNEVXaDRZejcyYy1sbC0xS1pITVloQ3hJN1d2VW5RMlduNVRrUDNPXzhjZmhXbWdlWHF5QzQzR0doTWxSYVc3bGZBTU1XSnYzU0FwUTdMYWI3RGZsM1FTbGw0dGpFV1ZPQ25lMTEzbFFkMVBtMkdDZms2LW9aODNLUkVvRGZ5M215VnowNXBjdjVn?oc=5)
 
-  - Superior Group of Companies to report Q2 2026 results, host conference call - Bitget (https://news.google.com/rss/articles/CBMiY0FVX3lxTE5UUzFpUENKXzROYVFrM1pld0JqcVd2N1lLaVhTbnAwaTFFbjg4T196SHE0VVBkZU1CVUhOb0hvNHBOdHJVVE1tNHdYQ2hEUmdTYkt4Q2xVbFJxME01VGFVbnZtMNIBY0FVX3lxTE5UUzFpUENKXzROYVFrM1pld0JqcVd2N1lLaVhTbnAwaTFFbjg4T196SHE0VVBkZU1CVUhOb0hvNHBOdHJVVE1tNHdYQ2hEUmdTYkt4Q2xVbFJxME01VGFVbnZtMA?oc=5)
+**Step 26 — Research.** The model wanted to know: *"Vivmark Residential VMRK news August 2026"* → got 6 results (via ddg)
 
-**Step 26 — Research.** The model wanted to know: *"Vivmark Residential VMRK news August 2026"* → got 6 results (via gnews_rss)
+  - Vivmark Residential Launches as One of the Country's Leading ... (https://www.tmcnet.com/usubmit/2026/08/17/10431168.htm)
 
-  - Vivmark Residential (VMRK) exec sells 300 shares, holds 17,988 - Stock Titan (https://news.google.com/rss/articles/CBMiswFBVV95cUxNX1hhaWZSS3Zjalk1ZmhjSGVmV1k3Wi11bHN0ZkRSaFEzU1ppZ2p2TFlSQ2lHRTFVcWxrQWExVm9zZm00WlF3M3A4WmlOdXNnQi1rcFhLWS1kVVlVQnY0LU56OUtGQXl2bzFjc3hwTFBMd2dZZHBzTEF0ZFhTbEhTWk41MTBjYUV2Q0s4WEh1S1NSNDBLT2ROakFLdUt1NkNIUHpKRkZXcE5LdURFaGM4NkdHSQ?oc=5)
+  - Vivmark Residential (VMRK) (https://investors.vivmarkresidential.com/)
 
-  - Vivmark Residential: The Merger Does Not Change The Story (NYSE:VMRK) - Seeking Alpha (https://news.google.com/rss/articles/CBMingFBVV95cUxQcWVyM0k1Ym5IRkJFRFozYzdyTnlsYTg2WkhEWUZka3VCWjR6eGZXZWxIT0wydTdaWFJrMW5INEtOTlRuVUZSNzhNQ0ZIalBZZkRrTDhQSXY0WkF5UE9CNkVUd2ZRNk5jNGJxMmlrTFI2VzMwZ21jY3JnbE5SVnJmZHZTcU9kTmVwZnJ1U2Y3OEJEUU90a3VnT1NvTVhfQQ?oc=5)
+  - Press Releases :: Vivmark Residential (VMRK) (https://investors.vivmarkresidential.com/news-events/press-releases)
 
-  - Vivmark Residential (VMRK) exec gifts 1,400 company shares - Stock Titan (https://news.google.com/rss/articles/CBMiswFBVV95cUxNVmRGZy1tUG5MTjlXeDd6WWphX1hkMG5zU3VDMDR4QkU4SktBVGZwbUs1NDVtZEpxeE5IUl8wY1lhS3kyYWw4VUxSNk5zWXdydjk3S3d5a2R3LVBuRm5HUjVZQjdUSEpndTZBVUxwMEpTbWx0LWVweExTbDdGVzgyRUFsRHVwelVxVGVfTS1Nc1UtY3V3MDA0cm5zY19VeDhRalFHbzJDNWpzQ2lYUi1URFZlOA?oc=5)
+**Step 27 — Research.** The model wanted to know: *"UDR Inc news August 2026"* → got 6 results (via ddg)
 
-**Step 27 — Research.** The model wanted to know: *"UDR Inc news August 2026 dividend"* → got 6 results (via gnews_rss)
+  - UDR, Inc. announces Monthly dividend, payable on August 31, 2026 (https://www.marketscreener.com/news/udr-inc-announces-monthly-dividend-payable-on-august-31-2026-ce7f58d9dd8ff026)
 
-  - UDR Inc's Dividend Analysis - Yahoo Finance (https://news.google.com/rss/articles/CBMikgFBVV95cUxNaVZCWkRPcGtqRU0wcWw2VkhkTldjd2syMXRMSE9KUm5sZkZQR2Z4ODBQNGxvWU9kdVB5TzdxUE52SW9UYldWY2RCWFhqVGwwRUo1RGFFNW5qRFZnSFhHS2wxemZXZmIyT3c5MTZ2dFl3TFB0d3FhaTdkcFo0Um9ZOWRzMnM3dEFQN2d3MEdnZW0wQQ?oc=5)
+  - UDR, Inc. (UDR) Latest Press Releases | Seeking Alpha (https://seekingalpha.com/symbol/UDR/press-releases)
 
-  - UDR, Inc. Commences a Monthly Dividend and Declares Dividends for the Second Quarter of 2026 - Business Wire (https://news.google.com/rss/articles/CBMi4gFBVV95cUxQUDd1MEdIYWxubEVMUWI3ZC1FVUFnbFc5UGdMeHRkMTlhS005ajlOQ09VNHg5c25lSnZINHNuU0l1a3BDRVYwWEdPdmkyS01ydmlRU1l5ZjhacUpRQVhCTE16ZlVCYjRZM3NrNXVfRm1LZjc2aWY5blA2YUdTUU1iajdkcmc0LWFEdEUtSUZQM2Q0WGFMVVZpT09GQ1lGRzVWYlQ3QWdsdVN3a05Hb29uQUJiQzd5Rk11aGQ0Ri1YN1JId1BILTgwN3gxYW1MMW4zUkFsbEFJVEtWUWVyX2Nld213?oc=5)
-
-  - UDR becomes first REIT to go to a monthly dividend - Multifamily Dive (https://news.google.com/rss/articles/CBMikAFBVV95cUxOTHcyTWwwbUJ1bHA1U09nM05Pb3FNOW5JRmlNZFNYdi1UU0dtbTAyaHgxMXViM2FHVVFfdU53U3BpUXVUWE9VVGp2UlVrOUpUMFJnZy1PQThpbHFKMnJjOHBXdkxpUEtISTg5aXBNUWdHYUlVVzFzQnVYd0d6YlJpb0ZwSTZpSFZXQ1ZhcV8yYTI?oc=5)
+  - UDR, Inc.: Official Announcements - Stock Market News (https://www.marketscreener.com/quote/stock/UDR-INC-14730/news-press-releases/)
 
 **Step 28 — Research.** The model wanted to know: *"Independence Realty Trust IRT news August 2026"* → got 6 results (via ddg)
-
-  - Independence Realty Trust Announces Second Quarter 2026 ... (https://investors.irtliving.com/press-releases/press-release/2026/Independence-Realty-Trust-Announces-Second-Quarter-2026-Financial-Results/default.aspx)
 
   - Independence Realty Trust Announces Second Quarter 2026 ... (https://finance.yahoo.com/real-estate/articles/independence-realty-trust-announces-second-200500185.html?fr=sycsrp_catchall)
 
   - Independence Realty Trust Reports Q2 2026 Results: Full ... (https://www.benzinga.com/news/26/08/60908164/independence-realty-trust-reports-q2-2026-results-full-earnings-call-transcript)
 
-**Step 29 — Research.** The model wanted to know: *"UMH Properties news August 2026 dividend"* → got 6 results (via gnews_rss)
+  - Press Releases | IRT Reit (https://investors.irtliving.com/press-releases/)
 
-  - UMH Properties Inc's Dividend Analysis - Yahoo Finance (https://news.google.com/rss/articles/CBMioAFBVV95cUxQZHV0ampZcENuenMwVUNXckIzQ091dUVDMk9vdGRIeU0tLUhNYTlqekUzM0p5a0VXVkNDcTVQZWlVVHVOR3F3MTl3ZVdCQ1gyeFpRZEdZcWw3TzZEQ0pMQ1pYRDE4WWNEc1YydDZnRDVzeFc4cFdxUFFhak5FZElxb25qZEpxVFdwTE53RkxGVThHZVN2RFNYekVWUVNrWnVB?oc=5)
+**Step 29 — Research.** The model wanted to know: *"UMH Properties news August 2026"* → got 6 results (via gnews_rss)
 
-  - UMH Properties (NYSE: UMH) CFO adds shares via dividend plan - Stock Titan (https://news.google.com/rss/articles/CBMisAFBVV95cUxON3FkU3FwOU1OVVh3VmNqRGEwVXR4SUZhV3lqOGg2YmhHSlV3OFQ4eHJSMll4bENvVTExT25aOVl1anZhSVl3ZkNGUkpXWDFvZmh1Y1VDejFqMVdpMldWRDlYa0R2d01TZ1QyakxodXdwdFppWm5tUVB6RkYtUnBselIwOTdpelRUXy1ieXRsNzBOa2ctdG9UWE9KT2FZTU14cmRILTVSRnY2c0c4MDlpNw?oc=5)
+  - William Blair Investment Management LLC Invests $10.18 Million in UMH Properties, Inc. $UMH - MarketBeat (https://news.google.com/rss/articles/CBMi4AFBVV95cUxNdHd6SHgwN3Y2Q2d2MGV2MXBZdFRJMVRyaWJFS0dBNjNmS29GancxUVNoV0YyQTdQNjdSNkhTeDNwSkZkWXRPd1JLT01DQzNUMWZKbWVwaks5N0dHek5UcjJCaFpZeHJwdnN6SWVlZm1DVXZEd0tJVDR0TnhGOUFvbmxOYXo5NHBkY2dveHQxSHpHcFpWTXRMWUMtVTRjNTE5b1B4LWRQQkVHUmMtNFpLUlNfbzUwaGt3RkhGQ3BvZURJZUFpbk5feWpPTlBWNUxQa2xqQlJDWDJpWjJCUHUzZA?oc=5)
 
-  - UMH PROPERTIES, INC. DECLARES COMMON AND PREFERRED DIVIDENDS - GlobeNewswire (https://news.google.com/rss/articles/CBMiygFBVV95cUxPS2FwbmZWOVhfcElfN191dS1LYTNPVmcwRnBkbUpQT1N6em9yVmZUcjRHQWxiOGowVThxRGRrSXQ0TjgyRkZIQ0xabTQ3TnUtMXRNUW40czJmcUF1ZElrQ3lHRjZLUHJHZXh3UmtLSVotQ0pwQ241U2dTeXM4WDAtbmJvOEltTE9jeTZEODRBMi1MOHFnNVFVZm9rRzVIcjI0aVhicnRIZ0FfX0R4VG9OVGxkdVZKWXhKdWVPWEttT3NpZE1QQ016bEhn?oc=5)
+  - Why Everyone Is Watching UMH Properties (UMH) Now - simplywall.st (https://news.google.com/rss/articles/CBMivAFBVV95cUxNMXhyUDU3Y250NXd5YTVCS0ZrZWlBOGIzbVBRWVc0dEdzaG5fWkI4REwxU1pyOTFxdVBFQnZ2bDk4SUFKUmt2dXFJWGJCZWU2UHd5NnRBQmQzbm5TdzBDT0FiRTZOS2NMYUFZaVFNaTZIZGlGdVRrV19TSTJ2emI3cG9NNldCUnIxV0ItOWhOclplOVY2cDA1amJvVUtLcXZkMWZncURfay1DWkJXalRqalRmazJybUlMTmVkWtIBwgFBVV95cUxPZkpERU95V0ktYlBycHVER3NRMVdyY1VPQTludTRNN0FUU3lRTThkQ2FtWEF5T0kyMk5Db0s4TjJLT3hIczFqMGwwdXRXd2p2UENZOFdnRHRWeE5HUm1MUm1DQlA0T0pLVHhEQUhsYl93MmRjZ3hZWXZ2ekkzb3JiRkJrNWVnTHNJWWVxOXBsZHVxeFcxTzgxN3B5VHFMTXB1YUI1VnV6VmNLam5EeWxTOV8wSWJvSEtaRDVmSEl5bnBRZw?oc=5)
 
-**Step 31 — Research.** The model wanted to know: *"Simon Property Group SPG news August 2026"* → got 6 results (via ddg)
+  - UMH Properties: $11.5M manufactured-home sales set record - Stock Titan (https://news.google.com/rss/articles/CBMivwFBVV95cUxPNmgxN250Uzl2cUJYbXhLQzlKRmxHeWpURXFGWUJIUktTUmhqemRhbUduZFplT2JRaHJBYXpkZHJkWFpnRlBOWUN4bHFNcnVlMGRDS3J5R3RNd05OWXkyd3lQdUdEanVEYm5aZlhuUnNLYTNUREtVMG9VNjRBelFlbjlBckpOYThXcmJBRzYyVEhGckxJY09XZDQ5V0VDaFA4YnpBN2hYQldzSEFKb1cwcE1abGNJM3lxak9FNW1BVQ?oc=5)
 
-  - Simon Property Group, Inc. (SPG) Q2 2026 Earnings Call ... (https://seekingalpha.com/article/4934333-simon-property-group-inc-spg-q2-2026-earnings-call-transcript)
+**Step 31 — Research.** The model wanted to know: *"Simon Property Group SPG news August 2026"* → got 6 results (via gnews_rss)
 
-  - Press Releases | Simon Property Group, L.P. (https://investors.simon.com/news-events/press-releases)
+  - Jupiter Topco LLC Invests $103.44 Million in Simon Property Group, Inc. $SPG - MarketBeat (https://news.google.com/rss/articles/CBMizAFBVV95cUxQNFV3SzVReWU2T3RYQ3owWUhXM1lVdktHU3JHcVJPZW1VQU0yaTNBTjJxR3NaSlFFcjFrX216UFNPT1VibG9zZVNxYXBwbzRBUERJNC1yNjhmREk3VE1VMkI0aDFSNWF2dE1TLW9ydF9POHl5SVJCRVM5eHN1MjkxQ0N4U2VuYl9QZXUwYjZvQTBMeUltcGRnNHZjU2k0elY0YktycUpKU0IwS3NLY1UwNE9MN29CQW5PR1NUY050ZHF0SjRQNlBZS2RQUlA?oc=5)
 
-  - Stockholder Events - Simon Property Group, L.P. (https://investors.simon.com/news-events/stockholder-events)
+  - Raised Guidance And Higher Payouts Might Change The Case For Investing In Simon Property Group (SPG) - simplywall.st (https://news.google.com/rss/articles/CBMi1gFBVV95cUxOd3ZGanVpUGJEUUlmYWZQNDFrYndPaUxZZ0xpN2pDUzZkam13Tzh6R0dHU3J3eEF0clpEaUF6TWFZN3ItRUlvX01vajFaekJFWXNRU3JkSDBkNE1DTG9zV0lqelBwcWJLVkFXeUNXUzlhMTR0UVZwd29JOUhfbzRpaXJ5SUJzWjI2dWNhTlczUzFSSm9GbnN5cF92QXVFT1M4a0M5ZFB5cmJkRW1fZmRzQXZMelFXMWVLaU5kWDZjWG9sampCd1BhYnB2STdGX0dES0U2VG1n0gHbAUFVX3lxTE9yUFdtT0t6VWFGOEdCNXczZHVOZmduS0F6YnExeksyWVhfb3dvY2VqUGhzZjBJZnduN2tmZnZrcHh0aHdwdW1WUllLV1Z1TEtRNUNXX3Q2UmNhZkRxZEVzU3JjVFM1SjI4WnlabzJXb1JBZDNfNEg0SVlhY2lycGI0TEY4eVhhMHo3TFV6clE1OW5FLTJvUk5scGkydlJrVzZFWTFvRjZacjJBY0xaeWRKX3Yyb2dMb2txR04zVldUWnQyOTFpUWdPNlBMWVJwRVg2bVFoOVg3al9tYw?oc=5)
 
-**Step 32 — Research.** The model wanted to know: *"Realty Income O news August 2026 dividend"* → got 6 results (via gnews_rss)
+  - Is Simon Property Group (NYSE:SPG) steadying as retail real estate meets softer confidence today? - Kalkine Media (https://news.google.com/rss/articles/CBMi8AFBVV95cUxOV3lMNXBTUnJsZk9EeHBWakMxcDRsVHFOMGZhWVZJblNPVXFZVTVLQnV4Y0k0SHcwLWVwWEFOa1h1Ym1CZnVtR09YOXNGS2NkWHZSM2kxV3dCbmgzMFEzcmVXMmJIRVdGVEpuZEd3TXJRTklmbmtzX3pWc19naURWZldwYXRDc2IwTGVzOENFNmdUYjNkMno5dGh2VUdOV1ktVnNFOFo3OXFIaUV4WGJ3ZHZqRDdPS0lZamJqamd4ZWNqb3I0TUFhXzJ5dWFiai1zc2NGTnc3ZU9iY3F0Z09ucWtOOEMxcnByQ1ZrV192ODY?oc=5)
+
+**Step 32 — Research.** The model wanted to know: *"Realty Income O news August 2026"* → got 6 results (via gnews_rss)
+
+  - Realty Income (O) Stock Could Trade At A Discount On Cash Flow While Earnings Look Rich - simplywall.st (https://news.google.com/rss/articles/CBMiygFBVV95cUxPTi1UZFhiZmlVZnZ1VXRQRklmZWpfdGJjWGZGN0x6eE11aVMxY0dqcGxyTlJNV0REZUZWdGNtVGRnS0U5UHFRV2ZfSGRyZlFzRnNtajNLb2xPbWNUOFYwM1FOVUpTQVF3YXcteFZIYUpXajFTU1EwT09PU0NLR3JTN3lFaGpHLUI1X3BRR003WnZudTJaSnVvU3lwLUU5MU9nOVA1eUp2U1dGbHNOc04tUFJ3U0JtdlhHdFFiTVdQbF9nSW5VMzZnanN30gHPAUFVX3lxTE1Hb0FLMzF2UmxuZXhlQ0ZjQUZ2VHFWQnhqUUhKVi1MRUdYLTB5R05sTk8wanhVV3pfbzd0Tks1c0lBZktWX1VxTG85cDNtOWttcHVCS2g0b0ZRZXBULVV0WVo3RGFjR1l0b3lHYTNBcWRWSU9ZVVRNWHZJeUl2UkxmM0ItSHEzdlZpMmRXYjhzcG1WbU5ZMXRGUkZidlpKdG42UmRXcG5NZ0JKaFNETU5SZExjcnNSbDFsNEQ5NVA1Y05ISlZQUmFCWDR5Rmdabw?oc=5)
 
   - Realty Income (O) Could Be 12% Undervalued Following New Convertible Note Issues - Yahoo Finance (https://news.google.com/rss/articles/CBMikwFBVV95cUxONWw0dEFUb182R3M1UnktNUJ6cGhMem5aZWZNZDg5M0FNOXVYT0ZWZlhtQlBld1dVNFVSc3JnVmdBbUxzaEQtLWhnV1lKRlJXSXJGTTVnVGFZeEt6MzBJQXZXNFA5aWJQclJISms5THJPMUF0VVMxa1RtNkNVbm5uY0EzMzJXM052R284LUk5SXNNaVk?oc=5)
 
-  - What Realty Income (O)'s New Convertible Notes and Steady Dividend Mean For Shareholders - simplywall.st (https://news.google.com/rss/articles/CBMiygFBVV95cUxPQmd6WGt0cER2ZGgwV0ZkRTRWX3VORGRGTHpiaWRRNGlGYnFyQlpmNWR5QWVQc05ReVRabGhGbENmS3JnZ1h5ZHdCRzNhUE9iSjhYWHBOZ2RWbnRLdVJzQko1T2JFRXJhanFza0ZzaS1lMl8wSUlvZWxBcGY4THJpMVBfSG5Hbk14SXFIMWQ1aE40TDVvUU02QmU1NXhXNElhTWpNMHI1ajBpb3pCOG9oMXppYnFfdU1RYm5WTm5GelVveDZGUl83bDJR0gHPAUFVX3lxTE1jcUgyQ0JGS2R0TndQUVY2M2xaUUJERDRVUkpDUVFJRDVBNENQZURXR0xUZ2JvYjhIeHFIUEhWMzRUNUQ2eDZ4cFEycjhOM1A4VHBfZXNuRlJiaEwwOXhxTVY2R3FIbVBlTDlpLVU4TmZ0bXFocERJdXU2dGFOSzhDcnJ5UlI3VDIyYXd2YjI5bXAyWHhBWk53NDMtd1RGcnhjejR4UUg0MHk5eGVGNEdRTlQ1NUJJd2VzVFNTV1doalpHMHJEODZYX1Ywc2JTVQ?oc=5)
+  - There Are Only a Handful of S&P 500 Stocks That Yield Over 5%. Here's My Top Pick to Buy Before the End of August. - The Motley Fool (https://news.google.com/rss/articles/CBMimAFBVV95cUxPdjBmSTMzUkdOeTVMSkdiRl93SU9Ja2tTVzBMX1pHZGcyeHM5LVQ2WnpMejU1V1pYRmp6NHV4dFJ3SXFOVThWb3ZOY2VZOWFObDluS0Nicm9ILTB4N0tlek1ETGpoX2Z5OHBVRTg4cHZzWndoWWFuZ2dXU3VneVBobVNmcExxbHd3aE5wNjl1S1BHYno4WG1acg?oc=5)
 
-  - How to Build $3,100 a Month in Dividend Income Starting From Zero - 24/7 Wall St. (https://news.google.com/rss/articles/CBMitAFBVV95cUxPRHgxMkRQYmhNbDRmMUt3dzdyMlQtUC1JNGJwNko5Y0hlWDRIeUl5ZVdLRXdxU3JmV2pucW5xNGZDdzBHMF9TWVJEVmJreWlCSlEwLUxHSmZYcmdiaUxnT2lfd2pPcWFrV2twNUF5WWtxUy1VQUE0b2xoek96VXlkVnhiNmNjUjloMnAyNkJsYlc1SDdhMmtub0VTWU9RWkRjWUhsWURFOUN5blc2WWlzUFVxYVU?oc=5)
+**Step 33 — Research.** The model wanted to know: *"Macerich MAC news August 2026"* → got 6 results (via ddg)
 
-**Step 33 — Research.** The model wanted to know: *"Macerich MAC news August 2026"* → got 6 results (via gnews_rss)
+  - News & Announcements | Macerich (https://investing.macerich.com/investor-newsroom/news-announcements)
 
-  - Piper Sandler upgrades Macerich stock rating on FFO growth outlook - Investing.com (https://news.google.com/rss/articles/CBMizwFBVV95cUxNa1hkcWxlY21UcVhqcjRnOUxHTzhmTHl3LWx6UXNGamNPamMtZHh2NW9vVUVaYV9RSnpCZ0JsYzBLVzI2Ykg4TkdrRmYyN2ZzQ1czMDU4eVBFbEJiSzNYbFlWODJOZVRXcXZfYlRHQ2NjQUZOcEZBMlhmWHFTRGRaODRwVkZranUzTFVsb1lmTTFzRWk3Mi0tTWlpWVZVNkltZVRLRXdBZXdTZVJMRUVZUWZnSnExSnNhTjdzNE51RExPa3JFYk1wNnhnMEFuTms?oc=5)
+  - Macerich Reports Second Quarter 2026 Earnings Results | Macerich (https://investing.macerich.com/news-releases/news-release-details/macerich-reports-second-quarter-2026-earnings-results)
 
-  - Macerich Sets Sept. 28 Payment Date for $0.17 Dividend - Stock Titan (https://news.google.com/rss/articles/CBMirAFBVV95cUxNWWlmcFdZQ1h4Nk1PbzA1NnEyN0NISVpINS0tZ2VxMThudU5DNVFSMTZPX01rSnRaQjVDaFU3MXp2eWJ4TFFLTlJiU21aeUVtRnctTngwa2lQYkFtVU92dXVaMnRWaUpNZ1Q4VTBKb2tuSG52a2FjYnYtdTM1UjZqTDlJVFZfazR1YXBEVmxDN01hUk9Fd2ZVY0dRd3htR0xKNDFFY1BZR3pYNFFh?oc=5)
+  - Macerich Stock Rises As Q2 Beat Triggers Analyst Target Hikes (https://www.timothysykes.com/news/macerichcompanythe-mac-news-2026_08_07/)
 
-  - Macerich (MAC), Why Is It Back In The Spotlight? - Yahoo Finance (https://news.google.com/rss/articles/CBMinAFBVV95cUxPYmRvLTdRUEN1QmZlUXBITWN6OFIxcXJRN1I0cm1PdTBaUjhTMmRhNWdVcXg4X0VLM2lXRWs0SDQ0NGtNSTVVa3NKcGdZZEdzM3JNb0p6UnhRTm4zanA3cVJHQXNGMDBWUVlrZzlWc3RtbmJEX3pVQzNrMFdDY0dSdVdnb0M2eHN6YkFLb25TRGRqZzNKUkkxYV9xa2k?oc=5)
+**Step 34 — Research.** The model wanted to know: *"Essential Properties EPRT news August 2026"* → got 6 results (via ddg)
 
-**Step 34 — Research.** The model wanted to know: *"Essential Properties Realty EPRT news August 2026"* → got 6 results (via gnews_rss)
+  - Essential Properties – Investor Relations (https://investors.essentialproperties.com/)
 
-  - Essential Properties Realty Trust, Inc. to Report Second Quarter 2026 Results on July 22, 2026 - Yahoo Finance (https://news.google.com/rss/articles/CBMioAFBVV95cUxNQVBxUVQ0MHA2ZjJSVHlNcFlCdlFhMnlOVmt4N3F3SDBiMDk0eU9DODVyenNHMFN0TnhYU0ZaN01ENl95RFR4NlJuS3lYTFdpQ1pTNXdGRndDcFRTMDJSNUF2dWJIYU4yZjBLcVNHelB1N25CTDV1S0JFN3JfVzZ4Q0dwRlFZN0ZscmFyNFZ4MExLa3QyVjFPVk1FZDJyVjFr?oc=5)
+  - Essential Properties Realty Trust (EPRT) Stock Price & OverviewEssential Properties Announces Second Quarter 2026 ResultsFinancialContent - Essential Properties Realty Trust, Inc ...387,308 Shares in Essential Properties Realty Trust, Inc ...Essential Properties Announces Second Quarter 2026 ResultsEssential Properties Realty Trust (EPRT) News Today (https://stockanalysis.com/stocks/eprt/)
 
-  - Essential Properties Closed $332.4M in 103 Properties - Stock Titan (https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcDB5MTZpWjdYcl8zMTJsbk1LN0NxMmF1ajk4eEdYZmVrcmJQaVltaVpoMDZNTUJ0dEdnOVZBNWdvS3dVVHdsU0lXcnZrY3UxVDRhdThTbUo2Ni03dEhJNnJfaVVRRWNWU1Bncy1sN3lkNnJhRjZfN0JxT19mcWhSZE5VZFo2emRJQ0d4cDNieXJHZHBqUlhfTFA1b2Q0RzJVQ2JoUUpjUUk?oc=5)
+  - Essential Properties Announces Second Quarter 2026 Results (https://investors.essentialproperties.com/news/essential-properties-announces-second-quarter-2026-results/55adff10-9559-4e34-9a81-9b537961958c)
 
-  - COHEN & STEERS, INC. Expands Essential Properties Realty Trust I - GuruFocus (https://news.google.com/rss/articles/CBMi5AFBVV95cUxQa0ZsaDJsT3VkTzR6b1lsS0U5U1BvWWxZZzVoUXdCeXFndmFNdk10Y0QxLXVuVGhHcVFFOEFKRVo1aGZ0dnplOG5SclhpaXA5cUc5cFZ4ZVNsTDdRX2k3dGVTZEZnenJLUWRaOU8tRUtkck45R05SMUZ0Q3hnaTBsZ0toekxUNmwwYlRaTkRabmtiUnFCa0hsQVdadFp0bzQ4Q2RPaDhBSVpIQ1VZWmxveXVvU1hSQ1VaRmNmNzZQM1FzalFOdkNEMjV5QmZuSjdjNVVhM0IwbE9aWl9CS1owRFBjb00?oc=5)
+**Step 36 — Research.** The model wanted to know: *"Equinix EQIX news August 2026"* → got 6 results (via ddg)
 
-**Step 36 — Research.** The model wanted to know: *"Equinix EQIX news August 2026"* → got 6 results (via gnews_rss)
+  - Equinix News August 2026: Equinix is trading 13% up in pre ... (https://ticker.report/ticker/equinix-news-august-2026)
 
-  - SGA Is Betting on Equinix (EQIX) as AI Demand Accelerates - Yahoo Finance (https://news.google.com/rss/articles/CBMimAFBVV95cUxPZlR0WklVcnJQQ2tFeXl6RmFqOHdpUXlSa3VCYWk5NmwyTDNSTThQVXNqZVVfWnFVLTkyX2ZfMlJUbFRRN0huZ2tnQXJpMmdOLW5vQjJVYUhCVlhNQkhHelpzcV9QUi1WQWF3MDNYT0NtZHJuSzVraDNXV3k5emJfQVl1Z1VCcHVfS3RaOUswMWdGV2Iyb0pJeA?oc=5)
+  - Equinix Commits Additional $50 Million to the Equinix ... (https://newsroom.equinix.com/2026-08-27-Equinix-Commits-Additional-50-Million-to-the-Equinix-Foundation,-Doubling-Its-Investment-in-Communities-Worldwide)
 
-  - Equinix at Six Five Summit: ai demand lifts guidance - Investing.com (https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZ1lMMjhUOEdnb2xOMEZHcVlUTFliOElTMzB1c1ZHa3ZHWjhNTWxiSEZRLXNoV2FMYVlsU1NPay13TC0yZEFiZE9vcENTOXp5NFlURmFTX2RqU3pyVXBLMXJ2VTVZUDNHTlhpWldiaGkxenBnLVc2V0lKcEFsNmhONUpYUHlqS1hnbm0yXzl5OFBnRUlGbDF6WTlEMmdLREEyQVRaMk1RcHFSZ2c?oc=5)
+  - Press Releases :: Equinix, Inc. (EQIX) (https://investor.equinix.com/news-events/press-releases)
 
-  - Equinix: Another Toll Booth On The AI Highway (NASDAQ:EQIX) - Seeking Alpha (https://news.google.com/rss/articles/CBMijgFBVV95cUxPakg5b0JncWR1MmdsaU1YVUZPM3JvNG9ITExrdVJwdU5zc214N2tudm5aZ2MtVUZCN2RiUkh2TmFqT2pIV1hJZHZqelExbGxrZ3Nydmt3VmxGR0V6MkNkU21XTEVVSlZsand5Z1YxYWlpd2ZRV2tnZElhRWNLY2pKQUNud1l5eEtyTWZWLWNn?oc=5)
+**Step 37 — Research.** The model wanted to know: *"American Tower AMT news August 2026"* → got 6 results (via gnews_rss)
 
-**Step 37 — Research.** The model wanted to know: *"American Tower AMT news August 2026 Barclays upgrade"* → got 6 results (via gnews_rss)
+  - Is American Tower (AMT) Cheap After Its Recent Mixed Share Price Performance? - simplywall.st (https://news.google.com/rss/articles/CBMizgFBVV95cUxQbE1jVXlWUURpc3NjZFNkUlZPUnRRREJSTEpWOGpmVmN4bkNWY0tUaFYwSi1yc0t1ZXZCblFUZ1psakJZalJkZDBKeU9QTy1hQkdGeXRMb3dFR0E3dTQwRWNtTEVBeFlsVGt1Wmt2ckQwaE1PbXdkYTB5WmVpN2hJMjlEaTZWSlpLNGFzcFRPRXFCekxWQmtZSlZEU1AwbXp1cVlHMmw0eEduZ0tiOFJKaGhXTnRjYUVQZTFDTkkwX1pYMWhUR0R4ckVxLWU4QdIB0wFBVV95cUxQOHVBOGNTWUJZZGdQY1dGbUJSUENoUVJDMzQ5RThrWjNyUk4xcGJDVnVfazlBYzI3OENLTjZLd01ReUljdV80blV4TUNURTFhajZKMF9va3ZhaW9sVUpYOVIxSGhCWWE5bmtwMUQwb2Vhb1FnOUJNR2xDYmFxdVVzRWFOdldQdE1nMjVnazRzVjJrbFRvVVNKSURhdUVia294cGNDOVhaQ2NsRVNSanV2Mml1NEwyTXZBU295b0RaVHZwMW13TUxEeHp5MTY5QXRyV1Zz?oc=5)
 
-  - How Investors Are Reacting To American Tower (AMT) After Barclays Highlights CoreSite’s Rising Importance - simplywall.st (https://news.google.com/rss/articles/CBMizgFBVV95cUxQRjRmbEc0Zmd5MkpUVGtfeTRpSjB5U3Y3YWdlT25aQWNwVjJmTTVVUjhXY0Uzc2lVWllqc2lVblpEcEVpV0lwVWNGcmNBazltTzZEWHZDTTFhT3dwTUZueGl2bWdxbm4zNy1waEZwZlUyNlI0QVVoRVExWGRidXVTZkUyLXR3NWdxQlNsc3RHbzhKMXhOR3JIMmV3QXhXeEtGUmFfc19vaDJiYjk5ZlN0UmxfS2IweThiajhCVU1VTDB0aUUzbWJNTktmbzdZQdIB0wFBVV95cUxPVm85OHdYUVQ2Zm9iZmJzdWE4bDdadEdyQWFBcHlsT0dzamV0VGlKckNndVpfTWdjVE9IZW5HMUFlV0lCSXBoYUx4TDEyNnZjTnozSDlmV2lPa19iQUpTRWFaTTVpTVRTOFAycEdqczJidDh0YUR0cXc2TFBtQ1lHSkU2Zkc1dWkxeE5rTmFESkdlbElXX0hLY3p0N0RYTGdNemRiU0pJNHBqbF9qNkQ5eWhxcFlfd1d6VVFpZnhYNFV5QzQ5dmRyVVpITDZwU2ZYbWxj?oc=5)
+  - Adelante Capital Management LLC Invests $8.53 Million in American Tower Corporation $AMT - MarketBeat (https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcmFRcURYM2dpT0lsYTBPTmFucmJCQkN1WHVzYW8ybmltVGRyTFFxaEpWbXNRaS14NWhYSGRUTTVkSXpPX0E5TkFZNlpjalRMNTRrMl9OT252ckZ1Uk9CV3VlR3Zxa0JEaERYNVFaLWRXTlJ6YmMyQWhPbVplS3VIX1JENC1XZVV0amdvZGZiU0tNTS1vMzNHaHNPOVltTnl6TlV1cTRRWkJfcjQ1YUJiMXoxSVA0YW93ZEpjc1FKcXZ4Y2ZKUEppb0QxM0N1Z001VW1CWkFJM2VkbVl0V25F?oc=5)
 
-  - American Tower (AMT) Wins A Barclays Upgrade, Does The Valuation Still Look Cheap? - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxObTdLX3JpS25NeUotbTlzNDBVUzFOaDBBLUVHcHFHbm5KR1hDZTJfaHUtXzNBME1STnBqTEhPcEZtVHgyNC1JeGI5YlQ1U2dsRDdDNHVVNHktSWxEZHliQ1daS2FwWmR4OTlSbE55YXFJOXowRHpJWFBLM0J1QmRiWTBFbF9pRkxBUTk1akZhaUNSMkVvYTZUV3hXSm5odw?oc=5)
-
-  - Barclays upgrades American Tower stock rating on growth outlook - Investing.com (https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaUFxQ2ctSWFkaFROM0FPWGxNTExkQkNwTjB5aWRTcjFyU3hCZ09Ndmp3VncyNWU2RExhdlFUNmpmMFJkTHpRbHlxTm9HTFZncmNPTkdQZXZnRkY0a1hldkV2SmNEZ3pnTUNEQ2gyazgzZW9fQ0VJWGhHSjBDVlEtZS05SDNBcFJqYkZBV0pMbWF0VlhkZXB4YVFfVHZPZmszZXZTWDhDNTNzQTVEVDVxMlY3cWJySDFwbjlNVlpsRzU?oc=5)
+  - American Tower (NYSE: AMT) director now holds 7,765 shares - Stock Titan (https://news.google.com/rss/articles/CBMitgFBVV95cUxOSFI3ZG5mZ0VWUVR6akU2UUswdlpIc2F3WHJnYUNROU1wWldFb3FOeVQ1ZGdmczNUMlJ5cURQcGljZTNzY21kT1F1OVVCU0xnS2hHZGNTaTJFb1I5YTJuamFwWXBNU0NqaG1TeDAydHB3OFNjUDNLRjloM3BzRmZfNHFPUUdkeEdHa0djU3pkeW9oSjV4SWlVbWtHVTRMQURmb1VkZ1d6WVZhLThxcnhmQ2haZkFWUQ?oc=5)
 
 **Step 38 — Research.** The model wanted to know: *"Outfront Media OUT news August 2026"* → got 6 results (via ddg)
 
@@ -248,13 +254,13 @@
 
   - OUTFRONT Media To Report Second Quarter 2026 Results on ... (https://finance.yahoo.com/media-advertising/articles/outfront-media-report-second-quarter-143000646.html?fr=sycsrp_catchall)
 
-**Step 39 — Research.** The model wanted to know: *"Uniti Group UNIT news August 2026 Citi conference"* → got 6 results (via ddg)
-
-  - Uniti Group Inc. to Present at the Citi 2026 Global TMT ... (https://www.manilatimes.net/2026/08/26/tmt-newswire/globenewswire/uniti-group-inc-to-present-at-the-citi-2026-global-tmt-conference/2412129)
-
-  - Uniti Group Inc. to Present at the Citi 2026 Global TMT ... (https://www.compuserve.com/pf/story/0022/20260825/9815602.htm)
+**Step 39 — Research.** The model wanted to know: *"Uniti Group UNIT news August 2026"* → got 6 results (via ddg)
 
   - Press Releases | Uniti Group, Inc. (https://investor.uniti.com/press-releases)
+
+  - Uniti Group Inc. current report, 20 August 2026 (NASDAQ:UNIT ... (https://www.metatrader.com/en/symbols/nasdaq/unit/documents/1897246-current-report-20-aug-2026)
+
+  - UNIT Press Releases Uniti Group - marketchameleon.com (https://marketchameleon.com/Overview/UNIT/PressReleases/)
 
 **Step 41 — Research.** The model wanted to know: *"Century Communities CCS news August 2026"* → got 6 results (via ddg)
 
@@ -264,21 +270,21 @@
 
   - Century Communities, Inc. News and Press Releases | PR Newswire (https://www.prnewswire.com/news/century-communities,-inc./)
 
-**Step 42 — Research.** The model wanted to know: *"St Joe Company JOE news August 2026 Watersound"* → got 6 results (via ddg)
+**Step 42 — Research.** The model wanted to know: *"St Joe Company JOE news August 2026"* → got 6 results (via ddg)
 
-  - The St. Joe Company Releases the Latest Issue of the ... (https://ir.joe.com/news-releases/news-release-details/st-joe-company-releases-latest-issue-watersound-clubr-member)
+  - Latest News - The St. Joe Company (https://ir.joe.com/press-releases)
 
-  - The St. Joe Company Releases the Latest Issue of the ... (https://finance.yahoo.com/real-estate/articles/st-joe-company-releases-latest-204500962.html?fr=sycsrp_catchall)
+  - Investor Relations | The St. Joe Company (https://ir.joe.com/)
 
-  - The St. Joe Company Releases the Latest Issue of the ... (https://www.morningstar.com/news/business-wire/20260812061756/the-st-joe-company-releases-the-latest-issue-of-the-watersound-club-member-watersound-lifestyle-magazine)
+  - JOE - The St. Joe Co News | Morningstar (https://www.morningstar.com/stocks/xnys/joe/news)
 
-**Step 43 — Research.** The model wanted to know: *"CBRE Group news August 2026"* → got 6 results (via ddg)
+**Step 43 — Research.** The model wanted to know: *"CBRE Group news August 2026"* → got 6 results (via gnews_rss)
 
-  - Press Releases - CBRE Group, Inc. (https://ir.cbre.com/press-releases)
+  - Adelante Capital Management LLC Makes New $6.17 Million Investment in CBRE Group, Inc. $CBRE - MarketBeat (https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUVZKczE3dHE4NXZTTlF0UkxFXzlvdjhDREp5X2ZqcjRBbExMazBiUGFCbGlnMmlxOTFzaVNDc0Z1ZTBLZ2FUTWdudEpvdUNoNXdRbnZuWGtOMUxvRm4zVTBNS1d3U1ZxVURzaWlnZ2kwMGtQSm83Vm9aZ1ZmUEJqUkd1NXRjVXZhQnRnWU9tNVpVdnpSQU5Wd0pwRm5SYjRTX01yaDd1YzhIZTZrQWxsQzVkYnF3SkZDbEhTcFpVUlR3elNLVVdaT0FtUUJJRWNqNVAzNWJCNEhDaTNfNG1yZEVB?oc=5)
 
-  - Newsroom - CBRE (https://www.cbre.com/about-us/newsroom)
+  - CRE People on the Move (Week of August 24, 2026) - CommercialSearch (https://news.google.com/rss/articles/CBMibkFVX3lxTE9qbmVkQ1dZMmNONlh0TUNyeVlFcm1wZ1NhNEtDRzdRSTlXcjMxYzd3Qlg4bThxN05EVUJyWE1lRXpCdkZfRXpKUWJINWxnMEdoOUVmSmpOQmNScHlrWTBJY3h2QmFOQTVkbFZOaldn?oc=5)
 
-  - CBRE Group (CBRE) Is Up 5.2% After Broader AI Role And ... (https://simplywall.st/stocks/us/real-estate-management-and-development/nyse-cbre/cbre-group/news/cbre-group-cbre-is-up-52-after-broader-ai-role-and-leasing-s)
+  - CBRE Group stock holds above $150 as guidance and institutional buying support the 2026 outlook - Ad-hoc-news.de (https://news.google.com/rss/articles/CBMizAFBVV95cUxPVHRYaWFPOGRONW1IeDZacG8yWnRjZVQ5UWlYSkk5STFEOXpCS3EwalE2SVZfaWlTLUhqM0dzUkFJa0pqMW1pNjZJT1NmLU9SdjI2VnZVRUp6QjVuczNBWlRWSk9WaHRUbThDRmtacTdOZFoxSVNBZUtzcTAtZE1FQ2g3N0RvLVcxVXpPR1N4SV9rU3ZpTXllaDJwM3BmZW1Ra0pjdzJ4VlBxd0xpbkFXMFhMU0FCMTlIS3dEV0dtOU8tbWhCenRfMFktMzE?oc=5)
 
 **Step 44 — Research.** The model wanted to know: *"CoStar Group CSGP news August 2026"* → got 6 results (via ddg)
 
@@ -286,15 +292,15 @@
 
   - CoStar Group Completes Acquisition of Zonda Real Estate ... (https://www.tipranks.com/news/company-announcements/costar-group-completes-acquisition-of-zonda-real-estate-platform)
 
-  - News - CoStar Group, Inc. (https://investors.costargroup.com/news)
+  - Costar Group (CSGP) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/CSGP/)
 
-**Step 46 — Research.** The model wanted to know: *"Compass COMP news August 2026"* → got 6 results (via gnews_rss)
+**Step 46 — Research.** The model wanted to know: *"Compass COMP news August 2026"* → got 6 results (via ddg)
 
-  - Compass Inc (COMP) Shares Fall 3.6% -- What GF Score of 67 Tells Investors - GuruFocus (https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd2lOaVJrWjR3OXlyWHVLYS1NMTJubThNWGo5MzM1bE9GMVZ0dFdrTmk4U096ZWVta2hlOHJCNkpDVkZhUTZNNnJJa2c0anpYSXhtWmc5Rkk4eTIxby1OaGkwdWZrUm84VkZQZ1hxZ2ZKU0hFLU5NanhXNVltT2V5WHotN0l4Z1pYaWs0OGdhQ3RVa0g1akUtbTF1UUpBQ3VjbWV1dlQ0ZWNEZw?oc=5)
+  - Compass (COMP) Earnings Date and Reports 2026 - MarketBeat (https://www.marketbeat.com/stocks/NYSE/COMP/earnings/)
 
-  - Why Compass (COMP) Dropped And What Investors Are Watching - Yahoo Finance (https://news.google.com/rss/articles/CBMioAFBVV95cUxNLVpoZzF5N3FWVXQ2eUJHcEpIcmFyb01LdWZQQkk3X0gzeThUdlVwc3lOV2RIamFmSkk2VGJVUmtoRHpKT0V0a1VjWHdiRHVGVGJpd2hWVTV3NE1aZUpPV1FjUWl6N1VPcUU3N0N3ajRiRHdHZzgwUVVrVWc4SlYyR2RTaXdOUVNPdElTTUxVQUdBUWJwYWl0RGJPR0hhQnY2?oc=5)
+  - Compass, Inc. Reports Record Second Quarter 2026 Results (https://investors.compass.com/news-events/press-releases/detail/177/compass-inc-reports-record-second-quarter-2026-results)
 
-  - Is Compass (COMP) Too Expensive After A 265% Three Year Return? - webull.com (https://news.google.com/rss/articles/CBMiWEFVX3lxTE5SNHVxTW9OUTBFdXdpdHkyRU4wNmFLWUJndlpGSnk4eGNzM2M1VWNIN1A0dl9ubEI1c1lPdURvUmhvVUxVY1kwRm1SYXdyaHJYRGpvNFpOLTY?oc=5)
+  - Compass News: Announcements & Press (https://www.compass.com/newsroom/press-releases)
 
 **Step 47 — Research.** The model wanted to know: *"Cushman Wakefield CWK news August 2026"* → got 6 results (via ddg)
 
@@ -304,12 +310,12 @@
 
   - Cushman & Wakefield - Cushman & Wakefield to Release Second ... (https://ir.cushmanwakefield.com/news/press-release-details/2026/Cushman--Wakefield-to-Release-Second-Quarter-2026-Earnings-on-August-5/default.aspx)
 
-**Step 48 — Research.** The model wanted to know: *"BXP Boston Properties senior notes offering August 2026"* → got 6 results (via ddg)
+**Step 48 — Research.** The model wanted to know: *"Crown Castle CCI news August 2026 Barclays upgrade"* → got 6 results (via gnews_rss)
 
-  - BXP Prices $700 Million Offering of Senior Unsecured Notes | BXP (https://investors.bxp.com/news-releases/news-release-details/bxp-prices-700-million-offering-senior-unsecured-notes)
+  - Crown Castle Draws an Upgrade With a Lower Price Target - TradingView (https://news.google.com/rss/articles/CBMitgFBVV95cUxQM0dQLV96U2RVUkYyOVJia1JwcUJTMEN2djg4eXN4R3pzcjFfWnEzVzR3OHJxeUwtaTVMV3laVXhCMWlaMUJURnlYSHI3NmN4TmV0QXlSQzlLM0pHM2gwRmFYRVhoVV81SXVTMHowR2cyeWNpM1FXSEpRdHh6cERWSjVVMlVsekQ2cEhTT3VJSHJVVU5HYlA3RnNzZkV2N3ZOMlZ0SEYzdFl6MDRETl9RTkx2eE8wdw?oc=5)
 
-  - BXP Prices $700 Million Offering of Senior Unsecured Notes (https://www.nasdaq.com/press-release/bxp-prices-700-million-offering-senior-unsecured-notes-2026-08-17)
+  - Barclays upgrades Crown Castle stock rating on tower market strength - Investing.com (https://news.google.com/rss/articles/CBMixwFBVV95cUxNY3VEODJNQnlpZ3VhQkItZHhvMWJFVlczM1pDdEtmYm90Sm85YWlzQ1NIaTZVMGl6b2lHZ2hrV3dDdy1DaV9jUk05Y1ZzZC1VS3lxM2ZTXzJ6cHBncEhaN0ZtMmJsaE9zRFdhOGk3cTBlLTBWdjZ3OU5IaTJ4WWFNVS03R3FnMkZMVGRBTU5meWFUc0ZIT1o2WFhoQjJPeWkxZjBDTnMxb2EzaTRDSlphODU4WFpvSDVDbEhCd3ozRXNXMWM3OHE0?oc=5)
 
-  - BXP Prices $700 Million Offering of Senior Unsecured Notes (https://markets.ft.com/data/announce/detail?dockey=600-202608171728BIZWIRE_USPRX____20260817_BW190625-1)
+  - Barclays Upgrades Crown Castle(CCI.US) to Buy Rating, Cuts Target Price to $84 - Moomoo (https://news.google.com/rss/articles/CBMipwFBVV95cUxPcUJMSE5NczRxSkxZbmV3R3RVRk9MWFRVQXRHSEVKVFczVVBFZHdOSV9OaGdzSFRfMmF3RWtBSTktUGZoa0RlSUNqMHk5b0Jia3RxMUk2b3F2LXMzM1hiUHNvaXJ3azdiV1d1OWJGUEFqS1d5ejY4ZU1GWFp2ckg4WVVka1NHMk5NdWN1VWp3Ym91MjlXaWJOdnNFc3VHNUdkaFdiZF9wTQ?oc=5)
 
 **Step 50 — Search budget exhausted.** Forced to conclude with what it already gathered.
