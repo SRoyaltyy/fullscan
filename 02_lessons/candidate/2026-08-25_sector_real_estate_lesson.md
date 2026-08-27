@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A future session with a verified falling 10Y/30Y curve at the open, oil sliding, and no fresh sector-specific shock, in which XLRE still closes down more than -0.5%, would falsify the corrected behavior’s causal chain. Conversely, a session with verified rising yields and strongly positive XLRE tape would test whether the live rate spine should always dominate the tape."
 sector: "Real Estate"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-25

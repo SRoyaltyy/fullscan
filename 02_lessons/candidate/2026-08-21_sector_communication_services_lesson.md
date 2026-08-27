@@ -7,7 +7,7 @@ error_category: "A (reasoning/weighting; not tool/data)"
 falsifier: "If the same setup occurs — positive futures, easing real yields, priced macro headwind — but a fresh same-morning negative data point (hot CPI, negative mega-cap premarket move, new adverse ruling) drives the sector down, the corrected behavior would fail. Also, repeated positive-reversal mornings that resolve lower without a fresh shock would invalidate the rule."
 sector: "Communication Services"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-21

@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If a future Healthcare day has all trigger conditions — carried broad positive catalyst, positive SPY, strong 3d/1w leadership — but XLV closes with rel ≤ +0.3% or a mild band, then the broad-spillover magnitude upgrade is falsified. Conversely, repeated overcalls from this rule would justify requiring an even stronger multi-name breadth threshold."
 sector: "Healthcare"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-21

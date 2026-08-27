@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "A future session with a positive same-morning reversal checklist but a fresh same-morning negative catalyst — e.g., a new top-holding earnings miss reported that morning, or a same-day hard-data miss — that still produces a down/flat sector close would falsify this lesson. A prior-session echo of an old negative does not falsify it; the lesson only discards stale catalysts."
 sector: "Consumer Defensive"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-21

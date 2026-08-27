@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If 30Y remains ≥5.25%, DFII10 closes down ≥10bp, and XLRE closes ≥ +0.5% relative on the same day, the level-sensitivity rule is too rigid. To be robust, require this outcome to recur in at least 3 of 5 similar future cases before rejecting the lesson."
 sector: "Real Estate"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-21

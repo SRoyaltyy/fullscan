@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "A future scheduled-day sector run with explicit predicted_direction/predicted_magnitude_band and a matching actual close that still produces scoreboard None/None/False/False would falsify the claimed fix. If the metadata source changes, the scoreboard should use the pipeline JSON or PREDICT block; missing prediction fields are an ops issue, not a forecast miss."
 sector: "Technology"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-25

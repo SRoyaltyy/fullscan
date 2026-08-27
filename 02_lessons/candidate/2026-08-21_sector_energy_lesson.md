@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The lesson is falsified if, on a future session with oil up >+1%, XLE RSI >70 and 1w rel >+5%, and SPY/ES flat-to-down, XLE still closes >+0.5% with positive relative performance in at least 2 of 3 comparable episodes. That would show the decoupling is not reliable enough to override the oil spine."
 sector: "Energy"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-21

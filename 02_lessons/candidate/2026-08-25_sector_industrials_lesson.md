@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A future case where S4=-1 (all timeframes negative relative), a fresh single-name negative exists, but the sector ETF closes positive on a broad risk-on day (SPY up >0.5%, XLI up >0.3%) would falsify this lesson. Also falsified if a down:mild call based on this lesson misses when the sector closes flat or up."
 sector: "Industrials"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-25

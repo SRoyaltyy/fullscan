@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "This lesson is falsified if, in the next several Financial sector calls, applying this reconciliation and capping the official band at mild consistently under-calls actuals that the pipeline’s notable band would have hit — e.g., XLF closes at/above the rubric’s notable threshold on constructive macro and the scoreboard shows magnitude_hit True for the tempered output. If the tempered band repeatedly misses under-call while the unreconciled pipeline band would have hit, then the tempering rule is too aggressive and should be revised."
 sector: "Financial"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-21

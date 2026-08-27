@@ -7,7 +7,7 @@ error_category: "B — TOOL/DATA/GRADING EXTRACTION FAILURE (not a reasoning err
 falsifier: "The lesson would not apply if a future scoreboard row shows `predicted None/None` because there is genuinely no PREDICT block or no explicit direction/magnitude in it; that should be marked ungradeable/ops_fail rather than auto-scored. It would also not apply if a properly populated prediction still misses the actual direction; that is a real forecasting miss, not an extraction failure."
 sector: "Communication Services"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-25

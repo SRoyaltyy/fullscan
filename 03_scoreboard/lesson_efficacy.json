@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-22T23:29:23.534663-04:00",
+  "generated_at": "2026-08-27T18:44:09.645213-04:00",
   "window": 7,
   "summary": {
-    "n_active": 78,
-    "n_judged": 8,
-    "improved": 1,
-    "flat": 0,
-    "worse": 7,
-    "mean_delta": -0.199
+    "n_active": 95,
+    "n_judged": 26,
+    "improved": 2,
+    "flat": 2,
+    "worse": 22,
+    "mean_delta": -0.246
   },
   "lessons": [
     {
@@ -20,8 +20,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.667,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -35,8 +35,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -50,8 +50,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.167,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -65,10 +65,11 @@
         "n": 5
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.15,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-communication-services-xlc-call-faces-a-live-geopolitical.md",
@@ -80,8 +81,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -95,8 +96,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -110,8 +111,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.667,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -126,7 +127,37 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-correct-direction-financial-sector-call-on-a-constructive.md",
+      "topic": "sector:Financial",
+      "active_since": "2026-08-27",
+      "error_category": "B",
+      "before": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-defensive-bond-proxy-sector-is-predicted-down-flat-because.md",
+      "topic": "sector:Consumer Defensive",
+      "active_since": "2026-08-27",
+      "error_category": "C",
+      "before": {
+        "hit": 0.429,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -141,7 +172,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -186,7 +217,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -200,8 +231,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -215,8 +246,8 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 1
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -230,8 +261,8 @@
         "n": 6
       },
       "after": {
-        "hit": 1.0,
-        "n": 1
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -245,8 +276,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.167,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -260,10 +291,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -276,11 +307,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.4,
+        "n": 5
       },
-      "delta": 0.071,
-      "verdict": "improved"
+      "delta": -0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "a-fresh-same-morning-negative-mega-cap-bellwether-earnings-m.md",
@@ -292,8 +323,8 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 1
+        "hit": 0.5,
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -308,7 +339,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -328,6 +359,21 @@
       "verdict": "insufficient"
     },
     {
+      "lesson": "a-high-beta-cyclical-sector-xly-is-predicted-down-after-a-sh.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-08-23",
+      "error_category": "D",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": 0.5,
+        "n": 2
+      },
+      "verdict": "insufficient"
+    },
+    {
       "lesson": "a-high-conviction-technology-xlk-call-with-a-benign-schedule.md",
       "topic": "sector:Technology",
       "active_since": "2026-08-13",
@@ -337,8 +383,23 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-large-positive-trial-regulatory-catalyst-originates-in-one.md",
+      "topic": "sector:Healthcare",
+      "active_since": "2026-08-27",
+      "error_category": "A",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -352,8 +413,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -368,7 +429,7 @@
       },
       "after": {
         "hit": 0.5,
-        "n": 4
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -382,8 +443,23 @@
         "n": 6
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.333,
+        "n": 3
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-macro-headwind-hawkish-fed-minutes-rate-hike-risk-was-rele.md",
+      "topic": "sector:Communication Services",
+      "active_since": "2026-08-27",
+      "error_category": "A",
+      "before": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -398,9 +474,16 @@
       },
       "after": {
         "hit": 1.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-predict-file-is-dated-on-a-us-cash-closed-day-weekend-holi.md",
+      "topic": null,
+      "active_since": "2026-08-27",
+      "error_category": "D",
+      "verdict": "not market-graded"
     },
     {
       "lesson": "a-prior-session-geopolitical-oil-supply-shock-e-g-hormuz-clo.md",
@@ -412,10 +495,11 @@
         "n": 4
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.2,
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.05,
+      "verdict": "flat"
     },
     {
       "lesson": "a-rate-sensitive-defensive-sector-consumer-staples-has-been.md",
@@ -427,10 +511,11 @@
         "n": 4
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.2,
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.3,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-rate-sensitive-defensive-sector-utilities-has-a-confirmed.md",
@@ -442,8 +527,38 @@
         "n": 3
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.167,
+        "n": 6
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-rate-sensitive-sector-call-uses-a-yield-change-table-label.md",
+      "topic": "sector:Real Estate",
+      "active_since": "2026-08-27",
+      "error_category": "B",
+      "before": {
+        "hit": 0.571,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "a-reit-call-is-made-up-because-same-day-nominal-real-yields.md",
+      "topic": "sector:Real Estate",
+      "active_since": "2026-08-27",
+      "error_category": "B",
+      "before": {
+        "hit": 0.571,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -457,10 +572,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -474,7 +589,7 @@
       },
       "after": {
         "hit": 1.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -488,8 +603,8 @@
         "n": 6
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -503,10 +618,11 @@
         "n": 5
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.35,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md",
@@ -518,10 +634,11 @@
         "n": 4
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.2,
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.55,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-sector-call-s-narrative-and-sector-scores-block-cap-magnit.md",
@@ -533,10 +650,11 @@
         "n": 5
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.2,
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.4,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-sector-has-led-spy-on-a-defensive-relative-strength-rotati.md",
@@ -554,6 +672,21 @@
       "verdict": "insufficient"
     },
     {
+      "lesson": "a-sector-predict-block-contains-explicit-predicted-direction.md",
+      "topic": "sector:Energy",
+      "active_since": "2026-08-27",
+      "error_category": "D",
+      "before": {
+        "hit": 0.429,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
       "lesson": "a-sector-prediction-is-narratively-scored-as-down-biased-bec.md",
       "topic": "sector:Industrials",
       "active_since": "2026-08-19",
@@ -564,7 +697,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -578,10 +711,11 @@
         "n": 5
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.6,
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.2,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-technology-xlk-call-has-fresh-real-catalysts-ai-infrastruc.md",
@@ -593,10 +727,11 @@
         "n": 4
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.4,
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.1,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-technology-xlk-down-call-has-strongly-negative-leading-com.md",
@@ -609,7 +744,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -624,9 +759,10 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 2
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.8,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-utility-defensive-sector-call-is-built-on-a-carried-defens.md",
@@ -639,7 +775,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -654,7 +790,7 @@
       },
       "after": {
         "hit": 0.5,
-        "n": 4
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -668,10 +804,11 @@
         "n": 5
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.15,
+      "verdict": "WORSE"
     },
     {
       "lesson": "an-effectively-two-stock-sector-etf-meta-alphabet-heavy-has.md",
@@ -683,8 +820,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -698,8 +835,38 @@
         "n": 3
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.5,
+        "n": 6
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "an-industrials-down-call-is-made-after-a-sharp-prior-risk-of.md",
+      "topic": "sector:Industrials",
+      "active_since": "2026-08-27",
+      "error_category": "A",
+      "before": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "basic-materials-xlb-is-predicted-up-from-a-a-broad-risk-on-t.md",
+      "topic": "sector:Basic Materials",
+      "active_since": "2026-08-27",
+      "error_category": "B",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -713,8 +880,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.667,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -728,8 +895,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.5,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -743,10 +910,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -759,8 +926,24 @@
         "n": 5
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.25,
+        "n": 4
+      },
+      "delta": -0.35,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "escalating-geopolitical-oil-supply-shock-catalyst-hormuz-typ.md",
+      "topic": "sector:Energy",
+      "active_since": "2026-08-27",
+      "error_category": "A",
+      "before": {
+        "hit": 0.429,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -774,8 +957,24 @@
         "n": 4
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.8,
+        "n": 5
+      },
+      "delta": 0.05,
+      "verdict": "improved"
+    },
+    {
+      "lesson": "for-a-bond-proxy-defensive-sector-when-s0-and-s1-are-both-ne.md",
+      "topic": "sector:Utilities",
+      "active_since": "2026-08-27",
+      "error_category": "C",
+      "before": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -789,10 +988,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.179,
+      "verdict": "WORSE"
     },
     {
       "lesson": "fresh-same-morning-positive-catalyst-cluster-china-fiscal-su.md",
@@ -804,8 +1004,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 0.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -820,9 +1020,10 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 3
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.75,
+      "verdict": "WORSE"
     },
     {
       "lesson": "long-duration-technology-semis-prediction-turns-up-on-a-stal.md",
@@ -834,8 +1035,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -864,10 +1065,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -880,10 +1081,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -896,10 +1097,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -912,8 +1113,24 @@
         "n": 4
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.4,
+        "n": 5
+      },
+      "delta": -0.1,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "no-scored-error-the-repeatable-non-scoring-pattern-is-a-narr.md",
+      "topic": "sector:Basic Materials",
+      "active_since": "2026-08-27",
+      "error_category": "NONE",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -927,8 +1144,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.167,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -944,6 +1161,36 @@
       "after": {
         "hit": 1.0,
         "n": 1
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "on-a-scheduled-release-day-a-sector-s-own-high-impact-hard-d.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-08-27",
+      "error_category": "A",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "on-a-scheduled-trading-day-a-sector-predict-block-contains-e.md",
+      "topic": "sector:Communication Services",
+      "active_since": "2026-08-27",
+      "error_category": "B",
+      "before": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -964,24 +1211,24 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.286,
+        "n": 7
       },
-      "delta": -0.238,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
       "lesson": "rule.md",
-      "topic": "general",
-      "active_since": "2026-08-19",
+      "topic": "sector:Financial",
+      "active_since": "2026-08-27",
       "error_category": "NONE",
       "before": {
-        "hit": 0.571,
+        "hit": 0.286,
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -995,7 +1242,7 @@
     {
       "lesson": "scheduled-trading-day-where-the-premarket-prediction-file-yy.md",
       "topic": null,
-      "active_since": "2026-08-17",
+      "active_since": "2026-08-27",
       "error_category": "D",
       "verdict": "not market-graded"
     },
@@ -1010,7 +1257,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -1025,7 +1272,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -1039,8 +1286,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -1054,8 +1301,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.5,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -1069,8 +1316,24 @@
         "n": 4
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.6,
+        "n": 5
+      },
+      "delta": -0.15,
+      "verdict": "WORSE"
+    },
+    {
+      "lesson": "when-a-sector-s-own-etf-tape-is-decisively-negative-across-a.md",
+      "topic": "sector:Industrials",
+      "active_since": "2026-08-27",
+      "error_category": "B",
+      "before": {
+        "hit": 0.143,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
@@ -1084,8 +1347,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.333,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -1099,8 +1362,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.167,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -1114,8 +1377,8 @@
         "n": 3
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.167,
+        "n": 6
       },
       "verdict": "insufficient"
     },
@@ -1130,9 +1393,10 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 3
+        "n": 5
       },
-      "verdict": "insufficient"
+      "delta": -0.25,
+      "verdict": "WORSE"
     },
     {
       "lesson": "when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md",
@@ -1145,7 +1409,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -1160,9 +1424,10 @@
       },
       "after": {
         "hit": 1.0,
-        "n": 2
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.4,
+      "verdict": "improved"
     }
   ],
   "topics": [
@@ -1173,15 +1438,15 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.556,
-        "n": 9
+        "hit": 0.5,
+        "n": 10
       }
     },
     {
       "topic": "sector:Basic Materials",
       "last10": {
-        "hit": 0.625,
-        "n": 8
+        "hit": 0.7,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1191,8 +1456,8 @@
     {
       "topic": "sector:Communication Services",
       "last10": {
-        "hit": 0.375,
-        "n": 8
+        "hit": 0.3,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1202,8 +1467,8 @@
     {
       "topic": "sector:Consumer Cyclical",
       "last10": {
-        "hit": 0.75,
-        "n": 8
+        "hit": 0.7,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1213,8 +1478,8 @@
     {
       "topic": "sector:Consumer Defensive",
       "last10": {
-        "hit": 0.5,
-        "n": 8
+        "hit": 0.4,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1224,8 +1489,8 @@
     {
       "topic": "sector:Energy",
       "last10": {
-        "hit": 0.625,
-        "n": 8
+        "hit": 0.5,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1235,8 +1500,8 @@
     {
       "topic": "sector:Financial",
       "last10": {
-        "hit": 0.5,
-        "n": 8
+        "hit": 0.4,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1257,8 +1522,8 @@
     {
       "topic": "sector:Industrials",
       "last10": {
-        "hit": 0.25,
-        "n": 8
+        "hit": 0.2,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1268,8 +1533,8 @@
     {
       "topic": "sector:Real Estate",
       "last10": {
-        "hit": 0.625,
-        "n": 8
+        "hit": 0.6,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1279,8 +1544,8 @@
     {
       "topic": "sector:Technology",
       "last10": {
-        "hit": 0.5,
-        "n": 8
+        "hit": 0.4,
+        "n": 10
       },
       "prev10": {
         "hit": null,
@@ -1290,8 +1555,8 @@
     {
       "topic": "sector:Utilities",
       "last10": {
-        "hit": 0.5,
-        "n": 8
+        "hit": 0.4,
+        "n": 10
       },
       "prev10": {
         "hit": null,

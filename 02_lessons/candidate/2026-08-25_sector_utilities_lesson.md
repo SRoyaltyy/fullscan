@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "A future Utilities case with S0=0, S1=0, S2=-1, S3=-1, S4=0, risk-on futures, and XLU closing down by more than ~0.5% would falsify the flat-default rule. That would show carried breadth/outflows can dominate even with neutral macro and a positive tape. Likewise, if a future scoreboard still records `predicted None/None` when the PREDICT block has explicit labels, the tooling/pipeline correction is incomplete."
 sector: "Utilities"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-25

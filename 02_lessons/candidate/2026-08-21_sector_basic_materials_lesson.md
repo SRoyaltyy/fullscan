@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future XLB call with an equally strong positive factor stack, a deterministic severe output, and no live temper trigger that closes at or below the severe threshold (roughly ≤ +1.5%) would falsify the recommendation to accept the pipeline band. That case would show that background macro commentary did dominate the open despite the positive tape."
 sector: "Basic Materials"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-21

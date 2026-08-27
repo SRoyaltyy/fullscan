@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If a PREDICT block actually omits `predicted_direction` or `predicted_magnitude_band`, then `None/None` and a false miss are correct. Also, if the actual close did not match the stated direction or magnitude band, a HIT would not be appropriate. This lesson applies only when explicit non-null predicted fields exist and the actual close confirms them."
 sector: "Energy"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-25

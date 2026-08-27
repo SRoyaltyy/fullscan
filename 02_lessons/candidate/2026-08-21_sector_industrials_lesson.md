@@ -7,7 +7,7 @@ error_category: "A — REASONING failure (direction/magnitude miss). The -3.0 ×
 falsifier: "If, after a sharp risk-off day, with ES/NQ ≥ +0.3%, no fresh same-day negative catalyst, and XLI still closes down while SPY closes up (absolute loss, not just relative underperformance), then the "positive reversal dominates absolute direction" rule is falsified for that instance. If that happens repeatedly in the next 10 Industrials runs, the lesson should be downgraded to relative-only."
 sector: "Industrials"
 date: "2026-08-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-21

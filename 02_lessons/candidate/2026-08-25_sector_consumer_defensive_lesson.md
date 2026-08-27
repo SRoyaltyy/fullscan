@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "This lesson would not apply if a PREDICT source genuinely lacks `predicted_direction` / `predicted_magnitude_band`, or if the scoreboard schema intentionally stores unverified predictions separately from the graded row. A checksum/fix test: compare the source PREDICT fields to the scoreboard fields on every grade; if explicit fields exist and the scoreboard still shows `None/None`, the bug is still present."
 sector: "Consumer Defensive"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-25

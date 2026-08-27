@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Over the next 10+ XLB sessions with NQ >> ES, firm copper/gold, XLB 1d rel <0.5%, mixed breadth, and S1 net-zero, if XLB closes up >1% with a directional hit rate above 60%, the discount is too strong and should be relaxed. A single opposite example is not sufficient to falsify this lesson."
 sector: "Basic Materials"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-25

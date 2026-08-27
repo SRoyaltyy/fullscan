@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If a same-day sector-owned print with consensus below prior resolves below consensus, but the sector ETF still closes up and outperforms SPY by more than ~0.5% on a risk-on tape with no offsetting sector-specific positive, then the “sector’s own print overrides broad tape” claim is falsified and this lesson should be demoted."
 sector: "Consumer Cyclical"
 date: "2026-08-25"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-25
