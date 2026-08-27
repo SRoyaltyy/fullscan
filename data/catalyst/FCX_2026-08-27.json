@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-09-08\",\n    \"description\": \"A mud rush at PT Freeport Indonesia's Grasberg Block Cave mine trapped workers, flooded underground workings, and forced a suspension of Grasberg minerals district mining operations.\",\n    \"evidence_excerpt\": \"\\\"On September 8, 2025, a major mud rush incident occurred at the Grasberg Block Cave (GBC) underground mine\\\"\",\n    \"source_urls\": [\n      \"https://investors.fcx.com/investors/news-releases/news-release-details/2025/Freeport-Provid",
+  "ticker": "FCX",
+  "generated_at": "2026-08-27",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-01-29\",\n    \"description\": \"UUUU signed a landmark agreement with the Navajo Nation to resume Pinyon Plain uranium-ore transport to White Mesa Mill under extra safety rules and to haul up to 10,000 tons of abandoned-mine cleanup material at no cost.\",\n    \"evidence_excerpt\": \"\\\"signing of a landmark agreement governing the transport of uranium ore along federal and state highways crossing the Navajo Nation\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/n",
+  "ticker": "UUUU",
+  "generated_at": "2026-08-27",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-01-13\",\n    \"description\": \"Ivanhoe Electric Inc (IE) and Maaden's 50/50 JV reported a Typhoon-guided copper discovery at Umm Ad Dabah near Al Amar, with copper mineralization in three holes remaining open beyond 700 meters.\",\n    \"evidence_excerpt\": \"\\\"Drilling Intersected Copper Mineralization in Three Holes to a Depth Beyond 700 Meters and Remains Open\\\"\",\n    \"source_urls\": [\n      \"https://ivanhoeelectric.com/news/ivanhoe-electrics-typhoon-sup-tm-sup-technology",
+  "ticker": "IE",
+  "generated_at": "2026-08-27",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

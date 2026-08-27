@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-05-07\",\n    \"description\": \"Uranium Energy Corp and Radiant Industries announced an MOU plus an initial transaction for UEC to supply U.S.-origin uranium concentrates to support Radiant's Kaleidos microreactor.\",\n    \"evidence_excerpt\": \"\\\"UEC will supply U.S. origin uranium concentrates to Radiant at mutually agreed terms.\\\"\",\n    \"source_urls\": [\n      \"https://www.nasdaq.com/press-release/uranium-energy-corp-and-radiant-industries-announce-us-uranium-supply-agree",
+  "ticker": "UEC",
+  "generated_at": "2026-08-27",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

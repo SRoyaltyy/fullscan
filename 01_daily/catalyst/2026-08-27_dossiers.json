@@ -1,0 +1,165 @@
+{
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T19:44:45.932558-04:00",
+  "max_n": 8,
+  "grok": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "FCX",
+      "role": "override_captain",
+      "why": "OVERRIDE Copper"
+    },
+    {
+      "ticker": "IE",
+      "role": "override_captain",
+      "why": "OVERRIDE Copper"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE Textile Manufacturing"
+    },
+    {
+      "ticker": "UFPI",
+      "role": "override_captain",
+      "why": "OVERRIDE Lumber & Wood Production"
+    },
+    {
+      "ticker": "BCC",
+      "role": "override_captain",
+      "why": "OVERRIDE Lumber & Wood Production"
+    },
+    {
+      "ticker": "DOW",
+      "role": "override_captain",
+      "why": "OVERRIDE Chemicals"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "FCX",
+      "role": "override_captain",
+      "why": "OVERRIDE Copper",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "IE",
+      "role": "override_captain",
+      "why": "OVERRIDE Copper",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE Textile Manufacturing",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "UFPI",
+      "role": "override_captain",
+      "why": "OVERRIDE Lumber & Wood Production",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "BCC",
+      "role": "override_captain",
+      "why": "OVERRIDE Lumber & Wood Production",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "DOW",
+      "role": "override_captain",
+      "why": "OVERRIDE Chemicals",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    }
+  ]
+}

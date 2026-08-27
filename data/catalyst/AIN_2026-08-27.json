@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-02-26\",\n    \"description\": \"Albany International authorized a new $250 million share repurchase program that supersedes the prior authorization.\",\n    \"evidence_excerpt\": \"\\\"The Board has also authorized a new share repurchase program which supersedes our current program and is now up to $250 million.\\\"\",\n    \"source_urls\": [\n      \"https://investors.albint.com/news-releases/news-release-details/albany-international-reports-fourth-quarter-2024-results\",\n      \"https",
+  "ticker": "AIN",
+  "generated_at": "2026-08-27",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

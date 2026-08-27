@@ -1672,5 +1672,7 @@
     "AU": 1.5,
     "XLU": -1.5,
     "XLK": -3.0
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-08-27"
 }

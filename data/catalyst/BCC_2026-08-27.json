@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-03\",\n    \"description\": \"Boise Cascade said James Hardie designated it the sole nationwide distributor for Hardie siding/trim, AZEK Exteriors, and TimberTech decking and railing, requiring BCC to exit competing siding, PVC trim, and exterior moulding lines.\",\n    \"evidence_excerpt\": \"\\\"designated Boise Cascade as a sole nationwide distribution partner\\\"\",\n    \"source_urls\": [\n      \"https://www.fool.com/earnings/call-transcripts/2026/08/10/boise-cascade-bcc-q2-20",
+  "ticker": "BCC",
+  "generated_at": "2026-08-27",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
