@@ -1,0 +1,121 @@
+name: Pipeline health (pre-open / post-close door)
+
+# Fail-closed, ≤10 min. Does NOT start research.
+# Prints door/bugs + previous-job inputs + expected outputs.
+#
+# Night 21:30 ET → post-close health (before 22:00 research).
+# Morning 05:30 ET → pre-open health (after 05:40 scrape wait is still
+# a WARN if digest hasn't landed; dispatch --phase after to audit a finished day).
+
+on:
+  schedule:
+    - cron: "30 1 * * 2-6"   # 21:30 EDT, before post-close 22:00
+    - cron: "30 9 * * 1-5"   # 05:30 EDT, before pre-open 05:55
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "door | preopen | postclose | auto"
+        required: false
+        default: "auto"
+      phase:
+        description: "before (prereqs only) | after (also expected outputs)"
+        required: false
+        default: "before"
+      date:
+        description: "YYYY-MM-DD (pre-open session / ET today)"
+        required: false
+        default: ""
+      source_date:
+        description: "Completed session (post-close source)"
+        required: false
+        default: ""
+      target_date:
+        description: "Next session (post-close writes)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline-health
+  cancel-in-progress: true
+
+jobs:
+  health:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 12
+    env:
+      HOME: /home/gha
+      FULLSCAN_HOME: /home/gha
+      GROK_ONLY: "1"
+      OPENCLAW_TIMEOUT: "45"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Align OpenClaw classroom (live json token, not 64-char secret)
+        continue-on-error: true
+        env:
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+        run: |
+          export HOME=/home/gha
+          chmod +x scripts/enable_openclaw_chat.sh || true
+          bash scripts/enable_openclaw_chat.sh
+
+      - name: Run healthcheck
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          GROK_ONLY: "1"
+        run: |
+          set -uo pipefail
+          export HOME=/home/gha
+          JOB="${{ github.event.inputs.job }}"
+          JOB="${JOB:-auto}"
+          PHASE="${{ github.event.inputs.phase }}"
+          PHASE="${PHASE:-before}"
+          DATE="${{ github.event.inputs.date }}"
+          SOURCE="${{ github.event.inputs.source_date }}"
+          TARGET="${{ github.event.inputs.target_date }}"
+          ARGS=(--job "$JOB" --phase "$PHASE" --write)
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ -n "$SOURCE" ] && ARGS+=(--source-date "$SOURCE")
+          [ -n "$TARGET" ] && ARGS+=(--target-date "$TARGET")
+          echo "CMD: python -m src.pipeline_health ${ARGS[*]}"
+          python -m src.pipeline_health "${ARGS[@]}"
+
+      - name: Show report
+        if: always()
+        run: |
+          D="${{ github.event.inputs.date }}"
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          echo "======== health $D ========"
+          ls -la 01_daily/${D}_pipeline_health_* 2>/dev/null || true
+          for f in 01_daily/${D}_pipeline_health_*.md; do
+            [ -f "$f" ] && { echo "---- $f ----"; cat "$f"; }
+          done
+
+      - name: Commit health report
+        if: always()
+        run: |
+          export HOME=/home/gha
+          bash scripts/safe_git_push.sh \
+            "chore: pipeline health [$(date -u +%F_%H%M)]" \
+            01_daily/*_pipeline_health_*.md \
+            01_daily/*_pipeline_health_*.json
