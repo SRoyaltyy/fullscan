@@ -1,0 +1,269 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-27T16:48:22.208589-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 5.18,
+      "delta_1d": 0.01,
+      "delta_1w": -0.01,
+      "delta_1m": 0.09
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 4.66,
+      "delta_1d": 0.02,
+      "delta_1w": 0.01,
+      "delta_1m": 0.05
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 2.34,
+      "delta_1d": 0.02,
+      "delta_1w": -0.01,
+      "delta_1m": -0.07
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 2.67,
+      "delta_1d": -0.03,
+      "delta_1w": -0.06,
+      "delta_1m": -0.17
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 3.64,
+      "delta_1d": -0.02,
+      "delta_1w": 0.02,
+      "delta_1m": -0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-28",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 0.456,
+      "delta_1d": -0.246,
+      "delta_1w": 0.231,
+      "delta_1m": -2.12
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 215.44,
+      "delta_1d": 52.69,
+      "delta_1w": 60.31,
+      "delta_1m": -92.65
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-27",
+      "current": 14.51,
+      "delta_1d": -0.7,
+      "delta_1w": -1.5
+    },
+    "vix3m": {
+      "date": "2026-08-27",
+      "current": 17.56,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.826,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.32,
+    "ratio_ma20": 0.947
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 83.54,
+      "pct_1d": 1.59
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 88.52,
+      "pct_1d": 0.77
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 4657.2,
+      "pct_1d": 1.28
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-27",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.03,
+      "pct_1m": -1.65
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 7733.5,
+      "pct_1d": 0.57
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 29638.5,
+      "pct_1d": 1.19
+    }
+  },
+  "finviz_futures_tape": {
+    "available": false,
+    "source": "01_daily/map_heat/2026-08-27_map_heat.json",
+    "rows": []
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 66262.16,
+          "pct_1d": 0.62
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 25652.97,
+          "pct_1d": 0.56
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 3912.52,
+          "pct_1d": 0.59
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 6808.21,
+          "pct_1d": 0.97
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 9127.8,
+          "pct_1d": -0.4
+        }
+      },
+      "composite_avg": 0.47
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 10792.54,
+          "pct_1d": -0.79
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 26367.24,
+          "pct_1d": 0.31
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 8319.87,
+          "pct_1d": -1.68
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 6424.73,
+          "pct_1d": -0.71
+        }
+      },
+      "composite_avg": -0.72
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": 0.26,
+    "window": "2026-08-20..2026-08-27"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 56.8,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-26 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": false,
+    "count": 0,
+    "items": []
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-27",
+      "open": 7710.34,
+      "high": 7741.27,
+      "low": 7689.89,
+      "close": 7730.99,
+      "pct_change": 0.72,
+      "prev_close": 7675.7,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.67,
+        "intraday_low_pct": 0.18,
+        "intraday_high_pct": 0.85,
+        "close_position_in_range": 0.8
+      }
+    },
+    "DOW": {
+      "date": "2026-08-27",
+      "open": 53613.66,
+      "high": 53707.62,
+      "low": 53345.62,
+      "close": 53569.44,
+      "pct_change": 0.2,
+      "prev_close": 53463.88,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.68,
+        "intraday_low_pct": -0.22,
+        "intraday_high_pct": 0.46,
+        "close_position_in_range": 0.62
+      }
+    },
+    "NDX": {
+      "date": "2026-08-27",
+      "open": 26356.98,
+      "high": 26553.9,
+      "low": 26273.87,
+      "close": 26541.35,
+      "pct_change": 1.57,
+      "prev_close": 26130.2,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 1.07,
+        "intraday_low_pct": 0.55,
+        "intraday_high_pct": 1.62,
+        "close_position_in_range": 0.96
+      }
+    }
+  }
+}

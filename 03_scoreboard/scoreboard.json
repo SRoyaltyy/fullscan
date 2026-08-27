@@ -7020,6 +7020,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-27",
+          "actual_pct": 1.18,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -10196,6 +10208,80 @@
       "sector": "Utilities",
       "etf": "XLU",
       "rubric": "00_grounding/sectors/utilities.md"
+    },
+    {
+      "date": "2026-08-27",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7710.34,
+      "actual_close": 7730.99,
+      "actual_pct_change": 0.72,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-27_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/nvidia-artificial-intelligence-earnings-dc8d556e709b50915cca9217a60b1991",
+          "date_accessed": "2026-08-27",
+          "summary": "The Wed after-close print that Thursday’s open was digesting.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html",
+          "date_accessed": "2026-08-27",
+          "summary": "Primary price impulse for NDX’s trend-up close.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/27/salesforce-stock-soars-on-track-for-second-best-day-ever.html",
+          "date_accessed": "2026-08-27",
+          "summary": "Second leg of the AI/software amplification, and the reason Dow/SPX breadth lagged NDX less than a pure-chip day would.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings/",
+          "date_accessed": "2026-08-27",
+          "summary": "The fundamental print behind the 22% gap.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.bloomberglaw.com/daily-labor-report/us-weekly-jobless-claims-fall-4k-to-203k-est-208k",
+          "date_accessed": "2026-08-27",
+          "summary": "Small 8:30 ET labor beat; too small to explain NDX +1.57%.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bnnbloomberg.ca/markets/2026/08/27/sptsx-composite-down-nearly-100-points-as-financial-stocks-fall-us-markets-up/",
+          "date_accessed": "2026-08-27",
+          "summary": "Confirms the close tape and the oil offset.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/26/meta-social-media-trial-settlement.html",
+          "date_accessed": "2026-08-27",
+          "summary": "Large headline, small Thursday SPX causal weight.",
+          "verification": "quote_not_found"
+        }
+      ],
+      "ops_fail": true,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Nvidia Q2 beat plus $108B Q3 and ~70% FY28 AI-demand guide (~+9%, ~$440B cap added)",
+      "key_interaction": "NVDA+CRM+CRWD AI-earnings amplification offset by hawkish Jackson Hole/sticky inflation/oil rebound/weak Europe — cap-weighted indexes up, median stock and Dow not",
+      "knowable_at_9am": "yes",
+      "attribution_contested": "yes",
+      "outlier_watch": "majority of S&P names down; Dow −0.22% intraday; oil and gold both up; Europe/France sold; CoreWeave flat vs NVDA",
+      "lesson_schema_ok": true
     }
   ]
 }
