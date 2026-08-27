@@ -1,0 +1,5543 @@
+{
+  "meta": {
+    "date": "2026-08-27",
+    "generated_at": "2026-08-27T01:21:44.466736-04:00",
+    "general_bias": 0.0,
+    "sector_bias": {},
+    "accuracy_gates": {
+      "general": {
+        "hit_rate": 0.5,
+        "n": 20,
+        "gate": 0.85
+      },
+      "sector:Basic Materials": {
+        "hit_rate": 0.7,
+        "n": 10,
+        "gate": 1.0
+      },
+      "sector:Communication Services": {
+        "hit_rate": 0.3,
+        "n": 10,
+        "gate": 0.5
+      },
+      "sector:Consumer Cyclical": {
+        "hit_rate": 0.7,
+        "n": 10,
+        "gate": 1.0
+      },
+      "sector:Consumer Defensive": {
+        "hit_rate": 0.4,
+        "n": 10,
+        "gate": 0.5
+      },
+      "sector:Energy": {
+        "hit_rate": 0.5,
+        "n": 10,
+        "gate": 0.85
+      },
+      "sector:Financial": {
+        "hit_rate": 0.4,
+        "n": 10,
+        "gate": 0.5
+      },
+      "sector:Healthcare": {
+        "hit_rate": 0.75,
+        "n": 8,
+        "gate": 1.0
+      },
+      "sector:Industrials": {
+        "hit_rate": 0.2,
+        "n": 10,
+        "gate": 0.5
+      },
+      "sector:Real Estate": {
+        "hit_rate": 0.6,
+        "n": 10,
+        "gate": 1.0
+      },
+      "sector:Technology": {
+        "hit_rate": 0.4,
+        "n": 10,
+        "gate": 0.5
+      },
+      "sector:Utilities": {
+        "hit_rate": 0.4,
+        "n": 10,
+        "gate": 0.5
+      }
+    },
+    "n_news_tickers": 128,
+    "n_ab": 2552,
+    "n_peer": 2406,
+    "same_day_general": false,
+    "same_day_sectors": 0,
+    "weather_risk": "unknown",
+    "n_universe": 2698,
+    "weights": {
+      "1d": [
+        0.1463,
+        0.0,
+        0.0,
+        0.3049,
+        0.3049,
+        0.2439
+      ],
+      "3d": [
+        0.2051,
+        0.0,
+        0.0,
+        0.2051,
+        0.3333,
+        0.2564
+      ],
+      "1w": [
+        0.2368,
+        0.0,
+        0.0,
+        0.1316,
+        0.3684,
+        0.2632
+      ],
+      "2w": [
+        0.2703,
+        0.0,
+        0.0,
+        0.0811,
+        0.3784,
+        0.2703
+      ],
+      "1m": [
+        0.3056,
+        0.0,
+        0.0,
+        0.0,
+        0.4167,
+        0.2778
+      ]
+    },
+    "weights_source": "book_policy.json",
+    "policy_version": 2,
+    "heat_scale": 0.25,
+    "sell_excludes_addons": true,
+    "absent_families": [
+      "sector",
+      "general"
+    ],
+    "input_health": {
+      "worst": "missing",
+      "family_status": {
+        "join": "ok",
+        "news": "missing",
+        "ab": "ok",
+        "peer": "ok",
+        "heat": "missing",
+        "general": "missing",
+        "sector": "missing"
+      },
+      "learn_grade": true
+    },
+    "horizons": [
+      "1d",
+      "3d",
+      "1w",
+      "2w",
+      "1m"
+    ],
+    "top_n": 25,
+    "inputs": [
+      {
+        "name": "Finviz Elite export",
+        "found": true,
+        "used_as": "liquidity + labels + AB proxy + digest"
+      },
+      {
+        "name": "Labels / membership",
+        "found": true,
+        "used_as": "join + mid_opp + earnings/range"
+      },
+      {
+        "name": "Weather (tape + FRED/DXY/VIX)",
+        "found": true,
+        "used_as": "join \u00d7 weather"
+      },
+      {
+        "name": "Channel 1 raw",
+        "found": true,
+        "used_as": "via weather"
+      },
+      {
+        "name": "Join ranked universe",
+        "found": true,
+        "used_as": "s_join"
+      },
+      {
+        "name": "News parse + actions",
+        "found": true,
+        "used_as": "s_news"
+      },
+      {
+        "name": "News judge",
+        "found": true,
+        "used_as": "s_news ticker tilts"
+      },
+      {
+        "name": "Finviz daily digest",
+        "found": true,
+        "used_as": "s_news company headlines"
+      },
+      {
+        "name": "General predict",
+        "found": false,
+        "used_as": "s_general \u00d7 beta"
+      },
+      {
+        "name": "Sector LLM essays",
+        "found": false,
+        "used_as": "s_sector (0 if essays missing)"
+      },
+      {
+        "name": "AB checklist + P01\u2013P04",
+        "found": true,
+        "used_as": "s_ab"
+      },
+      {
+        "name": "Peer RS",
+        "found": true,
+        "used_as": "s_peer"
+      },
+      {
+        "name": "Ticker checklist (rebound)",
+        "found": true,
+        "used_as": "rebound_floor (dated file, else latest \u2014 can be stale)"
+      },
+      {
+        "name": "Event scanner",
+        "found": true,
+        "used_as": "sector tilt + weather"
+      },
+      {
+        "name": "Map heat research",
+        "found": false,
+        "used_as": "s_heat nested override + captains"
+      },
+      {
+        "name": "Catalyst overlays",
+        "found": false,
+        "used_as": "not in ranker \u2014 separate chart workflow"
+      },
+      {
+        "name": "Insider / politician flow",
+        "found": false,
+        "used_as": "no daily file in repo"
+      },
+      {
+        "name": "Industry predict",
+        "found": true,
+        "used_as": "not scored (ad-hoc only)"
+      },
+      {
+        "name": "Learnings / mutable policy",
+        "found": false,
+        "used_as": "next predict prompt, not a ticker score"
+      }
+    ],
+    "n_news_after_digest": 111,
+    "event_sector_tilt": {
+      "Technology": 0.4,
+      "Consumer Cyclical": -0.8,
+      "Industrials": -0.56,
+      "Basic Materials": -0.32,
+      "Energy": -0.24,
+      "Consumer Defensive": -0.24,
+      "Financial": 0.24
+    },
+    "calendar_entry_scale": 1.0,
+    "earnings_entry_tickers": [],
+    "n_after_liquidity": 2698,
+    "min_market_cap_m": 80.0,
+    "min_avg_vol_k": 500.0,
+    "n_rebound": 0
+  },
+  "books": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "RRC",
+          "score": 1.388915822721268,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 9709.38,
+          "avg_vol_k": 3040.84
+        },
+        {
+          "ticker": "CRK",
+          "score": 1.22063139704186,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 4257.49,
+          "avg_vol_k": 2449.54
+        },
+        {
+          "ticker": "ACMR",
+          "score": 1.2026858360045434,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5509.95,
+          "avg_vol_k": 1447.04
+        },
+        {
+          "ticker": "MOS",
+          "score": 1.1792097848896126,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 7680.36,
+          "avg_vol_k": 8757.95
+        },
+        {
+          "ticker": "ELF",
+          "score": 1.1616650493866103,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 6312.09,
+          "avg_vol_k": 3120.65
+        },
+        {
+          "ticker": "EPAM",
+          "score": 1.1533931500652344,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 5641.55,
+          "avg_vol_k": 1882.16
+        },
+        {
+          "ticker": "CXT",
+          "score": 1.1460285576098999,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 2914.9,
+          "avg_vol_k": 892.35
+        },
+        {
+          "ticker": "XP",
+          "score": 1.1361403475711962,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9208.05,
+          "avg_vol_k": 5293.08
+        },
+        {
+          "ticker": "MNDY",
+          "score": 1.1267745901161483,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=+0.40; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.36; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 3912.47,
+          "avg_vol_k": 1577.6
+        },
+        {
+          "ticker": "VNT",
+          "score": 1.1130297696058042,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.85; sector1d=+0.40; ab=+0.94; LEAD,peers\u2191,sec\u2193; peer=+0.25; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4554.89,
+          "avg_vol_k": 1693.17
+        },
+        {
+          "ticker": "BFAM",
+          "score": 1.1020449016113294,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.80; ab=+0.85; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.33; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 3621.73,
+          "avg_vol_k": 934.99
+        },
+        {
+          "ticker": "SLI",
+          "score": 1.0999039507727644,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 644.1,
+          "avg_vol_k": 1765.24
+        },
+        {
+          "ticker": "SFM",
+          "score": 1.097329398491403,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.65; sector1d=-0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 8096.69,
+          "avg_vol_k": 2017.38
+        },
+        {
+          "ticker": "DEC",
+          "score": 1.0951964870649118,
+          "sector": "Energy",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.66; sector1d=-0.24; news=+0.74; ev=hormuz_energy_risk; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.67; mid_opp=+0.44",
+          "rebound": false,
+          "market_cap_m": 1049.3,
+          "avg_vol_k": 1033.53
+        },
+        {
+          "ticker": "LW",
+          "score": 1.0901908909426472,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.59; sector1d=-0.24; ab=+0.88; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.56; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7597.2,
+          "avg_vol_k": 1578.44
+        },
+        {
+          "ticker": "ICL",
+          "score": 1.08176697661532,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.73; sector1d=-0.32; ab=+0.94; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.36; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7331.28,
+          "avg_vol_k": 1309.04
+        },
+        {
+          "ticker": "WT",
+          "score": 1.078884432312023,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=+0.24; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.46",
+          "rebound": false,
+          "market_cap_m": 3751.44,
+          "avg_vol_k": 2799.14
+        },
+        {
+          "ticker": "ALHC",
+          "score": 1.0692943611541945,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=-0.15; ab=+0.81; LEAD,peers\u2191,ind\u2191; peer=+0.67; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 2883.34,
+          "avg_vol_k": 5649.35
+        },
+        {
+          "ticker": "KBR",
+          "score": 1.069154498898387,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.57; sector1d=-0.56; ab=+0.95; LEAD,peers\u2193,ind\u2193; peer=+0.22; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4781.75,
+          "avg_vol_k": 1735.64
+        },
+        {
+          "ticker": "TIGR",
+          "score": 1.0671254181092538,
+          "sector": "Financial",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.18; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.92; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 990.33,
+          "avg_vol_k": 3134.86
+        },
+        {
+          "ticker": "Z",
+          "score": 1.0624660870474276,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.91; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.33; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7899.47,
+          "avg_vol_k": 4333.56
+        },
+        {
+          "ticker": "BXSL",
+          "score": 1.0548698053503556,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.66; sector1d=+0.24; ab=+0.94; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.13; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 5807.95,
+          "avg_vol_k": 1642.01
+        },
+        {
+          "ticker": "OSK",
+          "score": 1.0543328246347685,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2191; peer=+0.42; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9722.77,
+          "avg_vol_k": 748.0
+        },
+        {
+          "ticker": "GPK",
+          "score": 1.0541401921525597,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.57; sector1d=-0.80; ab=+0.95; LAG,peers\u2191,ind\u2191,sec\u2193; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 3390.02,
+          "avg_vol_k": 5539.87
+        },
+        {
+          "ticker": "DNN",
+          "score": 1.0540149251030775,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.71; sector1d=-0.24; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.88; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 3285.95,
+          "avg_vol_k": 25228.3
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "QTRX",
+          "score": -0.46147876596142623,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 126.75,
+          "avg_vol_k": 924.38
+        },
+        {
+          "ticker": "NN",
+          "score": -0.09588031495940252,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 2597.98,
+          "avg_vol_k": 2714.07
+        },
+        {
+          "ticker": "GLUE",
+          "score": -0.287736377247331,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1226.8,
+          "avg_vol_k": 1417.85
+        },
+        {
+          "ticker": "CTMX",
+          "score": -0.1986092393595974,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 723.43,
+          "avg_vol_k": 3972.22
+        },
+        {
+          "ticker": "AZI",
+          "score": -0.43850865054613475,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.82,
+          "avg_vol_k": 8340.74
+        },
+        {
+          "ticker": "ACH",
+          "score": -0.4364476964782379,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 93.82,
+          "avg_vol_k": 1128.16
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.1753071360733548,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 430.2,
+          "avg_vol_k": 2951.71
+        },
+        {
+          "ticker": "HUMA",
+          "score": -0.4140229565797454,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 189.35,
+          "avg_vol_k": 11054.59
+        },
+        {
+          "ticker": "PUMP",
+          "score": -0.25218107501387627,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.68; sector1d=-0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1305.61,
+          "avg_vol_k": 4309.23
+        },
+        {
+          "ticker": "OTLK",
+          "score": -0.4042376966564022,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 151.74,
+          "avg_vol_k": 26936.73
+        },
+        {
+          "ticker": "IHRT",
+          "score": -0.16306024262994223,
+          "sector": "Communication Services",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.54; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.92; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 442.67,
+          "avg_vol_k": 926.72
+        },
+        {
+          "ticker": "IVVD",
+          "score": -0.40168520528397944,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.77; ab=-0.97; LAG,peers\u2193,ind\u2193; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 265.78,
+          "avg_vol_k": 4556.42
+        },
+        {
+          "ticker": "AEVA",
+          "score": -0.20086944072251028,
+          "sector": "Technology",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.38; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.97; mid_opp=+0.36",
+          "rebound": false,
+          "market_cap_m": 1100.66,
+          "avg_vol_k": 2108.1
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.6012057242889244,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+          "rebound": false,
+          "market_cap_m": 10850.69,
+          "avg_vol_k": 862.47
+        },
+        {
+          "ticker": "SPRY",
+          "score": -0.1510732996859081,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.61; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 599.67,
+          "avg_vol_k": 2028.31
+        },
+        {
+          "ticker": "ORGO",
+          "score": -0.39054338038338543,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.93; ab=-0.81; LAG,peers\u2193,ind\u2191; peer=-0.69; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 225.18,
+          "avg_vol_k": 854.84
+        },
+        {
+          "ticker": "GPCR",
+          "score": -0.07013550508153382,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 3519.15,
+          "avg_vol_k": 710.3
+        },
+        {
+          "ticker": "FLNC",
+          "score": 0.011034068078355053,
+          "sector": "Utilities",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 2045.32,
+          "avg_vol_k": 9830.28
+        },
+        {
+          "ticker": "ANNX",
+          "score": -0.22844813695861316,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 946.0,
+          "avg_vol_k": 3597.8
+        },
+        {
+          "ticker": "THRY",
+          "score": -0.3872660750517938,
+          "sector": "Technology",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.54; sector1d=+0.40; ab=-0.91; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.79; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 84.44,
+          "avg_vol_k": 744.26
+        },
+        {
+          "ticker": "YRD",
+          "score": -0.38405613463646815,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.74; sector1d=+0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 91.71,
+          "avg_vol_k": 1044.21
+        },
+        {
+          "ticker": "ARDX",
+          "score": -0.1421509361986596,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.90; ab=-0.95; LAG,peers\u2193,ind\u2193; peer=-0.49; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 954.39,
+          "avg_vol_k": 4148.34
+        },
+        {
+          "ticker": "MRNA",
+          "score": -0.7110968152208212,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+          "rebound": false,
+          "market_cap_m": 59749.64,
+          "avg_vol_k": 13745.05
+        },
+        {
+          "ticker": "TSHA",
+          "score": -0.2976290846425298,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.60; mid_opp=+0.24",
+          "rebound": false,
+          "market_cap_m": 1961.52,
+          "avg_vol_k": 3120.46
+        },
+        {
+          "ticker": "LU",
+          "score": -0.13721699192335157,
+          "sector": "Financial",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.58; sector1d=+0.24; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.76; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 1090.1,
+          "avg_vol_k": 1095.37
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "FUTU",
+            "score": 0.6975022980254093,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.93; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.97",
+            "rebound": false,
+            "market_cap_m": 12192.8,
+            "avg_vol_k": 2393.23
+          },
+          {
+            "ticker": "CNH",
+            "score": 0.675388309980856,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.96; LEAD,peers\u2191,ind\u2191; peer=+0.87",
+            "rebound": false,
+            "market_cap_m": 14382.37,
+            "avg_vol_k": 12929.27
+          },
+          {
+            "ticker": "HOOD",
+            "score": 0.6730470381771002,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=+0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86",
+            "rebound": false,
+            "market_cap_m": 97586.39,
+            "avg_vol_k": 26373.18
+          },
+          {
+            "ticker": "SUZ",
+            "score": 0.6646043779658367,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.88; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 11024.27,
+            "avg_vol_k": 3316.28
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "RRC",
+            "score": 1.388915822721268,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 9709.38,
+            "avg_vol_k": 3040.84
+          },
+          {
+            "ticker": "CRK",
+            "score": 1.22063139704186,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+            "rebound": false,
+            "market_cap_m": 4257.49,
+            "avg_vol_k": 2449.54
+          },
+          {
+            "ticker": "ACMR",
+            "score": 1.2026858360045434,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 5509.95,
+            "avg_vol_k": 1447.04
+          },
+          {
+            "ticker": "MOS",
+            "score": 1.1792097848896126,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 7680.36,
+            "avg_vol_k": 8757.95
+          },
+          {
+            "ticker": "ELF",
+            "score": 1.1616650493866103,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 6312.09,
+            "avg_vol_k": 3120.65
+          },
+          {
+            "ticker": "EPAM",
+            "score": 1.1533931500652344,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 5641.55,
+            "avg_vol_k": 1882.16
+          },
+          {
+            "ticker": "CXT",
+            "score": 1.1460285576098999,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 2914.9,
+            "avg_vol_k": 892.35
+          },
+          {
+            "ticker": "XP",
+            "score": 1.1361403475711962,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 9208.05,
+            "avg_vol_k": 5293.08
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "SLI",
+            "score": 1.0999039507727644,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 644.1,
+            "avg_vol_k": 1765.24
+          },
+          {
+            "ticker": "VYX",
+            "score": 1.097800716391796,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.71; sector1d=+0.40; ab=+0.93; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.95; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1226.06,
+            "avg_vol_k": 2342.99
+          },
+          {
+            "ticker": "DEC",
+            "score": 1.0951964870649118,
+            "sector": "Energy",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.66; sector1d=-0.24; news=+0.74; ev=hormuz_energy_risk; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.67; mid_opp=+0.44",
+            "rebound": false,
+            "market_cap_m": 1049.3,
+            "avg_vol_k": 1033.53
+          },
+          {
+            "ticker": "PGY",
+            "score": 1.083330292606295,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=+0.40; ab=+0.81; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.87; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1869.57,
+            "avg_vol_k": 3523.31
+          },
+          {
+            "ticker": "TIGR",
+            "score": 1.0671254181092538,
+            "sector": "Financial",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.18; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.92; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 990.33,
+            "avg_vol_k": 3134.86
+          },
+          {
+            "ticker": "FBRT",
+            "score": 1.0214898429908374,
+            "sector": "Real Estate",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.79; ab=+0.85; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.68; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 701.74,
+            "avg_vol_k": 1284.57
+          },
+          {
+            "ticker": "SID",
+            "score": 1.007438936265478,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.56; sector1d=-0.32; ab=+0.55; LEAD,peers\u2191,sec\u2191; peer=+0.97; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1365.87,
+            "avg_vol_k": 4033.82
+          },
+          {
+            "ticker": "COUR",
+            "score": 0.9952699015817352,
+            "sector": "Consumer Defensive",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.24; ab=+0.88; LEAD,peers\u2191,sec\u2191; peer=+0.28; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1602.27,
+            "avg_vol_k": 6781.03
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "AXSM",
+            "score": -0.6012057242889244,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+            "rebound": false,
+            "market_cap_m": 10850.69,
+            "avg_vol_k": 862.47
+          },
+          {
+            "ticker": "MRNA",
+            "score": -0.7110968152208212,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+            "rebound": false,
+            "market_cap_m": 59749.64,
+            "avg_vol_k": 13745.05
+          },
+          {
+            "ticker": "RKLB",
+            "score": -0.4624912429267372,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.48; sector1d=-0.56; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.77; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 39606.07,
+            "avg_vol_k": 23316.07
+          },
+          {
+            "ticker": "TU",
+            "score": -0.41525198730666213,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.91; ab=-0.88; LAG,peers\u2191,ind\u2191,sec\u2191; peer=-0.51; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 15413.3,
+            "avg_vol_k": 7201.28
+          },
+          {
+            "ticker": "BBIO",
+            "score": -0.5265998123146051,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.93; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.51",
+            "rebound": false,
+            "market_cap_m": 15516.28,
+            "avg_vol_k": 3253.72
+          },
+          {
+            "ticker": "ASTS",
+            "score": -0.4002655787964915,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.69; sector1d=+0.40; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.46; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 23303.35,
+            "avg_vol_k": 19039.99
+          },
+          {
+            "ticker": "STLA",
+            "score": -0.3212648267366193,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.85; sector1d=-0.80; ab=-0.70; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.38; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 14907.86,
+            "avg_vol_k": 19958.4
+          },
+          {
+            "ticker": "WIT",
+            "score": -0.3161790813675254,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.77; sector1d=+0.40; ab=-0.64; LAG,peers\u2193,ind\u2191,sec\u2193; peer=-0.49; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 18103.53,
+            "avg_vol_k": 10667.42
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "NN",
+            "score": -0.09588031495940252,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2597.98,
+            "avg_vol_k": 2714.07
+          },
+          {
+            "ticker": "GPCR",
+            "score": -0.07013550508153382,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 3519.15,
+            "avg_vol_k": 710.3
+          },
+          {
+            "ticker": "FLNC",
+            "score": 0.011034068078355053,
+            "sector": "Utilities",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 2045.32,
+            "avg_vol_k": 9830.28
+          },
+          {
+            "ticker": "QBTS",
+            "score": 0.02615065383718851,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=+0.40; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.72; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 6521.42,
+            "avg_vol_k": 24288.13
+          },
+          {
+            "ticker": "NAMS",
+            "score": 0.03627677215456515,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 3275.32,
+            "avg_vol_k": 1147.4
+          },
+          {
+            "ticker": "CORZ",
+            "score": 0.000363944266730698,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.31; sector1d=+0.40; ab=-0.88; LAG,peers\u2191,ind\u2193,sec\u2193; peer=-0.85; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 5597.75,
+            "avg_vol_k": 12719.71
+          },
+          {
+            "ticker": "CIFR",
+            "score": -0.037165057743549446,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.49; sector1d=+0.40; ab=-0.85; LAG,peers\u2191,ind\u2191,sec\u2193; peer=-0.77; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 6648.79,
+            "avg_vol_k": 29363.19
+          },
+          {
+            "ticker": "MLYS",
+            "score": 0.01648457955587057,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.85; LAG,peers\u2193,ind\u2193; peer=-0.41; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2288.86,
+            "avg_vol_k": 1331.73
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "QTRX",
+            "score": -0.46147876596142623,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 126.75,
+            "avg_vol_k": 924.38
+          },
+          {
+            "ticker": "GLUE",
+            "score": -0.287736377247331,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+            "rebound": false,
+            "market_cap_m": 1226.8,
+            "avg_vol_k": 1417.85
+          },
+          {
+            "ticker": "CTMX",
+            "score": -0.1986092393595974,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 723.43,
+            "avg_vol_k": 3972.22
+          },
+          {
+            "ticker": "AZI",
+            "score": -0.43850865054613475,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 87.82,
+            "avg_vol_k": 8340.74
+          },
+          {
+            "ticker": "ACH",
+            "score": -0.4364476964782379,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 93.82,
+            "avg_vol_k": 1128.16
+          },
+          {
+            "ticker": "EYPT",
+            "score": -0.1753071360733548,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 430.2,
+            "avg_vol_k": 2951.71
+          },
+          {
+            "ticker": "HUMA",
+            "score": -0.4140229565797454,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 189.35,
+            "avg_vol_k": 11054.59
+          },
+          {
+            "ticker": "PUMP",
+            "score": -0.25218107501387627,
+            "sector": "Energy",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.68; sector1d=-0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.78; mid_opp=+0.32",
+            "rebound": false,
+            "market_cap_m": 1305.61,
+            "avg_vol_k": 4309.23
+          }
+        ]
+      }
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "RRC",
+          "score": 1.3884266121356472,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 9709.38,
+          "avg_vol_k": 3040.84
+        },
+        {
+          "ticker": "CRK",
+          "score": 1.3064213380459488,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 4257.49,
+          "avg_vol_k": 2449.54
+        },
+        {
+          "ticker": "MOS",
+          "score": 1.2664346851174466,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 7680.36,
+          "avg_vol_k": 8757.95
+        },
+        {
+          "ticker": "ACMR",
+          "score": 1.2523420837379484,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5509.95,
+          "avg_vol_k": 1447.04
+        },
+        {
+          "ticker": "ELF",
+          "score": 1.2477514013080617,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 6312.09,
+          "avg_vol_k": 3120.65
+        },
+        {
+          "ticker": "EPAM",
+          "score": 1.2347616659402245,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 5641.55,
+          "avg_vol_k": 1882.16
+        },
+        {
+          "ticker": "CXT",
+          "score": 1.2341955970582057,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 2914.9,
+          "avg_vol_k": 892.35
+        },
+        {
+          "ticker": "XP",
+          "score": 1.2287951107315327,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9208.05,
+          "avg_vol_k": 5293.08
+        },
+        {
+          "ticker": "MNDY",
+          "score": 1.2089573225006873,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=+0.40; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.36; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 3912.47,
+          "avg_vol_k": 1577.6
+        },
+        {
+          "ticker": "VNT",
+          "score": 1.192923553650156,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.85; sector1d=+0.40; ab=+0.94; LEAD,peers\u2191,sec\u2193; peer=+0.25; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4554.89,
+          "avg_vol_k": 1693.17
+        },
+        {
+          "ticker": "SLI",
+          "score": 1.1828391998322092,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 644.1,
+          "avg_vol_k": 1765.24
+        },
+        {
+          "ticker": "BFAM",
+          "score": 1.1795926637081584,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.80; ab=+0.85; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.33; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 3621.73,
+          "avg_vol_k": 934.99
+        },
+        {
+          "ticker": "WT",
+          "score": 1.1724583906493649,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=+0.24; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.46",
+          "rebound": false,
+          "market_cap_m": 3751.44,
+          "avg_vol_k": 2799.14
+        },
+        {
+          "ticker": "SFM",
+          "score": 1.172394542091574,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.65; sector1d=-0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 8096.69,
+          "avg_vol_k": 2017.38
+        },
+        {
+          "ticker": "LW",
+          "score": 1.1566469939975756,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.59; sector1d=-0.24; ab=+0.88; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.56; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7597.2,
+          "avg_vol_k": 1578.44
+        },
+        {
+          "ticker": "ICL",
+          "score": 1.1560756443359295,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.73; sector1d=-0.32; ab=+0.94; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.36; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7331.28,
+          "avg_vol_k": 1309.04
+        },
+        {
+          "ticker": "OSK",
+          "score": 1.1431438050031928,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2191; peer=+0.42; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9722.77,
+          "avg_vol_k": 748.0
+        },
+        {
+          "ticker": "TFPM",
+          "score": 1.1380722929867488,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.06; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7205.88,
+          "avg_vol_k": 647.31
+        },
+        {
+          "ticker": "FIGR",
+          "score": 1.135600831544865,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=+0.24; ab=+0.88; ind\u2191,sec\u2191; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 8289.8,
+          "avg_vol_k": 3957.98
+        },
+        {
+          "ticker": "Z",
+          "score": 1.1355832944650093,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.91; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.33; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7899.47,
+          "avg_vol_k": 4333.56
+        },
+        {
+          "ticker": "KBR",
+          "score": 1.132742762746833,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.57; sector1d=-0.56; ab=+0.95; LEAD,peers\u2193,ind\u2193; peer=+0.22; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4781.75,
+          "avg_vol_k": 1735.64
+        },
+        {
+          "ticker": "HLNE",
+          "score": 1.1319292728056416,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=+0.24; ab=+0.93; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.10; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5809.39,
+          "avg_vol_k": 883.09
+        },
+        {
+          "ticker": "DNN",
+          "score": 1.126982055948449,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.71; sector1d=-0.24; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.88; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 3285.95,
+          "avg_vol_k": 25228.3
+        },
+        {
+          "ticker": "BRSL",
+          "score": 1.1259369298961424,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.90; sector1d=-0.80; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.19; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 2110.38,
+          "avg_vol_k": 1719.77
+        },
+        {
+          "ticker": "ZG",
+          "score": 1.1183752250314227,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.86; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.11; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7913.02,
+          "avg_vol_k": 1320.91
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "QTRX",
+          "score": -0.551423532735301,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 126.75,
+          "avg_vol_k": 924.38
+        },
+        {
+          "ticker": "NN",
+          "score": -0.1863156927777696,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 2597.98,
+          "avg_vol_k": 2714.07
+        },
+        {
+          "ticker": "GLUE",
+          "score": -0.38131862654062015,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1226.8,
+          "avg_vol_k": 1417.85
+        },
+        {
+          "ticker": "CTMX",
+          "score": -0.29114226454060754,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 723.43,
+          "avg_vol_k": 3972.22
+        },
+        {
+          "ticker": "ACH",
+          "score": -0.5261717294057101,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 93.82,
+          "avg_vol_k": 1128.16
+        },
+        {
+          "ticker": "AZI",
+          "score": -0.5229061919402511,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.82,
+          "avg_vol_k": 8340.74
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.26246874339217197,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 430.2,
+          "avg_vol_k": 2951.71
+        },
+        {
+          "ticker": "HUMA",
+          "score": -0.49763670934544213,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 189.35,
+          "avg_vol_k": 11054.59
+        },
+        {
+          "ticker": "OTLK",
+          "score": -0.4918919117090991,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 151.74,
+          "avg_vol_k": 26936.73
+        },
+        {
+          "ticker": "PUMP",
+          "score": -0.32796102133991506,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.68; sector1d=-0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1305.61,
+          "avg_vol_k": 4309.23
+        },
+        {
+          "ticker": "IVVD",
+          "score": -0.4824216641792104,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.77; ab=-0.97; LAG,peers\u2193,ind\u2193; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 265.78,
+          "avg_vol_k": 4556.42
+        },
+        {
+          "ticker": "SPRY",
+          "score": -0.24053473879864773,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.61; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 599.67,
+          "avg_vol_k": 2028.31
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.6901920906131636,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+          "rebound": false,
+          "market_cap_m": 10850.69,
+          "avg_vol_k": 862.47
+        },
+        {
+          "ticker": "GPCR",
+          "score": -0.15784058742934753,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 3519.15,
+          "avg_vol_k": 710.3
+        },
+        {
+          "ticker": "ORGO",
+          "score": -0.4767994444961544,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.93; ab=-0.81; LAG,peers\u2193,ind\u2191; peer=-0.69; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 225.18,
+          "avg_vol_k": 854.84
+        },
+        {
+          "ticker": "ANNX",
+          "score": -0.31616321333714487,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 946.0,
+          "avg_vol_k": 3597.8
+        },
+        {
+          "ticker": "IHRT",
+          "score": -0.2306101100763127,
+          "sector": "Communication Services",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.54; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.92; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 442.67,
+          "avg_vol_k": 926.72
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.06965914166303355,
+          "sector": "Utilities",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 2045.32,
+          "avg_vol_k": 9830.28
+        },
+        {
+          "ticker": "ARDX",
+          "score": -0.2282300918783008,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.90; ab=-0.95; LAG,peers\u2193,ind\u2193; peer=-0.49; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 954.39,
+          "avg_vol_k": 4148.34
+        },
+        {
+          "ticker": "MRNA",
+          "score": -0.796491832858115,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+          "rebound": false,
+          "market_cap_m": 59749.64,
+          "avg_vol_k": 13745.05
+        },
+        {
+          "ticker": "TSHA",
+          "score": -0.38613597108728825,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.60; mid_opp=+0.24",
+          "rebound": false,
+          "market_cap_m": 1961.52,
+          "avg_vol_k": 3120.46
+        },
+        {
+          "ticker": "YRD",
+          "score": -0.4615060713976441,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.74; sector1d=+0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 91.71,
+          "avg_vol_k": 1044.21
+        },
+        {
+          "ticker": "AEVA",
+          "score": -0.2601956675193892,
+          "sector": "Technology",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.38; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.97; mid_opp=+0.36",
+          "rebound": false,
+          "market_cap_m": 1100.66,
+          "avg_vol_k": 2108.1
+        },
+        {
+          "ticker": "IBIO",
+          "score": -0.45612034811483837,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.60; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.02,
+          "avg_vol_k": 868.82
+        },
+        {
+          "ticker": "QBTS",
+          "score": -0.05493306506905771,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.86; sector1d=+0.40; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.72; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 6521.42,
+          "avg_vol_k": 24288.13
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "FUTU",
+            "score": 0.791712823007967,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.93; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.97",
+            "rebound": false,
+            "market_cap_m": 12192.8,
+            "avg_vol_k": 2393.23
+          },
+          {
+            "ticker": "CNH",
+            "score": 0.7692542715343885,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.96; LEAD,peers\u2191,ind\u2191; peer=+0.87",
+            "rebound": false,
+            "market_cap_m": 14382.37,
+            "avg_vol_k": 12929.27
+          },
+          {
+            "ticker": "HOOD",
+            "score": 0.7684840477292674,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=+0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86",
+            "rebound": false,
+            "market_cap_m": 97586.39,
+            "avg_vol_k": 26373.18
+          },
+          {
+            "ticker": "SUZ",
+            "score": 0.7569321519479046,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.88; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 11024.27,
+            "avg_vol_k": 3316.28
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "RRC",
+            "score": 1.3884266121356472,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 9709.38,
+            "avg_vol_k": 3040.84
+          },
+          {
+            "ticker": "CRK",
+            "score": 1.3064213380459488,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+            "rebound": false,
+            "market_cap_m": 4257.49,
+            "avg_vol_k": 2449.54
+          },
+          {
+            "ticker": "MOS",
+            "score": 1.2664346851174466,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 7680.36,
+            "avg_vol_k": 8757.95
+          },
+          {
+            "ticker": "ACMR",
+            "score": 1.2523420837379484,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 5509.95,
+            "avg_vol_k": 1447.04
+          },
+          {
+            "ticker": "ELF",
+            "score": 1.2477514013080617,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 6312.09,
+            "avg_vol_k": 3120.65
+          },
+          {
+            "ticker": "EPAM",
+            "score": 1.2347616659402245,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 5641.55,
+            "avg_vol_k": 1882.16
+          },
+          {
+            "ticker": "CXT",
+            "score": 1.2341955970582057,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 2914.9,
+            "avg_vol_k": 892.35
+          },
+          {
+            "ticker": "XP",
+            "score": 1.2287951107315327,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 9208.05,
+            "avg_vol_k": 5293.08
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "SLI",
+            "score": 1.1828391998322092,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 644.1,
+            "avg_vol_k": 1765.24
+          },
+          {
+            "ticker": "VYX",
+            "score": 1.1778905321957955,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.71; sector1d=+0.40; ab=+0.93; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.95; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1226.06,
+            "avg_vol_k": 2342.99
+          },
+          {
+            "ticker": "PGY",
+            "score": 1.1752043996314026,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=+0.40; ab=+0.81; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.87; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1869.57,
+            "avg_vol_k": 3523.31
+          },
+          {
+            "ticker": "TIGR",
+            "score": 1.1170376201127663,
+            "sector": "Financial",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.18; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.92; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 990.33,
+            "avg_vol_k": 3134.86
+          },
+          {
+            "ticker": "FBRT",
+            "score": 1.100691696402817,
+            "sector": "Real Estate",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.79; ab=+0.85; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.68; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 701.74,
+            "avg_vol_k": 1284.57
+          },
+          {
+            "ticker": "DEC",
+            "score": 1.0842443975812914,
+            "sector": "Energy",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.66; sector1d=-0.24; news=+0.74; ev=hormuz_energy_risk; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.67; mid_opp=+0.44",
+            "rebound": false,
+            "market_cap_m": 1049.3,
+            "avg_vol_k": 1033.53
+          },
+          {
+            "ticker": "COUR",
+            "score": 1.0792290190940164,
+            "sector": "Consumer Defensive",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.24; ab=+0.88; LEAD,peers\u2191,sec\u2191; peer=+0.28; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1602.27,
+            "avg_vol_k": 6781.03
+          },
+          {
+            "ticker": "SID",
+            "score": 1.0682115756721164,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.56; sector1d=-0.32; ab=+0.55; LEAD,peers\u2191,sec\u2191; peer=+0.97; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1365.87,
+            "avg_vol_k": 4033.82
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "AXSM",
+            "score": -0.6901920906131636,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+            "rebound": false,
+            "market_cap_m": 10850.69,
+            "avg_vol_k": 862.47
+          },
+          {
+            "ticker": "MRNA",
+            "score": -0.796491832858115,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+            "rebound": false,
+            "market_cap_m": 59749.64,
+            "avg_vol_k": 13745.05
+          },
+          {
+            "ticker": "TU",
+            "score": -0.5000823671182123,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.91; ab=-0.88; LAG,peers\u2191,ind\u2191,sec\u2191; peer=-0.51; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 15413.3,
+            "avg_vol_k": 7201.28
+          },
+          {
+            "ticker": "RKLB",
+            "score": -0.5257556541222219,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.48; sector1d=-0.56; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.77; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 39606.07,
+            "avg_vol_k": 23316.07
+          },
+          {
+            "ticker": "BBIO",
+            "score": -0.6079245821417425,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.93; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.51",
+            "rebound": false,
+            "market_cap_m": 15516.28,
+            "avg_vol_k": 3253.72
+          },
+          {
+            "ticker": "ASTS",
+            "score": -0.4703942283718178,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.69; sector1d=+0.40; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.46; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 23303.35,
+            "avg_vol_k": 19039.99
+          },
+          {
+            "ticker": "STLA",
+            "score": -0.395786435422106,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.85; sector1d=-0.80; ab=-0.70; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.38; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 14907.86,
+            "avg_vol_k": 19958.4
+          },
+          {
+            "ticker": "WIT",
+            "score": -0.38566956693383236,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.77; sector1d=+0.40; ab=-0.64; LAG,peers\u2193,ind\u2191,sec\u2193; peer=-0.49; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 18103.53,
+            "avg_vol_k": 10667.42
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "NN",
+            "score": -0.1863156927777696,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2597.98,
+            "avg_vol_k": 2714.07
+          },
+          {
+            "ticker": "GPCR",
+            "score": -0.15784058742934753,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 3519.15,
+            "avg_vol_k": 710.3
+          },
+          {
+            "ticker": "FLNC",
+            "score": -0.06965914166303355,
+            "sector": "Utilities",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 2045.32,
+            "avg_vol_k": 9830.28
+          },
+          {
+            "ticker": "QBTS",
+            "score": -0.05493306506905771,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=+0.40; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.72; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 6521.42,
+            "avg_vol_k": 24288.13
+          },
+          {
+            "ticker": "NAMS",
+            "score": -0.05274175696557293,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 3275.32,
+            "avg_vol_k": 1147.4
+          },
+          {
+            "ticker": "MLYS",
+            "score": -0.07073580809962188,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.85; LAG,peers\u2193,ind\u2193; peer=-0.41; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2288.86,
+            "avg_vol_k": 1331.73
+          },
+          {
+            "ticker": "IMNM",
+            "score": -0.3029855154346828,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.96; ab=-0.88; LAG,peers\u2193,ind\u2193; peer=-0.36; mid_opp=+0.28",
+            "rebound": false,
+            "market_cap_m": 3265.36,
+            "avg_vol_k": 1400.92
+          },
+          {
+            "ticker": "CIFR",
+            "score": -0.09971153508966729,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.49; sector1d=+0.40; ab=-0.85; LAG,peers\u2191,ind\u2191,sec\u2193; peer=-0.77; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 6648.79,
+            "avg_vol_k": 29363.19
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "QTRX",
+            "score": -0.551423532735301,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 126.75,
+            "avg_vol_k": 924.38
+          },
+          {
+            "ticker": "GLUE",
+            "score": -0.38131862654062015,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+            "rebound": false,
+            "market_cap_m": 1226.8,
+            "avg_vol_k": 1417.85
+          },
+          {
+            "ticker": "CTMX",
+            "score": -0.29114226454060754,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 723.43,
+            "avg_vol_k": 3972.22
+          },
+          {
+            "ticker": "ACH",
+            "score": -0.5261717294057101,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 93.82,
+            "avg_vol_k": 1128.16
+          },
+          {
+            "ticker": "AZI",
+            "score": -0.5229061919402511,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 87.82,
+            "avg_vol_k": 8340.74
+          },
+          {
+            "ticker": "EYPT",
+            "score": -0.26246874339217197,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 430.2,
+            "avg_vol_k": 2951.71
+          },
+          {
+            "ticker": "HUMA",
+            "score": -0.49763670934544213,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 189.35,
+            "avg_vol_k": 11054.59
+          },
+          {
+            "ticker": "OTLK",
+            "score": -0.4918919117090991,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 151.74,
+            "avg_vol_k": 26936.73
+          }
+        ]
+      }
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "RRC",
+          "score": 1.3860088927174015,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 9709.38,
+          "avg_vol_k": 3040.84
+        },
+        {
+          "ticker": "CRK",
+          "score": 1.3652922591211603,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 4257.49,
+          "avg_vol_k": 2449.54
+        },
+        {
+          "ticker": "MOS",
+          "score": 1.327433795417652,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 7680.36,
+          "avg_vol_k": 8757.95
+        },
+        {
+          "ticker": "ELF",
+          "score": 1.3102225577481705,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 6312.09,
+          "avg_vol_k": 3120.65
+        },
+        {
+          "ticker": "CXT",
+          "score": 1.3006371449785723,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 2914.9,
+          "avg_vol_k": 892.35
+        },
+        {
+          "ticker": "XP",
+          "score": 1.2981459212348334,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9208.05,
+          "avg_vol_k": 5293.08
+        },
+        {
+          "ticker": "EPAM",
+          "score": 1.2972836420613287,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 5641.55,
+          "avg_vol_k": 1882.16
+        },
+        {
+          "ticker": "ACMR",
+          "score": 1.2874158867757615,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5509.95,
+          "avg_vol_k": 1447.04
+        },
+        {
+          "ticker": "MNDY",
+          "score": 1.2672151999243315,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=+0.40; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.36; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 3912.47,
+          "avg_vol_k": 1577.6
+        },
+        {
+          "ticker": "VNT",
+          "score": 1.254639950806653,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.85; sector1d=+0.40; ab=+0.94; LEAD,peers\u2191,sec\u2193; peer=+0.25; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4554.89,
+          "avg_vol_k": 1693.17
+        },
+        {
+          "ticker": "SLI",
+          "score": 1.2436190298226948,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 644.1,
+          "avg_vol_k": 1765.24
+        },
+        {
+          "ticker": "WT",
+          "score": 1.2420288069430458,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=+0.24; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.46",
+          "rebound": false,
+          "market_cap_m": 3751.44,
+          "avg_vol_k": 2799.14
+        },
+        {
+          "ticker": "BFAM",
+          "score": 1.2382068567308768,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.80; ab=+0.85; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.33; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 3621.73,
+          "avg_vol_k": 934.99
+        },
+        {
+          "ticker": "SFM",
+          "score": 1.2317909864950778,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.65; sector1d=-0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 8096.69,
+          "avg_vol_k": 2017.38
+        },
+        {
+          "ticker": "ICL",
+          "score": 1.2147875117095392,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.73; sector1d=-0.32; ab=+0.94; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.36; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7331.28,
+          "avg_vol_k": 1309.04
+        },
+        {
+          "ticker": "OSK",
+          "score": 1.2099286962231268,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2191; peer=+0.42; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9722.77,
+          "avg_vol_k": 748.0
+        },
+        {
+          "ticker": "LW",
+          "score": 1.209919582807272,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.59; sector1d=-0.24; ab=+0.88; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.56; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7597.2,
+          "avg_vol_k": 1578.44
+        },
+        {
+          "ticker": "ERO",
+          "score": 1.2041746080276825,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 4092.73,
+          "avg_vol_k": 1293.32
+        },
+        {
+          "ticker": "FIGR",
+          "score": 1.1977584219540498,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=+0.24; ab=+0.88; ind\u2191,sec\u2191; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 8289.8,
+          "avg_vol_k": 3957.98
+        },
+        {
+          "ticker": "HLNE",
+          "score": 1.19562164635533,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=+0.24; ab=+0.93; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.10; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5809.39,
+          "avg_vol_k": 883.09
+        },
+        {
+          "ticker": "Z",
+          "score": 1.1859972290670018,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.91; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.33; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7899.47,
+          "avg_vol_k": 4333.56
+        },
+        {
+          "ticker": "KBR",
+          "score": 1.1859175215468067,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.57; sector1d=-0.56; ab=+0.95; LEAD,peers\u2193,ind\u2193; peer=+0.22; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4781.75,
+          "avg_vol_k": 1735.64
+        },
+        {
+          "ticker": "DNN",
+          "score": 1.1803032673242355,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.71; sector1d=-0.24; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.88; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 3285.95,
+          "avg_vol_k": 25228.3
+        },
+        {
+          "ticker": "BRSL",
+          "score": 1.1781130726206204,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.90; sector1d=-0.80; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.19; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 2110.38,
+          "avg_vol_k": 1719.77
+        },
+        {
+          "ticker": "ZG",
+          "score": 1.1711007418558501,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.86; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.11; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7913.02,
+          "avg_vol_k": 1320.91
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "QTRX",
+          "score": -0.6167580385883406,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 126.75,
+          "avg_vol_k": 924.38
+        },
+        {
+          "ticker": "NN",
+          "score": -0.2525348276180419,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 2597.98,
+          "avg_vol_k": 2714.07
+        },
+        {
+          "ticker": "GLUE",
+          "score": -0.45012743799560645,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1226.8,
+          "avg_vol_k": 1417.85
+        },
+        {
+          "ticker": "CTMX",
+          "score": -0.3584858211914893,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 723.43,
+          "avg_vol_k": 3972.22
+        },
+        {
+          "ticker": "ACH",
+          "score": -0.5929000314373697,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 93.82,
+          "avg_vol_k": 1128.16
+        },
+        {
+          "ticker": "AZI",
+          "score": -0.5835377891618238,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.82,
+          "avg_vol_k": 8340.74
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.32208812092481176,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 430.2,
+          "avg_vol_k": 2951.71
+        },
+        {
+          "ticker": "HUMA",
+          "score": -0.5587801596165006,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 189.35,
+          "avg_vol_k": 11054.59
+        },
+        {
+          "ticker": "OTLK",
+          "score": -0.5552079465768722,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 151.74,
+          "avg_vol_k": 26936.73
+        },
+        {
+          "ticker": "PUMP",
+          "score": -0.387174839908407,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.68; sector1d=-0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1305.61,
+          "avg_vol_k": 4309.23
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.7565102511889787,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+          "rebound": false,
+          "market_cap_m": 10850.69,
+          "avg_vol_k": 862.47
+        },
+        {
+          "ticker": "SPRY",
+          "score": -0.3055888200404214,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.61; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 599.67,
+          "avg_vol_k": 2028.31
+        },
+        {
+          "ticker": "IVVD",
+          "score": -0.5452186584218269,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.77; ab=-0.97; LAG,peers\u2193,ind\u2193; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 265.78,
+          "avg_vol_k": 4556.42
+        },
+        {
+          "ticker": "ORGO",
+          "score": -0.5393587833481597,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.93; ab=-0.81; LAG,peers\u2193,ind\u2191; peer=-0.69; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 225.18,
+          "avg_vol_k": 854.84
+        },
+        {
+          "ticker": "GPCR",
+          "score": -0.2191013633537648,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 3519.15,
+          "avg_vol_k": 710.3
+        },
+        {
+          "ticker": "ANNX",
+          "score": -0.3774288859402332,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 946.0,
+          "avg_vol_k": 3597.8
+        },
+        {
+          "ticker": "ARDX",
+          "score": -0.2935464069204682,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.90; ab=-0.95; LAG,peers\u2193,ind\u2193; peer=-0.49; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 954.39,
+          "avg_vol_k": 4148.34
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.1315116093244132,
+          "sector": "Utilities",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 2045.32,
+          "avg_vol_k": 9830.28
+        },
+        {
+          "ticker": "TSHA",
+          "score": -0.44990345143670096,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.60; mid_opp=+0.24",
+          "rebound": false,
+          "market_cap_m": 1961.52,
+          "avg_vol_k": 3120.46
+        },
+        {
+          "ticker": "IHRT",
+          "score": -0.28387040125248764,
+          "sector": "Communication Services",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.54; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.92; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 442.67,
+          "avg_vol_k": 926.72
+        },
+        {
+          "ticker": "MRNA",
+          "score": -0.8535616753530659,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+          "rebound": false,
+          "market_cap_m": 59749.64,
+          "avg_vol_k": 13745.05
+        },
+        {
+          "ticker": "YRD",
+          "score": -0.5216109464259658,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.74; sector1d=+0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 91.71,
+          "avg_vol_k": 1044.21
+        },
+        {
+          "ticker": "NAMS",
+          "score": -0.11867100642392203,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 3275.32,
+          "avg_vol_k": 1147.4
+        },
+        {
+          "ticker": "IBIO",
+          "score": -0.5184582349768597,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.60; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.02,
+          "avg_vol_k": 868.82
+        },
+        {
+          "ticker": "VNDA",
+          "score": -0.2769414569190183,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.88; ab=-0.96; LAG,peers\u2193,ind\u2193; peer=-0.43; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 323.48,
+          "avg_vol_k": 942.87
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "FUTU",
+            "score": 0.8617946385973878,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.93; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.97",
+            "rebound": false,
+            "market_cap_m": 12192.8,
+            "avg_vol_k": 2393.23
+          },
+          {
+            "ticker": "CNH",
+            "score": 0.8389895071471729,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.96; LEAD,peers\u2191,ind\u2191; peer=+0.87",
+            "rebound": false,
+            "market_cap_m": 14382.37,
+            "avg_vol_k": 12929.27
+          },
+          {
+            "ticker": "HOOD",
+            "score": 0.8388675962331456,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=+0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86",
+            "rebound": false,
+            "market_cap_m": 97586.39,
+            "avg_vol_k": 26373.18
+          },
+          {
+            "ticker": "SUZ",
+            "score": 0.8241640519465618,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.88; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 11024.27,
+            "avg_vol_k": 3316.28
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "RRC",
+            "score": 1.3860088927174015,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 9709.38,
+            "avg_vol_k": 3040.84
+          },
+          {
+            "ticker": "CRK",
+            "score": 1.3652922591211603,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+            "rebound": false,
+            "market_cap_m": 4257.49,
+            "avg_vol_k": 2449.54
+          },
+          {
+            "ticker": "MOS",
+            "score": 1.327433795417652,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 7680.36,
+            "avg_vol_k": 8757.95
+          },
+          {
+            "ticker": "ELF",
+            "score": 1.3102225577481705,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 6312.09,
+            "avg_vol_k": 3120.65
+          },
+          {
+            "ticker": "CXT",
+            "score": 1.3006371449785723,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 2914.9,
+            "avg_vol_k": 892.35
+          },
+          {
+            "ticker": "XP",
+            "score": 1.2981459212348334,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 9208.05,
+            "avg_vol_k": 5293.08
+          },
+          {
+            "ticker": "EPAM",
+            "score": 1.2972836420613287,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 5641.55,
+            "avg_vol_k": 1882.16
+          },
+          {
+            "ticker": "ACMR",
+            "score": 1.2874158867757615,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 5509.95,
+            "avg_vol_k": 1447.04
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "SLI",
+            "score": 1.2436190298226948,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 644.1,
+            "avg_vol_k": 1765.24
+          },
+          {
+            "ticker": "PGY",
+            "score": 1.2408036479765248,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=+0.40; ab=+0.81; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.87; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1869.57,
+            "avg_vol_k": 3523.31
+          },
+          {
+            "ticker": "VYX",
+            "score": 1.2394378809753455,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.71; sector1d=+0.40; ab=+0.93; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.95; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1226.06,
+            "avg_vol_k": 2342.99
+          },
+          {
+            "ticker": "TIGR",
+            "score": 1.1632346021099753,
+            "sector": "Financial",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.18; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.92; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 990.33,
+            "avg_vol_k": 3134.86
+          },
+          {
+            "ticker": "FBRT",
+            "score": 1.1602192488049872,
+            "sector": "Real Estate",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.79; ab=+0.85; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.68; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 701.74,
+            "avg_vol_k": 1284.57
+          },
+          {
+            "ticker": "COUR",
+            "score": 1.1419209810951787,
+            "sector": "Consumer Defensive",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.24; ab=+0.88; LEAD,peers\u2191,sec\u2191; peer=+0.28; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1602.27,
+            "avg_vol_k": 6781.03
+          },
+          {
+            "ticker": "CRML",
+            "score": 1.120928836228352,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=-0.32; ab=+0.64; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+1.00; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 1173.64,
+            "avg_vol_k": 6512.71
+          },
+          {
+            "ticker": "SID",
+            "score": 1.1120092907603119,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.56; sector1d=-0.32; ab=+0.55; LEAD,peers\u2191,sec\u2191; peer=+0.97; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1365.87,
+            "avg_vol_k": 4033.82
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "AXSM",
+            "score": -0.7565102511889787,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+            "rebound": false,
+            "market_cap_m": 10850.69,
+            "avg_vol_k": 862.47
+          },
+          {
+            "ticker": "MRNA",
+            "score": -0.8535616753530659,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+            "rebound": false,
+            "market_cap_m": 59749.64,
+            "avg_vol_k": 13745.05
+          },
+          {
+            "ticker": "TU",
+            "score": -0.5632577587291866,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.91; ab=-0.88; LAG,peers\u2191,ind\u2191,sec\u2191; peer=-0.51; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 15413.3,
+            "avg_vol_k": 7201.28
+          },
+          {
+            "ticker": "RKLB",
+            "score": -0.5778213562102479,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.48; sector1d=-0.56; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.77; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 39606.07,
+            "avg_vol_k": 23316.07
+          },
+          {
+            "ticker": "BBIO",
+            "score": -0.665729088193288,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.93; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.51",
+            "rebound": false,
+            "market_cap_m": 15516.28,
+            "avg_vol_k": 3253.72
+          },
+          {
+            "ticker": "ASTS",
+            "score": -0.5250163165901164,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.69; sector1d=+0.40; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.46; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 23303.35,
+            "avg_vol_k": 19039.99
+          },
+          {
+            "ticker": "STLA",
+            "score": -0.44991510025592507,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.85; sector1d=-0.80; ab=-0.70; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.38; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 14907.86,
+            "avg_vol_k": 19958.4
+          },
+          {
+            "ticker": "WIT",
+            "score": -0.43573199445320665,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.77; sector1d=+0.40; ab=-0.64; LAG,peers\u2193,ind\u2191,sec\u2193; peer=-0.49; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 18103.53,
+            "avg_vol_k": 10667.42
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "NN",
+            "score": -0.2525348276180419,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2597.98,
+            "avg_vol_k": 2714.07
+          },
+          {
+            "ticker": "GPCR",
+            "score": -0.2191013633537648,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 3519.15,
+            "avg_vol_k": 710.3
+          },
+          {
+            "ticker": "FLNC",
+            "score": -0.1315116093244132,
+            "sector": "Utilities",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 2045.32,
+            "avg_vol_k": 9830.28
+          },
+          {
+            "ticker": "NAMS",
+            "score": -0.11867100642392203,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 3275.32,
+            "avg_vol_k": 1147.4
+          },
+          {
+            "ticker": "QBTS",
+            "score": -0.11376194285722885,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=+0.40; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.72; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 6521.42,
+            "avg_vol_k": 24288.13
+          },
+          {
+            "ticker": "MLYS",
+            "score": -0.13456965833903978,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.85; LAG,peers\u2193,ind\u2193; peer=-0.41; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2288.86,
+            "avg_vol_k": 1331.73
+          },
+          {
+            "ticker": "IMNM",
+            "score": -0.3668489570393797,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.96; ab=-0.88; LAG,peers\u2193,ind\u2193; peer=-0.36; mid_opp=+0.28",
+            "rebound": false,
+            "market_cap_m": 3265.36,
+            "avg_vol_k": 1400.92
+          },
+          {
+            "ticker": "CIFR",
+            "score": -0.15026482425848292,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.49; sector1d=+0.40; ab=-0.85; LAG,peers\u2191,ind\u2191,sec\u2193; peer=-0.77; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 6648.79,
+            "avg_vol_k": 29363.19
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "QTRX",
+            "score": -0.6167580385883406,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 126.75,
+            "avg_vol_k": 924.38
+          },
+          {
+            "ticker": "GLUE",
+            "score": -0.45012743799560645,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+            "rebound": false,
+            "market_cap_m": 1226.8,
+            "avg_vol_k": 1417.85
+          },
+          {
+            "ticker": "CTMX",
+            "score": -0.3584858211914893,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 723.43,
+            "avg_vol_k": 3972.22
+          },
+          {
+            "ticker": "ACH",
+            "score": -0.5929000314373697,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 93.82,
+            "avg_vol_k": 1128.16
+          },
+          {
+            "ticker": "AZI",
+            "score": -0.5835377891618238,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 87.82,
+            "avg_vol_k": 8340.74
+          },
+          {
+            "ticker": "EYPT",
+            "score": -0.32208812092481176,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 430.2,
+            "avg_vol_k": 2951.71
+          },
+          {
+            "ticker": "HUMA",
+            "score": -0.5587801596165006,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 189.35,
+            "avg_vol_k": 11054.59
+          },
+          {
+            "ticker": "OTLK",
+            "score": -0.5552079465768722,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 151.74,
+            "avg_vol_k": 26936.73
+          }
+        ]
+      }
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "CRK",
+          "score": 1.410225680525178,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 4257.49,
+          "avg_vol_k": 2449.54
+        },
+        {
+          "ticker": "RRC",
+          "score": 1.3865832822177417,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 9709.38,
+          "avg_vol_k": 3040.84
+        },
+        {
+          "ticker": "MOS",
+          "score": 1.3727619596361258,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 7680.36,
+          "avg_vol_k": 8757.95
+        },
+        {
+          "ticker": "ELF",
+          "score": 1.3542506256362956,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 6312.09,
+          "avg_vol_k": 3120.65
+        },
+        {
+          "ticker": "CXT",
+          "score": 1.344961633871675,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 2914.9,
+          "avg_vol_k": 892.35
+        },
+        {
+          "ticker": "XP",
+          "score": 1.3448735705374608,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9208.05,
+          "avg_vol_k": 5293.08
+        },
+        {
+          "ticker": "EPAM",
+          "score": 1.3378144191158676,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 5641.55,
+          "avg_vol_k": 1882.16
+        },
+        {
+          "ticker": "ACMR",
+          "score": 1.3131835980194502,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5509.95,
+          "avg_vol_k": 1447.04
+        },
+        {
+          "ticker": "MNDY",
+          "score": 1.309678809140308,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=+0.40; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.36; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 3912.47,
+          "avg_vol_k": 1577.6
+        },
+        {
+          "ticker": "VNT",
+          "score": 1.2943342563813616,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.85; sector1d=+0.40; ab=+0.94; LEAD,peers\u2191,sec\u2193; peer=+0.25; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4554.89,
+          "avg_vol_k": 1693.17
+        },
+        {
+          "ticker": "WT",
+          "score": 1.2893662829294779,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=+0.24; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.46",
+          "rebound": false,
+          "market_cap_m": 3751.44,
+          "avg_vol_k": 2799.14
+        },
+        {
+          "ticker": "SLI",
+          "score": 1.2858491795430602,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 644.1,
+          "avg_vol_k": 1765.24
+        },
+        {
+          "ticker": "BFAM",
+          "score": 1.2771382106877476,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.80; ab=+0.85; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.33; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 3621.73,
+          "avg_vol_k": 934.99
+        },
+        {
+          "ticker": "SFM",
+          "score": 1.268644474218545,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.65; sector1d=-0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 8096.69,
+          "avg_vol_k": 2017.38
+        },
+        {
+          "ticker": "OSK",
+          "score": 1.2546214059300107,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2191; peer=+0.42; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9722.77,
+          "avg_vol_k": 748.0
+        },
+        {
+          "ticker": "ERO",
+          "score": 1.2526781025722817,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 4092.73,
+          "avg_vol_k": 1293.32
+        },
+        {
+          "ticker": "ICL",
+          "score": 1.2512975234849304,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.73; sector1d=-0.32; ab=+0.94; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.36; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7331.28,
+          "avg_vol_k": 1309.04
+        },
+        {
+          "ticker": "LW",
+          "score": 1.2423318566741566,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.59; sector1d=-0.24; ab=+0.88; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.56; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7597.2,
+          "avg_vol_k": 1578.44
+        },
+        {
+          "ticker": "FIGR",
+          "score": 1.2396082679386426,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=+0.24; ab=+0.88; ind\u2191,sec\u2191; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 8289.8,
+          "avg_vol_k": 3957.98
+        },
+        {
+          "ticker": "HLNE",
+          "score": 1.2378514175771362,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=+0.24; ab=+0.93; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.10; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5809.39,
+          "avg_vol_k": 883.09
+        },
+        {
+          "ticker": "Z",
+          "score": 1.224219394941037,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.91; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.33; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7899.47,
+          "avg_vol_k": 4333.56
+        },
+        {
+          "ticker": "DNN",
+          "score": 1.217505309319837,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.71; sector1d=-0.24; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.88; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 3285.95,
+          "avg_vol_k": 25228.3
+        },
+        {
+          "ticker": "KBR",
+          "score": 1.2162444518870632,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.57; sector1d=-0.56; ab=+0.95; LEAD,peers\u2193,ind\u2193; peer=+0.22; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4781.75,
+          "avg_vol_k": 1735.64
+        },
+        {
+          "ticker": "BRSL",
+          "score": 1.2160271861844698,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.90; sector1d=-0.80; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.19; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 2110.38,
+          "avg_vol_k": 1719.77
+        },
+        {
+          "ticker": "BZ",
+          "score": 1.21162017923443,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.99; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 7391.69,
+          "avg_vol_k": 3875.57
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "QTRX",
+          "score": -0.6627392603652187,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 126.75,
+          "avg_vol_k": 924.38
+        },
+        {
+          "ticker": "NN",
+          "score": -0.29860206155327074,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 2597.98,
+          "avg_vol_k": 2714.07
+        },
+        {
+          "ticker": "GLUE",
+          "score": -0.4977089128302555,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1226.8,
+          "avg_vol_k": 1417.85
+        },
+        {
+          "ticker": "CTMX",
+          "score": -0.4057504260460889,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 723.43,
+          "avg_vol_k": 3972.22
+        },
+        {
+          "ticker": "ACH",
+          "score": -0.6382835442355131,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 93.82,
+          "avg_vol_k": 1128.16
+        },
+        {
+          "ticker": "AZI",
+          "score": -0.6268932360486846,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.82,
+          "avg_vol_k": 8340.74
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.3677998457656749,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 430.2,
+          "avg_vol_k": 2951.71
+        },
+        {
+          "ticker": "HUMA",
+          "score": -0.6013976400782978,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 189.35,
+          "avg_vol_k": 11054.59
+        },
+        {
+          "ticker": "OTLK",
+          "score": -0.6001294046447093,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 151.74,
+          "avg_vol_k": 26936.73
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.8014779004278174,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+          "rebound": false,
+          "market_cap_m": 10850.69,
+          "avg_vol_k": 862.47
+        },
+        {
+          "ticker": "SPRY",
+          "score": -0.3513017005196418,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.61; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 599.67,
+          "avg_vol_k": 2028.31
+        },
+        {
+          "ticker": "IVVD",
+          "score": -0.5851965178459418,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.77; ab=-0.97; LAG,peers\u2193,ind\u2193; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 265.78,
+          "avg_vol_k": 4556.42
+        },
+        {
+          "ticker": "GPCR",
+          "score": -0.26470211304432606,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 3519.15,
+          "avg_vol_k": 710.3
+        },
+        {
+          "ticker": "PUMP",
+          "score": -0.4246129592737676,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.68; sector1d=-0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1305.61,
+          "avg_vol_k": 4309.23
+        },
+        {
+          "ticker": "ORGO",
+          "score": -0.5834847126900975,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.93; ab=-0.81; LAG,peers\u2193,ind\u2191; peer=-0.69; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 225.18,
+          "avg_vol_k": 854.84
+        },
+        {
+          "ticker": "ANNX",
+          "score": -0.42303550329707523,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 946.0,
+          "avg_vol_k": 3597.8
+        },
+        {
+          "ticker": "ARDX",
+          "score": -0.33668123650071824,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.90; ab=-0.95; LAG,peers\u2193,ind\u2193; peer=-0.49; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 954.39,
+          "avg_vol_k": 4148.34
+        },
+        {
+          "ticker": "TSHA",
+          "score": -0.49531361622839487,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.60; mid_opp=+0.24",
+          "rebound": false,
+          "market_cap_m": 1961.52,
+          "avg_vol_k": 3120.46
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.17175254896162262,
+          "sector": "Utilities",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 2045.32,
+          "avg_vol_k": 9830.28
+        },
+        {
+          "ticker": "MRNA",
+          "score": -0.8987658520560027,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+          "rebound": false,
+          "market_cap_m": 59749.64,
+          "avg_vol_k": 13745.05
+        },
+        {
+          "ticker": "NAMS",
+          "score": -0.1637841260041053,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 3275.32,
+          "avg_vol_k": 1147.4
+        },
+        {
+          "ticker": "IBIO",
+          "score": -0.5623579412469576,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.60; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.02,
+          "avg_vol_k": 868.82
+        },
+        {
+          "ticker": "YRD",
+          "score": -0.5600037822771037,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.74; sector1d=+0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 91.71,
+          "avg_vol_k": 1044.21
+        },
+        {
+          "ticker": "VNDA",
+          "score": -0.3190533021096499,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.88; ab=-0.96; LAG,peers\u2193,ind\u2193; peer=-0.43; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 323.48,
+          "avg_vol_k": 942.87
+        },
+        {
+          "ticker": "IHRT",
+          "score": -0.317092898092188,
+          "sector": "Communication Services",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.54; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.92; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 442.67,
+          "avg_vol_k": 926.72
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "FUTU",
+            "score": 0.9094417117563108,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.93; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.97",
+            "rebound": false,
+            "market_cap_m": 12192.8,
+            "avg_vol_k": 2393.23
+          },
+          {
+            "ticker": "HOOD",
+            "score": 0.887325978619976,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=+0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86",
+            "rebound": false,
+            "market_cap_m": 97586.39,
+            "avg_vol_k": 26373.18
+          },
+          {
+            "ticker": "CNH",
+            "score": 0.8864907291628361,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.96; LEAD,peers\u2191,ind\u2191; peer=+0.87",
+            "rebound": false,
+            "market_cap_m": 14382.37,
+            "avg_vol_k": 12929.27
+          },
+          {
+            "ticker": "SUZ",
+            "score": 0.8713120741201623,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.88; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 11024.27,
+            "avg_vol_k": 3316.28
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "CRK",
+            "score": 1.410225680525178,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+            "rebound": false,
+            "market_cap_m": 4257.49,
+            "avg_vol_k": 2449.54
+          },
+          {
+            "ticker": "RRC",
+            "score": 1.3865832822177417,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 9709.38,
+            "avg_vol_k": 3040.84
+          },
+          {
+            "ticker": "MOS",
+            "score": 1.3727619596361258,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 7680.36,
+            "avg_vol_k": 8757.95
+          },
+          {
+            "ticker": "ELF",
+            "score": 1.3542506256362956,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 6312.09,
+            "avg_vol_k": 3120.65
+          },
+          {
+            "ticker": "CXT",
+            "score": 1.344961633871675,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 2914.9,
+            "avg_vol_k": 892.35
+          },
+          {
+            "ticker": "XP",
+            "score": 1.3448735705374608,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 9208.05,
+            "avg_vol_k": 5293.08
+          },
+          {
+            "ticker": "EPAM",
+            "score": 1.3378144191158676,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 5641.55,
+            "avg_vol_k": 1882.16
+          },
+          {
+            "ticker": "ACMR",
+            "score": 1.3131835980194502,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.40; news=+0.35; ev=ai_chip_demand_spike; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.52; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 5509.95,
+            "avg_vol_k": 1447.04
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "PGY",
+            "score": 1.288126394057857,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=+0.40; ab=+0.81; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.87; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1869.57,
+            "avg_vol_k": 3523.31
+          },
+          {
+            "ticker": "SLI",
+            "score": 1.2858491795430602,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 644.1,
+            "avg_vol_k": 1765.24
+          },
+          {
+            "ticker": "VYX",
+            "score": 1.2793279112896725,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.71; sector1d=+0.40; ab=+0.93; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.95; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1226.06,
+            "avg_vol_k": 2342.99
+          },
+          {
+            "ticker": "FBRT",
+            "score": 1.200085338939701,
+            "sector": "Real Estate",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.79; ab=+0.85; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.68; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 701.74,
+            "avg_vol_k": 1284.57
+          },
+          {
+            "ticker": "TIGR",
+            "score": 1.1856447161962842,
+            "sector": "Financial",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.18; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.92; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 990.33,
+            "avg_vol_k": 3134.86
+          },
+          {
+            "ticker": "COUR",
+            "score": 1.1843111450777766,
+            "sector": "Consumer Defensive",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.24; ab=+0.88; LEAD,peers\u2191,sec\u2191; peer=+0.28; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1602.27,
+            "avg_vol_k": 6781.03
+          },
+          {
+            "ticker": "CRML",
+            "score": 1.1661471254395246,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=-0.32; ab=+0.64; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+1.00; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 1173.64,
+            "avg_vol_k": 6512.71
+          },
+          {
+            "ticker": "SID",
+            "score": 1.143184639952633,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.56; sector1d=-0.32; ab=+0.55; LEAD,peers\u2191,sec\u2191; peer=+0.97; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1365.87,
+            "avg_vol_k": 4033.82
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "AXSM",
+            "score": -0.8014779004278174,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+            "rebound": false,
+            "market_cap_m": 10850.69,
+            "avg_vol_k": 862.47
+          },
+          {
+            "ticker": "MRNA",
+            "score": -0.8987658520560027,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+            "rebound": false,
+            "market_cap_m": 59749.64,
+            "avg_vol_k": 13745.05
+          },
+          {
+            "ticker": "TU",
+            "score": -0.6061394520913229,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.91; ab=-0.88; LAG,peers\u2191,ind\u2191,sec\u2191; peer=-0.51; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 15413.3,
+            "avg_vol_k": 7201.28
+          },
+          {
+            "ticker": "RKLB",
+            "score": -0.6082542427057532,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.48; sector1d=-0.56; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.77; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 39606.07,
+            "avg_vol_k": 23316.07
+          },
+          {
+            "ticker": "BBIO",
+            "score": -0.7077006483454373,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.93; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.51",
+            "rebound": false,
+            "market_cap_m": 15516.28,
+            "avg_vol_k": 3253.72
+          },
+          {
+            "ticker": "ASTS",
+            "score": -0.5597180872372131,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.69; sector1d=+0.40; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.46; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 23303.35,
+            "avg_vol_k": 19039.99
+          },
+          {
+            "ticker": "STLA",
+            "score": -0.4880135931183267,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.85; sector1d=-0.80; ab=-0.70; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.38; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 14907.86,
+            "avg_vol_k": 19958.4
+          },
+          {
+            "ticker": "WIT",
+            "score": -0.47138666194936063,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.77; sector1d=+0.40; ab=-0.64; LAG,peers\u2193,ind\u2191,sec\u2193; peer=-0.49; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 18103.53,
+            "avg_vol_k": 10667.42
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "NN",
+            "score": -0.29860206155327074,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2597.98,
+            "avg_vol_k": 2714.07
+          },
+          {
+            "ticker": "GPCR",
+            "score": -0.26470211304432606,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 3519.15,
+            "avg_vol_k": 710.3
+          },
+          {
+            "ticker": "FLNC",
+            "score": -0.17175254896162262,
+            "sector": "Utilities",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 2045.32,
+            "avg_vol_k": 9830.28
+          },
+          {
+            "ticker": "NAMS",
+            "score": -0.1637841260041053,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 3275.32,
+            "avg_vol_k": 1147.4
+          },
+          {
+            "ticker": "QBTS",
+            "score": -0.15523513857097948,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=+0.40; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.72; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 6521.42,
+            "avg_vol_k": 24288.13
+          },
+          {
+            "ticker": "MLYS",
+            "score": -0.17901001037667452,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.85; LAG,peers\u2193,ind\u2193; peer=-0.41; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2288.86,
+            "avg_vol_k": 1331.73
+          },
+          {
+            "ticker": "IMNM",
+            "score": -0.41047056095516343,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.96; ab=-0.88; LAG,peers\u2193,ind\u2193; peer=-0.36; mid_opp=+0.28",
+            "rebound": false,
+            "market_cap_m": 3265.36,
+            "avg_vol_k": 1400.92
+          },
+          {
+            "ticker": "MIRM",
+            "score": -0.1864208759955785,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.96; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.37; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 6396.47,
+            "avg_vol_k": 806.01
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "QTRX",
+            "score": -0.6627392603652187,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 126.75,
+            "avg_vol_k": 924.38
+          },
+          {
+            "ticker": "GLUE",
+            "score": -0.4977089128302555,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+            "rebound": false,
+            "market_cap_m": 1226.8,
+            "avg_vol_k": 1417.85
+          },
+          {
+            "ticker": "CTMX",
+            "score": -0.4057504260460889,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 723.43,
+            "avg_vol_k": 3972.22
+          },
+          {
+            "ticker": "ACH",
+            "score": -0.6382835442355131,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 93.82,
+            "avg_vol_k": 1128.16
+          },
+          {
+            "ticker": "AZI",
+            "score": -0.6268932360486846,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 87.82,
+            "avg_vol_k": 8340.74
+          },
+          {
+            "ticker": "EYPT",
+            "score": -0.3677998457656749,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 430.2,
+            "avg_vol_k": 2951.71
+          },
+          {
+            "ticker": "HUMA",
+            "score": -0.6013976400782978,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 189.35,
+            "avg_vol_k": 11054.59
+          },
+          {
+            "ticker": "OTLK",
+            "score": -0.6001294046447093,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 151.74,
+            "avg_vol_k": 26936.73
+          }
+        ]
+      }
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "CRK",
+          "score": 1.4752223922039227,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 4257.49,
+          "avg_vol_k": 2449.54
+        },
+        {
+          "ticker": "MOS",
+          "score": 1.4400816586857315,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 7680.36,
+          "avg_vol_k": 8757.95
+        },
+        {
+          "ticker": "ELF",
+          "score": 1.4231264859507826,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 6312.09,
+          "avg_vol_k": 3120.65
+        },
+        {
+          "ticker": "XP",
+          "score": 1.4212782040940812,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9208.05,
+          "avg_vol_k": 5293.08
+        },
+        {
+          "ticker": "CXT",
+          "score": 1.4181635709503677,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 2914.9,
+          "avg_vol_k": 892.35
+        },
+        {
+          "ticker": "EPAM",
+          "score": 1.4066659485222235,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 5641.55,
+          "avg_vol_k": 1882.16
+        },
+        {
+          "ticker": "RRC",
+          "score": 1.3839038775037107,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 9709.38,
+          "avg_vol_k": 3040.84
+        },
+        {
+          "ticker": "MNDY",
+          "score": 1.3739730886517507,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.98; sector1d=+0.40; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.36; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 3912.47,
+          "avg_vol_k": 1577.6
+        },
+        {
+          "ticker": "WT",
+          "score": 1.366025197975197,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.97; sector1d=+0.24; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.46",
+          "rebound": false,
+          "market_cap_m": 3751.44,
+          "avg_vol_k": 2799.14
+        },
+        {
+          "ticker": "VNT",
+          "score": 1.362301178224762,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.85; sector1d=+0.40; ab=+0.94; LEAD,peers\u2191,sec\u2193; peer=+0.25; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4554.89,
+          "avg_vol_k": 1693.17
+        },
+        {
+          "ticker": "PGY",
+          "score": 1.3604763313113741,
+          "sector": "Technology",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=+0.40; ab=+0.81; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.87; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 1869.57,
+          "avg_vol_k": 3523.31
+        },
+        {
+          "ticker": "SLI",
+          "score": 1.3528327852777176,
+          "sector": "Basic Materials",
+          "size": "small",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 644.1,
+          "avg_vol_k": 1765.24
+        },
+        {
+          "ticker": "BFAM",
+          "score": 1.3417181540642509,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.84; sector1d=-0.80; ab=+0.85; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.33; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 3621.73,
+          "avg_vol_k": 934.99
+        },
+        {
+          "ticker": "SFM",
+          "score": 1.3339795406529444,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.65; sector1d=-0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 8096.69,
+          "avg_vol_k": 2017.38
+        },
+        {
+          "ticker": "ERO",
+          "score": 1.3310888321236338,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.79; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 4092.73,
+          "avg_vol_k": 1293.32
+        },
+        {
+          "ticker": "OSK",
+          "score": 1.3282101922795055,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2191; peer=+0.42; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 9722.77,
+          "avg_vol_k": 748.0
+        },
+        {
+          "ticker": "TFPM",
+          "score": 1.31882941215397,
+          "sector": "Basic Materials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=-0.32; ab=+0.96; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.06; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7205.88,
+          "avg_vol_k": 647.31
+        },
+        {
+          "ticker": "FIGR",
+          "score": 1.308133115260059,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.99; sector1d=+0.24; ab=+0.88; ind\u2191,sec\u2191; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 8289.8,
+          "avg_vol_k": 3957.98
+        },
+        {
+          "ticker": "HLNE",
+          "score": 1.3080422273046968,
+          "sector": "Financial",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.96; sector1d=+0.24; ab=+0.93; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.10; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 5809.39,
+          "avg_vol_k": 883.09
+        },
+        {
+          "ticker": "LW",
+          "score": 1.3009223665812013,
+          "sector": "Consumer Defensive",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.59; sector1d=-0.24; ab=+0.88; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.56; mid_opp=+0.60",
+          "rebound": false,
+          "market_cap_m": 7597.2,
+          "avg_vol_k": 1578.44
+        },
+        {
+          "ticker": "Z",
+          "score": 1.2798986106459223,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.91; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.33; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 7899.47,
+          "avg_vol_k": 4333.56
+        },
+        {
+          "ticker": "DNN",
+          "score": 1.276264892170352,
+          "sector": "Energy",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.71; sector1d=-0.24; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.88; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 3285.95,
+          "avg_vol_k": 25228.3
+        },
+        {
+          "ticker": "KBR",
+          "score": 1.2746918767530593,
+          "sector": "Industrials",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.57; sector1d=-0.56; ab=+0.95; LEAD,peers\u2193,ind\u2193; peer=+0.22; mid_opp=+0.64",
+          "rebound": false,
+          "market_cap_m": 4781.75,
+          "avg_vol_k": 1735.64
+        },
+        {
+          "ticker": "BRSL",
+          "score": 1.2736154811850313,
+          "sector": "Consumer Cyclical",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.90; sector1d=-0.80; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.19; mid_opp=+0.68",
+          "rebound": false,
+          "market_cap_m": 2110.38,
+          "avg_vol_k": 1719.77
+        },
+        {
+          "ticker": "BZ",
+          "score": 1.2736067822143349,
+          "sector": "Communication Services",
+          "size": "mid",
+          "side": "buy",
+          "reasons": "join=+0.94; ab=+0.55; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.99; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 7391.69,
+          "avg_vol_k": 3875.57
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "QTRX",
+          "score": -0.7347590540210688,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 126.75,
+          "avg_vol_k": 924.38
+        },
+        {
+          "ticker": "GLUE",
+          "score": -0.5735508554423197,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1226.8,
+          "avg_vol_k": 1417.85
+        },
+        {
+          "ticker": "NN",
+          "score": -0.37158697332678636,
+          "sector": "Technology",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+          "rebound": false,
+          "market_cap_m": 2597.98,
+          "avg_vol_k": 2714.07
+        },
+        {
+          "ticker": "CTMX",
+          "score": -0.47999508907525923,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 723.43,
+          "avg_vol_k": 3972.22
+        },
+        {
+          "ticker": "ACH",
+          "score": -0.711809278457079,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 93.82,
+          "avg_vol_k": 1128.16
+        },
+        {
+          "ticker": "AZI",
+          "score": -0.6937404041100651,
+          "sector": "Consumer Cyclical",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.82,
+          "avg_vol_k": 8340.74
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.43361939915650083,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 430.2,
+          "avg_vol_k": 2951.71
+        },
+        {
+          "ticker": "OTLK",
+          "score": -0.6699465426649445,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 151.74,
+          "avg_vol_k": 26936.73
+        },
+        {
+          "ticker": "HUMA",
+          "score": -0.6687887300517219,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 189.35,
+          "avg_vol_k": 11054.59
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.8745616510400677,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+          "rebound": false,
+          "market_cap_m": 10850.69,
+          "avg_vol_k": 862.47
+        },
+        {
+          "ticker": "SPRY",
+          "score": -0.42303271584925717,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.61; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 599.67,
+          "avg_vol_k": 2028.31
+        },
+        {
+          "ticker": "IVVD",
+          "score": -0.6543158205469041,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.77; ab=-0.97; LAG,peers\u2193,ind\u2193; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 265.78,
+          "avg_vol_k": 4556.42
+        },
+        {
+          "ticker": "ORGO",
+          "score": -0.6524626886912539,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.93; ab=-0.81; LAG,peers\u2193,ind\u2191; peer=-0.69; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 225.18,
+          "avg_vol_k": 854.84
+        },
+        {
+          "ticker": "GPCR",
+          "score": -0.33230989026905705,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+          "rebound": false,
+          "market_cap_m": 3519.15,
+          "avg_vol_k": 710.3
+        },
+        {
+          "ticker": "ANNX",
+          "score": -0.4906493145498498,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 946.0,
+          "avg_vol_k": 3597.8
+        },
+        {
+          "ticker": "PUMP",
+          "score": -0.489767290305503,
+          "sector": "Energy",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.68; sector1d=-0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.78; mid_opp=+0.32",
+          "rebound": false,
+          "market_cap_m": 1305.61,
+          "avg_vol_k": 4309.23
+        },
+        {
+          "ticker": "ARDX",
+          "score": -0.4086297068354856,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.90; ab=-0.95; LAG,peers\u2193,ind\u2193; peer=-0.49; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 954.39,
+          "avg_vol_k": 4148.34
+        },
+        {
+          "ticker": "TSHA",
+          "score": -0.5656432211337029,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.60; mid_opp=+0.24",
+          "rebound": false,
+          "market_cap_m": 1961.52,
+          "avg_vol_k": 3120.46
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.23985721730475906,
+          "sector": "Utilities",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 2045.32,
+          "avg_vol_k": 9830.28
+        },
+        {
+          "ticker": "NAMS",
+          "score": -0.2364584276346411,
+          "sector": "Healthcare",
+          "size": "mid",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+          "rebound": false,
+          "market_cap_m": 3275.32,
+          "avg_vol_k": 1147.4
+        },
+        {
+          "ticker": "MRNA",
+          "score": -0.9618133709447045,
+          "sector": "Healthcare",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+          "rebound": false,
+          "market_cap_m": 59749.64,
+          "avg_vol_k": 13745.05
+        },
+        {
+          "ticker": "IBIO",
+          "score": -0.6310958619117392,
+          "sector": "Healthcare",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.60; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 87.02,
+          "avg_vol_k": 868.82
+        },
+        {
+          "ticker": "VNDA",
+          "score": -0.39019988509976533,
+          "sector": "Healthcare",
+          "size": "small",
+          "side": "sell",
+          "reasons": "join=-0.88; ab=-0.96; LAG,peers\u2193,ind\u2193; peer=-0.43; mid_opp=+0.40",
+          "rebound": false,
+          "market_cap_m": 323.48,
+          "avg_vol_k": 942.87
+        },
+        {
+          "ticker": "YRD",
+          "score": -0.6261613205460278,
+          "sector": "Financial",
+          "size": "micro",
+          "side": "sell",
+          "reasons": "join=-0.74; sector1d=+0.24; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2191; peer=-0.63; mid_opp=+0.16",
+          "rebound": false,
+          "market_cap_m": 91.71,
+          "avg_vol_k": 1044.21
+        },
+        {
+          "ticker": "TU",
+          "score": -0.6757609907093273,
+          "sector": "Communication Services",
+          "size": "large",
+          "side": "sell",
+          "reasons": "join=-0.91; ab=-0.88; LAG,peers\u2191,ind\u2191,sec\u2191; peer=-0.51; mid_opp=+0.11",
+          "rebound": false,
+          "market_cap_m": 15413.3,
+          "avg_vol_k": 7201.28
+        }
+      ],
+      "buy_by_size": {
+        "large+": [
+          {
+            "ticker": "FUTU",
+            "score": 0.9866485927311663,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.93; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.97",
+            "rebound": false,
+            "market_cap_m": 12192.8,
+            "avg_vol_k": 2393.23
+          },
+          {
+            "ticker": "HOOD",
+            "score": 0.9648907935237283,
+            "sector": "Financial",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=+0.24; ab=+0.95; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86",
+            "rebound": false,
+            "market_cap_m": 97586.39,
+            "avg_vol_k": 26373.18
+          },
+          {
+            "ticker": "CNH",
+            "score": 0.9633244304300875,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.96; LEAD,peers\u2191,ind\u2191; peer=+0.87",
+            "rebound": false,
+            "market_cap_m": 14382.37,
+            "avg_vol_k": 12929.27
+          },
+          {
+            "ticker": "SUZ",
+            "score": 0.9454335864299672,
+            "sector": "Basic Materials",
+            "size": "large",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.88; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.75; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 11024.27,
+            "avg_vol_k": 3316.28
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "CRK",
+            "score": 1.4752223922039227,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.97; sector1d=-0.24; ab=+0.64; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.84; mid_opp=+0.68",
+            "rebound": false,
+            "market_cap_m": 4257.49,
+            "avg_vol_k": 2449.54
+          },
+          {
+            "ticker": "MOS",
+            "score": 1.4400816586857315,
+            "sector": "Basic Materials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=-0.32; ab=+0.70; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 7680.36,
+            "avg_vol_k": 8757.95
+          },
+          {
+            "ticker": "ELF",
+            "score": 1.4231264859507826,
+            "sector": "Consumer Defensive",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.92; sector1d=-0.24; ab=+0.81; LEAD,peers\u2193,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 6312.09,
+            "avg_vol_k": 3120.65
+          },
+          {
+            "ticker": "XP",
+            "score": 1.4212782040940812,
+            "sector": "Financial",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=+0.24; ab=+0.98; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.74; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 9208.05,
+            "avg_vol_k": 5293.08
+          },
+          {
+            "ticker": "CXT",
+            "score": 1.4181635709503677,
+            "sector": "Industrials",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.56; ab=+0.95; LEAD,peers\u2191,ind\u2193; peer=+0.48; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 2914.9,
+            "avg_vol_k": 892.35
+          },
+          {
+            "ticker": "EPAM",
+            "score": 1.4066659485222235,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=+0.40; ab=+0.94; LEAD,peers\u2193,ind\u2191,sec\u2193; peer=+0.42; mid_opp=+0.64",
+            "rebound": false,
+            "market_cap_m": 5641.55,
+            "avg_vol_k": 1882.16
+          },
+          {
+            "ticker": "RRC",
+            "score": 1.3839038775037107,
+            "sector": "Energy",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=-0.24; news=+0.88; ev=hormuz_energy_risk; ab=+0.76; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.60; mid_opp=+0.60",
+            "rebound": false,
+            "market_cap_m": 9709.38,
+            "avg_vol_k": 3040.84
+          },
+          {
+            "ticker": "MNDY",
+            "score": 1.3739730886517507,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "buy",
+            "reasons": "join=+0.98; sector1d=+0.40; ab=+0.70; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.36; mid_opp=+0.68",
+            "rebound": false,
+            "market_cap_m": 3912.47,
+            "avg_vol_k": 1577.6
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "PGY",
+            "score": 1.3604763313113741,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.99; sector1d=+0.40; ab=+0.81; LEAD,peers\u2193,ind\u2193,sec\u2193; peer=+0.87; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1869.57,
+            "avg_vol_k": 3523.31
+          },
+          {
+            "ticker": "SLI",
+            "score": 1.3528327852777176,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.84; sector1d=-0.32; ab=+0.81; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.86; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 644.1,
+            "avg_vol_k": 1765.24
+          },
+          {
+            "ticker": "VYX",
+            "score": 1.3470689327257994,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.71; sector1d=+0.40; ab=+0.93; LEAD,peers\u2191,ind\u2191,sec\u2193; peer=+0.95; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 1226.06,
+            "avg_vol_k": 2342.99
+          },
+          {
+            "ticker": "FBRT",
+            "score": 1.2656567946467983,
+            "sector": "Real Estate",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.79; ab=+0.85; LEAD,peers\u2193,ind\u2193,sec\u2191; peer=+0.68; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 701.74,
+            "avg_vol_k": 1284.57
+          },
+          {
+            "ticker": "COUR",
+            "score": 1.2534105852938662,
+            "sector": "Consumer Defensive",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.94; sector1d=-0.24; ab=+0.88; LEAD,peers\u2191,sec\u2191; peer=+0.28; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 1602.27,
+            "avg_vol_k": 6781.03
+          },
+          {
+            "ticker": "TIGR",
+            "score": 1.236257738891485,
+            "sector": "Financial",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.18; sector1d=+0.24; ab=+0.97; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+0.92; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 990.33,
+            "avg_vol_k": 3134.86
+          },
+          {
+            "ticker": "CRML",
+            "score": 1.2314469325641069,
+            "sector": "Basic Materials",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.95; sector1d=-0.32; ab=+0.64; LEAD,peers\u2191,ind\u2191,sec\u2191; peer=+1.00; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 1173.64,
+            "avg_vol_k": 6512.71
+          },
+          {
+            "ticker": "MEI",
+            "score": 1.1934282227584307,
+            "sector": "Technology",
+            "size": "small",
+            "side": "buy",
+            "reasons": "join=+0.79; sector1d=+0.40; ab=+0.76; LEAD,ind\u2193,sec\u2193; peer=+0.99; mid_opp=+0.36",
+            "rebound": false,
+            "market_cap_m": 605.54,
+            "avg_vol_k": 721.96
+          }
+        ]
+      },
+      "sell_by_size": {
+        "large+": [
+          {
+            "ticker": "AXSM",
+            "score": -0.8745616510400677,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.95; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.53",
+            "rebound": false,
+            "market_cap_m": 10850.69,
+            "avg_vol_k": 862.47
+          },
+          {
+            "ticker": "MRNA",
+            "score": -0.9618133709447045,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.55; LAG,peers\u2193,ind\u2193; peer=-0.93",
+            "rebound": false,
+            "market_cap_m": 59749.64,
+            "avg_vol_k": 13745.05
+          },
+          {
+            "ticker": "TU",
+            "score": -0.6757609907093273,
+            "sector": "Communication Services",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.91; ab=-0.88; LAG,peers\u2191,ind\u2191,sec\u2191; peer=-0.51; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 15413.3,
+            "avg_vol_k": 7201.28
+          },
+          {
+            "ticker": "RKLB",
+            "score": -0.6654658582067973,
+            "sector": "Industrials",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.48; sector1d=-0.56; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.77; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 39606.07,
+            "avg_vol_k": 23316.07
+          },
+          {
+            "ticker": "BBIO",
+            "score": -0.7714792199422769,
+            "sector": "Healthcare",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.93; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.51",
+            "rebound": false,
+            "market_cap_m": 15516.28,
+            "avg_vol_k": 3253.72
+          },
+          {
+            "ticker": "ASTS",
+            "score": -0.6198435065264918,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.69; sector1d=+0.40; ab=-0.85; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.46; mid_opp=+0.07",
+            "rebound": false,
+            "market_cap_m": 23303.35,
+            "avg_vol_k": 19039.99
+          },
+          {
+            "ticker": "STLA",
+            "score": -0.5477085216204731,
+            "sector": "Consumer Cyclical",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.85; sector1d=-0.80; ab=-0.70; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.38; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 14907.86,
+            "avg_vol_k": 19958.4
+          },
+          {
+            "ticker": "WIT",
+            "score": -0.526599632802601,
+            "sector": "Technology",
+            "size": "large",
+            "side": "sell",
+            "reasons": "join=-0.77; sector1d=+0.40; ab=-0.64; LAG,peers\u2193,ind\u2191,sec\u2193; peer=-0.49; mid_opp=+0.11",
+            "rebound": false,
+            "market_cap_m": 18103.53,
+            "avg_vol_k": 10667.42
+          }
+        ],
+        "mid": [
+          {
+            "ticker": "NN",
+            "score": -0.37158697332678636,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.93; sector1d=+0.40; ab=-0.88; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.87; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2597.98,
+            "avg_vol_k": 2714.07
+          },
+          {
+            "ticker": "GPCR",
+            "score": -0.33230989026905705,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.98; ab=-0.70; LAG,peers\u2193,ind\u2193; peer=-0.78; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 3519.15,
+            "avg_vol_k": 710.3
+          },
+          {
+            "ticker": "FLNC",
+            "score": -0.23985721730475906,
+            "sector": "Utilities",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.79; ab=-0.93; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.62; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 2045.32,
+            "avg_vol_k": 9830.28
+          },
+          {
+            "ticker": "NAMS",
+            "score": -0.2364584276346411,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.91; LAG,peers\u2193,ind\u2193; peer=-0.42; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 3275.32,
+            "avg_vol_k": 1147.4
+          },
+          {
+            "ticker": "QBTS",
+            "score": -0.22009401313963783,
+            "sector": "Technology",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=+0.40; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.72; mid_opp=+0.56",
+            "rebound": false,
+            "market_cap_m": 6521.42,
+            "avg_vol_k": 24288.13
+          },
+          {
+            "ticker": "MLYS",
+            "score": -0.24939647136464427,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.85; LAG,peers\u2193,ind\u2193; peer=-0.41; mid_opp=+0.52",
+            "rebound": false,
+            "market_cap_m": 2288.86,
+            "avg_vol_k": 1331.73
+          },
+          {
+            "ticker": "IMNM",
+            "score": -0.4808690175819442,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.96; ab=-0.88; LAG,peers\u2193,ind\u2193; peer=-0.36; mid_opp=+0.28",
+            "rebound": false,
+            "market_cap_m": 3265.36,
+            "avg_vol_k": 1400.92
+          },
+          {
+            "ticker": "MIRM",
+            "score": -0.25419137563218513,
+            "sector": "Healthcare",
+            "size": "mid",
+            "side": "sell",
+            "reasons": "join=-0.96; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.37; mid_opp=+0.48",
+            "rebound": false,
+            "market_cap_m": 6396.47,
+            "avg_vol_k": 806.01
+          }
+        ],
+        "small/micro": [
+          {
+            "ticker": "QTRX",
+            "score": -0.7347590540210688,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.85; LAG,peers\u2191,ind\u2193; peer=-0.94; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 126.75,
+            "avg_vol_k": 924.38
+          },
+          {
+            "ticker": "GLUE",
+            "score": -0.5735508554423197,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.93; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.32",
+            "rebound": false,
+            "market_cap_m": 1226.8,
+            "avg_vol_k": 1417.85
+          },
+          {
+            "ticker": "CTMX",
+            "score": -0.47999508907525923,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.99; ab=-0.88; LAG,peers\u2191,ind\u2193; peer=-0.76; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 723.43,
+            "avg_vol_k": 3972.22
+          },
+          {
+            "ticker": "ACH",
+            "score": -0.711809278457079,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.92; ab=-0.93; LAG,peers\u2193,ind\u2191; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 93.82,
+            "avg_vol_k": 1128.16
+          },
+          {
+            "ticker": "AZI",
+            "score": -0.6937404041100651,
+            "sector": "Consumer Cyclical",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.86; sector1d=-0.80; ab=-0.76; LAG,peers\u2193,ind\u2193,sec\u2193; peer=-0.99; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 87.82,
+            "avg_vol_k": 8340.74
+          },
+          {
+            "ticker": "EYPT",
+            "score": -0.43361939915650083,
+            "sector": "Healthcare",
+            "size": "small",
+            "side": "sell",
+            "reasons": "join=-0.97; ab=-0.64; LAG,peers\u2193,ind\u2193; peer=-0.99; mid_opp=+0.40",
+            "rebound": false,
+            "market_cap_m": 430.2,
+            "avg_vol_k": 2951.71
+          },
+          {
+            "ticker": "OTLK",
+            "score": -0.6699465426649445,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.94; ab=-0.81; LAG,peers\u2193,ind\u2193; peer=-0.74; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 151.74,
+            "avg_vol_k": 26936.73
+          },
+          {
+            "ticker": "HUMA",
+            "score": -0.6687887300517219,
+            "sector": "Healthcare",
+            "size": "micro",
+            "side": "sell",
+            "reasons": "join=-0.85; ab=-0.81; LAG,peers\u2191,ind\u2193; peer=-0.83; mid_opp=+0.16",
+            "rebound": false,
+            "market_cap_m": 189.35,
+            "avg_vol_k": 11054.59
+          }
+        ]
+      }
+    }
+  }
+}

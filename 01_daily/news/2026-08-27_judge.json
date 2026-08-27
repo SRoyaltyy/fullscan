@@ -1,0 +1,23 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Basic-Materials": "bullish",
+  "Technology": "mixed",
+  "Healthcare": "bearish"
+ },
+ "tickers": {
+  "GDX": 4.0,
+  "XLV": -4.0,
+  "AU": 1.5,
+  "XLU": -1.5,
+  "XLK": -3.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [hawkish] Fed officials/regional directors push back on cuts; PCE today is the binary catalyst (session/1d-1w)\nMACRO risk: [bearish] AI jitters + rising yields pressure crowded tech/semis (session/1d)\nSECTOR basic-materials: [bullish] Gold surge on softer data/Fed anticipation lifts miners (GDX)\nSECTOR technology: [mixed] Rotation into software (ADSK +8%) vs Fabrinet weakness/APH -6.5% in hardware (IGV vs SMH)\nSECTOR healthcare: [bearish] Medicare Advantage plan drops hit managed care (XLV)\nINTERACTION: Fed path + PCE = one rates cluster; hot print hits rate-sensitive and long-duration tech\nWATCH: PCE outcome is the key; a hot surprise is the asymmetric risk given dovish positioning",
+ "date": "2026-08-27"
+}

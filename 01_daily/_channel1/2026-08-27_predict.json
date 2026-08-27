@@ -1,0 +1,400 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-27T01:15:14.872084-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 5.17,
+      "delta_1d": -0.06,
+      "delta_1w": -0.11,
+      "delta_1m": 0.05
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 4.64,
+      "delta_1d": -0.06,
+      "delta_1w": -0.07,
+      "delta_1m": -0.01
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 2.32,
+      "delta_1d": -0.06,
+      "delta_1w": -0.09,
+      "delta_1m": -0.12
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 2.7,
+      "delta_1d": 0.01,
+      "delta_1w": -0.05,
+      "delta_1m": -0.11
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 3.66,
+      "delta_1d": 0.01,
+      "delta_1w": 0.01,
+      "delta_1m": 0.02
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 0.702,
+      "delta_1d": 0.297,
+      "delta_1w": 0.385,
+      "delta_1m": -0.424
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-25",
+      "current": 230.01,
+      "delta_1d": -116.92,
+      "delta_1w": 4.89,
+      "delta_1m": -156.19
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-26",
+      "current": 15.21,
+      "delta_1d": -0.24,
+      "delta_1w": 0.32
+    },
+    "vix3m": {
+      "date": "2026-08-26",
+      "current": 17.99,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.845,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.45,
+    "ratio_ma20": 0.984
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 81.83,
+      "pct_1d": -0.49
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 86.53,
+      "pct_1d": -1.49
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 4674.3,
+      "pct_1d": 1.65
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-27",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.02,
+      "pct_1m": -1.64
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 7716.25,
+      "pct_1d": 0.34
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-27",
+      "last": 29479.5,
+      "pct_1d": 0.65
+    }
+  },
+  "finviz_futures_tape": {
+    "available": false,
+    "source": "01_daily/map_heat/2026-08-27_map_heat.json",
+    "rows": []
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 66239.62,
+          "pct_1d": -0.03
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 25516.94,
+          "pct_1d": -0.53
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 3935.99,
+          "pct_1d": 0.6
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 6901.24,
+          "pct_1d": 1.37
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 9039.7,
+          "pct_1d": -0.97
+        }
+      },
+      "composite_avg": 0.09
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 10878.1,
+          "pct_1d": -0.07
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 26285.96,
+          "pct_1d": 0.08
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 8462.39,
+          "pct_1d": 0.27
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-26",
+          "last": 6470.74,
+          "pct_1d": 0.23
+        }
+      },
+      "composite_avg": 0.13
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.292,
+    "window": "2026-08-19..2026-08-26"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 56.8,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-26 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Ahead of Salesforce Earnings, Here's What Barchart Data Says Comes Next for CRM Stock",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/ahead-salesforce-earnings-heres-barchart-152758624.html",
+        "published_at": "2026-08-25T15:27:58Z"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Is Mark Ruffalo anti-Semitic?",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/27/is-mark-ruffalo-anti-semitic?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 01:19:39 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Quest Diagnostics Stock: Is Wall Street Bullish or Bearish?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/quest-diagnostics-stock-wall-street-155243788.html",
+        "published_at": "2026-08-25T15:52:43Z"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Plug-in solar panels are coming to a shop near you - here's what to know",
+        "url": "https://www.bbc.co.uk/news/articles/c4g3y6398nwo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 26 Aug 2026 23:06:41 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Palestinians mourn ‘Camel of Hardship’ artist Sliman Mansour",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/27/palestinians-mourn-camel-of-hardship-artist-sliman-mansour?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 02:42:05 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Pro-Israel Democrats picked for top roles on key US House committee",
+        "url": "https://www.aljazeera.com/news/2026/8/27/pro-israel-democrats-picked-for-top-roles-on-key-us-house-committee?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 01:24:33 +0000"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "MicroCloud Hologram Invests $15.8 Million in Strategy Shares. What This Means for HOLO Stock.",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/microcloud-hologram-invests-15-8-154431813.html",
+        "published_at": "2026-08-25T15:44:31Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Spirit Airlines Sold Its Crown Jewels for Pennies. It’s a Warning Every Company Must Heed",
+        "url": "https://finance.yahoo.com/small-business/articles/spirit-airlines-sold-crown-jewels-155208866.html",
+        "published_at": "2026-08-25T15:52:08Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "CoreWeave Just Landed a Multibillion-Dollar AI Deal. How to Play CRWV Stock.",
+        "url": "https://finance.yahoo.com/technology/ai/articles/coreweave-just-landed-multibillion-dollar-160230170.html",
+        "published_at": "2026-08-25T16:02:30Z"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "What's Upsetting the Bond Market? - The Big Picture - The Big Picture",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1LazhJZFJ5TXhiXzFuaGc0YWxVU2MxY1pTTnpUcnA0dkpFV0Z0N2xRLWs1aHFyTGk4ZEpiTzI5VU5HUl9KcGtCUExlQ092MVppUFlGaXN3VG1yZ3hMSDdqdWhlZjN5amVwX2N4ckRB?oc=5",
+        "published_at": "Wed, 26 Aug 2026 10:50:04 GMT"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "What to know about Hugging Face, the open-source AI startup reportedly catching Nvidia’s eye",
+        "url": "https://www.marketwatch.com/story/what-to-know-about-hugging-face-the-open-source-ai-startup-reportedly-catching-nvidias-eye-243771f8?mod=mw_rss_topstories",
+        "published_at": "Thu, 27 Aug 2026 03:17:00 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Qatar’s prime minister to visit Tehran, seeking to revive US-Iran talks",
+        "url": "https://www.aljazeera.com/news/2026/8/27/qatars-prime-minister-to-visit-tehran-seeking-to-revive-us-iran-talks?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 02:54:04 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "US labels Palestine Action a terror group, founder says ‘that’s rich’",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/27/us-labels-palestine-action-a-terror-group-founder-says-thats?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 02:07:32 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "At least 12 dead, 54 injured as wildfires ravage northeastern Algeria",
+        "url": "https://www.aljazeera.com/news/2026/8/27/at-least-12-dead-54-injured-as-wildfires-ravage-northeastern-algeria?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 01:31:43 +0000"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Experts' five tips to make a rented property feel like home",
+        "url": "https://www.bbc.co.uk/news/articles/c3w0972z5d8o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 26 Aug 2026 23:08:42 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "How Dolly Parton's business savvy helped her succeed far beyond the charts",
+        "url": "https://www.bbc.co.uk/news/articles/c0klj72p66lo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 26 Aug 2026 23:03:46 GMT"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "4th Circuit dismisses some charges against Wells Fargo after jury’s $22.1M fee",
+        "url": "https://finance.yahoo.com/healthcare/articles/4th-circuit-dismisses-charges-against-152800849.html",
+        "published_at": "2026-08-25T15:28:00Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "NuScale Power Short Seller Profits Send Stark Warning to Investors",
+        "url": "https://finance.yahoo.com/energy/articles/nuscale-power-short-seller-profits-154543569.html",
+        "published_at": "2026-08-25T15:45:43Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-ai-servers-even-more-153107484.html",
+        "published_at": "2026-08-25T15:31:07Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Stocks Supported by Slumping Crude Prices and Lower Bond Yields",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-supported-slumping-crude-prices-151245665.html",
+        "published_at": "2026-08-25T15:12:45Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "McKesson Buys Precision Medicine to Expand Clinical Research and Commercialization",
+        "url": "https://finance.yahoo.com/healthcare/articles/mckesson-buys-precision-medicine-expand-153116988.html",
+        "published_at": "2026-08-25T15:31:16Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Can We Really ‘Grow Our Way Out Of’ $40 Trillion in National Debt? Why One Economist Says ‘The US Has No Chance.’",
+        "url": "https://finance.yahoo.com/economy/policy/articles/really-grow-way-40-trillion-161154543.html",
+        "published_at": "2026-08-25T16:11:54Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "Lego Is Turning Fads Into a $13 Billion Machine",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/lego-turning-fads-13-billion-152959567.html",
+        "published_at": "2026-08-25T15:29:59Z"
+      },
+      {
+        "source": "rss_yahoo_finance",
+        "title": "SpaceX Stock Just Crashed Below Its IPO Price: Here’s the Bull Case Nobody Can Ignore",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-stock-just-crashed-below-152319321.html",
+        "published_at": "2026-08-25T15:23:19Z"
+      },
+      {
+        "source": "rss_marketwatch_top",
+        "title": "Fed’s Lisa Cook denies committing mortgage fraud, says Trump has no grounds to remove her from office",
+        "url": "https://www.marketwatch.com/story/feds-lisa-cook-denies-committing-mortgage-fraud-says-trump-has-no-grounds-to-remove-her-from-office-4ea60c9d?mod=mw_rss_topstories",
+        "published_at": "Thu, 27 Aug 2026 00:14:00 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Meta's $18bn settlement may hasten reckoning for social media on child safety",
+        "url": "https://www.bbc.co.uk/news/articles/clyq4gxwe7go?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 26 Aug 2026 23:04:24 GMT"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Federal Reserve Governor Lisa Cook denounces Trump’s mortgage fraud claims",
+        "url": "https://www.aljazeera.com/news/2026/8/27/federal-reserve-governor-lisa-cook-denounces-trumps-mortgage-fraud-claims?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 02:33:08 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Brazil sues chat platform Discord over failure to protect child users",
+        "url": "https://www.aljazeera.com/news/2026/8/27/brazil-sues-chat-platform-discord-over-failure-to-protect-child-users?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 02:11:21 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Northern Nigeria’s female basketball players chase bigger dreams",
+        "url": "https://www.aljazeera.com/news/2026/8/27/northern-nigerias-female-basketball-players-chase-bigger-dreams?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 01:54:14 +0000"
+      },
+      {
+        "source": "rss_aljazeera_economy",
+        "title": "Construction worker documents moment he survives Nepal mudslide",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/27/construction-worker-documents-moment-he-survives-nepal-mudslide?traffic_source=rss",
+        "published_at": "Thu, 27 Aug 2026 01:09:01 +0000"
+      }
+    ]
+  }
+}

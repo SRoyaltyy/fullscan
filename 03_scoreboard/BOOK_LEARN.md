@@ -1,6 +1,6 @@
-# Book learn — weight tuner ledger (v2)
+# Book learn — weight tuner ledger (v3)
 
-Updated: **2026-08-22T23:29:41.323528-04:00** · evaluation as of **2026-08-23**
+Updated: **2026-08-27T02:28:11.798113-04:00** · evaluation as of **2026-08-27**
 
 Objective: mean forward return of the top-10 buy book **in excess of the
 liquid-universe median**, walk-forward on fully-realized dates only.
@@ -8,9 +8,9 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 | Horizon | dates | incumbent excess | best excess | decision |
 |---------|-------|------------------|-------------|----------|
-| 1d | 6 | -0.2129 | -0.1122 | hold — wins only 50% of dates (< 60%) |
-| 3d | 4 | — | — | observe — only 4 realized dates (< 5) |
-| 1w | 2 | — | — | observe — only 2 realized dates (< 5) |
+| 1d | 7 | -0.2761 | -0.1898 | hold — wins only 43% of dates (< 60%) |
+| 3d | 7 | -0.7184 | -0.5224 | hold — wins only 29% of dates (< 60%) |
+| 1w | 5 | 0.3678 | 0.7794 | hold — wins only 20% of dates (< 60%) |
 | 2w | 0 | — | — | observe — only 0 realized dates (< 5) |
 | 1m | 0 | — | — | observe — only 0 realized dates (< 5) |
 
@@ -26,13 +26,18 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 ## Sell-book construction
 
-- hold True — only 2 dates (n=2)
+- core=-3.203pp full=-0.922pp → sell_excludes_addons=False (n=5)
 
 ## Risk-off entry scaling (LLM weather call → sizing action)
 
-- scale: **0.5** (effective 2026-08-25) — hold scale 0.5 — only 3 realized risk-off dates (< 4)
+- scale: **1.0** (effective 2026-08-25) — book still makes +0.51% on risk-off days → scale back to 1.0 (cash drag not justified)
+
+## Map/captain heat scale (realized 1d excess return)
+
+- scale: **0.25** — incubate 0.25 — only 0 realized heat dates (< 5)
 
 ## History
 
+- v3 @ 2026-08-27: 1d: hold — wins only 43% of dates (< 60%); 3d: hold — wins only 29% of dates (< 60%); 1w: hold — wins only 20% of dates (< 60%); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v2 @ 2026-08-23: 1d: hold — wins only 50% of dates (< 60%); 3d: observe — only 4 realized dates (< 5); 1w: observe — only 2 realized dates (< 5); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v1 @ 2026-08-22: 1d: hold — wins only 50% of dates (< 60%); 3d: observe — only 4 realized dates (< 5); 1w: observe — only 2 realized dates (< 5); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
