@@ -1,13 +1,12 @@
 {
-  "status": "needs_reauth",
+  "status": "waiting",
   "oauth": "FAIL",
-  "pong_ok": false,
-  "reason": "xAI OAuth expired. Open the Claw tab, tap Start re-auth, then Open xAI.",
-  "user_code": null,
+  "pong_ok": null,
+  "reason": "Approve this code on the phone at auth.x.ai/device",
+  "user_code": "ZR6S-JY5H",
   "verification_uri": "https://auth.x.ai/device",
-  "expires_at": null,
-  "updated_at": "2026-08-27T23:15:00-04:00",
-  "source": "pipeline_health",
-  "job": "postclose",
-  "date": "2026-08-28"
+  "expires_at": "2026-08-28T00:28:26.087834-04:00",
+  "source": "xai_device_reauth",
+  "pid": 171657,
+  "updated_at": "2026-08-28T00:14:26.089964-04:00"
 }
