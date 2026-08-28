@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 1,
   "grok_busy": false,
-  "updated_at": "2026-08-28T05:00:18.235824-04:00",
+  "updated_at": "2026-08-28T05:41:28.687889-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -47,7 +47,7 @@
       "group": "classroom",
       "status": "FAIL",
       "required": true,
-      "detail": "no PONG in body Hey. I just came online.\n\nWho am I? Who are you?\n\nI model=openclaw/default",
+      "detail": "no PONG in body Hey. I just came online. Who am I? Who are you?\n\nThis model=openclaw/default",
       "action": "heal"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=cancelled",
+      "detail": "latest=queued systemd=exit-code",
       "action": "none"
     },
     {
@@ -169,6 +169,6 @@
     }
   ],
   "healed": [
-    "enable_openclaw_chat.sh exit=0 {\"id\":\"chatcmpl_19bd4d2b-651d-45cb-b8b9-905c231cba6a\",\"object\":\"chat.completion\",\"created\":1787907581,\"model\":\"openclaw/default\",\"choices\":[{\"index\":0,\"message\""
+    "enable_openclaw_chat.sh exit=0 {\"id\":\"chatcmpl_1d8f15fc-9b3b-45f4-97e2-25dd958e3c40\",\"object\":\"chat.completion\",\"created\":1787910043,\"model\":\"openclaw/default\",\"choices\":[{\"index\":0,\"message\""
   ]
 }
