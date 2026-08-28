@@ -78,6 +78,6 @@ jobs:
         run: |
           set -uo pipefail
           export HOME=/home/gha
-          python3 scripts/runtime_status.py --write || true
+          python3 scripts/runtime_status.py --heal || true
           echo "======== _runtime.json ========"
           cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"

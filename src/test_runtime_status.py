@@ -101,11 +101,30 @@ def test_pong_401_403_timeout():
 def test_run_timed_out_is_fail():
     mod = _load()
     st, req, det, act = mod.run_verdict("timed_out", "success")
-    assert st == "FAIL" and req
+    assert st == "FAIL" and act == "none"
     st, req, det, act = mod.run_verdict("success", "success")
     assert st == "OK"
     st, req, det, act = mod.run_verdict("failure", "failure")
     assert st == "WARN"
+
+
+def test_heal_targets_classroom_not_403():
+    mod = _load()
+    doors = [
+        mod.door("process", "OpenClaw process", "box", "FAIL", True, "died", "heal"),
+        mod.door("http403", "HTTP 403", "postclose", "FAIL", True, "Elite 403", "none"),
+        mod.door("stub", "Packet stubs", "postclose", "FAIL", True, "empty tape", "none"),
+        mod.door("timeout", "Grok turn timeout", "classroom", "WARN", True,
+                 "not in last snapshot — unproven", "heal"),
+        mod.door("token", "Token 48 vs 64", "classroom", "WARN", True,
+                 "json=48 env=64", "none"),
+    ]
+    ids = mod.heal_targets(doors)
+    assert "process" in ids
+    assert "timeout" in ids
+    assert "http403" not in ids
+    assert "stub" not in ids
+    assert "token" not in ids
 
 
 def test_snapshot_includes_prereq_doors():
@@ -126,6 +145,7 @@ def main() -> None:
         test_zombie_process_is_fail,
         test_pong_401_403_timeout,
         test_run_timed_out_is_fail,
+        test_heal_targets_classroom_not_403,
         test_snapshot_includes_prereq_doors,
     ]
     failed = 0

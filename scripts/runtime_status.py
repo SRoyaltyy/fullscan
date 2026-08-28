@@ -317,7 +317,7 @@ def run_verdict(conclusion: str, systemd_result: str) -> tuple[str, bool, str, s
     conc = (conclusion or "").lower()
     res = (systemd_result or "").lower()
     if conc == "timed_out" or res == "timeout":
-        return "FAIL", True, f"timed_out (GHA={conclusion or '—'} systemd={systemd_result or '—'})", "heal"
+        return "FAIL", False, f"timed_out (GHA={conclusion or '—'} systemd={systemd_result or '—'})", "none"
     if conc in ("cancelled",):
         return "WARN", False, f"latest={conclusion}", "none"
     if res in ("failure", "failed", "exit-code") or conc == "failure":
@@ -523,7 +523,7 @@ def scan_stubs(needles: dict[str, list[str]] | None = None) -> tuple[str, bool, 
                 hits.append(f"{mh.name}: EMPTY TAPE (403 overlay)")
     if not hits:
         return "OK", True, "no 401/403/timeout/64/DeepSeek stubs in latest packets", "none"
-    return "FAIL", True, "; ".join(hits[:4]), "heal"
+    return "FAIL", False, "; ".join(hits[:4]), "none"
 
 
 def door(id: str, name: str, group: str, status: str, required: bool,
@@ -621,40 +621,35 @@ def snapshot() -> dict:
             model_st, model_req, model_detail, model_act = (
                 "FAIL", True, "no 200 chat", "heal")
 
-    if pong_st == "FAIL" and "401" in pong_detail:
-        tok_st, tok_req, tok_det, tok_act = (
-            "FAIL", True, f"{tok_det} — PONG 401", "heal")
-    if needles.get("64") and tok_st != "FAIL":
-        tok_st, tok_req, tok_det, tok_act = (
-            "FAIL", True,
-            f"{tok_det} — last packet used 64-char ({', '.join(needles['64'][:2])})",
-            "heal")
-    if needles.get("1800") and t_st != "FAIL":
-        t_st, t_req, t_det, t_act = (
-            "FAIL", True,
-            f"{t_det} — last packet has 1800/timeout ({', '.join(needles['1800'][:2])})",
-            "heal")
-    if needles.get("deepseek") and grok_st != "FAIL":
-        grok_st, grok_req, grok_det, grok_act = (
-            "FAIL", True,
-            f"DeepSeek fallback in {', '.join(needles['deepseek'][:2])}",
-            "heal")
-
     http401_st, http401_req, http401_det, http401_act = "OK", True, "no 401", "none"
     if pong_st == "FAIL" and "401" in pong_detail:
         http401_st, http401_req, http401_det, http401_act = (
             "FAIL", True, pong_detail, "heal")
+    elif pong_st == "OK":
+        http401_st, http401_req, http401_det, http401_act = (
+            "OK", True, "live PONG 200 — last packet 401 is history", "none")
     elif needles.get("401"):
         http401_st, http401_req, http401_det, http401_act = (
-            "FAIL", True, f"401 in {', '.join(needles['401'][:2])}", "heal")
+            "WARN", False, f"401 in last packet {', '.join(needles['401'][:2])} — not live", "none")
 
     http403_st, http403_req, http403_det, http403_act = finviz_st, finviz_req, finviz_det, finviz_act
-    if pong_st == "FAIL" and "403" in pong_detail:
+    if http403_act == "heal":
+        http403_act = "none"
+    if needles.get("403") and http403_st != "FAIL":
         http403_st, http403_req, http403_det, http403_act = (
-            "FAIL", True, pong_detail, "heal")
-    elif needles.get("403"):
-        http403_st, http403_req, http403_det, http403_act = (
-            "FAIL", True, f"403 in {', '.join(needles['403'][:2])}", "heal")
+            "FAIL", False, f"403 in {', '.join(needles['403'][:2])}", "none")
+    # PONG 403 stays on the pong door. http403 is Finviz/Aliyun — heal cannot un-block it.
+
+    if needles.get("64") and tok_st == "OK":
+        tok_st, tok_req, tok_det, tok_act = (
+            "WARN", False,
+            f"{tok_det} — last packet used 64-char ({', '.join(needles['64'][:2])})",
+            "none")
+    if needles.get("1800") and t_st == "OK":
+        t_st, t_req, t_det, t_act = (
+            "WARN", False,
+            f"{t_det} — last packet had 1800 ({', '.join(needles['1800'][:2])})",
+            "none")
 
     pong_ok = pong_st == "OK"
     proc_st, proc_req, proc_det, proc_act = process_verdict(
@@ -755,13 +750,35 @@ def push(msg: str) -> None:
         pass
 
 
+CLASSROOM_HEAL_FAIL = {
+    "gateway", "port", "pong", "model", "process", "timeout", "token", "http401",
+}
+CLASSROOM_HEAL_UNPROVEN = {
+    "process", "timeout", "http401", "gateway", "port",
+}
+
+
+def heal_targets(doors: list) -> set[str]:
+    ids: set[str] = set()
+    for d in doors or []:
+        i = str(d.get("id") or "")
+        st = str(d.get("status") or "")
+        det = str(d.get("detail") or "")
+        if i in CLASSROOM_HEAL_FAIL and st == "FAIL":
+            ids.add(i)
+        if i in CLASSROOM_HEAL_UNPROVEN and st == "WARN" and "unproven" in det:
+            ids.add(i)
+        if i in ("preopen_timer", "postclose_timer") and st == "FAIL":
+            ids.add(i)
+    return ids
+
+
 def heal(payload: dict) -> list[str]:
     actions: list[str] = []
     if grok_busy():
         print("[runtime] Grok job running — will not bounce OpenClaw", flush=True)
         return actions
-    doors = payload.get("doors") or []
-    ids = {d["id"] for d in doors if d.get("required") and d.get("status") == "FAIL"}
+    ids = heal_targets(payload.get("doors") or [])
     env = {**os.environ, "HOME": os.environ.get("HOME") or "/home/gha", "GROK_ONLY": "1"}
     if "timeout" in ids and ENSURE_TIMEOUTS.is_file():
         try:
@@ -773,8 +790,7 @@ def heal(payload: dict) -> list[str]:
         except (OSError, subprocess.SubprocessError) as e:
             actions.append(f"ensure_openclaw_timeouts.sh failed: {e}")
     door_bad = bool(ids & {
-        "gateway", "port", "pong", "model", "token", "process",
-        "stub", "http401", "http403",
+        "gateway", "port", "pong", "model", "token", "process", "http401",
     })
     if door_bad and ENABLE_CHAT.is_file():
         try:
