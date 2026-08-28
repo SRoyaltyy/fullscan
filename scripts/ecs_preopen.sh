@@ -21,8 +21,8 @@ fi
 ET_NOW=$(TZ=America/New_York date '+%F %H:%M %Z')
 ET_DOW=$(TZ=America/New_York date +%u)
 ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-DAY=$(TZ=America/New_York date +%F)
-echo "[ecs-preopen] start $ET_NOW  root=$ROOT"
+DAY="${RUN_DATE:-$(TZ=America/New_York date +%F)}"
+echo "[ecs-preopen] start $ET_NOW  root=$ROOT day=$DAY force=${FORCE:-false}"
 
 if [ "$ET_DOW" -ge 6 ]; then
   echo "[ecs-preopen] weekend — skip"
@@ -75,7 +75,8 @@ git_prep() {
 
 # Persistent=true catch-up after a late enable must NOT rewrite today.
 # Timer is enabled for the next 05:55. Prove git push with the clock file.
-if [ "$ET_HM" -ge 925 ]; then
+# Health healer may set FORCE=true to ignore the 09:25 cutoff.
+if [ "$ET_HM" -ge 925 ] && [ "${FORCE:-false}" != "true" ] && [ "${FORCE:-0}" != "1" ]; then
   echo "[ecs-preopen] past 09:25 ET — not running python, not resetting the tree"
   write_clock
   git_prep
@@ -131,6 +132,10 @@ if [ -x "$ROOT/.venv/bin/python" ]; then
 fi
 
 ARGS=()
+[ -n "${RUN_DATE:-}" ] && ARGS+=(--date "$RUN_DATE")
+if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
+  ARGS+=(--force)
+fi
 [ -n "${1:-}" ] && ARGS+=("$@")
 
 set +e

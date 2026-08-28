@@ -57,13 +57,21 @@ bash scripts/ensure_openclaw_timeouts.sh || true
 
 PY="${FULLSCAN_PYTHON:-python3}"
 [ -x "$ROOT/.venv/bin/python" ] && PY="$ROOT/.venv/bin/python"
-SOURCE=$(TZ=America/New_York date +%F)
-TARGET=$("$PY" -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
-echo "[map-postclose] source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
+SOURCE="${SOURCE_DATE:-$(TZ=America/New_York date +%F)}"
+if [ -n "${TARGET_DATE:-}" ]; then
+  TARGET="$TARGET_DATE"
+else
+  TARGET=$("$PY" -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
+fi
+FORCE_FLAG=()
+if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
+  FORCE_FLAG=(--force)
+fi
+echo "[map-postclose] source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
 
 "$PY" -m src.map_heat --date "$TARGET" --force
 "$PY" -m src.map_heat_postclose \
-  --source-date "$SOURCE" --target-date "$TARGET"
+  --source-date "$SOURCE" --target-date "$TARGET" "${FORCE_FLAG[@]}"
 
 mkdir -p "$PERSIST/01_daily/map_heat" "$PERSIST/01_daily/_transcripts"
 cp -a "$ROOT/01_daily/map_heat/." "$PERSIST/01_daily/map_heat/" 2>/dev/null || true
