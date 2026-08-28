@@ -1,0 +1,510 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-08-28T03:03:00.395140-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 5.18,
+      "delta_1d": 0.01,
+      "delta_1w": -0.01,
+      "delta_1m": 0.09
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 4.66,
+      "delta_1d": 0.02,
+      "delta_1w": 0.01,
+      "delta_1m": 0.05
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 2.34,
+      "delta_1d": 0.02,
+      "delta_1w": -0.01,
+      "delta_1m": -0.07
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 2.67,
+      "delta_1d": -0.03,
+      "delta_1w": -0.06,
+      "delta_1m": -0.17
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 3.64,
+      "delta_1d": -0.02,
+      "delta_1w": 0.02,
+      "delta_1m": -0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-28",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 0.456,
+      "delta_1d": -0.246,
+      "delta_1w": 0.231,
+      "delta_1m": -2.12
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-26",
+      "current": 215.44,
+      "delta_1d": 52.69,
+      "delta_1w": 60.31,
+      "delta_1m": -92.65
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-27",
+      "current": 14.51,
+      "delta_1d": -0.7,
+      "delta_1w": -1.5
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.947,
+    "ratio_source": "vix/ma20",
+    "vix_ma20": 15.32,
+    "ratio_ma20": 0.947,
+    "ratio_stale": "VIX3M quote is 41 days older than VIX (2026-07-17 vs 2026-08-27)"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 82.84,
+      "pct_1d": -0.83
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 87.97,
+      "pct_1d": -1.93
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 4659.3,
+      "pct_1d": 1.08
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-28",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.01,
+      "pct_1m": -0.86
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 7740.5,
+      "pct_1d": -0.03
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 29625.75,
+      "pct_1d": -0.24
+    }
+  },
+  "finviz_futures_tape": {
+    "available": true,
+    "source": "01_daily/map_heat/2026-08-28_map_heat.json",
+    "rows": [
+      {
+        "ticker": "ES",
+        "label": "S&P 500",
+        "last": 7733.25,
+        "change": -0.12
+      },
+      {
+        "ticker": "NQ",
+        "label": "Nasdaq 100",
+        "last": 29607.5,
+        "change": -0.29
+      },
+      {
+        "ticker": "ER2",
+        "label": "Russell 2000",
+        "last": 3020.8,
+        "change": 0.06
+      },
+      {
+        "ticker": "YM",
+        "label": "DJIA",
+        "last": 53659.0,
+        "change": 0.08
+      },
+      {
+        "ticker": "VX",
+        "label": "VIX",
+        "last": 16.75,
+        "change": 0.53
+      },
+      {
+        "ticker": "CL",
+        "label": "Crude Oil WTI",
+        "last": 83.01,
+        "change": -0.63
+      },
+      {
+        "ticker": "NG",
+        "label": "Natural Gas",
+        "last": 2.917,
+        "change": 0.1
+      },
+      {
+        "ticker": "GC",
+        "label": "Gold",
+        "last": 4627.8,
+        "change": -0.77
+      },
+      {
+        "ticker": "SI",
+        "label": "Silver",
+        "last": 69.49,
+        "change": -1.02
+      },
+      {
+        "ticker": "HG",
+        "label": "Copper",
+        "last": 6.693,
+        "change": 0.03
+      },
+      {
+        "ticker": "DX",
+        "label": "USD",
+        "last": 99.135,
+        "change": 0.04
+      },
+      {
+        "ticker": "6E",
+        "label": "EUR",
+        "last": 1.16505,
+        "change": -0.05
+      },
+      {
+        "ticker": "6J",
+        "label": "JPY",
+        "last": 0.6275000000000001,
+        "change": -0.08
+      },
+      {
+        "ticker": "ZN",
+        "label": "10 Year Note",
+        "last": 108.546875,
+        "change": -0.03
+      },
+      {
+        "ticker": "ZB",
+        "label": "30 Year Bond",
+        "last": 109.84375,
+        "change": -0.11
+      },
+      {
+        "ticker": "NKD",
+        "label": "Nikkei 225",
+        "last": 66385.0,
+        "change": 0.23
+      },
+      {
+        "ticker": "DY",
+        "label": "DAX",
+        "last": 26485.0,
+        "change": 0.36
+      },
+      {
+        "ticker": "EX",
+        "label": "Euro Stoxx 50",
+        "last": 6454.0,
+        "change": 0.31
+      }
+    ]
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 66405.56,
+          "pct_1d": 0.41
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 25607.66,
+          "pct_1d": 0.16
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 3955.02,
+          "pct_1d": -0.04
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 6788.88,
+          "pct_1d": -1.79
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 9092.3,
+          "pct_1d": 0.6
+        }
+      },
+      "composite_avg": -0.13
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 10792.5,
+          "pct_1d": -0.79
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 26367.24,
+          "pct_1d": 0.31
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 8319.87,
+          "pct_1d": -1.68
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 6424.73,
+          "pct_1d": -0.71
+        }
+      },
+      "composite_avg": -0.72
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": 0.26,
+    "window": "2026-08-20..2026-08-27"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Quantum Computing Is Raising the Stakes for Cybersecurity: 5 Stocks to Watch",
+        "url": "https://www.marketbeat.com/articles/quantum-computing-is-raising-the-stakes-for-cybersecurity-5-stocks-to-watch/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T13:55:00Z"
+      },
+      {
+        "source": "newsapi_CNBC",
+        "title": "CrowdStrike pops 11% on record second quarter as 'Mythos moment' drives AI cyber wave",
+        "url": "https://www.cnbc.com/2026/08/26/crowdstrike-crwd-earnings-q2-2027.html",
+        "published_at": "2026-08-26T21:00:09Z"
+      },
+      {
+        "source": "newsapi_Business Insider",
+        "title": "Marc Benioff goes on the offensive: 'This is not the SaaSpocalypse'",
+        "url": "https://www.businessinsider.com/marc-benioff-salesforce-offensive-this-is-not-the-saaspocalypse-2026-8#article",
+        "published_at": "2026-08-26T22:28:56Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "PDD Beat Earnings—So Why Did the Stock Still Fall?",
+        "url": "https://www.marketbeat.com/articles/pdd-beat-earningsso-why-did-the-stock-still-fall/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T12:45:00Z"
+      },
+      {
+        "source": "newsapi_Financial Post",
+        "title": "Nvidia earnings give investors a barometer for state of AI trade",
+        "url": "https://financialpost.com/investing/nvidia-earnings-barometer-for-ai-trade",
+        "published_at": "2026-08-26T13:54:37Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "nCino Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-ncino-q2-earnings-call-highlights-2026-08-25/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-25T23:03:09Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Connor Clark & Lunn Investment Management Ltd. Buys New Position in PENN Entertainment, Inc. $PENN",
+        "url": "https://www.marketbeat.com/instant-alerts/filing-connor-clark-lunn-investment-management-ltd-buys-new-position-in-penn-entertainment-inc-penn-2026-08-26/",
+        "published_at": "2026-08-26T07:53:22Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Strattec Security Q4 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-strattec-security-q4-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T15:04:56Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "UP Fintech Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-up-fintech-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T14:03:26Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Powell Industries Eyes Record Revenue as Data Center Backlog Powers Growth",
+        "url": "https://www.marketbeat.com/instant-alerts/event-powell-industries-eyes-record-revenue-as-data-center-backlog-powers-growth-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T14:03:27Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "DSC Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-dsc-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T14:03:25Z"
+      },
+      {
+        "source": "newsapi_Business Insider",
+        "title": "Nvidia is the final boss of tech earnings. Here are 3 questions it must answer.",
+        "url": "https://www.businessinsider.com/nvidia-q2-earnings-preview-ai-demand-financing-memory-chip-stocks-2026-8#article",
+        "published_at": "2026-08-26T09:50:01Z"
+      },
+      {
+        "source": "newsapi_Business Standard",
+        "title": "Delhi Master Plan 2047 puts brokerages' spotlight on Max, Fortis, Medanta",
+        "url": "https://www.business-standard.com/markets/news/delhi-master-plan-2047-puts-brokerages-spotlight-on-max-fortis-medanta-126082600359_1.html",
+        "published_at": "2026-08-26T06:21:53Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Semtech Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-semtech-q2-earnings-call-highlights-2026-08-25/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-25T22:02:09Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "National Bank of Canada Q3 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-national-bank-of-canada-q3-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T17:02:34Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Heico Q3 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-heico-q3-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T16:03:31Z"
+      },
+      {
+        "source": "newsapi_Financial Post",
+        "title": "Software stocks get an earnings gut check after hot summer rally",
+        "url": "https://financialpost.com/news/software-stocks-get-an-earnings-gut-check-after-hot-summer-rally",
+        "published_at": "2026-08-26T17:07:07Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Williams-Sonoma Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-williams-sonoma-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T16:03:32Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Li Auto Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-li-auto-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T15:04:56Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Hochschild Mining H1 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-hochschild-mining-h1-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T15:04:56Z"
+      },
+      {
+        "source": "newsapi_Business Insider",
+        "title": "Nvidia is the final boss of tech earnings. Here are 3 questions it must answer.",
+        "url": "https://www.businessinsider.com/nvidia-q2-earnings-preview-ai-demand-financing-memory-chip-stocks-2026-8",
+        "published_at": "2026-08-26T14:59:07Z"
+      },
+      {
+        "source": "newsapi_Business Standard",
+        "title": "Purple Style Labs sets price band, eyes ₹4,604 crore IPO valuation",
+        "url": "https://www.business-standard.com/markets/ipo/purple-style-labs-sets-price-band-eyes-4-604-crore-ipo-valuation-126082601120_1.html",
+        "published_at": "2026-08-26T14:07:13Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Intuit Q4 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-intuit-q4-earnings-call-highlights-2026-08-25/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-25T23:03:08Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Photronics Q3 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-photronics-q3-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T14:03:25Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Victory Capital Strikes $7B Deal for First Eagle, Targets $571B in Client Assets",
+        "url": "https://www.marketbeat.com/instant-alerts/event-victory-capital-strikes-7b-deal-for-first-eagle-targets-571b-in-client-assets-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T13:02:06Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "LightInTheBox Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-lightinthebox-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T13:02:05Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Ligand Pharmaceuticals Highlights XOMA-Fueled Royalty Growth, $700M in Deployable Capital",
+        "url": "https://www.marketbeat.com/instant-alerts/event-ligand-pharmaceuticals-highlights-xoma-fueled-royalty-growth-700m-in-deployable-capital-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T17:02:36Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Zoom Communications Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-zoom-communications-q2-earnings-call-highlights-2026-08-25/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-25T23:03:10Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "SFL Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-sfl-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T16:03:31Z"
+      },
+      {
+        "source": "newsapi_MarketBeat",
+        "title": "Zhihu Q2 Earnings Call Highlights",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-zhihu-q2-earnings-call-highlights-2026-08-26/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+        "published_at": "2026-08-26T14:03:26Z"
+      }
+    ]
+  }
+}

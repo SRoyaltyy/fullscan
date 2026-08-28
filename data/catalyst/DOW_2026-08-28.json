@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-05-01\",\n    \"description\": \"Dow Inc (DOW) sold a 40% stake in Dow InfraCo LLC (Diamond Infrastructure Solutions) to a Macquarie Asset Management fund for about $2.4 billion.\",\n    \"evidence_excerpt\": \"\\\"On May 1, 2025, Dow sold a 40% stake in its wholly owned subsidiary Dow InfraCo LLC ... for initial proceeds of approximately $2.4 billion.\\\"\",\n    \"source_urls\": [\n      \"https://fortune.com/company-assets/1673/quartr/annual-report-10-k-cdc5b-2026-02-03-12-10-55.pdf",
+  "ticker": "DOW",
+  "generated_at": "2026-08-28",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-07-29\",\n    \"description\": \"UFP Industries Inc (UFPI) reported Q2 2026 net sales of $1.88 billion, up 3% year over year, while diluted EPS fell to $1.48 from $1.70 as higher freight costs compressed margins; full-year 2026 unit-demand outlook was left unchanged at the lower end of flat to slightly down.\",\n    \"evidence_excerpt\": \"\\\"Net Sales of $1.88 billion increased by 3 percent compared to $1.84 billion a year ago\\\"\",\n    \"source_urls\": [\n      \"https://www.prnew",
+  "ticker": "UFPI",
+  "generated_at": "2026-08-28",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

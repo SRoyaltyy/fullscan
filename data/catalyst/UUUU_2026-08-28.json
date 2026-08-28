@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-03-18\",\n    \"description\": \"Energy Fuels Inc (UUUU) and The Chemours Company announced a strategic alliance to expand their relationship and strengthen U.S. rare earth and critical mineral supply chains.\",\n    \"evidence_excerpt\": \"\\\"today announced they are forming a strategic alliance to expand the companies' existing relationship to enhance U.S. domestic rare earth\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/energy-fuels-and-chemours-f",
+  "ticker": "UUUU",
+  "generated_at": "2026-08-28",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

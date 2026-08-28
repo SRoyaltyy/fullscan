@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-09-08\",\n    \"description\": \"PT Freeport Indonesia, Freeport-McMoRan Inc's (FCX) Indonesian affiliate, suffered an unprecedented Grasberg Block Cave mud rush of about 800,000 metric tons of wet material that killed workers and forced a district-wide mining suspension.\",\n    \"evidence_excerpt\": \"\\\"a sudden rush of approximately 800,000 metric tons of wet material entered the mine and traveled rapidly\\\"\",\n    \"source_urls\": [\n      \"https://app.quotemedia.com/data/down",
+  "ticker": "FCX",
+  "generated_at": "2026-08-28",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

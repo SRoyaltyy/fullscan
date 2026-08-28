@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "mixed",
+  "hawkish",
+  "mixed"
+ ],
+ "sector_tilts": {
+  "Technology": "bullish",
+  "Duration": "bearish"
+ },
+ "tickers": {
+  "XLK": 9.5,
+  "NVDA": 4.0,
+  "IGV": 4.0,
+  "XLU": -4.0,
+  "ADI": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=2\nMACRO sticky_pce: [hawkish] Core PCE 3.3% stuck; yields/hike bets live into JH (session/1d-1w)\nMACRO warsh_jh: [mixed] Friday Jackson Hole is the residual two-sided Fed-path binary (session/1d)\nSECTOR technology: [bullish] NVDA beat already public; XLK/NQ leadership vs PCE-capped SPY (XLK)\nSECTOR software: [bullish] CRM-led software rally + CRWD AI-cyber; IGV sleeve not broad beta (IGV)\nSECTOR duration: [bearish] Sticky PCE/yield backup + JH event; XLU/XLRE/XLP lag if NQ leads (XLU/XLRE)\nSECTOR materials_gold: [mixed] Gold ~$4600/USD firm after PCE; prior miner rip is stale (XLB/gold)\nINTERACTION: PCE+Warsh=one rates cluster; NVDA+CRM/CRWD=one AI/software cluster \u2014 do not stack; NQ-lead after mega-cap AHR = defensive/financial relative lag\nWATCH: Warsh two-sided; PCE already traded so do not re-score as today\u2019s 8:30; gold/miners two-sided vs Wednesday",
+ "date": "2026-08-28"
+}

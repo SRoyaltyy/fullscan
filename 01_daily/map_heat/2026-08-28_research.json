@@ -1,0 +1,180 @@
+{
+  "date": "2026-08-28",
+  "phase": "morning_bootstrap",
+  "generated_at": "2026-08-28T02:09:20.250144-04:00",
+  "n_targets": 0,
+  "n_cards": 0,
+  "n_refreshed": 0,
+  "evidence_errors": [
+    "no post-close baseline \u2014 research skipped"
+  ],
+  "cards": [],
+  "size_gate": true,
+  "macro_gate": true,
+  "earnings_gate": false,
+  "size_gate_reason": "bootstrap \u2014 no post-close baseline",
+  "calendar_entry_scale": 0.5,
+  "earnings_entry_tickers": [],
+  "parent_splits": [],
+  "opportunities": [],
+  "vetoes": [],
+  "one_paragraph": "Bootstrap day: post-close captain baseline was missing. Research skipped so the rest of preopen can still succeed. stock_book will receive no s_heat. Full path resumes after the next 22:00 post-close job.",
+  "futures": [
+    {
+      "ticker": "ES",
+      "label": "S&P 500",
+      "last": 7733.25,
+      "change": -0.12
+    },
+    {
+      "ticker": "NQ",
+      "label": "Nasdaq 100",
+      "last": 29607.5,
+      "change": -0.29
+    },
+    {
+      "ticker": "ER2",
+      "label": "Russell 2000",
+      "last": 3020.8,
+      "change": 0.06
+    },
+    {
+      "ticker": "YM",
+      "label": "DJIA",
+      "last": 53659.0,
+      "change": 0.08
+    },
+    {
+      "ticker": "VX",
+      "label": "VIX",
+      "last": 16.75,
+      "change": 0.53
+    },
+    {
+      "ticker": "CL",
+      "label": "Crude Oil WTI",
+      "last": 83.01,
+      "change": -0.63
+    },
+    {
+      "ticker": "NG",
+      "label": "Natural Gas",
+      "last": 2.917,
+      "change": 0.1
+    },
+    {
+      "ticker": "GC",
+      "label": "Gold",
+      "last": 4627.8,
+      "change": -0.77
+    },
+    {
+      "ticker": "SI",
+      "label": "Silver",
+      "last": 69.49,
+      "change": -1.02
+    },
+    {
+      "ticker": "HG",
+      "label": "Copper",
+      "last": 6.693,
+      "change": 0.03
+    },
+    {
+      "ticker": "DX",
+      "label": "USD",
+      "last": 99.135,
+      "change": 0.04
+    },
+    {
+      "ticker": "6E",
+      "label": "EUR",
+      "last": 1.16505,
+      "change": -0.05
+    },
+    {
+      "ticker": "6J",
+      "label": "JPY",
+      "last": 0.6275000000000001,
+      "change": -0.08
+    },
+    {
+      "ticker": "ZN",
+      "label": "10 Year Note",
+      "last": 108.546875,
+      "change": -0.03
+    },
+    {
+      "ticker": "ZB",
+      "label": "30 Year Bond",
+      "last": 109.84375,
+      "change": -0.11
+    },
+    {
+      "ticker": "NKD",
+      "label": "Nikkei 225",
+      "last": 66385.0,
+      "change": 0.23
+    },
+    {
+      "ticker": "DY",
+      "label": "DAX",
+      "last": 26485.0,
+      "change": 0.36
+    },
+    {
+      "ticker": "EX",
+      "label": "Euro Stoxx 50",
+      "last": 6454.0,
+      "change": 0.31
+    }
+  ],
+  "econ": [
+    {
+      "event": "Chicago PMI",
+      "datetime": "2026-08-28T09:45:00",
+      "actual": null,
+      "previous": "57.6",
+      "forecast": "57",
+      "surprise": null,
+      "importance": 2
+    },
+    {
+      "event": "Fed Chair Warsh Speech",
+      "datetime": "2026-08-28T10:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 3
+    },
+    {
+      "event": "Michigan Consumer Sentiment Final",
+      "datetime": "2026-08-28T10:00:00",
+      "actual": null,
+      "previous": "55.2",
+      "forecast": "51.0",
+      "surprise": null,
+      "importance": 2
+    },
+    {
+      "event": "Non Farm Payrolls Annual Revision Prel",
+      "datetime": "2026-08-28T10:00:00",
+      "actual": null,
+      "previous": "-911K",
+      "forecast": null,
+      "surprise": null,
+      "importance": 3
+    },
+    {
+      "event": "Jackson Hole Symposium",
+      "datetime": "2026-08-28T20:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2
+    }
+  ],
+  "earnings": []
+}
