@@ -38,12 +38,23 @@ jobs:
       FULLSCAN_HOME: /home/gha
       GROK_ONLY: "1"
     steps:
+      - name: Skip if Grok already owns the box
+        run: |
+          set +e
+          if pgrep -af 'src.map_heat_postclose|src.run_preopen_all|ecs_preopen|ecs_map_postclose|-m src.map_heat' \
+               | grep -v pgrep | grep -v runtime_status >/dev/null; then
+            echo "Grok is talking — not occupying the runner for a clock snapshot"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+          exit 0
       - uses: actions/checkout@v4
+        if: env.skip != 'yes'
         with:
           clean: false
           fetch-depth: 0
 
       - name: Start or refresh xAI device login
+        if: env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
@@ -69,7 +80,7 @@ jobs:
           cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
 
       - name: Snapshot runtime doors for the phone
-        if: always()
+        if: always() && env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
@@ -78,6 +89,6 @@ jobs:
         run: |
           set -uo pipefail
           export HOME=/home/gha
-          python3 scripts/runtime_status.py --heal || true
+          python3 scripts/runtime_status.py --write || true
           echo "======== _runtime.json ========"
           cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"

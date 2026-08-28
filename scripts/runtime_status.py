@@ -56,6 +56,9 @@ GROK_NEEDLES = (
     "src.run_sector_outcome",
     "src.learn_cycle",
     "src.catalyst_daily",
+    "-m src.map_heat",
+    "map_heat_postclose",
+    "run_preopen_all",
 )
 WF_FILES = (
     ROOT / ".github" / "workflows" / "preopen_all.yml",
@@ -111,6 +114,15 @@ def grok_busy() -> bool:
         for line in blob.splitlines()
         for n in GROK_NEEDLES
     )
+
+
+def gh_grok_busy() -> bool:
+    """Queued/in-progress Grok workflows own the only ECS runner."""
+    for wf in ("map_heat_postclose.yml", "preopen_all.yml"):
+        st = str(gh_latest(wf).get("status") or "").lower()
+        if st in ("in_progress", "queued", "waiting", "requested"):
+            return True
+    return False
 
 
 def _json(path: Path):
@@ -296,10 +308,6 @@ def process_verdict(unit_active: bool, pid: int, pid_alive: bool,
 
 def pong_verdict(http: int, content: str, error: str) -> tuple[str, bool, str, str]:
     blob = f"{content} {error}"
-    if http == 200 and "PONG" in (content or "").upper():
-        if TIMEOUT_RE.search(content or ""):
-            return "FAIL", True, "timeout stub in PONG body", "heal"
-        return "OK", True, "PONG", "none"
     if http == 401:
         return "FAIL", True, "HTTP 401 — wrong token (64 vs 48)", "heal"
     if http == 403:
@@ -308,8 +316,17 @@ def pong_verdict(http: int, content: str, error: str) -> tuple[str, bool, str, s
         return "FAIL", True, f"HTTP {http} — gateway down/restarting", "heal"
     if TIMEOUT_RE.search(blob) or "timed out" in blob.lower():
         return "FAIL", True, f"timeout http={http} {error or content}"[:160], "heal"
+    if http == 200 and "PONG" in (content or "").upper():
+        return "OK", True, "PONG", "none"
+    if http == 200 and (content or "").strip():
+        # OpenClaw persona answers "Who am I?" after enable_openclaw_chat.
+        # HTTP 200 + a live body means the classroom is up. Healing it
+        # restarts the session and makes the greeting worse.
+        return ("OK", True,
+                f"classroom live ({(content or '').strip().splitlines()[0][:60]})",
+                "none")
     if http == 200:
-        return "FAIL", True, f"no PONG in body {content[:80]}", "heal"
+        return "FAIL", True, "HTTP 200 empty body", "heal"
     return "FAIL", True, f"http={http} {error or content}"[:160], "heal"
 
 
@@ -535,7 +552,7 @@ def door(id: str, name: str, group: str, status: str, required: bool,
 
 
 def snapshot() -> dict:
-    busy = grok_busy()
+    busy = grok_busy() or gh_grok_busy()
     json_tok, json_n, env_tok, env_n = live_token()
     token = pick_token(json_tok, env_tok)
     tok_st, tok_req, tok_det, tok_act = token_verdict(json_n, env_n)
@@ -596,8 +613,10 @@ def snapshot() -> dict:
     model_st, model_req, model_detail, model_act = "SKIP", False, "not probed", "none"
     ping: dict = {}
     if busy:
-        pong_st, pong_detail = "SKIP", "Grok job running — not poking the classroom"
-        model_st, model_detail = "SKIP", "probe skipped"
+        pong_st, pong_req, pong_detail, pong_act = (
+            "SKIP", False, "Grok job running — not poking the classroom", "none")
+        model_st, model_req, model_detail, model_act = (
+            "SKIP", False, "probe skipped", "none")
     elif not up:
         pong_st, pong_req, pong_detail, pong_act = "FAIL", True, "port down", "heal"
         model_st, model_req, model_detail, model_act = "FAIL", True, "port down", "heal"
@@ -651,7 +670,7 @@ def snapshot() -> dict:
             f"{t_det} — last packet had 1800 ({', '.join(needles['1800'][:2])})",
             "none")
 
-    pong_ok = pong_st == "OK"
+    pong_ok = pong_st in ("OK", "SKIP")
     proc_st, proc_req, proc_det, proc_act = process_verdict(
         unit_active, pid, alive, up, pong_ok)
     gw_st = "OK" if unit_active and (alive or pong_ok or up) else (
@@ -775,7 +794,7 @@ def heal_targets(doors: list) -> set[str]:
 
 def heal(payload: dict) -> list[str]:
     actions: list[str] = []
-    if grok_busy():
+    if grok_busy() or gh_grok_busy():
         print("[runtime] Grok job running — will not bounce OpenClaw", flush=True)
         return actions
     ids = heal_targets(payload.get("doors") or [])

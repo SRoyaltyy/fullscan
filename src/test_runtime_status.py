@@ -95,7 +95,11 @@ def test_pong_401_403_timeout():
     st, req, det, act = mod.pong_verdict(200, "LLM request timed out", "")
     assert st == "FAIL"
     st, req, det, act = mod.pong_verdict(200, "PONG", "")
-    assert st == "OK"
+    assert st == "OK" and act == "none"
+    st, req, det, act = mod.pong_verdict(
+        200, "Hey. I just came online.\n\nWho am I? Who are you?", "")
+    assert st == "OK" and act == "none"
+    assert "classroom live" in det
 
 
 def test_run_timed_out_is_fail():
