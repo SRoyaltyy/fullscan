@@ -4,5 +4,8 @@
     "clock.label_weather.yml": "2026-08-27T21:23:00.481294-04:00",
     "clock.learn_cycle.yml": "2026-08-27T21:23:00.518099-04:00",
     "postclose.baseline_json": "2026-08-27T22:47:22.923408-04:00"
+  },
+  "2026-08-28": {
+    "postclose.baseline_json": "2026-08-28T12:47:54.599700-04:00"
   }
 }
