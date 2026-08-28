@@ -95,9 +95,11 @@ def port_open(host: str = "127.0.0.1", port: int = 18789) -> bool:
 
 
 def systemctl(*args: str) -> tuple[int, str]:
+    # Units are system-scoped (systemd-run --unit=fullscan-*), matching
+    # pipeline_health.py. --user needs a D-Bus session the GHA job does not have.
     try:
         r = subprocess.run(
-            ["systemctl", "--user", *args],
+            ["systemctl", *args],
             capture_output=True, text=True, timeout=8, check=False)
         return r.returncode, (r.stdout or r.stderr or "").strip()
     except (OSError, subprocess.SubprocessError) as e:
@@ -131,7 +133,7 @@ def chat_ping(token: str) -> dict:
             "Authorization": f"Bearer {token}" if token else "",
         })
     try:
-        with urllib.request.urlopen(req, timeout=12) as resp:
+        with urllib.request.urlopen(req, timeout=20) as resp:
             raw = json.loads(resp.read().decode("utf-8", "replace"))
         content = (
             ((raw.get("choices") or [{}])[0].get("message") or {}).get("content") or ""
@@ -201,11 +203,14 @@ def snapshot() -> dict:
     else:
         tok_st, tok_det, tok_req = "FAIL", "no token", True
 
-    gw_st = "OK" if gw_rc == 0 and "active" in (gw_out or "active") else "FAIL"
+    gw_st = "OK" if gw_rc == 0 and "active" in (gw_out or "") else ("OK" if up else "FAIL")
+    gw_detail = gw_out or ("port up" if up else "inactive")
+    if gw_st == "OK" and "active" not in (gw_out or "") and up:
+        gw_detail = f"port up ({GW})"
     doors = [
         door("ecs", "ECS box", "box", "OK", True, "this job is on ecs-openclaw", "none"),
         door("gateway", "OpenClaw gateway", "box",
-             gw_st, True, gw_out or "inactive", "heal" if gw_st == "FAIL" else "none"),
+             gw_st, True, gw_detail, "heal" if gw_st == "FAIL" else "none"),
         door("port", "Port 18789", "classroom",
              "OK" if up else "FAIL", True,
              GW if up else "connection refused", "heal" if not up else "none"),
