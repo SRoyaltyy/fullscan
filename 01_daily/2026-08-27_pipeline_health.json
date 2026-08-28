@@ -1,36 +1,15 @@
 {
   "job": "postclose",
   "date": "2026-08-27",
-  "source_date": "2026-08-26",
-  "target_date": "2026-08-27",
+  "source_date": "2026-08-27",
+  "target_date": "2026-08-28",
   "book_date": "2026-08-27",
-  "generated_at": "2026-08-27T22:25:29.205984-04:00",
+  "generated_at": "2026-08-27T22:35:32.542739-04:00",
   "ok": false,
-  "n_fail": 6,
-  "n_warn": 4,
-  "round": 16,
-  "fix_actions": [
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "dispatched label_weather.yml force (for clock.label_weather.yml)",
-    "spawned python3 -m src.learn_cycle log=/home/gha/fullscan-logs/heal-learn_cycle.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening \u2014 ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {\"id\":\"chatcmp",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening \u2014 ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {\"id\":\"chatcmp",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
-    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log"
-  ],
+  "n_fail": 3,
+  "n_warn": 5,
+  "round": 1,
+  "fix_actions": [],
   "checks": [
     {
       "step": "runtime.home",
@@ -64,8 +43,8 @@
       "name": "OpenClaw PONG",
       "group": "runtime",
       "status": "OK",
-      "required": false,
-      "detail": "skipped \u2014 Grok job running (will not interrupt)",
+      "required": true,
+      "detail": "model=openclaw/default",
       "path": ""
     },
     {
@@ -73,8 +52,8 @@
       "name": "Classroom model is Grok not DeepSeek",
       "group": "runtime",
       "status": "OK",
-      "required": false,
-      "detail": "probe skipped",
+      "required": true,
+      "detail": "model=openclaw/default",
       "path": ""
     },
     {
@@ -142,12 +121,12 @@
     },
     {
       "step": "clock.map_heat_postclose.yml",
-      "name": "Map heat captain research (post-close) ran on 2026-08-26",
+      "name": "Map heat captain research (post-close) ran on 2026-08-27",
       "group": "clock",
-      "status": "FAIL",
-      "required": true,
-      "detail": "n=1 latest=failure event=workflow_dispatch",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33037180154"
+      "status": "WARN",
+      "required": false,
+      "detail": "n=9 latest=cancelled event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33135103109"
     },
     {
       "step": "clock.label_weather.yml",
@@ -189,8 +168,8 @@
       "step": "clock.learn_cycle.yml",
       "name": "Learn Cycle ran on 2026-08-27",
       "group": "clock",
-      "status": "FAIL",
-      "required": true,
+      "status": "WARN",
+      "required": false,
       "detail": "n=3 latest=failure event=workflow_dispatch",
       "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33121883832"
     },
@@ -200,52 +179,52 @@
       "group": "clock",
       "status": "WARN",
       "required": false,
-      "detail": "n=2 latest=queued event=schedule",
+      "detail": "n=2 latest=cancelled event=schedule",
       "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33132699701"
     },
     {
       "step": "postclose.map_heat_json",
-      "name": "2026-08-27_map_heat.json (industry groups + captains)",
+      "name": "2026-08-28_map_heat.json (industry groups + captains)",
       "group": "postclose",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "empty_futures_tape",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_map_heat.json"
+      "detail": "phase=postclose 213011 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_map_heat.json"
     },
     {
       "step": "postclose.map_heat_md",
-      "name": "2026-08-27_map_heat.md",
+      "name": "2026-08-28_map_heat.md",
       "group": "postclose",
       "status": "OK",
       "required": false,
       "detail": "6971 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_map_heat.md"
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_map_heat.md"
     },
     {
       "step": "postclose.baseline_json",
-      "name": "2026-08-27_research_baseline.json (captain cards)",
+      "name": "2026-08-28_research_baseline.json (captain cards)",
       "group": "postclose",
       "status": "FAIL",
       "required": true,
       "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_research_baseline.json"
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_research_baseline.json"
     },
     {
       "step": "postclose.baseline_md",
-      "name": "2026-08-27_research_baseline.md",
+      "name": "2026-08-28_research_baseline.md",
       "group": "postclose",
       "status": "FAIL",
       "required": true,
       "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_research_baseline.md"
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_research_baseline.md"
     },
     {
       "step": "postclose.transcripts",
       "name": "Post-close LLM transcripts",
       "group": "postclose",
-      "status": "WARN",
+      "status": "OK",
       "required": false,
-      "detail": "n=0",
+      "detail": "n=19",
       "path": ""
     },
     {
@@ -425,7 +404,7 @@
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "101065 bytes",
+      "detail": "91396 bytes",
       "path": "/home/gha/actions-runner/_work/fullscan/fullscan/00_grounding/mutable_policy.md"
     },
     {
