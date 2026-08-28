@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
-  "oauth": "FAIL",
+  "status": "ok",
+  "oauth": "OK",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "Z8VS-FT5V",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=Z8VS-FT5V",
-  "expires_at": "2026-08-28T01:08:21.134453-04:00",
+  "reason": "device login completed",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 172245,
-  "updated_at": "2026-08-28T00:54:21.134902-04:00"
+  "updated_at": "2026-08-28T01:03:05.402211-04:00"
 }
