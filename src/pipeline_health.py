@@ -58,7 +58,7 @@ FIX_STATE = ROOT / "data" / "health" / "fix_state.json"
 PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/"
 HEAL_LOG = Path("/home/gha/fullscan-logs")
 REAUTH_JSON = ROOT / "01_daily" / "_xai_reauth.json"
-DEVICE_URI = "https://auth.x.ai/device"
+DEVICE_URI = "https://accounts.x.ai/oauth2/device"
 XAI_REAUTH = ROOT / "scripts" / "xai_device_reauth.py"
 
 # (workflow, title, required_for_jobs, date_role)

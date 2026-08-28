@@ -30,21 +30,39 @@ def test_parse_device_output():
     mod = _load_script()
     blob = """
 To authorize, visit:
-  https://auth.x.ai/device
+  https://accounts.x.ai/oauth2/device
 and enter code: ABCD-EFGH
 
 Waiting for approval...
 """
     code, uri = mod.parse_device_output(blob)
     assert code == "ABCD-EFGH"
-    assert "auth.x.ai/device" in uri
+    assert "accounts.x.ai" in uri
 
-    code, uri = mod.parse_device_output("user_code: WXYZ1234\nverification_uri: https://auth.x.ai/device")
+    code, uri = mod.parse_device_output(
+        "user_code: WXYZ1234\nverification_uri: https://accounts.x.ai/oauth2/device"
+    )
     assert code == "WXYZ1234"
-    assert uri.startswith("https://auth.x.ai")
+    assert uri.startswith("https://accounts.x.ai")
+
+    code, uri = mod.parse_device_output(
+        "Open https://accounts.x.ai/oauth2/device?user_code=KQCM-ANGJ"
+    )
+    assert code == "KQCM-ANGJ"
+    assert "user_code=" in uri
 
     code, _ = mod.parse_device_output("nothing here")
     assert code is None
+
+
+def test_complete_uri():
+    mod = _load_script()
+    assert mod.complete_uri("ABCD-EFGH") == (
+        "https://accounts.x.ai/oauth2/device?user_code=ABCD-EFGH"
+    )
+    printed = "https://accounts.x.ai/oauth2/device?user_code=ABCD-EFGH"
+    assert mod.complete_uri("ABCD-EFGH", printed) == printed
+    assert mod.complete_uri(None) == "https://accounts.x.ai/oauth2/device"
 
 
 def test_reauth_payload_from_report():
@@ -70,7 +88,7 @@ def test_write_reauth_preserves_waiting():
         waiting = {
             "status": "waiting",
             "user_code": "ABCD-EFGH",
-            "verification_uri": "https://auth.x.ai/device",
+            "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=ABCD-EFGH",
             "expires_at": (datetime.now(ET) + timedelta(minutes=10)).isoformat(),
             "source": "xai_device_reauth",
         }

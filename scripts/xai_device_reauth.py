@@ -8,7 +8,7 @@ The GH job must NOT occupy the one ECS runner for 15 minutes. This script:
   --daemon   (internal) PTY-login, write 01_daily/_xai_reauth.json, git push,
              wait ≤15 min for the human to approve, write ok/fail, push again
 
-Phone app polls the public JSON and deep-links to auth.x.ai/device.
+Phone app polls the public JSON and one-taps accounts.x.ai/oauth2/device?user_code=.
 """
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "01_daily" / "_xai_reauth.json"
 LOG = Path(os.environ.get("FULLSCAN_LOG", "/home/gha/fullscan-logs/xai_reauth.log"))
 PID = Path(os.environ.get("FULLSCAN_REAUTH_PID", "/home/gha/fullscan-logs/xai_reauth.pid"))
-DEVICE_URI = "https://auth.x.ai/device"
+DEVICE_URI = "https://accounts.x.ai/oauth2/device"
 WAIT_S = 12 * 60
 PUSH = ROOT / "scripts" / "safe_git_push.sh"
 
@@ -38,8 +38,20 @@ CODE_RE = re.compile(
     r"([A-Z0-9]{4,8}(?:-[A-Z0-9]{4,8})?)",
     re.I,
 )
-URI_RE = re.compile(r"https?://(?:auth\.x\.ai|x\.ai)/[^\s\"']+", re.I)
+URI_RE = re.compile(
+    r"https?://(?:auth\.x\.ai|accounts\.x\.ai|x\.ai)/[^\s\"']+",
+    re.I,
+)
 BARE_CODE_RE = re.compile(r"\b([A-Z0-9]{4}-[A-Z0-9]{4})\b")
+
+
+def complete_uri(code: str | None, printed: str | None = None) -> str:
+    printed = (printed or "").strip()
+    if code and "user_code=" in printed and "accounts.x.ai" in printed:
+        return printed
+    if not code:
+        return DEVICE_URI
+    return f"{DEVICE_URI}?user_code={code}"
 
 
 def now_iso() -> str:
@@ -310,9 +322,9 @@ def daemon(force: bool) -> int:
         "status": "waiting",
         "oauth": "FAIL",
         "pong_ok": None,
-        "reason": "Approve this code on the phone at auth.x.ai/device",
+        "reason": "Approve this code on the phone at accounts.x.ai",
         "user_code": code,
-        "verification_uri": uri or DEVICE_URI,
+        "verification_uri": complete_uri(code, uri),
         "expires_at": expires,
         "source": "xai_device_reauth",
         "pid": pid,

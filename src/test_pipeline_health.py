@@ -167,7 +167,7 @@ def test_reauth_payload_fail_is_needs_reauth():
     ]
     p = reauth_payload_from_report(r)
     assert p["status"] == "needs_reauth"
-    assert p["verification_uri"].startswith("https://auth.x.ai")
+    assert p["verification_uri"].startswith("https://accounts.x.ai")
 
 
 if __name__ == "__main__":
