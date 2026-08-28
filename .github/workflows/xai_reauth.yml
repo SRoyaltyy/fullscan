@@ -5,6 +5,7 @@ name: xAI device reauth
 # foreground so GitHub Actions does not reap openclaw before a code is pushed.
 # --check is a no-op when models status is already ok.
 # The published grok.me app has no GitHub token and cannot dispatch.
+# After every pass we snapshot runtime doors for the phone.
 
 on:
   schedule:
@@ -47,7 +48,7 @@ jobs:
           set -uo pipefail
           export HOME=/home/gha
           mkdir -p /home/gha/fullscan-logs
-          chmod +x scripts/xai_device_reauth.py scripts/safe_git_push.sh || true
+          chmod +x scripts/xai_device_reauth.py scripts/runtime_status.py scripts/safe_git_push.sh || true
           FORCE="${{ github.event.inputs.force }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then
             FORCE="false"
@@ -59,5 +60,8 @@ jobs:
           else
             python3 scripts/xai_device_reauth.py --check
           fi
+          python3 scripts/runtime_status.py --write || true
           echo "======== _xai_reauth.json ========"
           cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
+          echo "======== _runtime.json ========"
+          cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"

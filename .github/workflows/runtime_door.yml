@@ -1,0 +1,56 @@
+name: Runtime door
+
+# Phone Claw tab. Snapshot + optional OpenClaw door heal on the ECS box.
+# Does not occupy the runner for a 3-hour pipeline health pass.
+# Does not start xAI device login (that's xai_reauth.yml).
+# Does not PONG while a Grok job is already talking.
+
+on:
+  workflow_dispatch:
+    inputs:
+      heal:
+        description: "true = restart gateway/timers if a door is down"
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: runtime-door
+  cancel-in-progress: false
+
+jobs:
+  door:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 8
+    env:
+      HOME: /home/gha
+      FULLSCAN_HOME: /home/gha
+      GROK_ONLY: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+          fetch-depth: 0
+
+      - name: Snapshot or heal runtime doors
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+        run: |
+          set -uo pipefail
+          export HOME=/home/gha
+          mkdir -p /home/gha/fullscan-logs
+          chmod +x scripts/runtime_status.py scripts/safe_git_push.sh scripts/enable_openclaw_chat.sh || true
+          HEAL="${{ github.event.inputs.heal }}"
+          if [ "$HEAL" = "true" ]; then
+            python3 scripts/runtime_status.py --heal || true
+          else
+            python3 scripts/runtime_status.py --write || true
+          fi
+          echo "======== _runtime.json ========"
+          cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"
