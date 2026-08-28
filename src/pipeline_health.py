@@ -12,7 +12,8 @@ Finviz/weather/AB/Pages) → wait for the missing files → re-audit.
 Does NOT scrape Finviz HTML on ECS (Aliyun 403). Does NOT PONG OpenClaw
 while a Grok job is already running. OAuth "expiring" is a warning, not a
 stop. Missing files still start their owning job. Permanent xAI auth is an
-API key in ~/.openclaw/.env (OAuth access tokens die ~6h).
+API key in ~/.openclaw/.env (OAuth access tokens die ~6h). The phone Claw
+tab + xai_reauth.yml publish a device code to 01_daily/_xai_reauth.json.
 
 Trash that counts as FAIL:
   missing / empty / garbled JSON
@@ -30,6 +31,7 @@ import re
 import shutil
 import socket
 import subprocess
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -55,6 +57,9 @@ ENABLE_CHAT = ROOT / "scripts" / "enable_openclaw_chat.sh"
 FIX_STATE = ROOT / "data" / "health" / "fix_state.json"
 PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/"
 HEAL_LOG = Path("/home/gha/fullscan-logs")
+REAUTH_JSON = ROOT / "01_daily" / "_xai_reauth.json"
+DEVICE_URI = "https://auth.x.ai/device"
+XAI_REAUTH = ROOT / "scripts" / "xai_device_reauth.py"
 
 # (workflow, title, required_for_jobs, date_role)
 # date_role: preopen | postclose | book
@@ -559,6 +564,89 @@ def oauth_verdict(check_code: int | None, pong_ok: bool) -> tuple[str, bool, str
             "token; refresh is blocked). Permanent: XAI_API_KEY from "
             "console.x.ai in ~/.openclaw/.env")
     return "WARN", False, "could not parse openclaw models status --check"
+
+
+def _load_reauth() -> dict:
+    try:
+        return json.loads(REAUTH_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def reauth_payload_from_report(report: Report) -> dict:
+    oauth = next((c for c in report.checks if c.step == "runtime.oauth"), None)
+    pong = next((c for c in report.checks if c.step == "runtime.pong"), None)
+    oauth_st = oauth.status if oauth else "WARN"
+    pong_ok = bool(pong and pong.status == "OK")
+    if oauth_st == "FAIL":
+        status = "needs_reauth"
+    elif oauth_st == "WARN":
+        status = "expiring"
+    else:
+        status = "ok"
+    return {
+        "status": status,
+        "oauth": oauth_st,
+        "pong_ok": pong_ok,
+        "reason": (oauth.detail if oauth else "")[:240],
+        "user_code": None,
+        "verification_uri": DEVICE_URI,
+        "expires_at": None,
+        "updated_at": datetime.now(ET).isoformat(),
+        "source": "pipeline_health",
+        "job": report.job,
+        "date": report.date,
+    }
+
+
+def write_reauth_status(report: Report) -> None:
+    """Publish a tiny public JSON the phone Claw tab polls.
+
+    Never clobber an in-flight device code (status=waiting + unexpired).
+    """
+    incoming = reauth_payload_from_report(report)
+    existing = _load_reauth()
+    if existing.get("status") == "waiting" and existing.get("user_code"):
+        still = True
+        exp = existing.get("expires_at")
+        if exp:
+            try:
+                when = datetime.fromisoformat(str(exp).replace("Z", "+00:00"))
+                if when.tzinfo is None:
+                    when = when.replace(tzinfo=ET)
+                still = when > datetime.now(ET)
+            except ValueError:
+                still = True
+        if still:
+            incoming["status"] = "waiting"
+            incoming["user_code"] = existing.get("user_code")
+            incoming["verification_uri"] = existing.get("verification_uri") or DEVICE_URI
+            incoming["expires_at"] = existing.get("expires_at")
+            incoming["source"] = existing.get("source") or "xai_device_reauth"
+    REAUTH_JSON.parent.mkdir(parents=True, exist_ok=True)
+    REAUTH_JSON.write_text(json.dumps(incoming, indent=2) + "\n", encoding="utf-8")
+
+
+def _spawn_device_reauth() -> str | None:
+    if not XAI_REAUTH.is_file():
+        return None
+    existing = _load_reauth()
+    if existing.get("status") == "waiting" and existing.get("user_code"):
+        return None
+    if grok_busy():
+        return None
+    HEAL_LOG.mkdir(parents=True, exist_ok=True)
+    log = HEAL_LOG / "xai_reauth.log"
+    logf = open(log, "a", encoding="utf-8")
+    subprocess.Popen(
+        ["setsid", sys.executable, str(XAI_REAUTH), "--force"],
+        cwd=str(ROOT),
+        stdout=logf,
+        stderr=subprocess.STDOUT,
+        start_new_session=True,
+        env={**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"},
+    )
+    return "started xAI device-code waiter (phone Claw tab)"
 
 
 def _read_xai_api_key() -> str:
@@ -1451,6 +1539,13 @@ def fix_local(report: Report) -> list[str]:
     if installed:
         actions.append(installed)
         print(f"[heal] {installed}", flush=True)
+    oauth_dead = any(
+        c.step == "runtime.oauth" and c.status == "FAIL" for c in report.checks)
+    if oauth_dead:
+        spawned = _spawn_device_reauth()
+        if spawned:
+            actions.append(spawned)
+            print(f"[heal] {spawned}", flush=True)
     if grok_busy():
         print("[heal] Grok job running — will not bounce OpenClaw", flush=True)
         return actions
@@ -1717,6 +1812,7 @@ def write_report(report: Report) -> None:
         p.write_text(body, encoding="utf-8")
     for p in (md, md2):
         p.write_text(text, encoding="utf-8")
+    write_reauth_status(report)
     print(f"[health] wrote {md} and {md2}", flush=True)
 
 

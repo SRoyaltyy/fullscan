@@ -1,0 +1,62 @@
+name: xAI device reauth
+
+# Phone Claw tab + 4-hour clock. Starts a DETACHED device-code waiter on
+# this box, publishes 01_daily/_xai_reauth.json, then exits so the one
+# ECS runner is not held for 15 minutes.
+#
+# Never GH-dispatches another ECS workflow. Never PONGs while Grok is busy
+# (the python bails if map_heat / preopen is running, unless force=true).
+
+on:
+  schedule:
+    # 20:10 / 00:10 / 04:10 / 08:10 / 12:10 / 16:10 ET (EDT = UTC-4)
+    - cron: "10 */4 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "true = start a device login even if models status looks ok"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: xai-reauth
+  cancel-in-progress: false
+
+jobs:
+  reauth:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 8
+    env:
+      HOME: /home/gha
+      FULLSCAN_HOME: /home/gha
+      GROK_ONLY: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+          fetch-depth: 0
+
+      - name: Start or refresh xAI device login
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: |
+          set -uo pipefail
+          export HOME=/home/gha
+          mkdir -p /home/gha/fullscan-logs
+          chmod +x scripts/xai_device_reauth.py scripts/safe_git_push.sh || true
+          FORCE="${{ github.event.inputs.force }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            FORCE="false"
+          fi
+          if [ "$FORCE" = "true" ]; then
+            python3 scripts/xai_device_reauth.py --force
+          else
+            python3 scripts/xai_device_reauth.py --check
+          fi
+          echo "======== _xai_reauth.json ========"
+          cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"

@@ -19,6 +19,7 @@ from src.pipeline_health import (
     oauth_verdict,
     packet_dates,
     pick_job,
+    reauth_payload_from_report,
 )
 
 ET = ZoneInfo("America/New_York")
@@ -153,6 +154,20 @@ def test_oauth_verdict():
     assert (st, req) == ("FAIL", True)
     st, req, _ = oauth_verdict(None, True)
     assert st == "WARN"
+
+
+def test_reauth_payload_fail_is_needs_reauth():
+    r = Report(job="postclose", date="2026-08-28",
+               source_date="2026-08-27", target_date="2026-08-28")
+    r.checks = [
+        Check(step="runtime.oauth", name="oauth", group="runtime",
+              status="FAIL", required=True, detail="expired"),
+        Check(step="runtime.pong", name="pong", group="runtime",
+              status="FAIL", required=True, detail="no"),
+    ]
+    p = reauth_payload_from_report(r)
+    assert p["status"] == "needs_reauth"
+    assert p["verification_uri"].startswith("https://auth.x.ai")
 
 
 if __name__ == "__main__":

@@ -130,4 +130,5 @@ jobs:
             "chore: pipeline health heal [$(date -u +%F_%H%M)]" \
             01_daily/*_pipeline_health.md \
             01_daily/*_pipeline_health.json \
+            01_daily/_xai_reauth.json \
             data/health/
