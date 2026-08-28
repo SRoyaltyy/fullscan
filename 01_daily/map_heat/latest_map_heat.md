@@ -3,10 +3,36 @@
 Export `finviz_2026-08-28.csv` · 11654 names · generated 2026-08-28T01:43:29.056310-04:00
 
 ## TAPE (live futures)
-_futures scrape empty_
+| Contract | Last | Change |
+|---|---:|---:|
+| S&P 500 (ES) | 7733.25 | -0.12% |
+| Nasdaq 100 (NQ) | 29607.5 | -0.29% |
+| Russell 2000 (ER2) | 3020.8 | +0.06% |
+| DJIA (YM) | 53659.0 | +0.08% |
+| VIX (VX) | 16.75 | +0.53% |
+| Crude Oil WTI (CL) | 83.01 | -0.63% |
+| Natural Gas (NG) | 2.917 | +0.10% |
+| Gold (GC) | 4627.8 | -0.77% |
+| Silver (SI) | 69.49 | -1.02% |
+| Copper (HG) | 6.693 | +0.03% |
+| USD (DX) | 99.135 | +0.04% |
+| EUR (6E) | 1.16505 | -0.05% |
+| JPY (6J) | 0.6275000000000001 | -0.08% |
+| 10 Year Note (ZN) | 108.546875 | -0.03% |
+| 30 Year Bond (ZB) | 109.84375 | -0.11% |
+| Nikkei 225 (NKD) | 66385.0 | +0.23% |
+| DAX (DY) | 26485.0 | +0.36% |
+| Euro Stoxx 50 (EX) | 6454.0 | +0.31% |
 
 ## CALENDAR
-No high-impact print / mega-cap earnings flagged.
+**SIZE GATE on** — high-impact print and/or mega-cap earnings today.
+
+Econ (importance ≥ 2):
+- 09:45 ET  Chicago PMI  actual —  cons 57  surprise —  prev 57.6
+- 10:00 ET  Fed Chair Warsh Speech  actual —  cons —  surprise —  prev —
+- 10:00 ET  Michigan Consumer Sentiment Final  actual —  cons 51.0  surprise —  prev 55.2
+- 10:00 ET  Non Farm Payrolls Annual Revision Prel  actual —  cons —  surprise —  prev -911K
+- 20:00 ET  Jackson Hole Symposium  actual —  cons —  surprise —  prev —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -123,6 +149,31 @@ COLD (1w):
 - **Energy** -0.1% 1d -0.8% 1w · XLE, AMLP, VDE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
+- 6 min **BF-B,SAM,STZ,TAP** Why Beer and Alcohol Stocks Are No Bargain (Barrons.com)
+- 19 min **NVDA** Shares turn cautious ahead of Warsh's Jackson Hole debut; FX, bonds hold breath (Reuters)
+- 49 min **WDAY** Workday Inc (WDAY) (Q2 2027) Earnings Call Highlights: AI Drives Record Growth and Strategic ... (GuruFocus.com)
+- 49 min **MRVL** Marvell Technology Inc (MRVL) (Q2 2027) Earnings Call Highlights: Record Revenue and Massive ... (GuruFocus.com)
+- 49 min **ADSK** Autodesk Inc (ADSK) (Q2 2027) Earnings Call Highlights: Strong Revenue Growth and Raised ... (GuruFocus.com)
+- 49 min **ULTA** Ulta Beauty Inc (ULTA) (Q2 2026) Earnings Call Highlights: Strong Sales Growth and Raised ... (GuruFocus.com)
+- 49 min **GAP** Gap Inc (GAP) (Q2 2026) Earnings Call Highlights: Gap Brand Surges 10% as Old Navy Stumbles (GuruFocus.com)
+- 49 min **LFVN** Lifevantage Corp (LFVN) (Q4 2026) Earnings Call Highlights: Revenue Declines 23% Amid Strategic ... (GuruFocus.com)
+- 49 min **ESTC** Elastic NV (ESTC) (Q1 2027) Earnings Call Highlights: Record Customer Additions and AI Adoption ... (GuruFocus.com)
+- 49 min **S** SentinelOne Inc (S) (Q2 2027) Earnings Call Highlights: Record ARR and Operating Margin Fuel ... (GuruFocus.com)
+- 50 min **RBRK** Rubrik Inc (RBRK) (Q2 2027) Earnings Call Highlights: Subscription ARR Surges 33% to $1. ... (GuruFocus.com)
+- 50 min **PD** PagerDuty Inc (PD) (Q2 2027) Earnings Call Highlights: Surpasses $500M ARR Milestone and ... (GuruFocus.com)
+- 50 min **BLK,IBIT** Bitcoin ETFs Extend Inflow Streak to 9 Days With $242M Added (BeInCrypto)
+- 50 min **AFRM** Affirm Holdings Inc (AFRM) (Q4 2026) Earnings Call Highlights: Record Profitability and ... (GuruFocus.com)
+- 50 min **BWLP** BW LPG Limited Financial Results for Q2 2026 (Business Wire)
+- 59 min **NFLX** The GTA 6 Leak Saga May Be Over  the Money Trail Shows Where It Went (BeInCrypto)
+- 1 hour **CRM** Matthew McConaughey Is Back Selling Salesforce  This Time With Anthropic's Claude As His Co-Star (Stocktwits)
+- 1 hour **CRWD,OKTA,ZETA** Why Did CRWD, OKTA, ZETA Stocks Jump To 52-Week Highs? (Stocktwits)
+- 1 hour **TTWO** TTWO Stock Rises Overnight: GTA 6 Extended Look Relieves 'Heartbreaking' Leak Woes  'This Game Will Set Records By Miles' (Stocktwits)
+- 1 hour **NVDA** Huawei's Ascend 910C sold out in China, but Nvidia's H200 supply gap persists (DigiTimes)
+- 1 hour **NVDA** Nvidia forms PAC to expand Washington lobbying (DigiTimes)
+- 1 hour **IREN,MRVL,NVDA,PYPL** Nasdaq Futures Sink While S&P 500, Dow Futures Gain Ahead Of Fed Chief Warshs Jackson Hole Speech: PYPL, MRVL, IREN, AFRM Stocks In Focus (Stocktwits)
+- 1 hour **ASTS,SPCX** ASTS Stock Takes Flight After 3-Day Skid As BlueBirds Deploy, New Zealand Gateway Opens (Stocktwits)
+- 1 hour **NVDA** Asian shares mostly gain after upbeat results for Nvidia and others lift US stocks (Associated Press)
+- 1 hour **NVDA** AP Top Extended Financial Headlines at 12:05 a.m. EDT (Associated Press)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
