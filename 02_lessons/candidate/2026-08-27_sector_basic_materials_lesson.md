@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "Next session where 8/25 conditions hold (NQ >> ES, XLB 1d rel <0.5%, mixed LIN/FCX/NEM/SHW, two-sided S1) and XLB still prints up with LIN/chemicals participating — then forbidding emitted-up and flattening S4/S1 is too strict. Separately, if pipeline leading_sum/total_score is shown to match the written components and still be up for a non-8/25 reason, this is not a pipeline-overwrite lesson."
 sector: "Basic Materials"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-27

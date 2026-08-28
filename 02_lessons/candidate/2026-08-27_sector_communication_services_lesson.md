@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If NVDA or another non-XLC mega prints after the close, NQ is green, XLC 1d rel is negative, META/GOOGL are mixed-to-flat premarket, S0 is held at 0, and XLC still closes up with or ahead of SPY on that session, the “don’t map foreign NQ beta into XLC S0=+1” rule is too strong and should be relaxed to a magnitude cap only. Also weakened if two such mornings produce XLC up/mild or better after the corrected flat/down-mild call."
 sector: "Communication Services"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-27

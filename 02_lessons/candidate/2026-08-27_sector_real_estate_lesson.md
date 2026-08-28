@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If 30Y remains ≥5.15% near a multi-decade high, the open/premarket curve is only a ~6 bp prior-close dip (not a verified second-day live decline), XLRE 1d relative is already red, sticky PCE is already printed, and a two-sided policy event is next session — and XLRE still closes ≥+0.5% absolute or ≥+0.5% vs SPY even after a same-day long-end backup — then “don’t call up” is too strict. Separately, a verified live falling 10Y/30Y/TIPS curve at the open on an oil slide, with no next-session policy event, that produces a REIT rally after a flat call would show 08-25’s positive spine should sometimes win."
 sector: "Real Estate"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-27

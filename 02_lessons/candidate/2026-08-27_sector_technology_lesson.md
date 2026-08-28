@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If top-weight AHR beat is already public, NQ ≥ ~+0.5%, ETF gapped past mild, and XLK still closes mild/flat on ≥2 of the next 3 such days, the notable requirement is too strong and must be revised. Also revise if timestamp verification still cannot surface the PR and notable would have been wrong."
 sector: "Technology"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-27

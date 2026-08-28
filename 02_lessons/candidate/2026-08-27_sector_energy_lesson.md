@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "After a green XLE day with oil down (S4=0), the next session still prints notable absolute XLE down driven by a fresh same-session crude collapse (CL/BZ ~−1% or worse at the live open) or a live bearish inventory shock. In that case S1=−2/notable remains valid and this cap is wrong."
 sector: "Energy"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-27

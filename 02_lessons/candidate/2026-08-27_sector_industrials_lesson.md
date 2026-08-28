@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this setup recurs (prior-day XLI rel >~+1%, 1w/1m still lagging, mega-cap AI AHR already public, NQ leading ES, S1 only stale survey/already-traded awards) and XLI still closes up without lagging SPY, the flat/down:mild preference is too strong and must relax to flat/mild."
 sector: "Industrials"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-27

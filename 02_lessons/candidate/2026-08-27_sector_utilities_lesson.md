@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this setup recurs (prior-session inflation already out, mega-cap AI/software earnings already public, NQ leading ES, no fresh utility catalyst, S0/S1 only from carried easing) and XLU still closes >+0.5% absolute or clearly beats SPY, the flat-to-down default is too rigid. If a verified same-day 8:30 cool print lifts XLU despite the tech tape, do not treat post-AHR tech follow-through as an automatic absolute veto."
 sector: "Utilities"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-27

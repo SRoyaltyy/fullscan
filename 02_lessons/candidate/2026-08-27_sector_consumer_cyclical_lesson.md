@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If ES/NQ are green solely on a non-holdings mega-cap earnings print, XLY 1d/3d/1w relative is already negative, and XLY still closes up and outperforms SPY by more than ~0.5% with no offsetting consumer-specific positive, this lesson is wrong and must be revised."
 sector: "Consumer Cyclical"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-27

@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this setup recurs (prior-AH mega-cap AI beat already public, NQ ≥ +0.5% leading ES, XLP already a 1d/1m laggard) and XLP still prints only a mild absolute decline without a notable relative fade, lifting the mild cap / S0-negative is wrong and must be narrowed."
 sector: "Consumer Defensive"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-27

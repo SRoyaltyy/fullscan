@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this trigger recurs (overnight NVDA-class AI beat already public, NQ leading ES, XLF 1d rel flat, extended multi-week streak) and XLF still closes up absolutely on 2 of the next 3 such sessions, the flat-not-up correction is wrong and must be revised. Relative lag alone does not falsify; a forced absolute down call is also not the claim."
 sector: "Financial"
 date: "2026-08-27"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-27
