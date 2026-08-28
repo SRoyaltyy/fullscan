@@ -198,9 +198,34 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
     errors: list[str] = []
     for sector in sorted({str(t["sector"]) for t in targets}):
         batch = [t for t in targets if t["sector"] == sector]
-        print(f"[map-postclose] Grok {sector} n={len(batch)}", flush=True)
+        stage = f"captains_{sector.lower().replace(' ', '_')}"
+        trans = ROOT / "01_daily" / "_transcripts" / f"{target_date}_map_postclose_{stage}.json"
+        if not force and trans.exists():
+            try:
+                tjs = json.loads(trans.read_text(encoding="utf-8"))
+                asst = next(
+                    (str(m.get("content") or "")
+                     for m in reversed(tjs.get("messages") or [])
+                     if m.get("role") == "assistant"),
+                    "",
+                )
+                obj = extract_json(asst) or {}
+                clean, errs = validate_cards(
+                    obj.get("cards") or [], batch, min_coverage=0.75)
+                if len(clean) >= int(len(batch) * 0.75 + 0.999):
+                    cards.extend(clean)
+                    errors.extend(f"{sector}:{e}" for e in errs)
+                    print(
+                        f"[map-postclose] reuse {sector}: {len(clean)}/{len(batch)} "
+                        f"from {trans.name}",
+                        flush=True,
+                    )
+                    continue
+            except Exception as e:  # noqa: BLE001
+                print(f"[map-postclose] reuse miss {sector}: {e}", flush=True)
+        print(f"[map-postclose] Grok {sector} n={len(batch)} t0", flush=True)
         raw = _chat(rubric, _sector_prompt(target_date, sector, batch, heat),
-                    target_date, f"captains_{sector.lower().replace(' ', '_')}")
+                    target_date, stage)
         obj = extract_json(raw) or {}
         clean, errs = validate_cards(
             obj.get("cards") or [], batch, min_coverage=0.75)
@@ -218,7 +243,7 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
             errs.extend(f"retry:{e}" for e in retry_errs)
         cards.extend(clean)
         errors.extend(f"{sector}:{e}" for e in errs)
-        print(f"[map-postclose] {sector}: {len(clean)}/{len(batch)} valid cards")
+        print(f"[map-postclose] {sector}: {len(clean)}/{len(batch)} valid cards", flush=True)
 
     required = int(len(targets) * 0.90 + 0.999)
     if len(cards) < required:
@@ -272,7 +297,7 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
     }
     js.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     md.write_text(render(payload), encoding="utf-8")
-    print(f"[map-postclose] wrote {js} ({len(cards)}/{len(targets)} cards)")
+    print(f"[map-postclose] wrote {js} ({len(cards)}/{len(targets)} cards)", flush=True)
     return payload
 
 

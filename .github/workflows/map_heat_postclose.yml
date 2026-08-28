@@ -126,7 +126,7 @@ jobs:
           echo "=== Grok captain research ==="
           ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
-          python -m src.map_heat_postclose "${ARGS[@]}"
+          python -u -m src.map_heat_postclose "${ARGS[@]}"
           PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
           mkdir -p "$PERSIST/01_daily/map_heat" "$PERSIST/01_daily/_transcripts"
           cp -a 01_daily/map_heat/. "$PERSIST/01_daily/map_heat/" 2>/dev/null || true
