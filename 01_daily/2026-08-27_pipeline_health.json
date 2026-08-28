@@ -1,12 +1,36 @@
 {
-  "job": "all",
+  "job": "postclose",
   "date": "2026-08-27",
   "source_date": "2026-08-26",
   "target_date": "2026-08-27",
-  "generated_at": "2026-08-27T12:54:00.772391-04:00",
+  "book_date": "2026-08-27",
+  "generated_at": "2026-08-27T22:25:29.205984-04:00",
   "ok": false,
-  "n_fail": 18,
-  "n_warn": 10,
+  "n_fail": 6,
+  "n_warn": 4,
+  "round": 16,
+  "fix_actions": [
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "dispatched label_weather.yml force (for clock.label_weather.yml)",
+    "spawned python3 -m src.learn_cycle log=/home/gha/fullscan-logs/heal-learn_cycle.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening \u2014 ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {\"id\":\"chatcmp",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening \u2014 ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {\"id\":\"chatcmp",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log",
+    "spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log"
+  ],
   "checks": [
     {
       "step": "runtime.home",
@@ -40,8 +64,8 @@
       "name": "OpenClaw PONG",
       "group": "runtime",
       "status": "OK",
-      "required": true,
-      "detail": "model=openclaw/default",
+      "required": false,
+      "detail": "skipped \u2014 Grok job running (will not interrupt)",
       "path": ""
     },
     {
@@ -49,8 +73,8 @@
       "name": "Classroom model is Grok not DeepSeek",
       "group": "runtime",
       "status": "OK",
-      "required": true,
-      "detail": "model=openclaw/default",
+      "required": false,
+      "detail": "probe skipped",
       "path": ""
     },
     {
@@ -59,7 +83,7 @@
       "group": "runtime",
       "status": "FAIL",
       "required": true,
-      "detail": "xAI token expiring/expired",
+      "detail": "HUMAN: openclaw models auth login --provider xai  (cannot auto-heal)",
       "path": ""
     },
     {
@@ -94,7 +118,7 @@
       "name": "systemd post-close timer enabled",
       "group": "clock",
       "status": "OK",
-      "required": false,
+      "required": true,
       "detail": "enabled",
       "path": ""
     },
@@ -113,26 +137,8 @@
       "group": "clock",
       "status": "OK",
       "required": false,
-      "detail": "558 bytes",
+      "detail": "546 bytes",
       "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/_ecs_clock.md"
-    },
-    {
-      "step": "clock.finviz_preopen_scrape.yml",
-      "name": "Finviz pre-open scrape (GH-hosted Elite) ran on 2026-08-27",
-      "group": "clock",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN on 2026-08-27 (n=0)",
-      "path": ""
-    },
-    {
-      "step": "clock.preopen_all.yml",
-      "name": "Pre-Open ALL ran on 2026-08-27",
-      "group": "clock",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN on 2026-08-27 (n=0)",
-      "path": ""
     },
     {
       "step": "clock.map_heat_postclose.yml",
@@ -140,71 +146,62 @@
       "group": "clock",
       "status": "FAIL",
       "required": true,
-      "detail": "n=2 latest=failure event=workflow_dispatch",
+      "detail": "n=1 latest=failure event=workflow_dispatch",
       "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33037180154"
     },
     {
-      "step": "scrape.digest_json",
-      "name": "Finviz Elite digest JSON",
-      "group": "scrape",
-      "status": "OK",
-      "required": true,
-      "detail": "86230 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_finviz_digest.json"
-    },
-    {
-      "step": "scrape.digest_md",
-      "name": "Finviz Elite digest MD",
-      "group": "scrape",
+      "step": "clock.label_weather.yml",
+      "name": "Label + Weather ran on 2026-08-27",
+      "group": "clock",
       "status": "OK",
       "required": false,
-      "detail": "11260 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_finviz_digest.md"
+      "detail": "n=2 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33132685053"
     },
     {
-      "step": "scrape.map_heat",
-      "name": "Map heat JSON (groups + morning overlay)",
-      "group": "scrape",
+      "step": "clock.ab_checklist.yml",
+      "name": "A+B1 Checklist ran on 2026-08-27",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=schedule",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33128783279"
+    },
+    {
+      "step": "clock.daily_pipeline.yml",
+      "name": "Daily pipeline outcome+reflect ran on 2026-08-27",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=2 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33115084414"
+    },
+    {
+      "step": "clock.sector_daily.yml",
+      "name": "Sector Daily outcome+reflect ran on 2026-08-27",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=4 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33121876025"
+    },
+    {
+      "step": "clock.learn_cycle.yml",
+      "name": "Learn Cycle ran on 2026-08-27",
+      "group": "clock",
       "status": "FAIL",
       "required": true,
-      "detail": "empty_futures_tape",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_map_heat.json"
+      "detail": "n=3 latest=failure event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33121883832"
     },
     {
-      "step": "scrape.tape",
-      "name": "Futures tape non-empty",
-      "group": "scrape",
-      "status": "FAIL",
-      "required": true,
-      "detail": "EMPTY TAPE (403 overlay / scrape skipped)",
-      "path": ""
-    },
-    {
-      "step": "scrape.econ",
-      "name": "Econ calendar rows",
-      "group": "scrape",
+      "step": "clock.stock_book_all.yml",
+      "name": "Stock Book ALL ran on 2026-08-27",
+      "group": "clock",
       "status": "WARN",
       "required": false,
-      "detail": "n=0",
-      "path": ""
-    },
-    {
-      "step": "scrape.earnings",
-      "name": "Earnings calendar rows",
-      "group": "scrape",
-      "status": "WARN",
-      "required": false,
-      "detail": "n=0",
-      "path": ""
-    },
-    {
-      "step": "scrape.ticker_news",
-      "name": "Ticker-tagged Finviz news",
-      "group": "scrape",
-      "status": "WARN",
-      "required": false,
-      "detail": "n=0",
-      "path": ""
+      "detail": "n=2 latest=queued event=schedule",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/33132699701"
     },
     {
       "step": "postclose.map_heat_json",
@@ -252,292 +249,202 @@
       "path": ""
     },
     {
-      "step": "preopen.in_digest",
-      "name": "INPUT: Finviz digest from 05:40 scrape",
-      "group": "preopen",
+      "step": "book.finviz",
+      "name": "INPUT: Finviz Elite export",
+      "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "86230 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_finviz_digest.json"
+      "detail": "11225673 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/exports/finviz_2026-08-27.csv"
     },
     {
-      "step": "preopen.in_baseline",
-      "name": "INPUT: last-night captain baseline",
-      "group": "preopen",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_research_baseline.json"
-    },
-    {
-      "step": "preopen.news_parse_json",
-      "name": "News parse JSON",
-      "group": "preopen",
+      "step": "book.membership",
+      "name": "Universe labels (segments)",
+      "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "294954 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_parsed.json"
+      "detail": "1132877 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/universe/2026-08-27_membership.csv"
     },
     {
-      "step": "preopen.news_parse_md",
-      "name": "News parse MD",
-      "group": "preopen",
+      "step": "book.weather",
+      "name": "Weather / regime JSON",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "9367 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/weather/2026-08-27_weather.json"
+    },
+    {
+      "step": "book.weather_sectors",
+      "name": "Weather signals.sectors \u2265 5",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "n=11",
+      "path": ""
+    },
+    {
+      "step": "book.join",
+      "name": "Join ranked CSV",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "2217844 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/join/2026-08-27_ranked.csv"
+    },
+    {
+      "step": "book.ab_raw",
+      "name": "AB checklist (raw)",
+      "group": "book",
       "status": "OK",
       "required": false,
-      "detail": "4691 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_parsed.md"
+      "detail": "7734573 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/ab_checklist/2026-08-27_ab_checklist.csv"
     },
     {
-      "step": "preopen.events",
-      "name": "Event scanner (primary, NOT carry)",
-      "group": "preopen",
-      "status": "FAIL",
+      "step": "book.ab",
+      "name": "AB checklist (enriched) \u2014 s_ab",
+      "group": "book",
+      "status": "OK",
       "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/events/2026-08-27_events.json"
+      "detail": "8741529 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/ab_checklist/2026-08-27_ab_checklist_enriched.csv"
     },
     {
-      "step": "preopen.events_md",
-      "name": "Events MD",
-      "group": "preopen",
+      "step": "book.peers",
+      "name": "Peer relative strength \u2014 s_peer",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "817363 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/peers/2026-08-27_peer_rs.csv"
+    },
+    {
+      "step": "book.book_json",
+      "name": "Stock book JSON (5 horizons)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "192042 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/data/stock_book/2026-08-27_stock_book.json"
+    },
+    {
+      "step": "book.book_md",
+      "name": "Stock book MD",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "102994 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-08-27_stock_book.md"
+    },
+    {
+      "step": "book.backtest",
+      "name": "Stock book backtest (repo-level)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "3240 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/STOCK_BOOK_BACKTEST.md"
+    },
+    {
+      "step": "book.paper_md",
+      "name": "Paper trading summary",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1718 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/PAPER_TRADING.md"
+    },
+    {
+      "step": "book.dashboard",
+      "name": "Dashboard HTML (Pages source)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "2217095 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/dashboard/index.html"
+    },
+    {
+      "step": "book.hit_board",
+      "name": "HIT_BOARD",
+      "group": "book",
+      "status": "OK",
+      "required": false,
+      "detail": "6678 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/HIT_BOARD.md"
+    },
+    {
+      "step": "outcome.general",
+      "name": "General outcome (graded call)",
+      "group": "outcome",
+      "status": "OK",
+      "required": true,
+      "detail": "24159 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/general/2026-08-27_outcome.md"
+    },
+    {
+      "step": "outcome.reflect",
+      "name": "General reflect MD",
+      "group": "outcome",
       "status": "WARN",
       "required": false,
       "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/events/2026-08-27_events.md"
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/general/2026-08-27_reflect.md"
     },
     {
-      "step": "preopen.judge_md",
-      "name": "News judge MD",
-      "group": "preopen",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_judge.md"
-    },
-    {
-      "step": "preopen.judge_json",
-      "name": "News judge JSON (parsed tilts)",
-      "group": "preopen",
+      "step": "outcome.candidate",
+      "name": "Candidate lesson filed today",
+      "group": "outcome",
       "status": "OK",
       "required": false,
-      "detail": "1064 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_judge.json"
+      "detail": "n=11",
+      "path": ""
     },
     {
-      "step": "preopen.research_json",
-      "name": "Map-heat morning refresh JSON",
-      "group": "preopen",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_research.json"
-    },
-    {
-      "step": "preopen.research_md",
-      "name": "Map-heat morning refresh MD",
-      "group": "preopen",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-27_research.md"
-    },
-    {
-      "step": "preopen.actions",
-      "name": "News actions JSON",
-      "group": "preopen",
-      "status": "OK",
-      "required": false,
-      "detail": "43953 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-08-27_actions.json"
-    },
-    {
-      "step": "preopen.catalyst_json",
-      "name": "Catalyst dossiers JSON",
-      "group": "preopen",
-      "status": "WARN",
-      "required": false,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/catalyst/2026-08-27_dossiers.json"
-    },
-    {
-      "step": "preopen.catalyst_md",
-      "name": "Catalyst dossiers MD",
-      "group": "preopen",
-      "status": "WARN",
-      "required": false,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/catalyst/2026-08-27_dossiers.md"
-    },
-    {
-      "step": "preopen.general",
-      "name": "General market predict",
-      "group": "preopen",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/general/2026-08-27_predict.md"
-    },
-    {
-      "step": "preopen.sector.basic_materials",
-      "name": "Sector predict \u2014 Basic Materials",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "10260 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/basic_materials_predict.md"
-    },
-    {
-      "step": "preopen.sector.communication_services",
-      "name": "Sector predict \u2014 Communication Services",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "7960 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/communication_services_predict.md"
-    },
-    {
-      "step": "preopen.sector.consumer_cyclical",
-      "name": "Sector predict \u2014 Consumer Cyclical",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "13438 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/consumer_cyclical_predict.md"
-    },
-    {
-      "step": "preopen.sector.consumer_defensive",
-      "name": "Sector predict \u2014 Consumer Defensive",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "9518 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/consumer_defensive_predict.md"
-    },
-    {
-      "step": "preopen.sector.energy",
-      "name": "Sector predict \u2014 Energy",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "8312 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/energy_predict.md"
-    },
-    {
-      "step": "preopen.sector.financial",
-      "name": "Sector predict \u2014 Financial",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "13698 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/financial_predict.md"
-    },
-    {
-      "step": "preopen.sector.healthcare",
-      "name": "Sector predict \u2014 Healthcare",
-      "group": "preopen",
-      "status": "FAIL",
-      "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/healthcare_predict.md"
-    },
-    {
-      "step": "preopen.sector.industrials",
-      "name": "Sector predict \u2014 Industrials",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "9515 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/industrials_predict.md"
-    },
-    {
-      "step": "preopen.sector.real_estate",
-      "name": "Sector predict \u2014 Real Estate",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "13866 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/real_estate_predict.md"
-    },
-    {
-      "step": "preopen.sector.technology",
-      "name": "Sector predict \u2014 Technology",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "10932 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/technology_predict.md"
-    },
-    {
-      "step": "preopen.sector.utilities",
-      "name": "Sector predict \u2014 Utilities",
-      "group": "preopen",
-      "status": "OK",
-      "required": true,
-      "detail": "9453 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/utilities_predict.md"
-    },
-    {
-      "step": "preopen.sector_count",
-      "name": "\u22658/11 quality sector predicts",
-      "group": "preopen",
+      "step": "outcome.sector_count",
+      "name": "Sector outcomes graded (>=8/11)",
+      "group": "outcome",
       "status": "OK",
       "required": true,
       "detail": "10/11",
       "path": ""
     },
     {
-      "step": "preopen.board",
-      "name": "Sector board JSON",
-      "group": "preopen",
-      "status": "OK",
-      "required": false,
-      "detail": "6909 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-08-27/_board.json"
-    },
-    {
-      "step": "preopen.qc",
-      "name": "Pre-open QC JSON",
-      "group": "preopen",
+      "step": "learn.learnings",
+      "name": "LEARNINGS.md digest",
+      "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "6661 bytes",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-08-27_preopen_qc.json"
+      "detail": "45805 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/03_scoreboard/LEARNINGS.md"
     },
     {
-      "step": "preopen.status_json",
-      "name": "Pre-open status JSON",
-      "group": "preopen",
-      "status": "FAIL",
+      "step": "learn.mutable_policy",
+      "name": "mutable_policy.md (machine injection)",
+      "group": "learn",
+      "status": "OK",
       "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-08-27_preopen_status.json"
+      "detail": "101065 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/00_grounding/mutable_policy.md"
     },
     {
-      "step": "preopen.status_md",
-      "name": "Pre-open status MD",
-      "group": "preopen",
-      "status": "WARN",
+      "step": "learn.book_policy",
+      "name": "book_policy.json (learned ranker weights)",
+      "group": "learn",
+      "status": "OK",
       "required": false,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-08-27_preopen_status.md"
+      "detail": "2520 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/00_grounding/book_policy.json"
     },
     {
-      "step": "preopen.grok_review_json",
-      "name": "Grok text review JSON",
-      "group": "preopen",
-      "status": "FAIL",
+      "step": "pages.dashboard",
+      "name": "Live dashboard reachable + data injected",
+      "group": "pages",
+      "status": "OK",
       "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-08-27_grok_review.json"
-    },
-    {
-      "step": "preopen.grok_review_md",
-      "name": "Grok text review MD",
-      "group": "preopen",
-      "status": "WARN",
-      "required": false,
-      "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-08-27_grok_review.md"
+      "detail": "HTTP 200, data_injected=True",
+      "path": "https://sroyaltyy.github.io/fullscan/dashboard/"
     }
   ]
 }
