@@ -1,11 +1,14 @@
 name: xAI device reauth
 
-# Phone Claw tab + clock. Starts a device-code waiter on this box,
-# publishes 01_daily/_xai_reauth.json. The dedicated job stays in the
-# foreground so GitHub Actions does not reap openclaw before a code is pushed.
-# --check is a no-op when models status is already ok.
+# Phone Claw tab + clock. Starts a DETACHED device-code waiter on this box,
+# publishes 01_daily/_xai_reauth.json, then exits so the ECS runner is not
+# held for 15 minutes.
+#
+# --check is a no-op when models status is already ok, so a 20-minute clock
+# is cheap. After the auth check, snapshot every runtime door (timeout 1800,
+# 64-char token, 401/403, dead process behind systemd active) so the phone
+# board is not a stale "everything is up".
 # The published grok.me app has no GitHub token and cannot dispatch.
-# After every pass we snapshot runtime doors for the phone.
 
 on:
   schedule:
@@ -48,7 +51,9 @@ jobs:
           set -uo pipefail
           export HOME=/home/gha
           mkdir -p /home/gha/fullscan-logs
-          chmod +x scripts/xai_device_reauth.py scripts/runtime_status.py scripts/safe_git_push.sh || true
+          chmod +x scripts/xai_device_reauth.py scripts/safe_git_push.sh \
+            scripts/runtime_status.py scripts/enable_openclaw_chat.sh \
+            scripts/ensure_openclaw_timeouts.sh || true
           FORCE="${{ github.event.inputs.force }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then
             FORCE="false"
@@ -60,8 +65,19 @@ jobs:
           else
             python3 scripts/xai_device_reauth.py --check
           fi
-          python3 scripts/runtime_status.py --write || true
           echo "======== _xai_reauth.json ========"
           cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
+
+      - name: Snapshot runtime doors for the phone
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+        run: |
+          set -uo pipefail
+          export HOME=/home/gha
+          python3 scripts/runtime_status.py --write || true
           echo "======== _runtime.json ========"
           cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"

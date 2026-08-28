@@ -36,7 +36,7 @@ def test_64_char_token_is_fail():
     st, req, det, act = mod.token_verdict(64, 64)
     assert st == "FAIL"
     st, req, det, act = mod.token_verdict(48, 64)
-    assert st == "WARN" and "401" in det
+    assert st == "WARN" and req and "401" in det
     st, req, det, act = mod.token_verdict(48, 0)
     assert st == "OK"
 
@@ -47,15 +47,27 @@ def test_1800_timeout_is_fail():
         "agents.defaults.timeoutSeconds": 1800,
         "subagents.runTimeoutSeconds": 1800,
         "models.providers.xai.timeoutSeconds": 1800,
-    })
+    }, yaml_hits=[])
     assert st == "FAIL" and req and act == "heal"
     assert "1800" in det
     st, req, det, act = mod.timeout_verdict({
         "agents.defaults.timeoutSeconds": 10800,
         "subagents.runTimeoutSeconds": 10800,
         "models.providers.xai.timeoutSeconds": 10800,
-    })
+    }, yaml_hits=[])
     assert st == "OK"
+
+
+def test_yaml_1800_is_fail_even_if_json_is_10800():
+    mod = _load()
+    st, req, det, act = mod.timeout_verdict({
+        "agents.defaults.timeoutSeconds": 10800,
+        "subagents.runTimeoutSeconds": 10800,
+        "models.providers.xai.timeoutSeconds": 10800,
+    }, yaml_hits=[("map_heat_postclose.yml", 1800)])
+    assert st == "FAIL" and req
+    assert "1800" in det
+    assert "map_heat_postclose.yml" in det
 
 
 def test_zombie_process_is_fail():
@@ -67,6 +79,9 @@ def test_zombie_process_is_fail():
     st, req, det, act = mod.process_verdict(
         unit_active=True, pid=12, pid_alive=True, port_up=True, pong_ok=True)
     assert st == "OK"
+    st, req, det, act = mod.process_verdict(
+        unit_active=True, pid=12, pid_alive=False, port_up=True, pong_ok=False)
+    assert st == "FAIL"
 
 
 def test_pong_401_403_timeout():
@@ -91,3 +106,38 @@ def test_run_timed_out_is_fail():
     assert st == "OK"
     st, req, det, act = mod.run_verdict("failure", "failure")
     assert st == "WARN"
+
+
+def test_snapshot_includes_prereq_doors():
+    mod = _load()
+    d = mod.door("http401", "HTTP 401", "classroom", "FAIL", True, "HTTP 401", "heal")
+    assert d["id"] == "http401"
+    d = mod.door("http403", "HTTP 403", "postclose", "FAIL", True, "HTTP 403", "heal")
+    assert d["group"] == "postclose"
+
+
+def main() -> None:
+    tests = [
+        test_door_payload_shape,
+        test_oauth_action_is_reauth,
+        test_64_char_token_is_fail,
+        test_1800_timeout_is_fail,
+        test_yaml_1800_is_fail_even_if_json_is_10800,
+        test_zombie_process_is_fail,
+        test_pong_401_403_timeout,
+        test_run_timed_out_is_fail,
+        test_snapshot_includes_prereq_doors,
+    ]
+    failed = 0
+    for fn in tests:
+        try:
+            fn()
+            print(f"ok  {fn.__name__}")
+        except Exception as e:  # noqa: BLE001
+            failed += 1
+            print(f"FAIL {fn.__name__}: {e}")
+    raise SystemExit(failed)
+
+
+if __name__ == "__main__":
+    main()

@@ -7,8 +7,9 @@
 Catches the things that actually kill pre-open and post-close:
   OpenClaw dead while systemd still says active
   48-char live json vs 64-char GitHub secret (401 path)
-  HTTP 401 / 403 from the classroom
-  timeoutSeconds still 1800 (Grok turns stub at 30m; want 10800)
+  HTTP 401 / 403 from the classroom or Elite scrape
+  timeoutSeconds / OPENCLAW_TIMEOUT still 1800 (Grok turns stub at 30m; want 10800)
+  GROK_ONLY missing / DeepSeek key still injected into a Grok job
   last pre-open / post-close run timed_out or 401/403 stubs in the packet
 
 Never PONG while a Grok job is running.
@@ -26,7 +27,7 @@ import subprocess
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -56,16 +57,29 @@ GROK_NEEDLES = (
     "src.learn_cycle",
     "src.catalyst_daily",
 )
+WF_FILES = (
+    ROOT / ".github" / "workflows" / "preopen_all.yml",
+    ROOT / ".github" / "workflows" / "map_heat_postclose.yml",
+)
+SH_FILES = (
+    ROOT / "scripts" / "ecs_preopen.sh",
+    ROOT / "scripts" / "ecs_map_postclose.sh",
+)
+TIMEOUT_ASSIGN = re.compile(
+    r"OPENCLAW_TIMEOUT(?:\s*[:=]\s*[\"']?(\d+)|[^\n]*?:-[\"']?(\d+))"
+)
 STUB_RE = re.compile(
     r"(LLM request timed out|model idle timeout|idle timeout|gateway timeout|"
     r"HTTP 401|401 Unauthorized|HTTP 403|403 Forbidden|"
     r"Aliyun 403|maps were not scraped|TIMEOUT/STUB|"
-    r"The model did not produce a response)",
+    r"The model did not produce a response|"
+    r"EMERGENCY: GROK_ONLY suspended|falling back to DeepSeek|"
+    r"live OpenClaw token len=64|using_token=len=64)",
     re.I,
 )
 TIMEOUT_RE = re.compile(
     r"(LLM request timed out|model idle timeout|idle timeout|gateway timeout|"
-    r"runTimeoutSeconds|timed out after)",
+    r"runTimeoutSeconds|timed out after|OPENCLAW_TIMEOUT[=:] ?1800)",
     re.I,
 )
 
@@ -77,7 +91,6 @@ def now_iso() -> str:
 def et_dates(now: datetime | None = None) -> list[str]:
     now = now or datetime.now(ET)
     today = now.date()
-    from datetime import timedelta
     return [
         today.isoformat(),
         (today + timedelta(days=1)).isoformat(),
@@ -105,6 +118,13 @@ def _json(path: Path):
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError, ValueError):
         return None
+
+
+def _text(path: Path) -> str:
+    try:
+        return path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return ""
 
 
 def live_token() -> tuple[str, int, str, int]:
@@ -139,7 +159,9 @@ def pick_token(json_tok: str, env: str) -> str:
 def token_verdict(json_n: int, env_n: int) -> tuple[str, bool, str, str]:
     """status, required, detail, action."""
     if json_n == LIVE_TOKEN_LEN and env_n == STALE_SECRET_LEN:
-        return "WARN", False, f"json={json_n} env={env_n} — using live json; env is 64-char 401 path", "none"
+        return ("WARN", True,
+                f"json={json_n} env={env_n} — live json wins; env is 64-char 401 path",
+                "heal")
     if json_n == LIVE_TOKEN_LEN:
         return "OK", True, f"json={json_n} env={env_n}", "none"
     if json_n == 0 and env_n == STALE_SECRET_LEN:
@@ -149,7 +171,7 @@ def token_verdict(json_n: int, env_n: int) -> tuple[str, bool, str, str]:
     if env_n == STALE_SECRET_LEN and json_n == 0:
         return "FAIL", True, "64-char secret, no live json", "heal"
     if json_n or env_n:
-        return "WARN", False, f"json={json_n} env={env_n}", "none"
+        return "WARN", True, f"json={json_n} env={env_n}", "heal"
     return "FAIL", True, "no token in json or env", "heal"
 
 
@@ -159,11 +181,13 @@ def timeout_fields(data: dict | None) -> dict[str, int | None]:
     defaults = (data.get("agents") or {}).get("defaults") or {}
     sub = defaults.get("subagents") or {}
     xai = ((data.get("models") or {}).get("providers") or {}).get("xai") or {}
+
     def _n(v):
         try:
             return int(v)
         except (TypeError, ValueError):
             return None
+
     return {
         "agents.defaults.timeoutSeconds": _n(defaults.get("timeoutSeconds")),
         "subagents.runTimeoutSeconds": _n(sub.get("runTimeoutSeconds") if isinstance(sub, dict) else None),
@@ -171,19 +195,85 @@ def timeout_fields(data: dict | None) -> dict[str, int | None]:
     }
 
 
-def timeout_verdict(fields: dict[str, int | None]) -> tuple[str, bool, str, str]:
+def yaml_timeout_hits() -> list[tuple[str, int]]:
+    hits: list[tuple[str, int]] = []
+    for p in (*WF_FILES, *SH_FILES):
+        text = _text(p)
+        if not text:
+            continue
+        for m in TIMEOUT_ASSIGN.finditer(text):
+            raw = m.group(1) or m.group(2)
+            try:
+                hits.append((p.name, int(raw)))
+            except (TypeError, ValueError):
+                continue
+    return hits
+
+
+def timeout_verdict(fields: dict[str, int | None],
+                    yaml_hits: list[tuple[str, int]] | None = None,
+                    ) -> tuple[str, bool, str, str]:
+    yaml_hits = yaml_hits if yaml_hits is not None else yaml_timeout_hits()
+    bad: list[str] = []
     if not fields:
-        return "FAIL", True, "openclaw.json unreadable — cannot see timeoutSeconds", "heal"
-    bad = []
-    for k, v in fields.items():
+        bad.append("openclaw.json unreadable")
+    for k, v in (fields or {}).items():
         if v is None:
             bad.append(f"{k}=missing")
         elif v < WANT_TIMEOUT:
             tag = "1800 kills Grok at 30m" if v == 1800 else f"{v}s too short"
             bad.append(f"{k}={v} ({tag}, want {WANT_TIMEOUT})")
+    for name, v in yaml_hits:
+        if v < WANT_TIMEOUT:
+            tag = "1800 kills Grok at 30m" if v == 1800 else f"{v}s too short"
+            bad.append(f"{name} OPENCLAW_TIMEOUT={v} ({tag}, want {WANT_TIMEOUT})")
     if bad:
         return "FAIL", True, "; ".join(bad), "heal"
-    return "OK", True, f"all {WANT_TIMEOUT}s", "none"
+    yaml_note = ""
+    if yaml_hits:
+        yaml_note = " yaml=" + ",".join(f"{n}:{v}" for n, v in yaml_hits)
+    return "OK", True, f"all {WANT_TIMEOUT}s{yaml_note}", "none"
+
+
+def yaml_grok_only_verdict() -> tuple[str, bool, str, str]:
+    missing: list[str] = []
+    deepseek: list[str] = []
+    for p in WF_FILES:
+        text = _text(p)
+        if not text:
+            missing.append(f"{p.name} unreadable")
+            continue
+        if not re.search(r'GROK_ONLY:\s*["\']?1', text):
+            missing.append(f"{p.name} missing GROK_ONLY=1")
+        if re.search(r"DEEPSEEK_API_KEY:\s*\$\{\{\s*secrets\.DEEPSEEK_API_KEY", text):
+            deepseek.append(p.name)
+    if missing:
+        return "FAIL", True, "; ".join(missing), "heal"
+    if deepseek:
+        return ("WARN", False,
+                f"{', '.join(deepseek)} still injects DEEPSEEK_API_KEY — GROK_ONLY must block it",
+                "none")
+    return "OK", False, "GROK_ONLY=1 in preopen + postclose yaml", "none"
+
+
+def yaml_token_secret_note() -> str:
+    notes: list[str] = []
+    for p in WF_FILES:
+        text = _text(p)
+        if re.search(r"OPENCLAW_TOKEN:\s*\$\{\{\s*secrets\.OPENCLAW_TOKEN", text):
+            notes.append(f"{p.name} injects 64-char GitHub secret")
+    return "; ".join(notes)
+
+
+def yaml_finviz_ecs_verdict() -> tuple[str, bool, str, str]:
+    text = _text(ROOT / ".github" / "workflows" / "map_heat_postclose.yml")
+    if not text:
+        return "WARN", False, "postclose yaml unreadable", "none"
+    if re.search(r"src\.map_heat\s+--date", text) and re.search(r"--force", text):
+        return ("WARN", True,
+                "post-close still runs map_heat --force on ECS (Aliyun 403)",
+                "none")
+    return "OK", True, "post-close does not scrape Finviz HTML on ECS", "none"
 
 
 def process_verdict(unit_active: bool, pid: int, pid_alive: bool,
@@ -201,7 +291,7 @@ def process_verdict(unit_active: bool, pid: int, pid_alive: bool,
         return "FAIL", True, "port up but unit inactive and not answering", "heal"
     if not pid_alive:
         return "FAIL", True, "OpenClaw process not running", "heal"
-    return "WARN", False, f"pid={pid} port={'up' if port_up else 'down'}", "heal"
+    return "WARN", True, f"pid={pid} port={'up' if port_up else 'down'}", "heal"
 
 
 def pong_verdict(http: int, content: str, error: str) -> tuple[str, bool, str, str]:
@@ -362,40 +452,78 @@ def gh_latest(wf: str) -> dict:
     }
 
 
-def scan_stubs() -> tuple[str, bool, str, str]:
-    hits: list[str] = []
+def scan_needles() -> dict[str, list[str]]:
+    """401 / 403 / 1800 / 64-char / DeepSeek in latest packets + health JSON."""
+    found: dict[str, list[str]] = {
+        "401": [], "403": [], "1800": [], "64": [], "deepseek": [],
+    }
     dates = et_dates()
     paths: list[Path] = []
+    daily = ROOT / "01_daily"
+    if daily.is_dir():
+        paths.extend(sorted(daily.glob("*_pipeline_health*.json"))[-6:])
+        paths.extend(sorted(daily.glob("*_preopen_status.json"))[-3:])
+        paths.extend(sorted(daily.glob("*_grok_review.json"))[-3:])
     for d in dates:
         paths.extend([
-            ROOT / "01_daily" / "general" / f"{d}_predict.md",
-            ROOT / "01_daily" / "map_heat" / f"{d}_research_baseline.md",
-            ROOT / "01_daily" / "map_heat" / f"{d}_map_heat.json",
-            ROOT / "01_daily" / "news" / f"{d}_finviz_digest.json",
+            daily / "general" / f"{d}_predict.md",
+            daily / "map_heat" / f"{d}_research_baseline.md",
+            daily / "map_heat" / f"{d}_map_heat.json",
+            daily / "news" / f"{d}_finviz_digest.json",
         ])
+        tr = daily / "_transcripts"
+        if tr.is_dir():
+            paths.extend(sorted(tr.glob(f"{d}_map_postclose_*.json"))[-4:])
+    seen: set[str] = set()
     for path in paths:
-        if not path.is_file():
+        key = str(path)
+        if key in seen or not path.is_file():
             continue
+        seen.add(key)
         try:
-            text = path.read_text(encoding="utf-8", errors="ignore")[:12000]
+            text = path.read_text(encoding="utf-8", errors="ignore")[:20000]
         except OSError:
             continue
-        if STUB_RE.search(text):
-            m = STUB_RE.search(text)
-            label = m.group(0) if m else "stub"
-            hits.append(f"{path.name}: {label}")
-        if path.suffix == ".json":
-            data = _json(path)
-            if isinstance(data, dict):
-                notes = str(data.get("notes") or data.get("one_paragraph") or "")
-                tape = data.get("tape")
-                if "not scraped" in notes.lower() or "403" in notes:
-                    hits.append(f"{path.name}: Elite 403 / not scraped")
-                if isinstance(tape, list) and not tape and "map_heat" in path.name:
-                    hits.append(f"{path.name}: EMPTY TAPE (403 overlay)")
+        low = text.lower()
+        label = path.name
+        if "401" in low or "unauthorized" in low:
+            found["401"].append(label)
+        if "403" in low or "aliyun" in low or "maps were not scraped" in low:
+            found["403"].append(label)
+        if "1800" in text or TIMEOUT_RE.search(text):
+            found["1800"].append(label)
+        if "len=64" in low or "64-char" in low or "token len=64" in low:
+            found["64"].append(label)
+        if "deepseek" in low and ("fallback" in low or "emergency" in low):
+            found["deepseek"].append(label)
+        if STUB_RE.search(text) and "403" not in found["403"]:
+            if "403" in (STUB_RE.search(text).group(0) if STUB_RE.search(text) else ""):
+                found["403"].append(label)
+    return found
+
+
+def scan_stubs(needles: dict[str, list[str]] | None = None) -> tuple[str, bool, str, str]:
+    needles = needles if needles is not None else scan_needles()
+    hits: list[str] = []
+    for key, label in (("401", "401"), ("403", "403"), ("1800", "1800/timeout"),
+                       ("64", "64-char token"), ("deepseek", "DeepSeek fallback")):
+        names = needles.get(key) or []
+        if names:
+            hits.append(f"{label} in {', '.join(names[:2])}")
+    dates = et_dates()
+    for d in dates:
+        mh = ROOT / "01_daily" / "map_heat" / f"{d}_map_heat.json"
+        data = _json(mh)
+        if isinstance(data, dict):
+            notes = str(data.get("notes") or data.get("one_paragraph") or "")
+            tape = data.get("tape")
+            if "not scraped" in notes.lower() or "403" in notes:
+                hits.append(f"{mh.name}: Elite 403 / not scraped")
+            if isinstance(tape, list) and not tape:
+                hits.append(f"{mh.name}: EMPTY TAPE (403 overlay)")
     if not hits:
-        return "OK", False, "no 401/403/timeout stubs in latest packets", "none"
-    return "FAIL", True, "; ".join(hits[:3]), "heal"
+        return "OK", True, "no 401/403/timeout/64/DeepSeek stubs in latest packets", "none"
+    return "FAIL", True, "; ".join(hits[:4]), "heal"
 
 
 def door(id: str, name: str, group: str, status: str, required: bool,
@@ -411,6 +539,12 @@ def snapshot() -> dict:
     json_tok, json_n, env_tok, env_n = live_token()
     token = pick_token(json_tok, env_tok)
     tok_st, tok_req, tok_det, tok_act = token_verdict(json_n, env_n)
+    secret_note = yaml_token_secret_note()
+    if secret_note and tok_st == "OK":
+        tok_st, tok_req, tok_det, tok_act = (
+            "WARN", True, f"{tok_det} — {secret_note}", "heal")
+    elif secret_note:
+        tok_det = f"{tok_det} — {secret_note}"
     up = port_open()
     gw = unit_show("fullscan-openclaw-gateway.service")
     try:
@@ -426,7 +560,10 @@ def snapshot() -> dict:
         if oc:
             break
     t_fields = timeout_fields(oc)
-    t_st, t_req, t_det, t_act = timeout_verdict(t_fields)
+    yaml_hits = yaml_timeout_hits()
+    t_st, t_req, t_det, t_act = timeout_verdict(t_fields, yaml_hits)
+    grok_st, grok_req, grok_det, grok_act = yaml_grok_only_verdict()
+    finviz_st, finviz_req, finviz_det, finviz_act = yaml_finviz_ecs_verdict()
 
     pre_en = unit_show("fullscan-preopen.timer").get("UnitFileState") or ""
     post_en = unit_show("fullscan-map-postclose.timer").get("UnitFileState") or ""
@@ -440,9 +577,8 @@ def snapshot() -> dict:
     post_st, post_req, post_det, post_act = run_verdict(
         post_run.get("conclusion") or post_run.get("status") or "",
         post_svc.get("Result") or "")
-    if pre_run.get("html_url"):
-        pre_det = f"{pre_det}"
-    stub_st, stub_req, stub_det, stub_act = scan_stubs()
+    needles = scan_needles()
+    stub_st, stub_req, stub_det, stub_act = scan_stubs(needles)
 
     code, blob = models_check()
     oauth_st = "OK" if code == 0 else ("WARN" if code == 2 else "FAIL")
@@ -485,9 +621,40 @@ def snapshot() -> dict:
             model_st, model_req, model_detail, model_act = (
                 "FAIL", True, "no 200 chat", "heal")
 
-    if pong_st == "FAIL" and "401" in pong_detail and tok_st != "FAIL":
+    if pong_st == "FAIL" and "401" in pong_detail:
         tok_st, tok_req, tok_det, tok_act = (
             "FAIL", True, f"{tok_det} — PONG 401", "heal")
+    if needles.get("64") and tok_st != "FAIL":
+        tok_st, tok_req, tok_det, tok_act = (
+            "FAIL", True,
+            f"{tok_det} — last packet used 64-char ({', '.join(needles['64'][:2])})",
+            "heal")
+    if needles.get("1800") and t_st != "FAIL":
+        t_st, t_req, t_det, t_act = (
+            "FAIL", True,
+            f"{t_det} — last packet has 1800/timeout ({', '.join(needles['1800'][:2])})",
+            "heal")
+    if needles.get("deepseek") and grok_st != "FAIL":
+        grok_st, grok_req, grok_det, grok_act = (
+            "FAIL", True,
+            f"DeepSeek fallback in {', '.join(needles['deepseek'][:2])}",
+            "heal")
+
+    http401_st, http401_req, http401_det, http401_act = "OK", True, "no 401", "none"
+    if pong_st == "FAIL" and "401" in pong_detail:
+        http401_st, http401_req, http401_det, http401_act = (
+            "FAIL", True, pong_detail, "heal")
+    elif needles.get("401"):
+        http401_st, http401_req, http401_det, http401_act = (
+            "FAIL", True, f"401 in {', '.join(needles['401'][:2])}", "heal")
+
+    http403_st, http403_req, http403_det, http403_act = finviz_st, finviz_req, finviz_det, finviz_act
+    if pong_st == "FAIL" and "403" in pong_detail:
+        http403_st, http403_req, http403_det, http403_act = (
+            "FAIL", True, pong_detail, "heal")
+    elif needles.get("403"):
+        http403_st, http403_req, http403_det, http403_act = (
+            "FAIL", True, f"403 in {', '.join(needles['403'][:2])}", "heal")
 
     pong_ok = pong_st == "OK"
     proc_st, proc_req, proc_det, proc_act = process_verdict(
@@ -509,8 +676,6 @@ def snapshot() -> dict:
     pre_timer_ok = pre_en in ("enabled", "enabled-runtime")
     post_timer_ok = post_en in ("enabled", "enabled-runtime")
 
-    grok_only = (os.environ.get("GROK_ONLY") or "1").strip() not in ("0", "false", "off")
-
     doors = [
         door("ecs", "ECS box", "box", "OK", True, "this job is on ecs-openclaw", "none"),
         door("process", "OpenClaw process", "box",
@@ -527,9 +692,10 @@ def snapshot() -> dict:
              tok_st, tok_req, tok_det, tok_act),
         door("timeout", "Grok turn timeout", "classroom",
              t_st, t_req, t_det, t_act),
+        door("http401", "HTTP 401", "classroom",
+             http401_st, http401_req, http401_det, http401_act),
         door("grok_only", "GROK_ONLY", "classroom",
-             "OK" if grok_only else "WARN", False,
-             "on" if grok_only else "off — DeepSeek fallback path", "none"),
+             grok_st, grok_req, grok_det, grok_act),
         door("oauth", "xAI auth", "auth", oauth_st, True, oauth_why,
              "reauth" if oauth_st != "OK" else "none"),
         door("api_key", "XAI_API_KEY", "auth",
@@ -545,6 +711,8 @@ def snapshot() -> dict:
              post_en or "disabled", "heal" if not post_timer_ok else "none"),
         door("postclose_run", "Post-close last run", "postclose",
              post_st, post_req, post_det, post_act),
+        door("http403", "HTTP 403", "postclose",
+             http403_st, http403_req, http403_det, http403_act),
         door("stub", "Packet stubs", "postclose",
              stub_st, stub_req, stub_det, stub_act),
     ]
@@ -604,7 +772,10 @@ def heal(payload: dict) -> list[str]:
             actions.append(f"ensure_openclaw_timeouts.sh exit={r.returncode} {tail[:140]}")
         except (OSError, subprocess.SubprocessError) as e:
             actions.append(f"ensure_openclaw_timeouts.sh failed: {e}")
-    door_bad = bool(ids & {"gateway", "port", "pong", "model", "token", "process", "stub"})
+    door_bad = bool(ids & {
+        "gateway", "port", "pong", "model", "token", "process",
+        "stub", "http401", "http403",
+    })
     if door_bad and ENABLE_CHAT.is_file():
         try:
             r = subprocess.run(
