@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       heal:
-        description: "true = restart gateway/timers if a door is down"
+        description: "true = restart gateway/timers / patch 1800s timeouts if a door is down"
         required: false
         default: "true"
 
@@ -45,7 +45,8 @@ jobs:
           set -uo pipefail
           export HOME=/home/gha
           mkdir -p /home/gha/fullscan-logs
-          chmod +x scripts/runtime_status.py scripts/safe_git_push.sh scripts/enable_openclaw_chat.sh || true
+          chmod +x scripts/runtime_status.py scripts/safe_git_push.sh \
+            scripts/enable_openclaw_chat.sh scripts/ensure_openclaw_timeouts.sh || true
           HEAL="${{ github.event.inputs.heal }}"
           if [ "$HEAL" = "true" ]; then
             python3 scripts/runtime_status.py --heal || true
