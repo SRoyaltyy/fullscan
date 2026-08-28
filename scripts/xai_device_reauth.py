@@ -30,7 +30,7 @@ OUT = ROOT / "01_daily" / "_xai_reauth.json"
 LOG = Path(os.environ.get("FULLSCAN_LOG", "/home/gha/fullscan-logs/xai_reauth.log"))
 PID = Path(os.environ.get("FULLSCAN_REAUTH_PID", "/home/gha/fullscan-logs/xai_reauth.pid"))
 DEVICE_URI = "https://auth.x.ai/device"
-WAIT_S = 15 * 60
+WAIT_S = 12 * 60
 PUSH = ROOT / "scripts" / "safe_git_push.sh"
 
 CODE_RE = re.compile(
@@ -154,20 +154,56 @@ def waiting_fresh(existing: dict) -> bool:
 
 
 def spawn_daemon(force: bool) -> int:
-    LOG.parent.mkdir(parents=True, exist_ok=True)
-    logf = open(LOG, "a", encoding="utf-8")
-    args = [sys.executable, str(Path(__file__).resolve()), "--daemon"]
+    """Start a waiter that can outlive this process.
+
+    GitHub Actions reaps setsid orphans when the job exits — that killed
+    openclaw before a user_code was ever pushed. Prefer systemd --user.
+    On a dedicated GHA reauth job, fall back to in-process.
+    """
+    script = str(Path(__file__).resolve())
+    args = [sys.executable, script, "--daemon"]
     if force:
         args.append("--force")
+    env = {**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"}
+    unit = "xai-reauth"
+    sysd = [
+        "systemd-run", "--user", "--collect",
+        f"--unit={unit}",
+        "--same-dir",
+        f"--working-directory={ROOT}",
+        f"--setenv=HOME={env['HOME']}",
+        *args,
+    ]
+    try:
+        subprocess.run(
+            ["systemctl", "--user", "reset-failed", unit],
+            capture_output=True, timeout=8, check=False,
+        )
+        r = subprocess.run(sysd, capture_output=True, text=True, timeout=15, env=env)
+        if r.returncode == 0:
+            print(f"[reauth] systemd-run {(r.stdout or r.stderr or '').strip()}",
+                  flush=True)
+            return 0
+        print(f"[reauth] systemd-run rc={r.returncode} {(r.stderr or '')[-240:]}",
+              flush=True)
+    except (OSError, subprocess.SubprocessError) as e:
+        print(f"[reauth] systemd-run unavailable: {e}", flush=True)
+
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print("[reauth] GITHUB_ACTIONS — running waiter in this process", flush=True)
+        return daemon(force)
+
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+    logf = open(LOG, "a", encoding="utf-8")
     proc = subprocess.Popen(
         ["setsid", *args],
         cwd=str(ROOT),
         stdout=logf,
         stderr=subprocess.STDOUT,
         start_new_session=True,
-        env={**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"},
+        env=env,
     )
-    print(f"[reauth] daemon pid={proc.pid}", flush=True)
+    print(f"[reauth] setsid pid={proc.pid} (dies if a GHA job is ending)", flush=True)
     return 0
 
 
@@ -378,8 +414,10 @@ def main() -> None:
     os.environ.setdefault("HOME", "/home/gha")
     if args.daemon:
         raise SystemExit(daemon(args.force))
-    if args.check or not args.force:
+    if args.check:
         raise SystemExit(check(args.force))
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        raise SystemExit(daemon(True))
     raise SystemExit(spawn_daemon(True))
 
 

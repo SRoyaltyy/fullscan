@@ -1,16 +1,15 @@
 name: xAI device reauth
 
-# Phone Claw tab + 4-hour clock. Starts a DETACHED device-code waiter on
-# this box, publishes 01_daily/_xai_reauth.json, then exits so the one
-# ECS runner is not held for 15 minutes.
-#
-# Never GH-dispatches another ECS workflow. Never PONGs while Grok is busy
-# (the python bails if map_heat / preopen is running, unless force=true).
+# Phone Claw tab + clock. Starts a device-code waiter on this box,
+# publishes 01_daily/_xai_reauth.json. The dedicated job stays in the
+# foreground so GitHub Actions does not reap openclaw before a code is pushed.
+# --check is a no-op when models status is already ok.
+# The published grok.me app has no GitHub token and cannot dispatch.
 
 on:
   schedule:
-    # 20:10 / 00:10 / 04:10 / 08:10 / 12:10 / 16:10 ET (EDT = UTC-4)
-    - cron: "10 */4 * * *"
+    # every 20 min; --check exits immediately if auth is still good
+    - cron: "7,27,47 * * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -29,7 +28,7 @@ concurrency:
 jobs:
   reauth:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 8
+    timeout-minutes: 16
     env:
       HOME: /home/gha
       FULLSCAN_HOME: /home/gha
@@ -54,7 +53,9 @@ jobs:
             FORCE="false"
           fi
           if [ "$FORCE" = "true" ]; then
-            python3 scripts/xai_device_reauth.py --force
+            # Foreground: GHA kills setsid orphans on job exit, which
+            # previously murdered openclaw before a user_code was pushed.
+            python3 scripts/xai_device_reauth.py --daemon --force
           else
             python3 scripts/xai_device_reauth.py --check
           fi
