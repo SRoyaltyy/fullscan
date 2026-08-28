@@ -1,4 +1,5 @@
 """Shared config for the prediction pipeline. All credentials come from env."""
+import json
 import os
 
 # --- credentials (never hardcode) ---
@@ -24,6 +25,11 @@ OPENCLAW_BACKEND_MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL",
 # 3h per call so a long Grok research turn is not killed as trash.
 # Job-level GitHub timeout must be >= this (see preopen_all.yml).
 OPENCLAW_TIMEOUT = int(os.environ.get("OPENCLAW_TIMEOUT", "10800"))
+# Live gateway bearer from ~/.openclaw/openclaw.json is 48 chars.
+# The GitHub OPENCLAW_TOKEN secret is 64 chars and 401s the classroom.
+LIVE_OPENCLAW_TOKEN_LEN = 48
+STALE_OPENCLAW_SECRET_LEN = 64
+_OPENCLAW_TOKEN_ALIGNED = False
 
 # --- DeepSeek (opt-in fallback only; off whenever Grok is configured) ---
 # Function-calling stages on the DeepSeek path must use deepseek-chat
@@ -73,6 +79,83 @@ def require_llm() -> None:
             "No LLM configured. Set OPENCLAW_GATEWAY_URL (+ OPENCLAW_TOKEN) "
             "to use Grok 4.6 through the OpenClaw gateway."
         )
+
+
+def _token_from_openclaw_json(path: str) -> str:
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, ValueError):
+        return ""
+    if not isinstance(data, dict):
+        return ""
+    gw = data.get("gateway") or {}
+    auth = gw.get("auth") if isinstance(gw.get("auth"), dict) else {}
+    return str(auth.get("token") or gw.get("token") or auth.get("password") or "")
+
+
+def live_openclaw_json_token() -> str:
+    """Gateway bearer from ECS json. Prefer 48-char; skip empty files."""
+    seen: set[str] = set()
+    found: list[str] = []
+    for path in (
+        "/home/gha/.openclaw/openclaw.json",
+        os.path.expanduser("~/.openclaw/openclaw.json"),
+    ):
+        if not path or path in seen:
+            continue
+        seen.add(path)
+        token = _token_from_openclaw_json(path)
+        if token:
+            found.append(token)
+    for token in found:
+        if len(token) == LIVE_OPENCLAW_TOKEN_LEN:
+            return token
+    return found[0] if found else ""
+
+
+def pick_openclaw_token(json_token: str = "", env_token: str = "") -> str:
+    """Prefer 48-char live json. 64-char GitHub secret is the 401 path."""
+    json_token = json_token or ""
+    env_token = env_token or ""
+    if len(json_token) == LIVE_OPENCLAW_TOKEN_LEN:
+        return json_token
+    if len(env_token) == LIVE_OPENCLAW_TOKEN_LEN:
+        return env_token
+    if json_token and len(json_token) != STALE_OPENCLAW_SECRET_LEN:
+        return json_token
+    if env_token and len(env_token) != STALE_OPENCLAW_SECRET_LEN:
+        return env_token
+    return json_token or env_token
+
+
+def align_openclaw_token(*, force: bool = False) -> str:
+    """Overwrite env/config with the live json token. Prints lengths only."""
+    global OPENCLAW_TOKEN, OPENCLAW_GATEWAY_URL, _OPENCLAW_TOKEN_ALIGNED
+    if _OPENCLAW_TOKEN_ALIGNED and not force:
+        return OPENCLAW_TOKEN
+    _OPENCLAW_TOKEN_ALIGNED = True
+    json_token = live_openclaw_json_token()
+    env_token = (os.environ.get("OPENCLAW_TOKEN")
+                 or os.environ.get("OPENCLAW_GATEWAY_TOKEN")
+                 or OPENCLAW_TOKEN or "")
+    picked = pick_openclaw_token(json_token, env_token)
+    if picked:
+        OPENCLAW_TOKEN = picked
+        os.environ["OPENCLAW_TOKEN"] = picked
+        os.environ["OPENCLAW_GATEWAY_TOKEN"] = picked
+        print(f"[openclaw] aligned token json_len={len(json_token)} "
+              f"env_len={len(env_token)} using_len={len(picked)}")
+        if len(picked) == STALE_OPENCLAW_SECRET_LEN:
+            print("[openclaw] WARN: using 64-char token (GitHub secret / "
+                  "401 path). Want 48-char live json.")
+    else:
+        print("[openclaw] no gateway token in json or env")
+    if os.path.isfile("/home/gha/.openclaw/openclaw.json"):
+        OPENCLAW_GATEWAY_URL = "http://127.0.0.1:18789"
+        os.environ["OPENCLAW_GATEWAY_URL"] = OPENCLAW_GATEWAY_URL
+        print("[openclaw] OPENCLAW_GATEWAY_URL -> http://127.0.0.1:18789")
+    return picked
 
 # --- repo paths ---
 GROUNDING = "00_grounding"

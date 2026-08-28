@@ -29,6 +29,7 @@ def _reset(openclaw_url: str = "", deepseek_key: str = "",
            grok_only: bool | None = None):
     config.OPENCLAW_GATEWAY_URL = openclaw_url
     config.DEEPSEEK_API_KEY = deepseek_key
+    config._OPENCLAW_TOKEN_ALIGNED = True  # tests supply the token themselves
     dc._OPENCLAW_STATE["down"] = False
     dc._OPENCLAW_STATE["reason"] = ""
     dc._OPENCLAW_STATE["timeouts"] = 0
@@ -224,6 +225,75 @@ def test_grok_only_blocks_deepseek_and_force_flag() -> None:
     assert urls == ["http://gw:18789/v1/chat/completions"]
 
 
+def test_grok_only_no_fallback_when_gateway_401() -> None:
+    """GROK_ONLY must not DeepSeek even after OpenClaw 401 / circuit-breaker."""
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key",
+           grok_only=True)
+    urls = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        urls.append(url)
+        if "gw:18789" in url:
+            r = _fake_response(401)
+            err = dc.requests.HTTPError(
+                "401 Client Error: Unauthorized for url: "
+                "http://gw:18789/v1/chat/completions")
+            err.response = r
+            r.raise_for_status.side_effect = err
+            return r
+        return _fake_response(200, "DEEPSEEK MUST NOT RUN")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == ""
+    assert dc._OPENCLAW_STATE["down"]
+    assert all("deepseek" not in u for u in urls)
+    assert urls  # did try OpenClaw
+
+    urls.clear()
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == ""
+    assert urls == []  # breaker: do not re-hit gateway OR DeepSeek
+
+
+def test_grok_only_no_fallback_when_already_down() -> None:
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key",
+           grok_only=True)
+    dc._OPENCLAW_STATE["down"] = True
+    dc._OPENCLAW_STATE["reason"] = "401 Unauthorized"
+    urls = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        urls.append(url)
+        return _fake_response(200, "DEEPSEEK MUST NOT RUN")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == ""
+    assert urls == []
+
+
+def test_pick_openclaw_token_prefers_live_48() -> None:
+    secret64 = "s" * 64
+    live48 = "l" * 48
+    other32 = "x" * 32
+    pick = config.pick_openclaw_token
+    assert pick(live48, secret64) == live48
+    assert pick(secret64, live48) == live48
+    assert pick("", live48) == live48
+    assert pick(live48, "") == live48
+    assert pick(secret64, other32) == other32
+    assert pick(other32, secret64) == other32
+    assert pick(secret64, secret64) == secret64
+    assert pick("", "") == ""
+    assert pick(secret64, "") == secret64
+
+
 def main() -> None:
     tests = [
         test_gates,
@@ -236,6 +306,9 @@ def main() -> None:
         test_describe_routing_no_secrets,
         test_timeout_content_is_empty,
         test_grok_only_blocks_deepseek_and_force_flag,
+        test_grok_only_no_fallback_when_gateway_401,
+        test_grok_only_no_fallback_when_already_down,
+        test_pick_openclaw_token_prefers_live_48,
     ]
     failed = 0
     for fn in tests:

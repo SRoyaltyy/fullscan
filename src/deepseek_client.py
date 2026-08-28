@@ -95,9 +95,9 @@ def _post(payload: dict, retries: int = 4) -> dict:
 # we stop retrying it for the rest of this process, so a 22-call sector day
 # does not spend 22 × retries waiting on a dead box.
 # Consecutive idle-timeout *content* (gateway is up but returns a timeout
-# stub as the assistant message) also trips the breaker after 2 in a row
-# so the remaining sectors fall through to DeepSeek instead of burning
-# 15 minutes each.
+# stub as the assistant message) also trips the breaker after 2 in a row.
+# Under GROK_ONLY the breaker means "stop calling Grok and return empty"
+# — DeepSeek/SearXNG must not write analysis.
 _OPENCLAW_STATE = {"down": False, "reason": "", "timeouts": 0}
 
 # Appended to the system prompt on research stages (tools=True). The
@@ -189,7 +189,8 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                    trace_path: str | None, stage_label: str) -> str:
     """One agent turn against the gateway. Grok does its own research
     (native web/X search) inside the turn. Returns '' on failure so the
-    caller can fall back to DeepSeek."""
+    caller can fall back to DeepSeek — unless GROK_ONLY, in which case
+    empty is the final answer."""
     import copy
     import os
 
@@ -210,16 +211,18 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
         return ""
 
     if not final:
-        print(f"[openclaw] EMPTY answer ({stage_label or 'llm run'}) — "
-              "will fall back to DeepSeek")
+        note = ("no DeepSeek/SearXNG fallback (GROK_ONLY)"
+                if config.grok_only() else "will fall back to DeepSeek")
+        print(f"[openclaw] EMPTY answer ({stage_label or 'llm run'}) — {note}")
         return ""
 
     if looks_like_timeout_content(final):
         _OPENCLAW_STATE["timeouts"] = _OPENCLAW_STATE.get("timeouts", 0) + 1
         n = _OPENCLAW_STATE["timeouts"]
+        note = ("no DeepSeek/SearXNG fallback (GROK_ONLY)"
+                if config.grok_only() else "will fall back to DeepSeek")
         print(f"[openclaw] timeout/error stub treated as empty "
-              f"({stage_label or 'llm run'}; consecutive={n}) — "
-              "will fall back to DeepSeek")
+              f"({stage_label or 'llm run'}; consecutive={n}) — {note}")
         if n >= 2:
             _mark_openclaw_down(
                 f"{n} consecutive idle-timeout stubs "
@@ -294,6 +297,8 @@ def chat(messages: list[dict], model: str, tools: bool = False,
               f"({stage_label or 'llm run'})")
         force_deepseek = False
 
+    config.align_openclaw_token()
+
     # ---- primary: OpenClaw / Grok ----
     if openclaw_available() and not force_deepseek:
         text = _openclaw_chat(messages, tools=tools, max_tokens=max_tokens,
@@ -303,27 +308,16 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               stage_label=stage_label)
         if text:
             return text
-        if grok_only and not _OPENCLAW_STATE["down"]:
-            # Content-level failure (empty/stub) with the gateway still
-            # reachable: stay Grok-only; the caller's retry ladder handles it.
+        if grok_only:
             print("[llm] GROK_ONLY: OpenClaw failed — no DeepSeek/SearXNG fallback")
             return ""
         if not config.DEEPSEEK_API_KEY:
             print("[llm] OpenClaw failed and no DEEPSEEK_API_KEY fallback")
             return ""
-        if grok_only:
-            print(f"[llm] EMERGENCY: OpenClaw gateway is DOWN "
-                  f"({_OPENCLAW_STATE['reason'][:120]}) — GROK_ONLY suspended "
-                  f"for this run, falling back to DeepSeek (model={model})")
-        else:
-            print(f"[llm] falling back to DeepSeek (model={model})")
+        print(f"[llm] falling back to DeepSeek (model={model})")
     elif force_deepseek:
         print(f"[llm] force_deepseek ({stage_label or 'llm run'}) — "
               "OpenClaw skipped for this call only")
-    elif grok_only and _OPENCLAW_STATE["down"] and config.DEEPSEEK_API_KEY:
-        print(f"[llm] EMERGENCY: OpenClaw gateway down "
-              f"({_OPENCLAW_STATE['reason'][:120]}) — GROK_ONLY suspended "
-              f"for this run, using DeepSeek (model={model})")
     elif grok_only:
         print("[llm] GROK_ONLY: OpenClaw unavailable/down — no fallback")
         return ""
@@ -475,7 +469,9 @@ def describe_routing() -> str:
         f"{config.MODEL_DISTILL}",
         "",
     ]
-    if config.openclaw_enabled():
+    if config.grok_only():
+        lines.append("GROK_ONLY: DeepSeek/SearXNG will not run analysis.")
+    elif config.openclaw_enabled():
         lines.append("Every LLM stage runs on Grok via OpenClaw first; "
                      "DeepSeek fires only if the gateway fails or answers "
                      "empty.")

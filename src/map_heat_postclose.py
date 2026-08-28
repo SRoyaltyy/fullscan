@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -117,31 +116,8 @@ def _sector_prompt(target_date: str, sector: str, targets: list[dict],
 
 
 def _align_openclaw_token() -> None:
-    """GitHub OPENCLAW_TOKEN is often stale vs the live gateway config."""
-    paths = [
-        os.path.expanduser("~/.openclaw/openclaw.json"),
-        "/home/gha/.openclaw/openclaw.json",
-    ]
-    token = ""
-    for path in paths:
-        try:
-            data = json.loads(Path(path).read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
-        gw = data.get("gateway") or {}
-        auth = gw.get("auth") if isinstance(gw.get("auth"), dict) else {}
-        token = str(auth.get("token") or gw.get("token")
-                    or auth.get("password") or "")
-        if token:
-            break
-    if token:
-        os.environ["OPENCLAW_TOKEN"] = token
-        config.OPENCLAW_TOKEN = token
-        print(f"[map-postclose] live OpenClaw token len={len(token)}")
-    if Path("/home/gha/.openclaw/openclaw.json").exists():
-        os.environ["OPENCLAW_GATEWAY_URL"] = "http://127.0.0.1:18789"
-        config.OPENCLAW_GATEWAY_URL = "http://127.0.0.1:18789"
-        print("[map-postclose] OPENCLAW_GATEWAY_URL -> http://127.0.0.1:18789")
+    """GitHub OPENCLAW_TOKEN is often the 64-char secret that 401s."""
+    config.align_openclaw_token(force=True)
 
 
 def _chat(system: str, user: str, target_date: str, stage: str,

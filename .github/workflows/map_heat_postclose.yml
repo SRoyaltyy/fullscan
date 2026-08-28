@@ -35,9 +35,11 @@ jobs:
     runs-on: [self-hosted, ecs]
     timeout-minutes: 360
     env:
-      OPENCLAW_TIMEOUT: "1800"
+      OPENCLAW_TIMEOUT: "10800"
       MAP_POSTCLOSE_LOCK: /home/gha/fullscan-persist/locks/map-postclose.lock
       GROK_ONLY: "1"
+      HOME: /home/gha
+      FULLSCAN_HOME: /home/gha
     steps:
       - name: Back off if ECS systemd research owns the box
         run: |
@@ -69,15 +71,12 @@ jobs:
         run: pip install -r requirements.txt
       - name: Ensure OpenClaw chat classroom is open
         if: env.skip != 'yes'
-        continue-on-error: true
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
         run: bash scripts/enable_openclaw_chat.sh
       - name: Build next-session tables and exhaustive captain baseline
         if: env.skip != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}

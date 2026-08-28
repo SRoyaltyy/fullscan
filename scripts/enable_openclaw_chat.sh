@@ -63,12 +63,28 @@ echo "env_OPENCLAW_TOKEN=$(fingerprint "$ENV_TOKEN")"
 echo "env_OPENCLAW_GATEWAY_TOKEN=$(fingerprint "$GW_ENV_TOKEN")"
 echo "json_token=$(fingerprint "$CFG_TOKEN")"
 
-# Prefer the json token. Env secrets are often stale after a gateway restart.
-TOKEN="$CFG_TOKEN"
-if [ -z "$TOKEN" ]; then TOKEN="$GW_ENV_TOKEN"; fi
-if [ -z "$TOKEN" ]; then TOKEN="$ENV_TOKEN"; fi
+# Prefer 48-char live json. 64-char GitHub secret is the 401 path.
+pick_token() {
+  local t best=""
+  for t in "$CFG_TOKEN" "$GW_ENV_TOKEN" "$ENV_TOKEN"; do
+    [ -n "$t" ] || continue
+    if [ ${#t} -eq 48 ]; then
+      echo "$t"
+      return
+    fi
+    if [ -z "$best" ] && [ ${#t} -ne 64 ]; then
+      best="$t"
+    fi
+  done
+  if [ -n "$best" ]; then echo "$best"; return; fi
+  echo "${CFG_TOKEN:-${GW_ENV_TOKEN:-$ENV_TOKEN}}"
+}
+TOKEN="$(pick_token)"
 echo "using_token=$(fingerprint "$TOKEN")"
 echo "token_set=$([ -n "$TOKEN" ] && echo yes || echo no)"
+if [ ${#TOKEN} -eq 64 ]; then
+  echo "WARN: using 64-char token (GitHub secret / 401 path). Want 48-char live json."
+fi
 
 # Push the LIVE token to later GH steps so Python does not use the stale secret.
 if [ -n "${GITHUB_ENV:-}" ] && [ -n "$TOKEN" ]; then
@@ -108,12 +124,21 @@ wait_port() {
 }
 
 chat_ping() {
-  # Try Bearer, then x-api-key, then the other candidate tokens.
-  local tokens=("$TOKEN")
-  [ -n "$CFG_TOKEN" ] && [ "$CFG_TOKEN" != "$TOKEN" ] && tokens+=("$CFG_TOKEN")
-  [ -n "$GW_ENV_TOKEN" ] && [ "$GW_ENV_TOKEN" != "$TOKEN" ] && tokens+=("$GW_ENV_TOKEN")
-  [ -n "$ENV_TOKEN" ] && [ "$ENV_TOKEN" != "$TOKEN" ] && tokens+=("$ENV_TOKEN")
+  # Try Bearer, then x-api-key. 48-char live first; 64-char secret last.
+  local first=() mid=() last=() seen="|"
   local t hdr code
+  for t in "$TOKEN" "$CFG_TOKEN" "$GW_ENV_TOKEN" "$ENV_TOKEN"; do
+    [ -n "$t" ] || continue
+    case "$seen" in
+      *"|$t|"*) continue ;;
+    esac
+    seen="${seen}${t}|"
+    if [ ${#t} -eq 48 ]; then first+=("$t")
+    elif [ ${#t} -eq 64 ]; then last+=("$t")
+    else mid+=("$t")
+    fi
+  done
+  local tokens=("${first[@]}" "${mid[@]}" "${last[@]}")
   for t in "${tokens[@]}"; do
     [ -n "$t" ] || continue
     for hdr in bearer xapikey; do
