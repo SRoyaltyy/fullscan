@@ -1,8 +1,8 @@
 {
-  "ok": false,
-  "n_fail": 1,
+  "ok": true,
+  "n_fail": 0,
   "grok_busy": false,
-  "updated_at": "2026-08-28T05:41:28.687889-04:00",
+  "updated_at": "2026-08-28T15:54:36.998969-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -18,10 +18,10 @@
       "id": "process",
       "name": "OpenClaw process",
       "group": "box",
-      "status": "WARN",
+      "status": "OK",
       "required": true,
-      "detail": "pid=152994 port=up",
-      "action": "heal"
+      "detail": "pid=152994 pong ok",
+      "action": "none"
     },
     {
       "id": "gateway",
@@ -45,10 +45,10 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "no PONG in body Hey. I just came online. Who am I? Who are you?\n\nThis model=openclaw/default",
-      "action": "heal"
+      "detail": "PONG model=openclaw/default",
+      "action": "none"
     },
     {
       "id": "model",
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "WARN",
-      "required": false,
-      "detail": "401 in last packet 2026-08-26_preopen_status.json, 2026-08-28_map_heat.json \u2014 not live",
+      "status": "OK",
+      "required": true,
+      "detail": "live PONG 200 \u2014 last packet 401 is history",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=queued systemd=exit-code",
+      "detail": "latest=success systemd=exit-code",
       "action": "none"
     },
     {
@@ -167,8 +167,5 @@
       "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-28_map_heat.json; 403 in 2026-08-28_pipeline_health_postclose.json, 2026-08-28_pipeline_health_postclose.json; DeepSeek fallback in 2",
       "action": "none"
     }
-  ],
-  "healed": [
-    "enable_openclaw_chat.sh exit=0 {\"id\":\"chatcmpl_1d8f15fc-9b3b-45f4-97e2-25dd958e3c40\",\"object\":\"chat.completion\",\"created\":1787910043,\"model\":\"openclaw/default\",\"choices\":[{\"index\":0,\"message\""
   ]
 }
