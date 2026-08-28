@@ -2,7 +2,7 @@
   "ok": true,
   "n_fail": 0,
   "grok_busy": false,
-  "updated_at": "2026-08-28T01:31:00.497841-04:00",
+  "updated_at": "2026-08-28T04:57:44.020933-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -15,12 +15,21 @@
       "action": "none"
     },
     {
+      "id": "process",
+      "name": "OpenClaw process",
+      "group": "box",
+      "status": "OK",
+      "required": true,
+      "detail": "pid=152994 pong ok",
+      "action": "none"
+    },
+    {
       "id": "gateway",
       "name": "OpenClaw gateway",
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "active",
+      "detail": "active pid=152994 alive",
       "action": "none"
     },
     {
@@ -38,7 +47,7 @@
       "group": "classroom",
       "status": "OK",
       "required": true,
-      "detail": "model=openclaw/default",
+      "detail": "PONG model=openclaw/default",
       "action": "none"
     },
     {
@@ -52,11 +61,38 @@
     },
     {
       "id": "token",
-      "name": "OpenClaw token",
+      "name": "Token 48 vs 64",
+      "group": "classroom",
+      "status": "WARN",
+      "required": true,
+      "detail": "json=48 env=48 \u2014 preopen_all.yml injects 64-char GitHub secret",
+      "action": "heal"
+    },
+    {
+      "id": "timeout",
+      "name": "Grok turn timeout",
       "group": "classroom",
       "status": "OK",
       "required": true,
-      "detail": "live_len=48",
+      "detail": "all 10800s yaml=preopen_all.yml:10800,preopen_all.yml:10800,map_heat_postclose.yml:10800,ecs_preopen.sh:10800,ecs_map_postclose.sh:10800",
+      "action": "none"
+    },
+    {
+      "id": "http401",
+      "name": "HTTP 401",
+      "group": "classroom",
+      "status": "OK",
+      "required": true,
+      "detail": "live PONG 200 \u2014 last packet 401 is history",
+      "action": "none"
+    },
+    {
+      "id": "grok_only",
+      "name": "GROK_ONLY",
+      "group": "classroom",
+      "status": "WARN",
+      "required": false,
+      "detail": "preopen_all.yml still injects DEEPSEEK_API_KEY \u2014 GROK_ONLY must block it",
       "action": "none"
     },
     {
@@ -80,20 +116,57 @@
     {
       "id": "preopen_timer",
       "name": "Pre-open timer",
-      "group": "clock",
+      "group": "preopen",
       "status": "OK",
       "required": true,
       "detail": "enabled",
       "action": "none"
     },
     {
+      "id": "preopen_run",
+      "name": "Pre-open last run",
+      "group": "preopen",
+      "status": "WARN",
+      "required": false,
+      "detail": "latest=success systemd=exit-code",
+      "action": "none"
+    },
+    {
       "id": "postclose_timer",
       "name": "Post-close timer",
-      "group": "clock",
+      "group": "postclose",
       "status": "OK",
       "required": true,
       "detail": "enabled",
       "action": "none"
+    },
+    {
+      "id": "postclose_run",
+      "name": "Post-close last run",
+      "group": "postclose",
+      "status": "WARN",
+      "required": false,
+      "detail": "latest=cancelled",
+      "action": "none"
+    },
+    {
+      "id": "http403",
+      "name": "HTTP 403",
+      "group": "postclose",
+      "status": "FAIL",
+      "required": false,
+      "detail": "403 in 2026-08-28_pipeline_health_postclose.json, 2026-08-28_pipeline_health_postclose.json",
+      "action": "none"
+    },
+    {
+      "id": "stub",
+      "name": "Packet stubs",
+      "group": "postclose",
+      "status": "FAIL",
+      "required": false,
+      "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-28_map_heat.json; 403 in 2026-08-28_pipeline_health_postclose.json, 2026-08-28_pipeline_health_postclose.json; DeepSeek fallback in 2",
+      "action": "none"
     }
-  ]
+  ],
+  "healed": []
 }
