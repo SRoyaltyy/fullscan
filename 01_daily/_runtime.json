@@ -1,0 +1,99 @@
+{
+  "ok": false,
+  "n_fail": 5,
+  "grok_busy": false,
+  "updated_at": "2026-08-28T01:28:55.919415-04:00",
+  "source": "runtime_status",
+  "doors": [
+    {
+      "id": "ecs",
+      "name": "ECS box",
+      "group": "box",
+      "status": "OK",
+      "required": true,
+      "detail": "this job is on ecs-openclaw",
+      "action": "none"
+    },
+    {
+      "id": "gateway",
+      "name": "OpenClaw gateway",
+      "group": "box",
+      "status": "FAIL",
+      "required": true,
+      "detail": "Failed to connect to bus: $DBUS_SESSION_BUS_ADDRESS and $XDG_RUNTIME_DIR not defined (consider using --machine=<user>@.host --user to connect to bus of other user)",
+      "action": "heal"
+    },
+    {
+      "id": "port",
+      "name": "Port 18789",
+      "group": "classroom",
+      "status": "OK",
+      "required": true,
+      "detail": "http://127.0.0.1:18789",
+      "action": "none"
+    },
+    {
+      "id": "pong",
+      "name": "PONG",
+      "group": "classroom",
+      "status": "FAIL",
+      "required": true,
+      "detail": "http=0 timed out",
+      "action": "heal"
+    },
+    {
+      "id": "model",
+      "name": "Classroom model",
+      "group": "classroom",
+      "status": "FAIL",
+      "required": true,
+      "detail": "no 200 chat",
+      "action": "heal"
+    },
+    {
+      "id": "token",
+      "name": "OpenClaw token",
+      "group": "classroom",
+      "status": "OK",
+      "required": true,
+      "detail": "live_len=48",
+      "action": "none"
+    },
+    {
+      "id": "oauth",
+      "name": "xAI auth",
+      "group": "auth",
+      "status": "WARN",
+      "required": true,
+      "detail": "Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fallbacks (0) : - Image",
+      "action": "reauth"
+    },
+    {
+      "id": "api_key",
+      "name": "XAI_API_KEY",
+      "group": "auth",
+      "status": "WARN",
+      "required": false,
+      "detail": "missing \u2014 OAuth dies ~6h",
+      "action": "none"
+    },
+    {
+      "id": "preopen_timer",
+      "name": "Pre-open timer",
+      "group": "clock",
+      "status": "FAIL",
+      "required": true,
+      "detail": "disabled",
+      "action": "heal"
+    },
+    {
+      "id": "postclose_timer",
+      "name": "Post-close timer",
+      "group": "clock",
+      "status": "FAIL",
+      "required": true,
+      "detail": "disabled",
+      "action": "heal"
+    }
+  ]
+}
