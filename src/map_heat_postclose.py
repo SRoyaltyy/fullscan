@@ -176,7 +176,8 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
     _align_openclaw_token()
     config.require_llm()
     heat = load_heat(target_date)
-    print(f"[map-postclose] heat industries={len(heat.get(\"industries\") or [])}", flush=True)
+    n_ind = len(heat.get("industries") or [])
+    print(f"[map-postclose] heat industries={n_ind}", flush=True)
     # Re-fetch the completed session in memory (do not overwrite its morning
     # artifact) so actual-vs-consensus becomes tomorrow's learning context.
     try:
