@@ -16,6 +16,7 @@ from src.pipeline_health import (
     _prev_weekday,
     _should_heal,
     _workflow_for_step,
+    oauth_verdict,
     packet_dates,
     pick_job,
 )
@@ -122,7 +123,7 @@ def test_clock_yml_not_healable():
     assert not _should_heal(c3)
 
 
-def test_oauth_blocks_grok_healable():
+def test_oauth_does_not_block_grok_healable():
     assert "map_heat_postclose.yml" in GROK_WORKFLOWS
     r = Report(job="postclose", date="2026-08-27",
                source_date="2026-08-27", target_date="2026-08-28")
@@ -136,13 +137,22 @@ def test_oauth_blocks_grok_healable():
               status="FAIL", required=True, detail="missing"),
     ]
     heal = {c.step for c in _healable(r)}
-    assert "postclose.baseline_json" not in heal
-    assert "book.weather" in heal  # ubuntu, OAuth does not block
-    r2 = Report(job="postclose", date="2026-08-27",
-                source_date="2026-08-27", target_date="2026-08-28")
-    r2.checks = r.checks[1:]  # no oauth fail
-    heal2 = {c.step for c in _healable(r2)}
-    assert "postclose.baseline_json" in heal2
+    assert "postclose.baseline_json" in heal
+    assert "book.weather" in heal
+    assert "runtime.oauth" not in heal
+
+
+def test_oauth_verdict():
+    st, req, _ = oauth_verdict(0, False)
+    assert (st, req) == ("OK", True)
+    st, req, _ = oauth_verdict(2, False)
+    assert (st, req) == ("WARN", False)  # expiring, still usable
+    st, req, _ = oauth_verdict(1, True)
+    assert (st, req) == ("WARN", False)  # expired text but PONG works
+    st, req, _ = oauth_verdict(1, False)
+    assert (st, req) == ("FAIL", True)
+    st, req, _ = oauth_verdict(None, True)
+    assert st == "WARN"
 
 
 if __name__ == "__main__":

@@ -10,7 +10,9 @@ job (systemd or detached python on ECS; GitHub dispatch only for ubuntu
 Finviz/weather/AB/Pages) → wait for the missing files → re-audit.
 
 Does NOT scrape Finviz HTML on ECS (Aliyun 403). Does NOT PONG OpenClaw
-while a Grok job is already running. xAI OAuth expiry is human-only.
+while a Grok job is already running. OAuth "expiring" is a warning, not a
+stop. Missing files still start their owning job. Permanent xAI auth is an
+API key in ~/.openclaw/.env (OAuth access tokens die ~6h).
 
 Trash that counts as FAIL:
   missing / empty / garbled JSON
@@ -149,6 +151,7 @@ GROK_NEEDLES = (
 )
 
 HUMAN_STEPS = {"runtime.oauth"}
+OPENCLAW_ENV = Path("/home/gha/.openclaw/.env")
 
 
 @dataclass
@@ -523,6 +526,83 @@ def _models_status() -> str:
         return str(e)
 
 
+def _models_check() -> tuple[int | None, str]:
+    """openclaw models status --check: 0 ok, 1 expired/missing, 2 expiring."""
+    try:
+        r = subprocess.run(
+            ["openclaw", "models", "status", "--check"],
+            capture_output=True, text=True, timeout=20,
+            env={**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"})
+        blob = ((r.stdout or "") + "\n" + (r.stderr or "")).strip()
+        return r.returncode, blob
+    except (OSError, subprocess.SubprocessError) as e:
+        return None, str(e)
+
+
+def oauth_verdict(check_code: int | None, pong_ok: bool) -> tuple[str, bool, str]:
+    """Return (status, required, reason). Never treat 'expiring' as dead.
+
+    code 0 = ok, 2 = expiring (still usable), 1 = expired/missing.
+    If the classroom still PONGs, we do not block Grok jobs.
+    """
+    if check_code == 0:
+        return "OK", True, "models status --check ok"
+    if check_code == 2:
+        return "WARN", False, "xAI token expiring but still usable"
+    if pong_ok:
+        return "WARN", False, (
+            "status says expired/unknown but OpenClaw PONG works — "
+            "starting Grok jobs anyway")
+    if check_code == 1:
+        return "FAIL", True, (
+            "xAI OAuth expired. OAuth cannot be made permanent (~6h access "
+            "token; refresh is blocked). Permanent: XAI_API_KEY from "
+            "console.x.ai in ~/.openclaw/.env")
+    return "WARN", False, "could not parse openclaw models status --check"
+
+
+def _read_xai_api_key() -> str:
+    env = (os.environ.get("XAI_API_KEY") or "").strip()
+    if env.startswith("xai-"):
+        return env
+    for path in (OPENCLAW_ENV, Path(os.path.expanduser("~/.openclaw/.env"))):
+        try:
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if line.startswith("XAI_API_KEY="):
+                    val = line.split("=", 1)[1].strip().strip('"').strip("'")
+                    if val.startswith("xai-"):
+                        return val
+        except OSError:
+            continue
+    return ""
+
+
+def _ensure_xai_api_key() -> str | None:
+    """Install a long-lived console key onto the gateway host if we have one."""
+    key = _read_xai_api_key()
+    if not key:
+        return None
+    os.environ["XAI_API_KEY"] = key
+    path = OPENCLAW_ENV
+    path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        existing = path.read_text(encoding="utf-8") if path.exists() else ""
+    except OSError:
+        existing = ""
+    lines = [ln for ln in existing.splitlines() if not ln.startswith("XAI_API_KEY=")]
+    lines.append(f"XAI_API_KEY={key}")
+    body = "\n".join(lines).rstrip() + "\n"
+    if existing == body:
+        os.environ["XAI_API_KEY"] = key
+        return None
+    path.write_text(body, encoding="utf-8")
+    try:
+        path.chmod(0o600)
+    except OSError:
+        pass
+    return f"wrote XAI_API_KEY to {path} (permanent, no OAuth expiry)"
+
+
 def _file_contains(path: Path, needle: str) -> bool:
     try:
         return needle in path.read_text(encoding="utf-8", errors="ignore")
@@ -663,18 +743,22 @@ def check_runtime(report: Report, skip_probe: bool = False) -> None:
         _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
              group="runtime", status="FAIL", required=True, detail="port down")
 
-    st = _models_status().lower()
-    if "expir" in st and "xai" in st:
-        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
-             group="runtime", status="FAIL", required=True,
-             detail="HUMAN: openclaw models auth login --provider xai  (cannot auto-heal)")
-    elif "xai" in st:
-        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
-             group="runtime", status="OK", required=True, detail="xai profile present")
-    else:
-        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
+    code, blob = _models_check()
+    pong_ok = any(c.step == "runtime.pong" and c.status == "OK" for c in report.checks)
+    st, req, why = oauth_verdict(code, pong_ok)
+    extra = (blob or "").replace("\n", " ")[:120]
+    _add(report, step="runtime.oauth", name="xAI auth (OAuth or API key)",
+         group="runtime", status=st, required=req,
+         detail=why + (f" | {extra}" if extra and st != "OK" else ""))
+    key = _read_xai_api_key()
+    if key:
+        _add(report, step="runtime.api_key", name="XAI_API_KEY on this box (permanent)",
+             group="runtime", status="OK", required=False,
+             detail=f"present tail={_tail(key)}")
+    elif st != "OK":
+        _add(report, step="runtime.api_key", name="XAI_API_KEY on this box (permanent)",
              group="runtime", status="WARN", required=False,
-             detail="could not parse openclaw models status")
+             detail="missing — OAuth dies ~6h. Put a console.x.ai key in ~/.openclaw/.env")
 
     grok_only = config.grok_only()
     _add(report, step="runtime.grok_only", name="GROK_ONLY (this health process)",
@@ -1246,6 +1330,9 @@ def _heal_env(extra: dict[str, str] | None = None) -> dict[str, str]:
     if n == LIVE_TOKEN_LEN:
         env["OPENCLAW_TOKEN"] = live
         env["OPENCLAW_GATEWAY_TOKEN"] = live
+    key = _read_xai_api_key()
+    if key:
+        env["XAI_API_KEY"] = key
     if extra:
         env.update(extra)
     return env
@@ -1348,16 +1435,7 @@ def _should_heal(c: Check) -> bool:
 
 
 def _healable(report: Report) -> list[Check]:
-    oauth = _oauth_dead(report)
-    out: list[Check] = []
-    for c in report.checks:
-        if not _should_heal(c):
-            continue
-        wf = _workflow_for_step(c.step)
-        if oauth and wf in GROK_WORKFLOWS:
-            continue
-        out.append(c)
-    return out
+    return [c for c in report.checks if _should_heal(c)]
 
 
 def _human_fails(report: Report) -> list[Check]:
@@ -1369,6 +1447,10 @@ def fix_local(report: Report) -> list[str]:
     os.environ["GROK_ONLY"] = "1"
     os.environ.setdefault("HOME", "/home/gha")
     actions: list[str] = []
+    installed = _ensure_xai_api_key()
+    if installed:
+        actions.append(installed)
+        print(f"[heal] {installed}", flush=True)
     if grok_busy():
         print("[heal] Grok job running — will not bounce OpenClaw", flush=True)
         return actions
@@ -1376,8 +1458,9 @@ def fix_local(report: Report) -> list[str]:
         c.status == "FAIL" and c.required and c.step.startswith("runtime.")
         and c.step != "runtime.oauth"
         for c in report.checks)
-    if door_bad and ENABLE_CHAT.exists():
-        print("[heal] OpenClaw door red — enable_openclaw_chat.sh", flush=True)
+    wrote_key = bool(installed and installed.startswith("wrote"))
+    if (door_bad or wrote_key) and ENABLE_CHAT.exists():
+        print("[heal] OpenClaw door/auth — enable_openclaw_chat.sh", flush=True)
         try:
             r = subprocess.run(
                 ["bash", str(ENABLE_CHAT)], cwd=str(ROOT),
@@ -1414,21 +1497,18 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
     if not isinstance(state, dict):
         state = {}
     today = dict(state.get(date) or {})
-    oauth = _oauth_dead(report)
 
     for c in report.checks:
         if not _should_heal(c):
-            if c.step in HUMAN_STEPS and c.status == "FAIL" and c.required:
-                print(f"[heal] {c.step}: human-only — {c.detail}", flush=True)
+            if c.step == "runtime.oauth" and c.status == "FAIL":
+                print(f"[heal] {c.step}: {c.detail} — still starting Grok jobs",
+                      flush=True)
             continue
         wf = _workflow_for_step(c.step)
         if not wf or wf == "pipeline_health.yml" or wf == "door":
             continue
         if wf in started:
             print(f"[heal] {wf} already started this run — wait", flush=True)
-            continue
-        if oauth and wf in GROK_WORKFLOWS:
-            print(f"[heal] xAI OAuth expired — will not start {wf}", flush=True)
             continue
         if wf == "preopen_all.yml" and (
                 "map_heat_postclose.yml" in started
@@ -1586,8 +1666,9 @@ def render(report: Report, fix_actions: list[str] | None = None) -> str:
         "Heal loop: audit → fix OpenClaw door / timers on this box → "
         "start systemd or spawn the owning ECS job (ubuntu workflows are "
         "GH-dispatched with force=true) → wait for files → re-audit. "
-        "Finviz HTML is never scraped on ECS. xAI OAuth expiry needs a human "
-        "(`openclaw models auth login --provider xai`).",
+        "Finviz HTML is never scraped on ECS. xAI OAuth dies ~6h and cannot "
+        "be refreshed (Cloudflare). Permanent auth is XAI_API_KEY in "
+        "`~/.openclaw/.env`. An expiring token does not block Grok jobs.",
         "",
         "| status | step | group | required | detail | path |",
         "| --- | --- | --- | --- | --- | --- |",
@@ -1666,9 +1747,6 @@ def run(job: str, date: str | None, source: str | None, target: str | None,
         if report.ok or time.time() >= deadline:
             break
         if not _healable(report):
-            if _oauth_dead(report):
-                print("[heal] xAI OAuth expired — Grok jobs will not start. "
-                      "HUMAN: openclaw models auth login --provider xai", flush=True)
             print("[heal] nothing left to auto-heal — stopping", flush=True)
             break
         print(f"\n== HEAL ROUND {i}/{rounds}  fails={report.n_fail} ==", flush=True)
