@@ -2,149 +2,195 @@
 
 Actuals: {'etf': 'XLK', 'pct': 3.155767002859644, 'spy_pct': 0.6552786111251541, 'rel': 2.50048839173449, 'open': 186.47000122070312, 'close': 188.61000061035156}
 
-Memory search is paused (index was built with a different embedding setup). Review below uses the injected morning note, deterministic actuals, and live sources.
+Memory search is paused (index metadata missing), so this review uses the injected morning packet, deterministic actuals, and live sources only.
 
 ## 0. Facts
 
-- **XLK** 2026-08-27: open **186.47**, close **188.61**, **+3.156%**
-- **SPY**: **+0.655%**
-- **Relative**: **+2.500%**
-- **Path:** prior close implied ~**182.84**; gap to 186.47 is already **~+2.0%** at the open, then a further **~+1.15%** open-to-close. Not a fade.
-- **Direction:** up. **Magnitude:** notable (high-end; not the 08-18 crash template).
-- Morning call: **up / mild** (pipeline total 4.0, S0–S4 1/1/0/−1/1, mult 1.0). Direction HIT, magnitude MISS.
+XLK **+3.16%** (open **186.47** → close **188.61**). SPY **+0.66%**. Relative **+2.50%**. Path: **gap-and-go**, not a V off a red open. Prior close was ~**$182.84**; cash opened already ~**+2.0%**, then ground another **~+1.15%** open-to-close and finished near the high. NDX **+1.57%** was the same shape (trend up, close near the day high). Direction **up**. Magnitude **notable** (not mild; not severe).
+
+Only **1 of 11** GICS sector ETFs closed up. XLK was the entire leadership tape.
+
+CLAIM: XLK closed $188.61, +3.16% on 2026-08-27; SPY $771.10, +0.66%.
+URL: https://www.thetrading.tools/sector-performance
+PUBLISHED: 2026-08-27 close
+QUOTE: “XLK $188.61 +3.16% … SPY $771.10 +0.66% … 1 of 11 sectors closed higher. The daily leader was XLK at +3.16%.”
+SUMMARY: Confirms deterministic ETF/SPY prints and the one-sector-up tape.
+
+CLAIM: Nasdaq Composite +1.57% to 26,541; S&P +0.72% to 7,730; Dow +0.20%.
+URL: https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-tech-strength-powers-nasdaq-higher-as-nvidia-leads-rally/
+PUBLISHED: 2026-08-27
+QUOTE: “Gaining 0.71% to 7,730, the S&P 500 advanced alongside a 1.57% jump to 26,541 for the Nasdaq Composite … Dow … rose 0.20% to 53,569.”
+SUMMARY: Cap-weighted tech led; the broad tape was not a risk-on melt-up.
+
+---
 
 ## 1. What drove the sector
 
-Primary driver was **overnight mega-cap AI-infra confirmation**, not same-day PCE.
+**Primary (taxonomy spine): semiconductor / AI-infra demand confirmation — Nvidia’s Wed-after-close print, digested in Thursday cash.**
 
-NVDA reported **after the close on Wednesday 8/26** (Q2 FY27): revenue **$96.2B** (+18% q/q, +106% y/y), data center **$89.0B**, non-GAAP EPS **$2.22**, Q3 guide **$108B ±2%** (Street ~$104B), and a **~70% FY28 revenue-growth** comment. Thursday NVDA **~+9%**, **~$440B** of cap added. That is the load-bearing XLK factor (NVDA ~**14%** of XLK). Semis followed (AVGO ~+4.5%, INTC ~+4.3%). Nasdaq **~+1.57%** vs SPY **~+0.66%** — tech-leading, not a beta-only drift.
+NVDA reported **2026-08-26 AHR**, not after the 8/27 close. Q2 FY27: revenue **$96.2B** (+106% y/y), data center **$89.0B** (+117% y/y), non-GAAP EPS **$2.22** vs ~$2.09, Q3 guide **$108.0B ±2%** (no China DC compute), FY28 growth commentary **~70%** and “demand much greater than 70% / supply-constrained.” Thursday NVDA **~+8.7%** (~$440B cap added). That is the load-bearing XLK impulse.
 
-A **second, non-duplicate sleeve**: software/cyber prints from the same 8/26 after-close batch. CRM **+18%** on an 11% revenue print, cRPO **+14%**, FY27 guide raise, Agentforce ARR **>$1.5B**, plus a **$2.6B Anthropic mark**. CRWD also ripped (~+18–20%) on a beat/raise. Morning had treated software as a **low-weight** rotation; on this tape it was a real second engine, not the spine.
+This is **one AI-infra cluster**, not three spines: hyperscaler/AI spend upside + foundry/HBM tightness showed up as the *same* print (Huang “AI inflection,” Kress supply-constrained 70%, TSMC/memory still tight). Rubric DO NOT: do not let NVDA alone define XLK — but NVDA is ~**14%** of the ETF, AVGO **~+4.5%**, MSFT **~+1.8%**, and software (CRM **+22.6%**, CRWD **+20.5%**, IGV **~+5%**) confirmed the complex. That is sector, not a one-off ticker.
 
-**PCE was not the Thursday driver.** July PCE printed **Wednesday 8/26 8:30am EDT**: headline **+0.2% m/m / +3.7% y/y** (0.1ppt hot vs consensus), **core +0.2% / +3.3% in line**. That is a resolved, mostly-benign core print — not a live Thursday binary.
+**Secondary:** software net-retention / large-deal relief (CRM beat + Anthropic “Claudeforce”; Benioff “this is not the SaaSpocalypse”). Low XLK weight (CRM ~1.1%) so it is **not** the ETF math, but it removed the software-drag sleeve the morning treated as low-weight.
 
-Taxonomy: **hyperscaler/AI-infra spend confirmation** (NVDA beat + AWS 2M GPU comment + $108B guide) + **semiconductor demand** + **software large-deal/AI ARR**, with **crowded-long** failing to cap once the print cleared. Export-control / OpenAI-vs-NVDA competitive chatter did not price.
+**Not the driver:** July PCE. BEA printed **Wed 8/26 08:30 ET** — headline **+0.2% m/m / +3.7% y/y** (a touch hot), core **+0.2% / +3.3%** in line. Sticky inflation + Warsh Jackson Hole **Fri 8/28** capped *SPY/duration*, not XLK. Session yields **backed up** (~10Y 4.66–4.67, +2 bp) and oil **reversed up** — the opposite of the morning easing/oil-slide snapshot. Tech decoupled.
+
+**Crowding did not cap the move.** BofA FMS crowded-long + a confirmed mega-cap beat produced a squeeze, not de-risk. AMD **~−0.9%** and CoreWeave **flat** show the complex was **not uniform**; XLK still printed +3% because the top weights ripped.
+
+CLAIM: Nvidia Q2 revenue $96.2B, DC $89.0B, Q3 outlook $108.0B ±2%.
+URL: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027
+PUBLISHED: 2026-08-26 (company PR; quarter ended July 26, 2026)
+QUOTE: “revenue for the second quarter ended July 26, 2026, of $96.2 billion, up 18% from the previous quarter and up 106% from a year ago. … Revenue is expected to be $108.0 billion, plus or minus 2%.”
+SUMMARY: The confirmed mega-cap beat/guide that Thursday cash opened on.
+
+CLAIM: NVDA +~9% Thursday, ~$440B of market cap; AVGO/INTC also bid; CoreWeave flat.
+URL: https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html
+PUBLISHED: 2026-08-27
+QUOTE: “Nvidia shares rose nearly 9% Thursday after the chip giant's revenue guidance reassured investors that artificial intelligence demand will remain strong. The surge added about $440 billion to the chip giant's market cap.”
+SUMMARY: Primary price impulse for XLK/NDX.
+
+CLAIM: Salesforce +22% Thursday; IGV ~+5%; software cluster bid.
+URL: https://www.cnbc.com/2026/08/27/salesforce-stock-soars-on-track-for-second-best-day-ever.html
+PUBLISHED: 2026-08-27
+QUOTE: “Shares of Salesforce jumped 22% Thursday … The iShares Expanded Tech-Software ETF climbed roughly 5%.”
+SUMMARY: Secondary software HIT; not the XLK weight, but it stopped software from being a drag.
+
+CLAIM: July PCE was Wednesday, not Thursday; core 3.3% in line, headline 3.7% a tenth hot.
+URL: https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026
+PUBLISHED: 2026-08-26
+QUOTE: “From the preceding month, the PCE price index for July increased 0.2 percent. Excluding food and energy, the PCE price index also increased 0.2 percent. … From the same month one year ago, the PCE price index for July increased 3.7 percent. Excluding food and energy … 3.3 percent.”
+SUMMARY: PCE was background sticky-inflation, not the 8/27 XLK catalyst.
+
+---
 
 ## 2. Audit of morning S0–S4 (use morning numbers, do not rewrite them)
 
-| Sleeve | Morning | vs Thursday reality |
-|---|---|---|
-| **S0 +1** | NQ +0.55% / ES +0.31%, real yields easing, oil down, VIX calm; **capped by “PCE today + Collins”** | The +1 *tilt* was the right sign. The **cap was invalid for 8/27**: PCE had already printed 8/26, core in-line. Collins leftover hawkishness did not dominate a confirmed NVDA beat. S0 was too conservative as a *magnitude* cap, not as a direction. |
-| **S1 +1** | Fresh AI-infra positives vs **NVDA pre-earnings de-risk** + OpenAI-chip narrative | Calendar error. NVDA was **already out**. De-risk was Wednesday’s setup, not Thursday’s. 08-12’s “fresh market-confirmed mega-cap beat” **was on the tape at the open**. S1 should have been **+2**, not mixed +1. OpenAI-vs-NVDA did not offset. |
-| **S2 0** | 1d rel +0.58% but 3d/1w mixed; ARM/ADI/AMD vs soft NVDA | Leadership on the day was **not mixed**. NVDA, AVGO, INTC, CRM all bid. Neutral S2 understated confirmed leadership. |
-| **S3 −1** | Crowding + PCE/NVDA binary = near-term supply | Structural crowding was real (BofA FMS). It did **not** produce Thursday supply; event *resolution* produced a squeeze. The −1 is why magnitude stayed **mild** in the call — that was the costly sleeve. |
-| **S4 +1** | Prior 1d rel +0.58% as confirmation only | Fine as confirmation. Did not cause the miss. |
+Morning as written: **S0 +1, S1 +1, S2 0, S3 −1, S4 +1**, mult **1.0**, total **4.0**, call **up / mild**. Narrative and pipeline agreed on **up/mild**. Direction **HIT**. Magnitude **MISS** (actual **notable**).
 
-**Rules audit (as written in the morning, not restated after the close):**
-- **08-12 up/notable:** morning said all three legs **not** met. At Thursday open they **were** met: confirmed NVDA beat, core PCE already in-line, NQ futures **+0.55%**. This is the miss.
-- **08-21 reversal:** correctly blocked a forced down. Direction OK.
-- **08-18 severe:** correctly off (that template is a crash tape). Actual +3.16% is **notable**, not 08-18 severe.
-- **08-14 stale-positive:** correctly refused to upgrade on circular-financing chatter. The live factor was the **print**, not the financing narrative.
-- **08-13/08-17:** correctly treated 1d rel as confirmation, not a booster.
-- **Divergence:** morning said leading and S4 agreed. True, and irrelevant to the magnitude miss.
+The binding error is a **wrong event calendar**, not a wrong sign. Morning treated 8/27 as “PCE due today + NVDA after the close today / de-risk.” Both events had already printed **8/26**.
+
+| Sleeve | Morning | vs 8/27 reality | Verdict |
+|---|---|---|---|
+| **S0 +1** | NQ +0.55%, easing real yields, oil down, VIX calm; PCE binary + Collins cap at +1 | PCE **already out**. Yields **up** ~+2 bp, oil **reversed up**. Tech still bid because NVDA, not because the curve eased | **Right sign, wrong story.** S0 was not a two-sided PCE day. For XLK the live macro was “narrow tech risk-on vs sticky inflation.” +1 did not block the call; it blocked **notable**. |
+| **S1 +1** | Stale-positive AI-infra spine; live mix of CoreWeave/Berkshire/ARM/upgrades vs OpenAI-vs-NVDA narrative and **NVDA pre-earnings de-risk** | The load-bearing factor was a **confirmed** NVDA beat/guide. OpenAI-chip narrative did not price. Software was a real HIT, not low-weight noise | **Too low.** This was the 08-12 mega-cap-beat sleeve. Should have been **+2 / +3**, one cluster. |
+| **S2 0** | 1d rel +0.58% but 3d/1w mixed; ARM/ADI/AMD up, NVDA “soft” | Leadership **narrow**: NVDA/AVGO/MSFT up, AAPL ~flat, **AMD red**, CoreWeave flat. ETF +3% on concentration, not equal-weight expansion | **Correct sleeve.** Breadth did not confirm a broad tech bid. Do not rewrite S2 to +2 after the fact. |
+| **S3 −1** | Crowding + PCE/NVDA binary = de-risk/supply | Crowding + **confirmed print** = squeeze. Binary was already resolved overnight | **Wrong sign for a post-print day.** −1 is why they capped mild. |
+| **S4 +1** | 1d rel +0.58% confirms up | Confirmation of *direction* only. It could not see the overnight gap | **Fine as confirmation.** Not the thesis, and it shouldn’t have been. |
+
+**08-12 up/notable gate — this is the autopsy.** Morning stated the gate correctly: *fresh market-confirmed mega-cap beat + benign-enough macro + positive futures → notable; else mild.* Then they scored the gate as **not met** because “NVDA prints after close today.” By cash open the beat **was** market-confirmed, NQ was green (later premarket NQ **+1.19%** vs the stale +0.55% snapshot), and sticky PCE did not veto XLK. The gate was live. They left magnitude at mild on a calendar error.
+
+Other lessons:
+- **08-14 stale-positive:** correctly refused to upgrade Nvidia financing/circular-capital. The *earnings print* is not that rule.
+- **08-21 reversal:** positive-futures leg was real and they used it for **up** — that part worked.
+- **08-18 severe:** correctly off.
+- **08-10 Hormuz:** oil was down in the *morning* snapshot and **up** on the close; irrelevant to XLK today.
+- **Single-ticker rule:** they were right not to set XLK = NVDA *before* the print. After a confirmed beat, NVDA is still not the whole ETF — but ignoring a 14% weight’s overnight reprice is the opposite error.
+
+HIT_GRID: “Hyperscaler CapEx / semis / HBM” were one cluster (correctly noted in prose, still listed as three HITs). “Crowded long” HIT was real and **amplified** the squeeze rather than capping it. “Export controls” HIT did not show up in the tape.
+
+---
 
 ## 3. Interactions / double-count / knowable-at-open
 
-- **One spine, not three:** NVDA beat, hyperscaler capex comments, HBM/memory tightness, and Vera Rubin production are **one AI-infra cluster**. Do not score them separately. CoreWeave/Berkshire from the morning note were the same cluster and were **not** the Thursday driver.
-- **Second independent sleeve (not double-count):** CRM/software AI ARR is a different XLK sleeve. It **added** to NVDA rather than substituting for it. That interaction is why XLK **+3.16%** vs NVDA-weight math alone (~14% × ~9% ≈ **+1.3ppt**). Residual is other semis + software.
-- **Macro × sector:** slightly hot headline PCE did **not** cancel the earnings impulse. Core in-line + confirmed mega-cap beat = earnings over macro. Morning feared the opposite binary.
-- **Knowable at open: partially → should have been yes for notable.** NVDA and CRM were public after 8/26 close. What was **not** knowable was follow-through vs the prior **four** post-earnings NVDA fade days, or Warsh (Fri 8/28). Direction-up was knowable; **mild vs notable** was a process miss, not an information miss.
+**Amplification:** NVDA demand confirmation × AVGO/semi follow-through × CRM/CRWD software relief × XLK mega-cap weights = one **AI-infra + AI-application** impulse. Shared root. Do not count NVDA, AVGO, CRM, IGV, and VIX crush as five causes.
+
+**Offset / mask:** Sticky 3.7/3.3 PCE + Warsh Friday + oil rebound + slightly higher 10Y **capped SPY at +0.66%** and left 10/11 sectors red. That offset is why this looks like a sector day, not a broad risk-on day. It did **not** cap XLK.
+
+**Double-count to avoid in the rewrite:** CoreWeave deal + Berkshire hyperscaler + ARM/IBM + ADI/AMD upgrades were morning *pre-print* tape, not independent of the AI-infra spine, and they were **not** what moved the ETF +3%. Scoring them +1 while parking NVDA as “de-risk” inverted the weights.
+
+**Knowable at open: yes.**
+- NVDA PR + call: **Wed after close**.
+- CRM/CRWD: **same AHR window**.
+- PCE: **Wed 08:30**.
+- XLK **opened 186.47** vs ~182.84 prior — already a ~2% gap, i.e. already past “mild” before the cash grind.
+- What was **not** locked: the extra ~1.1% open-to-close extension and the exact +8.7% NVDA close. Magnitude **notable** was available at 9:30; **severe** was not required.
+
+A correct 8/27 open read was **up / notable** under the morning’s own 08-12 rule. **Up / mild** was the pre-print template applied one session late.
+
+---
 
 ## 4. Outliers inside the sector
 
-- **NVDA ~+9%:** index-relevant, not a single-name curiosity. XLK’s concentration makes this the ETF.
-- **CRM ~+18%:** software outlier; Anthropic mark inflated EPS, but cRPO/Agentforce/guide were fundamental. Low-weight sleeve, high residual.
-- **CRWD ~+18–20%:** cyber/AI-spend cousin; only partly inside XLK’s S&P-tech set.
-- **AVGO ~+4.5%, INTC ~+4.3%:** semi complex confirmation, not NVDA-only.
-- **CoreWeave flat** (CNBC) while NVDA ripped — intra-AI dispersion, opposite of “whole complex identical.”
-- OpenAI-custom-chip “threat” narrative: **priced as noise** on the day.
+This was **narrow leadership inside a green ETF**, not “ETF up / names flat” and not a uniform semi bid.
 
-### Evidence
+- **NVDA ~+8.7% to $227.98** — top XLK weight (~14%). Mechanical contribution ~**+1.2 ppt** of the +3.16%. Necessary, not sufficient.
+- **AVGO ~+4.5% to $371.54** — second-order AI-infra confirmation.
+- **MSFT ~+1.75% to $505.06** — hyperscaler bid, milder than chips.
+- **AAPL ~+0.35%** — did not carry the ETF.
+- **AMD ~−0.9%** — morning upgrade sleeve **failed** as a same-day booster.
+- **ARM ~+1.65%** — IBM/mainframe leftover, not the driver.
+- **CRM +22.6% / CRWD +20.5%** — software outliers; CRM is only ~1.1% of XLK (~**+0.25 ppt**). Narrative bigger than weight.
+- **CoreWeave flat** (CNBC) vs NVDA +9% — neocloud did not tag along. Single-name rule holds in both directions.
 
-CLAIM: July 2026 PCE printed 8/26, not 8/27; headline +0.2% m/m / +3.7% y/y, core +0.2% / +3.3%.  
-URL: https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026  
-PUBLISHED: 2026-08-26  
-QUOTE: “From the preceding month, the PCE price index for July increased 0.2 percent. Excluding food and energy, the PCE price index also increased 0.2 percent.” / “From the same month one year ago, the PCE price index for July increased 3.7 percent. Excluding food and energy, the PCE price index increased 3.3 percent.”  
-SUMMARY: Official BEA print was Wednesday. Morning’s “PCE due today” on Thursday was a calendar error.
+No equal-weight tech melt-up. Concentration + one confirmed spine.
 
-CLAIM: Headline PCE 0.1ppt hot vs consensus; core in line; futures/yields twitched, not a tech shock.  
-URL: https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html  
-PUBLISHED: 2026-08-26  
-QUOTE: “increased a seasonally adjusted 0.2% for the month, putting the annual inflation rate at 3.7%… Both were 0.1 percentage point above the Dow Jones consensus. But stripping out volatile food and energy costs, core PCE posted respective gains of 0.2% and 3.3%, in line with forecasts.”  
-SUMMARY: Asymmetric risk the morning feared (hot core) did not hit.
-
-CLAIM: NVDA Q2 FY27 beat and up-guide after close 8/26.  
-URL: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027  
-PUBLISHED: 2026-08-26  
-QUOTE: “revenue for the second quarter ended July 26, 2026, of $96.2 billion, up 18% from the previous quarter and up 106% from a year ago… GAAP and non-GAAP earnings per diluted share were $2.46 and $2.22… Revenue is expected to be $108.0 billion, plus or minus 2%.” Data center “$89.0 billion, up 18%… and up 117%.”  
-SUMMARY: Confirmed mega-cap beat was overnight information for the 8/27 cash session.
-
-CLAIM: Thursday NVDA ~+9%, ~$440B cap, chip peers bid.  
-URL: https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html  
-PUBLISHED: 2026-08-27  
-QUOTE: “Nvidia shares rose nearly 9% Thursday… The surge added about $440 billion to the chip giant’s market cap… Several chip stocks also rallied… Broadcom and Intel rising.”  
-SUMMARY: This is the XLK session, not a pre-print de-risk day.
-
-CLAIM: NVDA also guided FY28 ~70% growth; AWS 2M GPUs; Q3 $108B vs ~$104.2B Street.  
-URL: https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html  
-PUBLISHED: 2026-08-26  
-QUOTE: “Nvidia said it sees sales of $108 billion in the current quarter, plus or minus 2%. Analysts were expecting guidance of $104.2 billion.” / “Amazon Web Services will buy 2 million Nvidia GPUs.”  
-SUMMARY: Guide + hyperscaler demand, not just a beat-and-fade print.
-
-CLAIM: CRM +18% Thursday after 8/26 earnings; AI ARR and Anthropic gain.  
-URL: https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html  
-PUBLISHED: 2026-08-26 (reaction 8/27)  
-QUOTE: “Salesforce shares soared 18% in trading on Thursday… Earnings per share: $5.90 adjusted vs. $3.27 expected… Revenue: $11.35 billion vs. $11.32 billion expected… $2.6 billion gain on strategic investments from a stake in… Anthropic.”  
-SUMMARY: Software sleeve was a second driver, not a low-weight sideshow.
-
-CLAIM: Salesforce operating metrics (cRPO, Agentforce) were real, not only the mark-to-market.  
-URL: https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings/  
-PUBLISHED: 2026-08-26  
-QUOTE: “cRPO of $33.5 billion, up 14%… Revenue of $11.3 billion, up 11%… Agentforce ARR exceeded $1.5 billion, up over 240% Y/Y… Raises full year FY27 revenue guidance to $46.1 billion to $46.4 billion.”  
-SUMMARY: Software fundamental confirmation alongside NVDA.
-
-CLAIM: XLK ~+3.1–3.2% to ~$188.6 on 8/27.  
-URL: https://stocknear.com/etf/XLK/history  
-PUBLISHED: 2026-08-27 tape  
-QUOTE: (provider recap) close ~$188.58–$188.64, prior close $182.84, ~+3.14–3.17%.  
-SUMMARY: Matches deterministic actuals (close 188.61, +3.156%).
+---
 
 OUTCOME_BEGIN
 SECTOR: Technology
 ETF: XLK
-ETF_PCT: 3.156
-SPY_PCT: 0.655
-REL_PCT: 2.500
+ETF_PCT: 3.155767002859644
+SPY_PCT: 0.6552786111251541
+REL_PCT: 2.50048839173449
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: notable
-PRIMARY_DRIVER: Thursday follow-through on Wednesday-night NVDA beat/guide (~+9%), with CRM/software as a second sleeve
-KEY_INTERACTION: Confirmed mega-cap AI-infra print overrode a slightly hot headline PCE; NVDA weight plus software beats stacked, they did not cancel
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction right, magnitude wrong — 08-12 notable was live at the open (NVDA+CRM already out, core PCE already in-line) but the note still scored a same-day PCE/NVDA binary and capped at up/mild
+PRIMARY_DRIVER: Nvidia Wed-AHR beat/$108B Q3/~70% FY28 guide repriced in Thursday cash, lifting XLK via AI-infra weights
+KEY_INTERACTION: Confirmed mega-cap AI print × software (CRM/CRWD) amplification × XLK concentration; sticky PCE/Warsh/oil-up capped SPY but not XLK
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Direction HIT, magnitude MISS — 08-12 notable-up gate was already live; packet treated 8/27 as pre-PCE/pre-NVDA
 OUTCOME_END
+
+---
 
 ## RESEARCH APPENDIX
 
-**Queries**
-- web_search: `XLK Technology Select Sector SPDR August 27 2026 performance`
-- web_search: `July 2026 core PCE inflation data August 27 2026`
+**Queries run**
+- web_search: `XLK Technology ETF August 27 2026 performance PCE Nvidia`
+- web_search: `July 2026 core PCE inflation data released August 27 2026`
 - web_search: `NVIDIA earnings August 27 2026 Q2 results stock reaction`
-- web_search: `SPY S&P 500 August 27 2026 close percentage change PCE Nvidia`
-- web_search: `site:bea.gov Personal Income and Outlays July 2026 release date`
-- web_search: `Salesforce CRM CrowdStrike CRWD earnings August 27 2026 stock surge`
-- web_search: `XLK holdings NVIDIA weight August 2026 Technology Select Sector`
-- web_search: `Nasdaq August 27 2026 close Nvidia Broadcom Intel technology sector`
-- x_search: `XLK NVDA tech stocks August 27 2026 rally PCE Nvidia earnings` (2026-08-27 to 2026-08-28)
-- web_fetch: BEA PCE, NVDA PR, CNBC NVDA 8/27, CNBC PCE 8/26, CNBC NVDA live blog, Salesforce PR, CNBC CRM, stocknear XLK (403)
+- web_search: `SPY XLK August 27 2026 close Nasdaq NVDA AVGO MSFT AAPL`
+- web_search: `July 2026 PCE release date August 26 or August 27 2026 BEA`
+- web_search: `site:cnbc.com July PCE inflation August 26 2026 core 3.3`
+- web_search: `Nasdaq stocks August 27 2026 Nvidia Broadcom AMD ARM TSM XLK rally`
+- web_search: `XLK holdings NVDA weight Salesforce CRM August 27 2026`
+- web_search: `AMD ARM AAPL MSFT AVGO CRM ADSK August 27 2026 stock close percent`
+- web_search: `XLK open high low August 27 2026 path gap`
+- web_search: `08-12 notable-up gate XLK mega-cap beat magnitude band technology sector`
+- x_search: `XLK NVDA tech rally August 27 2026 Nvidia earnings squeeze` (2026-08-27 to 2026-08-28)
+- web_fetch: NVIDIA IR PR; BEA July 2026 PIO; CNBC NVDA 8/27; CNBC PCE 8/26; CNBC Salesforce 8/27; AP NVDA; Motley Fool 8/27 recap; thetrading.tools sector performance
+- Local: `00_grounding/sectors/technology.md`, `sector_outcome_prompt.md`, peer 8/27 sector outcomes, `01_daily/general/2026-08-27_outcome.md`
 
-**Key sources and facts used**
-- BEA, *Personal Income and Outlays, July 2026* — https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026 — 2026-08-26 — PCE +0.2%/3.7%, core +0.2%/3.3%; next release 2026-09-30
-- CNBC PCE — https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html — 2026-08-26 — headline 0.1ppt hot, core in line
-- NVIDIA IR — https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027 — 2026-08-26 — $96.2B / $89B DC / $2.22 non-GAAP EPS / $108B ±2% Q3
-- CNBC NVDA Thursday — https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html — 2026-08-27 — ~+9%, ~$440B, AVGO/INTC bid, CRWV flat
-- CNBC NVDA live — https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html — 2026-08-26 — $108B vs $104.2B, AWS 2M GPUs, prior four post-print fades
-- Salesforce PR — https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings/ — 2026-08-26 — $11.3B, cRPO +14%, Agentforce ARR >$1.5B, FY27 $46.1–46.4B
-- CNBC CRM — https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html — reaction 8/27 — CRM +18%, $2.6B Anthropic gain
-- Deterministic Channel 1 actuals (injected): XLK +3.155767, SPY +0.655279, rel +2.500488, O/C 186.47/188.61
+**Key sources (title + URL + timestamp) and facts taken**
 
-**Not used as primary:** search-snippet claims that PCE released 8/27 (contradicted by BEA); Yahoo index recap fetch failed; stocknear fetch 403 (used search recap only as corroboration of the injected tape).
+1. **NVIDIA Announces Financial Results for Second Quarter Fiscal 2027** — https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027 — fetched 2026-08-28T00:21Z / 00:33Z  
+   Facts: Q2 ended 2026-07-26; rev $96.2B; DC $89.0B; GAAP/non-GAAP GM 75.0%; non-GAAP EPS $2.22; Q3 rev $108.0B ±2%, no China DC compute.
+
+2. **Strong AI chip demand powers Nvidia's Q2 results… | AP News** — https://apnews.com/article/nvidia-artificial-intelligence-earnings-dc8d556e709b50915cca9217a60b1991 — fetched 2026-08-28T00:32Z; published 2026-08-26  
+   Facts: EPS $2.46 GAAP / $2.22 ex-items vs $2.09; rev $96.22B vs $92.27B; Q3 ~$108B vs $104.86B Street; FY28 ~70% growth, supply-constrained.
+
+3. **Nvidia adds more than $400 billion…** — https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html — fetched 2026-08-28T00:30Z; published 2026-08-27  
+   Facts: NVDA ~+9% Thursday, ~$440B cap; AVGO/INTC bid; CoreWeave flat; Kress ~70% FY28; Huang demand >70%.
+
+4. **Personal Income and Outlays, July 2026** — https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026 — fetched 2026-08-28T00:27Z; published 2026-08-26  
+   Facts: PCE +0.2% m/m, +3.7% y/y; core +0.2% m/m, +3.3% y/y.
+
+5. **Fed’s preferred inflation gauge shows core prices rose 3.3% annually in July** — https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html — fetched 2026-08-28T00:33Z; published 2026-08-26  
+   Facts: Headline a tenth hot vs Dow Jones; core in line; Warsh Jackson Hole Friday; futures pulled back / yields up on the print (Wednesday).
+
+6. **Salesforce rockets 22%…** — https://www.cnbc.com/2026/08/27/salesforce-stock-soars-on-track-for-second-best-day-ever.html — fetched 2026-08-28T00:32Z; published 2026-08-27  
+   Facts: CRM +22%; IGV ~+5%; rev $11.35B vs $11.32B; adj EPS $5.90 vs $3.27; Anthropic Claudeforce.
+
+7. **Stock Market Today, Aug. 27…** — https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-tech-strength-powers-nasdaq-higher-as-nvidia-leads-rally/ — fetched 2026-08-28T00:32Z  
+   Facts: SPX +0.72% to 7730; Nasdaq +1.57% to 26541; Dow +0.20%; NVDA +8.74%; CRM +22.58%; CRWD +20.50%.
+
+8. **Sector Performance** — https://www.thetrading.tools/sector-performance — fetched 2026-08-28T00:22Z; as of 2026-08-27  
+   Facts: XLK $188.61 +3.16%; SPY $771.10 +0.66%; 1/11 sectors up.
+
+9. **XLK holdings (TradeSmith/Schwab via search)** — https://tradesmith.com/stockdata/XLK:NYSE/holdings  
+   Facts: NVDA ~14.23% weight; CRM ~1.13%.
+
+10. **X posts 2026-08-27** — e.g. https://x.com/AryaFintech/status/2093094021921161401 ; https://x.com/mayaivanoff/status/2093058650709307587  
+    Facts: XLK ~+3.07–3.16%; squeeze/short-cover language around NVDA. Used only as color, not as the driver.
+
+**Not used as primary:** Investing.com OHLC variants that disagreed with the injected open/close (186.47 / 188.61). Path uses deterministic open/close plus ~182.84 prior close from multiple tape recaps.

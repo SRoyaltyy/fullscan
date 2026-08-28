@@ -2,198 +2,160 @@
 
 Actuals: {'etf': 'XLY', 'pct': -1.0925284812920988, 'spy_pct': 0.6552786111251541, 'rel': -1.7478070924172528, 'open': 116.54000091552734, 'close': 115.87999725341797}
 
-Memory search is paused (index metadata missing), so this autopsy uses the injected morning packet, deterministic actuals, and live sources only.
-
-# Sector Post-Session Review — Consumer Cyclical (XLY) — 2026-08-27
+Memory index is unavailable, so this autopsy uses the injected morning call, deterministic actuals, and live sources only.
 
 ## 0. Facts
 
-| | |
-|---|---|
-| Open → Close | 116.54 → 115.88 |
-| XLY | **−1.09%** |
-| SPY | **+0.66%** |
-| Relative | **−1.75%** |
-| Path | Sold from the open; finished near the session low (range ~115.81–116.62). No afternoon rescue. |
+XLY **open 116.54 → close 115.88** (**-1.09%**). SPY **+0.66%**. Relative **-1.75%**. Path: opened already off the prior close, high ~116.61–116.62, low ~115.81 — never recovered, closed near the session low. Volume ~5.0–5.2M vs ~7.5M average (below-average participation, not a capitulation washout).
 
-**Actual:** down / **notable** (absolute just over 1%; relative −1.75% vs a green SPY is the real story).
-
-Official morning call (pipeline, not the narrative): **flat / flat**, score **0.5**, regime risk_on. Narrative wanted **up / mild** (S0+1, S1−1, S2 0, S3+1, S4 0 → 1.0) and was overridden.
+**Actual:** down / **notable** (abs ~1.1%, rel ~-1.75%). Official morning call (pipeline): **flat / flat** (score 0.5). Narrative wanted **up / mild**; pipeline flattened it. Direction **MISS**. Magnitude **MISS** (flat vs notable).
 
 ---
 
 ## 1. What drove the sector
 
-This was **not** a broad risk-off. SPY was up. XLY lost because the bid was a **narrow Nvidia/AI tape**, not a high-beta cyclical expansion, while the consumer spine stayed soft.
+This was **not** a broad risk-on day that XLY failed to join. It was a **narrow NVDA/AI tape** in which consumer cyclicals were the **worst S&P sector**.
 
-**Primary driver — AI/tech rotation after NVDA, with AMZN (largest XLY weight) left behind.**
+Taxonomy-aligned factors:
 
-CLAIM: Nvidia reported Q2 FY27 after the 8/26 close; Thursday 8/27 was the reaction session.  
-URL: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027  
-PUBLISHED: 2026-08-26 (results; Q2 ended 2026-07-26)  
-QUOTE: “revenue for the second quarter ended July 26, 2026, of $96.2 billion, up 18% from the previous quarter and up 106% from a year ago.” Q3 outlook “$108.0 billion, plus or minus 2%.”  
-SUMMARY: Blowout print + long-duration AI guide. That is Thursday’s market center of gravity.
+- **S0 shared macro, sector-mapped (dominant):** Nvidia blowout after the prior close lifted SPY/Nasdaq; **only Information Technology advanced among 11 S&P sectors**. Consumer discretionary was cited as the **biggest losing sector**. Green ES/NQ did **not** mean high-beta consumer beta expansion.
+- **S1 sector factors (live, not stale):** Oil **reversed** the morning relief tape (WTI rebound after multi-session declines; Hormuz-reopening reassessment). DJ consumer roundup: consumer cos fell as **oil futures and Treasury yields** revived inflation/mortgage-rate worries. AMZN (~24% of XLY) **~-1.5%**; HD **~-1.9%**; MCD **~-2.4%**. Conference Board Aug **89.4** / Expectations **68.2** was already in the tape. July PCE (released **Aug 26**, not the 27th) showed **headline +3.7% YoY**, core **+3.3%**, **real PCE ~0% m/m**, goods spending **- $49.9B**.
+- **S2 breadth:** Internal XLY breadth was poor. Tesla **~+2.6%** was the mega-cap **outlier up**; it did not offset AMZN/HD/MCD. Not an AMZN+TSLA growth bid.
+- **S3 flows:** 1m/3m inflows did not show up as a same-session bid.
+- **S4 tape:** Continuation of the morning’s 1d/3d/1w relative lag, amplified.
 
-CLAIM: NVDA ripped Thursday; the S&P bid was tech-concentrated.  
-URL: https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html  
-PUBLISHED: 2026-08-27  
-QUOTE: “Nvidia shares rose nearly 9% Thursday… The surge added about $440 billion to the chip giant’s market cap.”  
-SUMMARY: XLK/semis absorbed the risk-on. That is **not** XLY beta.
-
-CLAIM: Close-of-day sector tape: XLK leader, XLY laggard.  
-URL: https://x.com/baalhadid/status/2093070263449452628  
-PUBLISHED: 2026-08-27  
-QUOTE: XLY among the day’s laggards (~−1.1%); XLK led.  
-SUMMARY: Matches deterministic XLY −1.09% / SPY +0.66%. Rotation, not a consumer-cyclical melt-up.
-
-**Secondary — consumer-relevant PCE was not the “all-clear” the morning treated it as.**
-
-CLAIM: Headline PCE 3.7% YoY vs ~3.6% expected; core 3.3% in line; real spending basically flat; goods spending fell.  
-URL: https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026  
-PUBLISHED: 2026-08-26 (BEA 8:30 ET; CNBC/CBS dated 8/26)  
-QUOTE: “Personal consumption expenditures (PCE) increased $36.3 billion (0.2 percent)… Real PCE increased $1.3 billion (less than 0.1 percent)… PCE price index for July increased 3.7 percent… excluding food and energy… 3.3 percent.” Goods PCE −$49.9B, services +$86.2B.  
-URL: https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html  
-QUOTE: “increased a seasonally adjusted 0.2% for the month, putting the annual inflation rate at 3.7%… Both were 0.1 percentage point above the Dow Jones consensus. … core PCE posted respective gains of 0.2% and 3.3%, in line with forecasts. … personal income rose 0.4% while spending increased 0.2%… Stock market futures pulled back a bit after the report while Treasury yields were higher.”  
-URL: https://www.cbsnews.com/news/july-pce-inflation-index-federal-reserve/  
-PUBLISHED: 2026-08-26 09:17 ET  
-QUOTE: “held at a 3.7% annual pace in July, slightly higher than forecasted… spending on goods declined by $49.9 billion.”  
-SUMMARY: Core-in-line ≠ consumer-benign. Headline slightly hot, real goods demand weak, yields bid. That is XLY’s factor, not NVDA’s.
-
-**Carried consumer spine (already in the morning packet, still live):**
-
-CLAIM: Conference Board Aug confidence 89.4; Expectations 68.2 (−5.8 pts).  
-URL: https://www.prnewswire.com/news-releases/us-consumer-confidence-edged-down-slightly-in-august-302859371.html  
-PUBLISHED: last Tuesday of Aug 2026 (survey Aug 3–16)  
-QUOTE: “decreased by 0.8 points to 89.4… Expectations Index… fell by 5.8 points to 68.2.”  
-SUMMARY: Fresh soft read into this week; not a same-session shock on 8/27, but it is the sector’s fundamental weather.
-
-CLAIM: Kohl’s Q2 sales miss on cautious discretionary spend (8/26).  
-URL: https://www.reuters.com/business/retail-consumer/department-store-chain-kohls-misses-quarterly-sales-estimates-amid-cautious-2026-08-26/  
-PUBLISHED: 2026-08-26  
-SUMMARY: Comp sales −0.9%; management cited selective/non-essential spend, especially lower/middle income. Retail confirmation of the stale July retail-sales miss, not a mega-cap event.
-
-**Taxonomy mapping (consumer cyclical):**
-- **S0 shared macro:** NVDA-led risk-on for SPY/XLK; **not** equity-beta expansion into discretionary. Headline PCE/yields a mild headwind.
-- **S1 sector factors:** Soft consumer (confidence, real goods PCE, retail/Kohl’s) **hit**. Oil relief did **not** buy the sector a bounce.
-- **S2 breadth:** Internals split — TSLA up, AMZN/HD/MCD down. Mega-cap concentration did not produce a uniform XLY bid.
-- **S3 flows:** Prior 1m/3m inflows were not a same-day stabilizer.
-- **S4 tape:** 1d/3d/1w relative lag **continued and steepened**.
+Same-session color (not the primary ETF driver, but consistent): Best Buy beat and **raised** FY outlook; stock still sold off on deal-hunting / memory-cost commentary. Hormel **cut** sales guidance on fuel costs and a tough consumer (staples name, useful consumer color).
 
 ---
 
-## 2. Audit of morning S0–S4 vs reality
+## 2. Audit of morning S0–S4 (use morning numbers, not a rewrite)
 
-Use **morning numbers**, not a rewrite.
-
-| Sleeve | Morning | What happened | Verdict |
+| Sleeve | Morning | Reality | Verdict |
 |---|---|---|---|
-| **S0 +1** | ES +0.31%, NQ +0.55%, DFII10 easing, oil down, core PCE “in-line → hawkish tilt relieved,” 08-21 reversal checklist **fires** → direction to the tape (up) | Those futures were an **NVDA/AI** bid. SPY +0.66% confirms S0 for the index, **not** for XLY. Headline PCE 3.7% vs 3.6% was the consumer/rates piece; core-in-line was the wrong PCE slice for this ETF. | **Wrong mapping.** Risk-on was real and **narrow**. Treating NQ leadership as AMZN/TSLA XLY-positive was the miss. |
-| **S1 −1** | Stale retail miss, fresh confidence collapse, credit stress; offsets: oil, claims, SAAR, RevPAR, ABNB targets | Soft spine showed up in HD/MCD/retail and in XLY vs SPY. Oil relief did not dominate. | **Correct direction.** Should have been the **binding** sleeve once S0 was recognized as non-transferable. |
-| **S2 0** | Mega-cap concentrated; not a % names expansion | TSLA ~+2.4–2.6%; AMZN ~−1.3–1.5%; HD ~−1.8–1.9%; MCD ~−2.3–2.6%. Breadth inside XLY was **poor**. | **Too neutral.** Split mega-caps with AMZN (largest weight) down is a **negative** breadth tell, not a zero. |
-| **S3 +1** | +$111M 1m / +$739M 3m inflows | No evidence inflows cushioned a −1.75% relative day. | **Stale / overweighted.** Multi-month flow ≠ same-session bid. |
-| **S4 0** | 1d/3d/1w rel −0.69/−0.78/−0.82%; “on a positive-futures day, XLY may bounce” | Rel −1.75%. Open 116.54 → close 115.88. Lag **accelerated**. | **Too kind.** Persistent relative weakness on a green-SPY, green-NQ morning was confirmation, not a bounce setup. |
+| **S0 +1** | ES +0.31% / NQ +0.55%, DFII10 easing, oil **down**, PCE “in-line today 8:30” → XLY-positive | NVDA-only rally; 10/11 sectors down; XLY worst; oil **rebounded**; PCE was **yesterday** | **Wrong sign.** Mapped index futures onto XLY beta that did not exist. |
+| **S1 -1** | Soft consumer spine (retail -0.6% stale, CB 89.4 fresh, credit) offset by oil relief / labor / SAAR / RevPAR | Soft spine **showed up**; oil offset **failed**; AMZN/HD/MCD confirmed | **Right direction, under-weighted.** Offsets were not live. |
+| **S2 0** | Mega-cap concentration, not a % names expansion | AMZN down, TSLA up — concentration **hurt** | Too neutral. Leadership was not a consumer bid. |
+| **S3 +1** | +$111M 1m / +$739M 3m inflows | No session protection | Irrelevant today. Flow ≠ 1-day tape. |
+| **S4 0** | 1d/3d/1w rel **-0.69 / -0.78 / -0.82**; “may bounce on green futures” | Rel **-1.75%**; open-to-close grind lower | Should have been **-1**. The lag **was** the tell. |
 
-**Pipeline vs narrative:** Pipeline **flat/flat (0.5)** was less wrong than narrative **up/mild**. Both missed **direction** (actual down). Magnitude miss is larger: predicted **flat**, actual **notable**.
+**08-21 reversal lesson misfired.** Checklist (futures ≥+0.3%, real yields easing, oil not spiking) treated “the tape” as XLY-up. The tape that printed was **XLK/NVDA**, not cyclicals. **08-25 PCE lesson was applied to the wrong calendar day** (BEA Personal Income and Outlays, July 2026, released **Aug 26**). Core 3.3% YoY matching forecast was used to **relieve** a downside tilt; headline **3.7%** and **stalled real goods spending** were the consumer-relevant pieces and were already digested on the 26th.
 
-**Lessons:**
-- **08-21 reversal (futures ≥+0.3%, real yields easing, oil down → follow the tape up):** **Misfired.** The “tape” was NVDA/XLK, not XLY. Checklist needs a **sector-tape gate**: if XLY is already lagging 1d/3d/1w, do not import ES/NQ as XLY direction.
-- **08-25 same-day sticky PCE → conditional downside:** Morning **relieved** it because core was in-line. That was the wrong print. Headline + real goods PCE were the XLY-relevant lines. Also, BEA/CNBC/CBS date the release **2026-08-26**, while the morning packet treated PCE as **8/27 8:30 ET** and NVDA as “tonight.” If the packet was truly Thursday-morning, **both catalysts were already known** (PCE Wednesday AM, NVDA Wednesday after-close). That is a calendar error, not a close-of-day surprise.
-- **08-18 severe cap while AMZN/TSLA flat:** Not the issue; magnitude was notable not severe, and TSLA was **up**.
-- **Hormuz/oil lesson:** Correctly not fired (oil down).
+Narrative **up/mild** would have been a **worse** miss than pipeline **flat/flat**. Pipeline’s flatten was the only thing that kept the error from being a full opposite-direction call — and it still missed.
 
 ---
 
 ## 3. Interactions / double-count / knowable-at-open
 
-**Double-count / false transfer:**
-1. **Same NVDA shock counted as XLY-positive S0** (NQ lead “maps into AMZN/TSLA”) **and** as a reason to fade S4 lag. One shock: AI bid. It lifted SPY/XLK and **did not** lift XLY.
-2. **PCE split in two:** core-in-line as S0 relief, consumer spine only in S1. For XLY those are one object: sticky prices + flat real goods spending.
-3. Oil relief correctly counted once in S0 (morning self-audit). Not the problem.
-
-**Knowable at open: partially.**
-- **Knowable:** XLY already lagging 1d/3d/1w; confidence 89.4 / Expectations 68.2; July retail miss; Kohl’s 8/26 sales miss; AMZN ~24% + TSLA ~16% concentration; if the session is Thursday 8/27, **NVDA results and Wednesday PCE were already public**.
-- **Not fully knowable:** How hard the rotation would run (XLY −1.09% vs SPY +0.66%), AMZN’s refusal to tag the NVDA bid, HD/MCD follow-through.
-- Morning’s own text called NVDA “tonight, not today’s driver” — that is the process miss. The 08-21 checklist then treated NVDA-driven futures as a cyclical green light.
+- **Double-count:** Morning counted “risk-on” in **S0 (+1)** *and* refused to let **S4** go negative because the same futures tape “might bounce XLY.” That is one shock (green ES/NQ) scored twice in XLY’s favor. Oil relief was also treated as a durable S0 positive rather than a **prior-session** print that could reverse.
+- **Single-ticker:** AMZN drag was sector-relevant (largest weight), not a one-name fluke. TSLA’s +2.6% is the outlier that **failed** to save the ETF — the 08-18 “don’t call severe while AMZN/TSLA flat” lesson is orthogonal; AMZN was **not** flat.
+- **Knowable at open: partially.** Knowable: XLY already lagging 1d/3d/1w; CB confidence; prior-day PCE (sticky headline, real PCE ~0, goods down); NVDA as a **tech** catalyst that morning itself labeled “not today’s XLY driver.” Not knowable as a point estimate: **intraday oil rebound**, Warsh/Jackson Hole caution, and the **extreme** 1-of-11 sector breadth (tech-only advance with XLY worst).
 
 ---
 
 ## 4. Outliers inside the sector
 
-| Name | Role | 8/27 (approx.) | Read |
-|---|---|---|---|
-| **AMZN** | ~24% of XLY | ~−1.3% to −1.5% (prior close ~$260.28, trade ~$256) | Largest weight **did not** participate in AI risk-on. Drag. |
-| **TSLA** | ~16% | ~+$354, **+2.4% to +2.6%** | Upside outlier. **Failed to save the ETF.** Proves this was not a uniform mega-cap dump. |
-| **HD** | ~5.5% | ~−1.8% to −1.9% | Housing/retail cyclical confirmation. |
-| **MCD** | restaurant sleeve | ~−2.3% to −2.6% | Discretionary services weakness. |
-| **KSS** | not a top weight | 8/26 sales miss | Color, not the ETF math. |
+- **TSLA ~+2.6%** vs **AMZN ~-1.5%**, **HD ~-1.9%**, **MCD ~-2.4%**, **NKE ~-0.4%** — Tesla was the only mega-cap ballast; XLY still **-1.09%**.
+- **Best Buy:** beat + guidance raise, stock sold (consumer still deal-hunting; not a discretionary confirmation).
+- **NVDA ~+8.7%** explaining SPY **+0.66%** while XLY was the **worst sector** — the relative **-1.75%** is the story, not the absolute print.
 
-XLY down with TSLA up is the tell: **AMZN + the non-Tesla cyclical stack** set the close.
+---
+
+## Evidence
+
+CLAIM: XLY closed 115.88, -1.09% on 2026-08-27 (open ~116.54).  
+URL: https://www.marketwatch.com/investing/fund/xly/download-data  
+PUBLISHED: 2026-08-27 session  
+QUOTE: closed at $115.88, down $1.28 (-1.09%) from prior close $117.16  
+SUMMARY: Matches deterministic actuals (open 116.54, close 115.88, -1.0925%).
+
+CLAIM: Only S&P technology advanced Aug 27; consumer discretionary was the biggest losing sector.  
+URL: https://www.channelnewsasia.com/world/nvidia-us-tech-stocks-wall-street-fed-6346331  
+PUBLISHED: 2026-08-28 05:35 SGT (covering Aug 27 US session)  
+QUOTE: “Out of 11 industrial sectors in the S&P 500, only technology advanced. The biggest losing sector was consumer discretionary, with industrials and real estate also decisively lower.”  
+SUMMARY: SPY up was NVDA/tech, not cyclical beta. Directly falsifies morning S0→XLY mapping.
+
+CLAIM: Nvidia closed +8.74% at $227.98; S&P 500 +0.72% to 7731; Nasdaq +1.57%.  
+URL: https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-nvidia-surges-on-blowout-results-and-surprising-guidance/  
+PUBLISHED: 2026-08-27  
+QUOTE: “Nvidia (+8.74%) … closed at $227.98 … S&P 500 (+0.72%) closed at 7,731 … Nasdaq Composite (+1.57%) closed at 26,541.”  
+SUMMARY: Confirms the SPY print was an AI-earnings tape. Morning called NVDA “not today’s driver” for XLY — correct for XLY, wrong if used to justify S0 +1.
+
+CLAIM: Consumer companies fell Aug 27 as oil futures and Treasury yields rebounded.  
+URL: https://www.morningstar.com/news/dow-jones/2026082710694/consumer-cos-down-as-oil-futures-rebound-consumer-roundup  
+PUBLISHED: 2026-08-27 17:44 ET  
+QUOTE: “Consumer companies fell as a rebound in oil futures and Treasury yields spurred inflation and mortgage-rate worries.”  
+SUMMARY: Same-session oil reversal killed the morning “oil relief” S0/S1 offset. Hormel cut sales guidance on fuel + tough consumer.
+
+CLAIM: July PCE released Aug 26: headline +3.7% YoY, core +3.3% YoY, PCE prices +0.2% m/m, real PCE ~0% m/m, goods PCE -$49.9B.  
+URL: https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026  
+PUBLISHED: 2026-08-26  
+QUOTE: “From the same month one year ago, the PCE price index for July increased 3.7 percent. Excluding food and energy, the PCE price index increased 3.3 percent … Real PCE increased $1.3 billion (less than 0.1 percent) … decrease of $49.9 billion in spending on goods.”  
+SUMMARY: Morning treated this as a **same-day in-line** that relieved the 08-25 downside tilt. Calendar error + too much weight on core YoY vs headline/real goods.
+
+CLAIM: Aug 26 consumer roundup already blamed hot inflation for consumer-stock weakness.  
+URL: https://www.morningstar.com/news/dow-jones/202608269403/consumer-cos-down-after-inflation-data-consumer-roundup  
+PUBLISHED: 2026-08-26 18:03 ET  
+QUOTE: “Consumer companies fell slightly after a mixed round of earnings and a hot reading of inflation. The Personal Consumption Expenditures price index rose 3.7% on an annual basis in July, well above the Federal Reserve's target.”  
+SUMMARY: PCE was **prior-session** news, already in the consumer tape before the 27th open.
+
+CLAIM: Conference Board Aug confidence 89.4, Expectations 68.2.  
+URL: https://www.prnewswire.com/news-releases/us-consumer-confidence-edged-down-slightly-in-august-302859371.html  
+PUBLISHED: last Tuesday of Aug 2026 (survey Aug 3–16)  
+QUOTE: “decreased by 0.8 points to 89.4 … Expectations Index … fell by 5.8 points to 68.2.”  
+SUMMARY: Morning S1 soft-confidence HIT was valid and fresh enough; it was not overwritten by futures.
+
+CLAIM: AMZN ~-1.5%, TSLA ~+2.6%, HD ~-1.9%, MCD ~-2.4% on Aug 27.  
+URL: https://www.marketwatch.com/investing/stock/amzn/download-data  
+PUBLISHED: 2026-08-27 session  
+QUOTE: AMZN prior close $260.28; Aug 27 close ~$256.26 (~-1.54%).  
+SUMMARY: Largest XLY weight down; Tesla up was the internal outlier, not a sector bid.
 
 ---
 
 OUTCOME_BEGIN
 SECTOR: Consumer Cyclical
 ETF: XLY
-ETF_PCT: -1.09
-SPY_PCT: 0.66
-REL_PCT: -1.75
+ETF_PCT: -1.0925284812920988
+SPY_PCT: 0.6552786111251541
+REL_PCT: -1.7478070924172528
 ACTUAL_DIRECTION: down
 ACTUAL_MAGNITUDE: notable
-PRIMARY_DRIVER: Narrow NVDA/AI rotation lifted SPY/XLK while AMZN and the rest of discretionary sold; core-in-line PCE was not an XLY all-clear.
-KEY_INTERACTION: 08-21 mapped NQ/ES futures into XLY beta; that bid was NVDA, not cyclical, and stacked on a still-soft consumer spine (headline PCE/real goods, confidence, retail).
+PRIMARY_DRIVER: Narrow NVDA/AI rally left XLY as the worst S&P sector while oil rebounded and AMZN/retail dragged.
+KEY_INTERACTION: Green ES/NQ was scored as XLY-positive (S0 + 08-21 reversal) even though the live tape was tech-only and anti-correlated with discretionary.
 KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Pipeline flat beat narrative up/mild but both missed down/notable; S0 over-transferred an AI tape, S1 was the right sleeve, S4 lag should have blocked the reversal lesson.
+MORNING_READ_VERDICT: Pipeline flat/flat missed down/notable; S1 soft-consumer was right, S0 futures-to-XLY mapping and wrong-day PCE relief were the miss.
 OUTCOME_END
 
 ---
 
 ## RESEARCH APPENDIX
 
-**Queries**
-- web: `XLY ETF August 27 2026 performance Amazon Tesla consumer discretionary`
-- web: `why consumer discretionary stocks fell August 27 2026 XLY AMZN TSLA`
-- web: `SPY stock market August 27 2026 Nvidia PCE consumer confidence`
-- web: `July 2026 PCE inflation BEA core PCE 3.3% August 27 2026`
-- web: `Amazon AMZN stock August 27 2026 close Home Depot Tesla XLY holdings`
-- web: `Nvidia earnings August 26 2026 market reaction August 27 sector rotation`
-- web: `Amazon stock down August 27 2026 why AMZN decline`
-- web: `Home Depot HD stock August 27 2026 McDonalds Nike consumer discretionary laggards`
-- web: `S&P 500 sector performance August 27 2026 XLK XLY XLP rotation`
-- web: `Tesla TSLA close August 27 2026 stock price`
-- web: `Kohl's earnings August 26 2026 consumer spending discretionary`
-- web: `Amazon AMZN closing price August 27 2026 MarketWatch`
-- x: `XLY consumer discretionary Amazon Tesla stock move August 27 2026` (2026-08-27 to 2026-08-28)
-- x: `sector rotation XLK XLY August 27 2026 Nvidia consumer discretionary lagging` (2026-08-27 to 2026-08-28)
-- memory_search: paused (index metadata missing)
+**Memory:** `memory_search` disabled (index metadata missing / embedding mismatch). No MEMORY.md hits used. Workspace has no XLY archive files.
 
-**Key sources (facts taken)**
+**Queries run**
+- web_search: `XLY consumer discretionary ETF August 27 2026 performance`
+- web_search: `why did consumer discretionary stocks fall August 27 2026 Amazon Tesla XLY`
+- web_search: `July 2026 core PCE YoY 3.3 percent release date BEA`
+- web_search: `stock market news August 27 2026 S&P 500 consumer discretionary Nvidia`
+- web_search: `Amazon Tesla Home Depot stock August 27 2026`
+- web_search: `S&P 500 sectors August 27 2026 consumer discretionary lag Nvidia rally`
+- web_search: `WTI crude oil price August 27 2026 rebound`
+- web_search: `Amazon AMZN close August 27 2026 percentage change`
+- web_search: `Tesla TSLA Home Depot HD McDonalds MCD Nike NKE August 27 2026`
+- web_search: `Treasury yields August 27 2026 10-year Jackson Hole`
+- web_search: `Best Buy Hormel Foods August 27 2026 consumer guidance`
+- x_search: `XLY consumer discretionary lag August 27 2026 Nvidia Amazon Tesla` (from 2026-08-27 to 2026-08-28)
 
-1. **BEA — Personal Income and Outlays, July 2026** — https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026 — fetched 2026-08-27T21:17Z  
-   Income +0.4%; PCE +0.2%; real PCE ~0%; goods −$49.9B / services +$86.2B; PCE +0.2% m/m, +3.7% YoY; core +0.2% m/m, +3.3% YoY.
+**Key sources (title + URL + timestamp / facts taken)**
+1. **MarketWatch XLY download-data** — https://www.marketwatch.com/investing/fund/xly/download-data — 2026-08-27 close. Facts: XLY close $115.88, -1.09%, open ~$116.54.
+2. **CNA/AFP, “Nvidia boosts tech stocks but caution dominates ahead of Fed speech”** — https://www.channelnewsasia.com/world/nvidia-us-tech-stocks-wall-street-fed-6346331 — 28 Aug 2026 05:35. Facts: only tech sector advanced; consumer discretionary biggest loser; NVDA ~+9%; oil rebound / Hormuz; Warsh Jackson Hole Friday.
+3. **Motley Fool, Stock Market Today Aug 27** — https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-nvidia-surges-on-blowout-results-and-surprising-guidance/ — 2026-08-27. Facts: NVDA +8.74% to $227.98; SPX +0.72% to 7731; Nasdaq +1.57%.
+4. **DJ Newswires via Morningstar, Consumer Roundup Aug 27** — https://www.morningstar.com/news/dow-jones/2026082710694/consumer-cos-down-as-oil-futures-rebound-consumer-roundup — 2026-08-27 17:44 ET. Facts: oil + yields → consumer weakness; Hormel guidance cut; Best Buy raised outlook but shares fell.
+5. **DJ Newswires via Morningstar, Consumer Roundup Aug 26** — https://www.morningstar.com/news/dow-jones/202608269403/consumer-cos-down-after-inflation-data-consumer-roundup — 2026-08-26 18:03 ET. Facts: PCE +3.7% YoY already pressuring consumer names the day before.
+6. **BEA, Personal Income and Outlays, July 2026** — https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026 — 2026-08-26. Facts: PCE +3.7% YoY, core +3.3%, m/m +0.2% both, real PCE ~0%, goods -$49.9B. **Not an Aug 27 8:30 print.**
+7. **Conference Board via PR Newswire** — https://www.prnewswire.com/news-releases/us-consumer-confidence-edged-down-slightly-in-august-302859371.html. Facts: 89.4 / Expectations 68.2 / Present Situation 121.2.
+8. **MarketWatch AMZN** — https://www.marketwatch.com/investing/stock/amzn/download-data. Facts: AMZN 08-26 close $260.28; 08-27 ~-1.5% to ~$256.26.
+9. **GuruFocus / Investing.com oil** (via search) — WTI rebound to ~$83 area, ~+1.5–1.75% on 08-27 after prior declines.
+10. **X posts 2026-08-27** — https://x.com/MagnaTrades/status/2093012653342093327 (XLY puts vs NVDA); https://x.com/QuantLake/status/2093086409498198204 (XLK +3.16% vs XLY lag). Color only, not used as primary evidence.
 
-2. **CNBC — core PCE 3.3%** — https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html — dated 2026-08-26  
-   Headline 0.2%/3.7% both 0.1ppt above DJ consensus; core in line; futures dipped, yields up.
-
-3. **CBS News — July PCE** — https://www.cbsnews.com/news/july-pce-inflation-index-federal-reserve/ — 2026-08-26 09:17 ET  
-   3.7% vs 3.6% FactSet; goods spending down; Warsh Jackson Hole Friday.
-
-4. **NVIDIA IR Q2 FY27** — https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027  
-   Rev $96.2B, +106% YoY; data center $89.0B; Q3 guide $108B ±2%.
-
-5. **CNBC — NVDA +~9% Thursday** — https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html — 2026-08-27  
-   ~$440B market-cap add; chip complex bid.
-
-6. **Conference Board via PR Newswire** — https://www.prnewswire.com/news-releases/us-consumer-confidence-edged-down-slightly-in-august-302859371.html  
-   89.4; Present 121.2; Expectations 68.2; survey Aug 3–16.
-
-7. **Reuters / Kohl’s Q2** — https://www.reuters.com/business/retail-consumer/department-store-chain-kohls-misses-quarterly-sales-estimates-amid-cautious-2026-08-26/ — 2026-08-26  
-   Sales miss; cautious discretionary spend.
-
-8. **X — baalhadid 2093070263449452628** — 2026-08-27  
-   XLY ~−1.1% laggard; XLK led; matches actuals.
-
-9. **Deterministic Channel 1 (injected)** — XLY −1.0925%, SPY +0.6553%, rel −1.7478%, O/C 116.54/115.88.
-
-10. **Secondary price color (web search, not primary close):** AMZN prior close 8/26 $260.28, 8/27 ~$256 (−1.3% to −1.5%); TSLA ~$354 (+2.4–2.6%); HD ~−1.8–1.9%; MCD ~−2.3–2.6%. Used as **internal outliers**, not as ETF actuals.
-
-**Not used as evidence:** Zacks/Investing/Forbes/Benzinga/Kohl’s IR fetches that 403’d or bot-walled.
+**Not used / failed fetches:** Zacks (bot wall), Reuters/Barron’s (JS wall), Investing.com XLY hist (403), EnergyNow (403).

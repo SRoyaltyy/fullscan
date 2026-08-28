@@ -1,10 +1,10 @@
 ---
-trigger_pattern: "A Technology/XLK follow-through open where an index-relevant mega-cap AI-infra earnings beat (and any second software sleeve) is already public from the prior close/after-hours, the scheduled high-impact inflation print is already released with a non-shocking core, and NQ is independently positive (~≥0.5%), but the note still treats those events as same-session pending binaries, false-fails the 08-12 notable gate, scores S1 mixed and S3 as event-supply, and caps at up/mild."
-current_behavior: "Recycled a weekly calendar (“PCE due today,” “NVDA after close today”), scored S0 +1 / S1 +1 / S3 −1, declared 08-12 legs unmet, and emitted up/mild despite NQ +0.55% and a knowable overnight confirmation tape."
-corrected_behavior: "Before applying 08-12 or any binary-event cap, verify official timestamps (IR/BEA), not search snippets or carried “this week” language. If the mega-cap beat is already out and premarket/gap-confirmed, the macro print is already resolved non-negative, and NQ is green, 08-12 is ON: S1 +2, do not let crowding/S3 de-risk cap magnitude at mild, emit up/notable. Keep 08-13’s mild cap only when NQ is flat. After-hours prints are next-session tape, not still-pending. One AI-infra spine; software may add a second sleeve; do not triple-count capex/HBM/guide."
-evidence_cited: "2026-08-27 predicted up/mild; actual XLK +3.156% / SPY +0.655% / rel +2.500% (dir HIT, mag MISS). NVDA printed 8/26 after close ($96.2B, $108B ±2% guide; Thu ~+9%); PCE printed 8/26 (core +0.2%/3.3% in line); CRM +18% was a second sleeve. Gap ~+2% held. Morning still called PCE+NVDA a Thursday binary."
-error_category: "B"
-falsifier: "Same setup (overnight mega-cap beat public, core print already non-shocking, NQ ≳ +0.5%) where XLK still closes mild (<1%) or fades in ≥2 of the next 5 occurrences — then notable is too aggressive. Also wrong if the print was genuinely still after that session’s close."
+trigger_pattern: "A Technology/XLK session is scored as a pending binary de-risk day (scheduled 8:30 macro still due, top-weight mega-cap earnings still after the close) so the 08-12 up/notable gate is marked not met and magnitude is capped at mild, without verifying primary-source timestamps or the cash gap, when those events already printed prior session/AHR and the confirmed beat is the live AI-infra spine."
+current_behavior: "Treats the cash session as pre-PCE and pre-NVDA; parks NVDA as de-risk; scores S1 on pre-print tape (CoreWeave/Berkshire/ARM/upgrades) at +1; scores S3 crowding as event-risk supply (−1); applies 08-12 as not met; emits up/mild (mult 1.0)."
+corrected_behavior: "Before applying the pending-binary / no-confirmed-beat mild cap, verify company IR/BEA timestamps and open vs prior close. If the top-weight print is already public and market-confirmed and NQ is green, fire 08-12: one AI-infra cluster in S1 at +2/+3, do not score S3 as unresolved event-risk, and allow notable. A gap already through the mild band is a magnitude floor. Do not upgrade to severe from post-hoc concentration. Sticky inflation that caps SPY does not veto XLK once the mega-cap beat is confirmed."
+evidence_cited: "2026-08-27 predicted up/mild; XLK +3.16% vs SPY +0.66% (rel +2.50%), gap-and-go 186.47→188.61. NVDA reported 2026-08-26 AHR ($96.2B / $108B Q3 / ~70% FY28); Thursday NVDA ~+8.7%. PCE printed Wed 08:30 ET, not Thursday. Direction HIT, magnitude MISS. 08-12 was live at 9:30; the pre-print template was one session late."
+error_category: "A"
+falsifier: "If top-weight AHR beat is already public, NQ ≥ ~+0.5%, ETF gapped past mild, and XLK still closes mild/flat on ≥2 of the next 3 such days, the notable requirement is too strong and must be revised. Also revise if timestamp verification still cannot surface the PR and notable would have been wrong."
 sector: "Technology"
 date: "2026-08-27"
 status: "candidate"
@@ -12,101 +12,43 @@ status: "candidate"
 
 # Sector Reflection — Technology — 2026-08-27
 
-## Sector Reflection — Technology / XLK — 2026-08-27
+## TRIAGE
 
-### TRIAGE
+Direction **HIT** (up vs XLK **+3.16%**). Magnitude **MISS** (predicted **mild** vs actual **notable**; on the standing 1–2% / >2% table the print is even **severe**). Binding miss is **not** the sign.
 
-This is a **REASONING** miss, not a scoreboard/extraction miss and not a primary tool outage.
+Layer: **REASONING / missing evidence (A)**, not a scoreboard extraction bug. Channel 2 never ingested the already-public NVDA print (Q2 **$96.2B**, Q3 **$108B ±2%**, FY28 ~70% supply-constrained) or the Wednesday PCE timestamp. The book treated **2026-08-27 cash** as a two-sided **PCE-today + NVDA-AHR-today** de-risk session. Both had printed **2026-08-26**. News Judge “PCE due today” was a stale calendar label; the load-bearing hole was **no IR/PR fetch for NVDA**. Given those false inputs, applying the 08-12 “gate not met → mild” template was internally consistent — and wrong.
 
-- Predicted **up / mild** (pipeline total 4.0, S0–S4 1/1/0/−1/1, mult 1.0).
-- Actual XLK **+3.156%**, SPY **+0.655%**, rel **+2.500%**. Path: gap ~**+2.0%** then held ~**+1.15%** open-to-close.
-- Scoreboard: **direction HIT, magnitude MISS**. Confirmed.
-- Band: outcome labels **notable** (high-end). Do **not** relabel this as 08-18 **severe**; that template is a crash tape (S0/S1 ≈ −2 and NQ ≲ −1.5%). NQ was **+0.55%**.
-
-The load-bearing driver was already public at the open: **NVDA Q2 after the 8/26 close** ($96.2B / DC $89.0B / $108B ±2% guide; Thursday ~**+9%**), with **CRM/software** as a second sleeve. **July PCE printed 8/26 8:30am**, core in-line. The morning note still scored a **same-day PCE + NVDA-after-close binary**.
-
-That is not “unknowable follow-through.” It is a **calendar/status error** that then **misweighted** S1/S3 and **false-failed the 08-12 notable gate**. Category **B**. (News-snippet PCE dating was dirty, but sibling 08-27 sector notes already treated the mega-cap AI print as overnight follow-through. Technology uniquely treated its own print as still pending.)
+Knowable at open: **yes**. NVDA PR + call Wednesday AHR; PCE Wednesday 08:30 ET; XLK opened **186.47** vs prior ~**182.84** (~**+2%** gap) then ground to **188.61**. No 9:30 shock discount.
 
 ---
 
-### CHECK 1 — Lesson match
+**CHECK 1 — Lesson match.** Closest standing rule is the **08-12 up/notable gate** (fresh market-confirmed mega-cap/AI-infra beat + benign-enough macro + positive NQ → notable; else mild). It **was retrieved** and applied as **not met** (“NVDA prints after close today”). That is not a retrieval failure; it is a failed **as-of test**. Same-day 08-27 candidates (consumer defensive / financials / industrials) describe the shared **misdate-as-pending** bug; they did not exist at predict time. 08-13 (flat NQ follow-through → mild) does **not** match: NQ was **+0.55%** (later premarket **+1.19%**), not flat. 08-14 circular-financing stale-positive does not match an earnings print. 08-25 Technology D (scoreboard `None/None`) does not match: this run has a real `up/mild` vs **+3.16%** miss.
 
-**Matches the standing 08-12 Technology notable gate** (fresh market-confirmed mega-cap/AI-infra beat + benign/non-shocking macro + positive NQ). The note **retrieved** 08-12 and then **misapplied** it: “all three legs NOT met.” At the Thursday open they **were** met.
+**CHECK 2 — Backward test.** As-of check + fire 08-12 when the top-weight print is already public and NQ is green: **08-12** stays notable (CoreWeave/SMCI, NQ **+0.86%**) — no hurt. **08-13** stays mild (NQ **0.0%**) — no hurt. **08-14** has no market-confirmed beat — no hurt. **08-17** is a relative memory tape vs risk-off macro, not a mega-cap print — no hurt. **08-18** down/severe unchanged. **08-21** NVDA still pending; reversal checklist is a different rule. **08-25** no confirmed beat, mild HIT preserved. **08-26** PCE was actually pending at that open; NVDA AHR does not rewrite Wednesday cash. Correction is not a one-day fit.
 
-Also adjacent to same-morning **08-27 Financials** candidate (prior-session PCE still scored as pending) and to **mega-cap-earnings-over-macro-drag** (slightly hot headline PCE must not cancel a confirmed mega-cap beat).
+**CHECK 3 — Conflict.** None if scoped. **08-13** mild cap requires **non-confirming/flat NQ**; green NQ + confirmed beat is **08-12**, not 08-13. **08-14** is stale-negative deal sign, not a printed beat. **08-10** Hormuz/inflation shock did not fire (and oil-up on the close still didn’t cap XLK). **mega-cap-earnings-over-macro-drag** *aligns*: sticky 3.7/3.3 PCE + Warsh Friday capped **SPY**, not XLK. Do **not** resolve by calling **severe** from concentration after the fact (S2 mixed, AMD red, CoreWeave flat).
 
-This is **not** the 08-25 None/None grader bug. Prediction fields were ingested correctly.
+**CHECK 4 — Applied-lesson review.** **08-12**: applied as not-met → **hurt magnitude**. **08-21** reversal (NQ green → don’t force down) → **helped direction**. **08-18** severe-down template correctly off. **08-14** correctly refused Nvidia financing as fresh-positive. **08-10** correctly idle. **mega-cap-earnings-over-macro-drag** used only as “does not forbid up,” not as the notable upgrade — **incomplete, hurt magnitude**. **08-11** signed-vs-pipeline disagreement did not fire (narrative and pipeline both said up/mild). Crowding **08-12** already says not to use S3 as a magnitude cap once a confirmed catalyst has drawn flows; S3 **−1** was the mild cap.
 
-**Not a new mechanism.** The missing operational piece is a **timestamp check** before declaring 08-12 off. Treating that as a brand-new sector law would duplicate 08-12; the fix is forced calendar/freshness enforcement at predict time.
+**CHECK 5 — Falsifier.** If the same setup recurs — top-weight AHR beat already public, NQ ≥ ~+0.5%, ETF already gapped past mild — and XLK still closes **mild/flat** (gap fade) on **≥2 of the next 3** such days, requiring **notable** is too aggressive. Also revise if a verified timestamp still leaves Channel 2 without the PR **and** a notable call would have been wrong on the tape.
 
-### CHECK 2 — Backward test
+**Divergence:** morning `divergence_flagged: False`. Leading and S4 agreed on **up**. Futures were right on **direction**; they did not encode the overnight gap. **none_flagged**.
 
-Correction: if the mega-cap beat is **already out** and market-confirmed, the macro print is **already resolved** non-negative, and NQ is **independently green**, fire 08-12 (**up/notable**); do not recycle yesterday’s “prints today” binary.
-
-| Day | Would it help/hurt? |
-|---|---|
-| **08-12** up/notable HIT | **Helped / unchanged** — three legs truly on. |
-| **08-13** up/notable, flat NQ | **No hurt** — 08-13 still caps when NQ is flat; this rule does not fire. |
-| **08-14** stale circular-finance notable MISS | **No hurt** — no market-confirmed beat. |
-| **08-17** up/mild, actual flat | **No hurt** — no top-weight print. |
-| **08-18** down/severe HIT | **No hurt** — opposite tape. |
-| **08-21** reversal down/flat MISS | **No hurt** — no printed beat. |
-| **08-25** up/mild, NVDA still pending | **No hurt** — gate correctly off; stays mild. |
-| **08-26** PCE morning / NVDA after close | **Different session**; this rule is the *next* cash open. |
-
-Not a one-day fit. The prior **four NVDA fade days** are the live risk, not a reason to pretend the print isn’t out.
-
-### CHECK 3 — Conflict scan
-
-- **08-13 follow-through mild cap:** fires when the catalyst is already in the prior **cash** tape **and NQ is flat**. Today NQ **+0.55%** and the NVDA/CRM cash session had **not** traded yet. Distinguisher: **flat NQ → keep mild; green NQ + untraded overnight beat → 08-12 on.**
-- **08-11 after-hours:** after-hours is **not** same-session support; it **is** the next session’s open tape. Do not stretch 08-11 into “still pending tomorrow.”
-- **08-14 scheduled-data mild cap:** only if the print is **still pending**. Resolved core-in-line PCE does not cap.
-- **08-18 severe:** no conflict; crash template off.
-- **08-10 Hormuz:** oil down; does not fire.
-- **S3 crowding:** 08-12 already says do not let crowding cap magnitude once fresh catalysts have drawn flows. Today’s S3 **−1** is the conflict to **narrow**, not a reason to keep mild.
-
-### CHECK 4 — Applied-lesson review
-
-| Lesson | Applied? | Effect |
-|---|---|---|
-| **08-21 reversal** | Yes | **Helped** direction (blocked a forced down). |
-| **08-18 severe** | Yes, correctly off | Neutral. |
-| **08-14 stale-positive / circular finance** | Yes | **Helped** (did not upgrade on financing chatter). |
-| **08-10 oil shock** | Correctly off | Neutral. |
-| **08-13 / 08-17** (tape ≠ absolute booster) | Yes | Not the miss. |
-| **08-12 notable gate** | Cited, **false-negative** | **Hurt** — this is the magnitude miss. |
-| **mega-cap-earnings-over-macro-drag** | **Not applied** | **Hurt** — slightly hot headline PCE was allowed to cap a confirmed beat. |
-| **08-13 mild cap** | Not used as a hard block (NQ green) | Over-applied in spirit by treating an untraded overnight print as “already de-risk.” |
-
-### CHECK 5 — Falsifier
-
-If the same setup recurs — overnight **index-relevant** mega-cap AI-infra beat already public, core inflation print **already** in-line/non-shocking, NQ **≳ +0.5%**, 08-12 legs on — and XLK still closes **mild (<1%)** or **fades** (repeat of post-print fade days) in **≥2 of the next 5** such sessions, then upgrading to notable is too aggressive and the fade/crowding cap should return.
-
-Also falsified if the “pending” calendar was actually right (print truly after that session’s close) and a notable call would have been an overcall.
-
-**Knowable-at-open discount:** autopsy says **partially**, then **should have been yes for notable**. Fade vs hold was the residual uncertainty; **mild vs notable was a process miss**. No A/B discount.
-
-**Divergence:** morning `divergence_flagged: False`; leading and S4 agreed. Actual confirmed the up bias. **none_flagged**.
-
----
-
-### Verdict
-
-Direction right, magnitude wrong because **08-12 was live and was marked off**. Fix the event-timestamp checklist; do not write a new severe-band rule and do not treat this as a grader bug.
+**Verdict:** Keep direction logic. The magnitude error is an **as-of/calendar hole** that blocked a live 08-12 **up/notable** gate. Do not mint an “NVDA beat → severe” rule.
 
 LESSON_BEGIN
-ERROR_CATEGORY: B
-TRIGGER_PATTERN: A Technology/XLK follow-through open where an index-relevant mega-cap AI-infra earnings beat (and any second software sleeve) is already public from the prior close/after-hours, the scheduled high-impact inflation print is already released with a non-shocking core, and NQ is independently positive (~≥0.5%), but the note still treats those events as same-session pending binaries, false-fails the 08-12 notable gate, scores S1 mixed and S3 as event-supply, and caps at up/mild.
-CURRENT_BEHAVIOR: Recycled a weekly calendar (“PCE due today,” “NVDA after close today”), scored S0 +1 / S1 +1 / S3 −1, declared 08-12 legs unmet, and emitted up/mild despite NQ +0.55% and a knowable overnight confirmation tape.
-CORRECTED_BEHAVIOR: Before applying 08-12 or any binary-event cap, verify official timestamps (IR/BEA), not search snippets or carried “this week” language. If the mega-cap beat is already out and premarket/gap-confirmed, the macro print is already resolved non-negative, and NQ is green, 08-12 is ON: S1 +2, do not let crowding/S3 de-risk cap magnitude at mild, emit up/notable. Keep 08-13’s mild cap only when NQ is flat. After-hours prints are next-session tape, not still-pending. One AI-infra spine; software may add a second sleeve; do not triple-count capex/HBM/guide.
-EVIDENCE: 2026-08-27 predicted up/mild; actual XLK +3.156% / SPY +0.655% / rel +2.500% (dir HIT, mag MISS). NVDA printed 8/26 after close ($96.2B, $108B ±2% guide; Thu ~+9%); PCE printed 8/26 (core +0.2%/3.3% in line); CRM +18% was a second sleeve. Gap ~+2% held. Morning still called PCE+NVDA a Thursday binary.
-LESSON_MATCH_CHECK: Matches standing 08-12 notable gate (retrieved, misapplied — legs were met) and mega-cap-earnings-over-macro-drag (not applied). Adjacent to 08-27 Financials candidate on still-pending prior-session PCE. Not the 08-25 None/None grader bug. No new mechanism; enforce timestamp/freshness at predict time.
-BACKWARD_CHECK: Helped today. No hurt on 08-12 (true notable), 08-13 (flat NQ still capped), 08-14/08-17/08-21 (no confirmed top-weight beat), 08-18 (crash template), 08-25 (NVDA still pending → stay mild).
-CONFLICT_CHECK: None if scoped. 08-13 requires flat NQ; 08-11 after-hours ≠ next-session tape; 08-14 data-cap requires a still-pending print; 08-18 severe stays a crash template. Narrow S3 crowding so it cannot veto 08-12 once the beat is market-confirmed.
-FALSIFIER: Same setup (overnight mega-cap beat public, core print already non-shocking, NQ ≳ +0.5%) where XLK still closes mild (<1%) or fades in ≥2 of the next 5 occurrences — then notable is too aggressive. Also wrong if the print was genuinely still after that session’s close.
+ERROR_CATEGORY: A
+TRIGGER_PATTERN: A Technology/XLK session is scored as a pending binary de-risk day (scheduled 8:30 macro still due, top-weight mega-cap earnings still after the close) so the 08-12 up/notable gate is marked not met and magnitude is capped at mild, without verifying primary-source timestamps or the cash gap, when those events already printed prior session/AHR and the confirmed beat is the live AI-infra spine.
+CURRENT_BEHAVIOR: Treats the cash session as pre-PCE and pre-NVDA; parks NVDA as de-risk; scores S1 on pre-print tape (CoreWeave/Berkshire/ARM/upgrades) at +1; scores S3 crowding as event-risk supply (−1); applies 08-12 as not met; emits up/mild (mult 1.0).
+CORRECTED_BEHAVIOR: Before applying the pending-binary / no-confirmed-beat mild cap, verify company IR/BEA timestamps and open vs prior close. If the top-weight print is already public and market-confirmed and NQ is green, fire 08-12: one AI-infra cluster in S1 at +2/+3, do not score S3 as unresolved event-risk, and allow notable. A gap already through the mild band is a magnitude floor. Do not upgrade to severe from post-hoc concentration. Sticky inflation that caps SPY does not veto XLK once the mega-cap beat is confirmed.
+EVIDENCE: 2026-08-27 predicted up/mild; XLK +3.16% vs SPY +0.66% (rel +2.50%), gap-and-go 186.47→188.61. NVDA reported 2026-08-26 AHR ($96.2B / $108B Q3 / ~70% FY28); Thursday NVDA ~+8.7%. PCE printed Wed 08:30 ET, not Thursday. Direction HIT, magnitude MISS. 08-12 was live at 9:30; the pre-print template was one session late.
+LESSON_MATCH_CHECK: Matches the 08-12 notable-up gate applied to a false pending state (retrieved, not a retrieval miss) and the same-day 08-27 calendar-misdate candidates in other sectors (not available at predict time). Does not match 08-13 (NQ was not flat), 08-14 (not circular-financing), or 08-25 scoreboard None/None.
+BACKWARD_CHECK: Helped or neutral on recent similar days: 08-12 stays notable; 08-13 stays mild (flat NQ); 08-14/08-25 unchanged (no confirmed beat); 08-18/08-21/08-26 are different setups. No hurt.
+CONFLICT_CHECK: none — 08-13 mild cap requires flat/non-confirming NQ; 08-14 is stale-negative deals; mega-cap-earnings-over-macro-drag is the parent and is reinforced; 08-10 shock rule idle. Distinguisher: confirmed top-weight beat + green NQ → 08-12 notable, not a pre-print mild cap.
+FALSIFIER: If top-weight AHR beat is already public, NQ ≥ ~+0.5%, ETF gapped past mild, and XLK still closes mild/flat on ≥2 of the next 3 such days, the notable requirement is too strong and must be revised. Also revise if timestamp verification still cannot surface the PR and notable would have been wrong.
 DIVERGENCE_VERDICT: none_flagged
-ACTIVE_LESSON_REVIEW: 08-21 helped direction; 08-14/08-10/08-18 applied correctly and did not cause the miss; 08-12 was cited but false-failed and hurt magnitude; mega-cap-earnings-over-macro-drag was applicable and not applied (hurt); 08-13 mild-cap correctly not binding on green NQ.
+ACTIVE_LESSON_REVIEW: 08-12 applied as not-met — hurt magnitude. 08-21 reversal — helped direction. 08-14/08-18/08-10 correctly idle. mega-cap-earnings-over-macro-drag applied only as a down-forbid, not a notable upgrade — incomplete, hurt magnitude. 08-13 correctly not used as a cap.
 SECTOR: Technology
 LESSON_END
 
-⚠️ 🛠️ Exec failed: `list files in ~/fullscan/02_lessons/active -> search "tech|xlk|mega-cap|follow-through|notable|calendar|pce|earnings" → print text → list files in ~/fullscan/02_lessons/candidate -> search "tech" (in ~/fullscan)`
+⚠️ 🛠️ Exec failed: `list files in ~/fullscan/02_lessons/active -> search "tech|xlk|mega-cap|follow-through|earnings" → print text → list files in ~/fullscan/02_lessons/candidate -> search "technology|2026-08-27" → print text → list files in ~/fullscan/02_lessons/candidate -> search "2026-08-27" (in ~/fullscan)`
