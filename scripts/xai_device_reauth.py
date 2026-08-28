@@ -20,6 +20,8 @@ import signal
 import subprocess
 import sys
 import time
+import urllib.error
+import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -103,6 +105,14 @@ def push(msg: str) -> None:
     print((r.stdout or "")[-400:], flush=True)
     if r.returncode != 0:
         print((r.stderr or "")[-400:], flush=True)
+    try:
+        urllib.request.urlopen(
+            "https://purge.jsdelivr.net/gh/SRoyaltyy/fullscan@main/01_daily/_xai_reauth.json",
+            timeout=8,
+        ).read()
+        print("[reauth] purged jsdelivr", flush=True)
+    except (OSError, urllib.error.URLError) as e:
+        print(f"[reauth] jsdelivr purge skipped: {e}", flush=True)
 
 
 def grok_busy() -> bool:
