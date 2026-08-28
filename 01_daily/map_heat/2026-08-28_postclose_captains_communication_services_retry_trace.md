@@ -2,90 +2,136 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (6,124 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (8,371 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"GOOGL Google news August 2026 supply shortage phone"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"AppLovin APP stock news August 2026"* → got 6 results (via searxng)
 
-  - Nvidia’s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report - TradingView (https://news.google.com/rss/articles/CBMiaEFVX3lxTE56R2w0NEZpTUJhRzZiZnRoV2prTnlMaXNlYk9teU5QandhYi1iMnA1NnlZbnhXaEUzNVpZSDN5cElhYzR0TEZReTQydk9nVjQ5MXdrbENEYlJ2d2U0Uk1iNkFEaER6Z19w?oc=5)
+  - AppLovin Keeps Tanking: 160% Returns Lie Ahead According To ... (https://finance.yahoo.com/markets/stocks/articles/applovin-keeps-tanking-160-returns-122844009.html)
 
-  - Google's $12bn Marvell bet: What the chip supply shake-up means for data centre capital plans - capacityglobal.com (https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQkx5WDlfVDBReC1POWV3ZTFpaDBoTURCc3I0Y2hZN0hleVc5RnBzVEpOOWRWUmNvRVBPcVBwdUF6SjlpQWZJcjkyajdHWXoydWFVdXY3WEYyTkNfMU5uekZGc2UwV0VXRjFLOVhyNC1GNy1YYy1JQk1Fb1dvN2VtcVJrd2JNSWFCZGs5dHV6SGpIUlVxZnQxOFEyQndwWlQyQTZ0alhPb3FJOVNfTHdjbGx5SGZwQ1ZXRGVkOUFpdmg?oc=5)
+  - AppLovin Announces Second Quarter 2026 Financial Results (https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Second-Quarter-2026-Financial-Results/default.aspx)
 
-  - Google rationed Meta's access to Gemini amid an AI compute shortage - qz.com (https://news.google.com/rss/articles/CBMibEFVX3lxTE1jTWp2bDVMS1R2Wm5senJNQVFVbGo1bjJPMmVZTklGM2c2NE5XWkQ5a3lRV3k1RE1lMlRVNGdvRXlxdFdqM19wdHBWOTRjSWh6dzNZN2w4VVNxVXlGYk5Tc0l0QlRna0pGSVgteA?oc=5)
+  - AppLovin (NASDAQ:APP) Misses Q2 CY2026 Revenue Estimates ... (https://finance.yahoo.com/markets/stocks/articles/applovin-nasdaq-app-misses-q2-203826929.html)
 
-**Step 2 — Research.** The model wanted to know: *"RUM Rumble stock news August 2026 52-week high"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Omnicom OMC stock news August 2026"* → got 6 results (via searxng)
 
-  - Rumble (NASDAQ:RUM) Reaches New 1-Year High - Should You Buy? (https://www.marketbeat.com/instant-alerts/price-rumble-nasdaq-rum-reaches-new-1-year-high-should-you-buy-2026-08-26/)
+  - Omnicom Group (OMC) Could Be 15% Below Fair Value After ... (https://finance.yahoo.com/markets/stocks/articles/omnicom-group-omc-could-15-201030702.html)
 
-  - RUM Group (RUM) Stock Price & OverviewHome - Rumble IRRumble (RUM) Stock Price, News & Analysis - MarketBeatRUM Group (RUM) Shares Skyrocket, What You Need To KnowRUM Group Inc., RUM:NMQ summary - FT.comRUM Group Inc. Reports Record Second Quarter 2026 Results (https://stockanalysis.com/stocks/rum/)
+  - Omnicom Group Inc. Common Stock (OMC) Press Releases - Nasdaq (https://www.nasdaq.com/market-activity/stocks/omc/press-releases)
 
-  - Home - Rumble IR (https://investors.rumble.com/)
+  - Omnicom (OMC) Stock Looks Pricey Even With Strong Cash Flow (https://finance.yahoo.com/markets/stocks/articles/omnicom-omc-stock-looks-pricey-231414531.html)
 
-**Step 3 — Research.** The model wanted to know: *"DJT Trump Media news August 2026"* → got 6 results (via ddg)
+**Step 3 — Research.** The model wanted to know: *"Magnite MGNI stock news August 2026"* → got 6 results (via searxng)
 
-  - Trump Media (DJT) Q2 2026 Earnings Call Transcript (https://www.fool.com/earnings/call-transcripts/2026/08/17/trump-media-djt-q2-2026-earnings-call-transcript/)
+  - Magnite Reports Second Quarter 2026 Results (https://investor.magnite.com/news-releases/news-release-details/magnite-reports-second-quarter-2026-results)
 
-  - Trump crypto news: DJT scraps Crypto.com deals citing market ... (https://www.coindesk.com/business/2026/08/07/trump-media-pulls-back-from-crypto-scraps-crypto-com-cro-treasury-deal)
+  - Magnite to Announce Second Quarter 2026 Financial Results on ... (https://investor.magnite.com/news-releases/news-release-details/magnite-announce-second-quarter-2026-financial-results-august-5)
 
-  - DJT stock falls 8% as Trump Media loses $238 million: what ... (https://invezz.com/news/2026/08/11/djt-stock-falls-8-as-trump-media-loses-238-million-what-happens-next/)
+  - Magnite (MGNI) Stock Looks Overvalued On Cash Flow And Earnings (https://finance.yahoo.com/markets/stocks/articles/magnite-mgni-stock-looks-overvalued-170815023.html)
 
-**Step 4 — Research.** The model wanted to know: *"VZ Verizon news August 2026"* → got 6 results (via gnews_rss)
+**Step 4 — Research.** The model wanted to know: *"Stagwell STGW Adobe partnership news August 2026"* → got 6 results (via searxng)
 
-  - Verizon (NYSE: VZ) EVP sells 1,100 shares under 10b5-1 plan - Stock Titan (https://news.google.com/rss/articles/CBMiugFBVV95cUxNTFVQUXloMWRvSnl3czdpc2tSLV92b2QxR3RyWmZla00xUDhHdGQ0UmhqLUJ4cHN2TzNiNXRYMlVRM2R2UzNTUHNQTURqbHozY0xTWmRXZUJleG13MkxOb1MySHNzUDZVMEJ4ZXlZZXd5RzRZY1E4SjNhS0hBZnY2US13V0VtLWdNYkFObS0tRy00ejRsVTQ0MTRZQnBFcjFfT1FPbTFBZ1NMdEtNbVJxZGU0Ul9PdDRTV3c?oc=5)
+  - Stagwell Expands Strategic Partnership with Adobe to Build the ... (https://finance.yahoo.com/media-advertising/articles/stagwell-expands-strategic-partnership-adobe-170000540.html)
 
-  - Verizon Stock Leads Defensive Dividend Picks For Higher Rates - simplywall.st (https://news.google.com/rss/articles/CBMi0gFBVV95cUxQOVZaS0FlenR1QWdFWXE3MW55aUFqOEVhZXRuYVRBVHBiX0FIaVl6UEd2czVjMDVkaE5uVjJEc0xqYXNwV3BPRTVmUnI2WjdfellRT1cyNW82S2k4bXRWRGJ5YWp5T2tlX2Y3X3piQldPX3B2Q05PdE5ObThRc2NuQ0lOY2NCMWVLSWlvYWoxVnZpMU1RZmJpRmpBTlRNdml5N29weFVYM0V4NFluYTdfUmpIZ0xKeU1kVXd4blFMd1NQLXpOU3d3aERscThHb1IyRHfSAdcBQVVfeXFMTVQzNU9uU3ZZUEpBYUJaWVlNaHY5OC1WZlhQWGh4LXJpbW1lQ1lLZ1h1RjNydkk3QXM0WmxIczZCbUhmcGVmS0lfOENRYjJwLWp3a0QtYkpGaFdNRWVHUHhIWjBCMUJCNTJTY0tNMHhNdlRWeFA4bUhiSHlTTTBFSFpiQ1JXZWp6VUZFam9YSGZDcGtYTVZwRWNTTUNJNS1WTHk2azdkbkFra3h0N1NNaWhiRG5ScWNOd0NNbXYxSW1sYmdJRVU0VnN2bmVHQm0takU3cXRtVUU?oc=5)
+  - Stagwell Expands Adobe Partnership to 7 Solutions - Stock Titan (https://www.stocktitan.net/news/STGW/stagwell-expands-strategic-partnership-with-adobe-to-build-the-v0jc3ge3hahc.html)
 
-  - Verizon tops business internet rankings as reliability drops 12 points - Stock Titan (https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZEIyWnRPdkJndWpXYVo0bEw5RlJ3bVoweGNHTW9NLU5HTFM2emIxaURFS3ROaGswU0Q1WWtZYTY5TWplS3Z3WlRNVXNBN3cwY2xlclpmMTBxekdySHEtb192VUctME9uT2wzck1wR3kxdnVaSWR5bHdkMWREb25WQ2ZFNEhiV0ZsQ3R0aExHSnltUDJKNlJxSkp5YV9JZE1TZEY0WU5UTklhRFNWUERpeUxUYk1RMTN1SDhr?oc=5)
+  - Stagwell Expands Strategic Partnership with Adobe to Build the ... (https://www.barchart.com/story/news/4228044/stagwell-expands-strategic-partnership-with-adobe-to-build-the-future-of-enterprise-marketing-together)
 
-**Step 6 — Research.** The model wanted to know: *"T-Mobile TMUS news August 2026"* → got 6 results (via ddg)
+**Step 6 — Research.** The model wanted to know: *"Netflix NFLX stock news August 2026"* → got 6 results (via searxng)
 
-  - T-Mobile - News & Events - Press Releases (https://investor.t-mobile.com/events-and-presentations/news/default.aspx)
+  - Dear Netflix Stock Fans, Mark Your Calendars for August 27 (https://www.barchart.com/story/news/4133660/dear-netflix-stock-fans-mark-your-calendars-for-august-27)
 
-  - T-Mobile - News & Events - Events & Presentations (https://investor.t-mobile.com/events-and-presentations/events/default.aspx)
+  - Netflix (NFLX) Stock Falls Amid Market Uptick: What Investors Need ... (https://uk.finance.yahoo.com/news/netflix-nflx-stock-falls-amid-214502710.html)
 
-  - T-Mobile (TMUS) to Cut 77 Jobs in Washington in New Round of ... (https://www.tipranks.com/news/t-mobile-tmus-to-cut-77-jobs-in-washington-in-new-round-of-layoffs)
+  - Netflix Stock Is Down Nearly 40%. What's Going On? | The Motley Fool (https://www.fool.com/investing/2026/08/16/netflix-stock-is-down-nearly-40-whats-going-on/)
 
-**Step 7 — Research.** The model wanted to know: *"Lumen LUMN news August 2026"* → got 6 results (via ddg)
+**Step 7 — Research.** The model wanted to know: *"Disney DIS stock news August 2026"* → got 6 results (via searxng)
 
-  - Lumen - News (https://ir.lumen.com/news/default.aspx)
+  - DIS Stock Gains After Disney Announces Plan To Move ... (https://finance.yahoo.com/markets/stocks/articles/dis-stock-gains-disney-announces-121545139.html)
 
-  - Lumen - Lumen Technologies Reports Solid Second Quarter 2026 ... (https://ir.lumen.com/news/news-details/2026/Lumen-Technologies-Reports-Solid-Second-Quarter-2026-Results-Digital-Transformation-Accelerates/default.aspx)
+  - News Details - Disney Investor Relations (https://investors.thewaltdisneycompany.com/news/news-details/2026/The-Walt-Disney-Company-Executives-to-Discuss-Fiscal-Third-Quarter-2026-Financial-Results-via-Webcast/default.aspx)
 
-  - LUMN Q2 2026 Earnings Report on 8/4/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-8-4-lumen-technologies-inc-stock/)
+  - DIS Stock Price Prediction 2026-2027 | Disney Forecast | 24/7 Wall St. (https://247wallst.com/companies/dis/price-prediction?tpid=1649053&tv=link&tc=in_content)
 
-**Step 8 — Research.** The model wanted to know: *"TDS Telephone and Data Systems news August 2026 dividend"* → got 6 results (via gnews_rss)
+**Step 8 — Research.** The model wanted to know: *"Sphere Entertainment SPHR stock news August 2026"* → got 6 results (via searxng)
 
-  - TDS announces third quarter 2026 dividends - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxQaG1DS1JtRDBZbzJjMlhpYWZEMFdWTDNFN191b3VoNmgyY3NSUEJvaWZEX21fZDExS3pHY1VyN2pMZmxtWEUxNTZaVkxsRl9obnNOQllMbjlrOTlhcVV3M2xwaWVGWWNRMWNWeHRFVGduZndJTk95aHFIZFdYNldTUEJ1UlBRQ09UaDNRVS1fa1phRnhYZGVUWjNCejRxUQ?oc=5)
+  - A Look at Sphere Entertainment Co (SPHR) After 6.4% Decline -- G (https://www.gurufocus.com/news/9057217/a-look-at-sphere-entertainment-co-sphr-after-64-decline-gf-value-7584-vs-price-14734)
 
-  - Press Release: TDS Announces Third Quarter 2026 Dividends - Moomoo (https://news.google.com/rss/articles/CBMinwFBVV95cUxOTmxldWo0LVN6S2p3VkJ1TF9BRDJySDFmR2x4cS0wM2ttYVpmYXYwdHBINTlmT3lQckNCdHRKczF6M0hWYkZIMGlwMTJmRmRQb0lKbnlxYWRKQmRvNmRpYlBWNmdKVlcwVWZyaWxpT256NGJ3UjdGdTI2RGFJdU9YNUtyUkJQMWNILWhwWmFHak9mZXB3bWFyZmREWEJtc1U?oc=5)
+  - Sphere Entertainment (NYSE:SPHR) Shares Down 4.2% - MarketBeat (https://www.marketbeat.com/instant-alerts/price-sphere-entertainment-nyse-sphr-shares-down-42-heres-what-happened-2026-08-27/)
 
-  - Can Telephone And Data Systems (TDS) Justify Its Valuation As Earnings Turn Positive? - simplywall.st (https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVWszM1BlMmVBSjFuN05ZcE00cnNGNmVOVl9Gcm5nVVNHNXJQQUZrYXdVMHU4ajhoUV81T3lzSjJIZTJ5WjhZSHo4V2dqV21wRk8ybzhESFEtRzIyNjc0S2xPdDgyOUoxUWpRelB0UTBBUEdHWWZ0TlVQR3dZS19ZR0l3bldQUWtaeVBGNEN2cHJXdzA0WG1uZWJaZDFDdFBsQVZVNWV0TTIzVVJhR0RONWRfRHpjaUJiLURpRzdqbnUyZVdhVTFYOXUwM241OEpxb1hJejhrZ9IB3AFBVV95cUxOcHFfWlhJNGVxUlZESEszMG9BVUswQWo5WTI3VXpvN2NjVGZRR1FxSzhYZWNtTmpZb19kSUZKUlJTMEZ2LS00VERxcG05OEExOTY0azVWeWlxSl8za25nX2hxaVZSWEJ3bUZIMWs3Z3ZlM1FEdFlfMEVMcWlhdW5CdmdyUWp5eFVWT0FFZnBhZm9CM1VoM0hEU0NXdUpjZWp0SnFXS09aLWFpN1NaekJqOHpxekxGV2NZN1F2ZW51VUtHdlNXNlljWUhmMkEtVlRvZTl6OFZGZTBxRzJL?oc=5)
+  - Sphere Entertainment Co (SPHR) Stock Price, News & Analysis (https://www.stocktitan.net/overview/SPHR/)
 
-**Step 9 — Research.** The model wanted to know: *"Google GOOGL Pixel phone supply shortage price hike August 2026"* → got 2 results (via gnews_rss)
+**Step 9 — Research.** The model wanted to know: *"Cinemark CNK stock news August 2026"* → got 6 results (via searxng)
 
-  - Google basically confirms the Pixel 11 is getting a price hike - The Verge (https://news.google.com/rss/articles/CBMifEFVX3lxTE1xclVCbnZBUnpvZjhIanZGLXdzSmxWOFlpUUFtWTBKVVRYVC1uRV9mNFpJc2x2b28ydEZpcHdLeVFxLU1TY0dDekNCS19HdUlNcGJMWWNFSkdETVpTVmpwRmgwc0gwUGlfaWwtSlI4TXRfOGc4Rk5PdGE5VVc?oc=5)
+  - Cinemark Announces Quarterly Cash Dividend and Addition to ... (https://ir.cinemark.com/news-events/press-releases/detail/648/cinemark-announces-quarterly-cash-dividend-and-addition-to)
 
-  - Pixel 11 Pro Fold Renders Leak — Same Look, Higher Price - Memeburn (https://news.google.com/rss/articles/CBMiYkFVX3lxTE9DZ1FJRW1HZ1dLS3VBNVBEVWlGbTM2dS1KZjlIdGFRX1Z1d2V1UDdQUHJtT253MUxwcnRCMXliRGZETkhFLWI3alRxNlpPbEdSNkVJX0REcWZYX1NLejdNbnBR?oc=5)
+  - Is Cinemark Holdings Inc (CNK) Overvalued After 4.9% Rally? GF V (https://www.gurufocus.com/news/9050555/is-cinemark-holdings-inc-cnk-overvalued-after-49-rally-gf-value-says-overvalued)
 
-**Step 11 — Research.** The model wanted to know: *"Rumble RUM record Q2 2026 results revenue growth August"* → got 6 results (via ddg)
+  - Cinemark (NYSE: CNK) executive lines up multimillion stock sale (https://www.stocktitan.net/sec-filings/CNK/144-cinemark-holdings-inc-sec-filing-7387991ab21b.html)
 
-  - RUM Q2 2026 Earnings Report on 8/10/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-8-10-rumble-inc-stock/)
+**Step 11 — Research.** The model wanted to know: *"Alphabet GOOGL FTC YouTube probe news August 2026"* → got 6 results (via searxng)
 
-  - RUM Group Inc. Reports Record Second Quarter 2026 Results (https://www.rum.group/blog/rum-group-inc-reports-record-second-quarter-2026-results/)
+  - US FTC probes YouTube over social media policies, Bloomberg ... (https://www.reuters.com/legal/government/us-ftc-probes-youtube-over-social-media-policies-bloomberg-news-reports-2026-08-27/)
 
-  - RUM Group Inc. Reports Record Second Quarter 2026 Results (https://finviz.com/news/380091/rum-group-inc-reports-record-second-quarter-2026-results)
+  - US FTC Probing YouTube Over Social Media Policies - Bloomberg (https://www.bloomberg.com/news/articles/2026-08-27/us-ftc-probing-youtube-over-social-media-policies)
 
-**Step 12 — Research.** The model wanted to know: *"Google GOOGL stock news August 26 2026"* → got 6 results (via ddg)
+  - FTC Probes YouTube Over Suspended Social Media Accounts ... (https://finance.yahoo.com/markets/stocks/articles/ftc-probes-youtube-over-suspended-000043147.html)
 
-  - Alphabet (GOOG) Stock Price & OverviewGOOGL Stock Price Today (August 2026) — Alphabet Inc ...Alphabet Inc. (GOOGL) Stock Analysis: Navigating AI ...Alphabet Class A (GOOGL) Stock Forecast (2026)Alphabet Class C Stock Price - NASDAQ: GOOG - MorningstarAlphabet Analysis (August) 2026 | Price, Valuation & OutlookGOOGL Stock Forecast & Price Target — Aug 2026 (https://stockanalysis.com/stocks/goog/)
+**Step 12 — Research.** The model wanted to know: *"Rumble RUM stock 52-week high news August 2026"* → got 6 results (via searxng)
 
-  - GOOGL Stock Price Today (August 2026) — Alphabet Inc ... (https://tickzen.app/stocks/googl/overview)
+  - Rumble (NASDAQ:RUM) Reaches New 1-Year High - MarketBeat (https://www.marketbeat.com/instant-alerts/price-rumble-nasdaq-rum-reaches-new-1-year-high-should-you-buy-2026-08-26/)
 
-  - Alphabet Inc. (GOOGL) Stock Analysis: Navigating AI ... (https://tickeron.com/ticker/GOOGL/)
+  - Rumble stock hits 52-week high at 10.54 USD - Investing.com (https://www.investing.com/news/company-news/rumble-stock-hits-52week-high-at-1054-usd-93CH-4875742)
 
-**Step 14 — Research.** The model wanted to know: *"RUM Rumble stock August 26 2026 drop 8%"* → got 1 results (via gnews_rss)
+  - Why Did RUM, MRK, NEM Stocks Jump To 52-Week Highs Today? (https://finance.yahoo.com/markets/stocks/articles/why-did-rum-mrk-nem-022802361.html)
 
-  - Stock Market Today: Live Updates 11.08.2026 - TechStock² (https://news.google.com/rss/articles/CBMiX0FVX3lxTE10RGtrWVQ1UHd3WHJ6RFlHb2VDOU9BMFNxb3FVSzhMcFpIb3liMkJjc2FlZktiampuM2s2TFdrelJURHh0Y0FrQ1dlc2E1a1hDQ0VfUmVoRVVFV2hHVnRZ?oc=5)
+**Step 13 — Research.** The model wanted to know: *"Trump Media DJT stock news August 2026"* → got 6 results (via searxng)
 
-**Step 16 — Done researching.** The model stopped searching and wrote its full analysis (22,658 characters).
+  - Trump Media posts $238 million second-quarter loss as crypto ... (https://www.cnbc.com/2026/08/10/trump-media-djt-tmtg-earnings-truth-social-crypto.html)
+
+  - Press Releases - Trump Media | IR (https://ir.tmtgcorp.com/news-events/press-releases/)
+
+  - Here's Why DJT Stock Tumbled Today - Forbes (https://www.forbes.com/sites/antoniopequenoiv/2026/08/10/trump-media-tanks-8-to-2-week-low-as-company-reports-latest-losses/)
+
+**Step 14 — Research.** The model wanted to know: *"Verizon VZ NFL takeover Shine news August 2026"* → got 6 results (via searxng)
+
+  - Verizon launches NFL Shine takeover (https://www.verizon.com/about/news/verizon-nfl-shine-takeover-2026)
+
+  - Verizon announces massive NFL takeover in Verizon Shine (https://www.barchart.com/story/news/4210518/verizon-announces-massive-nfl-takeover-in-verizon-shine-thousands-of-free-tickets-to-nfl-games-and-giveaways-plus-20-epic-vip-football-experiences-just-for-verizon-customers)
+
+  - Verizon Announces Massive NFL Takeover in Verizon Shine (https://belatina.com/noticias-newswire?l=verizon-announces-massive-nfl-takeover-in-verizon-shine)
+
+**Step 16 — Research.** The model wanted to know: *"T-Mobile TMUS SpaceX small cells news August 2026"* → got 6 results (via searxng)
+
+  - SpaceX May Need Up to 1.5 Billion Small Cells to Challenge T-Mobile (https://finance.yahoo.com/technology/articles/spacex-may-1-5-billion-143656349.html)
+
+  - BofA sees SpaceX wireless ambitions as positive for T-Mobile and ... (https://finance.yahoo.com/technology/articles/bofa-sees-spacex-wireless-ambitions-124443204.html)
+
+  - SpaceX wireless push could benefit T-Mobile and tower firms, BofA ... (https://seekingalpha.com/news/4637082-spacex-wireless-push-could-benefit-t-mobile-tower-firms-bofa-says)
+
+**Step 17 — Research.** The model wanted to know: *"Lumen LUMN stock news August 2026"* → got 6 results (via searxng)
+
+  - Lumen Technologies Reports Solid Second Quarter 2026 Results (https://ir.lumen.com/news/news-details/2026/Lumen-Technologies-Reports-Solid-Second-Quarter-2026-Results-Digital-Transformation-Accelerates/default.aspx)
+
+  - Lumen Technologies Inc (LUMN) (Q2 2026) Earnings Call Highlights (https://finance.yahoo.com/markets/stocks/articles/lumen-technologies-inc-lumn-q2-050229627.html)
+
+  - Lumen - Investor Relations (https://ir.lumen.com/overview/default.aspx)
+
+**Step 18 — Research.** The model wanted to know: *"Telephone and Data Systems TDS dividend news August 2026"* → got 6 results (via searxng)
+
+  - TDS announces third quarter 2026 dividends - PR Newswire (https://www.prnewswire.com/news-releases/tds-announces-third-quarter-2026-dividends-302855623.html)
+
+  - Telephone and Data Systems, Inc. Common Shares (TDS) Press ... (https://www.nasdaq.com/market-activity/stocks/tds/press-releases)
+
+  - Telephone And Data Systems, Inc. (TDS) Dividends - DividendMax (https://www.dividendmax.com/united-states/nyse/unknown/telephone-and-data-systems-inc/dividends)
+
+**Step 20 — Research.** The model wanted to know: *"AppLovin APP stock August 27 2026 news"* → got 6 results (via searxng)
+
+  - AppLovin Stock Has Already Taken A Shock-Sized Fall Without A ... (https://finance.yahoo.com/markets/stocks/articles/applovin-stock-already-taken-shock-181956992.html)
+
+  - AppLovin Stock (APP) Opinions on Post-Earnings Sell-Off (https://www.quiverquant.com/news/AppLovin+Stock+(APP)+Opinions+on+Post-Earnings+Sell-Off)
+
+  - Is AppLovin (APP) Undervalued After Strong Growth And A Miss ... (https://simplywall.st/stocks/us/media/nasdaq-app/applovin/news/is-applovin-app-undervalued-after-strong-growth-and-a-miss-v)
+
+**Step 22 — Done researching.** The model stopped searching and wrote its full analysis (22,586 characters).
