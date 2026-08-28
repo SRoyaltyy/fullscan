@@ -114,7 +114,8 @@ jobs:
           fi
           echo "source=$SOURCE target=$TARGET FORCE=$FORCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
           set -e
-          python -m src.map_heat --date "$TARGET" --force
+          python -m src.map_heat --date "$TARGET" --force \
+            || echo "WARN: map_heat --force failed (Aliyun Finviz 403 is expected) — continuing to Grok"
           ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           python -m src.map_heat_postclose "${ARGS[@]}"
