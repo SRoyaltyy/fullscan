@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** falling (ratio 0.84 via vix/vix3m) spot 15.21
-- **Fear & Greed:** 57 (Greed) | **Yield/SPX 5d corr:** -0.29
+- **Yields:** unknown (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.83 via vix/vix3m) spot 14.51
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.26
 - **High-impact events:** 2 bullish vs 11 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
 
@@ -14,17 +14,17 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌤️ favorable | medium | finviz sector median week +1.73% [tape] |
-| sector:Communication Services | ⛅ neutral | medium | finviz sector median week -0.56% [tape] |
-| sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -1.30% [tape] |
-| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week +0.23% [tape] |
-| sector:Energy | ⛅ neutral | medium | finviz sector median week -1.24% [tape] |
-| sector:Financial | ⛅ neutral | medium | finviz sector median week +0.00% [tape] |
+| sector:Basic Materials | ⛅ neutral | high | sector predict score +2.6 dir up conf 0.55 [sector board] |
+| sector:Communication Services | ⛅ neutral | high | sector predict score +1.8 dir up conf 0.5 [sector board] |
+| sector:Consumer Cyclical | ⛅ neutral | high | sector predict score +0.5 dir flat conf 0.55 [sector board] |
+| sector:Consumer Defensive | 🌧️ hostile | high | sector predict score -5.0 dir down conf 0.55 [sector board] |
+| sector:Energy | 🌧️ hostile | high | sector predict score -8.6 dir down conf 0.55 [sector board] |
+| sector:Financial | 🌤️ favorable | high | sector predict score +5.2 dir up conf 0.5 [sector board] |
 | sector:Healthcare | 🌧️ hostile | medium | news_judge SECTOR Healthcare [bearish] |
-| sector:Industrials | ⛅ neutral | medium | finviz sector median week -1.19% [tape] |
-| sector:Real Estate | ⛅ neutral | medium | finviz sector median week -0.58% [tape] |
-| sector:Technology | ⛅ neutral | medium | finviz sector median week -0.76% [tape] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week -0.88% [tape] |
+| sector:Industrials | 🌤️ favorable | high | sector predict score +7.7 dir up conf 0.55 [sector board] |
+| sector:Real Estate | 🌤️ favorable | high | sector predict score +4.5 dir up conf 0.5 [sector board] |
+| sector:Technology | 🌤️ favorable | high | sector predict score +4.0 dir up conf 0.55 [sector board] |
+| sector:Utilities | 🌤️ favorable | high | sector predict score +7.5 dir up conf 0.55 [sector board] |
 
 ## Size
 
@@ -57,26 +57,26 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ⛅ neutral | low | risk-unknown, F&G Greed |
-| profit:yes | ⛅ neutral | low | — |
-| profit:thin | ⛅ neutral | low | — |
+| profit:no | ❔ unknown | low | no yields/risk signals |
+| profit:thin | ❔ unknown | low | no yields/risk signals |
+| profit:yes | ❔ unknown | low | no yields/risk signals |
 
 ## Style (growth/value)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌤️ favorable | medium | yields falling — duration/growth re-rates [factor: Bond yields] |
-| style:value | ⛅ neutral | low | value lags duration rallies |
-| style:blend | ⛅ neutral | low | — |
+| style:growth | ❔ unknown | low | no yields/risk signals |
+| style:blend | ❔ unknown | low | no yields/risk signals |
+| style:value | ❔ unknown | low | no yields/risk signals |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | ⛅ neutral | low | — |
-| lev:low | ⛅ neutral | low | — |
-| lev:mid | ⛅ neutral | low | — |
-| lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
+| lev:low | ❔ unknown | low | no signals |
+| lev:mid | ❔ unknown | low | no signals |
+| lev:high | ❔ unknown | low | no signals |
+| lev:neg_equity | ❔ unknown | low | no signals |
 
 ## Momentum state
 
