@@ -374,6 +374,9 @@ def fetch_event_options(earnings: list[dict], limit: int = 8) -> list[dict]:
     Uses the same chain fields Finviz exposes (IV, volume, OI), with yfinance
     as a resilient machine-readable source. This is volatility, never direction.
     """
+    if os.environ.get("GROK_ONLY") == "1":
+        print("[map_heat] skip yfinance event-options on ECS (GROK_ONLY)", flush=True)
+        return []
     try:
         import yfinance as yf
     except Exception:

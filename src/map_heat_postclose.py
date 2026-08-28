@@ -172,9 +172,11 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
         except (OSError, json.JSONDecodeError):
             pass
 
+    print(f"[map-postclose] start source research → {target_date}", flush=True)
     _align_openclaw_token()
     config.require_llm()
     heat = load_heat(target_date)
+    print(f"[map-postclose] heat industries={len(heat.get(\"industries\") or [])}", flush=True)
     # Re-fetch the completed session in memory (do not overwrite its morning
     # artifact) so actual-vs-consensus becomes tomorrow's learning context.
     try:
@@ -196,6 +198,7 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
     errors: list[str] = []
     for sector in sorted({str(t["sector"]) for t in targets}):
         batch = [t for t in targets if t["sector"] == sector]
+        print(f"[map-postclose] Grok {sector} n={len(batch)}", flush=True)
         raw = _chat(rubric, _sector_prompt(target_date, sector, batch, heat),
                     target_date, f"captains_{sector.lower().replace(' ', '_')}")
         obj = extract_json(raw) or {}

@@ -38,6 +38,7 @@ jobs:
       OPENCLAW_TIMEOUT: "10800"
       MAP_POSTCLOSE_LOCK: /home/gha/fullscan-persist/locks/map-postclose.lock
       GROK_ONLY: "1"
+      PYTHONUNBUFFERED: "1"
       HOME: /home/gha
       FULLSCAN_HOME: /home/gha
     steps:
@@ -114,8 +115,15 @@ jobs:
           fi
           echo "source=$SOURCE target=$TARGET FORCE=$FORCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
           set -e
-          python -m src.map_heat --date "$TARGET" --force \
-            || echo "WARN: map_heat --force failed (Aliyun Finviz 403 is expected) — continuing to Grok"
+          echo "=== map_heat --force (3 min cap; Aliyun 403/yfinance must not block Grok) ==="
+          timeout 180 python -u -m src.map_heat --date "$TARGET" --force \
+            || echo "WARN: map_heat --force failed/timed out — using $SOURCE heat as $TARGET baseline if needed"
+          if [ ! -s "01_daily/map_heat/${TARGET}_map_heat.json" ]; then
+            echo "cloning $SOURCE map_heat → $TARGET"
+            cp -f "01_daily/map_heat/${SOURCE}_map_heat.json" "01_daily/map_heat/${TARGET}_map_heat.json" || true
+            cp -f "01_daily/map_heat/${SOURCE}_map_heat.md" "01_daily/map_heat/${TARGET}_map_heat.md" || true
+          fi
+          echo "=== Grok captain research ==="
           ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           python -m src.map_heat_postclose "${ARGS[@]}"
