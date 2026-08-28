@@ -1,34 +1,42 @@
 name: Pipeline health
 
-# Audits every step: missing, empty, garbled, timeout stub, carry-forward,
-# wrong date, skipped — plus book chain, outcomes, learning loop, Pages.
-# With fix=true it re-dispatches the workflow that owns each required FAIL
-# (guarded: <=1 dispatch/step/day, never when busy, never itself).
+# One-stop diagnose + heal. Two clocks:
+#   07:00 ET  --job preopen    door, GH scrape, last-night baseline, morning essays
+#   00:30 ET  --job postclose  door, captain research, yesterday's book/outcomes
+#
+# Each run: audit → fix OpenClaw door / timers on this box → start systemd
+# or spawn the owning ECS job (ubuntu scrape/weather/AB/Pages are
+# GH-dispatched with force=true) → wait for files → re-audit, until
+# required FAILs are gone or the heal budget is spent.
+# Finviz HTML is never scraped here (Aliyun 403). xAI OAuth is human-only.
+# Never GH-dispatches another ECS workflow (would queue behind this job).
 
 on:
   schedule:
-    - cron: "15 14 * * 1-5"   # 10:15 ET — morning packet should already exist
-    - cron: "30 4 * * 2-6"    # 00:30 ET — post-close should have landed
+    # 07:00 EDT (06:00 EST). Packet should be landing; still before 09:25.
+    - cron: "0 11 * * 1-5"
+    # 00:30 ET Tue–Sat. Thursday 22:00 research should have started.
+    - cron: "30 4 * * 2-6"
   workflow_dispatch:
     inputs:
       job:
-        description: "all | runtime | preopen | postclose | scrape | afternoon"
+        description: "auto (clock) | preopen | postclose | all | scrape | afternoon"
         required: false
-        default: "all"
+        default: "auto"
       date:
         description: "pre-open session YYYY-MM-DD (empty = today ET)"
         required: false
         default: ""
       source_date:
-        description: "post-close night (completed session); empty = previous weekday"
+        description: "completed session (post-close night / book date)"
         required: false
         default: ""
       target_date:
         description: "post-close file date (next session); empty = --date"
         required: false
         default: ""
-      fix:
-        description: "true = re-dispatch owning workflow for each required FAIL"
+      no_fix:
+        description: "true = audit only, do not start or dispatch anything"
         required: false
         default: "false"
 
@@ -38,16 +46,17 @@ permissions:
 
 concurrency:
   group: pipeline-health
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   health:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 12
+    timeout-minutes: 180
     env:
       HOME: /home/gha
       FULLSCAN_HOME: /home/gha
       GROK_ONLY: "1"
+      HEALTH_HEAL_ROUNDS: "16"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -61,7 +70,7 @@ jobs:
       - name: Install
         run: pip install -r requirements.txt
 
-      - name: Audit pre-open + post-close artifacts
+      - name: Diagnose + heal
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
@@ -71,17 +80,36 @@ jobs:
         run: |
           set -uo pipefail
           export HOME=/home/gha
+          chmod +x scripts/enable_openclaw_chat.sh scripts/ecs_preopen.sh scripts/ecs_map_postclose.sh || true
+
           JOB="${{ github.event.inputs.job }}"
-          JOB="${JOB:-all}"
+          if [ -z "$JOB" ] || [ "$JOB" = "auto" ] || [ "${{ github.event_name }}" = "schedule" ]; then
+            ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+            if [ "$ET_HM" -ge 500 ] && [ "$ET_HM" -lt 1200 ]; then
+              JOB=preopen
+            else
+              JOB=postclose
+            fi
+          fi
           DATE="${{ github.event.inputs.date }}"
           SOURCE="${{ github.event.inputs.source_date }}"
           TARGET="${{ github.event.inputs.target_date }}"
+          if [ "$JOB" = "preopen" ]; then
+            export HEALTH_HEAL_SECONDS=9000
+            export HEALTH_HEAL_WAIT=180
+          else
+            export HEALTH_HEAL_SECONDS=10800
+            export HEALTH_HEAL_WAIT=180
+          fi
           ARGS=(--job "$JOB" --write)
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SOURCE" ] && ARGS+=(--source-date "$SOURCE")
           [ -n "$TARGET" ] && ARGS+=(--target-date "$TARGET")
-          [ "${{ github.event.inputs.fix }}" = "true" ] && ARGS+=(--fix)
+          if [ "${{ github.event.inputs.no_fix }}" = "true" ]; then
+            ARGS+=(--no-fix)
+          fi
           echo "CMD: python -m src.pipeline_health ${ARGS[*]}"
+          echo "JOB=$JOB ET_HM=$(TZ=America/New_York date +%H%M)"
           python -m src.pipeline_health "${ARGS[@]}"
 
       - name: Show report
@@ -90,7 +118,7 @@ jobs:
           D="${{ github.event.inputs.date }}"
           D="${D:-$(TZ=America/New_York date +%F)}"
           echo "======== $D ========"
-          ls -la 01_daily/${D}_pipeline_health.* 2>/dev/null || true
+          ls -la 01_daily/${D}_pipeline_health* 2>/dev/null || true
           cat "01_daily/${D}_pipeline_health.md" 2>/dev/null || true
 
       - name: Commit health report
@@ -98,7 +126,7 @@ jobs:
         run: |
           export HOME=/home/gha
           bash scripts/safe_git_push.sh \
-            "chore: pipeline health audit [$(date -u +%F_%H%M)]" \
+            "chore: pipeline health heal [$(date -u +%F_%H%M)]" \
             01_daily/*_pipeline_health.md \
             01_daily/*_pipeline_health.json \
             data/health/

@@ -14,6 +14,11 @@ on:
   schedule:
     - cron: "17 15 * * 1-5"   # weekdays 15:17 UTC
   workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
 
 jobs:
   label-weather:
@@ -35,13 +40,22 @@ jobs:
         run: python -m collectors.finviz_financials
 
       - name: Label the universe (Step A)
-        run: python -m src.segments --date "$(TZ=America/New_York date +%F)"
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.segments --date "$DATE"
 
       - name: Score the weather (Step B)
-        run: python -m src.weather --date "$(TZ=America/New_York date +%F)"
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.weather --date "$DATE"
 
       - name: Match stocks to weather (Step C)
-        run: python -m src.join --date "$(TZ=America/New_York date +%F)"
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.join --date "$DATE"
 
       - name: Commit outputs
         run: |
