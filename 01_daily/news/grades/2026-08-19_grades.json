@@ -12,14 +12,15 @@
       ],
       "entry_date": "2026-08-20",
       "entry_open": 273.45,
-      "window_through": "2026-08-26",
-      "trading_days_elapsed": 4,
+      "window_through": "2026-08-27",
+      "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 279.52,
-      "current_return_pct": 2.22,
+      "latest_close": 282.41,
+      "current_return_pct": 3.28,
       "horizon_returns_pct": {
         "1d": -0.21,
-        "3d": 1.82
+        "3d": 1.82,
+        "5d": 3.28
       },
       "mfe_pct": 4.32,
       "mfe_day": "2026-08-26",
@@ -37,14 +38,15 @@
       ],
       "entry_date": "2026-08-20",
       "entry_open": 142.7,
-      "window_through": "2026-08-26",
-      "trading_days_elapsed": 4,
+      "window_through": "2026-08-27",
+      "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 140.03,
-      "current_return_pct": -1.87,
+      "latest_close": 139.81,
+      "current_return_pct": -2.03,
       "horizon_returns_pct": {
         "1d": -4.55,
-        "3d": -2.57
+        "3d": -2.57,
+        "5d": -2.03
       },
       "mfe_pct": 0.93,
       "mfe_day": "2026-08-26",
@@ -62,41 +64,17 @@
       ],
       "entry_date": "2026-08-20",
       "entry_open": 119.96,
-      "window_through": "2026-08-26",
-      "trading_days_elapsed": 4,
+      "window_through": "2026-08-27",
+      "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 116.14,
-      "current_return_pct": -3.18,
+      "latest_close": 114.41,
+      "current_return_pct": -4.63,
       "horizon_returns_pct": {
         "1d": -5.71,
-        "3d": -5.29
+        "3d": -5.29,
+        "5d": -4.63
       },
       "mfe_pct": 0.95,
-      "mfe_day": "2026-08-20",
-      "ever_profitable": true,
-      "first_profitable_day": "2026-08-20"
-    },
-    {
-      "signal_date": "2026-08-19",
-      "generated_at": "2026-08-19 10:54",
-      "ticker": "TLN",
-      "side": "buy",
-      "net": 3.51,
-      "events": [
-        "ai_power_demand"
-      ],
-      "entry_date": "2026-08-20",
-      "entry_open": 320.28,
-      "window_through": "2026-08-26",
-      "trading_days_elapsed": 4,
-      "complete": false,
-      "latest_close": 306.29,
-      "current_return_pct": -4.37,
-      "horizon_returns_pct": {
-        "1d": -1.82,
-        "3d": -3.94
-      },
-      "mfe_pct": 0.54,
       "mfe_day": "2026-08-20",
       "ever_profitable": true,
       "first_profitable_day": "2026-08-20"
@@ -112,14 +90,15 @@
       ],
       "entry_date": "2026-08-20",
       "entry_open": 85.38,
-      "window_through": "2026-08-26",
-      "trading_days_elapsed": 4,
+      "window_through": "2026-08-27",
+      "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 84.22,
-      "current_return_pct": -1.36,
+      "latest_close": 83.47,
+      "current_return_pct": -2.24,
       "horizon_returns_pct": {
         "1d": -2.03,
-        "3d": -1.36
+        "3d": -1.36,
+        "5d": -2.24
       },
       "mfe_pct": 0.71,
       "mfe_day": "2026-08-20",
@@ -128,36 +107,46 @@
     }
   ],
   "summary": {
-    "n_suggestions": 5,
+    "n_suggestions": 4,
     "ever_profitable": {
-      "n": 5,
-      "wins": 5,
+      "n": 4,
+      "wins": 4,
       "win_rate": 100.0
     },
     "close_1d": {
-      "n": 5,
+      "n": 4,
       "wins": 0,
       "win_rate": 0.0,
-      "avg": -2.86
+      "avg": -3.12
     },
     "close_3d": {
-      "n": 5,
+      "n": 4,
       "wins": 1,
-      "win_rate": 20.0,
-      "avg": -2.27
+      "win_rate": 25.0,
+      "avg": -1.85
     },
-    "close_5d": null,
+    "close_5d": {
+      "n": 4,
+      "wins": 1,
+      "win_rate": 25.0,
+      "avg": -1.41
+    },
     "close_10d": null,
     "close_14d": null,
     "side_buy": {
-      "n": 5,
+      "n": 4,
       "ever_profitable": {
-        "n": 5,
-        "wins": 5,
+        "n": 4,
+        "wins": 4,
         "win_rate": 100.0,
-        "avg": 1.49
+        "avg": 1.73
       },
-      "close_5d": null
+      "close_5d": {
+        "n": 4,
+        "wins": 1,
+        "win_rate": 25.0,
+        "avg": -1.41
+      }
     },
     "side_sell": {
       "n": 0,
