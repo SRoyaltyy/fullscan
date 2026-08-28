@@ -1,20 +1,23 @@
-"""Read-only auditor: did pre-open / post-close actually run, and is the packet good?
+"""Diagnose + heal pre-open / post-close packets until required FAILs are gone.
 
-This module does NOT start OpenClaw, does NOT scrape Finviz, does NOT
-write predicts. It only inspects what is already on disk (plus a live
-PONG if the gateway happens to be up).
+Two daily jobs (fix ON by default):
+  --job preopen    07:00 ET  door, GH scrape, last-night baseline, morning essays
+  --job postclose  00:30 ET  door, captain research, previous session book/outcomes
+  --job auto       pick from the ET clock (used by the workflow cron)
 
-Trash that counts as FAIL (not a green check):
+Loop: audit → fix the OpenClaw door / timers on this box → start the owning
+job (systemd or detached python on ECS; GitHub dispatch only for ubuntu
+Finviz/weather/AB/Pages) → wait for the missing files → re-audit.
+
+Does NOT scrape Finviz HTML on ECS (Aliyun 403). Does NOT PONG OpenClaw
+while a Grok job is already running. xAI OAuth expiry is human-only.
+
+Trash that counts as FAIL:
   missing / empty / garbled JSON
   timeout / connection-refused stubs
   carry-forward / pass-over from another date
   explicit skip (morning_bootstrap, maps not scraped)
   DeepSeek/SearXNG fallback when the file claims Grok
-
-CLI:
-  python -m src.pipeline_health [--date YYYY-MM-DD] [--write]
-  python -m src.pipeline_health --job postclose --target-date YYYY-MM-DD
-  python -m src.pipeline_health --job preopen --date YYYY-MM-DD
 """
 from __future__ import annotations
 
@@ -25,6 +28,7 @@ import re
 import shutil
 import socket
 import subprocess
+import time
 import urllib.error
 import urllib.request
 from dataclasses import asdict, dataclass, field
@@ -33,7 +37,6 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from . import config, output_qc
-from .map_heat_postclose import next_weekday
 from .sector_taxonomy import FINVIZ_SECTORS
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,42 +49,103 @@ JSON_CFGS = (
 )
 LIVE_TOKEN_LEN = 48
 STALE_SECRET_LEN = 64
+ENABLE_CHAT = ROOT / "scripts" / "enable_openclaw_chat.sh"
+FIX_STATE = ROOT / "data" / "health" / "fix_state.json"
+PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/"
+HEAL_LOG = Path("/home/gha/fullscan-logs")
 
-# GitHub workflows that must have fired for a complete day.
-# (workflow file, human title, required, audit-date role)
-# role "preopen" = judged against the pre-open date; "postclose" = the night before.
+# (workflow, title, required_for_jobs, date_role)
+# date_role: preopen | postclose | book
 WORKFLOWS = [
-    ("finviz_preopen_scrape.yml", "Finviz pre-open scrape (GH-hosted Elite)", True, "preopen"),
-    ("map_heat_postclose.yml", "Map heat captain research (post-close)", True, "postclose"),
-    ("preopen_all.yml", "Pre-Open ALL", True, "preopen"),
-    ("collect-news-rss.yml", "Collect: RSS News", False, "preopen"),
-    ("collect-news-newsapi.yml", "Collect: NewsAPI", False, "preopen"),
-    ("collect-reddit.yml", "Collect: Reddit", False, "preopen"),
-    ("collect-market-yfinance.yml", "Collect: yfinance Market Data", False, "preopen"),
-    ("collect-macro-fred.yml", "Collect: FRED Macro", False, "preopen"),
-    ("collect-catalyst.yml", "Collect: Catalyst", False, "preopen"),
-    ("insider_fetch.yml", "Insider Fetch (Finviz B2)", False, "preopen"),
-    ("events_daily.yml", "Event Scanner", True, "preopen"),
-    ("news_judge.yml", "News judge", True, "preopen"),
-    ("label_weather.yml", "Label + Weather", True, "preopen"),
-    ("ab_checklist.yml", "A+B1 Checklist", False, "preopen"),
-    ("catalyst_daily.yml", "Catalyst daily (bounded dossiers)", False, "preopen"),
-    ("daily_pipeline.yml", "Autonomous Daily Market Pipeline", True, "preopen"),
-    ("sector_daily.yml", "Sector Daily (auto)", True, "preopen"),
-    ("learn_cycle.yml", "Learn Cycle", True, "preopen"),
-    ("news_grade.yml", "News Actions Grader", True, "preopen"),
-    ("hit_board.yml", "HIT Board", False, "preopen"),
-    ("stock_book_all.yml", "Stock Book ALL (one-shot)", True, "preopen"),
-    ("deploy-dashboard.yml", "Deploy dashboard to Pages", False, "preopen"),
+    ("finviz_preopen_scrape.yml", "Finviz pre-open scrape (GH-hosted Elite)",
+     {"preopen"}, "preopen"),
+    ("map_heat_postclose.yml", "Map heat captain research (post-close)",
+     {"preopen", "postclose"}, "postclose"),
+    ("preopen_all.yml", "Pre-Open ALL",
+     {"preopen"}, "preopen"),
+    ("collect-news-rss.yml", "Collect: RSS News", set(), "preopen"),
+    ("collect-news-newsapi.yml", "Collect: NewsAPI", set(), "preopen"),
+    ("collect-news-reddit.yml", "Collect: Reddit", set(), "preopen"),
+    ("collect-market-yfinance.yml", "Collect: yfinance Market Data", set(), "preopen"),
+    ("collect-macro-fred.yml", "Collect: FRED Macro", set(), "preopen"),
+    ("collect-catalyst.yml", "Collect: Catalyst", set(), "preopen"),
+    ("insider_fetch.yml", "Insider Fetch", set(), "preopen"),
+    ("events_daily.yml", "Event Scanner (fallback yml)", set(), "preopen"),
+    ("news_judge.yml", "News judge (fallback yml)", set(), "preopen"),
+    ("label_weather.yml", "Label + Weather", {"postclose"}, "book"),
+    ("ab_checklist.yml", "A+B1 Checklist", {"postclose"}, "book"),
+    ("catalyst_daily.yml", "Catalyst daily (midday extra)", set(), "preopen"),
+    ("daily_pipeline.yml", "Daily pipeline outcome+reflect", {"postclose"}, "book"),
+    ("sector_daily.yml", "Sector Daily outcome+reflect", {"postclose"}, "book"),
+    ("learn_cycle.yml", "Learn Cycle", {"postclose"}, "book"),
+    ("news_grade.yml", "News Actions Grader", set(), "book"),
+    ("hit_board.yml", "HIT Board", set(), "book"),
+    ("stock_book_all.yml", "Stock Book ALL", {"postclose"}, "book"),
+    ("deploy-dashboard.yml", "Deploy dashboard to Pages", set(), "book"),
 ]
+
+# More-specific prefixes first.
+FIX_MAP = [
+    ("runtime.", "door"),
+    ("postclose.", "map_heat_postclose.yml"),
+    ("scrape.", "finviz_preopen_scrape.yml"),
+    ("preopen.", "preopen_all.yml"),
+    ("book.weather", "label_weather.yml"),
+    ("book.membership", "label_weather.yml"),
+    ("book.join", "label_weather.yml"),
+    ("book.finviz", "label_weather.yml"),
+    ("book.ab", "ab_checklist.yml"),
+    ("book.peers", "stock_book_all.yml"),
+    ("book.", "stock_book_all.yml"),
+    ("outcome.sector", "sector_daily.yml"),
+    ("outcome.", "daily_pipeline.yml"),
+    ("learn.", "learn_cycle.yml"),
+    ("pages.", "deploy-dashboard.yml"),
+]
+
+# ubuntu-latest — safe to GH-dispatch while this health job holds the ECS runner.
+UBUNTU_WORKFLOWS = {
+    "finviz_preopen_scrape.yml",
+    "label_weather.yml",
+    "ab_checklist.yml",
+    "deploy-dashboard.yml",
+    "hit_board.yml",
+    "news_grade.yml",
+    "ab_enrich.yml",
+}
+
+ECS_UNITS = {
+    "preopen_all.yml": "fullscan-preopen.service",
+    "map_heat_postclose.yml": "fullscan-map-postclose.service",
+    "door": "fullscan-openclaw-gateway.service",
+}
+
+ECS_SCRIPTS = {
+    "preopen_all.yml": ROOT / "scripts" / "ecs_preopen.sh",
+    "map_heat_postclose.yml": ROOT / "scripts" / "ecs_map_postclose.sh",
+}
+
+GROK_NEEDLES = (
+    "ecs_preopen.sh",
+    "ecs_map_postclose.sh",
+    "src.run_preopen_all",
+    "src.map_heat_postclose",
+    "src.run_stock_book_all",
+    "src.run_outcome",
+    "src.run_sector_outcome",
+    "src.learn_cycle",
+    "src.catalyst_daily",
+)
+
+HUMAN_STEPS = {"runtime.oauth"}
 
 
 @dataclass
 class Check:
-    step: str           # stable id, e.g. postclose.map_heat
+    step: str
     name: str
-    group: str          # runtime | clock | scrape | postclose | preopen
-    status: str         # OK | FAIL | WARN
+    group: str
+    status: str
     required: bool
     detail: str = ""
     path: str = ""
@@ -93,9 +157,11 @@ class Report:
     date: str
     source_date: str
     target_date: str
-    generated_at: str
+    book_date: str = ""
+    generated_at: str = ""
     checks: list[Check] = field(default_factory=list)
     fix_actions: list[str] | None = None
+    round: int = 0
 
     @property
     def n_fail(self) -> int:
@@ -110,8 +176,8 @@ class Report:
         return self.n_fail == 0
 
 
-def _today() -> str:
-    return datetime.now(ET).date().isoformat()
+def _today(now: datetime | None = None) -> str:
+    return (now or datetime.now(ET)).date().isoformat()
 
 
 def _prev_weekday(date: str) -> str:
@@ -119,6 +185,64 @@ def _prev_weekday(date: str) -> str:
     while d.weekday() >= 5:
         d -= timedelta(days=1)
     return d.isoformat()
+
+
+def _next_weekday(date: str) -> str:
+    d = datetime.fromisoformat(date).date() + timedelta(days=1)
+    while d.weekday() >= 5:
+        d += timedelta(days=1)
+    return d.isoformat()
+
+
+def packet_dates(
+    job: str,
+    now: datetime | None = None,
+    date: str | None = None,
+    source: str | None = None,
+    target: str | None = None,
+) -> tuple[str, str, str, str]:
+    """Return (session, source, target, book).
+
+    preopen 07:00 D:          scrape/essays D, baseline dated D (night of D-1)
+    postclose 00:30 D:        research dated D, book D-1
+    postclose after 22:00 D:  research dated next weekday, book D
+    afternoon D (13:00-22:00): last-night research dated D, book D
+    """
+    now = now or datetime.now(ET)
+    session = date or now.date().isoformat()
+    hm = now.hour * 100 + now.minute
+    prev = _prev_weekday(session)
+    nxt = _next_weekday(session)
+    if job == "preopen":
+        src, tgt, book = prev, session, session
+    elif job in ("postclose", "afternoon", "all"):
+        if hm >= 2200:
+            src, tgt, book = session, nxt, session
+        elif hm < 500:
+            src, tgt, book = prev, session, prev
+        else:
+            src, tgt, book = prev, session, session
+    else:
+        src, tgt, book = prev, session, session
+    if source:
+        src = source
+        if job in ("postclose", "afternoon") and not date:
+            book = source
+    if target:
+        tgt = target
+    if job == "preopen":
+        book = session
+    return session, src, tgt, book
+
+
+def pick_job(job: str, now: datetime | None = None) -> str:
+    if job and job not in ("auto", ""):
+        return job
+    now = now or datetime.now(ET)
+    hm = now.hour * 100 + now.minute
+    if 500 <= hm < 1200:
+        return "preopen"
+    return "postclose"
 
 
 def _add(report: Report, **kw) -> Check:
@@ -179,8 +303,15 @@ def restore_persist(*dates: str) -> None:
             PERSIST / "01_daily" / "news",
             PERSIST / "01_daily" / "map_heat",
             PERSIST / "01_daily" / "catalyst",
+            PERSIST / "01_daily" / "weather",
             PERSIST / "01_daily" / "_transcripts",
             PERSIST / "data" / "catalyst",
+            PERSIST / "data" / "join",
+            PERSIST / "data" / "universe",
+            PERSIST / "data" / "ab_checklist",
+            PERSIST / "data" / "peers",
+            PERSIST / "data" / "stock_book",
+            PERSIST / "data" / "exports",
         ):
             if not folder.is_dir():
                 continue
@@ -208,7 +339,7 @@ def restore_persist(*dates: str) -> None:
         print(f"[health] persist restore: {n} paths", flush=True)
 
 
-def _payload_dates(data: dict) -> list[str]:
+def _payload_dates(data: dict) -> list[tuple[str, str]]:
     out = []
     for k in ("date", "scan_date", "asof", "source_heat_date", "source_date"):
         v = data.get(k)
@@ -237,9 +368,7 @@ def _deepseekish(text: str) -> bool:
 
 
 def artifact(report: Report, *, step: str, name: str, group: str, path: Path,
-             required: bool, expected_date: str, kind: str = "file",
-             qc=None) -> None:
-    """One on-disk artifact: missing / empty / garbled / timeout / stale / QC."""
+             required: bool, expected_date: str, qc=None) -> None:
     if not path.exists():
         _add(report, step=step, name=name, group=group,
              status="FAIL" if required else "WARN", required=required,
@@ -344,30 +473,216 @@ def _chat_ping(token: str) -> dict:
 def _systemctl(*args: str) -> str:
     try:
         r = subprocess.run(["systemctl", *args], capture_output=True,
-                           text=True, timeout=8)
+                           text=True, timeout=20)
         return (r.stdout or r.stderr or "").strip()
     except (OSError, subprocess.SubprocessError):
         return ""
 
 
+def _pgrep(*needles: str) -> bool:
+    try:
+        r = subprocess.run(["pgrep", "-af", "."], capture_output=True,
+                           text=True, timeout=8)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    blob = r.stdout or ""
+    return any(n in blob for n in needles)
+
+
+def _unit_active(unit: str) -> bool:
+    return _systemctl("is-active", unit) == "active"
+
+
+def grok_busy() -> bool:
+    if _unit_active("fullscan-preopen.service"):
+        return True
+    if _unit_active("fullscan-map-postclose.service"):
+        return True
+    return _pgrep(*GROK_NEEDLES)
+
+
 def _models_status() -> str:
     try:
-        r = subprocess.run(["openclaw", "models", "status"], capture_output=True,
-                           text=True, timeout=20,
-                           env={**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"})
+        r = subprocess.run(
+            ["openclaw", "models", "status"], capture_output=True,
+            text=True, timeout=20,
+            env={**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"})
         return (r.stdout or "") + "\n" + (r.stderr or "")
     except (OSError, subprocess.SubprocessError) as e:
         return str(e)
 
 
+def _file_contains(path: Path, needle: str) -> bool:
+    try:
+        return needle in path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return False
+
+
+def _slug(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+
+
+def _pull_paths(paths: list[str]) -> None:
+    if not paths:
+        return
+    try:
+        subprocess.run(["git", "fetch", "origin", "main"], cwd=str(ROOT),
+                       capture_output=True, timeout=40, check=False)
+        subprocess.run(["git", "checkout", "origin/main", "--", *paths],
+                       cwd=str(ROOT), capture_output=True, timeout=40, check=False)
+    except (OSError, subprocess.SubprocessError) as e:
+        print(f"[health] git pull skipped: {e}", flush=True)
+
+
+def _pull_scrape_paths(date: str) -> None:
+    _pull_paths([
+        f"01_daily/news/{date}_finviz_digest.json",
+        f"01_daily/news/{date}_finviz_digest.md",
+        f"01_daily/map_heat/{date}_map_heat.json",
+        f"01_daily/map_heat/{date}_map_heat.md",
+    ])
+
+
+def _pull_book_paths(date: str) -> None:
+    _pull_paths([
+        f"01_daily/weather/{date}_weather.json",
+        f"data/universe/{date}_membership.csv",
+        f"data/join/{date}_ranked.csv",
+        f"data/exports/finviz_{date}.csv",
+        f"data/ab_checklist/{date}_ab_checklist.csv",
+        f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
+        f"data/peers/{date}_peer_rs.csv",
+        f"data/stock_book/{date}_stock_book.json",
+        f"01_daily/{date}_stock_book.md",
+        "dashboard/index.html",
+        "03_scoreboard/HIT_BOARD.md",
+        "03_scoreboard/PAPER_TRADING.md",
+        "03_scoreboard/STOCK_BOOK_BACKTEST.md",
+        "03_scoreboard/LEARNINGS.md",
+    ])
+
+
+# ---------------------------------------------------------------------------
+# A. Door
+# ---------------------------------------------------------------------------
+
+def check_runtime(report: Report, skip_probe: bool = False) -> None:
+    print("\n== A. DOOR (OpenClaw) ==", flush=True)
+    home = os.environ.get("HOME") or ""
+    _add(report, step="runtime.home", name="HOME is /home/gha on ECS",
+         group="runtime",
+         status="OK" if home.rstrip("/") == "/home/gha" else "WARN",
+         required=False, detail=f"HOME={home!r}")
+
+    live, live_n = _live_token()
+    env = os.environ.get("OPENCLAW_TOKEN") or ""
+    if live_n == LIVE_TOKEN_LEN and env and len(env) == STALE_SECRET_LEN and live != env:
+        os.environ["OPENCLAW_TOKEN"] = live
+        os.environ["OPENCLAW_GATEWAY_TOKEN"] = live
+        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
+             group="runtime", status="WARN", required=False,
+             detail=f"MISMATCH — using live json tail={_tail(live)} (secret ignored)")
+    elif live_n == 0 and len(env) == STALE_SECRET_LEN:
+        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
+             group="runtime", status="FAIL", required=True,
+             detail="only 64-char GitHub secret present — 401 / SearXNG path")
+    elif live_n == LIVE_TOKEN_LEN or (live_n == 0 and len(env) == LIVE_TOKEN_LEN):
+        if live:
+            os.environ["OPENCLAW_TOKEN"] = live
+        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
+             group="runtime", status="OK", required=True,
+             detail=f"live_len={live_n or len(env)} tail={_tail(live or env)}")
+    elif live_n or env:
+        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
+             group="runtime", status="WARN", required=False,
+             detail=f"json_len={live_n} env_len={len(env)}")
+    else:
+        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
+             group="runtime", status="FAIL", required=True,
+             detail="no token in json or env")
+
+    token = live or env
+    port_up = _port_open()
+    if port_up:
+        _add(report, step="runtime.port", name="OpenClaw port 18789 listening",
+             group="runtime", status="OK", required=True, detail=GW)
+    else:
+        _add(report, step="runtime.port", name="OpenClaw port 18789 listening",
+             group="runtime", status="FAIL", required=True,
+             detail="connection refused")
+
+    if skip_probe:
+        _add(report, step="runtime.pong", name="OpenClaw PONG",
+             group="runtime", status="OK" if port_up else "FAIL",
+             required=not port_up,
+             detail="skipped — Grok job running (will not interrupt)")
+        _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
+             group="runtime", status="OK" if port_up else "FAIL",
+             required=not port_up, detail="probe skipped")
+    elif port_up:
+        ping = _chat_ping(token)
+        if ping.get("http") == 200 and "PONG" in (ping.get("content") or "").upper():
+            _add(report, step="runtime.pong", name="OpenClaw PONG",
+                 group="runtime", status="OK", required=True,
+                 detail=f"model={ping.get('model')}")
+        elif ping.get("http") == 401:
+            _add(report, step="runtime.pong", name="OpenClaw PONG",
+                 group="runtime", status="FAIL", required=True,
+                 detail="HTTP 401 — wrong token (64 vs 48)")
+        else:
+            _add(report, step="runtime.pong", name="OpenClaw PONG",
+                 group="runtime", status="FAIL", required=True,
+                 detail=f"http={ping.get('http')} {ping.get('error') or ping.get('content')}"[:180])
+        model = (ping.get("model") or "").lower()
+        if ping.get("http") == 200 and "deepseek" in model:
+            _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
+                 group="runtime", status="FAIL", required=True,
+                 detail=f"model={ping.get('model')} — DeepSeek fallback")
+        elif ping.get("http") == 200:
+            _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
+                 group="runtime", status="OK", required=True,
+                 detail=f"model={ping.get('model') or 'openclaw/default'}")
+        else:
+            _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
+                 group="runtime", status="FAIL", required=True, detail="no 200 chat")
+    else:
+        _add(report, step="runtime.pong", name="OpenClaw PONG",
+             group="runtime", status="FAIL", required=True, detail="port down")
+        _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
+             group="runtime", status="FAIL", required=True, detail="port down")
+
+    st = _models_status().lower()
+    if "expir" in st and "xai" in st:
+        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
+             group="runtime", status="FAIL", required=True,
+             detail="HUMAN: openclaw models auth login --provider xai  (cannot auto-heal)")
+    elif "xai" in st:
+        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
+             group="runtime", status="OK", required=True, detail="xai profile present")
+    else:
+        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
+             group="runtime", status="WARN", required=False,
+             detail="could not parse openclaw models status")
+
+    grok_only = config.grok_only()
+    _add(report, step="runtime.grok_only", name="GROK_ONLY (this health process)",
+         group="runtime",
+         status="OK" if grok_only else "WARN", required=False,
+         detail="on" if grok_only else "off here — heal exports GROK_ONLY=1")
+
+
+# ---------------------------------------------------------------------------
+# B. Clocks — n=0 is WARN; missing files in C–H are the real FAIL
+# ---------------------------------------------------------------------------
+
 def _gh_runs(date_map: dict[str, str]) -> list[dict]:
-    """date_map: workflow file -> ET date to audit against."""
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
     if not token:
         return []
     out = []
-    for wf, title, _req, _role in WORKFLOWS:
+    for wf, title, _jobs, _role in WORKFLOWS:
         date = date_map.get(wf, "")
         url = (f"https://api.github.com/repos/{repo}/actions/workflows/{wf}"
                f"/runs?per_page=10")
@@ -403,109 +718,14 @@ def _gh_runs(date_map: dict[str, str]) -> list[dict]:
     return out
 
 
-# ---------------------------------------------------------------------------
-# A. Runtime (observational — never starts anything)
-# ---------------------------------------------------------------------------
-
-def check_runtime(report: Report) -> None:
-    print("\n== A. RUNTIME (observational, nothing is started) ==", flush=True)
-    home = os.environ.get("HOME") or ""
-    _add(report, step="runtime.home", name="HOME is /home/gha on ECS",
-         group="runtime",
-         status="OK" if home.rstrip("/") == "/home/gha" else "WARN",
-         required=False, detail=f"HOME={home!r}")
-
-    live, live_n = _live_token()
-    env = os.environ.get("OPENCLAW_TOKEN") or ""
-    if live_n == LIVE_TOKEN_LEN and env and len(env) == STALE_SECRET_LEN and live != env:
-        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
-             group="runtime", status="WARN", required=False,
-             detail=f"MISMATCH json_len={live_n} tail={_tail(live)} "
-                    f"secret_len={len(env)} tail={_tail(env)} — json is the live one")
-    elif live_n == 0 and len(env) == STALE_SECRET_LEN:
-        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
-             group="runtime", status="FAIL", required=True,
-             detail="only 64-char GitHub secret present — 401 / SearXNG path")
-    elif live_n == LIVE_TOKEN_LEN or (live_n == 0 and len(env) == LIVE_TOKEN_LEN):
-        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
-             group="runtime", status="OK", required=True,
-             detail=f"live_len={live_n or len(env)} tail={_tail(live or env)}")
-    elif live_n or env:
-        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
-             group="runtime", status="WARN", required=False,
-             detail=f"json_len={live_n} env_len={len(env)}")
-    else:
-        _add(report, step="runtime.token", name="OpenClaw token (48 json vs 64 secret)",
-             group="runtime", status="FAIL", required=True,
-             detail="no token in json or env")
-
-    if _port_open():
-        _add(report, step="runtime.port", name="OpenClaw port 18789 listening",
-             group="runtime", status="OK", required=True, detail=GW)
-        ping = _chat_ping(live or env)
-        if ping.get("http") == 200 and "PONG" in (ping.get("content") or "").upper():
-            _add(report, step="runtime.pong", name="OpenClaw PONG",
-                 group="runtime", status="OK", required=True,
-                 detail=f"model={ping.get('model')}")
-        elif ping.get("http") == 401:
-            _add(report, step="runtime.pong", name="OpenClaw PONG",
-                 group="runtime", status="FAIL", required=True,
-                 detail="HTTP 401 — wrong token (64 vs 48)")
-        else:
-            _add(report, step="runtime.pong", name="OpenClaw PONG",
-                 group="runtime", status="FAIL", required=True,
-                 detail=f"http={ping.get('http')} {ping.get('error') or ping.get('content')}"[:180])
-        model = (ping.get("model") or "").lower()
-        if ping.get("http") == 200 and "deepseek" in model:
-            _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
-                 group="runtime", status="FAIL", required=True,
-                 detail=f"model={ping.get('model')} — DeepSeek fallback")
-        elif ping.get("http") == 200:
-            _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
-                 group="runtime", status="OK", required=True,
-                 detail=f"model={ping.get('model') or 'openclaw/default'}")
-        else:
-            _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
-                 group="runtime", status="FAIL", required=True, detail="no 200 chat")
-    else:
-        _add(report, step="runtime.port", name="OpenClaw port 18789 listening",
-             group="runtime", status="FAIL", required=True,
-             detail="connection refused (observational — health does not start it)")
-        _add(report, step="runtime.pong", name="OpenClaw PONG",
-             group="runtime", status="FAIL", required=True, detail="port down")
-        _add(report, step="runtime.model", name="Classroom model is Grok not DeepSeek",
-             group="runtime", status="FAIL", required=True, detail="port down")
-
-    st = _models_status().lower()
-    if "expir" in st and "xai" in st:
-        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
-             group="runtime", status="FAIL", required=True,
-             detail="xAI token expiring/expired")
-    elif "xai" in st:
-        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
-             group="runtime", status="OK", required=True, detail="xai profile present")
-    else:
-        _add(report, step="runtime.oauth", name="xAI OAuth not expired",
-             group="runtime", status="WARN", required=False,
-             detail="could not parse openclaw models status")
-
-    grok_only = config.grok_only()
-    _add(report, step="runtime.grok_only", name="GROK_ONLY (this health process)",
-         group="runtime",
-         status="OK" if grok_only else "WARN", required=False,
-         detail="on" if grok_only else "off here — post-close/pre-open yml must set GROK_ONLY=1")
-
-
-# ---------------------------------------------------------------------------
-# B. Did the clocks / GitHub jobs fire
-# ---------------------------------------------------------------------------
-
-def check_clocks(report: Report, preopen_date: str, postclose_night: str) -> None:
+def check_clocks(report: Report, job: str, preopen_date: str,
+                 postclose_night: str, book_date: str) -> None:
     print("\n== B. DID THE JOBS FIRE ==", flush=True)
     for unit, label, req in (
-        ("fullscan-preopen.timer", "systemd pre-open timer enabled", False),
+        ("fullscan-preopen.timer", "systemd pre-open timer enabled", job == "preopen"),
         ("fullscan-preopen.service", "systemd pre-open service (now)", False),
-        ("fullscan-map-postclose.timer", "systemd post-close timer enabled", False),
+        ("fullscan-map-postclose.timer", "systemd post-close timer enabled",
+         job == "postclose"),
         ("fullscan-openclaw-gateway.service", "OpenClaw gateway unit", False),
     ):
         if "timer" in unit:
@@ -515,26 +735,34 @@ def check_clocks(report: Report, preopen_date: str, postclose_night: str) -> Non
             val = _systemctl("is-active", unit)
             ok = val == "active"
         _add(report, step=f"clock.{unit}", name=label, group="clock",
-             status="OK" if ok else "WARN", required=req,
+             status="OK" if ok else ("FAIL" if req else "WARN"), required=req,
              detail=val or "not found")
 
     clock = ROOT / "01_daily" / "_ecs_clock.md"
     artifact(report, step="clock.ecs_clock", name="ECS clock file written",
              group="clock", path=clock, required=False, expected_date=preopen_date)
 
-    pairs = [(wf, title, postclose_night if role == "postclose" else preopen_date,
-              req)
-             for wf, title, req, role in WORKFLOWS]
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     if not token:
         _add(report, step="clock.gh", name="GitHub Actions runs for this ET date",
              group="clock", status="WARN", required=False,
              detail="no GITHUB_TOKEN — cannot list runs")
         return
-    date_map = {wf: (postclose_night if role == "postclose" else preopen_date)
-                for wf, _t, _req, role in WORKFLOWS}
+
+    def _when(role: str) -> str:
+        if role == "postclose":
+            return postclose_night
+        if role == "book":
+            return book_date
+        return preopen_date
+
+    date_map = {wf: _when(role) for wf, _t, _jobs, role in WORKFLOWS}
     rows_by_wf = {r.get("wf"): r for r in _gh_runs(date_map)}
-    for wf, title, when, req in pairs:
+    for wf, title, jobs, role in WORKFLOWS:
+        if job != "all" and job not in jobs:
+            continue
+        req = job in jobs
+        when = _when(role)
         row = rows_by_wf.get(wf) or {"wf": wf, "title": title, "n": 0, "latest": None}
         latest = row.get("latest") or {}
         if row.get("error"):
@@ -543,25 +771,28 @@ def check_clocks(report: Report, preopen_date: str, postclose_night: str) -> Non
             continue
         if not latest:
             _add(report, step=f"clock.{wf}", name=f"{title} ran on {when}",
-                 group="clock", status="FAIL" if req else "WARN", required=req,
-                 detail=f"DID NOT RUN on {when} (n=0)")
+                 group="clock", status="WARN", required=False,
+                 detail=f"n=0 on {when} — file checks below decide")
             continue
         conc = latest.get("conclusion") or latest.get("status") or "?"
-        st = "OK" if conc == "success" else (
-            "WARN" if conc in ("in_progress", "queued", None) else "FAIL")
+        if conc == "success":
+            st = "OK"
+        elif conc in ("in_progress", "queued", None):
+            st = "WARN"
+        else:
+            st = "FAIL" if req else "WARN"
         _add(report, step=f"clock.{wf}", name=f"{title} ran on {when}",
-             group="clock", status=st if req or st == "OK" else "WARN",
-             required=req,
+             group="clock", status=st, required=req and st == "FAIL",
              detail=f"n={row.get('n')} latest={conc} event={latest.get('event')}",
              path=latest.get("html_url") or "")
 
 
 # ---------------------------------------------------------------------------
-# C. Finviz scrape (05:40 GH-hosted) — inputs to pre-open
+# C–H artifact checks (same contract as the Map)
 # ---------------------------------------------------------------------------
 
 def check_scrape(report: Report, date: str) -> None:
-    print(f"\n== C. FINVIZ PRE-OPEN SCRAPE (GH-hosted, date {date}) ==", flush=True)
+    print(f"\n== C. FINVIZ PRE-OPEN SCRAPE (date {date}) ==", flush=True)
     news = ROOT / "01_daily" / "news"
     heat = ROOT / "01_daily" / "map_heat"
     artifact(report, step="scrape.digest_json",
@@ -592,28 +823,12 @@ def check_scrape(report: Report, date: str) -> None:
             _add(report, step="scrape.tape", name="Futures tape + overlay_at today",
                  group="scrape", status="FAIL", required=True,
                  detail=f"overlay_at={overlay_at or 'missing'} (pass-over / not overlaid today)")
-        _add(report, step="scrape.econ", name="Econ calendar rows",
-             group="scrape",
-             status="OK" if (data.get("econ") or []) else "WARN",
-             required=False, detail=f"n={len(data.get('econ') or [])}")
-        _add(report, step="scrape.earnings", name="Earnings calendar rows",
-             group="scrape",
-             status="OK" if (data.get("earnings") or []) else "WARN",
-             required=False, detail=f"n={len(data.get('earnings') or [])}")
-        _add(report, step="scrape.ticker_news", name="Ticker-tagged Finviz news",
-             group="scrape",
-             status="OK" if (data.get("ticker_news") or []) else "WARN",
-             required=False, detail=f"n={len(data.get('ticker_news') or [])}")
         notes = str(data.get("notes") or data.get("one_paragraph") or "")
         if "not scraped" in notes.lower() or "elite session empty" in notes.lower():
             _add(report, step="scrape.skipped", name="Maps actually scraped (not skipped)",
                  group="scrape", status="FAIL", required=True,
                  detail="notes say maps were not scraped / Elite 403")
 
-
-# ---------------------------------------------------------------------------
-# D. Post-close (night of source → files dated target)
-# ---------------------------------------------------------------------------
 
 def check_postclose(report: Report, source: str, target: str) -> None:
     print(f"\n== D. POST-CLOSE (night of {source} → files dated {target}) ==",
@@ -641,30 +856,16 @@ def check_postclose(report: Report, source: str, target: str) -> None:
     if isinstance(data, dict):
         n = len(data.get("cards") or [])
         cov = data.get("coverage")
+        try:
+            cov_f = float(cov) if cov is not None else 1.0
+        except (TypeError, ValueError):
+            cov_f = 0.0
         _add(report, step="postclose.coverage",
              name="Captain coverage ≥ 90%", group="postclose",
-             status="OK" if (cov is None or float(cov) >= 0.90) and n >= 20 else "FAIL",
+             status="OK" if cov_f >= 0.90 and n >= 20 else "FAIL",
              required=True, detail=f"cards={n} coverage={cov}")
-        _add(report, step="postclose.opportunities",
-             name="Opportunities / vetoes / parent_splits present",
-             group="postclose",
-             status="OK" if (data.get("opportunities") or data.get("parent_splits")) else "WARN",
-             required=False,
-             detail=f"opp={len(data.get('opportunities') or [])} "
-                    f"veto={len(data.get('vetoes') or [])} "
-                    f"splits={len(data.get('parent_splits') or [])}")
-        traces = list(heat.glob(f"{target}_postclose_*_trace.md"))
-        _add(report, step="postclose.traces",
-             name="Per-sector Grok traces on disk", group="postclose",
-             status="OK" if traces else "WARN", required=False,
-             detail=f"n={len(traces)}")
-    trans = list(tr.glob(f"{target}_map_postclose_*.json")) if tr.is_dir() else []
-    _add(report, step="postclose.transcripts",
-         name="Post-close LLM transcripts", group="postclose",
-         status="OK" if trans else "WARN", required=False,
-         detail=f"n={len(trans)}")
-    # Fallback path in the packet
-    blob = _read(heat / f"{target}_research_baseline.md") + _read(base) if base.exists() else ""
+    blob = _read(heat / f"{target}_research_baseline.md")
+    blob += _read(base) if base.exists() else ""
     if "searxng" in blob.lower() and "0 results" in blob.lower():
         _add(report, step="postclose.searxng",
              name="Research used Grok native search (not SearXNG)",
@@ -675,14 +876,11 @@ def check_postclose(report: Report, source: str, target: str) -> None:
              name="Research used Grok (not DeepSeek fallback)",
              group="postclose", status="FAIL", required=True,
              detail="DeepSeek fallback text in baseline")
-
-
-# ---------------------------------------------------------------------------
-# E. Pre-open ALL — every step
-# ---------------------------------------------------------------------------
-
-def _slug(s: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    trans = list(tr.glob(f"{target}_map_postclose_*.json")) if tr.is_dir() else []
+    _add(report, step="postclose.transcripts",
+         name="Post-close LLM transcripts", group="postclose",
+         status="OK" if trans else "WARN", required=False,
+         detail=f"n={len(trans)}")
 
 
 def check_preopen(report: Report, date: str) -> None:
@@ -694,7 +892,6 @@ def check_preopen(report: Report, date: str) -> None:
     gen = ROOT / "01_daily" / "general"
     sec = ROOT / "01_daily" / "sectors" / date
 
-    # 1. consume scrape (already section C) — still record as preopen prereq
     artifact(report, step="preopen.in_digest",
              name="INPUT: Finviz digest from 05:40 scrape",
              group="preopen", path=news / f"{date}_finviz_digest.json",
@@ -704,25 +901,15 @@ def check_preopen(report: Report, date: str) -> None:
              group="preopen", path=heat / f"{date}_research_baseline.json",
              required=True, expected_date=date, qc=output_qc.qc_map_heat_baseline)
 
-    # 2. news parse
     artifact(report, step="preopen.news_parse_json",
              name="News parse JSON", group="preopen",
              path=news / f"{date}_parsed.json", required=True,
              expected_date=date, qc=output_qc.qc_news_parse)
-    artifact(report, step="preopen.news_parse_md",
-             name="News parse MD", group="preopen",
-             path=news / f"{date}_parsed.md", required=False,
-             expected_date=date)
-
-    # 3. events + 4. catcher
     evj = ev / f"{date}_events.json"
     artifact(report, step="preopen.events",
              name="Event scanner (primary, NOT carry)", group="preopen",
              path=evj, required=True, expected_date=date,
              qc=output_qc.qc_events_path)
-    artifact(report, step="preopen.events_md",
-             name="Events MD", group="preopen",
-             path=ev / f"{date}_events.md", required=False, expected_date=date)
     data = _json(evj) if evj.exists() else None
     if isinstance(data, dict):
         catcher = data.get("catcher") or {}
@@ -730,7 +917,7 @@ def check_preopen(report: Report, date: str) -> None:
             _add(report, step="preopen.catcher",
                  name="Event catcher second pass ran", group="preopen",
                  status="OK", required=True,
-                 detail=f"found={catcher.get('found')} replaced={catcher.get('replaced_primary')}")
+                 detail=f"found={catcher.get('found')}")
         else:
             _add(report, step="preopen.catcher",
                  name="Event catcher second pass ran", group="preopen",
@@ -742,22 +929,11 @@ def check_preopen(report: Report, date: str) -> None:
                  name="events/latest.json points at today", group="preopen",
                  status="FAIL", required=True,
                  detail=f"PASS-OVER latest scan_date={latest.get('scan_date')}")
-        elif isinstance(latest, dict):
-            _add(report, step="preopen.events_latest",
-                 name="events/latest.json points at today", group="preopen",
-                 status="OK", required=False, detail=f"scan_date={latest.get('scan_date')}")
 
-    # 5. news judge
     artifact(report, step="preopen.judge_md",
              name="News judge MD", group="preopen",
              path=news / f"{date}_judge.md", required=True,
              expected_date=date, qc=output_qc.qc_news_judge)
-    artifact(report, step="preopen.judge_json",
-             name="News judge JSON (parsed tilts)", group="preopen",
-             path=news / f"{date}_judge.json", required=False,
-             expected_date=date)
-
-    # 6. morning captain refresh
     artifact(report, step="preopen.research_json",
              name="Map-heat morning refresh JSON", group="preopen",
              path=heat / f"{date}_research.json", required=True,
@@ -766,21 +942,15 @@ def check_preopen(report: Report, date: str) -> None:
              name="Map-heat morning refresh MD", group="preopen",
              path=heat / f"{date}_research.md", required=True,
              expected_date=date, qc=output_qc.qc_map_heat_research)
-
-    # 7. news actions
     artifact(report, step="preopen.actions",
              name="News actions JSON", group="preopen",
              path=news / f"{date}_actions.json", required=False,
              expected_date=date, qc=output_qc.qc_news_actions)
 
-    # 8. catalyst
     dj = cat / f"{date}_dossiers.json"
     artifact(report, step="preopen.catalyst_json",
              name="Catalyst dossiers JSON", group="preopen",
              path=dj, required=False, expected_date=date)
-    artifact(report, step="preopen.catalyst_md",
-             name="Catalyst dossiers MD", group="preopen",
-             path=cat / f"{date}_dossiers.md", required=False, expected_date=date)
     djs = _json(dj) if dj.exists() else None
     if isinstance(djs, dict):
         rows = djs.get("dossiers") or []
@@ -791,20 +961,17 @@ def check_preopen(report: Report, date: str) -> None:
         if searx and not native:
             _add(report, step="preopen.catalyst_backend",
                  name="Catalyst search_backend=grok_native", group="preopen",
-                 status="FAIL", required=False,
-                 detail=f"SearXNG/other backend on {len(searx)} dossiers, grok_native={len(native)}")
+                 status="FAIL", required=True,
+                 detail=f"SearXNG on {len(searx)} dossiers — re-run with GROK_ONLY")
         elif native:
             _add(report, step="preopen.catalyst_backend",
                  name="Catalyst search_backend=grok_native", group="preopen",
                  status="OK", required=False, detail=f"grok_native={len(native)}/{len(rows)}")
 
-    # 9. general predict
     artifact(report, step="preopen.general",
              name="General market predict", group="preopen",
              path=gen / f"{date}_predict.md", required=True,
              expected_date=date, qc=output_qc.qc_general_predict)
-
-    # 10. 11 sector predicts
     n_ok = 0
     for sector in FINVIZ_SECTORS:
         p = sec / f"{_slug(sector)}_predict.md"
@@ -819,13 +986,9 @@ def check_preopen(report: Report, date: str) -> None:
          name="≥8/11 quality sector predicts", group="preopen",
          status="OK" if n_ok >= 8 else "FAIL", required=True,
          detail=f"{n_ok}/11")
-
-    # 11. sector board
     artifact(report, step="preopen.board",
              name="Sector board JSON", group="preopen",
              path=sec / "_board.json", required=False, expected_date=date)
-
-    # 12. output_qc + status + grok review
     artifact(report, step="preopen.qc",
              name="Pre-open QC JSON", group="preopen",
              path=ROOT / "01_daily" / f"{date}_preopen_qc.json",
@@ -839,12 +1002,7 @@ def check_preopen(report: Report, date: str) -> None:
         _add(report, step="preopen.status_all_ok",
              name="preopen_status.all_ok true", group="preopen",
              status="OK" if st.get("all_ok") else "FAIL", required=True,
-             detail=f"all_ok={st.get('all_ok')} grok_ok={st.get('grok_ok')} "
-                    f"missing={st.get('missing_required')}")
-    artifact(report, step="preopen.status_md",
-             name="Pre-open status MD", group="preopen",
-             path=ROOT / "01_daily" / f"{date}_preopen_status.md",
-             required=False, expected_date=date)
+             detail=f"all_ok={st.get('all_ok')} grok_ok={st.get('grok_ok')}")
     gr = ROOT / "01_daily" / f"{date}_grok_review.json"
     artifact(report, step="preopen.grok_review_json",
              name="Grok text review JSON", group="preopen",
@@ -855,21 +1013,6 @@ def check_preopen(report: Report, date: str) -> None:
              name="Grok text review ok=true", group="preopen",
              status="OK" if g.get("ok") else "FAIL", required=True,
              detail=str(g.get("notes") or g.get("fails") or "")[:160])
-    artifact(report, step="preopen.grok_review_md",
-             name="Grok text review MD", group="preopen",
-             path=ROOT / "01_daily" / f"{date}_grok_review.md",
-             required=False, expected_date=date)
-
-
-# ---------------------------------------------------------------------------
-# F. Stock-book chain (afternoon) — the ranker and everything it eats
-# ---------------------------------------------------------------------------
-
-def _file_contains(path: Path, needle: str) -> bool:
-    try:
-        return needle in path.read_text(encoding="utf-8", errors="ignore")
-    except OSError:
-        return False
 
 
 def check_bookchain(report: Report, date: str) -> None:
@@ -881,17 +1024,31 @@ def check_bookchain(report: Report, date: str) -> None:
              group="book",
              path=ROOT / "data" / "universe" / f"{date}_membership.csv",
              required=True, expected_date=date)
+    wx = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
     artifact(report, step="book.weather", name="Weather / regime JSON",
-             group="book",
-             path=ROOT / "01_daily" / "weather" / f"{date}_weather.json",
-             required=True, expected_date=date)
+             group="book", path=wx, required=True, expected_date=date)
+    wj = _json(wx) if wx.exists() else None
+    if isinstance(wj, dict):
+        nsec = len((wj.get("signals") or {}).get("sectors") or {})
+        _add(report, step="book.weather_sectors",
+             name="Weather signals.sectors ≥ 5", group="book",
+             status="OK" if nsec >= 5 else "FAIL", required=True,
+             detail=f"n={nsec}")
     artifact(report, step="book.join", name="Join ranked CSV", group="book",
              path=ROOT / "data" / "join" / f"{date}_ranked.csv",
              required=True, expected_date=date)
-    artifact(report, step="book.input_health", name="Input-health preflight",
+    artifact(report, step="book.ab_raw", name="AB checklist (raw)",
              group="book",
-             path=ROOT / "data" / "stock_book" / f"{date}_input_health.json",
+             path=ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist.csv",
              required=False, expected_date=date)
+    artifact(report, step="book.ab", name="AB checklist (enriched) — s_ab",
+             group="book",
+             path=ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist_enriched.csv",
+             required=True, expected_date=date)
+    artifact(report, step="book.peers", name="Peer relative strength — s_peer",
+             group="book",
+             path=ROOT / "data" / "peers" / f"{date}_peer_rs.csv",
+             required=True, expected_date=date)
     artifact(report, step="book.book_json", name="Stock book JSON (5 horizons)",
              group="book",
              path=ROOT / "data" / "stock_book" / f"{date}_stock_book.json",
@@ -899,33 +1056,19 @@ def check_bookchain(report: Report, date: str) -> None:
     artifact(report, step="book.book_md", name="Stock book MD", group="book",
              path=ROOT / "01_daily" / f"{date}_stock_book.md",
              required=True, expected_date=date)
-    bt = ROOT / "03_scoreboard" / "STOCK_BOOK_BACKTEST.md"
     artifact(report, step="book.backtest", name="Stock book backtest (repo-level)",
-             group="book", path=bt, required=True, expected_date=date)
-    if bt.exists() and not _file_contains(bt, date):
-        _add(report, step="book.backtest_fresh", name="Backtest refreshed today",
-             group="book", status="WARN", required=False,
-             detail=f"no '{date}' inside backtest md")
+             group="book", path=ROOT / "03_scoreboard" / "STOCK_BOOK_BACKTEST.md",
+             required=True, expected_date=date)
     artifact(report, step="book.paper_md", name="Paper trading summary",
              group="book", path=ROOT / "03_scoreboard" / "PAPER_TRADING.md",
-             required=True, expected_date=date)
-    artifact(report, step="book.paper_curve", name="Paper equity curve CSV",
-             group="book", path=ROOT / "data" / "paper" / "equity_curve.csv",
              required=True, expected_date=date)
     artifact(report, step="book.dashboard", name="Dashboard HTML (Pages source)",
              group="book", path=ROOT / "dashboard" / "index.html",
              required=True, expected_date=date)
-    artifact(report, step="book.learn_ledger", name="BOOK_LEARN weight ledger",
-             group="book", path=ROOT / "03_scoreboard" / "BOOK_LEARN.md",
-             required=False, expected_date=date)
-    artifact(report, step="book.gaps", name="BOOK_GAPS blind-spot scan",
-             group="book", path=ROOT / "03_scoreboard" / "BOOK_GAPS.md",
-             required=False, expected_date=date)
+    hit = ROOT / "03_scoreboard" / "HIT_BOARD.md"
+    artifact(report, step="book.hit_board", name="HIT_BOARD",
+             group="book", path=hit, required=False, expected_date=date)
 
-
-# ---------------------------------------------------------------------------
-# G. Outcome / reflect / grading (evening)
-# ---------------------------------------------------------------------------
 
 def check_outcomes(report: Report, date: str) -> None:
     print(f"\n== G. OUTCOME / REFLECT / GRADING (date {date}) ==", flush=True)
@@ -933,8 +1076,8 @@ def check_outcomes(report: Report, date: str) -> None:
     artifact(report, step="outcome.general", name="General outcome (graded call)",
              group="outcome", path=gen / f"{date}_outcome.md",
              required=True, expected_date=date)
-    artifact(report, step="outcome.reflect_trace", name="Reflect ran (trace)",
-             group="outcome", path=gen / f"{date}_reflect_trace.md",
+    artifact(report, step="outcome.reflect", name="General reflect MD",
+             group="outcome", path=gen / f"{date}_reflect.md",
              required=False, expected_date=date)
     cand_dir = ROOT / "02_lessons" / "candidate"
     cand = list(cand_dir.glob(f"{date}*")) if cand_dir.is_dir() else []
@@ -948,15 +1091,7 @@ def check_outcomes(report: Report, date: str) -> None:
     _add(report, step="outcome.sector_count", name="Sector outcomes graded (>=8/11)",
          group="outcome", status="OK" if n_ok >= 8 else "FAIL", required=True,
          detail=f"{n_ok}/11")
-    artifact(report, step="outcome.horizon_board",
-             name="HORIZON_BOARD (multi-timeframe grades)", group="outcome",
-             path=ROOT / "03_scoreboard" / "HORIZON_BOARD.md",
-             required=False, expected_date=date)
 
-
-# ---------------------------------------------------------------------------
-# H. Learning loop products
-# ---------------------------------------------------------------------------
 
 def check_learning(report: Report, date: str) -> None:
     print(f"\n== H. LEARNING LOOP (date {date}) ==", flush=True)
@@ -971,66 +1106,41 @@ def check_learning(report: Report, date: str) -> None:
              name="mutable_policy.md (machine injection)", group="learn",
              path=ROOT / "00_grounding" / "mutable_policy.md",
              required=True, expected_date=date)
-    artifact(report, step="learn.efficacy", name="LESSON_EFFICACY.md",
-             group="learn", path=ROOT / "03_scoreboard" / "LESSON_EFFICACY.md",
-             required=False, expected_date=date)
     artifact(report, step="learn.book_policy",
              name="book_policy.json (learned ranker weights)", group="learn",
              path=ROOT / "00_grounding" / "book_policy.json",
              required=False, expected_date=date)
 
 
-# ---------------------------------------------------------------------------
-# I. Live dashboard on GitHub Pages
-# ---------------------------------------------------------------------------
-
-PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/"
-
-
 def check_pages(report: Report, date: str) -> None:
     print("\n== I. DASHBOARD ON GITHUB PAGES ==", flush=True)
     try:
         req = urllib.request.Request(PAGES_URL, headers={
-            "User-Agent": "fullscan-health",
-            "Cache-Control": "no-cache",
+            "User-Agent": "fullscan-health", "Cache-Control": "no-cache",
         })
         with urllib.request.urlopen(req, timeout=15) as resp:
             code = resp.getcode()
             body = resp.read(300000).decode("utf-8", "ignore")
         injected = "__DATA__" not in body
-        _add(report, step="pages.dashboard", name="Live dashboard reachable + data injected",
+        _add(report, step="pages.dashboard",
+             name="Live dashboard reachable + data injected",
              group="pages", status="OK" if (code == 200 and injected) else "FAIL",
-             required=True,
-             detail=f"HTTP {code}, data_injected={injected}", path=PAGES_URL)
+             required=True, detail=f"HTTP {code}, data_injected={injected}",
+             path=PAGES_URL)
     except (urllib.error.URLError, TimeoutError, OSError) as e:
-        _add(report, step="pages.dashboard", name="Live dashboard reachable + data injected",
+        _add(report, step="pages.dashboard",
+             name="Live dashboard reachable + data injected",
              group="pages", status="FAIL", required=True,
              detail=str(e)[:160], path=PAGES_URL)
 
 
 # ---------------------------------------------------------------------------
-# J. FIX MODE — re-dispatch the workflow that owns each required FAIL
+# Heal
 # ---------------------------------------------------------------------------
 
-# step prefix -> owning workflow (None = not auto-fixable)
-FIX_MAP = [
-    ("postclose.", "map_heat_postclose.yml"),
-    ("scrape.", "finviz_preopen_scrape.yml"),
-    ("preopen.", "preopen_all.yml"),
-    ("book.", "stock_book_all.yml"),
-    ("outcome.general", "daily_pipeline.yml"),
-    ("outcome.reflect", "daily_pipeline.yml"),
-    ("outcome.candidate", "daily_pipeline.yml"),
-    ("outcome.sector", "sector_daily.yml"),
-    ("outcome.horizon", "daily_pipeline.yml"),
-    ("learn.", "learn_cycle.yml"),
-    ("pages.", "deploy-dashboard.yml"),
-]
-# clock.<workflow>.yml steps map onto themselves.
-FIX_STATE = ROOT / "data" / "health" / "fix_state.json"
-
-
 def _workflow_for_step(step: str) -> str | None:
+    if step in HUMAN_STEPS:
+        return None
     if step.startswith("clock.") and step.endswith(".yml"):
         wf = step[len("clock."):]
         return None if wf == "pipeline_health.yml" else wf
@@ -1040,31 +1150,60 @@ def _workflow_for_step(step: str) -> str | None:
     return None
 
 
+def _dispatch_payload(wf: str, date: str, source: str, target: str, book: str) -> dict:
+    if wf == "preopen_all.yml":
+        return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
+    if wf == "finviz_preopen_scrape.yml":
+        return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
+    if wf == "map_heat_postclose.yml":
+        return {"ref": "main", "inputs": {
+            "source_date": source, "target_date": target, "force": "true"}}
+    if wf == "stock_book_all.yml":
+        return {"ref": "main", "inputs": {"run_date": book or date, "force": "true"}}
+    if wf == "daily_pipeline.yml":
+        return {"ref": "main", "inputs": {
+            "stage": "outcome", "run_date": book or date, "force": "true"}}
+    if wf == "sector_daily.yml":
+        return {"ref": "main", "inputs": {
+            "stage": "outcome_reflect", "run_date": book or date, "force": "true"}}
+    if wf == "label_weather.yml":
+        return {"ref": "main", "inputs": {"run_date": book or date}}
+    if wf == "ab_checklist.yml":
+        return {"ref": "main", "inputs": {"date": book or date}}
+    if wf == "catalyst_daily.yml":
+        return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
+    return {"ref": "main"}
+
+
 def _gh_request(path: str, method: str = "GET", payload: dict | None = None):
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
     if not token:
         return None, "no GITHUB_TOKEN"
+    headers = {"Authorization": f"Bearer {token}",
+               "Accept": "application/vnd.github+json",
+               "User-Agent": "fullscan-health"}
+    data = None
+    if payload is not None:
+        headers["Content-Type"] = "application/json"
+        data = json.dumps(payload).encode()
     req = urllib.request.Request(
         f"https://api.github.com/repos/{repo}{path}", method=method,
-        headers={"Authorization": f"Bearer {token}",
-                 "Accept": "application/vnd.github+json",
-                 "User-Agent": "fullscan-health"},
-        data=json.dumps(payload).encode() if payload is not None else None)
+        headers=headers, data=data)
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
             return resp.getcode(), ""
     except urllib.error.HTTPError as e:
-        return e.code, str(e)[:120]
+        return e.code, str(e)[:160]
     except (urllib.error.URLError, TimeoutError, OSError) as e:
-        return None, str(e)[:120]
+        return None, str(e)[:160]
 
 
 def _gh_workflow_busy(wf: str) -> bool:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
     repo = os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan"
     if not token:
-        return True  # cannot verify -> do not risk a duplicate dispatch
+        return False
     req = urllib.request.Request(
         f"https://api.github.com/repos/{repo}/actions/workflows/{wf}/runs?per_page=5",
         headers={"Authorization": f"Bearer {token}",
@@ -1074,52 +1213,324 @@ def _gh_workflow_busy(wf: str) -> bool:
         with urllib.request.urlopen(req, timeout=20) as resp:
             payload = json.loads(resp.read().decode())
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, OSError):
-        return True
+        return False
     return any(r.get("status") in ("queued", "in_progress")
                for r in payload.get("workflow_runs") or [])
 
 
-def fix_failures(report: Report, date: str) -> list[str]:
-    """Guarded auto-fix: for every required FAIL with an owning workflow,
-    re-dispatch that workflow — at most once per step per day, never when
-    the workflow is already queued/running, never pipeline_health itself."""
+def _start_unit(unit: str) -> str:
+    _systemctl("reset-failed", unit)
+    out = _systemctl("start", unit)
+    time.sleep(2)
+    state = _systemctl("is-active", unit) or "unknown"
+    return f"systemctl start {unit} → {state} {out}".strip()
+
+
+def _heal_env(extra: dict[str, str] | None = None) -> dict[str, str]:
+    env = {**os.environ, "GROK_ONLY": "1", "HOME": "/home/gha",
+           "FULLSCAN_HOME": "/home/gha", "PYTHONUNBUFFERED": "1"}
+    live, n = _live_token()
+    if n == LIVE_TOKEN_LEN:
+        env["OPENCLAW_TOKEN"] = live
+        env["OPENCLAW_GATEWAY_TOKEN"] = live
+    if extra:
+        env.update(extra)
+    return env
+
+
+def _spawn(cmd: list[str], extra_env: dict[str, str], log_name: str) -> str:
+    HEAL_LOG.mkdir(parents=True, exist_ok=True)
+    log = HEAL_LOG / log_name
+    env = _heal_env(extra_env)
+    with open(log, "ab") as fh:
+        stamp = datetime.now(ET).isoformat()
+        fh.write(f"\n--- heal spawn {stamp} {cmd}\n".encode())
+        fh.flush()
+        subprocess.Popen(
+            cmd, cwd=str(ROOT), env=env,
+            stdout=fh, stderr=subprocess.STDOUT,
+            start_new_session=True,
+        )
+    return f"spawned {' '.join(cmd)} log={log}"
+
+
+def _spawn_cmd(wf: str, date: str, source: str, target: str, book: str
+               ) -> tuple[list[str], dict[str, str]] | None:
+    py = str(ROOT / ".venv" / "bin" / "python")
+    if not Path(py).exists():
+        py = "python3"
+    if wf == "preopen_all.yml":
+        script = ECS_SCRIPTS[wf]
+        return ["bash", str(script)], {"RUN_DATE": date, "FORCE": "true"}
+    if wf == "map_heat_postclose.yml":
+        script = ECS_SCRIPTS[wf]
+        return ["bash", str(script)], {
+            "SOURCE_DATE": source, "TARGET_DATE": target, "FORCE": "true"}
+    if wf == "stock_book_all.yml":
+        return [py, "-m", "src.run_stock_book_all", "--date", book, "--force"], {}
+    if wf == "daily_pipeline.yml":
+        return [py, "-m", "src.run_outcome", "--date", book], {}
+    if wf == "sector_daily.yml":
+        return [py, "-m", "src.run_sector_outcome", "--date", book], {}
+    if wf == "learn_cycle.yml":
+        return [py, "-m", "src.learn_cycle"], {}
+    if wf == "catalyst_daily.yml":
+        return [py, "-m", "src.catalyst_daily", "--date", date], {}
+    return None
+
+
+def _already_running(wf: str) -> bool:
+    unit = ECS_UNITS.get(wf)
+    if unit and _unit_active(unit):
+        return True
+    if wf in UBUNTU_WORKFLOWS and _gh_workflow_busy(wf):
+        return True
+    needles = {
+        "preopen_all.yml": ("ecs_preopen.sh", "src.run_preopen_all"),
+        "map_heat_postclose.yml": ("ecs_map_postclose.sh", "src.map_heat_postclose"),
+        "stock_book_all.yml": ("src.run_stock_book_all",),
+        "daily_pipeline.yml": ("src.run_outcome", "src.run_reflect"),
+        "sector_daily.yml": ("src.run_sector_outcome", "src.run_sector_reflect"),
+        "learn_cycle.yml": ("src.learn_cycle",),
+        "catalyst_daily.yml": ("src.catalyst_daily",),
+    }.get(wf, ())
+    return bool(needles) and _pgrep(*needles)
+
+
+def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> list[Path]:
+    if wf == "finviz_preopen_scrape.yml":
+        return [ROOT / "01_daily" / "news" / f"{date}_finviz_digest.json"]
+    if wf == "map_heat_postclose.yml":
+        return [ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json"]
+    if wf == "preopen_all.yml":
+        return [ROOT / "01_daily" / f"{date}_preopen_status.json"]
+    if wf == "label_weather.yml":
+        return [
+            ROOT / "01_daily" / "weather" / f"{book}_weather.json",
+            ROOT / "data" / "join" / f"{book}_ranked.csv",
+        ]
+    if wf == "ab_checklist.yml":
+        return [ROOT / "data" / "ab_checklist" / f"{book}_ab_checklist_enriched.csv"]
+    if wf == "stock_book_all.yml":
+        return [ROOT / "data" / "stock_book" / f"{book}_stock_book.json"]
+    if wf == "daily_pipeline.yml":
+        return [ROOT / "01_daily" / "general" / f"{book}_outcome.md"]
+    if wf == "learn_cycle.yml":
+        return [ROOT / "03_scoreboard" / "LEARNINGS.md"]
+    return []
+
+
+def _healable(report: Report) -> list[Check]:
+    return [c for c in report.checks
+            if c.status == "FAIL" and c.required and c.step not in HUMAN_STEPS]
+
+
+def _human_fails(report: Report) -> list[Check]:
+    return [c for c in report.checks
+            if c.status == "FAIL" and c.required and c.step in HUMAN_STEPS]
+
+
+def fix_local(report: Report) -> list[str]:
+    os.environ["GROK_ONLY"] = "1"
+    os.environ.setdefault("HOME", "/home/gha")
     actions: list[str] = []
+    if grok_busy():
+        print("[heal] Grok job running — will not bounce OpenClaw", flush=True)
+        return actions
+    door_bad = any(
+        c.status == "FAIL" and c.required and c.step.startswith("runtime.")
+        and c.step != "runtime.oauth"
+        for c in report.checks)
+    if door_bad and ENABLE_CHAT.exists():
+        print("[heal] OpenClaw door red — enable_openclaw_chat.sh", flush=True)
+        try:
+            r = subprocess.run(
+                ["bash", str(ENABLE_CHAT)], cwd=str(ROOT),
+                capture_output=True, text=True, timeout=180,
+                env=_heal_env())
+            tail = (r.stdout or r.stderr or "")[-400:].replace("\n", " | ")
+            msg = f"enable_openclaw_chat.sh exit={r.returncode} {tail[:180]}"
+            actions.append(msg)
+            print(f"[heal] {msg}", flush=True)
+        except (OSError, subprocess.SubprocessError) as e:
+            actions.append(f"enable_openclaw_chat.sh failed: {e}")
+
+    for unit, need in (
+        ("fullscan-preopen.timer",
+         any(c.step == "clock.fullscan-preopen.timer" and c.status != "OK"
+             for c in report.checks)),
+        ("fullscan-map-postclose.timer",
+         any(c.step == "clock.fullscan-map-postclose.timer" and c.status != "OK"
+             for c in report.checks)),
+    ):
+        if not need:
+            continue
+        _systemctl("enable", "--now", unit)
+        actions.append(f"systemctl enable --now {unit}")
+    return actions
+
+
+def fix_jobs(report: Report, date: str, source: str, target: str, book: str
+             ) -> tuple[list[str], set[str]]:
+    actions: list[str] = []
+    started: set[str] = set()
     state = _json(FIX_STATE) if FIX_STATE.exists() else None
     if not isinstance(state, dict):
         state = {}
     today = dict(state.get(date) or {})
-    dispatched: set[str] = set()
+
     for c in report.checks:
         if c.status != "FAIL" or not c.required:
             continue
+        if c.step in HUMAN_STEPS:
+            print(f"[heal] {c.step}: human-only — {c.detail}", flush=True)
+            continue
         wf = _workflow_for_step(c.step)
-        if not wf:
+        if not wf or wf == "pipeline_health.yml" or wf == "door":
             continue
-        if c.step in today:
-            print(f"[fix] {c.step}: already re-dispatched today — skip", flush=True)
+        if wf in started:
             continue
-        if wf in dispatched:
+        if wf == "preopen_all.yml" and (
+                "map_heat_postclose.yml" in started
+                or "finviz_preopen_scrape.yml" in started
+                or _already_running("map_heat_postclose.yml")
+                or _already_running("finviz_preopen_scrape.yml")):
+            print("[heal] scrape/baseline still in flight — hold preopen", flush=True)
             continue
-        if _gh_workflow_busy(wf):
-            print(f"[fix] {wf} queued/running — skip {c.step}", flush=True)
+        if wf == "stock_book_all.yml" and (
+                "preopen_all.yml" in started
+                or "label_weather.yml" in started
+                or "ab_checklist.yml" in started
+                or _already_running("preopen_all.yml")):
+            print("[heal] prereqs still in flight — hold book", flush=True)
             continue
-        code, err = _gh_request(f"/actions/workflows/{wf}/dispatches",
-                                method="POST", payload={"ref": "main"})
-        if code == 204:
-            dispatched.add(wf)
-            today[c.step] = datetime.now(ET).isoformat()
-            msg = f"re-dispatched {wf} (for {c.step})"
+        if wf in ("daily_pipeline.yml", "sector_daily.yml") and (
+                "stock_book_all.yml" in started or _already_running("stock_book_all.yml")):
+            print("[heal] book still in flight — hold outcomes", flush=True)
+            continue
+        if wf == "learn_cycle.yml" and (
+                "daily_pipeline.yml" in started or "sector_daily.yml" in started):
+            print("[heal] outcomes still in flight — hold learn", flush=True)
+            continue
+        if wf not in UBUNTU_WORKFLOWS and grok_busy() and wf in (
+                "preopen_all.yml", "map_heat_postclose.yml", "stock_book_all.yml",
+                "daily_pipeline.yml", "sector_daily.yml", "learn_cycle.yml",
+                "catalyst_daily.yml"):
+            print(f"[heal] Grok already busy — hold {wf}", flush=True)
+            started.add(wf)
+            continue
+
+        if _already_running(wf):
+            print(f"[heal] {wf} already running — wait", flush=True)
+            started.add(wf)
+            continue
+
+        if wf in UBUNTU_WORKFLOWS:
+            payload = _dispatch_payload(wf, date, source, target, book)
+            code, err = _gh_request(f"/actions/workflows/{wf}/dispatches",
+                                    method="POST", payload=payload)
+            if code == 204:
+                started.add(wf)
+                today[c.step] = datetime.now(ET).isoformat()
+                msg = f"dispatched {wf} force (for {c.step})"
+                actions.append(msg)
+                print(f"[heal] {c.step} FAIL -> {msg}", flush=True)
+            else:
+                print(f"[heal] dispatch {wf} failed: {err or code}", flush=True)
+                actions.append(f"dispatch {wf} failed: {err or code}")
+            continue
+
+        # ECS Grok job: never GH-dispatch (would queue behind this health run).
+        unit = ECS_UNITS.get(wf)
+        use_unit = bool(unit)
+        if wf == "map_heat_postclose.yml":
+            # unit always uses today→next weekday; dated heal must spawn the script
+            today_et = _today()
+            if source != today_et:
+                use_unit = False
+        if use_unit and unit:
+            msg = _start_unit(unit)
             actions.append(msg)
-            print(f"[fix] {c.step} FAIL -> {msg}", flush=True)
-        else:
-            print(f"[fix] dispatch {wf} failed: {err or code}", flush=True)
+            print(f"[heal] {c.step} FAIL -> {msg}", flush=True)
+            started.add(wf)
+            today[c.step] = datetime.now(ET).isoformat()
+            continue
+
+        spawn = _spawn_cmd(wf, date, source, target, book)
+        if not spawn:
+            print(f"[heal] no spawn map for {wf}", flush=True)
+            continue
+        cmd, extra = spawn
+        msg = _spawn(cmd, extra, f"heal-{wf.replace('.yml', '')}.log")
+        actions.append(msg)
+        print(f"[heal] {c.step} FAIL -> {msg}", flush=True)
+        started.add(wf)
+        today[c.step] = datetime.now(ET).isoformat()
+
     state[date] = today
     FIX_STATE.parent.mkdir(parents=True, exist_ok=True)
     FIX_STATE.write_text(json.dumps(state, indent=2), encoding="utf-8")
     if not actions:
-        print("[fix] nothing actionable (no required FAIL with an owner, "
-              "or all guarded)", flush=True)
-    return actions
+        print("[heal] nothing new started this round", flush=True)
+    return actions, started
+
+
+def wait_for_heal(started: set[str], date: str, source: str, target: str,
+                  book: str, seconds: int) -> None:
+    if not started:
+        time.sleep(min(20, max(5, seconds)))
+        return
+    deadline = time.time() + max(15, seconds)
+    paths: list[Path] = []
+    for wf in started:
+        paths.extend(_expected_files(wf, date, source, target, book))
+    print(f"[heal] waiting up to {seconds}s for {len(paths)} files from {sorted(started)}",
+          flush=True)
+    while time.time() < deadline:
+        restore_persist(date, target, source, book)
+        if "finviz_preopen_scrape.yml" in started:
+            _pull_scrape_paths(date)
+        if started & {"label_weather.yml", "ab_checklist.yml", "stock_book_all.yml",
+                      "deploy-dashboard.yml", "hit_board.yml"}:
+            _pull_book_paths(book)
+        if paths and all(p.exists() and p.stat().st_size >= 8 for p in paths):
+            print("[heal] expected files landed", flush=True)
+            return
+        time.sleep(20)
+    print("[heal] wait budget spent — re-audit anyway", flush=True)
+
+
+def audit(job: str, date: str, source: str, target: str, book: str,
+          skip_probe: bool = False) -> Report:
+    restore_persist(date, target, source, book)
+    if job in ("all", "preopen", "scrape"):
+        _pull_scrape_paths(date)
+    if job in ("all", "postclose", "afternoon"):
+        _pull_book_paths(book)
+    report = Report(
+        job=job, date=date, source_date=source, target_date=target,
+        book_date=book, generated_at=datetime.now(ET).isoformat(),
+    )
+    print("=" * 72, flush=True)
+    print(f"  PIPELINE HEALTH  job={job}", flush=True)
+    print(f"  preopen={date}  postclose {source} → {target}  book={book}",
+          flush=True)
+    print("=" * 72, flush=True)
+    check_runtime(report, skip_probe=skip_probe)
+    if job in ("all", "preopen", "postclose"):
+        check_clocks(report, job, date, source, book)
+    if job in ("all", "preopen", "scrape"):
+        check_scrape(report, date)
+    if job in ("all", "postclose", "preopen"):
+        check_postclose(report, source, target)
+    if job in ("all", "preopen"):
+        check_preopen(report, date)
+    if job in ("all", "postclose", "afternoon"):
+        check_bookchain(report, book)
+        check_outcomes(report, book)
+        check_learning(report, book)
+        check_pages(report, book)
+    return report
 
 
 def render(report: Report, fix_actions: list[str] | None = None) -> str:
@@ -1127,16 +1538,16 @@ def render(report: Report, fix_actions: list[str] | None = None) -> str:
         f"# Pipeline health — {report.job}",
         "",
         f"pre-open date={report.date}  post-close source={report.source_date}  "
-        f"post-close target={report.target_date}",
-        f"generated {report.generated_at}",
+        f"post-close target={report.target_date}  book={report.book_date}",
+        f"generated {report.generated_at}  round={report.round}",
         f"**result={'PASS' if report.ok else 'FAIL'}**  "
         f"required_fails={report.n_fail}  warns={report.n_warn}",
         "",
-        "This job **does not run** research, scrape, or OpenClaw. "
-        "It only checks whether each step already ran and whether the file is "
-        "empty / garbled / a timeout stub / a carry-forward / the wrong date."
-        + ("" if fix_actions is None else
-           " With `--fix`, required FAILs re-dispatch their owning workflow."),
+        "Heal loop: audit → fix OpenClaw door / timers on this box → "
+        "start systemd or spawn the owning ECS job (ubuntu workflows are "
+        "GH-dispatched with force=true) → wait for files → re-audit. "
+        "Finviz HTML is never scraped on ECS. xAI OAuth expiry needs a human "
+        "(`openclaw models auth login --provider xai`).",
         "",
         "| status | step | group | required | detail | path |",
         "| --- | --- | --- | --- | --- | --- |",
@@ -1148,113 +1559,120 @@ def render(report: Report, fix_actions: list[str] | None = None) -> str:
             f"| {c.status} | {c.name} | {c.group} | "
             f"{'yes' if c.required else 'no'} | {det} | `{path}` |"
         )
-    lines += [
-        "",
-        "## Fix actions",
-        "",
-    ]
-    if fix_actions is None:
-        lines.append("fix mode off (pass `--fix` to re-dispatch failing required steps)")
-    elif fix_actions:
-        lines += [f"- {a}" for a in fix_actions]
+    lines += ["", "## Fix actions", ""]
+    if not fix_actions:
+        lines.append("_none this run_")
     else:
-        lines.append("fix mode on — nothing actionable (guards: ≤1 dispatch/step/day, "
-                     "skip busy workflows, required FAILs only)")
-    lines += [
-        "",
-        "## What each job is supposed to produce",
-        "",
-        "Post-close night of SOURCE writes **TARGET-dated** files "
-        "(`_map_heat.json`, `_research_baseline.json`).",
-        "GH Finviz scrape ~05:40 ET writes **today’s** digest and overlays tape onto that map heat.",
-        "Pre-open 05:55 ET consumes those, then writes parse / events / catcher / judge / "
-        "morning refresh / actions / catalyst / general predict / 11 sector predicts / "
-        "board / QC / Grok review.",
-        "",
-    ]
+        lines += [f"- {a}" for a in fix_actions]
+    humans = _human_fails(report)
+    if humans:
+        lines += ["", "## Human-only (cannot auto-heal)", ""]
+        lines += [f"- `{c.step}`: {c.detail}" for c in humans]
+    lines.append("")
     return "\n".join(lines) + "\n"
 
 
 def write_report(report: Report) -> None:
     out = ROOT / "01_daily"
     out.mkdir(parents=True, exist_ok=True)
-    md = out / f"{report.date}_pipeline_health.md"
-    js = out / f"{report.date}_pipeline_health.json"
+    tag = report.job if report.job in ("preopen", "postclose") else "all"
+    md = out / f"{report.date}_pipeline_health_{tag}.md"
+    js = out / f"{report.date}_pipeline_health_{tag}.json"
+    md2 = out / f"{report.date}_pipeline_health.md"
+    js2 = out / f"{report.date}_pipeline_health.json"
     payload = {
         "job": report.job, "date": report.date,
         "source_date": report.source_date, "target_date": report.target_date,
+        "book_date": report.book_date,
         "generated_at": report.generated_at, "ok": report.ok,
         "n_fail": report.n_fail, "n_warn": report.n_warn,
+        "round": report.round,
         "fix_actions": report.fix_actions,
         "checks": [asdict(c) for c in report.checks],
     }
-    js.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    md.write_text(render(report, report.fix_actions), encoding="utf-8")
-    print(f"[health] wrote {md}", flush=True)
-    print(f"[health] wrote {js}", flush=True)
+    body = json.dumps(payload, indent=2)
+    text = render(report, report.fix_actions)
+    for p in (js, js2):
+        p.write_text(body, encoding="utf-8")
+    for p in (md, md2):
+        p.write_text(text, encoding="utf-8")
+    print(f"[health] wrote {md} and {md2}", flush=True)
 
 
 def run(job: str, date: str | None, source: str | None, target: str | None,
-        write: bool, fix: bool = False) -> Report:
-    today = date or _today()
-    source = source or _prev_weekday(today)
-    target = target or today
-    # Evening: last night hasn't written *tomorrow* yet if we pass target=today
-    # in the morning. Callers override. Default: morning audit of today's packet
-    # = post-close target is TODAY (written last night).
-    restore_persist(today, target, source)
-    report = Report(
-        job=job, date=today, source_date=source, target_date=target,
-        generated_at=datetime.now(ET).isoformat(),
-    )
-    print("=" * 72, flush=True)
-    print(f"  PIPELINE HEALTH  job={job}  fix={'on' if fix else 'off'}", flush=True)
-    print(f"  preopen={today}  postclose {source} → {target}", flush=True)
-    print("=" * 72, flush=True)
-    if job in ("all", "door", "runtime"):
-        check_runtime(report)
-    if job in ("all", "preopen", "postclose"):
-        check_clocks(report, today, source)
-    if job in ("all", "preopen", "scrape"):
-        check_scrape(report, today)
-    if job in ("all", "postclose"):
-        check_postclose(report, source, target)
-    if job in ("all", "preopen"):
-        check_preopen(report, today)
-    if job in ("all", "afternoon"):
-        check_bookchain(report, today)
-        check_outcomes(report, today)
-        check_learning(report, today)
-        check_pages(report, today)
-    if fix:
-        report.fix_actions = fix_failures(report, today)
-    print("\n== SUMMARY ==", flush=True)
-    print(f"  {'PASS' if report.ok else 'FAIL'}  required_fails={report.n_fail}  "
-          f"warns={report.n_warn}", flush=True)
-    if report.fix_actions:
-        for a in report.fix_actions:
-            print(f"  FIX: {a}", flush=True)
+        write: bool, fix: bool = True) -> Report:
+    job = pick_job(job)
+    os.environ["GROK_ONLY"] = "1"
+    session, src, tgt, book = packet_dates(job, date=date, source=source, target=target)
+    budget = int(os.environ.get("HEALTH_HEAL_SECONDS") or (
+        "10800" if job == "postclose" else "9000"))
+    rounds = int(os.environ.get("HEALTH_HEAL_ROUNDS") or "16")
+    wait_s = int(os.environ.get("HEALTH_HEAL_WAIT") or "180")
+    deadline = time.time() + budget
+    all_actions: list[str] = []
+    report = audit(job, session, src, tgt, book, skip_probe=grok_busy())
+    report.round = 1
+    if not fix or report.ok:
+        report.fix_actions = all_actions or None
+        if write:
+            write_report(report)
+        print("\n== SUMMARY ==", flush=True)
+        print(f"  {'PASS' if report.ok else 'FAIL'}  required_fails={report.n_fail}  "
+              f"warns={report.n_warn}", flush=True)
+        return report
+
+    for i in range(1, rounds + 1):
+        if report.ok or time.time() >= deadline:
+            break
+        if not _healable(report):
+            print("[heal] only human-only FAILs remain — stopping", flush=True)
+            break
+        print(f"\n== HEAL ROUND {i}/{rounds}  fails={report.n_fail} ==", flush=True)
+        all_actions += fix_local(report)
+        actions, started = fix_jobs(report, session, src, tgt, book)
+        all_actions += actions
+        if i >= rounds or time.time() >= deadline:
+            break
+        wait_for_heal(started, session, src, tgt, book,
+                      min(wait_s, max(30, int(deadline - time.time()))))
+        report = audit(job, session, src, tgt, book, skip_probe=grok_busy())
+        report.round = i + 1
+
+    if not report.ok and all_actions:
+        report = audit(job, session, src, tgt, book, skip_probe=grok_busy())
+        report.round = max(report.round, rounds)
+    report.fix_actions = all_actions
     if write:
         write_report(report)
+    print("\n== SUMMARY ==", flush=True)
+    print(f"  {'PASS' if report.ok else 'FAIL'}  required_fails={report.n_fail}  "
+          f"warns={report.n_warn}  heals={len(all_actions)}", flush=True)
+    for a in all_actions:
+        print(f"  FIX: {a}", flush=True)
+    for h in _human_fails(report):
+        print(f"  HUMAN: {h.step} {h.detail}", flush=True)
     return report
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--job", default="all",
-                    choices=["all", "runtime", "door", "preopen", "postclose",
+    ap.add_argument("--job", default="auto",
+                    choices=["auto", "all", "runtime", "door", "preopen", "postclose",
                              "scrape", "afternoon"])
     ap.add_argument("--date", default=None, help="pre-open session (ET today)")
-    ap.add_argument("--source-date", default=None, help="completed session (post-close night)")
+    ap.add_argument("--source-date", default=None,
+                    help="completed session (post-close night / book date)")
     ap.add_argument("--target-date", default=None,
                     help="next session (post-close file date); default = --date")
     ap.add_argument("--write", action="store_true")
-    ap.add_argument("--fix", action="store_true",
-                    help="re-dispatch the owning workflow for each required FAIL "
-                         "(guarded: <=1/step/day, never when busy, never self)")
+    ap.add_argument("--fix", action="store_true", default=True,
+                    help="heal FAILs (default ON)")
+    ap.add_argument("--no-fix", action="store_true",
+                    help="audit only, do not start/dispatch anything")
     args = ap.parse_args()
+    fix = False if args.no_fix else True
     report = run(args.job, args.date, args.source_date, args.target_date,
-                 args.write, fix=args.fix)
+                 args.write, fix=fix)
     raise SystemExit(0 if report.ok else 1)
 
 
