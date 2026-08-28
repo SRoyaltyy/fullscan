@@ -7280,6 +7280,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-28",
+          "actual_pct": 0.49,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -8277,7 +8289,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "utilities −2.3% and energy −0.2% on a green, oil-up tape; NDX lagged a trending Dow",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-08-28",
+          "actual_pct": 0.49,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -9937,7 +9962,8 @@
       "etf": "XLB",
       "rubric": "00_grounding/sectors/basic_materials.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.4751009359255662
+      "rel_pct_change": -1.4751009359255662,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -9997,7 +10023,8 @@
       "etf": "XLC",
       "rubric": "00_grounding/sectors/communication_services.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.7209006178191877
+      "rel_pct_change": -1.7209006178191877,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10057,7 +10084,8 @@
       "etf": "XLY",
       "rubric": "00_grounding/sectors/consumer_cyclical.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.7478070924172528
+      "rel_pct_change": -1.7478070924172528,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10117,7 +10145,8 @@
       "etf": "XLP",
       "rubric": "00_grounding/sectors/consumer_defensive.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -2.034662937445697
+      "rel_pct_change": -2.034662937445697,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10177,7 +10206,8 @@
       "etf": "XLE",
       "rubric": "00_grounding/sectors/energy.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -0.8795287936721352
+      "rel_pct_change": -0.8795287936721352,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10237,7 +10267,8 @@
       "etf": "XLF",
       "rubric": "00_grounding/sectors/financial.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.3075224565863075
+      "rel_pct_change": -1.3075224565863075,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10297,7 +10328,8 @@
       "etf": "XLI",
       "rubric": "00_grounding/sectors/industrials.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.5092174585272788
+      "rel_pct_change": -1.5092174585272788,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10357,7 +10389,8 @@
       "etf": "XLRE",
       "rubric": "00_grounding/sectors/real_estate.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.6089275437501938
+      "rel_pct_change": -1.6089275437501938,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10417,7 +10450,8 @@
       "etf": "XLK",
       "rubric": "00_grounding/sectors/technology.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": 2.50048839173449
+      "rel_pct_change": 2.50048839173449,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10477,7 +10511,8 @@
       "etf": "XLU",
       "rubric": "00_grounding/sectors/utilities.md",
       "spy_pct_change": 0.6552786111251541,
-      "rel_pct_change": -1.4137204155094674
+      "rel_pct_change": -1.4137204155094674,
+      "horizon_grades": {}
     },
     {
       "date": "2026-08-27",
@@ -10573,18 +10608,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7735.17,
+      "actual_close": 7711.76,
+      "actual_pct_change": -0.25,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "miss"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-28_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-3f3477bcea915ac53ec2ae905ae57919",
+          "date_accessed": "2026-08-28",
+          "summary": "Official AP close recap matching Channel 1 index levels and showing small caps took the real hit.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+          "date_accessed": "2026-08-28",
+          "summary": "Primary-source hawkish inflation judgment that markets treated as opening the door to hikes.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/28/treasury-yields-jackson-hole.html",
+          "date_accessed": "2026-08-28",
+          "summary": "The cross-asset smoking gun: front-end rates and hike odds, not the long bond, did the day’s work.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html",
+          "date_accessed": "2026-08-28",
+          "summary": "Documents both the 10am timestamp and the contested “stocks up / yields up” equity attribution versus the down close.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html",
+          "date_accessed": "2026-08-28",
+          "summary": "Quantifies the policy-path surprise relative to the morning ~66/34 hold base.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-3f3477bcea915ac53ec2ae905ae57919",
+          "date_accessed": "2026-08-28",
+          "summary": "The “credibility offset” version of the day — hawkish for bonds, contained for stocks.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://timesofindia.indiatimes.com/business/international-business/oil-prices-today-28-august-2026-crude-holds-steady-heads-for-weekly-losses-as-hormuz-flows-remain-choppy/articleshow/133590230.cms",
+          "date_accessed": "2026-08-28",
+          "summary": "Rules out a same-day Hormuz supply shock as the equity driver; oil was a cushion, not a catalyst.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+          "date_accessed": "2026-08-28",
+          "summary": "The modifier that made “work to do” land as hike-risk rather than as a description of already-tight policy.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -10611,7 +10741,16 @@
           "confidence": 0.4
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": "Warsh Jackson Hole hawkish inflation language (“work to do”) repricing Sep hike odds ~35%→~56% and spiking the 2-year",
+      "key_interaction": "hawkish Warsh content amplified by sticky PCE, offset/masked by refusal of a rate path — bonds and hike odds moved much more than SPX",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "VIX still falling (14.43) and HY tighter while gold dumped and Russell -1.4%; Dow nearly flat vs NDX -0.52% — vol/credit did not confirm the equity fade",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-08-28",

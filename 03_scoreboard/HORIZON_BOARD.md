@@ -1,13 +1,13 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-08-27. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-08-28. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 7 | 14% (1/7) | 29% (2/7) | -0.32% |
-| general | 1w | 6 | 33% (2/6) | 67% (4/6) | -0.46% |
+| general | 3d | 8 | 12% (1/8) | 25% (2/8) | -0.22% |
+| general | 1w | 7 | 43% (3/7) | 57% (4/7) | -0.32% |
 | general | 2w | 2 | 0% (0/2) | 50% (1/2) | -1.50% |
 | sector:Basic Materials | 3d | 5 | 40% (2/5) | 20% (1/5) | +1.30% |
 | sector:Basic Materials | 1w | 3 | 33% (1/3) | 67% (2/3) | +2.15% |
@@ -35,21 +35,8 @@ Updated: 2026-08-27. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
-<<<<<<< HEAD
-<<<<<<< HEAD
-| 2026-08-20 | general | 1w | flat/mild | +1.18% (up/mild) | ❌ | ✅ |
-=======
-| 2026-08-21 | sector:Utilities | 3d | flat/mild | +0.96% (up/mild) | ❌ | ✅ |
-| 2026-08-21 | sector:Technology | 3d | down/mild | +2.89% (up/notable) | ❌ | ❌ |
-| 2026-08-21 | sector:Real Estate | 3d | up/mild | -0.93% (down/mild) | ❌ | ✅ |
-| 2026-08-21 | sector:Industrials | 3d | down/mild | -0.80% (down/mild) | ✅ | ✅ |
-| 2026-08-21 | sector:Financial | 3d | up/mild | +0.70% (up/mild) | ✅ | ✅ |
-| 2026-08-21 | sector:Energy | 3d | up/notable | -2.12% (down/notable) | ❌ | ✅ |
-| 2026-08-21 | sector:Consumer Defensive | 3d | flat/mild | -1.06% (down/mild) | ❌ | ✅ |
-| 2026-08-21 | sector:Consumer Cyclical | 3d | down/mild | -1.81% (down/notable) | ✅ | ❌ |
-| 2026-08-21 | sector:Communication Services | 3d | flat/mild | +0.01% (flat/flat) | ✅ | ❌ |
-| 2026-08-21 | sector:Basic Materials | 3d | up/notable | -0.58% (down/mild) | ❌ | ❌ |
-=======
+| 2026-08-23 | general | 3d | flat/mild | +0.49% (up/flat) | ❌ | ❌ |
+| 2026-08-21 | general | 1w | up/mild | +0.49% (up/flat) | ✅ | ❌ |
 | 2026-08-21 | sector:Utilities | 3d | flat/mild | +0.96% (up/mild) | ❌ | ✅ |
 | 2026-08-21 | sector:Technology | 3d | down/mild | +2.89% (up/notable) | ❌ | ❌ |
 | 2026-08-21 | sector:Real Estate | 3d | up/mild | -0.93% (down/mild) | ❌ | ✅ |
@@ -61,7 +48,6 @@ Updated: 2026-08-27. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-21 | sector:Communication Services | 3d | flat/mild | +0.01% (flat/flat) | ✅ | ❌ |
 | 2026-08-21 | sector:Basic Materials | 3d | up/notable | -0.58% (down/mild) | ❌ | ❌ |
 | 2026-08-20 | general | 1w | flat/mild | +1.18% (up/mild) | ❌ | ✅ |
->>>>>>> 47e5d43 (auto: sector daily outcome_reflect)
 | 2026-08-17 | sector:Utilities | 1w | up/mild | -2.26% (down/notable) | ❌ | ❌ |
 | 2026-08-17 | sector:Technology | 1w | up/mild | -0.90% (down/mild) | ❌ | ✅ |
 | 2026-08-17 | sector:Real Estate | 1w | up/mild | -0.38% (down/flat) | ❌ | ❌ |
@@ -72,44 +58,8 @@ Updated: 2026-08-27. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-17 | sector:Consumer Cyclical | 1w | down/mild | -0.75% (down/mild) | ✅ | ✅ |
 | 2026-08-17 | sector:Communication Services | 1w | up/mild | +0.53% (up/flat) | ✅ | ❌ |
 | 2026-08-17 | sector:Basic Materials | 1w | up/mild | +1.90% (up/mild) | ✅ | ✅ |
-<<<<<<< HEAD
->>>>>>> b6a2db6 (auto: sector daily outcome_reflect)
-=======
->>>>>>> 47e5d43 (auto: sector daily outcome_reflect)
 | 2026-08-18 | sector:Utilities | 3d | up/mild | -1.18% (down/mild) | ❌ | ✅ |
 | 2026-08-18 | sector:Technology | 3d | down/mild | -1.47% (down/mild) | ✅ | ✅ |
-| 2026-08-18 | sector:Real Estate | 3d | down/mild | +1.02% (up/mild) | ❌ | ✅ |
-| 2026-08-18 | sector:Industrials | 3d | down/mild | -1.75% (down/notable) | ✅ | ❌ |
-<<<<<<< HEAD
-| 2026-08-18 | sector:Financial | 3d | flat/mild | +0.71% (up/mild) | ❌ | ✅ |
-<<<<<<< HEAD
-| 2026-08-18 | sector:Energy | 3d | up/notable | -1.96% (down/notable) | ❌ | ✅ |
-| 2026-08-18 | sector:Consumer Defensive | 3d | up/mild | +0.82% (up/mild) | ✅ | ✅ |
-| 2026-08-18 | sector:Consumer Cyclical | 3d | down/notable | +0.70% (up/mild) | ❌ | ❌ |
-| 2026-08-18 | sector:Communication Services | 3d | down/mild | +1.95% (up/notable) | ❌ | ❌ |
-| 2026-08-18 | sector:Basic Materials | 3d | down/mild | +3.61% (up/severe) | ❌ | ❌ |
-| 2026-08-14 | sector:Utilities | 1w | up/mild | -1.83% (down/mild) | ❌ | ✅ |
-| 2026-08-14 | sector:Technology | 1w | up/notable | -3.75% (down/notable) | ❌ | ✅ |
-| 2026-08-14 | sector:Real Estate | 1w | up/mild | -0.41% (down/flat) | ❌ | ❌ |
-| 2026-08-14 | sector:Industrials | 1w | up/mild | -3.30% (down/notable) | ❌ | ❌ |
-| 2026-08-14 | sector:Financial | 1w | up/mild | +0.15% (flat/flat) | ❌ | ❌ |
-| 2026-08-14 | sector:Energy | 1w | up/mild | +0.84% (up/mild) | ✅ | ✅ |
-| 2026-08-14 | sector:Consumer Defensive | 1w | up/mild | +0.22% (flat/flat) | ❌ | ❌ |
-| 2026-08-14 | sector:Consumer Cyclical | 1w | flat/mild | -0.87% (down/mild) | ❌ | ✅ |
-| 2026-08-14 | sector:Communication Services | 1w | up/mild | -0.28% (flat/flat) | ❌ | ❌ |
-| 2026-08-14 | sector:Basic Materials | 1w | down/mild | +2.11% (up/mild) | ❌ | ✅ |
-| 2026-08-21 | general | 3d | up/mild | +0.04% (flat/flat) | ❌ | ❌ |
-| 2026-08-19 | general | 1w | down/mild | -0.40% (down/flat) | ✅ | ❌ |
-| 2026-08-17 | sector:Utilities | 3d | up/mild | -1.97% (down/notable) | ❌ | ❌ |
-| 2026-08-17 | sector:Technology | 3d | up/mild | -4.51% (down/severe) | ❌ | ❌ |
 
-*299 calls still maturing (T+h close not recorded yet).*
-=======
-
-*280 calls still maturing (T+h close not recorded yet).*
->>>>>>> b6a2db6 (auto: sector daily outcome_reflect)
-=======
-
-*279 calls still maturing (T+h close not recorded yet).*
->>>>>>> 47e5d43 (auto: sector daily outcome_reflect)
+*325 calls still maturing (T+h close not recorded yet).*
 

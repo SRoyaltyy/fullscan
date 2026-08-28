@@ -1,0 +1,376 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-08-28T17:16:35.040314-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 5.19,
+      "delta_1d": 0.01,
+      "delta_1w": -0.04,
+      "delta_1m": -0.01
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 4.67,
+      "delta_1d": 0.01,
+      "delta_1w": -0.02,
+      "delta_1m": 0.0
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 2.34,
+      "delta_1d": 0.0,
+      "delta_1w": -0.01,
+      "delta_1m": -0.07
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 2.63,
+      "delta_1d": -0.04,
+      "delta_1w": -0.12,
+      "delta_1m": -0.24
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 3.64,
+      "delta_1d": 0.0,
+      "delta_1w": 0.01,
+      "delta_1m": -0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-08-31",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-08-28",
+      "current": 0.175,
+      "delta_1d": -0.281,
+      "delta_1w": -0.025,
+      "delta_1m": -0.901
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-08-27",
+      "current": 131.19,
+      "delta_1d": -141.08,
+      "delta_1w": -43.05,
+      "delta_1m": -131.49
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-08-28",
+      "current": 14.43,
+      "delta_1d": -0.08,
+      "delta_1w": -0.7
+    },
+    "vix3m": {
+      "date": "2026-08-28",
+      "current": 17.48,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.826,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.25,
+    "ratio_ma20": 0.947
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 83.44,
+      "pct_1d": -0.11
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 88.29,
+      "pct_1d": -1.57
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 4504.1,
+      "pct_1d": -2.29
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-08-28",
+      "source": "DX-Y.NYB",
+      "pct_1d": 0.52,
+      "pct_1m": -0.33
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 7724.75,
+      "pct_1d": -0.23
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-08-28",
+      "last": 29509.5,
+      "pct_1d": -0.63
+    }
+  },
+  "finviz_futures_tape": {
+    "available": true,
+    "source": "01_daily/map_heat/2026-08-28_map_heat.json",
+    "rows": [
+      {
+        "ticker": "ES",
+        "label": "S&P 500",
+        "last": 7733.25,
+        "change": -0.12
+      },
+      {
+        "ticker": "NQ",
+        "label": "Nasdaq 100",
+        "last": 29607.5,
+        "change": -0.29
+      },
+      {
+        "ticker": "ER2",
+        "label": "Russell 2000",
+        "last": 3020.8,
+        "change": 0.06
+      },
+      {
+        "ticker": "YM",
+        "label": "DJIA",
+        "last": 53659.0,
+        "change": 0.08
+      },
+      {
+        "ticker": "VX",
+        "label": "VIX",
+        "last": 16.75,
+        "change": 0.53
+      },
+      {
+        "ticker": "CL",
+        "label": "Crude Oil WTI",
+        "last": 83.01,
+        "change": -0.63
+      },
+      {
+        "ticker": "NG",
+        "label": "Natural Gas",
+        "last": 2.917,
+        "change": 0.1
+      },
+      {
+        "ticker": "GC",
+        "label": "Gold",
+        "last": 4627.8,
+        "change": -0.77
+      },
+      {
+        "ticker": "SI",
+        "label": "Silver",
+        "last": 69.49,
+        "change": -1.02
+      },
+      {
+        "ticker": "HG",
+        "label": "Copper",
+        "last": 6.693,
+        "change": 0.03
+      },
+      {
+        "ticker": "DX",
+        "label": "USD",
+        "last": 99.135,
+        "change": 0.04
+      },
+      {
+        "ticker": "6E",
+        "label": "EUR",
+        "last": 1.16505,
+        "change": -0.05
+      },
+      {
+        "ticker": "6J",
+        "label": "JPY",
+        "last": 0.6275000000000001,
+        "change": -0.08
+      },
+      {
+        "ticker": "ZN",
+        "label": "10 Year Note",
+        "last": 108.546875,
+        "change": -0.03
+      },
+      {
+        "ticker": "ZB",
+        "label": "30 Year Bond",
+        "last": 109.84375,
+        "change": -0.11
+      },
+      {
+        "ticker": "NKD",
+        "label": "Nikkei 225",
+        "last": 66385.0,
+        "change": 0.23
+      },
+      {
+        "ticker": "DY",
+        "label": "DAX",
+        "last": 26485.0,
+        "change": 0.36
+      },
+      {
+        "ticker": "EX",
+        "label": "Euro Stoxx 50",
+        "last": 6454.0,
+        "change": 0.31
+      }
+    ]
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 66131.98,
+          "pct_1d": -0.2
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 25565.74,
+          "pct_1d": -0.34
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 3956.57,
+          "pct_1d": 1.13
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 6912.37,
+          "pct_1d": 1.53
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-08-27",
+          "last": 9038.2,
+          "pct_1d": -0.98
+        }
+      },
+      "composite_avg": 0.23
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 10824.26,
+          "pct_1d": 0.29
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 26569.99,
+          "pct_1d": 0.77
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 8401.18,
+          "pct_1d": 0.98
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-08-28",
+          "last": 6485.67,
+          "pct_1d": 0.95
+        }
+      },
+      "composite_avg": 0.75
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.21,
+    "window": "2026-08-21..2026-08-28"
+  },
+  "fear_greed": {
+    "available": false,
+    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": false,
+    "count": 0,
+    "items": []
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-08-28",
+      "open": 7735.17,
+      "high": 7771.48,
+      "low": 7700.91,
+      "close": 7711.76,
+      "pct_change": -0.25,
+      "prev_close": 7730.99,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.92,
+        "intraday_low_pct": -0.39,
+        "intraday_high_pct": 0.52,
+        "close_position_in_range": 0.15
+      }
+    },
+    "DOW": {
+      "date": "2026-08-28",
+      "open": 53611.94,
+      "high": 53819.65,
+      "low": 53489.41,
+      "close": 53559.99,
+      "pct_change": -0.02,
+      "prev_close": 53569.44,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 0.62,
+        "intraday_low_pct": -0.15,
+        "intraday_high_pct": 0.47,
+        "close_position_in_range": 0.21
+      }
+    },
+    "NDX": {
+      "date": "2026-08-28",
+      "open": 26515.99,
+      "high": 26700.68,
+      "low": 26359.27,
+      "close": 26402.42,
+      "pct_change": -0.52,
+      "prev_close": 26541.35,
+      "path": {
+        "shape": "reversal down (intraday spike faded, closed near low)",
+        "range_pct": 1.3,
+        "intraday_low_pct": -0.69,
+        "intraday_high_pct": 0.6,
+        "close_position_in_range": 0.13
+      }
+    }
+  }
+}
