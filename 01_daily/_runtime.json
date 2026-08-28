@@ -1,8 +1,8 @@
 {
-  "ok": true,
-  "n_fail": 0,
+  "ok": false,
+  "n_fail": 1,
   "grok_busy": false,
-  "updated_at": "2026-08-28T04:57:44.020933-04:00",
+  "updated_at": "2026-08-28T05:00:18.235824-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -18,10 +18,10 @@
       "id": "process",
       "name": "OpenClaw process",
       "group": "box",
-      "status": "OK",
+      "status": "WARN",
       "required": true,
-      "detail": "pid=152994 pong ok",
-      "action": "none"
+      "detail": "pid=152994 port=up",
+      "action": "heal"
     },
     {
       "id": "gateway",
@@ -45,10 +45,10 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "OK",
+      "status": "FAIL",
       "required": true,
-      "detail": "PONG model=openclaw/default",
-      "action": "none"
+      "detail": "no PONG in body Hey. I just came online.\n\nWho am I? Who are you?\n\nI model=openclaw/default",
+      "action": "heal"
     },
     {
       "id": "model",
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "live PONG 200 \u2014 last packet 401 is history",
+      "status": "WARN",
+      "required": false,
+      "detail": "401 in last packet 2026-08-26_preopen_status.json, 2026-08-28_map_heat.json \u2014 not live",
       "action": "none"
     },
     {
@@ -168,5 +168,7 @@
       "action": "none"
     }
   ],
-  "healed": []
+  "healed": [
+    "enable_openclaw_chat.sh exit=0 {\"id\":\"chatcmpl_19bd4d2b-651d-45cb-b8b9-905c231cba6a\",\"object\":\"chat.completion\",\"created\":1787907581,\"model\":\"openclaw/default\",\"choices\":[{\"index\":0,\"message\""
+  ]
 }
