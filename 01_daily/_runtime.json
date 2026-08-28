@@ -1,8 +1,8 @@
 {
-  "ok": false,
-  "n_fail": 5,
+  "ok": true,
+  "n_fail": 0,
   "grok_busy": false,
-  "updated_at": "2026-08-28T01:28:55.919415-04:00",
+  "updated_at": "2026-08-28T01:31:00.497841-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -18,10 +18,10 @@
       "id": "gateway",
       "name": "OpenClaw gateway",
       "group": "box",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "Failed to connect to bus: $DBUS_SESSION_BUS_ADDRESS and $XDG_RUNTIME_DIR not defined (consider using --machine=<user>@.host --user to connect to bus of other user)",
-      "action": "heal"
+      "detail": "active",
+      "action": "none"
     },
     {
       "id": "port",
@@ -36,19 +36,19 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "http=0 timed out",
-      "action": "heal"
+      "detail": "model=openclaw/default",
+      "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "no 200 chat",
-      "action": "heal"
+      "detail": "model=openclaw/default",
+      "action": "none"
     },
     {
       "id": "token",
@@ -81,19 +81,19 @@
       "id": "preopen_timer",
       "name": "Pre-open timer",
       "group": "clock",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "disabled",
-      "action": "heal"
+      "detail": "enabled",
+      "action": "none"
     },
     {
       "id": "postclose_timer",
       "name": "Post-close timer",
       "group": "clock",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "disabled",
-      "action": "heal"
+      "detail": "enabled",
+      "action": "none"
     }
   ]
 }
