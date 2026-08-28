@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
+  "status": "needs_reauth",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at auth.x.ai/device",
-  "user_code": "ZR6S-JY5H",
+  "reason": "device login did not finish rc=124",
+  "user_code": null,
   "verification_uri": "https://auth.x.ai/device",
-  "expires_at": "2026-08-28T00:28:26.087834-04:00",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 171657,
-  "updated_at": "2026-08-28T00:14:26.089964-04:00"
+  "updated_at": "2026-08-28T00:26:29.735085-04:00"
 }
