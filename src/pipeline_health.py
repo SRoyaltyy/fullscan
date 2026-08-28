@@ -114,6 +114,17 @@ UBUNTU_WORKFLOWS = {
     "ab_enrich.yml",
 }
 
+# ECS Grok jobs — never GH-dispatch from health; never start if OAuth is dead.
+GROK_WORKFLOWS = {
+    "preopen_all.yml",
+    "map_heat_postclose.yml",
+    "stock_book_all.yml",
+    "daily_pipeline.yml",
+    "sector_daily.yml",
+    "learn_cycle.yml",
+    "catalyst_daily.yml",
+}
+
 ECS_UNITS = {
     "preopen_all.yml": "fullscan-preopen.service",
     "map_heat_postclose.yml": "fullscan-map-postclose.service",
@@ -780,9 +791,10 @@ def check_clocks(report: Report, job: str, preopen_date: str,
         elif conc in ("in_progress", "queued", None):
             st = "WARN"
         else:
-            st = "FAIL" if req else "WARN"
+            # A failed GH run is a clue. Files in C–H decide the packet.
+            st = "WARN"
         _add(report, step=f"clock.{wf}", name=f"{title} ran on {when}",
-             group="clock", status=st, required=req and st == "FAIL",
+             group="clock", status=st, required=False,
              detail=f"n={row.get('n')} latest={conc} event={latest.get('event')}",
              path=latest.get("html_url") or "")
 
@@ -838,7 +850,8 @@ def check_postclose(report: Report, source: str, target: str) -> None:
     artifact(report, step="postclose.map_heat_json",
              name=f"{target}_map_heat.json (industry groups + captains)",
              group="postclose", path=heat / f"{target}_map_heat.json",
-             required=True, expected_date=target, qc=output_qc.qc_map_heat)
+             required=True, expected_date=target)
+    # Tape is the 05:40 GH overlay — empty tape here is not a post-close FAIL.
     artifact(report, step="postclose.map_heat_md",
              name=f"{target}_map_heat.md", group="postclose",
              path=heat / f"{target}_map_heat.md", required=False,
@@ -1141,9 +1154,9 @@ def check_pages(report: Report, date: str) -> None:
 def _workflow_for_step(step: str) -> str | None:
     if step in HUMAN_STEPS:
         return None
+    # GH run history is observational. File FAILs in C–H own the heal.
     if step.startswith("clock.") and step.endswith(".yml"):
-        wf = step[len("clock."):]
-        return None if wf == "pipeline_health.yml" else wf
+        return None
     for prefix, wf in FIX_MAP:
         if step.startswith(prefix):
             return wf
@@ -1320,9 +1333,31 @@ def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> 
     return []
 
 
+def _oauth_dead(report: Report) -> bool:
+    return any(c.step == "runtime.oauth" and c.status == "FAIL" for c in report.checks)
+
+
+def _should_heal(c: Check) -> bool:
+    if c.status != "FAIL" or not c.required:
+        return False
+    if c.step in HUMAN_STEPS:
+        return False
+    if c.step.startswith("clock.") and c.step.endswith(".yml"):
+        return False
+    return True
+
+
 def _healable(report: Report) -> list[Check]:
-    return [c for c in report.checks
-            if c.status == "FAIL" and c.required and c.step not in HUMAN_STEPS]
+    oauth = _oauth_dead(report)
+    out: list[Check] = []
+    for c in report.checks:
+        if not _should_heal(c):
+            continue
+        wf = _workflow_for_step(c.step)
+        if oauth and wf in GROK_WORKFLOWS:
+            continue
+        out.append(c)
+    return out
 
 
 def _human_fails(report: Report) -> list[Check]:
@@ -1370,25 +1405,30 @@ def fix_local(report: Report) -> list[str]:
     return actions
 
 
-def fix_jobs(report: Report, date: str, source: str, target: str, book: str
+def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
+             already: set[str] | None = None
              ) -> tuple[list[str], set[str]]:
     actions: list[str] = []
-    started: set[str] = set()
+    started: set[str] = set(already or ())
     state = _json(FIX_STATE) if FIX_STATE.exists() else None
     if not isinstance(state, dict):
         state = {}
     today = dict(state.get(date) or {})
+    oauth = _oauth_dead(report)
 
     for c in report.checks:
-        if c.status != "FAIL" or not c.required:
-            continue
-        if c.step in HUMAN_STEPS:
-            print(f"[heal] {c.step}: human-only — {c.detail}", flush=True)
+        if not _should_heal(c):
+            if c.step in HUMAN_STEPS and c.status == "FAIL" and c.required:
+                print(f"[heal] {c.step}: human-only — {c.detail}", flush=True)
             continue
         wf = _workflow_for_step(c.step)
         if not wf or wf == "pipeline_health.yml" or wf == "door":
             continue
         if wf in started:
+            print(f"[heal] {wf} already started this run — wait", flush=True)
+            continue
+        if oauth and wf in GROK_WORKFLOWS:
+            print(f"[heal] xAI OAuth expired — will not start {wf}", flush=True)
             continue
         if wf == "preopen_all.yml" and (
                 "map_heat_postclose.yml" in started
@@ -1412,10 +1452,7 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str
                 "daily_pipeline.yml" in started or "sector_daily.yml" in started):
             print("[heal] outcomes still in flight — hold learn", flush=True)
             continue
-        if wf not in UBUNTU_WORKFLOWS and grok_busy() and wf in (
-                "preopen_all.yml", "map_heat_postclose.yml", "stock_book_all.yml",
-                "daily_pipeline.yml", "sector_daily.yml", "learn_cycle.yml",
-                "catalyst_daily.yml"):
+        if wf in GROK_WORKFLOWS and grok_busy():
             print(f"[heal] Grok already busy — hold {wf}", flush=True)
             started.add(wf)
             continue
@@ -1481,6 +1518,9 @@ def wait_for_heal(started: set[str], date: str, source: str, target: str,
         time.sleep(min(20, max(5, seconds)))
         return
     deadline = time.time() + max(15, seconds)
+    if started & GROK_WORKFLOWS:
+        seconds = max(seconds, 600)
+        deadline = time.time() + max(15, seconds)
     paths: list[Path] = []
     for wf in started:
         paths.extend(_expected_files(wf, date, source, target, book))
@@ -1610,6 +1650,7 @@ def run(job: str, date: str | None, source: str | None, target: str | None,
     wait_s = int(os.environ.get("HEALTH_HEAL_WAIT") or "180")
     deadline = time.time() + budget
     all_actions: list[str] = []
+    ever_started: set[str] = set()
     report = audit(job, session, src, tgt, book, skip_probe=grok_busy())
     report.round = 1
     if not fix or report.ok:
@@ -1625,11 +1666,16 @@ def run(job: str, date: str | None, source: str | None, target: str | None,
         if report.ok or time.time() >= deadline:
             break
         if not _healable(report):
-            print("[heal] only human-only FAILs remain — stopping", flush=True)
+            if _oauth_dead(report):
+                print("[heal] xAI OAuth expired — Grok jobs will not start. "
+                      "HUMAN: openclaw models auth login --provider xai", flush=True)
+            print("[heal] nothing left to auto-heal — stopping", flush=True)
             break
         print(f"\n== HEAL ROUND {i}/{rounds}  fails={report.n_fail} ==", flush=True)
         all_actions += fix_local(report)
-        actions, started = fix_jobs(report, session, src, tgt, book)
+        actions, started = fix_jobs(report, session, src, tgt, book,
+                                    already=ever_started)
+        ever_started |= started
         all_actions += actions
         if i >= rounds or time.time() >= deadline:
             break

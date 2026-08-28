@@ -6,10 +6,15 @@ from zoneinfo import ZoneInfo
 
 from src.pipeline_health import (
     HUMAN_STEPS,
+    GROK_WORKFLOWS,
     UBUNTU_WORKFLOWS,
+    Check,
+    Report,
     _dispatch_payload,
+    _healable,
     _next_weekday,
     _prev_weekday,
+    _should_heal,
     _workflow_for_step,
     packet_dates,
     pick_job,
@@ -79,6 +84,9 @@ def test_workflow_routing():
     assert _workflow_for_step("outcome.sector_count") == "sector_daily.yml"
     assert _workflow_for_step("learn.learnings") == "learn_cycle.yml"
     assert _workflow_for_step("pages.dashboard") == "deploy-dashboard.yml"
+    # GH run history is observational — do not heal from clock.*.yml
+    assert _workflow_for_step("clock.learn_cycle.yml") is None
+    assert _workflow_for_step("clock.map_heat_postclose.yml") is None
 
 
 def test_ubuntu_vs_ecs_split():
@@ -100,6 +108,41 @@ def test_dispatch_payloads():
     assert p["inputs"]["run_date"] == "2026-08-27"
     p = _dispatch_payload("daily_pipeline.yml", "2026-08-28", "2026-08-27", "2026-08-28", "2026-08-27")
     assert p["inputs"]["stage"] == "outcome"
+
+
+def test_clock_yml_not_healable():
+    c = Check(step="clock.learn_cycle.yml", name="learn", group="clock",
+              status="FAIL", required=True)
+    assert not _should_heal(c)
+    c2 = Check(step="postclose.baseline_json", name="base", group="postclose",
+               status="FAIL", required=True)
+    assert _should_heal(c2)
+    c3 = Check(step="runtime.oauth", name="oauth", group="runtime",
+               status="FAIL", required=True)
+    assert not _should_heal(c3)
+
+
+def test_oauth_blocks_grok_healable():
+    assert "map_heat_postclose.yml" in GROK_WORKFLOWS
+    r = Report(job="postclose", date="2026-08-27",
+               source_date="2026-08-27", target_date="2026-08-28")
+    r.checks = [
+        Check(step="runtime.oauth", name="oauth", group="runtime",
+              status="FAIL", required=True,
+              detail="HUMAN: login"),
+        Check(step="postclose.baseline_json", name="base", group="postclose",
+              status="FAIL", required=True, detail="missing"),
+        Check(step="book.weather", name="wx", group="book",
+              status="FAIL", required=True, detail="missing"),
+    ]
+    heal = {c.step for c in _healable(r)}
+    assert "postclose.baseline_json" not in heal
+    assert "book.weather" in heal  # ubuntu, OAuth does not block
+    r2 = Report(job="postclose", date="2026-08-27",
+                source_date="2026-08-27", target_date="2026-08-28")
+    r2.checks = r.checks[1:]  # no oauth fail
+    heal2 = {c.step for c in _healable(r2)}
+    assert "postclose.baseline_json" in heal2
 
 
 if __name__ == "__main__":

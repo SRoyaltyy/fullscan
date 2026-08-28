@@ -99,7 +99,7 @@ jobs:
             export HEALTH_HEAL_WAIT=180
           else
             export HEALTH_HEAL_SECONDS=10800
-            export HEALTH_HEAL_WAIT=180
+            export HEALTH_HEAL_WAIT=600
           fi
           ARGS=(--job "$JOB" --write)
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
