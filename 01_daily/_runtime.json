@@ -1,8 +1,8 @@
 {
   "ok": true,
   "n_fail": 0,
-  "grok_busy": false,
-  "updated_at": "2026-08-29T01:06:27.514683-04:00",
+  "grok_busy": true,
+  "updated_at": "2026-08-29T04:30:24.354405-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -45,18 +45,18 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "PONG model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "Grok job running \u2014 not poking the classroom",
       "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "probe skipped",
       "action": "none"
     },
     {
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "live PONG 200 \u2014 last packet 401 is history",
+      "status": "WARN",
+      "required": false,
+      "detail": "401 in last packet 2026-08-26_preopen_status.json, 2026-08-28_map_heat.json \u2014 not live",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=queued systemd=exit-code",
       "action": "none"
     },
     {
