@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
+  "status": "needs_reauth",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "ZFB7-FK3R",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=ZFB7-FK3R",
-  "expires_at": "2026-08-29T01:07:35.317119-04:00",
+  "reason": "device login did not finish rc=124",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 248373,
-  "updated_at": "2026-08-29T00:53:35.317865-04:00"
+  "updated_at": "2026-08-29T01:05:38.832573-04:00"
 }
