@@ -1,0 +1,253 @@
+name: Finviz ALL (GH-hosted Elite)
+
+# One button from the phone / Actions tab. ubuntu-latest Azure IPs +
+# Elite login. Does NOT replace finviz_preopen_scrape.yml cron.
+#
+# Pulls everything Finviz-dependent pieces need:
+#   1. Elite export CSV  → data/exports/finviz_YYYY-MM-DD.csv
+#   2. finviz_digest --force (index quotes + Daily Digest column)
+#   3. map_heat --force (groups + futures tape + calendar + news)
+#   4. quote_colors --from-ab --top 50 (falls back to liquid / SPY set)
+#
+# A single 403 does not kill the tape: finviz_session.get retries 3x.
+# Hard fail only if the futures tape is empty after the full scrape.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      top:
+        description: "quote_colors --from-ab top N"
+        required: false
+        default: "50"
+      skip_colors:
+        description: "true = skip quote_colors (faster)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: finviz-all
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      FINVIZ_GAP_SEC: "5"
+      FINVIZ_GET_RETRIES: "3"
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml pandas requests yfinance || true
+
+      - name: Date + session unit tests
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          echo "DATE=$DATE"
+          python -m src.test_finviz_session
+
+      - name: Pull Elite export CSV
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set -euo pipefail
+          mkdir -p data/exports data/finviz
+          DATE="$DATE"
+          DEST="data/exports/finviz_${DATE}.csv"
+          python3 - << 'PY'
+          import os, sys
+          from pathlib import Path
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          date = os.environ.get("DATE") or datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+          dest = Path(f"data/exports/finviz_{date}.csv")
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          Path("data/finviz").mkdir(parents=True, exist_ok=True)
+
+          def looks_csv(raw: bytes) -> bool:
+              head = raw[:400].decode("utf-8", errors="ignore").lstrip()
+              if not head or head.startswith("<!"):
+                  return False
+              first = head.splitlines()[0].lower()
+              return "ticker" in first or first.startswith("no.") or "," in first
+
+          def save(raw: bytes, src: str) -> bool:
+              if not looks_csv(raw) or len(raw) < 200:
+                  print(f"[export] reject {src}: not csv ({len(raw)} bytes)")
+                  return False
+              dest.write_bytes(raw)
+              Path("data/finviz/latest.csv").write_bytes(raw)
+              n = raw.count(b"\n")
+              print(f"[export] wrote {dest} lines={n} src={src}")
+              return True
+
+          url = (os.environ.get("FINVIZ_EXPORT") or "").strip()
+          if url:
+              try:
+                  import requests
+                  r = requests.get(url, timeout=90)
+                  print(f"[export] FINVIZ_EXPORT → {r.status_code} {len(r.content)} bytes")
+                  if r.status_code == 200 and save(r.content, "FINVIZ_EXPORT"):
+                      raise SystemExit(0)
+              except SystemExit:
+                  raise
+              except Exception as e:
+                  print(f"[export] FINVIZ_EXPORT failed: {e}")
+
+          sys.path.insert(0, ".")
+          from src import finviz_session
+          sess = finviz_session.session()
+          if not finviz_session.authed(sess):
+              print("[export] Elite session not authed — keeping on-disk export if any")
+              raise SystemExit(0 if dest.exists() or list(Path("data/exports").glob("finviz_????-??-??.csv")) else 0)
+
+          for path in (
+              "/export.ashx?v=151",
+              "/export.ashx?v=111",
+              "/export.ashx",
+          ):
+              r = finviz_session.get(sess, path, timeout=90)
+              if r is None:
+                  continue
+              if save(r.content, path):
+                  raise SystemExit(0)
+          print("[export] live Elite export missed — digest/map_heat will use newest committed CSV")
+          PY
+          ls -la data/exports/finviz_*.csv 2>/dev/null | tail -5 || true
+          wc -l "$DEST" data/finviz/latest.csv 2>/dev/null || true
+
+      - name: Finviz daily digest --force
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set -euo pipefail
+          echo "CMD: python -m src.finviz_digest --date $DATE --force"
+          python -m src.finviz_digest --date "$DATE" --force
+
+      - name: Map heat FULL --force (groups + tape + calendar + news)
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          echo "CMD: python -m src.map_heat --date $DATE --force"
+          python -m src.map_heat --date "$DATE" --force
+
+      - name: Quote colors (top N, best-effort)
+        if: github.event.inputs.skip_colors != 'true'
+        continue-on-error: true
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          TOP="${{ github.event.inputs.top }}"
+          TOP="${TOP:-50}"
+          if ls data/ab_checklist/*_ab_checklist.csv >/dev/null 2>&1; then
+            ARGS=(--from-ab --top "$TOP" --date "$DATE")
+          else
+            echo "no ab_checklist — falling back to --liquid / indexes"
+            ARGS=(--liquid --max-tickers "$TOP" --date "$DATE")
+          fi
+          echo "CMD: python -m src.quote_colors ${ARGS[*]}"
+          python -m src.quote_colors "${ARGS[@]}" || \
+            python -m src.quote_colors --tickers SPY,QQQ,DIA,IWM,NVDA,AAPL,MSFT,AMZN,META,TSLA --date "$DATE"
+
+      - name: QC + status note
+        if: always()
+        run: |
+          python3 - << PY
+          import json, sys
+          from pathlib import Path
+          d = "${{ env.DATE }}"
+          heat = Path(f"01_daily/map_heat/{d}_map_heat.json")
+          digest = Path(f"01_daily/news/{d}_finviz_digest.md")
+          colors = Path(f"data/quote_colors/{d}_quote_colors.csv")
+          exports = sorted(Path("data/exports").glob("finviz_????-??-??.csv"))
+          status = Path(f"01_daily/news/{d}_finviz_all.md")
+          lines = [f"# Finviz ALL — {d}", ""]
+          ok_tape = False
+          n_ind = 0
+          n_tape = 0
+          if heat.exists():
+              data = json.loads(heat.read_text())
+              tape = data.get("tape") or []
+              n_tape = len(tape) if isinstance(tape, list) else 0
+              n_ind = len(data.get("industries") or [])
+              n_sec = len(data.get("sectors") or [])
+              keys = [t.get("ticker") for t in tape[:10]] if isinstance(tape, list) else []
+              ok_tape = n_tape > 0
+              lines += [
+                  f"- map_heat phase=`{data.get('phase')}` overlay_at=`{data.get('overlay_at')}`",
+                  f"- industries={n_ind} sectors={n_sec} tape={n_tape} {keys}",
+                  f"- econ={len(data.get('econ') or [])} earnings={len(data.get('earnings') or [])} ticker_news={len(data.get('ticker_news') or [])}",
+              ]
+          else:
+              lines.append("- map_heat JSON MISSING")
+          lines.append(f"- digest={'yes' if digest.exists() else 'NO'} {digest}")
+          lines.append(f"- colors={'yes' if colors.exists() else 'no'} {colors}")
+          lines.append(f"- exports={len(exports)} newest={exports[-1].name if exports else 'none'}")
+          lines.append("")
+          lines.append("FINVIZ_ALL_OK" if ok_tape and n_ind >= 20 else "FINVIZ_ALL_PARTIAL")
+          status.parent.mkdir(parents=True, exist_ok=True)
+          status.write_text("\n".join(lines) + "\n", encoding="utf-8")
+          print("\n".join(lines))
+          if not ok_tape:
+              print("FAIL empty_futures_tape")
+              sys.exit(1)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: finviz-all-${{ env.DATE }}
+          path: |
+            01_daily/news/${{ env.DATE }}_finviz_digest.*
+            01_daily/news/${{ env.DATE }}_finviz_all.md
+            01_daily/news/latest_finviz_digest.md
+            01_daily/map_heat/${{ env.DATE }}_map_heat.*
+            01_daily/map_heat/latest_map_heat.md
+            data/exports/finviz_${{ env.DATE }}.csv
+            data/finviz/latest.csv
+            data/quote_colors/${{ env.DATE }}_quote_colors.*
+          if-no-files-found: warn
+
+      - name: Commit
+        if: always()
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: finviz ALL (export+digest+groups+tape+colors) [${DATE}]" \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ data/finviz/ data/quote_colors/

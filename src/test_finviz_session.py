@@ -58,6 +58,22 @@ def test_get_rejects_403() -> None:
     assert r is None
 
 
+def test_get_retries_then_succeeds_on_403() -> None:
+    sess = mock.Mock()
+    bad = mock.Mock()
+    bad.status_code = 403
+    bad.text = "Forbidden"
+    good = mock.Mock()
+    good.status_code = 200
+    good.text = "<html><title>futures</title>var tiles = {};"
+    sess.get.side_effect = [bad, bad, good]
+    os.environ["FINVIZ_GET_RETRIES"] = "3"
+    r = finviz_session.get(sess, "/futures.ashx")
+    os.environ.pop("FINVIZ_GET_RETRIES", None)
+    assert r is good
+    assert sess.get.call_count == 3
+
+
 def test_session_cookie_probe_ok() -> None:
     with mock.patch.dict("os.environ", {
         "FINVIZ_AUTH": "tok",
@@ -124,6 +140,7 @@ def main() -> None:
         test_get_rewrites_public_to_elite,
         test_get_rejects_login_html,
         test_get_rejects_403,
+        test_get_retries_then_succeeds_on_403,
         test_session_cookie_probe_ok,
         test_session_missing_auth,
         test_gap_default_is_five,

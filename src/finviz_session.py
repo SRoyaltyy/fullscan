@@ -15,6 +15,9 @@ Live HTML is paced: one Elite GET every FINVIZ_GAP_SEC seconds (default 5).
 Jupyter-from-home never tripped the limiter because it was slow; cloud
 runners fire quotes/groups/news back-to-back and get 403. Pace here so
 every caller (digest, map_heat, quote_colors, catalyst) inherits it.
+
+Transient 403/429/5xx and login-HTML are retried FINVIZ_GET_RETRIES times
+(default 3) so one Cloudflare hiccup does not empty the futures tape.
 """
 from __future__ import annotations
 
@@ -40,6 +43,7 @@ UA = {
 
 _PACE_LOCK = threading.Lock()
 _LAST_GET = 0.0
+_RETRY_STATUSES = {403, 429, 500, 502, 503, 504}
 
 
 def gap_sec() -> float:
@@ -48,6 +52,14 @@ def gap_sec() -> float:
         return max(0.0, float(raw))
     except ValueError:
         return 5.0
+
+
+def get_retries() -> int:
+    raw = (os.environ.get("FINVIZ_GET_RETRIES") or "3").strip()
+    try:
+        return max(1, min(8, int(raw)))
+    except ValueError:
+        return 3
 
 
 def _pace() -> None:
@@ -62,6 +74,14 @@ def _pace() -> None:
         if wait > 0:
             time.sleep(wait)
         _LAST_GET = time.monotonic()
+
+
+def _backoff(attempt: int) -> None:
+    """Backoff between retries. Disabled when FINVIZ_GAP_SEC=0 (unit tests)."""
+    gap = gap_sec()
+    if gap <= 0:
+        return
+    time.sleep(min(gap * attempt, 20.0))
 
 
 def looks_like_login_html(text: str) -> bool:
@@ -159,22 +179,35 @@ def get(
     if isinstance(paths, str):
         paths = [paths]
     last_err = None
+    retries = get_retries()
     for path in paths:
         url = path if str(path).startswith("http") else elite_url(str(path))
         if url.startswith(PUBLIC + "/") and "login_submit" not in url:
             # Public pages 403 from ECS/Azure. Skip unless it is Elite.
             url = url.replace(PUBLIC, ELITE, 1)
-        try:
-            _pace()
-            r = sess.get(url, timeout=timeout)
-        except requests.RequestException as e:
-            last_err = f"{e}"
-            print(f"[finviz] {url}: {e}")
-            continue
-        if r.status_code == 200 and not looks_like_login_html(r.text):
-            return r
-        last_err = f"{r.status_code}"
-        print(f"[finviz] {r.status_code} {url}")
+        for attempt in range(1, retries + 1):
+            try:
+                _pace()
+                r = sess.get(url, timeout=timeout)
+            except requests.RequestException as e:
+                last_err = f"{e}"
+                print(f"[finviz] {url}: {e} attempt {attempt}/{retries}")
+                if attempt < retries:
+                    _backoff(attempt)
+                    continue
+                break
+            if r.status_code == 200 and not looks_like_login_html(r.text):
+                return r
+            last_err = f"{r.status_code}"
+            retryable = (
+                r.status_code in _RETRY_STATUSES
+                or looks_like_login_html(r.text)
+            )
+            print(f"[finviz] {r.status_code} {url} attempt {attempt}/{retries}")
+            if retryable and attempt < retries:
+                _backoff(attempt)
+                continue
+            break
     if last_err:
         print(f"[finviz] all Elite URLs failed ({last_err})")
     return None
