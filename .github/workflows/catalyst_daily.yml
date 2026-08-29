@@ -31,11 +31,12 @@ on:
         description: "true = ignore skip-if-good"
         required: false
         default: "false"
-  schedule:
-    # 08:15 ET last-chance if Pre-Open ALL finished without dossiers
-    - cron: "15 12 * * 1-5"
-    # 10:30 ET skip-if-good catch-up for the book path
-    - cron: "30 14 * * 1-5"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # 08:15 ET last-chance if Pre-Open ALL finished without dossiers
+  #   - cron: "15 12 * * 1-5"
+  #   # 10:30 ET skip-if-good catch-up for the book path
+  #   - cron: "30 14 * * 1-5"
 
 permissions:
   contents: write

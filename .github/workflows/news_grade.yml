@@ -7,8 +7,9 @@ name: News Actions Grader
 # every run, so partially-elapsed windows keep updating until complete.
 
 on:
-  schedule:
-    - cron: "45 21 * * 1-6"   # 21:45 UTC Mon–Sat (~17:45 ET, after close)
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "45 21 * * 1-6"   # 21:45 UTC Mon–Sat (~17:45 ET, after close)
   workflow_dispatch:
     inputs:
       max_days:

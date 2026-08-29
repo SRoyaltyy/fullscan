@@ -1,9 +1,10 @@
 name: Monthly Memory Distillation
 
 on:
-  schedule:
-    # 1st of month, 11:00 AM ET (15:00 UTC EDT)
-    - cron: '0 15 1 * *'
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # 1st of month, 11:00 AM ET (15:00 UTC EDT)
+  #   - cron: '0 15 1 * *'
   workflow_dispatch:
 
 permissions:

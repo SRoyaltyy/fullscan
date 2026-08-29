@@ -1,8 +1,9 @@
 name: "Collect: Ticker Master List"
 
 on:
-  schedule:
-    - cron: "0 4 * * 0"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "0 4 * * 0"
   workflow_dispatch:
   workflow_call:
 

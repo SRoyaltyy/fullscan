@@ -1015,6 +1015,10 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
         "series": series,
         "stats": stats,
         "capital": capital,
+        "ranker": "weighted",
+        "n_pile": 0,
+        "n_pile_liquid": 0,
+        "pile_used": False,
         "fees": {k: fees[k] for k in fees if not k.startswith("_")},
         "rules": {
             "hold_days": HOLD_DAYS,
@@ -1077,6 +1081,16 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
     payload["trades"] = fills
     payload["roundtrips"] = roundtrips or []
     payload["skipped"] = skipped or []
+    try:
+        book_path = BOOK_DIR / f"{date}_stock_book.json"
+        if book_path.exists():
+            bm = json.loads(book_path.read_text(encoding="utf-8")).get("meta") or {}
+            payload["ranker"] = bm.get("ranker") or "weighted"
+            payload["n_pile"] = int(bm.get("n_pile") or 0)
+            payload["n_pile_liquid"] = int(bm.get("n_pile_liquid") or 0)
+            payload["pile_used"] = bool(bm.get("pile_used"))
+    except Exception:
+        pass
 
     shell = Path(__file__).with_name("paper_dash.html").read_text(encoding="utf-8")
     html = shell.replace("__DATA__", json.dumps(payload))
@@ -1085,11 +1099,31 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
 
 def write_report(stats: list[dict], date: str, capital: float) -> None:
     SCOREBOARD.mkdir(parents=True, exist_ok=True)
+    ranker = "weighted"
+    n_liq = 0
+    used = False
+    try:
+        p = BOOK_DIR / f"{date}_stock_book.json"
+        if p.exists():
+            bm = json.loads(p.read_text(encoding="utf-8")).get("meta") or {}
+            ranker = bm.get("ranker") or "weighted"
+            n_liq = int(bm.get("n_pile_liquid") or 0)
+            used = bool(bm.get("pile_used"))
+    except Exception:
+        pass
+    ranker_line = (
+        f"Latest book **{date}** ranker: **green pile** ({n_liq} liquid names). "
+        "Paper buys the pile 15, not the old weighted 15."
+        if used else
+        f"Latest book **{date}** ranker: **weighted** (green pile liquid={n_liq}, need 8)."
+    )
     L = [
         "# Paper trading — Futubull-fee simulation",
         "",
         f"As of **{date}** · ${capital:,.0f} starting capital per sleeve · "
         "fees per `00_grounding/futubull_fees.json`",
+        "",
+        ranker_line,
         "",
         "Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 "
         "per size bucket. Fill at signal-day close. Sell only after min-hold "

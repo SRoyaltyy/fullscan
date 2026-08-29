@@ -1,8 +1,9 @@
 name: "Collect: Reddit"
 
 on:
-  schedule:
-    - cron: "15 * * * *"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "15 * * * *"
   workflow_dispatch:
   workflow_call:
 

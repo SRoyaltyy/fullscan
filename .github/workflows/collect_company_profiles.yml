@@ -1,8 +1,9 @@
 name: Collect Company Profiles
 
 on:
-  schedule:
-    - cron: '0 10 * * 0'   # Every Sunday at 10:00 AM UTC
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: '0 10 * * 0'   # Every Sunday at 10:00 AM UTC
   workflow_dispatch:
   workflow_call:
 

@@ -15,6 +15,14 @@ name: Stock Book ALL (one-shot)
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
+        required: false
+        default: "ecs"
+        type: choice
+        options:
+          - ecs
+          - ubuntu
       run_date:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
@@ -49,7 +57,7 @@ concurrency:
 
 jobs:
   all:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
       FULLSCAN_HOME: "/home/gha"

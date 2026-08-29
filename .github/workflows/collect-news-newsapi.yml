@@ -1,8 +1,9 @@
 name: "Collect: NewsAPI"
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "0 */6 * * *"
   workflow_dispatch:
   workflow_call:
 

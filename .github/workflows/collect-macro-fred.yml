@@ -1,8 +1,9 @@
 name: "Collect: FRED Macro Data"
 
 on:
-  schedule:
-    - cron: "0 13 * * *"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "0 13 * * *"
   workflow_dispatch:
   workflow_call:
 

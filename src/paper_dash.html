@@ -214,7 +214,10 @@ function lastCashFor(sleeve){
 
 document.getElementById('gen').textContent =
   "Generated "+D.generated.slice(0,16).replace('T',' ')+" · "+D.dates.length+" trading day(s) · $"+
-  D.capital.toLocaleString()+" per sleeve · long-only, whole shares, signal-day close fills · min-hold = trading sessions (weekends/holidays don't count)";
+  D.capital.toLocaleString()+" per sleeve · long-only, whole shares, signal-day close fills · min-hold = trading sessions (weekends/holidays don't count)"+
+  (D.pile_used
+    ? " · BUY = green pile ("+(D.n_pile_liquid||D.n_pile||0)+" liquid names)"
+    : " · BUY = weighted (pile liquid "+(D.n_pile_liquid||0)+")");
 
 function cardSet(){
   const sorted=[...D.stats].sort((a,b)=>b.return_pct-a.return_pct);

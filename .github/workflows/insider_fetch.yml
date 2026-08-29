@@ -15,9 +15,10 @@ on:
         description: "Max quote pages when quotes=liquid"
         required: false
         default: "300"
-  schedule:
-    # after US close weekdays
-    - cron: "0 22 * * 1-5"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # after US close weekdays
+  #   - cron: "0 22 * * 1-5"
 
 permissions:
   contents: write

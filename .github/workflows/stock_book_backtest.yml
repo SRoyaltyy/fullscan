@@ -13,9 +13,10 @@ on:
         description: "Max historical books to grade"
         required: false
         default: "30"
-  schedule:
-    # After stock book
-    - cron: "20 17 * * 1-5"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # After stock book
+  #   - cron: "20 17 * * 1-5"
 
 permissions:
   contents: write

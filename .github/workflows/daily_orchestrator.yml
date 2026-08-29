@@ -374,24 +374,13 @@ jobs:
             fi
           }
 
+          # Live pipeline only. Sludge crons are disabled; do not re-dispatch
+          # them from here or they steal the one ECS runner.
           WORKFLOWS=(
-            preopen_all.yml
             finviz_preopen_scrape.yml
-            finviz_digest.yml
-            events_daily.yml
-            news_parse.yml
-            news_judge.yml
-            news_actions.yml
-            daily_pipeline.yml
-            sector_daily.yml
-            label_weather.yml
-            catalyst_daily.yml
-            ab_checklist.yml
-            stock_book_all.yml
-            learn_cycle.yml
-            deepthink.yml
-            weekly_consolidation.yml
+            preopen_all.yml
             map_heat_postclose.yml
+            stock_book_all.yml
           )
 
           PREOPEN_OK="no"

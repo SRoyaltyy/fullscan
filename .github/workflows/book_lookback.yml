@@ -3,6 +3,14 @@ name: Book Lookback (ranker time machine)
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ecs
+          - ubuntu
       date:
         description: "Trading day YYYY-MM-DD or DD/MM (default latest book CSV)"
         required: false
@@ -29,7 +37,7 @@ concurrency:
 
 jobs:
   lookback:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.runner == 'ecs' && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4

@@ -1,8 +1,9 @@
 name: Collect SEC Filings & Insider Trades
 
 on:
-  schedule:
-    - cron: '0 14 * * 1-5'  # Weekdays at 2:00 PM UTC
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: '0 14 * * 1-5'  # Weekdays at 2:00 PM UTC
   workflow_dispatch:
   workflow_call:
 

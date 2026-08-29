@@ -46,8 +46,9 @@ on:
         description: "true = score only new asof days onto existing *_universe.parquet (do not rebuild 24 months)"
         type: boolean
         default: true
-  schedule:
-    - cron: "30 22 * * 1-5"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "30 22 * * 1-5"
 
 permissions:
   contents: write

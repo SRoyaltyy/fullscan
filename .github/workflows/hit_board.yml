@@ -5,9 +5,10 @@ name: HIT Board (all dates)
 
 on:
   workflow_dispatch:
-  schedule:
-    # After typical US session grade window (early HKT morning weekdays)
-    - cron: "30 22 * * 1-5"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # After typical US session grade window (early HKT morning weekdays)
+  #   - cron: "30 22 * * 1-5"
 
 permissions:
   contents: write

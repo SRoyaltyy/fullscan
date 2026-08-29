@@ -6,11 +6,12 @@ name: Sector Daily (auto)
 # OUTCOME+REFLECT stay in the post-close window (not predictive).
 
 on:
-  schedule:
-    # NO predict cron: Pre-Open ALL (06:00 ET) owns the 11 morning sector
-    # predicts. Predict here is dispatch-only (orchestrator fallback
-    # after 08:00 ET if ALL is not quality-ok).
-    - cron: "10 22 * * 1-5"   # ~18:10 ET outcome+reflect
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # NO predict cron: Pre-Open ALL (06:00 ET) owns the 11 morning sector
+  #   # predicts. Predict here is dispatch-only (orchestrator fallback
+  #   # after 08:00 ET if ALL is not quality-ok).
+  #   - cron: "10 22 * * 1-5"   # ~18:10 ET outcome+reflect
   workflow_dispatch:
     inputs:
       stage:

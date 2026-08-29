@@ -1,8 +1,9 @@
 name: "Collect: Macro Sentiment"
 
 on:
-  schedule:
-    - cron: "0 14 * * *"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   - cron: "0 14 * * *"
   workflow_dispatch:
   workflow_call:
 

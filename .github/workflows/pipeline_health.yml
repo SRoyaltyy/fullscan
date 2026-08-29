@@ -12,11 +12,12 @@ name: Pipeline health
 # Never GH-dispatches another ECS workflow (would queue behind this job).
 
 on:
-  schedule:
-    # 07:00 EDT (06:00 EST). Packet should be landing; still before 09:25.
-    - cron: "0 11 * * 1-5"
-    # 00:30 ET Tue–Sat. Thursday 22:00 research should have started.
-    - cron: "30 4 * * 2-6"
+  # schedule disabled 2026-08-29 — not in live pipeline
+  # schedule:
+  #   # 07:00 EDT (06:00 EST). Packet should be landing; still before 09:25.
+  #   - cron: "0 11 * * 1-5"
+  #   # 00:30 ET Tue–Sat. Thursday 22:00 research should have started.
+  #   - cron: "30 4 * * 2-6"
   workflow_dispatch:
     inputs:
       job:

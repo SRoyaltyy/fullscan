@@ -49,6 +49,14 @@ on:
     - cron: "55 9 * * 1-5"
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
+        required: false
+        default: "ecs"
+        type: choice
+        options:
+          - ecs
+          - ubuntu
       run_date:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
@@ -68,7 +76,7 @@ concurrency:
 
 jobs:
   preopen:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
       OPENCLAW_TIMEOUT: "10800"
