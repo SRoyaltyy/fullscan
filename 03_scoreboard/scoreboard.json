@@ -5024,6 +5024,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-08-29",
+          "actual_pct": -0.18,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -7421,6 +7433,18 @@
           "actual_direction": "flat",
           "actual_magnitude_band": "flat",
           "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-28",
+          "actual_pct": 0.49,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
           "magnitude_hit": false,
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
@@ -11555,6 +11579,86 @@
       "spy_pct_change": -0.2269485222937795,
       "rel_pct_change": -0.8152023803441599,
       "horizon_grades": {}
+    },
+    {
+      "date": "2026-08-29",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7710.34,
+      "actual_close": 7730.99,
+      "actual_pct_change": 0.72,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-29_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-b4216a1f191d0304b4ed59e6912e23a4",
+          "date_accessed": "2026-08-29",
+          "summary": "Official AP close tape matches Channel 1 exactly and documents negative breadth under a green index.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "date_accessed": "2026-08-29",
+          "summary": "Primary fundamental print that Thursday’s tape digested.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "date_accessed": "2026-08-29",
+          "summary": "The demand-narrative quote outlets used to explain the AI-complex bid.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-nvidia-surges-on-blowout-results-and-surprising-guidance/",
+          "date_accessed": "2026-08-29",
+          "summary": "Quantifies the mega-cap impulse and the AMD divergence.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/27/salesforce-stock-soars-on-track-for-second-best-day-ever.html",
+          "date_accessed": "2026-08-29",
+          "summary": "Second leg of the AI bid, software rather than silicon.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cbsnews.com/news/july-pce-inflation-index-federal-reserve/",
+          "date_accessed": "2026-08-29",
+          "summary": "Prior-day inflation miss that capped how far a known AI beat could broaden.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.commbank.com.au/articles/newsroom/2026/08/tech-stocks-lift-wall-street-as-ai-growth-story-strengthens.html",
+          "date_accessed": "2026-08-29",
+          "summary": "Independent AP-wire confirmation of concentration plus the +1 bp yield uptick.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html",
+          "date_accessed": "2026-08-29",
+          "summary": "Cross-check that the inflation constraint was a Wednesday setup, not a Thursday shock.",
+          "verification": "quote_not_found"
+        }
+      ],
+      "ops_fail": true,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Nvidia after-close beat/guide digested in cash, NVDA +8.7%, lifting NDX while SPX stayed a narrow chop",
+      "key_interaction": "AI-earnings impulse amplified in NDX and offset/masked in SPX/Dow by poor breadth plus a still-hawkish yield/inflation backdrop",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "no",
+      "outlier_watch": "Majority of S&P 500 stocks fell; AMD red vs NVDA/AVGO; small caps lagged; stocks up with yields up; oil prints disagree",
+      "lesson_schema_ok": true
     }
   ]
 }
