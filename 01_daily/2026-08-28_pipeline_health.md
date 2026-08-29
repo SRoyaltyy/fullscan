@@ -1,8 +1,8 @@
 # Pipeline health — postclose
 
 pre-open date=2026-08-28  post-close source=2026-08-27  post-close target=2026-08-28  book=2026-08-28
-generated 2026-08-28T15:40:10.746955-04:00  round=16
-**result=FAIL**  required_fails=7  warns=7
+generated 2026-08-28T22:14:41.688240-04:00  round=16
+**result=FAIL**  required_fails=9  warns=9
 
 Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or spawn the owning ECS job (ubuntu workflows are GH-dispatched with force=true) → wait for files → re-audit. Finviz HTML is never scraped on ECS. xAI OAuth dies ~6h and cannot be refreshed (Cloudflare). Permanent auth is XAI_API_KEY in `~/.openclaw/.env`. An expiring token does not block Grok jobs.
 
@@ -11,8 +11,8 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 | OK | HOME is /home/gha on ECS | runtime | no | HOME='/home/gha' | `` |
 | OK | OpenClaw token (48 json vs 64 secret) | runtime | yes | live_len=48 tail=864c | `` |
 | OK | OpenClaw port 18789 listening | runtime | yes | http://127.0.0.1:18789 | `` |
-| OK | OpenClaw PONG | runtime | yes | model=openclaw/default | `` |
-| OK | Classroom model is Grok not DeepSeek | runtime | yes | model=openclaw/default | `` |
+| FAIL | OpenClaw PONG | runtime | yes | http=0 timed out | `` |
+| FAIL | Classroom model is Grok not DeepSeek | runtime | yes | no 200 chat | `` |
 | WARN | xAI auth (OAuth or API key) | runtime | no | xAI token expiring but still usable / Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fal | `` |
 | WARN | XAI_API_KEY on this box (permanent) | runtime | no | missing — OAuth dies ~6h. Put a console.x.ai key in ~/.openclaw/.env | `` |
 | OK | GROK_ONLY (this health process) | runtime | no | on | `` |
@@ -20,14 +20,14 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 | WARN | systemd pre-open service (now) | clock | no | failed | `` |
 | OK | systemd post-close timer enabled | clock | yes | enabled | `` |
 | OK | OpenClaw gateway unit | clock | no | active | `` |
-| OK | ECS clock file written | clock | no | 554 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/_ecs_clock.md` |
+| OK | ECS clock file written | clock | no | 552 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/_ecs_clock.md` |
 | WARN | Map heat captain research (post-close) ran on 2026-08-27 | clock | no | n=3 latest=cancelled event=workflow_dispatch | `https://github.com/SRoyaltyy/fullscan/actions/runs/33135103109` |
-| OK | Label + Weather ran on 2026-08-28 | clock | no | n=1 latest=success event=workflow_dispatch | `https://github.com/SRoyaltyy/fullscan/actions/runs/33145981263` |
-| OK | A+B1 Checklist ran on 2026-08-28 | clock | no | n=1 latest=success event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33145047801` |
-| OK | Daily pipeline outcome+reflect ran on 2026-08-28 | clock | no | n=1 latest=success event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33144343676` |
-| OK | Sector Daily outcome+reflect ran on 2026-08-28 | clock | no | n=1 latest=success event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33146755596` |
+| WARN | Label + Weather ran on 2026-08-28 | clock | no | n=2 latest=failure event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33222232222` |
+| OK | A+B1 Checklist ran on 2026-08-28 | clock | no | n=2 latest=success event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33221481088` |
+| OK | Daily pipeline outcome+reflect ran on 2026-08-28 | clock | no | n=2 latest=success event=workflow_dispatch | `https://github.com/SRoyaltyy/fullscan/actions/runs/33211819822` |
+| WARN | Sector Daily outcome+reflect ran on 2026-08-28 | clock | no | n=4 latest=queued event=workflow_dispatch | `https://github.com/SRoyaltyy/fullscan/actions/runs/33216487993` |
 | OK | Learn Cycle ran on 2026-08-28 | clock | no | n=1 latest=success event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33145039651` |
-| WARN | Stock Book ALL ran on 2026-08-28 | clock | no | n=0 on 2026-08-28 — file checks below decide | `` |
+| WARN | Stock Book ALL ran on 2026-08-28 | clock | no | n=5 latest=pending event=schedule | `https://github.com/SRoyaltyy/fullscan/actions/runs/33224899576` |
 | OK | 2026-08-28_map_heat.json (industry groups + captains) | postclose | yes | phase=morning_overlay 246453 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_map_heat.json` |
 | OK | 2026-08-28_map_heat.md | postclose | no | 10969 bytes | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_map_heat.md` |
 | FAIL | 2026-08-28_research_baseline.json (captain cards) | postclose | yes | DID NOT RUN — file missing | `/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-08-28_research_baseline.json` |
@@ -59,7 +59,6 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 ## Fix actions
 
 - spawned bash /home/gha/actions-runner/_work/fullscan/fullscan/scripts/ecs_map_postclose.sh log=/home/gha/fullscan-logs/heal-map_heat_postclose.log
-- enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening — ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {"id":"chatcmp
 - enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening — ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {"id":"chatcmp
 - enable_openclaw_chat.sh exit=0 ons.enabled. Restart the gateway to apply. | port 18789 already listening — ping before restart | chat_http=200 hdr=bearer token=len=48 tail=864c | chat_body_prefix: {"id":"chatcmp
 
