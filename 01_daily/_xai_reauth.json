@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
+  "status": "needs_reauth",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "Z23V-TYMD",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=Z23V-TYMD",
-  "expires_at": "2026-08-29T09:37:40.318566-04:00",
+  "reason": "device login did not finish rc=124",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 296996,
-  "updated_at": "2026-08-29T09:23:40.318989-04:00"
+  "updated_at": "2026-08-29T09:35:43.777830-04:00"
 }
