@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-08-28
+updated: 2026-08-29
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-08-28**. Promoted: 12. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-08-29**. Promoted: 0. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
