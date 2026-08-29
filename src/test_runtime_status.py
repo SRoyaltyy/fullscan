@@ -127,8 +127,38 @@ def test_heal_targets_classroom_not_403():
     assert "process" in ids
     assert "timeout" in ids
     assert "http403" not in ids
-    assert "stub" not in ids
+    assert "stub" not in ids  # leftover packet text must not bounce OpenClaw
     assert "token" not in ids
+
+
+def test_scan_stubs_ignores_finviz_403():
+    mod = _load()
+    st, req, det, act = mod.scan_stubs({
+        "401": [], "403": ["2026-08-28_finviz_digest.json"], "1800": [],
+        "64": [], "deepseek": [],
+    })
+    assert st == "OK"
+    assert "403" not in det
+    st, req, det, act = mod.scan_stubs({
+        "401": [], "403": [], "1800": ["2026-08-28_research_baseline.md"],
+        "64": [], "deepseek": [],
+    })
+    assert st == "FAIL" and req and act == "heal"
+    assert "1800" in det
+
+
+def test_demote_stub_if_live():
+    mod = _load()
+    st, req, det, act = mod.demote_stub_if_live(
+        "FAIL", True, "401 in predict.md", "heal", "OK")
+    assert st == "WARN" and req is False and act == "none"
+    assert "history" in det
+    st, req, det, act = mod.demote_stub_if_live(
+        "FAIL", True, "401 in predict.md", "heal", "FAIL")
+    assert st == "FAIL" and act == "heal"
+    st, req, det, act = mod.demote_stub_if_live(
+        "OK", True, "clean", "none", "OK")
+    assert st == "OK"
 
 
 def test_snapshot_includes_prereq_doors():
@@ -150,6 +180,8 @@ def main() -> None:
         test_pong_401_403_timeout,
         test_run_timed_out_is_fail,
         test_heal_targets_classroom_not_403,
+        test_scan_stubs_ignores_finviz_403,
+        test_demote_stub_if_live,
         test_snapshot_includes_prereq_doors,
     ]
     failed = 0

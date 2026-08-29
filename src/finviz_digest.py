@@ -276,7 +276,7 @@ def _scrape_indices(skip: bool = False, export: Path | None = None) -> list[dict
         row = _scrape_index_digest(t, sess, export=export)
         if row:
             out.append(row)
-        time.sleep(0.55)
+        # Spacing lives in finviz_session.get (FINVIZ_GAP_SEC, default 5s).
     return out
 
 

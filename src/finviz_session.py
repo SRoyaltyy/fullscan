@@ -10,10 +10,17 @@ Auth, first match wins:
 
 Never log secrets. If neither works, get() returns None so callers skip
 instead of hammering public Finviz into 403s.
+
+Live HTML is paced: one Elite GET every FINVIZ_GAP_SEC seconds (default 5).
+Jupyter-from-home never tripped the limiter because it was slow; cloud
+runners fire quotes/groups/news back-to-back and get 403. Pace here so
+every caller (digest, map_heat, quote_colors, catalyst) inherits it.
 """
 from __future__ import annotations
 
 import os
+import threading
+import time
 from typing import Iterable
 
 import requests
@@ -30,6 +37,31 @@ UA = {
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
 }
+
+_PACE_LOCK = threading.Lock()
+_LAST_GET = 0.0
+
+
+def gap_sec() -> float:
+    raw = (os.environ.get("FINVIZ_GAP_SEC") or "5").strip()
+    try:
+        return max(0.0, float(raw))
+    except ValueError:
+        return 5.0
+
+
+def _pace() -> None:
+    """Sleep so consecutive Elite GETs are at least gap_sec() apart."""
+    global _LAST_GET
+    gap = gap_sec()
+    if gap <= 0:
+        return
+    with _PACE_LOCK:
+        now = time.monotonic()
+        wait = gap - (now - _LAST_GET)
+        if wait > 0:
+            time.sleep(wait)
+        _LAST_GET = time.monotonic()
 
 
 def looks_like_login_html(text: str) -> bool:
@@ -133,6 +165,7 @@ def get(
             # Public pages 403 from ECS/Azure. Skip unless it is Elite.
             url = url.replace(PUBLIC, ELITE, 1)
         try:
+            _pace()
             r = sess.get(url, timeout=timeout)
         except requests.RequestException as e:
             last_err = f"{e}"

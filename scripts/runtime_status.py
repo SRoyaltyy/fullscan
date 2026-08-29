@@ -520,27 +520,31 @@ def scan_needles() -> dict[str, list[str]]:
 
 
 def scan_stubs(needles: dict[str, list[str]] | None = None) -> tuple[str, bool, str, str]:
+    """Grok/classroom stubs only. Finviz 403 / empty tape is the http403 door.
+
+    Leftover '403' in a digest or map_heat overlay used to FAIL this door
+    every morning even when OpenClaw was fine. Heal then bounced the
+    classroom for a rate-limit, which never un-403s Finviz.
+    """
     needles = needles if needles is not None else scan_needles()
     hits: list[str] = []
-    for key, label in (("401", "401"), ("403", "403"), ("1800", "1800/timeout"),
+    for key, label in (("401", "401"), ("1800", "1800/timeout"),
                        ("64", "64-char token"), ("deepseek", "DeepSeek fallback")):
         names = needles.get(key) or []
         if names:
             hits.append(f"{label} in {', '.join(names[:2])}")
-    dates = et_dates()
-    for d in dates:
-        mh = ROOT / "01_daily" / "map_heat" / f"{d}_map_heat.json"
-        data = _json(mh)
-        if isinstance(data, dict):
-            notes = str(data.get("notes") or data.get("one_paragraph") or "")
-            tape = data.get("tape")
-            if "not scraped" in notes.lower() or "403" in notes:
-                hits.append(f"{mh.name}: Elite 403 / not scraped")
-            if isinstance(tape, list) and not tape:
-                hits.append(f"{mh.name}: EMPTY TAPE (403 overlay)")
     if not hits:
-        return "OK", True, "no 401/403/timeout/64/DeepSeek stubs in latest packets", "none"
-    return "FAIL", False, "; ".join(hits[:4]), "none"
+        return "OK", True, "no 401/timeout/64/DeepSeek stubs in this session's Grok packets", "none"
+    return "FAIL", True, "; ".join(hits[:4]), "heal"
+
+
+def demote_stub_if_live(st: str, req: bool, det: str, act: str, pong_st: str
+                        ) -> tuple[str, bool, str, str]:
+    """Leftover packet text is history when PONG is live. Do not bounce OpenClaw."""
+    if st == "FAIL" and pong_st in ("OK", "SKIP"):
+        return ("WARN", False,
+                f"history — {det} (classroom live)", "none")
+    return st, req, det, act
 
 
 def door(id: str, name: str, group: str, status: str, required: bool,
@@ -652,12 +656,29 @@ def snapshot() -> dict:
             "WARN", False, f"401 in last packet {', '.join(needles['401'][:2])} — not live", "none")
 
     http403_st, http403_req, http403_det, http403_act = finviz_st, finviz_req, finviz_det, finviz_act
+    # ECS heal_targets must not bounce OpenClaw for Finviz 403.
     if http403_act == "heal":
         http403_act = "none"
-    if needles.get("403") and http403_st != "FAIL":
+    tape_hits = []
+    for d in et_dates():
+        mh = ROOT / "01_daily" / "map_heat" / f"{d}_map_heat.json"
+        data = _json(mh)
+        if not isinstance(data, dict):
+            continue
+        notes = str(data.get("notes") or data.get("one_paragraph") or "")
+        tape = data.get("tape")
+        if "not scraped" in notes.lower() or "403" in notes:
+            tape_hits.append(f"{mh.name}: Elite 403 / not scraped")
+        if isinstance(tape, list) and not tape:
+            tape_hits.append(f"{mh.name}: EMPTY TAPE")
+    if needles.get("403"):
+        tape_hits.append(f"403 in {', '.join(needles['403'][:2])}")
+    if tape_hits and http403_st != "FAIL":
         http403_st, http403_req, http403_det, http403_act = (
-            "FAIL", False, f"403 in {', '.join(needles['403'][:2])}", "none")
-    # PONG 403 stays on the pong door. http403 is Finviz/Aliyun — heal cannot un-block it.
+            "FAIL", True, "; ".join(tape_hits[:3]), "none")
+    # PONG 403 stays on the pong door. http403 is Finviz — dashboard heals by re-scraping at 5s.
+    stub_st, stub_req, stub_det, stub_act = demote_stub_if_live(
+        stub_st, stub_req, stub_det, stub_act, pong_st)
 
     if needles.get("64") and tok_st == "OK":
         tok_st, tok_req, tok_det, tok_act = (

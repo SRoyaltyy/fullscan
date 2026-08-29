@@ -17,8 +17,7 @@ from zoneinfo import ZoneInfo
 import numpy as np
 import pandas as pd
 
-from . import config, scoreboard
-from .green_pile import GREEN_MIN, green_mask
+from . import config, green_pile, scoreboard
 
 ROOT = Path(__file__).resolve().parent.parent
 JOIN_DIR = ROOT / "data" / "join"
@@ -774,6 +773,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     gen_bias = float(_bias_for(gen_run, "1d") * gen_gate)
     sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
                    for sec, r in sector_runs.items()}
+    join["green"] = green_pile.green_mask(join)
+    gp = green_pile.pile_status(join)
+    print(f"[stock-book] green-pile {gp['reason']}")
 
     # ---- resolve weights: learned policy (bounded) → renorm over present families ----
     present = {
@@ -821,6 +823,12 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "inputs": _inputs_status(date),
         "n_news_after_digest": int((join["s_news"].abs() > 0).sum()) if "s_news" in join.columns else 0,
         "event_sector_tilt": ev_tilt,
+        "green_pile": gp,
+        "n_pile": gp.get("n_pile"),
+        "n_pile_liquid": gp.get("n_pile_liquid"),
+        "pile_used": gp.get("used"),
+        "green_min": gp.get("min", 8),
+        "ranker": "green_pile" if gp.get("used") else "weighted",
     }
     try:
         from .map_heat_research import calendar_entry_scale, earnings_entry_tickers
@@ -890,8 +898,6 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             bits.append(f"mid_opp={opp:+.2f}")
         if row.get("rebound"):
             bits.append("rebound_floor")
-        if row.get("green"):
-            bits.append("green_pile")
         return "; ".join(bits)
 
     join["reasons"] = join.apply(reasons, axis=1)
@@ -899,42 +905,27 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     meta["min_market_cap_m"] = MIN_MARKET_CAP_M
     meta["min_avg_vol_k"] = MIN_AVG_VOL_K
     meta["n_rebound"] = int(join["rebound"].sum()) if "rebound" in join.columns else 0
-
-    join["green"] = green_mask(join)
-    mcap = pd.to_numeric(join["market_cap_m"], errors="coerce").fillna(0.0) \
-        if "market_cap_m" in join.columns else pd.Series(0.0, index=join.index)
-    size = join["size"].astype(str).str.lower() if "size" in join.columns \
-        else pd.Series("", index=join.index)
-    liquid_green = join["green"] & (mcap >= MIN_OPP_MCAP_M) & ~size.eq("micro")
-    n_pile = int(join["green"].sum())
-    n_pile_liquid = int(liquid_green.sum())
-    pile_used = n_pile_liquid >= GREEN_MIN
-    meta["n_pile"] = n_pile
-    meta["n_pile_liquid"] = n_pile_liquid
-    meta["pile_used"] = pile_used
-    meta["green_min"] = GREEN_MIN
-    meta["ranker"] = "green_pile" if pile_used else "weighted"
-    print(
-        f"[stock-book] green pile={n_pile} liquid={n_pile_liquid} "
-        f"min={GREEN_MIN} used={pile_used} ranker={meta['ranker']}",
-        flush=True,
-    )
     return join, meta
 
 
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
-               buy_from: pd.DataFrame | None = None):
+              buy_mask=None):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
-    SELL side ranks on the core weighted score (no buy-side add-ons) when
-    sell_core is set and the column exists.
-
-    buy_from: optional pool for the BUY side (green pile). Sells still come
-    from the full df.
+    BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
+    full weighted walk. SELL always ranks on the core weighted score (no pile,
+    no buy-side add-ons) when sell_core is set and the column exists.
     """
     col = f"score_{horizon}"
-    src = buy_from if buy_from is not None and not buy_from.empty else df
-    ranked = src.sort_values(col, ascending=False)
+    pool = df
+    if buy_mask is not None:
+        try:
+            masked = df.loc[buy_mask]
+        except Exception:
+            masked = df
+        if masked is not None and len(masked):
+            pool = masked
+    ranked = pool.sort_values(col, ascending=False)
     picks = []
     sec_n: dict[str, int] = {}
     ind_n: dict[str, int] = {}
@@ -971,25 +962,33 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
     if sell_core and core_col in df.columns:
         sells = df.sort_values(core_col, ascending=True).head(top_n)
     else:
-        sells = df.sort_values(col, ascending=True).head(top_n)
+        sells = ranked.tail(top_n).iloc[::-1]
     return buys, sells
 
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
-                 sell_core: bool = True, buy_from: pd.DataFrame | None = None):
+                 sell_core: bool = True, buy_mask=None):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
     if sub.empty:
         return None, None
-    pool = None
-    if buy_from is not None and not buy_from.empty and "size" in buy_from.columns:
-        pool = buy_from[buy_from["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
+    sub_mask = None
+    if buy_mask is not None:
+        try:
+            sub_mask = buy_mask.reindex(sub.index).fillna(False)
+        except Exception:
+            sub_mask = None
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
-                      sell_core=sell_core, buy_from=pool)
+                      sell_core=sell_core, buy_mask=sub_mask)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
+    def _f(key):
+        try:
+            return float(r.get(key) or 0)
+        except (TypeError, ValueError):
+            return 0.0
     return {
         "ticker": r["Ticker"],
         "score": float(r[f"score_{horizon}"]),
@@ -998,9 +997,15 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "side": side,
         "reasons": r.get("reasons"),
         "rebound": bool(r.get("rebound", False)),
-        "in_pile": bool(r.get("green", False)),
         "market_cap_m": r.get("market_cap_m"),
         "avg_vol_k": r.get("avg_vol_k"),
+        "s_join": _f("s_join"),
+        "s_general": _f("s_general"),
+        "s_ab": _f("s_ab"),
+        "s_peer": _f("s_peer"),
+        "s_sector": _f("s_sector"),
+        "s_news": _f("s_news"),
+        "green": bool(r.get("green", False)),
     }
 
 
@@ -1118,7 +1123,30 @@ def _layer_lines(row, horizon: str, weights: dict | None = None) -> list[str]:
     return out
 
 
+def _green_pile_md(meta: dict) -> list[str]:
+    gp = meta.get("green_pile") or {}
+    if not gp:
+        return [
+            "## All-green BUY / SELL",
+            "",
+            "- green-pile meta missing — this book used the weighted walk.",
+            "",
+        ]
+    fired = gp.get("core_fired") or {}
+    bits = ", ".join(f"{k}={'yes' if v else 'NO'}" for k, v in fired.items()) or "unscored"
+    return [
+        "## All-green BUY / SELL",
+        "",
+        f"- Mode: **{gp.get('buy_mode', 'weighted_fallback')}** · SELL **{gp.get('sell_mode', 'core_weights')}**",
+        f"- Pile: **{gp.get('n_pile', 0)}** liquid all-green names (need ≥ {gp.get('min', 8)}) of {gp.get('n_universe', meta.get('n_universe'))}",
+        f"- Core fired: {bits}",
+        f"- {gp.get('reason', '')}",
+        "",
+    ]
+
+
 def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
+
     date = meta["date"]
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DAILY.mkdir(parents=True, exist_ok=True)
@@ -1141,24 +1169,22 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     df[cols_keep].to_csv(csv_path, index=False)
 
     sell_core = bool(meta.get("sell_excludes_addons", True))
-    pile_used = bool(meta.get("pile_used"))
-    buy_from = None
-    if pile_used and "green" in df.columns:
-        buy_from = df[df["green"] == True]
-        if buy_from.empty:
-            buy_from = None
+    gp = meta.get("green_pile") or {}
+    buy_mask = None
+    if gp.get("used") and "green" in df.columns:
+        buy_mask = df["green"] == True  # noqa: E712
     books = {}
     for h in HORIZONS:
-        b, s = _book_side(df, h, top_n, sell_core=sell_core, buy_from=buy_from)
+        b, s = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask)
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
             "buy_by_size": {},
             "sell_by_size": {},
-            "ranker": meta.get("ranker") or "weighted",
+            "ranker": "green_pile" if gp.get("used") else "weighted",
         }
         for bucket in SIZE_BUCKETS:
-            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core, buy_from=buy_from)
+            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core, buy_mask=buy_mask)
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -1169,24 +1195,20 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         json.dumps({"meta": meta, "books": books}, indent=2, default=str),
         encoding="utf-8",
     )
+    green_path = OUT_DIR / f"{date}_green.json"
+    tickers: list[str] = []
+    if "green" in df.columns and "Ticker" in df.columns:
+        tickers = [str(t) for t in df.loc[df["green"] == True, "Ticker"].tolist()]  # noqa: E712
+    green_path.write_text(
+        json.dumps({**gp, "tickers": tickers}, indent=2, default=str) + "\n",
+        encoding="utf-8",
+    )
 
     wr = meta.get("weather_risk")
     L = [
         f"# Stock book — {date}",
         "",
         f"_Generated {meta['generated_at']}_",
-        "",
-        (
-            f"**Ranker: green pile** — {meta.get('n_pile_liquid', 0)} liquid names "
-            f"with join+general+AB+peer all ≥ +0.05 (sector/news not red, relvol not dead). "
-            f"BUY 15 filled from the pile with the same $400M / sector caps. "
-            f"SELL still ranks on core weights."
-            if meta.get("pile_used")
-            else
-            f"**Ranker: weighted** — green pile had {meta.get('n_pile_liquid', 0)} liquid "
-            f"names (need {meta.get('green_min', 8)}). Falls back to w·join + sector + "
-            f"general + news + AB + peer."
-        ),
         "",
         "This file is the **human read** of one run. CSV/JSON next to it are the machine files.",
         "",
@@ -1200,6 +1222,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "4. **AB checklist** — structure score + P01–P04 (beats peers? peers up? industry up? sector board up?).",
         "5. **Peer RS** — this week's return vs that name's own correlated basket. Kills XLE clones.",
         "6. **Mid-cap opportunity** — extra points for liquid small/mid ($400M–$20B) that are not jammed at the 52-week high. Micros skipped. Max 4 large/mega.",
+        "",
+        "**All-green BUY.** A name is green when join, general, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile. If the pile is thinner (usually AB or peers all zeros, or no same-day general), the ranker keeps the old weighted walk. **SELL always ranks on core weights** — pile and mid-cap add-ons do not pick shorts.",
         "",
         "**1d** leans on news + AB + peers. **1m** drops news and leans on AB + peers + join.",
         "A sector headline (e.g. ADBE) cannot zero a mid-cap that just beat earnings or is leading its own peers.",
@@ -1217,6 +1241,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         f"- BUY window: ${meta.get('min_market_cap_m', 80):.0f}M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega",
         f"- News names after digest+judge: {meta.get('n_news_after_digest', meta.get('n_news_tickers'))}",
         "",
+        *_green_pile_md(meta),
         "## Inputs this run — every resource",
         "",
         "If a row says **missing**, that layer scored 0 today. If it says **found**, it moved the rank.",
@@ -1274,7 +1299,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     # Full rationale for 1d and 1m (the two sleeves that matter). Other horizons: compact table.
     detail_h = ("1d", "1m")
     for h in HORIZONS:
-        buys, sells = _book_side(df, h, top_n, sell_core=sell_core)
+        buys, sells = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask)
         if h in detail_h:
             L += ["", f"## {h} BUY — why these names", ""]
             for i, (_, r) in enumerate(buys.iterrows(), 1):

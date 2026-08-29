@@ -4,7 +4,10 @@ Run: python -m src.test_finviz_session
 """
 from __future__ import annotations
 
+import os
 from unittest import mock
+
+os.environ["FINVIZ_GAP_SEC"] = "0"
 
 from src import finviz_session
 
@@ -81,6 +84,31 @@ def test_session_missing_auth() -> None:
     assert s.headers.get("X-Fullscan-Finviz") == "missing"
 
 
+def test_gap_default_is_five() -> None:
+    with mock.patch.dict(os.environ, {"FINVIZ_GAP_SEC": ""}, clear=False):
+        os.environ.pop("FINVIZ_GAP_SEC", None)
+        assert finviz_session.gap_sec() == 5.0
+    os.environ["FINVIZ_GAP_SEC"] = "0"
+    assert finviz_session.gap_sec() == 0.0
+
+
+def test_get_paces_between_calls() -> None:
+    sess = mock.Mock()
+    resp = mock.Mock()
+    resp.status_code = 200
+    resp.text = "<html><title>SPY</title><td>Daily Digest</td>"
+    sess.get.return_value = resp
+    slept = []
+    os.environ["FINVIZ_GAP_SEC"] = "5"
+    finviz_session._LAST_GET = 0.0
+    with mock.patch.object(finviz_session.time, "sleep", side_effect=lambda s: slept.append(s)):
+        with mock.patch.object(finviz_session.time, "monotonic", side_effect=[0.0, 0.0, 0.0, 5.0]):
+            finviz_session.get(sess, "/quote.ashx?t=SPY")
+            finviz_session.get(sess, "/quote.ashx?t=QQQ")
+    os.environ["FINVIZ_GAP_SEC"] = "0"
+    assert slept and slept[0] >= 4.9
+
+
 def test_preopen_all_does_not_scrape_finviz() -> None:
     from pathlib import Path
     src = Path(__file__).with_name("run_preopen_all.py").read_text(encoding="utf-8")
@@ -98,6 +126,8 @@ def main() -> None:
         test_get_rejects_403,
         test_session_cookie_probe_ok,
         test_session_missing_auth,
+        test_gap_default_is_five,
+        test_get_paces_between_calls,
         test_preopen_all_does_not_scrape_finviz,
     ]
     failed = 0
