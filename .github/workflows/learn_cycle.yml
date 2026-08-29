@@ -11,9 +11,8 @@ on:
         description: "Graded runs per topic to mine"
         required: false
         default: "15"
-  # schedule disabled 2026-08-29 — not in live pipeline
-  # schedule:
-  #   - cron: "30 21 * * 1-5"
+  schedule:
+    - cron: "30 21 * * 1-5"
 
 permissions:
   contents: write

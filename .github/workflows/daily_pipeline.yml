@@ -1,12 +1,11 @@
 name: Autonomous Daily Market Pipeline
 
 on:
-  # schedule disabled 2026-08-29 — not in live pipeline
-  # schedule:
-  #   # NO predict cron: Pre-Open ALL (06:00 ET) owns the morning predict.
-  #   # Predict here is dispatch-only (orchestrator fallback after 08:00 ET).
-  #   # ~17:03 ET — outcome + reflect (NOT predictive; allowed after the bell)
-  #   - cron: '3 21 * * 0-6'
+  schedule:
+    # NO predict cron: Pre-Open ALL (06:00 ET) owns the morning predict.
+    # Predict here is dispatch-only (orchestrator fallback after 08:00 ET).
+    # ~17:03 ET — outcome + reflect (NOT predictive; allowed after the bell)
+    - cron: '3 21 * * 0-6'
   workflow_dispatch:
     inputs:
       stage:

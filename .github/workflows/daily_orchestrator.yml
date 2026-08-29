@@ -381,6 +381,8 @@ jobs:
             preopen_all.yml
             map_heat_postclose.yml
             stock_book_all.yml
+            daily_pipeline.yml
+            learn_cycle.yml
           )
 
           PREOPEN_OK="no"
