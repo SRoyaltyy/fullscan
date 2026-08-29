@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
+  "status": "needs_reauth",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "W2ZD-MWNH",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=W2ZD-MWNH",
-  "expires_at": "2026-08-29T04:32:05.946296-04:00",
+  "reason": "device login did not finish rc=124",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 294513,
-  "updated_at": "2026-08-29T04:18:05.946718-04:00"
+  "updated_at": "2026-08-29T04:30:09.391565-04:00"
 }
