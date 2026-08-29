@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-01-15\",\n    \"description\": \"Uranium Energy Corp bought 107,142,857 Anfield Energy shares for C$15 million, lifting its stake to about 17.8% non-diluted and 24.2% partially diluted.\",\n    \"evidence_excerpt\": \"\\\"The acquisition was completed on January 15, 2025 pursuant to a subscription agreement between the Company and Anfield\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/uranium-energy-corp-increases-holdings-in-anfield-energy-302352431.h",
+  "raw": "[\n  {\n    \"event_date\": \"2026-04-08\",\n    \"description\": \"Uranium Energy Corp commenced production at Burke Hollow in South Texas after TCEQ approval, starting the first new U.S. ISR uranium mine in over a decade.\",\n    \"evidence_excerpt\": \"\\\"commenced production at its Burke Hollow project, the world's newest in-situ recovery (\\\"ISR\\\") uranium mine\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/uranium-energy-corp-commences-production-at-burke-hollow-the-worlds-newest-",
   "ticker": "UEC",
   "generated_at": "2026-08-28",
   "cutoff_date": null,

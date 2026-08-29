@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2026-08-03\",\n    \"description\": \"Boise Cascade Co (BCC) reported Q2 2026 sales of $1.831 billion (up 5% YoY), net income of $57.3 million, and diluted EPS of $1.63, beating consensus of about $1.23 EPS and $1.77 billion revenue.\",\n    \"evidence_excerpt\": \"\\\"The construction company reported $1.63 EPS for the quarter, beating analysts' consensus estimates of $1.23 by $0.40.\\\"\",\n    \"source_urls\": [\n      \"https://www.fool.com/earnings/call-transcripts/2026/08/10/boise-cas",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-27\",\n    \"description\": \"Boise Cascade Co (BCC) SVP and General Counsel Jill Twedt sold 1,250 shares at an average price of $79.40, or about $99,250, leaving her with 25,295 shares.\",\n    \"evidence_excerpt\": \"\\\"SVP Jill Twedt sold 1,250 shares of the stock in a transaction on Thursday, August 27th. The stock was sold at an average price of $79.40\\\"\",\n    \"source_urls\": [\n      \"https://www.marketbeat.com/instant-alerts/insider-jill-twedt-sells-1250-shares-of-bois",
   "ticker": "BCC",
   "generated_at": "2026-08-28",
   "cutoff_date": null,

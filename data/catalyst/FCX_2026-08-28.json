@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-09-08\",\n    \"description\": \"PT Freeport Indonesia, Freeport-McMoRan Inc's (FCX) Indonesian affiliate, suffered an unprecedented Grasberg Block Cave mud rush of about 800,000 metric tons of wet material that killed workers and forced a district-wide mining suspension.\",\n    \"evidence_excerpt\": \"\\\"a sudden rush of approximately 800,000 metric tons of wet material entered the mine and traveled rapidly\\\"\",\n    \"source_urls\": [\n      \"https://app.quotemedia.com/data/down",
+  "raw": "[\n  {\n    \"event_date\": \"2025-06-19\",\n    \"description\": \"Freeport-McMoRan Inc (FCX) completed the sale of its Kokkola, Finland cobalt refinery and related cathode precursor business to Umicore for about $200 million in cash.\",\n    \"evidence_excerpt\": \"\\\"on or around June 19, 2025, FCX finalized the transaction involving its cobalt refinery in Kokkola, Finland\\\"\",\n    \"source_urls\": [\"https://miningrecord.com/freeport-mcmoran-inc-completes-sale-of-portion-of-cobalt-business-to-umicore/\"],\n    \"c",
   "ticker": "FCX",
   "generated_at": "2026-08-28",
   "cutoff_date": null,
