@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this S0=S1=0 / inherited-S2-S3-S4 setup recurs, the call is flat/mild, and XLF still closes ≤ −0.3% with continued relative lag on repeated such sessions, leftover follow-through is real and this lesson is wrong. Also falsified if the rule is used to emit up after every red XLF day, or if 08-18’s live ≥ +0.4% 1d rel is present at open and the rule still forces flat."
 sector: "Financial"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-08-28

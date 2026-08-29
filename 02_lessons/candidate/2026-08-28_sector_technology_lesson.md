@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Same setup (day-2 after a tape-embedded mega-cap/AI beat, NQ inside ±0.5%, crowded XLK, two-sided policy event still pending) and XLK still closes absolute up with hardware leadership holding through the speech → cutting S1 to 0 and allowing down would undercall. Also weakened if the speech prints hawkish, 2Y jumps, and XLK still holds because mega-cap ex-NVDA (MSFT/AAPL) lifts the ETF — then “allow down” is too hardware-blanket and must stay NVDA/SOX-weight-conditional. Two of the next three such days closing ≥+0.5% XLK retires the down-path default."
 sector: "Technology"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-08-28

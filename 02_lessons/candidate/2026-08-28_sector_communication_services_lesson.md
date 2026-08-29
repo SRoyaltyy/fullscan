@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "Next session with S0=S1=0, only stale S2/S4 lag, flat/mild call, and XLC still drops >1% on continuation of the same two-name fade with leaders still red into the open and no new shock. Or: this lesson is used to emit up after every washout and 08-27-type NVDA/XLK-only rallies miss again."
 sector: "Communication Services"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-08-28

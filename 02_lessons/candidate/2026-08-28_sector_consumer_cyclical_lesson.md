@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this S0=0 / stale-S1 / inherited-S2-S4 setup recurs, the call is flat/mild, and XLY still closes ≤ −0.5% or lags SPY by ≥ 0.5% with AMZN/HD also red, revise this lesson. Also falsified if a confirmed premarket AMZN/TSLA/HD breakdown is present and the rule still forces flat."
 sector: "Consumer Cyclical"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-08-28

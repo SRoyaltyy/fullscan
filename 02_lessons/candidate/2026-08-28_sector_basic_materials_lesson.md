@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Over the next 10+ XLB sessions with S0=S1=0, prior-day chemicals-led lag, prior 1d rel << −0.5%, and no fresh same-morning China/metal/macro HIT, if emitting flat instead of down misses because XLB still closes down >0.5% (or rel < −0.5%) with directional hit rate above ~60% on the stale-chemicals follow-through, the flat default is too strong and should be narrowed to magnitude-only."
 sector: "Basic Materials"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-08-28

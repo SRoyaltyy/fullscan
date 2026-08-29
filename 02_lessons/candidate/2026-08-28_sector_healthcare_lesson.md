@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this S0=0 / inherited-S1-rotation-S2-S4 setup recurs, the call is down/flat or flat/mild, and XLV still closes ≤ −0.3% with continued relative lag vs SPY on repeated such sessions, leftover follow-through is real and this lesson is wrong. Also falsified if a same-morning 08-14-type Rx headline is printing and the rule still forces flat, or if the rule is used to emit up after every red XLV day."
 sector: "Healthcare"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-08-28

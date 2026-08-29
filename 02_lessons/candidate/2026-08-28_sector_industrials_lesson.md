@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Narrative down/mild vs pipeline down/flat recurs, we emit mild, and XLI prints |pct| < 0.3% (pipeline flat would have hit) — then forcing narrative mild is wrong. Also false if 08-27 down:mild is used without the 1w/1m-laggard-after-AHR clause and XLI closes up/non-lagging the way XLF did on 08-28."
 sector: "Industrials"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-08-28

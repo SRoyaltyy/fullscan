@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "After a multi-day oil-down stack that already missed magnitude, WTI/CL still only sub-1% red at the open, cracks elevated, yesterday’s tape not reused as S4, model emits flat/mild — yet XLE still closes down ≥~0.5% with negative relative performance **driven by crude** (XOM/COP confirming the fade). That would mean the leftover oil-down still transmits and flattening was the error. The “unless transmitting” clause is separately falsified if WTI/CL ≥~1% down **and** XOM/COP are red premarket, we still flatten, and XLE then sells with oil."
 sector: "Energy"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-08-28

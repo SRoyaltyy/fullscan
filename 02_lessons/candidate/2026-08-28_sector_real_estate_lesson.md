@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "Same pre-open setup (two-sided Fed speech, sticky inflation in, live curve not falling, 30Y in stress zone, multi-horizon XLRE lag, S0=S1=0, down/mild) that closes up, or notable/severe down without a verified open long-end shock, falsifies this confirmation; hawkish speech + XLRE up would break the duration lean"
 sector: "Real Estate"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-08-28

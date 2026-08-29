@@ -1,11 +1,12 @@
 {
-  "updated": "2026-08-28T01:32:07.006727-04:00",
+  "updated": "2026-08-28T23:23:48.102089-04:00",
   "window_n": 15,
-  "direction_acc": 0.6,
+  "direction_acc": 0.5333333333333333,
   "notes": [],
   "threshold_deltas": {},
   "sector_notes": [
-    "sector:Communication Services weak (30%): review sector taxonomy weights / search templates.",
-    "sector:Industrials weak (20%): review sector taxonomy weights / search templates."
+    "sector:Communication Services weak (27%): review sector taxonomy weights / search templates.",
+    "sector:Financial weak (36%): review sector taxonomy weights / search templates.",
+    "sector:Industrials weak (27%): review sector taxonomy weights / search templates."
   ]
 }

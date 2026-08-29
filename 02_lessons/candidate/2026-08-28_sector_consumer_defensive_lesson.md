@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Same setup (outsized prior anti-FTS rel smash, next day S0=0, flat ES/NQ, two-sided policy event, sub-threshold green premarket) defaults to flat/mild but XLP still prints ≤ −0.3% with continued relative lag — then residual follow-through is real and this lesson is wrong. Also wrong if hawkish policy + growth unwind again produces XLP lag vs SPY rather than a non-semi relative bid."
 sector: "Consumer Defensive"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-08-28

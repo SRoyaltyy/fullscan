@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "Same open book prints notable down without an in-session hawkish yield/hike-odds shock and without a large idiosyncratic name crash — then the mild cap is too tight and must be revised."
 sector: "Utilities"
 date: "2026-08-28"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-08-28
