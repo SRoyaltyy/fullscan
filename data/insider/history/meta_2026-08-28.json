@@ -7,8 +7,8 @@
     "S"
   ],
   "n_tickers_requested": 40,
-  "n_trade_rows": 18,
-  "n_panel_rows": 2395,
+  "n_trade_rows": 1965,
+  "n_panel_rows": 2402,
   "panel_months": [
     "2025-02",
     "2025-03",
@@ -32,5 +32,5 @@
   ],
   "trades_path": "data/insider/history/trades_2026-08-28.parquet",
   "panel_path": "data/insider/history/monthly_panel.parquet",
-  "generated": "2026-08-28T02:16:56.748868-04:00"
+  "generated": "2026-08-28T23:57:47.207564-04:00"
 }
