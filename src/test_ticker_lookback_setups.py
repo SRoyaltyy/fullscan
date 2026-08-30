@@ -90,14 +90,17 @@ def test_render_shows_dates_and_effectiveness() -> None:
     assert "Setups that paid market-wide" in page
     assert "2026-07-31" in md and "2026-08-27" in md
     assert "1d edge" in md
-    assert "Dates these setups printed (this run)" in md
+    assert "| Setups |" in md
+    assert "Dates these setups printed (this run)" not in page
     assert payload["setup_hits"], "AAPL in this window should print at least one featured setup"
     hit = payload["setup_hits"][0]
     assert hit["date"]
     assert hit["ticker"] == "AAPL"
     assert str(hit["date"]) in md
-    assert "Market 1d edge" in page
     assert 'id="setups"' in page
+    assert "<th>Setups</th>" in page
+    assert "setup-hit" in page or "setup-chip" in page
+    assert 'th class="better' in page or "🔵" in page
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "lookback.xlsx"
         run.write_xlsx(payload, p)
@@ -106,6 +109,26 @@ def test_render_shows_dates_and_effectiveness() -> None:
         assert "AAPL" in wb.sheetnames
         assert wb["Setups"]["A1"].value == "Setups that paid market-wide"
         assert "Setups" in [c.value for c in wb["AAPL"][1]]
+
+
+def test_overlay_rings_factor_boxes_not_date_cell() -> None:
+    days = [
+        {"date": "2026-08-19", "boxes": {
+            "vol": "good", "ab": "good", "join": "good", "gen": "good",
+            "heat": "neutral", "judge": "good"}},
+        {"date": "2026-08-20", "boxes": {
+            "vol": "good", "ab": "good", "join": "good", "gen": "good",
+            "heat": "neutral", "judge": "good"}},
+    ]
+    payload = {"generated_at": "t", "names": [{"ticker": "TEST", "days": days}]}
+    page = run.render_html(payload)
+    assert "<th>Setups</th>" in page
+    assert 'td class="good setup-hit setup-long"' in page
+    assert "vol+AB" in page
+    # Date cell stays a single-line mark; chips live in the Setups column.
+    assert ">2026-08-20</th>" in page
+    assert "setup-chip" in page
+    assert '<div class="setup-hits">' not in page
 
 
 def test_random_n_is_fifty() -> None:
@@ -121,5 +144,6 @@ if __name__ == "__main__":
     test_stretch_blue_neutral_not_region()
     test_featured_book_loads_mine_window()
     test_render_shows_dates_and_effectiveness()
+    test_overlay_rings_factor_boxes_not_date_cell()
     test_random_n_is_fifty()
-    print("6 setup tests passed")
+    print("7 setup tests passed")

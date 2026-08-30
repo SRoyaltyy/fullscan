@@ -140,7 +140,7 @@ def test_phone_html_and_returns() -> None:
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
     assert "09:30 ET" in page
-    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th>" in page
+    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th><th>Setups</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
     assert day0["forward_returns"]["1d"] is not None
@@ -234,8 +234,8 @@ def test_signal_improved_is_strict() -> None:
         "names": [{"ticker": "TEST", "days": days}],
     }
     page = run.render_html(payload)
-    assert 'th class="better clean">🔵⚪ 2026-08-20' in page
-    assert 'th class="clean">⚪ 2026-08-19' in page
+    assert 'th class="better clean">🔵⚪ 2026-08-20</th>' in page
+    assert 'th class="clean">⚪ 2026-08-19</th>' in page
     assert "🚨 2026-08-21" in page
     assert "+≥3 pts" in page
     assert "purely worse" in page

@@ -134,7 +134,8 @@ name — not that we refused a last-known file from an earlier session.
 
 The Action publishes:
 
-- a **setups board** at the top of the phone page, markdown, Action job summary, and the first XLSX sheet — market-wide n / 1d edge / 3d xs / 1w xs plus every date this run printed one;
+- the same red/yellow/green color chart, with featured setups **overlaid** on the row/date they printed (Setups column + gold ring on the boxes that fired);
+- a compact setups legend (market n / 1d edge / 3d xs / 1w xs) above the chart; the Action job summary still lists every hit date;
 - downloadable XLSX with red/yellow/green cells (one sheet per ticker, plus a Setups column);
 - +1d / +3d / +1w **forward** price changes from that session (next 1 / 3 / 5 trading days), colored the same way (green up, yellow flat, red down);
 - a blue date when factor colors improved vs the prior session (no cell worse and at least one better) **or** factor points jumped by ≥3 (red=1, yellow=2, green=3);

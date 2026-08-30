@@ -27,6 +27,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "tag_factor",
         "mine_key": "blue|heat=bad",
         "label": "🔵 + heat red",
+        "short": "🔵+heat🔴",
+        "highlight": ["heat"],
         "when": "Blue on a name whose heat is red (heat=bad).",
         "verdict": "long",
         "fallback": {"n": 138, "edge_1d": 3.092, "edge_3d": None, "edge_1w": None},
@@ -36,6 +38,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "pair",
         "mine_key": "vol=good|ab=good",
         "label": "vol green + AB green",
+        "short": "vol+AB",
+        "highlight": ["vol", "ab"],
         "when": "Yesterday's tape: both vol and analyst-barometer green.",
         "verdict": "long",
         "fallback": {"n": 349, "edge_1d": 2.763, "edge_3d": 4.218, "edge_1w": 1.755},
@@ -45,6 +49,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "pair",
         "mine_key": "gen=bad|vol=good",
         "label": "vol green + gen red",
+        "short": "vol+gen🔴",
+        "highlight": ["vol", "gen"],
         "when": "Yesterday's tape is green vol against a red general-market box.",
         "verdict": "long",
         "fallback": {"n": 441, "edge_1d": 1.906, "edge_3d": 2.656, "edge_1w": 5.991},
@@ -54,6 +60,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "tag_factor",
         "mine_key": "blue|heat=good",
         "label": "🔵 + heat green",
+        "short": "🔵+heat🟢",
+        "highlight": ["heat"],
         "when": "Blue on a name whose heat is green.",
         "verdict": "long",
         "fallback": {"n": 372, "edge_1d": 1.759, "edge_3d": None, "edge_1w": None},
@@ -63,6 +71,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "pair",
         "mine_key": "join=bad|vol=good",
         "label": "vol green + join red",
+        "short": "vol+join🔴",
+        "highlight": ["vol", "join"],
         "when": "Yesterday's tape is green vol against a red join box.",
         "verdict": "long",
         "fallback": {"n": 467, "edge_1d": 1.738, "edge_3d": 3.142, "edge_1w": 3.443},
@@ -72,6 +82,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "tag_factor",
         "mine_key": "alarm|heat=bad",
         "label": "🚨 + heat red",
+        "short": "🚨+heat🔴",
+        "highlight": ["heat"],
         "when": "Alarm on a name whose heat is red — fade, do not chase.",
         "verdict": "fade",
         "fallback": {"n": 87, "edge_1d": -1.506, "edge_3d": None, "edge_1w": None},
@@ -81,6 +93,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "factor",
         "mine_key": "judge=neutral",
         "label": "judge yellow",
+        "short": "jdg🟡",
+        "highlight": ["judge"],
         "when": "Pre-open judge box is yellow (mixed / no clean read).",
         "verdict": "long",
         "fallback": {"n": 762, "edge_1d": 1.351, "edge_3d": 1.634, "edge_1w": None},
@@ -90,6 +104,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "tag_context",
         "mine_key": "first_crack",
         "label": "🚨 first crack (still-green row)",
+        "short": "first crack",
+        "highlight": [],
         "when": "Alarm on a still-green 09:30 row — first crack. Same idea as alarm|good.",
         "verdict": "fade",
         "fallback": {"n": 984, "edge_1d": -1.223, "edge_3d": -1.264, "edge_1w": -2.028},
@@ -99,6 +115,8 @@ FEATURED: list[dict[str, Any]] = [
         "mine_bucket": "tag_stretch",
         "mine_key": "blue|neutral",
         "label": "🔵 on mixed 3-day stretch",
+        "short": "🔵 stretch",
+        "highlight": [],
         "when": "Blue while the 3-day color stretch is mixed (not a clean green/red run).",
         "verdict": "long",
         "fallback": {"n": 4149, "edge_1d": 0.882, "edge_3d": 1.185, "edge_1w": 1.690},
@@ -174,6 +192,8 @@ def featured_book(mine: dict[str, Any] | None = None) -> list[dict[str, Any]]:
         out.append({
             "id": spec["id"],
             "label": spec["label"],
+            "short": spec.get("short") or spec["label"],
+            "highlight": list(spec.get("highlight") or []),
             "when": spec["when"],
             "verdict": spec["verdict"],
             "mine_bucket": spec["mine_bucket"],
@@ -316,8 +336,8 @@ def pct(v: Any) -> str:
         return "—"
 
 
-def render_setup_markdown(payload: dict[str, Any]) -> str:
-    """Board + this-run dates. Used in the MD report and the Action summary."""
+def render_setup_markdown(payload: dict[str, Any], include_dates: bool = True) -> str:
+    """Legend of setups that paid. Dates belong on the color chart unless asked."""
     ensure_setups(payload)
     window = payload.get("setup_window") or mine_window()
     book = payload.get("setup_book") or featured_book()
@@ -328,8 +348,9 @@ def render_setup_markdown(payload: dict[str, Any]) -> str:
         "",
         f"Mine window: **{window.get('from_date')} → {window.get('to_date')}** "
         f"· {window.get('n_tickers')} liquid names · {window.get('n_printed')} printed days.",
+        "These overlay the red/yellow/green chart — they do not replace it. "
         "Edge is excess vs the same-day universe median, minus the +0.27 sample-mean tilt. "
-        "These are the setups to use — bare 🔵 / 🚨 / ⚪ and 🔵-on-red (`turn`) did **not** replicate.",
+        "Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (`turn`) did **not** replicate.",
         "",
         "| Setup | Use | Market n | 1d edge | 3d xs | 1w xs | This run | This-run +1d |",
         "|---|---|---:|---:|---:|---:|---:|---:|",
@@ -342,6 +363,8 @@ def render_setup_markdown(payload: dict[str, Any]) -> str:
             f"{pct(s.get('edge_3d'))} | {pct(s.get('edge_1w'))} | "
             f"{r.get('hits_this_run') or 0} | {pct(r.get('this_run_mean_1d'))} |"
         )
+    if not include_dates:
+        return "\n".join(lines)
     lines += ["", "### Dates these setups printed (this run)", ""]
     if not hits:
         lines.append("_None of the featured setups printed on these names in this window._")
@@ -359,13 +382,42 @@ def render_setup_markdown(payload: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def box_highlights(day: dict[str, Any]) -> dict[str, str]:
+    """Factor box → verdict for cells this setup lights up on the color chart."""
+    out: dict[str, str] = {}
+    for s in day.get("setups") or []:
+        verdict = str(s.get("verdict") or "")
+        for key in s.get("highlight") or []:
+            if key not in out or verdict == "fade":
+                out[key] = verdict
+    return out
+
+
+def row_setup_class(day: dict[str, Any]) -> str:
+    hits = day.get("setups") or []
+    if not hits:
+        return ""
+    verdicts = {s.get("verdict") for s in hits}
+    if verdicts == {"fade"}:
+        return "has-setup setup-fade"
+    if verdicts == {"long"}:
+        return "has-setup setup-long"
+    return "has-setup setup-mixed"
+
+
 def setup_chips_html(day: dict[str, Any]) -> str:
     chips = []
     for s in day.get("setups") or []:
         tone = "good" if s.get("verdict") == "long" else "bad"
+        label = s.get("short") or s.get("label")
+        title = (
+            f"{s.get('label')} · {s.get('verdict')} · "
+            f"mkt {pct(s.get('edge_1d'))} (n={s.get('n')}) · "
+            f"{s.get('mine_from')} → {s.get('mine_to')}"
+        )
         chips.append(
-            f'<span class="setup-chip {tone}">{html.escape(str(s["label"]))} · '
-            f'{html.escape(str(s["verdict"]))} mkt {html.escape(pct(s.get("edge_1d")))}</span>'
+            f'<span class="setup-chip {tone}" title="{html.escape(title)}">'
+            f'{html.escape(str(label))} {html.escape(pct(s.get("edge_1d")))}</span>'
         )
     return " ".join(chips)
 
@@ -387,11 +439,11 @@ def ticker_setup_lines(rec: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def render_setup_html(payload: dict[str, Any]) -> str:
+    """Compact legend only. Dates sit on the color-chart rows, not a second table."""
     ensure_setups(payload)
     window = payload.get("setup_window") or mine_window()
     book = payload.get("setup_book") or featured_book()
     this_run = {s["id"]: s for s in (payload.get("setup_this_run") or [])}
-    hits = payload.get("setup_hits") or []
     book_rows = []
     for s in book:
         r = this_run.get(s["id"]) or {}
@@ -405,44 +457,23 @@ def render_setup_html(payload: dict[str, Any]) -> str:
             f'<td>{r.get("hits_this_run") or 0}</td>'
             f'<td>{html.escape(pct(r.get("this_run_mean_1d")))}</td></tr>'
         )
-    if hits:
-        hit_rows = "".join(
-            f'<tr><td>{html.escape(str(h.get("date") or ""))}</td>'
-            f'<td>{html.escape(str(h.get("ticker") or ""))}</td>'
-            f'<td>{html.escape(str(h.get("label") or ""))}</td>'
-            f'<td class="{"good" if h.get("verdict") == "long" else "bad"}">'
-            f'<strong>{html.escape(str(h.get("verdict") or ""))}</strong></td>'
-            f'<td>{html.escape(pct(h.get("this_1d")))}</td>'
-            f'<td>{html.escape(pct(h.get("edge_1d")))} (n={html.escape(str(h.get("n") or ""))})</td>'
-            f'<td>{html.escape(str(h.get("mine_from") or ""))} → '
-            f'{html.escape(str(h.get("mine_to") or ""))}</td></tr>'
-            for h in hits
-        )
-        hits_block = f"""
-<div class="sheet"><table>
-<thead><tr><th>Date</th><th>Ticker</th><th>Setup</th><th>Use</th><th>This +1d</th><th>Market 1d edge</th><th>Mine</th></tr></thead>
-<tbody>{hit_rows}</tbody></table></div>"""
-    else:
-        hits_block = (
-            '<p class="muted">None of the featured setups printed on these names in this window.</p>'
-        )
     return f"""
 <section class="setups" id="setups">
 <h2>Setups that paid market-wide</h2>
 <p>Mine window: <strong>{html.escape(str(window.get("from_date")))} → {html.escape(str(window.get("to_date")))}</strong>
  · {html.escape(str(window.get("n_tickers")))} liquid names
- · {html.escape(str(window.get("n_printed")))} printed days.</p>
+ · {html.escape(str(window.get("n_printed")))} printed days.
+ Overlay on the red/yellow/green chart below — gold ring on the boxes that fired.</p>
 <p class="muted">Edge is excess vs the same-day universe median, minus the +0.27 sample-mean tilt.
-These are the setups to use — bare 🔵 / 🚨 / ⚪ and 🔵-on-red (<code>turn</code>) did <strong>not</strong> replicate.</p>
+Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (<code>turn</code>) did <strong>not</strong> replicate.</p>
 <div class="sheet"><table>
 <thead><tr><th>Setup</th><th>Use</th><th>Market n</th><th>1d edge</th><th>3d xs</th><th>1w xs</th><th>This run</th><th>This-run +1d</th></tr></thead>
 <tbody>{''.join(book_rows)}</tbody></table></div>
-<h3>Dates these setups printed (this run)</h3>
-{hits_block}
 </section>"""
 
 
 def setup_labels(day: dict[str, Any]) -> str:
     return "; ".join(
-        f'{s.get("label")} ({s.get("verdict")})' for s in (day.get("setups") or [])
+        f'{s.get("short") or s.get("label")} {pct(s.get("edge_1d"))}'
+        for s in (day.get("setups") or [])
     )

@@ -7,9 +7,10 @@ name: Ticker Lookback (any stock)
 # prior predict also color when D's file is missing. Never the
 # same-day stock book (~13:00) or same-day post-close Finviz (~21:10).
 # Enter any ticker(s), or check Random for 50 liquid names
-# (mcap > $100M, avg volume > 500K). The run prints the featured
-# setups that paid market-wide (dates + 1d/3d/1w edge) at the top
-# of the phone page, markdown, spreadsheet, and job summary.
+# (mcap > $100M, avg volume > 500K). The red/yellow/green color
+# chart stays the sheet; featured setups overlay it (Setups column
+# + ring on the boxes that fired). Legend + job-summary dates
+# still show market-wide n and 1d/3d/1w edge.
 
 on:
   workflow_dispatch:
