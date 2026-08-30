@@ -1,0 +1,89 @@
+name: Ticker Lookback (any stock)
+
+# Phone-friendly manual backtest. Enter any ticker(s); the runner scans every
+# dated full-market artifact in the repo, not just names printed in the book.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "Ticker(s), comma-separated (example: AAPL,TEM,BRK-B)"
+        required: true
+        type: string
+      from_date:
+        description: "Optional first date YYYY-MM-DD"
+        required: false
+        default: ""
+        type: string
+      to_date:
+        description: "Optional last date YYYY-MM-DD"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: ticker-lookback
+  cancel-in-progress: false
+
+jobs:
+  lookback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Run ticker-first backtest
+        env:
+          TICKERS: ${{ inputs.tickers }}
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+        run: |
+          set -euo pipefail
+          ARGS=(--tickers "$TICKERS")
+          [ -n "$FROM_DATE" ] && ARGS+=(--from-date "$FROM_DATE")
+          [ -n "$TO_DATE" ] && ARGS+=(--to-date "$TO_DATE")
+          python -m src.ticker_lookback_run "${ARGS[@]}" | tee /tmp/ticker-lookback.log
+          slug=$(echo "$TICKERS" | tr '[:upper:]' '[:lower:]' | tr ',' '-' | tr -cd 'a-z0-9.-')
+          echo "SLUG=$slug" >> "$GITHUB_ENV"
+          test -s "dashboard/ticker-lookback/${slug}.html"
+          test -s "03_scoreboard/ticker_lookback/${slug}.md"
+      - name: Publish result to main
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: ticker lookback ${{ inputs.tickers }}" \
+            01_daily/ticker_lookback.md \
+            03_scoreboard/TICKER_LOOKBACK.md \
+            03_scoreboard/ticker_lookback/ \
+            data/stock_book/ticker_lookback.json \
+            data/stock_book/ticker_lookback/ \
+            dashboard/ticker-lookback/
+      - name: Upload phone page + data
+        uses: actions/upload-artifact@v4
+        with:
+          name: ticker-lookback-${{ env.SLUG }}
+          path: |
+            dashboard/ticker-lookback/${{ env.SLUG }}.html
+            03_scoreboard/ticker_lookback/${{ env.SLUG }}.md
+            data/stock_book/ticker_lookback/${{ env.SLUG }}.json
+      - name: Add links to run summary
+        run: |
+          {
+            echo "## Ticker lookback: ${{ inputs.tickers }}"
+            echo
+            echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/ticker-lookback/${SLUG}.html)"
+            echo "- [Markdown on GitHub](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/ticker_lookback/${SLUG}.md)"
+            echo "- The artifact above contains HTML + Markdown + JSON immediately."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Refresh GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main
+

@@ -234,7 +234,7 @@ jobs:
           mkdir -p pages_out/dashboard
           touch pages_out/.nojekyll
           if [ -f dashboard/index.html ]; then
-            cp dashboard/index.html pages_out/dashboard/index.html
+            cp -a dashboard/. pages_out/dashboard/
             cp dashboard/index.html pages_out/index.html
             echo "Prepared pages_out with dashboard"
             ls -la pages_out pages_out/dashboard

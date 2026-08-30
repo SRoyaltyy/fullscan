@@ -106,6 +106,25 @@ Actions → **"Pre-Open ALL (predictive one-shot)"** → Run workflow
 
 This is the one-button for every predictive part **as a backup**. The weekday clock is the ECS systemd timer (`scripts/install_ecs_preopen.sh`). Dispatch this workflow only if the box missed 05:55 ET.
 
+## Ticker lookback — any stock
+
+GitHub Actions → **Ticker Lookback (any stock)** → **Run workflow**.
+Enter one or more comma-separated symbols (`AAPL,TEM,BRK-B`) and optional
+start/end dates. This is ticker-first: it scans every dated full-market
+Finviz export, join, AB, peer, quote-color and stock-book artifact, even when
+the ticker was never printed in a buy/sell list.
+
+The Action publishes:
+
+- responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
+- full Markdown with every factor's 🟢🟡🔴⬛ state;
+- machine-readable JSON;
+- actual 1d/2d/3d/1w forward returns when the local price store covers them.
+
+Black means the source did not exist for that ticker/session; it never means
+neutral. The Action does not need an Elite login because it backtests the
+historical files already committed to the repository.
+
 The job self-reads every
 output (trash / timeout stub / carry-forward → fail) and Grok reads the
 files as text. It backs off if `/tmp/fullscan-preopen.lock` is held.
