@@ -908,7 +908,7 @@ run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,first_open,current
 2026-08-12,2026-08-12,WSBC,LONG,L3_long_green_hold2_midcap,hold2,42.23,42.76,40.45,-4.22%,-5.40%,18,deep green|green|white|white|white|light green|orange|red|purple|red|white|white|white|deep green|pink
 2026-08-12,2026-08-12,XERS,LONG,L3_long_green_hold2_midcap,hold2,8.385,8.59,8.6,+2.56%,+0.12%,18,deep green|green|white|purple|white|white|white|light green|purple|green|white|white|white|deep green|white
 2026-08-12,2026-08-12,ZYME,LONG,L3_long_green_hold2_midcap,hold2,24.7,25.27,29.01,+17.45%,+14.80%,18,light green|green|orange|purple|red|light green|orange|light green|purple|red|white|white|white|white|white
-2026-08-28,2026-08-27,AFYA,LONG,L3_long_green_hold2_midcap,hold2,14.31,,14.31,+0.00%,,3,deep green|green|orange|purple|white|light green|orange|red|purple|red|white|white|white|deep green|pink
+2026-08-28,2026-08-27,AFYA,LONG,L3_long_green_hold2_midcap,hold2,14.31,14.3800,14.31,+0.00%,,3,deep green|green|orange|purple|white|light green|orange|red|purple|red|white|white|white|deep green|pink
 2026-08-28,2026-08-27,AWF,LONG,L1_long_green_tp8_lowvol,tp8,10.2,,10.2,+0.00%,,3,light green|white|orange|purple|white|white|orange|light green|purple|red|white|white|white|white|pink
 2026-08-28,2026-08-27,AWF,LONG,L2_long_green_tp3_lowvol,tp3,10.2,,10.2,+0.00%,,3,light green|white|orange|purple|white|white|orange|light green|purple|red|white|white|white|white|pink
 2026-08-28,2026-08-27,BGT,LONG,L1_long_green_tp8_lowvol,tp8,11.07,,11.07,+0.00%,,3,light green|white|orange|purple|white|light green|orange|light green|purple|red|white|pink|white|deep green|pink
