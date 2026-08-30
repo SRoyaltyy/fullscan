@@ -1,13 +1,12 @@
-"""CLI wrapper: python -m src.ticker_lookback_cli --tickers TEM,ELF
+"""Per-session scan helpers for ticker lookback.
 
-Uses ticker_lookback.py helpers already on main.
+Used by src.ticker_lookback_run.
 """
 from __future__ import annotations
 
-import argparse
-import json
-from datetime import datetime
-from pathlib import Path
+import math
+
+import pandas as pd
 
 from . import ticker_lookback as tl
 
