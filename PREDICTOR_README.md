@@ -139,15 +139,21 @@ The Action publishes:
 - a **Cond** column with the G/Y/R tally; green or red when that color is the majority;
 - a **Reg** column with green vs red cell mass (yellows ignored). A simple
   count of 🔵 / 🚨 / ⚪ is not predictive; the same tag changes meaning on
-  the color stretch around it. In the 09:30 sample, 🔵 on a red row was
-  the useful turn and 🔵 on a green row was late; 🚨 on a still-green row
-  was the first-crack 1d drop and 🚨 on an already-red row meant the
-  bounce did not show up yet;
+  the color stretch around it. Market-wide (2659 liquid names / ~29k
+  printed days) the clean fade is 🚨 on a still-green row
+  (`first_crack`). 🔵 on a mixed 3-day stretch is the useful blue.
+  🔵 on a red row (`turn`) did not clear the bar. Factor configs that
+  printed: `vol=good` with `ab=good` or `join=bad`, and `judge=neutral`;
 - responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
 - compact Markdown color table;
 - machine-readable JSON;
 - as-of close plus forward +1d/+3d/+1w returns (calendar weekends and holiday dumps are omitted);
 - the same forward returns in JSON for backtest verification.
+
+A separate Action, **Ticker Lookback Mine**, scans the whole liquid
+universe (same mcap/vol gates) and grades 🔵 / 🚨 / ⚪ × region/stretch
+plus factor tones and pairs against +1d/+3d/+1w excess vs that day's
+universe median. Write-up: `03_scoreboard/TICKER_LOOKBACK_MINE.md`.
 
 Black means nothing knowable printed for that name; it never means
 neutral. Last-known tape / predict / map-heat from an earlier session
