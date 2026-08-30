@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "n_pile": 357,
+  "n_pile": 128,
   "n_universe": 2707,
   "pile_used": true,
   "live_buy": [
@@ -14,7 +14,7 @@
       "s_opp": 0.6000000000000001,
       "size": "mid",
       "sector": "Consumer Defensive",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": 3.53,
         "2d": 7.61,
@@ -68,7 +68,7 @@
       "s_opp": 0.64,
       "size": "mid",
       "sector": "Basic Materials",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": -0.38,
         "2d": -3.66,
@@ -86,7 +86,7 @@
       "s_opp": 0.6000000000000001,
       "size": "mid",
       "sector": "Healthcare",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": -0.09,
         "2d": -2.8,
@@ -122,7 +122,7 @@
       "s_opp": 0.52,
       "size": "mid",
       "sector": "Healthcare",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": -0.07,
         "2d": -4.55,
@@ -140,7 +140,7 @@
       "s_opp": 0.5599999999999999,
       "size": "mid",
       "sector": "Consumer Defensive",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": 2.52,
         "2d": 7.65,
@@ -158,7 +158,7 @@
       "s_opp": 0.64,
       "size": "mid",
       "sector": "Healthcare",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": 0.42,
         "2d": -2.13,
@@ -212,7 +212,7 @@
       "s_opp": 0.52,
       "size": "mid",
       "sector": "Financial",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": 2.57,
         "2d": 3.25,
@@ -230,7 +230,7 @@
       "s_opp": 0.6000000000000001,
       "size": "mid",
       "sector": "Utilities",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": -3.15,
         "2d": -1.28,
@@ -266,7 +266,7 @@
       "s_opp": 0.64,
       "size": "mid",
       "sector": "Financial",
-      "in_pile": true,
+      "in_pile": false,
       "fwd": {
         "1d": 1.24,
         "2d": 1.1,
@@ -313,42 +313,6 @@
       }
     },
     {
-      "ticker": "MGTX",
-      "book": 0.758,
-      "s_join": 0.9436422951299408,
-      "s_general": 0.23375,
-      "s_ab": 0.8482836399575129,
-      "s_peer": 0.8698590209439497,
-      "s_opp": 0.24,
-      "size": "small",
-      "sector": "Healthcare",
-      "in_pile": true,
-      "fwd": {
-        "1d": -1.38,
-        "2d": 1.99,
-        "3d": 2.61,
-        "1w": -2.75
-      }
-    },
-    {
-      "ticker": "WRBY",
-      "book": 1.005,
-      "s_join": 0.9012992310413284,
-      "s_general": 0.4675,
-      "s_ab": 0.7615941559557649,
-      "s_peer": 0.7470517478889498,
-      "s_opp": 0.52,
-      "size": "mid",
-      "sector": "Healthcare",
-      "in_pile": true,
-      "fwd": {
-        "1d": -0.07,
-        "2d": -4.55,
-        "3d": -5.32,
-        "1w": -7.98
-      }
-    },
-    {
       "ticker": "TEM",
       "book": 0.572,
       "s_join": 0.7754279140490017,
@@ -367,216 +331,256 @@
       }
     },
     {
-      "ticker": "ELF",
-      "book": 1.123,
-      "s_join": 0.8680219810175624,
+      "ticker": "ILMN",
+      "book": 0.345,
+      "s_join": 0.8299575597888287,
       "s_general": 0.4675,
-      "s_ab": 0.5545997223493823,
-      "s_peer": 0.8139927529479142,
-      "s_opp": 0.6000000000000001,
-      "size": "mid",
-      "sector": "Consumer Defensive",
-      "in_pile": true,
-      "fwd": {
-        "1d": 3.53,
-        "2d": 7.61,
-        "3d": 7.42,
-        "1w": 7.83
-      }
-    },
-    {
-      "ticker": "MEOH",
-      "book": 0.765,
-      "s_join": 0.9866142981514304,
-      "s_general": 0.070125,
       "s_ab": 0.7615941559557649,
-      "s_peer": 0.850891711813603,
-      "s_opp": 0.28,
-      "size": "mid",
-      "sector": "Basic Materials",
+      "s_peer": 0.6396020496038975,
+      "s_opp": -0.11,
+      "size": "large",
+      "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": 2.37,
-        "2d": 0.61,
-        "3d": -2.78,
-        "1w": -0.65
+        "1d": 2.89,
+        "2d": 4.68,
+        "3d": 5.51,
+        "1w": 6.78
       }
     },
     {
-      "ticker": "GSHD",
-      "book": 0.964,
-      "s_join": 0.9133886299443152,
+      "ticker": "CABA",
+      "book": 0.89,
+      "s_join": 0.7685190091226192,
       "s_general": 0.4675,
       "s_ab": 0.809301070201781,
-      "s_peer": 0.4743163252573666,
-      "s_opp": 0.52,
-      "size": "mid",
-      "sector": "Financial",
+      "s_peer": 0.5882592563981054,
+      "s_opp": 0.44,
+      "size": "small",
+      "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": 2.57,
-        "2d": 3.25,
-        "3d": 2.31,
-        "1w": -0.35
+        "1d": -1.88,
+        "2d": -2.82,
+        "3d": 0.94,
+        "1w": 5.96
       }
     },
     {
-      "ticker": "HCC",
-      "book": 0.883,
-      "s_join": 0.9866142981514304,
-      "s_general": 0.070125,
-      "s_ab": 0.809301070201781,
-      "s_peer": 0.7813199089523143,
-      "s_opp": 0.4,
-      "size": "mid",
-      "sector": "Basic Materials",
-      "in_pile": true,
-      "fwd": {
-        "1d": 3.26,
-        "2d": 3.13,
-        "3d": 1.87,
-        "1w": 4.74
-      }
-    },
-    {
-      "ticker": "ALB",
-      "book": 0.445,
+      "ticker": "CDE",
+      "book": 0.443,
       "s_join": 0.9866142981514304,
       "s_general": 0.4675,
-      "s_ab": 0.4621171572600097,
-      "s_peer": 0.7162978701990245,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.4929879666753243,
       "s_opp": 0.03,
       "size": "large",
       "sector": "Basic Materials",
       "in_pile": true,
       "fwd": {
-        "1d": 6.75,
-        "2d": 5.45,
-        "3d": -0.75,
-        "1w": 1.18
+        "1d": -0.66,
+        "2d": -1.09,
+        "3d": 2.27,
+        "1w": 5.21
       }
     },
     {
-      "ticker": "TRU",
-      "book": 0.373,
-      "s_join": 0.9240564010813912,
+      "ticker": "MTA",
+      "book": 0.484,
+      "s_join": 0.1583944267512058,
       "s_general": 0.4675,
-      "s_ab": 0.8482836399575129,
-      "s_peer": 0.3151472212328451,
-      "s_opp": -0.05,
-      "size": "large",
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.9459580968686326,
+      "s_opp": 0.1,
+      "size": "small",
+      "sector": "Basic Materials",
+      "in_pile": true,
+      "fwd": {
+        "1d": -0.54,
+        "2d": 0.89,
+        "3d": 1.34,
+        "1w": -1.52
+      }
+    },
+    {
+      "ticker": "VIRT",
+      "book": 0.772,
+      "s_join": 0.9012992310413284,
+      "s_general": 0.070125,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.498174426229455,
+      "s_opp": 0.4,
+      "size": "mid",
       "sector": "Financial",
       "in_pile": true,
       "fwd": {
-        "1d": -0.59,
-        "2d": -0.28,
-        "3d": -0.12,
-        "1w": -0.52
+        "1d": 11.01,
+        "2d": 8.33,
+        "3d": 6.55,
+        "1w": 9.56
       }
     },
     {
-      "ticker": "CELH",
-      "book": 1.0,
-      "s_join": 0.7311063398770159,
-      "s_general": 0.23375,
-      "s_ab": 0.6351489523872873,
-      "s_peer": 0.8719721546240654,
-      "s_opp": 0.5599999999999999,
-      "size": "mid",
-      "sector": "Consumer Defensive",
-      "in_pile": true,
-      "fwd": {
-        "1d": 2.52,
-        "2d": 7.65,
-        "3d": 8.6,
-        "1w": 1.38
-      }
-    },
-    {
-      "ticker": "LAUR",
-      "book": 0.707,
-      "s_join": 0.9240564010813912,
+      "ticker": "SSL",
+      "book": 0.746,
+      "s_join": 0.9582783175384386,
       "s_general": 0.070125,
       "s_ab": 0.5545997223493823,
-      "s_peer": 0.8617231593133063,
-      "s_opp": 0.28,
+      "s_peer": 0.4341505709859451,
+      "s_opp": 0.4,
       "size": "mid",
-      "sector": "Consumer Defensive",
+      "sector": "Basic Materials",
       "in_pile": true,
       "fwd": {
-        "1d": -0.27,
-        "2d": -0.67,
-        "3d": 2.13,
-        "1w": 3.94
+        "1d": 1.79,
+        "2d": 0.0,
+        "3d": -6.68,
+        "1w": -5.38
       }
     },
     {
-      "ticker": "FRPT",
-      "book": 0.892,
-      "s_join": 0.9188980995867476,
-      "s_general": 0.4675,
-      "s_ab": 0.7615941559557649,
-      "s_peer": 0.1720224088777414,
-      "s_opp": 0.52,
+      "ticker": "UGI",
+      "book": 0.757,
+      "s_join": 0.350400291678096,
+      "s_general": 0.23375,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.7861418047729132,
+      "s_opp": 0.4,
       "size": "mid",
-      "sector": "Consumer Defensive",
+      "sector": "Utilities",
       "in_pile": true,
       "fwd": {
-        "1d": -0.22,
-        "2d": 3.26,
-        "3d": 1.71,
-        "1w": -1.82
+        "1d": -0.79,
+        "2d": 0.79,
+        "3d": 1.21,
+        "1w": 0.9
       }
     },
     {
-      "ticker": "PRCH",
-      "book": 0.589,
-      "s_join": 0.824560474237046,
+      "ticker": "ABTC",
+      "book": 0.707,
+      "s_join": 0.350400291678096,
       "s_general": 0.4675,
-      "s_ab": 0.3583573983507859,
-      "s_peer": 0.616909302877065,
-      "s_opp": 0.24,
+      "s_ab": 0.2449186624037091,
+      "s_peer": 0.8296071660181292,
+      "s_opp": 0.4,
       "size": "small",
       "sector": "Financial",
       "in_pile": true,
       "fwd": {
-        "1d": 0.06,
-        "2d": -0.12,
-        "3d": 2.17,
-        "1w": 2.11
+        "1d": -6.38,
+        "2d": 2.01,
+        "3d": 9.09,
+        "1w": 3.42
+      }
+    },
+    {
+      "ticker": "TIGR",
+      "book": 0.706,
+      "s_join": 0.6097353604110768,
+      "s_general": 0.070125,
+      "s_ab": 0.2449186624037091,
+      "s_peer": 0.8294122199943192,
+      "s_opp": 0.4,
+      "size": "small",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 5.13,
+        "2d": 2.56,
+        "3d": 7.79,
+        "1w": -0.2
+      }
+    },
+    {
+      "ticker": "HTGC",
+      "book": 0.758,
+      "s_join": 0.8876214775262842,
+      "s_general": 0.070125,
+      "s_ab": 0.4621171572600097,
+      "s_peer": 0.250198915804814,
+      "s_opp": 0.48,
+      "size": "mid",
+      "sector": "Financial",
+      "in_pile": true,
+      "fwd": {
+        "1d": 0.59,
+        "2d": 2.76,
+        "3d": 3.29,
+        "1w": 2.88
+      }
+    },
+    {
+      "ticker": "AQN",
+      "book": 0.915,
+      "s_join": 0.6702517064842907,
+      "s_general": 0.070125,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.0636637788324484,
+      "s_opp": 0.64,
+      "size": "mid",
+      "sector": "Utilities",
+      "in_pile": true,
+      "fwd": {
+        "1d": -2.06,
+        "2d": -2.23,
+        "3d": -1.2,
+        "1w": -2.41
+      }
+    },
+    {
+      "ticker": "HNST",
+      "book": 0.664,
+      "s_join": 0.3429218310151787,
+      "s_general": 0.4675,
+      "s_ab": 0.3583573983507859,
+      "s_peer": 0.2804081513829301,
+      "s_opp": 0.36,
+      "size": "small",
+      "sector": "Consumer Defensive",
+      "in_pile": true,
+      "fwd": {
+        "1d": 1.81,
+        "2d": 4.74,
+        "3d": 10.99,
+        "1w": 16.13
       }
     }
   ],
   "overlap": [
-    "AUPH",
-    "CELH",
-    "ELF",
-    "GSHD",
-    "WRBY"
+    "AUPH"
   ],
   "entered": [
-    "ALB",
-    "FRPT",
-    "HCC",
+    "ABTC",
+    "AQN",
+    "CABA",
+    "CDE",
     "HL",
-    "LAUR",
-    "MEOH",
-    "MGTX",
-    "PRCH",
+    "HNST",
+    "HTGC",
+    "ILMN",
+    "MTA",
+    "SSL",
     "TEM",
-    "TRU"
+    "TIGR",
+    "UGI",
+    "VIRT"
   ],
   "dropped": [
     "CALX",
     "CE",
+    "CELH",
+    "ELF",
     "EPAM",
     "FIGR",
+    "GSHD",
     "HLNE",
     "IRTC",
     "MOS",
     "NHI",
     "OCUL",
-    "OGS"
+    "OGS",
+    "WRBY"
   ],
   "avg_fwd": {
     "live": {
@@ -586,10 +590,10 @@
       "1w": -0.9920000000000002
     },
     "green": {
-      "1d": 1.5680000000000003,
-      "2d": 1.369333333333333,
-      "3d": 1.3626666666666665,
-      "1w": 0.7680000000000001
+      "1d": 1.0599999999999998,
+      "2d": 0.922,
+      "3d": 2.779333333333333,
+      "1w": 3.0493333333333337
     }
   }
 }

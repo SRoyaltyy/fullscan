@@ -11,60 +11,53 @@ Same $400M / sector caps. Thin pile (< 8 liquid) → skip / fallback.
 | 2026-08-17 | 0 | no | -1.59% | n/a | +2.11% | n/a | 0/15 | — |
 | 2026-08-18 | 0 | no | +2.07% | n/a | +0.38% | n/a | 0/15 | — |
 | 2026-08-19 | 0 | no | -0.78% | n/a | -0.67% | n/a | 0/15 | — |
-| 2026-08-20 | 357 | yes | +1.20% | +1.57% | -0.99% | +0.77% | 5/15 | ALB, FRPT, HCC, HL, LAUR, MEOH, MGTX, PRCH, TEM, TRU |
-| 2026-08-21 | 351 | yes | -0.38% | -0.48% | -0.87% | -1.47% | 3/15 | ALB, AVAH, BGC, CRMD, CWK, DRH, ERO, HCC, HOOD, ILMN, MT, SLS |
+| 2026-08-20 | 128 | yes | +1.20% | +1.06% | -0.99% | +3.05% | 1/15 | ABTC, AQN, CABA, CDE, HL, HNST, HTGC, ILMN, MTA, SSL, TEM, TIGR, UGI, VIRT |
+| 2026-08-21 | 138 | yes | -0.38% | -1.27% | -0.87% | -1.41% | 3/15 | ALB, AVAH, BGC, CABA, ERO, HOOD, MT, REAX, SHO, SLS, SOFI, TGTX |
 | 2026-08-27 | 0 | no | -0.92% | n/a | n/a | n/a | 0/15 | — |
 
-## Verdict (fa56db2 / 870a2eb, 2026-08-30 recompute)
+## Verdict (vol-red wired, 2026-08-30)
 
-**ITERATE — sample too small to keep.** Only **n=2** days formed a pile (2026-08-20, 2026-08-21). Do not treat this as a keep. The stale two-day figures (green 1d +0.27 vs live +1.20, then −0.85 vs −0.38) are from the pre-`green_rank` book and are not the verdict.
+**ITERATE — sample too small to keep.** Still only **n=2** pile days (2026-08-20, 2026-08-21). Vol-red now actually runs. It shrank the piles **357→128** and **351→138** (still used) and made after-fee 1d **worse**. Do not keep.
 
-Fill: `lookback_green` uses the first yfinance auto-adjusted close on/after the signal date as entry and the close N trading sessions later as exit (1d = 1 session, 1w = 5). Long-only. Same as paper when the signal-day close exists. No next-open / VWAP. The lookback itself does **not** apply fees.
+Fill: first yfinance auto-adjusted close on/after the signal date → close N sessions later (1d=1, 1w=5), long-only. Same as paper when the close exists. Lookback does not apply fees.
 
-After Futubull fees (`00_grounding/futubull_fees.json` via `paper_trade.order_fees`): $10k sleeve, 15-way equal cash split, whole shares, fees on buy and sell. Min $0.99 commission + $1.00 platform per side makes the 15-name book pay ~$62 round-trip (~0.6 pp vs equal-weight name average).
+After Futubull fees (`00_grounding/futubull_fees.json` via `paper_trade.order_fees`): $10k sleeve, 15-way equal split, whole shares, buy+sell.
 
 | Book | n days | 1d hit (names / days) | avg 1d after fees (port) | avg 1w after fees (port) |
 |------|--------|------------------------|--------------------------|--------------------------|
-| green 15 | 2 | 13/30 = 43% names; 1/2 days | **−0.14%** | **−0.99%** |
-| live 1d first-15 | 2 | 12/30 = 40% names; 1/2 days | −0.24% | −1.84% |
-| SPY (same $10k, same fees) | 2 | 1/2 days | +0.02% | +0.75% |
+| green 15 (vol-red + green_rank) | 2 | 10/30 = 33% names; 1/2 days | **−0.79%** | **+0.18%** |
+| live 1d first-15 (historical book) | 2 | 12/30 = 40% names; 1/2 days | −0.24% | −1.84% |
+| SPY | 2 | 1/2 days | +0.02% | +0.75% |
 
 Per pile day after fees (port):
 
-| Date | green 1d | live15 1d | SPY 1d | green 1w | live15 1w | SPY 1w |
-|------|----------|-----------|--------|----------|-----------|--------|
-| 2026-08-20 | +0.82% | +0.52% | +0.36% | +0.07% | −1.65% | +1.06% |
-| 2026-08-21 | −1.09% | −0.99% | −0.33% | −2.05% | −2.03% | +0.43% |
+| Date | pile | green 1d | live15 1d | SPY 1d | green 1w | live15 1w | SPY 1w |
+|------|------|----------|-----------|--------|----------|-----------|--------|
+| 2026-08-20 | 128 | +0.34% | +0.52% | +0.36% | +2.31% | −1.65% | +1.06% |
+| 2026-08-21 | 138 | −1.92% | −0.99% | −0.33% | −1.95% | −2.03% | +0.43% |
 
-Gross lookback table above (no fees, equal-name mean): Aug 20 green **+1.57%** vs live **+1.20%**; Aug 21 green **−0.48%** vs live **−0.38%** (Aug 21 live mean is the full 25-name 1d book). Membership changed vs the stale board because BUY now ranks by `green_rank` (mean of join/general/AB/peer, no opp): overlap 11→5 then 13→3.
+Gross lookback (no fees): Aug 20 green **+1.06%** vs live **+1.20%**; Aug 21 green **−1.27%** vs live **−0.38%**. Overlap 1/15 then 3/15.
 
-North star ~2%/day after fees: best green day is **+0.82%**. Not close.
+Previous official lookback (green_rank, vol-red a no-op) had after-fee 1d **−0.14%**. Wiring relvol moved that to **−0.79%**. Hunch confirmed: shrink + worse 1d.
 
-`green_rank` beat live 1d after fees on the mean of these 2 days (−0.14 vs −0.24) and beat live 1w (−0.99 vs −1.84). It did **not** beat SPY on 1d or 1w. n=2 is not enough to keep.
+North star ~2%/day after fees: best green 1d is **+0.34%**. Not close. Green now **loses** to live and SPY on 1d after fees. It beats live on 1w (+0.18 vs −1.84) and still loses to SPY (+0.75). n=2 is not enough to keep.
 
 ### Skipped / pile=0 (not errors)
 
-No date raised. Eight `*_stock_book.csv` files exist; none others were invented.
+No date raised. Eight `*_stock_book.csv` files exist; none others were invented. Vol-red does not create piles on these days.
 
 | Date | pile | Why |
 |------|------|-----|
 | 2026-08-13 | 0 | AB and peer did not fire (no AB checklist, no peer_rs). |
 | 2026-08-14 | 0 | AB and peer did not fire (no AB checklist, no peer_rs). |
 | 2026-08-17 | 0 | AB and peer did not fire (no AB checklist, no peer_rs). |
-| 2026-08-18 | 0 | AB file is 1 row; peer fired; **general printed red** (mean −0.28) so no all-green names. |
-| 2026-08-19 | 0 | AB + peer fired; **general printed red** (mean −0.30) so no all-green names. |
+| 2026-08-18 | 0 | AB file is 1 row; peer fired; **general printed red** (mean −0.28). |
+| 2026-08-19 | 0 | AB + peer fired; **general printed red** (mean −0.30). |
 | 2026-08-27 | 0 | **general did not fire** (all ~0). AB + peer present. |
 
-Missing inputs that keep most days at pile=0: dated AB + peer_rs (13/14/17) and a non-red same-day general (18/19 red; 27 absent).
+Missing inputs: dated AB + peer_rs (13/14/17) and a non-red same-day general (18/19 red; 27 absent).
 
-### Vol-red hunch (verified, not assumed)
-
-`green_mask` vetoes Finviz relvol < 0.7 when a print exists, but `load_frame` / `*_stock_book.csv` / `_load_finviz_liquidity` never attach `relvol` / `Relative Volume`. Official `python -m src.lookback_green --all --top 15` therefore **cannot** apply vol-red. Joining the dated Finviz export (diagnostic only; live ranker not changed):
-
-- Aug 20: raw pile 357 → **128** (liquid 330 → 115); still used.
-- Aug 21: raw pile 351 → **138** (liquid 323 → 123); still used.
-- Top 15 reorders (e.g. Aug 20 drops MGTX/WRBY/ELF/MEOH/GSHD/HCC; Aug 21 drops GSHD/CRMD/ILMN).
-- After-fee 1d port on that diagnostic book: +0.34% then −1.92% (mean **−0.79%**), worse than the official green 15.
+Live `_book_side` now accepts `buy_sort="green_rank"` and `test_green_book` passes. Historical `*_stock_book.json` books were not rewritten — the live column above is what actually printed those days.
 
 No 6h AB job. No merge.
 
@@ -245,27 +238,27 @@ live dropped: AOS, CEG, COO, DHR, ELV, ES, EW, FAST, GGG, HLN, IQV, ITW, MDT, ML
 
 ### 2026-08-20
 
-live dropped: CALX, CE, EPAM, FIGR, HLNE, IRTC, MOS, NHI, OCUL, OGS
+live dropped: CALX, CE, CELH, ELF, EPAM, FIGR, GSHD, HLNE, IRTC, MOS, NHI, OCUL, OGS, WRBY
 
 **live**
 
 | # | Ticker | book | join | gen | AB | peer | opp | 1d | 1w | pile |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1 | ELF | 1.123 | +0.87 | +0.47 | +0.55 | +0.81 | +0.60 | +3.5% | +7.8% | yes |
+| 1 | ELF | 1.123 | +0.87 | +0.47 | +0.55 | +0.81 | +0.60 | +3.5% | +7.8% | no |
 | 2 | MOS | 1.066 | +0.98 | +0.23 | +0.64 | +0.05 | +0.68 | +4.5% | +1.8% | yes |
 | 3 | AUPH | 1.024 | +0.93 | +0.47 | +0.81 | +0.76 | +0.52 | -3.6% | -4.6% | yes |
-| 4 | CE | 1.02 | +0.95 | +0.07 | +0.64 | +0.51 | +0.64 | -0.4% | -4.5% | yes |
-| 5 | OCUL | 1.019 | +0.54 | +0.23 | +0.70 | +0.80 | +0.60 | -0.1% | -2.4% | yes |
+| 4 | CE | 1.02 | +0.95 | +0.07 | +0.64 | +0.51 | +0.64 | -0.4% | -4.5% | no |
+| 5 | OCUL | 1.019 | +0.54 | +0.23 | +0.70 | +0.80 | +0.60 | -0.1% | -2.4% | no |
 | 6 | EPAM | 1.015 | -0.15 | +0.47 | +0.46 | +0.80 | +0.68 | +3.4% | +5.6% | no |
-| 7 | WRBY | 1.005 | +0.90 | +0.47 | +0.76 | +0.75 | +0.52 | -0.1% | -8.0% | yes |
-| 8 | CELH | 1.0 | +0.73 | +0.23 | +0.64 | +0.87 | +0.56 | +2.5% | +1.4% | yes |
-| 9 | IRTC | 0.994 | +0.82 | +0.47 | +0.46 | +0.51 | +0.64 | +0.4% | -9.1% | yes |
+| 7 | WRBY | 1.005 | +0.90 | +0.47 | +0.76 | +0.75 | +0.52 | -0.1% | -8.0% | no |
+| 8 | CELH | 1.0 | +0.73 | +0.23 | +0.64 | +0.87 | +0.56 | +2.5% | +1.4% | no |
+| 9 | IRTC | 0.994 | +0.82 | +0.47 | +0.46 | +0.51 | +0.64 | +0.4% | -9.1% | no |
 | 10 | CALX | 0.986 | +0.01 | +0.23 | +0.36 | +0.78 | +0.68 | -0.6% | -6.7% | no |
 | 11 | NHI | 0.971 | +0.75 | +0.07 | +0.81 | +0.28 | +0.64 | -0.7% | -1.8% | no |
-| 12 | GSHD | 0.964 | +0.91 | +0.47 | +0.81 | +0.47 | +0.52 | +2.6% | -0.3% | yes |
-| 13 | OGS | 0.945 | +0.81 | +0.07 | +0.85 | +0.15 | +0.60 | -3.1% | -2.2% | yes |
+| 12 | GSHD | 0.964 | +0.91 | +0.47 | +0.81 | +0.47 | +0.52 | +2.6% | -0.3% | no |
+| 13 | OGS | 0.945 | +0.81 | +0.07 | +0.85 | +0.15 | +0.60 | -3.1% | -2.2% | no |
 | 14 | FIGR | 0.941 | +0.89 | +0.19 | +0.55 | +0.00 | +0.68 | +8.4% | +5.4% | no |
-| 15 | HLNE | 0.938 | +0.95 | +0.23 | +0.46 | +0.25 | +0.64 | +1.2% | +2.7% | yes |
+| 15 | HLNE | 0.938 | +0.95 | +0.23 | +0.46 | +0.25 | +0.64 | +1.2% | +2.7% | no |
 
 **green-pile 15**
 
@@ -273,47 +266,47 @@ live dropped: CALX, CE, EPAM, FIGR, HLNE, IRTC, MOS, NHI, OCUL, OGS
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | AUPH | 1.024 | +0.93 | +0.47 | +0.81 | +0.76 | +0.52 | -3.6% | -4.6% | yes |
 | 2 | HL | 0.516 | +0.99 | +0.47 | +0.76 | +0.70 | +0.03 | -0.5% | +3.0% | yes |
-| 3 | MGTX | 0.758 | +0.94 | +0.23 | +0.85 | +0.87 | +0.24 | -1.4% | -2.8% | yes |
-| 4 | WRBY | 1.005 | +0.90 | +0.47 | +0.76 | +0.75 | +0.52 | -0.1% | -8.0% | yes |
-| 5 | TEM | 0.572 | +0.78 | +0.47 | +0.55 | +0.96 | +0.03 | +9.1% | +6.1% | yes |
-| 6 | ELF | 1.123 | +0.87 | +0.47 | +0.55 | +0.81 | +0.60 | +3.5% | +7.8% | yes |
-| 7 | MEOH | 0.765 | +0.99 | +0.07 | +0.76 | +0.85 | +0.28 | +2.4% | -0.7% | yes |
-| 8 | GSHD | 0.964 | +0.91 | +0.47 | +0.81 | +0.47 | +0.52 | +2.6% | -0.3% | yes |
-| 9 | HCC | 0.883 | +0.99 | +0.07 | +0.81 | +0.78 | +0.40 | +3.3% | +4.7% | yes |
-| 10 | ALB | 0.445 | +0.99 | +0.47 | +0.46 | +0.72 | +0.03 | +6.8% | +1.2% | yes |
-| 11 | TRU | 0.373 | +0.92 | +0.47 | +0.85 | +0.32 | -0.05 | -0.6% | -0.5% | yes |
-| 12 | CELH | 1.0 | +0.73 | +0.23 | +0.64 | +0.87 | +0.56 | +2.5% | +1.4% | yes |
-| 13 | LAUR | 0.707 | +0.92 | +0.07 | +0.55 | +0.86 | +0.28 | -0.3% | +3.9% | yes |
-| 14 | FRPT | 0.892 | +0.92 | +0.47 | +0.76 | +0.17 | +0.52 | -0.2% | -1.8% | yes |
-| 15 | PRCH | 0.589 | +0.82 | +0.47 | +0.36 | +0.62 | +0.24 | +0.1% | +2.1% | yes |
+| 3 | TEM | 0.572 | +0.78 | +0.47 | +0.55 | +0.96 | +0.03 | +9.1% | +6.1% | yes |
+| 4 | ILMN | 0.345 | +0.83 | +0.47 | +0.76 | +0.64 | -0.11 | +2.9% | +6.8% | yes |
+| 5 | CABA | 0.89 | +0.77 | +0.47 | +0.81 | +0.59 | +0.44 | -1.9% | +6.0% | yes |
+| 6 | CDE | 0.443 | +0.99 | +0.47 | +0.64 | +0.49 | +0.03 | -0.7% | +5.2% | yes |
+| 7 | MTA | 0.484 | +0.16 | +0.47 | +0.55 | +0.95 | +0.10 | -0.5% | -1.5% | yes |
+| 8 | VIRT | 0.772 | +0.90 | +0.07 | +0.64 | +0.50 | +0.40 | +11.0% | +9.6% | yes |
+| 9 | SSL | 0.746 | +0.96 | +0.07 | +0.55 | +0.43 | +0.40 | +1.8% | -5.4% | yes |
+| 10 | UGI | 0.757 | +0.35 | +0.23 | +0.55 | +0.79 | +0.40 | -0.8% | +0.9% | yes |
+| 11 | ABTC | 0.707 | +0.35 | +0.47 | +0.24 | +0.83 | +0.40 | -6.4% | +3.4% | yes |
+| 12 | TIGR | 0.706 | +0.61 | +0.07 | +0.24 | +0.83 | +0.40 | +5.1% | -0.2% | yes |
+| 13 | HTGC | 0.758 | +0.89 | +0.07 | +0.46 | +0.25 | +0.48 | +0.6% | +2.9% | yes |
+| 14 | AQN | 0.915 | +0.67 | +0.07 | +0.70 | +0.06 | +0.64 | -2.1% | -2.4% | yes |
+| 15 | HNST | 0.664 | +0.34 | +0.47 | +0.36 | +0.28 | +0.36 | +1.8% | +16.1% | yes |
 
 ### 2026-08-21
 
-live dropped: ABR, BFAM, BZ, CALX, CE, CRSP, DNN, DUOL, EPAM, FBRT, FIGR, GPK, HLNE, MOS, NFG, NHI, OCUL, OPCH, VNT, WGS, Z, ZG
+live dropped: ABR, BFAM, BZ, CALX, CE, CRSP, DNN, DUOL, EPAM, FIGR, GPK, GSHD, HLNE, NFG, NHI, NMRK, OCUL, OPCH, VNT, WGS, Z, ZG
 
 **live**
 
 | # | Ticker | book | join | gen | AB | peer | opp | 1d | 1w | pile |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | MOS | 1.146 | +0.84 | +0.23 | +0.64 | +0.81 | +0.64 | -1.7% | -3.3% | yes |
-| 2 | OCUL | 1.135 | +0.91 | +0.23 | +0.76 | +0.79 | +0.60 | -2.7% | -6.5% | yes |
-| 3 | GSHD | 1.134 | +0.91 | +0.47 | +0.96 | +0.76 | +0.52 | +0.7% | -1.7% | yes |
+| 2 | OCUL | 1.135 | +0.91 | +0.23 | +0.76 | +0.79 | +0.60 | -2.7% | -6.5% | no |
+| 3 | GSHD | 1.134 | +0.91 | +0.47 | +0.96 | +0.76 | +0.52 | +0.7% | -1.7% | no |
 | 4 | DUOL | 1.133 | -0.15 | +0.23 | +0.95 | +0.86 | +0.68 | +0.5% | +0.6% | no |
 | 5 | CRSP | 1.133 | +0.83 | +0.47 | +0.81 | +0.67 | +0.60 | -4.1% | -3.0% | yes |
 | 6 | XP | 1.124 | +0.87 | +0.23 | +0.96 | +0.82 | +0.52 | +1.6% | +5.1% | yes |
-| 7 | OPCH | 1.104 | +0.93 | +0.07 | +0.96 | +0.22 | +0.64 | -0.1% | +0.8% | yes |
-| 8 | WGS | 1.094 | +0.82 | +0.47 | +0.88 | +0.19 | +0.64 | -2.1% | -0.8% | yes |
-| 9 | HLNE | 1.085 | +0.95 | +0.23 | +0.85 | +0.33 | +0.60 | -0.1% | +0.7% | yes |
+| 7 | OPCH | 1.104 | +0.93 | +0.07 | +0.96 | +0.22 | +0.64 | -0.1% | +0.8% | no |
+| 8 | WGS | 1.094 | +0.82 | +0.47 | +0.88 | +0.19 | +0.64 | -2.1% | -0.8% | no |
+| 9 | HLNE | 1.085 | +0.95 | +0.23 | +0.85 | +0.33 | +0.60 | -0.1% | +0.7% | no |
 | 10 | FIGR | 1.074 | +0.94 | +0.19 | +0.93 | +0.00 | +0.64 | -1.2% | -7.8% | no |
 | 11 | EPAM | 1.073 | -0.15 | +0.47 | +0.91 | +0.73 | +0.64 | +0.8% | +4.0% | no |
 | 12 | CALX | 1.072 | -0.15 | +0.23 | +0.76 | +0.80 | +0.68 | -0.8% | -6.6% | no |
-| 13 | NHI | 1.035 | +0.89 | +0.07 | +0.85 | +0.05 | +0.64 | -0.4% | -1.8% | yes |
+| 13 | NHI | 1.035 | +0.89 | +0.07 | +0.85 | +0.05 | +0.64 | -0.4% | -1.8% | no |
 | 14 | ZG | 1.034 | +0.38 | +0.47 | +0.55 | +0.78 | +0.68 | +3.2% | -0.5% | no |
 | 15 | VNT | 1.019 | -0.15 | +0.23 | +0.88 | +0.58 | +0.64 | +0.8% | -0.7% | no |
-| 16 | CE | 1.014 | +0.82 | +0.07 | +0.46 | +0.45 | +0.64 | -3.3% | -3.9% | yes |
+| 16 | CE | 1.014 | +0.82 | +0.07 | +0.46 | +0.45 | +0.64 | -3.3% | -3.9% | no |
 | 17 | FBRT | 0.996 | +0.79 | +0.23 | +0.94 | +0.33 | +0.52 | +0.6% | +0.8% | yes |
-| 18 | NMRK | 0.991 | +0.92 | +0.47 | +0.94 | +0.34 | +0.48 | -0.9% | -2.3% | yes |
-| 19 | ABR | 0.982 | +0.61 | +0.23 | +0.93 | +0.39 | +0.52 | +1.2% | -2.5% | yes |
+| 18 | NMRK | 0.991 | +0.92 | +0.47 | +0.94 | +0.34 | +0.48 | -0.9% | -2.3% | no |
+| 19 | ABR | 0.982 | +0.61 | +0.23 | +0.93 | +0.39 | +0.52 | +1.2% | -2.5% | no |
 | 20 | GPK | 0.978 | -0.15 | +0.07 | +0.95 | +0.51 | +0.68 | -4.3% | -3.3% | no |
 | 21 | NFG | 0.966 | +0.92 | +0.07 | +0.64 | +0.33 | +0.64 | -0.0% | +0.6% | no |
 | 22 | BZ | 0.959 | +0.69 | +0.07 | +0.64 | +0.48 | +0.64 | -3.2% | +11.6% | no |
@@ -327,19 +320,19 @@ live dropped: ABR, BFAM, BZ, CALX, CE, CRSP, DNN, DUOL, EPAM, FBRT, FIGR, GPK, H
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | HOOD | 0.673 | +0.94 | +0.47 | +0.95 | +0.89 | +0.03 | -4.2% | -3.6% | yes |
 | 2 | SLS | 0.888 | +0.83 | +0.47 | +0.88 | +0.95 | +0.28 | -7.3% | -14.6% | yes |
-| 3 | GSHD | 1.134 | +0.91 | +0.47 | +0.96 | +0.76 | +0.52 | +0.7% | -1.7% | yes |
-| 4 | CRMD | 1.065 | +0.95 | +0.47 | +0.81 | +0.86 | +0.48 | +1.0% | +1.2% | yes |
-| 5 | AVAH | 0.908 | +0.92 | +0.47 | +0.96 | +0.70 | +0.32 | +4.1% | +1.2% | yes |
-| 6 | ILMN | 0.417 | +0.91 | +0.47 | +0.96 | +0.69 | -0.17 | +1.7% | -1.7% | yes |
-| 7 | ALB | 0.611 | +0.88 | +0.47 | +0.85 | +0.80 | +0.03 | -1.2% | -4.1% | yes |
-| 8 | MT | 0.399 | +0.95 | +0.47 | +0.85 | +0.70 | -0.17 | +0.6% | +3.0% | yes |
+| 3 | AVAH | 0.908 | +0.92 | +0.47 | +0.96 | +0.70 | +0.32 | +4.1% | +1.2% | yes |
+| 4 | TGTX | 0.868 | +0.85 | +0.47 | +0.94 | +0.76 | +0.28 | +3.2% | -0.6% | yes |
+| 5 | ALB | 0.611 | +0.88 | +0.47 | +0.85 | +0.80 | +0.03 | -1.2% | -4.1% | yes |
+| 6 | CABA | 0.931 | +0.93 | +0.47 | +0.88 | +0.71 | +0.36 | -1.0% | -0.3% | yes |
+| 7 | MT | 0.399 | +0.95 | +0.47 | +0.85 | +0.70 | -0.17 | +0.6% | +3.0% | yes |
+| 8 | SOFI | 0.693 | +0.91 | +0.47 | +0.88 | +0.70 | +0.11 | -3.5% | -4.5% | yes |
 | 9 | XP | 1.124 | +0.87 | +0.23 | +0.96 | +0.82 | +0.52 | +1.6% | +5.1% | yes |
-| 10 | HCC | 0.891 | +0.96 | +0.07 | +0.93 | +0.77 | +0.32 | -0.1% | +0.3% | yes |
-| 11 | BGC | 0.96 | +0.87 | +0.23 | +0.95 | +0.61 | +0.40 | +0.8% | +2.3% | yes |
-| 12 | NMRK | 0.991 | +0.92 | +0.47 | +0.94 | +0.34 | +0.48 | -0.9% | -2.3% | yes |
-| 13 | ERO | 0.924 | +0.96 | +0.23 | +0.98 | +0.40 | +0.40 | -2.2% | -1.5% | yes |
-| 14 | CWK | 0.952 | +0.91 | +0.47 | +0.85 | +0.27 | +0.48 | -1.2% | -4.7% | yes |
-| 15 | DRH | 0.883 | +0.93 | +0.23 | +0.99 | +0.23 | +0.40 | -0.6% | -0.9% | yes |
+| 10 | BGC | 0.96 | +0.87 | +0.23 | +0.95 | +0.61 | +0.40 | +0.8% | +2.3% | yes |
+| 11 | ERO | 0.924 | +0.96 | +0.23 | +0.98 | +0.40 | +0.40 | -2.2% | -1.5% | yes |
+| 12 | MOS | 1.146 | +0.84 | +0.23 | +0.64 | +0.81 | +0.64 | -1.7% | -3.3% | yes |
+| 13 | FBRT | 0.996 | +0.79 | +0.23 | +0.94 | +0.33 | +0.52 | +0.6% | +0.8% | yes |
+| 14 | SHO | 0.963 | +0.89 | +0.23 | +0.95 | +0.09 | +0.52 | +0.2% | +0.3% | yes |
+| 15 | REAX | 0.788 | +0.74 | +0.23 | +0.46 | +0.73 | +0.36 | -9.1% | n/a | yes |
 
 ### 2026-08-27
 
