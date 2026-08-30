@@ -125,6 +125,69 @@ def test_get_paces_between_calls() -> None:
     assert slept and slept[0] >= 4.9
 
 
+def test_skip_live_get_never_hits_network() -> None:
+    sess = mock.Mock()
+    with mock.patch.dict(os.environ, {"FINVIZ_SKIP_LIVE": "1", "FINVIZ_FORCE_LIVE": ""}, clear=False):
+        r = finviz_session.get(sess, "/quote.ashx?t=SPY")
+    assert r is None
+    sess.get.assert_not_called()
+
+
+def test_skip_live_session_never_probes() -> None:
+    with mock.patch.dict(os.environ, {
+        "FINVIZ_SKIP_LIVE": "1",
+        "FINVIZ_FORCE_LIVE": "",
+        "FINVIZ_AUTH": "tok",
+        "FINVIZ_EMAIL": "a@b.c",
+        "FINVIZ_PASSWORD": "x",
+    }, clear=False):
+        with mock.patch.object(finviz_session, "_probe") as probe:
+            s = finviz_session.session()
+    assert not finviz_session.authed(s)
+    assert s.headers.get("X-Fullscan-Finviz") == "skipped"
+    probe.assert_not_called()
+
+
+def test_ecs_runner_labels_block_live() -> None:
+    env = {
+        "FINVIZ_SKIP_LIVE": "",
+        "FINVIZ_FORCE_LIVE": "",
+        "RUNNER_NAME": "ecs-box",
+        "RUNNER_LABELS": "self-hosted,ecs,linux",
+    }
+    with mock.patch.dict(os.environ, env, clear=False):
+        assert finviz_session.live_html_allowed() is False
+        sess = mock.Mock()
+        r = finviz_session.get(sess, "/futures.ashx")
+    assert r is None
+    sess.get.assert_not_called()
+
+
+def test_force_live_overrides_skip() -> None:
+    with mock.patch.dict(os.environ, {
+        "FINVIZ_SKIP_LIVE": "1",
+        "FINVIZ_FORCE_LIVE": "1",
+        "RUNNER_LABELS": "self-hosted,ecs",
+    }, clear=False):
+        assert finviz_session.live_html_allowed() is True
+
+
+def test_ecs_scripts_export_skip_live() -> None:
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    preopen = (root / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    postclose = (root / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
+    yml = (root / ".github" / "workflows" / "preopen_all.yml").read_text(encoding="utf-8")
+    fa = (root / ".github" / "workflows" / "finviz_all.yml").read_text(encoding="utf-8")
+    pc = (root / ".github" / "workflows" / "map_heat_postclose.yml").read_text(encoding="utf-8")
+    assert "FINVIZ_SKIP_LIVE=1" in preopen
+    assert "FINVIZ_SKIP_LIVE=1" in postclose
+    assert 'FINVIZ_SKIP_LIVE: "1"' in yml
+    assert 'FINVIZ_SKIP_LIVE: "1"' in pc
+    assert 'cron: "10 1 * * 2-6"' in fa
+    assert "ubuntu-latest" in fa
+
+
 def test_preopen_all_does_not_scrape_finviz() -> None:
     from pathlib import Path
     src = Path(__file__).with_name("run_preopen_all.py").read_text(encoding="utf-8")
@@ -145,6 +208,11 @@ def main() -> None:
         test_session_missing_auth,
         test_gap_default_is_five,
         test_get_paces_between_calls,
+        test_skip_live_get_never_hits_network,
+        test_skip_live_session_never_probes,
+        test_ecs_runner_labels_block_live,
+        test_force_live_overrides_skip,
+        test_ecs_scripts_export_skip_live,
         test_preopen_all_does_not_scrape_finviz,
     ]
     failed = 0

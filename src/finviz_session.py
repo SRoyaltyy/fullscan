@@ -22,6 +22,8 @@ Transient 403/429/5xx and login-HTML are retried FINVIZ_GET_RETRIES times
 Aliyun ECS is blocked on every Elite HTML path. live_html_allowed() is
 False when FINVIZ_SKIP_LIVE=1 or the runner is self-hosted/ecs; get()
 returns None without a request. FINVIZ_FORCE_LIVE=1 overrides.
+session() also skips the Elite login probe on ECS so systemd jobs never
+touch finviz.com.
 """
 from __future__ import annotations
 
@@ -144,6 +146,10 @@ def session() -> requests.Session:
     """Authenticated Elite session. Always returns a Session; check authed()."""
     s = requests.Session()
     s.headers.update(UA)
+    if not live_html_allowed():
+        print("[finviz] SKIP Elite login/probe (ECS / FINVIZ_SKIP_LIVE)")
+        s.headers["X-Fullscan-Finviz"] = "skipped"
+        return s
     token = (
         os.environ.get("FINVIZ_AUTH")
         or os.environ.get("AUTH_TOKEN_FINVIZ")
