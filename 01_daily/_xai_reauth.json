@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
+  "status": "needs_reauth",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "FKXE-K4NY",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=FKXE-K4NY",
-  "expires_at": "2026-08-30T02:10:07.741982-04:00",
+  "reason": "device login did not finish rc=124",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 304485,
-  "updated_at": "2026-08-30T01:56:07.742564-04:00"
+  "updated_at": "2026-08-30T02:08:11.022513-04:00"
 }
