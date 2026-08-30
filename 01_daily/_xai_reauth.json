@@ -1,11 +1,12 @@
 {
-  "status": "needs_reauth",
+  "status": "waiting",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "device login did not finish rc=124",
-  "user_code": null,
-  "verification_uri": "https://accounts.x.ai/oauth2/device",
-  "expires_at": null,
+  "reason": "Approve this code on the phone at accounts.x.ai",
+  "user_code": "QQTG-SQN6",
+  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=QQTG-SQN6",
+  "expires_at": "2026-08-30T10:55:24.666184-04:00",
   "source": "xai_device_reauth",
-  "updated_at": "2026-08-30T08:02:15.118907-04:00"
+  "pid": 307617,
+  "updated_at": "2026-08-30T10:41:24.666932-04:00"
 }
