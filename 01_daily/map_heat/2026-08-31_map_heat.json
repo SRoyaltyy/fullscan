@@ -8722,7 +8722,121 @@
   ],
   "ticker_news": [
     {
-      "time": "28 min",
+      "time": "36 min",
+      "title": "Eric Trump Says The Tides Have Turned For Bitcoin As AI And Institutions Fuel Crypto Adoption",
+      "url": "https://finance.yahoo.com/m/26f44732-90d5-3e5d-b072-963af1e2cba3/eric-trump-says-%E2%80%98the-tides.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "ABTC"
+      ]
+    },
+    {
+      "time": "44 min",
+      "title": "Acoramidis Demonstrates Reversal of Cardiac Structural Disease Progression and Functional Decline and Significantly Increases Days Alive and Free from Hospitalization in ATTR-CM",
+      "url": "/news/386706/acoramidis-demonstrates-reversal-of-cardiac-structural-disease-progression-and-functional-decline-and-significantly-increases-days-alive-and-free-from-hospitalization-in-attr-cm",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "BBIO"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "L3Harris Celebrates Successful Launch of NASA's Nancy Grace Roman Space Telescope",
+      "url": "/news/386705/l3harris-celebrates-successful-launch-of-nasas-nancy-grace-roman-space-telescope",
+      "source": "Business Wire",
+      "tickers": [
+        "LHX"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Victoria's Secret stock soars nearly 300% as GLP-1 weight-loss drugs help reshape lingerie buying habits",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/victorias-secret-stock-soars-nearly-130000704.html",
+      "source": "Moneywise",
+      "tickers": [
+        "VSXY"
+      ]
+    },
+    {
+      "time": "2 hours",
+      "title": "Come on, Target. Do better.",
+      "url": "https://finance.yahoo.com/markets/stocks/article/come-on-target-do-better-123000000.html",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "DKS",
+        "TGT"
+      ]
+    },
+    {
+      "time": "2 hours",
+      "title": "Party balloons could become a 'luxury' as the Iran war spurs a helium shortage",
+      "url": "https://www.marketwatch.com/story/party-balloons-could-become-a-luxury-as-the-iran-war-spurs-a-helium-shortage-89e3f86e?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "DLTR"
+      ]
+    },
+    {
+      "time": "2 hours",
+      "title": "Alnylam Presents New Data at ESC Congress 2026 Reinforcing Strength in RNAi-Powered TTR Silencing Across ATTR-CM Patient Populations and Treatment Settings",
+      "url": "https://www.businesswire.com/news/home/20260829551848/en/",
+      "source": "Business Wire",
+      "tickers": [
+        "ALNY"
+      ]
+    },
+    {
+      "time": "2 hours",
+      "title": "AI isn't eating software after all - and the sector's 'epic' rally could run through October",
+      "url": "https://www.marketwatch.com/story/ai-isnt-eating-software-after-all-and-the-sectors-epic-rally-could-run-through-october-a4610583?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "CRM",
+        "CRWD",
+        "IGV",
+        "MSFT",
+        "NOW"
+      ]
+    },
+    {
+      "time": "2 hours",
+      "title": "'All about acceleration': After Nvidia earnings, the tech trade is getting more segmented",
+      "url": "https://finance.yahoo.com/markets/article/all-about-acceleration-after-nvidia-earnings-the-tech-trade-is-getting-more-segmented-114905135.html",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "MRVL",
+        "NVDA"
+      ]
+    },
+    {
+      "time": "2 hours",
+      "title": "Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change?",
+      "url": "https://finance.yahoo.com/m/19aa43b1-0e66-3238-86d1-6abf76da4d99/tim-cook-owns-crypto-but.html",
+      "source": "BeInCrypto",
+      "tickers": [
+        "AAPL"
+      ]
+    },
+    {
+      "time": "3 hours",
+      "title": "When are September Social Security checks coming? It starts to get tricky very soon",
+      "url": "https://finance.yahoo.com/economy/policy/articles/september-social-security-checks-coming-112500036.html",
+      "source": "Moneywise",
+      "tickers": [
+        "JPM"
+      ]
+    },
+    {
+      "time": "3 hours",
+      "title": "South Korea may be getting too old to take advantage of its AI boom",
+      "url": "https://finance.yahoo.com/economy/articles/south-korea-may-getting-too-110000570.html",
+      "source": "Fortune",
+      "tickers": [
+        "SKHY"
+      ]
+    },
+    {
+      "time": "3 hours",
       "title": "The Midwestern Burger Chain That's Going Full MAGA",
       "url": "https://www.wsj.com/business/steak-n-shake-maga-a85d4ee8?mod=wsj_FV",
       "source": "The Wall Street Journal",
@@ -8731,7 +8845,7 @@
       ]
     },
     {
-      "time": "58 min",
+      "time": "4 hours",
       "title": "Street Calls of the Week",
       "url": "https://finance.yahoo.com/markets/stocks/articles/street-calls-week-103002740.html",
       "source": "Investing.com",
@@ -8742,7 +8856,16 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "4 hours",
+      "title": "SpaceX launches NASAs $4.3 billion Roman space telescope",
+      "url": "https://finance.yahoo.com/m/61309ea8-106b-3a10-b2c7-5cc138ecd8a5/spacex-launches-nasa%E2%80%99s-%244.3.html",
+      "source": "Investing.com",
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "time": "4 hours",
       "title": "SpaceX set to launch NASAs $4.3 billion Roman space telescope",
       "url": "https://finance.yahoo.com/m/61309ea8-106b-3a10-b2c7-5cc138ecd8a5/spacex-set-to-launch-nasa%E2%80%99s.html",
       "source": "Investing.com",
@@ -8751,7 +8874,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "4 hours",
       "title": "Multifamily Recovery Broadens Beyond Class A Assets",
       "url": "https://finance.yahoo.com/m/00fe6bbc-c386-3ff3-96f4-77befda2a1d5/multifamily-recovery-broadens.html",
       "source": "CRE Daily",
@@ -8760,7 +8883,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "4 hours",
       "title": "Apple's big handoff and a jobs report: What to watch this week",
       "url": "https://finance.yahoo.com/markets/article/apples-big-handoff-and-a-jobs-report-what-to-watch-this-week-100000786.html",
       "source": "Yahoo Finance",
@@ -8770,7 +8893,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "4 hours",
       "title": "Best CD rates today, Sunday, August 30, 2026: Lock in up to 4.30% APY",
       "url": "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-sunday-august-30-2026-lock-in-up-to-430-apy-100000110.html",
       "source": "Yahoo Personal Finance",
@@ -8779,7 +8902,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "4 hours",
       "title": "Trump Real Estate Stock Trades Show June Net Selling",
       "url": "https://finance.yahoo.com/m/7d1ad742-f2e2-3e41-9439-6be0f6d9f849/trump-real-estate-stock.html",
       "source": "CRE Daily",
@@ -8790,7 +8913,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "5 hours",
       "title": "A Texas Banking Billionaire and His Children Are Locked in a Bitter Succession Drama",
       "url": "https://www.wsj.com/business/a-texas-banking-billionaire-and-his-children-are-locked-in-a-bitter-succession-drama-0b39ffaa?mod=wsj_FV",
       "source": "The Wall Street Journal",
@@ -8799,7 +8922,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "5 hours",
       "title": "What to Expect in Markets This Week: Dell, Several Consumer Companies to Report; August Jobs Data Due",
       "url": "https://finance.yahoo.com/m/6cc973a2-9150-30cd-98c8-f55b42a45031/what-to-expect-in-markets.html",
       "source": "Investopedia",
@@ -8809,7 +8932,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "6 hours",
       "title": "Ukrainian drone strike sparks fire at major Russian oil refinery",
       "url": "https://finance.yahoo.com/m/431e37b1-1e41-3bd8-8960-5da139d75669/ukrainian-drone-strike-sparks.html",
       "source": "Investing.com",
@@ -8819,7 +8942,7 @@
       ]
     },
     {
-      "time": "6 hours",
+      "time": "9 hours",
       "title": "Iran insists Strait of Hormuz remains closed as war enters seventh month",
       "url": "https://finance.yahoo.com/m/89a8ad24-5a4a-32e0-bd4d-5cbc7f8cd5f1/iran-insists-strait-of-hormuz.html",
       "source": "Investing.com",
@@ -8829,7 +8952,7 @@
       ]
     },
     {
-      "time": "6 hours",
+      "time": "9 hours",
       "title": "Khamenei urges unity among Gulf leaders as Tehran keeps Hormuz closed",
       "url": "https://finance.yahoo.com/m/89a8ad24-5a4a-32e0-bd4d-5cbc7f8cd5f1/khamenei-urges-unity-among.html",
       "source": "Investing.com",
@@ -9475,126 +9598,6 @@
       "source": "ACCESSWIRE",
       "tickers": [
         "IPST"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "SentinelOne CEO on Earnings, AI's Cybersecurity Impact",
-      "url": "https://finance.yahoo.com/video/sentinelone-ceo-earnings-ais-cybersecurity-231037772.html",
-      "source": "Bloomberg",
-      "tickers": [
-        "S"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Hafnia Ltd (HAFN) (Q2 2026) Earnings Call Highlights: Record Net Profit and Strategic ...",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/hafnia-ltd-hafn-q2-2026-230124612.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "HAFN"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Banco BBVA Argentina SA (BBAR) (Q2 2026) Earnings Call Highlights: Net Income Surges 44. ...",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/banco-bbva-argentina-sa-bbar-230117160.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "BBAR"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Nano Labs Ltd (NA) (H1 2026) Earnings Call Highlights: Strategic AI-Web3 Pivot Amidst Widening ...",
-      "url": "https://finance.yahoo.com/technology/ai/articles/nano-labs-ltd-na-h1-230117438.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "NA"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "UpStart Investments Files for TSXV Conditional Approval",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/upstart-investments-files-tsxv-conditional-225800401.html",
-      "source": "TMX Newsfile",
-      "tickers": [
-        "UPST"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Takeda Receives U.S. FDA Approval of MIMRYLO (rusfertide), Marking a Potential Shift in the Treatment Paradigm for Polycythemia Vera",
-      "url": "https://www.businesswire.com/news/home/20260824773270/en/MIMRYLO",
-      "source": "Business Wire",
-      "tickers": [
-        "TAK"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Qualcomm's HBC play pulls Samsung and SK hynix into a new race beyond HBM",
-      "url": "https://www.digitimes.com/news/a20260828VL218/qualcomm-hbm-samsung-infrastructure-bandwidth.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "QCOM"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "NVAX Stock Climbs As Partnership Model Keeps COVID Vaccine Cash Flow Open",
-      "url": "https://finance.yahoo.com/m/a9fd3428-5fc6-3866-a7c4-3977fe5b2f77/nvax-stock-climbs-as.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "NVAX",
-        "SNY",
-        "TAK"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Lucid Stock Defies Major Recall Shock",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/lucid-stock-defies-major-recall-222943009.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "LCID"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Meta's 9.9% Jio Stake Finally Gets a Public Scoreboard",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/metas-9-9-jio-stake-222758011.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "META"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Nvidia Drops 3.3% as $315 Target Meets a $108 Billion Test",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-drops-3-3-315-222706659.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "NVDA",
-        "SF"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "Marvell Stock Faces Critical Test After Sharp Drop",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-stock-faces-critical-test-222611171.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "MRVL"
-      ]
-    },
-    {
-      "time": "Aug-28",
-      "title": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m. Eastern Time on September 2, 2026 to Discuss OneTest Revenue and Expanding Commercial Opportunity",
-      "url": "/news/386693/2020-biolabs-reschedules-investor-webinar-to-2-00-pm-eastern-time-on-september-2-2026-to-discuss-onetest-revenue-and-expanding-commercial-opportunity",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "AIDX"
       ]
     }
   ],
@@ -10380,5 +10383,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 131,
-  "overlay_at": "2026-08-30T07:28:12.301025-04:00"
+  "overlay_at": "2026-08-30T10:45:02.485218-04:00"
 }
