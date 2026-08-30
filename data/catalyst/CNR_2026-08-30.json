@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-01-13\",\n    \"description\": \"Core Natural Resources Inc (CNR) idled the Leer South longwall after combustion-related activity was detected in a previously mined area.\",\n    \"evidence_excerpt\": \"\\\"The longwall system had been idle since January 13, 2025, when combustion-related activity was detected in a previously mined area.\\\"\",\n    \"source_urls\": [\n      \"https://www.coalage.com/departments/breaking-news/core-natural-resources-resumes-longwall-mining-at-leer-south/",
+  "ticker": "CNR",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

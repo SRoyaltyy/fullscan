@@ -1,0 +1,116 @@
+{
+  "signal_date": "2026-08-21",
+  "horizon": "1w",
+  "generated_at": "2026-08-30T14:58:27.437389-04:00",
+  "missed_movers": [
+    {
+      "ticker": "WLY",
+      "fwd_pct": 4.13,
+      "class": "outweighed",
+      "sector": "Communication Services",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.442,
+        "s_sector": -0.25,
+        "s_general": 0.07,
+        "s_news": 0.0,
+        "s_ab": 0.925,
+        "s_peer": 0.012,
+        "s_opp": 0.28
+      }
+    },
+    {
+      "ticker": "ADEA",
+      "fwd_pct": -1.79,
+      "class": "outweighed",
+      "sector": "Technology",
+      "size": "mid",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": 0.412,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": -0.462,
+        "s_peer": -0.278,
+        "s_opp": 0.52
+      }
+    },
+    {
+      "ticker": "HUBB",
+      "fwd_pct": -2.21,
+      "class": "outweighed",
+      "sector": "Industrials",
+      "size": "large",
+      "signals": {
+        "s_join": -0.929,
+        "s_sector": -0.275,
+        "s_general": 0.234,
+        "s_news": 0.0,
+        "s_ab": 0.124,
+        "s_peer": -0.336,
+        "s_opp": 0.03
+      }
+    },
+    {
+      "ticker": "SHEL",
+      "fwd_pct": -2.59,
+      "class": "outweighed",
+      "sector": "Energy",
+      "size": "mega",
+      "signals": {
+        "s_join": 0.957,
+        "s_sector": -0.15,
+        "s_general": 0.07,
+        "s_news": 0.0,
+        "s_ab": 0.809,
+        "s_peer": -0.067,
+        "s_opp": -0.34
+      }
+    },
+    {
+      "ticker": "SITC",
+      "fwd_pct": -2.61,
+      "class": "gated_out",
+      "sector": "Real Estate",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.287,
+        "s_sector": 0.6,
+        "s_general": 0.234,
+        "s_news": 0.0,
+        "s_ab": -0.462,
+        "s_peer": 0.487,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "UA",
+      "fwd_pct": -5.73,
+      "class": "outweighed",
+      "sector": "Consumer Cyclical",
+      "size": "mid",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": -0.31,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": -0.245,
+        "s_peer": -0.038,
+        "s_opp": 0.64
+      }
+    }
+  ],
+  "n_blind": 0,
+  "worst_buys": [],
+  "input_silence_on_movers": {
+    "s_join": 0.0,
+    "s_sector": 0.0,
+    "s_general": 0.0,
+    "s_ab": 0.0,
+    "s_peer": 0.333
+  },
+  "absent_inputs": [
+    "s_news"
+  ],
+  "universe_median_fwd_pct": -2.4
+}

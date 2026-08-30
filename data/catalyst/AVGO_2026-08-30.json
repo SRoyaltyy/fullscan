@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-10-08\",\n    \"description\": \"Broadcom Inc (AVGO) announced it is shipping Tomahawk 6-Davisson, the industry\u2019s first 102.4-Tbps Ethernet switch with co-packaged optics for AI networking.\",\n    \"evidence_excerpt\": \"\\\"the industry\u2019s first to deliver an unprecedented 102.4 terabits per second of optically enabled switching capacity\\\"\",\n    \"source_urls\": [\n      \"https://www.globenewswire.com/news-release/2025/10/08/3163429/19933/en/broadcom-announces-tomahawk-6-davisson",
+  "ticker": "AVGO",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "earnings"
+}

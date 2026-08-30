@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-17\",\n    \"description\": \"Kulicke & Soffa appointed Dr. Raj Talluri as President and CEO effective September 1, 2026 and elected him to the Board effective August 17, 2026, with Lester Wong remaining EVP and CFO.\",\n    \"evidence_excerpt\": \"\\\"named Dr. Raj Talluri as President and Chief Executive Officer (\\\"CEO\\\") effective September 1, 2026\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/kulicke-and-soffa-industries-inc-appoints-dr-raj-tal",
+  "ticker": "KLIC",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

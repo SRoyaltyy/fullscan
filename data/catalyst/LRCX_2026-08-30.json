@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-30\",\n    \"description\": \"Wellington Management Group LLP raised its LRCX stake 291.2% in Q2 to 1,215,581 shares valued at about $526.75 million, according to its latest 13F.\",\n    \"evidence_excerpt\": \"\\\"Wellington Management increased its Lam Research position by 291.2% in the second quarter, adding 904,824 shares\\\"\",\n    \"source_urls\": [\n      \"https://www.marketbeat.com/instant-alerts/filing-wellington-management-group-llp-has-52675-million-stock-holdings-in-la",
+  "ticker": "LRCX",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

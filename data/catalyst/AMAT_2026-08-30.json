@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-13\",\n    \"description\": \"Applied Materials reported record Q3 FY2026 results, with revenue of $9.12 billion and non-GAAP EPS of $3.50 beating estimates.\",\n    \"evidence_excerpt\": \"\\\"Record revenue $9.12 billion, up 25 percent year over year\\\"\",\n    \"source_urls\": [\n      \"https://www.globenewswire.com/news-release/2026/08/13/3344890/0/en/applied-materials-announces-third-quarter-2026-results.html\",\n      \"https://finance.yahoo.com/technology/articles/applied-mate",
+  "ticker": "AMAT",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,124 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T14:44:43.446219-04:00",
+  "inputs": [
+    {
+      "name": "finviz_export",
+      "family": "join",
+      "status": "ok",
+      "n": 11628,
+      "detail": "finviz_2026-08-30.csv"
+    },
+    {
+      "name": "membership",
+      "family": "join",
+      "status": "ok",
+      "n": 5910,
+      "detail": ""
+    },
+    {
+      "name": "join_ranked",
+      "family": "join",
+      "status": "ok",
+      "n": 5910,
+      "detail": "std=0.973"
+    },
+    {
+      "name": "news_actions",
+      "family": "news",
+      "status": "missing",
+      "n": 0,
+      "detail": ""
+    },
+    {
+      "name": "news_judge",
+      "family": "news",
+      "status": "missing",
+      "n": null,
+      "detail": "LLM ticker tilts absent"
+    },
+    {
+      "name": "finviz_digest",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "ab_checklist",
+      "family": "ab",
+      "status": "ok",
+      "n": 2690,
+      "detail": "2026-08-30_ab_checklist_enriched.csv"
+    },
+    {
+      "name": "peer_rs",
+      "family": "peer",
+      "status": "ok",
+      "n": 5136,
+      "detail": ""
+    },
+    {
+      "name": "ticker_checklist",
+      "family": "addon",
+      "status": "ok",
+      "n": 11627,
+      "detail": ""
+    },
+    {
+      "name": "events",
+      "family": "addon",
+      "status": "degraded",
+      "n": null,
+      "detail": "CARRY-FORWARD (carried_from=2026-08-28) \u2014 not a real 2026-08-30 scan; tilt suspect"
+    },
+    {
+      "name": "map_heat",
+      "family": "heat",
+      "status": "missing",
+      "n": null,
+      "detail": "post-close/morning research missing; preopen must FAIL; s_heat=0"
+    },
+    {
+      "name": "general_predict",
+      "family": "general",
+      "status": "missing",
+      "n": null,
+      "detail": "s_general=0 \u2014 weight renormalized away"
+    },
+    {
+      "name": "sector_predicts",
+      "family": "sector",
+      "status": "missing",
+      "n": 0,
+      "detail": "0/11 quality"
+    },
+    {
+      "name": "price_store",
+      "family": "learn",
+      "status": "stale",
+      "n": null,
+      "detail": "last_date=2026-08-21"
+    }
+  ],
+  "family_status": {
+    "join": "ok",
+    "news": "missing",
+    "ab": "ok",
+    "peer": "ok",
+    "heat": "missing",
+    "general": "missing",
+    "sector": "missing"
+  },
+  "families_present": {
+    "join": true,
+    "news": false,
+    "ab": true,
+    "peer": true,
+    "heat": false,
+    "general": false,
+    "sector": false
+  },
+  "learn_grade": true,
+  "worst": "missing"
+}

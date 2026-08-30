@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-02-26\",\n    \"description\": \"ACM Research Inc (ACMR) reported record FY2025 revenue of $901.3 million (+15.2% YoY) and Q4 2025 revenue of $244.4 million, with non-GAAP diluted EPS of $0.25, and maintained 2026 revenue guidance of $1.08\u2013$1.175 billion.\",\n    \"evidence_excerpt\": \"\\\"We delivered record annual revenue of $901 million, up 15% year over year\\\"\",\n    \"source_urls\": [\n      \"https://www.globenewswire.com/news-release/2026/02/26/3245429/0/en/ACM-Research-Repo",
+  "ticker": "ACMR",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

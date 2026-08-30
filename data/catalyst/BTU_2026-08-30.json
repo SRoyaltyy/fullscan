@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-04-15\",\n    \"description\": \"Peabody Energy Corp (BTU) signed a multi-year contract to supply 7\u20138 million tons of Powder River Basin coal per year to Associated Electric Cooperative Inc. for at least seven years.\",\n    \"evidence_excerpt\": \"\\\"signed a contract to provide seven to eight million tons of coal per year to Associated Electric Cooperative Inc. (Associated) for at least the next seven years.\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-rel",
+  "ticker": "BTU",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

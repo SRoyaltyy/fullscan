@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-04-29\",\n    \"description\": \"Albany Engineered Composites (AIN) was awarded a seven-year contract from Bell Textron to produce composite structural components for the Bell 525 helicopter.\",\n    \"evidence_excerpt\": \"\\\"AEC has been awarded a seven-year contract from Bell Textron, Inc. (Bell) to produce composite structures components\\\"\",\n    \"source_urls\": [\n      \"https://investors.albint.com/news-releases/news-release-details/albany-engineered-composites-awarded-seve",
+  "ticker": "AIN",
+  "generated_at": "2026-08-30",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
