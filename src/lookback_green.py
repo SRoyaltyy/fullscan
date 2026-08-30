@@ -14,7 +14,7 @@ import pandas as pd
 
 from .book_learn import _fwd_returns, _load_panel, _select_buys, load_frame
 from .book_lookback import BOOK_DIR, SCORE, _jload, _parse_date, _tick
-from .green_pile import GREEN_MIN, green_mask
+from .green_pile import GREEN_MIN, attach_ranks, green_mask
 
 YF_H = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
 SUMMARY = SCORE / "BOOK_GREEN.md"
@@ -96,6 +96,7 @@ def run(date: str | None = None, top_n: int = 15, panel=None) -> dict:
     df = load_frame(date)
     if df is None or df.empty:
         raise SystemExit(f"no frame for {date}")
+    df = attach_ranks(df)
     pile = green_mask(df)
     df = df.copy()
     df["green"] = pile.to_numpy()
@@ -104,7 +105,8 @@ def run(date: str | None = None, top_n: int = 15, panel=None) -> dict:
     if green_df.empty:
         green_picks: list[int] = []
     else:
-        gscore = pd.to_numeric(green_df["score_1d"], errors="coerce").fillna(-999).to_numpy()
+        col = "green_rank" if "green_rank" in green_df.columns else "score_1d"
+        gscore = pd.to_numeric(green_df[col], errors="coerce").fillna(-999).to_numpy()
         green_picks = _select_buys(green_df, gscore, top_n)
 
     book = _jload("data", "stock_book", f"{date}_stock_book.json") or {}
@@ -185,8 +187,8 @@ def render_all(days: list[dict]) -> str:
         "# Green-pile book — every date",
         "",
         "Fill the 15 from names where join + general + AB + peer are all green,",
-        "sector/news are not red. Same $400M / sector caps.",
-        "If the pile is thinner than 8 liquid names (no AB/peer that day), skip.",
+        "sector/news not red, relvol not red (< 0.7) when printed. Rank by green_rank.",
+        "Same $400M / sector caps. Thin pile (< 8 liquid) → skip / fallback.",
         "",
         "| Date | pile | used? | live 1d | green 1d | live 1w | green 1w | overlap | entered |",
         "|------|------|-------|---------|----------|---------|----------|---------|---------|",

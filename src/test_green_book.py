@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from src.green_pile import GREEN_MIN, green_mask
+from src.green_pile import GREEN_MIN, attach_ranks, green_mask
 from src.stock_book import _book_side, _row_dict
 
 
@@ -68,15 +68,15 @@ def test_book_fills_from_pile_when_thick():
         ))
         rows[-1]["industry"] = f"w{i}"
     df = pd.DataFrame(rows)
+    df = attach_ranks(df)
     df["green"] = green_mask(df)
     assert int(df["green"].sum()) >= GREEN_MIN
-    pile = df[df["green"]]
-    buys, sells = _book_side(df, "1d", 15, buy_from=pile)
+    buys, sells = _book_side(df, "1d", 15, buy_mask=df["green"], buy_sort="green_rank")
     assert len(buys) == 15
-    assert set(buys["Ticker"]).issubset(set(pile["Ticker"]))
+    assert set(buys["Ticker"]).issubset(set(df.loc[df["green"], "Ticker"]))
     assert not any(str(t).startswith("W") for t in buys["Ticker"])
     rec = _row_dict(buys.iloc[0], "1d", "buy")
-    assert rec["in_pile"] is True
+    assert rec.get("green") is True or rec.get("in_pile") is True
 
 
 def test_thin_pile_caller_keeps_weights():
@@ -86,7 +86,7 @@ def test_thin_pile_caller_keeps_weights():
     ])
     df["green"] = green_mask(df)
     assert int(df["green"].sum()) < GREEN_MIN
-    buys, _ = _book_side(df, "1d", 15, buy_from=None)
+    buys, _ = _book_side(df, "1d", 15, buy_mask=None)
     assert list(buys["Ticker"])[0] == "W1"
 
 

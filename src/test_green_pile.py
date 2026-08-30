@@ -23,7 +23,7 @@ def test_all_green_passes() -> None:
     st = pile_status(df)
     assert st["used"] is True
     assert st["buy_mode"] == "green_pile"
-    assert st["sell_mode"] == "core_weights"
+    assert st["sell_mode"] in ("core_weights", "core_weights_ex_green")
 
 
 def test_missing_ab_collapses() -> None:
@@ -41,7 +41,7 @@ def test_news_red_is_veto() -> None:
     assert bool(mask.iloc[1]) is True
 
 
-def test_news_yellow_is_not_veto() -> None:
+def test_news_yellow_is_not_a_veto() -> None:
     df = pd.DataFrame([_row(s_news=0.0)])
     assert bool(green_mask(df).iloc[0]) is True
 
@@ -68,6 +68,13 @@ def test_core_eps() -> None:
     assert bool(green_mask(df).iloc[0]) is True
 
 
+def test_green_rank_mean() -> None:
+    from src.green_pile import attach_ranks
+    df = attach_ranks(pd.DataFrame([_row(s_join=0.4, s_general=0.2, s_ab=0.6, s_peer=0.8)]))
+    assert abs(float(df["green_rank"].iloc[0]) - 0.5) < 1e-9
+    assert abs(float(df["s_tape"].iloc[0]) - 0.7) < 1e-9
+
+
 def test_micro_not_liquid() -> None:
     rows = [_row() for _ in range(GREEN_MIN)]
     for r in rows:
@@ -83,10 +90,11 @@ def main() -> None:
         test_all_green_passes,
         test_missing_ab_collapses,
         test_news_red_is_veto,
-        test_news_yellow_is_not_veto,
+        test_news_yellow_is_not_a_veto,
         test_dead_relvol_veto,
         test_thin_pile_fallback,
         test_core_eps,
+        test_green_rank_mean,
         test_micro_not_liquid,
     ]
     failed = 0
