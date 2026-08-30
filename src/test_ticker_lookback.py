@@ -123,23 +123,50 @@ def test_signal_improved_is_strict() -> None:
     ]
     tl.annotate_signal_improved(days)
     assert days[0]["signal_improved"] is False
+    assert days[0]["zero_red"] is True
     assert days[1]["signal_improved"] is True
+    assert days[1]["zero_red"] is True
     assert days[2]["signal_improved"] is False
+    assert days[2]["zero_red"] is False
 
     payload = {
         "generated_at": "t",
         "names": [{"ticker": "TEST", "days": days}],
     }
     page = run.render_html(payload)
-    assert 'th class="better">2026-08-20</th>' in page
-    assert "🔵 this day improved" in page
+    assert 'th class="better clean">🔵⚪ 2026-08-20</th>' in page
+    assert "th class=\"clean\">⚪ 2026-08-19</th>" in page
+    assert "+≥3 pts" in page
+    assert "no red cells" in page
     md = run.render_md(payload)
-    assert "🔵 2026-08-20" in md
+    assert "🔵⚪ 2026-08-20" in md
+    assert "⚪ 2026-08-19" in md
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "lookback.xlsx"
         run.write_xlsx(payload, p)
         wb = load_workbook(p)
         assert wb["TEST"]["A3"].fill.fgColor.rgb[-6:] == "5B9BD5"
+        assert wb["TEST"]["A2"].fill.fgColor.rgb[-6:] == "FFFFFF"
+
+
+def test_blue_on_point_jump_and_zero_red() -> None:
+    assert tl.box_points({"join": "bad", "ab": "neutral", "gen": "good"}) == 6
+    assert tl.zero_red({"join": "neutral", "ab": "good"}) is True
+    assert tl.zero_red({"join": "bad", "ab": "good"}) is False
+    assert tl.zero_red({"join": "missing"}) is False
+
+    # One cell worse (ab yellow→red) but net points +4 → still blue.
+    days = [
+        {"date": "2026-08-19", "boxes": {
+            "join": "bad", "sector": "bad", "gen": "bad", "ab": "neutral"}},
+        {"date": "2026-08-20", "boxes": {
+            "join": "good", "sector": "good", "gen": "neutral", "ab": "bad"}},
+    ]
+    assert tl.objectively_better(days[0]["boxes"], days[1]["boxes"]) is False
+    assert tl.point_delta(days[0]["boxes"], days[1]["boxes"]) >= 3
+    tl.annotate_signal_improved(days)
+    assert days[1]["signal_improved"] is True
+    assert days[1]["zero_red"] is False
 
 
 if __name__ == "__main__":
@@ -150,4 +177,5 @@ if __name__ == "__main__":
     test_random_universe_gates()
     test_price_tones()
     test_signal_improved_is_strict()
-    print("7 tests passed")
+    test_blue_on_point_jump_and_zero_red()
+    print("8 tests passed")

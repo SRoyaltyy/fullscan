@@ -38,6 +38,9 @@ RELVOL_DEAD = 0.7
 CORE = ("s_join", "s_general", "s_ab", "s_peer")
 BOX_ICON = {"good": "\U0001f7e2", "bad": "\U0001f534", "neutral": "\U0001f7e1", "missing": "\u2b1b"}
 TONE_RANK = {"bad": 0, "neutral": 1, "good": 2}
+# User-facing points for day-over-day jumps: red=1, yellow=2, green=3.
+TONE_POINTS = {"bad": 1, "neutral": 2, "good": 3}
+BLUE_POINT_JUMP = 3
 RANDOM_N = 10
 # Finviz export units: Market Cap = $ millions, Average Volume = thousands of shares.
 RANDOM_MIN_MCAP_M = 100.0
@@ -120,14 +123,46 @@ def objectively_better(prev_boxes, next_boxes) -> bool:
     return improved
 
 
+def box_points(boxes) -> int:
+    """Sum red=1 / yellow=2 / green=3. Missing is 0."""
+    total = 0
+    for key, _ in BOX_COLS:
+        total += TONE_POINTS.get(str((boxes or {}).get(key) or "").lower(), 0)
+    return total
+
+
+def point_delta(prev_boxes, next_boxes) -> int:
+    return box_points(next_boxes) - box_points(prev_boxes)
+
+
+def zero_red(boxes) -> bool:
+    """True when at least one printed factor exists and none of them is red."""
+    printed = False
+    for key, _ in BOX_COLS:
+        tone = str((boxes or {}).get(key) or "").lower()
+        if tone not in TONE_POINTS:
+            continue
+        printed = True
+        if tone == "bad":
+            return False
+    return printed
+
+
 def annotate_signal_improved(days):
-    """Mark the later day when its signal is objectively better than the prior day."""
+    """Mark blue (improved or +≥3 points) and white (zero red) on each day."""
     for i, day in enumerate(days or []):
+        boxes = day.get("boxes") or {}
+        day["zero_red"] = zero_red(boxes)
+        day["box_points"] = box_points(boxes)
+        day["point_delta"] = None
         day["signal_improved"] = False
         if i == 0:
             continue
-        day["signal_improved"] = objectively_better(
-            days[i - 1].get("boxes"), day.get("boxes"))
+        prev = days[i - 1].get("boxes") or {}
+        delta = point_delta(prev, boxes)
+        day["point_delta"] = delta
+        day["signal_improved"] = (
+            objectively_better(prev, boxes) or delta >= BLUE_POINT_JUMP)
     return days
 
 
