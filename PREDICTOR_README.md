@@ -120,7 +120,9 @@ The Action publishes:
 - downloadable XLSX with red/yellow/green cells (one sheet per ticker);
 - +1d / +3d / +1w **forward** price changes from that session (next 1 / 3 / 5 trading days), colored the same way (green up, yellow flat, red down);
 - a blue date when factor colors improved vs the prior session (no cell worse and at least one better) **or** factor points jumped by ≥3 (red=1, yellow=2, green=3);
+- 🚨 when the day is purely worse vs the prior session (no cell better, at least one worse);
 - a white mark on any day with zero red factor cells;
+- a **Cond** column with the G/Y/R tally; green or red when that color is the majority;
 - responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
 - compact Markdown color table;
 - machine-readable JSON;

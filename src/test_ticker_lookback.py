@@ -45,7 +45,7 @@ def test_phone_html_and_returns() -> None:
     page = run.render_html(payload)
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
-    assert "<th>+1d</th><th>+3d</th><th>+1w</th>" in page
+    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
     assert day0["forward_returns"]["1d"] is not None
@@ -127,7 +127,9 @@ def test_signal_improved_is_strict() -> None:
     assert days[1]["signal_improved"] is True
     assert days[1]["zero_red"] is True
     assert days[2]["signal_improved"] is False
+    assert days[2]["signal_alarm"] is True
     assert days[2]["zero_red"] is False
+    assert days[2]["condition"]["tone"] in {"good", "neutral", "bad"}
 
     payload = {
         "generated_at": "t",
@@ -136,11 +138,14 @@ def test_signal_improved_is_strict() -> None:
     page = run.render_html(payload)
     assert 'th class="better clean">🔵⚪ 2026-08-20</th>' in page
     assert "th class=\"clean\">⚪ 2026-08-19</th>" in page
+    assert "🚨 2026-08-21" in page
     assert "+≥3 pts" in page
-    assert "no red cells" in page
+    assert "purely worse" in page
     md = run.render_md(payload)
     assert "🔵⚪ 2026-08-20" in md
     assert "⚪ 2026-08-19" in md
+    assert "🚨 2026-08-21" in md
+    assert "| Cond |" in md
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "lookback.xlsx"
         run.write_xlsx(payload, p)
@@ -166,7 +171,49 @@ def test_blue_on_point_jump_and_zero_red() -> None:
     assert tl.point_delta(days[0]["boxes"], days[1]["boxes"]) >= 3
     tl.annotate_signal_improved(days)
     assert days[1]["signal_improved"] is True
+    assert days[1]["signal_alarm"] is False
     assert days[1]["zero_red"] is False
+
+
+def test_alarm_and_condition_majority() -> None:
+    assert tl.purely_worse(
+        {"join": "good", "ab": "neutral"},
+        {"join": "neutral", "ab": "bad"},
+    ) is True
+    assert tl.purely_worse(
+        {"join": "good", "ab": "neutral"},
+        {"join": "good", "ab": "good"},
+    ) is False
+    # Mixed: one better, one worse — not purely worse.
+    assert tl.purely_worse(
+        {"join": "neutral", "ab": "good"},
+        {"join": "good", "ab": "bad"},
+    ) is False
+
+    green_major = {k: "good" for k, _ in tl.BOX_COLS}
+    red_major = {k: "bad" for k, _ in tl.BOX_COLS}
+    mixed = {k: "neutral" for k, _ in tl.BOX_COLS}
+    mixed["join"] = mixed["ab"] = mixed["peer"] = "good"
+    mixed["news"] = mixed["vol"] = "bad"
+    assert tl.general_condition(green_major)["tone"] == "good"
+    assert tl.general_condition(red_major)["tone"] == "bad"
+    assert tl.general_condition(mixed)["tone"] == "neutral"
+    assert tl.general_condition({})["tone"] == "missing"
+
+    days = [
+        {"date": "2026-08-19", "boxes": {"join": "good", "ab": "good", "peer": "neutral"}},
+        {"date": "2026-08-20", "boxes": {"join": "neutral", "ab": "bad", "peer": "neutral"}},
+    ]
+    tl.annotate_signal_improved(days)
+    assert days[1]["signal_alarm"] is True
+    assert days[1]["signal_improved"] is False
+    payload = {
+        "generated_at": "t",
+        "names": [{"ticker": "TEST", "days": days}],
+    }
+    page = run.render_html(payload)
+    assert "🚨 2026-08-20" in page
+    assert ">0/2/1<" in page
 
 
 if __name__ == "__main__":
@@ -178,4 +225,5 @@ if __name__ == "__main__":
     test_price_tones()
     test_signal_improved_is_strict()
     test_blue_on_point_jump_and_zero_red()
-    print("8 tests passed")
+    test_alarm_and_condition_majority()
+    print("9 tests passed")

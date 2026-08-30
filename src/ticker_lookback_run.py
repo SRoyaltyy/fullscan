@@ -103,6 +103,8 @@ def _date_marks(day):
     marks = []
     if day.get("signal_improved"):
         marks.append("🔵")
+    if day.get("signal_alarm"):
+        marks.append("🚨")
     if day.get("zero_red"):
         marks.append("⚪")
     return "".join(marks)
@@ -117,9 +119,31 @@ def _date_classes(day):
     cls = []
     if day.get("signal_improved"):
         cls.append("better")
+    if day.get("signal_alarm"):
+        cls.append("alarm")
     if day.get("zero_red"):
         cls.append("clean")
     return " ".join(cls)
+
+
+def _condition(day):
+    cond = day.get("condition")
+    if not cond:
+        cond = tl.general_condition(day.get("boxes") or {})
+    return cond
+
+
+def _condition_text(cond):
+    if not cond or cond.get("tone") == "missing" or not cond.get("n"):
+        return "—"
+    return f"{cond['good']}/{cond['neutral']}/{cond['bad']}"
+
+
+def _condition_md(cond):
+    text = _condition_text(cond)
+    if text == "—":
+        return text
+    return f"{_icon(cond.get('tone'))} {text}"
 
 
 def render_md(payload):
@@ -129,12 +153,14 @@ def render_md(payload):
               f"mcap > $100M, avg vol > 500K_", ""]
     L += ["_🔵 = vs prior session: no cell worse and at least one better, "
           "or factor points jumped by ≥3 (red=1, yellow=2, green=3)_",
-          "_⚪ = no red factor cells that day_", ""]
+          "_🚨 = purely worse vs prior session (no cell better, at least one worse)_",
+          "_⚪ = no red factor cells that day_",
+          "_Cond = G/Y/R tally; green or red when that color is the majority_", ""]
     cols = " | ".join(label for _, label in tl.BOX_COLS)
-    bars = "|".join(["---"] * (6 + len(tl.BOX_COLS)))
+    bars = "|".join(["---"] * (7 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
         L += [f"## {rec['ticker']}", "",
-              f"| Date | Price | +1d | +3d | +1w | Class | {cols} |",
+              f"| Date | Price | +1d | +3d | +1w | Class | Cond | {cols} |",
               f"|{bars}|"]
         for d in rec["days"]:
             pc = d.get("price_changes") or {}
@@ -147,7 +173,8 @@ def render_md(payload):
                 f"| {date} | {_fmt_price(pc, 'price')} | "
                 f"{_fmt_price_md(pc, tones, '1d')} | "
                 f"{_fmt_price_md(pc, tones, '3d')} | "
-                f"{_fmt_price_md(pc, tones, '1w')} | {d.get('class')} | {cells} |"
+                f"{_fmt_price_md(pc, tones, '1w')} | {d.get('class')} | "
+                f"{_condition_md(_condition(d))} | {cells} |"
             )
         L.append("")
     return "\n".join(L) + "\n"
@@ -173,6 +200,7 @@ def render_html(payload):
                 for k, _ in tl.BOX_COLS
             )
             date_cls = _date_classes(day)
+            cond = _condition(day)
             price_tds = "".join(
                 f'<td class="{html.escape(tones.get(key, "missing"))}">'
                 f'{_fmt_price(pc, key)}</td>'
@@ -181,7 +209,9 @@ def render_html(payload):
             rows.append(
                 f'<tr><th class="{html.escape(date_cls)}">'
                 f'{html.escape(_date_label(day))}</th>'
-                f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}{cells}</tr>"
+                f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
+                f'<td class="{html.escape(cond.get("tone", "missing"))}">'
+                f'{html.escape(_condition_text(cond))}</td>{cells}</tr>'
             )
         factor_headers = "".join(
             f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
@@ -189,7 +219,7 @@ def render_html(payload):
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th>{factor_headers}</tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th>{factor_headers}</tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = "".join(
@@ -216,13 +246,15 @@ th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);wh
 thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
 td.good{{background:#123d2c}}td.bad{{background:#4b2028}}td.neutral{{background:#473e1d}}td.missing{{background:#23283a}}
 tbody th.better{{background:#1d4ed8;color:#edf2ff}}
+tbody th.alarm{{box-shadow:inset 3px 0 0 #f97316}}
+tbody th.alarm:not(.better):not(.clean){{background:#4b2028;color:#edf2ff}}
 tbody th.clean{{box-shadow:inset 3px 0 0 #f8fafc}}
 tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
 .muted{{color:var(--muted)}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts (R=1 Y=2 G=3) · ⚪ no red cells</p>
+<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority</p>
 {random_note}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
 
@@ -241,7 +273,7 @@ def write_xlsx(payload, path):
     }
     wb = Workbook()
     wb.remove(wb.active)
-    headers = ["Date", "Price", "+1d", "+3d", "+1w"] + [
+    headers = ["Date", "Price", "+1d", "+3d", "+1w", "Cond"] + [
         label for _, label in tl.BOX_COLS]
     for rec in payload["names"]:
         ws = wb.create_sheet(rec["ticker"][:31])
@@ -254,9 +286,10 @@ def write_xlsx(payload, path):
         for day in rec["days"]:
             pc = day.get("price_changes") or {}
             tones = day.get("price_tones") or _price_tones(pc)
+            cond = _condition(day)
             ws.append([
                 _date_label(day), pc.get("price"), pc.get("1d"),
-                pc.get("3d"), pc.get("1w"),
+                pc.get("3d"), pc.get("1w"), _condition_text(cond),
             ] + [
                 _icon((day.get("boxes") or {}).get(k, "missing"))
                 for k, _ in tl.BOX_COLS
@@ -266,6 +299,9 @@ def write_xlsx(payload, path):
             if day.get("signal_improved"):
                 date_cell.fill = fills["better"]
                 date_cell.font = Font(bold=True, color="FFFFFF")
+            elif day.get("signal_alarm"):
+                date_cell.fill = fills["bad"]
+                date_cell.font = Font(bold=True, color="FFFFFF")
             elif day.get("zero_red"):
                 date_cell.fill = fills["clean"]
                 date_cell.font = Font(bold=True, color="1F4E78")
@@ -274,7 +310,10 @@ def write_xlsx(payload, path):
                 cell.number_format = '0.00"%"'
                 cell.fill = fills.get(tones.get(key, "missing"), fills["missing"])
                 cell.alignment = Alignment(horizontal="center")
-            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=6):
+            cond_cell = ws.cell(row, 6)
+            cond_cell.fill = fills.get(cond.get("tone", "missing"), fills["missing"])
+            cond_cell.alignment = Alignment(horizontal="center")
+            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=7):
                 tone = (day.get("boxes") or {}).get(key, "missing")
                 ws.cell(row, offset).fill = fills.get(tone, fills["missing"])
                 ws.cell(row, offset).alignment = Alignment(horizontal="center")
