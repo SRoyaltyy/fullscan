@@ -26,7 +26,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import config, finviz_session, preopen
+from . import config, finviz_calendars, finviz_session, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -57,14 +57,7 @@ NEG_RE = re.compile(
     r"sell rating|profit warning|layoff)\b"
 )
 
-FUTURES_KEEP = [
-    ("ES", "S&P 500"), ("NQ", "Nasdaq 100"), ("ER2", "Russell 2000"),
-    ("YM", "DJIA"), ("VX", "VIX futures"), ("CL", "Crude WTI"), ("BZ", "Brent"),
-    ("NG", "Nat gas"), ("GC", "Gold"), ("SI", "Silver"), ("HG", "Copper"),
-    ("DX", "USD"), ("6E", "EUR"), ("6J", "JPY"), ("ZN", "10Y note"),
-    ("ZB", "30Y bond"), ("NKD", "Nikkei"), ("DY", "DAX"), ("EX", "Euro Stoxx"),
-    ("BT", "Bitcoin"),
-]
+FUTURES_KEEP = finviz_calendars.FUTURES_KEEP
 
 
 def _session() -> requests.Session:
@@ -177,136 +170,31 @@ def fetch_groups(sess: requests.Session, g: str) -> dict[str, dict]:
 def fetch_futures(sess: requests.Session) -> dict[str, dict]:
     r = finviz_session.get(sess, ["/futures.ashx", "/futures"])
     if r is None:
-        print("[map_heat] futures failed: Elite session empty/403")
+        print("[map_heat] futures failed: Elite session empty/403/skipped")
         return {}
-    m = re.search(r"var tiles = (\{.*?\});\s*\n", r.text, re.S)
-    if not m:
-        m = re.search(r"var tiles = (\{.*\})", r.text, re.S)
-    if not m:
-        print("[map_heat] futures: no tiles blob")
-        return {}
-    blob = m.group(1)
-    # JS object is JSON-enough (quoted keys).
-    try:
-        tiles = json.loads(blob)
-    except json.JSONDecodeError:
-        blob2 = re.sub(r",\s*}", "}", blob)
-        try:
-            tiles = json.loads(blob2)
-        except json.JSONDecodeError as e:
-            print(f"[map_heat] futures json: {e}")
-            return {}
-    out = {}
-    for key, row in tiles.items():
-        if not isinstance(row, dict):
-            continue
-        ticker = str(row.get("ticker") or key)
-        out[ticker] = {
-            "label": row.get("label") or ticker,
-            "last": row.get("last"),
-            "change": row.get("change"),
-            "prev_close": row.get("prevClose"),
-        }
+    out = finviz_calendars.parse_futures_html(r.text)
     print(f"[map_heat] futures tiles: {len(out)}")
     return out
 
 
 def fetch_econ(sess: requests.Session, date: str) -> list[dict]:
-    r = finviz_session.get(sess, [
-        f"/calendar/economic?dateFrom={date}",
-        f"/calendar.ashx?d={date}",
-    ])
-    if r is None:
-        print("[map_heat] econ calendar failed: Elite session empty/403")
-        return []
-    rows = []
-    for m in re.finditer(
-        r'\{"calendarId":(\d+),.*?"event":"(.*?)".*?"date":"(.*?)".*?'
-        r'"actual":(.*?),.*?"previous":(.*?),.*?"forecast":(.*?),.*?'
-        r'"importance":(\d+)',
-        r.text,
-    ):
-        day = m.group(3)[:10]
-        if day != date:
-            continue
-        actual = m.group(4).strip('"')
-        prev = m.group(5).strip('"')
-        fc = m.group(6).strip('"')
-        if actual == "null":
-            actual = None
-        if prev == "null":
-            prev = None
-        if fc == "null":
-            fc = None
-        rows.append({
-            "event": m.group(2).encode("utf-8").decode("unicode_escape"),
-            "datetime": m.group(3),
-            "actual": actual,
-            "previous": prev,
-            "forecast": fc,
-            "surprise": _numeric_surprise(actual, fc),
-            "importance": int(m.group(7)),
-        })
-    # de-dupe
-    seen = set()
-    uniq = []
-    for row in rows:
-        k = (row["event"], row["datetime"])
-        if k in seen:
-            continue
-        seen.add(k)
-        uniq.append(row)
-    print(f"[map_heat] econ {date}: {len(uniq)}")
-    return uniq
+    return finviz_calendars.fetch_econ(sess, date)
 
 
 def fetch_earnings(sess: requests.Session, date: str) -> list[dict]:
-    r = finviz_session.get(sess, [
-        f"/calendar/earnings?dateFrom={date}",
-    ])
-    if r is None:
-        print("[map_heat] earnings calendar failed: Elite session empty/403")
-        return []
-    rows = []
-    for m in re.finditer(
-        r'\{"earningsDate":"(.*?)".*?"ticker":"(.*?)".*?"company":"(.*?)".*?'
-        r'"marketCap":([0-9.]+).*?"epsEstimate":(.*?),',
-        r.text,
-    ):
-        day = m.group(1)[:10]
-        if day != date:
-            continue
-        est = m.group(5)
-        if est == "null":
-            est = None
-        else:
-            try:
-                est = float(est)
-            except ValueError:
-                pass
-        when = m.group(1)
-        session = "AMC" if "T16" in when or "T20" in when or "T21" in when else "BMO"
-        if "T00" in when or "T04" in when:
-            session = "BMO"
-        rows.append({
-            "ticker": m.group(2),
-            "company": m.group(3),
-            "datetime": when,
-            "session": session,
-            "mcap": float(m.group(4)),
-            "eps_est": est,
-        })
-    rows.sort(key=lambda x: -x["mcap"])
-    print(f"[map_heat] earnings {date}: {len(rows)}")
-    return rows
+    return finviz_calendars.fetch_earnings(sess, date)
+
+
+def _parse_econ_html(html: str, asof: str) -> list[dict]:
+    return finviz_calendars.parse_econ_html(html, asof)
+
+
+def _parse_earnings_html(html: str, asof: str) -> list[dict]:
+    return finviz_calendars.parse_earnings_html(html, asof)
 
 
 def _numeric_surprise(actual: Any, forecast: Any) -> float | None:
-    """Best-effort actual minus consensus. Units stay as displayed by Finviz."""
-    a, f = _pct(actual), _pct(forecast)
-    if a is None or f is None:
-        return None
-    return round(a - f, 4)
+    return finviz_calendars._numeric_surprise(actual, forecast)
 
 
 def fetch_stock_news(sess: requests.Session, limit: int = 250) -> list[dict]:
@@ -489,40 +377,12 @@ def _agg_from_members(sub: pd.DataFrame) -> dict:
 
 
 def _tape_from_futures(futures: dict) -> list[dict]:
-    tape = []
-    for ticker, label in FUTURES_KEEP:
-        row = futures.get(ticker)
-        if not row and ticker == "VX":
-            row = futures.get("VI") or futures.get("VIX")
-        if not row:
-            continue
-        tape.append({
-            "ticker": ticker,
-            "label": row.get("label") or label,
-            "last": row.get("last"),
-            "change": row.get("change"),
-        })
-    return tape
+    return finviz_calendars.tape_from_futures(futures)
 
 
-def _calendar_fields(econ: list[dict], earns: list[dict]) -> dict:
-    """Split macro vs mega-earnings. Only MACRO halves the whole book."""
-    mega_earn = [e for e in earns if (e.get("mcap") or 0) >= 50_000][:12]
-    high_econ = [e for e in econ if e.get("importance", 0) >= 2][:12]
-    macro_gate = bool(high_econ)
-    tickers = [
-        str(e.get("ticker") or "").upper()
-        for e in mega_earn if e.get("ticker")
-    ]
-    return {
-        "econ": high_econ,
-        "earnings": mega_earn,
-        "macro_gate": macro_gate,
-        "earnings_gate": bool(mega_earn),
-        "size_gate": macro_gate,
-        "calendar_entry_scale": 0.5 if macro_gate else 1.0,
-        "earnings_entry_tickers": tickers,
-    }
+def _calendar_fields(econ: list[dict], earns: list[dict], asof: str | None = None) -> dict:
+    return finviz_calendars.calendar_fields(econ, earns, asof)
+
 
 
 def overlay_live(date: str, payload: dict) -> dict:
@@ -538,11 +398,19 @@ def overlay_live(date: str, payload: dict) -> dict:
     ticker_news = fetch_stock_news(sess)
     major_news_tickers = fetch_major_news_tickers(sess)
     out = dict(payload)
-    out.update(_calendar_fields(econ, earns))
-    out["tape"] = _tape_from_futures(futures)
+    out.update(_calendar_fields(econ, earns, date))
+    tape = _tape_from_futures(futures)
+    if tape:
+        out["tape"] = tape
+    elif out.get("tape"):
+        print("[map_heat] live tape empty — keeping prior committed tape")
+    else:
+        out["tape"] = []
     out["event_options"] = fetch_event_options(out.get("earnings") or [])
-    out["ticker_news"] = ticker_news
-    out["major_news_tickers"] = major_news_tickers
+    if ticker_news:
+        out["ticker_news"] = ticker_news
+    if major_news_tickers:
+        out["major_news_tickers"] = major_news_tickers
     out["overlay_at"] = datetime.now(ET).isoformat()
     out["phase"] = "morning_overlay"
     return out
@@ -707,7 +575,7 @@ def build(date: str) -> dict:
     theme_tape.sort(key=lambda r: abs(r.get("w1") or 0), reverse=True)
 
     tape = _tape_from_futures(futures)
-    gates = _calendar_fields(econ, earns)
+    gates = _calendar_fields(econ, earns, date)
     event_options = fetch_event_options(gates["earnings"])
 
     payload = {

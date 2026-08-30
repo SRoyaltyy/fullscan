@@ -43,6 +43,7 @@ export OPENCLAW_TIMEOUT="${OPENCLAW_TIMEOUT:-10800}"
 export FULLSCAN_PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
 export FULLSCAN_HOME="${FULLSCAN_HOME:-/home/gha}"
 export PYTHONUNBUFFERED=1
+export FINVIZ_SKIP_LIVE=1
 
 write_clock() {
   mkdir -p "$ROOT/01_daily"
