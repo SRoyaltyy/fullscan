@@ -243,9 +243,14 @@ def main():
 
     t0 = time.time()
     run_date = date.today().isoformat()
-    tickers = sorted(os.path.basename(p)[:-5]
-                     for p in glob.glob(os.path.join(GRIDS_DIR, "*.json"))
-                     if not os.path.basename(p).startswith("_"))
+    # Universe = grids (if present) UNION rows cache. On GitHub runners the
+    # grids dir starts empty (only rows are restored from the state branch),
+    # so grids-only enumeration silently processed ZERO tickers.
+    tickers = sorted({os.path.basename(p)[:-5]
+                      for p in glob.glob(os.path.join(GRIDS_DIR, "*.json"))}
+                     | {os.path.basename(p)[:-5]
+                        for p in glob.glob(os.path.join(ROWS_DIR, "*.json"))}
+                     - {"_failed"})
     if args.limit:
         tickers = tickers[:args.limit]
 
