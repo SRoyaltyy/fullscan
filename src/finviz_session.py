@@ -74,9 +74,6 @@ def live_html_allowed() -> bool:
         return True
     if (os.environ.get("FINVIZ_SKIP_LIVE") or "").strip() == "1":
         return False
-    env = (os.environ.get("RUNNER_ENVIRONMENT") or "").lower()
-    if env == "github-hosted":
-        return True
     blob = " ".join([
         os.environ.get("RUNNER_NAME") or "",
         os.environ.get("RUNNER_LABELS") or "",
@@ -86,6 +83,9 @@ def live_html_allowed() -> bool:
     ]).lower()
     if "self-hosted" in blob or "ecs" in blob or "/home/gha" in blob:
         return False
+    env = (os.environ.get("RUNNER_ENVIRONMENT") or "").lower()
+    if env == "github-hosted":
+        return True
     return True
 
 
