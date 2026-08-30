@@ -152,8 +152,11 @@ def test_ecs_runner_labels_block_live() -> None:
     env = {
         "FINVIZ_SKIP_LIVE": "",
         "FINVIZ_FORCE_LIVE": "",
+        "RUNNER_ENVIRONMENT": "",
         "RUNNER_NAME": "ecs-box",
         "RUNNER_LABELS": "self-hosted,ecs,linux",
+        "HOME": "/home/gha",
+        "FULLSCAN_HOME": "/home/gha",
     }
     with mock.patch.dict(os.environ, env, clear=False):
         assert finviz_session.live_html_allowed() is False
@@ -196,6 +199,7 @@ def test_github_hosted_allows_live() -> None:
         "RUNNER_LABELS": "ubuntu-latest",
         "HOME": "/home/runner",
         "FULLSCAN_HOME": "",
+        "RUNNER_NAME": "GitHub Actions",
     }
     with mock.patch.dict(os.environ, env, clear=False):
         assert finviz_session.live_html_allowed() is True
