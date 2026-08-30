@@ -117,14 +117,17 @@ pipeline actually knew before the cash open — not the same-day close.
 
 | Box | Vintage on date D |
 |---|---|
-| join | D's `{D}_ranked.csv` when D's weather was built from the morning predict (labels × pre-open weather). Else prior join. |
-| vol, AB, peer, Finviz factor cells | Prior trading session (last completed tape) |
-| buy | Overnight pick: D−1 stock book (~13:00 ET the day before) |
-| sector, gen, news, digest, judge, heat, catal | D's pre-open packet (05:40–05:55 ET) |
+| join | D's `{D}_ranked.csv` when D's weather was built from the morning predict (labels × pre-open weather). Else last prior join. |
+| vol, AB, peer, Finviz factor cells | Last completed tape dated before D (walk back if that session's file is missing). Never same-day Finviz. |
+| buy | Last stock book dated before D (~13:00 ET). Never same-day book. |
+| sector, gen | D's morning predict, else the last prior predict still knowable at 09:30 |
+| news, digest, judge, catal | D's pre-open files. Ticker row first; else that day's sector tilt / sector digest. |
+| heat | D morning captains, else the map-heat industry/sector board knowable at 09:30 (D `morning_overlay` or last night's board) |
 | Price, +1d, +3d, +1w | Outcomes from D's close (not factors) |
 
 Same-day `data/stock_book/{D}_stock_book.csv` and `data/exports/finviz_{D}.csv`
-never color D's factor boxes. Black means that file was not knowable yet.
+never color D's factor boxes. Black means nothing knowable printed for that
+name — not that we refused a last-known file from an earlier session.
 
 The Action publishes:
 
@@ -146,9 +149,11 @@ The Action publishes:
 - as-of close plus forward +1d/+3d/+1w returns (calendar weekends and holiday dumps are omitted);
 - the same forward returns in JSON for backtest verification.
 
-Black means the source did not exist for that ticker/session; it never means
-neutral. The Action does not need an Elite login because it backtests the
-historical files already committed to the repository.
+Black means nothing knowable printed for that name; it never means
+neutral. Last-known tape / predict / map-heat from an earlier session
+still color when those files were knowable at 09:30. The Action does
+not need an Elite login because it backtests the historical files
+already committed to the repository.
 
 The job self-reads every
 output (trash / timeout stub / carry-forward → fail) and Grok reads the

@@ -1,8 +1,10 @@
 name: Ticker Lookback (any stock)
 
 # Phone-friendly manual backtest as of 09:30 ET. Factor colors use the
-# two-packet recipe: last night's tape + this morning's pre-open, plus
-# D's join when weather came from the morning predict. Never the
+# two-packet recipe: last completed tape (walk back if a session file
+# is missing) + this morning's pre-open, plus D's join when weather
+# came from the morning predict. Map-heat industry boards and the last
+# prior predict also color when D's file is missing. Never the
 # same-day stock book (~13:00) or same-day post-close Finviz (~21:10).
 # Enter any ticker(s), or check Random for 10 liquid names
 # (mcap > $100M, avg volume > 500K).

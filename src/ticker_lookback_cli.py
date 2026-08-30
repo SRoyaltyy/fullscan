@@ -87,12 +87,14 @@ def _boxes(sig, fv_rel, in_buy, present, digest_tone=None, judge_tone=None,
            heat_tone=None, catal_tone=None):
     """Color boxes from the 09:30-ET information set only.
 
-    Tape boxes (vol/AB/peer) require the prior session's files.
+    Tape boxes (vol/AB/peer) use the last completed tape dated before D
+    (walk back when the exact prior session file is missing).
     Join uses D's ranked file when that day's weather came from the
-    morning predict; otherwise the prior join.
-    Morning boxes (sector/gen/news/digest/judge/heat/catal) require D's
-    pre-open packet. Missing means that file was not knowable yet — never
-    a silent yellow.
+    morning predict; otherwise the last prior join.
+    Morning boxes use D's pre-open packet, or the last prior predict for
+    sector/gen. Digest/judge may fall back to that day's sector print.
+    Missing means nothing knowable printed for that name — never a
+    silent yellow just because a sample file exists.
     """
     out = {
         "join": tl._polarity(sig.get("s_join")) if present.get("join") else "missing",
@@ -140,8 +142,9 @@ def _independent_green(sig, fv_rel):
 def _scan_session(sess, ticker):
     """Factor colors as of 09:30 ET on sess['date'].
 
-    Packet recipe: D's join when weather is the morning predict; prior
-    Finviz / AB / peer / overnight book; D's pre-open packet. Same-day
+    Packet recipe: D's join when weather is the morning predict; last
+    Finviz / AB / peer / overnight book dated before D; D's pre-open
+    packet (last prior predict when D's is missing). Same-day
     stock_book and same-day post-close Finviz are ignored.
     """
     t = tl._tick(ticker)
@@ -154,18 +157,28 @@ def _scan_session(sess, ticker):
         join = (sess.get("join") or {}).get(t)
         join_source, join_vintage = "packet_join", sess["date"]
     else:
-        join = (prior or {}).get("join", {}).get(t) if prior else None
-        join_source, join_vintage = "prior_join", prior_date
-    fv = (prior or {}).get("finviz", {}).get(t) if prior else None
-    ab = (prior or {}).get("ab", {}).get(t) if prior else None
-    peer = (prior or {}).get("peer", {}).get(t) if prior else None
+        join_sess = tl.walk_prior(sess, lambda s: t in (s.get("join") or {}))
+        join = (join_sess.get("join") or {}).get(t) if join_sess else None
+        join_source, join_vintage = "prior_join", (
+            join_sess["date"] if join_sess else prior_date)
+    fv_sess = tl.walk_prior(sess, lambda s: t in (s.get("finviz") or {}))
+    ab_sess = tl.walk_prior(sess, lambda s: t in (s.get("ab") or {}))
+    peer_sess = tl.walk_prior(sess, lambda s: t in (s.get("peer") or {}))
+    book_sess = tl.walk_prior(sess, lambda s: s.get("has", {}).get("book"))
+    fv = (fv_sess.get("finviz") or {}).get(t) if fv_sess else None
+    ab = (ab_sess.get("ab") or {}).get(t) if ab_sess else None
+    peer = (peer_sess.get("peer") or {}).get(t) if peer_sess else None
     univ = None
     if use_packet_join:
         univ = (sess.get("universe") or {}).get(t)
-    if not univ and prior:
-        univ = (prior.get("universe") or {}).get(t)
-    prior_book = (prior or {}).get("book", {}).get(t) if prior else None
-    quote = (prior or {}).get("quote_colors", {}).get(t) if prior else None
+    if not univ:
+        univ_sess = tl.walk_prior(sess, lambda s: t in (s.get("universe") or {}))
+        univ = (univ_sess.get("universe") or {}).get(t) if univ_sess else None
+    prior_book = (book_sess.get("book") or {}).get(t) if book_sess else None
+    quote_sess = tl.walk_prior(
+        sess, lambda s: t in (s.get("quote_colors") or {}))
+    quote = ((quote_sess.get("quote_colors") or {}).get(t)
+             if quote_sess else None)
     catalyst = packet.get("catalyst", {}).get(t)
 
     news_rec = (packet.get("news") or {}).get(t)
@@ -194,19 +207,19 @@ def _scan_session(sess, ticker):
     if ab:
         source.append("prior_ab")
         sig["s_ab"] = tl._s_from_ab(ab)
-        vintage["ab"] = prior_date
+        vintage["ab"] = ab_sess["date"] if ab_sess else prior_date
     if peer:
         source.append("prior_peer")
         sig["s_peer"] = tl._s_from_peer(peer)
-        vintage["peer"] = prior_date
+        vintage["peer"] = peer_sess["date"] if peer_sess else prior_date
     if fv:
         source.append("prior_finviz")
         if mcap is None:
             mcap = tl._num(fv.get("Market Cap"))
         sector = sector or fv.get("Sector")
         industry = industry or fv.get("Industry")
-        vintage["vol"] = prior_date
-        vintage["finviz"] = prior_date
+        vintage["vol"] = fv_sess["date"] if fv_sess else prior_date
+        vintage["finviz"] = fv_sess["date"] if fv_sess else prior_date
     if prior_book:
         source.append("overnight_book")
         reasons = prior_book.get("reasons")
@@ -215,7 +228,7 @@ def _scan_session(sess, ticker):
         size = size or prior_book.get("size")
         if mcap is None:
             mcap = tl._num(prior_book.get("market_cap_m"))
-        vintage["overnight_book"] = prior_date
+        vintage["overnight_book"] = book_sess["date"] if book_sess else prior_date
     if univ:
         sector = sector or univ.get("sector")
         industry = industry or univ.get("industry")
@@ -234,11 +247,15 @@ def _scan_session(sess, ticker):
         vintage["judge"] = sess["date"]
     if packet.get("has_predict"):
         source.append("preopen_predict")
-        vintage["sector"] = sess["date"]
-        vintage["gen"] = sess["date"]
+        pred_v = packet.get("predict_vintage") or sess["date"]
+        vintage["sector"] = pred_v
+        vintage["gen"] = pred_v
         sec_bias = (packet.get("sector_bias") or {}).get(sector)
         if sec_bias is not None:
             sig["s_sector"] = float(sec_bias)
+        else:
+            # Predict printed; this sector was not called. Flat, not missing.
+            sig["s_sector"] = 0.0
         beta_src = None
         if join is not None:
             beta_src = join.get("beta")
@@ -248,6 +265,8 @@ def _scan_session(sess, ticker):
     heat_val = (packet.get("heat") or {}).get(t)
     if heat_val is None and industry:
         heat_val = (packet.get("heat_ind") or {}).get(industry)
+    if heat_val is None and sector:
+        heat_val = (packet.get("heat_sec") or {}).get(sector)
     if heat_val is not None:
         source.append("preopen_heat")
         sig["s_heat"] = float(heat_val)
@@ -257,8 +276,8 @@ def _scan_session(sess, ticker):
         vintage["catal"] = sess["date"]
 
     fv_rel = tl._fv_relvol(fv)
-    buys = ((prior or {}).get("buys") or {}).get(t) or {}
-    sells = ((prior or {}).get("sells") or {}).get(t) or {}
+    buys = ((book_sess or {}).get("buys") or {}).get(t) or {}
+    sells = ((book_sess or {}).get("sells") or {}).get(t) or {}
     present = {
         "join": join is not None,
         "ab": ab is not None,
@@ -267,12 +286,19 @@ def _scan_session(sess, ticker):
         "sector": sig.get("s_sector") is not None or packet.get("has_predict"),
         "gen": packet.get("has_predict"),
         "news": news_rec is not None or packet.get("has_actions") or packet.get("has_judge"),
-        "overnight_book": bool((prior or {}).get("has", {}).get("book")),
+        "overnight_book": book_sess is not None,
     }
     judge_raw = (packet.get("judge") or {}).get(t)
-    judge_tone = tl._polarity(judge_raw) if judge_raw is not None else (
-        "missing" if not packet.get("has_judge") else "missing")
+    judge_tone = tl._polarity(judge_raw) if judge_raw is not None else None
+    if judge_tone is None:
+        judge_tone = tl.judge_sector_tone(packet.get("judge_tilts"), sector)
+    if judge_tone is None:
+        judge_tone = "missing"
+    elif judge_raw is None and judge_tone != "missing":
+        vintage["judge"] = sess["date"]
     digest_tone = (packet.get("digest_tones") or {}).get(t)
+    if digest_tone is None and sector:
+        digest_tone = (packet.get("digest_sector") or {}).get(sector)
     if digest_tone is None:
         digest_tone = "missing"
     heat_tone = tl._polarity(sig.get("s_heat")) if sig.get("s_heat") is not None else "missing"

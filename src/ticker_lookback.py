@@ -4,11 +4,15 @@ Each dated row is the 09:30 ET information set, not the same-day close.
 
   Packet recipe (what the ranker is supposed to know by the open):
     join — D's ranked file when D's weather was built from the morning
-           predict (labels × pre-open weather). Else prior join.
-    vol / Finviz cells / AB / peer / overnight book — prior session tape.
-    sector / gen / news / digest / judge / heat / catal — D pre-open.
-  Same-day stock_book (~13:00) and same-day post-close Finviz (~21:10)
-  never color D's factor boxes.
+           predict (labels × pre-open weather). Else last prior join.
+    vol / Finviz cells / AB / peer / overnight book — last completed
+           tape dated before D (walk back if the prior session file
+           is missing). Same-day Finviz / book still never color D.
+    sector / gen — D's morning predict, else the last prior predict.
+    news / digest / judge / catal — D's pre-open files (ticker row,
+           else sector tilt / sector digest when the file printed one).
+    heat — D morning captains, else the map-heat industry/sector board
+           knowable by 09:30 (D morning_overlay or last night's board).
 
   +1d / +3d / +1w stay forward outcomes from D's close.
 
@@ -62,6 +66,8 @@ REGION_MIN_PRINT = 3
 REGION_GAP = 2
 STRETCH_WINDOW = 3
 STRETCH_EDGE = 0.15
+# Walk at most this many prior sessions for last-known tape / predict.
+LAST_KNOWN_STEPS = 8
 RANDOM_N = 10
 # Finviz export units: Market Cap = $ millions, Average Volume = thousands of shares.
 RANDOM_MIN_MCAP_M = 100.0
@@ -495,6 +501,73 @@ def _beta_load(v):
     return 0.4
 
 
+def walk_prior(sess, pred, max_steps=LAST_KNOWN_STEPS):
+    """Last prior session that satisfies pred. Never returns sess itself."""
+    cur = (sess or {}).get("prior")
+    n = 0
+    while cur is not None and n < max_steps:
+        try:
+            if pred(cur):
+                return cur
+        except Exception:
+            pass
+        cur = cur.get("prior")
+        n += 1
+    return None
+
+
+def last_predict_date(date):
+    """D's morning predict, else the last prior session that has one."""
+    if (GENERAL_DIR / f"{date}_predict.md").exists():
+        return date
+    idx = _INDEX or build_index()
+    sess = next((s for s in idx["sessions"] if s["date"] == date), None)
+    hit = walk_prior(
+        sess, lambda s: (GENERAL_DIR / f"{s['date']}_predict.md").exists())
+    return hit["date"] if hit else None
+
+
+# Judge sector_tilts use short aliases, not always Finviz sector names.
+_JUDGE_SECTOR = {
+    "technology": "technology",
+    "semis/xlk": "technology",
+    "semis/ai": "technology",
+    "software": "technology",
+    "energy": "energy",
+    "healthcare": "healthcare",
+    "basic materials": "basic materials",
+    "basic-materials": "basic materials",
+    "materials_gold": "basic materials",
+    "gold/miners": "basic materials",
+    "precious": "basic materials",
+}
+
+
+def _norm_sector(name):
+    return str(name or "").lower().replace("_", " ").replace("-", " ").strip()
+
+
+def judge_sector_tone(tilts, sector):
+    """Map judge sector_tilts onto a Finviz sector. None if no match."""
+    if not tilts or not sector:
+        return None
+    target = _JUDGE_SECTOR.get(_norm_sector(sector), _norm_sector(sector))
+    if not target:
+        return None
+    for key, val in (tilts.items() if isinstance(tilts, dict) else []):
+        mapped = _JUDGE_SECTOR.get(_norm_sector(key), _norm_sector(key))
+        if not mapped or mapped != target:
+            continue
+        v = str(val or "").lower()
+        if "bull" in v or v in {"up", "pos", "positive"}:
+            return "good"
+        if "bear" in v or v in {"down", "neg", "negative"}:
+            return "bad"
+        if "mix" in v or "neutral" in v or "flat" in v:
+            return "neutral"
+    return None
+
+
 def _digest_tones(date):
     """Ticker → tone from D's pre-open Finviz digest file only."""
     data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
@@ -520,52 +593,123 @@ def _digest_tones(date):
     return out
 
 
+def _digest_sector_tones(date):
+    """Sector → tone from D's digest by_sector bucket (mean polarity)."""
+    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    try:
+        from .stock_book import _digest_polarity
+    except Exception:
+        return {}
+    out = {}
+    for sec, rows in (data.get("by_sector") or {}).items():
+        scores = []
+        for row in rows or []:
+            if not isinstance(row, dict):
+                continue
+            text = str(row.get("digest") or row.get("news_title") or "")
+            if not text.strip():
+                continue
+            scores.append(_digest_polarity(text))
+        if scores:
+            out[str(sec)] = _polarity(sum(scores) / len(scores))
+    return out
+
+
+def _map_heat_board(date, prior_date=None):
+    """Map-heat industry/sector board knowable at 09:30.
+
+    D's file is used only when it is a morning_overlay (prior export).
+    Same-day postclose boards leak D's tape. Otherwise last prior board.
+    """
+    data = _jload(MAP_HEAT_DIR / f"{date}_map_heat.json") or {}
+    if data.get("phase") == "morning_overlay":
+        return data, date
+    idx = _INDEX or build_index()
+    sess = next((s for s in idx["sessions"] if s["date"] == date), None)
+
+    def has_board(s):
+        return (MAP_HEAT_DIR / f"{s['date']}_map_heat.json").exists()
+
+    hit = walk_prior(sess, has_board)
+    if hit:
+        return _jload(MAP_HEAT_DIR / f"{hit['date']}_map_heat.json") or {}, hit["date"]
+    if prior_date:
+        fallback = _jload(MAP_HEAT_DIR / f"{prior_date}_map_heat.json") or {}
+        if fallback:
+            return fallback, prior_date
+    return {}, None
+
+
+def _heat_from_board(data):
+    """Industry / sector d1 from a map_heat.json board."""
+    ind, sec = {}, {}
+    for row in data.get("industries") or []:
+        if not isinstance(row, dict):
+            continue
+        name, d1 = row.get("industry"), _num(row.get("d1"))
+        if name and d1 is not None:
+            ind[name] = float(d1)
+    for row in data.get("sectors") or []:
+        if not isinstance(row, dict):
+            continue
+        name, d1 = row.get("sector"), _num(row.get("d1"))
+        if name and d1 is not None:
+            sec[name] = float(d1)
+    return ind, sec
+
+
 def _heat_asof(date, prior_date=None):
-    """Ticker boosts knowable by 09:30: D morning refresh, else last night's baseline.
+    """Heat knowable by 09:30: captains, then the map-heat board.
 
     Same-day research.json is used only when map_heat_research.ticker_boosts
     accepts it (phase=morning_refresh, ≥20 cards). A rejected same-day file
     is not re-read loosely — that would smuggle a post-close stub onto D.
     """
+    tboost, iboost, vintage = {}, {}, None
     try:
         from .map_heat_research import ticker_boosts
-        tboost, iboost = ticker_boosts(date)
-        if tboost:
-            return tboost, iboost, date
+        tb, ib = ticker_boosts(date)
+        if tb:
+            tboost, iboost, vintage = tb, ib, date
     except Exception:
         pass
-    tboost, iboost = {}, {}
-    for name in (
-        MAP_HEAT_DIR / f"{prior_date}_research_baseline.json" if prior_date else None,
-        MAP_HEAT_DIR / f"{prior_date}_research.json" if prior_date else None,
-    ):
-        if name is None or not name.exists():
-            continue
-        data = _jload(name) or {}
-        vintage = None
-        m = re.search(r"(20\d{2}-\d{2}-\d{2})", name.name)
-        if m:
-            vintage = m.group(1)
-        for card in data.get("cards") or []:
-            direction = str(card.get("subsector_dir") or "").lower()
-            sign = 1.0 if direction == "up" else -1.0 if direction == "down" else 0.0
-            for cap in card.get("captains") or []:
-                if not isinstance(cap, dict):
-                    continue
-                t = _tick(cap.get("ticker"))
-                sent = str(cap.get("sent") or "")
-                if not t:
-                    continue
-                if sent == "pos":
-                    tboost[t] = 0.2 * (sign or 1.0)
-                elif sent == "neg":
-                    tboost[t] = -0.2 * (abs(sign) or 1.0)
-            ind = card.get("industry")
-            if ind and sign and card.get("action") == "OVERRIDE":
-                iboost[ind] = 0.12 * sign
-        if tboost:
-            return tboost, iboost, vintage or prior_date
-    return tboost, iboost, None
+    if not tboost:
+        for name in (
+            MAP_HEAT_DIR / f"{prior_date}_research_baseline.json" if prior_date else None,
+            MAP_HEAT_DIR / f"{prior_date}_research.json" if prior_date else None,
+        ):
+            if name is None or not name.exists():
+                continue
+            data = _jload(name) or {}
+            m = re.search(r"(20\d{2}-\d{2}-\d{2})", name.name)
+            file_v = m.group(1) if m else prior_date
+            for card in data.get("cards") or []:
+                direction = str(card.get("subsector_dir") or "").lower()
+                sign = 1.0 if direction == "up" else -1.0 if direction == "down" else 0.0
+                for cap in card.get("captains") or []:
+                    if not isinstance(cap, dict):
+                        continue
+                    t = _tick(cap.get("ticker"))
+                    sent = str(cap.get("sent") or "")
+                    if not t:
+                        continue
+                    if sent == "pos":
+                        tboost[t] = 0.2 * (sign or 1.0)
+                    elif sent == "neg":
+                        tboost[t] = -0.2 * (abs(sign) or 1.0)
+                ind = card.get("industry")
+                if ind and sign and card.get("action") == "OVERRIDE":
+                    iboost[ind] = 0.12 * sign
+            if tboost:
+                vintage = file_v
+                break
+    board, board_v = _map_heat_board(date, prior_date)
+    board_ind, board_sec = _heat_from_board(board)
+    for k, v in board_ind.items():
+        iboost.setdefault(k, v)
+    if board_v and vintage is None:
+        vintage = board_v
+    return tboost, iboost, vintage, board_sec, board_v
 
 
 def _digest_book(date):
@@ -679,25 +823,34 @@ def join_packet_ok(date) -> bool:
 
 
 def preopen_packet(date, prior_date=None):
-    """D's 05:40–05:55 ET packet. Cached on the index. No same-day tape."""
+    """D's 05:40–05:55 ET packet. Cached on the index. No same-day tape.
+
+    Gen/sector may come from the last prior morning predict when D's
+    file is missing — that call was still knowable at 09:30 on D.
+    """
     idx = _INDEX or build_index()
     cache = idx.setdefault("preopen", {})
     if date in cache:
         return cache[date]
-    news, judge_map = {}, {}
+    news, judge_map, judge_tilts = {}, {}, {}
     gen_bias, sector_bias = 0.0, {}
+    pred_date = last_predict_date(date)
     try:
         from . import stock_book as sb
         news = sb._merge_news(sb._load_news_actions(date), _digest_book(date))
         try:
             from .judge_apply import load_or_parse
-            judge_map = (load_or_parse(date) or {}).get("tickers") or {}
+            judge_payload = load_or_parse(date) or {}
+            judge_map = judge_payload.get("tickers") or {}
+            judge_tilts = judge_payload.get("sector_tilts") or {}
             for t, net in judge_map.items():
                 rec = news.setdefault(str(t).upper(), {"net": 0.0, "events": []})
                 rec["net"] = float(rec.get("net") or 0) + float(net)
         except Exception:
-            judge_map = {}
-        runs = sb._runs_for_date(date)
+            judge_map, judge_tilts = {}, {}
+            raw_judge = _jload(NEWS_DIR / f"{date}_judge.json") or {}
+            judge_tilts = raw_judge.get("sector_tilts") or {}
+        runs = sb._runs_for_date(pred_date or date)
         gates = _accuracy_gates_asof(date, prior_date=prior_date)
         gen_bias = float(
             sb._bias_for(runs.get("general"), "1d") * gates.get("general", 1.0))
@@ -711,8 +864,12 @@ def preopen_packet(date, prior_date=None):
             sector_bias[sec] = sector_bias.get(sec, 0.0) + float(tilt)
     except Exception:
         pass
-    heat, heat_ind, heat_v = _heat_asof(date, prior_date)
+    heat, heat_ind, heat_v, heat_sec, heat_board_v = _heat_asof(date, prior_date)
     digest_tones = _digest_tones(date)
+    digest_sector = _digest_sector_tones(date)
+    if not judge_tilts:
+        judge_tilts = (_jload(NEWS_DIR / f"{date}_judge.json") or {}).get(
+            "sector_tilts") or {}
     catalyst = {
         _tick(r.get("ticker")): r
         for r in ((_jload(CATALYST_DIR / f"{date}_dossiers.json") or {}).get("dossiers") or [])
@@ -723,18 +880,22 @@ def preopen_packet(date, prior_date=None):
         "news": news,
         "judge": {str(k).upper(): float(v) for k, v in (judge_map or {}).items()
                   if v is not None},
+        "judge_tilts": judge_tilts,
         "digest_tones": digest_tones,
+        "digest_sector": digest_sector,
         "gen_bias": gen_bias,
         "sector_bias": sector_bias,
         "heat": heat,
         "heat_ind": heat_ind,
-        "heat_vintage": heat_v,
+        "heat_sec": heat_sec,
+        "heat_vintage": heat_v or heat_board_v,
         "catalyst": catalyst,
+        "predict_vintage": pred_date,
         "has_actions": (NEWS_DIR / f"{date}_actions.json").exists(),
         "has_digest": (NEWS_DIR / f"{date}_finviz_digest.json").exists(),
         "has_judge": (NEWS_DIR / f"{date}_judge.json").exists()
                      or (NEWS_DIR / f"{date}_judge.md").exists(),
-        "has_predict": (GENERAL_DIR / f"{date}_predict.md").exists(),
+        "has_predict": bool(pred_date),
     }
     cache[date] = packet
     return packet
