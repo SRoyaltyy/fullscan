@@ -116,10 +116,12 @@ the ticker was never printed in a buy/sell list.
 
 The Action publishes:
 
+- downloadable XLSX with red/yellow/green cells (one sheet per ticker);
 - responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
-- full Markdown with every factor's 🟢🟡🔴⬛ state;
+- compact Markdown color table;
 - machine-readable JSON;
-- actual 1d/2d/3d/1w forward returns when the local price store covers them.
+- price and trailing 1d/3d/1w changes as known on each date;
+- forward 1d/2d/3d/1w returns in JSON for backtest verification.
 
 Black means the source did not exist for that ticker/session; it never means
 neutral. The Action does not need an Elite login because it backtests the

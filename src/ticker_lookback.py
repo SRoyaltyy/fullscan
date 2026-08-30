@@ -56,7 +56,10 @@ def _num(x, default=None):
     if x is None or (isinstance(x, float) and math.isnan(x)):
         return default
     try:
-        v = float(x)
+        raw = str(x).strip().replace(",", "")
+        if raw.endswith("%"):
+            raw = raw[:-1]
+        v = float(raw)
     except (TypeError, ValueError):
         return default
     return default if math.isnan(v) else v
@@ -228,6 +231,55 @@ def forward_returns(ticker: str, date: str) -> dict[str, float | None]:
             exitp = _num(panel[t].iloc[idx + n])
             if exitp:
                 out[h] = round(100 * (exitp / entry - 1), 3)
+    return out
+
+
+def trailing_returns(ticker: str, date: str,
+                     sessions: list[dict] | None = None,
+                     current_finviz: dict | None = None) -> dict:
+    """Price and trailing 1d/3d/1w changes known as of this session.
+
+    Prefer the point-in-time OHLC panel. Full-market Finviz snapshots fill
+    current price plus 1d/1w when the local price panel has not caught up.
+    """
+    t = _tick(ticker)
+    out = {"price": None, "1d": None, "3d": None, "1w": None}
+    panel = _price_panel()
+    if not panel.empty and t in panel.columns:
+        idx = panel.index.searchsorted(pd.Timestamp(date))
+        if idx < len(panel.index) and panel.index[idx].date().isoformat() == date:
+            current = _num(panel[t].iloc[idx])
+            if current:
+                out["price"] = round(current, 4)
+                for label, n in (("1d", 1), ("3d", 3), ("1w", 5)):
+                    if idx >= n:
+                        prior = _num(panel[t].iloc[idx - n])
+                        if prior:
+                            out[label] = round(100 * (current / prior - 1), 3)
+    fv = current_finviz or {}
+    if out["price"] is None:
+        out["price"] = _num(fv.get("Price"))
+    if out["1d"] is None:
+        out["1d"] = _num(fv.get("Change") or fv.get("Change %"))
+    if out["1w"] is None:
+        out["1w"] = _num(
+            fv.get("Performance (Week)") or fv.get("Perf Week"))
+
+    # Last-resort 3-session close from dated full-market snapshots.
+    if out["3d"] is None and out["price"] and sessions:
+        current_i = next(
+            (i for i, s in enumerate(sessions) if s["date"] == date), None)
+        prior_prices = []
+        if current_i is not None:
+            for s in reversed(sessions[:current_i]):
+                row = (s.get("finviz") or {}).get(t) or {}
+                px = _num(row.get("Price"))
+                if px:
+                    prior_prices.append(px)
+                if len(prior_prices) >= 3:
+                    break
+        if len(prior_prices) >= 3:
+            out["3d"] = round(100 * (out["price"] / prior_prices[2] - 1), 3)
     return out
 
 
