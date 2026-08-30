@@ -1,0 +1,39 @@
+name: Apply Finviz no-403 remainder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Patch
+        run: python3 scripts/apply_finviz_no403.py
+      - name: Test
+        run: |
+          pip install pandas beautifulsoup4 lxml requests pyyaml -q
+          python -m py_compile src/map_heat.py src/finviz_session.py src/finviz_calendars.py
+          python -m src.test_finviz_session
+          python -m src.test_map_heat_integration
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/map_heat.py src/test_finviz_session.py \
+            .github/workflows/map_heat_postclose.yml \
+            .github/workflows/finviz_all.yml \
+            .github/workflows/preopen_all.yml \
+            scripts/ecs_preopen.sh
+          git status
+          git commit -m "fix: wire calendars + stop ECS Finviz HTML scrapes" || echo No changes
+          git pull --rebase origin main || true
+          git push origin main
