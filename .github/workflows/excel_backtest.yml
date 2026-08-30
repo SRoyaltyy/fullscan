@@ -1,0 +1,95 @@
+name: Excel Bot Backtest (historical signals)
+
+# Historical effectiveness run for the excel_bot strategies.
+# For every ticker: deep Yahoo fetch (same datasource as the daily bot) ->
+# full-span Excel-replica engine grids -> per-day cluster-confirmation
+# signals (identical logic to daily_run.find_signals) -> exit-rule outcome.
+# Resumable: done tickers tracked in excel_bot/backtest/state/done.json;
+# self-dispatches until the universe is complete.
+
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Deep fetch window in years (colors start ~600d in)"
+        default: "5"
+      limit:
+        description: "Only first N tickers (0 = all)"
+        default: "0"
+      budget_min:
+        description: "Stop launching new tickers after N minutes"
+        default: "300"
+      continue_chain:
+        description: "Self-dispatch again if tickers remain"
+        default: "true"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: excel-backtest
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install openpyxl
+
+      - name: Restore ticker universe (rows cache, excel-state branch)
+        run: |
+          curl -sL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/excel-state/state/rows.tar.gz" -o /tmp/rows.tar.gz
+          mkdir -p excel_bot/data/rows
+          tar -xzf /tmp/rows.tar.gz -C excel_bot/data/rows --strip-components=1 || \
+          tar -xzf /tmp/rows.tar.gz -C excel_bot/data/rows
+          echo "universe: $(ls excel_bot/data/rows | wc -l) tickers"
+
+      - name: Run historical backfill
+        id: bt
+        env:
+          YEARS: ${{ inputs.years }}
+          LIMIT: ${{ inputs.limit }}
+          BUDGET: ${{ inputs.budget_min }}
+        run: |
+          cd excel_bot
+          ARGS="--years $YEARS --workers 4 --budget-min $BUDGET"
+          if [ "$LIMIT" != "0" ]; then ARGS="$ARGS --limit $LIMIT"; fi
+          python engine/backfill.py $ARGS 2>&1 | tee /tmp/backfill.log
+          REM=$(grep -oP '^REMAINING=\K\d+' /tmp/backfill.log | tail -1 || echo 0)
+          echo "remaining=${REM:-0}" >> "$GITHUB_OUTPUT"
+
+      - name: Build effectiveness summary
+        if: always()
+        run: |
+          cd excel_bot
+          python engine/bt_summary.py || true
+
+      - name: Commit backtest results to main
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "excel-bot backtest: $(date -u +%F) (+tickers chunk)" \
+            excel_bot/backtest/ || true
+
+      - name: Self-dispatch if tickers remain
+        if: steps.bt.outputs.remaining != '0' && inputs.continue_chain == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "${{ steps.bt.outputs.remaining }} tickers remain -- chaining next run"
+          gh workflow run excel_backtest.yml \
+            -F years="${{ inputs.years }}" \
+            -F limit="${{ inputs.limit }}" \
+            -F budget_min="${{ inputs.budget_min }}" \
+            -F continue_chain="${{ inputs.continue_chain }}"
