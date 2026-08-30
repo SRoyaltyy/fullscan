@@ -252,8 +252,8 @@ COLD (1w):
 - **Energy** -0.1% 1d -0.8% 1w · XLE, AMLP, VDE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 36 min **ABTC** Eric Trump Says The Tides Have Turned For Bitcoin As AI And Institutions Fuel Crypto Adoption (Stocktwits)
-- 44 min **BBIO** Acoramidis Demonstrates Reversal of Cardiac Structural Disease Progression and Functional Decline and Significantly Increases Days Alive and Free from Hospitalization in ATTR-CM (GlobeNewswire)
+- 38 min **ABTC** Eric Trump Says The Tides Have Turned For Bitcoin As AI And Institutions Fuel Crypto Adoption (Stocktwits)
+- 47 min **BBIO** Acoramidis Demonstrates Reversal of Cardiac Structural Disease Progression and Functional Decline and Significantly Increases Days Alive and Free from Hospitalization in ATTR-CM (GlobeNewswire)
 - 1 hour **LHX** L3Harris Celebrates Successful Launch of NASA's Nancy Grace Roman Space Telescope (Business Wire)
 - 1 hour **VSXY** Victoria's Secret stock soars nearly 300% as GLP-1 weight-loss drugs help reshape lingerie buying habits (Moneywise)
 - 2 hours **DKS,TGT** Come on, Target. Do better. (Yahoo Finance)
@@ -261,7 +261,7 @@ COLD (1w):
 - 2 hours **ALNY** Alnylam Presents New Data at ESC Congress 2026 Reinforcing Strength in RNAi-Powered TTR Silencing Across ATTR-CM Patient Populations and Treatment Settings (Business Wire)
 - 2 hours **CRM,CRWD,IGV,MSFT,NOW** AI isn't eating software after all - and the sector's 'epic' rally could run through October (MarketWatch)
 - 2 hours **MRVL,NVDA** 'All about acceleration': After Nvidia earnings, the tech trade is getting more segmented (Yahoo Finance)
-- 2 hours **AAPL** Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change? (BeInCrypto)
+- 3 hours **AAPL** Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change? (BeInCrypto)
 - 3 hours **JPM** When are September Social Security checks coming? It starts to get tricky very soon (Moneywise)
 - 3 hours **SKHY** South Korea may be getting too old to take advantage of its AI boom (Fortune)
 - 3 hours **BH** The Midwestern Burger Chain That's Going Full MAGA (The Wall Street Journal)

@@ -8722,7 +8722,7 @@
   ],
   "ticker_news": [
     {
-      "time": "36 min",
+      "time": "38 min",
       "title": "Eric Trump Says The Tides Have Turned For Bitcoin As AI And Institutions Fuel Crypto Adoption",
       "url": "https://finance.yahoo.com/m/26f44732-90d5-3e5d-b072-963af1e2cba3/eric-trump-says-%E2%80%98the-tides.html",
       "source": "Stocktwits",
@@ -8731,7 +8731,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "47 min",
       "title": "Acoramidis Demonstrates Reversal of Cardiac Structural Disease Progression and Functional Decline and Significantly Increases Days Alive and Free from Hospitalization in ATTR-CM",
       "url": "/news/386706/acoramidis-demonstrates-reversal-of-cardiac-structural-disease-progression-and-functional-decline-and-significantly-increases-days-alive-and-free-from-hospitalization-in-attr-cm",
       "source": "GlobeNewswire",
@@ -8809,7 +8809,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change?",
       "url": "https://finance.yahoo.com/m/19aa43b1-0e66-3238-86d1-6abf76da4d99/tim-cook-owns-crypto-but.html",
       "source": "BeInCrypto",
@@ -10383,5 +10383,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 131,
-  "overlay_at": "2026-08-30T10:45:02.485218-04:00"
+  "overlay_at": "2026-08-30T10:47:39.801793-04:00"
 }
