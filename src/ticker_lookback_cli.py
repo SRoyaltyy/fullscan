@@ -87,7 +87,9 @@ def _boxes(sig, fv_rel, in_buy, present, digest_tone=None, judge_tone=None,
            heat_tone=None, catal_tone=None):
     """Color boxes from the 09:30-ET information set only.
 
-    Tape boxes (join/vol/AB/peer) require the prior session's files.
+    Tape boxes (vol/AB/peer) require the prior session's files.
+    Join uses D's ranked file when that day's weather came from the
+    morning predict; otherwise the prior join.
     Morning boxes (sector/gen/news/digest/judge/heat/catal) require D's
     pre-open packet. Missing means that file was not knowable yet — never
     a silent yellow.
@@ -138,20 +140,30 @@ def _independent_green(sig, fv_rel):
 def _scan_session(sess, ticker):
     """Factor colors as of 09:30 ET on sess['date'].
 
-    Prior-session tape (join / Finviz / AB / peer / overnight book) plus
-    same-morning pre-open packet (news / digest / judge / predicts / heat /
-    catalyst). Same-day stock_book and same-day post-close Finviz are ignored.
+    Packet recipe: D's join when weather is the morning predict; prior
+    Finviz / AB / peer / overnight book; D's pre-open packet. Same-day
+    stock_book and same-day post-close Finviz are ignored.
     """
     t = tl._tick(ticker)
     prior = sess.get("prior")
     prior_date = sess.get("prior_date")
     packet = tl.preopen_packet(sess["date"], prior_date=prior_date)
 
-    join = (prior or {}).get("join", {}).get(t) if prior else None
+    use_packet_join = tl.join_packet_ok(sess["date"])
+    if use_packet_join:
+        join = (sess.get("join") or {}).get(t)
+        join_source, join_vintage = "packet_join", sess["date"]
+    else:
+        join = (prior or {}).get("join", {}).get(t) if prior else None
+        join_source, join_vintage = "prior_join", prior_date
     fv = (prior or {}).get("finviz", {}).get(t) if prior else None
     ab = (prior or {}).get("ab", {}).get(t) if prior else None
     peer = (prior or {}).get("peer", {}).get(t) if prior else None
-    univ = (prior.get("universe") or {}).get(t) if prior else None
+    univ = None
+    if use_packet_join:
+        univ = (sess.get("universe") or {}).get(t)
+    if not univ and prior:
+        univ = (prior.get("universe") or {}).get(t)
     prior_book = (prior or {}).get("book", {}).get(t) if prior else None
     quote = (prior or {}).get("quote_colors", {}).get(t) if prior else None
     catalyst = packet.get("catalyst", {}).get(t)
@@ -173,12 +185,12 @@ def _scan_session(sess, ticker):
     vintage = {"asof": "09:30_et", "prior_date": prior_date}
 
     if join:
-        source.append("prior_join")
+        source.append(join_source)
         sig["s_join"] = tl._s_from_join(join)
         sector = join.get("sector")
         industry = join.get("industry")
         size = join.get("size")
-        vintage["join"] = prior_date
+        vintage["join"] = join_vintage
     if ab:
         source.append("prior_ab")
         sig["s_ab"] = tl._s_from_ab(ab)
