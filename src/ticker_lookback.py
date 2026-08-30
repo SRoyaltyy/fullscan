@@ -123,6 +123,50 @@ def objectively_better(prev_boxes, next_boxes) -> bool:
     return improved
 
 
+def purely_worse(prev_boxes, next_boxes) -> bool:
+    """True when no comparable cell improved and at least one got worse."""
+    worsened = False
+    for key, _ in BOX_COLS:
+        a = _tone_rank((prev_boxes or {}).get(key))
+        b = _tone_rank((next_boxes or {}).get(key))
+        if a is None or b is None:
+            continue
+        if b > a:
+            return False
+        if b < a:
+            worsened = True
+    return worsened
+
+
+def tone_tally(boxes) -> dict:
+    counts = {"good": 0, "neutral": 0, "bad": 0}
+    for key, _ in BOX_COLS:
+        tone = str((boxes or {}).get(key) or "").lower()
+        if tone in counts:
+            counts[tone] += 1
+    return counts
+
+
+def general_condition(boxes) -> dict:
+    """Majority tone of printed factors plus G/Y/R counts.
+
+    Green or red only when that color strictly outcounts the other two.
+    Ties and yellow-led days are yellow. All-missing is missing.
+    """
+    c = tone_tally(boxes)
+    g, y, r = c["good"], c["neutral"], c["bad"]
+    n = g + y + r
+    if n == 0:
+        tone = "missing"
+    elif g > r and g > y:
+        tone = "good"
+    elif r > g and r > y:
+        tone = "bad"
+    else:
+        tone = "neutral"
+    return {"tone": tone, "good": g, "neutral": y, "bad": r, "n": n}
+
+
 def box_points(boxes) -> int:
     """Sum red=1 / yellow=2 / green=3. Missing is 0."""
     total = 0
@@ -149,13 +193,15 @@ def zero_red(boxes) -> bool:
 
 
 def annotate_signal_improved(days):
-    """Mark blue (improved or +≥3 points) and white (zero red) on each day."""
+    """Mark blue / alarm / white and attach the general-condition tally."""
     for i, day in enumerate(days or []):
         boxes = day.get("boxes") or {}
         day["zero_red"] = zero_red(boxes)
         day["box_points"] = box_points(boxes)
+        day["condition"] = general_condition(boxes)
         day["point_delta"] = None
         day["signal_improved"] = False
+        day["signal_alarm"] = False
         if i == 0:
             continue
         prev = days[i - 1].get("boxes") or {}
@@ -163,6 +209,7 @@ def annotate_signal_improved(days):
         day["point_delta"] = delta
         day["signal_improved"] = (
             objectively_better(prev, boxes) or delta >= BLUE_POINT_JUMP)
+        day["signal_alarm"] = purely_worse(prev, boxes)
     return days
 
 
