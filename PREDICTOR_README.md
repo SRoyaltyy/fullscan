@@ -133,6 +133,12 @@ The Action publishes:
 - 🚨 when the day is purely worse vs the prior session (no cell better, at least one worse);
 - a white mark on any day with zero red factor cells;
 - a **Cond** column with the G/Y/R tally; green or red when that color is the majority;
+- a **Reg** column with green vs red cell mass (yellows ignored). A simple
+  count of 🔵 / 🚨 / ⚪ is not predictive; the same tag changes meaning on
+  the color stretch around it. In the 09:30 sample, 🔵 on a red row was
+  the useful turn and 🔵 on a green row was late; 🚨 on a still-green row
+  was the first-crack 1d drop and 🚨 on an already-red row meant the
+  bounce did not show up yet;
 - responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
 - compact Markdown color table;
 - machine-readable JSON;

@@ -124,6 +124,11 @@ def _date_classes(day):
         cls.append("alarm")
     if day.get("zero_red"):
         cls.append("clean")
+    tone = (day.get("region") or {}).get("tone")
+    if tone == "good":
+        cls.append("reg-good")
+    elif tone == "bad":
+        cls.append("reg-bad")
     return " ".join(cls)
 
 
@@ -147,6 +152,28 @@ def _condition_md(cond):
     return f"{_icon(cond.get('tone'))} {text}"
 
 
+def _region(day):
+    reg = day.get("region")
+    if not reg:
+        reg = tl.color_region(day.get("boxes") or {})
+    return reg
+
+
+def _region_text(reg):
+    tone = (reg or {}).get("tone")
+    if tone in (None, "missing", "thin"):
+        return "—"
+    g, r = (reg or {}).get("good", 0), (reg or {}).get("bad", 0)
+    return f"{g}-{r}"
+
+
+def _region_md(reg):
+    text = _region_text(reg)
+    if text == "—":
+        return text
+    return f"{_icon((reg or {}).get('tone'))} {text}"
+
+
 def render_md(payload):
     L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_",
          "", "_As of 09:30 ET: overnight tape + that morning's pre-open packet. "
@@ -159,12 +186,17 @@ def render_md(payload):
           "or factor points jumped by ≥3 (red=1, yellow=2, green=3)_",
           "_🚨 = purely worse vs prior session (no cell better, at least one worse)_",
           "_⚪ = no red factor cells that day_",
-          "_Cond = G/Y/R tally; green or red when that color is the majority_", ""]
+          "_Cond = G/Y/R tally; green or red when that color is the majority_",
+          "_Reg = green vs red cell mass (yellows ignored). Tags change meaning "
+          "on a mismatch: 🔵 on a red row has been the useful turn; 🔵 on a "
+          "green row has been late. 🚨 on a still-green row has been the "
+          "first-crack 1d drop; 🚨 on an already-red row meant the bounce "
+          "did not show up yet._", ""]
     cols = " | ".join(label for _, label in tl.BOX_COLS)
-    bars = "|".join(["---"] * (7 + len(tl.BOX_COLS)))
+    bars = "|".join(["---"] * (8 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
         L += [f"## {rec['ticker']}", "",
-              f"| Date | Price | +1d | +3d | +1w | Class | Cond | {cols} |",
+              f"| Date | Price | +1d | +3d | +1w | Class | Cond | Reg | {cols} |",
               f"|{bars}|"]
         for d in rec["days"]:
             pc = d.get("price_changes") or {}
@@ -178,7 +210,8 @@ def render_md(payload):
                 f"{_fmt_price_md(pc, tones, '1d')} | "
                 f"{_fmt_price_md(pc, tones, '3d')} | "
                 f"{_fmt_price_md(pc, tones, '1w')} | {d.get('class')} | "
-                f"{_condition_md(_condition(d))} | {cells} |"
+                f"{_condition_md(_condition(d))} | "
+                f"{_region_md(_region(d))} | {cells} |"
             )
         L.append("")
     return "\n".join(L) + "\n"
@@ -205,6 +238,7 @@ def render_html(payload):
             )
             date_cls = _date_classes(day)
             cond = _condition(day)
+            reg = _region(day)
             price_tds = "".join(
                 f'<td class="{html.escape(tones.get(key, "missing"))}">'
                 f'{_fmt_price(pc, key)}</td>'
@@ -215,7 +249,9 @@ def render_html(payload):
                 f'{html.escape(_date_label(day))}</th>'
                 f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
                 f'<td class="{html.escape(cond.get("tone", "missing"))}">'
-                f'{html.escape(_condition_text(cond))}</td>{cells}</tr>'
+                f'{html.escape(_condition_text(cond))}</td>'
+                f'<td class="{html.escape(reg.get("tone", "missing"))}">'
+                f'{html.escape(_region_text(reg))}</td>{cells}</tr>'
             )
         factor_headers = "".join(
             f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
@@ -223,7 +259,7 @@ def render_html(payload):
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th>{factor_headers}</tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th>{factor_headers}</tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = "".join(
@@ -254,12 +290,15 @@ tbody th.alarm{{box-shadow:inset 3px 0 0 #f97316}}
 tbody th.alarm:not(.better):not(.clean){{background:#4b2028;color:#edf2ff}}
 tbody th.clean{{box-shadow:inset 3px 0 0 #f8fafc}}
 tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
+tbody th.reg-good{{box-shadow:inset 0 -3px 0 #22c55e}}
+tbody th.reg-bad{{box-shadow:inset 0 -3px 0 #ef4444}}
 .muted{{color:var(--muted)}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
 <p>Factor colors = knowable by 09:30 ET (overnight tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
-<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority</p>
+<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Reg = green vs red mass</p>
+<p class="muted">Tags change meaning by region: 🔵 on a red row has been the useful turn; 🔵 on a green row has been late. 🚨 on a still-green row has been the first-crack 1d drop; 🚨 on an already-red row meant the bounce did not show up yet.</p>
 {random_note}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
 
@@ -278,7 +317,7 @@ def write_xlsx(payload, path):
     }
     wb = Workbook()
     wb.remove(wb.active)
-    headers = ["Date", "Price", "+1d", "+3d", "+1w", "Cond"] + [
+    headers = ["Date", "Price", "+1d", "+3d", "+1w", "Cond", "Reg"] + [
         label for _, label in tl.BOX_COLS]
     for rec in payload["names"]:
         ws = wb.create_sheet(rec["ticker"][:31])
@@ -292,9 +331,11 @@ def write_xlsx(payload, path):
             pc = day.get("price_changes") or {}
             tones = day.get("price_tones") or _price_tones(pc)
             cond = _condition(day)
+            reg = _region(day)
             ws.append([
                 _date_label(day), pc.get("price"), pc.get("1d"),
                 pc.get("3d"), pc.get("1w"), _condition_text(cond),
+                _region_text(reg),
             ] + [
                 _icon((day.get("boxes") or {}).get(k, "missing"))
                 for k, _ in tl.BOX_COLS
@@ -318,7 +359,13 @@ def write_xlsx(payload, path):
             cond_cell = ws.cell(row, 6)
             cond_cell.fill = fills.get(cond.get("tone", "missing"), fills["missing"])
             cond_cell.alignment = Alignment(horizontal="center")
-            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=7):
+            reg_cell = ws.cell(row, 7)
+            reg_tone = reg.get("tone", "missing")
+            if reg_tone == "thin":
+                reg_tone = "missing"
+            reg_cell.fill = fills.get(reg_tone, fills["missing"])
+            reg_cell.alignment = Alignment(horizontal="center")
+            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=8):
                 tone = (day.get("boxes") or {}).get(key, "missing")
                 ws.cell(row, offset).fill = fills.get(tone, fills["missing"])
                 ws.cell(row, offset).alignment = Alignment(horizontal="center")

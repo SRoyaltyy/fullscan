@@ -53,6 +53,11 @@ TONE_RANK = {"bad": 0, "neutral": 1, "good": 2}
 # User-facing points for day-over-day jumps: red=1, yellow=2, green=3.
 TONE_POINTS = {"bad": 1, "neutral": 2, "good": 3}
 BLUE_POINT_JUMP = 3
+# Row region: ignore yellows. Need this many printed cells and this G−R gap.
+REGION_MIN_PRINT = 3
+REGION_GAP = 2
+STRETCH_WINDOW = 3
+STRETCH_EDGE = 0.15
 RANDOM_N = 10
 # Finviz export units: Market Cap = $ millions, Average Volume = thousands of shares.
 RANDOM_MIN_MCAP_M = 100.0
@@ -204,6 +209,87 @@ def zero_red(boxes) -> bool:
     return printed
 
 
+def color_region(boxes, min_print=REGION_MIN_PRINT, gap=REGION_GAP) -> dict:
+    """Green vs red cell mass, yellows ignored.
+
+    Cond treats yellow as a color, so a 5/4/1 row is yellow. The sheet's
+    visual 'sea of green' / 'sea of red' is G−R. Thin = not enough prints
+    to call a region.
+    """
+    c = tone_tally(boxes)
+    g, r = c["good"], c["bad"]
+    n = g + c["neutral"] + r
+    if n == 0:
+        tone, bal = "missing", None
+    elif n < min_print:
+        tone, bal = "thin", (g - r) / n
+    elif g - r >= gap:
+        tone, bal = "good", (g - r) / n
+    elif r - g >= gap:
+        tone, bal = "bad", (g - r) / n
+    else:
+        tone, bal = "neutral", (g - r) / n
+    return {"tone": tone, "good": g, "neutral": c["neutral"], "bad": r,
+            "n": n, "balance": None if bal is None else round(bal, 3)}
+
+
+def tag_context(day) -> list[str]:
+    """How the day's tags sit on the row's green/red mass.
+
+    Measured on the 09:30 set (67 names / ~1500 printed days): blue on a
+    red row was the useful blue (turn); blue on a green row was late.
+    Alarm on a still-green row was the first-crack 1d drop; alarm on an
+    already-red row meant the bounce did not show up yet.
+    """
+    reg = str((day.get("region") or {}).get("tone") or "")
+    out = []
+    if day.get("signal_improved"):
+        if reg == "bad":
+            out.append("turn")
+        elif reg == "good":
+            out.append("late")
+    if day.get("signal_alarm"):
+        if reg == "good":
+            out.append("first_crack")
+        elif reg == "bad":
+            out.append("continuation")
+    if day.get("zero_red"):
+        if reg == "neutral":
+            out.append("clean_chop")
+        elif reg == "good":
+            out.append("crowded")
+    return out
+
+
+def annotate_regions(days, window=STRETCH_WINDOW, edge=STRETCH_EDGE):
+    """Attach row region, trailing stretch, and tag-in-region context."""
+    bals = []
+    for day in days or []:
+        region = color_region(day.get("boxes") or {})
+        day["region"] = region
+        bals.append(region.get("balance"))
+    for i, day in enumerate(days or []):
+        window_vals = [b for b in bals[max(0, i - window + 1): i + 1]
+                       if b is not None]
+        if not window_vals:
+            stretch_tone, stretch_bal = "missing", None
+        else:
+            stretch_bal = sum(window_vals) / len(window_vals)
+            if stretch_bal >= edge:
+                stretch_tone = "good"
+            elif stretch_bal <= -edge:
+                stretch_tone = "bad"
+            else:
+                stretch_tone = "neutral"
+        day["stretch"] = {
+            "tone": stretch_tone,
+            "n": len(window_vals),
+            "balance": None if stretch_bal is None else round(stretch_bal, 3),
+        }
+        day["tag_context"] = tag_context(day)
+    return days
+
+
 def annotate_signal_improved(days):
     """Mark blue / alarm / white and attach the general-condition tally."""
     for i, day in enumerate(days or []):
@@ -222,6 +308,7 @@ def annotate_signal_improved(days):
         day["signal_improved"] = (
             objectively_better(prev, boxes) or delta >= BLUE_POINT_JUMP)
         day["signal_alarm"] = purely_worse(prev, boxes)
+    annotate_regions(days)
     return days
 
 
