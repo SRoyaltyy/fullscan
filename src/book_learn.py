@@ -153,6 +153,12 @@ def load_frame(date: str) -> pd.DataFrame | None:
         else:
             df["market_cap_m"] = np.nan
             df["avg_vol_k"] = np.nan
+    # Historical book CSVs predate relvol. Green-mask vol-red is a no-op
+    # unless the dated Finviz Relative Volume print is joined here.
+    if not any(c in df.columns for c in ("relvol", "rel_vol", "Relative Volume")):
+        liq = _load_finviz_liquidity(date)
+        if len(liq) and "relvol" in liq.columns:
+            df = df.merge(liq[["Ticker", "relvol"]], on="Ticker", how="left")
     df = _reconstruct_opp(df, date)
     if "s_opp" not in df.columns:
         df["s_opp"] = 0.0

@@ -143,13 +143,14 @@ RANGE_OPP = {
 
 
 def _load_finviz_liquidity(date: str) -> pd.DataFrame:
-    """Ticker → market_cap_m, avg_vol_k from dated (or latest) Finviz export."""
+    """Ticker → market_cap_m, avg_vol_k, relvol from dated (or latest) Finviz export."""
     export_dir = ROOT / "data" / "exports"
     path = export_dir / f"finviz_{date}.csv"
+    empty = pd.DataFrame(columns=["Ticker", "market_cap_m", "avg_vol_k", "relvol"])
     if not path.exists():
         files = sorted(export_dir.glob("finviz_????-??-??.csv"))
         if not files:
-            return pd.DataFrame(columns=["Ticker", "market_cap_m", "avg_vol_k"])
+            return empty
         path = files[-1]
     df = pd.read_csv(path, low_memory=False)
     tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
@@ -157,6 +158,9 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
     out["Ticker"] = df[tcol].astype(str).str.strip().str.upper()
     out["market_cap_m"] = pd.to_numeric(df.get("Market Cap"), errors="coerce")
     out["avg_vol_k"] = pd.to_numeric(df.get("Average Volume"), errors="coerce")
+    rel_col = next((c for c in ("Relative Volume", "Rel Volume", "Rel Vol", "RelVol")
+                    if c in df.columns), None)
+    out["relvol"] = pd.to_numeric(df[rel_col], errors="coerce") if rel_col else np.nan
     return out.drop_duplicates("Ticker", keep="first")
 
 
@@ -773,6 +777,7 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     gen_bias = float(_bias_for(gen_run, "1d") * gen_gate)
     sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
                    for sec, r in sector_runs.items()}
+    join = green_pile.attach_ranks(join)
     join["green"] = green_pile.green_mask(join)
     gp = green_pile.pile_status(join)
     print(f"[stock-book] green-pile {gp['reason']}")
@@ -909,14 +914,15 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
 
 
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
-              buy_mask=None):
+              buy_mask=None, buy_sort=None):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
     BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
-    full weighted walk. SELL always ranks on the core weighted score (no pile,
-    no buy-side add-ons) when sell_core is set and the column exists.
+    full weighted walk. When buy_sort is set (live green pile: green_rank),
+    rank the pool on that column instead of score_{horizon}. SELL always ranks
+    on the core weighted score (no pile, no buy-side add-ons) when sell_core
+    is set and the column exists.
     """
-    col = f"score_{horizon}"
     pool = df
     if buy_mask is not None:
         try:
@@ -925,6 +931,9 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             masked = df
         if masked is not None and len(masked):
             pool = masked
+    col = f"score_{horizon}"
+    if buy_sort and buy_sort in pool.columns:
+        col = buy_sort
     ranked = pool.sort_values(col, ascending=False)
     picks = []
     sec_n: dict[str, int] = {}
@@ -967,7 +976,7 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
 
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
-                 sell_core: bool = True, buy_mask=None):
+                 sell_core: bool = True, buy_mask=None, buy_sort=None):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
@@ -980,7 +989,7 @@ def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
         except Exception:
             sub_mask = None
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
-                      sell_core=sell_core, buy_mask=sub_mask)
+                      sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -1155,7 +1164,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
-        "s_heat_raw", "s_heat", "green",
+        "s_heat_raw", "s_heat", "green", "relvol", "green_rank", "s_tape",
         # per-horizon LLM components + core scores: this CSV is the learning
         # snapshot book_learn re-scores under candidate weights
         *[f"s_sector_{h}" for h in HORIZONS],
@@ -1171,11 +1180,15 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     sell_core = bool(meta.get("sell_excludes_addons", True))
     gp = meta.get("green_pile") or {}
     buy_mask = None
+    buy_sort = None
     if gp.get("used") and "green" in df.columns:
         buy_mask = df["green"] == True  # noqa: E712
+        if "green_rank" in df.columns:
+            buy_sort = "green_rank"
     books = {}
     for h in HORIZONS:
-        b, s = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask)
+        b, s = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask,
+                          buy_sort=buy_sort)
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
@@ -1184,7 +1197,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
             "ranker": "green_pile" if gp.get("used") else "weighted",
         }
         for bucket in SIZE_BUCKETS:
-            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core, buy_mask=buy_mask)
+            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core,
+                                 buy_mask=buy_mask, buy_sort=buy_sort)
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -1223,7 +1237,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "5. **Peer RS** — this week's return vs that name's own correlated basket. Kills XLE clones.",
         "6. **Mid-cap opportunity** — extra points for liquid small/mid ($400M–$20B) that are not jammed at the 52-week high. Micros skipped. Max 4 large/mega.",
         "",
-        "**All-green BUY.** A name is green when join, general, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile. If the pile is thinner (usually AB or peers all zeros, or no same-day general), the ranker keeps the old weighted walk. **SELL always ranks on core weights** — pile and mid-cap add-ons do not pick shorts.",
+        "**All-green BUY.** A name is green when join, general, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile ranked by green_rank (mean of the four cores, no opp). If the pile is thinner (usually AB or peers all zeros, or no same-day general), the ranker keeps the old weighted walk. **SELL always ranks on core weights** — pile and mid-cap add-ons do not pick shorts.",
         "",
         "**1d** leans on news + AB + peers. **1m** drops news and leans on AB + peers + join.",
         "A sector headline (e.g. ADBE) cannot zero a mid-cap that just beat earnings or is leading its own peers.",
@@ -1299,7 +1313,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     # Full rationale for 1d and 1m (the two sleeves that matter). Other horizons: compact table.
     detail_h = ("1d", "1m")
     for h in HORIZONS:
-        buys, sells = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask)
+        buys, sells = _book_side(df, h, top_n, sell_core=sell_core,
+                                buy_mask=buy_mask, buy_sort=buy_sort)
         if h in detail_h:
             L += ["", f"## {h} BUY — why these names", ""]
             for i, (_, r) in enumerate(buys.iterrows(), 1):
