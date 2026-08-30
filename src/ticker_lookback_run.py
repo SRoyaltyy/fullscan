@@ -9,6 +9,7 @@ from datetime import datetime
 
 from . import ticker_lookback as tl
 from . import ticker_lookback_cli as scan
+from . import ticker_lookback_setups as setups
 
 
 def _icon(kind):
@@ -175,6 +176,7 @@ def _region_md(reg):
 
 
 def render_md(payload):
+    setups.ensure_setups(payload)
     L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_",
          "", "_As of 09:30 ET: last completed tape (walk back if a session "
          "file is missing) + that morning's pre-open packet. Same-day stock "
@@ -183,16 +185,16 @@ def render_md(payload):
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
               f"mcap > $100M, avg vol > 500K_", ""]
+    L += [setups.render_setup_markdown(payload), ""]
     L += ["_🔵 = vs prior session: no cell worse and at least one better, "
           "or factor points jumped by ≥3 (red=1, yellow=2, green=3)_",
           "_🚨 = purely worse vs prior session (no cell better, at least one worse)_",
           "_⚪ = no red factor cells that day_",
           "_Cond = G/Y/R tally; green or red when that color is the majority_",
-          "_Reg = green vs red cell mass (yellows ignored). Tags change meaning "
-          "on a mismatch: 🔵 on a red row has been the useful turn; 🔵 on a "
-          "green row has been late. 🚨 on a still-green row has been the "
-          "first-crack 1d drop; 🚨 on an already-red row meant the bounce "
-          "did not show up yet._", ""]
+          "_Reg = green vs red cell mass (yellows ignored). Use the setup board "
+          "above — bare 🔵 / 🚨 / ⚪ and 🔵-on-red (`turn`) did not replicate "
+          "market-wide. 🚨 on a still-green row is the first-crack fade; "
+          "🔵 on a mixed 3-day stretch is the useful blue._", ""]
     cols = " | ".join(label for _, label in tl.BOX_COLS)
     bars = "|".join(["---"] * (8 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
@@ -214,18 +216,32 @@ def render_md(payload):
                 f"{_condition_md(_condition(d))} | "
                 f"{_region_md(_region(d))} | {cells} |"
             )
+        printed = setups.ticker_setup_lines(rec)
+        if printed:
+            L += ["", "**Setups this name printed**", ""]
+            for row in printed:
+                L.append(
+                    f"- {row['date']} · {row['label']} · **{row['verdict']}** · "
+                    f"this +1d {setups.pct(row.get('this_1d'))} · "
+                    f"market {setups.pct(row.get('edge_1d'))} (n={row.get('n')})"
+                )
         L.append("")
     return "\n".join(L) + "\n"
 
 
 def _slug(tickers, random_pick=False):
-    body = "-".join(tl._tick(t) for t in tickers if tl._tick(t)).lower()
+    names = [tl._tick(t) for t in tickers if tl._tick(t)]
     if random_pick:
-        return f"random-{body}" if body else "random"
-    return body
+        head = "-".join(t.lower() for t in names[:4])
+        n = len(names)
+        if head:
+            return f"random-{n}-{head}"
+        return f"random-{n}"
+    return "-".join(t.lower() for t in names)
 
 
 def render_html(payload):
+    setups.ensure_setups(payload)
     sections = []
     for rec in payload["names"]:
         rows = []
@@ -245,9 +261,11 @@ def render_html(payload):
                 f'{_fmt_price(pc, key)}</td>'
                 for key in ("1d", "3d", "1w")
             )
+            chips = setups.setup_chips_html(day)
+            chip_html = f'<div class="setup-hits">{chips}</div>' if chips else ""
             rows.append(
                 f'<tr><th class="{html.escape(date_cls)}">'
-                f'{html.escape(_date_label(day))}</th>'
+                f'{html.escape(_date_label(day))}{chip_html}</th>'
                 f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
                 f'<td class="{html.escape(cond.get("tone", "missing"))}">'
                 f'{html.escape(_condition_text(cond))}</td>'
@@ -256,14 +274,27 @@ def render_html(payload):
             )
         factor_headers = "".join(
             f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
+        printed = setups.ticker_setup_lines(rec)
+        extra = ""
+        if printed:
+            items = "".join(
+                f'<li>{html.escape(str(row["date"]))} · {html.escape(str(row["label"]))} · '
+                f'<strong>{html.escape(str(row["verdict"]))}</strong> · '
+                f'this +1d {html.escape(setups.pct(row.get("this_1d")))} · '
+                f'market {html.escape(setups.pct(row.get("edge_1d")))} '
+                f'(n={html.escape(str(row.get("n") or ""))})</li>'
+                for row in printed
+            )
+            extra = f'<ul class="ticker-setups">{items}</ul>'
         sections.append(f"""
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
  <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th>{factor_headers}</tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
+ {extra}
 </section>""")
-    nav = "".join(
+    nav = '<a href="#setups">Setups</a>' + "".join(
         f'<a href="#{html.escape(r["ticker"])}">{html.escape(r["ticker"])}</a>'
         for r in payload["names"]
     )
@@ -283,6 +314,7 @@ nav{{display:flex;gap:8px;overflow:auto;position:sticky;top:0;background:#0b1020
 nav a,.class{{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);text-decoration:none;white-space:nowrap}}
 .sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:22px}}
 table{{border-collapse:separate;border-spacing:0;min-width:900px;width:100%;background:var(--card)}}
+section.setups table{{min-width:640px}}
 th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
 thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
 td.good{{background:#123d2c}}td.bad{{background:#4b2028}}td.neutral{{background:#473e1d}}td.missing{{background:#23283a}}
@@ -293,21 +325,99 @@ tbody th.clean{{box-shadow:inset 3px 0 0 #f8fafc}}
 tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
 tbody th.reg-good{{box-shadow:inset 0 -3px 0 #22c55e}}
 tbody th.reg-bad{{box-shadow:inset 0 -3px 0 #ef4444}}
+.setup-chip{{display:inline-block;margin:3px 2px 0 0;padding:2px 8px;border-radius:999px;font-size:11px;white-space:normal}}
+.setup-chip.good{{background:#123d2c}}
+.setup-chip.bad{{background:#4b2028}}
+.setup-hits{{margin-top:4px;font-weight:400;white-space:normal}}
+.ticker-setups{{color:var(--muted);padding-left:18px}}
 .muted{{color:var(--muted)}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
 <p>Factor colors = knowable by 09:30 ET (last completed tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
 <p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Reg = green vs red mass</p>
-<p class="muted">Tags change meaning by region: 🔵 on a red row has been the useful turn; 🔵 on a green row has been late. 🚨 on a still-green row has been the first-crack 1d drop; 🚨 on an already-red row meant the bounce did not show up yet.</p>
-{random_note}<nav>{nav}</nav>{''.join(sections)}
+<p class="muted">Use the setup board below. Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (turn) did not replicate market-wide. 🚨 on a still-green row is the first-crack fade; 🔵 on a mixed 3-day stretch is the useful blue.</p>
+{random_note}{setups.render_setup_html(payload)}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
+
+
+def _write_setups_sheet(wb, payload, fills):
+    from openpyxl.styles import Alignment, Font, PatternFill
+
+    setups.ensure_setups(payload)
+    window = payload.get("setup_window") or setups.mine_window()
+    ws = wb.create_sheet("Setups", 0)
+    ws["A1"] = "Setups that paid market-wide"
+    ws["A1"].font = Font(bold=True, size=14)
+    ws["A2"] = (
+        f"Mine window: {window.get('from_date')} → {window.get('to_date')} · "
+        f"{window.get('n_tickers')} liquid names · {window.get('n_printed')} printed days"
+    )
+    ws["A3"] = (
+        "Edge is excess vs the same-day universe median, minus the +0.27 sample-mean tilt. "
+        "Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (turn) did not replicate."
+    )
+    headers = [
+        "Setup", "Use", "When", "Market n", "1d edge", "3d xs", "1w xs",
+        "Mine from", "Mine to", "Hits this run", "This-run +1d",
+    ]
+    ws.append([])
+    ws.append(headers)
+    head_row = ws.max_row
+    for cell in ws[head_row]:
+        cell.font = Font(bold=True, color="FFFFFF")
+        cell.fill = PatternFill("solid", fgColor="1F4E78")
+        cell.alignment = Alignment(horizontal="center")
+    run_by = {s["id"]: s for s in (payload.get("setup_this_run") or [])}
+    for s in payload.get("setup_book") or []:
+        r = run_by.get(s["id"]) or {}
+        ws.append([
+            s.get("label"), s.get("verdict"), s.get("when"), s.get("n"),
+            s.get("edge_1d"), s.get("edge_3d"), s.get("edge_1w"),
+            s.get("mine_from"), s.get("mine_to"),
+            r.get("hits_this_run") or 0, r.get("this_run_mean_1d"),
+        ])
+        row = ws.max_row
+        tone = "good" if s.get("verdict") == "long" else "bad"
+        ws.cell(row, 2).fill = fills.get(tone, fills["missing"])
+        ws.cell(row, 2).alignment = Alignment(horizontal="center")
+        for col in (5, 6, 7, 11):
+            ws.cell(row, col).number_format = '0.00'
+    ws.append([])
+    ws.append(["Dates these setups printed (this run)"])
+    ws.cell(ws.max_row, 1).font = Font(bold=True, size=12)
+    hit_headers = [
+        "Date", "Ticker", "Setup", "Use", "This +1d", "This +3d", "This +1w",
+        "Market 1d edge", "Market n", "Mine from", "Mine to",
+    ]
+    ws.append(hit_headers)
+    hit_head = ws.max_row
+    for cell in ws[hit_head]:
+        cell.font = Font(bold=True, color="FFFFFF")
+        cell.fill = PatternFill("solid", fgColor="1F4E78")
+        cell.alignment = Alignment(horizontal="center")
+    for h in payload.get("setup_hits") or []:
+        ws.append([
+            h.get("date"), h.get("ticker"), h.get("label"), h.get("verdict"),
+            h.get("this_1d"), h.get("this_3d"), h.get("this_1w"),
+            h.get("edge_1d"), h.get("n"), h.get("mine_from"), h.get("mine_to"),
+        ])
+        row = ws.max_row
+        tone = "good" if h.get("verdict") == "long" else "bad"
+        ws.cell(row, 4).fill = fills.get(tone, fills["missing"])
+        for col in (5, 6, 7, 8):
+            ws.cell(row, col).number_format = '0.00'
+    widths = {"A": 36, "B": 12, "C": 56, "D": 12, "E": 12, "F": 12,
+              "G": 12, "H": 16, "I": 12, "J": 14, "K": 14}
+    for col, width in widths.items():
+        ws.column_dimensions[col].width = width
 
 
 def write_xlsx(payload, path):
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
 
+    setups.ensure_setups(payload)
     fills = {
         "good": PatternFill("solid", fgColor="63BE7B"),
         "neutral": PatternFill("solid", fgColor="FFEB84"),
@@ -318,7 +428,8 @@ def write_xlsx(payload, path):
     }
     wb = Workbook()
     wb.remove(wb.active)
-    headers = ["Date", "Price", "+1d", "+3d", "+1w", "Cond", "Reg"] + [
+    _write_setups_sheet(wb, payload, fills)
+    headers = ["Date", "Price", "+1d", "+3d", "+1w", "Cond", "Reg", "Setups"] + [
         label for _, label in tl.BOX_COLS]
     for rec in payload["names"]:
         ws = wb.create_sheet(rec["ticker"][:31])
@@ -336,7 +447,7 @@ def write_xlsx(payload, path):
             ws.append([
                 _date_label(day), pc.get("price"), pc.get("1d"),
                 pc.get("3d"), pc.get("1w"), _condition_text(cond),
-                _region_text(reg),
+                _region_text(reg), setups.setup_labels(day),
             ] + [
                 _icon((day.get("boxes") or {}).get(k, "missing"))
                 for k, _ in tl.BOX_COLS
@@ -366,14 +477,18 @@ def write_xlsx(payload, path):
                 reg_tone = "missing"
             reg_cell.fill = fills.get(reg_tone, fills["missing"])
             reg_cell.alignment = Alignment(horizontal="center")
-            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=8):
+            ws.cell(row, 8).alignment = Alignment(horizontal="left", wrap_text=True)
+            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=9):
                 tone = (day.get("boxes") or {}).get(key, "missing")
                 ws.cell(row, offset).fill = fills.get(tone, fills["missing"])
                 ws.cell(row, offset).alignment = Alignment(horizontal="center")
         ws.column_dimensions["A"].width = 18
         ws.column_dimensions["B"].width = 12
+        ws.column_dimensions["H"].width = 36
         for col in range(3, len(headers) + 1):
-            ws.column_dimensions[chr(64 + col)].width = 9
+            letter = chr(64 + col) if col <= 26 else None
+            if letter and letter != "H":
+                ws.column_dimensions[letter].width = 9
         ws.auto_filter.ref = ws.dimensions
     wb.save(path)
 
@@ -397,9 +512,19 @@ def _emit_github_env(slug, tickers, random_pick=False):
         fh.write(f"LOOKBACK_RANDOM={'true' if random_pick else 'false'}\n")
 
 
+def _emit_github_summary(payload):
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(setups.render_setup_markdown(payload))
+        fh.write("\n")
+
+
 def run(tickers, from_date=None, to_date=None, random_pick=False):
     payload = scan_tickers(tickers, from_date=from_date, to_date=to_date)
     payload["random"] = bool(random_pick)
+    setups.attach_setups(payload)
     tl.BOOK_DIR.mkdir(parents=True, exist_ok=True)
     tl.DAILY.mkdir(parents=True, exist_ok=True)
     tl.SCORE.mkdir(parents=True, exist_ok=True)
@@ -427,6 +552,7 @@ def run(tickers, from_date=None, to_date=None, random_pick=False):
     xlsx_path = xlsx_dir / f"{slug}.xlsx"
     write_xlsx(payload, xlsx_path)
     _emit_github_env(slug, tickers, random_pick=random_pick)
+    _emit_github_summary(payload)
     print(md[:12000])
     print(f"[ticker-lookback] slug {slug}")
     print(f"[ticker-lookback] names {','.join(tickers)}")
@@ -442,7 +568,7 @@ def main():
     ap.add_argument("--tickers", default="",
                     help="comma-separated names, or 'random'")
     ap.add_argument("--random", action="store_true",
-                    help="pick 10 stocks with mcap>$100M and avg vol>500K")
+                    help="pick 50 stocks with mcap>$100M and avg vol>500K")
     ap.add_argument("--random-n", type=int, default=tl.RANDOM_N)
     ap.add_argument("--seed", default="", help="optional RNG seed for --random")
     ap.add_argument("--from-date", default="", help="optional YYYY-MM-DD")

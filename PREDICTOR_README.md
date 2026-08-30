@@ -110,10 +110,13 @@ This is the one-button for every predictive part **as a backup**. The weekday cl
 
 GitHub Actions → **Ticker Lookback (any stock)** → **Run workflow**.
 Enter one or more comma-separated symbols (`AAPL,TEM,BRK-B`) and optional
-start/end dates, or check **Random** for 10 names with market cap > $100M
+start/end dates, or check **Random** for 50 names with market cap > $100M
 and average volume > 500K. This is ticker-first: any name, not just the
 book. Each dated row is the **09:30 ET information set** — what the
 pipeline actually knew before the cash open — not the same-day close.
+The Action opens with the featured setups that paid market-wide
+(mine window, n, 1d/3d/1w edge) and every date those setups printed
+on the names in this run.
 
 | Box | Vintage on date D |
 |---|---|
@@ -131,7 +134,8 @@ name — not that we refused a last-known file from an earlier session.
 
 The Action publishes:
 
-- downloadable XLSX with red/yellow/green cells (one sheet per ticker);
+- a **setups board** at the top of the phone page, markdown, Action job summary, and the first XLSX sheet — market-wide n / 1d edge / 3d xs / 1w xs plus every date this run printed one;
+- downloadable XLSX with red/yellow/green cells (one sheet per ticker, plus a Setups column);
 - +1d / +3d / +1w **forward** price changes from that session (next 1 / 3 / 5 trading days), colored the same way (green up, yellow flat, red down);
 - a blue date when factor colors improved vs the prior session (no cell worse and at least one better) **or** factor points jumped by ≥3 (red=1, yellow=2, green=3);
 - 🚨 when the day is purely worse vs the prior session (no cell better, at least one worse);

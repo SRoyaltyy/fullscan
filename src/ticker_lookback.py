@@ -68,7 +68,7 @@ STRETCH_WINDOW = 3
 STRETCH_EDGE = 0.15
 # Walk at most this many prior sessions for last-known tape / predict.
 LAST_KNOWN_STEPS = 8
-RANDOM_N = 10
+RANDOM_N = 50
 # Finviz export units: Market Cap = $ millions, Average Volume = thousands of shares.
 RANDOM_MIN_MCAP_M = 100.0
 RANDOM_MIN_AVG_VOL_K = 500.0
