@@ -72,6 +72,7 @@ jobs:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           GROK_ONLY: "1"
+          FINVIZ_SKIP_LIVE: "1"
         run: |
           set -euo pipefail
           DATE="${{ github.event.inputs.run_date }}"
