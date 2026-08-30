@@ -264,6 +264,8 @@ def main():
                                                 chunksize=32):
                 ok += 0 if e else 1
                 err += 1 if e else 0
+                if e and err <= 5:
+                    print(f"  ERR {tk}: {e}", flush=True)
                 if (ok + err) % 200 == 0:
                     print(f"  ... {ok+err}/{len(tickers)} "
                           f"({time.time()-t0:.0f}s)", flush=True)
