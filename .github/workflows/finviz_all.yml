@@ -13,6 +13,9 @@ name: Finviz ALL (GH-hosted Elite)
 # Hard fail only if the futures tape is empty after the full scrape.
 
 on:
+  schedule:
+    # 21:10 EDT post-close groups + tape on Azure, not Aliyun.
+    - cron: "10 1 * * 2-6"
   workflow_dispatch:
     inputs:
       run_date:
