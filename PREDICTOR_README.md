@@ -118,13 +118,13 @@ artifact, even when the ticker was never printed in a buy/sell list.
 The Action publishes:
 
 - downloadable XLSX with red/yellow/green cells (one sheet per ticker);
-- 1d / 3d / 1w price changes colored the same way (green up, yellow flat, red down);
+- +1d / +3d / +1w **forward** price changes from that session (next 1 / 3 / 5 trading days), colored the same way (green up, yellow flat, red down);
 - a blue date cell when that day's factor colors improved vs the prior session (no cell worse, at least one better);
 - responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
 - compact Markdown color table;
 - machine-readable JSON;
-- price and trailing 1d/3d/1w changes as known on each date;
-- forward 1d/2d/3d/1w returns in JSON for backtest verification.
+- as-of close plus forward +1d/+3d/+1w returns (calendar weekends and holiday dumps are omitted);
+- the same forward returns in JSON for backtest verification.
 
 Black means the source did not exist for that ticker/session; it never means
 neutral. The Action does not need an Elite login because it backtests the

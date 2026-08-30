@@ -32,7 +32,7 @@ SCORE = ROOT / "03_scoreboard"
 ET = ZoneInfo("America/New_York")
 
 EPS = 0.05
-PRICE_EPS = 0.5  # ±0.5% prints yellow on trailing 1d/3d/1w
+PRICE_EPS = 0.5  # ±0.5% prints yellow on forward 1d/3d/1w
 RELVOL_SPIKE = 1.5
 RELVOL_DEAD = 0.7
 CORE = ("s_join", "s_general", "s_ab", "s_peer")
@@ -84,8 +84,17 @@ def _polarity(x, eps=EPS):
 
 
 def price_tone(x, eps=PRICE_EPS):
-    """Red / yellow / green for a trailing percent change."""
+    """Red / yellow / green for a forward percent change."""
     return _polarity(x, eps=eps)
+
+
+def is_trading_date(date_str) -> bool:
+    """True for Mon–Fri. Weekend artifact dumps are not market sessions."""
+    try:
+        d = datetime.strptime(str(date_str)[:10], "%Y-%m-%d")
+    except (TypeError, ValueError):
+        return False
+    return d.weekday() < 5
 
 
 def _tone_rank(tone):
@@ -203,7 +212,7 @@ def session_dates():
     dates.update(_dates_from(AB_DIR, "????-??-??_ab_checklist.csv"))
     dates.update(_dates_from(PEER_DIR, "????-??-??_peer_rs.csv"))
     dates.update(_dates_from(QUOTE_DIR, "????-??-??_quote_colors_detail.json"))
-    return sorted(dates)
+    return sorted(d for d in dates if is_trading_date(d))
 
 
 def _by_ticker(df):
@@ -302,8 +311,20 @@ def _price_panel():
     return _PRICE_PANEL
 
 
-def forward_returns(ticker: str, date: str) -> dict[str, float | None]:
-    """Signal-close to future-close returns over trading sessions."""
+def _asof_close(ticker: str, date: str, current_finviz: dict | None = None):
+    """Session close on `date`: OHLC panel first, then that day's Finviz Price."""
+    t = _tick(ticker)
+    panel = _price_panel()
+    if not panel.empty and t in panel.columns:
+        idx = panel.index.searchsorted(pd.Timestamp(date))
+        if idx < len(panel.index) and panel.index[idx].date().isoformat() == date:
+            px = _num(panel[t].iloc[idx])
+            if px:
+                return px
+    return _num((current_finviz or {}).get("Price"))
+
+
+def _fwd_from_panel(ticker: str, date: str) -> dict[str, float | None]:
     panel = _price_panel()
     t = _tick(ticker)
     horizons = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
@@ -324,53 +345,58 @@ def forward_returns(ticker: str, date: str) -> dict[str, float | None]:
     return out
 
 
-def trailing_returns(ticker: str, date: str,
-                     sessions: list[dict] | None = None,
-                     current_finviz: dict | None = None) -> dict:
-    """Price and trailing 1d/3d/1w changes known as of this session.
+def _fwd_from_sessions(ticker: str, date: str, sessions: list[dict] | None,
+                       entry: float | None) -> dict[str, float | None]:
+    """Fill forward % from later trading-session Finviz closes."""
+    horizons = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
+    out = {h: None for h in horizons}
+    if not entry or not sessions:
+        return out
+    t = _tick(ticker)
+    future = [s for s in sessions
+              if s.get("date") and s["date"] > date and is_trading_date(s["date"])]
+    for h, n in horizons.items():
+        if len(future) < n:
+            continue
+        row = (future[n - 1].get("finviz") or {}).get(t) or {}
+        exitp = _num(row.get("Price"))
+        if exitp:
+            out[h] = round(100 * (exitp / entry - 1), 3)
+    return out
 
-    Prefer the point-in-time OHLC panel. Full-market Finviz snapshots fill
-    current price plus 1d/1w when the local price panel has not caught up.
+
+def forward_returns(ticker: str, date: str,
+                    sessions: list[dict] | None = None,
+                    current_finviz: dict | None = None) -> dict[str, float | None]:
+    """Close on `date` → close 1 / 2 / 3 / 5 trading sessions later."""
+    out = _fwd_from_panel(ticker, date)
+    if all(v is not None for v in out.values()):
+        return out
+    entry = _asof_close(ticker, date, current_finviz=current_finviz)
+    fallback = _fwd_from_sessions(ticker, date, sessions, entry)
+    for h, v in fallback.items():
+        if out.get(h) is None:
+            out[h] = v
+    return out
+
+
+def forward_price_changes(ticker: str, date: str,
+                          sessions: list[dict] | None = None,
+                          current_finviz: dict | None = None) -> dict:
+    """As-of close plus forward 1d / 3d / 1w percent changes.
+
+    1d = next trading session, 3d = three sessions later, 1w = five sessions later.
     """
     t = _tick(ticker)
-    out = {"price": None, "1d": None, "3d": None, "1w": None}
-    panel = _price_panel()
-    if not panel.empty and t in panel.columns:
-        idx = panel.index.searchsorted(pd.Timestamp(date))
-        if idx < len(panel.index) and panel.index[idx].date().isoformat() == date:
-            current = _num(panel[t].iloc[idx])
-            if current:
-                out["price"] = round(current, 4)
-                for label, n in (("1d", 1), ("3d", 3), ("1w", 5)):
-                    if idx >= n:
-                        prior = _num(panel[t].iloc[idx - n])
-                        if prior:
-                            out[label] = round(100 * (current / prior - 1), 3)
-    fv = current_finviz or {}
-    if out["price"] is None:
-        out["price"] = _num(fv.get("Price"))
-    if out["1d"] is None:
-        out["1d"] = _num(fv.get("Change") or fv.get("Change %"))
-    if out["1w"] is None:
-        out["1w"] = _num(
-            fv.get("Performance (Week)") or fv.get("Perf Week"))
-
-    # Last-resort 3-session close from dated full-market snapshots.
-    if out["3d"] is None and out["price"] and sessions:
-        current_i = next(
-            (i for i, s in enumerate(sessions) if s["date"] == date), None)
-        prior_prices = []
-        if current_i is not None:
-            for s in reversed(sessions[:current_i]):
-                row = (s.get("finviz") or {}).get(t) or {}
-                px = _num(row.get("Price"))
-                if px:
-                    prior_prices.append(px)
-                if len(prior_prices) >= 3:
-                    break
-        if len(prior_prices) >= 3:
-            out["3d"] = round(100 * (out["price"] / prior_prices[2] - 1), 3)
-    return out
+    price = _asof_close(t, date, current_finviz=current_finviz)
+    fwd = forward_returns(
+        t, date, sessions=sessions, current_finviz=current_finviz)
+    return {
+        "price": None if price is None else round(price, 4),
+        "1d": fwd.get("1d"),
+        "3d": fwd.get("3d"),
+        "1w": fwd.get("1w"),
+    }
 
 
 def _join_family_tone(val):

@@ -240,6 +240,6 @@ def _scan_session(sess, ticker):
         "quote_color_fields": (quote or {}).get("fields") or {},
         "ab_factors": _ab_factors(ab),
         "catalyst": catalyst,
-        "forward_returns": tl.forward_returns(t, sess["date"]),
+        "forward_returns": tl.forward_returns(t, sess["date"]),  # sessions filled by runner
         "artifacts_that_day": sess["has"],
     }
