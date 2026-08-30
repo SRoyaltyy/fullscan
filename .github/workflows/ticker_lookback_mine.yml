@@ -1,0 +1,72 @@
+name: Ticker Lookback Mine
+
+# Market-wide 09:30 pattern mine: tags × region and factor configs
+# vs +1d/+3d/+1w excess. Same vintage rules as ticker lookback.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_names:
+        description: "Cap liquid names (0 = all)"
+        required: false
+        default: "0"
+        type: string
+      from_date:
+        description: "Optional first date YYYY-MM-DD"
+        required: false
+        default: ""
+        type: string
+      to_date:
+        description: "Optional last date YYYY-MM-DD"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ticker-lookback-mine
+  cancel-in-progress: false
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Mine
+        env:
+          MAX_NAMES: ${{ inputs.max_names }}
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [ -n "${MAX_NAMES}" ] && [ "${MAX_NAMES}" != "0" ]; then
+            ARGS+=(--max-names "$MAX_NAMES")
+          fi
+          [ -n "$FROM_DATE" ] && ARGS+=(--from-date "$FROM_DATE")
+          [ -n "$TO_DATE" ] && ARGS+=(--to-date "$TO_DATE")
+          python -m src.ticker_lookback_mine "${ARGS[@]}"
+          test -s 03_scoreboard/TICKER_LOOKBACK_MINE.md
+          test -s 03_scoreboard/ticker_lookback_mine.json
+      - name: Publish
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: ticker lookback mine" \
+            03_scoreboard/TICKER_LOOKBACK_MINE.md \
+            03_scoreboard/ticker_lookback_mine.json \
+            01_daily/*_ticker_lookback_mine.md
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ticker-lookback-mine
+          path: |
+            03_scoreboard/TICKER_LOOKBACK_MINE.md
+            03_scoreboard/ticker_lookback_mine.json

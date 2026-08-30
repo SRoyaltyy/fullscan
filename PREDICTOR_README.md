@@ -149,6 +149,11 @@ The Action publishes:
 - as-of close plus forward +1d/+3d/+1w returns (calendar weekends and holiday dumps are omitted);
 - the same forward returns in JSON for backtest verification.
 
+A separate Action, **Ticker Lookback Mine**, scans the whole liquid
+universe (same mcap/vol gates) and grades 🔵 / 🚨 / ⚪ × region/stretch
+plus factor tones and pairs against +1d/+3d/+1w excess vs that day's
+universe median. Write-up: `03_scoreboard/TICKER_LOOKBACK_MINE.md`.
+
 Black means nothing knowable printed for that name; it never means
 neutral. Last-known tape / predict / map-heat from an earlier session
 still color when those files were knowable at 09:30. The Action does
