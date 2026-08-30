@@ -18,6 +18,10 @@ every caller (digest, map_heat, quote_colors, catalyst) inherits it.
 
 Transient 403/429/5xx and login-HTML are retried FINVIZ_GET_RETRIES times
 (default 3) so one Cloudflare hiccup does not empty the futures tape.
+
+Aliyun ECS is blocked on every Elite HTML path. live_html_allowed() is
+False when FINVIZ_SKIP_LIVE=1 or the runner is self-hosted/ecs; get()
+returns None without a request. FINVIZ_FORCE_LIVE=1 overrides.
 """
 from __future__ import annotations
 
@@ -60,6 +64,22 @@ def get_retries() -> int:
         return max(1, min(8, int(raw)))
     except ValueError:
         return 3
+
+
+def live_html_allowed() -> bool:
+    """False on Aliyun ECS / explicit skip. True on GH-hosted and laptops."""
+    if (os.environ.get("FINVIZ_FORCE_LIVE") or "").strip() == "1":
+        return True
+    if (os.environ.get("FINVIZ_SKIP_LIVE") or "").strip() == "1":
+        return False
+    blob = " ".join([
+        os.environ.get("RUNNER_NAME") or "",
+        os.environ.get("RUNNER_LABELS") or "",
+        os.environ.get("FINVIZ_RUNNER") or "",
+    ]).lower()
+    if "self-hosted" in blob or "ecs" in blob:
+        return False
+    return True
 
 
 def _pace() -> None:
@@ -176,6 +196,9 @@ def get(
     timeout: int = 30,
 ) -> requests.Response | None:
     """GET Elite first. Do not fall through to public finviz.com from the cloud."""
+    if not live_html_allowed():
+        print("[finviz] SKIP live HTML (ECS / FINVIZ_SKIP_LIVE) — use committed artifacts")
+        return None
     if isinstance(paths, str):
         paths = [paths]
     last_err = None

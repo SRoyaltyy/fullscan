@@ -69,7 +69,14 @@ if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
 fi
 echo "[map-postclose] source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
 
-"$PY" -m src.map_heat --date "$TARGET" --force
+# Aliyun Cloudflare-blocks Elite HTML. Never scrape here — clone the
+# GH-hosted finviz_all / preopen scrape artifact forward to next session.
+export FINVIZ_SKIP_LIVE=1
+if [ -s "01_daily/map_heat/${SOURCE}_map_heat.json" ]; then
+  echo "[map-postclose] clone $SOURCE map_heat → $TARGET"
+  cp -f "01_daily/map_heat/${SOURCE}_map_heat.json" "01_daily/map_heat/${TARGET}_map_heat.json" || true
+  cp -f "01_daily/map_heat/${SOURCE}_map_heat.md" "01_daily/map_heat/${TARGET}_map_heat.md" || true
+fi
 "$PY" -m src.map_heat_postclose \
   --source-date "$SOURCE" --target-date "$TARGET" "${FORCE_FLAG[@]}"
 
