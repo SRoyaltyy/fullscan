@@ -4,6 +4,8 @@ name: Map Heat Captain Research (post-close)
 # One sector-batched pass researches every liquid SPX/RUT industry captain
 # for the NEXT session. The 05:55 job performs one small overnight refresh.
 # Preopen lock / systemd active is the only hard gate. /tmp locks are not used.
+#
+# ECS never scrapes Elite HTML (Aliyun 403). Clone today's GH-hosted heat.
 
 on:
   schedule:
@@ -46,6 +48,7 @@ jobs:
       OPENCLAW_TIMEOUT: "10800"
       MAP_POSTCLOSE_LOCK: /home/gha/fullscan-persist/locks/map-postclose.lock
       GROK_ONLY: "1"
+      FINVIZ_SKIP_LIVE: "1"
       PYTHONUNBUFFERED: "1"
       HOME: /home/gha
       FULLSCAN_HOME: /home/gha
@@ -88,11 +91,8 @@ jobs:
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
           GROK_ONLY: "1"
+          FINVIZ_SKIP_LIVE: "1"
           SOURCE: ${{ github.event.inputs.source_date }}
           TARGET: ${{ github.event.inputs.target_date }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
@@ -100,7 +100,6 @@ jobs:
           set -uo pipefail
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           echo "et_hm=$ET_HM uid=$(id -u) user=$(id -un)"
-          echo "openclaw_token_set=$([ -n \"${OPENCLAW_TOKEN:-}\" ] && echo yes || echo no)"
           if command -v systemctl >/dev/null 2>&1 \
              && systemctl is-active --quiet fullscan-preopen.service; then
             echo "preopen service active — abort"
@@ -123,13 +122,14 @@ jobs:
           fi
           echo "source=$SOURCE target=$TARGET FORCE=$FORCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
           set -e
-          echo "=== map_heat --force (3 min cap; Aliyun 403/yfinance must not block Grok) ==="
-          timeout 180 python -u -m src.map_heat --date "$TARGET" --force \
-            || echo "WARN: map_heat --force failed/timed out — using $SOURCE heat as $TARGET baseline if needed"
-          if [ ! -s "01_daily/map_heat/${TARGET}_map_heat.json" ]; then
+          echo "=== clone GH-hosted map_heat (ECS never scrapes Elite HTML) ==="
+          export FINVIZ_SKIP_LIVE=1
+          if [ -s "01_daily/map_heat/${SOURCE}_map_heat.json" ]; then
             echo "cloning $SOURCE map_heat → $TARGET"
             cp -f "01_daily/map_heat/${SOURCE}_map_heat.json" "01_daily/map_heat/${TARGET}_map_heat.json" || true
             cp -f "01_daily/map_heat/${SOURCE}_map_heat.md" "01_daily/map_heat/${TARGET}_map_heat.md" || true
+          elif [ ! -s "01_daily/map_heat/${TARGET}_map_heat.json" ]; then
+            echo "WARN: no $SOURCE heat to clone and $TARGET missing"
           fi
           echo "=== Grok captain research ==="
           ARGS=(--source-date "$SOURCE" --target-date "$TARGET")
