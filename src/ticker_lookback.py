@@ -1,17 +1,5 @@
 """Ticker-first lookback — any name, every session we have artifacts for.
 
-Date-first report is `book_lookback.py` / `01_daily/YYYY-MM-DD_lookback.md`.
-This flips the axis: pass tickers (they do NOT have to be in a printed book),
-walk every session that left a book / join / Finviz / AB / peer file, and
-rebuild the same boxes the Aug-20 lookback page uses.
-
-Full-market sources (not just the printed 15):
-  stock_book CSV   ~2.7k later dates, ~11.5k on Aug 13-14
-  join ranked      ~5.9k
-  Finviz export    ~11.6k
-  AB slim          ~2.7k
-  peer RS          ~5.1k
-
 CLI:
   python -m src.ticker_lookback --tickers TEM,ELF,AAPL
 """
@@ -56,7 +44,7 @@ JOIN_FAMILIES = (
 _INDEX = None
 
 
-def _tick(s) -> str:
+def _tick(s):
     return str(s or "").strip().upper()
 
 
@@ -70,7 +58,7 @@ def _num(x, default=None):
     return default if math.isnan(v) else v
 
 
-def _polarity(x, eps: float = EPS) -> str:
+def _polarity(x, eps=EPS):
     v = _num(x)
     if v is None:
         return "missing"
@@ -81,7 +69,7 @@ def _polarity(x, eps: float = EPS) -> str:
     return "neutral"
 
 
-def _csv(path: Path) -> pd.DataFrame:
+def _csv(path):
     if not path.exists():
         return pd.DataFrame()
     try:
@@ -90,7 +78,7 @@ def _csv(path: Path) -> pd.DataFrame:
         return pd.DataFrame()
 
 
-def _jload(path: Path):
+def _jload(path):
     if not path.exists():
         return None
     try:
@@ -99,7 +87,7 @@ def _jload(path: Path):
         return None
 
 
-def _dates_from(folder: Path, pattern: str) -> list[str]:
+def _dates_from(folder, pattern):
     out = []
     for p in folder.glob(pattern):
         m = re.search(r"(20\d{2}-\d{2}-\d{2})", p.name)
@@ -108,7 +96,7 @@ def _dates_from(folder: Path, pattern: str) -> list[str]:
     return sorted(set(out))
 
 
-def session_dates() -> list[str]:
+def session_dates():
     dates = set()
     dates.update(_dates_from(BOOK_DIR, "????-??-??_stock_book.csv"))
     dates.update(_dates_from(JOIN_DIR, "????-??-??_ranked.csv"))
@@ -118,7 +106,7 @@ def session_dates() -> list[str]:
     return sorted(dates)
 
 
-def _by_ticker(df: pd.DataFrame) -> dict:
+def _by_ticker(df):
     if df is None or df.empty:
         return {}
     tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
@@ -130,7 +118,7 @@ def _by_ticker(df: pd.DataFrame) -> dict:
     return out
 
 
-def build_index() -> dict:
+def build_index():
     global _INDEX
     if _INDEX is not None:
         return _INDEX
@@ -149,39 +137,22 @@ def build_index() -> dict:
         for h, entry in (book_json.get("books") or {}).items():
             for i, r in enumerate(entry.get("buy") or [], 1):
                 t = _tick(r.get("ticker"))
-                buys.setdefault(t, {})[h] = {
-                    "rank": i, "score": r.get("score"), "reasons": r.get("reasons"),
-                }
+                buys.setdefault(t, {})[h] = {"rank": i, "score": r.get("score"), "reasons": r.get("reasons")}
             for i, r in enumerate(entry.get("sell") or [], 1):
                 t = _tick(r.get("ticker"))
                 sells.setdefault(t, {})[h] = {"rank": i, "score": r.get("score")}
-        green_buy = {
-            _tick(x.get("ticker") if isinstance(x, dict) else x)
-            for x in (green.get("green_buy") or [])
-        }
-        live_buy = {
-            _tick(x.get("ticker") if isinstance(x, dict) else x)
-            for x in (green.get("live_buy") or [])
-        }
+        green_buy = {_tick(x.get("ticker") if isinstance(x, dict) else x) for x in (green.get("green_buy") or [])}
+        live_buy = {_tick(x.get("ticker") if isinstance(x, dict) else x) for x in (green.get("live_buy") or [])}
         sessions.append({
             "date": d,
-            "has": {
-                "book": bool(book_map), "join": bool(join_map),
-                "finviz": bool(fv_map), "ab": bool(ab_map),
-                "peer": bool(peer_map), "universe": bool(univ_map),
-                "green": bool(green),
-            },
-            "n_book": len(book_map), "n_join": len(join_map),
-            "n_finviz": len(fv_map), "n_ab": len(ab_map), "n_peer": len(peer_map),
-            "book": book_map, "join": join_map, "finviz": fv_map,
-            "ab": ab_map, "peer": peer_map, "universe": univ_map,
-            "buys": buys, "sells": sells,
+            "has": {"book": bool(book_map), "join": bool(join_map), "finviz": bool(fv_map),
+                     "ab": bool(ab_map), "peer": bool(peer_map), "universe": bool(univ_map), "green": bool(green)},
+            "n_book": len(book_map), "n_join": len(join_map), "n_finviz": len(fv_map),
+            "n_ab": len(ab_map), "n_peer": len(peer_map),
+            "book": book_map, "join": join_map, "finviz": fv_map, "ab": ab_map,
+            "peer": peer_map, "universe": univ_map, "buys": buys, "sells": sells,
             "green_buy": green_buy, "live_buy": live_buy,
-            "green_meta": {
-                "n_pile": green.get("n_pile"),
-                "n_universe": green.get("n_universe"),
-                "pile_used": green.get("pile_used"),
-            },
+            "green_meta": {"n_pile": green.get("n_pile"), "n_universe": green.get("n_universe"), "pile_used": green.get("pile_used")},
         })
     paper_hits = {}
     trades = _csv(PAPER_DIR / "trades.csv")
@@ -189,11 +160,71 @@ def build_index() -> dict:
         for rec in trades.to_dict(orient="records"):
             t = _tick(rec.get("ticker"))
             paper_hits.setdefault(t, []).append({
-                "date": str(rec.get("date") or "")[:10],
-                "side": rec.get("side"),
-                "sleeve": rec.get("sleeve"),
-                "price": _num(rec.get("price")),
+                "date": str(rec.get("date") or "")[:10], "side": rec.get("side"),
+                "sleeve": rec.get("sleeve"), "price": _num(rec.get("price")),
                 "reason": str(rec.get("reason") or "")[:180],
             })
     _INDEX = {"sessions": sessions, "paper": paper_hits, "dates": dates}
     return _INDEX
+
+
+def _join_family_tone(val):
+    if val is None or (isinstance(val, float) and math.isnan(val)):
+        return "missing"
+    s = str(val).strip().lower()
+    if not s or s in {"nan", "none", "neutral", "mid", "past", "flat"}:
+        return "neutral"
+    good = {"uptrend", "above", "yes", "good", "cheap", "strong_buy", "buy", "big_beat", "beat", "fast", "up", "high", "spike", "hot", "lead", "bull", "positive"}
+    bad = {"downtrend", "below", "no", "poor", "rich", "expensive", "sell", "strong_sell", "miss", "big_miss", "slow", "down", "low", "quiet", "dead", "lag", "veto", "bear", "negative", "overbought"}
+    if s in good:
+        return "good"
+    if s in bad:
+        return "bad"
+    if "beat" in s or "buy" in s or "up" in s:
+        return "good"
+    if "miss" in s or "sell" in s or "down" in s:
+        return "bad"
+    return "neutral"
+
+
+def _s_from_join(j):
+    if not j:
+        return None
+    v = _num(j.get("score_norm"))
+    if v is not None:
+        return max(-1.0, min(1.0, v / 2.0))
+    v = _num(j.get("total_score"))
+    if v is not None:
+        return max(-1.0, min(1.0, v / 3.0))
+    return None
+
+
+def _s_from_ab(ab):
+    if not ab:
+        return None
+    v = _num(ab.get("ab_raw"))
+    return None if v is None else max(-1.0, min(1.0, v / 12.0))
+
+
+def _s_from_peer(p):
+    if not p:
+        return None
+    v = _num(p.get("rs_week"))
+    if v is None:
+        v = _num(p.get("rs_month"))
+    return None if v is None else max(-1.0, min(1.0, v / 8.0))
+
+
+def _fv_relvol(fv):
+    if not fv:
+        return None
+    for k in ("Relative Volume", "Rel Volume", "Rel Vol", "RelVol", "relvol"):
+        v = _num(fv.get(k))
+        if v is not None:
+            return v
+    vol = _num(fv.get("Volume"))
+    adv = _num(fv.get("Average Volume") or fv.get("Avg Volume") or fv.get("Avg Vol"))
+    if vol and adv and adv > 0:
+        adv_shares = adv * 1000 if adv < vol else adv
+        return vol / adv_shares if adv_shares else None
+    return None
