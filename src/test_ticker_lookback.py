@@ -175,13 +175,16 @@ def test_random_universe_gates() -> None:
     row = df[df["Ticker"].astype(str).str.upper() == uni[0]].iloc[0]
     assert float(row["Market Cap"]) > 100
     assert float(row["Average Volume"]) > 500
-    a = tl.pick_random_tickers(n=10, seed=7)
-    b = tl.pick_random_tickers(n=10, seed=7)
-    c = tl.pick_random_tickers(n=10, seed=8)
+    assert tl.RANDOM_N == 50
+    a = tl.pick_random_tickers(n=tl.RANDOM_N, seed=7)
+    b = tl.pick_random_tickers(n=tl.RANDOM_N, seed=7)
+    c = tl.pick_random_tickers(n=tl.RANDOM_N, seed=8)
     assert a == b
-    assert len(a) == 10
-    assert len(set(a)) == 10
+    assert len(a) == tl.RANDOM_N
+    assert len(set(a)) == tl.RANDOM_N
     assert a != c
+    ten = tl.pick_random_tickers(n=10, seed=7)
+    assert len(ten) == 10
     names, flag = run.resolve_tickers("random", seed=7)
     assert flag is True
     assert names == a
@@ -231,8 +234,8 @@ def test_signal_improved_is_strict() -> None:
         "names": [{"ticker": "TEST", "days": days}],
     }
     page = run.render_html(payload)
-    assert 'th class="better clean">🔵⚪ 2026-08-20</th>' in page
-    assert "th class=\"clean\">⚪ 2026-08-19</th>" in page
+    assert 'th class="better clean">🔵⚪ 2026-08-20' in page
+    assert 'th class="clean">⚪ 2026-08-19' in page
     assert "🚨 2026-08-21" in page
     assert "+≥3 pts" in page
     assert "purely worse" in page

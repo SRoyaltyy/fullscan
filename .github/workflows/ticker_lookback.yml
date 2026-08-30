@@ -6,8 +6,10 @@ name: Ticker Lookback (any stock)
 # came from the morning predict. Map-heat industry boards and the last
 # prior predict also color when D's file is missing. Never the
 # same-day stock book (~13:00) or same-day post-close Finviz (~21:10).
-# Enter any ticker(s), or check Random for 10 liquid names
-# (mcap > $100M, avg volume > 500K).
+# Enter any ticker(s), or check Random for 50 liquid names
+# (mcap > $100M, avg volume > 500K). The run prints the featured
+# setups that paid market-wide (dates + 1d/3d/1w edge) at the top
+# of the phone page, markdown, spreadsheet, and job summary.
 
 on:
   workflow_dispatch:
@@ -18,7 +20,7 @@ on:
         default: ""
         type: string
       random:
-        description: "Pick 10 random stocks (market cap > $100M, average volume > 500K)"
+        description: "Pick 50 random stocks (market cap > $100M, average volume > 500K)"
         required: false
         default: false
         type: boolean
@@ -106,6 +108,7 @@ jobs:
             echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/ticker-lookback/${SLUG}.html)"
             echo "- [Markdown on GitHub](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/ticker_lookback/${SLUG}.md)"
             echo "- The artifact above contains the colored XLSX, HTML, Markdown and JSON immediately."
+            echo "- Featured setups (dates + market-wide edge) are in the job summary above and at the top of the phone page / XLSX Setups sheet."
           } >> "$GITHUB_STEP_SUMMARY"
       - name: Refresh GitHub Pages
         env:
