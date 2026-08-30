@@ -17,6 +17,17 @@ def test_enriched_ab_dates_are_indexed() -> None:
     assert sess["n_ab"] > 1000
 
 
+def test_session_dates_skip_weekends() -> None:
+    dates = tl.session_dates()
+    assert dates
+    assert "2026-08-29" not in dates  # Saturday dump
+    assert "2026-08-30" not in dates  # Sunday dump
+    assert "2026-04-26" not in dates  # Sunday dump
+    from datetime import datetime
+    for d in dates:
+        assert datetime.strptime(d, "%Y-%m-%d").weekday() < 5
+
+
 def test_any_finviz_name_gets_cards_without_book() -> None:
     payload = run.scan_tickers(
         ["AAPL"], from_date="2026-08-24", to_date="2026-08-25")
@@ -34,12 +45,19 @@ def test_phone_html_and_returns() -> None:
     page = run.render_html(payload)
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
-    assert "<th>1d</th><th>3d</th><th>1w</th>" in page
+    assert "<th>+1d</th><th>+3d</th><th>+1w</th>" in page
     assert "AAPL" in page
-    assert payload["names"][0]["days"][0]["forward_returns"]["1d"] is not None
-    changes = payload["names"][0]["days"][0]["price_changes"]
+    day0 = payload["names"][0]["days"][0]
+    assert day0["forward_returns"]["1d"] is not None
+    changes = day0["price_changes"]
     assert changes["price"] is not None
     assert changes["1d"] is not None
+    assert changes["1d"] == day0["forward_returns"]["1d"]
+    panel = tl._price_panel()
+    t = panel["AAPL"]
+    i = panel.index.searchsorted(__import__("pandas").Timestamp("2026-08-19"))
+    expected = round(100 * (float(t.iloc[i + 1]) / float(t.iloc[i]) - 1), 3)
+    assert changes["1d"] == expected
     tones = payload["names"][0]["days"][0]["price_tones"]
     assert tones["1d"] in {"good", "neutral", "bad"}
     assert 'td class="' in page
@@ -126,9 +144,10 @@ def test_signal_improved_is_strict() -> None:
 
 if __name__ == "__main__":
     test_enriched_ab_dates_are_indexed()
+    test_session_dates_skip_weekends()
     test_any_finviz_name_gets_cards_without_book()
     test_phone_html_and_returns()
     test_random_universe_gates()
     test_price_tones()
     test_signal_improved_is_strict()
-    print("6 tests passed")
+    print("7 tests passed")

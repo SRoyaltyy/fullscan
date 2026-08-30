@@ -23,10 +23,11 @@ def _price_tones(pc):
 
 
 def _attach_day_extras(card, ticker, sess, sessions):
-    card["price_changes"] = tl.trailing_returns(
-        ticker, sess["date"], sessions=sessions,
-        current_finviz=(sess.get("finviz") or {}).get(ticker),
-    )
+    fv = (sess.get("finviz") or {}).get(ticker)
+    card["price_changes"] = tl.forward_price_changes(
+        ticker, sess["date"], sessions=sessions, current_finviz=fv)
+    card["forward_returns"] = tl.forward_returns(
+        ticker, sess["date"], sessions=sessions, current_finviz=fv)
     card["price_tones"] = _price_tones(card["price_changes"])
     return card
 
@@ -109,7 +110,7 @@ def render_md(payload):
     bars = "|".join(["---"] * (6 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
         L += [f"## {rec['ticker']}", "",
-              f"| Date | Price | 1d | 3d | 1w | Class | {cols} |",
+              f"| Date | Price | +1d | +3d | +1w | Class | {cols} |",
               f"|{bars}|"]
         for d in rec["days"]:
             pc = d.get("price_changes") or {}
@@ -163,7 +164,7 @@ def render_html(payload):
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>1d</th><th>3d</th><th>1w</th>{factor_headers}</tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th>{factor_headers}</tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = "".join(
@@ -212,7 +213,7 @@ def write_xlsx(payload, path):
     }
     wb = Workbook()
     wb.remove(wb.active)
-    headers = ["Date", "Price", "1d", "3d", "1w"] + [
+    headers = ["Date", "Price", "+1d", "+3d", "+1w"] + [
         label for _, label in tl.BOX_COLS]
     for rec in payload["names"]:
         ws = wb.create_sheet(rec["ticker"][:31])
