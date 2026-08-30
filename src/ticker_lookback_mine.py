@@ -180,18 +180,20 @@ def summarize(rows, horizon="1d") -> dict:
     }
 
 
-def verdict(stat, min_n=MIN_N) -> str:
-    """long / fade / noise from 1d excess."""
+def verdict(stat, min_n=MIN_N, base_xs=0.0) -> str:
+    """long / fade / noise from 1d excess vs the sample's own mean excess."""
     if not stat or stat.get("n", 0) < min_n:
         return "thin"
     xs = stat.get("mean_xs")
     hit = stat.get("hit_xs")
     if xs is None:
         return "noise"
+    edge = float(xs) - float(base_xs or 0.0)
+    stat["edge"] = round(edge, 3)
     hit_edge = hit is not None and abs(hit - 0.5) >= HIT_CUT
-    if xs >= XS_CUT and (hit is None or hit >= 0.5 or hit_edge):
+    if edge >= XS_CUT and (hit is None or hit >= 0.48 or hit_edge):
         return "long"
-    if xs <= -XS_CUT and (hit is None or hit <= 0.5 or hit_edge):
+    if edge <= -XS_CUT and (hit is None or hit <= 0.52 or hit_edge):
         return "fade"
     return "noise"
 
@@ -206,13 +208,16 @@ def _group(rows, key_fn) -> dict[str, list]:
     return out
 
 
-def _pack(groups, min_n=MIN_N) -> list[dict]:
+def _pack(groups, min_n=MIN_N, base_xs=0.0) -> list[dict]:
     packed = []
     for key, group in groups.items():
+        if not key:
+            continue
         stat = summarize(group, "1d")
         if not stat.get("n"):
             continue
-        item = {"key": key, **stat, "verdict": verdict(stat, min_n=min_n)}
+        read = verdict(stat, min_n=min_n, base_xs=base_xs)
+        item = {"key": key, **stat, "verdict": read}
         for h in ("3d", "1w"):
             extra = summarize(group, h)
             item[f"{h}_n"] = extra.get("n", 0)
@@ -221,38 +226,58 @@ def _pack(groups, min_n=MIN_N) -> list[dict]:
         packed.append(item)
     packed.sort(key=lambda r: (
         0 if r["verdict"] in {"long", "fade"} else 1,
-        -abs(r.get("mean_xs") or 0),
+        -abs(r.get("edge") or r.get("mean_xs") or 0),
         -r["n"],
     ))
     return packed
 
 
+def _context_groups(rows) -> dict[str, list]:
+    out: dict[str, list] = {}
+    for row in rows:
+        for ctx in row.get("tag_context") or []:
+            if ctx:
+                out.setdefault(str(ctx), []).append(row)
+    return out
+
+
 def mine_buckets(rows) -> dict[str, list[dict]]:
     """Interpretable configs only — no kitchen-sink cross."""
+    base = _pack({"all": rows}, min_n=1)
+    base_xs = (base[0].get("mean_xs") or 0.0) if base else 0.0
+    kw = {"base_xs": base_xs}
     return {
-        "base": _pack({"all": rows}, min_n=1),
-        "tags": _pack(_group(rows, _tag_name)),
-        "tag_context": _pack(
-            _group(rows, lambda r: ",".join(r.get("tag_context") or []) or None),
-            min_n=MIN_N_RARE),
+        "base": base,
+        "tags": _pack(_group(
+            rows, lambda r: None if _tag_name(r) == "none" else _tag_name(r)),
+            **kw),
+        "tag_context": _pack(_context_groups(rows), min_n=MIN_N_RARE, **kw),
         "tag_region": _pack(_group(
             rows,
             lambda r: f"{_tag_name(r)}|{r.get('region') or '?'}"
             if _tag_name(r) != "none" else None),
-            min_n=MIN_N_RARE),
+            min_n=MIN_N_RARE, **kw),
         "tag_stretch": _pack(_group(
             rows,
             lambda r: f"{_tag_name(r)}|{r.get('stretch') or '?'}"
             if _tag_name(r) != "none" else None),
-            min_n=MIN_N_RARE),
-        "region": _pack(_group(rows, lambda r: r.get("region") or None)),
-        "stretch": _pack(_group(rows, lambda r: r.get("stretch") or None)),
-        "cond": _pack(_group(rows, lambda r: r.get("cond") or None)),
-        "class": _pack(_group(rows, lambda r: r.get("cls") or None),
-                       min_n=MIN_N_RARE),
-        "factor": _pack(_factor_groups(rows)),
-        "pair": _pack(_pair_groups(rows), min_n=MIN_N),
-        "tag_factor": _pack(_tag_factor_groups(rows), min_n=MIN_N_RARE),
+            min_n=MIN_N_RARE, **kw),
+        "region": _pack(_group(
+            rows, lambda r: f"reg={r['region']}" if r.get("region") else None),
+            **kw),
+        "stretch": _pack(_group(
+            rows,
+            lambda r: f"stretch={r['stretch']}" if r.get("stretch") else None),
+            **kw),
+        "cond": _pack(_group(
+            rows, lambda r: f"cond={r['cond']}" if r.get("cond") else None),
+            **kw),
+        "class": _pack(_group(
+            rows, lambda r: f"class={r['cls']}" if r.get("cls") else None),
+            min_n=MIN_N_RARE, **kw),
+        "factor": _pack(_factor_groups(rows), **kw),
+        "pair": _pack(_pair_groups(rows), min_n=MIN_N, **kw),
+        "tag_factor": _pack(_tag_factor_groups(rows), min_n=MIN_N_RARE, **kw),
     }
 
 
@@ -312,10 +337,34 @@ def _usable(rows):
     return [r for r in rows if r.get("verdict") in {"long", "fade"}]
 
 
+def _top_usable(buckets, n=10) -> list[dict]:
+    skip = {"gated_out", "class=gated_out", "asof_0930", "class=asof_0930"}
+    rows = []
+    for key in ("tag_region", "tag_context", "tag_stretch",
+                "factor", "pair", "tag_factor"):
+        for row in buckets.get(key) or []:
+            if row.get("verdict") not in {"long", "fade"}:
+                continue
+            if row.get("key") in skip:
+                continue
+            rows.append(row)
+    rows.sort(key=lambda r: -abs(r.get("edge") or 0))
+    seen, out = set(), []
+    for row in rows:
+        if row["key"] in seen:
+            continue
+        seen.add(row["key"])
+        out.append(row)
+        if len(out) >= n:
+            break
+    return out
+
+
 def render_md(payload) -> str:
     meta = payload.get("meta") or {}
     buckets = payload.get("buckets") or {}
     base = (buckets.get("base") or [{}])[0]
+    lead = _top_usable(buckets)
     L = [
         "# Ticker lookback mine — market-wide 09:30",
         "",
@@ -328,8 +377,19 @@ def render_md(payload) -> str:
         f"Sessions {meta.get('from_date') or '—'} → {meta.get('to_date') or '—'}.",
         "",
         "Excess = name return minus that session's universe median. "
-        "Long / fade need n≥80 (n≥40 for rarer tags) and |1d excess|≥0.15. "
+        "Edge = that excess minus the sample's own mean excess "
+        "(right-skewed names pull the raw mean above the median). "
+        "Long / fade need n≥80 (n≥40 for rarer tags) and |edge|≥0.15. "
         "Same-day Finviz and same-day book do not color the factors.",
+        "",
+        "## Read this first",
+        "",
+        "Biggest edges vs the sample's own mean. "
+        "`turn` (blue on a red row) did **not** clear the bar market-wide. "
+        "The useful blue is a blue tag on a mixed 3-day stretch. "
+        "Alarm on a still-green row (`first_crack`) is the clean fade.",
+        "",
+        _table(lead, limit=10) if lead else "_No usable patterns._",
         "",
         "## Base rate",
         "",
@@ -395,15 +455,15 @@ def render_md(payload) -> str:
 
 def _table(rows, limit=24) -> str:
     lines = [
-        "| pattern | n | read | 1d hit | 1d xs-hit | 1d xs | 3d xs | 1w xs |",
-        "|---|---:|---|---:|---:|---:|---:|---:|",
+        "| pattern | n | read | 1d hit | 1d xs-hit | 1d edge | 1d xs | 3d xs | 1w xs |",
+        "|---|---:|---|---:|---:|---:|---:|---:|---:|",
     ]
     for row in rows[:limit]:
         lines.append(
             f"| `{row['key']}` | {row['n']} | {row.get('verdict')} | "
             f"{_pct(row.get('hit'))} | {_pct(row.get('hit_xs'))} | "
-            f"{_num(row.get('mean_xs'))} | {_num(row.get('3d_mean_xs'))} | "
-            f"{_num(row.get('1w_mean_xs'))} |"
+            f"{_num(row.get('edge'))} | {_num(row.get('mean_xs'))} | "
+            f"{_num(row.get('3d_mean_xs'))} | {_num(row.get('1w_mean_xs'))} |"
         )
     return "\n".join(lines)
 

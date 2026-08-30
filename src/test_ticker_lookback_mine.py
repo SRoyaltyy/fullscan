@@ -47,10 +47,12 @@ def test_verdict_long_fade_noise() -> None:
     fade_rows = [_row("2026-08-20", -1.0, -0.4) for _ in range(90)]
     noise_rows = [_row("2026-08-20", 0.1, 0.02) for _ in range(90)]
     thin_rows = [_row("2026-08-20", 2.0, 1.0) for _ in range(10)]
-    assert mine.verdict(mine.summarize(long_rows)) == "long"
-    assert mine.verdict(mine.summarize(fade_rows)) == "fade"
-    assert mine.verdict(mine.summarize(noise_rows)) == "noise"
-    assert mine.verdict(mine.summarize(thin_rows)) == "thin"
+    assert mine.verdict(mine.summarize(long_rows), base_xs=0.0) == "long"
+    assert mine.verdict(mine.summarize(fade_rows), base_xs=0.0) == "fade"
+    assert mine.verdict(mine.summarize(noise_rows), base_xs=0.0) == "noise"
+    assert mine.verdict(mine.summarize(thin_rows), base_xs=0.0) == "thin"
+    # A +0.20 excess is just the sample skew if the base is also +0.20.
+    assert mine.verdict(mine.summarize(long_rows), base_xs=0.40) == "noise"
 
 
 def test_mine_buckets_tag_region() -> None:

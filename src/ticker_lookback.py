@@ -246,10 +246,9 @@ def color_region(boxes, min_print=REGION_MIN_PRINT, gap=REGION_GAP) -> dict:
 def tag_context(day) -> list[str]:
     """How the day's tags sit on the row's green/red mass.
 
-    Measured on the 09:30 set (67 names / ~1500 printed days): blue on a
-    red row was the useful blue (turn); blue on a green row was late.
-    Alarm on a still-green row was the first-crack 1d drop; alarm on an
-    already-red row meant the bounce did not show up yet.
+    Labels only — the market-wide mine decides which ones pay.
+    first_crack (alarm on a still-green row) is the clean fade.
+    turn (blue on a red row) did not clear the bar market-wide.
     """
     reg = str((day.get("region") or {}).get("tone") or "")
     out = []
