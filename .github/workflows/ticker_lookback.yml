@@ -39,7 +39,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow
+        run: pip install pandas pyarrow openpyxl
       - name: Run ticker-first backtest
         env:
           TICKERS: ${{ inputs.tickers }}
@@ -70,6 +70,7 @@ jobs:
         with:
           name: ticker-lookback-${{ env.SLUG }}
           path: |
+            03_scoreboard/ticker_lookback/${{ env.SLUG }}.xlsx
             dashboard/ticker-lookback/${{ env.SLUG }}.html
             03_scoreboard/ticker_lookback/${{ env.SLUG }}.md
             data/stock_book/ticker_lookback/${{ env.SLUG }}.json
@@ -80,7 +81,7 @@ jobs:
             echo
             echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/ticker-lookback/${SLUG}.html)"
             echo "- [Markdown on GitHub](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/ticker_lookback/${SLUG}.md)"
-            echo "- The artifact above contains HTML + Markdown + JSON immediately."
+            echo "- The artifact above contains the colored XLSX, HTML, Markdown and JSON immediately."
           } >> "$GITHUB_STEP_SUMMARY"
       - name: Refresh GitHub Pages
         env:

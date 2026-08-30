@@ -1,6 +1,11 @@
 """Ticker-first lookback regression tests against committed artifacts."""
 from __future__ import annotations
 
+import tempfile
+from pathlib import Path
+
+from openpyxl import load_workbook
+
 from src import ticker_lookback as tl
 from src import ticker_lookback_run as run
 
@@ -28,10 +33,19 @@ def test_phone_html_and_returns() -> None:
         ["AAPL"], from_date="2026-08-19", to_date="2026-08-20")
     page = run.render_html(payload)
     assert 'name="viewport"' in page
-    assert "Finviz full-market factors" in page
-    assert "After signal close" in page
+    assert "🟢 positive" in page
+    assert "<th>1d</th><th>3d</th><th>1w</th>" in page
     assert "AAPL" in page
     assert payload["names"][0]["days"][0]["forward_returns"]["1d"] is not None
+    changes = payload["names"][0]["days"][0]["price_changes"]
+    assert changes["price"] is not None
+    assert changes["1d"] is not None
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / "lookback.xlsx"
+        run.write_xlsx(payload, p)
+        wb = load_workbook(p)
+        assert "AAPL" in wb.sheetnames
+        assert wb["AAPL"]["C2"].value is not None
 
 
 if __name__ == "__main__":

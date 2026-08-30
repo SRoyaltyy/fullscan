@@ -30,6 +30,10 @@ def scan_ticker(ticker, sessions=None, idx=None):
                 "artifacts_that_day": sess["has"],
             })
             continue
+        card["price_changes"] = tl.trailing_returns(
+            t, sess["date"], sessions=sessions,
+            current_finviz=(sess.get("finviz") or {}).get(t),
+        )
         days.append(card)
         if card.get("buy_ranks"):
             recommended.append({
@@ -69,97 +73,28 @@ def scan_tickers(tickers, from_date=None, to_date=None):
 
 
 def render_md(payload):
-    L = [
-        "# Ticker lookback — any name, every session",
-        "", f"_Generated {payload['generated_at']}_", "",
-        "Same boxes as `01_daily/2026-08-20_lookback.md`:",
-        "good / present-flat / against / missing.", "",
-        "A name does not have to be in the printed book.",
-        "Independent green = join/gen/AB/peer all >= +0.05, sector/news not red, relvol not dead (<0.7).",
-        "", "## Sessions on disk", "",
-        "| Date | book | join | finviz | AB | peer |",
-        "|------|-----:|-----:|-------:|---:|-----:|",
-    ]
-    for s in payload["sessions"]:
-        L.append(
-            f"| {s['date']} | {s['n_book'] or '—'} | {s['n_join'] or '—'} | "
-            f"{s['n_finviz'] or '—'} | {s['n_ab'] or '—'} | {s['n_peer'] or '—'} |"
-        )
+    L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_", ""]
+    cols = " | ".join(label for _, label in tl.BOX_COLS)
+    bars = "|".join(["---"] * (6 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
-        buys = ", ".join(
-            x["date"] + " (" + ",".join(x["horizons"]) + ")"
-            for x in rec["recommended_days"]
-        ) or "—"
-        L += ["", f"## {rec['ticker']}", "",
-              f"Prints on **{rec['n_with_print']}/{rec['n_sessions']}** sessions. Buy-book days: {buys}.", "",
-              f"Independent-green days: {', '.join(rec['green_days']) or '—'}.", ""]
-        if rec["paper"]:
-            L.append("Paper fills:")
-            for p in rec["paper"]:
-                L.append(f"- {p['date']} {p.get('side')} {p.get('sleeve')} @ {p.get('price')} — {p.get('reason')}")
-            L.append("")
-        L += [
-            "| Date | class | join | sect | gen | news | dig | jdg | AB | peer | heat | vol | cat | buy | sources |",
-            "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|",
-        ]
+        L += [f"## {rec['ticker']}", "",
+              f"| Date | Price | 1d | 3d | 1w | Class | {cols} |",
+              f"|{bars}|"]
         for d in rec["days"]:
+            pc = d.get("price_changes") or {}
+            def pval(key):
+                v = pc.get(key)
+                if v is None:
+                    return "—"
+                return f"{v:+.2f}%" if key != "price" else f"${v:,.2f}"
             boxes = d.get("boxes") or {}
-            cells = " | ".join(_icon(boxes.get(k, "missing")) for k, _ in tl.BOX_COLS)
-            src = ",".join(d.get("sources") or []) or "—"
-            L.append(f"| {d['date']} | {d.get('class')} | {cells} | {src} |")
-        L.append("")
-        for d in rec["days"]:
-            if d.get("class") == "no_data":
-                continue
-            s = d.get("signals") or {}
-            L += [
-                f"### {d['date']} · {d.get('size') or '?'} · {d.get('sector') or '?'}", "",
-                f"**class: `{d.get('class')}`** · sources: {', '.join(d.get('sources') or []) or '—'}", "",
-                " ".join(f"{_icon((d.get('boxes') or {}).get(k, 'missing'))}{lab}" for k, lab in tl.BOX_COLS), "",
-            ]
-            fwd = d.get("forward_returns") or {}
+            cells = " | ".join(
+                _icon(boxes.get(k, "missing")) for k, _ in tl.BOX_COLS)
             L.append(
-                "Forward return from signal close: "
-                + " · ".join(
-                    f"**{h} {v:+.2f}%**" if v is not None else f"{h} —"
-                    for h, v in fwd.items()
-                )
+                f"| {d['date']} | {pval('price')} | {pval('1d')} | "
+                f"{pval('3d')} | {pval('1w')} | {d.get('class')} | {cells} |"
             )
-            L.append("")
-            gate = d.get("independent_green") or {}
-            L.append(f"Independent green: **{'YES' if gate.get('green') else 'no'}** — {gate.get('why')}")
-            L.append("")
-            if d.get("buy_ranks"):
-                L.append("Buy-book ranks: " + ", ".join(f"{h} #{v['rank']}" for h, v in d["buy_ranks"].items()))
-                L.append("")
-            if d.get("reasons"):
-                L.append(f"Ranker reasons: `{d['reasons']}`")
-                L.append("")
-            jf = d.get("join_families") or {}
-            if jf:
-                L.append("Join factors: " + " · ".join(
-                    f"{_icon(v.get('tone', 'missing'))}{k}={v.get('value')}"
-                    for k, v in jf.items()
-                ))
-                L.append("")
-            for title, key in (
-                ("Finviz full-export factors", "finviz_factors"),
-                ("Finviz quote-color fields", "quote_color_fields"),
-                ("AB checklist factors", "ab_factors"),
-            ):
-                factors = d.get(key) or {}
-                if not factors:
-                    continue
-                L += [f"**{title}:**", ""]
-                chunks = []
-                for name, val in factors.items():
-                    tone = val.get("tone") or val.get("color") or "neutral"
-                    chunks.append(
-                        f"{_icon(tone)} {name}=`{val.get('value')}`"
-                    )
-                L.append(" · ".join(chunks))
-                L.append("")
-    L += ["## Files", "", "- `data/stock_book/ticker_lookback.json`", "- `01_daily/ticker_lookback.md`", ""]
+        L.append("")
     return "\n".join(L) + "\n"
 
 
@@ -167,73 +102,35 @@ def _slug(tickers):
     return "-".join(tl._tick(t) for t in tickers if tl._tick(t)).lower()
 
 
-def _factor_chips(day):
-    chips = []
-    for key, label in tl.BOX_COLS:
-        tone = (day.get("boxes") or {}).get(key, "missing")
-        chips.append(
-            f'<span class="chip {html.escape(tone)}">{_icon(tone)} '
-            f'{html.escape(label)}</span>'
-        )
-    return "".join(chips)
-
-
-def _detail_rows(day):
-    blocks = []
-    for title, key in (
-        ("Join factors", "join_families"),
-        ("Finviz full-market factors", "finviz_factors"),
-        ("Finviz quote colors", "quote_color_fields"),
-        ("AB checklist", "ab_factors"),
-    ):
-        vals = day.get(key) or {}
-        if not vals:
-            continue
-        chips = []
-        for name, rec in vals.items():
-            tone = str(rec.get("tone") or rec.get("color") or "neutral")
-            css = {"green": "good", "red": "bad"}.get(tone, tone)
-            chips.append(
-                f'<span class="factor {html.escape(css)}">{_icon(tone)} '
-                f'<b>{html.escape(str(name))}</b> '
-                f'{html.escape(str(rec.get("value")))}</span>'
-            )
-        blocks.append(
-            f"<h4>{html.escape(title)}</h4><div class='factors'>"
-            + "".join(chips) + "</div>"
-        )
-    return "".join(blocks)
-
-
 def render_html(payload):
     sections = []
     for rec in payload["names"]:
-        cards = []
-        for day in reversed(rec["days"]):
-            no_data = day.get("class") == "no_data"
-            fwd = day.get("forward_returns") or {}
-            returns = " · ".join(
-                f"{h} {v:+.2f}%" if v is not None else f"{h} —"
-                for h, v in fwd.items()
+        rows = []
+        for day in rec["days"]:
+            pc = day.get("price_changes") or {}
+            def val(key):
+                v = pc.get(key)
+                if v is None:
+                    return "—"
+                return f"{v:+.2f}%" if key != "price" else f"${v:,.2f}"
+            cells = "".join(
+                f'<td class="{html.escape((day.get("boxes") or {}).get(k, "missing"))}">'
+                f'{_icon((day.get("boxes") or {}).get(k, "missing"))}</td>'
+                for k, _ in tl.BOX_COLS
             )
-            cards.append(f"""
-<article class="day {'nodata' if no_data else ''}" data-class="{html.escape(day.get('class',''))}">
-  <div class="dayhead"><h3>{html.escape(day['date'])}</h3>
-  <span class="class">{html.escape(day.get('class') or 'no_data')}</span></div>
-  <div class="meta">{html.escape(str(day.get('sector') or '—'))} ·
-    {html.escape(str(day.get('industry') or '—'))} · {html.escape(', '.join(day.get('sources') or []) or 'no source')}</div>
-  <div class="chips">{_factor_chips(day)}</div>
-  <div class="returns"><b>After signal close:</b> {html.escape(returns)}</div>
-  <div class="gate"><b>Independent green:</b> {'YES' if (day.get('independent_green') or {}).get('green') else 'no'} —
-    {html.escape(str((day.get('independent_green') or {}).get('why') or ''))}</div>
-  {_detail_rows(day)}
-</article>""")
+            rows.append(
+                f"<tr><th>{html.escape(day['date'])}</th>"
+                f"<td>{val('price')}</td><td>{val('1d')}</td>"
+                f"<td>{val('3d')}</td><td>{val('1w')}</td>{cells}</tr>"
+            )
+        factor_headers = "".join(
+            f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
         sections.append(f"""
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
- <p>{rec['n_with_print']}/{rec['n_sessions']} sessions with data ·
- independent-green: {html.escape(', '.join(rec['green_days']) or 'none')}</p>
- {''.join(cards)}
+ <div class="sheet"><table>
+ <thead><tr><th>Date</th><th>Price</th><th>1d</th><th>3d</th><th>1w</th>{factor_headers}</tr></thead>
+ <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = "".join(
         f'<a href="#{html.escape(r["ticker"])}">{html.escape(r["ticker"])}</a>'
@@ -248,18 +145,63 @@ def render_html(payload):
 main{{max-width:1000px;margin:auto;padding:16px}}h1,h2,h3,h4{{margin:.35em 0}}
 nav{{display:flex;gap:8px;overflow:auto;position:sticky;top:0;background:#0b1020ee;padding:10px 0;z-index:2}}
 nav a,.class{{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);text-decoration:none;white-space:nowrap}}
-.day{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}}
-.day.nodata{{opacity:.55}}.dayhead{{display:flex;justify-content:space-between;align-items:center}}
-.meta,.returns,.gate{{color:var(--muted);margin:8px 0}}.chips,.factors{{display:flex;flex-wrap:wrap;gap:7px}}
-.chip,.factor{{border:1px solid var(--line);border-radius:9px;padding:7px 9px;min-height:38px}}
-.good{{background:#123d2c}}.bad{{background:#4b2028}}.neutral{{background:#473e1d}}.missing{{background:#23283a}}
-h4{{font-size:13px;color:var(--muted);margin-top:13px}}
-@media(max-width:600px){{main{{padding:10px}}.day{{padding:11px}}.factor{{width:100%}}}}
+.sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:22px}}
+table{{border-collapse:separate;border-spacing:0;min-width:900px;width:100%;background:var(--card)}}
+th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
+thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
+td.good{{background:#123d2c}}td.bad{{background:#4b2028}}td.neutral{{background:#473e1d}}td.missing{{background:#23283a}}
+@media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>Any ticker, every dated full-market artifact on disk. Generated {html.escape(payload['generated_at'])}.</p>
+<p>🟢 positive · 🟡 neutral · 🔴 negative · ⬛ missing</p>
 <nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
+
+
+def write_xlsx(payload, path):
+    from openpyxl import Workbook
+    from openpyxl.styles import Alignment, Font, PatternFill
+
+    fills = {
+        "good": PatternFill("solid", fgColor="63BE7B"),
+        "neutral": PatternFill("solid", fgColor="FFEB84"),
+        "bad": PatternFill("solid", fgColor="F8696B"),
+        "missing": PatternFill("solid", fgColor="808080"),
+    }
+    wb = Workbook()
+    wb.remove(wb.active)
+    headers = ["Date", "Price", "1d", "3d", "1w"] + [
+        label for _, label in tl.BOX_COLS]
+    for rec in payload["names"]:
+        ws = wb.create_sheet(rec["ticker"][:31])
+        ws.freeze_panes = "B2"
+        ws.append(headers)
+        for cell in ws[1]:
+            cell.font = Font(bold=True, color="FFFFFF")
+            cell.fill = PatternFill("solid", fgColor="1F4E78")
+            cell.alignment = Alignment(horizontal="center")
+        for day in rec["days"]:
+            pc = day.get("price_changes") or {}
+            ws.append([
+                day["date"], pc.get("price"), pc.get("1d"),
+                pc.get("3d"), pc.get("1w"),
+            ] + [
+                _icon((day.get("boxes") or {}).get(k, "missing"))
+                for k, _ in tl.BOX_COLS
+            ])
+            row = ws.max_row
+            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=6):
+                tone = (day.get("boxes") or {}).get(key, "missing")
+                ws.cell(row, offset).fill = fills.get(tone, fills["missing"])
+                ws.cell(row, offset).alignment = Alignment(horizontal="center")
+            for col in (3, 4, 5):
+                ws.cell(row, col).number_format = '0.00"%"'
+        ws.column_dimensions["A"].width = 13
+        ws.column_dimensions["B"].width = 12
+        for col in range(3, len(headers) + 1):
+            ws.column_dimensions[chr(64 + col)].width = 9
+        ws.auto_filter.ref = ws.dimensions
+    wb.save(path)
 
 
 def run(tickers, from_date=None, to_date=None):
@@ -287,10 +229,14 @@ def run(tickers, from_date=None, to_date=None):
     page = render_html(payload)
     (web_dir / f"{slug}.html").write_text(page, encoding="utf-8")
     (web_dir / "index.html").write_text(page, encoding="utf-8")
+    xlsx_dir = tl.SCORE / "ticker_lookback"
+    xlsx_path = xlsx_dir / f"{slug}.xlsx"
+    write_xlsx(payload, xlsx_path)
     print(md[:12000])
     print(f"[ticker-lookback] wrote {js}")
     print(f"[ticker-lookback] wrote {tl.DAILY / 'ticker_lookback.md'}")
     print(f"[ticker-lookback] phone page dashboard/ticker-lookback/{slug}.html")
+    print(f"[ticker-lookback] spreadsheet {xlsx_path}")
     return payload
 
 
