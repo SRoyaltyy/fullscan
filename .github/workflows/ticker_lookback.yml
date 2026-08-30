@@ -1,7 +1,10 @@
 name: Ticker Lookback (any stock)
 
-# Phone-friendly manual backtest. Enter any ticker(s), or check Random for
-# 10 liquid names (mcap > $100M, avg volume > 500K).
+# Phone-friendly manual backtest as of 09:30 ET. Factor colors use the
+# prior session's tape plus that morning's pre-open packet — never the
+# same-day stock book (~13:00) or same-day post-close Finviz (~21:10).
+# Enter any ticker(s), or check Random for 10 liquid names
+# (mcap > $100M, avg volume > 500K).
 
 on:
   workflow_dispatch:

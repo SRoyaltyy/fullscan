@@ -74,6 +74,7 @@ def scan_tickers(tickers, from_date=None, to_date=None):
     ]
     return {
         "generated_at": datetime.now(tl.ET).isoformat(),
+        "asof": "09:30_et",
         "from_date": from_date, "to_date": to_date,
         "sessions": [
             {"date": s["date"], "has": s["has"], "n_book": s["n_book"],
@@ -147,7 +148,10 @@ def _condition_md(cond):
 
 
 def render_md(payload):
-    L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_", ""]
+    L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_",
+         "", "_As of 09:30 ET: overnight tape + that morning's pre-open packet. "
+         "Same-day stock book and post-close Finviz do not color the factor boxes. "
+         "Price / +1d / +3d / +1w are session-close outcomes._", ""]
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
               f"mcap > $100M, avg vol > 500K_", ""]
@@ -254,6 +258,7 @@ tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
+<p>Factor colors = knowable by 09:30 ET (overnight tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
 <p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority</p>
 {random_note}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""

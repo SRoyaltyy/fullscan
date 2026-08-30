@@ -1,7 +1,16 @@
 """Ticker-first lookback — any name, every session we have artifacts for.
 
+Each dated row is the 09:30 ET information set, not the same-day close.
+
+  Tape (join / Finviz / AB / peer / overnight book): prior trading session.
+  Morning packet (sector / gen / news / digest / judge / heat / catalyst):
+  D's pre-open files (05:40–05:55 ET). Same-day stock_book (~13:00) and
+  same-day post-close Finviz (~21:10) never color D's factor boxes.
+
+  +1d / +3d / +1w stay forward outcomes from D's close.
+
 CLI:
-  python -m src.ticker_lookback --tickers TEM,ELF,AAPL
+  python -m src.ticker_lookback_run --tickers TEM,ELF,AAPL
 """
 from __future__ import annotations
 
@@ -25,6 +34,9 @@ PEER_DIR = ROOT / "data" / "peers"
 UNIVERSE_DIR = ROOT / "data" / "universe"
 QUOTE_DIR = ROOT / "data" / "quote_colors"
 CATALYST_DIR = ROOT / "01_daily" / "catalyst"
+NEWS_DIR = ROOT / "01_daily" / "news"
+GENERAL_DIR = ROOT / "01_daily" / "general"
+MAP_HEAT_DIR = ROOT / "01_daily" / "map_heat"
 PAPER_DIR = ROOT / "data" / "paper"
 PRICE_STORE = ROOT / "data" / "prices" / "ohlc.parquet"
 DAILY = ROOT / "01_daily"
@@ -294,6 +306,9 @@ def session_dates():
     dates.update(_dates_from(AB_DIR, "????-??-??_ab_checklist.csv"))
     dates.update(_dates_from(PEER_DIR, "????-??-??_peer_rs.csv"))
     dates.update(_dates_from(QUOTE_DIR, "????-??-??_quote_colors_detail.json"))
+    dates.update(_dates_from(NEWS_DIR, "????-??-??_actions.json"))
+    dates.update(_dates_from(NEWS_DIR, "????-??-??_finviz_digest.json"))
+    dates.update(_dates_from(GENERAL_DIR, "????-??-??_predict.md"))
     return sorted(d for d in dates if is_trading_date(d))
 
 
@@ -360,6 +375,9 @@ def build_index():
             "green_buy": green_buy, "live_buy": live_buy,
             "green_meta": {"n_pile": green.get("n_pile"), "n_universe": green.get("n_universe"), "pile_used": green.get("pile_used")},
         })
+    for i, sess in enumerate(sessions):
+        sess["prior"] = sessions[i - 1] if i else None
+        sess["prior_date"] = sessions[i - 1]["date"] if i else None
     paper_hits = {}
     trades = _csv(PAPER_DIR / "trades.csv")
     if not trades.empty and "ticker" in trades.columns:
@@ -370,8 +388,245 @@ def build_index():
                 "sleeve": rec.get("sleeve"), "price": _num(rec.get("price")),
                 "reason": str(rec.get("reason") or "")[:180],
             })
-    _INDEX = {"sessions": sessions, "paper": paper_hits, "dates": dates}
+    _INDEX = {"sessions": sessions, "paper": paper_hits, "dates": dates,
+              "preopen": {}}
     return _INDEX
+
+
+def _beta_load(v):
+    s = str(v).lower() if v == v else ""
+    if s == "high":
+        return 1.0
+    if s == "mid":
+        return 0.5
+    if s == "low":
+        return 0.15
+    return 0.4
+
+
+def _digest_tones(date):
+    """Ticker → tone from D's pre-open Finviz digest file only."""
+    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    out = {}
+    rows = list(data.get("top_signal") or []) + list(
+        data.get("all_ticker_digests_sample") or [])
+    for sec_rows in (data.get("by_sector") or {}).values():
+        rows.extend(sec_rows or [])
+    try:
+        from .stock_book import _digest_polarity
+    except Exception:
+        _digest_polarity = lambda _t: 0.0
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        t = _tick(row.get("ticker"))
+        if not t or t in out or t in {"SPY", "QQQ", "DIA", "IWM"}:
+            continue
+        text = str(row.get("digest") or row.get("news_title") or "")
+        if not text.strip():
+            continue
+        out[t] = _polarity(_digest_polarity(text))
+    return out
+
+
+def _heat_asof(date, prior_date=None):
+    """Ticker boosts knowable by 09:30: D morning refresh, else last night's baseline.
+
+    Same-day research.json is used only when map_heat_research.ticker_boosts
+    accepts it (phase=morning_refresh, ≥20 cards). A rejected same-day file
+    is not re-read loosely — that would smuggle a post-close stub onto D.
+    """
+    try:
+        from .map_heat_research import ticker_boosts
+        tboost, iboost = ticker_boosts(date)
+        if tboost:
+            return tboost, iboost, date
+    except Exception:
+        pass
+    tboost, iboost = {}, {}
+    for name in (
+        MAP_HEAT_DIR / f"{prior_date}_research_baseline.json" if prior_date else None,
+        MAP_HEAT_DIR / f"{prior_date}_research.json" if prior_date else None,
+    ):
+        if name is None or not name.exists():
+            continue
+        data = _jload(name) or {}
+        vintage = None
+        m = re.search(r"(20\d{2}-\d{2}-\d{2})", name.name)
+        if m:
+            vintage = m.group(1)
+        for card in data.get("cards") or []:
+            direction = str(card.get("subsector_dir") or "").lower()
+            sign = 1.0 if direction == "up" else -1.0 if direction == "down" else 0.0
+            for cap in card.get("captains") or []:
+                if not isinstance(cap, dict):
+                    continue
+                t = _tick(cap.get("ticker"))
+                sent = str(cap.get("sent") or "")
+                if not t:
+                    continue
+                if sent == "pos":
+                    tboost[t] = 0.2 * (sign or 1.0)
+                elif sent == "neg":
+                    tboost[t] = -0.2 * (abs(sign) or 1.0)
+            ind = card.get("industry")
+            if ind and sign and card.get("action") == "OVERRIDE":
+                iboost[ind] = 0.12 * sign
+        if tboost:
+            return tboost, iboost, vintage or prior_date
+    return tboost, iboost, None
+
+
+def _digest_book(date):
+    """Finviz digest → news-book rows, without stock_book's print side effect."""
+    try:
+        from .stock_book import _digest_polarity
+    except Exception:
+        return {}
+    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    out = {}
+    rows = list(data.get("top_signal") or []) + list(
+        data.get("all_ticker_digests_sample") or [])
+    for sec_rows in (data.get("by_sector") or {}).values():
+        rows.extend(sec_rows or [])
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        t = _tick(row.get("ticker"))
+        if not t or t in out or t in {"SPY", "QQQ", "DIA", "IWM"}:
+            continue
+        if row.get("is_dividend"):
+            continue
+        text = str(row.get("digest") or row.get("news_title") or "")
+        pol = _digest_polarity(text)
+        if not pol:
+            continue
+        out[t] = {
+            "net": pol,
+            "events": [{"event": "finviz_digest", "digest": text[:160]}],
+            "source": "digest",
+        }
+    return out
+
+
+def _accuracy_gates_asof(date, prior_date=None):
+    """Hit-rate gates from scoreboard runs whose 1d outcome closed before D.
+
+    A predict on D−1 is graded off D's close, so it is not knowable at
+    09:30 on D. Cutoff is prior_date (exclusive). The full committed
+    scoreboard would leak later outcomes into historical magnitudes.
+    """
+    try:
+        from . import scoreboard
+        board = scoreboard.load()
+    except Exception:
+        return {}
+    cutoff = prior_date or date
+    hits = {}
+    for r in board.get("runs") or []:
+        if str(r.get("date") or "") >= str(cutoff):
+            continue
+        h = r.get("direction_hit")
+        if h is None:
+            continue
+        topic = r.get("topic") or ""
+        hits.setdefault(topic, []).append(1.0 if h else 0.0)
+    gates = {}
+    for topic, arr in hits.items():
+        n = len(arr)
+        hr = sum(arr) / n
+        if n >= 3 and hr < 0.45:
+            gates[topic] = 0.5
+        elif n >= 3 and hr < 0.55:
+            gates[topic] = 0.85
+        else:
+            gates[topic] = 1.0
+    return gates
+
+
+def _events_sector_tilt(date):
+    """D's dated events file only — never events/latest.json."""
+    data = _jload(ROOT / "01_daily" / "events" / f"{date}_events.json") or {}
+    tilt = {}
+    for e in data.get("events") or []:
+        try:
+            impact = float(e.get("impact") or 0)
+        except (TypeError, ValueError):
+            continue
+        if impact < 3:
+            continue
+        direc = str(e.get("expected_direction") or "").lower()
+        sign = (1.0 if direc.startswith(("bull", "pos"))
+                else -1.0 if direc.startswith(("bear", "neg")) else 0.0)
+        if not sign:
+            continue
+        for sec in e.get("sectors") or []:
+            if str(sec).upper() in ("BROAD", "SPX", "ALL"):
+                continue
+            tilt[str(sec)] = tilt.get(str(sec), 0.0) + sign * min(impact, 5) * 0.08
+    return tilt
+
+
+def preopen_packet(date, prior_date=None):
+    """D's 05:40–05:55 ET packet. Cached on the index. No same-day tape."""
+    idx = _INDEX or build_index()
+    cache = idx.setdefault("preopen", {})
+    if date in cache:
+        return cache[date]
+    news, judge_map = {}, {}
+    gen_bias, sector_bias = 0.0, {}
+    try:
+        from . import stock_book as sb
+        news = sb._merge_news(sb._load_news_actions(date), _digest_book(date))
+        try:
+            from .judge_apply import load_or_parse
+            judge_map = (load_or_parse(date) or {}).get("tickers") or {}
+            for t, net in judge_map.items():
+                rec = news.setdefault(str(t).upper(), {"net": 0.0, "events": []})
+                rec["net"] = float(rec.get("net") or 0) + float(net)
+        except Exception:
+            judge_map = {}
+        runs = sb._runs_for_date(date)
+        gates = _accuracy_gates_asof(date, prior_date=prior_date)
+        gen_bias = float(
+            sb._bias_for(runs.get("general"), "1d") * gates.get("general", 1.0))
+        for topic, run in runs.items():
+            if not str(topic).startswith("sector:"):
+                continue
+            sec = topic.split(":", 1)[1]
+            sector_bias[sec] = float(
+                sb._bias_for(run, "1d") * gates.get(topic, 1.0))
+        for sec, tilt in _events_sector_tilt(date).items():
+            sector_bias[sec] = sector_bias.get(sec, 0.0) + float(tilt)
+    except Exception:
+        pass
+    heat, heat_ind, heat_v = _heat_asof(date, prior_date)
+    digest_tones = _digest_tones(date)
+    catalyst = {
+        _tick(r.get("ticker")): r
+        for r in ((_jload(CATALYST_DIR / f"{date}_dossiers.json") or {}).get("dossiers") or [])
+        if isinstance(r, dict) and _tick(r.get("ticker"))
+    }
+    packet = {
+        "asof": "09:30_et",
+        "news": news,
+        "judge": {str(k).upper(): float(v) for k, v in (judge_map or {}).items()
+                  if v is not None},
+        "digest_tones": digest_tones,
+        "gen_bias": gen_bias,
+        "sector_bias": sector_bias,
+        "heat": heat,
+        "heat_ind": heat_ind,
+        "heat_vintage": heat_v,
+        "catalyst": catalyst,
+        "has_actions": (NEWS_DIR / f"{date}_actions.json").exists(),
+        "has_digest": (NEWS_DIR / f"{date}_finviz_digest.json").exists(),
+        "has_judge": (NEWS_DIR / f"{date}_judge.json").exists()
+                     or (NEWS_DIR / f"{date}_judge.md").exists(),
+        "has_predict": (GENERAL_DIR / f"{date}_predict.md").exists(),
+    }
+    cache[date] = packet
+    return packet
 
 
 def _price_panel():
