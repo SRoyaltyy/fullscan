@@ -176,8 +176,9 @@ def _region_md(reg):
 
 def render_md(payload):
     L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_",
-         "", "_As of 09:30 ET: overnight tape + that morning's pre-open packet. "
-         "Same-day stock book and post-close Finviz do not color the factor boxes. "
+         "", "_As of 09:30 ET: last completed tape (walk back if a session "
+         "file is missing) + that morning's pre-open packet. Same-day stock "
+         "book and post-close Finviz do not color the factor boxes. "
          "Price / +1d / +3d / +1w are session-close outcomes._", ""]
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
@@ -296,7 +297,7 @@ tbody th.reg-bad{{box-shadow:inset 0 -3px 0 #ef4444}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>Factor colors = knowable by 09:30 ET (overnight tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
+<p>Factor colors = knowable by 09:30 ET (last completed tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
 <p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Reg = green vs red mass</p>
 <p class="muted">Tags change meaning by region: 🔵 on a red row has been the useful turn; 🔵 on a green row has been late. 🚨 on a still-green row has been the first-crack 1d drop; 🚨 on an already-red row meant the bounce did not show up yet.</p>
 {random_note}<nav>{nav}</nav>{''.join(sections)}

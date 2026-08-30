@@ -374,6 +374,71 @@ def test_tag_context_depends_on_region() -> None:
     assert "late" in days[1]["tag_context"]
 
 
+def test_last_known_tape_fills_gap_not_same_day() -> None:
+    """08-26 has join/predict but no Finviz/AB/peer/book. 08-27 09:30
+    still knows 08-25's tape and 08-21's book. Same-day 08-27 Finviz
+    and 08-27 book must not color."""
+    assert tl.last_predict_date("2026-08-27") == "2026-08-26"
+    payload = run.scan_tickers(
+        ["AAPL"], from_date="2026-08-27", to_date="2026-08-27")
+    day = payload["names"][0]["days"][0]
+    vintage = day["factor_vintage"]
+    assert vintage["vol"] == "2026-08-25"
+    assert vintage["ab"] == "2026-08-25"
+    assert vintage["peer"] == "2026-08-21"
+    assert vintage["overnight_book"] == "2026-08-21"
+    assert day["boxes"]["vol"] != "missing"
+    assert day["boxes"]["ab"] != "missing"
+    assert day["boxes"]["peer"] != "missing"
+    assert day["boxes"]["buy"] != "missing"
+    # Evening 08-27 weather is not the morning packet — stay on 08-26 join.
+    assert tl.join_packet_ok("2026-08-27") is False
+    assert vintage["join"] == "2026-08-26"
+    assert "prior_join" in day["sources"]
+    # Last morning predict still knowable Thursday 09:30.
+    assert day["boxes"]["gen"] != "missing"
+    assert vintage["gen"] == "2026-08-26"
+    # Same-day 08-27 RelVol is 0.61; last-known 08-25 is 0.08. Both dead,
+    # but the vintage must be the earlier file.
+    idx = tl.build_index()
+    by = {s["date"]: s for s in idx["sessions"]}
+    assert tl._fv_relvol(by["2026-08-27"]["finviz"]["AAPL"]) != tl._fv_relvol(
+        by["2026-08-25"]["finviz"]["AAPL"])
+
+
+def test_last_known_does_not_invent_pre_finviz_tape() -> None:
+    """No Elite export until 08-13. Do not walk back to April 26."""
+    payload = run.scan_tickers(
+        ["AAPL"], from_date="2026-08-12", to_date="2026-08-12")
+    day = payload["names"][0]["days"][0]
+    assert day["boxes"]["vol"] == "missing"
+    assert "vol" not in (day.get("factor_vintage") or {})
+
+
+def test_heat_uses_map_heat_board() -> None:
+    """Research captains are empty stubs. Industry board still prints."""
+    payload = run.scan_tickers(
+        ["AAPL"], from_date="2026-08-26", to_date="2026-08-26")
+    day = payload["names"][0]["days"][0]
+    assert day["boxes"]["heat"] != "missing"
+    assert "preopen_heat" in day["sources"]
+    assert day["factor_vintage"].get("heat")
+
+
+def test_judge_and_digest_use_sector_print() -> None:
+    """Random names are not in the 5-ticker judge / 400-name digest sample.
+    The day's sector tilt / sector digest still printed."""
+    payload = run.scan_tickers(
+        ["AAPL"], from_date="2026-08-28", to_date="2026-08-28")
+    day = payload["names"][0]["days"][0]
+    assert day["boxes"]["judge"] != "missing"
+    assert day["boxes"]["digest"] != "missing"
+    assert tl.judge_sector_tone(
+        {"Technology": "bullish"}, "Technology") == "good"
+    assert tl.judge_sector_tone(
+        {"Semis/Xlk": "bearish"}, "Technology") == "bad"
+
+
 if __name__ == "__main__":
     test_enriched_ab_dates_are_indexed()
     test_session_dates_skip_weekends()
@@ -390,4 +455,8 @@ if __name__ == "__main__":
     test_alarm_and_condition_majority()
     test_color_region_ignores_yellows()
     test_tag_context_depends_on_region()
-    print("15 tests passed")
+    test_last_known_tape_fills_gap_not_same_day()
+    test_last_known_does_not_invent_pre_finviz_tape()
+    test_heat_uses_map_heat_board()
+    test_judge_and_digest_use_sector_print()
+    print("19 tests passed")
