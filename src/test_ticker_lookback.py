@@ -113,7 +113,7 @@ def test_phone_html_and_returns() -> None:
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
     assert "09:30 ET" in page
-    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th>" in page
+    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
     assert day0["forward_returns"]["1d"] is not None
@@ -214,6 +214,7 @@ def test_signal_improved_is_strict() -> None:
     assert "⚪ 2026-08-19" in md
     assert "🚨 2026-08-21" in md
     assert "| Cond |" in md
+    assert "| Reg |" in md
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "lookback.xlsx"
         run.write_xlsx(payload, p)
@@ -282,6 +283,68 @@ def test_alarm_and_condition_majority() -> None:
     page = run.render_html(payload)
     assert "🚨 2026-08-20" in page
     assert ">0/2/1<" in page
+    assert "Reg = green vs red" in page
+
+
+def test_color_region_ignores_yellows() -> None:
+    green = {k: "good" for k, _ in tl.BOX_COLS}
+    red = {k: "bad" for k, _ in tl.BOX_COLS}
+    mixed = {k: "neutral" for k, _ in tl.BOX_COLS}
+    mixed["join"] = mixed["ab"] = mixed["peer"] = "good"
+    mixed["news"] = mixed["vol"] = "bad"
+    # Cond is yellow (yellows dominate). G−R = 1 is still mixed.
+    assert tl.general_condition(mixed)["tone"] == "neutral"
+    assert tl.color_region(mixed)["tone"] == "neutral"
+    mixed["heat"] = mixed["buy"] = "good"
+    assert tl.color_region(mixed)["tone"] == "good"
+    assert tl.color_region(green)["tone"] == "good"
+    assert tl.color_region(red)["tone"] == "bad"
+    assert tl.color_region({})["tone"] == "missing"
+    assert tl.color_region({"join": "good", "ab": "good"})["tone"] == "thin"
+
+
+def test_tag_context_depends_on_region() -> None:
+    # Alarm while the row is still green → first crack.
+    days = [
+        {"date": "2026-08-19", "boxes": {
+            "join": "good", "ab": "good", "peer": "good",
+            "vol": "good", "news": "neutral"}},
+        {"date": "2026-08-20", "boxes": {
+            "join": "good", "ab": "good", "peer": "good",
+            "vol": "bad", "news": "neutral"}},
+    ]
+    tl.annotate_signal_improved(days)
+    assert days[1]["signal_alarm"] is True
+    assert days[1]["region"]["tone"] == "good"
+    assert "first_crack" in days[1]["tag_context"]
+
+    # Blue on a still-red row → turn.
+    days = [
+        {"date": "2026-08-19", "boxes": {
+            "join": "bad", "ab": "bad", "peer": "bad",
+            "vol": "bad", "news": "neutral"}},
+        {"date": "2026-08-20", "boxes": {
+            "join": "neutral", "ab": "bad", "peer": "bad",
+            "vol": "bad", "news": "neutral"}},
+    ]
+    tl.annotate_signal_improved(days)
+    assert days[1]["signal_improved"] is True
+    assert days[1]["region"]["tone"] == "bad"
+    assert "turn" in days[1]["tag_context"]
+
+    # Blue on an already-green row → late.
+    days = [
+        {"date": "2026-08-19", "boxes": {
+            "join": "good", "ab": "neutral", "peer": "good",
+            "vol": "good", "news": "neutral"}},
+        {"date": "2026-08-20", "boxes": {
+            "join": "good", "ab": "good", "peer": "good",
+            "vol": "good", "news": "neutral"}},
+    ]
+    tl.annotate_signal_improved(days)
+    assert days[1]["signal_improved"] is True
+    assert days[1]["region"]["tone"] == "good"
+    assert "late" in days[1]["tag_context"]
 
 
 if __name__ == "__main__":
@@ -297,4 +360,6 @@ if __name__ == "__main__":
     test_signal_improved_is_strict()
     test_blue_on_point_jump_and_zero_red()
     test_alarm_and_condition_majority()
-    print("12 tests passed")
+    test_color_region_ignores_yellows()
+    test_tag_context_depends_on_region()
+    print("14 tests passed")
