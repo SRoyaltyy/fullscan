@@ -185,21 +185,20 @@ def render_md(payload):
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
               f"mcap > $100M, avg vol > 500K_", ""]
-    L += [setups.render_setup_markdown(payload), ""]
+    L += [setups.render_setup_markdown(payload, include_dates=False), ""]
     L += ["_🔵 = vs prior session: no cell worse and at least one better, "
           "or factor points jumped by ≥3 (red=1, yellow=2, green=3)_",
           "_🚨 = purely worse vs prior session (no cell better, at least one worse)_",
           "_⚪ = no red factor cells that day_",
           "_Cond = G/Y/R tally; green or red when that color is the majority_",
-          "_Reg = green vs red cell mass (yellows ignored). Use the setup board "
-          "above — bare 🔵 / 🚨 / ⚪ and 🔵-on-red (`turn`) did not replicate "
-          "market-wide. 🚨 on a still-green row is the first-crack fade; "
-          "🔵 on a mixed 3-day stretch is the useful blue._", ""]
+          "_Reg = green vs red cell mass (yellows ignored). Setups overlay the "
+          "color chart on the date they printed — bare 🔵 / 🚨 / ⚪ and "
+          "🔵-on-red (`turn`) did not replicate market-wide._", ""]
     cols = " | ".join(label for _, label in tl.BOX_COLS)
-    bars = "|".join(["---"] * (8 + len(tl.BOX_COLS)))
+    bars = "|".join(["---"] * (9 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
         L += [f"## {rec['ticker']}", "",
-              f"| Date | Price | +1d | +3d | +1w | Class | Cond | Reg | {cols} |",
+              f"| Date | Price | +1d | +3d | +1w | Class | Cond | Reg | Setups | {cols} |",
               f"|{bars}|"]
         for d in rec["days"]:
             pc = d.get("price_changes") or {}
@@ -214,17 +213,8 @@ def render_md(payload):
                 f"{_fmt_price_md(pc, tones, '3d')} | "
                 f"{_fmt_price_md(pc, tones, '1w')} | {d.get('class')} | "
                 f"{_condition_md(_condition(d))} | "
-                f"{_region_md(_region(d))} | {cells} |"
+                f"{_region_md(_region(d))} | {setups.setup_labels(d) or '—'} | {cells} |"
             )
-        printed = setups.ticker_setup_lines(rec)
-        if printed:
-            L += ["", "**Setups this name printed**", ""]
-            for row in printed:
-                L.append(
-                    f"- {row['date']} · {row['label']} · **{row['verdict']}** · "
-                    f"this +1d {setups.pct(row.get('this_1d'))} · "
-                    f"market {setups.pct(row.get('edge_1d'))} (n={row.get('n')})"
-                )
         L.append("")
     return "\n".join(L) + "\n"
 
@@ -248,8 +238,10 @@ def render_html(payload):
         for day in rec["days"]:
             pc = day.get("price_changes") or {}
             tones = day.get("price_tones") or _price_tones(pc)
+            lit = setups.box_highlights(day)
             cells = "".join(
-                f'<td class="{html.escape((day.get("boxes") or {}).get(k, "missing"))}">'
+                f'<td class="{html.escape((day.get("boxes") or {}).get(k, "missing"))}'
+                f'{" setup-hit setup-" + html.escape(lit[k]) if k in lit else ""}">'
                 f'{_icon((day.get("boxes") or {}).get(k, "missing"))}</td>'
                 for k, _ in tl.BOX_COLS
             )
@@ -262,37 +254,26 @@ def render_html(payload):
                 for key in ("1d", "3d", "1w")
             )
             chips = setups.setup_chips_html(day)
-            chip_html = f'<div class="setup-hits">{chips}</div>' if chips else ""
+            row_cls = setups.row_setup_class(day)
             rows.append(
-                f'<tr><th class="{html.escape(date_cls)}">'
-                f'{html.escape(_date_label(day))}{chip_html}</th>'
+                f'<tr class="{html.escape(row_cls)}">'
+                f'<th class="{html.escape(date_cls)}">'
+                f'{html.escape(_date_label(day))}</th>'
                 f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
                 f'<td class="{html.escape(cond.get("tone", "missing"))}">'
                 f'{html.escape(_condition_text(cond))}</td>'
                 f'<td class="{html.escape(reg.get("tone", "missing"))}">'
-                f'{html.escape(_region_text(reg))}</td>{cells}</tr>'
+                f'{html.escape(_region_text(reg))}</td>'
+                f'<td class="setups">{chips or "—"}</td>{cells}</tr>'
             )
         factor_headers = "".join(
             f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
-        printed = setups.ticker_setup_lines(rec)
-        extra = ""
-        if printed:
-            items = "".join(
-                f'<li>{html.escape(str(row["date"]))} · {html.escape(str(row["label"]))} · '
-                f'<strong>{html.escape(str(row["verdict"]))}</strong> · '
-                f'this +1d {html.escape(setups.pct(row.get("this_1d")))} · '
-                f'market {html.escape(setups.pct(row.get("edge_1d")))} '
-                f'(n={html.escape(str(row.get("n") or ""))})</li>'
-                for row in printed
-            )
-            extra = f'<ul class="ticker-setups">{items}</ul>'
         sections.append(f"""
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th>{factor_headers}</tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th><th>Setups</th>{factor_headers}</tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
- {extra}
 </section>""")
     nav = '<a href="#setups">Setups</a>' + "".join(
         f'<a href="#{html.escape(r["ticker"])}">{html.escape(r["ticker"])}</a>'
@@ -318,6 +299,10 @@ section.setups table{{min-width:640px}}
 th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
 thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
 td.good{{background:#123d2c}}td.bad{{background:#4b2028}}td.neutral{{background:#473e1d}}td.missing{{background:#23283a}}
+td.setup-hit{{outline:2px solid #eab308;outline-offset:-2px}}
+td.setup-hit.setup-fade{{outline-color:#fb923c}}
+tr.has-setup td.setups{{box-shadow:inset 3px 0 0 #eab308}}
+tr.setup-fade td.setups{{box-shadow:inset 3px 0 0 #fb923c}}
 tbody th.better{{background:#1d4ed8;color:#edf2ff}}
 tbody th.alarm{{box-shadow:inset 3px 0 0 #f97316}}
 tbody th.alarm:not(.better):not(.clean){{background:#4b2028;color:#edf2ff}}
@@ -325,18 +310,17 @@ tbody th.clean{{box-shadow:inset 3px 0 0 #f8fafc}}
 tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
 tbody th.reg-good{{box-shadow:inset 0 -3px 0 #22c55e}}
 tbody th.reg-bad{{box-shadow:inset 0 -3px 0 #ef4444}}
-.setup-chip{{display:inline-block;margin:3px 2px 0 0;padding:2px 8px;border-radius:999px;font-size:11px;white-space:normal}}
+td.setups{{text-align:left;white-space:normal;max-width:200px;font-size:12px}}
+.setup-chip{{display:inline-block;margin:1px 2px;padding:1px 7px;border-radius:999px;font-size:11px;white-space:nowrap}}
 .setup-chip.good{{background:#123d2c}}
 .setup-chip.bad{{background:#4b2028}}
-.setup-hits{{margin-top:4px;font-weight:400;white-space:normal}}
-.ticker-setups{{color:var(--muted);padding-left:18px}}
 .muted{{color:var(--muted)}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
 <p>Factor colors = knowable by 09:30 ET (last completed tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
 <p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Reg = green vs red mass</p>
-<p class="muted">Use the setup board below. Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (turn) did not replicate market-wide. 🚨 on a still-green row is the first-crack fade; 🔵 on a mixed 3-day stretch is the useful blue.</p>
+<p class="muted">The red/yellow/green chart is the sheet. Featured setups overlay it: gold ring on the boxes that fired, chips in the Setups column on that date. Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (turn) did not replicate market-wide.</p>
 {random_note}{setups.render_setup_html(payload)}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
 
@@ -415,9 +399,15 @@ def _write_setups_sheet(wb, payload, fills):
 
 def write_xlsx(payload, path):
     from openpyxl import Workbook
-    from openpyxl.styles import Alignment, Font, PatternFill
+    from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
     setups.ensure_setups(payload)
+    gold = Border(
+        left=Side(style="medium", color="EAB308"),
+        right=Side(style="medium", color="EAB308"),
+        top=Side(style="medium", color="EAB308"),
+        bottom=Side(style="medium", color="EAB308"),
+    )
     fills = {
         "good": PatternFill("solid", fgColor="63BE7B"),
         "neutral": PatternFill("solid", fgColor="FFEB84"),
@@ -478,10 +468,14 @@ def write_xlsx(payload, path):
             reg_cell.fill = fills.get(reg_tone, fills["missing"])
             reg_cell.alignment = Alignment(horizontal="center")
             ws.cell(row, 8).alignment = Alignment(horizontal="left", wrap_text=True)
+            lit = setups.box_highlights(day)
             for offset, (key, _label) in enumerate(tl.BOX_COLS, start=9):
                 tone = (day.get("boxes") or {}).get(key, "missing")
-                ws.cell(row, offset).fill = fills.get(tone, fills["missing"])
-                ws.cell(row, offset).alignment = Alignment(horizontal="center")
+                cell = ws.cell(row, offset)
+                cell.fill = fills.get(tone, fills["missing"])
+                cell.alignment = Alignment(horizontal="center")
+                if key in lit:
+                    cell.border = gold
         ws.column_dimensions["A"].width = 18
         ws.column_dimensions["B"].width = 12
         ws.column_dimensions["H"].width = 36
