@@ -110,13 +110,16 @@ This is the one-button for every predictive part **as a backup**. The weekday cl
 
 GitHub Actions → **Ticker Lookback (any stock)** → **Run workflow**.
 Enter one or more comma-separated symbols (`AAPL,TEM,BRK-B`) and optional
-start/end dates. This is ticker-first: it scans every dated full-market
-Finviz export, join, AB, peer, quote-color and stock-book artifact, even when
-the ticker was never printed in a buy/sell list.
+start/end dates, or check **Random** for 10 names with market cap > $100M
+and average volume > 500K. This is ticker-first: it scans every dated
+full-market Finviz export, join, AB, peer, quote-color and stock-book
+artifact, even when the ticker was never printed in a buy/sell list.
 
 The Action publishes:
 
 - downloadable XLSX with red/yellow/green cells (one sheet per ticker);
+- 1d / 3d / 1w price changes colored the same way (green up, yellow flat, red down);
+- a blue date cell when that day's factor colors improved vs the prior session (no cell worse, at least one better);
 - responsive phone HTML under `/dashboard/ticker-lookback/<tickers>.html`;
 - compact Markdown color table;
 - machine-readable JSON;
