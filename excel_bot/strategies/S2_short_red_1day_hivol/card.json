@@ -1,0 +1,41 @@
+{
+ "name": "S2_short_red_1day_hivol",
+ "spec": {
+  "cohort_filter": "volM:high(>8%)",
+  "cluster_definition": {
+   "name": "hyst_core_score_e5_x2",
+   "kind": "hyst",
+   "key": "core_score",
+   "enter": 5,
+   "exit": 2,
+   "min_len": 2
+  },
+  "side": "short_red",
+  "entry_rule": "buy at cluster confirmation-day CLOSE (leak-free per timing verdict, NOTES.md)",
+  "exit_rule": "hold1"
+ },
+ "cost_model": "0.10% round trip mcap>=$300M; 0.30% below",
+ "color_legend": "deep green > green > light green > white > pink < red < deep red (+purple/blue/orange)",
+ "stats": {
+  "discovery": {
+   "n": 4455,
+   "avg_net": 0.012158572390572392,
+   "t": 9.900341349759383,
+   "win": 0.5840628507295174,
+   "tickers": 519
+  },
+  "holdout": {
+   "n": 2901,
+   "avg_net": 0.011182092381937264,
+   "t": 8.438900874893072,
+   "win": 0.5794553602206136,
+   "tickers": 344
+  }
+ },
+ "n_trades": 7356,
+ "caveats": [
+  "6.5-month single-regime window; deep-history regime validation pending",
+  "overlapping trades inflate t",
+  "survivorship bias: current listings only"
+ ]
+}

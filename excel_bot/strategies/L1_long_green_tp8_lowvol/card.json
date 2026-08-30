@@ -1,0 +1,48 @@
+{
+ "name": "L1_long_green_tp8_lowvol",
+ "spec": {
+  "cohort_filter": "volM:low(<3%)",
+  "cluster_definition": {
+   "name": "tol3_core_score_ml2",
+   "kind": "tolerant",
+   "key": "core_score",
+   "thresh": 0.5,
+   "tol": 3,
+   "min_len": 2
+  },
+  "side": "long_green",
+  "entry_rule": "buy at cluster confirmation-day CLOSE (leak-free per timing verdict, NOTES.md)",
+  "exit_rule": "tp8"
+ },
+ "cost_model": "0.10% round trip mcap>=$300M; 0.30% below",
+ "color_legend": "deep green > green > light green > white > pink < red < deep red (+purple/blue/orange)",
+ "stats": {
+  "discovery": {
+   "n": 2635,
+   "avg_net": 0.012680645161290322,
+   "t": 12.533736088692075,
+   "win": 0.5138519924098671,
+   "tickers": 569
+  },
+  "holdout": {
+   "n": 1869,
+   "avg_net": 0.012234991974317818,
+   "t": 10.018797297549911,
+   "win": 0.5131086142322098,
+   "tickers": 391
+  },
+  "unknown": {
+   "n": 5,
+   "avg_net": -0.011036000000000002,
+   "t": -0.26897712297724713,
+   "win": 0.4,
+   "tickers": 1
+  }
+ },
+ "n_trades": 4509,
+ "caveats": [
+  "6.5-month single-regime window; deep-history regime validation pending",
+  "overlapping trades inflate t",
+  "survivorship bias: current listings only"
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "name": "S1_short_red_1day_optionable",
+ "spec": {
+  "cohort_filter": "opt:Yes",
+  "cluster_definition": {
+   "name": "hyst_core_score_e3_x2",
+   "kind": "hyst",
+   "key": "core_score",
+   "enter": 3,
+   "exit": 2,
+   "min_len": 2
+  },
+  "side": "short_red",
+  "entry_rule": "buy at cluster confirmation-day CLOSE (leak-free per timing verdict, NOTES.md)",
+  "exit_rule": "hold1"
+ },
+ "cost_model": "0.10% round trip mcap>=$300M; 0.30% below",
+ "color_legend": "deep green > green > light green > white > pink < red < deep red (+purple/blue/orange)",
+ "stats": {
+  "discovery": {
+   "n": 9815,
+   "avg_net": 0.005219280692817117,
+   "t": 13.151618569868912,
+   "win": 0.5534386143657667,
+   "tickers": 1420
+  },
+  "holdout": {
+   "n": 6623,
+   "avg_net": 0.004972344858825306,
+   "t": 10.469486601868647,
+   "win": 0.5488449343197946,
+   "tickers": 966
+  },
+  "unknown": {
+   "n": 5,
+   "avg_net": 0.008018,
+   "t": 0.8055222835286633,
+   "win": 0.8,
+   "tickers": 1
+  }
+ },
+ "n_trades": 16443,
+ "caveats": [
+  "6.5-month single-regime window; deep-history regime validation pending",
+  "overlapping trades inflate t",
+  "survivorship bias: current listings only"
+ ]
+}

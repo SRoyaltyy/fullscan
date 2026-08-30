@@ -1,0 +1,90 @@
+name: Excel Bot (cluster signals daily)
+
+# The local 18:30 Windows pipeline, moved to GitHub. Zero tokens.
+# Fetch (Yahoo v8 HTTPS, incremental) -> Excel-replica engine (same formulas,
+# same colors) -> strategy signals -> append to ONE suggestions.csv ->
+# refresh tracking on all past suggestions -> daily MD summary.
+#
+# State (the 3,603-ticker price cache) lives on the orphan branch
+# `excel-state` as state/rows.tar.gz, squashed every run so it never grows.
+
+on:
+  schedule:
+    - cron: "30 10 * * 2-6"   # Tue-Sat 10:30 UTC = 18:30 HKT, after US close
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "only first N tickers (0 = all 3,603)"
+        required: false
+        default: "0"
+      signals_only:
+        description: "true = skip fetch, re-derive signals from cached grids"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: excel-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install openpyxl
+
+      - name: Restore price-cache state (excel-state branch)
+        run: |
+          set -euo pipefail
+          mkdir -p excel_bot/data/rows
+          curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/excel-state/state/rows.tar.gz" -o /tmp/rows.tar.gz
+          tar -xzf /tmp/rows.tar.gz -C excel_bot/data/rows
+          echo "restored $(ls excel_bot/data/rows | wc -l) ticker caches"
+
+      - name: Run fetch + engine + signals + tracking
+        working-directory: excel_bot
+        env:
+          LIMIT: ${{ github.event.inputs.limit }}
+          SIGNALS_ONLY: ${{ github.event.inputs.signals_only }}
+        run: |
+          set -euo pipefail
+          ARGS=""
+          if [ -n "${LIMIT:-}" ] && [ "${LIMIT:-0}" != "0" ]; then ARGS="--limit $LIMIT"; fi
+          if [ "${SIGNALS_ONLY:-false}" = "true" ]; then ARGS="$ARGS --signals-only"; fi
+          echo "CMD: python engine/daily_run.py --workers 4 $ARGS"
+          python engine/daily_run.py --workers 4 $ARGS
+          python engine/gh_summary.py
+
+      - name: Save price-cache state (squash excel-state)
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "excel-bot"
+          git config user.email "excel-bot@users.noreply.github.com"
+          git fetch origin excel-state
+          git worktree add --detach /tmp/state FETCH_HEAD
+          tar -czf /tmp/state/state/rows.tar.gz -C excel_bot/data/rows .
+          cd /tmp/state
+          git add state/rows.tar.gz
+          git commit -q --amend -m "excel-state: rows cache after $(date -u +%F) run"
+          git push -q -f origin HEAD:excel-state
+          echo "state saved"
+
+      - name: Commit suggestions + daily summary to main
+        if: always()
+        run: |
+          set -euo pipefail
+          bash scripts/safe_git_push.sh \
+            "excel-bot: daily signals [$(date -u +%F)]" \
+            excel_bot/suggestions/suggestions.csv \
+            excel_bot/daily/ || echo "nothing to commit"

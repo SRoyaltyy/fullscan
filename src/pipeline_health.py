@@ -88,6 +88,7 @@ WORKFLOWS = [
     ("news_grade.yml", "News Actions Grader", set(), "book"),
     ("hit_board.yml", "HIT Board", set(), "book"),
     ("stock_book_all.yml", "Stock Book ALL", {"postclose"}, "book"),
+    ("excel_bot.yml", "Excel Bot (cluster signals)", set(), "preopen"),
     ("deploy-dashboard.yml", "Deploy dashboard to Pages", set(), "book"),
 ]
 

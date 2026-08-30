@@ -1,0 +1,40 @@
+{
+ "name": "L5_long_green_hold2_midhibeta",
+ "spec": {
+  "cohort_filter": "mid:beta>1.5",
+  "cluster_definition": {
+   "name": "tol2_A_ml3",
+   "kind": "tolerant",
+   "key": "a",
+   "tol": 2,
+   "min_len": 3
+  },
+  "side": "long_green",
+  "entry_rule": "buy at cluster confirmation-day CLOSE (leak-free per timing verdict, NOTES.md)",
+  "exit_rule": "hold2"
+ },
+ "cost_model": "0.10% round trip mcap>=$300M; 0.30% below",
+ "color_legend": "deep green > green > light green > white > pink < red < deep red (+purple/blue/orange)",
+ "stats": {
+  "discovery": {
+   "n": 542,
+   "avg_net": 0.01333389298892989,
+   "t": 4.920827565705533,
+   "win": 0.5867158671586716,
+   "tickers": 114
+  },
+  "holdout": {
+   "n": 349,
+   "avg_net": 0.01032724928366762,
+   "t": 2.5057654969720184,
+   "win": 0.5702005730659025,
+   "tickers": 74
+  }
+ },
+ "n_trades": 891,
+ "caveats": [
+  "6.5-month single-regime window; deep-history regime validation pending",
+  "overlapping trades inflate t",
+  "survivorship bias: current listings only"
+ ]
+}

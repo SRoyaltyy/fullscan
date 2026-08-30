@@ -1,0 +1,41 @@
+{
+ "name": "L4_long_green_hold8_bbailike",
+ "spec": {
+  "cohort_filter": "mid:BBAI-like(hi-beta,unprof)",
+  "cluster_definition": {
+   "name": "hyst_core_score_e3_x0",
+   "kind": "hyst",
+   "key": "core_score",
+   "enter": 3,
+   "exit": 0,
+   "min_len": 2
+  },
+  "side": "long_green",
+  "entry_rule": "buy at cluster confirmation-day CLOSE (leak-free per timing verdict, NOTES.md)",
+  "exit_rule": "hold8"
+ },
+ "cost_model": "0.10% round trip mcap>=$300M; 0.30% below",
+ "color_legend": "deep green > green > light green > white > pink < red < deep red (+purple/blue/orange)",
+ "stats": {
+  "discovery": {
+   "n": 526,
+   "avg_net": 0.028027794676806085,
+   "t": 4.050920902174311,
+   "win": 0.46577946768060835,
+   "tickers": 65
+  },
+  "holdout": {
+   "n": 268,
+   "avg_net": 0.019420037313432836,
+   "t": 2.3543291139728457,
+   "win": 0.4626865671641791,
+   "tickers": 36
+  }
+ },
+ "n_trades": 794,
+ "caveats": [
+  "6.5-month single-regime window; deep-history regime validation pending",
+  "overlapping trades inflate t",
+  "survivorship bias: current listings only"
+ ]
+}
