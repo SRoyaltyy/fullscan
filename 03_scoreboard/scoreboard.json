@@ -6109,6 +6109,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-08-30",
+          "actual_pct": 0.51,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -8458,6 +8470,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-08-30",
+          "actual_pct": 0.74,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -11658,6 +11682,92 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "no",
       "outlier_watch": "Majority of S&P 500 stocks fell; AMD red vs NVDA/AVGO; small caps lagged; stocks up with yields up; oil prints disagree",
+      "lesson_schema_ok": true
+    },
+    {
+      "date": "2026-08-30",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7710.34,
+      "actual_close": 7730.99,
+      "actual_pct_change": 0.72,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-08-30_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-b4216a1f191d0304b4ed59e6912e23a4",
+          "date_accessed": "2026-08-30",
+          "summary": "Official wire close and the breadth fact that defines the day.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "date_accessed": "2026-08-30",
+          "summary": "Primary source for the overnight catalyst that Thursday cash digested.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html",
+          "date_accessed": "2026-08-30",
+          "summary": "Quantifies the guide surprise and the setup that a beat was not automatically a rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/27/salesforce-stock-soars-on-track-for-second-best-day-ever.html",
+          "date_accessed": "2026-08-30",
+          "summary": "Second leg of the AI confirmation (application software, not just GPUs).",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-tech-strength-powers-nasdaq-higher-as-nvidia-leads-rally/",
+          "date_accessed": "2026-08-30",
+          "summary": "Matches injected OHLC and names the single-stock stack.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.latimes.com/business/story/2026-08-27/tech-stocks-lead-wall-street-after-nvidia-salesforce-others-say-ai-is-creating-big-growth",
+          "date_accessed": "2026-08-30",
+          "summary": "Independent AP-derived confirmation of narrowness, the bond tick, oil, and Warsh-eve.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.channelnewsasia.com/business/oil-settles-up-2-after-trump-rejects-return-iran-ceasefire-deal-terms-6343976",
+          "date_accessed": "2026-08-30",
+          "summary": "Same-day geopolitical oil shock; settlement prints differ slightly from the AP $88.52 Brent figure.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.hormelfoods.com/newsroom/press-releases/hormel-foods-reports-third-quarter-fiscal-2026-results/",
+          "date_accessed": "2026-08-30",
+          "summary": "Outlier/consumer-stress print on a mega-cap up day.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/08/20/bessent-says-treasury-buyback-operation-could-be-more-than-4-billion.html",
+          "date_accessed": "2026-08-30",
+          "summary": "Background fiscal/yield regime still live; not the day’s primary driver.",
+          "verification": "quote_not_found"
+        }
+      ],
+      "ops_fail": true,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Nvidia Q2 beat/above-Street Q3 guide cash follow-through, amplified by Salesforce/CrowdStrike software relief",
+      "key_interaction": "AI-earnings amplification (NVDA × CRM/CRWD × cap-weight) masked by negative breadth, slightly higher yields, and firmer oil — net SPX +0.72% chop while NDX trended",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "no",
+      "outlier_watch": "Majority of S&P names down; Dow lagged; Hormel −10% and retailers/HP fell on/despite beats; oil up on Iran while SPX never printed red; Russell cash +0.3% vs RTY futures −1.37%",
       "lesson_schema_ok": true
     }
   ]
