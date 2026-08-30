@@ -1,6 +1,6 @@
 {
   "date": "2026-08-30",
-  "generated_at": "2026-08-30T00:16:44.673197-04:00",
+  "generated_at": "2026-08-30T03:28:19.869810-04:00",
   "export_used": "data/exports/finviz_2026-08-30.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -687,7 +687,7 @@
     {
       "ticker": "INTU",
       "digest": "JPMorgan and Bank of America cut Intuit to Neutral, slash price targets on weaker FY27 outlook and rising TurboTax, QuickBooks competition",
-      "news_title": "Intuit's Real Problem Is Not On Its Income Statement",
+      "news_title": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1954,7 +1954,7 @@
     {
       "ticker": "INTU",
       "digest": "JPMorgan and Bank of America cut Intuit to Neutral, slash price targets on weaker FY27 outlook and rising TurboTax, QuickBooks competition",
-      "news_title": "Intuit's Real Problem Is Not On Its Income Statement",
+      "news_title": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
