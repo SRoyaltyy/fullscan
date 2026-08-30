@@ -1,16 +1,22 @@
-"""Green pile: every *present* name-layer is green, silent yellows ignored.
+"""Green pile: this ticker's tape is clean — not a weighted beauty contest.
 
 A name is green when:
-  join, general, AB, peer are all >= EPS (actually fired for the name)
+  join, general, AB, peer are all >= EPS (must have fired for the name)
   sector and news are not red
-  relative volume is not dead (< 0.7) when we have a Finviz print
+  Finviz relative volume is not red (< 0.7) when a print exists
 
-Yellow on news/digest/judge/sector (flat / no headline) is treated as
-no data — not a veto. Black / missing heat and catalyst are ignored.
+Missing / yellow on news, digest, judge, sector, or relvol (no Finviz
+print) is not a veto. A red is.
 
-Live BUY fills from the pile when it has ≥ GREEN_MIN liquid names after
-the $400M / sector / industry caps. Otherwise the ranker keeps the old
-weighted walk. SELL always ranks on core weights (no pile, no add-ons).
+BUY 15 is filled from that pile, ranked by green_rank = mean of the
+four cores (no opp, no weights). Same $400M / 4-per-sector /
+3-per-industry / 4 large-mega caps. If the liquid pile is thinner than
+GREEN_MIN (usually no AB/peer file yet), keep the weighted walk so
+pre-open does not go blank.
+
+SELL never shorts a green name. When the pile is used, shorts rank on
+core weights from the non-green remainder. Otherwise core weights on
+the full universe.
 """
 from __future__ import annotations
 
@@ -28,6 +34,26 @@ def _num(s: pd.Series) -> pd.Series:
     return pd.to_numeric(s, errors="coerce").fillna(0.0)
 
 
+def _relvol(df: pd.DataFrame) -> pd.Series | None:
+    for c in ("relvol", "rel_vol", "Relative Volume"):
+        if c in df.columns:
+            return pd.to_numeric(df[c], errors="coerce")
+    return None
+
+
+def attach_ranks(df: pd.DataFrame) -> pd.DataFrame:
+    """green_rank = equal mean of the four cores. s_tape = mean(AB, peer)."""
+    if df is None or df.empty:
+        return df
+    out = df.copy()
+    cores = [_num(out[c]) if c in out.columns else pd.Series(0.0, index=out.index) for c in CORE]
+    out["green_rank"] = sum(cores) / float(len(CORE))
+    ab = _num(out["s_ab"]) if "s_ab" in out.columns else pd.Series(0.0, index=out.index)
+    peer = _num(out["s_peer"]) if "s_peer" in out.columns else pd.Series(0.0, index=out.index)
+    out["s_tape"] = (ab + peer) / 2.0
+    return out
+
+
 def green_mask(df: pd.DataFrame) -> pd.Series:
     if df is None or df.empty:
         return pd.Series(dtype=bool)
@@ -40,13 +66,11 @@ def green_mask(df: pd.DataFrame) -> pd.Series:
         ok &= _num(df["s_sector"]) > -EPS
     if "s_news" in df.columns:
         ok &= _num(df["s_news"]) > -EPS
-    rel = None
-    for c in ("relvol", "rel_vol", "Relative Volume"):
-        if c in df.columns:
-            rel = pd.to_numeric(df[c], errors="coerce")
-            break
+    rel = _relvol(df)
     if rel is not None:
-        ok &= ~((rel > 0) & (rel < RELVOL_DEAD))
+        printed = rel.notna() & (rel > 0)
+        dead = printed & (rel < RELVOL_DEAD)
+        ok &= ~dead
     return ok
 
 
@@ -93,7 +117,8 @@ def pile_status(df: pd.DataFrame) -> dict:
     if used:
         reason = (
             f"pile {n_liq} ≥ {GREEN_MIN} liquid all-green names — "
-            "BUY 15 from the pile; SELL stays on core weights"
+            "BUY 15 from the pile by green_rank (no opp); "
+            "SELL is core weights on the non-green remainder"
         )
     elif missing:
         reason = (
@@ -114,10 +139,11 @@ def pile_status(df: pd.DataFrame) -> dict:
         "min": GREEN_MIN,
         "eps": EPS,
         "relvol_dead": RELVOL_DEAD,
+        "rank_col": "green_rank",
         "core_fired": {CORE_LABEL[c]: v for c, v in fired.items()},
         "missing_core": missing,
         "buy_mode": "green_pile" if used else "weighted_fallback",
-        "sell_mode": "core_weights",
+        "sell_mode": "core_weights_ex_green" if used else "core_weights",
         "caps": {
             "min_mcap_m": 400.0,
             "max_per_sector": 4,
