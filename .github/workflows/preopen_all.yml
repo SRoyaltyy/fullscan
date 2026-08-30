@@ -83,6 +83,7 @@ jobs:
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
+      FINVIZ_SKIP_LIVE: "1"
     steps:
       - name: Wait if ECS systemd pre-open owns the box
         run: |
@@ -177,6 +178,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           GROK_ONLY: "1"
+          FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
