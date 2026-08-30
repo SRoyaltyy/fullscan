@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import random
 import re
 from datetime import datetime
 from pathlib import Path
@@ -31,10 +32,16 @@ SCORE = ROOT / "03_scoreboard"
 ET = ZoneInfo("America/New_York")
 
 EPS = 0.05
+PRICE_EPS = 0.5  # ±0.5% prints yellow on trailing 1d/3d/1w
 RELVOL_SPIKE = 1.5
 RELVOL_DEAD = 0.7
 CORE = ("s_join", "s_general", "s_ab", "s_peer")
 BOX_ICON = {"good": "\U0001f7e2", "bad": "\U0001f534", "neutral": "\U0001f7e1", "missing": "\u2b1b"}
+TONE_RANK = {"bad": 0, "neutral": 1, "good": 2}
+RANDOM_N = 10
+# Finviz export units: Market Cap = $ millions, Average Volume = thousands of shares.
+RANDOM_MIN_MCAP_M = 100.0
+RANDOM_MIN_AVG_VOL_K = 500.0
 BOX_COLS = (
     ("join", "join"), ("sector", "sect"), ("gen", "gen"), ("news", "news"),
     ("digest", "dig"), ("judge", "jdg"), ("ab", "AB"), ("peer", "peer"),
@@ -74,6 +81,89 @@ def _polarity(x, eps=EPS):
     if v <= -eps:
         return "bad"
     return "neutral"
+
+
+def price_tone(x, eps=PRICE_EPS):
+    """Red / yellow / green for a trailing percent change."""
+    return _polarity(x, eps=eps)
+
+
+def _tone_rank(tone):
+    return TONE_RANK.get(str(tone or "").lower())
+
+
+def objectively_better(prev_boxes, next_boxes) -> bool:
+    """True when next day's factor colors improved with no cell worse.
+
+    Comparable cells only (red / yellow / green on both days). Missing is
+    ignored. Rank: red < yellow < green.
+    """
+    improved = False
+    for key, _ in BOX_COLS:
+        a = _tone_rank((prev_boxes or {}).get(key))
+        b = _tone_rank((next_boxes or {}).get(key))
+        if a is None or b is None:
+            continue
+        if b < a:
+            return False
+        if b > a:
+            improved = True
+    return improved
+
+
+def annotate_signal_improved(days):
+    """Mark the later day when its signal is objectively better than the prior day."""
+    for i, day in enumerate(days or []):
+        day["signal_improved"] = False
+        if i == 0:
+            continue
+        day["signal_improved"] = objectively_better(
+            days[i - 1].get("boxes"), day.get("boxes"))
+    return days
+
+
+def latest_finviz_path(asof=None):
+    files = sorted(EXPORT_DIR.glob("finviz_????-??-??.csv"))
+    if asof:
+        files = [p for p in files if p.stem.split("_", 1)[-1] <= asof]
+    return files[-1] if files else None
+
+
+def liquid_universe(asof=None, min_mcap_m=RANDOM_MIN_MCAP_M,
+                    min_avg_vol_k=RANDOM_MIN_AVG_VOL_K):
+    """Tickers with market cap > $100M and average volume > 500K shares."""
+    path = latest_finviz_path(asof)
+    if path is None:
+        return []
+    df = _csv(path)
+    if df.empty:
+        return []
+    tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
+    seen, out = set(), []
+    for rec in df.to_dict(orient="records"):
+        t = _tick(rec.get(tcol))
+        if not t or t in seen:
+            continue
+        mcap = _num(rec.get("Market Cap"))
+        adv = _num(rec.get("Average Volume") or rec.get("Avg Volume")
+                   or rec.get("Avg Vol"))
+        if mcap is None or adv is None:
+            continue
+        if mcap > min_mcap_m and adv > min_avg_vol_k:
+            seen.add(t)
+            out.append(t)
+    return out
+
+
+def pick_random_tickers(n=RANDOM_N, asof=None, seed=None):
+    names = liquid_universe(asof)
+    if not names:
+        raise SystemExit(
+            "no liquid names (mcap>$100M, avg vol>500K) in Finviz exports")
+    rng = random.Random(seed)
+    if len(names) <= n:
+        return names
+    return rng.sample(names, n)
 
 
 def _csv(path):

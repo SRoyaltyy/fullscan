@@ -33,23 +33,102 @@ def test_phone_html_and_returns() -> None:
         ["AAPL"], from_date="2026-08-19", to_date="2026-08-20")
     page = run.render_html(payload)
     assert 'name="viewport"' in page
-    assert "🟢 positive" in page
+    assert "🟢 up / positive" in page
     assert "<th>1d</th><th>3d</th><th>1w</th>" in page
     assert "AAPL" in page
     assert payload["names"][0]["days"][0]["forward_returns"]["1d"] is not None
     changes = payload["names"][0]["days"][0]["price_changes"]
     assert changes["price"] is not None
     assert changes["1d"] is not None
+    tones = payload["names"][0]["days"][0]["price_tones"]
+    assert tones["1d"] in {"good", "neutral", "bad"}
+    assert 'td class="' in page
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "lookback.xlsx"
         run.write_xlsx(payload, p)
         wb = load_workbook(p)
         assert "AAPL" in wb.sheetnames
         assert wb["AAPL"]["C2"].value is not None
+        assert wb["AAPL"]["C2"].fill.fgColor.rgb[-6:] in {
+            "63BE7B", "FFEB84", "F8696B", "808080"}
+
+
+def test_random_universe_gates() -> None:
+    uni = tl.liquid_universe()
+    assert len(uni) >= 10
+    path = tl.latest_finviz_path()
+    import pandas as pd
+    df = pd.read_csv(path, usecols=["Ticker", "Market Cap", "Average Volume"])
+    row = df[df["Ticker"].astype(str).str.upper() == uni[0]].iloc[0]
+    assert float(row["Market Cap"]) > 100
+    assert float(row["Average Volume"]) > 500
+    a = tl.pick_random_tickers(n=10, seed=7)
+    b = tl.pick_random_tickers(n=10, seed=7)
+    c = tl.pick_random_tickers(n=10, seed=8)
+    assert a == b
+    assert len(a) == 10
+    assert len(set(a)) == 10
+    assert a != c
+    names, flag = run.resolve_tickers("random", seed=7)
+    assert flag is True
+    assert names == a
+
+
+def test_price_tones() -> None:
+    assert tl.price_tone(1.2) == "good"
+    assert tl.price_tone(-1.2) == "bad"
+    assert tl.price_tone(0.1) == "neutral"
+    assert tl.price_tone(None) == "missing"
+
+
+def test_signal_improved_is_strict() -> None:
+    worse = {"join": "neutral", "ab": "good"}
+    next_worse = {"join": "bad", "ab": "good"}
+    assert tl.objectively_better(worse, next_worse) is False
+
+    same = {"join": "neutral", "ab": "good"}
+    assert tl.objectively_better(same, same) is False
+
+    better = {"join": "good", "ab": "good"}
+    assert tl.objectively_better(worse, better) is True
+
+    # missing on either side is ignored, not treated as a downgrade
+    assert tl.objectively_better(
+        {"join": "neutral", "ab": "missing"},
+        {"join": "good", "ab": "missing"},
+    ) is True
+
+    days = [
+        {"date": "2026-08-19", "boxes": {"join": "neutral", "ab": "neutral"}},
+        {"date": "2026-08-20", "boxes": {"join": "good", "ab": "neutral"}},
+        {"date": "2026-08-21", "boxes": {"join": "good", "ab": "bad"}},
+    ]
+    tl.annotate_signal_improved(days)
+    assert days[0]["signal_improved"] is False
+    assert days[1]["signal_improved"] is True
+    assert days[2]["signal_improved"] is False
+
+    payload = {
+        "generated_at": "t",
+        "names": [{"ticker": "TEST", "days": days}],
+    }
+    page = run.render_html(payload)
+    assert 'th class="better">2026-08-20</th>' in page
+    assert "🔵 this day improved" in page
+    md = run.render_md(payload)
+    assert "🔵 2026-08-20" in md
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / "lookback.xlsx"
+        run.write_xlsx(payload, p)
+        wb = load_workbook(p)
+        assert wb["TEST"]["A3"].fill.fgColor.rgb[-6:] == "5B9BD5"
 
 
 if __name__ == "__main__":
     test_enriched_ab_dates_are_indexed()
     test_any_finviz_name_gets_cards_without_book()
     test_phone_html_and_returns()
-    print("3 tests passed")
+    test_random_universe_gates()
+    test_price_tones()
+    test_signal_improved_is_strict()
+    print("6 tests passed")

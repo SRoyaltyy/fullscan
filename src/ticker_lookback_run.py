@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 from datetime import datetime
 
 from . import ticker_lookback as tl
@@ -16,6 +17,20 @@ def _icon(kind):
     return tl.BOX_ICON.get(kind, tl.BOX_ICON["missing"])
 
 
+def _price_tones(pc):
+    pc = pc or {}
+    return {k: tl.price_tone(pc.get(k)) for k in ("1d", "3d", "1w")}
+
+
+def _attach_day_extras(card, ticker, sess, sessions):
+    card["price_changes"] = tl.trailing_returns(
+        ticker, sess["date"], sessions=sessions,
+        current_finviz=(sess.get("finviz") or {}).get(ticker),
+    )
+    card["price_tones"] = _price_tones(card["price_changes"])
+    return card
+
+
 def scan_ticker(ticker, sessions=None, idx=None):
     idx = idx or tl.build_index()
     t = tl._tick(ticker)
@@ -24,16 +39,12 @@ def scan_ticker(ticker, sessions=None, idx=None):
     for sess in sessions:
         card = scan._scan_session(sess, t)
         if card is None:
-            days.append({
+            card = {
                 "date": sess["date"], "ticker": t, "class": "no_data",
                 "sources": [], "boxes": {k: "missing" for k, _ in tl.BOX_COLS},
                 "artifacts_that_day": sess["has"],
-            })
-            continue
-        card["price_changes"] = tl.trailing_returns(
-            t, sess["date"], sessions=sessions,
-            current_finviz=(sess.get("finviz") or {}).get(t),
-        )
+            }
+        _attach_day_extras(card, t, sess, sessions)
         days.append(card)
         if card.get("buy_ranks"):
             recommended.append({
@@ -43,6 +54,7 @@ def scan_ticker(ticker, sessions=None, idx=None):
             })
         if card.get("independent_green", {}).get("green") or card.get("in_green_buy"):
             green_days.append(card["date"])
+    tl.annotate_signal_improved(days)
     hits = [d for d in days if d.get("class") != "no_data"]
     return {
         "ticker": t, "n_sessions": len(sessions), "n_with_print": len(hits),
@@ -72,8 +84,27 @@ def scan_tickers(tickers, from_date=None, to_date=None):
     }
 
 
+def _fmt_price(pc, key):
+    v = (pc or {}).get(key)
+    if v is None:
+        return "—"
+    return f"{v:+.2f}%" if key != "price" else f"${v:,.2f}"
+
+
+def _fmt_price_md(pc, tones, key):
+    text = _fmt_price(pc, key)
+    if key == "price" or text == "—":
+        return text
+    return f"{_icon((tones or {}).get(key) or tl.price_tone((pc or {}).get(key)))} {text}"
+
+
 def render_md(payload):
     L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_", ""]
+    if payload.get("random"):
+        L += [f"_Random {len(payload['names'])} names, "
+              f"mcap > $100M, avg vol > 500K_", ""]
+    L += ["_🔵 = this day's factor colors improved vs the prior session "
+          "(no cell worse, at least one better)_", ""]
     cols = " | ".join(label for _, label in tl.BOX_COLS)
     bars = "|".join(["---"] * (6 + len(tl.BOX_COLS)))
     for rec in payload["names"]:
@@ -82,24 +113,26 @@ def render_md(payload):
               f"|{bars}|"]
         for d in rec["days"]:
             pc = d.get("price_changes") or {}
-            def pval(key):
-                v = pc.get(key)
-                if v is None:
-                    return "—"
-                return f"{v:+.2f}%" if key != "price" else f"${v:,.2f}"
+            tones = d.get("price_tones") or _price_tones(pc)
             boxes = d.get("boxes") or {}
             cells = " | ".join(
                 _icon(boxes.get(k, "missing")) for k, _ in tl.BOX_COLS)
+            date = f"🔵 {d['date']}" if d.get("signal_improved") else d["date"]
             L.append(
-                f"| {d['date']} | {pval('price')} | {pval('1d')} | "
-                f"{pval('3d')} | {pval('1w')} | {d.get('class')} | {cells} |"
+                f"| {date} | {_fmt_price(pc, 'price')} | "
+                f"{_fmt_price_md(pc, tones, '1d')} | "
+                f"{_fmt_price_md(pc, tones, '3d')} | "
+                f"{_fmt_price_md(pc, tones, '1w')} | {d.get('class')} | {cells} |"
             )
         L.append("")
     return "\n".join(L) + "\n"
 
 
-def _slug(tickers):
-    return "-".join(tl._tick(t) for t in tickers if tl._tick(t)).lower()
+def _slug(tickers, random_pick=False):
+    body = "-".join(tl._tick(t) for t in tickers if tl._tick(t)).lower()
+    if random_pick:
+        return f"random-{body}" if body else "random"
+    return body
 
 
 def render_html(payload):
@@ -108,20 +141,21 @@ def render_html(payload):
         rows = []
         for day in rec["days"]:
             pc = day.get("price_changes") or {}
-            def val(key):
-                v = pc.get(key)
-                if v is None:
-                    return "—"
-                return f"{v:+.2f}%" if key != "price" else f"${v:,.2f}"
+            tones = day.get("price_tones") or _price_tones(pc)
             cells = "".join(
                 f'<td class="{html.escape((day.get("boxes") or {}).get(k, "missing"))}">'
                 f'{_icon((day.get("boxes") or {}).get(k, "missing"))}</td>'
                 for k, _ in tl.BOX_COLS
             )
+            date_cls = "better" if day.get("signal_improved") else ""
+            price_tds = "".join(
+                f'<td class="{html.escape(tones.get(key, "missing"))}">'
+                f'{_fmt_price(pc, key)}</td>'
+                for key in ("1d", "3d", "1w")
+            )
             rows.append(
-                f"<tr><th>{html.escape(day['date'])}</th>"
-                f"<td>{val('price')}</td><td>{val('1d')}</td>"
-                f"<td>{val('3d')}</td><td>{val('1w')}</td>{cells}</tr>"
+                f'<tr><th class="{date_cls}">{html.escape(day["date"])}</th>'
+                f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}{cells}</tr>"
             )
         factor_headers = "".join(
             f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
@@ -135,6 +169,11 @@ def render_html(payload):
     nav = "".join(
         f'<a href="#{html.escape(r["ticker"])}">{html.escape(r["ticker"])}</a>'
         for r in payload["names"]
+    )
+    picked = ", ".join(html.escape(r["ticker"]) for r in payload["names"])
+    random_note = (
+        f'<p class="muted">Random draw: {picked} · mcap &gt; $100M · avg vol &gt; 500K</p>'
+        if payload.get("random") else ""
     )
     return f"""<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -150,11 +189,13 @@ table{{border-collapse:separate;border-spacing:0;min-width:900px;width:100%;back
 th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
 thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
 td.good{{background:#123d2c}}td.bad{{background:#4b2028}}td.neutral{{background:#473e1d}}td.missing{{background:#23283a}}
+tbody th.better{{background:#1d4ed8;color:#edf2ff}}
+.muted{{color:var(--muted)}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>🟢 positive · 🟡 neutral · 🔴 negative · ⬛ missing</p>
-<nav>{nav}</nav>{''.join(sections)}
+<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 this day improved vs prior (no cell worse)</p>
+{random_note}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
 
 
@@ -167,6 +208,7 @@ def write_xlsx(payload, path):
         "neutral": PatternFill("solid", fgColor="FFEB84"),
         "bad": PatternFill("solid", fgColor="F8696B"),
         "missing": PatternFill("solid", fgColor="808080"),
+        "better": PatternFill("solid", fgColor="5B9BD5"),
     }
     wb = Workbook()
     wb.remove(wb.active)
@@ -182,6 +224,7 @@ def write_xlsx(payload, path):
             cell.alignment = Alignment(horizontal="center")
         for day in rec["days"]:
             pc = day.get("price_changes") or {}
+            tones = day.get("price_tones") or _price_tones(pc)
             ws.append([
                 day["date"], pc.get("price"), pc.get("1d"),
                 pc.get("3d"), pc.get("1w"),
@@ -190,12 +233,18 @@ def write_xlsx(payload, path):
                 for k, _ in tl.BOX_COLS
             ])
             row = ws.max_row
+            if day.get("signal_improved"):
+                ws.cell(row, 1).fill = fills["better"]
+                ws.cell(row, 1).font = Font(bold=True, color="FFFFFF")
+            for col, key in ((3, "1d"), (4, "3d"), (5, "1w")):
+                cell = ws.cell(row, col)
+                cell.number_format = '0.00"%"'
+                cell.fill = fills.get(tones.get(key, "missing"), fills["missing"])
+                cell.alignment = Alignment(horizontal="center")
             for offset, (key, _label) in enumerate(tl.BOX_COLS, start=6):
                 tone = (day.get("boxes") or {}).get(key, "missing")
                 ws.cell(row, offset).fill = fills.get(tone, fills["missing"])
                 ws.cell(row, offset).alignment = Alignment(horizontal="center")
-            for col in (3, 4, 5):
-                ws.cell(row, col).number_format = '0.00"%"'
         ws.column_dimensions["A"].width = 13
         ws.column_dimensions["B"].width = 12
         for col in range(3, len(headers) + 1):
@@ -204,12 +253,32 @@ def write_xlsx(payload, path):
     wb.save(path)
 
 
-def run(tickers, from_date=None, to_date=None):
+def resolve_tickers(raw, random_pick=False, n=tl.RANDOM_N, asof=None, seed=None):
+    tokens = [t.strip() for t in (raw or "").split(",") if t.strip()]
+    named = [t for t in tokens if t.lower() != "random"]
+    want_random = bool(random_pick) or any(t.lower() == "random" for t in tokens)
+    if want_random:
+        return tl.pick_random_tickers(n=n, asof=asof, seed=seed), True
+    return [tl._tick(t) for t in named if tl._tick(t)], False
+
+
+def _emit_github_env(slug, tickers, random_pick=False):
+    path = os.environ.get("GITHUB_ENV")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(f"SLUG={slug}\n")
+        fh.write(f"LOOKBACK_TICKERS={','.join(tickers)}\n")
+        fh.write(f"LOOKBACK_RANDOM={'true' if random_pick else 'false'}\n")
+
+
+def run(tickers, from_date=None, to_date=None, random_pick=False):
     payload = scan_tickers(tickers, from_date=from_date, to_date=to_date)
+    payload["random"] = bool(random_pick)
     tl.BOOK_DIR.mkdir(parents=True, exist_ok=True)
     tl.DAILY.mkdir(parents=True, exist_ok=True)
     tl.SCORE.mkdir(parents=True, exist_ok=True)
-    slug = _slug(tickers)
+    slug = _slug(tickers, random_pick=random_pick)
     if not slug:
         raise SystemExit("no valid tickers")
     js = tl.BOOK_DIR / "ticker_lookback.json"
@@ -232,7 +301,10 @@ def run(tickers, from_date=None, to_date=None):
     xlsx_dir = tl.SCORE / "ticker_lookback"
     xlsx_path = xlsx_dir / f"{slug}.xlsx"
     write_xlsx(payload, xlsx_path)
+    _emit_github_env(slug, tickers, random_pick=random_pick)
     print(md[:12000])
+    print(f"[ticker-lookback] slug {slug}")
+    print(f"[ticker-lookback] names {','.join(tickers)}")
     print(f"[ticker-lookback] wrote {js}")
     print(f"[ticker-lookback] wrote {tl.DAILY / 'ticker_lookback.md'}")
     print(f"[ticker-lookback] phone page dashboard/ticker-lookback/{slug}.html")
@@ -242,14 +314,23 @@ def run(tickers, from_date=None, to_date=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tickers", required=True, help="comma-separated, any listed name")
+    ap.add_argument("--tickers", default="",
+                    help="comma-separated names, or 'random'")
+    ap.add_argument("--random", action="store_true",
+                    help="pick 10 stocks with mcap>$100M and avg vol>500K")
+    ap.add_argument("--random-n", type=int, default=tl.RANDOM_N)
+    ap.add_argument("--seed", default="", help="optional RNG seed for --random")
     ap.add_argument("--from-date", default="", help="optional YYYY-MM-DD")
     ap.add_argument("--to-date", default="", help="optional YYYY-MM-DD")
     args = ap.parse_args()
-    tickers = [t.strip() for t in args.tickers.split(",") if t.strip()]
+    seed = args.seed if args.seed else None
+    tickers, random_pick = resolve_tickers(
+        args.tickers, random_pick=args.random, n=args.random_n,
+        asof=args.to_date or None, seed=seed)
     if not tickers:
-        raise SystemExit("pass --tickers TEM,ELF")
-    run(tickers, from_date=args.from_date or None, to_date=args.to_date or None)
+        raise SystemExit("pass --tickers TEM,ELF or --random")
+    run(tickers, from_date=args.from_date or None,
+        to_date=args.to_date or None, random_pick=random_pick)
 
 
 if __name__ == "__main__":
