@@ -1,8 +1,8 @@
 """Finviz insider trading fetch (B2).
 
 Sources (no paid third-party API):
-  1. Market-wide: https://finviz.com/insidertrading.ashx  (latest / buys / sales / top week)
-  2. Per-ticker:  https://finviz.com/quote.ashx?t=TICKER   (same table as Elite UI)
+  1. Market-wide: elite.finviz.com/insidertrading.ashx (via finviz_session)
+  2. Per-ticker:  elite.finviz.com/quote.ashx?t=TICKER (via finviz_session)
 
 CLI:
   python -m src.insider_fetch                  # market-wide only
@@ -25,7 +25,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import config
+from . import config, finviz_session
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "data" / "exports"
@@ -39,15 +39,13 @@ UA = {
     )
 }
 
-MARKET_URLS = {
-    "latest": "https://finviz.com/insidertrading.ashx",
-    "buys": "https://finviz.com/insidertrading.ashx?tc=1",
-    "sales": "https://finviz.com/insidertrading.ashx?tc=2",
-    "top_week": "https://finviz.com/insidertrading.ashx?or=-10&tv=100000&tc=7&o=-transactionValue",
-    "top_week_buys": "https://finviz.com/insidertrading.ashx?or=-10&tv=100000&tc=1&o=-transactionValue",
+MARKET_PATHS = {
+    "latest": "/insidertrading.ashx",
+    "buys": "/insidertrading.ashx?tc=1",
+    "sales": "/insidertrading.ashx?tc=2",
+    "top_week": "/insidertrading.ashx?or=-10&tv=100000&tc=7&o=-transactionValue",
+    "top_week_buys": "/insidertrading.ashx?or=-10&tv=100000&tc=1&o=-transactionValue",
 }
-
-QUOTE_URL = "https://finviz.com/quote.ashx?t={ticker}"
 
 MCAP_MIN = 80_000_000.0
 ADV_MIN = 500_000.0
@@ -86,17 +84,7 @@ def _parse_finviz_date(s: str) -> str | None:
 
 
 def _session() -> requests.Session:
-    s = requests.Session()
-    s.headers.update(UA)
-    # Optional Elite cookie / auth if present
-    token = (
-        __import__("os").environ.get("FINVIZ_AUTH")
-        or __import__("os").environ.get("AUTH_TOKEN_FINVIZ")
-        or ""
-    )
-    if token:
-        s.cookies.set("auth", token, domain=".finviz.com")
-    return s
+    return finviz_session.session()
 
 
 def _table_to_rows(soup: BeautifulSoup, source: str, ticker_hint: str | None = None) -> list[dict]:
@@ -106,7 +94,6 @@ def _table_to_rows(soup: BeautifulSoup, source: str, ticker_hint: str | None = N
         if len(trs) < 2:
             continue
         heads = [c.get_text(strip=True) for c in trs[0].find_all(["th", "td"])]
-        # market page has Ticker; quote page has Insider Trading
         has_mkt = "Ticker" in heads and "Transaction" in heads
         has_q = "Insider Trading" in heads and "Transaction" in heads
         if not (has_mkt or has_q):
@@ -116,7 +103,6 @@ def _table_to_rows(soup: BeautifulSoup, source: str, ticker_hint: str | None = N
             if len(cols) < 7:
                 continue
             if has_mkt:
-                # Ticker, Owner, Relationship, Date, Transaction, Cost, #Shares, Value ($), #Shares Total, SEC Form 4
                 ticker = cols[0].upper()
                 owner, rel, date_s, txn = cols[1], cols[2], cols[3], cols[4]
                 cost, shares, value, shares_tot = cols[5], cols[6], cols[7], cols[8] if len(cols) > 8 else ""
@@ -127,7 +113,6 @@ def _table_to_rows(soup: BeautifulSoup, source: str, ticker_hint: str | None = N
                 cost, shares, value = cols[4], cols[5], cols[6]
                 shares_tot = cols[7] if len(cols) > 7 else ""
                 form4 = cols[8] if len(cols) > 8 else ""
-            # SEC link from anchor if present
             link = ""
             for a in tr.find_all("a", href=True):
                 if "sec.gov" in a["href"] or "Archives" in a["href"]:
@@ -135,7 +120,6 @@ def _table_to_rows(soup: BeautifulSoup, source: str, ticker_hint: str | None = N
                     break
             trade_date = _parse_finviz_date(date_s)
             val = _num(value)
-            # sign: Buy / Purchase positive; Sale / Sell / Proposed Sale negative for net
             txn_l = txn.lower()
             if any(k in txn_l for k in ("buy", "purchase", "exercise")):
                 signed = val if np.isfinite(val) else np.nan
@@ -170,21 +154,24 @@ def _table_to_rows(soup: BeautifulSoup, source: str, ticker_hint: str | None = N
 def fetch_market(sess: requests.Session | None = None) -> pd.DataFrame:
     sess = sess or _session()
     all_rows = []
-    for name, url in MARKET_URLS.items():
+    if not finviz_session.live_html_allowed():
+        print("[insider] SKIP live HTML (ECS / FINVIZ_SKIP_LIVE) — use committed artifacts")
+        return pd.DataFrame()
+    for name, path in MARKET_PATHS.items():
         try:
-            r = sess.get(url, timeout=45)
-            r.raise_for_status()
+            r = finviz_session.get(sess, path, timeout=45)
+            if r is None:
+                print(f"[insider] market:{name} FAIL elite empty/403")
+                continue
             soup = BeautifulSoup(r.text, "html.parser")
             part = _table_to_rows(soup, source=f"market:{name}")
             print(f"[insider] market:{name} rows={len(part)}")
             all_rows.extend(part)
-            time.sleep(0.6)
         except Exception as e:
             print(f"[insider] market:{name} FAIL {e}")
     if not all_rows:
         return pd.DataFrame()
     df = pd.DataFrame(all_rows)
-    # dedupe on ticker+owner+date+txn+shares+value
     df = df.drop_duplicates(
         subset=["ticker", "owner", "trade_date", "transaction", "shares", "value"],
         keep="first",
@@ -195,8 +182,11 @@ def fetch_market(sess: requests.Session | None = None) -> pd.DataFrame:
 def fetch_quote_insiders(ticker: str, sess: requests.Session | None = None) -> pd.DataFrame:
     sess = sess or _session()
     t = ticker.upper().strip()
-    r = sess.get(QUOTE_URL.format(ticker=t), timeout=45)
-    r.raise_for_status()
+    if not finviz_session.live_html_allowed():
+        return pd.DataFrame()
+    r = finviz_session.get(sess, [f"/quote.ashx?t={t}"], timeout=45)
+    if r is None:
+        raise RuntimeError(f"Elite quote page unavailable for {t}")
     soup = BeautifulSoup(r.text, "html.parser")
     rows = _table_to_rows(soup, source=f"quote:{t}", ticker_hint=t)
     return pd.DataFrame(rows)
@@ -275,7 +265,7 @@ def month_over_month(monthly: pd.DataFrame, asof: str) -> pd.DataFrame:
             "sell_cur": cur_sell,
             "n_buys_cur": n_b,
             "n_sells_cur": n_s,
-            "flag_insider_net": flag,  # +1 accumulation, -1 distribution
+            "flag_insider_net": flag,
             "status": "GOOD" if flag > 0 else ("BAD" if flag < 0 else "NEUTRAL"),
         })
     return pd.DataFrame(rows).sort_values("net_cur", ascending=False)
@@ -335,7 +325,6 @@ def run(
     mom_path = OUT_DIR / f"{asof}_insider_mom.csv"
     mom.to_csv(mom_path, index=False)
 
-    # human summary
     lines = [
         f"# Insider fetch — {asof}",
         "",
