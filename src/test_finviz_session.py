@@ -188,6 +188,41 @@ def test_ecs_scripts_export_skip_live() -> None:
     assert "ubuntu-latest" in fa
 
 
+def test_github_hosted_allows_live() -> None:
+    env = {
+        "FINVIZ_SKIP_LIVE": "",
+        "FINVIZ_FORCE_LIVE": "",
+        "RUNNER_ENVIRONMENT": "github-hosted",
+        "RUNNER_LABELS": "ubuntu-latest",
+        "HOME": "/home/runner",
+        "FULLSCAN_HOME": "",
+    }
+    with mock.patch.dict(os.environ, env, clear=False):
+        assert finviz_session.live_html_allowed() is True
+
+
+def test_gha_home_blocks_live() -> None:
+    env = {
+        "FINVIZ_SKIP_LIVE": "",
+        "FINVIZ_FORCE_LIVE": "",
+        "RUNNER_ENVIRONMENT": "",
+        "RUNNER_LABELS": "",
+        "RUNNER_NAME": "",
+        "HOME": "/home/gha",
+        "FULLSCAN_HOME": "/home/gha",
+    }
+    with mock.patch.dict(os.environ, env, clear=False):
+        assert finviz_session.live_html_allowed() is False
+
+
+def test_insider_fetch_uses_elite_session() -> None:
+    from pathlib import Path
+    src = Path(__file__).with_name("insider_fetch.py").read_text(encoding="utf-8")
+    assert "https://finviz.com/" not in src
+    assert "finviz_session.get" in src
+    assert "MARKET_PATHS" in src
+
+
 def test_preopen_all_does_not_scrape_finviz() -> None:
     from pathlib import Path
     src = Path(__file__).with_name("run_preopen_all.py").read_text(encoding="utf-8")
@@ -213,6 +248,9 @@ def main() -> None:
         test_ecs_runner_labels_block_live,
         test_force_live_overrides_skip,
         test_ecs_scripts_export_skip_live,
+        test_github_hosted_allows_live,
+        test_gha_home_blocks_live,
+        test_insider_fetch_uses_elite_session,
         test_preopen_all_does_not_scrape_finviz,
     ]
     failed = 0
