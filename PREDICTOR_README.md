@@ -111,9 +111,19 @@ This is the one-button for every predictive part **as a backup**. The weekday cl
 GitHub Actions → **Ticker Lookback (any stock)** → **Run workflow**.
 Enter one or more comma-separated symbols (`AAPL,TEM,BRK-B`) and optional
 start/end dates, or check **Random** for 10 names with market cap > $100M
-and average volume > 500K. This is ticker-first: it scans every dated
-full-market Finviz export, join, AB, peer, quote-color and stock-book
-artifact, even when the ticker was never printed in a buy/sell list.
+and average volume > 500K. This is ticker-first: any name, not just the
+book. Each dated row is the **09:30 ET information set** — what the
+pipeline actually knew before the cash open — not the same-day close.
+
+| Box | Vintage on date D |
+|---|---|
+| join, vol, AB, peer, Finviz factor cells | Prior trading session (last completed tape) |
+| buy | Overnight pick: D−1 stock book (~13:00 ET the day before) |
+| sector, gen, news, digest, judge, heat, catal | D's pre-open packet (05:40–05:55 ET) |
+| Price, +1d, +3d, +1w | Outcomes from D's close (not factors) |
+
+Same-day `data/stock_book/{D}_stock_book.csv` and `data/exports/finviz_{D}.csv`
+never color D's factor boxes. Black means that file was not knowable yet.
 
 The Action publishes:
 

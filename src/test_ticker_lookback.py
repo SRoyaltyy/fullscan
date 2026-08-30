@@ -34,9 +34,76 @@ def test_any_finviz_name_gets_cards_without_book() -> None:
     rec = payload["names"][0]
     assert rec["n_sessions"] == 2
     assert rec["n_with_print"] == 2
-    assert all("finviz" in d["sources"] for d in rec["days"])
+    assert payload.get("asof") == "09:30_et"
+    assert all("prior_finviz" in d["sources"] for d in rec["days"])
+    assert all(d.get("asof") == "09:30_et" for d in rec["days"])
     assert all(len(d.get("finviz_factors") or {}) >= 10 for d in rec["days"])
     assert all(len(d.get("ab_factors") or {}) >= 10 for d in rec["days"])
+
+
+def test_asof_0930_tape_is_prior_session_not_same_day() -> None:
+    """Same-day post-close Finviz and same-day book must not color D's boxes."""
+    payload = run.scan_tickers(
+        ["AAPL"], from_date="2026-08-24", to_date="2026-08-25")
+    rec = payload["names"][0]
+    idx = tl.build_index()
+    by_date = {s["date"]: s for s in idx["sessions"]}
+    for day in rec["days"]:
+        d = day["date"]
+        prior = by_date[d].get("prior_date")
+        vintage = day.get("factor_vintage") or {}
+        assert vintage.get("asof") == "09:30_et"
+        assert vintage.get("prior_date") == prior
+        assert vintage.get("vol") == prior
+        assert vintage.get("join") == prior
+        assert vintage.get("ab") == prior
+        assert "finviz" not in day["sources"]
+        assert "join" not in day["sources"]
+        assert "book" not in day["sources"]
+        # Morning boxes, when present, are D's pre-open files.
+        if "preopen_digest" in day["sources"]:
+            assert vintage.get("digest") == d
+        if "preopen_judge" in day["sources"]:
+            assert vintage.get("judge") == d
+        if "preopen_predict" in day["sources"]:
+            assert vintage.get("sector") == d
+            assert vintage.get("gen") == d
+
+    # 2026-08-24 same-day AAPL RelVol is 0.52 (dead/red). Prior 08-21 is 1.05
+    # (yellow). A 09:30 backtest must keep yellow.
+    day24 = next(d for d in rec["days"] if d["date"] == "2026-08-24")
+    same_day = by_date["2026-08-24"]["finviz"]["AAPL"]
+    prior_fv = by_date["2026-08-21"]["finviz"]["AAPL"]
+    assert tl._fv_relvol(same_day) < tl.RELVOL_DEAD
+    assert tl.RELVOL_DEAD <= tl._fv_relvol(prior_fv) < tl.RELVOL_SPIKE
+    assert day24["boxes"]["vol"] == "neutral"
+    assert day24["boxes"]["vol"] != "bad"
+
+
+def test_overnight_buy_is_prior_book_not_same_day_ranker() -> None:
+    """ELF printed on the 08-20 13:00 book; at 09:30 that morning it was not a pick."""
+    payload = run.scan_tickers(
+        ["ELF", "NEE"], from_date="2026-08-20", to_date="2026-08-20")
+    by_ticker = {n["ticker"]: n["days"][0] for n in payload["names"]}
+    elf = by_ticker["ELF"]
+    nee = by_ticker["NEE"]
+    assert elf["prior_date"] == "2026-08-19"
+    assert elf["boxes"]["buy"] != "good"
+    assert "overnight_buy" not in elf["class"]
+    assert not elf.get("buy_ranks")
+    # NEE was on the 08-19 overnight book, so 08-20 09:30 still sees the pick.
+    assert nee["boxes"]["buy"] == "good"
+    assert nee["class"] == "overnight_buy"
+    assert nee.get("buy_ranks")
+
+
+def test_events_tilt_uses_dated_file_not_latest() -> None:
+    # 2026-08-19 has no dated events file; latest.json is a later scan.
+    assert (tl.ROOT / "01_daily" / "events" / "latest.json").exists()
+    assert not (tl.ROOT / "01_daily" / "events" / "2026-08-19_events.json").exists()
+    assert tl._events_sector_tilt("2026-08-19") == {}
+    tilt25 = tl._events_sector_tilt("2026-08-25")
+    assert tilt25  # dated 08-25 file has bullish industrials, etc.
 
 
 def test_phone_html_and_returns() -> None:
@@ -45,6 +112,7 @@ def test_phone_html_and_returns() -> None:
     page = run.render_html(payload)
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
+    assert "09:30 ET" in page
     assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
@@ -220,10 +288,13 @@ if __name__ == "__main__":
     test_enriched_ab_dates_are_indexed()
     test_session_dates_skip_weekends()
     test_any_finviz_name_gets_cards_without_book()
+    test_asof_0930_tape_is_prior_session_not_same_day()
+    test_overnight_buy_is_prior_book_not_same_day_ranker()
+    test_events_tilt_uses_dated_file_not_latest()
     test_phone_html_and_returns()
     test_random_universe_gates()
     test_price_tones()
     test_signal_improved_is_strict()
     test_blue_on_point_jump_and_zero_red()
     test_alarm_and_condition_majority()
-    print("9 tests passed")
+    print("12 tests passed")

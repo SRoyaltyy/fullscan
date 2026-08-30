@@ -83,18 +83,27 @@ def _ab_factors(row):
     return out
 
 
-def _boxes(sig, fv_rel, in_buy, present):
+def _boxes(sig, fv_rel, in_buy, present, digest_tone=None, judge_tone=None,
+           heat_tone=None, catal_tone=None):
+    """Color boxes from the 09:30-ET information set only.
+
+    Tape boxes (join/vol/AB/peer) require the prior session's files.
+    Morning boxes (sector/gen/news/digest/judge/heat/catal) require D's
+    pre-open packet. Missing means that file was not knowable yet — never
+    a silent yellow.
+    """
     out = {
-        "join": tl._polarity(sig.get("s_join")) if present.get("join") or present.get("book") else "missing",
-        "sector": tl._polarity(sig.get("s_sector")) if present.get("book") else "missing",
-        "gen": tl._polarity(sig.get("s_general")) if present.get("book") else "missing",
-        "news": tl._polarity(sig.get("s_news")) if present.get("book") else "missing",
-        "digest": "neutral" if present.get("book") else "missing",
-        "judge": "neutral" if present.get("book") else "missing",
-        "ab": tl._polarity(sig.get("s_ab")) if present.get("ab") or present.get("book") else "missing",
-        "peer": tl._polarity(sig.get("s_peer")) if present.get("peer") or present.get("book") else "missing",
-        "heat": "missing", "catal": "missing",
-        "buy": "good" if in_buy else "neutral",
+        "join": tl._polarity(sig.get("s_join")) if present.get("join") else "missing",
+        "sector": tl._polarity(sig.get("s_sector")) if present.get("sector") else "missing",
+        "gen": tl._polarity(sig.get("s_general")) if present.get("gen") else "missing",
+        "news": tl._polarity(sig.get("s_news")) if present.get("news") else "missing",
+        "digest": digest_tone or "missing",
+        "judge": judge_tone or "missing",
+        "ab": tl._polarity(sig.get("s_ab")) if present.get("ab") else "missing",
+        "peer": tl._polarity(sig.get("s_peer")) if present.get("peer") else "missing",
+        "heat": heat_tone or "missing",
+        "catal": catal_tone or "missing",
+        "buy": "good" if in_buy else ("neutral" if present.get("overnight_book") else "missing"),
     }
     if not present.get("finviz") and fv_rel is None:
         out["vol"] = "missing"
@@ -106,11 +115,6 @@ def _boxes(sig, fv_rel, in_buy, present):
         out["vol"] = "bad"
     else:
         out["vol"] = "neutral"
-    if not present.get("book"):
-        for k, sk in (("sector", "s_sector"), ("gen", "s_general"), ("news", "s_news")):
-            if out[k] == "neutral" and sig.get(sk) is None:
-                out[k] = "missing"
-        out["digest"] = out["judge"] = "missing"
     return out
 
 
@@ -132,102 +136,172 @@ def _independent_green(sig, fv_rel):
 
 
 def _scan_session(sess, ticker):
+    """Factor colors as of 09:30 ET on sess['date'].
+
+    Prior-session tape (join / Finviz / AB / peer / overnight book) plus
+    same-morning pre-open packet (news / digest / judge / predicts / heat /
+    catalyst). Same-day stock_book and same-day post-close Finviz are ignored.
+    """
     t = tl._tick(ticker)
-    book, join, fv = sess["book"].get(t), sess["join"].get(t), sess["finviz"].get(t)
-    ab, peer, univ = sess["ab"].get(t), sess["peer"].get(t), sess["universe"].get(t)
-    quote = sess.get("quote_colors", {}).get(t)
-    catalyst = sess.get("catalyst", {}).get(t)
-    if not any((book, join, fv, ab, peer, univ, quote, catalyst)):
+    prior = sess.get("prior")
+    prior_date = sess.get("prior_date")
+    packet = tl.preopen_packet(sess["date"], prior_date=prior_date)
+
+    join = (prior or {}).get("join", {}).get(t) if prior else None
+    fv = (prior or {}).get("finviz", {}).get(t) if prior else None
+    ab = (prior or {}).get("ab", {}).get(t) if prior else None
+    peer = (prior or {}).get("peer", {}).get(t) if prior else None
+    univ = (prior.get("universe") or {}).get(t) if prior else None
+    prior_book = (prior or {}).get("book", {}).get(t) if prior else None
+    quote = (prior or {}).get("quote_colors", {}).get(t) if prior else None
+    catalyst = packet.get("catalyst", {}).get(t)
+
+    news_rec = (packet.get("news") or {}).get(t)
+    has_preopen = any((
+        packet.get("has_actions"), packet.get("has_digest"),
+        packet.get("has_judge"), packet.get("has_predict"),
+        bool(catalyst), bool(packet.get("heat")),
+    ))
+    if not any((join, fv, ab, peer, univ, prior_book, quote, news_rec, catalyst, has_preopen)):
         return None
-    sig = {k: None for k in ("s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_heat", "s_opp", "score_1d", "score_3d", "score_1w")}
+
+    sig = {k: None for k in (
+        "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer",
+        "s_heat", "s_opp", "score_1d", "score_3d", "score_1w")}
     reasons = sector = industry = size = mcap = None
     source = []
-    if book:
-        source.append("book")
-        for k in sig:
-            if k in book:
-                sig[k] = tl._num(book.get(k), 0.0)
-        reasons, sector, industry, size = book.get("reasons"), book.get("sector"), book.get("industry"), book.get("size")
-        mcap = tl._num(book.get("market_cap_m"))
+    vintage = {"asof": "09:30_et", "prior_date": prior_date}
+
     if join:
-        source.append("join")
-        if sig["s_join"] is None:
-            sig["s_join"] = tl._s_from_join(join)
-        sector = sector or join.get("sector")
-        industry = industry or join.get("industry")
-        size = size or join.get("size")
+        source.append("prior_join")
+        sig["s_join"] = tl._s_from_join(join)
+        sector = join.get("sector")
+        industry = join.get("industry")
+        size = join.get("size")
+        vintage["join"] = prior_date
     if ab:
-        source.append("ab")
-        if sig["s_ab"] is None:
-            sig["s_ab"] = tl._s_from_ab(ab)
+        source.append("prior_ab")
+        sig["s_ab"] = tl._s_from_ab(ab)
+        vintage["ab"] = prior_date
     if peer:
-        source.append("peer")
-        if sig["s_peer"] is None:
-            sig["s_peer"] = tl._s_from_peer(peer)
+        source.append("prior_peer")
+        sig["s_peer"] = tl._s_from_peer(peer)
+        vintage["peer"] = prior_date
     if fv:
-        source.append("finviz")
+        source.append("prior_finviz")
         if mcap is None:
             mcap = tl._num(fv.get("Market Cap"))
         sector = sector or fv.get("Sector")
         industry = industry or fv.get("Industry")
-    if univ and "universe" not in source:
-        source.append("universe")
+        vintage["vol"] = prior_date
+        vintage["finviz"] = prior_date
+    if prior_book:
+        source.append("overnight_book")
+        reasons = prior_book.get("reasons")
+        sector = sector or prior_book.get("sector")
+        industry = industry or prior_book.get("industry")
+        size = size or prior_book.get("size")
+        if mcap is None:
+            mcap = tl._num(prior_book.get("market_cap_m"))
+        vintage["overnight_book"] = prior_date
+    if univ:
         sector = sector or univ.get("sector")
         industry = industry or univ.get("industry")
-    if quote:
-        source.append("quote_colors")
+    if news_rec or packet.get("has_actions") or packet.get("has_judge"):
+        if news_rec:
+            source.append("preopen_news")
+        net = (news_rec or {}).get("net")
+        if net is not None:
+            sig["s_news"] = max(-1.0, min(1.0, math.tanh(float(net) / 5.0)))
+        vintage["news"] = sess["date"]
+    if packet.get("has_digest"):
+        source.append("preopen_digest")
+        vintage["digest"] = sess["date"]
+    if packet.get("has_judge"):
+        source.append("preopen_judge")
+        vintage["judge"] = sess["date"]
+    if packet.get("has_predict"):
+        source.append("preopen_predict")
+        vintage["sector"] = sess["date"]
+        vintage["gen"] = sess["date"]
+        sec_bias = (packet.get("sector_bias") or {}).get(sector)
+        if sec_bias is not None:
+            sig["s_sector"] = float(sec_bias)
+        beta_src = None
+        if join is not None:
+            beta_src = join.get("beta")
+        if beta_src is None and fv is not None:
+            beta_src = fv.get("Beta") or fv.get("beta")
+        sig["s_general"] = float(packet.get("gen_bias") or 0.0) * tl._beta_load(beta_src)
+    heat_val = (packet.get("heat") or {}).get(t)
+    if heat_val is None and industry:
+        heat_val = (packet.get("heat_ind") or {}).get(industry)
+    if heat_val is not None:
+        source.append("preopen_heat")
+        sig["s_heat"] = float(heat_val)
+        vintage["heat"] = packet.get("heat_vintage") or sess["date"]
     if catalyst:
-        source.append("catalyst")
+        source.append("preopen_catalyst")
+        vintage["catal"] = sess["date"]
+
     fv_rel = tl._fv_relvol(fv)
-    buys = sess["buys"].get(t) or {}
-    sells = sess["sells"].get(t) or {}
+    buys = ((prior or {}).get("buys") or {}).get(t) or {}
+    sells = ((prior or {}).get("sells") or {}).get(t) or {}
     present = {
-        "book": book is not None,
-        "join": join is not None or (book is not None and sig.get("s_join") is not None),
-        "ab": ab is not None or (book is not None and sig.get("s_ab") is not None),
-        "peer": peer is not None or (book is not None and sig.get("s_peer") is not None),
+        "join": join is not None,
+        "ab": ab is not None,
+        "peer": peer is not None,
         "finviz": fv is not None,
+        "sector": sig.get("s_sector") is not None or packet.get("has_predict"),
+        "gen": packet.get("has_predict"),
+        "news": news_rec is not None or packet.get("has_actions") or packet.get("has_judge"),
+        "overnight_book": bool((prior or {}).get("has", {}).get("book")),
     }
-    boxes = _boxes(sig, fv_rel, bool(buys), present)
-    if sig.get("s_heat") is not None:
-        boxes["heat"] = tl._polarity(sig.get("s_heat"))
+    judge_raw = (packet.get("judge") or {}).get(t)
+    judge_tone = tl._polarity(judge_raw) if judge_raw is not None else (
+        "missing" if not packet.get("has_judge") else "missing")
+    digest_tone = (packet.get("digest_tones") or {}).get(t)
+    if digest_tone is None:
+        digest_tone = "missing"
+    heat_tone = tl._polarity(sig.get("s_heat")) if sig.get("s_heat") is not None else "missing"
+    catal_tone = "missing"
     if catalyst:
         cat_weight = tl._num(catalyst.get("conviction"), 50.0) / 100.0
         signal = str(catalyst.get("net_signal") or "").lower()
         signed = cat_weight if "bullish" in signal else -cat_weight if "bearish" in signal else 0.0
-        boxes["catal"] = tl._polarity(signed)
+        catal_tone = tl._polarity(signed)
+    boxes = _boxes(
+        sig, fv_rel, bool(buys), present,
+        digest_tone=digest_tone, judge_tone=judge_tone,
+        heat_tone=heat_tone, catal_tone=catal_tone)
     gate = _independent_green(sig, fv_rel)
     families = {}
     if join:
         for fam in tl.JOIN_FAMILIES:
             if fam in join and pd.notna(join.get(fam)):
-                families[fam] = {"value": join.get(fam), "tone": tl._join_family_tone(join.get(fam))}
-    cls = "no_print"
-    if book:
-        if size == "micro" or (mcap is not None and mcap < 400):
-            cls = "gated_out"
-        elif buys:
-            cls = "in_buy_book"
-        elif sells:
-            cls = "in_sell_book"
-        elif gate["green"]:
-            cls = "green_not_printed"
-        elif any(abs(tl._num(sig.get(c), 0) or 0) >= tl.EPS for c in ("s_ab", "s_peer", "s_news")):
-            cls = "outweighed"
-        else:
-            cls = "in_universe"
-    elif join or ab or peer:
-        cls = "full_market_only"
-    elif fv:
-        cls = "finviz_only"
+                families[fam] = {"value": join.get(fam),
+                                 "tone": tl._join_family_tone(join.get(fam))}
+    cls = "asof_0930"
+    if size == "micro" or (mcap is not None and mcap < 400):
+        cls = "gated_out"
+    elif buys:
+        cls = "overnight_buy"
+    elif sells:
+        cls = "overnight_sell"
+    elif gate["green"]:
+        cls = "green_0930"
+    elif not any((join, fv, ab, peer, news_rec, catalyst, packet.get("has_predict"))):
+        cls = "no_print"
     if reasons is not None and isinstance(reasons, float) and math.isnan(reasons):
         reasons = None
     return {
-        "date": sess["date"], "ticker": t, "class": cls, "sources": source,
+        "date": sess["date"], "ticker": t, "class": cls, "asof": "09:30_et",
+        "sources": source, "factor_vintage": vintage,
         "sector": sector, "industry": industry, "size": size, "mcap_m": mcap,
         "signals": {k: (None if v is None else round(v, 3)) for k, v in sig.items()},
         "boxes": boxes, "independent_green": gate,
-        "in_green_buy": t in sess["green_buy"], "in_live_buy": t in sess["live_buy"],
+        "in_green_buy": False,
+        "in_live_buy": False,
         "buy_ranks": buys, "sell_ranks": sells,
         "reasons": None if reasons is None else str(reasons),
         "finviz": None if not fv else {"relvol": None if fv_rel is None else round(fv_rel, 3),
@@ -240,6 +314,7 @@ def _scan_session(sess, ticker):
         "quote_color_fields": (quote or {}).get("fields") or {},
         "ab_factors": _ab_factors(ab),
         "catalyst": catalyst,
-        "forward_returns": tl.forward_returns(t, sess["date"]),  # sessions filled by runner
+        "forward_returns": tl.forward_returns(t, sess["date"]),
         "artifacts_that_day": sess["has"],
+        "prior_date": prior_date,
     }
