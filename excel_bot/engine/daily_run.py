@@ -109,6 +109,7 @@ def update_ticker(ticker):
                                          rows[0]["date"]), rows[-1]["date"])
         days = build_ticker(ticker, rows, anchors)
         if days:
+            os.makedirs(GRIDS_DIR, exist_ok=True)
             json.dump({"ticker": ticker, "days": days},
                       open(os.path.join(GRIDS_DIR, f"{ticker}.json"), "w"))
         return (ticker, len(days), None)
