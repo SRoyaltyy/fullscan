@@ -1,8 +1,8 @@
 {
   "ok": false,
-  "n_fail": 1,
+  "n_fail": 2,
   "grok_busy": false,
-  "updated_at": "2026-08-30T07:27:09.103197-04:00",
+  "updated_at": "2026-08-30T08:03:02.815360-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -47,7 +47,7 @@
       "group": "classroom",
       "status": "OK",
       "required": true,
-      "detail": "PONG model=openclaw/default",
+      "detail": "classroom live (Hey. I just came online. Who am I? Who are you?) model=openclaw/default",
       "action": "none"
     },
     {
@@ -99,7 +99,7 @@
       "id": "oauth",
       "name": "xAI auth",
       "group": "auth",
-      "status": "WARN",
+      "status": "FAIL",
       "required": true,
       "detail": "Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fallbacks (0) : - Image",
       "action": "reauth"
@@ -155,7 +155,7 @@
       "group": "postclose",
       "status": "FAIL",
       "required": true,
-      "detail": "2026-08-31_map_heat.json: EMPTY TAPE; 403 in 2026-08-28_pipeline_health_postclose.json, 2026-08-28_pipeline_health_postclose.json",
+      "detail": "403 in 2026-08-28_pipeline_health_postclose.json, 2026-08-28_pipeline_health_postclose.json",
       "action": "none"
     },
     {
@@ -167,6 +167,5 @@
       "detail": "history \u2014 401 in 2026-08-26_preopen_status.json, 2026-08-30_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
       "action": "none"
     }
-  ],
-  "healed": []
+  ]
 }
