@@ -41,10 +41,10 @@ jobs:
               mkdir -p dashboard_artifact
               unzip -o artifact.zip -d dashboard_artifact
               if [ -f dashboard_artifact/index.html ]; then
-                cp dashboard_artifact/index.html pages_out/dashboard/index.html
+                cp -a dashboard_artifact/. pages_out/dashboard/
                 cp dashboard_artifact/index.html pages_out/index.html
               elif [ -f dashboard_artifact/dashboard/index.html ]; then
-                cp dashboard_artifact/dashboard/index.html pages_out/dashboard/index.html
+                cp -a dashboard_artifact/dashboard/. pages_out/dashboard/
                 cp dashboard_artifact/dashboard/index.html pages_out/index.html
               fi
             fi
@@ -52,7 +52,7 @@ jobs:
 
           # Fallback: use dashboard committed on main
           if [ ! -f pages_out/dashboard/index.html ] && [ -f dashboard/index.html ]; then
-            cp dashboard/index.html pages_out/dashboard/index.html
+            cp -a dashboard/. pages_out/dashboard/
             cp dashboard/index.html pages_out/index.html
             echo "Used dashboard/index.html from main"
           fi

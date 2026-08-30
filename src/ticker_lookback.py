@@ -22,7 +22,10 @@ EXPORT_DIR = ROOT / "data" / "exports"
 AB_DIR = ROOT / "data" / "ab_checklist"
 PEER_DIR = ROOT / "data" / "peers"
 UNIVERSE_DIR = ROOT / "data" / "universe"
+QUOTE_DIR = ROOT / "data" / "quote_colors"
+CATALYST_DIR = ROOT / "01_daily" / "catalyst"
 PAPER_DIR = ROOT / "data" / "paper"
+PRICE_STORE = ROOT / "data" / "prices" / "ohlc.parquet"
 DAILY = ROOT / "01_daily"
 SCORE = ROOT / "03_scoreboard"
 ET = ZoneInfo("America/New_York")
@@ -42,6 +45,7 @@ JOIN_FAMILIES = (
     "themes", "analyst", "peg", "q_mom", "range", "ext", "roe",
 )
 _INDEX = None
+_PRICE_PANEL = None
 
 
 def _tick(s):
@@ -102,7 +106,10 @@ def session_dates():
     dates.update(_dates_from(JOIN_DIR, "????-??-??_ranked.csv"))
     dates.update(_dates_from(EXPORT_DIR, "finviz_????-??-??.csv"))
     dates.update(_dates_from(AB_DIR, "????-??-??_ab_slim.csv"))
+    dates.update(_dates_from(AB_DIR, "????-??-??_ab_checklist_enriched.csv"))
+    dates.update(_dates_from(AB_DIR, "????-??-??_ab_checklist.csv"))
     dates.update(_dates_from(PEER_DIR, "????-??-??_peer_rs.csv"))
+    dates.update(_dates_from(QUOTE_DIR, "????-??-??_quote_colors_detail.json"))
     return sorted(dates)
 
 
@@ -130,9 +137,21 @@ def build_index():
         book_map = _by_ticker(_csv(BOOK_DIR / f"{d}_stock_book.csv"))
         join_map = _by_ticker(_csv(JOIN_DIR / f"{d}_ranked.csv"))
         fv_map = _by_ticker(_csv(EXPORT_DIR / f"finviz_{d}.csv"))
-        ab_map = _by_ticker(_csv(AB_DIR / f"{d}_ab_slim.csv"))
+        ab_path = AB_DIR / f"{d}_ab_slim.csv"
+        if not ab_path.exists():
+            ab_path = AB_DIR / f"{d}_ab_checklist_enriched.csv"
+        if not ab_path.exists():
+            ab_path = AB_DIR / f"{d}_ab_checklist.csv"
+        ab_map = _by_ticker(_csv(ab_path))
         peer_map = _by_ticker(_csv(PEER_DIR / f"{d}_peer_rs.csv"))
         univ_map = _by_ticker(_csv(UNIVERSE_DIR / f"{d}_membership.csv"))
+        quote_map = _jload(QUOTE_DIR / f"{d}_quote_colors_detail.json") or {}
+        catalyst_payload = _jload(CATALYST_DIR / f"{d}_dossiers.json") or {}
+        catalyst_map = {
+            _tick(r.get("ticker")): r
+            for r in (catalyst_payload.get("dossiers") or [])
+            if isinstance(r, dict) and _tick(r.get("ticker"))
+        }
         buys, sells = {}, {}
         for h, entry in (book_json.get("books") or {}).items():
             for i, r in enumerate(entry.get("buy") or [], 1):
@@ -146,11 +165,14 @@ def build_index():
         sessions.append({
             "date": d,
             "has": {"book": bool(book_map), "join": bool(join_map), "finviz": bool(fv_map),
-                     "ab": bool(ab_map), "peer": bool(peer_map), "universe": bool(univ_map), "green": bool(green)},
+                     "ab": bool(ab_map), "peer": bool(peer_map), "universe": bool(univ_map),
+                     "quote_colors": bool(quote_map), "catalyst": bool(catalyst_map),
+                     "green": bool(green)},
             "n_book": len(book_map), "n_join": len(join_map), "n_finviz": len(fv_map),
             "n_ab": len(ab_map), "n_peer": len(peer_map),
             "book": book_map, "join": join_map, "finviz": fv_map, "ab": ab_map,
-            "peer": peer_map, "universe": univ_map, "buys": buys, "sells": sells,
+            "peer": peer_map, "universe": univ_map, "quote_colors": quote_map,
+            "catalyst": catalyst_map, "buys": buys, "sells": sells,
             "green_buy": green_buy, "live_buy": live_buy,
             "green_meta": {"n_pile": green.get("n_pile"), "n_universe": green.get("n_universe"), "pile_used": green.get("pile_used")},
         })
@@ -166,6 +188,47 @@ def build_index():
             })
     _INDEX = {"sessions": sessions, "paper": paper_hits, "dates": dates}
     return _INDEX
+
+
+def _price_panel():
+    global _PRICE_PANEL
+    if _PRICE_PANEL is not None:
+        return _PRICE_PANEL
+    if not PRICE_STORE.exists():
+        _PRICE_PANEL = pd.DataFrame()
+        return _PRICE_PANEL
+    try:
+        df = pd.read_parquet(PRICE_STORE)
+        df["date"] = pd.to_datetime(df["date"]).dt.normalize()
+        df["ticker"] = df["ticker"].astype(str).str.upper()
+        _PRICE_PANEL = df.drop_duplicates(
+            ["date", "ticker"], keep="last"
+        ).pivot(index="date", columns="ticker", values="close").sort_index()
+    except Exception:
+        _PRICE_PANEL = pd.DataFrame()
+    return _PRICE_PANEL
+
+
+def forward_returns(ticker: str, date: str) -> dict[str, float | None]:
+    """Signal-close to future-close returns over trading sessions."""
+    panel = _price_panel()
+    t = _tick(ticker)
+    horizons = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
+    out = {h: None for h in horizons}
+    if panel.empty or t not in panel.columns:
+        return out
+    idx = panel.index.searchsorted(pd.Timestamp(date))
+    if idx >= len(panel.index) or panel.index[idx].date().isoformat() != date:
+        return out
+    entry = _num(panel[t].iloc[idx])
+    if not entry:
+        return out
+    for h, n in horizons.items():
+        if idx + n < len(panel.index):
+            exitp = _num(panel[t].iloc[idx + n])
+            if exitp:
+                out[h] = round(100 * (exitp / entry - 1), 3)
+    return out
 
 
 def _join_family_tone(val):
@@ -202,7 +265,11 @@ def _s_from_join(j):
 def _s_from_ab(ab):
     if not ab:
         return None
-    v = _num(ab.get("ab_raw"))
+    v = None
+    for key in ("ab_raw", "score_enriched", "score_merged", "score"):
+        v = _num(ab.get(key))
+        if v is not None:
+            break
     return None if v is None else max(-1.0, min(1.0, v / 12.0))
 
 
