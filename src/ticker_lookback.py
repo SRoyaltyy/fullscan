@@ -2,10 +2,13 @@
 
 Each dated row is the 09:30 ET information set, not the same-day close.
 
-  Tape (join / Finviz / AB / peer / overnight book): prior trading session.
-  Morning packet (sector / gen / news / digest / judge / heat / catalyst):
-  D's pre-open files (05:40–05:55 ET). Same-day stock_book (~13:00) and
-  same-day post-close Finviz (~21:10) never color D's factor boxes.
+  Packet recipe (what the ranker is supposed to know by the open):
+    join — D's ranked file when D's weather was built from the morning
+           predict (labels × pre-open weather). Else prior join.
+    vol / Finviz cells / AB / peer / overnight book — prior session tape.
+    sector / gen / news / digest / judge / heat / catal — D pre-open.
+  Same-day stock_book (~13:00) and same-day post-close Finviz (~21:10)
+  never color D's factor boxes.
 
   +1d / +3d / +1w stay forward outcomes from D's close.
 
@@ -37,6 +40,7 @@ CATALYST_DIR = ROOT / "01_daily" / "catalyst"
 NEWS_DIR = ROOT / "01_daily" / "news"
 GENERAL_DIR = ROOT / "01_daily" / "general"
 MAP_HEAT_DIR = ROOT / "01_daily" / "map_heat"
+WEATHER_DIR = ROOT / "01_daily" / "weather"
 PAPER_DIR = ROOT / "data" / "paper"
 PRICE_STORE = ROOT / "data" / "prices" / "ohlc.parquet"
 DAILY = ROOT / "01_daily"
@@ -652,6 +656,26 @@ def _events_sector_tilt(date):
                 continue
             tilt[str(sec)] = tilt.get(str(sec), 0.0) + sign * min(impact, 5) * 0.08
     return tilt
+
+
+def join_packet_ok(date) -> bool:
+    """True when D's ranked join is the two-packet recipe.
+
+    Join is labels × weather. Weather's primary input is D's general
+    predict (05:55 ET). If that predict is missing or never made it
+    into the weather file, fall back to the prior session's join.
+    """
+    if not (JOIN_DIR / f"{date}_ranked.csv").exists():
+        return False
+    if not (GENERAL_DIR / f"{date}_predict.md").exists():
+        return False
+    weather = _jload(WEATHER_DIR / f"{date}_weather.json") or {}
+    if not weather:
+        return False
+    sig = weather.get("signals") or {}
+    if sig.get("general_score") is None and str(sig.get("risk") or "") in {"", "unknown"}:
+        return False
+    return True
 
 
 def preopen_packet(date, prior_date=None):

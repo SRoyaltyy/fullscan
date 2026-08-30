@@ -55,11 +55,18 @@ def test_asof_0930_tape_is_prior_session_not_same_day() -> None:
         assert vintage.get("asof") == "09:30_et"
         assert vintage.get("prior_date") == prior
         assert vintage.get("vol") == prior
-        assert vintage.get("join") == prior
         assert vintage.get("ab") == prior
         assert "finviz" not in day["sources"]
         assert "join" not in day["sources"]
         assert "book" not in day["sources"]
+        # Join is D's packet file when weather came from the morning predict.
+        if tl.join_packet_ok(d):
+            assert vintage.get("join") == d
+            assert "packet_join" in day["sources"]
+        else:
+            assert vintage.get("join") == prior
+            if day.get("boxes", {}).get("join") != "missing":
+                assert "prior_join" in day["sources"]
         # Morning boxes, when present, are D's pre-open files.
         if "preopen_digest" in day["sources"]:
             assert vintage.get("digest") == d
@@ -78,6 +85,26 @@ def test_asof_0930_tape_is_prior_session_not_same_day() -> None:
     assert tl.RELVOL_DEAD <= tl._fv_relvol(prior_fv) < tl.RELVOL_SPIKE
     assert day24["boxes"]["vol"] == "neutral"
     assert day24["boxes"]["vol"] != "bad"
+    # 08-24 has join + weather from the morning predict — use that file,
+    # not 08-21's join. Vol/buy still stay on the prior tape.
+    assert tl.join_packet_ok("2026-08-24") is True
+    assert day24["factor_vintage"]["join"] == "2026-08-24"
+    assert "packet_join" in day24["sources"]
+
+
+def test_join_packet_uses_same_day_ranked_not_prior() -> None:
+    """08-12 is the first join file. Clock-strict prior tape has no join;
+    the packet recipe should still color join from 08-12's ranked file."""
+    assert tl.join_packet_ok("2026-08-12") is True
+    assert tl.join_packet_ok("2026-08-11") is False
+    payload = run.scan_tickers(["AAPL"], from_date="2026-08-12", to_date="2026-08-12")
+    day = payload["names"][0]["days"][0]
+    assert day["factor_vintage"]["join"] == "2026-08-12"
+    assert "packet_join" in day["sources"]
+    assert day["boxes"]["join"] != "missing"
+    # No Elite export until 08-13, so 08-12 vol has no prior tape.
+    assert day["boxes"]["vol"] == "missing"
+    assert day["boxes"]["buy"] != "good"
 
 
 def test_overnight_buy_is_prior_book_not_same_day_ranker() -> None:
@@ -352,6 +379,7 @@ if __name__ == "__main__":
     test_session_dates_skip_weekends()
     test_any_finviz_name_gets_cards_without_book()
     test_asof_0930_tape_is_prior_session_not_same_day()
+    test_join_packet_uses_same_day_ranked_not_prior()
     test_overnight_buy_is_prior_book_not_same_day_ranker()
     test_events_tilt_uses_dated_file_not_latest()
     test_phone_html_and_returns()
@@ -362,4 +390,4 @@ if __name__ == "__main__":
     test_alarm_and_condition_majority()
     test_color_region_ignores_yellows()
     test_tag_context_depends_on_region()
-    print("14 tests passed")
+    print("15 tests passed")

@@ -117,7 +117,8 @@ pipeline actually knew before the cash open — not the same-day close.
 
 | Box | Vintage on date D |
 |---|---|
-| join, vol, AB, peer, Finviz factor cells | Prior trading session (last completed tape) |
+| join | D's `{D}_ranked.csv` when D's weather was built from the morning predict (labels × pre-open weather). Else prior join. |
+| vol, AB, peer, Finviz factor cells | Prior trading session (last completed tape) |
 | buy | Overnight pick: D−1 stock book (~13:00 ET the day before) |
 | sector, gen, news, digest, judge, heat, catal | D's pre-open packet (05:40–05:55 ET) |
 | Price, +1d, +3d, +1w | Outcomes from D's close (not factors) |
