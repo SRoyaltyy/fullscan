@@ -116,3 +116,84 @@ def session_dates() -> list[str]:
     dates.update(_dates_from(AB_DIR, "????-??-??_ab_slim.csv"))
     dates.update(_dates_from(PEER_DIR, "????-??-??_peer_rs.csv"))
     return sorted(dates)
+
+
+def _by_ticker(df: pd.DataFrame) -> dict:
+    if df is None or df.empty:
+        return {}
+    tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
+    out = {}
+    for rec in df.to_dict(orient="records"):
+        t = _tick(rec.get(tcol))
+        if t and t not in out:
+            out[t] = rec
+    return out
+
+
+def build_index() -> dict:
+    global _INDEX
+    if _INDEX is not None:
+        return _INDEX
+    dates = session_dates()
+    sessions = []
+    for d in dates:
+        book_json = _jload(BOOK_DIR / f"{d}_stock_book.json") or {}
+        green = _jload(BOOK_DIR / f"{d}_green.json") or {}
+        book_map = _by_ticker(_csv(BOOK_DIR / f"{d}_stock_book.csv"))
+        join_map = _by_ticker(_csv(JOIN_DIR / f"{d}_ranked.csv"))
+        fv_map = _by_ticker(_csv(EXPORT_DIR / f"finviz_{d}.csv"))
+        ab_map = _by_ticker(_csv(AB_DIR / f"{d}_ab_slim.csv"))
+        peer_map = _by_ticker(_csv(PEER_DIR / f"{d}_peer_rs.csv"))
+        univ_map = _by_ticker(_csv(UNIVERSE_DIR / f"{d}_membership.csv"))
+        buys, sells = {}, {}
+        for h, entry in (book_json.get("books") or {}).items():
+            for i, r in enumerate(entry.get("buy") or [], 1):
+                t = _tick(r.get("ticker"))
+                buys.setdefault(t, {})[h] = {
+                    "rank": i, "score": r.get("score"), "reasons": r.get("reasons"),
+                }
+            for i, r in enumerate(entry.get("sell") or [], 1):
+                t = _tick(r.get("ticker"))
+                sells.setdefault(t, {})[h] = {"rank": i, "score": r.get("score")}
+        green_buy = {
+            _tick(x.get("ticker") if isinstance(x, dict) else x)
+            for x in (green.get("green_buy") or [])
+        }
+        live_buy = {
+            _tick(x.get("ticker") if isinstance(x, dict) else x)
+            for x in (green.get("live_buy") or [])
+        }
+        sessions.append({
+            "date": d,
+            "has": {
+                "book": bool(book_map), "join": bool(join_map),
+                "finviz": bool(fv_map), "ab": bool(ab_map),
+                "peer": bool(peer_map), "universe": bool(univ_map),
+                "green": bool(green),
+            },
+            "n_book": len(book_map), "n_join": len(join_map),
+            "n_finviz": len(fv_map), "n_ab": len(ab_map), "n_peer": len(peer_map),
+            "book": book_map, "join": join_map, "finviz": fv_map,
+            "ab": ab_map, "peer": peer_map, "universe": univ_map,
+            "buys": buys, "sells": sells,
+            "green_buy": green_buy, "live_buy": live_buy,
+            "green_meta": {
+                "n_pile": green.get("n_pile"),
+                "n_universe": green.get("n_universe"),
+                "pile_used": green.get("pile_used"),
+            },
+        })
+    paper_hits = {}
+    trades = _csv(PAPER_DIR / "trades.csv")
+    if not trades.empty and "ticker" in trades.columns:
+        for rec in trades.to_dict(orient="records"):
+            t = _tick(rec.get("ticker"))
+            paper_hits.setdefault(t, []).append({
+                "date": str(rec.get("date") or "")[:10],
+                "side": rec.get("side"),
+                "sleeve": rec.get("sleeve"),
+                "price": _num(rec.get("price")),
+                "reason": str(rec.get("reason") or "")[:180],
+            })
+    _INDEX = {"sessions": sessions, "paper": paper_hits, "dates": dates}
+    return _INDEX
