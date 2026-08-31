@@ -1,8 +1,8 @@
 {
   "ok": false,
-  "n_fail": 1,
-  "grok_busy": true,
-  "updated_at": "2026-08-31T09:56:29.565158-04:00",
+  "n_fail": 5,
+  "grok_busy": false,
+  "updated_at": "2026-08-31T13:55:21.816223-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -18,10 +18,10 @@
       "id": "process",
       "name": "OpenClaw process",
       "group": "box",
-      "status": "OK",
+      "status": "WARN",
       "required": true,
-      "detail": "pid=413253 pong ok",
-      "action": "none"
+      "detail": "pid=417604 port=up",
+      "action": "heal"
     },
     {
       "id": "gateway",
@@ -29,7 +29,7 @@
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "active pid=413253 alive",
+      "detail": "active pid=417604 alive",
       "action": "none"
     },
     {
@@ -45,19 +45,19 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "SKIP",
-      "required": false,
-      "detail": "Grok job running \u2014 not poking the classroom",
-      "action": "none"
+      "status": "FAIL",
+      "required": true,
+      "detail": "HTTP 401 \u2014 wrong token (64 vs 48)",
+      "action": "heal"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "SKIP",
-      "required": false,
-      "detail": "probe skipped",
-      "action": "none"
+      "status": "FAIL",
+      "required": true,
+      "detail": "no 200 chat",
+      "action": "heal"
     },
     {
       "id": "token",
@@ -81,10 +81,10 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "WARN",
-      "required": false,
-      "detail": "401 in last packet 2026-08-26_preopen_status.json, 2026-08-31_map_heat.json \u2014 not live",
-      "action": "none"
+      "status": "FAIL",
+      "required": true,
+      "detail": "HTTP 401 \u2014 wrong token (64 vs 48)",
+      "action": "heal"
     },
     {
       "id": "grok_only",
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=cancelled",
+      "detail": "latest=failure systemd=exit-code",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=queued systemd=exit-code",
+      "detail": "latest=failure systemd=exit-code",
       "action": "none"
     },
     {
@@ -162,13 +162,10 @@
       "id": "stub",
       "name": "Packet stubs",
       "group": "postclose",
-      "status": "WARN",
-      "required": false,
-      "detail": "history \u2014 401 in 2026-08-26_preopen_status.json, 2026-08-31_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
-      "action": "none"
+      "status": "FAIL",
+      "required": true,
+      "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-31_preopen_status.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json",
+      "action": "heal"
     }
-  ],
-  "healed": [
-    "enable_openclaw_chat.sh exit=1 13253]: 2026-08-31T21:56:05.317+08:00 [openai-compat] chat completion failed: FailoverError: 403 \"You have run out of credits or need a Grok subscription. Add c"
   ]
 }
