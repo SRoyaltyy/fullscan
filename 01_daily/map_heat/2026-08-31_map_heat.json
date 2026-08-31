@@ -8558,157 +8558,157 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7708.0,
-      "change": -0.18
+      "last": 7708.25,
+      "change": -0.17
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29452.25,
-      "change": -0.14
+      "last": 29453.75,
+      "change": -0.13
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2978.2,
-      "change": 0.03
+      "last": 2976.2,
+      "change": -0.05
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 53505.0,
-      "change": -0.15
+      "last": 53493.0,
+      "change": -0.16
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.05,
-      "change": 0.68
+      "last": 17.1,
+      "change": 0.97
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 86.56,
-      "change": 3.82
+      "last": 86.54,
+      "change": 3.79
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 91.29,
+      "last": 91.33,
       "change": 3.64
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.887,
-      "change": -0.1
+      "last": 2.895,
+      "change": 0.21
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3393,
-      "change": 2.05
+      "last": 4.3442,
+      "change": 2.24
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.0868,
-      "change": 1.14
+      "last": 3.0867,
+      "change": 1.2
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4494.6,
-      "change": -0.78
+      "last": 4502.0,
+      "change": -0.61
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.68,
-      "change": -0.13
+      "last": 67.75,
+      "change": -0.05
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.668,
-      "change": 0.14
+      "last": 6.6665,
+      "change": 0.11
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1812.0,
-      "change": -2.3
+      "last": 1811.9,
+      "change": -2.29
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1415.0,
-      "change": -2.24
+      "last": 1417.0,
+      "change": -2.07
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.49,
-      "change": -0.17
+      "last": 99.475,
+      "change": -0.18
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.1606,
-      "change": 0.16
+      "last": 1.1608,
+      "change": 0.17
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6268,
+      "last": 0.6267,
       "change": 0.25
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3543,
+      "last": 1.3544,
       "change": 0.1
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.71595,
-      "change": 0.03
+      "last": 0.716,
+      "change": 0.04
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.72025,
-      "change": 0.1
+      "last": 0.7205,
+      "change": 0.13
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.2386,
-      "change": 0.12
+      "last": 1.2387,
+      "change": 0.14
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.59175,
-      "change": 0.11
+      "last": 0.59185,
+      "change": 0.14
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 107.921875,
+      "last": 107.90625,
       "change": 0.04
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.859375,
-      "change": 0.05
+      "last": 105.8515625,
+      "change": 0.04
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.66796875,
+      "last": 102.671875,
       "change": 0.05
     },
     {
@@ -8720,56 +8720,56 @@
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66285.0,
-      "change": 0.81
+      "last": 66250.0,
+      "change": 0.71
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26431.0,
-      "change": -0.71
+      "last": 26389.0,
+      "change": -0.87
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6475.0,
-      "change": -0.42
+      "last": 6470.0,
+      "change": -0.49
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 538.75,
-      "change": 0.42
+      "last": 537.75,
+      "change": 0.28
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1285.75,
-      "change": -0.17
+      "last": 1284.5,
+      "change": -0.27
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 776.75,
-      "change": -0.89
+      "last": 775.0,
+      "change": -1.15
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.67,
-      "change": -0.18
+      "last": 70.6,
+      "change": -0.28
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 338.4,
-      "change": -1.2
+      "last": 338.5,
+      "change": -1.17
     },
     {
       "ticker": "ZO",
       "label": "Oats",
       "last": 372.25,
-      "change": -0.8
+      "change": -0.67
     },
     {
       "ticker": "ZR",
@@ -8792,8 +8792,8 @@
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 92.65,
-      "change": 1.34
+      "last": 92.72,
+      "change": 1.48
     },
     {
       "ticker": "CC",
@@ -8834,14 +8834,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 78860.0,
-      "change": 1.33
+      "last": 78815.0,
+      "change": 1.22
     },
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 820.8,
-      "change": -0.35
+      "last": 820.6,
+      "change": -0.36
     },
     {
       "ticker": "ZK",
@@ -8852,7 +8852,47 @@
   ],
   "ticker_news": [
     {
-      "time": "5 min",
+      "time": "10 min",
+      "title": "Intel, ServiceNow, Chevron, Strategy, and More Stocks That Explain Today's Market",
+      "url": "https://www.barrons.com/articles/stock-movers-3aad06c8?mod=bar_FV",
+      "source": "Barrons.com",
+      "tickers": [
+        "MSTR",
+        "PLTR",
+        "INTC",
+        "NVDA",
+        "SOXX"
+      ]
+    },
+    {
+      "time": "15 min",
+      "title": "GameStop Announces Amendment to Convertible Notes Exchange; Approximately $358.4 Million to be Settled in Cash in Lieu of Stock",
+      "url": "/news/386741/gamestop-announces-amendment-to-convertible-notes-exchange-approximately-3584-million-to-be-settled-in-cash-in-lieu-of-stock",
+      "source": "Business Wire",
+      "tickers": [
+        "GME"
+      ]
+    },
+    {
+      "time": "21 min",
+      "title": "Gilat Announces $100 Million Five-Year Convertible Notes at 60% Conversion Premium",
+      "url": "/news/386739/gilat-announces-100-million-five-year-convertible-notes-at-60-conversion-premium",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "GILT"
+      ]
+    },
+    {
+      "time": "21 min",
+      "title": "GameStop Announces Second Quarter 2026 Preliminary Results",
+      "url": "/news/386740/gamestop-announces-second-quarter-2026-preliminary-results",
+      "source": "Business Wire",
+      "tickers": [
+        "GME"
+      ]
+    },
+    {
+      "time": "26 min",
       "title": "So-Young Reports Unaudited Second Quarter 2026 Financial Results",
       "url": "/news/386729/so-young-reports-unaudited-second-quarter-2026-financial-results",
       "source": "PR Newswire",
@@ -8861,7 +8901,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "Ziihera (zanidatamab-hrii) plus Chemotherapy Demonstrates Statistically Significant Overall Survival Benefit Versus Trastuzumab plus Chemotherapy in First-Line HER2+ Advanced GEA",
       "url": "/news/386730/ziihera-zanidatamab-hrii-plus-chemotherapy-demonstrates-statistically-significant-overall-survival-benefit-versus-trastuzumab-plus-chemotherapy-in-first-line-her2-advanced-gea",
       "source": "PR Newswire",
@@ -8870,17 +8910,17 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "Realtor.com Ranks the Top Metros for New Construction in 2026",
       "url": "/news/386731/realtorcom-ranks-the-top-metros-for-new-construction-in-2026",
       "source": "PR Newswire",
       "tickers": [
-        "NWSA",
-        "NWS"
+        "NWS",
+        "NWSA"
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "High Tide Continues Canadian Expansion with Three New Canna Cabana Locations",
       "url": "/news/386732/high-tide-continues-canadian-expansion-with-three-new-canna-cabana-locations",
       "source": "PR Newswire",
@@ -8889,7 +8929,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "IDEAYA Biosciences Announces Successful FDA Type C Meeting for IDE849, DLL3 TOP1 ADC, on Phase 3 Registrational Trial Design for Potential Accelerated and Full Approval in Extensive Stage Small Cell Lung Cancer",
       "url": "/news/386733/ideaya-biosciences-announces-successful-fda-type-c-meeting-for-ide849-dll3-top1-adc-on-phase-3-registrational-trial-design-for-potential-accelerated-and-full-approval-in-extensive-stage-small-cell-lung-cancer",
       "source": "PR Newswire",
@@ -8898,7 +8938,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "Oppenheimer Welcomes Joel Berry II and Expands North Carolina Private Client Team Focused on Advising Athletes",
       "url": "/news/386734/oppenheimer-welcomes-joel-berry-ii-and-expands-north-carolina-private-client-team-focused-on-advising-athletes",
       "source": "PR Newswire",
@@ -8907,7 +8947,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "Nano Labs Announces Resignation of Director",
       "url": "/news/386735/nano-labs-announces-resignation-of-director",
       "source": "GlobeNewswire",
@@ -8916,7 +8956,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "KBR Awarded FEED Contract for Live Oak Consortium's Large-Scale e-NG Project in Nebraska",
       "url": "/news/386736/kbr-awarded-feed-contract-for-live-oak-consortiums-large-scale-e-ng-project-in-nebraska",
       "source": "GlobeNewswire",
@@ -8925,7 +8965,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "FirstCash Upsizes and Extends Term of Unsecured Bank Credit Facility; Size of Committed Facility Increased from $700 Million to $1.1 Billion; Maturity Date Extended to August 2031",
       "url": "/news/386737/firstcash-upsizes-and-extends-term-of-unsecured-bank-credit-facility-size-of-committed-facility-increased-from-700-million-to-11-billion-maturity-date-extended-to-august-2031",
       "source": "GlobeNewswire",
@@ -8934,7 +8974,7 @@
       ]
     },
     {
-      "time": "5 min",
+      "time": "26 min",
       "title": "HCWC Announces Host Digital Secures $1.25 Billion, 15-Year AI Data Center Lease",
       "url": "/news/386738/hcwc-announces-host-digital-secures-125-billion-15-year-ai-data-center-lease",
       "source": "GlobeNewswire",
@@ -8943,7 +8983,45 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "26 min",
+      "title": "Goldstorm Metals Provides Updates on the Ongoing Phase I Drilling and Reconnaissance Program and Completed Geophysical Survey at the Crown Project, Located in the Golden Triangle of British Columbia",
+      "url": "https://finance.yahoo.com/markets/commodities/articles/goldstorm-metals-provides-updates-ongoing-100000983.html",
+      "source": "TMX Newsfile",
+      "tickers": [
+        "SA",
+        "NEM"
+      ]
+    },
+    {
+      "time": "26 min",
+      "title": "Best CD rates today, Monday, August 31, 2026: Lock in up to 4.30% APY",
+      "url": "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-monday-august-31-2026-lock-in-up-to-430-apy-100000028.html",
+      "source": "Yahoo Personal Finance",
+      "tickers": [
+        "GS"
+      ]
+    },
+    {
+      "time": "26 min",
+      "title": "Hollywood studios have sued over AI. Now Google is courting them to use its tools",
+      "url": "https://finance.yahoo.com/technology/ai/articles/hollywood-studios-sued-over-ai-100000457.html",
+      "source": "LA Times",
+      "tickers": [
+        "GOOGL",
+        "GOOG"
+      ]
+    },
+    {
+      "time": "26 min",
+      "title": "Why you need an AI agent workforce today: Open Machine CEO",
+      "url": "https://finance.yahoo.com/video/why-ai-agent-workforce-today-100000464.html",
+      "source": "Yahoo Finance Video",
+      "tickers": [
+        "IBM"
+      ]
+    },
+    {
+      "time": "42 min",
       "title": "IREN Stock Faces 3-Month Losing Streak After Q4 Miss, But Analyst Sees Buying Opportunity",
       "url": "https://finance.yahoo.com/m/9398c8e3-c481-3db8-9f23-9c03d0a3d937/iren-stock-faces-3-month.html",
       "source": "Stocktwits",
@@ -8952,20 +9030,20 @@
       ]
     },
     {
-      "time": "29 min",
+      "time": "50 min",
       "title": "Energy stocks rally as fresh U.S.-Iran attacks drive oil prices higher",
       "url": "https://finance.yahoo.com/energy/articles/energy-stocks-rally-fresh-u-093550675.html",
       "source": "Investing.com",
       "tickers": [
         "HAL",
         "CVX",
-        "PSX",
-        "OXY",
-        "XOM"
+        "XOM",
+        "MPC",
+        "PSX"
       ]
     },
     {
-      "time": "35 min",
+      "time": "56 min",
       "title": "Japanese automakers Nissan and Honda agree to work together on software for cars",
       "url": "https://finance.yahoo.com/technology/articles/japanese-automakers-nissan-honda-agree-093013402.html",
       "source": "Associated Press",
@@ -8974,7 +9052,7 @@
       ]
     },
     {
-      "time": "35 min",
+      "time": "56 min",
       "title": "Nutex Health Hospitals Earn Multiple Community Honors in Second Quarter 2026",
       "url": "/news/386728/nutex-health-hospitals-earn-multiple-community-honors-in-second-quarter-2026",
       "source": "PR Newswire",
@@ -8983,12 +9061,21 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "1 hour",
       "title": "OpenAI Reportedly Joins Salesforce, Others In Testing Outcome-Based AI Pricing  Astra Launch In Focus",
       "url": "https://finance.yahoo.com/m/fc31da72-5b45-32c6-ba02-c6b7675ae6d4/openai-reportedly-joins.html",
       "source": "Stocktwits",
       "tickers": [
         "CRM"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "CLARITY Act Lags as Bitcoin ETFs Slip",
+      "url": "https://finance.yahoo.com/m/91bd2f11-21c7-38d5-a5c7-5a000d13105f/clarity-act-lags-as-bitcoin.html",
+      "source": "Cryptonews",
+      "tickers": [
+        "BLK"
       ]
     },
     {
@@ -9045,9 +9132,9 @@
       "source": "Stocktwits",
       "tickers": [
         "RKLB",
+        "ASTS",
         "SPCX",
         "LUNR",
-        "ASTS",
         "FLY"
       ]
     },
@@ -9060,8 +9147,8 @@
         "RKLB",
         "INTC",
         "NVDA",
-        "CRWD",
-        "AAPL"
+        "AAPL",
+        "CRWD"
       ]
     },
     {
@@ -9106,7 +9193,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Gold Is Up Nearly 30% In The Last Year, But Goldman Sachs Sees More Room To Run",
       "url": "https://finance.yahoo.com/m/20700e43-688b-3f24-b969-8735bc51c43c/gold-is-up-nearly-30%25-in-the.html",
       "source": "Stocktwits",
@@ -9149,10 +9236,10 @@
       "url": "https://finance.yahoo.com/m/2a504c3b-e98e-3cb0-a156-26c4bb4979b2/5-consumer-stocks-bucked.html",
       "source": "Stocktwits",
       "tickers": [
-        "DASH",
         "ANF",
-        "ABNB",
         "EL",
+        "DASH",
+        "ABNB",
         "FIGS"
       ]
     },
@@ -9167,7 +9254,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT",
       "url": "/news/386721/datavault-ai-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-dvlt",
       "source": "PR Newswire",
@@ -9176,7 +9263,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE",
       "url": "/news/386720/amgens-repatha-reduces-risk-of-death-in-patients-at-high-risk-for-a-first-heart-attack-or-stroke",
       "source": "PR Newswire",
@@ -9185,7 +9272,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY",
       "url": "/news/386719/ars-pharmaceuticals-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-spry",
       "source": "PR Newswire",
@@ -9194,7 +9281,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch",
       "url": "https://finance.yahoo.com/m/8cdb57c6-54da-3986-996d-1895e625cd8f/crowdstrike%E2%80%99s-ai-security.html",
       "source": "Stocktwits",
@@ -9278,7 +9365,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Lexinfintech: Q2 Earnings Snapshot",
       "url": "https://finance.yahoo.com/markets/stocks/articles/lexinfintech-q2-earnings-snapshot-062122236.html",
       "source": "Associated Press",
@@ -9339,8 +9426,8 @@
       "url": "https://www.barrons.com/articles/private-credit-stocks-bdc-morgan-stanley-ceb607d7?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
-        "ARCC",
         "BX",
+        "ARCC",
         "ARES",
         "MSDL"
       ]
@@ -9365,7 +9452,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America",
       "url": "https://finance.yahoo.com/m/e41d88e0-e46d-3192-8eb0-3a7fe0b52b90/nvda-stock-eyes-best-month.html",
       "source": "Stocktwits",
@@ -9398,14 +9485,14 @@
       "source": "Stocktwits",
       "tickers": [
         "MOH",
-        "NBIS",
         "PLTR",
+        "NBIS",
         "ADBE",
         "ORCL"
       ]
     },
     {
-      "time": "5 hours",
+      "time": "6 hours",
       "title": "U.S., Iran trade strikes for first time since July; Trump threatens Kharg attacks",
       "url": "https://finance.yahoo.com/m/89a8ad24-5a4a-32e0-bd4d-5cbc7f8cd5f1/u.s.%2C-iran-trade-strikes-for.html",
       "source": "Investing.com",
@@ -9414,7 +9501,7 @@
       ]
     },
     {
-      "time": "5 hours",
+      "time": "6 hours",
       "title": "OpenAI to pull its models from Cursor, highlighting tension with SpaceX's Elon Musk",
       "url": "https://www.digitimes.com/news/a20260831VL212/openai-spacex-elon-musk-acquisition-lawsuit.html",
       "source": "DigiTimes",
@@ -9424,7 +9511,7 @@
       ]
     },
     {
-      "time": "5 hours",
+      "time": "6 hours",
       "title": "Samsung Galaxy Z Fold8 demand surges, straining UMC 22nm DDI supply",
       "url": "https://www.digitimes.com/news/a20260831PD204/samsung-galaxy-ddi-umc-22nm.html",
       "source": "DigiTimes",
@@ -9641,89 +9728,6 @@
       "tickers": [
         "EIX"
       ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "John Ternus to lead Apple into the age of AI",
-      "url": "https://finance.yahoo.com/technology/ai/articles/john-ternus-lead-apple-age-010145522.html",
-      "source": "AFP",
-      "tickers": [
-        "AAPL"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "High-End Credit Cardholders Find It's Harder to Get Their Money's Worth",
-      "url": "https://www.wsj.com/personal-finance/high-end-credit-cardholders-find-its-harder-to-get-their-moneys-worth-b10d3bc7?mod=wsj_FV",
-      "source": "The Wall Street Journal",
-      "tickers": [
-        "AXP",
-        "DASH"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "GM's Canadian workers approve deal adding truck to Ontario plant amid US trade war",
-      "url": "https://finance.yahoo.com/news/gms-canadian-workers-approve-deal-004259247.html",
-      "source": "Reuters",
-      "tickers": [
-        "GM"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "HUTCHMED Announces SANOVO Trial Demonstrated Significant Progression-Free Survival Benefit of ORPATHYS Plus TAGRISSO in Treatment-Naive Patients with MET-Overexpressing EGFR-mutated Lung Cancer in China",
-      "url": "/news/386712/hutchmed-announces-sanovo-trial-demonstrated-significant-progression-free-survival-benefit-of-orpathys-plus-tagrisso-in-treatment-naive-patients-with-met-overexpressing-egfr-mutated-lung-cancer-in-china",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "HCM"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Podcast highlights: Xiaomi's 3nm chip cap, HBM in Malaysia, and Nvidia's margin tradeoff",
-      "url": "https://www.digitimes.com/news/a20260828PD237/xiaomi-hbm-malaysia-nvidia-tsmc-chips.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "AAPL",
-        "NVDA"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Nan Juen to ship Vera Rubin rails in August, ramp ASIC in September",
-      "url": "https://www.digitimes.com/news/a20260828PD225/rubin-asic-vr-shipping-production.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "USI advances optical interconnect push with ELSFP laser module",
-      "url": "https://www.digitimes.com/news/a20260828PD226/usi-laser-data-data-center-production.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "UVV"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Faraday Future Founder and Global CEO YT Jia Shares Weekly Investor Update: New Robot Deliveries and Updates from the Middle East; Recap on FF EAI Robotics \"Built in USA\" Business Partner Conference Held Last Week; RoboShare Officially Launched",
-      "url": "/news/386711/faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-update-new-robot-deliveries-and-updates-from-the-middle-east-recap-on-ff-eai-robotics-built-in-usa-business-partner-conference-held-last-week-roboshare-officially-launched",
-      "source": "Business Wire",
-      "tickers": [
-        "FFAI"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Faraday Future expands robotics push in Middle East, set to launch new products",
-      "url": "https://finance.yahoo.com/technology/articles/faraday-future-expands-robotics-push-213911214.html",
-      "source": "Investing.com",
-      "tickers": [
-        "FFAI"
-      ]
     }
   ],
   "major_news_tickers": [
@@ -9734,7 +9738,10 @@
     "CRWD",
     "RKLB",
     "LCO",
+    "INTC",
+    "GS",
     "CRM",
+    "BLK",
     "ASTS"
   ],
   "event_options": [
@@ -10477,5 +10484,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 126,
-  "overlay_at": "2026-08-31T06:05:43.091095-04:00"
+  "overlay_at": "2026-08-31T06:26:50.840524-04:00"
 }
