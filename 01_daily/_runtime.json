@@ -1,8 +1,8 @@
 {
   "ok": false,
-  "n_fail": 4,
-  "grok_busy": false,
-  "updated_at": "2026-08-31T09:32:01.156617-04:00",
+  "n_fail": 1,
+  "grok_busy": true,
+  "updated_at": "2026-08-31T09:56:29.565158-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -18,10 +18,10 @@
       "id": "process",
       "name": "OpenClaw process",
       "group": "box",
-      "status": "WARN",
+      "status": "OK",
       "required": true,
-      "detail": "pid=411946 port=up",
-      "action": "heal"
+      "detail": "pid=413253 pong ok",
+      "action": "none"
     },
     {
       "id": "gateway",
@@ -29,7 +29,7 @@
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "active pid=411946 alive",
+      "detail": "active pid=413253 alive",
       "action": "none"
     },
     {
@@ -45,19 +45,19 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "FAIL",
-      "required": true,
-      "detail": "http=500 {\"error\":{\"message\":\"internal error\",\"type\":\"api_error\"}}",
-      "action": "heal"
+      "status": "SKIP",
+      "required": false,
+      "detail": "Grok job running \u2014 not poking the classroom",
+      "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "FAIL",
-      "required": true,
-      "detail": "no 200 chat",
-      "action": "heal"
+      "status": "SKIP",
+      "required": false,
+      "detail": "probe skipped",
+      "action": "none"
     },
     {
       "id": "token",
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=cancelled",
+      "detail": "latest=queued systemd=exit-code",
       "action": "none"
     },
     {
@@ -162,13 +162,13 @@
       "id": "stub",
       "name": "Packet stubs",
       "group": "postclose",
-      "status": "FAIL",
-      "required": true,
-      "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-31_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json",
-      "action": "heal"
+      "status": "WARN",
+      "required": false,
+      "detail": "history \u2014 401 in 2026-08-26_preopen_status.json, 2026-08-31_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
+      "action": "none"
     }
   ],
   "healed": [
-    "enable_openclaw_chat.sh exit=1 11946]: 2026-08-31T21:31:35.780+08:00 [openai-compat] chat completion failed: FailoverError: 403 \"You have run out of credits or need a Grok subscription. Add c"
+    "enable_openclaw_chat.sh exit=1 13253]: 2026-08-31T21:56:05.317+08:00 [openai-compat] chat completion failed: FailoverError: 403 \"You have run out of credits or need a Grok subscription. Add c"
   ]
 }
