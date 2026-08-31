@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7710.25 | -0.15% |
-| Nasdaq 100 (NQ) | 29517.25 | +0.10% |
-| Russell 2000 (ER2) | 2980.5 | +0.10% |
-| DJIA (YM) | 53504.0 | -0.15% |
-| VIX (VX) | 17.1 | +0.68% |
-| Crude Oil WTI (CL) | 84.72 | +1.59% |
-| Crude Oil Brent (QA) | 89.74 | +1.87% |
-| Natural Gas (NG) | 2.851 | -1.25% |
-| Heating Oil (HO) | 4.3105 | +1.32% |
-| Gasoline RBOB (RB) | 3.067 | +0.40% |
-| Gold (GC) | 4492.3 | -0.77% |
-| Silver (SI) | 67.675 | -0.11% |
-| Copper (HG) | 6.6885 | +0.47% |
-| Platinum (PL) | 1815.6 | -2.09% |
-| Palladium (PA) | 1426.5 | -1.34% |
-| USD (DX) | 99.505 | -0.15% |
-| EUR (6E) | 1.16025 | +0.13% |
-| JPY (6J) | 0.6272 | +0.33% |
-| GBP (6B) | 1.3543 | +0.10% |
-| AUD (6A) | 0.71585 | +0.03% |
-| CAD (6C) | 0.72005 | +0.08% |
-| CHF (6S) | 1.23965 | +0.20% |
-| NZD (6N) | 0.59185 | +0.14% |
-| 10 Year Note (ZN) | 108.03125 | +0.16% |
-| 5 Year Note (ZF) | 105.921875 | +0.12% |
+| S&P 500 (ES) | 7709.0 | -0.17% |
+| Nasdaq 100 (NQ) | 29503.25 | +0.04% |
+| Russell 2000 (ER2) | 2978.7 | +0.04% |
+| DJIA (YM) | 53493.0 | -0.15% |
+| VIX (VX) | 17.05 | +0.68% |
+| Crude Oil WTI (CL) | 85.03 | +1.97% |
+| Crude Oil Brent (QA) | 90.0 | +2.15% |
+| Natural Gas (NG) | 2.846 | -1.49% |
+| Heating Oil (HO) | 4.3101 | +1.44% |
+| Gasoline RBOB (RB) | 3.0709 | +0.71% |
+| Gold (GC) | 4492.6 | -0.81% |
+| Silver (SI) | 67.59 | -0.26% |
+| Copper (HG) | 6.6855 | +0.42% |
+| Platinum (PL) | 1811.0 | -2.34% |
+| Palladium (PA) | 1425.0 | -1.51% |
+| USD (DX) | 99.475 | -0.19% |
+| EUR (6E) | 1.16075 | +0.17% |
+| JPY (6J) | 0.6273 | +0.34% |
+| GBP (6B) | 1.3546 | +0.12% |
+| AUD (6A) | 0.71585 | +0.02% |
+| CAD (6C) | 0.72005 | +0.07% |
+| CHF (6S) | 1.23995 | +0.24% |
+| NZD (6N) | 0.59195 | +0.14% |
+| 10 Year Note (ZN) | 108.015625 | +0.14% |
+| 5 Year Note (ZF) | 105.90625 | +0.10% |
 | 2 Year Note (ZT) | 102.69140625 | +0.07% |
-| 30 Year Bond (ZB) | 109.375 | +0.14% |
-| Nikkei 225 (NKD) | 66425.0 | +1.00% |
-| DAX (DY) | 26443.0 | -0.63% |
-| Euro Stoxx 50 (EX) | 6480.0 | -0.32% |
-| Corn (ZC) | 537.5 | +0.23% |
-| Soybeans (ZS) | 1286.5 | -0.12% |
-| Wheat (ZW) | 778.25 | -0.64% |
-| Soybean oil (ZL) | 70.55 | -0.37% |
-| Soybean Meal (ZM) | 339.0 | -1.02% |
+| 30 Year Bond (ZB) | 109.34375 | +0.11% |
+| Nikkei 225 (NKD) | 66395.0 | +0.94% |
+| DAX (DY) | 26434.0 | -0.68% |
+| Euro Stoxx 50 (EX) | 6479.0 | -0.34% |
+| Corn (ZC) | 537.0 | +0.09% |
+| Soybeans (ZS) | 1284.5 | -0.27% |
+| Wheat (ZW) | 776.25 | -0.92% |
+| Soybean oil (ZL) | 70.56 | -0.37% |
+| Soybean Meal (ZM) | 338.2 | -1.28% |
 | Oats (ZO) | 371.75 | -0.80% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 91.88 | +0.53% |
+| Cotton (CT) | 91.76 | +0.42% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78440.0 | +0.78% |
-| Canola (RS) | 821.1 | -0.32% |
+| Bitcoin (BTC) | 78505.0 | +0.86% |
+| Canola (RS) | 819.8 | -0.50% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 27 min **DVLT** Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT (PR Newswire)
-- 30 min **AMGN** AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE (PR Newswire)
-- 36 min **SPRY** ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY (PR Newswire)
-- 40 min **CRWD,NVDA** CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch (Stocktwits)
-- 48 min **OCTV** Octave and MAIRE collaborate on the application of AI across engineering and construction workflows (GlobeNewswire)
-- 48 min **IVR,O** Monthly Dividends Are the Latest Income Craze, but There Are Risks (Barrons.com)
-- 48 min **AAPL** The architect of Apple's China machine also built its hardest problem (DigiTimes)
-- 48 min **AAPL** Cook made sustainability an Apple feature; the ledger he leaves John Ternus is mixed (DigiTimes)
+- 30 min **SPCX,TSLA** Tesla Cybercab Hype Builds: Cathie Wood, Chamath Cheer Musks AI, Energy Push  But One Analyst Calls The Bull Case Absurd (Stocktwits)
+- 41 min **DVLT** Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT (PR Newswire)
+- 44 min **AMGN** AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE (PR Newswire)
+- 50 min **SPRY** ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY (PR Newswire)
+- 54 min **NVDA,CRWD** CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch (Stocktwits)
+- 1 hour **OCTV** Octave and MAIRE collaborate on the application of AI across engineering and construction workflows (GlobeNewswire)
+- 1 hour **IVR,O** Monthly Dividends Are the Latest Income Craze, but There Are Risks (Barrons.com)
+- 1 hour **AAPL** The architect of Apple's China machine also built its hardest problem (DigiTimes)
+- 1 hour **AAPL** Cook made sustainability an Apple feature; the ledger he leaves John Ternus is mixed (DigiTimes)
 - 1 hour **AON** AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now (Stocktwits)
-- 1 hour **BLK,IBIT** Bitcoin ETFs Pulled In Near $1 Billion Last Week, So Why Is BTC Stuck Below $80,000? (BeInCrypto)
+- 1 hour **IBIT,BLK** Bitcoin ETFs Pulled In Near $1 Billion Last Week, So Why Is BTC Stuck Below $80,000? (BeInCrypto)
 - 1 hour **GAP** GAP Stock Surged 18% Last Week: Wall Street Raises Price Targets, Eyes Old Navy Turnaround (Stocktwits)
 - 1 hour **LX** Lexinfintech: Q2 Earnings Snapshot (Associated Press)
 - 1 hour **RKLB** RKLB Stock Slips Overnight: Strong Winds Delay Electron Launch, Insiders Sell $2.8M Worth Of Shares (Stocktwits)
-- 1 hour **AAPL** Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings (BeInCrypto)
-- 1 hour **BMRN** BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea (PR Newswire)
-- 1 hour **AXTA** AkzoNobel and Axalta announce three directors to finalize Board of combined company (GlobeNewswire)
-- 1 hour **AMZN,GOOGL,SPCX** 6 Numbers That Back Up the AI Trade (Barrons.com)
-- 1 hour **ARCC,ARES,BX,MSDL** Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk (Barrons.com)
+- 2 hours **AAPL** Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings (BeInCrypto)
+- 2 hours **BMRN** BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea (PR Newswire)
+- 2 hours **AXTA** AkzoNobel and Axalta announce three directors to finalize Board of combined company (GlobeNewswire)
+- 2 hours **SPCX,GOOGL,AMZN** 6 Numbers That Back Up the AI Trade (Barrons.com)
+- 2 hours **BX,ARCC,ARES,MSDL** Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk (Barrons.com)
 - 2 hours **NVDA** Andrew Bailey: AI threatens to unleash global market downturn (The Telegraph)
-- 2 hours **ASTS,VZ** ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch (Stocktwits)
+- 2 hours **VZ,ASTS** ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch (Stocktwits)
 - 2 hours **NVDA** NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America (Stocktwits)
-- 2 hours **LX** LexinFintech Holdings Ltd. Reports Second Quarter 2026 Unaudited Financial Results (GlobeNewswire)
-- 2 hours **BBW** Michael Burrys Build-A-Bear Bet Takes A Hit As Stock Suffers Worst Week Since COVID Rout  I Spy An Atypical Turnaround Dance (Stocktwits)
-- 3 hours **ADBE,LULU,MELI,MOH,MU** Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared (Stocktwits)
-- 3 hours **LCO** U.S., Iran trade strikes for first time since July; Trump threatens Kharg attacks (Investing.com)
+- 3 hours **LX** LexinFintech Holdings Ltd. Reports Second Quarter 2026 Unaudited Financial Results (GlobeNewswire)
+- 3 hours **BBW** Michael Burrys Build-A-Bear Bet Takes A Hit As Stock Suffers Worst Week Since COVID Rout  I Spy An Atypical Turnaround Dance (Stocktwits)
+- 3 hours **MOH,ADBE,PLTR,ORCL,NBIS** Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

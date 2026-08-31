@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
   "generated_at": "2026-08-31T03:48:25.433368-04:00",
-  "phase": "postclose",
+  "phase": "morning_overlay",
   "export": "finviz_2026-08-31.csv",
   "n_tickers": 11627,
   "sectors": [
@@ -8558,152 +8558,152 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7710.25,
-      "change": -0.15
+      "last": 7709.0,
+      "change": -0.17
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29517.25,
-      "change": 0.1
+      "last": 29503.25,
+      "change": 0.04
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2980.5,
-      "change": 0.1
+      "last": 2978.7,
+      "change": 0.04
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 53504.0,
+      "last": 53493.0,
       "change": -0.15
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.1,
+      "last": 17.05,
       "change": 0.68
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 84.72,
-      "change": 1.59
+      "last": 85.03,
+      "change": 1.97
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 89.74,
-      "change": 1.87
+      "last": 90.0,
+      "change": 2.15
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.851,
-      "change": -1.25
+      "last": 2.846,
+      "change": -1.49
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3105,
-      "change": 1.32
+      "last": 4.3101,
+      "change": 1.44
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.067,
-      "change": 0.4
+      "last": 3.0709,
+      "change": 0.71
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4492.3,
-      "change": -0.77
+      "last": 4492.6,
+      "change": -0.81
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.675,
-      "change": -0.11
+      "last": 67.59,
+      "change": -0.26
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.6885,
-      "change": 0.47
+      "last": 6.6855,
+      "change": 0.42
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1815.6,
-      "change": -2.09
+      "last": 1811.0,
+      "change": -2.34
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1426.5,
-      "change": -1.34
+      "last": 1425.0,
+      "change": -1.51
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.505,
-      "change": -0.15
+      "last": 99.475,
+      "change": -0.19
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.16025,
-      "change": 0.13
+      "last": 1.16075,
+      "change": 0.17
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6272,
-      "change": 0.33
+      "last": 0.6273,
+      "change": 0.34
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3543,
-      "change": 0.1
+      "last": 1.3546,
+      "change": 0.12
     },
     {
       "ticker": "6A",
       "label": "AUD",
       "last": 0.71585,
-      "change": 0.03
+      "change": 0.02
     },
     {
       "ticker": "6C",
       "label": "CAD",
       "last": 0.72005,
-      "change": 0.08
+      "change": 0.07
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23965,
-      "change": 0.2
+      "last": 1.23995,
+      "change": 0.24
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.59185,
+      "last": 0.59195,
       "change": 0.14
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 108.03125,
-      "change": 0.16
+      "last": 108.015625,
+      "change": 0.14
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.921875,
-      "change": 0.12
+      "last": 105.90625,
+      "change": 0.1
     },
     {
       "ticker": "ZT",
@@ -8714,56 +8714,56 @@
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 109.375,
-      "change": 0.14
+      "last": 109.34375,
+      "change": 0.11
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66425.0,
-      "change": 1.0
+      "last": 66395.0,
+      "change": 0.94
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26443.0,
-      "change": -0.63
+      "last": 26434.0,
+      "change": -0.68
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6480.0,
-      "change": -0.32
+      "last": 6479.0,
+      "change": -0.34
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 537.5,
-      "change": 0.23
+      "last": 537.0,
+      "change": 0.09
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1286.5,
-      "change": -0.12
+      "last": 1284.5,
+      "change": -0.27
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 778.25,
-      "change": -0.64
+      "last": 776.25,
+      "change": -0.92
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.55,
+      "last": 70.56,
       "change": -0.37
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 339.0,
-      "change": -1.02
+      "last": 338.2,
+      "change": -1.28
     },
     {
       "ticker": "ZO",
@@ -8792,8 +8792,8 @@
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 91.88,
-      "change": 0.53
+      "last": 91.76,
+      "change": 0.42
     },
     {
       "ticker": "CC",
@@ -8834,14 +8834,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 78440.0,
-      "change": 0.78
+      "last": 78505.0,
+      "change": 0.86
     },
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 821.1,
-      "change": -0.32
+      "last": 819.8,
+      "change": -0.5
     },
     {
       "ticker": "ZK",
@@ -8852,7 +8852,17 @@
   ],
   "ticker_news": [
     {
-      "time": "27 min",
+      "time": "30 min",
+      "title": "Tesla Cybercab Hype Builds: Cathie Wood, Chamath Cheer Musks AI, Energy Push  But One Analyst Calls The Bull Case Absurd",
+      "url": "https://finance.yahoo.com/m/84b61924-e3ab-377d-a08a-3094c13a1190/tesla-cybercab-hype-builds%3A.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "SPCX",
+        "TSLA"
+      ]
+    },
+    {
+      "time": "41 min",
       "title": "Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT",
       "url": "/news/386721/datavault-ai-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-dvlt",
       "source": "PR Newswire",
@@ -8861,7 +8871,7 @@
       ]
     },
     {
-      "time": "30 min",
+      "time": "44 min",
       "title": "AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE",
       "url": "/news/386720/amgens-repatha-reduces-risk-of-death-in-patients-at-high-risk-for-a-first-heart-attack-or-stroke",
       "source": "PR Newswire",
@@ -8870,7 +8880,7 @@
       ]
     },
     {
-      "time": "36 min",
+      "time": "50 min",
       "title": "ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY",
       "url": "/news/386719/ars-pharmaceuticals-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-spry",
       "source": "PR Newswire",
@@ -8879,17 +8889,17 @@
       ]
     },
     {
-      "time": "40 min",
+      "time": "54 min",
       "title": "CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch",
       "url": "https://finance.yahoo.com/m/8cdb57c6-54da-3986-996d-1895e625cd8f/crowdstrike%E2%80%99s-ai-security.html",
       "source": "Stocktwits",
       "tickers": [
-        "CRWD",
-        "NVDA"
+        "NVDA",
+        "CRWD"
       ]
     },
     {
-      "time": "48 min",
+      "time": "1 hour",
       "title": "Octave and MAIRE collaborate on the application of AI across engineering and construction workflows",
       "url": "/news/386718/octave-and-maire-collaborate-on-the-application-of-ai-across-engineering-and-construction-workflows",
       "source": "GlobeNewswire",
@@ -8898,7 +8908,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "1 hour",
       "title": "Monthly Dividends Are the Latest Income Craze, but There Are Risks",
       "url": "https://www.barrons.com/articles/monthly-dividend-stocks-etfs-income-risks-9fea116f?mod=bar_FV",
       "source": "Barrons.com",
@@ -8908,7 +8918,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "1 hour",
       "title": "The architect of Apple's China machine also built its hardest problem",
       "url": "https://www.digitimes.com/news/a20260827VL213/apple-tim-cook-john-ternus-revenue.html",
       "source": "DigiTimes",
@@ -8917,7 +8927,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "1 hour",
       "title": "Cook made sustainability an Apple feature; the ledger he leaves John Ternus is mixed",
       "url": "https://www.digitimes.com/news/a20260827VL214/apple-tim-cook-john-ternus-2025-2015.html",
       "source": "DigiTimes",
@@ -8940,8 +8950,8 @@
       "url": "https://finance.yahoo.com/m/107ec58f-3b61-3ab1-b93e-9eda8ffea601/bitcoin-etfs-pulled-in-near.html",
       "source": "BeInCrypto",
       "tickers": [
-        "BLK",
-        "IBIT"
+        "IBIT",
+        "BLK"
       ]
     },
     {
@@ -8972,7 +8982,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings",
       "url": "https://finance.yahoo.com/m/ad11ed0a-9b4c-349d-b691-9aaaadf9dba8/ternus-takes-over-as-apple.html",
       "source": "BeInCrypto",
@@ -8981,7 +8991,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea",
       "url": "/news/386716/biomarin-announces-global-settlement-with-ascendis-pharma-as-ascendis-will-pay-royalties-to-biomarin-on-yuviwel-sales-in-us-eu-brazil-and-south-korea",
       "source": "PR Newswire",
@@ -8990,7 +9000,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "AkzoNobel and Axalta announce three directors to finalize Board of combined company",
       "url": "/news/386717/akzonobel-and-axalta-announce-three-directors-to-finalize-board-of-combined-company",
       "source": "GlobeNewswire",
@@ -8999,25 +9009,25 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "6 Numbers That Back Up the AI Trade",
       "url": "https://www.barrons.com/articles/numbers-back-up-the-ai-trade-af7d7599?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
-        "AMZN",
+        "SPCX",
         "GOOGL",
-        "SPCX"
+        "AMZN"
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk",
       "url": "https://www.barrons.com/articles/private-credit-stocks-bdc-morgan-stanley-ceb607d7?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
+        "BX",
         "ARCC",
         "ARES",
-        "BX",
         "MSDL"
       ]
     },
@@ -9036,8 +9046,8 @@
       "url": "https://finance.yahoo.com/m/14f2eca5-f8be-3576-beed-432bfd7de59f/asts-stock-could-get-a-new.html",
       "source": "Stocktwits",
       "tickers": [
-        "ASTS",
-        "VZ"
+        "VZ",
+        "ASTS"
       ]
     },
     {
@@ -9050,7 +9060,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "LexinFintech Holdings Ltd. Reports Second Quarter 2026 Unaudited Financial Results",
       "url": "/news/386715/lexinfintech-holdings-ltd-reports-second-quarter-2026-unaudited-financial-results",
       "source": "GlobeNewswire",
@@ -9059,7 +9069,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Michael Burrys Build-A-Bear Bet Takes A Hit As Stock Suffers Worst Week Since COVID Rout  I Spy An Atypical Turnaround Dance",
       "url": "https://finance.yahoo.com/m/81f1e618-cd4b-32ea-aa23-315ecbb18848/michael-burry%E2%80%99s-build-a-bear.html",
       "source": "Stocktwits",
@@ -9073,11 +9083,11 @@
       "url": "https://finance.yahoo.com/m/e0dc4f4e-1078-3f7e-b606-d8a499adbff7/michael-burry-bought.html",
       "source": "Stocktwits",
       "tickers": [
-        "ADBE",
-        "LULU",
-        "MELI",
         "MOH",
-        "MU"
+        "ADBE",
+        "PLTR",
+        "ORCL",
+        "NBIS"
       ]
     },
     {
@@ -9109,7 +9119,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "e.l.f. Beauty and Parity Release \"Girls Who Play Change the Game\", Connecting Girls' Sports Participation to Long-Term Workplace Impact",
       "url": "/news/386714/elf-beauty-and-parity-release-girls-who-play-change-the-game-connecting-girls-sports-participation-to-long-term-workplace-impact",
       "source": "Business Wire",
@@ -9708,15 +9718,6 @@
       "source": "BeInCrypto",
       "tickers": [
         "AAPL"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "When are September Social Security checks coming? It starts to get tricky very soon",
-      "url": "https://finance.yahoo.com/economy/policy/articles/september-social-security-checks-coming-112500036.html",
-      "source": "Moneywise",
-      "tickers": [
-        "JPM"
       ]
     }
   ],
@@ -10501,5 +10502,6 @@
   "earnings_entry_tickers": [],
   "calendar_window_days": 16,
   "econ_window_count": 185,
-  "earnings_window_count": 129
+  "earnings_window_count": 129,
+  "overlay_at": "2026-08-31T04:02:17.152763-04:00"
 }
