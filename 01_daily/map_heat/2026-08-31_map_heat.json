@@ -8428,26 +8428,26 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7703.75,
-      "change": -0.2
+      "last": 7704.25,
+      "change": -0.24
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29450.25,
-      "change": -0.09
+      "last": 29451.75,
+      "change": -0.16
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2970.7,
-      "change": -0.2
+      "last": 2971.0,
+      "change": -0.23
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 53447.0,
-      "change": -0.23
+      "last": 53450.0,
+      "change": -0.25
     },
     {
       "ticker": "VX",
@@ -8458,121 +8458,121 @@
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 85.97,
-      "change": 2.95
+      "last": 85.9,
+      "change": 3.07
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 90.94,
-      "change": 3.1
+      "last": 90.89,
+      "change": 3.21
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.872,
-      "change": -0.55
+      "last": 2.873,
+      "change": -0.52
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3416,
-      "change": 2.07
+      "last": 4.3407,
+      "change": 2.2
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.0914,
-      "change": 1.22
+      "last": 3.0896,
+      "change": 1.37
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4480.9,
-      "change": -1.0
+      "last": 4482.7,
+      "change": -1.08
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.205,
+      "last": 67.28,
       "change": -0.79
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.668,
-      "change": 0.23
+      "last": 6.672,
+      "change": 0.17
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1814.8,
-      "change": -2.09
+      "last": 1814.4,
+      "change": -2.11
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1413.5,
-      "change": -2.17
+      "last": 1413.0,
+      "change": -2.34
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.575,
-      "change": -0.1
+      "last": 99.57,
+      "change": -0.08
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15945,
-      "change": 0.08
+      "last": 1.1595,
+      "change": 0.06
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6264,
-      "change": 0.22
+      "last": 0.6264500000000001,
+      "change": 0.21
     },
     {
       "ticker": "6B",
       "label": "GBP",
       "last": 1.3543,
-      "change": 0.11
+      "change": 0.09
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7162,
-      "change": 0.08
+      "last": 0.71615,
+      "change": 0.06
     },
     {
       "ticker": "6C",
       "label": "CAD",
       "last": 0.72015,
-      "change": 0.1
+      "change": 0.08
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.2371,
-      "change": 0.02
+      "last": 1.23725,
+      "change": 0.0
     },
     {
       "ticker": "6N",
       "label": "NZD",
       "last": 0.5918,
-      "change": 0.14
+      "change": 0.12
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 107.9375,
-      "change": 0.06
+      "last": 107.921875,
+      "change": 0.04
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.84375,
+      "last": 105.8515625,
       "change": 0.04
     },
     {
@@ -8585,31 +8585,31 @@
       "ticker": "ZB",
       "label": "30 Year Bond",
       "last": 109.1875,
-      "change": 0.0
+      "change": -0.03
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66175.0,
-      "change": 0.65
+      "last": 66120.0,
+      "change": 0.52
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26581.0,
+      "last": 26577.0,
       "change": -0.15
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6494.0,
-      "change": -0.11
+      "last": 6493.0,
+      "change": -0.14
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 538.5,
-      "change": 0.42
+      "last": 538.25,
+      "change": 0.37
     },
     {
       "ticker": "ZS",
@@ -8620,13 +8620,13 @@
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 776.5,
-      "change": -0.99
+      "last": 776.0,
+      "change": -0.96
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.72,
+      "last": 70.73,
       "change": -0.14
     },
     {
@@ -8710,8 +8710,8 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 822.4,
-      "change": -0.22
+      "last": 822.0,
+      "change": -0.21
     },
     {
       "ticker": "ZK",
@@ -8722,7 +8722,7 @@
   ],
   "ticker_news": [
     {
-      "time": "15 min",
+      "time": "18 min",
       "title": "ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch",
       "url": "https://finance.yahoo.com/m/14f2eca5-f8be-3576-beed-432bfd7de59f/asts-stock-could-get-a-new.html",
       "source": "Stocktwits",
@@ -8732,7 +8732,7 @@
       ]
     },
     {
-      "time": "36 min",
+      "time": "39 min",
       "title": "NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America",
       "url": "https://finance.yahoo.com/m/e41d88e0-e46d-3192-8eb0-3a7fe0b52b90/nvda-stock-eyes-best-month.html",
       "source": "Stocktwits",
@@ -8741,7 +8741,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "46 min",
       "title": "LexinFintech Holdings Ltd. Reports Second Quarter 2026 Unaudited Financial Results",
       "url": "/news/386715/lexinfintech-holdings-ltd-reports-second-quarter-2026-unaudited-financial-results",
       "source": "GlobeNewswire",
@@ -8750,7 +8750,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "47 min",
       "title": "Michael Burrys Build-A-Bear Bet Takes A Hit As Stock Suffers Worst Week Since COVID Rout  I Spy An Atypical Turnaround Dance",
       "url": "https://finance.yahoo.com/m/81f1e618-cd4b-32ea-aa23-315ecbb18848/michael-burry%E2%80%99s-build-a-bear.html",
       "source": "Stocktwits",
@@ -10379,5 +10379,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 129,
-  "overlay_at": "2026-08-31T01:43:57.366746-04:00"
+  "overlay_at": "2026-08-31T01:46:08.456482-04:00"
 }
