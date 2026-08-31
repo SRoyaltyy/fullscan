@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7708.25 | -0.17% |
-| Nasdaq 100 (NQ) | 29453.75 | -0.13% |
-| Russell 2000 (ER2) | 2976.2 | -0.05% |
-| DJIA (YM) | 53493.0 | -0.16% |
-| VIX (VX) | 17.1 | +0.97% |
-| Crude Oil WTI (CL) | 86.54 | +3.79% |
-| Crude Oil Brent (QA) | 91.33 | +3.64% |
-| Natural Gas (NG) | 2.895 | +0.21% |
-| Heating Oil (HO) | 4.3442 | +2.24% |
-| Gasoline RBOB (RB) | 3.0867 | +1.20% |
-| Gold (GC) | 4502.0 | -0.61% |
-| Silver (SI) | 67.75 | -0.05% |
-| Copper (HG) | 6.6665 | +0.11% |
-| Platinum (PL) | 1811.9 | -2.29% |
-| Palladium (PA) | 1417.0 | -2.07% |
-| USD (DX) | 99.475 | -0.18% |
-| EUR (6E) | 1.1608 | +0.17% |
-| JPY (6J) | 0.6267 | +0.25% |
-| GBP (6B) | 1.3544 | +0.10% |
-| AUD (6A) | 0.716 | +0.04% |
-| CAD (6C) | 0.7205 | +0.13% |
-| CHF (6S) | 1.2387 | +0.14% |
-| NZD (6N) | 0.59185 | +0.14% |
-| 10 Year Note (ZN) | 107.90625 | +0.04% |
-| 5 Year Note (ZF) | 105.8515625 | +0.04% |
-| 2 Year Note (ZT) | 102.671875 | +0.05% |
-| 30 Year Bond (ZB) | 109.15625 | -0.06% |
-| Nikkei 225 (NKD) | 66250.0 | +0.71% |
-| DAX (DY) | 26389.0 | -0.87% |
-| Euro Stoxx 50 (EX) | 6470.0 | -0.49% |
-| Corn (ZC) | 537.75 | +0.28% |
-| Soybeans (ZS) | 1284.5 | -0.27% |
-| Wheat (ZW) | 775.0 | -1.15% |
-| Soybean oil (ZL) | 70.6 | -0.28% |
-| Soybean Meal (ZM) | 338.5 | -1.17% |
+| S&P 500 (ES) | 7707.75 | -0.18% |
+| Nasdaq 100 (NQ) | 29454.5 | -0.12% |
+| Russell 2000 (ER2) | 2974.9 | -0.07% |
+| DJIA (YM) | 53477.0 | -0.20% |
+| VIX (VX) | 17.05 | +0.68% |
+| Crude Oil WTI (CL) | 86.3 | +3.49% |
+| Crude Oil Brent (QA) | 91.02 | +3.34% |
+| Natural Gas (NG) | 2.896 | +0.28% |
+| Heating Oil (HO) | 4.35 | +2.38% |
+| Gasoline RBOB (RB) | 3.08 | +0.98% |
+| Gold (GC) | 4499.5 | -0.68% |
+| Silver (SI) | 67.775 | -0.01% |
+| Copper (HG) | 6.6625 | +0.05% |
+| Platinum (PL) | 1812.2 | -2.27% |
+| Palladium (PA) | 1415.5 | -2.17% |
+| USD (DX) | 99.495 | -0.16% |
+| EUR (6E) | 1.1606 | +0.16% |
+| JPY (6J) | 0.62665 | +0.24% |
+| GBP (6B) | 1.3541 | +0.09% |
+| AUD (6A) | 0.7157 | +0.00% |
+| CAD (6C) | 0.72045 | +0.13% |
+| CHF (6S) | 1.2385 | +0.11% |
+| NZD (6N) | 0.5916 | +0.08% |
+| 10 Year Note (ZN) | 107.890625 | +0.01% |
+| 5 Year Note (ZF) | 105.84375 | +0.04% |
+| 2 Year Note (ZT) | 102.66796875 | +0.05% |
+| 30 Year Bond (ZB) | 109.125 | -0.11% |
+| Nikkei 225 (NKD) | 66295.0 | +0.79% |
+| DAX (DY) | 26380.0 | -0.90% |
+| Euro Stoxx 50 (EX) | 6469.0 | -0.49% |
+| Corn (ZC) | 537.0 | +0.05% |
+| Soybeans (ZS) | 1283.25 | -0.39% |
+| Wheat (ZW) | 773.25 | -1.37% |
+| Soybean oil (ZL) | 70.43 | -0.56% |
+| Soybean Meal (ZM) | 337.8 | -1.37% |
 | Oats (ZO) | 372.25 | -0.67% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 92.72 | +1.48% |
+| Cotton (CT) | 93.05 | +1.85% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78815.0 | +1.22% |
-| Canola (RS) | 820.6 | -0.36% |
+| Bitcoin (BTC) | 78710.0 | +1.10% |
+| Canola (RS) | 820.3 | -0.50% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -129,13 +129,13 @@ Mega-cap earnings:
 
 Options event-vol flags (NOT direction):
 - **AVGO** exp 2026-08-31 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **PANW** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **PANW** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.0
 - **DELL** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **MDT** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **MDT** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.301
 - **ADBE** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **SNOW** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI —
-- **HPE** exp 2026-09-04 ATM IV 0.0078 implied move +0.1% put/call OI —
-- **CIEN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI nan
+- **HPE** exp 2026-09-04 ATM IV 0.0078 implied move +0.1% put/call OI 0.0
+- **CIEN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.0
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 10 min **MSTR,PLTR,INTC,NVDA,SOXX** Intel, ServiceNow, Chevron, Strategy, and More Stocks That Explain Today's Market (Barrons.com)
-- 15 min **GME** GameStop Announces Amendment to Convertible Notes Exchange; Approximately $358.4 Million to be Settled in Cash in Lieu of Stock (Business Wire)
-- 21 min **GILT** Gilat Announces $100 Million Five-Year Convertible Notes at 60% Conversion Premium (GlobeNewswire)
-- 21 min **GME** GameStop Announces Second Quarter 2026 Preliminary Results (Business Wire)
-- 26 min **SY** So-Young Reports Unaudited Second Quarter 2026 Financial Results (PR Newswire)
-- 26 min **JAZZ** Ziihera (zanidatamab-hrii) plus Chemotherapy Demonstrates Statistically Significant Overall Survival Benefit Versus Trastuzumab plus Chemotherapy in First-Line HER2+ Advanced GEA (PR Newswire)
-- 26 min **NWS,NWSA** Realtor.com Ranks the Top Metros for New Construction in 2026 (PR Newswire)
-- 26 min **HITI** High Tide Continues Canadian Expansion with Three New Canna Cabana Locations (PR Newswire)
-- 26 min **IDYA** IDEAYA Biosciences Announces Successful FDA Type C Meeting for IDE849, DLL3 TOP1 ADC, on Phase 3 Registrational Trial Design for Potential Accelerated and Full Approval in Extensive Stage Small Cell Lung Cancer (PR Newswire)
-- 26 min **OPY** Oppenheimer Welcomes Joel Berry II and Expands North Carolina Private Client Team Focused on Advising Athletes (PR Newswire)
-- 26 min **NA** Nano Labs Announces Resignation of Director (GlobeNewswire)
-- 26 min **KBR** KBR Awarded FEED Contract for Live Oak Consortium's Large-Scale e-NG Project in Nebraska (GlobeNewswire)
-- 26 min **FCFS** FirstCash Upsizes and Extends Term of Unsecured Bank Credit Facility; Size of Committed Facility Increased from $700 Million to $1.1 Billion; Maturity Date Extended to August 2031 (GlobeNewswire)
-- 26 min **HCWC** HCWC Announces Host Digital Secures $1.25 Billion, 15-Year AI Data Center Lease (GlobeNewswire)
-- 26 min **SA,NEM** Goldstorm Metals Provides Updates on the Ongoing Phase I Drilling and Reconnaissance Program and Completed Geophysical Survey at the Crown Project, Located in the Golden Triangle of British Columbia (TMX Newsfile)
-- 26 min **GS** Best CD rates today, Monday, August 31, 2026: Lock in up to 4.30% APY (Yahoo Personal Finance)
-- 26 min **GOOGL,GOOG** Hollywood studios have sued over AI. Now Google is courting them to use its tools (LA Times)
-- 26 min **IBM** Why you need an AI agent workforce today: Open Machine CEO (Yahoo Finance Video)
-- 42 min **IREN** IREN Stock Faces 3-Month Losing Streak After Q4 Miss, But Analyst Sees Buying Opportunity (Stocktwits)
-- 50 min **HAL,CVX,XOM,MPC,PSX** Energy stocks rally as fresh U.S.-Iran attacks drive oil prices higher (Investing.com)
-- 56 min **HMC** Japanese automakers Nissan and Honda agree to work together on software for cars (Associated Press)
-- 56 min **NUTX** Nutex Health Hospitals Earn Multiple Community Honors in Second Quarter 2026 (PR Newswire)
-- 1 hour **CRM** OpenAI Reportedly Joins Salesforce, Others In Testing Outcome-Based AI Pricing  Astra Launch In Focus (Stocktwits)
-- 1 hour **BLK** CLARITY Act Lags as Bitcoin ETFs Slip (Cryptonews)
-- 1 hour **V,MA** Visa, Mastercard process first global payments in Syria (Electronic Payments)
+- 1 min **DSGX** K&R International Services Uses Descartes to Help Automate High-Volume EU Ecommerce Import Filings (GlobeNewswire)
+- 7 min **CIEN,AVGO,DELL** Rate-Hike Odds Are Rising and the Tech Rally Looks Vulnerable (Barrons.com)
+- 11 min **ADBE** Adobe, MCIT and HUMAIN Expand Partnership, Providing Over $4bn in Free Access to AI-powered Creative Tools to Millions of Citizens and Residents of Saudi Arabia (Business Wire)
+- 14 min **BTAI,TEVA** Teva Pharmaceuticals to acquire BioXcel assets for up to $125m (Pharmaceutical Technology)
+- 16 min **AON** Aon to acquire USI to establish the premier U.S. middle-market platform (PR Newswire)
+- 16 min **NVA** Nova Minerals Attends Roundtable with U.S. Department of Energy (GlobeNewswire)
+- 16 min **ZDGE** Zedge Accelerates DataSeeds.AI Strategy with $7.5 Million Insider Investment and Appointment of Morris Berger as CEO (ACCESSWIRE)
+- 16 min **KKR** KKR To Sell USI to Aon plc in $17 Billion Transaction (Business Wire)
+- 16 min **Q** Qnity Introduces Stackplane CMP Slurry Platform for Advanced Packaging (Business Wire)
+- 16 min **RNGR** Ranger Energy Services to Acquire STEP Energy Services' U.S. Coiled Tubing Assets (Business Wire)
+- 18 min **PCG,CVX,XOM** Premarket movers: PG&E stock slumps, oil producers gain (MarketWatch)
+- 30 min **MSTR,PLTR,NVDA,INTC,SOXX** Intel, ServiceNow, Chevron, Strategy, and More Stocks That Explain Today's Market (Barrons.com)
+- 35 min **GME** GameStop Announces Amendment to Convertible Notes Exchange; Approximately $358.4 Million to be Settled in Cash in Lieu of Stock (Business Wire)
+- 41 min **GILT** Gilat Announces $100 Million Five-Year Convertible Notes at 60% Conversion Premium (GlobeNewswire)
+- 41 min **GME** GameStop Announces Second Quarter 2026 Preliminary Results (Business Wire)
+- 46 min **SY** So-Young Reports Unaudited Second Quarter 2026 Financial Results (PR Newswire)
+- 46 min **JAZZ** Ziihera (zanidatamab-hrii) plus Chemotherapy Demonstrates Statistically Significant Overall Survival Benefit Versus Trastuzumab plus Chemotherapy in First-Line HER2+ Advanced GEA (PR Newswire)
+- 46 min **NWS,NWSA** Realtor.com Ranks the Top Metros for New Construction in 2026 (PR Newswire)
+- 46 min **HITI** High Tide Continues Canadian Expansion with Three New Canna Cabana Locations (PR Newswire)
+- 46 min **IDYA** IDEAYA Biosciences Announces Successful FDA Type C Meeting for IDE849, DLL3 TOP1 ADC, on Phase 3 Registrational Trial Design for Potential Accelerated and Full Approval in Extensive Stage Small Cell Lung Cancer (PR Newswire)
+- 46 min **OPY** Oppenheimer Welcomes Joel Berry II and Expands North Carolina Private Client Team Focused on Advising Athletes (PR Newswire)
+- 46 min **NA** Nano Labs Announces Resignation of Director (GlobeNewswire)
+- 46 min **KBR** KBR Awarded FEED Contract for Live Oak Consortium's Large-Scale e-NG Project in Nebraska (GlobeNewswire)
+- 46 min **FCFS** FirstCash Upsizes and Extends Term of Unsecured Bank Credit Facility; Size of Committed Facility Increased from $700 Million to $1.1 Billion; Maturity Date Extended to August 2031 (GlobeNewswire)
+- 46 min **HCWC** HCWC Announces Host Digital Secures $1.25 Billion, 15-Year AI Data Center Lease (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
