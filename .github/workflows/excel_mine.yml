@@ -1,0 +1,84 @@
+name: Excel Bot Strategy Tournament (deep mining)
+
+# Runs the 33-def x 14-exit x 2-side x cohort tournament over the persisted
+# deep grids (excel-deep-grids branch), applies discovery/holdout + regime
+# gates, emits strategy cards for winners, appends their trades to the
+# ledger, refreshes the portfolio dashboard, publishes to Pages.
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_n:
+        description: "Minimum discovery trades per combo"
+        default: "300"
+      max_cards:
+        description: "Max new strategy cards to issue"
+        default: "10"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: excel-mine
+  cancel-in-progress: false
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install openpyxl
+
+      - name: Restore deep grids (excel-deep-grids branch)
+        run: |
+          curl -sL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/excel-deep-grids/state/grids_deep.tar.gz" -o /tmp/grids.tar.gz
+          mkdir -p excel_bot/grids_deep
+          tar -xzf /tmp/grids.tar.gz -C excel_bot --strip-components=1 || \
+          tar -xzf /tmp/grids.tar.gz -C excel_bot
+          echo "grids: $(ls excel_bot/grids_deep | wc -l)"
+
+      - name: Run tournament
+        env:
+          MIN_N: ${{ inputs.min_n }}
+          MAX_CARDS: ${{ inputs.max_cards }}
+        run: |
+          cd excel_bot
+          python engine/mine_deep.py --min-n "$MIN_N" --max-cards "$MAX_CARDS" --workers 4
+
+      - name: Refresh portfolio dashboard
+        if: always()
+        run: |
+          cd excel_bot
+          python engine/portfolio.py || true
+
+      - name: Commit cards + ledger + dashboard to main
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "excel-bot tournament: new strategy cards + ledger $(date -u +%F)" \
+            excel_bot/strategies excel_bot/backtest/ || true
+
+      - name: Publish dashboard to GitHub Pages
+        if: always()
+        run: |
+          set -uo pipefail
+          [ -f excel_bot/backtest/dashboard.html ] || exit 0
+          git config user.name "excel-bot"
+          git config user.email "excel-bot@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add --detach /tmp/pages FETCH_HEAD
+          mkdir -p /tmp/pages/excel-bot
+          cp excel_bot/backtest/dashboard.html /tmp/pages/excel-bot/index.html
+          cd /tmp/pages
+          git add excel-bot/index.html
+          git commit -q -m "excel-bot dashboard $(date -u +%F)" || echo "no change"
+          git push -q origin HEAD:gh-pages

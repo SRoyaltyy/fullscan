@@ -43,6 +43,8 @@ from daily_run import DEFS, load_strategies, parse_date
 BT_DIR = "backtest"
 TRADES_CSV = os.path.join(BT_DIR, "trades.csv")
 DONE_JSON = os.path.join(BT_DIR, "state", "done.json")
+DONE_GRIDS_JSON = os.path.join(BT_DIR, "state", "done_grids.json")
+GRIDS_DEEP_DIR = "grids_deep"
 
 TRADE_FIELDS = [
     "ticker", "strategy", "side", "signal_date", "cluster_start",
@@ -171,7 +173,77 @@ def ticker_trades(ticker, rows, strategies, fz_rec):
     return out, None
 
 
-# ------------------------------------------------------------------ driver --
+def grid_for(ticker, rows):
+    """Full-span color grid for a ticker's deep rows."""
+    earliest = rows[0]["date"] + timedelta(days=600)   # weekly lookback warm-up
+    anchors = pick_anchors(rows, earliest, rows[-1]["date"])
+    if not anchors:
+        return None
+    days = build_ticker(ticker, rows, anchors)
+    return days or None
+
+
+def _work_grids(job):
+    """Grids-only mode: fetch deep, build full-span grid, save it. No trades."""
+    ticker, years = job
+    try:
+        rows = fetch_daily_fast(ticker, date.today() - timedelta(days=years * 365),
+                                date.today())
+        if len(rows) < 200:
+            return ticker, "insufficient history"
+        days = grid_for(ticker, rows)
+        if not days or len(days) < 30:
+            return ticker, "thin grid"
+        os.makedirs(GRIDS_DEEP_DIR, exist_ok=True)
+        json.dump({"ticker": ticker, "days": days},
+                  open(os.path.join(GRIDS_DEEP_DIR, f"{ticker}.json"), "w"))
+        return ticker, None
+    except Exception as e:  # noqa: BLE001
+        return ticker, f"{type(e).__name__}: {e}"[:150]
+
+
+def main_grids_only(args):
+    """Build + persist deep grids for the whole universe (resumable)."""
+    t0 = time.time()
+    tickers = sorted({os.path.basename(p)[:-5]
+                      for p in glob.glob("data/rows/*.json")}
+                     | {os.path.basename(p)[:-5]
+                        for p in glob.glob("grids/*.json")
+                        if not os.path.basename(p).startswith("_")})
+    if args.limit:
+        tickers = tickers[:args.limit]
+    done = {} if args.no_resume else (
+        json.load(open(DONE_GRIDS_JSON)) if os.path.exists(DONE_GRIDS_JSON)
+        else {})
+    todo = [t for t in tickers if t not in done]
+    print(f"[grids-only] {len(done)} done, {len(todo)} to go", flush=True)
+    if not todo:
+        print("REMAINING=0", flush=True)
+        return
+    from multiprocessing import Pool
+    budget_s = args.budget_min * 60
+    with Pool(args.workers) as pool:
+        for tk, err in pool.imap_unordered(
+                _work_grids, [(t, args.years) for t in todo], chunksize=4):
+            done[tk] = f"ERR {err}" if err else "ok"
+            if len(done) % 100 == 0:
+                os.makedirs(os.path.dirname(DONE_GRIDS_JSON), exist_ok=True)
+                json.dump(done, open(DONE_GRIDS_JSON, "w"))
+                print(f"  ... {len(done)}/{len(tickers)} "
+                      f"({(time.time()-t0)/60:.1f}m)", flush=True)
+            if time.time() - t0 > budget_s:
+                pool.terminate()
+                print("[budget] stopping", flush=True)
+                break
+    os.makedirs(os.path.dirname(DONE_GRIDS_JSON), exist_ok=True)
+    json.dump(done, open(DONE_GRIDS_JSON, "w"))
+    remaining = len([t for t in tickers if t not in done])
+    print(f"[grids-only done] {remaining} remaining, "
+          f"{(time.time()-t0)/60:.1f}m", flush=True)
+    print(f"REMAINING={remaining}", flush=True)
+
+
+
 def load_done():
     if os.path.exists(DONE_JSON):
         return json.load(open(DONE_JSON))
@@ -212,7 +284,12 @@ def main():
     ap.add_argument("--budget-min", type=float, default=1e9,
                     help="stop launching new tickers after this many minutes")
     ap.add_argument("--no-resume", action="store_true")
+    ap.add_argument("--grids-only", action="store_true",
+                    help="build+persist deep grids only, no trades")
     args = ap.parse_args()
+    if args.grids_only:
+        main_grids_only(args)
+        return
 
     t0 = time.time()
     strategies = load_strategies()

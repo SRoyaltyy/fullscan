@@ -22,6 +22,9 @@ on:
       continue_chain:
         description: "Self-dispatch again if tickers remain"
         default: "true"
+      grids_only:
+        description: "Build+persist deep grids only (for strategy mining)"
+        default: "false"
 
 permissions:
   contents: write
@@ -59,13 +62,43 @@ jobs:
           YEARS: ${{ inputs.years }}
           LIMIT: ${{ inputs.limit }}
           BUDGET: ${{ inputs.budget_min }}
+          GRIDS_ONLY: ${{ inputs.grids_only }}
         run: |
           cd excel_bot
           ARGS="--years $YEARS --workers 4 --budget-min $BUDGET"
           if [ "$LIMIT" != "0" ]; then ARGS="$ARGS --limit $LIMIT"; fi
+          if [ "$GRIDS_ONLY" = "true" ]; then ARGS="$ARGS --grids-only"; fi
           python engine/backfill.py $ARGS 2>&1 | tee /tmp/backfill.log
           REM=$(grep -oP '^REMAINING=\K\d+' /tmp/backfill.log | tail -1 || echo 0)
           echo "remaining=${REM:-0}" >> "$GITHUB_OUTPUT"
+
+      - name: Save deep grids (excel-deep-grids branch, squash)
+        if: inputs.grids_only == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "excel-bot"
+          git config user.email "excel-bot@users.noreply.github.com"
+          mkdir -p /tmp/gd/state
+          printf 'Deep full-span Excel-replica color grids (grids_deep/), squashed.\n' > /tmp/gd/README.md
+          tar -czf /tmp/gd/state/grids_deep.tar.gz -C excel_bot grids_deep
+          if git fetch origin excel-deep-grids; then
+            git worktree add --detach /tmp/gdw FETCH_HEAD
+            cp /tmp/gd/state/grids_deep.tar.gz /tmp/gdw/state/grids_deep.tar.gz
+            cp /tmp/gd/README.md /tmp/gdw/README.md
+            cd /tmp/gdw
+            git add -A
+            git commit -q --amend -m "deep grids $(date -u +%F)"
+            git push -q -f origin HEAD:excel-deep-grids
+          else
+            cd /tmp/gd
+            git init -q .
+            git add -A
+            git commit -q -m "deep grids $(date -u +%F)"
+            git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/heads/excel-deep-grids
+          fi
+          echo "deep grids saved"
 
       - name: Build effectiveness summary
         if: always()
@@ -88,6 +121,23 @@ jobs:
             "excel-bot backtest: $(date -u +%F) (+tickers chunk)" \
             excel_bot/backtest/ || true
 
+      - name: Publish dashboard to GitHub Pages
+        if: always()
+        run: |
+          set -uo pipefail
+          [ -f excel_bot/backtest/dashboard.html ] || exit 0
+          git config user.name "excel-bot"
+          git config user.email "excel-bot@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add --detach /tmp/pages FETCH_HEAD
+          mkdir -p /tmp/pages/excel-bot
+          cp excel_bot/backtest/dashboard.html /tmp/pages/excel-bot/index.html
+          cd /tmp/pages
+          git add excel-bot/index.html
+          git commit -q -m "excel-bot dashboard $(date -u +%F)" || echo "no change"
+          git push -q origin HEAD:gh-pages
+          echo "published: https://sroyaltyy.github.io/fullscan/excel-bot/"
+
       - name: Self-dispatch if tickers remain
         if: steps.bt.outputs.remaining != '0' && inputs.continue_chain == 'true'
         env:
@@ -98,4 +148,5 @@ jobs:
             -F years="${{ inputs.years }}" \
             -F limit="${{ inputs.limit }}" \
             -F budget_min="${{ inputs.budget_min }}" \
-            -F continue_chain="${{ inputs.continue_chain }}"
+            -F continue_chain="${{ inputs.continue_chain }}" \
+            -F grids_only="${{ inputs.grids_only }}"

@@ -125,9 +125,12 @@ def load_strategies():
         if card["name"] == "smoke_test":
             continue
         spec = card["spec"]
+        # prefer the card's own definition dict (mined strategies may use
+        # definitions outside the built-in matrix); fall back to DEFS by name
+        d = spec["cluster_definition"]
         out.append({
             "name": card["name"],
-            "definition": DEFS[spec["cluster_definition"]["name"]],
+            "definition": DEFS.get(d["name"], d),
             "side": 1 if spec["side"] == "long_green" else -1,
             "exit_rule": spec["exit_rule"],
             "cohort": spec["cohort_filter"],
