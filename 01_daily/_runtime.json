@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 4,
   "grok_busy": false,
-  "updated_at": "2026-08-31T09:11:44.936181-04:00",
+  "updated_at": "2026-08-31T09:32:01.156617-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -20,7 +20,7 @@
       "group": "box",
       "status": "WARN",
       "required": true,
-      "detail": "pid=411207 port=up",
+      "detail": "pid=411946 port=up",
       "action": "heal"
     },
     {
@@ -29,7 +29,7 @@
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "active pid=411207 alive",
+      "detail": "active pid=411946 alive",
       "action": "none"
     },
     {
@@ -169,6 +169,6 @@
     }
   ],
   "healed": [
-    "enable_openclaw_chat.sh exit=1 11207]: 2026-08-31T21:11:19.685+08:00 [openai-compat] chat completion failed: FailoverError: 403 \"You have run out of credits or need a Grok subscription. Add c"
+    "enable_openclaw_chat.sh exit=1 11946]: 2026-08-31T21:31:35.780+08:00 [openai-compat] chat completion failed: FailoverError: 403 \"You have run out of credits or need a Grok subscription. Add c"
   ]
 }
