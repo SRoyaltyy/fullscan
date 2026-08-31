@@ -134,6 +134,10 @@ MAX_LARGE_MEGA = 4          # rest of the book is small/mid
 MIN_OPP_MCAP_M = 400.0      # skip sub-$400M "lottery" micros in BUY
 MAX_OPP_MCAP_M = 20000.0    # above this is large/mega for the cap
 PERSIST_PENALTY = 0.10
+# mid_opp used to add +0.60–0.68 and buy Healthcare into a −0.50 sector call.
+OPP_CAP = 0.20
+HARD_SECTOR_RED = -0.25     # essay-red; not the ±0.09 event-tilt noise
+MAX_EVENT_SECTOR_TILT = 0.20
 # Liquid mid/small with room to run (BB-class). Additive, not a 7th weight.
 SIZE_OPP = {"micro": 0.00, "small": 0.16, "mid": 0.32, "large": -0.05, "mega": -0.22}
 RANGE_OPP = {
@@ -149,7 +153,7 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
     if not path.exists():
         files = sorted(export_dir.glob("finviz_????-??-??.csv"))
         if not files:
-            return pd.DataFrame(columns=["Ticker", "market_cap_m", "avg_vol_k"])
+            return pd.DataFrame(columns=["Ticker", "market_cap_m", "avg_vol_k", "relvol"])
         path = files[-1]
     df = pd.read_csv(path, low_memory=False)
     tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
@@ -157,6 +161,12 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
     out["Ticker"] = df[tcol].astype(str).str.strip().str.upper()
     out["market_cap_m"] = pd.to_numeric(df.get("Market Cap"), errors="coerce")
     out["avg_vol_k"] = pd.to_numeric(df.get("Average Volume"), errors="coerce")
+    rel_col = next(
+        (c for c in ("Relative Volume", "Rel Volume", "Rel Vol", "RelVol", "relvol")
+         if c in df.columns),
+        None,
+    )
+    out["relvol"] = pd.to_numeric(df[rel_col], errors="coerce") if rel_col else np.nan
     return out.drop_duplicates("Ticker", keep="first")
 
 
@@ -420,7 +430,25 @@ def _load_events_sector_tilt(date: str) -> dict[str, float]:
             if str(sec).upper() in ("BROAD", "SPX", "ALL"):
                 continue
             tilt[str(sec)] = tilt.get(str(sec), 0.0) + sign * min(impact, 5) * 0.08
-    return tilt
+    return _clip_event_tilt(tilt)
+
+
+def _clip_event_tilt(
+    tilt: dict[str, float], cap: float = MAX_EVENT_SECTOR_TILT
+) -> dict[str, float]:
+    """Keep the event overlay from inverting a same-day sector essay.
+
+    2026-08-31: Energy essay +0.47 + event −0.56 → −0.09 (pile veto);
+    Technology essay −0.28 + event +1.04 → +0.77 (fake cluster).
+    """
+    out: dict[str, float] = {}
+    for sec, raw in (tilt or {}).items():
+        try:
+            v = float(raw)
+        except (TypeError, ValueError):
+            continue
+        out[str(sec)] = max(-cap, min(cap, v))
+    return out
 
 
 def _inputs_status(date: str) -> list[dict]:
@@ -594,6 +622,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     else:
         join["market_cap_m"] = np.nan
         join["avg_vol_k"] = np.nan
+        join["relvol"] = np.nan
+    if "relvol" not in join.columns:
+        join["relvol"] = np.nan
     n_before = len(join)
     liquid = (
         (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
@@ -769,10 +800,23 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         for h in HORIZONS:
             join[f"s_sector_{h}"] = join[f"s_sector_{h}"] + extra
         join["s_sector"] = join["s_sector_1d"]
-        print(f"[stock-book] event-scanner sector tilt on {len(ev_tilt)} sectors")
+        print(f"[stock-book] event-scanner sector tilt on {len(ev_tilt)} sectors "
+              f"(clipped ±{MAX_EVENT_SECTOR_TILT:.2f})")
     gen_bias = float(_bias_for(gen_run, "1d") * gen_gate)
     sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
                    for sec, r in sector_runs.items()}
+
+    # Opportunity is a BUY-side nudge, not a license to ignore a red sector.
+    if "s_opp" in join.columns:
+        join["s_opp_raw"] = join["s_opp"]
+        hard_sec = pd.to_numeric(join["s_sector"], errors="coerce").fillna(0.0) <= HARD_SECTOR_RED
+        n_zero = int(hard_sec.sum())
+        join.loc[hard_sec, "s_opp"] = 0.0
+        join["s_opp"] = pd.to_numeric(join["s_opp"], errors="coerce").fillna(0.0).clip(upper=OPP_CAP)
+        print(f"[stock-book] s_opp capped at {OPP_CAP:.2f}; "
+              f"zeroed on {n_zero} hard sector-red names")
+
+    join = green_pile.attach_ranks(join)
     join["green"] = green_pile.green_mask(join)
     gp = green_pile.pile_status(join)
     print(f"[stock-book] green-pile {gp['reason']}")
@@ -908,13 +952,51 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     return join, meta
 
 
+def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
+    """Hard quality gates on the BUY walk (pile + weighted fallback).
+
+    Drops: essay-red sectors, LAG names that also lost their peer basket,
+    and printed dead relative volume. Soft yellow (sector −0.09 event noise,
+    modest red general) is not a veto here — the pile / weights handle that.
+    """
+    if df is None or df.empty:
+        return pd.Series(dtype=bool)
+    veto = pd.Series(False, index=df.index)
+    if "s_sector" in df.columns:
+        veto |= pd.to_numeric(df["s_sector"], errors="coerce").fillna(0.0) <= HARD_SECTOR_RED
+    peer = (
+        pd.to_numeric(df["s_peer"], errors="coerce").fillna(0.0)
+        if "s_peer" in df.columns
+        else pd.Series(0.0, index=df.index)
+    )
+    lab = df["context_label"].astype(str) if "context_label" in df.columns else None
+    reasons = df["reasons"].astype(str) if "reasons" in df.columns else None
+    is_lag = pd.Series(False, index=df.index)
+    if lab is not None:
+        is_lag |= lab.str.contains(r"\bLAG\b", regex=True, na=False)
+    if reasons is not None:
+        is_lag |= reasons.str.contains(r"\bLAG\b", regex=True, na=False)
+    veto |= is_lag & (peer <= 0)
+    rel = None
+    for c in ("relvol", "rel_vol", "Relative Volume"):
+        if c in df.columns:
+            rel = pd.to_numeric(df[c], errors="coerce")
+            break
+    if rel is not None:
+        printed = rel.notna() & (rel > 0)
+        veto |= printed & (rel < green_pile.RELVOL_DEAD)
+    return veto
+
+
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
-              buy_mask=None):
+              buy_mask=None, buy_sort=None):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
     BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
-    full weighted walk. SELL always ranks on the core weighted score (no pile,
-    no buy-side add-ons) when sell_core is set and the column exists.
+    full weighted walk. buy_sort (e.g. green_rank) overrides score_{h} when the
+    pile is used. SELL always ranks on the core weighted score (no pile,
+    no buy-side add-ons) when sell_core is set and the column exists, and
+    never shorts a name that is in the buy_mask.
     """
     col = f"score_{horizon}"
     pool = df
@@ -925,7 +1007,15 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             masked = df
         if masked is not None and len(masked):
             pool = masked
-    ranked = pool.sort_values(col, ascending=False)
+    if pool is not None and len(pool):
+        try:
+            pool = pool.loc[~_buy_veto_mask(pool)]
+        except Exception:
+            pass
+    sort_col = col
+    if buy_sort and pool is not None and buy_sort in getattr(pool, "columns", []):
+        sort_col = buy_sort
+    ranked = pool.sort_values(sort_col, ascending=False)
     picks = []
     sec_n: dict[str, int] = {}
     ind_n: dict[str, int] = {}
@@ -959,15 +1049,32 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             break
     buys = pd.DataFrame(picks) if picks else ranked.head(0)
     core_col = f"core_{horizon}"
-    if sell_core and core_col in df.columns:
-        sells = df.sort_values(core_col, ascending=True).head(top_n)
+    sell_df = df
+    pile_sell = False
+    if buy_mask is not None:
+        try:
+            rest = df.loc[~buy_mask]
+            if rest is not None and len(rest):
+                sell_df = rest
+                pile_sell = True
+            else:
+                return buys, df.head(0)
+        except Exception:
+            sell_df = df
+    if sell_core and core_col in sell_df.columns:
+        sells = sell_df.sort_values(core_col, ascending=True).head(top_n)
     else:
         sells = ranked.tail(top_n).iloc[::-1]
+    if pile_sell and buy_mask is not None:
+        try:
+            sells = sells.loc[~buy_mask.reindex(sells.index).fillna(False)]
+        except Exception:
+            pass
     return buys, sells
 
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
-                 sell_core: bool = True, buy_mask=None):
+                 sell_core: bool = True, buy_mask=None, buy_sort=None):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
@@ -980,7 +1087,7 @@ def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
         except Exception:
             sub_mask = None
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
-                      sell_core=sell_core, buy_mask=sub_mask)
+                      sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -1155,7 +1262,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
-        "s_heat_raw", "s_heat", "green",
+        "s_opp_raw", "s_heat_raw", "s_heat", "green", "green_rank", "relvol",
         # per-horizon LLM components + core scores: this CSV is the learning
         # snapshot book_learn re-scores under candidate weights
         *[f"s_sector_{h}" for h in HORIZONS],
@@ -1171,11 +1278,15 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     sell_core = bool(meta.get("sell_excludes_addons", True))
     gp = meta.get("green_pile") or {}
     buy_mask = None
+    buy_sort = None
     if gp.get("used") and "green" in df.columns:
         buy_mask = df["green"] == True  # noqa: E712
+        if "green_rank" in df.columns:
+            buy_sort = "green_rank"
     books = {}
     for h in HORIZONS:
-        b, s = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask)
+        b, s = _book_side(df, h, top_n, sell_core=sell_core,
+                          buy_mask=buy_mask, buy_sort=buy_sort)
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
@@ -1184,7 +1295,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
             "ranker": "green_pile" if gp.get("used") else "weighted",
         }
         for bucket in SIZE_BUCKETS:
-            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core, buy_mask=buy_mask)
+            bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core,
+                                  buy_mask=buy_mask, buy_sort=buy_sort)
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -1223,7 +1335,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "5. **Peer RS** — this week's return vs that name's own correlated basket. Kills XLE clones.",
         "6. **Mid-cap opportunity** — extra points for liquid small/mid ($400M–$20B) that are not jammed at the 52-week high. Micros skipped. Max 4 large/mega.",
         "",
-        "**All-green BUY.** A name is green when join, general, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile. If the pile is thinner (usually AB or peers all zeros, or no same-day general), the ranker keeps the old weighted walk. **SELL always ranks on core weights** — pile and mid-cap add-ons do not pick shorts.",
+        "**All-green BUY.** A name is green when join, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). General is a market-wide SPX stamp — a modest red general does not empty the pile. A hard-red general (≤ −0.25) is a veto unless the same-day sector call is green. Event-scanner sector tilt is clipped to ±0.20 so it cannot invert the day's essay. mid_opp is capped at +0.20 and zeroed on hard sector-red names. BUY also drops LAG+peer-losers and printed dead volume. If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile by green_rank (no opp). If the pile is thinner (usually AB or peers all zeros), the ranker keeps the weighted walk under the same vetoes. **SELL always ranks on core weights** and never shorts a green name when the pile is used.",
         "",
         "**1d** leans on news + AB + peers. **1m** drops news and leans on AB + peers + join.",
         "A sector headline (e.g. ADBE) cannot zero a mid-cap that just beat earnings or is leading its own peers.",
@@ -1299,7 +1411,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     # Full rationale for 1d and 1m (the two sleeves that matter). Other horizons: compact table.
     detail_h = ("1d", "1m")
     for h in HORIZONS:
-        buys, sells = _book_side(df, h, top_n, sell_core=sell_core, buy_mask=buy_mask)
+        buys, sells = _book_side(df, h, top_n, sell_core=sell_core,
+                                buy_mask=buy_mask, buy_sort=buy_sort)
         if h in detail_h:
             L += ["", f"## {h} BUY — why these names", ""]
             for i, (_, r) in enumerate(buys.iterrows(), 1):

@@ -1,15 +1,20 @@
 """Green pile: this ticker's tape is clean — not a weighted beauty contest.
 
 A name is green when:
-  join, general, AB, peer are all >= EPS (must have fired for the name)
+  join, AB, peer are all >= EPS (name-specific tape must have fired)
   sector and news are not red
   Finviz relative volume is not red (< 0.7) when a print exists
+  a hard-red general (market stamp × beta ≤ −HARD_RED) is a veto
+  unless the same-day sector call is green (relative-strength exception)
 
-Missing / yellow on news, digest, judge, sector, or relvol (no Finviz
-print) is not a veto. A red is.
+General is a market-wide SPX stamp, not a name-specific tape. A modest
+red general (typical −0.07 on a slightly down open) must not empty the
+pile and dump the book onto a weighted walk. Missing / yellow on news,
+digest, judge, sector, general, or relvol (no Finviz print) is not a
+veto. A red is — except the hard-general exception above.
 
 BUY 15 is filled from that pile, ranked by green_rank = mean of the
-four cores (no opp, no weights). Same $400M / 4-per-sector /
+three name cores (no opp, no weights). Same $400M / 4-per-sector /
 3-per-industry / 4 large-mega caps. If the liquid pile is thinner than
 GREEN_MIN (usually no AB/peer file yet), keep the weighted walk so
 pre-open does not go blank.
@@ -23,11 +28,12 @@ from __future__ import annotations
 import pandas as pd
 
 EPS = 0.05
+HARD_RED = 0.25
 RELVOL_DEAD = 0.7
 GREEN_MIN = 8
 MIN_LIQUID_MCAP_M = 400.0
-CORE = ("s_join", "s_general", "s_ab", "s_peer")
-CORE_LABEL = {"s_join": "join", "s_general": "general", "s_ab": "AB", "s_peer": "peer"}
+CORE = ("s_join", "s_ab", "s_peer")
+CORE_LABEL = {"s_join": "join", "s_ab": "AB", "s_peer": "peer"}
 
 
 def _num(s: pd.Series) -> pd.Series:
@@ -42,7 +48,7 @@ def _relvol(df: pd.DataFrame) -> pd.Series | None:
 
 
 def attach_ranks(df: pd.DataFrame) -> pd.DataFrame:
-    """green_rank = equal mean of the four cores. s_tape = mean(AB, peer)."""
+    """green_rank = equal mean of the name cores. s_tape = mean(AB, peer)."""
     if df is None or df.empty:
         return df
     out = df.copy()
@@ -66,6 +72,16 @@ def green_mask(df: pd.DataFrame) -> pd.Series:
         ok &= _num(df["s_sector"]) > -EPS
     if "s_news" in df.columns:
         ok &= _num(df["s_news"]) > -EPS
+    if "s_general" in df.columns:
+        gen = _num(df["s_general"])
+        sec = (
+            _num(df["s_sector"])
+            if "s_sector" in df.columns
+            else pd.Series(0.0, index=df.index)
+        )
+        hard_gen = gen <= -HARD_RED
+        sector_support = sec >= EPS
+        ok &= ~(hard_gen & ~sector_support)
     rel = _relvol(df)
     if rel is not None:
         printed = rel.notna() & (rel > 0)
@@ -138,6 +154,7 @@ def pile_status(df: pd.DataFrame) -> dict:
         "used": used,
         "min": GREEN_MIN,
         "eps": EPS,
+        "hard_red": HARD_RED,
         "relvol_dead": RELVOL_DEAD,
         "rank_col": "green_rank",
         "core_fired": {CORE_LABEL[c]: v for c, v in fired.items()},

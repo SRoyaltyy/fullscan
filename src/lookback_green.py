@@ -186,7 +186,7 @@ def render_all(days: list[dict]) -> str:
     L = [
         "# Green-pile book — every date",
         "",
-        "Fill the 15 from names where join + general + AB + peer are all green,",
+        "Fill the 15 from names where join + AB + peer are all green,",
         "sector/news not red, relvol not red (< 0.7) when printed. Rank by green_rank.",
         "Same $400M / sector caps. Thin pile (< 8 liquid) → skip / fallback.",
         "",
