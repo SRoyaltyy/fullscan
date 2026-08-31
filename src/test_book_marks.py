@@ -26,6 +26,25 @@ def test_boxes_use_lookback_polarity() -> None:
     assert b["vol"] == "neutral"
 
 
+def test_lattice_sources_fill_digest_judge_catalyst() -> None:
+    b = boxes_from_row(_sig(
+        src_sector_tone="neutral",
+        src_gen_tone="bad",
+        src_news_tone="good",
+        src_digest_tone="good",
+        src_judge_tone="good",
+        src_ab_tone="good",
+        src_heat_tone="bad",
+        src_vol_tone="neutral",
+        src_catal_tone="good",
+    ))
+    assert b["sector"] == "neutral"
+    assert b["digest"] == "good"
+    assert b["judge"] == "good"
+    assert b["heat"] == "bad"
+    assert b["catal"] == "good"
+
+
 def test_white_is_zero_red_not_a_hard_gate() -> None:
     # Modest gen-red → not white. Still a valid BUY if Cond/region hold.
     rec = annotate_one(boxes_from_row(_sig()), None)
@@ -88,6 +107,7 @@ def test_buy_veto_drops_alarm_and_cond_red() -> None:
 def main() -> None:
     tests = [
         test_boxes_use_lookback_polarity,
+        test_lattice_sources_fill_digest_judge_catalyst,
         test_white_is_zero_red_not_a_hard_gate,
         test_alarm_is_purely_worse,
         test_first_crack_is_a_fade,
