@@ -1,0 +1,78 @@
+name: Stock Book readiness
+
+# Read-only board for the seven workflows that feed the ranker.
+# Does not start or heal anything. FAIL = empty / truncated / QC fail.
+# PARTIAL = some required outputs are good, others are not.
+#
+# Code comes from the ref that triggered this run. Daily artifacts are
+# overlaid from main so the board matches the live packet.
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Session YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+  schedule:
+    # 08:50 ET during EDT — after scrape + pre-open, before the bell
+    - cron: "50 12 * * 1-5"
+    # 13:20 ET — after Stock Book ALL's 13:00 ET cron
+    - cron: "20 17 * * 1-5"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: stock-book-diag
+  cancel-in-progress: true
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Overlay live daily files from main
+        run: |
+          git fetch origin main --depth=1
+          git checkout origin/main -- 01_daily data 03_scoreboard dashboard \
+            || echo "overlay skipped (already on main or paths missing)"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Diagnose Stock Book upstream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uo pipefail
+          DATE="${{ github.event.inputs.date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          echo "DATE=$DATE"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          python -m src.stock_book_diag --date "$DATE" --write
+          status=$?
+          exit "$status"
+
+      - name: Show board
+        if: always()
+        run: |
+          D="${DATE:-$(TZ=America/New_York date +%F)}"
+          echo "======== $D ========"
+          cat "01_daily/${D}_stock_book_diag.md" 2>/dev/null || true
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-book-diag-${{ env.DATE }}
+          path: |
+            01_daily/${{ env.DATE }}_stock_book_diag.md
+            01_daily/${{ env.DATE }}_stock_book_diag.json
+          if-no-files-found: warn
