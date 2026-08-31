@@ -96,6 +96,16 @@ SCENARIOS = [
                     "S1_short_red_1day_optionable"],
      "per_trade": 10000, "max_new_day": 3,
      "max_open": 25, "capital": 250000, "rank": True},
+    {"name": "G_long_compound",
+     "desc": "Longs only, top 3/day, 8% of CURRENT equity per trade "
+             "(compounding)",
+     "strategies": LONGS, "per_trade": 0.08, "size_mode": "pct",
+     "max_new_day": 3, "max_open": 20, "capital": 200000, "rank": True},
+    {"name": "H_all_compound",
+     "desc": "All strategies, top 4/day, 5% of CURRENT equity per trade "
+             "(compounding)",
+     "strategies": "ALL", "per_trade": 0.05, "size_mode": "pct",
+     "max_new_day": 4, "max_open": 30, "capital": 300000, "rank": True},
 ]
 
 COLOR_SCORE = {"deep green": 2.0, "green": 1.5, "light green": 1.0,
@@ -200,7 +210,14 @@ def run_scenario(cfg, trades):
             if len(b["open"]) >= cfg["max_open"]:
                 n_skip_cap += 1
                 continue
-            shares = int(cfg["per_trade"] // t["p_in"])
+            if cfg.get("size_mode") == "pct":
+                held = sum(p["shares"] * p["p_in"] for p in b["open"]
+                           if p["side"] == "LONG") + \
+                       sum(p["lock"] for p in b["open"] if p["side"] != "LONG")
+                alloc = (b["cash"] + held) * cfg["per_trade"]
+            else:
+                alloc = cfg["per_trade"]
+            shares = int(alloc // t["p_in"])
             if shares < 1:
                 n_skip_cash += 1
                 continue
@@ -255,6 +272,32 @@ def run_scenario(cfg, trades):
     }
 
 
+def spy_benchmark(d0, d1, base=100000):
+    """SPY buy-and-hold over the same window, for honest comparison."""
+    try:
+        from fastfetch import fetch_daily_fast
+        rows = fetch_daily_fast("SPY", d0, d1)
+    except Exception as e:  # noqa: BLE001
+        print(f"[benchmark] SPY fetch failed: {e}")
+        return None
+    if not rows:
+        return None
+    p0 = rows[0]["close"]
+    pts = [(r["date"], base * r["close"] / p0) for r in rows]
+    eq = [v for _, v in pts]
+    total = eq[-1] / base - 1
+    yrs = max((pts[-1][0] - pts[0][0]).days / 365.25, 0.01)
+    peak, mdd = -1e18, 0.0
+    for v in eq:
+        peak = max(peak, v)
+        mdd = min(mdd, v / peak - 1)
+    return {"name": "SPY buy&hold (benchmark)", "equity": pts,
+            "total_ret": total, "cagr": (eq[-1] / base) ** (1 / yrs) - 1,
+            "mdd": mdd, "final_eq": eq[-1], "capital0": base,
+            "sharpe": None, "win": None, "n_taken": 1, "fees": 0.0,
+            "benchmark": True, "desc": "S&P 500 ETF, same window"}
+
+
 def monthly_returns(equity):
     bym = {}
     for d, v in equity:
@@ -274,7 +317,7 @@ def fmt_money(v):
     return f"${v:,.0f}"
 
 
-def build_report(results, path):
+def build_report(results, path, bench=None):
     L = [f"# Portfolio backtest — {date.today()}",
          "",
          "Actual buy/sell simulation over the historical signal ledger with "
@@ -292,6 +335,10 @@ def build_report(results, path):
                  f"{r['mdd']:.1%} | {r['sharpe']:.2f} | {r['win']:.1%} | "
                  f"{r['n_taken']} | {r['n_skip_cash'] + r['n_skip_cap']} | "
                  f"{fmt_money(r['fees'])} |")
+    if bench:
+        L.append(f"| **{bench['name']}** | {fmt_money(bench['final_eq'])} | "
+                 f"**{bench['total_ret']:+.1%}** | **{bench['cagr']:+.1%}** | "
+                 f"{bench['mdd']:.1%} | - | - | 1 | 0 | - |")
     L += ["", "\\* drawdown on cost-basis equity — understated for "
           "long-hold tp strategies.", ""]
     for r in results:
@@ -316,7 +363,7 @@ def build_report(results, path):
         fh.write("\n".join(L) + "\n")
 
 
-def build_dashboard(results, path):
+def build_dashboard(results, path, bench=None):
     # weekly-downsampled equity curves keep the html small
     series = {}
     for r in results:
@@ -325,19 +372,38 @@ def build_dashboard(results, path):
             pts.append(r["equity"][-1])
         series[r["name"]] = [[str(d), round(v, 0)] for d, v in pts]
     labels = sorted({d for pts in series.values() for d, _ in pts})
+    bench_series = None
+    bench_card = None
+    bench_monthly = None
+    if bench:
+        bench_series = {str(d): round(v, 0) for d, v in bench["equity"][::2]}
+        labels = sorted(set(labels) | set(bench_series))
+        bench_card = {kk: (round(vv, 4) if isinstance(vv, float) else vv)
+                      for kk, vv in bench.items()
+                      if kk in ("name", "desc", "capital0", "final_eq",
+                                "total_ret", "cagr", "mdd", "benchmark")}
+        bench_monthly = {f"{y}-{m:02d}": round(v, 4) for (y, m), v in
+                         monthly_returns(bench["equity"]).items()}
+    cards = [{kk: (round(vv, 4) if isinstance(vv, float) else vv)
+              for kk, vv in r.items()
+              if kk in ("name", "desc", "capital0", "final_eq",
+                        "total_ret", "cagr", "mdd", "sharpe", "win",
+                        "n_taken", "fees", "pf", "avg_pnl")}
+             for r in results]
+    if bench_card:
+        cards.append(bench_card)
+    monthly = {r["name"]: {f"{y}-{m:02d}": round(v, 4)
+                           for (y, m), v in
+                           monthly_returns(r["equity"]).items()}
+               for r in results}
+    if bench_monthly:
+        monthly["SPY"] = bench_monthly
     data = {
         "labels": labels,
         "series": {k: dict(v) for k, v in series.items()},
-        "cards": [{kk: (round(vv, 4) if isinstance(vv, float) else vv)
-                   for kk, vv in r.items()
-                   if kk in ("name", "desc", "capital0", "final_eq",
-                             "total_ret", "cagr", "mdd", "sharpe", "win",
-                             "n_taken", "fees", "pf", "avg_pnl")}
-                  for r in results],
-        "monthly": {r["name"]: {f"{y}-{m:02d}": round(v, 4)
-                                for (y, m), v in
-                                monthly_returns(r["equity"]).items()}
-                    for r in results},
+        "bench": bench_series,
+        "cards": cards,
+        "monthly": monthly,
     }
     html = DASH_HTML.replace("__DATA__", json.dumps(data))
     with open(path, "w", encoding="utf-8") as fh:
@@ -373,28 +439,39 @@ const fm = v => "$" + Math.round(v).toLocaleString();
 const fp = v => (v>=0?"+":"") + (v*100).toFixed(1) + "%";
 const cls = v => v>=0 ? "pos" : "neg";
 document.getElementById("cards").innerHTML = D.cards.map((c,i)=>`
-<div class="card" style="border-top:3px solid ${PAL[i%PAL.length]}">
+<div class="card" style="border-top:3px solid ${c.benchmark?"#e5e7eb":PAL[i%PAL.length]}">
 <b>${c.name}</b><div class="d">${c.desc}</div>
 <div class="kv"><span>final</span><b>${fm(c.final_eq)}</b></div>
 <div class="kv"><span>total / CAGR</span><b class="${cls(c.total_ret)}">${fp(c.total_ret)} / ${fp(c.cagr)}</b></div>
 <div class="kv"><span>max DD*</span><b class="neg">${(c.mdd*100).toFixed(1)}%</b></div>
-<div class="kv"><span>Sharpe / win</span><b>${c.sharpe.toFixed(2)} / ${(c.win*100).toFixed(0)}%</b></div>
-<div class="kv"><span>trades / fees</span><b>${c.n_taken.toLocaleString()} / ${fm(c.fees)}</b></div>
+${c.benchmark?`<div class="kv"><span>benchmark</span><b>buy & hold</b></div>`
+:`<div class="kv"><span>Sharpe / win</span><b>${c.sharpe.toFixed(2)} / ${(c.win*100).toFixed(0)}%</b></div>
+<div class="kv"><span>trades / fees</span><b>${c.n_taken.toLocaleString()} / ${fm(c.fees)}</b></div>`}
 </div>`).join("");
 function ds(key, map, i, fill){return {label:key,
  data:D.labels.map(l=>map[l] ?? null), borderColor:PAL[i%PAL.length],
  backgroundColor:fill?PAL[i%PAL.length]+"22":undefined, fill:!!fill,
  pointRadius:0, borderWidth:1.5, spanGaps:true, tension:.15};}
+function benchDs(fill){return D.bench?[{label:"SPY",
+ data:D.labels.map(l=>D.bench[l] ?? null), borderColor:"#e5e7eb",
+ borderDash:[6,4], backgroundColor:fill?"#e5e7eb22":undefined, fill:!!fill,
+ pointRadius:0, borderWidth:1.5, spanGaps:true, tension:.15}]:[];}
 new Chart(eq,{type:"line",data:{labels:D.labels,
- datasets:Object.entries(D.series).map(([k,v],i)=>ds(k,v,i))},
+ datasets:[...Object.entries(D.series).map(([k,v],i)=>ds(k,v,i)),...benchDs(false)]},
  options:{plugins:{legend:{labels:{color:"#ccc"}}},
  scales:{x:{ticks:{color:"#889",maxTicksLimit:12}},
  y:{ticks:{color:"#889",callback:fm}}}}});
 new Chart(dd,{type:"line",data:{labels:D.labels,
- datasets:Object.entries(D.series).map(([k,v],i)=>{
+ datasets:[...Object.entries(D.series).map(([k,v],i)=>{
   let peak=-1e18;const m={};for(const [d0,val] of Object.entries(v)){
    peak=Math.max(peak,val);m[d0]=val/peak-1;}
-  return ds(k,m,i,true);})},
+  return ds(k,m,i,true);}),
+  ...(D.bench?(()=>{let peak=-1e18;const m={};
+   for(const [d0,val] of Object.entries(D.bench)){
+    peak=Math.max(peak,val);m[d0]=val/peak-1;}
+   return [{label:"SPY",data:D.labels.map(l=>m[l]??null),
+    borderColor:"#e5e7eb",borderDash:[6,4],pointRadius:0,borderWidth:1.5,
+    spanGaps:true,tension:.15}];})():[])]},
  options:{plugins:{legend:{display:false}},
  scales:{x:{ticks:{color:"#889",maxTicksLimit:12}},
  y:{ticks:{color:"#889",callback:v=>(v*100).toFixed(0)+"%"}}}}});
@@ -420,10 +497,17 @@ def main():
               f"dd={r['mdd']:7.1%} sharpe={r['sharpe']:5.2f} "
               f"win={r['win']:.1%} n={r['n_taken']} fees={fmt_money(r['fees'])}",
               flush=True)
+    d0 = min(t["d_in"] for t in trades)
+    d1 = max(t["d_out"] for t in trades)
+    bench = spy_benchmark(d0, d1)
+    if bench:
+        print(f"{'SPY benchmark':22s} eq={fmt_money(bench['final_eq']):>12s} "
+              f"ret={bench['total_ret']:+8.1%} cagr={bench['cagr']:+7.1%} "
+              f"dd={bench['mdd']:7.1%}", flush=True)
     md = os.path.join(BT_DIR, f"portfolio_{date.today()}.md")
     html = os.path.join(BT_DIR, "dashboard.html")
-    build_report(results, md)
-    build_dashboard(results, html)
+    build_report(results, md, bench)
+    build_dashboard(results, html, bench)
     print(f"wrote {md} and {html}")
 
 

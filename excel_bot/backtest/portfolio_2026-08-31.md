@@ -10,6 +10,9 @@ Actual buy/sell simulation over the historical signal ledger with position sizin
 | D_short_only_top5 | $206,187 | -17.5% | -4.9% | -36.4% | -0.36 | 49.0% | 4839 | 65 | $290,158 |
 | E_sleeves | $598,497 | +14.0% | +3.4% | -23.5% | 0.35 | 50.2% | 17469 | 236819 | $754,993 |
 | F_best_pair_L2_S1 | $156,830 | -37.3% | -11.3% | -39.7% | -1.75 | 53.0% | 2915 | 1736 | $121,693 |
+| G_long_compound | $373,879 | +86.9% | +17.4% | -35.2% | 0.76 | 48.1% | 2716 | 17043 | $210,525 |
+| H_all_compound | $351,062 | +17.0% | +4.1% | -20.3% | 0.32 | 47.5% | 3887 | 3367 | $219,996 |
+| **SPY buy&hold (benchmark)** | $212,547 | **+112.5%** | **+21.4%** | -19.0% | - | - | 1 | 0 | - |
 
 \* drawdown on cost-basis equity — understated for long-hold tp strategies.
 
@@ -60,4 +63,20 @@ fees were 26.8% of gross winning P&L
 best: STEX 2024-06-11 SHORT $4,251; SKYA 2025-03-28 SHORT $2,842; NRT 2023-10-31 SHORT $2,695
 
 worst: OGN 2025-04-29 LONG $-3,070; DFDV 2025-06-27 SHORT $-2,758; FATE 2023-01-06 SHORT $-2,460
+
+## G_long_compound — Longs only, top 3/day, 8% of CURRENT equity per trade (compounding)
+
+fees were 10.7% of gross winning P&L
+
+best: SYRE 2023-06-20 LONG $37,398; RGTI 2025-09-11 LONG $20,965; UMAC 2026-05-27 LONG $20,561
+
+worst: MAAS 2025-04-29 LONG $-10,855; AGL 2026-03-11 LONG $-7,993; AXTI 2026-08-17 LONG $-7,717
+
+## H_all_compound — All strategies, top 4/day, 5% of CURRENT equity per trade (compounding)
+
+fees were 12.7% of gross winning P&L
+
+best: PSNL 2024-07-09 LONG $21,211; RGTI 2025-09-11 LONG $14,109; DJT 2024-01-18 LONG $13,409
+
+worst: MAAS 2025-04-29 LONG $-7,548; AXTI 2025-02-20 LONG $-6,590; MAAS 2024-10-01 LONG $-4,559
 
