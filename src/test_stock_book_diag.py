@@ -292,12 +292,23 @@ def test_workflow_yaml_is_read_only():
     text = WF.read_text(encoding="utf-8")
     assert "name: Stock Book readiness" in text
     assert "src.stock_book_diag" in text
+    assert "--as-of" in text
+    assert "--rebuild-if-missing" in text
     assert "self-hosted" not in text
     assert "contents: read" in text
     assert "workflow_dispatch" in text
     # Must not dispatch or heal other jobs.
     assert "gh workflow run" not in text
     assert "GROK_ONLY" not in text
+
+
+def test_action_ok_historical_and_today():
+    d13 = diag.audit("2026-08-13", gh_runs={})
+    assert d13.ranker_ready is True
+    assert diag.action_ok(d13) is True
+    d31 = diag.audit("2026-08-31", gh_runs={})
+    assert d31.decisions.get("intentional_stand_down") is True
+    assert diag.action_ok(d31) is True
 
 
 def test_render_json_roundtrip():
@@ -348,6 +359,7 @@ if __name__ == "__main__":
     _run(test_decisions_trace_to_inputs)
     _run(test_audit_live_days)
     _run(test_workflow_yaml_is_read_only)
+    _run(test_action_ok_historical_and_today)
     _run(test_render_json_roundtrip)
     print(f"{passed} passed, {failed} failed")
     raise SystemExit(1 if failed else 0)

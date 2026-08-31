@@ -3,7 +3,7 @@
 Horizons: 1d, 3d, 1w, 2w, 1m
 Layers: join (labels×weather) + sector bias + general regime + news actions
 
-CLI: python -m src.stock_book [--date YYYY-MM-DD] [--top 25]
+CLI: python -m src.stock_book [--date YYYY-MM-DD] [--top 25] [--as-of]
 """
 from __future__ import annotations
 
@@ -686,7 +686,8 @@ def _prev_book_buys(date: str) -> dict[str, set[str]]:
     return out
 
 
-def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]:
+def build(date: str | None = None, top_n: int = 25,
+          as_of: bool = False) -> tuple[pd.DataFrame, dict]:
     join, date = _load_join(date)
 
     # Pre-flight integrity check — never fatal, but recorded and used to
@@ -938,18 +939,28 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     # market permission, parent sector, child industry/theme, company event,
     # intrinsic setup, and flow.  These colors do not alter the legacy core;
     # they decide which lane is allowed to use it.
+    # Historical --as-of replays skip the lattice until the session it
+    # actually shipped (2026-08-31).
     lattice_context = None
-    try:
-        from . import decision_lattice
-        lattice_context = decision_lattice.build_context(
-            date, general_run=gen_run, weather=weather,
-        )
-        join = decision_lattice.attach_domains(join, lattice_context)
-        market = lattice_context.get("market") or {}
-        print(f"[stock-book] decision lattice market: {market.get('rationale')}")
-    except Exception as e:  # noqa: BLE001 — legacy ranker remains a fallback
-        print(f"[stock-book] decision lattice evidence skipped: {e}")
-        lattice_context = None
+    use_lattice = True
+    if as_of:
+        from . import book_era
+        use_lattice = book_era.live(date, "decision_lattice")
+        if not use_lattice:
+            print(f"[stock-book] as-of {date}: lattice not live — "
+                  f"using {book_era.method_for(date)}")
+    if use_lattice:
+        try:
+            from . import decision_lattice
+            lattice_context = decision_lattice.build_context(
+                date, general_run=gen_run, weather=weather,
+            )
+            join = decision_lattice.attach_domains(join, lattice_context)
+            market = lattice_context.get("market") or {}
+            print(f"[stock-book] decision lattice market: {market.get('rationale')}")
+        except Exception as e:  # noqa: BLE001 — legacy ranker remains a fallback
+            print(f"[stock-book] decision lattice evidence skipped: {e}")
+            lattice_context = None
 
     # Opportunity is a BUY-side nudge, not a license to ignore a red sector.
     if "s_opp" in join.columns:
@@ -964,6 +975,15 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     join = green_pile.attach_ranks(join)
     join["green"] = green_pile.green_mask(join)
     gp = green_pile.pile_status(join)
+    if as_of:
+        from . import book_era
+        if not book_era.live(date, "green_pile"):
+            gp = dict(gp)
+            gp["used"] = False
+            gp["buy_mode"] = "weighted_as_of"
+            gp["reason"] = (
+                f"as-of {date}: green pile not live — weighted walk"
+            )
     print(f"[stock-book] green-pile {gp['reason']}")
 
     # ---- resolve weights: learned policy (bounded) → renorm over present families ----
@@ -1021,6 +1041,7 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "pile_used": gp.get("used"),
         "green_min": gp.get("min", 8),
         "ranker": "green_pile" if gp.get("used") else "weighted",
+        "as_of": bool(as_of),
         "general_direction": str((gen_run or {}).get("predicted_direction") or ""),
         "market_decision": (
             (lattice_context or {}).get("market")
@@ -2231,8 +2252,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--top", type=int, default=25)
+    ap.add_argument("--as-of", dest="as_of", action="store_true",
+                    help="Use the ranker that was live on --date "
+                         "(weighted / green-pile / lattice)")
     args = ap.parse_args()
-    df, meta = build(args.date, top_n=args.top)
+    df, meta = build(args.date, top_n=args.top, as_of=args.as_of)
     write_report(df, meta, top_n=args.top)
 
 

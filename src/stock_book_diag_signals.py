@@ -22,7 +22,7 @@ import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from . import config
+from . import book_era, config
 from .ticker_lookback_setups import match_day
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -582,18 +582,48 @@ def extract_decisions(date: str) -> dict:
         if isinstance(meta.get("decision_lattice"), dict)
         else {}
     )
+    era = book_era.describe(date, meta)
+    market = lattice.get("market") or meta.get("market_decision") or {}
+    if not market:
+        bias = era.get("general_bias")
+        try:
+            bias_f = float(bias) if bias is not None else 0.0
+        except (TypeError, ValueError):
+            bias_f = 0.0
+        tone = "good" if bias_f > 0.10 else ("bad" if bias_f < -0.10 else "neutral")
+        market = {
+            "state": era.get("method") or "weighted",
+            "tone": tone,
+            "score": bias_f,
+            "good_points": None,
+            "bad_points": None,
+            "risk": "",
+            "rationale": (
+                f"as-of {date} method={era.get('method')}; "
+                f"general_bias={bias_f:+.2f} "
+                f"{era.get('general_direction') or ''}".rstrip()
+            ),
+            "allowed_lanes": ["weighted"],
+            "max_long_slots": SLEEVE_N,
+            "position_scale": 1.0,
+        }
+    ranker = era.get("method") or (
+        meta.get("ranker") or ("green_pile" if meta.get("pile_used")
+                               else "weighted")
+    )
     return {
         "date": date,
         "prior_date": prev,
         "present": bool(book.get("books")),
-        "ranker": meta.get("ranker") or ("green_pile" if meta.get("pile_used")
-                                         else "weighted"),
+        "ranker": ranker,
         "n_pile": meta.get("n_pile"),
         "pile_used": meta.get("pile_used"),
         "n_1d_buy": n_buy,
         "n_1d_sell": n_sell,
-        "market": lattice.get("market") or meta.get("market_decision") or {},
+        "market": market,
         "lattice": lattice,
+        "era": era,
+        "paper": book_era.paper_context(date),
         "bull_watch": list(lattice.get("bull_watch") or []),
         "bear_watch": list(lattice.get("bear_watch") or []),
         "intentional_stand_down": bool(
@@ -604,21 +634,7 @@ def extract_decisions(date: str) -> dict:
             {**row, "file": row["file"].format(date=date)}
             for row in FACTOR_TRACE
         ],
-        "how": [
-            "Stock Book ALL calls `python -m src.stock_book` after the "
-            "upstream files land.",
-            "1d uses gate → route → rank: market permission; parent/child "
-            "group; direct company evidence; setup/flow.",
-            "The weighted score ranks only inside an eligible standard, "
-            "group-leader, or catalyst lane. It cannot offset a hard gate.",
-            "The source color row remains; a deduplicated six-domain row "
-            "(MKT,parent,child,company,setup,flow) owns permission.",
-            "SELL/AVOID uses the bear lattice. Paper does not short.",
-            f"paper_trade --top {SLEEVE_N} takes the first {SLEEVE_N} 1d "
-            "BUY names into the 1d_top sleeve (fill = that day's close).",
-            "paper_trade writes dashboard/index.html; stock_book_all.yml "
-            f"force-pushes gh-pages → {PAGES_URL}",
-        ],
+        "how": book_era.how_steps(era),
     }
 
 
@@ -704,14 +720,61 @@ def _market_line(dec: dict) -> str:
     market = dec.get("market") or {}
     if not market:
         return "MARKET unknown — no lattice record"
+    good = _num(market.get("good_points"))
+    bad = _num(market.get("bad_points"))
+    extras = []
+    if good is not None:
+        extras.append(f"good={good:+.1f}")
+    if bad is not None:
+        extras.append(f"bad={bad:+.1f}")
+    risk = market.get("risk")
+    if risk:
+        extras.append(f"risk={risk}")
+    extra = (" " + " ".join(extras) + " ") if extras else " "
     return (
         f"MARKET {str(market.get('state') or '?').upper()} "
-        f"score={_num(market.get('score')) or 0:+.2f} "
-        f"good={_num(market.get('good_points')) or 0:+.1f} "
-        f"bad={_num(market.get('bad_points')) or 0:+.1f} "
-        f"risk={market.get('risk') or '?'} — "
-        f"{market.get('rationale') or ''}"
+        f"score={_num(market.get('score')) or 0:+.2f}"
+        f"{extra}— {market.get('rationale') or ''}"
     )
+
+
+def render_era_markdown(era: dict | None, dec: dict | None = None) -> list[str]:
+    era = era or (dec or {}).get("era") or {}
+    paper = (dec or {}).get("paper") or {}
+    if not era:
+        return []
+    lines = [
+        "### As-of method",
+        "",
+        f"- Ranker: **{era.get('method') or '?'}** — {era.get('process') or ''}",
+    ]
+    present = era.get("families_present") or []
+    absent = era.get("families_absent") or []
+    if present:
+        lines.append("- Families present: " + ", ".join(str(x) for x in present))
+    if absent:
+        lines.append("- Families absent / zero that day: " + ", ".join(str(x) for x in absent))
+    w1d = era.get("weights_1d")
+    if w1d:
+        labels = era.get("families") or []
+        bits = []
+        for i, w in enumerate(w1d):
+            lab = labels[i] if i < len(labels) else f"w{i}"
+            bits.append(f"{lab}={float(w):.2f}")
+        lines.append("- 1d weights: " + " · ".join(bits))
+    note = paper.get("note") or ""
+    if note:
+        lines += ["", f"- Paper vs SPY: {note}"]
+    best = paper.get("best") or {}
+    spy = paper.get("spy_return")
+    if best and spy is not None:
+        lines.append(
+            f"- Best sleeve through this date: `{best.get('sleeve')}` "
+            f"{best.get('ret'):+.1%} vs SPY {spy:+.1%} "
+            f"(dashboard start {paper.get('start')})."
+        )
+    lines.append("")
+    return lines
 
 
 def _box_legend() -> str:
@@ -893,7 +956,12 @@ def render_actions_markdown(dec: dict) -> list[str]:
             continue
         lines.append(_action_md_row(d, "BUY"))
     if not [d for d in (h1.get("buy") or []) if d.get("sleeve")]:
-        lines.append("| — | | | | | | | none — market/lattice stood down |")
+        why = (
+            "none — market/lattice stood down"
+            if dec.get("intentional_stand_down")
+            else "none"
+        )
+        lines.append(f"| — | | | | | | | {why} |")
     lines += ["", "### ACTION BUY — book only", "",
               "| Action | # | Ticker | Source boxes | Domains | Lane | Score | Decision |",
               "|---|---|---|---|---|---|---|---|"]
@@ -934,6 +1002,7 @@ def render_actions_markdown(dec: dict) -> list[str]:
     for d in (h1.get("sell") or []):
         lines.append(_action_md_row(d, "SELL"))
     lines.append("")
+    lines += render_era_markdown(dec.get("era"), dec)
     return lines
 
 

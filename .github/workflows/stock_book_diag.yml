@@ -1,8 +1,12 @@
 name: Stock Book readiness
 
-# Read-only board for the workflows that feed the ranker, the buy/sell
-# names the ranker wrote, and whether those names reached the .io
-# dashboard. Does not start or heal anything.
+# Board for the workflows that feed the ranker, the buy/sell names the
+# ranker wrote, and whether those names reached the .io dashboard.
+# Historical dates (from the 2026-08-13 dashboard onward) use the input
+# contract and ranker that were live that day. Missing later-era files
+# (Judge, digest, AB, peers, map-heat) are era-skip, not a refusal.
+# If a session has join but no book, the job replays the as-of ranker
+# in-workspace only — it does not push or heal main.
 # FAIL = empty / truncated / QC fail.
 # PARTIAL = some required outputs are good, others are not.
 #
@@ -33,7 +37,7 @@ concurrency:
 jobs:
   diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,7 +62,7 @@ jobs:
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           echo "DATE=$DATE"
           echo "DATE=$DATE" >> "$GITHUB_ENV"
-          python -m src.stock_book_diag --date "$DATE" --write
+          python -m src.stock_book_diag --date "$DATE" --write --as-of --rebuild-if-missing
           status=$?
           exit "$status"
 
