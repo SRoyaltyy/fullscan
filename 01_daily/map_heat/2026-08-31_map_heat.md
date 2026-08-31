@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7714.75 | -0.09% |
-| Nasdaq 100 (NQ) | 29531.0 | +0.14% |
-| Russell 2000 (ER2) | 2981.9 | +0.13% |
-| DJIA (YM) | 53508.0 | -0.15% |
-| VIX (VX) | 17.0 | +0.38% |
-| Crude Oil WTI (CL) | 85.36 | +2.35% |
-| Crude Oil Brent (QA) | 90.28 | +2.45% |
-| Natural Gas (NG) | 2.857 | -1.21% |
-| Heating Oil (HO) | 4.3059 | +1.33% |
-| Gasoline RBOB (RB) | 3.0769 | +0.85% |
-| Gold (GC) | 4492.5 | -0.83% |
-| Silver (SI) | 67.725 | -0.12% |
-| Copper (HG) | 6.6715 | +0.19% |
-| Platinum (PL) | 1812.9 | -2.23% |
-| Palladium (PA) | 1427.0 | -1.34% |
-| USD (DX) | 99.475 | -0.18% |
-| EUR (6E) | 1.1606 | +0.16% |
-| JPY (6J) | 0.6273500000000001 | +0.37% |
-| GBP (6B) | 1.3547 | +0.13% |
-| AUD (6A) | 0.71585 | +0.03% |
-| CAD (6C) | 0.72005 | +0.07% |
-| CHF (6S) | 1.2392 | +0.16% |
-| NZD (6N) | 0.592 | +0.15% |
-| 10 Year Note (ZN) | 108.03125 | +0.13% |
-| 5 Year Note (ZF) | 105.9140625 | +0.10% |
-| 2 Year Note (ZT) | 102.6953125 | +0.07% |
-| 30 Year Bond (ZB) | 109.375 | +0.11% |
-| Nikkei 225 (NKD) | 66380.0 | +0.95% |
-| DAX (DY) | 26439.0 | -0.67% |
-| Euro Stoxx 50 (EX) | 6479.0 | -0.32% |
-| Corn (ZC) | 537.75 | +0.28% |
-| Soybeans (ZS) | 1286.5 | -0.10% |
-| Wheat (ZW) | 777.25 | -0.86% |
-| Soybean oil (ZL) | 70.61 | -0.32% |
-| Soybean Meal (ZM) | 338.9 | -0.99% |
+| S&P 500 (ES) | 7711.5 | -0.14% |
+| Nasdaq 100 (NQ) | 29493.5 | +0.01% |
+| Russell 2000 (ER2) | 2980.5 | +0.09% |
+| DJIA (YM) | 53510.0 | -0.14% |
+| VIX (VX) | 17.1 | +0.97% |
+| Crude Oil WTI (CL) | 85.75 | +2.88% |
+| Crude Oil Brent (QA) | 90.63 | +2.94% |
+| Natural Gas (NG) | 2.86 | -0.93% |
+| Heating Oil (HO) | 4.3078 | +1.40% |
+| Gasoline RBOB (RB) | 3.0774 | +0.88% |
+| Gold (GC) | 4487.7 | -0.91% |
+| Silver (SI) | 67.72 | -0.10% |
+| Copper (HG) | 6.672 | +0.22% |
+| Platinum (PL) | 1812.2 | -2.27% |
+| Palladium (PA) | 1425.0 | -1.51% |
+| USD (DX) | 99.5 | -0.16% |
+| EUR (6E) | 1.1605 | +0.15% |
+| JPY (6J) | 0.62715 | +0.32% |
+| GBP (6B) | 1.3546 | +0.13% |
+| AUD (6A) | 0.7157 | -0.01% |
+| CAD (6C) | 0.7199 | +0.05% |
+| CHF (6S) | 1.23835 | +0.11% |
+| NZD (6N) | 0.59165 | +0.11% |
+| 10 Year Note (ZN) | 108.0 | +0.13% |
+| 5 Year Note (ZF) | 105.90625 | +0.10% |
+| 2 Year Note (ZT) | 102.6875 | +0.06% |
+| 30 Year Bond (ZB) | 109.375 | +0.14% |
+| Nikkei 225 (NKD) | 66390.0 | +0.94% |
+| DAX (DY) | 26446.0 | -0.66% |
+| Euro Stoxx 50 (EX) | 6480.0 | -0.34% |
+| Corn (ZC) | 539.25 | +0.51% |
+| Soybeans (ZS) | 1288.0 | -0.02% |
+| Wheat (ZW) | 780.25 | -0.48% |
+| Soybean oil (ZL) | 70.68 | -0.17% |
+| Soybean Meal (ZM) | 339.2 | -0.85% |
 | Oats (ZO) | 371.75 | -0.80% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 91.87 | +0.55% |
+| Cotton (CT) | 92.3 | +0.96% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78630.0 | +0.84% |
-| Canola (RS) | 820.6 | -0.40% |
+| Bitcoin (BTC) | 78400.0 | +0.71% |
+| Canola (RS) | 822.0 | -0.22% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -255,10 +255,15 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 13 min **GS** Gold Is Up Nearly 30% In The Last Year, But Goldman Sachs Sees More Room To Run (Stocktwits)
-- 17 min **WRD** WeRide Included in HKEX Tech 100 Index Following September 2026 Quarterly Review (GlobeNewswire)
-- 26 min **ANF,EL,DASH,ABNB,FIGS** 5 Consumer Stocks Bucked August Gloom With Double-Digit Gains: ANF, FIGS, EL, ABNB, DASH (Stocktwits)
-- 50 min **SPCX,TSLA** Tesla Cybercab Hype Builds: Cathie Wood, Chamath Cheer Musks AI, Energy Push  But One Analyst Calls The Bull Case Absurd (Stocktwits)
+- 10 min **INTC,NVDA,AAPL,CRWD** Why Are Nasdaq, S&P 500 Futures Subdued Premarket? NVDA, AAPL, INTC, CRWD, RKLB, SLS Stocks In Focus (Stocktwits)
+- 13 min **WBUY** WEBUY GLOBAL LTD. Reports Record NATAS Fair Bookings of US$ 4.76 Million, 42% Higher than March 2026 (GlobeNewswire)
+- 13 min **ALVO** Alvotech Announces FDA Acceptance for Review of Biologics License Application for AVT80, Expanding Proposed Biosimilar Program for Entyvio to Subcutaneous Presentations (GlobeNewswire)
+- 15 min **NOW,TEAM,CRM,WDAY,CRWD** TEAM Stock Heads For Best Month Ever As Software Stocks Swing From SaaSpocalypse To Full Revival In One Month (Stocktwits)
+- 15 min **CL,LCO** Oil jumps, Fed hawkish, Jobs data - Whats moving markets (Investing.com)
+- 34 min **GS** Gold Is Up Nearly 30% In The Last Year, But Goldman Sachs Sees More Room To Run (Stocktwits)
+- 38 min **WRD** WeRide Included in HKEX Tech 100 Index Following September 2026 Quarterly Review (GlobeNewswire)
+- 47 min **ANF,EL,ABNB,DASH,FIGS** 5 Consumer Stocks Bucked August Gloom With Double-Digit Gains: ANF, FIGS, EL, ABNB, DASH (Stocktwits)
+- 1 hour **SPCX,TSLA** Tesla Cybercab Hype Builds: Cathie Wood, Chamath Cheer Musks AI, Energy Push  But One Analyst Calls The Bull Case Absurd (Stocktwits)
 - 1 hour **DVLT** Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT (PR Newswire)
 - 1 hour **AMGN** AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE (PR Newswire)
 - 1 hour **SPRY** ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY (PR Newswire)
@@ -267,19 +272,14 @@ COLD (1w):
 - 1 hour **IVR,O** Monthly Dividends Are the Latest Income Craze, but There Are Risks (Barrons.com)
 - 1 hour **AAPL** The architect of Apple's China machine also built its hardest problem (DigiTimes)
 - 1 hour **AAPL** Cook made sustainability an Apple feature; the ledger he leaves John Ternus is mixed (DigiTimes)
-- 1 hour **AON** AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now (Stocktwits)
-- 1 hour **IBIT,BLK** Bitcoin ETFs Pulled In Near $1 Billion Last Week, So Why Is BTC Stuck Below $80,000? (BeInCrypto)
-- 1 hour **GAP** GAP Stock Surged 18% Last Week: Wall Street Raises Price Targets, Eyes Old Navy Turnaround (Stocktwits)
+- 2 hours **AON** AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now (Stocktwits)
+- 2 hours **IBIT,BLK** Bitcoin ETFs Pulled In Near $1 Billion Last Week, So Why Is BTC Stuck Below $80,000? (BeInCrypto)
+- 2 hours **GAP** GAP Stock Surged 18% Last Week: Wall Street Raises Price Targets, Eyes Old Navy Turnaround (Stocktwits)
 - 2 hours **LX** Lexinfintech: Q2 Earnings Snapshot (Associated Press)
 - 2 hours **RKLB** RKLB Stock Slips Overnight: Strong Winds Delay Electron Launch, Insiders Sell $2.8M Worth Of Shares (Stocktwits)
 - 2 hours **AAPL** Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings (BeInCrypto)
 - 2 hours **BMRN** BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea (PR Newswire)
 - 2 hours **AXTA** AkzoNobel and Axalta announce three directors to finalize Board of combined company (GlobeNewswire)
-- 2 hours **AMZN,SPCX,GOOGL** 6 Numbers That Back Up the AI Trade (Barrons.com)
-- 2 hours **BX,ARCC,ARES,MSDL** Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk (Barrons.com)
-- 2 hours **NVDA** Andrew Bailey: AI threatens to unleash global market downturn (The Telegraph)
-- 2 hours **VZ,ASTS** ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch (Stocktwits)
-- 3 hours **NVDA** NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
