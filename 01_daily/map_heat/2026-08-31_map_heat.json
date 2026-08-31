@@ -8558,122 +8558,122 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7709.0,
-      "change": -0.17
+      "last": 7714.75,
+      "change": -0.09
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29503.25,
-      "change": 0.04
+      "last": 29531.0,
+      "change": 0.14
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2978.7,
-      "change": 0.04
+      "last": 2981.9,
+      "change": 0.13
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 53493.0,
+      "last": 53508.0,
       "change": -0.15
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.05,
-      "change": 0.68
+      "last": 17.0,
+      "change": 0.38
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 85.03,
-      "change": 1.97
+      "last": 85.36,
+      "change": 2.35
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 90.0,
-      "change": 2.15
+      "last": 90.28,
+      "change": 2.45
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.846,
-      "change": -1.49
+      "last": 2.857,
+      "change": -1.21
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3101,
-      "change": 1.44
+      "last": 4.3059,
+      "change": 1.33
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.0709,
-      "change": 0.71
+      "last": 3.0769,
+      "change": 0.85
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4492.6,
-      "change": -0.81
+      "last": 4492.5,
+      "change": -0.83
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.59,
-      "change": -0.26
+      "last": 67.725,
+      "change": -0.12
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.6855,
-      "change": 0.42
+      "last": 6.6715,
+      "change": 0.19
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1811.0,
-      "change": -2.34
+      "last": 1812.9,
+      "change": -2.23
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1425.0,
-      "change": -1.51
+      "last": 1427.0,
+      "change": -1.34
     },
     {
       "ticker": "DX",
       "label": "USD",
       "last": 99.475,
-      "change": -0.19
+      "change": -0.18
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.16075,
-      "change": 0.17
+      "last": 1.1606,
+      "change": 0.16
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6273,
-      "change": 0.34
+      "last": 0.6273500000000001,
+      "change": 0.37
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3546,
-      "change": 0.12
+      "last": 1.3547,
+      "change": 0.13
     },
     {
       "ticker": "6A",
       "label": "AUD",
       "last": 0.71585,
-      "change": 0.02
+      "change": 0.03
     },
     {
       "ticker": "6C",
@@ -8684,86 +8684,86 @@
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23995,
-      "change": 0.24
+      "last": 1.2392,
+      "change": 0.16
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.59195,
-      "change": 0.14
+      "last": 0.592,
+      "change": 0.15
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 108.015625,
-      "change": 0.14
+      "last": 108.03125,
+      "change": 0.13
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.90625,
+      "last": 105.9140625,
       "change": 0.1
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.69140625,
+      "last": 102.6953125,
       "change": 0.07
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 109.34375,
+      "last": 109.375,
       "change": 0.11
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66395.0,
-      "change": 0.94
+      "last": 66380.0,
+      "change": 0.95
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26434.0,
-      "change": -0.68
+      "last": 26439.0,
+      "change": -0.67
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
       "last": 6479.0,
-      "change": -0.34
+      "change": -0.32
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 537.0,
-      "change": 0.09
+      "last": 537.75,
+      "change": 0.28
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1284.5,
-      "change": -0.27
+      "last": 1286.5,
+      "change": -0.1
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 776.25,
-      "change": -0.92
+      "last": 777.25,
+      "change": -0.86
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.56,
-      "change": -0.37
+      "last": 70.61,
+      "change": -0.32
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 338.2,
-      "change": -1.28
+      "last": 338.9,
+      "change": -0.99
     },
     {
       "ticker": "ZO",
@@ -8792,8 +8792,8 @@
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 91.76,
-      "change": 0.42
+      "last": 91.87,
+      "change": 0.55
     },
     {
       "ticker": "CC",
@@ -8834,14 +8834,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 78505.0,
-      "change": 0.86
+      "last": 78630.0,
+      "change": 0.84
     },
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 819.8,
-      "change": -0.5
+      "last": 820.6,
+      "change": -0.4
     },
     {
       "ticker": "ZK",
@@ -8852,7 +8852,38 @@
   ],
   "ticker_news": [
     {
-      "time": "30 min",
+      "time": "13 min",
+      "title": "Gold Is Up Nearly 30% In The Last Year, But Goldman Sachs Sees More Room To Run",
+      "url": "https://finance.yahoo.com/m/20700e43-688b-3f24-b969-8735bc51c43c/gold-is-up-nearly-30%25-in-the.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "GS"
+      ]
+    },
+    {
+      "time": "17 min",
+      "title": "WeRide Included in HKEX Tech 100 Index Following September 2026 Quarterly Review",
+      "url": "/news/386722/weride-included-in-hkex-tech-100-index-following-september-2026-quarterly-review",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "WRD"
+      ]
+    },
+    {
+      "time": "26 min",
+      "title": "5 Consumer Stocks Bucked August Gloom With Double-Digit Gains: ANF, FIGS, EL, ABNB, DASH",
+      "url": "https://finance.yahoo.com/m/2a504c3b-e98e-3cb0-a156-26c4bb4979b2/5-consumer-stocks-bucked.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "ANF",
+        "EL",
+        "DASH",
+        "ABNB",
+        "FIGS"
+      ]
+    },
+    {
+      "time": "50 min",
       "title": "Tesla Cybercab Hype Builds: Cathie Wood, Chamath Cheer Musks AI, Energy Push  But One Analyst Calls The Bull Case Absurd",
       "url": "https://finance.yahoo.com/m/84b61924-e3ab-377d-a08a-3094c13a1190/tesla-cybercab-hype-builds%3A.html",
       "source": "Stocktwits",
@@ -8862,7 +8893,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "1 hour",
       "title": "Datavault AI Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - DVLT",
       "url": "/news/386721/datavault-ai-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-dvlt",
       "source": "PR Newswire",
@@ -8871,7 +8902,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "1 hour",
       "title": "AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE",
       "url": "/news/386720/amgens-repatha-reduces-risk-of-death-in-patients-at-high-risk-for-a-first-heart-attack-or-stroke",
       "source": "PR Newswire",
@@ -8880,7 +8911,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "1 hour",
       "title": "ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SPRY",
       "url": "/news/386719/ars-pharmaceuticals-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-spry",
       "source": "PR Newswire",
@@ -8889,7 +8920,7 @@
       ]
     },
     {
-      "time": "54 min",
+      "time": "1 hour",
       "title": "CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch",
       "url": "https://finance.yahoo.com/m/8cdb57c6-54da-3986-996d-1895e625cd8f/crowdstrike%E2%80%99s-ai-security.html",
       "source": "Stocktwits",
@@ -8964,7 +8995,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Lexinfintech: Q2 Earnings Snapshot",
       "url": "https://finance.yahoo.com/markets/stocks/articles/lexinfintech-q2-earnings-snapshot-062122236.html",
       "source": "Associated Press",
@@ -8973,7 +9004,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "RKLB Stock Slips Overnight: Strong Winds Delay Electron Launch, Insiders Sell $2.8M Worth Of Shares",
       "url": "https://finance.yahoo.com/m/f22f45d2-f2d7-3dae-89b3-3c6f6559d532/rklb-stock-slips-overnight%3A.html",
       "source": "Stocktwits",
@@ -9014,9 +9045,9 @@
       "url": "https://www.barrons.com/articles/numbers-back-up-the-ai-trade-af7d7599?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
+        "AMZN",
         "SPCX",
-        "GOOGL",
-        "AMZN"
+        "GOOGL"
       ]
     },
     {
@@ -9051,7 +9082,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America",
       "url": "https://finance.yahoo.com/m/e41d88e0-e46d-3192-8eb0-3a7fe0b52b90/nvda-stock-eyes-best-month.html",
       "source": "Stocktwits",
@@ -9084,10 +9115,10 @@
       "source": "Stocktwits",
       "tickers": [
         "MOH",
-        "ADBE",
         "PLTR",
+        "ADBE",
         "ORCL",
-        "NBIS"
+        "NVDA"
       ]
     },
     {
@@ -9100,7 +9131,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "OpenAI to pull its models from Cursor, highlighting tension with SpaceX's Elon Musk",
       "url": "https://www.digitimes.com/news/a20260831VL212/openai-spacex-elon-musk-acquisition-lawsuit.html",
       "source": "DigiTimes",
@@ -9110,7 +9141,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Samsung Galaxy Z Fold8 demand surges, straining UMC 22nm DDI supply",
       "url": "https://www.digitimes.com/news/a20260831PD204/samsung-galaxy-ddi-umc-22nm.html",
       "source": "DigiTimes",
@@ -9686,38 +9717,6 @@
       "source": "Business Wire",
       "tickers": [
         "ALNY"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "AI isn't eating software after all - and the sector's 'epic' rally could run through October",
-      "url": "https://www.marketwatch.com/story/ai-isnt-eating-software-after-all-and-the-sectors-epic-rally-could-run-through-october-a4610583?mod=mw_FV",
-      "source": "MarketWatch",
-      "tickers": [
-        "CRM",
-        "CRWD",
-        "IGV",
-        "MSFT",
-        "NOW"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "'All about acceleration': After Nvidia earnings, the tech trade is getting more segmented",
-      "url": "https://finance.yahoo.com/markets/article/all-about-acceleration-after-nvidia-earnings-the-tech-trade-is-getting-more-segmented-114905135.html",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "MRVL",
-        "NVDA"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change?",
-      "url": "https://finance.yahoo.com/m/19aa43b1-0e66-3238-86d1-6abf76da4d99/tim-cook-owns-crypto-but.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "AAPL"
       ]
     }
   ],
@@ -10503,5 +10502,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 129,
-  "overlay_at": "2026-08-31T04:02:17.152763-04:00"
+  "overlay_at": "2026-08-31T04:22:47.124416-04:00"
 }
