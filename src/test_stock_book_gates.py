@@ -145,6 +145,12 @@ def test_20260831_sleeve_drops_broken_names() -> None:
         return
     for bad in ("WAY", "PBH", "NFG"):
         assert bad not in buys[:10], f"{bad} still in 1d sleeve: {buys[:10]}"
+    for row in (book.get("books") or {}).get("1d", {}).get("buy") or []:
+        if row.get("ticker") in buys[:10]:
+            assert not row.get("lb_alarm"), f"{row.get('ticker')} is 🚨 in the sleeve"
+            assert not row.get("lb_fade"), f"{row.get('ticker')} is a fade setup in the sleeve"
+            assert row.get("lb_cond") != "bad"
+            assert row.get("lb_region") != "bad"
 
 
 def main() -> None:
