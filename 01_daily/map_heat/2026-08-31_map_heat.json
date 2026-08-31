@@ -8428,133 +8428,133 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7709.25,
-      "change": -0.17
+      "last": 7710.75,
+      "change": -0.15
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29512.0,
-      "change": 0.04
+      "last": 29518.75,
+      "change": 0.08
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
       "last": 2977.6,
-      "change": 0.0
+      "change": 0.01
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 53505.0,
+      "last": 53513.0,
       "change": -0.14
     },
     {
       "ticker": "VX",
       "label": "VIX",
       "last": 17.1,
-      "change": 0.97
+      "change": 0.68
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 85.63,
+      "last": 85.58,
       "change": 2.66
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 90.64,
-      "change": 2.86
+      "last": 90.6,
+      "change": 2.87
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.864,
+      "last": 2.861,
       "change": -0.93
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3399,
+      "last": 4.3403,
       "change": 2.14
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.0869,
-      "change": 1.17
+      "last": 3.0848,
+      "change": 1.14
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4486.8,
-      "change": -0.96
+      "last": 4490.0,
+      "change": -0.89
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.38,
-      "change": -0.66
+      "last": 67.455,
+      "change": -0.47
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.681,
-      "change": 0.3
+      "last": 6.683,
+      "change": 0.38
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1817.0,
-      "change": -2.04
+      "last": 1819.0,
+      "change": -1.91
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1424.0,
-      "change": -1.65
+      "last": 1425.5,
+      "change": -1.55
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.57,
-      "change": -0.08
+      "last": 99.56,
+      "change": -0.1
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15955,
-      "change": 0.06
+      "last": 1.15965,
+      "change": 0.08
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.62605,
-      "change": 0.14
+      "last": 0.6261,
+      "change": 0.16
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3545,
-      "change": 0.12
+      "last": 1.3548,
+      "change": 0.13
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7163,
-      "change": 0.07
+      "last": 0.71635,
+      "change": 0.08
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.72015,
-      "change": 0.07
+      "last": 0.7202,
+      "change": 0.09
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23795,
+      "last": 1.23805,
       "change": 0.07
     },
     {
@@ -8567,67 +8567,67 @@
       "ticker": "ZN",
       "label": "10 Year Note",
       "last": 108.0,
-      "change": 0.13
+      "change": 0.12
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
       "last": 105.90625,
-      "change": 0.1
+      "change": 0.09
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.68359375,
+      "last": 102.6796875,
       "change": 0.06
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
       "last": 109.28125,
-      "change": 0.09
+      "change": 0.06
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66420.0,
-      "change": 0.96
+      "last": 66465.0,
+      "change": 1.05
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26559.0,
-      "change": -0.24
+      "last": 26551.0,
+      "change": -0.28
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6493.0,
-      "change": -0.15
+      "last": 6490.0,
+      "change": -0.17
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 538.5,
+      "last": 538.75,
       "change": 0.37
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
       "last": 1287.0,
-      "change": -0.06
+      "change": -0.08
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 776.25,
-      "change": -0.99
+      "last": 776.75,
+      "change": -1.02
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.73,
-      "change": -0.13
+      "last": 70.81,
+      "change": -0.07
     },
     {
       "ticker": "ZM",
@@ -8662,8 +8662,8 @@
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 91.97,
-      "change": 0.66
+      "last": 91.94,
+      "change": 0.63
     },
     {
       "ticker": "CC",
@@ -8704,14 +8704,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 78205.0,
-      "change": 0.46
+      "last": 78325.0,
+      "change": 0.66
     },
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 822.7,
-      "change": -0.15
+      "last": 822.5,
+      "change": -0.1
     },
     {
       "ticker": "ZK",
@@ -8722,7 +8722,7 @@
   ],
   "ticker_news": [
     {
-      "time": "27 min",
+      "time": "29 min",
       "title": "Lexinfintech: Q2 Earnings Snapshot",
       "url": "https://finance.yahoo.com/markets/stocks/articles/lexinfintech-q2-earnings-snapshot-062122236.html",
       "source": "Associated Press",
@@ -8731,7 +8731,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "46 min",
       "title": "RKLB Stock Slips Overnight: Strong Winds Delay Electron Launch, Insiders Sell $2.8M Worth Of Shares",
       "url": "https://finance.yahoo.com/m/f22f45d2-f2d7-3dae-89b3-3c6f6559d532/rklb-stock-slips-overnight%3A.html",
       "source": "Stocktwits",
@@ -8740,7 +8740,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "48 min",
       "title": "Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings",
       "url": "https://finance.yahoo.com/m/ad11ed0a-9b4c-349d-b691-9aaaadf9dba8/ternus-takes-over-as-apple.html",
       "source": "BeInCrypto",
@@ -8749,7 +8749,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "50 min",
       "title": "BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea",
       "url": "/news/386716/biomarin-announces-global-settlement-with-ascendis-pharma-as-ascendis-will-pay-royalties-to-biomarin-on-yuviwel-sales-in-us-eu-brazil-and-south-korea",
       "source": "PR Newswire",
@@ -8758,7 +8758,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "50 min",
       "title": "AkzoNobel and Axalta announce three directors to finalize Board of combined company",
       "url": "/news/386717/akzonobel-and-axalta-announce-three-directors-to-finalize-board-of-combined-company",
       "source": "GlobeNewswire",
@@ -8767,7 +8767,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "50 min",
       "title": "6 Numbers That Back Up the AI Trade",
       "url": "https://www.barrons.com/articles/numbers-back-up-the-ai-trade-af7d7599?mod=bar_FV",
       "source": "Barrons.com",
@@ -8778,7 +8778,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "50 min",
       "title": "Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk",
       "url": "https://www.barrons.com/articles/private-credit-stocks-bdc-morgan-stanley-ceb607d7?mod=bar_FV",
       "source": "Barrons.com",
@@ -10375,5 +10375,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 129,
-  "overlay_at": "2026-08-31T02:48:45.049640-04:00"
+  "overlay_at": "2026-08-31T02:51:06.664878-04:00"
 }

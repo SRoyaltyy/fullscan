@@ -5,54 +5,54 @@ Export `finviz_2026-08-28.csv` · 11654 names · generated 2026-08-29T04:31:45.8
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7709.25 | -0.17% |
-| Nasdaq 100 (NQ) | 29512.0 | +0.04% |
-| Russell 2000 (ER2) | 2977.6 | +0.00% |
-| DJIA (YM) | 53505.0 | -0.14% |
-| VIX (VX) | 17.1 | +0.97% |
-| Crude Oil WTI (CL) | 85.63 | +2.66% |
-| Crude Oil Brent (QA) | 90.64 | +2.86% |
-| Natural Gas (NG) | 2.864 | -0.93% |
-| Heating Oil (HO) | 4.3399 | +2.14% |
-| Gasoline RBOB (RB) | 3.0869 | +1.17% |
-| Gold (GC) | 4486.8 | -0.96% |
-| Silver (SI) | 67.38 | -0.66% |
-| Copper (HG) | 6.681 | +0.30% |
-| Platinum (PL) | 1817.0 | -2.04% |
-| Palladium (PA) | 1424.0 | -1.65% |
-| USD (DX) | 99.57 | -0.08% |
-| EUR (6E) | 1.15955 | +0.06% |
-| JPY (6J) | 0.62605 | +0.14% |
-| GBP (6B) | 1.3545 | +0.12% |
-| AUD (6A) | 0.7163 | +0.07% |
-| CAD (6C) | 0.72015 | +0.07% |
-| CHF (6S) | 1.23795 | +0.07% |
+| S&P 500 (ES) | 7710.75 | -0.15% |
+| Nasdaq 100 (NQ) | 29518.75 | +0.08% |
+| Russell 2000 (ER2) | 2977.6 | +0.01% |
+| DJIA (YM) | 53513.0 | -0.14% |
+| VIX (VX) | 17.1 | +0.68% |
+| Crude Oil WTI (CL) | 85.58 | +2.66% |
+| Crude Oil Brent (QA) | 90.6 | +2.87% |
+| Natural Gas (NG) | 2.861 | -0.93% |
+| Heating Oil (HO) | 4.3403 | +2.14% |
+| Gasoline RBOB (RB) | 3.0848 | +1.14% |
+| Gold (GC) | 4490.0 | -0.89% |
+| Silver (SI) | 67.455 | -0.47% |
+| Copper (HG) | 6.683 | +0.38% |
+| Platinum (PL) | 1819.0 | -1.91% |
+| Palladium (PA) | 1425.5 | -1.55% |
+| USD (DX) | 99.56 | -0.10% |
+| EUR (6E) | 1.15965 | +0.08% |
+| JPY (6J) | 0.6261 | +0.16% |
+| GBP (6B) | 1.3548 | +0.13% |
+| AUD (6A) | 0.71635 | +0.08% |
+| CAD (6C) | 0.7202 | +0.09% |
+| CHF (6S) | 1.23805 | +0.07% |
 | NZD (6N) | 0.59185 | +0.13% |
-| 10 Year Note (ZN) | 108.0 | +0.13% |
-| 5 Year Note (ZF) | 105.90625 | +0.10% |
-| 2 Year Note (ZT) | 102.68359375 | +0.06% |
-| 30 Year Bond (ZB) | 109.28125 | +0.09% |
-| Nikkei 225 (NKD) | 66420.0 | +0.96% |
-| DAX (DY) | 26559.0 | -0.24% |
-| Euro Stoxx 50 (EX) | 6493.0 | -0.15% |
-| Corn (ZC) | 538.5 | +0.37% |
-| Soybeans (ZS) | 1287.0 | -0.06% |
-| Wheat (ZW) | 776.25 | -0.99% |
-| Soybean oil (ZL) | 70.73 | -0.13% |
+| 10 Year Note (ZN) | 108.0 | +0.12% |
+| 5 Year Note (ZF) | 105.90625 | +0.09% |
+| 2 Year Note (ZT) | 102.6796875 | +0.06% |
+| 30 Year Bond (ZB) | 109.28125 | +0.06% |
+| Nikkei 225 (NKD) | 66465.0 | +1.05% |
+| DAX (DY) | 26551.0 | -0.28% |
+| Euro Stoxx 50 (EX) | 6490.0 | -0.17% |
+| Corn (ZC) | 538.75 | +0.37% |
+| Soybeans (ZS) | 1287.0 | -0.08% |
+| Wheat (ZW) | 776.75 | -1.02% |
+| Soybean oil (ZL) | 70.81 | -0.07% |
 | Soybean Meal (ZM) | 338.1 | -1.28% |
 | Oats (ZO) | 372.5 | -0.60% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 91.97 | +0.66% |
+| Cotton (CT) | 91.94 | +0.63% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78205.0 | +0.46% |
-| Canola (RS) | 822.7 | -0.15% |
+| Bitcoin (BTC) | 78325.0 | +0.66% |
+| Canola (RS) | 822.5 | -0.10% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -252,13 +252,13 @@ COLD (1w):
 - **Energy** -0.1% 1d -0.8% 1w · XLE, AMLP, VDE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 27 min **LX** Lexinfintech: Q2 Earnings Snapshot (Associated Press)
-- 44 min **RKLB** RKLB Stock Slips Overnight: Strong Winds Delay Electron Launch, Insiders Sell $2.8M Worth Of Shares (Stocktwits)
-- 46 min **AAPL** Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings (BeInCrypto)
-- 48 min **BMRN** BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea (PR Newswire)
-- 48 min **AXTA** AkzoNobel and Axalta announce three directors to finalize Board of combined company (GlobeNewswire)
-- 48 min **AMZN,GOOGL,SPCX** 6 Numbers That Back Up the AI Trade (Barrons.com)
-- 48 min **ARCC,ARES,BX,MSDL** Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk (Barrons.com)
+- 29 min **LX** Lexinfintech: Q2 Earnings Snapshot (Associated Press)
+- 46 min **RKLB** RKLB Stock Slips Overnight: Strong Winds Delay Electron Launch, Insiders Sell $2.8M Worth Of Shares (Stocktwits)
+- 48 min **AAPL** Ternus Takes Over as Apple CEO With AAPL Near $320: History Shows Wild First-Year Swings (BeInCrypto)
+- 50 min **BMRN** BioMarin Announces Global Settlement with Ascendis Pharma A/S; Ascendis Will Pay Royalties to BioMarin on Yuviwel Sales in U.S., EU, Brazil and South Korea (PR Newswire)
+- 50 min **AXTA** AkzoNobel and Axalta announce three directors to finalize Board of combined company (GlobeNewswire)
+- 50 min **AMZN,GOOGL,SPCX** 6 Numbers That Back Up the AI Trade (Barrons.com)
+- 50 min **ARCC,ARES,BX,MSDL** Private Credit Stocks Are Rebounding, but Shared Loans Bring Growing Risk (Barrons.com)
 - 1 hour **NVDA** Andrew Bailey: AI threatens to unleash global market downturn (The Telegraph)
 - 1 hour **ASTS,VZ** ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch (Stocktwits)
 - 1 hour **NVDA** NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America (Stocktwits)
