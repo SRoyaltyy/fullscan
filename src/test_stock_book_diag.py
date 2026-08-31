@@ -245,17 +245,23 @@ def test_decisions_trace_to_inputs():
     assert dec["present"] is True
     buys = dec["horizons"]["1d"]["buy"]
     sells = dec["horizons"]["1d"]["sell"]
-    assert len(buys) >= 10
     assert len(sells) >= 10
-    top = buys[0]
+    assert dec["market"]["state"] == "hard_red"
+    assert dec["intentional_stand_down"] is True
+    assert len(dec["bull_watch"]) >= 10
+    top = buys[0] if buys else sells[0]
     assert top["ticker"]
     assert top["rank"] == 1
-    assert top["sleeve"] is True
+    assert top["sleeve"] is True  # rank metadata; SELL is never paper-filled
     assert set(top["boxes"]) == set(BOX_KEYS)
+    assert set(top["domains"]) == {
+        "market", "parent", "child", "company", "setup", "flow",
+    }
     # Scores on the book row must color the matching box.
     assert top["boxes"]["join"] == polarity(top["scores"]["s_join"])
     assert top["boxes"]["ab"] == polarity(top["scores"]["s_ab"])
     assert top["reasons"]
+    assert top["bear_decision"]
     files = {s["key"]: s["file"] for s in dec["factor_trace"]}
     assert "2026-08-31" in files["join"]
     assert files["ab"].endswith("_ab_checklist_enriched.csv")
@@ -266,11 +272,14 @@ def test_decisions_trace_to_inputs():
     )
     banner = render_actions_plain(dec)
     assert "ACTIONS" in banner
-    assert f"ACTION BUY  #{top['rank']:>2} {top['ticker']}" in banner
+    assert "MARKET HARD_RED" in banner
+    assert "BULL DECISIONS" in banner
+    assert "(none)" in banner
     assert "ACTION SELL" in banner
     act_md = "\n".join(render_actions_markdown(dec))
     assert top["ticker"] in act_md
-    assert "**BUY**" in act_md
+    assert "Bull decisions" in act_md
+    assert "Market gate" in act_md
     md = "\n".join(__import__(
         "src.stock_book_diag_signals", fromlist=["render_decisions_markdown"]
     ).render_decisions_markdown(dec))

@@ -147,13 +147,16 @@ RANGE_OPP = {
 
 
 def _load_finviz_liquidity(date: str) -> pd.DataFrame:
-    """Ticker → market_cap_m, avg_vol_k from dated (or latest) Finviz export."""
+    """Ticker liquidity + live price confirmation from the dated Finviz export."""
     export_dir = ROOT / "data" / "exports"
     path = export_dir / f"finviz_{date}.csv"
     if not path.exists():
         files = sorted(export_dir.glob("finviz_????-??-??.csv"))
         if not files:
-            return pd.DataFrame(columns=["Ticker", "market_cap_m", "avg_vol_k", "relvol"])
+            return pd.DataFrame(columns=[
+                "Ticker", "market_cap_m", "avg_vol_k", "relvol",
+                "change_pct", "gap_pct",
+            ])
         path = files[-1]
     df = pd.read_csv(path, low_memory=False)
     tcol = "Ticker" if "Ticker" in df.columns else df.columns[0]
@@ -167,6 +170,12 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
         None,
     )
     out["relvol"] = pd.to_numeric(df[rel_col], errors="coerce") if rel_col else np.nan
+    for source, target in (("Change", "change_pct"), ("Gap", "gap_pct")):
+        if source in df.columns:
+            raw = df[source].astype(str).str.replace("%", "", regex=False)
+            out[target] = pd.to_numeric(raw, errors="coerce")
+        else:
+            out[target] = np.nan
     return out.drop_duplicates("Ticker", keep="first")
 
 
@@ -618,6 +627,15 @@ def _load_ab_enriched(date: str) -> pd.DataFrame:
                 continue
             out = df[["Ticker"]].copy()
             out["ab_raw"] = pd.to_numeric(df[score_col], errors="coerce")
+            # The lattice uses score_base as intrinsic setup evidence.  P01-P04
+            # remain visible in s_ab, but no longer get counted again as peer /
+            # group permission.
+            if "score_base" in df.columns:
+                out["ab_base_raw"] = pd.to_numeric(
+                    df["score_base"], errors="coerce"
+                )
+            else:
+                out["ab_base_raw"] = out["ab_raw"]
             for c in ("score_context", "P01_peer_lead_week", "P02_peers_advancing",
                       "P03_industry_advancing", "P04_sector_supportive", "context_label"):
                 if c in df.columns:
@@ -630,7 +648,7 @@ def _load_ab_enriched(date: str) -> pd.DataFrame:
             print(f"[stock-book] AB loaded {p.name} rows={len(out):,} col={score_col}")
             return out
     print(f"[stock-book] WARN: no AB checklist for {date}")
-    return pd.DataFrame(columns=["Ticker", "ab_raw"])
+    return pd.DataFrame(columns=["Ticker", "ab_raw", "ab_base_raw"])
 
 
 def _load_peer_rs(date: str) -> pd.DataFrame:
@@ -726,15 +744,33 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         _load_news_actions(date),
         _load_finviz_digest(date),
     )
+    # news_actions already persists News Judge events.  Apply the judge here
+    # only for older packets that predate that integration; otherwise the
+    # same adjudicated headline was counted twice.
     try:
         from .judge_apply import load_or_parse
+        judge_already_applied = any(
+            isinstance(event, dict) and event.get("event") == "news_judge"
+            for rec in news.values()
+            for event in (rec.get("events") or [])
+        )
         jt = (load_or_parse(date).get("tickers") or {})
-        for t, net in jt.items():
-            rec = news.setdefault(t.upper(), {"net": 0.0, "events": []})
-            rec["net"] = float(rec.get("net") or 0) + float(net)
-            rec.setdefault("events", []).append({"event": "news_judge", "weight": net})
-        if jt:
-            print(f"[stock-book] elevated {len(jt)} news-judge tickers into s_news")
+        if not judge_already_applied:
+            for t, net in jt.items():
+                rec = news.setdefault(t.upper(), {"net": 0.0, "events": []})
+                rec["net"] = float(rec.get("net") or 0) + float(net)
+                rec.setdefault("events", []).append(
+                    {"event": "news_judge", "weight": net}
+                )
+            if jt:
+                print(
+                    f"[stock-book] applied {len(jt)} News Judge tickers once"
+                )
+        elif jt:
+            print(
+                f"[stock-book] News Judge already in actions "
+                f"({len(jt)} tickers) — not double-counted"
+            )
     except Exception as e:
         print(f"[stock-book] judge overlay skipped: {e}")
     ab = _load_ab_enriched(date)
@@ -775,8 +811,13 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         join = join.merge(ab, on="Ticker", how="left")
         raw = pd.to_numeric(join.get("ab_raw"), errors="coerce").fillna(0.0)
         join["s_ab"] = np.tanh(raw / 8.0)
+        base_raw = pd.to_numeric(
+            join.get("ab_base_raw"), errors="coerce"
+        ).fillna(raw)
+        join["s_ab_intrinsic"] = np.tanh(base_raw / 8.0)
     else:
         join["s_ab"] = 0.0
+        join["s_ab_intrinsic"] = 0.0
 
     if len(peer):
         join = join.merge(peer, on="Ticker", how="left")
@@ -886,6 +927,23 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     sector_bias = {sec: float(_bias_for(r, "1d") * gates.get(f"sector:{sec}", 1.0))
                    for sec, r in sector_runs.items()}
 
+    # Build independent decision domains before the color/lookback layer:
+    # market permission, parent sector, child industry/theme, company event,
+    # intrinsic setup, and flow.  These colors do not alter the legacy core;
+    # they decide which lane is allowed to use it.
+    lattice_context = None
+    try:
+        from . import decision_lattice
+        lattice_context = decision_lattice.build_context(
+            date, general_run=gen_run, weather=weather,
+        )
+        join = decision_lattice.attach_domains(join, lattice_context)
+        market = lattice_context.get("market") or {}
+        print(f"[stock-book] decision lattice market: {market.get('rationale')}")
+    except Exception as e:  # noqa: BLE001 — legacy ranker remains a fallback
+        print(f"[stock-book] decision lattice evidence skipped: {e}")
+        lattice_context = None
+
     # Opportunity is a BUY-side nudge, not a license to ignore a red sector.
     if "s_opp" in join.columns:
         join["s_opp_raw"] = join["s_opp"]
@@ -957,11 +1015,19 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "green_min": gp.get("min", 8),
         "ranker": "green_pile" if gp.get("used") else "weighted",
         "general_direction": str((gen_run or {}).get("predicted_direction") or ""),
+        "market_decision": (
+            (lattice_context or {}).get("market")
+            if lattice_context else None
+        ),
     }
-    meta["stand_down"] = _stand_down_status(date, meta)
-    if meta["stand_down"].get("stand_down"):
-        print(f"[stock-book] STAND DOWN — {meta['stand_down'].get('reason')}")
-        meta["ranker"] = "stand_down"
+    # Final stand-down is known only after direct-company exceptions have
+    # been tested against setup/flow and the lookback marks.
+    meta["stand_down"] = {
+        "stand_down": False,
+        "restrict_to_catalysts": False,
+        "reason": "decision lattice pending",
+        "n_usable_catalysts": 0,
+    }
     try:
         from .map_heat_research import calendar_entry_scale, earnings_entry_tickers
         meta["calendar_entry_scale"] = calendar_entry_scale(date)
@@ -1011,6 +1077,37 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     except Exception as e:  # noqa: BLE001 — marks must never kill the book
         print(f"[stock-book] lookback marks skipped: {e}")
 
+    if lattice_context is not None:
+        try:
+            from . import decision_lattice
+            join = decision_lattice.finalize_decisions(
+                join, date, lattice_context,
+            )
+            lattice_summary = decision_lattice.summarize(
+                join, lattice_context, top_n=max(15, top_n),
+            )
+            meta["decision_lattice"] = lattice_summary
+            meta["stand_down"] = lattice_summary.get("stand_down") or {}
+            meta["ranker"] = "decision_lattice"
+            if meta["stand_down"].get("stand_down"):
+                print(
+                    f"[stock-book] STAND DOWN — "
+                    f"{meta['stand_down'].get('reason')}"
+                )
+            else:
+                print(
+                    f"[stock-book] decision lattice: "
+                    f"{lattice_summary.get('n_bull_eligible', 0)} bull / "
+                    f"{lattice_summary.get('n_bear_eligible', 0)} bear eligible"
+                )
+        except Exception as e:  # noqa: BLE001
+            print(f"[stock-book] decision lattice routing skipped: {e}")
+            meta["stand_down"] = _stand_down_status(date, meta)
+    else:
+        meta["stand_down"] = _stand_down_status(date, meta)
+        if meta["stand_down"].get("stand_down"):
+            meta["ranker"] = "stand_down"
+
     def reasons(row):
         bits = []
         if abs(row["s_join"]) > 0.12:
@@ -1057,6 +1154,12 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         tags = row.get("lb_tags")
         if isinstance(tags, str) and tags:
             bits.append(tags)
+        lane = row.get("decision_lane")
+        if isinstance(lane, str) and lane:
+            bits.append(f"lane={lane}")
+        blockers = row.get("decision_blockers")
+        if isinstance(blockers, str) and blockers:
+            bits.append(f"blocked={blockers}")
         return "; ".join(bits)
 
     join["reasons"] = join.apply(reasons, axis=1)
@@ -1076,6 +1179,11 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     """
     if df is None or df.empty:
         return pd.Series(dtype=bool)
+    # In lattice mode permission has already been decided from all domains,
+    # including lookback alarm/blue/white.  Do not re-apply the legacy sector
+    # veto and accidentally kill a valid direct-company exception.
+    if "bull_eligible" in df.columns:
+        return ~df["bull_eligible"].astype(bool)
     veto = pd.Series(False, index=df.index)
     if "s_sector" in df.columns:
         veto |= pd.to_numeric(df["s_sector"], errors="coerce").fillna(0.0) <= HARD_SECTOR_RED
@@ -1109,7 +1217,8 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
 
 
 def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
-                sell_core: bool = True) -> pd.DataFrame:
+                sell_core: bool = True, sell_mask=None,
+                sell_sort: str | None = None) -> pd.DataFrame:
     """Worst names on the SELL score. Never empty just because BUY stood down.
 
     Policy may turn sell_excludes_addons off (live book_policy.json does).
@@ -1117,17 +1226,30 @@ def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
     """
     if df is None or not len(df):
         return df.head(0) if df is not None else pd.DataFrame()
+    pool = df
+    if sell_mask is not None:
+        try:
+            masked = df.loc[sell_mask]
+            if masked is not None and len(masked):
+                pool = masked
+            else:
+                return df.head(0)
+        except Exception:
+            pool = df
+    if sell_sort and sell_sort in pool.columns:
+        return pool.sort_values(sell_sort, ascending=False).head(top_n)
     core_col = f"core_{horizon}"
     score_col = f"score_{horizon}"
-    if sell_core and core_col in df.columns:
-        return df.sort_values(core_col, ascending=True).head(top_n)
-    if score_col in df.columns:
-        return df.sort_values(score_col, ascending=True).head(top_n)
-    return df.head(0)
+    if sell_core and core_col in pool.columns:
+        return pool.sort_values(core_col, ascending=True).head(top_n)
+    if score_col in pool.columns:
+        return pool.sort_values(score_col, ascending=True).head(top_n)
+    return pool.head(0)
 
 
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
-              buy_mask=None, buy_sort=None, allow_empty=False):
+              buy_mask=None, buy_sort=None, allow_empty=False,
+              sell_mask=None, sell_sort=None):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
     BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
@@ -1147,7 +1269,10 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
         if masked is not None and len(masked):
             pool = masked
         elif allow_empty:
-            return df.head(0), _rank_sells(df, horizon, top_n, sell_core)
+            return df.head(0), _rank_sells(
+                df, horizon, top_n, sell_core,
+                sell_mask=sell_mask, sell_sort=sell_sort,
+            )
     if pool is not None and len(pool):
         try:
             pool = pool.loc[~_buy_veto_mask(pool)]
@@ -1201,7 +1326,16 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
                 return buys, df.head(0)
         except Exception:
             sell_df = df
-    sells = _rank_sells(sell_df, horizon, top_n, sell_core)
+    local_sell_mask = sell_mask
+    if sell_mask is not None and sell_df is not df:
+        try:
+            local_sell_mask = sell_mask.reindex(sell_df.index).fillna(False)
+        except Exception:
+            local_sell_mask = None
+    sells = _rank_sells(
+        sell_df, horizon, top_n, sell_core,
+        sell_mask=local_sell_mask, sell_sort=sell_sort,
+    )
     if pile_sell and buy_mask is not None:
         try:
             sells = sells.loc[~buy_mask.reindex(sells.index).fillna(False)]
@@ -1212,21 +1346,28 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
                  sell_core: bool = True, buy_mask=None, buy_sort=None,
-                 allow_empty=False):
+                 allow_empty=False, sell_mask=None, sell_sort=None):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
     if sub.empty:
         return None, None
     sub_mask = None
+    sub_sell_mask = None
     if buy_mask is not None:
         try:
             sub_mask = buy_mask.reindex(sub.index).fillna(False)
         except Exception:
             sub_mask = None
+    if sell_mask is not None:
+        try:
+            sub_sell_mask = sell_mask.reindex(sub.index).fillna(False)
+        except Exception:
+            sub_sell_mask = None
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
                       sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort,
-                      allow_empty=allow_empty)
+                      allow_empty=allow_empty, sell_mask=sub_sell_mask,
+                      sell_sort=sell_sort)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -1239,6 +1380,7 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "ticker": r["Ticker"],
         "score": float(r[f"score_{horizon}"]),
         "sector": r.get("sector"),
+        "industry": r.get("industry"),
         "size": r.get("size"),
         "side": side,
         "reasons": r.get("reasons"),
@@ -1251,6 +1393,11 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "s_peer": _f("s_peer"),
         "s_sector": _f("s_sector"),
         "s_news": _f("s_news"),
+        "s_heat": _f("s_heat"),
+        "s_ab_intrinsic": _f("s_ab_intrinsic"),
+        "relvol": _f("relvol"),
+        "change_pct": _f("change_pct"),
+        "gap_pct": _f("gap_pct"),
         "green": bool(r.get("green", False)),
         "lb_cond": r.get("lb_cond"),
         "lb_region": r.get("lb_region"),
@@ -1260,6 +1407,49 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "lb_fade": bool(r.get("lb_fade", False)),
         "lb_tags": r.get("lb_tags") or "",
         "lb_setups": r.get("lb_setups") or "",
+        "decision_lane": r.get("decision_lane") or "",
+        "bull_eligible": bool(r.get("bull_eligible", False)),
+        "bear_eligible": bool(r.get("bear_eligible", False)),
+        "bull_rank": _f("bull_rank"),
+        "bear_rank": _f("bear_rank"),
+        "bull_decision": r.get("bull_decision") or "",
+        "bear_decision": r.get("bear_decision") or "",
+        "decision_blockers": r.get("decision_blockers") or "",
+        "domain_boxes": {
+            key: r.get(f"d_{key}") or "missing"
+            for key in (
+                "market", "parent", "child", "company", "setup", "flow"
+            )
+        },
+        "source_boxes": {
+            key: r.get(f"src_{key}_tone") or "missing"
+            for key in (
+                "join", "sector", "gen", "news", "digest", "judge",
+                "ab", "peer", "heat", "vol", "catal",
+            )
+        },
+        "domain_cond": r.get("domain_cond") or "",
+        "domain_region": r.get("domain_region") or "",
+        "domain_white": bool(r.get("domain_white", False)),
+        "domain_name_white": bool(r.get("domain_name_white", False)),
+        "domain_blue": bool(r.get("domain_blue", False)),
+        "domain_alarm": bool(r.get("domain_alarm", False)),
+        "parent_conflict": bool(r.get("parent_conflict", False)),
+        "child_abs_tone": r.get("child_abs_tone") or "",
+        "child_rel_tone": r.get("child_rel_tone") or "",
+        "child_d1": _f("child_d1"),
+        "child_w1": _f("child_w1"),
+        "child_residual": _f("child_residual"),
+        "group_label": r.get("group_label") or "",
+        "group_themes": r.get("group_themes") or "",
+        "company_strength": _f("company_strength"),
+        "company_direct": bool(r.get("company_direct", False)),
+        "company_materiality": r.get("company_materiality") or "",
+        "company_price_confirmed": bool(
+            r.get("company_price_confirmed", False)
+        ),
+        "company_summary": r.get("company_summary") or "",
+        "company_sources": r.get("company_sources") or "",
     }
 
 
@@ -1586,6 +1776,86 @@ def _finviz_board_md(date: str, meta: dict) -> list[str]:
     return lines
 
 
+def _lattice_md(meta: dict) -> list[str]:
+    """Trace the independent market/group/company/setup decision."""
+    lattice = meta.get("decision_lattice") or {}
+    market = lattice.get("market") or meta.get("market_decision") or {}
+    if not lattice and not market:
+        return []
+    icon = {"good": "🟢", "neutral": "🟡", "bad": "🔴", "missing": "⬛"}
+    lines = [
+        "## Decision lattice — gate → route → rank",
+        "",
+        "The weighted score is now a tie-breaker inside an eligible lane. "
+        "It cannot average away a market, group, company, or setup veto.",
+        "",
+        f"### MARKET: {icon.get(market.get('tone'), '⬛')} "
+        f"{str(market.get('state') or 'unknown').upper()}",
+        "",
+        f"- {market.get('rationale') or 'no market evaluation'}",
+        f"- Allowed long lanes: "
+        f"**{', '.join(market.get('allowed_lanes') or []) or 'none'}** · "
+        f"max slots {market.get('max_long_slots', 0)} · "
+        f"size ×{_num_or_zero(market.get('position_scale')):.2f}",
+    ]
+    if market.get("bull_reasons"):
+        lines.append("- Bull evidence: " + "; ".join(market["bull_reasons"]))
+    if market.get("bear_reasons"):
+        lines.append("- Bear evidence: " + "; ".join(market["bear_reasons"]))
+    lines += [
+        "",
+        "Decision domains: **MKT · parent · child · company · setup · flow**. "
+        "Measured parent/child tape is kept separate from the LLM essay; "
+        "direct company events must be price-confirmed on a hard-red day.",
+        "",
+        "### Bull decisions (eligible or closest blocked cases)",
+        "",
+        "| # | Ticker | Domains | Lane | Company / group | Decision |",
+        "|---:|--------|---------|------|-----------------|----------|",
+    ]
+    for i, row in enumerate((lattice.get("bull_watch") or [])[:15], 1):
+        domains = "".join(
+            icon.get((row.get("domains") or {}).get(k), "⬛")
+            for k in ("market", "parent", "child", "company", "setup", "flow")
+        )
+        company = str(row.get("company") or "—").replace("|", "/")
+        group = str(row.get("group") or "—").replace("|", "/")
+        decision = str(row.get("bull_decision") or "").replace("|", "/")
+        lines.append(
+            f"| {i} | **{row.get('ticker')}** | {domains} | "
+            f"{row.get('lane')} | {company}; {group} "
+            f"{_pp(row.get('child_d1'))} d1 / {_pp(row.get('child_w1'))} 1w "
+            f"/ {_pp(row.get('child_residual'))} vs parent | {decision} |"
+        )
+    lines += [
+        "",
+        "### Bear decisions",
+        "",
+        "| # | Ticker | Domains | Industry | Decision |",
+        "|---:|--------|---------|----------|----------|",
+    ]
+    for i, row in enumerate((lattice.get("bear_watch") or [])[:15], 1):
+        domains = "".join(
+            icon.get((row.get("domains") or {}).get(k), "⬛")
+            for k in ("market", "parent", "child", "company", "setup", "flow")
+        )
+        decision = str(row.get("bear_decision") or "").replace("|", "/")
+        lines.append(
+            f"| {i} | **{row.get('ticker')}** | {domains} | "
+            f"{str(row.get('group') or '—').replace('|', '/')} | {decision} |"
+        )
+    lines.append("")
+    return lines
+
+
+def _num_or_zero(value) -> float:
+    try:
+        v = float(value)
+        return 0.0 if v != v else v
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
 
     date = meta["date"]
@@ -1594,11 +1864,31 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
 
     cols_keep = [
         "Ticker", "sector", "industry", "size",
-        "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
-        "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
+        "market_cap_m", "avg_vol_k", "relvol", "change_pct", "gap_pct",
+        "liquid", "rebound", "at_low",
+        "s_join", "s_sector", "s_general", "s_news", "s_ab",
+        "s_ab_intrinsic", "s_peer", "s_opp",
         "s_opp_raw", "s_heat_raw", "s_heat", "green", "green_rank", "relvol",
         "lb_cond", "lb_region", "lb_zero_red", "lb_blue", "lb_alarm",
         "lb_fade", "lb_tags", "lb_setups", "lb_points",
+        *[f"d_{k}" for k in (
+            "market", "parent", "child", "company", "setup", "flow",
+        )],
+        *[f"src_{k}_tone" for k in (
+            "join", "sector", "gen", "news", "digest", "judge",
+            "ab", "peer", "heat", "vol", "catal",
+        )],
+        "domain_cond", "domain_region", "domain_white", "domain_name_white",
+        "domain_blue", "domain_alarm", "parent_conflict",
+        "child_abs_tone", "child_rel_tone", "child_d1", "child_w1",
+        "child_residual", "group_label", "group_themes", "group_strength",
+        "company_strength", "company_direct", "company_materiality",
+        "company_price_confirmed", "company_summary", "company_sources",
+        "setup_strength", "flow_strength",
+        "decision_lane", "bull_eligible", "bear_eligible",
+        "bull_rank", "bear_rank", "bull_decision", "bear_decision",
+        "decision_blockers", "parent_trace", "child_trace", "company_trace",
+        "setup_trace", "flow_trace",
         # per-horizon LLM components + core scores: this CSV is the learning
         # snapshot book_learn re-scores under candidate weights
         *[f"s_sector_{h}" for h in HORIZONS],
@@ -1614,40 +1904,105 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     sell_core = bool(meta.get("sell_excludes_addons", True))
     gp = meta.get("green_pile") or {}
     sd = meta.get("stand_down") or {}
-    buy_mask = None
-    buy_sort = None
-    allow_empty = False
-    if sd.get("stand_down"):
-        buy_mask = pd.Series(False, index=df.index)
-        allow_empty = True
-    elif sd.get("restrict_to_catalysts") and sd.get("catalyst_tickers"):
-        buy_mask = df["Ticker"].isin({str(t).upper() for t in sd["catalyst_tickers"]})
-        allow_empty = True
-    elif gp.get("used") and "green" in df.columns:
-        buy_mask = df["green"] == True  # noqa: E712
-        if "green_rank" in df.columns:
-            buy_sort = "green_rank"
+
+    def selection(horizon: str):
+        """1d uses the lattice; longer horizons remain shadow-compatible."""
+        if (
+            horizon == "1d"
+            and "bull_eligible" in df.columns
+            and "bear_eligible" in df.columns
+        ):
+            market = (
+                (meta.get("decision_lattice") or {}).get("market")
+                or meta.get("market_decision")
+                or {}
+            )
+            slots = max(0, int(market.get("max_long_slots", top_n)))
+            eligible = df["bull_eligible"].astype(bool)
+            allowed_idx = (
+                df.loc[eligible].sort_values(
+                    "bull_rank", ascending=False
+                ).head(slots).index
+            )
+            return {
+                "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
+                "buy_sort": "bull_rank",
+                "allow_empty": True,
+                "sell_mask": df["bear_eligible"].astype(bool),
+                "sell_sort": "bear_rank",
+                "ranker": "decision_lattice",
+                "top_n": top_n,
+            }
+        if horizon == "1d" and sd.get("stand_down"):
+            return {
+                "buy_mask": pd.Series(False, index=df.index),
+                "buy_sort": None,
+                "allow_empty": True,
+                "sell_mask": None,
+                "sell_sort": None,
+                "ranker": "stand_down",
+                "top_n": top_n,
+            }
+        if (
+            horizon == "1d"
+            and sd.get("restrict_to_catalysts")
+            and sd.get("catalyst_tickers")
+        ):
+            tickers = {str(t).upper() for t in sd["catalyst_tickers"]}
+            return {
+                "buy_mask": df["Ticker"].isin(tickers),
+                "buy_sort": None,
+                "allow_empty": True,
+                "sell_mask": None,
+                "sell_sort": None,
+                "ranker": "catalyst_only",
+                "top_n": top_n,
+            }
+        mask = None
+        sort = None
+        if gp.get("used") and "green" in df.columns:
+            mask = df["green"] == True  # noqa: E712
+            sort = "green_rank" if "green_rank" in df.columns else None
+        return {
+            "buy_mask": mask,
+            "buy_sort": sort,
+            "allow_empty": False,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "green_pile" if gp.get("used") else "weighted",
+            "top_n": top_n,
+        }
+
     books = {}
-    ranker = (
-        "stand_down" if sd.get("stand_down")
-        else ("catalyst_only" if sd.get("restrict_to_catalysts")
-              else ("green_pile" if gp.get("used") else "weighted"))
-    )
     for h in HORIZONS:
-        b, s = _book_side(df, h, top_n, sell_core=sell_core,
-                          buy_mask=buy_mask, buy_sort=buy_sort,
-                          allow_empty=allow_empty)
+        pick = selection(h)
+        b, s = _book_side(df, h, pick["top_n"], sell_core=sell_core,
+                          buy_mask=pick["buy_mask"],
+                          buy_sort=pick["buy_sort"],
+                          allow_empty=pick["allow_empty"],
+                          sell_mask=pick["sell_mask"],
+                          sell_sort=pick["sell_sort"])
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
             "buy_by_size": {},
             "sell_by_size": {},
-            "ranker": ranker,
+            "ranker": pick["ranker"],
         }
         for bucket in SIZE_BUCKETS:
+            bmask = (
+                pick["buy_mask"].reindex(df.index).fillna(False)
+                if pick["buy_mask"] is not None else None
+            )
+            smask = (
+                pick["sell_mask"].reindex(df.index).fillna(False)
+                if pick["sell_mask"] is not None else None
+            )
             bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core,
-                                  buy_mask=buy_mask, buy_sort=buy_sort,
-                                  allow_empty=allow_empty)
+                                  buy_mask=bmask, buy_sort=pick["buy_sort"],
+                                  allow_empty=pick["allow_empty"],
+                                  sell_mask=smask,
+                                  sell_sort=pick["sell_sort"])
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -1675,21 +2030,28 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "",
         "This file is the **human read** of one run. CSV/JSON next to it are the machine files.",
         "",
-        "## How today's rank is built",
+        "## How today's action is built",
         "",
-        "Every liquid name ($80M+ mcap, 500k+ ADV) gets six signals, then a mid-cap opportunity add-on:",
+        "**1d uses a decision lattice.** Evidence is evaluated on its own "
+        "merits before any numeric rank:",
         "",
-        "1. **Join × weather** — do this *kind* of stock (sector, size, trend, leverage, earnings) fit today's tape?",
-        "2. **Sector / general predict** — same-day LLM calls only. Missing file = 0, never yesterday's leftover.",
-        "3. **News / judge** — headlines plus the news-judge ticker list (AU/ADBE-style).",
-        "4. **AB checklist** — structure score + P01–P04 (beats peers? peers up? industry up? sector board up?).",
-        "5. **Peer RS** — this week's return vs that name's own correlated basket. Kills XLE clones.",
-        "6. **Mid-cap opportunity** — extra points for liquid small/mid ($400M–$20B) that are not jammed at the 52-week high. Micros skipped. Max 4 large/mega.",
+        "1. **Market gate** — raw general factor scoreboard + risk state "
+        "sets exposure. An extreme confirmed red day closes ordinary longs.",
+        "2. **Parent / child route** — sector tape/essay and independent "
+        "industry/theme absolute + relative strength decide where.",
+        "3. **Company route** — News Judge adjudicates; actions, Finviz digest "
+        "and dossiers form one deduplicated direct-event decision.",
+        "4. **Setup / flow gate** — intrinsic AB + join structure, peer RS, "
+        "price/gap and time-aware relative volume decide whether now.",
+        "5. **Rank inside the lane** — standard, group-leader or catalyst. "
+        "mid_opp cannot grant permission.",
         "",
-        "**All-green BUY.** A name is green when join, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). General is a market-wide SPX stamp — a modest red general does not empty the pile. A hard-red general (≤ −0.25) is a veto unless the same-day sector call is green. Event-scanner sector tilt is clipped to ±0.20 so it cannot invert the day's essay. mid_opp is capped at +0.20 and zeroed on hard sector-red names. BUY also drops LAG+peer-losers, printed dead volume, and the lookback marks the sheet already used: 🚨 alarm (purely worse), Cond-red, region-red, and featured fade setups (first_crack / alarm|heat=bad). 🔵 blue gets a small boost. ⚪ white (no red cells) is recorded but not a hard gate — a red general makes it empty. If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile by green_rank (no opp). If the pile is thinner (usually AB or peers all zeros), the ranker keeps the weighted walk under the same vetoes. **SELL always ranks on core weights** and never shorts a green name when the pile is used.",
-        "",
-        "**1d** leans on news + AB + peers. **1m** drops news and leans on AB + peers + join.",
-        "A sector headline (e.g. ADBE) cannot zero a mid-cap that just beat earnings or is leading its own peers.",
+        "The existing red/yellow/green source graph remains visible. "
+        "Its digest, judge and catalyst cells are now populated before "
+        "selection. 🔵 / 🚨 / ⚪, Cond, region and featured fades remain gates. "
+        "A second six-domain row prevents duplicate headlines from voting "
+        "three times. Longer horizons remain on the legacy weighted rank "
+        "while the 1d lattice is validated.",
         "",
         "## Today's regime",
         "",
@@ -1708,6 +2070,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         f"- News names after digest+judge: {meta.get('n_news_after_digest', meta.get('n_news_tickers'))}",
         "",
         *_green_pile_md(meta),
+        *_lattice_md(meta),
         *_finviz_board_md(date, meta),
         "## Inputs this run — every resource",
         "",
@@ -1766,9 +2129,13 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     # Full rationale for 1d and 1m (the two sleeves that matter). Other horizons: compact table.
     detail_h = ("1d", "1m")
     for h in HORIZONS:
-        buys, sells = _book_side(df, h, top_n, sell_core=sell_core,
-                                buy_mask=buy_mask, buy_sort=buy_sort,
-                                allow_empty=allow_empty)
+        pick = selection(h)
+        buys, sells = _book_side(df, h, pick["top_n"], sell_core=sell_core,
+                                buy_mask=pick["buy_mask"],
+                                buy_sort=pick["buy_sort"],
+                                allow_empty=pick["allow_empty"],
+                                sell_mask=pick["sell_mask"],
+                                sell_sort=pick["sell_sort"])
         empty_why = (
             (meta.get("stand_down") or {}).get("reason")
             if (meta.get("stand_down") or {}).get("stand_down")
@@ -1795,7 +2162,13 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                 L += ["_no SELL rank today_", ""]
             else:
                 for _, r in sells.iterrows():
-                    lab = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")
+                    if h == "1d" and r.get("bear_decision"):
+                        lab = str(r.get("bear_decision"))
+                    else:
+                        lab = (
+                            _label_plain(r.get("context_label"))
+                            or str(r.get("reasons") or "")
+                        )
                     L.append(
                         f"- **{r['Ticker']}** ({r.get('size')}, {r.get('sector')}, {_usd(r.get('market_cap_m'))}) "
                         f"score {float(r[f'score_{h}']):+.3f}. {lab}"

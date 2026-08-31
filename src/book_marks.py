@@ -53,18 +53,25 @@ def boxes_from_row(row) -> dict[str, str]:
     get = row.get if hasattr(row, "get") else lambda k, d=None: (
         row[k] if k in getattr(row, "index", []) else d
     )
+    def source(name: str, fallback: str) -> str:
+        value = str(get(f"src_{name}_tone", "") or "").lower()
+        return value if value in ("good", "bad", "neutral", "missing") else fallback
+
     return {
         "join": tl._polarity(get("s_join")),
-        "sector": tl._polarity(get("s_sector")),
-        "gen": tl._polarity(get("s_general")),
-        "news": tl._polarity(get("s_news")),
-        "digest": "missing",
-        "judge": "missing",
-        "ab": tl._polarity(get("s_ab")),
+        # Prefer lattice source/domain verdicts.  They preserve conflicts and
+        # fill the digest/judge/catalyst cells that were previously hardcoded
+        # missing before BUY selection.
+        "sector": source("sector", tl._polarity(get("s_sector"))),
+        "gen": source("gen", tl._polarity(get("s_general"))),
+        "news": source("news", tl._polarity(get("s_news"))),
+        "digest": source("digest", "missing"),
+        "judge": source("judge", "missing"),
+        "ab": source("ab", tl._polarity(get("s_ab"))),
         "peer": tl._polarity(get("s_peer")),
-        "heat": tl._polarity(get("s_heat")),
-        "vol": _vol_tone(get("relvol")),
-        "catal": "missing",
+        "heat": source("heat", tl._polarity(get("s_heat"))),
+        "vol": source("vol", _vol_tone(get("relvol"))),
+        "catal": source("catal", "missing"),
     }
 
 

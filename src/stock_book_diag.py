@@ -1029,7 +1029,14 @@ def main() -> None:
     pub = next((w for w in report.workflows if w.key == "publish"), None)
     names = ((report.decisions or {}).get("horizons") or {}).get("1d") or {}
     has_names = bool(names.get("buy"))
-    ok = report.ranker_ready and book.status == "OK" and has_names
+    intentional_stand_down = bool(
+        (report.decisions or {}).get("intentional_stand_down")
+    )
+    # An explicit HARD_RED no-BUY is a valid action, not a broken ranker.
+    # The report still fails if the book itself is empty (no SELL/AVOID names)
+    # or required ranker inputs are unavailable.
+    actionable = has_names or intentional_stand_down
+    ok = report.ranker_ready and book.status == "OK" and actionable
     if pub and pub.status == "FAIL":
         ok = False
     raise SystemExit(0 if ok else 1)
