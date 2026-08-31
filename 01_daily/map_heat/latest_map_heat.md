@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7710.0 | -0.16% |
-| Nasdaq 100 (NQ) | 29465.25 | -0.09% |
-| Russell 2000 (ER2) | 2976.0 | -0.03% |
-| DJIA (YM) | 53509.0 | -0.14% |
-| VIX (VX) | 17.05 | +0.68% |
-| Crude Oil WTI (CL) | 86.27 | +3.37% |
-| Crude Oil Brent (QA) | 90.96 | +3.19% |
-| Natural Gas (NG) | 2.899 | +0.31% |
-| Heating Oil (HO) | 4.3588 | +2.57% |
-| Gasoline RBOB (RB) | 3.0836 | +1.07% |
-| Gold (GC) | 4505.4 | -0.54% |
-| Silver (SI) | 67.955 | +0.25% |
-| Copper (HG) | 6.6795 | +0.33% |
-| Platinum (PL) | 1817.0 | -2.04% |
+| S&P 500 (ES) | 7710.0 | -0.15% |
+| Nasdaq 100 (NQ) | 29462.0 | -0.10% |
+| Russell 2000 (ER2) | 2976.5 | -0.04% |
+| DJIA (YM) | 53506.0 | -0.15% |
+| VIX (VX) | 17.0 | +0.38% |
+| Crude Oil WTI (CL) | 86.25 | +3.39% |
+| Crude Oil Brent (QA) | 90.94 | +3.20% |
+| Natural Gas (NG) | 2.895 | +0.28% |
+| Heating Oil (HO) | 4.3589 | +2.59% |
+| Gasoline RBOB (RB) | 3.083 | +1.08% |
+| Gold (GC) | 4504.9 | -0.55% |
+| Silver (SI) | 67.905 | +0.20% |
+| Copper (HG) | 6.68 | +0.32% |
+| Platinum (PL) | 1816.1 | -2.06% |
 | Palladium (PA) | 1419.5 | -1.89% |
-| USD (DX) | 99.5 | -0.16% |
-| EUR (6E) | 1.1605 | +0.15% |
+| USD (DX) | 99.505 | -0.16% |
+| EUR (6E) | 1.16045 | +0.15% |
 | JPY (6J) | 0.6267499999999999 | +0.25% |
-| GBP (6B) | 1.354 | +0.07% |
-| AUD (6A) | 0.7156 | -0.01% |
-| CAD (6C) | 0.72025 | +0.10% |
-| CHF (6S) | 1.2385 | +0.11% |
-| NZD (6N) | 0.5915 | +0.07% |
-| 10 Year Note (ZN) | 107.90625 | +0.03% |
+| GBP (6B) | 1.3541 | +0.09% |
+| AUD (6A) | 0.71555 | -0.01% |
+| CAD (6C) | 0.7202 | +0.10% |
+| CHF (6S) | 1.2384 | +0.10% |
+| NZD (6N) | 0.5914 | +0.06% |
+| 10 Year Note (ZN) | 107.90625 | +0.01% |
 | 5 Year Note (ZF) | 105.8515625 | +0.04% |
 | 2 Year Note (ZT) | 102.66796875 | +0.05% |
 | 30 Year Bond (ZB) | 109.125 | -0.09% |
 | Nikkei 225 (NKD) | 66325.0 | +0.84% |
-| DAX (DY) | 26403.0 | -0.81% |
-| Euro Stoxx 50 (EX) | 6474.0 | -0.43% |
+| DAX (DY) | 26409.0 | -0.80% |
+| Euro Stoxx 50 (EX) | 6476.0 | -0.40% |
 | Corn (ZC) | 536.25 | -0.05% |
-| Soybeans (ZS) | 1283.5 | -0.33% |
-| Wheat (ZW) | 772.0 | -1.47% |
-| Soybean oil (ZL) | 70.45 | -0.52% |
-| Soybean Meal (ZM) | 337.8 | -1.37% |
+| Soybeans (ZS) | 1283.25 | -0.37% |
+| Wheat (ZW) | 772.5 | -1.50% |
+| Soybean oil (ZL) | 70.48 | -0.52% |
+| Soybean Meal (ZM) | 337.5 | -1.40% |
 | Oats (ZO) | 372.25 | -0.67% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 93.24 | +2.19% |
+| Cotton (CT) | 93.25 | +2.05% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78970.0 | +1.46% |
-| Canola (RS) | 821.0 | -0.32% |
+| Bitcoin (BTC) | 78975.0 | +1.46% |
+| Canola (RS) | 821.0 | -0.33% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **NTWK** NETSOL Technologies announces leadership transitions across Americas and Europe businesses (GlobeNewswire)
-- 4 min **O** Realty Income Corp's Dividend Analysis (GuruFocus.com)
-- 4 min **ALL** Allstate Corp's Dividend Analysis (GuruFocus.com)
-- 5 min **B** Barrick Mining Corp's Dividend Analysis (GuruFocus.com)
-- 6 min **BAM** Brookfield Asset Management Ltd's Dividend Analysis (GuruFocus.com)
-- 6 min **CSX** CSX Corp's Dividend Analysis (GuruFocus.com)
-- 7 min **UNP** Union Pacific Corp's Dividend Analysis (GuruFocus.com)
-- 7 min **BRVE,BMY** Jefferies starts biopharma firm Braveheart at Buy after IPO (Investing.com)
-- 7 min **LH** Labcorp Launches Next Generation of Labcorp Global Trial Connect to Help Sponsors and Investigator Sites Navigate Clinical Trial Complexity (PR Newswire)
-- 7 min **BEAM** Beam Therapeutics to Participate in Upcoming September 2026 Investor Conferences (GlobeNewswire)
-- 7 min **SEED** Origin Agritech Establishes R&D Center in Guizhou with Biotech Unit and State-Backed Seed Joint Venture (GlobeNewswire)
-- 7 min **XOM,SMC** Summit Midstream Corporation Announces Final Investment Decision on Double E Pipeline Mainline Compression Expansion (PR Newswire)
-- 7 min **PLSM** Pulsenmore Ltd. Announces Financial Results and Business Highlights for the First Half of 2026 (PR Newswire)
-- 7 min **BLRX** BioLineRx Reports Second Quarter 2026 Financial Results and Provides Corporate Update (PR Newswire)
-- 7 min **RDHL** RedHill Divests Talicia to Apotex for $18 Million Cash Upfront Plus Milestones to Fuel Strategic Growth Opportunities (PR Newswire)
-- 7 min **LLY** New Phase 3b data on Lilly's Taltz (ixekizumab) and Zepbound (tirzepatide) used together showed improved and durable efficacy at one year in adults with psoriatic disease and obesity (PR Newswire)
-- 7 min **VWAV** VisionWave Holdings Provides Update on Pending Acquisition of Majority Interest in C.M. Composite Materials Ltd. (GlobeNewswire)
-- 7 min **UMH** UMH PROPERTIES, INC. SECURES NEW FANNIE MAE MORTGAGE (GlobeNewswire)
-- 7 min **KTOS** Kratos Receives $35 Million National Security Related Military-Grade Hardware Production Program Award (GlobeNewswire)
-- 7 min **LTBR** Lightbridge Selected for U.S. Department of Energy Launch Pad INL Program to Advance Commercialization of Lightbridge Fuel (GlobeNewswire)
-- 7 min **TELA** TELA Bio Announces COO / CFO Transition and Strategic Cost Reduction Initiative (GlobeNewswire)
-- 7 min **ASND** Ascendis and BioMarin Enter Binding Term Sheet for a Global Settlement and License Agreement Related to YUVIWEL (Navepegritide) (GlobeNewswire)
-- 7 min **ECHO** COLLEGE FOOTBALL IS BACK: WATCH AS THIS SEASON'S TOP STANDOUTS SHOW FANS HOW TO TUNE-IN ON THEIR TERMS (GlobeNewswire)
-- 7 min **MBUU** CORRECTING AND REPLACING Malibu Boats, Inc. Announces Fourth Quarter and Full Year Fiscal 2026 Results (GlobeNewswire)
-- 7 min **AXSM** Axsome Therapeutics Initiates SUMMIT Phase 3 Trial of AXS-05 in Smoking Cessation (GlobeNewswire)
+- 3 min **DPZ** Domino's Asks America: Is the Domino Pizza's First Fast-Food Icon? (PR Newswire)
+- 5 min **DOV** Dover Corp's Dividend Analysis (GuruFocus.com)
+- 5 min **EL** The Estee Lauder Companies Inc's Dividend Analysis (GuruFocus.com)
+- 6 min **NTWK** NETSOL Technologies announces leadership transitions across Americas and Europe businesses (GlobeNewswire)
+- 6 min **O** Realty Income Corp's Dividend Analysis (GuruFocus.com)
+- 7 min **ALL** Allstate Corp's Dividend Analysis (GuruFocus.com)
+- 7 min **B** Barrick Mining Corp's Dividend Analysis (GuruFocus.com)
+- 8 min **BAM** Brookfield Asset Management Ltd's Dividend Analysis (GuruFocus.com)
+- 8 min **CSX** CSX Corp's Dividend Analysis (GuruFocus.com)
+- 9 min **UNP** Union Pacific Corp's Dividend Analysis (GuruFocus.com)
+- 9 min **BRVE,BMY** Jefferies starts biopharma firm Braveheart at Buy after IPO (Investing.com)
+- 10 min **LH** Labcorp Launches Next Generation of Labcorp Global Trial Connect to Help Sponsors and Investigator Sites Navigate Clinical Trial Complexity (PR Newswire)
+- 10 min **BEAM** Beam Therapeutics to Participate in Upcoming September 2026 Investor Conferences (GlobeNewswire)
+- 10 min **SEED** Origin Agritech Establishes R&D Center in Guizhou with Biotech Unit and State-Backed Seed Joint Venture (GlobeNewswire)
+- 10 min **XOM,SMC** Summit Midstream Corporation Announces Final Investment Decision on Double E Pipeline Mainline Compression Expansion (PR Newswire)
+- 10 min **PLSM** Pulsenmore Ltd. Announces Financial Results and Business Highlights for the First Half of 2026 (PR Newswire)
+- 10 min **BLRX** BioLineRx Reports Second Quarter 2026 Financial Results and Provides Corporate Update (PR Newswire)
+- 10 min **RDHL** RedHill Divests Talicia to Apotex for $18 Million Cash Upfront Plus Milestones to Fuel Strategic Growth Opportunities (PR Newswire)
+- 10 min **LLY** New Phase 3b data on Lilly's Taltz (ixekizumab) and Zepbound (tirzepatide) used together showed improved and durable efficacy at one year in adults with psoriatic disease and obesity (PR Newswire)
+- 10 min **VWAV** VisionWave Holdings Provides Update on Pending Acquisition of Majority Interest in C.M. Composite Materials Ltd. (GlobeNewswire)
+- 10 min **UMH** UMH PROPERTIES, INC. SECURES NEW FANNIE MAE MORTGAGE (GlobeNewswire)
+- 10 min **KTOS** Kratos Receives $35 Million National Security Related Military-Grade Hardware Production Program Award (GlobeNewswire)
+- 10 min **LTBR** Lightbridge Selected for U.S. Department of Energy Launch Pad INL Program to Advance Commercialization of Lightbridge Fuel (GlobeNewswire)
+- 10 min **TELA** TELA Bio Announces COO / CFO Transition and Strategic Cost Reduction Initiative (GlobeNewswire)
+- 10 min **ASND** Ascendis and BioMarin Enter Binding Term Sheet for a Global Settlement and License Agreement Related to YUVIWEL (Navepegritide) (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
