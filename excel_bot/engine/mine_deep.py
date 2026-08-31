@@ -79,13 +79,13 @@ def scan_grid(path):
                     if cell is None:
                         cell = out[k] = {"disc": [0, 0.0, 0.0, 0],
                                          "hold": [0, 0.0, 0.0, 0],
-                                         "years": defaultdict(lambda: [0, 0.0])}
+                                         "years": {}}
                     slot = cell["disc"] if split == "discovery" else cell["hold"]
                     slot[0] += 1
                     slot[1] += net
                     slot[2] += net * net
                     slot[3] += 1 if net > 0 else 0
-                    y = cell["years"][yr]
+                    y = cell["years"].setdefault(yr, [0, 0.0])
                     y[0] += 1
                     y[1] += net
     return out
@@ -102,7 +102,7 @@ def merge_cell(dst, src):
         for i in range(4):
             dst[split][i] += src[split][i]
     for y, v in src["years"].items():
-        d = dst["years"][y]
+        d = dst["years"].setdefault(y, [0, 0.0])
         d[0] += v[0]
         d[1] += v[1]
 
@@ -242,7 +242,7 @@ def main():
                 if dst is None:
                     dst = cells[k] = {
                         "disc": [0, 0.0, 0.0, 0], "hold": [0, 0.0, 0.0, 0],
-                        "years": defaultdict(lambda: [0, 0.0])}
+                        "years": {}}
                 merge_cell(dst, cell)
             if (i + 1) % 500 == 0:
                 print(f"  ... {i+1}/{len(files)}", flush=True)
@@ -265,7 +265,7 @@ def main():
         if d["t"] < 3 or h["t"] < 2 or h["avg_net"] <= 0:
             continue
         losing = sum(1 for y in YEARS
-                     if cell["years"][y][0] >= 30
+                     if cell["years"].get(y, [0, 0.0])[0] >= 30
                      and cell["years"][y][1] / cell["years"][y][0] < 0)
         if losing > 1:
             continue
