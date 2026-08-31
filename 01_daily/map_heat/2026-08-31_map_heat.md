@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7694.0 | -0.35% |
-| Nasdaq 100 (NQ) | 29406.0 | -0.28% |
-| Russell 2000 (ER2) | 2968.2 | -0.29% |
-| DJIA (YM) | 53401.0 | -0.33% |
+| S&P 500 (ES) | 7693.0 | -0.37% |
+| Nasdaq 100 (NQ) | 29383.5 | -0.36% |
+| Russell 2000 (ER2) | 2966.1 | -0.40% |
+| DJIA (YM) | 53390.0 | -0.36% |
 | VIX (VX) | 17.05 | +0.68% |
-| Crude Oil WTI (CL) | 86.37 | +3.56% |
-| Crude Oil Brent (QA) | 90.94 | +3.20% |
-| Natural Gas (NG) | 2.871 | -0.59% |
-| Heating Oil (HO) | 4.3772 | +2.98% |
-| Gasoline RBOB (RB) | 3.064 | +0.45% |
-| Gold (GC) | 4495.4 | -0.76% |
-| Silver (SI) | 67.63 | -0.13% |
-| Copper (HG) | 6.6945 | +0.53% |
-| Platinum (PL) | 1813.5 | -2.20% |
-| Palladium (PA) | 1408.0 | -2.69% |
-| USD (DX) | 99.535 | -0.11% |
-| EUR (6E) | 1.15995 | +0.09% |
-| JPY (6J) | 0.62635 | +0.18% |
-| GBP (6B) | 1.354 | +0.05% |
-| AUD (6A) | 0.71565 | -0.03% |
-| CAD (6C) | 0.72075 | +0.15% |
-| CHF (6S) | 1.2382 | +0.09% |
-| NZD (6N) | 0.59145 | +0.04% |
-| 10 Year Note (ZN) | 107.75 | -0.10% |
-| 5 Year Note (ZF) | 105.7578125 | -0.04% |
+| Crude Oil WTI (CL) | 86.06 | +3.19% |
+| Crude Oil Brent (QA) | 90.72 | +2.95% |
+| Natural Gas (NG) | 2.867 | -0.87% |
+| Heating Oil (HO) | 4.3688 | +2.84% |
+| Gasoline RBOB (RB) | 3.0568 | +0.23% |
+| Gold (GC) | 4486.9 | -0.95% |
+| Silver (SI) | 67.35 | -0.61% |
+| Copper (HG) | 6.6825 | +0.35% |
+| Platinum (PL) | 1810.8 | -2.38% |
+| Palladium (PA) | 1397.0 | -3.41% |
+| USD (DX) | 99.53 | -0.13% |
+| EUR (6E) | 1.1601 | +0.12% |
+| JPY (6J) | 0.62615 | +0.16% |
+| GBP (6B) | 1.3539 | +0.07% |
+| AUD (6A) | 0.7157 | +0.01% |
+| CAD (6C) | 0.7208 | +0.19% |
+| CHF (6S) | 1.2387 | +0.13% |
+| NZD (6N) | 0.5916 | +0.08% |
+| 10 Year Note (ZN) | 107.734375 | -0.13% |
+| 5 Year Note (ZF) | 105.7421875 | -0.07% |
 | 2 Year Note (ZT) | 102.62890625 | +0.01% |
-| 30 Year Bond (ZB) | 108.75 | -0.40% |
-| Nikkei 225 (NKD) | 66380.0 | +0.94% |
-| DAX (DY) | 26431.0 | -0.73% |
-| Euro Stoxx 50 (EX) | 6485.0 | -0.26% |
-| Corn (ZC) | 532.25 | -0.70% |
-| Soybeans (ZS) | 1279.75 | -0.60% |
-| Wheat (ZW) | 764.5 | -2.55% |
-| Soybean oil (ZL) | 70.13 | -1.03% |
-| Soybean Meal (ZM) | 338.3 | -1.26% |
-| Oats (ZO) | 369.25 | -1.53% |
+| 30 Year Bond (ZB) | 108.65625 | -0.54% |
+| Nikkei 225 (NKD) | 66255.0 | +0.73% |
+| DAX (DY) | 26391.0 | -0.86% |
+| Euro Stoxx 50 (EX) | 6474.0 | -0.43% |
+| Corn (ZC) | 532.25 | -0.79% |
+| Soybeans (ZS) | 1279.0 | -0.70% |
+| Wheat (ZW) | 762.25 | -2.77% |
+| Soybean oil (ZL) | 69.96 | -1.23% |
+| Soybean Meal (ZM) | 337.1 | -1.58% |
+| Oats (ZO) | 367.25 | -2.00% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
-| Coffee (KC) | 315.9 | +1.01% |
-| Sugar (SB) | 17.76 | +1.14% |
-| Cotton (CT) | 93.6 | +2.44% |
-| Cocoa (CC) | 6726.0 | +1.20% |
-| Orange Juice (JO) | 144.65 | -0.48% |
+| Coffee (KC) | 312.9 | +0.14% |
+| Sugar (SB) | 17.75 | +1.08% |
+| Cotton (CT) | 93.48 | +2.36% |
+| Cocoa (CC) | 6716.0 | +0.74% |
+| Orange Juice (JO) | 143.45 | -0.04% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78180.0 | +0.52% |
-| Canola (RS) | 817.1 | -0.80% |
+| Bitcoin (BTC) | 78220.0 | +0.45% |
+| Canola (RS) | 815.3 | -0.97% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 5 min **NRSN** NeuroSense Unveils Accelerated, Capital-Efficient Strategy to Advance PrimeC Toward Potential Approval in ALS (PR Newswire)
-- 5 min **CHGA** Change Agents Completes Phase 2 of its Catch-Up Agentic AI Video Studio Platform; Development led by Caylent with Funding from Amazon Web Services Grant (GlobeNewswire)
-- 5 min **MOBX** Vision Aerial Begins Production of American-Built Vulcan Drone Family Ahead of Acquisition by Mobix Labs (Nasdaq: MOBX) (Business Wire)
-- 6 min **DARE** Dare Bioscience Announces New NIH Funding Award for Approximately $908,000 to Advance DARE-PTB2 for the Prevention of Preterm Birth (GlobeNewswire)
-- 7 min **AFG** American Financial Group, Inc. Announces Closing of the Sale of Charleston Harbor Resort & Marina (Business Wire)
-- 9 min **XYZ,TSLA,BLK,MU,SNDK** Fed up with bitcoin? That's exactly why you should buy. (MarketWatch)
-- 13 min **LLY** Eli Lilly Strikes $2.9B Deal For Its 13th Acquisition This Year  As Fresh Zepbound Data Impresses (Stocktwits)
-- 15 min **ONMD** OneMedNet's iRWD Platform Enables Rapid Feasibility-to-Delivery for Leading AI-Driven Drug Development Company (GlobeNewswire)
-- 17 min **GEMI** Gemini wins arbitration ruling over collapsed Earn lending program (Quartz)
-- 19 min **ABAT** American Battery Technology Company Hosts DOE Leadership to Showcase Commercial Technologies Strengthening U.S. Critical Minerals Supply Chains (GlobeNewswire)
-- 19 min **GWRS** Global Water Resources Declares Monthly Dividend (GlobeNewswire)
-- 20 min **BMO** BMO Named Official Bank of the Los Angeles Lakers (PR Newswire)
-- 20 min **CVLT** Commvault Integrates Cyber Recovery Actions into CrowdStrike Charlotte Agentic SOAR Workflows (PR Newswire)
-- 20 min **G** Genpact Names Priya Vijayarajendran Chief Product and Platform Officer (PR Newswire)
-- 20 min **MSTR,BMNR,ORBS,COIN** Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.90 Million Tokens, and Total Crypto and Total Cash Holdings of $15.6 Billion (PR Newswire)
-- 20 min **SNES** Swampscott Municipal Integrated Pest Management Program Achieves 43% Reduction in Rodent Activity with Evolve Rat (PR Newswire)
-- 20 min **QUBT** Quantum Computing Inc. To Attend Lake Street Capital Markets 10th Annual Best Ideas Growth (Big10) Conference (PR Newswire)
-- 20 min **NEOV** NeoVolta Announces Strategic U.S. Battery Cell Supply and BESS Manufacturing Collaboration with SK On (GlobeNewswire)
-- 20 min **DTCX** Datacentrex Invests $30 Million in Eagle LNG Partners, a Supplier of Fuel for the U.S. Space Launch Industry (GlobeNewswire)
-- 20 min **EDVA** Endovia Health Sciences Welcomes Historic Shift in Federal Cannabinoid Policy; Advances CannEpil FDA Submission and Expands Development Pipeline (GlobeNewswire)
-- 20 min **NNVC** While Measles Cases Continue to Increase in The USA and Globally, NanoViricides is Getting Ready for Clinical Trials of Its Revolutionary Broad-spectrum Drug Candidate NV-387 as A Treatment for Measles (ACCESSWIRE)
-- 20 min **SMX** Luxury Has An Authentication Problem; SMX Is Putting The Proof Inside The Product (ACCESSWIRE)
-- 20 min **ENSC** Ensysce Biosciences Completes Final Phase of PF614-MPAR-102 Clinical Study (ACCESSWIRE)
-- 20 min **TFC** From Relief to Recovery: Truist and Truist Foundation Surpass Halfway Point of $725 Million Truist Cares for Western North Carolina Commitment (ACCESSWIRE)
-- 20 min **SUPN** Chloe Kim Teams Up with Qelbree, the #1 Prescribed Branded Non-Stimulant ADHD Treatment*, to Help Empower People Navigating ADHD (GlobeNewswire)
+- 1 min **CCB** Kaplan Fox & Kilsheimer LLP is Investigating Coastal Financial Corporation (CCB) for Possible Securities Law Violations (Newsfile)
+- 4 min **QTEX** QTREX to Unveil Ultra-High-Density Interconnect Architecture Supporting 17,280 Coaxial Lines per Cryogenic Stage at IEEE Quantum Week 2026 (GlobeNewswire)
+- 5 min **SST** MapQuest Surges to No. 1 in the Apple App Store, 30 Years After Inventing Online Mapping (Business Wire)
+- 5 min **PNR** Pentair Shares Plunge 15% After Undisclosed Pool Channel Destocking Comes to Light (Newsfile)
+- 6 min **RKT** Rocket Companies Names Alessio Sanfilippo Chief Executive Officer of Redfin (PR Newswire)
+- 6 min **AVGO** Broadcom Announces VMware AI Factory, Enabling Faster Time to Production AI and Greater Control Over AI Tokenomics (GlobeNewswire)
+- 7 min **AVGO** VMware Cloud Foundation Brings Leading AI Models to the Private AI Cloud (GlobeNewswire)
+- 8 min **AVGO** Broadcom Strengthens Spring Security and Adds Coverage of Java, Python, and Node.js Ecosystems with TrueSource (GlobeNewswire)
+- 8 min **MSTR** Strategy Inc. is officially back in the Bitcoin buying business (Investing.com)
+- 9 min **AVGO** Broadcom Unveils AI-Ready Data Foundations in VMware Tanzu Platform to Power Secure Enterprise AI Cloud (GlobeNewswire)
+- 10 min **AVGO** Broadcom Delivers End-to-End Security, Identity, and Observability for Agentic AI (GlobeNewswire)
+- 11 min **PCG** PG&E downgraded by Wells Fargo, BMO as California wildfire reform falls short (Investing.com)
+- 11 min **NICM** Nicola Mining Receives Positive Silver and Gold Initial Assay Results from Red Eye Project (Newsfile Corp.)
+- 11 min **CHH** Choice Hotels International Appoints Dominic Dragisich as President & Chief Executive Officer (PR Newswire)
+- 11 min **NEE** FPL Launches New Assistance Center, Making It Easier for Customers to Find Ways to Get Help and Save (PR Newswire)
+- 11 min **FRUT** Yorkville America Launches MANGOS Plus Index ETF (FRUT), a Single-Ticket Expression of AI's Platform and Hardware Layers (PR Newswire)
+- 11 min **PAYX** WISE at Work: Early Results Show Paychex AI Is Reducing Payroll Errors and Improving Service Efficiency at Scale (GlobeNewswire)
+- 11 min **FTNT** Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders (GlobeNewswire)
+- 11 min **SAIL** SailPoint Announces Integration with CrowdStrike Falcon Next-Gen SIEM (GlobeNewswire)
+- 11 min **SPT** Sprout Social Announces Winners of the Inaugural 2026 Social Intelligence Awards (GlobeNewswire)
+- 11 min **AVGO** Broadcom Unveils AgentMinder, An Enterprise Solution for AI Agent Governance and Runtime Control (GlobeNewswire)
+- 11 min **SNSC** SunScout Signs Definitive Agreement for First Philippine Solar-Plus-Storage Project, Expected to Add US$25 Million in Construction Revenue (GlobeNewswire)
+- 11 min **XLAB** Exascale and EnergyBank Sign MOU to Develop AI Compute Powered by Full-Scale Floating Offshore Wind Turbine (GlobeNewswire)
+- 11 min **CYAB** Cyabra Secures Significant Engagement with Fortune Global 500 Food and Beverage Leader (GlobeNewswire)
+- 11 min **UTMD** Femcare Ltd Acquires Orion Medical Supplies Ltd in the UK (ACCESSWIRE)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
