@@ -1,7 +1,7 @@
 {
   "signal_date": "2026-08-21",
   "horizon": "1w",
-  "generated_at": "2026-08-30T14:58:27.437389-04:00",
+  "generated_at": "2026-08-31T09:01:32.486008-04:00",
   "missed_movers": [
     {
       "ticker": "WLY",
@@ -17,6 +17,22 @@
         "s_ab": 0.925,
         "s_peer": 0.012,
         "s_opp": 0.28
+      }
+    },
+    {
+      "ticker": "FBRX",
+      "fwd_pct": 0.09,
+      "class": "outweighed",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": 0.151,
+        "s_sector": 0.6,
+        "s_general": 0.468,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": -0.682,
+        "s_opp": 0.04
       }
     },
     {
@@ -106,11 +122,11 @@
     "s_join": 0.0,
     "s_sector": 0.0,
     "s_general": 0.0,
-    "s_ab": 0.0,
-    "s_peer": 0.333
+    "s_ab": 0.143,
+    "s_peer": 0.286
   },
   "absent_inputs": [
     "s_news"
   ],
-  "universe_median_fwd_pct": -2.4
+  "universe_median_fwd_pct": -2.21
 }

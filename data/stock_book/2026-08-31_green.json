@@ -1,0 +1,28 @@
+{
+  "n_pile": 0,
+  "n_pile_raw": 0,
+  "n_pile_liquid": 0,
+  "n_universe": 2685,
+  "used": false,
+  "min": 8,
+  "eps": 0.05,
+  "relvol_dead": 0.7,
+  "rank_col": "green_rank",
+  "core_fired": {
+    "join": true,
+    "general": true,
+    "AB": true,
+    "peer": true
+  },
+  "missing_core": [],
+  "buy_mode": "weighted_fallback",
+  "sell_mode": "core_weights",
+  "caps": {
+    "min_mcap_m": 400.0,
+    "max_per_sector": 4,
+    "max_per_industry": 3,
+    "max_large_mega": 4
+  },
+  "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk; SELL stays on core",
+  "tickers": []
+}

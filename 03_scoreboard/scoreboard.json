@@ -12351,6 +12351,64 @@
       "sector": "Utilities",
       "etf": "XLU",
       "rubric": "00_grounding/sectors/utilities.md"
+    },
+    {
+      "date": "2026-08-31",
+      "topic": "sector:Consumer Cyclical",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.55,
+      "total_score": -4.95,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      },
+      "leading_sum": -5.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        }
+      },
+      "sector": "Consumer Cyclical",
+      "etf": "XLY",
+      "rubric": "00_grounding/sectors/consumer_cyclical.md"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have a comprehensive set of events. Let me also search for the 21-year veteran commercial role appointment and the Q2 2026 earnings details more specifically.\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Core Natural Resources 21-year veteran commercial role 2026</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Core Natural Resources CNR stellar Q2 stock remains c",
+  "raw": "I now have comprehensive information. Let me compile the distinct events, excluding the Finviz-confirmed CFO appointment event (Aug 31, 2026). Note that the executive succession announcement on Aug 19, 2026 is the same underlying event as the Finviz one, so I'll exclude it to avoid duplication.\n\nLet me compile the final list of events:\n\n```json\n[\n  {\n    \"event_date\": \"2025-01-14\",\n    \"description\": \"Core Natural Resources Inc (CNR) completed the all-stock merger of equals between CONSOL Energy",
   "ticker": "CNR",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

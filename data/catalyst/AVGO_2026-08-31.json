@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information on multiple distinct events. Let me compile the final JSON output. The Finviz event about Powertech FOPLP capacity (Aug 31, 2026, mass production mid-2027) is already confirmed, so I won't duplicate that. However, the Powertech Singapore JV ($400M) is a distinct event from July 2026.\n\nLet me compile the events:\n\n1. **Q4 FY2025 earnings** (Dec 17, 2025) - Revenue up 24% to $63.89 billion on AI demand\n2. **Morgan Stanley price target** (Dec 15, 2025) - dropped ",
+  "raw": "I now have comprehensive information. Let me compile the distinct new events not covered by the Finviz event (which was about Powertech FOPLP capacity booked by Broadcom).\n\nHere are the distinct new events I've identified:\n\n1. **Q4 FY2025 earnings (Dec 11, 2025)** - Record revenue, AI demand\n2. **Q1 FY2026 earnings beat (Mar 4, 2026)** - EPS beat, revenue beat\n3. **Q2 FY2026 earnings miss (Jun 3, 2026)** - Stock plunged on weak software sales\n4. **$10B buyback authorization (Mar 4, 2026)**\n5. **",
   "ticker": "AVGO",
   "generated_at": "2026-08-31",
   "cutoff_date": null,
