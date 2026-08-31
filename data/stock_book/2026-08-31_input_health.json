@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31T08:47:27.738019-04:00",
+  "generated_at": "2026-08-31T12:29:04.876774-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -75,9 +75,9 @@
     {
       "name": "map_heat",
       "family": "heat",
-      "status": "missing",
-      "n": null,
-      "detail": "post-close/morning research missing; preopen must FAIL; s_heat=0"
+      "status": "degraded",
+      "n": 15,
+      "detail": "morning research missing; Finviz industry residuals applied (15 OVERRIDE/SPLIT rows)"
     },
     {
       "name": "general_predict",
@@ -106,7 +106,7 @@
     "news": "ok",
     "ab": "ok",
     "peer": "ok",
-    "heat": "missing",
+    "heat": "degraded",
     "general": "ok",
     "sector": "degraded"
   },
@@ -115,10 +115,10 @@
     "news": true,
     "ab": true,
     "peer": true,
-    "heat": false,
+    "heat": true,
     "general": true,
     "sector": true
   },
   "learn_grade": true,
-  "worst": "missing"
+  "worst": "stale"
 }
