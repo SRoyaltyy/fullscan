@@ -1,7 +1,9 @@
 name: Stock Book readiness
 
-# Read-only board for the seven workflows that feed the ranker.
-# Does not start or heal anything. FAIL = empty / truncated / QC fail.
+# Read-only board for the workflows that feed the ranker, the buy/sell
+# names the ranker wrote, and whether those names reached the .io
+# dashboard. Does not start or heal anything.
+# FAIL = empty / truncated / QC fail.
 # PARTIAL = some required outputs are good, others are not.
 #
 # Code comes from the ref that triggered this run. Daily artifacts are
@@ -60,12 +62,17 @@ jobs:
           status=$?
           exit "$status"
 
-      - name: Show board
+      - name: Show today's actions
         if: always()
         run: |
           D="${DATE:-$(TZ=America/New_York date +%F)}"
-          echo "======== $D ========"
-          cat "01_daily/${D}_stock_book_diag.md" 2>/dev/null || true
+          echo "======== $D ACTIONS ========"
+          MD="01_daily/${D}_stock_book_diag.md"
+          if [ -f "$MD" ]; then
+            awk '/^## Today.s actions/,/^## Dashboard|^## Why the ranker|^## Post-close/' "$MD"
+          else
+            echo "NO REPORT — diagnostic did not write a board"
+          fi
 
       - name: Upload report
         if: always()

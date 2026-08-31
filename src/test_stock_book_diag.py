@@ -181,7 +181,7 @@ def test_specs_match_user_contract():
     specs = {s["key"]: s for s in diag.workflow_specs("2026-08-31")}
     assert set(specs) == {
         "postclose", "finviz", "preopen", "weather", "ab",
-        "catalyst", "stock_book",
+        "catalyst", "stock_book", "publish",
     }
     post = {f["key"] for f in specs["postclose"]["files"]}
     assert post == {"baseline_json", "baseline_md", "heat_json", "heat_md"}
@@ -228,7 +228,55 @@ def test_audit_live_days():
     assert "READY" in md or "BLOCKED" in md
     assert "Post-close research" in md
     assert "Pre-Open ALL" in md
+    assert "Today's actions" in md
+    assert "ACTION BUY" in md or "**BUY**" in md
+    assert "Dashboard / .io" in md
     assert "⬜ MISSING" in md or "MISSING" in md
+
+
+def test_decisions_trace_to_inputs():
+    from src.stock_book_diag_signals import (
+        BOX_KEYS, FACTOR_TRACE, extract_decisions, polarity,
+    )
+    assert polarity(0.94) == "good"
+    assert polarity(-0.07) == "bad"
+    assert polarity(0.0) == "neutral"
+    dec = extract_decisions("2026-08-31")
+    assert dec["present"] is True
+    buys = dec["horizons"]["1d"]["buy"]
+    sells = dec["horizons"]["1d"]["sell"]
+    assert len(buys) >= 10
+    assert len(sells) >= 10
+    top = buys[0]
+    assert top["ticker"]
+    assert top["rank"] == 1
+    assert top["sleeve"] is True
+    assert set(top["boxes"]) == set(BOX_KEYS)
+    # Scores on the book row must color the matching box.
+    assert top["boxes"]["join"] == polarity(top["scores"]["s_join"])
+    assert top["boxes"]["ab"] == polarity(top["scores"]["s_ab"])
+    assert top["reasons"]
+    files = {s["key"]: s["file"] for s in dec["factor_trace"]}
+    assert "2026-08-31" in files["join"]
+    assert files["ab"].endswith("_ab_checklist_enriched.csv")
+    assert files["gen"].endswith("_predict.md")
+    assert len(FACTOR_TRACE) == 12
+    from src.stock_book_diag_signals import (
+        render_actions_markdown, render_actions_plain,
+    )
+    banner = render_actions_plain(dec)
+    assert "ACTIONS" in banner
+    assert f"ACTION BUY  #{top['rank']:>2} {top['ticker']}" in banner
+    assert "ACTION SELL" in banner
+    act_md = "\n".join(render_actions_markdown(dec))
+    assert top["ticker"] in act_md
+    assert "**BUY**" in act_md
+    md = "\n".join(__import__(
+        "src.stock_book_diag_signals", fromlist=["render_decisions_markdown"]
+    ).render_decisions_markdown(dec))
+    assert top["ticker"] in md
+    assert "1d_top" in md
+    assert "sroyaltyy.github.io/fullscan/dashboard" in "\n".join(dec["how"])
 
 
 def test_workflow_yaml_is_read_only():
@@ -248,11 +296,12 @@ def test_render_json_roundtrip():
     payload = diag.report_to_json(report)
     assert payload["date"] == "2026-08-31"
     assert payload["overall"] in ("OK", "PARTIAL", "FAIL")
-    assert len(payload["workflows"]) == 7
+    assert len(payload["workflows"]) == 8
     assert {w["key"] for w in payload["workflows"]} == {
         "postclose", "finviz", "preopen", "weather", "ab",
-        "catalyst", "stock_book",
+        "catalyst", "stock_book", "publish",
     }
+    assert "horizons" in (payload.get("decisions") or {})
 
 
 if __name__ == "__main__":
@@ -287,6 +336,7 @@ if __name__ == "__main__":
         _run(test_inspect_stock_book_json, p)
         _run(test_inspect_join, p)
     _run(test_specs_match_user_contract)
+    _run(test_decisions_trace_to_inputs)
     _run(test_audit_live_days)
     _run(test_workflow_yaml_is_read_only)
     _run(test_render_json_roundtrip)
