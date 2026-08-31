@@ -155,7 +155,7 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
         if not files:
             return pd.DataFrame(columns=[
                 "Ticker", "market_cap_m", "avg_vol_k", "relvol",
-                "change_pct", "gap_pct",
+                "change_pct", "gap_pct", "news_time",
             ])
         path = files[-1]
     df = pd.read_csv(path, low_memory=False)
@@ -176,6 +176,10 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
             out[target] = pd.to_numeric(raw, errors="coerce")
         else:
             out[target] = np.nan
+    out["news_time"] = (
+        df["News Time"].astype(str)
+        if "News Time" in df.columns else ""
+    )
     return out.drop_duplicates("Ticker", keep="first")
 
 
@@ -914,6 +918,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
 
     join["s_sector"] = join["s_sector_1d"]
     join["s_general"] = join["s_general_1d"]
+    # Preserve the essay-only verdict before event-scanner context is added.
+    # The parent evaluator can then show a real tape-vs-essay conflict.
+    join["s_sector_essay"] = join["s_sector_1d"]
 
     ev_tilt = _load_events_sector_tilt(date)
     if ev_tilt and "sector" in join.columns:
@@ -1392,12 +1399,14 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "s_ab": _f("s_ab"),
         "s_peer": _f("s_peer"),
         "s_sector": _f("s_sector"),
+        "s_sector_essay": _f("s_sector_essay"),
         "s_news": _f("s_news"),
         "s_heat": _f("s_heat"),
         "s_ab_intrinsic": _f("s_ab_intrinsic"),
         "relvol": _f("relvol"),
         "change_pct": _f("change_pct"),
         "gap_pct": _f("gap_pct"),
+        "news_time": r.get("news_time") or "",
         "green": bool(r.get("green", False)),
         "lb_cond": r.get("lb_cond"),
         "lb_region": r.get("lb_region"),
@@ -1445,6 +1454,7 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "company_strength": _f("company_strength"),
         "company_direct": bool(r.get("company_direct", False)),
         "company_materiality": r.get("company_materiality") or "",
+        "company_fresh": bool(r.get("company_fresh", False)),
         "company_price_confirmed": bool(
             r.get("company_price_confirmed", False)
         ),
@@ -1865,8 +1875,9 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     cols_keep = [
         "Ticker", "sector", "industry", "size",
         "market_cap_m", "avg_vol_k", "relvol", "change_pct", "gap_pct",
+        "news_time",
         "liquid", "rebound", "at_low",
-        "s_join", "s_sector", "s_general", "s_news", "s_ab",
+        "s_join", "s_sector", "s_sector_essay", "s_general", "s_news", "s_ab",
         "s_ab_intrinsic", "s_peer", "s_opp",
         "s_opp_raw", "s_heat_raw", "s_heat", "green", "green_rank", "relvol",
         "lb_cond", "lb_region", "lb_zero_red", "lb_blue", "lb_alarm",
@@ -1883,7 +1894,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "child_abs_tone", "child_rel_tone", "child_d1", "child_w1",
         "child_residual", "group_label", "group_themes", "group_strength",
         "company_strength", "company_direct", "company_materiality",
-        "company_price_confirmed", "company_summary", "company_sources",
+        "company_fresh", "company_price_confirmed", "company_summary",
+        "company_sources",
         "setup_strength", "flow_strength",
         "decision_lane", "bull_eligible", "bear_eligible",
         "bull_rank", "bear_rank", "bull_decision", "bear_decision",

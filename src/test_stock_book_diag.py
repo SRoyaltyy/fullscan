@@ -259,7 +259,7 @@ def test_decisions_trace_to_inputs():
     }
     # Scores on the book row must color the matching box.
     assert top["boxes"]["join"] == polarity(top["scores"]["s_join"])
-    assert top["boxes"]["ab"] == polarity(top["scores"]["s_ab"])
+    assert top["boxes"]["ab"] == polarity(top["scores"]["s_ab_intrinsic"])
     assert top["reasons"]
     assert top["bear_decision"]
     files = {s["key"]: s["file"] for s in dec["factor_trace"]}

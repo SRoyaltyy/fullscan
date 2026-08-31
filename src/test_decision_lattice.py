@@ -7,6 +7,7 @@ from __future__ import annotations
 import pandas as pd
 
 from src.decision_lattice import (
+    _digest_tone,
     attach_domains,
     evaluate_market,
     finalize_decisions,
@@ -30,6 +31,7 @@ def _market(state: str = "yellow") -> dict:
 
 def _context(state: str = "yellow") -> dict:
     return {
+        "date": "2099-01-01",
         "market": _market(state),
         "heat": {
             "premarket": True,
@@ -77,6 +79,7 @@ def _frame(ticker: str = "TEST") -> pd.DataFrame:
         "relvol": 0.10,
         "change_pct": 1.0,
         "gap_pct": 0.8,
+        "news_time": "2099-01-01 08:00:00",
         "lb_alarm": False,
         "lb_fade": False,
         "lb_cond": "good",
@@ -171,12 +174,53 @@ def test_failed_dossier_does_not_erase_digest_event() -> None:
     assert "finviz_digest" in out["company_sources"]
 
 
+def test_stale_digest_cannot_be_hard_red_exception() -> None:
+    ctx = _context("hard_red")
+    ctx["digest"]["OLD"] = {
+        "tone": "good",
+        "text": "Old Corp beats earnings and raises guidance",
+        "materiality": "high",
+        "direct": True,
+        "event_risk": False,
+    }
+    frame = _frame("OLD")
+    frame["news_time"] = "2098-12-20 08:00:00"
+    decided = finalize_decisions(
+        attach_domains(frame, ctx), "2099-01-01", ctx,
+    ).iloc[0]
+    assert bool(decided["company_fresh"]) is False
+    assert decided["d_company"] == "neutral"
+    assert bool(decided["bull_eligible"]) is False
+
+
+def test_insider_sale_is_not_bullish_record_language() -> None:
+    text = (
+        "Cardinal Health CEO sold $29 million of company stock following "
+        "the post-earnings share surge to record levels"
+    )
+    assert _digest_tone(text) == "bad"
+
+
+def test_judge_company_names_survive_prose_parser() -> None:
+    from src.judge_apply import parse_judge_md
+
+    parsed = parse_judge_md(
+        "SECTOR Technology: [bullish] Salesforce beat supports software\n"
+        "SECTOR Healthcare: [bullish] Amgen Repatha Phase 3 succeeded\n"
+    )
+    assert parsed["tickers"]["CRM"] > 0
+    assert parsed["tickers"]["AMGN"] > 0
+
+
 def main() -> None:
     tests = [
         test_extreme_general_is_market_gate_not_eight_percent,
         test_parent_conflict_survives_and_child_is_independent,
         test_hard_red_blocks_group_but_allows_confirmed_direct_event,
         test_failed_dossier_does_not_erase_digest_event,
+        test_stale_digest_cannot_be_hard_red_exception,
+        test_insider_sale_is_not_bullish_record_language,
+        test_judge_company_names_survive_prose_parser,
     ]
     for test in tests:
         test()
