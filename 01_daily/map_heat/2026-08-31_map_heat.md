@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7686.0 | -0.46% |
-| Nasdaq 100 (NQ) | 29407.75 | -0.24% |
-| Russell 2000 (ER2) | 2958.4 | -0.63% |
-| DJIA (YM) | 53248.0 | -0.62% |
-| VIX (VX) | 17.05 | +0.38% |
-| Crude Oil WTI (CL) | 86.21 | +3.33% |
-| Crude Oil Brent (QA) | 91.14 | +3.43% |
-| Natural Gas (NG) | 2.902 | +0.48% |
-| Heating Oil (HO) | 4.4148 | +3.83% |
-| Gasoline RBOB (RB) | 3.0647 | +0.41% |
-| Gold (GC) | 4484.7 | -0.99% |
-| Silver (SI) | 67.19 | -0.88% |
-| Copper (HG) | 6.705 | +0.66% |
-| Platinum (PL) | 1804.2 | -2.68% |
-| Palladium (PA) | 1386.0 | -4.11% |
-| USD (DX) | 99.515 | -0.15% |
-| EUR (6E) | 1.16025 | +0.14% |
-| JPY (6J) | 0.6263000000000001 | +0.19% |
-| GBP (6B) | 1.3543 | +0.10% |
-| AUD (6A) | 0.71595 | +0.05% |
-| CAD (6C) | 0.7209 | +0.20% |
-| CHF (6S) | 1.2387 | +0.13% |
-| NZD (6N) | 0.5918 | +0.12% |
-| 10 Year Note (ZN) | 107.703125 | -0.16% |
-| 5 Year Note (ZF) | 105.7421875 | -0.06% |
-| 2 Year Note (ZT) | 102.640625 | +0.02% |
-| 30 Year Bond (ZB) | 108.5625 | -0.57% |
-| Nikkei 225 (NKD) | 66195.0 | +0.72% |
-| DAX (DY) | 26387.0 | -0.88% |
-| Euro Stoxx 50 (EX) | 6465.0 | -0.54% |
-| Corn (ZC) | 536.25 | +0.23% |
-| Soybeans (ZS) | 1284.25 | -0.19% |
-| Wheat (ZW) | 763.5 | -2.55% |
-| Soybean oil (ZL) | 70.22 | -0.54% |
-| Soybean Meal (ZM) | 339.2 | -1.02% |
-| Oats (ZO) | 373.5 | -0.33% |
-| Rough Rice (ZR) | 15.645 | +0.71% |
-| Coffee (KC) | 311.3 | -0.47% |
-| Sugar (SB) | 17.78 | +1.20% |
-| Cotton (CT) | 93.25 | +2.10% |
-| Cocoa (CC) | 6741.0 | +1.49% |
-| Orange Juice (JO) | 144.6 | -0.52% |
-| Lumber (LB) | 553.0 | +0.54% |
-| Live Cattle (LC) | 212.375 | +0.40% |
-| Lean Hogs (LH) | 83.25 | +1.74% |
-| Feeder Cattle (FC) | 316.725 | +0.11% |
-| Bitcoin (BTC) | 78290.0 | +0.65% |
-| Canola (RS) | 817.4 | -0.62% |
+| S&P 500 (ES) | 7685.75 | -0.47% |
+| Nasdaq 100 (NQ) | 29415.5 | -0.31% |
+| Russell 2000 (ER2) | 2954.5 | -0.78% |
+| DJIA (YM) | 53254.0 | -0.62% |
+| VIX (VX) | 16.9 | +0.09% |
+| Crude Oil WTI (CL) | 85.68 | +2.71% |
+| Crude Oil Brent (QA) | 90.76 | +2.97% |
+| Natural Gas (NG) | 2.89 | +0.03% |
+| Heating Oil (HO) | 4.4018 | +3.58% |
+| Gasoline RBOB (RB) | 3.0543 | +0.20% |
+| Gold (GC) | 4475.5 | -1.24% |
+| Silver (SI) | 67.21 | -0.92% |
+| Copper (HG) | 6.71 | +0.73% |
+| Platinum (PL) | 1801.4 | -2.86% |
+| Palladium (PA) | 1385.0 | -4.31% |
+| USD (DX) | 99.5 | -0.15% |
+| EUR (6E) | 1.16055 | +0.16% |
+| JPY (6J) | 0.62635 | +0.19% |
+| GBP (6B) | 1.3539 | +0.07% |
+| AUD (6A) | 0.71595 | +0.03% |
+| CAD (6C) | 0.72125 | +0.22% |
+| CHF (6S) | 1.2391 | +0.17% |
+| NZD (6N) | 0.592 | +0.15% |
+| 10 Year Note (ZN) | 107.640625 | -0.20% |
+| 5 Year Note (ZF) | 105.7109375 | -0.08% |
+| 2 Year Note (ZT) | 102.6328125 | +0.01% |
+| 30 Year Bond (ZB) | 108.4375 | -0.72% |
+| Nikkei 225 (NKD) | 66235.0 | +0.65% |
+| DAX (DY) | 26397.0 | -0.82% |
+| Euro Stoxx 50 (EX) | 6467.0 | -0.52% |
+| Corn (ZC) | 537.0 | +0.14% |
+| Soybeans (ZS) | 1285.75 | -0.17% |
+| Wheat (ZW) | 768.25 | -2.14% |
+| Soybean oil (ZL) | 70.3 | -0.73% |
+| Soybean Meal (ZM) | 339.6 | -0.88% |
+| Oats (ZO) | 372.0 | -0.80% |
+| Rough Rice (ZR) | 15.7 | +0.93% |
+| Coffee (KC) | 310.65 | -0.71% |
+| Sugar (SB) | 17.74 | +0.97% |
+| Cotton (CT) | 93.1 | +1.89% |
+| Cocoa (CC) | 6656.0 | +0.05% |
+| Orange Juice (JO) | 144.35 | -0.34% |
+| Lumber (LB) | 554.0 | -0.36% |
+| Live Cattle (LC) | 212.75 | +0.61% |
+| Lean Hogs (LH) | 83.45 | +2.05% |
+| Feeder Cattle (FC) | 317.175 | +0.32% |
+| Bitcoin (BTC) | 78255.0 | +0.54% |
+| Canola (RS) | 819.2 | -0.58% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -113,29 +113,29 @@ Mega-cap earnings:
 - AMC **NTAP**  EPS est 2.1211  (Netapp Inc)
 - AMC **MDB**  EPS est 1.6154  (MongoDB Inc)
 - BMO **KR**  EPS est 1.0542  (Kroger Co)
-- BMO **SUNB**  EPS est 1.0343  (Sunbelt Rentals Holdings Inc)
 - AMC **ZS**  EPS est 1.0884  (Zscaler Inc)
+- BMO **SUNB**  EPS est 1.0343  (Sunbelt Rentals Holdings Inc)
 - AMC **CASY**  EPS est 6.7441  (Casey's General Stores Inc)
 - AMC **IOT**  EPS est 0.16  (Samsara Inc)
 - AMC **GWRE**  EPS est 0.9331  (Guidewire Software Inc)
 - AMC **LULU**  EPS est 1.7944  (Lululemon Athletica Inc)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
 - AMC **FIVE**  EPS est 1.395  (Five Below Inc)
-- BMO **BF-B**  EPS est 0.37  (Brown-Forman Corp)
 - BMO **BF-A**  EPS est 0.3697  (Brown-Forman Corp)
+- BMO **BF-B**  EPS est 0.37  (Brown-Forman Corp)
 - AMC **DOCU**  EPS est 1.0853  (DocuSign Inc)
 - BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
 - BMO **NIO**  EPS est -0.055  (NIO Inc ADR)
 
 Options event-vol flags (NOT direction):
-- **AVGO** exp 2026-08-31 ATM IV 0.3546 implied move +1.9% put/call OI 0.66
-- **PANW** exp 2026-09-04 ATM IV 1.023 implied move +10.7% put/call OI 0.293
-- **DELL** exp 2026-09-04 ATM IV 1.2057 implied move +12.6% put/call OI 0.532
-- **MDT** exp 2026-09-04 ATM IV 0.5134 implied move +5.4% put/call OI 4.213
-- **ADBE** exp 2026-09-04 ATM IV 0.5265 implied move +5.5% put/call OI 0.588
-- **SNOW** exp 2026-09-04 ATM IV 1.3245 implied move +13.9% put/call OI 0.782
-- **HPE** exp 2026-09-04 ATM IV 1.1694 implied move +12.2% put/call OI 0.163
-- **CIEN** exp 2026-09-04 ATM IV 1.3474 implied move +14.1% put/call OI 18.545
+- **AVGO** exp 2026-08-31 ATM IV 0.2695 implied move +1.4% put/call OI 0.66
+- **PANW** exp 2026-09-04 ATM IV 0.9938 implied move +10.4% put/call OI 0.263
+- **DELL** exp 2026-09-04 ATM IV 1.1912 implied move +12.5% put/call OI 0.324
+- **MDT** exp 2026-09-04 ATM IV 0.5586 implied move +5.8% put/call OI 0.301
+- **ADBE** exp 2026-09-04 ATM IV 0.4729 implied move +5.0% put/call OI 0.588
+- **SNOW** exp 2026-09-04 ATM IV 1.3202 implied move +13.8% put/call OI 0.782
+- **HPE** exp 2026-09-04 ATM IV 1.1856 implied move +12.4% put/call OI 0.163
+- **CIEN** exp 2026-09-04 ATM IV 1.2693 implied move +13.3% put/call OI 6.643
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 58 sec **WSE** Kaplan Fox Urges Wise Group plc (WSE) Investors Seeking Recovery to Contact the Firm Before September 29, 2026 (Newsfile)
-- 3 min **TSLA,AMD,ARKK,NVDA** Cathie Wood Is Buying Nvidia Again. Why the Chip Maker Is a Bargain. (Barrons.com)
-- 8 min **CNS** Cohen & Steers and Trademark Acquire Oak Hill Plaza Shopping Center in Austin, Texas (PR Newswire)
-- 12 min **QTEX** Correction: QTREX Establishes Cryogenic Interconnect Capacity, More Than Four Times the Highest Publicly Disclosed Industry Benchmark (GlobeNewswire)
-- 15 min **GME,EBAY** GameStop's sales fell but profit nearly doubled as eBay investment paid off (Quartz)
-- 15 min **MOBX** Mobix Labs (Nasdaq: MOBX) Drone Acquisition Target Vision Aerial Opens Vulcan Orders, Projects 93% Revenue Growth in 2027 (Business Wire)
-- 15 min **ENSG** Kaplan Fox is Investigating The Ensign Group, Inc. (ENSG) on Behalf of Shareholders for Possible Securities Law Violations (Newsfile)
-- 16 min **THG** The Hanover Insurance Group, Inc. Declares Quarterly Dividend of $0.95 Per Common Share (PR Newswire)
-- 17 min **GME,EBAY** GameStop Q2 2026 preliminary results: sales down, profit up (Quartz)
-- 18 min **WMT** Amazon Prime vs. Walmart Plus: Which is The Better Deal? We Did the Math (The Penny Hoarder)
-- 20 min **LDOS** How AI Is Transforming Geospatial Intelligence (ACCESSWIRE)
-- 21 min **SPCX** SpaceX may need up to $130B to build a standalone mobile network: Bernstein (Investing.com)
-- 25 min **CHRS** Coherus to Participate in Upcoming Investor Conferences (GlobeNewswire)
-- 25 min **UNIT** Canton Now a 'Gig-Ready' Community (GlobeNewswire)
-- 25 min **THH** TryHard Holdings Limited Regains Compliance with Nasdaq Minimum Bid Price Requirement (GlobeNewswire)
-- 25 min **ELAN** Elanco Scales Biologics Capabilities With Expansion of Kansas Manufacturing Facility (ACCESSWIRE)
-- 26 min **AVGO** Broadcom Introduces VMware Private AI Cloud, Enabling Enterprises to Scale AI Cost-Effectively, Operate More Securely, and Innovate Rapidly (GlobeNewswire)
-- 28 min **BMNR** BitMine Makes Biggest Weekly Ethereum Purchase Since June, Adding Over 50K ETH To Its Stash (Stocktwits)
-- 28 min **PCG** PG&E Stock Plunges on Wildfire Liability Setback (Schaeffer's Research)
-- 29 min **NG** TNR Gold launches 2026 exploration program at Shotgun gold project in Alaska (Proactive)
-- 29 min **MSTR** Strategy Makes First Bitcoin Purchase Since June as Cryptocurrency On Pace for Best Month in Nearly 2 Years. (Barrons.com)
-- 30 min **AUID** authID Selected to Strengthen Workforce Security for Multi-National Manufacturing Automation Company (GlobeNewswire)
-- 33 min **ORCL** Big Short Legend Steve Eisman Warns OpenAI Failure Could Trigger 'Immediate Recession' (Benzinga Prediction Markets)
-- 33 min **GME,EBAY** GameStop stock jumps with eBay investment expected to boost Q2 profit (Yahoo Finance)
-- 35 min **LAES** SEALSQ's $24.5M Pure-Play Quantum Computing Investments and Collaborations Begin Generating Commercial Synergies (GlobeNewswire)
+- 4 min **SPRC** Weekly Roundup on the Cannabis Sector & Psychedelic Sector (Market Exclusive)
+- 8 min **DRAM,MU** Micron Under Threat as China's CXMT Delivers Cutting-Edge Chip. How to Win From Both. (Barrons.com)
+- 10 min **EC** Ecopetrol Announces the Nomination of Candidates for Seats 7, 8 and 9 and the Formalization of the Slate of Candidates for the Board of Directors of Ecopetrol S.A. (PR Newswire)
+- 10 min **VVV** Valvoline Inc. to Participate in Goldman Sachs Global Consumer and Retail Conference (Business Wire)
+- 11 min **CLBT** Kaplan Fox & Kilsheimer LLP is Investigating Cellebrite DI Ltd. (CLBT) for Possible Securities Law Violations (Newsfile)
+- 13 min **BMNR** Tom Lee Sees 'Very Strong' September Market Rally If Fed Holds Rates  Says Bitcoins First Leg Up Has Begun (Stocktwits)
+- 13 min **EC** Ecopetrol announces the implementation of measures designed to ensure the proper representation of Shareholders at the Extraordinary Meeting scheduled for September 15, 2026 (PR Newswire)
+- 15 min **EC** GENERAL SHAREHOLDERS' MEETING OF ECOPETROL S.A. (PR Newswire)
+- 16 min **RCI** Rogers Returns to Yorkville with The Rogers Red Carpet During TIFF (GlobeNewswire)
+- 16 min **LHX** L3Harris to Present at Upcoming Investor Conference (Business Wire)
+- 19 min **SMG** Scotts Miracle-Gro's biggest challenge: Overcoming young homeowners who are OK with dandelions in their lawn (Yahoo Finance)
+- 19 min **TSLA** Next Up For Tesla's Self-Driving Tech: Potholes (Barrons.com)
+- 20 min **META** OpenAIs ChatGPT Ads Hit $1 Billion in Annualized Revenue in Just 200 Days  Now Sam Altman Is Taking the Business Global (Benzinga Private Markets)
+- 20 min **GOOG,GOOGL,META,AAPL,SPCX** It's Tim Cook's final day as Apple CEO. Here's what investors need from John Ternus. (Yahoo Finance Video)
+- 21 min **WSE** Kaplan Fox Urges Wise Group plc (WSE) Investors Seeking Recovery to Contact the Firm Before September 29, 2026 (Newsfile)
+- 22 min **NVDA** Nvidia investing $3.5 billion in MediaTek for AI chip partnership (Quartz)
+- 22 min **HLF** Herbalife Reaffirms Third Quarter and Full Year 2026 Guidance (Business Wire)
+- 24 min **WDC,AMD** The Floor Under Micron's Worst Case Is Written Into Its Contracts, Not Memory Prices (Trefis)
+- 24 min **TSLA,NVDA,AMD,ARKK** Cathie Wood Is Buying Nvidia Again. Why the Chip Maker Is a Bargain. (Barrons.com)
+- 26 min **MCD** McDonald's launches Texas-only meal with collectible artist-designed cups (Quartz)
+- 29 min **STRC** Michael Saylors Strategy Returns to Buying With $370M Bitcoin  Is Price Breakout Coming? (CCN)
+- 29 min **CNS** Cohen & Steers and Trademark Acquire Oak Hill Plaza Shopping Center in Austin, Texas (PR Newswire)
+- 31 min **EIX,PCG,TENX,MNSO,TP** Deere upgraded, Lumentum initiated: Wall Street's top analyst calls (The Fly)
+- 33 min **NVDA** Nvidia Makes MediaTek Partnership Even Bigger, Huang Says (Bloomberg)
+- 33 min **QTEX** Correction: QTREX Establishes Cryogenic Interconnect Capacity, More Than Four Times the Highest Publicly Disclosed Industry Benchmark (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
