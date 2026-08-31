@@ -73,6 +73,12 @@ jobs:
           cd excel_bot
           python engine/bt_summary.py || true
 
+      - name: Run portfolio simulation + dashboard
+        if: always()
+        run: |
+          cd excel_bot
+          python engine/portfolio.py || true
+
       - name: Commit backtest results to main
         if: always()
         env:
