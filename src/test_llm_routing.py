@@ -73,6 +73,7 @@ def test_openclaw_primary_wins() -> None:
                         {"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False, max_tokens=100)
     assert text == "GROK ANSWER"
+    assert dc.last_provider() == "openclaw"
     assert len(calls) == 1
     c = calls[0]
     assert c["url"] == "http://gw:18789/v1/chat/completions"
@@ -121,6 +122,7 @@ def test_fallback_on_gateway_failure() -> None:
         text = dc.chat([{"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False)
     assert text == "DEEPSEEK ANSWER"
+    assert dc.last_provider() == "deepseek"
     assert any("deepseek" in u for u in urls)
     # circuit breaker: gateway now marked down for the rest of the process
     assert dc._OPENCLAW_STATE["down"]
@@ -175,6 +177,7 @@ def test_deepseek_only_unchanged() -> None:
         text = dc.chat([{"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False)
     assert text == "DS"
+    assert dc.last_provider() == "deepseek"
     assert urls == [f"{config.DEEPSEEK_BASE_URL}/chat/completions"]
 
 

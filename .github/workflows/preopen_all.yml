@@ -1,7 +1,8 @@
 name: Pre-Open ALL (predictive one-shot)
 
 # One-shot predictive write that must land before 09:30 ET.
-# Sequential. ECS does Grok + news/events/predicts. It does NOT scrape
+# Sequential. ECS does Grok-primary/DeepSeek-fallback news/events/predicts.
+# It does NOT scrape
 # live Finviz HTML (Aliyun 403s public finviz.com).
 #
 #   [GH-hosted ubuntu-latest finviz_preopen_scrape.yml ~05:40 ET:
@@ -177,7 +178,8 @@ jobs:
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
-          GROK_ONLY: "1"
+          # Preserve the pre-open run when Grok is unavailable or out of credits.
+          GROK_ONLY: "0"
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e

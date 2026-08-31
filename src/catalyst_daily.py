@@ -28,6 +28,21 @@ SIGNAL_WEIGHT = {
     "bearish": -1.8,
     "strong bearish": -3.0,
 }
+USABLE_SEARCH_BACKENDS = {
+    "grok_native",
+    "deepseek_fallback",
+    "routed_search",
+}
+
+
+def usable_dossier(row: dict) -> bool:
+    """A cited dossier from either side of the configured provider chain."""
+    return bool(
+        isinstance(row, dict)
+        and row.get("net_signal")
+        and not row.get("error")
+        and row.get("search_backend") in USABLE_SEARCH_BACKENDS
+    )
 
 
 def _today() -> str:
@@ -160,11 +175,7 @@ def already_good(date: str) -> bool:
         return False
     data = _load_json(js)
     rows = data.get("dossiers") or []
-    ok = [
-        r for r in rows
-        if isinstance(r, dict) and r.get("net_signal") and not r.get("error")
-        and r.get("search_backend") == "grok_native"
-    ]
+    ok = [r for r in rows if usable_dossier(r)]
     return len(ok) >= 2
 
 
@@ -178,8 +189,7 @@ def ticker_boosts(date: str) -> dict[str, float]:
     out: dict[str, float] = {}
     for row in load_dossiers(date):
         t = _norm_ticker(row.get("ticker"))
-        if (not t or row.get("error")
-                or row.get("search_backend") != "grok_native"):
+        if not t or not usable_dossier(row):
             continue
         w = signal_weight(row.get("net_signal") or "", row.get("conviction"))
         if w:
@@ -206,8 +216,7 @@ def apply_to_actions(date: str, dossiers: list[dict] | None = None) -> dict:
     applied = 0
     for row in dossiers:
         t = _norm_ticker(row.get("ticker"))
-        if (not t or row.get("error")
-                or row.get("search_backend") != "grok_native"):
+        if not t or not usable_dossier(row):
             continue
         w = signal_weight(row.get("net_signal") or "", row.get("conviction"))
         if not w:
@@ -271,7 +280,8 @@ def render(payload: dict) -> str:
     lines = [
         f"# CATALYST DAILY — {payload.get('date')}", "",
         f"{payload.get('n_ok', 0)}/{payload.get('n_targets', 0)} dossiers "
-        f"· max={payload.get('max_n')} · grok={payload.get('grok', True)}", "", "## TARGETS",
+        f"· max={payload.get('max_n')} · routing={payload.get('routing', 'Grok → DeepSeek')}",
+        "", "## TARGETS",
     ]
     for t in payload.get("targets") or []:
         lines.append(f"- **{t.get('ticker')}** [{t.get('role')}] {t.get('why')}")
@@ -301,22 +311,21 @@ def _reuse_saved(ticker: str, date: str) -> dict | None:
     if not path.exists():
         return None
     data = _load_json(path)
-    return data if (
-        data.get("net_signal")
-        and data.get("search_backend") == "grok_native"
-    ) else None
+    return data if usable_dossier(data) else None
 
 
 def _prepare_engine(skip_gemini: bool) -> object:
     from collectors import catalyst_analysis as ca
     from collectors.catalyst_grok_runtime import install as install_grok_search
-    if not config.openclaw_enabled():
-        raise SystemExit("GROK_ONLY: set OPENCLAW_GATEWAY_URL")
-    print("[catalyst_daily] Grok-only — OpenClaw / Grok 4.6 native search")
+    if not config.has_llm():
+        raise SystemExit(
+            "Set OPENCLAW_GATEWAY_URL or DEEPSEEK_API_KEY for catalyst analysis"
+        )
+    print("[catalyst_daily] Grok primary, DeepSeek fallback")
     install_grok_search(ca)
     if skip_gemini:
         print("[catalyst_daily] note: --gemini/--skip no longer applies; "
-              "verdict+catcher are Grok")
+              "verdict+catcher use the routed LLM")
     return ca
 
 
@@ -365,7 +374,7 @@ def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict
     if not targets:
         return []
     config.require_llm()
-    print("[catalyst_daily] search=Grok native web/X (no SearXNG)")
+    print("[catalyst_daily] search=Grok native web/X; DeepSeek web-search fallback")
     ca = _prepare_engine(skip_gemini)
     ca.CUTOFF_DATE = None
     ca.TODAY = date
@@ -420,20 +429,20 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
     if dry_select:
         payload = {
             "date": date, "generated_at": datetime.now(ET).isoformat(),
-            "max_n": max_n, "grok": True, "gemini": False, "n_targets": len(targets),
+            "max_n": max_n, "routing": "Grok → DeepSeek",
+            "grok": True, "deepseek_fallback": not config.grok_only(),
+            "gemini": False, "n_targets": len(targets),
             "n_ok": 0, "targets": targets, "dossiers": [], "dry_select": True,
         }
         write_payload(payload)
         return payload
     dossiers = run_dossiers(date, targets, skip_gemini=skip_gemini)
-    n_ok = sum(
-        1 for d in dossiers
-        if d.get("net_signal") and not d.get("error")
-        and d.get("search_backend") == "grok_native"
-    )
+    n_ok = sum(1 for d in dossiers if usable_dossier(d))
     payload = {
         "date": date, "generated_at": datetime.now(ET).isoformat(),
-        "max_n": max_n, "grok": True, "gemini": False, "n_targets": len(targets),
+        "max_n": max_n, "routing": "Grok → DeepSeek",
+        "grok": True, "deepseek_fallback": not config.grok_only(),
+        "gemini": False, "n_targets": len(targets),
         "n_ok": n_ok, "targets": targets, "dossiers": dossiers,
     }
     write_payload(payload)

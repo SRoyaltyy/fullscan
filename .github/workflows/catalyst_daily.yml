@@ -9,8 +9,9 @@ name: Catalyst daily (bounded dossiers)
 # and before predicts, so dossiers land before 09:30 ET.
 # This workflow is last-chance (08:15 ET) plus afternoon skip-if-good
 # so Stock Book ALL can still merge if morning burned the clock.
-# Analysis is Grok-only (OpenClaw / Grok 4.6). Same prompts.
-# Search is Grok native web/X — no SearXNG.
+# Analysis uses Grok first (OpenClaw / Grok 4.6), then DeepSeek when Grok
+# is unavailable, rate-limited, or out of credits. DeepSeek uses the
+# SearXNG → DDG → Google News search chain.
 
 on:
   workflow_dispatch:
@@ -63,15 +64,17 @@ jobs:
 
       - name: Run catalyst daily
         env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_TIMEOUT: "3600"
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          GROK_ONLY: "1"
+          GROK_ONLY: "0"
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -euo pipefail

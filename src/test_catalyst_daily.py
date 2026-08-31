@@ -85,6 +85,7 @@ def test_apply_to_actions(tmp_path, monkeypatch):
         "why": "OVERRIDE Uranium",
         "net_signal": "Bullish",
         "conviction": 80,
+        "search_backend": "deepseek_fallback",
         "catalyst_stack": "Cameco contract + uranium price.",
     }]
     report = cd.apply_to_actions(date, dossiers)
@@ -103,7 +104,8 @@ def test_ticker_boosts(tmp_path, monkeypatch):
     date = "2026-08-26"
     (out / f"{date}_dossiers.json").write_text(json.dumps({
         "dossiers": [
-            {"ticker": "CCJ", "net_signal": "Strong Bullish", "conviction": 100},
+            {"ticker": "CCJ", "net_signal": "Strong Bullish", "conviction": 100,
+             "search_backend": "deepseek_fallback"},
             {"ticker": "COP", "error": "fail"},
         ]
     }), encoding="utf-8")
@@ -111,3 +113,16 @@ def test_ticker_boosts(tmp_path, monkeypatch):
     boosts = cd.ticker_boosts(date)
     assert boosts["CCJ"] == 3.0
     assert "COP" not in boosts
+
+
+def test_deepseek_dossier_is_usable():
+    assert cd.usable_dossier({
+        "ticker": "CCJ",
+        "net_signal": "Bullish",
+        "search_backend": "deepseek_fallback",
+    })
+    assert not cd.usable_dossier({
+        "ticker": "CCJ",
+        "net_signal": "Bullish",
+        "search_backend": "unknown",
+    })

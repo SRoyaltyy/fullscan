@@ -78,6 +78,27 @@ def test_timeout_content_falls_back_to_deepseek() -> None:
     assert dc._OPENCLAW_STATE["down"]
 
 
+def test_credit_exhaustion_content_falls_back_to_deepseek() -> None:
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        if "gw:18789" in url:
+            return _fake_response(
+                200,
+                "Usage limit reached: insufficient credits for this request.",
+            )
+        return _fake_response(200, "DEEPSEEK ANSWER")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat(
+            [{"role": "user", "content": "hi"}],
+            model="deepseek-chat",
+            tools=False,
+        )
+    assert text == "DEEPSEEK ANSWER"
+    assert dc.last_provider() == "deepseek"
+
+
 def test_real_essay_not_timeout() -> None:
     text = (SEC / "technology_predict.md").read_text(encoding="utf-8")
     assert not output_qc.looks_like_timeout(text)
@@ -121,6 +142,7 @@ def main() -> None:
         test_general_predict_accepted,
         test_judge_accepted,
         test_timeout_content_falls_back_to_deepseek,
+        test_credit_exhaustion_content_falls_back_to_deepseek,
         test_real_essay_not_timeout,
         test_scoreboard_merge_unions_topics,
         test_preopen_report_flags_08_24,
