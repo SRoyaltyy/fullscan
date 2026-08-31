@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7710.0 | -0.15% |
-| Nasdaq 100 (NQ) | 29462.0 | -0.10% |
-| Russell 2000 (ER2) | 2976.5 | -0.04% |
-| DJIA (YM) | 53506.0 | -0.15% |
-| VIX (VX) | 17.0 | +0.38% |
-| Crude Oil WTI (CL) | 86.25 | +3.39% |
-| Crude Oil Brent (QA) | 90.94 | +3.20% |
-| Natural Gas (NG) | 2.895 | +0.28% |
-| Heating Oil (HO) | 4.3589 | +2.59% |
-| Gasoline RBOB (RB) | 3.083 | +1.08% |
-| Gold (GC) | 4504.9 | -0.55% |
-| Silver (SI) | 67.905 | +0.20% |
-| Copper (HG) | 6.68 | +0.32% |
-| Platinum (PL) | 1816.1 | -2.06% |
-| Palladium (PA) | 1419.5 | -1.89% |
-| USD (DX) | 99.505 | -0.16% |
-| EUR (6E) | 1.16045 | +0.15% |
-| JPY (6J) | 0.6267499999999999 | +0.25% |
-| GBP (6B) | 1.3541 | +0.09% |
-| AUD (6A) | 0.71555 | -0.01% |
-| CAD (6C) | 0.7202 | +0.10% |
-| CHF (6S) | 1.2384 | +0.10% |
-| NZD (6N) | 0.5914 | +0.06% |
-| 10 Year Note (ZN) | 107.90625 | +0.01% |
-| 5 Year Note (ZF) | 105.8515625 | +0.04% |
+| S&P 500 (ES) | 7708.5 | -0.18% |
+| Nasdaq 100 (NQ) | 29449.75 | -0.16% |
+| Russell 2000 (ER2) | 2975.6 | -0.07% |
+| DJIA (YM) | 53511.0 | -0.14% |
+| VIX (VX) | 17.05 | +0.68% |
+| Crude Oil WTI (CL) | 86.39 | +3.59% |
+| Crude Oil Brent (QA) | 91.07 | +3.37% |
+| Natural Gas (NG) | 2.898 | +0.35% |
+| Heating Oil (HO) | 4.3614 | +2.65% |
+| Gasoline RBOB (RB) | 3.0787 | +0.93% |
+| Gold (GC) | 4504.9 | -0.56% |
+| Silver (SI) | 67.955 | +0.25% |
+| Copper (HG) | 6.6875 | +0.42% |
+| Platinum (PL) | 1816.0 | -2.07% |
+| Palladium (PA) | 1421.5 | -1.76% |
+| USD (DX) | 99.485 | -0.17% |
+| EUR (6E) | 1.16065 | +0.16% |
+| JPY (6J) | 0.62695 | +0.30% |
+| GBP (6B) | 1.3541 | +0.08% |
+| AUD (6A) | 0.7157 | -0.01% |
+| CAD (6C) | 0.7203 | +0.10% |
+| CHF (6S) | 1.23885 | +0.14% |
+| NZD (6N) | 0.5915 | +0.06% |
+| 10 Year Note (ZN) | 107.890625 | +0.01% |
+| 5 Year Note (ZF) | 105.84375 | +0.04% |
 | 2 Year Note (ZT) | 102.66796875 | +0.05% |
 | 30 Year Bond (ZB) | 109.125 | -0.09% |
-| Nikkei 225 (NKD) | 66325.0 | +0.84% |
-| DAX (DY) | 26409.0 | -0.80% |
-| Euro Stoxx 50 (EX) | 6476.0 | -0.40% |
-| Corn (ZC) | 536.25 | -0.05% |
-| Soybeans (ZS) | 1283.25 | -0.37% |
-| Wheat (ZW) | 772.5 | -1.50% |
-| Soybean oil (ZL) | 70.48 | -0.52% |
-| Soybean Meal (ZM) | 337.5 | -1.40% |
+| Nikkei 225 (NKD) | 66310.0 | +0.81% |
+| DAX (DY) | 26427.0 | -0.73% |
+| Euro Stoxx 50 (EX) | 6481.0 | -0.32% |
+| Corn (ZC) | 536.0 | -0.05% |
+| Soybeans (ZS) | 1283.5 | -0.35% |
+| Wheat (ZW) | 773.25 | -1.37% |
+| Soybean oil (ZL) | 70.71 | -0.25% |
+| Soybean Meal (ZM) | 338.0 | -1.31% |
 | Oats (ZO) | 372.25 | -0.67% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 93.25 | +2.05% |
+| Cotton (CT) | 93.38 | +2.20% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78975.0 | +1.46% |
-| Canola (RS) | 821.0 | -0.33% |
+| Bitcoin (BTC) | 78900.0 | +1.30% |
+| Canola (RS) | 821.5 | -0.27% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -128,12 +128,12 @@ Mega-cap earnings:
 - BMO **NIO**  EPS est -0.055  (NIO Inc ADR)
 
 Options event-vol flags (NOT direction):
-- **AVGO** exp 2026-08-31 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **AVGO** exp 2026-08-31 ATM IV 0.0078 implied move +0.0% put/call OI 0.66
 - **PANW** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.263
-- **DELL** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.0
+- **DELL** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 1.818
 - **MDT** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.301
 - **ADBE** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.158
-- **SNOW** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI —
+- **SNOW** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI 0.582
 - **HPE** exp 2026-09-04 ATM IV 0.0078 implied move +0.1% put/call OI 1.384
 - **CIEN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 18.545
 
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **DPZ** Domino's Asks America: Is the Domino Pizza's First Fast-Food Icon? (PR Newswire)
-- 5 min **DOV** Dover Corp's Dividend Analysis (GuruFocus.com)
-- 5 min **EL** The Estee Lauder Companies Inc's Dividend Analysis (GuruFocus.com)
-- 6 min **NTWK** NETSOL Technologies announces leadership transitions across Americas and Europe businesses (GlobeNewswire)
-- 6 min **O** Realty Income Corp's Dividend Analysis (GuruFocus.com)
-- 7 min **ALL** Allstate Corp's Dividend Analysis (GuruFocus.com)
-- 7 min **B** Barrick Mining Corp's Dividend Analysis (GuruFocus.com)
-- 8 min **BAM** Brookfield Asset Management Ltd's Dividend Analysis (GuruFocus.com)
-- 8 min **CSX** CSX Corp's Dividend Analysis (GuruFocus.com)
-- 9 min **UNP** Union Pacific Corp's Dividend Analysis (GuruFocus.com)
-- 9 min **BRVE,BMY** Jefferies starts biopharma firm Braveheart at Buy after IPO (Investing.com)
-- 10 min **LH** Labcorp Launches Next Generation of Labcorp Global Trial Connect to Help Sponsors and Investigator Sites Navigate Clinical Trial Complexity (PR Newswire)
-- 10 min **BEAM** Beam Therapeutics to Participate in Upcoming September 2026 Investor Conferences (GlobeNewswire)
-- 10 min **SEED** Origin Agritech Establishes R&D Center in Guizhou with Biotech Unit and State-Backed Seed Joint Venture (GlobeNewswire)
-- 10 min **XOM,SMC** Summit Midstream Corporation Announces Final Investment Decision on Double E Pipeline Mainline Compression Expansion (PR Newswire)
-- 10 min **PLSM** Pulsenmore Ltd. Announces Financial Results and Business Highlights for the First Half of 2026 (PR Newswire)
-- 10 min **BLRX** BioLineRx Reports Second Quarter 2026 Financial Results and Provides Corporate Update (PR Newswire)
-- 10 min **RDHL** RedHill Divests Talicia to Apotex for $18 Million Cash Upfront Plus Milestones to Fuel Strategic Growth Opportunities (PR Newswire)
-- 10 min **LLY** New Phase 3b data on Lilly's Taltz (ixekizumab) and Zepbound (tirzepatide) used together showed improved and durable efficacy at one year in adults with psoriatic disease and obesity (PR Newswire)
-- 10 min **VWAV** VisionWave Holdings Provides Update on Pending Acquisition of Majority Interest in C.M. Composite Materials Ltd. (GlobeNewswire)
-- 10 min **UMH** UMH PROPERTIES, INC. SECURES NEW FANNIE MAE MORTGAGE (GlobeNewswire)
-- 10 min **KTOS** Kratos Receives $35 Million National Security Related Military-Grade Hardware Production Program Award (GlobeNewswire)
-- 10 min **LTBR** Lightbridge Selected for U.S. Department of Energy Launch Pad INL Program to Advance Commercialization of Lightbridge Fuel (GlobeNewswire)
-- 10 min **TELA** TELA Bio Announces COO / CFO Transition and Strategic Cost Reduction Initiative (GlobeNewswire)
-- 10 min **ASND** Ascendis and BioMarin Enter Binding Term Sheet for a Global Settlement and License Agreement Related to YUVIWEL (Navepegritide) (GlobeNewswire)
+- 5 min **LLY** Lilly to Buy This Autoimmune Drugmaker for $2.9 Billion in Cash. What It Means for the Stock. (Barrons.com)
+- 6 min **APLE** Apple Hospitality REIT Inc's Dividend Analysis (GuruFocus.com)
+- 7 min **SLB** Energy stocks near record highs as oil prices rise, and amid an M&A deal (MarketWatch)
+- 7 min **DNP** DNP Select Income Fund Inc's Dividend Analysis (GuruFocus.com)
+- 7 min **STEP** StepStone Group Inc's Dividend Analysis (GuruFocus.com)
+- 9 min **EPR** EPR Properties's Dividend Analysis (GuruFocus.com)
+- 9 min **AAPL** John Ternus becomes Apple CEO, with AI as first big challenge (Quartz)
+- 9 min **BIPC** Brookfield Infrastructure Corp's Dividend Analysis (GuruFocus.com)
+- 12 min **OBDC** Blue Owl Capital Corp's Dividend Analysis (GuruFocus.com)
+- 12 min **RLI** RLI Corp's Dividend Analysis (GuruFocus.com)
+- 12 min **PCG,EIX,SRE** PG&E Stock Plummets on California Wildfire Legislation. Why Wall Street Isn't Happy. (Barrons.com)
+- 12 min **BEPC,BEP** Brookfield Renewable Corp's Dividend Analysis (GuruFocus.com)
+- 13 min **ESNT** Essent Group Ltd's Dividend Analysis (GuruFocus.com)
+- 13 min **AVAL** Grupo Aval Acciones y Valores SA's Dividend Analysis (GuruFocus.com)
+- 13 min **POLA** Polar Power Announces MSI Defense Solutions' Adoption of Its DC Generator for EAGLS (GlobeNewswire)
+- 13 min **AMD** AMD, Cisco and HUMAIN Expand Saudi Arabia's AI Infrastructure as AMD Instinct Systems Go Live (GlobeNewswire)
+- 14 min **BCS** Fed Rate Hike Odds Jump: Why Kevin Warshs Work To Do Comment Has Barclays Reportedly Calling For Two More Hikes (Stocktwits)
+- 14 min **OWL** Blue Owl Capital Inc's Dividend Analysis (GuruFocus.com)
+- 15 min **ADC,WMT** Agree Realty Corp's Dividend Analysis (GuruFocus.com)
+- 15 min **BEP** Brookfield Renewable Partners LP's Dividend Analysis (GuruFocus.com)
+- 16 min **FDS** FactSet Research Systems Inc's Dividend Analysis (GuruFocus.com)
+- 17 min **AGNC** AGNC Investment Corp's Dividend Analysis (GuruFocus.com)
+- 17 min **SPCX** SpaceX's Weekend: One Big Launch and One Crew-13 Hiccup (Barrons.com)
+- 18 min **SAIC** SAIC Announces Second Quarter of Fiscal Year 2027 Results (GlobeNewswire)
+- 18 min **AIZ** Assurant Inc's Dividend Analysis (GuruFocus.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
