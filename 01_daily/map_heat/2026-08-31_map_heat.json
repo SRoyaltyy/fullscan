@@ -8558,20 +8558,20 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7714.25,
-      "change": -0.11
+      "last": 7712.25,
+      "change": -0.13
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29499.5,
-      "change": 0.0
+      "last": 29483.5,
+      "change": -0.03
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2981.2,
-      "change": 0.11
+      "last": 2980.4,
+      "change": 0.09
     },
     {
       "ticker": "YM",
@@ -8588,86 +8588,86 @@
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 86.34,
-      "change": 3.57
+      "last": 86.14,
+      "change": 3.39
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 91.26,
-      "change": 3.62
+      "last": 91.02,
+      "change": 3.34
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.862,
-      "change": -0.9
+      "last": 2.872,
+      "change": -0.52
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3465,
-      "change": 2.29
+      "last": 4.3288,
+      "change": 1.89
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.0942,
-      "change": 1.45
+      "last": 3.0822,
+      "change": 1.05
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4492.6,
-      "change": -0.82
+      "last": 4492.4,
+      "change": -0.85
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.775,
-      "change": -0.02
+      "last": 67.725,
+      "change": -0.09
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.672,
-      "change": 0.2
+      "last": 6.671,
+      "change": 0.18
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1814.5,
-      "change": -2.14
+      "last": 1812.4,
+      "change": -2.28
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1423.0,
-      "change": -1.65
+      "last": 1418.5,
+      "change": -1.96
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.5,
+      "last": 99.51,
       "change": -0.15
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.16065,
-      "change": 0.16
+      "last": 1.1603,
+      "change": 0.14
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6268,
+      "last": 0.6267,
       "change": 0.25
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3544,
-      "change": 0.09
+      "last": 1.3541,
+      "change": 0.08
     },
     {
       "ticker": "6A",
@@ -8678,62 +8678,62 @@
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.72015,
+      "last": 0.7201,
       "change": 0.08
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23855,
-      "change": 0.09
+      "last": 1.2379,
+      "change": 0.08
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.5918,
-      "change": 0.12
+      "last": 0.5915,
+      "change": 0.06
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 107.953125,
+      "last": 107.921875,
       "change": 0.06
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
       "last": 105.859375,
-      "change": 0.05
+      "change": 0.04
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.66796875,
-      "change": 0.05
+      "last": 102.6640625,
+      "change": 0.04
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 109.28125,
+      "last": 109.25,
       "change": 0.03
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66460.0,
-      "change": 0.99
+      "last": 66395.0,
+      "change": 0.97
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26441.0,
-      "change": -0.65
+      "last": 26438.0,
+      "change": -0.69
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6480.0,
-      "change": -0.32
+      "last": 6479.0,
+      "change": -0.35
     },
     {
       "ticker": "ZC",
@@ -8744,32 +8744,32 @@
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1285.75,
-      "change": -0.16
+      "last": 1285.0,
+      "change": -0.23
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 776.0,
-      "change": -1.05
+      "last": 776.5,
+      "change": -0.96
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.83,
-      "change": 0.01
+      "last": 70.65,
+      "change": -0.27
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 338.5,
-      "change": -1.17
+      "last": 338.6,
+      "change": -1.14
     },
     {
       "ticker": "ZO",
       "label": "Oats",
-      "last": 371.25,
-      "change": -0.93
+      "last": 372.25,
+      "change": -0.8
     },
     {
       "ticker": "ZR",
@@ -8792,8 +8792,8 @@
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 92.79,
-      "change": 1.56
+      "last": 92.98,
+      "change": 1.66
     },
     {
       "ticker": "CC",
@@ -8834,14 +8834,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 78895.0,
-      "change": 1.35
+      "last": 78960.0,
+      "change": 1.44
     },
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 821.4,
-      "change": -0.3
+      "last": 821.7,
+      "change": -0.24
     },
     {
       "ticker": "ZK",
@@ -8852,17 +8852,45 @@
   ],
   "ticker_news": [
     {
-      "time": "20 min",
-      "title": "Visa, Mastercard process first global payments in Syria",
-      "url": "https://finance.yahoo.com/m/8eb7b41b-47e7-381e-8e49-c25d847cf6f5/visa%2C-mastercard-process.html",
-      "source": "Electronic Payments",
+      "time": "9 min",
+      "title": "Energy stocks rally as fresh U.S.-Iran attacks drive oil prices higher",
+      "url": "https://finance.yahoo.com/energy/articles/energy-stocks-rally-fresh-u-093550675.html",
+      "source": "Investing.com",
       "tickers": [
-        "MA",
-        "V"
+        "MPC",
+        "CL"
+      ]
+    },
+    {
+      "time": "15 min",
+      "title": "Nutex Health Hospitals Earn Multiple Community Honors in Second Quarter 2026",
+      "url": "/news/386728/nutex-health-hospitals-earn-multiple-community-honors-in-second-quarter-2026",
+      "source": "PR Newswire",
+      "tickers": [
+        "NUTX"
       ]
     },
     {
       "time": "24 min",
+      "title": "OpenAI Reportedly Joins Salesforce, Others In Testing Outcome-Based AI Pricing  Astra Launch In Focus",
+      "url": "https://finance.yahoo.com/m/fc31da72-5b45-32c6-ba02-c6b7675ae6d4/openai-reportedly-joins.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "CRM"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Visa, Mastercard process first global payments in Syria",
+      "url": "https://finance.yahoo.com/m/8eb7b41b-47e7-381e-8e49-c25d847cf6f5/visa%2C-mastercard-process.html",
+      "source": "Electronic Payments",
+      "tickers": [
+        "V",
+        "MA"
+      ]
+    },
+    {
+      "time": "45 min",
       "title": "Walmart to pay $50m to settle DOJ opioid-dispensing allegations",
       "url": "https://finance.yahoo.com/m/7a4cefd0-f7fc-3bb1-b9a0-15be973b6798/walmart-to-pay-%2450m-to-settle.html",
       "source": "Retail Insight Network",
@@ -8871,7 +8899,7 @@
       ]
     },
     {
-      "time": "32 min",
+      "time": "53 min",
       "title": "Tesla, SpaceX Coming Soon Projects Are Finally Turning Real, Says Elon Musk  Terafab Could Dwarf Americas Highway System",
       "url": "https://finance.yahoo.com/m/02e779d9-7207-31b2-b97c-3b740a77c307/tesla%2C-spacex-%E2%80%98coming-soon%E2%80%99.html",
       "source": "Stocktwits",
@@ -8881,7 +8909,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "1 hour",
       "title": "WULF Stock In Focus: William Blair Says TeraWulfs Pullback Could Offer 'Favorable' Entry Point, Sees 100% Upside",
       "url": "https://finance.yahoo.com/m/464c5bbb-4995-33f0-937e-84deb4998b46/wulf-stock-in-focus%3A-william.html",
       "source": "Stocktwits",
@@ -8890,7 +8918,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "1 hour",
       "title": "ASTS, RKLB, LUNR, FLY Eye August Gains  Elon Musk Backs Trumps Plan To Train Americas Next Space Leaders",
       "url": "https://finance.yahoo.com/m/eaaf7234-229e-320b-9802-bb0a4a138724/asts%2C-rklb%2C-lunr%2C-fly-eye.html",
       "source": "Stocktwits",
@@ -8898,25 +8926,25 @@
         "RKLB",
         "FLY",
         "SPCX",
-        "ASTS",
-        "LUNR"
+        "LUNR",
+        "ASTS"
       ]
     },
     {
-      "time": "51 min",
+      "time": "1 hour",
       "title": "Why Are Nasdaq, S&P 500 Futures Subdued Premarket? NVDA, AAPL, INTC, CRWD, RKLB, SLS Stocks In Focus",
       "url": "https://finance.yahoo.com/m/11dc7e09-def8-390a-a0db-83c673bd9e13/why-are-nasdaq%2C-s%26p-500.html",
       "source": "Stocktwits",
       "tickers": [
-        "INTC",
         "RKLB",
+        "INTC",
         "NVDA",
         "CRWD",
         "AAPL"
       ]
     },
     {
-      "time": "54 min",
+      "time": "1 hour",
       "title": "WEBUY GLOBAL LTD. Reports Record NATAS Fair Bookings of US$ 4.76 Million, 42% Higher than March 2026",
       "url": "/news/386724/webuy-global-ltd-reports-record-natas-fair-bookings-of-us-476-million-42-higher-than-march-2026",
       "source": "GlobeNewswire",
@@ -8925,7 +8953,7 @@
       ]
     },
     {
-      "time": "54 min",
+      "time": "1 hour",
       "title": "Alvotech Announces FDA Acceptance for Review of Biologics License Application for AVT80, Expanding Proposed Biosimilar Program for Entyvio to Subcutaneous Presentations",
       "url": "/news/386725/alvotech-announces-fda-acceptance-for-review-of-biologics-license-application-for-avt80-expanding-proposed-biosimilar-program-for-entyvio-to-subcutaneous-presentations",
       "source": "GlobeNewswire",
@@ -8934,7 +8962,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "1 hour",
       "title": "TEAM Stock Heads For Best Month Ever As Software Stocks Swing From SaaSpocalypse To Full Revival In One Month",
       "url": "https://finance.yahoo.com/m/39d19431-6a4d-32b9-86d3-a1e6036dc1d0/team-stock-heads-for-best.html",
       "source": "Stocktwits",
@@ -8947,7 +8975,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "1 hour",
       "title": "Oil jumps, Fed hawkish, Jobs data - Whats moving markets",
       "url": "https://finance.yahoo.com/markets/articles/oil-jumps-fed-hawkish-jobs-082846106.html",
       "source": "Investing.com",
@@ -9008,7 +9036,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Tesla Cybercab Hype Builds: Cathie Wood, Chamath Cheer Musks AI, Energy Push  But One Analyst Calls The Bull Case Absurd",
       "url": "https://finance.yahoo.com/m/84b61924-e3ab-377d-a08a-3094c13a1190/tesla-cybercab-hype-builds%3A.html",
       "source": "Stocktwits",
@@ -9092,7 +9120,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now",
       "url": "https://finance.yahoo.com/m/a1df2ad9-fcaa-3031-b7b0-56f0b3bbcccb/aon-flat%2C-kkr-rises-overnight.html",
       "source": "Stocktwits",
@@ -9101,7 +9129,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Bitcoin ETFs Pulled In Near $1 Billion Last Week, So Why Is BTC Stuck Below $80,000?",
       "url": "https://finance.yahoo.com/m/107ec58f-3b61-3ab1-b93e-9eda8ffea601/bitcoin-etfs-pulled-in-near.html",
       "source": "BeInCrypto",
@@ -9111,7 +9139,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "GAP Stock Surged 18% Last Week: Wall Street Raises Price Targets, Eyes Old Navy Turnaround",
       "url": "https://finance.yahoo.com/m/7fccc5f2-8e34-3ef5-b358-3a09bad8fba0/gap-stock-surged-18%25-last.html",
       "source": "Stocktwits",
@@ -9188,7 +9216,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Andrew Bailey: AI threatens to unleash global market downturn",
       "url": "https://finance.yahoo.com/m/8120b718-c123-3f02-a25c-a098c0b924e7/andrew-bailey%3A-ai-threatens.html",
       "source": "The Telegraph",
@@ -9197,13 +9225,13 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch",
       "url": "https://finance.yahoo.com/m/14f2eca5-f8be-3576-beed-432bfd7de59f/asts-stock-could-get-a-new.html",
       "source": "Stocktwits",
       "tickers": [
-        "ASTS",
-        "VZ"
+        "VZ",
+        "ASTS"
       ]
     },
     {
@@ -9234,20 +9262,20 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared",
       "url": "https://finance.yahoo.com/m/e0dc4f4e-1078-3f7e-b606-d8a499adbff7/michael-burry-bought.html",
       "source": "Stocktwits",
       "tickers": [
         "MOH",
-        "ADBE",
         "PLTR",
         "NBIS",
+        "ADBE",
         "NVDA"
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "U.S., Iran trade strikes for first time since July; Trump threatens Kharg attacks",
       "url": "https://finance.yahoo.com/m/89a8ad24-5a4a-32e0-bd4d-5cbc7f8cd5f1/u.s.%2C-iran-trade-strikes-for.html",
       "source": "Investing.com",
@@ -9705,77 +9733,17 @@
         "AMZN",
         "NFLX"
       ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Meta Settlement a Start, But Incomplete: Senator",
-      "url": "https://www.barrons.com/livecoverage/sunday0830/card/meta-settlement-a-start-but-incomplete-senator-qyakzyMU0CkIRrvumww0?mod=bar_FV",
-      "source": "Barrons.com",
-      "tickers": [
-        "META"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Aon Nears Roughly $17 Billion Deal for Insurance Brokerage USI",
-      "url": "https://www.wsj.com/finance/aon-nears-roughly-17-billion-deal-for-insurance-brokerage-usi-fcc9fba9?mod=wsj_FV",
-      "source": "The Wall Street Journal",
-      "tickers": [
-        "AON",
-        "KKR"
-      ]
-    },
-    {
-      "time": "Aug-30",
-      "title": "Arrowhead Pharmaceuticals Presents Phase 3 SHASTA-3 and SHASTA-4 Data Demonstrating Plozasiran Reduced Acute Pancreatitis Events in Patients with Severe Hypertriglyceridemia",
-      "url": "https://www.businesswire.com/news/home/20260830813912/en/",
-      "source": "Business Wire",
-      "tickers": [
-        "ARWR"
-      ]
     }
   ],
   "major_news_tickers": [
     "NVDA",
-    "MSFT",
-    "GOOG",
-    "GOOGL",
-    "WMT",
     "AAPL",
-    "AMZN",
-    "CRM",
-    "MRVL",
-    "IREN",
-    "LLY",
-    "CRWD",
-    "COIN",
-    "CVX",
-    "DELL",
-    "META",
-    "IBM",
-    "AVGO",
-    "CNS",
-    "ORCL",
-    "CSCO",
-    "DKS",
     "SPCX",
-    "HAL",
-    "NKE",
-    "PLTR",
-    "MU",
-    "PYPL",
-    "HOOD",
-    "SPGI",
-    "STRC",
-    "MRK",
-    "NVAX",
-    "SCHW",
-    "JNJ",
-    "PANW",
-    "TGT",
-    "CME",
-    "MSTR",
-    "PFE"
+    "TSLA",
+    "CRWD",
+    "RKLB",
+    "CRM",
+    "ASTS"
   ],
   "event_options": [
     {
@@ -10509,5 +10477,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 126,
-  "overlay_at": "2026-08-31T05:25:05.454728-04:00"
+  "overlay_at": "2026-08-31T05:45:40.634128-04:00"
 }
