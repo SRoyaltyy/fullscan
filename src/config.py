@@ -9,11 +9,11 @@ FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
 DATABASE_URL = os.environ.get("DATABASE_URL", "")
 DATABASE_KEY = os.environ.get("DATABASE_KEY", "")  # reserved (REST fallback)
 
-# --- OpenClaw gateway = SOLE analysis engine (Grok 4.6 via SuperGrok) ---
+# --- OpenClaw gateway = primary analysis engine (Grok 4.6 via SuperGrok) ---
 # The gateway runs on the always-on box (Alibaba ECS, Singapore) and
 # exposes an OpenAI-compatible POST /v1/chat/completions. When
-# OPENCLAW_GATEWAY_URL is set, EVERY LLM stage runs on Grok. DeepSeek
-# is disabled unless GROK_ONLY=0 is set explicitly.
+# OPENCLAW_GATEWAY_URL is set, every LLM stage tries Grok first. Workflows
+# set GROK_ONLY=0 so DeepSeek can take over on outage, quota, or empty output.
 # On the OpenClaw path the model uses its own native web/X search —
 # the local SearXNG tool loop is fallback-only (and unused when Grok-only).
 OPENCLAW_GATEWAY_URL = os.environ.get("OPENCLAW_GATEWAY_URL", "").rstrip("/")
@@ -31,16 +31,21 @@ LIVE_OPENCLAW_TOKEN_LEN = 48
 STALE_OPENCLAW_SECRET_LEN = 64
 _OPENCLAW_TOKEN_ALIGNED = False
 
-# --- DeepSeek (opt-in fallback only; off whenever Grok is configured) ---
+# --- DeepSeek fallback ---
 # Function-calling stages on the DeepSeek path must use deepseek-chat
 # (deepseek-reasoner has no tools support). Leave the key set for
-# emergency GROK_ONLY=0 runs; production must not call it.
+# fallback runs; GROK_ONLY=1 remains available for an explicit Grok-only run.
 MODEL_PREDICT = os.environ.get("MODEL_PREDICT", "deepseek-chat")
 MODEL_OUTCOME = os.environ.get("MODEL_OUTCOME", "deepseek-chat")
 MODEL_REFLECT = os.environ.get("MODEL_REFLECT", "deepseek-reasoner")
 MODEL_DISTILL = os.environ.get("MODEL_DISTILL", "deepseek-reasoner")
 DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL",
                                    "https://api.deepseek.com")
+# DeepSeek Chat rejects larger output budgets even when Grok accepts them.
+# Keep fallback requests valid instead of forwarding Grok's 24k/40k caps.
+DEEPSEEK_CHAT_MAX_TOKENS = int(
+    os.environ.get("DEEPSEEK_CHAT_MAX_TOKENS", "8192")
+)
 
 
 def openclaw_enabled() -> bool:

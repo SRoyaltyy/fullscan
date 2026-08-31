@@ -249,23 +249,28 @@ def timeout_verdict(fields: dict[str, int | None],
 
 def yaml_grok_only_verdict() -> tuple[str, bool, str, str]:
     missing: list[str] = []
-    deepseek: list[str] = []
+    blocked: list[str] = []
     for p in WF_FILES:
         text = _text(p)
         if not text:
             missing.append(f"{p.name} unreadable")
             continue
-        if not re.search(r'GROK_ONLY:\s*["\']?1', text):
-            missing.append(f"{p.name} missing GROK_ONLY=1")
-        if re.search(r"DEEPSEEK_API_KEY:\s*\$\{\{\s*secrets\.DEEPSEEK_API_KEY", text):
-            deepseek.append(p.name)
+        if not re.search(r'GROK_ONLY:\s*["\']?0', text):
+            blocked.append(f"{p.name} does not set GROK_ONLY=0")
+        if not re.search(
+            r"DEEPSEEK_API_KEY:\s*\$\{\{\s*secrets\.DEEPSEEK_API_KEY",
+            text,
+        ):
+            blocked.append(f"{p.name} does not inject DEEPSEEK_API_KEY")
     if missing:
         return "FAIL", True, "; ".join(missing), "heal"
-    if deepseek:
-        return ("WARN", False,
-                f"{', '.join(deepseek)} still injects DEEPSEEK_API_KEY — GROK_ONLY must block it",
-                "none")
-    return "OK", False, "GROK_ONLY=1 in preopen + postclose yaml", "none"
+    if blocked:
+        return "FAIL", True, "; ".join(blocked), "heal"
+    return (
+        "OK", False,
+        "Grok primary + DeepSeek fallback enabled in preopen + postclose yaml",
+        "none",
+    )
 
 
 def yaml_token_secret_note() -> str:

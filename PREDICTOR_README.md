@@ -53,7 +53,10 @@ which tries providers in order:
    RESEARCH APPENDIX (queries, sources, facts) to keep output auditable.
 2. **DeepSeek API** — the original client, unchanged, including the
    SearXNG → ddgs → DDG HTML → Google News RSS tool loop. Fires only
-   when the gateway is unreachable, errors, or answers empty.
+   when the gateway is unreachable, rate-limited/out of credits, errors,
+   or answers empty. The production pre-open/post-close/catalyst/book
+   Actions explicitly set `GROK_ONLY=0`; `GROK_ONLY=1` is an opt-in
+   emergency override, not the normal workflow setting.
 
 ### Wiring the gateway (one-time, on the ECS)
 
@@ -89,6 +92,7 @@ With neither secret set, everything runs on DeepSeek exactly as before.
 | `OPENCLAW_BACKEND_MODEL` | `xai/grok-4.6` | backend model header (`x-openclaw-model`) |
 | `OPENCLAW_TIMEOUT` | `10800` | per-call timeout (seconds, **3 hours**); research turns are slow. Job-level timeouts on ECS LLM workflows are ≥ this so GitHub does not kill the runner first. |
 | `DEEPSEEK_API_KEY` | — | fallback provider (keep it set) |
+| `DEEPSEEK_CHAT_MAX_TOKENS` | `8192` | caps Grok-sized output budgets to a request DeepSeek Chat accepts |
 | `MODEL_PREDICT` … `MODEL_DISTILL` | deepseek-chat / deepseek-reasoner | models used on the fallback path only |
 
 Check routing (no network): `python -m src.deepseek_client`
@@ -102,6 +106,16 @@ Live round-trip test: `python -m src.deepseek_client --probe`
 ## Manual run
 
 Actions → **"Pre-Open ALL (predictive one-shot)"** → Run workflow
+
+If Grok is unavailable, the before-open recovery order is:
+
+1. **Map Heat Captain Research (post-close)** — Grok first, then DeepSeek.
+2. **Finviz pre-open scrape** — no LLM; Grok credits are irrelevant.
+3. **Pre-Open ALL** — Grok first, then DeepSeek for every LLM stage.
+4. **Label + Weather** — no LLM.
+5. **A+B1 Checklist** — no LLM.
+6. **Catalyst daily** — Grok first, then DeepSeek + web-search.
+7. **Stock Book ALL** — Grok first, then DeepSeek for missing LLM inputs.
 (optional date; `force=true` only as an emergency after 09:25 ET).
 
 This is the one-button for every predictive part **as a backup**. The weekday clock is the ECS systemd timer (`scripts/install_ecs_preopen.sh`). Dispatch this workflow only if the box missed 05:55 ET.

@@ -5,7 +5,8 @@ name: Stock Book ALL (one-shot)
 #   then publish dashboard/ to GitHub Pages (fixed Chrome URL).
 #
 # LLM stages (predict / 11 sectors / events / news judge / book-reflect)
-# hit Grok 4.6 via OpenClaw on the ECS. DeepSeek is fallback only.
+# hit Grok 4.6 via OpenClaw on the ECS. DeepSeek automatically takes over
+# when Grok is unavailable, rate-limited, or out of credits.
 # Must run on [self-hosted, ecs]: ubuntu-latest cannot reach the
 # loopback gateway and used to fall back to DeepSeek every weekday.
 # One ECS runner — a 6h book run will queue other ECS jobs.
@@ -87,7 +88,7 @@ jobs:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
-          GROK_ONLY: "1"
+          GROK_ONLY: "0"
         run: |
           set -e
           DATE="${{ github.event.inputs.run_date }}"

@@ -29,6 +29,7 @@ On the DeepSeek path, stages needing tools must run on deepseek-chat
 from __future__ import annotations
 
 import json
+import threading
 import time
 import uuid
 
@@ -99,6 +100,16 @@ def _post(payload: dict, retries: int = 4) -> dict:
 # Under GROK_ONLY the breaker means "stop calling Grok and return empty"
 # — DeepSeek/SearXNG must not write analysis.
 _OPENCLAW_STATE = {"down": False, "reason": "", "timeouts": 0}
+_CALL_STATE = threading.local()
+
+
+def last_provider() -> str:
+    """Provider used by the latest chat() call on this worker thread."""
+    return str(getattr(_CALL_STATE, "provider", "") or "")
+
+
+def _set_last_provider(provider: str) -> None:
+    _CALL_STATE.provider = provider
 
 # Appended to the system prompt on research stages (tools=True). The
 # RESEARCH appendix goes at the END so output contracts (first-line
@@ -291,6 +302,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import copy
     import os
 
+    _set_last_provider("")
     grok_only = config.grok_only()
     if grok_only and force_deepseek:
         print(f"[llm] GROK_ONLY: ignoring force_deepseek "
@@ -307,6 +319,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               trace_path=trace_path,
                               stage_label=stage_label)
         if text:
+            _set_last_provider("openclaw")
             return text
         if grok_only:
             print("[llm] GROK_ONLY: OpenClaw failed — no DeepSeek/SearXNG fallback")
@@ -327,8 +340,20 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         return ""
 
     # ---- fallback: DeepSeek + SearXNG tool loop (original client) ----
+    deepseek_max_tokens = max_tokens
+    if model == "deepseek-chat":
+        deepseek_max_tokens = min(
+            max_tokens,
+            config.DEEPSEEK_CHAT_MAX_TOKENS,
+        )
+        if deepseek_max_tokens != max_tokens:
+            print(
+                f"[llm] cap DeepSeek max_tokens "
+                f"{max_tokens}→{deepseek_max_tokens}"
+            )
     payload = {"model": model, "messages": messages,
-               "max_tokens": max_tokens, "temperature": temperature}
+               "max_tokens": deepseek_max_tokens,
+               "temperature": temperature}
     if tools:
         payload["tools"] = [SEARCH_TOOL]
         payload["tool_choice"] = "auto"
@@ -413,6 +438,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                 fh.write("\n\n".join(trace) + "\n")
         except OSError as e:
             print(f"[trace] save failed: {e}")
+    _set_last_provider("deepseek")
     return final
 
 

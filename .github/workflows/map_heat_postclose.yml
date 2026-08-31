@@ -1,6 +1,8 @@
 name: Map Heat Captain Research (post-close)
 
-# Heavy Grok research is intentionally outside the pre-open critical path.
+# Heavy research is intentionally outside the pre-open critical path.
+# Grok is primary; DeepSeek + web-search is the automatic fallback when
+# Grok is unavailable, rate-limited, or out of credits.
 # One sector-batched pass researches every liquid SPX/RUT industry captain
 # for the NEXT session. The 05:55 job performs one small overnight refresh.
 # Preopen lock / systemd active is the only hard gate. /tmp locks are not used.
@@ -47,7 +49,7 @@ jobs:
     env:
       OPENCLAW_TIMEOUT: "10800"
       MAP_POSTCLOSE_LOCK: /home/gha/fullscan-persist/locks/map-postclose.lock
-      GROK_ONLY: "1"
+      GROK_ONLY: "0"
       FINVIZ_SKIP_LIVE: "1"
       PYTHONUNBUFFERED: "1"
       HOME: /home/gha
@@ -89,9 +91,11 @@ jobs:
       - name: Build next-session tables and exhaustive captain baseline
         if: env.skip != 'yes'
         env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          GROK_ONLY: "1"
+          GROK_ONLY: "0"
           FINVIZ_SKIP_LIVE: "1"
           SOURCE: ${{ github.event.inputs.source_date }}
           TARGET: ${{ github.event.inputs.target_date }}

@@ -224,9 +224,9 @@ def build_health_snapshot(ticker, conn):
     return {"profile": profile, "finviz": finviz}
 
 # ── LLM setup ──────────────────────────────────────────
-# Grok-only safety net. Production installs catalyst_grok_runtime, which uses
-# OpenClaw native web/X. Even if legacy safe_create is reached accidentally,
-# it cannot call DeepSeek.
+# Production installs catalyst_grok_runtime, which uses the shared
+# Grok-primary / DeepSeek-fallback client. Keep the legacy providers usable
+# as a safety net for direct execution.
 _OC_URL = os.environ.get("OPENCLAW_GATEWAY_URL", "").rstrip("/")
 _PROVIDERS = []
 if _OC_URL:
@@ -238,8 +238,22 @@ if _OC_URL:
                    "OPENCLAW_BACKEND_MODEL", "xai/grok-4.6")}),
         os.environ.get("OPENCLAW_AGENT", "openclaw/default"),
     ))
+_DS_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+_GROK_ONLY = (os.environ.get("GROK_ONLY") or "").strip().lower() in {
+    "1", "true", "yes", "on",
+}
+if _DS_KEY and not _GROK_ONLY:
+    _PROVIDERS.append((
+        "deepseek",
+        OpenAI(api_key=_DS_KEY, base_url=os.environ.get(
+            "DEEPSEEK_BASE_URL", "https://api.deepseek.com")),
+        os.environ.get("MODEL_PREDICT", "deepseek-chat"),
+    ))
 if not _PROVIDERS:
-    raise SystemExit("GROK_ONLY: set OPENCLAW_GATEWAY_URL")
+    raise SystemExit(
+        "Set OPENCLAW_GATEWAY_URL or DEEPSEEK_API_KEY "
+        "(and GROK_ONLY=0) for catalyst analysis"
+    )
 client = _PROVIDERS[0][1]
 
 def safe_create(**kwargs):

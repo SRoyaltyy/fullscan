@@ -73,6 +73,7 @@ def test_openclaw_primary_wins() -> None:
                         {"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False, max_tokens=100)
     assert text == "GROK ANSWER"
+    assert dc.last_provider() == "openclaw"
     assert len(calls) == 1
     c = calls[0]
     assert c["url"] == "http://gw:18789/v1/chat/completions"
@@ -121,6 +122,7 @@ def test_fallback_on_gateway_failure() -> None:
         text = dc.chat([{"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False)
     assert text == "DEEPSEEK ANSWER"
+    assert dc.last_provider() == "deepseek"
     assert any("deepseek" in u for u in urls)
     # circuit breaker: gateway now marked down for the rest of the process
     assert dc._OPENCLAW_STATE["down"]
@@ -175,7 +177,27 @@ def test_deepseek_only_unchanged() -> None:
         text = dc.chat([{"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False)
     assert text == "DS"
+    assert dc.last_provider() == "deepseek"
     assert urls == [f"{config.DEEPSEEK_BASE_URL}/chat/completions"]
+
+
+def test_deepseek_chat_caps_grok_sized_output_budget() -> None:
+    _reset(deepseek_key="ds-key")
+    seen = {}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        seen["body"] = json
+        return _fake_response(200, "DS")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat(
+            [{"role": "user", "content": "hi"}],
+            model="deepseek-chat",
+            tools=False,
+            max_tokens=40000,
+        )
+    assert text == "DS"
+    assert seen["body"]["max_tokens"] == config.DEEPSEEK_CHAT_MAX_TOKENS
 
 
 def test_describe_routing_no_secrets() -> None:
@@ -303,6 +325,7 @@ def main() -> None:
         test_fallback_on_empty_answer,
         test_no_fallback_returns_empty,
         test_deepseek_only_unchanged,
+        test_deepseek_chat_caps_grok_sized_output_budget,
         test_describe_routing_no_secrets,
         test_timeout_content_is_empty,
         test_grok_only_blocks_deepseek_and_force_flag,

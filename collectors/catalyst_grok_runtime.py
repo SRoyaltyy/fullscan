@@ -1,12 +1,12 @@
-"""Runtime overlay: catalyst_analysis uses Grok native web/X search.
+"""Runtime overlay: catalyst_analysis uses the shared LLM routing.
 
-Imported by src.catalyst_daily. Does not call SearXNG or DeepSeek.
+Grok native web/X is primary. When GROK_ONLY=0, the public client
+automatically falls back to DeepSeek with its web-search tool loop.
 """
 from __future__ import annotations
 
 import asyncio
 import json
-import os
 import re
 from datetime import datetime
 from pathlib import Path
@@ -14,7 +14,8 @@ from pathlib import Path
 
 def _native_search_brief(queries):
     lines = [
-        "USE NATIVE WEB/X SEARCH. There is no pre-fetched snippet pack.",
+        "USE THE WEB-SEARCH CAPABILITY AVAILABLE TO YOU. "
+        "There is no pre-fetched snippet pack.",
         "Run the queries below (and any better ones you need), then extract.",
         "",
     ]
@@ -109,14 +110,20 @@ def install(ca) -> None:
         print("[catalyst] Grok native search already installed")
         return
 
-    oc = (os.environ.get("OPENCLAW_GATEWAY_URL") or "").rstrip("/")
-    if not oc:
-        raise SystemExit("OPENCLAW_GATEWAY_URL required — Grok native search, no SearXNG")
+    from src import config
+    if not config.has_llm():
+        raise SystemExit(
+            "Catalyst analysis needs OPENCLAW_GATEWAY_URL or "
+            "DEEPSEEK_API_KEY"
+        )
 
-    def _grok_chat(messages, temperature, max_tokens, tools, stage):
+    providers_used: set[str] = set()
+
+    def _routed_chat(messages, temperature, max_tokens, tools, stage):
         from src import deepseek_client
-        text = deepseek_client._openclaw_chat(
+        text = deepseek_client.chat(
             messages,
+            model=config.MODEL_PREDICT,
             tools=tools,
             max_tokens=max_tokens,
             temperature=temperature,
@@ -124,23 +131,23 @@ def install(ca) -> None:
             trace_path=None,
             stage_label=stage,
         )
+        providers_used.add(deepseek_client.last_provider() or "unknown")
         return (text or "").strip() or None
 
     def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000,
                  tools=False, stage="catalyst"):
         messages = [{"role": "system", "content": prompt},
                     {"role": "user", "content": user_msg}]
-        text = _grok_chat(messages, temperature, max_tokens, tools, stage)
+        text = _routed_chat(messages, temperature, max_tokens, tools, stage)
         if text:
             return text
         raise RuntimeError(
-            f"GROK_ONLY: OpenClaw returned empty for {stage}; "
-            "DeepSeek/Gemini fallback is forbidden"
+            f"OpenClaw and DeepSeek both returned empty for {stage}"
         )
 
     async def run_verdict_pass(full_name, ticker, cutoff_date):
         prompt = ca.build_verdict_prompt(full_name, ticker, cutoff_date)
-        print("  🧠 Asking Grok for an independent verdict (native search)…")
+        print("  🧠 Asking the routed LLM for an independent verdict (web search)…")
         try:
             answer = await asyncio.to_thread(
                 call_llm, prompt,
@@ -171,7 +178,7 @@ def install(ca) -> None:
     async def run_catcher_pass(full_name, ticker, cutoff_date, grid, weighted_taxonomy,
                                net_signal, conviction):
         prompt = ca.build_catcher_prompt(full_name, ticker, cutoff_date, grid, net_signal, conviction)
-        print("  🐾 Running Grok catcher (native search)…")
+        print("  🐾 Running routed LLM catcher (web search)…")
         try:
             answer = await asyncio.wait_for(
                 asyncio.to_thread(
@@ -182,10 +189,10 @@ def install(ca) -> None:
                 timeout=900,
             )
             if not answer:
-                print("  ⚠️  Grok catcher empty — original grid")
+                print("  ⚠️  LLM catcher empty — original grid")
                 return grid
         except Exception as e:
-            print(f"  ⚠️  Grok catcher failed: {e}")
+            print(f"  ⚠️  LLM catcher failed: {e}")
             return grid
         try:
             parsed = ca.parse_json(answer) if hasattr(ca, "parse_json") else None
@@ -224,9 +231,8 @@ def install(ca) -> None:
             print(f"    ➕ Catcher added {hit.get('taxonomy')} ({hit.get('event_date', '?')})")
         return grid
 
-    orig_analyze = ca.analyze_stock_async
-
     async def analyze_stock_async(ticker, snapshot, searxng_url):
+        providers_used.clear()
         db_name = snapshot["profile"].get("company_name", "")
         if db_name and db_name.lower() != ticker.lower() and len(db_name) > 2:
             official_name = db_name
@@ -244,7 +250,8 @@ def install(ca) -> None:
 
         catalyst_queries = ca._make_catalyst_templates(full_name)
         context_queries = ca._make_context_templates(full_name)
-        print(f"  ⏳ {len(catalyst_queries)}+{len(context_queries)} queries → Grok native search")
+        print(f"  ⏳ {len(catalyst_queries)}+{len(context_queries)} queries "
+              "→ routed web search")
         search_results_str = _native_search_brief(catalyst_queries)
         context_str = _native_search_brief(context_queries)
         finviz_json = ca.json.dumps(finviz_events, indent=2)
@@ -257,7 +264,7 @@ def install(ca) -> None:
             asyncio.to_thread(call_llm, prompt1, f"Extract events for {full_name}. Search first.", 0.3, 40000, True, f"CATALYST STEP1 {ticker}"),
             asyncio.to_thread(call_llm, prompt2, f"Context for {full_name}. Search first.", 0.3, 40000, True, f"CATALYST STEP2 {ticker}"),
         )
-        print("  ✅ Step 1 + Step 2 Grok done.")
+        print("  ✅ Step 1 + Step 2 LLM done.")
 
         try:
             raw_events = ca.parse_json(step1_raw)
@@ -327,11 +334,17 @@ def install(ca) -> None:
         final_result["net_signal"] = new_signal
         final_result["conviction"] = new_conviction
         gem_verdict, gem_reason = await verdict_task
-        print(f"  🧠 Grok verdict: {gem_verdict or 'N/A'}")
+        print(f"  🧠 Routed verdict: {gem_verdict or 'N/A'}")
         if gem_reason:
             print(f"     Reason: {gem_reason[:200]}")
         final_result["grok_verdict"] = gem_verdict
-        final_result["search_backend"] = "grok_native"
+        final_result["search_backend"] = (
+            "grok_native"
+            if providers_used == {"openclaw"}
+            else "deepseek_fallback"
+            if "deepseek" in providers_used
+            else "routed_search"
+        )
         return final_result
 
     def analyze_stock(ticker, snapshot, searxng_url):
@@ -343,4 +356,4 @@ def install(ca) -> None:
     ca.analyze_stock_async = analyze_stock_async
     ca.analyze_stock = analyze_stock
     ca._GROK_NATIVE_SEARCH = True
-    print("[catalyst] installed Grok native search overlay (SearXNG disabled)")
+    print("[catalyst] installed Grok-primary / DeepSeek-fallback search overlay")
