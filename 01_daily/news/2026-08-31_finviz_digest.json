@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-30T07:26:53.244639-04:00",
-  "export_used": "data/exports/finviz_2026-08-30.csv",
+  "generated_at": "2026-08-31T03:46:56.881325-04:00",
+  "export_used": "data/exports/finviz_2026-08-31.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
   "index_digests": [
@@ -38,7 +38,7 @@
     {
       "ticker": "AAPL",
       "digest": "Apple raises U.S. Apple TV streaming to $14.99 and Apple One to $21.95 per month, effective today",
-      "news_title": "Tim Cook wasn't a 'product guy' - so he re-engineered Apple instead",
+      "news_title": "The architect of Apple's China machine also built its hardest problem",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -71,7 +71,7 @@
     {
       "ticker": "ADBE",
       "digest": "Salesforce earnings beat sparks software rally lifting Adobe 6%",
-      "news_title": "Is Adobe Stocks AI Strategy Worth The Near-Term Risk?",
+      "news_title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -113,6 +113,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "AMGN",
+      "digest": "Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis",
+      "news_title": "AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "AMX",
       "digest": "JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.",
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
@@ -126,7 +137,7 @@
     {
       "ticker": "AMZN",
       "digest": "Evercore ISI's Mahaney raises Amazon 12‑month price target to $355 from $315, reiterates Buy on stronger retail trends",
-      "news_title": "The S&P 500 keeps climbing on days when stocks broadly struggle. Here's what's going on.",
+      "news_title": "6 Numbers That Back Up the AI Trade",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -137,7 +148,7 @@
     {
       "ticker": "AON",
       "digest": "Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity",
-      "news_title": "Q3 2026 Insurance Labor Market Study Results Reflect Slowing Turnover and Modest Growth",
+      "news_title": "AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now",
       "sector": "Financial",
       "industry": "Insurance Brokers",
       "is_dividend": false,
@@ -162,6 +173,17 @@
       "news_title": "Generac Holdings Inc. stock underperforms Thursday when compared to competitors",
       "sector": "Technology",
       "industry": "Electronic Components",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "APO",
+      "digest": "Apollo funds to provide $9B nonvoting minority equity investment in ONEOK to finance Brazos Midstream Permian Midland Basin acquisition and debt reduction",
+      "news_title": "ONEOK to Acquire Brazos Midland Gas Assets for $4.425 Billion",
+      "sector": "Financial",
+      "industry": "Asset Management",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -357,7 +379,7 @@
     {
       "ticker": "CIEN",
       "digest": "Northland upgrades Ciena to Outperform from Market Perform, raises price target to $500 from $450",
-      "news_title": "Arista's Price Assumes The Parts Arrive On Time",
+      "news_title": "Jobs, Broadcom, Dell, Hewlett, Planet Labs, and More to Watch This Week",
       "sector": "Technology",
       "industry": "Communication Equipment",
       "is_dividend": false,
@@ -412,7 +434,7 @@
     {
       "ticker": "CRM",
       "digest": "Salesforce beats Q2 guidance, raises FY27 outlook as analysts lift price targets after 'narrative-changing' results",
-      "news_title": "Why ZM Stock Prints So Much Cash Right Now",
+      "news_title": "Why Retail Traders Couldnt Take Their Eyes Off These Stocks Last Week: NVDA, CRWD, MRVL, CRM, ASTS",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -423,7 +445,7 @@
     {
       "ticker": "CRWD",
       "digest": "Profit-taking drives CRWD pullback after 20% earnings surge on AI-driven results",
-      "news_title": "6 things investors need to watch in the week ahead",
+      "news_title": "CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -566,7 +588,7 @@
     {
       "ticker": "FIX",
       "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
-      "news_title": "How To Bank 17% A Year On FIX Stock Without Selling A Share",
+      "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
       "sector": "Industrials",
       "industry": "Engineering & Construction",
       "is_dividend": false,
@@ -672,28 +694,6 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
-    },
-    {
-      "ticker": "ING",
-      "digest": "ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates",
-      "news_title": "Bessent Has No Easy Fix for Whats Really Driving Bond Yields Up",
-      "sector": "Financial",
-      "industry": "Banks - Diversified",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "INTU",
-      "digest": "JPMorgan and Bank of America cut Intuit to Neutral, slash price targets on weaker FY27 outlook and rising TurboTax, QuickBooks competition",
-      "news_title": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
-      "sector": "Technology",
-      "industry": "Software - Application",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -701,7 +701,7 @@
       {
         "ticker": "AAPL",
         "digest": "Apple raises U.S. Apple TV streaming to $14.99 and Apple One to $21.95 per month, effective today",
-        "news_title": "Tim Cook wasn't a 'product guy' - so he re-engineered Apple instead",
+        "news_title": "The architect of Apple's China machine also built its hardest problem",
         "sector": "Technology",
         "industry": "Consumer Electronics",
         "is_dividend": false,
@@ -712,7 +712,7 @@
       {
         "ticker": "ADBE",
         "digest": "Salesforce earnings beat sparks software rally lifting Adobe 6%",
-        "news_title": "Is Adobe Stocks AI Strategy Worth The Near-Term Risk?",
+        "news_title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -767,7 +767,7 @@
       {
         "ticker": "CIEN",
         "digest": "Northland upgrades Ciena to Outperform from Market Perform, raises price target to $500 from $450",
-        "news_title": "Arista's Price Assumes The Parts Arrive On Time",
+        "news_title": "Jobs, Broadcom, Dell, Hewlett, Planet Labs, and More to Watch This Week",
         "sector": "Technology",
         "industry": "Communication Equipment",
         "is_dividend": false,
@@ -778,7 +778,7 @@
       {
         "ticker": "CRM",
         "digest": "Salesforce beats Q2 guidance, raises FY27 outlook as analysts lift price targets after 'narrative-changing' results",
-        "news_title": "Why ZM Stock Prints So Much Cash Right Now",
+        "news_title": "Why Retail Traders Couldnt Take Their Eyes Off These Stocks Last Week: NVDA, CRWD, MRVL, CRM, ASTS",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -792,6 +792,17 @@
         "ticker": "ABBV",
         "digest": "AbbVie seeks EMA approval for Skyrizi (risankizumab) subcutaneous induction therapy in adults with moderately to severely active Crohn's disease",
         "news_title": "Did A Product Swap Fuel JNJ Stocks 54% Surge?",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "AMGN",
+        "digest": "Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis",
+        "news_title": "AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -864,17 +875,6 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
-      },
-      {
-        "ticker": "ELV",
-        "digest": "Elevance Health CEO disclosed purchasing company shares after the stock’s recent post-earnings slide, signaling insider confidence in the insurer.",
-        "news_title": "Is CVS Stock Set for a Rebound?",
-        "sector": "Healthcare",
-        "industry": "Healthcare Plans",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
       }
     ],
     "Industrials": [
@@ -925,7 +925,7 @@
       {
         "ticker": "FIX",
         "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
-        "news_title": "How To Bank 17% A Year On FIX Stock Without Selling A Share",
+        "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
         "sector": "Industrials",
         "industry": "Engineering & Construction",
         "is_dividend": false,
@@ -971,9 +971,20 @@
       {
         "ticker": "AON",
         "digest": "Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity",
-        "news_title": "Q3 2026 Insurance Labor Market Study Results Reflect Slowing Turnover and Modest Growth",
+        "news_title": "AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now",
         "sector": "Financial",
         "industry": "Insurance Brokers",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "APO",
+        "digest": "Apollo funds to provide $9B nonvoting minority equity investment in ONEOK to finance Brazos Midstream Permian Midland Basin acquisition and debt reduction",
+        "news_title": "ONEOK to Acquire Brazos Midland Gas Assets for $4.425 Billion",
+        "sector": "Financial",
+        "industry": "Asset Management",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1044,17 +1055,6 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
-      },
-      {
-        "ticker": "ING",
-        "digest": "ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates",
-        "news_title": "Bessent Has No Easy Fix for Whats Really Driving Bond Yields Up",
-        "sector": "Financial",
-        "industry": "Banks - Diversified",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
       }
     ],
     "Consumer Cyclical": [
@@ -1072,7 +1072,7 @@
       {
         "ticker": "AMZN",
         "digest": "Evercore ISI's Mahaney raises Amazon 12‑month price target to $355 from $315, reiterates Buy on stronger retail trends",
-        "news_title": "The S&P 500 keeps climbing on days when stocks broadly struggle. Here's what's going on.",
+        "news_title": "6 Numbers That Back Up the AI Trade",
         "sector": "Consumer Cyclical",
         "industry": "Internet Retail",
         "is_dividend": false,
@@ -1305,7 +1305,7 @@
     {
       "ticker": "AAPL",
       "digest": "Apple raises U.S. Apple TV streaming to $14.99 and Apple One to $21.95 per month, effective today",
-      "news_title": "Tim Cook wasn't a 'product guy' - so he re-engineered Apple instead",
+      "news_title": "The architect of Apple's China machine also built its hardest problem",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -1338,7 +1338,7 @@
     {
       "ticker": "ADBE",
       "digest": "Salesforce earnings beat sparks software rally lifting Adobe 6%",
-      "news_title": "Is Adobe Stocks AI Strategy Worth The Near-Term Risk?",
+      "news_title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1380,6 +1380,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "AMGN",
+      "digest": "Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis",
+      "news_title": "AMGEN'S REPATHA REDUCES RISK OF DEATH IN PATIENTS AT HIGH RISK FOR A FIRST HEART ATTACK OR STROKE",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "AMX",
       "digest": "JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.",
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
@@ -1393,7 +1404,7 @@
     {
       "ticker": "AMZN",
       "digest": "Evercore ISI's Mahaney raises Amazon 12‑month price target to $355 from $315, reiterates Buy on stronger retail trends",
-      "news_title": "The S&P 500 keeps climbing on days when stocks broadly struggle. Here's what's going on.",
+      "news_title": "6 Numbers That Back Up the AI Trade",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -1404,7 +1415,7 @@
     {
       "ticker": "AON",
       "digest": "Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity",
-      "news_title": "Q3 2026 Insurance Labor Market Study Results Reflect Slowing Turnover and Modest Growth",
+      "news_title": "AON Flat, KKR Rises Overnight As $17B Insurance Megadeal Reportedly Looms: Retails Bullish On Just One For Now",
       "sector": "Financial",
       "industry": "Insurance Brokers",
       "is_dividend": false,
@@ -1429,6 +1440,17 @@
       "news_title": "Generac Holdings Inc. stock underperforms Thursday when compared to competitors",
       "sector": "Technology",
       "industry": "Electronic Components",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "APO",
+      "digest": "Apollo funds to provide $9B nonvoting minority equity investment in ONEOK to finance Brazos Midstream Permian Midland Basin acquisition and debt reduction",
+      "news_title": "ONEOK to Acquire Brazos Midland Gas Assets for $4.425 Billion",
+      "sector": "Financial",
+      "industry": "Asset Management",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1624,7 +1646,7 @@
     {
       "ticker": "CIEN",
       "digest": "Northland upgrades Ciena to Outperform from Market Perform, raises price target to $500 from $450",
-      "news_title": "Arista's Price Assumes The Parts Arrive On Time",
+      "news_title": "Jobs, Broadcom, Dell, Hewlett, Planet Labs, and More to Watch This Week",
       "sector": "Technology",
       "industry": "Communication Equipment",
       "is_dividend": false,
@@ -1679,7 +1701,7 @@
     {
       "ticker": "CRM",
       "digest": "Salesforce beats Q2 guidance, raises FY27 outlook as analysts lift price targets after 'narrative-changing' results",
-      "news_title": "Why ZM Stock Prints So Much Cash Right Now",
+      "news_title": "Why Retail Traders Couldnt Take Their Eyes Off These Stocks Last Week: NVDA, CRWD, MRVL, CRM, ASTS",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1690,7 +1712,7 @@
     {
       "ticker": "CRWD",
       "digest": "Profit-taking drives CRWD pullback after 20% earnings surge on AI-driven results",
-      "news_title": "6 things investors need to watch in the week ahead",
+      "news_title": "CrowdStrikes AI Security Rally Faces Its Next Test At Fal.Con 2026: What Investors Should Watch",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -1833,7 +1855,7 @@
     {
       "ticker": "FIX",
       "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
-      "news_title": "How To Bank 17% A Year On FIX Stock Without Selling A Share",
+      "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
       "sector": "Industrials",
       "industry": "Engineering & Construction",
       "is_dividend": false,
@@ -2009,7 +2031,7 @@
     {
       "ticker": "KKR",
       "digest": "KKR agrees to pay a record settlement in a premerger-filings case, resolving legal claims over its merger notification practices.",
-      "news_title": "KKR's $250 Million Fine Lands Outside Its Funds",
+      "news_title": "Aon nears around $17B deal to buy KKR-backed USI Insurance  WSJ",
       "sector": "Financial",
       "industry": "Asset Management",
       "is_dividend": false,
@@ -2097,7 +2119,7 @@
     {
       "ticker": "MELI",
       "digest": "Positive growth coverage and institutional buys drive MELI 6% surge",
-      "news_title": "Is The Slide In eBay Stock Actually Worth Buying?",
+      "news_title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -2153,28 +2175,6 @@
       "ticker": "MPWR",
       "digest": "Q2 earnings beat and strong AI guidance propel MPWR 8.35% gain",
       "news_title": "Monolithic Power Systems Inc. stock underperforms Friday when compared to competitors",
-      "sector": "Technology",
-      "industry": "Semiconductors",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "MRNA",
-      "digest": "Argus upgrades Moderna to Buy with $180 target after FDA approves 2026-2027 Spikevax and mNEXSPIKE COVID-19 vaccines",
-      "news_title": "BNTX Stock On Track For Worst Day Since March After Cancer Vaccine Trial Halt  BMO Capital Terms It Clear Setback",
-      "sector": "Healthcare",
-      "industry": "Biotechnology",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "MRVL",
-      "digest": "Marvell sharply raises FY27–FY28 outlook on accelerating AI data center and custom demand",
-      "news_title": "How networking became the critical layer of AI",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,

@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-08-31
 
-_Generated 2026-08-30T07:26:53.244639-04:00 · export=data/exports/finviz_2026-08-30.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-08-31T03:46:56.881325-04:00 · export=data/exports/finviz_2026-08-31.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -18,11 +18,13 @@ _Generated 2026-08-30T07:26:53.244639-04:00 · export=data/exports/finviz_2026-0
 - **ADI** [Technology]: Bernstein and Seaport upgrade Analog Devices on AI data center opportunity and improved risk-reward outlook
 - **ADSK** [Technology]: Autodesk beats Q2 expectations and raises FY27 revenue and billings guidance, bolstered by MaintainX
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
+- **AMGN** [Healthcare]: Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - **AMZN** [Consumer Cyclical]: Evercore ISI's Mahaney raises Amazon 12‑month price target to $355 from $315, reiterates Buy on stronger retail trends
 - **AON** [Financial]: Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity
 - **APD** [Basic Materials]: Air Products beats fiscal Q3 2026 EPS with non-GAAP $3.47, raises FY26 EPS outlook, takes $2.9B clean energy exit charge
 - **APH** [Technology]: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
+- **APO** [Financial]: Apollo funds to provide $9B nonvoting minority equity investment in ONEOK to finance Brazos Midstream Permian Midland Basin acquisition and debt reduction
 - **APP** [Communication Serv]: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
 - **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - **AU** [Basic Materials]: Gold price surge on softer data and FOMC anticipation drives AU up 8.5%
@@ -49,8 +51,6 @@ _Generated 2026-08-30T07:26:53.244639-04:00 · export=data/exports/finviz_2026-0
 - **CRWD** [Technology]: Profit-taking drives CRWD pullback after 20% earnings surge on AI-driven results
 - **CSX** [Industrials]: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - **CVE** [Energy]: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
-- **CVS** [Healthcare]: CVS Health beats Q2 estimates, raises 2026 EPS and cash flow guidance, pre-guides 2027 amid PBM headwinds
-- **DDOG** [Technology]: M&A speculation involving Palo Alto Networks drives DDOG 10% surge
 
 ## By sector (top signal)
 
@@ -63,10 +63,10 @@ _Generated 2026-08-30T07:26:53.244639-04:00 · export=data/exports/finviz_2026-0
 
 ### Healthcare (n=8)
 - ABBV: AbbVie seeks EMA approval for Skyrizi (risankizumab) subcutaneous induction therapy in adults with moderately to severely active Crohn's disease
+- AMGN: Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis
 - ARGX: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - BDX: Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72
 - CAH: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
-- CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
 
 ### Industrials (n=8)
 - AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
@@ -77,10 +77,10 @@ _Generated 2026-08-30T07:26:53.244639-04:00 · export=data/exports/finviz_2026-0
 
 ### Financial (n=8)
 - AON: Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity
+- APO: Apollo funds to provide $9B nonvoting minority equity investment in ONEOK to finance Brazos Midstream Permian Midland Basin acquisition and debt reduction
 - BAM: Brookfield Asset Management, partners and La Caisse close roughly $6.5bn (C$9bn including debt) acquisition of Canadian renewable company Boralex
 - BBVA: BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program
 - BCS: Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge
-- BMO: Bank of Montreal beats fiscal Q3 2026 estimates with non-GAAP EPS $2.86, revenue $7.2B, announces new share buyback plan and higher dividend
 
 ### Consumer Cyclical (n=5)
 - ABNB: Airbnb shares rise after Bernstein lifts its price target to $217 and Evercore ISI raises its target to $200, both citing strengthening post–Q2 growth trends.
