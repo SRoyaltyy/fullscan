@@ -1,8 +1,8 @@
 {
   "ok": false,
-  "n_fail": 5,
+  "n_fail": 4,
   "grok_busy": false,
-  "updated_at": "2026-08-31T03:35:43.396959-04:00",
+  "updated_at": "2026-08-31T09:11:44.936181-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -20,7 +20,7 @@
       "group": "box",
       "status": "WARN",
       "required": true,
-      "detail": "pid=152994 port=up",
+      "detail": "pid=411207 port=up",
       "action": "heal"
     },
     {
@@ -29,7 +29,7 @@
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "active pid=152994 alive",
+      "detail": "active pid=411207 alive",
       "action": "none"
     },
     {
@@ -47,7 +47,7 @@
       "group": "classroom",
       "status": "FAIL",
       "required": true,
-      "detail": "HTTP 401 \u2014 wrong token (64 vs 48)",
+      "detail": "http=500 {\"error\":{\"message\":\"internal error\",\"type\":\"api_error\"}}",
       "action": "heal"
     },
     {
@@ -81,10 +81,10 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "FAIL",
-      "required": true,
-      "detail": "HTTP 401 \u2014 wrong token (64 vs 48)",
-      "action": "heal"
+      "status": "WARN",
+      "required": false,
+      "detail": "401 in last packet 2026-08-26_preopen_status.json, 2026-08-31_map_heat.json \u2014 not live",
+      "action": "none"
     },
     {
       "id": "grok_only",
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=cancelled",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=failure systemd=exit-code",
+      "detail": "latest=cancelled",
       "action": "none"
     },
     {
@@ -164,8 +164,11 @@
       "group": "postclose",
       "status": "FAIL",
       "required": true,
-      "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-30_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json",
+      "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-31_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json",
       "action": "heal"
     }
+  ],
+  "healed": [
+    "enable_openclaw_chat.sh exit=1 11207]: 2026-08-31T21:11:19.685+08:00 [openai-compat] chat completion failed: FailoverError: 403 \"You have run out of credits or need a Grok subscription. Add c"
   ]
 }
