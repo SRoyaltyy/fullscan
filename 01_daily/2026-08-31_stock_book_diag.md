@@ -1,6 +1,6 @@
 # Stock Book readiness — 2026-08-31
 
-**Ranker: READY** · overall **PARTIAL** · 2026-08-31T14:19:01.030051-04:00
+**Ranker: READY** · overall **PARTIAL** · 2026-08-31T15:08:11.332560-04:00
 
 ## Today's actions — 2026-08-31
 
@@ -75,13 +75,22 @@ Domain order: **market · parent · child · company · setup · flow**.
 | **SELL** | 24 | `EOSE` | 🔴🔴🔴⬛⬛⬛🔴🔴🔴🔴⬛🟡 | 🔴🔴🔴🟡🔴🔴 | blocked | -0.489 | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
 | **SELL** | 25 | `ASTS` | 🔴🔴🔴⬛⬛⬛🔴🔴🔴🔴⬛🟡 | 🔴🔴🔴🟡🔴🔴 | blocked | -0.394 | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
 
+### As-of method
+
+- Ranker: **decision_lattice** — 1d gate → route → rank (market / parent / child / company / setup / flow). Scores rank only inside a granted lane.
+- Families present: join, news, ab, peer, heat, general, sector
+- 1d weights: join=0.12 · sector=0.10 · general=0.08 · news=0.25 · ab=0.25 · peer=0.20
+
+- Paper vs SPY: 3d_size +11.2% vs SPY -0.9% from 2026-08-13 through 2026-08-31. The 1d_top sleeve is the names this Action prints; the ~11% prints sat on _size and longer-horizon sleeves of the same weighted books.
+- Best sleeve through this date: `3d_size` +11.2% vs SPY -0.9% (dashboard start 2026-08-13).
+
 FAIL = empty, truncated, carry-forward, timeout stub, or QC fail. PARTIAL = some required outputs are good, others are not. Optional files do not change the workflow flag.
 
 | Workflow | Status | Inputs | Required | Optional | Last GH run |
 |---|---|---|---|---|---|
 | Post-close research | ✅ OK | ready | 2/2 | 2/2 | — |
 | Finviz scrape | ✅ OK | ready | 1/1 | 1/1 | — |
-| Pre-Open ALL | ⚠️ PARTIAL | ready | 17/20 | 2/2 | — |
+| Pre-Open ALL | ⚠️ PARTIAL | ready | 15/20 | 2/2 | — |
 | Label + weather | ✅ OK | ready | 1/1 | — | — |
 | AB checklist | ✅ OK | ready | 1/1 | 1/1 | — |
 | Catalyst dossiers | ❌ FAIL | ready | — | 0/1 | — |
@@ -107,11 +116,13 @@ _Boxes order: join sect gen news dig jdg AB peer heat vol cat buy_
 
 ### How a name gets onto the .io dashboard
 
-- Stock Book ALL calls `python -m src.stock_book` after the upstream files land.
+- As-of **2026-08-31** the ranker was **decision_lattice** — not today's lattice unless that method is decision_lattice.
+- 1d gate → route → rank (market / parent / child / company / setup / flow). Scores rank only inside a granted lane.
+- Families that actually moved the rank: join, news, ab, peer, heat, general, sector.
 - 1d uses gate → route → rank: market permission; parent/child group; direct company evidence; setup/flow.
-- The weighted score ranks only inside an eligible standard, group-leader, or catalyst lane. It cannot offset a hard gate.
-- The source color row remains; a deduplicated six-domain row (MKT,parent,child,company,setup,flow) owns permission.
+- The weighted score ranks only inside an eligible lane.
 - SELL/AVOID uses the bear lattice. Paper does not short.
+- Stock Book ALL calls `python -m src.stock_book` after the upstream files that existed that morning land.
 - paper_trade --top 10 takes the first 10 1d BUY names into the 1d_top sleeve (fill = that day's close).
 - paper_trade writes dashboard/index.html; stock_book_all.yml force-pushes gh-pages → https://sroyaltyy.github.io/fullscan/dashboard/
 
@@ -201,15 +212,15 @@ _Boxes order: join sect gen news dig jdg AB peer heat vol cat buy_
 | `01_daily/sectors/2026-08-31/_board.json` | optional | ✅ OK |  |
 | `01_daily/2026-08-31_preopen_qc.json` | required | ✅ OK | all_ok=True |
 | `01_daily/2026-08-31_preopen_status.json` | required | ✅ OK | all_ok=False missing=['map_heat_research'] |
-| `01_daily/2026-08-31_grok_review.json` | required | ✅ OK | ok=False Core artifacts (general predict, events, news judge, news parse, finviz digest, map-heat tables) are present, same-day,  |
-| `01_daily/sectors/2026-08-31/basic_materials_predict.md` | required | ✅ OK |  |
+| `01_daily/2026-08-31_grok_review.json` | required | ✅ OK | ok=False The core artifacts (general predict, events, news judge, news parse, finviz digest, map-heat tables) are present, same-d |
+| `01_daily/sectors/2026-08-31/basic_materials_predict.md` | required | ⬜ MISSING | missing |
 | `01_daily/sectors/2026-08-31/communication_services_predict.md` | required | ⬜ MISSING | missing |
 | `01_daily/sectors/2026-08-31/consumer_cyclical_predict.md` | required | ✅ OK |  |
 | `01_daily/sectors/2026-08-31/consumer_defensive_predict.md` | required | ✅ OK |  |
 | `01_daily/sectors/2026-08-31/energy_predict.md` | required | ✅ OK |  |
 | `01_daily/sectors/2026-08-31/financial_predict.md` | required | ✅ OK |  |
 | `01_daily/sectors/2026-08-31/healthcare_predict.md` | required | ✅ OK |  |
-| `01_daily/sectors/2026-08-31/industrials_predict.md` | required | ✅ OK |  |
+| `01_daily/sectors/2026-08-31/industrials_predict.md` | required | ⬜ MISSING | missing |
 | `01_daily/sectors/2026-08-31/real_estate_predict.md` | required | ✅ OK |  |
 | `01_daily/sectors/2026-08-31/technology_predict.md` | required | ✅ OK |  |
 | `01_daily/sectors/2026-08-31/utilities_predict.md` | required | ✅ OK |  |

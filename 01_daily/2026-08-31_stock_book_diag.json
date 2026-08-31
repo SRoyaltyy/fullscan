@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31T14:19:01.030051-04:00",
+  "generated_at": "2026-08-31T15:08:11.332560-04:00",
   "ranker_ready": true,
   "overall": "PARTIAL",
   "blockers": [],
@@ -27,6 +27,49 @@
     },
     "url": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
+  "era": {
+    "date": "2026-08-31",
+    "method": "decision_lattice",
+    "process": "1d gate \u2192 route \u2192 rank (market / parent / child / company / setup / flow). Scores rank only inside a granted lane.",
+    "families": [
+      "join",
+      "sector",
+      "general",
+      "news",
+      "ab",
+      "peer"
+    ],
+    "families_present": [
+      "join",
+      "news",
+      "ab",
+      "peer",
+      "heat",
+      "general",
+      "sector"
+    ],
+    "families_absent": [],
+    "weights_1d": [
+      0.12,
+      0.1,
+      0.08,
+      0.25,
+      0.25,
+      0.2
+    ],
+    "general_bias": -0.4675,
+    "general_direction": "down",
+    "n_ab": 2551,
+    "n_peer": 2400,
+    "same_day_general": true,
+    "same_day_sectors": 10,
+    "pile_used": true,
+    "n_pile": 93,
+    "dashboard_start": "2026-08-13",
+    "lattice_live": true,
+    "green_pile_live": true
+  },
+  "rebuilt": false,
   "decisions": {
     "date": "2026-08-31",
     "prior_date": "2026-08-28",
@@ -2245,6 +2288,111 @@
           "bear_decision": "SELL/AVOID \u2014 market=HARD_RED; red domains=parent,child,setup,flow"
         }
       ]
+    },
+    "era": {
+      "date": "2026-08-31",
+      "method": "decision_lattice",
+      "process": "1d gate \u2192 route \u2192 rank (market / parent / child / company / setup / flow). Scores rank only inside a granted lane.",
+      "families": [
+        "join",
+        "sector",
+        "general",
+        "news",
+        "ab",
+        "peer"
+      ],
+      "families_present": [
+        "join",
+        "news",
+        "ab",
+        "peer",
+        "heat",
+        "general",
+        "sector"
+      ],
+      "families_absent": [],
+      "weights_1d": [
+        0.12,
+        0.1,
+        0.08,
+        0.25,
+        0.25,
+        0.2
+      ],
+      "general_bias": -0.4675,
+      "general_direction": "down",
+      "n_ab": 2551,
+      "n_peer": 2400,
+      "same_day_general": true,
+      "same_day_sectors": 10,
+      "pile_used": true,
+      "n_pile": 93,
+      "dashboard_start": "2026-08-13",
+      "lattice_live": true,
+      "green_pile_live": true
+    },
+    "paper": {
+      "start": "2026-08-13",
+      "through": "2026-08-31",
+      "spy_return": -0.008715999999999946,
+      "sleeves": [
+        {
+          "sleeve": "3d_size",
+          "equity": 11080.21,
+          "ret": 0.11153902100146951
+        },
+        {
+          "sleeve": "1m_size",
+          "equity": 11075.13,
+          "ret": 0.1110182626185614
+        },
+        {
+          "sleeve": "2w_top",
+          "equity": 11011.19,
+          "ret": 0.10258875080482288
+        },
+        {
+          "sleeve": "2w_size",
+          "equity": 10925.4,
+          "ret": 0.09602536064685685
+        },
+        {
+          "sleeve": "1w_size",
+          "equity": 10889.35,
+          "ret": 0.09241653148584561
+        },
+        {
+          "sleeve": "1w_top",
+          "equity": 10828.53,
+          "ret": 0.08452859668187362
+        },
+        {
+          "sleeve": "1d_size",
+          "equity": 10758.67,
+          "ret": 0.07927102079960213
+        },
+        {
+          "sleeve": "1m_top",
+          "equity": 10444.09,
+          "ret": 0.044630461657871656
+        },
+        {
+          "sleeve": "1d_top",
+          "equity": 10090.48,
+          "ret": 0.010609391509882826
+        },
+        {
+          "sleeve": "3d_top",
+          "equity": 10072.9,
+          "ret": 0.008848671196999502
+        }
+      ],
+      "best": {
+        "sleeve": "3d_size",
+        "equity": 11080.21,
+        "ret": 0.11153902100146951
+      },
+      "note": "3d_size +11.2% vs SPY -0.9% from 2026-08-13 through 2026-08-31. The 1d_top sleeve is the names this Action prints; the ~11% prints sat on _size and longer-horizon sleeves of the same weighted books."
     },
     "bull_watch": [
       {
@@ -7026,11 +7174,13 @@
       }
     ],
     "how": [
-      "Stock Book ALL calls `python -m src.stock_book` after the upstream files land.",
+      "As-of **2026-08-31** the ranker was **decision_lattice** \u2014 not today's lattice unless that method is decision_lattice.",
+      "1d gate \u2192 route \u2192 rank (market / parent / child / company / setup / flow). Scores rank only inside a granted lane.",
+      "Families that actually moved the rank: join, news, ab, peer, heat, general, sector.",
       "1d uses gate \u2192 route \u2192 rank: market permission; parent/child group; direct company evidence; setup/flow.",
-      "The weighted score ranks only inside an eligible standard, group-leader, or catalyst lane. It cannot offset a hard gate.",
-      "The source color row remains; a deduplicated six-domain row (MKT,parent,child,company,setup,flow) owns permission.",
+      "The weighted score ranks only inside an eligible lane.",
       "SELL/AVOID uses the bear lattice. Paper does not short.",
+      "Stock Book ALL calls `python -m src.stock_book` after the upstream files that existed that morning land.",
       "paper_trade --top 10 takes the first 10 1d BUY names into the 1d_top sleeve (fill = that day's close).",
       "paper_trade writes dashboard/index.html; stock_book_all.yml force-pushes gh-pages \u2192 https://sroyaltyy.github.io/fullscan/dashboard/"
     ]
@@ -7085,7 +7235,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17037,
+          "size": 17108,
           "source": ""
         }
       ]
@@ -7130,7 +7280,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 17,
+      "n_req_ok": 15,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -7183,7 +7333,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 31911,
+          "size": 37656,
           "source": ""
         },
         {
@@ -7193,7 +7343,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12162,
+          "size": 11612,
           "source": ""
         },
         {
@@ -7233,7 +7383,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12237,
+          "size": 13762,
           "source": ""
         },
         {
@@ -7243,7 +7393,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6769,
+          "size": 6941,
           "source": ""
         },
         {
@@ -7253,7 +7403,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 6614,
+          "size": 6623,
           "source": ""
         },
         {
@@ -7263,7 +7413,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['map_heat_research']",
-          "size": 7079,
+          "size": 7314,
           "source": ""
         },
         {
@@ -7272,8 +7422,8 @@
           "path": "01_daily/2026-08-31_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core artifacts (general predict, events, news judge, news parse, finviz digest, map-heat tables) are present, same-day, ",
-          "size": 1021,
+          "reason": "ok=False The core artifacts (general predict, events, news judge, news parse, finviz digest, map-heat tables) are present, same-d",
+          "size": 1316,
           "source": ""
         },
         {
@@ -7281,9 +7431,9 @@
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-08-31/basic_materials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 7396,
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
           "source": ""
         },
         {
@@ -7303,7 +7453,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10268,
+          "size": 10596,
           "source": ""
         },
         {
@@ -7313,7 +7463,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10424,
+          "size": 14186,
           "source": ""
         },
         {
@@ -7323,7 +7473,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 15739,
+          "size": 13232,
           "source": ""
         },
         {
@@ -7333,7 +7483,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 15101,
+          "size": 14651,
           "source": ""
         },
         {
@@ -7343,7 +7493,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 9856,
+          "size": 9480,
           "source": ""
         },
         {
@@ -7351,9 +7501,9 @@
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-08-31/industrials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9249,
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
           "source": ""
         },
         {
@@ -7363,7 +7513,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 9910,
+          "size": 9408,
           "source": ""
         },
         {
@@ -7373,7 +7523,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 8543,
+          "size": 8239,
           "source": ""
         },
         {
@@ -7383,7 +7533,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14597,
+          "size": 9044,
           "source": ""
         }
       ]
@@ -7519,7 +7669,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12237,
+          "size": 13762,
           "source": "preopen"
         },
         {
@@ -7529,7 +7679,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6769,
+          "size": 6941,
           "source": "preopen"
         },
         {
@@ -7559,7 +7709,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12162,
+          "size": 11612,
           "source": "preopen"
         },
         {

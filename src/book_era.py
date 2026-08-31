@@ -280,6 +280,8 @@ def how_steps(era: dict) -> list[str]:
     steps += [
         "Stock Book ALL calls `python -m src.stock_book` after the "
         "upstream files that existed that morning land.",
+        "paper_trade --top 10 takes the first 10 1d BUY names into the "
+        "1d_top sleeve (fill = that day's close).",
         "paper_trade writes dashboard/index.html; stock_book_all.yml "
         "force-pushes gh-pages → https://sroyaltyy.github.io/fullscan/dashboard/",
     ]
