@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 1,
   "grok_busy": false,
-  "updated_at": "2026-08-30T20:49:00.140521-04:00",
+  "updated_at": "2026-08-30T22:19:12.000712-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -167,5 +167,6 @@
       "detail": "history \u2014 401 in 2026-08-26_preopen_status.json, 2026-08-30_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
       "action": "none"
     }
-  ]
+  ],
+  "healed": []
 }
