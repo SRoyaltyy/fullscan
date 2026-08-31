@@ -1,6 +1,6 @@
 # Stock book — 2026-08-31
 
-_Generated 2026-08-31T14:18:58.380427-04:00_
+_Generated 2026-08-31T19:02:44.871995-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -22,7 +22,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - General predict (same-day): -0.47 down (present)
 - Stand-down: **YES — no BUY** — HARD_RED: general down score=-5.85; good=+0.5 vs bad=-7.0; risk=off; red pillars=5; no confirmed direct-company exception
 - Sector predicts this date: 10/11 (ok)
-- News tickers in play: 120
+- News tickers in play: 118
 - AB coverage: 2551 names · peer RS: 2400
 - Universe after liquidity: 2685
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
@@ -31,7 +31,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 ## All-green BUY / SELL
 
 - Stand-down: **no BUY.** HARD_RED: general down score=-5.85; good=+0.5 vs bad=-7.0; risk=off; red pillars=5; no confirmed direct-company exception
-- Pile still computed (93 liquid green of 2685) but is not used to force names into a no-win open.
+- Pile still computed (134 liquid green of 2685) but is not used to force names into a no-win open.
 - SELL still ranks on full weights.
 
 ## Decision lattice — gate → route → rank
@@ -51,41 +51,41 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 
 | # | Ticker | Domains | Lane | Company / group | Decision |
 |---:|--------|---------|------|-----------------|----------|
-| 1 | **CRM** | 🔴🔴🟢🟢🟢🔴 | blocked | direct high digest (same-day): Salesforce beats Q2 guidance, raises FY27 outlook as analysts lift price targets after 'narrative-changing' results; Software - Application +0.4% d1 / +4.2% 1w / +3.0% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; parent sector RED; flow RED; direct catalyst lacks price confirmation / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=GREEN(0.88); setup=GREEN; flow=RED |
+| 1 | **CRM** | 🔴🔴🟢🟢🟢🟡 | blocked | direct high digest (same-day): Salesforce beats Q2 guidance, raises FY27 outlook as analysts lift price targets after 'narrative-changing' results; Software - Application +0.4% d1 / +4.2% 1w / +3.0% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; parent sector RED; direct catalyst lacks price confirmation / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=GREEN(0.88); setup=GREEN; flow=YELLOW |
 | 2 | **AMGN** | 🔴🔴🔴🟢🟢🔴 | blocked | direct high digest (same-day): Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis; Drug Manufacturers - General -0.4% d1 / -3.2% 1w / -1.0% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; parent sector RED; child industry/theme RED; flow RED; direct catalyst lacks price confirmation; v2 domain region red / market=HARD_RED; parent=RED; child=RED/rel=YELLOW; company=GREEN(0.82); setup=GREEN; flow=RED |
 | 3 | **AON** | 🔴🟢🟢🟢🟢🟡 | blocked | direct high digest (same-day): Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity; Insurance Brokers +1.7% d1 / +0.4% 1w / -0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=GREEN(0.72); setup=GREEN; flow=YELLOW |
-| 4 | **BNS** | 🔴🟢🟢🟡🟢🟢 | blocked | direct high digest (stale/undated): Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=GREEN |
-| 5 | **BMO** | 🔴🟢🟢🟡🟢🟢 | blocked | direct high digest (stale/undated): Bank of Montreal beats fiscal Q3 2026 estimates with non-GAAP EPS $2.86, revenue $7.2B, announces new share buyback plan and higher dividend; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=GREEN |
-| 6 | **BKR** | 🔴🟢🟢🟡🟢🟡 | blocked | direct high digest (stale/undated): Baker Hughes wins multi-year Kuwait Oil Company contract as key technology collaborator for Ahmadi Innovation Valley; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
-| 7 | **ING** | 🔴🟢🟢🟡🟢🟢 | blocked | direct high digest (stale/undated): ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=GREEN |
-| 8 | **RES** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 9 | **NOV** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 10 | **BBVA** | 🔴🟢🟢🟡🟢🟡 | blocked | direct high digest (stale/undated): BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
-| 11 | **PBF** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Refining & Marketing +1.6% d1 / +1.0% 1w / +3.1% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 12 | **MPC** | 🔴🟢🟢🟡🟢🔴 | blocked | direct normal digest (stale/undated): Mizuho raises Marathon Petroleum price target to $304 from $284, keeps Neutral after stronger-than-expected Q2 results; Oil & Gas Refining & Marketing +1.6% d1 / +1.0% 1w / +3.1% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; flow RED / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.30); setup=GREEN; flow=RED |
-| 13 | **CAH** | 🔴🔴🟢🟡🟢🟡 | blocked | direct high digest (stale/undated): Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.; Medical Distribution +0.1% d1 / +2.7% 1w / +4.9% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; parent sector RED; direct catalyst lacks price confirmation; legacy Cond red / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
-| 14 | **WTTR** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 15 | **CDNS** | 🔴🔴🟢🟡🟢🟡 | blocked | direct high digest (stale/undated): Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook; Software - Application +0.4% d1 / +4.2% 1w / +3.0% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; parent sector RED; direct catalyst lacks price confirmation / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
+| 4 | **MPC** | 🔴🟢🟢🟡🟢🟢 | blocked | direct normal digest (stale/undated): Mizuho raises Marathon Petroleum price target to $304 from $284, keeps Neutral after stronger-than-expected Q2 results; Oil & Gas Refining & Marketing +1.6% d1 / +1.0% 1w / +3.1% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.30); setup=GREEN; flow=GREEN |
+| 5 | **BNS** | 🔴🟢🟢🟡🟢🟢 | blocked | direct high digest (stale/undated): Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=GREEN |
+| 6 | **BMO** | 🔴🟢🟢🟡🟢🟢 | blocked | direct high digest (stale/undated): Bank of Montreal beats fiscal Q3 2026 estimates with non-GAAP EPS $2.86, revenue $7.2B, announces new share buyback plan and higher dividend; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=GREEN |
+| 7 | **BKR** | 🔴🟢🟢🟡🟢🟡 | blocked | direct high digest (stale/undated): Baker Hughes wins multi-year Kuwait Oil Company contract as key technology collaborator for Ahmadi Innovation Valley; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
+| 8 | **ING** | 🔴🟢🟢🟡🟢🟢 | blocked | direct high digest (stale/undated): ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs; direct catalyst lacks price confirmation / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=GREEN |
+| 9 | **RES** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 10 | **DINO** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Refining & Marketing +1.6% d1 / +1.0% 1w / +3.1% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 11 | **NOV** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 12 | **SLB** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 13 | **HAL** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Equipment & Services +0.9% d1 / +1.6% 1w / +3.7% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 14 | **BBVA** | 🔴🟢🟢🟡🟢🟡 | blocked | direct high digest (stale/undated): BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program; Banks - Diversified +0.9% d1 / +1.4% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
+| 15 | **PBF** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Oil & Gas Refining & Marketing +1.6% d1 / +1.0% 1w / +3.1% vs parent | BLOCK BUY — HARD_RED market closes ordinary/group longs / market=HARD_RED; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 
 ### Bear decisions
 
 | # | Ticker | Domains | Industry | Decision |
 |---:|--------|---------|----------|----------|
-| 1 | **DKS** | 🔴🔴🔴🟡🔴🔴 | Specialty Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2% |
-| 2 | **CSIQ** | 🔴🔴🔴🟡🔴🔴 | Solar | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.5% |
-| 3 | **EVGO** | 🔴🔴🔴🟡🔴🔴 | Specialty Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2% |
-| 4 | **MNSO** | 🔴🔴🔴🟡🔴🔴 | Specialty Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2% |
-| 5 | **BEPC** | 🔴🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0% |
-| 6 | **ATOM** | 🔴🔴🔴🟡🔴🔴 | Semiconductor Equipment & Materials | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -6.0% |
-| 7 | **FLNC** | 🔴🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0% |
-| 8 | **FRVO** | 🔴🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0% |
-| 9 | **VPG** | 🔴🔴🔴🟡🔴🔴 | Scientific & Technical Instruments | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -3.3% |
-| 10 | **AEHR** | 🔴🔴🔴🟡🔴🔴 | Semiconductor Equipment & Materials | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -6.0% |
-| 11 | **SAFX** | 🔴🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0% |
-| 12 | **SHMD** | 🔴🔴🔴🟡🔴🔴 | Specialty Industrial Machinery | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
-| 13 | **AIIO** | 🔴🔴🔴🟡🔴🔴 | Auto Manufacturers | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
-| 14 | **LPTH** | 🔴🔴🔴🟡🔴🔴 | Electronic Components | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
-| 15 | **ORBS** | 🔴🔴🔴🟡🔴🔴 | Packaging & Containers | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 1 | **MNSO** | 🔴🔴🔴🟡🔴🔴 | Specialty Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2% |
+| 2 | **BEPC** | 🔴🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0% |
+| 3 | **DKS** | 🔴🔴🔴🟡🔴🟡 | Specialty Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -5.2% |
+| 4 | **JKS** | 🔴🔴🔴🟡🔴🟡 | Solar | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.5% |
+| 5 | **RGTI** | 🔴🔴🔴🟡🔴🔴 | Computer Hardware | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 6 | **AIIO** | 🔴🔴🔴🟡🔴🔴 | Auto Manufacturers | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 7 | **CSIQ** | 🔴🔴🔴🟡🔴🟡 | Solar | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.5% |
+| 8 | **ORBS** | 🔴🔴🔴🟡🔴🔴 | Packaging & Containers | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 9 | **FCEL** | 🔴🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 10 | **ATOM** | 🔴🔴🔴🟡🔴🟡 | Semiconductor Equipment & Materials | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -6.0% |
+| 11 | **NNBR** | 🔴🔴🔴🟡🔴🔴 | Conglomerates | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 12 | **DHC** | 🔴🔴🔴🟡🔴🔴 | REIT - Healthcare Facilities | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
+| 13 | **VPG** | 🔴🔴🔴🟡🔴🟡 | Scientific & Technical Instruments | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -3.3% |
+| 14 | **ARKO** | 🔴🔴🔴🟡🔴🟡 | Specialty Retail | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -5.2% |
+| 15 | **NPWR** | 🔴🔴🔴🟡🔴🔴 | Specialty Industrial Machinery | SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow |
 
 ## Finviz outperform board (industry + theme)
 
@@ -100,11 +100,11 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 |--------|----------:|----------:|-------:|---------------|
 | Basic Materials | -1.5% | -1.2% | -0.55 |  |
 | Communication Services | +1.4% | +1.3% | — |  |
-| Consumer Cyclical | +1.4% | -0.6% | -0.55 |  |
-| Consumer Defensive | +0.6% | -0.3% | +0.00 |  |
-| Energy | +0.1% | -2.1% | +0.47 | essay UP, tape DOWN |
+| Consumer Cyclical | +1.4% | -0.6% | -0.50 |  |
+| Consumer Defensive | +0.6% | -0.3% | +0.28 |  |
+| Energy | +0.1% | -2.1% | +0.53 | essay UP, tape DOWN |
 | Financial | +0.3% | +0.9% | +0.25 |  |
-| Healthcare | -0.8% | -2.2% | -0.50 |  |
+| Healthcare | -0.8% | -2.2% | -0.55 |  |
 | Industrials | -1.0% | -1.5% | -0.28 |  |
 | Real Estate | -0.4% | -1.3% | -0.55 |  |
 | Technology | -1.4% | +1.2% | -0.28 | essay DOWN, tape UP |
@@ -206,22 +206,22 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Catalyst overlays | **missing / not in ranker** | not in ranker — separate chart workflow |
 | Insider / politician flow | **missing / not in ranker** | no daily file in repo |
 | Industry predict | **found** | not scored (ad-hoc only) |
-| Learnings / mutable policy | **missing / not in ranker** | next predict prompt, not a ticker score |
+| Learnings / mutable policy | **found** | next predict prompt, not a ticker score |
 
 ### Sector LLM bias (1d) — 0 / empty means that essay was not run today
 
 | Sector | bias |
 |--------|------|
 | Basic Materials | -0.55 |
+| Healthcare | -0.55 |
 | Real Estate | -0.55 |
-| Consumer Cyclical | -0.55 |
-| Healthcare | -0.50 |
-| Energy | +0.47 |
+| Energy | +0.53 |
+| Consumer Cyclical | -0.50 |
+| Consumer Defensive | +0.28 |
 | Industrials | -0.28 |
 | Technology | -0.28 |
 | Utilities | -0.28 |
 | Financial | +0.25 |
-| Consumer Defensive | +0.00 |
 
 ### How much each predictor is trusted (graded hit rate)
 
@@ -257,31 +257,31 @@ _HARD_RED: general down score=-5.85; good=+0.5 vs bad=-7.0; risk=off; red pillar
 
 ## 1d AVOID — bottom of the same rank
 
-- **DKS** (large, Consumer Cyclical, $12.2B) score -0.454. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2%
-- **CSIQ** (small, Technology, $890M) score -0.230. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.5%
-- **EVGO** (small, Consumer Cyclical, $437M) score -0.532. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2%
-- **MNSO** (mid, Consumer Cyclical, $2.9B) score -0.442. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2%
-- **BEPC** (mid, Utilities, $5.9B) score -0.443. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0%
-- **ATOM** (micro, Technology, $166M) score -0.299. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -6.0%
-- **FLNC** (mid, Utilities, $2.0B) score -0.432. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0%
-- **FRVO** (mid, Utilities, $4.5B) score -0.391. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0%
-- **VPG** (small, Technology, $850M) score -0.223. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -3.3%
-- **AEHR** (mid, Technology, $2.7B) score -0.153. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -6.0%
-- **SAFX** (micro, Utilities, $152M) score -0.353. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0%
-- **SHMD** (micro, Industrials, $207M) score -0.524. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **AIIO** (small, Consumer Cyclical, $381M) score -0.555. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **LPTH** (small, Technology, $754M) score -0.304. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **ORBS** (small, Consumer Cyclical, $344M) score -0.432. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **QBTS** (mid, Technology, $6.3B) score -0.327. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **JKS** (small, Technology, $701M) score -0.316. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.5%
-- **FCEL** (small, Industrials, $1.4B) score -0.512. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **NNBR** (micro, Industrials, $277M) score -0.460. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **DHC** (small, Real Estate, $1.8B) score -0.515. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **ARKO** (small, Consumer Cyclical, $499M) score -0.348. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -5.2%
-- **EYPT** (small, Healthcare, $393M) score -0.443. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **NPWR** (micro, Industrials, $161M) score -0.406. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **EOSE** (small, Industrials, $1.2B) score -0.489. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
-- **ASTS** (large, Technology, $22.5B) score -0.394. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **MNSO** (mid, Consumer Cyclical, $2.9B) score -0.422. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -5.2%
+- **BEPC** (mid, Utilities, $5.9B) score -0.463. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -4.0%
+- **DKS** (large, Consumer Cyclical, $12.2B) score -0.447. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -5.2%
+- **JKS** (small, Technology, $701M) score -0.348. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.5%
+- **RGTI** (mid, Technology, $5.2B) score -0.249. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **AIIO** (small, Consumer Cyclical, $381M) score -0.545. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **CSIQ** (small, Technology, $890M) score -0.236. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.5%
+- **ORBS** (small, Consumer Cyclical, $344M) score -0.425. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **FCEL** (small, Industrials, $1.4B) score -0.511. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **ATOM** (micro, Technology, $166M) score -0.354. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -6.0%
+- **NNBR** (micro, Industrials, $277M) score -0.459. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **DHC** (small, Real Estate, $1.8B) score -0.534. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **VPG** (small, Technology, $850M) score -0.288. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -3.3%
+- **ARKO** (small, Consumer Cyclical, $499M) score -0.337. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -5.2%
+- **NPWR** (micro, Industrials, $161M) score -0.401. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **EVGO** (small, Consumer Cyclical, $437M) score -0.523. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -5.2%
+- **COHU** (mid, Technology, $2.3B) score -0.100. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow; child lags parent -6.0%
+- **ADTN** (small, Technology, $620M) score -0.251. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **TRT** (micro, Technology, $104M) score -0.379. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -6.0%
+- **MTZ** (large, Industrials, $19.3B) score -0.420. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.4%
+- **VLRS** (small, Industrials, $755M) score -0.427. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
+- **DQ** (small, Technology, $946M) score -0.131. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.5%
+- **CAMT** (mid, Technology, $6.4B) score -0.093. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -6.0%
+- **APG** (large, Industrials, $17.3B) score -0.328. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup; child lags parent -4.4%
+- **JBLU** (small, Industrials, $1.8B) score -0.333. SELL/AVOID — market=HARD_RED; red domains=parent,child,setup,flow
 
 ## 3d BUY (compact — same names, different weights)
 
@@ -305,31 +305,31 @@ _HARD_RED: general down score=-5.85; good=+0.5 vs bad=-7.0; risk=off; red pillar
 
 ## 1m AVOID — bottom of the same rank
 
-- **HPP** (small, Real Estate, $729M) score -0.666. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **HPP** (small, Real Estate, $729M) score -0.704. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **REAX** (small, Real Estate, $464M) score -0.690. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **OPEN** (mid, Real Estate, $3.2B) score -0.688. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **DHC** (small, Real Estate, $1.8B) score -0.683. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **CMTG** (micro, Real Estate, $229M) score -0.672. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LUNR** (mid, Industrials, $2.7B) score -0.666. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EH** (micro, Industrials, $259M) score -0.657. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **REAX** (small, Real Estate, $464M) score -0.652. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **BKSY** (small, Industrials, $970M) score -0.650. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **OPEN** (mid, Real Estate, $3.2B) score -0.648. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **RKLB** (large, Industrials, $38.2B) score -0.647. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **SPIR** (small, Industrials, $528M) score -0.646. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **RKLB** (large, Industrials, $38.2B) score -0.645. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **RCAT** (small, Industrials, $1.3B) score -0.644. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DHC** (small, Real Estate, $1.8B) score -0.644. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **CMTG** (micro, Real Estate, $229M) score -0.639. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **FIP** (small, Industrials, $422M) score -0.635. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **SHMD** (micro, Industrials, $207M) score -0.625. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EVTL** (micro, Industrials, $118M) score -0.620. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **PENN** (mid, Consumer Cyclical, $2.3B) score -0.607. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **FCEL** (small, Industrials, $1.4B) score -0.604. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **LWLG** (small, Basic Materials, $845M) score -0.603. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **KODK** (small, Industrials, $885M) score -0.603. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **RDW** (mid, Industrials, $2.7B) score -0.597. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **AIIO** (small, Consumer Cyclical, $381M) score -0.597. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **EH** (micro, Industrials, $259M) score -0.639. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **FIP** (small, Industrials, $422M) score -0.629. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **BEPC** (mid, Utilities, $5.9B) score -0.622. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **SHMD** (micro, Industrials, $207M) score -0.616. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **EVTL** (micro, Industrials, $118M) score -0.603. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TLN** (large, Utilities, $14.3B) score -0.603. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
+- **FCEL** (small, Industrials, $1.4B) score -0.603. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **MAC** (mid, Real Estate, $7.0B) score -0.602. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **LWLG** (small, Basic Materials, $845M) score -0.601. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **RDW** (mid, Industrials, $2.7B) score -0.595. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **JBGS** (small, Real Estate, $901M) score -0.594. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **STWD** (mid, Real Estate, $5.9B) score -0.594. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BIPC** (mid, Utilities, $5.3B) score -0.592. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **FLNC** (mid, Utilities, $2.0B) score -0.591. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **PCT** (small, Industrials, $1.3B) score -0.587. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EVGO** (small, Consumer Cyclical, $437M) score -0.586. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **GNRC** (large, Industrials, $10.8B) score -0.582. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **BEPC** (mid, Utilities, $5.9B) score -0.582. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EOSE** (small, Industrials, $1.2B) score -0.581. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 

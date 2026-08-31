@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the distinct events. The Finviz event already covers the August 31, 2026 CFO appointment / President's responsibilities expansion, so I'll exclude that. Let me compile the new distinct events.\n\nKey events I've identified:\n1. **Oct 8, 2025** - Leadership change: Jimmy Brock appointed CEO, Paul Lang departs\n2. **Jan 14, 2025** - Merger completion creating Core Natural Resources (CONSOL + Arch)\n3. **Feb 12, 2026** - Q4 2025 results: net loss of $",
+  "raw": "I now have comprehensive information. Let me compile the events. Note that the Finviz event already covers the CFO appointment/executive succession (dated 2026-08-31). However, the Finviz event is dated 2026-08-31 while the actual announcement was 2026-08-19. The Finviz event covers \"Core Natural Resources Expands President's Responsibilities and Appoints New CFO\" - so I should NOT duplicate that specific event. But I can extract the related CFO insider holding and other events.\n\nLet me compile ",
   "ticker": "CNR",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

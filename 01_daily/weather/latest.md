@@ -5,9 +5,9 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -5.8, conf 0.55)
-- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** calm (ratio 1.00 via vix/ma20) spot 15.3
-- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** +0.26
-- **High-impact events:** 6 bullish vs 14 bearish
+- **Yields:** rising (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 14.92
+- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** -0.48
+- **High-impact events:** 6 bullish vs 10 bearish | China: bull
 
 ## Sectors
 
@@ -15,14 +15,14 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 |---|---|---|---|
 | sector:Basic Materials | 🌤️ favorable | medium | news_judge SECTOR Basic Materials [bullish] |
 | sector:Communication Services | ⛅ neutral | medium | finviz sector median week -0.44% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -5.0 dir down conf 0.55 [sector board] |
-| sector:Consumer Defensive | ⛅ neutral | high | sector predict score +0.9 dir flat conf 0.55 [sector board] |
+| sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -4.5 dir down conf 0.5 [sector board] |
+| sector:Consumer Defensive | ⛅ neutral | high | sector predict score +2.5 dir up conf 0.55 [sector board] |
 | sector:Energy | 🌤️ favorable | medium | news_judge SECTOR Energy [bullish] |
-| sector:Financial | ⛅ neutral | high | sector predict score +1.4 dir up conf 0.5 [sector board] |
+| sector:Financial | 🌤️ favorable | high | sector predict score +3.8 dir up conf 0.5 [sector board] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
 | sector:Industrials | 🌧️ hostile | high | sector predict score -4.0 dir down conf 0.55 [sector board] |
-| sector:Real Estate | 🌧️ hostile | high | sector predict score -8.1 dir down conf 0.55 [sector board] |
-| sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
+| sector:Real Estate | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.55 [sector board] |
+| sector:Technology | 🌧️ hostile | high | sector predict score -5.4 dir down conf 0.55 [sector board] |
 | sector:Utilities | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.55 [sector board] |
 
 ## Size
@@ -64,15 +64,15 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
+| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | risk-off — leverage amplifies the downside [factors + general] |
+| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
 | lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
@@ -110,7 +110,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
 | geo:US | 🌧️ hostile | low | mirrors general risk-off [general predict] |
-| geo:ADR-China | ⛅ neutral | low | no high-impact China event flagged |
+| geo:ADR-China | 🌤️ favorable | medium | high-impact China event(s) lean bull [event scanner] |
 
 ## Gates (always-on cautions)
 
