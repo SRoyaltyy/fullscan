@@ -1,8 +1,8 @@
 {
   "ok": false,
-  "n_fail": 1,
+  "n_fail": 5,
   "grok_busy": false,
-  "updated_at": "2026-08-31T01:44:58.022886-04:00",
+  "updated_at": "2026-08-31T03:35:43.396959-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -18,10 +18,10 @@
       "id": "process",
       "name": "OpenClaw process",
       "group": "box",
-      "status": "OK",
+      "status": "WARN",
       "required": true,
-      "detail": "pid=152994 pong ok",
-      "action": "none"
+      "detail": "pid=152994 port=up",
+      "action": "heal"
     },
     {
       "id": "gateway",
@@ -45,19 +45,19 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "OK",
+      "status": "FAIL",
       "required": true,
-      "detail": "PONG model=openclaw/default",
-      "action": "none"
+      "detail": "HTTP 401 \u2014 wrong token (64 vs 48)",
+      "action": "heal"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "OK",
+      "status": "FAIL",
       "required": true,
-      "detail": "model=openclaw/default",
-      "action": "none"
+      "detail": "no 200 chat",
+      "action": "heal"
     },
     {
       "id": "token",
@@ -65,7 +65,7 @@
       "group": "classroom",
       "status": "WARN",
       "required": true,
-      "detail": "json=48 env=48 \u2014 preopen_all.yml injects 64-char GitHub secret",
+      "detail": "json=48 env=48 \u2014 preopen_all.yml injects 64-char GitHub secret; map_heat_postclose.yml injects 64-char GitHub secret",
       "action": "heal"
     },
     {
@@ -81,18 +81,18 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "OK",
+      "status": "FAIL",
       "required": true,
-      "detail": "live PONG 200 \u2014 last packet 401 is history",
-      "action": "none"
+      "detail": "HTTP 401 \u2014 wrong token (64 vs 48)",
+      "action": "heal"
     },
     {
       "id": "grok_only",
       "name": "GROK_ONLY",
       "group": "classroom",
-      "status": "WARN",
+      "status": "OK",
       "required": false,
-      "detail": "preopen_all.yml still injects DEEPSEEK_API_KEY \u2014 GROK_ONLY must block it",
+      "detail": "Grok primary + DeepSeek fallback enabled in preopen + postclose yaml",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=failure systemd=exit-code",
       "action": "none"
     },
     {
@@ -162,11 +162,10 @@
       "id": "stub",
       "name": "Packet stubs",
       "group": "postclose",
-      "status": "WARN",
-      "required": false,
-      "detail": "history \u2014 401 in 2026-08-26_preopen_status.json, 2026-08-30_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
-      "action": "none"
+      "status": "FAIL",
+      "required": true,
+      "detail": "401 in 2026-08-26_preopen_status.json, 2026-08-30_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json",
+      "action": "heal"
     }
-  ],
-  "healed": []
+  ]
 }
