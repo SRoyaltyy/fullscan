@@ -559,7 +559,7 @@ def extract_decisions(date: str) -> dict:
             "upstream files land.",
             "core_h = w_join·s_join + w_sector·s_sector + w_gen·s_gen + "
             "w_news·s_news + w_ab·s_ab + w_peer·s_peer + s_heat.",
-            "BUY fills from the green pile (join/gen/AB/peer all green, "
+            "BUY fills from the green pile (join/AB/peer green, "
             "sector/news not red) when the pile is thick enough; otherwise "
             "the weighted score. Caps: $400M min, 4/sector, 4 large-mega.",
             "SELL ranks on core only and never shorts a green name. "

@@ -908,6 +908,21 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             mask = join["Ticker"].isin(held) & ~fresh
             join.loc[mask, f"score_{h}"] = join.loc[mask, f"score_{h}"] - PERSIST_PENALTY
 
+    try:
+        from . import book_marks
+        join = book_marks.attach(join, date)
+        join = book_marks.apply_blue_boost(join, HORIZONS)
+        meta["lookback_marks"] = {
+            "n_alarm": int(join["lb_alarm"].sum()) if "lb_alarm" in join.columns else 0,
+            "n_fade": int(join["lb_fade"].sum()) if "lb_fade" in join.columns else 0,
+            "n_blue": int(join["lb_blue"].sum()) if "lb_blue" in join.columns else 0,
+            "n_white": int(join["lb_zero_red"].sum()) if "lb_zero_red" in join.columns else 0,
+            "white_is_gate": False,
+            "vetoes": ["alarm", "fade_setup", "cond=bad", "region=bad"],
+        }
+    except Exception as e:  # noqa: BLE001 — marks must never kill the book
+        print(f"[stock-book] lookback marks skipped: {e}")
+
     def reasons(row):
         bits = []
         if abs(row["s_join"]) > 0.12:
@@ -942,6 +957,18 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
             bits.append(f"mid_opp={opp:+.2f}")
         if row.get("rebound"):
             bits.append("rebound_floor")
+        if row.get("lb_alarm"):
+            bits.append("🚨")
+        if row.get("lb_blue"):
+            bits.append("🔵")
+        if row.get("lb_zero_red"):
+            bits.append("⚪")
+        cond = row.get("lb_cond")
+        if isinstance(cond, str) and cond and cond not in ("missing", "nan"):
+            bits.append(f"cond={cond}")
+        tags = row.get("lb_tags")
+        if isinstance(tags, str) and tags:
+            bits.append(tags)
         return "; ".join(bits)
 
     join["reasons"] = join.apply(reasons, axis=1)
@@ -985,6 +1012,11 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     if rel is not None:
         printed = rel.notna() & (rel > 0)
         veto |= printed & (rel < green_pile.RELVOL_DEAD)
+    try:
+        from . import book_marks
+        veto |= book_marks.veto_mask(df)
+    except Exception:
+        pass
     return veto
 
 
@@ -1113,6 +1145,14 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "s_sector": _f("s_sector"),
         "s_news": _f("s_news"),
         "green": bool(r.get("green", False)),
+        "lb_cond": r.get("lb_cond"),
+        "lb_region": r.get("lb_region"),
+        "lb_alarm": bool(r.get("lb_alarm", False)),
+        "lb_blue": bool(r.get("lb_blue", False)),
+        "lb_zero_red": bool(r.get("lb_zero_red", False)),
+        "lb_fade": bool(r.get("lb_fade", False)),
+        "lb_tags": r.get("lb_tags") or "",
+        "lb_setups": r.get("lb_setups") or "",
     }
 
 
@@ -1263,6 +1303,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "market_cap_m", "avg_vol_k", "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_general", "s_news", "s_ab", "s_peer", "s_opp",
         "s_opp_raw", "s_heat_raw", "s_heat", "green", "green_rank", "relvol",
+        "lb_cond", "lb_region", "lb_zero_red", "lb_blue", "lb_alarm",
+        "lb_fade", "lb_tags", "lb_setups", "lb_points",
         # per-horizon LLM components + core scores: this CSV is the learning
         # snapshot book_learn re-scores under candidate weights
         *[f"s_sector_{h}" for h in HORIZONS],
@@ -1335,7 +1377,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "5. **Peer RS** — this week's return vs that name's own correlated basket. Kills XLE clones.",
         "6. **Mid-cap opportunity** — extra points for liquid small/mid ($400M–$20B) that are not jammed at the 52-week high. Micros skipped. Max 4 large/mega.",
         "",
-        "**All-green BUY.** A name is green when join, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). General is a market-wide SPX stamp — a modest red general does not empty the pile. A hard-red general (≤ −0.25) is a veto unless the same-day sector call is green. Event-scanner sector tilt is clipped to ±0.20 so it cannot invert the day's essay. mid_opp is capped at +0.20 and zeroed on hard sector-red names. BUY also drops LAG+peer-losers and printed dead volume. If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile by green_rank (no opp). If the pile is thinner (usually AB or peers all zeros), the ranker keeps the weighted walk under the same vetoes. **SELL always ranks on core weights** and never shorts a green name when the pile is used.",
+        "**All-green BUY.** A name is green when join, AB, and peer are all ≥ +0.05, sector and news are not red, and relvol is not dead (< 0.7). General is a market-wide SPX stamp — a modest red general does not empty the pile. A hard-red general (≤ −0.25) is a veto unless the same-day sector call is green. Event-scanner sector tilt is clipped to ±0.20 so it cannot invert the day's essay. mid_opp is capped at +0.20 and zeroed on hard sector-red names. BUY also drops LAG+peer-losers, printed dead volume, and the lookback marks the sheet already used: 🚨 alarm (purely worse), Cond-red, region-red, and featured fade setups (first_crack / alarm|heat=bad). 🔵 blue gets a small boost. ⚪ white (no red cells) is recorded but not a hard gate — a red general makes it empty. If ≥ 8 liquid green names survive the $400M / 4-per-sector / 3-per-industry / 4 large-mega caps, BUY 15 is filled from that pile by green_rank (no opp). If the pile is thinner (usually AB or peers all zeros), the ranker keeps the weighted walk under the same vetoes. **SELL always ranks on core weights** and never shorts a green name when the pile is used.",
         "",
         "**1d** leans on news + AB + peers. **1m** drops news and leans on AB + peers + join.",
         "A sector headline (e.g. ADBE) cannot zero a mid-cap that just beat earnings or is leading its own peers.",
