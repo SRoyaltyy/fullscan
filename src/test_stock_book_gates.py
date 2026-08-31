@@ -133,6 +133,20 @@ def test_opp_cap_constant() -> None:
     assert HARD_SECTOR_RED == -0.25
 
 
+def test_20260831_sleeve_drops_broken_names() -> None:
+    from pathlib import Path
+    import json
+    p = Path("data/stock_book/2026-08-31_stock_book.json")
+    if not p.exists():
+        return
+    book = json.loads(p.read_text(encoding="utf-8"))
+    buys = [r["ticker"] for r in (book.get("books") or {}).get("1d", {}).get("buy") or []]
+    if not buys:
+        return
+    for bad in ("WAY", "PBH", "NFG"):
+        assert bad not in buys[:10], f"{bad} still in 1d sleeve: {buys[:10]}"
+
+
 def main() -> None:
     tests = [
         test_event_tilt_cannot_invert_essay,
@@ -141,6 +155,7 @@ def main() -> None:
         test_dead_relvol_is_buy_veto,
         test_pile_sorts_by_green_rank_not_opp_score,
         test_opp_cap_constant,
+        test_20260831_sleeve_drops_broken_names,
     ]
     failed = 0
     for fn in tests:
