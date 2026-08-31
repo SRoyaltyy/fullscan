@@ -5,54 +5,54 @@ Export `finviz_2026-08-28.csv` · 11654 names · generated 2026-08-29T04:31:45.8
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7692.25 | -0.39% |
-| Nasdaq 100 (NQ) | 29340.0 | -0.51% |
-| Russell 2000 (ER2) | 2967.6 | -0.33% |
-| DJIA (YM) | 53416.0 | -0.31% |
-| VIX (VX) | 17.35 | +2.45% |
-| Crude Oil WTI (CL) | 85.56 | +2.59% |
-| Crude Oil Brent (QA) | 90.55 | +2.78% |
-| Natural Gas (NG) | 2.871 | -0.59% |
-| Heating Oil (HO) | 4.3202 | +1.68% |
-| Gasoline RBOB (RB) | 3.0772 | +0.89% |
-| Gold (GC) | 4476.4 | -1.18% |
-| Silver (SI) | 66.72 | -1.57% |
-| Copper (HG) | 6.6125 | -0.70% |
-| Platinum (PL) | 1823.9 | -1.64% |
-| Palladium (PA) | 1417.0 | -2.07% |
-| USD (DX) | 99.545 | -0.11% |
-| EUR (6E) | 1.1598 | +0.09% |
-| JPY (6J) | 0.62639 | +0.20% |
+| S&P 500 (ES) | 7702.25 | -0.26% |
+| Nasdaq 100 (NQ) | 29423.0 | -0.24% |
+| Russell 2000 (ER2) | 2971.7 | -0.20% |
+| DJIA (YM) | 53455.0 | -0.24% |
+| VIX (VX) | 17.25 | +1.56% |
+| Crude Oil WTI (CL) | 85.56 | +2.58% |
+| Crude Oil Brent (QA) | 90.47 | +2.68% |
+| Natural Gas (NG) | 2.872 | -0.52% |
+| Heating Oil (HO) | 4.3265 | +1.80% |
+| Gasoline RBOB (RB) | 3.0817 | +0.99% |
+| Gold (GC) | 4472.5 | -1.29% |
+| Silver (SI) | 67.115 | -1.00% |
+| Copper (HG) | 6.6665 | +0.09% |
+| Platinum (PL) | 1810.0 | -2.39% |
+| Palladium (PA) | 1412.5 | -2.38% |
+| USD (DX) | 99.57 | -0.09% |
+| EUR (6E) | 1.15965 | +0.07% |
+| JPY (6J) | 0.62655 | +0.22% |
 | GBP (6B) | 1.3542 | +0.09% |
-| AUD (6A) | 0.7165 | +0.11% |
-| CAD (6C) | 0.72035 | +0.11% |
-| CHF (6S) | 1.23889 | +0.14% |
-| NZD (6N) | 0.5918 | +0.12% |
+| AUD (6A) | 0.7161 | +0.07% |
+| CAD (6C) | 0.7202 | +0.09% |
+| CHF (6S) | 1.23735 | +0.02% |
+| NZD (6N) | 0.5918 | +0.13% |
 | 10 Year Note (ZN) | 107.953125 | +0.07% |
 | 5 Year Note (ZF) | 105.8671875 | +0.06% |
 | 2 Year Note (ZT) | 102.66015625 | +0.04% |
-| 30 Year Bond (ZB) | 109.3125 | +0.09% |
-| Nikkei 225 (NKD) | 65325.0 | -0.68% |
-| DAX (DY) | 26506.0 | -0.42% |
-| Euro Stoxx 50 (EX) | 6471.0 | -0.48% |
-| Corn (ZC) | 539.75 | +0.61% |
-| Soybeans (ZS) | 1291.0 | +0.23% |
-| Wheat (ZW) | 778.5 | -0.70% |
-| Soybean oil (ZL) | 70.72 | -0.14% |
-| Soybean Meal (ZM) | 339.7 | -0.82% |
-| Oats (ZO) | 373.75 | -0.27% |
+| 30 Year Bond (ZB) | 109.25 | +0.03% |
+| Nikkei 225 (NKD) | 66185.0 | +0.59% |
+| DAX (DY) | 26548.0 | -0.29% |
+| Euro Stoxx 50 (EX) | 6485.0 | -0.26% |
+| Corn (ZC) | 537.75 | +0.19% |
+| Soybeans (ZS) | 1287.0 | -0.10% |
+| Wheat (ZW) | 774.5 | -1.24% |
+| Soybean oil (ZL) | 70.58 | -0.34% |
+| Soybean Meal (ZM) | 338.5 | -1.20% |
+| Oats (ZO) | 371.5 | -0.80% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
 | Coffee (KC) | 312.6 | +1.03% |
 | Sugar (SB) | 17.56 | -3.46% |
-| Cotton (CT) | 91.62 | +0.26% |
+| Cotton (CT) | 92.03 | +0.65% |
 | Cocoa (CC) | 6636.0 | +7.69% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 77835.0 | +0.00% |
-| Canola (RS) | 823.0 | -0.08% |
+| Bitcoin (BTC) | 77925.0 | +0.08% |
+| Canola (RS) | 820.1 | -0.44% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -102,7 +102,7 @@ Econ (importance ≥ 2):
 
 Mega-cap earnings:
 - AMC **AVGO**  EPS est 3.2154  (Broadcom Inc)
-- AMC **PANW**  EPS est 0.9768  (Palo Alto Networks Inc)
+- AMC **PANW**  EPS est 0.9776  (Palo Alto Networks Inc)
 - AMC **DELL**  EPS est 4.9126  (Dell Technologies Inc)
 - BMO **MDT**  EPS est 1.3884  (Medtronic Plc)
 - AMC **ADBE**  EPS est 6.0674  (Adobe Inc)
@@ -128,14 +128,14 @@ Mega-cap earnings:
 - BMO **NIO**  EPS est -0.055  (NIO Inc ADR)
 
 Options event-vol flags (NOT direction):
-- **AVGO** exp 2026-08-31 ATM IV 0.4468 implied move +2.3% put/call OI 0.381
-- **PANW** exp 2026-09-04 ATM IV 1.007 implied move +11.8% put/call OI 0.38
-- **DELL** exp 2026-09-04 ATM IV 1.2059 implied move +14.1% put/call OI 1.171
-- **MDT** exp 2026-09-04 ATM IV 0.5374 implied move +6.3% put/call OI 0.266
-- **ADBE** exp 2026-09-04 ATM IV 0.4741 implied move +5.5% put/call OI 0.015
-- **SNOW** exp 2026-09-04 ATM IV 1.3261 implied move +15.5% put/call OI 0.651
-- **HPE** exp 2026-09-04 ATM IV 1.2051 implied move +14.1% put/call OI 2.185
-- **CIEN** exp 2026-09-04 ATM IV 1.2906 implied move +15.1% put/call OI 0.211
+- **AVGO** exp 2026-08-31 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **PANW** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **DELL** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **MDT** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **ADBE** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **SNOW** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI —
+- **HPE** exp 2026-09-04 ATM IV 0.0078 implied move +0.1% put/call OI —
+- **CIEN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI nan
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -252,31 +252,31 @@ COLD (1w):
 - **Energy** -0.1% 1d -0.8% 1w · XLE, AMLP, VDE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 27 min **ASTS,CRM,CRWD,MRVL,NVDA** Why Retail Traders Couldnt Take Their Eyes Off These Stocks Last Week: NVDA, CRWD, MRVL, CRM, ASTS (Stocktwits)
-- 30 min **PYPL** PayPal Stock Posts Worst Week In Over 6 Months As Buyout Reportedly Falls Apart  But Retail Isn't Ready To Give Up (Stocktwits)
-- 52 min **AAPL,GOOG,GOOGL,QCOM** Weekly news roundup: US pressures Korea chip investment, MediaTek wins Google TPU, Apple debuts 2nm M6 (DigiTimes)
-- 1 hour **GM** Unifor autoworkers ratify contracts with GM Canada. What happens next? (Detroit Free Press)
-- 1 hour **EIX** SCE Calls for Comprehensive Wildfire Reform to Protect Communities and Keep Bills Affordable (Business Wire)
-- 1 hour **AAPL** John Ternus to lead Apple into the age of AI (AFP)
-- 1 hour **AXP,DASH** High-End Credit Cardholders Find It's Harder to Get Their Money's Worth (The Wall Street Journal)
-- 1 hour **GM** GM's Canadian workers approve deal adding truck to Ontario plant amid US trade war (Reuters)
-- 2 hours **HCM** HUTCHMED Announces SANOVO Trial Demonstrated Significant Progression-Free Survival Benefit of ORPATHYS Plus TAGRISSO in Treatment-Naive Patients with MET-Overexpressing EGFR-mutated Lung Cancer in China (GlobeNewswire)
-- 2 hours **AAPL,NVDA** Podcast highlights: Xiaomi's 3nm chip cap, HBM in Malaysia, and Nvidia's margin tradeoff (DigiTimes)
-- 2 hours **NVDA** Nan Juen to ship Vera Rubin rails in August, ramp ASIC in September (DigiTimes)
-- 2 hours **UVV** USI advances optical interconnect push with ELSFP laser module (DigiTimes)
-- 3 hours **FFAI** Faraday Future Founder and Global CEO YT Jia Shares Weekly Investor Update: New Robot Deliveries and Updates from the Middle East; Recap on FF EAI Robotics "Built in USA" Business Partner Conference Held Last Week; RoboShare Officially Launched (Business Wire)
-- 4 hours **FFAI** Faraday Future expands robotics push in Middle East, set to launch new products (Investing.com)
-- 5 hours **CVX,FANG** Soap Cocktails Help U.S. Shale Boost Oil Production (Oilprice.com)
-- 5 hours **OKE** ONEOK Announces Cash Tender Offers in Connection with $5 Billion Debt Repayment Plan (PR Newswire)
-- 5 hours **APO,OKE** ONEOK to Acquire Brazos Midstream's Permian Midland Basin Assets for $4.425 Billion (PR Newswire)
-- 6 hours **NOW** Serval Bets It Can Automate the Work IT Admins Used to Do  and ServiceNow Should Pay Attention (Forkast News)
-- 6 hours **PCG** PG&E Statement on Senate Bill 492 (PR Newswire)
-- 6 hours **MSTR,STRC** Strategys Bitcoin Is $2.8 Billion in ProfitIs Saylor Teeing Up a Buy? (decrypt)
-- 7 hours **CRM** Helium Price Soars 170% in One Weekend: Is It Too Late to Buy HNT Now? (BeInCrypto)
-- 8 hours **MSTR,STRC** Michael Saylor Says We're Back': 3 Reasons MicroStrategy May Resume Buying Bitcoin (BeInCrypto)
-- 8 hours **AVGO,CIEN,DELL,HPE** Jobs, Broadcom, Dell, Hewlett, Planet Labs, and More to Watch This Week (Barrons.com)
-- 8 hours **AON,KKR** Aon nears around $17B deal to buy KKR-backed USI Insurance  WSJ (Investing.com)
-- 9 hours **AVGO,HPE,NVDA** Futures Set to Trade Ahead of Jobs Data, Tech Earnings (Barrons.com)
+- 16 min **NVDA** NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America (Stocktwits)
+- 23 min **LX** LexinFintech Holdings Ltd. Reports Second Quarter 2026 Unaudited Financial Results (GlobeNewswire)
+- 24 min **BBW** Michael Burrys Build-A-Bear Bet Takes A Hit As Stock Suffers Worst Week Since COVID Rout  I Spy An Atypical Turnaround Dance (Stocktwits)
+- 52 min **ADBE,LULU,MELI,MOH,MU** Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared (Stocktwits)
+- 57 min **LCO** U.S., Iran trade strikes for first time since July; Trump threatens Kharg attacks (Investing.com)
+- 1 hour **SPCX,TSLA** OpenAI to pull its models from Cursor, highlighting tension with SpaceX's Elon Musk (DigiTimes)
+- 1 hour **UMC** Samsung Galaxy Z Fold8 demand surges, straining UMC 22nm DDI supply (DigiTimes)
+- 1 hour **ELF** e.l.f. Beauty and Parity Release "Girls Who Play Change the Game", Connecting Girls' Sports Participation to Long-Term Workplace Impact (Business Wire)
+- Aug-30 **DT,ESTC,TEAM** Why Did ESTC, TEAM, DT Stocks Hit 52-Week Highs Last Week? (Stocktwits)
+- Aug-30 **INTC,SKHY** INTC Stocks Next Boost Could Be Here: Report Says Intel May Land Korea's SK Hynix As Major Customer (Stocktwits)
+- Aug-30 **ABSI,MANE** Hair Loss Biotechs Emerge As Wall Street's Newest Growth Trade (BeInCrypto)
+- Aug-30 **BLK,CRCL** BlackRock's BUIDL Reclaims Top Spot for Tokenized Treasuries, Bolstering RWA Market (BeInCrypto)
+- Aug-30 **GS,KLAR** Why Is KLAR Stock Rising In Overnight Trading? (Stocktwits)
+- Aug-30 **ABTC,HUT** Eric Trump Says American Bitcoin Mines Up to 13 BTC Daily at 49% Margins (BeInCrypto)
+- Aug-30 **NVDA** SiFive BigSky brings RISC-V into data centers with CUDA, Nvidia links and enterprise Linux (DigiTimes)
+- Aug-30 **APO** ONEOK to Acquire Brazos Midland Gas Assets for $4.425 Billion (Oilprice.com)
+- Aug-30 **AZN,SLS** SLS Stock Rises Overnight: Healthcare Execs Tout AML Drug As Game Changer Ahead Of Final Trial Trigger (Stocktwits)
+- Aug-30 **SPCX** Musk tackles key AI power bottleneck with in-house turbine foundry (DigiTimes)
+- Aug-30 **GRND** Grindr wants to be the everything app for gay men; investors are still deciding whether it can pull it off (TechCrunch)
+- Aug-30 **AAPL** AAPL Stock Heads For Another Green Month As John Ternus Takes The Reins From Tim Cook: What Could Change? (Stocktwits)
+- Aug-30 **AMD,ANET,FIX,KLAC,LITE** Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme (BeInCrypto)
+- Aug-30 **ASTS,CRM,CRWD,MRVL,NVDA** Why Retail Traders Couldnt Take Their Eyes Off These Stocks Last Week: NVDA, CRWD, MRVL, CRM, ASTS (Stocktwits)
+- Aug-30 **PYPL** PayPal Stock Posts Worst Week In Over 6 Months As Buyout Reportedly Falls Apart  But Retail Isn't Ready To Give Up (Stocktwits)
+- Aug-30 **AAPL,GOOG,GOOGL,QCOM** Weekly news roundup: US pressures Korea chip investment, MediaTek wins Google TPU, Apple debuts 2nm M6 (DigiTimes)
+- Aug-30 **NVDA,SKHY** SK Hynix Weighs Japan Memory Fab Partnership to Supply AI Boom (Bloomberg)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
