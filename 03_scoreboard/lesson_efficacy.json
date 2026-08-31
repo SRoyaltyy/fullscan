@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-29T04:30:49.110144-04:00",
+  "generated_at": "2026-08-31T16:50:20.742282-04:00",
   "window": 7,
   "summary": {
-    "n_active": 118,
+    "n_active": 120,
     "n_judged": 46,
     "improved": 3,
     "flat": 1,
@@ -1205,6 +1205,13 @@
       "verdict": "WORSE"
     },
     {
+      "lesson": "envelope-date-is-a-us-cash-closed-day-weekend-holiday-and-or.md",
+      "topic": null,
+      "active_since": "2026-08-31",
+      "error_category": "D",
+      "verdict": "not market-graded"
+    },
+    {
       "lesson": "escalating-geopolitical-oil-supply-shock-catalyst-hormuz-typ.md",
       "topic": "sector:Energy",
       "active_since": "2026-08-27",
@@ -1601,6 +1608,13 @@
       },
       "delta": -0.467,
       "verdict": "WORSE"
+    },
+    {
+      "lesson": "this-shows-up-on-1w-books-when-the-news-family-is-absent-and.md",
+      "topic": null,
+      "active_since": "2026-08-31",
+      "error_category": "C",
+      "verdict": "not market-graded"
     },
     {
       "lesson": "two-name-duration-growth-book-xlc-like-meta-googl-spine-with.md",

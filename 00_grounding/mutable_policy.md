@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-08-29
+updated: 2026-08-31
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-08-29**. Promoted: 0. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-08-31**. Promoted: 2. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -428,6 +428,12 @@ falsifier: "If this exact setup
 trigger_pattern: "Energy/XLE prediction where premarket oil is green (CL/BZ up) and a geopolitical supply-shock catalyst is actively in the same-day news cycle, but the model anchors to the prior 1d flat/negative XLE tape and to negative demand-side offsets (inventory build, IEA/OPEC) and mechanically caps the call at up/mild. The catalyst can re-ignite intraday and produce notable relative outperformance."
 corrected_behavior: "Separate a stale catalyst from an escalating one. If oil futures are green premarket AND the geopolitical supply-risk catalyst is still in current headlines, treat the oil spine as the dominant S1 driver; do not let demand-side negatives cap S1 at +1.0 when the live catalyst is supply-positive. Do not require the prior 1d XLE tape to have already confirmed leade
 
+### envelope-date-is-a-us-cash-closed-day-weekend-holiday-and-or.md
+---
+trigger_pattern: "Envelope date is a US cash-closed day (weekend/holiday) and/or premarket YYYY-MM-DD_predict.md is absent/empty/missing SCORES_BEGIN at open or grade time, while Channel 1 still injects a prior cash session’s OHLC."
+corrected_behavior: "OPS calendar+file gate before grade: if the envelope date is not a US cash session OR predict.md lacks SCORES_BEGIN, keep ops_fail=true, hits None, skip B0–B7, do not pair a weekend job to a prior Thursday/Friday tape as a market miss; on the next cash open verify/retry predict.md before 09:30 ET and alert ops; snapshot must not paint WRONG when ops_fail; increment existing D-ops occurrences, write no reasoning lesson."
+falsifier: "If a present valid predict.md with SCORES_BEGIN on a real cash session is marked ops_fail, or a weekend fi
+
 ### escalating-geopolitical-oil-supply-shock-catalyst-hormuz-typ.md
 ---
 trigger_pattern: "Escalating geopolitical oil/supply-shock catalyst (Hormuz-type, Brent up >+1% and near multi-year highs) is present, but the energy equity ETF is extremely extended/overbought (RSI >70, 1w relative return >+5%) and the broad equity tape is turning risk-off into commodities while equities fade. In this setup, oil can rally while XLE closes flat-to-down as profit-taking and crowding unwind in the equity complex. An oil-up signal is not sufficient for an energy-equity-up call."
@@ -634,6 +640,12 @@ corrected_behavior: "When a fresh comparable top-holding catalyst is present, do
 trigger_pattern: "Sector prediction made when the sector's dominant commodity spine (oil) is green premarket and the geopolitical supply-risk catalyst is actively escalating (fresh attacks, disrupted chokepoint, collapsed talks), while the broad market is flat/negative. The sector has already run hard over 1w, creating a temptation to cap S1 or downgrade magnitude."
 corrected_behavior: "No correction. Continue applying the 08-14 active-escalation refinement: verify oil's live sign, distinguish active vs stale catalyst using same-morning headlines, and let S1 carry with S0 muted. The scoreboard magnitude hit is supported by the +1.55% relative beat even though the absolute +1.08% can read as mild in prose."
 falsifier: "The 08-14 refinement would be falsified by a day with green CL/BZ fu
+
+### this-shows-up-on-1w-books-when-the-news-family-is-absent-and.md
+---
+trigger_pattern: "This shows up on 1w books when the news family is absent and s_news is zero-filled, so a name with a 1–5 day idiosyncratic catalyst and already-strong AB/join still dies as outweighed."
+corrected_behavior: "When news_actions/news_judge are missing, drop the news family and renormalize remaining scores (same handling as general_predict when s_general=0) instead of scoring s_news as a fake 0; when the family is present, require news_judge tilts from dated catalysts in the digest so a high-AB name with a fresh product/earnings event can clear the buy cutoff."
+falsifier: "Wrong if, once news_judge is live and non-zero, 1w top-10 excess does not improve on names that had a 1–5 day catalyst and s_ab>0.9 at pick time, or if those news-tilted adds underperform the universe me
 
 ### two-name-duration-growth-book-xlc-like-meta-googl-spine-with.md
 ---
