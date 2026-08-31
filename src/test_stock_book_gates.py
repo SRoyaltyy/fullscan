@@ -206,6 +206,17 @@ def test_20260831_sleeve_drops_broken_names() -> None:
         return
     book = json.loads(p.read_text(encoding="utf-8"))
     buys = [r["ticker"] for r in (book.get("books") or {}).get("1d", {}).get("buy") or []]
+    if (book.get("meta") or {}).get("ranker") == "decision_lattice":
+        lattice = (book.get("meta") or {}).get("decision_lattice") or {}
+        assert (lattice.get("market") or {}).get("state") == "hard_red"
+        assert not buys
+        assert len(
+            (book.get("books") or {}).get("1d", {}).get("sell") or []
+        ) >= 10
+        watches = [r.get("ticker") for r in lattice.get("bull_watch") or []]
+        assert "AMGN" in watches[:5], watches[:5]
+        assert lattice.get("n_bull_eligible") == 0
+        return
     if not buys:
         return
     for bad in ("WAY", "PBH", "NFG"):

@@ -96,8 +96,9 @@ FACTOR_TRACE = (
         "key": "ab", "label": "AB",
         "file": "data/ab_checklist/{date}_ab_checklist_enriched.csv",
         "workflow": "AB checklist",
-        "score": "s_ab",
-        "means": "A+B1 checklist + peer/industry enrich.",
+        "score": "s_ab_intrinsic",
+        "means": "intrinsic A+B1 checklist; P01-P04 group/peer context is "
+        "shown separately to avoid double-counting.",
     },
     {
         "key": "peer", "label": "peer",
@@ -512,7 +513,7 @@ def _decision(row: dict, *, side: str, horizon: str, rank: int,
         "child_residual": _num(row.get("child_residual")),
         "scores": {
             k: _num(row.get(k))
-            for k in ("s_join", "s_general", "s_ab", "s_peer",
+            for k in ("s_join", "s_general", "s_ab", "s_ab_intrinsic", "s_peer",
                       "s_sector", "s_news", "s_heat")
             if row.get(k) is not None
         },
@@ -747,6 +748,7 @@ def _score_bits(d: dict) -> str:
             continue
         tone = (d.get("boxes") or {}).get(
             {"s_join": "join", "s_general": "gen", "s_ab": "ab",
+             "s_ab_intrinsic": "ab",
              "s_peer": "peer", "s_sector": "sector", "s_news": "news",
              "s_heat": "heat"}.get(key, ""),
             polarity(v),
@@ -770,9 +772,17 @@ def render_actions_plain(dec: dict) -> str:
         f"1d {dec.get('n_1d_buy') or 0} BUY / {dec.get('n_1d_sell') or 0} SELL  "
         f"sleeve=first {SLEEVE_N} BUY → {PAGES_URL}",
         _market_line(dec),
-        "",
-        f"--- ACTION BUY  (1d_top sleeve, fills .io) ---",
     ]
+    market = dec.get("market") or {}
+    if market.get("bull_reasons"):
+        lines.append(
+            "MARKET BULL: " + "; ".join(market.get("bull_reasons") or [])
+        )
+    if market.get("bear_reasons"):
+        lines.append(
+            "MARKET BEAR: " + "; ".join(market.get("bear_reasons") or [])
+        )
+    lines += ["", f"--- ACTION BUY  (1d_top sleeve, fills .io) ---"]
     sleeve = [d for d in (h1.get("buy") or []) if d.get("sleeve")]
     rest = [d for d in (h1.get("buy") or []) if not d.get("sleeve")]
     if not sleeve:
@@ -806,10 +816,16 @@ def _watch_line(row: dict, rank: int, side: str) -> str:
         row.get("bull_decision") if side == "BULL"
         else row.get("bear_decision")
     )
+    evidence = ""
+    if side == "BULL":
+        company = str(row.get("company") or "")
+        group = str(row.get("group") or "")
+        if company or group:
+            evidence = f" evidence={company or 'no direct event'} / {group}"
     return (
         f"{side} #{rank:>2} {_tick(row.get('ticker')):<6} "
         f"{domains} lane={row.get('lane') or 'blocked'} "
-        f"{decision or ''}"
+        f"{decision or ''}{evidence}"
     )
 
 
