@@ -1,6 +1,6 @@
 # AB enriched — 2026-08-31
 
-- Base checklist: `stub/export`
+- Base checklist: `2026-08-31_ab_checklist.csv`
 - Peer map: `data/peers/correlations.csv` or `Correlations.xlsx` (5,511 names)
 - Peer RS: `2026-08-31_peer_rs.csv`
 - Export: `finviz_2026-08-31.csv`
@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| MUFG | +11 | +8 | +3 | +2.9 | 100% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
-| AVPT | +11 | +8 | +3 | +1.6 | 60% | +0.5 | Technology | — | LEAD,peers↑,ind↑ |
-| RDVT | +11 | +8 | +3 | +1.7 | 100% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| AGYS | +11 | +8 | +3 | +0.6 | 56% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| STT | +10 | +7 | +3 | +2.3 | 100% | +0.7 | Financial | — | LEAD,peers↑,ind↑ |
-| DCBO | +10 | +7 | +3 | +1.3 | 67% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| TWLO | +10 | +7 | +3 | +2.1 | 80% | +0.5 | Technology | — | LEAD,peers↑,ind↑ |
-| ACIW | +10 | +7 | +3 | +2.1 | 90% | +0.5 | Technology | — | LEAD,peers↑,ind↑ |
-| IOT | +10 | +7 | +3 | +0.9 | 80% | +0.5 | Technology | — | LEAD,peers↑,ind↑ |
-| SMFG | +10 | +7 | +3 | +1.9 | 60% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
-| WFC | +10 | +7 | +3 | +3.1 | 100% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
-| CAH | +10 | +7 | +3 | +1.1 | 80% | +1.2 | Healthcare | — | LEAD,peers↑,ind↑ |
-| HCI | +10 | +7 | +3 | +0.7 | 70% | +1.2 | Financial | — | LEAD,peers↑,ind↑ |
-| TD | +10 | +7 | +3 | +2.8 | 100% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
-| GCT | +10 | +7 | +3 | +6.1 | 100% | +0.5 | Technology | — | LEAD,peers↑,ind↑ |
-| UVE | +10 | +7 | +3 | +1.1 | 90% | +1.2 | Financial | — | LEAD,peers↑,ind↑ |
-| THG | +10 | +7 | +3 | +0.9 | 80% | +1.2 | Financial | — | LEAD,peers↑,ind↑ |
-| MNDY | +10 | +7 | +3 | +4.6 | 78% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| MTLS | +10 | +7 | +3 | +6.0 | 100% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| BAC | +9 | +6 | +3 | +0.9 | 80% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
-| DSGX | +9 | +6 | +3 | +0.2 | 50% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| NTNX | +9 | +6 | +3 | +2.1 | 60% | +0.5 | Technology | — | LEAD,peers↑,ind↑ |
-| CWCO | +9 | +6 | +3 | +0.3 | 50% | +1.4 | Utilities | — | LEAD,peers↑,ind↑ |
-| VYX | +9 | +6 | +3 | +9.1 | 100% | +0.2 | Technology | — | LEAD,peers↑,ind↑ |
-| JXN | +9 | +6 | +3 | +1.4 | 70% | +1.2 | Financial | — | LEAD,peers↑,ind↑ |
+| CMBT | +20 | +16 | +4 | +1.3 | 80% | +0.2 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| DINO | +20 | +16 | +4 | +5.1 | 100% | +0.8 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| ADSK | +19 | +19 | +0 | -5.1 | 11% | +1.0 | Technology | down | LAG,peers↑,ind↑,sec↓ |
+| GSBD | +19 | +15 | +4 | +1.5 | 60% | +0.6 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| RJF | +18 | +14 | +4 | +2.1 | 90% | +0.6 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| FAF | +18 | +14 | +4 | +3.4 | 100% | +1.1 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| TWLO | +18 | +16 | +2 | +2.1 | 70% | +0.7 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| SCHW | +18 | +16 | +2 | -3.2 | 0% | +0.2 | Financial | up | LAG,peers↑,ind↑,sec↑ |
+| WDAY | +18 | +18 | +0 | -2.3 | 20% | +1.0 | Technology | down | LAG,peers↑,ind↑,sec↓ |
+| EVTC | +17 | +17 | +0 | +0.8 | 60% | +0.7 | Technology | down | LEAD,peers↓,ind↑,sec↓ |
+| RYAN | +17 | +15 | +2 | +2.5 | 100% | +1.1 | Financial | up | LEAD,peers↓,ind↑,sec↑ |
+| TPG | +17 | +15 | +2 | +3.1 | 100% | +0.6 | Financial | up | LEAD,peers↓,ind↑,sec↑ |
+| CRWD | +17 | +15 | +2 | +8.3 | 89% | +0.7 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| INSW | +17 | +15 | +2 | -1.0 | 40% | +0.2 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| CDW | +17 | +15 | +2 | +11.9 | 100% | +1.3 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| DSGX | +16 | +14 | +2 | +0.1 | 60% | +1.0 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| EPAM | +16 | +14 | +2 | +0.7 | 62% | +1.3 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| LNC | +16 | +12 | +4 | +1.9 | 70% | +1.2 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| CVI | +16 | +12 | +4 | +3.2 | 89% | +0.8 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| TAL | +16 | +12 | +4 | +1.0 | 62% | +0.9 | Consumer Defensive | flat | LEAD,peers↑,ind↑,sec↑ |
+| LAUR | +16 | +12 | +4 | +2.1 | 67% | +0.9 | Consumer Defensive | flat | LEAD,peers↑,ind↑,sec↑ |
+| LPLA | +16 | +12 | +4 | +1.0 | 89% | +0.2 | Financial | up | LEAD,peers↑,ind↑,sec↑ |
+| MTDR | +16 | +16 | +0 | -2.0 | 25% | -0.4 | Energy | up | LAG,peers↑,ind↓,sec↑ |
+| VLO | +16 | +12 | +4 | +1.4 | 71% | +0.8 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| HLNE | +16 | +14 | +2 | +0.8 | 70% | +0.6 | Financial | up | LEAD,peers↓,ind↑,sec↑ |
