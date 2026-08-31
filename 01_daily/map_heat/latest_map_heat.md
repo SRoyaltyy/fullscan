@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7707.25 | -0.21% |
-| Nasdaq 100 (NQ) | 29464.0 | -0.12% |
-| Russell 2000 (ER2) | 2975.7 | -0.07% |
-| DJIA (YM) | 53487.0 | -0.18% |
-| VIX (VX) | 17.0 | +0.38% |
-| Crude Oil WTI (CL) | 86.19 | +3.33% |
-| Crude Oil Brent (QA) | 90.78 | +3.04% |
-| Natural Gas (NG) | 2.899 | +0.28% |
-| Heating Oil (HO) | 4.3526 | +2.38% |
-| Gasoline RBOB (RB) | 3.0598 | +0.33% |
-| Gold (GC) | 4509.3 | -0.48% |
-| Silver (SI) | 68.12 | +0.46% |
-| Copper (HG) | 6.6975 | +0.55% |
-| Platinum (PL) | 1818.8 | -1.99% |
-| Palladium (PA) | 1415.0 | -2.24% |
-| USD (DX) | 99.49 | -0.17% |
-| EUR (6E) | 1.1605 | +0.15% |
-| JPY (6J) | 0.62685 | +0.27% |
-| GBP (6B) | 1.3546 | +0.10% |
-| AUD (6A) | 0.7163 | +0.06% |
-| CAD (6C) | 0.72075 | +0.17% |
-| CHF (6S) | 1.23905 | +0.15% |
-| NZD (6N) | 0.59195 | +0.14% |
-| 10 Year Note (ZN) | 107.890625 | +0.01% |
-| 5 Year Note (ZF) | 105.84375 | +0.04% |
-| 2 Year Note (ZT) | 102.66796875 | +0.05% |
-| 30 Year Bond (ZB) | 109.03125 | -0.17% |
-| Nikkei 225 (NKD) | 66480.0 | +1.07% |
-| DAX (DY) | 26449.0 | -0.65% |
-| Euro Stoxx 50 (EX) | 6488.0 | -0.22% |
-| Corn (ZC) | 535.5 | -0.19% |
-| Soybeans (ZS) | 1284.75 | -0.25% |
-| Wheat (ZW) | 773.5 | -1.31% |
-| Soybean oil (ZL) | 70.16 | -0.93% |
-| Soybean Meal (ZM) | 339.6 | -0.85% |
-| Oats (ZO) | 370.5 | -1.13% |
+| S&P 500 (ES) | 7694.0 | -0.35% |
+| Nasdaq 100 (NQ) | 29406.0 | -0.28% |
+| Russell 2000 (ER2) | 2968.2 | -0.29% |
+| DJIA (YM) | 53401.0 | -0.33% |
+| VIX (VX) | 17.05 | +0.68% |
+| Crude Oil WTI (CL) | 86.37 | +3.56% |
+| Crude Oil Brent (QA) | 90.94 | +3.20% |
+| Natural Gas (NG) | 2.871 | -0.59% |
+| Heating Oil (HO) | 4.3772 | +2.98% |
+| Gasoline RBOB (RB) | 3.064 | +0.45% |
+| Gold (GC) | 4495.4 | -0.76% |
+| Silver (SI) | 67.63 | -0.13% |
+| Copper (HG) | 6.6945 | +0.53% |
+| Platinum (PL) | 1813.5 | -2.20% |
+| Palladium (PA) | 1408.0 | -2.69% |
+| USD (DX) | 99.535 | -0.11% |
+| EUR (6E) | 1.15995 | +0.09% |
+| JPY (6J) | 0.62635 | +0.18% |
+| GBP (6B) | 1.354 | +0.05% |
+| AUD (6A) | 0.71565 | -0.03% |
+| CAD (6C) | 0.72075 | +0.15% |
+| CHF (6S) | 1.2382 | +0.09% |
+| NZD (6N) | 0.59145 | +0.04% |
+| 10 Year Note (ZN) | 107.75 | -0.10% |
+| 5 Year Note (ZF) | 105.7578125 | -0.04% |
+| 2 Year Note (ZT) | 102.62890625 | +0.01% |
+| 30 Year Bond (ZB) | 108.75 | -0.40% |
+| Nikkei 225 (NKD) | 66380.0 | +0.94% |
+| DAX (DY) | 26431.0 | -0.73% |
+| Euro Stoxx 50 (EX) | 6485.0 | -0.26% |
+| Corn (ZC) | 532.25 | -0.70% |
+| Soybeans (ZS) | 1279.75 | -0.60% |
+| Wheat (ZW) | 764.5 | -2.55% |
+| Soybean oil (ZL) | 70.13 | -1.03% |
+| Soybean Meal (ZM) | 338.3 | -1.26% |
+| Oats (ZO) | 369.25 | -1.53% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
-| Coffee (KC) | 313.35 | +0.14% |
-| Sugar (SB) | 17.84 | +1.48% |
-| Cotton (CT) | 93.37 | +2.12% |
-| Cocoa (CC) | 6735.0 | +0.90% |
-| Orange Juice (JO) | 143.35 | -1.42% |
+| Coffee (KC) | 315.9 | +1.01% |
+| Sugar (SB) | 17.76 | +1.14% |
+| Cotton (CT) | 93.6 | +2.44% |
+| Cocoa (CC) | 6726.0 | +1.20% |
+| Orange Juice (JO) | 144.65 | -0.48% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78680.0 | +1.01% |
-| Canola (RS) | 819.4 | -0.51% |
+| Bitcoin (BTC) | 78180.0 | +0.52% |
+| Canola (RS) | 817.1 | -0.80% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 9 min **PNC** PNC Executives to Speak at Barclays Global Financial Services Conference (PR Newswire)
-- 9 min **CTSH,CRWD** Cognizant and CrowdStrike Protect Critical Operations Across Converged IT and OT Environments (PR Newswire)
-- 10 min **ARKK,NVDA,AMD** Nvidia Looks Like a Growth Stock Again. Watch Cathie Wood. (Barrons.com)
-- 10 min **BAC** BofA turns S&P 500 signals from red to yellow: What to buy now (Investing.com)
-- 11 min **AVGO** Cathie Wood Loads Up $20 Million on Broadcom Ahead of Earnings (GuruFocus.com)
-- 14 min **JPM,DELL** J.P. Morgan Sends Bullish Message on Dell Stock Ahead of Earnings (GuruFocus.com)
-- 14 min **AMRN** Amarin Highlights New REDUCE-IT and Mechanistic Data Presented at European Society of Cardiology (ESC) Congress 2026 (GlobeNewswire)
-- 14 min **AGCO** AGCO Opens Advanced Parts Distribution Center in Visalia, Calif., Expanding Parts Availability for Western U.S. Farmers (PR Newswire)
-- 14 min **CRWD** CrowdStrike Brings the Falcon Platform to Snowflake, Unifying Security and Data at Enterprise Scale (Business Wire)
-- 14 min **CFND** C1 Fund Inc. Reports Portfolio Developments and Key Milestones in Shareholder Letter (Business Wire)
-- 14 min **HYPR** Hyperfine, Inc. to Participate in Lake Street Capital Markets 10th Annual Best Ideas Growth Conference (Business Wire)
-- 15 min **AAPL,AVGO** Broadcom Q2 Earnings Preview: What To Expect From Upcoming Report (GuruFocus.com)
-- 16 min **NIO** NIO Q2 Earnings Preview: What To Expect From Upcoming Report (GuruFocus.com)
-- 17 min **AMZN,META,NVDA** Amazon Stock Gets a Boost. AWS Adds Anthropic, Meta and OpenAI Models (GuruFocus.com)
-- 18 min **CRWD** CrowdStrike Expands Project QuiltWorks Across the Tech Ecosystem, Uniting More Data Sources to Secure Frontier AI Risk (Business Wire)
-- 19 min **CRWD** CrowdStrike and Google Announce the Falcon Platform on Google Cloud (Business Wire)
-- 19 min **ZBRA** Zebra Technologies Wins Three Red Dot Design Awards for Devices Powering Frontline Workflows (Business Wire)
-- 20 min **TITN,DE,CNH,AGCO** Deere Gets an Upgrade as Baird Bets Big on a Farm Recovery (Barrons.com)
-- 24 min **RNAZ** TransCode Therapeutics Announces Publication Demonstrating Survival Benefit of TTX-MC138 in Preclinical Model of Breast Cancer Bone Metastasis (PR Newswire)
-- 24 min **STEP** StepStone Group to Present at the Barclays Global Financial Services Conference (GlobeNewswire)
-- 24 min **MSTR,STRC** MicroStrategy Ends 10-Week Pause With $370 Million Bitcoin Buy (BeInCrypto)
-- 25 min **CRWD** CrowdStrike Launches Falcon IQ to Operationalize Project QuiltWorks at Machine Speed (Business Wire)
-- 26 min **MRDN** Meridian Holdings to Participate in the H.C. Wainwright 28th Annual Global Investment Conference (NewMediaWire)
-- 29 min **RFIL** RF Industries to Report Third Quarter Results on September 14 (ACCESSWIRE)
-- 29 min **ZG,Z** Zillow is helping 78,000 renters and counting turn monthly bills into credit progress (PR Newswire)
+- 5 min **NRSN** NeuroSense Unveils Accelerated, Capital-Efficient Strategy to Advance PrimeC Toward Potential Approval in ALS (PR Newswire)
+- 5 min **CHGA** Change Agents Completes Phase 2 of its Catch-Up Agentic AI Video Studio Platform; Development led by Caylent with Funding from Amazon Web Services Grant (GlobeNewswire)
+- 5 min **MOBX** Vision Aerial Begins Production of American-Built Vulcan Drone Family Ahead of Acquisition by Mobix Labs (Nasdaq: MOBX) (Business Wire)
+- 6 min **DARE** Dare Bioscience Announces New NIH Funding Award for Approximately $908,000 to Advance DARE-PTB2 for the Prevention of Preterm Birth (GlobeNewswire)
+- 7 min **AFG** American Financial Group, Inc. Announces Closing of the Sale of Charleston Harbor Resort & Marina (Business Wire)
+- 9 min **XYZ,TSLA,BLK,MU,SNDK** Fed up with bitcoin? That's exactly why you should buy. (MarketWatch)
+- 13 min **LLY** Eli Lilly Strikes $2.9B Deal For Its 13th Acquisition This Year  As Fresh Zepbound Data Impresses (Stocktwits)
+- 15 min **ONMD** OneMedNet's iRWD Platform Enables Rapid Feasibility-to-Delivery for Leading AI-Driven Drug Development Company (GlobeNewswire)
+- 17 min **GEMI** Gemini wins arbitration ruling over collapsed Earn lending program (Quartz)
+- 19 min **ABAT** American Battery Technology Company Hosts DOE Leadership to Showcase Commercial Technologies Strengthening U.S. Critical Minerals Supply Chains (GlobeNewswire)
+- 19 min **GWRS** Global Water Resources Declares Monthly Dividend (GlobeNewswire)
+- 20 min **BMO** BMO Named Official Bank of the Los Angeles Lakers (PR Newswire)
+- 20 min **CVLT** Commvault Integrates Cyber Recovery Actions into CrowdStrike Charlotte Agentic SOAR Workflows (PR Newswire)
+- 20 min **G** Genpact Names Priya Vijayarajendran Chief Product and Platform Officer (PR Newswire)
+- 20 min **MSTR,BMNR,ORBS,COIN** Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.90 Million Tokens, and Total Crypto and Total Cash Holdings of $15.6 Billion (PR Newswire)
+- 20 min **SNES** Swampscott Municipal Integrated Pest Management Program Achieves 43% Reduction in Rodent Activity with Evolve Rat (PR Newswire)
+- 20 min **QUBT** Quantum Computing Inc. To Attend Lake Street Capital Markets 10th Annual Best Ideas Growth (Big10) Conference (PR Newswire)
+- 20 min **NEOV** NeoVolta Announces Strategic U.S. Battery Cell Supply and BESS Manufacturing Collaboration with SK On (GlobeNewswire)
+- 20 min **DTCX** Datacentrex Invests $30 Million in Eagle LNG Partners, a Supplier of Fuel for the U.S. Space Launch Industry (GlobeNewswire)
+- 20 min **EDVA** Endovia Health Sciences Welcomes Historic Shift in Federal Cannabinoid Policy; Advances CannEpil FDA Submission and Expands Development Pipeline (GlobeNewswire)
+- 20 min **NNVC** While Measles Cases Continue to Increase in The USA and Globally, NanoViricides is Getting Ready for Clinical Trials of Its Revolutionary Broad-spectrum Drug Candidate NV-387 as A Treatment for Measles (ACCESSWIRE)
+- 20 min **SMX** Luxury Has An Authentication Problem; SMX Is Putting The Proof Inside The Product (ACCESSWIRE)
+- 20 min **ENSC** Ensysce Biosciences Completes Final Phase of PF614-MPAR-102 Clinical Study (ACCESSWIRE)
+- 20 min **TFC** From Relief to Recovery: Truist and Truist Foundation Surpass Halfway Point of $725 Million Truist Cares for Western North Carolina Commitment (ACCESSWIRE)
+- 20 min **SUPN** Chloe Kim Teams Up with Qelbree, the #1 Prescribed Branded Non-Stimulant ADHD Treatment*, to Help Empower People Navigating ADHD (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
