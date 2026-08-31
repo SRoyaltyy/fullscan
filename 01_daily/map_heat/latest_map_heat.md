@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7699.0 | -0.30% |
-| Nasdaq 100 (NQ) | 29418.25 | -0.25% |
-| Russell 2000 (ER2) | 2969.8 | -0.26% |
-| DJIA (YM) | 53462.0 | -0.23% |
-| VIX (VX) | 17.0 | +0.38% |
-| Crude Oil WTI (CL) | 85.49 | +2.51% |
-| Crude Oil Brent (QA) | 90.25 | +2.51% |
-| Natural Gas (NG) | 2.899 | +0.45% |
-| Heating Oil (HO) | 4.3645 | +2.79% |
-| Gasoline RBOB (RB) | 3.0451 | -0.17% |
-| Gold (GC) | 4493.6 | -0.80% |
-| Silver (SI) | 67.41 | -0.55% |
-| Copper (HG) | 6.7065 | +0.76% |
-| Platinum (PL) | 1809.9 | -2.29% |
-| Palladium (PA) | 1394.0 | -3.52% |
-| USD (DX) | 99.51 | -0.14% |
-| EUR (6E) | 1.16045 | +0.14% |
-| JPY (6J) | 0.6263000000000001 | +0.18% |
-| GBP (6B) | 1.3542 | +0.09% |
-| AUD (6A) | 0.71595 | +0.03% |
-| CAD (6C) | 0.72085 | +0.17% |
-| CHF (6S) | 1.2391 | +0.15% |
+| S&P 500 (ES) | 7686.0 | -0.46% |
+| Nasdaq 100 (NQ) | 29407.75 | -0.24% |
+| Russell 2000 (ER2) | 2958.4 | -0.63% |
+| DJIA (YM) | 53248.0 | -0.62% |
+| VIX (VX) | 17.05 | +0.38% |
+| Crude Oil WTI (CL) | 86.21 | +3.33% |
+| Crude Oil Brent (QA) | 91.14 | +3.43% |
+| Natural Gas (NG) | 2.902 | +0.48% |
+| Heating Oil (HO) | 4.4148 | +3.83% |
+| Gasoline RBOB (RB) | 3.0647 | +0.41% |
+| Gold (GC) | 4484.7 | -0.99% |
+| Silver (SI) | 67.19 | -0.88% |
+| Copper (HG) | 6.705 | +0.66% |
+| Platinum (PL) | 1804.2 | -2.68% |
+| Palladium (PA) | 1386.0 | -4.11% |
+| USD (DX) | 99.515 | -0.15% |
+| EUR (6E) | 1.16025 | +0.14% |
+| JPY (6J) | 0.6263000000000001 | +0.19% |
+| GBP (6B) | 1.3543 | +0.10% |
+| AUD (6A) | 0.71595 | +0.05% |
+| CAD (6C) | 0.7209 | +0.20% |
+| CHF (6S) | 1.2387 | +0.13% |
 | NZD (6N) | 0.5918 | +0.12% |
-| 10 Year Note (ZN) | 107.765625 | -0.12% |
-| 5 Year Note (ZF) | 105.765625 | -0.04% |
-| 2 Year Note (ZT) | 102.6484375 | +0.03% |
-| 30 Year Bond (ZB) | 108.71875 | -0.43% |
-| Nikkei 225 (NKD) | 66280.0 | +0.75% |
-| DAX (DY) | 26428.0 | -0.72% |
-| Euro Stoxx 50 (EX) | 6483.0 | +1.06% |
-| Corn (ZC) | 532.25 | -0.79% |
-| Soybeans (ZS) | 1279.0 | -0.70% |
-| Wheat (ZW) | 762.25 | -2.77% |
-| Soybean oil (ZL) | 69.96 | -1.23% |
-| Soybean Meal (ZM) | 337.1 | -1.58% |
-| Oats (ZO) | 367.25 | -2.00% |
-| Rough Rice (ZR) | 15.58 | +0.23% |
-| Coffee (KC) | 312.15 | -0.24% |
-| Sugar (SB) | 17.78 | +1.31% |
-| Cotton (CT) | 92.92 | +1.59% |
-| Cocoa (CC) | 6733.0 | +1.25% |
-| Orange Juice (JO) | 144.55 | -0.31% |
+| 10 Year Note (ZN) | 107.703125 | -0.16% |
+| 5 Year Note (ZF) | 105.7421875 | -0.06% |
+| 2 Year Note (ZT) | 102.640625 | +0.02% |
+| 30 Year Bond (ZB) | 108.5625 | -0.57% |
+| Nikkei 225 (NKD) | 66195.0 | +0.72% |
+| DAX (DY) | 26387.0 | -0.88% |
+| Euro Stoxx 50 (EX) | 6465.0 | -0.54% |
+| Corn (ZC) | 536.25 | +0.23% |
+| Soybeans (ZS) | 1284.25 | -0.19% |
+| Wheat (ZW) | 763.5 | -2.55% |
+| Soybean oil (ZL) | 70.22 | -0.54% |
+| Soybean Meal (ZM) | 339.2 | -1.02% |
+| Oats (ZO) | 373.5 | -0.33% |
+| Rough Rice (ZR) | 15.645 | +0.71% |
+| Coffee (KC) | 311.3 | -0.47% |
+| Sugar (SB) | 17.78 | +1.20% |
+| Cotton (CT) | 93.25 | +2.10% |
+| Cocoa (CC) | 6741.0 | +1.49% |
+| Orange Juice (JO) | 144.6 | -0.52% |
 | Lumber (LB) | 553.0 | +0.54% |
-| Live Cattle (LC) | 211.825 | -0.56% |
-| Lean Hogs (LH) | 81.9 | +1.58% |
-| Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78210.0 | +0.56% |
-| Canola (RS) | 815.8 | -0.96% |
+| Live Cattle (LC) | 212.375 | +0.40% |
+| Lean Hogs (LH) | 83.25 | +1.74% |
+| Feeder Cattle (FC) | 316.725 | +0.11% |
+| Bitcoin (BTC) | 78290.0 | +0.65% |
+| Canola (RS) | 817.4 | -0.62% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -128,14 +128,14 @@ Mega-cap earnings:
 - BMO **NIO**  EPS est -0.055  (NIO Inc ADR)
 
 Options event-vol flags (NOT direction):
-- **AVGO** exp 2026-08-31 ATM IV 0.0078 implied move +0.0% put/call OI 0.66
-- **PANW** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI 0.293
-- **DELL** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI 0.15
-- **MDT** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 4.213
-- **ADBE** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 1.051
-- **SNOW** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 0.26
-- **HPE** exp 2026-09-04 ATM IV 0.001 implied move +0.0% put/call OI 0.759
-- **CIEN** exp 2026-09-04 ATM IV 0.001 implied move +0.0% put/call OI 18.545
+- **AVGO** exp 2026-08-31 ATM IV 0.3546 implied move +1.9% put/call OI 0.66
+- **PANW** exp 2026-09-04 ATM IV 1.023 implied move +10.7% put/call OI 0.293
+- **DELL** exp 2026-09-04 ATM IV 1.2057 implied move +12.6% put/call OI 0.532
+- **MDT** exp 2026-09-04 ATM IV 0.5134 implied move +5.4% put/call OI 4.213
+- **ADBE** exp 2026-09-04 ATM IV 0.5265 implied move +5.5% put/call OI 0.588
+- **SNOW** exp 2026-09-04 ATM IV 1.3245 implied move +13.9% put/call OI 0.782
+- **HPE** exp 2026-09-04 ATM IV 1.1694 implied move +12.2% put/call OI 0.163
+- **CIEN** exp 2026-09-04 ATM IV 1.3474 implied move +14.1% put/call OI 18.545
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 1 min **CHRS** Coherus to Participate in Upcoming Investor Conferences (GlobeNewswire)
-- 1 min **UNIT** Canton Now a 'Gig-Ready' Community (GlobeNewswire)
-- 1 min **THH** TryHard Holdings Limited Regains Compliance with Nasdaq Minimum Bid Price Requirement (GlobeNewswire)
-- 2 min **AVGO** Broadcom Introduces VMware Private AI Cloud, Enabling Enterprises to Scale AI Cost-Effectively, Operate More Securely, and Innovate Rapidly (GlobeNewswire)
-- 4 min **PCG** PG&E Stock Plunges on Wildfire Liability Setback (Schaeffer's Research)
-- 5 min **MSTR** Strategy Makes First Bitcoin Purchase Since June as Cryptocurrency On Pace for Best Month in Nearly 2 Years. (Barrons.com)
-- 6 min **AUID** authID Selected to Strengthen Workforce Security for Multi-National Manufacturing Automation Company (GlobeNewswire)
-- 9 min **ORCL** Big Short Legend Steve Eisman Warns OpenAI Failure Could Trigger 'Immediate Recession' (Benzinga Prediction Markets)
-- 9 min **GME,EBAY** GameStop stock jumps with eBay investment expected to boost Q2 profit (Yahoo Finance)
-- 11 min **LAES** SEALSQ's $24.5M Pure-Play Quantum Computing Investments and Collaborations Begin Generating Commercial Synergies (GlobeNewswire)
-- 11 min **MVIS** MicroVision Regains Compliance with Nasdaq's Continued Listing Requirements (ACCESSWIRE)
-- 14 min **MSTR** Strategy Buys Bitcoin for First Time Since June (The Wall Street Journal)
-- 15 min **NVDA** Nvidia and MediaTek expand partnership, Nvidia invests $3.5b (Investing.com)
-- 16 min **DJIA** Stock Futures Held Hostage by Resurgent Oil Prices (Schaeffer's Research)
-- 16 min **CRDO** Earnings To Watch: Credo Technology Group Holding Ltd (CRDO) Q1 2027 -- GF Value Sees 64% Upside (GuruFocus.com)
-- 20 min **HLX** Helix Shareholders Approve Combination with Hornbeck Offshore Services (Business Wire)
-- 21 min **BCS** Barclays is now forecasting two Fed rate hikes after Warsh's hawkish Jackson Hole warning (Quartz)
-- 21 min **CCB** Kaplan Fox & Kilsheimer LLP is Investigating Coastal Financial Corporation (CCB) for Possible Securities Law Violations (Newsfile)
-- 24 min **QTEX** QTREX to Unveil Ultra-High-Density Interconnect Architecture Supporting 17,280 Coaxial Lines per Cryogenic Stage at IEEE Quantum Week 2026 (GlobeNewswire)
-- 25 min **SST** MapQuest Surges to No. 1 in the Apple App Store, 30 Years After Inventing Online Mapping (Business Wire)
-- 25 min **PNR** Pentair Shares Plunge 15% After Undisclosed Pool Channel Destocking Comes to Light (Newsfile)
-- 26 min **RKT** Rocket Companies Names Alessio Sanfilippo Chief Executive Officer of Redfin (PR Newswire)
-- 26 min **AVGO** Broadcom Announces VMware AI Factory, Enabling Faster Time to Production AI and Greater Control Over AI Tokenomics (GlobeNewswire)
-- 26 min **BIVI** BioVie completes final patient visit in Phase 2 Long COVID trial (Proactive)
-- 27 min **BCS** Barclays forecasts two Fed rate hikes after Warsh Jackson Hole speech (Quartz)
+- 58 sec **WSE** Kaplan Fox Urges Wise Group plc (WSE) Investors Seeking Recovery to Contact the Firm Before September 29, 2026 (Newsfile)
+- 3 min **TSLA,AMD,ARKK,NVDA** Cathie Wood Is Buying Nvidia Again. Why the Chip Maker Is a Bargain. (Barrons.com)
+- 8 min **CNS** Cohen & Steers and Trademark Acquire Oak Hill Plaza Shopping Center in Austin, Texas (PR Newswire)
+- 12 min **QTEX** Correction: QTREX Establishes Cryogenic Interconnect Capacity, More Than Four Times the Highest Publicly Disclosed Industry Benchmark (GlobeNewswire)
+- 15 min **GME,EBAY** GameStop's sales fell but profit nearly doubled as eBay investment paid off (Quartz)
+- 15 min **MOBX** Mobix Labs (Nasdaq: MOBX) Drone Acquisition Target Vision Aerial Opens Vulcan Orders, Projects 93% Revenue Growth in 2027 (Business Wire)
+- 15 min **ENSG** Kaplan Fox is Investigating The Ensign Group, Inc. (ENSG) on Behalf of Shareholders for Possible Securities Law Violations (Newsfile)
+- 16 min **THG** The Hanover Insurance Group, Inc. Declares Quarterly Dividend of $0.95 Per Common Share (PR Newswire)
+- 17 min **GME,EBAY** GameStop Q2 2026 preliminary results: sales down, profit up (Quartz)
+- 18 min **WMT** Amazon Prime vs. Walmart Plus: Which is The Better Deal? We Did the Math (The Penny Hoarder)
+- 20 min **LDOS** How AI Is Transforming Geospatial Intelligence (ACCESSWIRE)
+- 21 min **SPCX** SpaceX may need up to $130B to build a standalone mobile network: Bernstein (Investing.com)
+- 25 min **CHRS** Coherus to Participate in Upcoming Investor Conferences (GlobeNewswire)
+- 25 min **UNIT** Canton Now a 'Gig-Ready' Community (GlobeNewswire)
+- 25 min **THH** TryHard Holdings Limited Regains Compliance with Nasdaq Minimum Bid Price Requirement (GlobeNewswire)
+- 25 min **ELAN** Elanco Scales Biologics Capabilities With Expansion of Kansas Manufacturing Facility (ACCESSWIRE)
+- 26 min **AVGO** Broadcom Introduces VMware Private AI Cloud, Enabling Enterprises to Scale AI Cost-Effectively, Operate More Securely, and Innovate Rapidly (GlobeNewswire)
+- 28 min **BMNR** BitMine Makes Biggest Weekly Ethereum Purchase Since June, Adding Over 50K ETH To Its Stash (Stocktwits)
+- 28 min **PCG** PG&E Stock Plunges on Wildfire Liability Setback (Schaeffer's Research)
+- 29 min **NG** TNR Gold launches 2026 exploration program at Shotgun gold project in Alaska (Proactive)
+- 29 min **MSTR** Strategy Makes First Bitcoin Purchase Since June as Cryptocurrency On Pace for Best Month in Nearly 2 Years. (Barrons.com)
+- 30 min **AUID** authID Selected to Strengthen Workforce Security for Multi-National Manufacturing Automation Company (GlobeNewswire)
+- 33 min **ORCL** Big Short Legend Steve Eisman Warns OpenAI Failure Could Trigger 'Immediate Recession' (Benzinga Prediction Markets)
+- 33 min **GME,EBAY** GameStop stock jumps with eBay investment expected to boost Q2 profit (Yahoo Finance)
+- 35 min **LAES** SEALSQ's $24.5M Pure-Play Quantum Computing Investments and Collaborations Begin Generating Commercial Synergies (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
