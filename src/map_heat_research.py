@@ -366,11 +366,55 @@ def inject_block(date_str: str | None = None, sector: str | None = None,
     return body + "\n"
 
 
+def tape_boosts(date: str) -> tuple[dict[str, float], dict[str, float]]:
+    """Deterministic Finviz industry residual → s_heat when the essay is gone.
+
+    Reads ``<date>_map_heat.json`` OVERRIDE / SPLIT rows (child 1w vs parent
+    ≥ 3pp). Captains on those rows get a ticker nudge; the industry gets a
+    smaller residual so the book can use the outperform board without Grok.
+    """
+    js = OUT_DIR / f"{date}_map_heat.json"
+    if not js.exists():
+        return {}, {}
+    try:
+        data = json.loads(js.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}, {}
+    tboost: dict[str, float] = {}
+    iboost: dict[str, float] = {}
+    for o in data.get("overrides") or []:
+        try:
+            vs = float(o.get("vs_parent_w1") or 0)
+        except (TypeError, ValueError):
+            continue
+        if abs(vs) < 3:
+            continue
+        sign = 1.0 if vs > 0 else -1.0
+        mag = min(0.16, 0.04 * abs(vs) / 3.0)
+        ind = str(o.get("industry") or "")
+        if ind:
+            iboost[ind] = round(mag * sign, 3)
+        for t in (o.get("spx_leaders") or []) + (o.get("rut_leaders") or []):
+            if isinstance(t, dict):
+                tt = str(t.get("ticker") or "").strip().upper()
+            else:
+                tt = str(t or "").strip().upper()
+            if tt:
+                tboost[tt] = round(0.20 * sign, 3)
+    tboost.pop("", None)
+    iboost.pop("", None)
+    if tboost or iboost:
+        print(f"[map-heat] Finviz tape boosts {len(tboost)} captains, "
+              f"{len(iboost)} industries (no morning research)")
+    return tboost, iboost
+
+
 def ticker_boosts(date: str) -> tuple[dict[str, float], dict[str, float]]:
     """(ticker → score, industry → score) for stock_book s_heat."""
     js = OUT_DIR / f"{date}_research.json"
     if not js.exists():
-        return {}, {}
+        print("[map-heat] no morning research — Finviz tape boosts")
+        return tape_boosts(date)
     try:
         data = json.loads(js.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
@@ -378,8 +422,8 @@ def ticker_boosts(date: str) -> tuple[dict[str, float], dict[str, float]]:
     if (data.get("phase") != "morning_refresh"
             or len(data.get("cards") or []) < 20
             or data.get("evidence_errors")):
-        print("[map-heat] research not strict morning_refresh — no book boosts")
-        return {}, {}
+        print("[map-heat] research not strict morning_refresh — Finviz tape boosts")
+        return tape_boosts(date)
     tboost: dict[str, float] = {}
     iboost: dict[str, float] = {}
     for c in data.get("cards") or []:

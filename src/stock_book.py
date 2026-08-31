@@ -433,6 +433,66 @@ def _load_events_sector_tilt(date: str) -> dict[str, float]:
     return _clip_event_tilt(tilt)
 
 
+def _stand_down_status(date: str, meta: dict) -> dict:
+    """Empty the BUY book on a clearly no-win open.
+
+    Fires when the same-day general is down, weather is risk-off, the
+    signed bias is ≤ −0.25, and catalyst daily produced zero usable
+    company dossiers. If a dossier *did* land, BUY is only those tickers.
+    """
+    direction = str(meta.get("general_direction") or "").lower()
+    risk = str(meta.get("weather_risk") or "")
+    try:
+        bias = float(meta.get("general_bias") or 0)
+    except (TypeError, ValueError):
+        bias = 0.0
+    cat_tickers: list[str] = []
+    n_cat = 0
+    try:
+        from .catalyst_daily import load_dossiers, usable_dossier
+        for row in load_dossiers(date):
+            if not usable_dossier(row):
+                continue
+            n_cat += 1
+            t = str(row.get("ticker") or "").strip().upper()
+            if t:
+                cat_tickers.append(t)
+    except Exception:
+        pass
+    fire = (
+        bool(meta.get("same_day_general"))
+        and direction == "down"
+        and risk == "off"
+        and bias <= -0.25
+        and n_cat == 0
+    )
+    if fire:
+        reason = (
+            f"general {direction} bias={bias:+.2f} risk={risk} "
+            f"and 0 usable company dossiers — no BUY"
+        )
+    elif direction == "down" and n_cat:
+        reason = (
+            f"general {direction} but {n_cat} usable dossiers — "
+            "BUY is those names only"
+        )
+        fire = False
+        restrict = True
+    else:
+        reason = "open is tradeable"
+        restrict = False
+    return {
+        "stand_down": fire,
+        "restrict_to_catalysts": (not fire) and direction == "down" and n_cat > 0,
+        "reason": reason,
+        "catalyst_tickers": cat_tickers,
+        "n_usable_catalysts": n_cat,
+        "general_direction": direction,
+        "weather_risk": risk,
+        "general_bias": bias,
+    }
+
+
 def _clip_event_tilt(
     tilt: dict[str, float], cap: float = MAX_EVENT_SECTOR_TILT
 ) -> dict[str, float]:
@@ -473,7 +533,11 @@ def _inputs_status(date: str) -> list[dict]:
          or any((ROOT / "data" / "checklist").glob("*_checklist.csv")),
          "rebound_floor (dated file, else latest — can be stale)"),
         ("Event scanner", exists("01_daily", "events", "latest.json"), "sector tilt + weather"),
-        ("Map heat research", exists("01_daily", "map_heat", f"{date}_research.json"), "s_heat nested override + captains"),
+        ("Finviz map heat (industry RS / themes)",
+         exists("01_daily", "map_heat", f"{date}_map_heat.json"),
+         "industry residual + theme tape → s_heat when research is gone"),
+        ("Map heat captain research", exists("01_daily", "map_heat", f"{date}_research.json"),
+         "Grok captain essays (strict morning_refresh; else Finviz tape)"),
         ("Catalyst overlays", False, "not in ranker — separate chart workflow"),
         ("Insider / politician flow", False, "no daily file in repo"),
         ("Industry predict", exists("01_daily", "industry"), "not scored (ad-hoc only)"),
@@ -749,6 +813,22 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         join["s_heat_raw"] = 0.0
         join["s_heat"] = 0.0
 
+    heat_source = "none"
+    if tboost or iboost:
+        rjs = ROOT / "01_daily" / "map_heat" / f"{date}_research.json"
+        used_research = False
+        if rjs.exists():
+            try:
+                rd = json.loads(rjs.read_text(encoding="utf-8"))
+                used_research = (
+                    rd.get("phase") == "morning_refresh"
+                    and len(rd.get("cards") or []) >= 20
+                    and not rd.get("evidence_errors")
+                )
+            except (OSError, json.JSONDecodeError, TypeError):
+                used_research = False
+        heat_source = "captain_research" if used_research else "finviz_tape"
+
     # --- opportunity: liquid mid/small with room to run (BB-class) ---
     sz = join["size"].astype(str).str.lower() if "size" in join.columns else pd.Series("", index=join.index)
     rng = join["range"].astype(str).str.lower() if "range" in join.columns else pd.Series("", index=join.index)
@@ -855,6 +935,9 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "weights_source": policy_meta["weights_source"],
         "policy_version": policy_meta.get("policy_version"),
         "heat_scale": policy_meta.get("heat_scale", 1.0),
+        "heat_source": heat_source,
+        "n_heat_captains": len(tboost),
+        "n_heat_industries": len(iboost),
         "sell_excludes_addons": policy_meta.get("sell_excludes_addons", True),
         "absent_families": absent_families,
         "input_health": {
@@ -873,7 +956,12 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "pile_used": gp.get("used"),
         "green_min": gp.get("min", 8),
         "ranker": "green_pile" if gp.get("used") else "weighted",
+        "general_direction": str((gen_run or {}).get("predicted_direction") or ""),
     }
+    meta["stand_down"] = _stand_down_status(date, meta)
+    if meta["stand_down"].get("stand_down"):
+        print(f"[stock-book] STAND DOWN — {meta['stand_down'].get('reason')}")
+        meta["ranker"] = "stand_down"
     try:
         from .map_heat_research import calendar_entry_scale, earnings_entry_tickers
         meta["calendar_entry_scale"] = calendar_entry_scale(date)
@@ -1020,15 +1108,34 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     return veto
 
 
+def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
+                sell_core: bool = True) -> pd.DataFrame:
+    """Worst names on the SELL score. Never empty just because BUY stood down.
+
+    Policy may turn sell_excludes_addons off (live book_policy.json does).
+    In that case rank on score_{h}; otherwise prefer core_{h}.
+    """
+    if df is None or not len(df):
+        return df.head(0) if df is not None else pd.DataFrame()
+    core_col = f"core_{horizon}"
+    score_col = f"score_{horizon}"
+    if sell_core and core_col in df.columns:
+        return df.sort_values(core_col, ascending=True).head(top_n)
+    if score_col in df.columns:
+        return df.sort_values(score_col, ascending=True).head(top_n)
+    return df.head(0)
+
+
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
-              buy_mask=None, buy_sort=None):
+              buy_mask=None, buy_sort=None, allow_empty=False):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
     BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
     full weighted walk. buy_sort (e.g. green_rank) overrides score_{h} when the
     pile is used. SELL always ranks on the core weighted score (no pile,
     no buy-side add-ons) when sell_core is set and the column exists, and
-    never shorts a name that is in the buy_mask.
+    never shorts a name that is in the buy_mask. allow_empty empties BUY
+    (stand-down / catalyst-only miss) but still ranks SELL.
     """
     col = f"score_{horizon}"
     pool = df
@@ -1039,6 +1146,8 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             masked = df
         if masked is not None and len(masked):
             pool = masked
+        elif allow_empty:
+            return df.head(0), _rank_sells(df, horizon, top_n, sell_core)
     if pool is not None and len(pool):
         try:
             pool = pool.loc[~_buy_veto_mask(pool)]
@@ -1080,7 +1189,6 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
         if len(picks) >= top_n:
             break
     buys = pd.DataFrame(picks) if picks else ranked.head(0)
-    core_col = f"core_{horizon}"
     sell_df = df
     pile_sell = False
     if buy_mask is not None:
@@ -1093,10 +1201,7 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
                 return buys, df.head(0)
         except Exception:
             sell_df = df
-    if sell_core and core_col in sell_df.columns:
-        sells = sell_df.sort_values(core_col, ascending=True).head(top_n)
-    else:
-        sells = ranked.tail(top_n).iloc[::-1]
+    sells = _rank_sells(sell_df, horizon, top_n, sell_core)
     if pile_sell and buy_mask is not None:
         try:
             sells = sells.loc[~buy_mask.reindex(sells.index).fillna(False)]
@@ -1106,7 +1211,8 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
 
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
-                 sell_core: bool = True, buy_mask=None, buy_sort=None):
+                 sell_core: bool = True, buy_mask=None, buy_sort=None,
+                 allow_empty=False):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
@@ -1119,7 +1225,8 @@ def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
         except Exception:
             sub_mask = None
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
-                      sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort)
+                      sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort,
+                      allow_empty=allow_empty)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -1272,6 +1379,18 @@ def _layer_lines(row, horizon: str, weights: dict | None = None) -> list[str]:
 
 def _green_pile_md(meta: dict) -> list[str]:
     gp = meta.get("green_pile") or {}
+    sd = meta.get("stand_down") or {}
+    if sd.get("stand_down"):
+        return [
+            "## All-green BUY / SELL",
+            "",
+            f"- Stand-down: **no BUY.** {sd.get('reason', '')}",
+            f"- Pile still computed ({gp.get('n_pile', 0)} liquid green of "
+            f"{gp.get('n_universe', meta.get('n_universe'))}) but is not used "
+            "to force names into a no-win open.",
+            f"- SELL still ranks on {'core' if meta.get('sell_excludes_addons', True) else 'full'} weights.",
+            "",
+        ]
     if not gp:
         return [
             "## All-green BUY / SELL",
@@ -1290,6 +1409,181 @@ def _green_pile_md(meta: dict) -> list[str]:
         f"- {gp.get('reason', '')}",
         "",
     ]
+
+
+def _load_map_heat(date: str) -> dict:
+    p = ROOT / "01_daily" / "map_heat" / f"{date}_map_heat.json"
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _pp(v, digits=1) -> str:
+    try:
+        return f"{float(v):+.{digits}f}%"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def _finviz_board_md(date: str, meta: dict) -> list[str]:
+    """Human read of the Finviz outperform board (industry/theme, not 11-sector essays)."""
+    heat = _load_map_heat(date)
+    src = meta.get("heat_source") or "none"
+    n_cap = meta.get("n_heat_captains") or 0
+    n_ind = meta.get("n_heat_industries") or 0
+    lines = [
+        "## Finviz outperform board (industry + theme)",
+        "",
+        "This is the live Finviz groups tape — child industry vs parent sector, "
+        "plus theme joins. Sector LLM essays are a separate (and often disagreeing) layer.",
+        "",
+        f"- Heat into the ranker today: **{src}**"
+        f" ({n_cap} captains, {n_ind} industries → s_heat).",
+        f"- Board file: `01_daily/map_heat/{date}_map_heat.json`"
+        + (f" · generated {heat.get('generated_at')}" if heat.get("generated_at") else ""),
+        "",
+    ]
+    if not heat:
+        lines += ["_map_heat.json missing — no industry/theme tape today._", ""]
+        return lines
+
+    essay = meta.get("sector_bias") or {}
+    lines += [
+        "### Sector RS vs same-day LLM essay",
+        "",
+        "| Sector | Finviz 1d | Finviz 1w | LLM 1d | Tape vs essay |",
+        "|--------|----------:|----------:|-------:|---------------|",
+    ]
+    for row in heat.get("sectors") or []:
+        sec = row.get("sector") or ""
+        d1 = row.get("d1")
+        w1 = row.get("w1")
+        bias = essay.get(sec)
+        note = ""
+        try:
+            w1f = float(w1)
+            if bias is not None:
+                bf = float(bias)
+                if bf > 0.15 and w1f <= -1.0:
+                    note = "essay UP, tape DOWN"
+                elif bf < -0.15 and w1f >= 1.0:
+                    note = "essay DOWN, tape UP"
+                elif abs(bf) <= 0.15 and abs(w1f) >= 1.5:
+                    note = "essay flat, tape moving"
+        except (TypeError, ValueError):
+            note = ""
+        bias_s = f"{float(bias):+.2f}" if bias is not None else "—"
+        lines.append(
+            f"| {sec} | {_pp(d1)} | {_pp(w1)} | {bias_s} | {note} |"
+        )
+
+    hot = heat.get("hot") or []
+    cold = heat.get("cold") or []
+    lines += [
+        "",
+        "### Industry heat (1w vs parent)",
+        "",
+        "**HOT**",
+        "",
+    ]
+    for row in hot[:8]:
+        caps = []
+        for c in (row.get("spx_leaders") or []) + (row.get("rut_leaders") or []):
+            if isinstance(c, dict) and c.get("ticker"):
+                caps.append(str(c["ticker"]))
+            elif isinstance(c, str) and c:
+                caps.append(c)
+        cap_s = ", ".join(caps[:4]) if caps else "—"
+        lines.append(
+            f"- **{row.get('industry')}** ({row.get('sector')}) "
+            f"{_pp(row.get('d1'))} 1d · {_pp(row.get('w1'))} 1w · "
+            f"vs parent {_pp(row.get('vs_parent_w1'))} · {cap_s}"
+        )
+    lines += ["", "**COLD**", ""]
+    for row in cold[:8]:
+        caps = []
+        for c in (row.get("spx_leaders") or []) + (row.get("rut_leaders") or []):
+            if isinstance(c, dict) and c.get("ticker"):
+                caps.append(str(c["ticker"]))
+            elif isinstance(c, str) and c:
+                caps.append(c)
+        cap_s = ", ".join(caps[:4]) if caps else "—"
+        lines.append(
+            f"- **{row.get('industry')}** ({row.get('sector')}) "
+            f"{_pp(row.get('d1'))} 1d · {_pp(row.get('w1'))} 1w · "
+            f"vs parent {_pp(row.get('vs_parent_w1'))} · {cap_s}"
+        )
+
+    ov = heat.get("overrides") or []
+    if ov:
+        lines += [
+            "",
+            "### Overrides (child 1w residual ≥ 3pp)",
+            "",
+            "| Action | Industry | 1w | Parent 1w | Gap | Captains |",
+            "|--------|----------|---:|----------:|----:|----------|",
+        ]
+        for o in ov[:16]:
+            pretty = []
+            for c in (o.get("spx_leaders") or []) + (o.get("rut_leaders") or []):
+                if isinstance(c, dict) and c.get("ticker"):
+                    pretty.append(str(c["ticker"]))
+                elif isinstance(c, str) and c:
+                    pretty.append(c)
+            lines.append(
+                f"| {o.get('action') or '—'} | {o.get('industry')} | "
+                f"{_pp(o.get('w1'))} | {_pp(o.get('parent_w1'))} | "
+                f"{_pp(o.get('vs_parent_w1'))} | {', '.join(pretty[:4]) or '—'} |"
+            )
+
+    # Theme join lives on `themes`; the Finviz ETF basket tape is `theme_tape`.
+    join_themes = [t for t in (heat.get("themes") or []) if t.get("subthemes")]
+    etf_themes = list(heat.get("theme_tape") or [])
+    if not etf_themes:
+        etf_themes = [t for t in (heat.get("themes") or []) if t.get("n_etfs")]
+    if join_themes:
+        lines += [
+            "",
+            "### Theme join (sub-sector vs GICS parent)",
+            "",
+        ]
+        for th in join_themes:
+            bits = []
+            for st in th.get("subthemes") or []:
+                flag = "AGREE" if st.get("agree") else "**DIVERGE**"
+                bits.append(
+                    f"{st.get('label')}: {_pp(st.get('w1'))} 1w vs parent "
+                    f"{_pp(st.get('parent_w1'))} → {flag}"
+                )
+            lines.append(f"- **{th.get('theme')}** — " + "; ".join(bits))
+    if etf_themes:
+        ranked = sorted(
+            etf_themes,
+            key=lambda t: abs(float(t.get("w1") or 0)),
+            reverse=True,
+        )
+        lines += [
+            "",
+            "### Theme ETF tape (biggest |1w| moves)",
+            "",
+            "| Theme | 1d | 1w | Leaders |",
+            "|-------|---:|---:|---------|",
+        ]
+        for t in ranked[:12]:
+            leads = []
+            for L in t.get("leaders") or []:
+                if isinstance(L, dict) and L.get("ticker"):
+                    leads.append(str(L["ticker"]))
+            lines.append(
+                f"| {t.get('theme')} | {_pp(t.get('d1'))} | {_pp(t.get('w1'))} | "
+                f"{', '.join(leads[:3]) or '—'} |"
+            )
+    lines.append("")
+    return lines
 
 
 def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
@@ -1319,26 +1613,41 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
 
     sell_core = bool(meta.get("sell_excludes_addons", True))
     gp = meta.get("green_pile") or {}
+    sd = meta.get("stand_down") or {}
     buy_mask = None
     buy_sort = None
-    if gp.get("used") and "green" in df.columns:
+    allow_empty = False
+    if sd.get("stand_down"):
+        buy_mask = pd.Series(False, index=df.index)
+        allow_empty = True
+    elif sd.get("restrict_to_catalysts") and sd.get("catalyst_tickers"):
+        buy_mask = df["Ticker"].isin({str(t).upper() for t in sd["catalyst_tickers"]})
+        allow_empty = True
+    elif gp.get("used") and "green" in df.columns:
         buy_mask = df["green"] == True  # noqa: E712
         if "green_rank" in df.columns:
             buy_sort = "green_rank"
     books = {}
+    ranker = (
+        "stand_down" if sd.get("stand_down")
+        else ("catalyst_only" if sd.get("restrict_to_catalysts")
+              else ("green_pile" if gp.get("used") else "weighted"))
+    )
     for h in HORIZONS:
         b, s = _book_side(df, h, top_n, sell_core=sell_core,
-                          buy_mask=buy_mask, buy_sort=buy_sort)
+                          buy_mask=buy_mask, buy_sort=buy_sort,
+                          allow_empty=allow_empty)
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
             "buy_by_size": {},
             "sell_by_size": {},
-            "ranker": "green_pile" if gp.get("used") else "weighted",
+            "ranker": ranker,
         }
         for bucket in SIZE_BUCKETS:
             bb, ss = _bucket_side(df, h, bucket, sell_core=sell_core,
-                                  buy_mask=buy_mask, buy_sort=buy_sort)
+                                  buy_mask=buy_mask, buy_sort=buy_sort,
+                                  allow_empty=allow_empty)
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -1386,7 +1695,10 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "",
         f"- Weather risk: **{wr}**",
         f"- General predict (same-day): {meta['general_bias']:+.2f} "
+        f"{meta.get('general_direction') or ''} "
         f"({'present' if meta.get('same_day_general') else 'MISSING → 0'})",
+        f"- Stand-down: **{'YES — no BUY' if (meta.get('stand_down') or {}).get('stand_down') else 'no'}**"
+        f" — {(meta.get('stand_down') or {}).get('reason', '')}",
         f"- Sector predicts this date: {meta.get('same_day_sectors', 0)}/11 "
         f"({'ok' if meta.get('same_day_sectors') else 'missing → sector layer is 0; Finviz week tape still sits in join'})",
         f"- News tickers in play: {meta['n_news_tickers']}",
@@ -1396,6 +1708,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         f"- News names after digest+judge: {meta.get('n_news_after_digest', meta.get('n_news_tickers'))}",
         "",
         *_green_pile_md(meta),
+        *_finviz_board_md(date, meta),
         "## Inputs this run — every resource",
         "",
         "If a row says **missing**, that layer scored 0 today. If it says **found**, it moved the rank.",
@@ -1454,41 +1767,58 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     detail_h = ("1d", "1m")
     for h in HORIZONS:
         buys, sells = _book_side(df, h, top_n, sell_core=sell_core,
-                                buy_mask=buy_mask, buy_sort=buy_sort)
+                                buy_mask=buy_mask, buy_sort=buy_sort,
+                                allow_empty=allow_empty)
+        empty_why = (
+            (meta.get("stand_down") or {}).get("reason")
+            if (meta.get("stand_down") or {}).get("stand_down")
+            else "no names passed the BUY mask"
+        )
         if h in detail_h:
             L += ["", f"## {h} BUY — why these names", ""]
-            for i, (_, r) in enumerate(buys.iterrows(), 1):
-                L += [
-                    f"### {i}. {r['Ticker']} · {_usd(r.get('market_cap_m'))} {r.get('size')} · {r.get('sector')}",
-                    "",
-                    f"**{h} score {float(r[f'score_{h}']):+.3f}**",
-                    "",
-                    _why(r),
-                    "",
-                    *_layer_lines(r, h, meta.get("weights")),
-                    "",
-                ]
+            if buys is None or not len(buys):
+                L += [f"_{empty_why}_", ""]
+            else:
+                for i, (_, r) in enumerate(buys.iterrows(), 1):
+                    L += [
+                        f"### {i}. {r['Ticker']} · {_usd(r.get('market_cap_m'))} {r.get('size')} · {r.get('sector')}",
+                        "",
+                        f"**{h} score {float(r[f'score_{h}']):+.3f}**",
+                        "",
+                        _why(r),
+                        "",
+                        *_layer_lines(r, h, meta.get("weights")),
+                        "",
+                    ]
             L += ["", f"## {h} AVOID — bottom of the same rank", ""]
-            for _, r in sells.iterrows():
-                lab = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")
-                L.append(
-                    f"- **{r['Ticker']}** ({r.get('size')}, {r.get('sector')}, {_usd(r.get('market_cap_m'))}) "
-                    f"score {float(r[f'score_{h}']):+.3f}. {lab}"
-                )
+            if sells is None or not len(sells):
+                L += ["_no SELL rank today_", ""]
+            else:
+                for _, r in sells.iterrows():
+                    lab = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")
+                    L.append(
+                        f"- **{r['Ticker']}** ({r.get('size')}, {r.get('sector')}, {_usd(r.get('market_cap_m'))}) "
+                        f"score {float(r[f'score_{h}']):+.3f}. {lab}"
+                    )
         else:
             L += [
                 "",
                 f"## {h} BUY (compact — same names, different weights)",
                 "",
-                "| # | Ticker | Score | Size | Sector | Why in short |",
-                "|---|--------|------:|------|--------|--------------|",
             ]
-            for i, (_, r) in enumerate(buys.iterrows(), 1):
-                short = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")[:80]
-                L.append(
-                    f"| {i} | {r['Ticker']} | {float(r[f'score_{h}']):+.3f} | {r.get('size')} | "
-                    f"{r.get('sector')} | {short} |"
-                )
+            if buys is None or not len(buys):
+                L += [f"_{empty_why}_", ""]
+            else:
+                L += [
+                    "| # | Ticker | Score | Size | Sector | Why in short |",
+                    "|---|--------|------:|------|--------|--------------|",
+                ]
+                for i, (_, r) in enumerate(buys.iterrows(), 1):
+                    short = _label_plain(r.get("context_label")) or str(r.get("reasons") or "")[:80]
+                    L.append(
+                        f"| {i} | {r['Ticker']} | {float(r[f'score_{h}']):+.3f} | {r.get('size')} | "
+                        f"{r.get('sector')} | {short} |"
+                    )
 
     L += [
         "",
@@ -1501,6 +1831,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         f"- Weather: `01_daily/weather/{date}_weather.md`",
         f"- AB enrich: `data/ab_checklist/{date}_ab_checklist_enriched.md`",
         f"- Peer RS: `01_daily/{date}_peer_rs.md`",
+        f"- Finviz map heat: `01_daily/map_heat/{date}_map_heat.md`",
         "",
     ]
     md_path = DAILY / f"{date}_stock_book.md"
