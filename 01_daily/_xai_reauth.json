@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
+  "status": "needs_reauth",
   "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "YCBM-7AD7",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=YCBM-7AD7",
-  "expires_at": "2026-08-31T16:29:25.555931-04:00",
+  "reason": "device login did not finish rc=124",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 419451,
-  "updated_at": "2026-08-31T16:15:25.556307-04:00"
+  "updated_at": "2026-08-31T16:27:29.221307-04:00"
 }
