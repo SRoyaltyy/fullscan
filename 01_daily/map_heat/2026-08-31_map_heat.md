@@ -5,54 +5,54 @@ Export `finviz_2026-08-31.csv` · 11627 names · generated 2026-08-31T03:48:25.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7705.25 | -0.21% |
-| Nasdaq 100 (NQ) | 29436.5 | -0.19% |
-| Russell 2000 (ER2) | 2973.9 | -0.11% |
-| DJIA (YM) | 53481.0 | -0.18% |
-| VIX (VX) | 17.0 | +0.38% |
-| Crude Oil WTI (CL) | 86.68 | +3.87% |
-| Crude Oil Brent (QA) | 91.24 | +3.52% |
-| Natural Gas (NG) | 2.926 | +1.35% |
-| Heating Oil (HO) | 4.3746 | +2.99% |
-| Gasoline RBOB (RB) | 3.089 | +1.29% |
-| Gold (GC) | 4506.8 | -0.50% |
-| Silver (SI) | 67.97 | +0.29% |
-| Copper (HG) | 6.688 | +0.40% |
-| Platinum (PL) | 1818.1 | -1.93% |
-| Palladium (PA) | 1425.0 | -1.38% |
-| USD (DX) | 99.48 | -0.19% |
-| EUR (6E) | 1.16065 | +0.17% |
-| JPY (6J) | 0.62695 | +0.30% |
-| GBP (6B) | 1.354 | +0.08% |
-| AUD (6A) | 0.716 | +0.04% |
-| CAD (6C) | 0.72045 | +0.13% |
-| CHF (6S) | 1.2388 | +0.15% |
-| NZD (6N) | 0.59175 | +0.11% |
-| 10 Year Note (ZN) | 107.890625 | +0.01% |
+| S&P 500 (ES) | 7702.25 | -0.25% |
+| Nasdaq 100 (NQ) | 29429.0 | -0.21% |
+| Russell 2000 (ER2) | 2974.7 | -0.09% |
+| DJIA (YM) | 53463.0 | -0.23% |
+| VIX (VX) | 17.05 | +0.68% |
+| Crude Oil WTI (CL) | 86.4 | +3.62% |
+| Crude Oil Brent (QA) | 90.99 | +3.34% |
+| Natural Gas (NG) | 2.912 | +1.07% |
+| Heating Oil (HO) | 4.3705 | +2.78% |
+| Gasoline RBOB (RB) | 3.0796 | +0.93% |
+| Gold (GC) | 4507.0 | -0.51% |
+| Silver (SI) | 67.98 | +0.29% |
+| Copper (HG) | 6.693 | +0.52% |
+| Platinum (PL) | 1816.9 | -2.05% |
+| Palladium (PA) | 1426.0 | -1.55% |
+| USD (DX) | 99.505 | -0.16% |
+| EUR (6E) | 1.1603 | +0.14% |
+| JPY (6J) | 0.6268 | +0.27% |
+| GBP (6B) | 1.3538 | +0.05% |
+| AUD (6A) | 0.7159 | +0.03% |
+| CAD (6C) | 0.72055 | +0.15% |
+| CHF (6S) | 1.23875 | +0.11% |
+| NZD (6N) | 0.59165 | +0.08% |
+| 10 Year Note (ZN) | 107.90625 | +0.03% |
 | 5 Year Note (ZF) | 105.84375 | +0.04% |
-| 2 Year Note (ZT) | 102.671875 | +0.05% |
-| 30 Year Bond (ZB) | 109.0625 | -0.14% |
+| 2 Year Note (ZT) | 102.6640625 | +0.04% |
+| 30 Year Bond (ZB) | 109.15625 | -0.06% |
 | Nikkei 225 (NKD) | 66320.0 | +0.83% |
-| DAX (DY) | 26435.0 | -0.69% |
-| Euro Stoxx 50 (EX) | 6485.0 | -0.26% |
-| Corn (ZC) | 535.75 | -0.14% |
-| Soybeans (ZS) | 1284.25 | -0.23% |
-| Wheat (ZW) | 771.75 | -1.53% |
-| Soybean oil (ZL) | 70.84 | +0.06% |
-| Soybean Meal (ZM) | 338.1 | -1.31% |
-| Oats (ZO) | 372.25 | -0.67% |
+| DAX (DY) | 26428.0 | -0.73% |
+| Euro Stoxx 50 (EX) | 6484.0 | -0.28% |
+| Corn (ZC) | 535.0 | -0.33% |
+| Soybeans (ZS) | 1281.75 | -0.49% |
+| Wheat (ZW) | 771.5 | -1.59% |
+| Soybean oil (ZL) | 69.83 | -1.19% |
+| Soybean Meal (ZM) | 338.9 | -1.08% |
+| Oats (ZO) | 371.75 | -0.80% |
 | Rough Rice (ZR) | 15.58 | +0.23% |
-| Coffee (KC) | 310.55 | -0.72% |
-| Sugar (SB) | 17.63 | +0.63% |
-| Cotton (CT) | 93.41 | +2.17% |
-| Cocoa (CC) | 6631.0 | -0.48% |
+| Coffee (KC) | 312.7 | -0.42% |
+| Sugar (SB) | 17.73 | +0.91% |
+| Cotton (CT) | 93.03 | +1.85% |
+| Cocoa (CC) | 6718.0 | +0.86% |
 | Orange Juice (JO) | 145.3 | -1.76% |
 | Lumber (LB) | 553.0 | +0.54% |
 | Live Cattle (LC) | 211.825 | -0.56% |
 | Lean Hogs (LH) | 81.9 | +1.58% |
 | Feeder Cattle (FC) | 316.75 | -0.49% |
-| Bitcoin (BTC) | 78745.0 | +1.10% |
-| Canola (RS) | 821.4 | -0.28% |
+| Bitcoin (BTC) | 78570.0 | +0.96% |
+| Canola (RS) | 817.0 | -0.76% |
 | Ethanol (ZK) | 2.01 | +0.00% |
 
 ## CALENDAR
@@ -255,31 +255,31 @@ COLD (1w):
 - **Robotics & Automation** -1.8% 1d -0.5% 1w · BAI, AIQ, QTUM
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **MOVE** Corvex Announces Significant Data Center Expansion; Increasing Current Capacity 5x with Contracted Path to 13x (PR Newswire)
-- 4 min **STC** STEWART INFORMATION SERVICES CORPORATION ANNOUNCES DIVIDEND INCREASE AND DECLARES THIRD QUARTER DIVIDEND (PR Newswire)
-- 4 min **PBK** PowerBank Corporation Announces Development Agreement for the Development of Battery Energy Storage Projects in Ontario (PR Newswire)
-- 4 min **CIVB** Civista Bancshares Completes Leadership Transition; Chuck Parcher Assumes Role as President and CEO (PR Newswire)
-- 8 min **HAWK** HawkEye 360 Confirms Early Lock-up Release for September 2nd; Announces Preliminary Inclusion in the Russell 2000 Index (PR Newswire)
-- 12 min **MSFT,GOOGL,AMZN,AVGO,META** The Stock Market Rally Is About to Face Its Biggest Test (Barrons.com)
-- 17 min **GOOG,GOOGL,META** Meta Could Overtake Google Search Ad Revenue In 2026, Bernstein Says: AI Is Driving The Shift (Stocktwits)
-- 19 min **KPTI** Karyopharm Submits Supplemental New Drug Application to the FDA for XPOVIO (selinexor) Plus Ruxolitinib for Patients with Myelofibrosis (PR Newswire)
-- 19 min **CAG** Conagra Brands to Release Fiscal 2027 First Quarter Earnings on September 30, 2026 (PR Newswire)
-- 19 min **INDO** Indonesia Energy Announces K-29 Well Drilling Has Reached Total Depth and Testing Operations Are In Preparation (GlobeNewswire)
-- 19 min **SRXH** SRX Global Acquires Senior Secured Debt in CERo Therapeutics Holdings, Inc., an Innovative Cellular Immunotherapy Company with Cancer Fighting Molecule for the Treatment of Hematologic Cancers (GlobeNewswire)
-- 19 min **XNDU** Xanadu Charts Path to Over 1,000 Logical Qubits by 2031 (GlobeNewswire)
-- 19 min **REKR** Rekor Systems Calls for a National Industry Standard to Preserve the Public-Safety Value of ALPR (GlobeNewswire)
-- 19 min **PVLA** Palvella Therapeutics Completes Rolling Submission of New Drug Application to FDA for QTORIN Rapamycin for the Treatment of Microcystic Lymphatic Malformations (GlobeNewswire)
-- 19 min **CVX** Advisory: Chevron to Participate in Fireside Q&A at the Barclays 40th Annual Energy-Power Conference (Business Wire)
-- 19 min **AGEN** Agenus to Participate in Upcoming September Investor Conferences (Business Wire)
-- 26 min **LLY** Lilly to Buy This Autoimmune Drugmaker for $2.9 Billion in Cash. What It Means for the Stock. (Barrons.com)
-- 26 min **APLE** Apple Hospitality REIT Inc's Dividend Analysis (GuruFocus.com)
-- 28 min **SLB** Energy stocks near record highs as oil prices rise, and amid an M&A deal (MarketWatch)
-- 28 min **DNP** DNP Select Income Fund Inc's Dividend Analysis (GuruFocus.com)
-- 28 min **GOOG,GOOGL,AAPL** John Ternus is officially taking over as Apple CEO, with AI as his biggest test (Quartz)
-- 28 min **STEP** StepStone Group Inc's Dividend Analysis (GuruFocus.com)
-- 29 min **VENU** VENU Reports Luxe FireSuite Sales Averaging Over 80% Across Three Venues Ahead of Openings (Business Wire)
-- 30 min **EPR** EPR Properties's Dividend Analysis (GuruFocus.com)
-- 30 min **AAPL** John Ternus becomes Apple CEO, with AI as first big challenge (Quartz)
+- 4 min **RNAZ** TransCode Therapeutics Announces Publication Demonstrating Survival Benefit of TTX-MC138 in Preclinical Model of Breast Cancer Bone Metastasis (PR Newswire)
+- 4 min **STEP** StepStone Group to Present at the Barclays Global Financial Services Conference (GlobeNewswire)
+- 9 min **RFIL** RF Industries to Report Third Quarter Results on September 14 (ACCESSWIRE)
+- 9 min **ZG,Z** Zillow is helping 78,000 renters and counting turn monthly bills into credit progress (PR Newswire)
+- 9 min **OKUR** OnKure Therapeutics to Participate in the Morgan Stanley Global Healthcare Conference (GlobeNewswire)
+- 9 min **ELTX** Elicio Therapeutics to Participate at the H.C. Wainwright 28th Annual Global Investment Conference (GlobeNewswire)
+- 9 min **CPSH** CPS Technologies Secures Initial Defense Order for Tungsten Components (GlobeNewswire)
+- 9 min **KLRS** Kalaris to Present at Morgan Stanley 24th Annual Global Healthcare Conference (GlobeNewswire)
+- 9 min **AQMS** Aqua Metals and WMC Sign LOI Covering 100% of Planned Lithium Carbonate Output from First Commercial-Scale AquaRefining Facility (GlobeNewswire)
+- 9 min **GNTX** Gentex Announces Third Quarter 2026 Cash Dividend (GlobeNewswire)
+- 9 min **SVM** Silvercorp Publishes Fiscal 2026 Sustainability Report (Newsfile Corp.)
+- 9 min **INVZ** Innoviz Technologies Appoints Yoav Har-Even as Chairperson of the Board of Directors (PR Newswire)
+- 9 min **MFC** Manulife President and Chief Executive Officer Phil Witherington to participate in fireside chat at the Scotiabank Financials Summit (PR Newswire)
+- 9 min **RKT** Redfin Reports Americans Are Leaving Areas at Risk of Poor Air Quality, Mostly Because They're Expensive (PR Newswire)
+- 9 min **MKC** McCormick & Company to Report 2026 Third Quarter Financial Results on October 1, 2026 (PR Newswire)
+- 9 min **ABT** Abbott launches the first and only ready-to-feed liquid infant formula made with whole milk in the U.S. at similar price to its existing Similac powdered formula (PR Newswire)
+- 9 min **OWL** Blue Owl to Present at Barclays 24th Annual Global Financial Services Conference (PR Newswire)
+- 9 min **CLGN,BA** COLLPLANT IS ACQUIRING LIGHTSOLVER- ENTERS SUPERCOMPUTING AND PHOTONIC COMPUTING MARKETS (PR Newswire)
+- 9 min **AIR** AAR earns 2026 Great Place To Work Certification (PR Newswire)
+- 9 min **ROAD** Construction Partners, Inc. Completes Oklahoma Acquisition (PR Newswire)
+- 9 min **AIXC** AIxC's RoboShare Makes U.S. Robot-Sharing History as Seven Robots Share the Stage with DU$TY and Big (PR Newswire)
+- 9 min **ABBV** AbbVie to Present at the Wells Fargo 21st Annual Healthcare Conference (PR Newswire)
+- 9 min **EVGN** Evogene Responds to Dissident Shareholders: Transformation and Commercial Progress Provide a Clear Path Forward (PR Newswire)
+- 9 min **DKS** DICK'S Sporting Goods Announces Participation in the Goldman Sachs 33rd Annual Global Consumer and Retail Conference (PR Newswire)
+- 9 min **CNC** Centene Appoints New Chief Information Officer (PR Newswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
