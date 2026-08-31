@@ -92,6 +92,7 @@ With neither secret set, everything runs on DeepSeek exactly as before.
 | `OPENCLAW_BACKEND_MODEL` | `xai/grok-4.6` | backend model header (`x-openclaw-model`) |
 | `OPENCLAW_TIMEOUT` | `10800` | per-call timeout (seconds, **3 hours**); research turns are slow. Job-level timeouts on ECS LLM workflows are ≥ this so GitHub does not kill the runner first. |
 | `DEEPSEEK_API_KEY` | — | fallback provider (keep it set) |
+| `DEEPSEEK_CHAT_MAX_TOKENS` | `8192` | caps Grok-sized output budgets to a request DeepSeek Chat accepts |
 | `MODEL_PREDICT` … `MODEL_DISTILL` | deepseek-chat / deepseek-reasoner | models used on the fallback path only |
 
 Check routing (no network): `python -m src.deepseek_client`

@@ -51,7 +51,11 @@ def test_judge_accepted() -> None:
 
 
 def test_timeout_content_falls_back_to_deepseek() -> None:
-    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    _reset(
+        openclaw_url="http://gw:18789",
+        deepseek_key="ds-key",
+        grok_only=False,
+    )
     stub = (
         "LLM request timed out.\n\n"
         "The model did not produce a response before the model idle timeout."
@@ -79,7 +83,11 @@ def test_timeout_content_falls_back_to_deepseek() -> None:
 
 
 def test_credit_exhaustion_content_falls_back_to_deepseek() -> None:
-    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    _reset(
+        openclaw_url="http://gw:18789",
+        deepseek_key="ds-key",
+        grok_only=False,
+    )
 
     def fake_post(url, headers=None, json=None, timeout=None):
         if "gw:18789" in url:

@@ -41,6 +41,11 @@ MODEL_REFLECT = os.environ.get("MODEL_REFLECT", "deepseek-reasoner")
 MODEL_DISTILL = os.environ.get("MODEL_DISTILL", "deepseek-reasoner")
 DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL",
                                    "https://api.deepseek.com")
+# DeepSeek Chat rejects larger output budgets even when Grok accepts them.
+# Keep fallback requests valid instead of forwarding Grok's 24k/40k caps.
+DEEPSEEK_CHAT_MAX_TOKENS = int(
+    os.environ.get("DEEPSEEK_CHAT_MAX_TOKENS", "8192")
+)
 
 
 def openclaw_enabled() -> bool:

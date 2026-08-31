@@ -181,6 +181,25 @@ def test_deepseek_only_unchanged() -> None:
     assert urls == [f"{config.DEEPSEEK_BASE_URL}/chat/completions"]
 
 
+def test_deepseek_chat_caps_grok_sized_output_budget() -> None:
+    _reset(deepseek_key="ds-key")
+    seen = {}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        seen["body"] = json
+        return _fake_response(200, "DS")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat(
+            [{"role": "user", "content": "hi"}],
+            model="deepseek-chat",
+            tools=False,
+            max_tokens=40000,
+        )
+    assert text == "DS"
+    assert seen["body"]["max_tokens"] == config.DEEPSEEK_CHAT_MAX_TOKENS
+
+
 def test_describe_routing_no_secrets() -> None:
     _reset(openclaw_url="http://gw:18789", deepseek_key="super-secret-key")
     config.OPENCLAW_TOKEN = "another-secret"
@@ -306,6 +325,7 @@ def main() -> None:
         test_fallback_on_empty_answer,
         test_no_fallback_returns_empty,
         test_deepseek_only_unchanged,
+        test_deepseek_chat_caps_grok_sized_output_budget,
         test_describe_routing_no_secrets,
         test_timeout_content_is_empty,
         test_grok_only_blocks_deepseek_and_force_flag,

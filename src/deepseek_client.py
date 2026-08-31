@@ -340,8 +340,20 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         return ""
 
     # ---- fallback: DeepSeek + SearXNG tool loop (original client) ----
+    deepseek_max_tokens = max_tokens
+    if model == "deepseek-chat":
+        deepseek_max_tokens = min(
+            max_tokens,
+            config.DEEPSEEK_CHAT_MAX_TOKENS,
+        )
+        if deepseek_max_tokens != max_tokens:
+            print(
+                f"[llm] cap DeepSeek max_tokens "
+                f"{max_tokens}→{deepseek_max_tokens}"
+            )
     payload = {"model": model, "messages": messages,
-               "max_tokens": max_tokens, "temperature": temperature}
+               "max_tokens": deepseek_max_tokens,
+               "temperature": temperature}
     if tools:
         payload["tools"] = [SEARCH_TOOL]
         payload["tool_choice"] = "auto"
