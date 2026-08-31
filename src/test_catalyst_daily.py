@@ -57,7 +57,10 @@ def test_select_priority(tmp_path, monkeypatch):
     picked = cd.select_targets(date, max_n=6)
     tickers = [p["ticker"] for p in picked]
     roles = {p["ticker"]: p["role"] for p in picked}
-    assert tickers[0] == "CCJ"
+    # Researched opportunities and binary earnings get seats before the
+    # broader override-captain fill.
+    assert tickers[0] == "LEU"
+    assert "CCJ" in tickers
     assert "UEC" in tickers
     assert "LEU" in tickers
     assert "NVDA" in tickers
