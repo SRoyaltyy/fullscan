@@ -103,6 +103,32 @@ def test_empty_tape_is_not_overlay_good() -> None:
     assert mh.overlay_is_good(None, "2099-01-01") is False
 
 
+def test_tape_boosts_from_finviz_overrides() -> None:
+    orig = research.OUT_DIR
+    with tempfile.TemporaryDirectory() as d:
+        research.OUT_DIR = Path(d)
+        js = Path(d) / "2099-01-01_map_heat.json"
+        js.write_text(json.dumps({
+            "overrides": [
+                {"industry": "Thermal Coal", "vs_parent_w1": 6.26,
+                 "action": "OVERRIDE", "spx_leaders": [],
+                 "rut_leaders": ["CNR", "BTU"]},
+                {"industry": "Solar", "vs_parent_w1": -4.5,
+                 "action": "OVERRIDE", "spx_leaders": ["FSLR"],
+                 "rut_leaders": []},
+            ],
+        }))
+        t, i = research.tape_boosts("2099-01-01")
+        assert i["Thermal Coal"] > 0
+        assert i["Solar"] < 0
+        assert t["CNR"] > 0
+        assert t["FSLR"] < 0
+        # no morning research → ticker_boosts uses the tape
+        tt, ii = research.ticker_boosts("2099-01-01")
+        assert tt == t and ii == i
+    research.OUT_DIR = orig
+
+
 def test_heat_scale_default_is_incubate() -> None:
     _, meta = stock_book.load_policy()
     assert float(meta["heat_scale"]) <= 0.50
@@ -192,9 +218,10 @@ if __name__ == "__main__":
     test_missing_research_is_visible_but_bootstrap_is_safe()
     test_calendar_entry_scale_ignores_legacy_earnings_mix()
     test_empty_tape_is_not_overlay_good()
+    test_tape_boosts_from_finviz_overrides()
     test_heat_scale_default_is_incubate()
     test_weekend_upcoming_econ_does_not_trip_size_gate()
     test_parse_econ_route_init_keeps_upcoming()
     test_parse_earnings_preview_window()
     test_tape_keeps_all_tiles_not_just_whitelist()
-    print("9 tests passed")
+    print("10 tests passed")

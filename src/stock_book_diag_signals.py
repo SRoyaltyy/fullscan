@@ -46,6 +46,7 @@ BOX_KEYS = (
     "join", "sector", "gen", "news", "digest", "judge",
     "ab", "peer", "heat", "vol", "catal", "buy",
 )
+DOMAIN_KEYS = ("market", "parent", "child", "company", "setup", "flow")
 
 # Each lookback box → the input that colored it.
 FACTOR_TRACE = (
@@ -95,8 +96,9 @@ FACTOR_TRACE = (
         "key": "ab", "label": "AB",
         "file": "data/ab_checklist/{date}_ab_checklist_enriched.csv",
         "workflow": "AB checklist",
-        "score": "s_ab",
-        "means": "A+B1 checklist + peer/industry enrich.",
+        "score": "s_ab_intrinsic",
+        "means": "intrinsic A+B1 checklist; P01-P04 group/peer context is "
+        "shown separately to avoid double-counting.",
     },
     {
         "key": "peer", "label": "peer",
@@ -107,10 +109,11 @@ FACTOR_TRACE = (
     },
     {
         "key": "heat", "label": "heat",
-        "file": "01_daily/map_heat/{date}_research.json",
+        "file": "01_daily/map_heat/{date}_map_heat.json",
         "workflow": "Post-close research / Pre-Open ALL",
         "score": "s_heat",
-        "means": "captain/industry heat boost (morning refresh).",
+        "means": "child industry/theme absolute + parent-relative tape; "
+        "captain research enriches when healthy.",
     },
     {
         "key": "vol", "label": "vol",
@@ -384,7 +387,7 @@ def boxes_for_row(row: dict, extras: dict, in_buy: bool) -> dict[str, str]:
     t = _tick(row.get("ticker"))
     sector = str(row.get("sector") or "")
     judge_t, judge_sec = extras.get("judge_t") or {}, extras.get("judge_sec") or {}
-    return {
+    computed = {
         "join": polarity(row.get("s_join")),
         "sector": polarity(row.get("s_sector")),
         "gen": polarity(row.get("s_general")),
@@ -398,6 +401,16 @@ def boxes_for_row(row: dict, extras: dict, in_buy: bool) -> dict[str, str]:
         "catal": (extras.get("catal") or {}).get(t) or "missing",
         "buy": "good" if in_buy else "neutral",
     }
+    # The ranker now persists each source verdict before lookback/selection.
+    # Prefer it to re-parsing sidecars so the Action shows exactly what made
+    # the decision.  `buy` remains a display-only circular cell.
+    stored = row.get("source_boxes")
+    if isinstance(stored, dict):
+        for key in BOX_KEYS:
+            tone = str(stored.get(key) or "")
+            if key != "buy" and tone in BOX_ICON:
+                computed[key] = tone
+    return computed
 
 
 def _annotate(boxes: dict, prev: dict | None) -> dict:
@@ -473,9 +486,34 @@ def _decision(row: dict, *, side: str, horizon: str, rank: int,
         "size": row.get("size"),
         "green": bool(row.get("green")),
         "reasons": str(row.get("reasons") or ""),
+        "decision_lane": row.get("decision_lane") or "",
+        "bull_eligible": bool(row.get("bull_eligible")),
+        "bear_eligible": bool(row.get("bear_eligible")),
+        "bull_decision": str(row.get("bull_decision") or ""),
+        "bear_decision": str(row.get("bear_decision") or ""),
+        "decision_blockers": str(row.get("decision_blockers") or ""),
+        "domains": (
+            row.get("domain_boxes")
+            if isinstance(row.get("domain_boxes"), dict)
+            else {}
+        ),
+        "domain_cond": row.get("domain_cond"),
+        "domain_region": row.get("domain_region"),
+        "domain_white": bool(row.get("domain_white")),
+        "domain_name_white": bool(row.get("domain_name_white")),
+        "company_summary": row.get("company_summary"),
+        "company_strength": _num(row.get("company_strength")),
+        "company_direct": bool(row.get("company_direct")),
+        "company_price_confirmed": bool(
+            row.get("company_price_confirmed")
+        ),
+        "group_label": row.get("group_label") or row.get("industry"),
+        "child_d1": _num(row.get("child_d1")),
+        "child_w1": _num(row.get("child_w1")),
+        "child_residual": _num(row.get("child_residual")),
         "scores": {
             k: _num(row.get(k))
-            for k in ("s_join", "s_general", "s_ab", "s_peer",
+            for k in ("s_join", "s_general", "s_ab", "s_ab_intrinsic", "s_peer",
                       "s_sector", "s_news", "s_heat")
             if row.get(k) is not None
         },
@@ -539,6 +577,11 @@ def extract_decisions(date: str) -> dict:
     }
     n_buy = len(buys_1d)
     n_sell = len(sells_1d)
+    lattice = (
+        meta.get("decision_lattice")
+        if isinstance(meta.get("decision_lattice"), dict)
+        else {}
+    )
     return {
         "date": date,
         "prior_date": prev,
@@ -549,6 +592,13 @@ def extract_decisions(date: str) -> dict:
         "pile_used": meta.get("pile_used"),
         "n_1d_buy": n_buy,
         "n_1d_sell": n_sell,
+        "market": lattice.get("market") or meta.get("market_decision") or {},
+        "lattice": lattice,
+        "bull_watch": list(lattice.get("bull_watch") or []),
+        "bear_watch": list(lattice.get("bear_watch") or []),
+        "intentional_stand_down": bool(
+            (lattice.get("stand_down") or {}).get("stand_down")
+        ),
         "horizons": horizons,
         "factor_trace": [
             {**row, "file": row["file"].format(date=date)}
@@ -557,13 +607,13 @@ def extract_decisions(date: str) -> dict:
         "how": [
             "Stock Book ALL calls `python -m src.stock_book` after the "
             "upstream files land.",
-            "core_h = w_join·s_join + w_sector·s_sector + w_gen·s_gen + "
-            "w_news·s_news + w_ab·s_ab + w_peer·s_peer + s_heat.",
-            "BUY fills from the green pile (join/gen/AB/peer all green, "
-            "sector/news not red) when the pile is thick enough; otherwise "
-            "the weighted score. Caps: $400M min, 4/sector, 4 large-mega.",
-            "SELL ranks on core only and never shorts a green name. "
-            "Paper trading does not take the SELL book.",
+            "1d uses gate → route → rank: market permission; parent/child "
+            "group; direct company evidence; setup/flow.",
+            "The weighted score ranks only inside an eligible standard, "
+            "group-leader, or catalyst lane. It cannot offset a hard gate.",
+            "The source color row remains; a deduplicated six-domain row "
+            "(MKT,parent,child,company,setup,flow) owns permission.",
+            "SELL/AVOID uses the bear lattice. Paper does not short.",
             f"paper_trade --top {SLEEVE_N} takes the first {SLEEVE_N} 1d "
             "BUY names into the 1d_top sleeve (fill = that day's close).",
             "paper_trade writes dashboard/index.html; stock_book_all.yml "
@@ -644,6 +694,26 @@ def _box_cell(boxes: dict) -> str:
     return "".join(BOX_ICON.get((boxes or {}).get(k), "⬛") for k in BOX_KEYS)
 
 
+def _domain_cell(domains: dict) -> str:
+    return "".join(
+        BOX_ICON.get((domains or {}).get(k), "⬛") for k in DOMAIN_KEYS
+    )
+
+
+def _market_line(dec: dict) -> str:
+    market = dec.get("market") or {}
+    if not market:
+        return "MARKET unknown — no lattice record"
+    return (
+        f"MARKET {str(market.get('state') or '?').upper()} "
+        f"score={_num(market.get('score')) or 0:+.2f} "
+        f"good={_num(market.get('good_points')) or 0:+.1f} "
+        f"bad={_num(market.get('bad_points')) or 0:+.1f} "
+        f"risk={market.get('risk') or '?'} — "
+        f"{market.get('rationale') or ''}"
+    )
+
+
 def _box_legend() -> str:
     bits = []
     for spec in FACTOR_TRACE:
@@ -678,6 +748,7 @@ def _score_bits(d: dict) -> str:
             continue
         tone = (d.get("boxes") or {}).get(
             {"s_join": "join", "s_general": "gen", "s_ab": "ab",
+             "s_ab_intrinsic": "ab",
              "s_peer": "peer", "s_sector": "sector", "s_news": "news",
              "s_heat": "heat"}.get(key, ""),
             polarity(v),
@@ -700,9 +771,18 @@ def render_actions_plain(dec: dict) -> str:
         f"ranker={dec.get('ranker')}  "
         f"1d {dec.get('n_1d_buy') or 0} BUY / {dec.get('n_1d_sell') or 0} SELL  "
         f"sleeve=first {SLEEVE_N} BUY → {PAGES_URL}",
-        "",
-        f"--- ACTION BUY  (1d_top sleeve, fills .io) ---",
+        _market_line(dec),
     ]
+    market = dec.get("market") or {}
+    if market.get("bull_reasons"):
+        lines.append(
+            "MARKET BULL: " + "; ".join(market.get("bull_reasons") or [])
+        )
+    if market.get("bear_reasons"):
+        lines.append(
+            "MARKET BEAR: " + "; ".join(market.get("bear_reasons") or [])
+        )
+    lines += ["", f"--- ACTION BUY  (1d_top sleeve, fills .io) ---"]
     sleeve = [d for d in (h1.get("buy") or []) if d.get("sleeve")]
     rest = [d for d in (h1.get("buy") or []) if not d.get("sleeve")]
     if not sleeve:
@@ -714,7 +794,13 @@ def render_actions_plain(dec: dict) -> str:
         lines.append("(none)")
     for d in rest:
         lines.append(_action_line(d, "BUY"))
-    lines += ["", "--- ACTION SELL  (fade list — paper does not short) ---"]
+    lines += ["", "--- BULL DECISIONS  (eligible + closest blocked) ---"]
+    watches = dec.get("bull_watch") or []
+    if not watches:
+        lines.append("(none)")
+    for i, row in enumerate(watches[:15], 1):
+        lines.append(_watch_line(row, i, "BULL"))
+    lines += ["", "--- ACTION SELL  (bear decisions — paper does not short) ---"]
     sells = h1.get("sell") or []
     if not sells:
         lines.append("(none)")
@@ -722,6 +808,25 @@ def render_actions_plain(dec: dict) -> str:
         lines.append(_action_line(d, "SELL"))
     lines.append("")
     return "\n".join(lines)
+
+
+def _watch_line(row: dict, rank: int, side: str) -> str:
+    domains = _domain_cell(row.get("domains") or {})
+    decision = (
+        row.get("bull_decision") if side == "BULL"
+        else row.get("bear_decision")
+    )
+    evidence = ""
+    if side == "BULL":
+        company = str(row.get("company") or "")
+        group = str(row.get("group") or "")
+        if company or group:
+            evidence = f" evidence={company or 'no direct event'} / {group}"
+    return (
+        f"{side} #{rank:>2} {_tick(row.get('ticker')):<6} "
+        f"{domains} lane={row.get('lane') or 'blocked'} "
+        f"{decision or ''}{evidence}"
+    )
 
 
 def _action_line(d: dict, verb: str) -> str:
@@ -737,10 +842,16 @@ def _action_line(d: dict, verb: str) -> str:
         for s in (d.get("setups") or [])
     )
     extra = f"  setups={setups}" if setups else ""
+    decision = (
+        d.get("bull_decision") if verb == "BUY"
+        else d.get("bear_decision")
+    )
+    decision_text = f"  DECISION={decision}" if decision else ""
     return (
         f"ACTION {verb:<4} #{d.get('rank'):>2} {d.get('ticker'):<6} "
         f"{d.get('size') or '?':<5} {d.get('sector') or '?':<22} "
-        f"{boxes}  {d.get('reasons') or ''}{marks}{extra}"
+        f"{boxes} domains={_domain_cell(d.get('domains') or {})}  "
+        f"{d.get('reasons') or ''}{marks}{extra}{decision_text}"
     )
 
 
@@ -754,8 +865,19 @@ def render_actions_markdown(dec: dict) -> list[str]:
             "",
         ]
     h1 = (dec.get("horizons") or {}).get(PRIMARY_H) or {}
+    market = dec.get("market") or {}
     lines = [
         f"## Today's actions — {date}",
+        "",
+        f"### Market gate: "
+        f"{BOX_ICON.get(market.get('tone'), '⬛')} "
+        f"{str(market.get('state') or 'unknown').upper()}",
+        "",
+        f"- {_market_line(dec)}",
+        f"- Allowed lanes: "
+        f"`{', '.join(market.get('allowed_lanes') or []) or 'none'}` · "
+        f"max long slots {market.get('max_long_slots', 0)} · "
+        f"size ×{_num(market.get('position_scale')) or 0:.2f}",
         "",
         f"These are the names `src.stock_book` wrote. "
         f"The first {SLEEVE_N} BUY names are the paper sleeve that "
@@ -763,24 +885,52 @@ def render_actions_markdown(dec: dict) -> list[str]:
         "",
         "### ACTION BUY — sleeve (fills .io)",
         "",
-        "| Action | # | Ticker | Boxes | Score | Why (from inputs) |",
-        "|---|---|---|---|---|---|",
+        "| Action | # | Ticker | Source boxes | Domains | Lane | Score | Decision |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     for d in (h1.get("buy") or []):
         if not d.get("sleeve"):
             continue
         lines.append(_action_md_row(d, "BUY"))
+    if not [d for d in (h1.get("buy") or []) if d.get("sleeve")]:
+        lines.append("| — | | | | | | | none — market/lattice stood down |")
     lines += ["", "### ACTION BUY — book only", "",
-              "| Action | # | Ticker | Boxes | Score | Why (from inputs) |",
-              "|---|---|---|---|---|---|"]
+              "| Action | # | Ticker | Source boxes | Domains | Lane | Score | Decision |",
+              "|---|---|---|---|---|---|---|---|"]
     book_only = [d for d in (h1.get("buy") or []) if not d.get("sleeve")]
     if not book_only:
-        lines.append("| — | | | | | none |")
+        lines.append("| — | | | | | | | none |")
     for d in book_only:
         lines.append(_action_md_row(d, "BUY"))
-    lines += ["", "### ACTION SELL — fade list (not paper-traded)", "",
-              "| Action | # | Ticker | Boxes | Score | Why (from inputs) |",
-              "|---|---|---|---|---|---|"]
+    lines += [
+        "",
+        "### Bull decisions — eligible and closest blocked cases",
+        "",
+        "Domain order: **market · parent · child · company · setup · flow**.",
+        "",
+        "| # | Ticker | Domains | Lane | Direct company | Group | Decision |",
+        "|---:|---|---|---|---|---|---|",
+    ]
+    for i, row in enumerate((dec.get("bull_watch") or [])[:15], 1):
+        company = str(row.get("company") or "—").replace("|", "/")
+        decision = str(row.get("bull_decision") or "").replace("|", "/")
+        lines.append(
+            f"| {i} | `{_tick(row.get('ticker'))}` | "
+            f"{_domain_cell(row.get('domains') or {})} | "
+            f"{row.get('lane') or 'blocked'} | {company} | "
+            f"{row.get('group') or '—'} "
+            f"({_num(row.get('child_d1')) or 0:+.1f}% d1 / "
+            f"{_num(row.get('child_w1')) or 0:+.1f}% 1w / "
+            f"{_num(row.get('child_residual')) or 0:+.1f}% rel) | "
+            f"{decision} |"
+        )
+    lines += [
+        "",
+        "### ACTION SELL — bear decisions (not paper-traded)",
+        "",
+        "| Action | # | Ticker | Source boxes | Domains | Lane | Score | Decision |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
     for d in (h1.get("sell") or []):
         lines.append(_action_md_row(d, "SELL"))
     lines.append("")
@@ -790,9 +940,15 @@ def render_actions_markdown(dec: dict) -> list[str]:
 def _action_md_row(d: dict, verb: str) -> str:
     boxes = "".join(BOX_ICON.get((d.get("boxes") or {}).get(k), "⬛")
                     for k in BOX_KEYS)
-    why = (d.get("reasons") or "").replace("|", "/")
+    why = (
+        d.get("bull_decision") if verb == "BUY"
+        else d.get("bear_decision")
+    ) or d.get("reasons") or ""
+    why = str(why).replace("|", "/")
     return (
-        f"| **{verb}** | {d.get('rank')} | `{d.get('ticker')}` | {boxes} | "
+        f"| **{verb}** | {d.get('rank')} | `{d.get('ticker')}` | "
+        f"{boxes} | {_domain_cell(d.get('domains') or {})} | "
+        f"{d.get('decision_lane') or '—'} | "
         f"{d.get('score') or 0:.3f} | {why} |"
     )
 
@@ -830,9 +986,9 @@ def render_decisions_markdown(dec: dict) -> list[str]:
         + f" · 1d book {dec.get('n_1d_buy') or 0} buy / {dec.get('n_1d_sell') or 0} sell"
         + f" · vs prior {dec.get('prior_date')}",
         "",
-        "Each name is a row the ranker actually wrote. Boxes are the "
-        "lookback red/yellow/green for that input. Hover the lineage "
-        "table for the file that colored the box.",
+        "Each name is a row the ranker actually wrote. Source boxes retain "
+        "the lookback red/yellow/green language; the six-domain row owns "
+        "permission and keeps duplicate evidence from voting twice.",
         "",
         f"_Boxes {_box_legend()}_",
         "",
@@ -843,35 +999,38 @@ def render_decisions_markdown(dec: dict) -> list[str]:
         lines.append(f"- {step}")
     lines += ["", "### 1d BUY — what paper can fill", ""]
     lines += [
-        "| # | Name | Sleeve | Boxes | Score | Sector | Rationale | Setups |",
-        "|---|---|---|---|---|---|---|---|",
+        "| # | Name | Sleeve | Source boxes | Domains | Lane | Score | Sector | Decision | Setups |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for d in h1.get("buy") or []:
         sleeve = "1d_top" if d.get("sleeve") else "book only"
         setups = _setups(d)
         marks = _marks(d)
         name = f"{marks} `{d['ticker']}`".strip()
-        why = (d.get("reasons") or "") + (
+        why = (d.get("bull_decision") or d.get("reasons") or "") + (
             (" · " + _score_bits(d)) if d.get("scores") else ""
         )
         lines.append(
             f"| {d['rank']} | {name} | {sleeve} | {_box_cell(d.get('boxes'))} | "
+            f"{_domain_cell(d.get('domains'))} | "
+            f"{d.get('decision_lane') or '—'} | "
             f"{d.get('score') or 0:.3f} | {d.get('sector') or ''} | "
             f"{why.replace('|', '/')} | {setups} |"
         )
     lines += ["", "### 1d SELL — fade list (not paper-traded)", ""]
     lines += [
-        "| # | Name | Boxes | Score | Sector | Rationale | Setups |",
-        "|---|---|---|---|---|---|---|",
+        "| # | Name | Source boxes | Domains | Score | Sector | Bear decision | Setups |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     for d in h1.get("sell") or []:
         marks = _marks(d)
         name = f"{marks} `{d['ticker']}`".strip()
-        why = (d.get("reasons") or "") + (
+        why = (d.get("bear_decision") or d.get("reasons") or "") + (
             (" · " + _score_bits(d)) if d.get("scores") else ""
         )
         lines.append(
             f"| {d['rank']} | {name} | {_box_cell(d.get('boxes'))} | "
+            f"{_domain_cell(d.get('domains'))} | "
             f"{d.get('score') or 0:.3f} | {d.get('sector') or ''} | "
             f"{why.replace('|', '/')} | {_setups(d)} |"
         )

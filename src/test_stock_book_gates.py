@@ -128,6 +128,71 @@ def test_pile_sorts_by_green_rank_not_opp_score() -> None:
     assert not set(sells["Ticker"]).intersection(set(df.loc[df["green"], "Ticker"]))
 
 
+def test_stand_down_empties_buy() -> None:
+    from src.stock_book import _book_side, _stand_down_status
+    st = _stand_down_status("2026-08-31", {
+        "same_day_general": True,
+        "general_direction": "down",
+        "weather_risk": "off",
+        "general_bias": -0.47,
+    })
+    assert st["stand_down"] is True
+    assert st["n_usable_catalysts"] == 0
+    df = pd.DataFrame([
+        _row("SM", sector=0.27, sector_name="Energy", score=1.0),
+    ])
+    buys, sells = _book_side(
+        df, "1d", 10,
+        buy_mask=pd.Series(False, index=df.index),
+        allow_empty=True,
+    )
+    assert len(buys) == 0
+    assert len(sells) >= 1
+    # live policy has sell_excludes_addons=False — still rank SELL on score
+    df2 = df.drop(columns=["core_1d"])
+    buys2, sells2 = _book_side(
+        df2, "1d", 10,
+        buy_mask=pd.Series(False, index=df2.index),
+        allow_empty=True,
+        sell_core=False,
+    )
+    assert len(buys2) == 0
+    assert len(sells2) >= 1
+    assert "SM" in set(sells2["Ticker"])
+
+
+def test_finviz_board_reads_theme_tape() -> None:
+    import json
+    from src.stock_book import ROOT, _finviz_board_md
+
+    heat_dir = ROOT / "01_daily" / "map_heat"
+    heat_dir.mkdir(parents=True, exist_ok=True)
+    p = heat_dir / "2099-01-02_map_heat.json"
+    p.write_text(json.dumps({
+        "sectors": [{"sector": "Energy", "d1": 0.1, "w1": -2.1}],
+        "hot": [], "cold": [], "overrides": [],
+        "themes": [{"theme": "Energy Traditional", "subthemes": [
+            {"label": "Oil Services", "w1": 1.6, "parent_w1": -2.1, "agree": False}
+        ]}],
+        "theme_tape": [{"theme": "Space Exploration & Technology",
+                        "d1": -2.3, "w1": -5.0, "n_etfs": 13,
+                        "leaders": [{"ticker": "NASA"}]}],
+    }), encoding="utf-8")
+    try:
+        md = "\n".join(_finviz_board_md("2099-01-02", {
+            "heat_source": "finviz_tape",
+            "n_heat_captains": 1,
+            "n_heat_industries": 1,
+            "sector_bias": {"Energy": 0.47},
+        }))
+        assert "essay UP, tape DOWN" in md
+        assert "Oil Services" in md and "DIVERGE" in md
+        assert "Theme ETF tape" in md
+        assert "NASA" in md
+    finally:
+        p.unlink(missing_ok=True)
+
+
 def test_opp_cap_constant() -> None:
     assert OPP_CAP == 0.20
     assert HARD_SECTOR_RED == -0.25
@@ -141,10 +206,27 @@ def test_20260831_sleeve_drops_broken_names() -> None:
         return
     book = json.loads(p.read_text(encoding="utf-8"))
     buys = [r["ticker"] for r in (book.get("books") or {}).get("1d", {}).get("buy") or []]
+    if (book.get("meta") or {}).get("ranker") == "decision_lattice":
+        lattice = (book.get("meta") or {}).get("decision_lattice") or {}
+        assert (lattice.get("market") or {}).get("state") == "hard_red"
+        assert not buys
+        assert len(
+            (book.get("books") or {}).get("1d", {}).get("sell") or []
+        ) >= 10
+        watches = [r.get("ticker") for r in lattice.get("bull_watch") or []]
+        assert "AMGN" in watches[:5], watches[:5]
+        assert lattice.get("n_bull_eligible") == 0
+        return
     if not buys:
         return
     for bad in ("WAY", "PBH", "NFG"):
         assert bad not in buys[:10], f"{bad} still in 1d sleeve: {buys[:10]}"
+    for row in (book.get("books") or {}).get("1d", {}).get("buy") or []:
+        if row.get("ticker") in buys[:10]:
+            assert not row.get("lb_alarm"), f"{row.get('ticker')} is 🚨 in the sleeve"
+            assert not row.get("lb_fade"), f"{row.get('ticker')} is a fade setup in the sleeve"
+            assert row.get("lb_cond") != "bad"
+            assert row.get("lb_region") != "bad"
 
 
 def main() -> None:
@@ -154,6 +236,8 @@ def main() -> None:
         test_lag_and_peer_red_is_buy_veto,
         test_dead_relvol_is_buy_veto,
         test_pile_sorts_by_green_rank_not_opp_score,
+        test_stand_down_empties_buy,
+        test_finviz_board_reads_theme_tape,
         test_opp_cap_constant,
         test_20260831_sleeve_drops_broken_names,
     ]

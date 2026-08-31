@@ -69,6 +69,8 @@ KNOWN_NAMES = {
     "American Airlines": "AAL", "Analog Devices": "ADI",
     "Moderna": "MRNA", "Merck": "MRK",
     "BlackBerry": "BB", "Blackberry": "BB",
+    "Salesforce": "CRM", "Amgen": "AMGN", "Repatha": "AMGN",
+    "Broadcom": "AVGO", "Cardinal Health": "CAH",
     "NextEra": "NEE", "Constellation": "CEG", "Vistra": "VST",
 }
 
