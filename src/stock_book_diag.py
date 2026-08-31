@@ -883,6 +883,9 @@ def render_markdown(report: Report) -> str:
         f"**Ranker: {rank}** · overall **{report.overall}** · "
         f"{report.generated_at}",
         "",
+    ]
+    lines += signals.render_actions_markdown(report.decisions)
+    lines += [
         "FAIL = empty, truncated, carry-forward, timeout stub, or QC fail. "
         "PARTIAL = some required outputs are good, others are not. "
         "Optional files do not change the workflow flag.",
@@ -927,6 +930,8 @@ def render_markdown(report: Report) -> str:
 def render_text(report: Report) -> str:
     rank = "READY" if report.ranker_ready else "BLOCKED"
     lines = [
+        signals.render_actions_plain(report.decisions).rstrip(),
+        "",
         f"[stock-book-diag] {report.date}  ranker={rank}  overall={report.overall}",
     ]
     for w in report.workflows:
@@ -946,20 +951,6 @@ def render_text(report: Report) -> str:
         lines.append("  blockers:")
         for b in report.blockers:
             lines.append(f"    - {b}")
-    dec = report.decisions or {}
-    h1 = (dec.get("horizons") or {}).get("1d") or {}
-    if h1.get("buy"):
-        lines.append("  1d BUY (sleeve = first 10 → .io):")
-        for d in (h1.get("buy") or [])[:12]:
-            sleeve = "sleeve" if d.get("sleeve") else "book"
-            boxes = "".join(
-                signals.BOX_ICON.get((d.get("boxes") or {}).get(k), "?")
-                for k in signals.BOX_KEYS
-            )
-            lines.append(
-                f"    {d['rank']:>2} {sleeve:<6} {d['ticker']:<6} "
-                f"{boxes}  {d.get('reasons') or ''}"
-            )
     return "\n".join(lines)
 
 
@@ -1026,6 +1017,7 @@ def main() -> None:
     gh = {} if args.no_gh else fetch_gh_runs(date)
     report = audit(date, gh_runs=gh)
     print(render_text(report))
+    signals.emit_action_notices(report.decisions)
     if args.write:
         md, js = write_report(report)
         print(f"[stock-book-diag] wrote {md}")

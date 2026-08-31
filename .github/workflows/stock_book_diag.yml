@@ -62,12 +62,17 @@ jobs:
           status=$?
           exit "$status"
 
-      - name: Show board
+      - name: Show today's actions
         if: always()
         run: |
           D="${DATE:-$(TZ=America/New_York date +%F)}"
-          echo "======== $D ========"
-          cat "01_daily/${D}_stock_book_diag.md" 2>/dev/null || true
+          echo "======== $D ACTIONS ========"
+          MD="01_daily/${D}_stock_book_diag.md"
+          if [ -f "$MD" ]; then
+            awk '/^## Today.s actions/,/^## Dashboard|^## Why the ranker|^## Post-close/' "$MD"
+          else
+            echo "NO REPORT — diagnostic did not write a board"
+          fi
 
       - name: Upload report
         if: always()

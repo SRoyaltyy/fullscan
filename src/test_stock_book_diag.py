@@ -228,7 +228,8 @@ def test_audit_live_days():
     assert "READY" in md or "BLOCKED" in md
     assert "Post-close research" in md
     assert "Pre-Open ALL" in md
-    assert "Buy / sell decisions" in md
+    assert "Today's actions" in md
+    assert "ACTION BUY" in md or "**BUY**" in md
     assert "Dashboard / .io" in md
     assert "⬜ MISSING" in md or "MISSING" in md
 
@@ -260,6 +261,16 @@ def test_decisions_trace_to_inputs():
     assert files["ab"].endswith("_ab_checklist_enriched.csv")
     assert files["gen"].endswith("_predict.md")
     assert len(FACTOR_TRACE) == 12
+    from src.stock_book_diag_signals import (
+        render_actions_markdown, render_actions_plain,
+    )
+    banner = render_actions_plain(dec)
+    assert "ACTIONS" in banner
+    assert f"ACTION BUY  #{top['rank']:>2} {top['ticker']}" in banner
+    assert "ACTION SELL" in banner
+    act_md = "\n".join(render_actions_markdown(dec))
+    assert top["ticker"] in act_md
+    assert "**BUY**" in act_md
     md = "\n".join(__import__(
         "src.stock_book_diag_signals", fromlist=["render_decisions_markdown"]
     ).render_decisions_markdown(dec))

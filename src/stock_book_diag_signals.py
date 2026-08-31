@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 import urllib.error
 import urllib.request
@@ -683,6 +684,133 @@ def _score_bits(d: dict) -> str:
         )
         parts.append(f"{BOX_ICON.get(tone, '⬛')} {spec['label']}={v:+.2f}")
     return " · ".join(parts)
+
+
+def render_actions_plain(dec: dict) -> str:
+    """The thing you see first: today's BUY / SELL list."""
+    date = dec.get("date") or "?"
+    if not dec.get("present"):
+        return (
+            f"======== {date} ACTIONS ========\n"
+            "NO BOOK — ranker has not written any buy/sell names.\n"
+        )
+    h1 = (dec.get("horizons") or {}).get(PRIMARY_H) or {}
+    lines = [
+        f"======== {date} ACTIONS ========",
+        f"ranker={dec.get('ranker')}  "
+        f"1d {dec.get('n_1d_buy') or 0} BUY / {dec.get('n_1d_sell') or 0} SELL  "
+        f"sleeve=first {SLEEVE_N} BUY → {PAGES_URL}",
+        "",
+        f"--- ACTION BUY  (1d_top sleeve, fills .io) ---",
+    ]
+    sleeve = [d for d in (h1.get("buy") or []) if d.get("sleeve")]
+    rest = [d for d in (h1.get("buy") or []) if not d.get("sleeve")]
+    if not sleeve:
+        lines.append("(none)")
+    for d in sleeve:
+        lines.append(_action_line(d, "BUY"))
+    lines += ["", "--- ACTION BUY  (book only, not in the 10-name sleeve) ---"]
+    if not rest:
+        lines.append("(none)")
+    for d in rest:
+        lines.append(_action_line(d, "BUY"))
+    lines += ["", "--- ACTION SELL  (fade list — paper does not short) ---"]
+    sells = h1.get("sell") or []
+    if not sells:
+        lines.append("(none)")
+    for d in sells:
+        lines.append(_action_line(d, "SELL"))
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _action_line(d: dict, verb: str) -> str:
+    boxes = "".join(BOX_ICON.get((d.get("boxes") or {}).get(k), "⬛")
+                    for k in BOX_KEYS)
+    marks = ""
+    if d.get("blue"):
+        marks += "🔵"
+    if d.get("alarm"):
+        marks += "🚨"
+    setups = ", ".join(
+        s.get("label") or s.get("id") or ""
+        for s in (d.get("setups") or [])
+    )
+    extra = f"  setups={setups}" if setups else ""
+    return (
+        f"ACTION {verb:<4} #{d.get('rank'):>2} {d.get('ticker'):<6} "
+        f"{d.get('size') or '?':<5} {d.get('sector') or '?':<22} "
+        f"{boxes}  {d.get('reasons') or ''}{marks}{extra}"
+    )
+
+
+def render_actions_markdown(dec: dict) -> list[str]:
+    date = dec.get("date") or "?"
+    if not dec.get("present"):
+        return [
+            f"## Today's actions — {date}",
+            "",
+            "**NO BOOK** — the ranker has not written any buy/sell names.",
+            "",
+        ]
+    h1 = (dec.get("horizons") or {}).get(PRIMARY_H) or {}
+    lines = [
+        f"## Today's actions — {date}",
+        "",
+        f"These are the names `src.stock_book` wrote. "
+        f"The first {SLEEVE_N} BUY names are the paper sleeve that "
+        f"[the .io dashboard]({PAGES_URL}) can fill.",
+        "",
+        "### ACTION BUY — sleeve (fills .io)",
+        "",
+        "| Action | # | Ticker | Boxes | Score | Why (from inputs) |",
+        "|---|---|---|---|---|---|",
+    ]
+    for d in (h1.get("buy") or []):
+        if not d.get("sleeve"):
+            continue
+        lines.append(_action_md_row(d, "BUY"))
+    lines += ["", "### ACTION BUY — book only", "",
+              "| Action | # | Ticker | Boxes | Score | Why (from inputs) |",
+              "|---|---|---|---|---|---|"]
+    book_only = [d for d in (h1.get("buy") or []) if not d.get("sleeve")]
+    if not book_only:
+        lines.append("| — | | | | | none |")
+    for d in book_only:
+        lines.append(_action_md_row(d, "BUY"))
+    lines += ["", "### ACTION SELL — fade list (not paper-traded)", "",
+              "| Action | # | Ticker | Boxes | Score | Why (from inputs) |",
+              "|---|---|---|---|---|---|"]
+    for d in (h1.get("sell") or []):
+        lines.append(_action_md_row(d, "SELL"))
+    lines.append("")
+    return lines
+
+
+def _action_md_row(d: dict, verb: str) -> str:
+    boxes = "".join(BOX_ICON.get((d.get("boxes") or {}).get(k), "⬛")
+                    for k in BOX_KEYS)
+    why = (d.get("reasons") or "").replace("|", "/")
+    return (
+        f"| **{verb}** | {d.get('rank')} | `{d.get('ticker')}` | {boxes} | "
+        f"{d.get('score') or 0:.3f} | {why} |"
+    )
+
+
+def emit_action_notices(dec: dict) -> None:
+    """GitHub Actions annotations so BUY names show at the top of the run."""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    h1 = ((dec.get("horizons") or {}).get(PRIMARY_H) or {})
+    for d in (h1.get("buy") or []):
+        if not d.get("sleeve"):
+            continue
+        reason = (d.get("reasons") or "").replace("\n", " ")[:200]
+        print(
+            f"::notice title=ACTION BUY {d.get('ticker')}::"
+            f"#{d.get('rank')} {reason}",
+            flush=True,
+        )
 
 
 def render_decisions_markdown(dec: dict) -> list[str]:
