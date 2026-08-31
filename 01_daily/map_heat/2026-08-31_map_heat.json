@@ -8428,212 +8428,212 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7702.25,
-      "change": -0.26
+      "last": 7703.75,
+      "change": -0.2
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29423.0,
-      "change": -0.24
+      "last": 29450.25,
+      "change": -0.09
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2971.7,
+      "last": 2970.7,
       "change": -0.2
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 53455.0,
-      "change": -0.24
+      "last": 53447.0,
+      "change": -0.23
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.25,
-      "change": 1.56
+      "last": 17.2,
+      "change": 1.27
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 85.56,
-      "change": 2.58
+      "last": 85.97,
+      "change": 2.95
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 90.47,
-      "change": 2.68
+      "last": 90.94,
+      "change": 3.1
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
       "last": 2.872,
-      "change": -0.52
+      "change": -0.55
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.3265,
-      "change": 1.8
+      "last": 4.3416,
+      "change": 2.07
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.0817,
-      "change": 0.99
+      "last": 3.0914,
+      "change": 1.22
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4472.5,
-      "change": -1.29
+      "last": 4480.9,
+      "change": -1.0
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.115,
-      "change": -1.0
+      "last": 67.205,
+      "change": -0.79
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.6665,
-      "change": 0.09
+      "last": 6.668,
+      "change": 0.23
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1810.0,
-      "change": -2.39
+      "last": 1814.8,
+      "change": -2.09
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1412.5,
-      "change": -2.38
+      "last": 1413.5,
+      "change": -2.17
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.57,
-      "change": -0.09
+      "last": 99.575,
+      "change": -0.1
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15965,
-      "change": 0.07
+      "last": 1.15945,
+      "change": 0.08
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.62655,
+      "last": 0.6264,
       "change": 0.22
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3542,
-      "change": 0.09
+      "last": 1.3543,
+      "change": 0.11
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7161,
-      "change": 0.07
+      "last": 0.7162,
+      "change": 0.08
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.7202,
-      "change": 0.09
+      "last": 0.72015,
+      "change": 0.1
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23735,
+      "last": 1.2371,
       "change": 0.02
     },
     {
       "ticker": "6N",
       "label": "NZD",
       "last": 0.5918,
-      "change": 0.13
+      "change": 0.14
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 107.953125,
-      "change": 0.07
+      "last": 107.9375,
+      "change": 0.06
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.8671875,
-      "change": 0.06
+      "last": 105.84375,
+      "change": 0.04
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.66015625,
-      "change": 0.04
+      "last": 102.65625,
+      "change": 0.03
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 109.25,
-      "change": 0.03
+      "last": 109.1875,
+      "change": 0.0
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 66185.0,
-      "change": 0.59
+      "last": 66175.0,
+      "change": 0.65
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 26548.0,
-      "change": -0.29
+      "last": 26581.0,
+      "change": -0.15
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6485.0,
-      "change": -0.26
+      "last": 6494.0,
+      "change": -0.11
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 537.75,
-      "change": 0.19
+      "last": 538.5,
+      "change": 0.42
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1287.0,
-      "change": -0.1
+      "last": 1287.75,
+      "change": 0.0
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 774.5,
-      "change": -1.24
+      "last": 776.5,
+      "change": -0.99
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.58,
-      "change": -0.34
+      "last": 70.72,
+      "change": -0.14
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 338.5,
-      "change": -1.2
+      "last": 338.8,
+      "change": -1.05
     },
     {
       "ticker": "ZO",
@@ -8662,8 +8662,8 @@
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 92.03,
-      "change": 0.65
+      "last": 91.98,
+      "change": 0.68
     },
     {
       "ticker": "CC",
@@ -8704,14 +8704,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 77925.0,
-      "change": 0.08
+      "last": 78300.0,
+      "change": 0.55
     },
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 820.1,
-      "change": -0.44
+      "last": 822.4,
+      "change": -0.22
     },
     {
       "ticker": "ZK",
@@ -8722,7 +8722,17 @@
   ],
   "ticker_news": [
     {
-      "time": "16 min",
+      "time": "15 min",
+      "title": "ASTS Stock Could Get A New Catalyst: US Mobile Sets Sights On Q4 AST SpaceMobile Launch",
+      "url": "https://finance.yahoo.com/m/14f2eca5-f8be-3576-beed-432bfd7de59f/asts-stock-could-get-a-new.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "ASTS",
+        "VZ"
+      ]
+    },
+    {
+      "time": "36 min",
       "title": "NVDA Stock Eyes Best Month Since May: Jensen Huang Says AI Data Center Boom Is Reindustrializing America",
       "url": "https://finance.yahoo.com/m/e41d88e0-e46d-3192-8eb0-3a7fe0b52b90/nvda-stock-eyes-best-month.html",
       "source": "Stocktwits",
@@ -8731,7 +8741,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "43 min",
       "title": "LexinFintech Holdings Ltd. Reports Second Quarter 2026 Unaudited Financial Results",
       "url": "/news/386715/lexinfintech-holdings-ltd-reports-second-quarter-2026-unaudited-financial-results",
       "source": "GlobeNewswire",
@@ -8740,7 +8750,7 @@
       ]
     },
     {
-      "time": "24 min",
+      "time": "44 min",
       "title": "Michael Burrys Build-A-Bear Bet Takes A Hit As Stock Suffers Worst Week Since COVID Rout  I Spy An Atypical Turnaround Dance",
       "url": "https://finance.yahoo.com/m/81f1e618-cd4b-32ea-aa23-315ecbb18848/michael-burry%E2%80%99s-build-a-bear.html",
       "source": "Stocktwits",
@@ -8749,7 +8759,7 @@
       ]
     },
     {
-      "time": "52 min",
+      "time": "1 hour",
       "title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites  Heres How His August Bets Fared",
       "url": "https://finance.yahoo.com/m/e0dc4f4e-1078-3f7e-b606-d8a499adbff7/michael-burry-bought.html",
       "source": "Stocktwits",
@@ -8762,7 +8772,7 @@
       ]
     },
     {
-      "time": "57 min",
+      "time": "1 hour",
       "title": "U.S., Iran trade strikes for first time since July; Trump threatens Kharg attacks",
       "url": "https://finance.yahoo.com/m/89a8ad24-5a4a-32e0-bd4d-5cbc7f8cd5f1/u.s.%2C-iran-trade-strikes-for.html",
       "source": "Investing.com",
@@ -9585,15 +9595,6 @@
         "CVX",
         "XOM"
       ]
-    },
-    {
-      "time": "Aug-29",
-      "title": "Mark Walters insurers face funding squeeze as affiliate loans mature - WSJ",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/mark-walter-insurers-face-funding-020017980.html",
-      "source": "Investing.com",
-      "tickers": [
-        "TWG"
-      ]
     }
   ],
   "major_news_tickers": [
@@ -10378,5 +10379,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 185,
   "earnings_window_count": 129,
-  "overlay_at": "2026-08-31T01:23:15.236146-04:00"
+  "overlay_at": "2026-08-31T01:43:57.366746-04:00"
 }
