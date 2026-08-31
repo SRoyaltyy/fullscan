@@ -1,8 +1,12 @@
-"""Stock Book upstream readiness — OK / FAIL / PARTIAL in GitHub.
+"""Stock Book readiness — inputs, buy/sell names, and the .io dashboard.
 
-Inspects the seven workflows that feed the ranker. File existence is not
-enough: empty, truncated, carry-forward, timeout stubs, and output_qc
-failures are FAIL. A workflow is:
+Inspects the workflows that feed the ranker, writes the actual 1d
+buy/sell list with lookback red/yellow/green boxes traced to those
+inputs, and checks that paper_trade published dashboard/index.html
+to GitHub Pages. File existence is not enough: empty, truncated,
+carry-forward, timeout stubs, and output_qc failures are FAIL.
+
+A workflow is:
 
   OK       every required output exists and passes QC
   PARTIAL  at least one required output is OK, but not all
@@ -29,6 +33,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from . import config, output_qc
+from . import stock_book_diag_signals as signals
 from .sector_taxonomy import FINVIZ_SECTORS
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -88,6 +93,8 @@ class Report:
     overall: str
     workflows: list[WorkflowCheck] = field(default_factory=list)
     blockers: list[str] = field(default_factory=list)
+    decisions: dict = field(default_factory=dict)
+    pages: dict = field(default_factory=dict)
 
 
 # ---------------------------------------------------------------------------
@@ -219,6 +226,10 @@ def inspect_kind(kind: str, path: Path, date: str) -> tuple[str, str, int]:
         return _generic_text(path, min_chars=50)
     if kind == "html":
         return _qc_html(path)
+    if kind == "dashboard_session":
+        return signals.inspect_dashboard_html(path, date)
+    if kind == "pages_live":
+        return signals.inspect_pages_live(date)
     return _generic_text(path)
 
 
@@ -668,7 +679,23 @@ def workflow_specs(date: str) -> list[dict]:
                 _file("paper", "Paper trading MD",
                       "03_scoreboard/PAPER_TRADING.md", "optional", "md"),
                 _file("dashboard", "Dashboard HTML",
-                      "dashboard/index.html", "optional", "html"),
+                      "dashboard/index.html", "optional", "dashboard_session"),
+            ],
+        },
+        {
+            "key": "publish",
+            "name": "Dashboard / .io",
+            "yaml": "deploy-dashboard.yml",
+            "files": [
+                _file("in_book", "Stock book JSON",
+                      f"{book}_stock_book.json", "input", "stock_book_json",
+                      "stock_book"),
+                _file("dash_html", "Dashboard HTML (repo)",
+                      "dashboard/index.html", "required", "dashboard_session"),
+                _file("paper", "Paper trading MD",
+                      "03_scoreboard/PAPER_TRADING.md", "required", "md"),
+                _file("pages", "Live GitHub Pages",
+                      signals.PAGES_URL, "required", "pages_live"),
             ],
         },
     ]
@@ -756,6 +783,16 @@ def audit(date: str, gh_runs: dict[str, dict] | None = None) -> Report:
     else:
         overall = "FAIL"
 
+    decisions = signals.extract_decisions(date)
+    pub = next((w for w in workflows if w.key == "publish"), None)
+    pages = {
+        "local": next((asdict(f) for f in (pub.files if pub else [])
+                       if f.key == "dash_html"), {}),
+        "live": next((asdict(f) for f in (pub.files if pub else [])
+                      if f.key == "pages"), {}),
+        "url": signals.PAGES_URL,
+    }
+
     return Report(
         date=date,
         generated_at=datetime.now(ET).isoformat(),
@@ -763,6 +800,8 @@ def audit(date: str, gh_runs: dict[str, dict] | None = None) -> Report:
         overall=overall,
         workflows=workflows,
         blockers=blockers,
+        decisions=decisions,
+        pages=pages,
     )
 
 
@@ -859,6 +898,8 @@ def render_markdown(report: Report) -> str:
             f"| {w.name} | {_MARK.get(w.status, w.status)} | {inputs} | "
             f"{req} | {opt} | {_gh_cell(w.gh_run)} |"
         )
+    lines += [""] + signals.render_pages_markdown(report.pages)
+    lines += signals.render_decisions_markdown(report.decisions)
     if report.blockers:
         lines += ["", "## Why the ranker is blocked", ""]
         for b in report.blockers:
@@ -905,6 +946,20 @@ def render_text(report: Report) -> str:
         lines.append("  blockers:")
         for b in report.blockers:
             lines.append(f"    - {b}")
+    dec = report.decisions or {}
+    h1 = (dec.get("horizons") or {}).get("1d") or {}
+    if h1.get("buy"):
+        lines.append("  1d BUY (sleeve = first 10 → .io):")
+        for d in (h1.get("buy") or [])[:12]:
+            sleeve = "sleeve" if d.get("sleeve") else "book"
+            boxes = "".join(
+                signals.BOX_ICON.get((d.get("boxes") or {}).get(k), "?")
+                for k in signals.BOX_KEYS
+            )
+            lines.append(
+                f"    {d['rank']:>2} {sleeve:<6} {d['ticker']:<6} "
+                f"{boxes}  {d.get('reasons') or ''}"
+            )
     return "\n".join(lines)
 
 
@@ -915,6 +970,8 @@ def report_to_json(report: Report) -> dict:
         "ranker_ready": report.ranker_ready,
         "overall": report.overall,
         "blockers": report.blockers,
+        "pages": report.pages,
+        "decisions": report.decisions,
         "workflows": [
             {
                 "key": w.key,
@@ -977,7 +1034,13 @@ def main() -> None:
     # Fail the Action unless the ranker can run and Stock Book itself is OK.
     # PARTIAL/FAIL upstream is a red X so it is obvious in GitHub.
     book = next(w for w in report.workflows if w.key == "stock_book")
-    raise SystemExit(0 if report.ranker_ready and book.status == "OK" else 1)
+    pub = next((w for w in report.workflows if w.key == "publish"), None)
+    names = ((report.decisions or {}).get("horizons") or {}).get("1d") or {}
+    has_names = bool(names.get("buy"))
+    ok = report.ranker_ready and book.status == "OK" and has_names
+    if pub and pub.status == "FAIL":
+        ok = False
+    raise SystemExit(0 if ok else 1)
 
 
 if __name__ == "__main__":
