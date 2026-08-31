@@ -30,7 +30,7 @@ def _row(ticker, join, gen, ab, peer, sector=0.0, news=0.0, relvol=1.2,
     }
 
 
-def test_mask_requires_four_greens():
+def test_mask_requires_name_cores():
     df = pd.DataFrame([
         _row("OK", 0.2, 0.2, 0.2, 0.2),
         _row("NOAB", 0.2, 0.2, 0.0, 0.2),
@@ -91,7 +91,7 @@ def test_thin_pile_caller_keeps_weights():
 
 
 if __name__ == "__main__":
-    test_mask_requires_four_greens()
+    test_mask_requires_name_cores()
     test_yellow_news_is_not_a_veto()
     test_book_fills_from_pile_when_thick()
     test_thin_pile_caller_keeps_weights()

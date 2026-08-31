@@ -71,8 +71,23 @@ def test_core_eps() -> None:
 def test_green_rank_mean() -> None:
     from src.green_pile import attach_ranks
     df = attach_ranks(pd.DataFrame([_row(s_join=0.4, s_general=0.2, s_ab=0.6, s_peer=0.8)]))
-    assert abs(float(df["green_rank"].iloc[0]) - 0.5) < 1e-9
+    assert abs(float(df["green_rank"].iloc[0]) - 0.6) < 1e-9  # mean(join, AB, peer)
     assert abs(float(df["s_tape"].iloc[0]) - 0.7) < 1e-9
+
+
+def test_modest_gen_red_is_not_a_veto() -> None:
+    df = pd.DataFrame([_row(s_general=-0.07)])
+    assert bool(green_mask(df).iloc[0]) is True
+
+
+def test_hard_gen_red_without_sector_fails() -> None:
+    df = pd.DataFrame([_row(s_general=-0.40, s_sector=0.0)])
+    assert bool(green_mask(df).iloc[0]) is False
+
+
+def test_hard_gen_red_with_sector_support() -> None:
+    df = pd.DataFrame([_row(s_general=-0.40, s_sector=0.20)])
+    assert bool(green_mask(df).iloc[0]) is True
 
 
 def test_micro_not_liquid() -> None:
@@ -95,6 +110,9 @@ def main() -> None:
         test_thin_pile_fallback,
         test_core_eps,
         test_green_rank_mean,
+        test_modest_gen_red_is_not_a_veto,
+        test_hard_gen_red_without_sector_fails,
+        test_hard_gen_red_with_sector_support,
         test_micro_not_liquid,
     ]
     failed = 0

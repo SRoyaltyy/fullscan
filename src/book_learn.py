@@ -63,6 +63,7 @@ from .stock_book import (
     SIGNAL_FAMILIES,
     SIZE_OPP,
     WEIGHTS,
+    _buy_veto_mask,
     _load_ab_enriched,
     _load_finviz_liquidity,
     _load_peer_rs,
@@ -229,11 +230,17 @@ def _select_buys(df: pd.DataFrame, score: np.ndarray, top_n: int) -> list[int]:
     inds = df["industry"].astype(str).to_numpy() if "industry" in df.columns \
         else np.array([""] * len(df))
     mcaps = pd.to_numeric(df["market_cap_m"], errors="coerce").fillna(0).to_numpy()
+    try:
+        veto = _buy_veto_mask(df).to_numpy(dtype=bool)
+    except Exception:
+        veto = np.zeros(len(df), dtype=bool)
     picks: list[int] = []
     sec_n: dict[str, int] = {}
     ind_n: dict[str, int] = {}
     large_n = 0
     for i in order:
+        if i < len(veto) and veto[i]:
+            continue
         size, mcap = sizes[i], float(mcaps[i])
         if size == "micro" or mcap < MIN_OPP_MCAP_M:
             continue
