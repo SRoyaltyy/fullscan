@@ -1,164 +1,155 @@
 # Event Scan — 2026-08-31
 
-- events tracked: **36** (via openclaw)
-- uncertainty: **?**
-- summary:
+- events tracked: **21** (via repair, repaired)
+- uncertainty: **elevated**
+- summary: The market enters September with elevated uncertainty centered on the Fed's first rate decision under new Chair Kevin Warsh, whose hawkish Jackson Hole speech has pushed September hike odds to ~50%. Key US data (jobs report Sep 4, CPI Sep 11) will be decisive. Geopolitical risks are elevated: US-Canada trade war escalates with tariffs effective Sep 8, US-Iran war continues with oil around $120, and the Trump-Xi summit Sep 24 looms. AI trade remains the dominant bullish force after Nvidia's blowout, with Broadcom and Dell earnings this week as the next test. China's manufacturing contraction adds to global growth concerns. Overall, a high-impact week ahead with multiple macro catalysts.
 
-## Events tracked (36)
+## Events tracked (21)
 
-1. **US strikes Iran's Larak Island; Iran retaliates against US bases in Jordan**
-   - geopolitical | today | 2026-08-30..2026-08-31 | impact 5/5 | bearish
-   - regions: US, Middle East | sectors: Energy, BROAD
-   - First US military action in a month against Iran re-escalates the 2026 Iran war, pushing Brent above $90 and threatening Strait of Hormuz shipping.
-2. **Fed Chair Warsh hawkish Jackson Hole speech raises September rate hike odds**
-   - macro_data | past | 2026-08-28 | impact 5/5 | bearish
+1. **FOMC September rate decision (Sep 15-16)**
+   - macro_data | upcoming | 2026-09-15..2026-09-16 | impact 5/5 | mixed
    - regions: US | sectors: BROAD
-   - Warsh signaled inflation 'still too high' and rate hikes may be needed, pushing fed funds futures to ~56% odds of a September hike.
-3. **FOMC meeting September 15-16 — rate hike now a coin flip**
-   - macro_data | upcoming | 2026-09-15..2026-09-16 | impact 5/5 | bearish
-   - regions: US | sectors: BROAD
-   - Markets now price ~56% odds of a 25bp hike after Warsh's hawkish pivot; a hike would be the first since 2023 and could trigger broad risk-off.
-4. **US August jobs report (Sep 4) — consensus ~25K, after July's -23K surprise**
+   - First FOMC under new Chair Kevin Warsh; rate hike odds jumped to ~50% after his hawkish Jackson Hole speech calling inflation 'concerning'.
+2. **US August jobs report (Sep 4)**
    - macro_data | upcoming | 2026-09-04 | impact 4/5 | mixed
    - regions: US | sectors: BROAD
-   - July payrolls unexpectedly fell 23K; August consensus is only ~25K, making this a critical data point for the September Fed decision.
-5. **US August CPI release (Sep 11) — consensus ~3.3-3.4% YoY**
-   - macro_data | upcoming | 2026-09-11 | impact 4/5 | mixed
+   - July payrolls fell 23K (first negative print of cycle); August data will be decisive for whether the Fed hikes or holds in September.
+3. **US CPI for August (Sep 11)**
+   - macro_data | upcoming | 2026-09-11 | impact 4/5 | bearish
    - regions: US | sectors: BROAD
-   - July CPI was 3.4% YoY; this print lands just days before the FOMC and will be decisive for whether Warsh can push through a hike.
-6. **OPEC+ meeting Sep 6 — likely to pause output hikes for October**
-   - geopolitical | upcoming | 2026-09-06 | impact 3/5 | bullish
-   - regions: Global, Middle East | sectors: Energy
-   - After six consecutive monthly increases, OPEC+ sources suggest a pause for Q4; combined with Iran tensions, this supports higher oil prices.
-7. **ECB rate decision Sep 10 — hike expected to 2.50%**
+   - July CPI eased to 3.4% annual; Warsh has signaled inflation remains 'concerning' and above target, making this print pivotal for the September hike call.
+4. **ECB rate decision (Sep 10)**
    - macro_data | upcoming | 2026-09-10 | impact 3/5 | bearish
    - regions: EU | sectors: BROAD
-   - ECB policymakers ready to raise rates to contain side-effects of fiscal expansion; current rate 2.25%.
-8. **BOJ September rate hike — market-implied probability ~57%**
-   - macro_data | upcoming | 2026-09-17..2026-09-18 | impact 3/5 | bearish
-   - regions: Japan | sectors: BROAD, Financial
-   - BOJ sources signal a September hike and faster tightening pace; yen strength could pressure Japanese exporters and global carry trades.
-9. **China PMI August: manufacturing 49.8 (contraction), services 49.0**
+   - Deposit rate at 2.25%; markets watching whether ECB cuts again amid eurozone weakness or holds given global inflation concerns.
+5. **Bank of Japan rate decision (Sep 17-18)**
+   - macro_data | upcoming | 2026-09-17..2026-09-18 | impact 3/5 | mixed
+   - regions: Japan | sectors: BROAD
+   - BoJ held at 1.0% in July after hiking to 31-year high; normalization path continues with possible further hikes.
+6. **Canada retaliatory tariffs take effect (Sep 8)**
+   - government | upcoming | 2026-09-08 | impact 3/5 | bearish
+   - regions: US, Canada | sectors: Consumer Cyclical, Industrials, Basic Materials, BROAD
+   - Canada will match US 50% tariffs on $20B of products 'dollar for dollar' starting Sept 8 after trade talks collapsed Aug 21; Carney says Canada is 'at war' over trade.
+7. **Trump-Xi summit at White House (Sep 24)**
+   - geopolitical | upcoming | 2026-09-24 | impact 4/5 | mixed
+   - regions: US, China | sectors: Technology, BROAD
+   - Xi's state visit to Washington; AI dominance expected to be central topic; trade truce extension 'almost certain' per SCMP.
+8. **SCO Summit in Bishkek, Kyrgyzstan (Aug 31-Sep 1)**
+   - geopolitical | today | 2026-08-31..2026-09-01 | impact 3/5 | mixed
+   - regions: China, Russia, India, Middle East | sectors: Energy, BROAD
+   - Xi, Modi, Putin and Iran's Pezeshkian meet under one roof; signals on Russia-Ukraine, Iran war diplomacy, and de-dollarization.
+9. **Nvidia Q2 FY2027 earnings beat (Aug 26)**
+   - earnings | past | 2026-08-26 | impact 4/5 | bullish
+   - regions: US | sectors: Technology
+   - Revenue $96.2B (+106% YoY), profit doubled to $59.7B; data center sales $89B as AI demand accelerates — confirms AI capex supercycle.
+10. **Broadcom Q3 earnings (Sep 2)**
+   - earnings | upcoming | 2026-09-02 | impact 3/5 | bullish
+   - regions: US | sectors: Technology
+   - AI chip bellwether after Nvidia's blowout; EPS est. $3.24, Wall Street's highest target $630; Jefferies optimistic on AI chip demand.
+11. **Apple iPhone 18 event (Sep 9)**
+   - ongoing | upcoming | 2026-09-09 | impact 3/5 | mixed
+   - regions: US | sectors: Technology, Consumer Cyclical
+   - First major product launch under new CEO John Ternus; 'Surprise and Shine' event expected to unveil iPhone 18 lineup.
+12. **US national debt hits $40 trillion (Aug 18)**
+   - government | past | 2026-08-18 | impact 3/5 | bearish
+   - regions: US | sectors: BROAD
+   - Debt reached $40T months earlier than expected as bond yields rise; economists increasingly worried about fiscal sustainability and term premium.
+13. **Jackson Hole: Warsh's hawkish debut speech (Aug 28)**
+   - macro_data | past | 2026-08-28 | impact 4/5 | bearish
+   - regions: US | sectors: BROAD
+   - New Fed Chair Warsh called inflation 'concerning' and stayed quiet on rates, sending September hike odds higher and putting Fed 'at odds' with Treasury.
+14. **China manufacturing PMI 49.8 (Aug 31)**
    - macro_data | today | 2026-08-31 | impact 3/5 | bearish
-   - regions: China | sectors: BROAD, Basic Materials, Consumer Cyclical
-   - Second straight month of manufacturing contraction and services stuck at 49.0 signals continued economic weakness despite stimulus efforts.
-10. **China's $119B policy financing tool opens for local government projects**
-   - government | past | 2026-08-24 | impact 3/5 | bullish
-   - regions: China | sectors: BROAD, Real Estate, Industrials
-   - 800B yuan policy-based financing tool aims to shore up local government infrastructure projects and counter economic slowdown.
-11. **US declares national emergency over bulk-power system security (EO 14421)**
-   - government | past | 2026-08-26 | impact 3/5 | mixed
-   - regions: US | sectors: Utilities, Technology, Industrials
-   - Executive order prohibits foreign-produced bulk-power system equipment, creating new supply chain compliance requirements for utilities and grid equipment makers.
-12. **US-Canada trade war escalates: 50% tariffs, Canada retaliates Sep 8**
-   - government | upcoming | 2026-09-08 | impact 4/5 | bearish
-   - regions: US, Canada | sectors: BROAD, Consumer Cyclical, Industrials, Basic Materials
-   - US imposed 50% tariffs on $27.6B of Canadian goods; Canada retaliates with 15-50% tariffs on ~700 US products effective Sep 8.
-13. **SEC proposes 'Regulation Crypto Assets' framework**
-   - government | past | 2026-08-18 | impact 3/5 | bullish
-   - regions: US | sectors: Financial, Technology
-   - First purpose-built crypto offering regime with startup exemption and safe harbor; could unlock institutional crypto adoption.
-14. **Nvidia Q2 FY2027 earnings: $96.2B revenue, +106% YoY, stock falls**
-   - earnings | past | 2026-08-26 | impact 4/5 | mixed
-   - regions: US | sectors: Technology
-   - Nvidia beat on revenue but shares fell as investors focused on guidance and AI capex sustainability; bellwether for entire AI trade.
-15. **Broadcom Q3 FY2026 earnings Sep 2 — AI revenue expected ~$29B**
-   - earnings | upcoming | 2026-09-02 | impact 4/5 | bullish
-   - regions: US | sectors: Technology
-   - Broadcom is the next major AI chip bellwether after Nvidia; consensus near $29B revenue with earnings expected to rise 90%+.
-16. **US GDP Q2 2026 second estimate: 1.5% annualized, unchanged**
-   - macro_data | past | 2026-08-26 | impact 3/5 | bearish
-   - regions: US | sectors: BROAD
-   - Sluggish 1.5% growth confirms economic deceleration from 2.1% in Q1, supporting stagflation concerns with inflation at 3.4%.
-17. **US PCE inflation July: 3.7% YoY, above 3.6% forecast**
-   - macro_data | past | 2026-08-26 | impact 4/5 | bearish
-   - regions: US | sectors: BROAD
-   - PCE at 3.7% YoY, above expectations, reinforces Warsh's hawkish stance and supports case for September rate hike.
-18. **US retail sales July: first decline in 9 months**
-   - macro_data | past | 2026-08-14 | impact 3/5 | bearish
-   - regions: US | sectors: Consumer Cyclical, Consumer Defensive
-   - Consumer spending slowed to weakest pace in 7 months, adding to evidence of economic softening.
-19. **US-Iran ceasefire expired Aug 17 without deal; war re-escalating**
-   - geopolitical | past | 2026-08-17 | impact 5/5 | bearish
-   - regions: US, Middle East | sectors: Energy, BROAD
-   - 60-day ceasefire from June MOU expired without final deal; US reimposed naval blockade and now struck Iranian targets, keeping oil above $90.
-20. **Boeing SPEEA union rejects contract, authorizes strike (potential Oct 7)**
-   - ongoing | past | 2026-08-21..2026-10-07 | impact 3/5 | bearish
-   - regions: US | sectors: Industrials
-   - 17,000 Boeing engineers/technical workers rejected contract and authorized strike; negotiations resume but strike possible from Oct 7.
-21. **Super El Niño (>90% probability of very strong event) developing**
-   - ongoing | upcoming | 2026-09-01..2026-12-31 | impact 3/5 | mixed
-   - regions: Global | sectors: Basic Materials, Consumer Defensive, Energy, Utilities
-   - Very strong El Niño (>90% probability) could disrupt global crop yields, energy demand, and commodity supply chains through late 2026.
-22. **US midterm elections Nov 3 — markets pricing potential Congress flip**
-   - legislative | upcoming | 2026-11-03 | impact 4/5 | mixed
-   - regions: US | sectors: BROAD
-   - Markets increasingly pricing possibility of Democrats taking House/Senate, which could constrain Trump's tariff and fiscal agenda.
-23. **US debt hits $40 trillion, months earlier than expected**
-   - legislative | past | 2026-08-18 | impact 3/5 | bearish
-   - regions: US | sectors: BROAD, Financial
-   - Faster-than-expected borrowing means next debt ceiling deadline arrives ahead of schedule, likely in 2027, raising fiscal risk concerns.
-24. **Senate deal to avert shutdown through midterms reached Aug 3**
-   - legislative | past | 2026-08-03 | impact 2/5 | bullish
-   - regions: US | sectors: BROAD
-   - Bipartisan agreement keeps government funded past November midterms, removing near-term shutdown risk.
-25. **South Korea exports surge 56% in August on semiconductor boom**
-   - macro_data | past | 2026-08-21 | impact 3/5 | bullish
+   - regions: China | sectors: BROAD
+   - Factory activity shrank for second straight month (49.8, up from 49.2 but still below 50), keeping pressure on Beijing to support growth.
+15. **China M2/M1 money supply data (Aug 17)**
+   - macro_data | past | 2026-08-17 | impact 2/5 | mixed
+   - regions: China | sectors: BROAD
+   - M2 up 7.7% YoY, M1 up 4%; PBoC expanded cross-border RMB operations for multinationals — modest easing signals.
+16. **OPEC+ September output hike (Aug 2)**
+   - geopolitical | past | 2026-08-02 | impact 3/5 | bearish
+   - regions: Middle East, Global | sectors: Energy
+   - OPEC+ approved 188K bpd September hike, completing rollback of 2023 voluntary cuts; adds supply amid Iran war volatility.
+17. **US-Iran war: 6-month standoff, oil volatility (ongoing)**
+   - geopolitical | ongoing | 2026-08-01..2026-09-14 | impact 4/5 | mixed
+   - regions: Middle East, Global | sectors: Energy, BROAD
+   - US/Israel attacked Iran Feb 28; oil spiked to ~$120 before easing; talks deadlocked, shipping attacks continue — a persistent tail risk for energy and global markets.
+18. **South Korea chip exports: 15th month of growth (Aug 28)**
+   - macro_data | past | 2026-08-28 | impact 2/5 | bullish
    - regions: South Korea | sectors: Technology
-   - Record August exports ($55.2B, +56% YoY) with semiconductors up 198.8%, confirming global AI chip demand supercycle.
-26. **Taiwan semiconductor exports hit third-best month ($75.3B) in July**
-   - macro_data | past | 2026-08-07 | impact 3/5 | bullish
-   - regions: Taiwan | sectors: Technology
-   - TSMC-led chip exports continue record run; 78.5% of outbound sales in semiconductor categories, driving Taiwan's explosive GDP growth.
-27. **US-China tariff exclusions extended on 178 Chinese products to Nov 10**
-   - government | past | 2026-08-24 | impact 2/5 | bullish
-   - regions: US, China | sectors: Consumer Cyclical, Technology, Industrials
-   - USTR extended tariff exclusions on 178 Chinese products through Nov 10, providing temporary relief for importers.
-28. **AI TechWorld conference Sep 1-3, Santa Clara — AI infrastructure focus**
-   - ongoing | upcoming | 2026-09-01..2026-09-03 | impact 2/5 | bullish
+   - August exports likely extended 15th consecutive month of growth (+62.6%), driven by AI chip demand; semiconductors ~half of exports.
+19. **South Korea $3.5B semiconductor fund (Aug 10)**
+   - government | past | 2026-08-10 | impact 2/5 | bullish
+   - regions: South Korea | sectors: Technology
+   - Seoul launching 5T won fund for chip materials/parts/equipment/fabless firms; supports Korea's AI chip ambitions.
+20. **ISM Manufacturing PMI (Sep 1)**
+   - macro_data | upcoming | 2026-09-01 | impact 3/5 | mixed
+   - regions: US | sectors: Industrials, BROAD
+   - June ISM was 53.3 (6th straight expansion); August reading will gauge manufacturing resilience amid tariff uncertainty.
+21. **Dell and Palo Alto Networks earnings (Sep 2-3)**
+   - earnings | upcoming | 2026-09-02..2026-09-03 | impact 2/5 | mixed
    - regions: US | sectors: Technology
-   - Premier AI engineering conference could provide catalysts for AI infrastructure and semiconductor stocks.
-29. **US mortgage rates at 6.66% (30-yr fixed) — housing affordability pressure**
-   - macro_data | past | 2026-08-27 | impact 2/5 | bearish
-   - regions: US | sectors: Real Estate, Financial
-   - Mortgage rates remain elevated near 6.7%, constraining housing affordability and home sales; FHFA house prices up only 2.1% YoY.
-30. **US initial jobless claims at 203K (week ending Aug 22) — labor market cooling**
-   - macro_data | past | 2026-08-27 | impact 2/5 | mixed
-   - regions: US | sectors: BROAD
-   - Jobless claims remain low but employment-to-population ratio at lowest since 2014, signaling labor market weakness beneath the surface.
-31. **US-China trade truce holding but points of friction remain**
-   - geopolitical | past | 2026-07-16..2026-08-31 | impact 3/5 | mixed
-   - regions: US, China | sectors: BROAD, Technology
-   - Tariff rates reduced to 30% after November 2025 deal, but semiconductor export controls and H200 chip tariffs remain contentious.
-32. **Fed July FOMC minutes (Aug 19) — 9-3 vote, dissents push for hike**
-   - macro_data | past | 2026-08-19 | impact 4/5 | bearish
-   - regions: US | sectors: BROAD
-   - Three dissents at July meeting raised pressure for September hike; minutes showed September hike 'still on the table'.
-33. **US CPI July: 3.4% YoY, core 2.5% — cooling but above target**
-   - macro_data | past | 2026-08-12 | impact 4/5 | mixed
-   - regions: US | sectors: BROAD
-   - Headline cooled to 3.4% from 3.5%, core at 2.5%; but Warsh argues inflation still too high and PCE at 3.7% shows persistence.
-34. **2026 hurricane season quiet so far — El Niño suppressing activity**
-   - ongoing | upcoming | 2026-09-01..2026-11-30 | impact 2/5 | bullish
-   - regions: US, Caribbean | sectors: Energy, Utilities, Insurance
-   - Only 3 named storms so far; El Niño suppressing peak-season activity, reducing energy and insurance disruption risk.
-35. **US Space Academy executive order (Aug 28) — space sector policy**
-   - government | past | 2026-08-28 | impact 1/5 | bullish
-   - regions: US | sectors: Industrials, Technology
-   - New executive order establishes US Space Academy, signaling continued space policy focus and potential defense/space industry tailwinds.
-36. **Apple v. Epic Games — Supreme Court granted certiorari (Jun 30)**
-   - judicial | upcoming | 2026-10-01..2026-12-31 | impact 3/5 | mixed
-   - regions: US | sectors: Technology, Communication Services
-   - SCOTUS will hear Apple v. Epic in upcoming term; ruling could reshape app store economics and platform antitrust standards.
+   - AI infrastructure and cybersecurity bellwethers; will test whether AI demand breadth extends beyond Nvidia.
 
 ---
 
 ## Model narrative
 
-Now I have comprehensive data across all categories. Let me compile the final event scan.
+I now have comprehensive coverage across all categories. Let me compile the final scan. I have enough data to build a thorough event scan with 15-40 events.
+
+Key events I've identified:
+1. **FOMC meeting Sept 15-16** - rate hike odds elevated after Warsh's hawkish Jackson Hole speech
+2. **US jobs report Sept 4** - August payrolls, critical for Fed decision
+3. **US CPI Sept 11** (August data) - inflation data
+4. **ECB meeting Sept 10** - rate decision
+5. **BoJ meeting Sept 17-18** - rate decision
+6. **Canada-US trade war escalation** - Canada retaliatory tariffs Sept 8
+7. **Trump-Xi summit Sept 24** - US-China meeting
+8. **SCO summit in Kyrgyzstan** - Xi, Modi, Putin meeting
+9. **Nvidia earnings Aug 26** - beat expectations
+10. **Broadcom earnings Sept 2** - AI chip bellwether
+11. **Apple iPhone event Sept 9** - first under new CEO Ternus
+12. **US debt hits $40 trillion** - bond market concern
+13. **Iran war** - ongoing, oil prices volatile
+14. **OPEC+ September output hike** - completed rollback
+15. **China PMI 49.8** - contraction second month
+16. **Jackson Hole** - Warsh's hawkish speech
+17. **South Korea chip exports** - 15th month growth
+18. **China M2/M1 data** - Aug 17
+19. **ISM Manufacturing PMI Sept 1**
+20. **Dell/Palo Alto earnings** - this week
+
+Let me now construct the JSON and report.
 
 ---
 
-## CATCHER ADDITIONS (second pass) — 0 missed events
+## CATCHER ADDITIONS (second pass) — 19 missed events
 
-Primary scan was comprehensive — no missed events found.
+**Government / legislative / judicial:**
+
+- **EO 14420/14421: National emergency to secure US bulk-power system** (2026-08-26) — Utilities, Energy, Industrials. Trump declared a national emergency under IEEPA authorizing DOE to prohibit foreign-produced bulk-power electric equipment (solar inverters, battery storage), hitting Chinese equipment suppliers and US clean-energy project costs. Watch: DOE licensing rules and which foreign manufacturers get targeted; impact on utility capex and solar/storage stocks.
+- **SEC proposes 'Regulation Crypto Assets' framework** (2026-08-18) — Financial, Technology. First major SEC crypto rulemaking under Trump admin creating a tailored offering regime with exemptions up to $5M, a major clarity step for crypto markets. Watch: 60-day comment period and whether final rule broadens exemptions; crypto exchange and token issuer reaction.
+- **Senate passes continuing resolution funding government through midterms** (2026-08-08) — BROAD. Senate passed a bipartisan CR funding government through the November midterms, removing near-term shutdown risk; House must still pass it when Congress returns in September. Watch: House vote in September; any shutdown risk if House balks before Oct 1.
+- **China MOFCOM countermeasures: drone export controls + 7 US entities sanctioned** (2026-08-05) — Industrials, Technology, BROAD. China's Commerce Ministry imposed case-by-case drone export reviews to the US and sanctioned 7 US entities, escalating tech/trade tensions ahead of the Trump-Xi summit. Watch: Whether drone export curbs expand to other dual-use items; impact on US drone and supply-chain stocks.
+- **Trump signs EO creating US Space Academy** (2026-08-28) — Industrials, Technology. Executive order establishing a US Space Academy to train space workforce, supporting the commercial space and defense industrial base. Watch: Implementation details and funding; space/defense contractor beneficiaries.
+- **Trump signs EO renaming Lake Ontario 'Lake America' amid Canada trade war** (2026-08-27) — BROAD. Symbolic escalation in the US-Canada trade war, signaling no near-term de-escalation before Canada's Sep 8 retaliatory tariffs take effect. Watch: Canada's response and whether trade talks resume before Sep 8 tariffs.
+- **Russia sanctions bill: House vote expected in September** (2026-09-01..2026-09-14) — Energy, BROAD. Senate advanced sweeping Russia sanctions legislation; House vote expected in September amid 'moment of extreme urgency' in Ukraine, potentially hitting energy and Russian-linked assets. Watch: House passage timing and scope of sanctions; energy market reaction.
+
+**Other misses:**
+
+- **University of Michigan consumer sentiment falls to 51.0, inflation expectations 4.0%** (2026-08-28) — macro_data; BROAD. Consumer sentiment fell ~6% MoM to 51.0 with year-ahead inflation expectations at 4.0%, reinforcing Warsh's hawkish inflation concern and September hike odds.
+- **Japan Q2 GDP grows 1.1% annualized, missing estimates** (2026-08-17) — macro_data; BROAD. Japan Q2 GDP missed 2.0% consensus (1.1% annualized), with weak domestic demand, complicating BoJ's normalization path ahead of its Sep 17-18 decision.
+- **Eurozone flash PMI: manufacturing hits 4-year high (52.8)** (2026-08-21) — macro_data; BROAD, Industrials. Eurozone manufacturing PMI rose to 52.8 (51-month high) driven by German AI-related tech goods, tempering ECB easing bets ahead of the Sep 10 decision.
+- **China holds 1-year LPR at 3% for 13th month** (2026-08-20) — macro_data; BROAD, Financial. PBoC held LPRs steady despite manufacturing contraction, signaling reluctance to ease aggressively; keeps pressure on Beijing to support growth.
+- **CrowdStrike Q2 FY2027 earnings beat, raises guidance** (2026-08-26) — earnings; Technology. CrowdStrike topped estimates and raised annual revenue forecast as AI threats mount, popping 11%+ and confirming cybersecurity as an AI tailwind.
+- **Salesforce Q2 FY2027 record results, surges 23% on Anthropic partnership** (2026-08-26) — earnings; Technology. Salesforce delivered record Q2 results and announced an Anthropic partnership, sending shares up 23% and confirming AI software demand breadth beyond Nvidia.
+- **Deere Q3 earnings: raises 2026 profit view on AI construction boom** (2026-08-20) — earnings; Industrials. Deere raised its 2026 profit outlook as AI-driven construction demand offset continued farm weakness, a bellwether for the industrial/ag equipment cycle.
+- **TJX and Ross Stores off-price retail earnings** (2026-08-19..2026-08-21) — earnings; Consumer Cyclical. Ross beat with 10% comp growth while TJX's Marmaxx slowdown clouded its beat, signaling divergent consumer spending and off-price dynamics amid tariff-driven inflation.
+- **RBNZ rate decision (Sep 2)** (2026-09-02) — macro_data; BROAD. RBNZ MPS meeting with updated projections after July hike to 2.50%; markets watching for hold, hike, or cut signals.
+- **China deploys record number of ships near Taiwan** (2026-08-27) — geopolitical; BROAD, Technology. China's record maritime deployment near Taiwan raises cross-strait tension ahead of the Trump-Xi summit, a tail risk for tech supply chains.
+- **US industrial production rises below expectations in July** (2026-08-18) — macro_data; Industrials, BROAD. US industrial production ticked up but below expectations in July, with manufacturing capacity utilization edging higher — a mixed signal for the Fed.
+- **EIA weekly crude inventories: modest build** (2026-08-26) — commodities; Energy. US crude inventories rose 0.1M bbl in a modest build, providing limited relief to oil prices still elevated near $120 on Iran war risk.
+
+**Coverage assessment:** The primary scan covered macro data, earnings, and geopolitical events well, but was blind to nearly all government actions — missing multiple executive orders, the SEC crypto rulemaking, the Senate funding bill, and China's countermeasures. It also missed several second-tier macro prints (UMich sentiment, Japan GDP, Eurozone PMI) and second-tier earnings (CrowdStrike, Salesforce, Deere, TJX/Ross).
+
+**Biggest gap:** EO 14420/14421 declaring a national emergency to secure the US bulk-power system (Aug 26) — a major IEEPA-based action restricting foreign-produced power equipment that directly hits utilities, solar/storage, and Chinese suppliers, and was entirely absent from the primary scan.

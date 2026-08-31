@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the distinct events, excluding the Finviz-confirmed CFO appointment event (Aug 31, 2026). Note that the executive succession announcement on Aug 19, 2026 is the same underlying event as the Finviz one, so I'll exclude it to avoid duplication.\n\nLet me compile the final list of events:\n\n```json\n[\n  {\n    \"event_date\": \"2025-01-14\",\n    \"description\": \"Core Natural Resources Inc (CNR) completed the all-stock merger of equals between CONSOL Energy",
+  "raw": "I now have comprehensive information. Let me compile the distinct events. The Finviz event already covers the August 31, 2026 CFO appointment / President's responsibilities expansion, so I'll exclude that. Let me compile the new distinct events.\n\nKey events I've identified:\n1. **Oct 8, 2025** - Leadership change: Jimmy Brock appointed CEO, Paul Lang departs\n2. **Jan 14, 2025** - Merger completion creating Core Natural Resources (CONSOL + Arch)\n3. **Feb 12, 2026** - Q4 2025 results: net loss of $",
   "ticker": "CNR",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

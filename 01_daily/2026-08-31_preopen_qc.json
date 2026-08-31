@@ -1,13 +1,13 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31T07:12:43.453569-04:00",
+  "generated_at": "2026-08-31T13:40:03.711133-04:00",
   "items": [
     {
       "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-08-31_predict.md",
       "reason": "",
-      "size": 12237,
+      "size": 13762,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -18,7 +18,7 @@
       "kind": "events",
       "path": "01_daily/events/2026-08-31_events.json",
       "reason": "",
-      "size": 31911,
+      "size": 37656,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -29,7 +29,7 @@
       "kind": "news_judge",
       "path": "01_daily/news/2026-08-31_judge.md",
       "reason": "",
-      "size": 12162,
+      "size": 11612,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -102,14 +102,14 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/basic_materials_predict.md",
-      "reason": "",
-      "size": 7396,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -124,14 +124,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/consumer_cyclical_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 10596,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -139,7 +139,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/consumer_defensive_predict.md",
       "reason": "",
-      "size": 10424,
+      "size": 14186,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -150,7 +150,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/energy_predict.md",
       "reason": "",
-      "size": 15739,
+      "size": 13232,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -161,7 +161,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/financial_predict.md",
       "reason": "",
-      "size": 15101,
+      "size": 14651,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -172,21 +172,21 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/healthcare_predict.md",
       "reason": "",
-      "size": 9856,
+      "size": 9480,
       "carried": false,
       "timeout": false,
       "empty": false,
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/industrials_predict.md",
-      "reason": "",
-      "size": 9249,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -194,7 +194,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/real_estate_predict.md",
       "reason": "",
-      "size": 9910,
+      "size": 9408,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -205,7 +205,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/technology_predict.md",
       "reason": "",
-      "size": 8543,
+      "size": 8239,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -216,7 +216,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-08-31/utilities_predict.md",
       "reason": "",
-      "size": 14597,
+      "size": 9044,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -226,9 +226,9 @@
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": true,
-      "reason": "",
-      "size": 7396
+      "ok": false,
+      "reason": "missing",
+      "size": 0
     },
     {
       "sector": "Communication Services",
@@ -238,60 +238,60 @@
     },
     {
       "sector": "Consumer Cyclical",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 10596
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 10424
+      "size": 14186
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 15739
+      "size": 13232
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 15101
+      "size": 14651
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 9856
+      "size": 9480
     },
     {
       "sector": "Industrials",
-      "ok": true,
-      "reason": "",
-      "size": 9249
+      "ok": false,
+      "reason": "missing",
+      "size": 0
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 9910
+      "size": 9408
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 8543
+      "size": 8239
     },
     {
       "sector": "Utilities",
       "ok": true,
       "reason": "",
-      "size": 14597
+      "size": 9044
     }
   ],
-  "sector_n_ok": 9,
+  "sector_n_ok": 8,
   "sector_n_total": 11,
   "all_ok": true
 }

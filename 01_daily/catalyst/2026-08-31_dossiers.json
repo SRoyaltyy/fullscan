@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31T08:36:04.583454-04:00",
+  "generated_at": "2026-08-31T13:01:36.928607-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,

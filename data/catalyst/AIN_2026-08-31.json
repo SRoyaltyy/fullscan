@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the distinct, high-impact events. Note that the Finviz event about the Pratt & Whitney Geared Turbofan contract and CAMX 2026 is already confirmed, so I should not duplicate it. However, the Finviz event mentions the contract was secured in Q2 2026, but the actual contract signing was announced in Q1 2026 (April 30, 2026 earnings call). Since the Finviz event already covers the Pratt & Whitney contract, I'll focus on other distinct events.\n\nLe",
+  "raw": "I now have comprehensive information. Let me compile the final JSON array of distinct events, excluding the Finviz-covered event (CAMX 2026 showcase / Pratt & Whitney GTF contract / Q2 2026 non-GAAP EPS $0.82 beat).\n\nNote: The Finviz event covers the Pratt & Whitney contract and the Q2 2026 EPS beat, so I'll avoid duplicating those. However, the Q2 2026 full results with specific revenue figures ($329.5M, EPS $0.61) and Q3 guidance are distinct enough to include. I'll include the Q2 2026 results",
   "ticker": "AIN",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

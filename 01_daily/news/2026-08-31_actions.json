@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T04:38:01.472121-04:00",
+  "generated_at": "2026-08-31T11:41:51.816060-04:00",
   "hours": 48,
   "raw_headlines": 400,
   "unique_events": 5,
@@ -10,7 +10,7 @@
   "reasoned_events": [
     {
       "event": "fed_rate_path",
-      "headline_count": 41,
+      "headline_count": 42,
       "framework": {
         "keep": "conditional",
         "us_relevance": "high",
@@ -26,7 +26,7 @@
         "confidence": 0.55,
         "drop_reason": "",
         "notes": [
-          "headline_count=41 supports non-noise severity",
+          "headline_count=42 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -39,34 +39,28 @@
       ],
       "evidence": [
         {
-          "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZWlrekRPMjZoeC1sSXNwR29MZy1pT0w2UTVRcC1JdjUzUTZDaTFkWi1DTVEtVlJzU1JHd3ZTMUhQLTBJMjV0cUU2MWdsRGphU0F3UE9NbGUtcFVUcE1FZGZFNjczSVN5WnM2NF9BUFhKUVRMbjhJMXQ1ZjhUMlhLV2xxOE04eEY1Z0F0am5qNXZacFRrQkJ2dDhnY3NNSWFfTUxCd3RR0gGrAUFVX3lxTE1iME12QXVKVkQ4QTJVSHg1WGpwd0cwZEZCQkt2eEdlQy12dldQUmpEZEp0bkFsVEJZTG1GRFRWSmJIbExpS3lSS3lYeHBEbzNKVWYyOU9SeW5pTUZNcGVMOUNFb3hya3lPaVFSVFh5TXp2SXJ2QjBkOS0wY3dvZzl1V21tQ2xXNUQ1R0VUWG9PWWo1M25aNG5ZdHNhSU9kNDVvOVVrOF80SXN3UQ?oc=5",
-          "published_at": "Fri, 28 Aug 2026 15:22:10 GMT"
-        },
-        {
           "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
           "source": "rss_cnbc_finance",
           "url": "https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html",
           "published_at": "Fri, 28 Aug 2026 15:22:10 GMT"
         },
         {
-          "title": "Treasury Yields Rise as Warsh Vows to Pull Down Inflation - Bloomberg.com",
+          "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQWptRmR5ZmRVZ0VwdVlQVGFDNjJWUE42cGw3d04xUmJidE9sU1NhWms1T1BQZTdEY3JvcGs2V0lBb3ZiazBpX0FpaUJoOElVTkY2MVZHd2huSTJub1FORzRkNDN0OXJMZTU2dnIyYUJhMVpZZ3kzbERxX0xoVkhqVHNhQ0c1SWdmVFNudGtJWTdsTElEZFpLRVR2ZnlnYWZKNnF3emhFNVFGeWdG?oc=5",
-          "published_at": "Fri, 28 Aug 2026 14:11:40 GMT"
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZWlrekRPMjZoeC1sSXNwR29MZy1pT0w2UTVRcC1JdjUzUTZDaTFkWi1DTVEtVlJzU1JHd3ZTMUhQLTBJMjV0cUU2MWdsRGphU0F3UE9NbGUtcFVUcE1FZGZFNjczSVN5WnM2NF9BUFhKUVRMbjhJMXQ1ZjhUMlhLV2xxOE04eEY1Z0F0am5qNXZacFRrQkJ2dDhnY3NNSWFfTUxCd3RR0gGrAUFVX3lxTE1iME12QXVKVkQ4QTJVSHg1WGpwd0cwZEZCQkt2eEdlQy12dldQUmpEZEp0bkFsVEJZTG1GRFRWSmJIbExpS3lSS3lYeHBEbzNKVWYyOU9SeW5pTUZNcGVMOUNFb3hya3lPaVFSVFh5TXp2SXJ2QjBkOS0wY3dvZzl1V21tQ2xXNUQ1R0VUWG9PWWo1M25aNG5ZdHNhSU9kNDVvOVVrOF80SXN3UQ?oc=5",
+          "published_at": "Fri, 28 Aug 2026 15:22:10 GMT"
         },
         {
-          "title": "Fed Chair Warsh says inflation still too high, interest rates may need to be raised - Spectrum News",
+          "title": "Federal Reserve chief faces pivotal moment in Jackson Hole - The Hill",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObjVzT29KLUJiWWtmQ2RfamMyblRET0lPWXNFVTJ4N1NMZ2pUMUhnM1o2SElsT3lSUHlxTDVvaDhIdmpnYXZuQVBOZUFyLUhrS2hJcFBxRUxlclV2a01ReXFkM2N3R1k3NHBHRllzOUY4c0VSVTNYMnNZaWJaRVpLRWhPM2pkblpGVHVIb25iOE84MzdRNm5MNUM4dVNTTEdaZjUzX2t3?oc=5",
-          "published_at": "Fri, 28 Aug 2026 14:43:00 GMT"
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE93YThSZlpaZVBvSEF4RFNoZnFZSmhYMXJRMjlPUlhabFQ3MVVGWXcyekNITWhJMHlCODlpbHJGM0NQa0M2LTJSd1psOUhrbmh5bmlPNzlRS3Z5emhNM2JyYWlUZE5ERjIyMkZzQ0VpU3VNbXBhZlN3eGRXMA?oc=5",
+          "published_at": "Thu, 27 Aug 2026 21:34:00 GMT"
         },
         {
-          "title": "Jobs report, Broadcom results pose next hurdles for stock market rally - Yahoo Finance",
-          "source": "rss_google_markets",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeDA2cUZ0QzNPRTVuNzBlRVNTZFpJUTdTYldHb1BzYTJyd2k2T2dwVlZ5ZDJXTE9GX0dzMl8zTVhpYXljTXMwN1hlV2RlX05sUFA2YU42MWpEQkY5OElMdklmMUJBZ2tYbUR1OExkTXBpTzNvSFBqZGl5YkRabmJfUlNSeVVsVWN5R2hjaTlNM3pEaS0wRHlRVWIyR05UdXc?oc=5",
-          "published_at": "Fri, 28 Aug 2026 20:22:06 GMT"
+          "title": "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+          "source": "rss_marketwatch_top",
+          "url": "https://www.marketwatch.com/story/kevin-warsh-gets-what-every-fed-chair-hopes-for-a-bond-market-that-trust-his-words-5103dad5?mod=mw_rss_topstories",
+          "published_at": "Fri, 28 Aug 2026 20:10:00 GMT"
         },
         {
           "title": "Warsh Signals Hawkish Shift on Inflation at Jackson Hole. Markets See a Rate Hike Back on the Table. - Barron's",
@@ -81,45 +75,16 @@
           "published_at": "Fri, 28 Aug 2026 16:08:16 GMT"
         },
         {
-          "title": "Fed Chair Warsh signals rate hikes may be needed with inflation still elevated - ABC News - Breaking News, Latest News and Videos",
+          "title": "The Federal Reserve raises the flag of caution inflation is not over yet - المتداول العربي",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVWZyUWpuN0E4dk84MXd4dGlGeVA5QnR0cXNkM19QaVJEc3VuRXBYSU96S2pCNDYzbEo3clpfdV9iMERPWmxnWVNYVlJpbkI2a1N5eGNFQnNyUHNobGlKc2tHMHhsUEtjSmtraVAzeUdnSTRTMWJzaE85QU9LQVVLZzc3M2J0UHg5ZHdfTlBhWExzS3ZQNENYc21ZXzNJY19XaWfSAacBQVVfeXFMUEUyNndJQml5cDdZUm42NlBucU82RGJzYnRkWW94a29hblMzeEVhNmw5d2FlUThFZFg2OG9QMTJ3dEVSZHZTc3E3Q1Q1RWlqUXh3SEdKcWdVOVJYdVJlSDFkdDBXUl9kX09jUWhSbW9MTk11cG1XbVVXTGJwUGtTc3cwQWJqbm1OMm5YNi1TR1VQQ0NjR2VKcnp2WEwwWHVFVHU5dWxHNmc?oc=5",
-          "published_at": "Fri, 28 Aug 2026 14:53:05 GMT"
-        }
-      ]
-    },
-    {
-      "event": "ai_chip_demand_spike",
-      "headline_count": 1,
-      "framework": {
-        "keep": "keep",
-        "us_relevance": "high",
-        "us_relevance_why": "US-listed semi demand / domestic fab narrative",
-        "channel": "sector_fundamental",
-        "geography": "us_domestic",
-        "severity": "session",
-        "horizon": "1d-1w",
-        "action_object": "basket",
-        "action_object_detail": "SOX/SMH bias; NVDA often first-price",
-        "polarity": "bullish",
-        "polarity_why": "named AI demand / fab investment narrative",
-        "confidence": 0.6,
-        "drop_reason": "",
-        "notes": []
-      },
-      "mechanism": "Named AI/hyperscale demand (e.g. SpaceX chip commit) supports semi and equipment risk appetite. Differs from tariff shock: this is demand +, not cost +. Still often priced fast in NVDA — equipment/secondaries may lag.",
-      "amp_damp": "",
-      "mean_revert": "fade if no follow-through orders",
-      "taxonomy": [
-        "Sector tailwind/index inclusion",
-        "Operational milestone (e.g., first patient dosed, satellite commissioned)"
-      ],
-      "evidence": [
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd3lqcF9UTnUzUkRFNWs3ZlE3a0JmYzRvdnZQaVhnNTBTa2cwTm11d2Y1X3ZTVmFENVNrY2h5WU9TSzVWUmdpQm9BbVlmOE9acTBlVkhHdldpeEs1cnFlVzRFdWtMVXBncmRsalY4SERrQ1hMMG84Y2dyWkRnZUpNU0d6MWdkcWt4TWp2aEZWSUxjSlEyUVhhYl8wVmpZeG4yeXUtNFc1TlZhQk50ejFmbWJxRjhJUmdxS1JneS1jbnpvX0NqcTFackJ3?oc=5",
+          "published_at": "Fri, 28 Aug 2026 18:41:14 GMT"
+        },
         {
-          "title": "Nvidia Q2 earnings: stock surges 8.7%, adds $442 billion in value - Yahoo Finance",
-          "source": "rss_google_markets",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXy1KWWlBbWZ5Snl3TDVFY2ttaTZidFV5UU0tTXFQVWpONVMwZVVRNmhGUWdiZ3cxc2M4V1VtT2xCSjNTYjEyTko5RFJVa0JKNGpPSzloUWQzRkVUc0xjb0JJUmZYVHp5bkIxYlM1S1d3LVgwM2VhWjVnXzF1M2M2V2xUd1dXTUpTcEZZZ3NkTXNoeTZGMlNDeVBuVDQ?oc=5",
-          "published_at": "Fri, 28 Aug 2026 11:14:32 GMT"
+          "title": "US Fed chair warns inflation progress insufficient, hints at rate hikes - Al Jazeera",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQd0NBQXVfMXZWdzF1ZENVa1FhMEJhaWZvZEdGWmZLMy1VVUZqSHN4cThGVGE2Y21HS29DMjQ0ZUp1Nkh0eHktN3plWE4xWndSUngtaXA4a1ZwS0lmVzNLbXVGa0lHLVpKZTVtYkpTSUFHOHpINVRjX3EyU2cwbGJnYjU5ZE9aWlhRMlNQc2xNQVVkMTJYWlpVR1loVFJNZ3l0bTdFcjU1TVRyeWhMZUtQLVAxNzPSAboBQVVfeXFMTWtVYVpZRlp5a3VpbW9RaWZmRF9VTl9jTGJfc0JXMFZKZTZNc0N2ZWtDMkdBLVdkaVNfdVVhMGxGeFQzSXRxRmZtY29kZWZDbTcySU85dEVXdFBYSjVkOGtHT1ZULTg1bnBCZXJMX2gyQUppR0dlVlRTcXBKdmlfSFI1QXVGV281SGdyaGVtb011ZWhHRUxjVEVWWU1IV3lVUGtqUXBvdURHVHBEWXVqMGVTWkhpSEJQUnRR?oc=5",
+          "published_at": "Fri, 28 Aug 2026 17:24:35 GMT"
         }
       ]
     },
@@ -151,22 +116,63 @@
       ],
       "evidence": [
         {
-          "title": "‘It’s all you can hear’: New Jersey lawsuit takes on datacenter’s noise pollution - The Guardian",
-          "source": "rss_google_business",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSjU1UzBNT0hhOHRoMktZekNFS1R1YnJMazQ1MDhhSnRpWEtnTWlPT1k5TFc3dDE2ZWl6V1ROMnR2ZkxSTWZJeFRIVGpCTlQ2eGlHMGdCVEEtb29QSFRwNnpudVd2dGx6Y1gxVmwyT29iWXc1d0Q1bXl6UTItM0VmX3hzeUxiZWJqZHBYRw?oc=5",
-          "published_at": "Fri, 28 Aug 2026 15:34:00 GMT"
-        },
-        {
           "title": "nVent (NVT) Could Pay Approximately $2.3B for Maverick Power. Is the Data Center Expansion Worth the Price?",
           "source": "rss_yahoo_finance",
           "url": "https://finance.yahoo.com/markets/stocks/articles/nvent-nvt-could-pay-approximately-202333223.html",
           "published_at": "2026-08-27T20:23:33Z"
+        },
+        {
+          "title": "‘It’s all you can hear’: New Jersey lawsuit takes on datacenter’s noise pollution - The Guardian",
+          "source": "rss_google_business",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSjU1UzBNT0hhOHRoMktZekNFS1R1YnJMazQ1MDhhSnRpWEtnTWlPT1k5TFc3dDE2ZWl6V1ROMnR2ZkxSTWZJeFRIVGpCTlQ2eGlHMGdCVEEtb29QSFRwNnpudVd2dGx6Y1gxVmwyT29iWXc1d0Q1bXl6UTItM0VmX3hzeUxiZWJqZHBYRw?oc=5",
+          "published_at": "Fri, 28 Aug 2026 15:34:00 GMT"
+        }
+      ]
+    },
+    {
+      "event": "ai_chip_demand_spike",
+      "headline_count": 2,
+      "framework": {
+        "keep": "keep",
+        "us_relevance": "high",
+        "us_relevance_why": "US-listed semi demand / domestic fab narrative",
+        "channel": "sector_fundamental",
+        "geography": "us_domestic",
+        "severity": "session",
+        "horizon": "1d-1w",
+        "action_object": "basket",
+        "action_object_detail": "SOX/SMH bias; NVDA often first-price",
+        "polarity": "bullish",
+        "polarity_why": "named AI demand / fab investment narrative",
+        "confidence": 0.6,
+        "drop_reason": "",
+        "notes": []
+      },
+      "mechanism": "Named AI/hyperscale demand (e.g. SpaceX chip commit) supports semi and equipment risk appetite. Differs from tariff shock: this is demand +, not cost +. Still often priced fast in NVDA — equipment/secondaries may lag.",
+      "amp_damp": "",
+      "mean_revert": "fade if no follow-through orders",
+      "taxonomy": [
+        "Sector tailwind/index inclusion",
+        "Operational milestone (e.g., first patient dosed, satellite commissioned)"
+      ],
+      "evidence": [
+        {
+          "title": "Nvidia Q2 earnings: stock surges 8.7%, adds $442 billion in value - Yahoo Finance",
+          "source": "rss_google_markets",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNXy1KWWlBbWZ5Snl3TDVFY2ttaTZidFV5UU0tTXFQVWpONVMwZVVRNmhGUWdiZ3cxc2M4V1VtT2xCSjNTYjEyTko5RFJVa0JKNGpPSzloUWQzRkVUc0xjb0JJUmZYVHp5bkIxYlM1S1d3LVgwM2VhWjVnXzF1M2M2V2xUd1dXTUpTcEZZZ3NkTXNoeTZGMlNDeVBuVDQ?oc=5",
+          "published_at": "Fri, 28 Aug 2026 11:14:32 GMT"
+        },
+        {
+          "title": "Stock Market Today, Aug. 27: Nvidia Surges on Blowout Results and Surprising Guidance - Yahoo Finance",
+          "source": "rss_google_markets",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSU5sdGhNNzdlQjR2SThzdDB4cjhIZW5NSTQ1X1BnWkloUlI4aWhnY1FrQkExejdyWTI1ZjBtWlFtVFd0ZldhR3lWRUxvNEl1cC1tQzY5Q2dJUG9lZWlxdmpDNXpNZmp6RkkwM09XTkt5amw3X29sOHBrcjd5LTBIdDh3eTB4aE1Kb2RUUW04ZkNadkYz?oc=5",
+          "published_at": "Thu, 27 Aug 2026 21:21:26 GMT"
         }
       ]
     },
     {
       "event": "hormuz_energy_risk",
-      "headline_count": 4,
+      "headline_count": 2,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -196,12 +202,6 @@
           "source": "rss_aljazeera_economy",
           "url": "https://www.aljazeera.com/news/liveblog/2026/8/28/iran-war-live-tehran-prepares-conditions-to-open-strait-of-hormuz?traffic_source=rss",
           "published_at": "Fri, 28 Aug 2026 00:00:00 +0000"
-        },
-        {
-          "title": "Iran says it will name its terms for reopening Strait of Hormuz",
-          "source": "rss_aljazeera_economy",
-          "url": "https://www.aljazeera.com/economy/2026/8/28/iran-says-it-will-name-its-terms-for-reopening-strait-of-hormuz?traffic_source=rss",
-          "published_at": "Fri, 28 Aug 2026 01:23:42 +0000"
         }
       ]
     },
@@ -289,6 +289,27 @@
       "framework_polarity": "mixed"
     },
     {
+      "event": "ai_power_demand",
+      "role": "primary",
+      "bucket": "utilities_power",
+      "side": "buy",
+      "weight": 3.51,
+      "tickers": [
+        "CEG",
+        "VST",
+        "NEE",
+        "SO",
+        "OGE",
+        "IDA",
+        "UTL",
+        "HNRG",
+        "NVT"
+      ],
+      "note": "load growth / power scarcity narrative",
+      "why": "Framework keep=keep channel=sector_fundamental object=basket:CEG/VST/NRG-type power; not pollution pure-plays horizon=1w-1m severity=session conf=0.65. Edge=primary buy `utilities_power` because load growth / power scarcity narrative.",
+      "framework_polarity": "bullish"
+    },
+    {
       "event": "ai_chip_demand_spike",
       "role": "primary",
       "bucket": "semiconductors",
@@ -326,27 +347,6 @@
       ],
       "note": "fab/tooling second order",
       "why": "Framework keep=keep channel=sector_fundamental object=basket:SOX/SMH bias; NVDA often first-price horizon=1d-1w severity=session conf=0.6. Edge=primary buy `semi_equipment` because fab/tooling second order.",
-      "framework_polarity": "bullish"
-    },
-    {
-      "event": "ai_power_demand",
-      "role": "primary",
-      "bucket": "utilities_power",
-      "side": "buy",
-      "weight": 3.51,
-      "tickers": [
-        "CEG",
-        "VST",
-        "NEE",
-        "SO",
-        "OGE",
-        "IDA",
-        "UTL",
-        "HNRG",
-        "NVT"
-      ],
-      "note": "load growth / power scarcity narrative",
-      "why": "Framework keep=keep channel=sector_fundamental object=basket:CEG/VST/NRG-type power; not pollution pure-plays horizon=1w-1m severity=session conf=0.65. Edge=primary buy `utilities_power` because load growth / power scarcity narrative.",
       "framework_polarity": "bullish"
     },
     {
@@ -466,65 +466,6 @@
     }
   ],
   "ticker_actions": [
-    {
-      "ticker": "XLE",
-      "buy_score": 8.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 8.0,
-          "bucket": "judge"
-        }
-      ],
-      "net": 8.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "AU",
-      "buy_score": 6.9,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "weak_labor_print",
-          "side": "buy",
-          "weight": 1.4,
-          "bucket": "gold"
-        },
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 5.5,
-          "bucket": "judge"
-        }
-      ],
-      "net": 6.9,
-      "side": "buy",
-      "size": "large"
-    },
-    {
-      "ticker": "ADBE",
-      "buy_score": 6.38,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "weak_labor_print",
-          "side": "buy",
-          "weight": 0.88,
-          "bucket": "software_app"
-        },
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 5.5,
-          "bucket": "judge"
-        }
-      ],
-      "net": 6.38,
-      "side": "buy",
-      "size": "large"
-    },
     {
       "ticker": "COP",
       "buy_score": 6.0,
@@ -846,22 +787,7 @@
       "size": "mid"
     },
     {
-      "ticker": "XLK",
-      "buy_score": 4.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 4.0,
-          "bucket": "judge"
-        }
-      ],
-      "net": 4.0,
-      "side": "buy"
-    },
-    {
-      "ticker": "XLV",
+      "ticker": "XLE",
       "buy_score": 4.0,
       "sell_score": 0.0,
       "events": [
@@ -1020,6 +946,28 @@
       "size": "large"
     },
     {
+      "ticker": "AU",
+      "buy_score": 2.9,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 1.4,
+          "bucket": "gold"
+        },
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": 2.9,
+      "side": "buy",
+      "size": "large"
+    },
+    {
       "ticker": "NVDA",
       "buy_score": 2.52,
       "sell_score": 0.0,
@@ -1146,6 +1094,28 @@
       "net": 2.52,
       "side": "buy",
       "size": "mega"
+    },
+    {
+      "ticker": "ADBE",
+      "buy_score": 2.38,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "weak_labor_print",
+          "side": "buy",
+          "weight": 0.88,
+          "bucket": "software_app"
+        },
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": 2.38,
+      "side": "buy",
+      "size": "large"
     },
     {
       "ticker": "ASML",
@@ -1276,7 +1246,7 @@
       "size": "large"
     },
     {
-      "ticker": "XLU",
+      "ticker": "ADI",
       "buy_score": 0.0,
       "sell_score": 1.5,
       "events": [
@@ -1289,6 +1259,21 @@
       ],
       "net": -1.5,
       "side": "sell"
+    },
+    {
+      "ticker": "AMLP",
+      "buy_score": 1.5,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": 1.5,
+      "side": "buy"
     },
     {
       "ticker": "NEM",
@@ -1628,12 +1613,11 @@
     }
   ],
   "judge_tickers": {
-    "AU": 5.5,
-    "ADBE": 5.5,
-    "XLK": 4.0,
-    "XLV": 4.0,
-    "XLE": 8.0,
-    "XLU": -1.5
+    "ADI": -1.5,
+    "XLE": 4.0,
+    "AU": 1.5,
+    "ADBE": 1.5,
+    "AMLP": 1.5
   },
   "catalyst_tickers": 0,
   "catalyst_date": "2026-08-31"

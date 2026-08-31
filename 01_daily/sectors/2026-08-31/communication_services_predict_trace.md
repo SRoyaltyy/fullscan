@@ -2,56 +2,56 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (667,965 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (668,148 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
 **Step 1 — Research.** The model wanted to know: *"Meta Alphabet communication services stocks August 31 2026"* → got 6 results (via ddg)
 
-  - The Largest Communications Services Companies by Market Cap ... (https://www.fool.com/research/largest-communications-companies/)
+  - Meta vs. Alphabet: One AI Giant Looks Undervalued (https://247wallst.com/investing/2026/08/31/meta-vs-alphabet-one-ai-giant-looks-undervalued/)
 
-  - GOOGL, META, NFLX & 300+ Communication Stocks Screener (2026 ... (https://vcpscanner.com/sectors/communication-services)
+  - Meta - Home (https://investor.atmeta.com/home/default.aspx)
 
-  - Communication Services sector stocks in August 2026 - Finrange (https://finrange.com/en/sectors/communication-services)
+  - Alphabet (GOOGL) Market Cap & Net Worth - Stock Analysis (https://stockanalysis.com/stocks/googl/market-cap/)
 
-**Step 2 — Research.** The model wanted to know: *"XLC ETF communication services flows positioning August 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"XLC communication services ETF flows positioning August 2026"* → got 3 results (via gnews_rss)
 
-  - XLC Technical Analysis, Signals & Chart - SwingTradeBot (https://swingtradebot.com/equities/XLC)
+  - Forget QQQ: This ETF Marries the Magnificent 7 and Communications - MarketBeat (https://news.google.com/rss/articles/CBMiowFBVV95cUxNSDBBRkVBbHpNMEpsVU90M0JRZkI2U1NRbGRXVkozM1pyaXJCZkJCUHU3SnZINTNUdnB3QXJiMDFpRGJuTjM3Sm1XekVqaFc0d3gxQXdBU3AwWUE5NHZLcFhGZmszLXJ4Y01udE4zT2tNVExGRnFUUmNjN2hGWkVkaUJ3bG5QdVo3M3Fic3Jzdm9BU3UxMnpiWlpPdXFBMXl1Q1ow?oc=5)
 
-  - Communication Services (XLC) ETF Forecast (2026) (https://clearank.com/etf/communication-services-xlc/)
+  - State Street Communication Services Select Sector SPDR Premium Income ETF - ETF Database (https://news.google.com/rss/articles/CBMiQEFVX3lxTFBjd3pGX3dCaDRrQktFX2cxZWU0MGRUUm43V3lHNHdVLVRMZVVnenRHSEJ5czBOZXhkZzhVa3Mzc2U?oc=5)
 
-  - XLC: State Street® Communication Services Select Sector SPDR® ETFState Street Communication Services Select Sector SPDR ETFState Street Communication Services Select Sector SPDR ETF - XLCState Street Communication Services Select Sector SPDR ETFXLC ETF Stock Price & Overview (https://www.ssga.com/us/en/intermediary/etfs/state-street-communication-services-select-sector-spdr-etf-xlc)
+  - State Street Communication Services Select Sector SPDR ETF - ETF Database (https://news.google.com/rss/articles/CBMiP0FVX3lxTE5Gb2R4TkVpcG40Mm9HaFhhcDhDdHgxMTcweDhTTkt4N19oRjRwU1EwSTJFTUxCSzlvTkEyT2VDcw?oc=5)
 
 **Step 4 — Research.** The model wanted to know: *"Warsh Jackson Hole rate hike September odds August 31 2026"* → got 6 results (via ddg)
 
-  - Jackson Hole analyst roundup: Warsh's speech sends hike ... (https://www.cnbc.com/2026/08/31/jackson-hole-fed-chair-kevin-warsh-hawkish-rate-hikes-analysts.html)
-
   - Warsh Credibility Gap Pushes September Hike Bet to 40% at ... (https://www.ratespike.com/articles/warsh-credibility-hike-odds-jackson-hole-2026)
 
-  - September Fed decision is now a coin flip as rate hike odds ... (https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html)
+  - Jackson Hole analyst roundup: Warsh's speech sends hike ... (https://www.cnbc.com/2026/08/31/jackson-hole-fed-chair-kevin-warsh-hawkish-rate-hikes-analysts.html)
 
-**Step 5 — Research.** The model wanted to know: *"Meta Alphabet ad revenue AI monetization August 2026"* → got 6 results (via ddg)
+  - Fed Rate Hike Odds Rise After Warsh’s Jackson Hole Speech (https://www.forbes.com/sites/bill_stone/2026/08/30/fed-rate-hike-odds-rise-after-warshs-jackson-hole-speech/)
 
-  - GOOGL Rides on Strong Advertising Revenues: Can It Beat RDDT ... (https://www.zacks.com/stock/news/2981266/googl-rides-on-strong-advertising-revenues-can-it-beat-rddt-and-meta)
+**Step 5 — Research.** The model wanted to know: *"Meta Alphabet ad revenue AI monetization August 2026"* → got 6 results (via gnews_rss)
 
-  - Meta - Meta Reports Second Quarter 2026 Results (https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx)
+  - Meta vs. Alphabet: One AI Giant Looks Undervalued - 24/7 Wall St. (https://news.google.com/rss/articles/CBMilgFBVV95cUxNTTFjQXN3bS1mOEw0bkpQMF9nRWJNUGZtNktPQ2tfNy1LOHBfV0c1bmdfXzNYVmQzenNJRVhacnVRNUlaWk9Ebmx4c2NfM0NxeERJeVJYQTVfUm1CTTZuTlVJNWZUQlNaM1pjbEhmUEZqNVpuaUdDZ2FvVU4tMmptRmluY3pwVjFTWnpNc05lU2RlUFdyZkE?oc=5)
 
-  - Alphabet vs. Meta: One AI Giant Looks More Attractive (https://247wallst.com/investing/2026/08/27/alphabet-vs-meta-one-ai-giant-looks-more-attractive/)
+  - Meta and Alphabet show contrasting AI growth an... - Pluang (https://news.google.com/rss/articles/CBMijgFBVV95cUxPMnVuRkFZcVZpUzh6akJKb0ZHRG1YS0JKckgyUUVVcHV5UnZSU3RhZUsyek9iSjV0ZFBYR2xxbU9mbEpxcnNMT3I0WVhsTFZObFphWWx5aWNaOENOMzBtaTQwMzNBVm91RElWX3VUQjlEYnFHdFVjX2ZCSmJLUXNuVE5YcGR2TkhmVUNFdGFn?oc=5)
 
-**Step 7 — Research.** The model wanted to know: *"Strait of Hormuz Iran oil August 31 2026"* → got 6 results (via ddg)
+  - Meta’s $60 Billion AI Machine Could Dethrone Google Search by Year-End - 24/7 Wall St. (https://news.google.com/rss/articles/CBMisgFBVV95cUxPLW53UG1CbUs4cHBhMFd4eFh0SS12RVE1MnloaUJtNU5NRDFGdktKSHdQeFIyR1o5MDV5R255eHVVWkdlRDA3VUVPOGxBMElJZzVxb2J2MW9hQVA4a1NYeURENWhRT3FIQVZnRnZ0akhwWGVHZGZnM0hfczczVElLS0Q0ODRGVEIwUXJiNERSYUVjMmdCLUkwa19TSVE0cXNCNERkdkdlRHpXUDEtb2ttYV93?oc=5)
 
-  - US-Iran Strait of Hormuz Oil Prices: 2026 Crisis (https://discoveryalert.com/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/)
+**Step 7 — Research.** The model wanted to know: *"stock market August 31 2026 premarket futures rate hike yields"* → got 6 results (via ddg)
 
-  - Strait of Hormuz Live Ship Tracker — Real-Time Crossings ... (https://hormuz.data-tracking.net/)
+  - US Stock Market Live Today Aug 31, 2026 — S&P 500, Dow ... (https://vittarthi.com/markets/us)
 
-  - Iran War 2026 — Live Energy Crisis Tracker | Strait of Hormuz ... (https://global-news-events.com/)
+  - Stock Market Outlook for Monday, August 31, 2026 (https://strongbuyanalytics.com/stock-market-outlook)
 
-**Step 8 — Research.** The model wanted to know: *"stock market today August 31 2026 premarket tech selloff yields"* → got 6 results (via gnews_rss)
+  - Stock Market News for Aug 31, 2026 - August 31, 2026 - Zacks.com (https://www.zacks.com/stock/news/2982260/stock-market-news-for-aug-31-2026)
 
-  - Wall Street ends higher as tech rebounds before Nvidia results - Reuters (https://news.google.com/rss/articles/CBMirgFBVV95cUxOdmhxOE10Q2J5RzR6U1lxZjRCX0FUYmdxdkl5SE5fT1N2SG5RSmMxb0xPekZ2eDNjbVhyVE54N0FIOTByZEdrMFUtSmp0U3A0R2RLVldRczJ2aW5PU2QzUzZ6Y0FYUThQU01jdEJOdzdtbndvdThwXzhUbDAzQ2lHeVIwbHE4dkZITlhxZ0JLLWVEVHdzZmcxYTdub3dWRjh1QnRNUzRhU0V3bnJZV2c?oc=5)
+**Step 8 — Research.** The model wanted to know: *"Meta Alphabet Netflix communication services stocks today August 31 2026"* → got 6 results (via ddg)
 
-  - US stock futures steady after tech slump; investors focus on Middle East tensions - Reuters (https://news.google.com/rss/articles/CBMivwFBVV95cUxQNnFzX1pZYUZsd0lHWkM3SGVWNE9NRkFvRVdmQ1JIcVJMeXBKenVjQnJLVlFOTnpSVTU2VW95Y2ZUNUdaTnNqd0ItNGpUVktVMkFjR29JTExtc1NUV3lKYkw3MGRDWFozRmlJM0lIdW0xd3daMHZPTVVwZzV3d1ZZTGkybTBPYlZ6czhMVDNtY29pRE5SM2hvejNyZFFLUnRRSXMzTmhYTjBjTTBCejc5N1dxakdsSXBVSzZNRFV6cw?oc=5)
+  - Netflix vs. Meta: The Better Media Stock May Surprise You (https://247wallst.com/investing/2026/08/31/netflix-vs-meta-the-better-media-stock-may-surprise-you/)
 
-  - US Stock Market Today 08/24/2026 [UPDATE: 23:07 EDT] [Micron Slips Back as QQQ Holds Overnight Gain] - TechStock² (https://news.google.com/rss/articles/CBMiX0FVX3lxTE51R1NFU3RETWJIc0dfZnNva244Z28xcjlMZmh6VjFoeldBNFlvbC1rRzNMNDc2SGpYRFphRF9oWnkwNGRWWE5OX1pKbkdKVWpfTVR2UnR1QVQtY0hXYk5z?oc=5)
+  - META Stock Price | Meta Platforms Inc. Stock Quote (U.S ...Meta Platforms Inc (META) Stock Price & News - Google FinanceMETA Stock - Meta Platforms Class A - NASDAQ: META - MorningstarMETA Stock Price (-7.26) | Stock Quote, Chart & News for Meta ...Meta Platforms (META) Stock - Research | Financials | Charts ...Meta Platforms, Inc. (META) Stock Historical Prices & Data ... (https://www.marketwatch.com/investing/stock/meta)
 
-**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (12,090 characters).
+  - Meta Platforms Inc (META) Stock Price & News - Google Finance (https://www.google.com/finance/quote/META:NASDAQ)
+
+**Step 10 — Done researching.** The model stopped searching and wrote its full analysis (14,632 characters).

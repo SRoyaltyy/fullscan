@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the distinct new events not covered by the Finviz event (which was about Powertech FOPLP capacity booked by Broadcom).\n\nHere are the distinct new events I've identified:\n\n1. **Q4 FY2025 earnings (Dec 11, 2025)** - Record revenue, AI demand\n2. **Q1 FY2026 earnings beat (Mar 4, 2026)** - EPS beat, revenue beat\n3. **Q2 FY2026 earnings miss (Jun 3, 2026)** - Stock plunged on weak software sales\n4. **$10B buyback authorization (Mar 4, 2026)**\n5. **",
+  "raw": "I now have comprehensive data. Let me compile the final JSON output with distinct, new events (excluding the Finviz-confirmed Powertech FOPLP event).\n\n```json\n[\n  {\n    \"event_date\": \"2025-12-11\",\n    \"description\": \"Broadcom reported Q4 FY2025 revenue of $18.0B, raised its quarterly dividend 10% to $0.65/share (15th consecutive annual increase), and issued Q1 FY2026 guidance of ~$19.1B revenue.\",\n    \"evidence_excerpt\": \"\\\"Broadcom Q4 revenue hits $18.0B, lifts dividend 10%\\\"\",\n    \"source_urls",
   "ticker": "AVGO",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

@@ -1,17 +1,25 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31T07:09:35.321120-04:00",
+  "generated_at": "2026-08-31T13:40:03.055674-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-08-31/communication_services_predict.md",
-      "reason": "Missing required sector predict file."
+      "path": "01_daily/map_heat/2026-08-31_research.md",
+      "reason": "Missing required map_heat_research file"
     },
     {
-      "path": "01_daily/sectors/2026-08-31/consumer_cyclical_predict.md",
-      "reason": "Missing required sector predict file."
+      "path": "01_daily/sectors/2026-08-31/basic_materials_predict.md",
+      "reason": "Missing required sector predict"
+    },
+    {
+      "path": "01_daily/sectors/2026-08-31/communication_services_predict.md",
+      "reason": "Missing required sector predict"
+    },
+    {
+      "path": "01_daily/sectors/2026-08-31/industrials_predict.md",
+      "reason": "Missing required sector predict"
     }
   ],
   "missing_required": [
@@ -77,24 +85,24 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 1,
+      "n_today": 8,
       "latest": {
-        "id": 33370577740,
+        "id": 33399857749,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/33370577740"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/33399857749"
       }
     },
     {
       "workflow": "finviz_preopen_scrape.yml",
       "n_today": 8,
       "latest": {
-        "id": 33385545538,
-        "status": "in_progress",
-        "conclusion": null,
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/33385545538"
+        "id": 33418304155,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/33418304155"
       }
     },
     {
@@ -139,18 +147,18 @@
     },
     {
       "workflow": "map_heat_postclose.yml",
-      "n_today": 6,
+      "n_today": 8,
       "latest": {
-        "id": 33382646729,
-        "status": "completed",
-        "conclusion": "cancelled",
+        "id": 33401684769,
+        "status": "queued",
+        "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/33382646729"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/33401684769"
       }
     }
   ],
   "qc": {
-    "sector_n_ok": 9,
+    "sector_n_ok": 8,
     "sector_n_total": 11,
     "items": [
       {
@@ -158,21 +166,21 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/general/2026-08-31_predict.md",
-        "size": 12237
+        "size": 13762
       },
       {
         "kind": "events",
         "ok": true,
         "reason": "",
         "path": "01_daily/events/2026-08-31_events.json",
-        "size": 31911
+        "size": 37656
       },
       {
         "kind": "news_judge",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-08-31_judge.md",
-        "size": 12162
+        "size": 11612
       },
       {
         "kind": "news_parse",
@@ -218,10 +226,10 @@
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-08-31/basic_materials_predict.md",
-        "size": 7396
+        "size": 0
       },
       {
         "kind": "sector_predict",
@@ -232,66 +240,66 @@
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-08-31/consumer_cyclical_predict.md",
-        "size": 0
+        "size": 10596
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/consumer_defensive_predict.md",
-        "size": 10424
+        "size": 14186
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/energy_predict.md",
-        "size": 15739
+        "size": 13232
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/financial_predict.md",
-        "size": 15101
+        "size": 14651
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/healthcare_predict.md",
-        "size": 9856
+        "size": 9480
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-08-31/industrials_predict.md",
-        "size": 9249
+        "size": 0
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/real_estate_predict.md",
-        "size": 9910
+        "size": 9408
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/technology_predict.md",
-        "size": 8543
+        "size": 8239
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-08-31/utilities_predict.md",
-        "size": 14597
+        "size": 9044
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I have gathered sufficient information. Let me compile the distinct events, being careful not to duplicate the Finviz event (which covers the Q2 2026 weak results and securities lawsuit). Let me extract the new distinct events.\n\n```json\n[\n  {\n    \"event_date\": \"2026-05-05\",\n    \"description\": \"Peabody Energy reported Q1 2026 results that fell short of expectations, causing the stock to decline, with analysts noting a weak quarter but seeing value at the price.\",\n    \"evidence_excerpt\": \"\\\"Earnin",
+  "raw": "I now have comprehensive information. Let me compile the final JSON array of distinct events, avoiding duplication with the Finviz event (which covers the securities lawsuit dated 2026-08-31 and the weak Q2 with adjusted EBITDA $24m and EPS -$0.74).\n\nThe Finviz event is about the securities lawsuit (DJS Law Group) and mentions the weak Q2. I'll treat the securities class action over Centurion mine delays as a distinct event since it's a different lawsuit (filed June 2026, deadline Aug 24, 2026, ",
   "ticker": "BTU",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

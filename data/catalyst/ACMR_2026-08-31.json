@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information to compile the distinct events. Let me finalize the extraction, excluding the Finviz-confirmed Q2 2026 earnings event (Aug 31, 2026).\n\n```json\n[\n  {\n    \"event_date\": \"2025-09-24\",\n    \"description\": \"ACM Research's subsidiary ACM Research (Shanghai) completed a private offering of ordinary shares, raising approximately US$630 million.\",\n    \"evidence_excerpt\": \"On September 24, 2025, ACM Research announced that its subsidiary, ACM Research (Shanghai), comple",
+  "raw": "I now have comprehensive information. Let me compile the distinct events, excluding the Finviz-confirmed Q2 2026 earnings event (which is already covered). Let me identify the distinct new events:\n\n1. **Jan 22, 2026** - Updated 2025 revenue outlook to $885-$900M and initial 2026 outlook of $1,080-$1,175M\n2. **Feb 26, 2026** - Q4 2025 / FY2025 earnings results (revenue rises but margins compress sharply, stock dropped 17%)\n3. **Feb 26, 2026** - Received multiple advanced packaging equipment order",
   "ticker": "ACMR",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

@@ -2,160 +2,158 @@
 
 ### IMPORTANT NEWS (my ranking)
 
-1. **Fed Chair Warsh signals rate hikes may be needed; September hike odds rise to ~coin flip** — This is the dominant macro driver for the session and next 1-5 sessions, directly repricing the entire rate complex and equity risk appetite.
-2. **Treasury Yields Rise as Warsh Vows to Pull Down Inflation** — The yield move is the transmission mechanism for the Fed signal; it hits long-duration tech, REITs, and utilities hardest while supporting financials via NIM/rotation.
-3. **Gold price surge on softer data and FOMC anticipation lifts AU +8.5%, Barrick +8.2%** — This is a major sector-fundamental move in Basic Materials, driven by monetary metals, and was dropped by the mechanical filter as noise.
-4. **Iran says it will name terms for reopening Strait of Hormuz** — This is a live geopolitical/oil supply-risk headline that can flip the broad tape risk-off; it caps risk appetite and supports energy/defensives.
-5. **Corn and wheat prices jump to highest in more than three years** — This is a fresh agricultural commodity shock that feeds inflation/stagflation fears and supports the Basic Materials/agriculture complex.
-6. **Salesforce earnings beat sparks software rally lifting Adobe 6%** — This is a fresh, index-relevant mega-cap tech catalyst that supports the software/AI complex and can override macro drag if futures confirm.
-7. **Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV** — This is a major late-stage trial readout that lifts Amgen and can provide Healthcare sector sympathy; it was dropped by the mechanical filter as single-name noise.
-8. **With the US and Canada locked in a trade war, fears of a recession lurk** — This is a macro risk-off overlay that dampens cyclicals and supports defensives; it was dropped by the mechanical filter as noise.
+1. **Fed Chair Warsh signals rate hikes may be needed; September hike odds now a coin flip** — This is the dominant macro driver for the session and next 1-5 sessions, directly repricing the entire rate-sensitive complex and equity risk appetite. (channel: rates)
+2. **Gold price surge on softer data and FOMC anticipation lifts AU +8.5%, Barrick +8.2%** — A major monetary-metals move that signals a regime shift in real-rate expectations and acts as a leading indicator for risk appetite; rescued from noise. (channel: rates)
+3. **Iran says it will name terms for reopening Strait of Hormuz; IRGC asserts strait control** — Active geopolitical supply-shock risk that can flip the broad tape risk-off and is a direct input to energy and defensive sectors. (channel: risk)
+4. **Corn and wheat prices jump to highest in more than three years** — A fresh agricultural supply shock that feeds inflation expectations and hits consumer staples/discretionary margins; rescued from noise. (channel: sector_fundamental)
+5. **Salesforce earnings beat sparks software rally lifting Adobe 6%** — A fresh, index-relevant mega-cap catalyst that supports the software complex and provides a positive counterweight to the hawkish Fed tape. (channel: sector_fundamental)
+6. **Amgen says Repatha cut all-cause mortality 20% in Phase 3 VESALIUS-CV** — A major late-stage trial readout with broad cardiovascular implications; sector-level catalyst for Healthcare, not just single-name. (channel: sector_fundamental)
+7. **Fabrinet earnings weakness and rising yields spark 6.5% Analog Devices drop** — A fresh negative for the semiconductor supply chain that, combined with the hawkish Fed, pressures the tech complex. (channel: sector_fundamental)
+8. **Apollo funds to provide $9B nonvoting minority equity investment in ONEOK** — A large capital deployment into energy infrastructure that signals institutional risk appetite and supports the midstream basket. (channel: sentiment)
 
 ---
 
 ### STEP 1 — FRAMEWORK SCORE
 
-**1. Fed Chair Warsh signals rate hikes may be needed; September hike odds rise to ~coin flip**
+**1. Fed Chair Warsh signals rate hikes; September hike odds coin flip**
 - keep: **keep**
-- us_relevance: **high** — Direct Fed policy signal, the single most important driver of US equity risk appetite.
+- us_relevance: **high** — Direct Fed policy signal; reprices the entire US rate curve and equity risk premium.
 - channel: **rates**
 - geography: **us_domestic**
 - severity: **regime**
 - horizon: **1w-1m**
 - action_object: **spx**
-- action_object_detail: **SPX beta, rate-sensitive sectors**
+- action_object_detail: SPX beta, rate-sensitive sectors (XLU, XLRE, XLP)
 - polarity: **hawkish**
-- polarity_why: Rate hike odds rising is a hawkish repricing that pressures equity multiples.
-- confidence: **0.85**
+- polarity_why: Warsh explicitly signals inflation fight not over, opening door to hikes.
+- confidence: **0.9**
 
-**2. Treasury Yields Rise as Warsh Vows to Pull Down Inflation**
+**2. Gold surge on softer data/FOMC anticipation (AU +8.5%, B +8.2%)**
 - keep: **keep**
-- us_relevance: **high** — Yield move is the direct transmission of the Fed signal; it determines sector rotation.
+- us_relevance: **high** — Gold's surge is a direct repricing of real-rate expectations and a leading risk-appetite signal.
 - channel: **rates**
-- geography: **us_domestic**
+- geography: **global_priced**
 - severity: **session**
 - horizon: **1d-1w**
-- action_object: **basket**
-- action_object_detail: **Long-duration (XLK, XLRE, XLU) vs value/financials (XLF)**
-- polarity: **bearish**
-- polarity_why: Rising yields pressure long-duration assets and support value/rate-sensitive financials.
+- action_object: **sector_etf**
+- action_object_detail: GDX, XLB (gold miners within materials)
+- polarity: **bullish**
+- polarity_why: Softer data + FOMC anticipation = lower real-rate expectations, bid for monetary metals.
 - confidence: **0.8**
 
-**3. Gold price surge on softer data and FOMC anticipation lifts AU +8.5%, Barrick +8.2%**
+**3. Iran terms for reopening Strait of Hormuz; IRGC asserts control**
 - keep: **keep**
-- us_relevance: **medium** — Gold surge is a major sector move in Basic Materials, but not a broad SPX driver.
-- channel: **sector_fundamental**
-- geography: **global_priced**
-- severity: **session**
-- horizon: **1d-1w**
-- action_object: **sector_etf**
-- action_object_detail: **XLB, GDX, gold miners**
-- polarity: **bullish**
-- polarity_why: Monetary metals bid on rate-cut anticipation lifts miners and materials.
-- confidence: **0.75**
-
-**4. Iran says it will name terms for reopening Strait of Hormuz**
-- keep: **conditional**
-- us_relevance: **high** — Live geopolitical supply-risk headline that can flip the tape risk-off.
+- us_relevance: **high** — Direct supply-shock risk to global oil; can flip equity tape risk-off.
 - channel: **risk**
 - geography: **global_priced**
 - severity: **session**
-- horizon: **1d**
-- action_object: **spx**
-- action_object_detail: **SPX beta, energy (XLE), defensives (XLP, XLV)**
-- polarity: **bearish**
-- polarity_why: Supply disruption risk raises oil and inflation fears, pressuring equities.
-- confidence: **0.6**
-
-**5. Corn and wheat prices jump to highest in more than three years**
-- keep: **conditional**
-- us_relevance: **medium** — Agricultural commodity shock feeds inflation/stagflation narrative.
-- channel: **sector_fundamental**
-- geography: **global_priced**
-- severity: **session**
 - horizon: **1d-1w**
 - action_object: **sector_etf**
-- action_object_detail: **XLB, agriculture-related names, consumer staples (XLP)**
-- polarity: **bearish**
-- polarity_why: Food inflation is a stagflationary input that pressures consumer spending and equity multiples.
-- confidence: **0.6**
-
-**6. Salesforce earnings beat sparks software rally lifting Adobe 6%**
-- keep: **keep**
-- us_relevance: **high** — Fresh, index-relevant mega-cap tech catalyst that can drive XLK and SPX.
-- channel: **sector_fundamental**
-- geography: **us_domestic**
-- severity: **session**
-- horizon: **1d**
-- action_object: **sector_etf**
-- action_object_detail: **XLK, IGV, software basket**
-- polarity: **bullish**
-- polarity_why: Strong earnings beat lifts the software complex and supports tech leadership.
+- action_object_detail: XLE (bullish), XLY/XLI (bearish on cost), XLU (defensive bid)
+- polarity: **mixed**
+- polarity_why: Bullish for energy, bearish for consumer/industrial margins and broad risk appetite.
 - confidence: **0.7**
 
-**7. Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV**
-- keep: **conditional**
-- us_relevance: **medium** — Major trial readout for a large-cap biotech; can lift Healthcare sector.
+**4. Corn and wheat prices jump to highest in three years**
+- keep: **keep**
+- us_relevance: **medium** — Agricultural inflation feeds into consumer prices and Fed policy path.
+- channel: **sector_fundamental**
+- geography: **global_priced**
+- severity: **session**
+- horizon: **1d-1w**
+- action_object: **sector_etf**
+- action_object_detail: XLP (bearish margins), DBA (bullish)
+- polarity: **bearish**
+- polarity_why: Higher input costs pressure staples margins and add to inflation stickiness.
+- confidence: **0.6**
+
+**5. Salesforce earnings beat sparks software rally (ADBE +6%)**
+- keep: **keep**
+- us_relevance: **high** — Fresh mega-cap catalyst supporting the software complex and tech sentiment.
+- channel: **sector_fundamental**
+- geography: **us_domestic**
+- severity: **session**
+- horizon: **1d**
+- action_object: **sector_etf**
+- action_object_detail: IGV, XLK
+- polarity: **bullish**
+- polarity_why: Strong earnings and guidance lift the entire software basket.
+- confidence: **0.8**
+
+**6. Amgen Repatha cuts all-cause mortality 20% in Phase 3**
+- keep: **keep**
+- us_relevance: **high** — Major clinical win for a large-cap pharma with broad cardiovascular implications.
 - channel: **sector_fundamental**
 - geography: **us_domestic**
 - severity: **session**
 - horizon: **1d-1w**
 - action_object: **sector_etf**
-- action_object_detail: **XLV, Healthcare basket**
+- action_object_detail: XLV, IBB (biotech sympathy)
 - polarity: **bullish**
-- polarity_why: Positive Phase 3 mortality data is a major catalyst for Amgen and can lift peers.
-- confidence: **0.65**
+- polarity_why: Positive trial readout lifts the company and the broader pharma/biotech complex.
+- confidence: **0.7**
 
-**8. With the US and Canada locked in a trade war, fears of a recession lurk**
+**7. Fabrinet weakness + rising yields spark 6.5% ADI drop**
 - keep: **conditional**
-- us_relevance: **medium** — Trade-war recession fears are a macro risk-off overlay.
-- channel: **risk**
+- us_relevance: **high** — Negative read-through for the semiconductor supply chain on a hawkish-rate day.
+- channel: **sector_fundamental**
 - geography: **us_supply_chain**
 - severity: **session**
-- horizon: **1w**
-- action_object: **spx**
-- action_object_detail: **SPX beta, cyclicals**
+- horizon: **1d**
+- action_object: **sector_etf**
+- action_object_detail: SMH, XLK
 - polarity: **bearish**
-- polarity_why: Recession fears dampen risk appetite and hit cyclical sectors.
-- confidence: **0.55**
+- polarity_why: Supply-chain weakness compounds the multiple compression from rising yields.
+- confidence: **0.7**
+
+**8. Apollo $9B investment in ONEOK**
+- keep: **conditional**
+- us_relevance: **medium** — Large capital deployment signals institutional risk appetite for energy infrastructure.
+- channel: **sentiment**
+- geography: **us_domestic**
+- severity: **noise**
+- horizon: **1d**
+- action_object: **basket**
+- action_object_detail: Midstream energy basket (AMLP)
+- polarity: **bullish**
+- polarity_why: Large strategic investment validates the sector's cash-flow profile.
+- confidence: **0.6**
 
 ---
 
 ### STEP 2 — INTERACTIONS
 
-- **Fed path + rising yields + gold surge**: Treat as ONE rates cluster. Hawkish Fed repricing (hike odds up) is the dominant driver; the gold surge is a monetary-metals bid on rate-cut anticipation, which is a *separate* signal from the hawkish Fed path. Do not double-count. The gold move is likely a hedge against the hawkish shock, not a confirmation of easing.
-- **Warsh hawkish + Iran/Hormuz headline + corn/wheat spike**: This is a stagflation cluster. Hawkish Fed + supply-side shocks (oil, food) = stagflation risk, which is a strong negative for equities and a positive for energy/defensives. Treat as ONE risk-off cluster.
-- **Salesforce beat + Warsh hawkish**: This is a mega-cap-earnings-over-macro-drag test. If futures confirm (NQ ≥ +0.5%), the earnings beat can override the macro drag for XLK. If futures are flat/negative, the hawkish Fed signal dominates. Do not double-count the Salesforce beat as both a sector catalyst and a broad risk-on signal.
-- **Amgen Phase 3 + Healthcare sector**: Single-name biotech success with sector sympathy. This can lift XLV, but only if the broad tape is not risk-off. If the hawkish Fed signal dominates, XLV may still lag SPY.
+- **Fed path + gold surge**: The gold surge is the market's leading indicator that the Fed's hawkish rhetoric may not be fully credible. Treat as ONE rates cluster: hawkish Fed + rising gold = market pricing a policy error. This supports a defensive tilt (gold miners, staples) over rate-sensitive cyclicals.
+- **Hawkish Fed + Fabrinet/ADI weakness**: Rising yields + supply-chain weakness = double hit on semis. Do not buy the software rally (CRM/ADBE) as a broad tech signal; it is a single-name/software-specific move.
+- **Iran/Hormuz + corn/wheat spike**: Two supply shocks (oil + agriculture) = stagflationary impulse. This is a direct negative for consumer discretionary and a positive for energy and defensive staples, but the staples margin hit from grain costs partially offsets the defensive bid.
+- **Amgen Phase 3 + gold surge**: Both are defensive/sector-fundamental positives. Healthcare and gold miners can both benefit on a risk-off day, but they are separate trades, not one cluster.
 
 ---
 
 ### STEP 3 — RECLASSIFY AUDIT
 
-**Items marked usable that I DROP:**
-- None. The usable set is almost entirely Warsh/Fed headlines, which are all relevant and correctly tagged.
+**DROPPED_FROM_USABLE:**
+- None. The mechanical set is appropriately macro-focused.
 
-**Items marked noise/single_name that I RESCUE into keep/conditional:**
-- **Gold price surge (AU +8.5%, Barrick +8.2%)** — RESCUE to keep. This is a major sector-fundamental move in Basic Materials, not noise.
-- **Amgen Repatha Phase 3 mortality data** — RESCUE to conditional. This is a major late-stage trial readout for a large-cap biotech with sector sympathy, not pure single-name noise.
-- **Corn and wheat prices jump to highest in more than three years** — RESCUE to conditional. This is a fresh agricultural commodity shock feeding inflation/stagflation fears.
-- **With the US and Canada locked in a trade war, fears of a recession lurk** — RESCUE to conditional. This is a macro risk-off overlay, not noise.
+**RESCUED_FROM_NOISE:**
+- **Gold price surge (AU +8.5%, B +8.2%)** — Mechanical filter dropped as single-name noise; this is a rates/real-yield regime signal.
+- **Corn and wheat prices jump to highest in three years** — Mechanical filter dropped as commodity noise; this is a sector-fundamental inflation signal for staples.
+- **Iran says it will name terms for reopening Strait of Hormuz** — Mechanical filter dropped as geopolitical noise; this is a live risk-off catalyst for the broad tape.
 
 ---
 
 ### STEP 4 — B1 / SECTOR INJECT
 
 ```
-NEWS_JUDGE: n=8 rescued=4
-MACRO rates: [hawkish] Warsh signals rate hikes needed; Sep hike odds ~coin flip (regime/1w-1m)
-MACRO risk: [bearish] Iran to name Hormuz terms; oil supply risk live (session/1d)
-MACRO inflation: [bearish] Corn/wheat 3-yr highs; stagflation overlay (session/1d-1w)
-SECTOR Basic Materials: [bullish] Gold surge lifts AU +8.5%, Barrick +8.2% (XLB/GDX)
-SECTOR Technology: [bullish] Salesforce beat sparks software rally, ADBE +6% (XLK/IGV)
-SECTOR Healthcare: [bullish] Amgen Repatha cuts mortality 20% in Phase 3 (XLV)
-SECTOR Energy: [bullish] Hormuz risk + oil supply premium (XLE)
-INTERACTION: Warsh hawkish + Iran + corn/wheat = ONE stagflation risk-off cluster; Salesforce beat is the only fresh positive that can override if futures confirm.
-WATCH: If NQ futures fail to confirm ≥+0.5%, the Salesforce beat will not save XLK from the hawkish Fed drag.
+NEWS_JUDGE: n=8 rescued=3
+MACRO rates: [hawkish] Warsh signals hikes; Sep odds coin flip; gold surge signals policy-error risk (regime/1w-1m)
+MACRO risk: [bearish] Iran/Hormuz terms + corn/wheat spike = stagflationary supply shock (session/1d-1w)
+SECTOR technology: [mixed] CRM beat lifts software (IGV) but ADI/Fabrinet + hawkish Fed pressures semis (SMH) (session/1d)
+SECTOR healthcare: [bullish] Amgen Repatha mortality win lifts XLV/IBB sympathy (session/1d-1w)
+SECTOR materials: [bullish] Gold surge lifts miners (GDX/XLB) despite China drag (session/1d-1w)
+SECTOR energy: [bullish] Hormuz risk + Apollo/ONEOK $9B investment support XLE/midstream (session/1d-1w)
+INTERACTION: Hawkish Fed + gold surge = policy-error pricing; do not buy semis on software strength
+WATCH: Ranking thin on single-name side; monitor for fresh NFP/jobs-week headlines
 ```
 
 ---
@@ -163,26 +161,25 @@ WATCH: If NQ futures fail to confirm ≥+0.5%, the Salesforce beat will not save
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Fed Chair Warsh signals rate hikes needed; Sep hike odds ~coin flip | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta | pol=hawkish | conf=0.85
-- Treasury Yields Rise as Warsh Vows to Pull Down Inflation | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=basket:XLK/XLRE/XLU vs XLF | pol=bearish | conf=0.8
-- Gold price surge lifts AU +8.5%, Barrick +8.2% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLB/GDX | pol=bullish | conf=0.75
-- Iran says it will name terms for reopening Strait of Hormuz | keep=conditional | channel=risk | severity=session | horizon=1d | object=spx:SPX beta | pol=bearish | conf=0.6
-- Corn and wheat prices jump to highest in more than three years | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLB/XLP | pol=bearish | conf=0.6
-- Salesforce earnings beat sparks software rally lifting Adobe 6% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d | object=sector_etf:XLK/IGV | pol=bullish | conf=0.7
-- Amgen says Repatha cut all-cause mortality 20% in Phase 3 VESALIUS-CV | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV | pol=bullish | conf=0.65
-- US-Canada trade war recession fears lurk | keep=conditional | channel=risk | severity=session | horizon=1w | object=spx:SPX beta | pol=bearish | conf=0.55
-INTERACTIONS: Warsh hawkish + Iran/Hormuz + corn/wheat = ONE stagflation risk-off cluster; Salesforce beat is the only fresh positive that can override if futures confirm; Amgen Phase 3 can lift XLV only if broad tape not risk-off
-RESCUED_FROM_NOISE: Gold price surge (AU +8.5%, Barrick +8.2%); Amgen Repatha Phase 3 mortality data; Corn and wheat prices jump to highest in more than three years; US-Canada trade war recession fears
+- Fed Chair Warsh signals rate hikes; Sep odds coin flip | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta | pol=hawkish | conf=0.9
+- Gold surge on softer data/FOMC anticipation (AU +8.5%, B +8.2%) | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:GDX/XLB | pol=bullish | conf=0.8
+- Iran terms for reopening Strait of Hormuz; IRGC asserts control | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:XLE/XLY/XLU | pol=mixed | conf=0.7
+- Corn and wheat prices jump to highest in three years | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLP/DBA | pol=bearish | conf=0.6
+- Salesforce earnings beat sparks software rally (ADBE +6%) | keep=keep | channel=sector_fundamental | severity=session | horizon=1d | object=sector_etf:IGV/XLK | pol=bullish | conf=0.8
+- Amgen Repatha cuts all-cause mortality 20% in Phase 3 | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV/IBB | pol=bullish | conf=0.7
+- Fabrinet weakness + rising yields spark 6.5% ADI drop | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d | object=sector_etf:SMH/XLK | pol=bearish | conf=0.7
+- Apollo $9B investment in ONEOK | keep=conditional | channel=sentiment | severity=noise | horizon=1d | object=basket:Midstream (AMLP) | pol=bullish | conf=0.6
+INTERACTIONS: Fed path + gold surge = policy-error pricing, one rates cluster; Hawkish Fed + ADI/Fabrinet = double hit on semis, do not buy software as broad tech; Iran/Hormuz + corn/wheat = stagflationary supply shock, negative XLY, positive XLE/XLU; Amgen + gold = separate defensive bids
+RESCUED_FROM_NOISE: Gold price surge (AU +8.5%, B +8.2%); Corn and wheat prices jump to highest in three years; Iran says it will name terms for reopening Strait of Hormuz
 DROPPED_FROM_USABLE: none
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=4
-MACRO rates: [hawkish] Warsh signals rate hikes needed; Sep hike odds ~coin flip (regime/1w-1m)
-MACRO risk: [bearish] Iran to name Hormuz terms; oil supply risk live (session/1d)
-MACRO inflation: [bearish] Corn/wheat 3-yr highs; stagflation overlay (session/1d-1w)
-SECTOR Basic Materials: [bullish] Gold surge lifts AU +8.5%, Barrick +8.2% (XLB/GDX)
-SECTOR Technology: [bullish] Salesforce beat sparks software rally, ADBE +6% (XLK/IGV)
-SECTOR Healthcare: [bullish] Amgen Repatha cuts mortality 20% in Phase 3 (XLV)
-SECTOR Energy: [bullish] Hormuz risk + oil supply premium (XLE)
-INTERACTION: Warsh hawkish + Iran + corn/wheat = ONE stagflation risk-off cluster; Salesforce beat is the only fresh positive that can override if futures confirm.
-WATCH: If NQ futures fail to confirm ≥+0.5%, the Salesforce beat will not save XLK from the hawkish Fed drag.
+NEWS_JUDGE: n=8 rescued=3
+MACRO rates: [hawkish] Warsh signals hikes; Sep odds coin flip; gold surge signals policy-error risk (regime/1w-1m)
+MACRO risk: [bearish] Iran/Hormuz terms + corn/wheat spike = stagflationary supply shock (session/1d-1w)
+SECTOR technology: [mixed] CRM beat lifts software (IGV) but ADI/Fabrinet + hawkish Fed pressures semis (SMH) (session/1d)
+SECTOR healthcare: [bullish] Amgen Repatha mortality win lifts XLV/IBB sympathy (session/1d-1w)
+SECTOR materials: [bullish] Gold surge lifts miners (GDX/XLB) despite China drag (session/1d-1w)
+SECTOR energy: [bullish] Hormuz risk + Apollo/ONEOK $9B investment support XLE/midstream (session/1d-1w)
+INTERACTION: Hawkish Fed + gold surge = policy-error pricing; do not buy semis on software strength
+WATCH: Ranking thin on single-name side; monitor for fresh NFP/jobs-week headlines
 NEWS_PARSE_END

@@ -3,25 +3,22 @@
  "macros": [
   "hawkish",
   "bearish",
-  "bearish",
   "hawkish",
-  "bearish",
   "bearish"
  ],
  "sector_tilts": {
-  "Basic Materials": "bullish",
-  "Technology": "bullish",
+  "Technology": "mixed",
   "Healthcare": "bullish",
+  "Basic Materials": "bullish",
   "Energy": "bullish"
  },
  "tickers": {
-  "AU": 5.5,
-  "ADBE": 5.5,
-  "XLK": 4.0,
-  "XLV": 4.0,
-  "XLE": 8.0,
-  "XLU": -1.5
+  "ADI": -1.5,
+  "XLE": 4.0,
+  "AU": 1.5,
+  "ADBE": 1.5,
+  "AMLP": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Warsh signals rate hikes needed; Sep hike odds ~coin flip (regime/1w-1m)\nMACRO risk: [bearish] Iran to name Hormuz terms; oil supply risk live (session/1d)\nMACRO inflation: [bearish] Corn/wheat 3-yr highs; stagflation overlay (session/1d-1w)\nSECTOR Basic Materials: [bullish] Gold surge lifts AU +8.5%, Barrick +8.2% (XLB/GDX)\nSECTOR Technology: [bullish] Salesforce beat sparks software rally, ADBE +6% (XLK/IGV)\nSECTOR Healthcare: [bullish] Amgen Repatha cuts mortality 20% in Phase 3 (XLV)\nSECTOR Energy: [bullish] Hormuz risk + oil supply premium (XLE)\nINTERACTION: Warsh hawkish + Iran + corn/wheat = ONE stagflation risk-off cluster; Salesforce beat is the only fresh positive that can override if futures confirm.\nWATCH: If NQ futures fail to confirm \u2265+0.5%, the Salesforce beat will not save XLK from the hawkish Fed drag.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] Warsh signals hikes; Sep odds coin flip; gold surge signals policy-error risk (regime/1w-1m)\nMACRO risk: [bearish] Iran/Hormuz terms + corn/wheat spike = stagflationary supply shock (session/1d-1w)\nSECTOR technology: [mixed] CRM beat lifts software (IGV) but ADI/Fabrinet + hawkish Fed pressures semis (SMH) (session/1d)\nSECTOR healthcare: [bullish] Amgen Repatha mortality win lifts XLV/IBB sympathy (session/1d-1w)\nSECTOR materials: [bullish] Gold surge lifts miners (GDX/XLB) despite China drag (session/1d-1w)\nSECTOR energy: [bullish] Hormuz risk + Apollo/ONEOK $9B investment support XLE/midstream (session/1d-1w)\nINTERACTION: Hawkish Fed + gold surge = policy-error pricing; do not buy semis on software strength\nWATCH: Ranking thin on single-name side; monitor for fresh NFP/jobs-week headlines",
  "date": "2026-08-31"
 }

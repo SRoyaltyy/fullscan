@@ -1,13 +1,13 @@
 {
   "date": "2026-08-31",
-  "n_ok": 10,
+  "n_ok": 8,
   "n_total": 11,
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": true,
-      "reason": "",
-      "size": 7396
+      "ok": false,
+      "reason": "missing",
+      "size": 0
     },
     {
       "sector": "Communication Services",
@@ -19,55 +19,55 @@
       "sector": "Consumer Cyclical",
       "ok": true,
       "reason": "",
-      "size": 10268
+      "size": 10596
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 10424
+      "size": 14186
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 15739
+      "size": 13232
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 15101
+      "size": 14651
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 9856
+      "size": 9480
     },
     {
       "sector": "Industrials",
-      "ok": true,
-      "reason": "",
-      "size": 9249
+      "ok": false,
+      "reason": "missing",
+      "size": 0
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 9910
+      "size": 9408
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 8543
+      "size": 8239
     },
     {
       "sector": "Utilities",
       "ok": true,
       "reason": "",
-      "size": 14597
+      "size": 9044
     }
   ]
 }

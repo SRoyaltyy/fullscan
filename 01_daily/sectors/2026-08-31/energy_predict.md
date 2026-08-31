@@ -4,52 +4,38 @@
 - rubric: `00_grounding/sectors/energy.md`
 - predicted_direction: **up**
 - predicted_magnitude_band: **notable**
-- total_score: **9.0** (mult 1.0)
+- total_score: **10.175** (mult 1.1)
 - regime: sector_shock
 - divergence_flagged: **False**
 
 ## Channel 1 sector ETF tape
 
 ```
-ETF XLE vs SPY (yfinance, through 2026-08-27):
-  1d: XLE -0.22% | SPY +0.66% | rel -0.88%
-  3d: XLE -1.30% | SPY +1.00% | rel -2.30%
-  1w: XLE -2.29% | SPY +1.11% | rel -3.40%
-  1m: XLE +6.21% | SPY +5.71% | rel +0.50%
+ETF XLE vs SPY (yfinance, through 2026-08-31):
+  1d: XLE +1.88% | SPY -0.68% | rel +2.56%
+  3d: XLE +2.26% | SPY -0.01% | rel +2.26%
+  1w: XLE -0.28% | SPY +0.02% | rel -0.30%
+  1m: XLE +7.63% | SPY +3.26% | rel +4.37%
 ```
 
-I now have a clear picture. Let me synthesize.
+The live search confirms the oil surge is real and actively escalating. Let me verify the XLE tape and current positioning more precisely.
 
-**Key facts for today (2026-08-31):**
-- **Oil is UP sharply**: WTI +1.97% to $85.03, Brent +2.15% to $90.0 (Channel 1 futures tape). Live sources confirm WTI ~$85.11, Brent ~$88.83-90. This is a **crude oil price surge**.
-- **Catalyst is ACTIVE/ESCALATING**: US and Iran exchanged strikes for the first time in about a month; Tehran claims a tanker hit by mines in the Strait of Hormuz. Iran says it will name terms for reopening Hormuz. This is a **fresh geopolitical supply-shock escalation** — the 08-14 green-oil escalation lesson FIRES.
-- **Warsh hawkish**: Rate hike odds ~coin flip, dollar near two-week high, yields rising. This is a macro headwind for cyclicals but secondary vs oil for energy.
-- **XLE tape**: 1d rel −0.88%, 3d rel −2.30%, 1w rel −3.40%, 1m rel +0.50%. XLE has been a **relative laggard** on 1d/3d/1w after the Hormuz run unwound. 1m rel only +0.50% — NOT overbought/extended (RSI not >70). The 08-21 oil-up/XLE-down decoupling lesson does NOT fire because XLE is not overbought (1w rel −3.40%, not +5%).
+The Channel 1 sector ETF tape shows XLE 1d rel +2.56% (XLE +1.88% vs SPY −0.68%) — this is a **fresh, confirming tape**. This is critical: unlike 08-21 (where the 1d tape was only +0.46% and XLE was overbought), today XLE is already up +1.88% absolute with +2.56% relative on the day. The oil surge is transmitting.
 
-Let me apply the active lessons carefully:
+Let me confirm the key facts:
+- **Oil UP sharply**: WTI +1.97% ($85.03), Brent +2.15% ($90.0). Live sources confirm oil up >2-3% on US-Iran strikes. This is a **crude oil price surge**.
+- **Catalyst ACTIVE/ESCALATING**: US-Iran military strikes resumed, Hormuz supply fears reignited, Iran to name reopening terms. Fresh escalation — 08-14 green-oil escalation FIRES.
+- **XLE tape CONFIRMING**: 1d rel +2.56%, XLE +1.88% absolute. This is NOT the 08-21 overbought decoupling (XLE 1w rel −0.30%, not overbought). Oil-up IS transmitting.
+- **XLE RSI ~70** (neutral territory per clearank), price above 50-day average.
 
-**08-11 live-oil verify**: Channel 1 CL=F +4.02% / BZ=F −0.27% conflict. Live WTI futures tape shows +1.97% (85.03), Brent +2.15% (90.0). Live sources confirm WTI ~$85.11, Brent ~$88.83-90. So oil is UP today. The BZ=F −0.27% appears stale. Resolve to oil UP. **08-11 passes — oil sign is positive.**
+Let me check the macro overlay and whether there are offsets.
 
-**08-14 green-oil escalation**: Oil futures green AND geopolitical supply-risk catalyst actively escalating (US-Iran strikes, Hormuz mine claim, Iran to name reopening terms). This FIRES. The oil spine should be the dominant S1 driver.
-
-**08-21 oil-up/XLE-down decoupling**: This requires XLE overbought/extended (RSI >70, 1w rel >+5%). XLE 1w rel is −3.40% — NOT overbought. This lesson does NOT fire. XLE is a relative laggard, so oil-up should transmit positively.
-
-**08-27/08-28 oil-down stack lessons**: These fire only when oil is DOWN. Oil is UP today. Do not fire.
-
-**08-12/08-13 stale-run cap**: Requires 1w rel >+4% cushion. XLE 1w rel is −3.40%. Does not fire.
-
-So the setup is: **oil surging on fresh US-Iran escalation, XLE a relative laggard (not overbought), broad tape mixed/soft on Warsh hawkishness.**
-
-This is a **sector_shock** regime — the move is driven by sector-specific geopolitical supply, not broad beta. Per the 08-10 lesson, keep S0 muted and let S1 carry.
-
-Let me score.
-
-**S0_SHARED_MACRO:** Broad tape is mixed/soft: ES −0.17%, NQ +0.04%, VIX 15.22 (+0.71), Fear&Greed 58.2. Warsh hawkish (rate hike odds ~coin flip), dollar near two-week high (DXY +0.38% 1d), yields rising (10Y 4.67, 30Y 5.19). USD strengthening is a mild commodity headwind. But the dominant driver is the oil/Hormuz catalyst, not broad beta. Per sector_shock framing, keep S0 muted. **0** (mild USD headwind offset by the sector-specific nature of the move).
+**S0_SHARED_MACRO:** Broad tape is mixed/soft: ES −0.45% premarket, NQ −0.17%, VIX 15.15 (+0.64), Fear&Greed 58.2. Warsh hawkish (rate hike odds coin flip), dollar near two-week high (DXY +0.27% 1d), yields rising (10Y 4.67, 30Y 5.19). USD strengthening is a mild commodity headwind. But the dominant driver is the oil/Hormuz catalyst, not broad beta. Per sector_shock framing, keep S0 muted. **0** (mild USD headwind offset by sector-specific nature).
 
 **S1_SECTOR_FACTORS:**
-- **Crude oil price surge (WTI/Brent)**: WTI +1.97%, Brent +2.15%, live-verified — STRONGLY POSITIVE (dominant spine)
+- **Crude oil price surge (WTI/Brent)**: WTI +1.97%, Brent +2.15%, live-verified, oil up >3% intraday — STRONGLY POSITIVE (dominant spine)
 - **Geopolitical supply risk premium**: US-Iran strikes, Hormuz mine claim, Iran to name reopening terms — ACTIVELY ESCALATING, fresh — STRONGLY POSITIVE
-- **Inventory**: EIA week ending 8/21 was +0.1 Mb crude (barely a build), gasoline −2.5 Mb, distillate −2.23 Mb — products drew, mixed. Next print Sep 2. Neutral-to-slightly-positive.
+- **Inventory**: EIA week ending 8/21 was +0.1 Mb crude (barely a build), gasoline −2.5 Mb, distillate −2.23 Mb — products drew, mixed. Next print Sep 2. Neutral.
 - **OPEC+ adding barrels**: Aug +188 kb/d, Sep +188 kb/d — NEGATIVE offset (carried)
 - **Demand destruction**: IEA −1.6 mb/d 2026 — NEGATIVE offset (carried)
 - **Crack spreads**: still extreme (diesel crack elevated) — POSITIVE refiner offset
@@ -57,82 +43,93 @@ Let me score.
 
 Per the 08-14 refinement, do not cap S1 at +1.0 when the catalyst is actively escalating. The fresh US-Iran strikes + Hormuz mine claim is a fresh escalation, not stale. **S1 = +2.0**
 
-**S2_BREADTH:** XLE has been a relative laggard (1d rel −0.88%, 3d −2.30%, 1w −3.40%). But today oil is surging on fresh escalation. The breadth question is whether the oil-up transmits to XLE. Given XLE is NOT overbought (unlike 08-21), and the catalyst is fresh, oil-up should transmit. But the prior 1d/3d/1w relative underperformance suggests leadership has been stalling. I'll score **+1.0** — the fresh oil surge should lift the complex, but the recent laggard status tempers it.
+**S2_BREADTH:** XLE 1d rel +2.56% — the tape is confirming fresh leadership TODAY. Unlike 08-21 (where 1d rel was only +0.46% and XLE was overbought), today XLE is up +1.88% absolute with +2.56% relative. The oil surge is transmitting. XLE is NOT overbought (1w rel −0.30%). Breadth should expand on the oil surge. **+1.0**
 
-**S3_FLOWS_POSITIONING:** Energy ETFs have seen sustained outflows (~$4B over ~65 days). XLE AUM ~$39B. YTD ~+40% is a crowded long that has been unwinding. But a fresh supply shock can draw renewed inflows. **+0.5** — the fresh catalyst can reverse flows, but the recent outflow streak is a caution.
+**S3_FLOWS_POSITIONING:** Energy ETFs have seen sustained outflows (~$4B over ~65 days). But a fresh supply shock can draw renewed inflows. The Apollo $9B ONEOK investment signals institutional risk appetite into energy infrastructure. **+0.5** — fresh catalyst can reverse flows, but the recent outflow streak is a caution.
 
-**S4_ETF_TAPE:** Confirmation only. 1d rel −0.88% (negative — the prior session was a laggard). The current-day tape is not yet confirming fresh leadership at the open. Per the 08-12 stale-catalyst lesson, I should not require the prior 1d tape to have already confirmed leadership when the premarket oil move plus active headlines can be the confirming signal. But S4 is confirmation only — the 1d rel is negative. **+0.5** (the premarket oil move is the confirming signal, not the prior tape).
+**S4_ETF_TAPE:** Confirmation only. 1d rel +2.56% — **decisively positive and confirming**. This is the key difference from 08-21. The current-day tape IS confirming fresh leadership. **+1.0**
 
-**Divergence:** S1 (sector factors, strongly positive on escalating supply shock) vs S4 (1d rel −0.88%, negative). There IS a divergence — the leading factors are strongly positive while the 1d tape is negative. But per the 08-14 refinement, the premarket oil move plus active headlines can be the confirming signal even when the prior 1d tape hasn't confirmed. I'll flag this as a mild divergence but trust the factors (oil surge + fresh escalation) over the stale 1d tape.
+**Divergence:** S1 (sector factors, strongly positive on escalating supply shock) ALIGNS with the 1d tape (+2.56% rel). No divergence — factors and tape agree. **No divergence flagged.**
 
 **Regime:** sector_shock. The move is driven by sector-specific geopolitical supply, not broad beta. **sector_shock**
 
-**Multiplier:** Given the fresh escalating supply shock and confirming premarket oil move, but also the recent relative laggard status and the hawkish Warsh macro overlay (which pressures cyclicals), I'll set multiplier at **1.0**. The escalation is fresh and oil is surging, but the broad tape is soft on Warsh and XLE has been lagging.
+**Multiplier:** Given the escalating supply shock AND confirming tape (1d rel +2.56%), and XLE NOT overbought (unlike 08-21), I'll set multiplier at **1.1**. The escalation is fresh, the tape confirms, and there's no overbought decoupling risk.
 
-**Direction:** Up. Oil surging on fresh US-Iran escalation, XLE not overbought, sector_shock regime.
+**Direction:** Up. Oil surging on fresh US-Iran escalation, XLE confirming leadership, not overbought.
 
-**Magnitude:** The oil surge is strong (WTI +1.97%, Brent +2.15%) and the catalyst is fresh escalation. But XLE has been a relative laggard, the broad tape is soft on Warsh hawkishness, and Energy mag hit-rate is 0.3. I'll cap at **notable** — not severe, given the laggard status and macro headwind. Multiplier 1.0.
+**Magnitude:** The tape is confirming (+2.56% rel, +1.88% abs). Oil up >2-3%. This is a fresh escalation with transmission. **notable** is justified. Not severe — the broad tape is soft (ES −0.45%), Warsh hawkish, USD firming, and there are carried demand-destruction/OPEC+ offsets.
 
-Let me compute: S0(0) + S1(+2) + S2(+1) + S3(+0.5) + S4(+0.5) = +4.0 × 1.0 = **+4.0 → up/notable** (borderline, but the strong S1 on fresh escalation supports notable).
+Let me finalize the scores.
 
-Actually, let me reconsider magnitude. The 08-14 lesson showed that active escalation with green oil can produce notable (XLE +1.39% abs, +1.59% rel). Today oil is up ~2% on fresh US-Iran strikes — comparable to 08-14. But XLE is a relative laggard (1w rel −3.40%) vs 08-14 where it was running. The laggard status means the oil-up should transmit but the magnitude may be more muted. I'll keep **notable** but with moderate confidence.
+**S0_SHARED_MACRO: 0** (sector_shock framing; mild USD headwind offset by sector-specific nature)
+**S1_SECTOR_FACTORS: +2** (crude surge + active escalation, dominant spine)
+**S2_BREADTH: +1** (tape confirming fresh leadership, not overbought)
+**S3_FLOWS_POSITIONING: +0.5** (fresh catalyst can reverse outflows; Apollo ONEOK investment)
+**S4_ETF_TAPE: +1** (1d rel +2.56% confirming)
+**MULTIPLIER: 1.1**
+**CONFIDENCE: 0.62**
+**REGIME: sector_shock**
 
-Confidence: **0.55** (Energy mag hit-rate 0.3; keep direction, shrink confidence per the Energy experiment).
+Total = (0 + 2 + 1 + 0.5 + 1) × 1.1 = 4.5 × 1.1 = 4.95 → up/notable
+
+Wait, let me reconsider the magnitude. The 08-21 lesson warns about overbought decoupling, but that doesn't apply here (XLE not overbought, tape confirming). The 08-12 stale-catalyst lesson doesn't apply (fresh escalation). The 08-14 refinement says active escalation + green oil = dominant S1, and the tape confirms.
+
+However, I should be careful about magnitude. The broad tape is soft (ES −0.45%), Warsh hawkish, USD firming. The 08-10 sector_shock lesson says keep S0 muted and let S1 carry. The tape is confirming at +2.56% rel. This supports notable.
+
+Let me also consider: the 08-28 lesson says "default flat/mild unless WTI/CL ≥~1% down AND XOM/COP confirming." That's for oil-DOWN stacks. Today oil is UP, so that lesson doesn't apply.
+
+Given the fresh escalation + confirming tape + not overbought, up/notable is well-supported. Confidence 0.62.
 
 Let me finalize.
 
 ---
 
-MEMORY_CONFIRM: Sector Energy (XLE) — last-10 graded dir=0.5 mag=0.3 (n=10); last-30 dir=0.5 mag=0.333 (n=12). Last graded 08-28 down/mild vs XLE +0.626% (dir MISS, mag HIT). Applied: 08-11 live-oil verify — Channel 1 CL=F +4.02% / BZ=F −0.27% conflict; live WTI futures tape shows **+1.97%** (85.03) and Brent **+2.15%** (90.0), live sources confirm WTI ~$85.11 / Brent ~$88.83–90, so oil is UP today (BZ=F −0.27% stale). 08-14 green-oil escalation **fires** (oil green + US-Iran strikes + Hormuz mine claim + Iran to name reopening terms). 08-12/08-13 stale-run cap does **not** fire (1w rel −3.40%, not >+4% cushion). 08-21 oil-up/XLE-down decoupling does **not** fire (XLE 1w rel −3.40%, not overbought/RSI>70). 08-27/08-28 oil-down stack lessons do **not** fire (oil is UP). Open Energy experiment: keep direction, shrink confidence after mag misses. Memory index unavailable; used injected sector scoreboard/lessons only.
+MEMORY_CONFIRM: Sector Energy (XLE) — n=10 graded last-10 dir=0.5 mag=0.3; last graded 08-28 down/mild vs XLE +0.626% (dir MISS, mag HIT). 08-31 up/notable is the current run (ungraded). Applied: 08-11 live-oil verify — Channel 1 CL=F +2.58% / BZ=F −1.3% conflict; live futures tape WTI +1.97% ($85.03), Brent +2.15% ($90.0); live sources confirm oil up >2-3% on US-Iran strikes. Resolve to **oil UP**. 08-14 green-oil escalation **FIRES** (oil green + actively escalating US-Iran strikes/Hormuz). 08-21 oil-up/XLE-down decoupling does **NOT** fire (XLE 1w rel −0.30%, NOT overbought). 08-27/08-28 oil-down stack lessons do **NOT** fire (oil is UP). 08-12/08-13 stale-run cap does **NOT** fire (1w rel −0.30%, not >+4% cushion). 08-10 sector_shock framing applies (keep S0 muted, let S1 carry). Open Energy experiment: keep direction, shrink confidence after mag misses — but this is a fresh escalation with confirming tape, not a leftover stack.
 
 ## Energy / XLE — 2026-08-31
 
-This is a **fresh geopolitical supply-shock escalation** session. Oil is surging (WTI +1.97%, Brent +2.15%) on US-Iran strikes — the first exchange in about a month — plus a Hormuz mine claim and Iran saying it will name terms for reopening the Strait. This is NOT a stale catalyst and NOT an oil-down stack. The 08-14 green-oil escalation playbook applies.
+This is a **fresh geopolitical supply-shock escalation** session. Oil is surging on US-Iran military strikes resuming and Hormuz supply fears reigniting. Critically, unlike 08-21 (where XLE was overbought and the tape did not confirm), today XLE is **already up +1.88% absolute / +2.56% relative** — the oil surge IS transmitting. This is the 08-14 active-escalation playbook, not the 08-21 decoupling.
 
 ### Channel 2
 
-**1. Shared macro as it hits energy.** Broad tape is **mixed/soft**: ES −0.17%, NQ +0.04%, VIX 15.22 (+0.71), Fear & Greed 58.2. **Warsh is hawkish** — September hike odds ~coin flip, dollar near two-week high (DXY +0.38% 1d), yields rising (10Y 4.67, 30Y 5.19). USD strengthening is a mild commodity headwind. But the dominant driver is the **oil/Hormuz catalyst**, not broad beta. Per sector_shock framing, keep S0 muted. **S0 = 0.**
+**1. Shared macro as it hits energy.** Broad tape is mixed/soft: ES −0.45% premarket, NQ −0.17%, VIX 15.15 (+0.64), Fear&Greed 58.2. **Warsh hawkish** (rate hike odds ~coin flip), dollar near two-week high (DXY +0.27% 1d), yields rising (10Y 4.67, 30Y 5.19). USD strengthening is a mild commodity headwind. But the dominant driver is the **oil/Hormuz catalyst**, not broad beta. Per sector_shock framing, keep S0 muted. **S0 = 0.**
 
-**2. Spine (S1).** Count the oil shock **once**. Live-verified.
-- **Crude oil price surge (live-verified):** WTI +1.97% to $85.03, Brent +2.15% to $90.0 (Channel 1 futures). Live sources confirm WTI ~$85.11, Brent ~$88.83–90. Same sign — 08-11 passes. **This is the load-bearing factor.**
-- **Geopolitical supply risk premium — ACTIVELY ESCALATING:** US and Iran exchanged strikes for the first time in ~a month; Tehran claims a tanker hit by mines in the Strait of Hormuz; Iran says it will name terms for reopening Hormuz. This is **fresh escalation**, not stale. Per the 08-14 refinement, do not cap S1 at +1.0 when the catalyst is actively escalating.
-- **Inventory (carried, mixed):** EIA week ending 8/21 crude +0.1 Mb (barely a build), gasoline −2.5 Mb, distillate −2.23 Mb — products drew. Next print Sep 2. Neutral-to-slightly-positive.
+**2. Spine (S1).** Count the oil shock **once**.
+- **Crude oil price surge (live-verified):** WTI +1.97% ($85.03), Brent +2.15% ($90.0); live sources confirm oil up >2-3% intraday on US-Iran strikes. This is the load-bearing spine. **STRONGLY POSITIVE.**
+- **Geopolitical supply risk premium (ACTIVE/ESCALATING):** US-Iran military strikes resumed (first in ~a month), Tehran claims tanker hit by mines in Hormuz, Iran to name terms for reopening strait. **Fresh escalation** — not stale. Per 08-14, do not cap S1 at +1.0.
+- **Inventory (carried):** EIA week ending 8/21 crude +0.1 Mb (barely a build), gasoline −2.5 Mb, distillate −2.23 Mb — products drew. Next print Sep 2. Neutral.
 - **OPEC+ adding barrels (carried):** Aug +188 kb/d, Sep +188 kb/d — NEGATIVE offset.
 - **Demand destruction (carried):** IEA −1.6 mb/d 2026 — NEGATIVE offset.
 - **Crack spreads still extreme** (diesel crack elevated) — POSITIVE refiner offset.
-- **Nat gas ~$2.85 (−1.49%)** — no surge; N/A for oil-weighted XLE.
+- **Nat gas ~$2.85, down −1.49%** — no surge; N/A for oil-weighted XLE.
 
-Net S1 = **+2.0**. The fresh escalation dominates. Not +3: OPEC+ add and IEA demand cut are real offsets; cracks cushion refiners.
+Net S1 = **+2.0**. Not +3: OPEC+ add + IEA demand destruction are real carried offsets; cracks cushion refiners. But the fresh escalation dominates.
 
-**3. Breadth.** XLE has been a **relative laggard** (1d rel −0.88%, 3d −2.30%, 1w −3.40%) after the Hormuz run unwound. But XLE is **NOT overbought** (1w rel −3.40%, not +5%; RSI not >70), so the 08-21 oil-up/XLE-down decoupling does NOT apply. The fresh oil surge should transmit to the laggard complex. **S2 = +1.0.**
+**3. Breadth.** XLE 1d rel **+2.56%** — the tape is confirming fresh leadership TODAY. XLE is **NOT overbought** (1w rel −0.30%, RSI ~70 neutral). This is the key difference from 08-21. Oil-up is transmitting to the equity complex. **S2 = +1.**
 
-**4. Flows / positioning.** Energy ETFs have seen sustained outflows (~$4B over ~65 days). XLE AUM ~$39B. YTD ~+40% is a crowded long that has been unwinding. A fresh supply shock can draw renewed inflows, but the recent outflow streak is a caution. **S3 = +0.5.**
+**4. Flows / positioning.** Energy ETFs have seen sustained outflows (~$4B over ~65 days), but a fresh supply shock can draw renewed inflows. **Apollo $9B ONEOK investment** signals institutional risk appetite into energy infrastructure. Crowded long has been unwinding; fresh catalyst can reverse. **S3 = +0.5.**
 
-**5. Catalysts.** No fresh XLE-wide earnings. **US-Iran strikes + Hormuz mine claim + Iran reopening terms** is the dominant fresh catalyst — oil-up at the open. **Warsh hawkishness** is a macro overlay (pressures cyclicals) but secondary vs oil. EIA next print Sep 2.
+**5. Catalysts.** No fresh XLE-wide earnings. **US-Iran strikes + Hormuz reopening terms** are the dominant fresh catalyst. Warsh Jackson Hole is a two-sided macro binary (hawkish = USD/yields headwind, but secondary vs oil). **S4 = +1** (1d rel +2.56% confirming).
 
 ### Scoring logic
 
-S0 = **0**: mixed/soft tape, hawkish Warsh, USD up — but the move is sector-specific (sector_shock), not broad beta. Not −1 (no panic liquidation; VIX ~15.2). Not +1 (would fight the hawkish macro overlay).
+S0 = **0**: sector_shock framing; mild USD headwind offset by sector-specific nature. Not −1 (no broad liquidation; VIX ~15). Not +1 (would fight the soft broad tape).
 
-S1 = **+2.0**: live-verified oil surge + actively escalating geopolitical supply shock, minus damped OPEC+ add / IEA demand cut and a crack offset. 08-14 refinement applied — do not cap at +1.0 on fresh escalation.
+S1 = **+2**: crude surge + active escalation, dominant spine. 08-14 refinement applied (do not cap at +1.0 on active escalation).
 
-S2 = **+1.0**: XLE is a relative laggard (not overbought), so the fresh oil surge should transmit. Not +2 (recent breadth has been stalling).
+S2 = **+1**: tape confirming fresh leadership (+2.56% rel), not overbought.
 
-S3 = **+0.5**: fresh catalyst can reverse outflows, but the recent streak is a caution.
+S3 = **+0.5**: fresh catalyst can reverse outflows; Apollo ONEOK investment.
 
-S4 = **+0.5**: confirmation only. 1d rel −0.88% is negative (prior laggard), but the premarket oil move (+2%) plus active headlines is the confirming signal per the 08-14 refinement.
+S4 = **+1**: 1d rel +2.56% — decisive confirmation, not a sub-0.5% bounce.
 
-**Divergence:** S1 (strongly positive on fresh escalation) vs S4 (1d rel negative). This is a **leading-vs-tape divergence** — the factors point up while the 1d tape is still red. Per the 08-14 refinement, the premarket oil move plus active headlines can be the confirming signal even when the prior 1d tape hasn't confirmed. **Trust factors over tape.**
+**No leading-vs-tape divergence** — factors and tape agree higher. Trust factors.
 
-**Regime:** sector_shock. The move is driven by sector-specific geopolitical supply, not broad beta. **sector_shock**
+Magnitude: **notable**. Fresh escalation + confirming tape (+2.56% rel, +1.88% abs) + not overbought. Not severe — broad tape soft (ES −0.45%), Warsh hawkish, USD firming, carried OPEC+/demand offsets. Multiplier **1.1**. Confidence **0.62** (fresh escalation with confirming tape; Energy mag hit-rate 0.3 but this is a high-conviction setup).
 
-**Multiplier:** Fresh escalating supply shock + confirming premarket oil move, but XLE is a relative laggard and the broad tape is soft on Warsh hawkishness. **1.0.**
+Regime **sector_shock**: move driven by sector-specific geopolitical supply, not broad beta.
 
-**Direction:** Up. Oil surging on fresh US-Iran escalation, XLE not overbought, sector_shock regime.
-
-**Magnitude:** Oil surge is strong (WTI +2%, Brent +2.15%) and the catalyst is fresh escalation. But XLE is a relative laggard, the broad tape is soft on Warsh, and Energy mag hit-rate is 0.3. Cap at **notable**, not severe. Multiplier 1.0.
-
-Self-audit: lens = XLE/oil, not SPX; no same-shock triple-count; refiners not allowed to drive the ETF; no single-ticker call; the 08-21 decoupling does not fire (XLE not overbought); the 08-27/08-28 oil-down stack lessons do not fire (oil is up).
+Self-audit: lens = XLE/oil, not SPX; no same-shock triple-count; refiners not allowed to drive the ETF; no single-ticker call; 08-21 decoupling correctly not fired (not overbought); 08-27/08-28 oil-down stack correctly not fired (oil up).
 
 ---
 
@@ -141,32 +138,33 @@ S0_SHARED_MACRO: 0
 S1_SECTOR_FACTORS: 2
 S2_BREADTH: 1
 S3_FLOWS_POSITIONING: 0.5
-S4_ETF_TAPE: 0.5
-MULTIPLIER: 1.0
-CONFIDENCE: 0.55
+S4_ETF_TAPE: 1
+MULTIPLIER: 1.1
+CONFIDENCE: 0.62
 REGIME: sector_shock
-HORIZON_3D: up:notable:0.55
-HORIZON_1W: up:mild:0.50
+HORIZON_3D: up:notable:0.60
+HORIZON_1W: up:mild:0.52
 HORIZON_2W: flat:mild:0.45
-HORIZON_1M: up:mild:0.48
+HORIZON_1M: up:mild:0.50
 SECTOR_SCORES_END
 
 HIT_GRID_BEGIN
-Crude oil price surge (WTI/Brent)|HIT|0.85|2026-08-31|https://www.bloomberg.com/news/articles/2026-08-30/latest-oil-market-news-and-analysis-for-aug-31
-Geopolitical supply risk premium|HIT|0.80|2026-08-31|https://news.google.com/rss/articles/CBMiugFBVV95cUxPaWZwQ0VlYmtZN0VZd1NOek0zdWo1bzA2eVZqbG42N05ZOGFpS0xNR0lEdno0MkkxbTN0WUFaSlJjTDBJaFNFWmxHcVdseTBpWl9jMTNrUXhLY1VNeDdZOGZSck5OZE5KSnZ6S2huZkcyTGVQVDNLZUJ2ZDR1Rmd3WTBWQmJ1blZYMEVKNEd2ZGxpT3dYWDdqYS12TXZ4R0U4RmRoM3ZIUlM5U2kxS1d3VkVfd2pESG1VQkE
-Risk-off tape / flight to safety|PARTIAL|0.55|2026-08-31|channel1 ES -0.17% / VIX 15.22 (+0.71)
-USD strengthening|PARTIAL|0.55|2026-08-31|channel1 DXY +0.38% 1d
-Real yields rising|PARTIAL|0.50|2026-08-27|channel1 DFII10 2.34, 1d +0.0
-Inventory draw (EIA crude/products)|PARTIAL|0.50|2026-08-26|https://www.eia.gov/petroleum/supply/weekly/
-OPEC+ production increase / quota break|HIT|0.60|2026-08-31|carried Aug +188 kb/d / Sep +188 kb/d
-Demand destruction (recession/China weak)|HIT|0.60|2026-08-12|https://www.iea.org/reports/oil-market-report-august-2026
-Crack spread / refining margin expansion|HIT|0.55|2026-08-31|diesel crack elevated
-Sector rotation out of energy|PARTIAL|0.50|2026-08-31|~$4B outflows over ~65 days
+Crude oil price surge (WTI/Brent)|HIT|0.90|2026-08-31|https://www.reuters.com/markets/commodities/oil-rises-over-2-us-iran-resume-military-attacks-2026-08-30/
+Geopolitical supply risk premium|HIT|0.85|2026-08-31|https://www.energynow.com/oil-jumps-more-than-3-us-iran-military-strikes-reignite-hormuz-supply-fears/
+Sector breadth expansion (% names up)|HIT|0.70|2026-08-31|channel1 XLE 1d rel +2.56%
+Sector ETF inflow / relative volume spike|PARTIAL|0.55|2026-08-31|channel1 XLE +1.88% abs / +2.56% rel
+Crack spread / refining margin expansion|HIT|0.60|2026-08-31|channel1 diesel crack elevated
+OPEC+ production increase / quota break|HIT|0.60|2026-08-31|carried Aug/Sep +188 kb/d
+Demand destruction (recession/China weak)|HIT|0.55|2026-08-31|carried IEA -1.6 mb/d 2026
+USD strengthening|HIT|0.55|2026-08-31|channel1 DXY +0.27% 1d
+Risk-off tape / flight to safety|MISS|0.60|2026-08-31|channel1 ES -0.45% / VIX 15.15
+Natural gas price surge|MISS|0.70|2026-08-31|channel1 NG -1.49%
+Inventory draw (EIA crude/products)|MISS|0.60|2026-08-31|channel1 EIA crude +0.1 Mb
 HIT_GRID_END
 
 ---
 ## Pipeline-computed decision (deterministic)
 
 ```json
-{'components': {'S0_SHARED_MACRO': 0.0, 'S1_SECTOR_FACTORS': 2.0, 'S2_BREADTH': 1.0, 'S3_FLOWS_POSITIONING': 0.5, 'S4_ETF_TAPE': 0.5}, 'multiplier': 1.0, 'leading_sum': 8.0, 'divergence_flagged': False, 'total_score': 9.0, 'predicted_direction': 'up', 'predicted_magnitude_band': 'notable', 'confidence_score': 0.55, 'regime': 'sector_shock'}
+{'components': {'S0_SHARED_MACRO': 0.0, 'S1_SECTOR_FACTORS': 2.0, 'S2_BREADTH': 1.0, 'S3_FLOWS_POSITIONING': 0.5, 'S4_ETF_TAPE': 1.0}, 'multiplier': 1.1, 'leading_sum': 8.0, 'divergence_flagged': False, 'total_score': 10.175, 'predicted_direction': 'up', 'predicted_magnitude_band': 'notable', 'confidence_score': 0.62, 'regime': 'sector_shock'}
 ```
