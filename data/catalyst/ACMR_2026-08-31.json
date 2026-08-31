@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "Now I have comprehensive information. Let me compile the distinct events, being careful not to duplicate the Finviz event (Q2 2026 earnings beat, EPS $0.61, revenue $292.9M, raised 2026 outlook, panel-level horizontal tool orders).\n\nHere are the distinct NEW events I can extract:\n\n1. **Q4 2025 earnings miss** (Feb 26, 2026) - Stock tumbled on Q4 earnings miss, revenue rose but margins compressed sharply, stock dropped 17%\n2. **Q1 2026 earnings beat** (May 7, 2026) - Revenue surged 34%, margin pr",
+  "ticker": "ACMR",
+  "generated_at": "2026-08-31",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

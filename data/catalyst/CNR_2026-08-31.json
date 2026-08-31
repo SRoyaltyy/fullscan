@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "I now have a comprehensive set of events. Let me also search for the 21-year veteran commercial role appointment and the Q2 2026 earnings details more specifically.\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Core Natural Resources 21-year veteran commercial role 2026</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Core Natural Resources CNR stellar Q2 stock remains c",
+  "ticker": "CNR",
+  "generated_at": "2026-08-31",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

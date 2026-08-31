@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "I now have comprehensive information. Let me compile the final list of distinct events, excluding the Finviz-confirmed securities lawsuit event (2026-08-31) and its related weak Q2 results.\n\nThe Finviz event covers: securities lawsuit (2026-08-31) + weak Q2 with adjusted EBITDA $24m, EPS -$0.74, Centurion ramp reiteration. So I should NOT duplicate the securities class action lawsuit events or the Q2 weak results.\n\nLet me compile the distinct new events:\n\n1. **Q2 2025 earnings** (Jul 31, 2025) -",
+  "ticker": "BTU",
+  "generated_at": "2026-08-31",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

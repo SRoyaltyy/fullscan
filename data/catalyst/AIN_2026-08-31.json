@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "I have enough information to compile the events. Let me now compile the final JSON output with the distinct new events I've found.\n\nThe Finviz event already covers: CAMX 2026 showcase, Pratt & Whitney Geared Turbofan contract, Q2 2026 non-GAAP EPS $0.82 beat. I need to avoid duplicating those.\n\nHere are the distinct new events:\n\n1. **Q2 2026 earnings report** (Aug 4, 2026) - revenue $329.5M up 6%, net income $17.4M, diluted EPS $0.61 up 97%, adjusted EBITDA $57.8M up 11%, adjusted EPS $0.82 up 4",
+  "ticker": "AIN",
+  "generated_at": "2026-08-31",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

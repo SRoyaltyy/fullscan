@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "Now let me get the reason for the August 18 slump from the Fool article.\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">\"Kulicke\" \"Soffa\" \"slumped\" \"nearly 10%\" reason CEO Raj Talluri August 18 2026</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n</\uff5c\uff5cDSML\uff5c\uff5ctool_calls>",
+  "ticker": "KLIC",
+  "generated_at": "2026-08-31",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

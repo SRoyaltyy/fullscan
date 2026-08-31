@@ -1,0 +1,167 @@
+{
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T06:25:08.195841-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE Textile Manufacturing"
+    },
+    {
+      "ticker": "CNR",
+      "role": "override_captain",
+      "why": "OVERRIDE Thermal Coal"
+    },
+    {
+      "ticker": "BTU",
+      "role": "override_captain",
+      "why": "OVERRIDE Thermal Coal"
+    },
+    {
+      "ticker": "LRCX",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials"
+    },
+    {
+      "ticker": "AMAT",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials"
+    },
+    {
+      "ticker": "ACMR",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials"
+    },
+    {
+      "ticker": "KLIC",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE Textile Manufacturing",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "CNR",
+      "role": "override_captain",
+      "why": "OVERRIDE Thermal Coal",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "BTU",
+      "role": "override_captain",
+      "why": "OVERRIDE Thermal Coal",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "LRCX",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AMAT",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "ACMR",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "KLIC",
+      "role": "override_captain",
+      "why": "OVERRIDE Semiconductor Equipment & Materials",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    }
+  ]
+}

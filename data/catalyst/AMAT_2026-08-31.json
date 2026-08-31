@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "Now I have comprehensive data. Let me compile all the distinct events. I need to be careful not to duplicate the Finviz event (Aug 31, 2026 stock underperformance). Let me compile the events:\n\n1. **Q4 2025 earnings** (Nov 13, 2025) - Record annual revenue and EPS, stock fell after-hours despite beat\n2. **Q1 2026 earnings** (Feb 12, 2026) - Beat EPS forecast, stock slipped\n3. **Q2 2026 earnings** (May 14, 2026) - Record revenue, 50% gross margin, beat on AI demand\n4. **Q3 2026 earnings** (Aug 13,",
+  "ticker": "AMAT",
+  "generated_at": "2026-08-31",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,9 @@
+# Grok text review — 2026-08-31
+
+ok=False
+
+Core artifacts (general predict, events, news judge, news parse, finviz digest, map-heat tables) are present, same-day, and complete. The map_heat_research.md is missing, but the baseline file exists and is a post-close nested map, so this is acceptable. However, only 9 of 11 sector predicts are present; communication_services and consumer_cyclical are missing. This falls below the required minimum of 8 quality-ok sectors, so the day fails. The 9 present sector essays are substantive and take clear directional stances.
+
+## Fails
+- `01_daily/sectors/2026-08-31/communication_services_predict.md`: Missing required sector predict file.
+- `01_daily/sectors/2026-08-31/consumer_cyclical_predict.md`: Missing required sector predict file.
