@@ -22,12 +22,12 @@ on:
         description: "Last session YYYY-MM-DD (empty = latest tape)"
         required: false
         default: ""
-      min_change:
-        description: "Minimum session Change% (default 5 = every gainer ≥5%)"
+      floors:
+        description: "Change% floors to walk, comma-separated (default 2,5)"
         required: false
-        default: "5"
+        default: "2,5"
       liquid:
-        description: "Only mcap ≥ $500M and adv ≥ 500k (skip penny spikes)"
+        description: "Only mcap ≥ $100M and adv ≥ 500k (skip penny spikes)"
         required: false
         default: true
         type: boolean
@@ -66,13 +66,13 @@ jobs:
         env:
           FROM_DATE: ${{ inputs.from_date }}
           TO_DATE: ${{ inputs.to_date }}
-          MIN_CHANGE: ${{ inputs.min_change }}
+          FLOORS: ${{ inputs.floors }}
           LIQUID: ${{ inputs.liquid }}
         run: |
           set -euo pipefail
           FROM_DATE="${FROM_DATE:-2026-08-13}"
-          MIN_CHANGE="${MIN_CHANGE:-5}"
-          ARGS=(--from "$FROM_DATE" --min-change "$MIN_CHANGE" --all --write)
+          FLOORS="${FLOORS:-2,5}"
+          ARGS=(--from "$FROM_DATE" --floors "$FLOORS" --all --buys --write --min-mcap 100)
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to "$TO_DATE")
           if [ "${LIQUID}" = "false" ]; then
             ARGS+=(--no-liquid)
@@ -106,11 +106,11 @@ jobs:
           {
             echo "## Top Gainer As-Of"
             echo
-            echo "Every realized gainer ≥ ${{ inputs.min_change }}% since ${{ inputs.from_date }} (as-of 09:30 ET boxes)."
+            echo "Gainers at floors ${{ inputs.floors }} plus today's 1d BUY, since ${{ inputs.from_date }} (as-of 09:30 ET boxes, mcap ≥ \$100M)."
             echo
             echo "Download the **top-gainer-asof** artifact for the full per-name table."
             echo
             if [ -f 03_scoreboard/TOP_GAINER_ASOF.md ]; then
-              awk '/^## Hit rate/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF.md
+              awk '/^## What the boxes/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF.md
             fi
           } >> "$GITHUB_STEP_SUMMARY"

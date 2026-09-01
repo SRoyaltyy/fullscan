@@ -1149,7 +1149,13 @@ def main() -> None:
         try:
             from . import gainer_asof
             gmd, gjs = gainer_asof.write_scoreboard(
-                gainer_asof.walk(from_date=book_era.DASHBOARD_START, force=True)
+                gainer_asof.walk(
+                    from_date=book_era.DASHBOARD_START,
+                    top_n=0,
+                    floors=[2.0, 5.0],
+                    include_buys=True,
+                    force=True,
+                )
             )
             print(f"[stock-book-diag] wrote {gmd}")
             print(f"[stock-book-diag] wrote {gjs}")
