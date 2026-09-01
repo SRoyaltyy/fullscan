@@ -17,6 +17,10 @@ Writes:
   03_scoreboard/top_gainer_asof.json
 
 CLI: python -m src.gainer_asof --floors 2,5 --all --buys --sells --losers --write
+
+Alternate leak-test (Action method=lag-3d):
+  --snapshots 1,2 --horizon 3
+  Color from yesterday and two sessions prior. Grade on close 3 sessions later.
 """
 from __future__ import annotations
 
@@ -277,15 +281,20 @@ def tape_coverage(df: pd.DataFrame) -> dict:
 
 def _liquid_tape(df: pd.DataFrame, *, top_n: int, min_change: float,
                  liquid: bool, min_mcap_m: float | None,
-                 side: str = "up") -> list[dict]:
+                 side: str = "up", skip_change: bool = False) -> list[dict]:
     if df is None or df.empty:
         return []
     work = df.copy()
-    if "Ticker" not in work.columns or "Change" not in work.columns:
+    if "Ticker" not in work.columns:
+        return []
+    if not skip_change and "Change" not in work.columns:
         return []
     floor = MIN_MCAP_M if min_mcap_m is None else float(min_mcap_m)
     work["ticker"] = work["Ticker"].map(tl._tick)
-    work["chg"] = work["Change"].map(_pct)
+    if "Change" in work.columns:
+        work["chg"] = work["Change"].map(_pct)
+    else:
+        work["chg"] = float("nan")
     work["mcap"] = pd.to_numeric(work["Market Cap"], errors="coerce") if "Market Cap" in work.columns else float("nan")
     work["adv"] = pd.to_numeric(work["Average Volume"], errors="coerce") if "Average Volume" in work.columns else float("nan")
     work["volume"] = pd.to_numeric(work["Volume"], errors="coerce") if "Volume" in work.columns else float("nan")
@@ -293,14 +302,15 @@ def _liquid_tape(df: pd.DataFrame, *, top_n: int, min_change: float,
         not_etf = ~work["Industry"].astype(str).eq("Exchange Traded Fund")
     else:
         not_etf = True
-    chg_ok = (
-        work["chg"] >= float(min_change)
-        if side == "up"
-        else work["chg"] <= float(min_change)
-    )
+    if skip_change:
+        chg_ok = True
+    elif side == "up":
+        chg_ok = work["chg"] >= float(min_change)
+    else:
+        chg_ok = work["chg"] <= float(min_change)
     keep = (
         work["ticker"].astype(bool)
-        & work["chg"].notna()
+        & (True if skip_change else work["chg"].notna())
         & chg_ok
         & (work["volume"].fillna(0) > 0)
         & not_etf
@@ -317,7 +327,7 @@ def _liquid_tape(df: pd.DataFrame, *, top_n: int, min_change: float,
             "company": rec.get("Company") or "",
             "sector": rec.get("Sector") or "",
             "industry": rec.get("Industry") or "",
-            "change_pct": round(float(rec["chg"]), 2),
+            "change_pct": None if rec.get("chg") != rec.get("chg") or rec.get("chg") is None else round(float(rec["chg"]), 2),
             "mcap_m": _num(rec.get("mcap")),
             "avg_vol_k": _num(rec.get("adv")),
         })
@@ -688,63 +698,191 @@ def _finviz_change_map(fv: pd.DataFrame) -> dict[str, float]:
     return out
 
 
+def horizon_key(horizon: int) -> str:
+    return {1: "1d", 2: "2d", 3: "3d", 5: "1w"}.get(int(horizon), f"{int(horizon)}d")
+
+
+def lag_label(lag: int) -> str:
+    return "D" if int(lag) == 0 else f"D-{int(lag)}"
+
+
+def parse_lags(raw) -> tuple[int, ...]:
+    if raw is None or raw == "":
+        return (0,)
+    if isinstance(raw, (list, tuple)):
+        vals = [int(x) for x in raw]
+    else:
+        vals = [int(x) for x in str(raw).split(",") if str(x).strip() != ""]
+    return tuple(vals) or (0,)
+
+
+def session_at_lag(idx, date: str, lag: int):
+    """Trading session `lag` sessions before `date`. lag=0 is that date."""
+    sessions = (idx or {}).get("sessions") or []
+    dates = [s["date"] for s in sessions]
+    try:
+        i = dates.index(date)
+    except ValueError:
+        return None
+    j = i - int(lag)
+    if j < 0:
+        return None
+    return sessions[j]
+
+
+def forward_change(ticker: str, date: str, horizon: int,
+                   sessions: list | None = None):
+    """Close on `date` → close `horizon` trading sessions later."""
+    if int(horizon) <= 1:
+        return None
+    fwd = tl.forward_returns(ticker, date, sessions=sessions)
+    return fwd.get(horizon_key(horizon))
+
+
+def _horizon_change_map(tickers: list[str], date: str, horizon: int,
+                        sessions: list | None = None) -> dict[str, float]:
+    out = {}
+    for t in tickers:
+        chg = forward_change(t, date, horizon, sessions=sessions)
+        if chg is not None:
+            out[t] = chg
+    return out
+
+
+def liquid_horizon_movers(df: pd.DataFrame, date: str, *,
+                          top_n: int = TOP_N, min_change: float = 0.0,
+                          liquid: bool = True, min_mcap_m: float | None = None,
+                          side: str = "up", horizon: int = 3,
+                          sessions: list | None = None) -> list[dict]:
+    """Liquid names ranked by N-session forward return, not same-day Change%."""
+    universe = _liquid_tape(
+        df, top_n=0, min_change=0.0, liquid=liquid,
+        min_mcap_m=min_mcap_m, side="up", skip_change=True,
+    )
+    key = horizon_key(horizon)
+    out = []
+    for rec in universe:
+        chg = tl.forward_returns(rec["ticker"], date, sessions=sessions).get(key)
+        if chg is None:
+            continue
+        rec = dict(rec)
+        rec["change_pct"] = round(float(chg), 2)
+        rec["horizon"] = int(horizon)
+        out.append(rec)
+    floor = float(min_change)
+    if side == "up":
+        out = [r for r in out if r["change_pct"] >= floor]
+        out.sort(key=lambda r: r["change_pct"], reverse=True)
+    else:
+        if floor > 0:
+            floor = -abs(floor)
+        out = [r for r in out if r["change_pct"] <= floor]
+        out.sort(key=lambda r: r["change_pct"])
+    if top_n and int(top_n) > 0:
+        out = out[:int(top_n)]
+    return out
+
+
 def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
              min_change: float = MIN_CHANGE, liquid: bool = True,
              include_buys: bool = True,
              include_sells: bool = False,
              include_losers: bool = False,
-             min_mcap_m: float | None = None) -> dict:
+             min_mcap_m: float | None = None,
+             snapshot_lags: tuple[int, ...] = (0,),
+             horizon: int = 1) -> dict:
     idx = idx or tl.build_index()
+    lags = parse_lags(snapshot_lags)
+    horizon = int(horizon or 1)
     sess = next((s for s in idx["sessions"] if s["date"] == date), None)
     fv = load_finviz(date)
     cov = tape_coverage(fv)
-    names = (
-        liquid_gainers(
+    sessions = idx.get("sessions") or []
+    loser_floor = -abs(float(min_change)) if min_change else LOSER_FLOOR
+    if cov["status"] == "missing":
+        names, loser_names = [], []
+    elif horizon > 1:
+        names = liquid_horizon_movers(
+            fv, date, top_n=top_n, min_change=min_change, liquid=liquid,
+            min_mcap_m=min_mcap_m, side="up", horizon=horizon,
+            sessions=sessions,
+        )
+        loser_names = (
+            liquid_horizon_movers(
+                fv, date, top_n=top_n, min_change=loser_floor, liquid=liquid,
+                min_mcap_m=min_mcap_m, side="down", horizon=horizon,
+                sessions=sessions,
+            )
+            if include_losers else []
+        )
+    else:
+        names = liquid_gainers(
             fv, top_n=top_n, min_change=min_change, liquid=liquid,
             min_mcap_m=min_mcap_m,
         )
-        if cov["status"] != "missing" else []
-    )
-    loser_floor = -abs(float(min_change)) if min_change else LOSER_FLOOR
-    loser_names = (
-        liquid_losers(
-            fv, top_n=top_n, min_change=loser_floor, liquid=liquid,
-            min_mcap_m=min_mcap_m,
+        loser_names = (
+            liquid_losers(
+                fv, top_n=top_n, min_change=loser_floor, liquid=liquid,
+                min_mcap_m=min_mcap_m,
+            )
+            if include_losers else []
         )
-        if include_losers and cov["status"] != "missing" else []
-    )
     buy_meta = same_day_buy_rows(date)
     sell_meta = same_day_sell_rows(date)
     buy_today = {r["ticker"] for r in buy_meta}
     sell_today = {r["ticker"] for r in sell_meta}
-    realized = _finviz_change_map(fv)
-    ctx = load_day_context(date)
-    era_skip = _era_skip(date)
-    prior_sess = None
-    if sess and sess.get("prior_date"):
-        prior_sess = next(
-            (s for s in idx["sessions"] if s["date"] == sess["prior_date"]),
-            None,
+    if horizon > 1:
+        tickers = list({
+            *(r["ticker"] for r in names),
+            *(r["ticker"] for r in loser_names),
+            *buy_today,
+            *sell_today,
+        })
+        realized = _horizon_change_map(tickers, date, horizon, sessions=sessions)
+    else:
+        realized = _finviz_change_map(fv)
+    ctx_by_date: dict[str | None, dict] = {}
+    cache: dict[tuple, dict] = {}
+
+    def context_for(snap_date: str | None) -> dict:
+        if snap_date not in ctx_by_date:
+            ctx_by_date[snap_date] = load_day_context(snap_date) if snap_date else {}
+        return ctx_by_date[snap_date]
+
+    def paint_lag(row, lag, chg=None):
+        key = (int(lag), row["ticker"])
+        if key in cache:
+            return cache[key]
+        snap = session_at_lag(idx, date, lag)
+        snap_date = snap["date"] if snap else None
+        ctx = context_for(snap_date)
+        prior = session_at_lag(idx, snap_date, 1) if snap_date else None
+        painted = color_name(
+            snap, row, buy_today, realized=chg,
+            market_tone=ctx.get("market_tone"),
+            book_domains=ctx.get("domains"),
+            sell_today=sell_today,
+            market_state=ctx.get("market_state"),
+            book_lanes=ctx.get("lanes"),
+            book_marks=ctx.get("marks"),
+            book_opp=ctx.get("opp"),
+            era_skip=_era_skip(snap_date) if snap_date else [],
+            lattice_live=ctx.get("lattice_live"),
+            prior_sess=prior,
         )
-    cache: dict[str, dict] = {}
+        painted["snapshot_lag"] = int(lag)
+        painted["snapshot_date"] = snap_date
+        cache[key] = painted
+        return painted
 
     def paint(row, chg=None):
-        t = row["ticker"]
-        if t not in cache:
-            cache[t] = color_name(
-                sess, row, buy_today, realized=chg,
-                market_tone=ctx.get("market_tone"),
-                book_domains=ctx.get("domains"),
-                sell_today=sell_today,
-                market_state=ctx.get("market_state"),
-                book_lanes=ctx.get("lanes"),
-                book_marks=ctx.get("marks"),
-                book_opp=ctx.get("opp"),
-                era_skip=era_skip,
-                lattice_live=ctx.get("lattice_live"),
-                prior_sess=prior_sess,
-            )
-        return cache[t]
+        snaps = {lag: paint_lag(row, lag, chg) for lag in lags}
+        primary = snaps[lags[0]]
+        out = dict(primary)
+        out["change_pct"] = chg if chg is not None else row.get("change_pct")
+        out["horizon"] = horizon
+        out["snapshots"] = {lag_label(lag): snaps[lag] for lag in lags}
+        return out
 
     rows = [paint(row) for row in names]
     buys = []
@@ -764,9 +902,9 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
         "date": date,
         "coverage": cov,
         "spy_change": _spy_change(fv),
-        "era_skip": era_skip,
-        "market_state": ctx.get("market_state"),
-        "lattice_live": ctx.get("lattice_live"),
+        "era_skip": _era_skip(date),
+        "market_state": context_for(date).get("market_state"),
+        "lattice_live": context_for(date).get("lattice_live"),
         "n_gainers": len(rows),
         "n_losers": len(losers),
         "n_overnight_buy": sum(1 for r in rows if r.get("overnight_buy")),
@@ -777,6 +915,10 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
         "loser_floor": float(loser_floor),
         "liquid": bool(liquid),
         "top_n": top_n,
+        "horizon": horizon,
+        "snapshot_lags": list(lags),
+        "snapshot_labels": [lag_label(x) for x in lags],
+        "realized_label": "3d Δ" if horizon == 3 else ("Δ" if horizon <= 1 else f"{horizon}d Δ"),
         "rows": rows,
         "buys": buys,
         "sells": sells,
@@ -1050,14 +1192,19 @@ def walk(from_date: str = START, to_date: str | None = None,
          include_buys: bool = True,
          include_sells: bool = True,
          include_losers: bool = True,
-         min_mcap_m: float | None = None) -> dict:
+         min_mcap_m: float | None = None,
+         snapshot_lags: tuple[int, ...] | str = (0,),
+         horizon: int = 1) -> dict:
     global _WALK
     floor_list = [float(x) for x in (floors or [min_change])]
     floor_list = sorted({x for x in floor_list})
     primary = min(floor_list) if floor_list else float(min_change)
+    lags = parse_lags(snapshot_lags)
+    horizon = int(horizon or 1)
     key = (
         from_date, to_date, top_n, primary, tuple(floor_list),
         liquid, include_buys, include_sells, include_losers, min_mcap_m,
+        lags, horizon,
     )
     if _WALK is not None and not force and _WALK.get("_key") == list(key):
         return _WALK
@@ -1072,6 +1219,7 @@ def walk(from_date: str = START, to_date: str | None = None,
             liquid=liquid, include_buys=include_buys,
             include_sells=include_sells, include_losers=include_losers,
             min_mcap_m=min_mcap_m,
+            snapshot_lags=lags, horizon=horizon,
         )
         for d in dates
     ]
@@ -1144,6 +1292,10 @@ def walk(from_date: str = START, to_date: str | None = None,
     payload = {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
+        "horizon": horizon,
+        "snapshot_lags": list(lags),
+        "snapshot_labels": [lag_label(x) for x in lags],
+        "realized_label": "3d Δ" if horizon == 3 else ("Δ" if horizon <= 1 else f"{horizon}d Δ"),
         "from_date": from_date,
         "to_date": to_date,
         "top_n": top_n,
@@ -1190,20 +1342,68 @@ def _box_table(boxes: dict, cols=GAINER_BOX_COLS) -> list[str]:
     return lines
 
 
+def _cond_cell(row: dict | None) -> str:
+    cond = (row or {}).get("condition") or {}
+    if cond.get("n"):
+        return (
+            f"{tl.BOX_ICON.get(cond.get('tone'), '⬛')} "
+            f"{cond.get('good', 0)}/{cond.get('neutral', 0)}/{cond.get('bad', 0)}"
+        )
+    return GREY
+
+
+def _snap_block(snap: dict | None) -> list[str]:
+    s = snap or {}
+    return [
+        s.get("marks_cell") or _marks_cell(s.get("marks")),
+        _cond_cell(s),
+        s.get("lane_label") or lane_label(s.get("lane")),
+        _mid_opp_cell(s.get("mid_opp")),
+        s.get("labeled") or _labeled(s.get("boxes")),
+        s.get("labeled_domains") or _labeled_domains(s.get("domains")),
+    ]
+
+
 def _name_table(rows: list[dict], *, realized_label: str = "Δ") -> list[str]:
+    first = rows[0] if rows else {}
+    snaps = first.get("snapshots") or {}
+    labels = list(snaps) if len(snaps) > 1 else []
+    if labels:
+        stamp_heads = []
+        for lab in labels:
+            stamp_heads += [
+                f"{lab} Marks", f"{lab} Cond", f"{lab} Hall pass",
+                f"{lab} mid_opp", f"{lab} cameras", f"{lab} coaches",
+            ]
+        heads = (
+            ["#", "Ticker", realized_label, "Sector"]
+            + stamp_heads
+            + ["On today's 1d BUY", "On today's 1d SELL"]
+        )
+        lines = [
+            "| " + " | ".join(heads) + " |",
+            "|" + "|".join(["---:"] + ["---"] * (len(heads) - 1)) + "|",
+        ]
+        for i, row in enumerate(rows, 1):
+            chg = row.get("change_pct")
+            chg_s = f"{chg:+.2f}%" if chg is not None else "—"
+            cells = [
+                str(i), f"`{row['ticker']}`", chg_s, row.get("sector") or "—",
+            ]
+            packed = row.get("snapshots") or {}
+            for lab in labels:
+                cells += _snap_block(packed.get(lab))
+            cells += [
+                "yes" if row.get("on_1d_buy") else "—",
+                "yes" if row.get("on_1d_sell") else "—",
+            ]
+            lines.append("| " + " | ".join(cells) + " |")
+        return lines
     lines = [
         f"| # | Ticker | {realized_label} | Sector | Marks | Cond | Hall pass | mid_opp | Source boxes (cameras) | Domains (coaches) | Overnight BUY | On today's 1d BUY | On today's 1d SELL |",
         "|---:|---|---:|---|---|---|---|---|---|---|---|---|---|",
     ]
     for i, row in enumerate(rows, 1):
-        cond = row.get("condition") or {}
-        if cond.get("n"):
-            cond_s = (
-                f"{tl.BOX_ICON.get(cond.get('tone'), '⬛')} "
-                f"{cond.get('good', 0)}/{cond.get('neutral', 0)}/{cond.get('bad', 0)}"
-            )
-        else:
-            cond_s = GREY
         chg = row.get("change_pct")
         chg_s = f"{chg:+.2f}%" if chg is not None else "—"
         hall = row.get("lane_label") or lane_label(row.get("lane"))
@@ -1211,7 +1411,7 @@ def _name_table(rows: list[dict], *, realized_label: str = "Δ") -> list[str]:
             f"| {i} | `{row['ticker']}` | {chg_s} | "
             f"{row.get('sector') or '—'} | "
             f"{row.get('marks_cell') or _marks_cell(row.get('marks'))} | "
-            f"{cond_s} | {hall} | {_mid_opp_cell(row.get('mid_opp'))} | "
+            f"{_cond_cell(row)} | {hall} | {_mid_opp_cell(row.get('mid_opp'))} | "
             f"{row.get('labeled') or _labeled(row.get('boxes'))} | "
             f"{row.get('labeled_domains') or _labeled_domains(row.get('domains'))} | "
             f"{'yes' if row.get('overnight_buy') else '—'} | "
@@ -1259,9 +1459,23 @@ def render_day_markdown(date: str, day: dict | None = None,
     spy_s = f"{spy:+.2f}%" if spy is not None else "—"
     mcap = MIN_MCAP_M if min_mcap_m is None else float(min_mcap_m)
     lines = [
-        f"### Top gainers — as-of 09:30 on {date}",
+        f"### Top gainers — as-of 09:30 on {date}"
+        + (
+            f" · snapshots {', '.join(day.get('snapshot_labels') or [])}"
+            if day.get("snapshot_lags") and day.get("snapshot_lags") != [0]
+            else ""
+        )
+        + (
+            f" · outcome {day.get('realized_label')}"
+            if (day.get("horizon") or 1) > 1 else ""
+        ),
         "",
-        "Realized winners (Finviz Change%"
+        "Realized movers ("
+        + (
+            f"{day.get('realized_label') or 'Δ'}"
+            if (day.get("horizon") or 1) > 1
+            else "Finviz Change%"
+        )
         + (
             f" ≥ {day.get('min_change'):.0f}%"
             if (day.get("min_change") or 0) > 0 else ""
@@ -1291,7 +1505,7 @@ def render_day_markdown(date: str, day: dict | None = None,
     if not rows:
         lines += ["_No liquid gainer tape for this session._", ""]
     else:
-        lines += _name_table(rows)
+        lines += _name_table(rows, realized_label=day.get("realized_label") or "Δ")
         lines += [
             "",
             f"Overnight BUY caught {day.get('n_overnight_buy') or 0}/{len(rows)}; "
@@ -1310,7 +1524,7 @@ def render_day_markdown(date: str, day: dict | None = None,
             f"today's 1d SELL list caught {day.get('n_on_1d_sell') or 0}/{len(losers)}.",
             "",
         ]
-        lines += _name_table(losers)
+        lines += _name_table(losers, realized_label=day.get("realized_label") or "Δ")
         lines.append("")
     buys = day.get("buys") or []
     if buys:
@@ -1323,7 +1537,9 @@ def render_day_markdown(date: str, day: dict | None = None,
             f"{hit2}/{len(buys)} closed ≥2% · {hit5}/{len(buys)} closed ≥5%.",
             "",
         ]
-        lines += _name_table(buys, realized_label="Realized Δ")
+        lines += _name_table(
+            buys, realized_label=day.get("realized_label") or "Realized Δ",
+        )
         lines.append("")
     sells = day.get("sells") or []
     if sells:
@@ -1336,7 +1552,9 @@ def render_day_markdown(date: str, day: dict | None = None,
             f"{hit2}/{len(sells)} closed ≤-2% · {hit5}/{len(sells)} closed ≤-5%.",
             "",
         ]
-        lines += _name_table(sells, realized_label="Realized Δ")
+        lines += _name_table(
+            sells, realized_label=day.get("realized_label") or "Realized Δ",
+        )
         lines.append("")
     return lines
 
@@ -1353,7 +1571,16 @@ def render_markdown(payload: dict) -> str:
         "min_change": payload.get("min_change") or 5,
     }
     lines = [
-        "# Top gainers — as-of 09:30",
+        "# Top gainers — as-of 09:30"
+        + (
+            f" · snapshots {', '.join(payload.get('snapshot_labels') or [])}"
+            if payload.get("snapshot_lags") and payload.get("snapshot_lags") != [0]
+            else ""
+        )
+        + (
+            f" · {payload.get('realized_label')}"
+            if (payload.get("horizon") or 1) > 1 else ""
+        ),
         "",
         f"_Generated {payload.get('generated_at')} · as-of 09:30 ET · "
         f"{payload.get('from_date')} → {payload.get('to_date') or 'latest'}"
@@ -1489,13 +1716,25 @@ def render_markdown(payload: dict) -> str:
     return "\n".join(lines)
 
 
-def write_scoreboard(payload: dict | None = None) -> tuple[Path, Path]:
+def scoreboard_paths(suffix: str = "") -> tuple[Path, Path]:
+    if suffix:
+        tag = str(suffix).strip().upper().replace(" ", "_")
+        return (
+            OUT_MD.parent / f"TOP_GAINER_ASOF_{tag}.md",
+            OUT_JSON.parent / f"top_gainer_asof_{tag.lower()}.json",
+        )
+    return OUT_MD, OUT_JSON
+
+
+def write_scoreboard(payload: dict | None = None,
+                     suffix: str = "") -> tuple[Path, Path]:
     payload = payload or walk(force=True)
     slim = {k: v for k, v in payload.items() if k != "_key"}
-    OUT_MD.parent.mkdir(parents=True, exist_ok=True)
-    OUT_MD.write_text(render_markdown(payload), encoding="utf-8")
-    OUT_JSON.write_text(json.dumps(slim, indent=2), encoding="utf-8")
-    return OUT_MD, OUT_JSON
+    md_path, js_path = scoreboard_paths(suffix)
+    md_path.parent.mkdir(parents=True, exist_ok=True)
+    md_path.write_text(render_markdown(payload), encoding="utf-8")
+    js_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    return md_path, js_path
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -1523,6 +1762,14 @@ def build_parser() -> argparse.ArgumentParser:
                     help="Include names below the mcap / adv floor")
     ap.add_argument("--min-mcap", type=float, default=MIN_MCAP_M,
                     help="Market-cap floor in $ millions (default 100)")
+    ap.add_argument("--snapshots", default="0",
+                    help="Color from these session lags: 0=that morning, "
+                         "1=yesterday, 2=two sessions prior (e.g. 1,2)")
+    ap.add_argument("--horizon", type=int, default=1,
+                    help="Outcome window in trading sessions "
+                         "(1=same-day Change%, 3=close 3 sessions later)")
+    ap.add_argument("--write-suffix", default="",
+                    help="Write TOP_GAINER_ASOF_<suffix>.md instead of the live sheet")
     ap.add_argument("--write", action="store_true")
     return ap
 
@@ -1544,12 +1791,14 @@ def main() -> None:
         include_sells=args.sells,
         include_losers=args.losers,
         min_mcap_m=args.min_mcap,
+        snapshot_lags=args.snapshots,
+        horizon=args.horizon,
         force=True,
     )
     text = render_markdown(payload)
     print(text)
     if args.write:
-        md, js = write_scoreboard(payload)
+        md, js = write_scoreboard(payload, suffix=args.write_suffix)
         print(f"[gainer-asof] wrote {md}")
         print(f"[gainer-asof] wrote {js}")
 
