@@ -1277,7 +1277,7 @@ def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
 
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
               buy_mask=None, buy_sort=None, allow_empty=False,
-              sell_mask=None, sell_sort=None):
+              sell_mask=None, sell_sort=None, respect_mask=False):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
     BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
@@ -1296,6 +1296,16 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             masked = df
         if masked is not None and len(masked):
             pool = masked
+            if respect_mask:
+                sort_col = (
+                    buy_sort if buy_sort and buy_sort in pool.columns
+                    else f"score_{horizon}"
+                )
+                buys = pool.sort_values(sort_col, ascending=False)
+                return buys, _rank_sells(
+                    df, horizon, top_n, sell_core,
+                    sell_mask=sell_mask, sell_sort=sell_sort,
+                )
         elif allow_empty:
             return df.head(0), _rank_sells(
                 df, horizon, top_n, sell_core,
@@ -1374,7 +1384,8 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
                  sell_core: bool = True, buy_mask=None, buy_sort=None,
-                 allow_empty=False, sell_mask=None, sell_sort=None):
+                 allow_empty=False, sell_mask=None, sell_sort=None,
+                 respect_mask=False):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
@@ -1395,7 +1406,7 @@ def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
                       sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort,
                       allow_empty=allow_empty, sell_mask=sub_sell_mask,
-                      sell_sort=sell_sort)
+                      sell_sort=sell_sort, respect_mask=respect_mask)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -1961,10 +1972,11 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                 "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
                 "buy_sort": "bull_rank",
                 "allow_empty": True,
+                "respect_mask": True,
                 "sell_mask": df["bear_eligible"].astype(bool),
                 "sell_sort": "bear_rank",
                 "ranker": "decision_lattice",
-                "top_n": top_n,
+                "top_n": slots or top_n,
             }
         if horizon == "1d" and sd.get("stand_down"):
             return {
@@ -2014,7 +2026,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                           buy_sort=pick["buy_sort"],
                           allow_empty=pick["allow_empty"],
                           sell_mask=pick["sell_mask"],
-                          sell_sort=pick["sell_sort"])
+                          sell_sort=pick["sell_sort"],
+                          respect_mask=bool(pick.get("respect_mask")))
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
@@ -2035,7 +2048,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                                   buy_mask=bmask, buy_sort=pick["buy_sort"],
                                   allow_empty=pick["allow_empty"],
                                   sell_mask=smask,
-                                  sell_sort=pick["sell_sort"])
+                                  sell_sort=pick["sell_sort"],
+                                  respect_mask=bool(pick.get("respect_mask")))
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -2168,7 +2182,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                                 buy_sort=pick["buy_sort"],
                                 allow_empty=pick["allow_empty"],
                                 sell_mask=pick["sell_mask"],
-                                sell_sort=pick["sell_sort"])
+                                sell_sort=pick["sell_sort"],
+                                respect_mask=bool(pick.get("respect_mask")))
         empty_why = (
             (meta.get("stand_down") or {}).get("reason")
             if (meta.get("stand_down") or {}).get("stand_down")

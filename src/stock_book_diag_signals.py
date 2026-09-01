@@ -944,10 +944,16 @@ def render_actions_markdown(dec: dict) -> list[str]:
         "",
         f"These are the names `src.stock_book` wrote. "
         f"The first {SLEEVE_N} BUY names are the paper sleeve that "
-        f"[the .io dashboard]({PAGES_URL}) can fill. "
-        f"On RED / HARD_RED the sleeve is the most-probable longs "
-        f"the lattice + lookback (r/y/g, 🚨, 🔵, ⚪) still clock — "
-        f"not a claim the tape is safe.",
+        f"[the .io dashboard]({PAGES_URL}) can fill.",
+    ]
+    state = str(market.get("state") or "").lower()
+    if state in ("red", "hard_red"):
+        lines += [
+            "On a RED / HARD_RED tape this sleeve is the most-probable "
+            "longs the lattice + lookback (r/y/g, 🚨, 🔵, ⚪) still clock "
+            "— not a claim the open is safe. Size is scaled down.",
+        ]
+    lines += [
         "",
         "### ACTION BUY — sleeve (fills .io)",
         "",

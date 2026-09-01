@@ -243,6 +243,43 @@ def test_probable_long_without_price_confirm() -> None:
     assert "company news" in decided["bull_decision"]
 
 
+def test_company_news_survives_red_group_on_hard_red() -> None:
+    """AMGN-style: same-day company clock, hostile parent/child/flow."""
+    ctx = _context("hard_red")
+    ctx["digest"]["AMGN"] = {
+        "tone": "good",
+        "text": "Amgen says Repatha cut all-cause mortality 20% in Phase 3",
+        "materiality": "high",
+        "direct": True,
+        "event_risk": False,
+    }
+    ctx["heat"]["sectors"]["Healthcare"] = {
+        "d1": -1.0, "w1": -2.0, "breadth": 0.3, "rvol": 0.8,
+    }
+    ctx["heat"]["industries"] = {
+        "Drug Manufacturers - General": {
+            "d1": -0.4, "w1": -3.2, "vs_parent_w1": -1.0,
+            "breadth": 0.3, "rvol": 0.8,
+        }
+    }
+    frame = _frame("AMGN")
+    frame["sector"] = "Healthcare"
+    frame["industry"] = "Drug Manufacturers - General"
+    frame["s_sector"] = -0.50
+    frame["s_peer"] = -0.20
+    frame["change_pct"] = -1.2
+    frame["gap_pct"] = -0.6
+    decided = finalize_decisions(
+        attach_domains(frame, ctx), "2099-01-01", ctx,
+    ).iloc[0]
+    assert decided["d_company"] == "good"
+    assert decided["d_parent"] == "bad"
+    assert decided["d_child"] == "bad"
+    assert decided["decision_lane"] == "probable"
+    assert bool(decided["bull_eligible"]) is True
+    assert "company news" in decided["bull_decision"]
+
+
 def test_alarm_still_blocks_probable() -> None:
     ctx = _context("hard_red")
     ctx["digest"]["FADE"] = {
@@ -289,6 +326,7 @@ def main() -> None:
         test_failed_dossier_does_not_erase_digest_event,
         test_stale_digest_cannot_be_hard_red_exception,
         test_probable_long_without_price_confirm,
+        test_company_news_survives_red_group_on_hard_red,
         test_alarm_still_blocks_probable,
         test_insider_sale_is_not_bullish_record_language,
         test_judge_company_names_survive_prose_parser,

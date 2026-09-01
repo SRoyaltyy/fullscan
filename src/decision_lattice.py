@@ -994,11 +994,16 @@ def finalize_decisions(
         domains = {key: str(row.get(f"d_{key}") or "missing")
                    for key in DOMAIN_KEYS}
         blue, alarm = _change_marks(domains, previous.get(ticker))
-        legacy_vetoes = _legacy_vetoes(row)
+        lookback_vetoes = _legacy_vetoes(row)
         if alarm:
-            legacy_vetoes.append("v2 domain alarm")
+            lookback_vetoes.append("v2 domain alarm")
+        # Domain-region red is almost automatic on HARD_RED (market is red
+        # for everyone). Keep it as a veto for ordinary lanes, not for a
+        # company-news / lookback-clocked probable long.
+        region_veto = []
         if str(row.get("domain_region") or "") == "bad":
-            legacy_vetoes.append("v2 domain region red")
+            region_veto.append("v2 domain region red")
+        legacy_vetoes = lookback_vetoes + region_veto
         quality_ok = not legacy_vetoes
 
         direct = bool(row.get("company_direct"))
@@ -1062,11 +1067,20 @@ def finalize_decisions(
             )
         )
         group_clock = (
-            child_outperform
+            str(row.get("child_abs_tone")) == "good"
+            and str(row.get("child_rel_tone")) == "good"
             and child_strong
             and domains["setup"] == "good"
             and domains["flow"] != "bad"
             and domains["company"] != "bad"
+            # Industry tape alone is not a long. Need a name-level clock
+            # (company news, peer RS, or lookback blue) so HARD_RED does
+            # not mint a long for every name in a hot child.
+            and (
+                domains["company"] == "good"
+                or _num(row.get("s_peer")) >= 0.05
+                or bool(row.get("lb_blue") or blue)
+            )
         )
         marks_clock = (
             (white or blue_mark)
@@ -1075,7 +1089,7 @@ def finalize_decisions(
             and domains["company"] != "bad"
         )
         probable = bool(
-            quality_ok
+            not lookback_vetoes
             and domains["setup"] != "bad"
             and (company_clock or group_clock or marks_clock)
         )
@@ -1247,6 +1261,7 @@ def finalize_decisions(
             + (0.50 if white else 0.0)
             + (0.30 if str(row.get("lb_cond") or "") == "good" else 0.0)
             - (1.50 if bool(row.get("lb_alarm")) else 0.0)
+            + (2.50 if company_clock and bool(row.get("company_fresh")) else 0.0)
         )
         bear_rank = (
             (10.0 if bear_eligible else 0.0)
@@ -1319,32 +1334,23 @@ def summarize(df: pd.DataFrame, context: dict, top_n: int = 15) -> dict:
             "bull_watch": [],
             "bear_watch": [],
         }
-    # A hard-red board must show every fresh direct-company case even when
-    # hostile group/setup evidence pushes it below a relative-strength name.
-    # Otherwise AMGN-like events disappear from the very audit meant to
-    # explain why they were rejected.
+    # Same-day company clocks first so AMGN-style events cannot be buried
+    # under a sea of blue / group-tape names, then fill by bull_rank.
     ordered_idx: list[Any] = []
-    tiers = [
-        df.loc[df["bull_eligible"].astype(bool)].sort_values(
-            "bull_rank", ascending=False
-        ),
-        df.loc[
-            df["company_fresh"].astype(bool)
-            & df["company_direct"].astype(bool)
-            & (pd.to_numeric(
-                df["company_strength"], errors="coerce"
-            ).fillna(0.0) >= DIRECT_EVENT_MIN)
-        ].sort_values(
-            ["company_strength", "bull_rank"], ascending=False
-        ),
-        df.sort_values("bull_rank", ascending=False),
-    ]
-    for tier in tiers:
-        for idx in tier.index:
-            if idx not in ordered_idx:
-                ordered_idx.append(idx)
-            if len(ordered_idx) >= top_n:
-                break
+    company_first = df.loc[
+        df["company_fresh"].astype(bool)
+        & df["company_direct"].astype(bool)
+        & (pd.to_numeric(df["company_strength"], errors="coerce").fillna(0.0)
+           >= DIRECT_EVENT_MIN)
+    ].sort_values(
+        ["bull_eligible", "company_strength", "bull_rank"],
+        ascending=False,
+    )
+    for idx in company_first.head(5).index:
+        ordered_idx.append(idx)
+    for idx in df.sort_values("bull_rank", ascending=False).index:
+        if idx not in ordered_idx:
+            ordered_idx.append(idx)
         if len(ordered_idx) >= top_n:
             break
     bull = df.loc[ordered_idx]
