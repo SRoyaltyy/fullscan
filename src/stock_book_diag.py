@@ -923,6 +923,17 @@ def render_markdown(report: Report) -> str:
         "",
     ]
     lines += signals.render_actions_markdown(report.decisions)
+    try:
+        from . import gainer_asof
+        lines += gainer_asof.render_day_markdown(report.date)
+    except Exception as e:  # noqa: BLE001
+        lines += [
+            "",
+            f"### Top gainers — as-of 09:30 on {report.date}",
+            "",
+            f"_walk failed: {e}_",
+            "",
+        ]
     lines += [
         "FAIL = empty, truncated, carry-forward, timeout stub, or QC fail. "
         "PARTIAL = some required outputs are good, others are not. "
@@ -975,6 +986,15 @@ def render_text(report: Report) -> str:
     lines = [
         signals.render_actions_plain(report.decisions).rstrip(),
         "",
+    ]
+    try:
+        from . import gainer_asof
+        gainer_txt = "\n".join(gainer_asof.render_day_markdown(report.date)).rstrip()
+        if gainer_txt:
+            lines += [gainer_txt, ""]
+    except Exception as e:  # noqa: BLE001
+        lines += [f"[gainer-asof] walk failed: {e}", ""]
+    lines += [
         f"[stock-book-diag] {report.date}  ranker={rank}  overall={report.overall}"
         f"  method={((report.era or {}).get('method') or '?')}",
     ]
@@ -1126,6 +1146,15 @@ def main() -> None:
         md, js = write_report(report)
         print(f"[stock-book-diag] wrote {md}")
         print(f"[stock-book-diag] wrote {js}")
+        try:
+            from . import gainer_asof
+            gmd, gjs = gainer_asof.write_scoreboard(
+                gainer_asof.walk(from_date=book_era.DASHBOARD_START, force=True)
+            )
+            print(f"[stock-book-diag] wrote {gmd}")
+            print(f"[stock-book-diag] wrote {gjs}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[stock-book-diag] gainer as-of walk failed: {e}")
     emit_github_summary(report)
     raise SystemExit(0 if action_ok(report) else 1)
 

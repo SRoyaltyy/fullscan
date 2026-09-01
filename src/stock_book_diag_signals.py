@@ -47,6 +47,14 @@ BOX_KEYS = (
     "ab", "peer", "heat", "vol", "catal", "buy",
 )
 DOMAIN_KEYS = ("market", "parent", "child", "company", "setup", "flow")
+DOMAIN_LABELS = (
+    ("market", "mkt"),
+    ("parent", "par"),
+    ("child", "chd"),
+    ("company", "co"),
+    ("setup", "set"),
+    ("flow", "flw"),
+)
 
 # Each lookback box → the input that colored it.
 FACTOR_TRACE = (
@@ -534,6 +542,22 @@ def _decision(row: dict, *, side: str, horizon: str, rank: int,
     }
 
 
+def _enrich_watch(row: dict, buy_set: set[str]) -> dict:
+    """Keep source boxes on watch rows the same way ACTION SELL does."""
+    out = dict(row or {})
+    t = _tick(out.get("ticker"))
+    stored = out.get("source_boxes") if isinstance(out.get("source_boxes"), dict) else {}
+    boxes = {
+        key: (str(stored.get(key) or "") if str(stored.get(key) or "") in BOX_ICON
+              else "missing")
+        for key in BOX_KEYS
+    }
+    boxes["buy"] = "good" if t in buy_set else "neutral"
+    out["boxes"] = boxes
+    out["source_boxes"] = boxes
+    return out
+
+
 def extract_decisions(date: str) -> dict:
     book = _load_book(date)
     meta = book.get("meta") if isinstance(book.get("meta"), dict) else {}
@@ -624,8 +648,12 @@ def extract_decisions(date: str) -> dict:
         "lattice": lattice,
         "era": era,
         "paper": book_era.paper_context(date),
-        "bull_watch": list(lattice.get("bull_watch") or []),
-        "bear_watch": list(lattice.get("bear_watch") or []),
+        "bull_watch": [
+            _enrich_watch(row, buy_set) for row in (lattice.get("bull_watch") or [])
+        ],
+        "bear_watch": [
+            _enrich_watch(row, buy_set) for row in (lattice.get("bear_watch") or [])
+        ],
         "intentional_stand_down": bool(
             (lattice.get("stand_down") or {}).get("stand_down")
         ),
@@ -707,13 +735,35 @@ def inspect_pages_live(date: str) -> tuple[str, str, int]:
 # ---------------------------------------------------------------------------
 
 def _box_cell(boxes: dict) -> str:
-    return "".join(BOX_ICON.get((boxes or {}).get(k), "⬛") for k in BOX_KEYS)
+    return labeled_source_boxes(boxes)
 
 
 def _domain_cell(domains: dict) -> str:
-    return "".join(
-        BOX_ICON.get((domains or {}).get(k), "⬛") for k in DOMAIN_KEYS
+    return labeled_domain_boxes(domains)
+
+
+def labeled_source_boxes(boxes: dict | None) -> str:
+    """join🟢 sect🔴 … — lineage, not a 12-emoji blob."""
+    bits = []
+    for spec in FACTOR_TRACE:
+        tone = (boxes or {}).get(spec["key"])
+        bits.append(f"{spec['label']}{BOX_ICON.get(tone, '⬛')}")
+    return " ".join(bits)
+
+
+def labeled_domain_boxes(domains: dict | None) -> str:
+    return " ".join(
+        f"{lab}{BOX_ICON.get((domains or {}).get(key), '⬛')}"
+        for key, lab in DOMAIN_LABELS
     )
+
+
+def source_box_legend() -> str:
+    return " · ".join(spec["label"] for spec in FACTOR_TRACE)
+
+
+def domain_box_legend() -> str:
+    return " · ".join(f"{lab}={key}" for key, lab in DOMAIN_LABELS)
 
 
 def _market_line(dec: dict) -> str:
@@ -778,10 +828,9 @@ def render_era_markdown(era: dict | None, dec: dict | None = None) -> list[str]:
 
 
 def _box_legend() -> str:
-    bits = []
-    for spec in FACTOR_TRACE:
-        bits.append(spec["label"])
-    return "order: " + " ".join(bits)
+    return (
+        f"source {source_box_legend()} · domains {domain_box_legend()}"
+    )
 
 
 def _marks(d: dict) -> str:
@@ -845,7 +894,12 @@ def render_actions_plain(dec: dict) -> str:
         lines.append(
             "MARKET BEAR: " + "; ".join(market.get("bear_reasons") or [])
         )
-    lines += ["", f"--- ACTION BUY  (1d_top sleeve, fills .io) ---"]
+    lines += [
+        f"source boxes: {source_box_legend()}",
+        f"domains: {domain_box_legend()}",
+        "",
+        "--- ACTION BUY  (1d_top sleeve, fills .io) ---",
+    ]
     sleeve = [d for d in (h1.get("buy") or []) if d.get("sleeve")]
     rest = [d for d in (h1.get("buy") or []) if not d.get("sleeve")]
     if not sleeve:
@@ -875,6 +929,7 @@ def render_actions_plain(dec: dict) -> str:
 
 def _watch_line(row: dict, rank: int, side: str) -> str:
     domains = _domain_cell(row.get("domains") or {})
+    sources = _box_cell(row.get("boxes") or row.get("source_boxes") or {})
     decision = (
         row.get("bull_decision") if side == "BULL"
         else row.get("bear_decision")
@@ -887,14 +942,13 @@ def _watch_line(row: dict, rank: int, side: str) -> str:
             evidence = f" evidence={company or 'no direct event'} / {group}"
     return (
         f"{side} #{rank:>2} {_tick(row.get('ticker')):<6} "
-        f"{domains} lane={row.get('lane') or 'blocked'} "
+        f"{sources}  domains={domains} lane={row.get('lane') or 'blocked'} "
         f"{decision or ''}{evidence}"
     )
 
 
 def _action_line(d: dict, verb: str) -> str:
-    boxes = "".join(BOX_ICON.get((d.get("boxes") or {}).get(k), "⬛")
-                    for k in BOX_KEYS)
+    boxes = _box_cell(d.get("boxes") or {})
     marks = ""
     if d.get("blue"):
         marks += "🔵"
@@ -913,7 +967,7 @@ def _action_line(d: dict, verb: str) -> str:
     return (
         f"ACTION {verb:<4} #{d.get('rank'):>2} {d.get('ticker'):<6} "
         f"{d.get('size') or '?':<5} {d.get('sector') or '?':<22} "
-        f"{boxes} domains={_domain_cell(d.get('domains') or {})}  "
+        f"{boxes}  domains={_domain_cell(d.get('domains') or {})}  "
         f"{d.get('reasons') or ''}{marks}{extra}{decision_text}"
     )
 
@@ -955,6 +1009,9 @@ def render_actions_markdown(dec: dict) -> list[str]:
         ]
     lines += [
         "",
+        f"_Source boxes {source_box_legend()}_",
+        f"_Domains {domain_box_legend()}_",
+        "",
         "### ACTION BUY — sleeve (fills .io)",
         "",
         "| Action | # | Ticker | Source boxes | Domains | Lane | Score | Decision |",
@@ -983,16 +1040,18 @@ def render_actions_markdown(dec: dict) -> list[str]:
         "",
         "### Bull decisions — eligible and closest blocked cases",
         "",
-        "Domain order: **market · parent · child · company · setup · flow**.",
+        "Source boxes keep the 12 golden inputs. Domain order: "
+        "**market · parent · child · company · setup · flow**.",
         "",
-        "| # | Ticker | Domains | Lane | Direct company | Group | Decision |",
-        "|---:|---|---|---|---|---|---|",
+        "| # | Ticker | Source boxes | Domains | Lane | Direct company | Group | Decision |",
+        "|---:|---|---|---|---|---|---|---|",
     ]
     for i, row in enumerate((dec.get("bull_watch") or [])[:15], 1):
         company = str(row.get("company") or "—").replace("|", "/")
         decision = str(row.get("bull_decision") or "").replace("|", "/")
         lines.append(
             f"| {i} | `{_tick(row.get('ticker'))}` | "
+            f"{_box_cell(row.get('boxes') or row.get('source_boxes') or {})} | "
             f"{_domain_cell(row.get('domains') or {})} | "
             f"{row.get('lane') or 'blocked'} | {company} | "
             f"{row.get('group') or '—'} "
@@ -1016,8 +1075,6 @@ def render_actions_markdown(dec: dict) -> list[str]:
 
 
 def _action_md_row(d: dict, verb: str) -> str:
-    boxes = "".join(BOX_ICON.get((d.get("boxes") or {}).get(k), "⬛")
-                    for k in BOX_KEYS)
     why = (
         d.get("bull_decision") if verb == "BUY"
         else d.get("bear_decision")
@@ -1025,7 +1082,8 @@ def _action_md_row(d: dict, verb: str) -> str:
     why = str(why).replace("|", "/")
     return (
         f"| **{verb}** | {d.get('rank')} | `{d.get('ticker')}` | "
-        f"{boxes} | {_domain_cell(d.get('domains') or {})} | "
+        f"{_box_cell(d.get('boxes') or {})} | "
+        f"{_domain_cell(d.get('domains') or {})} | "
         f"{d.get('decision_lane') or '—'} | "
         f"{d.get('score') or 0:.3f} | {why} |"
     )
@@ -1039,10 +1097,11 @@ def emit_action_notices(dec: dict) -> None:
     for d in (h1.get("buy") or []):
         if not d.get("sleeve"):
             continue
-        reason = (d.get("reasons") or "").replace("\n", " ")[:200]
+        reason = (d.get("reasons") or "").replace("\n", " ")[:160]
         print(
             f"::notice title=ACTION BUY {d.get('ticker')}::"
-            f"#{d.get('rank')} {reason}",
+            f"#{d.get('rank')} {_box_cell(d.get('boxes') or {})} "
+            f"domains={_domain_cell(d.get('domains') or {})} {reason}",
             flush=True,
         )
 
