@@ -1,9 +1,10 @@
 name: Top Gainer As-Of
 
 # For every session since the dashboard start, take realized gainers
-# at/above a Change% floor (default 5%) and color the 12 golden boxes
-# from the 09:30 ET packet. Same-day RelVol and same-day stock book
-# never color a cell.
+# at/above a Change% floor (default 2,5), liquid losers ≤-2%, and the
+# morning 1d BUY/SELL sleeves. Color the 12 cameras + 6 coaches +
+# hall-pass lane from the 09:30 ET packet. Same-day RelVol and
+# same-day stock book never color a cell. Missing-as-of prints grey.
 #
 # This is not Stock Book Backtest (that grades the book's own picks)
 # and not Ticker Lookback (that is one name at a time).
@@ -72,7 +73,7 @@ jobs:
           set -euo pipefail
           FROM_DATE="${FROM_DATE:-2026-08-13}"
           FLOORS="${FLOORS:-2,5}"
-          ARGS=(--from "$FROM_DATE" --floors "$FLOORS" --all --buys --write --min-mcap 100)
+          ARGS=(--from "$FROM_DATE" --floors "$FLOORS" --all --buys --sells --losers --write --min-mcap 100)
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to "$TO_DATE")
           if [ "${LIQUID}" = "false" ]; then
             ARGS+=(--no-liquid)
@@ -106,7 +107,7 @@ jobs:
           {
             echo "## Top Gainer As-Of"
             echo
-            echo "Gainers at floors ${{ inputs.floors }} plus today's 1d BUY, since ${{ inputs.from_date }} (as-of 09:30 ET boxes, mcap ≥ \$100M)."
+            echo "Gainers at floors ${{ inputs.floors }} plus losers ≤-2%, 1d BUY and 1d SELL, with hall-pass lanes, since ${{ inputs.from_date }} (as-of 09:30 ET boxes, mcap ≥ \$100M)."
             echo
             echo "Download the **top-gainer-asof** artifact for the full per-name table."
             echo

@@ -26,13 +26,11 @@ def test_0813_asof_boxes_are_prior_tape_not_same_day_close():
     assert row["labeled_domains"].startswith("mkt")
     vintage = row["factor_vintage"]
     assert vintage.get("asof") == "09:30_et"
-    # Vol / AB / overnight buy come from the last completed tape before D.
     if row["boxes"]["vol"] != "missing":
         assert vintage.get("vol")
         assert vintage["vol"] < "2026-08-13"
     assert "finviz" not in (row.get("sources") or [])
     assert "book" not in (row.get("sources") or [])
-    # Outcome is same-day Change%; buy box is overnight, not "they ripped".
     assert row["change_pct"] > 0
     assert row["labeled"].startswith("join")
     assert "sect" in row["labeled"]
@@ -129,6 +127,68 @@ def test_era_skip_marks_pre_digest_days():
     assert "catal" not in gainer_asof._era_skip("2026-08-31")
 
 
+def test_infer_lane_hall_pass_labels():
+    assert gainer_asof.infer_lane({"setup": "bad"}) == "blocked"
+    assert gainer_asof.infer_lane(
+        {"company": "good", "setup": "good", "flow": "neutral"},
+        market_state="green",
+    ) == "catalyst"
+    assert gainer_asof.infer_lane(
+        {"company": "good", "setup": "good", "flow": "neutral"},
+        market_state="hard_red",
+    ) == "catalyst_exception"
+    assert gainer_asof.infer_lane(
+        {"child": "good", "setup": "good", "flow": "neutral", "company": "neutral"},
+    ) == "group_leader"
+    assert gainer_asof.infer_lane(
+        {"setup": "good", "flow": "good", "company": "neutral", "parent": "neutral"},
+        market_state="green",
+    ) == "standard"
+    assert gainer_asof.infer_lane(
+        {"setup": "good", "flow": "good", "company": "neutral", "parent": "neutral"},
+        market_state="hard_red",
+    ) == "probable"
+    assert gainer_asof.infer_lane({}, saved="group_leader") == "group_leader"
+    assert gainer_asof.lane_label("group_leader") == "group leader"
+    assert gainer_asof.lane_label("catalyst_exception") == "catalyst exception"
+
+
+def test_grey_icon_for_era_skip_missing():
+    assert gainer_asof._icon("missing", era=True) == gainer_asof.GREY
+    assert gainer_asof._icon("missing", era=False) == "⬛"
+    labeled = gainer_asof._labeled({"digest": "missing", "join": "good"}, era_skip=["digest"])
+    assert "dig⬜" in labeled
+    assert "join" in labeled
+
+
+def test_liquid_losers_are_down():
+    df = gainer_asof.load_finviz("2026-08-13")
+    if df.empty:
+        return
+    names = gainer_asof.liquid_losers(df, top_n=15)
+    assert all(r["change_pct"] <= gainer_asof.LOSER_FLOOR for r in names)
+    ticks = [r["ticker"] for r in names]
+    assert "XHG" not in ticks
+
+
+def test_day_walk_carries_hall_pass_and_sides():
+    day = gainer_asof.day_walk(
+        "2026-08-31", include_buys=True, include_sells=True,
+        include_losers=True, top_n=5,
+    )
+    assert "sells" in day and "losers" in day
+    row = (day.get("buys") or day.get("rows") or [None])[0]
+    if not row:
+        return
+    assert row.get("lane") in gainer_asof.LANES or row.get("lane") is None
+    assert "lane_label" in row
+    assert "marks" in row
+    assert "bucket" in row
+    md = "\n".join(gainer_asof.render_day_markdown("2026-08-31", day=day))
+    assert "Hall pass" in md
+    assert "group leader" in md or "standard" in md or "blocked" in md or "probable" in md or "catalyst" in md
+
+
 if __name__ == "__main__":
     test_liquid_gainers_skip_penny_spikes()
     test_0813_asof_boxes_are_prior_tape_not_same_day_close()
@@ -139,4 +199,8 @@ if __name__ == "__main__":
     test_buy_sleeve_is_colored_alongside_gainers()
     test_0831_uses_saved_lattice_domains()
     test_era_skip_marks_pre_digest_days()
+    test_infer_lane_hall_pass_labels()
+    test_grey_icon_for_era_skip_missing()
+    test_liquid_losers_are_down()
+    test_day_walk_carries_hall_pass_and_sides()
     print("ok")
