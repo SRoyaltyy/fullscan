@@ -16,7 +16,8 @@ Writes:
   03_scoreboard/TOP_GAINER_ASOF.md
   03_scoreboard/top_gainer_asof.json
 
-CLI: python -m src.gainer_asof [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--write]
+CLI: python -m src.gainer_asof [--from YYYY-MM-DD] [--to YYYY-MM-DD]
+     [--min-change 5] [--all] [--write]
 """
 from __future__ import annotations
 
@@ -39,6 +40,7 @@ BOOK_DIR = ROOT / "data" / "stock_book"
 
 START = book_era.DASHBOARD_START
 TOP_N = 15
+MIN_CHANGE = 5.0
 MIN_MCAP_M = 500.0
 MIN_AVG_VOL_K = 500.0
 # Same-day Change tape is usable when at least this share of rows printed.
@@ -115,7 +117,8 @@ def tape_coverage(df: pd.DataFrame) -> dict:
     return {"status": status, "n": n, "n_change": n_change, "frac": round(frac, 3)}
 
 
-def liquid_gainers(df: pd.DataFrame, top_n: int = TOP_N) -> list[dict]:
+def liquid_gainers(df: pd.DataFrame, top_n: int = TOP_N,
+                   min_change: float = 0.0, liquid: bool = True) -> list[dict]:
     if df is None or df.empty:
         return []
     work = df.copy()
@@ -133,13 +136,19 @@ def liquid_gainers(df: pd.DataFrame, top_n: int = TOP_N) -> list[dict]:
     keep = (
         work["ticker"].astype(bool)
         & work["chg"].notna()
-        & (work["chg"] > 0)
-        & (work["mcap"] >= MIN_MCAP_M)
-        & (work["adv"] >= MIN_AVG_VOL_K)
+        & (work["chg"] >= float(min_change))
         & (work["volume"].fillna(0) > 0)
         & not_etf
     )
-    ranked = work.loc[keep].sort_values("chg", ascending=False).head(int(top_n))
+    if liquid:
+        keep = (
+            keep
+            & (work["mcap"] >= MIN_MCAP_M)
+            & (work["adv"] >= MIN_AVG_VOL_K)
+        )
+    ranked = work.loc[keep].sort_values("chg", ascending=False)
+    if top_n and int(top_n) > 0:
+        ranked = ranked.head(int(top_n))
     out = []
     for rec in ranked.to_dict(orient="records"):
         out.append({
@@ -185,12 +194,16 @@ def color_gainer(sess: dict, row: dict, buy_today: set[str]) -> dict:
     }
 
 
-def day_walk(date: str, *, idx=None, top_n: int = TOP_N) -> dict:
+def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
+             min_change: float = 0.0, liquid: bool = True) -> dict:
     idx = idx or tl.build_index()
     sess = next((s for s in idx["sessions"] if s["date"] == date), None)
     fv = load_finviz(date)
     cov = tape_coverage(fv)
-    names = liquid_gainers(fv, top_n=top_n) if cov["status"] != "missing" else []
+    names = (
+        liquid_gainers(fv, top_n=top_n, min_change=min_change, liquid=liquid)
+        if cov["status"] != "missing" else []
+    )
     buy_today = same_day_buy_set(date)
     rows = []
     if sess is not None:
@@ -225,6 +238,9 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N) -> dict:
         "n_gainers": len(rows),
         "n_overnight_buy": sum(1 for r in rows if r.get("overnight_buy")),
         "n_on_1d_buy": sum(1 for r in rows if r.get("on_1d_buy")),
+        "min_change": float(min_change),
+        "liquid": bool(liquid),
+        "top_n": top_n,
         "rows": rows,
     }
 
@@ -274,27 +290,35 @@ def _tally(days: list[dict]) -> dict:
 
 
 def walk(from_date: str = START, to_date: str | None = None,
-         top_n: int = TOP_N, *, force: bool = False) -> dict:
+         top_n: int = TOP_N, min_change: float = 0.0,
+         liquid: bool = True, *, force: bool = False) -> dict:
     global _WALK
     if _WALK is not None and not force:
         if (_WALK.get("from_date") == from_date
                 and _WALK.get("to_date") == to_date
-                and _WALK.get("top_n") == top_n):
+                and _WALK.get("top_n") == top_n
+                and _WALK.get("min_change") == min_change
+                and _WALK.get("liquid") == liquid):
             return _WALK
     idx = tl.build_index()
     dates = [
         s["date"] for s in idx["sessions"]
         if s["date"] >= from_date and (not to_date or s["date"] <= to_date)
     ]
-    days = [day_walk(d, idx=idx, top_n=top_n) for d in dates]
+    days = [
+        day_walk(d, idx=idx, top_n=top_n, min_change=min_change, liquid=liquid)
+        for d in dates
+    ]
     payload = {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
         "from_date": from_date,
         "to_date": to_date,
         "top_n": top_n,
-        "min_mcap_m": MIN_MCAP_M,
-        "min_avg_vol_k": MIN_AVG_VOL_K,
+        "min_change": float(min_change),
+        "liquid": bool(liquid),
+        "min_mcap_m": MIN_MCAP_M if liquid else 0.0,
+        "min_avg_vol_k": MIN_AVG_VOL_K if liquid else 0.0,
         "legend": _legend(),
         "days": days,
         "summary": _tally(days),
@@ -311,8 +335,16 @@ def render_day_markdown(date: str, day: dict | None = None) -> list[str]:
     lines = [
         f"### Top gainers — as-of 09:30 on {date}",
         "",
-        "Realized liquid winners (Finviz Change%, mcap ≥ $500M, adv ≥ 500k, "
-        "not ETF). Boxes are the 09:30 ET packet — last completed tape + "
+        "Realized winners (Finviz Change%"
+        + (
+            f" ≥ {day.get('min_change'):.0f}%"
+            if (day.get("min_change") or 0) > 0 else ""
+        )
+        + (
+            ", mcap ≥ $500M, adv ≥ 500k, not ETF"
+            if day.get("liquid", True) else ", any name, not ETF"
+        )
+        + "). Boxes are the 09:30 ET packet — last completed tape + "
         "that morning's pre-open files. Same-day RelVol / same-day book do "
         "not color a cell. `buy` = overnight 1d BUY; `on 1d BUY` = today's "
         "book after the ranker ran.",
@@ -368,13 +400,30 @@ def render_markdown(payload: dict) -> str:
         "# Top gainers — as-of 09:30",
         "",
         f"_Generated {payload.get('generated_at')} · as-of 09:30 ET · "
-        f"{payload.get('from_date')} → {payload.get('to_date') or 'latest'}_",
+        f"{payload.get('from_date')} → {payload.get('to_date') or 'latest'}"
+        + (
+            f" · Change ≥ {payload.get('min_change'):.0f}%"
+            if (payload.get("min_change") or 0) > 0 else ""
+        )
+        + (
+            " · all names"
+            if not payload.get("top_n") else f" · top {payload.get('top_n')}"
+        )
+        + "_",
         "",
-        "Each session's liquid top gainers (Finviz Change%, "
-        f"mcap ≥ ${payload.get('min_mcap_m'):.0f}M, "
-        f"adv ≥ {payload.get('min_avg_vol_k'):.0f}k, not ETF). "
-        "Boxes are filled from the information set knowable before the open. "
-        "Same-day Finviz RelVol and same-day stock book never color a box.",
+        "Each session's realized gainers (Finviz Change%"
+        + (
+            f" ≥ {payload.get('min_change'):.0f}%"
+            if (payload.get("min_change") or 0) > 0 else ""
+        )
+        + (
+            f", mcap ≥ ${payload.get('min_mcap_m') or 0:.0f}M, "
+            f"adv ≥ {payload.get('min_avg_vol_k') or 0:.0f}k, not ETF"
+            if payload.get("liquid", True) else ", any printed name, not ETF"
+        )
+        + "). Boxes are filled from the information set knowable before the "
+        "open. Same-day Finviz RelVol and same-day stock book never color a "
+        "box.",
         "",
         f"_Boxes {payload.get('legend') or _legend()}_",
         "",
@@ -415,13 +464,23 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--from", dest="from_date", default=START)
     ap.add_argument("--to", dest="to_date", default="")
-    ap.add_argument("--top", type=int, default=TOP_N)
+    ap.add_argument("--top", type=int, default=TOP_N,
+                    help="Cap per session (0 or --all = every name over the floor)")
+    ap.add_argument("--all", action="store_true",
+                    help="Do not cap — every name at/above --min-change")
+    ap.add_argument("--min-change", type=float, default=MIN_CHANGE,
+                    help="Minimum session Change%% (default 5)")
+    ap.add_argument("--no-liquid", dest="liquid", action="store_false",
+                    help="Include names below $500M / 500k adv")
     ap.add_argument("--write", action="store_true")
     args = ap.parse_args()
+    top_n = 0 if args.all else args.top
     payload = walk(
         from_date=args.from_date,
         to_date=args.to_date or None,
-        top_n=args.top,
+        top_n=top_n,
+        min_change=args.min_change,
+        liquid=args.liquid,
         force=True,
     )
     text = render_markdown(payload)

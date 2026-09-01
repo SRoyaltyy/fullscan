@@ -52,6 +52,18 @@ def test_walk_summary_covers_dashboard_start():
     assert "join" in day_md
 
 
+def test_all_above_five_percent_is_uncapped():
+    df = gainer_asof.load_finviz("2026-08-13")
+    names = gainer_asof.liquid_gainers(df, top_n=0, min_change=5.0, liquid=True)
+    assert len(names) >= 40
+    assert all(r["change_pct"] >= 5.0 for r in names)
+    assert names[0]["change_pct"] >= names[-1]["change_pct"]
+    assert "XHG" not in [r["ticker"] for r in names]
+    capped = gainer_asof.liquid_gainers(df, top_n=15, min_change=5.0)
+    assert len(capped) == 15
+    assert [r["ticker"] for r in capped] == [r["ticker"] for r in names[:15]]
+
+
 def test_era_skip_marks_pre_digest_days():
     skip = gainer_asof._era_skip("2026-08-13")
     assert "digest" in skip
@@ -67,5 +79,6 @@ if __name__ == "__main__":
     test_liquid_gainers_skip_penny_spikes()
     test_0813_asof_boxes_are_prior_tape_not_same_day_close()
     test_walk_summary_covers_dashboard_start()
+    test_all_above_five_percent_is_uncapped()
     test_era_skip_marks_pre_digest_days()
     print("ok")
