@@ -1,14 +1,14 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-08-30. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-09-01. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 8 | 12% (1/8) | 25% (2/8) | -0.22% |
+| general | 3d | 9 | 11% (1/9) | 33% (3/9) | -0.31% |
 | general | 1w | 8 | 38% (3/8) | 62% (5/8) | -0.19% |
-| general | 2w | 4 | 25% (1/4) | 25% (1/4) | -0.67% |
+| general | 2w | 5 | 20% (1/5) | 40% (2/5) | -0.73% |
 | sector:Basic Materials | 3d | 5 | 40% (2/5) | 20% (1/5) | +1.30% |
 | sector:Basic Materials | 1w | 4 | 25% (1/4) | 50% (2/4) | +2.29% |
 | sector:Communication Services | 3d | 5 | 60% (3/5) | 20% (1/5) | +0.18% |
@@ -36,6 +36,8 @@ Updated: 2026-08-30. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-08-28 | general | 3d | flat/mild | -1.04% (down/mild) | ❌ | ✅ |
+| 2026-08-19 | general | 2w | flat/mild | -0.99% (down/mild) | ❌ | ✅ |
 | 2026-08-23 | general | 1w | flat/mild | +0.74% (up/mild) | ❌ | ✅ |
 | 2026-08-18 | general | 2w | flat/mild | +0.51% (up/flat) | ❌ | ❌ |
 | 2026-08-17 | general | 2w | flat/mild | -0.18% (flat/flat) | ✅ | ❌ |
@@ -59,8 +61,6 @@ Updated: 2026-08-30. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-21 | sector:Industrials | 3d | down/mild | -0.80% (down/mild) | ✅ | ✅ |
 | 2026-08-21 | sector:Financial | 3d | up/mild | +0.70% (up/mild) | ✅ | ✅ |
 | 2026-08-21 | sector:Energy | 3d | up/notable | -2.12% (down/notable) | ❌ | ✅ |
-| 2026-08-21 | sector:Consumer Defensive | 3d | flat/mild | -1.06% (down/mild) | ❌ | ✅ |
-| 2026-08-21 | sector:Consumer Cyclical | 3d | down/mild | -1.81% (down/notable) | ✅ | ❌ |
 
-*310 calls still maturing (T+h close not recorded yet).*
+*400 calls still maturing (T+h close not recorded yet).*
 

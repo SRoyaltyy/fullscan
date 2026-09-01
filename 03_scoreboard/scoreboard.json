@@ -7181,6 +7181,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-01",
+          "actual_pct": -0.99,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -10930,7 +10942,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "VIX still falling (14.43) and HY tighter while gold dumped and Russell -1.4%; Dow nearly flat vs NDX -0.52% — vol/credit did not confirm the equity fade",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-01",
+          "actual_pct": -1.04,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -12430,18 +12455,113 @@
         "B7_OIL_DOLLAR": -0.5
       },
       "leading_sum": -5.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7635.47,
+      "actual_close": 7631.47,
+      "actual_pct_change": -0.71,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -0.5,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-01_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202609017616/sp-500-falls-071-to-763147-data-talk",
+          "date_accessed": "2026-09-01",
+          "summary": "Official close matches Channel 1; this was the worst session since Aug. 20, not a routine chop.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/01/us-iran-war-trump-hormuz-tanker-attack-shipping-sanctions-.html",
+          "date_accessed": "2026-09-01",
+          "summary": "The fresh kinetic increment and the oil extension beyond the premarket +2.3% print are the same story.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-6-august-2026-ism-manufacturing-pmi-report-302865127.html",
+          "date_accessed": "2026-09-01",
+          "summary": "Expansion cooled on a mild miss; the inflation subindex did not cool at all.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/01/stock-market-midday-sept-1-stocks-slide-on-global-bond-sell-off/",
+          "date_accessed": "2026-09-01",
+          "summary": "Cross-asset fingerprint was yields-up/gold-down/tech-down, not a classic haven bid.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202609016174/comex-copper-settles-132-lower-at-65065-data-talk",
+          "date_accessed": "2026-09-01",
+          "summary": "Industrial metals sold off while oil rallied — supply-shock, not a synchronized commodity bid.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-01-2026",
+          "date_accessed": "2026-09-01",
+          "summary": "End-of-day rates and oil confirm the oil-to-yields amplifier beyond the premarket sleeve.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+          "date_accessed": "2026-09-01",
+          "summary": "The 10:00 labor print was a slight miss vs ~7.33M consensus, not a labor-market break, and it did not reverse PATH.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/01/dell-q2-earnings-report-2027.html",
+          "date_accessed": "2026-09-01",
+          "summary": "Confirms the morning call that Dell was a pending binary, not a 9am catalyst; it belongs to tomorrow’s tape.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -12468,7 +12588,16 @@
           "confidence": 0.4
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Fresh Hormuz/US-Iran kinetic increment transmitted through an oil spike and a global bond selloff",
+      "key_interaction": "Oil amplified Warsh’s hawkish path so a still-expanding ISM 54.6 was not bought — inflation-conditional, not growth-conditional",
+      "knowable_at_9am": "yes",
+      "attribution_contested": "yes",
+      "outlier_watch": "Gold and copper fell, HY stayed tight, energy rallied, Apple rose — rates/supply-shock split, not classic panic risk-off",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-01",
