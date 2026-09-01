@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31T23:24:57.596362-04:00",
+  "generated_at": "2026-08-31T23:55:38.539707-04:00",
   "ranker_ready": true,
   "overall": "PARTIAL",
   "blockers": [],
@@ -2675,7 +2675,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (same-day): Salesforce beats Q2 guidance, raises FY27 outlook as analysts lift price targets after 'narrative-changing' results",
         "company_strength": 0.88,
@@ -2692,7 +2693,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "good",
+          "digest": "good",
+          "judge": "good",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "AMGN",
@@ -2722,7 +2737,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (same-day): Amgen says Repatha cut all-cause mortality 20% in high-risk adults in Phase 3 VESALIUS-CV primary prevention analysis",
         "company_strength": 0.82,
@@ -2739,7 +2755,21 @@
         "white": false,
         "alarm": false,
         "cond": "neutral",
-        "region": "neutral"
+        "region": "neutral",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "good",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "AON",
@@ -2769,7 +2799,8 @@
           "peer": "neutral",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (same-day): Aon names Nadin Virani interim CFO, reaffirms 2026 guidance, launches Sidecar X transactional risk platform with $200 million capacity",
         "company_strength": 0.72,
@@ -2786,7 +2817,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "MPC",
@@ -2816,7 +2861,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct normal digest (stale/undated): Mizuho raises Marathon Petroleum price target to $304 from $284, keeps Neutral after stronger-than-expected Q2 results",
         "company_strength": 0.3,
@@ -2833,7 +2879,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "BMO",
@@ -2863,7 +2923,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (stale/undated): Bank of Montreal beats fiscal Q3 2026 estimates with non-GAAP EPS $2.86, revenue $7.2B, announces new share buyback plan and higher dividend",
         "company_strength": 0.48,
@@ -2880,7 +2941,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "CM",
@@ -2910,7 +2985,8 @@
           "peer": "bad",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (stale/undated): Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates",
         "company_strength": 0.48,
@@ -2927,7 +3003,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "bad",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "AMZN",
@@ -2957,7 +3047,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct normal digest (same-day): Evercore ISI's Mahaney raises Amazon 12\u2011month price target to $355 from $315, reiterates Buy on stronger retail trends",
         "company_strength": 0.42,
@@ -2974,7 +3065,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "CVE",
@@ -3004,7 +3109,8 @@
           "peer": "good",
           "heat": "neutral",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (stale/undated): Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
         "company_strength": 0.48,
@@ -3021,7 +3127,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "neutral",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "LIN",
@@ -3051,7 +3171,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "direct high digest (stale/undated): Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B",
         "company_strength": 0.48,
@@ -3068,7 +3189,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "CVX",
@@ -3098,7 +3233,8 @@
           "peer": "good",
           "heat": "neutral",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "good"
         },
         "company": "basket/action net=+4.20; context only, not a company catalyst",
         "company_strength": 0.28,
@@ -3115,7 +3251,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "good",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "neutral",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "good"
+        }
       },
       {
         "ticker": "RES",
@@ -3145,7 +3295,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3162,7 +3313,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "APD",
@@ -3192,7 +3357,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "direct high digest (stale/undated): Air Products beats fiscal Q3 2026 EPS with non-GAAP $3.47, raises FY26 EPS outlook, takes $2.9B clean energy exit charge",
         "company_strength": 0.48,
@@ -3209,7 +3375,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "DINO",
@@ -3239,7 +3419,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3256,7 +3437,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "NOV",
@@ -3286,7 +3481,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3303,7 +3499,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "SLB",
@@ -3333,7 +3543,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3350,7 +3561,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "VOD",
@@ -3380,7 +3605,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3397,7 +3623,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "HAL",
@@ -3427,7 +3667,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3444,7 +3685,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "PBF",
@@ -3474,7 +3729,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3491,7 +3747,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "VLO",
@@ -3521,7 +3791,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3538,7 +3809,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "WTTR",
@@ -3568,7 +3853,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3585,7 +3871,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "CDNS",
@@ -3615,7 +3915,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "direct high digest (stale/undated): Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
         "company_strength": 0.48,
@@ -3632,7 +3933,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "ADBE",
@@ -3662,7 +3977,8 @@
           "peer": "bad",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "Judge names ticker good, but no direct material event is verified \u2014 YELLOW",
         "company_strength": 0.4,
@@ -3679,7 +3995,21 @@
         "white": false,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "good",
+          "digest": "good",
+          "judge": "good",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "CVI",
@@ -3709,7 +4039,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3726,7 +4057,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "NEXT",
@@ -3756,7 +4101,8 @@
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3773,7 +4119,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "good"
+        "region": "good",
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "SDGR",
@@ -3803,7 +4163,8 @@
           "peer": "good",
           "heat": "neutral",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3820,7 +4181,21 @@
         "white": true,
         "alarm": false,
         "cond": "good",
-        "region": "neutral"
+        "region": "neutral",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "neutral",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       }
     ],
     "bear_watch": [
@@ -3852,7 +4227,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "good",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3869,7 +4245,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "good",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "BEPC",
@@ -3899,7 +4289,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3916,7 +4307,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "DKS",
@@ -3946,7 +4351,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -3963,7 +4369,21 @@
         "white": false,
         "alarm": false,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "AIIO",
@@ -3993,7 +4413,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4010,7 +4431,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "ORBS",
@@ -4040,7 +4475,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4057,7 +4493,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "CSIQ",
@@ -4087,7 +4537,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4104,7 +4555,21 @@
         "white": false,
         "alarm": false,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "neutral",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "JKS",
@@ -4134,7 +4599,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4151,7 +4617,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "FCEL",
@@ -4181,7 +4661,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4198,7 +4679,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "NNBR",
@@ -4228,7 +4723,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4245,7 +4741,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "DHC",
@@ -4275,7 +4785,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4292,7 +4803,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "ARKO",
@@ -4322,7 +4847,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4339,7 +4865,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "NPWR",
@@ -4369,7 +4909,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4386,7 +4927,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "EVGO",
@@ -4416,7 +4971,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4433,7 +4989,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "RGTI",
@@ -4463,7 +5033,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4480,7 +5051,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "MTZ",
@@ -4510,7 +5095,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4527,7 +5113,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "COHU",
@@ -4557,7 +5157,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4574,7 +5175,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "VLRS",
@@ -4604,7 +5219,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4621,7 +5237,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "ADTN",
@@ -4651,7 +5281,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4668,7 +5299,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "ATOM",
@@ -4698,7 +5343,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4715,7 +5361,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "APG",
@@ -4745,7 +5405,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4762,7 +5423,21 @@
         "white": false,
         "alarm": false,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "JBLU",
@@ -4792,7 +5467,8 @@
           "peer": "bad",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4809,7 +5485,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "neutral",
+          "peer": "bad",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "NRGV",
@@ -4839,7 +5529,8 @@
           "peer": "neutral",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4856,7 +5547,21 @@
         "white": false,
         "alarm": false,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "neutral",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "OLN",
@@ -4886,7 +5591,8 @@
           "peer": "bad",
           "heat": "neutral",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4903,7 +5609,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "neutral",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "FLNC",
@@ -4933,7 +5653,8 @@
           "peer": "good",
           "heat": "bad",
           "vol": "neutral",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4950,7 +5671,21 @@
         "white": false,
         "alarm": false,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "good",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       },
       {
         "ticker": "GVA",
@@ -4980,7 +5715,8 @@
           "peer": "good",
           "heat": "bad",
           "vol": "missing",
-          "catal": "missing"
+          "catal": "missing",
+          "buy": "neutral"
         },
         "company": "no direct company event",
         "company_strength": 0.0,
@@ -4997,7 +5733,21 @@
         "white": false,
         "alarm": true,
         "cond": "bad",
-        "region": "bad"
+        "region": "bad",
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "missing",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "good",
+          "heat": "bad",
+          "vol": "missing",
+          "catal": "missing",
+          "buy": "neutral"
+        }
       }
     ],
     "intentional_stand_down": false,
