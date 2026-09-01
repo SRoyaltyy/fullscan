@@ -3,7 +3,7 @@
 Horizons: 1d, 3d, 1w, 2w, 1m
 Layers: join (labels×weather) + sector bias + general regime + news actions
 
-CLI: python -m src.stock_book [--date YYYY-MM-DD] [--top 25]
+CLI: python -m src.stock_book [--date YYYY-MM-DD] [--top 25] [--as-of]
 """
 from __future__ import annotations
 
@@ -686,7 +686,8 @@ def _prev_book_buys(date: str) -> dict[str, set[str]]:
     return out
 
 
-def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]:
+def build(date: str | None = None, top_n: int = 25,
+          as_of: bool = False) -> tuple[pd.DataFrame, dict]:
     join, date = _load_join(date)
 
     # Pre-flight integrity check — never fatal, but recorded and used to
@@ -938,18 +939,28 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     # market permission, parent sector, child industry/theme, company event,
     # intrinsic setup, and flow.  These colors do not alter the legacy core;
     # they decide which lane is allowed to use it.
+    # Historical --as-of replays skip the lattice until the session it
+    # actually shipped (2026-08-31).
     lattice_context = None
-    try:
-        from . import decision_lattice
-        lattice_context = decision_lattice.build_context(
-            date, general_run=gen_run, weather=weather,
-        )
-        join = decision_lattice.attach_domains(join, lattice_context)
-        market = lattice_context.get("market") or {}
-        print(f"[stock-book] decision lattice market: {market.get('rationale')}")
-    except Exception as e:  # noqa: BLE001 — legacy ranker remains a fallback
-        print(f"[stock-book] decision lattice evidence skipped: {e}")
-        lattice_context = None
+    use_lattice = True
+    if as_of:
+        from . import book_era
+        use_lattice = book_era.live(date, "decision_lattice")
+        if not use_lattice:
+            print(f"[stock-book] as-of {date}: lattice not live — "
+                  f"using {book_era.method_for(date)}")
+    if use_lattice:
+        try:
+            from . import decision_lattice
+            lattice_context = decision_lattice.build_context(
+                date, general_run=gen_run, weather=weather,
+            )
+            join = decision_lattice.attach_domains(join, lattice_context)
+            market = lattice_context.get("market") or {}
+            print(f"[stock-book] decision lattice market: {market.get('rationale')}")
+        except Exception as e:  # noqa: BLE001 — legacy ranker remains a fallback
+            print(f"[stock-book] decision lattice evidence skipped: {e}")
+            lattice_context = None
 
     # Opportunity is a BUY-side nudge, not a license to ignore a red sector.
     if "s_opp" in join.columns:
@@ -964,6 +975,15 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
     join = green_pile.attach_ranks(join)
     join["green"] = green_pile.green_mask(join)
     gp = green_pile.pile_status(join)
+    if as_of:
+        from . import book_era
+        if not book_era.live(date, "green_pile"):
+            gp = dict(gp)
+            gp["used"] = False
+            gp["buy_mode"] = "weighted_as_of"
+            gp["reason"] = (
+                f"as-of {date}: green pile not live — weighted walk"
+            )
     print(f"[stock-book] green-pile {gp['reason']}")
 
     # ---- resolve weights: learned policy (bounded) → renorm over present families ----
@@ -1021,6 +1041,7 @@ def build(date: str | None = None, top_n: int = 25) -> tuple[pd.DataFrame, dict]
         "pile_used": gp.get("used"),
         "green_min": gp.get("min", 8),
         "ranker": "green_pile" if gp.get("used") else "weighted",
+        "as_of": bool(as_of),
         "general_direction": str((gen_run or {}).get("predicted_direction") or ""),
         "market_decision": (
             (lattice_context or {}).get("market")
@@ -1256,7 +1277,7 @@ def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
 
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
               buy_mask=None, buy_sort=None, allow_empty=False,
-              sell_mask=None, sell_sort=None):
+              sell_mask=None, sell_sort=None, respect_mask=False):
     """Prefer liquid mid/small. Cap large+mega. Skip sub-$400M micros on the BUY side.
 
     BUY fills from buy_mask (green pile) when it is thick enough; otherwise the
@@ -1275,6 +1296,16 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             masked = df
         if masked is not None and len(masked):
             pool = masked
+            if respect_mask:
+                sort_col = (
+                    buy_sort if buy_sort and buy_sort in pool.columns
+                    else f"score_{horizon}"
+                )
+                buys = pool.sort_values(sort_col, ascending=False)
+                return buys, _rank_sells(
+                    df, horizon, top_n, sell_core,
+                    sell_mask=sell_mask, sell_sort=sell_sort,
+                )
         elif allow_empty:
             return df.head(0), _rank_sells(
                 df, horizon, top_n, sell_core,
@@ -1353,7 +1384,8 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
 
 def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
                  sell_core: bool = True, buy_mask=None, buy_sort=None,
-                 allow_empty=False, sell_mask=None, sell_sort=None):
+                 allow_empty=False, sell_mask=None, sell_sort=None,
+                 respect_mask=False):
     if "size" not in df.columns:
         return None, None
     sub = df[df["size"].astype(str).str.lower().isin(SIZE_BUCKETS[bucket])]
@@ -1374,7 +1406,7 @@ def _bucket_side(df: pd.DataFrame, horizon: str, bucket: str, n: int = 8,
     return _book_side(sub, horizon, min(n, max(1, len(sub) // 2)),
                       sell_core=sell_core, buy_mask=sub_mask, buy_sort=buy_sort,
                       allow_empty=allow_empty, sell_mask=sub_sell_mask,
-                      sell_sort=sell_sort)
+                      sell_sort=sell_sort, respect_mask=respect_mask)
 
 
 def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
@@ -1940,10 +1972,11 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                 "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
                 "buy_sort": "bull_rank",
                 "allow_empty": True,
+                "respect_mask": True,
                 "sell_mask": df["bear_eligible"].astype(bool),
                 "sell_sort": "bear_rank",
                 "ranker": "decision_lattice",
-                "top_n": top_n,
+                "top_n": slots or top_n,
             }
         if horizon == "1d" and sd.get("stand_down"):
             return {
@@ -1993,7 +2026,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                           buy_sort=pick["buy_sort"],
                           allow_empty=pick["allow_empty"],
                           sell_mask=pick["sell_mask"],
-                          sell_sort=pick["sell_sort"])
+                          sell_sort=pick["sell_sort"],
+                          respect_mask=bool(pick.get("respect_mask")))
         entry = {
             "buy": [_row_dict(r, h, "buy") for _, r in b.iterrows()],
             "sell": [_row_dict(r, h, "sell") for _, r in s.iterrows()],
@@ -2014,7 +2048,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                                   buy_mask=bmask, buy_sort=pick["buy_sort"],
                                   allow_empty=pick["allow_empty"],
                                   sell_mask=smask,
-                                  sell_sort=pick["sell_sort"])
+                                  sell_sort=pick["sell_sort"],
+                                  respect_mask=bool(pick.get("respect_mask")))
             if bb is not None:
                 entry["buy_by_size"][bucket] = [_row_dict(r, h, "buy") for _, r in bb.iterrows()]
                 entry["sell_by_size"][bucket] = [_row_dict(r, h, "sell") for _, r in ss.iterrows()]
@@ -2147,7 +2182,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
                                 buy_sort=pick["buy_sort"],
                                 allow_empty=pick["allow_empty"],
                                 sell_mask=pick["sell_mask"],
-                                sell_sort=pick["sell_sort"])
+                                sell_sort=pick["sell_sort"],
+                                respect_mask=bool(pick.get("respect_mask")))
         empty_why = (
             (meta.get("stand_down") or {}).get("reason")
             if (meta.get("stand_down") or {}).get("stand_down")
@@ -2231,8 +2267,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--top", type=int, default=25)
+    ap.add_argument("--as-of", dest="as_of", action="store_true",
+                    help="Use the ranker that was live on --date "
+                         "(weighted / green-pile / lattice)")
     args = ap.parse_args()
-    df, meta = build(args.date, top_n=args.top)
+    df, meta = build(args.date, top_n=args.top, as_of=args.as_of)
     write_report(df, meta, top_n=args.top)
 
 

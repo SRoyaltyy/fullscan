@@ -230,6 +230,8 @@ def test_audit_live_days():
     assert "Pre-Open ALL" in md
     assert "Today's actions" in md
     assert "ACTION BUY" in md or "**BUY**" in md
+    assert "Top gainers" in md
+    assert "join" in md and "sect" in md
     assert "Dashboard / .io" in md
     assert "⬜ MISSING" in md or "MISSING" in md
 
@@ -247,8 +249,11 @@ def test_decisions_trace_to_inputs():
     sells = dec["horizons"]["1d"]["sell"]
     assert len(sells) >= 10
     assert dec["market"]["state"] == "hard_red"
-    assert dec["intentional_stand_down"] is True
     assert len(dec["bull_watch"]) >= 10
+    # HARD_RED may still list probable longs; empty BUY is only a stand-down
+    # when nothing clocked.
+    if not buys:
+        assert dec["intentional_stand_down"] is True
     top = buys[0] if buys else sells[0]
     assert top["ticker"]
     assert top["rank"] == 1
@@ -274,12 +279,29 @@ def test_decisions_trace_to_inputs():
     assert "ACTIONS" in banner
     assert "MARKET HARD_RED" in banner
     assert "BULL DECISIONS" in banner
-    assert "(none)" in banner
     assert "ACTION SELL" in banner
+    assert "source boxes: join · sect · gen · news · dig · jdg · AB · peer · heat · vol · cat · buy" in banner
+    if buys:
+        assert "ACTION BUY" in banner
+        assert top["ticker"] in banner
+        assert "join" in banner
+        assert "sect" in banner
+    else:
+        assert "(none)" in banner
     act_md = "\n".join(render_actions_markdown(dec))
     assert top["ticker"] in act_md
     assert "Bull decisions" in act_md
     assert "Market gate" in act_md
+    assert "| # | Ticker | Source boxes | Domains |" in act_md
+    watch = dec["bull_watch"][0]
+    assert set(watch["boxes"]) == set(BOX_KEYS)
+    assert "join" in (watch.get("boxes") or {})
+    from src.stock_book_diag_signals import labeled_source_boxes
+    labeled = labeled_source_boxes(top["boxes"])
+    assert labeled.startswith("join")
+    assert "sect" in labeled
+    assert labeled in banner
+    assert labeled in act_md
     md = "\n".join(__import__(
         "src.stock_book_diag_signals", fromlist=["render_decisions_markdown"]
     ).render_decisions_markdown(dec))
@@ -292,12 +314,23 @@ def test_workflow_yaml_is_read_only():
     text = WF.read_text(encoding="utf-8")
     assert "name: Stock Book readiness" in text
     assert "src.stock_book_diag" in text
+    assert "--as-of" in text
+    assert "--rebuild-if-missing" in text
     assert "self-hosted" not in text
     assert "contents: read" in text
     assert "workflow_dispatch" in text
     # Must not dispatch or heal other jobs.
     assert "gh workflow run" not in text
     assert "GROK_ONLY" not in text
+
+
+def test_action_ok_historical_and_today():
+    d13 = diag.audit("2026-08-13", gh_runs={})
+    assert d13.ranker_ready is True
+    assert diag.action_ok(d13) is True
+    d31 = diag.audit("2026-08-31", gh_runs={})
+    assert d31.decisions.get("market", {}).get("state") == "hard_red"
+    assert diag.action_ok(d31) is True
 
 
 def test_render_json_roundtrip():
@@ -348,6 +381,7 @@ if __name__ == "__main__":
     _run(test_decisions_trace_to_inputs)
     _run(test_audit_live_days)
     _run(test_workflow_yaml_is_read_only)
+    _run(test_action_ok_historical_and_today)
     _run(test_render_json_roundtrip)
     print(f"{passed} passed, {failed} failed")
     raise SystemExit(1 if failed else 0)

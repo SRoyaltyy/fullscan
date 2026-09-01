@@ -1,0 +1,116 @@
+name: Top Gainer As-Of
+
+# For every session since the dashboard start, take realized gainers
+# at/above a Change% floor (default 5%) and color the 12 golden boxes
+# from the 09:30 ET packet. Same-day RelVol and same-day stock book
+# never color a cell.
+#
+# This is not Stock Book Backtest (that grades the book's own picks)
+# and not Ticker Lookback (that is one name at a time).
+#
+# Code comes from the ref that triggered the run. Daily artifacts are
+# overlaid from main so the walk sees the live tape.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = latest tape)"
+        required: false
+        default: ""
+      min_change:
+        description: "Minimum session Change% (default 5 = every gainer ≥5%)"
+        required: false
+        default: "5"
+      liquid:
+        description: "Only mcap ≥ $500M and adv ≥ 500k (skip penny spikes)"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: gainer-asof
+  cancel-in-progress: true
+
+jobs:
+  walk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Overlay live daily files from main
+        run: |
+          git fetch origin main --depth=1
+          git checkout origin/main -- 01_daily data \
+            || echo "overlay skipped (already on main or paths missing)"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pandas pyarrow
+
+      - name: Walk every gainer at/above the floor
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+          MIN_CHANGE: ${{ inputs.min_change }}
+          LIQUID: ${{ inputs.liquid }}
+        run: |
+          set -euo pipefail
+          FROM_DATE="${FROM_DATE:-2026-08-13}"
+          MIN_CHANGE="${MIN_CHANGE:-5}"
+          ARGS=(--from "$FROM_DATE" --min-change "$MIN_CHANGE" --all --write)
+          [ -n "${TO_DATE:-}" ] && ARGS+=(--to "$TO_DATE")
+          if [ "${LIQUID}" = "false" ]; then
+            ARGS+=(--no-liquid)
+          fi
+          python -m src.gainer_asof "${ARGS[@]}" | tee /tmp/gainer-asof.md
+          test -s 03_scoreboard/TOP_GAINER_ASOF.md
+          test -s 03_scoreboard/top_gainer_asof.json
+
+      - name: Show hit-rate table
+        if: always()
+        run: |
+          echo "======== TOP GAINER AS-OF ========"
+          if [ -f 03_scoreboard/TOP_GAINER_ASOF.md ]; then
+            awk '/^# Top gainers/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF.md
+          else
+            echo "NO SCOREBOARD — walk did not write"
+          fi
+
+      - name: Upload scoreboard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: top-gainer-asof
+          path: |
+            03_scoreboard/TOP_GAINER_ASOF.md
+            03_scoreboard/top_gainer_asof.json
+
+      - name: Add links to run summary
+        if: always()
+        run: |
+          {
+            echo "## Top Gainer As-Of"
+            echo
+            echo "Every realized gainer ≥ ${{ inputs.min_change }}% since ${{ inputs.from_date }} (as-of 09:30 ET boxes)."
+            echo
+            echo "Download the **top-gainer-asof** artifact for the full per-name table."
+            echo
+            if [ -f 03_scoreboard/TOP_GAINER_ASOF.md ]; then
+              awk '/^## Hit rate/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

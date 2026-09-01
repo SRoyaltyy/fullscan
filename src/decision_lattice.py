@@ -230,16 +230,18 @@ def evaluate_market(
     )
     if hard_red:
         state, tone = "hard_red", "bad"
-        max_longs, scale = 2, 0.25
-        allowed = ["catalyst_exception"]
+        # Still publish the best longs the lattice + lookback can clock.
+        # Size stays quartered; paper should not treat these as full-risk.
+        max_longs, scale = 10, 0.25
+        allowed = ["catalyst_exception", "probable"]
     elif hard_green:
         state, tone = "green", "good"
         max_longs, scale = 15, 1.0
         allowed = ["standard", "group_leader", "catalyst"]
     elif direction == "down" and (risk == "off" or total <= -1.0):
         state, tone = "red", "bad"
-        max_longs, scale = 4, 0.35
-        allowed = ["group_leader", "catalyst"]
+        max_longs, scale = 8, 0.35
+        allowed = ["group_leader", "catalyst", "probable"]
     elif direction == "up" and risk != "off":
         state, tone = "green", "good"
         max_longs, scale = 15, 1.0
@@ -992,11 +994,16 @@ def finalize_decisions(
         domains = {key: str(row.get(f"d_{key}") or "missing")
                    for key in DOMAIN_KEYS}
         blue, alarm = _change_marks(domains, previous.get(ticker))
-        legacy_vetoes = _legacy_vetoes(row)
+        lookback_vetoes = _legacy_vetoes(row)
         if alarm:
-            legacy_vetoes.append("v2 domain alarm")
+            lookback_vetoes.append("v2 domain alarm")
+        # Domain-region red is almost automatic on HARD_RED (market is red
+        # for everyone). Keep it as a veto for ordinary lanes, not for a
+        # company-news / lookback-clocked probable long.
+        region_veto = []
         if str(row.get("domain_region") or "") == "bad":
-            legacy_vetoes.append("v2 domain region red")
+            region_veto.append("v2 domain region red")
+        legacy_vetoes = lookback_vetoes + region_veto
         quality_ok = not legacy_vetoes
 
         direct = bool(row.get("company_direct"))
@@ -1035,12 +1042,85 @@ def finalize_decisions(
             and domains["flow"] != "bad"
             and quality_ok
         )
+        # Most-probable long: the new method still clocks a name when the
+        # tape is hostile if company news, child/theme outperformance, or
+        # lookback blue/white fire — and the original alarm/fade/Cond/region
+        # evaluator has not vetoed it.
+        # Original lookback evaluator only — domain_name_white is too easy
+        # on a HARD_RED day (market is red for everyone).
+        white = bool(row.get("lb_zero_red"))
+        blue_mark = bool(row.get("lb_blue") or blue)
+        child_outperform = (
+            str(row.get("child_abs_tone")) == "good"
+            or str(row.get("child_rel_tone")) == "good"
+        )
+        child_strong = (
+            _num(row.get("child_w1")) >= GROUP_ABS_WEEK
+            or _num(row.get("child_residual")) >= GROUP_RESIDUAL
+        )
+        company_clock = (
+            domains["company"] == "good"
+            and (
+                (direct and bool(row.get("company_fresh"))
+                 and company_strength >= 0.48)
+                or company_strength >= DIRECT_EVENT_MIN
+            )
+        )
+        group_clock = (
+            str(row.get("child_abs_tone")) == "good"
+            and str(row.get("child_rel_tone")) == "good"
+            and child_strong
+            and domains["setup"] == "good"
+            and domains["flow"] != "bad"
+            and domains["company"] != "bad"
+            # Industry tape alone is not a long. Need a name-level clock
+            # (company news, peer RS, or lookback blue) so HARD_RED does
+            # not mint a long for every name in a hot child.
+            and (
+                domains["company"] == "good"
+                or _num(row.get("s_peer")) >= 0.05
+                or bool(row.get("lb_blue") or blue)
+            )
+        )
+        marks_clock = (
+            (white or blue_mark)
+            and domains["setup"] == "good"
+            and domains["child"] != "bad"
+            and domains["company"] != "bad"
+        )
+        probable = bool(
+            not lookback_vetoes
+            and domains["setup"] != "bad"
+            and (company_clock or group_clock or marks_clock)
+        )
+        clocks: list[str] = []
+        if company_clock:
+            clocks.append(
+                "company news "
+                + ("fresh " if row.get("company_fresh") else "")
+                + f"({company_strength:.2f})"
+            )
+        if group_clock:
+            clocks.append(
+                f"child/theme outperform "
+                f"{_num(row.get('child_w1')):+.1f}% 1w / "
+                f"{_num(row.get('child_residual')):+.1f}% rel"
+            )
+        if marks_clock:
+            bits = []
+            if blue_mark:
+                bits.append("🔵 blue")
+            if white:
+                bits.append("⚪ white")
+            clocks.append("lookback " + (",".join(bits) or "marks"))
 
         lane = "blocked"
         eligible = False
         if state == "hard_red":
             if hard_red_catalyst:
                 lane, eligible = "catalyst_exception", True
+            elif probable:
+                lane, eligible = "probable", True
         elif state == "red":
             if catalyst and confirmed:
                 lane, eligible = "catalyst", True
@@ -1049,6 +1129,8 @@ def finalize_decisions(
                 or _num(row.get("gap_pct")) >= PRICE_CONFIRM_PCT
             ):
                 lane, eligible = "group_leader", True
+            elif probable:
+                lane, eligible = "probable", True
         else:
             if catalyst:
                 lane, eligible = "catalyst", True
@@ -1056,12 +1138,18 @@ def finalize_decisions(
                 lane, eligible = "group_leader", True
             elif standard:
                 lane, eligible = "standard", True
+            elif probable:
+                lane, eligible = "probable", True
 
         blockers: list[str] = []
-        if state == "hard_red" and not hard_red_catalyst:
-            blockers.append("HARD_RED market closes ordinary/group longs")
-        elif state == "red" and not (catalyst or group_leader):
-            blockers.append("RED market requires a confirmed catalyst or group leader")
+        if state == "hard_red" and not (hard_red_catalyst or probable):
+            blockers.append(
+                "HARD_RED: no company / child-outperform / lookback clock"
+            )
+        elif state == "red" and not (catalyst or group_leader or probable):
+            blockers.append(
+                "RED market: no confirmed catalyst, group leader, or probable clock"
+            )
         if domains["parent"] == "bad":
             blockers.append("parent sector RED")
         if domains["child"] == "bad":
@@ -1091,8 +1179,23 @@ def finalize_decisions(
             f"flow={_tone_label(domains['flow'])}",
         ]
         if eligible:
-            bull_decision = (
-                f"BUY {lane.upper()} — " + "; ".join(bull_parts)
+            mark_bits = []
+            if blue_mark:
+                mark_bits.append("🔵")
+            if white:
+                mark_bits.append("⚪")
+            if str(row.get("lb_cond") or "") == "good":
+                mark_bits.append("Cond green")
+            prefix = f"BUY {lane.upper()}"
+            if lane == "probable":
+                prefix += (
+                    " — most-probable long on "
+                    f"{state.upper()} (size ×{float(market.get('position_scale') or 0.25):.2f})"
+                )
+                if clocks:
+                    prefix += "; clocks: " + "; ".join(clocks)
+            bull_decision = prefix + " — " + "; ".join(
+                bull_parts + (["lookback=" + ",".join(mark_bits)] if mark_bits else [])
             )
         else:
             bull_decision = (
@@ -1142,8 +1245,9 @@ def finalize_decisions(
             "catalyst": 3.0,
             "group_leader": 2.0,
             "standard": 1.0,
+            "probable": 0.8,
             "blocked": 0.0,
-        }[lane]
+        }.get(lane, 0.0)
         bull_rank = (
             (10.0 if eligible else 0.0)
             + lane_bonus
@@ -1153,6 +1257,11 @@ def finalize_decisions(
             + _num(row.get("flow_strength"))
             + domain_good * 0.20
             - domain_bad * 0.35
+            + (0.80 if blue_mark else 0.0)
+            + (0.50 if white else 0.0)
+            + (0.30 if str(row.get("lb_cond") or "") == "good" else 0.0)
+            - (1.50 if bool(row.get("lb_alarm")) else 0.0)
+            + (2.50 if company_clock and bool(row.get("company_fresh")) else 0.0)
         )
         bear_rank = (
             (10.0 if bear_eligible else 0.0)
@@ -1207,6 +1316,11 @@ def _watch_row(row: pd.Series) -> dict:
         "child_residual": _num(row.get("child_residual")),
         "bull_decision": row.get("bull_decision"),
         "bear_decision": row.get("bear_decision"),
+        "blue": bool(row.get("lb_blue") or row.get("domain_blue")),
+        "white": bool(row.get("lb_zero_red") or row.get("domain_name_white")),
+        "alarm": bool(row.get("lb_alarm") or row.get("domain_alarm")),
+        "cond": row.get("lb_cond") or row.get("domain_cond"),
+        "region": row.get("lb_region") or row.get("domain_region"),
     }
 
 
@@ -1220,32 +1334,23 @@ def summarize(df: pd.DataFrame, context: dict, top_n: int = 15) -> dict:
             "bull_watch": [],
             "bear_watch": [],
         }
-    # A hard-red board must show every fresh direct-company case even when
-    # hostile group/setup evidence pushes it below a relative-strength name.
-    # Otherwise AMGN-like events disappear from the very audit meant to
-    # explain why they were rejected.
+    # Same-day company clocks first so AMGN-style events cannot be buried
+    # under a sea of blue / group-tape names, then fill by bull_rank.
     ordered_idx: list[Any] = []
-    tiers = [
-        df.loc[df["bull_eligible"].astype(bool)].sort_values(
-            "bull_rank", ascending=False
-        ),
-        df.loc[
-            df["company_fresh"].astype(bool)
-            & df["company_direct"].astype(bool)
-            & (pd.to_numeric(
-                df["company_strength"], errors="coerce"
-            ).fillna(0.0) >= DIRECT_EVENT_MIN)
-        ].sort_values(
-            ["company_strength", "bull_rank"], ascending=False
-        ),
-        df.sort_values("bull_rank", ascending=False),
-    ]
-    for tier in tiers:
-        for idx in tier.index:
-            if idx not in ordered_idx:
-                ordered_idx.append(idx)
-            if len(ordered_idx) >= top_n:
-                break
+    company_first = df.loc[
+        df["company_fresh"].astype(bool)
+        & df["company_direct"].astype(bool)
+        & (pd.to_numeric(df["company_strength"], errors="coerce").fillna(0.0)
+           >= DIRECT_EVENT_MIN)
+    ].sort_values(
+        ["bull_eligible", "company_strength", "bull_rank"],
+        ascending=False,
+    )
+    for idx in company_first.head(5).index:
+        ordered_idx.append(idx)
+    for idx in df.sort_values("bull_rank", ascending=False).index:
+        if idx not in ordered_idx:
+            ordered_idx.append(idx)
         if len(ordered_idx) >= top_n:
             break
     bull = df.loc[ordered_idx]
@@ -1257,12 +1362,16 @@ def summarize(df: pd.DataFrame, context: dict, top_n: int = 15) -> dict:
     stand_down = (
         str(market.get("state")) == "hard_red" and n_eligible == 0
     )
+    n_probable = int(
+        (df["decision_lane"].astype(str) == "probable").sum()
+    ) if "decision_lane" in df.columns else 0
     reason = (
-        f"{market.get('rationale')}; no confirmed direct-company exception"
+        f"{market.get('rationale')}; no company / child / lookback clock"
         if stand_down
         else (
             f"{n_eligible} names qualified through "
             f"{','.join(market.get('allowed_lanes') or [])}"
+            + (f" ({n_probable} probable)" if n_probable else "")
         )
     )
     return {

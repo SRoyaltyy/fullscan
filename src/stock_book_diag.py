@@ -17,6 +17,7 @@ reported separately so a blocked job is obvious.
 
 CLI:
   python -m src.stock_book_diag [--date YYYY-MM-DD] [--write]
+                               [--as-of|--strict] [--rebuild-if-missing]
 """
 from __future__ import annotations
 
@@ -32,7 +33,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, output_qc
+from . import book_era, config, output_qc
 from . import stock_book_diag_signals as signals
 from .sector_taxonomy import FINVIZ_SECTORS
 
@@ -55,8 +56,8 @@ class FileCheck:
     key: str
     name: str
     path: str
-    role: str  # required | optional | input
-    status: str  # OK | FAIL | MISSING
+    role: str  # required | optional | input | era
+    status: str  # OK | FAIL | MISSING | SKIP
     reason: str = ""
     size: int = 0
     source: str = ""
@@ -95,6 +96,8 @@ class Report:
     blockers: list[str] = field(default_factory=list)
     decisions: dict = field(default_factory=dict)
     pages: dict = field(default_factory=dict)
+    era: dict = field(default_factory=dict)
+    rebuilt: bool = False
 
 
 # ---------------------------------------------------------------------------
@@ -514,7 +517,7 @@ def _file(key: str, name: str, rel: str, role: str, kind: str,
     }
 
 
-def workflow_specs(date: str) -> list[dict]:
+def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
     heat = f"01_daily/map_heat/{date}"
     news = f"01_daily/news/{date}"
     ev = f"01_daily/events/{date}"
@@ -529,7 +532,7 @@ def workflow_specs(date: str) -> list[dict]:
               f"{sec}/{slug}_predict.md", "required", "sector_predict")
         for slug in SECTOR_SLUGS
     ]
-    return [
+    specs = [
         {
             "key": "postclose",
             "name": "Post-close research",
@@ -699,12 +702,16 @@ def workflow_specs(date: str) -> list[dict]:
             ],
         },
     ]
+    if as_of:
+        return book_era.apply_era(specs, date)
+    return specs
 
 
 def aggregate_status(files: list[FileCheck]) -> tuple[str, bool, int, int, int, int]:
     req = [f for f in files if f.role == "required"]
     opt = [f for f in files if f.role == "optional"]
     inp = [f for f in files if f.role == "input"]
+    # role=era files are pre-pipeline for this date. They never block.
     n_req_ok = sum(1 for f in req if f.status == "OK")
     n_opt_ok = sum(1 for f in opt if f.status == "OK")
     inputs_ready = all(f.status == "OK" for f in inp) if inp else True
@@ -730,12 +737,27 @@ def aggregate_status(files: list[FileCheck]) -> tuple[str, bool, int, int, int, 
 
 def _check_file(spec: dict, date: str) -> FileCheck:
     path = _p(spec["rel"])
+    role = spec["role"]
+    if role == "era":
+        if not path.exists() and spec.get("kind") != "pages_live":
+            start = spec.get("era_start") or ""
+            feature = spec.get("era_feature") or spec["key"]
+            return FileCheck(
+                key=spec["key"],
+                name=spec["name"],
+                path=spec["rel"],
+                role=role,
+                status="SKIP",
+                reason=f"not in pipeline as of {date} (first {feature} {start})",
+                size=0,
+                source=spec.get("source") or "",
+            )
     status, reason, size = inspect_kind(spec["kind"], path, date)
     return FileCheck(
         key=spec["key"],
         name=spec["name"],
         path=spec["rel"],
-        role=spec["role"],
+        role=role,
         status=status,
         reason=reason,
         size=size,
@@ -743,9 +765,10 @@ def _check_file(spec: dict, date: str) -> FileCheck:
     )
 
 
-def audit(date: str, gh_runs: dict[str, dict] | None = None) -> Report:
+def audit(date: str, gh_runs: dict[str, dict] | None = None,
+          as_of: bool = True) -> Report:
     workflows: list[WorkflowCheck] = []
-    for spec in workflow_specs(date):
+    for spec in workflow_specs(date, as_of=as_of):
         files = [_check_file(f, date) for f in spec["files"]]
         status, ready, n_ok, n_req, n_opt_ok, n_opt = aggregate_status(files)
         workflows.append(WorkflowCheck(
@@ -763,15 +786,26 @@ def audit(date: str, gh_runs: dict[str, dict] | None = None) -> Report:
         ))
 
     book = next(w for w in workflows if w.key == "stock_book")
-    ranker_ready = all(
+    book_json = next((f for f in book.files if f.key == "book_json"), None)
+    book_written = bool(book_json and book_json.status == "OK")
+    era_inputs_ok = all(
         f.status == "OK" for f in book.files if f.role == "input"
     )
+    # A book that already exists was produced with that day's packet.
+    # Do not treat later-era files (Judge, digest, AB, peers) as blockers.
+    historical = date < book_era.today_et()
+    ranker_ready = era_inputs_ok or (historical and book_written)
     blockers = []
     for f in book.files:
         if f.role != "input" or f.status == "OK":
             continue
         src = f" (from {f.source})" if f.source else ""
         blockers.append(f"{f.status} {f.name} `{f.path}`{src} — {f.reason or f.status}")
+    if historical and book_written:
+        blockers = [
+            b + " (as-of: ignored — book already written that day)"
+            for b in blockers
+        ]
 
     flags = [w.status for w in workflows]
     if all(s == "OK" for s in flags):
@@ -784,6 +818,9 @@ def audit(date: str, gh_runs: dict[str, dict] | None = None) -> Report:
         overall = "FAIL"
 
     decisions = signals.extract_decisions(date)
+    era = (decisions or {}).get("era") or book_era.describe(
+        date, book_era.load_book_meta(date),
+    )
     pub = next((w for w in workflows if w.key == "publish"), None)
     pages = {
         "local": next((asdict(f) for f in (pub.files if pub else [])
@@ -802,6 +839,7 @@ def audit(date: str, gh_runs: dict[str, dict] | None = None) -> Report:
         blockers=blockers,
         decisions=decisions,
         pages=pages,
+        era=era,
     )
 
 
@@ -858,7 +896,7 @@ def fetch_gh_runs(date: str) -> dict[str, dict]:
 # ---------------------------------------------------------------------------
 
 _MARK = {"OK": "✅ OK", "PARTIAL": "⚠️ PARTIAL", "FAIL": "❌ FAIL"}
-_FILE_MARK = {"OK": "✅", "FAIL": "❌", "MISSING": "⬜"}
+_FILE_MARK = {"OK": "✅", "FAIL": "❌", "MISSING": "⬜", "SKIP": "➖"}
 
 
 def _gh_cell(run: dict | None) -> str:
@@ -885,6 +923,17 @@ def render_markdown(report: Report) -> str:
         "",
     ]
     lines += signals.render_actions_markdown(report.decisions)
+    try:
+        from . import gainer_asof
+        lines += gainer_asof.render_day_markdown(report.date)
+    except Exception as e:  # noqa: BLE001
+        lines += [
+            "",
+            f"### Top gainers — as-of 09:30 on {report.date}",
+            "",
+            f"_walk failed: {e}_",
+            "",
+        ]
     lines += [
         "FAIL = empty, truncated, carry-forward, timeout stub, or QC fail. "
         "PARTIAL = some required outputs are good, others are not. "
@@ -917,7 +966,12 @@ def render_markdown(report: Report) -> str:
             "|---|---|---|---|",
         ]
         for f in w.files:
-            need = f.role if f.role != "input" else f"input ← {f.source or '?'}"
+            if f.role == "era":
+                need = "era (not in pipeline yet)"
+            elif f.role == "input":
+                need = f"input ← {f.source or '?'}"
+            else:
+                need = f.role
             detail = (f.reason or "").replace("|", "/")
             lines.append(
                 f"| `{f.path}` | {need} | "
@@ -932,7 +986,17 @@ def render_text(report: Report) -> str:
     lines = [
         signals.render_actions_plain(report.decisions).rstrip(),
         "",
-        f"[stock-book-diag] {report.date}  ranker={rank}  overall={report.overall}",
+    ]
+    try:
+        from . import gainer_asof
+        gainer_txt = "\n".join(gainer_asof.render_day_markdown(report.date)).rstrip()
+        if gainer_txt:
+            lines += [gainer_txt, ""]
+    except Exception as e:  # noqa: BLE001
+        lines += [f"[gainer-asof] walk failed: {e}", ""]
+    lines += [
+        f"[stock-book-diag] {report.date}  ranker={rank}  overall={report.overall}"
+        f"  method={((report.era or {}).get('method') or '?')}",
     ]
     for w in report.workflows:
         inputs = "ready" if w.inputs_ready else "blocked"
@@ -942,9 +1006,7 @@ def render_text(report: Report) -> str:
             f"required={req}"
         )
         for f in w.files:
-            if f.status == "OK" and f.role != "input":
-                continue
-            if f.status == "OK":
+            if f.status in ("OK", "SKIP"):
                 continue
             lines.append(f"           {f.explain()}")
     if report.blockers:
@@ -962,6 +1024,8 @@ def report_to_json(report: Report) -> dict:
         "overall": report.overall,
         "blockers": report.blockers,
         "pages": report.pages,
+        "era": report.era,
+        "rebuilt": report.rebuilt,
         "decisions": report.decisions,
         "workflows": [
             {
@@ -1005,6 +1069,45 @@ def today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
+def _rebuild_as_of(date: str) -> bool:
+    """Replay the ranker with the method that was live on `date`."""
+    from . import stock_book
+    print(f"[stock-book-diag] rebuilding {date} with as-of method "
+          f"{book_era.method_for(date)}")
+    df, meta = stock_book.build(date, as_of=True)
+    stock_book.write_report(df, meta, top_n=int(meta.get("top_n") or 25))
+    return True
+
+
+def action_ok(report: Report) -> bool:
+    """Exit status for the Action.
+
+    Today: ranker ready + book OK + names (or HARD_RED stand-down);
+    live .io must not be FAIL.
+
+    Historical: the book that was written that day is enough. Missing
+    later-era files and a live .io that no longer lists the session
+    do not refuse the run.
+    """
+    book = next(w for w in report.workflows if w.key == "stock_book")
+    pub = next((w for w in report.workflows if w.key == "publish"), None)
+    names = ((report.decisions or {}).get("horizons") or {}).get("1d") or {}
+    has_names = bool(names.get("buy") or names.get("sell"))
+    intentional_stand_down = bool(
+        (report.decisions or {}).get("intentional_stand_down")
+    )
+    actionable = has_names or intentional_stand_down
+    book_json = next((f for f in book.files if f.key == "book_json"), None)
+    book_written = bool(book_json and book_json.status == "OK")
+    historical = report.date < today()
+    if historical:
+        return book_written and actionable
+    ok = report.ranker_ready and book.status == "OK" and actionable
+    if pub and pub.status == "FAIL":
+        ok = False
+    return ok
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default="", help="session YYYY-MM-DD (default today ET)")
@@ -1012,34 +1115,48 @@ def main() -> None:
                     help="Write 01_daily/<date>_stock_book_diag.md|json")
     ap.add_argument("--no-gh", action="store_true",
                     help="Skip GitHub Actions run lookup")
+    ap.add_argument("--as-of", dest="as_of", action="store_true",
+                    default=True,
+                    help="Use the input contract and ranker live on --date "
+                         "(default). Historical missing files are era-skip.")
+    ap.add_argument("--strict", dest="as_of", action="store_false",
+                    help="Score today-era required files even on old dates")
+    ap.add_argument("--rebuild-if-missing", action="store_true",
+                    help="If this date has join but no book, replay the "
+                         "as-of ranker so the Action still prints names")
     args = ap.parse_args()
     date = args.date or today()
+    rebuilt = False
+    if args.rebuild_if_missing and not book_era.book_exists(date):
+        if book_era.join_exists(date):
+            try:
+                rebuilt = _rebuild_as_of(date)
+            except SystemExit as e:
+                print(f"[stock-book-diag] as-of rebuild aborted: {e}")
+            except Exception as e:  # noqa: BLE001
+                print(f"[stock-book-diag] as-of rebuild failed: {e}")
+        else:
+            print(f"[stock-book-diag] no join for {date} — cannot rebuild")
     gh = {} if args.no_gh else fetch_gh_runs(date)
-    report = audit(date, gh_runs=gh)
+    report = audit(date, gh_runs=gh, as_of=args.as_of)
+    report.rebuilt = rebuilt
     print(render_text(report))
     signals.emit_action_notices(report.decisions)
     if args.write:
         md, js = write_report(report)
         print(f"[stock-book-diag] wrote {md}")
         print(f"[stock-book-diag] wrote {js}")
+        try:
+            from . import gainer_asof
+            gmd, gjs = gainer_asof.write_scoreboard(
+                gainer_asof.walk(from_date=book_era.DASHBOARD_START, force=True)
+            )
+            print(f"[stock-book-diag] wrote {gmd}")
+            print(f"[stock-book-diag] wrote {gjs}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[stock-book-diag] gainer as-of walk failed: {e}")
     emit_github_summary(report)
-    # Fail the Action unless the ranker can run and Stock Book itself is OK.
-    # PARTIAL/FAIL upstream is a red X so it is obvious in GitHub.
-    book = next(w for w in report.workflows if w.key == "stock_book")
-    pub = next((w for w in report.workflows if w.key == "publish"), None)
-    names = ((report.decisions or {}).get("horizons") or {}).get("1d") or {}
-    has_names = bool(names.get("buy"))
-    intentional_stand_down = bool(
-        (report.decisions or {}).get("intentional_stand_down")
-    )
-    # An explicit HARD_RED no-BUY is a valid action, not a broken ranker.
-    # The report still fails if the book itself is empty (no SELL/AVOID names)
-    # or required ranker inputs are unavailable.
-    actionable = has_names or intentional_stand_down
-    ok = report.ranker_ready and book.status == "OK" and actionable
-    if pub and pub.status == "FAIL":
-        ok = False
-    raise SystemExit(0 if ok else 1)
+    raise SystemExit(0 if action_ok(report) else 1)
 
 
 if __name__ == "__main__":
