@@ -1,11 +1,11 @@
 {
   "status": "needs_reauth",
-  "oauth": "FAIL",
+  "oauth": "WARN",
   "pong_ok": null,
-  "reason": "device login did not finish rc=124",
+  "reason": "Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fallbacks (0) : - Image model   : - Image f",
   "user_code": null,
   "verification_uri": "https://accounts.x.ai/oauth2/device",
   "expires_at": null,
   "source": "xai_device_reauth",
-  "updated_at": "2026-08-31T20:10:31.627102-04:00"
+  "updated_at": "2026-09-01T00:58:51.598538-04:00"
 }
