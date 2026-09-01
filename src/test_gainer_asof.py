@@ -186,6 +186,10 @@ def test_cli_accepts_sells_and_losers():
     off = p.parse_args(["--no-sells", "--no-losers"])
     assert off.sells is False
     assert off.losers is False
+    lag = p.parse_args(["--snapshots", "1,2", "--horizon", "3", "--write-suffix", "LAG3D"])
+    assert lag.snapshots == "1,2"
+    assert lag.horizon == 3
+    assert lag.write_suffix == "LAG3D"
 
 
 def test_day_walk_carries_hall_pass_and_sides():
@@ -242,6 +246,49 @@ def test_pre_lattice_hall_pass_is_grey_not_blocked():
     assert "Hall pass" in md
 
 
+def test_session_lags_are_prior_trading_days():
+    idx = tl.build_index()
+    assert gainer_asof.session_at_lag(idx, "2026-08-14", 0)["date"] == "2026-08-14"
+    assert gainer_asof.session_at_lag(idx, "2026-08-14", 1)["date"] == "2026-08-13"
+    # 8/17 is Monday; two sessions back is 8/13
+    two = gainer_asof.session_at_lag(idx, "2026-08-17", 2)
+    assert two and two["date"] == "2026-08-13"
+    assert gainer_asof.parse_lags("1,2") == (1, 2)
+    assert gainer_asof.lag_label(1) == "D-1"
+
+
+def test_lag3d_uses_prior_snapshots_and_3d_price():
+    day = gainer_asof.day_walk(
+        "2026-08-14", include_buys=True, include_sells=False,
+        include_losers=False, top_n=5,
+        snapshot_lags=(1, 2), horizon=3,
+    )
+    assert day["horizon"] == 3
+    assert day["snapshot_lags"] == [1, 2]
+    assert day["realized_label"] == "3d Δ"
+    assert day.get("rows")
+    row = day["rows"][0]
+    assert set(row["snapshots"]) == {"D-1", "D-2"}
+    fwd = tl.forward_returns(row["ticker"], "2026-08-14")
+    assert fwd.get("3d") is not None
+    assert abs(row["change_pct"] - fwd.get("3d")) < 0.02
+    d1 = row["snapshots"]["D-1"]
+    d2 = row["snapshots"]["D-2"]
+    assert d1.get("snapshot_date") == "2026-08-13"
+    assert d2.get("snapshot_date")
+    assert d2["snapshot_date"] < d1["snapshot_date"]
+    assert set(d1["boxes"]) >= {k for k, _ in tl.BOX_COLS}
+    assert set(d2["domains"]) == {k for k, _ in gainer_asof.DOMAIN_COLS}
+    md = "\n".join(gainer_asof.render_day_markdown("2026-08-14", day=day))
+    assert "D-1" in md and "D-2" in md
+    assert "3d Δ" in md
+    same = gainer_asof.day_walk("2026-08-14", top_n=5)
+    # Same-day Δ and 3d Δ are different windows.
+    if same.get("rows") and day.get("rows"):
+        if same["rows"][0]["ticker"] == day["rows"][0]["ticker"]:
+            assert same["rows"][0]["change_pct"] != day["rows"][0]["change_pct"]
+
+
 if __name__ == "__main__":
     test_liquid_gainers_skip_penny_spikes()
     test_0813_asof_boxes_are_prior_tape_not_same_day_close()
@@ -258,4 +305,6 @@ if __name__ == "__main__":
     test_cli_accepts_sells_and_losers()
     test_day_walk_carries_hall_pass_and_sides()
     test_pre_lattice_hall_pass_is_grey_not_blocked()
+    test_session_lags_are_prior_trading_days()
+    test_lag3d_uses_prior_snapshots_and_3d_price()
     print("ok")

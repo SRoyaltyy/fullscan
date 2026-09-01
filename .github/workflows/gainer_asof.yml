@@ -32,6 +32,14 @@ on:
         required: false
         default: true
         type: boolean
+      method:
+        description: "same-day = D morning boxes + same-day Change%. lag-3d = yesterday + 2-session-prior snapshots, grade on close 3 sessions later."
+        required: false
+        default: "same-day"
+        type: choice
+        options:
+          - same-day
+          - lag-3d
 
 permissions:
   contents: read
@@ -69,24 +77,36 @@ jobs:
           TO_DATE: ${{ inputs.to_date }}
           FLOORS: ${{ inputs.floors }}
           LIQUID: ${{ inputs.liquid }}
+          METHOD: ${{ inputs.method }}
         run: |
           set -euo pipefail
           FROM_DATE="${FROM_DATE:-2026-08-13}"
           FLOORS="${FLOORS:-2,5}"
+          METHOD="${METHOD:-same-day}"
           ARGS=(--from "$FROM_DATE" --floors "$FLOORS" --all --buys --sells --losers --write --min-mcap 100)
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to "$TO_DATE")
           if [ "${LIQUID}" = "false" ]; then
             ARGS+=(--no-liquid)
           fi
+          if [ "$METHOD" = "lag-3d" ]; then
+            ARGS+=(--snapshots 1,2 --horizon 3 --write-suffix LAG3D)
+          fi
           python -m src.gainer_asof "${ARGS[@]}" | tee /tmp/gainer-asof.md
-          test -s 03_scoreboard/TOP_GAINER_ASOF.md
-          test -s 03_scoreboard/top_gainer_asof.json
+          if [ "$METHOD" = "lag-3d" ]; then
+            test -s 03_scoreboard/TOP_GAINER_ASOF_LAG3D.md
+            test -s 03_scoreboard/top_gainer_asof_lag3d.json
+          else
+            test -s 03_scoreboard/TOP_GAINER_ASOF.md
+            test -s 03_scoreboard/top_gainer_asof.json
+          fi
 
       - name: Show hit-rate table
         if: always()
         run: |
           echo "======== TOP GAINER AS-OF ========"
-          if [ -f 03_scoreboard/TOP_GAINER_ASOF.md ]; then
+          if [ -f 03_scoreboard/TOP_GAINER_ASOF_LAG3D.md ]; then
+            awk '/^# Top gainers/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF_LAG3D.md
+          elif [ -f 03_scoreboard/TOP_GAINER_ASOF.md ]; then
             awk '/^# Top gainers/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF.md
           else
             echo "NO SCOREBOARD — walk did not write"
@@ -100,6 +120,8 @@ jobs:
           path: |
             03_scoreboard/TOP_GAINER_ASOF.md
             03_scoreboard/top_gainer_asof.json
+            03_scoreboard/TOP_GAINER_ASOF_LAG3D.md
+            03_scoreboard/top_gainer_asof_lag3d.json
 
       - name: Add links to run summary
         if: always()
@@ -107,11 +129,17 @@ jobs:
           {
             echo "## Top Gainer As-Of"
             echo
-            echo "Gainers at floors ${{ inputs.floors }} plus losers ≤-2%, 1d BUY and 1d SELL, with hall-pass lanes, since ${{ inputs.from_date }} (as-of 09:30 ET boxes, mcap ≥ \$100M)."
+            echo "Method **${{ inputs.method }}**. Gainers at floors ${{ inputs.floors }} plus losers, 1d BUY and 1d SELL, since ${{ inputs.from_date }}."
+            if [ "${{ inputs.method }}" = "lag-3d" ]; then
+              echo
+              echo "Lag test: cameras/coaches from yesterday (D-1) and two sessions prior (D-2). Price % is close 3 sessions later, not same-day Change%."
+            fi
             echo
             echo "Download the **top-gainer-asof** artifact for the full per-name table."
             echo
-            if [ -f 03_scoreboard/TOP_GAINER_ASOF.md ]; then
-              awk '/^## What the boxes/,/^## Per session/' 03_scoreboard/TOP_GAINER_ASOF.md
+            BOARD=03_scoreboard/TOP_GAINER_ASOF.md
+            [ -f 03_scoreboard/TOP_GAINER_ASOF_LAG3D.md ] && BOARD=03_scoreboard/TOP_GAINER_ASOF_LAG3D.md
+            if [ -f "$BOARD" ]; then
+              awk '/^## What the boxes/,/^## Per session/' "$BOARD"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
