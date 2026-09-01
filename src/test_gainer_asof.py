@@ -22,6 +22,8 @@ def test_0813_asof_boxes_are_prior_tape_not_same_day_close():
     row = day["rows"][0]
     assert set(row["boxes"]) >= {k for k, _ in tl.BOX_COLS}
     assert "yday" in row["boxes"]
+    assert set(row["domains"]) == {k for k, _ in gainer_asof.DOMAIN_COLS}
+    assert row["labeled_domains"].startswith("mkt")
     vintage = row["factor_vintage"]
     assert vintage.get("asof") == "09:30_et"
     # Vol / AB / overnight buy come from the last completed tape before D.
@@ -47,6 +49,8 @@ def test_walk_summary_covers_dashboard_start():
     md = gainer_asof.render_markdown(payload)
     assert "Hit rate" in md
     assert "yΔ" in md or "yday" in md
+    assert "mkt" in md and "par" in md and "chd" in md
+    assert "Domains" in md
     assert "join" in md
     assert "ARX" in md or "`ARX`" in md
     day_md = "\n".join(gainer_asof.render_day_markdown("2026-08-13"))
@@ -97,10 +101,21 @@ def test_buy_sleeve_is_colored_alongside_gainers():
     md = gainer_asof.render_markdown(payload)
     assert "today's 1d BUY" in md
     assert "What the boxes actually said" in md
+    assert "mkt" in md
+    assert buy.get("labeled_domains", "").startswith("mkt")
     assert "Regime" in md
     assert payload["floors_detail"]["2"]["summary"]["n_names"] >= payload[
         "floors_detail"]["5"]["summary"]["n_names"]
     assert payload["buys"]["summary"]["n_names"] >= 1
+
+
+def test_0831_uses_saved_lattice_domains():
+    day = gainer_asof.day_walk("2026-08-31", include_buys=True, top_n=5)
+    assert day["buys"]
+    buy = next((r for r in day["buys"] if r["ticker"] == "CRM"), day["buys"][0])
+    assert buy["factor_vintage"].get("domains") in ("book", "book+derived")
+    assert buy["domains"]["market"] == "bad"  # HARD_RED
+    assert "mkt🔴" in buy["labeled_domains"] or buy["domains"]["market"] == "bad"
 
 
 def test_era_skip_marks_pre_digest_days():
@@ -122,5 +137,6 @@ if __name__ == "__main__":
     test_yday_uses_prior_tape_not_same_day()
     test_two_percent_floor_is_wider_than_five()
     test_buy_sleeve_is_colored_alongside_gainers()
+    test_0831_uses_saved_lattice_domains()
     test_era_skip_marks_pre_digest_days()
     print("ok")
