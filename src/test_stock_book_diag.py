@@ -247,8 +247,11 @@ def test_decisions_trace_to_inputs():
     sells = dec["horizons"]["1d"]["sell"]
     assert len(sells) >= 10
     assert dec["market"]["state"] == "hard_red"
-    assert dec["intentional_stand_down"] is True
     assert len(dec["bull_watch"]) >= 10
+    # HARD_RED may still list probable longs; empty BUY is only a stand-down
+    # when nothing clocked.
+    if not buys:
+        assert dec["intentional_stand_down"] is True
     top = buys[0] if buys else sells[0]
     assert top["ticker"]
     assert top["rank"] == 1
@@ -274,8 +277,12 @@ def test_decisions_trace_to_inputs():
     assert "ACTIONS" in banner
     assert "MARKET HARD_RED" in banner
     assert "BULL DECISIONS" in banner
-    assert "(none)" in banner
     assert "ACTION SELL" in banner
+    if buys:
+        assert "ACTION BUY" in banner
+        assert top["ticker"] in banner
+    else:
+        assert "(none)" in banner
     act_md = "\n".join(render_actions_markdown(dec))
     assert top["ticker"] in act_md
     assert "Bull decisions" in act_md
@@ -307,7 +314,7 @@ def test_action_ok_historical_and_today():
     assert d13.ranker_ready is True
     assert diag.action_ok(d13) is True
     d31 = diag.audit("2026-08-31", gh_runs={})
-    assert d31.decisions.get("intentional_stand_down") is True
+    assert d31.decisions.get("market", {}).get("state") == "hard_red"
     assert diag.action_ok(d31) is True
 
 

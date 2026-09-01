@@ -944,7 +944,10 @@ def render_actions_markdown(dec: dict) -> list[str]:
         "",
         f"These are the names `src.stock_book` wrote. "
         f"The first {SLEEVE_N} BUY names are the paper sleeve that "
-        f"[the .io dashboard]({PAGES_URL}) can fill.",
+        f"[the .io dashboard]({PAGES_URL}) can fill. "
+        f"On RED / HARD_RED the sleeve is the most-probable longs "
+        f"the lattice + lookback (r/y/g, 🚨, 🔵, ⚪) still clock — "
+        f"not a claim the tape is safe.",
         "",
         "### ACTION BUY — sleeve (fills .io)",
         "",
