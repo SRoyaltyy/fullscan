@@ -20,7 +20,8 @@ def test_0813_asof_boxes_are_prior_tape_not_same_day_close():
     assert day["coverage"]["status"] == "full"
     assert day["rows"]
     row = day["rows"][0]
-    assert set(row["boxes"]) == {k for k, _ in tl.BOX_COLS}
+    assert set(row["boxes"]) >= {k for k, _ in tl.BOX_COLS}
+    assert "yday" in row["boxes"]
     vintage = row["factor_vintage"]
     assert vintage.get("asof") == "09:30_et"
     # Vol / AB / overnight buy come from the last completed tape before D.
@@ -44,7 +45,8 @@ def test_walk_summary_covers_dashboard_start():
     assert dates == ["2026-08-13", "2026-08-14"]
     assert payload["summary"]["n_names"] >= 5
     md = gainer_asof.render_markdown(payload)
-    assert "Hit rate on names that then ripped" in md
+    assert "Hit rate" in md
+    assert "yΔ" in md or "yday" in md
     assert "join" in md
     assert "ARX" in md or "`ARX`" in md
     day_md = "\n".join(gainer_asof.render_day_markdown("2026-08-13"))
@@ -64,6 +66,43 @@ def test_all_above_five_percent_is_uncapped():
     assert [r["ticker"] for r in capped] == [r["ticker"] for r in names[:15]]
 
 
+def test_yday_uses_prior_tape_not_same_day():
+    day = gainer_asof.day_walk("2026-08-14")
+    row = day["rows"][0]
+    assert "yday" in row["boxes"]
+    vintage = row["factor_vintage"]
+    if row["boxes"]["yday"] != "missing":
+        assert vintage.get("yday")
+        assert vintage["yday"] < "2026-08-14"
+        assert vintage["yday"] == row["prior_date"]
+
+
+def test_two_percent_floor_is_wider_than_five():
+    df = gainer_asof.load_finviz("2026-08-13")
+    n2 = len(gainer_asof.liquid_gainers(df, top_n=0, min_change=2.0))
+    n5 = len(gainer_asof.liquid_gainers(df, top_n=0, min_change=5.0))
+    assert n2 > n5 >= 40
+
+
+def test_buy_sleeve_is_colored_alongside_gainers():
+    day = gainer_asof.day_walk("2026-08-13", include_buys=True)
+    assert day["buys"]
+    buy = day["buys"][0]
+    assert buy["on_1d_buy"] is True
+    assert "yday" in buy["boxes"]
+    payload = gainer_asof.walk(
+        from_date="2026-08-13", to_date="2026-08-13",
+        top_n=0, floors=[2.0, 5.0], include_buys=True, force=True,
+    )
+    md = gainer_asof.render_markdown(payload)
+    assert "today's 1d BUY" in md
+    assert "What the boxes actually said" in md
+    assert "Regime" in md
+    assert payload["floors_detail"]["2"]["summary"]["n_names"] >= payload[
+        "floors_detail"]["5"]["summary"]["n_names"]
+    assert payload["buys"]["summary"]["n_names"] >= 1
+
+
 def test_era_skip_marks_pre_digest_days():
     skip = gainer_asof._era_skip("2026-08-13")
     assert "digest" in skip
@@ -80,5 +119,8 @@ if __name__ == "__main__":
     test_0813_asof_boxes_are_prior_tape_not_same_day_close()
     test_walk_summary_covers_dashboard_start()
     test_all_above_five_percent_is_uncapped()
+    test_yday_uses_prior_tape_not_same_day()
+    test_two_percent_floor_is_wider_than_five()
+    test_buy_sleeve_is_colored_alongside_gainers()
     test_era_skip_marks_pre_digest_days()
     print("ok")
