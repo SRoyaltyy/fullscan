@@ -28,7 +28,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import book_era, ticker_lookback as tl
+from . import book_era, book_marks as lb_marks, ticker_lookback as tl
 from . import ticker_lookback_cli as scan
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -140,14 +140,23 @@ def _labeled_domains(domains: dict | None, era_skip: list[str] | None = None) ->
 
 
 def lane_label(lane: str | None) -> str:
-    if not lane:
-        return "—"
+    if not lane or lane == "missing":
+        return GREY
     return LANE_LABELS.get(lane, str(lane).replace("_", " "))
 
 
 def infer_lane(domains: dict | None, *, market_state: str | None = None,
-               saved: str | None = None) -> str:
-    """Hall-pass lane from as-of domains, else the book's saved lane."""
+               saved: str | None = None,
+               lattice_live: bool = True) -> str | None:
+    """Hall-pass lane: book's saved lane wins, else as-of coaches.
+
+    Missing coaches (or a date before the lattice) are grey, not blocked.
+    Blocked only when the coaches printed and said no.
+    """
+    if saved in LANES:
+        return saved
+    if not lattice_live:
+        return None
     d = domains or {}
     setup = d.get("setup") or "missing"
     flow = d.get("flow") or "missing"
@@ -155,23 +164,18 @@ def infer_lane(domains: dict | None, *, market_state: str | None = None,
     child = d.get("child") or "missing"
     parent = d.get("parent") or "missing"
     state = str(market_state or "").lower()
-    saved_ok = saved if saved in LANES else None
 
     if setup == "bad":
         return "blocked"
+    if setup != "good":
+        return None
 
-    catalyst = company == "good" and setup == "good" and flow != "bad"
-    group = (
-        child == "good"
-        and setup == "good"
-        and flow != "bad"
-        and company != "bad"
-    )
+    catalyst = company == "good" and flow != "bad"
+    group = child == "good" and flow != "bad" and company != "bad"
     standard = (
         parent != "bad"
         and child != "bad"
         and company != "bad"
-        and setup == "good"
         and flow != "bad"
     )
 
@@ -180,14 +184,14 @@ def infer_lane(domains: dict | None, *, market_state: str | None = None,
             return "catalyst_exception"
         if standard or group:
             return "probable"
-        return saved_ok or "blocked"
+        return "blocked"
     if catalyst:
         return "catalyst"
     if group:
         return "group_leader"
     if standard:
         return "standard"
-    return saved_ok or "blocked"
+    return "blocked"
 
 
 def _chg_tone(chg) -> str:
@@ -404,6 +408,7 @@ def load_day_context(date: str) -> dict:
     cmap: dict[str, dict[str, str]] = {}
     lanes: dict[str, str] = {}
     marks: dict[str, dict] = {}
+    opp: dict[str, float] = {}
     csv_path = BOOK_DIR / f"{date}_stock_book.csv"
     if csv_path.exists():
         try:
@@ -412,6 +417,9 @@ def load_day_context(date: str) -> dict:
             frame = pd.DataFrame()
         if not frame.empty and "Ticker" in frame.columns:
             has_d = all(f"d_{k}" in frame.columns for k, _ in DOMAIN_COLS)
+            has_lane = "decision_lane" in frame.columns or "lane" in frame.columns
+            has_marks = "lb_blue" in frame.columns
+            has_opp = "s_opp" in frame.columns
             for rec in frame.drop_duplicates("Ticker").to_dict(orient="records"):
                 t = tl._tick(rec.get("Ticker"))
                 if not t:
@@ -423,14 +431,21 @@ def load_day_context(date: str) -> dict:
                         else "missing"
                         for key, _ in DOMAIN_COLS
                     }
-                lane = rec.get("decision_lane") or rec.get("lane")
-                if lane in LANES:
-                    lanes[t] = lane
-                marks[t] = {
-                    "blue": bool(rec.get("lb_blue") or rec.get("domain_blue")),
-                    "alarm": bool(rec.get("lb_alarm") or rec.get("domain_alarm")),
-                    "white": bool(rec.get("lb_zero_red") or rec.get("domain_white")),
-                }
+                if has_lane:
+                    lane = rec.get("decision_lane") or rec.get("lane")
+                    if lane in LANES:
+                        lanes[t] = lane
+                if has_marks:
+                    marks[t] = {
+                        "blue": bool(rec.get("lb_blue") or rec.get("domain_blue")),
+                        "alarm": bool(rec.get("lb_alarm") or rec.get("domain_alarm")),
+                        "white": bool(rec.get("lb_zero_red") or rec.get("domain_white")),
+                        "from_book": True,
+                    }
+                if has_opp:
+                    val = _num(rec.get("s_opp"))
+                    if val is not None:
+                        opp[t] = val
     if not cmap or not lanes:
         for side in ("buy", "sell"):
             for r in ((data.get("books") or {}).get("1d") or {}).get(side) or []:
@@ -450,18 +465,25 @@ def load_day_context(date: str) -> dict:
                 lane = r.get("decision_lane") or r.get("lane")
                 if lane in LANES and t not in lanes:
                     lanes[t] = lane
-                if t not in marks:
+                if t not in marks and any(k in r for k in ("lb_blue", "blue", "lb_alarm", "alarm")):
                     marks[t] = {
                         "blue": bool(r.get("lb_blue") or r.get("blue")),
                         "alarm": bool(r.get("lb_alarm") or r.get("alarm")),
                         "white": bool(r.get("lb_zero_red") or r.get("white")),
+                        "from_book": True,
                     }
+                if t not in opp:
+                    val = _num(r.get("s_opp"))
+                    if val is not None:
+                        opp[t] = val
     return {
         "market_tone": market_tone,
         "market_state": market_state,
+        "lattice_live": book_era.live(date, "decision_lattice"),
         "domains": cmap,
         "lanes": lanes,
         "marks": marks,
+        "opp": opp,
     }
 
 
@@ -481,15 +503,69 @@ def _yday_from_sess(sess: dict | None, ticker: str) -> tuple[str, str | None, fl
     return _chg_tone(chg), vintage, None if chg is None else round(float(chg), 2)
 
 
-def _marks_pack(row: dict, book_marks: dict | None, t: str) -> dict:
+def _camera_boxes(boxes: dict | None) -> dict[str, str]:
+    return {
+        key: (boxes or {}).get(key) or "missing"
+        for key, _ in tl.BOX_COLS if key != "buy"
+    }
+
+
+def _marks_pack(row: dict, book_marks: dict | None, t: str,
+                boxes: dict | None = None,
+                prev_boxes: dict | None = None) -> dict:
     stored = (book_marks or {}).get(t) or {}
-    blue = bool(stored.get("blue") or row.get("lb_blue") or row.get("blue"))
-    alarm = bool(stored.get("alarm") or row.get("lb_alarm") or row.get("alarm"))
-    white = bool(stored.get("white") or row.get("lb_zero_red") or row.get("white"))
+    have_today = any(
+        (boxes or {}).get(key) in ("good", "bad", "neutral")
+        for key, _ in tl.BOX_COLS if key != "buy"
+    )
+    if stored.get("from_book") or row.get("lb_blue") is True or row.get("lb_alarm") is True:
+        blue = bool(stored.get("blue") or row.get("lb_blue") or row.get("blue"))
+        alarm = bool(stored.get("alarm") or row.get("lb_alarm") or row.get("alarm"))
+        white = bool(stored.get("white") or row.get("lb_zero_red") or row.get("white"))
+        have_compare = True
+        source = "book"
+    else:
+        today = _camera_boxes(boxes)
+        prev = _camera_boxes(prev_boxes) if prev_boxes else None
+        rec = lb_marks.annotate_one(today, prev)
+        blue = bool(rec.get("lb_blue"))
+        alarm = bool(rec.get("lb_alarm"))
+        white = bool(rec.get("lb_zero_red"))
+        have_compare = prev is not None
+        source = "asof"
     icons = "".join(
         bit for bit, on in (("🔵", blue), ("🚨", alarm), ("⚪", white)) if on
     )
-    return {"blue": blue, "alarm": alarm, "white": white, "icons": icons}
+    return {
+        "blue": blue,
+        "alarm": alarm,
+        "white": white,
+        "icons": icons,
+        "from_book": source == "book",
+        "have_compare": have_compare,
+        "have_today": have_today,
+        "source": source,
+    }
+
+
+def _marks_cell(marks: dict | None) -> str:
+    m = marks or {}
+    def slot(on: bool, icon: str, known: bool) -> str:
+        if on:
+            return icon
+        return "—" if known else GREY
+    known = bool(m.get("have_compare") or m.get("from_book"))
+    return (
+        f"{slot(bool(m.get('blue')), '🔵', known)} "
+        f"{slot(bool(m.get('alarm')), '🚨', known)} "
+        f"{slot(bool(m.get('white')), '⚪', bool(m.get('have_today') or m.get('from_book')))}"
+    )
+
+
+def _mid_opp_cell(value) -> str:
+    if value is None:
+        return GREY
+    return f"{float(value):+.2f}"
 
 
 def color_name(sess: dict | None, row: dict, buy_today: set[str],
@@ -500,7 +576,10 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
                market_state: str | None = None,
                book_lanes: dict[str, str] | None = None,
                book_marks: dict[str, dict] | None = None,
-               era_skip: list[str] | None = None) -> dict:
+               book_opp: dict[str, float] | None = None,
+               era_skip: list[str] | None = None,
+               lattice_live: bool | None = None,
+               prior_sess: dict | None = None) -> dict:
     t = row["ticker"]
     card = scan._scan_session(sess, t) if sess else {}
     card = card or {}
@@ -525,9 +604,11 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
         domains = _derive_domains(boxes, market_tone=market_tone)
         vintage["domains"] = "derived"
     skip = era_skip
+    date = (sess or {}).get("date") or row.get("date")
     if skip is None:
-        date = (sess or {}).get("date") or row.get("date")
         skip = _era_skip(date) if date else []
+    if lattice_live is None:
+        lattice_live = book_era.live(date, "decision_lattice") if date else False
     cond = tl.general_condition({k: boxes.get(k) for k, _ in tl.BOX_COLS})
     region = tl.color_region({k: boxes.get(k) for k, _ in tl.BOX_COLS})
     chg = row.get("change_pct") if row.get("change_pct") is not None else realized
@@ -537,8 +618,21 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
         or row.get("lane")
         or None
     )
-    lane = infer_lane(domains, market_state=market_state, saved=saved_lane)
-    marks = _marks_pack(row, book_marks, t)
+    lane = infer_lane(
+        domains, market_state=market_state, saved=saved_lane,
+        lattice_live=bool(lattice_live),
+    )
+    prev_boxes = None
+    stored_marks = (book_marks or {}).get(t) or {}
+    if not stored_marks.get("from_book") and prior_sess:
+        prev_card = scan._scan_session(prior_sess, t) or {}
+        prev_boxes = prev_card.get("boxes")
+    marks = _marks_pack(row, book_marks, t, boxes=boxes, prev_boxes=prev_boxes)
+    mid_opp = (book_opp or {}).get(t)
+    if mid_opp is None:
+        mid_opp = _num((card.get("signals") or {}).get("s_opp"))
+    if mid_opp is None:
+        mid_opp = _num(row.get("s_opp"))
     sell_today = sell_today or set()
     return {
         **row,
@@ -560,9 +654,12 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
         "lane": lane,
         "lane_label": lane_label(lane),
         "marks": marks,
+        "marks_cell": _marks_cell(marks),
+        "mid_opp": mid_opp,
         "bucket": row.get("size") or card.get("size") or "",
         "asof": "09:30_et",
         "prior_date": (sess or {}).get("prior_date"),
+        "lattice_live": bool(lattice_live),
     }
 
 
@@ -623,6 +720,12 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
     realized = _finviz_change_map(fv)
     ctx = load_day_context(date)
     era_skip = _era_skip(date)
+    prior_sess = None
+    if sess and sess.get("prior_date"):
+        prior_sess = next(
+            (s for s in idx["sessions"] if s["date"] == sess["prior_date"]),
+            None,
+        )
     cache: dict[str, dict] = {}
 
     def paint(row, chg=None):
@@ -636,7 +739,10 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
                 market_state=ctx.get("market_state"),
                 book_lanes=ctx.get("lanes"),
                 book_marks=ctx.get("marks"),
+                book_opp=ctx.get("opp"),
                 era_skip=era_skip,
+                lattice_live=ctx.get("lattice_live"),
+                prior_sess=prior_sess,
             )
         return cache[t]
 
@@ -660,6 +766,7 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
         "spy_change": _spy_change(fv),
         "era_skip": era_skip,
         "market_state": ctx.get("market_state"),
+        "lattice_live": ctx.get("lattice_live"),
         "n_gainers": len(rows),
         "n_losers": len(losers),
         "n_overnight_buy": sum(1 for r in rows if r.get("overnight_buy")),
@@ -684,6 +791,7 @@ def _tally(rows: list[dict], era_skip: list[str] | None = None,
     n_over_sell = n_today_sell = 0
     hit2 = hit5 = hit_neg2 = hit_neg5 = 0
     lanes = Counter()
+    n_blue = n_alarm = n_white = 0
     chgs = []
     for row in rows:
         n += 1
@@ -697,6 +805,13 @@ def _tally(rows: list[dict], era_skip: list[str] | None = None,
             n_today_sell += 1
         if row.get("lane") in LANES:
             lanes[row["lane"]] += 1
+        marks = row.get("marks") or {}
+        if marks.get("blue"):
+            n_blue += 1
+        if marks.get("alarm"):
+            n_alarm += 1
+        if marks.get("white"):
+            n_white += 1
         chg = _pct(row.get("change_pct"))
         if chg is not None:
             chgs.append(chg)
@@ -766,6 +881,12 @@ def _tally(rows: list[dict], era_skip: list[str] | None = None,
         "hit_neg2_pct": round(100.0 * hit_neg2 / len(chgs), 1) if chgs else 0.0,
         "hit_neg5_pct": round(100.0 * hit_neg5 / len(chgs), 1) if chgs else 0.0,
         "lanes": dict(lanes),
+        "n_blue": n_blue,
+        "n_alarm": n_alarm,
+        "n_white": n_white,
+        "blue_pct": round(100.0 * n_blue / n, 1) if n else 0.0,
+        "alarm_pct": round(100.0 * n_alarm / n, 1) if n else 0.0,
+        "white_pct": round(100.0 * n_white / n, 1) if n else 0.0,
         "boxes": out,
         "domains": domain_out,
     }
@@ -818,6 +939,15 @@ def _insights(floors: dict, buys: dict, regime: dict,
         f"and hit ≥2% / ≥5% on "
         f"{bsum.get('hit_2_pct') or 0:.1f}% / {bsum.get('hit_5_pct') or 0:.1f}% "
         f"of names with a printed Change%."
+    )
+    lines.append("")
+    lines.append(
+        f"Stamps on those ≥5% winners: 🔵 {g5.get('blue_pct') or 0:.1f}% · "
+        f"🚨 {g5.get('alarm_pct') or 0:.1f}% · "
+        f"⚪ {g5.get('white_pct') or 0:.1f}%. "
+        "Hall pass is grey before 2026-08-31 (lattice not live). "
+        "On lattice days the book's saved lane wins — do not read missing "
+        "coaches as blocked."
     )
     if l2 or l5 or ssum:
         med_s = ssum.get("median_change")
@@ -1062,34 +1192,63 @@ def _box_table(boxes: dict, cols=GAINER_BOX_COLS) -> list[str]:
 
 def _name_table(rows: list[dict], *, realized_label: str = "Δ") -> list[str]:
     lines = [
-        f"| # | Ticker | {realized_label} | Sector | Hall pass | Source boxes | Domains | Cond | Overnight BUY | On today's 1d BUY | On today's 1d SELL |",
-        "|---:|---|---:|---|---|---|---|---|---|---|---|",
+        f"| # | Ticker | {realized_label} | Sector | Marks | Cond | Hall pass | mid_opp | Source boxes (cameras) | Domains (coaches) | Overnight BUY | On today's 1d BUY | On today's 1d SELL |",
+        "|---:|---|---:|---|---|---|---|---|---|---|---|---|---|",
     ]
     for i, row in enumerate(rows, 1):
         cond = row.get("condition") or {}
-        cond_s = (
-            f"{tl.BOX_ICON.get(cond.get('tone'), '⬛')} "
-            f"{cond.get('good', 0)}/{cond.get('neutral', 0)}/{cond.get('bad', 0)}"
-            if cond.get("n") else "—"
-        )
+        if cond.get("n"):
+            cond_s = (
+                f"{tl.BOX_ICON.get(cond.get('tone'), '⬛')} "
+                f"{cond.get('good', 0)}/{cond.get('neutral', 0)}/{cond.get('bad', 0)}"
+            )
+        else:
+            cond_s = GREY
         chg = row.get("change_pct")
         chg_s = f"{chg:+.2f}%" if chg is not None else "—"
-        marks = row.get("marks") or {}
-        mark_s = marks.get("icons") if isinstance(marks, dict) else (marks or "")
         hall = row.get("lane_label") or lane_label(row.get("lane"))
-        if mark_s:
-            hall = f"{hall} {mark_s}".strip()
         lines.append(
             f"| {i} | `{row['ticker']}` | {chg_s} | "
-            f"{row.get('sector') or '—'} | {hall} | "
+            f"{row.get('sector') or '—'} | "
+            f"{row.get('marks_cell') or _marks_cell(row.get('marks'))} | "
+            f"{cond_s} | {hall} | {_mid_opp_cell(row.get('mid_opp'))} | "
             f"{row.get('labeled') or _labeled(row.get('boxes'))} | "
             f"{row.get('labeled_domains') or _labeled_domains(row.get('domains'))} | "
-            f"{cond_s} | "
             f"{'yes' if row.get('overnight_buy') else '—'} | "
             f"{'yes' if row.get('on_1d_buy') else '—'} | "
             f"{'yes' if row.get('on_1d_sell') else '—'} |"
         )
     return lines
+
+
+def _two_scoreboards_legend() -> list[str]:
+    return [
+        "## Two scoreboards",
+        "",
+        "There are two scoreboards, not one. Green = good. Yellow = meh. "
+        "Red = bad. Black = that camera was off that morning. "
+        f"Grey ({GREY}) = we did not have the file as-of that date — not a veto.",
+        "",
+        "**Source boxes are the 12 hallway cameras.** They say what each file "
+        "saw at 09:30 ET. `join` weather×labels · `sect` sector essay · "
+        "`gen` whole-market essay · `news` news-action · `dig` Finviz sentence · "
+        "`jdg` judge · `AB` homework · `peer` vs club · `heat` club vs class · "
+        "`vol` RelVol · `cat` dossier · `buy` already on overnight 1d BUY. "
+        "`yΔ` is yesterday's Change% from the prior tape.",
+        "",
+        "**Domain lights are the 6 coaches.** They take those cameras and "
+        "decide if you get a hall pass. `mkt` principal (GREEN / YELLOW / RED / "
+        "HARD_RED) · `par` class teacher · `chd` club advisor · `co` the kid's "
+        "own story · `set` homework (must be green for a normal long) · "
+        "`flw` hall monitor. Numbers only rank kids who already have a pass.",
+        "",
+        "**Stamps on every name:** `Cond` = green vs red camera count. "
+        "🔵 boxes got better vs yesterday. 🚨 boxes got worse (can veto a long). "
+        "⚪ no red cameras printed. `Hall pass` = standard / group leader / "
+        "catalyst / catalyst exception / probable / blocked — or grey before "
+        "the lattice (2026-08-31). `mid_opp` is “kinda interesting,” not a lane.",
+        "",
+    ]
 
 
 def render_day_markdown(date: str, day: dict | None = None,
@@ -1111,15 +1270,13 @@ def render_day_markdown(date: str, day: dict | None = None,
             f", mcap ≥ ${mcap:.0f}M, adv ≥ 500k, not ETF"
             if day.get("liquid", True) else ", any name, not ETF"
         )
-        +         "). Source boxes are the 09:30 ET packet. Domains are the lattice "
-        "checklist (`mkt · par · chd · co · set · flw`) from that day's book "
-        "when saved, else derived from those sources. Hall pass is the "
-        "lattice lane (standard / group leader / catalyst / catalyst "
-        "exception / probable / blocked). `yΔ` is yesterday's Change% "
-        "from the last completed tape. Missing-as-of prints grey.",
+        + "). Two scoreboards: source boxes (12 cameras + yΔ) and domain "
+        "lights (6 coaches). Stamps on every name: Marks 🔵🚨⚪, Cond, "
+        "Hall pass, mid_opp. Missing-as-of prints grey — not blocked.",
         "",
-        f"_Source boxes {_legend()}_",
-        f"_Domains {_domain_legend()}_",
+        f"_Cameras {_legend()}_",
+        f"_Coaches {_domain_legend()}_",
+        f"_Marks 🔵 better vs yesterday · 🚨 worse · ⚪ no red cameras · {GREY} no as-of_",
         "",
         f"Coverage **{cov.get('status') or '?'}** "
         f"({cov.get('n_change') or 0}/{cov.get('n') or 0} printed a Change%) "
@@ -1211,21 +1368,21 @@ def render_markdown(payload: dict) -> str:
         )
         + "_",
         "",
-        "Each session's realized gainers and losers plus the 1d BUY and "
-        "1d SELL sleeves. Source boxes are the 09:30 ET packet. Domains are "
-        "`mkt · par · chd · co · set · flw` (saved lattice when the book "
-        "has `d_*`, else derived: market←gen/session, parent←sect, "
-        "child←heat, company←news/dig/jdg/cat, setup←AB, flow←vol). "
-        "Hall pass is the lattice lane. `yΔ` is yesterday's Change% from "
-        "the prior tape. Missing-as-of prints grey."
+        "Each session's realized ≥2% / ≥5% rippers, ≤-2% / ≤-5% losers, "
+        "and the 1d BUY / 1d SELL records. Every name gets both scoreboards "
+        "plus the stamps (Marks 🔵🚨⚪, Cond, Hall pass, mid_opp) as of "
+        "09:30 that morning. Grey means the file was not live yet."
         + (
             f" Liquidity: mcap ≥ ${payload.get('min_mcap_m') or 0:.0f}M, "
             f"adv ≥ {payload.get('min_avg_vol_k') or 0:.0f}k, not ETF."
             if payload.get("liquid", True) else " Any printed name, not ETF."
         ),
         "",
-        f"_Source boxes {payload.get('legend') or _legend()}_",
-        f"_Domains {payload.get('domain_legend') or _domain_legend()}_",
+    ]
+    lines += _two_scoreboards_legend()
+    lines += [
+        f"_Cameras {payload.get('legend') or _legend()}_",
+        f"_Coaches {payload.get('domain_legend') or _domain_legend()}_",
         "",
     ]
     lines += payload.get("insights") or _insights(
@@ -1264,6 +1421,9 @@ def render_markdown(payload: dict) -> str:
         else:
             extra.append(f"overnight BUY {summ.get('overnight_buy_pct') or 0:.1f}%")
             extra.append(f"today's 1d BUY {summ.get('on_1d_buy_pct') or 0:.1f}%")
+        extra.append(f"🔵 {summ.get('blue_pct') or 0:.1f}%")
+        extra.append(f"🚨 {summ.get('alarm_pct') or 0:.1f}%")
+        extra.append(f"⚪ {summ.get('white_pct') or 0:.1f}%")
         lines[-1] += " · ".join(extra) + "."
         lines += [
             "",

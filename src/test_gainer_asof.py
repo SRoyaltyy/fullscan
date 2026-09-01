@@ -149,8 +149,11 @@ def test_infer_lane_hall_pass_labels():
         market_state="hard_red",
     ) == "probable"
     assert gainer_asof.infer_lane({}, saved="group_leader") == "group_leader"
+    assert gainer_asof.infer_lane({}, lattice_live=False) is None
+    assert gainer_asof.infer_lane({}, lattice_live=True) is None
     assert gainer_asof.lane_label("group_leader") == "group leader"
     assert gainer_asof.lane_label("catalyst_exception") == "catalyst exception"
+    assert gainer_asof.lane_label(None) == gainer_asof.GREY
 
 
 def test_grey_icon_for_era_skip_missing():
@@ -212,7 +215,31 @@ def test_day_walk_carries_hall_pass_and_sides():
     md = "\n".join(gainer_asof.render_day_markdown("2026-08-31", day=day))
     assert "Hall pass" in md
     assert "1d SELL" in md
+    assert "Marks" in md
+    assert "mid_opp" in md
+    assert "Source boxes (cameras)" in md
+    assert "Domains (coaches)" in md
+    assert "🔵" in md or "🚨" in md or "⚪" in md or gainer_asof.GREY in (sell.get("marks_cell") or "")
     assert "group leader" in md or "standard" in md or "blocked" in md or "probable" in md or "catalyst" in md
+    crm = next((r for r in day["buys"] if r["ticker"] == "CRM"), None)
+    if crm:
+        assert crm["lane"] == "probable"
+        assert crm["marks"]["blue"] is True
+        assert "🔵" in (crm.get("marks_cell") or "")
+
+
+def test_pre_lattice_hall_pass_is_grey_not_blocked():
+    day = gainer_asof.day_walk("2026-08-13", include_buys=True, top_n=5)
+    row = (day.get("rows") or [None])[0]
+    assert row
+    assert row.get("lattice_live") is False
+    assert row.get("lane") is None
+    assert row.get("lane_label") == gainer_asof.GREY
+    assert "marks" in row
+    assert "marks_cell" in row
+    md = "\n".join(gainer_asof.render_day_markdown("2026-08-13", day=day))
+    assert "Marks" in md
+    assert "Hall pass" in md
 
 
 if __name__ == "__main__":
@@ -230,4 +257,5 @@ if __name__ == "__main__":
     test_liquid_losers_are_down()
     test_cli_accepts_sells_and_losers()
     test_day_walk_carries_hall_pass_and_sides()
+    test_pre_lattice_hall_pass_is_grey_not_blocked()
     print("ok")
