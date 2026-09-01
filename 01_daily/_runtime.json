@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 1,
   "grok_busy": false,
-  "updated_at": "2026-09-01T06:13:44.386997-04:00",
+  "updated_at": "2026-09-01T11:22:19.094254-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -47,7 +47,7 @@
       "group": "classroom",
       "status": "OK",
       "required": true,
-      "detail": "classroom live (Hey. I just came online.) model=openclaw/default",
+      "detail": "PONG model=openclaw/default",
       "action": "none"
     },
     {
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=failure systemd=exit-code",
+      "detail": "latest=cancelled",
       "action": "none"
     },
     {
@@ -164,7 +164,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-08-26_preopen_status.json, 2026-08-31_preopen_status.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
+      "detail": "history \u2014 401 in 2026-08-31_preopen_status.json, 2026-09-01_predict.md; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
       "action": "none"
     }
   ]
