@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-08-29T04:30:49.110144-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-08-31T20:43:53.851199-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 118 · judged (enough data both sides): 46 · improved: 3 · flat: 1 · worse: 42 · mean delta: -0.278**
+**Active lessons: 120 · judged (enough data both sides): 46 · improved: 3 · flat: 1 · worse: 42 · mean delta: -0.278**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -133,6 +133,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `day-2-technology-xlk-after-a-confirmed-already-t` | sector:Technology | 2026-08-28 | 43% (n=7) | — | — | insufficient |
 | `dominant-positive-catalyst-geopolitical-de-escal` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
 | `energy-xle-prediction-where-premarket-oil-is-gre` | sector:Energy | 2026-08-17 | 60% (n=5) | 33% (n=6) | -27% | WORSE |
+| `envelope-date-is-a-us-cash-closed-day-weekend-ho` | — | 2026-08-31 | — | — | — | not market-graded |
 | `escalating-geopolitical-oil-supply-shock-catalys` | sector:Energy | 2026-08-27 | 43% (n=7) | 0% (n=1) | — | insufficient |
 | `existing-basic-materials-rule-is-confirmed-after` | sector:Basic Materials | 2026-08-14 | 75% (n=4) | 57% (n=7) | -18% | WORSE |
 | `for-a-bond-proxy-defensive-sector-when-s0-and-s1` | sector:Utilities | 2026-08-27 | 29% (n=7) | 100% (n=1) | — | insufficient |
@@ -161,6 +162,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `scheduled-us-cash-session-where-premarket-yyyy-m` | — | 2026-08-28 | — | — | — | not market-graded |
 | `sector-has-just-recorded-a-strong-positive-relat` | sector:Communication Services | 2026-08-18 | 33% (n=6) | 0% (n=5) | -33% | WORSE |
 | `sector-prediction-made-when-the-sector-s-dominan` | sector:Energy | 2026-08-18 | 67% (n=6) | 20% (n=5) | -47% | WORSE |
+| `this-shows-up-on-1w-books-when-the-news-family-i` | — | 2026-08-31 | — | — | — | not market-graded |
 | `two-name-duration-growth-book-xlc-like-meta-goog` | sector:Communication Services | 2026-08-28 | 29% (n=7) | — | — | insufficient |
 | `when-a-defensive-sector-prediction-is-directiona` | sector:Consumer Defensive | 2026-08-13 | 33% (n=3) | 43% (n=7) | — | insufficient |
 | `when-a-geopolitical-supply-shock-headline-is-act` | sector:Energy | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |

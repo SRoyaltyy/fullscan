@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the distinct events. Note the Finviz event is about Aug 31, 2026 stock underperformance - I should not duplicate that. Let me compile the new events.\n\nKey events to extract:\n1. **Q3 2026 results (Aug 13, 2026)** - record revenue $9.12B, EPS $3.50, raised outlook\n2. **Q2 2026 results (May 14, 2026)** - record revenue $7.91B\n3. **Q4 2025 results (Nov 13, 2025)** - EPS beat $2.17 vs $2.12\n4. **TSMC EPIC deal (May 11, 2026)** - partnership expansi",
+  "raw": "I now have comprehensive event data. Let me compile the distinct events, being careful not to duplicate the Finviz event (AMAT stock underperformed Friday, Aug 31, 2026, down 6.7% on global bond sell-off).\n\nLet me compile the final JSON array of new, distinct events.\n\n```json\n[\n  {\n    \"event_date\": \"2026-08-13\",\n    \"description\": \"AMAT reported record Q3 2026 revenue of $9.12 billion with record operating profit and non-GAAP EPS, driven by AI infrastructure demand.\",\n    \"evidence_excerpt\": \"A",
   "ticker": "AMAT",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

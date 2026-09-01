@@ -7,11 +7,23 @@ evidence_cited: "WLY 2026-08-21 (fwd +4.13 vs universe median -2.4; s_ab=0.925, 
 error_category: "C"
 scope: "book"
 date: "2026-08-30"
-status: "promoted"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-08-31"
+sources: "['2026-08-30_book_lesson.md']"
 schema_ok: "true"
-validation_errors: ""
 ---
 
-# Book reflection — 2026-08-30
+## RULE
+When news_actions/news_judge are missing, drop the news family and renormalize remaining scores (same handling as general_predict when s_general=0) instead of scoring s_news as a fake 0; when the family is present, require news_judge tilts from dated catalysts in the digest so a high-AB name with a fresh product/earnings event can clear the buy cutoff.
 
-Gap scan: `data/stock_book/2026-08-21_book_gaps.json`
+## WHEN IT FIRES
+This shows up on 1w books when the news family is absent and s_news is zero-filled, so a name with a 1–5 day idiosyncratic catalyst and already-strong AB/join still dies as outweighed.
+
+## WRONG IF
+Wrong if, once news_judge is live and non-zero, 1w top-10 excess does not improve on names that had a 1–5 day catalyst and s_ab>0.9 at pick time, or if those news-tilted adds underperform the universe median.
+
+## EVIDENCE
+WLY 2026-08-21 (fwd +4.13 vs universe median -2.4; s_ab=0.925, s_join=0.442, s_news=0.0, class=outweighed) after the 2026-08-19 Spectral Analysis API launch; s_news=0.0 also on ADEA/HUBB/SHEL/SITC/UA; absent_inputs=['s_news']; n_blind=0; worst_buys=[]
+
+(learn_cycle promote)

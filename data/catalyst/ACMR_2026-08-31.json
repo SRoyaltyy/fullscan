@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the distinct events, excluding the Finviz-confirmed Q2 2026 earnings event (which is already covered). Let me identify the distinct new events:\n\n1. **Jan 22, 2026** - Updated 2025 revenue outlook to $885-$900M and initial 2026 outlook of $1,080-$1,175M\n2. **Feb 26, 2026** - Q4 2025 / FY2025 earnings results (revenue rises but margins compress sharply, stock dropped 17%)\n3. **Feb 26, 2026** - Received multiple advanced packaging equipment order",
+  "raw": "I now have comprehensive information. Let me compile the distinct events, excluding the Finviz-confirmed Q2 2026 earnings event (which is already covered). Let me organize the events:\n\n1. **Jan 22, 2026** - Updated 2025 revenue outlook to $885-$900M, projected 2026 revenue of $1,080-$1,175M\n2. **Feb 26, 2026** - Q4 2025 earnings: revenue $244.4M beat, EPS $0.25 missed $0.39\n3. **May 5, 2026** - Seaport initiates Buy with $75 PT\n4. **May 7, 2026** - Q1 2026 earnings: revenue surges 34%, beats for",
   "ticker": "ACMR",
   "generated_at": "2026-08-31",
   "cutoff_date": null,

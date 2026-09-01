@@ -1,30 +1,30 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-08-31T13:01:39.430361-04:00",
+  "fetched_at": "2026-08-31T19:02:17.366779-04:00",
   "fred": {
     "DGS30": {
       "available": true,
-      "date": "2026-08-27",
-      "current": 5.19,
-      "delta_1d": 0.01,
-      "delta_1w": -0.04,
-      "delta_1m": -0.01
+      "date": "2026-08-28",
+      "current": 5.22,
+      "delta_1d": 0.03,
+      "delta_1w": -0.05,
+      "delta_1m": 0.01
     },
     "DGS10": {
       "available": true,
-      "date": "2026-08-27",
-      "current": 4.67,
-      "delta_1d": 0.01,
-      "delta_1w": -0.02,
-      "delta_1m": 0.0
+      "date": "2026-08-28",
+      "current": 4.73,
+      "delta_1d": 0.06,
+      "delta_1w": -0.01,
+      "delta_1m": 0.05
     },
     "DFII10": {
       "available": true,
-      "date": "2026-08-27",
-      "current": 2.34,
-      "delta_1d": 0.0,
-      "delta_1w": -0.01,
-      "delta_1m": -0.07
+      "date": "2026-08-28",
+      "current": 2.42,
+      "delta_1d": 0.08,
+      "delta_1w": 0.02,
+      "delta_1m": 0.01
     },
     "BAMLH0A0HYM2": {
       "available": true,
@@ -44,7 +44,7 @@
     },
     "IORB": {
       "available": true,
-      "date": "2026-08-31",
+      "date": "2026-09-01",
       "current": 3.65,
       "delta_1d": 0.0,
       "delta_1w": 0.0,
@@ -52,11 +52,11 @@
     },
     "RRPONTSYD": {
       "available": true,
-      "date": "2026-08-28",
-      "current": 0.175,
-      "delta_1d": -0.281,
-      "delta_1w": -0.025,
-      "delta_1m": -0.901
+      "date": "2026-08-31",
+      "current": 6.726,
+      "delta_1d": 6.551,
+      "delta_1w": 6.346,
+      "delta_1m": 4.575
     },
     "USEPUINDXD": {
       "available": true,
@@ -70,38 +70,38 @@
   "vix": {
     "vix": {
       "date": "2026-08-31",
-      "current": 15.19,
-      "delta_1d": 0.68,
-      "delta_1w": 0.06
+      "current": 14.92,
+      "delta_1d": 0.41,
+      "delta_1w": -0.21
     },
     "vix3m": {
       "date": "2026-08-31",
-      "current": 17.72,
+      "current": 17.53,
       "source": "^VIX3M"
     },
-    "ratio": 0.857,
+    "ratio": 0.851,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 15.28,
-    "ratio_ma20": 0.994
+    "vix_ma20": 15.27,
+    "ratio_ma20": 0.977
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-08-31",
-      "last": 85.37,
-      "pct_1d": 2.36
+      "last": 86.23,
+      "pct_1d": 3.39
     },
     "BZ=F": {
       "available": true,
       "date": "2026-08-31",
-      "last": 88.01,
-      "pct_1d": -1.46
+      "last": 88.52,
+      "pct_1d": -0.88
     },
     "GC=F": {
       "available": true,
       "date": "2026-08-31",
-      "last": 4485.9,
-      "pct_1d": 0.17
+      "last": 4495.1,
+      "pct_1d": 0.38
     },
     "DXY": {
       "available": true,
@@ -115,14 +115,14 @@
     "ES=F": {
       "available": true,
       "date": "2026-08-31",
-      "last": 7687.0,
-      "pct_1d": -0.45
+      "last": 7701.0,
+      "pct_1d": -0.27
     },
     "NQ=F": {
       "available": true,
       "date": "2026-08-31",
-      "last": 29433.75,
-      "pct_1d": -0.2
+      "last": 29494.25,
+      "pct_1d": 0.01
     }
   },
   "finviz_futures_tape": {
@@ -471,29 +471,29 @@
         },
         "DAX": {
           "available": true,
-          "date": "2026-08-31",
-          "last": 26258.11,
-          "pct_1d": -0.41
+          "date": "2026-08-27",
+          "last": 26367.24,
+          "pct_1d": 0.31
         },
         "CAC": {
           "available": true,
-          "date": "2026-08-31",
-          "last": 8334.5,
-          "pct_1d": 0.18
+          "date": "2026-08-27",
+          "last": 8319.87,
+          "pct_1d": -1.68
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-08-31",
-          "last": 6420.16,
-          "pct_1d": -0.07
+          "date": "2026-08-27",
+          "last": 6424.73,
+          "pct_1d": -0.71
         }
       },
-      "composite_avg": -0.27
+      "composite_avg": -0.72
     }
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": -0.537,
+    "corr_5d": -0.481,
     "window": "2026-08-21..2026-08-31"
   },
   "fear_greed": {
