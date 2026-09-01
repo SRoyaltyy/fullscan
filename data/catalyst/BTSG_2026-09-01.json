@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-01-20\",\n    \"description\": \"BrightSpring Health Services Inc (BTSG) entered a definitive agreement to divest ResCare Community Living to Sevita for $835 million in cash and said it would use proceeds mainly to reduce debt.\",\n    \"evidence_excerpt\": \"\\\"entered into a definitive agreement to divest its Community Living business, namely ResCare Community Living, to Sevita, a leading provider of home and community-based specialty health care, for $835 million in cash co",
+  "ticker": "BTSG",
+  "generated_at": "2026-09-01",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

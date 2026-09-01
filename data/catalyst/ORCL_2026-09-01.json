@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-06-11\",\n    \"description\": \"Oracle Corp (ORCL) reported Q4 FY2025 revenue of $15.9 billion, up 11%, and full-year FY2025 revenue of $57.4 billion, up 8%.\",\n    \"evidence_excerpt\": \"\\\"Q4 Total Revenue $15.9 billion, up 11%\\\"\",\n    \"source_urls\": [\n      \"https://www.oracle.com/news/announcement/q4fy25-earnings-release-2025-06-11/\"\n    ],\n    \"confidence\": 95\n  },\n  {\n    \"event_date\": \"2025-07-22\",\n    \"description\": \"OpenAI confirmed it is the customer on Oracle\u2019s p",
+  "ticker": "ORCL",
+  "generated_at": "2026-09-01",
+  "cutoff_date": null,
+  "role": "earnings"
+}

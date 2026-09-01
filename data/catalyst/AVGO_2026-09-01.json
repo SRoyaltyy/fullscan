@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-10-13\",\n    \"description\": \"OpenAI and Broadcom Inc (AVGO) announced a strategic collaboration to co-develop and deploy 10 gigawatts of OpenAI-designed custom AI accelerators and Broadcom Ethernet networking, with rack deployments targeted to start in H2 2026 and complete by end of 2029.\",\n    \"evidence_excerpt\": \"\\\"OpenAI and Broadcom today announced a collaboration for 10 gigawatts of custom AI accelerators.\\\"\",\n    \"source_urls\": [\n      \"https://openai.com/index",
+  "ticker": "AVGO",
+  "generated_at": "2026-09-01",
+  "cutoff_date": null,
+  "role": "earnings"
+}

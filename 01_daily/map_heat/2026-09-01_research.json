@@ -1,0 +1,966 @@
+{
+  "date": "2026-09-01",
+  "phase": "morning_bootstrap",
+  "generated_at": "2026-09-01T06:35:20.467433-04:00",
+  "n_targets": 0,
+  "n_cards": 0,
+  "n_refreshed": 0,
+  "evidence_errors": [
+    "no post-close baseline \u2014 research skipped"
+  ],
+  "cards": [],
+  "size_gate": true,
+  "macro_gate": true,
+  "earnings_gate": true,
+  "size_gate_reason": "bootstrap \u2014 no post-close baseline",
+  "calendar_entry_scale": 0.5,
+  "earnings_entry_tickers": [
+    "PANW",
+    "DELL",
+    "MDT"
+  ],
+  "parent_splits": [],
+  "opportunities": [],
+  "vetoes": [],
+  "one_paragraph": "Bootstrap day: post-close captain baseline was missing. Research skipped so the rest of preopen can still succeed. stock_book will receive no s_heat. Full path resumes after the next 22:00 post-close job.",
+  "futures": [
+    {
+      "ticker": "ES",
+      "label": "S&P 500",
+      "last": 7653.0,
+      "change": -0.58
+    },
+    {
+      "ticker": "NQ",
+      "label": "Nasdaq 100",
+      "last": 29208.25,
+      "change": -1.02
+    },
+    {
+      "ticker": "ER2",
+      "label": "Russell 2000",
+      "last": 2942.3,
+      "change": -0.55
+    },
+    {
+      "ticker": "YM",
+      "label": "DJIA",
+      "last": 52898.0,
+      "change": -0.64
+    },
+    {
+      "ticker": "VX",
+      "label": "VIX",
+      "last": 16.85,
+      "change": 1.75
+    },
+    {
+      "ticker": "CL",
+      "label": "Crude Oil WTI",
+      "last": 88.01,
+      "change": 2.59
+    },
+    {
+      "ticker": "QA",
+      "label": "Crude Oil Brent",
+      "last": 92.25,
+      "change": 1.89
+    },
+    {
+      "ticker": "NG",
+      "label": "Natural Gas",
+      "last": 2.917,
+      "change": -0.61
+    },
+    {
+      "ticker": "HO",
+      "label": "Heating Oil",
+      "last": 4.4785,
+      "change": 1.45
+    },
+    {
+      "ticker": "RB",
+      "label": "Gasoline RBOB",
+      "last": 3.1016,
+      "change": 0.78
+    },
+    {
+      "ticker": "GC",
+      "label": "Gold",
+      "last": 4421.7,
+      "change": -1.31
+    },
+    {
+      "ticker": "SI",
+      "label": "Silver",
+      "last": 65.295,
+      "change": -2.49
+    },
+    {
+      "ticker": "HG",
+      "label": "Copper",
+      "last": 6.599,
+      "change": -1.32
+    },
+    {
+      "ticker": "PL",
+      "label": "Platinum",
+      "last": 1768.0,
+      "change": -1.42
+    },
+    {
+      "ticker": "PA",
+      "label": "Palladium",
+      "last": 1338.5,
+      "change": -2.89
+    },
+    {
+      "ticker": "DX",
+      "label": "USD",
+      "last": 99.55,
+      "change": 0.16
+    },
+    {
+      "ticker": "6E",
+      "label": "EUR",
+      "last": 1.1599,
+      "change": -0.2
+    },
+    {
+      "ticker": "6J",
+      "label": "JPY",
+      "last": 0.6255000000000001,
+      "change": -0.14
+    },
+    {
+      "ticker": "6B",
+      "label": "GBP",
+      "last": 1.354,
+      "change": -0.06
+    },
+    {
+      "ticker": "6A",
+      "label": "AUD",
+      "last": 0.71415,
+      "change": -0.29
+    },
+    {
+      "ticker": "6C",
+      "label": "CAD",
+      "last": 0.7213,
+      "change": -0.11
+    },
+    {
+      "ticker": "6S",
+      "label": "CHF",
+      "last": 1.2365,
+      "change": -0.21
+    },
+    {
+      "ticker": "6N",
+      "label": "NZD",
+      "last": 0.58965,
+      "change": -0.35
+    },
+    {
+      "ticker": "ZN",
+      "label": "10 Year Note",
+      "last": 107.484375,
+      "change": -0.15
+    },
+    {
+      "ticker": "ZF",
+      "label": "5 Year Note",
+      "last": 105.609375,
+      "change": -0.09
+    },
+    {
+      "ticker": "ZT",
+      "label": "2 Year Note",
+      "last": 102.60546875,
+      "change": -0.01
+    },
+    {
+      "ticker": "ZB",
+      "label": "30 Year Bond",
+      "last": 108.15625,
+      "change": -0.43
+    },
+    {
+      "ticker": "NKD",
+      "label": "Nikkei 225",
+      "last": 65040.0,
+      "change": -1.31
+    },
+    {
+      "ticker": "DY",
+      "label": "DAX",
+      "last": 26009.0,
+      "change": -1.19
+    },
+    {
+      "ticker": "EX",
+      "label": "Euro Stoxx 50",
+      "last": 6376.0,
+      "change": -0.92
+    },
+    {
+      "ticker": "ZC",
+      "label": "Corn",
+      "last": 538.5,
+      "change": 0.09
+    },
+    {
+      "ticker": "ZS",
+      "label": "Soybeans",
+      "last": 1300.5,
+      "change": 0.93
+    },
+    {
+      "ticker": "ZW",
+      "label": "Wheat",
+      "last": 784.25,
+      "change": 1.32
+    },
+    {
+      "ticker": "ZL",
+      "label": "Soybean oil",
+      "last": 72.21,
+      "change": 1.92
+    },
+    {
+      "ticker": "ZM",
+      "label": "Soybean Meal",
+      "last": 339.5,
+      "change": 0.27
+    },
+    {
+      "ticker": "ZO",
+      "label": "Oats",
+      "last": 376.5,
+      "change": 0.94
+    },
+    {
+      "ticker": "ZR",
+      "label": "Rough Rice",
+      "last": 15.675,
+      "change": -0.32
+    },
+    {
+      "ticker": "KC",
+      "label": "Coffee",
+      "last": 307.55,
+      "change": -1.27
+    },
+    {
+      "ticker": "SB",
+      "label": "Sugar",
+      "last": 17.88,
+      "change": 0.45
+    },
+    {
+      "ticker": "CT",
+      "label": "Cotton",
+      "last": 91.26,
+      "change": -2.01
+    },
+    {
+      "ticker": "CC",
+      "label": "Cocoa",
+      "last": 6690.0,
+      "change": -1.31
+    },
+    {
+      "ticker": "JO",
+      "label": "Orange Juice",
+      "last": 139.95,
+      "change": -5.34
+    },
+    {
+      "ticker": "LB",
+      "label": "Lumber",
+      "last": 562.5,
+      "change": 1.08
+    },
+    {
+      "ticker": "LC",
+      "label": "Live Cattle",
+      "last": 212.65,
+      "change": 0.45
+    },
+    {
+      "ticker": "LH",
+      "label": "Lean Hogs",
+      "last": 83.675,
+      "change": 2.17
+    },
+    {
+      "ticker": "FC",
+      "label": "Feeder Cattle",
+      "last": 316.625,
+      "change": 0.16
+    },
+    {
+      "ticker": "BTC",
+      "label": "Bitcoin",
+      "last": 78055.0,
+      "change": -1.45
+    },
+    {
+      "ticker": "RS",
+      "label": "Canola",
+      "last": 828.2,
+      "change": 1.84
+    },
+    {
+      "ticker": "ZK",
+      "label": "Ethanol",
+      "last": 2.01498,
+      "change": 0.24
+    }
+  ],
+  "econ": [
+    {
+      "event": "Fed Barr Speech",
+      "datetime": "2026-09-01T09:05:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Interest Rate",
+      "ticker": "FDTR"
+    },
+    {
+      "event": "ISM Manufacturing PMI",
+      "datetime": "2026-09-01T10:00:00",
+      "actual": null,
+      "previous": "55.6",
+      "forecast": "55.2",
+      "surprise": null,
+      "importance": 3,
+      "category": "Business Confidence",
+      "ticker": "NAPMPMI"
+    },
+    {
+      "event": "JOLTs Job Openings",
+      "datetime": "2026-09-01T10:00:00",
+      "actual": null,
+      "previous": "7.359M",
+      "forecast": "7.3M",
+      "surprise": null,
+      "importance": 3,
+      "category": "Job Offers",
+      "ticker": "UNITEDSTAJOBOFF"
+    },
+    {
+      "event": "ISM Manufacturing Employment",
+      "datetime": "2026-09-01T10:00:00",
+      "actual": null,
+      "previous": "52.8",
+      "forecast": "52.5",
+      "surprise": null,
+      "importance": 2,
+      "category": "ISM Manufacturing Employment",
+      "ticker": "USAIME"
+    },
+    {
+      "event": "API Crude Oil Stock Change",
+      "datetime": "2026-09-01T16:30:00",
+      "actual": null,
+      "previous": "4.2M",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "API Crude Oil Stock Change",
+      "ticker": "APICRUDEOIL"
+    },
+    {
+      "event": "MBA 30-Year Mortgage Rate",
+      "datetime": "2026-09-02T07:00:00",
+      "actual": null,
+      "previous": "6.78%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Mortgage Rate",
+      "ticker": "UNITEDSTAMORRAT"
+    },
+    {
+      "event": "ADP Employment Change",
+      "datetime": "2026-09-02T08:15:00",
+      "actual": null,
+      "previous": "44K",
+      "forecast": "47K",
+      "surprise": null,
+      "importance": 2,
+      "category": "ADP Employment Change",
+      "ticker": "UNITEDSTAADPEMPCHA"
+    },
+    {
+      "event": "Factory Orders MoM",
+      "datetime": "2026-09-02T10:00:00",
+      "actual": null,
+      "previous": "-0.3%",
+      "forecast": "0.6%",
+      "surprise": null,
+      "importance": 2,
+      "category": "Factory Orders",
+      "ticker": "UNITEDSTAFACORD"
+    },
+    {
+      "event": "EIA Crude Oil Stocks Change",
+      "datetime": "2026-09-02T10:30:00",
+      "actual": null,
+      "previous": "0.095M",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Crude Oil Stocks Change",
+      "ticker": "UNITEDSTACRUOILSTOCH"
+    },
+    {
+      "event": "EIA Gasoline Stocks Change",
+      "datetime": "2026-09-02T10:30:00",
+      "actual": null,
+      "previous": "-2.536M",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Gasoline Stocks Change",
+      "ticker": "UNITEDSTAGASSTOCHA"
+    },
+    {
+      "event": "Balance of Trade",
+      "datetime": "2026-09-03T08:30:00",
+      "actual": null,
+      "previous": "-$73.3B",
+      "forecast": "-$90B",
+      "surprise": null,
+      "importance": 2,
+      "category": "Balance of Trade",
+      "ticker": "USTBTOT"
+    },
+    {
+      "event": "Exports",
+      "datetime": "2026-09-03T08:30:00",
+      "actual": null,
+      "previous": "$314.7B",
+      "forecast": "$308.5B",
+      "surprise": null,
+      "importance": 2,
+      "category": "Exports",
+      "ticker": "TBEXTOT"
+    },
+    {
+      "event": "Fed Waller Speech",
+      "datetime": "2026-09-03T08:30:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Interest Rate",
+      "ticker": "FDTR"
+    },
+    {
+      "event": "Imports",
+      "datetime": "2026-09-03T08:30:00",
+      "actual": null,
+      "previous": "$388.0B",
+      "forecast": "$399.7B",
+      "surprise": null,
+      "importance": 2,
+      "category": "Imports",
+      "ticker": "TBIMTOT"
+    },
+    {
+      "event": "Initial Jobless Claims",
+      "datetime": "2026-09-03T08:30:00",
+      "actual": null,
+      "previous": "203K",
+      "forecast": "205K",
+      "surprise": null,
+      "importance": 2,
+      "category": "Initial Jobless Claims",
+      "ticker": "IJCUSA"
+    },
+    {
+      "event": "ISM Services PMI",
+      "datetime": "2026-09-03T10:00:00",
+      "actual": null,
+      "previous": "54.1",
+      "forecast": "54.3",
+      "surprise": null,
+      "importance": 3,
+      "category": "Non Manufacturing PMI",
+      "ticker": "UNITEDSTANONMANPMI"
+    },
+    {
+      "event": "Fed Hammack Speech",
+      "datetime": "2026-09-03T15:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Interest Rate",
+      "ticker": "FDTR"
+    },
+    {
+      "event": "Non Farm Payrolls",
+      "datetime": "2026-09-04T08:30:00",
+      "actual": null,
+      "previous": "-23K",
+      "forecast": "58K",
+      "surprise": null,
+      "importance": 3,
+      "category": "Non Farm Payrolls",
+      "ticker": "NFP TCH"
+    },
+    {
+      "event": "Unemployment Rate",
+      "datetime": "2026-09-04T08:30:00",
+      "actual": null,
+      "previous": "4.1%",
+      "forecast": "4.1%",
+      "surprise": null,
+      "importance": 3,
+      "category": "Unemployment Rate",
+      "ticker": "USURTOT"
+    },
+    {
+      "event": "Average Hourly Earnings MoM",
+      "datetime": "2026-09-04T08:30:00",
+      "actual": null,
+      "previous": "0.1%",
+      "forecast": "0.3%",
+      "surprise": null,
+      "importance": 2,
+      "category": "Average Hourly Earnings",
+      "ticker": "UNITEDSTAAVEHOUEAR"
+    },
+    {
+      "event": "Average Hourly Earnings YoY",
+      "datetime": "2026-09-04T08:30:00",
+      "actual": null,
+      "previous": "3.2%",
+      "forecast": "3%",
+      "surprise": null,
+      "importance": 2,
+      "category": "Average Hourly Earnings YoY",
+      "ticker": "USAAHEY"
+    },
+    {
+      "event": "Participation Rate",
+      "datetime": "2026-09-04T08:30:00",
+      "actual": null,
+      "previous": "61.4%",
+      "forecast": "61.4%",
+      "surprise": null,
+      "importance": 2,
+      "category": "Labor Force Participation Rate",
+      "ticker": "UNITEDSTALABFORPARRA"
+    },
+    {
+      "event": "ADP Employment Change Weekly",
+      "datetime": "2026-09-08T08:15:00",
+      "actual": null,
+      "previous": "11.75K",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "ADP Employment Change Weekly",
+      "ticker": "USAAECW"
+    },
+    {
+      "event": "MBA 30-Year Mortgage Rate",
+      "datetime": "2026-09-09T07:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Mortgage Rate",
+      "ticker": "UNITEDSTAMORRAT"
+    },
+    {
+      "event": "API Crude Oil Stock Change",
+      "datetime": "2026-09-09T16:30:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "API Crude Oil Stock Change",
+      "ticker": "APICRUDEOIL"
+    },
+    {
+      "event": "PPI MoM",
+      "datetime": "2026-09-10T08:30:00",
+      "actual": null,
+      "previous": "0%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 3,
+      "category": "Producer Price Inflation MoM",
+      "ticker": "USAPPIM"
+    },
+    {
+      "event": "Core PPI MoM",
+      "datetime": "2026-09-10T08:30:00",
+      "actual": null,
+      "previous": "0.2%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Core Producer Prices MoM",
+      "ticker": "USACPPM"
+    },
+    {
+      "event": "Initial Jobless Claims",
+      "datetime": "2026-09-10T08:30:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Initial Jobless Claims",
+      "ticker": "IJCUSA"
+    },
+    {
+      "event": "Existing Home Sales",
+      "datetime": "2026-09-10T10:00:00",
+      "actual": null,
+      "previous": "4.06M",
+      "forecast": null,
+      "surprise": null,
+      "importance": 3,
+      "category": "Existing Home Sales",
+      "ticker": "UNITEDSTAEXIHOMSAL"
+    },
+    {
+      "event": "Existing Home Sales MoM",
+      "datetime": "2026-09-10T10:00:00",
+      "actual": null,
+      "previous": "-1.7%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Existing Home Sales MoM",
+      "ticker": "USAEHSM"
+    },
+    {
+      "event": "EIA Crude Oil Stocks Change",
+      "datetime": "2026-09-10T12:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Crude Oil Stocks Change",
+      "ticker": "UNITEDSTACRUOILSTOCH"
+    },
+    {
+      "event": "EIA Gasoline Stocks Change",
+      "datetime": "2026-09-10T12:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Gasoline Stocks Change",
+      "ticker": "UNITEDSTAGASSTOCHA"
+    },
+    {
+      "event": "Core Inflation Rate MoM",
+      "datetime": "2026-09-11T08:30:00",
+      "actual": null,
+      "previous": "0.2%",
+      "forecast": "0.2%",
+      "surprise": null,
+      "importance": 3,
+      "category": "Core Inflation Rate MoM",
+      "ticker": "USACIRM"
+    },
+    {
+      "event": "Core Inflation Rate YoY",
+      "datetime": "2026-09-11T08:30:00",
+      "actual": null,
+      "previous": "2.5%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 3,
+      "category": "Core Inflation Rate",
+      "ticker": "USACORECPIRATE"
+    },
+    {
+      "event": "Inflation Rate MoM",
+      "datetime": "2026-09-11T08:30:00",
+      "actual": null,
+      "previous": "0.1%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 3,
+      "category": "Inflation Rate Mom",
+      "ticker": "UNITEDSTAINFRATMOM"
+    },
+    {
+      "event": "Inflation Rate YoY",
+      "datetime": "2026-09-11T08:30:00",
+      "actual": null,
+      "previous": "3.4%",
+      "forecast": null,
+      "surprise": null,
+      "importance": 3,
+      "category": "Inflation Rate",
+      "ticker": "CPI YOY"
+    },
+    {
+      "event": "CPI",
+      "datetime": "2026-09-11T08:30:00",
+      "actual": null,
+      "previous": "333.92",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Consumer Price Index CPI",
+      "ticker": "UNITEDSTACONPRIINDCP"
+    },
+    {
+      "event": "CPI s.a",
+      "datetime": "2026-09-11T08:30:00",
+      "actual": null,
+      "previous": "332.81",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "CPI seasonally adjusted",
+      "ticker": "USACSA"
+    },
+    {
+      "event": "Michigan Consumer Sentiment Prel",
+      "datetime": "2026-09-11T10:00:00",
+      "actual": null,
+      "previous": "51.7",
+      "forecast": "52",
+      "surprise": null,
+      "importance": 3,
+      "category": "Consumer Confidence",
+      "ticker": "CONCCONF"
+    },
+    {
+      "event": "Monthly Budget Statement",
+      "datetime": "2026-09-11T14:00:00",
+      "actual": null,
+      "previous": null,
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "Government Budget Value",
+      "ticker": "UNITEDSTAGOVBUDVAL"
+    }
+  ],
+  "earnings": [
+    {
+      "ticker": "AVGO",
+      "company": "Broadcom Inc",
+      "datetime": "2026-09-02T16:30:00",
+      "session": "AMC",
+      "mcap": 1743177.3128632777,
+      "eps_est": 3.2154
+    },
+    {
+      "ticker": "ORCL",
+      "company": "Oracle Corp",
+      "datetime": "2026-09-10T16:30:00",
+      "session": "AMC",
+      "mcap": 423429.225707655,
+      "eps_est": 1.7349
+    },
+    {
+      "ticker": "PANW",
+      "company": "Palo Alto Networks Inc",
+      "datetime": "2026-09-01T16:30:00",
+      "session": "AMC",
+      "mcap": 308371.5420801723,
+      "eps_est": 0.9775
+    },
+    {
+      "ticker": "DELL",
+      "company": "Dell Technologies Inc",
+      "datetime": "2026-09-01T16:30:00",
+      "session": "AMC",
+      "mcap": 294585.38639107044,
+      "eps_est": 4.9113
+    },
+    {
+      "ticker": "MDT",
+      "company": "Medtronic Plc",
+      "datetime": "2026-09-01T08:30:00",
+      "session": "BMO",
+      "mcap": 118654.2147473997,
+      "eps_est": 1.3884
+    },
+    {
+      "ticker": "ADBE",
+      "company": "Adobe Inc",
+      "datetime": "2026-09-10T16:30:00",
+      "session": "AMC",
+      "mcap": 115143.83192383207,
+      "eps_est": 6.075
+    },
+    {
+      "ticker": "SNOW",
+      "company": "Snowflake Inc",
+      "datetime": "2026-09-02T16:30:00",
+      "session": "AMC",
+      "mcap": 113698.35413203211,
+      "eps_est": 0.4468
+    },
+    {
+      "ticker": "HPE",
+      "company": "Hewlett Packard Enterprise Co",
+      "datetime": "2026-09-02T16:30:00",
+      "session": "AMC",
+      "mcap": 69083.69111178341,
+      "eps_est": 0.9316
+    },
+    {
+      "ticker": "CIEN",
+      "company": "CIENA Corp",
+      "datetime": "2026-09-03T08:30:00",
+      "session": "BMO",
+      "mcap": 53523.88100668149,
+      "eps_est": 1.7274
+    },
+    {
+      "ticker": "CRDO",
+      "company": "Credo Technology Group Holding Ltd",
+      "datetime": "2026-09-01T16:30:00",
+      "session": "AMC",
+      "mcap": 41909.43785172659,
+      "eps_est": 1.174
+    },
+    {
+      "ticker": "NTAP",
+      "company": "Netapp Inc",
+      "datetime": "2026-09-02T16:30:00",
+      "session": "AMC",
+      "mcap": 36360.25,
+      "eps_est": 2.1226
+    },
+    {
+      "ticker": "MDB",
+      "company": "MongoDB Inc",
+      "datetime": "2026-09-01T16:30:00",
+      "session": "AMC",
+      "mcap": 36192.75706143661,
+      "eps_est": 1.6154
+    },
+    {
+      "ticker": "KR",
+      "company": "Kroger Co",
+      "datetime": "2026-09-11T08:30:00",
+      "session": "BMO",
+      "mcap": 35331.37247489255,
+      "eps_est": 1.0542
+    },
+    {
+      "ticker": "ZS",
+      "company": "Zscaler Inc",
+      "datetime": "2026-09-03T16:30:00",
+      "session": "AMC",
+      "mcap": 30077.973645583483,
+      "eps_est": 1.0884
+    },
+    {
+      "ticker": "SUNB",
+      "company": "Sunbelt Rentals Holdings Inc",
+      "datetime": "2026-09-09T08:30:00",
+      "session": "BMO",
+      "mcap": 29036.587271735647,
+      "eps_est": 1.0343
+    },
+    {
+      "ticker": "CASY",
+      "company": "Casey's General Stores Inc",
+      "datetime": "2026-09-08T16:30:00",
+      "session": "AMC",
+      "mcap": 27975.71782520728,
+      "eps_est": 6.7441
+    },
+    {
+      "ticker": "IOT",
+      "company": "Samsara Inc",
+      "datetime": "2026-09-03T16:30:00",
+      "session": "AMC",
+      "mcap": 23672.791214732257,
+      "eps_est": 0.16
+    },
+    {
+      "ticker": "GWRE",
+      "company": "Guidewire Software Inc",
+      "datetime": "2026-09-03T16:30:00",
+      "session": "AMC",
+      "mcap": 17046.74,
+      "eps_est": 0.9331
+    },
+    {
+      "ticker": "LULU",
+      "company": "Lululemon Athletica Inc",
+      "datetime": "2026-09-03T16:30:00",
+      "session": "AMC",
+      "mcap": 14121.571678560025,
+      "eps_est": 1.7944
+    },
+    {
+      "ticker": "COO",
+      "company": "Cooper Companies Inc",
+      "datetime": "2026-09-09T16:30:00",
+      "session": "AMC",
+      "mcap": 13776.967471956614,
+      "eps_est": 1.1237
+    },
+    {
+      "ticker": "FIVE",
+      "company": "Five Below Inc",
+      "datetime": "2026-09-02T16:30:00",
+      "session": "AMC",
+      "mcap": 13657.947455910295,
+      "eps_est": 1.395
+    },
+    {
+      "ticker": "DOCU",
+      "company": "DocuSign Inc",
+      "datetime": "2026-09-03T16:30:00",
+      "session": "AMC",
+      "mcap": 12602.345590844081,
+      "eps_est": 1.0853
+    },
+    {
+      "ticker": "BF-A",
+      "company": "Brown-Forman Corp",
+      "datetime": "2026-09-02T08:30:00",
+      "session": "BMO",
+      "mcap": 12304.9,
+      "eps_est": 0.3688
+    },
+    {
+      "ticker": "BF-B",
+      "company": "Brown-Forman Corp",
+      "datetime": "2026-09-02T08:30:00",
+      "session": "BMO",
+      "mcap": 12304.9,
+      "eps_est": 0.3692
+    },
+    {
+      "ticker": "SAIL",
+      "company": "Sailpoint Inc",
+      "datetime": "2026-09-09T08:30:00",
+      "session": "BMO",
+      "mcap": 11683.967835035863,
+      "eps_est": 0.0791
+    }
+  ]
+}

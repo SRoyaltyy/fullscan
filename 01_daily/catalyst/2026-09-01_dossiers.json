@@ -1,0 +1,167 @@
+{
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T07:37:06.205212-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE Textile Manufacturing"
+    },
+    {
+      "ticker": "HCC",
+      "role": "override_captain",
+      "why": "OVERRIDE Coking Coal"
+    },
+    {
+      "ticker": "AMR",
+      "role": "override_captain",
+      "why": "OVERRIDE Coking Coal"
+    },
+    {
+      "ticker": "VEEV",
+      "role": "override_captain",
+      "why": "OVERRIDE Health Information Services"
+    },
+    {
+      "ticker": "BTSG",
+      "role": "override_captain",
+      "why": "OVERRIDE Health Information Services"
+    },
+    {
+      "ticker": "TXG",
+      "role": "override_captain",
+      "why": "OVERRIDE Health Information Services"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE Textile Manufacturing",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "HCC",
+      "role": "override_captain",
+      "why": "OVERRIDE Coking Coal",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AMR",
+      "role": "override_captain",
+      "why": "OVERRIDE Coking Coal",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "VEEV",
+      "role": "override_captain",
+      "why": "OVERRIDE Health Information Services",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "BTSG",
+      "role": "override_captain",
+      "why": "OVERRIDE Health Information Services",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "TXG",
+      "role": "override_captain",
+      "why": "OVERRIDE Health Information Services",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    }
+  ]
+}

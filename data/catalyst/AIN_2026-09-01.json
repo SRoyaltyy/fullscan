@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-10\",\n    \"description\": \"Albany Engineered Composites, a segment of Albany International Corp (AIN), announced a teaming agreement with Lockheed Martin to accelerate high-rate production for U.S. hypersonic weapons programs.\",\n    \"evidence_excerpt\": \"\\\"Lockheed Martin (NYSE:LMT) and Albany Engineered Composites, a segment of Albany International Corp. (NYSE: AIN), have announced a teaming agreement\\\"\",\n    \"source_urls\": [\n      \"https://news.lockheedmartin.com/",
+  "ticker": "AIN",
+  "generated_at": "2026-09-01",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "mixed",
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "mixed",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Healthcare": "bullish",
+  "Technology": "mixed"
+ },
+ "tickers": {
+  "AMGN": 5.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=3\nMACRO fed_path: [hawkish] Post-Warsh Sep FOMC coin flip; hike odds back on table (regime/1d-1w)\nMACRO geo_oil: [mixed] Hormuz live \u2014 IRGC control/US blockade vs reopen terms (session/XLE)\nMACRO inflation: [hawkish] Corn/wheat 3-year highs reinforce sticky-inflation warning (session/1w)\nMACRO calendar: [bearish] September seasonality into hawkish path (session/1w-1m)\nSECTOR healthcare: [bullish] AMGN Repatha Ph3 \u221220% all-cause mortality (XLV/CV basket)\nSECTOR technology: [mixed] ADI AI-datacenter upgrades vs hawkish duration (XLK/semis)\nSECTOR software: [mixed] ADSK beat/raise; do not buy duration software on rates hope (IGV)\nINTERACTION: Warsh + Hormuz + food inflation = one stagflation/rates cluster; AI/software prints do not override\nWATCH: Finviz gold-miner rip on \u201ccut bets\u201d conflicts with hawkish tape \u2014 stale/contested, not dovish",
+ "date": "2026-09-01"
+}
