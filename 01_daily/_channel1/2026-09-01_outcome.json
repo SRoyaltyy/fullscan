@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-09-01T17:09:33.092506-04:00",
+  "fetched_at": "2026-09-01T19:11:49.742342-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-09-01",
-      "last": 90.66,
-      "pct_1d": 5.71
+      "last": 90.82,
+      "pct_1d": 5.9
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-01",
-      "last": 95.22,
-      "pct_1d": 5.23
+      "last": 95.3,
+      "pct_1d": 5.32
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-01",
-      "last": 4375.8,
-      "pct_1d": -1.25
+      "last": 4373.5,
+      "pct_1d": -1.3
     },
     "DXY": {
       "available": true,
       "date": "2026-09-01",
       "source": "DX-Y.NYB",
       "pct_1d": 0.23,
-      "pct_1m": -0.14
+      "pct_1m": -0.15
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-01",
-      "last": 7647.0,
-      "pct_1d": -0.68
+      "last": 7645.75,
+      "pct_1d": -0.69
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-01",
-      "last": 29142.25,
-      "pct_1d": -1.26
+      "last": 29133.75,
+      "pct_1d": -1.29
     }
   },
   "finviz_futures_tape": {
@@ -465,30 +465,30 @@
       "per_index": {
         "FTSE": {
           "available": true,
-          "date": "2026-09-01",
-          "last": 10789.28,
-          "pct_1d": -0.03
+          "date": "2026-08-27",
+          "last": 10792.5,
+          "pct_1d": -0.79
         },
         "DAX": {
           "available": true,
-          "date": "2026-09-01",
-          "last": 25970.11,
-          "pct_1d": -1.1
+          "date": "2026-08-31",
+          "last": 26258.11,
+          "pct_1d": -0.41
         },
         "CAC": {
           "available": true,
-          "date": "2026-09-01",
-          "last": 8301.85,
-          "pct_1d": -0.39
+          "date": "2026-08-31",
+          "last": 8334.5,
+          "pct_1d": 0.18
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-09-01",
-          "last": 6368.98,
-          "pct_1d": -0.8
+          "date": "2026-08-31",
+          "last": 6420.16,
+          "pct_1d": -0.07
         }
       },
-      "composite_avg": -0.58
+      "composite_avg": -0.27
     }
   },
   "yield_spx_corr": {

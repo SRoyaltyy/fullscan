@@ -12514,51 +12514,51 @@
       "reflection_lesson_ref": "02_lessons/candidate/2026-09-01_lesson.md",
       "sources_used": [
         {
-          "url": "https://www.morningstar.com/news/dow-jones/202609017616/sp-500-falls-071-to-763147-data-talk",
+          "url": "https://www.cnbc.com/2026/09/01/us-iran-war-trump-hormuz-tanker-attack-shipping-sanctions-.html",
           "date_accessed": "2026-09-01",
-          "summary": "Official close matches Channel 1; this was the worst session since Aug. 20, not a routine chop.",
+          "summary": "Session oil quotes put WTI through $90 and Brent ~$94.5, larger than the morning +2% impulse.",
           "verification": "quote_not_found"
         },
         {
           "url": "https://www.cnbc.com/2026/09/01/us-iran-war-trump-hormuz-tanker-attack-shipping-sanctions-.html",
           "date_accessed": "2026-09-01",
-          "summary": "The fresh kinetic increment and the oil extension beyond the premarket +2.3% print are the same story.",
+          "summary": "Shipping attack + Tuesday CENTCOM confirmation made Hormuz a live supply-risk story into the cash open.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://apnews.com/article/stocks-markets-oil-bonds-775d7cf741349c7c8e689c0beb57f074",
+          "date_accessed": "2026-09-01",
+          "summary": "AP’s close frame is geo → oil → inflation → bonds → equities, matching the primary-driver chain.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://apnews.com/article/stocks-markets-oil-bonds-775d7cf741349c7c8e689c0beb57f074",
+          "date_accessed": "2026-09-01",
+          "summary": "Duration/AI-capex names transmitted the yield/oil shock into SPX/NDX.",
           "verification": "quote_not_found"
         },
         {
           "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-6-august-2026-ism-manufacturing-pmi-report-302865127.html",
           "date_accessed": "2026-09-01",
-          "summary": "Expansion cooled on a mild miss; the inflation subindex did not cool at all.",
+          "summary": "10:00 print was a growth miss inside expansion with no cooling in prices — stagflation-flavored, not a dovish gift.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/01/stock-market-midday-sept-1-stocks-slide-on-global-bond-sell-off/",
+          "url": "https://www.manufacturingdive.com/news/us-manufacturing-slowed-august-ism-pmi/829262/",
           "date_accessed": "2026-09-01",
-          "summary": "Cross-asset fingerprint was yields-up/gold-down/tech-down, not a classic haven bid.",
+          "summary": "The 10am survey is a symptom of the same geo/tariff inflation complex, not an independent growth shock that rewrote PATH.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://www.morningstar.com/news/dow-jones/202609016174/comex-copper-settles-132-lower-at-65065-data-talk",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/01/stock-market-today-sept-1-stocks-slide-and-oil-surges-amid-u-s-iran-tension/",
           "date_accessed": "2026-09-01",
-          "summary": "Industrial metals sold off while oil rallied — supply-shock, not a synchronized commodity bid.",
+          "summary": "Independent close wrap matches Channel 1 magnitude; Fool also flags CRWD/PANW as extra tech supply.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-01-2026",
+          "url": "https://www.fool.com/investing/2026/09/01/ceo-michael-dell-just-delivered-fantastic-news-for-dell-shareholders/",
           "date_accessed": "2026-09-01",
-          "summary": "End-of-day rates and oil confirm the oil-to-yields amplifier beyond the premarket sleeve.",
-          "verification": "http_401"
-        },
-        {
-          "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
-          "date_accessed": "2026-09-01",
-          "summary": "The 10:00 labor print was a slight miss vs ~7.33M consensus, not a labor-market break, and it did not reverse PATH.",
-          "verification": "http_403"
-        },
-        {
-          "url": "https://www.cnbc.com/2026/09/01/dell-q2-earnings-report-2027.html",
-          "date_accessed": "2026-09-01",
-          "summary": "Confirms the morning call that Dell was a pending binary, not a 9am catalyst; it belongs to tomorrow’s tape.",
+          "summary": "The AI-hardware binary the morning left unscored printed AHR, not during the −1% Nasdaq cash session.",
           "verification": "quote_not_found"
         }
       ],
@@ -12591,11 +12591,11 @@
       "news_judge_present": true,
       "ops_fail": false,
       "path_shape": "choppy / range-bound",
-      "primary_driver": "Fresh Hormuz/US-Iran kinetic increment transmitted through an oil spike and a global bond selloff",
-      "key_interaction": "Oil amplified Warsh’s hawkish path so a still-expanding ISM 54.6 was not bought — inflation-conditional, not growth-conditional",
+      "primary_driver": "Hormuz tanker + Tuesday US-IRGC strikes spiked oil and transmitted into yields/tech; weak open never left the red",
+      "key_interaction": "Amplification — one Hormuz kinetic root produced oil + yields + hike-odds + tech-down (energy bid only masked the index)",
       "knowable_at_9am": "yes",
       "attribution_contested": "yes",
-      "outlier_watch": "Gold and copper fell, HY stayed tight, energy rallied, Apple rose — rates/supply-shock split, not classic panic risk-off",
+      "outlier_watch": "Gold down ~1.3% on a war day; energy up vs indices down; AAPL +2.6% on CEO handoff; HY unstressed; Dell AI beat was AHR only",
       "horizon_grades": {},
       "lesson_schema_ok": true
     },
