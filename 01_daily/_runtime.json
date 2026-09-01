@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 1,
   "grok_busy": false,
-  "updated_at": "2026-09-01T17:37:26.115145-04:00",
+  "updated_at": "2026-09-01T19:40:31.776121-04:00",
   "source": "runtime_status",
   "doors": [
     {
