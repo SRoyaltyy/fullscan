@@ -1,11 +1,12 @@
 {
-  "status": "needs_reauth",
-  "oauth": "WARN",
+  "status": "waiting",
+  "oauth": "FAIL",
   "pong_ok": null,
-  "reason": "Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fallbacks (0) : - Image model   : - Image f",
-  "user_code": null,
-  "verification_uri": "https://accounts.x.ai/oauth2/device",
-  "expires_at": null,
+  "reason": "Approve this code on the phone at accounts.x.ai",
+  "user_code": "TV7D-HET4",
+  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=TV7D-HET4",
+  "expires_at": "2026-09-01T06:14:52.216971-04:00",
   "source": "xai_device_reauth",
-  "updated_at": "2026-09-01T06:00:33.573433-04:00"
+  "pid": 475809,
+  "updated_at": "2026-09-01T06:00:52.217556-04:00"
 }
