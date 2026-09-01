@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-09-01T17:23:53.278134-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-09-01T19:40:55.736245-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 120 · judged (enough data both sides): 46 · improved: 3 · flat: 1 · worse: 42 · mean delta: -0.278**
+**Active lessons: 123 · judged (enough data both sides): 47 · improved: 3 · flat: 2 · worse: 42 · mean delta: -0.269**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -16,7 +16,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 - `a-financials-call-treats-a-long-end-yield-spike-as-a-one-sid.md` (sector:Financial, since 2026-08-19): 43% → 20% (-23%)
 - `a-financials-prediction-treats-any-2s10s-steepening-as-an-un.md` (sector:Financial, since 2026-08-18): 50% → 20% (-30%)
 - `a-follow-through-session-where-the-dominant-catalyst-is-a-pr.md` (general, since 2026-08-13): 57% → 29% (-28%)
-- `a-fresh-same-morning-hard-data-macro-miss-e-g-china-ip-retai.md` (general, since 2026-08-17): 43% → 33% (-10%)
+- `a-fresh-same-morning-negative-mega-cap-bellwether-earnings-m.md` (general, since 2026-08-20): 57% → 50% (-7%)
 - `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services, since 2026-08-19): 43% → 0% (-43%)
 - `a-high-beta-cyclical-sector-xly-is-predicted-down-after-a-sh.md` (sector:Consumer Cyclical, since 2026-08-23): 71% → 25% (-46%)
 - `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate, since 2026-08-19): 71% → 40% (-31%)
@@ -38,7 +38,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 - `dominant-positive-catalyst-geopolitical-de-escalation-strong.md` (general, since 2026-08-13): 57% → 29% (-28%)
 - `energy-xle-prediction-where-premarket-oil-is-green-cl-bz-up.md` (sector:Energy, since 2026-08-17): 60% → 33% (-27%)
 - `existing-basic-materials-rule-is-confirmed-after-a-hard-xlb.md` (sector:Basic Materials, since 2026-08-14): 75% → 57% (-18%)
-- `fresh-same-morning-hard-data-macro-miss-china-ip-retail-plus.md` (general, since 2026-08-18): 43% → 20% (-23%)
+- `fresh-same-morning-hard-data-macro-miss-china-ip-retail-plus.md` (general, since 2026-08-18): 43% → 33% (-10%)
 - `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities, since 2026-08-14): 75% → 14% (-61%)
 - `mixed-catalyst-session-positive-geopolitical-de-escalation-h.md` (general, since 2026-08-13): 57% → 29% (-28%)
 - `no-corrective-trigger-full-hit-on-both-axes-under-an-activel.md` (general, since 2026-08-13): 57% → 29% (-28%)
@@ -55,6 +55,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Lesson | Topic | Since | Before | After | Δ | Verdict |
 |--------|-------|-------|--------|-------|---|---------|
+| `a-1w-winner-is-gated-out-when-s-ab-s-peer-are-st` | — | 2026-09-01 | — | — | — | not market-graded |
 | `a-basic-materials-xlb-call-builds-a-severe-up-sc` | sector:Basic Materials | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |
 | `a-bond-proxy-defensive-sector-utilities-xlu-is-s` | sector:Utilities | 2026-08-28 | 14% (n=7) | — | — | insufficient |
 | `a-bond-proxy-rate-sensitive-defensive-sector-sta` | sector:Consumer Defensive | 2026-08-13 | 33% (n=3) | 43% (n=7) | — | insufficient |
@@ -79,8 +80,8 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `a-financials-sector-call-has-strongly-positive-s` | sector:Financial | 2026-08-13 | 67% (n=3) | 14% (n=7) | — | insufficient |
 | `a-financials-xlf-call-with-s0-0-and-s1-0-mixed-f` | sector:Financial | 2026-08-28 | 14% (n=7) | — | — | insufficient |
 | `a-follow-through-session-where-the-dominant-cata` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
-| `a-fresh-same-morning-hard-data-macro-miss-e-g-ch` | general | 2026-08-17 | 43% (n=7) | 33% (n=6) | -10% | WORSE |
-| `a-fresh-same-morning-negative-mega-cap-bellwethe` | general | 2026-08-20 | 57% (n=7) | 33% (n=3) | — | insufficient |
+| `a-fresh-same-morning-hard-data-macro-miss-e-g-ch` | general | 2026-08-17 | 43% (n=7) | 43% (n=7) | +0% | flat |
+| `a-fresh-same-morning-negative-mega-cap-bellwethe` | general | 2026-08-20 | 57% (n=7) | 50% (n=4) | -7% | WORSE |
 | `a-fresh-top-holding-legal-regulatory-catalyst-e-` | sector:Communication Services | 2026-08-19 | 43% (n=7) | 0% (n=5) | -43% | WORSE |
 | `a-healthcare-xlv-call-after-a-strong-multi-week-` | sector:Healthcare | 2026-08-13 | 67% (n=3) | 100% (n=5) | — | insufficient |
 | `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq` | sector:Healthcare | 2026-08-28 | 71% (n=7) | — | — | insufficient |
@@ -137,13 +138,15 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `escalating-geopolitical-oil-supply-shock-catalys` | sector:Energy | 2026-08-27 | 43% (n=7) | 0% (n=1) | — | insufficient |
 | `existing-basic-materials-rule-is-confirmed-after` | sector:Basic Materials | 2026-08-14 | 75% (n=4) | 57% (n=7) | -18% | WORSE |
 | `for-a-bond-proxy-defensive-sector-when-s0-and-s1` | sector:Utilities | 2026-08-27 | 29% (n=7) | 100% (n=1) | — | insufficient |
-| `fresh-same-morning-hard-data-macro-miss-china-ip` | general | 2026-08-18 | 43% (n=7) | 20% (n=5) | -23% | WORSE |
-| `fresh-same-morning-positive-catalyst-cluster-chi` | general | 2026-08-21 | 43% (n=7) | 0% (n=2) | — | insufficient |
+| `fresh-overnight-kinetic-oil-supply-increment-not` | general | 2026-09-01 | 29% (n=7) | — | — | insufficient |
+| `fresh-same-morning-hard-data-macro-miss-china-ip` | general | 2026-08-18 | 43% (n=7) | 33% (n=6) | -10% | WORSE |
+| `fresh-same-morning-positive-catalyst-cluster-chi` | general | 2026-08-21 | 43% (n=7) | 33% (n=3) | — | insufficient |
 | `in-a-utilities-xlu-call-a-second-soft-inflation-` | sector:Utilities | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% | WORSE |
 | `industrials-xli-narrative-and-sector-scores-cap-` | sector:Industrials | 2026-08-28 | 14% (n=7) | — | — | insufficient |
 | `long-duration-technology-semis-prediction-turns-` | sector:Technology | 2026-08-13 | 33% (n=3) | 43% (n=7) | — | insufficient |
 | `mega-cap-cyclical-etf-xly-amzn-tsla-hd-with-s0-0` | sector:Consumer Cyclical | 2026-08-28 | 57% (n=7) | — | — | insufficient |
 | `mega-cap-earnings-over-macro-drag.md` | general | 2026-07-31 | — | 71% (n=7) | — | insufficient |
+| `missed-1w-movers-show-s-news-0-despite-a-catalog` | — | 2026-09-01 | — | — | — | not market-graded |
 | `mixed-catalyst-session-positive-geopolitical-de-` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
 | `no-corrective-trigger-full-hit-on-both-axes-unde` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
 | `no-error-full-direction-magnitude-hit-no-correct` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
@@ -156,7 +159,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `ops-missing-predict-file.md` | — | 2026-08-08 | — | — | — | not market-graded |
 | `premarket-tape-shows-no-directional-confirmation` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
 | `rule.md` | sector:Financial | 2026-08-27 | 29% (n=7) | 0% (n=1) | — | insufficient |
-| `scheduled-same-session-fed-chair-fomc-keynote-is` | general | 2026-08-28 | 29% (n=7) | — | — | insufficient |
+| `scheduled-same-session-fed-chair-fomc-keynote-is` | general | 2026-08-28 | 29% (n=7) | 100% (n=1) | — | insufficient |
 | `scheduled-trading-day-opens-with-the-premarket-p` | — | 2026-08-13 | — | — | — | not market-graded |
 | `scheduled-trading-day-where-the-premarket-predic` | — | 2026-08-27 | — | — | — | not market-graded |
 | `scheduled-us-cash-session-where-premarket-yyyy-m` | — | 2026-08-28 | — | — | — | not market-graded |
@@ -180,7 +183,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Topic | prev 10 | last 10 |
 |-------|---------|---------|
-| general | 60% (n=10) | 40% (n=10) |
+| general | 70% (n=10) | 40% (n=10) |
 | sector:Basic Materials | 100% (n=2) | 50% (n=10) |
 | sector:Communication Services | 0% (n=2) | 30% (n=10) |
 | sector:Consumer Cyclical | 50% (n=2) | 60% (n=10) |

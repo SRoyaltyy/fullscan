@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-01
 
-Generated: **2026-09-01T17:23:52.954644-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-01T19:40:55.496585-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,8 +15,8 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 134 |
 | Hypotheses written | 135 (wins=66, losses=69) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 0 |
-| Active lesson files now | 120 |
+| Lessons promoted to active | 3 |
+| Active lesson files now | 123 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -40,13 +40,6 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the **experiment** to run next, and the **policy candidate** (do instead).
 
 ### `general` — 8 wins, 7 losses
-
-#### LOSS — 2026-08-19
-- **When:** [general] Predicted down but went up (pct=0.21, score=-7.2, sector=).
-- **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
-- **Experiment:** [general] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
-- **Do instead:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
-- **Wrong if:** [general] Wrong if this hedge reduces direction accuracy over 10 runs.
 
 #### LOSS — 2026-08-20
 - **When:** [general] Predicted up but went down (pct=-0.87, score=1.125, sector=).
@@ -75,6 +68,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Experiment:** [general] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **Do instead:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [general] Wrong if this hedge reduces direction accuracy over 10 runs.
+
+#### WIN — 2026-09-01
+- **When:** [general] Predicted down, market/sector went down (pct=-0.71, score=-6.3, sector=).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
 
 ### `news` — 1 wins, 0 losses
 
@@ -494,7 +494,9 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-_No new promotions this cycle (candidates incomplete or already active)._
+- `a-1w-winner-is-gated-out-when-s-ab-s-peer-are-still-deeply-n.md`
+- `missed-1w-movers-show-s-news-0-despite-a-catalog-headline-al.md`
+- `fresh-overnight-kinetic-oil-supply-increment-not-leftover-ta.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 

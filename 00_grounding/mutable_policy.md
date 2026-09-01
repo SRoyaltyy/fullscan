@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-09-01**. Promoted: 0. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-09-01**. Promoted: 3. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -27,6 +27,13 @@ Last learn_cycle: **2026-09-01**. Promoted: 0. Human digest: `03_scoreboard/LEAR
 - **sector:Utilities**: 45% (5/11)
 
 ## Active adjustments (promoted lessons, truncated)
+
+### a-1w-winner-is-gated-out-when-s-ab-s-peer-are-still-deeply-n.md
+---
+trigger_pattern: "A 1w winner is gated_out when s_ab/s_peer are still deeply negative after a crash even though s_join and s_sector are already constructive, or when a micro name with maxed peer/AB fails a size or join floor."
+corrected_behavior: "Add an eligibility override gate: do not hard-exclude when (s_join>0.5 and s_sector>0.5) even if s_ab and s_peer are both <-0.5; and do not size-gate micros when s_peer>=0.99 and s_ab>0.5."
+falsifier: "Wrong if admitting CAPR/CYPH-style overrides into the 1w top-10 lowers excess vs the universe median over the next ≥5 fully-realized books."
+current_behavior: "Eligibility treats weak AB/peer (and micro size) as hard exclusions, so CAPR never enters despite s_join=0.611 and s_sector=0.6, and CYPH never enters despite s_ab=0.704 and s_peer=1.0."
 
 ### a-basic-materials-xlb-call-builds-a-severe-up-score-from-str.md
 ---
@@ -452,6 +459,13 @@ evidence_cited: "2026-08-13 XLB actual -0.51%, SPY +0.70
 trigger_pattern: "For a bond-proxy/defensive sector, when S0 and S1 are both neutral because the macro forces are offsetting (risk-on equity tape vs easing/intermediate yields but elevated long-end), and the only negative components are carried relative-breadth/outflow scores (S2/S3) with no fresh decisive sector-level negative, the model over-commits to `down` instead of `flat`. Separately, if the PREDICT block contains explicit `predicted_direction` and `predicted_magnitude_band`, the scoreboard must not later record `predicted None/None`."
 corrected_behavior: "When S0=0 and S1=0, and the only negatives are carried S2/S3 relative/flow scores, prefer `flat` (or `flat/up`) with a mild band on a risk-on tape; do not manufacture a directional down call from carried negatives alone. Reser
 
+### fresh-overnight-kinetic-oil-supply-increment-not-leftover-ta.md
+---
+trigger_pattern: "Fresh overnight kinetic/oil-supply increment (not leftover-tape) with independently confirming NQ ≤ −0.5%, Europe already red, paid hawkish Fed text scored only in B3, BN=GN confined to data, no same-morning mega-cap or hard-data miss."
+corrected_behavior: "No score change. Keep B1 at −1 (not −2 crash, not leftover 0) when the kinetic increment is fresh; keep B7 at −0.5 for the same oil shock; allow B6 −0.5 when NQ independently confirms ≤ −0.5%; leave B3 as the only Warsh sleeve; emit DOWN/MILD; do not apply 08-28 leftover-tape flatten or mega-cap down-forbid when futures already confirm weakness."
+falsifier: "If this trigger recurs and SPX closes ≥ +0.3% or ≥ 1.0% down on 2 of the next 3 such days, down/mild must be revised, not defended."
+current_behavior: "Scored 
+
 ### fresh-same-morning-hard-data-macro-miss-china-ip-retail-plus.md
 ---
 trigger_pattern: "Fresh same-morning hard-data macro miss (China IP/retail) plus an active geopolitical/oil risk-off escalation (Trump/Oman threat, Hormuz ceasefire expiry), a carried low-confidence Fed-easing repricing as the only strong positive, and clearly negative US index futures (NQ ≤ −1%, ES < −0.4%); no fresh index-relevant mega-cap earnings catalyst. The correct output is down/mild — full confirmation of the 08-17 fresh-hard-data-miss lesson."
@@ -492,6 +506,12 @@ corrected_behavior: "When Channel 2 has an index-relevant positive mega-cap earn
 falsifier: "Wrong if mega-cap earnings green but SPX still falls that day while futures were non-negative at the open."
 current_behavior: "Over-weight oil/China/Fed negatives vs Amazon/MSFT-type prints; call down."
 evidence_cited: "2026-07-31 predicted down/mild; actual SPX +0.70%; Amazon
+
+### missed-1w-movers-show-s-news-0-despite-a-catalog-headline-al.md
+---
+trigger_pattern: "Missed 1w movers show s_news=0 despite a catalog headline already public before pick time, or a negative news tilt on large-cap software that then rips through a scheduled earnings window inside the horizon."
+corrected_behavior: "Require news_judge to attach finviz_digest plus FDA/8-K/partnership headlines onto every name with |s_join|>0.5 or |s_ab|>0.5 (so CAPR cannot stay at 0.0 a week after the BLA-amendment news); and add a reliability gate that treats negative s_news as missing—not a sell veto—when s_ab>0.8 and an events-addon earnings date falls inside the 1w horizon."
+falsifier: "Wrong if those attachments still leave s_news≈0 on CAPR-like pre-signal catalysts, or if neutralizing pre-earnings news tilts on high-AB mega-caps does not raise 1w buy-book excess vs 
 
 ### mixed-catalyst-session-positive-geopolitical-de-escalation-h.md
 ---
@@ -711,9 +731,9 @@ corrected_behavior: "If 8/25 conditions hold, emitted predicted_direction cannot
 ## Per-scope DO-INSTEAD
 
 ### scope `general` — wins=8 losses=7
-- **win 2026-08-21:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-08-23:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-08-28:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-01:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=1 losses=0
 - **win news:** [news] Rank event families by 1d close, not ever-touch MFE.
