@@ -171,12 +171,28 @@ def test_liquid_losers_are_down():
     assert "XHG" not in ticks
 
 
+def test_cli_accepts_sells_and_losers():
+    p = gainer_asof.build_parser()
+    args = p.parse_args([
+        "--from", "2026-08-13", "--floors", "2,5", "--all",
+        "--buys", "--sells", "--losers", "--write", "--min-mcap", "100",
+    ])
+    assert args.sells is True
+    assert args.losers is True
+    assert args.buys is True
+    off = p.parse_args(["--no-sells", "--no-losers"])
+    assert off.sells is False
+    assert off.losers is False
+
+
 def test_day_walk_carries_hall_pass_and_sides():
     day = gainer_asof.day_walk(
         "2026-08-31", include_buys=True, include_sells=True,
         include_losers=True, top_n=5,
     )
     assert "sells" in day and "losers" in day
+    assert day.get("sells")
+    assert day.get("losers")
     row = (day.get("buys") or day.get("rows") or [None])[0]
     if not row:
         return
@@ -184,8 +200,18 @@ def test_day_walk_carries_hall_pass_and_sides():
     assert "lane_label" in row
     assert "marks" in row
     assert "bucket" in row
+    sell = day["sells"][0]
+    loser = day["losers"][0]
+    assert set(sell["boxes"]) >= {k for k, _ in tl.BOX_COLS}
+    assert set(sell["domains"]) == {k for k, _ in gainer_asof.DOMAIN_COLS}
+    assert sell["labeled"].startswith("join")
+    assert sell.get("labeled_domains", "").startswith("mkt")
+    assert set(loser["boxes"]) >= {k for k, _ in tl.BOX_COLS}
+    assert set(loser["domains"]) == {k for k, _ in gainer_asof.DOMAIN_COLS}
+    assert loser["change_pct"] <= gainer_asof.LOSER_FLOOR
     md = "\n".join(gainer_asof.render_day_markdown("2026-08-31", day=day))
     assert "Hall pass" in md
+    assert "1d SELL" in md
     assert "group leader" in md or "standard" in md or "blocked" in md or "probable" in md or "catalyst" in md
 
 
@@ -202,5 +228,6 @@ if __name__ == "__main__":
     test_infer_lane_hall_pass_labels()
     test_grey_icon_for_era_skip_missing()
     test_liquid_losers_are_down()
+    test_cli_accepts_sells_and_losers()
     test_day_walk_carries_hall_pass_and_sides()
     print("ok")

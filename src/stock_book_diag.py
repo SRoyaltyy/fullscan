@@ -1154,6 +1154,8 @@ def main() -> None:
                     top_n=0,
                     floors=[2.0, 5.0],
                     include_buys=True,
+                    include_sells=True,
+                    include_losers=True,
                     force=True,
                 )
             )
