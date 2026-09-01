@@ -45,6 +45,14 @@ REGIME_EDGE = 15.0
 STABLE_EDGE = 8.0
 
 GAINER_BOX_COLS = tl.BOX_COLS + (("yday", "yΔ"),)
+DOMAIN_COLS = (
+    ("market", "mkt"),
+    ("parent", "par"),
+    ("child", "chd"),
+    ("company", "co"),
+    ("setup", "set"),
+    ("flow", "flw"),
+)
 BOX_ERA = {
     "join": "join",
     "sector": "sector_predict",
@@ -59,6 +67,14 @@ BOX_ERA = {
     "catal": "catalyst",
     "buy": "stock_book",
     "yday": None,
+}
+DOMAIN_ERA = {
+    "market": "general_predict",
+    "parent": "sector_predict",
+    "child": "map_heat",
+    "company": "news_actions",
+    "setup": "ab_enriched",
+    "flow": None,
 }
 
 _WALK = None
@@ -76,10 +92,21 @@ def _legend() -> str:
     return " · ".join(lab for _, lab in GAINER_BOX_COLS)
 
 
+def _domain_legend() -> str:
+    return " · ".join(lab for _, lab in DOMAIN_COLS)
+
+
 def _labeled(boxes: dict | None) -> str:
     return " ".join(
         f"{lab}{tl.BOX_ICON.get((boxes or {}).get(key), '⬛')}"
         for key, lab in GAINER_BOX_COLS
+    )
+
+
+def _labeled_domains(domains: dict | None) -> str:
+    return " ".join(
+        f"{lab}{tl.BOX_ICON.get((domains or {}).get(key), '⬛')}"
+        for key, lab in DOMAIN_COLS
     )
 
 
@@ -193,10 +220,93 @@ def liquid_gainers(df: pd.DataFrame, top_n: int = TOP_N,
 
 def _era_skip(date: str) -> list[str]:
     skip = []
-    for key, feature in BOX_ERA.items():
+    for key, feature in {**BOX_ERA, **DOMAIN_ERA}.items():
         if feature and not book_era.live(date, feature):
             skip.append(key)
     return skip
+
+
+def _blend_tones(tones) -> str:
+    printed = [t for t in tones if t in ("good", "bad", "neutral")]
+    if not printed:
+        return "missing"
+    goods = printed.count("good")
+    bads = printed.count("bad")
+    if goods and not bads:
+        return "good"
+    if bads and not goods:
+        return "bad"
+    if goods and bads:
+        return "neutral"
+    return "neutral"
+
+
+def _derive_domains(boxes: dict, market_tone: str | None = None) -> dict[str, str]:
+    """Lattice checklist from as-of source boxes when the book has no d_*."""
+    flow = boxes.get("vol") if boxes.get("vol") not in (None, "missing") else boxes.get("peer")
+    return {
+        "market": market_tone or boxes.get("gen") or "missing",
+        "parent": boxes.get("sector") or "missing",
+        "child": boxes.get("heat") or "missing",
+        "company": _blend_tones([
+            boxes.get("news"), boxes.get("digest"),
+            boxes.get("judge"), boxes.get("catal"),
+        ]),
+        "setup": boxes.get("ab") or "missing",
+        "flow": flow or "missing",
+    }
+
+
+def load_day_domains(date: str) -> tuple[str | None, dict[str, dict[str, str]]]:
+    """Session market tone + per-ticker lattice domains from that day's book."""
+    market_tone = None
+    path = BOOK_DIR / f"{date}_stock_book.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        data = {}
+    meta = data.get("meta") if isinstance(data.get("meta"), dict) else {}
+    lat = meta.get("decision_lattice") if isinstance(meta.get("decision_lattice"), dict) else {}
+    market = lat.get("market") or meta.get("market_decision") or {}
+    if isinstance(market, dict) and market.get("tone") in tl.BOX_ICON:
+        market_tone = market.get("tone")
+    if market_tone is None:
+        bias = _num(meta.get("general_bias"))
+        if bias is not None:
+            market_tone = "good" if bias > 0.10 else "bad" if bias < -0.10 else "neutral"
+    cmap: dict[str, dict[str, str]] = {}
+    csv_path = BOOK_DIR / f"{date}_stock_book.csv"
+    if csv_path.exists():
+        try:
+            frame = pd.read_csv(csv_path, usecols=lambda c: c == "Ticker" or str(c).startswith("d_"))
+        except (OSError, ValueError, pd.errors.ParserError):
+            frame = pd.DataFrame()
+        if not frame.empty and all(f"d_{k}" in frame.columns for k, _ in DOMAIN_COLS):
+            for rec in frame.drop_duplicates("Ticker").to_dict(orient="records"):
+                t = tl._tick(rec.get("Ticker"))
+                if not t:
+                    continue
+                cmap[t] = {
+                    key: str(rec.get(f"d_{key}") or "missing")
+                    if str(rec.get(f"d_{key}") or "missing") in tl.BOX_ICON
+                    else "missing"
+                    for key, _ in DOMAIN_COLS
+                }
+    if not cmap:
+        for side in ("buy", "sell"):
+            for r in ((data.get("books") or {}).get("1d") or {}).get(side) or []:
+                if not isinstance(r, dict):
+                    continue
+                t = tl._tick(r.get("ticker"))
+                stored = r.get("domain_boxes") if isinstance(r.get("domain_boxes"), dict) else {}
+                if t and stored:
+                    cmap[t] = {
+                        key: str(stored.get(key) or "missing")
+                        if str(stored.get(key) or "missing") in tl.BOX_ICON
+                        else "missing"
+                        for key, _ in DOMAIN_COLS
+                    }
+    return market_tone, cmap
 
 
 def _yday_from_sess(sess: dict | None, ticker: str) -> tuple[str, str | None, float | None]:
@@ -210,7 +320,9 @@ def _yday_from_sess(sess: dict | None, ticker: str) -> tuple[str, str | None, fl
 
 
 def color_name(sess: dict | None, row: dict, buy_today: set[str],
-               realized: float | None = None) -> dict:
+               realized: float | None = None,
+               market_tone: str | None = None,
+               book_domains: dict[str, dict[str, str]] | None = None) -> dict:
     t = row["ticker"]
     card = scan._scan_session(sess, t) if sess else {}
     card = card or {}
@@ -220,6 +332,20 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
     boxes["yday"] = yday
     if yv:
         vintage["yday"] = yv
+    stored = (book_domains or {}).get(t)
+    if stored and all(stored.get(k) not in (None, "", "missing") for k, _ in DOMAIN_COLS):
+        domains = {k: stored.get(k) or "missing" for k, _ in DOMAIN_COLS}
+        vintage["domains"] = "book"
+    elif stored:
+        derived = _derive_domains(boxes, market_tone=market_tone)
+        domains = {
+            k: (stored.get(k) if stored.get(k) in tl.BOX_ICON else derived.get(k) or "missing")
+            for k, _ in DOMAIN_COLS
+        }
+        vintage["domains"] = "book+derived"
+    else:
+        domains = _derive_domains(boxes, market_tone=market_tone)
+        vintage["domains"] = "derived"
     cond = tl.general_condition({k: boxes.get(k) for k, _ in tl.BOX_COLS})
     region = tl.color_region({k: boxes.get(k) for k, _ in tl.BOX_COLS})
     chg = row.get("change_pct") if row.get("change_pct") is not None else realized
@@ -227,7 +353,9 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
         **row,
         "change_pct": chg,
         "boxes": boxes,
+        "domains": domains,
         "labeled": _labeled(boxes),
+        "labeled_domains": _labeled_domains(domains),
         "factor_vintage": vintage,
         "sources": card.get("sources") or [],
         "class": card.get("class") or ("no_session" if not sess else "no_data"),
@@ -284,12 +412,16 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
     buy_meta = same_day_buy_rows(date)
     buy_today = {r["ticker"] for r in buy_meta}
     realized = _finviz_change_map(fv)
+    market_tone, book_domains = load_day_domains(date)
     cache: dict[str, dict] = {}
 
     def paint(row, chg=None):
         t = row["ticker"]
         if t not in cache:
-            cache[t] = color_name(sess, row, buy_today, realized=chg)
+            cache[t] = color_name(
+                sess, row, buy_today, realized=chg,
+                market_tone=market_tone, book_domains=book_domains,
+            )
         return cache[t]
 
     rows = [paint(row) for row in names]
@@ -317,7 +449,7 @@ def day_walk(date: str, *, idx=None, top_n: int = TOP_N,
 
 def _tally(rows: list[dict], era_skip: list[str] | None = None,
            skip_by_date: dict[str, list[str]] | None = None) -> dict:
-    counts = {key: Counter() for key, _ in GAINER_BOX_COLS}
+    counts = {key: Counter() for key, _ in GAINER_BOX_COLS + DOMAIN_COLS}
     n = n_over = n_today = 0
     hit2 = hit5 = 0
     chgs = []
@@ -338,28 +470,41 @@ def _tally(rows: list[dict], era_skip: list[str] | None = None,
         if skip_by_date is not None:
             skip = set(skip_by_date.get(row.get("date") or "", []) or skip)
         boxes = row.get("boxes") or {}
+        domains = row.get("domains") or {}
         for key, _ in GAINER_BOX_COLS:
             tone = boxes.get(key) or "missing"
             if key in skip and tone == "missing":
                 counts[key]["era"] += 1
             else:
                 counts[key][tone] += 1
-    out = {}
-    for key, _ in GAINER_BOX_COLS:
-        c = counts[key]
-        total = sum(c.values()) or 1
-        out[key] = {
-            "good": c.get("good", 0),
-            "neutral": c.get("neutral", 0),
-            "bad": c.get("bad", 0),
-            "missing": c.get("missing", 0),
-            "era": c.get("era", 0),
-            "good_pct": round(100.0 * c.get("good", 0) / total, 1),
-            "bad_pct": round(100.0 * c.get("bad", 0) / total, 1),
-            "printed_pct": round(
-                100.0 * (total - c.get("missing", 0) - c.get("era", 0)) / total, 1
-            ),
-        }
+        for key, _ in DOMAIN_COLS:
+            tone = domains.get(key) or "missing"
+            if key in skip and tone == "missing":
+                counts[key]["era"] += 1
+            else:
+                counts[key][tone] += 1
+
+    def pack(cols):
+        packed = {}
+        for key, _ in cols:
+            c = counts[key]
+            total = sum(c.values()) or 1
+            packed[key] = {
+                "good": c.get("good", 0),
+                "neutral": c.get("neutral", 0),
+                "bad": c.get("bad", 0),
+                "missing": c.get("missing", 0),
+                "era": c.get("era", 0),
+                "good_pct": round(100.0 * c.get("good", 0) / total, 1),
+                "bad_pct": round(100.0 * c.get("bad", 0) / total, 1),
+                "printed_pct": round(
+                    100.0 * (total - c.get("missing", 0) - c.get("era", 0)) / total, 1
+                ),
+            }
+        return packed
+
+    out = pack(GAINER_BOX_COLS)
+    domain_out = pack(DOMAIN_COLS)
     chgs_sorted = sorted(chgs)
     mid = chgs_sorted[len(chgs_sorted) // 2] if chgs_sorted else None
     return {
@@ -373,6 +518,7 @@ def _tally(rows: list[dict], era_skip: list[str] | None = None,
         "hit_2_pct": round(100.0 * hit2 / len(chgs), 1) if chgs else 0.0,
         "hit_5_pct": round(100.0 * hit5 / len(chgs), 1) if chgs else 0.0,
         "boxes": out,
+        "domains": domain_out,
     }
 
 
@@ -422,11 +568,17 @@ def _insights(floors: dict, buys: dict, regime: dict) -> list[str]:
     )
     lines.append("")
 
-    g5b = g5.get("boxes") or {}
-    upb = ((regime.get("spy_up") or {}).get("boxes") or {})
-    dnb = ((regime.get("spy_down") or {}).get("boxes") or {})
+    g5b = {**(g5.get("boxes") or {}), **(g5.get("domains") or {})}
+    upb = {
+        **((regime.get("spy_up") or {}).get("boxes") or {}),
+        **((regime.get("spy_up") or {}).get("domains") or {}),
+    }
+    dnb = {
+        **((regime.get("spy_down") or {}).get("boxes") or {}),
+        **((regime.get("spy_down") or {}).get("domains") or {}),
+    }
     stable, sensitive, holes = [], [], []
-    for key, lab in GAINER_BOX_COLS:
+    for key, lab in GAINER_BOX_COLS + DOMAIN_COLS:
         rec = g5b.get(key) or {}
         printed = rec.get("printed_pct") or 0
         if printed < 10:
@@ -471,6 +623,9 @@ def _insights(floors: dict, buys: dict, regime: dict) -> list[str]:
             lines.append(f"- {bit}")
         lines.append("")
     lines += [
+        "`mkt` is the session market gate (same tone on every name that day "
+        "when the lattice saved it). `par` / `chd` / `co` / `set` / `flw` "
+        "are permission, not a second vote of join. "
         "`gen` is the market-condition box. It is the morning essay, not the "
         "close, so a SPY-down session can still show gen🟢 on the names that "
         "ripped if the pre-open write was constructive. `yΔ` is yesterday's "
@@ -561,6 +716,7 @@ def walk(from_date: str = START, to_date: str | None = None,
         "min_mcap_m": mcap if liquid else 0.0,
         "min_avg_vol_k": MIN_AVG_VOL_K if liquid else 0.0,
         "legend": _legend(),
+        "domain_legend": _domain_legend(),
         "days": primary_days,
         "summary": days_by_floor.get(primary_key, {}).get("summary") or _tally([]),
         "floors_detail": days_by_floor,
@@ -573,12 +729,12 @@ def walk(from_date: str = START, to_date: str | None = None,
     return payload
 
 
-def _box_table(boxes: dict) -> list[str]:
+def _box_table(boxes: dict, cols=GAINER_BOX_COLS) -> list[str]:
     lines = [
         "| Box | Green | Yellow | Red | Missing | Era-skip | Green% | Printed% |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
-    for key, lab in GAINER_BOX_COLS:
+    for key, lab in cols:
         rec = (boxes or {}).get(key) or {}
         lines.append(
             f"| {lab} | {rec.get('good', 0)} | {rec.get('neutral', 0)} | "
@@ -591,8 +747,8 @@ def _box_table(boxes: dict) -> list[str]:
 
 def _name_table(rows: list[dict], *, realized_label: str = "Δ") -> list[str]:
     lines = [
-        f"| # | Ticker | {realized_label} | Sector | As-of boxes | Cond | Overnight BUY | On today's 1d BUY |",
-        "|---:|---|---:|---|---|---|---|---|",
+        f"| # | Ticker | {realized_label} | Sector | Source boxes | Domains | Cond | Overnight BUY | On today's 1d BUY |",
+        "|---:|---|---:|---|---|---|---|---|---|",
     ]
     for i, row in enumerate(rows, 1):
         cond = row.get("condition") or {}
@@ -606,6 +762,7 @@ def _name_table(rows: list[dict], *, realized_label: str = "Δ") -> list[str]:
         lines.append(
             f"| {i} | `{row['ticker']}` | {chg_s} | "
             f"{row.get('sector') or '—'} | {row.get('labeled') or _labeled(row.get('boxes'))} | "
+            f"{row.get('labeled_domains') or _labeled_domains(row.get('domains'))} | "
             f"{cond_s} | "
             f"{'yes' if row.get('overnight_buy') else '—'} | "
             f"{'yes' if row.get('on_1d_buy') else '—'} |"
@@ -632,11 +789,13 @@ def render_day_markdown(date: str, day: dict | None = None,
             f", mcap ≥ ${mcap:.0f}M, adv ≥ 500k, not ETF"
             if day.get("liquid", True) else ", any name, not ETF"
         )
-        + "). Boxes are the 09:30 ET packet. `yΔ` is yesterday's Change% "
-        "from the last completed tape. Same-day RelVol / same-day book do "
-        "not color a cell.",
+        + "). Source boxes are the 09:30 ET packet. Domains are the lattice "
+        "checklist (`mkt · par · chd · co · set · flw`) from that day's book "
+        "when saved, else derived from those sources. `yΔ` is yesterday's "
+        "Change% from the last completed tape.",
         "",
-        f"_Boxes {_legend()}_",
+        f"_Source boxes {_legend()}_",
+        f"_Domains {_domain_legend()}_",
         "",
         f"Coverage **{cov.get('status') or '?'}** "
         f"({cov.get('n_change') or 0}/{cov.get('n') or 0} printed a Change%) "
@@ -700,16 +859,19 @@ def render_markdown(payload: dict) -> str:
         + "_",
         "",
         "Each session's realized gainers plus the 1d BUY sleeve. "
-        "Boxes are the 09:30 ET packet. `yΔ` is yesterday's Change% from "
-        "the prior tape (never today's close). Same-day RelVol and same-day "
-        "stock book never color a box."
+        "Source boxes are the 09:30 ET packet. Domains are "
+        "`mkt · par · chd · co · set · flw` (saved lattice when the book "
+        "has `d_*`, else derived: market←gen/session, parent←sect, "
+        "child←heat, company←news/dig/jdg/cat, setup←AB, flow←vol). "
+        "`yΔ` is yesterday's Change% from the prior tape."
         + (
             f" Liquidity: mcap ≥ ${payload.get('min_mcap_m') or 0:.0f}M, "
             f"adv ≥ {payload.get('min_avg_vol_k') or 0:.0f}k, not ETF."
             if payload.get("liquid", True) else " Any printed name, not ETF."
         ),
         "",
-        f"_Boxes {payload.get('legend') or _legend()}_",
+        f"_Source boxes {payload.get('legend') or _legend()}_",
+        f"_Domains {payload.get('domain_legend') or _domain_legend()}_",
         "",
     ]
     lines += payload.get("insights") or _insights(floors, buys, regime)
@@ -737,7 +899,17 @@ def render_markdown(payload: dict) -> str:
             extra.append(f"overnight BUY {summ.get('overnight_buy_pct') or 0:.1f}%")
             extra.append(f"today's 1d BUY {summ.get('on_1d_buy_pct') or 0:.1f}%")
         lines[-1] += " · ".join(extra) + "."
-        lines += ["", *_box_table(summ.get("boxes") or {}), ""]
+        lines += [
+            "",
+            "Source boxes:",
+            "",
+            *_box_table(summ.get("boxes") or {}),
+            "",
+            "Domains (`mkt · par · chd · co · set · flw`):",
+            "",
+            *_box_table(summ.get("domains") or {}, cols=DOMAIN_COLS),
+            "",
+        ]
 
     up, down = regime.get("spy_up") or {}, regime.get("spy_down") or {}
     if up or down:
@@ -751,9 +923,10 @@ def render_markdown(payload: dict) -> str:
             "| Box | Up green% | Down green% | Δ | Up printed% | Down printed% |",
             "|---|---:|---:|---:|---:|---:|",
         ]
-        for key, lab in GAINER_BOX_COLS:
-            a = (up.get("boxes") or {}).get(key) or {}
-            b = (down.get("boxes") or {}).get(key) or {}
+        for key, lab in GAINER_BOX_COLS + DOMAIN_COLS:
+            src = "domains" if key in {k for k, _ in DOMAIN_COLS} else "boxes"
+            a = (up.get(src) or {}).get(key) or {}
+            b = (down.get(src) or {}).get(key) or {}
             delta = (a.get("good_pct") or 0) - (b.get("good_pct") or 0)
             lines.append(
                 f"| {lab} | {a.get('good_pct') or 0:.1f}% | "
