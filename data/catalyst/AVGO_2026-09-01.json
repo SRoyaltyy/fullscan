@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-10-13\",\n    \"description\": \"OpenAI and Broadcom Inc (AVGO) announced a strategic collaboration to co-develop and deploy 10 gigawatts of OpenAI-designed custom AI accelerators and Broadcom Ethernet networking, with rack deployments targeted to start in H2 2026 and complete by end of 2029.\",\n    \"evidence_excerpt\": \"\\\"OpenAI and Broadcom today announced a collaboration for 10 gigawatts of custom AI accelerators.\\\"\",\n    \"source_urls\": [\n      \"https://openai.com/index",
+  "raw": "[\n  {\n    \"event_date\": \"2025-07-01\",\n    \"description\": \"Broadcom Inc (AVGO) divested its VeloCloud SD-WAN portfolio to Arista Networks as it focused VMware on private-cloud software rather than branch networking.\",\n    \"evidence_excerpt\": \"\\\"Arista acquired the VeloCloud\u24c7 SD-WAN portfolio from Broadcom.\\\"\",\n    \"source_urls\": [\n      \"https://www.arista.com/en/company/news/press-release/21646-pr-07012025\",\n      \"https://www.techtarget.com/searchnetworking/news/366627055/Arista-buys-VeloCloud-",
   "ticker": "AVGO",
   "generated_at": "2026-09-01",
   "cutoff_date": null,

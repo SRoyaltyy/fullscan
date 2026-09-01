@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-02-06\",\n    \"description\": \"10x Genomics Inc (TXG) and Harvard settled a Xenium-related patent dispute with Vizgen during trial, with the case dismissed with prejudice.\",\n    \"evidence_excerpt\": \"\\\"10x-harvard-settle-genomics-patent-dispute-with-vizgen-during-trial\\\"\",\n    \"source_urls\": [\n      \"https://www.reuters.com/legal/government/10x-harvard-settle-genomics-patent-dispute-with-vizgen-during-trial-2025-02-06/\"\n    ],\n    \"confidence\": 80\n  },\n  {\n    \"event_da",
+  "raw": "[\n  {\n    \"event_date\": \"2025-02-06\",\n    \"description\": \"10x Genomics and Harvard settled their genomics patent dispute with Vizgen during trial in Delaware, with later disclosures indicating a $26 million upfront payment plus royalties.\",\n    \"evidence_excerpt\": \"\\\"10x, Harvard, and Vizgen reached a settlement resolving their ongoing patent infringement and related litigation.\\\"\",\n    \"source_urls\": [\n      \"https://www.reuters.com/legal/government/10x-harvard-settle-genomics-patent-dispute-wi",
   "ticker": "TXG",
   "generated_at": "2026-09-01",
   "cutoff_date": null,

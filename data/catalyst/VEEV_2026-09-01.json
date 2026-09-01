@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-08-18\",\n    \"description\": \"Veeva Systems Inc (VEEV) and IQVIA announced long-term global clinical and commercial partnerships and the complete resolution of all pending legal disputes.\",\n    \"evidence_excerpt\": \"\\\"announced global clinical and commercial partnerships and the complete resolution of all pending legal disputes.\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/iqvia-and-veeva-announce-long-term-clinical-and-commercial-partnershi",
+  "raw": "[\n  {\n    \"event_date\": \"2025-08-18\",\n    \"description\": \"VEEV and IQVIA announced long-term global clinical and commercial partnerships and the complete resolution of all pending legal disputes.\",\n    \"evidence_excerpt\": \"\\\"announced global clinical and commercial partnerships and the complete resolution of all pending legal disputes.\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/iqvia-and-veeva-announce-long-term-clinical-and-commercial-partnerships-and-resolution-of",
   "ticker": "VEEV",
   "generated_at": "2026-09-01",
   "cutoff_date": null,

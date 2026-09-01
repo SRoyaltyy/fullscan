@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2026-08-05\",\n    \"description\": \"Warrior Met Coal Inc (HCC) reported Q2 2026 net income of $87.4 million ($1.65/share) on $509.7 million of revenue and raised full-year 2026 coal sales guidance to 13.0\u201314.0 million short tons.\",\n    \"evidence_excerpt\": \"\\\"Net Income -- $87.4 million, or $1.65 per diluted share, up from $5.6 million in the prior year quarter.\\\"\",\n    \"source_urls\": [\n      \"https://www.fool.com/earnings/call-transcripts/2026/08/12/warrior-met-coal-hcc-q2-",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-05\",\n    \"description\": \"Warrior Met Coal reported Q2 2026 net income of $87.4 million ($1.65 diluted EPS) on $509.7 million of revenue, generated $103.4 million of free cash flow, and raised full-year 2026 sales guidance to 13.0\u201314.0 million short tons.\",\n    \"evidence_excerpt\": \"\\\"Warrior reported net income for the second quarter of 2026 of $87.4 million, or $1.65 per diluted share\\\"\",\n    \"source_urls\": [\n      \"https://investors.warriormetcoal.com/news-relea",
   "ticker": "HCC",
   "generated_at": "2026-09-01",
   "cutoff_date": null,

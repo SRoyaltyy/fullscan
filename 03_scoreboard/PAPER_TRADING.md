@@ -2,7 +2,7 @@
 
 As of **2026-09-01** · $10,000 starting capital per sleeve · fees per `00_grounding/futubull_fees.json`
 
-Latest book **2026-09-01** ranker: **green pile** (53 liquid names). Paper buys the pile 15, not the old weighted 15.
+Latest book **2026-09-01** ranker: **green pile** (50 liquid names). Paper buys the pile 15, not the old weighted 15.
 
 Sleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** — weekends and NYSE holidays do not count) AND the name has left the book.
 

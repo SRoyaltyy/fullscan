@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2026-08-10\",\n    \"description\": \"Albany Engineered Composites, a segment of Albany International Corp (AIN), announced a teaming agreement with Lockheed Martin to accelerate high-rate production for U.S. hypersonic weapons programs.\",\n    \"evidence_excerpt\": \"\\\"Lockheed Martin (NYSE:LMT) and Albany Engineered Composites, a segment of Albany International Corp. (NYSE: AIN), have announced a teaming agreement\\\"\",\n    \"source_urls\": [\n      \"https://news.lockheedmartin.com/",
+  "raw": "[\n  {\n    \"event_date\": \"2026-08-04\",\n    \"description\": \"Albany International reported Q2 2026 revenue of $329.5 million, up 5.8% year over year, with Engineered Composites record sales of $150.8 million, and guided Q3 2026 revenue to $320\u2013$330 million and adjusted EPS to $0.60\u2013$0.70.\",\n    \"evidence_excerpt\": \"\\\"Second quarter revenue was $329.5 million, representing a growth of 5.8% year-over-year.\\\"\",\n    \"source_urls\": [\n      \"https://www.fool.com/earnings/call-transcripts/2026/08/04/alban",
   "ticker": "AIN",
   "generated_at": "2026-09-01",
   "cutoff_date": null,
