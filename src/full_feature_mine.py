@@ -29,6 +29,8 @@ def _finite(x):
 def _load():
     with urllib.request.urlopen(_SRC_URL, timeout=30) as fh:
         src = fh.read().decode("utf-8")
+    src = src.replace("from . import ", "from src import ")
+    src = src.replace("from .ticker_lookback_setups import", "from src.ticker_lookback_setups import")
     src = src.replace(
         "import argparse\nimport json\nimport statistics\n",
         "import argparse\nimport json\nimport math\nimport statistics\n",
@@ -43,7 +45,7 @@ def _load():
     src = src.replace(
         "        exitp = tl._num(panel[t].iloc[idx + n])\n        if exitp:\n",
         "        exitp = _finite(tl._num(panel[t].iloc[idx + n]))\n"
-        "        if exitp is None or exitp == 0:\n            continue\n        if exitp:\n",
+        "        if exitp is None or exitp == 0:\n            continue\n        if True:\n",
         1,
     )
     src = src.replace(
@@ -64,27 +66,32 @@ def _load():
         1,
     )
     src = src.replace(
-        "def _nfmt(x, nd=2):\n    return \"\u2014\" if x is None else f\"{float(x):+.{nd}f}\"\n",
-        "def _nfmt(x, nd=2):\n    v = _finite(x)\n    return \"\u2014\" if v is None else f\"{v:+.{nd}f}\"\n",
+        'def _nfmt(x, nd=2):\n    return "\u2014" if x is None else f"{float(x):+.{nd}f}"\n',
+        'def _nfmt(x, nd=2):\n    v = _finite(x)\n    return "\u2014" if v is None else f"{v:+.{nd}f}"\n',
         1,
     )
     src = src.replace(
-        "    rows = df.to_dict(\"records\") if len(df) else []\n    attach_excess(rows)\n",
-        "    rows = df.to_dict(\"records\") if len(df) else []\n"
-        "    for row in rows:\n"
-        "        for h in HORIZONS:\n"
-        "            row[f\"ret_{h}\"] = _finite(row.get(f\"ret_{h}\"))\n"
-        "    attach_excess(rows)\n",
+        '    rows = df.to_dict("records") if len(df) else []\n    attach_excess(rows)\n',
+        '    rows = df.to_dict("records") if len(df) else []\n'
+        '    for row in rows:\n'
+        '        for h in HORIZONS:\n'
+        '            row[f"ret_{h}"] = _finite(row.get(f"ret_{h}"))\n'
+        '    attach_excess(rows)\n',
         1,
     )
-    ns = {"__name__": __name__, "__file__": __file__, "_finite": _finite}
-    exec(compile(src, "full_feature_mine_085b96e.py", "exec"), ns)
+    ns = {
+        "__name__": "src.full_feature_mine",
+        "__package__": "src",
+        "__file__": __file__,
+        "_finite": _finite,
+    }
+    exec(compile(src, __file__, "exec"), ns)
     return ns
 
 
 _ns = _load()
 globals().update({k: v for k, v in _ns.items() if not k.startswith("__")})
-_finite = _finite  # keep helper visible for tests
+_finite = _finite
 
 if __name__ == "__main__":
     main()
