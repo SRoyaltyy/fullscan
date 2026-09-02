@@ -8,10 +8,14 @@ from src.boring_winners_backtest import (
     SECTOR_CAP,
     a_printed,
     annotate_actions,
+    book_gate_ok,
+    fill_overlay,
     fill_seats,
+    fill_short_overlay,
     pick_seats,
     pool_mask,
     short_pool_mask,
+    stack_label,
     stack_masks,
 )
 
@@ -144,6 +148,90 @@ def test_turnover_buy_hold_sell():
     assert held == ["BBB"]
 
 
+def test_stack_label_order():
+    assert stack_label(_row(hot=True, Aand=True, blue=True, steady_f=True)) == "hot_ab_peer"
+    assert stack_label(_row(blue=True, steady_f=True)) == "steady_blue"
+    assert stack_label(_row(blue=True, white_f=True)) == "blue_white"
+    assert stack_label(_row(blue=True)) == "blue"
+    assert stack_label(_row(Aand=True)) == "ab_and_peer"
+    assert stack_label(_row(alarm_f=True)) == "alarm_rebound"
+    assert stack_label(_row(fade_x=True, blue=True)) == "fade"
+    assert stack_label(_row()) == "none"
+    assert stack_label(None) == "book_only"
+
+
+def test_book_gate_rejects_micro():
+    assert book_gate_ok(500, 800, "small") is True
+    assert book_gate_ok(200, 800, "small") is False
+    assert book_gate_ok(500, 100, "small") is False
+    assert book_gate_ok(5000, 800, "micro") is False
+
+
+def test_overlay_drops_fade_from_book():
+    g = pd.DataFrame([
+        _row(Ticker="KEEP", blue=True, mine_score=6),
+        _row(Ticker="FADE", blue=True, fade_x=True, mine_score=9),
+    ])
+    seats, rule, dropped = fill_overlay(g, ["KEEP", "FADE"], universe={})
+    assert [s["ticker"] for s in seats] == ["KEEP"]
+    assert [d["ticker"] for d in dropped] == ["FADE"]
+    assert dropped[0]["why"] == "fade"
+    assert rule == "blue"
+
+
+def test_overlay_adds_gated_extra_and_swaps_weak_book():
+    g = pd.DataFrame([
+        _row(Ticker="WEAK", mine_score=0, sector_name="Tech"),
+        _row(Ticker="ADD", blue=True, steady_f=True, mine_score=12, sector_name="Health"),
+        _row(Ticker="JUNK", rsi_os=True, mine_score=1, sector_name="Energy"),
+    ])
+    universe = {
+        "WEAK": {"Ticker": "WEAK", "market_cap_m": 800, "avg_vol_k": 900, "size": "mid", "liquid": True, "sector": "Tech", "industry": "Soft", "score_1d": 0.4},
+        "ADD": {"Ticker": "ADD", "market_cap_m": 1200, "avg_vol_k": 700, "size": "mid", "liquid": True, "sector": "Health", "industry": "Bio", "score_1d": 0.9},
+        "JUNK": {"Ticker": "JUNK", "market_cap_m": 900, "avg_vol_k": 600, "size": "mid", "liquid": True, "sector": "Energy", "industry": "Oil", "score_1d": 0.2},
+        "MICRO": {"Ticker": "MICRO", "market_cap_m": 80, "avg_vol_k": 900, "size": "micro", "liquid": True, "sector": "Tech", "industry": "Soft", "score_1d": 1.0},
+    }
+    seats, rule, dropped = fill_overlay(g, ["WEAK"], universe=universe, seats=1, max_extras=5)
+    names = [s["ticker"] for s in seats]
+    assert names == ["ADD"]
+    assert "JUNK" not in names
+    assert seats[0]["source"] == "extra"
+    assert any(d["ticker"] == "WEAK" and d["why"] == "swapped_for_mine_extra" for d in dropped)
+    assert "steady_blue" in rule
+
+
+def test_overlay_does_not_force_25_on_thin_book():
+    g = pd.DataFrame([_row(Ticker="ONLY", blue=True, mine_score=5)])
+    universe = {
+        "ONLY": {"Ticker": "ONLY", "market_cap_m": 900, "avg_vol_k": 800, "size": "mid", "liquid": True, "sector": "Tech", "industry": "Soft", "score_1d": 0.5},
+    }
+    seats, _, _ = fill_overlay(g, ["ONLY"], universe=universe)
+    assert [s["ticker"] for s in seats] == ["ONLY"]
+    assert len(seats) == 1
+
+
+def test_overlay_rejects_ungated_extra():
+    g = pd.DataFrame([
+        _row(Ticker="BOOK", blue=True, mine_score=5),
+        _row(Ticker="PENNY", blue=True, steady_f=True, mine_score=20),
+    ])
+    universe = {
+        "PENNY": {"Ticker": "PENNY", "market_cap_m": 40, "avg_vol_k": 80, "size": "micro", "liquid": True, "sector": "Health", "industry": "Bio", "score_1d": 2.0},
+    }
+    seats, _, _ = fill_overlay(g, ["BOOK"], universe=universe)
+    assert [s["ticker"] for s in seats] == ["BOOK"]
+
+
+def test_short_overlay_is_sell_and_fade():
+    g = pd.DataFrame([
+        _row(Ticker="FD", fade_x=True, inv_score=3),
+        _row(Ticker="OK", fade_x=True, inv_score=4),
+        _row(Ticker="BOOKONLY", fade_x=False, inv_score=5),
+    ])
+    shorts = fill_short_overlay(g, ["FD", "BOOKONLY"])
+    assert [s["ticker"] for s in shorts] == ["FD"]
+
+
 def test_short_is_fade_only():
     fade = pd.DataFrame([
         _row(Ticker="FD", fade_x=True, inv_score=3),
@@ -167,5 +255,12 @@ if __name__ == "__main__":
     test_sector_cap_and_score_order()
     test_pick_seats_fills_25_with_sector_cap_6()
     test_turnover_buy_hold_sell()
+    test_stack_label_order()
+    test_book_gate_rejects_micro()
+    test_overlay_drops_fade_from_book()
+    test_overlay_adds_gated_extra_and_swaps_weak_book()
+    test_overlay_does_not_force_25_on_thin_book()
+    test_overlay_rejects_ungated_extra()
+    test_short_overlay_is_sell_and_fade()
     test_short_is_fade_only()
     print("ok")

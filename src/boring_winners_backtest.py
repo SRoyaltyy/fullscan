@@ -1,21 +1,23 @@
-"""25-seat book from the fixed FEATURE_MINE edges (DeepSeek hierarchy).
+"""Book-first overlay: 1d BUY walk + FEATURE_MINE stacks + as-of cameras.
 
 Reads 03_scoreboard/feature_asof_panel.parquet. Does not rebuild it.
 
-Core fill (fade vetoed)
------------------------
-1. hot+ab+peer     up to 8 seats — 70.6% hit scalp (small n)
-2. steady+blue     best risk/reward on the mine board
-3. blue+white      combinatorial white (white alone is a trap)
-4. blue            baseline
-5. ab AND peer     up to 5 seats — high-hit modest mean
-6. alarm+not_white contrarian rebound when no blue printed
-7. rsi=oversold    lottery last resort
-8. gap=down        lottery last resort
+The mine-only 25-seat dump lost to stock-book BUY on the priced window
+(+0.11 vs +0.55 mean day). This module starts from the same 1d BUY list
+the Top Gainer As-Of walk uses, then overlays the mined stacks:
 
-Never: white alone, fade, join-AND-Band dump, OR-dump of 1,800 A names.
+  keep   book BUY that is not fade (prefer a named stack)
+  drop   book BUY that printed fade / first_crack
+  swap   stack-less book names lose their seat to a better extra
+  add    extras the book missed — only if they pass the BUY floor
+         (mcap >= $400M, ADV >= 500k) and print a named stack
 
-Short sleeve: fade / first_crack only.
+Each seat is painted with the same 12 cameras + coaches + marks +
+hall-pass the Top Gainer As-Of board uses.
+
+Short sleeve: book SELL ∩ fade.
+
+Mine-only fill stays as a comparison column, not the live book.
 """
 from __future__ import annotations
 
@@ -25,6 +27,19 @@ from pathlib import Path
 import pandas as pd
 
 from src import bt_report
+from src.gainer_asof import (
+    _cond_cell,
+    _era_skip,
+    _labeled,
+    _labeled_domains,
+    color_name,
+    lane_label,
+    load_day_context,
+    same_day_buy_rows,
+    same_day_sell_rows,
+    session_at_lag,
+)
+from src.ticker_lookback import build_index
 
 ROOT = Path(__file__).resolve().parent.parent
 PANEL = ROOT / "03_scoreboard" / "feature_asof_panel.parquet"
@@ -41,6 +56,14 @@ HORIZONS = ("1d", "2d", "3d", "1w")
 CLIP = 30.0
 SEATS = 25
 SECTOR_CAP = 6
+# Book-quality gates for extras the 1d BUY list missed.
+BUY_MCAP_M = 400.0
+BUY_ADV_K = 500.0
+MAX_EXTRAS = 5
+MAX_SHORT = 8
+EXTRA_SECTOR_CAP = 4
+EXTRA_INDUSTRY_CAP = 3
+EXTRA_LARGE_CAP = 4
 # Don't let 800 steady+blue names crowd out the 70% hit scalp.
 STACK_CAP = {"hot_ab_peer": 8, "ab_and_peer": 5}
 RELVOL_RANK = {"normal": 2, "dead": 1, "hot": 0, "missing": -1}
@@ -56,6 +79,9 @@ HOW = {
     "empty": "no mined long stack printed",
     "fade": "fade / first_crack — short sleeve",
     "none": "no fade print — short book empty",
+    "book": "1d BUY kept — no mined stack printed on the seat",
+    "book_only": "on the 1d BUY list, not in the mine panel",
+    "overlay": "1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras",
 }
 STACK_ORDER = (
     "hot_ab_peer",
@@ -67,6 +93,8 @@ STACK_ORDER = (
     "rsi_oversold",
     "gap_down",
 )
+STACK_RANK = {name: i for i, name in enumerate(STACK_ORDER)}
+WEAK_STACKS = {"none", "book_only", "book"}
 
 
 def _finite(s: pd.Series) -> pd.Series:
@@ -225,6 +253,236 @@ def fill_seats(g: pd.DataFrame, seats: int = SEATS, cap: int = SECTOR_CAP) -> tu
     return pd.DataFrame(kept), ("+".join(used) if used else "empty")
 
 
+def stack_label(r) -> str:
+    """Best named FEATURE_MINE stack on a panel row (or book_only / none)."""
+    if r is None:
+        return "book_only"
+    fade = bool(r.get("fade_x") if "fade_x" in getattr(r, "index", []) or "fade_x" in r else False)
+    if not fade:
+        fade = bool(r.get("fade") or r.get("first_crack"))
+    if fade:
+        return "fade"
+    hot = bool(r.get("hot"))
+    aand = bool(r.get("Aand"))
+    blue = bool(r.get("blue"))
+    steady = bool(r.get("steady_f") if r.get("steady_f") is not None else r.get("steady"))
+    white = bool(r.get("white_f") if r.get("white_f") is not None else r.get("white"))
+    alarm = bool(r.get("alarm_f") if r.get("alarm_f") is not None else r.get("alarm"))
+    if hot and aand:
+        return "hot_ab_peer"
+    if steady and blue:
+        return "steady_blue"
+    if blue and white:
+        return "blue_white"
+    if blue:
+        return "blue"
+    if aand:
+        return "ab_and_peer"
+    if alarm and not white:
+        return "alarm_rebound"
+    if r.get("rsi_os"):
+        return "rsi_oversold"
+    if r.get("gap_dn"):
+        return "gap_down"
+    return "none"
+
+
+def book_gate_ok(mcap_m, adv_k, size=None) -> bool:
+    try:
+        m = float(mcap_m) if mcap_m is not None and mcap_m == mcap_m else 0.0
+        a = float(adv_k) if adv_k is not None and adv_k == adv_k else 0.0
+    except (TypeError, ValueError):
+        return False
+    if str(size or "").lower() == "micro":
+        return False
+    return m >= BUY_MCAP_M and a >= BUY_ADV_K
+
+
+def _is_large(urec: dict) -> bool:
+    size = str((urec or {}).get("size") or "").lower()
+    try:
+        m = float((urec or {}).get("market_cap_m") or 0)
+    except (TypeError, ValueError):
+        m = 0.0
+    return size in ("large", "mega") or m > 20000.0
+
+
+def load_book_universe(date: str) -> dict[str, dict]:
+    """That morning's scored stock-book CSV — the gated universe extras come from."""
+    path = BOOK_DIR / f"{date}_stock_book.csv"
+    if not path.exists():
+        return {}
+    try:
+        frame = pd.read_csv(path)
+    except (OSError, ValueError, pd.errors.ParserError):
+        return {}
+    out = {}
+    for rec in frame.to_dict(orient="records"):
+        t = str(rec.get("Ticker") or "").upper()
+        if t:
+            out[t] = rec
+    return out
+
+
+def _pack_seat(ticker: str, source: str, panel_row, urec: dict | None = None) -> dict:
+    urec = urec or {}
+    fade = bool(panel_row.get("fade_x")) if panel_row is not None else False
+    stack = stack_label(panel_row)
+    sector = None
+    if panel_row is not None:
+        sector = panel_row.get("sector_name")
+    sector = sector or urec.get("sector") or "UNK"
+    try:
+        ms = int(panel_row.get("mine_score") or 0) if panel_row is not None else 0
+    except (TypeError, ValueError):
+        ms = 0
+    try:
+        bs = float(urec.get("score_1d")) if urec.get("score_1d") == urec.get("score_1d") else 0.0
+    except (TypeError, ValueError):
+        bs = 0.0
+    return {
+        "ticker": ticker,
+        "source": source,
+        "stack": stack,
+        "fade": fade,
+        "in_panel": panel_row is not None,
+        "sector": str(sector or "UNK"),
+        "industry": str(urec.get("industry") or ""),
+        "mine_score": ms,
+        "book_score": bs,
+        "large": _is_large(urec),
+        "row": panel_row,
+    }
+
+
+def _overlay_rank(p: dict) -> tuple:
+    return (
+        STACK_RANK.get(p["stack"], 99),
+        -int(p.get("mine_score") or 0),
+        -float(p.get("book_score") or 0),
+        p["ticker"],
+    )
+
+
+def fill_overlay(
+    g: pd.DataFrame,
+    book_buys: list[str],
+    universe: dict[str, dict] | None = None,
+    seats: int = SEATS,
+    cap: int = SECTOR_CAP,
+    max_extras: int = MAX_EXTRAS,
+) -> tuple[list[dict], str, list[dict]]:
+    """Book-first seat: keep BUY, drop fade, swap stack-less, add gated extras."""
+    universe = universe or {}
+    by_t = {str(r["Ticker"]).upper(): r for _, r in g.iterrows()} if len(g) else {}
+
+    kept_book: list[dict] = []
+    dropped: list[dict] = []
+    for t in book_buys:
+        p = _pack_seat(t, "book", by_t.get(t), universe.get(t))
+        if p["fade"]:
+            dropped.append({**p, "why": "fade"})
+            continue
+        kept_book.append(p)
+
+    extras: list[dict] = []
+    book_set = set(book_buys)
+    for t, urec in universe.items():
+        if t in book_set:
+            continue
+        if urec.get("liquid") is False:
+            continue
+        if not book_gate_ok(urec.get("market_cap_m"), urec.get("avg_vol_k"), urec.get("size")):
+            continue
+        r = by_t.get(t)
+        if r is None or r.get("fade_x"):
+            continue
+        stack = stack_label(r)
+        if stack in WEAK_STACKS or stack == "fade":
+            continue
+        if stack in {"rsi_oversold", "gap_down"} and int(r.get("mine_score") or 0) < 3:
+            continue
+        extras.append(_pack_seat(t, "extra", r, urec))
+
+    extras.sort(key=_overlay_rank)
+    extras = extras[:max_extras]
+    stacked_book = [p for p in kept_book if p["stack"] not in WEAK_STACKS]
+    weak_book = [p for p in kept_book if p["stack"] in WEAK_STACKS]
+    stacked_book.sort(key=_overlay_rank)
+    weak_book.sort(key=_overlay_rank)
+
+    # Stacked book first, then extras (they steal seats from stack-less book names).
+    queue = stacked_book + extras + weak_book
+    seats_out: list[dict] = []
+    sec_n: dict[str, int] = {}
+    ind_n: dict[str, int] = {}
+    large_n = 0
+    seen: set[str] = set()
+    for p in queue:
+        if p["ticker"] in seen:
+            continue
+        extra = p["source"] == "extra"
+        sec = p["sector"]
+        ind = p.get("industry") or ""
+        if extra:
+            if sec and sec_n.get(sec, 0) >= EXTRA_SECTOR_CAP:
+                continue
+            if ind and ind not in ("", "nan", "None") and ind_n.get(ind, 0) >= EXTRA_INDUSTRY_CAP:
+                continue
+            if p.get("large") and large_n >= EXTRA_LARGE_CAP:
+                continue
+        elif cap and sec and sec_n.get(sec, 0) >= cap:
+            dropped.append({**p, "why": "sector_cap"})
+            continue
+        if len(seats_out) >= seats:
+            if not extra:
+                dropped.append({**p, "why": "swapped_for_mine_extra"})
+            continue
+        seats_out.append(p)
+        seen.add(p["ticker"])
+        if sec:
+            sec_n[sec] = sec_n.get(sec, 0) + 1
+        if extra and ind and ind not in ("", "nan", "None"):
+            ind_n[ind] = ind_n.get(ind, 0) + 1
+        if extra and p.get("large"):
+            large_n += 1
+        elif not extra and p.get("large"):
+            large_n += 1
+
+    seated = {p["ticker"] for p in seats_out}
+    for p in kept_book:
+        if p["ticker"] not in seated and not any(d["ticker"] == p["ticker"] for d in dropped):
+            dropped.append({**p, "why": "swapped_for_mine_extra"})
+
+    used = []
+    for p in seats_out:
+        if p["stack"] not in used and p["stack"] not in WEAK_STACKS:
+            used.append(p["stack"])
+    if not used:
+        rule = "book" if seats_out else "empty"
+    else:
+        rule = "+".join(used)
+    return seats_out, rule, dropped
+
+
+def fill_short_overlay(
+    g: pd.DataFrame,
+    book_sells: list[str],
+    seats: int = MAX_SHORT,
+) -> list[dict]:
+    """Book SELL ∩ fade — the short sleeve that actually combines both systems."""
+    by_t = {str(r["Ticker"]).upper(): r for _, r in g.iterrows()} if len(g) else {}
+    out = []
+    for t in book_sells:
+        r = by_t.get(t)
+        if r is None or not bool(r.get("fade_x")):
+            continue
+        out.append(_pack_seat(t, "book", r))
+        if len(out) >= seats:
+            break
+    return out
+
+
 def annotate_actions(prev: set[str] | None, tickers: list[str]):
     prev = set(prev or [])
     actions = ["hold" if t in prev else "buy" for t in tickers]
@@ -256,6 +514,78 @@ def _rets(row) -> dict:
         v = row.get(f"ret_{h}")
         out[f"ret_{h}"] = None if v is None or pd.isna(v) else float(v)
     return out
+
+
+def _empty_row(ticker: str) -> dict:
+    return {
+        "Ticker": ticker,
+        "stack": "book_only",
+        "score": 0,
+        "inv_score": 0,
+        "blue": False,
+        "ab": None,
+        "peer": None,
+        "short": None,
+        "sma20": None,
+        "ab_up": False,
+        "white": False,
+        "steady": False,
+        "alarm": False,
+        "join": None,
+        "points": 0,
+        "n_red": 0,
+        "relvol": None,
+        "rsi": None,
+        "gap": None,
+        "sector": None,
+        **{f"ret_{h}": None for h in HORIZONS},
+    }
+
+
+def _pick_from_pack(p: dict, extra=None) -> dict:
+    r = p.get("row")
+    if r is not None:
+        d = _pick_dict(r, extra)
+    else:
+        d = _empty_row(p["ticker"])
+        if extra:
+            d.update(extra)
+    d["Ticker"] = p["ticker"]
+    d["src"] = p.get("source") or "book"
+    d["stack"] = p.get("stack") or d.get("stack")
+    d["book_score"] = p.get("book_score")
+    if p.get("why"):
+        d["why"] = p["why"]
+    return d
+
+
+def _paint_row(
+    date: str,
+    ticker: str,
+    book_row: dict | None,
+    idx,
+    ctx: dict,
+    buy_today: set[str],
+    sell_today: set[str],
+) -> dict:
+    sess = session_at_lag(idx, date, 0) if idx else None
+    prior = session_at_lag(idx, date, 1) if idx else None
+    row = dict(book_row or {})
+    row["ticker"] = ticker
+    painted = color_name(
+        sess, row, buy_today,
+        market_tone=ctx.get("market_tone"),
+        book_domains=ctx.get("domains"),
+        sell_today=sell_today,
+        market_state=ctx.get("market_state"),
+        book_lanes=ctx.get("lanes"),
+        book_marks=ctx.get("marks"),
+        book_opp=ctx.get("opp"),
+        era_skip=_era_skip(date),
+        lattice_live=ctx.get("lattice_live"),
+        prior_sess=prior,
+    )
+    return painted
 
 
 def _pick_dict(r, extra=None) -> dict:
@@ -319,45 +649,124 @@ def _book_compare(g: pd.DataFrame, date: str) -> dict:
     }
 
 
-def session_row(date: str, g: pd.DataFrame, prev_long: set[str] | None = None, prev_short: set[str] | None = None) -> dict:
-    seats, rule = fill_seats(g)
-    first_mask, first_rule = pool_mask(g)
-    pool = g.loc[first_mask]
-    smask, srule = short_pool_mask(g)
-    if len(seats):
-        smask = smask & ~g["Ticker"].isin(set(seats["Ticker"]))
-    shorts = pick_seats(g, smask, score_col="inv_score")
+def session_row(
+    date: str,
+    g: pd.DataFrame,
+    prev_long: set[str] | None = None,
+    prev_short: set[str] | None = None,
+    *,
+    idx=None,
+    ctx: dict | None = None,
+    paint: bool = True,
+) -> dict:
+    buy_rows = same_day_buy_rows(date)
+    sell_rows = same_day_sell_rows(date)
+    book_buys = [r["ticker"] for r in buy_rows]
+    book_sells = [r["ticker"] for r in sell_rows]
+    buy_today = set(book_buys)
+    sell_today = set(book_sells)
+    universe = load_book_universe(date)
+    packs, rule, dropped_packs = fill_overlay(g, book_buys, universe)
+    short_packs = fill_short_overlay(g, book_sells)
 
-    long_tickers = list(seats["Ticker"]) if len(seats) else []
-    short_tickers = list(shorts["Ticker"]) if len(shorts) else []
+    mine_seats, mine_rule = fill_seats(g)
+    first_mask, _first_rule = pool_mask(g)
+    pool = g.loc[first_mask]
+    mine_picks = [_pick_dict(r, {"stack": r.get("stack") or mine_rule}) for _, r in mine_seats.iterrows()] if len(mine_seats) else []
+
+    long_tickers = [p["ticker"] for p in packs]
+    short_tickers = [p["ticker"] for p in short_packs]
     actions, bought, sold, held = annotate_actions(prev_long, long_tickers)
     sactions, sbought, ssold, sheld = annotate_actions(prev_short, short_tickers)
 
-    picks = [
-        _pick_dict(r, {"side": "buy", "action": actions[i], "rule": r.get("stack") or rule, "stack": r.get("stack") or first_rule})
-        for i, (_, r) in enumerate(seats.iterrows())
-    ]
-    short_picks = [
-        _pick_dict(r, {"side": "sell", "action": "short" if sactions[i] == "buy" else "hold", "rule": srule, "stack": srule})
-        for i, (_, r) in enumerate(shorts.iterrows())
-    ]
+    ctx = ctx if ctx is not None else (load_day_context(date) if paint else {})
+    book_by_t = {r["ticker"]: r for r in buy_rows + sell_rows}
+
+    picks = []
+    for i, pack in enumerate(packs):
+        extra = {
+            "side": "buy",
+            "action": actions[i],
+            "rule": pack.get("stack") or rule,
+            "stack": pack.get("stack") or rule,
+            "src": pack.get("source"),
+        }
+        pick = _pick_from_pack(pack, extra)
+        if paint and idx is not None:
+            painted = _paint_row(date, pack["ticker"], book_by_t.get(pack["ticker"]), idx, ctx, buy_today, sell_today)
+            pick["marks"] = painted.get("marks")
+            pick["marks_cell"] = painted.get("marks_cell")
+            pick["condition"] = painted.get("condition")
+            pick["region"] = painted.get("region")
+            pick["lane"] = painted.get("lane")
+            pick["lane_label"] = painted.get("lane_label")
+            pick["labeled"] = painted.get("labeled")
+            pick["labeled_domains"] = painted.get("labeled_domains")
+            pick["boxes"] = painted.get("boxes")
+            pick["domains"] = painted.get("domains")
+            pick["mid_opp"] = painted.get("mid_opp")
+            pick["overnight_buy"] = painted.get("overnight_buy")
+            pick["on_1d_buy"] = painted.get("on_1d_buy")
+            pick["on_1d_sell"] = painted.get("on_1d_sell")
+        picks.append(pick)
+
+    short_picks = []
+    for i, pack in enumerate(short_packs):
+        extra = {
+            "side": "sell",
+            "action": "short" if sactions[i] == "buy" else "hold",
+            "rule": "fade",
+            "stack": "fade",
+            "src": "book",
+        }
+        pick = _pick_from_pack(pack, extra)
+        if paint and idx is not None:
+            painted = _paint_row(date, pack["ticker"], book_by_t.get(pack["ticker"]), idx, ctx, buy_today, sell_today)
+            pick["marks"] = painted.get("marks")
+            pick["marks_cell"] = painted.get("marks_cell")
+            pick["condition"] = painted.get("condition")
+            pick["lane"] = painted.get("lane")
+            pick["lane_label"] = painted.get("lane_label")
+            pick["labeled"] = painted.get("labeled")
+            pick["labeled_domains"] = painted.get("labeled_domains")
+            pick["mid_opp"] = painted.get("mid_opp")
+            pick["on_1d_buy"] = painted.get("on_1d_buy")
+            pick["on_1d_sell"] = painted.get("on_1d_sell")
+        short_picks.append(pick)
+
+    dropped = [_pick_from_pack(p, {"src": p.get("source"), "why": p.get("why"), "stack": p.get("stack")}) for p in dropped_packs]
+
     vs_book = _book_compare(g, date)
     uni = {h: bt_report.name_stats(g[f"ret_{h}"]) for h in HORIZONS}
     how_parts = [HOW.get(s, s) for s in rule.split("+") if s]
+    n_keep = sum(1 for p in packs if p.get("source") == "book")
+    n_add = sum(1 for p in packs if p.get("source") == "extra")
+    overlay_rows = [p.get("row") for p in packs if p.get("row") is not None]
+    overlay_df = pd.DataFrame(overlay_rows) if overlay_rows else g.head(0)
+    short_rows = [p.get("row") for p in short_packs if p.get("row") is not None]
+    short_df = pd.DataFrame(short_rows) if short_rows else g.head(0)
     return {
         "date": date,
         "rule": rule,
-        "short_rule": srule,
-        "how": " → ".join(how_parts) if how_parts else HOW["empty"],
-        "short_how": HOW.get(srule, srule),
+        "mine_rule": mine_rule,
+        "short_rule": "fade" if short_picks else "none",
+        "how": HOW["overlay"] + " → " + (" → ".join(how_parts) if how_parts else HOW.get(rule, rule)),
+        "short_how": "book SELL ∩ fade",
         "a_printed": a_printed(g),
         "n_book": int(len(g)),
+        "n_book_buy": int(len(book_buys)),
+        "n_keep": n_keep,
+        "n_add": n_add,
+        "n_drop": int(len(dropped)),
         "n_pool": int(len(pool)),
-        "n_seats": int(len(seats)),
-        "n_short": int(len(shorts)),
+        "n_seats": int(len(packs)),
+        "n_short": int(len(short_packs)),
+        "n_mine": int(len(mine_seats)),
         "n_blue": int(g["blue"].sum()),
         "n_ab_good": int(g["ab_good"].sum()),
         "n_peer_good": int(g["peer_good"].sum()),
+        "market_state": (ctx or {}).get("market_state"),
+        "market_tone": (ctx or {}).get("market_tone"),
         "bought": bought,
         "sold": sold,
         "held": held,
@@ -366,25 +775,29 @@ def session_row(date: str, g: pd.DataFrame, prev_long: set[str] | None = None, p
         "short_held": sheld,
         "uni": uni,
         "pool": {h: bt_report.name_stats(pool[f"ret_{h}"]) for h in HORIZONS},
-        "seats": {h: bt_report.name_stats(seats[f"ret_{h}"]) if len(seats) else {"n": 0} for h in HORIZONS},
-        "shorts": {h: bt_report.name_stats(shorts[f"ret_{h}"]) if len(shorts) else {"n": 0} for h in HORIZONS},
+        "seats": {h: bt_report.name_stats(overlay_df[f"ret_{h}"]) if len(overlay_df) and f"ret_{h}" in overlay_df.columns else {"n": 0} for h in HORIZONS},
+        "shorts": {h: bt_report.name_stats(short_df[f"ret_{h}"]) if len(short_df) and f"ret_{h}" in short_df.columns else {"n": 0} for h in HORIZONS},
         "book": {h: _mean(picks, f"ret_{h}") for h in HORIZONS},
         "short_book": {h: (None if _mean(short_picks, f"ret_{h}") is None else round(-_mean(short_picks, f"ret_{h}"), 3)) for h in HORIZONS},
         "vs_book": vs_book,
+        "vs_mine": {h: _mean(mine_picks, f"ret_{h}") for h in HORIZONS},
+        "mine_rule_used": mine_rule,
         "picks": picks,
         "short_picks": short_picks,
+        "dropped": dropped,
     }
 
 
 def run(path: Path = PANEL) -> dict:
     df = load_panel(path)
+    idx = build_index()
     days = []
     prev_long: set[str] = set()
     prev_short: set[str] = set()
     prev_picks: dict[str, dict] = {}
     ledger = []
     for date, g in df.groupby("date", sort=True):
-        d = session_row(str(date), g, prev_long, prev_short)
+        d = session_row(str(date), g, prev_long, prev_short, idx=idx, paint=True)
         sell_rows = []
         for t in d["sold"]:
             prior = dict(prev_picks.get(t) or {"Ticker": t})
@@ -411,10 +824,13 @@ def run(path: Path = PANEL) -> dict:
     name_1d = [r["ret_1d"] for r in ledger if r.get("side") == "buy" and r.get("action") != "sell" and r.get("ret_1d") is not None]
     name_2d = [r["ret_2d"] for r in ledger if r.get("side") == "buy" and r.get("action") != "sell" and r.get("ret_2d") is not None]
     book_1d = [d["vs_book"]["book"]["1d"] for d in days if (d.get("vs_book") or {}).get("book", {}).get("1d") is not None]
+    mine_1d = [d["vs_mine"]["1d"] for d in days if (d.get("vs_mine") or {}).get("1d") is not None]
     return {
         "generated_from": str(path),
+        "mode": "book_x_mine_overlay",
         "seats": SEATS,
         "sector_cap": SECTOR_CAP,
+        "max_extras": MAX_EXTRAS,
         "rows": int(len(df)),
         "sessions": [d["date"] for d in days],
         "days": days,
@@ -426,6 +842,7 @@ def run(path: Path = PANEL) -> dict:
             "long_1d_names": bt_report.name_stats(name_1d),
             "long_2d_names": bt_report.name_stats(name_2d),
             "stock_book_1d_days": bt_report.day_book_stats(book_1d),
+            "mine_only_1d_days": bt_report.day_book_stats(mine_1d),
         },
     }
 
@@ -451,14 +868,34 @@ def _ret(v) -> str:
 
 
 def _name_table(rows: list[dict], rule: str) -> list[str]:
+    painted = any(r.get("labeled") or r.get("marks_cell") for r in rows)
+    if painted:
+        lines = [
+            "| # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |",
+            "|---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|",
+        ]
+        for i, r in enumerate(rows, 1):
+            n = i if r.get("action") != "sell" else "—"
+            hall = r.get("lane_label") or lane_label(r.get("lane"))
+            lines.append(
+                f"| {n} | {r.get('action','buy')} | `{r['Ticker']}` | {r.get('src') or 'book'} "
+                f"| `{r.get('stack') or rule}` "
+                f"| {r.get('marks_cell') or '—'} | {_cond_cell(r)} | {hall or '—'} "
+                f"| {r.get('labeled') or _labeled(r.get('boxes'))} "
+                f"| {r.get('labeled_domains') or _labeled_domains(r.get('domains'))} "
+                f"| {_ret(r.get('ret_1d'))} | {_ret(r.get('ret_2d'))} "
+                f"| {_ret(r.get('ret_3d'))} | {_ret(r.get('ret_1w'))} |"
+            )
+        return lines
     lines = [
-        "| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |",
-        "|---:|---|---|---|---|---|---:|---:|---:|---:|---:|",
+        "| # | action | Ticker | src | stack | sector | relvol | score | 1d | 2d | 3d | 1w |",
+        "|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|",
     ]
     for i, r in enumerate(rows, 1):
         n = i if r.get("action") != "sell" else "—"
         lines.append(
-            f"| {n} | {r.get('action','buy')} | {r['Ticker']} | `{r.get('stack') or rule}` "
+            f"| {n} | {r.get('action','buy')} | `{r['Ticker']}` | {r.get('src') or 'book'} "
+            f"| `{r.get('stack') or rule}` "
             f"| {r.get('sector') or '—'} | {r.get('relvol') or '—'} | {r.get('score') if r.get('score') is not None else '—'} "
             f"| {_ret(r.get('ret_1d'))} | {_ret(r.get('ret_2d'))} "
             f"| {_ret(r.get('ret_3d'))} | {_ret(r.get('ret_1w'))} |"
@@ -466,24 +903,38 @@ def _name_table(rows: list[dict], rule: str) -> list[str]:
     return lines
 
 
+def _day_score_line(d: dict) -> str:
+    vs = (d.get("vs_book") or {}).get("book") or {}
+    vm = d.get("vs_mine") or {}
+    return (
+        f"Overlay 1d {_ret(d['book']['1d'])} · 2d {_ret(d['book']['2d'])} · "
+        f"3d {_ret(d['book']['3d'])} · 1w {_ret(d['book']['1w'])} · "
+        f"W/L {_wl(d['picks'])[0]}/{_wl(d['picks'])[1]} · "
+        f"stock-book BUY 1d {_ret(vs.get('1d'))} · mine-only 1d {_ret(vm.get('1d'))} · "
+        f"universe med {_num(d['uni']['1d'],'median')}."
+    )
+
+
 def render_one_day(d: dict) -> str:
     lines = []
     a = lines.append
-    vs = (d.get("vs_book") or {}).get("book") or {}
-    a(f"# Boring winners — {d['date']}")
+    tone = d.get("market_tone") or "—"
+    state = d.get("market_state") or "—"
+    a(f"# Boring winners overlay — {d['date']}")
     a("")
-    a(f"**Stacks:** `{d['rule']}`")
+    a(f"**Market:** {state} · tone `{tone}`")
+    a("")
+    a(
+        f"1d BUY n={d.get('n_book_buy', 0)} · overlay n={d['n_seats']} "
+        f"(keep {d.get('n_keep', 0)} · add {d.get('n_add', 0)} · drop {d.get('n_drop', 0)}) · "
+        f"stacks `{d['rule']}`"
+    )
     a("")
     a(d["how"])
     a("")
-    a(
-        f"Book 1d {_ret(d['book']['1d'])} · 2d {_ret(d['book']['2d'])} · "
-        f"3d {_ret(d['book']['3d'])} · 1w {_ret(d['book']['1w'])} · "
-        f"W/L {_wl(d['picks'])[0]}/{_wl(d['picks'])[1]} · "
-        f"stock-book BUY 1d {_ret(vs.get('1d'))} · universe med {_num(d['uni']['1d'],'median')}."
-    )
+    a(_day_score_line(d))
     a("")
-    a("## Longs (this morning)")
+    a("## Long overlay")
     a("")
     if d["picks"]:
         lines.extend(_name_table(d["picks"], d["rule"]))
@@ -491,7 +942,18 @@ def render_one_day(d: dict) -> str:
         a("")
         a(f"Seats 1d {bt_report.fmt_stats_row(s1d)}." if s1d.get("n") else "1d not settled — names only.")
     else:
-        a("_empty core_")
+        a("_empty overlay — no 1d BUY and no gated extra_")
+    if d.get("dropped"):
+        a("")
+        a("## Dropped from 1d BUY")
+        a("")
+        a("| Ticker | why | stack | 1d | 2d |")
+        a("|---|---|---|---:|---:|")
+        for r in d["dropped"]:
+            a(
+                f"| `{r['Ticker']}` | {r.get('why') or '—'} | `{r.get('stack') or '—'}` "
+                f"| {_ret(r.get('ret_1d'))} | {_ret(r.get('ret_2d'))} |"
+            )
     if d.get("sells"):
         a("")
         a("## Sold overnight (last seated returns)")
@@ -499,7 +961,7 @@ def render_one_day(d: dict) -> str:
         lines.extend(_name_table(d["sells"], "prior"))
     if d.get("short_picks"):
         a("")
-        a("## Shorts (fade)")
+        a("## Short overlay (SELL ∩ fade)")
         a("")
         lines.extend(_name_table(d["short_picks"], d["short_rule"]))
     a("")
@@ -510,47 +972,61 @@ def render(report: dict) -> str:
     lines = []
     a = lines.append
     tot = report.get("totals") or {}
-    a("# Boring winners — mined 25-seat book")
+    a("# Boring winners — book × mine overlay")
     a("")
-    a("Daily-rebalanced from the **fixed FEATURE_MINE** edges. Equal-weight, close-to-close, clip ±30 on the book line. Per-name 1d/2d/3d/1w are raw.")
+    a("Starts from the **same 1d BUY list** the Top Gainer As-Of walk uses, then overlays the fixed FEATURE_MINE stacks. Equal-weight, close-to-close, clip ±30 on the book line. Per-name 1d/2d/3d/1w are raw.")
     a("")
-    a("## Edges this seater uses")
+    a("## How a seat is won")
+    a("")
+    a("1. **Keep** a 1d BUY name that is not fade. Prefer a named mine stack.")
+    a("2. **Drop** a 1d BUY name that printed fade / first_crack.")
+    a("3. **Swap** a stack-less book name for a gated extra with a named stack.")
+    a("4. **Add** at most 5 extras the book missed — only if they pass the BUY floor (`mcap ≥ $400M`, `ADV ≥ 500k`, not micro) and print a named stack. Extras also honor the book's 4/sector, 3/industry, 4 large/mega caps.")
+    a("5. **Paint** every seat with the 12 as-of cameras, 6 coaches, 🔵🚨⚪ marks, Cond, and hall-pass — same board as Top Gainer As-Of.")
+    a("6. **Short** is book SELL ∩ fade, not the raw fade dump.")
+    a("")
+    a("Mine-only 25-seat fill is kept as a comparison column. It is not the live book.")
+    a("")
+    a("## Edges the overlay prefers")
     a("")
     a("| priority | stack | mine-board 1d | role |")
     a("|---:|---|---|---|")
-    a("| 1 | `hot+ab+peer` | 70.6% hit · +3.14 mean · n=51 | up to 8 scalp seats |")
+    a("| 1 | `hot+ab+peer` | 70.6% hit · +3.14 mean · n=51 | scalp, if the book or a gated extra has it |")
     a("| 2 | `steady+blue` | 52.0% hit · +9.54 mean · n=1394 | core swing |")
     a("| 3 | `blue+white` | 49.4% hit · +10.48 mean · n=1246 | white only with blue |")
     a("| 4 | `blue` | 57.7% hit · +4.46 mean · n=3387 | baseline |")
-    a("| 5 | `ab AND peer` | ~65% hit · ~+1 mean | up to 5 modest fill |")
-    a("| 6 | `alarm AND NOT white` | 47.7% hit · +2.27 mean | rebound when no blue |")
-    a("| 7 | `rsi=oversold` / `gap=down` | low hit · huge mean | lottery last resort |")
-    a("| short | `fade` / `first_crack` | 38.2% hit · −0.72 mean | short only |")
+    a("| 5 | `ab AND peer` | ~65% hit · ~+1 mean | modest fill |")
+    a("| 6 | `alarm AND NOT white` | 47.7% hit · +2.27 mean | rebound |")
+    a("| 7 | `rsi=oversold` / `gap=down` | low hit · huge mean | extras only if mine_score ≥ 3 |")
+    a("| short | book SELL ∩ `fade` | 38.2% hit · −0.72 mean | short only |")
     a("")
-    a("Never seated: white alone, fade as a long, `ab OR peer` 1,800-name dump, `join AND Band` alphabet dump.")
-    a("Max 25, sector cap 6. Thin books are allowed. A cameras print from **2026-08-20**. Settled 1d through **2026-08-20**.")
+    a("Never seated as a long: white alone, fade, `ab OR peer` dump, `join AND Band` alphabet dump, micro / sub-$400M extras.")
+    a("Thin 1d BUY mornings stay thin — we do not force 25 junk seats. A cameras print from **2026-08-20**. Settled 1d through **2026-08-20**.")
     a("")
     a("Per-day files: `03_scoreboard/boring_winners/<date>.md` · today also at `01_daily/<date>_boring_winners.md` and `latest_boring_winners.md`.")
     a("")
     a("## Daily book returns")
     a("")
-    a("| date | stacks | n | mine 1d | book BUY 1d | uni med | 2d | 3d | 1w | W | L |")
-    a("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
+    a("| date | stacks | n | keep | add | drop | overlay 1d | book BUY 1d | mine-only 1d | uni med | 2d | W | L |")
+    a("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
     for d in report["days"]:
         w, l = _wl(d["picks"])
         vs = (d.get("vs_book") or {}).get("book") or {}
+        vm = d.get("vs_mine") or {}
         a(
             f"| {d['date']} | `{d['rule']}` | {d['n_seats']} "
-            f"| {_ret(d['book']['1d'])} | {_ret(vs.get('1d'))} | {_num(d['uni']['1d'],'median')} "
-            f"| {_ret(d['book']['2d'])} | {_ret(d['book']['3d'])} | {_ret(d['book']['1w'])} "
+            f"| {d.get('n_keep', 0)} | {d.get('n_add', 0)} | {d.get('n_drop', 0)} "
+            f"| {_ret(d['book']['1d'])} | {_ret(vs.get('1d'))} | {_ret(vm.get('1d'))} "
+            f"| {_num(d['uni']['1d'],'median')} | {_ret(d['book']['2d'])} "
             f"| {w} | {l} |"
         )
     a("")
     t1 = tot.get("long_1d_days") or {}
     tb = tot.get("stock_book_1d_days") or {}
+    tm = tot.get("mine_only_1d_days") or {}
     if t1.get("n_days"):
         a(
-            f"Mine book 1d: {t1['n_days']} priced days · "
+            f"Overlay 1d: {t1['n_days']} priced days · "
             f"p(loss day)={_pct(t1.get('p_loss_day'))} · "
             f"mean={bt_report.fmt_num(t1.get('mean_day'))} · "
             f"cum={bt_report.fmt_num(t1.get('cum_sum'))}."
@@ -562,14 +1038,21 @@ def render(report: dict) -> str:
             f"mean={bt_report.fmt_num(tb.get('mean_day'))} · "
             f"cum={bt_report.fmt_num(tb.get('cum_sum'))}."
         )
+    if tm.get("n_days"):
+        a(
+            f"Mine-only 25 1d (comparison): {tm['n_days']} priced days · "
+            f"p(loss day)={_pct(tm.get('p_loss_day'))} · "
+            f"mean={bt_report.fmt_num(tm.get('mean_day'))} · "
+            f"cum={bt_report.fmt_num(tm.get('cum_sum'))}."
+        )
     n1 = tot.get("long_1d_names") or {}
     if n1.get("n"):
-        a(f"Mine names 1d: {bt_report.fmt_stats_row(n1)}.")
+        a(f"Overlay names 1d: {bt_report.fmt_stats_row(n1)}.")
     n2 = tot.get("long_2d_names") or {}
     if n2.get("n"):
-        a(f"Mine names 2d: {bt_report.fmt_stats_row(n2)}.")
+        a(f"Overlay names 2d: {bt_report.fmt_stats_row(n2)}.")
     a("")
-    a("## Daily short book (fade only, −1 × clipped name return)")
+    a("## Daily short overlay (book SELL ∩ fade, −1 × clipped name return)")
     a("")
     a("| date | n | 1d | 2d | new | covered |")
     a("|---|---:|---:|---:|---:|---:|")
@@ -583,7 +1066,7 @@ def render(report: dict) -> str:
     if s1.get("n_days"):
         a("")
         a(
-            f"Short book 1d: {s1['n_days']} priced days · "
+            f"Short overlay 1d: {s1['n_days']} priced days · "
             f"p(loss day)={_pct(s1.get('p_loss_day'))} · "
             f"mean={bt_report.fmt_num(s1.get('mean_day'))} · "
             f"cum={bt_report.fmt_num(s1.get('cum_sum'))}."
@@ -591,24 +1074,33 @@ def render(report: dict) -> str:
     a("")
     a("## Each day's stocks")
     a("")
-    a("`buy` / `hold` this morning. `sell` = dropped overnight (last seated 1d/2d/3d/1w).")
+    a("`keep` = on 1d BUY. `add` = gated extra. `buy` / `hold` this morning. `sell` = dropped overnight. Cameras and coaches are the Top Gainer As-Of 09:30 ET paint.")
     a("")
     for d in report["days"]:
-        vs = (d.get("vs_book") or {}).get("book") or {}
-        a(f"### {d['date']} · `{d['rule']}` · n={d['n_seats']}")
+        a(
+            f"### {d['date']} · `{d['rule']}` · n={d['n_seats']} "
+            f"(keep {d.get('n_keep', 0)} / add {d.get('n_add', 0)} / drop {d.get('n_drop', 0)})"
+        )
         a("")
+        if d.get("market_state") or d.get("market_tone"):
+            a(f"Market: {d.get('market_state') or '—'} · tone `{d.get('market_tone') or '—'}`")
+            a("")
         a(d["how"])
         a("")
-        a(
-            f"Book 1d {_ret(d['book']['1d'])} · 2d {_ret(d['book']['2d'])} · "
-            f"3d {_ret(d['book']['3d'])} · 1w {_ret(d['book']['1w'])} · "
-            f"stock-book BUY 1d {_ret(vs.get('1d'))} · universe med {_num(d['uni']['1d'],'median')}."
-        )
+        a(_day_score_line(d))
         a("")
         if d["picks"]:
             lines.extend(_name_table(d["picks"], d["rule"]))
         else:
-            a("_empty pool_")
+            a("_empty overlay_")
+        if d.get("dropped"):
+            a("")
+            a("Dropped from 1d BUY:")
+            a("")
+            a("| Ticker | why | stack | 1d |")
+            a("|---|---|---|---:|")
+            for r in d["dropped"]:
+                a(f"| `{r['Ticker']}` | {r.get('why') or '—'} | `{r.get('stack') or '—'}` | {_ret(r.get('ret_1d'))} |")
         if d.get("sells"):
             a("")
             a("Sold overnight:")
@@ -620,10 +1112,10 @@ def render(report: dict) -> str:
         a("")
     a("## Notes")
     a("")
-    a("1. Sub-50% hit is not the issue. Expectancy needs mean. The mine board now has both.")
-    a("2. `blue` board mean +4.46 is squeeze-contaminated. Book lines clip ±30. Raw name 2d can still look insane.")
-    a("3. `ab=good` / `peer=good` alone are high-hit / tiny-mean. They fill after blue, they do not lead.")
-    a("4. No blue morning (8/13) falls through to lottery `rsi=oversold` / `gap=down`. That is labeled.")
+    a("1. The point is the combination: book quality gates + mined stacks + as-of cameras. Mine-only lost to stock-book BUY on the priced window. Overlay should track the book and beat it when a stack adds or a fade drops.")
+    a("2. `blue` board mean +4.46 is squeeze-contaminated. Book lines clip ±30.")
+    a("3. HARD_RED / thin BUY mornings stay thin. We do not backfill 25 lottery names.")
+    a("4. A cameras (`ab` / `peer`) only print from **2026-08-20**. Before that, extras cannot fire `hot+ab+peer` / `ab+peer`.")
     a("")
     return "\n".join(lines) + "\n"
 
@@ -634,11 +1126,17 @@ def daily_rows(report: dict) -> list[dict]:
         w1, l1 = _wl(d["picks"], "ret_1d")
         w2, l2 = _wl(d["picks"], "ret_2d")
         vs = (d.get("vs_book") or {}).get("book") or {}
+        vm = d.get("vs_mine") or {}
         rows.append({
             "date": d["date"],
-            "strat": "boring_winners_mine25",
+            "strat": "boring_winners_overlay",
             "side": "buy",
             "rule": d["rule"],
+            "n_keep": d.get("n_keep"),
+            "n_add": d.get("n_add"),
+            "n_drop": d.get("n_drop"),
+            "n_book_buy": d.get("n_book_buy"),
+            "mine_only_1d": vm.get("1d"),
             "n_bought": len(d["bought"]),
             "bought": " ".join(d["bought"]),
             "n_sold": len(d["sold"]),
@@ -661,7 +1159,7 @@ def daily_rows(report: dict) -> list[dict]:
         sw2, sl2 = _wl(d["short_picks"], "ret_2d")
         rows.append({
             "date": d["date"],
-            "strat": "boring_winners_mine25",
+            "strat": "boring_winners_overlay",
             "side": "sell",
             "rule": d["short_rule"],
             "n_bought": len(d["short_bought"]),
