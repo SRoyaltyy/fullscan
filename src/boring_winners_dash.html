@@ -63,9 +63,16 @@
  <li><code>seats</code> — 10 / 25 / 50. Thin BUY mornings stay thin unless extras can fill.</li>
  <li><code>hold N</code> — a name bought on D cannot be sold until it has aged N sessions. Locked names keep their seat. Today's new buys only fill empties; if the book is full they are <b>skipped</b>.</li>
  <li><code>color</code> — <b>blue</b> keeps 🔵 names only. <b>green</b> keeps panel <code>cond=good</code>.</li>
- <li><code>HARD_RED</code> (lattice from 2026-08-31) — <b>stand-down</b> no new buys. <b>−5% fill</b> assumes we got 5% cheaper on new buys that morning. <b>limit −5%</b> only buys if that name's 1d is ≤ −5.</li>
+ <li><code>HARD_RED</code> (lattice from 2026-08-31) — <b>stand-down</b> no new buys. <b>limit −5%</b> and <b>−5% fill</b> only fill at <code>open×0.95</code> if that session's <i>low</i> printed through the limit. No print → limit skips; haircut fills at the 16:00 ET close. Close-to-close ≤ −5 is not enough.</li>
+ <li><code>Futubull fees</code> — same schedule as the paper blotter (<code>00_grounding/futubull_fees.json</code>). Whole shares only. New buys split leftover cash equally; skip if the split cannot buy 1 share after fees.</li>
+ <li><code>orig 8/13–8/21</code> — same sleeve, cut to the window before the late-Aug drawdown / HARD_RED lattice. Start equity is the prior close (or $10k if the sleeve begins inside the window).</li>
 </ol>
 <p class="note">Live book is still <code>overlay 25 · daily</code>. This page is how we pick the next default. Paper blotter: <a id="paperLink" href="../">stock-book simulation</a>.</p>
+</div>
+<div class="how" id="origBox">
+<h2>Original window 8/13–8/21</h2>
+<p class="note" id="origNote">Would-be live overlay 25 daily before things went downstream. Fees and whole-share sizing included.</p>
+<div class="cards" id="origCards"></div>
 </div>
 
 <details class="curve-box" open>
@@ -80,7 +87,7 @@
 <h2 id="tapeTitle">Day tape</h2>
 <p class="mut" id="tapeHint" style="margin:0 0 8px"></p>
 <div id="tapeHost"></div>
-<div class="note">1d is close-to-close from that session. After 8/20, missing panel hops are filled from the next Finviz tape. HARD_RED −5% fill adds +5 to that day's 1d on <i>new</i> buys only.</div>
+<div class="note">Default fill is the session close (16:00 ET), same clock as the paper blotter. HARD_RED −5% uses the daily bar: fill at open×0.95 only when low ≤ open×0.95. Daily OHLC has no print minute — time is <code>intraday (low ≤ open×0.95)</code> or <code>16:00 ET close</code>. First-day PnL is close / fill − 1, not close-to-close.</div>
 </div>
 <script>
 const D = __DATA__;
@@ -146,6 +153,7 @@ function renderCards(){
     ["Cum 1d", num(s.cum), cls(s.cum)],
     ["P(loss day)", pct(s.p_loss_day), "mut"],
     ["Final", money(s.final), cls((s.final||0)-D.capital)],
+    ["Fees", money(s.fees_cum), "mut"],
     ["SPY $10k", money(spy), "mut"],
   ];
   document.getElementById("cards").innerHTML=cards.map(([k,v,c])=>`<div class="card">${esc(k)}<b class="${c}">${v}</b></div>`).join("");
@@ -159,7 +167,6 @@ function visibleKeys(){
     if(k==="SPY") return !hidden.has(k);
     if(!ok.has(k)) return false;
     if(sleeve && k!==sleeve && !hidden.has("others")) {
-      // always show selected; others if not hidden as a group — show selected + SPY + any not hidden
     }
     return !hidden.has(k);
   });
@@ -209,9 +216,28 @@ function renderLegend(){
   });
 }
 
+function renderOrig(){
+  const w=D.orig_window||{};
+  const s=stats.find(x=>x.sleeve===sleeve)||{};
+  const spyW=w.spy||{};
+  const note=document.getElementById("origNote");
+  if(note) note.textContent = (w.note||"Live overlay 25 daily before the late-Aug drawdown.")+" Selected sleeve stats use the same cash/fee ledger.";
+  const cards=[
+    ["Window", (w.start||"2026-08-13")+" → "+(w.end||"2026-08-21"), "gold"],
+    ["Sleeve $", money(s.win_end), cls(s.win_pnl)],
+    ["Window PnL", money(s.win_pnl), cls(s.win_pnl)],
+    ["Window ret", s.win_ret==null?"—":pct(s.win_ret), cls(s.win_ret)],
+    ["Mean day", num(s.win_mean), cls(s.win_mean)],
+    ["Days / fees", (s.win_n||0)+"d · "+money(s.win_fees), "mut"],
+    ["SPY $10k", money(spyW.end_eq), cls(spyW.ret)],
+  ];
+  const host=document.getElementById("origCards");
+  if(host) host.innerHTML=cards.map(([k,v,c])=>`<div class="card">${esc(k)}<b class="${c}">${v}</b></div>`).join("");
+}
+
 function renderStats(){
-  const rows=passing().slice().sort((a,b)=>(b.mean_day??-999)-(a.mean_day??-999));
-  const head="<tr><th>Sleeve</th><th>src</th><th>n</th><th>hold</th><th>color</th><th>hard</th><th>mean day</th><th>cum</th><th>p(loss)</th><th>final</th></tr>";
+  const rows=passing().slice().sort((a,b)=>(b.win_ret??b.mean_day??-999)-(a.win_ret??a.mean_day??-999));
+  const head="<tr><th>Sleeve</th><th>src</th><th>n</th><th>hold</th><th>color</th><th>hard</th><th>mean day</th><th>cum</th><th>p(loss)</th><th>final</th><th>8/13–8/21</th><th>win ret</th></tr>";
   const body=rows.map(s=>`<tr>
     <td><button type="button" class="chip ${s.sleeve===sleeve?"on":""}" data-s="${s.sleeve}">${esc(s.label)}</button></td>
     <td>${esc(s.source)}</td><td>${s.seats}</td><td>${s.hold}</td>
@@ -220,29 +246,68 @@ function renderStats(){
     <td class="${cls(s.cum)}">${num(s.cum)}</td>
     <td>${pct(s.p_loss_day)}</td>
     <td class="${cls((s.final||0)-D.capital)}">${money(s.final)}</td>
+    <td class="${cls(s.win_pnl)}">${money(s.win_end)}</td>
+    <td class="${cls(s.win_ret)}">${s.win_ret==null?"—":pct(s.win_ret)}</td>
   </tr>`).join("");
   const tb=document.getElementById("stats");
   tb.innerHTML=head+body;
   tb.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{sleeve=b.dataset.s;renderAll();});
 }
 
+function px(n){if(n==null||n==="")return "—";return Number(n).toFixed(2);}
+function fillBuy(b){
+  const t=b.ticker||b;
+  if(typeof b!=="object") return `<b class="pos">${esc(t)}</b>`;
+  const extra = b.open!=null ? ` · o ${px(b.open)} / l ${px(b.low)} / c ${px(b.close)}` : "";
+  const sh = b.shares!=null ? `${b.shares}sh ` : "";
+  const fee = b.fees!=null ? ` fee ${px(b.fees)}` : "";
+  return `<b class="pos">${esc(t)}</b> ${sh}buy ${px(b.buy_px)} @ ${esc(b.buy_when||"—")}${fee}${extra}`;
+}
+function fillSell(s){
+  const t=s.ticker||s;
+  if(typeof s!=="object") return `<b class="neg">${esc(t)}</b>`;
+  const from = s.buy_px!=null ? ` (from ${px(s.buy_px)} @ ${esc(s.buy_when||"—")})` : "";
+  const sh = s.shares!=null ? `${s.shares}sh ` : "";
+  const fee = s.fees!=null ? ` fee ${px(s.fees)}` : "";
+  const pnl = s.realized_pnl!=null ? ` pnl ${num(s.realized_pnl)}` : "";
+  return `<b class="neg">${esc(t)}</b> ${sh}sell ${px(s.sell_px)} @ ${esc(s.sell_when||"16:00 ET close")}${fee}${pnl}${from}`;
+}
+function fillSkip(s){
+  if(typeof s!=="object") return esc(s);
+  const ohlc = s.open!=null ? ` o ${px(s.open)} / l ${px(s.low)} / c ${px(s.close)}` : "";
+  return `${esc(s.ticker)} (${esc(s.why||"?")}${ohlc})`;
+}
+function fillHeld(d){
+  const by={};
+  (d.names||[]).forEach(n=>{by[n.ticker]=n;});
+  return (d.held||[]).map(t=>{
+    const n=by[t]||{};
+    const pxbit = n.mark_px!=null ? ` mark ${px(n.mark_px)}` : "";
+    const ent = n.entry_px!=null ? ` from ${px(n.entry_px)} @ ${esc(n.entry_when||"—")}` : "";
+    return `<b>${esc(t)}</b>${pxbit}${ent}`;
+  }).join(" ") || "—";
+}
 function renderTape(){
   const days=(D.daily||{})[sleeve]||[];
   document.getElementById("tapeHint").textContent = (stats.find(s=>s.sleeve===sleeve)||{}).label || sleeve;
+  const w=D.orig_window||{};
   document.getElementById("tapeHost").innerHTML=days.map(d=>{
-    const skip=(d.skipped||[]).map(x=>x.ticker||x).join(" ");
+    const buys=(d.buys&&d.buys.length)?d.buys:(d.bought||[]);
+    const sells=(d.sells&&d.sells.length)?d.sells:(d.sold||[]);
+    const skips=d.skipped||[];
+    const inWin=w.start && w.end && d.date>=w.start && d.date<=w.end;
     return `<div class="day">
-      <div class="day-h"><b>${esc(d.date)}</b>
-        <span>held ${d.n_held} · buy ${d.n_buy} · skip ${d.n_skip} · sell ${d.n_sell}</span>
+      <div class="day-h"><b>${esc(d.date)}</b>${inWin?'<span class="gold">orig window</span>':''}
+        <span>held ${d.n_held} · buy ${d.n_buy} · skip ${d.n_skip} · sell ${d.n_sell}${d.cash!=null?` · cash ${money(d.cash)}`:""}${d.fees_cum!=null?` · fees ${money(d.fees_cum)}`:""}</span>
         <span class="${cls(d.day_pnl)}">${num(d.day_pnl)}</span>
         <span>${money(d.equity)}</span>
         ${d.hard_red?'<span class="gold">HARD_RED</span>':""}
       </div>
       <div class="ticks">
-        <div>held: ${(d.held||[]).map(t=>`<b>${esc(t)}</b>`).join(" ")||"—"}</div>
-        <div>bought: ${(d.bought||[]).map(t=>`<b class="pos">${esc(t)}</b>`).join(" ")||"—"}</div>
-        <div>sold: ${(d.sold||[]).map(t=>`<b class="neg">${esc(t)}</b>`).join(" ")||"—"}</div>
-        ${skip?`<div>skipped: ${esc(skip)}</div>`:""}
+        <div>held: ${fillHeld(d)}</div>
+        <div>bought: ${buys.length?buys.map(fillBuy).join("<br>") : "—"}</div>
+        <div>sold: ${sells.length?sells.map(fillSell).join("<br>") : "—"}</div>
+        ${skips.length?`<div>skipped: ${skips.map(fillSkip).join(" · ")}</div>`:""}
       </div>
     </div>`;
   }).join("");
@@ -252,6 +317,7 @@ function renderAll(){
   renderFilters();
   renderChips();
   renderCards();
+  renderOrig();
   draw();
   renderLegend();
   renderStats();
