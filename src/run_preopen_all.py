@@ -8,12 +8,13 @@ Does in one ECS job (skip-if-good, fail-closed QC):
   → map heat research (morning delta over last night's baseline)
   → news actions
   → general predict → 11 sector predicts → sector board
+  → weather (deterministic labels×regime; unblocks join / stock book)
   → catalyst dossiers (layer 3; optional, after the 09:25-critical predicts)
   → output_qc (regex) → Grok reads the files as text → workflow check
 
 NOT included (those run later on their own crons, still required):
   outcome / reflect / horizon grade, learn_cycle, deepthink, weekly
-  promotion, weather, AB checklist, stock book, paper dashboard.
+  promotion, AB checklist, stock book, paper dashboard.
 
 Finviz industry groups + exhaustive captain research run at 22:00 ET
 (post-close, still ECS). Premarket must not re-scrape yesterday's tape.
@@ -96,6 +97,7 @@ def _date_paths(root: Path, date: str) -> list[Path]:
         root / "01_daily" / "news",
         root / "01_daily" / "map_heat",
         root / "01_daily" / "catalyst",
+        root / "01_daily" / "weather",
         root / "01_daily" / "_transcripts",
         root / "01_daily" / "_channel1",
         root / "data" / "catalyst",
@@ -387,6 +389,10 @@ def run(date: str | None = None, force: bool = False) -> None:
              [py, "-m", "src.run_sector_predict", "--date", date, *fa])
         step("sector_board", "Sector board",
              [py, "-m", "src.sector_board", "--date", date])
+        # Deterministic, seconds. Must land before catalyst so a long
+        # dossier pass cannot leave the ranker blocked on weather.
+        step("weather", "Weather / regime",
+             [py, "-m", "src.weather", "--date", date])
         step("catalyst", "Catalyst dossiers (identified names)",
              [py, "-m", "src.catalyst_daily", "--date", date, *fa])
 

@@ -314,6 +314,7 @@ def test_workflow_yaml_is_read_only():
     text = WF.read_text(encoding="utf-8")
     assert "name: Stock Book readiness" in text
     assert "src.stock_book_diag" in text
+    assert "pip install pandas" in text
     assert "--as-of" in text
     assert "--rebuild-if-missing" in text
     assert "self-hosted" not in text

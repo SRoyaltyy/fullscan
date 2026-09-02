@@ -59,6 +59,51 @@ def _load_json(p: Path):
         return None
 
 
+_DIR_RE = re.compile(r"^-\s*predicted_direction:\s*\*\*(.+?)\*\*", re.I)
+_SCORE_RE = re.compile(r"^-\s*total_score:\s*\*\*([+-]?[\d.]+)")
+_CONF_RE = re.compile(r"^-\s*confidence_score:\s*\*?\*?([+-]?[\d.]+)")
+
+
+def _run_from_predict_md(path: Path) -> dict | None:
+    """Read the deterministic decision footer when scoreboard ingest lagged."""
+    if not path.exists():
+        return None
+    direction = None
+    score = None
+    conf = None
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return None
+    for line in lines:
+        line = line.strip()
+        m = _DIR_RE.match(line)
+        if m:
+            direction = m.group(1).strip()
+            continue
+        m = _SCORE_RE.match(line)
+        if m:
+            try:
+                score = float(m.group(1))
+            except ValueError:
+                pass
+            continue
+        m = _CONF_RE.match(line)
+        if m:
+            try:
+                conf = float(m.group(1))
+            except ValueError:
+                pass
+    if score is None and not direction:
+        return None
+    return {
+        "predicted_direction": direction,
+        "total_score": score,
+        "confidence_score": conf,
+        "source": "predict_md",
+    }
+
+
 def load_runs(date_str: str) -> tuple[dict | None, dict[str, dict]]:
     d = _load_json(SCOREBOARD) or {}
     general, sectors = None, {}
@@ -70,6 +115,16 @@ def load_runs(date_str: str) -> tuple[dict | None, dict[str, dict]]:
             general = r
         elif topic.startswith("sector:"):
             sectors[topic.split(":", 1)[1]] = r
+    if general is None:
+        general = _run_from_predict_md(DAILY / "general" / f"{date_str}_predict.md")
+    for name in SECTORS:
+        if name in sectors:
+            continue
+        slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+        run = _run_from_predict_md(
+            DAILY / "sectors" / date_str / f"{slug}_predict.md")
+        if run:
+            sectors[name] = run
     return general, sectors
 
 

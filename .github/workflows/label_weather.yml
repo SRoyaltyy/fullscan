@@ -34,6 +34,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Fetch fresh Finviz Elite export
+        continue-on-error: true
         env:
           DATABASE_URL:    ${{ secrets.DATABASE_URL }}
           FINVIZ_EMAIL:    ${{ secrets.FINVIZ_EMAIL }}
@@ -41,6 +42,7 @@ jobs:
         run: python -m collectors.finviz_financials
 
       - name: Label the universe (Step A)
+        continue-on-error: true
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
