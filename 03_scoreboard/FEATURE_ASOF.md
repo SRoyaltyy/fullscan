@@ -24,43 +24,43 @@ Sessions **2026-08-13 → 2026-09-01** · 47432 name-days · 11 days.
 
 | Ticker | 🔵 | ⚪ | 🚨 | n_red | vol | ab | peer | relvol | rsi | short | setups | 1d |
 |---|:-:|:-:|:-:|---:|---|---|---|---|---|---|---|---:|
-| EXE | Y |  |  | 1 | missing | good | good | dead | mid | mid |  | +nan |
-| PBR-A |  |  |  | 1 | neutral | good | good | dead | mid | low |  | +nan |
-| GMAB |  |  |  | 3 | missing | good | bad | dead | mid | low |  | +nan |
-| PBR |  |  |  | 1 | neutral | good | good | dead | mid | low |  | +nan |
-| ASND | Y |  |  | 2 | missing | good | good | dead | mid | mid |  | +nan |
-| DVN | Y |  |  | 1 | neutral | good | good | dead | mid | low |  | +nan |
-| PR | Y |  |  | 2 | missing | good | bad | dead | mid | low |  | +nan |
-| REGN | Y |  |  | 3 | missing | good | bad | dead | mid | low |  | +nan |
-| EQT |  |  |  | 2 | neutral | good | bad | dead | mid | mid |  | +nan |
-| RRC |  |  |  | 2 | missing | good | bad | dead | mid | high |  | +nan |
-| STNG |  |  |  | 1 | missing | good | neutral | dead | mid | mid |  | +nan |
-| AR |  |  |  | 2 | missing | good | bad | dead | mid | mid |  | +nan |
-| OXY | Y |  |  | 1 | neutral | good | good | dead | mid | low |  | +nan |
-| MTDR | Y |  |  | 1 | missing | good | good | dead | mid | high |  | +nan |
-| MDT |  |  |  | 3 | neutral | good | good | dead | mid | low |  | +nan |
-| EOG | Y |  |  | 2 | neutral | good | bad | dead | mid | low |  | +nan |
-| HLN | Y |  |  | 2 | missing | good | good | dead | mid | low |  | +nan |
-| INCY | Y |  |  | 3 | missing | good | bad | dead | mid | mid |  | +nan |
-| EXEL |  |  |  | 3 | missing | good | bad | dead | mid | high |  | +nan |
-| WAY | Y |  |  | 2 | missing | good | good | dead | mid | high | tag_factor:blue|heat=good | +nan |
-| GMED |  |  |  | 3 | missing | good | good | dead | mid | mid |  | +nan |
-| SU |  |  |  | 2 | neutral | good | bad | dead | mid | low |  | +nan |
-| CNQ | Y |  |  | 2 | neutral | good | bad | dead | mid | low |  | +nan |
-| LLY |  |  |  | 4 | neutral | good | bad | dead | mid | low |  | +nan |
-| MGY | Y |  |  | 2 | missing | good | bad | dead | mid | high |  | +nan |
-| VG | Y |  |  | 1 | neutral | good | neutral | dead | mid | high | tag_factor:blue|heat=good | +nan |
-| CVE |  |  |  | 1 | neutral | good | good | dead | mid | mid |  | +nan |
-| RMD |  |  |  | 2 | neutral | good | good | dead | mid | high |  | +nan |
-| NBIX | Y |  |  | 2 | neutral | good | good | dead | mid | mid |  | +nan |
-| CHRD | Y |  |  | 1 | missing | good | good | dead | mid | mid |  | +nan |
-| JAZZ | Y |  |  | 2 | missing | good | neutral | dead | mid | mid |  | +nan |
-| VRTX | Y |  |  | 2 | missing | good | good | dead | mid | low |  | +nan |
-| BMRN | Y |  |  | 2 | neutral | good | good | dead | mid | mid |  | +nan |
-| COP | Y |  |  | 2 | neutral | good | bad | dead | mid | low |  | +nan |
-| CORT | Y |  |  | 3 | missing | good | bad | dead | mid | high |  | +nan |
-| ABT |  |  | Y | 4 | missing | good | bad | dead | mid | low | tag_factor:alarm|heat=bad | +nan |
-| BKR |  |  |  | 2 | missing | good | bad | dead | mid | low |  | +nan |
-| ET | Y |  |  | 2 | missing | good | bad | dead | mid | low | tag_factor:blue|heat=good | +nan |
-| FRO |  |  |  | 1 | neutral | good | neutral | dead | mid | mid |  | +nan |
-| DHR |  |  |  | 3 | missing | good | good | dead | overbought | low |  | +nan |
+| EXE | Y |  |  | 1 | missing | good | good | dead | mid | mid |  | — |
+| PBR-A |  |  |  | 1 | neutral | good | good | dead | mid | low |  | — |
+| GMAB |  |  |  | 3 | missing | good | bad | dead | mid | low |  | — |
+| PBR |  |  |  | 1 | neutral | good | good | dead | mid | low |  | — |
+| ASND | Y |  |  | 2 | missing | good | good | dead | mid | mid |  | — |
+| DVN | Y |  |  | 1 | neutral | good | good | dead | mid | low |  | — |
+| PR | Y |  |  | 2 | missing | good | bad | dead | mid | low |  | — |
+| REGN | Y |  |  | 3 | missing | good | bad | dead | mid | low |  | — |
+| EQT |  |  |  | 2 | neutral | good | bad | dead | mid | mid |  | — |
+| RRC |  |  |  | 2 | missing | good | bad | dead | mid | high |  | — |
+| STNG |  |  |  | 1 | missing | good | neutral | dead | mid | mid |  | — |
+| AR |  |  |  | 2 | missing | good | bad | dead | mid | mid |  | — |
+| OXY | Y |  |  | 1 | neutral | good | good | dead | mid | low |  | — |
+| MTDR | Y |  |  | 1 | missing | good | good | dead | mid | high |  | — |
+| MDT |  |  |  | 3 | neutral | good | good | dead | mid | low |  | — |
+| EOG | Y |  |  | 2 | neutral | good | bad | dead | mid | low |  | — |
+| HLN | Y |  |  | 2 | missing | good | good | dead | mid | low |  | — |
+| INCY | Y |  |  | 3 | missing | good | bad | dead | mid | mid |  | — |
+| EXEL |  |  |  | 3 | missing | good | bad | dead | mid | high |  | — |
+| WAY | Y |  |  | 2 | missing | good | good | dead | mid | high | tag_factor:blue|heat=good | — |
+| GMED |  |  |  | 3 | missing | good | good | dead | mid | mid |  | — |
+| SU |  |  |  | 2 | neutral | good | bad | dead | mid | low |  | — |
+| CNQ | Y |  |  | 2 | neutral | good | bad | dead | mid | low |  | — |
+| LLY |  |  |  | 4 | neutral | good | bad | dead | mid | low |  | — |
+| MGY | Y |  |  | 2 | missing | good | bad | dead | mid | high |  | — |
+| VG | Y |  |  | 1 | neutral | good | neutral | dead | mid | high | tag_factor:blue|heat=good | — |
+| CVE |  |  |  | 1 | neutral | good | good | dead | mid | mid |  | — |
+| RMD |  |  |  | 2 | neutral | good | good | dead | mid | high |  | — |
+| NBIX | Y |  |  | 2 | neutral | good | good | dead | mid | mid |  | — |
+| CHRD | Y |  |  | 1 | missing | good | good | dead | mid | mid |  | — |
+| JAZZ | Y |  |  | 2 | missing | good | neutral | dead | mid | mid |  | — |
+| VRTX | Y |  |  | 2 | missing | good | good | dead | mid | low |  | — |
+| BMRN | Y |  |  | 2 | neutral | good | good | dead | mid | mid |  | — |
+| COP | Y |  |  | 2 | neutral | good | bad | dead | mid | low |  | — |
+| CORT | Y |  |  | 3 | missing | good | bad | dead | mid | high |  | — |
+| ABT |  |  | Y | 4 | missing | good | bad | dead | mid | low | tag_factor:alarm|heat=bad | — |
+| BKR |  |  |  | 2 | missing | good | bad | dead | mid | low |  | — |
+| ET | Y |  |  | 2 | missing | good | bad | dead | mid | low | tag_factor:blue|heat=good | — |
+| FRO |  |  |  | 1 | neutral | good | neutral | dead | mid | mid |  | — |
+| DHR |  |  |  | 3 | missing | good | good | dead | overbought | low |  | — |
