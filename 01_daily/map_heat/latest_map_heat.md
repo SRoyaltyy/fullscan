@@ -5,54 +5,54 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7638.5 | -0.05% |
-| Nasdaq 100 (NQ) | 29080.25 | -0.14% |
-| Russell 2000 (ER2) | 2922.5 | -0.08% |
-| DJIA (YM) | 52836.0 | +0.01% |
-| VIX (VX) | 17.2 | -0.31% |
-| Crude Oil WTI (CL) | 90.76 | +0.49% |
-| Crude Oil Brent (QA) | 95.54 | +0.85% |
-| Natural Gas (NG) | 2.952 | +1.62% |
-| Heating Oil (HO) | 4.693 | +0.31% |
-| Gasoline RBOB (RB) | 3.1446 | +0.34% |
-| Gold (GC) | 4365.5 | -0.66% |
-| Silver (SI) | 64.57 | -1.16% |
-| Copper (HG) | 6.54 | -0.91% |
-| Platinum (PL) | 1749.2 | -1.01% |
-| Palladium (PA) | 1314.5 | -1.21% |
-| USD (DX) | 99.705 | +0.07% |
-| EUR (6E) | 1.1586 | -0.09% |
-| JPY (6J) | 0.6257 | +0.13% |
-| GBP (6B) | 1.3502 | -0.08% |
-| AUD (6A) | 0.714 | -0.07% |
-| CAD (6C) | 0.7191 | -0.15% |
-| CHF (6S) | 1.23225 | -0.11% |
-| NZD (6N) | 0.5842 | -0.89% |
-| 10 Year Note (ZN) | 107.359375 | -0.01% |
-| 5 Year Note (ZF) | 105.484375 | -0.01% |
-| 2 Year Note (ZT) | 102.5234375 | -0.00% |
-| 30 Year Bond (ZB) | 108.09375 | -0.14% |
-| Nikkei 225 (NKD) | 64470.0 | -0.63% |
-| DAX (DY) | 25870.0 | -0.46% |
-| Euro Stoxx 50 (EX) | 6352.0 | -0.35% |
-| Corn (ZC) | 537.25 | -1.60% |
-| Soybeans (ZS) | 1302.75 | -1.20% |
+| S&P 500 (ES) | 7623.25 | -0.26% |
+| Nasdaq 100 (NQ) | 28949.5 | -0.61% |
+| Russell 2000 (ER2) | 2918.4 | -0.23% |
+| DJIA (YM) | 52748.0 | -0.17% |
+| VIX (VX) | 17.4 | +0.85% |
+| Crude Oil WTI (CL) | 90.48 | +0.28% |
+| Crude Oil Brent (QA) | 94.99 | +0.33% |
+| Natural Gas (NG) | 2.946 | +1.45% |
+| Heating Oil (HO) | 4.6609 | -0.32% |
+| Gasoline RBOB (RB) | 3.1386 | +0.14% |
+| Gold (GC) | 4355.5 | -0.93% |
+| Silver (SI) | 64.22 | -1.73% |
+| Copper (HG) | 6.5345 | -1.02% |
+| Platinum (PL) | 1727.6 | -2.22% |
+| Palladium (PA) | 1313.5 | -1.44% |
+| USD (DX) | 99.75 | +0.11% |
+| EUR (6E) | 1.15815 | -0.13% |
+| JPY (6J) | 0.6263000000000001 | +0.22% |
+| GBP (6B) | 1.3495 | -0.13% |
+| AUD (6A) | 0.71225 | -0.33% |
+| CAD (6C) | 0.71795 | -0.31% |
+| CHF (6S) | 1.2288 | -0.39% |
+| NZD (6N) | 0.58095 | -1.43% |
+| 10 Year Note (ZN) | 107.3125 | -0.06% |
+| 5 Year Note (ZF) | 105.4609375 | -0.03% |
+| 2 Year Note (ZT) | 102.51953125 | -0.01% |
+| 30 Year Bond (ZB) | 107.96875 | -0.26% |
+| Nikkei 225 (NKD) | 63850.0 | -1.59% |
+| DAX (DY) | 25797.0 | -0.73% |
+| Euro Stoxx 50 (EX) | 6350.0 | -0.36% |
+| Corn (ZC) | 536.25 | -1.69% |
+| Soybeans (ZS) | 1302.5 | -1.16% |
 | Wheat (ZW) | 767.25 | -1.95% |
-| Soybean oil (ZL) | 71.95 | -0.76% |
-| Soybean Meal (ZM) | 340.8 | -1.42% |
-| Oats (ZO) | 378.75 | -0.79% |
+| Soybean oil (ZL) | 72.18 | -0.44% |
+| Soybean Meal (ZM) | 339.8 | -1.74% |
+| Oats (ZO) | 376.0 | -0.72% |
 | Rough Rice (ZR) | 15.78 | -0.28% |
-| Coffee (KC) | 308.35 | -0.66% |
-| Sugar (SB) | 18.38 | +3.09% |
-| Cotton (CT) | 88.62 | -3.23% |
-| Cocoa (CC) | 6509.0 | -2.95% |
+| Coffee (KC) | 303.9 | -1.80% |
+| Sugar (SB) | 18.27 | -0.44% |
+| Cotton (CT) | 88.82 | -3.03% |
+| Cocoa (CC) | 6537.0 | -0.68% |
 | Orange Juice (JO) | 144.8 | +5.76% |
 | Lumber (LB) | 558.5 | -0.44% |
 | Live Cattle (LC) | 212.4 | -0.28% |
 | Lean Hogs (LH) | 83.7 | -0.03% |
 | Feeder Cattle (FC) | 316.05 | -0.51% |
-| Bitcoin (BTC) | 77960.0 | +0.54% |
-| Canola (RS) | 828.7 | -1.60% |
+| Bitcoin (BTC) | 76815.0 | -1.00% |
+| Canola (RS) | 829.4 | -1.48% |
 | Ethanol (ZK) | 2.0825 | +1.34% |
 
 ## CALENDAR
@@ -111,17 +111,17 @@ Mega-cap earnings:
 - AMC **NTAP**  EPS est 2.1226  (Netapp Inc)
 - BMO **KR**  EPS est 1.0536  (Kroger Co)
 - AMC **CPRT**  EPS est 0.3819  (Copart Inc)
-- AMC **ZS**  EPS est 1.0884  (Zscaler Inc)
+- AMC **ZS**  EPS est 1.0885  (Zscaler Inc)
 - AMC **CASY**  EPS est 6.7441  (Casey's General Stores Inc)
-- BMO **SUNB**  EPS est 1.0343  (Sunbelt Rentals Holdings Inc)
+- BMO **SUNB**  EPS est 1.0361  (Sunbelt Rentals Holdings Inc)
 - AMC **IOT**  EPS est 0.16  (Samsara Inc)
 - AMC **GWRE**  EPS est 0.9331  (Guidewire Software Inc)
 - AMC **LULU**  EPS est 1.7944  (Lululemon Athletica Inc)
 - AMC **FIVE**  EPS est 1.4021  (Five Below Inc)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
 - AMC **DOCU**  EPS est 1.0853  (DocuSign Inc)
-- BMO **BF-B**  EPS est 0.3695  (Brown-Forman Corp)
 - BMO **BF-A**  EPS est 0.3691  (Brown-Forman Corp)
+- BMO **BF-B**  EPS est 0.3695  (Brown-Forman Corp)
 - BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
 
 Options event-vol flags (NOT direction):
@@ -252,31 +252,31 @@ COLD (1w):
 - **Technology** -2.8% 1d -1.7% 1w · VGT, XLK, SMH
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 25 min **AMD,AMZN,NVDA,SKHY** Asian shares decline after stocks slip on Wall Street, while global bond sell-off intensifies (Associated Press)
-- 29 min **ADBE** Adobe Stock: Citi Sees 'Achievable Set-Up' Ahead Of Q3 Earnings, Raises Price Target (Stocktwits)
-- 48 min **GTLB** GitLab Inc (GTLB) (Q2 2027) Earnings Call Highlights: Record Bookings and Flex Momentum Drive ... (GuruFocus.com)
-- 48 min **MDB** MongoDB Inc (MDB) (Q2 2027) Earnings Call Highlights: Record Revenue Growth and AI Momentum ... (GuruFocus.com)
-- 48 min **CRDO** Credo Technology Group Holding Ltd (CRDO) (Q1 2027) Earnings Call Highlights: Record Revenue ... (GuruFocus.com)
-- 48 min **SY** So-Young International Inc (SY) (Q2 2026) Earnings Call Highlights: Record Revenue and ... (GuruFocus.com)
-- 49 min **TU** TELUS Mental Health Index: Cost of living is top money worry for 62 per cent of UK workers as financial anxiety hits workplace productivity (PR Newswire)
-- 49 min **AVGO,GOOGL** Broadcom Looks for a Reset with Third-Quarter Earnings (Barrons.com)
-- 49 min **IPHA** Innate Pharma to Participate in the H.C. Wainwright 28th Annual Global Investment Conference (Business Wire)
-- 49 min **IBM** IBM's quantum pitch to chip audience: bottleneck is now manufacturing (DigiTimes)
-- 53 min **CRWV,IREN,PANW** NBIS, IREN, CRWV At Risk? OpenAI Co-Founder Warns AI Agents Could Turn Neoclouds Into Cybersecurity Targets  Palo Alto CEO Offers Fix (Stocktwits)
-- 1 hour **HIMS,NVO** HIMS Stock Kicks Off September In The Red: FDAs GLP-1 Alert Steals The Spotlight From Australia Expansion (Stocktwits)
-- 1 hour **GPRO** GPRO Stock Heads For Best Week Ever: GoPro Targets A Bigger Future Beyond Cameras In Defense And AI  'Starman Optical Has The Resources' (Stocktwits)
-- 1 hour **TSM** Taiwan says its companies plan to invest another $20 billion in US (Reuters)
-- Sep-01 **META** Manus resumes independent operations after Meta deal collapses (DigiTimes)
-- Sep-01 **CVX** CVX Stock Extends Gains Overnight: Chevron Reportedly Nears Deal For Giant Venezuelan Oil Fields (Stocktwits)
-- Sep-01 **TSLA,UBER** Tesla Could Make Robotaxis 60x Bigger, Cathie Woods ARK Says  But Gary Black Thinks Uber Will Win The Race (Stocktwits)
-- Sep-01 **AAPL** SDC to expand foldable iPhone OLED mass production in September (DigiTimes)
-- Sep-01 **CRDO** CRDO Plunges Despite Q1 Beat: Retail Feels Stock Will Recover Strongly (Stocktwits)
-- Sep-01 **AAPL** Apple Product Priorities for the John Ternus Era (Above Avalon)
-- Sep-01 **MMED,DE,PFE** Why Did PFE, MMED, DE Stocks Surge To 52-Week Highs Today? (Stocktwits)
-- Sep-01 **AAPL** Apple to Give New CEO $3 Million Salary (The Wall Street Journal)
-- Sep-01 **SHEL** Shell to Take Full Control of Tri Star Energy in U.S. Retail Push (Oilprice.com)
-- Sep-01 **NIO** Nio Bets On China Auto Recovery To Lift Q4 Deliveries Above 40,000 A Month  But BofA Isnt Buying The Bull Case (Stocktwits)
-- Sep-01 **ORCL** ORCL Stock Extends Fall Overnight After Analyst Cuts Price Target, Flags Analyst Day As Key Catalyst: Retail Watches Cautiously (Stocktwits)
+- 6 min **PFGC,SYY** SupplyCaddy secures funding from CEAS Investments (Packaging Gateway)
+- 13 min **RYAAY** Europe's largest airline warns of jet-fuel prices at $140 this winter as it cuts capacity (MarketWatch)
+- 15 min **DELL,MU** Micron Stock Can't Catch a Break. It Does Have This One Big Catalyst. (Barrons.com)
+- 19 min **SPCX,HWM,DPC,BRK-B** Elon Musk Wants to Make Power-Turbine Components. It Won't Be Easy. (The Wall Street Journal)
+- 20 min **GTLB,MDB,DELL,CRDO,HPE** GitLab shares surge after earnings, and other early market movers (MarketWatch)
+- 29 min **MU** Micron Taiwan Unit Reportedly Plans Record Bonuses To Avert Strike: MU Stock Dips For Second Day (Stocktwits)
+- 36 min **MSTR,STRC** Strategy's Phong Le Defends Buying Bitcoin At $80K After Selling Near $60K: Right Trade (Stocktwits)
+- 45 min **GTLB** Why Is GTLB Stock Surging Nearly 21% Premarket Today? (Stocktwits)
+- 46 min **HPE,BF-B,SNOW,OLLI,FIVE** Broadcom, Hewlett Packard and Snowflake lead another round of tech earnings (MarketWatch)
+- 46 min **NVDA,M** What Dell and Nvidia just proved to the AI stock haters (Yahoo Finance)
+- 49 min **WTW** WTW and WSL Football join forces to support the growth of the women's game (GlobeNewswire)
+- 49 min **BAH** Booz Allen Charts Autonomous AI Threats and Unveils New Counter AI Defense (Business Wire)
+- 49 min **YSG** Yatsen Announces Second Quarter 2026 Financial Results (PR Newswire)
+- 49 min **CDT** CDT Provides Capital Update and Confirms No Nasdaq Deficiencies (GlobeNewswire)
+- 49 min **SHOP,AEO** How to build a brand newsletter in 2026 (Marketing Brew)
+- 49 min **ESCA** The 10 biggest SUVs you can buy in 2026, ranked (Quartz)
+- 52 min **CRK** Comstock signs $1.65bn LoI with SOCAR for Haynesville asset stakes (Offshore Technology)
+- 1 hour **FRVO,GOOGL,GOOG** Fervo Energy signs 396MW geothermal PPA with Google in Utah (Power Technology)
+- 1 hour **BP,SHEL** British energy giant BP names Ian Tyler as chair after boardroom turmoil (Euronews)
+- 1 hour **ADP,MSTR,NVDA,STRC** Nasdaq Futures Slip As Rising Iran Tensions, Oil, Treasury Yields Keep Wall Street On Edge: NVDA, DELL, CRDO, NIO, RKLB, MSTR In Focus (Stocktwits)
+- 1 hour **SKHY,SNDK,SPCX** 3 Stocks Drive Half of August's $665 Billion CEX Perpetual Futures Volume (BeInCrypto)
+- 1 hour **WOOF,FIVE** FIVE, WOOF Stocks Rise Premarket: Five Below And Petco Get Fresh Wall Street Price Target Boosts Ahead Of Earnings (Stocktwits)
+- 1 hour **NVDA** DELL Stock Jumps Premarket: Analyst Calls Dells Q2 Beat-And-Raise The Most Bullish AI Report Since Nvidias (Stocktwits)
+- 1 hour **BP** Pakistan Rejects Costly LNG Cargo as Blackout Risk Deepens (Oilprice.com)
+- 1 hour **RKLB,ASTS,PL** Berenberg launches space coverage, initiates 4 stocks with Buy ratings (Investing.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
