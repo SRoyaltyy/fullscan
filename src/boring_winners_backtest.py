@@ -1,27 +1,21 @@
-"""25-seat backtest from FEATURE_MINE AND-stacks.
+"""25-seat book from the fixed FEATURE_MINE edges (DeepSeek hierarchy).
 
-Reads 03_scoreboard/feature_asof_panel.parquet (same vintage as the mine).
-Does not rebuild the panel. No same-day Finviz leak — buckets are already as-of.
+Reads 03_scoreboard/feature_asof_panel.parquet. Does not rebuild it.
 
-The mine board is promising. Seating `ab=good OR peer=good` (1,800 names) or
-`short AND sma20=below` (500 names) is not. This seater merges the printed
-cameras into the mined AND-stacks, in hit-rate order, and stops at 25.
+Core fill (fade vetoed)
+-----------------------
+1. hot+ab+peer     up to 8 seats — 70.6% hit scalp (small n)
+2. steady+blue     best risk/reward on the mine board
+3. blue+white      combinatorial white (white alone is a trap)
+4. blue            baseline
+5. ab AND peer     up to 5 seats — high-hit modest mean
+6. alarm+not_white contrarian rebound when no blue printed
+7. rsi=oversold    lottery last resort
+8. gap=down        lottery last resort
 
-Fill order (fade / first_crack vetoed; each stack adds new names only)
---------------------------------------------------------------------
-1. hot+ab+peer          70.6% 1d hit on the mine board
-2. ab AND peer          tighter than A-or
-3. blue AND A           blue overlay on a printed hit camera
-4. steady+blue          not hot (squeeze)
-5. blue+white           not hot
-6. A AND B              ab|peer good AND (short=high OR sma20=below)
-7. blue                 not hot
-8. join AND Band        last resort when no hit camera printed
+Never: white alone, fade, join-AND-Band dump, OR-dump of 1,800 A names.
 
-Rank inside a stack: mine_score, lookback points, fewer reds, boring relvol
-(normal > dead > hot), ticker. Sector cap 6.
-
-Short sleeve: fade / first_crack, else ab|peer bad when A printed.
+Short sleeve: fade / first_crack only.
 """
 from __future__ import annotations
 
@@ -36,45 +30,54 @@ ROOT = Path(__file__).resolve().parent.parent
 PANEL = ROOT / "03_scoreboard" / "feature_asof_panel.parquet"
 BOOK_DIR = ROOT / "data" / "stock_book"
 OUT_MD = ROOT / "03_scoreboard" / "BORING_WINNERS.md"
+OUT_LATEST = ROOT / "03_scoreboard" / "latest_boring_winners.md"
+OUT_DAYS = ROOT / "03_scoreboard" / "boring_winners"
 OUT_JSON = ROOT / "03_scoreboard" / "boring_winners.json"
 OUT_CSV = ROOT / "03_scoreboard" / "boring_winners_picks.csv"
 OUT_DAILY = ROOT / "03_scoreboard" / "boring_winners_daily.csv"
+DAILY_DIR = ROOT / "01_daily"
 
 HORIZONS = ("1d", "2d", "3d", "1w")
 CLIP = 30.0
 SEATS = 25
 SECTOR_CAP = 6
-# Boring rank: do not seat the hottest junk first. hot+ab+peer still wins on mine_score.
+# Don't let 800 steady+blue names crowd out the 70% hit scalp.
+STACK_CAP = {"hot_ab_peer": 8, "ab_and_peer": 5}
 RELVOL_RANK = {"normal": 2, "dead": 1, "hot": 0, "missing": -1}
 HOW = {
-    "hot_ab_peer": "mined `hot+ab+peer` (70.6% 1d hit)",
-    "ab_and_peer": "mined `ab=good AND peer=good`",
-    "blue_A": "blue AND (ab|peer good)",
-    "steady_blue": "mined `steady+blue`, not hot",
-    "blue_white": "mined `blue+white`, not hot",
-    "A_and_B": "(ab|peer good) AND (short=high OR sma20=below)",
-    "blue": "blue, not hot",
-    "join_band": "no hit camera; `join=good AND short=high AND sma20=below`, not hot",
+    "steady_blue": "core `steady+blue` (52% hit / +9.54 mean on the mine board)",
+    "blue_white": "swing `blue+white` (white only with blue)",
+    "blue": "baseline `blue`",
+    "hot_ab_peer": "scalp `hot+ab+peer` (70.6% hit, small n)",
+    "ab_and_peer": "scalp `ab AND peer` (high hit, modest mean)",
+    "alarm_rebound": "rebound `alarm AND NOT white`",
+    "rsi_oversold": "lottery `rsi=oversold` (low hit, huge mean)",
+    "gap_down": "lottery `gap=down`",
     "empty": "no mined long stack printed",
-    "fade": "fade or first_crack",
-    "A_bad": "A cameras printed; pool=ab|peer bad",
-    "none": "no fade or bad-A print — short book empty",
+    "fade": "fade / first_crack — short sleeve",
+    "none": "no fade print — short book empty",
 }
 STACK_ORDER = (
     "hot_ab_peer",
-    "ab_and_peer",
-    "blue_A",
     "steady_blue",
     "blue_white",
-    "A_and_B",
     "blue",
-    "join_band",
+    "ab_and_peer",
+    "alarm_rebound",
+    "rsi_oversold",
+    "gap_down",
 )
 
 
 def _finite(s: pd.Series) -> pd.Series:
     s = pd.to_numeric(s, errors="coerce")
     return s.replace([float("inf"), float("-inf")], pd.NA)
+
+
+def _flag(g: pd.DataFrame, col: str, default=False) -> pd.Series:
+    if col not in g.columns:
+        return pd.Series(default, index=g.index)
+    return g[col].fillna(False)
 
 
 def load_panel(path: Path = PANEL) -> pd.DataFrame:
@@ -90,37 +93,33 @@ def load_panel(path: Path = PANEL) -> pd.DataFrame:
     df["B_and"] = (df["short_b"] == "high") & (df["sma20_b"] == "below")
     df["fade_x"] = df["fade"].fillna(False) | df["first_crack"].fillna(False)
     df["hot"] = df["relvol_b"] == "hot"
-    df["steady_f"] = df["steady"].fillna(False) if "steady" in df.columns else False
-    df["white_f"] = df["white"].fillna(False)
-    df["join_f"] = df["join_good"].fillna(False) if "join_good" in df.columns else False
-    df["cond_f"] = (df["cond"] == "good") if "cond" in df.columns else False
-    df["alarm_f"] = df["alarm"].fillna(False) if "alarm" in df.columns else False
-    hot_ab = df["hot"] & df["Aand"]
+    df["steady_f"] = _flag(df, "steady")
+    df["white_f"] = _flag(df, "white")
+    df["join_f"] = _flag(df, "join_good")
+    df["cond_f"] = df["cond"].eq("good") if "cond" in df.columns else False
+    df["alarm_f"] = _flag(df, "alarm")
+    df["rsi_os"] = df["rsi_b"].eq("oversold") if "rsi_b" in df.columns else False
+    df["gap_dn"] = df["gap_b"].eq("down") if "gap_b" in df.columns else False
+    blue = df["blue"].fillna(False)
     df["mine_score"] = (
-        5 * hot_ab.astype(int)
-        + 4 * df["Aand"].astype(int)
-        + 3 * df["blue"].fillna(False).astype(int)
-        + 2 * df["white_f"].astype(int)
-        + 2 * df["steady_f"].astype(int)
-        + 2 * df["ab_good"].fillna(False).astype(int)
-        + 2 * df["peer_good"].fillna(False).astype(int)
+        5 * (df["steady_f"] & blue).astype(int)
+        + 4 * (blue & df["white_f"]).astype(int)
+        + 3 * blue.astype(int)
+        + 3 * (df["hot"] & df["Aand"]).astype(int)
+        + 2 * (df["alarm_f"] & ~df["white_f"]).astype(int)
+        + 2 * df["Aand"].astype(int)
+        + df["ab_good"].fillna(False).astype(int)
+        + df["peer_good"].fillna(False).astype(int)
         + df["ab_up"].fillna(False).astype(int)
-        + (df["short_b"] == "high").astype(int)
-        + (df["sma20_b"] == "below").astype(int)
-        + df["join_f"].astype(int)
-        + df["cond_f"].astype(int)
-        - 2 * df["alarm_f"].astype(int)
-        - 2 * (df["hot"] & ~df["Aand"]).astype(int)
-        - (df["relvol_b"] == "dead").astype(int)
+        + df["rsi_os"].astype(int)
+        + df["gap_dn"].astype(int)
+        - 5 * df["fade_x"].astype(int)
+        - 2 * (df["hot"] & ~blue & ~df["Aand"]).astype(int)
     )
     df["score"] = df["mine_score"]
     df["inv_score"] = (
         3 * df["fade"].fillna(False).astype(int)
         + 2 * df["first_crack"].fillna(False).astype(int)
-        + 2 * (df["ab"] == "bad").astype(int)
-        + 2 * (df["peer"] == "bad").astype(int)
-        + (df["short_b"] == "low").astype(int)
-        + (df["sma20_b"] == "above").astype(int)
     )
     df["relvol_rk"] = df["relvol_b"].map(RELVOL_RANK).fillna(-1).astype(int)
     return df
@@ -132,21 +131,20 @@ def a_printed(g: pd.DataFrame) -> bool:
 
 def stack_masks(g: pd.DataFrame) -> list[tuple[str, pd.Series]]:
     alive = ~g["fade_x"]
-    not_hot = ~g["hot"]
+    blue = g["blue"].fillna(False)
     return [
-        ("hot_ab_peer", alive & g["hot"] & g["Aand"]),
-        ("ab_and_peer", alive & g["Aand"]),
-        ("blue_A", alive & g["blue"].fillna(False) & g["A"]),
-        ("steady_blue", alive & g["steady_f"] & g["blue"].fillna(False) & not_hot),
-        ("blue_white", alive & g["blue"].fillna(False) & g["white_f"] & not_hot),
-        ("A_and_B", alive & g["A"] & g["B_or"]),
-        ("blue", alive & g["blue"].fillna(False) & not_hot),
-        ("join_band", alive & g["join_f"] & g["B_and"] & not_hot),
+        ("hot_ab_peer", alive & _flag(g, "hot") & _flag(g, "Aand")),
+        ("steady_blue", alive & _flag(g, "steady_f") & blue),
+        ("blue_white", alive & blue & _flag(g, "white_f")),
+        ("blue", alive & blue),
+        ("ab_and_peer", alive & _flag(g, "Aand")),
+        ("alarm_rebound", alive & _flag(g, "alarm_f") & ~_flag(g, "white_f")),
+        ("rsi_oversold", alive & _flag(g, "rsi_os")),
+        ("gap_down", alive & _flag(g, "gap_dn")),
     ]
 
 
 def pool_mask(g: pd.DataFrame, seats: int = SEATS):
-    """First mined stack that actually printed. `seats` kept for call-site compat."""
     del seats
     for name, mask in stack_masks(g):
         if bool(mask.any()):
@@ -155,11 +153,8 @@ def pool_mask(g: pd.DataFrame, seats: int = SEATS):
 
 
 def short_pool_mask(g: pd.DataFrame):
-    """Only seat a short book when fade or bad-A actually printed."""
     if bool(g["fade_x"].any()):
         return g["fade_x"], "fade"
-    if a_printed(g) and bool(g["A_bad"].any()):
-        return g["A_bad"], "A_bad"
     return pd.Series(False, index=g.index), "none"
 
 
@@ -193,7 +188,6 @@ def pick_seats(
 
 
 def fill_seats(g: pd.DataFrame, seats: int = SEATS, cap: int = SECTOR_CAP) -> tuple[pd.DataFrame, str]:
-    """Walk mined stacks in hit-rate order and add new names until `seats`."""
     taken: set[str] = set()
     kept = []
     sec_n: dict[str, int] = {}
@@ -204,8 +198,14 @@ def fill_seats(g: pd.DataFrame, seats: int = SEATS, cap: int = SECTOR_CAP) -> tu
         remain = mask & ~g["Ticker"].isin(taken)
         if not bool(remain.any()):
             continue
+        stack_cap = STACK_CAP.get(name)
+        want = seats - len(kept)
+        if stack_cap is not None:
+            want = min(want, stack_cap)
+        if want <= 0:
+            continue
         got = 0
-        chunk = pick_seats(g, remain, seats=seats - len(kept), cap=cap)
+        chunk = pick_seats(g, remain, seats=want, cap=cap)
         if chunk.empty:
             continue
         for _, row in chunk.iterrows():
@@ -218,16 +218,14 @@ def fill_seats(g: pd.DataFrame, seats: int = SEATS, cap: int = SECTOR_CAP) -> tu
             taken.add(str(row["Ticker"]))
             sec_n[sec] = sec_n.get(sec, 0) + 1
             got += 1
-            if len(kept) >= seats:
+            if got >= want or len(kept) >= seats:
                 break
         if got:
             used.append(name)
-    rule = "+".join(used) if used else "empty"
-    return pd.DataFrame(kept), rule
+    return pd.DataFrame(kept), ("+".join(used) if used else "empty")
 
 
 def annotate_actions(prev: set[str] | None, tickers: list[str]):
-    """Label today's seats vs yesterday's book. Returns actions, bought, sold, held."""
     prev = set(prev or [])
     actions = ["hold" if t in prev else "buy" for t in tickers]
     bought = [t for t in tickers if t not in prev]
@@ -261,10 +259,13 @@ def _rets(row) -> dict:
 
 
 def _pick_dict(r, extra=None) -> dict:
+    ms = r.get("mine_score")
+    if ms is None or (isinstance(ms, float) and pd.isna(ms)):
+        ms = r.get("score") or 0
     d = {
         "Ticker": r["Ticker"],
-        "stack": r.get("stack") or extra.get("stack") if extra else r.get("stack"),
-        "score": int(r.get("mine_score") if pd.notna(r.get("mine_score")) else r.get("score") or 0),
+        "stack": r.get("stack"),
+        "score": int(ms),
         "inv_score": int(r.get("inv_score") or 0),
         "blue": bool(r.get("blue")),
         "ab": r.get("ab"),
@@ -272,12 +273,15 @@ def _pick_dict(r, extra=None) -> dict:
         "short": r.get("short_b"),
         "sma20": r.get("sma20_b"),
         "ab_up": bool(r.get("ab_up")),
-        "white": bool(r.get("white_f") if "white_f" in r.index else r.get("white")),
-        "steady": bool(r.get("steady_f") if "steady_f" in r.index else r.get("steady")),
+        "white": bool(r.get("white_f") if "white_f" in getattr(r, "index", []) else r.get("white")),
+        "steady": bool(r.get("steady_f") if "steady_f" in getattr(r, "index", []) else r.get("steady")),
+        "alarm": bool(r.get("alarm_f") if "alarm_f" in getattr(r, "index", []) else r.get("alarm")),
         "join": r.get("join"),
         "points": int(r.get("points") or 0),
         "n_red": int(r.get("n_red") or 0),
         "relvol": r.get("relvol_b"),
+        "rsi": r.get("rsi_b"),
+        "gap": r.get("gap_b"),
         "sector": r.get("sector_name"),
         **_rets(r),
     }
@@ -303,7 +307,7 @@ def _wl(rows: list[dict], key: str = "ret_1d") -> tuple[int, int]:
 def _book_compare(g: pd.DataFrame, date: str) -> dict:
     tickers = load_book_buys(date)
     if not tickers:
-        return {"n": 0, "tickers": []}
+        return {"n": 0, "tickers": [], "book": {}}
     sub = g[g["Ticker"].isin(tickers)]
     rows = [_pick_dict(r) for _, r in sub.iterrows()]
     return {
@@ -338,10 +342,9 @@ def session_row(date: str, g: pd.DataFrame, prev_long: set[str] | None = None, p
         for i, (_, r) in enumerate(shorts.iterrows())
     ]
     vs_book = _book_compare(g, date)
-
     uni = {h: bt_report.name_stats(g[f"ret_{h}"]) for h in HORIZONS}
     how_parts = [HOW.get(s, s) for s in rule.split("+") if s]
-    out = {
+    return {
         "date": date,
         "rule": rule,
         "short_rule": srule,
@@ -355,7 +358,6 @@ def session_row(date: str, g: pd.DataFrame, prev_long: set[str] | None = None, p
         "n_blue": int(g["blue"].sum()),
         "n_ab_good": int(g["ab_good"].sum()),
         "n_peer_good": int(g["peer_good"].sum()),
-        "n_band": int(g["B_and"].sum()),
         "bought": bought,
         "sold": sold,
         "held": held,
@@ -372,7 +374,6 @@ def session_row(date: str, g: pd.DataFrame, prev_long: set[str] | None = None, p
         "picks": picks,
         "short_picks": short_picks,
     }
-    return out
 
 
 def run(path: Path = PANEL) -> dict:
@@ -449,24 +450,91 @@ def _ret(v) -> str:
     return f"{v:+.2f}"
 
 
+def _name_table(rows: list[dict], rule: str) -> list[str]:
+    lines = [
+        "| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |",
+        "|---:|---|---|---|---|---|---:|---:|---:|---:|---:|",
+    ]
+    for i, r in enumerate(rows, 1):
+        n = i if r.get("action") != "sell" else "—"
+        lines.append(
+            f"| {n} | {r.get('action','buy')} | {r['Ticker']} | `{r.get('stack') or rule}` "
+            f"| {r.get('sector') or '—'} | {r.get('relvol') or '—'} | {r.get('score') if r.get('score') is not None else '—'} "
+            f"| {_ret(r.get('ret_1d'))} | {_ret(r.get('ret_2d'))} "
+            f"| {_ret(r.get('ret_3d'))} | {_ret(r.get('ret_1w'))} |"
+        )
+    return lines
+
+
+def render_one_day(d: dict) -> str:
+    lines = []
+    a = lines.append
+    vs = (d.get("vs_book") or {}).get("book") or {}
+    a(f"# Boring winners — {d['date']}")
+    a("")
+    a(f"**Stacks:** `{d['rule']}`")
+    a("")
+    a(d["how"])
+    a("")
+    a(
+        f"Book 1d {_ret(d['book']['1d'])} · 2d {_ret(d['book']['2d'])} · "
+        f"3d {_ret(d['book']['3d'])} · 1w {_ret(d['book']['1w'])} · "
+        f"W/L {_wl(d['picks'])[0]}/{_wl(d['picks'])[1]} · "
+        f"stock-book BUY 1d {_ret(vs.get('1d'))} · universe med {_num(d['uni']['1d'],'median')}."
+    )
+    a("")
+    a("## Longs (this morning)")
+    a("")
+    if d["picks"]:
+        lines.extend(_name_table(d["picks"], d["rule"]))
+        s1d = d["seats"]["1d"]
+        a("")
+        a(f"Seats 1d {bt_report.fmt_stats_row(s1d)}." if s1d.get("n") else "1d not settled — names only.")
+    else:
+        a("_empty core_")
+    if d.get("sells"):
+        a("")
+        a("## Sold overnight (last seated returns)")
+        a("")
+        lines.extend(_name_table(d["sells"], "prior"))
+    if d.get("short_picks"):
+        a("")
+        a("## Shorts (fade)")
+        a("")
+        lines.extend(_name_table(d["short_picks"], d["short_rule"]))
+    a("")
+    return "\n".join(lines) + "\n"
+
+
 def render(report: dict) -> str:
     lines = []
     a = lines.append
     tot = report.get("totals") or {}
-    a("# Boring winners — 25-seat mined stacks")
+    a("# Boring winners — mined 25-seat book")
     a("")
-    a("Daily-rebalanced long book from **FEATURE_MINE AND-stacks**, not the wide OR dump.")
-    a("Equal-weight, close-to-close, clip ±30 on the book line. Per-name returns below are raw.")
+    a("Daily-rebalanced from the **fixed FEATURE_MINE** edges. Equal-weight, close-to-close, clip ±30 on the book line. Per-name 1d/2d/3d/1w are raw.")
     a("")
-    a("Fill order: `hot+ab+peer` → `ab AND peer` → `blue AND A` → `steady+blue` → `blue+white` → `A AND B` → `blue` → `join AND Band`.")
-    a("Fade / first_crack vetoed. Hot names stay out except on `hot+ab+peer`. Sector cap 6. Max 25 — thin books are allowed.")
+    a("## Edges this seater uses")
     a("")
-    a("A cameras only print from **2026-08-20**. Settled `1d` only through **2026-08-20**.")
-    a("Current method = stock-book 1d BUY, graded on the same as-of panel (not the yfinance book backtest).")
+    a("| priority | stack | mine-board 1d | role |")
+    a("|---:|---|---|---|")
+    a("| 1 | `hot+ab+peer` | 70.6% hit · +3.14 mean · n=51 | up to 8 scalp seats |")
+    a("| 2 | `steady+blue` | 52.0% hit · +9.54 mean · n=1394 | core swing |")
+    a("| 3 | `blue+white` | 49.4% hit · +10.48 mean · n=1246 | white only with blue |")
+    a("| 4 | `blue` | 57.7% hit · +4.46 mean · n=3387 | baseline |")
+    a("| 5 | `ab AND peer` | ~65% hit · ~+1 mean | up to 5 modest fill |")
+    a("| 6 | `alarm AND NOT white` | 47.7% hit · +2.27 mean | rebound when no blue |")
+    a("| 7 | `rsi=oversold` / `gap=down` | low hit · huge mean | lottery last resort |")
+    a("| short | `fade` / `first_crack` | 38.2% hit · −0.72 mean | short only |")
+    a("")
+    a("Never seated: white alone, fade as a long, `ab OR peer` 1,800-name dump, `join AND Band` alphabet dump.")
+    a("Max 25, sector cap 6. Thin books are allowed. A cameras print from **2026-08-20**. Settled 1d through **2026-08-20**.")
+    a("")
+    a("Per-day files: `03_scoreboard/boring_winners/<date>.md` · today also at `01_daily/<date>_boring_winners.md` and `latest_boring_winners.md`.")
     a("")
     a("## Daily book returns")
     a("")
-    a("| date | stacks | n | mine 1d | book BUY 1d | uni 1d | 2d | 3d | 1w | W | L |")
+    a("| date | stacks | n | mine 1d | book BUY 1d | uni med | 2d | 3d | 1w | W | L |")
     a("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
     for d in report["days"]:
         w, l = _wl(d["picks"])
@@ -501,13 +569,13 @@ def render(report: dict) -> str:
     if n2.get("n"):
         a(f"Mine names 2d: {bt_report.fmt_stats_row(n2)}.")
     a("")
-    a("## Daily short book (inverse, −1 × clipped name return)")
+    a("## Daily short book (fade only, −1 × clipped name return)")
     a("")
-    a("| date | rule | n | 1d | 2d | new | covered |")
-    a("|---|---|---:|---:|---:|---:|---:|")
+    a("| date | n | 1d | 2d | new | covered |")
+    a("|---|---:|---:|---:|---:|---:|")
     for d in report["days"]:
         a(
-            f"| {d['date']} | `{d['short_rule']}` | {d['n_short']} "
+            f"| {d['date']} | {d['n_short']} "
             f"| {_ret(d['short_book']['1d'])} | {_ret(d['short_book']['2d'])} "
             f"| {len(d['short_bought'])} | {len(d['short_sold'])} |"
         )
@@ -523,7 +591,7 @@ def render(report: dict) -> str:
     a("")
     a("## Each day's stocks")
     a("")
-    a("One table per session. `buy` = new that morning, `hold` = still seated. `sell` rows are names dropped overnight (last seated returns).")
+    a("`buy` / `hold` this morning. `sell` = dropped overnight (last seated 1d/2d/3d/1w).")
     a("")
     for d in report["days"]:
         vs = (d.get("vs_book") or {}).get("book") or {}
@@ -537,40 +605,25 @@ def render(report: dict) -> str:
             f"stock-book BUY 1d {_ret(vs.get('1d'))} · universe med {_num(d['uni']['1d'],'median')}."
         )
         a("")
-        if not d["picks"] and not d.get("sells"):
-            a("_empty pool_")
-            a("")
-            continue
-        a("| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |")
-        a("|---:|---|---|---|---|---|---:|---:|---:|---:|---:|")
-        for i, r in enumerate(d["picks"], 1):
-            a(
-                f"| {i} | {r.get('action','buy')} | {r['Ticker']} | `{r.get('stack') or d['rule']}` "
-                f"| {r.get('sector') or '—'} | {r.get('relvol') or '—'} | {r.get('score') if r.get('score') is not None else '—'} "
-                f"| {_ret(r.get('ret_1d'))} | {_ret(r.get('ret_2d'))} "
-                f"| {_ret(r.get('ret_3d'))} | {_ret(r.get('ret_1w'))} |"
-            )
-        for r in d.get("sells") or []:
-            a(
-                f"| — | sell | {r['Ticker']} | `{r.get('stack') or 'prior'}` "
-                f"| {r.get('sector') or '—'} | {r.get('relvol') or '—'} | {r.get('score') if r.get('score') is not None else '—'} "
-                f"| {_ret(r.get('ret_1d'))} | {_ret(r.get('ret_2d'))} "
-                f"| {_ret(r.get('ret_3d'))} | {_ret(r.get('ret_1w'))} |"
-            )
-        s1d = d["seats"]["1d"]
-        if s1d.get("n"):
-            a("")
-            a(f"Seats 1d {bt_report.fmt_stats_row(s1d)}.")
+        if d["picks"]:
+            lines.extend(_name_table(d["picks"], d["rule"]))
         else:
+            a("_empty pool_")
+        if d.get("sells"):
             a("")
-            a("1d not settled — names only.")
+            a("Sold overnight:")
+            a("")
+            lines.extend(_name_table(d["sells"], "prior"))
+        s1d = d["seats"]["1d"]
+        a("")
+        a(f"Seats 1d {bt_report.fmt_stats_row(s1d)}." if s1d.get("n") else "1d not settled — names only.")
         a("")
     a("## Notes")
     a("")
-    a("1. Board `ab=good` / `peer=good` hit-rates are almost entirely the A-camera window (from 20 Aug) and one broad up day. AND them; do not OR-dump 1,800 names.")
-    a("2. `blue+relvol=hot` and `rsi=oversold` print huge means because of squeezes. They are not the boring book.")
-    a("3. `join_band` is a last resort on mornings with no hit camera. It will track the tape.")
-    a("4. Re-score after 21 Aug / 27 Aug / 30 Aug 1d settles.")
+    a("1. Sub-50% hit is not the issue. Expectancy needs mean. The mine board now has both.")
+    a("2. `blue` board mean +4.46 is squeeze-contaminated. Book lines clip ±30. Raw name 2d can still look insane.")
+    a("3. `ab=good` / `peer=good` alone are high-hit / tiny-mean. They fill after blue, they do not lead.")
+    a("4. No blue morning (8/13) falls through to lottery `rsi=oversold` / `gap=down`. That is labeled.")
     a("")
     return "\n".join(lines) + "\n"
 
@@ -632,15 +685,34 @@ def daily_rows(report: dict) -> list[dict]:
     return rows
 
 
-def main() -> None:
-    report = run()
+def write_outputs(report: dict) -> None:
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
+    OUT_DAYS.mkdir(parents=True, exist_ok=True)
+    DAILY_DIR.mkdir(parents=True, exist_ok=True)
     OUT_MD.write_text(render(report), encoding="utf-8")
     slim = {k: v for k, v in report.items() if k != "ledger"}
     OUT_JSON.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     pd.DataFrame(report["ledger"]).to_csv(OUT_CSV, index=False)
     pd.DataFrame(daily_rows(report)).to_csv(OUT_DAILY, index=False)
-    print(f"[bw] days={len(report['days'])} seats={SEATS} md={OUT_MD} csv={OUT_CSV} daily={OUT_DAILY}", flush=True)
+    for d in report["days"]:
+        text = render_one_day(d)
+        (OUT_DAYS / f"{d['date']}.md").write_text(text, encoding="utf-8")
+    if report["days"]:
+        latest = report["days"][-1]
+        latest_text = render_one_day(latest)
+        OUT_LATEST.write_text(latest_text, encoding="utf-8")
+        (DAILY_DIR / f"{latest['date']}_boring_winners.md").write_text(latest_text, encoding="utf-8")
+        (DAILY_DIR / "latest_boring_winners.md").write_text(latest_text, encoding="utf-8")
+
+
+def main() -> None:
+    report = run()
+    write_outputs(report)
+    print(
+        f"[bw] days={len(report['days'])} seats={SEATS} "
+        f"md={OUT_MD} days_dir={OUT_DAYS} daily={OUT_DAILY}",
+        flush=True,
+    )
 
 
 if __name__ == "__main__":

@@ -41,6 +41,8 @@ def _row(**kw):
         join_f=False,
         cond_f=False,
         alarm_f=False,
+        rsi_os=False,
+        gap_dn=False,
         score=0,
         mine_score=0,
         inv_score=0,
@@ -60,57 +62,64 @@ def test_defaults_are_25_by_6():
     assert SECTOR_CAP == 6
 
 
-def test_join_band_when_no_hit_camera():
+def test_lottery_when_no_blue_no_alarm():
     g = pd.DataFrame([
-        _row(Ticker="KEEP", B_and=True, join_f=True, mine_score=2),
-        _row(Ticker="DROP", B_and=True, join_f=False, mine_score=2),
-        _row(Ticker="FADE", B_and=True, join_f=True, fade_x=True, mine_score=2),
-        _row(Ticker="HOT", B_and=True, join_f=True, hot=True, mine_score=2),
+        _row(Ticker="RSI", rsi_os=True, mine_score=1),
+        _row(Ticker="GAP", gap_dn=True, mine_score=1),
+        _row(Ticker="FADE", rsi_os=True, fade_x=True, mine_score=1),
     ])
     mask, rule = pool_mask(g)
-    assert rule == "join_band"
-    assert set(g.loc[mask, "Ticker"]) == {"KEEP"}
+    assert rule == "rsi_oversold"
+    assert set(g.loc[mask, "Ticker"]) == {"RSI"}
 
 
-def test_hot_ab_peer_beats_loose_a():
+def test_steady_blue_leads_when_no_scalp():
     g = pd.DataFrame([
-        _row(Ticker="HOT", hot=True, Aand=True, A=True, ab="good", peer="good", ab_good=True, peer_good=True, mine_score=12),
-        _row(Ticker="AONLY", A=True, ab="good", ab_good=True, B_or=True, mine_score=3),
-        _row(Ticker="BL", blue=True, mine_score=3),
+        _row(Ticker="CORE", blue=True, steady_f=True, mine_score=12),
+        _row(Ticker="AL", alarm_f=True, mine_score=4),
     ])
     names = [n for n, m in stack_masks(g) if bool(m.any())]
-    assert names[0] == "hot_ab_peer"
+    assert names[0] == "steady_blue"
     seats, rule = fill_seats(g, seats=1)
-    assert list(seats["Ticker"]) == ["HOT"]
+    assert list(seats["Ticker"]) == ["CORE"]
+    assert rule.startswith("steady_blue")
+
+
+def test_scalp_reserved_then_core():
+    g = pd.DataFrame([
+        _row(Ticker="HOT", hot=True, Aand=True, A=True, mine_score=10, sector_name="Tech"),
+        _row(Ticker="CORE", blue=True, steady_f=True, mine_score=12, sector_name="Health"),
+    ])
+    seats, rule = fill_seats(g, seats=2)
+    assert list(seats["Ticker"]) == ["HOT", "CORE"]
     assert rule.startswith("hot_ab_peer")
 
 
 def test_fill_walks_stacks_without_dupes():
     rows = [
-        _row(Ticker="H1", hot=True, Aand=True, A=True, ab="good", peer="good", mine_score=12, sector_name="Tech"),
-        _row(Ticker="H2", hot=True, Aand=True, A=True, ab="good", peer="good", mine_score=11, sector_name="Health"),
-        _row(Ticker="AND", Aand=True, A=True, ab="good", peer="good", mine_score=8, sector_name="Energy"),
-        _row(Ticker="BL", blue=True, mine_score=3, sector_name="Util"),
+        _row(Ticker="SB", blue=True, steady_f=True, mine_score=12, sector_name="Tech"),
+        _row(Ticker="BW", blue=True, white_f=True, mine_score=10, sector_name="Health"),
+        _row(Ticker="BL", blue=True, mine_score=6, sector_name="Energy"),
+        _row(Ticker="AL", alarm_f=True, mine_score=3, sector_name="Util"),
     ]
     g = pd.DataFrame(rows)
     seats, rule = fill_seats(g, seats=4)
-    assert list(seats["Ticker"]) == ["H1", "H2", "AND", "BL"]
-    assert "hot_ab_peer" in rule and "ab_and_peer" in rule and "blue" in rule
-    assert list(seats["stack"]) == ["hot_ab_peer", "hot_ab_peer", "ab_and_peer", "blue"]
+    assert list(seats["Ticker"]) == ["SB", "BW", "BL", "AL"]
+    assert list(seats["stack"]) == ["steady_blue", "blue_white", "blue", "alarm_rebound"]
+    assert "steady_blue" in rule and "alarm_rebound" in rule
 
 
 def test_a_printed_when_cameras_on():
     g = pd.DataFrame([_row(Ticker="AB", ab="good", ab_good=True, A=True)])
     assert a_printed(g) is True
-    g2 = pd.DataFrame([_row(Ticker="X")])
-    assert a_printed(g2) is False
+    assert a_printed(pd.DataFrame([_row(Ticker="X")])) is False
 
 
 def test_sector_cap_and_score_order():
     rows = []
     for i in range(6):
-        rows.append(_row(Ticker=f"H{i}", sector_name="Health", mine_score=9 - i, score=9 - i, points=20 - i, A=True, ab_good=True))
-    rows.append(_row(Ticker="FIN", sector_name="Financial", mine_score=8, score=8, points=15, A=True, ab_good=True))
+        rows.append(_row(Ticker=f"H{i}", sector_name="Health", mine_score=9 - i, score=9 - i, points=20 - i, blue=True))
+    rows.append(_row(Ticker="FIN", sector_name="Financial", mine_score=8, score=8, points=15, blue=True))
     g = pd.DataFrame(rows)
     top = pick_seats(g, pd.Series([True] * len(g)), seats=5, cap=4)
     assert list(top["Ticker"]) == ["H0", "H1", "FIN", "H2", "H3"]
@@ -135,37 +144,28 @@ def test_turnover_buy_hold_sell():
     assert held == ["BBB"]
 
 
-def test_short_pool_prefers_fade_then_bad_a():
+def test_short_is_fade_only():
     fade = pd.DataFrame([
         _row(Ticker="FD", fade_x=True, inv_score=3),
-        _row(Ticker="OK", A=True, ab="good"),
+        _row(Ticker="OK", A=True, ab="good", A_bad=True),
     ])
     mask, rule = short_pool_mask(fade)
     assert rule == "fade"
     assert set(fade.loc[mask, "Ticker"]) == {"FD"}
-
-    bad = pd.DataFrame([
-        _row(Ticker="BD", ab="bad", A_bad=True, inv_score=2),
-        _row(Ticker="OK", ab="good", A=True),
-    ])
-    mask, rule = short_pool_mask(bad)
-    assert rule == "A_bad"
-    assert set(bad.loc[mask, "Ticker"]) == {"BD"}
-
-    empty = pd.DataFrame([_row(Ticker="OK")])
-    mask, rule = short_pool_mask(empty)
+    empty = pd.DataFrame([_row(Ticker="OK", A_bad=True, ab="bad")])
+    _, rule = short_pool_mask(empty)
     assert rule == "none"
-    assert not bool(mask.any())
 
 
 if __name__ == "__main__":
     test_defaults_are_25_by_6()
-    test_join_band_when_no_hit_camera()
-    test_hot_ab_peer_beats_loose_a()
+    test_lottery_when_no_blue_no_alarm()
+    test_steady_blue_leads_when_no_scalp()
+    test_scalp_reserved_then_core()
     test_fill_walks_stacks_without_dupes()
     test_a_printed_when_cameras_on()
     test_sector_cap_and_score_order()
     test_pick_seats_fills_25_with_sector_cap_6()
     test_turnover_buy_hold_sell()
-    test_short_pool_prefers_fade_then_bad_a()
+    test_short_is_fade_only()
     print("ok")
