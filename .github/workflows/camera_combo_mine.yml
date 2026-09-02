@@ -1,0 +1,127 @@
+name: Camera Combo Mine
+
+# Sift 09:30 cameras for combinations that actually pay.
+# Leaderboards: highest win rate and highest average return on
+# 1d / 2d / 3d / 1w / 2w. Also grades zero-red vs red-count and
+# D0 × D-1 × D-2 lag interactions.
+#
+# Same vintage rules as ticker lookback: same-day Finviz and
+# same-day book never color a cell.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_names:
+        description: "Cap liquid names (0 = all)"
+        required: false
+        default: "0"
+        type: string
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+        type: string
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = latest)"
+        required: false
+        default: ""
+        type: string
+      tickers:
+        description: "Optional comma list instead of liquid universe"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: camera-combo-mine
+  cancel-in-progress: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Overlay live daily files from main
+        run: |
+          git fetch origin main --depth=1
+          git checkout origin/main -- 01_daily data \
+            || echo "overlay skipped (already on main or paths missing)"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pandas pyarrow
+
+      - name: Unit tests
+        run: python -m src.test_camera_combo_mine
+
+      - name: Mine
+        env:
+          MAX_NAMES: ${{ inputs.max_names }}
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+          TICKERS: ${{ inputs.tickers }}
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [ -n "${MAX_NAMES}" ] && [ "${MAX_NAMES}" != "0" ]; then
+            ARGS+=(--max-names "$MAX_NAMES")
+          fi
+          [ -n "${FROM_DATE}" ] && ARGS+=(--from-date "$FROM_DATE")
+          [ -n "${TO_DATE}" ] && ARGS+=(--to-date "$TO_DATE")
+          [ -n "${TICKERS}" ] && ARGS+=(--tickers "$TICKERS")
+          python -m src.camera_combo_mine "${ARGS[@]}"
+          test -s 03_scoreboard/CAMERA_COMBO_MINE.md
+          test -s 03_scoreboard/camera_combo_mine.json
+
+      - name: Show leaderboards
+        if: always()
+        run: |
+          echo "======== CAMERA COMBO MINE ========"
+          if [ -f 03_scoreboard/CAMERA_COMBO_MINE.md ]; then
+            awk '/^# Camera combo mine/,/^## 2d — highest win rate/' \
+              03_scoreboard/CAMERA_COMBO_MINE.md | head -n 120
+          else
+            echo "NO BOARD — mine did not write"
+          fi
+
+      - name: Publish
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: camera combo mine" \
+            03_scoreboard/CAMERA_COMBO_MINE.md \
+            03_scoreboard/camera_combo_mine.json \
+            01_daily/*_camera_combo_mine.md
+
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: camera-combo-mine
+          path: |
+            03_scoreboard/CAMERA_COMBO_MINE.md
+            03_scoreboard/camera_combo_mine.json
+
+      - name: Add links to run summary
+        if: always()
+        run: |
+          {
+            echo "## Camera Combo Mine"
+            echo
+            echo "Win-rate and mean-return leaderboards on 1d / 2d / 3d / 1w / 2w."
+            echo "Zero-red buckets and D0×D-1×D-2 lag interactions included."
+            echo
+            echo "Download the **camera-combo-mine** artifact for the full board."
+            echo
+            if [ -f 03_scoreboard/CAMERA_COMBO_MINE.md ]; then
+              awk '/^## Base rate/,/^## 2d — highest win rate/' \
+                03_scoreboard/CAMERA_COMBO_MINE.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
