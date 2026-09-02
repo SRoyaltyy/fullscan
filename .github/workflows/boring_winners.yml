@@ -2,6 +2,7 @@ name: Boring Winners Backtest
 
 # Overlay 1d BUY with FEATURE_MINE stacks (keep / drop fade / add gated extras)
 # and publish the as-of painted MD pack: scoreboard, per-day books, today's latest.
+# Also merge dashboard/boring-winners onto gh-pages without wiping the paper book.
 
 on:
   workflow_dispatch:
@@ -75,11 +76,40 @@ jobs:
             "chore: boring winners book×mine overlay" \
             "${FILES[@]}"
 
+      - name: Merge boring-winners onto gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -s dashboard/boring-winners/index.html
+          TMP=$(mktemp -d)
+          git clone --depth 1 --branch gh-pages \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "$TMP" || {
+              echo "WARN: gh-pages clone failed — Pages not updated this run"
+              exit 0
+            }
+          mkdir -p "$TMP/dashboard/boring-winners"
+          cp -a dashboard/boring-winners/. "$TMP/dashboard/boring-winners/"
+          touch "$TMP/.nojekyll"
+          git -C "$TMP" config user.name "Market-Bot-Automaton"
+          git -C "$TMP" config user.email "bot@users.noreply.github.com"
+          git -C "$TMP" add dashboard/boring-winners .nojekyll
+          if git -C "$TMP" diff --cached --quiet; then
+            echo "gh-pages already has current boring-winners"
+            exit 0
+          fi
+          git -C "$TMP" commit -m "deploy boring-winners dashboard ${GITHUB_SHA}"
+          git -C "$TMP" push origin gh-pages
+          echo "Published https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
+
       - name: Summary
         if: always()
         run: |
           {
             echo "## Boring winners"
+            echo
+            echo "Pages: https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
             echo
             if [ -f 03_scoreboard/BORING_WINNERS.md ]; then
               awk '/^## Daily book returns/,/^## Daily short book/' 03_scoreboard/BORING_WINNERS.md

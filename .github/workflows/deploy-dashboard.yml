@@ -3,6 +3,8 @@ name: Deploy dashboard to GitHub Pages
 # Backup path: when Stock Book ALL finishes, republish the uploaded
 # "dashboard" artifact to gh-pages. Primary publish is now inside
 # stock_book_all.yml itself; this remains for resilience.
+# Always overlay dashboard/boring-winners and dashboard/ticker-lookback
+# from main so force-orphan deploys cannot 404 those pages.
 
 on:
   workflow_run:
@@ -57,11 +59,24 @@ jobs:
             echo "Used dashboard/index.html from main"
           fi
 
+          # Overlay sub-dashboards from this checkout so orphan deploys keep them.
+          if [ -f dashboard/boring-winners/index.html ]; then
+            mkdir -p pages_out/dashboard/boring-winners
+            cp -a dashboard/boring-winners/. pages_out/dashboard/boring-winners/
+            echo "Overlayed dashboard/boring-winners from main"
+          fi
+          if [ -f dashboard/ticker-lookback/index.html ]; then
+            mkdir -p pages_out/dashboard/ticker-lookback
+            cp -a dashboard/ticker-lookback/. pages_out/dashboard/ticker-lookback/
+            echo "Overlayed dashboard/ticker-lookback from main"
+          fi
+
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
             exit 1
           fi
           ls -la pages_out pages_out/dashboard
+          ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners still missing"
 
       - name: Publish to GitHub Pages (gh-pages)
         uses: peaceiris/actions-gh-pages@v4
@@ -74,5 +89,6 @@ jobs:
       - name: Show Pages URL
         run: |
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"
