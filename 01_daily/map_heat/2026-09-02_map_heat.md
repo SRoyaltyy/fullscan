@@ -5,54 +5,54 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7626.25 | -0.22% |
-| Nasdaq 100 (NQ) | 28980.5 | -0.51% |
-| Russell 2000 (ER2) | 2918.9 | -0.21% |
-| DJIA (YM) | 52761.0 | -0.14% |
+| S&P 500 (ES) | 7623.5 | -0.26% |
+| Nasdaq 100 (NQ) | 28966.0 | -0.55% |
+| Russell 2000 (ER2) | 2916.9 | -0.27% |
+| DJIA (YM) | 52743.0 | -0.16% |
 | VIX (VX) | 17.35 | +0.56% |
-| Crude Oil WTI (CL) | 90.17 | -0.07% |
-| Crude Oil Brent (QA) | 94.85 | +0.18% |
-| Natural Gas (NG) | 2.948 | +1.55% |
-| Heating Oil (HO) | 4.6382 | -0.81% |
-| Gasoline RBOB (RB) | 3.1454 | +0.31% |
-| Gold (GC) | 4355.5 | -0.90% |
-| Silver (SI) | 64.325 | -1.53% |
-| Copper (HG) | 6.543 | -0.86% |
-| Platinum (PL) | 1722.7 | -2.44% |
-| Palladium (PA) | 1316.0 | -1.06% |
-| USD (DX) | 99.8 | +0.16% |
-| EUR (6E) | 1.1577 | -0.16% |
-| JPY (6J) | 0.6261 | +0.20% |
-| GBP (6B) | 1.3483 | -0.23% |
-| AUD (6A) | 0.7123 | -0.33% |
-| CAD (6C) | 0.7178 | -0.34% |
-| CHF (6S) | 1.228 | -0.45% |
-| NZD (6N) | 0.58055 | -1.48% |
-| 10 Year Note (ZN) | 107.296875 | -0.09% |
-| 5 Year Note (ZF) | 105.4453125 | -0.05% |
-| 2 Year Note (ZT) | 102.51171875 | -0.02% |
-| 30 Year Bond (ZB) | 108.03125 | -0.17% |
-| Nikkei 225 (NKD) | 63935.0 | -1.47% |
-| DAX (DY) | 25801.0 | -0.74% |
-| Euro Stoxx 50 (EX) | 6349.0 | -0.42% |
-| Corn (ZC) | 538.0 | -1.47% |
-| Soybeans (ZS) | 1304.0 | -1.02% |
-| Wheat (ZW) | 771.75 | -1.34% |
-| Soybean oil (ZL) | 72.17 | -0.36% |
-| Soybean Meal (ZM) | 341.3 | -1.33% |
+| Crude Oil WTI (CL) | 90.43 | +0.27% |
+| Crude Oil Brent (QA) | 95.14 | +0.53% |
+| Natural Gas (NG) | 2.947 | +1.45% |
+| Heating Oil (HO) | 4.6441 | -0.75% |
+| Gasoline RBOB (RB) | 3.1496 | +0.49% |
+| Gold (GC) | 4356.0 | -0.95% |
+| Silver (SI) | 64.225 | -1.74% |
+| Copper (HG) | 6.539 | -0.92% |
+| Platinum (PL) | 1720.6 | -2.56% |
+| Palladium (PA) | 1315.5 | -1.21% |
+| USD (DX) | 99.815 | +0.17% |
+| EUR (6E) | 1.1574 | -0.19% |
+| JPY (6J) | 0.62605 | +0.20% |
+| GBP (6B) | 1.3482 | -0.24% |
+| AUD (6A) | 0.71245 | -0.30% |
+| CAD (6C) | 0.71795 | -0.31% |
+| CHF (6S) | 1.2279 | -0.46% |
+| NZD (6N) | 0.58125 | -1.38% |
+| 10 Year Note (ZN) | 107.3125 | -0.06% |
+| 5 Year Note (ZF) | 105.453125 | -0.04% |
+| 2 Year Note (ZT) | 102.515625 | -0.02% |
+| 30 Year Bond (ZB) | 108.03125 | -0.20% |
+| Nikkei 225 (NKD) | 63855.0 | -1.58% |
+| DAX (DY) | 25781.0 | -0.80% |
+| Euro Stoxx 50 (EX) | 6343.0 | -0.47% |
+| Corn (ZC) | 538.5 | -1.33% |
+| Soybeans (ZS) | 1305.25 | -0.97% |
+| Wheat (ZW) | 772.75 | -1.31% |
+| Soybean oil (ZL) | 72.22 | -0.32% |
+| Soybean Meal (ZM) | 341.4 | -1.27% |
 | Oats (ZO) | 376.0 | -1.44% |
 | Rough Rice (ZR) | 15.78 | -0.28% |
-| Coffee (KC) | 304.45 | -1.64% |
-| Sugar (SB) | 18.37 | +0.11% |
-| Cotton (CT) | 89.19 | -2.57% |
-| Cocoa (CC) | 6530.0 | -0.58% |
+| Coffee (KC) | 302.8 | -2.12% |
+| Sugar (SB) | 18.43 | +0.33% |
+| Cotton (CT) | 89.17 | -2.60% |
+| Cocoa (CC) | 6540.0 | -0.55% |
 | Orange Juice (JO) | 144.8 | +5.76% |
 | Lumber (LB) | 558.5 | -0.44% |
 | Live Cattle (LC) | 212.4 | -0.28% |
 | Lean Hogs (LH) | 83.7 | -0.03% |
 | Feeder Cattle (FC) | 316.05 | -0.51% |
-| Bitcoin (BTC) | 76850.0 | -0.91% |
-| Canola (RS) | 831.6 | -1.26% |
+| Bitcoin (BTC) | 76675.0 | -1.04% |
+| Canola (RS) | 831.3 | -1.26% |
 | Ethanol (ZK) | 2.0825 | +1.34% |
 
 ## CALENDAR
@@ -127,11 +127,11 @@ Mega-cap earnings:
 Options event-vol flags (NOT direction):
 - **AVGO** exp 2026-09-02 ATM IV 0.9336 implied move +4.9% put/call OI —
 - **ORCL** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **ACN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **ACN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI 1.0
 - **ADBE** exp 2026-09-04 ATM IV 0.0078 implied move +0.1% put/call OI —
 - **SNOW** exp 2026-09-04 ATM IV 0.001 implied move +0.0% put/call OI —
 - **HPE** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **CIEN** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI —
+- **CIEN** exp 2026-09-04 ATM IV 0.002 implied move +0.0% put/call OI 0.0
 - **NTAP** exp 2026-09-18 ATM IV 0.0078 implied move +0.2% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
@@ -252,31 +252,31 @@ COLD (1w):
 - **Technology** -2.8% 1d -1.7% 1w · VGT, XLK, SMH
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 8 min **CVX** Chevron confirms it will expand operations in Venezuela (Associated Press)
-- 11 min **ECX** Flyme AIOS to Deploy WorkBuddy AI Tools Across All Flyme Platforms (PR Newswire)
-- 13 min **TSLA** Tesla set to hold Cybercab event in Austin, Texas (Reuters)
-- 14 min **CVX** Chevron Expands Position in Venezuela (Business Wire)
-- 24 min **DELL** Dell Shares Rise 10% Premarket After AI Server Demand Supports Guidance Increase (InvestorsHub)
-- 24 min **BANC** Banc of California, Inc. to Participate in the Barclays 24th Annual Global Financial Services Conference (Business Wire)
-- 25 min **MDB** MongoDB Shares Fall 14% as Atlas Growth Remains at Recent Levels (InvestorsHub)
-- 26 min **KSS** Kohl's CEO addresses Sephora sales slump (Milwaukee Journal Sentinel)
-- 26 min **PANW** Palo Alto Networks Reports Higher Quarterly Profit as Security Revenue Grows (InvestorsHub)
-- 28 min **TU** TELUS Mental Health Index: Cost of living is the top money worry for 58 percent of US workers as financial anxiety hits workplace productivity (PR Newswire)
-- 29 min **SGLD** Scorpio Gold Drills 3.02 g/t Gold over 48.92 Metres from 118.87 Metres and 1.19 g/t Gold over 99.94 Metres from 98.61 Metres at the Goldwedge Target at Manhattan (Newsfile Corp.)
-- 29 min **NWS,NWSA** Delistings Trend Below Last Year's Pace As Summer Comes to an End: Realtor.com August Housing Report (PR Newswire)
-- 29 min **TCOM** Trip.com Group Limited to Report Second Quarter and First Half of 2026 Financial Results on September 15, 2026 U.S. Time (PR Newswire)
-- 29 min **YQ** 17 Education & Technology Group Inc. to Report Second Quarter 2026 Unaudited Financial Results on September 8, 2026 (GlobeNewswire)
-- 29 min **AVEX** AEVEX and Divergent Announce Strategic Collaboration to Accelerate Adaptive UAS Development and Scalable Production (Business Wire)
-- 29 min **OGI** Organigram Global to Host 2026 OG Investor Session (Business Wire)
-- 29 min **VRT** Vertiv Declares Quarterly Dividend (PR Newswire)
-- 29 min **NVDA** Nvidia's next act is bigger than selling AI chips: Chart of the Day (Yahoo Finance)
-- 29 min **AAPL** Apple rallies as John Ternus takes the helm  how to protect the stock for almost nothing: Alpha Options Playbook (Yahoo Finance)
-- 29 min **GS** Best CD rates today, Wednesday, September 2, 2026: Earn up to 4.30% APY with Marcus (Yahoo Personal Finance)
-- 34 min **INTC,SNDK** Here's the biggest thing keeping AI stock investors up at night (Yahoo Finance)
-- 37 min **GTLB,MSFT,SPCX** GitLab Stock Soars 21% After Earnings. It's Still Not a Buy. (Barrons.com)
-- 39 min **TAK** Takeda and Weave Bio collaborate on AI-driven automation in drug development (Pharmaceutical Technology)
-- 43 min **PEP,MDLZ** Mondelz, PepsiCo and pladis join forces for circular packaging trial (Packaging Gateway)
-- 45 min **KDP** Keurig Dr Pepper to sell stake  and factory  to Chobani (Just Food)
+- 3 min **UPC** Universe Pharmaceuticals Shares Rise 22.6% Premarket With No New Catalyst Identified (InvestorsHub)
+- 4 min **SIRI** Sirius XM Shares Rise 3.1% Premarket After Deutsche Bank Upgrade (InvestorsHub)
+- 5 min **ALGS** Aligos Therapeutics Shares Rise 7.6% Premarket Following Recent Company Updates (InvestorsHub)
+- 5 min **NIQ,SMWB** NIQ and Similarweb Advance Agentic Commerce Measurement for the AI Shopping Era (Business Wire)
+- 5 min **MRK** Merck to Participate in the Wells Fargo 21st Annual Healthcare Conference (Business Wire)
+- 5 min **AIG** AIG Announces Board Leadership Transition (Business Wire)
+- 5 min **MSFT** Many jobs will disappear forever: Bill Gates says AI could erase careers. Build a financial firewall before AI strikes (Moneywise)
+- 6 min **CVX** Chevron Readies Plans to Invest $7 Billion, Double Production in Venezuela (The Wall Street Journal)
+- 7 min **TSLA** Tesla Prepares Cybercab Event in Austin as Robotaxi Rollout Develops (InvestorsHub)
+- 10 min **AMZN** Amazon stock just entered the danger zone (Yahoo Finance)
+- 20 min **USGO** U.S. GoldMining Provides Update on State-Led West Susitna Access Road, AIDEA Authorizes up to $25 Million in Funding for the State's Planned Geotechnical and Engineering Work (PR Newswire)
+- 20 min **PZG** Paramount Gold Announces BLM Approval of Plan of Operations and Determination of Financial Guarantee for the Grassy Mountain Project (GlobeNewswire)
+- 20 min **VRT** Vertiv Announces Agreement to Acquire UtilityInnovation Group to Accelerate Time to Power for AI Data Centers (PR Newswire)
+- 20 min **IMUX** Immunic to Host Virtual Relapsing Multiple Sclerosis R&D Day on September 9, 2026 (PR Newswire)
+- 20 min **GPUS** Hyperscale Data Has Ceased Bitcoin Mining Operations in Michigan as It Fulfills the Requirements of the AI Data Center Master Services Agreement Expected to be Worth Approximately $1.2 Billion (PR Newswire)
+- 20 min **CMPS** Compass Pathways Recognized as a 2026 Fierce 50 Breakthrough Honoree (Business Wire)
+- 20 min **NXDR** Nextdoor Deepens Its Commitment to Local Business Discovery and Recommendations (Business Wire)
+- 20 min **HUM** Humana Board Declares Payment of Quarterly Dividend to Stockholders (Business Wire)
+- 20 min **UBER** Florida baker's 400 cinnamon rolls worth $3,000 vanished mid-delivery  5 days later police found every one (Moneywise)
+- 21 min **ORCL** ORCL Stock Could Be Near A Turning Point, Says Jefferies As Peak-Negative Investor Sentiment Sets In (Stocktwits)
+- 25 min **CVX** US oil giant Chevron confirms it will expand operations in Venezuela (Associated Press)
+- 29 min **CVX** Chevron confirms it will expand operations in Venezuela (Associated Press)
+- 32 min **ECX** Flyme AIOS to Deploy WorkBuddy AI Tools Across All Flyme Platforms (PR Newswire)
+- 34 min **TSLA** Tesla set to hold Cybercab event in Austin, Texas (Reuters)
+- 35 min **CVX** Chevron Expands Position in Venezuela (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
