@@ -4,8 +4,12 @@ name: Map Heat Captain Research (post-close)
 # Grok is primary; DeepSeek + web-search is the automatic fallback when
 # Grok is unavailable, rate-limited, or out of credits.
 # One sector-batched pass researches every liquid SPX/RUT industry captain
-# for the NEXT session. The 05:55 job performs one small overnight refresh.
-# Preopen lock / systemd active is the only hard gate. /tmp locks are not used.
+# for the NEXT session.
+#
+# ONE automatic start: this file's nightly cron. Orchestrator must not
+# re-dispatch it. Extra workflow_dispatch jobs cancel the older one.
+# ECS systemd timer is the same work; this job backs off if that service
+# is already active.
 #
 # ECS never scrapes Elite HTML (Aliyun 403). Clone today's GH-hosted heat.
 
@@ -37,10 +41,11 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: map-heat-postclose
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   research:
