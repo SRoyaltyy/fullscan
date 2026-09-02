@@ -5,54 +5,54 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7638.25 | -0.06% |
-| Nasdaq 100 (NQ) | 29030.25 | -0.32% |
-| Russell 2000 (ER2) | 2926.4 | +0.06% |
-| DJIA (YM) | 52894.0 | +0.13% |
-| VIX (VX) | 17.25 | -0.02% |
-| Crude Oil WTI (CL) | 89.55 | -0.71% |
-| Crude Oil Brent (QA) | 94.2 | -0.48% |
-| Natural Gas (NG) | 2.938 | +1.17% |
-| Heating Oil (HO) | 4.6011 | -1.60% |
-| Gasoline RBOB (RB) | 3.1393 | +0.16% |
-| Gold (GC) | 4374.1 | -0.51% |
-| Silver (SI) | 64.845 | -0.81% |
-| Copper (HG) | 6.6075 | +0.10% |
-| Platinum (PL) | 1740.4 | -1.47% |
-| Palladium (PA) | 1329.5 | -0.08% |
-| USD (DX) | 99.73 | +0.11% |
-| EUR (6E) | 1.1583 | -0.13% |
-| JPY (6J) | 0.6268 | +0.30% |
-| GBP (6B) | 1.3489 | -0.19% |
-| AUD (6A) | 0.7141 | -0.09% |
-| CAD (6C) | 0.7185 | -0.24% |
-| CHF (6S) | 1.22955 | -0.34% |
-| NZD (6N) | 0.58245 | -1.20% |
-| 10 Year Note (ZN) | 107.4375 | +0.06% |
-| 5 Year Note (ZF) | 105.53125 | +0.03% |
-| 2 Year Note (ZT) | 102.546875 | +0.02% |
-| 30 Year Bond (ZB) | 108.375 | +0.09% |
-| Nikkei 225 (NKD) | 64035.0 | -1.30% |
-| DAX (DY) | 25865.0 | -0.48% |
-| Euro Stoxx 50 (EX) | 6365.0 | -0.14% |
-| Corn (ZC) | 538.5 | -1.37% |
-| Soybeans (ZS) | 1305.5 | -0.95% |
-| Wheat (ZW) | 772.0 | -1.37% |
-| Soybean oil (ZL) | 72.21 | -0.54% |
-| Soybean Meal (ZM) | 341.5 | -1.24% |
-| Oats (ZO) | 376.0 | -1.44% |
+| S&P 500 (ES) | 7640.25 | -0.03% |
+| Nasdaq 100 (NQ) | 29039.75 | -0.29% |
+| Russell 2000 (ER2) | 2925.8 | +0.05% |
+| DJIA (YM) | 52920.0 | +0.17% |
+| VIX (VX) | 17.15 | -0.60% |
+| Crude Oil WTI (CL) | 89.92 | -0.37% |
+| Crude Oil Brent (QA) | 94.6 | -0.07% |
+| Natural Gas (NG) | 2.923 | +0.62% |
+| Heating Oil (HO) | 4.6491 | -0.59% |
+| Gasoline RBOB (RB) | 3.1831 | +1.47% |
+| Gold (GC) | 4380.4 | -0.34% |
+| Silver (SI) | 64.865 | -0.77% |
+| Copper (HG) | 6.611 | +0.19% |
+| Platinum (PL) | 1748.7 | -1.01% |
+| Palladium (PA) | 1335.0 | +0.33% |
+| USD (DX) | 99.715 | +0.08% |
+| EUR (6E) | 1.15845 | -0.10% |
+| JPY (6J) | 0.62705 | +0.34% |
+| GBP (6B) | 1.3477 | -0.27% |
+| AUD (6A) | 0.71475 | +0.03% |
+| CAD (6C) | 0.7191 | -0.15% |
+| CHF (6S) | 1.22895 | -0.37% |
+| NZD (6N) | 0.58245 | -1.17% |
+| 10 Year Note (ZN) | 107.421875 | +0.04% |
+| 5 Year Note (ZF) | 105.53125 | +0.04% |
+| 2 Year Note (ZT) | 102.5546875 | +0.03% |
+| 30 Year Bond (ZB) | 108.34375 | +0.09% |
+| Nikkei 225 (NKD) | 64070.0 | -1.23% |
+| DAX (DY) | 25889.0 | -0.35% |
+| Euro Stoxx 50 (EX) | 6371.0 | -0.03% |
+| Corn (ZC) | 537.75 | -1.51% |
+| Soybeans (ZS) | 1303.25 | -1.10% |
+| Wheat (ZW) | 775.75 | -0.86% |
+| Soybean oil (ZL) | 71.94 | -0.70% |
+| Soybean Meal (ZM) | 340.4 | -1.53% |
+| Oats (ZO) | 377.0 | -1.18% |
 | Rough Rice (ZR) | 15.78 | -0.28% |
-| Coffee (KC) | 301.15 | -2.65% |
-| Sugar (SB) | 18.36 | +0.05% |
-| Cotton (CT) | 88.84 | -2.94% |
-| Cocoa (CC) | 6183.0 | -6.10% |
-| Orange Juice (JO) | 144.8 | +5.76% |
+| Coffee (KC) | 301.55 | -2.55% |
+| Sugar (SB) | 18.15 | -1.20% |
+| Cotton (CT) | 88.71 | -3.19% |
+| Cocoa (CC) | 6199.0 | -5.69% |
+| Orange Juice (JO) | 145.5 | +0.24% |
 | Lumber (LB) | 558.5 | -0.44% |
 | Live Cattle (LC) | 212.4 | -0.28% |
 | Lean Hogs (LH) | 83.7 | -0.03% |
 | Feeder Cattle (FC) | 316.05 | -0.51% |
-| Bitcoin (BTC) | 76850.0 | -0.90% |
-| Canola (RS) | 828.9 | -1.56% |
+| Bitcoin (BTC) | 76940.0 | -0.77% |
+| Canola (RS) | 828.7 | -1.57% |
 | Ethanol (ZK) | 2.0825 | +1.34% |
 
 ## CALENDAR
@@ -60,7 +60,7 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 
 Econ (importance ≥ 2):
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual 6.79%  cons —  surprise —  prev 6.78%
-- 08:15 ET  ADP Employment Change  actual —  cons 47K  surprise —  prev 44K
+- 08:15 ET  ADP Employment Change  actual 38K  cons 47K  surprise —  prev 44K
 - 10:00 ET  Factory Orders MoM  actual —  cons 0.6%  surprise —  prev -0.3%
 - 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons -1.1M  surprise —  prev 0.095M
 - 10:30 ET  EIA Gasoline Stocks Change  actual —  cons -1.9M  surprise —  prev -2.536M
@@ -117,8 +117,8 @@ Mega-cap earnings:
 - AMC **IOT**  EPS est 0.16  (Samsara Inc)
 - AMC **GWRE**  EPS est 0.9331  (Guidewire Software Inc)
 - AMC **LULU**  EPS est 1.7944  (Lululemon Athletica Inc)
-- AMC **FIVE**  EPS est 1.4021  (Five Below Inc)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
+- AMC **FIVE**  EPS est 1.4021  (Five Below Inc)
 - BMO **BF-A**  EPS est 0.3691  (Brown-Forman Corp)
 - BMO **BF-B**  EPS est 0.3695  (Brown-Forman Corp)
 - AMC **DOCU**  EPS est 1.0853  (DocuSign Inc)
@@ -252,31 +252,31 @@ COLD (1w):
 - **Technology** -2.8% 1d -1.7% 1w · VGT, XLK, SMH
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **BRK-B** Berkshire's Abel Sees Opportunity in Data-Center Energy Demand (The Wall Street Journal)
-- 5 min **CMG** CHIPOTLE ARRIVES IN ASIA WITH FIRST RESTAURANT IN SEOUL (PR Newswire)
-- 6 min **ROLR** High Roller Technologies Announces ROLR Prediction Markets Platform Commercial Launch Timing (GlobeNewswire)
-- 6 min **DELL** Why Bond Yields Are Crushing the S&P 500 AI Rally (Barrons.com)
-- 6 min **UBER** Uber Stock Rises After CEO Announces 10% Global Workforce Cut (Barrons.com)
-- 8 min **MASK** 3 E Network Enters into $1M Private Placement to CEO-Led Entity at $1.426 Per Share (GlobeNewswire)
-- 9 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 10 min **GTLB,DELL,PANW,AVGO** The 2 Shining Lights in Market's Bond-Yield Gloom (Barrons.com)
-- 12 min **PSQL,INFQ,QNT,XNDU,HQ** What Pasqal's Volatile Stock Trading Debut Means for Quantum Stocks (Barrons.com)
-- 13 min **STC** Stewart Expands Commercial Energy & Infrastructure Capabilities with Acquisition of Tower Title (Business Wire)
-- 13 min **ZWS** Zurn Elkay Water Solutions Named One of America's Greatest Companies 2026 by Newsweek (Business Wire)
-- 13 min **IMNM** Immunome to Present at the H.C. Wainwright 28th Annual Global Investment Conference (Business Wire)
-- 15 min **UBER,GOOGL,TSLA** Low Costs and No Steering Wheels: What to Watch at Tesla's Cybercab Event (Barrons.com)
-- 16 min **BANR** Banner completes $177m acquisition of Pacific Financial (Retail Banker International)
-- 17 min **FCEL** FuelCell Energy Stock Sinks as Earnings Miss Estimates (Barrons.com)
-- 17 min **CRM,INTC,AMZN,UBS,NVDA** Why Nvidia's $14 Billion Hugging Face Deal Would Make Total Sense (Barrons.com)
-- 17 min **PLTR,AIG** AIG's Zaffino Stepping Down as Chairman, Joining Palantir (The Wall Street Journal)
-- 18 min **MU,NVDA** Only in America: Trump hails Nvidias record $96.2B quarter and Microns massive $250B US bet  are you cashing in? (Moneywise)
-- 19 min **FCEL** FuelCell Energy: Fiscal Q3 Earnings Snapshot (Associated Press)
-- 20 min **XOM,CVX** Chevron unveils $7 billion Venezuela deal as US claims a fifth of the country's oil (Euronews)
-- 20 min **SNOW,AVGO** Wall Street headed into the red, bond markets are twitchy, while oil keeps pushing higher (Proactive)
-- 21 min **DAKT** Daktronics: Fiscal Q1 Earnings Snapshot (Associated Press)
-- 21 min **LPLA** Merit Financial Advisors names John Rajes chief technology officer (Private Banker International)
-- 22 min **YCBD** cbdMD Enters Definitive Agreement to Acquire Twinlab Brands, Expanding Into Legacy Supplements, Sports Nutrition, Women's Beauty, Weight Loss and Longevity Wellness (PR Newswire)
-- 23 min **KIDZ** KIDZ AI Enters Into Agreement to Acquire Strategic Equity Stake in Cambodia's National Cloud Data Center, Locking In Priority Access to Power-Connected AI Infrastructure in Southeast Asia (ACCESSWIRE)
+- 1 min **ASB** Angela M.W. Kelley to join Associated Bank as General Counsel (PR Newswire)
+- 1 min **CINF** The Cincinnati Insurance Company Chief Claims Officer Announces Retirement (PR Newswire)
+- 1 min **VRRM** Verra Mobility launches AI-driven Title & Registration solution, cutting fleet vehicle activation time up to 80% (PR Newswire)
+- 3 min **MMM** New 3M Cooling Film helps fleet and rail operators keep cabin interiors cooler and improve efficiency (PR Newswire)
+- 3 min **HWM,SPCX,CMI,FTAI,CAT** SpaceX Is Barging Into New Businesses and Dragging These Power Stocks Down (Barrons.com)
+- 4 min **CANF** Can-Fite Announces Exercise of Warrants for Approximately $4.0 Million in Gross Proceeds (GlobeNewswire)
+- 4 min **INTC,CRM,UBS,NVDA,AMZN** Why Is Nvidia Willing to Pay $14 Billion for Hugging Face? (Barrons.com)
+- 5 min **CCL** SEABOURN ANNOUNCES 138-DAY "2029 WORLD CRUISE: ICONIC ISLANDS & REMOTE HORIZONS" (PR Newswire)
+- 6 min **FCEL** FuelCell Stock Shut Down by Top-Line Whiff (Schaeffer's Research)
+- 6 min **BMRN** BioMarin to Participate in Upcoming Investor Conferences (PR Newswire)
+- 6 min **WDAY** Workday Signs a New State or Local Government Nearly Every Week as Agencies Move Off of Legacy Systems (PR Newswire)
+- 6 min **PHOS** Emerging Growth Research Issues Press Release Announcing New Flash Report on First Phosphate Corp. (ACCESSWIRE)
+- 6 min **DLPN** Dolphin Subsidiary The Digital Dept. Rolls Out Exclusive Ranch House for its Creators at LTK Con 2026 (ACCESSWIRE)
+- 6 min **CXDO** Crexendo Again Earns Number 1 G2 Rankings Across UCaaS, VoIP and AI Categories (ACCESSWIRE)
+- 6 min **BTTC** Black Titan Corporation Announces Full Conversion of Its Outstanding Convertible Note (ACCESSWIRE)
+- 6 min **VOXR** Vox Royalty Enters into Binding Agreement to Acquire the White Dam Gold Royalty in Australia (ACCESSWIRE)
+- 6 min **TDC** Teradata Brings Enterprise AI Directly to Microsoft OneLake (PR Newswire)
+- 6 min **SECZ** Securitize and Socios.com Partner to Develop Tokenized Equity Offerings for Professional Sports Teams (PR Newswire)
+- 6 min **IHG** Crowne Plaza by IHG Debuts New Flagship Property in the Heart of New York City (PR Newswire)
+- 6 min **CART** Instacart and World Market Announce Exclusive Partnership to Deliver Global-Inspired Products in as Fast as One Hour (PR Newswire)
+- 6 min **VIVK** VIVAKOR PROVIDES Q3 2026 REVENUE GUIDANCE OF APPROXIMATELY $270 MILLION (GlobeNewswire)
+- 6 min **LI** Li Auto Inc. Launches the New Li MEGA, a High-Tech Flagship MPV (GlobeNewswire)
+- 6 min **LUD** Luda Technology Group Subsidiary Secures One-Year Steel Products Sales Contract with Contract Value of approximately $17.8 Million (GlobeNewswire)
+- 6 min **HCWB** HCW Biologics Strengthens U.S. Patent Estate for Its Lead Clinical-Stage Immunotherapeutic HCW9302 as Alopecia Areata Treatment (GlobeNewswire)
+- 6 min **GRML** Greenland Mines Completes Acquisition of World-Class Rare Earth Nd-Pr Magnet and Defense Mine Asset Following Greenland Government Approval (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
