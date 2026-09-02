@@ -1,6 +1,6 @@
 name: Boring Winners Backtest
 
-# Seat the FEATURE_MINE high-n edges (A / blue / short+sma20) into a 15-name book.
+# Seat the FEATURE_MINE high-n edges (A / blue / short+sma20) into a 25-name book.
 
 on:
   workflow_dispatch:
@@ -40,14 +40,16 @@ jobs:
           python -m src.boring_winners_backtest
           test -s 03_scoreboard/BORING_WINNERS.md
           test -s 03_scoreboard/boring_winners_picks.csv
+          test -s 03_scoreboard/boring_winners_daily.csv
 
       - name: Publish
         run: |
           bash scripts/safe_git_push.sh \
-            "chore: boring winners 15-seat backtest" \
+            "chore: boring winners 25-seat backtest" \
             03_scoreboard/BORING_WINNERS.md \
             03_scoreboard/boring_winners.json \
-            03_scoreboard/boring_winners_picks.csv
+            03_scoreboard/boring_winners_picks.csv \
+            03_scoreboard/boring_winners_daily.csv
 
       - name: Summary
         if: always()
@@ -56,6 +58,6 @@ jobs:
             echo "## Boring winners"
             echo
             if [ -f 03_scoreboard/BORING_WINNERS.md ]; then
-              awk '/^## Session tape/,/^## 15-seat books/' 03_scoreboard/BORING_WINNERS.md
+              awk '/^## Daily book returns/,/^## Daily short book/' 03_scoreboard/BORING_WINNERS.md
             fi
           } >> "$GITHUB_STEP_SUMMARY"
