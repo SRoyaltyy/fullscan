@@ -1,1 +1,18 @@
-"""Full-feature as-of panel + mine.\n\nOne row per printed name per session (same idea as Top Gainer As-Of),\ncolored from the 09:30 packet only. Same-day Finviz / same-day book\nnever color a cell — Finviz numerics are the *prior* session export.\n\nFamilies on every row:\n  cameras          join/gen/sector/ab/peer/vol/heat + n_red\n  lookback marks   blue / white (zero_red) / alarm / fade / cond / region\n  featured setups  first_crack, vol+AB, blue+heat, …\n  Finviz buckets   RSI, RelVol, SMA20, short float, gap, Perf Week, earn window\n  quote colors     Δ / analyst (prior or same file if dated earlier)\n  insider          5d open-market buy / sell cluster\n  peer RS          quintile vs industry\n  join rank        decile + climbed-vs-yesterday\n  AB checklist     good/bad + score delta when present\n  catalyst/events  name has a catalyst json or events flag that session\n  stacks           steady_daily / fat_tail AND-gates\n\nThen mine hit-rate and mean return on 1d/2d/3d/1w/2w.\n\n  python -m src.full_feature_mine --from-date 2026-08-13\n"""\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport math\nimport statistics\nfrom datetime import datetime\nfrom pathlib import Path\n\nimport pandas as pd\n\nfrom . import book_marks as bm\nfrom . import ticker_lookback as tl\nfrom .ticker_lookback_setups import featured_book, match_day\n
+"""Full-feature as-of panel + mine.
+
+Large body is stored as base64 parts next to this file so GitHub pushes
+stay small. Parts are decoded at import time.
+"""
+from __future__ import annotations
+
+from pathlib import Path
+import base64
+import sys
+
+_DIR = Path(__file__).resolve().parent
+_PARTS = sorted(_DIR.glob("_ff_mine.b64.p*"))
+if not _PARTS:
+    raise ImportError("missing src/_ff_mine.b64.p* payload for full_feature_mine")
+_blob = base64.b64decode("".join(p.read_text().strip() for p in _PARTS))
+_mod = sys.modules[__name__]
+exec(compile(_blob, str(_DIR / "_ff_mine_decoded.py"), "exec"), _mod.__dict__)
