@@ -1,0 +1,146 @@
+def write_dashboard(lab: dict) -> None:
+    DASH_DIR.mkdir(parents=True, exist_ok=True)
+    series = {sid: sl["equity"] for sid, sl in lab["sleeves"].items()}
+    series["SPY"] = lab["spy"]["equity"]
+    stats = []
+    for sid, sl in lab["sleeves"].items():
+        tot = sl.get("totals") or {}
+        spec = sl["spec"]
+        win = sl.get("orig_window") or {}
+        stats.append({
+            "sleeve": sid,
+            "label": spec.get("label") or sid,
+            "source": spec["source"],
+            "seats": spec["seats"],
+            "hold": spec["hold"],
+            "color": spec["color"],
+            "hard_red": spec["hard_red"],
+            "mean_day": tot.get("mean_day"),
+            "cum": tot.get("cum_sum"),
+            "p_loss_day": tot.get("p_loss_day"),
+            "n_days": tot.get("n_days"),
+            "final": sl.get("final"),
+            "fees_cum": sl.get("fees_cum"),
+            "win_n": win.get("n_days"),
+            "win_mean": win.get("mean_day"),
+            "win_end": win.get("end_eq"),
+            "win_start": win.get("start_eq"),
+            "win_ret": win.get("ret"),
+            "win_pnl": win.get("pnl"),
+            "win_fees": win.get("fees"),
+            "win_p_loss": win.get("p_loss_day"),
+        })
+    slim_daily = {}
+    for sid, sl in lab["sleeves"].items():
+        slim_daily[sid] = [
+            {
+                "date": d["date"],
+                "n_held": d["n_held"],
+                "n_buy": d["n_buy"],
+                "n_sell": d["n_sell"],
+                "n_skip": d["n_skip"],
+                "n_cand": d.get("n_cand"),
+                "day_pnl": d["day_pnl"],
+                "equity": d["equity"],
+                "hard_red": d.get("hard_red"),
+                "held": d.get("held") or [],
+                "bought": d.get("bought") or [],
+                "sold": d.get("sold") or [],
+                "skipped": d.get("skipped") or [],
+                "buys": d.get("buys") or [],
+                "sells": d.get("sells") or [],
+                "names": d.get("names") or [],
+                "cash": d.get("cash"),
+                "invested": d.get("invested"),
+                "fees_cum": d.get("fees_cum"),
+            }
+            for d in sl.get("daily") or []
+        ]
+    payload = {
+        "generated": lab["generated"],
+        "capital": lab["capital"],
+        "dates": lab["dates"],
+        "series": series,
+        "stats": stats,
+        "daily": slim_daily,
+        "rules": lab["rules"],
+        "paper": "../",
+        "orig_window": lab.get("orig_window") or {
+            "start": ORIG_WINDOW[0], "end": ORIG_WINDOW[1], "label": ORIG_WINDOW_LABEL,
+        },
+    }
+    shell = TEMPLATE.read_text(encoding="utf-8")
+    html = shell.replace("__DATA__", json.dumps(payload))
+    (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
+
+
+def daily_rows(lab: dict) -> list[dict]:
+    rows = []
+    for sid, sl in lab["sleeves"].items():
+        spec = sl["spec"]
+        for d in sl.get("daily") or []:
+            rows.append({
+                "sleeve": sid,
+                "source": spec["source"],
+                "seats": spec["seats"],
+                "hold": spec["hold"],
+                "color": spec["color"],
+                "hard_red": spec["hard_red"],
+                "date": d["date"],
+                "n_held": d["n_held"],
+                "n_buy": d["n_buy"],
+                "n_skip": d["n_skip"],
+                "n_sell": d["n_sell"],
+                "day_pnl": d["day_pnl"],
+                "equity": d["equity"],
+            })
+    return rows
+
+
+def write_outputs(lab: dict) -> None:
+    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    slim = {
+        "generated": lab["generated"],
+        "capital": lab["capital"],
+        "dates": lab["dates"],
+        "scenarios": lab["scenarios"],
+        "rules": lab["rules"],
+        "spy": lab["spy"],
+        "sleeves": {
+            sid: {
+                "spec": sl["spec"],
+                "totals": sl["totals"],
+                "equity": sl["equity"],
+                "final": sl["final"],
+                "orig_window": sl.get("orig_window"),
+                "daily": [
+                    {k: d[k] for k in (
+                        "date", "day_pnl", "equity", "n_held", "n_buy",
+                        "n_sell", "n_skip", "n_cand", "hard_red",
+                        "bought", "sold", "held", "buys", "sells",
+                        "cash", "invested", "fees_cum",
+                    ) if k in d}
+                    for d in sl.get("daily") or []
+                ],
+            }
+            for sid, sl in lab["sleeves"].items()
+        },
+    }
+    OUT_JSON.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    OUT_MD.write_text(render_md(lab), encoding="utf-8")
+    pd.DataFrame(daily_rows(lab)).to_csv(OUT_CSV, index=False)
+    write_dashboard(lab)
+
+
+def main() -> None:
+    lab = run_lab()
+    write_outputs(lab)
+    print(
+        f"[bw-lab] sleeves={len(lab['sleeves'])} days={len(lab['dates'])} "
+        f"dash={DASH_DIR / 'index.html'} md={OUT_MD}",
+        flush=True,
+    )
+
+
+if __name__ == "__main__":
+    main()

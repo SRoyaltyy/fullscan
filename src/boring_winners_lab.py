@@ -1,1 +1,6 @@
-"""Scenario lab for the book \u00d7 mine overlay.\n\nReplays the same panel as boring_winners_backtest, then runs named\nsleeves that change one knob at a time:\n\n  source     book | overlay | mine\n  seats      10 / 25 / 50\n  hold       1 / 2 / 3 / 5 trading sessions (locked names keep their seat)\n  color      all | blue | green (panel cond==good)\n  hard_red   none | stand_down | haircut_5 | limit_5\n\nHold-N: a name bought on D cannot be sold until it has aged N sessions.\nNew candidates only fill empty seats. If the book is full of locked\nnames, today's buys are skipped (n_skip).\n\nhard_red (lattice live from 2026-08-31):\n  stand_down  no new buys\n  haircut_5   new buy fills at open\u00d70.95 only if that day's low printed\n              through the limit; otherwise fills at the session close\n  limit_5     new buy only if low \u2264 open\u00d70.95; fill at open\u00d70.95\n              (not close-to-close \u2264 \u22125)\n\nDoes not rebuild the mine parquet. Does not overwrite the paper-trading\ndashboard \u2014 writes dashboard/boring-winners/index.html.\n"""\n
+"""Loader — concatenates _bw_lab.p* into this module."""
+from pathlib import Path
+_parts = sorted(Path(__file__).resolve().parent.glob("_bw_lab.p*"))
+if not _parts:
+    raise RuntimeError("missing src/_bw_lab.p* parts")
+exec(compile("".join(p.read_text(encoding="utf-8") for p in _parts), str(Path(__file__).resolve()), "exec"), globals())
