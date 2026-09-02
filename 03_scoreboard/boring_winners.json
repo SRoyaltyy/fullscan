@@ -1,6 +1,8 @@
 {
   "generated_from": "/home/runner/work/fullscan/fullscan/03_scoreboard/feature_asof_panel.parquet",
   "mode": "book_x_mine_overlay",
+  "live_date": "2026-09-02",
+  "missing_live_book": true,
   "seats": 25,
   "sector_cap": 6,
   "max_extras": 5,
@@ -4970,29 +4972,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6
+            "n": 5
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6,
-            "balance": 0.333
+            "n": 5,
+            "balance": 0.4
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -5005,7 +5007,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "neutral",
+            "company": "missing",
             "setup": "missing",
             "flow": "bad"
           },
@@ -5058,29 +5060,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6
+            "n": 5
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6,
-            "balance": 0.333
+            "n": 5,
+            "balance": 0.4
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -5093,7 +5095,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "neutral",
+            "company": "missing",
             "setup": "missing",
             "flow": "bad"
           },
@@ -5144,31 +5146,31 @@
           },
           "marks_cell": "\u2014 \u2014 \u26aa",
           "condition": {
-            "tone": "neutral",
+            "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 0,
-            "n": 6
+            "n": 5
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 5,
+            "balance": 0.6
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udfe1",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -5181,7 +5183,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "neutral",
+            "company": "missing",
             "setup": "missing",
             "flow": "neutral"
           },
@@ -7581,21 +7583,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7,
-            "balance": 0.429
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -7603,7 +7605,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7669,21 +7671,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7,
-            "balance": 0.429
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -7691,7 +7693,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7755,23 +7757,23 @@
           },
           "marks_cell": "\u2014 \ud83d\udea8 \u2014",
           "condition": {
-            "tone": "neutral",
+            "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 1,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 1,
-            "n": 7,
-            "balance": 0.286
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "neutral",
@@ -7779,7 +7781,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7845,21 +7847,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7,
-            "balance": 0.429
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -7867,7 +7869,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -9939,29 +9941,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6
+            "n": 5
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6,
-            "balance": 0.333
+            "n": 5,
+            "balance": 0.4
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -9974,7 +9976,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "neutral",
+            "company": "missing",
             "setup": "missing",
             "flow": "bad"
           },
@@ -10295,29 +10297,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6
+            "n": 5
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 1,
             "bad": 1,
-            "n": 6,
-            "balance": 0.333
+            "n": 5,
+            "balance": 0.4
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -10330,7 +10332,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "neutral",
+            "company": "missing",
             "setup": "missing",
             "flow": "bad"
           },
@@ -10471,31 +10473,31 @@
           },
           "marks_cell": "\u2014 \u2014 \u26aa",
           "condition": {
-            "tone": "neutral",
+            "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 0,
-            "n": 6
+            "n": 5
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 5,
+            "balance": 0.6
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udfe1",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -10508,7 +10510,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "neutral",
+            "company": "missing",
             "setup": "missing",
             "flow": "neutral"
           },
@@ -13131,21 +13133,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7,
-            "balance": 0.429
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -13153,7 +13155,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14288,21 +14290,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7,
-            "balance": 0.429
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -14310,7 +14312,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14466,21 +14468,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 4,
+            "neutral": 3,
             "bad": 0,
-            "n": 7,
-            "balance": 0.429
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -14488,7 +14490,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14642,23 +14644,23 @@
           },
           "marks_cell": "\u2014 \ud83d\udea8 \u2014",
           "condition": {
-            "tone": "neutral",
+            "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 1,
-            "n": 7
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 2,
             "bad": 1,
-            "n": 7,
-            "balance": 0.286
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "neutral",
@@ -14666,7 +14668,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "neutral",
+            "judge": "missing",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
