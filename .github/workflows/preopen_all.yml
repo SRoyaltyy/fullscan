@@ -1,53 +1,10 @@
 name: Pre-Open ALL (predictive one-shot)
 
-# One-shot predictive write that must land before 09:30 ET.
-# Sequential. ECS does Grok-primary/DeepSeek-fallback news/events/predicts.
-# It does NOT scrape
-# live Finviz HTML (Aliyun 403s public finviz.com).
-#
-#   [GH-hosted ubuntu-latest finviz_preopen_scrape.yml ~05:40 ET:
-#      Elite digest + map heat overlay (tape/calendar)]
-#   → news parse → events + catcher (no carry) → news judge
-#   → morning captain refresh
-#   → news actions
-#   → catalyst dossiers (layer 3 on identified names)
-#   → general predict → 11 sector predicts → sector board
-#   → output_qc (regex) → Grok reads the MD/JSON as text (one call)
-#   → workflow check
-#
-# Industry groups + exhaustive captain research run at 22:00 ET
-# (map_heat_postclose, still ECS). Missing last-night baseline is WARN
-# (morning_bootstrap), not a day-fail. Empty futures tape IS a day-fail.
-#
-# CLOCK:
-#   1. ECS systemd timer at 05:55 America/New_York (DST-correct). Primary.
-#   2. This workflow's GitHub cron at 09:55 UTC = 05:55 EDT. Backup.
-#      flock /tmp/fullscan-preopen.lock: if systemd already owns the box,
-#      this job WAITS (up to 4h) then persist-restores + skip-if-good +
-#      pushes. If the timer was never enabled, GitHub still starts the
-#      ECS runner on time instead of waiting for orchestrator 06:50 ET.
-#   3. workflow_dispatch + orchestrator last-chance after that.
-#
-# GitHub cron is UTC and DST-blind. After US falls back to EST, 09:55 UTC
-# is 04:55 ET — too early, harmless (python still runs). systemd is the
-# DST-correct clock; this cron is insurance until the timer is proven live.
-#
-# NOT in this job (they MUST still run later on their own crons +
-# orchestrator guard): outcome/reflect, learn_cycle, deepthink, weekly,
-# weather, AB, stock book, paper dashboard.
-#
-# Skip-if-good: quality files for THIS day are not overwritten.
-# 09:25 ET cutoff: late starts refuse new predictive writes. Clock
-# enable + git push of 01_daily/_ecs_clock.md still run so a heal
-# dispatch can prove the timer and the GIT_DIR push path.
-#
-# OpenClaw per-call timeout is 3 hours so a long Grok research turn is
-# not killed as a 9-minute stub. Job budget is 6 hours.
+# CLOCK: ECS systemd timer 05:55 America/New_York only.
+# No GitHub cron. Orchestrator does not re-dispatch this job.
+# Skip-if-good is file QC only (src.skip_if_good) — no Grok/DeepSeek.
 
 on:
-  schedule:
-    # 05:55 EDT. Backup if systemd timer is not enabled on the box.
-    - cron: "55 9 * * 1-5"
   workflow_dispatch:
     inputs:
       runner:
@@ -73,7 +30,7 @@ permissions:
 
 concurrency:
   group: preopen-all
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   preopen:
@@ -91,49 +48,37 @@ jobs:
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
           exec 9>/tmp/fullscan-preopen.lock
           if flock -n 9; then
-            echo "lock is free (this is a backup dispatch)"
+            echo "lock is free"
             flock -u 9 || true
           else
-            echo "ECS systemd job holds /tmp/fullscan-preopen.lock — waiting up to 4h, then persist-restore + push"
-            if flock -w 14400 9; then
-              echo "lock released; GH continues (skip-if-good, then push)"
-              echo "waited_for_lock=yes" >> "$GITHUB_ENV"
-              flock -u 9 || true
-            else
-              echo "lock still held after 4h — backing off"
-              echo "skip=yes" >> "$GITHUB_ENV"
-            fi
+            echo "ECS systemd job holds the lock — backing off"
+            echo "skip=yes" >> "$GITHUB_ENV"
           fi
 
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
         with:
-          # Do not git-clean untracked 01_daily files. Skip-if-good reads
-          # the work tree; a clean here is how a finished day gets rewritten.
           clean: false
+
+      - name: Skip if morning packet already on disk (no LLM)
+        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          if python3 -m src.skip_if_good --job preopen_all --date "$DATE"; then
+            echo "Morning packet already on disk — no Grok/DeepSeek"
+            echo "skip_python=yes" >> "$GITHUB_ENV"
+          fi
 
       - name: Raise OpenClaw timeouts + enable 05:55 timer if missing
         if: env.skip != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           export HOME="${FULLSCAN_HOME:-/home/gha}"
           chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
-            scripts/ecs_map_postclose.sh \
-            scripts/safe_git_push.sh || true
+            scripts/ecs_map_postclose.sh scripts/safe_git_push.sh || true
           bash scripts/ensure_ecs_clock.sh
 
       - name: Gate — weekend / past cutoff
@@ -141,12 +86,12 @@ jobs:
         run: |
           DOW=$(TZ=America/New_York date +%u)
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "DOW=$DOW ET_HM=$ET_HM waited_for_lock=${waited_for_lock:-no}"
+          echo "DOW=$DOW ET_HM=$ET_HM"
           if [ "$DOW" -ge 6 ]; then
             echo "Weekend — pre-open ALL skipped."
             echo "skip=yes" >> "$GITHUB_ENV"
-          elif [ "$ET_HM" -ge 925 ] && [ "${waited_for_lock:-no}" != "yes" ]; then
-            echo "past 09:25 ET — skip python (no rewrite); still commit clock status"
+          elif [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — skip python"
             echo "skip_python=yes" >> "$GITHUB_ENV"
           fi
 
@@ -171,14 +116,8 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
-          # Preserve the pre-open run when Grok is unavailable or out of credits.
           GROK_ONLY: "0"
           FINVIZ_SKIP_LIVE: "1"
         run: |
@@ -186,7 +125,7 @@ jobs:
           export HOME="${FULLSCAN_HOME:-/home/gha}"
           exec 9>/tmp/fullscan-preopen.lock
           if ! flock -n 9; then
-            echo "ECS systemd job grabbed the lock after checkout — backing off"
+            echo "ECS systemd job grabbed the lock — backing off"
             exit 0
           fi
           DATE="${{ github.event.inputs.run_date }}"
@@ -196,7 +135,6 @@ jobs:
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
-          echo "OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT"
           python -m src.run_preopen_all "${ARGS[@]}"
 
       - name: Show QC
@@ -204,12 +142,8 @@ jobs:
         run: |
           D="${{ github.event.inputs.run_date }}"
           D="${D:-$(TZ=America/New_York date +%F)}"
-          echo "======== preopen QC $D ========"
           python -m src.output_qc --date "$D" --preopen || true
-          echo "======== status ========"
           cat "01_daily/${D}_preopen_status.md" 2>/dev/null || true
-          echo "======== grok review ========"
-          cat "01_daily/${D}_grok_review.md" 2>/dev/null || true
 
       - name: Commit predictive artifacts
         if: always() && env.skip != 'yes'
@@ -217,23 +151,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           export HOME="${FULLSCAN_HOME:-/home/gha}"
-          export GIT_TERMINAL_PROMPT=0
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
-          git config --global --add safe.directory "$(pwd)"
-          git config --global --add safe.directory '*'
           PATHS=(01_daily/_ecs_clock.md)
           if [ "${skip_python:-}" != "yes" ]; then
-            PATHS+=(
-              01_daily/general/ 01_daily/sectors/ 01_daily/events
+            PATHS+=(01_daily/general/ 01_daily/sectors/ 01_daily/events
               01_daily/news/ 01_daily/map_heat/ 01_daily/catalyst/
-              data/catalyst/
-              01_daily/_transcripts/ 01_daily/_channel1/
+              data/catalyst/ 01_daily/_transcripts/ 01_daily/_channel1/
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
               01_daily/*_grok_review.json 01_daily/*_grok_review.md
-              02_lessons/ 03_scoreboard/
-            )
+              02_lessons/ 03_scoreboard/)
           fi
           bash scripts/safe_git_push.sh \
             "auto: pre-open ALL [$(date -u +%F_%H%M)]" \
