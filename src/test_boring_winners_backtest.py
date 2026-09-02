@@ -3,7 +3,15 @@ from __future__ import annotations
 
 import pandas as pd
 
-from src.boring_winners_backtest import a_printed, pick_seats, pool_mask
+from src.boring_winners_backtest import (
+    SEATS,
+    SECTOR_CAP,
+    a_printed,
+    annotate_actions,
+    pick_seats,
+    pool_mask,
+    short_pool_mask,
+)
 
 
 def _row(**kw):
@@ -21,7 +29,9 @@ def _row(**kw):
         sma20_b="above",
         B_and=False,
         A=False,
+        A_bad=False,
         score=0,
+        inv_score=0,
         points=10,
         n_red=0,
         relvol_rk=1,
@@ -30,6 +40,11 @@ def _row(**kw):
     )
     base.update(kw)
     return base
+
+
+def test_defaults_are_25_by_6():
+    assert SEATS == 25
+    assert SECTOR_CAP == 6
 
 
 def test_fallback_band_when_no_a_no_blue():
@@ -54,6 +69,17 @@ def test_a_beats_blue_when_cameras_printed():
     assert a_printed(g) is True
 
 
+def test_blue_fallback_needs_enough_names_for_seat_count():
+    rows = [_row(Ticker=f"B{i}", blue=True, score=3) for i in range(15)]
+    rows.append(_row(Ticker="BAND", B_and=True, score=2))
+    g = pd.DataFrame(rows)
+    _, rule25 = pool_mask(g, seats=25)
+    assert rule25 == "Band"
+    mask15, rule15 = pool_mask(g, seats=15)
+    assert rule15 == "blue"
+    assert set(g.loc[mask15, "Ticker"]) == {f"B{i}" for i in range(15)}
+
+
 def test_sector_cap_and_score_order():
     rows = []
     for i in range(6):
@@ -64,8 +90,60 @@ def test_sector_cap_and_score_order():
     assert list(top["Ticker"]) == ["H0", "H1", "FIN", "H2", "H3"]
 
 
+def test_pick_seats_fills_25_with_sector_cap_6():
+    rows = []
+    for sec, prefix in (("Health", "H"), ("Tech", "T"), ("Energy", "E"), ("Fin", "F"), ("Util", "U")):
+        for i in range(8):
+            rows.append(_row(Ticker=f"{prefix}{i}", sector_name=sec, score=20 - i, points=10))
+    g = pd.DataFrame(rows)
+    top = pick_seats(g, pd.Series([True] * len(g)))
+    assert len(top) == 25
+    assert top.groupby("sector_name").size().max() <= 6
+
+
+def test_turnover_buy_hold_sell():
+    actions, bought, sold, held = annotate_actions({"AAA", "BBB"}, ["BBB", "CCC"])
+    assert actions == ["hold", "buy"]
+    assert bought == ["CCC"]
+    assert sold == ["AAA"]
+    assert held == ["BBB"]
+    actions0, bought0, sold0, held0 = annotate_actions(None, ["AAA"])
+    assert actions0 == ["buy"]
+    assert bought0 == ["AAA"]
+    assert sold0 == []
+    assert held0 == []
+
+
+def test_short_pool_prefers_fade_then_bad_a():
+    fade = pd.DataFrame([
+        _row(Ticker="FD", fade_x=True, inv_score=3),
+        _row(Ticker="OK", A=True, ab="good", A_bad=False),
+    ])
+    mask, rule = short_pool_mask(fade)
+    assert rule == "fade"
+    assert set(fade.loc[mask, "Ticker"]) == {"FD"}
+
+    bad = pd.DataFrame([
+        _row(Ticker="BD", ab="bad", A_bad=True, inv_score=2),
+        _row(Ticker="OK", ab="good", A=True),
+    ])
+    mask, rule = short_pool_mask(bad)
+    assert rule == "A_bad"
+    assert set(bad.loc[mask, "Ticker"]) == {"BD"}
+
+    empty = pd.DataFrame([_row(Ticker="OK")])
+    mask, rule = short_pool_mask(empty)
+    assert rule == "none"
+    assert not bool(mask.any())
+
+
 if __name__ == "__main__":
+    test_defaults_are_25_by_6()
     test_fallback_band_when_no_a_no_blue()
     test_a_beats_blue_when_cameras_printed()
+    test_blue_fallback_needs_enough_names_for_seat_count()
     test_sector_cap_and_score_order()
+    test_pick_seats_fills_25_with_sector_cap_6()
+    test_turnover_buy_hold_sell()
+    test_short_pool_prefers_fade_then_bad_a()
     print("ok")
