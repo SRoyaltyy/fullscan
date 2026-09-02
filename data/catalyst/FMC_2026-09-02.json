@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2026-07-29\",\n    \"description\": \"FMC Corp (FMC) reported Q2 2026 revenue of $867 million and cut full-year 2026 revenue guidance excluding India to $3.50\u2013$3.70 billion.\",\n    \"evidence_excerpt\": \"\\\"Revenue excluding India lowered to a range of $3.50 billion to $3.70 billion, a decline of 7 percent at the midpoint versus 2025\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/fmc-corporation-reports-second-quarter-2026-results-with-adjusted-ebitda-ab",
+  "ticker": "FMC",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-10-01\",\n    \"description\": \"Corteva (NYSE: CTVA) announced a Board-approved plan to separate into two independent public companies via a tax-free spin-off of its Seed business (SpinCo) from Crop Protection (New Corteva), expected in the second half of 2026.\",\n    \"evidence_excerpt\": \"\\\"Board of Directors has unanimously approved a plan to separate the company into two independent, publicly traded companies\\\"\",\n    \"source_urls\": [\n      \"https://www.nasdaq.com/press",
+  "ticker": "CTVA",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

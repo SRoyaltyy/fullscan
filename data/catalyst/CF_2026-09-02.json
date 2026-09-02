@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-04-08\",\n    \"description\": \"CF Industries Holdings Inc (CF) formed a joint venture with JERA and Mitsui to develop a world-scale low-carbon ammonia facility at its Blue Point Complex in Louisiana.\",\n    \"evidence_excerpt\": \"\\\"announced the formation of a joint venture (JV) with JERA Co., Inc. (Japan\u2019s largest energy company) and Mitsui & Co.\\\"\",\n    \"source_urls\": [\n      \"https://www.reuters.com/sustainability/climate-energy/cf-industries-forms-jv-4-billion-low-car",
+  "ticker": "CF",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

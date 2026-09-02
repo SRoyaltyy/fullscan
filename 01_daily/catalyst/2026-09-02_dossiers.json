@@ -1,0 +1,167 @@
+{
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T08:12:59.172502-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "CTVA",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs"
+    },
+    {
+      "ticker": "CF",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs"
+    },
+    {
+      "ticker": "FMC",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs"
+    },
+    {
+      "ticker": "IPI",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "CTVA",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "CF",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "FMC",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "IPI",
+      "role": "override_captain",
+      "why": "OVERRIDE Agricultural Inputs",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    }
+  ]
+}

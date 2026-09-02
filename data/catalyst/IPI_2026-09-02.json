@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-07-02\",\n    \"description\": \"The New Mexico Supreme Court upheld rulings that Intrepid Potash Inc (IPI) had abandoned the bulk of its Pecos River water rights.\",\n    \"evidence_excerpt\": \"\\\"On July 2, 2025, the New Mexico Supreme Court (Case No. S-1-SC-40182) upheld lower court rulings finding abandonment\\\"\",\n    \"source_urls\": [\n      \"https://law.justia.com/cases/new-mexico/supreme-court/2025/s-1-sc-40182.html\",\n      \"https://www.leagle.com/decision/innmco202507023",
+  "ticker": "IPI",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

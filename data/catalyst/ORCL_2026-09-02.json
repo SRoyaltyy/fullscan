@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-06-11\",\n    \"description\": \"Oracle Corp (ORCL) reported FY2025 Q4 revenue of $15.9 billion, up 11%, with non-GAAP EPS of $1.70 and full-year revenue of $57.4 billion.\",\n    \"evidence_excerpt\": \"\\\"Q4 Total Revenue $15.9 billion, up 11%\\\"\",\n    \"source_urls\": [\"https://www.oracle.com/news/announcement/q4fy25-earnings-release-2025-06-11/\"],\n    \"confidence\": 95\n  },\n  {\n    \"event_date\": \"2025-07-07\",\n    \"description\": \"The U.S. GSA announced a OneGov agreement giving",
+  "ticker": "ORCL",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "earnings"
+}

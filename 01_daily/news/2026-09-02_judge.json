@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "mixed",
+  "hawkish",
+  "hawkish",
+  "mixed",
+  "hawkish"
+ ],
+ "sector_tilts": {
+  "Healthcare": "bullish"
+ },
+ "tickers": {
+  "XLV": 4.0,
+  "AMGN": 5.5,
+  "XLK": -1.5,
+  "ADI": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=4\nMACRO fed_path: [hawkish] Warsh JH puts September hike on the table; yields up, SPX beta pressured (regime/1d-1w)\nMACRO geo_oil: [mixed] US-Iran stalemate vs Iran Hormuz reopen terms; futures flat-to-lower (session/1d-1w)\nMACRO inflation_ag: [hawkish] Corn/wheat 3-year highs reinforce inflation warning (session/1d-1w)\nSECTOR precious_metals: [bearish] Gold \u22123% on hike odds, not a geo hedge (GDX/XLB miners)\nSECTOR healthcare: [bullish] AMGN Repatha Ph3 mortality \u221220%; CV/XLV sympathy (XLV)\nSECTOR tech_hardware: [mixed] ADI AI-DC upgrades vs APH/Fabrinet + duration hit (XLK/SMH)\nINTERACTION: Warsh + Hormuz stalemate + ag spike = one inflation/risk-off stack; do not buy semis/software on AI/beat into hike repricing\nWATCH: Hormuz reopen terms can fade the geo premium only if oil confirms; gold/miners follow real yields",
+ "date": "2026-09-02"
+}

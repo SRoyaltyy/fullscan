@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-03-17\",\n    \"description\": \"Energy Fuels signed a strategic MOU with POSCO International to collaborate on a non-China rare earth magnet supply chain linking UUUU NdPr oxide to POSCO EV traction motor cores.\",\n    \"evidence_excerpt\": \"\\\"signing of a strategic Memorandum of Understanding (MOU) with South Korea-based POSCO International\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/us-based-energy-fuels-and-south-korea-based-posco-internatio",
+  "ticker": "UUUU",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

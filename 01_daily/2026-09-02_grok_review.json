@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T09:29:05.134838-04:00",
+  "ok": true,
+  "fails": [],
+  "notes": "Same-day 2026-09-02 core is human-usable: general DOWN/mild with MEMORY_CONFIRM/SCORES, a real events scan (scan_date today, catcher ran), news judge/parse, finviz digest, and a populated map-heat futures tape. Nine of eleven sector essays are complete with directions (technology and utilities missing; still >=8). map_heat research.md is missing while the captain baseline is present \u2014 enhancement only, not a core fail.",
+  "prompt_chars": 222859,
+  "reply_chars": 460,
+  "reviewer": "grok-4.6-text"
+}

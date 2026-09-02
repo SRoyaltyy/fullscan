@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "[\n  {\n    \"event_date\": \"2025-02-19\",\n    \"description\": \"UEC achieved first dried and drummed U3O8 at its Irigaray Central Processing Plant in Wyoming after restarting Christensen Ranch ISR operations.\",\n    \"evidence_excerpt\": \"\\\"successful processing, drying and drumming of uranium concentrates at the Company's Irigaray Central Processing Plant\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/uranium-energy-corp-achieves-key-production-milestone-with-drummed-uranium-co",
+  "ticker": "UEC",
+  "generated_at": "2026-09-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
