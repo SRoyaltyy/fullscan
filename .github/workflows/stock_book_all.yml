@@ -238,10 +238,21 @@ jobs:
             cp -a dashboard/. pages_out/dashboard/
             cp dashboard/index.html pages_out/index.html
             echo "Prepared pages_out with dashboard"
-            ls -la pages_out pages_out/dashboard
           else
             echo "WARN: dashboard/index.html missing — Pages deploy may be empty"
           fi
+          if [ -f dashboard/boring-winners/index.html ]; then
+            mkdir -p pages_out/dashboard/boring-winners
+            cp -a dashboard/boring-winners/. pages_out/dashboard/boring-winners/
+            echo "Kept dashboard/boring-winners"
+          fi
+          if [ -f dashboard/ticker-lookback/index.html ]; then
+            mkdir -p pages_out/dashboard/ticker-lookback
+            cp -a dashboard/ticker-lookback/. pages_out/dashboard/ticker-lookback/
+            echo "Kept dashboard/ticker-lookback"
+          fi
+          ls -la pages_out pages_out/dashboard
+          ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners missing from pages_out"
 
       - name: Deploy dashboard to GitHub Pages (gh-pages)
         if: always()
@@ -269,14 +280,16 @@ jobs:
             "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git -C "$TMP" push --force origin gh-pages
           echo "Published https://SRoyaltyy.github.io/fullscan/dashboard/"
+          echo "Published https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
           echo "Published https://SRoyaltyy.github.io/fullscan/"
 
       - name: Print fixed dashboard URL
         if: always()
         run: |
           echo "=============================================="
-          echo "Fixed Chrome link (after Pages is enabled):"
+          echo "Fixed Chrome links (after Pages is enabled):"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/"
+          echo "  https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
           echo "  https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Repo Settings → Pages → Source = Deploy from branch → gh-pages / (root)"
           echo "=============================================="
