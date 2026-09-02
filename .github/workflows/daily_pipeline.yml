@@ -2,9 +2,8 @@ name: Autonomous Daily Market Pipeline
 
 on:
   schedule:
-    # NO predict cron: Pre-Open ALL (06:00 ET) owns the morning predict.
-    # Predict here is dispatch-only (orchestrator fallback after 08:00 ET).
-    # ~17:03 ET — outcome + reflect (NOT predictive; allowed after the bell)
+    # NO predict cron: Pre-Open ALL owns the morning predict.
+    # ~17:03 ET — outcome + reflect only
     - cron: '3 21 * * 0-6'
   workflow_dispatch:
     inputs:
@@ -26,7 +25,7 @@ permissions:
 
 concurrency:
   group: daily-pipeline
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run-pipeline:
@@ -34,11 +33,23 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
+
+      - name: Skip if today's outcome already on disk (no LLM)
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          if python3 -m src.skip_if_good --job daily_pipeline --date "$DATE"; then
+            echo "Outcome already on disk — skip pipeline LLM"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install dependencies
+        if: env.skip != 'yes'
         run: pip install requests yfinance pandas openai ddgs psycopg2-binary
 
       - name: Decide stage
@@ -48,18 +59,15 @@ jobs:
             DOW=$(TZ=America/New_York date +%u)
             ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
             PLAN="none"
-
             if [ "$ET_HM" -ge 600 ] && [ "$ET_HM" -lt 925 ]; then
               PLAN="predict"
             elif [ "$ET_HM" -ge 1600 ]; then
               PLAN="outcome_reflect"
             fi
-
             if [ "$PLAN" = "predict" ] && [ "$DOW" -ge 6 ]; then
               PLAN="none"
               echo "Weekend — prediction skipped (heartbeat only)."
             fi
-
             echo "ET_HM=$ET_HM plan=$PLAN"
             echo "plan=$PLAN" >> "$GITHUB_OUTPUT"
           else
@@ -68,10 +76,10 @@ jobs:
 
       - name: Heartbeat (idle or weekend prediction skip)
         if: steps.stage.outputs.plan == 'none'
-        run: echo "✅ Pipeline cron fired at $(TZ=America/New_York date) — no execution scheduled."
+        run: echo "Pipeline cron fired — no execution scheduled."
 
       - name: Run prediction stage
-        if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
+        if: env.skip != 'yes' && (steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all')
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -90,7 +98,7 @@ jobs:
           python -m src.run_predict "${ARGS[@]}"
 
       - name: Run outcome stage
-        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all'
+        if: env.skip != 'yes' && (steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all')
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -104,17 +112,17 @@ jobs:
         run: python -m src.run_outcome ${DATE:+--date "$DATE"}
 
       - name: Run horizon grader (multi-timeframe T+h grades)
-        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all'
+        if: env.skip != 'yes' && (steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'outcome' || steps.stage.outputs.plan == 'all')
         env:
           DATE: ${{ github.event.inputs.run_date }}
         run: python -m src.horizon_grade ${DATE:+--date "$DATE"}
 
       - name: Wait 5 minutes before reflection (if outcome/reflect is planned)
-        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all'
+        if: env.skip != 'yes' && (steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'all')
         run: sleep 300
 
       - name: Run reflection stage
-        if: steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'reflect' || steps.stage.outputs.plan == 'all'
+        if: env.skip != 'yes' && (steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'reflect' || steps.stage.outputs.plan == 'all')
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -125,6 +133,7 @@ jobs:
         run: python -m src.run_reflect ${DATE:+--date "$DATE"}
 
       - name: Commit updated logs & scoreboard
+        if: env.skip != 'yes'
         run: |
           bash scripts/safe_git_push.sh \
             "auto: pipeline run [$(date -u +%F_%H%M)]" \
