@@ -1,0 +1,12 @@
+date,strat,rule,n_bought,bought,hold_1d_pnl,hold_2d_pnl,hold_1d_w,hold_1d_l,hold_2d_w,hold_2d_l,how
+2026-08-13,boring_winners_live15,Band,15,ABEO ANDG ATRA BETR BW BYND CRIS CVRX CYN DJCO EMPD EVTL GSUN KSCP LESL,-1.15,-4.18,7,7,2,10,A and blue thin; pool=short=high AND sma20=below
+2026-08-14,boring_winners_live15,blue,12,GLND NCMI STUB ANGI BMBL BORR FLNG IEP NEE NRG VST CEG,-2.87,-4.14,3,8,4,7,A missing; pool=blue
+2026-08-17,boring_winners_live15,blue,8,UAMY ALTO CC FMC AMAT AVGO AMD ASML,-3.14,-2.64,1,7,3,5,A missing; pool=blue
+2026-08-18,boring_winners_live15,Band,15,AOS BF-B COCO EVRG EXEL KMB LNT LNTH PBH PNW RRC TAP BKH CAPR ENVX,3.21,1.10,14,1,9,6,A and blue thin; pool=short=high AND sma20=below
+2026-08-19,boring_winners_live15,blue,15,LOGI WB AAL ALK AKAM MGM NYT SIRI WLY NEE NRG ARM JD LEN MAR,-1.73,-1.81,3,12,3,12,A missing; pool=blue
+2026-08-20,boring_winners_live15,A,15,HIMS PACB VERA FSLR GRND SOC RIOT NYT LZ TPR ETSY PLNT YETI JPM TEM,1.61,,10,5,,,A cameras printed; pool=ab|peer good
+2026-08-21,boring_winners_live15,A,15,CTRE EZPW RZLT TCBI DLO OLLI RR AKBA CRSP ABR ALLY ALT SOFI TMC ALTO,,,,,A cameras printed; pool=ab|peer good
+2026-08-27,boring_winners_live15,A,15,KD VYX AVT DAVE SLM DJT CBRL CXT DPZ IP PBI RVLV SFM XRX BRBR,,,,,A cameras printed; pool=ab|peer good
+2026-08-30,boring_winners_live15,A,15,UPBD BAND DXC PARR FND LULU POOL CRWD AGNC ES GLPI SBS ZIP GENI PEB,,,,,A cameras printed; pool=ab|peer good
+2026-08-31,boring_winners_live15,A,15,BMO AMZN RWAY VTS SDGR TCOM HDSN BAH CRM CVE CVX LIN OXY COST APD,,,,,A cameras printed; pool=ab|peer good
+2026-09-01,boring_winners_live15,A,15,CTGO GPRO IEP ANNX WOLF ADMA ALLO COGT DDD AVAV ENVX VRRM DKS FWRG GME,,,,,A cameras printed; pool=ab|peer good
