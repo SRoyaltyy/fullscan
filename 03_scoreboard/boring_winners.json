@@ -1,5 +1,5 @@
 {
-  "generated_from": "/workspace/03_scoreboard/feature_asof_panel.parquet",
+  "generated_from": "/home/runner/work/fullscan/fullscan/03_scoreboard/feature_asof_panel.parquet",
   "seats": 25,
   "sector_cap": 6,
   "rows": 47432,
