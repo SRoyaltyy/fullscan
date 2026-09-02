@@ -2,7 +2,7 @@
 
 
 
-**Step 0 — Setup.** Loaded 20,336 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.
+**Step 0 — Setup.** Loaded 22,690 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.
 
 
 
