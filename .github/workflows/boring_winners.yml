@@ -1,0 +1,61 @@
+name: Boring Winners Backtest
+
+# Seat the FEATURE_MINE high-n edges (A / blue / short+sma20) into a 15-name book.
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Full Feature Mine"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: boring-winners
+  cancel-in-progress: true
+
+jobs:
+  seat:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pandas pyarrow
+
+      - name: Tests
+        run: python -m src.test_boring_winners_backtest
+
+      - name: Seat
+        run: |
+          set -euo pipefail
+          test -s 03_scoreboard/feature_asof_panel.parquet
+          python -m src.boring_winners_backtest
+          test -s 03_scoreboard/BORING_WINNERS.md
+          test -s 03_scoreboard/boring_winners_picks.csv
+
+      - name: Publish
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: boring winners 15-seat backtest" \
+            03_scoreboard/BORING_WINNERS.md \
+            03_scoreboard/boring_winners.json \
+            03_scoreboard/boring_winners_picks.csv
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Boring winners"
+            echo
+            if [ -f 03_scoreboard/BORING_WINNERS.md ]; then
+              awk '/^## Session tape/,/^## 15-seat books/' 03_scoreboard/BORING_WINNERS.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
