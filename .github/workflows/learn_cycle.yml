@@ -1,8 +1,7 @@
 name: Learn Cycle
 
 # After outcomes exist: mine wins+losses → hypotheses → promote lessons →
-# rewrite mutable_policy.md + LEARNINGS.md (human digest of what changed
-# for every daily workflow).
+# rewrite mutable_policy.md + LEARNINGS.md.
 
 on:
   workflow_dispatch:
@@ -17,6 +16,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: learn-cycle
+  cancel-in-progress: true
+
 jobs:
   learn:
     runs-on: [self-hosted, ecs]
@@ -27,14 +30,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Skip if today's learnings already on disk (no LLM)
+        run: |
+          DATE="$(TZ=America/New_York date +%F)"
+          if python3 -m src.skip_if_good --job learn_cycle --date "$DATE"; then
+            echo "Learnings already on disk — skip LLM"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Install
+        if: env.skip != 'yes'
         run: pip install -r requirements.txt
 
       - name: Run learn_cycle
+        if: env.skip != 'yes'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -47,16 +60,16 @@ jobs:
           python -m src.learn_cycle --lookback "$LB"
           echo "======== LEARNINGS.md (digest) ========"
           head -160 03_scoreboard/LEARNINGS.md || true
-          echo "======== mutable_policy (head) ========"
-          head -80 00_grounding/mutable_policy.md || true
 
       - name: Lesson efficacy (did promoted lessons change outcomes?)
+        if: env.skip != 'yes'
         continue-on-error: true
         run: |
           python -m src.lesson_efficacy
           head -40 03_scoreboard/LESSON_EFFICACY.md || true
 
       - name: Commit policy + learnings + hypotheses
+        if: env.skip != 'yes'
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"

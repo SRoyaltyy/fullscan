@@ -4,16 +4,9 @@ name: xAI device reauth
 # publishes 01_daily/_xai_reauth.json, then exits so the ECS runner is not
 # held for 15 minutes.
 #
-# --check is a no-op when models status is already ok, so a 20-minute clock
-# is cheap. After the auth check, snapshot every runtime door (timeout 1800,
-# 64-char token, 401/403, dead process behind systemd active) so the phone
-# board is not a stale "everything is up".
-# The published grok.me app has no GitHub token and cannot dispatch.
+# Dispatch only. A 20-minute ECS cron queued behind Grok and burned the runner.
 
 on:
-  schedule:
-    # every 20 min; --check exits immediately if auth is still good
-    - cron: "7,27,47 * * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -27,7 +20,7 @@ permissions:
 
 concurrency:
   group: xai-reauth
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   reauth:
@@ -66,12 +59,8 @@ jobs:
             scripts/runtime_status.py scripts/enable_openclaw_chat.sh \
             scripts/ensure_openclaw_timeouts.sh || true
           FORCE="${{ github.event.inputs.force }}"
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            FORCE="false"
-          fi
+          FORCE="${FORCE:-false}"
           if [ "$FORCE" = "true" ]; then
-            # Foreground: GHA kills setsid orphans on job exit, which
-            # previously murdered openclaw before a user_code was pushed.
             python3 scripts/xai_device_reauth.py --daemon --force
           else
             python3 scripts/xai_device_reauth.py --check
