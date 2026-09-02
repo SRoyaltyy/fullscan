@@ -424,6 +424,8 @@ def fill_overlay(
         extra = p["source"] == "extra"
         sec = p["sector"]
         ind = p.get("industry") or ""
+        # Book names already passed the 1d BUY gates. Never drop them for
+        # our sector cap — extras are the only names that re-check 4/sector.
         if extra:
             if sec and sec_n.get(sec, 0) >= EXTRA_SECTOR_CAP:
                 continue
@@ -431,9 +433,6 @@ def fill_overlay(
                 continue
             if p.get("large") and large_n >= EXTRA_LARGE_CAP:
                 continue
-        elif cap and sec and sec_n.get(sec, 0) >= cap:
-            dropped.append({**p, "why": "sector_cap"})
-            continue
         if len(seats_out) >= seats:
             if not extra:
                 dropped.append({**p, "why": "swapped_for_mine_extra"})

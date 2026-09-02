@@ -210,6 +210,15 @@ def test_overlay_does_not_force_25_on_thin_book():
     assert len(seats) == 1
 
 
+def test_overlay_keeps_book_names_past_sector_cap():
+    rows = [_row(Ticker=f"H{i}", blue=True, mine_score=5, sector_name="Healthcare") for i in range(8)]
+    g = pd.DataFrame(rows)
+    buys = [f"H{i}" for i in range(8)]
+    seats, _, dropped = fill_overlay(g, buys, universe={}, cap=6)
+    assert [s["ticker"] for s in seats] == buys
+    assert dropped == []
+
+
 def test_overlay_rejects_ungated_extra():
     g = pd.DataFrame([
         _row(Ticker="BOOK", blue=True, mine_score=5),
@@ -260,6 +269,7 @@ if __name__ == "__main__":
     test_overlay_drops_fade_from_book()
     test_overlay_adds_gated_extra_and_swaps_weak_book()
     test_overlay_does_not_force_25_on_thin_book()
+    test_overlay_keeps_book_names_past_sector_cap()
     test_overlay_rejects_ungated_extra()
     test_short_overlay_is_sell_and_fade()
     test_short_is_fade_only()
