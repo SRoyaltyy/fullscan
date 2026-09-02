@@ -275,8 +275,8 @@ def install(ca) -> None:
         except Exception as e:
             print(f"  ❌ Step 1 parse failed: {e}")
             return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
-        if ca.CUTOFF_DATE:
-            raw_events = [e for e in raw_events if e.get("event_date", "9999") <= ca.CUTOFF_DATE]
+        raw_events = ca.filter_events_to_window(raw_events)
+        print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after window)")
 
         try:
             context_profile = ca.parse_json(step2_raw)

@@ -42,21 +42,25 @@ def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
     ]
     try:
         cur = conn.cursor()
-        for i, q in enumerate(queries):
+        try:
+            for i, q in enumerate(queries):
+                try:
+                    params = (hours, limit) if i == 0 else (limit,)
+                    cur.execute(q, params)
+                    rows = [{"source": s, "title": t, "url": u,
+                             "published_at": str(p)}
+                            for s, t, u, p in cur.fetchall()]
+                    if rows or i == 1:
+                        return rows
+                except Exception as e:  # noqa: BLE001
+                    conn.rollback()
+                    print(f"[db] news query variant {i} failed: {e}")
+            return []
+        finally:
             try:
-                params = (hours, limit) if i == 0 else (limit,)
-                cur.execute(q, params)
-                rows = [{"source": s, "title": t, "url": u,
-                         "published_at": str(p)}
-                        for s, t, u, p in cur.fetchall()]
                 cur.close()
-                if rows or i == 1:
-                    return rows
-            except Exception as e:  # noqa: BLE001
-                conn.rollback()
-                print(f"[db] news query variant {i} failed: {e}")
-        cur.close()
-        return []
+            except Exception:
+                pass
     finally:
         conn.close()
 
@@ -120,26 +124,30 @@ def news_between(
     ]
     try:
         cur = conn.cursor()
-        for i, q in enumerate(queries):
+        try:
+            for i, q in enumerate(queries):
+                try:
+                    cur.execute(q, (start, end, limit))
+                    rows = [
+                        {
+                            "source": s,
+                            "title": t,
+                            "url": u,
+                            "published_at": str(p) if p is not None else "",
+                            "collected_at": str(c) if c is not None else "",
+                        }
+                        for s, t, u, p, c in cur.fetchall()
+                    ]
+                    if rows:
+                        return rows
+                except Exception as e:  # noqa: BLE001
+                    conn.rollback()
+                    print(f"[db] news_between variant {i} failed: {e}")
+            return []
+        finally:
             try:
-                cur.execute(q, (start, end, limit))
-                rows = [
-                    {
-                        "source": s,
-                        "title": t,
-                        "url": u,
-                        "published_at": str(p) if p is not None else "",
-                        "collected_at": str(c) if c is not None else "",
-                    }
-                    for s, t, u, p, c in cur.fetchall()
-                ]
-                if rows:
-                    cur.close()
-                    return rows
-            except Exception as e:  # noqa: BLE001
-                conn.rollback()
-                print(f"[db] news_between variant {i} failed: {e}")
-        cur.close()
-        return []
+                cur.close()
+            except Exception:
+                pass
     finally:
         conn.close()
