@@ -20,7 +20,7 @@ jobs:
   seat:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -32,17 +32,23 @@ jobs:
         run: pip install pandas pyarrow
 
       - name: Tests
-        run: python -m src.test_boring_winners_backtest
+        run: |
+          python -m src.test_boring_winners_backtest
+          python -m src.test_boring_winners_lab
 
       - name: Seat
         run: |
           set -euo pipefail
           test -s 03_scoreboard/feature_asof_panel.parquet
           python -m src.boring_winners_backtest
+          python -m src.boring_winners_lab
           test -s 03_scoreboard/BORING_WINNERS.md
           test -s 03_scoreboard/latest_boring_winners.md
           test -s 03_scoreboard/boring_winners_picks.csv
           test -s 03_scoreboard/boring_winners_daily.csv
+          test -s 03_scoreboard/BORING_WINNERS_LAB.md
+          test -s 03_scoreboard/boring_winners_lab.json
+          test -s dashboard/boring-winners/index.html
           test -d 03_scoreboard/boring_winners
           test -n "$(ls 03_scoreboard/boring_winners/*.md)"
           test -s 01_daily/latest_boring_winners.md
@@ -58,6 +64,10 @@ jobs:
               03_scoreboard/boring_winners_picks.csv \
               03_scoreboard/boring_winners_daily.csv \
               03_scoreboard/boring_winners/*.md \
+              03_scoreboard/BORING_WINNERS_LAB.md \
+              03_scoreboard/boring_winners_lab.json \
+              03_scoreboard/boring_winners_lab_daily.csv \
+              dashboard/boring-winners/index.html \
               01_daily/*_boring_winners.md \
               01_daily/latest_boring_winners.md
           )
@@ -73,6 +83,12 @@ jobs:
             echo
             if [ -f 03_scoreboard/BORING_WINNERS.md ]; then
               awk '/^## Daily book returns/,/^## Daily short book/' 03_scoreboard/BORING_WINNERS.md
+            fi
+            echo
+            if [ -f 03_scoreboard/BORING_WINNERS_LAB.md ]; then
+              echo "### Scenario lab"
+              echo
+              awk '/^## Leaderboard/,/^## Daily overlay/' 03_scoreboard/BORING_WINNERS_LAB.md
             fi
             echo
             if [ -f 03_scoreboard/latest_boring_winners.md ]; then

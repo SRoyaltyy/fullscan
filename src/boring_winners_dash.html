@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boring Winners Lab — book × mine overlay</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --chip:#2a3450; --day:#121826; --gold:#fbbf24;
+ }
+ *{box-sizing:border-box}
+ html,body{overflow-x:hidden}
+ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}
+ h1{font-size:20px;margin:0 0 4px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .sub a{color:#93c5fd}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
+ canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ .legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+ .legend span{cursor:pointer;padding:2px 10px;border-radius:12px;border:1px solid #333;font-size:12px;user-select:none}
+ table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:12.5px}
+ th,td{padding:6px 8px;border-bottom:1px solid var(--line2);text-align:right;white-space:nowrap}
+ th{color:var(--mut);font-weight:600} td:first-child,th:first-child{text-align:left}
+ h2{font-size:15px;margin:18px 0 6px;color:#aeb9cf}
+ .note{color:var(--dim);font-size:11.5px;margin-top:8px}
+ .bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+ .bar select{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace}
+ .chip{cursor:pointer;padding:7px 12px;border-radius:999px;border:1px solid var(--chip);background:var(--card);color:#aeb9cf;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+ .how{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:16px 0 8px}
+ .how h2{margin:0 0 8px}
+ .how ol{margin:0;padding-left:18px}
+ .how li{margin:0 0 6px}
+ .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--gold)}
+ details{margin:14px 0}
+ details>summary{cursor:pointer;color:#aeb9cf;font-size:15px;font-weight:600}
+ .day{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
+ .day-h{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between;
+   padding:8px 12px;background:var(--day);border-bottom:1px solid var(--line);font-size:12px;color:#aeb9cf}
+ .day-h b{color:var(--fg);font-family:ui-monospace,Menlo,Consolas,monospace}
+ .ticks{padding:8px 12px;font-size:12px;color:var(--mut);line-height:1.6}
+ .ticks b{color:var(--fg);font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600}
+ @media (max-width:640px){
+   canvas{height:220px}
+   .wrap{padding:12px 12px 40px}
+   table{display:block;overflow-x:auto}
+ }
+</style></head><body><div class="wrap">
+<h1>Boring Winners Lab</h1>
+<div class="sub" id="gen"></div>
+<div class="cards" id="cards"></div>
+<div class="bar" id="filterBar"></div>
+<div class="bar" id="sleeveBar"></div>
+
+<div class="how">
+<h2>How a sleeve is built</h2>
+<ol>
+ <li><code>source</code> — <b>book</b> is the raw 1d BUY list. <b>overlay</b> keeps that list, drops fade, swaps stack-less names, adds gated extras. <b>mine</b> is the old 25-seat dump (comparison only).</li>
+ <li><code>seats</code> — 10 / 25 / 50. Thin BUY mornings stay thin unless extras can fill.</li>
+ <li><code>hold N</code> — a name bought on D cannot be sold until it has aged N sessions. Locked names keep their seat. Today's new buys only fill empties; if the book is full they are <b>skipped</b>.</li>
+ <li><code>color</code> — <b>blue</b> keeps 🔵 names only. <b>green</b> keeps panel <code>cond=good</code>.</li>
+ <li><code>HARD_RED</code> (lattice from 2026-08-31) — <b>stand-down</b> no new buys. <b>−5% fill</b> assumes we got 5% cheaper on new buys that morning. <b>limit −5%</b> only buys if that name's 1d is ≤ −5.</li>
+</ol>
+<p class="note">Live book is still <code>overlay 25 · daily</code>. This page is how we pick the next default. Paper blotter: <a id="paperLink" href="../">stock-book simulation</a>.</p>
+</div>
+
+<details class="curve-box" open>
+<summary>Equity curve — $10k start, equal-weight, clip ±30</summary>
+<canvas id="chart" height="280"></canvas>
+<div class="legend" id="legend"></div>
+</details>
+
+<h2>Leaderboard</h2>
+<table id="stats"></table>
+
+<h2 id="tapeTitle">Day tape</h2>
+<p class="mut" id="tapeHint" style="margin:0 0 8px"></p>
+<div id="tapeHost"></div>
+<div class="note">1d is close-to-close from that session. After 8/20, missing panel hops are filled from the next Finviz tape. HARD_RED −5% fill adds +5 to that day's 1d on <i>new</i> buys only.</div>
+</div>
+<script>
+const D = __DATA__;
+const COLORS = ["#60a5fa","#34d399","#fbbf24","#f472b6","#a78bfa","#f87171","#22d3ee","#fb923c","#4ade80","#e879f9","#94a3b8","#c084fc","#2dd4bf","#facc15","#fb7185","#38bdf8","#a3e635","#f97316"];
+const stats = D.stats || [];
+const keys = Object.keys(D.series || {});
+const hidden = new Set();
+let sleeve = (stats.find(s=>s.sleeve==="overlay_25_h1") || stats[0] || {}).sleeve || "overlay_25_h1";
+let filters = {source:"all", seats:"all", hold:"all", color:"all", hard_red:"all"};
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));}
+function money(n){if(n==null||n==="")return "—";return (n<0?"-":"")+"$"+Math.abs(n).toLocaleString(undefined,{maximumFractionDigits:0});}
+function pct(n){if(n==null)return "—";return (n*100).toFixed(1)+"%";}
+function num(n){if(n==null)return "—";return (n>=0?"+":"")+Number(n).toFixed(2);}
+function cls(n){if(n==null)return "mut";return n>0?"pos":n<0?"neg":"mut";}
+
+function passing(){
+  return stats.filter(s=>{
+    if(filters.source!=="all" && s.source!==filters.source) return false;
+    if(filters.seats!=="all" && String(s.seats)!==String(filters.seats)) return false;
+    if(filters.hold!=="all" && String(s.hold)!==String(filters.hold)) return false;
+    if(filters.color!=="all" && s.color!==filters.color) return false;
+    if(filters.hard_red!=="all" && s.hard_red!==filters.hard_red) return false;
+    return true;
+  });
+}
+
+function renderFilters(){
+  const bar=document.getElementById("filterBar");
+  const opts = [
+    ["source",["all","book","overlay","mine"]],
+    ["seats",["all","10","25","50"]],
+    ["hold",["all","1","2","3","5"]],
+    ["color",["all","blue","green"]],
+    ["hard_red",["all","none","stand_down","haircut_5","limit_5"]],
+  ];
+  bar.innerHTML=opts.map(([k,vs])=>`<select data-k="${k}">`+vs.map(v=>`<option value="${v}" ${filters[k]===v?"selected":""}>${k}: ${v}</option>`).join("")+`</select>`).join("");
+  bar.querySelectorAll("select").forEach(el=>{
+    el.onchange=()=>{filters[el.dataset.k]=el.value;
+      const ok=passing();
+      if(!ok.some(s=>s.sleeve===sleeve) && ok[0]) sleeve=ok[0].sleeve;
+      renderAll();
+    };
+  });
+}
+
+function renderChips(){
+  const bar=document.getElementById("sleeveBar");
+  const ok=passing();
+  bar.innerHTML=ok.map(s=>{
+    const on=s.sleeve===sleeve?"on":"";
+    return `<button type="button" class="chip ${on}" data-s="${s.sleeve}">${esc(s.label)}</button>`;
+  }).join("");
+  bar.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{sleeve=b.dataset.s;renderAll();});
+}
+
+function renderCards(){
+  const s=stats.find(x=>x.sleeve===sleeve)||{};
+  const spy=(D.series.SPY||[]).slice(-1)[0];
+  const cards=[
+    ["Sleeve", s.label||sleeve, "gold"],
+    ["Mean day", num(s.mean_day), cls(s.mean_day)],
+    ["Cum 1d", num(s.cum), cls(s.cum)],
+    ["P(loss day)", pct(s.p_loss_day), "mut"],
+    ["Final", money(s.final), cls((s.final||0)-D.capital)],
+    ["SPY $10k", money(spy), "mut"],
+  ];
+  document.getElementById("cards").innerHTML=cards.map(([k,v,c])=>`<div class="card">${esc(k)}<b class="${c}">${v}</b></div>`).join("");
+  document.getElementById("gen").innerHTML =
+    `Generated ${esc(D.generated||"")} · ${esc((D.dates||[])[0]||"")} → ${esc((D.dates||[]).slice(-1)[0]||"")} · $10k equal-weight · <a href="${esc(D.paper||"../")}">paper trading</a>`;
+}
+
+function visibleKeys(){
+  const ok=new Set(passing().map(s=>s.sleeve));
+  return keys.filter(k=>{
+    if(k==="SPY") return !hidden.has(k);
+    if(!ok.has(k)) return false;
+    if(sleeve && k!==sleeve && !hidden.has("others")) {
+      // always show selected; others if not hidden as a group — show selected + SPY + any not hidden
+    }
+    return !hidden.has(k);
+  });
+}
+
+function draw(){
+  const cv=document.getElementById("chart"),ctx=cv.getContext("2d");
+  const W=cv.width=cv.clientWidth*2,H=cv.height=560;
+  ctx.clearRect(0,0,W,H);
+  const vis=visibleKeys();
+  let lo=Infinity,hi=-Infinity;
+  vis.forEach(k=>(D.series[k]||[]).forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));
+  if(lo===Infinity)return;
+  const pad=(hi-lo)*0.06||1;lo-=pad;hi+=pad;
+  const X=i=>40+i/(Math.max(1,D.dates.length-1))*(W-70);
+  const Y=v=>H-30-(v-lo)/(hi-lo)*(H-60);
+  ctx.strokeStyle="#2a3450";ctx.fillStyle="#66708a";ctx.font="20px sans-serif";
+  for(let g=0;g<=4;g++){const v=lo+(hi-lo)*g/4;ctx.beginPath();ctx.moveTo(40,Y(v));ctx.lineTo(W-30,Y(v));ctx.stroke();
+    ctx.fillText("$"+(v/1000).toFixed(1)+"k",2,Y(v)+6);}
+  D.dates.forEach((d,i)=>{if(i%Math.ceil(D.dates.length/6)===0)ctx.fillText(d.slice(5),X(i)-18,H-8);});
+  vis.forEach(k=>{
+    const i=keys.indexOf(k);
+    ctx.strokeStyle=COLORS[i%COLORS.length];
+    ctx.lineWidth=k===sleeve?3:(k==="SPY"?2.2:1.4);
+    ctx.globalAlpha=k===sleeve||k==="SPY"?1:0.35;
+    ctx.setLineDash(k==="SPY"?[6,4]:[]);
+    ctx.beginPath();let started=false;
+    (D.series[k]||[]).forEach((v,j)=>{if(v==null)return;started?ctx.lineTo(X(j),Y(v)):ctx.moveTo(X(j),Y(v));started=true;});
+    ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;
+  });
+}
+
+function renderLegend(){
+  const leg=document.getElementById("legend");
+  const vis=visibleKeys();
+  leg.innerHTML="";
+  vis.forEach(k=>{
+    const i=keys.indexOf(k);
+    const s=document.createElement("span");
+    const st=stats.find(x=>x.sleeve===k);
+    s.textContent=st?st.label:k;
+    s.style.borderColor=COLORS[i%COLORS.length];
+    s.style.color=COLORS[i%COLORS.length];
+    s.style.opacity=hidden.has(k)?0.3:1;
+    s.onclick=()=>{hidden.has(k)?hidden.delete(k):hidden.add(k);renderAll();};
+    leg.appendChild(s);
+  });
+}
+
+function renderStats(){
+  const rows=passing().slice().sort((a,b)=>(b.mean_day??-999)-(a.mean_day??-999));
+  const head="<tr><th>Sleeve</th><th>src</th><th>n</th><th>hold</th><th>color</th><th>hard</th><th>mean day</th><th>cum</th><th>p(loss)</th><th>final</th></tr>";
+  const body=rows.map(s=>`<tr>
+    <td><button type="button" class="chip ${s.sleeve===sleeve?"on":""}" data-s="${s.sleeve}">${esc(s.label)}</button></td>
+    <td>${esc(s.source)}</td><td>${s.seats}</td><td>${s.hold}</td>
+    <td>${esc(s.color)}</td><td>${esc(s.hard_red)}</td>
+    <td class="${cls(s.mean_day)}">${num(s.mean_day)}</td>
+    <td class="${cls(s.cum)}">${num(s.cum)}</td>
+    <td>${pct(s.p_loss_day)}</td>
+    <td class="${cls((s.final||0)-D.capital)}">${money(s.final)}</td>
+  </tr>`).join("");
+  const tb=document.getElementById("stats");
+  tb.innerHTML=head+body;
+  tb.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{sleeve=b.dataset.s;renderAll();});
+}
+
+function renderTape(){
+  const days=(D.daily||{})[sleeve]||[];
+  document.getElementById("tapeHint").textContent = (stats.find(s=>s.sleeve===sleeve)||{}).label || sleeve;
+  document.getElementById("tapeHost").innerHTML=days.map(d=>{
+    const skip=(d.skipped||[]).map(x=>x.ticker||x).join(" ");
+    return `<div class="day">
+      <div class="day-h"><b>${esc(d.date)}</b>
+        <span>held ${d.n_held} · buy ${d.n_buy} · skip ${d.n_skip} · sell ${d.n_sell}</span>
+        <span class="${cls(d.day_pnl)}">${num(d.day_pnl)}</span>
+        <span>${money(d.equity)}</span>
+        ${d.hard_red?'<span class="gold">HARD_RED</span>':""}
+      </div>
+      <div class="ticks">
+        <div>held: ${(d.held||[]).map(t=>`<b>${esc(t)}</b>`).join(" ")||"—"}</div>
+        <div>bought: ${(d.bought||[]).map(t=>`<b class="pos">${esc(t)}</b>`).join(" ")||"—"}</div>
+        <div>sold: ${(d.sold||[]).map(t=>`<b class="neg">${esc(t)}</b>`).join(" ")||"—"}</div>
+        ${skip?`<div>skipped: ${esc(skip)}</div>`:""}
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function renderAll(){
+  renderFilters();
+  renderChips();
+  renderCards();
+  draw();
+  renderLegend();
+  renderStats();
+  renderTape();
+}
+window.addEventListener("resize",draw);
+renderAll();
+</script></body></html>
