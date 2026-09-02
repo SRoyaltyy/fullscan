@@ -1,6 +1,8 @@
 """Tiny unit tests for full_feature_mine helpers."""
 from __future__ import annotations
 
+import math
+
 import pandas as pd
 
 from src import full_feature_mine as ff
@@ -56,6 +58,21 @@ def test_summarize_empty():
     assert s["n"] == 0
 
 
+def test_summarize_skips_nan():
+    rows = [
+        {"ret_1d": 2.0, "xs_1d": 1.0},
+        {"ret_1d": float("nan"), "xs_1d": float("nan")},
+        {"ret_1d": None, "xs_1d": None},
+        {"ret_1d": -1.0, "xs_1d": -2.0},
+    ]
+    s = ff.summarize(rows, "1d")
+    assert s["n"] == 2
+    assert s["hit"] == 0.5
+    assert s["mean"] == 0.5
+    assert s["mean_xs"] == -0.5
+    assert ff._nfmt(float("nan")) == "\u2014"
+
+
 def test_panel_roundtrip_flags():
     df = pd.DataFrame([
         {"Ticker": "AAA", "date": "2026-08-20", "blue": True, "white": False,
@@ -78,5 +95,6 @@ if __name__ == "__main__":
     test_flag_filters()
     test_steady_fat_flags()
     test_summarize_empty()
+    test_summarize_skips_nan()
     test_panel_roundtrip_flags()
     print("ok")
