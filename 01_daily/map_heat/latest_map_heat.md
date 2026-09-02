@@ -5,36 +5,36 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7640.25 | -0.03% |
-| Nasdaq 100 (NQ) | 29039.75 | -0.29% |
-| Russell 2000 (ER2) | 2925.8 | +0.05% |
-| DJIA (YM) | 52920.0 | +0.17% |
+| S&P 500 (ES) | 7644.75 | +0.01% |
+| Nasdaq 100 (NQ) | 29070.75 | -0.20% |
+| Russell 2000 (ER2) | 2927.3 | +0.09% |
+| DJIA (YM) | 52930.0 | +0.19% |
 | VIX (VX) | 17.15 | -0.60% |
-| Crude Oil WTI (CL) | 89.92 | -0.37% |
-| Crude Oil Brent (QA) | 94.6 | -0.07% |
-| Natural Gas (NG) | 2.923 | +0.62% |
-| Heating Oil (HO) | 4.6491 | -0.59% |
-| Gasoline RBOB (RB) | 3.1831 | +1.47% |
-| Gold (GC) | 4380.4 | -0.34% |
-| Silver (SI) | 64.865 | -0.77% |
-| Copper (HG) | 6.611 | +0.19% |
-| Platinum (PL) | 1748.7 | -1.01% |
-| Palladium (PA) | 1335.0 | +0.33% |
-| USD (DX) | 99.715 | +0.08% |
+| Crude Oil WTI (CL) | 89.82 | -0.52% |
+| Crude Oil Brent (QA) | 94.53 | -0.13% |
+| Natural Gas (NG) | 2.937 | +1.21% |
+| Heating Oil (HO) | 4.6718 | -0.18% |
+| Gasoline RBOB (RB) | 3.1843 | +1.50% |
+| Gold (GC) | 4385.6 | -0.24% |
+| Silver (SI) | 65.26 | -0.18% |
+| Copper (HG) | 6.6145 | +0.21% |
+| Platinum (PL) | 1753.7 | -0.73% |
+| Palladium (PA) | 1336.0 | +0.44% |
+| USD (DX) | 99.71 | +0.08% |
 | EUR (6E) | 1.15845 | -0.10% |
-| JPY (6J) | 0.62705 | +0.34% |
-| GBP (6B) | 1.3477 | -0.27% |
-| AUD (6A) | 0.71475 | +0.03% |
-| CAD (6C) | 0.7191 | -0.15% |
-| CHF (6S) | 1.22895 | -0.37% |
-| NZD (6N) | 0.58245 | -1.17% |
+| JPY (6J) | 0.6272 | +0.37% |
+| GBP (6B) | 1.3483 | -0.23% |
+| AUD (6A) | 0.71495 | +0.03% |
+| CAD (6C) | 0.7189 | -0.19% |
+| CHF (6S) | 1.22905 | -0.38% |
+| NZD (6N) | 0.58225 | -1.23% |
 | 10 Year Note (ZN) | 107.421875 | +0.04% |
-| 5 Year Note (ZF) | 105.53125 | +0.04% |
-| 2 Year Note (ZT) | 102.5546875 | +0.03% |
-| 30 Year Bond (ZB) | 108.34375 | +0.09% |
-| Nikkei 225 (NKD) | 64070.0 | -1.23% |
-| DAX (DY) | 25889.0 | -0.35% |
-| Euro Stoxx 50 (EX) | 6371.0 | -0.03% |
+| 5 Year Note (ZF) | 105.515625 | +0.03% |
+| 2 Year Note (ZT) | 102.546875 | +0.02% |
+| 30 Year Bond (ZB) | 108.3125 | +0.06% |
+| Nikkei 225 (NKD) | 64140.0 | -1.17% |
+| DAX (DY) | 25895.0 | -0.35% |
+| Euro Stoxx 50 (EX) | 6373.0 | +0.00% |
 | Corn (ZC) | 537.75 | -1.51% |
 | Soybeans (ZS) | 1303.25 | -1.10% |
 | Wheat (ZW) | 775.75 | -0.86% |
@@ -42,17 +42,17 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 | Soybean Meal (ZM) | 340.4 | -1.53% |
 | Oats (ZO) | 377.0 | -1.18% |
 | Rough Rice (ZR) | 15.78 | -0.28% |
-| Coffee (KC) | 301.55 | -2.55% |
-| Sugar (SB) | 18.15 | -1.20% |
-| Cotton (CT) | 88.71 | -3.19% |
-| Cocoa (CC) | 6199.0 | -5.69% |
-| Orange Juice (JO) | 145.5 | +0.24% |
+| Coffee (KC) | 303.35 | -1.89% |
+| Sugar (SB) | 18.27 | -0.54% |
+| Cotton (CT) | 88.97 | -2.83% |
+| Cocoa (CC) | 6155.0 | -6.33% |
+| Orange Juice (JO) | 144.7 | -0.14% |
 | Lumber (LB) | 558.5 | -0.44% |
 | Live Cattle (LC) | 212.4 | -0.28% |
 | Lean Hogs (LH) | 83.7 | -0.03% |
 | Feeder Cattle (FC) | 316.05 | -0.51% |
-| Bitcoin (BTC) | 76940.0 | -0.77% |
-| Canola (RS) | 828.7 | -1.57% |
+| Bitcoin (BTC) | 76960.0 | -0.70% |
+| Canola (RS) | 829.7 | -1.41% |
 | Ethanol (ZK) | 2.0825 | +1.34% |
 
 ## CALENDAR
@@ -252,31 +252,31 @@ COLD (1w):
 - **Technology** -2.8% 1d -1.7% 1w · VGT, XLK, SMH
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 1 min **ASB** Angela M.W. Kelley to join Associated Bank as General Counsel (PR Newswire)
-- 1 min **CINF** The Cincinnati Insurance Company Chief Claims Officer Announces Retirement (PR Newswire)
-- 1 min **VRRM** Verra Mobility launches AI-driven Title & Registration solution, cutting fleet vehicle activation time up to 80% (PR Newswire)
-- 3 min **MMM** New 3M Cooling Film helps fleet and rail operators keep cabin interiors cooler and improve efficiency (PR Newswire)
-- 3 min **HWM,SPCX,CMI,FTAI,CAT** SpaceX Is Barging Into New Businesses and Dragging These Power Stocks Down (Barrons.com)
-- 4 min **CANF** Can-Fite Announces Exercise of Warrants for Approximately $4.0 Million in Gross Proceeds (GlobeNewswire)
-- 4 min **INTC,CRM,UBS,NVDA,AMZN** Why Is Nvidia Willing to Pay $14 Billion for Hugging Face? (Barrons.com)
-- 5 min **CCL** SEABOURN ANNOUNCES 138-DAY "2029 WORLD CRUISE: ICONIC ISLANDS & REMOTE HORIZONS" (PR Newswire)
-- 6 min **FCEL** FuelCell Stock Shut Down by Top-Line Whiff (Schaeffer's Research)
-- 6 min **BMRN** BioMarin to Participate in Upcoming Investor Conferences (PR Newswire)
-- 6 min **WDAY** Workday Signs a New State or Local Government Nearly Every Week as Agencies Move Off of Legacy Systems (PR Newswire)
-- 6 min **PHOS** Emerging Growth Research Issues Press Release Announcing New Flash Report on First Phosphate Corp. (ACCESSWIRE)
-- 6 min **DLPN** Dolphin Subsidiary The Digital Dept. Rolls Out Exclusive Ranch House for its Creators at LTK Con 2026 (ACCESSWIRE)
-- 6 min **CXDO** Crexendo Again Earns Number 1 G2 Rankings Across UCaaS, VoIP and AI Categories (ACCESSWIRE)
-- 6 min **BTTC** Black Titan Corporation Announces Full Conversion of Its Outstanding Convertible Note (ACCESSWIRE)
-- 6 min **VOXR** Vox Royalty Enters into Binding Agreement to Acquire the White Dam Gold Royalty in Australia (ACCESSWIRE)
-- 6 min **TDC** Teradata Brings Enterprise AI Directly to Microsoft OneLake (PR Newswire)
-- 6 min **SECZ** Securitize and Socios.com Partner to Develop Tokenized Equity Offerings for Professional Sports Teams (PR Newswire)
-- 6 min **IHG** Crowne Plaza by IHG Debuts New Flagship Property in the Heart of New York City (PR Newswire)
-- 6 min **CART** Instacart and World Market Announce Exclusive Partnership to Deliver Global-Inspired Products in as Fast as One Hour (PR Newswire)
-- 6 min **VIVK** VIVAKOR PROVIDES Q3 2026 REVENUE GUIDANCE OF APPROXIMATELY $270 MILLION (GlobeNewswire)
-- 6 min **LI** Li Auto Inc. Launches the New Li MEGA, a High-Tech Flagship MPV (GlobeNewswire)
-- 6 min **LUD** Luda Technology Group Subsidiary Secures One-Year Steel Products Sales Contract with Contract Value of approximately $17.8 Million (GlobeNewswire)
-- 6 min **HCWB** HCW Biologics Strengthens U.S. Patent Estate for Its Lead Clinical-Stage Immunotherapeutic HCW9302 as Alopecia Areata Treatment (GlobeNewswire)
-- 6 min **GRML** Greenland Mines Completes Acquisition of World-Class Rare Earth Nd-Pr Magnet and Defense Mine Asset Following Greenland Government Approval (GlobeNewswire)
+- 7 min **BRK-A** Berkshire CEO Greg Abel warns of U.S. data center backlash (Quartz)
+- 7 min **MAMO** Massimo Group to Unveil New Warrior 1500 UTV at Equip Exposition and Showcase Next-Generation Product Platform at 2026 SEMA Show (PR Newswire)
+- 7 min **RKLB** Blue Origin Beats Rocket Lab, Wins $700 Million Mars Comms Contract (Investor's Business Daily)
+- 7 min **AVEX** Kaplan Fox Urges Investors of AEVEX Corp. (AVEX) with Significant Losses to Seek a Leadership Role Before October 20, 2026 (Newsfile)
+- 8 min **AAPL,C** Apple's Annual iPhone Event Is a Week Away. Why It's More Important Than Ever. (Barrons.com)
+- 10 min **HOOD** HOOD Stock Price Target Hiked On Football Prediction Market Boom  Robinhood Chains CASHCAT Hits Record High (Stocktwits)
+- 10 min **VTIX** Virtuix to Showcase AI-Enabled Counter-Drone Training System to U.S. Army Leaders at Maneuver Warfighter Conference (GlobeNewswire)
+- 10 min **BF-B,TROW,MKC,MDT,PG** 6 Safe Dividend Aristocrats Yielding Up to 4.7% to Buy as Tech Cools Off (Barrons.com)
+- 10 min **AOUT** American Outdoor Brands Inc (AOUT) Q1 2027 Earnings Report Preview: What To Expect (GuruFocus.com)
+- 11 min **BBCP** Earnings To Watch: Concrete Pumping Holdings Inc (BBCP) Q3 2026 -- GF Value Sees 13% Downside (GuruFocus.com)
+- 11 min **FJET,SIDU,LUNR,FLY,VOYG** Before Anything Flies to Space, It Has to Be Built, Tested, and Proven on the Ground, and That Quiet Bottleneck Is Becoming a Business (PR Newswire)
+- 11 min **MAMA** Earnings To Watch: Mama's Creations Inc (MAMA) Q2 2027 -- GF Value Sees 9% Downside (GuruFocus.com)
+- 12 min **UTI** Universal Technical Institute, Inc. Celebrates Opening of New San Antonio Campus (PR Newswire)
+- 12 min **CAT** Caterpillar and FieldAI Advance AI-Powered Industrial Innovation (PR Newswire)
+- 12 min **DH** Special Committee of Definitive Healthcare Board Confirms Receipt of Going-Private Proposal from Advent International (GlobeNewswire)
+- 12 min **CBAT** CBAK Energy Highlights Completed Nanjing Phase II Ramp-Up and Accelerating Global Demand Following Investor Conference (GlobeNewswire)
+- 12 min **EXLS** EXL announces Departure of Vivek Jetley, President and Head of Insurance, Healthcare and Life Sciences (GlobeNewswire)
+- 12 min **GCTK** Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego State University Fowler College of Business (Business Wire)
+- 12 min **OPAD** Offerpad Founder and CEO Brian Bair Recognized for Vision and Leadership in Housing (Business Wire)
+- 12 min **LTC** LTC's $200 Million Acquisition Accelerates SHOP Transformation (Business Wire)
+- 12 min **CMCSA** Comcast Reaches Construction Milestone in Latest Jackson County Expansion, Bringing Xfinity and Comcast Business Services to More Michigan Residents and Businesses (Business Wire)
+- 12 min **KFY** Korn Ferry to Report Quarterly Earnings via Live Webcast on September 9, 2026 (Business Wire)
+- 12 min **TSM** Could Apples foldable iPhone be a $14B opportunity? Morgan Stanley weighs in (Investing.com)
+- 13 min **APO** Citi Wealth appoints Liz McElherne to lead AIMS platform management (Private Banker International)
+- 13 min **RITR** Reitar's Jingxing HK and Cainiao Launch Global Strategic Cooperation (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
