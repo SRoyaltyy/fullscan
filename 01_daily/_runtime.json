@@ -1,8 +1,8 @@
 {
   "ok": false,
   "n_fail": 1,
-  "grok_busy": true,
-  "updated_at": "2026-09-02T05:47:57.680447-04:00",
+  "grok_busy": false,
+  "updated_at": "2026-09-02T09:35:35.331365-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -45,18 +45,18 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "SKIP",
-      "required": false,
-      "detail": "Grok job running \u2014 not poking the classroom",
+      "status": "OK",
+      "required": true,
+      "detail": "PONG model=openclaw/default",
       "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "SKIP",
-      "required": false,
-      "detail": "probe skipped",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
       "action": "none"
     },
     {
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "WARN",
-      "required": false,
-      "detail": "401 in last packet 2026-08-31_preopen_status.json, 2026-09-03_map_postclose_synthesis.json \u2014 not live",
+      "status": "OK",
+      "required": true,
+      "detail": "live PONG 200 \u2014 last packet 401 is history",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=queued systemd=exit-code",
+      "detail": "latest=cancelled",
       "action": "none"
     },
     {
@@ -164,9 +164,8 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-08-31_preopen_status.json, 2026-09-03_map_postclose_synthesis.json; 1800/timeout in 2026-09-03_map_postclose_captains_technology.json; DeepSeek fallback in 20",
+      "detail": "history \u2014 401 in 2026-08-31_preopen_status.json, 2026-09-02_predict.md; 1800/timeout in 2026-09-03_map_postclose_captains_technology.json; DeepSeek fallback in 2026-08-28_pipeline_",
       "action": "none"
     }
-  ],
-  "healed": []
+  ]
 }
