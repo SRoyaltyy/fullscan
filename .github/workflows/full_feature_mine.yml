@@ -1,0 +1,125 @@
+name: Full Feature Mine
+
+# Per-session as-of sheet for every printed name (like Top Gainer As-Of),
+# plus win-rate / mean-return mines across cameras, lookback marks
+# (🔵 blue / ⚪ white / 🚨 alarm / fade / cond / region), Finviz buckets,
+# quote-color Δ, insider clusters, peer RS, join-rank delta, AB, catalyst.
+#
+# Vintage: same-day Finviz and same-day book never color a cell.
+# Finviz numerics come from the prior session export.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+        type: string
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = latest book)"
+        required: false
+        default: ""
+        type: string
+      liquid:
+        description: "Restrict to mcap ≥ $100M and adv ≥ 500k when those cols exist"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: full-feature-mine
+  cancel-in-progress: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Overlay live daily files from main
+        run: |
+          git fetch origin main --depth=1
+          git checkout origin/main -- 01_daily data \
+            || echo "overlay skipped (already on main or paths missing)"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pandas pyarrow
+
+      - name: Unit tests
+        run: python -m src.test_full_feature_mine
+
+      - name: Build as-of panel and mine
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+          LIQUID: ${{ inputs.liquid }}
+        run: |
+          set -euo pipefail
+          ARGS=(--from-date "${FROM_DATE:-2026-08-13}")
+          [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
+          if [ "${LIQUID}" = "false" ]; then
+            ARGS+=(--no-liquid)
+          fi
+          python -m src.full_feature_mine "${ARGS[@]}"
+          test -s 03_scoreboard/FEATURE_ASOF.md
+          test -s 03_scoreboard/FEATURE_MINE.md
+          test -s 03_scoreboard/full_feature_mine.json
+
+      - name: Show leaderboards
+        if: always()
+        run: |
+          echo "======== FEATURE MINE ========"
+          if [ -f 03_scoreboard/FEATURE_MINE.md ]; then
+            awk '/^# Full feature mine/,/^## 2d — highest win rate/' \
+              03_scoreboard/FEATURE_MINE.md | head -n 140
+          else
+            echo "NO BOARD"
+          fi
+
+      - name: Publish
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: full feature as-of mine" \
+            03_scoreboard/FEATURE_ASOF.md \
+            03_scoreboard/FEATURE_MINE.md \
+            03_scoreboard/full_feature_mine.json \
+            03_scoreboard/feature_asof_panel.parquet \
+            data/feature_asof \
+            01_daily/*_feature_mine.md
+
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-feature-mine
+          path: |
+            03_scoreboard/FEATURE_ASOF.md
+            03_scoreboard/FEATURE_MINE.md
+            03_scoreboard/full_feature_mine.json
+            03_scoreboard/feature_asof_panel.parquet
+            data/feature_asof/
+
+      - name: Add links to run summary
+        if: always()
+        run: |
+          {
+            echo "## Full Feature Mine"
+            echo
+            echo "Per-day as-of list for every printed name, plus hit/mean mines."
+            echo "Includes 🔵 blue / ⚪ white / 🚨 alarm / fade, Finviz buckets, quote Δ, insider, peer RS, join, AB, catalyst."
+            echo
+            echo "Download the **full-feature-mine** artifact for daily CSVs + panel parquet."
+            echo
+            if [ -f 03_scoreboard/FEATURE_MINE.md ]; then
+              awk '/^## Base rate/,/^## 2d — highest win rate/' 03_scoreboard/FEATURE_MINE.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
