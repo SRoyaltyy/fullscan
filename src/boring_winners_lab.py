@@ -345,7 +345,13 @@ def render_md(lab: dict) -> str:
             f"| {d['date']} | {d['n_held']} | {d['n_buy']} | {d['n_skip']} | {d['n_sell']} "
             f"| {_ret(d['day_pnl'])} | {d['equity']:,.0f} |"
         )
-    lines += ["", "Live book is still `overlay_25_h1`. The lab is how we pick the next default.", ""]
+    lines += [
+        "",
+        "Live book is still `overlay_25_h1`. The lab is how we pick the next default.",
+        "",
+        "Notes: `haircut_5` assumes we actually got 5% cheaper on every new HARD_RED buy — that is an entry model, not a print. `hold 3d` is the more honest lift (less churn in the late-August grind). `blue only` lost because this window's 🔵 names were the energy tape.",
+        "",
+    ]
     return "\n".join(lines) + "\n"
 
 
