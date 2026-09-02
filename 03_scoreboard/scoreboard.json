@@ -7333,6 +7333,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-02",
+          "actual_pct": 0.33,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -13257,18 +13269,113 @@
         "B7_OIL_DOLLAR": 0.0
       },
       "leading_sum": -3.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7634.58,
+      "actual_close": 7666.6,
+      "actual_pct_change": 0.46,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.0,
+          "status": "neutral"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-02_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-7cb0aefedfd933d048b8b3e5843449f8",
+          "date_accessed": "2026-09-02",
+          "summary": "Official AP close tape matches Channel 1 SPX/Dow/NDX direction and magnitude (mild up).",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/adp-national-employment-report-private-sector-employment-increased-by-38-000-jobs-in-august-302867661.html",
+          "date_accessed": "2026-09-02",
+          "summary": "Pre-open ADP miss concentrated in manufacturing/professional services, with education/health carrying the headline.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://apnews.com/article/stocks-markets-iran-oil-bonds-27b78c349725ac744c96a6b8b8167bae",
+          "date_accessed": "2026-09-02",
+          "summary": "Cash-session AI-infra re-rating, not merely an after-hours blip.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html",
+          "date_accessed": "2026-09-02",
+          "summary": "Permanent FOMC voter reframed the week’s bond selloff as growth, not a mandate to hike immediately.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.local10.com/business/2026/09/02/wall-street-rises-as-tech-stocks-climb-and-oil-prices-bond-yields-hold-relatively-steady/",
+          "date_accessed": "2026-09-02",
+          "summary": "Cross-asset fingerprint is oil up, yields slightly down, AI split (Dell/NVDA up, PANW down).",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html",
+          "date_accessed": "2026-09-02",
+          "summary": "Independent confirmation of the 8:15 ET miss that the morning model left unscored.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.interactivebrokers.com/campus/traders-insight/ibkr-economic-landscape/weaker-than-expected-adp-jobs-alongside-williams-bessent-comments-halt-bond-pain/",
+          "date_accessed": "2026-09-02",
+          "summary": "Documents the competing (non-Dell) attribution and the 9-of-11 sector breadth.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/01/dell-q2-earnings-report-2027.html",
+          "date_accessed": "2026-09-02",
+          "summary": "Establishes that Wednesday’s cash melt-up started from a true overnight AI-infra shock the morning B1 sleeve netted to zero.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -13295,7 +13402,16 @@
           "confidence": 0.45
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Dell AI-server beat/FY raise (+15.8% cash) spilling into NVDA/AI-infra bid",
+      "key_interaction": "Dell AI print amplified by Williams’ “yields = AI-driven growth” frame, offset by leftover Hormuz/Brent $96 and still-majority hike odds — net looks like a calm +0.5% chop, not a one-cause day",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "PANW −9.3% on an AI-cyber beat; real estate red; oil up with stocks up; NDX trend vs SPX chop",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-02",

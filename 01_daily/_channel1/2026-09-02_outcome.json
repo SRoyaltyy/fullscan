@@ -1,0 +1,562 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-09-02T19:11:41.389861-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 5.27,
+      "delta_1d": 0.02,
+      "delta_1w": 0.1,
+      "delta_1m": 0.04
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 4.79,
+      "delta_1d": 0.04,
+      "delta_1w": 0.15,
+      "delta_1m": 0.09
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 2.44,
+      "delta_1d": 0.0,
+      "delta_1w": 0.12,
+      "delta_1m": 0.01
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 2.65,
+      "delta_1d": 0.02,
+      "delta_1w": -0.05,
+      "delta_1m": -0.13
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 3.66,
+      "delta_1d": -0.02,
+      "delta_1w": 0.0,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-09-03",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-09-02",
+      "current": 0.525,
+      "delta_1d": -0.2,
+      "delta_1w": -0.177,
+      "delta_1m": -1.726
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 167.08,
+      "delta_1d": -103.59,
+      "delta_1w": 5.21,
+      "delta_1m": -47.27
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-09-02",
+      "current": 15.2,
+      "delta_1d": -1.14,
+      "delta_1w": -0.25
+    },
+    "vix3m": {
+      "date": "2026-09-02",
+      "current": 17.73,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.857,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.23,
+    "ratio_ma20": 0.998
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-09-02",
+      "last": 90.75,
+      "pct_1d": 0.59
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-09-02",
+      "last": 95.32,
+      "pct_1d": 0.71
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-09-02",
+      "last": 4430.5,
+      "pct_1d": 1.9
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-09-02",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.09,
+      "pct_1m": -0.38
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-09-02",
+      "last": 7676.75,
+      "pct_1d": 0.44
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-09-02",
+      "last": 29184.25,
+      "pct_1d": 0.2
+    }
+  },
+  "finviz_futures_tape": {
+    "available": true,
+    "source": "01_daily/map_heat/2026-09-02_map_heat.json",
+    "rows": [
+      {
+        "ticker": "ES",
+        "label": "S&P 500",
+        "last": 7644.75,
+        "change": 0.01
+      },
+      {
+        "ticker": "NQ",
+        "label": "Nasdaq 100",
+        "last": 29070.75,
+        "change": -0.2
+      },
+      {
+        "ticker": "ER2",
+        "label": "Russell 2000",
+        "last": 2927.3,
+        "change": 0.09
+      },
+      {
+        "ticker": "YM",
+        "label": "DJIA",
+        "last": 52930.0,
+        "change": 0.19
+      },
+      {
+        "ticker": "VX",
+        "label": "VIX",
+        "last": 17.15,
+        "change": -0.6
+      },
+      {
+        "ticker": "CL",
+        "label": "Crude Oil WTI",
+        "last": 89.82,
+        "change": -0.52
+      },
+      {
+        "ticker": "QA",
+        "label": "Crude Oil Brent",
+        "last": 94.53,
+        "change": -0.13
+      },
+      {
+        "ticker": "NG",
+        "label": "Natural Gas",
+        "last": 2.937,
+        "change": 1.21
+      },
+      {
+        "ticker": "HO",
+        "label": "Heating Oil",
+        "last": 4.6718,
+        "change": -0.18
+      },
+      {
+        "ticker": "RB",
+        "label": "Gasoline RBOB",
+        "last": 3.1843,
+        "change": 1.5
+      },
+      {
+        "ticker": "GC",
+        "label": "Gold",
+        "last": 4385.6,
+        "change": -0.24
+      },
+      {
+        "ticker": "SI",
+        "label": "Silver",
+        "last": 65.26,
+        "change": -0.18
+      },
+      {
+        "ticker": "HG",
+        "label": "Copper",
+        "last": 6.6145,
+        "change": 0.21
+      },
+      {
+        "ticker": "PL",
+        "label": "Platinum",
+        "last": 1753.7,
+        "change": -0.73
+      },
+      {
+        "ticker": "PA",
+        "label": "Palladium",
+        "last": 1336.0,
+        "change": 0.44
+      },
+      {
+        "ticker": "DX",
+        "label": "USD",
+        "last": 99.71,
+        "change": 0.08
+      },
+      {
+        "ticker": "6E",
+        "label": "EUR",
+        "last": 1.15845,
+        "change": -0.1
+      },
+      {
+        "ticker": "6J",
+        "label": "JPY",
+        "last": 0.6272,
+        "change": 0.37
+      },
+      {
+        "ticker": "6B",
+        "label": "GBP",
+        "last": 1.3483,
+        "change": -0.23
+      },
+      {
+        "ticker": "6A",
+        "label": "AUD",
+        "last": 0.71495,
+        "change": 0.03
+      },
+      {
+        "ticker": "6C",
+        "label": "CAD",
+        "last": 0.7189,
+        "change": -0.19
+      },
+      {
+        "ticker": "6S",
+        "label": "CHF",
+        "last": 1.22905,
+        "change": -0.38
+      },
+      {
+        "ticker": "6N",
+        "label": "NZD",
+        "last": 0.58225,
+        "change": -1.23
+      },
+      {
+        "ticker": "ZN",
+        "label": "10 Year Note",
+        "last": 107.421875,
+        "change": 0.04
+      },
+      {
+        "ticker": "ZF",
+        "label": "5 Year Note",
+        "last": 105.515625,
+        "change": 0.03
+      },
+      {
+        "ticker": "ZT",
+        "label": "2 Year Note",
+        "last": 102.546875,
+        "change": 0.02
+      },
+      {
+        "ticker": "ZB",
+        "label": "30 Year Bond",
+        "last": 108.3125,
+        "change": 0.06
+      },
+      {
+        "ticker": "NKD",
+        "label": "Nikkei 225",
+        "last": 64140.0,
+        "change": -1.17
+      },
+      {
+        "ticker": "DY",
+        "label": "DAX",
+        "last": 25895.0,
+        "change": -0.35
+      },
+      {
+        "ticker": "EX",
+        "label": "Euro Stoxx 50",
+        "last": 6373.0,
+        "change": 0.0
+      },
+      {
+        "ticker": "ZC",
+        "label": "Corn",
+        "last": 537.75,
+        "change": -1.51
+      },
+      {
+        "ticker": "ZS",
+        "label": "Soybeans",
+        "last": 1303.25,
+        "change": -1.1
+      },
+      {
+        "ticker": "ZW",
+        "label": "Wheat",
+        "last": 775.75,
+        "change": -0.86
+      },
+      {
+        "ticker": "ZL",
+        "label": "Soybean oil",
+        "last": 71.94,
+        "change": -0.7
+      },
+      {
+        "ticker": "ZM",
+        "label": "Soybean Meal",
+        "last": 340.4,
+        "change": -1.53
+      },
+      {
+        "ticker": "ZO",
+        "label": "Oats",
+        "last": 377.0,
+        "change": -1.18
+      },
+      {
+        "ticker": "ZR",
+        "label": "Rough Rice",
+        "last": 15.78,
+        "change": -0.28
+      },
+      {
+        "ticker": "KC",
+        "label": "Coffee",
+        "last": 303.35,
+        "change": -1.89
+      },
+      {
+        "ticker": "SB",
+        "label": "Sugar",
+        "last": 18.27,
+        "change": -0.54
+      },
+      {
+        "ticker": "CT",
+        "label": "Cotton",
+        "last": 88.97,
+        "change": -2.83
+      },
+      {
+        "ticker": "CC",
+        "label": "Cocoa",
+        "last": 6155.0,
+        "change": -6.33
+      },
+      {
+        "ticker": "JO",
+        "label": "Orange Juice",
+        "last": 144.7,
+        "change": -0.14
+      },
+      {
+        "ticker": "LB",
+        "label": "Lumber",
+        "last": 558.5,
+        "change": -0.44
+      },
+      {
+        "ticker": "LC",
+        "label": "Live Cattle",
+        "last": 212.4,
+        "change": -0.28
+      },
+      {
+        "ticker": "LH",
+        "label": "Lean Hogs",
+        "last": 83.7,
+        "change": -0.03
+      },
+      {
+        "ticker": "FC",
+        "label": "Feeder Cattle",
+        "last": 316.05,
+        "change": -0.51
+      },
+      {
+        "ticker": "BTC",
+        "label": "Bitcoin",
+        "last": 76960.0,
+        "change": -0.7
+      },
+      {
+        "ticker": "RS",
+        "label": "Canola",
+        "last": 829.7,
+        "change": -1.41
+      },
+      {
+        "ticker": "ZK",
+        "label": "Ethanol",
+        "last": 2.0825,
+        "change": 1.34
+      }
+    ]
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 66215.34,
+          "pct_1d": -0.15
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 25329.73,
+          "pct_1d": -0.93
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 3979.89,
+          "pct_1d": -0.16
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 6835.8,
+          "pct_1d": 0.23
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 9066.7,
+          "pct_1d": -0.1
+        }
+      },
+      "composite_avg": -0.22
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 10789.3,
+          "pct_1d": -0.03
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 25970.11,
+          "pct_1d": -1.1
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 8301.85,
+          "pct_1d": -0.39
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-09-01",
+          "last": 6368.98,
+          "pct_1d": -0.8
+        }
+      },
+      "composite_avg": -0.58
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.795,
+    "window": "2026-08-25..2026-09-02"
+  },
+  "fear_greed": {
+    "available": false,
+    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": false,
+    "count": 0,
+    "items": []
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-09-02",
+      "open": 7634.58,
+      "high": 7681.19,
+      "low": 7633.62,
+      "close": 7666.6,
+      "pct_change": 0.46,
+      "prev_close": 7631.47,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.62,
+        "intraday_low_pct": 0.03,
+        "intraday_high_pct": 0.65,
+        "close_position_in_range": 0.69
+      }
+    },
+    "DOW": {
+      "date": "2026-09-02",
+      "open": 52829.58,
+      "high": 53227.5,
+      "low": 52829.58,
+      "close": 53061.95,
+      "pct_change": 0.56,
+      "prev_close": 52766.88,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.75,
+        "intraday_low_pct": 0.12,
+        "intraday_high_pct": 0.87,
+        "close_position_in_range": 0.58
+      }
+    },
+    "NDX": {
+      "date": "2026-09-02",
+      "open": 26094.0,
+      "high": 26245.04,
+      "low": 26062.68,
+      "close": 26217.83,
+      "pct_change": 0.45,
+      "prev_close": 26099.77,
+      "path": {
+        "shape": "trend up (closed near day high)",
+        "range_pct": 0.7,
+        "intraday_low_pct": -0.14,
+        "intraday_high_pct": 0.56,
+        "close_position_in_range": 0.85
+      }
+    }
+  }
+}
