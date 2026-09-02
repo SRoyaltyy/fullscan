@@ -383,20 +383,6 @@ def run(
     else:
         print("[all] skip News actions (DONE for this day)")
 
-    # Catalyst dossiers from OVERRIDE captains, map-heat opportunities,
-    # mega-cap earnings, and action conflicts. Merges net_signal into
-    # today's news actions so the .io paper book sees them.
-    if skip_llm:
-        print("[all] skip Catalyst daily (--skip-llm)")
-    elif config.has_llm():
-        print("[all] → Catalyst daily (skip-if-good + merge into actions)")
-        _run([sys.executable, "-m", "src.catalyst_daily", "--date", date], check=False)
-        if not _exists("01_daily", "catalyst", f"{date}_dossiers.json"):
-            print("[all] WARN: catalyst dossiers missing for", date,
-                  "— book ranks without catalyst merge")
-    else:
-        print("[all] skip Catalyst daily (no LLM configured)")
-
     if not skip_llm and need("general_predict"):
         if config.has_llm():
             print("[all] → General market predict")
@@ -419,7 +405,7 @@ def run(
     else:
         print("[all] skip Per-sector predict (DONE for this day — 11/11)")
 
-    print("[all] → Weather / regime (after same-day predicts)")
+    print("[all] → Weather / regime (after same-day predicts, before join)")
     _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
     if not _exists("01_daily", "weather", f"{date}_weather.json"):
         raise SystemExit(
@@ -465,6 +451,18 @@ def run(
 
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)], check=True)
+
+    # Optional layer 3. Must not sit in front of weather/join/book —
+    # 2026-09-02 eight names ate the morning and the ranker stayed blocked.
+    if skip_llm:
+        print("[all] skip Catalyst daily (--skip-llm)")
+    elif config.has_llm():
+        print("[all] → Catalyst daily (after book; skip-if-good + merge)")
+        _run([sys.executable, "-m", "src.catalyst_daily", "--date", date], check=False)
+        if not _exists("01_daily", "catalyst", f"{date}_dossiers.json"):
+            print("[all] WARN: catalyst dossiers missing for", date)
+    else:
+        print("[all] skip Catalyst daily (no LLM configured)")
 
     print("[all] → Stock book backtest")
     _run(

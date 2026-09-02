@@ -53,6 +53,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install (gainer as-of walk needs pandas)
+        run: pip install pandas pyarrow
+
       - name: Diagnose Stock Book upstream
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
