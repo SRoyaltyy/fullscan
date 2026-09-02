@@ -172,11 +172,12 @@ def finviz_session_dates(export_dir: Path | None = None) -> list[str]:
         for p in export_dir.glob("finviz_????-??-??.csv")
     }
     try:
-        from src.ticker_lookback import is_trading_date, session_dates
+        from src.ticker_lookback import session_dates
         dates.update(session_dates())
-        return sorted(d for d in dates if is_trading_date(d))
     except Exception:
-        return sorted(dates)
+        pass
+    # Keep weekend tapes too — 8/30 is in the panel and has a Finviz file.
+    return sorted(dates)
 
 
 def load_finviz_px(date: str, export_dir: Path | None = None) -> dict[str, dict]:
