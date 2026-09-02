@@ -1,58 +1,19 @@
-name: Daily Orchestrator (pre-market + post-close guard)
+name: Daily Orchestrator (missed-job guard)
 
-# Watches the critical workflows and re-dispatches any that missed their
-# cron, failed, OR went green without writing a QUALITY artifact
-# (existence is not enough: timeout stubs and carry-forwards used to
-# look like success).
-#
-# PREDICTIVE (must land before 09:30 ET). Primary path is Pre-Open ALL
-# (one ECS job). Individual predictive workflows are last-chance
-# fallback after 08:00 ET if ALL is not quality-ok. This guard will
-# NOT dispatch predictive workflows after 09:25 ET unless force=true.
-#
-#   preopen_all              ~10:00 UTC / 06:00 ET   PRIMARY one-button (ECS Grok)
-#   finviz_preopen_scrape    ~09:40 UTC / 05:40 ET   GH-hosted Elite HTML
-#   finviz_digest            dispatch-only           fallback digest
-#   events_daily    ~10:10 UTC              fallback
-#   news_parse      10/12:15 UTC            fallback
-#   news_judge      10/12:25 UTC            fallback
-#   news_actions    ~11:20 UTC              fallback
-#   daily_pipeline  predict ~10:45 UTC      fallback (predict stage)
-#   sector_daily    predict ~11:10 UTC      fallback (predict stage)
-#
-# POST-CLOSE (must still run, at their own pace):
-#   daily_pipeline  outcome_reflect ~21:03 UTC
-#   sector_daily    outcome_reflect ~22:10 UTC
-#   learn_cycle     ~21:30 UTC
-#   label_weather   ~15:17 UTC
-#   catalyst_daily  ~14:30 UTC / 10:30 ET  dossiers + merge into news actions
-#   ab_checklist    15:00 UTC + 21:30
-#   stock_book_all  17:00 UTC (dashboard)
-#   deepthink       Sunday 13:00 UTC
-#   weekly_consolidation Sunday 15:00 UTC
-
+# Does NOT own pre-open or map-heat. Those have one clock each
+# (ECS 05:55 ET / GH map-heat 22:00 ET) plus file skip-if-good.
+# This guard only re-dispatches: Finviz scrape, stock book, pipeline
+# outcome, learn_cycle — and only when today's file is missing.
 
 on:
   schedule:
-    # ~06:50 ET, ~07:50 ET, ~08:20 ET
-    - cron: "50 10 * * 1-5"
     - cron: "50 11 * * 1-5"
-    - cron: "20 12 * * 1-5"
-    # after catalyst daily (14:30 UTC), before Stock Book ALL (17:00)
-    - cron: "5 15 * * 1-5"
-    # after Stock Book ALL (17:00 UTC) — catch a missed book / book-without-AB
-    - cron: "15 18 * * 1-5"
-    # post-close: after pipeline outcome (~21:03) + learn_cycle (~21:30)
-    - cron: "45 21 * * 1-5"
-    # post-close: after sector outcome (~22:10)
-    - cron: "40 22 * * 1-5"
-    # Sunday: after deepthink (13:00) and weekly (15:00)
-    - cron: "30 13 * * 0"
+    - cron: "15 21 * * 1-5"
     - cron: "30 16 * * 0"
   workflow_dispatch:
     inputs:
       force:
-        description: "Force re-dispatch even if a successful run already exists today"
+        description: "Force re-dispatch even if today's file exists"
         required: false
         default: "false"
 
@@ -62,29 +23,28 @@ permissions:
 
 concurrency:
   group: daily-orchestrator
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   guard:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Check artifacts + re-dispatch missing/failed/green-empty
+      - name: Re-dispatch only if today's file is missing
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
           set -euo pipefail
-
           REPO="${{ github.repository }}"
           TODAY=$(TZ=America/New_York date +%F)
           HOUR=$((10#$(date -u +%H)))
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "Orchestrator date (ET): $TODAY  utc_hour=$HOUR  et_hm=$ET_HM  force=$FORCE"
+          echo "Orchestrator date (ET): $TODAY utc_hour=$HOUR et_hm=$ET_HM force=$FORCE"
 
           repo_file() {
             gh api "repos/${REPO}/contents/${1}?ref=main" --jq .sha >/dev/null 2>&1
@@ -92,240 +52,27 @@ jobs:
           repo_file_size() {
             gh api "repos/${REPO}/contents/${1}?ref=main" --jq '.size // 0' 2>/dev/null || echo 0
           }
-          repo_decode() {
-            local raw
-            raw=$(gh api "repos/${REPO}/contents/${1}?ref=main" --jq .content 2>/dev/null) || return 1
-            echo "$raw" | tr -d '\n' | base64 -d 2>/dev/null
-          }
-          repo_predict_quality_n() {
-            gh api "repos/${REPO}/contents/${1}?ref=main" \
-              --jq '[.[]? | select(.type=="file" and (.name | endswith("_predict.md")) and (.size >= 3000))] | length' \
-              2>/dev/null || echo 0
-          }
-          repo_outcome_quality_n() {
-            gh api "repos/${REPO}/contents/${1}?ref=main" \
-              --jq '[.[]? | select(.type=="file" and (.name | endswith("_outcome.md")) and (.size >= 400))] | length' \
-              2>/dev/null || echo 0
-          }
-
-          is_predictive() {
-            case "$1" in
-              preopen_all.yml|finviz_preopen_scrape.yml|finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml)
-                return 0 ;;
-              daily_pipeline.yml|sector_daily.yml)
-                [ "$ET_HM" -lt 925 ]
-                return $?
-                ;;
-              *) return 1 ;;
-            esac
-          }
-
-          is_postclose() {
-            case "$1" in
-              learn_cycle.yml|deepthink.yml|weekly_consolidation.yml|map_heat_postclose.yml)
-                return 0 ;;
-              daily_pipeline.yml|sector_daily.yml)
-                [ "$ET_HM" -ge 1600 ]
-                return $?
-                ;;
-              *) return 1 ;;
-            esac
-          }
-
-          PREDICTIVE_INDIVIDUALS=(
-            finviz_digest.yml
-            events_daily.yml
-            news_parse.yml
-            news_judge.yml
-            news_actions.yml
-            daily_pipeline.yml
-            sector_daily.yml
-          )
 
           artifact_ok() {
             local WF="$1"
             case "$WF" in
-              preopen_all.yml)
-                local content
-                content=$(repo_decode "01_daily/${TODAY}_preopen_qc.json") || return 1
-                echo "$content" | python3 -c '
-          import json,sys
-          try:
-              d=json.load(sys.stdin)
-          except Exception:
-              sys.exit(1)
-          if d.get("date") != sys.argv[1]:
-              sys.exit(1)
-          sys.exit(0 if d.get("all_ok") else 1)
-          ' "$TODAY" || return 1
-                content=$(repo_decode "01_daily/${TODAY}_grok_review.json") || return 1
-                echo "$content" | python3 -c '
-          import json,sys
-          try:
-              d=json.load(sys.stdin)
-          except Exception:
-              sys.exit(1)
-          if d.get("date") != sys.argv[1]:
-              sys.exit(1)
-          if d.get("fails"):
-              sys.exit(1)
-          sys.exit(0 if d.get("ok") else 1)
-          ' "$TODAY"
-                ;;
-              finviz_digest.yml)
-                local sz
-                sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
-                [ "${sz:-0}" -gt 200 ] \
-                  || repo_file "01_daily/news/${TODAY}_finviz_digest.md"
-                ;;
               finviz_preopen_scrape.yml)
                 local sz
                 sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
-                [ "${sz:-0}" -gt 200 ] || return 1
-                content=$(repo_decode "01_daily/map_heat/${TODAY}_map_heat.json") || return 1
-                echo "$content" | python3 -c '
-          import json,sys
-          try:
-              d=json.load(sys.stdin)
-          except Exception:
-              sys.exit(1)
-          day=sys.argv[1]
-          phase=str(d.get("phase") or "")
-          overlay=str(d.get("overlay_at") or "")
-          sys.exit(0 if (phase=="morning_overlay" or overlay.startswith(day)) else 1)
-          ' "$TODAY"
-                ;;
-              events_daily.yml)
-                local content
-                content=$(repo_decode "01_daily/events/${TODAY}_events.json") || return 1
-                echo "$content" | python3 -c '
-          import json,sys
-          try:
-              d=json.load(sys.stdin)
-          except Exception:
-              sys.exit(1)
-          ev=d.get("events") or []
-          if d.get("carried_from"):
-              print("    events CARRIED — not quality-ok")
-              sys.exit(1)
-          if not ev:
-              print("    events n=0")
-              sys.exit(1)
-          if all((e.get("status")=="carried") for e in ev if isinstance(e, dict)):
-              print("    events all status=carried — not quality-ok")
-              sys.exit(1)
-          print("    events n=%d quality-ok" % len(ev))
-          '
-                ;;
-              news_parse.yml)
-                local sz
-                sz=$(repo_file_size "01_daily/news/${TODAY}_parsed.json")
                 [ "${sz:-0}" -gt 200 ]
-                ;;
-              news_judge.yml)
-                local content
-                content=$(repo_decode "01_daily/news/${TODAY}_judge.md") || return 1
-                echo "$content" | python3 -c '
-          import sys
-          t=sys.stdin.read()
-          if len(t) < 400:
-              sys.exit(1)
-          low=t.lower()
-          if "llm request timed out" in low or "idle timeout" in low:
-              sys.exit(1)
-          if "NEWS_PARSE_BEGIN" not in t:
-              sys.exit(1)
-          sys.exit(0)
-          '
-                ;;
-              news_actions.yml)
-                local sz
-                sz=$(repo_file_size "01_daily/news/${TODAY}_actions.json")
-                [ "${sz:-0}" -gt 200 ]
-                ;;
-              catalyst_daily.yml)
-                local content
-                content=$(repo_decode "01_daily/catalyst/${TODAY}_dossiers.json") || return 1
-                echo "$content" | python3 -c '
-          import json,sys
-          try:
-              d=json.load(sys.stdin)
-          except Exception:
-              sys.exit(1)
-          if d.get("date") != sys.argv[1]:
-              sys.exit(1)
-          rows=d.get("dossiers") or []
-          ok=[r for r in rows if isinstance(r, dict)
-              and r.get("net_signal") and not r.get("error")
-              and r.get("search_backend") == "grok_native"]
-          print("    catalyst quality dossiers=%d" % len(ok))
-          sys.exit(0 if len(ok) >= 2 else 1)
-          ' "$TODAY"
-                ;;
-              daily_pipeline.yml)
-                if [ "$ET_HM" -ge 1600 ]; then
-                  repo_file "01_daily/general/${TODAY}_outcome.md"
-                else
-                  local content
-                  content=$(repo_decode "01_daily/general/${TODAY}_predict.md") || return 1
-                  echo "$content" | python3 -c '
-          import sys
-          t=sys.stdin.read()
-          if len(t) < 2000:
-              sys.exit(1)
-          low=t.lower()
-          if "llm request timed out" in low or "idle timeout" in low:
-              sys.exit(1)
-          if "MEMORY_CONFIRM" not in t or "SCORES_BEGIN" not in t:
-              sys.exit(1)
-          sys.exit(0)
-          '
-                fi
-                ;;
-              sector_daily.yml)
-                if [ "$ET_HM" -ge 1600 ]; then
-                  local n
-                  n=$(repo_outcome_quality_n "01_daily/sectors/${TODAY}")
-                  echo "    sector quality-sized outcome files=$n/11"
-                  [ "${n:-0}" -ge 8 ]
-                else
-                  local n
-                  n=$(repo_predict_quality_n "01_daily/sectors/${TODAY}")
-                  echo "    sector quality-sized (>=3k) predict files=$n/11"
-                  [ "${n:-0}" -ge 8 ]
-                fi
-                ;;
-              label_weather.yml)
-                repo_file "01_daily/weather/${TODAY}_weather.json"
-                ;;
-              ab_checklist.yml)
-                local sz
-                if repo_file "data/ab_checklist/${TODAY}_ab_checklist_enriched.csv"; then
-                  return 0
-                fi
-                sz=$(repo_file_size "data/ab_checklist/${TODAY}_ab_checklist.csv")
-                echo "    ab raw size=$sz"
-                [ "${sz:-0}" -gt 10000 ]
                 ;;
               stock_book_all.yml)
                 repo_file "data/stock_book/${TODAY}_stock_book.json" \
                   || repo_file "01_daily/${TODAY}_stock_book.md"
                 ;;
-              learn_cycle.yml)
-                repo_file "01_daily/${TODAY}_learnings.md"
-                ;;
-              deepthink.yml)
+              daily_pipeline.yml)
                 local sz
-                sz=$(repo_file_size "03_scoreboard/DEEPTHINK.md")
+                sz=$(repo_file_size "01_daily/general/${TODAY}_outcome.md")
                 [ "${sz:-0}" -gt 400 ]
                 ;;
-              weekly_consolidation.yml)
-                return 1
-                ;;
-              map_heat_postclose.yml)
-                local next
-                next=$(python3 -c "from datetime import datetime,timedelta; d=datetime.strptime('$TODAY','%Y-%m-%d').date()+timedelta(days=1); d += timedelta(days=(7-d.weekday()) if d.weekday()>=5 else 0); print(d.isoformat())")
-                repo_file "01_daily/map_heat/${next}_research_baseline.json"
+              learn_cycle.yml)
+                repo_file "01_daily/${TODAY}_learnings.md" \
+                  || repo_file "03_scoreboard/LEARNINGS.md"
                 ;;
               *)
                 return 1
@@ -335,267 +82,68 @@ jobs:
 
           dispatch_wf() {
             local WF="$1"
-            echo "MISSING/FAILED/GREEN-EMPTY for $TODAY → dispatching $WF"
-            local ok=0
-            case "$WF" in
-              daily_pipeline.yml)
-                local STAGE="predict"
-                [ "$ET_HM" -ge 1600 ] && STAGE="outcome_reflect"
-                if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                    -f ref=main -f "inputs[stage]=${STAGE}" 2>/dev/null; then
-                  ok=1
-                elif gh workflow run "$WF" --ref main -f stage="$STAGE" 2>/dev/null; then
-                  ok=1
-                fi
-                ;;
-              sector_daily.yml)
-                local STAGE="predict"
-                [ "$ET_HM" -ge 1600 ] && STAGE="outcome_reflect"
-                if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                    -f ref=main -f "inputs[stage]=${STAGE}" 2>/dev/null; then
-                  ok=1
-                elif gh workflow run "$WF" --ref main -f stage="$STAGE" 2>/dev/null; then
-                  ok=1
-                fi
-                ;;
-              *)
-                if gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                    -f ref=main 2>/dev/null; then
-                  ok=1
-                elif gh workflow run "$WF" --ref main 2>/dev/null; then
-                  ok=1
-                fi
-                ;;
-            esac
-            if [ "$ok" -eq 1 ]; then
-              echo "Dispatched $WF"
+            echo "MISSING for $TODAY → dispatching $WF"
+            if [ "$WF" = "daily_pipeline.yml" ]; then
+              gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
+                -f ref=main -f "inputs[stage]=outcome_reflect" || true
             else
-              echo "WARN: failed to dispatch $WF — continuing"
+              gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
+                -f ref=main || true
             fi
           }
 
-          # Live pipeline only. Sludge crons are disabled; do not re-dispatch
-          # them from here or they steal the one ECS runner.
           WORKFLOWS=(
             finviz_preopen_scrape.yml
-            preopen_all.yml
-            map_heat_postclose.yml
             stock_book_all.yml
             daily_pipeline.yml
             learn_cycle.yml
           )
 
-          PREOPEN_OK="no"
-          PREOPEN_ACTIVE="no"
-          PREOPEN_COMPLETED="no"
-          if artifact_ok "preopen_all.yml"; then PREOPEN_OK="yes"; fi
-          PREOPEN_RAW=$(gh api "repos/${REPO}/actions/workflows/preopen_all.yml/runs?per_page=15" \
-            --jq '.workflow_runs[] | {id, status, conclusion, created_at}' || echo "")
-          if [ -n "$PREOPEN_RAW" ]; then
-            while IFS=$'\t' read -r id status conclusion created; do
-              [ -n "$id" ] || continue
-              et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
-              [ "$et" = "$TODAY" ] || continue
-              case "$status" in
-                in_progress|queued|waiting|pending) PREOPEN_ACTIVE="yes" ;;
-              esac
-              if [ "$status" = "completed" ]; then
-                PREOPEN_COMPLETED="yes"
-              fi
-            done < <(echo "$PREOPEN_RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at] | @tsv')
-          fi
-          echo "preopen_all artifact_ok=$PREOPEN_OK active=$PREOPEN_ACTIVE completed=$PREOPEN_COMPLETED"
-
-          RUN_STATUSES=$(gh run list --repo "$REPO" --workflow preopen_all.yml --limit 20 \
-            --json status,createdAt,databaseId 2>/dev/null || echo "[]")
-          N_ACTIVE=$(echo "$RUN_STATUSES" | python3 -c '
-          import json,sys,datetime
-          from datetime import timezone
-          try:
-              from zoneinfo import ZoneInfo
-              et = ZoneInfo("America/New_York")
-          except Exception:
-              et = timezone.utc
-          today = sys.argv[1]
-          try:
-              rows = json.load(sys.stdin)
-          except Exception:
-              rows = []
-          n = 0
-          for r in rows or []:
-              created = r.get("createdAt") or ""
-              try:
-                  dt = datetime.datetime.fromisoformat(created.replace("Z","+00:00"))
-                  day = dt.astimezone(et).date().isoformat()
-              except Exception:
-                  day = ""
-              if day != today:
-                  continue
-              if (r.get("status") or "") in ("in_progress","queued","waiting","pending"):
-                  n += 1
-          print(n)
-          ' "$TODAY" 2>/dev/null || echo 0)
-          if [ "${N_ACTIVE:-0}" -gt 0 ]; then
-            PREOPEN_ACTIVE="yes"
-            echo "preopen_all gh-run-list active=$N_ACTIVE → PREOPEN_ACTIVE=yes"
-          fi
-          echo "preopen_all artifact_ok=$PREOPEN_OK active=$PREOPEN_ACTIVE completed=$PREOPEN_COMPLETED (after run-list)"
-
           for WF in "${WORKFLOWS[@]}"; do
             echo ""
             echo "======== $WF ========"
-
-            if [ "$WF" = "preopen_all.yml" ] && [ "$FORCE" != "true" ] && [ "$PREOPEN_ACTIVE" = "yes" ]; then
-              echo "skip $WF — already queued or in_progress on the ECS runner"
-              continue
-            fi
-
-            if is_predictive "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then
-              echo "skip $WF — past 09:25 ET predictive cutoff (et_hm=$ET_HM)"
-              continue
-            fi
-
-            if is_postclose "$WF" && [ "$FORCE" != "true" ] && [ "$ET_HM" -lt 1600 ]; then
-              echo "skip $WF — post-close window starts 16:00 ET (et_hm=$ET_HM)"
-              continue
-            fi
-
-            if [ "$WF" = "map_heat_postclose.yml" ] && [ "$FORCE" != "true" ]; then
-              if [ "$ET_HM" -ge 430 ] && [ "$ET_HM" -lt 2200 ]; then
-                echo "skip $WF — waits for 22:00–04:29 ET (et_hm=$ET_HM)"
+            if [ "$FORCE" != "true" ]; then
+              if [ "$WF" = "finviz_preopen_scrape.yml" ] && [ "$ET_HM" -ge 925 ]; then
+                echo "skip $WF — past 09:25 ET"
+                continue
+              fi
+              if [ "$WF" = "stock_book_all.yml" ] && [ "$HOUR" -lt 16 ]; then
+                echo "skip book until 16:00 UTC"
+                continue
+              fi
+              if [ "$WF" = "daily_pipeline.yml" ] && [ "$ET_HM" -lt 1600 ]; then
+                echo "skip pipeline outcome until 16:00 ET"
+                continue
+              fi
+              if [ "$WF" = "learn_cycle.yml" ] && [ "$ET_HM" -lt 1700 ]; then
+                echo "skip learn until 17:00 ET"
                 continue
               fi
             fi
 
-            if [ "$WF" = "daily_pipeline.yml" ] || [ "$WF" = "sector_daily.yml" ]; then
-              if [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ] && [ "$ET_HM" -lt 1600 ]; then
-                echo "skip $WF — market hours (predict window closed, outcome not yet)"
-                continue
-              fi
-            fi
-
-            DOW=$(TZ=America/New_York date +%u)
-            if [ "$WF" = "deepthink.yml" ] || [ "$WF" = "weekly_consolidation.yml" ]; then
-              if [ "$DOW" != "7" ] && [ "$FORCE" != "true" ]; then
-                echo "skip $WF — Sunday only (dow=$DOW)"
-                continue
-              fi
-            fi
-
-            if [ "$WF" = "finviz_preopen_scrape.yml" ] && [ "$FORCE" != "true" ]; then
-              if artifact_ok "$WF"; then
-                echo "skip $WF — digest + morning overlay already on main"
-                continue
-              fi
-              echo "GH Finviz scrape missing/thin — dispatching $WF"
-            fi
-
-            if [ "$WF" != "preopen_all.yml" ] && [ "$WF" != "finviz_preopen_scrape.yml" ]; then
-              case "$WF" in
-                finviz_digest.yml|events_daily.yml|news_parse.yml|news_judge.yml|news_actions.yml|daily_pipeline.yml|sector_daily.yml)
-                  if is_predictive "$WF" && [ "$FORCE" != "true" ]; then
-                    if [ "$PREOPEN_OK" = "yes" ]; then
-                      echo "skip $WF — Pre-Open ALL already quality-ok"
-                      continue
-                    fi
-                    if [ "$PREOPEN_ACTIVE" = "yes" ]; then
-                      echo "skip $WF — Pre-Open ALL still on the ECS runner"
-                      continue
-                    fi
-                    if [ "$ET_HM" -lt 800 ]; then
-                      echo "skip $WF — Pre-Open ALL is the primary path until 08:00 ET"
-                      continue
-                    fi
-                    if [ "$PREOPEN_COMPLETED" != "yes" ]; then
-                      echo "skip $WF — Pre-Open ALL has not finished today; not queueing a competitor"
-                      continue
-                    fi
-                    echo "last-chance fallback for $WF (ALL finished, not quality-ok, et_hm=$ET_HM)"
-                  fi
-                  ;;
-              esac
-            fi
-
-            RAW=$(gh api "repos/${REPO}/actions/workflows/$WF/runs?per_page=20" \
-              --jq '.workflow_runs[] | {id, status, conclusion, event, created_at, html_url}' || echo "")
-
+            RAW=$(gh api "repos/${REPO}/actions/workflows/$WF/runs?per_page=10" \
+              --jq '.workflow_runs[] | {id, status, conclusion, created_at}' || echo "")
             HAS_ACTIVE=""
-            HAS_SUCCESS=""
-            LATEST="none"
             if [ -n "$RAW" ]; then
-              LATEST=$(echo "$RAW" | jq -s -r '.[0] // empty | "\(.status)/\(.conclusion // "-") @ \(.created_at) \(.html_url)"' 2>/dev/null || true)
-              while IFS=$'\t' read -r id status conclusion created url; do
+              while IFS=$'\t' read -r id status conclusion created; do
                 [ -n "$id" ] || continue
                 et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
                 [ "$et" = "$TODAY" ] || continue
                 if [ "$status" = "in_progress" ] || [ "$status" = "queued" ] || [ "$status" = "waiting" ] || [ "$status" = "pending" ]; then
                   HAS_ACTIVE="$id"
-                elif [ "$conclusion" = "success" ]; then
-                  HAS_SUCCESS="$id"
                 fi
-              done < <(echo "$RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at, .html_url] | @tsv')
-            fi
-            echo "latest: ${LATEST:-none}"
-            echo "today active=${HAS_ACTIVE:--} success=${HAS_SUCCESS:--}"
-
-            ART_OK="no"
-            if artifact_ok "$WF"; then
-              ART_OK="yes"
-            fi
-            echo "artifact_ok=$ART_OK"
-
-            if [ "$WF" = "catalyst_daily.yml" ] && [ "$FORCE" != "true" ] && [ "$HOUR" -lt 14 ]; then
-              echo "skip $WF — waits for 14:00 UTC (after pre-open packet)"
-              continue
-            fi
-            if [ "$WF" = "catalyst_daily.yml" ] && [ "$FORCE" != "true" ] && [ "$PREOPEN_ACTIVE" = "yes" ]; then
-              echo "skip $WF — Pre-Open ALL still on the ECS runner"
-              continue
+              done < <(echo "$RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at] | @tsv')
             fi
 
-            if [ "$WF" = "stock_book_all.yml" ] && [ "$FORCE" != "true" ] && [ "$HOUR" -lt 16 ]; then
-              echo "skip book ALL until 16:00 UTC (prereqs still landing)"
-              continue
-            fi
-
-            if [ "$WF" = "stock_book_all.yml" ] && [ "$ART_OK" = "yes" ] && [ "$FORCE" != "true" ]; then
-              AB_OK="no"
-              if artifact_ok "ab_checklist.yml"; then AB_OK="yes"; fi
-              echo "book present; ab_ok=$AB_OK"
-              if [ "$AB_OK" = "no" ] && [ "$HOUR" -ge 16 ]; then
-                if [ -n "$HAS_ACTIVE" ]; then
-                  echo "book ALL already running — let it pick up AB"
-                  continue
-                fi
-                echo "book exists but AB missing → re-dispatch book ALL so s_ab is scored"
-                dispatch_wf "$WF"
-                continue
-              fi
-            fi
-
-            if [ "$FORCE" = "true" ]; then
-              dispatch_wf "$WF"
-              continue
-            fi
             if [ -n "$HAS_ACTIVE" ]; then
-              echo "OK — in progress/queued (id=$HAS_ACTIVE). Skipping."
+              echo "OK — already running id=$HAS_ACTIVE"
               continue
             fi
-            if [ "$ART_OK" = "yes" ]; then
-              echo "OK — today's quality artifact is on main. Skipping."
+            if [ "$FORCE" != "true" ] && artifact_ok "$WF"; then
+              echo "OK — today's file is on main"
               continue
-            fi
-            if [ -n "$HAS_SUCCESS" ] && { [ "$WF" = "weekly_consolidation.yml" ] || [ "$WF" = "deepthink.yml" ]; }; then
-              echo "OK — successful $WF run today (id=$HAS_SUCCESS). Skipping."
-              continue
-            fi
-            if [ -n "$HAS_SUCCESS" ]; then
-              echo "GREEN-EMPTY/GREEN-BAD — GH success id=$HAS_SUCCESS but artifact missing or low-quality. Re-dispatching."
-            else
-              echo "MISSING or FAILED for $TODAY."
             fi
             dispatch_wf "$WF"
           done
 
-          echo ""
           echo "Orchestrator pass complete at $(date -u +%F_%H%M) UTC"
