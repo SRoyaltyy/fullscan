@@ -5,54 +5,54 @@ Export `finviz_2026-09-02.csv` · 11635 names · generated 2026-09-02T01:49:12.7
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7625.0 | -0.23% |
-| Nasdaq 100 (NQ) | 28968.25 | -0.54% |
-| Russell 2000 (ER2) | 2919.1 | -0.19% |
-| DJIA (YM) | 52753.0 | -0.13% |
+| S&P 500 (ES) | 7626.25 | -0.22% |
+| Nasdaq 100 (NQ) | 28980.5 | -0.51% |
+| Russell 2000 (ER2) | 2918.9 | -0.21% |
+| DJIA (YM) | 52761.0 | -0.14% |
 | VIX (VX) | 17.35 | +0.56% |
-| Crude Oil WTI (CL) | 90.47 | +0.22% |
-| Crude Oil Brent (QA) | 94.97 | +0.38% |
-| Natural Gas (NG) | 2.948 | +1.48% |
-| Heating Oil (HO) | 4.6522 | -0.51% |
-| Gasoline RBOB (RB) | 3.141 | +0.21% |
-| Gold (GC) | 4355.6 | -0.92% |
-| Silver (SI) | 64.23 | -1.73% |
-| Copper (HG) | 6.5405 | -0.91% |
-| Platinum (PL) | 1725.4 | -2.23% |
-| Palladium (PA) | 1313.0 | -1.32% |
-| USD (DX) | 99.79 | +0.15% |
-| EUR (6E) | 1.1577 | -0.17% |
-| JPY (6J) | 0.6261 | +0.21% |
-| GBP (6B) | 1.3486 | -0.19% |
-| AUD (6A) | 0.7122 | -0.34% |
-| CAD (6C) | 0.71785 | -0.31% |
-| CHF (6S) | 1.22855 | -0.41% |
-| NZD (6N) | 0.5808 | -1.46% |
-| 10 Year Note (ZN) | 107.296875 | -0.06% |
-| 5 Year Note (ZF) | 105.4609375 | -0.03% |
-| 2 Year Note (ZT) | 102.515625 | -0.01% |
-| 30 Year Bond (ZB) | 108.0 | -0.23% |
-| Nikkei 225 (NKD) | 63915.0 | -1.50% |
-| DAX (DY) | 25806.0 | -0.71% |
-| Euro Stoxx 50 (EX) | 6349.0 | -0.39% |
-| Corn (ZC) | 537.75 | -1.51% |
-| Soybeans (ZS) | 1304.5 | -1.01% |
-| Wheat (ZW) | 771.75 | -1.44% |
-| Soybean oil (ZL) | 72.21 | -0.32% |
-| Soybean Meal (ZM) | 341.2 | -1.30% |
+| Crude Oil WTI (CL) | 90.17 | -0.07% |
+| Crude Oil Brent (QA) | 94.85 | +0.18% |
+| Natural Gas (NG) | 2.948 | +1.55% |
+| Heating Oil (HO) | 4.6382 | -0.81% |
+| Gasoline RBOB (RB) | 3.1454 | +0.31% |
+| Gold (GC) | 4355.5 | -0.90% |
+| Silver (SI) | 64.325 | -1.53% |
+| Copper (HG) | 6.543 | -0.86% |
+| Platinum (PL) | 1722.7 | -2.44% |
+| Palladium (PA) | 1316.0 | -1.06% |
+| USD (DX) | 99.8 | +0.16% |
+| EUR (6E) | 1.1577 | -0.16% |
+| JPY (6J) | 0.6261 | +0.20% |
+| GBP (6B) | 1.3483 | -0.23% |
+| AUD (6A) | 0.7123 | -0.33% |
+| CAD (6C) | 0.7178 | -0.34% |
+| CHF (6S) | 1.228 | -0.45% |
+| NZD (6N) | 0.58055 | -1.48% |
+| 10 Year Note (ZN) | 107.296875 | -0.09% |
+| 5 Year Note (ZF) | 105.4453125 | -0.05% |
+| 2 Year Note (ZT) | 102.51171875 | -0.02% |
+| 30 Year Bond (ZB) | 108.03125 | -0.17% |
+| Nikkei 225 (NKD) | 63935.0 | -1.47% |
+| DAX (DY) | 25801.0 | -0.74% |
+| Euro Stoxx 50 (EX) | 6349.0 | -0.42% |
+| Corn (ZC) | 538.0 | -1.47% |
+| Soybeans (ZS) | 1304.0 | -1.02% |
+| Wheat (ZW) | 771.75 | -1.34% |
+| Soybean oil (ZL) | 72.17 | -0.36% |
+| Soybean Meal (ZM) | 341.3 | -1.33% |
 | Oats (ZO) | 376.0 | -1.44% |
 | Rough Rice (ZR) | 15.78 | -0.28% |
-| Coffee (KC) | 304.9 | -1.47% |
-| Sugar (SB) | 18.35 | -0.05% |
-| Cotton (CT) | 89.18 | -2.49% |
-| Cocoa (CC) | 6513.0 | -0.88% |
+| Coffee (KC) | 304.45 | -1.64% |
+| Sugar (SB) | 18.37 | +0.11% |
+| Cotton (CT) | 89.19 | -2.57% |
+| Cocoa (CC) | 6530.0 | -0.58% |
 | Orange Juice (JO) | 144.8 | +5.76% |
 | Lumber (LB) | 558.5 | -0.44% |
 | Live Cattle (LC) | 212.4 | -0.28% |
 | Lean Hogs (LH) | 83.7 | -0.03% |
 | Feeder Cattle (FC) | 316.05 | -0.51% |
-| Bitcoin (BTC) | 76930.0 | -0.82% |
-| Canola (RS) | 831.7 | -1.24% |
+| Bitcoin (BTC) | 76850.0 | -0.91% |
+| Canola (RS) | 831.6 | -1.26% |
 | Ethanol (ZK) | 2.0825 | +1.34% |
 
 ## CALENDAR
@@ -119,9 +119,9 @@ Mega-cap earnings:
 - AMC **LULU**  EPS est 1.7944  (Lululemon Athletica Inc)
 - AMC **FIVE**  EPS est 1.4021  (Five Below Inc)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
-- AMC **DOCU**  EPS est 1.0853  (DocuSign Inc)
 - BMO **BF-A**  EPS est 0.3691  (Brown-Forman Corp)
 - BMO **BF-B**  EPS est 0.3695  (Brown-Forman Corp)
+- AMC **DOCU**  EPS est 1.0853  (DocuSign Inc)
 - BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
 
 Options event-vol flags (NOT direction):
@@ -252,31 +252,31 @@ COLD (1w):
 - **Technology** -2.8% 1d -1.7% 1w · VGT, XLK, SMH
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **DELL** Dell Shares Rise 10% Premarket After AI Server Demand Supports Guidance Increase (InvestorsHub)
-- 5 min **MDB** MongoDB Shares Fall 14% as Atlas Growth Remains at Recent Levels (InvestorsHub)
-- 6 min **PANW** Palo Alto Networks Reports Higher Quarterly Profit as Security Revenue Grows (InvestorsHub)
-- 8 min **TU** TELUS Mental Health Index: Cost of living is the top money worry for 58 percent of US workers as financial anxiety hits workplace productivity (PR Newswire)
-- 9 min **SGLD** Scorpio Gold Drills 3.02 g/t Gold over 48.92 Metres from 118.87 Metres and 1.19 g/t Gold over 99.94 Metres from 98.61 Metres at the Goldwedge Target at Manhattan (Newsfile Corp.)
-- 9 min **NWS,NWSA** Delistings Trend Below Last Year's Pace As Summer Comes to an End: Realtor.com August Housing Report (PR Newswire)
-- 9 min **TCOM** Trip.com Group Limited to Report Second Quarter and First Half of 2026 Financial Results on September 15, 2026 U.S. Time (PR Newswire)
-- 9 min **YQ** 17 Education & Technology Group Inc. to Report Second Quarter 2026 Unaudited Financial Results on September 8, 2026 (GlobeNewswire)
-- 9 min **AVEX** AEVEX and Divergent Announce Strategic Collaboration to Accelerate Adaptive UAS Development and Scalable Production (Business Wire)
-- 9 min **OGI** Organigram Global to Host 2026 OG Investor Session (Business Wire)
-- 9 min **VRT** Vertiv Declares Quarterly Dividend (PR Newswire)
-- 9 min **NVDA** Nvidia's next act is bigger than selling AI chips: Chart of the Day (Yahoo Finance)
-- 9 min **AAPL** Apple rallies as John Ternus takes the helm  how to protect the stock for almost nothing: Alpha Options Playbook (Yahoo Finance)
-- 9 min **GS** Best CD rates today, Wednesday, September 2, 2026: Earn up to 4.30% APY with Marcus (Yahoo Personal Finance)
-- 14 min **INTC,SNDK** Here's the biggest thing keeping AI stock investors up at night (Yahoo Finance)
-- 17 min **GTLB,MSFT,SPCX** GitLab Stock Soars 21% After Earnings. It's Still Not a Buy. (Barrons.com)
-- 19 min **TAK** Takeda and Weave Bio collaborate on AI-driven automation in drug development (Pharmaceutical Technology)
-- 23 min **PEP,MDLZ** Mondelz, PepsiCo and pladis join forces for circular packaging trial (Packaging Gateway)
-- 25 min **KDP** Keurig Dr Pepper to sell stake  and factory  to Chobani (Just Food)
-- 27 min **PFGC,SYY,USFD** SupplyCaddy secures funding from CEAS Investments (Packaging Gateway)
-- 30 min **RIO** Rome Resources, Georgina Energy, Sterling Digital, Aminex, CMRS, Quantum Blockchain Technologies (Proactive)
-- 33 min **RYAAY** Europe's largest airline warns of jet-fuel prices at $140 this winter as it cuts capacity (MarketWatch)
-- 35 min **DELL,MU** Micron Stock Can't Catch a Break. It Does Have This One Big Catalyst. (Barrons.com)
-- 39 min **SPCX,HWM,DPC,BRK-B** Elon Musk Wants to Make Power-Turbine Components. It Won't Be Easy. (The Wall Street Journal)
-- 40 min **GTLB,MDB,DELL,CRDO,HPE** GitLab shares surge after earnings, and other early market movers (MarketWatch)
+- 8 min **CVX** Chevron confirms it will expand operations in Venezuela (Associated Press)
+- 11 min **ECX** Flyme AIOS to Deploy WorkBuddy AI Tools Across All Flyme Platforms (PR Newswire)
+- 13 min **TSLA** Tesla set to hold Cybercab event in Austin, Texas (Reuters)
+- 14 min **CVX** Chevron Expands Position in Venezuela (Business Wire)
+- 24 min **DELL** Dell Shares Rise 10% Premarket After AI Server Demand Supports Guidance Increase (InvestorsHub)
+- 24 min **BANC** Banc of California, Inc. to Participate in the Barclays 24th Annual Global Financial Services Conference (Business Wire)
+- 25 min **MDB** MongoDB Shares Fall 14% as Atlas Growth Remains at Recent Levels (InvestorsHub)
+- 26 min **KSS** Kohl's CEO addresses Sephora sales slump (Milwaukee Journal Sentinel)
+- 26 min **PANW** Palo Alto Networks Reports Higher Quarterly Profit as Security Revenue Grows (InvestorsHub)
+- 28 min **TU** TELUS Mental Health Index: Cost of living is the top money worry for 58 percent of US workers as financial anxiety hits workplace productivity (PR Newswire)
+- 29 min **SGLD** Scorpio Gold Drills 3.02 g/t Gold over 48.92 Metres from 118.87 Metres and 1.19 g/t Gold over 99.94 Metres from 98.61 Metres at the Goldwedge Target at Manhattan (Newsfile Corp.)
+- 29 min **NWS,NWSA** Delistings Trend Below Last Year's Pace As Summer Comes to an End: Realtor.com August Housing Report (PR Newswire)
+- 29 min **TCOM** Trip.com Group Limited to Report Second Quarter and First Half of 2026 Financial Results on September 15, 2026 U.S. Time (PR Newswire)
+- 29 min **YQ** 17 Education & Technology Group Inc. to Report Second Quarter 2026 Unaudited Financial Results on September 8, 2026 (GlobeNewswire)
+- 29 min **AVEX** AEVEX and Divergent Announce Strategic Collaboration to Accelerate Adaptive UAS Development and Scalable Production (Business Wire)
+- 29 min **OGI** Organigram Global to Host 2026 OG Investor Session (Business Wire)
+- 29 min **VRT** Vertiv Declares Quarterly Dividend (PR Newswire)
+- 29 min **NVDA** Nvidia's next act is bigger than selling AI chips: Chart of the Day (Yahoo Finance)
+- 29 min **AAPL** Apple rallies as John Ternus takes the helm  how to protect the stock for almost nothing: Alpha Options Playbook (Yahoo Finance)
+- 29 min **GS** Best CD rates today, Wednesday, September 2, 2026: Earn up to 4.30% APY with Marcus (Yahoo Personal Finance)
+- 34 min **INTC,SNDK** Here's the biggest thing keeping AI stock investors up at night (Yahoo Finance)
+- 37 min **GTLB,MSFT,SPCX** GitLab Stock Soars 21% After Earnings. It's Still Not a Buy. (Barrons.com)
+- 39 min **TAK** Takeda and Weave Bio collaborate on AI-driven automation in drug development (Pharmaceutical Technology)
+- 43 min **PEP,MDLZ** Mondelz, PepsiCo and pladis join forces for circular packaging trial (Packaging Gateway)
+- 45 min **KDP** Keurig Dr Pepper to sell stake  and factory  to Chobani (Just Food)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
