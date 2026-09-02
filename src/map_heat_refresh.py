@@ -109,6 +109,67 @@ def _write_bootstrap(date: str, heat: dict) -> dict:
     return payload
 
 
+def _write_passthrough(date: str, heat: dict, baseline: dict,
+                       errors: list[str]) -> dict:
+    """Keep last night's cards so the required research artifact still lands.
+
+    A failed morning Grok pass must not leave `_research.md` missing — that
+    is what failed Pre-Open ALL on 2026-09-02 after two valid-looking
+    retries. Heat still applies from the post-close cards.
+    """
+    cards = list(baseline.get("cards") or [])
+    payload = {
+        "date": date,
+        "phase": "morning_refresh",
+        "passthrough": True,
+        "source_baseline_generated_at": baseline.get("generated_at"),
+        "generated_at": datetime.now(ET).isoformat(),
+        "n_targets": baseline.get("n_targets"),
+        "n_cards": len(cards),
+        "n_refreshed": 0,
+        "evidence_errors": [],
+        "morning_refresh_errors": list(errors or [])[:20],
+        "cards": cards,
+        "size_gate": bool(heat.get("macro_gate") or heat.get("size_gate")),
+        "macro_gate": bool(heat.get("macro_gate")),
+        "earnings_gate": bool(heat.get("earnings_gate")),
+        "size_gate_reason": baseline.get("size_gate_reason") or (
+            "high-impact Finviz economic calendar"
+            if heat.get("macro_gate") else ""),
+        "calendar_entry_scale": 0.5 if heat.get("macro_gate") else 1.0,
+        "earnings_entry_tickers": heat.get("earnings_entry_tickers") or [
+            str(e.get("ticker") or "").upper()
+            for e in (heat.get("earnings") or []) if e.get("ticker")
+        ],
+        "parent_splits": baseline.get("parent_splits") or [],
+        "opportunities": baseline.get("opportunities") or [],
+        "vetoes": baseline.get("vetoes") or [],
+        "one_paragraph": (
+            "Morning delta refresh failed captain-evidence QC "
+            f"({'; '.join((errors or [])[:6])}). Using last night's "
+            "post-close captain cards so the book still has heat. "
+            "Overnight tape/news was not re-scored."
+        ),
+        "futures": heat.get("tape") or [],
+        "econ": heat.get("econ") or [],
+        "earnings": heat.get("earnings") or [],
+    }
+    final_path = OUT / f"{date}_research.json"
+    final_md = OUT / f"{date}_research.md"
+    OUT.mkdir(parents=True, exist_ok=True)
+    final_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    final_md.write_text(render(payload), encoding="utf-8")
+    (OUT / "latest_research.md").write_text(
+        final_md.read_text(encoding="utf-8"), encoding="utf-8")
+    qc = output_qc.qc_map_heat_research(final_md)
+    if not qc.ok:
+        output_qc.reject(final_path, final_md)
+        raise SystemExit(f"passthrough research QC failed: {qc.reason}")
+    print(f"[map-refresh] PASSTHROUGH wrote {final_path} "
+          f"({len(cards)} baseline cards; morning errors={errors[:6]})")
+    return payload
+
+
 def run(date: str, force: bool = False) -> dict:
     preopen.refuse_if_late("map_heat_refresh", force=force)
     heat_path = OUT / f"{date}_map_heat.json"
@@ -181,7 +242,10 @@ def run(date: str, force: bool = False) -> dict:
             obj.get("cards") or [], targets, min_coverage=0.8,
             require_x_record=True)
         if errors or len(clean) < max(3, int(0.8 * len(targets))):
-            raise SystemExit(f"morning card validation failed: {errors[:12]}")
+            print(f"[map-refresh] retry still failed ({errors[:8]}) — "
+                  "writing post-close baseline as morning_refresh so "
+                  "preopen can finish")
+            return _write_passthrough(date, heat, baseline, errors)
     merged = dict(base_by)
     for card in clean:
         merged[card["industry"]] = card

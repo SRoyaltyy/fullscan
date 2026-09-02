@@ -97,16 +97,31 @@ def validate_cards(cards: list[dict], targets: list[dict],
             if require_x_record and not isinstance(x_sent, dict):
                 errors.append(f"{industry}:{ticker}:missing_x_search_record")
                 continue
-            if require_x_record and x_sent.get("used") is True:
+            # Grok often claims used=true without a URL or mention delta.
+            # That is not evidence — coerce unused instead of killing the
+            # captain and then the whole industry card.
+            if require_x_record and isinstance(x_sent, dict) and x_sent.get("used") is True:
                 urls = x_sent.get("sample_urls") or []
-                if not any(_url_ok(u) for u in urls):
-                    errors.append(f"{industry}:{ticker}:x_used_without_url")
-                    continue
+                has_url = any(_url_ok(u) for u in urls)
                 try:
                     float(x_sent.get("mention_delta_24h"))
+                    has_delta = True
                 except (TypeError, ValueError):
-                    errors.append(f"{industry}:{ticker}:x_used_without_mention_delta")
-                    continue
+                    has_delta = False
+                if not has_url or not has_delta:
+                    why = []
+                    if not has_url:
+                        why.append("no sample url")
+                    if not has_delta:
+                        why.append("no mention_delta_24h")
+                    cap = dict(cap)
+                    cap["x_sentiment"] = {
+                        **x_sent,
+                        "used": False,
+                        "reason": (str(x_sent.get("reason") or "").strip()
+                                   or "used=true coerced unused: " + ", ".join(why)),
+                    }
+                    x_sent = cap["x_sentiment"]
             if (require_x_record and x_sent.get("used") is not True
                     and not str(x_sent.get("reason") or "").strip()):
                 errors.append(f"{industry}:{ticker}:x_unavailable_without_reason")

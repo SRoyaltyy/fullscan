@@ -311,39 +311,52 @@ def scrape_finviz_news(ticker):
         print(f"  ⚠️  Finviz news scrape failed: {e}")
         return []
 
+def _search_year_span():
+    """Years that actually sit inside the live/backtest lookback window.
+
+    Hardcoding '2025 2026' made every live morning hunt last year's news.
+    """
+    end = (CUTOFF_DATE or TODAY or "")[:4]
+    start = (LOOKBACK_START or end)[:4]
+    if start and end and start != end:
+        return f"{start} {end}"
+    return end or str(date.today().year)
+
+
 # ── Search templates (trimmed context) ────────────────
 def _make_catalyst_templates(full_name):
+    years = _search_year_span()
     return [
-        f"{full_name} contract partnership agreement 2025 2026",
-        f"{full_name} strategic alliance joint venture 2025 2026",
-        f"{full_name} product launch FDA approval regulatory greenlight 2025 2026",
-        f"{full_name} analyst upgrade downgrade price target initiation 2025 2026",
-        f"{full_name} CEO CFO management change appointment departure 2025 2026",
-        f"{full_name} capital raise PIPE funding round offering 2025 2026",
-        f"{full_name} share buyback repurchase dividend increase 2025 2026",
-        f"{full_name} earnings beat miss revenue EBITDA EPS results 2025 2026",
-        f"{full_name} earnings guidance raise cut outlook 2025 2026",
-        f"{full_name} acquisition merger divestiture spin-off 2025 2026",
-        f"{full_name} operational milestone capacity expansion 2025 2026",
-        f"{full_name} product failure recall safety issue 2025 2026",
-        f"{full_name} insider buying selling CEO CFO Form 4 2025 2026",
-        f"{full_name} activist investor 13D stake accumulation exit 2025 2026",
-        f"{full_name} institutional ownership 13F filing increase decrease 2025 2026",
-        f"{full_name} supply chain disruption factory fire shipping 2025 2026",
-        f"{full_name} patent grant litigation IP theft lawsuit 2025 2026",
-        f"{full_name} sector tailwind headwind rotation 2025 2026",
-        f"{full_name} commodity price impact input cost 2025 2026",
-        f"{full_name} tariff trade policy impact 2025 2026",
-        f"{full_name} government subsidy mandate regulation 2025 2026",
-        f"{full_name} short interest short squeeze bear raid 2025 2026",
-        f"{full_name} technical breakout breakdown death cross 2026",
-        f"{full_name} geopolitical impact sanctions conflict 2025 2026",
-        f"{full_name} regulatory approval denial antitrust block 2025 2026",
-        f"{full_name} revenue growth customer concentration 2025 2026",
-        f"{full_name} cost structure margin profitability 2025 2026",
-        f"{full_name} competitive position market share moat 2025 2026",
-        f"{full_name} debt financing liquidity cash burn 2025 2026",
-        f"{full_name} litigation lawsuit investigation 2025 2026",
+        f"{full_name} contract partnership agreement {years}",
+        f"{full_name} strategic alliance joint venture {years}",
+        f"{full_name} product launch FDA approval regulatory greenlight {years}",
+        f"{full_name} analyst upgrade downgrade price target initiation {years}",
+        f"{full_name} CEO CFO management change appointment departure {years}",
+        f"{full_name} capital raise PIPE funding round offering {years}",
+        f"{full_name} share buyback repurchase dividend increase {years}",
+        f"{full_name} earnings beat miss revenue EBITDA EPS results {years}",
+        f"{full_name} earnings guidance raise cut outlook {years}",
+        f"{full_name} acquisition merger divestiture spin-off {years}",
+        f"{full_name} operational milestone capacity expansion {years}",
+        f"{full_name} product failure recall safety issue {years}",
+        f"{full_name} insider buying selling CEO CFO Form 4 {years}",
+        f"{full_name} activist investor 13D stake accumulation exit {years}",
+        f"{full_name} institutional ownership 13F filing increase decrease {years}",
+        f"{full_name} supply chain disruption factory fire shipping {years}",
+        f"{full_name} patent grant litigation IP theft lawsuit {years}",
+        f"{full_name} sector tailwind headwind rotation {years}",
+        f"{full_name} commodity price impact input cost {years}",
+        f"{full_name} tariff trade policy impact {years}",
+        f"{full_name} government subsidy mandate regulation {years}",
+        f"{full_name} short interest short squeeze bear raid {years}",
+        f"{full_name} technical breakout breakdown death cross {years}",
+        f"{full_name} geopolitical impact sanctions conflict {years}",
+        f"{full_name} regulatory approval denial antitrust block {years}",
+        f"{full_name} revenue growth customer concentration {years}",
+        f"{full_name} cost structure margin profitability {years}",
+        f"{full_name} competitive position market share moat {years}",
+        f"{full_name} debt financing liquidity cash burn {years}",
+        f"{full_name} litigation lawsuit investigation {years}",
     ]
 
 def _make_context_templates(full_name):
@@ -491,6 +504,11 @@ new events ― prioritise those with the highest impact.
 Before extracting, verify that the snippet refers SPECIFICALLY to
 {full_name} or its ticker {ticker}. If an article is about a different
 company, DISCARD IT.
+
+AS-OF: {today}. LOOKBACK START: {lookback_start}.
+ONLY extract events with event_date on or after {lookback_start}
+and on or before {today}. Discard older history (including prior
+calendar years unless that date is still inside this window).
 
 Rules:
 - Describe each event in one sentence.
@@ -673,7 +691,7 @@ OUTPUT FORMAT: Return ONLY this JSON.
       "base_weight": 8,
       "adjusted_weight": 10,
       "event_ids": [0, 3],
-      "event_date": "2025-10-14",
+      "event_date": "2026-06-10",
       "evidence_excerpt": "...",
       "source_urls": ["https://..."],
       "confidence": 90
@@ -705,14 +723,128 @@ def _format_step4(full_name, ticker, today, merged_events_json, weighted_taxonom
                                 weighted_taxonomy_json=weighted_taxonomy_json,
                                 snapshot_json=snapshot_json)
 
+def _strip_json_fence(raw):
+    text = str(raw or "").strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+    return text
+
+
+def _loads_relaxed(text):
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
+    cleaned = re.sub(r",\s*}", "}", text)
+    cleaned = re.sub(r",\s*]", "]", cleaned)
+    try:
+        return json.loads(cleaned)
+    except Exception:
+        return None
+
+
+def _extract_complete_objects(text):
+    """Keep complete `{...}` objects from a truncated JSON array."""
+    objs = []
+    i = 0
+    n = len(text)
+    if "[" in text[:8]:
+        i = text.find("[") + 1
+    while i < n:
+        while i < n and text[i] in " \t\r\n,":
+            i += 1
+        if i >= n or text[i] in "]}":
+            break
+        if text[i] != "{":
+            break
+        depth = 0
+        in_str = False
+        esc = False
+        start = i
+        done = False
+        for j in range(i, n):
+            ch = text[j]
+            if in_str:
+                if esc:
+                    esc = False
+                elif ch == "\\":
+                    esc = True
+                elif ch == '"':
+                    in_str = False
+                continue
+            if ch == '"':
+                in_str = True
+            elif ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    parsed = _loads_relaxed(text[start:j + 1])
+                    if isinstance(parsed, dict):
+                        objs.append(parsed)
+                    i = j + 1
+                    done = True
+                    break
+        if not done:
+            break
+    return objs
+
+
 def parse_json(raw):
-    if raw.startswith("```"): raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-    try: return json.loads(raw)
-    except: pass
-    cleaned = re.sub(r",\s*}", "}", raw); cleaned = re.sub(r",\s*]", "]", cleaned)
-    try: return json.loads(cleaned)
-    except: pass
-    raise ValueError(f"Failed to parse JSON. Start: {raw[:200]}")
+    """Parse model JSON. Salvage complete objects from a truncated array.
+
+    Grok/OpenClaw often returns a valid-looking `[` that dies mid-string.
+    Throwing the whole ticker away for that is how live preopen got 0/8
+    dossiers two mornings in a row.
+    """
+    text = _strip_json_fence(raw)
+    if not text:
+        raise ValueError("Failed to parse JSON. Start: <empty>")
+    parsed = _loads_relaxed(text)
+    if parsed is not None:
+        return parsed
+    starts = [text.find(c) for c in "[{" if text.find(c) >= 0]
+    start = min(starts) if starts else -1
+    if start > 0:
+        parsed = _loads_relaxed(text[start:])
+        if parsed is not None:
+            return parsed
+        text = text[start:]
+    elif start == 0:
+        pass
+    else:
+        raise ValueError(f"Failed to parse JSON. Start: {text[:200]}")
+    objs = _extract_complete_objects(text)
+    if objs:
+        return objs
+    raise ValueError(f"Failed to parse JSON. Start: {text[:200]}")
+
+
+def filter_events_to_window(events, lookback_start=None, cutoff=None):
+    """Drop dated events outside the lookback / as-of window."""
+    start = lookback_start or LOOKBACK_START
+    end = cutoff if cutoff is not None else (CUTOFF_DATE or TODAY)
+    kept = []
+    dropped = 0
+    for e in events or []:
+        if not isinstance(e, dict):
+            dropped += 1
+            continue
+        d = str(e.get("event_date") or "")[:10]
+        if len(d) >= 10 and start and d < start:
+            dropped += 1
+            continue
+        if end and len(d) >= 10 and d > end:
+            dropped += 1
+            continue
+        kept.append(e)
+    if dropped:
+        print(f"  📋 dropped {dropped} events outside {start}..{end or 'live'}")
+    return kept
+
+
+def _as_of(cutoff_date):
+    return cutoff_date or TODAY
 
 def call_llm(prompt, user_msg, temperature=0.3, max_tokens=40000):
     messages = [{"role": "system", "content": prompt}, {"role": "user", "content": user_msg}]
@@ -892,16 +1024,18 @@ def build_verdict_prompt(full_name, ticker, cutoff_date):
         format_list("Negative Market Mechanics:", negative_mechanics),
     ])
 
+    as_of = _as_of(cutoff_date)
+    lookback = LOOKBACK_START
     prompt = f"""You are an expert market analyst.
 
 STOCK: {full_name} (ticker: {ticker}).
-CUTOFF DATE: {cutoff_date}.
-LOOKBACK: 6 months before {cutoff_date} (i.e., from approximately {LOOKBACK_START} to {cutoff_date}).
+AS-OF DATE: {as_of}{" (live morning; not a backtest cutoff)" if not cutoff_date else " (backtest cutoff)"}.
+LOOKBACK WINDOW: {lookback} through {as_of} (about 6 months).
 
-ONLY data points and events published on or before {cutoff_date} are valid.
-Discard everything after {cutoff_date}. Looking forward is strictly prohibited.
+ONLY data points and events published on or after {lookback} and on or before {as_of} are valid.
+Discard older history. Do not invent a forward tape after {as_of}.
 
-TASK: Predict the stock's direction for the 2 weeks after {cutoff_date}.
+TASK: Predict the stock's direction for the 2 weeks after {as_of}.
 Provide a clear verdict: Bullish or Bearish, followed by a concise explanation
 (3‑5 sentences) citing specific dates and real source URLs.
 
@@ -913,7 +1047,7 @@ lookback window.
 {catalyst_section}
 
 ========== CRITICAL ANTI‑HALLUCINATION RULES ==========
-- Every event you cite MUST have been published on or before {cutoff_date}.
+- Every event you cite MUST have been published on or after {lookback} and on or before {as_of}.
 - Every event MUST include at least one real URL you found during web search.
 - If you cannot find a real URL for a claim, do NOT make the claim.
 - Do NOT guess dates. If the exact date is unclear, use the publication date
@@ -1054,8 +1188,8 @@ def build_catcher_prompt(full_name, ticker, cutoff_date, grid, net_signal, convi
 
     instructions = f"""
 You are a financial fact‑checker for {full_name} (ticker: {ticker}).
-TODAY is {cutoff_date}.  LOOKBACK is the 6 months before {cutoff_date}.
-ONLY events on or before {cutoff_date} are valid. Discard anything after {cutoff_date}.
+TODAY is {_as_of(cutoff_date)}.  LOOKBACK is {LOOKBACK_START} through {_as_of(cutoff_date)}.
+ONLY events on or after {LOOKBACK_START} and on or before {_as_of(cutoff_date)} are valid.
 
 **USE THE WEB** to search for evidence.
 Your job:
@@ -1211,9 +1345,8 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         print(f"  ❌ Step 1 parse failed: {e}")
         return {"error": "Step 1 parse failure", "raw": step1_raw[:500]}
 
-    if CUTOFF_DATE:
-        raw_events = [e for e in raw_events if e.get("event_date", "9999") <= CUTOFF_DATE]
-    print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after cutoff)")
+    raw_events = filter_events_to_window(raw_events)
+    print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after window)")
 
     try:
         context_profile = parse_json(step2_raw)

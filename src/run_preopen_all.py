@@ -7,8 +7,8 @@ Does in one ECS job (skip-if-good, fail-closed QC):
   → news parse → events (+ catcher) → news judge
   → map heat research (morning delta over last night's baseline)
   → news actions
-  → catalyst dossiers (layer 3 on identified themes / captains / actions)
   → general predict → 11 sector predicts → sector board
+  → catalyst dossiers (layer 3; optional, after the 09:25-critical predicts)
   → output_qc (regex) → Grok reads the files as text → workflow check
 
 NOT included (those run later on their own crons, still required):
@@ -377,17 +377,18 @@ def run(date: str | None = None, force: bool = False) -> None:
         step("news_actions", "News actions",
              [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
               "--date", date, *fa])
-        # Layer 3: bounded Grok dossiers on names already identified by
-        # map-heat opportunities / OVERRIDE captains / mega earnings /
-        # action conflicts. Merges into today's actions before predicts.
-        step("catalyst", "Catalyst dossiers (identified names)",
-             [py, "-m", "src.catalyst_daily", "--date", date, *fa])
+        # Time-critical predicts first. Eight catalyst names each do
+        # 30+19 web searches + two LLM calls and on 2026-09-02 that ate
+        # the morning — Tech/Utilities then hit the 09:25 refuse.
+        # Dossiers still merge into actions for the later stock book.
         step("general_predict", "General market predict",
              [py, "-m", "src.run_predict", "--date", date, *fa])
         step("sector_predict", "Per-sector predict (all 11)",
              [py, "-m", "src.run_sector_predict", "--date", date, *fa])
         step("sector_board", "Sector board",
              [py, "-m", "src.sector_board", "--date", date])
+        step("catalyst", "Catalyst dossiers (identified names)",
+             [py, "-m", "src.catalyst_daily", "--date", date, *fa])
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)

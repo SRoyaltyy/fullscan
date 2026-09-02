@@ -68,7 +68,10 @@ Rules:
   INVALID. Price movement alone is not sentiment.
 - `none` is honest and acceptable, but include `search_note`.
 - X is required only in the morning hot-list refresh. If unavailable, set
-  `x_sentiment.used=false`; never fake mention counts.
+  `x_sentiment.used=false` with a one-line reason; never fake mention counts.
+  `used=true` is valid only when you also supply `mention_delta_24h` (a
+  number) AND at least one real `sample_urls` http(s) link. If you cannot
+  fill both, set `used=false`.
 - one_line ≤ 160 chars. why ≤ 120 chars.
 
 ## Job 2 — opportunity synthesis (JSON first)

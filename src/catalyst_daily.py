@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -329,22 +329,32 @@ def _prepare_engine(skip_gemini: bool) -> object:
     return ca
 
 
-def _snapshot(ticker: str) -> dict:
+def _snapshot(ticker: str, conn=None) -> dict:
     snap = {"profile": {"company_name": ticker, "sector": "", "industry": "",
                         "country": "", "description": ""}, "finviz": {}}
-    if not config.DATABASE_URL:
+    owned = False
+    if conn is None and config.DATABASE_URL:
+        try:
+            import psycopg2
+            conn = psycopg2.connect(config.DATABASE_URL, connect_timeout=10)
+            owned = True
+        except Exception as e:
+            print(f"[catalyst_daily] snapshot {ticker} fallback: {e}")
+            return snap
+    if conn is None:
         return snap
     try:
-        import psycopg2
         from collectors.catalyst_analysis import build_health_snapshot
-        conn = psycopg2.connect(config.DATABASE_URL)
-        try:
-            return build_health_snapshot(ticker, conn)
-        finally:
-            conn.close()
+        return build_health_snapshot(ticker, conn)
     except Exception as e:
         print(f"[catalyst_daily] snapshot {ticker} fallback: {e}")
         return snap
+    finally:
+        if owned and conn is not None:
+            try:
+                conn.close()
+            except Exception:
+                pass
 
 
 def _summarize(ticker: str, role: str, why: str, result: dict) -> dict:
@@ -378,26 +388,49 @@ def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict
     ca = _prepare_engine(skip_gemini)
     ca.CUTOFF_DATE = None
     ca.TODAY = date
+    try:
+        as_of = datetime.strptime(date, "%Y-%m-%d").date()
+        ca.LOOKBACK_START = (as_of - timedelta(days=185)).isoformat()
+    except ValueError:
+        pass
     out: list[dict] = []
-    for spec in targets:
-        ticker = spec["ticker"]
-        print(f"[catalyst_daily] → {ticker} ({spec['role']})", flush=True)
-        reused = _reuse_saved(ticker, date)
-        if reused:
-            print(f"[catalyst_daily] reuse data/catalyst/{ticker}_{date}.json")
-            out.append(_summarize(ticker, spec["role"], spec["why"], reused))
-            continue
+    conn = None
+    if config.DATABASE_URL:
         try:
-            result = ca.analyze_stock(ticker, _snapshot(ticker), "")
+            import psycopg2
+            conn = psycopg2.connect(config.DATABASE_URL, connect_timeout=10)
         except Exception as e:
-            print(f"[catalyst_daily] FAIL {ticker}: {e}")
-            out.append({"ticker": ticker, "role": spec["role"], "why": spec["why"], "error": str(e)[:240]})
-            continue
-        DATA_CATALYST.mkdir(parents=True, exist_ok=True)
-        payload = dict(result)
-        payload.update({"ticker": ticker, "generated_at": date, "cutoff_date": None, "role": spec["role"]})
-        (DATA_CATALYST / f"{ticker}_{date}.json").write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
-        out.append(_summarize(ticker, spec["role"], spec["why"], result))
+            print(f"[catalyst_daily] shared snapshot connect failed: {e}")
+            conn = None
+    try:
+        for spec in targets:
+            ticker = spec["ticker"]
+            print(f"[catalyst_daily] → {ticker} ({spec['role']})", flush=True)
+            reused = _reuse_saved(ticker, date)
+            if reused:
+                print(f"[catalyst_daily] reuse data/catalyst/{ticker}_{date}.json")
+                out.append(_summarize(ticker, spec["role"], spec["why"], reused))
+                continue
+            try:
+                result = ca.analyze_stock(ticker, _snapshot(ticker, conn), "")
+            except Exception as e:
+                print(f"[catalyst_daily] FAIL {ticker}: {e}")
+                out.append({"ticker": ticker, "role": spec["role"], "why": spec["why"],
+                            "error": str(e)[:240]})
+                continue
+            DATA_CATALYST.mkdir(parents=True, exist_ok=True)
+            payload = dict(result)
+            payload.update({"ticker": ticker, "generated_at": date,
+                            "cutoff_date": None, "role": spec["role"]})
+            (DATA_CATALYST / f"{ticker}_{date}.json").write_text(
+                json.dumps(payload, indent=2, default=str), encoding="utf-8")
+            out.append(_summarize(ticker, spec["role"], spec["why"], result))
+    finally:
+        if conn is not None:
+            try:
+                conn.close()
+            except Exception:
+                pass
     return out
 
 
