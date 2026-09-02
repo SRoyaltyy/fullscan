@@ -72,7 +72,7 @@ def test_haircut_only_on_new_buy():
         hold=1, seats=2, hard_red="haircut_5", market_hard=True,
         rets={"OLD": 1.0, "NEW": -2.0},
         bars={
-            "OLD": {"open": 100.0, "high": 102.0, "low": 99.0, "close": 101.0},
+            "OLD": {"open": 101.0, "high": 102.0, "low": 99.0, "close": 101.0},
             "NEW": {"open": 100.0, "high": 101.0, "low": 94.0, "close": 98.0},
         },
         prev_closes={"OLD": 100.0},
@@ -81,7 +81,7 @@ def test_haircut_only_on_new_buy():
     assert rec["bought"] == ["NEW"]
     assert rec["buys"][0]["buy_kind"] == "limit_5"
     assert rec["buys"][0]["buy_px"] == 95.0
-    assert by["OLD"] == 1.0  # 101/100 - 1
+    assert abs(by["OLD"] - 1.0) < 1e-9  # (101/100 - 1)*100 via prior close
     assert abs(by["NEW"] - (98 / 95 - 1) * 100) < 1e-6
 
 

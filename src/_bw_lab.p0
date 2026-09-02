@@ -269,7 +269,7 @@ def _mark_ret(
             raw = raw + 5.0
     else:
         return None
-    return max(-CLIP, min(CLIP, raw))
+    return max(-CLIP, min(CLIP, round(float(raw), 10)))
 
 
 def step_hold(
@@ -389,4 +389,3 @@ def step_hold(
         "buys": buys,
         "sells": sells,
     }
-
