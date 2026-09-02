@@ -1,6 +1,6 @@
 name: Boring Winners Backtest
 
-# Seat the FEATURE_MINE high-n edges (A / blue / short+sma20) into a 25-name book.
+# Seat FEATURE_MINE AND-stacks (hot+ab+peer → A∧peer → blue stacks → join∧Band) into a 25-name book.
 
 on:
   workflow_dispatch:
