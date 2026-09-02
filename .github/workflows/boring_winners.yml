@@ -1,6 +1,7 @@
 name: Boring Winners Backtest
 
-# Seat the FEATURE_MINE high-n edges (A / blue / short+sma20) into a 25-name book.
+# Seat the fixed FEATURE_MINE edges (steady+blue → blue+white → blue → …)
+# and publish the full MD pack: scoreboard, per-day books, today's latest.
 
 on:
   workflow_dispatch:
@@ -39,17 +40,30 @@ jobs:
           test -s 03_scoreboard/feature_asof_panel.parquet
           python -m src.boring_winners_backtest
           test -s 03_scoreboard/BORING_WINNERS.md
+          test -s 03_scoreboard/latest_boring_winners.md
           test -s 03_scoreboard/boring_winners_picks.csv
           test -s 03_scoreboard/boring_winners_daily.csv
+          test -d 03_scoreboard/boring_winners
+          test -n "$(ls 03_scoreboard/boring_winners/*.md)"
+          test -s 01_daily/latest_boring_winners.md
 
       - name: Publish
         run: |
+          set -euo pipefail
+          mapfile -t FILES < <(
+            printf '%s\n' \
+              03_scoreboard/BORING_WINNERS.md \
+              03_scoreboard/latest_boring_winners.md \
+              03_scoreboard/boring_winners.json \
+              03_scoreboard/boring_winners_picks.csv \
+              03_scoreboard/boring_winners_daily.csv \
+              03_scoreboard/boring_winners/*.md \
+              01_daily/*_boring_winners.md \
+              01_daily/latest_boring_winners.md
+          )
           bash scripts/safe_git_push.sh \
-            "chore: boring winners 25-seat backtest" \
-            03_scoreboard/BORING_WINNERS.md \
-            03_scoreboard/boring_winners.json \
-            03_scoreboard/boring_winners_picks.csv \
-            03_scoreboard/boring_winners_daily.csv
+            "chore: boring winners mined book" \
+            "${FILES[@]}"
 
       - name: Summary
         if: always()
@@ -59,5 +73,11 @@ jobs:
             echo
             if [ -f 03_scoreboard/BORING_WINNERS.md ]; then
               awk '/^## Daily book returns/,/^## Daily short book/' 03_scoreboard/BORING_WINNERS.md
+            fi
+            echo
+            if [ -f 03_scoreboard/latest_boring_winners.md ]; then
+              echo "### Latest book"
+              echo
+              cat 03_scoreboard/latest_boring_winners.md
             fi
           } >> "$GITHUB_STEP_SUMMARY"

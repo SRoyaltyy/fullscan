@@ -1,614 +1,746 @@
-# Boring winners — 25-seat book
+# Boring winners — mined 25-seat book
 
-Daily-rebalanced long book from the FEATURE_MINE high-n edges. Equal-weight, close-to-close.
-The short sleeve is the inverse filter (fade / bad A), disjoint from the longs. Empty when those cameras did not print.
+Daily-rebalanced from the **fixed FEATURE_MINE** edges. Equal-weight, close-to-close, clip ±30 on the book line. Per-name 1d/2d/3d/1w are raw.
 
-**Long:** Hit A = `ab=good` OR `peer=good`. Scale B = `short=high` OR `sma20=below`. Blue overlay. Fade / first_crack vetoed.
-**Seats:** 25 long + 25 short. **Sector cap:** 6. Score = `3·blue + 2·ab + 2·peer + 1·short_high + 1·sma_below + 1·ab_up`.
+## Edges this seater uses
 
-A cameras only print from **2026-08-20**. Before that the live rule falls through to blue, then `short AND sma20=below`.
-Settled `1d` only through **2026-08-20**. Later sessions have names, no close-to-close yet.
+| priority | stack | mine-board 1d | role |
+|---:|---|---|---|
+| 1 | `hot+ab+peer` | 70.6% hit · +3.14 mean · n=51 | up to 8 scalp seats |
+| 2 | `steady+blue` | 52.0% hit · +9.54 mean · n=1394 | core swing |
+| 3 | `blue+white` | 49.4% hit · +10.48 mean · n=1246 | white only with blue |
+| 4 | `blue` | 57.7% hit · +4.46 mean · n=3387 | baseline |
+| 5 | `ab AND peer` | ~65% hit · ~+1 mean | up to 5 modest fill |
+| 6 | `alarm AND NOT white` | 47.7% hit · +2.27 mean | rebound when no blue |
+| 7 | `rsi=oversold` / `gap=down` | low hit · huge mean | lottery last resort |
+| short | `fade` / `first_crack` | 38.2% hit · −0.72 mean | short only |
+
+Never seated: white alone, fade as a long, `ab OR peer` 1,800-name dump, `join AND Band` alphabet dump.
+Max 25, sector cap 6. Thin books are allowed. A cameras print from **2026-08-20**. Settled 1d through **2026-08-20**.
+
+Per-day files: `03_scoreboard/boring_winners/<date>.md` · today also at `01_daily/<date>_boring_winners.md` and `latest_boring_winners.md`.
 
 ## Daily book returns
 
-Equal-weight, clip ±30. Tickers and per-name 1d/2d/3d/1w are in the ledger below and in `boring_winners_picks.csv`.
+| date | stacks | n | mine 1d | book BUY 1d | uni med | 2d | 3d | 1w | W | L |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2026-08-13 | `rsi_oversold` | 25 | +2.26 | +2.00 | +0.00 | +3.81 | +3.43 | -0.06 | 12 | 10 |
+| 2026-08-14 | `steady_blue+alarm_rebound` | 25 | +1.08 | +0.52 | -0.24 | -0.82 | -0.65 | -2.38 | 8 | 13 |
+| 2026-08-17 | `steady_blue+alarm_rebound` | 24 | -2.15 | -1.59 | -0.60 | -1.12 | -2.29 | — | 5 | 19 |
+| 2026-08-18 | `alarm_rebound` | 25 | -0.74 | +2.07 | +0.88 | -2.12 | -1.31 | — | 12 | 13 |
+| 2026-08-19 | `steady_blue+blue` | 25 | -0.99 | -0.78 | -0.98 | -0.79 | — | — | 9 | 16 |
+| 2026-08-20 | `hot_ab_peer+steady_blue+rsi_oversold+gap_down` | 23 | +1.21 | +1.10 | +0.72 | — | — | — | 17 | 5 |
+| 2026-08-21 | `hot_ab_peer+steady_blue+alarm_rebound` | 25 | — | — | — | — | — | — | 0 | 0 |
+| 2026-08-27 | `hot_ab_peer+steady_blue+alarm_rebound` | 25 | — | — | — | — | — | — | 0 | 0 |
+| 2026-08-30 | `hot_ab_peer+steady_blue+alarm_rebound` | 25 | — | — | — | — | — | — | 0 | 0 |
+| 2026-08-31 | `hot_ab_peer+steady_blue+blue` | 25 | — | — | — | — | — | — | 0 | 0 |
+| 2026-09-01 | `steady_blue+blue+alarm_rebound` | 25 | — | — | — | — | — | — | 0 | 0 |
 
-| date | rule | n | 1d | 2d | 3d | 1w | W | L | bought | sold | held |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026-08-13 | `Band` | 25 | +0.28 | -2.92 | -3.88 | -5.00 | 12 | 12 | 25 | 0 | 0 |
-| 2026-08-14 | `blue` | 17 | -2.26 | -3.95 | -1.99 | -1.88 | 5 | 11 | 17 | 25 | 0 |
-| 2026-08-17 | `blue` | 12 | -3.21 | -3.67 | -4.34 | — | 2 | 10 | 12 | 17 | 0 |
-| 2026-08-18 | `Band` | 25 | +2.15 | -0.50 | -0.65 | — | 17 | 7 | 25 | 12 | 0 |
-| 2026-08-19 | `blue` | 25 | -1.67 | -1.24 | — | — | 4 | 21 | 25 | 25 | 0 |
-| 2026-08-20 | `A` | 25 | +1.89 | — | — | — | 15 | 10 | 24 | 24 | 1 |
-| 2026-08-21 | `A` | 25 | — | — | — | — | 0 | 0 | 24 | 24 | 1 |
-| 2026-08-27 | `A` | 25 | — | — | — | — | 0 | 0 | 25 | 25 | 0 |
-| 2026-08-30 | `A` | 25 | — | — | — | — | 0 | 0 | 23 | 23 | 2 |
-| 2026-08-31 | `A` | 25 | — | — | — | — | 0 | 0 | 24 | 24 | 1 |
-| 2026-09-01 | `A` | 25 | — | — | — | — | 0 | 0 | 25 | 25 | 0 |
+Mine book 1d: 6 priced days · p(loss day)=50.0% · mean=+0.11 · cum=+0.67.
+Stock-book BUY 1d (same panel): 6 priced days · p(loss day)=33.3% · mean=+0.55 · cum=+3.33.
+Mine names 1d: n=144 · p_win=43.8% · p_loss=52.8% · avg_win=+219.25 · avg_loss=-2.95 · mean=+94.37 · clip30=+0.08 · payoff=74.32.
+Mine names 2d: n=123 · p_win=38.2% · p_loss=60.2% · avg_win=+419.26 · avg_loss=-4.53 · mean=+157.48 · clip30=-0.20 · payoff=92.53.
 
-Long book 1d: 6 priced days · p(loss day)=50.0% · mean=-0.47 · cum=-2.83 · avg win day=+1.44 · avg loss day=-2.38.
-Long book 2d: 5 priced days · p(loss day)=100.0% · mean=-2.46 · cum=-12.29.
-Long names 1d: n=127 · p_win=43.3% · p_loss=55.9% · avg_win=+4.34 · avg_loss=-3.49 · mean=-0.07 · clip30=-0.10 · payoff=1.24.
-Long names 2d: n=100 · p_win=32.0% · p_loss=67.0% · avg_win=+3.01 · avg_loss=-4.90 · mean=-2.32 · clip30=-2.19 · payoff=0.61.
+## Daily short book (fade only, −1 × clipped name return)
 
-## Daily short book (inverse, −1 × clipped name return)
+| date | n | 1d | 2d | new | covered |
+|---|---:|---:|---:|---:|---:|
+| 2026-08-13 | 0 | — | — | 0 | 0 |
+| 2026-08-14 | 0 | — | — | 0 | 0 |
+| 2026-08-17 | 25 | +2.37 | +0.36 | 25 | 0 |
+| 2026-08-18 | 6 | -0.78 | -2.59 | 6 | 25 |
+| 2026-08-19 | 0 | — | — | 0 | 6 |
+| 2026-08-20 | 0 | — | — | 0 | 0 |
+| 2026-08-21 | 21 | — | — | 21 | 0 |
+| 2026-08-27 | 25 | — | — | 25 | 21 |
+| 2026-08-30 | 24 | — | — | 22 | 23 |
+| 2026-08-31 | 25 | — | — | 25 | 24 |
+| 2026-09-01 | 25 | — | — | 25 | 25 |
 
-Shorts only when fade / first_crack printed, or when A cameras printed bad. Empty otherwise.
+Short book 1d: 2 priced days · p(loss day)=50.0% · mean=+0.79 · cum=+1.59.
 
-| date | rule | n | 1d | 2d | new | covered |
-|---|---|---:|---:|---:|---:|---:|
-| 2026-08-13 | `none` | 0 | — | — | 0 | 0 |
-| 2026-08-14 | `none` | 0 | — | — | 0 | 0 |
-| 2026-08-17 | `fade` | 25 | +0.45 | +0.07 | 25 | 0 |
-| 2026-08-18 | `fade` | 6 | -0.81 | -2.66 | 6 | 25 |
-| 2026-08-19 | `none` | 0 | — | — | 0 | 6 |
-| 2026-08-20 | `A_bad` | 25 | -2.13 | — | 25 | 0 |
-| 2026-08-21 | `fade` | 21 | — | — | 21 | 25 |
-| 2026-08-27 | `fade` | 25 | — | — | 25 | 21 |
-| 2026-08-30 | `fade` | 24 | — | — | 23 | 24 |
-| 2026-08-31 | `fade` | 25 | — | — | 25 | 24 |
-| 2026-09-01 | `fade` | 25 | — | — | 24 | 24 |
+## Each day's stocks
 
-Short book 1d: 3 priced days · p(loss day)=66.7% · mean=-0.83 · cum=-2.49.
+`buy` / `hold` this morning. `sell` = dropped overnight (last seated 1d/2d/3d/1w).
 
-## Each stock bought / held / sold
+### 2026-08-13 · `rsi_oversold` · n=25
 
-Long seats only. `buy` = new that morning, `hold` = still in the book, `sell` = dropped at the next rebalance (returns are the last seated close-to-close). Shorts are in the daily short table and the CSV (`side=sell`).
+lottery `rsi=oversold` (low hit, huge mean)
 
-| date | action | Ticker | sector | score | 1d | 2d | 3d | 1w |
-|---|---|---|---|---:|---:|---:|---:|---:|
-| 2026-08-13 | buy | ABEO | Healthcare | 2 | -5.67 | -6.46 | -2.99 | -6.14 |
-| 2026-08-13 | buy | ANDG | Consumer Cyclical | 2 | +1.22 | +1.45 | -5.28 | +4.18 |
-| 2026-08-13 | buy | ATRA | Healthcare | 2 | -4.93 | -1.76 | +2.47 | +10.22 |
-| 2026-08-13 | buy | BETR | Financial | 2 | -8.47 | -9.73 | -13.00 | -22.67 |
-| 2026-08-13 | buy | BW | Industrials | 2 | +10.05 | +6.10 | -2.25 | -9.84 |
-| 2026-08-13 | buy | BYND | Consumer Defensive | 2 | — | — | — | — |
-| 2026-08-13 | buy | CRIS | Healthcare | 2 | -3.74 | — | — | — |
-| 2026-08-13 | buy | CVRX | Healthcare | 2 | +4.76 | -6.46 | -6.46 | -3.40 |
-| 2026-08-13 | buy | CYN | Technology | 2 | +4.22 | -0.47 | -0.47 | +0.47 |
-| 2026-08-13 | buy | DJCO | Technology | 2 | +0.35 | -0.87 | -0.11 | +2.24 |
-| 2026-08-13 | buy | EMPD | Consumer Cyclical | 2 | +2.12 | -1.06 | -1.06 | +0.71 |
-| 2026-08-13 | buy | EVTL | Industrials | 2 | -1.07 | -4.30 | -7.40 | -10.50 |
-| 2026-08-13 | buy | FBIO | Healthcare | 2 | -1.68 | -5.37 | -2.35 | -7.05 |
-| 2026-08-13 | buy | GSUN | Consumer Defensive | 2 | +7.46 | — | — | — |
-| 2026-08-13 | buy | IMDX | Healthcare | 2 | +16.44 | +15.09 | +15.36 | +15.90 |
-| 2026-08-13 | buy | KSCP | Industrials | 2 | -6.17 | -11.73 | -11.11 | -12.35 |
-| 2026-08-13 | buy | LESL | Consumer Cyclical | 2 | -16.23 | -14.80 | -18.18 | -20.78 |
-| 2026-08-13 | buy | MVIS | Technology | 2 | -40.58 | -43.24 | -52.26 | -53.58 |
-| 2026-08-13 | buy | ONON | Consumer Cyclical | 2 | +1.99 | -0.89 | -1.77 | -5.35 |
-| 2026-08-13 | buy | OPEN | Real Estate | 2 | -0.27 | -3.01 | -7.95 | -4.93 |
-| 2026-08-13 | buy | TPR | Consumer Cyclical | 2 | +0.46 | +0.49 | +3.01 | +1.11 |
-| 2026-08-13 | buy | VWAV | Industrials | 2 | +44.72 | +16.26 | +8.13 | -12.20 |
-| 2026-08-13 | buy | YETI | Consumer Cyclical | 2 | -2.00 | -5.43 | -4.90 | -3.23 |
-| 2026-08-13 | buy | ABX | Financial | 2 | +8.80 | +7.04 | +5.75 | +7.51 |
-| 2026-08-13 | buy | AIOT | Technology | 2 | -0.95 | -8.28 | -4.78 | -3.82 |
-| 2026-08-14 | buy | GLND | Energy | 5 | +0.00 | +1.56 | +10.16 | +16.41 |
-| 2026-08-14 | buy | NCMI | Communication Services | 5 | -4.54 | -11.89 | -7.69 | -11.19 |
-| 2026-08-14 | buy | STUB | Communication Services | 5 | -11.88 | -11.76 | -14.11 | -17.33 |
-| 2026-08-14 | buy | ANGI | Communication Services | 5 | -5.51 | -1.91 | +1.70 | +4.24 |
-| 2026-08-14 | buy | BMBL | Communication Services | 5 | -4.06 | +0.37 | +2.95 | +3.32 |
-| 2026-08-14 | buy | BORR | Energy | 5 | +1.58 | +0.00 | -0.68 | +1.58 |
-| 2026-08-14 | buy | CCOI | Communication Services | 5 | -5.14 | -10.61 | -8.49 | -18.92 |
-| 2026-08-14 | buy | DJT | Communication Services | 5 | -2.06 | -2.54 | +0.97 | +10.04 |
-| 2026-08-14 | buy | FLNG | Energy | 5 | +0.26 | +0.97 | +5.46 | +3.99 |
-| 2026-08-14 | buy | IEP | Energy | 5 | -4.18 | -7.95 | -10.38 | -8.49 |
-| 2026-08-14 | buy | IMPP | Energy | 5 | +3.76 | +5.43 | +4.38 | +8.56 |
-| 2026-08-14 | buy | LB | Energy | 5 | +1.02 | +2.71 | +4.46 | +14.00 |
-| 2026-08-14 | buy | NEE | Utilities | 4 | +0.04 | +0.04 | -0.33 | -2.95 |
-| 2026-08-14 | buy | NRG | Utilities | 4 | -3.07 | -8.46 | -4.48 | -10.40 |
-| 2026-08-14 | buy | VST | Utilities | 4 | -1.36 | -5.14 | -3.67 | -8.05 |
-| 2026-08-14 | buy | CEG | Utilities | 3 | -1.67 | -5.55 | -2.95 | -3.40 |
-| 2026-08-14 | buy | TLN | Utilities | 3 | -1.60 | -12.43 | -11.13 | -13.31 |
-| 2026-08-14 | sell | ABEO | Healthcare | 2 | -5.67 | -6.46 | -2.99 | -6.14 |
-| 2026-08-14 | sell | ABX | Financial | 2 | +8.80 | +7.04 | +5.75 | +7.51 |
-| 2026-08-14 | sell | AIOT | Technology | 2 | -0.95 | -8.28 | -4.78 | -3.82 |
-| 2026-08-14 | sell | ANDG | Consumer Cyclical | 2 | +1.22 | +1.45 | -5.28 | +4.18 |
-| 2026-08-14 | sell | ATRA | Healthcare | 2 | -4.93 | -1.76 | +2.47 | +10.22 |
-| 2026-08-14 | sell | BETR | Financial | 2 | -8.47 | -9.73 | -13.00 | -22.67 |
-| 2026-08-14 | sell | BW | Industrials | 2 | +10.05 | +6.10 | -2.25 | -9.84 |
-| 2026-08-14 | sell | BYND | Consumer Defensive | 2 | — | — | — | — |
-| 2026-08-14 | sell | CRIS | Healthcare | 2 | -3.74 | — | — | — |
-| 2026-08-14 | sell | CVRX | Healthcare | 2 | +4.76 | -6.46 | -6.46 | -3.40 |
-| 2026-08-14 | sell | CYN | Technology | 2 | +4.22 | -0.47 | -0.47 | +0.47 |
-| 2026-08-14 | sell | DJCO | Technology | 2 | +0.35 | -0.87 | -0.11 | +2.24 |
-| 2026-08-14 | sell | EMPD | Consumer Cyclical | 2 | +2.12 | -1.06 | -1.06 | +0.71 |
-| 2026-08-14 | sell | EVTL | Industrials | 2 | -1.07 | -4.30 | -7.40 | -10.50 |
-| 2026-08-14 | sell | FBIO | Healthcare | 2 | -1.68 | -5.37 | -2.35 | -7.05 |
-| 2026-08-14 | sell | GSUN | Consumer Defensive | 2 | +7.46 | — | — | — |
-| 2026-08-14 | sell | IMDX | Healthcare | 2 | +16.44 | +15.09 | +15.36 | +15.90 |
-| 2026-08-14 | sell | KSCP | Industrials | 2 | -6.17 | -11.73 | -11.11 | -12.35 |
-| 2026-08-14 | sell | LESL | Consumer Cyclical | 2 | -16.23 | -14.80 | -18.18 | -20.78 |
-| 2026-08-14 | sell | MVIS | Technology | 2 | -40.58 | -43.24 | -52.26 | -53.58 |
-| 2026-08-14 | sell | ONON | Consumer Cyclical | 2 | +1.99 | -0.89 | -1.77 | -5.35 |
-| 2026-08-14 | sell | OPEN | Real Estate | 2 | -0.27 | -3.01 | -7.95 | -4.93 |
-| 2026-08-14 | sell | TPR | Consumer Cyclical | 2 | +0.46 | +0.49 | +3.01 | +1.11 |
-| 2026-08-14 | sell | VWAV | Industrials | 2 | +44.72 | +16.26 | +8.13 | -12.20 |
-| 2026-08-14 | sell | YETI | Consumer Cyclical | 2 | -2.00 | -5.43 | -4.90 | -3.23 |
-| 2026-08-17 | buy | UAMY | Basic Materials | 5 | -7.47 | +1.96 | -6.23 | — |
-| 2026-08-17 | buy | ALTO | Basic Materials | 5 | +0.47 | -0.71 | -0.95 | — |
-| 2026-08-17 | buy | CC | Basic Materials | 5 | -1.91 | +1.21 | -0.19 | — |
-| 2026-08-17 | buy | FMC | Basic Materials | 5 | -0.59 | +6.19 | +6.88 | — |
-| 2026-08-17 | buy | GPRE | Basic Materials | 5 | +0.25 | -0.68 | -0.74 | — |
-| 2026-08-17 | buy | HUN | Basic Materials | 5 | -2.52 | -1.26 | -1.46 | — |
-| 2026-08-17 | buy | AMAT | Technology | 4 | -3.92 | -7.31 | -7.21 | — |
-| 2026-08-17 | buy | AVGO | Technology | 4 | -3.17 | -7.63 | -7.24 | — |
-| 2026-08-17 | buy | AMD | Technology | 3 | -4.27 | -7.82 | -7.22 | — |
-| 2026-08-17 | buy | ASML | Technology | 3 | -4.26 | -6.98 | -7.05 | — |
-| 2026-08-17 | buy | INTC | Technology | 3 | -6.57 | -10.33 | -10.98 | — |
-| 2026-08-17 | buy | LRCX | Technology | 3 | -4.63 | -10.66 | -9.69 | — |
-| 2026-08-17 | sell | ANGI | Communication Services | 5 | -5.51 | -1.91 | +1.70 | +4.24 |
-| 2026-08-17 | sell | BMBL | Communication Services | 5 | -4.06 | +0.37 | +2.95 | +3.32 |
-| 2026-08-17 | sell | BORR | Energy | 5 | +1.58 | +0.00 | -0.68 | +1.58 |
-| 2026-08-17 | sell | CCOI | Communication Services | 5 | -5.14 | -10.61 | -8.49 | -18.92 |
-| 2026-08-17 | sell | CEG | Utilities | 3 | -1.67 | -5.55 | -2.95 | -3.40 |
-| 2026-08-17 | sell | DJT | Communication Services | 5 | -2.06 | -2.54 | +0.97 | +10.04 |
-| 2026-08-17 | sell | FLNG | Energy | 5 | +0.26 | +0.97 | +5.46 | +3.99 |
-| 2026-08-17 | sell | GLND | Energy | 5 | +0.00 | +1.56 | +10.16 | +16.41 |
-| 2026-08-17 | sell | IEP | Energy | 5 | -4.18 | -7.95 | -10.38 | -8.49 |
-| 2026-08-17 | sell | IMPP | Energy | 5 | +3.76 | +5.43 | +4.38 | +8.56 |
-| 2026-08-17 | sell | LB | Energy | 5 | +1.02 | +2.71 | +4.46 | +14.00 |
-| 2026-08-17 | sell | NCMI | Communication Services | 5 | -4.54 | -11.89 | -7.69 | -11.19 |
-| 2026-08-17 | sell | NEE | Utilities | 4 | +0.04 | +0.04 | -0.33 | -2.95 |
-| 2026-08-17 | sell | NRG | Utilities | 4 | -3.07 | -8.46 | -4.48 | -10.40 |
-| 2026-08-17 | sell | STUB | Communication Services | 5 | -11.88 | -11.76 | -14.11 | -17.33 |
-| 2026-08-17 | sell | TLN | Utilities | 3 | -1.60 | -12.43 | -11.13 | -13.31 |
-| 2026-08-17 | sell | VST | Utilities | 4 | -1.36 | -5.14 | -3.67 | -8.05 |
-| 2026-08-18 | buy | AOS | Industrials | 2 | +4.83 | +2.58 | +3.65 | — |
-| 2026-08-18 | buy | BF-B | Consumer Defensive | 2 | +4.71 | +4.64 | +4.75 | — |
-| 2026-08-18 | buy | COCO | Consumer Defensive | 2 | +6.34 | +2.56 | -0.30 | — |
-| 2026-08-18 | buy | EVRG | Utilities | 2 | +0.19 | -0.31 | -3.00 | — |
-| 2026-08-18 | buy | EXEL | Healthcare | 2 | +2.39 | +1.07 | +1.81 | — |
-| 2026-08-18 | buy | KMB | Consumer Defensive | 2 | +2.00 | +0.90 | +1.48 | — |
-| 2026-08-18 | buy | LNT | Utilities | 2 | +0.24 | -0.74 | -3.03 | — |
-| 2026-08-18 | buy | LNTH | Healthcare | 2 | +0.22 | -0.02 | -0.29 | — |
-| 2026-08-18 | buy | PBH | Healthcare | 2 | +2.19 | -0.10 | +1.46 | — |
-| 2026-08-18 | buy | PNW | Utilities | 2 | -0.72 | -0.77 | -2.79 | — |
-| 2026-08-18 | buy | RRC | Energy | 2 | +1.15 | +2.03 | +3.01 | — |
-| 2026-08-18 | buy | TAP | Consumer Defensive | 2 | +3.31 | +3.60 | +4.40 | — |
-| 2026-08-18 | buy | BKH | Utilities | 2 | +0.06 | +0.19 | -2.00 | — |
-| 2026-08-18 | buy | CALM | Consumer Defensive | 2 | -0.79 | +1.53 | +1.98 | — |
-| 2026-08-18 | buy | JBS | Consumer Defensive | 2 | +0.66 | -0.81 | +1.17 | — |
-| 2026-08-18 | buy | CAPR | Healthcare | 2 | +12.71 | -3.39 | -11.16 | — |
-| 2026-08-18 | buy | ENVX | Industrials | 2 | +8.45 | +4.31 | +7.82 | — |
-| 2026-08-18 | buy | EVTL | Industrials | 2 | -1.29 | -3.35 | -1.16 | — |
-| 2026-08-18 | buy | EYPT | Healthcare | 2 | +15.17 | -1.28 | -2.74 | — |
-| 2026-08-18 | buy | IEP | Energy | 2 | -2.63 | -2.63 | -0.59 | — |
-| 2026-08-18 | buy | OTLK | Healthcare | 2 | -1.43 | -3.43 | -7.57 | — |
-| 2026-08-18 | buy | SERV | Industrials | 2 | — | — | — | — |
-| 2026-08-18 | buy | YSS | Industrials | 2 | -2.30 | -11.71 | -10.56 | — |
-| 2026-08-18 | buy | CDNL | Industrials | 2 | -4.01 | -6.40 | -3.63 | — |
-| 2026-08-18 | buy | DPZ | Consumer Cyclical | 2 | +0.08 | -0.56 | +1.67 | — |
-| 2026-08-18 | sell | ALTO | Basic Materials | 5 | +0.47 | -0.71 | -0.95 | — |
-| 2026-08-18 | sell | AMAT | Technology | 4 | -3.92 | -7.31 | -7.21 | — |
-| 2026-08-18 | sell | AMD | Technology | 3 | -4.27 | -7.82 | -7.22 | — |
-| 2026-08-18 | sell | ASML | Technology | 3 | -4.26 | -6.98 | -7.05 | — |
-| 2026-08-18 | sell | AVGO | Technology | 4 | -3.17 | -7.63 | -7.24 | — |
-| 2026-08-18 | sell | CC | Basic Materials | 5 | -1.91 | +1.21 | -0.19 | — |
-| 2026-08-18 | sell | FMC | Basic Materials | 5 | -0.59 | +6.19 | +6.88 | — |
-| 2026-08-18 | sell | GPRE | Basic Materials | 5 | +0.25 | -0.68 | -0.74 | — |
-| 2026-08-18 | sell | HUN | Basic Materials | 5 | -2.52 | -1.26 | -1.46 | — |
-| 2026-08-18 | sell | INTC | Technology | 3 | -6.57 | -10.33 | -10.98 | — |
-| 2026-08-18 | sell | LRCX | Technology | 3 | -4.63 | -10.66 | -9.69 | — |
-| 2026-08-18 | sell | UAMY | Basic Materials | 5 | -7.47 | +1.96 | -6.23 | — |
-| 2026-08-19 | buy | LOGI | Technology | 5 | -5.11 | -4.42 | — | — |
-| 2026-08-19 | buy | WB | Communication Services | 5 | -4.00 | -6.14 | — | — |
-| 2026-08-19 | buy | AAL | Industrials | 5 | -2.45 | -0.29 | — | — |
-| 2026-08-19 | buy | ALK | Industrials | 5 | -2.55 | -1.99 | — | — |
-| 2026-08-19 | buy | AKAM | Technology | 5 | -2.44 | -2.15 | — | — |
-| 2026-08-19 | buy | MGM | Consumer Cyclical | 5 | -0.12 | +1.20 | — | — |
-| 2026-08-19 | buy | NYT | Communication Services | 5 | -1.00 | -0.41 | — | — |
-| 2026-08-19 | buy | SIRI | Communication Services | 5 | -0.98 | +0.07 | — | — |
-| 2026-08-19 | buy | WLY | Communication Services | 5 | +0.21 | -0.75 | — | — |
-| 2026-08-19 | buy | NEE | Utilities | 4 | -1.02 | -2.63 | — | — |
-| 2026-08-19 | buy | NRG | Utilities | 4 | -4.33 | -6.20 | — | — |
-| 2026-08-19 | buy | ARM | Technology | 4 | +0.55 | -2.41 | — | — |
-| 2026-08-19 | buy | CHTR | Communication Services | 4 | -3.09 | -1.51 | — | — |
-| 2026-08-19 | buy | JD | Consumer Cyclical | 4 | +0.20 | +0.07 | — | — |
-| 2026-08-19 | buy | LEN | Consumer Cyclical | 4 | -2.15 | -0.32 | — | — |
-| 2026-08-19 | buy | MAR | Consumer Cyclical | 4 | -0.73 | -0.79 | — | — |
-| 2026-08-19 | buy | MCD | Consumer Cyclical | 4 | +0.63 | +1.31 | — | — |
-| 2026-08-19 | buy | SWKS | Technology | 4 | -0.79 | -1.96 | — | — |
-| 2026-08-19 | buy | TCOM | Consumer Cyclical | 4 | -0.17 | -0.86 | — | — |
-| 2026-08-19 | buy | AXP | Financial | 4 | -2.57 | -1.15 | — | — |
-| 2026-08-19 | buy | CDNS | Technology | 4 | -0.44 | +1.28 | — | — |
-| 2026-08-19 | buy | CDW | Technology | 4 | -2.67 | +0.04 | — | — |
-| 2026-08-19 | buy | DAL | Industrials | 4 | -2.68 | -1.06 | — | — |
-| 2026-08-19 | buy | NMR | Financial | 4 | -0.63 | +2.21 | — | — |
-| 2026-08-19 | buy | UAL | Industrials | 4 | -3.52 | -2.25 | — | — |
-| 2026-08-19 | sell | AOS | Industrials | 2 | +4.83 | +2.58 | +3.65 | — |
-| 2026-08-19 | sell | BF-B | Consumer Defensive | 2 | +4.71 | +4.64 | +4.75 | — |
-| 2026-08-19 | sell | BKH | Utilities | 2 | +0.06 | +0.19 | -2.00 | — |
-| 2026-08-19 | sell | CALM | Consumer Defensive | 2 | -0.79 | +1.53 | +1.98 | — |
-| 2026-08-19 | sell | CAPR | Healthcare | 2 | +12.71 | -3.39 | -11.16 | — |
-| 2026-08-19 | sell | CDNL | Industrials | 2 | -4.01 | -6.40 | -3.63 | — |
-| 2026-08-19 | sell | COCO | Consumer Defensive | 2 | +6.34 | +2.56 | -0.30 | — |
-| 2026-08-19 | sell | DPZ | Consumer Cyclical | 2 | +0.08 | -0.56 | +1.67 | — |
-| 2026-08-19 | sell | ENVX | Industrials | 2 | +8.45 | +4.31 | +7.82 | — |
-| 2026-08-19 | sell | EVRG | Utilities | 2 | +0.19 | -0.31 | -3.00 | — |
-| 2026-08-19 | sell | EVTL | Industrials | 2 | -1.29 | -3.35 | -1.16 | — |
-| 2026-08-19 | sell | EXEL | Healthcare | 2 | +2.39 | +1.07 | +1.81 | — |
-| 2026-08-19 | sell | EYPT | Healthcare | 2 | +15.17 | -1.28 | -2.74 | — |
-| 2026-08-19 | sell | IEP | Energy | 2 | -2.63 | -2.63 | -0.59 | — |
-| 2026-08-19 | sell | JBS | Consumer Defensive | 2 | +0.66 | -0.81 | +1.17 | — |
-| 2026-08-19 | sell | KMB | Consumer Defensive | 2 | +2.00 | +0.90 | +1.48 | — |
-| 2026-08-19 | sell | LNT | Utilities | 2 | +0.24 | -0.74 | -3.03 | — |
-| 2026-08-19 | sell | LNTH | Healthcare | 2 | +0.22 | -0.02 | -0.29 | — |
-| 2026-08-19 | sell | OTLK | Healthcare | 2 | -1.43 | -3.43 | -7.57 | — |
-| 2026-08-19 | sell | PBH | Healthcare | 2 | +2.19 | -0.10 | +1.46 | — |
-| 2026-08-19 | sell | PNW | Utilities | 2 | -0.72 | -0.77 | -2.79 | — |
-| 2026-08-19 | sell | RRC | Energy | 2 | +1.15 | +2.03 | +3.01 | — |
-| 2026-08-19 | sell | SERV | Industrials | 2 | — | — | — | — |
-| 2026-08-19 | sell | TAP | Consumer Defensive | 2 | +3.31 | +3.60 | +4.40 | — |
-| 2026-08-19 | sell | YSS | Industrials | 2 | -2.30 | -11.71 | -10.56 | — |
-| 2026-08-20 | buy | HIMS | Healthcare | 10 | +6.03 | — | — | — |
-| 2026-08-20 | buy | PACB | Healthcare | 10 | +9.76 | — | — | — |
-| 2026-08-20 | buy | VERA | Healthcare | 10 | +3.25 | — | — | — |
-| 2026-08-20 | buy | FSLR | Technology | 10 | +0.10 | — | — | — |
-| 2026-08-20 | buy | GRND | Technology | 10 | -0.83 | — | — | — |
-| 2026-08-20 | buy | SOC | Energy | 10 | +0.59 | — | — | — |
-| 2026-08-20 | buy | RIOT | Financial | 10 | -5.48 | — | — | — |
-| 2026-08-20 | hold | NYT | Communication Services | 10 | +0.60 | — | — | — |
-| 2026-08-20 | buy | LZ | Industrials | 10 | -0.43 | — | — | — |
-| 2026-08-20 | buy | TPR | Consumer Cyclical | 10 | +0.27 | — | — | — |
-| 2026-08-20 | buy | ETSY | Consumer Cyclical | 10 | -0.22 | — | — | — |
-| 2026-08-20 | buy | PLNT | Consumer Cyclical | 10 | +2.03 | — | — | — |
-| 2026-08-20 | buy | YETI | Consumer Cyclical | 10 | -0.55 | — | — | — |
-| 2026-08-20 | buy | JPM | Financial | 9 | +0.01 | — | — | — |
-| 2026-08-20 | buy | TEM | Healthcare | 9 | +9.06 | — | — | — |
-| 2026-08-20 | buy | ACHV | Healthcare | 9 | -0.37 | — | — | — |
-| 2026-08-20 | buy | AUPH | Healthcare | 9 | -3.59 | — | — | — |
-| 2026-08-20 | buy | EZPW | Financial | 9 | +12.03 | — | — | — |
-| 2026-08-20 | buy | HNST | Consumer Defensive | 9 | +1.81 | — | — | — |
-| 2026-08-20 | buy | METC | Basic Materials | 9 | +6.73 | — | — | — |
-| 2026-08-20 | buy | MOS | Basic Materials | 9 | +4.54 | — | — | — |
-| 2026-08-20 | buy | WIX | Technology | 9 | -0.39 | — | — | — |
-| 2026-08-20 | buy | ABX | Financial | 9 | +5.46 | — | — | — |
-| 2026-08-20 | buy | AEE | Utilities | 9 | -2.44 | — | — | — |
-| 2026-08-20 | buy | CBSH | Financial | 9 | -0.71 | — | — | — |
-| 2026-08-20 | sell | AAL | Industrials | 5 | -2.45 | -0.29 | — | — |
-| 2026-08-20 | sell | AKAM | Technology | 5 | -2.44 | -2.15 | — | — |
-| 2026-08-20 | sell | ALK | Industrials | 5 | -2.55 | -1.99 | — | — |
-| 2026-08-20 | sell | ARM | Technology | 4 | +0.55 | -2.41 | — | — |
-| 2026-08-20 | sell | AXP | Financial | 4 | -2.57 | -1.15 | — | — |
-| 2026-08-20 | sell | CDNS | Technology | 4 | -0.44 | +1.28 | — | — |
-| 2026-08-20 | sell | CDW | Technology | 4 | -2.67 | +0.04 | — | — |
-| 2026-08-20 | sell | CHTR | Communication Services | 4 | -3.09 | -1.51 | — | — |
-| 2026-08-20 | sell | DAL | Industrials | 4 | -2.68 | -1.06 | — | — |
-| 2026-08-20 | sell | JD | Consumer Cyclical | 4 | +0.20 | +0.07 | — | — |
-| 2026-08-20 | sell | LEN | Consumer Cyclical | 4 | -2.15 | -0.32 | — | — |
-| 2026-08-20 | sell | LOGI | Technology | 5 | -5.11 | -4.42 | — | — |
-| 2026-08-20 | sell | MAR | Consumer Cyclical | 4 | -0.73 | -0.79 | — | — |
-| 2026-08-20 | sell | MCD | Consumer Cyclical | 4 | +0.63 | +1.31 | — | — |
-| 2026-08-20 | sell | MGM | Consumer Cyclical | 5 | -0.12 | +1.20 | — | — |
-| 2026-08-20 | sell | NEE | Utilities | 4 | -1.02 | -2.63 | — | — |
-| 2026-08-20 | sell | NMR | Financial | 4 | -0.63 | +2.21 | — | — |
-| 2026-08-20 | sell | NRG | Utilities | 4 | -4.33 | -6.20 | — | — |
-| 2026-08-20 | sell | SIRI | Communication Services | 5 | -0.98 | +0.07 | — | — |
-| 2026-08-20 | sell | SWKS | Technology | 4 | -0.79 | -1.96 | — | — |
-| 2026-08-20 | sell | TCOM | Consumer Cyclical | 4 | -0.17 | -0.86 | — | — |
-| 2026-08-20 | sell | UAL | Industrials | 4 | -3.52 | -2.25 | — | — |
-| 2026-08-20 | sell | WB | Communication Services | 5 | -4.00 | -6.14 | — | — |
-| 2026-08-20 | sell | WLY | Communication Services | 5 | +0.21 | -0.75 | — | — |
-| 2026-08-21 | buy | CTRE | Real Estate | 10 | — | — | — | — |
-| 2026-08-21 | hold | EZPW | Financial | 10 | — | — | — | — |
-| 2026-08-21 | buy | RZLT | Healthcare | 10 | — | — | — | — |
-| 2026-08-21 | buy | TCBI | Financial | 10 | — | — | — | — |
-| 2026-08-21 | buy | DLO | Technology | 10 | — | — | — | — |
-| 2026-08-21 | buy | OLLI | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-21 | buy | RR | Industrials | 10 | — | — | — | — |
-| 2026-08-21 | buy | AKBA | Healthcare | 9 | — | — | — | — |
-| 2026-08-21 | buy | CRSP | Healthcare | 9 | — | — | — | — |
-| 2026-08-21 | buy | ABR | Real Estate | 9 | — | — | — | — |
-| 2026-08-21 | buy | ALLY | Financial | 9 | — | — | — | — |
-| 2026-08-21 | buy | ALT | Healthcare | 9 | — | — | — | — |
-| 2026-08-21 | buy | AQST | Healthcare | 9 | — | — | — | — |
-| 2026-08-21 | buy | AVTR | Healthcare | 9 | — | — | — | — |
-| 2026-08-21 | buy | SOFI | Financial | 9 | — | — | — | — |
-| 2026-08-21 | buy | TMC | Basic Materials | 9 | — | — | — | — |
-| 2026-08-21 | buy | WAL | Financial | 9 | — | — | — | — |
-| 2026-08-21 | buy | XP | Financial | 9 | — | — | — | — |
-| 2026-08-21 | buy | ALTO | Basic Materials | 9 | — | — | — | — |
-| 2026-08-21 | buy | APLE | Real Estate | 9 | — | — | — | — |
-| 2026-08-21 | buy | DRH | Real Estate | 9 | — | — | — | — |
-| 2026-08-21 | buy | GTY | Real Estate | 9 | — | — | — | — |
-| 2026-08-21 | buy | RLJ | Real Estate | 9 | — | — | — | — |
-| 2026-08-21 | buy | VMC | Basic Materials | 9 | — | — | — | — |
-| 2026-08-21 | buy | FOUR | Technology | 9 | — | — | — | — |
-| 2026-08-21 | sell | ABX | Financial | 9 | +5.46 | — | — | — |
-| 2026-08-21 | sell | ACHV | Healthcare | 9 | -0.37 | — | — | — |
-| 2026-08-21 | sell | AEE | Utilities | 9 | -2.44 | — | — | — |
-| 2026-08-21 | sell | AUPH | Healthcare | 9 | -3.59 | — | — | — |
-| 2026-08-21 | sell | CBSH | Financial | 9 | -0.71 | — | — | — |
-| 2026-08-21 | sell | ETSY | Consumer Cyclical | 10 | -0.22 | — | — | — |
-| 2026-08-21 | sell | FSLR | Technology | 10 | +0.10 | — | — | — |
-| 2026-08-21 | sell | GRND | Technology | 10 | -0.83 | — | — | — |
-| 2026-08-21 | sell | HIMS | Healthcare | 10 | +6.03 | — | — | — |
-| 2026-08-21 | sell | HNST | Consumer Defensive | 9 | +1.81 | — | — | — |
-| 2026-08-21 | sell | JPM | Financial | 9 | +0.01 | — | — | — |
-| 2026-08-21 | sell | LZ | Industrials | 10 | -0.43 | — | — | — |
-| 2026-08-21 | sell | METC | Basic Materials | 9 | +6.73 | — | — | — |
-| 2026-08-21 | sell | MOS | Basic Materials | 9 | +4.54 | — | — | — |
-| 2026-08-21 | sell | NYT | Communication Services | 10 | +0.60 | — | — | — |
-| 2026-08-21 | sell | PACB | Healthcare | 10 | +9.76 | — | — | — |
-| 2026-08-21 | sell | PLNT | Consumer Cyclical | 10 | +2.03 | — | — | — |
-| 2026-08-21 | sell | RIOT | Financial | 10 | -5.48 | — | — | — |
-| 2026-08-21 | sell | SOC | Energy | 10 | +0.59 | — | — | — |
-| 2026-08-21 | sell | TEM | Healthcare | 9 | +9.06 | — | — | — |
-| 2026-08-21 | sell | TPR | Consumer Cyclical | 10 | +0.27 | — | — | — |
-| 2026-08-21 | sell | VERA | Healthcare | 10 | +3.25 | — | — | — |
-| 2026-08-21 | sell | WIX | Technology | 9 | -0.39 | — | — | — |
-| 2026-08-21 | sell | YETI | Consumer Cyclical | 10 | -0.55 | — | — | — |
-| 2026-08-27 | buy | KD | Technology | 10 | — | — | — | — |
-| 2026-08-27 | buy | VYX | Technology | 10 | — | — | — | — |
-| 2026-08-27 | buy | AVT | Technology | 10 | — | — | — | — |
-| 2026-08-27 | buy | DAVE | Technology | 10 | — | — | — | — |
-| 2026-08-27 | buy | GRND | Technology | 10 | — | — | — | — |
-| 2026-08-27 | buy | ITRI | Technology | 10 | — | — | — | — |
-| 2026-08-27 | buy | SLM | Financial | 10 | — | — | — | — |
-| 2026-08-27 | buy | DJT | Communication Services | 10 | — | — | — | — |
-| 2026-08-27 | buy | CBRL | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-27 | buy | CXT | Industrials | 10 | — | — | — | — |
-| 2026-08-27 | buy | DPZ | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-27 | buy | IP | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-27 | buy | PBI | Industrials | 10 | — | — | — | — |
-| 2026-08-27 | buy | RVLV | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-27 | buy | SFM | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-27 | buy | XRX | Industrials | 10 | — | — | — | — |
-| 2026-08-27 | buy | BRBR | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-27 | buy | ESAB | Industrials | 10 | — | — | — | — |
-| 2026-08-27 | buy | JBLU | Industrials | 10 | — | — | — | — |
-| 2026-08-27 | buy | NCLH | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-27 | buy | POST | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-27 | buy | SKIN | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-27 | buy | VFC | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-27 | buy | ABX | Financial | 9 | — | — | — | — |
-| 2026-08-27 | buy | KMPR | Financial | 9 | — | — | — | — |
-| 2026-08-27 | sell | ABR | Real Estate | 9 | — | — | — | — |
-| 2026-08-27 | sell | AKBA | Healthcare | 9 | — | — | — | — |
-| 2026-08-27 | sell | ALLY | Financial | 9 | — | — | — | — |
-| 2026-08-27 | sell | ALT | Healthcare | 9 | — | — | — | — |
-| 2026-08-27 | sell | ALTO | Basic Materials | 9 | — | — | — | — |
-| 2026-08-27 | sell | APLE | Real Estate | 9 | — | — | — | — |
-| 2026-08-27 | sell | AQST | Healthcare | 9 | — | — | — | — |
-| 2026-08-27 | sell | AVTR | Healthcare | 9 | — | — | — | — |
-| 2026-08-27 | sell | CRSP | Healthcare | 9 | — | — | — | — |
-| 2026-08-27 | sell | CTRE | Real Estate | 10 | — | — | — | — |
-| 2026-08-27 | sell | DLO | Technology | 10 | — | — | — | — |
-| 2026-08-27 | sell | DRH | Real Estate | 9 | — | — | — | — |
-| 2026-08-27 | sell | EZPW | Financial | 10 | — | — | — | — |
-| 2026-08-27 | sell | FOUR | Technology | 9 | — | — | — | — |
-| 2026-08-27 | sell | GTY | Real Estate | 9 | — | — | — | — |
-| 2026-08-27 | sell | OLLI | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-27 | sell | RLJ | Real Estate | 9 | — | — | — | — |
-| 2026-08-27 | sell | RR | Industrials | 10 | — | — | — | — |
-| 2026-08-27 | sell | RZLT | Healthcare | 10 | — | — | — | — |
-| 2026-08-27 | sell | SOFI | Financial | 9 | — | — | — | — |
-| 2026-08-27 | sell | TCBI | Financial | 10 | — | — | — | — |
-| 2026-08-27 | sell | TMC | Basic Materials | 9 | — | — | — | — |
-| 2026-08-27 | sell | VMC | Basic Materials | 9 | — | — | — | — |
-| 2026-08-27 | sell | WAL | Financial | 9 | — | — | — | — |
-| 2026-08-27 | sell | XP | Financial | 9 | — | — | — | — |
-| 2026-08-30 | buy | UPBD | Technology | 10 | — | — | — | — |
-| 2026-08-30 | buy | BAND | Technology | 10 | — | — | — | — |
-| 2026-08-30 | buy | DXC | Technology | 10 | — | — | — | — |
-| 2026-08-30 | buy | PARR | Energy | 10 | — | — | — | — |
-| 2026-08-30 | buy | FND | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | buy | LULU | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | buy | POOL | Industrials | 10 | — | — | — | — |
-| 2026-08-30 | buy | CRWD | Technology | 9 | — | — | — | — |
-| 2026-08-30 | buy | BRZE | Technology | 9 | — | — | — | — |
-| 2026-08-30 | buy | CRCT | Technology | 9 | — | — | — | — |
-| 2026-08-30 | buy | AGNC | Real Estate | 9 | — | — | — | — |
-| 2026-08-30 | buy | ES | Utilities | 9 | — | — | — | — |
-| 2026-08-30 | buy | GLPI | Real Estate | 9 | — | — | — | — |
-| 2026-08-30 | buy | SBS | Utilities | 9 | — | — | — | — |
-| 2026-08-30 | buy | ZIP | Communication Services | 9 | — | — | — | — |
-| 2026-08-30 | buy | GENI | Communication Services | 9 | — | — | — | — |
-| 2026-08-30 | buy | PEB | Real Estate | 9 | — | — | — | — |
-| 2026-08-30 | buy | SRE | Utilities | 9 | — | — | — | — |
-| 2026-08-30 | buy | DG | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-30 | hold | POST | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-30 | buy | VITL | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-30 | hold | BRBR | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-30 | buy | NWL | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-30 | buy | SNN | Healthcare | 9 | — | — | — | — |
-| 2026-08-30 | buy | SYK | Healthcare | 9 | — | — | — | — |
-| 2026-08-30 | sell | ABX | Financial | 9 | — | — | — | — |
-| 2026-08-30 | sell | AVT | Technology | 10 | — | — | — | — |
-| 2026-08-30 | sell | CBRL | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | sell | CXT | Industrials | 10 | — | — | — | — |
-| 2026-08-30 | sell | DAVE | Technology | 10 | — | — | — | — |
-| 2026-08-30 | sell | DJT | Communication Services | 10 | — | — | — | — |
-| 2026-08-30 | sell | DPZ | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | sell | ESAB | Industrials | 10 | — | — | — | — |
-| 2026-08-30 | sell | GRND | Technology | 10 | — | — | — | — |
-| 2026-08-30 | sell | IP | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | sell | ITRI | Technology | 10 | — | — | — | — |
-| 2026-08-30 | sell | JBLU | Industrials | 10 | — | — | — | — |
-| 2026-08-30 | sell | KD | Technology | 10 | — | — | — | — |
-| 2026-08-30 | sell | KMPR | Financial | 9 | — | — | — | — |
-| 2026-08-30 | sell | NCLH | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | sell | PBI | Industrials | 10 | — | — | — | — |
-| 2026-08-30 | sell | RVLV | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | sell | SFM | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-30 | sell | SKIN | Consumer Defensive | 10 | — | — | — | — |
-| 2026-08-30 | sell | SLM | Financial | 10 | — | — | — | — |
-| 2026-08-30 | sell | VFC | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-30 | sell | VYX | Technology | 10 | — | — | — | — |
-| 2026-08-30 | sell | XRX | Industrials | 10 | — | — | — | — |
-| 2026-08-31 | buy | BMO | Financial | 9 | — | — | — | — |
-| 2026-08-31 | buy | AMZN | Consumer Cyclical | 9 | — | — | — | — |
-| 2026-08-31 | buy | RWAY | Financial | 9 | — | — | — | — |
-| 2026-08-31 | buy | VTS | Energy | 9 | — | — | — | — |
-| 2026-08-31 | buy | SDGR | Healthcare | 9 | — | — | — | — |
-| 2026-08-31 | buy | TCOM | Consumer Cyclical | 9 | — | — | — | — |
-| 2026-08-31 | buy | HDSN | Basic Materials | 9 | — | — | — | — |
-| 2026-08-31 | buy | BAH | Industrials | 9 | — | — | — | — |
-| 2026-08-31 | buy | CRM | Technology | 8 | — | — | — | — |
-| 2026-08-31 | buy | CVE | Energy | 8 | — | — | — | — |
-| 2026-08-31 | buy | CVX | Energy | 8 | — | — | — | — |
-| 2026-08-31 | buy | LIN | Basic Materials | 8 | — | — | — | — |
-| 2026-08-31 | buy | OXY | Energy | 8 | — | — | — | — |
-| 2026-08-31 | buy | COST | Consumer Defensive | 8 | — | — | — | — |
-| 2026-08-31 | buy | DTM | Energy | 8 | — | — | — | — |
-| 2026-08-31 | buy | APD | Basic Materials | 8 | — | — | — | — |
-| 2026-08-31 | buy | VOD | Communication Services | 8 | — | — | — | — |
-| 2026-08-31 | buy | TALO | Energy | 8 | — | — | — | — |
-| 2026-08-31 | buy | FIBK | Financial | 8 | — | — | — | — |
-| 2026-08-31 | buy | TCBI | Financial | 7 | — | — | — | — |
-| 2026-08-31 | buy | COR | Healthcare | 7 | — | — | — | — |
-| 2026-08-31 | hold | UPBD | Technology | 7 | — | — | — | — |
-| 2026-08-31 | buy | HWM | Industrials | 7 | — | — | — | — |
-| 2026-08-31 | buy | FHB | Financial | 7 | — | — | — | — |
-| 2026-08-31 | buy | HASI | Financial | 7 | — | — | — | — |
-| 2026-08-31 | sell | AGNC | Real Estate | 9 | — | — | — | — |
-| 2026-08-31 | sell | BAND | Technology | 10 | — | — | — | — |
-| 2026-08-31 | sell | BRBR | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-31 | sell | BRZE | Technology | 9 | — | — | — | — |
-| 2026-08-31 | sell | CRCT | Technology | 9 | — | — | — | — |
-| 2026-08-31 | sell | CRWD | Technology | 9 | — | — | — | — |
-| 2026-08-31 | sell | DG | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-31 | sell | DXC | Technology | 10 | — | — | — | — |
-| 2026-08-31 | sell | ES | Utilities | 9 | — | — | — | — |
-| 2026-08-31 | sell | FND | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-31 | sell | GENI | Communication Services | 9 | — | — | — | — |
-| 2026-08-31 | sell | GLPI | Real Estate | 9 | — | — | — | — |
-| 2026-08-31 | sell | LULU | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-08-31 | sell | NWL | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-31 | sell | PARR | Energy | 10 | — | — | — | — |
-| 2026-08-31 | sell | PEB | Real Estate | 9 | — | — | — | — |
-| 2026-08-31 | sell | POOL | Industrials | 10 | — | — | — | — |
-| 2026-08-31 | sell | POST | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-31 | sell | SBS | Utilities | 9 | — | — | — | — |
-| 2026-08-31 | sell | SNN | Healthcare | 9 | — | — | — | — |
-| 2026-08-31 | sell | SRE | Utilities | 9 | — | — | — | — |
-| 2026-08-31 | sell | SYK | Healthcare | 9 | — | — | — | — |
-| 2026-08-31 | sell | VITL | Consumer Defensive | 9 | — | — | — | — |
-| 2026-08-31 | sell | ZIP | Communication Services | 9 | — | — | — | — |
-| 2026-09-01 | buy | CTGO | Basic Materials | 10 | — | — | — | — |
-| 2026-09-01 | buy | GPRO | Technology | 10 | — | — | — | — |
-| 2026-09-01 | buy | IEP | Energy | 10 | — | — | — | — |
-| 2026-09-01 | buy | ANNX | Healthcare | 10 | — | — | — | — |
-| 2026-09-01 | buy | WOLF | Technology | 10 | — | — | — | — |
-| 2026-09-01 | buy | ADMA | Healthcare | 10 | — | — | — | — |
-| 2026-09-01 | buy | ALLO | Healthcare | 10 | — | — | — | — |
-| 2026-09-01 | buy | COGT | Healthcare | 10 | — | — | — | — |
-| 2026-09-01 | buy | DDD | Technology | 10 | — | — | — | — |
-| 2026-09-01 | buy | FULC | Healthcare | 10 | — | — | — | — |
-| 2026-09-01 | buy | INDV | Healthcare | 10 | — | — | — | — |
-| 2026-09-01 | buy | AVAV | Industrials | 10 | — | — | — | — |
-| 2026-09-01 | buy | ENVX | Industrials | 10 | — | — | — | — |
-| 2026-09-01 | buy | VRRM | Technology | 10 | — | — | — | — |
-| 2026-09-01 | buy | DKS | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-09-01 | buy | FWRG | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-09-01 | buy | GME | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-09-01 | buy | MIR | Industrials | 10 | — | — | — | — |
-| 2026-09-01 | buy | ATRO | Industrials | 10 | — | — | — | — |
-| 2026-09-01 | buy | LNT | Utilities | 10 | — | — | — | — |
-| 2026-09-01 | buy | UAA | Consumer Cyclical | 10 | — | — | — | — |
-| 2026-09-01 | buy | KMI | Energy | 9 | — | — | — | — |
-| 2026-09-01 | buy | DHT | Energy | 9 | — | — | — | — |
-| 2026-09-01 | buy | LBRT | Energy | 9 | — | — | — | — |
-| 2026-09-01 | buy | ASX | Technology | 9 | — | — | — | — |
-| 2026-09-01 | sell | AMZN | Consumer Cyclical | 9 | — | — | — | — |
-| 2026-09-01 | sell | APD | Basic Materials | 8 | — | — | — | — |
-| 2026-09-01 | sell | BAH | Industrials | 9 | — | — | — | — |
-| 2026-09-01 | sell | BMO | Financial | 9 | — | — | — | — |
-| 2026-09-01 | sell | COR | Healthcare | 7 | — | — | — | — |
-| 2026-09-01 | sell | COST | Consumer Defensive | 8 | — | — | — | — |
-| 2026-09-01 | sell | CRM | Technology | 8 | — | — | — | — |
-| 2026-09-01 | sell | CVE | Energy | 8 | — | — | — | — |
-| 2026-09-01 | sell | CVX | Energy | 8 | — | — | — | — |
-| 2026-09-01 | sell | DTM | Energy | 8 | — | — | — | — |
-| 2026-09-01 | sell | FHB | Financial | 7 | — | — | — | — |
-| 2026-09-01 | sell | FIBK | Financial | 8 | — | — | — | — |
-| 2026-09-01 | sell | HASI | Financial | 7 | — | — | — | — |
-| 2026-09-01 | sell | HDSN | Basic Materials | 9 | — | — | — | — |
-| 2026-09-01 | sell | HWM | Industrials | 7 | — | — | — | — |
-| 2026-09-01 | sell | LIN | Basic Materials | 8 | — | — | — | — |
-| 2026-09-01 | sell | OXY | Energy | 8 | — | — | — | — |
-| 2026-09-01 | sell | RWAY | Financial | 9 | — | — | — | — |
-| 2026-09-01 | sell | SDGR | Healthcare | 9 | — | — | — | — |
-| 2026-09-01 | sell | TALO | Energy | 8 | — | — | — | — |
-| 2026-09-01 | sell | TCBI | Financial | 7 | — | — | — | — |
-| 2026-09-01 | sell | TCOM | Consumer Cyclical | 9 | — | — | — | — |
-| 2026-09-01 | sell | UPBD | Technology | 7 | — | — | — | — |
-| 2026-09-01 | sell | VOD | Communication Services | 8 | — | — | — | — |
-| 2026-09-01 | sell | VTS | Energy | 9 | — | — | — | — |
+Book 1d +2.26 · 2d +3.81 · 3d +3.43 · 1w -0.06 · stock-book BUY 1d +2.00 · universe med +0.00.
 
-## Daily long books (compact)
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | ALPS | `rsi_oversold` | Healthcare | normal | 2 | -2.44 | -2.44 | -9.76 | -17.68 |
+| 2 | buy | CISS | `rsi_oversold` | Industrials | normal | 2 | -3.66 | +2778.05 | +3265.85 | +3473.17 |
+| 3 | buy | TOPP | `rsi_oversold` | Industrials | normal | 2 | +3.98 | -15.54 | -12.35 | -22.71 |
+| 4 | buy | VEEA | `rsi_oversold` | Technology | normal | 2 | +4.69 | +4.69 | +8.59 | -2.34 |
+| 5 | buy | XTNT | `rsi_oversold` | Healthcare | normal | 2 | +0.00 | +6.45 | +6.45 | +6.45 |
+| 6 | buy | YMT | `rsi_oversold` | Technology | normal | 2 | -1.32 | -3.07 | -6.58 | -10.96 |
+| 7 | buy | LRHC | `rsi_oversold` | Real Estate | dead | 2 | -5.09 | -3.98 | -7.95 | -10.33 |
+| 8 | buy | PFSA | `rsi_oversold` | Healthcare | dead | 2 | -5.36 | +376.34 | +2789.59 | +696.00 |
+| 9 | buy | SILO | `rsi_oversold` | Healthcare | dead | 2 | -0.62 | -4.66 | -4.66 | -14.91 |
+| 10 | buy | UZX | `rsi_oversold` | Consumer Cyclical | dead | 2 | +2.52 | +0.00 | +0.84 | +1.68 |
+| 11 | buy | VMAR | `rsi_oversold` | Consumer Cyclical | dead | 2 | +0.15 | +7.53 | +5.87 | +6.02 |
+| 12 | buy | ONFO | `rsi_oversold` | Communication Services | normal | 2 | +12.12 | +1.73 | -6.49 | -32.03 |
+| 13 | buy | HAO | `rsi_oversold` | Communication Services | dead | 2 | — | +2403.07 | +2654.60 | +2163.80 |
+| 14 | buy | ABX | `rsi_oversold` | Financial | normal | 1 | +8.80 | +7.04 | +5.75 | +7.51 |
+| 15 | buy | ACM | `rsi_oversold` | Industrials | normal | 1 | -0.79 | -2.19 | -2.97 | +2.47 |
+| 16 | buy | AHCO | `rsi_oversold` | Healthcare | normal | 1 | +1.93 | +1.93 | +2.10 | -5.44 |
+| 17 | buy | AKBA | `rsi_oversold` | Healthcare | normal | 1 | +0.34 | -1.15 | -2.07 | +5.63 |
+| 18 | buy | ALAR | `rsi_oversold` | Technology | normal | 1 | -1.09 | -4.92 | -4.37 | -8.20 |
+| 19 | buy | AMZE | `rsi_oversold` | Technology | normal | 1 | +18.93 | +2.43 | -1.94 | -7.28 |
+| 20 | buy | ARKO | `rsi_oversold` | Consumer Cyclical | normal | 1 | +7.78 | +7.31 | +4.22 | +2.00 |
+| 21 | buy | AZYY | `rsi_oversold` | Financial | normal | 1 | -0.69 | -1.61 | -1.76 | -1.05 |
+| 22 | buy | BAER | `rsi_oversold` | Industrials | normal | 1 | +0.00 | -4.80 | -7.20 | -8.00 |
+| 23 | buy | BBD | `rsi_oversold` | Financial | normal | 1 | -0.32 | -1.91 | -3.49 | -5.40 |
+| 24 | buy | BRBI | `rsi_oversold` | Financial | normal | 1 | +0.54 | -0.81 | +3.48 | -0.76 |
+| 25 | buy | CDNL | `rsi_oversold` | Industrials | normal | 1 | +13.73 | +13.19 | +30.24 | +21.90 |
 
-### 2026-08-13 · `Band` · pool 547 · A and blue thin; pool=short=high AND sma20=below
+Seats 1d n=24 · p_win=50.0% · p_loss=41.7% · avg_win=+6.29 · avg_loss=-2.14 · mean=+2.26 · clip30=+2.26 · payoff=2.94.
 
-ABEO -5.67/-6.46 ANDG +1.22/+1.45 ATRA -4.93/-1.76 BETR -8.47/-9.73 BW +10.05/+6.10 BYND —/— CRIS -3.74/— CVRX +4.76/-6.46 CYN +4.22/-0.47 DJCO +0.35/-0.87 EMPD +2.12/-1.06 EVTL -1.07/-4.30 FBIO -1.68/-5.37 GSUN +7.46/— IMDX +16.44/+15.09 KSCP -6.17/-11.73 LESL -16.23/-14.80 MVIS -40.58/-43.24 ONON +1.99/-0.89 OPEN -0.27/-3.01 TPR +0.46/+0.49 VWAV +44.72/+16.26 YETI -2.00/-5.43 ABX +8.80/+7.04 AIOT -0.95/-8.28
+### 2026-08-14 · `steady_blue+alarm_rebound` · n=25
 
-Seats 1d n=24 · p_win=50.0% · p_loss=50.0% · avg_win=+8.55 · avg_loss=-7.65 · mean=+0.45 · clip30=+0.28 · payoff=1.12 · universe hit=46.4% med=+0.00.
+core `steady+blue` (52% hit / +9.54 mean on the mine board) → rebound `alarm AND NOT white`
 
-### 2026-08-14 · `blue` · pool 517 · A missing; pool=blue
+Book 1d +1.08 · 2d -0.82 · 3d -0.65 · 1w -2.38 · stock-book BUY 1d +0.52 · universe med -0.24.
 
-GLND +0.00/+1.56 NCMI -4.54/-11.89 STUB -11.88/-11.76 ANGI -5.51/-1.91 BMBL -4.06/+0.37 BORR +1.58/+0.00 CCOI -5.14/-10.61 DJT -2.06/-2.54 FLNG +0.26/+0.97 IEP -4.18/-7.95 IMPP +3.76/+5.43 LB +1.02/+2.71 NEE +0.04/+0.04 NRG -3.07/-8.46 VST -1.36/-5.14 CEG -1.67/-5.55 TLN -1.60/-12.43
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | hold | ONFO | `steady_blue` | Communication Services | normal | 14 | -9.27 | -16.60 | -8.49 | -44.40 |
+| 2 | hold | HAO | `steady_blue` | Communication Services | dead | 14 | — | — | — | — |
+| 3 | buy | BAOS | `steady_blue` | Communication Services | hot | 14 | -4.00 | -3.40 | +4.20 | -4.60 |
+| 4 | buy | RCON | `steady_blue` | Energy | hot | 14 | +13233.33 | +11033.33 | +12133.33 | +10166.67 |
+| 5 | buy | APP | `steady_blue` | Communication Services | normal | 13 | -1.10 | -2.59 | -1.47 | -3.07 |
+| 6 | buy | BODI | `steady_blue` | Communication Services | normal | 13 | -8.96 | -12.80 | -8.82 | -9.39 |
+| 7 | buy | EPSN | `steady_blue` | Energy | normal | 13 | +1.25 | +1.79 | +0.00 | +0.36 |
+| 8 | buy | GEOS | `steady_blue` | Energy | normal | 13 | +3.04 | +6.25 | -1.25 | -1.61 |
+| 9 | buy | PLTK | `steady_blue` | Communication Services | normal | 13 | -9.96 | -11.15 | -6.38 | -5.58 |
+| 10 | buy | VIVK | `steady_blue` | Energy | normal | 13 | +0.00 | -3.28 | -4.10 | -12.29 |
+| 11 | buy | CRC | `steady_blue` | Energy | dead | 13 | +0.41 | -0.32 | +0.90 | -0.13 |
+| 12 | buy | CRK | `steady_blue` | Energy | dead | 13 | -3.63 | -2.85 | -3.70 | +1.14 |
+| 13 | buy | NEE | `steady_blue` | Utilities | normal | 12 | +0.04 | +0.04 | -0.33 | -2.95 |
+| 14 | buy | CEG | `steady_blue` | Utilities | dead | 12 | -1.67 | -5.55 | -2.95 | -3.40 |
+| 15 | buy | NRG | `steady_blue` | Utilities | dead | 12 | -3.07 | -8.46 | -4.48 | -10.40 |
+| 16 | buy | TLN | `steady_blue` | Utilities | dead | 12 | -1.60 | -12.43 | -11.13 | -13.31 |
+| 17 | buy | VST | `steady_blue` | Utilities | dead | 12 | -1.36 | -5.14 | -3.67 | -8.05 |
+| 18 | hold | ALPS | `alarm_rebound` | Healthcare | normal | 4 | +0.00 | -7.50 | -15.62 | +0.00 |
+| 19 | hold | XTNT | `alarm_rebound` | Healthcare | normal | 4 | +6.45 | +6.45 | +6.45 | +3.23 |
+| 20 | hold | PFSA | `alarm_rebound` | Healthcare | dead | 4 | +403.33 | +2953.33 | +1407.78 | +506.67 |
+| 21 | hold | SILO | `alarm_rebound` | Healthcare | dead | 4 | -4.06 | -4.06 | -10.62 | -17.19 |
+| 22 | hold | UZX | `alarm_rebound` | Consumer Cyclical | dead | 4 | -2.46 | -1.64 | -3.28 | -1.64 |
+| 23 | hold | VMAR | `alarm_rebound` | Consumer Cyclical | dead | 4 | +7.37 | +5.71 | +0.45 | +0.90 |
+| 24 | hold | AHCO | `alarm_rebound` | Healthcare | normal | 3 | +0.00 | +0.17 | -2.58 | -3.10 |
+| 25 | hold | AKBA | `alarm_rebound` | Healthcare | normal | 3 | -1.49 | -2.41 | +1.38 | +3.90 |
 
-Seats 1d n=17 · p_win=29.4% · p_loss=64.7% · avg_win=+1.33 · avg_loss=-4.10 · mean=-2.26 · clip30=-2.26 · payoff=0.33 · universe hit=32.2% med=-0.24.
+Sold overnight:
 
-### 2026-08-17 · `blue` · pool 175 · A missing; pool=blue
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | ABX | `rsi_oversold` | Financial | normal | 1 | +8.80 | +7.04 | +5.75 | +7.51 |
+| — | sell | ACM | `rsi_oversold` | Industrials | normal | 1 | -0.79 | -2.19 | -2.97 | +2.47 |
+| — | sell | ALAR | `rsi_oversold` | Technology | normal | 1 | -1.09 | -4.92 | -4.37 | -8.20 |
+| — | sell | AMZE | `rsi_oversold` | Technology | normal | 1 | +18.93 | +2.43 | -1.94 | -7.28 |
+| — | sell | ARKO | `rsi_oversold` | Consumer Cyclical | normal | 1 | +7.78 | +7.31 | +4.22 | +2.00 |
+| — | sell | AZYY | `rsi_oversold` | Financial | normal | 1 | -0.69 | -1.61 | -1.76 | -1.05 |
+| — | sell | BAER | `rsi_oversold` | Industrials | normal | 1 | +0.00 | -4.80 | -7.20 | -8.00 |
+| — | sell | BBD | `rsi_oversold` | Financial | normal | 1 | -0.32 | -1.91 | -3.49 | -5.40 |
+| — | sell | BRBI | `rsi_oversold` | Financial | normal | 1 | +0.54 | -0.81 | +3.48 | -0.76 |
+| — | sell | CDNL | `rsi_oversold` | Industrials | normal | 1 | +13.73 | +13.19 | +30.24 | +21.90 |
+| — | sell | CISS | `rsi_oversold` | Industrials | normal | 2 | -3.66 | +2778.05 | +3265.85 | +3473.17 |
+| — | sell | LRHC | `rsi_oversold` | Real Estate | dead | 2 | -5.09 | -3.98 | -7.95 | -10.33 |
+| — | sell | TOPP | `rsi_oversold` | Industrials | normal | 2 | +3.98 | -15.54 | -12.35 | -22.71 |
+| — | sell | VEEA | `rsi_oversold` | Technology | normal | 2 | +4.69 | +4.69 | +8.59 | -2.34 |
+| — | sell | YMT | `rsi_oversold` | Technology | normal | 2 | -1.32 | -3.07 | -6.58 | -10.96 |
 
-UAMY -7.47/+1.96 ALTO +0.47/-0.71 CC -1.91/+1.21 FMC -0.59/+6.19 GPRE +0.25/-0.68 HUN -2.52/-1.26 AMAT -3.92/-7.31 AVGO -3.17/-7.63 AMD -4.27/-7.82 ASML -4.26/-6.98 INTC -6.57/-10.33 LRCX -4.63/-10.66
+Seats 1d n=24 · p_win=33.3% · p_loss=54.2% · avg_win=+1706.90 · avg_loss=-4.05 · mean=+566.77 · clip30=+1.08 · payoff=421.67.
 
-Seats 1d n=12 · p_win=16.7% · p_loss=83.3% · avg_win=+0.36 · avg_loss=-3.93 · mean=-3.21 · clip30=-3.21 · payoff=0.09 · universe hit=35.7% med=-0.60.
+### 2026-08-17 · `steady_blue+alarm_rebound` · n=24
 
-### 2026-08-18 · `Band` · pool 408 · A and blue thin; pool=short=high AND sma20=below
+core `steady+blue` (52% hit / +9.54 mean on the mine board) → rebound `alarm AND NOT white`
 
-AOS +4.83/+2.58 BF-B +4.71/+4.64 COCO +6.34/+2.56 EVRG +0.19/-0.31 EXEL +2.39/+1.07 KMB +2.00/+0.90 LNT +0.24/-0.74 LNTH +0.22/-0.02 PBH +2.19/-0.10 PNW -0.72/-0.77 RRC +1.15/+2.03 TAP +3.31/+3.60 BKH +0.06/+0.19 CALM -0.79/+1.53 JBS +0.66/-0.81 CAPR +12.71/-3.39 ENVX +8.45/+4.31 EVTL -1.29/-3.35 EYPT +15.17/-1.28 IEP -2.63/-2.63 OTLK -1.43/-3.43 SERV —/— YSS -2.30/-11.71 CDNL -4.01/-6.40 DPZ +0.08/-0.56
+Book 1d -2.15 · 2d -1.12 · 3d -2.29 · 1w — · stock-book BUY 1d -1.59 · universe med -0.60.
 
-Seats 1d n=24 · p_win=70.8% · p_loss=29.2% · avg_win=+3.81 · avg_loss=-1.88 · mean=+2.15 · clip30=+2.15 · payoff=2.02 · universe hit=62.4% med=+0.88.
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | AMAT | `steady_blue` | Technology | normal | 13 | -3.92 | -7.31 | -7.21 | — |
+| 2 | buy | BAK | `steady_blue` | Basic Materials | normal | 13 | -1.99 | +0.00 | -1.49 | — |
+| 3 | buy | TMC | `steady_blue` | Basic Materials | normal | 13 | +3.98 | +5.30 | +5.30 | — |
+| 4 | buy | SGML | `steady_blue` | Basic Materials | hot | 13 | -3.50 | -4.29 | -6.12 | — |
+| 5 | buy | AMD | `steady_blue` | Technology | normal | 12 | -4.27 | -7.82 | -7.22 | — |
+| 6 | buy | ASML | `steady_blue` | Technology | normal | 12 | -4.26 | -6.98 | -7.05 | — |
+| 7 | buy | AVGO | `steady_blue` | Technology | normal | 12 | -3.17 | -7.63 | -7.24 | — |
+| 8 | buy | INTC | `steady_blue` | Technology | normal | 12 | -6.57 | -10.33 | -10.98 | — |
+| 9 | buy | LRCX | `steady_blue` | Technology | normal | 12 | -4.63 | -10.66 | -9.69 | — |
+| 10 | buy | AG | `steady_blue` | Basic Materials | normal | 12 | -5.57 | +6.54 | +8.28 | — |
+| 11 | buy | AGI | `steady_blue` | Basic Materials | normal | 12 | -3.21 | +5.15 | +7.94 | — |
+| 12 | buy | ALB | `steady_blue` | Basic Materials | normal | 12 | -0.95 | +0.22 | +0.15 | — |
+| 13 | buy | SION | `alarm_rebound` | Healthcare | normal | 4 | +0.51 | +5.75 | -6.60 | — |
+| 14 | buy | ALMS | `alarm_rebound` | Healthcare | normal | 3 | -2.43 | -5.92 | -10.35 | — |
+| 15 | buy | CVGI | `alarm_rebound` | Consumer Cyclical | normal | 3 | -3.25 | -7.96 | -7.96 | — |
+| 16 | buy | EBS | `alarm_rebound` | Healthcare | normal | 3 | +3.56 | +8.67 | +7.11 | — |
+| 17 | buy | KOD | `alarm_rebound` | Healthcare | normal | 3 | -0.81 | -2.22 | -2.78 | — |
+| 18 | buy | MGNX | `alarm_rebound` | Healthcare | normal | 3 | +0.74 | +2.71 | +0.25 | — |
+| 19 | buy | MNRO | `alarm_rebound` | Consumer Cyclical | normal | 3 | +2.51 | +8.74 | +3.46 | — |
+| 20 | buy | NAUT | `alarm_rebound` | Healthcare | normal | 3 | -3.29 | +2.38 | +2.38 | — |
+| 21 | buy | TDUP | `alarm_rebound` | Consumer Cyclical | normal | 3 | -1.75 | +3.15 | -3.85 | — |
+| 22 | buy | UA | `alarm_rebound` | Consumer Cyclical | normal | 3 | -4.82 | -1.16 | -0.77 | — |
+| 23 | buy | UAA | `alarm_rebound` | Consumer Cyclical | dead | 3 | -4.16 | -0.76 | +0.19 | — |
+| 24 | buy | XPOF | `alarm_rebound` | Consumer Cyclical | dead | 3 | -0.39 | -2.55 | -0.59 | — |
 
-### 2026-08-19 · `blue` · pool 156 · A missing; pool=blue
+Sold overnight:
 
-LOGI -5.11/-4.42 WB -4.00/-6.14 AAL -2.45/-0.29 ALK -2.55/-1.99 AKAM -2.44/-2.15 MGM -0.12/+1.20 NYT -1.00/-0.41 SIRI -0.98/+0.07 WLY +0.21/-0.75 NEE -1.02/-2.63 NRG -4.33/-6.20 ARM +0.55/-2.41 CHTR -3.09/-1.51 JD +0.20/+0.07 LEN -2.15/-0.32 MAR -0.73/-0.79 MCD +0.63/+1.31 SWKS -0.79/-1.96 TCOM -0.17/-0.86 AXP -2.57/-1.15 CDNS -0.44/+1.28 CDW -2.67/+0.04 DAL -2.68/-1.06 NMR -0.63/+2.21 UAL -3.52/-2.25
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | AHCO | `alarm_rebound` | Healthcare | normal | 3 | +0.00 | +0.17 | -2.58 | -3.10 |
+| — | sell | AKBA | `alarm_rebound` | Healthcare | normal | 3 | -1.49 | -2.41 | +1.38 | +3.90 |
+| — | sell | ALPS | `alarm_rebound` | Healthcare | normal | 4 | +0.00 | -7.50 | -15.62 | +0.00 |
+| — | sell | APP | `steady_blue` | Communication Services | normal | 13 | -1.10 | -2.59 | -1.47 | -3.07 |
+| — | sell | BAOS | `steady_blue` | Communication Services | hot | 14 | -4.00 | -3.40 | +4.20 | -4.60 |
+| — | sell | BODI | `steady_blue` | Communication Services | normal | 13 | -8.96 | -12.80 | -8.82 | -9.39 |
+| — | sell | CEG | `steady_blue` | Utilities | dead | 12 | -1.67 | -5.55 | -2.95 | -3.40 |
+| — | sell | CRC | `steady_blue` | Energy | dead | 13 | +0.41 | -0.32 | +0.90 | -0.13 |
+| — | sell | CRK | `steady_blue` | Energy | dead | 13 | -3.63 | -2.85 | -3.70 | +1.14 |
+| — | sell | EPSN | `steady_blue` | Energy | normal | 13 | +1.25 | +1.79 | +0.00 | +0.36 |
+| — | sell | GEOS | `steady_blue` | Energy | normal | 13 | +3.04 | +6.25 | -1.25 | -1.61 |
+| — | sell | HAO | `steady_blue` | Communication Services | dead | 14 | — | — | — | — |
+| — | sell | NEE | `steady_blue` | Utilities | normal | 12 | +0.04 | +0.04 | -0.33 | -2.95 |
+| — | sell | NRG | `steady_blue` | Utilities | dead | 12 | -3.07 | -8.46 | -4.48 | -10.40 |
+| — | sell | ONFO | `steady_blue` | Communication Services | normal | 14 | -9.27 | -16.60 | -8.49 | -44.40 |
+| — | sell | PFSA | `alarm_rebound` | Healthcare | dead | 4 | +403.33 | +2953.33 | +1407.78 | +506.67 |
+| — | sell | PLTK | `steady_blue` | Communication Services | normal | 13 | -9.96 | -11.15 | -6.38 | -5.58 |
+| — | sell | RCON | `steady_blue` | Energy | hot | 14 | +13233.33 | +11033.33 | +12133.33 | +10166.67 |
+| — | sell | SILO | `alarm_rebound` | Healthcare | dead | 4 | -4.06 | -4.06 | -10.62 | -17.19 |
+| — | sell | TLN | `steady_blue` | Utilities | dead | 12 | -1.60 | -12.43 | -11.13 | -13.31 |
+| — | sell | UZX | `alarm_rebound` | Consumer Cyclical | dead | 4 | -2.46 | -1.64 | -3.28 | -1.64 |
+| — | sell | VIVK | `steady_blue` | Energy | normal | 13 | +0.00 | -3.28 | -4.10 | -12.29 |
+| — | sell | VMAR | `alarm_rebound` | Consumer Cyclical | dead | 4 | +7.37 | +5.71 | +0.45 | +0.90 |
+| — | sell | VST | `steady_blue` | Utilities | dead | 12 | -1.36 | -5.14 | -3.67 | -8.05 |
+| — | sell | XTNT | `alarm_rebound` | Healthcare | normal | 4 | +6.45 | +6.45 | +6.45 | +3.23 |
 
-Seats 1d n=25 · p_win=16.0% · p_loss=84.0% · avg_win=+0.40 · avg_loss=-2.07 · mean=-1.67 · clip30=-1.67 · payoff=0.19 · universe hit=29.4% med=-0.98.
+Seats 1d n=24 · p_win=20.8% · p_loss=79.2% · avg_win=+2.26 · avg_loss=-3.31 · mean=-2.15 · clip30=-2.15 · payoff=0.68.
 
-### 2026-08-20 · `A` · pool 1821 · A cameras printed; pool=ab|peer good
+### 2026-08-18 · `alarm_rebound` · n=25
 
-HIMS +6.03/— PACB +9.76/— VERA +3.25/— FSLR +0.10/— GRND -0.83/— SOC +0.59/— RIOT -5.48/— NYT +0.60/— LZ -0.43/— TPR +0.27/— ETSY -0.22/— PLNT +2.03/— YETI -0.55/— JPM +0.01/— TEM +9.06/— ACHV -0.37/— AUPH -3.59/— EZPW +12.03/— HNST +1.81/— METC +6.73/— MOS +4.54/— WIX -0.39/— ABX +5.46/— AEE -2.44/— CBSH -0.71/—
+rebound `alarm AND NOT white`
 
-Seats 1d n=25 · p_win=60.0% · p_loss=40.0% · avg_win=+4.15 · avg_loss=-1.50 · mean=+1.89 · clip30=+1.89 · payoff=2.76 · universe hit=65.1% med=+0.72.
+Book 1d -0.74 · 2d -2.12 · 3d -1.31 · 1w — · stock-book BUY 1d +2.07 · universe med +0.88.
 
-### 2026-08-21 · `A` · pool 1898 · A cameras printed; pool=ab|peer good
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | hold | BAK | `alarm_rebound` | Basic Materials | normal | 4 | +2.03 | +0.51 | +1.01 | — |
+| 2 | buy | ABEV | `alarm_rebound` | Consumer Defensive | normal | 3 | +1.08 | +1.80 | +3.60 | — |
+| 3 | buy | DHT | `alarm_rebound` | Energy | normal | 3 | +3.52 | +2.54 | +2.64 | — |
+| 4 | buy | ENB | `alarm_rebound` | Energy | normal | 3 | -2.22 | -0.78 | -1.81 | — |
+| 5 | buy | LHX | `alarm_rebound` | Industrials | normal | 3 | -0.87 | -3.25 | -4.58 | — |
+| 6 | buy | CDNL | `alarm_rebound` | Industrials | normal | 3 | -4.01 | -6.40 | -3.63 | — |
+| 7 | buy | CELH | `alarm_rebound` | Consumer Defensive | normal | 3 | +7.89 | +8.83 | +11.57 | — |
+| 8 | buy | CIG | `alarm_rebound` | Utilities | normal | 3 | +1.58 | -1.05 | +1.05 | — |
+| 9 | buy | HE | `alarm_rebound` | Utilities | normal | 3 | +1.30 | +0.43 | -0.52 | — |
+| 10 | buy | LINC | `alarm_rebound` | Consumer Defensive | normal | 3 | -5.22 | -5.73 | -7.32 | — |
+| 11 | buy | MIDD | `alarm_rebound` | Industrials | normal | 3 | -1.38 | -1.30 | +1.30 | — |
+| 12 | buy | ODD | `alarm_rebound` | Consumer Defensive | normal | 3 | +6.50 | +1.71 | +7.48 | — |
+| 13 | buy | QFIN | `alarm_rebound` | Financial | normal | 3 | -2.24 | -5.06 | -4.02 | — |
+| 14 | buy | RBA | `alarm_rebound` | Industrials | normal | 3 | +0.49 | +1.90 | +1.47 | — |
+| 15 | buy | RTO | `alarm_rebound` | Industrials | normal | 3 | -0.21 | -1.06 | +0.25 | — |
+| 16 | buy | SBS | `alarm_rebound` | Utilities | normal | 3 | +0.44 | -1.98 | +1.32 | — |
+| 17 | buy | SFD | `alarm_rebound` | Consumer Defensive | normal | 3 | +0.09 | -1.11 | -1.24 | — |
+| 18 | buy | UTI | `alarm_rebound` | Consumer Defensive | normal | 3 | -2.92 | -8.43 | -10.71 | — |
+| 19 | buy | CIGL | `alarm_rebound` | Industrials | dead | 3 | -4.35 | -6.52 | -6.52 | — |
+| 20 | buy | SAFX | `alarm_rebound` | Utilities | dead | 3 | -18.72 | -18.72 | -22.99 | — |
+| 21 | buy | AMX | `alarm_rebound` | Communication Services | normal | 3 | -0.34 | -1.02 | +0.68 | — |
+| 22 | buy | APP | `alarm_rebound` | Communication Services | normal | 3 | +1.15 | +0.49 | -0.48 | — |
+| 23 | buy | ARKO | `alarm_rebound` | Consumer Cyclical | normal | 3 | -0.42 | -2.13 | +1.28 | — |
+| 24 | buy | BBAR | `alarm_rebound` | Financial | normal | 3 | -1.90 | -4.61 | -4.81 | — |
+| 25 | buy | BBD | `alarm_rebound` | Financial | normal | 3 | +0.33 | -1.97 | +2.30 | — |
 
-CTRE —/— EZPW —/— RZLT —/— TCBI —/— DLO —/— OLLI —/— RR —/— AKBA —/— CRSP —/— ABR —/— ALLY —/— ALT —/— AQST —/— AVTR —/— SOFI —/— TMC —/— WAL —/— XP —/— ALTO —/— APLE —/— DRH —/— GTY —/— RLJ —/— VMC —/— FOUR —/—
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | AG | `steady_blue` | Basic Materials | normal | 12 | -5.57 | +6.54 | +8.28 | — |
+| — | sell | AGI | `steady_blue` | Basic Materials | normal | 12 | -3.21 | +5.15 | +7.94 | — |
+| — | sell | ALB | `steady_blue` | Basic Materials | normal | 12 | -0.95 | +0.22 | +0.15 | — |
+| — | sell | ALMS | `alarm_rebound` | Healthcare | normal | 3 | -2.43 | -5.92 | -10.35 | — |
+| — | sell | AMAT | `steady_blue` | Technology | normal | 13 | -3.92 | -7.31 | -7.21 | — |
+| — | sell | AMD | `steady_blue` | Technology | normal | 12 | -4.27 | -7.82 | -7.22 | — |
+| — | sell | ASML | `steady_blue` | Technology | normal | 12 | -4.26 | -6.98 | -7.05 | — |
+| — | sell | AVGO | `steady_blue` | Technology | normal | 12 | -3.17 | -7.63 | -7.24 | — |
+| — | sell | CVGI | `alarm_rebound` | Consumer Cyclical | normal | 3 | -3.25 | -7.96 | -7.96 | — |
+| — | sell | EBS | `alarm_rebound` | Healthcare | normal | 3 | +3.56 | +8.67 | +7.11 | — |
+| — | sell | INTC | `steady_blue` | Technology | normal | 12 | -6.57 | -10.33 | -10.98 | — |
+| — | sell | KOD | `alarm_rebound` | Healthcare | normal | 3 | -0.81 | -2.22 | -2.78 | — |
+| — | sell | LRCX | `steady_blue` | Technology | normal | 12 | -4.63 | -10.66 | -9.69 | — |
+| — | sell | MGNX | `alarm_rebound` | Healthcare | normal | 3 | +0.74 | +2.71 | +0.25 | — |
+| — | sell | MNRO | `alarm_rebound` | Consumer Cyclical | normal | 3 | +2.51 | +8.74 | +3.46 | — |
+| — | sell | NAUT | `alarm_rebound` | Healthcare | normal | 3 | -3.29 | +2.38 | +2.38 | — |
+| — | sell | SGML | `steady_blue` | Basic Materials | hot | 13 | -3.50 | -4.29 | -6.12 | — |
+| — | sell | SION | `alarm_rebound` | Healthcare | normal | 4 | +0.51 | +5.75 | -6.60 | — |
+| — | sell | TDUP | `alarm_rebound` | Consumer Cyclical | normal | 3 | -1.75 | +3.15 | -3.85 | — |
+| — | sell | TMC | `steady_blue` | Basic Materials | normal | 13 | +3.98 | +5.30 | +5.30 | — |
+| — | sell | UA | `alarm_rebound` | Consumer Cyclical | normal | 3 | -4.82 | -1.16 | -0.77 | — |
+| — | sell | UAA | `alarm_rebound` | Consumer Cyclical | dead | 3 | -4.16 | -0.76 | +0.19 | — |
+| — | sell | XPOF | `alarm_rebound` | Consumer Cyclical | dead | 3 | -0.39 | -2.55 | -0.59 | — |
+
+Seats 1d n=25 · p_win=48.0% · p_loss=52.0% · avg_win=+2.20 · avg_loss=-3.45 · mean=-0.74 · clip30=-0.74 · payoff=0.64.
+
+### 2026-08-19 · `steady_blue+blue` · n=25
+
+core `steady+blue` (52% hit / +9.54 mean on the mine board) → baseline `blue`
+
+Book 1d -0.99 · 2d -0.79 · 3d — · 1w — · stock-book BUY 1d -0.78 · universe med -0.98.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | NEE | `steady_blue` | Utilities | normal | 8 | -1.02 | -2.63 | — | — |
+| 2 | buy | ARM | `blue` | Technology | normal | 4 | +0.55 | -2.41 | — | — |
+| 3 | buy | ASML | `blue` | Technology | normal | 4 | -0.08 | +0.69 | — | — |
+| 4 | buy | KEYS | `blue` | Technology | normal | 4 | -0.92 | -1.04 | — | — |
+| 5 | buy | SKM | `blue` | Communication Services | normal | 4 | -1.11 | +4.00 | — | — |
+| 6 | buy | Q | `blue` | Technology | dead | 4 | +5.93 | +2.25 | — | — |
+| 7 | buy | ROL | `blue` | Consumer Cyclical | dead | 4 | +0.33 | +1.79 | — | — |
+| 8 | buy | ALAB | `blue` | Technology | normal | 4 | +0.52 | -1.40 | — | — |
+| 9 | buy | AMAT | `blue` | Technology | normal | 4 | +0.12 | -0.67 | — | — |
+| 10 | buy | PWR | `blue` | Industrials | normal | 3 | -2.21 | -5.62 | — | — |
+| 11 | buy | WMS | `blue` | Industrials | dead | 3 | -2.71 | -1.83 | — | — |
+| 12 | buy | NRG | `blue` | Utilities | dead | 3 | -4.33 | -6.20 | — | — |
+| 13 | buy | TLN | `blue` | Utilities | dead | 3 | -1.66 | -2.45 | — | — |
+| 14 | buy | ABNB | `blue` | Consumer Cyclical | normal | 3 | -0.75 | +0.49 | — | — |
+| 15 | buy | AEM | `blue` | Basic Materials | normal | 3 | +2.08 | +4.01 | — | — |
+| 16 | buy | ATAT | `blue` | Consumer Cyclical | normal | 3 | -7.43 | -6.08 | — | — |
+| 17 | buy | CHTR | `blue` | Communication Services | normal | 3 | -3.09 | -1.51 | — | — |
+| 18 | buy | JD | `blue` | Consumer Cyclical | normal | 3 | +0.20 | +0.07 | — | — |
+| 19 | buy | LEN | `blue` | Consumer Cyclical | normal | 3 | -2.15 | -0.32 | — | — |
+| 20 | buy | MAR | `blue` | Consumer Cyclical | normal | 3 | -0.73 | -0.79 | — | — |
+| 21 | buy | NEM | `blue` | Basic Materials | normal | 3 | +2.05 | +5.20 | — | — |
+| 22 | buy | NWSA | `blue` | Communication Services | normal | 3 | +0.68 | +3.16 | — | — |
+| 23 | buy | WB | `blue` | Communication Services | normal | 3 | -4.00 | -6.14 | — | — |
+| 24 | buy | AAL | `blue` | Industrials | dead | 3 | -2.45 | -0.29 | — | — |
+| 25 | buy | ALK | `blue` | Industrials | dead | 3 | -2.55 | -1.99 | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | ABEV | `alarm_rebound` | Consumer Defensive | normal | 3 | +1.08 | +1.80 | +3.60 | — |
+| — | sell | AMX | `alarm_rebound` | Communication Services | normal | 3 | -0.34 | -1.02 | +0.68 | — |
+| — | sell | APP | `alarm_rebound` | Communication Services | normal | 3 | +1.15 | +0.49 | -0.48 | — |
+| — | sell | ARKO | `alarm_rebound` | Consumer Cyclical | normal | 3 | -0.42 | -2.13 | +1.28 | — |
+| — | sell | BAK | `alarm_rebound` | Basic Materials | normal | 4 | +2.03 | +0.51 | +1.01 | — |
+| — | sell | BBAR | `alarm_rebound` | Financial | normal | 3 | -1.90 | -4.61 | -4.81 | — |
+| — | sell | BBD | `alarm_rebound` | Financial | normal | 3 | +0.33 | -1.97 | +2.30 | — |
+| — | sell | CDNL | `alarm_rebound` | Industrials | normal | 3 | -4.01 | -6.40 | -3.63 | — |
+| — | sell | CELH | `alarm_rebound` | Consumer Defensive | normal | 3 | +7.89 | +8.83 | +11.57 | — |
+| — | sell | CIG | `alarm_rebound` | Utilities | normal | 3 | +1.58 | -1.05 | +1.05 | — |
+| — | sell | CIGL | `alarm_rebound` | Industrials | dead | 3 | -4.35 | -6.52 | -6.52 | — |
+| — | sell | DHT | `alarm_rebound` | Energy | normal | 3 | +3.52 | +2.54 | +2.64 | — |
+| — | sell | ENB | `alarm_rebound` | Energy | normal | 3 | -2.22 | -0.78 | -1.81 | — |
+| — | sell | HE | `alarm_rebound` | Utilities | normal | 3 | +1.30 | +0.43 | -0.52 | — |
+| — | sell | LHX | `alarm_rebound` | Industrials | normal | 3 | -0.87 | -3.25 | -4.58 | — |
+| — | sell | LINC | `alarm_rebound` | Consumer Defensive | normal | 3 | -5.22 | -5.73 | -7.32 | — |
+| — | sell | MIDD | `alarm_rebound` | Industrials | normal | 3 | -1.38 | -1.30 | +1.30 | — |
+| — | sell | ODD | `alarm_rebound` | Consumer Defensive | normal | 3 | +6.50 | +1.71 | +7.48 | — |
+| — | sell | QFIN | `alarm_rebound` | Financial | normal | 3 | -2.24 | -5.06 | -4.02 | — |
+| — | sell | RBA | `alarm_rebound` | Industrials | normal | 3 | +0.49 | +1.90 | +1.47 | — |
+| — | sell | RTO | `alarm_rebound` | Industrials | normal | 3 | -0.21 | -1.06 | +0.25 | — |
+| — | sell | SAFX | `alarm_rebound` | Utilities | dead | 3 | -18.72 | -18.72 | -22.99 | — |
+| — | sell | SBS | `alarm_rebound` | Utilities | normal | 3 | +0.44 | -1.98 | +1.32 | — |
+| — | sell | SFD | `alarm_rebound` | Consumer Defensive | normal | 3 | +0.09 | -1.11 | -1.24 | — |
+| — | sell | UTI | `alarm_rebound` | Consumer Defensive | normal | 3 | -2.92 | -8.43 | -10.71 | — |
+
+Seats 1d n=25 · p_win=36.0% · p_loss=64.0% · avg_win=+1.39 · avg_loss=-2.33 · mean=-0.99 · clip30=-0.99 · payoff=0.60.
+
+### 2026-08-20 · `hot_ab_peer+steady_blue+rsi_oversold+gap_down` · n=23
+
+scalp `hot+ab+peer` (70.6% hit, small n) → core `steady+blue` (52% hit / +9.54 mean on the mine board) → lottery `rsi=oversold` (low hit, huge mean) → lottery `gap=down`
+
+Book 1d +1.21 · 2d — · 3d — · 1w — · stock-book BUY 1d +1.10 · universe med +0.72.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | KC | `hot_ab_peer` | Technology | hot | 20 | -2.45 | — | — | — |
+| 2 | buy | UBS | `hot_ab_peer` | Financial | hot | 20 | +0.17 | — | — | — |
+| 3 | buy | BMEA | `hot_ab_peer` | Healthcare | hot | 19 | +0.73 | — | — | — |
+| 4 | buy | CRSP | `hot_ab_peer` | Healthcare | hot | 19 | +2.37 | — | — | — |
+| 5 | buy | PUK | `hot_ab_peer` | Financial | hot | 19 | +2.14 | — | — | — |
+| 6 | buy | WBS | `hot_ab_peer` | Financial | hot | 19 | — | — | — | — |
+| 7 | buy | TGT | `hot_ab_peer` | Consumer Defensive | hot | 16 | +4.54 | — | — | — |
+| 8 | buy | ALEC | `hot_ab_peer` | Healthcare | hot | 15 | +4.42 | — | — | — |
+| 9 | buy | JPM | `steady_blue` | Financial | normal | 17 | +0.01 | — | — | — |
+| 10 | buy | MU | `steady_blue` | Technology | normal | 17 | -0.78 | — | — | — |
+| 11 | buy | AZN | `steady_blue` | Healthcare | normal | 17 | +0.91 | — | — | — |
+| 12 | buy | BEN | `steady_blue` | Financial | normal | 17 | +1.00 | — | — | — |
+| 13 | buy | BRKR | `steady_blue` | Healthcare | normal | 17 | -0.60 | — | — | — |
+| 14 | buy | CATX | `steady_blue` | Healthcare | normal | 17 | +2.80 | — | — | — |
+| 15 | buy | CF | `steady_blue` | Basic Materials | normal | 17 | +3.10 | — | — | — |
+| 16 | buy | HNST | `steady_blue` | Consumer Defensive | normal | 17 | +1.81 | — | — | — |
+| 17 | buy | KRNY | `steady_blue` | Financial | normal | 17 | +0.62 | — | — | — |
+| 18 | buy | MT | `steady_blue` | Basic Materials | normal | 17 | +1.53 | — | — | — |
+| 19 | buy | TX | `steady_blue` | Basic Materials | normal | 17 | +2.29 | — | — | — |
+| 20 | buy | ENB | `rsi_oversold` | Energy | normal | 11 | -1.04 | — | — | — |
+| 21 | buy | SBS | `rsi_oversold` | Utilities | normal | 11 | +3.36 | — | — | — |
+| 22 | buy | CRSR | `gap_down` | Technology | normal | 6 | +0.18 | — | — | — |
+| 23 | buy | NBIS | `gap_down` | Technology | hot | 5 | -0.45 | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | AAL | `blue` | Industrials | dead | 3 | -2.45 | -0.29 | — | — |
+| — | sell | ABNB | `blue` | Consumer Cyclical | normal | 3 | -0.75 | +0.49 | — | — |
+| — | sell | AEM | `blue` | Basic Materials | normal | 3 | +2.08 | +4.01 | — | — |
+| — | sell | ALAB | `blue` | Technology | normal | 4 | +0.52 | -1.40 | — | — |
+| — | sell | ALK | `blue` | Industrials | dead | 3 | -2.55 | -1.99 | — | — |
+| — | sell | AMAT | `blue` | Technology | normal | 4 | +0.12 | -0.67 | — | — |
+| — | sell | ARM | `blue` | Technology | normal | 4 | +0.55 | -2.41 | — | — |
+| — | sell | ASML | `blue` | Technology | normal | 4 | -0.08 | +0.69 | — | — |
+| — | sell | ATAT | `blue` | Consumer Cyclical | normal | 3 | -7.43 | -6.08 | — | — |
+| — | sell | CHTR | `blue` | Communication Services | normal | 3 | -3.09 | -1.51 | — | — |
+| — | sell | JD | `blue` | Consumer Cyclical | normal | 3 | +0.20 | +0.07 | — | — |
+| — | sell | KEYS | `blue` | Technology | normal | 4 | -0.92 | -1.04 | — | — |
+| — | sell | LEN | `blue` | Consumer Cyclical | normal | 3 | -2.15 | -0.32 | — | — |
+| — | sell | MAR | `blue` | Consumer Cyclical | normal | 3 | -0.73 | -0.79 | — | — |
+| — | sell | NEE | `steady_blue` | Utilities | normal | 8 | -1.02 | -2.63 | — | — |
+| — | sell | NEM | `blue` | Basic Materials | normal | 3 | +2.05 | +5.20 | — | — |
+| — | sell | NRG | `blue` | Utilities | dead | 3 | -4.33 | -6.20 | — | — |
+| — | sell | NWSA | `blue` | Communication Services | normal | 3 | +0.68 | +3.16 | — | — |
+| — | sell | PWR | `blue` | Industrials | normal | 3 | -2.21 | -5.62 | — | — |
+| — | sell | Q | `blue` | Technology | dead | 4 | +5.93 | +2.25 | — | — |
+| — | sell | ROL | `blue` | Consumer Cyclical | dead | 4 | +0.33 | +1.79 | — | — |
+| — | sell | SKM | `blue` | Communication Services | normal | 4 | -1.11 | +4.00 | — | — |
+| — | sell | TLN | `blue` | Utilities | dead | 3 | -1.66 | -2.45 | — | — |
+| — | sell | WB | `blue` | Communication Services | normal | 3 | -4.00 | -6.14 | — | — |
+| — | sell | WMS | `blue` | Industrials | dead | 3 | -2.71 | -1.83 | — | — |
+
+Seats 1d n=22 · p_win=77.3% · p_loss=22.7% · avg_win=+1.88 · avg_loss=-1.06 · mean=+1.21 · clip30=+1.21 · payoff=1.77.
+
+### 2026-08-21 · `hot_ab_peer+steady_blue+alarm_rebound` · n=25
+
+scalp `hot+ab+peer` (70.6% hit, small n) → core `steady+blue` (52% hit / +9.54 mean on the mine board) → rebound `alarm AND NOT white`
+
+Book 1d — · 2d — · 3d — · 1w — · stock-book BUY 1d — · universe med —.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | ALVO | `hot_ab_peer` | Healthcare | hot | 20 | — | — | — | — |
+| 2 | hold | MT | `hot_ab_peer` | Basic Materials | hot | 20 | — | — | — | — |
+| 3 | buy | VIRT | `hot_ab_peer` | Financial | hot | 20 | — | — | — | — |
+| 4 | hold | AZN | `hot_ab_peer` | Healthcare | hot | 19 | — | — | — | — |
+| 5 | buy | FUTU | `hot_ab_peer` | Financial | hot | 19 | — | — | — | — |
+| 6 | buy | PCG | `hot_ab_peer` | Utilities | hot | 19 | — | — | — | — |
+| 7 | buy | SUZ | `hot_ab_peer` | Basic Materials | hot | 19 | — | — | — | — |
+| 8 | buy | AKBA | `hot_ab_peer` | Healthcare | hot | 15 | — | — | — | — |
+| 9 | buy | OPCH | `steady_blue` | Healthcare | dead | 18 | — | — | — | — |
+| 10 | buy | CGON | `steady_blue` | Healthcare | normal | 17 | — | — | — | — |
+| 11 | buy | GGB | `steady_blue` | Basic Materials | normal | 17 | — | — | — | — |
+| 12 | buy | HTGC | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| 13 | buy | LLY | `steady_blue` | Healthcare | normal | 17 | — | — | — | — |
+| 14 | buy | SOFI | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| 15 | buy | TRU | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| 16 | buy | UMH | `steady_blue` | Real Estate | normal | 17 | — | — | — | — |
+| 17 | buy | V | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| 18 | buy | APLE | `steady_blue` | Real Estate | dead | 17 | — | — | — | — |
+| 19 | buy | CTRE | `steady_blue` | Real Estate | dead | 17 | — | — | — | — |
+| 20 | buy | DRH | `steady_blue` | Real Estate | dead | 17 | — | — | — | — |
+| 21 | buy | AGRO | `alarm_rebound` | Consumer Defensive | hot | 9 | — | — | — | — |
+| 22 | buy | BYND | `alarm_rebound` | Consumer Defensive | hot | 9 | — | — | — | — |
+| 23 | buy | GO | `alarm_rebound` | Consumer Defensive | dead | 7 | — | — | — | — |
+| 24 | buy | BOOT | `alarm_rebound` | Consumer Cyclical | normal | 6 | — | — | — | — |
+| 25 | buy | CELH | `alarm_rebound` | Consumer Defensive | normal | 6 | — | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | ALEC | `hot_ab_peer` | Healthcare | hot | 15 | +4.42 | — | — | — |
+| — | sell | BEN | `steady_blue` | Financial | normal | 17 | +1.00 | — | — | — |
+| — | sell | BMEA | `hot_ab_peer` | Healthcare | hot | 19 | +0.73 | — | — | — |
+| — | sell | BRKR | `steady_blue` | Healthcare | normal | 17 | -0.60 | — | — | — |
+| — | sell | CATX | `steady_blue` | Healthcare | normal | 17 | +2.80 | — | — | — |
+| — | sell | CF | `steady_blue` | Basic Materials | normal | 17 | +3.10 | — | — | — |
+| — | sell | CRSP | `hot_ab_peer` | Healthcare | hot | 19 | +2.37 | — | — | — |
+| — | sell | CRSR | `gap_down` | Technology | normal | 6 | +0.18 | — | — | — |
+| — | sell | ENB | `rsi_oversold` | Energy | normal | 11 | -1.04 | — | — | — |
+| — | sell | HNST | `steady_blue` | Consumer Defensive | normal | 17 | +1.81 | — | — | — |
+| — | sell | JPM | `steady_blue` | Financial | normal | 17 | +0.01 | — | — | — |
+| — | sell | KC | `hot_ab_peer` | Technology | hot | 20 | -2.45 | — | — | — |
+| — | sell | KRNY | `steady_blue` | Financial | normal | 17 | +0.62 | — | — | — |
+| — | sell | MU | `steady_blue` | Technology | normal | 17 | -0.78 | — | — | — |
+| — | sell | NBIS | `gap_down` | Technology | hot | 5 | -0.45 | — | — | — |
+| — | sell | PUK | `hot_ab_peer` | Financial | hot | 19 | +2.14 | — | — | — |
+| — | sell | SBS | `rsi_oversold` | Utilities | normal | 11 | +3.36 | — | — | — |
+| — | sell | TGT | `hot_ab_peer` | Consumer Defensive | hot | 16 | +4.54 | — | — | — |
+| — | sell | TX | `steady_blue` | Basic Materials | normal | 17 | +2.29 | — | — | — |
+| — | sell | UBS | `hot_ab_peer` | Financial | hot | 20 | +0.17 | — | — | — |
+| — | sell | WBS | `hot_ab_peer` | Financial | hot | 19 | — | — | — | — |
 
 1d not settled — names only.
 
-### 2026-08-27 · `A` · pool 1686 · A cameras printed; pool=ab|peer good
+### 2026-08-27 · `hot_ab_peer+steady_blue+alarm_rebound` · n=25
 
-KD —/— VYX —/— AVT —/— DAVE —/— GRND —/— ITRI —/— SLM —/— DJT —/— CBRL —/— CXT —/— DPZ —/— IP —/— PBI —/— RVLV —/— SFM —/— XRX —/— BRBR —/— ESAB —/— JBLU —/— NCLH —/— POST —/— SKIN —/— VFC —/— ABX —/— KMPR —/—
+scalp `hot+ab+peer` (70.6% hit, small n) → core `steady+blue` (52% hit / +9.54 mean on the mine board) → rebound `alarm AND NOT white`
+
+Book 1d — · 2d — · 3d — · 1w — · stock-book BUY 1d — · universe med —.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | ROST | `hot_ab_peer` | Consumer Cyclical | hot | 16 | — | — | — | — |
+| 2 | buy | G | `hot_ab_peer` | Technology | hot | 15 | — | — | — | — |
+| 3 | buy | BKKT | `hot_ab_peer` | Technology | hot | 14 | — | — | — | — |
+| 4 | buy | BTDR | `hot_ab_peer` | Technology | hot | 14 | — | — | — | — |
+| 5 | buy | TRON | `hot_ab_peer` | Consumer Cyclical | hot | 11 | — | — | — | — |
+| 6 | buy | DSX | `hot_ab_peer` | Industrials | hot | 10 | — | — | — | — |
+| 7 | buy | ALT | `hot_ab_peer` | Healthcare | hot | 10 | — | — | — | — |
+| 8 | hold | ALVO | `hot_ab_peer` | Healthcare | hot | 10 | — | — | — | — |
+| 9 | buy | ACMR | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| 10 | buy | ADSK | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| 11 | buy | AMD | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| 12 | buy | CSWC | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| 13 | buy | PSEC | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| 14 | buy | MUFG | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| 15 | buy | PRAA | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| 16 | buy | SKWD | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| 17 | buy | SLM | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| 18 | buy | META | `steady_blue` | Communication Services | normal | 17 | — | — | — | — |
+| 19 | buy | PSO | `steady_blue` | Communication Services | normal | 17 | — | — | — | — |
+| 20 | buy | DIS | `steady_blue` | Communication Services | dead | 17 | — | — | — | — |
+| 21 | buy | DV | `steady_blue` | Communication Services | dead | 17 | — | — | — | — |
+| 22 | buy | TIGO | `steady_blue` | Communication Services | dead | 17 | — | — | — | — |
+| 23 | buy | ARCT | `alarm_rebound` | Healthcare | hot | 10 | — | — | — | — |
+| 24 | buy | CYPH | `alarm_rebound` | Healthcare | hot | 10 | — | — | — | — |
+| 25 | buy | GUTS | `alarm_rebound` | Healthcare | hot | 10 | — | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | AGRO | `alarm_rebound` | Consumer Defensive | hot | 9 | — | — | — | — |
+| — | sell | AKBA | `hot_ab_peer` | Healthcare | hot | 15 | — | — | — | — |
+| — | sell | APLE | `steady_blue` | Real Estate | dead | 17 | — | — | — | — |
+| — | sell | AZN | `hot_ab_peer` | Healthcare | hot | 19 | — | — | — | — |
+| — | sell | BOOT | `alarm_rebound` | Consumer Cyclical | normal | 6 | — | — | — | — |
+| — | sell | BYND | `alarm_rebound` | Consumer Defensive | hot | 9 | — | — | — | — |
+| — | sell | CELH | `alarm_rebound` | Consumer Defensive | normal | 6 | — | — | — | — |
+| — | sell | CGON | `steady_blue` | Healthcare | normal | 17 | — | — | — | — |
+| — | sell | CTRE | `steady_blue` | Real Estate | dead | 17 | — | — | — | — |
+| — | sell | DRH | `steady_blue` | Real Estate | dead | 17 | — | — | — | — |
+| — | sell | FUTU | `hot_ab_peer` | Financial | hot | 19 | — | — | — | — |
+| — | sell | GGB | `steady_blue` | Basic Materials | normal | 17 | — | — | — | — |
+| — | sell | GO | `alarm_rebound` | Consumer Defensive | dead | 7 | — | — | — | — |
+| — | sell | HTGC | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| — | sell | LLY | `steady_blue` | Healthcare | normal | 17 | — | — | — | — |
+| — | sell | MT | `hot_ab_peer` | Basic Materials | hot | 20 | — | — | — | — |
+| — | sell | OPCH | `steady_blue` | Healthcare | dead | 18 | — | — | — | — |
+| — | sell | PCG | `hot_ab_peer` | Utilities | hot | 19 | — | — | — | — |
+| — | sell | SOFI | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| — | sell | SUZ | `hot_ab_peer` | Basic Materials | hot | 19 | — | — | — | — |
+| — | sell | TRU | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| — | sell | UMH | `steady_blue` | Real Estate | normal | 17 | — | — | — | — |
+| — | sell | V | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| — | sell | VIRT | `hot_ab_peer` | Financial | hot | 20 | — | — | — | — |
 
 1d not settled — names only.
 
-### 2026-08-30 · `A` · pool 1840 · A cameras printed; pool=ab|peer good
+### 2026-08-30 · `hot_ab_peer+steady_blue+alarm_rebound` · n=25
 
-UPBD —/— BAND —/— DXC —/— PARR —/— FND —/— LULU —/— POOL —/— CRWD —/— BRZE —/— CRCT —/— AGNC —/— ES —/— GLPI —/— SBS —/— ZIP —/— GENI —/— PEB —/— SRE —/— DG —/— POST —/— VITL —/— BRBR —/— NWL —/— SNN —/— SYK —/—
+scalp `hot+ab+peer` (70.6% hit, small n) → core `steady+blue` (52% hit / +9.54 mean on the mine board) → rebound `alarm AND NOT white`
+
+Book 1d — · 2d — · 3d — · 1w — · stock-book BUY 1d — · universe med —.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | DTM | `hot_ab_peer` | Energy | hot | 11 | — | — | — | — |
+| 2 | buy | ANF | `hot_ab_peer` | Consumer Cyclical | hot | 9 | — | — | — | — |
+| 3 | buy | CRML | `hot_ab_peer` | Basic Materials | hot | 9 | — | — | — | — |
+| 4 | buy | MATV | `hot_ab_peer` | Basic Materials | hot | 9 | — | — | — | — |
+| 5 | buy | URBN | `hot_ab_peer` | Consumer Cyclical | hot | 9 | — | — | — | — |
+| 6 | buy | GDRX | `hot_ab_peer` | Healthcare | hot | 8 | — | — | — | — |
+| 7 | buy | BOX | `hot_ab_peer` | Technology | hot | 7 | — | — | — | — |
+| 8 | buy | SMTC | `hot_ab_peer` | Technology | hot | 7 | — | — | — | — |
+| 9 | buy | CDNS | `steady_blue` | Technology | normal | 17 | — | — | — | — |
+| 10 | buy | CRWD | `steady_blue` | Technology | normal | 17 | — | — | — | — |
+| 11 | buy | ADBE | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| 12 | buy | BRZE | `steady_blue` | Technology | normal | 17 | — | — | — | — |
+| 13 | buy | ES | `steady_blue` | Utilities | normal | 17 | — | — | — | — |
+| 14 | buy | GLPI | `steady_blue` | Real Estate | normal | 17 | — | — | — | — |
+| 15 | buy | SBS | `steady_blue` | Utilities | normal | 17 | — | — | — | — |
+| 16 | buy | ZIP | `steady_blue` | Communication Services | normal | 17 | — | — | — | — |
+| 17 | buy | SRE | `steady_blue` | Utilities | dead | 17 | — | — | — | — |
+| 18 | buy | AGNC | `steady_blue` | Real Estate | normal | 16 | — | — | — | — |
+| 19 | buy | AMT | `steady_blue` | Real Estate | normal | 16 | — | — | — | — |
+| 20 | buy | ATHM | `steady_blue` | Communication Services | normal | 16 | — | — | — | — |
+| 21 | buy | BKH | `steady_blue` | Utilities | normal | 16 | — | — | — | — |
+| 22 | buy | BXP | `steady_blue` | Real Estate | normal | 16 | — | — | — | — |
+| 23 | buy | CNP | `steady_blue` | Utilities | normal | 16 | — | — | — | — |
+| 24 | buy | HAFN | `alarm_rebound` | Industrials | normal | 8 | — | — | — | — |
+| 25 | buy | ABNB | `alarm_rebound` | Consumer Cyclical | normal | 7 | — | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | ACMR | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| — | sell | ADSK | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| — | sell | ALT | `hot_ab_peer` | Healthcare | hot | 10 | — | — | — | — |
+| — | sell | ALVO | `hot_ab_peer` | Healthcare | hot | 10 | — | — | — | — |
+| — | sell | AMD | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| — | sell | ARCT | `alarm_rebound` | Healthcare | hot | 10 | — | — | — | — |
+| — | sell | BKKT | `hot_ab_peer` | Technology | hot | 14 | — | — | — | — |
+| — | sell | BTDR | `hot_ab_peer` | Technology | hot | 14 | — | — | — | — |
+| — | sell | CSWC | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| — | sell | CYPH | `alarm_rebound` | Healthcare | hot | 10 | — | — | — | — |
+| — | sell | DIS | `steady_blue` | Communication Services | dead | 17 | — | — | — | — |
+| — | sell | DSX | `hot_ab_peer` | Industrials | hot | 10 | — | — | — | — |
+| — | sell | DV | `steady_blue` | Communication Services | dead | 17 | — | — | — | — |
+| — | sell | G | `hot_ab_peer` | Technology | hot | 15 | — | — | — | — |
+| — | sell | GUTS | `alarm_rebound` | Healthcare | hot | 10 | — | — | — | — |
+| — | sell | META | `steady_blue` | Communication Services | normal | 17 | — | — | — | — |
+| — | sell | MUFG | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| — | sell | PRAA | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| — | sell | PSEC | `steady_blue` | Financial | normal | 17 | — | — | — | — |
+| — | sell | PSO | `steady_blue` | Communication Services | normal | 17 | — | — | — | — |
+| — | sell | ROST | `hot_ab_peer` | Consumer Cyclical | hot | 16 | — | — | — | — |
+| — | sell | SKWD | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| — | sell | SLM | `steady_blue` | Financial | dead | 17 | — | — | — | — |
+| — | sell | TIGO | `steady_blue` | Communication Services | dead | 17 | — | — | — | — |
+| — | sell | TRON | `hot_ab_peer` | Consumer Cyclical | hot | 11 | — | — | — | — |
 
 1d not settled — names only.
 
-### 2026-08-31 · `A` · pool 1798 · A cameras printed; pool=ab|peer good
+### 2026-08-31 · `hot_ab_peer+steady_blue+blue` · n=25
 
-BMO —/— AMZN —/— RWAY —/— VTS —/— SDGR —/— TCOM —/— HDSN —/— BAH —/— CRM —/— CVE —/— CVX —/— LIN —/— OXY —/— COST —/— DTM —/— APD —/— VOD —/— TALO —/— FIBK —/— TCBI —/— COR —/— UPBD —/— HWM —/— FHB —/— HASI —/—
+scalp `hot+ab+peer` (70.6% hit, small n) → core `steady+blue` (52% hit / +9.54 mean on the mine board) → baseline `blue`
+
+Book 1d — · 2d — · 3d — · 1w — · stock-book BUY 1d — · universe med —.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | CRM | `hot_ab_peer` | Technology | hot | 11 | — | — | — | — |
+| 2 | buy | BEKE | `hot_ab_peer` | Real Estate | hot | 10 | — | — | — | — |
+| 3 | buy | SGI | `hot_ab_peer` | Consumer Cyclical | hot | 9 | — | — | — | — |
+| 4 | buy | ESTC | `hot_ab_peer` | Technology | hot | 8 | — | — | — | — |
+| 5 | buy | UPXI | `hot_ab_peer` | Communication Services | hot | 8 | — | — | — | — |
+| 6 | buy | DFDV | `hot_ab_peer` | Financial | hot | 8 | — | — | — | — |
+| 7 | buy | ESI | `hot_ab_peer` | Basic Materials | hot | 8 | — | — | — | — |
+| 8 | buy | TENB | `hot_ab_peer` | Technology | hot | 8 | — | — | — | — |
+| 9 | buy | CVE | `steady_blue` | Energy | normal | 13 | — | — | — | — |
+| 10 | buy | CVX | `steady_blue` | Energy | normal | 13 | — | — | — | — |
+| 11 | buy | BMO | `steady_blue` | Financial | normal | 13 | — | — | — | — |
+| 12 | buy | RWAY | `steady_blue` | Financial | normal | 13 | — | — | — | — |
+| 13 | buy | VOD | `steady_blue` | Communication Services | dead | 13 | — | — | — | — |
+| 14 | buy | COST | `steady_blue` | Consumer Defensive | normal | 12 | — | — | — | — |
+| 15 | hold | DTM | `steady_blue` | Energy | normal | 12 | — | — | — | — |
+| 16 | buy | XXI | `steady_blue` | Consumer Defensive | normal | 10 | — | — | — | — |
+| 17 | buy | AON | `steady_blue` | Financial | dead | 9 | — | — | — | — |
+| 18 | buy | UCB | `steady_blue` | Financial | normal | 9 | — | — | — | — |
+| 19 | buy | AMZN | `blue` | Consumer Cyclical | normal | 8 | — | — | — | — |
+| 20 | buy | LIN | `blue` | Basic Materials | dead | 8 | — | — | — | — |
+| 21 | buy | OXY | `blue` | Energy | dead | 8 | — | — | — | — |
+| 22 | buy | APD | `blue` | Basic Materials | normal | 8 | — | — | — | — |
+| 23 | buy | TALO | `blue` | Energy | normal | 8 | — | — | — | — |
+| 24 | buy | VTS | `blue` | Energy | normal | 8 | — | — | — | — |
+| 25 | buy | SDGR | `blue` | Healthcare | normal | 8 | — | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | ABNB | `alarm_rebound` | Consumer Cyclical | normal | 7 | — | — | — | — |
+| — | sell | ADBE | `steady_blue` | Technology | dead | 17 | — | — | — | — |
+| — | sell | AGNC | `steady_blue` | Real Estate | normal | 16 | — | — | — | — |
+| — | sell | AMT | `steady_blue` | Real Estate | normal | 16 | — | — | — | — |
+| — | sell | ANF | `hot_ab_peer` | Consumer Cyclical | hot | 9 | — | — | — | — |
+| — | sell | ATHM | `steady_blue` | Communication Services | normal | 16 | — | — | — | — |
+| — | sell | BKH | `steady_blue` | Utilities | normal | 16 | — | — | — | — |
+| — | sell | BOX | `hot_ab_peer` | Technology | hot | 7 | — | — | — | — |
+| — | sell | BRZE | `steady_blue` | Technology | normal | 17 | — | — | — | — |
+| — | sell | BXP | `steady_blue` | Real Estate | normal | 16 | — | — | — | — |
+| — | sell | CDNS | `steady_blue` | Technology | normal | 17 | — | — | — | — |
+| — | sell | CNP | `steady_blue` | Utilities | normal | 16 | — | — | — | — |
+| — | sell | CRML | `hot_ab_peer` | Basic Materials | hot | 9 | — | — | — | — |
+| — | sell | CRWD | `steady_blue` | Technology | normal | 17 | — | — | — | — |
+| — | sell | ES | `steady_blue` | Utilities | normal | 17 | — | — | — | — |
+| — | sell | GDRX | `hot_ab_peer` | Healthcare | hot | 8 | — | — | — | — |
+| — | sell | GLPI | `steady_blue` | Real Estate | normal | 17 | — | — | — | — |
+| — | sell | HAFN | `alarm_rebound` | Industrials | normal | 8 | — | — | — | — |
+| — | sell | MATV | `hot_ab_peer` | Basic Materials | hot | 9 | — | — | — | — |
+| — | sell | SBS | `steady_blue` | Utilities | normal | 17 | — | — | — | — |
+| — | sell | SMTC | `hot_ab_peer` | Technology | hot | 7 | — | — | — | — |
+| — | sell | SRE | `steady_blue` | Utilities | dead | 17 | — | — | — | — |
+| — | sell | URBN | `hot_ab_peer` | Consumer Cyclical | hot | 9 | — | — | — | — |
+| — | sell | ZIP | `steady_blue` | Communication Services | normal | 17 | — | — | — | — |
 
 1d not settled — names only.
 
-### 2026-09-01 · `A` · pool 1700 · A cameras printed; pool=ab|peer good
+### 2026-09-01 · `steady_blue+blue+alarm_rebound` · n=25
 
-CTGO —/— GPRO —/— IEP —/— ANNX —/— WOLF —/— ADMA —/— ALLO —/— COGT —/— DDD —/— FULC —/— INDV —/— AVAV —/— ENVX —/— VRRM —/— DKS —/— FWRG —/— GME —/— MIR —/— ATRO —/— LNT —/— UAA —/— KMI —/— DHT —/— LBRT —/— ASX —/—
+core `steady+blue` (52% hit / +9.54 mean on the mine board) → baseline `blue` → rebound `alarm AND NOT white`
+
+Book 1d — · 2d — · 3d — · 1w — · stock-book BUY 1d — · universe med —.
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| 1 | buy | TEL | `steady_blue` | Technology | dead | 14 | — | — | — | — |
+| 2 | buy | MU | `steady_blue` | Technology | dead | 13 | — | — | — | — |
+| 3 | buy | KMI | `steady_blue` | Energy | dead | 13 | — | — | — | — |
+| 4 | buy | DHT | `steady_blue` | Energy | dead | 13 | — | — | — | — |
+| 5 | buy | LNG | `steady_blue` | Energy | dead | 13 | — | — | — | — |
+| 6 | buy | PAGP | `steady_blue` | Energy | dead | 13 | — | — | — | — |
+| 7 | buy | ASX | `steady_blue` | Technology | dead | 13 | — | — | — | — |
+| 8 | buy | DVN | `steady_blue` | Energy | dead | 13 | — | — | — | — |
+| 9 | buy | KEYS | `steady_blue` | Technology | dead | 13 | — | — | — | — |
+| 10 | buy | UMC | `steady_blue` | Technology | dead | 13 | — | — | — | — |
+| 11 | buy | AM | `steady_blue` | Energy | dead | 13 | — | — | — | — |
+| 12 | buy | APH | `steady_blue` | Technology | dead | 13 | — | — | — | — |
+| 13 | buy | ED | `blue` | Utilities | dead | 10 | — | — | — | — |
+| 14 | buy | HNST | `alarm_rebound` | Consumer Defensive | dead | 8 | — | — | — | — |
+| 15 | buy | BRK-B | `alarm_rebound` | Financial | dead | 7 | — | — | — | — |
+| 16 | buy | DG | `alarm_rebound` | Consumer Defensive | dead | 7 | — | — | — | — |
+| 17 | buy | KKR | `alarm_rebound` | Financial | dead | 7 | — | — | — | — |
+| 18 | buy | SMFG | `alarm_rebound` | Financial | dead | 7 | — | — | — | — |
+| 19 | buy | SVM | `alarm_rebound` | Basic Materials | dead | 7 | — | — | — | — |
+| 20 | buy | APO | `alarm_rebound` | Financial | dead | 7 | — | — | — | — |
+| 21 | hold | BMO | `alarm_rebound` | Financial | dead | 7 | — | — | — | — |
+| 22 | buy | CRBG | `alarm_rebound` | Financial | dead | 7 | — | — | — | — |
+| 23 | buy | RCI | `alarm_rebound` | Communication Services | dead | 7 | — | — | — | — |
+| 24 | buy | DOLE | `alarm_rebound` | Consumer Defensive | dead | 7 | — | — | — | — |
+| 25 | buy | GGB | `alarm_rebound` | Basic Materials | dead | 7 | — | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | stack | sector | relvol | score | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---:|---:|---:|---:|---:|
+| — | sell | AMZN | `blue` | Consumer Cyclical | normal | 8 | — | — | — | — |
+| — | sell | AON | `steady_blue` | Financial | dead | 9 | — | — | — | — |
+| — | sell | APD | `blue` | Basic Materials | normal | 8 | — | — | — | — |
+| — | sell | BEKE | `hot_ab_peer` | Real Estate | hot | 10 | — | — | — | — |
+| — | sell | COST | `steady_blue` | Consumer Defensive | normal | 12 | — | — | — | — |
+| — | sell | CRM | `hot_ab_peer` | Technology | hot | 11 | — | — | — | — |
+| — | sell | CVE | `steady_blue` | Energy | normal | 13 | — | — | — | — |
+| — | sell | CVX | `steady_blue` | Energy | normal | 13 | — | — | — | — |
+| — | sell | DFDV | `hot_ab_peer` | Financial | hot | 8 | — | — | — | — |
+| — | sell | DTM | `steady_blue` | Energy | normal | 12 | — | — | — | — |
+| — | sell | ESI | `hot_ab_peer` | Basic Materials | hot | 8 | — | — | — | — |
+| — | sell | ESTC | `hot_ab_peer` | Technology | hot | 8 | — | — | — | — |
+| — | sell | LIN | `blue` | Basic Materials | dead | 8 | — | — | — | — |
+| — | sell | OXY | `blue` | Energy | dead | 8 | — | — | — | — |
+| — | sell | RWAY | `steady_blue` | Financial | normal | 13 | — | — | — | — |
+| — | sell | SDGR | `blue` | Healthcare | normal | 8 | — | — | — | — |
+| — | sell | SGI | `hot_ab_peer` | Consumer Cyclical | hot | 9 | — | — | — | — |
+| — | sell | TALO | `blue` | Energy | normal | 8 | — | — | — | — |
+| — | sell | TENB | `hot_ab_peer` | Technology | hot | 8 | — | — | — | — |
+| — | sell | UCB | `steady_blue` | Financial | normal | 9 | — | — | — | — |
+| — | sell | UPXI | `hot_ab_peer` | Communication Services | hot | 8 | — | — | — | — |
+| — | sell | VOD | `steady_blue` | Communication Services | dead | 13 | — | — | — | — |
+| — | sell | VTS | `blue` | Energy | normal | 8 | — | — | — | — |
+| — | sell | XXI | `steady_blue` | Consumer Defensive | normal | 10 | — | — | — | — |
 
 1d not settled — names only.
 
 ## Notes
 
-1. **A is not a multi-week edge in this panel.** One priced A-session, and that session was a broad up day.
-2. **Blue is not constantly winning.** It can lift vs a red tape and still lose hard the next session.
-3. **short AND sma20=below tracks the tape**, not a separate engine.
-4. Use A as a same-morning seat-filler when the cameras printed. Re-score after later 1d prints settle.
+1. Sub-50% hit is not the issue. Expectancy needs mean. The mine board now has both.
+2. `blue` board mean +4.46 is squeeze-contaminated. Book lines clip ±30. Raw name 2d can still look insane.
+3. `ab=good` / `peer=good` alone are high-hit / tiny-mean. They fill after blue, they do not lead.
+4. No blue morning (8/13) falls through to lottery `rsi=oversold` / `gap=down`. That is labeled.
 

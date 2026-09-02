@@ -1,655 +1,655 @@
-date,Ticker,score,inv_score,blue,ab,peer,short,sma20,ab_up,points,n_red,relvol,sector,ret_1d,ret_2d,ret_3d,ret_1w,side,action,rule
-2026-08-13,ABEO,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-5.669,-6.457,-2.992,-6.142,buy,buy,Band
-2026-08-13,ANDG,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,1.222,1.449,-5.28,4.182,buy,buy,Band
-2026-08-13,ATRA,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-4.935,-1.763,2.468,10.223,buy,buy,Band
-2026-08-13,BETR,2,0,False,missing,missing,high,below,False,11,0,hot,Financial,-8.467,-9.733,-13.0,-22.667,buy,buy,Band
-2026-08-13,BW,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,10.053,6.096,-2.246,-9.84,buy,buy,Band
-2026-08-13,BYND,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Defensive,,,,,buy,buy,Band
-2026-08-13,CRIS,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-3.743,,,,buy,buy,Band
-2026-08-13,CVRX,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,4.762,-6.463,-6.463,-3.401,buy,buy,Band
-2026-08-13,CYN,2,0,False,missing,missing,high,below,False,11,0,hot,Technology,4.225,-0.469,-0.469,0.469,buy,buy,Band
-2026-08-13,DJCO,2,0,False,missing,missing,high,below,False,11,0,hot,Technology,0.351,-0.873,-0.113,2.242,buy,buy,Band
-2026-08-13,EMPD,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,2.12,-1.06,-1.06,0.707,buy,buy,Band
-2026-08-13,EVTL,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,-1.074,-4.296,-7.399,-10.501,buy,buy,Band
-2026-08-13,FBIO,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-1.678,-5.369,-2.349,-7.047,buy,buy,Band
-2026-08-13,GSUN,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Defensive,7.463,,,,buy,buy,Band
-2026-08-13,IMDX,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,16.442,15.094,15.364,15.903,buy,buy,Band
-2026-08-13,KSCP,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,-6.173,-11.728,-11.111,-12.346,buy,buy,Band
-2026-08-13,LESL,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,-16.234,-14.805,-18.182,-20.779,buy,buy,Band
-2026-08-13,MVIS,2,0,False,missing,missing,high,below,False,11,0,hot,Technology,-40.584,-43.236,-52.255,-53.581,buy,buy,Band
-2026-08-13,ONON,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,1.994,-0.886,-1.773,-5.35,buy,buy,Band
-2026-08-13,OPEN,2,0,False,missing,missing,high,below,False,11,0,hot,Real Estate,-0.274,-3.014,-7.945,-4.932,buy,buy,Band
-2026-08-13,TPR,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,0.46,0.491,3.014,1.114,buy,buy,Band
-2026-08-13,VWAV,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,44.715,16.26,8.13,-12.195,buy,buy,Band
-2026-08-13,YETI,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,-2.001,-5.432,-4.904,-3.233,buy,buy,Band
-2026-08-13,ABX,2,0,False,missing,missing,high,below,False,11,0,normal,Financial,8.803,7.042,5.751,7.512,buy,buy,Band
-2026-08-13,AIOT,2,0,False,missing,missing,high,below,False,11,0,normal,Technology,-0.955,-8.28,-4.777,-3.822,buy,buy,Band
-2026-08-14,GLND,5,0,True,missing,missing,high,below,False,11,0,hot,Energy,0.0,1.562,10.156,16.406,buy,buy,blue
-2026-08-14,NCMI,5,0,True,missing,missing,high,below,False,11,0,hot,Communication Services,-4.545,-11.888,-7.692,-11.189,buy,buy,blue
-2026-08-14,STUB,5,0,True,missing,missing,high,below,False,11,0,hot,Communication Services,-11.881,-11.757,-14.109,-17.327,buy,buy,blue
-2026-08-14,ANGI,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-5.508,-1.907,1.695,4.237,buy,buy,blue
-2026-08-14,BMBL,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-4.059,0.369,2.952,3.321,buy,buy,blue
-2026-08-14,BORR,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,1.58,0.0,-0.677,1.58,buy,buy,blue
-2026-08-14,CCOI,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-5.141,-10.612,-8.494,-18.921,buy,buy,blue
-2026-08-14,DJT,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-2.056,-2.539,0.967,10.036,buy,buy,blue
-2026-08-14,FLNG,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,0.26,0.974,5.455,3.994,buy,buy,blue
-2026-08-14,IEP,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,-4.178,-7.951,-10.377,-8.491,buy,buy,blue
-2026-08-14,IMPP,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,3.758,5.428,4.384,8.559,buy,buy,blue
-2026-08-14,LB,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,1.017,2.707,4.461,14.004,buy,buy,blue
-2026-08-14,NEE,4,0,True,missing,missing,mid,below,False,12,0,normal,Utilities,0.035,0.035,-0.325,-2.947,buy,buy,blue
-2026-08-14,NRG,4,0,True,missing,missing,mid,below,False,12,0,dead,Utilities,-3.066,-8.46,-4.484,-10.401,buy,buy,blue
-2026-08-14,VST,4,1,True,missing,missing,low,below,False,12,0,dead,Utilities,-1.364,-5.137,-3.666,-8.047,buy,buy,blue
-2026-08-14,CEG,3,1,True,missing,missing,mid,above,False,12,0,dead,Utilities,-1.673,-5.547,-2.949,-3.405,buy,buy,blue
-2026-08-14,TLN,3,1,True,missing,missing,mid,above,False,12,0,dead,Utilities,-1.604,-12.428,-11.135,-13.31,buy,buy,blue
-2026-08-14,ABEO,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-5.669,-6.457,-2.992,-6.142,buy,sell,blue
-2026-08-14,ABX,2,0,False,missing,missing,high,below,False,11,0,normal,Financial,8.803,7.042,5.751,7.512,buy,sell,blue
-2026-08-14,AIOT,2,0,False,missing,missing,high,below,False,11,0,normal,Technology,-0.955,-8.28,-4.777,-3.822,buy,sell,blue
-2026-08-14,ANDG,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,1.222,1.449,-5.28,4.182,buy,sell,blue
-2026-08-14,ATRA,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-4.935,-1.763,2.468,10.223,buy,sell,blue
-2026-08-14,BETR,2,0,False,missing,missing,high,below,False,11,0,hot,Financial,-8.467,-9.733,-13.0,-22.667,buy,sell,blue
-2026-08-14,BW,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,10.053,6.096,-2.246,-9.84,buy,sell,blue
-2026-08-14,BYND,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Defensive,,,,,buy,sell,blue
-2026-08-14,CRIS,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-3.743,,,,buy,sell,blue
-2026-08-14,CVRX,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,4.762,-6.463,-6.463,-3.401,buy,sell,blue
-2026-08-14,CYN,2,0,False,missing,missing,high,below,False,11,0,hot,Technology,4.225,-0.469,-0.469,0.469,buy,sell,blue
-2026-08-14,DJCO,2,0,False,missing,missing,high,below,False,11,0,hot,Technology,0.351,-0.873,-0.113,2.242,buy,sell,blue
-2026-08-14,EMPD,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,2.12,-1.06,-1.06,0.707,buy,sell,blue
-2026-08-14,EVTL,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,-1.074,-4.296,-7.399,-10.501,buy,sell,blue
-2026-08-14,FBIO,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,-1.678,-5.369,-2.349,-7.047,buy,sell,blue
-2026-08-14,GSUN,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Defensive,7.463,,,,buy,sell,blue
-2026-08-14,IMDX,2,0,False,missing,missing,high,below,False,11,0,hot,Healthcare,16.442,15.094,15.364,15.903,buy,sell,blue
-2026-08-14,KSCP,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,-6.173,-11.728,-11.111,-12.346,buy,sell,blue
-2026-08-14,LESL,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,-16.234,-14.805,-18.182,-20.779,buy,sell,blue
-2026-08-14,MVIS,2,0,False,missing,missing,high,below,False,11,0,hot,Technology,-40.584,-43.236,-52.255,-53.581,buy,sell,blue
-2026-08-14,ONON,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,1.994,-0.886,-1.773,-5.35,buy,sell,blue
-2026-08-14,OPEN,2,0,False,missing,missing,high,below,False,11,0,hot,Real Estate,-0.274,-3.014,-7.945,-4.932,buy,sell,blue
-2026-08-14,TPR,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,0.46,0.491,3.014,1.114,buy,sell,blue
-2026-08-14,VWAV,2,0,False,missing,missing,high,below,False,11,0,hot,Industrials,44.715,16.26,8.13,-12.195,buy,sell,blue
-2026-08-14,YETI,2,0,False,missing,missing,high,below,False,11,0,hot,Consumer Cyclical,-2.001,-5.432,-4.904,-3.233,buy,sell,blue
-2026-08-17,UAMY,5,0,True,missing,missing,high,below,False,11,0,normal,Basic Materials,-7.473,1.957,-6.228,,buy,buy,blue
-2026-08-17,ALTO,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,0.474,-0.711,-0.948,,buy,buy,blue
-2026-08-17,CC,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,-1.908,1.209,-0.191,,buy,buy,blue
-2026-08-17,FMC,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,-0.589,6.189,6.876,,buy,buy,blue
-2026-08-17,GPRE,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,0.248,-0.682,-0.743,,buy,buy,blue
-2026-08-17,HUN,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,-2.522,-1.261,-1.455,,buy,buy,blue
-2026-08-17,AMAT,4,1,True,missing,missing,low,below,False,12,0,normal,Technology,-3.919,-7.312,-7.205,,buy,buy,blue
-2026-08-17,AVGO,4,1,True,missing,missing,low,below,False,12,0,normal,Technology,-3.167,-7.632,-7.237,,buy,buy,blue
-2026-08-17,AMD,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-4.271,-7.822,-7.221,,buy,buy,blue
-2026-08-17,ASML,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-4.256,-6.977,-7.053,,buy,buy,blue
-2026-08-17,INTC,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-6.571,-10.329,-10.977,,buy,buy,blue
-2026-08-17,LRCX,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-4.63,-10.665,-9.688,,buy,buy,blue
-2026-08-17,ANGI,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-5.508,-1.907,1.695,4.237,buy,sell,blue
-2026-08-17,BMBL,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-4.059,0.369,2.952,3.321,buy,sell,blue
-2026-08-17,BORR,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,1.58,0.0,-0.677,1.58,buy,sell,blue
-2026-08-17,CCOI,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-5.141,-10.612,-8.494,-18.921,buy,sell,blue
-2026-08-17,CEG,3,1,True,missing,missing,mid,above,False,12,0,dead,Utilities,-1.673,-5.547,-2.949,-3.405,buy,sell,blue
-2026-08-17,DJT,5,0,True,missing,missing,high,below,False,11,0,normal,Communication Services,-2.056,-2.539,0.967,10.036,buy,sell,blue
-2026-08-17,FLNG,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,0.26,0.974,5.455,3.994,buy,sell,blue
-2026-08-17,GLND,5,0,True,missing,missing,high,below,False,11,0,hot,Energy,0.0,1.562,10.156,16.406,buy,sell,blue
-2026-08-17,IEP,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,-4.178,-7.951,-10.377,-8.491,buy,sell,blue
-2026-08-17,IMPP,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,3.758,5.428,4.384,8.559,buy,sell,blue
-2026-08-17,LB,5,0,True,missing,missing,high,below,False,11,0,normal,Energy,1.017,2.707,4.461,14.004,buy,sell,blue
-2026-08-17,NCMI,5,0,True,missing,missing,high,below,False,11,0,hot,Communication Services,-4.545,-11.888,-7.692,-11.189,buy,sell,blue
-2026-08-17,NEE,4,0,True,missing,missing,mid,below,False,12,0,normal,Utilities,0.035,0.035,-0.325,-2.947,buy,sell,blue
-2026-08-17,NRG,4,0,True,missing,missing,mid,below,False,12,0,dead,Utilities,-3.066,-8.46,-4.484,-10.401,buy,sell,blue
-2026-08-17,STUB,5,0,True,missing,missing,high,below,False,11,0,hot,Communication Services,-11.881,-11.757,-14.109,-17.327,buy,sell,blue
-2026-08-17,TLN,3,1,True,missing,missing,mid,above,False,12,0,dead,Utilities,-1.604,-12.428,-11.135,-13.31,buy,sell,blue
-2026-08-17,VST,4,1,True,missing,missing,low,below,False,12,0,dead,Utilities,-1.364,-5.137,-3.666,-8.047,buy,sell,blue
-2026-08-17,OCTV,0,7,False,missing,missing,low,above,False,10,0,hot,Technology,3.385,2.497,0.666,,sell,short,fade
-2026-08-17,ZIM,0,7,False,missing,missing,low,above,False,10,0,hot,Industrials,-1.111,-4.859,-5.727,,sell,short,fade
-2026-08-17,AIV,0,7,False,missing,missing,low,above,False,10,0,normal,Real Estate,0.0,0.382,-0.382,,sell,short,fade
-2026-08-17,BEP,0,7,False,missing,missing,low,above,False,10,0,normal,Utilities,-4.762,-2.671,-4.413,,sell,short,fade
-2026-08-17,CAE,0,7,False,missing,missing,low,above,False,10,0,normal,Industrials,-4.127,-4.274,-7.922,,sell,short,fade
-2026-08-17,CMCSA,0,7,False,missing,missing,low,above,False,10,0,normal,Communication Services,2.464,3.989,3.324,,sell,short,fade
-2026-08-17,DIS,0,7,False,missing,missing,low,above,False,10,0,normal,Communication Services,0.435,3.314,3.691,,sell,short,fade
-2026-08-17,EMR,0,7,False,missing,missing,low,above,False,10,0,normal,Industrials,-2.635,-2.746,-4.523,,sell,short,fade
-2026-08-17,ERIC,0,7,False,missing,missing,low,above,False,10,0,normal,Technology,-0.787,-0.197,-0.59,,sell,short,fade
-2026-08-17,EXFY,0,7,False,missing,missing,low,above,False,10,0,normal,Technology,3.084,7.489,10.132,,sell,short,fade
-2026-08-17,KT,0,7,False,missing,missing,low,above,False,10,0,normal,Communication Services,-1.158,0.0,-1.737,,sell,short,fade
-2026-08-17,NGG,0,7,False,missing,missing,low,above,False,10,0,normal,Utilities,1.058,-0.775,-0.824,,sell,short,fade
-2026-08-17,NOK,0,7,False,missing,missing,low,above,False,10,0,normal,Technology,-3.618,-6.03,-5.844,,sell,short,fade
-2026-08-17,PCG,0,7,False,missing,missing,low,above,False,10,0,normal,Utilities,1.829,0.857,2.629,,sell,short,fade
-2026-08-17,SAP,0,7,False,missing,missing,low,above,False,10,0,normal,Technology,1.265,3.734,4.451,,sell,short,fade
-2026-08-17,SBLK,0,7,False,missing,missing,low,above,False,10,0,normal,Industrials,0.133,0.266,-0.1,,sell,short,fade
-2026-08-17,SKM,0,7,False,missing,missing,low,above,False,10,0,normal,Communication Services,-3.879,-3.053,-4.129,,sell,short,fade
-2026-08-17,SONY,0,7,False,missing,missing,low,above,False,10,0,normal,Technology,-1.139,-0.886,-0.506,,sell,short,fade
-2026-08-17,SUNB,0,7,False,missing,missing,low,above,False,10,0,normal,Industrials,-5.22,-3.981,-7.265,,sell,short,fade
-2026-08-17,WPP,0,7,False,missing,missing,low,above,False,10,0,normal,Communication Services,2.167,3.328,1.664,,sell,short,fade
-2026-08-17,ACA,0,7,False,missing,missing,low,above,False,10,0,dead,Industrials,0.234,0.166,0.269,,sell,short,fade
-2026-08-17,AMH,0,7,False,missing,missing,low,above,False,10,0,dead,Real Estate,0.119,2.081,2.2,,sell,short,fade
-2026-08-17,AMT,0,7,False,missing,missing,low,above,False,10,0,dead,Real Estate,0.058,1.312,2.026,,sell,short,fade
-2026-08-17,AQN,0,7,False,missing,missing,low,above,False,10,0,dead,Utilities,-0.686,-0.172,-0.172,,sell,short,fade
-2026-08-17,BXDC,0,7,False,missing,missing,low,above,False,10,0,dead,Real Estate,1.672,-1.574,-1.968,,sell,short,fade
-2026-08-18,AOS,2,0,False,missing,missing,high,below,False,9,1,dead,Industrials,4.831,2.58,3.648,,buy,buy,Band
-2026-08-18,BF-B,2,0,False,missing,missing,high,below,False,9,1,dead,Consumer Defensive,4.715,4.641,4.751,,buy,buy,Band
-2026-08-18,COCO,2,0,False,missing,missing,high,below,False,9,1,dead,Consumer Defensive,6.342,2.565,-0.299,,buy,buy,Band
-2026-08-18,EVRG,2,0,False,missing,missing,high,below,False,9,1,dead,Utilities,0.192,-0.312,-2.997,,buy,buy,Band
-2026-08-18,EXEL,2,0,False,missing,missing,high,below,False,9,1,dead,Healthcare,2.391,1.073,1.807,,buy,buy,Band
-2026-08-18,KMB,2,0,False,missing,missing,high,below,False,9,1,dead,Consumer Defensive,2.005,0.9,1.476,,buy,buy,Band
-2026-08-18,LNT,2,0,False,missing,missing,high,below,False,9,1,dead,Utilities,0.243,-0.743,-3.029,,buy,buy,Band
-2026-08-18,LNTH,2,0,False,missing,missing,high,below,False,9,1,dead,Healthcare,0.219,-0.02,-0.289,,buy,buy,Band
-2026-08-18,PBH,2,0,False,missing,missing,high,below,False,9,1,dead,Healthcare,2.195,-0.099,1.463,,buy,buy,Band
-2026-08-18,PNW,2,0,False,missing,missing,high,below,False,9,1,dead,Utilities,-0.719,-0.769,-2.786,,buy,buy,Band
-2026-08-18,RRC,2,0,False,missing,missing,high,below,False,9,1,dead,Energy,1.154,2.032,3.011,,buy,buy,Band
-2026-08-18,TAP,2,0,False,missing,missing,high,below,False,8,1,normal,Consumer Defensive,3.307,3.598,4.401,,buy,buy,Band
-2026-08-18,BKH,2,0,False,missing,missing,high,below,False,8,1,dead,Utilities,0.055,0.191,-1.996,,buy,buy,Band
-2026-08-18,CALM,2,0,False,missing,missing,high,below,False,8,1,dead,Consumer Defensive,-0.788,1.527,1.983,,buy,buy,Band
-2026-08-18,JBS,2,0,False,missing,missing,high,below,False,8,1,dead,Consumer Defensive,0.659,-0.805,1.171,,buy,buy,Band
-2026-08-18,CAPR,2,0,False,missing,missing,high,below,False,7,2,hot,Healthcare,12.712,-3.39,-11.158,,buy,buy,Band
-2026-08-18,ENVX,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,8.453,4.306,7.815,,buy,buy,Band
-2026-08-18,EVTL,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,-1.289,-3.351,-1.16,,buy,buy,Band
-2026-08-18,EYPT,2,0,False,missing,missing,high,below,False,7,2,hot,Healthcare,15.174,-1.28,-2.742,,buy,buy,Band
-2026-08-18,IEP,2,0,False,missing,missing,high,below,False,7,2,hot,Energy,-2.635,-2.635,-0.586,,buy,buy,Band
-2026-08-18,OTLK,2,0,False,missing,missing,high,below,False,7,2,hot,Healthcare,-1.429,-3.429,-7.571,,buy,buy,Band
-2026-08-18,SERV,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,,,,,buy,buy,Band
-2026-08-18,YSS,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,-2.303,-11.708,-10.557,,buy,buy,Band
-2026-08-18,CDNL,2,0,False,missing,missing,high,below,False,7,2,normal,Industrials,-4.01,-6.402,-3.633,,buy,buy,Band
-2026-08-18,DPZ,2,0,False,missing,missing,high,below,False,7,2,normal,Consumer Cyclical,0.08,-0.559,1.665,,buy,buy,Band
-2026-08-18,ALTO,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,0.474,-0.711,-0.948,,buy,sell,Band
-2026-08-18,AMAT,4,1,True,missing,missing,low,below,False,12,0,normal,Technology,-3.919,-7.312,-7.205,,buy,sell,Band
-2026-08-18,AMD,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-4.271,-7.822,-7.221,,buy,sell,Band
-2026-08-18,ASML,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-4.256,-6.977,-7.053,,buy,sell,Band
-2026-08-18,AVGO,4,1,True,missing,missing,low,below,False,12,0,normal,Technology,-3.167,-7.632,-7.237,,buy,sell,Band
-2026-08-18,CC,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,-1.908,1.209,-0.191,,buy,sell,Band
-2026-08-18,FMC,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,-0.589,6.189,6.876,,buy,sell,Band
-2026-08-18,GPRE,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,0.248,-0.682,-0.743,,buy,sell,Band
-2026-08-18,HUN,5,0,True,missing,missing,high,below,False,11,0,dead,Basic Materials,-2.522,-1.261,-1.455,,buy,sell,Band
-2026-08-18,INTC,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-6.571,-10.329,-10.977,,buy,sell,Band
-2026-08-18,LRCX,3,2,True,missing,missing,low,above,False,12,0,normal,Technology,-4.63,-10.665,-9.688,,buy,sell,Band
-2026-08-18,UAMY,5,0,True,missing,missing,high,below,False,11,0,normal,Basic Materials,-7.473,1.957,-6.228,,buy,sell,Band
-2026-08-18,DVN,0,7,False,missing,missing,low,above,False,10,1,normal,Energy,0.753,3.073,2.655,,sell,short,fade
-2026-08-18,COP,0,7,False,missing,missing,low,above,False,10,1,dead,Energy,0.663,3.986,3.97,,sell,short,fade
-2026-08-18,CVX,0,7,False,missing,missing,low,above,False,10,1,dead,Energy,0.883,0.887,0.642,,sell,short,fade
-2026-08-18,OXY,0,7,False,missing,missing,low,above,False,10,1,dead,Energy,0.485,2.876,2.508,,sell,short,fade
-2026-08-18,XOM,0,7,False,missing,missing,low,above,False,10,1,dead,Energy,-0.477,0.356,-0.272,,sell,short,fade
-2026-08-18,APA,1,6,False,missing,missing,high,above,False,10,1,dead,Energy,2.549,4.768,2.407,,sell,short,fade
-2026-08-19,LOGI,5,0,True,missing,missing,high,below,False,7,2,normal,Technology,-5.106,-4.419,,,buy,buy,blue
-2026-08-19,WB,5,0,True,missing,missing,high,below,False,7,2,normal,Communication Services,-4.005,-6.142,,,buy,buy,blue
-2026-08-19,AAL,5,0,True,missing,missing,high,below,False,7,2,dead,Industrials,-2.453,-0.289,,,buy,buy,blue
-2026-08-19,ALK,5,0,True,missing,missing,high,below,False,7,2,dead,Industrials,-2.547,-1.989,,,buy,buy,blue
-2026-08-19,AKAM,5,0,True,missing,missing,high,below,False,6,2,dead,Technology,-2.437,-2.145,,,buy,buy,blue
-2026-08-19,MGM,5,0,True,missing,missing,high,below,False,6,2,dead,Consumer Cyclical,-0.116,1.203,,,buy,buy,blue
-2026-08-19,NYT,5,0,True,missing,missing,high,below,False,6,2,dead,Communication Services,-1.001,-0.409,,,buy,buy,blue
-2026-08-19,SIRI,5,0,True,missing,missing,high,below,False,6,2,dead,Communication Services,-0.977,0.07,,,buy,buy,blue
-2026-08-19,WLY,5,0,True,missing,missing,high,below,False,6,2,dead,Communication Services,0.212,-0.75,,,buy,buy,blue
-2026-08-19,NEE,4,0,True,missing,missing,mid,below,False,10,1,normal,Utilities,-1.024,-2.631,,,buy,buy,blue
-2026-08-19,NRG,4,0,True,missing,missing,mid,below,False,8,2,dead,Utilities,-4.329,-6.195,,,buy,buy,blue
-2026-08-19,ARM,4,1,True,missing,missing,low,below,False,7,2,normal,Technology,0.553,-2.414,,,buy,buy,blue
-2026-08-19,CHTR,4,1,True,missing,missing,high,above,False,7,2,normal,Communication Services,-3.089,-1.508,,,buy,buy,blue
-2026-08-19,JD,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,0.204,0.068,,,buy,buy,blue
-2026-08-19,LEN,4,1,True,missing,missing,high,above,False,7,2,normal,Consumer Cyclical,-2.153,-0.321,,,buy,buy,blue
-2026-08-19,MAR,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,-0.729,-0.788,,,buy,buy,blue
-2026-08-19,MCD,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,0.628,1.309,,,buy,buy,blue
-2026-08-19,SWKS,4,1,True,missing,missing,high,above,False,7,2,normal,Technology,-0.789,-1.957,,,buy,buy,blue
-2026-08-19,TCOM,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,-0.172,-0.86,,,buy,buy,blue
-2026-08-19,AXP,4,1,True,missing,missing,low,below,False,7,2,dead,Financial,-2.574,-1.147,,,buy,buy,blue
-2026-08-19,CDNS,4,1,True,missing,missing,low,below,False,7,2,dead,Technology,-0.441,1.283,,,buy,buy,blue
-2026-08-19,CDW,4,0,True,missing,missing,mid,below,False,7,2,dead,Technology,-2.668,0.036,,,buy,buy,blue
-2026-08-19,DAL,4,0,True,missing,missing,mid,below,False,7,2,dead,Industrials,-2.677,-1.057,,,buy,buy,blue
-2026-08-19,NMR,4,1,True,missing,missing,low,below,False,7,2,dead,Financial,-0.631,2.208,,,buy,buy,blue
-2026-08-19,UAL,4,0,True,missing,missing,mid,below,False,7,2,dead,Industrials,-3.515,-2.254,,,buy,buy,blue
-2026-08-19,AOS,2,0,False,missing,missing,high,below,False,9,1,dead,Industrials,4.831,2.58,3.648,,buy,sell,blue
-2026-08-19,BF-B,2,0,False,missing,missing,high,below,False,9,1,dead,Consumer Defensive,4.715,4.641,4.751,,buy,sell,blue
-2026-08-19,BKH,2,0,False,missing,missing,high,below,False,8,1,dead,Utilities,0.055,0.191,-1.996,,buy,sell,blue
-2026-08-19,CALM,2,0,False,missing,missing,high,below,False,8,1,dead,Consumer Defensive,-0.788,1.527,1.983,,buy,sell,blue
-2026-08-19,CAPR,2,0,False,missing,missing,high,below,False,7,2,hot,Healthcare,12.712,-3.39,-11.158,,buy,sell,blue
-2026-08-19,CDNL,2,0,False,missing,missing,high,below,False,7,2,normal,Industrials,-4.01,-6.402,-3.633,,buy,sell,blue
-2026-08-19,COCO,2,0,False,missing,missing,high,below,False,9,1,dead,Consumer Defensive,6.342,2.565,-0.299,,buy,sell,blue
-2026-08-19,DPZ,2,0,False,missing,missing,high,below,False,7,2,normal,Consumer Cyclical,0.08,-0.559,1.665,,buy,sell,blue
-2026-08-19,ENVX,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,8.453,4.306,7.815,,buy,sell,blue
-2026-08-19,EVRG,2,0,False,missing,missing,high,below,False,9,1,dead,Utilities,0.192,-0.312,-2.997,,buy,sell,blue
-2026-08-19,EVTL,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,-1.289,-3.351,-1.16,,buy,sell,blue
-2026-08-19,EXEL,2,0,False,missing,missing,high,below,False,9,1,dead,Healthcare,2.391,1.073,1.807,,buy,sell,blue
-2026-08-19,EYPT,2,0,False,missing,missing,high,below,False,7,2,hot,Healthcare,15.174,-1.28,-2.742,,buy,sell,blue
-2026-08-19,IEP,2,0,False,missing,missing,high,below,False,7,2,hot,Energy,-2.635,-2.635,-0.586,,buy,sell,blue
-2026-08-19,JBS,2,0,False,missing,missing,high,below,False,8,1,dead,Consumer Defensive,0.659,-0.805,1.171,,buy,sell,blue
-2026-08-19,KMB,2,0,False,missing,missing,high,below,False,9,1,dead,Consumer Defensive,2.005,0.9,1.476,,buy,sell,blue
-2026-08-19,LNT,2,0,False,missing,missing,high,below,False,9,1,dead,Utilities,0.243,-0.743,-3.029,,buy,sell,blue
-2026-08-19,LNTH,2,0,False,missing,missing,high,below,False,9,1,dead,Healthcare,0.219,-0.02,-0.289,,buy,sell,blue
-2026-08-19,OTLK,2,0,False,missing,missing,high,below,False,7,2,hot,Healthcare,-1.429,-3.429,-7.571,,buy,sell,blue
-2026-08-19,PBH,2,0,False,missing,missing,high,below,False,9,1,dead,Healthcare,2.195,-0.099,1.463,,buy,sell,blue
-2026-08-19,PNW,2,0,False,missing,missing,high,below,False,9,1,dead,Utilities,-0.719,-0.769,-2.786,,buy,sell,blue
-2026-08-19,RRC,2,0,False,missing,missing,high,below,False,9,1,dead,Energy,1.154,2.032,3.011,,buy,sell,blue
-2026-08-19,SERV,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,,,,,buy,sell,blue
-2026-08-19,TAP,2,0,False,missing,missing,high,below,False,8,1,normal,Consumer Defensive,3.307,3.598,4.401,,buy,sell,blue
-2026-08-19,YSS,2,0,False,missing,missing,high,below,False,7,2,hot,Industrials,-2.303,-11.708,-10.557,,buy,sell,blue
-2026-08-20,HIMS,10,0,True,good,good,high,below,True,16,0,normal,Healthcare,6.026,,,,buy,buy,A
-2026-08-20,PACB,10,0,True,good,good,high,below,True,15,0,hot,Healthcare,9.756,,,,buy,buy,A
-2026-08-20,VERA,10,0,True,good,good,high,below,True,15,0,normal,Healthcare,3.247,,,,buy,buy,A
-2026-08-20,FSLR,10,0,True,good,good,high,below,True,15,1,normal,Technology,0.103,,,,buy,buy,A
-2026-08-20,GRND,10,0,True,good,good,high,below,True,15,1,dead,Technology,-0.83,,,,buy,buy,A
-2026-08-20,SOC,10,0,True,good,good,high,below,True,15,1,dead,Energy,0.592,,,,buy,buy,A
-2026-08-20,RIOT,10,0,True,good,good,high,below,True,14,1,normal,Financial,-5.481,,,,buy,buy,A
-2026-08-20,NYT,10,0,True,good,good,high,below,True,14,1,dead,Communication Services,0.597,,,,buy,hold,A
-2026-08-20,LZ,10,0,True,good,good,high,below,True,13,2,normal,Industrials,-0.427,,,,buy,buy,A
-2026-08-20,TPR,10,0,True,good,good,high,below,True,13,2,normal,Consumer Cyclical,0.27,,,,buy,buy,A
-2026-08-20,ETSY,10,0,True,good,good,high,below,True,13,2,dead,Consumer Cyclical,-0.222,,,,buy,buy,A
-2026-08-20,PLNT,10,0,True,good,good,high,below,True,13,2,dead,Consumer Cyclical,2.033,,,,buy,buy,A
-2026-08-20,YETI,10,0,True,good,good,high,below,True,13,2,dead,Consumer Cyclical,-0.545,,,,buy,buy,A
-2026-08-20,JPM,9,1,True,good,good,low,below,True,17,0,normal,Financial,0.009,,,,buy,buy,A
-2026-08-20,TEM,9,1,True,good,good,high,above,True,16,0,hot,Healthcare,9.062,,,,buy,buy,A
-2026-08-20,ACHV,9,1,True,good,good,high,above,True,16,0,normal,Healthcare,-0.374,,,,buy,buy,A
-2026-08-20,AUPH,9,1,True,good,good,high,above,True,16,0,normal,Healthcare,-3.59,,,,buy,buy,A
-2026-08-20,EZPW,9,0,True,good,good,high,below,False,16,0,normal,Financial,12.031,,,,buy,buy,A
-2026-08-20,HNST,9,1,True,good,good,high,above,True,16,0,normal,Consumer Defensive,1.815,,,,buy,buy,A
-2026-08-20,METC,9,1,True,good,good,high,above,True,16,0,normal,Basic Materials,6.726,,,,buy,buy,A
-2026-08-20,MOS,9,0,True,good,good,high,below,False,16,0,normal,Basic Materials,4.54,,,,buy,buy,A
-2026-08-20,WIX,9,1,True,good,good,high,above,True,16,0,normal,Technology,-0.388,,,,buy,buy,A
-2026-08-20,ABX,9,0,True,good,good,high,below,False,16,0,dead,Financial,5.459,,,,buy,buy,A
-2026-08-20,AEE,9,0,True,good,good,mid,below,True,16,0,dead,Utilities,-2.445,,,,buy,buy,A
-2026-08-20,CBSH,9,0,True,good,good,mid,below,True,16,0,dead,Financial,-0.714,,,,buy,buy,A
-2026-08-20,AAL,5,0,True,missing,missing,high,below,False,7,2,dead,Industrials,-2.453,-0.289,,,buy,sell,A
-2026-08-20,AKAM,5,0,True,missing,missing,high,below,False,6,2,dead,Technology,-2.437,-2.145,,,buy,sell,A
-2026-08-20,ALK,5,0,True,missing,missing,high,below,False,7,2,dead,Industrials,-2.547,-1.989,,,buy,sell,A
-2026-08-20,ARM,4,1,True,missing,missing,low,below,False,7,2,normal,Technology,0.553,-2.414,,,buy,sell,A
-2026-08-20,AXP,4,1,True,missing,missing,low,below,False,7,2,dead,Financial,-2.574,-1.147,,,buy,sell,A
-2026-08-20,CDNS,4,1,True,missing,missing,low,below,False,7,2,dead,Technology,-0.441,1.283,,,buy,sell,A
-2026-08-20,CDW,4,0,True,missing,missing,mid,below,False,7,2,dead,Technology,-2.668,0.036,,,buy,sell,A
-2026-08-20,CHTR,4,1,True,missing,missing,high,above,False,7,2,normal,Communication Services,-3.089,-1.508,,,buy,sell,A
-2026-08-20,DAL,4,0,True,missing,missing,mid,below,False,7,2,dead,Industrials,-2.677,-1.057,,,buy,sell,A
-2026-08-20,JD,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,0.204,0.068,,,buy,sell,A
-2026-08-20,LEN,4,1,True,missing,missing,high,above,False,7,2,normal,Consumer Cyclical,-2.153,-0.321,,,buy,sell,A
-2026-08-20,LOGI,5,0,True,missing,missing,high,below,False,7,2,normal,Technology,-5.106,-4.419,,,buy,sell,A
-2026-08-20,MAR,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,-0.729,-0.788,,,buy,sell,A
-2026-08-20,MCD,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,0.628,1.309,,,buy,sell,A
-2026-08-20,MGM,5,0,True,missing,missing,high,below,False,6,2,dead,Consumer Cyclical,-0.116,1.203,,,buy,sell,A
-2026-08-20,NEE,4,0,True,missing,missing,mid,below,False,10,1,normal,Utilities,-1.024,-2.631,,,buy,sell,A
-2026-08-20,NMR,4,1,True,missing,missing,low,below,False,7,2,dead,Financial,-0.631,2.208,,,buy,sell,A
-2026-08-20,NRG,4,0,True,missing,missing,mid,below,False,8,2,dead,Utilities,-4.329,-6.195,,,buy,sell,A
-2026-08-20,SIRI,5,0,True,missing,missing,high,below,False,6,2,dead,Communication Services,-0.977,0.07,,,buy,sell,A
-2026-08-20,SWKS,4,1,True,missing,missing,high,above,False,7,2,normal,Technology,-0.789,-1.957,,,buy,sell,A
-2026-08-20,TCOM,4,1,True,missing,missing,low,below,False,7,2,normal,Consumer Cyclical,-0.172,-0.86,,,buy,sell,A
-2026-08-20,UAL,4,0,True,missing,missing,mid,below,False,7,2,dead,Industrials,-3.515,-2.254,,,buy,sell,A
-2026-08-20,WB,5,0,True,missing,missing,high,below,False,7,2,normal,Communication Services,-4.005,-6.142,,,buy,sell,A
-2026-08-20,WLY,5,0,True,missing,missing,high,below,False,6,2,dead,Communication Services,0.212,-0.75,,,buy,sell,A
-2026-08-20,NEXA,3,6,True,bad,bad,low,above,False,12,2,normal,Basic Materials,9.453,,,,sell,short,A_bad
-2026-08-20,SBSW,3,6,True,bad,bad,low,above,False,12,2,normal,Basic Materials,6.43,,,,sell,short,A_bad
-2026-08-20,SGML,3,6,True,bad,bad,low,above,False,12,2,normal,Basic Materials,11.556,,,,sell,short,A_bad
-2026-08-20,CNC,3,6,True,bad,bad,low,above,False,12,2,dead,Healthcare,1.372,,,,sell,short,A_bad
-2026-08-20,EQH,4,6,True,bad,bad,low,above,True,12,2,dead,Financial,0.308,,,,sell,short,A_bad
-2026-08-20,IONQ,3,6,True,bad,bad,low,above,False,11,3,normal,Technology,8.018,,,,sell,short,A_bad
-2026-08-20,WMT,0,6,False,bad,bad,low,above,False,11,3,normal,Consumer Defensive,0.104,,,,sell,short,A_bad
-2026-08-20,SNPS,3,6,True,bad,bad,low,above,False,11,3,dead,Technology,-0.013,,,,sell,short,A_bad
-2026-08-20,TUYA,3,6,True,bad,bad,low,above,False,11,3,dead,Technology,2.857,,,,sell,short,A_bad
-2026-08-20,VLN,3,6,True,bad,bad,low,above,False,11,3,dead,Technology,2.26,,,,sell,short,A_bad
-2026-08-20,WIT,3,6,True,bad,bad,low,above,False,11,3,dead,Technology,-1.047,,,,sell,short,A_bad
-2026-08-20,COST,0,6,False,bad,bad,low,above,False,10,3,dead,Consumer Defensive,1.524,,,,sell,short,A_bad
-2026-08-20,LILA,4,6,True,bad,bad,low,above,True,10,3,dead,Communication Services,3.672,,,,sell,short,A_bad
-2026-08-20,YRD,3,6,True,bad,bad,low,above,False,10,3,dead,Financial,0.0,,,,sell,short,A_bad
-2026-08-20,HLMN,0,6,False,bad,bad,low,above,False,9,4,dead,Industrials,0.602,,,,sell,short,A_bad
-2026-08-20,LMT,0,6,False,bad,bad,low,above,False,9,4,dead,Industrials,-1.384,,,,sell,short,A_bad
-2026-08-20,VST,4,5,True,bad,bad,low,below,False,13,2,normal,Utilities,-1.965,,,,sell,short,A_bad
-2026-08-20,GDRX,3,5,True,bad,bad,mid,above,False,12,2,hot,Healthcare,-3.09,,,,sell,short,A_bad
-2026-08-20,BAK,4,5,True,bad,bad,low,below,False,12,2,normal,Basic Materials,0.505,,,,sell,short,A_bad
-2026-08-20,BBD,4,5,True,bad,bad,low,below,False,12,2,normal,Financial,4.362,,,,sell,short,A_bad
-2026-08-20,BMO,5,5,True,bad,bad,low,below,True,12,2,normal,Financial,0.885,,,,sell,short,A_bad
-2026-08-20,CLF,4,5,True,bad,bad,high,above,False,12,2,normal,Basic Materials,4.935,,,,sell,short,A_bad
-2026-08-20,CLMT,3,5,True,bad,bad,mid,above,False,12,2,normal,Basic Materials,1.491,,,,sell,short,A_bad
-2026-08-20,CM,5,5,True,bad,bad,low,below,True,12,2,normal,Financial,0.691,,,,sell,short,A_bad
-2026-08-20,FG,4,5,True,bad,bad,low,below,False,12,2,normal,Financial,-0.309,,,,sell,short,A_bad
-2026-08-21,CTRE,10,0,True,good,good,high,below,True,17,0,dead,Real Estate,,,,,buy,buy,A
-2026-08-21,EZPW,10,0,True,good,good,high,below,True,17,0,dead,Financial,,,,,buy,hold,A
-2026-08-21,RZLT,10,0,True,good,good,high,below,True,17,0,dead,Healthcare,,,,,buy,buy,A
-2026-08-21,TCBI,10,0,True,good,good,high,below,True,17,0,dead,Financial,,,,,buy,buy,A
-2026-08-21,DLO,10,0,True,good,good,high,below,True,15,1,normal,Technology,,,,,buy,buy,A
-2026-08-21,OLLI,10,0,True,good,good,high,below,True,15,1,dead,Consumer Defensive,,,,,buy,buy,A
-2026-08-21,RR,10,0,True,good,good,high,below,True,13,2,dead,Industrials,,,,,buy,buy,A
-2026-08-21,AKBA,9,0,True,good,good,mid,below,True,17,0,hot,Healthcare,,,,,buy,buy,A
-2026-08-21,CRSP,9,1,True,good,good,high,above,True,17,0,hot,Healthcare,,,,,buy,buy,A
-2026-08-21,ABR,9,0,True,good,good,high,below,False,17,0,normal,Real Estate,,,,,buy,buy,A
-2026-08-21,ALLY,9,0,True,good,good,mid,below,True,17,0,normal,Financial,,,,,buy,buy,A
-2026-08-21,ALT,9,0,True,good,good,high,below,False,17,0,normal,Healthcare,,,,,buy,buy,A
-2026-08-21,AQST,9,1,True,good,good,high,above,True,17,0,normal,Healthcare,,,,,buy,buy,A
-2026-08-21,AVTR,9,1,True,good,good,high,above,True,17,0,normal,Healthcare,,,,,buy,buy,A
-2026-08-21,SOFI,9,1,True,good,good,high,above,True,17,0,normal,Financial,,,,,buy,buy,A
-2026-08-21,TMC,9,0,True,good,good,high,below,False,17,0,normal,Basic Materials,,,,,buy,buy,A
-2026-08-21,WAL,9,0,True,good,good,mid,below,True,17,0,normal,Financial,,,,,buy,buy,A
-2026-08-21,XP,9,0,True,good,good,mid,below,True,17,0,normal,Financial,,,,,buy,buy,A
-2026-08-21,ALTO,9,0,True,good,good,high,below,False,17,0,dead,Basic Materials,,,,,buy,buy,A
-2026-08-21,APLE,9,1,True,good,good,high,above,True,17,0,dead,Real Estate,,,,,buy,buy,A
-2026-08-21,DRH,9,0,True,good,good,mid,below,True,17,0,dead,Real Estate,,,,,buy,buy,A
-2026-08-21,GTY,9,0,True,good,good,high,below,False,17,0,dead,Real Estate,,,,,buy,buy,A
-2026-08-21,RLJ,9,0,True,good,good,high,below,False,17,0,dead,Real Estate,,,,,buy,buy,A
-2026-08-21,VMC,9,0,True,good,good,mid,below,True,17,0,dead,Basic Materials,,,,,buy,buy,A
-2026-08-21,FOUR,9,0,True,good,good,high,below,False,15,1,normal,Technology,,,,,buy,buy,A
-2026-08-21,ABX,9,0,True,good,good,high,below,False,16,0,dead,Financial,5.459,,,,buy,sell,A
-2026-08-21,ACHV,9,1,True,good,good,high,above,True,16,0,normal,Healthcare,-0.374,,,,buy,sell,A
-2026-08-21,AEE,9,0,True,good,good,mid,below,True,16,0,dead,Utilities,-2.445,,,,buy,sell,A
-2026-08-21,AUPH,9,1,True,good,good,high,above,True,16,0,normal,Healthcare,-3.59,,,,buy,sell,A
-2026-08-21,CBSH,9,0,True,good,good,mid,below,True,16,0,dead,Financial,-0.714,,,,buy,sell,A
-2026-08-21,ETSY,10,0,True,good,good,high,below,True,13,2,dead,Consumer Cyclical,-0.222,,,,buy,sell,A
-2026-08-21,FSLR,10,0,True,good,good,high,below,True,15,1,normal,Technology,0.103,,,,buy,sell,A
-2026-08-21,GRND,10,0,True,good,good,high,below,True,15,1,dead,Technology,-0.83,,,,buy,sell,A
-2026-08-21,HIMS,10,0,True,good,good,high,below,True,16,0,normal,Healthcare,6.026,,,,buy,sell,A
-2026-08-21,HNST,9,1,True,good,good,high,above,True,16,0,normal,Consumer Defensive,1.815,,,,buy,sell,A
-2026-08-21,JPM,9,1,True,good,good,low,below,True,17,0,normal,Financial,0.009,,,,buy,sell,A
-2026-08-21,LZ,10,0,True,good,good,high,below,True,13,2,normal,Industrials,-0.427,,,,buy,sell,A
-2026-08-21,METC,9,1,True,good,good,high,above,True,16,0,normal,Basic Materials,6.726,,,,buy,sell,A
-2026-08-21,MOS,9,0,True,good,good,high,below,False,16,0,normal,Basic Materials,4.54,,,,buy,sell,A
-2026-08-21,NYT,10,0,True,good,good,high,below,True,14,1,dead,Communication Services,0.597,,,,buy,sell,A
-2026-08-21,PACB,10,0,True,good,good,high,below,True,15,0,hot,Healthcare,9.756,,,,buy,sell,A
-2026-08-21,PLNT,10,0,True,good,good,high,below,True,13,2,dead,Consumer Cyclical,2.033,,,,buy,sell,A
-2026-08-21,RIOT,10,0,True,good,good,high,below,True,14,1,normal,Financial,-5.481,,,,buy,sell,A
-2026-08-21,SOC,10,0,True,good,good,high,below,True,15,1,dead,Energy,0.592,,,,buy,sell,A
-2026-08-21,TEM,9,1,True,good,good,high,above,True,16,0,hot,Healthcare,9.062,,,,buy,sell,A
-2026-08-21,TPR,10,0,True,good,good,high,below,True,13,2,normal,Consumer Cyclical,0.27,,,,buy,sell,A
-2026-08-21,VERA,10,0,True,good,good,high,below,True,15,0,normal,Healthcare,3.247,,,,buy,sell,A
-2026-08-21,WIX,9,1,True,good,good,high,above,True,16,0,normal,Technology,-0.388,,,,buy,sell,A
-2026-08-21,YETI,10,0,True,good,good,high,below,True,13,2,dead,Consumer Cyclical,-0.545,,,,buy,sell,A
-2026-08-21,RELY,2,8,False,good,bad,mid,above,False,14,1,dead,Technology,,,,,sell,short,fade
-2026-08-21,COP,4,7,False,good,good,low,above,False,15,1,normal,Energy,,,,,sell,short,fade
-2026-08-21,DVN,4,7,False,good,good,low,above,False,15,1,normal,Energy,,,,,sell,short,fade
-2026-08-21,KO,4,7,False,good,good,low,above,False,15,1,normal,Consumer Defensive,,,,,sell,short,fade
-2026-08-21,EDU,5,7,False,good,good,low,above,True,15,1,dead,Consumer Defensive,,,,,sell,short,fade
-2026-08-21,LAUR,4,7,False,good,good,low,above,False,15,1,dead,Consumer Defensive,,,,,sell,short,fade
-2026-08-21,LRCX,5,7,False,good,good,low,above,True,15,1,dead,Technology,,,,,sell,short,fade
-2026-08-21,NVDA,2,7,False,good,neutral,low,above,False,14,1,normal,Technology,,,,,sell,short,fade
-2026-08-21,UL,4,7,False,good,good,low,above,False,14,1,normal,Consumer Defensive,,,,,sell,short,fade
-2026-08-21,WSE,3,7,False,good,neutral,low,above,True,14,1,normal,Technology,,,,,sell,short,fade
-2026-08-21,XOM,2,7,False,good,neutral,low,above,False,14,1,normal,Energy,,,,,sell,short,fade
-2026-08-21,MDLZ,2,7,False,good,neutral,low,above,False,14,1,dead,Consumer Defensive,,,,,sell,short,fade
-2026-08-21,MNST,3,7,False,good,neutral,low,above,True,14,1,dead,Consumer Defensive,,,,,sell,short,fade
-2026-08-21,UBER,4,7,False,good,good,low,above,False,14,2,normal,Technology,,,,,sell,short,fade
-2026-08-21,DUOT,5,6,False,good,good,high,above,False,15,1,normal,Technology,,,,,sell,short,fade
-2026-08-21,EVER,5,6,False,good,good,high,above,False,15,1,dead,Communication Services,,,,,sell,short,fade
-2026-08-21,HLX,2,6,False,good,neutral,mid,above,False,14,1,dead,Energy,,,,,sell,short,fade
-2026-08-21,HPK,5,6,False,good,good,high,above,False,14,1,dead,Energy,,,,,sell,short,fade
-2026-08-21,NXE,2,6,False,good,neutral,mid,above,False,14,1,dead,Energy,,,,,sell,short,fade
-2026-08-21,HWM,5,6,False,good,good,low,below,False,14,2,dead,Industrials,,,,,sell,short,fade
-2026-08-21,BZ,5,5,False,good,good,mid,below,False,15,1,normal,Communication Services,,,,,sell,short,fade
-2026-08-27,KD,10,0,True,good,good,high,below,True,18,0,normal,Technology,,,,,buy,buy,A
-2026-08-27,VYX,10,0,True,good,good,high,below,True,18,0,normal,Technology,,,,,buy,buy,A
-2026-08-27,AVT,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,buy,A
-2026-08-27,DAVE,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,buy,A
-2026-08-27,GRND,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,buy,A
-2026-08-27,ITRI,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,buy,A
-2026-08-27,SLM,10,0,True,good,good,high,below,True,18,0,dead,Financial,,,,,buy,buy,A
-2026-08-27,DJT,10,0,True,good,good,high,below,True,17,0,normal,Communication Services,,,,,buy,buy,A
-2026-08-27,CBRL,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-08-27,CXT,10,0,True,good,good,high,below,True,16,1,dead,Industrials,,,,,buy,buy,A
-2026-08-27,DPZ,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-08-27,IP,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-08-27,PBI,10,0,True,good,good,high,below,True,16,1,dead,Industrials,,,,,buy,buy,A
-2026-08-27,RVLV,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-08-27,SFM,10,0,True,good,good,high,below,True,16,1,dead,Consumer Defensive,,,,,buy,buy,A
-2026-08-27,XRX,10,0,True,good,good,high,below,True,16,1,dead,Industrials,,,,,buy,buy,A
-2026-08-27,BRBR,10,0,True,good,good,high,below,True,15,1,dead,Consumer Defensive,,,,,buy,buy,A
-2026-08-27,ESAB,10,0,True,good,good,high,below,True,14,2,normal,Industrials,,,,,buy,buy,A
-2026-08-27,JBLU,10,0,True,good,good,high,below,True,14,2,normal,Industrials,,,,,buy,buy,A
-2026-08-27,NCLH,10,0,True,good,good,high,below,True,14,2,normal,Consumer Cyclical,,,,,buy,buy,A
-2026-08-27,POST,10,0,True,good,good,high,below,True,14,2,dead,Consumer Defensive,,,,,buy,buy,A
-2026-08-27,SKIN,10,0,True,good,good,high,below,True,14,2,dead,Consumer Defensive,,,,,buy,buy,A
-2026-08-27,VFC,10,0,True,good,good,high,below,True,14,2,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-08-27,ABX,9,0,True,good,good,high,below,False,18,0,dead,Financial,,,,,buy,buy,A
-2026-08-27,KMPR,9,0,True,good,good,high,below,False,18,0,dead,Financial,,,,,buy,buy,A
-2026-08-27,ABR,9,0,True,good,good,high,below,False,17,0,normal,Real Estate,,,,,buy,sell,A
-2026-08-27,AKBA,9,0,True,good,good,mid,below,True,17,0,hot,Healthcare,,,,,buy,sell,A
-2026-08-27,ALLY,9,0,True,good,good,mid,below,True,17,0,normal,Financial,,,,,buy,sell,A
-2026-08-27,ALT,9,0,True,good,good,high,below,False,17,0,normal,Healthcare,,,,,buy,sell,A
-2026-08-27,ALTO,9,0,True,good,good,high,below,False,17,0,dead,Basic Materials,,,,,buy,sell,A
-2026-08-27,APLE,9,1,True,good,good,high,above,True,17,0,dead,Real Estate,,,,,buy,sell,A
-2026-08-27,AQST,9,1,True,good,good,high,above,True,17,0,normal,Healthcare,,,,,buy,sell,A
-2026-08-27,AVTR,9,1,True,good,good,high,above,True,17,0,normal,Healthcare,,,,,buy,sell,A
-2026-08-27,CRSP,9,1,True,good,good,high,above,True,17,0,hot,Healthcare,,,,,buy,sell,A
-2026-08-27,CTRE,10,0,True,good,good,high,below,True,17,0,dead,Real Estate,,,,,buy,sell,A
-2026-08-27,DLO,10,0,True,good,good,high,below,True,15,1,normal,Technology,,,,,buy,sell,A
-2026-08-27,DRH,9,0,True,good,good,mid,below,True,17,0,dead,Real Estate,,,,,buy,sell,A
-2026-08-27,EZPW,10,0,True,good,good,high,below,True,17,0,dead,Financial,,,,,buy,sell,A
-2026-08-27,FOUR,9,0,True,good,good,high,below,False,15,1,normal,Technology,,,,,buy,sell,A
-2026-08-27,GTY,9,0,True,good,good,high,below,False,17,0,dead,Real Estate,,,,,buy,sell,A
-2026-08-27,OLLI,10,0,True,good,good,high,below,True,15,1,dead,Consumer Defensive,,,,,buy,sell,A
-2026-08-27,RLJ,9,0,True,good,good,high,below,False,17,0,dead,Real Estate,,,,,buy,sell,A
-2026-08-27,RR,10,0,True,good,good,high,below,True,13,2,dead,Industrials,,,,,buy,sell,A
-2026-08-27,RZLT,10,0,True,good,good,high,below,True,17,0,dead,Healthcare,,,,,buy,sell,A
-2026-08-27,SOFI,9,1,True,good,good,high,above,True,17,0,normal,Financial,,,,,buy,sell,A
-2026-08-27,TCBI,10,0,True,good,good,high,below,True,17,0,dead,Financial,,,,,buy,sell,A
-2026-08-27,TMC,9,0,True,good,good,high,below,False,17,0,normal,Basic Materials,,,,,buy,sell,A
-2026-08-27,VMC,9,0,True,good,good,mid,below,True,17,0,dead,Basic Materials,,,,,buy,sell,A
-2026-08-27,WAL,9,0,True,good,good,mid,below,True,17,0,normal,Financial,,,,,buy,sell,A
-2026-08-27,XP,9,0,True,good,good,mid,below,True,17,0,normal,Financial,,,,,buy,sell,A
-2026-08-27,BBVA,3,9,False,good,bad,low,above,True,17,1,normal,Financial,,,,,sell,short,fade
-2026-08-27,CEF,3,9,False,good,bad,low,above,True,16,1,normal,Financial,,,,,sell,short,fade
-2026-08-27,COF,2,9,False,good,bad,low,above,False,16,1,normal,Financial,,,,,sell,short,fade
-2026-08-27,SCHW,3,9,False,good,bad,low,above,True,16,1,normal,Financial,,,,,sell,short,fade
-2026-08-27,BBDC,2,9,False,good,bad,low,above,False,16,1,dead,Financial,,,,,sell,short,fade
-2026-08-27,GCMG,3,9,False,good,bad,low,above,True,16,1,dead,Financial,,,,,sell,short,fade
-2026-08-27,BEKE,4,7,False,good,good,low,above,False,17,0,hot,Real Estate,,,,,sell,short,fade
-2026-08-27,AES,5,7,False,good,good,low,above,True,17,0,normal,Utilities,,,,,sell,short,fade
-2026-08-27,PCG,4,7,False,good,good,low,above,False,17,0,normal,Utilities,,,,,sell,short,fade
-2026-08-27,SBAC,4,7,False,good,good,low,above,False,17,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-27,WELL,4,7,False,good,good,low,above,False,17,0,dead,Real Estate,,,,,sell,short,fade
-2026-08-27,FCX,5,7,False,good,good,low,above,True,17,1,hot,Basic Materials,,,,,sell,short,fade
-2026-08-27,AU,5,7,False,good,good,low,above,True,17,1,normal,Basic Materials,,,,,sell,short,fade
-2026-08-27,LIN,5,7,False,good,good,low,above,True,17,1,normal,Basic Materials,,,,,sell,short,fade
-2026-08-27,CNQ,5,7,False,good,good,low,above,True,17,1,dead,Energy,,,,,sell,short,fade
-2026-08-27,BXDC,3,7,False,good,neutral,low,above,True,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-27,LXP,3,7,False,good,neutral,low,above,True,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-27,VMRK,3,7,False,good,neutral,low,above,True,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-27,PAAS,5,7,False,good,good,low,above,True,16,1,hot,Basic Materials,,,,,sell,short,fade
-2026-08-27,TX,5,7,False,good,good,low,above,True,16,1,hot,Basic Materials,,,,,sell,short,fade
-2026-08-27,CCJ,5,7,False,good,good,low,above,True,16,1,normal,Energy,,,,,sell,short,fade
-2026-08-27,CMBT,4,7,False,good,good,low,above,False,16,1,normal,Energy,,,,,sell,short,fade
-2026-08-27,ECL,5,7,False,good,good,low,above,True,16,1,normal,Basic Materials,,,,,sell,short,fade
-2026-08-27,ET,4,7,False,good,good,low,above,False,16,1,normal,Energy,,,,,sell,short,fade
-2026-08-27,NOMD,4,7,False,good,good,low,above,False,16,1,normal,Consumer Defensive,,,,,sell,short,fade
-2026-08-30,UPBD,10,0,True,good,good,high,below,True,18,0,normal,Technology,,,,,buy,buy,A
-2026-08-30,BAND,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,buy,A
-2026-08-30,DXC,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,buy,A
-2026-08-30,PARR,10,0,True,good,good,high,below,True,16,1,normal,Energy,,,,,buy,buy,A
-2026-08-30,FND,10,0,True,good,good,high,below,True,14,2,normal,Consumer Cyclical,,,,,buy,buy,A
-2026-08-30,LULU,10,0,True,good,good,high,below,True,14,2,normal,Consumer Cyclical,,,,,buy,buy,A
-2026-08-30,POOL,10,0,True,good,good,high,below,True,14,2,dead,Industrials,,,,,buy,buy,A
-2026-08-30,CRWD,9,1,True,good,good,low,below,True,19,0,normal,Technology,,,,,buy,buy,A
-2026-08-30,BRZE,9,1,True,good,good,high,above,True,18,0,normal,Technology,,,,,buy,buy,A
-2026-08-30,CRCT,9,1,True,good,good,high,above,True,18,0,normal,Technology,,,,,buy,buy,A
-2026-08-30,AGNC,9,0,True,good,good,high,below,False,17,0,normal,Real Estate,,,,,buy,buy,A
-2026-08-30,ES,9,1,True,good,good,low,below,True,17,0,normal,Utilities,,,,,buy,buy,A
-2026-08-30,GLPI,9,0,True,good,good,mid,below,True,17,0,normal,Real Estate,,,,,buy,buy,A
-2026-08-30,SBS,9,1,True,good,good,low,below,True,17,0,normal,Utilities,,,,,buy,buy,A
-2026-08-30,ZIP,9,0,True,good,good,mid,below,True,17,0,normal,Communication Services,,,,,buy,buy,A
-2026-08-30,GENI,9,0,True,good,good,high,below,False,17,0,dead,Communication Services,,,,,buy,buy,A
-2026-08-30,PEB,9,0,True,good,good,high,below,False,17,0,dead,Real Estate,,,,,buy,buy,A
-2026-08-30,SRE,9,1,True,good,good,low,below,True,17,0,dead,Utilities,,,,,buy,buy,A
-2026-08-30,DG,9,1,True,good,good,low,below,True,16,1,normal,Consumer Defensive,,,,,buy,buy,A
-2026-08-30,POST,9,0,True,good,good,high,below,False,16,1,normal,Consumer Defensive,,,,,buy,hold,A
-2026-08-30,VITL,9,0,True,good,good,high,below,False,16,1,normal,Consumer Defensive,,,,,buy,buy,A
-2026-08-30,BRBR,9,0,True,good,good,high,below,False,16,1,dead,Consumer Defensive,,,,,buy,hold,A
-2026-08-30,NWL,9,0,True,good,good,high,below,False,16,1,dead,Consumer Defensive,,,,,buy,buy,A
-2026-08-30,SNN,9,1,True,good,good,low,below,True,15,1,normal,Healthcare,,,,,buy,buy,A
-2026-08-30,SYK,9,1,True,good,good,low,below,True,15,1,normal,Healthcare,,,,,buy,buy,A
-2026-08-30,ABX,9,0,True,good,good,high,below,False,18,0,dead,Financial,,,,,buy,sell,A
-2026-08-30,AVT,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,sell,A
-2026-08-30,CBRL,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,sell,A
-2026-08-30,CXT,10,0,True,good,good,high,below,True,16,1,dead,Industrials,,,,,buy,sell,A
-2026-08-30,DAVE,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,sell,A
-2026-08-30,DJT,10,0,True,good,good,high,below,True,17,0,normal,Communication Services,,,,,buy,sell,A
-2026-08-30,DPZ,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,sell,A
-2026-08-30,ESAB,10,0,True,good,good,high,below,True,14,2,normal,Industrials,,,,,buy,sell,A
-2026-08-30,GRND,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,sell,A
-2026-08-30,IP,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,sell,A
-2026-08-30,ITRI,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,sell,A
-2026-08-30,JBLU,10,0,True,good,good,high,below,True,14,2,normal,Industrials,,,,,buy,sell,A
-2026-08-30,KD,10,0,True,good,good,high,below,True,18,0,normal,Technology,,,,,buy,sell,A
-2026-08-30,KMPR,9,0,True,good,good,high,below,False,18,0,dead,Financial,,,,,buy,sell,A
-2026-08-30,NCLH,10,0,True,good,good,high,below,True,14,2,normal,Consumer Cyclical,,,,,buy,sell,A
-2026-08-30,PBI,10,0,True,good,good,high,below,True,16,1,dead,Industrials,,,,,buy,sell,A
-2026-08-30,RVLV,10,0,True,good,good,high,below,True,16,1,dead,Consumer Cyclical,,,,,buy,sell,A
-2026-08-30,SFM,10,0,True,good,good,high,below,True,16,1,dead,Consumer Defensive,,,,,buy,sell,A
-2026-08-30,SKIN,10,0,True,good,good,high,below,True,14,2,dead,Consumer Defensive,,,,,buy,sell,A
-2026-08-30,SLM,10,0,True,good,good,high,below,True,18,0,dead,Financial,,,,,buy,sell,A
-2026-08-30,VFC,10,0,True,good,good,high,below,True,14,2,dead,Consumer Cyclical,,,,,buy,sell,A
-2026-08-30,VYX,10,0,True,good,good,high,below,True,18,0,normal,Technology,,,,,buy,sell,A
-2026-08-30,XRX,10,0,True,good,good,high,below,True,16,1,dead,Industrials,,,,,buy,sell,A
-2026-08-30,SHOP,2,9,False,good,bad,low,above,False,16,1,normal,Technology,,,,,sell,short,fade
-2026-08-30,EXFY,2,9,False,good,bad,low,above,False,16,1,dead,Technology,,,,,sell,short,fade
-2026-08-30,MU,3,9,False,good,bad,low,above,True,16,1,dead,Technology,,,,,sell,short,fade
-2026-08-30,NOK,2,9,False,good,bad,low,above,False,16,1,dead,Technology,,,,,sell,short,fade
-2026-08-30,ADSK,2,8,False,good,bad,mid,above,False,17,1,normal,Technology,,,,,sell,short,fade
-2026-08-30,DDOG,4,8,False,good,bad,low,below,True,17,1,normal,Technology,,,,,sell,short,fade
-2026-08-30,BNS,4,7,False,good,good,low,above,False,17,1,normal,Financial,,,,,sell,short,fade
-2026-08-30,ING,4,7,False,good,good,low,above,False,17,1,normal,Financial,,,,,sell,short,fade
-2026-08-30,MA,4,7,False,good,good,low,above,False,17,1,normal,Financial,,,,,sell,short,fade
-2026-08-30,AES,2,7,False,good,neutral,low,above,False,16,0,normal,Utilities,,,,,sell,hold,fade
-2026-08-30,PLD,2,7,False,good,neutral,low,above,False,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-30,RNW,3,7,False,good,neutral,low,above,True,16,0,normal,Utilities,,,,,sell,short,fade
-2026-08-30,AJG,5,7,False,good,good,low,above,True,16,1,normal,Financial,,,,,sell,short,fade
-2026-08-30,CNO,4,7,False,good,good,low,above,False,16,1,normal,Financial,,,,,sell,short,fade
-2026-08-30,DB,4,7,False,good,good,low,above,False,16,1,normal,Financial,,,,,sell,short,fade
-2026-08-30,CRMD,5,6,False,good,good,high,above,False,16,0,normal,Healthcare,,,,,sell,short,fade
-2026-08-30,DTE,3,6,False,good,neutral,low,below,False,16,0,normal,Utilities,,,,,sell,short,fade
-2026-08-30,FCPT,2,6,False,neutral,good,mid,above,False,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-30,NTST,3,6,False,neutral,good,high,above,False,16,0,dead,Real Estate,,,,,sell,short,fade
-2026-08-30,DEC,4,6,False,good,good,mid,above,False,16,1,normal,Energy,,,,,sell,short,fade
-2026-08-30,RRC,5,6,False,good,good,high,above,False,16,1,normal,Energy,,,,,sell,short,fade
-2026-08-30,ARR,4,5,False,good,neutral,high,below,False,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-30,EFC,3,5,False,good,neutral,mid,below,False,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-30,RLJ,4,5,False,good,neutral,high,below,False,16,0,normal,Real Estate,,,,,sell,short,fade
-2026-08-31,BMO,9,1,True,good,good,low,below,True,19,1,normal,Financial,,,,,buy,buy,A
-2026-08-31,AMZN,9,1,True,good,good,low,below,True,19,2,normal,Consumer Cyclical,,,,,buy,buy,A
-2026-08-31,RWAY,9,1,True,good,good,high,above,True,17,1,normal,Financial,,,,,buy,buy,A
-2026-08-31,VTS,9,1,True,good,good,high,above,True,16,2,normal,Energy,,,,,buy,buy,A
-2026-08-31,SDGR,9,1,True,good,good,high,above,True,15,2,normal,Healthcare,,,,,buy,buy,A
-2026-08-31,TCOM,9,1,True,good,good,low,below,True,15,2,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-08-31,HDSN,9,0,True,good,good,mid,below,True,14,2,normal,Basic Materials,,,,,buy,buy,A
-2026-08-31,BAH,9,0,True,good,good,mid,below,True,14,3,dead,Industrials,,,,,buy,buy,A
-2026-08-31,CRM,8,1,True,good,good,mid,above,True,25,2,hot,Technology,,,,,buy,buy,A
-2026-08-31,CVE,8,1,True,good,good,mid,above,True,20,1,normal,Energy,,,,,buy,buy,A
-2026-08-31,CVX,8,2,True,good,good,low,above,True,20,1,normal,Energy,,,,,buy,buy,A
-2026-08-31,LIN,8,2,True,good,good,low,above,True,19,2,dead,Basic Materials,,,,,buy,buy,A
-2026-08-31,OXY,8,2,True,good,good,low,above,True,19,2,dead,Energy,,,,,buy,buy,A
-2026-08-31,COST,8,1,True,good,good,low,below,False,17,1,normal,Consumer Defensive,,,,,buy,buy,A
-2026-08-31,DTM,8,0,True,good,good,mid,below,False,17,1,normal,Energy,,,,,buy,buy,A
-2026-08-31,APD,8,2,True,good,good,low,above,True,17,2,normal,Basic Materials,,,,,buy,buy,A
-2026-08-31,VOD,8,2,True,good,good,low,above,True,16,1,dead,Communication Services,,,,,buy,buy,A
-2026-08-31,TALO,8,1,True,good,good,mid,above,True,16,2,normal,Energy,,,,,buy,buy,A
-2026-08-31,FIBK,8,2,True,good,bad,high,below,True,13,2,normal,Financial,,,,,buy,buy,A
-2026-08-31,TCBI,7,0,False,good,good,high,below,True,17,1,normal,Financial,,,,,buy,buy,A
-2026-08-31,COR,7,2,True,good,good,low,above,False,17,2,dead,Healthcare,,,,,buy,buy,A
-2026-08-31,UPBD,7,0,False,good,good,high,below,True,16,2,normal,Technology,,,,,buy,hold,A
-2026-08-31,HWM,7,3,True,good,bad,low,below,True,16,3,normal,Industrials,,,,,buy,buy,A
-2026-08-31,FHB,7,0,False,good,good,high,below,True,15,1,normal,Financial,,,,,buy,buy,A
-2026-08-31,HASI,7,0,False,good,good,high,below,True,15,1,dead,Financial,,,,,buy,buy,A
-2026-08-31,AGNC,9,0,True,good,good,high,below,False,17,0,normal,Real Estate,,,,,buy,sell,A
-2026-08-31,BAND,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,sell,A
-2026-08-31,BRBR,9,0,True,good,good,high,below,False,16,1,dead,Consumer Defensive,,,,,buy,sell,A
-2026-08-31,BRZE,9,1,True,good,good,high,above,True,18,0,normal,Technology,,,,,buy,sell,A
-2026-08-31,CRCT,9,1,True,good,good,high,above,True,18,0,normal,Technology,,,,,buy,sell,A
-2026-08-31,CRWD,9,1,True,good,good,low,below,True,19,0,normal,Technology,,,,,buy,sell,A
-2026-08-31,DG,9,1,True,good,good,low,below,True,16,1,normal,Consumer Defensive,,,,,buy,sell,A
-2026-08-31,DXC,10,0,True,good,good,high,below,True,18,0,dead,Technology,,,,,buy,sell,A
-2026-08-31,ES,9,1,True,good,good,low,below,True,17,0,normal,Utilities,,,,,buy,sell,A
-2026-08-31,FND,10,0,True,good,good,high,below,True,14,2,normal,Consumer Cyclical,,,,,buy,sell,A
-2026-08-31,GENI,9,0,True,good,good,high,below,False,17,0,dead,Communication Services,,,,,buy,sell,A
-2026-08-31,GLPI,9,0,True,good,good,mid,below,True,17,0,normal,Real Estate,,,,,buy,sell,A
-2026-08-31,LULU,10,0,True,good,good,high,below,True,14,2,normal,Consumer Cyclical,,,,,buy,sell,A
-2026-08-31,NWL,9,0,True,good,good,high,below,False,16,1,dead,Consumer Defensive,,,,,buy,sell,A
-2026-08-31,PARR,10,0,True,good,good,high,below,True,16,1,normal,Energy,,,,,buy,sell,A
-2026-08-31,PEB,9,0,True,good,good,high,below,False,17,0,dead,Real Estate,,,,,buy,sell,A
-2026-08-31,POOL,10,0,True,good,good,high,below,True,14,2,dead,Industrials,,,,,buy,sell,A
-2026-08-31,POST,9,0,True,good,good,high,below,False,16,1,normal,Consumer Defensive,,,,,buy,sell,A
-2026-08-31,SBS,9,1,True,good,good,low,below,True,17,0,normal,Utilities,,,,,buy,sell,A
-2026-08-31,SNN,9,1,True,good,good,low,below,True,15,1,normal,Healthcare,,,,,buy,sell,A
-2026-08-31,SRE,9,1,True,good,good,low,below,True,17,0,dead,Utilities,,,,,buy,sell,A
-2026-08-31,SYK,9,1,True,good,good,low,below,True,15,1,normal,Healthcare,,,,,buy,sell,A
-2026-08-31,VITL,9,0,True,good,good,high,below,False,16,1,normal,Consumer Defensive,,,,,buy,sell,A
-2026-08-31,ZIP,9,0,True,good,good,mid,below,True,17,0,normal,Communication Services,,,,,buy,sell,A
-2026-08-31,IAG,0,9,False,bad,bad,low,above,False,10,5,normal,Basic Materials,,,,,sell,short,fade
-2026-08-31,VLN,1,9,False,bad,bad,low,above,True,8,6,dead,Technology,,,,,sell,short,fade
-2026-08-31,MNSO,2,8,False,bad,bad,low,below,True,9,6,hot,Consumer Cyclical,,,,,sell,short,fade
-2026-08-31,HTZ,1,8,False,bad,bad,high,above,False,8,6,normal,Industrials,,,,,sell,short,fade
-2026-08-31,NPWR,1,8,False,bad,bad,mid,above,True,8,6,normal,Industrials,,,,,sell,short,fade
-2026-08-31,AIIO,1,8,False,bad,bad,low,below,False,8,6,dead,Consumer Cyclical,,,,,sell,short,fade
-2026-08-31,ORBS,1,8,False,bad,bad,mid,above,True,8,6,dead,Consumer Cyclical,,,,,sell,short,fade
-2026-08-31,RXRX,1,8,False,bad,bad,high,above,False,8,6,dead,Healthcare,,,,,sell,short,fade
-2026-08-31,GUTS,1,8,False,bad,bad,low,below,False,6,6,normal,Healthcare,,,,,sell,short,fade
-2026-08-31,LAR,0,8,False,bad,bad,mid,above,False,6,6,normal,Basic Materials,,,,,sell,short,fade
-2026-08-31,MAR,1,8,False,bad,bad,low,below,False,6,6,normal,Consumer Cyclical,,,,,sell,short,fade
-2026-08-31,AVTX,1,8,False,bad,bad,high,above,False,6,6,dead,Healthcare,,,,,sell,short,fade
-2026-08-31,LODE,1,8,False,bad,bad,high,above,False,6,6,dead,Basic Materials,,,,,sell,short,fade
-2026-08-31,VLRS,1,8,False,bad,bad,low,below,False,6,6,dead,Industrials,,,,,sell,short,fade
-2026-08-31,CEG,7,7,True,good,good,low,above,False,21,2,dead,Utilities,,,,,sell,short,fade
-2026-08-31,B,2,7,False,good,bad,low,above,False,15,4,normal,Basic Materials,,,,,sell,short,fade
-2026-08-31,FCX,2,7,False,good,bad,low,above,False,15,4,normal,Basic Materials,,,,,sell,short,fade
-2026-08-31,VISN,2,7,False,bad,bad,high,below,False,10,5,hot,Technology,,,,,sell,short,fade
-2026-08-31,AEHR,2,7,False,bad,bad,high,below,False,10,5,normal,Technology,,,,,sell,short,fade
-2026-08-31,AAOI,2,7,False,bad,bad,high,below,False,10,5,dead,Technology,,,,,sell,short,fade
-2026-08-31,COHU,2,7,False,bad,bad,high,below,False,10,5,dead,Technology,,,,,sell,short,fade
-2026-08-31,DE,2,7,False,good,bad,low,above,False,10,5,dead,Industrials,,,,,sell,short,fade
-2026-08-31,MXL,1,7,False,bad,bad,mid,below,False,10,5,dead,Technology,,,,,sell,short,fade
-2026-08-31,EIX,2,7,False,bad,bad,mid,below,True,9,5,hot,Utilities,,,,,sell,short,fade
-2026-08-31,ACA,2,7,False,bad,good,low,above,False,8,5,normal,Industrials,,,,,sell,short,fade
-2026-09-01,CTGO,10,0,True,good,good,high,below,True,17,3,dead,Basic Materials,,,,,buy,buy,A
-2026-09-01,GPRO,10,0,True,good,good,high,below,True,16,1,dead,Technology,,,,,buy,buy,A
-2026-09-01,IEP,10,0,True,good,good,high,below,True,16,1,dead,Energy,,,,,buy,buy,A
-2026-09-01,ANNX,10,0,True,good,good,high,below,True,15,2,dead,Healthcare,,,,,buy,buy,A
-2026-09-01,WOLF,10,0,True,good,good,high,below,True,15,2,dead,Technology,,,,,buy,buy,A
-2026-09-01,ADMA,10,0,True,good,good,high,below,True,13,2,dead,Healthcare,,,,,buy,buy,A
-2026-09-01,ALLO,10,0,True,good,good,high,below,True,13,2,dead,Healthcare,,,,,buy,buy,A
-2026-09-01,COGT,10,0,True,good,good,high,below,True,13,2,dead,Healthcare,,,,,buy,buy,A
-2026-09-01,DDD,10,0,True,good,good,high,below,True,13,2,dead,Technology,,,,,buy,buy,A
-2026-09-01,FULC,10,0,True,good,good,high,below,True,13,2,dead,Healthcare,,,,,buy,buy,A
-2026-09-01,INDV,10,0,True,good,good,high,below,True,13,2,dead,Healthcare,,,,,buy,buy,A
-2026-09-01,AVAV,10,0,True,good,good,high,below,True,13,3,dead,Industrials,,,,,buy,buy,A
-2026-09-01,ENVX,10,0,True,good,good,high,below,True,13,3,dead,Industrials,,,,,buy,buy,A
-2026-09-01,VRRM,10,0,True,good,good,high,below,True,12,2,dead,Technology,,,,,buy,buy,A
-2026-09-01,DKS,10,0,True,good,good,high,below,True,12,4,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-09-01,FWRG,10,0,True,good,good,high,below,True,12,4,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-09-01,GME,10,0,True,good,good,high,below,True,12,4,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-09-01,MIR,10,0,True,good,good,high,below,True,12,4,dead,Industrials,,,,,buy,buy,A
-2026-09-01,ATRO,10,0,True,good,good,high,below,True,11,3,dead,Industrials,,,,,buy,buy,A
-2026-09-01,LNT,10,0,True,good,good,high,below,True,10,4,dead,Utilities,,,,,buy,buy,A
-2026-09-01,UAA,10,0,True,good,good,high,below,True,10,4,dead,Consumer Cyclical,,,,,buy,buy,A
-2026-09-01,KMI,9,1,True,good,good,low,below,True,19,1,dead,Energy,,,,,buy,buy,A
-2026-09-01,DHT,9,1,True,good,good,high,above,True,18,1,dead,Energy,,,,,buy,buy,A
-2026-09-01,LBRT,9,0,True,good,good,high,below,False,18,1,dead,Energy,,,,,buy,buy,A
-2026-09-01,ASX,9,1,True,good,good,low,below,True,17,1,dead,Technology,,,,,buy,buy,A
-2026-09-01,AMZN,9,1,True,good,good,low,below,True,19,2,normal,Consumer Cyclical,,,,,buy,sell,A
-2026-09-01,APD,8,2,True,good,good,low,above,True,17,2,normal,Basic Materials,,,,,buy,sell,A
-2026-09-01,BAH,9,0,True,good,good,mid,below,True,14,3,dead,Industrials,,,,,buy,sell,A
-2026-09-01,BMO,9,1,True,good,good,low,below,True,19,1,normal,Financial,,,,,buy,sell,A
-2026-09-01,COR,7,2,True,good,good,low,above,False,17,2,dead,Healthcare,,,,,buy,sell,A
-2026-09-01,COST,8,1,True,good,good,low,below,False,17,1,normal,Consumer Defensive,,,,,buy,sell,A
-2026-09-01,CRM,8,1,True,good,good,mid,above,True,25,2,hot,Technology,,,,,buy,sell,A
-2026-09-01,CVE,8,1,True,good,good,mid,above,True,20,1,normal,Energy,,,,,buy,sell,A
-2026-09-01,CVX,8,2,True,good,good,low,above,True,20,1,normal,Energy,,,,,buy,sell,A
-2026-09-01,DTM,8,0,True,good,good,mid,below,False,17,1,normal,Energy,,,,,buy,sell,A
-2026-09-01,FHB,7,0,False,good,good,high,below,True,15,1,normal,Financial,,,,,buy,sell,A
-2026-09-01,FIBK,8,2,True,good,bad,high,below,True,13,2,normal,Financial,,,,,buy,sell,A
-2026-09-01,HASI,7,0,False,good,good,high,below,True,15,1,dead,Financial,,,,,buy,sell,A
-2026-09-01,HDSN,9,0,True,good,good,mid,below,True,14,2,normal,Basic Materials,,,,,buy,sell,A
-2026-09-01,HWM,7,3,True,good,bad,low,below,True,16,3,normal,Industrials,,,,,buy,sell,A
-2026-09-01,LIN,8,2,True,good,good,low,above,True,19,2,dead,Basic Materials,,,,,buy,sell,A
-2026-09-01,OXY,8,2,True,good,good,low,above,True,19,2,dead,Energy,,,,,buy,sell,A
-2026-09-01,RWAY,9,1,True,good,good,high,above,True,17,1,normal,Financial,,,,,buy,sell,A
-2026-09-01,SDGR,9,1,True,good,good,high,above,True,15,2,normal,Healthcare,,,,,buy,sell,A
-2026-09-01,TALO,8,1,True,good,good,mid,above,True,16,2,normal,Energy,,,,,buy,sell,A
-2026-09-01,TCBI,7,0,False,good,good,high,below,True,17,1,normal,Financial,,,,,buy,sell,A
-2026-09-01,TCOM,9,1,True,good,good,low,below,True,15,2,dead,Consumer Cyclical,,,,,buy,sell,A
-2026-09-01,UPBD,7,0,False,good,good,high,below,True,16,2,normal,Technology,,,,,buy,sell,A
-2026-09-01,VOD,8,2,True,good,good,low,above,True,16,1,dead,Communication Services,,,,,buy,sell,A
-2026-09-01,VTS,9,1,True,good,good,high,above,True,16,2,normal,Energy,,,,,buy,sell,A
-2026-09-01,TS,3,9,False,good,bad,low,above,True,16,2,dead,Energy,,,,,sell,short,fade
-2026-09-01,EU,1,9,False,bad,bad,low,above,True,10,5,dead,Energy,,,,,sell,short,fade
-2026-09-01,THM,0,9,False,bad,bad,low,above,False,6,6,dead,Basic Materials,,,,,sell,short,fade
-2026-09-01,DEC,3,8,False,good,bad,mid,above,True,18,2,dead,Energy,,,,,sell,short,fade
-2026-09-01,AFL,1,8,False,bad,bad,low,below,False,8,5,dead,Financial,,,,,sell,short,fade
-2026-09-01,CERS,2,8,False,bad,bad,high,above,True,8,5,dead,Healthcare,,,,,sell,short,fade
-2026-09-01,CNC,1,8,False,bad,bad,low,below,False,8,5,dead,Healthcare,,,,,sell,short,fade
-2026-09-01,ITUB,2,8,False,bad,bad,low,below,True,8,5,dead,Financial,,,,,sell,short,fade
-2026-09-01,PFGC,1,8,False,bad,bad,low,below,False,8,5,dead,Consumer Defensive,,,,,sell,short,fade
-2026-09-01,PUK,1,8,False,bad,bad,low,below,False,8,5,dead,Financial,,,,,sell,short,fade
-2026-09-01,MNSO,1,8,False,bad,bad,low,below,False,8,6,hot,Consumer Cyclical,,,,,sell,hold,fade
-2026-09-01,CRML,1,8,False,bad,bad,high,above,False,8,6,dead,Basic Materials,,,,,sell,short,fade
-2026-09-01,DKNG,1,8,False,bad,bad,high,above,False,8,6,dead,Consumer Cyclical,,,,,sell,short,fade
-2026-09-01,MYGN,1,8,False,bad,bad,high,above,False,8,6,dead,Healthcare,,,,,sell,short,fade
-2026-09-01,NG,0,8,False,bad,bad,mid,above,False,8,6,dead,Basic Materials,,,,,sell,short,fade
-2026-09-01,USAS,1,8,False,bad,bad,mid,above,True,8,6,dead,Basic Materials,,,,,sell,short,fade
-2026-09-01,WU,1,8,False,bad,bad,high,above,False,8,6,dead,Financial,,,,,sell,short,fade
-2026-09-01,XHR,1,8,False,bad,bad,mid,above,True,8,6,dead,Real Estate,,,,,sell,short,fade
-2026-09-01,AMTX,1,8,False,bad,bad,high,above,False,6,6,dead,Basic Materials,,,,,sell,short,fade
-2026-09-01,ANGI,1,8,False,bad,bad,high,above,False,6,6,dead,Communication Services,,,,,sell,short,fade
-2026-09-01,DFH,1,8,False,bad,bad,high,above,False,6,6,dead,Consumer Cyclical,,,,,sell,short,fade
-2026-09-01,FVRR,1,8,False,bad,bad,high,above,False,6,6,dead,Communication Services,,,,,sell,short,fade
-2026-09-01,INN,1,8,False,bad,bad,low,below,False,6,6,dead,Real Estate,,,,,sell,short,fade
-2026-09-01,LU,1,8,False,bad,bad,low,below,False,6,6,dead,Financial,,,,,sell,short,fade
-2026-09-01,MLCO,1,8,False,bad,bad,low,below,False,6,6,dead,Consumer Cyclical,,,,,sell,short,fade
+date,Ticker,stack,score,inv_score,blue,ab,peer,short,sma20,ab_up,white,steady,alarm,join,points,n_red,relvol,rsi,gap,sector,ret_1d,ret_2d,ret_3d,ret_1w,side,action,rule
+2026-08-13,ALPS,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Healthcare,-2.439,-2.439,-9.756,-17.683,buy,buy,rsi_oversold
+2026-08-13,CISS,rsi_oversold,2,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,down,Industrials,-3.659,2778.049,3265.854,3473.171,buy,buy,rsi_oversold
+2026-08-13,TOPP,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Industrials,3.984,-15.538,-12.351,-22.709,buy,buy,rsi_oversold
+2026-08-13,VEEA,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Technology,4.687,4.687,8.594,-2.344,buy,buy,rsi_oversold
+2026-08-13,XTNT,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Healthcare,0.0,6.452,6.452,6.452,buy,buy,rsi_oversold
+2026-08-13,YMT,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Technology,-1.316,-3.07,-6.579,-10.965,buy,buy,rsi_oversold
+2026-08-13,LRHC,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,dead,oversold,down,Real Estate,-5.087,-3.975,-7.949,-10.334,buy,buy,rsi_oversold
+2026-08-13,PFSA,rsi_oversold,2,0,False,missing,missing,high,below,False,True,True,False,good,11,0,dead,oversold,down,Healthcare,-5.363,376.341,2789.59,696.004,buy,buy,rsi_oversold
+2026-08-13,SILO,rsi_oversold,2,0,False,missing,missing,high,below,False,True,True,False,good,11,0,dead,oversold,down,Healthcare,-0.621,-4.658,-4.658,-14.907,buy,buy,rsi_oversold
+2026-08-13,UZX,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,dead,oversold,down,Consumer Cyclical,2.521,0.0,0.84,1.681,buy,buy,rsi_oversold
+2026-08-13,VMAR,rsi_oversold,2,0,False,missing,missing,mid,below,False,True,True,False,good,11,0,dead,oversold,down,Consumer Cyclical,0.151,7.53,5.873,6.024,buy,buy,rsi_oversold
+2026-08-13,ONFO,rsi_oversold,2,0,False,missing,missing,low,below,False,False,True,False,good,9,1,normal,oversold,down,Communication Services,12.121,1.732,-6.494,-32.035,buy,buy,rsi_oversold
+2026-08-13,HAO,rsi_oversold,2,0,False,missing,missing,low,below,False,False,True,False,good,9,1,dead,oversold,down,Communication Services,,2403.067,2654.601,2163.804,buy,buy,rsi_oversold
+2026-08-13,ABX,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,8.803,7.042,5.751,7.512,buy,buy,rsi_oversold
+2026-08-13,ACM,rsi_oversold,1,0,False,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Industrials,-0.786,-2.185,-2.971,2.468,buy,buy,rsi_oversold
+2026-08-13,AHCO,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Healthcare,1.93,1.93,2.105,-5.439,buy,buy,rsi_oversold
+2026-08-13,AKBA,rsi_oversold,1,0,False,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Healthcare,0.345,-1.149,-2.069,5.632,buy,buy,rsi_oversold
+2026-08-13,ALAR,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Technology,-1.093,-4.918,-4.372,-8.197,buy,buy,rsi_oversold
+2026-08-13,AMZE,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Technology,18.932,2.427,-1.942,-7.282,buy,buy,rsi_oversold
+2026-08-13,ARKO,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Consumer Cyclical,7.778,7.311,4.219,2.0,buy,buy,rsi_oversold
+2026-08-13,AZYY,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,-0.687,-1.615,-1.761,-1.051,buy,buy,rsi_oversold
+2026-08-13,BAER,rsi_oversold,1,0,False,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Industrials,0.0,-4.8,-7.2,-8.0,buy,buy,rsi_oversold
+2026-08-13,BBD,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,-0.317,-1.905,-3.492,-5.397,buy,buy,rsi_oversold
+2026-08-13,BRBI,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,0.535,-0.812,3.477,-0.757,buy,buy,rsi_oversold
+2026-08-13,CDNL,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Industrials,13.733,13.185,30.237,21.898,buy,buy,rsi_oversold
+2026-08-14,ONFO,steady_blue,14,0,True,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Communication Services,-9.266,-16.602,-8.494,-44.402,buy,hold,steady_blue
+2026-08-14,HAO,steady_blue,14,0,True,missing,missing,low,below,False,True,True,False,good,11,0,dead,oversold,down,Communication Services,,,,,buy,hold,steady_blue
+2026-08-14,BAOS,steady_blue,14,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,hot,oversold,down,Communication Services,-4.0,-3.4,4.2,-4.6,buy,buy,steady_blue
+2026-08-14,RCON,steady_blue,14,0,True,missing,missing,low,below,False,True,True,False,good,11,0,hot,oversold,down,Energy,13233.334,11033.333,12133.334,10166.667,buy,buy,steady_blue
+2026-08-14,APP,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Communication Services,-1.097,-2.593,-1.474,-3.066,buy,buy,steady_blue
+2026-08-14,BODI,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Communication Services,-8.962,-12.802,-8.819,-9.388,buy,buy,steady_blue
+2026-08-14,EPSN,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,mid,down,Energy,1.254,1.792,0.0,0.358,buy,buy,steady_blue
+2026-08-14,GEOS,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Energy,3.036,6.25,-1.25,-1.607,buy,buy,steady_blue
+2026-08-14,PLTK,steady_blue,13,0,True,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Communication Services,-9.96,-11.155,-6.375,-5.578,buy,buy,steady_blue
+2026-08-14,VIVK,steady_blue,13,0,True,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Energy,0.0,-3.279,-4.098,-12.295,buy,buy,steady_blue
+2026-08-14,CRC,steady_blue,13,0,True,missing,missing,mid,above,False,True,True,False,good,11,0,dead,mid,down,Energy,0.413,-0.319,0.9,-0.131,buy,buy,steady_blue
+2026-08-14,CRK,steady_blue,13,0,True,missing,missing,high,above,False,True,True,False,good,11,0,dead,mid,down,Energy,-3.627,-2.845,-3.698,1.138,buy,buy,steady_blue
+2026-08-14,NEE,steady_blue,12,0,True,missing,missing,mid,below,False,True,True,False,good,12,0,normal,mid,flat,Utilities,0.035,0.035,-0.325,-2.947,buy,buy,steady_blue
+2026-08-14,CEG,steady_blue,12,0,True,missing,missing,mid,above,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-1.673,-5.547,-2.949,-3.405,buy,buy,steady_blue
+2026-08-14,NRG,steady_blue,12,0,True,missing,missing,mid,below,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-3.066,-8.46,-4.484,-10.401,buy,buy,steady_blue
+2026-08-14,TLN,steady_blue,12,0,True,missing,missing,mid,above,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-1.604,-12.428,-11.135,-13.31,buy,buy,steady_blue
+2026-08-14,VST,steady_blue,12,0,True,missing,missing,low,below,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-1.364,-5.137,-3.666,-8.047,buy,buy,steady_blue
+2026-08-14,ALPS,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,good,9,1,normal,oversold,down,Healthcare,0.0,-7.5,-15.625,0.0,buy,hold,alarm_rebound
+2026-08-14,XTNT,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,good,9,1,normal,oversold,down,Healthcare,6.452,6.452,6.452,3.226,buy,hold,alarm_rebound
+2026-08-14,PFSA,alarm_rebound,4,0,False,missing,missing,high,below,False,False,False,True,good,9,1,dead,oversold,down,Healthcare,403.333,2953.333,1407.778,506.667,buy,hold,alarm_rebound
+2026-08-14,SILO,alarm_rebound,4,0,False,missing,missing,high,below,False,False,False,True,good,9,1,dead,oversold,down,Healthcare,-4.063,-4.063,-10.625,-17.187,buy,hold,alarm_rebound
+2026-08-14,UZX,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,good,9,1,dead,oversold,down,Consumer Cyclical,-2.459,-1.639,-3.279,-1.639,buy,hold,alarm_rebound
+2026-08-14,VMAR,alarm_rebound,4,0,False,missing,missing,mid,below,False,False,False,True,good,9,1,dead,oversold,down,Consumer Cyclical,7.368,5.714,0.451,0.902,buy,hold,alarm_rebound
+2026-08-14,AHCO,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,good,9,1,normal,oversold,flat,Healthcare,0.0,0.172,-2.582,-3.098,buy,hold,alarm_rebound
+2026-08-14,AKBA,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,good,9,1,normal,oversold,flat,Healthcare,-1.489,-2.406,1.375,3.895,buy,hold,alarm_rebound
+2026-08-14,ABX,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,8.803,7.042,5.751,7.512,buy,sell,steady_blue+alarm_rebound
+2026-08-14,ACM,rsi_oversold,1,0,False,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Industrials,-0.786,-2.185,-2.971,2.468,buy,sell,steady_blue+alarm_rebound
+2026-08-14,ALAR,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Technology,-1.093,-4.918,-4.372,-8.197,buy,sell,steady_blue+alarm_rebound
+2026-08-14,AMZE,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Technology,18.932,2.427,-1.942,-7.282,buy,sell,steady_blue+alarm_rebound
+2026-08-14,ARKO,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Consumer Cyclical,7.778,7.311,4.219,2.0,buy,sell,steady_blue+alarm_rebound
+2026-08-14,AZYY,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,-0.687,-1.615,-1.761,-1.051,buy,sell,steady_blue+alarm_rebound
+2026-08-14,BAER,rsi_oversold,1,0,False,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Industrials,0.0,-4.8,-7.2,-8.0,buy,sell,steady_blue+alarm_rebound
+2026-08-14,BBD,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,-0.317,-1.905,-3.492,-5.397,buy,sell,steady_blue+alarm_rebound
+2026-08-14,BRBI,rsi_oversold,1,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Financial,0.535,-0.812,3.477,-0.757,buy,sell,steady_blue+alarm_rebound
+2026-08-14,CDNL,rsi_oversold,1,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Industrials,13.733,13.185,30.237,21.898,buy,sell,steady_blue+alarm_rebound
+2026-08-14,CISS,rsi_oversold,2,0,False,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,down,Industrials,-3.659,2778.049,3265.854,3473.171,buy,sell,steady_blue+alarm_rebound
+2026-08-14,LRHC,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,dead,oversold,down,Real Estate,-5.087,-3.975,-7.949,-10.334,buy,sell,steady_blue+alarm_rebound
+2026-08-14,TOPP,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Industrials,3.984,-15.538,-12.351,-22.709,buy,sell,steady_blue+alarm_rebound
+2026-08-14,VEEA,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Technology,4.687,4.687,8.594,-2.344,buy,sell,steady_blue+alarm_rebound
+2026-08-14,YMT,rsi_oversold,2,0,False,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Technology,-1.316,-3.07,-6.579,-10.965,buy,sell,steady_blue+alarm_rebound
+2026-08-17,AMAT,steady_blue,13,0,True,missing,missing,low,below,False,True,True,False,good,12,0,normal,mid,down,Technology,-3.919,-7.312,-7.205,,buy,buy,steady_blue
+2026-08-17,BAK,steady_blue,13,0,True,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,flat,Basic Materials,-1.99,0.0,-1.493,,buy,buy,steady_blue
+2026-08-17,TMC,steady_blue,13,0,True,missing,missing,high,above,False,True,True,False,good,11,0,normal,mid,down,Basic Materials,3.979,5.305,5.305,,buy,buy,steady_blue
+2026-08-17,SGML,steady_blue,13,0,True,missing,missing,mid,above,False,True,True,False,good,11,0,hot,mid,down,Basic Materials,-3.5,-4.287,-6.124,,buy,buy,steady_blue
+2026-08-17,AMD,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-4.271,-7.822,-7.221,,buy,buy,steady_blue
+2026-08-17,ASML,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-4.256,-6.977,-7.053,,buy,buy,steady_blue
+2026-08-17,AVGO,steady_blue,12,0,True,missing,missing,low,below,False,True,True,False,good,12,0,normal,mid,flat,Technology,-3.167,-7.632,-7.237,,buy,buy,steady_blue
+2026-08-17,INTC,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-6.571,-10.329,-10.977,,buy,buy,steady_blue
+2026-08-17,LRCX,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-4.63,-10.665,-9.688,,buy,buy,steady_blue
+2026-08-17,AG,steady_blue,12,0,True,missing,missing,mid,above,False,True,True,False,good,11,0,normal,mid,flat,Basic Materials,-5.57,6.541,8.278,,buy,buy,steady_blue
+2026-08-17,AGI,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,11,0,normal,mid,flat,Basic Materials,-3.207,5.149,7.944,,buy,buy,steady_blue
+2026-08-17,ALB,steady_blue,12,0,True,missing,missing,high,above,False,True,True,False,good,11,0,normal,mid,flat,Basic Materials,-0.955,0.216,0.149,,buy,buy,steady_blue
+2026-08-17,SION,alarm_rebound,4,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,down,Healthcare,0.508,5.753,-6.599,,buy,buy,alarm_rebound
+2026-08-17,ALMS,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,neutral,8,1,normal,mid,down,Healthcare,-2.431,-5.922,-10.353,,buy,buy,alarm_rebound
+2026-08-17,CVGI,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,-3.245,-7.965,-7.965,,buy,buy,alarm_rebound
+2026-08-17,EBS,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Healthcare,3.556,8.667,7.111,,buy,buy,alarm_rebound
+2026-08-17,KOD,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,mid,down,Healthcare,-0.805,-2.221,-2.782,,buy,buy,alarm_rebound
+2026-08-17,MGNX,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,mid,down,Healthcare,0.739,2.709,0.246,,buy,buy,alarm_rebound
+2026-08-17,MNRO,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,2.509,8.737,3.46,,buy,buy,alarm_rebound
+2026-08-17,NAUT,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Healthcare,-3.292,2.384,2.384,,buy,buy,alarm_rebound
+2026-08-17,TDUP,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,-1.748,3.147,-3.846,,buy,buy,alarm_rebound
+2026-08-17,UA,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,-4.817,-1.156,-0.771,,buy,buy,alarm_rebound
+2026-08-17,UAA,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,dead,oversold,flat,Consumer Cyclical,-4.159,-0.756,0.189,,buy,buy,alarm_rebound
+2026-08-17,XPOF,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,dead,oversold,flat,Consumer Cyclical,-0.393,-2.554,-0.589,,buy,buy,alarm_rebound
+2026-08-17,AHCO,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,good,9,1,normal,oversold,flat,Healthcare,0.0,0.172,-2.582,-3.098,buy,sell,steady_blue+alarm_rebound
+2026-08-17,AKBA,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,good,9,1,normal,oversold,flat,Healthcare,-1.489,-2.406,1.375,3.895,buy,sell,steady_blue+alarm_rebound
+2026-08-17,ALPS,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,good,9,1,normal,oversold,down,Healthcare,0.0,-7.5,-15.625,0.0,buy,sell,steady_blue+alarm_rebound
+2026-08-17,APP,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Communication Services,-1.097,-2.593,-1.474,-3.066,buy,sell,steady_blue+alarm_rebound
+2026-08-17,BAOS,steady_blue,14,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,hot,oversold,down,Communication Services,-4.0,-3.4,4.2,-4.6,buy,sell,steady_blue+alarm_rebound
+2026-08-17,BODI,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Communication Services,-8.962,-12.802,-8.819,-9.388,buy,sell,steady_blue+alarm_rebound
+2026-08-17,CEG,steady_blue,12,0,True,missing,missing,mid,above,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-1.673,-5.547,-2.949,-3.405,buy,sell,steady_blue+alarm_rebound
+2026-08-17,CRC,steady_blue,13,0,True,missing,missing,mid,above,False,True,True,False,good,11,0,dead,mid,down,Energy,0.413,-0.319,0.9,-0.131,buy,sell,steady_blue+alarm_rebound
+2026-08-17,CRK,steady_blue,13,0,True,missing,missing,high,above,False,True,True,False,good,11,0,dead,mid,down,Energy,-3.627,-2.845,-3.698,1.138,buy,sell,steady_blue+alarm_rebound
+2026-08-17,EPSN,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,mid,down,Energy,1.254,1.792,0.0,0.358,buy,sell,steady_blue+alarm_rebound
+2026-08-17,GEOS,steady_blue,13,0,True,missing,missing,mid,below,False,True,True,False,good,11,0,normal,oversold,flat,Energy,3.036,6.25,-1.25,-1.607,buy,sell,steady_blue+alarm_rebound
+2026-08-17,HAO,steady_blue,14,0,True,missing,missing,low,below,False,True,True,False,good,11,0,dead,oversold,down,Communication Services,,,,,buy,sell,steady_blue+alarm_rebound
+2026-08-17,NEE,steady_blue,12,0,True,missing,missing,mid,below,False,True,True,False,good,12,0,normal,mid,flat,Utilities,0.035,0.035,-0.325,-2.947,buy,sell,steady_blue+alarm_rebound
+2026-08-17,NRG,steady_blue,12,0,True,missing,missing,mid,below,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-3.066,-8.46,-4.484,-10.401,buy,sell,steady_blue+alarm_rebound
+2026-08-17,ONFO,steady_blue,14,0,True,missing,missing,low,below,False,True,True,False,good,11,0,normal,oversold,down,Communication Services,-9.266,-16.602,-8.494,-44.402,buy,sell,steady_blue+alarm_rebound
+2026-08-17,PFSA,alarm_rebound,4,0,False,missing,missing,high,below,False,False,False,True,good,9,1,dead,oversold,down,Healthcare,403.333,2953.333,1407.778,506.667,buy,sell,steady_blue+alarm_rebound
+2026-08-17,PLTK,steady_blue,13,0,True,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Communication Services,-9.96,-11.155,-6.375,-5.578,buy,sell,steady_blue+alarm_rebound
+2026-08-17,RCON,steady_blue,14,0,True,missing,missing,low,below,False,True,True,False,good,11,0,hot,oversold,down,Energy,13233.334,11033.333,12133.334,10166.667,buy,sell,steady_blue+alarm_rebound
+2026-08-17,SILO,alarm_rebound,4,0,False,missing,missing,high,below,False,False,False,True,good,9,1,dead,oversold,down,Healthcare,-4.063,-4.063,-10.625,-17.187,buy,sell,steady_blue+alarm_rebound
+2026-08-17,TLN,steady_blue,12,0,True,missing,missing,mid,above,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-1.604,-12.428,-11.135,-13.31,buy,sell,steady_blue+alarm_rebound
+2026-08-17,UZX,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,good,9,1,dead,oversold,down,Consumer Cyclical,-2.459,-1.639,-3.279,-1.639,buy,sell,steady_blue+alarm_rebound
+2026-08-17,VIVK,steady_blue,13,0,True,missing,missing,high,below,False,True,True,False,good,11,0,normal,oversold,flat,Energy,0.0,-3.279,-4.098,-12.295,buy,sell,steady_blue+alarm_rebound
+2026-08-17,VMAR,alarm_rebound,4,0,False,missing,missing,mid,below,False,False,False,True,good,9,1,dead,oversold,down,Consumer Cyclical,7.368,5.714,0.451,0.902,buy,sell,steady_blue+alarm_rebound
+2026-08-17,VST,steady_blue,12,0,True,missing,missing,low,below,False,True,True,False,good,12,0,dead,mid,flat,Utilities,-1.364,-5.137,-3.666,-8.047,buy,sell,steady_blue+alarm_rebound
+2026-08-17,XTNT,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,good,9,1,normal,oversold,down,Healthcare,6.452,6.452,6.452,3.226,buy,sell,steady_blue+alarm_rebound
+2026-08-17,VST,fade,-5,5,False,missing,missing,low,below,False,True,False,True,neutral,11,0,normal,mid,flat,Utilities,-3.826,-2.334,-4.907,,sell,short,fade
+2026-08-17,NEE,fade,-5,5,False,missing,missing,mid,below,False,True,False,True,neutral,11,0,dead,mid,flat,Utilities,0.0,-0.36,-1.38,,sell,short,fade
+2026-08-17,ACHR,fade,-5,5,False,missing,missing,high,above,False,True,False,True,neutral,10,0,normal,mid,flat,Industrials,-1.095,0.939,-4.695,,sell,short,fade
+2026-08-17,ACN,fade,-5,5,False,missing,missing,mid,above,False,True,False,True,neutral,10,0,normal,mid,flat,Technology,1.735,7.76,6.689,,sell,short,fade
+2026-08-17,ADIG,fade,-5,5,False,missing,missing,low,below,False,True,False,True,neutral,10,0,normal,mid,flat,Technology,-4.34,-0.327,5.413,,sell,short,fade
+2026-08-17,AIB,fade,-5,5,False,missing,missing,low,below,False,True,False,True,neutral,10,0,normal,mid,flat,Technology,-24.39,-12.195,-18.902,,sell,short,fade
+2026-08-17,AIV,fade,-5,5,False,missing,missing,low,above,False,True,False,True,neutral,10,0,normal,mid,flat,Real Estate,0.0,0.382,-0.382,,sell,short,fade
+2026-08-17,AMX,fade,-5,5,False,missing,missing,low,below,False,True,False,True,neutral,10,0,normal,mid,flat,Communication Services,-0.211,-0.549,-1.225,,sell,short,fade
+2026-08-17,ARRY,fade,-5,5,False,missing,missing,high,below,False,True,False,True,neutral,10,0,normal,mid,flat,Technology,-3.614,-1.205,-5.422,,sell,short,fade
+2026-08-17,ASC,fade,-5,5,False,missing,missing,mid,above,False,True,False,True,neutral,10,0,normal,mid,flat,Industrials,-0.332,1.771,0.664,,sell,short,fade
+2026-08-17,ATEN,fade,-5,5,False,missing,missing,high,below,False,True,False,True,neutral,10,0,normal,mid,flat,Technology,-2.742,-5.85,-6.654,,sell,short,fade
+2026-08-17,ATKR,fade,-5,5,False,missing,missing,mid,above,False,True,False,True,neutral,10,0,normal,overbought,flat,Industrials,0.064,0.054,0.118,,sell,short,fade
+2026-08-17,AVB,fade,-5,5,False,missing,missing,low,below,False,True,False,True,neutral,10,0,normal,mid,flat,Real Estate,0.0,0.0,0.0,,sell,short,fade
+2026-08-17,BEP,fade,-5,5,False,missing,missing,low,above,False,True,False,True,neutral,10,0,normal,mid,flat,Utilities,-4.762,-2.671,-4.413,,sell,short,fade
+2026-08-17,BKKT,fade,-5,5,False,missing,missing,high,below,False,True,False,True,neutral,10,0,normal,mid,flat,Technology,-2.669,8.708,5.337,,sell,short,fade
+2026-08-17,BLBD,fade,-5,5,False,missing,missing,high,below,False,True,False,True,neutral,10,0,normal,mid,flat,Industrials,-3.788,-2.129,-3.992,,sell,short,fade
+2026-08-17,CAE,fade,-5,5,False,missing,missing,low,above,False,True,False,True,neutral,10,0,normal,mid,flat,Industrials,-4.127,-4.274,-7.922,,sell,short,fade
+2026-08-17,CBZ,fade,-5,5,False,missing,missing,mid,above,False,True,False,True,neutral,10,0,normal,overbought,flat,Industrials,0.11,0.366,0.622,,sell,short,fade
+2026-08-17,CCOI,fade,-5,5,False,missing,missing,high,below,False,True,False,True,neutral,10,0,normal,mid,flat,Communication Services,-5.767,-3.535,-6.884,,sell,short,fade
+2026-08-17,CIG,fade,-4,5,False,missing,missing,low,below,False,True,False,True,neutral,10,0,normal,oversold,flat,Utilities,-1.042,0.521,-2.083,,sell,short,fade
+2026-08-17,CIM,fade,-5,5,False,missing,missing,low,below,False,True,False,True,neutral,10,0,normal,mid,flat,Real Estate,-0.085,0.17,-1.363,,sell,short,fade
+2026-08-17,CMCSA,fade,-5,5,False,missing,missing,low,above,False,True,False,True,neutral,10,0,normal,mid,flat,Communication Services,2.464,3.989,3.324,,sell,short,fade
+2026-08-17,CPT,fade,-5,5,False,missing,missing,mid,below,False,True,False,True,neutral,10,0,normal,mid,flat,Real Estate,-0.905,0.129,-0.314,,sell,short,fade
+2026-08-17,DIS,fade,-5,5,False,missing,missing,low,above,False,True,False,True,neutral,10,0,normal,mid,flat,Communication Services,0.435,3.314,3.691,,sell,short,fade
+2026-08-17,FOXA,fade,-5,5,False,missing,missing,high,above,False,True,False,True,neutral,10,0,normal,overbought,up,Communication Services,-0.231,-1.778,-1.778,,sell,short,fade
+2026-08-18,BAK,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,down,Basic Materials,2.03,0.508,1.015,,buy,hold,alarm_rebound
+2026-08-18,ABEV,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,good,9,1,normal,oversold,flat,Consumer Defensive,1.079,1.799,3.597,,buy,buy,alarm_rebound
+2026-08-18,DHT,alarm_rebound,3,0,False,missing,missing,mid,above,False,False,False,True,neutral,8,1,normal,mid,down,Energy,3.521,2.538,2.641,,buy,buy,alarm_rebound
+2026-08-18,ENB,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Energy,-2.218,-0.778,-1.81,,buy,buy,alarm_rebound
+2026-08-18,LHX,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,neutral,8,1,normal,mid,down,Industrials,-0.869,-3.255,-4.583,,buy,buy,alarm_rebound
+2026-08-18,CDNL,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,-4.01,-6.402,-3.633,,buy,buy,alarm_rebound
+2026-08-18,CELH,alarm_rebound,3,0,False,missing,missing,high,above,False,False,False,True,bad,7,2,normal,mid,down,Consumer Defensive,7.893,8.829,11.572,,buy,buy,alarm_rebound
+2026-08-18,CIG,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,normal,oversold,flat,Utilities,1.579,-1.053,1.053,,buy,buy,alarm_rebound
+2026-08-18,HE,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Utilities,1.298,0.433,-0.519,,buy,buy,alarm_rebound
+2026-08-18,LINC,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Consumer Defensive,-5.225,-5.73,-7.315,,buy,buy,alarm_rebound
+2026-08-18,MIDD,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,-1.377,-1.298,1.298,,buy,buy,alarm_rebound
+2026-08-18,ODD,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,mid,down,Consumer Defensive,6.504,1.707,7.48,,buy,buy,alarm_rebound
+2026-08-18,QFIN,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,good,7,2,normal,oversold,flat,Financial,-2.239,-5.058,-4.022,,buy,buy,alarm_rebound
+2026-08-18,RBA,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,0.49,1.901,1.469,,buy,buy,alarm_rebound
+2026-08-18,RTO,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,-0.212,-1.06,0.254,,buy,buy,alarm_rebound
+2026-08-18,SBS,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,normal,oversold,flat,Utilities,0.44,-1.978,1.319,,buy,buy,alarm_rebound
+2026-08-18,SFD,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Consumer Defensive,0.089,-1.11,-1.243,,buy,buy,alarm_rebound
+2026-08-18,UTI,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Consumer Defensive,-2.917,-8.43,-10.707,,buy,buy,alarm_rebound
+2026-08-18,CIGL,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,dead,mid,down,Industrials,-4.348,-6.522,-6.522,,buy,buy,alarm_rebound
+2026-08-18,SAFX,alarm_rebound,3,0,False,missing,missing,high,above,False,False,False,True,bad,7,2,dead,mid,down,Utilities,-18.72,-18.72,-22.986,,buy,buy,alarm_rebound
+2026-08-18,AMX,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,flat,Communication Services,-0.339,-1.016,0.677,,buy,buy,alarm_rebound
+2026-08-18,APP,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,bad,5,3,normal,oversold,flat,Communication Services,1.149,0.491,-0.485,,buy,buy,alarm_rebound
+2026-08-18,ARKO,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,5,3,normal,oversold,flat,Consumer Cyclical,-0.424,-2.13,1.282,,buy,buy,alarm_rebound
+2026-08-18,BBAR,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,up,Financial,-1.897,-4.607,-4.81,,buy,buy,alarm_rebound
+2026-08-18,BBD,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,flat,Financial,0.329,-1.974,2.303,,buy,buy,alarm_rebound
+2026-08-18,AG,steady_blue,12,0,True,missing,missing,mid,above,False,True,True,False,good,11,0,normal,mid,flat,Basic Materials,-5.57,6.541,8.278,,buy,sell,alarm_rebound
+2026-08-18,AGI,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,11,0,normal,mid,flat,Basic Materials,-3.207,5.149,7.944,,buy,sell,alarm_rebound
+2026-08-18,ALB,steady_blue,12,0,True,missing,missing,high,above,False,True,True,False,good,11,0,normal,mid,flat,Basic Materials,-0.955,0.216,0.149,,buy,sell,alarm_rebound
+2026-08-18,ALMS,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,neutral,8,1,normal,mid,down,Healthcare,-2.431,-5.922,-10.353,,buy,sell,alarm_rebound
+2026-08-18,AMAT,steady_blue,13,0,True,missing,missing,low,below,False,True,True,False,good,12,0,normal,mid,down,Technology,-3.919,-7.312,-7.205,,buy,sell,alarm_rebound
+2026-08-18,AMD,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-4.271,-7.822,-7.221,,buy,sell,alarm_rebound
+2026-08-18,ASML,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-4.256,-6.977,-7.053,,buy,sell,alarm_rebound
+2026-08-18,AVGO,steady_blue,12,0,True,missing,missing,low,below,False,True,True,False,good,12,0,normal,mid,flat,Technology,-3.167,-7.632,-7.237,,buy,sell,alarm_rebound
+2026-08-18,CVGI,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,-3.245,-7.965,-7.965,,buy,sell,alarm_rebound
+2026-08-18,EBS,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Healthcare,3.556,8.667,7.111,,buy,sell,alarm_rebound
+2026-08-18,INTC,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-6.571,-10.329,-10.977,,buy,sell,alarm_rebound
+2026-08-18,KOD,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,mid,down,Healthcare,-0.805,-2.221,-2.782,,buy,sell,alarm_rebound
+2026-08-18,LRCX,steady_blue,12,0,True,missing,missing,low,above,False,True,True,False,good,12,0,normal,mid,flat,Technology,-4.63,-10.665,-9.688,,buy,sell,alarm_rebound
+2026-08-18,MGNX,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,mid,down,Healthcare,0.739,2.709,0.246,,buy,sell,alarm_rebound
+2026-08-18,MNRO,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,2.509,8.737,3.46,,buy,sell,alarm_rebound
+2026-08-18,NAUT,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Healthcare,-3.292,2.384,2.384,,buy,sell,alarm_rebound
+2026-08-18,SGML,steady_blue,13,0,True,missing,missing,mid,above,False,True,True,False,good,11,0,hot,mid,down,Basic Materials,-3.5,-4.287,-6.124,,buy,sell,alarm_rebound
+2026-08-18,SION,alarm_rebound,4,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,down,Healthcare,0.508,5.753,-6.599,,buy,sell,alarm_rebound
+2026-08-18,TDUP,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,-1.748,3.147,-3.846,,buy,sell,alarm_rebound
+2026-08-18,TMC,steady_blue,13,0,True,missing,missing,high,above,False,True,True,False,good,11,0,normal,mid,down,Basic Materials,3.979,5.305,5.305,,buy,sell,alarm_rebound
+2026-08-18,UA,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Consumer Cyclical,-4.817,-1.156,-0.771,,buy,sell,alarm_rebound
+2026-08-18,UAA,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,dead,oversold,flat,Consumer Cyclical,-4.159,-0.756,0.189,,buy,sell,alarm_rebound
+2026-08-18,XPOF,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,neutral,8,1,dead,oversold,flat,Consumer Cyclical,-0.393,-2.554,-0.589,,buy,sell,alarm_rebound
+2026-08-18,DVN,fade,-3,5,False,missing,missing,low,above,False,False,False,True,good,10,1,normal,mid,flat,Energy,0.753,3.073,2.655,,sell,short,fade
+2026-08-18,APA,fade,-3,5,False,missing,missing,high,above,False,False,False,True,good,10,1,dead,mid,flat,Energy,2.549,4.768,2.407,,sell,short,fade
+2026-08-18,COP,fade,-3,5,False,missing,missing,low,above,False,False,False,True,good,10,1,dead,mid,flat,Energy,0.663,3.986,3.97,,sell,short,fade
+2026-08-18,CVX,fade,-3,5,False,missing,missing,low,above,False,False,False,True,good,10,1,dead,mid,flat,Energy,0.883,0.887,0.642,,sell,short,fade
+2026-08-18,EOG,fade,-3,5,False,missing,missing,mid,above,False,False,False,True,good,10,1,dead,mid,flat,Energy,0.525,2.347,2.925,,sell,short,fade
+2026-08-18,FANG,fade,-3,5,False,missing,missing,mid,above,False,False,False,True,good,10,1,dead,mid,flat,Energy,-0.7,0.476,0.333,,sell,short,fade
+2026-08-19,NEE,steady_blue,8,0,True,missing,missing,mid,below,False,False,True,False,good,10,1,normal,mid,flat,Utilities,-1.024,-2.631,,,buy,buy,steady_blue
+2026-08-19,ARM,blue,4,0,True,missing,missing,low,below,False,False,False,False,good,7,2,normal,mid,down,Technology,0.553,-2.414,,,buy,buy,blue
+2026-08-19,ASML,blue,4,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,down,Technology,-0.081,0.687,,,buy,buy,blue
+2026-08-19,KEYS,blue,4,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,down,Technology,-0.92,-1.039,,,buy,buy,blue
+2026-08-19,SKM,blue,4,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,down,Communication Services,-1.11,4.001,,,buy,buy,blue
+2026-08-19,Q,blue,4,0,True,missing,missing,low,below,False,False,False,False,good,7,2,dead,mid,down,Technology,5.935,2.253,,,buy,buy,blue
+2026-08-19,ROL,blue,4,0,True,missing,missing,mid,below,False,False,False,False,good,7,2,dead,oversold,flat,Consumer Cyclical,0.331,1.793,,,buy,buy,blue
+2026-08-19,ALAB,blue,4,0,True,missing,missing,mid,below,False,False,False,False,neutral,6,2,normal,mid,down,Technology,0.519,-1.401,,,buy,buy,blue
+2026-08-19,AMAT,blue,4,0,True,missing,missing,low,below,False,False,False,False,neutral,6,2,normal,mid,down,Technology,0.115,-0.67,,,buy,buy,blue
+2026-08-19,PWR,blue,3,0,True,missing,missing,low,above,False,False,False,False,neutral,8,1,normal,mid,flat,Industrials,-2.205,-5.62,,,buy,buy,blue
+2026-08-19,WMS,blue,3,0,True,missing,missing,mid,above,False,False,False,False,neutral,8,1,dead,mid,flat,Industrials,-2.712,-1.83,,,buy,buy,blue
+2026-08-19,NRG,blue,3,0,True,missing,missing,mid,below,False,False,False,False,bad,8,2,dead,mid,flat,Utilities,-4.329,-6.195,,,buy,buy,blue
+2026-08-19,TLN,blue,3,0,True,missing,missing,mid,above,False,False,False,False,bad,8,2,dead,mid,flat,Utilities,-1.663,-2.448,,,buy,buy,blue
+2026-08-19,ABNB,blue,3,0,True,missing,missing,mid,above,False,False,False,False,good,7,2,normal,overbought,flat,Consumer Cyclical,-0.746,0.488,,,buy,buy,blue
+2026-08-19,AEM,blue,3,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,overbought,flat,Basic Materials,2.08,4.015,,,buy,buy,blue
+2026-08-19,ATAT,blue,3,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,-7.432,-6.081,,,buy,buy,blue
+2026-08-19,CHTR,blue,3,0,True,missing,missing,high,above,False,False,False,False,good,7,2,normal,mid,flat,Communication Services,-3.089,-1.508,,,buy,buy,blue
+2026-08-19,JD,blue,3,0,True,missing,missing,low,below,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,0.204,0.068,,,buy,buy,blue
+2026-08-19,LEN,blue,3,0,True,missing,missing,high,above,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,-2.153,-0.321,,,buy,buy,blue
+2026-08-19,MAR,blue,3,0,True,missing,missing,low,below,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,-0.729,-0.788,,,buy,buy,blue
+2026-08-19,NEM,blue,3,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,flat,Basic Materials,2.047,5.197,,,buy,buy,blue
+2026-08-19,NWSA,blue,3,0,True,missing,missing,mid,above,False,False,False,False,good,7,2,normal,mid,flat,Communication Services,0.679,3.158,,,buy,buy,blue
+2026-08-19,WB,blue,3,0,True,missing,missing,high,below,False,False,False,False,good,7,2,normal,mid,flat,Communication Services,-4.005,-6.142,,,buy,buy,blue
+2026-08-19,AAL,blue,3,0,True,missing,missing,high,below,False,False,False,False,bad,7,2,dead,mid,flat,Industrials,-2.453,-0.289,,,buy,buy,blue
+2026-08-19,ALK,blue,3,0,True,missing,missing,high,below,False,False,False,False,bad,7,2,dead,mid,flat,Industrials,-2.547,-1.989,,,buy,buy,blue
+2026-08-19,ABEV,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,good,9,1,normal,oversold,flat,Consumer Defensive,1.079,1.799,3.597,,buy,sell,steady_blue+blue
+2026-08-19,AMX,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,flat,Communication Services,-0.339,-1.016,0.677,,buy,sell,steady_blue+blue
+2026-08-19,APP,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,bad,5,3,normal,oversold,flat,Communication Services,1.149,0.491,-0.485,,buy,sell,steady_blue+blue
+2026-08-19,ARKO,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,5,3,normal,oversold,flat,Consumer Cyclical,-0.424,-2.13,1.282,,buy,sell,steady_blue+blue
+2026-08-19,BAK,alarm_rebound,4,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,down,Basic Materials,2.03,0.508,1.015,,buy,sell,steady_blue+blue
+2026-08-19,BBAR,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,up,Financial,-1.897,-4.607,-4.81,,buy,sell,steady_blue+blue
+2026-08-19,BBD,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,5,3,normal,oversold,flat,Financial,0.329,-1.974,2.303,,buy,sell,steady_blue+blue
+2026-08-19,CDNL,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,-4.01,-6.402,-3.633,,buy,sell,steady_blue+blue
+2026-08-19,CELH,alarm_rebound,3,0,False,missing,missing,high,above,False,False,False,True,bad,7,2,normal,mid,down,Consumer Defensive,7.893,8.829,11.572,,buy,sell,steady_blue+blue
+2026-08-19,CIG,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,normal,oversold,flat,Utilities,1.579,-1.053,1.053,,buy,sell,steady_blue+blue
+2026-08-19,CIGL,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,dead,mid,down,Industrials,-4.348,-6.522,-6.522,,buy,sell,steady_blue+blue
+2026-08-19,DHT,alarm_rebound,3,0,False,missing,missing,mid,above,False,False,False,True,neutral,8,1,normal,mid,down,Energy,3.521,2.538,2.641,,buy,sell,steady_blue+blue
+2026-08-19,ENB,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,neutral,8,1,normal,oversold,flat,Energy,-2.218,-0.778,-1.81,,buy,sell,steady_blue+blue
+2026-08-19,HE,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Utilities,1.298,0.433,-0.519,,buy,sell,steady_blue+blue
+2026-08-19,LHX,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,neutral,8,1,normal,mid,down,Industrials,-0.869,-3.255,-4.583,,buy,sell,steady_blue+blue
+2026-08-19,LINC,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Consumer Defensive,-5.225,-5.73,-7.315,,buy,sell,steady_blue+blue
+2026-08-19,MIDD,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,-1.377,-1.298,1.298,,buy,sell,steady_blue+blue
+2026-08-19,ODD,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,mid,down,Consumer Defensive,6.504,1.707,7.48,,buy,sell,steady_blue+blue
+2026-08-19,QFIN,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,good,7,2,normal,oversold,flat,Financial,-2.239,-5.058,-4.022,,buy,sell,steady_blue+blue
+2026-08-19,RBA,alarm_rebound,3,0,False,missing,missing,mid,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,0.49,1.901,1.469,,buy,sell,steady_blue+blue
+2026-08-19,RTO,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,normal,oversold,flat,Industrials,-0.212,-1.06,0.254,,buy,sell,steady_blue+blue
+2026-08-19,SAFX,alarm_rebound,3,0,False,missing,missing,high,above,False,False,False,True,bad,7,2,dead,mid,down,Utilities,-18.72,-18.72,-22.986,,buy,sell,steady_blue+blue
+2026-08-19,SBS,alarm_rebound,3,0,False,missing,missing,low,below,False,False,False,True,bad,7,2,normal,oversold,flat,Utilities,0.44,-1.978,1.319,,buy,sell,steady_blue+blue
+2026-08-19,SFD,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Consumer Defensive,0.089,-1.11,-1.243,,buy,sell,steady_blue+blue
+2026-08-19,UTI,alarm_rebound,3,0,False,missing,missing,high,below,False,False,False,True,bad,7,2,normal,oversold,flat,Consumer Defensive,-2.917,-8.43,-10.707,,buy,sell,steady_blue+blue
+2026-08-20,KC,hot_ab_peer,20,0,True,good,good,low,above,True,True,True,False,neutral,16,0,hot,mid,up,Technology,-2.452,,,,buy,buy,hot_ab_peer
+2026-08-20,UBS,hot_ab_peer,20,0,True,good,good,low,above,True,True,True,False,good,16,0,hot,mid,flat,Financial,0.169,,,,buy,buy,hot_ab_peer
+2026-08-20,BMEA,hot_ab_peer,19,0,True,good,good,high,above,False,True,True,False,good,16,0,hot,mid,flat,Healthcare,0.735,,,,buy,buy,hot_ab_peer
+2026-08-20,CRSP,hot_ab_peer,19,0,True,good,good,high,above,False,True,True,False,good,16,0,hot,mid,up,Healthcare,2.374,,,,buy,buy,hot_ab_peer
+2026-08-20,PUK,hot_ab_peer,19,0,True,good,good,low,below,False,True,True,False,good,16,0,hot,mid,flat,Financial,2.14,,,,buy,buy,hot_ab_peer
+2026-08-20,WBS,hot_ab_peer,19,0,True,good,good,mid,above,False,True,True,False,good,16,0,hot,mid,flat,Financial,,,,,buy,buy,hot_ab_peer
+2026-08-20,TGT,hot_ab_peer,16,0,True,good,good,mid,above,True,True,False,False,good,16,0,hot,overbought,down,Consumer Defensive,4.543,,,,buy,buy,hot_ab_peer
+2026-08-20,ALEC,hot_ab_peer,15,0,True,good,good,mid,above,True,True,False,False,good,16,0,hot,mid,flat,Healthcare,4.425,,,,buy,buy,hot_ab_peer
+2026-08-20,JPM,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Financial,0.009,,,,buy,buy,steady_blue
+2026-08-20,MU,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,normal,mid,flat,Technology,-0.775,,,,buy,buy,steady_blue
+2026-08-20,AZN,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,16,0,normal,mid,flat,Healthcare,0.906,,,,buy,buy,steady_blue
+2026-08-20,BEN,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,16,0,normal,mid,flat,Financial,1.001,,,,buy,buy,steady_blue
+2026-08-20,BRKR,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,16,0,normal,mid,flat,Healthcare,-0.601,,,,buy,buy,steady_blue
+2026-08-20,CATX,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,16,0,normal,mid,up,Healthcare,2.804,,,,buy,buy,steady_blue
+2026-08-20,CF,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,16,0,normal,mid,flat,Basic Materials,3.103,,,,buy,buy,steady_blue
+2026-08-20,HNST,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,16,0,normal,mid,flat,Consumer Defensive,1.815,,,,buy,buy,steady_blue
+2026-08-20,KRNY,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,16,0,normal,mid,flat,Financial,0.62,,,,buy,buy,steady_blue
+2026-08-20,MT,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,16,0,normal,mid,flat,Basic Materials,1.533,,,,buy,buy,steady_blue
+2026-08-20,TX,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,16,0,normal,mid,flat,Basic Materials,2.287,,,,buy,buy,steady_blue
+2026-08-20,ENB,rsi_oversold,11,0,True,good,neutral,low,below,True,False,True,False,good,14,1,normal,oversold,flat,Energy,-1.039,,,,buy,buy,rsi_oversold
+2026-08-20,SBS,rsi_oversold,11,0,True,good,bad,low,below,True,False,True,False,good,14,1,normal,oversold,flat,Utilities,3.363,,,,buy,buy,rsi_oversold
+2026-08-20,CRSR,gap_down,6,0,True,good,bad,high,below,True,False,False,False,bad,13,2,normal,mid,down,Technology,0.183,,,,buy,buy,gap_down
+2026-08-20,NBIS,gap_down,5,0,True,good,neutral,high,above,False,False,False,False,bad,14,1,hot,mid,down,Technology,-0.445,,,,buy,buy,gap_down
+2026-08-20,AAL,blue,3,0,True,missing,missing,high,below,False,False,False,False,bad,7,2,dead,mid,flat,Industrials,-2.453,-0.289,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ABNB,blue,3,0,True,missing,missing,mid,above,False,False,False,False,good,7,2,normal,overbought,flat,Consumer Cyclical,-0.746,0.488,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,AEM,blue,3,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,overbought,flat,Basic Materials,2.08,4.015,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ALAB,blue,4,0,True,missing,missing,mid,below,False,False,False,False,neutral,6,2,normal,mid,down,Technology,0.519,-1.401,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ALK,blue,3,0,True,missing,missing,high,below,False,False,False,False,bad,7,2,dead,mid,flat,Industrials,-2.547,-1.989,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,AMAT,blue,4,0,True,missing,missing,low,below,False,False,False,False,neutral,6,2,normal,mid,down,Technology,0.115,-0.67,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ARM,blue,4,0,True,missing,missing,low,below,False,False,False,False,good,7,2,normal,mid,down,Technology,0.553,-2.414,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ASML,blue,4,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,down,Technology,-0.081,0.687,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ATAT,blue,3,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,-7.432,-6.081,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,CHTR,blue,3,0,True,missing,missing,high,above,False,False,False,False,good,7,2,normal,mid,flat,Communication Services,-3.089,-1.508,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,JD,blue,3,0,True,missing,missing,low,below,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,0.204,0.068,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,KEYS,blue,4,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,down,Technology,-0.92,-1.039,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,LEN,blue,3,0,True,missing,missing,high,above,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,-2.153,-0.321,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,MAR,blue,3,0,True,missing,missing,low,below,False,False,False,False,good,7,2,normal,mid,flat,Consumer Cyclical,-0.729,-0.788,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,NEE,steady_blue,8,0,True,missing,missing,mid,below,False,False,True,False,good,10,1,normal,mid,flat,Utilities,-1.024,-2.631,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,NEM,blue,3,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,flat,Basic Materials,2.047,5.197,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,NRG,blue,3,0,True,missing,missing,mid,below,False,False,False,False,bad,8,2,dead,mid,flat,Utilities,-4.329,-6.195,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,NWSA,blue,3,0,True,missing,missing,mid,above,False,False,False,False,good,7,2,normal,mid,flat,Communication Services,0.679,3.158,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,PWR,blue,3,0,True,missing,missing,low,above,False,False,False,False,neutral,8,1,normal,mid,flat,Industrials,-2.205,-5.62,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,Q,blue,4,0,True,missing,missing,low,below,False,False,False,False,good,7,2,dead,mid,down,Technology,5.935,2.253,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,ROL,blue,4,0,True,missing,missing,mid,below,False,False,False,False,good,7,2,dead,oversold,flat,Consumer Cyclical,0.331,1.793,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,SKM,blue,4,0,True,missing,missing,low,above,False,False,False,False,good,7,2,normal,mid,down,Communication Services,-1.11,4.001,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,TLN,blue,3,0,True,missing,missing,mid,above,False,False,False,False,bad,8,2,dead,mid,flat,Utilities,-1.663,-2.448,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,WB,blue,3,0,True,missing,missing,high,below,False,False,False,False,good,7,2,normal,mid,flat,Communication Services,-4.005,-6.142,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-20,WMS,blue,3,0,True,missing,missing,mid,above,False,False,False,False,neutral,8,1,dead,mid,flat,Industrials,-2.712,-1.83,,,buy,sell,hot_ab_peer+steady_blue+rsi_oversold+gap_down
+2026-08-21,ALVO,hot_ab_peer,20,0,True,good,good,low,above,True,True,True,False,good,17,0,hot,mid,flat,Healthcare,,,,,buy,buy,hot_ab_peer
+2026-08-21,MT,hot_ab_peer,20,0,True,good,good,low,below,False,True,True,False,good,17,0,hot,mid,down,Basic Materials,,,,,buy,hold,hot_ab_peer
+2026-08-21,VIRT,hot_ab_peer,20,0,True,good,good,mid,above,True,True,True,False,good,17,0,hot,mid,flat,Financial,,,,,buy,buy,hot_ab_peer
+2026-08-21,AZN,hot_ab_peer,19,0,True,good,good,low,above,False,True,True,False,good,17,0,hot,mid,flat,Healthcare,,,,,buy,hold,hot_ab_peer
+2026-08-21,FUTU,hot_ab_peer,19,0,True,good,good,mid,above,False,True,True,False,good,17,0,hot,mid,up,Financial,,,,,buy,buy,hot_ab_peer
+2026-08-21,PCG,hot_ab_peer,19,0,True,good,good,low,above,False,True,True,False,good,17,0,hot,mid,flat,Utilities,,,,,buy,buy,hot_ab_peer
+2026-08-21,SUZ,hot_ab_peer,19,0,True,good,good,low,above,False,True,True,False,good,17,0,hot,mid,flat,Basic Materials,,,,,buy,buy,hot_ab_peer
+2026-08-21,AKBA,hot_ab_peer,15,0,True,good,good,mid,below,True,True,False,False,good,17,0,hot,mid,flat,Healthcare,,,,,buy,buy,hot_ab_peer
+2026-08-21,OPCH,steady_blue,18,0,True,good,good,high,above,True,True,True,False,good,17,0,dead,mid,down,Healthcare,,,,,buy,buy,steady_blue
+2026-08-21,CGON,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,17,0,normal,mid,flat,Healthcare,,,,,buy,buy,steady_blue
+2026-08-21,GGB,steady_blue,17,0,True,good,good,low,below,False,True,True,False,good,17,0,normal,mid,down,Basic Materials,,,,,buy,buy,steady_blue
+2026-08-21,HTGC,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-21,LLY,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,normal,mid,flat,Healthcare,,,,,buy,buy,steady_blue
+2026-08-21,SOFI,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-21,TRU,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-21,UMH,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-21,V,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-21,APLE,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,17,0,dead,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-21,CTRE,steady_blue,17,0,True,good,good,high,below,True,True,True,False,good,17,0,dead,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-21,DRH,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,dead,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-21,AGRO,alarm_rebound,9,0,False,good,good,mid,above,False,False,False,True,bad,13,2,hot,mid,flat,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-08-21,BYND,alarm_rebound,9,0,False,good,good,high,below,False,False,False,True,bad,13,2,hot,mid,flat,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-08-21,GO,alarm_rebound,7,0,False,good,good,high,above,True,False,False,True,bad,13,2,dead,mid,flat,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-08-21,BOOT,alarm_rebound,6,0,False,good,good,mid,above,False,False,False,True,bad,13,2,normal,mid,flat,Consumer Cyclical,,,,,buy,buy,alarm_rebound
+2026-08-21,CELH,alarm_rebound,6,0,False,good,good,high,above,False,False,False,True,bad,13,2,normal,mid,flat,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-08-21,ALEC,hot_ab_peer,15,0,True,good,good,mid,above,True,True,False,False,good,16,0,hot,mid,flat,Healthcare,4.425,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,BEN,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,16,0,normal,mid,flat,Financial,1.001,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,BMEA,hot_ab_peer,19,0,True,good,good,high,above,False,True,True,False,good,16,0,hot,mid,flat,Healthcare,0.735,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,BRKR,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,16,0,normal,mid,flat,Healthcare,-0.601,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,CATX,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,16,0,normal,mid,up,Healthcare,2.804,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,CF,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,16,0,normal,mid,flat,Basic Materials,3.103,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,CRSP,hot_ab_peer,19,0,True,good,good,high,above,False,True,True,False,good,16,0,hot,mid,up,Healthcare,2.374,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,CRSR,gap_down,6,0,True,good,bad,high,below,True,False,False,False,bad,13,2,normal,mid,down,Technology,0.183,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,ENB,rsi_oversold,11,0,True,good,neutral,low,below,True,False,True,False,good,14,1,normal,oversold,flat,Energy,-1.039,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,HNST,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,16,0,normal,mid,flat,Consumer Defensive,1.815,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,JPM,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Financial,0.009,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,KC,hot_ab_peer,20,0,True,good,good,low,above,True,True,True,False,neutral,16,0,hot,mid,up,Technology,-2.452,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,KRNY,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,16,0,normal,mid,flat,Financial,0.62,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,MU,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,normal,mid,flat,Technology,-0.775,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,NBIS,gap_down,5,0,True,good,neutral,high,above,False,False,False,False,bad,14,1,hot,mid,down,Technology,-0.445,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,PUK,hot_ab_peer,19,0,True,good,good,low,below,False,True,True,False,good,16,0,hot,mid,flat,Financial,2.14,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,SBS,rsi_oversold,11,0,True,good,bad,low,below,True,False,True,False,good,14,1,normal,oversold,flat,Utilities,3.363,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,TGT,hot_ab_peer,16,0,True,good,good,mid,above,True,True,False,False,good,16,0,hot,overbought,down,Consumer Defensive,4.543,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,TX,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,16,0,normal,mid,flat,Basic Materials,2.287,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,UBS,hot_ab_peer,20,0,True,good,good,low,above,True,True,True,False,good,16,0,hot,mid,flat,Financial,0.169,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,WBS,hot_ab_peer,19,0,True,good,good,mid,above,False,True,True,False,good,16,0,hot,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-21,ACMR,fade,1,5,False,good,good,mid,below,False,False,False,True,bad,15,1,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-21,ADM,fade,1,5,False,good,good,mid,above,False,False,False,True,good,15,1,normal,mid,flat,Consumer Defensive,,,,,sell,short,fade
+2026-08-21,BZ,fade,1,5,False,good,good,mid,below,False,False,False,True,good,15,1,normal,mid,flat,Communication Services,,,,,sell,short,fade
+2026-08-21,COP,fade,1,5,False,good,good,low,above,False,False,False,True,good,15,1,normal,overbought,flat,Energy,,,,,sell,short,fade
+2026-08-21,DUOT,fade,1,5,False,good,good,high,above,False,False,False,True,bad,15,1,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-21,DVN,fade,1,5,False,good,good,low,above,False,False,False,True,good,15,1,normal,mid,flat,Energy,,,,,sell,short,fade
+2026-08-21,EL,fade,1,5,False,good,good,mid,above,False,False,False,True,good,15,1,normal,overbought,flat,Consumer Defensive,,,,,sell,short,fade
+2026-08-21,KO,fade,1,5,False,good,good,low,above,False,False,False,True,neutral,15,1,normal,overbought,flat,Consumer Defensive,,,,,sell,short,fade
+2026-08-21,MKC,fade,1,5,False,good,good,mid,above,False,False,False,True,good,15,1,normal,mid,flat,Consumer Defensive,,,,,sell,short,fade
+2026-08-21,MRVL,fade,2,5,False,good,good,mid,above,True,False,False,True,bad,15,1,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-21,PLTR,fade,2,5,False,good,good,mid,above,True,False,False,True,bad,15,1,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-21,TGT,fade,1,5,False,good,good,mid,above,False,False,False,True,good,15,1,normal,overbought,flat,Consumer Defensive,,,,,sell,short,fade
+2026-08-21,APPN,fade,1,5,False,good,good,high,above,False,False,False,True,bad,15,1,dead,overbought,flat,Technology,,,,,sell,short,fade
+2026-08-21,BG,fade,1,5,False,good,good,mid,above,False,False,False,True,good,15,1,dead,mid,flat,Consumer Defensive,,,,,sell,short,fade
+2026-08-21,CALX,fade,1,5,False,good,good,high,above,False,False,False,True,bad,15,1,dead,mid,flat,Technology,,,,,sell,short,fade
+2026-08-21,EVER,fade,1,5,False,good,good,high,above,False,False,False,True,good,15,1,dead,mid,flat,Communication Services,,,,,sell,short,fade
+2026-08-21,XOM,fade,-2,5,False,good,neutral,low,above,False,False,False,True,good,14,1,normal,overbought,flat,Energy,,,,,sell,short,fade
+2026-08-21,HLX,fade,-2,5,False,good,neutral,mid,above,False,False,False,True,good,14,1,dead,mid,flat,Energy,,,,,sell,short,fade
+2026-08-21,HPK,fade,1,5,False,good,good,high,above,False,False,False,True,neutral,14,1,dead,mid,up,Energy,,,,,sell,short,fade
+2026-08-21,NXE,fade,-2,5,False,good,neutral,mid,above,False,False,False,True,good,14,1,dead,mid,flat,Energy,,,,,sell,short,fade
+2026-08-21,HWM,fade,1,5,False,good,good,low,below,False,False,False,True,bad,14,2,dead,mid,flat,Industrials,,,,,sell,short,fade
+2026-08-27,ROST,hot_ab_peer,16,0,True,good,good,mid,below,True,False,True,False,good,16,1,hot,mid,up,Consumer Cyclical,,,,,buy,buy,hot_ab_peer
+2026-08-27,G,hot_ab_peer,15,0,True,good,good,mid,above,True,True,False,False,good,18,0,hot,mid,flat,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-27,BKKT,hot_ab_peer,14,0,True,good,good,high,above,False,True,False,False,good,18,0,hot,mid,up,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-27,BTDR,hot_ab_peer,14,0,True,good,good,high,above,False,True,False,False,good,18,0,hot,mid,up,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-27,TRON,hot_ab_peer,11,0,True,good,good,high,above,True,False,False,False,good,16,1,hot,overbought,up,Consumer Cyclical,,,,,buy,buy,hot_ab_peer
+2026-08-27,DSX,hot_ab_peer,10,0,True,good,good,low,above,False,False,False,False,good,16,1,hot,overbought,flat,Industrials,,,,,buy,buy,hot_ab_peer
+2026-08-27,ALT,hot_ab_peer,10,0,False,good,good,high,above,True,False,False,True,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,buy,hot_ab_peer
+2026-08-27,ALVO,hot_ab_peer,10,0,False,good,good,low,above,True,False,False,True,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,hold,hot_ab_peer
+2026-08-27,ACMR,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,19,0,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-08-27,ADSK,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,19,0,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-08-27,AMD,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,19,0,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-08-27,CSWC,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,18,0,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-27,PSEC,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,18,0,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-27,MUFG,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-27,PRAA,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-27,SKWD,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-27,SLM,steady_blue,17,0,True,good,good,high,below,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-27,META,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-27,PSO,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-27,DIS,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,dead,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-27,DV,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,dead,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-27,TIGO,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,dead,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-27,ARCT,alarm_rebound,10,0,False,good,good,high,above,True,False,False,True,bad,15,1,hot,overbought,flat,Healthcare,,,,,buy,buy,alarm_rebound
+2026-08-27,CYPH,alarm_rebound,10,0,False,good,good,mid,above,True,False,False,True,bad,15,1,hot,overbought,up,Healthcare,,,,,buy,buy,alarm_rebound
+2026-08-27,GUTS,alarm_rebound,10,0,False,good,good,low,above,True,False,False,True,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,buy,alarm_rebound
+2026-08-27,AGRO,alarm_rebound,9,0,False,good,good,mid,above,False,False,False,True,bad,13,2,hot,mid,flat,Consumer Defensive,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,AKBA,hot_ab_peer,15,0,True,good,good,mid,below,True,True,False,False,good,17,0,hot,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,APLE,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,17,0,dead,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,AZN,hot_ab_peer,19,0,True,good,good,low,above,False,True,True,False,good,17,0,hot,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,BOOT,alarm_rebound,6,0,False,good,good,mid,above,False,False,False,True,bad,13,2,normal,mid,flat,Consumer Cyclical,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,BYND,alarm_rebound,9,0,False,good,good,high,below,False,False,False,True,bad,13,2,hot,mid,flat,Consumer Defensive,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,CELH,alarm_rebound,6,0,False,good,good,high,above,False,False,False,True,bad,13,2,normal,mid,flat,Consumer Defensive,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,CGON,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,17,0,normal,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,CTRE,steady_blue,17,0,True,good,good,high,below,True,True,True,False,good,17,0,dead,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,DRH,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,dead,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,FUTU,hot_ab_peer,19,0,True,good,good,mid,above,False,True,True,False,good,17,0,hot,mid,up,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,GGB,steady_blue,17,0,True,good,good,low,below,False,True,True,False,good,17,0,normal,mid,down,Basic Materials,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,GO,alarm_rebound,7,0,False,good,good,high,above,True,False,False,True,bad,13,2,dead,mid,flat,Consumer Defensive,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,HTGC,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,LLY,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,normal,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,MT,hot_ab_peer,20,0,True,good,good,low,below,False,True,True,False,good,17,0,hot,mid,down,Basic Materials,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,OPCH,steady_blue,18,0,True,good,good,high,above,True,True,True,False,good,17,0,dead,mid,down,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,PCG,hot_ab_peer,19,0,True,good,good,low,above,False,True,True,False,good,17,0,hot,mid,flat,Utilities,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,SOFI,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,SUZ,hot_ab_peer,19,0,True,good,good,low,above,False,True,True,False,good,17,0,hot,mid,flat,Basic Materials,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,TRU,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,UMH,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,V,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,normal,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,VIRT,hot_ab_peer,20,0,True,good,good,mid,above,True,True,True,False,good,17,0,hot,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-27,BCS,fade,-1,5,False,good,good,low,below,False,True,False,True,good,19,0,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-27,BGC,fade,-1,5,False,good,good,low,above,False,True,False,True,good,18,0,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-27,BSBR,fade,0,5,False,good,good,low,above,True,True,False,True,good,18,0,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-27,CEG,fade,-1,5,False,good,good,mid,above,False,True,False,True,good,18,0,normal,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-27,DB,fade,-1,5,False,good,good,low,above,False,True,False,True,good,18,0,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-27,EZPW,fade,-1,5,False,good,good,high,above,False,True,False,True,good,18,0,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-27,FUTU,fade,0,5,False,good,good,mid,above,True,True,False,True,good,18,0,normal,overbought,flat,Financial,,,,,sell,short,fade
+2026-08-27,AES,fade,0,5,False,good,good,low,above,True,True,False,True,good,17,0,normal,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-27,AUPH,fade,0,5,False,good,good,high,above,True,True,False,True,good,17,0,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-27,CRMD,fade,0,5,False,good,good,high,above,True,True,False,True,good,17,0,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-27,FBRT,fade,0,5,False,good,good,mid,above,True,True,False,True,good,17,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-27,PCG,fade,-1,5,False,good,good,low,above,False,True,False,True,good,17,0,normal,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-27,SBAC,fade,-1,5,False,good,good,low,above,False,True,False,True,good,17,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-27,SHO,fade,0,5,False,good,good,mid,below,True,True,False,True,good,17,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-27,UMH,fade,-1,5,False,good,good,mid,above,False,True,False,True,good,17,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-27,AHR,fade,0,5,False,good,good,high,above,True,True,False,True,good,17,0,dead,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-27,APLE,fade,-1,5,False,good,good,high,above,False,True,False,True,good,17,0,dead,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-27,CORT,fade,0,5,False,good,good,high,above,True,True,False,True,good,17,0,dead,overbought,flat,Healthcare,,,,,sell,short,fade
+2026-08-27,OGS,fade,-1,5,False,good,good,mid,above,False,True,False,True,good,17,0,dead,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-27,AU,fade,2,5,False,good,good,low,above,True,False,False,True,good,17,1,normal,overbought,up,Basic Materials,,,,,sell,short,fade
+2026-08-27,LIN,fade,2,5,False,good,good,low,above,True,False,False,True,good,17,1,normal,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-08-27,CNQ,fade,2,5,False,good,good,low,above,True,False,False,True,good,17,1,dead,overbought,flat,Energy,,,,,sell,short,fade
+2026-08-27,FCX,fade,5,5,False,good,good,low,above,True,False,False,True,good,17,1,hot,mid,up,Basic Materials,,,,,sell,short,fade
+2026-08-27,PLX,fade,0,5,False,good,good,mid,above,True,True,False,True,neutral,16,0,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-27,DXCM,fade,0,5,False,good,good,mid,above,True,True,False,True,neutral,16,0,dead,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-30,DTM,hot_ab_peer,11,0,True,good,good,mid,below,True,False,False,False,bad,14,2,hot,mid,flat,Energy,,,,,buy,buy,hot_ab_peer
+2026-08-30,ANF,hot_ab_peer,9,0,False,good,good,high,above,False,False,False,True,bad,14,2,hot,overbought,up,Consumer Cyclical,,,,,buy,buy,hot_ab_peer
+2026-08-30,CRML,hot_ab_peer,9,0,False,good,good,high,above,False,False,False,True,bad,14,2,hot,mid,flat,Basic Materials,,,,,buy,buy,hot_ab_peer
+2026-08-30,MATV,hot_ab_peer,9,0,False,good,good,low,above,False,False,False,True,bad,14,2,hot,mid,flat,Basic Materials,,,,,buy,buy,hot_ab_peer
+2026-08-30,URBN,hot_ab_peer,9,0,False,good,good,high,above,False,False,False,True,bad,14,2,hot,mid,up,Consumer Cyclical,,,,,buy,buy,hot_ab_peer
+2026-08-30,GDRX,hot_ab_peer,8,0,False,good,good,mid,above,True,False,False,False,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,buy,hot_ab_peer
+2026-08-30,BOX,hot_ab_peer,7,0,False,good,good,high,above,False,True,True,False,good,18,0,hot,mid,up,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-30,SMTC,hot_ab_peer,7,0,False,good,good,mid,above,False,True,False,False,good,18,0,hot,mid,flat,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-30,CDNS,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,19,0,normal,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-08-30,CRWD,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,19,0,normal,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-08-30,ADBE,steady_blue,17,0,True,good,good,mid,above,False,True,True,False,good,19,0,dead,mid,down,Technology,,,,,buy,buy,steady_blue
+2026-08-30,BRZE,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,18,0,normal,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-08-30,ES,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,buy,steady_blue
+2026-08-30,GLPI,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-30,SBS,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,buy,steady_blue
+2026-08-30,ZIP,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-30,SRE,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,dead,mid,flat,Utilities,,,,,buy,buy,steady_blue
+2026-08-30,AGNC,steady_blue,16,0,True,good,good,high,below,False,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-30,AMT,steady_blue,16,0,True,good,good,low,above,False,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-30,ATHM,steady_blue,16,0,True,good,good,low,below,False,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-30,BKH,steady_blue,16,0,True,good,good,high,above,False,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,buy,steady_blue
+2026-08-30,BXP,steady_blue,16,0,True,good,good,mid,above,False,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,buy,steady_blue
+2026-08-30,CNP,steady_blue,16,0,True,good,good,mid,below,False,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,buy,steady_blue
+2026-08-30,HAFN,alarm_rebound,8,0,False,good,good,low,above,True,False,False,True,bad,14,2,normal,mid,down,Industrials,,,,,buy,buy,alarm_rebound
+2026-08-30,ABNB,alarm_rebound,7,0,False,good,good,mid,above,True,False,False,True,bad,15,2,normal,mid,flat,Consumer Cyclical,,,,,buy,buy,alarm_rebound
+2026-08-30,ACMR,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,19,0,dead,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,ADSK,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,19,0,dead,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,ALT,hot_ab_peer,10,0,False,good,good,high,above,True,False,False,True,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,ALVO,hot_ab_peer,10,0,False,good,good,low,above,True,False,False,True,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,AMD,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,19,0,dead,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,ARCT,alarm_rebound,10,0,False,good,good,high,above,True,False,False,True,bad,15,1,hot,overbought,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,BKKT,hot_ab_peer,14,0,True,good,good,high,above,False,True,False,False,good,18,0,hot,mid,up,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,BTDR,hot_ab_peer,14,0,True,good,good,high,above,False,True,False,False,good,18,0,hot,mid,up,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,CSWC,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,18,0,normal,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,CYPH,alarm_rebound,10,0,False,good,good,mid,above,True,False,False,True,bad,15,1,hot,overbought,up,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,DIS,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,17,0,dead,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,DSX,hot_ab_peer,10,0,True,good,good,low,above,False,False,False,False,good,16,1,hot,overbought,flat,Industrials,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,DV,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,17,0,dead,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,G,hot_ab_peer,15,0,True,good,good,mid,above,True,True,False,False,good,18,0,hot,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,GUTS,alarm_rebound,10,0,False,good,good,low,above,True,False,False,True,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,META,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,MUFG,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,PRAA,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,PSEC,steady_blue,17,0,True,good,good,mid,above,True,True,True,False,good,18,0,normal,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,PSO,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,ROST,hot_ab_peer,16,0,True,good,good,mid,below,True,False,True,False,good,16,1,hot,mid,up,Consumer Cyclical,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,SKWD,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,SLM,steady_blue,17,0,True,good,good,high,below,True,True,True,False,good,18,0,dead,mid,flat,Financial,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,TIGO,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,dead,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,TRON,hot_ab_peer,11,0,True,good,good,high,above,True,False,False,False,good,16,1,hot,overbought,up,Consumer Cyclical,,,,,buy,sell,hot_ab_peer+steady_blue+alarm_rebound
+2026-08-30,ACMR,fade,-1,5,False,good,good,mid,below,False,True,False,True,good,18,0,dead,mid,flat,Technology,,,,,sell,short,fade
+2026-08-30,AMD,fade,0,5,False,good,good,low,below,True,True,False,True,good,18,0,dead,mid,flat,Technology,,,,,sell,short,fade
+2026-08-30,LRCX,fade,-1,5,False,good,good,low,below,False,True,False,True,good,18,0,dead,mid,flat,Technology,,,,,sell,short,fade
+2026-08-30,BR,fade,-4,5,False,good,neutral,low,above,False,True,False,True,good,17,0,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-30,DBX,fade,-4,5,False,good,neutral,high,above,False,True,False,True,good,17,0,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-30,EXLS,fade,-4,5,False,good,neutral,mid,above,False,True,False,True,good,17,0,normal,overbought,flat,Technology,,,,,sell,short,fade
+2026-08-30,BNS,fade,1,5,False,good,good,low,above,False,False,False,True,good,17,1,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-30,ING,fade,1,5,False,good,good,low,above,False,False,False,True,good,17,1,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-30,MA,fade,1,5,False,good,good,low,above,False,False,False,True,good,17,1,normal,overbought,flat,Financial,,,,,sell,short,fade
+2026-08-30,AES,fade,-4,5,False,good,neutral,low,above,False,True,False,True,good,16,0,normal,mid,flat,Utilities,,,,,sell,hold,fade
+2026-08-30,ARR,fade,-4,5,False,good,neutral,high,below,False,True,False,True,good,16,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-30,CRMD,fade,-1,5,False,good,good,high,above,False,True,False,True,neutral,16,0,normal,mid,flat,Healthcare,,,,,sell,hold,fade
+2026-08-30,DTE,fade,-4,5,False,good,neutral,low,below,False,True,False,True,good,16,0,normal,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-30,EFC,fade,-4,5,False,good,neutral,mid,below,False,True,False,True,good,16,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-30,FCPT,fade,-4,5,False,neutral,good,mid,above,False,True,False,True,good,16,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-30,PLD,fade,-4,5,False,good,neutral,low,above,False,True,False,True,good,16,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-30,RLJ,fade,-4,5,False,good,neutral,high,below,False,True,False,True,good,16,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-30,RNW,fade,-3,5,False,good,neutral,low,above,True,True,False,True,good,16,0,normal,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-30,WY,fade,-4,5,False,good,neutral,mid,below,False,True,False,True,good,16,0,normal,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-30,ABX,fade,2,5,False,good,good,high,above,True,False,False,True,good,16,1,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-30,AJG,fade,2,5,False,good,good,low,above,True,False,False,True,good,16,1,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-30,APAM,fade,2,5,False,good,good,mid,above,True,False,False,True,good,16,1,normal,mid,flat,Financial,,,,,sell,short,fade
+2026-08-30,DEC,fade,1,5,False,good,good,mid,above,False,False,False,True,good,16,1,normal,mid,flat,Energy,,,,,sell,short,fade
+2026-08-30,RRC,fade,1,5,False,good,good,high,above,False,False,False,True,good,16,1,normal,mid,flat,Energy,,,,,sell,short,fade
+2026-08-31,CRM,hot_ab_peer,11,0,True,good,good,mid,above,True,False,False,False,good,25,2,hot,overbought,flat,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-31,BEKE,hot_ab_peer,10,0,False,good,good,low,above,True,False,False,True,good,15,2,hot,mid,up,Real Estate,,,,,buy,buy,hot_ab_peer
+2026-08-31,SGI,hot_ab_peer,9,0,False,good,good,low,below,False,False,False,True,bad,11,3,hot,mid,flat,Consumer Cyclical,,,,,buy,buy,hot_ab_peer
+2026-08-31,ESTC,hot_ab_peer,8,0,False,good,good,mid,above,True,False,False,False,good,16,2,hot,overbought,up,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-31,UPXI,hot_ab_peer,8,0,False,good,good,high,above,False,False,False,False,bad,16,2,hot,mid,down,Communication Services,,,,,buy,buy,hot_ab_peer
+2026-08-31,DFDV,hot_ab_peer,8,0,False,good,good,high,above,True,False,False,False,bad,15,2,hot,overbought,flat,Financial,,,,,buy,buy,hot_ab_peer
+2026-08-31,ESI,hot_ab_peer,8,0,False,good,good,low,below,True,False,False,False,good,14,2,hot,mid,flat,Basic Materials,,,,,buy,buy,hot_ab_peer
+2026-08-31,TENB,hot_ab_peer,8,0,False,good,good,high,above,True,False,False,False,good,14,2,hot,mid,flat,Technology,,,,,buy,buy,hot_ab_peer
+2026-08-31,CVE,steady_blue,13,0,True,good,good,mid,above,True,False,True,False,good,20,1,normal,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-08-31,CVX,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,20,1,normal,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-08-31,BMO,steady_blue,13,0,True,good,good,low,below,True,False,True,False,good,19,1,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-31,RWAY,steady_blue,13,0,True,good,good,high,above,True,False,True,False,good,17,1,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-31,VOD,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,16,1,dead,mid,flat,Communication Services,,,,,buy,buy,steady_blue
+2026-08-31,COST,steady_blue,12,0,True,good,good,low,below,False,False,True,False,good,17,1,normal,mid,flat,Consumer Defensive,,,,,buy,buy,steady_blue
+2026-08-31,DTM,steady_blue,12,0,True,good,good,mid,below,False,False,True,False,good,17,1,normal,mid,flat,Energy,,,,,buy,hold,steady_blue
+2026-08-31,XXI,steady_blue,10,0,True,good,neutral,low,above,True,False,True,False,good,16,1,normal,mid,flat,Consumer Defensive,,,,,buy,buy,steady_blue
+2026-08-31,AON,steady_blue,9,0,True,good,neutral,low,above,False,False,True,False,good,18,1,dead,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-31,UCB,steady_blue,9,0,True,good,neutral,mid,below,False,False,True,False,good,16,1,normal,mid,flat,Financial,,,,,buy,buy,steady_blue
+2026-08-31,AMZN,blue,8,0,True,good,good,low,below,True,False,False,False,good,19,2,normal,mid,flat,Consumer Cyclical,,,,,buy,buy,blue
+2026-08-31,LIN,blue,8,0,True,good,good,low,above,True,False,False,False,good,19,2,dead,mid,flat,Basic Materials,,,,,buy,buy,blue
+2026-08-31,OXY,blue,8,0,True,good,good,low,above,True,False,False,False,good,19,2,dead,mid,flat,Energy,,,,,buy,buy,blue
+2026-08-31,APD,blue,8,0,True,good,good,low,above,True,False,False,False,good,17,2,normal,mid,flat,Basic Materials,,,,,buy,buy,blue
+2026-08-31,TALO,blue,8,0,True,good,good,mid,above,True,False,False,False,good,16,2,normal,mid,flat,Energy,,,,,buy,buy,blue
+2026-08-31,VTS,blue,8,0,True,good,good,high,above,True,False,False,False,good,16,2,normal,mid,flat,Energy,,,,,buy,buy,blue
+2026-08-31,SDGR,blue,8,0,True,good,good,high,above,True,False,False,False,good,15,2,normal,mid,flat,Healthcare,,,,,buy,buy,blue
+2026-08-31,ABNB,alarm_rebound,7,0,False,good,good,mid,above,True,False,False,True,bad,15,2,normal,mid,flat,Consumer Cyclical,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,ADBE,steady_blue,17,0,True,good,good,mid,above,False,True,True,False,good,19,0,dead,mid,down,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,AGNC,steady_blue,16,0,True,good,good,high,below,False,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,AMT,steady_blue,16,0,True,good,good,low,above,False,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,ANF,hot_ab_peer,9,0,False,good,good,high,above,False,False,False,True,bad,14,2,hot,overbought,up,Consumer Cyclical,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,ATHM,steady_blue,16,0,True,good,good,low,below,False,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,BKH,steady_blue,16,0,True,good,good,high,above,False,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,BOX,hot_ab_peer,7,0,False,good,good,high,above,False,True,True,False,good,18,0,hot,mid,up,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,BRZE,steady_blue,17,0,True,good,good,high,above,True,True,True,False,good,18,0,normal,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,BXP,steady_blue,16,0,True,good,good,mid,above,False,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,CDNS,steady_blue,17,0,True,good,good,low,above,True,True,True,False,good,19,0,normal,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,CNP,steady_blue,16,0,True,good,good,mid,below,False,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,CRML,hot_ab_peer,9,0,False,good,good,high,above,False,False,False,True,bad,14,2,hot,mid,flat,Basic Materials,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,CRWD,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,19,0,normal,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,ES,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,GDRX,hot_ab_peer,8,0,False,good,good,mid,above,True,False,False,False,bad,15,1,hot,mid,flat,Healthcare,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,GLPI,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,normal,mid,flat,Real Estate,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,HAFN,alarm_rebound,8,0,False,good,good,low,above,True,False,False,True,bad,14,2,normal,mid,down,Industrials,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,MATV,hot_ab_peer,9,0,False,good,good,low,above,False,False,False,True,bad,14,2,hot,mid,flat,Basic Materials,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,SBS,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,normal,mid,flat,Utilities,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,SMTC,hot_ab_peer,7,0,False,good,good,mid,above,False,True,False,False,good,18,0,hot,mid,flat,Technology,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,SRE,steady_blue,17,0,True,good,good,low,below,True,True,True,False,good,17,0,dead,mid,flat,Utilities,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,URBN,hot_ab_peer,9,0,False,good,good,high,above,False,False,False,True,bad,14,2,hot,mid,up,Consumer Cyclical,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,ZIP,steady_blue,17,0,True,good,good,mid,below,True,True,True,False,good,17,0,normal,mid,flat,Communication Services,,,,,buy,sell,hot_ab_peer+steady_blue+blue
+2026-08-31,CEG,fade,4,5,True,good,good,low,above,False,False,False,True,good,21,2,dead,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-31,NVDA,fade,2,3,False,good,good,low,below,True,False,False,True,good,17,3,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-31,ADI,fade,-2,3,False,good,bad,low,below,False,False,False,True,good,17,6,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-31,APH,fade,1,3,False,good,good,low,below,False,False,False,True,good,16,3,dead,mid,flat,Technology,,,,,sell,short,fade
+2026-08-31,KEYS,fade,1,3,False,good,good,low,below,False,False,False,True,good,15,3,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-31,B,fade,-2,3,False,good,bad,low,above,False,False,False,True,good,15,4,normal,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-08-31,FCX,fade,-2,3,False,good,bad,low,above,False,False,False,True,good,15,4,normal,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-08-31,CDNA,fade,1,3,False,good,good,high,above,False,False,False,True,good,14,3,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-31,ENTG,fade,1,3,False,good,good,mid,below,False,False,False,True,good,14,3,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-31,HPQ,fade,2,3,False,good,good,high,above,True,False,False,True,good,14,3,normal,mid,flat,Technology,,,,,sell,short,fade
+2026-08-31,ARIS,fade,-2,3,False,good,neutral,low,above,False,False,False,True,good,13,3,normal,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-08-31,ITW,fade,2,3,False,good,good,mid,below,True,False,False,True,bad,13,4,normal,mid,flat,Industrials,,,,,sell,short,fade
+2026-08-31,ATAT,fade,1,3,False,good,good,low,above,False,False,False,True,good,12,3,normal,mid,flat,Consumer Cyclical,,,,,sell,short,fade
+2026-08-31,AVAH,fade,1,3,False,good,good,mid,above,False,False,False,True,good,12,3,normal,overbought,flat,Healthcare,,,,,sell,short,fade
+2026-08-31,GAU,fade,1,3,False,good,good,low,above,False,False,False,True,good,12,3,normal,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-08-31,GMAB,fade,2,3,False,good,good,low,above,True,False,False,True,good,12,3,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-31,HRMY,fade,2,3,False,good,good,high,above,True,False,False,True,good,12,3,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-31,LFST,fade,2,3,False,good,good,mid,above,True,False,False,True,good,12,3,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-31,PLX,fade,1,3,False,good,good,mid,above,False,False,False,True,good,12,3,normal,mid,flat,Healthcare,,,,,sell,short,fade
+2026-08-31,TFPM,fade,1,3,False,good,good,low,above,False,False,False,True,good,12,3,normal,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-08-31,ETR,fade,2,3,False,good,good,mid,below,True,False,False,True,good,12,3,dead,mid,flat,Utilities,,,,,sell,short,fade
+2026-08-31,LTC,fade,1,3,False,good,good,mid,above,False,False,False,True,good,12,3,dead,mid,flat,Real Estate,,,,,sell,short,fade
+2026-08-31,AEIS,fade,2,3,False,good,good,mid,below,True,False,False,True,bad,12,4,normal,mid,flat,Industrials,,,,,sell,short,fade
+2026-08-31,BE,fade,1,3,False,good,good,mid,below,False,False,False,True,bad,12,4,normal,mid,flat,Industrials,,,,,sell,short,fade
+2026-08-31,DUK,fade,2,3,False,good,good,low,below,True,False,False,True,bad,12,4,normal,mid,flat,Utilities,,,,,sell,short,fade
+2026-09-01,TEL,steady_blue,14,0,True,good,good,low,below,True,False,True,False,good,14,1,dead,mid,down,Technology,,,,,buy,buy,steady_blue
+2026-09-01,MU,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,22,1,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-09-01,KMI,steady_blue,13,0,True,good,good,low,below,True,False,True,False,good,19,1,dead,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-09-01,DHT,steady_blue,13,0,True,good,good,high,above,True,False,True,False,good,18,1,dead,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-09-01,LNG,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,18,1,dead,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-09-01,PAGP,steady_blue,13,0,True,good,good,mid,above,True,False,True,False,good,18,1,dead,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-09-01,ASX,steady_blue,13,0,True,good,good,low,below,True,False,True,False,good,17,1,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-09-01,DVN,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,17,1,dead,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-09-01,KEYS,steady_blue,13,0,True,good,good,low,below,True,False,True,False,good,17,1,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-09-01,UMC,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,17,1,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-09-01,AM,steady_blue,13,0,True,good,good,mid,above,True,False,True,False,good,16,1,dead,mid,flat,Energy,,,,,buy,buy,steady_blue
+2026-09-01,APH,steady_blue,13,0,True,good,good,low,below,True,False,True,False,good,16,1,dead,mid,flat,Technology,,,,,buy,buy,steady_blue
+2026-09-01,ED,blue,10,0,True,good,good,low,below,True,False,False,False,bad,10,4,dead,oversold,down,Utilities,,,,,buy,buy,blue
+2026-09-01,HNST,alarm_rebound,8,0,False,good,good,high,above,True,False,False,True,bad,13,3,dead,mid,down,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-09-01,BRK-B,alarm_rebound,7,0,False,good,good,low,below,True,False,False,True,good,15,2,dead,mid,flat,Financial,,,,,buy,buy,alarm_rebound
+2026-09-01,DG,alarm_rebound,7,0,False,good,good,low,above,True,False,False,True,good,15,2,dead,mid,flat,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-09-01,KKR,alarm_rebound,7,0,False,good,good,low,above,True,False,False,True,good,15,2,dead,mid,flat,Financial,,,,,buy,buy,alarm_rebound
+2026-09-01,SMFG,alarm_rebound,7,0,False,good,good,low,above,True,False,False,True,good,15,2,dead,mid,flat,Financial,,,,,buy,buy,alarm_rebound
+2026-09-01,SVM,alarm_rebound,7,0,False,good,good,high,above,True,False,False,True,neutral,14,2,dead,mid,flat,Basic Materials,,,,,buy,buy,alarm_rebound
+2026-09-01,APO,alarm_rebound,7,0,False,good,good,mid,above,True,False,False,True,good,13,2,dead,mid,flat,Financial,,,,,buy,buy,alarm_rebound
+2026-09-01,BMO,alarm_rebound,7,0,False,good,good,low,below,True,False,False,True,good,13,2,dead,mid,flat,Financial,,,,,buy,hold,alarm_rebound
+2026-09-01,CRBG,alarm_rebound,7,0,False,good,good,mid,below,True,False,False,True,good,13,2,dead,mid,flat,Financial,,,,,buy,buy,alarm_rebound
+2026-09-01,RCI,alarm_rebound,7,0,False,good,good,mid,above,True,False,False,True,good,13,2,dead,mid,flat,Communication Services,,,,,buy,buy,alarm_rebound
+2026-09-01,DOLE,alarm_rebound,7,0,False,good,good,mid,above,True,False,False,True,bad,11,3,dead,mid,flat,Consumer Defensive,,,,,buy,buy,alarm_rebound
+2026-09-01,GGB,alarm_rebound,7,0,False,good,good,low,below,True,False,False,True,bad,11,3,dead,mid,flat,Basic Materials,,,,,buy,buy,alarm_rebound
+2026-09-01,AMZN,blue,8,0,True,good,good,low,below,True,False,False,False,good,19,2,normal,mid,flat,Consumer Cyclical,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,AON,steady_blue,9,0,True,good,neutral,low,above,False,False,True,False,good,18,1,dead,mid,flat,Financial,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,APD,blue,8,0,True,good,good,low,above,True,False,False,False,good,17,2,normal,mid,flat,Basic Materials,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,BEKE,hot_ab_peer,10,0,False,good,good,low,above,True,False,False,True,good,15,2,hot,mid,up,Real Estate,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,COST,steady_blue,12,0,True,good,good,low,below,False,False,True,False,good,17,1,normal,mid,flat,Consumer Defensive,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,CRM,hot_ab_peer,11,0,True,good,good,mid,above,True,False,False,False,good,25,2,hot,overbought,flat,Technology,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,CVE,steady_blue,13,0,True,good,good,mid,above,True,False,True,False,good,20,1,normal,mid,flat,Energy,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,CVX,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,20,1,normal,mid,flat,Energy,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,DFDV,hot_ab_peer,8,0,False,good,good,high,above,True,False,False,False,bad,15,2,hot,overbought,flat,Financial,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,DTM,steady_blue,12,0,True,good,good,mid,below,False,False,True,False,good,17,1,normal,mid,flat,Energy,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,ESI,hot_ab_peer,8,0,False,good,good,low,below,True,False,False,False,good,14,2,hot,mid,flat,Basic Materials,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,ESTC,hot_ab_peer,8,0,False,good,good,mid,above,True,False,False,False,good,16,2,hot,overbought,up,Technology,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,LIN,blue,8,0,True,good,good,low,above,True,False,False,False,good,19,2,dead,mid,flat,Basic Materials,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,OXY,blue,8,0,True,good,good,low,above,True,False,False,False,good,19,2,dead,mid,flat,Energy,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,RWAY,steady_blue,13,0,True,good,good,high,above,True,False,True,False,good,17,1,normal,mid,flat,Financial,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,SDGR,blue,8,0,True,good,good,high,above,True,False,False,False,good,15,2,normal,mid,flat,Healthcare,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,SGI,hot_ab_peer,9,0,False,good,good,low,below,False,False,False,True,bad,11,3,hot,mid,flat,Consumer Cyclical,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,TALO,blue,8,0,True,good,good,mid,above,True,False,False,False,good,16,2,normal,mid,flat,Energy,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,TENB,hot_ab_peer,8,0,False,good,good,high,above,True,False,False,False,good,14,2,hot,mid,flat,Technology,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,UCB,steady_blue,9,0,True,good,neutral,mid,below,False,False,True,False,good,16,1,normal,mid,flat,Financial,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,UPXI,hot_ab_peer,8,0,False,good,good,high,above,False,False,False,False,bad,16,2,hot,mid,down,Communication Services,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,VOD,steady_blue,13,0,True,good,good,low,above,True,False,True,False,good,16,1,dead,mid,flat,Communication Services,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,VTS,blue,8,0,True,good,good,high,above,True,False,False,False,good,16,2,normal,mid,flat,Energy,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,XXI,steady_blue,10,0,True,good,neutral,low,above,True,False,True,False,good,16,1,normal,mid,flat,Consumer Defensive,,,,,buy,sell,steady_blue+blue+alarm_rebound
+2026-09-01,DEC,fade,-1,5,False,good,bad,mid,above,True,False,False,True,good,18,2,dead,mid,flat,Energy,,,,,sell,short,fade
+2026-09-01,MPC,fade,-2,5,False,good,neutral,low,above,False,False,False,True,good,17,1,dead,overbought,up,Energy,,,,,sell,short,fade
+2026-09-01,VLO,fade,-2,5,False,good,neutral,mid,above,False,False,False,True,good,17,1,dead,overbought,flat,Energy,,,,,sell,short,fade
+2026-09-01,BNS,fade,1,5,False,good,good,low,above,False,False,False,True,good,16,2,dead,mid,flat,Financial,,,,,sell,short,fade
+2026-09-01,TS,fade,-1,5,False,good,bad,low,above,True,False,False,True,good,16,2,dead,mid,flat,Energy,,,,,sell,short,fade
+2026-09-01,NEXT,fade,-2,5,False,good,neutral,high,above,False,False,False,True,good,15,1,dead,mid,flat,Energy,,,,,sell,short,fade
+2026-09-01,WTTR,fade,-2,5,False,good,bad,mid,below,False,False,False,True,good,14,2,dead,mid,up,Energy,,,,,sell,short,fade
+2026-09-01,LIN,fade,1,3,False,good,good,low,above,False,False,False,True,good,17,3,dead,mid,flat,Basic Materials,,,,,sell,short,fade
+2026-09-01,BKNG,fade,-1,3,False,good,bad,low,below,True,False,False,True,good,15,4,dead,mid,flat,Consumer Cyclical,,,,,sell,short,fade
+2026-09-01,BTI,fade,-2,3,False,good,bad,low,below,False,False,False,True,good,15,4,dead,mid,flat,Consumer Defensive,,,,,sell,short,fade
+2026-09-01,GSK,fade,-2,3,False,good,bad,low,below,False,False,False,True,good,15,4,dead,mid,flat,Healthcare,,,,,sell,short,fade
+2026-09-01,AMZN,fade,2,3,False,good,good,low,below,False,False,False,True,good,14,3,dead,mid,down,Consumer Cyclical,,,,,sell,short,fade
+2026-09-01,BEKE,fade,2,3,False,good,good,low,above,False,False,False,True,good,14,3,dead,mid,down,Real Estate,,,,,sell,short,fade
+2026-09-01,BUD,fade,1,3,False,good,good,low,below,False,False,False,True,good,14,3,dead,mid,flat,Consumer Defensive,,,,,sell,short,fade
+2026-09-01,BZ,fade,1,3,False,good,good,mid,above,False,False,False,True,good,14,3,dead,mid,flat,Communication Services,,,,,sell,short,fade
+2026-09-01,CCEP,fade,1,3,False,good,good,mid,above,False,False,False,True,good,14,3,dead,mid,flat,Consumer Defensive,,,,,sell,short,fade
+2026-09-01,CFFN,fade,1,3,False,good,good,mid,below,False,False,False,True,good,14,3,dead,mid,flat,Financial,,,,,sell,short,fade
+2026-09-01,DB,fade,1,3,False,good,good,low,above,False,False,False,True,good,14,3,dead,overbought,flat,Financial,,,,,sell,short,fade
+2026-09-01,EW,fade,-1,3,False,good,neutral,low,below,True,False,False,True,good,14,3,dead,mid,flat,Healthcare,,,,,sell,short,fade
+2026-09-01,FAF,fade,2,3,False,good,good,mid,above,True,False,False,True,good,14,3,dead,mid,flat,Financial,,,,,sell,short,fade
+2026-09-01,HUM,fade,1,3,False,good,good,low,above,False,False,False,True,good,14,3,dead,mid,flat,Healthcare,,,,,sell,short,fade
+2026-09-01,MFG,fade,2,3,False,good,good,low,above,True,False,False,True,good,14,3,dead,mid,flat,Financial,,,,,sell,short,fade
+2026-09-01,NFLX,fade,1,3,False,good,good,low,above,False,False,False,True,good,14,3,dead,mid,flat,Communication Services,,,,,sell,short,fade
+2026-09-01,SNN,fade,1,3,False,good,good,low,below,False,False,False,True,good,14,3,dead,mid,flat,Healthcare,,,,,sell,short,fade
+2026-09-01,TCOM,fade,1,3,False,good,good,low,above,False,False,False,True,good,14,3,dead,mid,flat,Consumer Cyclical,,,,,sell,short,fade
