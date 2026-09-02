@@ -64,30 +64,60 @@ def test_stand_down_blocks_new_buys():
 
 
 def test_haircut_only_on_new_buy():
-    held = {"OLD": {"age": 0, "src": "book"}}
+    held = {"OLD": {"age": 0, "src": "book", "entry_px": 100.0}}
     rec = step_hold(
         held,
         [{"ticker": "OLD", "source": "book", "stack": "blue"},
          {"ticker": "NEW", "source": "extra", "stack": "blue"}],
         hold=1, seats=2, hard_red="haircut_5", market_hard=True,
         rets={"OLD": 1.0, "NEW": -2.0},
+        bars={
+            "OLD": {"open": 100.0, "high": 102.0, "low": 99.0, "close": 101.0},
+            "NEW": {"open": 100.0, "high": 101.0, "low": 94.0, "close": 98.0},
+        },
+        prev_closes={"OLD": 100.0},
     )
     by = {n["ticker"]: n["ret_1d"] for n in rec["names"]}
+    assert rec["bought"] == ["NEW"]
+    assert rec["buys"][0]["buy_kind"] == "limit_5"
+    assert rec["buys"][0]["buy_px"] == 95.0
     assert by["OLD"] == 1.0
-    assert by["NEW"] == 3.0  # -2 + 5
-    assert rec["day_pnl"] == 2.0
+    assert abs(by["NEW"] - (98 / 95 - 1) * 100) < 1e-6
 
 
 def test_limit_5_skips_unless_dipped():
     rec = step_hold(
         {},
         [{"ticker": "DIP", "source": "book", "stack": "blue"},
-         {"ticker": "UP", "source": "book", "stack": "blue"}],
-        hold=1, seats=2, hard_red="limit_5", market_hard=True,
-        rets={"DIP": -6.0, "UP": 1.0},
+         {"ticker": "UP", "source": "book", "stack": "blue"},
+         {"ticker": "FAKE", "source": "book", "stack": "blue"}],
+        hold=1, seats=3, hard_red="limit_5", market_hard=True,
+        rets={"DIP": -6.0, "UP": 1.0, "FAKE": -8.0},
+        bars={
+            "DIP": {"open": 100.0, "high": 100.0, "low": 93.0, "close": 96.0},
+            "UP": {"open": 50.0, "high": 52.0, "low": 49.5, "close": 51.0},
+            "FAKE": {"open": 20.0, "high": 20.2, "low": 19.2, "close": 19.1},
+        },
     )
     assert rec["bought"] == ["DIP"]
+    assert rec["buys"][0]["buy_px"] == 95.0
+    assert rec["buys"][0]["buy_when"].startswith("intraday")
     assert any(s["ticker"] == "UP" and s["why"] == "limit_miss" for s in rec["skipped"])
+    assert any(s["ticker"] == "FAKE" and s["why"] == "limit_miss" for s in rec["skipped"])
+
+
+def test_haircut_falls_back_to_close_without_print():
+    rec = step_hold(
+        {},
+        [{"ticker": "NODIP", "source": "book", "stack": "blue"}],
+        hold=1, seats=1, hard_red="haircut_5", market_hard=True,
+        rets={"NODIP": -1.0},
+        bars={"NODIP": {"open": 10.0, "high": 10.2, "low": 9.7, "close": 9.9}},
+    )
+    assert rec["bought"] == ["NODIP"]
+    assert rec["buys"][0]["buy_kind"] == "close"
+    assert rec["buys"][0]["buy_px"] == 9.9
+    assert rec["buys"][0]["buy_when"] == "16:00 ET close"
 
 
 def test_color_filter():
@@ -119,6 +149,7 @@ if __name__ == "__main__":
     test_stand_down_blocks_new_buys()
     test_haircut_only_on_new_buy()
     test_limit_5_skips_unless_dipped()
+    test_haircut_falls_back_to_close_without_print()
     test_color_filter()
     test_extras_scale_with_book()
     test_spec_defaults_are_live_book()
