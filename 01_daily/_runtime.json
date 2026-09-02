@@ -1,8 +1,8 @@
 {
   "ok": false,
   "n_fail": 1,
-  "grok_busy": false,
-  "updated_at": "2026-09-02T02:20:31.051690-04:00",
+  "grok_busy": true,
+  "updated_at": "2026-09-02T05:47:57.680447-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -45,18 +45,18 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "classroom live (Hey. I just came online.) model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "Grok job running \u2014 not poking the classroom",
       "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "probe skipped",
       "action": "none"
     },
     {
@@ -72,18 +72,18 @@
       "id": "timeout",
       "name": "Grok turn timeout",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "all 10800s yaml=preopen_all.yml:10800,preopen_all.yml:10800,map_heat_postclose.yml:10800,ecs_preopen.sh:10800,ecs_map_postclose.sh:10800",
+      "status": "WARN",
+      "required": false,
+      "detail": "all 10800s yaml=preopen_all.yml:10800,preopen_all.yml:10800,map_heat_postclose.yml:10800,ecs_preopen.sh:10800,ecs_map_postclose.sh:10800 \u2014 last packet had 1800 (2026-09-03_map_post",
       "action": "none"
     },
     {
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "live PONG 200 \u2014 last packet 401 is history",
+      "status": "WARN",
+      "required": false,
+      "detail": "401 in last packet 2026-08-31_preopen_status.json, 2026-09-03_map_postclose_synthesis.json \u2014 not live",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=queued systemd=exit-code",
       "action": "none"
     },
     {
@@ -164,8 +164,9 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-08-31_preopen_status.json, 2026-09-01_predict.md; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json (classroom live)",
+      "detail": "history \u2014 401 in 2026-08-31_preopen_status.json, 2026-09-03_map_postclose_synthesis.json; 1800/timeout in 2026-09-03_map_postclose_captains_technology.json; DeepSeek fallback in 20",
       "action": "none"
     }
-  ]
+  ],
+  "healed": []
 }
