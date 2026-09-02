@@ -1,0 +1,392 @@
+"""Scenario lab for the book × mine overlay.
+
+Replays the same panel as boring_winners_backtest, then runs named
+sleeves that change one knob at a time:
+
+  source     book | overlay | mine
+  seats      10 / 25 / 50
+  hold       1 / 2 / 3 / 5 trading sessions (locked names keep their seat)
+  color      all | blue | green (panel cond==good)
+  hard_red   none | stand_down | haircut_5 | limit_5
+
+Hold-N: a name bought on D cannot be sold until it has aged N sessions.
+New candidates only fill empty seats. If the book is full of locked
+names, today's buys are skipped (n_skip).
+
+hard_red (lattice live from 2026-08-31):
+  stand_down  no new buys
+  haircut_5   new buy fills at open×0.95 only if that day's low printed
+              through the limit; otherwise fills at the session close
+  limit_5     new buy only if low ≤ open×0.95; fill at open×0.95
+              (not close-to-close ≤ −5)
+
+Does not rebuild the mine parquet. Does not overwrite the paper-trading
+dashboard — writes dashboard/boring-winners/index.html.
+"""
+from __future__ import annotations
+
+import json
+from dataclasses import asdict, dataclass
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import pandas as pd
+
+from src import bt_report
+from src.boring_winners_backtest import (
+    CLIP,
+    MAX_EXTRAS,
+    SEATS,
+    _pack_seat,
+    fill_overlay,
+    fill_returns_from_finviz,
+    fill_seats,
+    load_book_buys,
+    load_book_universe,
+    load_finviz_px,
+    load_panel,
+)
+from src.gainer_asof import load_day_context
+from src.paper_trade import load_fees, order_fees
+from src.price_store import _load_store
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT_JSON = ROOT / "03_scoreboard" / "boring_winners_lab.json"
+OUT_MD = ROOT / "03_scoreboard" / "BORING_WINNERS_LAB.md"
+OUT_CSV = ROOT / "03_scoreboard" / "boring_winners_lab_daily.csv"
+DASH_DIR = ROOT / "dashboard" / "boring-winners"
+TEMPLATE = Path(__file__).with_name("boring_winners_dash.html")
+CAPITAL = 10_000.0
+LIMIT_PCT = 0.05
+CLOSE_WHEN = "16:00 ET close"
+LIMIT_WHEN = "intraday (low ≤ open×0.95)"
+# Live book before the late-Aug drawdown / HARD_RED lattice.
+ORIG_WINDOW = ("2026-08-13", "2026-08-21")
+ORIG_WINDOW_LABEL = "orig 8/13–8/21"
+
+
+@dataclass(frozen=True)
+class Spec:
+    id: str
+    label: str
+    source: str = "overlay"       # book | overlay | mine
+    seats: int = 25
+    hold: int = 1
+    color: str = "all"            # all | blue | green
+    hard_red: str = "none"        # none | stand_down | haircut_5 | limit_5
+    fade_veto: bool = True
+
+
+# Named grid — not a full cartesian. Each row changes one idea.
+SCENARIOS = (
+    Spec("book_25_h1", "book 25 · daily", source="book", seats=25, hold=1),
+    Spec("overlay_25_h1", "overlay 25 · daily (live)", source="overlay", seats=25, hold=1),
+    Spec("mine_25_h1", "mine 25 · daily", source="mine", seats=25, hold=1),
+    Spec("overlay_10_h1", "overlay 10 · daily", source="overlay", seats=10, hold=1),
+    Spec("overlay_50_h1", "overlay 50 · daily", source="overlay", seats=50, hold=1),
+    Spec("overlay_25_h2", "overlay 25 · hold 2d", source="overlay", seats=25, hold=2),
+    Spec("overlay_25_h3", "overlay 25 · hold 3d", source="overlay", seats=25, hold=3),
+    Spec("overlay_25_h5", "overlay 25 · hold 1w", source="overlay", seats=25, hold=5),
+    Spec("book_25_h3", "book 25 · hold 3d", source="book", seats=25, hold=3),
+    Spec("overlay_10_h3", "overlay 10 · hold 3d", source="overlay", seats=10, hold=3),
+    Spec("overlay_25_h1_blue", "overlay 25 · blue only", source="overlay", seats=25, hold=1, color="blue"),
+    Spec("overlay_25_h1_green", "overlay 25 · green cond", source="overlay", seats=25, hold=1, color="green"),
+    Spec("overlay_10_h1_green", "overlay 10 · green cond", source="overlay", seats=10, hold=1, color="green"),
+    Spec("overlay_25_h3_blue", "overlay 25 · hold 3d · blue", source="overlay", seats=25, hold=3, color="blue"),
+    Spec("overlay_25_h1_stand", "overlay 25 · HARD_RED stand-down", source="overlay", seats=25, hold=1, hard_red="stand_down"),
+    Spec("overlay_25_h1_cut5", "overlay 25 · HARD_RED −5% fill", source="overlay", seats=25, hold=1, hard_red="haircut_5"),
+    Spec("overlay_25_h1_lim5", "overlay 25 · HARD_RED limit −5%", source="overlay", seats=25, hold=1, hard_red="limit_5"),
+    Spec("overlay_50_h1_cut5", "overlay 50 · HARD_RED −5% fill", source="overlay", seats=50, hold=1, hard_red="haircut_5"),
+)
+
+
+def extras_for(seats: int) -> int:
+    return max(MAX_EXTRAS, seats // 5)
+
+
+def _f(v):
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return None
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    return None if x <= 0 or pd.isna(x) else x
+
+
+def load_ohlc_bars() -> dict[str, dict[str, dict]]:
+    """date -> ticker -> {open, high, low, close} from data/prices/ohlc.parquet."""
+    df = _load_store()
+    out: dict[str, dict[str, dict]] = {}
+    if df is None or df.empty:
+        return out
+    use = df[["date", "ticker", "open", "high", "low", "close"]].copy()
+    use["date"] = pd.to_datetime(use["date"]).dt.strftime("%Y-%m-%d")
+    use["ticker"] = use["ticker"].astype(str).str.upper()
+    for rec in use.itertuples(index=False):
+        bar = {
+            "open": _f(rec.open),
+            "high": _f(rec.high),
+            "low": _f(rec.low),
+            "close": _f(rec.close),
+        }
+        if bar["close"] is None and bar["open"] is None:
+            continue
+        out.setdefault(rec.date, {})[rec.ticker] = bar
+    return out
+
+
+def dipped(bar: dict | None, pct: float = LIMIT_PCT) -> bool:
+    if not bar:
+        return False
+    o, lo = bar.get("open"), bar.get("low")
+    return o is not None and lo is not None and lo <= o * (1.0 - pct)
+
+
+def limit_px(bar: dict) -> float | None:
+    o = bar.get("open") if bar else None
+    return None if o is None else round(o * (1.0 - LIMIT_PCT), 6)
+
+
+def market_is_hard(date: str, ctx_cache: dict | None = None) -> bool:
+    cache = ctx_cache if ctx_cache is not None else {}
+    if date not in cache:
+        cache[date] = load_day_context(date)
+    return str((cache[date] or {}).get("market_state") or "").lower() == "hard_red"
+
+
+def filter_color(packs: list[dict], color: str) -> list[dict]:
+    if color == "all":
+        return packs
+    out = []
+    for p in packs:
+        r = p.get("row")
+        if r is None:
+            continue
+        if color == "blue" and bool(r.get("blue")):
+            out.append(p)
+        elif color == "green" and str(r.get("cond") or "") == "good":
+            out.append(p)
+    return out
+
+
+def candidates(date: str, g: pd.DataFrame, spec: Spec) -> list[dict]:
+    buys = load_book_buys(date, top=max(spec.seats, 25))
+    universe = load_book_universe(date)
+    by_t = {str(r["Ticker"]).upper(): r for _, r in g.iterrows()} if len(g) else {}
+    if spec.source == "book":
+        packs = []
+        for t in buys[: spec.seats]:
+            p = _pack_seat(t, "book", by_t.get(t), universe.get(t))
+            if spec.fade_veto and p.get("fade"):
+                continue
+            packs.append(p)
+    elif spec.source == "mine":
+        seats, _ = fill_seats(g, seats=spec.seats)
+        packs = []
+        if len(seats):
+            for _, r in seats.iterrows():
+                t = str(r["Ticker"]).upper()
+                packs.append(_pack_seat(t, "mine", r, universe.get(t)))
+    else:
+        packs, _, _ = fill_overlay(
+            g, buys, universe, seats=spec.seats, max_extras=extras_for(spec.seats),
+        )
+    return filter_color(packs, spec.color)
+
+
+def day_rets(g: pd.DataFrame) -> dict[str, float]:
+    out = {}
+    if not len(g) or "ret_1d" not in g.columns:
+        return out
+    for _, r in g.iterrows():
+        v = r.get("ret_1d")
+        if v is None or pd.isna(v):
+            continue
+        out[str(r["Ticker"]).upper()] = float(v)
+    return out
+
+
+def _entry_fill(bar: dict | None, *, market_hard: bool, hard_red: str) -> tuple[str | None, dict]:
+    """Decide fill price/time for a new buy. why is set when the order does not fill."""
+    if not bar or bar.get("close") is None:
+        return "no_bar", {}
+    want_limit = market_hard and hard_red in {"limit_5", "haircut_5"}
+    if want_limit and dipped(bar):
+        px = limit_px(bar)
+        return None, {
+            "entry_px": px,
+            "entry_when": LIMIT_WHEN,
+            "entry_kind": "limit_5",
+            "open": bar.get("open"),
+            "low": bar.get("low"),
+            "high": bar.get("high"),
+            "close": bar.get("close"),
+        }
+    if market_hard and hard_red == "limit_5":
+        return "limit_miss", {
+            "open": bar.get("open"),
+            "low": bar.get("low"),
+            "high": bar.get("high"),
+            "close": bar.get("close"),
+        }
+    return None, {
+        "entry_px": bar["close"],
+        "entry_when": CLOSE_WHEN,
+        "entry_kind": "close",
+        "open": bar.get("open"),
+        "low": bar.get("low"),
+        "high": bar.get("high"),
+        "close": bar.get("close"),
+    }
+
+
+def _mark_ret(
+    t: str,
+    pos: dict,
+    rets: dict[str, float],
+    bars: dict[str, dict] | None,
+    prev_closes: dict[str, float] | None,
+    *,
+    market_hard: bool,
+    hard_red: str,
+) -> float | None:
+    bar = (bars or {}).get(t)
+    close = bar.get("close") if bar else None
+    if close is not None:
+        if int(pos.get("age") or 0) == 0 and pos.get("entry_px"):
+            raw = (close / float(pos["entry_px"]) - 1.0) * 100.0
+        elif prev_closes and prev_closes.get(t):
+            raw = (close / float(prev_closes[t]) - 1.0) * 100.0
+        elif t in rets:
+            raw = float(rets[t])
+        else:
+            return None
+    elif t in rets:
+        raw = float(rets[t])
+        if int(pos.get("age") or 0) == 0 and market_hard and hard_red == "haircut_5":
+            raw = raw + 5.0
+    else:
+        return None
+    return max(-CLIP, min(CLIP, raw))
+
+
+def step_hold(
+    held: dict[str, dict],
+    cand: list[dict],
+    *,
+    hold: int,
+    seats: int,
+    hard_red: str,
+    market_hard: bool,
+    rets: dict[str, float],
+    bars: dict[str, dict] | None = None,
+    prev_closes: dict[str, float] | None = None,
+) -> dict:
+    """One morning: age → sell unlocked off-list → fill empty seats → mark."""
+    for pos in held.values():
+        pos["age"] = int(pos.get("age") or 0) + 1
+
+    cand_set = {p["ticker"] for p in cand}
+    sold, sells = [], []
+    for t in list(held):
+        if int(held[t]["age"]) >= hold and t not in cand_set:
+            pos = held.pop(t)
+            bar = (bars or {}).get(t) or {}
+            sell_px = bar.get("close")
+            sells.append({
+                "ticker": t,
+                "side": "sell",
+                "sell_px": sell_px,
+                "sell_when": CLOSE_WHEN if sell_px is not None else None,
+                "buy_px": pos.get("entry_px"),
+                "buy_when": pos.get("entry_when"),
+                "buy_kind": pos.get("entry_kind"),
+            })
+            sold.append(t)
+
+    bought, skipped, buys = [], [], []
+    allow_new = not (market_hard and hard_red == "stand_down")
+    if allow_new:
+        for p in cand:
+            t = p["ticker"]
+            if t in held:
+                continue
+            if len(held) >= seats:
+                skipped.append({"ticker": t, "why": "no_seat"})
+                continue
+            if bars is None:
+                if market_hard and hard_red == "limit_5":
+                    r = rets.get(t)
+                    if r is None or r > -5.0:
+                        skipped.append({"ticker": t, "why": "limit_miss"})
+                        continue
+                why, fill = None, {"entry_px": None, "entry_when": None, "entry_kind": None}
+            else:
+                why, fill = _entry_fill((bars or {}).get(t), market_hard=market_hard, hard_red=hard_red)
+            if why:
+                skipped.append({"ticker": t, "why": why, **{k: fill.get(k) for k in ("open", "low", "close") if fill.get(k) is not None}})
+                continue
+            held[t] = {
+                "age": 0,
+                "src": p.get("source"),
+                "stack": p.get("stack"),
+                "entry": p.get("date"),
+                **fill,
+            }
+            bought.append(t)
+            buys.append({
+                "ticker": t,
+                "side": "buy",
+                "buy_px": fill.get("entry_px"),
+                "buy_when": fill.get("entry_when"),
+                "buy_kind": fill.get("entry_kind"),
+                "open": fill.get("open"),
+                "low": fill.get("low"),
+                "high": fill.get("high"),
+                "close": fill.get("close"),
+            })
+    elif market_hard:
+        for p in cand:
+            if p["ticker"] not in held:
+                skipped.append({"ticker": p["ticker"], "why": "stand_down"})
+
+    pnls = []
+    named = []
+    for t, pos in held.items():
+        adj = _mark_ret(
+            t, pos, rets, bars, prev_closes,
+            market_hard=market_hard, hard_red=hard_red,
+        )
+        if adj is None:
+            continue
+        pnls.append(adj)
+        bar = (bars or {}).get(t) or {}
+        named.append({
+            "ticker": t,
+            "ret_1d": adj,
+            "age": pos["age"],
+            "src": pos.get("src"),
+            "stack": pos.get("stack"),
+            "mark_px": bar.get("close"),
+            "entry_px": pos.get("entry_px"),
+            "entry_when": pos.get("entry_when"),
+        })
+    day_pnl = round(float(sum(pnls) / len(pnls)), 3) if pnls else None
+    return {
+        "day_pnl": day_pnl,
+        "n_held": len(held),
+        "n_priced": len(pnls),
+        "n_buy": len(bought),
+        "n_sell": len(sold),
+        "n_skip": len(skipped),
+        "bought": bought,
+        "sold": sold,
+        "skipped": skipped,
+        "held": list(held),
+        "names": named,
+        "buys": buys,
+        "sells": sells,
+    }
+

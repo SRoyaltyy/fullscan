@@ -1,0 +1,289 @@
+def window_perf(daily: list[dict], start: str, end: str, capital: float = CAPITAL) -> dict:
+    """Equity / day stats for [start, end] inclusive. Start equity is prior close."""
+    before = [d for d in daily if d.get("date") and d["date"] < start]
+    rows = [d for d in daily if d.get("date") and start <= d["date"] <= end]
+    start_eq = float(before[-1]["equity"]) if before and before[-1].get("equity") is not None else capital
+    end_eq = float(rows[-1]["equity"]) if rows and rows[-1].get("equity") is not None else start_eq
+    pnls = [d["day_pnl"] for d in rows if d.get("day_pnl") is not None]
+    fees_end = float((rows[-1] or {}).get("fees_cum") or 0) if rows else 0.0
+    fees_start = float(before[-1].get("fees_cum") or 0) if before else 0.0
+    tot = bt_report.day_book_stats(pnls) if pnls else {}
+    return {
+        "start": start,
+        "end": end,
+        "n_days": len(rows),
+        "start_eq": round(start_eq, 2),
+        "end_eq": round(end_eq, 2),
+        "pnl": round(end_eq - start_eq, 2),
+        "ret": None if start_eq <= 0 else round(end_eq / start_eq - 1.0, 4),
+        "mean_day": tot.get("mean_day"),
+        "cum": tot.get("cum_sum"),
+        "p_loss_day": tot.get("p_loss_day"),
+        "fees": round(fees_end - fees_start, 2),
+        "dates": [d["date"] for d in rows],
+    }
+
+
+def spy_window(dates: list[str], spy_eq: list[float], start: str, end: str, capital: float = CAPITAL) -> dict:
+    start_eq = capital
+    end_eq = capital
+    for d, eq in zip(dates, spy_eq):
+        if d < start:
+            start_eq = eq
+        if start <= d <= end:
+            end_eq = eq
+    return {
+        "start": start,
+        "end": end,
+        "start_eq": round(start_eq, 2),
+        "end_eq": round(end_eq, 2),
+        "pnl": round(end_eq - start_eq, 2),
+        "ret": None if start_eq <= 0 else round(end_eq / start_eq - 1.0, 4),
+    }
+
+
+def spy_series(dates: list[str]) -> list[float | None]:
+    out = []
+    for d in dates:
+        row = (load_finviz_px(d) or {}).get("SPY") or {}
+        chg = row.get("change")
+        out.append(None if chg is None else round(float(chg), 3))
+    return out
+
+
+def _size_buy(cash: float, n_new: int, px: float, fees: dict) -> tuple[int, float, float]:
+    """Whole shares from an equal cash split. Returns shares, fee, cost."""
+    if n_new < 1 or px is None or px <= 0 or cash <= 0:
+        return 0, 0.0, 0.0
+    per = cash / n_new
+    shares = int(per // px)
+    if shares < 1:
+        return 0, 0.0, 0.0
+    fee = order_fees(shares, px, "buy", fees)
+    cost = shares * px + fee
+    if cost > cash:
+        shares = int((cash - fee) // px)
+        if shares < 1:
+            return 0, 0.0, 0.0
+        fee = order_fees(shares, px, "buy", fees)
+        cost = shares * px + fee
+    return shares, fee, cost
+
+
+def run_spec(spec: Spec, days: list[tuple[str, pd.DataFrame]], ctx_cache: dict, ohlc: dict | None = None) -> dict:
+    held: dict[str, dict] = {}
+    lots: dict[str, dict] = {}
+    fees = load_fees()
+    cash = float(CAPITAL)
+    fees_cum = 0.0
+    curve = []
+    equity = CAPITAL
+    daily = []
+    ohlc = ohlc or {}
+    prev_closes: dict[str, float] = {}
+    prev_eq = CAPITAL
+    for date, g in days:
+        cand = candidates(date, g, spec)
+        for p in cand:
+            p["date"] = date
+        hard = market_is_hard(date, ctx_cache)
+        bars = ohlc.get(date) or {}
+        rec = step_hold(
+            held, cand,
+            hold=spec.hold, seats=spec.seats,
+            hard_red=spec.hard_red, market_hard=hard,
+            rets=day_rets(g),
+            bars=bars if bars else None,
+            prev_closes=prev_closes,
+        )
+        rec["date"] = date
+        rec["hard_red"] = hard
+        rec["n_cand"] = len(cand)
+
+        for sl in rec.get("sells") or []:
+            t = sl["ticker"]
+            lot = lots.pop(t, None)
+            if not lot:
+                continue
+            px = sl.get("sell_px")
+            if px is None:
+                continue
+            fee = order_fees(lot["shares"], px, "sell", fees)
+            proceeds = lot["shares"] * px - fee
+            cash += proceeds
+            fees_cum += fee
+            sl["shares"] = lot["shares"]
+            sl["fees"] = fee
+            sl["amount"] = round(proceeds, 2)
+            sl["realized_pnl"] = round(proceeds - lot["cost"], 2)
+            sl["cash_after"] = round(cash, 2)
+
+        priced = [b for b in (rec.get("buys") or []) if b.get("buy_px")]
+        n_try = len(priced) or 1
+        kept_buys = []
+        for b in list(rec.get("buys") or []):
+            t = b["ticker"]
+            px = b.get("buy_px")
+            shares, fee, cost = _size_buy(cash, n_try, px, fees)
+            if shares < 1:
+                held.pop(t, None)
+                if t in rec["bought"]:
+                    rec["bought"].remove(t)
+                rec["skipped"].append({
+                    "ticker": t, "why": "cash",
+                    "buy_px": px, "cash": round(cash, 2),
+                })
+                continue
+            cash -= cost
+            fees_cum += fee
+            lots[t] = {"shares": shares, "cost": cost, "entry_px": px}
+            held[t]["shares"] = shares
+            held[t]["cost"] = cost
+            b["shares"] = shares
+            b["fees"] = fee
+            b["amount"] = round(cost, 2)
+            b["cash_after"] = round(cash, 2)
+            kept_buys.append(b)
+        rec["buys"] = kept_buys
+        rec["n_buy"] = len(kept_buys)
+        rec["n_skip"] = len(rec.get("skipped") or [])
+        rec["held"] = list(held)
+
+        invested = 0.0
+        for t, lot in lots.items():
+            bar = bars.get(t) or {}
+            last = bar.get("close") or lot["entry_px"]
+            invested += lot["shares"] * last
+        equity = round(cash + invested, 2)
+        rec["cash"] = round(cash, 2)
+        rec["invested"] = round(invested, 2)
+        rec["fees_cum"] = round(fees_cum, 2)
+        rec["equity"] = equity
+        rec["day_pnl"] = None if prev_eq <= 0 else round(100.0 * (equity / prev_eq - 1.0), 3)
+        prev_eq = equity
+        daily.append(rec)
+        curve.append(equity)
+        for t, bar in bars.items():
+            if bar.get("close") is not None:
+                prev_closes[t] = bar["close"]
+    pnls = [d["day_pnl"] for d in daily if d["day_pnl"] is not None]
+    return {
+        "spec": asdict(spec),
+        "totals": bt_report.day_book_stats(pnls),
+        "equity": curve,
+        "final": curve[-1] if curve else CAPITAL,
+        "daily": daily,
+        "fees_cum": fees_cum,
+        "orig_window": window_perf(daily, ORIG_WINDOW[0], ORIG_WINDOW[1]),
+    }
+
+
+def run_lab(path=None) -> dict:
+    from src.boring_winners_backtest import PANEL
+    df = fill_returns_from_finviz(load_panel(path or PANEL))
+    days = [(str(d), g) for d, g in df.groupby("date", sort=True)]
+    dates = [d for d, _ in days]
+    ctx_cache: dict = {}
+    ohlc = load_ohlc_bars()
+    sleeves = {spec.id: run_spec(spec, days, ctx_cache, ohlc) for spec in SCENARIOS}
+    spy = spy_series(dates)
+    spy_eq = []
+    eq = CAPITAL
+    for x in spy:
+        if x is not None:
+            eq = round(eq * (1.0 + x / 100.0), 2)
+        spy_eq.append(eq)
+    return {
+        "generated": datetime.now(ZoneInfo("America/New_York")).isoformat(),
+        "capital": CAPITAL,
+        "dates": dates,
+        "scenarios": [asdict(s) for s in SCENARIOS],
+        "sleeves": sleeves,
+        "spy": {"day": spy, "equity": spy_eq},
+        "orig_window": {
+            "start": ORIG_WINDOW[0],
+            "end": ORIG_WINDOW[1],
+            "label": ORIG_WINDOW_LABEL,
+            "note": "Live overlay 25 daily, pre-drawdown window before HARD_RED lattice (2026-08-31).",
+            "spy": spy_window(dates, spy_eq, ORIG_WINDOW[0], ORIG_WINDOW[1]),
+        },
+        "rules": {
+            "hold_unit": "trading_sessions",
+            "clip": CLIP,
+            "fill": "default = 16:00 ET close. HARD_RED limit_5 / haircut_5 fill at open×0.95 only if that day's low printed through the limit (not close-to-close ≤ −5). haircut_5 without a print falls back to the close.",
+            "hold": "locked names keep their seat; new buys only fill empties",
+            "fees": "Futubull US schedule from 00_grounding/futubull_fees.json (same as paper blotter)",
+            "sizing": "whole shares; leftover cash split equally across new fills; skip if <1 share after fees",
+            "orig_window": f"{ORIG_WINDOW[0]} → {ORIG_WINDOW[1]} (original live book before the late-Aug drawdown)",
+        },
+    }
+
+
+def _ret(v) -> str:
+    if v is None:
+        return "—"
+    return f"{v:+.2f}"
+
+
+def render_md(lab: dict) -> str:
+    lines = [
+        "# Boring winners — scenario lab",
+        "",
+        "Same overlay engine, different knobs. Hold-N locks a seat for N sessions; today's new buys only fill empties. HARD_RED rules only fire when the lattice prints `hard_red` (from 2026-08-31).",
+        "",
+        "Dashboard: `dashboard/boring-winners/index.html` → https://sroyaltyy.github.io/fullscan/dashboard/boring-winners/",
+        "",
+        "## Leaderboard",
+        "",
+        "| sleeve | source | n | hold | color | hard_red | mean day | cum | p(loss day) | final $10k | orig 8/13–8/21 |",
+        "|---|---|---:|---:|---|---|---:|---:|---:|---:|---:|",
+    ]
+    rows = []
+    for sid, sl in lab["sleeves"].items():
+        spec = sl["spec"]
+        tot = sl.get("totals") or {}
+        rows.append((tot.get("mean_day") or -999, sid, spec, tot, sl.get("final"), sl.get("orig_window") or {}))
+    rows.sort(key=lambda x: x[0], reverse=True)
+    for _, sid, spec, tot, final, win in rows:
+        wtxt = "—"
+        if win.get("end_eq") is not None and win.get("n_days"):
+            wtxt = f"{win['end_eq']:,.0f} ({_ret((win.get('ret') or 0)*100)} / {win['n_days']}d)"
+        lines.append(
+            f"| `{sid}` | {spec['source']} | {spec['seats']} | {spec['hold']} "
+            f"| {spec['color']} | {spec['hard_red']} "
+            f"| {_ret(tot.get('mean_day'))} | {_ret(tot.get('cum_sum'))} "
+            f"| {bt_report.fmt_pct(tot.get('p_loss_day'))} "
+            f"| {final:,.0f} | {wtxt} |"
+        )
+    ow = lab.get("orig_window") or {}
+    live_w = ((lab["sleeves"].get("overlay_25_h1") or {}).get("orig_window") or {})
+    lines += [
+        "",
+        f"## Original window {ow.get('start') or ORIG_WINDOW[0]} → {ow.get('end') or ORIG_WINDOW[1]}",
+        "",
+        ow.get("note") or "Live overlay 25 daily before the late-Aug drawdown.",
+        "",
+        f"- overlay 25 daily: ${live_w.get('start_eq')} → ${live_w.get('end_eq')} "
+        f"({_ret((live_w.get('ret') or 0)*100)} over {live_w.get('n_days')}d, "
+        f"mean {_ret(live_w.get('mean_day'))}, fees ${live_w.get('fees')})",
+        f"- SPY $10k: ${((ow.get('spy') or {}).get('start_eq'))} → ${((ow.get('spy') or {}).get('end_eq'))}",
+        "",
+        "## Daily overlay 25 · daily (live)",
+        "",
+    ]
+    live = (lab["sleeves"].get("overlay_25_h1") or {}).get("daily") or []
+    lines += ["| date | n held | buy | skip | sell | 1d | equity |", "|---|---:|---:|---:|---:|---:|---:|"]
+    for d in live:
+        lines.append(
+            f"| {d['date']} | {d['n_held']} | {d['n_buy']} | {d['n_skip']} | {d['n_sell']} "
+            f"| {_ret(d['day_pnl'])} | {d['equity']:,.0f} |"
+        )
+    lines += [
+        "",
+        "Live book is still `overlay_25_h1`. The lab is how we pick the next default.",
+        "",
+        "Notes: `limit_5` / `haircut_5` now require the session low to print through open×0.95. No print → limit skips, haircut fills at the close. Fills are priced from ohlc.parquet. Exact minute of the low is not in the daily bar — time is `intraday (low ≤ open×0.95)` or `16:00 ET close`.",
+        "",
+    ]
+    return "\n".join(lines) + "\n"
+
