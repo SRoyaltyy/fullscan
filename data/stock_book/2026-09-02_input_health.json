@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T13:20:59.883034-04:00",
+  "inputs": [
+    {
+      "name": "finviz_export",
+      "family": "join",
+      "status": "ok",
+      "n": 11636,
+      "detail": "finviz_2026-09-02.csv"
+    },
+    {
+      "name": "membership",
+      "family": "join",
+      "status": "ok",
+      "n": 5915,
+      "detail": ""
+    },
+    {
+      "name": "join_ranked",
+      "family": "join",
+      "status": "ok",
+      "n": 5915,
+      "detail": "std=0.980"
+    },
+    {
+      "name": "news_actions",
+      "family": "news",
+      "status": "ok",
+      "n": 72,
+      "detail": ""
+    },
+    {
+      "name": "news_judge",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "finviz_digest",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "ab_checklist",
+      "family": "ab",
+      "status": "ok",
+      "n": 2683,
+      "detail": "2026-09-02_ab_checklist_enriched.csv"
+    },
+    {
+      "name": "peer_rs",
+      "family": "peer",
+      "status": "ok",
+      "n": 5135,
+      "detail": ""
+    },
+    {
+      "name": "ticker_checklist",
+      "family": "addon",
+      "status": "ok",
+      "n": 11627,
+      "detail": ""
+    },
+    {
+      "name": "events",
+      "family": "addon",
+      "status": "ok",
+      "n": null,
+      "detail": "45 events, scan_date=2026-09-02"
+    },
+    {
+      "name": "map_heat",
+      "family": "heat",
+      "status": "degraded",
+      "n": 15,
+      "detail": "morning research missing; Finviz industry residuals applied (15 OVERRIDE/SPLIT rows)"
+    },
+    {
+      "name": "general_predict",
+      "family": "general",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "sector_predicts",
+      "family": "sector",
+      "status": "degraded",
+      "n": 9,
+      "detail": "9/11 quality"
+    },
+    {
+      "name": "price_store",
+      "family": "learn",
+      "status": "stale",
+      "n": null,
+      "detail": "last_date=2026-08-21"
+    }
+  ],
+  "family_status": {
+    "join": "ok",
+    "news": "ok",
+    "ab": "ok",
+    "peer": "ok",
+    "heat": "degraded",
+    "general": "ok",
+    "sector": "degraded"
+  },
+  "families_present": {
+    "join": true,
+    "news": true,
+    "ab": true,
+    "peer": true,
+    "heat": true,
+    "general": true,
+    "sector": true
+  },
+  "learn_grade": true,
+  "worst": "stale"
+}

@@ -1,6 +1,6 @@
 # Book gaps — what the ranker missed (signal 2026-08-21, 1w = 5 sessions)
 
-_Generated 2026-09-01T17:03:38.864663-04:00_ · universe median fwd: -3.52%
+_Generated 2026-09-02T13:36:01.539822-04:00_ · universe median fwd: -3.52%
 
 Classes: **blind** = every input was silent (unknown-unknown evidence) · **outweighed** = signals existed but the rank buried them (weight-tuner territory) · **gated_out** = excluded by hard micro/mcap gates on purpose.
 
