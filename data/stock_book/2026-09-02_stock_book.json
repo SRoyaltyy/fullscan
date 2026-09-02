@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-02",
-    "generated_at": "2026-09-02T13:21:08.628340-04:00",
+    "generated_at": "2026-09-02T15:43:57.796492-04:00",
     "general_bias": -0.442,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -126,7 +126,7 @@
       ]
     },
     "weights_source": "book_policy.json",
-    "policy_version": 8,
+    "policy_version": 9,
     "heat_scale": 0.25,
     "heat_source": "finviz_tape",
     "n_heat_captains": 47,

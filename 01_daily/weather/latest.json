@@ -1,6 +1,6 @@
 {
  "date": "2026-09-02",
- "generated_at": "2026-09-02T13:16:48.157539-04:00",
+ "generated_at": "2026-09-02T15:43:46.291887-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,17 +23,17 @@
   "dgs10_current": 4.75,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.11,
-  "vix_ratio": 0.861,
-  "vix_spot": 15.38,
-  "vix_delta_1d": -0.96,
+  "dxy_pct_1d": -0.07,
+  "vix_ratio": 0.857,
+  "vix_spot": 15.18,
+  "vix_delta_1d": -1.16,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 0.73,
+  "oil_pct_1d": 0.74,
   "oil": "flat",
-  "fear_greed": 58.2,
-  "fear_greed_label": "Greed",
-  "regime_corr": -0.791,
+  "fear_greed": null,
+  "fear_greed_label": null,
+  "regime_corr": -0.798,
   "sectors": {
    "Basic Materials": {
     "score": 0.0,
@@ -304,7 +304,7 @@
    "no": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, F&G Greed"
+    "why": "risk-mixed, F&G None"
    },
    "yes": {
     "stance": "neutral",

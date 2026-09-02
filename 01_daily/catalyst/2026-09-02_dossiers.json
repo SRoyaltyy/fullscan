@@ -1,6 +1,6 @@
 {
   "date": "2026-09-02",
-  "generated_at": "2026-09-02T08:12:59.172502-04:00",
+  "generated_at": "2026-09-02T16:45:06.589863-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
@@ -55,113 +55,49 @@
       "ticker": "AVGO",
       "role": "earnings",
       "why": "earnings AMC",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "ORCL",
       "role": "earnings",
       "why": "earnings AMC",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "UEC",
       "role": "override_captain",
       "why": "OVERRIDE Uranium",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "UUUU",
       "role": "override_captain",
       "why": "OVERRIDE Uranium",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "CTVA",
       "role": "override_captain",
       "why": "OVERRIDE Agricultural Inputs",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "CF",
       "role": "override_captain",
       "why": "OVERRIDE Agricultural Inputs",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "FMC",
       "role": "override_captain",
       "why": "OVERRIDE Agricultural Inputs",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     },
     {
       "ticker": "IPI",
       "role": "override_captain",
       "why": "OVERRIDE Agricultural Inputs",
-      "net_signal": null,
-      "conviction": null,
-      "search_backend": null,
-      "catalyst_stack": "",
-      "key_assumption": "",
-      "n_pos": 0,
-      "n_neg": 0,
-      "top_hits": [],
-      "error": "Step 1 parse failure"
+      "error": "'list' object has no attribute 'get'"
     }
   ]
 }

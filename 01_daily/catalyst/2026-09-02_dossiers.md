@@ -13,13 +13,13 @@
 - **IPI** [override_captain] OVERRIDE Agricultural Inputs
 
 ## DOSSIERS
-- **AVGO** ERROR Step 1 parse failure
-- **ORCL** ERROR Step 1 parse failure
-- **UEC** ERROR Step 1 parse failure
-- **UUUU** ERROR Step 1 parse failure
-- **CTVA** ERROR Step 1 parse failure
-- **CF** ERROR Step 1 parse failure
-- **FMC** ERROR Step 1 parse failure
-- **IPI** ERROR Step 1 parse failure
+- **AVGO** ERROR 'list' object has no attribute 'get'
+- **ORCL** ERROR 'list' object has no attribute 'get'
+- **UEC** ERROR 'list' object has no attribute 'get'
+- **UUUU** ERROR 'list' object has no attribute 'get'
+- **CTVA** ERROR 'list' object has no attribute 'get'
+- **CF** ERROR 'list' object has no attribute 'get'
+- **FMC** ERROR 'list' object has no attribute 'get'
+- **IPI** ERROR 'list' object has no attribute 'get'
 
 CATALYST_DAILY_OK
