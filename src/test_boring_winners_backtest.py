@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import pandas as pd
 
+from pathlib import Path
+
 from src.boring_winners_backtest import (
     SEATS,
     SECTOR_CAP,
@@ -10,6 +12,7 @@ from src.boring_winners_backtest import (
     annotate_actions,
     book_gate_ok,
     fill_overlay,
+    fill_returns_from_finviz,
     fill_seats,
     fill_short_overlay,
     pick_seats,
@@ -254,6 +257,44 @@ def test_short_is_fade_only():
     assert rule == "none"
 
 
+def test_finviz_fills_missing_1d_keeps_panel():
+    import tempfile
+    tmp = Path(tempfile.mkdtemp())
+    (tmp / "finviz_2026-08-21.csv").write_text(
+        "Ticker,Price,Change\nAAA,10,1%\nBBB,20,2%\n", encoding="utf-8"
+    )
+    (tmp / "finviz_2026-08-24.csv").write_text(
+        "Ticker,Price,Change\nAAA,11,10%\nBBB,19,-5%\n", encoding="utf-8"
+    )
+    g = pd.DataFrame([
+        {"Ticker": "AAA", "date": "2026-08-21", "ret_1d": None, "ret_2d": None, "ret_3d": None, "ret_1w": None},
+        {"Ticker": "BBB", "date": "2026-08-21", "ret_1d": 1.25, "ret_2d": None, "ret_3d": None, "ret_1w": None},
+    ])
+    out = fill_returns_from_finviz(
+        g, export_dir=tmp, session_cal=["2026-08-21", "2026-08-24"],
+    )
+    assert abs(float(out.loc[out.Ticker == "AAA", "ret_1d"].iloc[0]) - 10.0) < 1e-6
+    assert abs(float(out.loc[out.Ticker == "BBB", "ret_1d"].iloc[0]) - 1.25) < 1e-6
+
+
+def test_finviz_1d_falls_back_to_change():
+    import tempfile
+    tmp = Path(tempfile.mkdtemp())
+    (tmp / "finviz_2026-08-21.csv").write_text(
+        "Ticker,Price,Change\nCCC,,\n", encoding="utf-8"
+    )
+    (tmp / "finviz_2026-08-24.csv").write_text(
+        "Ticker,Price,Change\nCCC,,3.5%\n", encoding="utf-8"
+    )
+    g = pd.DataFrame([
+        {"Ticker": "CCC", "date": "2026-08-21", "ret_1d": None, "ret_2d": None, "ret_3d": None, "ret_1w": None},
+    ])
+    out = fill_returns_from_finviz(
+        g, export_dir=tmp, session_cal=["2026-08-21", "2026-08-24"],
+    )
+    assert abs(float(out.loc[0, "ret_1d"]) - 3.5) < 1e-6
+
+
 if __name__ == "__main__":
     test_defaults_are_25_by_6()
     test_lottery_when_no_blue_no_alarm()
@@ -273,4 +314,6 @@ if __name__ == "__main__":
     test_overlay_rejects_ungated_extra()
     test_short_overlay_is_sell_and_fade()
     test_short_is_fade_only()
+    test_finviz_fills_missing_1d_keeps_panel()
+    test_finviz_1d_falls_back_to_change()
     print("ok")

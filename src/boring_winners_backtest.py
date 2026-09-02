@@ -44,6 +44,7 @@ from src.ticker_lookback import build_index
 ROOT = Path(__file__).resolve().parent.parent
 PANEL = ROOT / "03_scoreboard" / "feature_asof_panel.parquet"
 BOOK_DIR = ROOT / "data" / "stock_book"
+EXPORT_DIR = ROOT / "data" / "exports"
 OUT_MD = ROOT / "03_scoreboard" / "BORING_WINNERS.md"
 OUT_LATEST = ROOT / "03_scoreboard" / "latest_boring_winners.md"
 OUT_DAYS = ROOT / "03_scoreboard" / "boring_winners"
@@ -53,6 +54,7 @@ OUT_DAILY = ROOT / "03_scoreboard" / "boring_winners_daily.csv"
 DAILY_DIR = ROOT / "01_daily"
 
 HORIZONS = ("1d", "2d", "3d", "1w")
+HORIZON_LAG = {"1d": 1, "2d": 2, "3d": 3, "1w": 5}
 CLIP = 30.0
 SEATS = 25
 SECTOR_CAP = 6
@@ -151,6 +153,113 @@ def load_panel(path: Path = PANEL) -> pd.DataFrame:
     )
     df["relvol_rk"] = df["relvol_b"].map(RELVOL_RANK).fillna(-1).astype(int)
     return df
+
+
+def _parse_finviz_pct(x):
+    if x is None or (isinstance(x, float) and pd.isna(x)):
+        return None
+    try:
+        return float(str(x).strip().replace("%", "").replace(",", ""))
+    except (TypeError, ValueError):
+        return None
+
+
+def finviz_session_dates(export_dir: Path | None = None) -> list[str]:
+    """Trading dates that have a Finviz tape, plus lookback session dates."""
+    export_dir = Path(export_dir or EXPORT_DIR)
+    dates = {
+        p.stem.replace("finviz_", "")
+        for p in export_dir.glob("finviz_????-??-??.csv")
+    }
+    try:
+        from src.ticker_lookback import is_trading_date, session_dates
+        dates.update(session_dates())
+        return sorted(d for d in dates if is_trading_date(d))
+    except Exception:
+        return sorted(dates)
+
+
+def load_finviz_px(date: str, export_dir: Path | None = None) -> dict[str, dict]:
+    """Ticker → {price, change} from that morning's Finviz tape."""
+    path = Path(export_dir or EXPORT_DIR) / f"finviz_{date}.csv"
+    if not path.exists():
+        return {}
+    try:
+        frame = pd.read_csv(path)
+    except (OSError, ValueError, pd.errors.ParserError):
+        return {}
+    if "Ticker" not in frame.columns:
+        return {}
+    out = {}
+    chg_col = "Change" if "Change" in frame.columns else ("Change %" if "Change %" in frame.columns else None)
+    for rec in frame.to_dict(orient="records"):
+        t = str(rec.get("Ticker") or "").upper()
+        if not t:
+            continue
+        px = pd.to_numeric(rec.get("Price"), errors="coerce")
+        chg = _parse_finviz_pct(rec.get(chg_col)) if chg_col else None
+        out[t] = {
+            "price": None if pd.isna(px) else float(px),
+            "change": chg,
+        }
+    return out
+
+
+def fill_returns_from_finviz(
+    df: pd.DataFrame,
+    export_dir: Path | None = None,
+    session_cal: list[str] | None = None,
+) -> pd.DataFrame:
+    """Fill missing ret_1d/2d/3d/1w from successive Finviz Prices.
+
+    Does not rebuild or write the mine parquet. Existing panel returns stay.
+    1d also falls back to the next tape's Change% when a Price is missing.
+    """
+    export_dir = Path(export_dir or EXPORT_DIR)
+    cal = list(session_cal) if session_cal is not None else finviz_session_dates(export_dir)
+    if not cal:
+        return df
+    pos = {d: i for i, d in enumerate(cal)}
+    needed = set()
+    for d in df["date"].astype(str).unique():
+        d = str(d)[:10]
+        j = pos.get(d)
+        if j is None:
+            continue
+        needed.add(d)
+        for lag in HORIZON_LAG.values():
+            if j + lag < len(cal):
+                needed.add(cal[j + lag])
+    maps = {d: load_finviz_px(d, export_dir) for d in sorted(needed)}
+    out = df.copy()
+    for h, lag in HORIZON_LAG.items():
+        col = f"ret_{h}"
+        if col not in out.columns:
+            out[col] = pd.NA
+        filled = []
+        for _, r in out.iterrows():
+            cur = r.get(col)
+            if cur is not None and not pd.isna(cur):
+                filled.append(cur)
+                continue
+            d = str(r["date"])[:10]
+            t = str(r["Ticker"]).upper()
+            j = pos.get(d)
+            if j is None or j + lag >= len(cal):
+                filled.append(cur)
+                continue
+            nxt = cal[j + lag]
+            entry = (maps.get(d) or {}).get(t) or {}
+            exitr = (maps.get(nxt) or {}).get(t) or {}
+            ep, xp = entry.get("price"), exitr.get("price")
+            if ep and xp:
+                filled.append(round(100.0 * (xp / ep - 1.0), 3))
+            elif lag == 1 and exitr.get("change") is not None:
+                filled.append(round(float(exitr["change"]), 3))
+            else:
+                filled.append(cur)
+        out[col] = _finite(pd.Series(filled, index=out.index))
+    return out
 
 
 def a_printed(g: pd.DataFrame) -> bool:
@@ -789,6 +898,7 @@ def session_row(
 
 def run(path: Path = PANEL) -> dict:
     df = load_panel(path)
+    df = fill_returns_from_finviz(df)
     idx = build_index()
     days = []
     prev_long: set[str] = set()
@@ -1000,7 +1110,7 @@ def render(report: dict) -> str:
     a("| short | book SELL ∩ `fade` | 38.2% hit · −0.72 mean | short only |")
     a("")
     a("Never seated as a long: white alone, fade, `ab OR peer` dump, `join AND Band` alphabet dump, micro / sub-$400M extras.")
-    a("Thin 1d BUY mornings stay thin — we do not force 25 junk seats. A cameras print from **2026-08-20**. Settled 1d through **2026-08-20**.")
+    a("Thin 1d BUY mornings stay thin — we do not force 25 junk seats. A cameras print from **2026-08-20**. Panel yfinance 1d is settled through **2026-08-20**; later days use the next Finviz tape (`Price`/`Price`, else `Change%`). The parquet is not rebuilt.")
     a("")
     a("Per-day files: `03_scoreboard/boring_winners/<date>.md` · today also at `01_daily/<date>_boring_winners.md` and `latest_boring_winners.md`.")
     a("")
@@ -1115,6 +1225,7 @@ def render(report: dict) -> str:
     a("2. `blue` board mean +4.46 is squeeze-contaminated. Book lines clip ±30.")
     a("3. HARD_RED / thin BUY mornings stay thin. We do not backfill 25 lottery names.")
     a("4. A cameras (`ab` / `peer`) only print from **2026-08-20**. Before that, extras cannot fire `hot+ab+peer` / `ab+peer`.")
+    a("5. 1d after 8/20 comes from the next Finviz tape we already parse every morning. Same close-to-close idea as the panel; not a parquet rebuild.")
     a("")
     return "\n".join(lines) + "\n"
 
