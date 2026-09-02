@@ -12,7 +12,10 @@ from src.boring_winners_backtest import (
     annotate_actions,
     book_gate_ok,
     fill_overlay,
+    extend_panel_with_live_books,
     fill_returns_from_finviz,
+    stock_book_dates,
+    stub_panel_day,
     fill_seats,
     fill_short_overlay,
     pick_seats,
@@ -295,6 +298,44 @@ def test_finviz_1d_falls_back_to_change():
     assert abs(float(out.loc[0, "ret_1d"]) - 3.5) < 1e-6
 
 
+def test_stub_panel_reads_book_marks():
+    import tempfile
+    tmp = Path(tempfile.mkdtemp())
+    (tmp / "2026-09-02_stock_book.json").write_text("{}", encoding="utf-8")
+    (tmp / "2026-09-02_stock_book.csv").write_text(
+        "Ticker,sector,src_ab_tone,src_peer_tone,lb_blue,lb_fade,lb_alarm,lb_zero_red,lb_cond,lb_points,relvol,s_ab\n"
+        "AAA,Energy,good,good,True,False,False,True,good,12,2.0,0.8\n"
+        "BBB,Tech,bad,neutral,False,True,True,False,bad,4,0.4,-0.2\n",
+        encoding="utf-8",
+    )
+    g = stub_panel_day("2026-09-02", book_dir=tmp)
+    a = g[g.Ticker == "AAA"].iloc[0]
+    b = g[g.Ticker == "BBB"].iloc[0]
+    assert bool(a["blue"]) and a["ab_good"] and a["relvol_b"] == "hot"
+    assert bool(b["fade"]) and b["cond"] == "bad"
+    assert a["ret_1d"] is None
+    assert "2026-09-02" in stock_book_dates(tmp)
+
+
+def test_extend_panel_appends_new_book_morning():
+    import tempfile
+    tmp = Path(tempfile.mkdtemp())
+    (tmp / "2026-09-02_stock_book.json").write_text("{}", encoding="utf-8")
+    (tmp / "2026-09-02_stock_book.csv").write_text(
+        "Ticker,sector,src_ab_tone,src_peer_tone,lb_blue,lb_fade,lb_cond,lb_points,relvol\n"
+        "NEW,Health,good,good,True,False,good,8,1.0\n",
+        encoding="utf-8",
+    )
+    base = pd.DataFrame([
+        {**_row(Ticker="OLD", blue=True), "date": "2026-09-01", "ret_1d": 1.0},
+    ])
+    out = extend_panel_with_live_books(base, book_dir=tmp)
+    assert set(out["date"].astype(str)) == {"2026-09-01", "2026-09-02"}
+    assert "NEW" in set(out["Ticker"])
+    again = extend_panel_with_live_books(out, book_dir=tmp)
+    assert list(again["date"].astype(str)).count("2026-09-02") == 1
+
+
 if __name__ == "__main__":
     test_defaults_are_25_by_6()
     test_lottery_when_no_blue_no_alarm()
@@ -316,4 +357,6 @@ if __name__ == "__main__":
     test_short_is_fade_only()
     test_finviz_fills_missing_1d_keeps_panel()
     test_finviz_1d_falls_back_to_change()
+    test_stub_panel_reads_book_marks()
+    test_extend_panel_appends_new_book_morning()
     print("ok")

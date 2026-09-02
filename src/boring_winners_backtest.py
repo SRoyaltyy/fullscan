@@ -110,8 +110,107 @@ def _flag(g: pd.DataFrame, col: str, default=False) -> pd.Series:
     return g[col].fillna(False)
 
 
-def load_panel(path: Path = PANEL) -> pd.DataFrame:
-    df = pd.read_parquet(path)
+def stock_book_dates(book_dir: Path | None = None) -> list[str]:
+    """Mornings that have a 1d BUY list — includes today once Stock Book ALL lands."""
+    book_dir = Path(book_dir or BOOK_DIR)
+    return sorted({p.name[:10] for p in book_dir.glob("????-??-??_stock_book.json")})
+
+
+def _boolish(x) -> bool:
+    if isinstance(x, bool):
+        return x
+    return str(x).strip().lower() in {"true", "1", "yes"}
+
+
+def _relvol_bucket(rec: dict) -> str:
+    tone = str(rec.get("relvol_b") or "").lower()
+    if tone in RELVOL_RANK:
+        return tone
+    try:
+        v = float(rec.get("relvol") or 0)
+    except (TypeError, ValueError):
+        v = 0.0
+    if v >= 1.5:
+        return "hot"
+    if 0 < v < 0.7:
+        return "dead"
+    if v > 0:
+        return "normal"
+    return "missing"
+
+
+def stub_panel_day(date: str, book_dir: Path | None = None) -> pd.DataFrame:
+    """Build a mine-shaped day from that morning's stock-book CSV.
+
+    Used when FEATURE_MINE parquet has not caught up (today). 1d stays
+    empty until the next Finviz tape. Overlay marks come from lb_*.
+    """
+    path = Path(book_dir or BOOK_DIR) / f"{date}_stock_book.csv"
+    if not path.exists():
+        return pd.DataFrame()
+    try:
+        frame = pd.read_csv(path)
+    except (OSError, ValueError, pd.errors.ParserError):
+        return pd.DataFrame()
+    if "Ticker" not in frame.columns:
+        return pd.DataFrame()
+    tones = (
+        "src_join_tone", "src_sector_tone", "src_gen_tone", "src_ab_tone",
+        "src_peer_tone", "src_heat_tone", "src_vol_tone",
+    )
+    rows = []
+    for rec in frame.to_dict(orient="records"):
+        t = str(rec.get("Ticker") or "").upper()
+        if not t:
+            continue
+        def tone(key, fallback="missing"):
+            v = str(rec.get(key) or fallback).lower()
+            return v if v in {"good", "bad", "neutral", "missing"} else "missing"
+        ab, peer, join = tone("src_ab_tone"), tone("src_peer_tone"), tone("src_join_tone")
+        setups = str(rec.get("lb_setups") or "")
+        try:
+            points = int(float(rec.get("lb_points") or 0))
+        except (TypeError, ValueError):
+            points = 0
+        try:
+            ab_score = float(rec.get("s_ab")) if rec.get("s_ab") == rec.get("s_ab") else 0.0
+        except (TypeError, ValueError):
+            ab_score = 0.0
+        rows.append({
+            "Ticker": t,
+            "date": date,
+            "ab": ab,
+            "peer": peer,
+            "join": join,
+            "ab_good": ab == "good",
+            "peer_good": peer == "good",
+            "join_good": join == "good",
+            "blue": _boolish(rec.get("lb_blue")),
+            "white": _boolish(rec.get("lb_zero_red")),
+            "alarm": _boolish(rec.get("lb_alarm")),
+            "fade": _boolish(rec.get("lb_fade")),
+            "first_crack": "first_crack" in setups,
+            "steady": False,
+            "cond": rec.get("lb_cond") or "missing",
+            "region": rec.get("lb_region") or "missing",
+            "ab_up": ab_score > 0,
+            "short_b": "missing",
+            "sma20_b": "missing",
+            "rsi_b": "missing",
+            "gap_b": "missing",
+            "relvol_b": _relvol_bucket(rec),
+            "points": points,
+            "n_red": sum(1 for k in tones if str(rec.get(k) or "").lower() == "bad"),
+            "sector_name": rec.get("sector") or "UNK",
+            **{f"ret_{h}": None for h in HORIZONS},
+        })
+    return pd.DataFrame(rows)
+
+
+def _annotate_panel(df: pd.DataFrame) -> pd.DataFrame:
+    if df is None or df.empty:
+        return df
+    df = df.copy()
     for h in HORIZONS:
         col = f"ret_{h}"
         if col in df.columns:
@@ -153,6 +252,27 @@ def load_panel(path: Path = PANEL) -> pd.DataFrame:
     )
     df["relvol_rk"] = df["relvol_b"].map(RELVOL_RANK).fillna(-1).astype(int)
     return df
+
+
+def extend_panel_with_live_books(df: pd.DataFrame, book_dir: Path | None = None) -> pd.DataFrame:
+    """Append stock-book mornings the mine parquet has not ingested yet (today)."""
+    have = set(df["date"].astype(str)) if df is not None and len(df) else set()
+    extra = []
+    for date in stock_book_dates(book_dir):
+        if date in have:
+            continue
+        stub = stub_panel_day(date, book_dir)
+        if stub is None or stub.empty:
+            continue
+        extra.append(_annotate_panel(stub))
+    if not extra:
+        return df
+    return pd.concat([df, *extra], ignore_index=True, sort=False)
+
+
+def load_panel(path: Path = PANEL, book_dir: Path | None = None) -> pd.DataFrame:
+    df = _annotate_panel(pd.read_parquet(path))
+    return extend_panel_with_live_books(df, book_dir)
 
 
 def _parse_finviz_pct(x):
@@ -935,9 +1055,19 @@ def run(path: Path = PANEL) -> dict:
     name_2d = [r["ret_2d"] for r in ledger if r.get("side") == "buy" and r.get("action") != "sell" and r.get("ret_2d") is not None]
     book_1d = [d["vs_book"]["book"]["1d"] for d in days if (d.get("vs_book") or {}).get("book", {}).get("1d") is not None]
     mine_1d = [d["vs_mine"]["1d"] for d in days if (d.get("vs_mine") or {}).get("1d") is not None]
+    live = None
+    try:
+        from zoneinfo import ZoneInfo
+        from datetime import datetime as _dt
+        live = _dt.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+    except Exception:
+        live = None
+    missing_live = bool(live and live not in [d["date"] for d in days] and Path(BOOK_DIR / f"{live}_stock_book.json").exists() is False)
     return {
         "generated_from": str(path),
         "mode": "book_x_mine_overlay",
+        "live_date": live,
+        "missing_live_book": missing_live,
         "seats": SEATS,
         "sector_cap": SECTOR_CAP,
         "max_extras": MAX_EXTRAS,
@@ -1085,6 +1215,12 @@ def render(report: dict) -> str:
     a("# Boring winners — book × mine overlay")
     a("")
     a("Starts from the **same 1d BUY list** the Top Gainer As-Of walk uses, then overlays the fixed FEATURE_MINE stacks. Equal-weight, close-to-close, clip ±30 on the book line. Per-name 1d/2d/3d/1w are raw.")
+    if report.get("missing_live_book") and report.get("live_date"):
+        a("")
+        a(f"**{report['live_date']} is not on this board** — that morning's `data/stock_book/{report['live_date']}_stock_book.json` is not in the repo yet. Run **Stock Book ALL**, then re-run **Boring Winners Backtest**. Today's 1d will stay `—` until tomorrow's Finviz tape.")
+    elif report.get("days") and report["days"][-1]["date"] == report.get("live_date"):
+        a("")
+        a(f"**{report['live_date']} is this morning's live book.** 1d/2d are blank until later tapes. Buys/sells vs yesterday are the eval.")
     a("")
     a("## How a seat is won")
     a("")
