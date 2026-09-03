@@ -72,6 +72,12 @@ RANDOM_N = 50
 # Finviz export units: Market Cap = $ millions, Average Volume = thousands of shares.
 RANDOM_MIN_MCAP_M = 100.0
 RANDOM_MIN_AVG_VOL_K = 500.0
+# Recent movement: ATR / Price × 100 from the last completed Finviz tape
+# (knowable at 09:30). Join already bins <2% low / 2–5% mid / ≥5% high.
+# Quiet large-caps like late-August CVS sit at the bottom of mid (~2.2%)
+# after a summer run compressed. 2.5% drops those without needing
+# same-day Change%.
+MIN_ATR_PCT = 2.5
 BOX_COLS = (
     ("join", "join"), ("sector", "sect"), ("gen", "gen"), ("news", "news"),
     ("digest", "dig"), ("judge", "jdg"), ("ab", "AB"), ("peer", "peer"),
@@ -323,6 +329,21 @@ def annotate_signal_improved(days):
     return days
 
 
+def atr_pct(atr, price):
+    """Average True Range as a percent of last price, or None."""
+    a = _num(atr)
+    p = _num(price)
+    if a is None or p is None or p <= 0:
+        return None
+    return round(100.0 * float(a) / float(p), 3)
+
+
+def moves_enough(atr, price, min_atr_pct=MIN_ATR_PCT) -> bool:
+    """True when recent ATR% clears the movement floor."""
+    pct = atr_pct(atr, price)
+    return pct is not None and pct >= float(min_atr_pct)
+
+
 def latest_finviz_path(asof=None):
     files = sorted(EXPORT_DIR.glob("finviz_????-??-??.csv"))
     if asof:
@@ -331,8 +352,9 @@ def latest_finviz_path(asof=None):
 
 
 def liquid_universe(asof=None, min_mcap_m=RANDOM_MIN_MCAP_M,
-                    min_avg_vol_k=RANDOM_MIN_AVG_VOL_K):
-    """Tickers with market cap > $100M and average volume > 500K shares."""
+                    min_avg_vol_k=RANDOM_MIN_AVG_VOL_K,
+                    min_atr_pct=MIN_ATR_PCT):
+    """Liquid names that still move: mcap, ADV, and recent ATR%."""
     path = latest_finviz_path(asof)
     if path is None:
         return []
@@ -350,7 +372,12 @@ def liquid_universe(asof=None, min_mcap_m=RANDOM_MIN_MCAP_M,
                    or rec.get("Avg Vol"))
         if mcap is None or adv is None:
             continue
-        if mcap > min_mcap_m and adv > min_avg_vol_k:
+        if (
+            mcap > min_mcap_m
+            and adv > min_avg_vol_k
+            and moves_enough(
+                rec.get("Average True Range"), rec.get("Price"), min_atr_pct)
+        ):
             seen.add(t)
             out.append(t)
     return out
@@ -360,7 +387,8 @@ def pick_random_tickers(n=RANDOM_N, asof=None, seed=None):
     names = liquid_universe(asof)
     if not names:
         raise SystemExit(
-            "no liquid names (mcap>$100M, avg vol>500K) in Finviz exports")
+            "no liquid movers (mcap>$100M, avg vol>500K, ATR%≥"
+            f"{MIN_ATR_PCT}) in Finviz exports")
     rng = random.Random(seed)
     if len(names) <= n:
         return names

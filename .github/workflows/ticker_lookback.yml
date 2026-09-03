@@ -6,7 +6,7 @@ name: Ticker Lookback (any stock)
 # 6 domain coaches, hall-pass lane, marks, Cond, and BUY PROBABLE /
 # HARD_RED copy from that day's book when it exists (else as-of
 # coaches). Enter any ticker(s), or check Random for 50 liquid names
-# (mcap > $100M, avg volume > 500K). Featured setups still overlay
+# (mcap > $100M, avg volume > 500K, ATR% ≥ 2.5). Featured setups still overlay
 # the camera sheet.
 
 on:
@@ -18,7 +18,7 @@ on:
         default: ""
         type: string
       random:
-        description: "Pick 50 random stocks (market cap > $100M, average volume > 500K)"
+        description: "Pick 50 random stocks (mcap > $100M, avg vol > 500K, ATR% ≥ 2.5)"
         required: false
         default: false
         type: boolean

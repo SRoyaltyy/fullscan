@@ -10,10 +10,12 @@ from src.green_pile import attach_ranks, green_mask
 from src.stock_book import (
     HARD_SECTOR_RED,
     MAX_EVENT_SECTOR_TILT,
+    MIN_ATR_PCT,
     OPP_CAP,
     _book_side,
     _buy_veto_mask,
     _clip_event_tilt,
+    _load_finviz_liquidity,
 )
 
 
@@ -233,6 +235,14 @@ def test_20260831_sleeve_drops_broken_names() -> None:
             assert row.get("lb_region") != "bad"
 
 
+def test_book_liquidity_requires_recent_atr() -> None:
+    liq = _load_finviz_liquidity("2026-09-01")
+    cvs = liq.loc[liq.Ticker == "CVS"].iloc[0]
+    hive = liq.loc[liq.Ticker == "HIVE"].iloc[0]
+    assert float(cvs.atr_pct) < MIN_ATR_PCT
+    assert float(hive.atr_pct) >= MIN_ATR_PCT
+
+
 def main() -> None:
     tests = [
         test_event_tilt_cannot_invert_essay,
@@ -244,6 +254,7 @@ def main() -> None:
         test_finviz_board_reads_theme_tape,
         test_opp_cap_constant,
         test_20260831_sleeve_drops_broken_names,
+        test_book_liquidity_requires_recent_atr,
     ]
     failed = 0
     for fn in tests:

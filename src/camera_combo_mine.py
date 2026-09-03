@@ -408,7 +408,7 @@ def render_md(payload) -> str:
         f"_Generated {payload.get('generated_at')} · as-of 09:30 ET_",
         "",
         f"Liquid universe **{meta.get('n_names', 0)}** names "
-        f"(mcap > $100M, adv > 500k). **{meta.get('n_rows', 0)}** printed "
+        f"(mcap > $100M, adv > 500k, ATR% ≥ {tl.MIN_ATR_PCT}). **{meta.get('n_rows', 0)}** printed "
         f"name-days (≥{MIN_PRINT} cameras + a forward). "
         f"Sessions {meta.get('from_date') or '—'} → {meta.get('to_date') or '—'}.",
         "",

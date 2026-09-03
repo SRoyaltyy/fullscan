@@ -18,6 +18,7 @@ import numpy as np
 import pandas as pd
 
 from . import config, green_pile, scoreboard
+from . import ticker_lookback as tl
 
 ROOT = Path(__file__).resolve().parent.parent
 JOIN_DIR = ROOT / "data" / "join"
@@ -126,6 +127,7 @@ def effective_weights(
 # Average Volume in export is in *thousands* of shares → 500 == 500k shares
 MIN_MARKET_CAP_M = 80.0
 MIN_AVG_VOL_K = 500.0
+MIN_ATR_PCT = tl.MIN_ATR_PCT
 REBOUND_WINDOW = 40
 REBOUND_BOOST = 0.08  # smaller than AB/peer so it cannot clone a sector
 MAX_PER_INDUSTRY = 3
@@ -155,7 +157,7 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
         if not files:
             return pd.DataFrame(columns=[
                 "Ticker", "market_cap_m", "avg_vol_k", "relvol",
-                "change_pct", "gap_pct", "news_time",
+                "change_pct", "gap_pct", "news_time", "atr_pct",
             ])
         path = files[-1]
     df = pd.read_csv(path, low_memory=False)
@@ -180,6 +182,9 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
         df["News Time"].astype(str)
         if "News Time" in df.columns else ""
     )
+    atr = pd.to_numeric(df.get("Average True Range"), errors="coerce")
+    px = pd.to_numeric(df.get("Price"), errors="coerce")
+    out["atr_pct"] = np.where(px > 0, 100.0 * atr / px, np.nan)
     return out.drop_duplicates("Ticker", keep="first")
 
 
@@ -713,14 +718,18 @@ def build(date: str | None = None, top_n: int = 25,
     if "relvol" not in join.columns:
         join["relvol"] = np.nan
     n_before = len(join)
+    if "atr_pct" not in join.columns:
+        join["atr_pct"] = np.nan
     liquid = (
         (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
         & (join["avg_vol_k"].fillna(0) >= MIN_AVG_VOL_K)
+        & (join["atr_pct"].fillna(0) >= MIN_ATR_PCT)
     )
     join["liquid"] = liquid
     join = join.loc[liquid].copy()
     print(
-        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M vol>={MIN_AVG_VOL_K}k: "
+        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M "
+        f"vol>={MIN_AVG_VOL_K}k ATR%>={MIN_ATR_PCT}: "
         f"{n_before} → {len(join)}"
     )
 
@@ -1194,6 +1203,7 @@ def build(date: str | None = None, top_n: int = 25,
     meta["n_after_liquidity"] = int(len(join))
     meta["min_market_cap_m"] = MIN_MARKET_CAP_M
     meta["min_avg_vol_k"] = MIN_AVG_VOL_K
+    meta["min_atr_pct"] = MIN_ATR_PCT
     meta["n_rebound"] = int(join["rebound"].sum()) if "rebound" in join.columns else 0
     return join, meta
 
@@ -1426,6 +1436,7 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "rebound": bool(r.get("rebound", False)),
         "market_cap_m": r.get("market_cap_m"),
         "avg_vol_k": r.get("avg_vol_k"),
+        "atr_pct": r.get("atr_pct"),
         "s_join": _f("s_join"),
         "s_general": _f("s_general"),
         "s_ab": _f("s_ab"),
@@ -1906,7 +1917,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
 
     cols_keep = [
         "Ticker", "sector", "industry", "size",
-        "market_cap_m", "avg_vol_k", "relvol", "change_pct", "gap_pct",
+        "market_cap_m", "avg_vol_k", "atr_pct", "relvol", "change_pct", "gap_pct",
         "news_time",
         "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_sector_essay", "s_general", "s_news", "s_ab",

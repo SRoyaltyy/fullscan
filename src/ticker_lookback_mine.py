@@ -1,6 +1,6 @@
 """Market-wide 09:30 lookback pattern mine.
 
-Scans the liquid universe (mcap > $100M, avg vol > 500K) and grades
+Scans the liquid-mover universe (mcap > $100M, avg vol > 500K, ATR% ≥ 2.5) and grades
 tag × region, tag × stretch, factor tones, and small factor pairs
 against +1d / +3d / +1w — raw and vs the same-day universe median.
 
@@ -371,7 +371,7 @@ def render_md(payload) -> str:
         f"_Generated {payload.get('generated_at')}_",
         "",
         f"Liquid universe **{meta.get('n_names', 0)}** names "
-        f"(mcap > $100M, avg vol > 500K). "
+        f"(mcap > $100M, avg vol > 500K, ATR% ≥ {tl.MIN_ATR_PCT}). "
         f"**{meta.get('n_rows', 0)}** printed days "
         f"(≥{MIN_PRINT} factor boxes + a forward). "
         f"Sessions {meta.get('from_date') or '—'} → {meta.get('to_date') or '—'}.",

@@ -429,7 +429,7 @@ def render_md(payload):
         "session; +1d / +3d / +1w are later 16:00 ET closes._", ""]
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
-              f"mcap > $100M, avg vol > 500K_", ""]
+              f"mcap > $100M, avg vol > 500K, ATR% ≥ {tl.MIN_ATR_PCT}_", ""]
     L += [setups.render_setup_markdown(payload, include_dates=False), ""]
     L += [
         f"_Cameras {ga._legend()}_",
