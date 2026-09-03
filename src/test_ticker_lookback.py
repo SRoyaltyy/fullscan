@@ -140,7 +140,7 @@ def test_phone_html_and_returns() -> None:
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
     assert "09:30 ET" in page
-    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Action</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>" in page
+    assert "<th>Price</th><th>Open</th><th>o→c</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Action</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
     assert day0["forward_returns"]["1d"] is not None
@@ -161,8 +161,10 @@ def test_phone_html_and_returns() -> None:
         run.write_xlsx(payload, p)
         wb = load_workbook(p)
         assert "AAPL" in wb.sheetnames
-        assert wb["AAPL"]["C2"].value is not None
-        assert wb["AAPL"]["C2"].fill.fgColor.rgb[-6:] in {
+        heads = [c.value for c in wb["AAPL"][1]]
+        assert heads[:7] == ["Date", "Price", "Open", "o→c", "+1d", "+3d", "+1w"]
+        assert wb["AAPL"]["D2"].value is not None
+        assert wb["AAPL"]["D2"].fill.fgColor.rgb[-6:] in {
             "63BE7B", "FFEB84", "F8696B", "808080"}
 
 
@@ -234,9 +236,9 @@ def test_signal_improved_is_strict() -> None:
         "names": [{"ticker": "TEST", "days": days}],
     }
     page = run.render_html(payload)
-    assert 'th class="better clean">🔵⚪ 2026-08-20</th>' in page
-    assert 'th class="clean">⚪ 2026-08-19</th>' in page
-    assert "🚨 2026-08-21" in page
+    assert 'th class="better clean">🔵⚪ 2026-08-20 09:30 ET</th>' in page
+    assert 'th class="clean">⚪ 2026-08-19 09:30 ET</th>' in page
+    assert "🚨 2026-08-21 09:30 ET" in page
     assert "+≥3 pts" in page
     assert "purely worse" in page
     md = run.render_md(payload)

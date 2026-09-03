@@ -126,7 +126,7 @@ def test_overlay_rings_factor_boxes_not_date_cell() -> None:
     assert 'td class="good setup-hit setup-long"' in page
     assert "vol+AB" in page
     # Date cell stays a single-line mark; chips live in the Setups column.
-    assert ">2026-08-20</th>" in page
+    assert ">2026-08-20 09:30 ET</th>" in page
     assert "setup-chip" in page
     assert '<div class="setup-hits">' not in page
 

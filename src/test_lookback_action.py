@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from src import lookback_action as act
+from src import ticker_lookback as tl
 from src import ticker_lookback_run as run
 
 
@@ -106,6 +107,38 @@ def test_lookback_sheet_has_action_column() -> None:
     assert "| Action |" in md
     assert "<th>Action</th>" in page
     assert "BUY" in md
+    assert day["action_stamp"] == "2026-09-01 09:30 ET"
+    assert day["action_label"] == "BUY · 2026-09-01 09:30 ET"
+    assert "BUY · 2026-09-01 09:30 ET" in md
+    assert "BUY · 2026-09-01 09:30 ET" in page
+    assert "| o→c |" in md
+    assert "<th>o→c</th>" in page
+    assert "| Open |" in md
+    assert "<th>Open</th>" in page
+    assert act.cond_tally(day) != "—"
+
+
+def test_action_clocks_are_open_not_close() -> None:
+    assert act.format_action("SELL", "2026-08-17") == "SELL · 2026-08-17 09:30 ET"
+    assert act.format_price(3.82, "2026-08-17") == "$3.82 · 2026-08-17 16:00 ET"
+    assert act.format_price(3.72, "2026-08-17", act.OPEN_CLOCK) == (
+        "$3.72 · 2026-08-17 09:30 ET")
+    assert act.format_open_close(2.69, "2026-08-17") == (
+        "+2.69% · 2026-08-17 09:30→16:00 ET")
+    assert act.format_ret(-12.69, "2026-08-18") == (
+        "-12.69% · 2026-08-18 16:00 ET")
+    assert act.cond_tally({
+        "condition": {"tone": "good", "n": 4, "good": 3, "neutral": 0, "bad": 1},
+    }) == "3/0/1"
+    bar = tl.session_bar("AAPL", "2026-08-17")
+    assert bar["open"] is not None
+    assert bar["close"] is not None
+    assert bar["close_open_pct"] == round(
+        100.0 * (bar["close"] / bar["open"] - 1.0), 3)
+    later = tl.session_bar("AAPL", "2026-08-24")
+    assert later["open"] is not None
+    assert later["close"] is not None
+    assert later["close_open_pct"] is not None
 
 
 if __name__ == "__main__":
@@ -117,4 +150,5 @@ if __name__ == "__main__":
     test_call_ignores_same_day_change()
     test_grade_buy_sell()
     test_lookback_sheet_has_action_column()
-    print("8 lookback-action tests passed")
+    test_action_clocks_are_open_not_close()
+    print("9 lookback-action tests passed")

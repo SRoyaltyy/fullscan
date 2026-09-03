@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parent.parent
 PARAMS_PATH = ROOT / "00_grounding" / "lookback_action_params.json"
 
 ACTIONS = ("BUY", "SELL", "NO BUY", "HOLD")
+OPEN_CLOCK = "09:30 ET"
+CLOSE_CLOCK = "16:00 ET"
 BUY_LANES = (
     "standard",
     "group_leader",
@@ -230,6 +232,8 @@ def attach_actions(payload: dict, params: dict | None = None) -> dict:
             day["action_call"] = packed["action"]
             day["action_reason"] = packed["reason"]
             day["action_horizon"] = packed.get("horizon") or "1d"
+            day["action_stamp"] = session_stamp(day.get("date"), OPEN_CLOCK)
+            day["action_label"] = format_action(packed["action"], day.get("date"))
     payload["action_params"] = {k: v for k, v in p.items() if k != "label"}
     payload["action_preset"] = p.get("label") or default_preset_name()
     return payload
@@ -261,6 +265,56 @@ def grade_call(action: str, fwd: dict | None, *, eps: float = 0.0) -> dict[str, 
         else:
             out[h] = ret < -eps
     return out
+
+
+def session_stamp(date, clock: str = OPEN_CLOCK) -> str:
+    d = str(date or "")[:10]
+    return f"{d} {clock}" if d else "—"
+
+
+def format_action(action: str | None, date) -> str:
+    """BUY/SELL/HOLD · 2026-08-17 09:30 ET — the call is known at the open."""
+    verb = str(action or "").strip()
+    if not verb or verb == "—":
+        return "—"
+    return f"{verb} · {session_stamp(date, OPEN_CLOCK)}"
+
+
+def format_price(px, date, clock: str = CLOSE_CLOCK) -> str:
+    if px is None:
+        return "—"
+    try:
+        return f"${float(px):,.2f} · {session_stamp(date, clock)}"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def format_ret(pct, date, clock: str = CLOSE_CLOCK) -> str:
+    if pct is None:
+        return "—"
+    try:
+        return f"{float(pct):+.2f}% · {session_stamp(date, clock)}"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def format_open_close(pct, date) -> str:
+    if pct is None:
+        return "—"
+    try:
+        d = str(date or "")[:10]
+        return f"{float(pct):+.2f}% · {d} 09:30→16:00 ET"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def cond_tally(day: dict | None) -> str:
+    cond = (day or {}).get("condition")
+    if not cond:
+        cond = tl.general_condition((day or {}).get("boxes") or {})
+    if not cond or cond.get("tone") == "missing" or not cond.get("n"):
+        return "—"
+    return f"{cond.get('good', 0)}/{cond.get('neutral', 0)}/{cond.get('bad', 0)}"
 
 
 def action_tone(action: str) -> str:

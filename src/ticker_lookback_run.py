@@ -35,6 +35,8 @@ def _attach_day_extras(card, ticker, sess, sessions):
     card["forward_returns"] = tl.forward_returns(
         ticker, sess["date"], sessions=sessions, current_finviz=fv)
     card["price_tones"] = _price_tones(card["price_changes"])
+    card["session_bar"] = tl.session_bar(ticker, sess["date"])
+    card["horizon_dates"] = tl.horizon_dates(sess["date"])
     return card
 
 
@@ -274,7 +276,8 @@ def _date_marks(day):
 
 def _date_label(day):
     marks = _date_marks(day)
-    return f"{marks} {day['date']}".strip() if marks else day["date"]
+    stamp = act.session_stamp(day.get("date"), act.OPEN_CLOCK)
+    return f"{marks} {stamp}".strip() if marks else stamp
 
 
 def _date_classes(day):
@@ -354,7 +357,7 @@ def _fmt_mid_opp(value):
 
 def _sheet_headers():
     return (
-        ["Date", "Price", "+1d", "+3d", "+1w", "Action", "Cond", "Hall pass", "mid_opp", "Setups"]
+        ["Date", "Price", "Open", "o→c", "+1d", "+3d", "+1w", "Action", "Cond", "Hall pass", "mid_opp", "Setups"]
         + [label for _, label in CAMERA_COLS]
         + [label for _, label in DOMAIN_COLS]
         + ["Decision"]
@@ -362,7 +365,49 @@ def _sheet_headers():
 
 
 def _action_text(day):
-    return day.get("action_call") or "—"
+    return day.get("action_label") or act.format_action(
+        day.get("action_call"), day.get("date"))
+
+
+def _session_bar(day):
+    bar = day.get("session_bar")
+    if bar:
+        return bar
+    ticker = day.get("ticker")
+    date = day.get("date")
+    if ticker and date:
+        return tl.session_bar(ticker, date)
+    return {}
+
+
+def _horizon_dates(day):
+    hz = day.get("horizon_dates")
+    if hz:
+        return hz
+    date = day.get("date")
+    return tl.horizon_dates(date) if date else {}
+
+
+def _price_cell(day):
+    bar = _session_bar(day)
+    px = bar.get("close")
+    if px is None:
+        px = (day.get("price_changes") or {}).get("price")
+    return act.format_price(px, day.get("date"), act.CLOSE_CLOCK)
+
+
+def _open_cell(day):
+    return act.format_price(_session_bar(day).get("open"), day.get("date"), act.OPEN_CLOCK)
+
+
+def _open_close_cell(day):
+    return act.format_open_close(_session_bar(day).get("close_open_pct"), day.get("date"))
+
+
+def _fwd_cell(day, key):
+    pc = day.get("price_changes") or {}
+    when = _horizon_dates(day).get(key)
+    return act.format_ret(pc.get(key), when, act.CLOSE_CLOCK)
 
 
 def render_md(payload):
@@ -376,8 +421,12 @@ def render_md(payload):
         "pass, and BUY PROBABLE / HARD_RED copy come from that day's book "
         "when it exists, else the as-of coaches. **Action** is the "
         "authoritative BUY / SELL / NO BUY / HOLD from those 09:30 "
-        "cameras, featured mine setups, and hall pass — not the "
-        "forward +1d / +3d / +1w, which stay session-close outcomes._", ""]
+        "cameras, featured mine setups, and hall pass. "
+        "**Action is known at that date 09:30 ET** — the regular open, "
+        "before anyone knows the name will close as a gainer. It is not "
+        "an end-of-day call to trade the next morning. Price is the "
+        "16:00 ET close; Open is 09:30 ET; o→c is open→close the same "
+        "session; +1d / +3d / +1w are later 16:00 ET closes._", ""]
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
               f"mcap > $100M, avg vol > 500K_", ""]
@@ -415,10 +464,10 @@ def render_md(payload):
             date = _date_label(d)
             why = str(_decision_cell(d)).replace("|", "/")
             L.append(
-                f"| {date} | {_fmt_price(pc, 'price')} | "
-                f"{_fmt_price_md(pc, tones, '1d')} | "
-                f"{_fmt_price_md(pc, tones, '3d')} | "
-                f"{_fmt_price_md(pc, tones, '1w')} | "
+                f"| {date} | {_price_cell(d)} | {_open_cell(d)} | {_open_close_cell(d)} | "
+                f"{_fwd_cell(d, '1d')} | "
+                f"{_fwd_cell(d, '3d')} | "
+                f"{_fwd_cell(d, '1w')} | "
                 f"**{_action_text(d)}** | "
                 f"{_condition_md(_condition(d))} | "
                 f"{_hall_text(d)} | {_fmt_mid_opp(d.get('mid_opp'))} | "
@@ -457,9 +506,10 @@ def render_html(payload):
             )
             date_cls = _date_classes(day)
             cond = _condition(day)
+            oc_tone = tl.price_tone(_session_bar(day).get("close_open_pct"))
             price_tds = "".join(
                 f'<td class="{html.escape(tones.get(key, "missing"))}">'
-                f'{_fmt_price(pc, key)}</td>'
+                f'{html.escape(_fwd_cell(day, key))}</td>'
                 for key in ("1d", "3d", "1w")
             )
             chips = setups.setup_chips_html(day)
@@ -474,12 +524,16 @@ def render_html(payload):
             )
             why = html.escape(_decision_cell(day))
             action = _action_text(day)
-            action_tone = act.action_tone(action)
+            action_tone = act.action_tone(day.get("action_call") or "")
             rows.append(
                 f'<tr class="{html.escape(row_cls)}">'
                 f'<th class="{html.escape(date_cls)}">'
                 f'{html.escape(_date_label(day))}</th>'
-                f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
+                f"<td>{html.escape(_price_cell(day))}</td>"
+                f"<td>{html.escape(_open_cell(day))}</td>"
+                f'<td class="{html.escape(oc_tone)}">'
+                f'{html.escape(_open_close_cell(day))}</td>'
+                f"{price_tds}"
                 f'<td class="action {html.escape(action_tone)}">'
                 f'{html.escape(action)}</td>'
                 f'<td class="{html.escape(cond.get("tone", "missing"))}">'
@@ -498,7 +552,7 @@ def render_html(payload):
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Action</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>{factor_headers}{domain_headers}<th>Decision</th></tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>Open</th><th>o→c</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Action</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>{factor_headers}{domain_headers}<th>Decision</th></tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = '<a href="#setups">Setups</a>' + "".join(
@@ -520,7 +574,7 @@ main{{max-width:1000px;margin:auto;padding:16px}}h1,h2,h3,h4{{margin:.35em 0}}
 nav{{display:flex;gap:8px;overflow:auto;position:sticky;top:0;background:#0b1020ee;padding:10px 0;z-index:2}}
 nav a,.class{{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);text-decoration:none;white-space:nowrap}}
 .sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:22px}}
-table{{border-collapse:separate;border-spacing:0;min-width:1400px;width:100%;background:var(--card)}}
+table{{border-collapse:separate;border-spacing:0;min-width:1680px;width:100%;background:var(--card)}}
 section.setups table{{min-width:640px}}
 th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
 thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
@@ -550,7 +604,7 @@ tbody th.hard-red{{box-shadow:inset 0 -3px 0 #f59e0b}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>Same method as Stock Book readiness. Cameras = knowable by 09:30 ET (last completed tape + pre-open packet). Domains / hall pass / BUY PROBABLE come from that day's book when it exists. <b>Action</b> is the 09:30 BUY / SELL / NO BUY / HOLD. Price / +1d / +3d / +1w are session-close outcomes.</p>
+<p>Same method as Stock Book readiness. Cameras = knowable by 09:30 ET (last completed tape + pre-open packet). <b>Action is that date 09:30 ET</b> — known at the open, before anyone knows the name will close as a gainer. Not an end-of-day call for the next morning. Price = 16:00 ET close. Open = 09:30 ET. o→c = same-session open→close. +1d / +3d / +1w = later 16:00 ET closes.</p>
 <p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · ⬜ no as-of · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Hall pass = standard / group leader / catalyst / probable / blocked · Action = BUY / SELL / NO BUY / HOLD</p>
 <p class="muted">Two scoreboards: 12 cameras + yΔ, then 6 coaches (mkt · par · chd · co · set · flw). HARD_RED may still print BUY PROBABLE (size ×0.25). Featured setups overlay the camera sheet: gold ring on the boxes that fired.</p>
 {random_note}{setups.render_setup_html(payload)}<nav>{nav}</nav>{''.join(sections)}
@@ -654,6 +708,9 @@ def write_xlsx(payload, path):
     _write_setups_sheet(wb, payload, fills)
     headers = _sheet_headers()
     col_of = {name: i + 1 for i, name in enumerate(headers)}
+    col_of["1d"] = col_of["+1d"]
+    col_of["3d"] = col_of["+3d"]
+    col_of["1w"] = col_of["+1w"]
     cam_start = col_of["join"]
     domain_start = col_of["mkt"]
     decision_col = col_of["Decision"]
@@ -675,8 +732,13 @@ def write_xlsx(payload, path):
             tones = day.get("price_tones") or _price_tones(pc)
             cond = _condition(day)
             domains = day.get("domains") or {}
+            bar = _session_bar(day)
             ws.append([
-                _date_label(day), pc.get("price"), pc.get("1d"),
+                _date_label(day),
+                _price_cell(day),
+                _open_cell(day),
+                bar.get("close_open_pct"),
+                pc.get("1d"),
                 pc.get("3d"), pc.get("1w"), _action_text(day),
                 _condition_text(cond),
                 _hall_text(day), _fmt_mid_opp(day.get("mid_opp")),
@@ -700,14 +762,21 @@ def write_xlsx(payload, path):
             elif white:
                 date_cell.fill = fills["clean"]
                 date_cell.font = Font(bold=True, color="1F4E78")
-            for col, key in ((3, "1d"), (4, "3d"), (5, "1w")):
-                cell = ws.cell(row, col)
+            oc_col = col_of.get("o→c")
+            if oc_col:
+                oc_cell = ws.cell(row, oc_col)
+                oc_cell.number_format = '0.00"%"'
+                oc_cell.fill = fills.get(
+                    tl.price_tone(bar.get("close_open_pct")), fills["missing"])
+                oc_cell.alignment = Alignment(horizontal="center")
+            for key in ("1d", "3d", "1w"):
+                cell = ws.cell(row, col_of[key])
                 cell.number_format = '0.00"%"'
                 cell.fill = fills.get(tones.get(key, "missing"), fills["missing"])
                 cell.alignment = Alignment(horizontal="center")
             action_cell = ws.cell(row, action_col)
             action_cell.fill = fills.get(
-                act.action_tone(_action_text(day)), fills["missing"])
+                act.action_tone(day.get("action_call") or ""), fills["missing"])
             action_cell.alignment = Alignment(horizontal="center")
             cond_cell = ws.cell(row, cond_col)
             cond_cell.fill = fills.get(cond.get("tone", "missing"), fills["missing"])
@@ -730,13 +799,16 @@ def write_xlsx(payload, path):
                 cell.alignment = Alignment(horizontal="center")
             ws.cell(row, decision_col).alignment = Alignment(
                 horizontal="left", wrap_text=True)
-        ws.column_dimensions["A"].width = 18
-        ws.column_dimensions["B"].width = 12
-        ws.column_dimensions[_col_letter(action_col)].width = 12
+        ws.column_dimensions["A"].width = 28
+        ws.column_dimensions["B"].width = 28
+        ws.column_dimensions[_col_letter(col_of["Open"])].width = 28
+        ws.column_dimensions[_col_letter(col_of["o→c"])].width = 28
+        ws.column_dimensions[_col_letter(action_col)].width = 28
         ws.column_dimensions[_col_letter(hall_col)].width = 18
         ws.column_dimensions[_col_letter(setups_col)].width = 28
         ws.column_dimensions[_col_letter(decision_col)].width = 56
-        wide = {action_col, hall_col, setups_col, decision_col}
+        wide = {action_col, hall_col, setups_col, decision_col,
+                col_of["Open"], col_of["o→c"]}
         for col in range(3, len(headers) + 1):
             if col in wide:
                 continue
