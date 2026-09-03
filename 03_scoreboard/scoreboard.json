@@ -7485,6 +7485,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-03",
+          "actual_pct": 0.96,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -10966,6 +10978,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 0.47,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -13955,18 +13979,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7686.71,
+      "actual_close": 7747.71,
+      "actual_pct_change": 1.06,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-03_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/speech/waller20260903a.htm",
+          "date_accessed": "2026-09-03",
+          "summary": "Official 8:30 ET Reuters remarks flipped the live policy object from a Warsh-majority hike path to a conditional hold.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/03/fed-governor-waller-indicates-he-will-support-holding-rates-steady-at-september-meeting.html",
+          "date_accessed": "2026-09-03",
+          "summary": "The rates market treated Waller as a genuine path change, not color.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/03/stock-market-midday-sept-3-stocks-rally-as-treasury-yields-fall-broadcom-falls-despite-earnings-beat/",
+          "date_accessed": "2026-09-03",
+          "summary": "Duration easing is the cross-asset fingerprint of the equity trend-up.",
+          "verification": "verified"
+        },
+        {
+          "url": "http://hosting.briefing.com/cschwab/Calendars/EconomicReleases/napmserv.htm",
+          "date_accessed": "2026-09-03",
+          "summary": "Growth beat and a hot prices index arrived at 10:00; the path did not reverse, so Waller dominated the print.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://economics.td.com/us-ism-non-manufacturing-index",
+          "date_accessed": "2026-09-03",
+          "summary": "Macro attribution of ISM is hawkish; equities did not trade that sleeve.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.fool.com/investing/2026/09/03/why-broadcom-stock-dropped-today/",
+          "date_accessed": "2026-09-03",
+          "summary": "Confirms the morning call that AVGO was not an index bid; it is an outlier vs NDX +1.4%.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/03/stock-market-midday-sept-3-stocks-rally-as-treasury-yields-fall-broadcom-falls-despite-earnings-beat/",
+          "date_accessed": "2026-09-03",
+          "summary": "Overnight earnings that the morning B1 scan did not score, and that ran opposite AVGO.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://siliconangle.com/2026/09/03/nvidia-confirms-12-9b-acquisition-of-ai-hosting-platform-hugging-face/",
+          "date_accessed": "2026-09-03",
+          "summary": "AI-ecosystem headline and a modest NVDA bid, not the index’s primary cause.",
+          "verification": "verified"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -13993,7 +14112,16 @@
           "confidence": 0.5
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "Waller 8:30 ET hold-lean cut Sep hike odds (~63%→~48%) and pulled 10Y ~5 bp to ~4.75%",
+      "key_interaction": "Waller hold-lean offset Warsh/hike-odds drag and masked hawkish ISM prices 72.6; yields/odds/VIX/dollar are one shock not four",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "AVGO −2.75% (intraday ~−6%) on a beat vs NDX +1.4%; ISM prices 72.6 and energy/materials red while indexes grinded to highs; gold +2% with stocks",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-03",
