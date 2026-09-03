@@ -1,32 +1,36 @@
 {
-  "generated_at": "2026-09-03T07:35:35",
+  "generated_at": "2026-09-03T09:31:54",
   "asof": "2026-09-03",
   "params": {
     "capital": 100000.0,
     "top_n": 10,
     "pct": 0.05,
-    "preset": "gated"
+    "side": "long",
+    "entry": "open",
+    "hold": "1d",
+    "rank": "cond",
+    "gate_score": 1.0
   },
-  "n_trades": 117,
-  "n_skipped": 3589,
-  "hit": 0.504,
-  "total_pnl": -1277.36,
-  "total_ret_pct": -1.25,
-  "final_equity": 98752.02,
-  "max_dd_pct": 2.24,
-  "avg_win": 118.19,
-  "avg_loss": -142.25,
+  "n_trades": 31,
+  "n_skipped": 3894,
+  "hit": 0.613,
+  "total_pnl": 4751.59,
+  "total_ret_pct": 4.75,
+  "final_equity": 104751.59,
+  "max_dd_pct": 0.13,
+  "avg_win": 336.8,
+  "avg_loss": -137.31,
   "by_side": {
     "BUY": {
-      "n": 26,
-      "hit": 0.385,
-      "pnl": -543.35
+      "n": 31,
+      "hit": 0.613,
+      "pnl": 4751.59
     },
     "SELL": {
-      "n": 91,
-      "hit": 0.538,
-      "pnl": -734.01
+      "n": 0,
+      "hit": null,
+      "pnl": 0
     }
   },
-  "n_days": 11
+  "n_days": 14
 }
