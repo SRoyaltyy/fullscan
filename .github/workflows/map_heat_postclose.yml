@@ -11,6 +11,10 @@ name: Map Heat Captain Research (post-close)
 # ECS systemd timer is the same work; this job backs off if that service
 # is already active.
 #
+# Skip-if-good keys off the LAST CLOSED ET session, not calendar today.
+# A GH cron that drifts past midnight ET must not start the following
+# night's research.
+#
 # ECS never scrapes Elite HTML (Aliyun 403). Clone today's GH-hosted heat.
 
 on:
@@ -27,7 +31,7 @@ on:
           - ecs
           - ubuntu
       source_date:
-        description: "Completed session YYYY-MM-DD (default today ET)"
+        description: "Completed session YYYY-MM-DD (default last closed ET session)"
         required: false
         default: ""
       target_date:
@@ -81,6 +85,19 @@ jobs:
         if: env.skip != 'yes'
         with:
           clean: false
+      - name: Skip if last-closed baseline already on disk
+        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        run: |
+          set -euo pipefail
+          SOURCE="${{ github.event.inputs.source_date }}"
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "et_hm=$ET_HM event=${{ github.event_name }} source_in=${SOURCE:-<last-closed>}"
+          ARGS=(--job map_heat_postclose)
+          [ -n "$SOURCE" ] && ARGS+=(--date "$SOURCE")
+          if python3 -m src.skip_if_good "${ARGS[@]}"; then
+            echo "baseline already on disk — no Grok"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
       - uses: actions/setup-python@v5
         if: env.skip != 'yes'
         with:
@@ -125,7 +142,9 @@ jobs:
           else
             echo "WARN: cannot open $LOCK — running without flock"
           fi
-          SOURCE="${SOURCE:-$(TZ=America/New_York date +%F)}"
+          if [ -z "${SOURCE:-}" ]; then
+            SOURCE=$(python -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+          fi
           if [ -z "${TARGET:-}" ]; then
             TARGET=$(python -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
           fi

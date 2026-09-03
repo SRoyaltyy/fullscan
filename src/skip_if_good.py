@@ -25,6 +25,22 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
+def last_closed_session(now: datetime | None = None) -> str:
+    """Most recent session that has already printed a close.
+
+    Before 16:00 ET a weekday is still live, so yesterday (rolling
+    back across the weekend) is the closed source date. Post-close
+    research keys off this, not calendar 'today'.
+    """
+    now = now or datetime.now(ET)
+    d = now.date()
+    if now.hour < 16:
+        d -= timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= timedelta(days=1)
+    return d.isoformat()
+
+
 def _next_weekday(date_s: str) -> str:
     d = datetime.strptime(date_s, "%Y-%m-%d").date()
     d += timedelta(days=1)
@@ -88,16 +104,20 @@ def check_preopen_all(date: str) -> bool:
 
 
 def check_map_heat_postclose(date: str) -> bool:
+    """date = completed (source) session. Artifact lives on the NEXT session."""
     target = _next_weekday(date)
-    baseline = ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json"
-    md = ROOT / "01_daily" / "map_heat" / f"{target}_research.md"
+    heat = ROOT / "01_daily" / "map_heat"
+    baseline = heat / f"{target}_research_baseline.json"
+    md_base = heat / f"{target}_research_baseline.md"
+    md_short = heat / f"{target}_research.md"
     if not output_qc.qc_map_heat_baseline(baseline).ok:
         return _log(False, "map_heat_postclose", date,
                     f"target={target} baseline missing/thin")
-    if not _exists_gt(md, 400):
+    if not (_exists_gt(md_base, 400) or _exists_gt(md_short, 400)):
         return _log(False, "map_heat_postclose", date,
-                    f"target={target} research.md missing")
-    return _log(True, "map_heat_postclose", date, f"target={target} baseline present")
+                    f"target={target} baseline.md missing")
+    return _log(True, "map_heat_postclose", date,
+                f"target={target} baseline present")
 
 
 def check_stock_book_all(date: str) -> bool:
@@ -144,7 +164,12 @@ def main() -> None:
     ap.add_argument("--job", required=True, choices=sorted(JOBS))
     ap.add_argument("--date", default=None)
     args = ap.parse_args()
-    date = args.date or _today()
+    if args.date:
+        date = args.date
+    elif args.job == "map_heat_postclose":
+        date = last_closed_session()
+    else:
+        date = _today()
     os.chdir(ROOT)
     ok = JOBS[args.job](date)
     raise SystemExit(0 if ok else 1)
