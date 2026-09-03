@@ -726,6 +726,8 @@ def _slim_called(r: dict) -> dict:
         "horizon_dates": r.get("horizon_dates"),
         "condition": r.get("condition"),
         "cond_tally": r.get("cond_tally"),
+        "boxes": r.get("boxes"),
+        "conviction": r.get("conviction"),
         "action_call": r.get("action_call"),
         "action_label": r.get("action_label"),
         "action_stamp": r.get("action_stamp"),
@@ -733,7 +735,8 @@ def _slim_called(r: dict) -> dict:
         "lane": r.get("lane"),
         "lane_label": r.get("lane_label"),
         "setups": [
-            {"id": s.get("id"), "short": s.get("short"), "verdict": s.get("verdict")}
+            {"id": s.get("id"), "short": s.get("short"),
+             "verdict": s.get("verdict"), "edge_1d": s.get("edge_1d")}
             for s in (r.get("setups") or [])
         ],
         "price_changes": r.get("price_changes") or r.get("forward_returns"),
