@@ -49,6 +49,11 @@ def test_score_rows_buy_catch() -> None:
     assert scored["mean_pnl"]["1d"] == 2.0
 
 
+def test_hits_cell_is_one_column() -> None:
+    assert gla.hits_cell({"1d": True, "3d": False, "1w": None}) == "✅/❌/—"
+    assert gla.hits_cell({}) == "—/—/—"
+
+
 def test_gainer_table_stamps_clocks_prices_and_cond() -> None:
     page = gla.render_html({
         "generated_at": "t",
@@ -80,6 +85,7 @@ def test_gainer_table_stamps_clocks_prices_and_cond() -> None:
         }],
     })
     assert "Date 09:30 ET" in page
+    assert "Hits 1d/3d/1w" in page
     assert "Close 16:00 ET" in page
     assert "Open 09:30 ET" in page
     assert "o→c 09:30→16:00" in page
@@ -87,16 +93,23 @@ def test_gainer_table_stamps_clocks_prices_and_cond() -> None:
     assert "SELL · 2026-08-17 09:30 ET" in page
     assert "$3.82 · 2026-08-17 16:00 ET" in page
     assert "$3.72 · 2026-08-17 09:30 ET" in page
-    assert "+14.55% · 2026-08-17 16:00 ET" in page
-    assert "+2.69% · 2026-08-17 09:30→16:00 ET" in page
+    assert f"{act.ret_icon(14.55)} +14.55% · 2026-08-17 16:00 ET" in page
+    assert f"{act.ret_icon(2.688)} +2.69% · 2026-08-17 09:30→16:00 ET" in page
     assert "2/3/1" in page
-    assert "-12.69% · 2026-08-18 16:00 ET" in page
+    assert f"{act.ret_icon(-12.69)} -12.69% · 2026-08-18 16:00 ET" in page
+    assert "✅/✅/✅" in page
+    assert page.index("Hits 1d/3d/1w") < page.index("Close 16:00 ET")
+    assert page.index("✅/✅/✅") < page.index("CBRS")
+    assert ">1d</th>" not in page
     assert "known at the open" in page
     assert "Not an end-of-day call" in page
+    assert 'td class=\'good\'' in page
+    assert 'td class=\'bad\'' in page
 
 
 if __name__ == "__main__":
     test_collect_gainers_is_liquid_top()
     test_score_rows_buy_catch()
+    test_hits_cell_is_one_column()
     test_gainer_table_stamps_clocks_prices_and_cond()
-    print("3 gainer-lookback-action tests passed")
+    print("4 gainer-lookback-action tests passed")

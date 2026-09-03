@@ -289,23 +289,33 @@ def format_price(px, date, clock: str = CLOSE_CLOCK) -> str:
         return "—"
 
 
-def format_ret(pct, date, clock: str = CLOSE_CLOCK) -> str:
+def ret_tone(pct) -> str:
+    return tl.price_tone(pct)
+
+
+def ret_icon(pct) -> str:
+    return tl.BOX_ICON.get(ret_tone(pct), tl.BOX_ICON["missing"])
+
+
+def format_ret(pct, date, clock: str = CLOSE_CLOCK, *, marked: bool = True) -> str:
     if pct is None:
         return "—"
     try:
-        return f"{float(pct):+.2f}% · {session_stamp(date, clock)}"
+        text = f"{float(pct):+.2f}% · {session_stamp(date, clock)}"
     except (TypeError, ValueError):
         return "—"
+    return f"{ret_icon(pct)} {text}" if marked else text
 
 
-def format_open_close(pct, date) -> str:
+def format_open_close(pct, date, *, marked: bool = True) -> str:
     if pct is None:
         return "—"
     try:
         d = str(date or "")[:10]
-        return f"{float(pct):+.2f}% · {d} 09:30→16:00 ET"
+        text = f"{float(pct):+.2f}% · {d} 09:30→16:00 ET"
     except (TypeError, ValueError):
         return "—"
+    return f"{ret_icon(pct)} {text}" if marked else text
 
 
 def cond_tally(day: dict | None) -> str:

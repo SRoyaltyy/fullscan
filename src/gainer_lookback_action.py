@@ -276,6 +276,20 @@ def _hit_icon(v) -> str:
     return "—"
 
 
+def hits_cell(hits: dict | None) -> str:
+    """One left-side column: 1d / 3d / 1w catch marks."""
+    hits = hits or {}
+    return "/".join(_hit_icon(hits.get(h)) for h in HORIZONS)
+
+
+def _pct_text(pct, date, clock: str = act.CLOSE_CLOCK) -> str:
+    return act.format_ret(pct, date, clock, marked=True)
+
+
+def _oc_text(pct, date) -> str:
+    return act.format_open_close(pct, date, marked=True)
+
+
 def render_markdown(payload: dict) -> str:
     sweeps = payload.get("sweeps") or {}
     chosen = payload.get("preset") or "featured"
@@ -358,11 +372,11 @@ def render_markdown(payload: dict) -> str:
         "",
         "## Gainer mornings (default preset)",
         "",
-        "| Date 09:30 ET | # | Ticker | Close 16:00 ET | Open 09:30 ET | "
-        "Δ close 16:00 ET | o→c 09:30→16:00 | Cond | "
+        "| Date 09:30 ET | Hits 1d/3d/1w | # | Ticker | Close 16:00 ET | "
+        "Open 09:30 ET | Δ close 16:00 ET | o→c 09:30→16:00 | Cond | "
         "Action 09:30 ET | Why | Setups | "
-        "+1d 16:00 ET | +3d 16:00 ET | +1w 16:00 ET | 1d | 3d | 1w |",
-        "|---|---:|---|---:|---:|---:|---:|---|---|---|---|---:|---:|---:|---|---|---|",
+        "+1d 16:00 ET | +3d 16:00 ET | +1w 16:00 ET |",
+        "|---|---|---:|---|---:|---:|---:|---:|---|---|---|---|---:|---:|---:|",
     ]
     rows = sorted(
         payload.get("gainer_rows") or [],
@@ -372,28 +386,28 @@ def render_markdown(payload: dict) -> str:
         hits = r.get("hits") or {}
         bar = r.get("session_bar") or {}
         hz = r.get("horizon_dates") or {}
+        fwd = _fwd(r) or {}
         L.append(
             f"| {act.session_stamp(r.get('date'), act.OPEN_CLOCK)} | "
+            f"{hits_cell(hits)} | "
             f"{r.get('gainer_rank')} | `{r.get('ticker')}` | "
             f"{act.format_price(bar.get('close'), r.get('date'), act.CLOSE_CLOCK)} | "
             f"{act.format_price(bar.get('open'), r.get('date'), act.OPEN_CLOCK)} | "
-            f"{act.format_ret(r.get('gainer_change'), r.get('date'), act.CLOSE_CLOCK)} | "
-            f"{act.format_open_close(bar.get('close_open_pct'), r.get('date'))} | "
+            f"{_pct_text(r.get('gainer_change'), r.get('date'), act.CLOSE_CLOCK)} | "
+            f"{_oc_text(bar.get('close_open_pct'), r.get('date'))} | "
             f"{r.get('cond_tally') or act.cond_tally(r)} | "
             f"**{r.get('action_label') or act.format_action(r.get('action_call'), r.get('date'))}** | "
             f"{str(r.get('action_reason') or '—').replace('|', '/')} | "
             f"{setups.setup_labels(r) or '—'} | "
-            f"{act.format_ret((_fwd(r) or {}).get('1d'), hz.get('1d'), act.CLOSE_CLOCK)} | "
-            f"{act.format_ret((_fwd(r) or {}).get('3d'), hz.get('3d'), act.CLOSE_CLOCK)} | "
-            f"{act.format_ret((_fwd(r) or {}).get('1w'), hz.get('1w'), act.CLOSE_CLOCK)} | "
-            f"{_hit_icon(hits.get('1d'))} | "
-            f"{_hit_icon(hits.get('3d'))} | "
-            f"{_hit_icon(hits.get('1w'))} |"
+            f"{_pct_text(fwd.get('1d'), hz.get('1d'), act.CLOSE_CLOCK)} | "
+            f"{_pct_text(fwd.get('3d'), hz.get('3d'), act.CLOSE_CLOCK)} | "
+            f"{_pct_text(fwd.get('1w'), hz.get('1w'), act.CLOSE_CLOCK)} |"
         )
     L += [
         "",
         "_Action = that date **09:30 ET**, known before the open and "
-        "before the gainer list exists. Δ close = Finviz Change% "
+        "before the gainer list exists. Hits (left) = 1d/3d/1w catch "
+        "✅/❌. 🟢 up · 🟡 flat · 🔴 down. Δ close = Finviz Change% "
         "(prior close → 16:00 ET), outcome only. o→c = same-session "
         "open→close. +1d / +3d / +1w = later 16:00 ET closes._",
         "",
@@ -427,24 +441,29 @@ def render_html(payload: dict) -> str:
         hits = r.get("hits") or {}
         bar = r.get("session_bar") or {}
         hz = r.get("horizon_dates") or {}
+        fwd = _fwd(r) or {}
+
+        def pct_td(pct, text) -> str:
+            cls = html.escape(act.ret_tone(pct))
+            return f"<td class='{cls}'>{html.escape(text)}</td>"
+
         body.append(
             f"<tr><th>{html.escape(act.session_stamp(r.get('date'), act.OPEN_CLOCK))}</th>"
+            f"<td class='hits'>{html.escape(hits_cell(hits))}</td>"
             f"<td>{r.get('gainer_rank') or ''}</td>"
             f"<td>{html.escape(str(r.get('ticker') or ''))}</td>"
             f"<td>{html.escape(act.format_price(bar.get('close'), r.get('date'), act.CLOSE_CLOCK))}</td>"
             f"<td>{html.escape(act.format_price(bar.get('open'), r.get('date'), act.OPEN_CLOCK))}</td>"
-            f"<td>{html.escape(act.format_ret(r.get('gainer_change'), r.get('date'), act.CLOSE_CLOCK))}</td>"
-            f"<td>{html.escape(act.format_open_close(bar.get('close_open_pct'), r.get('date')))}</td>"
+            f"{pct_td(r.get('gainer_change'), _pct_text(r.get('gainer_change'), r.get('date'), act.CLOSE_CLOCK))}"
+            f"{pct_td(bar.get('close_open_pct'), _oc_text(bar.get('close_open_pct'), r.get('date')))}"
             f"<td>{html.escape(str(r.get('cond_tally') or act.cond_tally(r)))}</td>"
             f"<td class='{tone}'>{html.escape(str(r.get('action_label') or act.format_action(r.get('action_call'), r.get('date'))))}</td>"
             f"<td class='why'>{html.escape(str(r.get('action_reason') or '—'))}</td>"
             f"<td>{html.escape(setups.setup_labels(r) or '—')}</td>"
-            f"<td>{html.escape(act.format_ret((_fwd(r) or {}).get('1d'), hz.get('1d'), act.CLOSE_CLOCK))}</td>"
-            f"<td>{html.escape(act.format_ret((_fwd(r) or {}).get('3d'), hz.get('3d'), act.CLOSE_CLOCK))}</td>"
-            f"<td>{html.escape(act.format_ret((_fwd(r) or {}).get('1w'), hz.get('1w'), act.CLOSE_CLOCK))}</td>"
-            f"<td>{_hit_icon(hits.get('1d'))}</td>"
-            f"<td>{_hit_icon(hits.get('3d'))}</td>"
-            f"<td>{_hit_icon(hits.get('1w'))}</td></tr>"
+            f"{pct_td(fwd.get('1d'), _pct_text(fwd.get('1d'), hz.get('1d'), act.CLOSE_CLOCK))}"
+            f"{pct_td(fwd.get('3d'), _pct_text(fwd.get('3d'), hz.get('3d'), act.CLOSE_CLOCK))}"
+            f"{pct_td(fwd.get('1w'), _pct_text(fwd.get('1w'), hz.get('1w'), act.CLOSE_CLOCK))}"
+            "</tr>"
         )
     return f"""<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -455,9 +474,12 @@ def render_html(payload: dict) -> str:
 main{{max-width:1280px;margin:auto;padding:16px}}h1,h2{{margin:.4em 0}}
 .muted{{color:var(--muted)}}
 .sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:16px 0}}
-table{{border-collapse:separate;border-spacing:0;min-width:1800px;width:100%;background:var(--card)}}
+table{{border-collapse:separate;border-spacing:0;min-width:1680px;width:100%;background:var(--card)}}
 th,td{{padding:8px 7px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
-thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
+thead th{{position:sticky;top:0;background:#17213a;z-index:2}}
+thead th:nth-child(2){{left:13.5rem;z-index:3}}
+tbody th{{position:sticky;left:0;background:#17213a;text-align:left;z-index:1}}
+td.hits{{position:sticky;left:13.5rem;background:#17213a;font-weight:700;z-index:1;box-shadow:1px 0 0 var(--line)}}
 td.good{{background:#123d2c}}td.bad{{background:#4b2028}}td.neutral{{background:#473e1d}}
 td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 tr.chosen td{{outline:1px solid #eab308}}
@@ -466,7 +488,7 @@ tr.chosen td{{outline:1px solid #eab308}}
 <h1>Gainer lookback action</h1>
 <p>Liquid Finviz top {html.escape(str(payload.get('top_n')))} gainers
 ({html.escape(str(payload.get('from_date')))} → {html.escape(str(payload.get('to_date')))}).
-<b>Action is that date 09:30 ET</b> — known at the open, before anyone knows the name will close as a gainer. Not an end-of-day call for the next morning. Δ close = prior close→16:00. o→c = 09:30→16:00 same session. +1d/+3d/+1w = later 16:00 ET closes.</p>
+<b>Action is that date 09:30 ET</b> — known at the open, before anyone knows the name will close as a gainer. Not an end-of-day call for the next morning. Δ close = prior close→16:00. o→c = 09:30→16:00 same session. +1d/+3d/+1w = later 16:00 ET closes. 🟢 up · 🟡 flat · 🔴 down. Hits (left) = 1d/3d/1w catch.</p>
 <p class="muted">BUY on the gainer morning (recall):
 <b>{html.escape(_pct(payload.get('recall_buy_rate')))}</b>
 · default preset <code>{html.escape(str(chosen))}</code></p>
@@ -476,7 +498,7 @@ tr.chosen td{{outline:1px solid #eab308}}
 <tbody>{''.join(sweep_rows)}</tbody></table></div>
 <h2>Each gainer morning</h2>
 <div class="sheet"><table>
-<thead><tr><th>Date 09:30 ET</th><th>#</th><th>Ticker</th><th>Close 16:00 ET</th><th>Open 09:30 ET</th><th>Δ close 16:00 ET</th><th>o→c 09:30→16:00</th><th>Cond</th><th>Action 09:30 ET</th><th>Why</th><th>Setups</th><th>+1d 16:00 ET</th><th>+3d 16:00 ET</th><th>+1w 16:00 ET</th><th>1d</th><th>3d</th><th>1w</th></tr></thead>
+<thead><tr><th>Date 09:30 ET</th><th>Hits 1d/3d/1w</th><th>#</th><th>Ticker</th><th>Close 16:00 ET</th><th>Open 09:30 ET</th><th>Δ close 16:00 ET</th><th>o→c 09:30→16:00</th><th>Cond</th><th>Action 09:30 ET</th><th>Why</th><th>Setups</th><th>+1d 16:00 ET</th><th>+3d 16:00 ET</th><th>+1w 16:00 ET</th></tr></thead>
 <tbody>{''.join(body)}</tbody></table></div>
 </main></body></html>"""
 
