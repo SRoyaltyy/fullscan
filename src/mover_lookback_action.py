@@ -42,9 +42,13 @@ CALLED = ("BUY", "SELL", "NO BUY")
 
 
 def universe_tape(sess: dict) -> str:
-    """Finviz date knowable at 09:30 on this session."""
+    """Finviz date knowable at 09:30 on this session.
+
+    Prefer the prior session's export. If that file is missing (first
+    tape in the archive), use this session's file — only then.
+    """
     prior = sess.get("prior_date")
-    if prior and tl.latest_finviz_path(prior):
+    if prior and (tl.EXPORT_DIR / f"finviz_{prior}.csv").is_file():
         return prior
     return sess["date"]
 

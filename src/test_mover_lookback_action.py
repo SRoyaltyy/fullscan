@@ -20,6 +20,12 @@ def test_collect_movers_uses_prior_tape_not_gainers() -> None:
     assert meta["min_avg_vol_k"] == 500.0
 
 
+def test_first_session_falls_back_to_same_tape() -> None:
+    meta = mla.collect_movers(from_date="2026-08-13", to_date="2026-08-13")
+    assert meta["tape_of"]["2026-08-13"] == "2026-08-13"
+    assert len(meta["by_date"]["2026-08-13"]) >= 1000
+
+
 def test_collect_movers_keeps_cvs_when_it_still_moved() -> None:
     meta = mla.collect_movers(from_date="2026-08-17", to_date="2026-08-17")
     tape = meta["tape_of"]["2026-08-17"]
@@ -100,6 +106,7 @@ def test_mover_table_is_not_gainer_list() -> None:
 
 if __name__ == "__main__":
     test_collect_movers_uses_prior_tape_not_gainers()
+    test_first_session_falls_back_to_same_tape()
     test_collect_movers_keeps_cvs_when_it_still_moved()
     test_mover_table_is_not_gainer_list()
     print("3 mover-lookback-action tests passed")
