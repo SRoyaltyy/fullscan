@@ -14,7 +14,7 @@ Strategy levers (CLI):
                      --entry close (day_change needs the 16:00 print)
   --gate-score X          default 1.0   (trade only when the morning general
         predict score >= X; missing predict = allow; 'none' disables)
-  --pct 0.05              per-trade notional as fraction of equity
+  --pct 0.10              per-trade notional as fraction of equity
   --capital 100000
 
 Day gate (the "avoid fall days" layer): the premarket general predict
@@ -720,7 +720,7 @@ def main() -> None:
     ap.add_argument("--payload", default=str(PAYLOAD))
     ap.add_argument("--capital", type=float, default=100_000.0)
     ap.add_argument("--top-n", type=int, default=10)
-    ap.add_argument("--pct", type=float, default=0.05)
+    ap.add_argument("--pct", type=float, default=0.10)
     ap.add_argument("--side", choices=["long", "both"], default="long")
     ap.add_argument("--entry", choices=["open", "close"], default="open")
     ap.add_argument("--hold", choices=["eod", "1d", "3d", "1w"], default="1d")
