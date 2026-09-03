@@ -84,7 +84,9 @@ def _fwd(day: dict) -> dict:
 def _score_rows(rows: list[dict], params: dict) -> dict:
     counts = Counter()
     hits = {h: Counter() for h in HORIZONS}
-    rets = {h: [] for h in HORIZONS}
+    buy_hits = {h: Counter() for h in HORIZONS}
+    sell_hits = {h: Counter() for h in HORIZONS}
+    signed = {h: [] for h in HORIZONS}
     aligned = Counter()
     for row in rows:
         packed = act.action_call(row, params=params)
@@ -96,15 +98,19 @@ def _score_rows(rows: list[dict], params: dict) -> dict:
         for h in HORIZONS:
             g = grade[h]
             row_hits[h] = g
-            if g is None:
+            raw = (_fwd(row) or {}).get(h)
+            try:
+                ret = None if raw is None else float(raw)
+            except (TypeError, ValueError):
+                ret = None
+            if g is None or ret is None:
                 continue
             hits[h]["n"] += 1
             hits[h]["hit"] += int(g)
-            val = (_fwd(row) or {}).get(h)
-            try:
-                rets[h].append(float(val))
-            except (TypeError, ValueError):
-                pass
+            bucket = buy_hits if action == "BUY" else sell_hits
+            bucket[h]["n"] += 1
+            bucket[h]["hit"] += int(g)
+            signed[h].append(ret if action == "BUY" else -ret)
         if action in ("BUY", "SELL"):
             a, b = row_hits.get("1d"), row_hits.get("3d")
             if a is not None and b is not None:
@@ -119,10 +125,9 @@ def _score_rows(rows: list[dict], params: dict) -> dict:
             return None
         return round(c.get("hit", 0) / n, 3)
 
-    mean = {}
-    for h in HORIZONS:
-        xs = rets[h]
-        mean[h] = None if not xs else round(sum(xs) / len(xs), 3)
+    def mean(xs) -> float | None:
+        return None if not xs else round(sum(xs) / len(xs), 3)
+
     return {
         "n": counts["n"],
         "n_buy": counts.get("BUY", 0),
@@ -132,9 +137,11 @@ def _score_rows(rows: list[dict], params: dict) -> dict:
         "catch": {h: rate(hits[h]) for h in HORIZONS},
         "catch_n": {h: hits[h].get("n", 0) for h in HORIZONS},
         "catch_hit": {h: hits[h].get("hit", 0) for h in HORIZONS},
+        "buy_catch": {h: rate(buy_hits[h]) for h in HORIZONS},
+        "sell_catch": {h: rate(sell_hits[h]) for h in HORIZONS},
         "aligned_1d_3d": rate(aligned),
         "aligned_n": aligned.get("n", 0),
-        "mean_ret": mean,
+        "mean_pnl": {h: mean(signed[h]) for h in HORIZONS},
         "params": {k: v for k, v in params.items() if k != "label"},
         "label": params.get("label") or "",
     }
@@ -279,12 +286,22 @@ def render_markdown(payload: dict) -> str:
         "coaches + featured mine setups). The **Action** column is the "
         "authoritative BUY / SELL / NO BUY / HOLD. Same-day Change% "
         "only selects the universe — it does not enter the call. "
-        "Catch = BUY and the forward move is up, or SELL and it is down.",
+        "Catch = BUY and the forward move is up, or SELL and it is down. "
+        "**pnl 1d** is signed (BUY keeps +1d, SELL flips it). "
+        "Gainer-morning SELLs are a hard test: those names already "
+        "ripped, so a fade is fighting the tape. **History** is the "
+        "fairer read — every printed lookback day of those names.",
         "",
         f"Default preset **`{chosen}`**. "
         f"BUY on the gainer morning (recall): "
         f"**{_pct(payload.get('recall_buy_rate'))}** "
         f"({payload.get('recall_buy')}/{payload.get('n_gainer_days')}).",
+        "",
+        "First read: **SELL / first-crack is the edge** (~65% 1d on "
+        "history). Featured **BUY is still ~coin-flip** on +1d for these "
+        "names. Most rippers print HOLD at 09:30 — we do not invent a "
+        "long after the fact. Tweak `00_grounding/lookback_action_params.json` "
+        "and re-run the Action.",
         "",
         "## Preset sweep",
         "",
@@ -293,8 +310,8 @@ def render_markdown(payload: dict) -> str:
         "names (the full sheet).",
         "",
         "| Preset | Slice | n | BUY | SELL | NO BUY | HOLD | "
-        "catch 1d | catch 3d | catch 1w | 1d+3d aligned | mean +1d |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "catch 1d | BUY 1d | SELL 1d | catch 3d | catch 1w | 1d+3d | pnl 1d |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for name, block in sweeps.items():
         for slice_name, key in (("gainer-days", "gainer_days"), ("history", "history")):
@@ -307,10 +324,12 @@ def render_markdown(payload: dict) -> str:
                 f"{_pct((s.get('catch') or {}).get('1d'))} "
                 f"({(s.get('catch_hit') or {}).get('1d') or 0}/"
                 f"{(s.get('catch_n') or {}).get('1d') or 0}) | "
+                f"{_pct((s.get('buy_catch') or {}).get('1d'))} | "
+                f"{_pct((s.get('sell_catch') or {}).get('1d'))} | "
                 f"{_pct((s.get('catch') or {}).get('3d'))} | "
                 f"{_pct((s.get('catch') or {}).get('1w'))} | "
                 f"{_pct(s.get('aligned_1d_3d'))} | "
-                f"{_ret((s.get('mean_ret') or {}).get('1d'))} |"
+                f"{_ret((s.get('mean_pnl') or {}).get('1d'))} |"
             )
     L += [
         "",
@@ -375,9 +394,10 @@ def render_html(payload: dict) -> str:
             f"<td>{s.get('n') or 0}</td><td>{s.get('n_buy') or 0}</td>"
             f"<td>{s.get('n_sell') or 0}</td><td>{s.get('n_hold') or 0}</td>"
             f"<td>{html.escape(_pct((s.get('catch') or {}).get('1d')))}</td>"
+            f"<td>{html.escape(_pct((s.get('buy_catch') or {}).get('1d')))}</td>"
+            f"<td>{html.escape(_pct((s.get('sell_catch') or {}).get('1d')))}</td>"
             f"<td>{html.escape(_pct((s.get('catch') or {}).get('3d')))}</td>"
-            f"<td>{html.escape(_pct((s.get('catch') or {}).get('1w')))}</td>"
-            f"<td>{html.escape(_ret((s.get('mean_ret') or {}).get('1d')))}</td></tr>"
+            f"<td>{html.escape(_ret((s.get('mean_pnl') or {}).get('1d')))}</td></tr>"
         )
     body = []
     for r in sorted(
@@ -427,7 +447,7 @@ Action is 09:30-only. Catch = BUY and the forward move is up, or SELL and it is 
 · default preset <code>{html.escape(str(chosen))}</code></p>
 <h2>Preset sweep (gainer mornings)</h2>
 <div class="sheet"><table>
-<thead><tr><th>Preset</th><th>n</th><th>BUY</th><th>SELL</th><th>HOLD</th><th>catch 1d</th><th>catch 3d</th><th>catch 1w</th><th>mean +1d</th></tr></thead>
+<thead><tr><th>Preset</th><th>n</th><th>BUY</th><th>SELL</th><th>HOLD</th><th>catch 1d</th><th>BUY 1d</th><th>SELL 1d</th><th>catch 3d</th><th>pnl 1d</th></tr></thead>
 <tbody>{''.join(sweep_rows)}</tbody></table></div>
 <h2>Each gainer morning</h2>
 <div class="sheet"><table>

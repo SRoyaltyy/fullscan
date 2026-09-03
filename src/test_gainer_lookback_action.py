@@ -45,6 +45,8 @@ def test_score_rows_buy_catch() -> None:
     assert scored["n_no_buy"] == 1
     assert scored["catch"]["1d"] == 1.0
     assert scored["catch_n"]["1d"] == 1
+    assert scored["buy_catch"]["1d"] == 1.0
+    assert scored["mean_pnl"]["1d"] == 2.0
 
 
 if __name__ == "__main__":
