@@ -3,605 +3,601 @@
 142 captain cards · size_gate=False set by pre-open refresh
 
 ## CAPTAIN CARDS
-- **HEAT Agricultural Inputs** (Basic Materials) dir=up conv=medium
+- **OVERRIDE Agricultural Inputs** (Basic Materials) dir=up conv=medium
   captains: CTVA SPX pos, CF SPX pos, FMC RUT none, IPI RUT none
-  XLB misses the ag-input bid: CTVA Vylor pipeline and CF Blue Point ammonia, 85% breadth.
-  do_not: bury CTVA/CF in XLB or treat as generic chemicals
-- **HEAT Aluminum** (Basic Materials) dir=flat conv=low
-  captains: CENX RUT neg, CSTM RUT none
-  Week residual up but d1 red and 25% breadth; CENX compliance tape, CSTM silent.
-  do_not: treat aluminum week residual as a clean nested long
-- **HEAT Building Materials** (Basic Materials) dir=down conv=low
-  captains: CRH SPX pos, MLM SPX pos, KNF RUT none, USLM RUT none
-  All four captains week-red; Lhoist/Pisgah are company deals, not a group bid.
-  do_not: read MLM/CRH M&A as building-materials HEAT
+  XLB hides a seed/fertilizer OVERRIDE: CTVA Vylor trait and CF blue-ammonia plants confirm the nested long.
+  do_not: bury CTVA/CF in XLB DOWN
+- **HEAT Aluminum** (Basic Materials) dir=up conv=low
+  captains: CENX RUT none, CSTM RUT none
+  Aluminum screens hot vs XLB on full breadth, but captains have no current news—do not upgrade conviction.
+  do_not: treat CENX/CSTM tape as confirmed news bid
+- **HEAT Building Materials** (Basic Materials) dir=down conv=medium
+  captains: CRH SPX none, MLM SPX pos, KNF RUT neg, USLM RUT none
+  Aggregates tape is down with 6% breadth; JPM OW MLM vs UW KNF is stock-picking, not a sector bid.
+  do_not: read MLM upgrade as a building-materials reversal
 - **HEAT Chemicals** (Basic Materials) dir=flat conv=low
-  captains: DOW SPX none, HUN RUT pos, REX RUT none
-  Week still down; HUN/Olin vote is the only live catalyst, REX print still ahead.
-  do_not: call chemicals UP on HUN deal or DOW flat day
-- **OVERRIDE Coking Coal** (Basic Materials) dir=up conv=medium
-  captains: HCC RUT pos, AMR RUT neg
-  OVERRIDE vs materials: HCC Blue Creek volumes; AMR tape is not a clean confirm.
-  do_not: average coking coal into XLB or chase AMR on +12% w1
-- **HEAT Copper** (Basic Materials) dir=down conv=low
-  captains: FCX SPX none, IE RUT pos
-  Both captains week-red; IE EXIM letter is project finance, not an FCX confirm.
-  do_not: use IE EXIM to override FCX/copper tape down
-- **HEAT Gold** (Basic Materials) dir=down conv=medium
-  captains: NEM SPX neg, SSRM RUT none, NG RUT none
-  Flagged lag vs materials; Sep 1 bullion dump hits NEM/NG, SSRM d1 is not a turn.
-  do_not: average gold weakness into XLB or fade it as random miner noise
+  captains: DOW SPX none, HUN RUT pos, REX RUT pos
+  Chemicals are residual-firm vs XLB but mixed: REX ethanol beat, HUN deal vote, DOW silent and d1 flat.
+  do_not: treat REX crush-margin beat as a DOW/HUN chemicals cycle turn
+- **OVERRIDE Coking Coal** (Basic Materials) dir=up conv=low
+  captains: HCC RUT none, AMR RUT none
+  Met coal still screens OVERRIDE vs XLB on w1 residual, but d1 is red, breadth is 0, and captains have no news.
+  do_not: size HCC/AMR OVERRIDE off weekly residual without a current fact
+- **HEAT Copper** (Basic Materials) dir=down conv=medium
+  captains: FCX SPX none, IE RUT none
+  Copper is a clean XLB mislabel: captains d1/w1 crushed, breadth 0, EXIM/PFS not a today bid.
+  do_not: average FCX/IE into a materials bounce
+- **SPLIT Gold** (Basic Materials) dir=down conv=medium
+  captains: NEM SPX mixed, SSRM RUT none, NG RUT none
+  Gold is the XLB SPLIT: NEM mixed on bullion fade, SSRM/NG silent, tape and breadth washed out.
+  do_not: buy miners as a materials mean-reversion
 - **HEAT Lumber & Wood Production** (Basic Materials) dir=down conv=low
-  captains: UFPI RUT none, BCC RUT mixed
-  UFPI and BCC still week-down ~5%; Hardie swap is BCC-specific, not a lumber bid.
-  do_not: map wood captains into XLB or housing ETFs as a materials long
-- **HEAT Other Industrial Metals & Mining** (Basic Materials) dir=flat conv=low
+  captains: UFPI RUT none, BCC RUT none
+  Lumber captains are housing-beta down with no current news; do not nest a wood long vs XLB.
+  do_not: use James Hardie/Deckorators stubs as today sentiment
+- **HEAT Other Industrial Metals & Mining** (Basic Materials) dir=down conv=low
   captains: MTRN RUT pos, USAR RUT pos
-  MTRN semi-materials vs USAR rare-earth policy; captains split, residual flat-to-down.
-  do_not: bundle USAR rare earths with MTRN beryllium/AI metals
+  Street initiated MTRN/USAR Buy today, but the tape is still down—news and residual disagree.
+  do_not: flip this sleeve long off analyst inits against a red residual
 - **HEAT Other Precious Metals & Mining** (Basic Materials) dir=down conv=low
-  captains: PPTA RUT pos, ELE RUT pos
-  PPTA Stibnite build is project news against a down tape; ELE still week-red.
-  do_not: fold antimony/gold-dev PPTA into XLB gold beta
+  captains: PPTA RUT none, ELE RUT none
+  Other precious is gold-beta DOWN with empty captains; do not nest a PPTA/ELE long vs XLB.
+  do_not: use stale Stibnite/EXIM recaps as today sentiment
 - **HEAT Paper & Paper Products** (Basic Materials) dir=down conv=low
-  captains: SLVM RUT mixed
-  SLVM is the only liquid captain and week-down; Eastover spend is transition, not a turn.
-  do_not: treat paper capex updates as a materials-ETF long
-- **HEAT Specialty Chemicals** (Basic Materials) dir=flat conv=low
-  captains: LIN SPX none, SHW SPX pos, SXT RUT none, BCPC RUT none
-  LIN flat, SHW/SXT/BCPC week-down; Sep 1 SHW hike is company-specific, not a group bid.
-  do_not: call specialty chem UP on LIN flat or SHW pricing
-- **OVERRIDE Steel** (Basic Materials) dir=up conv=medium
+  captains: SLVM RUT none
+  Only liquid captain SLVM is red with no news; paper is not a residual long vs XLB.
+  do_not: fade SLVM weakness into a paper mean-reversion
+- **HEAT Specialty Chemicals** (Basic Materials) dir=down conv=low
+  captains: LIN SPX none, SHW SPX none, SXT RUT none, BCPC RUT none
+  Specialty chems only beat XLB on residual; LIN/SHW/SXT/BCPC have no fresh news and tape is soft.
+  do_not: call LIN/SHW a nested long off a dividend/ex-date
+- **HEAT Steel** (Basic Materials) dir=up conv=medium
   captains: NUE SPX pos, STLD SPX none, WS RUT none, NWPX RUT pos
-  OVERRIDE vs XLB: NUE WV EAF is live; NWPX is water-pipe, not mill beta.
-  do_not: average steel into XLB DOWN or treat NWPX as a mill captain
+  Steel is the quiet XLB miss: NUE hiked HRC $15 and NWPX bought Serpentix; STLD/WS have no fresh print.
+  do_not: average steel into Canada-tariff panic without an STLD fact
 - **HEAT Advertising Agencies** (Communication Services) dir=flat conv=low
-  captains: APP SPX neg, OMC SPX pos, MGNI RUT none, STGW RUT none
-  Weekly residual beats XLC, but APP's Evercore ecommerce cut and red RUT agencies kill a clean nested long.
-  do_not: treat APP HEAT as ad-tech confirmation
-- **HEAT Broadcasting** (Communication Services) dir=flat conv=low
+  captains: APP SPX mixed, OMC SPX pos, MGNI RUT none, STGW RUT none
+  Ads beat XLC on residual, but APP is split-rated and RUT SSPs have no fresh tape-confirming news.
+  do_not: read vs_parent +1.64 as a broad agency long
+- **HEAT Broadcasting** (Communication Services) dir=down conv=low
   captains: NMAX RUT none, FUBO RUT pos
-  RUT captains are bid vs a slightly negative residual; FUBO's boxing FAST deal is small, NMAX has no fresh news.
-  do_not: average NMAX/FUBO into XLC broadcasting down
-- **HEAT Electronic Gaming & Multimedia** (Communication Services) dir=down conv=medium
+  Broadcast tape is still the XLC laggard; FUBO bounce is merger-recognition, not a group turn.
+  do_not: average FUBO bounce into NMAX or linear TV
+- **HEAT Electronic Gaming & Multimedia** (Communication Services) dir=down conv=low
   captains: TTWO SPX mixed
-  Only liquid captain is TTWO; GTA Online scare plus -6.7% d1 is nested down, not a dip-buy vs XLC.
-  do_not: bury TTWO in XLC flat/up
+  Only TTWO is liquid; GTA hype is real but the industry tape is still down hard on one name.
+  do_not: treat GTA VI Netflix views as a gaming-industry up-tape
 - **HEAT Entertainment** (Communication Services) dir=down conv=low
-  captains: NFLX SPX mixed, DIS SPX pos, SPHR RUT pos, CNK RUT pos
-  Incentive chatter is pos, but SPHR/CNK weekly crush, NFLX deceleration, and 0.21 breadth keep entertainment down.
-  do_not: read Trump Hollywood posts as exhibitor confirmation
-- **HEAT Internet Content & Information** (Communication Services) dir=down conv=low
-  captains: GOOG SPX pos, GOOGL SPX pos, RUM RUT none, DJT RUT none
-  Fervo is AI-power, not content; GOOG tape still red and RUT names do not confirm a nested internet long.
-  do_not: label Fervo PPA as XLC internet-content UP
-- **HEAT Publishing** (Communication Services) dir=down conv=low
+  captains: NFLX SPX mixed, DIS SPX none, SPHR RUT pos, CNK RUT none
+  Entertainment residual is still down; SPHR is a nested venue story, not a DIS/NFLX group turn.
+  do_not: fold Sphere into Netflix/Disney streaming
+- **HEAT Internet Content & Information** (Communication Services) dir=flat conv=medium
+  captains: GOOG SPX pos, GOOGL SPX pos, RUM RUT pos, DJT RUT neg
+  Alphabet is the only liquid internet captain with today's fact; RUM/DJT are not the GOOGL tape.
+  do_not: average DJT crypto-loss into GOOGL AI bid
+- **HEAT Publishing** (Communication Services) dir=flat conv=low
   captains: WLY RUT none, TDAY RUT none
-  Both RUT captains red with no live fundamental; WLY is a Sep 3 print, not a nested long vs XLC.
-  do_not: upgrade publishing on vs-parent residual alone
+  Publishing is calendar, not tape: WLY prints pre-open Sep 3; TDAY is a Sep 8 conference name.
+  do_not: treat an earnings-date stub as a publishing up-tape
 - **HEAT Telecom Services** (Communication Services) dir=up conv=medium
-  captains: VZ SPX none, TMUS SPX pos, LUMN RUT pos, TDS RUT mixed
-  XLC will miss LUMN's cloud-network bid: RUT telecom is up while VZ/TMUS sit flat.
-  do_not: average LUMN into VZ/TMUS wireless
-- **HEAT Apparel Manufacturing** (Consumer Cyclical) dir=down conv=medium
-  captains: RL SPX neg, ZGN RUT none, KTB RUT none
-  Apparel mfg residual -3.9 w1 vs parent; RL downgrade confirms the down tape, ZGN/KTB are event placeholders.
-  do_not: average RL weakness into a broad XLY bounce
+  captains: VZ SPX none, TMUS SPX pos, LUMN RUT pos, TDS RUT pos
+  Telecom is the XLC relative bid: TMUS/TDS/LUMN news agrees with green d1; VZ is silent.
+  do_not: bury TMUS/LUMN in a flat XLC print
+- **HEAT Apparel Manufacturing** (Consumer Cyclical) dir=down conv=low
+  captains: RL SPX none, ZGN RUT none, KTB RUT pos
+  Mfg tape is residual-down vs XLY; only KTB’s Helly Hansen 2030 map is live — don’t read RL/ZGN into the heat.
+  do_not: bury KTB Helly Hansen day in apparel DOWN
 - **HEAT Apparel Retail** (Consumer Cyclical) dir=down conv=low
-  captains: TJX SPX neg, ROST SPX pos, URBN RUT pos, VSXY RUT none
-  Industry residual still red: Ross/URBN prints are nested longs, TJX Marmaxx slowdown is the SPX tell.
-  do_not: average ROST strength into TJX or XLY apparel
-- **HEAT Auto & Truck Dealerships** (Consumer Cyclical) dir=up conv=low
+  captains: TJX SPX none, ROST SPX none, URBN RUT none, VSXY RUT none
+  Off-price/specialty captains are silent into this close; residual-down retail is still the tape, not a Ross/TJX re-rate.
+  do_not: recycle Aug ROST/TJX earnings as today’s heat
+- **HEAT Auto & Truck Dealerships** (Consumer Cyclical) dir=down conv=low
   captains: CVNA SPX pos, RUSHA RUT none, OPLN RUT none
-  Dealers residual +1.6 w1 vs parent; CVNA recon expansion is the only current captain fact.
-  do_not: read RUSHA split as bullish demand
-- **OVERRIDE Auto Manufacturers** (Consumer Cyclical) dir=up conv=medium
-  captains: TSLA SPX pos, GM SPX none, LCID RUT none, LVWR RUT none
-  OVERRIDE vs XLY: TSLA Cybercab 9/3 is the nested bid; GM/LCID/LVWR do not confirm.
-  do_not: bury TSLA in XLY or average in LCID
-- **HEAT Auto Parts** (Consumer Cyclical) dir=flat conv=low
-  captains: ORLY SPX none, AZO SPX none, GTX RUT pos, ATMU RUT none
-  Aftermarket tape flat-to-down; only GTX rating upgrade is current, ORLY/AZO are silent into prints.
-  do_not: treat GTX turbo bid as O'Reilly/AZO DIY demand
+  Dealership residual is still down; CVNA’s Brasher’s IRC is network build, not a group bid.
+  do_not: treat CVNA recon expansion as auto-dealer UP
+- **HEAT Auto Manufacturers** (Consumer Cyclical) dir=up conv=low
+  captains: TSLA SPX neg, GM SPX pos, LCID RUT none
+  Weekly residual still beats XLY, but TSLA is event-risk into Cybercab and LCID is silent — nested, not a sector long.
+  do_not: buy XLY/autos as TSLA Cybercab
+- **HEAT Auto Parts** (Consumer Cyclical) dir=down conv=low
+  captains: ORLY SPX none, AZO SPX none, GTX RUT none, DORM RUT none
+  Aftermarket captains are quiet; residual-down parts stay nested under a soft XLY, not a DIY bid.
+  do_not: infer ORLY/AZO from price or Phinia stubs
 - **HEAT Department Stores** (Consumer Cyclical) dir=flat conv=low
-  captains: KSS RUT mixed
-  Only liquid captain is KSS: sales still negative, guide/buyback is the offset, not a sector turn.
-  do_not: promote department stores off a +0.6% d1 bounce
+  captains: KSS RUT none
+  Only liquid captain is KSS, flat vs parent on a quiet tape — not a department-store turn.
+  do_not: treat a 0% d1 as sentiment
 - **HEAT Footwear & Accessories** (Consumer Cyclical) dir=down conv=low
-  captains: NKE SPX neg, DECK SPX none, SHOO RUT none, WWW RUT none
-  Footwear residual -2.9 w1; NKE cleanup/decline guide is the SPX captain, RUT names silent.
-  do_not: use LULU essays as NKE/DECK sentiment
-- **HEAT Furnishings, Fixtures & Appliances** (Consumer Cyclical) dir=flat conv=low
-  captains: ALH RUT neg, HNI RUT none
-  Industry residual green vs XLY but captains are ALH supply overhang and silent HNI — not a confirmed up.
-  do_not: treat parent residual as furniture demand
+  captains: NKE SPX neg, DECK SPX pos, SHOO RUT none, WWW RUT none
+  Footwear residual is down and NKE cleanup still cuts FY27; Teva SKU is not a group bid.
+  do_not: average DECK product drop into NKE inventory reset
+- **HEAT Furnishings, Fixtures & Appliances** (Consumer Cyclical) dir=down conv=low
+  captains: ALH RUT pos, HNI RUT none
+  Furnishings tape is hard-down; ALH credit upgrade is balance-sheet, not a housing-goods bid.
+  do_not: read S&P BB- as furnishings UP
 - **HEAT Gambling** (Consumer Cyclical) dir=down conv=low
   captains: SGHC RUT none, RSI RUT none
-  Online gambling residual -2.6 w1, breadth 0.07; captains have no current news, so tape stands.
-  do_not: recycle August earnings as today's sentiment
-- **HEAT Home Improvement Retail** (Consumer Cyclical) dir=down conv=medium
-  captains: HD SPX none, LOW SPX neg
-  Home improvement residual -2.4 w1; LOW DIY guide cut is the live captain, HD silent.
-  do_not: buy the 9/1 trades-coalition headline as a LOW turn
-- **HEAT Internet Retail** (Consumer Cyclical) dir=down conv=medium
-  captains: AMZN SPX neg, DASH SPX none, RVLV RUT none, LQDT RUT none
-  AMZN FTC ad-auction suit is the internet-retail captain; DASH/RVLV/LQDT add no offset.
-  do_not: fade AMZN on price alone or bury the FTC fact in XLY
+  iGaming captains have no close-dated facts; residual-down gambling stays a fade vs XLY, not World Cup rerun.
+  do_not: reuse Aug SGHC/RSI earnings as today
+- **HEAT Home Improvement Retail** (Consumer Cyclical) dir=down conv=low
+  captains: HD SPX none, LOW SPX pos
+  HD/LOW residual is the worst big-box lag vs XLY; a trades coalition does not fix DIY demand.
+  do_not: buy XLY/home-improvement on Lowe’s CSR
+- **HEAT Internet Retail** (Consumer Cyclical) dir=down conv=low
+  captains: AMZN SPX neg, DASH SPX pos, RVLV RUT pos, LQDT RUT none
+  AMZN legal overhang dominates the SPX captain; DASH/RVLV CSR-growth notes don’t offset residual-down e-commerce.
+  do_not: tag AMZN on NVDA/Hugging Face
 - **HEAT Leisure** (Consumer Cyclical) dir=down conv=low
-  captains: HAS SPX neg, LTH RUT none, GOLF RUT none
-  Leisure residual -2.4 w1; HAS breach is the only current captain, LTH/GOLF silent.
-  do_not: use Take-Two underperformance blurbs as HAS news
+  captains: HAS SPX none, LTH RUT none, GOLF RUT none
+  Leisure residual is a clean lag vs XLY with no captain confirmation — toys/clubs/golf are quiet.
+  do_not: reuse GOLF Q2 as today
 - **HEAT Lodging** (Consumer Cyclical) dir=down conv=low
   captains: MAR SPX none, HLT SPX none
-  Lodging residual -3.0 w1 with both SPX captains news-empty; tape is the tell.
-  do_not: spin a Sydney Four Points transfer into MAR demand
-- **SPLIT Luxury Goods** (Consumer Cyclical) dir=down conv=low
-  captains: TPR SPX mixed, SIG RUT none, CPRI RUT none
-  Luxury SPLIT: residual -4.6 w1; Gap/Krakoff is a Coach-competitive headline, SIG/CPRI silent.
-  do_not: treat TPR tape as Coach strength
+  Lodging is a 3pt residual lag vs XLY with silent captains — not a RevPAR re-rate today.
+  do_not: backdate MAR/HLT Q2 into Sept 2
+- **HEAT Luxury Goods** (Consumer Cyclical) dir=down conv=low
+  captains: TPR SPX none, SIG RUT none, CPRI RUT none
+  Luxury residual lags XLY ~3pts with no captain news — Coach/Signet/Capri are dead air into SIG.
+  do_not: use 52-week lows as CPRI sentiment
 - **HEAT Packaging & Containers** (Consumer Cyclical) dir=down conv=low
-  captains: SW SPX none, AMCR SPX pos, GEF RUT none, AMBP RUT mixed
-  Packaging residual -3.3 w1, breadth 0; AMCR synergy beat is nested, not a sector turn.
-  do_not: average AMCR into SW/GEF tape
-- **HEAT Personal Services** (Consumer Cyclical) dir=down conv=low
+  captains: SW SPX none, AMCR SPX none, GEF RUT none, AMBP RUT none
+  Packaging residual is a 3pt XLY lag with silent captains — don’t convert old box hikes into today’s bid.
+  do_not: average SW containerboard into XLY
+- **HEAT Personal Services** (Consumer Cyclical) dir=flat conv=low
   captains: ROL SPX none, FTDR RUT none, CSV RUT none
-  Personal services residual -1.4 w1; all three captains news-empty today, so residual stands.
-  do_not: use conference-attendance stubs as FTDR sentiment
+  Personal services only barely beat XLY on the week; captains are silent — not a defensive re-rate.
+  do_not: promote ROL on an Aug install PR
 - **HEAT Recreational Vehicles** (Consumer Cyclical) dir=down conv=low
   captains: PII RUT none, HOG RUT none
-  RV residual -2.7 w1, breadth 0.13; PII race PR and HOG legal-officer swap are not tape confirmation.
-  do_not: read PII d1 green as an industry turn
+  RV residual lags XLY with no usable captain fact — powersports stays a consumer-durables fade.
+  do_not: use racing wins as PII/HOG sentiment
 - **HEAT Residential Construction** (Consumer Cyclical) dir=down conv=low
-  captains: DHI SPX neg, PHM SPX none, IBP RUT none, SKY RUT none
-  Builders residual -1.6 w1, breadth 0; DHI guide/legal reserves keep the down nested vs XLY.
-  do_not: use Toll Brothers blurbs as DHI/PHM sentiment
+  captains: DHI SPX none, PHM SPX none, IBP RUT none, SKY RUT none
+  Builders are a 3pt residual lag vs XLY with empty captains — housing weakness is the nested short, not a PHM essay.
+  do_not: average DHI/PHM into XLY
 - **SPLIT Resorts & Casinos** (Consumer Cyclical) dir=down conv=low
-  captains: LVS SPX neg, MGM SPX none, RRR RUT pos, VAC RUT none
-  Casinos SPLIT: Macau Aug GGR down for LVS, RRR local reopen is the nested offset, breadth 0.
-  do_not: average RRR reopen into LVS/Macau
-- **HEAT Restaurants** (Consumer Cyclical) dir=down conv=low
-  captains: MCD SPX none, SBUX SPX none, EAT RUT none, CAKE RUT none
-  Restaurants residual -1.9 w1; all four captains lack current evidence, so residual/breadth stand.
-  do_not: invent a Starbucks 9/1 Investor Day from a January recap
-- **SPLIT Specialty Retail** (Consumer Cyclical) dir=down conv=low
-  captains: CASY SPX none, WSM SPX pos, RH RUT none, ASO RUT none
-  Specialty SPLIT: CASY tape crushed into 9/8 print; WSM raise is the nested long vs residual -5.9 w1.
-  do_not: average WSM into CASY or XLY specialty
+  captains: LVS SPX none, MGM SPX none, RRR RUT pos, VAC RUT pos
+  SPLIT vs XLY: Macau-heavy LVS is silent/price-driven while local RRR reopen and VAC dividend are the nested names.
+  do_not: average LVS Macau miss into RRR/VAC
+- **HEAT Restaurants** (Consumer Cyclical) dir=flat conv=low
+  captains: MCD SPX none, SBUX SPX pos, EAT RUT none, CAKE RUT none
+  Restaurants only barely beat XLY; SBUX fall SKU is the live captain, not an MCD traffic fix.
+  do_not: backdate Skye Anderson (Aug 4) to this close
+- **HEAT Specialty Retail** (Consumer Cyclical) dir=flat conv=low
+  captains: CASY SPX none, WSM SPX none, RH RUT none, ASO RUT none
+  Specialty is flat vs XLY into CASY/ASO prints next week — no captain confirmation today.
+  do_not: reuse Aug 26 WSM raise as today
 - **SPLIT Textile Manufacturing** (Consumer Cyclical) dir=down conv=low
   captains: AIN RUT pos
-  Textile residual -9.6 w1 vs parent; AIN contract/EPS raise is nested pos against a still-down tape.
-  do_not: fade AIN solely on -5% d1 or bury it in XLY
+  SPLIT: textiles are −9pts vs XLY, but the only liquid captain just kept SLC and doubled Q3 EPS guide.
+  do_not: bury AIN CH-53K/SLC win in textile DOWN
 - **SPLIT Travel Services** (Consumer Cyclical) dir=down conv=low
   captains: BKNG SPX pos, ABNB SPX pos, GBTG RUT none, LIND RUT none
-  Travel SPLIT: BKNG/ABNB 9/1 analyst+fee news vs residual -4.9 w1 and LIND air-pocket.
-  do_not: read OTA initiations as a broad XLY travel bounce
+  SPLIT: travel is −5pts vs XLY, but BKNG/ABNB got Rosenblatt Bids — don’t dump OTAs with LIND/GBTG.
+  do_not: average BKNG/ABNB into travel DOWN
 - **HEAT Beverages - Brewers** (Consumer Defensive) dir=down conv=low
-  captains: STZ SPX pos, TAP SPX mixed, SAM RUT neg
-  Beer still volume-soft; STZ farm spend is supply PR, TAP sales down, SAM loses its CFO.
-  do_not: treat vs-parent +0.82 as a beer long; residual is less-bad, not bid
+  captains: STZ SPX none, TAP SPX none, SAM RUT none
+  HEAT is residual only: STZ/TAP/SAM all week-red with zero Sep 2 company tape — do not fade XLP via brewers.
+  do_not: treat mild vs-parent +0.45 as a beer long
 - **HEAT Beverages - Non-Alcoholic** (Consumer Defensive) dir=down conv=low
-  captains: KO SPX pos, PEP SPX neg, COCO RUT pos, FIZZ RUT none
-  Industry residual is down; KO/COCO quality vs PEP NA lag — do not average into one soda tape.
-  do_not: read XLP or KO strength as a PEP/FIZZ bid
+  captains: KO SPX pos, PEP SPX mixed, COCO RUT none, FIZZ RUT none
+  Industry residual -2.3 vs parent and COCO week-crushed; KO quality does not rescue the non-alc sleeve inside XLP.
+  do_not: average KO strength into a non-alc long
 - **HEAT Beverages - Wineries & Distilleries** (Consumer Defensive) dir=down conv=medium
-  captains: BF-B SPX none
-  Flagged spirits residual vs parent; only liquid captain is BF-B into a BMO print — no live sentiment.
-  do_not: bury Jack/spirits weakness inside XLP or beer
+  captains: BF-B SPX mixed
+  BF-B Q1 organic sales -1% and FY OI guided -3–5%; spirits are the XLP downside miss, not a bounce.
+  do_not: bury BF-B weakness in XLP or in beer
 - **HEAT Confectioners** (Consumer Defensive) dir=down conv=low
-  captains: MDLZ SPX none, HSY SPX pos
-  Cocoa-cost confection tape still residual-down; HSY salty snack PR does not flip MDLZ or the group.
-  do_not: average HSY snack M&A into a chocolate up-tape
-- **HEAT Discount Stores** (Consumer Defensive) dir=flat conv=low
-  captains: WMT SPX pos, COST SPX mixed, PSMT RUT pos
-  WMT is the grocery price-war winner; COST mixed on refunds/suit; week still not a club-store up-tape.
-  do_not: fold WMT share gains into KR/XLP or treat COST lawsuit as a club-store short
-- **HEAT Education & Training Services** (Consumer Defensive) dir=up conv=low
-  captains: LAUR RUT none, CVSA RUT pos
-  Best XLP residual in the set (+2.94 w1) sits in LatAm/healthcare ed, not staples shelves.
-  do_not: bury LAUR/CVSA inside XLP DOWN/FLAT
-- **HEAT Farm Products** (Consumer Defensive) dir=up conv=medium
-  captains: ADM SPX none, BG SPX pos, CALM RUT none, DMC RUT pos
-  Crushers/ag merchants are the XLP miss; eggs (CALM) are the nested lag inside the same industry.
-  do_not: average CALM egg deflation into ADM/BG crush bid or into XLP
-- **HEAT Food Distribution** (Consumer Defensive) dir=down conv=low
+  captains: MDLZ SPX pos, HSY SPX mixed
+  HSY CFO handoff and MDLZ Buy reiteration do not offset week-lag vs XLP — confectioners stay a fade.
+  do_not: treat KATSEYE bars or Stifel as a chocolate OVERRIDE
+- **HEAT Discount Stores** (Consumer Defensive) dir=up conv=medium
+  captains: WMT SPX pos, COST SPX pos, PSMT RUT none
+  COST Aug comps +8.4% and WMT price-invest confirm warehouse/value share; XLP will miss this nested long vs grocers.
+  do_not: average WMT/COST into a generic XLP defensive bid
+- **HEAT Education & Training Services** (Consumer Defensive) dir=flat conv=low
+  captains: LAUR RUT none, CVSA RUT none
+  No Sep 2 ticker news; LAUR/CVSA only a mild residual beat vs XLP — do not manufacture an education long.
+  do_not: invent an SPX education captain
+- **OVERRIDE Farm Products** (Consumer Defensive) dir=up conv=medium
+  captains: ADM SPX neg, BG SPX pos, CALM RUT none, DMC RUT pos
+  OVERRIDE vs XLP: BG mills sale + DMC China JV; ADM crush tape bid even after Odesa hit — do not bury in staples.
+  do_not: average CALM eggs or XLP into this crush/fresh-cut bid
+- **HEAT Food Distribution** (Consumer Defensive) dir=flat conv=low
   captains: SYY SPX pos, CHEF RUT none, UNFI RUT none
-  Broad foodservice residual is down and thin; SYY upgrade does not rescue UNFI into a Sep 8 print.
-  do_not: treat SYY as the industry tape or average UNFI into SYY
+  CHEF is the specialty bid vs SYY/UNFI, but industry week still lags parent — nested, not a broadline XLP long.
+  do_not: treat SYY FY27 recap as a food-distribution OVERRIDE
 - **HEAT Grocery Stores** (Consumer Defensive) dir=down conv=medium
   captains: KR SPX neg, WMK RUT none, YSWY RUT none
-  KR is the live nested short vs WMT price cuts; regional grocers have no fresh tape-changer.
-  do_not: average KR into WMT/COST or into XLP defensive
+  Citi puts KR on 30-day downside watch as WMT grocery cuts intensify; do not treat KR as XLP ballast.
+  do_not: bundle KR with WMT/COST value share
 - **HEAT Household & Personal Products** (Consumer Defensive) dir=flat conv=low
   captains: PG SPX none, CL SPX none, IPAR RUT none, NWL RUT none
-  HPC residual vs parent is only mildly positive; no captain has a current-day operating fact.
-  do_not: invent a PG/CL bid from the CL bond-rout ticker tag
+  No Sep 2 fundamental prints on PG/CL/IPAR/NWL; 0.16 breadth — flat residual, not a household-products long.
+  do_not: read PG's d1 bounce as an HPC OVERRIDE
 - **HEAT Packaged Foods** (Consumer Defensive) dir=flat conv=low
-  captains: KHC SPX none, GIS SPX pos, MZTI RUT mixed, CENTA RUT none
-  Packaged food residual vs parent is only +1.1; GIS clean-label vs MZTI outbreak is a split, not a group bid.
-  do_not: average GIS cereal reformulation into KHC turnaround or MZTI foodservice
+  captains: KHC SPX none, GIS SPX none, MZTI RUT none, CENTA RUT none
+  No Sep 2 captain news; KHC/GIS residual only a mild XLP beat — skip packaged foods as a sector-ETF miss.
+  do_not: promote Classico sauce or cereal-color PR as a nested long
 - **HEAT Tobacco** (Consumer Defensive) dir=flat conv=low
-  captains: PM SPX pos, MO SPX pos, TPB RUT none, UVV RUT none
-  PM/MO pact is efficiency, not demand; week tape still down and pouches/leaf have no fresh fact.
-  do_not: read the manufacturing deal as a combustible up-tape or average TPB pouches into MO
+  captains: PM SPX none, MO SPX mixed, TPB RUT none, UVV RUT none
+  MO sues FDA over pouch-review delays; PM silent today and TPB week-crushed — do not buy XLP via tobacco.
+  do_not: treat the FDA lawsuit as a smoke-free OVERRIDE
 - **HEAT Oil & Gas Drilling** (Energy) dir=up conv=low
-  captains: NE RUT none, RIG RUT pos
-  Drilling residual is hot vs Energy but NE is news-less and lagging; RIG’s India deepwater bid is the only captain confirmation.
-  do_not: treat NE/RIG as a broad offshore cycle just because industry breadth is 1.0
-- **HEAT Oil & Gas E&P** (Energy) dir=flat conv=low
-  captains: COP SPX none, EOG SPX none, SM RUT none, MGY RUT pos
-  E&P week residual is still oil-weak vs Energy; day bounce is tape, not a captain-news turn except MGY’s initiation.
-  do_not: read COP/EOG green d1 as an E&P regime change vs XLE
-- **SPLIT Oil & Gas Equipment & Services** (Energy) dir=up conv=medium
-  captains: SLB SPX pos, BKR SPX none, KGS RUT none, WHD RUT none
-  XLE will misread SLB as a drilling cycle; Kelvion is data-center cooling nested inside oilfield services.
-  do_not: average SLB’s cooling bid into Energy DOWN/oilfield capex
-- **HEAT Oil & Gas Integrated** (Energy) dir=up conv=low
-  captains: XOM SPX pos, CVX SPX pos, DEC RUT none
-  Overnight Venezuela-deal chatter bid XOM/CVX; week residual vs Energy is still negative—don’t average into XLE.
-  do_not: treat a one-day Venezuela headline as integrated week leadership vs Energy
-- **HEAT Oil & Gas Midstream** (Energy) dir=up conv=low
-  captains: WMB SPX none, KMI SPX none, KNTK RUT none, GLNG RUT none
-  Gas midstream captains are bid on LNG/power backlog, but no fresh Sep 1-2 prints; residual still leads Energy.
-  do_not: fold WMB/KMI gas-power into an oil-integrated Venezuela bounce
-- **HEAT Oil & Gas Refining & Marketing** (Energy) dir=up conv=medium
-  captains: MPC SPX none, VLO SPX pos, PBF RUT mixed, DK RUT pos
-  Refiners are the Energy nested long: SRE relief plus tight cracks, with White House pump-price pressure as the veto risk.
-  do_not: bury DK/VLO/PBF in XLE oil or treat Trump meeting as a pure crack-spread gift
-- **HEAT Thermal Coal** (Energy) dir=up conv=low
+  captains: NE RUT none, RIG RUT none
+  RUT drillers still bid vs Energy, but captains have no Sep news; residual heat is tape, not contracts.
+  do_not: treat NE/RIG heat as a fresh backlog event
+- **HEAT Oil & Gas E&P** (Energy) dir=up conv=medium
+  captains: COP SPX pos, EOG SPX none, SM RUT none, MGY RUT pos
+  E&P bid is in-line with XLE: Hormuz realized-price lift on COP, WildFire/UBS support on MGY; EOG/SM silent.
+  do_not: call this an OVERRIDE vs Energy; vs_parent_w1 is -0.17
+- **HEAT Oil & Gas Equipment & Services** (Energy) dir=flat conv=low
+  captains: SLB SPX mixed, BKR SPX none, KGS RUT none, WHD RUT none
+  W1 residual vs XLE is real, but d1/breadth broke: SLB is a data-center deal dump, not an oilfield confirmation.
+  do_not: read SLB Kelvion as OFS/drilling heat
+- **HEAT Oil & Gas Integrated** (Energy) dir=up conv=medium
+  captains: XOM SPX mixed, CVX SPX pos, DEC RUT pos
+  Integrated tape is up: CVX locked Venezuela barrels, DEC bought Permian PDP; XOM is politically mixed, not broken.
+  do_not: average CVX Venezuela into a generic XLE/XOM trade
+- **HEAT Oil & Gas Midstream** (Energy) dir=flat conv=low
+  captains: WMB SPX none, KMI SPX none, KNTK RUT none, GLNG RUT pos
+  Midstream lags Energy residual; pipes are quiet, only GLNG's FLNG/dividend tape is fresh and positive.
+  do_not: use WMB/KMI heat as a Sep catalyst; vs_parent_w1 is -0.74
+- **HEAT Oil & Gas Refining & Marketing** (Energy) dir=up conv=high
+  captains: MPC SPX pos, VLO SPX pos, PBF RUT pos, DK RUT pos
+  Nested long vs XLE: +3.18 w1 residual, Hormuz cracks, White House refiners session, and DK SRE cash-flow relief.
+  do_not: bury MPC/VLO/PBF/DK inside a generic Energy/XLE UP
+- **HEAT Thermal Coal** (Energy) dir=down conv=low
   captains: CNR RUT none, BTU RUT none
-  Thermal coal residual is hot vs Energy with no fresh captain news; don’t bury CNR/BTU in XLE oil tape.
-  do_not: average coal heat into Energy oil or treat the stale BTU suit as today’s tape
-- **HEAT Uranium** (Energy) dir=down conv=low
+  Coal weekly bounce is not confirmed: d1 red, breadth 0, captains have no fresh operator news.
+  do_not: treat CNR/BTU w1 green as a coal OVERRIDE vs Energy
+- **OVERRIDE Uranium** (Energy) dir=down conv=low
   captains: UEC RUT none, UUUU RUT pos
-  Uranium residual is cold vs Energy; UUUU’s ASM close is REE mine-to-magnet, not a uranium tape confirmation.
-  do_not: read UUUU as a uranium nested long or bury REE inside XLE/Uranium DOWN
-- **HEAT Asset Management** (Financial) dir=flat conv=low
+  OVERRIDE down vs Energy: both captains red, breadth 0; UEC silent and UUUU's ASM close is REE, not uranium.
+  do_not: average UEC/UUUU into XLE UP or treat ASM as a uranium bid
+- **HEAT Asset Management** (Financial) dir=down conv=low
   captains: BLK SPX pos, BX SPX none, VCTR RUT pos, STEP RUT none
-  AM residual vs XLF is flat-to-firm; IBIT fees and VCTR/First Eagle are nested, not an XLF buy.
-  do_not: average IBIT or First Eagle into XLF UP
+  AM residual is real: BLK/BX still bidless vs XLF; only VCTR’s S&P outlook is a nested positive.
+  do_not: average VCTR credit-outlook into BLK/BX fee-multiple drawdown
 - **HEAT Banks - Diversified** (Financial) dir=flat conv=low
-  captains: JPM SPX none, BAC SPX neg, NTB RUT neg
-  Weekly vs-parent residual is thin-breadth; Abel selling BAC is not a JPM/XLF tell.
-  do_not: treat vs_parent +1.0 as a diversified-bank uptrend
+  captains: JPM SPX none, BAC SPX none, NTB RUT neg
+  Money-center tape is only relatively firm vs XLF; NTB CEO liquidation is the only hard RUT fact.
+  do_not: read JPM/BAC as a rates-led UP notable off Fed copy
 - **HEAT Banks - Regional** (Financial) dir=down conv=low
-  captains: USB SPX mixed, PNC SPX none, UMBF RUT none, ONB RUT none
-  Regionals residual vs XLF is still down; USB Sun Belt add does not flip PNC/UMBF/ONB.
-  do_not: bury USB expansion inside a blanket regional short
-- **HEAT Capital Markets** (Financial) dir=flat conv=low
-  captains: MS SPX none, GS SPX none, HUT RUT pos, SNEX RUT none
-  MS/GS quiet; HUT’s Lambda/Anthropic site is AI-infra nested inside capital markets, not IBD.
-  do_not: average HUT into MS/GS or XLF
+  captains: USB SPX none, PNC SPX none, UMBF RUT none, ONB RUT none
+  Regionals are quietly heavy with empty newsflow; do not upgrade USB expansion into a confirmed bid.
+  do_not: treat Barclays conference slots as PNC/UMBF sentiment
+- **HEAT Capital Markets** (Financial) dir=down conv=low
+  captains: MS SPX none, GS SPX none, HUT RUT pos, SNEX RUT pos
+  MS/GS are yield-heavy and news-empty; HUT AI-power and SNEX dairy hedges are the nested exceptions.
+  do_not: bury HUT’s Anthropic/Lambda site inside a GS/MS capital-markets DOWN
 - **HEAT Credit Services** (Financial) dir=down conv=low
-  captains: V SPX pos, MA SPX none, FCFS RUT pos, ENVA RUT none
-  Credit residual vs XLF is down; V fraud-tool launch is nested long vs pawn/consumer-lend tape.
-  do_not: read V/MA as XLF or average FCFS/ENVA into networks
+  captains: V SPX pos, MA SPX pos, FCFS RUT none, ENVA RUT none
+  Networks have a stablecoin product win, but credit residual is still down and RUT lenders are silent.
+  do_not: treat V/MA Arc headlines as a consumer-credit UP or as ENVA/FCFS confirmation
 - **HEAT Financial Conglomerates** (Financial) dir=down conv=low
   captains: HTH RUT none, TREE RUT none
-  Industry residual vs XLF is up; HTH/TREE captains are red and news-empty — do not buy the residual.
-  do_not: treat vs_parent +2.07 as a HTH/TREE long
+  Tiny two-name sleeve: HTH/TREE offered no fresh facts against a still-soft tape.
+  do_not: use TREE’s $384m name as an XLF read-through
 - **HEAT Financial Data & Stock Exchanges** (Financial) dir=up conv=medium
   captains: SPGI SPX pos, CME SPX pos
-  CapIQ optionality and CME GPU futures are structure/product nested vs XLF beta.
-  do_not: fold SPGI/CME into a generic XLF heat
+  This is the clean Financial nested long: SPGI corporate actions + CME volume both confirm vs-parent bid.
+  do_not: fold SPGI/CME into a generic XLF or banks UP
 - **HEAT Insurance - Diversified** (Financial) dir=flat conv=low
-  captains: BRK-B SPX pos, AIG SPX none, PLGO RUT none
-  BRK-B is Abel’s GOOG add, not P&C pricing; AIG/PLGO have no same-day catalyst.
-  do_not: read Berkshire equity-book moves as XLF insurance
-- **HEAT Insurance - Life** (Financial) dir=down conv=low
+  captains: BRK-B SPX pos, AIG SPX pos, PLGO RUT none
+  Abel/data-center color is BRK-specific; AIG is just a PT reiteration. Sleeve stays flat vs XLF.
+  do_not: promote diversified insurance as a reinsurance or P&C proxy
+- **HEAT Insurance - Life** (Financial) dir=flat conv=low
   captains: MET SPX none, AFL SPX none, JXN RUT none, CNO RUT pos
-  Life residual vs XLF is down; CNO worksite/Medicare is the only nested long vs MET/AFL silence.
-  do_not: average CNO briefing into a life-insurance short
-- **HEAT Insurance - Property & Casualty** (Financial) dir=down conv=low
+  Life is flat: MET/AFL silent, CNO worksite/Medicare briefing is the only nested positive.
+  do_not: use ASX:AFL copy for Aflac or average CNO into MET
+- **HEAT Insurance - Property & Casualty** (Financial) dir=flat conv=low
   captains: CB SPX none, PGR SPX none, MCY RUT none, SIGI RUT none
-  P&C residual vs XLF is down with no same-day loss or pricing print on captains.
-  do_not: invent a cat or rate story from price
-- **HEAT Insurance - Reinsurance** (Financial) dir=flat conv=low
+  P&C tape is only mildly bid vs XLF; captains have no same-day underwriting fact.
+  do_not: upgrade PGR on a 10b5-1 Form 4 or CB on a Q2 recap
+- **HEAT Insurance - Reinsurance** (Financial) dir=up conv=low
   captains: EG SPX none, HG RUT none, SPNT RUT none
-  Reinsurance residual is XLF-like flat; captains have no same-day underwriting print.
-  do_not: upgrade EG triangles into a reinsurance long
-- **HEAT Insurance - Specialty** (Financial) dir=down conv=low
+  Reinsurance is the vs-parent winner on tape/breadth, but captains published no confirming news today.
+  do_not: size a reinsurance long off residual alone without a cat/pricing fact
+- **HEAT Insurance - Specialty** (Financial) dir=flat conv=low
   captains: ACT RUT none, ESNT RUT none
-  MI captains are red vs XLF with no same-day NIW/credit print; housing-rate residual is the nest.
-  do_not: recycle Q2 beats as today's sentiment
-- **SPLIT Insurance Brokers** (Financial) dir=down conv=medium
-  captains: MRSH SPX pos, AON SPX neg, NP RUT none, BWIN RUT none
-  SPLIT: AON USI leverage/buyback freeze vs Marsh Asia cyber launch — XLF will smear both.
-  do_not: average AON’s $17B deal into MRSH or XLF
-- **HEAT Mortgage Finance** (Financial) dir=down conv=medium
-  captains: PFSI RUT neg, WD RUT none
-  Mortgage residual vs XLF is sharply down; PFSI legal overlay is nested, not an XLF rate trade.
-  do_not: hide PFSI/WD inside XLF or a generic rate short
+  Mortgage-insurers are flat-to-soft with no fresh NIW/credit print against the rate tape.
+  do_not: reuse Q2 MI beat language as today’s sentiment
+- **HEAT Insurance Brokers** (Financial) dir=down conv=medium
+  captains: MRSH SPX pos, AON SPX neg, NP RUT none, ARX RUT none
+  Broker residual is AON-deal overhang; Marsh’s 8.2% benefits survey does not offset the leverage hit.
+  do_not: average MRSH survey strength into AON’s $17B USI balance-sheet freeze
+- **SPLIT Mortgage Finance** (Financial) dir=down conv=low
+  captains: PFSI RUT none, WD RUT none
+  Flagged SPLIT vs XLF is rate-path, not a same-day origination print; captains are news-empty.
+  do_not: buy the mortgage dip off an Aug tombstone or a July EPS miss
 - **HEAT Shell Companies** (Financial) dir=down conv=low
   captains: LION RUT none
-  Only liquid captain is LION (studios, mis-bucketed); no SPAC bid tape for XLF to capture.
-  do_not: treat LION as a blank-check or XLF financial
+  Do not read XLF ‘shell’ residual through LION: it is a studio tape, news-empty, and down hard.
+  do_not: treat LION as a SPAC/shell bid or as Financial beta
 - **HEAT Biotechnology** (Healthcare) dir=flat conv=low
-  captains: VRTX SPX pos, REGN SPX neg, KRYS RUT pos, APGE RUT none
-  Residual vs XLV is mild; KRYS CF data vs REGN lawsuit splits captains — not a clean nested biotech long.
-  do_not: average KRYS into XLV or treat VRTX deal as sector-wide bid
+  captains: VRTX SPX pos, REGN SPX mixed, KRYS RUT pos, APGE RUT none
+  Week still red vs parent; VRTX Crinetics close and KRYS CF data are nested, REGN mixed, APGE is deal-arb.
+  do_not: average VRTX/KRYS into XLV biotech DOWN
 - **HEAT Diagnostics & Research** (Healthcare) dir=down conv=low
   captains: TMO SPX none, DHR SPX none, TWST RUT none, RDNT RUT none
-  Breadth 0.17 and red d1 in TMO/DHR/TWST; vs-parent residual is relative, not a confirmed nested bid.
-  do_not: read vs-parent +1.35 as a diagnostics long without news
-- **HEAT Drug Manufacturers - General** (Healthcare) dir=down conv=low
+  TMO/DHR/TWST/RDNT all week-red, breadth 0.35, zero current news; residual vs parent stays down.
+  do_not: buy the tools bounce inside XLV
+- **HEAT Drug Manufacturers - General** (Healthcare) dir=flat conv=low
   captains: LLY SPX pos, JNJ SPX pos
-  News is deal/label positive but residual vs parent is −1.23 and LLY week is −7; tape still down.
-  do_not: treat LLY Merida Phase 1 M&A as an XLV or big-pharma long
+  LLY Merida and JNJ China psoriasis nods are pos, but LLY week -6% so the sleeve is not an upgrade.
+  do_not: treat big-pharma news as an XLV UP
 - **HEAT Drug Manufacturers - Specialty & Generic** (Healthcare) dir=flat conv=low
-  captains: ZTS SPX none, VTRS SPX none, ALKS RUT pos, HIMS RUT none
-  ALKS Lancet data is the only fresh captain fact; ZTS/VTRS/HIMS are silent — residual vs parent is not a tape confirm.
-  do_not: bundle ALKS orexin data into a specialty-pharma basket long
+  captains: ZTS SPX none, VTRS SPX none, ALKS RUT pos, HIMS RUT neg
+  HIMS FDA GLP-1 scare offsets ALKS orexin tape; ZTS/VTRS quiet. Not a clean specialty long.
+  do_not: use HIMS as a GLP-1 proxy long
 - **OVERRIDE Health Information Services** (Healthcare) dir=up conv=medium
-  captains: VEEV SPX pos, BTSG RUT none, TXG RUT pos
-  OVERRIDE vs Healthcare: VEEV Falcon + week +15 confirms nested HIS long; BTSG tape does not.
-  do_not: bury VEEV in XLV or average BTSG weakness into the OVERRIDE
-- **HEAT Healthcare Plans** (Healthcare) dir=down conv=low
-  captains: UNH SPX pos, CVS SPX pos, OSCR RUT none, ALHC RUT neg
-  Breadth 0.09: UNH/CVS news is constructive but OSCR/ALHC week is red — not a plans nested long.
-  do_not: average CVS Aetna recovery into UNH/XLV managed-care down
-- **HEAT Medical Care Facilities** (Healthcare) dir=down conv=low
-  captains: HCA SPX none, DVA SPX pos, PACS RUT pos, LFST RUT none
-  PACS Florida deal is nested noise inside a down residual; HCA still silent and week −3.5.
-  do_not: treat PACS bed-adds as a facilities-sector long vs XLV
+  captains: VEEV SPX pos, BTSG RUT none, HQY RUT pos
+  OVERRIDE vs Healthcare: VEEV Falcon Safety plus HQY HSA raise; d1 dip after VEEV +13% week.
+  do_not: bury VEEV in XLV
+- **HEAT Healthcare Plans** (Healthcare) dir=up conv=medium
+  captains: UNH SPX none, CVS SPX pos, OSCR RUT pos, ALHC RUT neg
+  Plans residual +3.6 vs parent, 91% breadth; CVS/OSCR pos, ALHC legal is the veto not the sleeve.
+  do_not: short the plans sleeve because of ALHC
+- **HEAT Medical Care Facilities** (Healthcare) dir=flat conv=low
+  captains: HCA SPX none, DVA SPX mixed, PACS RUT pos, LFST RUT none
+  PACS Florida 32-home deal is the live print; HCA/LFST quiet, DVA mixed settlement vs Humana VBC.
+  do_not: read PACS M&A as an HCA/XLV facilities buy
 - **HEAT Medical Devices** (Healthcare) dir=down conv=low
-  captains: ABT SPX pos, SYK SPX pos, GKOS RUT none, HAE RUT none
-  ABT/SYK product-M&A news vs week −5/−1 captains: residual ~0 vs parent, still a devices down tape.
-  do_not: read SYK ZuriMED as a medical-device sector turn
+  captains: ABT SPX none, SYK SPX pos, GKOS RUT none, HAE RUT none
+  Breadth 0.19; SYK ZuriMED is idiosyncratic while ABT/GKOS/HAE have no current tape-changing news.
+  do_not: buy devices on the SYK deal
 - **HEAT Medical Distribution** (Healthcare) dir=up conv=low
   captains: MCK SPX neg, COR SPX none
-  Vs-parent +3.3 and 0.58 breadth still flag nested bid, but MCK cyber is the live captain fact.
-  do_not: ignore the MCK breach because the industry residual is green
-- **HEAT Medical Instruments & Supplies** (Healthcare) dir=up conv=medium
-  captains: ISRG SPX none, BDX SPX pos, MMED RUT pos, MMSI RUT none
-  MMED beat/raise plus vs-parent +2.1 is the nested bid; ISRG has no current fact to confirm SPX.
-  do_not: fold MMED into XLV or into ISRG valuation debate
+  MCK/COR bid on residual +2.9 vs parent, but MCK ShinyHunters PHI theft is a hard news veto.
+  do_not: long MCK on the distribution residual
+- **HEAT Medical Instruments & Supplies** (Healthcare) dir=flat conv=low
+  captains: ISRG SPX none, BDX SPX none, MMED RUT pos, MMSI RUT none
+  MMED Flex/Q1 beat is the nested diabetes long inside weak ISRG/BDX; industry breadth 0.25.
+  do_not: average MMED into instruments DOWN or into XLV
 - **HEAT Aerospace & Defense** (Industrials) dir=flat conv=low
-  captains: GE SPX none, RTX SPX pos, MOG-A RUT none, VSEC RUT pos
-  Weekly residual still heat vs XLI, but captains printed red today and only RTX/VSEC have current facts.
-  do_not: treat XLI HEAT as a clean A&D bid; GE/RTX day-red vs residual
-- **HEAT Airlines** (Industrials) dir=down conv=medium
-  captains: DAL SPX none, UAL SPX pos, SKYW RUT none, ALGT RUT pos
-  Airlines are nested down vs XLI: w1 -4.5, breadth 0.06; route/app news does not offset the tape.
-  do_not: average DAL/UAL into XLI HEAT or buy the oil-drop bounce stub
+  captains: GE SPX pos, RTX SPX none, MOG-A RUT none, VSEC RUT none
+  A&D still red, but beating XLI; GE Navy/hypersonic is the nested bid, RTX/Moog/VSE silent.
+  do_not: bury GE awards in XLI/A&D DOWN
+- **SPLIT Airlines** (Industrials) dir=down conv=medium
+  captains: DAL SPX none, UAL SPX none, SKYW RUT none, ALGT RUT pos
+  Flagged SPLIT: majors news-light while group is -8.5% vs XLI; ALGT routes do not offset DAL/UAL washout.
+  do_not: buy the oil-down airline bounce
 - **HEAT Airports & Air Services** (Industrials) dir=down conv=low
-  captains: JOBY RUT mixed
-  Only liquid captain is JOBY, still red on week; certification timeline is mixed, not a tape confirm.
-  do_not: proxy airports with airlines or invent AENA/ASR names
+  captains: JOBY RUT none
+  Single captain JOBY is red vs XLI with no dated 9/2 certification print.
+  do_not: treat eVTOL hope as airport-services bid
 - **HEAT Building Products & Equipment** (Industrials) dir=down conv=low
-  captains: TT SPX pos, JCI SPX none, GFF RUT none, ARLO RUT none
-  Building products residual is down vs XLI; TT AI-cooling news is real but JCI/GFF/ARLO are silent today.
-  do_not: fold TT data-center HVAC into a broad XLI long
+  captains: TT SPX none, JCI SPX none, GFF RUT none, ARLO RUT none
+  HVAC/data-center backlog is stale; 9/2 captains are silent while the group lags XLI.
+  do_not: reuse August cooling backlog as today news
 - **HEAT Business Equipment & Supplies** (Industrials) dir=up conv=low
-  captains: XRX RUT none
-  XRX is the only captain and screens hot vs XLI, but there is no current fact behind the rip.
-  do_not: size a $0.4B name as an XLI nested long
+  captains: XRX RUT pos
+  Tiny group beating XLI on XRX Xeikon print-portfolio deal; one-captain tape.
+  do_not: size XRX like an SPX industrial
 - **HEAT Conglomerates** (Industrials) dir=down conv=low
-  captains: MMM SPX none, HON SPX none, BBUC RUT none, GHC RUT none
-  Conglomerates lag XLI with no current captain fact; do not read MMM/HON as industrial beta.
-  do_not: use leftover GEV-engine stubs on HON/MMM
-- **HEAT Consulting Services** (Industrials) dir=flat conv=low
-  captains: VRSK SPX pos, EFX SPX none, HURN RUT none, ICFI RUT pos
-  VRSK cat-model print is today's only SPX fact; EFX is red and silent, so the group stays flat.
-  do_not: call consulting UP off VRSK while EFX is -2.7 d1
-- **HEAT Electrical Equipment & Parts** (Industrials) dir=flat conv=low
-  captains: VRT SPX none, HUBB SPX none, ENS RUT none, ATKR RUT mixed
-  Electrical residual is only +1.2 vs XLI and flat on the day; ATKR is deal-arb, not a cycle signal.
-  do_not: read VRT as XLK AI beta or trade ATKR as electrical direction
-- **HEAT Engineering & Construction** (Industrials) dir=down conv=low
-  captains: PWR SPX pos, FIX SPX none, FLR RUT mixed, ACA RUT mixed
-  E&C weekly residual is -2.6 vs XLI even with PWR's upgrade; FLR/ACA are project-end and deal-arb.
-  do_not: buy the group off PWR/FIX day green against a red weekly residual
-- **HEAT Farm & Heavy Construction Machinery** (Industrials) dir=up conv=medium
-  captains: CAT SPX none, DE SPX pos, TEX RUT none, FSS RUT none
-  DE is the nested tape: upgrade plus ATH vs CAT silent/red; do not average Deere into CAT AI-power.
-  do_not: call the group a CAT data-center proxy
-- **HEAT Industrial Distribution** (Industrials) dir=down conv=low
-  captains: GWW SPX pos, FAST SPX none, XMTR RUT none, REZI RUT neg
-  Distribution lags XLI; GWW tech tuck-in does not offset FAST silence and REZI OEM loss.
-  do_not: use Ferguson S&P-add stub on FAST
-- **HEAT Integrated Freight & Logistics** (Industrials) dir=flat conv=low
-  captains: UPS SPX pos, FDX SPX none, HUBG RUT neg, PBI RUT none
-  Weekly residual is +1.8 vs XLI but HUBG accounting vetoes a clean bid; UPS reorg is the only live SPX fact.
-  do_not: pair UPS reorg with HUBG as a logistics basket
+  captains: MMM SPX pos, HON SPX none, BBUC RUT none, GHC RUT none
+  MMM film is a product drip; HON/BBUC/GHC silent while conglomerates lag XLI.
+  do_not: read 3M film as a Honeywell automation bid
+- **HEAT Consulting Services** (Industrials) dir=up conv=low
+  captains: VRSK SPX pos, EFX SPX none, HURN RUT none, ICFI RUT none
+  Group beats XLI; only VRSK’s $171B cat-loss lift is 9/2 evidence, EFX/HURN/ICF silent.
+  do_not: average VRSK cat-model demand into XLI DOWN
+- **HEAT Electrical Equipment & Parts** (Industrials) dir=up conv=low
+  captains: VRT SPX pos, HUBB SPX none, ENS RUT none, ATKR RUT none
+  VRT paid up for AI microgrids; HUBB/ENS/ATKR silent — nested power bid vs flat residual.
+  do_not: average VRT UIG into XLI DOWN
+- **HEAT Engineering & Construction** (Industrials) dir=up conv=low
+  captains: PWR SPX none, FIX SPX pos, FLR RUT none, ACA RUT mixed
+  FIX DC backlog still the nested long; PWR/FLR news-light, ACA is deal-arb not construction beta.
+  do_not: fold FIX into generic XLI construction DOWN
+- **HEAT Farm & Heavy Construction Machinery** (Industrials) dir=up conv=low
+  captains: CAT SPX mixed, DE SPX pos, FSS RUT none, TEX RUT none
+  Nested split: DE AI/ag bid vs CAT mixed FieldAI/SpaceX drag; do not average into machinery.
+  do_not: average Deere into CAT/XLI DOWN
+- **HEAT Industrial Distribution** (Industrials) dir=flat conv=low
+  captains: GWW SPX none, FAST SPX none, XMTR RUT none, REZI RUT pos
+  Distribution residual ~flat; only REZI insider buy is 9/2, GWW/FAST/XMTR silent.
+  do_not: treat Ferguson S&P news as FAST
+- **HEAT Integrated Freight & Logistics** (Industrials) dir=down conv=medium
+  captains: UPS SPX mixed, FDX SPX none, PBI RUT pos, HUBG RUT neg
+  Parcel reorg + HUBG filing mess outweigh PBI presort grab; logistics still a fade vs XLI.
+  do_not: buy UPS Store character as a network inflect
 - **HEAT Marine Shipping** (Industrials) dir=up conv=low
-  captains: MATX RUT pos, CMRE RUT mixed
-  Marine residual +1.7 vs XLI with 0.63 breadth; MATX peak-season China is the nested tape XLI misses.
-  do_not: bury MATX inside a generic transports down
-- **HEAT Metal Fabrication** (Industrials) dir=flat conv=low
+  captains: MATX RUT none, CMRE RUT none
+  Breadth/residual beat XLI but captains have no 9/2 freight-rate evidence.
+  do_not: invent a Transpacific print from the keyword stub
+- **HEAT Metal Fabrication** (Industrials) dir=down conv=low
   captains: CMC RUT none, GPGI RUT neg
-  Fabrication is flat vs XLI; GPGI lawsuit is a veto, CMC award is not a bid.
-  do_not: treat GPGI legal PR as a positive catalyst
+  No SPX captain; GPGI lawsuit is the only 9/2 fact and it is negative.
+  do_not: treat GPGI legal ads as a steel bid
 - **HEAT Pollution & Treatment Controls** (Industrials) dir=flat conv=low
-  captains: VLTO SPX pos, ZWS RUT none, CECO RUT none
-  Water residual is flat vs XLI; VLTO tuck-in is the only current captain fact.
-  do_not: call pollution UP off CECO's August earnings stub
+  captains: VLTO SPX none, ZWS RUT pos, CECO RUT none
+  Water names lag on tape; ZWS award is soft pos, VLTO deal not a 9/2 close.
+  do_not: re-underwrite Cleanwater1 as today news
 - **HEAT Railroads** (Industrials) dir=down conv=medium
-  captains: UNP SPX neg, CSX SPX none, TRN RUT none, GBX RUT neg
-  Rails nested down vs XLI; UNP merger politics plus GBX succession, no offsetting CSX fact.
-  do_not: buy UNP as a transcon synergy tape while AGs are live
-- **HEAT Rental & Leasing Services** (Industrials) dir=down conv=low
+  captains: UNP SPX pos, CSX SPX none, TRN RUT none, GBX RUT neg
+  Rails -5.7% vs XLI; UNP merger talk does not offset CSX silence and GBX CEO exit.
+  do_not: buy rails on Berkshire TV
+- **HEAT Rental & Leasing Services** (Industrials) dir=down conv=medium
   captains: URI SPX none, GATX RUT none, HRI RUT none
-  Rental residual -2.5 vs XLI with empty current news; URI day green is not a nested long.
-  do_not: promote URI megaproject Q2 as today's bid
-- **HEAT Security & Protection Services** (Industrials) dir=down conv=low
-  captains: ALLE SPX pos, BCO RUT neg, GEO RUT none
-  Security lags XLI; ALLE product drop does not cancel BCO CMA risk or GEO silence.
-  do_not: bundle GEO ICE wins with ALLE locks as one trade
-- **HEAT Specialty Business Services** (Industrials) dir=down conv=low
-  captains: CTAS SPX none, CPRT SPX none, UNF RUT mixed, AZZ RUT none
-  Specialty services lag XLI; CTAS/UNF is a deal overlay, not an industry bid.
-  do_not: trade UNF as an independent uniform compounder into the CTAS close
+  Rental is a clean residual down vs XLI with zero 9/2 captain facts.
+  do_not: call URI 'outperform on a down day' sentiment
+- **HEAT Security & Protection Services** (Industrials) dir=flat conv=low
+  captains: ALLE SPX none, BCO RUT none, GEO RUT none
+  Security residual ~flat; dividend/Form 4/old CMA probe are not a 9/2 direction.
+  do_not: treat CMA probe as a BCO positive
+- **HEAT Specialty Business Services** (Industrials) dir=flat conv=low
+  captains: CTAS SPX none, CPRT SPX none, UNF RUT pos, AZZ RUT none
+  Uniform residual beats XLI slightly; UNF SKU launch is drip, CTAS/CPRT/AZZ silent.
+  do_not: trade UNF product as a closed CTAS deal
 - **HEAT Specialty Industrial Machinery** (Industrials) dir=down conv=low
-  captains: GEV SPX none, ETN SPX pos, NPO RUT none, JBTM RUT mixed
-  Machinery residual -1.9 vs XLI; GEV overnight bid is unusable, ETN AI-power is the only current pos.
-  do_not: average GEV wind miss into an XLI machinery long
+  captains: GEV SPX none, ETN SPX pos, NPO RUT none, JBTM RUT none
+  Group lags XLI; ETN enclosure plant is the nested power bid, GEV/NPO/JBTM news-light.
+  do_not: average ETN capacity into GEV/XLI DOWN
 - **HEAT Staffing & Employment Services** (Industrials) dir=up conv=low
-  captains: KFY RUT pos, TNET RUT mixed
-  Staffing residual +2.3 vs XLI; KFY deal/survey is current, TNET is mixed so conviction stays low.
-  do_not: read 3.3% wage budgets as a broad XLI labor-cost shock
+  captains: KFY RUT pos, TNET RUT none
+  No SPX captain; KFY AMS close is the nested RPO scale-up vs a red staffing tape.
+  do_not: average KFY into TNET/XLI staffing DOWN
 - **HEAT Tools & Accessories** (Industrials) dir=down conv=low
-  captains: SNA SPX none, SWK SPX pos, KMT RUT none, HLMN RUT none
-  Tools lag XLI; SWK reshoring spend is the only current pos and does not flip the residual.
-  do_not: treat SNA dividend as a tools up-tape
-- **HEAT Trucking** (Industrials) dir=up conv=low
-  captains: ODFL SPX neg, RXO RUT none, ARCB RUT pos
-  Trucking residual +1.2 vs XLI with 0.81 breadth, but ODFL Canada-friction news caps conviction.
-  do_not: ignore ODFL's Canada headline just because industry breadth is green
-- **HEAT Waste Management** (Industrials) dir=down conv=low
-  captains: WM SPX mixed, RSG SPX none, CWST RUT none, ONT RUT pos
-  Waste residual is down vs XLI; WM succession and ONT awards do not flip the group.
-  do_not: treat RSG workplace PR as a volume bid
+  captains: SNA SPX none, SWK SPX none, KMT RUT none, HLMN RUT none
+  Tools lag XLI with empty 9/2 captains — dividends and old capex only.
+  do_not: use SWK $1B headline without a 9/2 URL
+- **HEAT Trucking** (Industrials) dir=down conv=medium
+  captains: ODFL SPX none, RXO RUT none, ARCB RUT none
+  Worst breadth on the board (0.06) and no 9/2 freight print — residual down vs XLI.
+  do_not: fade-chase ODFL on a dividend record date
+- **HEAT Waste Management** (Industrials) dir=up conv=low
+  captains: WM SPX none, RSG SPX pos, CWST RUT none, ONT RUT none
+  Waste beats XLI on residual; RSG cert is soft pos, WM succession already digested.
+  do_not: bury RSG/WM relative bid in XLI DOWN
 - **HEAT REIT - Diversified** (Real Estate) dir=down conv=low
-  captains: VICI SPX neg, BNL RUT none, GNL RUT none
-  Diversified net-lease lags XLRE; VICI PT cut to $26, BNL/GNL have no fresh tape-changing news.
-  do_not: treat GNL Modiv stub as today's bid
-- **HEAT REIT - Healthcare Facilities** (Real Estate) dir=up conv=low
+  captains: VICI SPX neg, BNL RUT mixed, GNL RUT none
+  Diversified residual is only +0.2 vs XLRE with 35% breadth; VICI PT cut keeps this from a nested long.
+  do_not: read a slight vs-parent residual as a diversified-REIT bid
+- **HEAT REIT - Healthcare Facilities** (Real Estate) dir=up conv=medium
   captains: WELL SPX none, VTR SPX pos, CTRE RUT none, SBRA RUT none
-  SHOP residual beats XLRE; only VTR has a same-day PT raise—WELL/CTRE/SBRA are silent.
-  do_not: average senior-housing residual into XLRE DOWN
+  Healthcare is the XLRE miss higher: +2.2pt vs parent, 88% breadth, all four captains green d1.
+  do_not: average SHOP/senior-housing into a flat XLRE rate tape
 - **HEAT REIT - Hotel & Motel** (Real Estate) dir=down conv=medium
-  captains: HST SPX none, RHP RUT none, APLE RUT none
-  Lodging is the XLRE nested short: 0% breadth, d1 -2.3%, captains have no offsetting news.
-  do_not: use stale Q2 RevPAR beats as today's bid
-- **HEAT REIT - Industrial** (Real Estate) dir=down conv=low
-  captains: PLD SPX none, PSA SPX pos, TRNO RUT pos, LXP RUT none
-  Industrial still XLRE-soft; PSA Canada close is the only same-session company fact vs quiet PLD.
-  do_not: read PSA Canada into a Prologis bid
-- **HEAT REIT - Mortgage** (Real Estate) dir=flat conv=low
+  captains: HST SPX none, RHP RUT pos, APLE RUT none
+  Hotels are the XLRE miss lower: -3.0pt vs parent, 13% breadth; RHP deal does not reverse the tape.
+  do_not: buy lodging on the Grande Lakes close against -6% w1 / 13% breadth
+- **HEAT REIT - Industrial** (Real Estate) dir=flat conv=low
+  captains: PLD SPX none, PSA SPX pos, TRNO RUT none, LXP RUT none
+  Industrial residual ~flat vs XLRE; PSA Canada close is stock-specific, not a sector bid.
+  do_not: treat PSA Canada as an industrial-REIT tape confirmation
+- **HEAT REIT - Mortgage** (Real Estate) dir=down conv=low
   captains: DX RUT none, BXMT RUT none
-  mREITs hold up vs XLRE on residual, but DX/BXMT have no current catalyst—office-loan overhang is stale.
-  do_not: treat BXMT d1 green as a credit all-clear
-- **HEAT REIT - Office** (Real Estate) dir=down conv=low
-  captains: BXP SPX none, ARE SPX none, CDP RUT pos, SLG RUT none
-  Office residual lags XLRE; CDP PT jump is defense-IT, not a BXP/ARE/SLG bid.
-  do_not: read BXP notes or ARE dividend as office recovery
-- **HEAT REIT - Residential** (Real Estate) dir=down conv=low
+  Mortgage REITs print 5% breadth and -1.3 d1; vs-parent +0.4 is not a bid with no current news.
+  do_not: fade XLRE into mREITs on a tiny positive residual
+- **HEAT REIT - Office** (Real Estate) dir=down conv=medium
+  captains: BXP SPX mixed, ARE SPX none, CDP RUT none, SLG RUT none
+  Office is an XLRE miss lower: -2.5pt vs parent, 20% breadth; BXP housing conversion is not an office bid.
+  do_not: bundle CDP defense-IT or ARE lab into a generic office bounce
+- **HEAT REIT - Residential** (Real Estate) dir=flat conv=low
   captains: VMRK SPX none, UDR SPX none, IRT RUT none, UMH RUT pos
-  Apartments lag XLRE; UMH Fannie refi is too small to offset silent VMRK/UDR/IRT tape.
-  do_not: treat VMRK merger scale as a same-day occupancy bid
-- **HEAT REIT - Retail** (Real Estate) dir=down conv=low
-  captains: SPG SPX none, O SPX none, MAC RUT none, EPRT RUT none
-  Malls/net-lease drift with XLRE; SPG/O/MAC/EPRT lack a same-session demand print.
-  do_not: use Simon Media Network stub as today's retail bid
-- **HEAT REIT - Specialty** (Real Estate) dir=up conv=medium
-  captains: EQIX SPX pos, AMT SPX pos, OUT RUT none, UNIT RUT pos
-  Towers/datacenters are the XLRE miss: EQIX quantum rack + AMT CoreSite OCI on-ramp.
-  do_not: bury EQIX/AMT in XLRE malls-and-apartments DOWN
-- **HEAT Real Estate - Development** (Real Estate) dir=flat conv=low
-  captains: CCS RUT pos
-  CCS Onyx opening is a multifamily PR, not a development-cycle turn vs still-red d1 tape.
-  do_not: size a homebuilder bounce off one apartment ribbon-cutting
+  Residential is flat vs XLRE (d1 ~0, residual -0.2); UMH loan is micro, VMRK gift is not a bid.
+  do_not: treat the AVB/EQR merger brand as a same-day residential catalyst
+- **HEAT REIT - Retail** (Real Estate) dir=up conv=low
+  captains: SPG SPX pos, O SPX none, MAC RUT none, EPRT RUT none
+  Retail residual +0.8 vs XLRE with 62% breadth; only SPG has current product news, so conviction stays low.
+  do_not: call a mall/net-lease surge from one media-network launch
+- **HEAT REIT - Specialty** (Real Estate) dir=flat conv=low
+  captains: EQIX SPX pos, AMT SPX pos, OUT RUT none, UNIT RUT none
+  Specialty tape is slightly soft vs XLRE; EQIX/AMT AI-connect news is nested, not a specialty-REIT bid.
+  do_not: average EQIX inference news into towers, billboards, and fiber
+- **HEAT Real Estate - Development** (Real Estate) dir=down conv=low
+  captains: CCS RUT none
+  Development is an XLRE miss lower: -2.1pt vs parent, 23% breadth, only CCS and no current ops news.
+  do_not: read a luxury apartment opening as a homebuilder turn
 - **HEAT Real Estate - Diversified** (Real Estate) dir=down conv=low
   captains: JOE RUT none
-  JOE retail-lease news is stale; Northwest Florida developer remains the XLRE laggard.
-  do_not: use August Town Center leases as a Sept bid
+  JOE-only diversified tape is -2.1pt vs XLRE with 0% breadth and no current news.
+  do_not: use an August retail lease to override a red, zero-breadth tape
 - **HEAT Real Estate Services** (Real Estate) dir=down conv=low
-  captains: CBRE SPX none, CSGP SPX none, COMP RUT pos, CWK RUT none
-  Brokerage/data names are the XLRE dump; COMP PT raise does not fix CBRE/CSGP/CWK tape.
-  do_not: fade a -3% services d1 on one UBS COMP note
-- **HEAT Communication Equipment** (Technology) dir=flat conv=low
-  captains: CSCO SPX pos, LITE SPX pos, VSAT RUT pos, BDC RUT none
-  XLK-lagging comms: LITE/CSCO AI-optics bid vs weak RUT (VSAT service news, BDC silent).
-  do_not: average LITE into CSCO/XLK or bury optics in comms HEAT
+  captains: CBRE SPX none, CSGP SPX none, COMP RUT pos, CWK RUT pos
+  Services are an XLRE miss lower: -2.6pt vs parent; COMP First Look does not offset a -12% w1.
+  do_not: buy COMP mean-reversion on an MLS settlement against -12% weekly tape
+- **HEAT Communication Equipment** (Technology) dir=down conv=low
+  captains: CSCO SPX pos, MSI SPX none, VSAT RUT pos, BDC RUT none
+  Comms residual lags XLK on 0.13 breadth; Cisco Saudi fabric is nested, not a group bid.
+  do_not: average CSCO AI-networking go-live into comms HEAT DOWN
 - **HEAT Computer Hardware** (Technology) dir=up conv=medium
-  captains: DELL SPX pos, ANET SPX none, QBTS RUT none, RGTI RUT pos
-  DELL AMC raise is the hardware nested long; ANET quiet, RUT quantum still a side tape.
-  do_not: wait for the print — DELL already reported; do not mix QBTS/RGTI into DELL
-- **HEAT Consumer Electronics** (Technology) dir=flat conv=low
-  captains: AAPL SPX mixed, SONO RUT pos, GPRO RUT pos
-  AAPL CEO/memory mixed dominates; SONO refresh and GPRO/Starman are RUT noise, not the industry.
-  do_not: treat GPRO squeeze or SONO launch as an AAPL/consumer-electronics nested long
+  captains: DELL SPX pos, ANET SPX pos, QBTS RUT mixed, RGTI RUT none
+  Hardware tape residual red; Dell $74B AI-server guide is the nested long XLK will mislabel.
+  do_not: bury DELL print in Computer Hardware HEAT DOWN; do not treat QBTS/RGTI as Dell proxies
+- **SPLIT Consumer Electronics** (Technology) dir=up conv=medium
+  captains: AAPL SPX pos, SONO RUT pos, GPRO RUT pos
+  SPLIT vs XLK: AAPL event + GPRO Starman bid; Sonos product is real but not the tape leader.
+  do_not: average GPRO merger tape into AAPL; do not treat SONO as the split long
 - **HEAT Electronic Components** (Technology) dir=flat conv=low
-  captains: APH SPX none, GLW SPX none, PLXS RUT none, BELFB RUT none
-  Components lag XLK with silent captains; split/guide-recycle is not a nested interconnect long.
-  do_not: force an APH/GLW AI-interconnect story without a current fact
-- **HEAT Electronics & Computer Distribution** (Technology) dir=up conv=low
-  captains: NSIT RUT pos, CNXN RUT none
-  No SPX captain; RUT distributors still the XLK-beat tape, but news is award-stale vs DELL-class.
-  do_not: invent an SPX distributor; do not size NSIT like DELL
+  captains: APH SPX none, GLW SPX mixed, PLXS RUT none, BELFA RUT none
+  Components ~flat vs XLK; APH split and 13F churn are not a subsector impulse.
+  do_not: read APH split as AI-connector confirmation
+- **HEAT Electronics & Computer Distribution** (Technology) dir=flat conv=low
+  captains: NSIT RUT none, CNXN RUT none
+  No SPX captain; RUT distributors flat vs parent with stale partner/contract headlines.
+  do_not: promote NSIT/CNXN on August awards
 - **HEAT Information Technology Services** (Technology) dir=down conv=low
-  captains: IBM SPX none, ACN SPX none, CIFR RUT none, PENG RUT pos
-  IT services lag XLK; IBM/ACN silent, CIFR is HPC not consulting, PENG legal is noise.
-  do_not: read CIFR powered-shell tape as Accenture/IBM services demand
-- **HEAT Scientific & Technical Instruments** (Technology) dir=down conv=low
-  captains: KEYS SPX none, GRMN SPX pos, ESE RUT none, NOVT RUT none
-  Instruments are the XLK leftover: residual −3.5w, KEYS/ESE/NOVT silent, GRMN marine is not AI test.
-  do_not: map GRMN wearables/marine into KEYS AI-instrumentation
+  captains: IBM SPX none, ACN SPX pos, CIFR RUT pos, PENG RUT none
+  IT services residual still lags XLK; ACN tuck-ins and CIFR HPC notes do not flip the group.
+  do_not: treat CIFR HPC leases as IBM/ACN services beta
+- **OVERRIDE Scientific & Technical Instruments** (Technology) dir=down conv=low
+  captains: KEYS SPX none, COHR SPX pos, ESE RUT none, NOVT RUT none
+  OVERRIDE vs XLK: instruments residual −4.3w; COHR optics bid is nested, not a group rescue.
+  do_not: average COHR AI-optics into instruments OVERRIDE DOWN
 - **OVERRIDE Semiconductor Equipment & Materials** (Technology) dir=down conv=low
-  captains: LRCX SPX pos, AMAT SPX none, ACMR RUT none, KLIC RUT none
-  OVERRIDE down vs XLK: breadth 0.14, AMAT/ACMR/KLIC silent; Lam Taiwan check does not flip the tape.
-  do_not: average LRCX/AMAT into XLK UP or treat Taiwan R&D cash as a WFE upturn
-- **HEAT Semiconductors** (Technology) dir=up conv=medium
-  captains: NVDA SPX mixed, AVGO SPX none, SLAB RUT none, MXL RUT none
-  Chips still beat XLK on NVDA demand, but circular-deal debate plus AVGO AMC caps conviction.
-  do_not: promote a broad XLK/SOXX UP notable into the AVGO print
-- **HEAT Software - Application** (Technology) dir=up conv=medium
-  captains: CRM SPX pos, UBER SPX pos, FROG RUT none, TTAN RUT none
-  App software beats XLK on CRM Agentforce; UBER initiate is contra-tape, FROG/TTAN not confirmatory.
-  do_not: fold UBER’s −4% d1 into the CRM AI-software nested long
+  captains: LRCX SPX none, AMAT SPX none, ACMR RUT none, KLIC RUT pos
+  WFE OVERRIDE: 0.00 breadth and −7.5 vs XLK; KLIC CPO note is nested, not a Lam/AMAT bid.
+  do_not: average KLIC CPO into LRCX/AMAT OVERRIDE DOWN
+- **HEAT Semiconductors** (Technology) dir=flat conv=low
+  captains: NVDA SPX pos, AVGO SPX mixed, SLAB RUT none, MXL RUT none
+  Semis ~flat vs XLK; NVDA HF talks vs AVGO beat-and-light-guide is a mega-cap split, not a group impulse.
+  do_not: promote XLK/SOXX UP off AVGO AMC; do not average MXL into AVGO
+- **HEAT Software - Application** (Technology) dir=flat conv=low
+  captains: CRM SPX pos, UBER SPX mixed, FROG RUT pos, TTAN RUT none
+  App software ~in-line vs XLK; CRM AI digest vs UBER cuts and FROG product is a split, not a sector bid.
+  do_not: treat UBER layoffs as CRM confirmation
 - **HEAT Software - Infrastructure** (Technology) dir=up conv=medium
-  captains: MSFT SPX none, PLTR SPX pos, ZETA RUT none, QLYS RUT none
-  Infra software is the XLK residual leader; PLTR TITAN is the live fact, MSFT/ZETA/QLYS are quiet.
-  do_not: sell PLTR into a Microsoft-backlog essay or a CRWD/OKTA 52-week-high mashup
+  captains: MSFT SPX pos, PLTR SPX pos, ZETA RUT none, QLYS RUT none
+  Infra software residual leads XLK; MSFT Azure-dollar disclosure + PLTR TITAN are the nested tells.
+  do_not: promote broad XLK UP off MSFT; do not skip PLTR into mega-cap cloud
 - **OVERRIDE Solar** (Technology) dir=down conv=medium
-  captains: FSLR SPX none, RUN RUT mixed, SHLS RUT pos
-  Solar OVERRIDE vs XLK: FSLR silent, RUN mixed, SHLS legal win does not lift 0.13 breadth.
-  do_not: average FSLR/RUN into XLK or treat a Shoals verdict as a module-demand turn
-- **HEAT Utilities - Diversified** (Utilities) dir=down conv=low
-  captains: SRE SPX mixed, AES SPX pos, AVA RUT none, UTL RUT pos
-  Diversified residual slightly worse than parent; SRE is CA-wildfire mixed, AES is a $15 take-private, not a nested long.
-  do_not: read AES CFIUS as uncapped utility upside
-- **HEAT Utilities - Independent Power Producers** (Utilities) dir=up conv=medium
-  captains: CEG SPX pos, VST SPX pos, HNRG RUT mixed
-  IPP residual +2.3 vs parent on CEG 920 MW nuclear PPAs and VST Helix; HNRG print is mixed, not the tell.
-  do_not: average HNRG outage miss into the CEG/VST nuclear-AI bid
-- **HEAT Utilities - Regulated Electric** (Utilities) dir=down conv=low
-  captains: NEE SPX pos, SO SPX pos, TXNM RUT mixed, POR RUT pos
-  NEE Japan-gas funding and SO OpenAI 3.2 GW are pos, but residual is still down vs parent; TXNM sold stock.
-  do_not: treat NEE/SO data-center headlines as industry UP
-- **HEAT Utilities - Regulated Gas** (Utilities) dir=up conv=medium
-  captains: ATO SPX pos, NI SPX pos, SWX RUT pos, BKH RUT pos
-  Gas residual beats parent; ATO/NI/SWX/BKH all held FY and BKH’s 3 GW Wyoming DC pipeline is the nested tell.
-  do_not: fold BKH data-center pipeline into XLU DOWN
-- **HEAT Utilities - Regulated Water** (Utilities) dir=up conv=medium
-  captains: AWK SPX pos, AWR RUT pos, CWT RUT pos
-  Water residual +2.3 vs parent; AWK merger advancing, AWR beat, CWT filed Kona rates — don’t bury in XLU down.
-  do_not: average AWK/AWR/CWT into diversified utility weakness
-- **HEAT Utilities - Renewable** (Utilities) dir=flat conv=low
+  captains: FSLR SPX mixed, RUN RUT neg, SHLS RUT pos
+  Solar OVERRIDE vs XLK: RUN guide cut + tariff reset dominate; SHLS verdict is idiosyncratic.
+  do_not: average FSLR/SHLS into XLK or treat SHLS legal win as a solar bid
+- **HEAT Utilities - Diversified** (Utilities) dir=up conv=low
+  captains: SRE SPX mixed, AES SPX pos, AVA RUT none, UTL RUT none
+  Diversified beat XLU on SRE's Jefferies bounce; AES is $15 deal-capped after CFIUS, not a utility tape.
+  do_not: treat AES as a live utility captain or bury SRE's CA-liability mix inside XLU UP
+- **HEAT Utilities - Independent Power Producers** (Utilities) dir=flat conv=low
+  captains: CEG SPX pos, VST SPX pos, HNRG RUT none
+  CEG/VST news is constructive, but IPP breadth 0.22 and w1 still red—don't read the bounce as a sector turn.
+  do_not: average CEG/VST nuclear-AI power into XLU regulated electric
+- **HEAT Utilities - Regulated Electric** (Utilities) dir=flat conv=low
+  captains: NEE SPX none, SO SPX pos, TXNM RUT neg, POR RUT none
+  SO's 3.2 GW OpenAI approval is nested vs electric's -2.1% w1; TXNM $400M print is dilution, not a leader.
+  do_not: buy XLU on the OpenAI headline or treat TXNM w1 strength as organic demand
+- **HEAT Utilities - Regulated Gas** (Utilities) dir=up conv=low
+  captains: ATO SPX none, NI SPX none, SWX RUT none, BKH RUT none
+  Gas is the XLU relative winner on residual (+1.5 vs parent), but captains have no fresh equity news.
+  do_not: invent an AI-gas catalyst or average this residual into XLU DOWN week
+- **HEAT Utilities - Regulated Water** (Utilities) dir=up conv=low
+  captains: AWK SPX mixed, AWR RUT none, CWT RUT none
+  Water leads XLU on residual (+2.0 vs parent); AWK merger still in PA PUC, AWR/CWT lack current fundamentals.
+  do_not: average water residual into XLU or treat the Newsweek headline as CWT sentiment
+- **HEAT Utilities - Renewable** (Utilities) dir=down conv=low
   captains: ORA RUT pos, FLNC RUT mixed
-  ORA raised FY on geothermal/AI PPAs; FLNC cut FY on factory delays. Residual only barely beats parent.
-  do_not: net ORA’s raise against FLNC’s cut into one XLU call
+  No SPX captain; ORA guidance/storage vs FLNC delivery slip—do not average geothermal into the battery OEM.
+  do_not: fold ORA into renewable DOWN or fade FLNC's backlog into a clean long
 
 ## PARENT SPLITS
-- **Basic Materials** long ['Coking Coal', 'Steel'] · avoid ['Gold'] — XLB -1.18% c2c; HCC Blue Creek + NUE WV EAF vs Sep 1 bullion dump in NEM
-- **Consumer Cyclical** long ['Auto Manufacturers', 'Specialty Retail', 'Textile Manufacturing'] · avoid ['Apparel Manufacturing', 'Luxury Goods'] — XLY -1.72% c2c; TSLA Cybercab 9/3, WSM raise, AIN CH-53K vs RL downgrade
-- **Energy** long ['Oil & Gas Equipment & Services'] · avoid ['Oil & Gas Integrated', 'Thermal Coal'] — XLE +1.27% oil bid; SLB Kelvion is data-center cooling, not drilling-cycle beta
-- **Financial** long [] · avoid ['Insurance Brokers'] — XLF -0.88%; AON $17B all-debt USI pauses buybacks — do not read brokers as one tape
-- **Consumer Defensive** long [] · avoid ['Beverages - Wineries & Distilleries'] — XLP +0.32% c2c; spirits residual is BF-B into a BMO print with no post-print fact
+- **Basic Materials** long ['Agricultural Inputs'] · avoid ['Gold', 'Copper', 'Other Precious Metals & Mining', 'Coking Coal'] — XLB bounce vs washed metals; CTVA/CF news OVERRIDE, miners/met-coal have no current fact
+- **Consumer Defensive** long ['Farm Products'] · avoid ['broad XLP / eggs'] — BG mill sale + DMC China JV; ADM Odesa hit and CALM silent — do not average into staples
+- **Energy** long ['Oil & Gas Refining & Marketing', 'Oil & Gas Integrated'] · avoid ['Oil & Gas Equipment & Services', 'Oil & Gas Drilling'] — CVX Venezuela + DEC Birch + MPC/VLO White House/cracks; SLB is Kelvion dump, NE/RIG have no Sep contracts
+- **Consumer Cyclical** long ['Textile Manufacturing'] · avoid ['Resorts & Casinos Macau', 'Travel Services small-cap'] — AIN kept SLC/CH-53K and doubled Q3 EPS inside textile DOWN; LVS silent, GBTG/LIND stale
 
 ## OPPORTUNITIES
-- **long hcc_coking_nested** [HCC] 1w: OVERRIDE vs XLB; Blue Creek adoption, FY26 sales 13.0-14.0 Mst; AMR is the cut, not the confirm
-- **long nue_steel_nested** [NUE] 1w: OVERRIDE vs XLB DOWN; first arc at $4B Apple Grove EAF, 2027 ramp — not mill-average NWPX
-- **long tsla_cybercab_nested** [TSLA] 1-2d: OVERRIDE vs XLY; Cybercab Austin 9/3 already bid 8/31 — GM/LCID/LVWR do not confirm
-- **long slb_kelvion_cooling** [SLB] 1w: SPLIT vs XLE oil; $3.4bn cash Kelvion is data-center cooling nested inside oilfield services
-- **long wsm_specialty_nested** [WSM] 1w: SPLIT vs XLY specialty residual; Q2 comps +6.2%, FY comps/OM raised, $200M tariff refunds
-- **long ain_ch53k_nested** [AIN] 1w: SPLIT vs textile residual -9.6 w1; keep SLC, amended CH-53K, Q3 adj EPS $1.40-$1.50
-- **long rrr_local_reopen** [RRR] 1w: Casinos SPLIT: GVR East Tower full reopen this month vs LVS/Macau Aug GGR -1.2% YoY
-- **short nem_gold_vs_xlb** [NEM] 1w: HEAT lag vs XLB; Sep 1 spot gold ~-$88 / -1.97% on hawkish Fed — SSRM/NG have no turn fact
-- **short aon_usi_leverage** [AON] 1w: Brokers SPLIT vs XLF; $17B all-debt USI, buybacks paused, accretion only 2028+
+- **long ag_inputs_nested** [CTVA,CF] 1w: OVERRIDE vs XLB; Vylor yield-trait roadmap + Blue Point blue ammonia
+- **long farm_products_nested** [BG,DMC] 1w: OVERRIDE vs XLP; COFCO mill sale + China fresh-cut JV, not ADM/CALM
+- **long cvx_venezuela** [CVX] 1w: >$7B/5yr Venezuela JV, ~600k bpd; do not average into XOM/XLE
+- **long dec_birch_permian** [DEC] 1w: $1.8B Birch PDP, +~35% prod / +~55% EBITDA; RUT name XLE misses
+- **long refiners_whitehouse** [MPC,VLO] 1w: HEAT high vs XLE/OFS; White House refiners session + Hormuz crack tape
+- **long ain_slc_split** [AIN] 1w: SPLIT vs XLY textiles DOWN; keep SLC, CH-53K amend, Q3 EPS guide doubled
 
 ## VETOES
-- XLK/SPX notable UP — Post-close XLK -1.53%; groups tech w1 is not a nested product and size_gate is not a morning call
-- AMR chase on w1 rip — FY met shipments cut to 13.2-14.0 Mt, cost guide up after DTA wind damage
-- XLY bounce / LCID / LVWR — Apparel RL downgrade confirms down residual; LCID/LVWR have no 9/1-9/2 fact; LVWR is sub-scale
-- NWPX as mill captain — Water-pipe backlog, not sheet-mill beta with NUE
-- Thermal coal CNR/BTU in XLE — HEAT vs oil with no Sep 1-2 captain print
-- BF-B into BMO — Q1 FY27 due Sep 2 open; no post-print fact at this stamp
-- BKNG/ABNB as XLY travel — OTA initiations vs residual -4.9 w1; do not promote a discretionary travel bounce
-- Overnight futures size — Calendar/futures refresh is pre-open, not this baseline
+- HCC/AMR OVERRIDE — w1 residual only; d1 red, breadth 0, no Sep 1–2 fact
+- gold/other-precious mean-reversion — NEM mixed on bullion fade; SSRM/NG/PPTA/ELE news-empty
+- FCX/IE copper bounce — HEAT down, breadth 0; EXIM/PFS not a today bid
+- SLB Kelvion as OFS/XLE heat — data-center cooling deal + SA Hold into d1/breadth break
+- NE/RIG driller heat — no September contract print; residual is tape
+- LVS/Macau into RRR/VAC — SPLIT: LVS price-only, local reopen/dividend is not the industry
+- ADM or CALM as farm long — Odesa terminal damage; eggs oversupply is July, not Sep 2
+- XLK/SPX notable UP — XLK close-to-close −0.02; not a nested product
 
 ## SYNTHESIS
-XLB’s -1.18% close hides two OVERRIDE longs XLB will average away: HCC on Blue Creek customer adoption and a 13.0–14.0 Mst FY26 sales raise, and NUE after the first arc at the $4B Apple Grove EAF, while Sep 1’s ~$88 gold dump leaves NEM as the nested short versus materials. XLY’s -1.72% close is not one consumer tape: TSLA is a Cybercab 9/3 OVERRIDE, WSM raised comps and operating-margin guides against a crushed CASY tape, and AIN kept Salt Lake on an amended CH-53K with Q3 adj EPS lifted to $1.40–$1.50; RL’s Aug 31 downgrade and Macau’s third down GGR month are the parts the ETF will mislabel. XLE’s +1.27% oil bid misreads SLB’s $3.4bn Kelvion purchase as drilling-cycle beta — it is data-center cooling nested inside oilfield services. AON’s $17B all-debt USI deal (buybacks paused, accretion 2028+) is the broker name XLF will smear across the group; RRR’s Green Valley Ranch East Tower reopen is the local offset to LVS/Macau, not a casino-complex long. Do not chase AMR or LCID, do not treat NWPX as mill beta, leave BF-B and thermal coal alone without a live print, and do not promote a broad SPX/XLK bounce off this close.
+XLB’s close-to-close bounce mislabels a washed metals complex: gold, copper and other-precious captains are news-empty and tape-red, while Agricultural Inputs is the nested OVERRIDE on CTVA’s Sep 1 Vylor yield/stability trait and CF’s Blue Point blue-ammonia build. XLP likewise hides Farm Products — BG selling two São Paulo mills to COFCO and DMC’s China fresh-cut JV — not CALM eggs or ADM after the Odesa drone hit. XLE is bid for barrels, not services: CVX locked >$7B Venezuela JVs toward ~600k bpd, DEC bought Birch Permian PDP, and MPC/VLO sat in the White House refiners session, but SLB Kelvion is a data-center deal dump and NE/RIG have no September backlog print. Versus XLY, AIN kept Salt Lake City, amended CH-53K, and doubled Q3 EPS guide inside textile DOWN; leave Macau LVS and news-empty HCC/AMR OVERRIDE on the veto list. This is the post-close nested map only — overnight futures and the pre-open calendar still gate size.
 
 CAPTAIN_CARDS_OK
 OPPORTUNITY_OK
