@@ -2,6 +2,15 @@
 
 Trades the mover lookback calls as a cash-accounted paper book.
 
+Sources (--source):
+  mover  = mover-lookback BUY/SELL calls, knowable at 09:30 ET (default)
+  book   = daily stock-book picks (data/stock_book/{date}_stock_book.json,
+           --book-list 1d|3d|1w|2w|1m). The book prints ~13:00-15:45 ET,
+           so book mode FORCES entry at the 16:00 ET close — a 09:30
+           entry would be a forward leak. Ranks by book score.
+Book mode writes its own outputs (data/book_paper/, BOOK_PAPER.md,
+BOOK_STRATEGY_SWEEP.md, dashboard/book-paper/) and never clobbers mover mode.
+
 Strategy levers (CLI):
   --side long|both        default long (SELL shorts optional)
   --entry open|close      default open  (09:30 ET vs 16:00 ET entry)
@@ -58,6 +67,8 @@ BORROW_MIN_PRICE = 5.0
 BORROW_ANNUAL = 0.01
 FEE_DRAG = 0.15  # % round-trip, sweep approximation
 
+TITLE = "Mover paper trading"
+
 
 # ------------------------------------------------------------ payload I/O --
 def load_payload(path: Path = PAYLOAD) -> dict:
@@ -87,12 +98,71 @@ def tradeable_calls(payload: dict, side: str) -> list[dict]:
     return rows
 
 
+# ------------------------------------------------------------ book source --
+BOOK_DIR = ROOT / "data" / "stock_book"
+BOOK_LISTS = ("1d", "3d", "1w", "2w", "1m")
+HOLD_SESSIONS = {"1d": 1, "3d": 3, "1w": 5}
+
+
+def _session_calendar(payload: dict) -> list[str]:
+    sd = sorted(payload.get("session_dates") or [])
+    if sd:
+        return sd
+    return sorted(p.name[:10]
+                  for p in BOOK_DIR.glob("????-??-??_stock_book.json"))
+
+
+def book_calls(payload: dict, book_list: str, side: str) -> list[dict]:
+    """Daily stock-book picks -> call rows for the sim.
+
+    LEAK RULE: the book prints ~13:00-15:45 ET on the signal day, so the
+    09:30 open of that day is NOT knowable. Book mode must run with
+    --entry close (enforced in main). Exit dates come from the session
+    calendar; prices from the shared OHLC store via _bar().
+    """
+    cal = _session_calendar(payload)
+    rows: list[dict] = []
+    for path in sorted(BOOK_DIR.glob("????-??-??_stock_book.json")):
+        date = path.name[:10]
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        book = ((doc.get("books") or {}).get(book_list)) or {}
+        if date in cal:
+            i = cal.index(date)
+            hz = {h: cal[i + n] for h, n in HOLD_SESSIONS.items()
+                  if i + n < len(cal)}
+        else:
+            hz = {}
+        for side_key, call in (("buy", "BUY"), ("sell", "SELL")):
+            if call == "SELL" and side != "both":
+                continue
+            for p in book.get(side_key) or []:
+                t = p.get("ticker")
+                if not t:
+                    continue
+                score = float(p.get("score") or 0)
+                rows.append({
+                    "date": date, "ticker": t, "action_call": call,
+                    "conviction": score, "_conv": score,
+                    "cond_tally": p.get("size") or "—",
+                    "action_reason": p.get("reasons"),
+                    "horizon_dates": dict(hz),
+                })
+    return rows
+
+
 # --------------------------------------------------------------- day gate --
-def gate_table(payload: dict, gate_score: float | None) -> list[dict]:
+def gate_table(payload: dict, gate_score: float | None,
+               dates: list[str] | None = None) -> list[dict]:
     """Per-session gate decision + advisory flags (news judge / events)."""
     regime = payload.get("regime") or {}
+    if dates is None:
+        dates = sorted(set([r.get("date")
+                            for r in payload.get("called_rows") or []]))
     table = []
-    for d in sorted(set([r.get("date") for r in payload.get("called_rows") or []])):
+    for d in sorted(dates):
         g = regime.get(d) or {}
         score, pdir = g.get("predict_score"), g.get("predict_dir")
         if gate_score is None:
@@ -163,6 +233,9 @@ RANKS = {
                         - ((r.get("condition") or {}).get("bad") or 0)),
     "conviction": lambda r: -(r.get("_conv") or 0),
     "dip": lambda r: (r.get("day_change") or 0),   # close-entry only
+    # stock-book score: best BUY first, best SELL (most negative) first
+    "book": lambda r: -(r.get("_conv") or 0)
+    * (1 if r.get("action_call") == "BUY" else -1),
 }
 
 
@@ -464,7 +537,104 @@ def run_sweep(payload: dict, gate_score: float | None) -> list[dict]:
     return results
 
 
+def _compound_trim(daily: list[tuple[str, list[float]]],
+                   min_days: int, min_trades: int):
+    """Shared anti-lottery scorer: raw vs trimmed compound (drop 2 best +
+    2 worst trades) over per-day mean returns."""
+    flat = [(d, v) for d, vs in daily for v in vs]
+    allr = [v for _, vs in daily for v in vs]
+    if len(daily) < min_days or len(allr) < min_trades:
+        return None
+
+    def compound(pairs):
+        dd = defaultdict(list)
+        for d, v in pairs:
+            dd[d].append(v)
+        eq = 1.0
+        for d in sorted(dd):
+            eq *= 1 + sum(dd[d]) / len(dd[d]) / 100
+        return (eq - 1) * 100
+
+    raw = compound(flat)
+    kept = sorted(flat, key=lambda x: x[1])
+    kept = kept[2:-2] if len(kept) > 8 else kept
+    trim = compound(kept)
+    hit = sum(1 for x in allr if x > 0) / len(allr)
+    return {"days": len(daily), "trades": len(allr),
+            "raw_pct": round(raw, 1), "trim_pct": round(trim, 1),
+            "hit": round(hit, 3)}
+
+
+def _book_row_ret(r: dict, hold: str):
+    """close(signal day) -> close(exit session), from the OHLC store."""
+    t = r.get("ticker") or ""
+    c0 = (_bar(t, r.get("date") or "") or {}).get("close")
+    if not c0:
+        return None
+    xd = (r.get("horizon_dates") or {}).get(hold)
+    if not xd:
+        return None
+    c1 = (_bar(t, xd) or {}).get("close")
+    if not c1:
+        return None
+    ret = (float(c1) - float(c0)) / float(c0) * 100
+    if r.get("action_call") == "SELL":
+        ret = -ret
+    return ret - FEE_DRAG
+
+
+def run_book_sweep(rows: list[dict], payload: dict,
+                   gate_score: float | None) -> list[dict]:
+    """Re-rank the book levers daily: top-N x hold x gate. Entry is always
+    the 16:00 ET close (the book is not knowable at 09:30)."""
+    regime = payload.get("regime") or {}
+
+    def gate_ok(d, gate):
+        if gate == "none":
+            return True
+        s = (regime.get(d) or {}).get("predict_score")
+        return s is None or s >= (gate_score if gate_score is not None else 1.0)
+
+    by_day: dict[str, list[dict]] = defaultdict(list)
+    for r in rows:
+        by_day[r["date"]].append(r)
+
+    results = []
+    for topn in (5, 10, 15):
+        for hold in ("1d", "3d", "1w"):
+            for gate in ("none", "score"):
+                daily = []
+                for d in sorted(by_day):
+                    if not gate_ok(d, gate):
+                        continue
+                    picked = sorted(by_day[d], key=RANKS["book"])[:topn]
+                    vs = [x for x in (_book_row_ret(r, hold)
+                                      for r in picked)
+                          if x is not None]
+                    if vs:
+                        daily.append((d, vs))
+                sc = _compound_trim(daily, min_days=3, min_trades=10)
+                if sc:
+                    results.append({"side": "long", "filter": "book",
+                                    "rank": "book", "topn": topn,
+                                    "entry": "close", "hold": hold,
+                                    "gate": gate, **sc})
+    results.sort(key=lambda x: -x["trim_pct"])
+    return results
+
+
 # ---------------------------------------------------------------- output --
+def _set_out_paths(source: str) -> None:
+    """Book mode writes to its own files so it never clobbers mover mode."""
+    global OUT_DIR, MD_OUT, SWEEP_MD, HTML_OUT, TITLE
+    if source == "book":
+        OUT_DIR = ROOT / "data" / "book_paper"
+        MD_OUT = ROOT / "03_scoreboard" / "BOOK_PAPER.md"
+        SWEEP_MD = ROOT / "03_scoreboard" / "BOOK_STRATEGY_SWEEP.md"
+        HTML_OUT = ROOT / "dashboard" / "book-paper" / "index.html"
+        TITLE = "Stock-book paper trading"
+
+
 def write_outputs(sim, st, gates, sweep, payload, gate_score) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     HTML_OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -502,8 +672,12 @@ def write_outputs(sim, st, gates, sweep, payload, gate_score) -> None:
 
 def _write_md(sim, st, gates, payload, gate_score) -> None:
     bs = st["by_side"]
+    src_note = ""
+    if sim.get("source") == "book":
+        src_note = (f" Selection: `{sim.get('book_list')}` stock-book buy "
+                    "list (prints ~13:00-15:45 ET, hence close entry).")
     L = [
-        "# Mover paper trading", "",
+        f"# {TITLE}", "",
         f"_Generated {datetime.now().isoformat(timespec='seconds')} — "
         f"calls {payload.get('from_date')} → {payload.get('to_date')}_", "",
         "**Strategy:** "
@@ -512,7 +686,7 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
         f"({'09:30 ET' if sim['entry'] == 'open' else '16:00 ET'}) · "
         f"hold {sim['hold']} (exit 16:00 ET) · {sim['pct']:.0%} of equity "
         f"per trade · Futubull fees · cash-accounted (unfittable trades "
-        "skipped and logged).",
+        f"skipped and logged).{src_note}",
         "",
         f"**Day gate:** trade only when the morning general predict score "
         f">= {gate_score if gate_score is not None else 'off'} "
@@ -549,16 +723,16 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
                  f"{t['shares']} | ${t['entry_px']:.2f} | {t.get('exit_dt')} | "
                  f"${t.get('exit_px') or 0:.2f} | ${t.get('pnl') or 0:,.2f} | "
                  f"{t.get('ret_pct') or 0}% | {t.get('cond_tally') or '—'} |")
-    L += ["", "Full records: `data/mover_paper/trades.csv` (every fill with "
-              "ET timestamps, prices, fees), `skipped.csv`, "
-              "`equity_curve.csv`. Lever sweep: `MOVER_STRATEGY_SWEEP.md`. "
-              "Dashboard: `dashboard/mover-paper/index.html`.", ""]
+    L += ["", f"Full records: `{OUT_DIR.relative_to(ROOT)}/trades.csv` "
+              "(every fill with ET timestamps, prices, fees), `skipped.csv`, "
+              f"`equity_curve.csv`. Lever sweep: `{SWEEP_MD.name}`. "
+              f"Dashboard: `{HTML_OUT.relative_to(ROOT)}`.", ""]
     MD_OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
 def _write_sweep_md(sweep: list[dict], gate_score) -> None:
     L = [
-        "# Mover strategy sweep (daily re-rank)", "",
+        f"# {TITLE} — strategy sweep (daily re-rank)", "",
         "Every lever combo re-scored on the latest payload. "
         "**Sorted by trimmed compound** — the 2 best and 2 worst trades are "
         "dropped before compounding, so one lottery winner cannot put a "
@@ -657,7 +831,7 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
     HTML_OUT.write_text(f"""<!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mover paper trading</title>
+<title>{TITLE}</title>
 <style>
 :root{{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}}
@@ -674,7 +848,7 @@ tbody th{{background:#17213a;text-align:left}}
 td.good{{color:#4ade80}}td.bad{{color:#f87171}}
 td.why{{text-align:left;white-space:normal;max-width:320px;font-size:12px}}
 </style></head><body><main>
-<h1>Mover paper trading</h1>
+<h1>{TITLE}</h1>
 <p class="muted">{'LONG-only' if sim['side'] == 'long' else 'LONG+SHORT'} ·
 top {sim['top_n']}/day by {sim['rank']} · entry {sim['entry']} ·
 hold {sim['hold']} · {sim['pct']:.0%} equity/trade · day gate: {gs} ·
@@ -718,33 +892,59 @@ Futubull fees · cash-accounted.</p>
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--payload", default=str(PAYLOAD))
+    ap.add_argument("--source", choices=["mover", "book"], default="mover",
+                    help="mover = lookback calls; book = daily stock-book "
+                         "picks (entry forced to 16:00 ET close)")
+    ap.add_argument("--book-list", choices=list(BOOK_LISTS), default="1d",
+                    help="which stock-book horizon list to follow")
     ap.add_argument("--capital", type=float, default=100_000.0)
     ap.add_argument("--top-n", type=int, default=10)
     ap.add_argument("--pct", type=float, default=0.10)
     ap.add_argument("--side", choices=["long", "both"], default="long")
-    ap.add_argument("--entry", choices=["open", "close"], default="open")
-    ap.add_argument("--hold", choices=["eod", "1d", "3d", "1w"], default="1d")
-    ap.add_argument("--rank", choices=["cond", "conviction", "dip"],
-                    default="cond")
+    ap.add_argument("--entry", choices=["open", "close"], default=None,
+                    help="default: open for mover, close for book (leak "
+                         "guard)")
+    ap.add_argument("--hold", choices=["eod", "1d", "3d", "1w"], default=None,
+                    help="default: 1d for mover, 1w for book (best "
+                         "cash-accounted sim)")
+    ap.add_argument("--rank", choices=["cond", "conviction", "dip", "book"],
+                    default=None)
     ap.add_argument("--gate-score", default="1.0",
                     help="'none' disables the day gate")
     args = ap.parse_args()
-    if args.rank == "dip" and args.entry != "close":
+    entry = args.entry or ("close" if args.source == "book" else "open")
+    hold = args.hold or ("1w" if args.source == "book" else "1d")
+    rank = args.rank or ("book" if args.source == "book" else "cond")
+    if rank == "dip" and entry != "close":
         raise SystemExit("[mover-paper] dip rank needs the 16:00 print — "
                          "use --entry close (leak guard)")
+    if args.source == "book" and entry != "close":
+        raise SystemExit("[mover-paper] the stock book prints ~13:00-15:45 "
+                         "ET — a 09:30 entry would be a forward leak. "
+                         "Use --entry close.")
     gate_score = None if args.gate_score == "none" else float(args.gate_score)
     payload = load_payload(Path(args.payload))
-    calls = tradeable_calls(payload, args.side)
-    gates = gate_table(payload, gate_score)
-    print(f"[mover-paper] {len(calls)} calls · side={args.side} "
-          f"entry={args.entry} hold={args.hold} rank={args.rank} "
-          f"gate={gate_score} · "
+    _set_out_paths(args.source)
+    if args.source == "book":
+        calls = book_calls(payload, args.book_list, args.side)
+        gates = gate_table(payload, gate_score,
+                           dates=sorted(set(r["date"] for r in calls)))
+        sweep_fn = lambda: run_book_sweep(calls, payload, gate_score)
+    else:
+        calls = tradeable_calls(payload, args.side)
+        gates = gate_table(payload, gate_score)
+        sweep_fn = lambda: run_sweep(payload, gate_score)
+    print(f"[mover-paper] source={args.source} · {len(calls)} calls · "
+          f"side={args.side} entry={entry} hold={hold} "
+          f"rank={rank} gate={gate_score} · "
           f"{sum(1 for g in gates if g['decision'] == 'OPEN')}/{len(gates)} days open")
     sim = run_sim(calls, gates, capital=args.capital, top_n=args.top_n,
-                  pct=args.pct, side=args.side, entry=args.entry,
-                  hold=args.hold, rank=args.rank)
+                  pct=args.pct, side=args.side, entry=entry,
+                  hold=hold, rank=rank)
+    sim["source"] = args.source
+    sim["book_list"] = args.book_list
     st = stats(sim)
-    sweep = run_sweep(payload, gate_score)
+    sweep = sweep_fn()
     write_outputs(sim, st, gates, sweep, payload, gate_score)
     print(f"[mover-paper] {st['n_trades']} trades, {st['n_skipped']} skipped, "
           f"equity ${st['final_equity']:,.0f} ({st['total_ret_pct']}%), "
