@@ -1,6 +1,6 @@
 # Mover lookback action
 
-_Generated 2026-09-03T05:31:42.875302-04:00_
+_Generated 2026-09-03T06:36:18.084503-04:00_
 
 Universe: names knowable at **09:30 ET** — last completed Finviz tape with mcap > $100M, ADV > 500K, ATR% ≥ 2.5. **2026-08-13** → **2026-09-03**. 33928 mover-days · 2302 names · 16 sessions.
 

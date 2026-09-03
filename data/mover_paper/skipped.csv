@@ -233,282 +233,284 @@ date,ticker,side,conviction,reason
 2026-08-19,ZENA,BUY,1.706,day gate CLOSED: predict DOWN score -7.20 < +1.00
 2026-08-19,ZIM,BUY,1.906,day gate CLOSED: predict DOWN score -7.20 < +1.00
 2026-08-19,ZLAB,BUY,1.506,day gate CLOSED: predict DOWN score -7.20 < +1.00
-2026-08-20,APA,BUY,3.963,outside top-N conviction cut
-2026-08-20,AQST,BUY,3.963,outside top-N conviction cut
-2026-08-20,AUTL,BUY,3.963,outside top-N conviction cut
-2026-08-20,AYA,BUY,3.963,outside top-N conviction cut
-2026-08-20,CABA,BUY,3.963,outside top-N conviction cut
-2026-08-20,CRDL,BUY,3.963,outside top-N conviction cut
-2026-08-20,CRSP,BUY,3.963,outside top-N conviction cut
-2026-08-20,CYPH,BUY,3.963,outside top-N conviction cut
-2026-08-20,DUOT,BUY,3.963,outside top-N conviction cut
-2026-08-20,EDIT,BUY,3.963,outside top-N conviction cut
-2026-08-20,FDMT,BUY,3.963,outside top-N conviction cut
-2026-08-20,HITI,BUY,3.963,outside top-N conviction cut
-2026-08-20,INO,BUY,3.963,outside top-N conviction cut
-2026-08-20,IOVA,BUY,3.963,outside top-N conviction cut
-2026-08-20,KURA,BUY,3.963,outside top-N conviction cut
-2026-08-20,MRK,BUY,3.963,outside top-N conviction cut
-2026-08-20,MRVI,BUY,3.963,outside top-N conviction cut
-2026-08-20,MRVL,BUY,3.963,outside top-N conviction cut
-2026-08-20,NUVB,BUY,3.963,outside top-N conviction cut
-2026-08-20,OABI,BUY,3.963,outside top-N conviction cut
-2026-08-20,OMER,BUY,3.963,outside top-N conviction cut
-2026-08-20,PRME,BUY,3.963,outside top-N conviction cut
-2026-08-20,RGEN,BUY,3.963,outside top-N conviction cut
-2026-08-20,SANA,BUY,3.963,outside top-N conviction cut
-2026-08-20,SCZM,BUY,3.963,outside top-N conviction cut
-2026-08-20,SGMT,BUY,3.963,outside top-N conviction cut
-2026-08-20,TEM,BUY,3.963,outside top-N conviction cut
-2026-08-20,TNXP,BUY,3.963,outside top-N conviction cut
-2026-08-20,XNCR,BUY,3.963,outside top-N conviction cut
-2026-08-20,AMLX,BUY,3.763,outside top-N conviction cut
-2026-08-20,ASM,BUY,3.763,outside top-N conviction cut
-2026-08-20,BMNR,BUY,3.763,outside top-N conviction cut
-2026-08-20,CAI,BUY,3.763,outside top-N conviction cut
-2026-08-20,CGAU,BUY,3.763,outside top-N conviction cut
-2026-08-20,CHRS,BUY,3.763,outside top-N conviction cut
-2026-08-20,CRCL,BUY,3.763,outside top-N conviction cut
-2026-08-20,DEFT,BUY,3.763,outside top-N conviction cut
-2026-08-20,DUOL,BUY,3.763,outside top-N conviction cut
-2026-08-20,EBS,BUY,3.763,outside top-N conviction cut
-2026-08-20,EGO,BUY,3.763,outside top-N conviction cut
-2026-08-20,EL,BUY,3.763,outside top-N conviction cut
-2026-08-20,ETOR,BUY,3.763,outside top-N conviction cut
-2026-08-20,EXK,BUY,3.763,outside top-N conviction cut
-2026-08-20,GAU,BUY,3.763,outside top-N conviction cut
-2026-08-20,GENB,BUY,3.763,outside top-N conviction cut
-2026-08-20,GROY,BUY,3.763,outside top-N conviction cut
-2026-08-20,HMY,BUY,3.763,outside top-N conviction cut
-2026-08-20,HTFL,BUY,3.763,outside top-N conviction cut
-2026-08-20,HYMC,BUY,3.763,outside top-N conviction cut
-2026-08-20,KLAR,BUY,3.763,outside top-N conviction cut
-2026-08-20,NOMD,BUY,3.763,outside top-N conviction cut
-2026-08-20,PAAS,BUY,3.763,outside top-N conviction cut
-2026-08-20,PSNL,BUY,3.763,outside top-N conviction cut
-2026-08-20,PURR,BUY,3.763,outside top-N conviction cut
-2026-08-20,SA,BUY,3.763,outside top-N conviction cut
-2026-08-20,SENS,BUY,3.763,outside top-N conviction cut
-2026-08-20,SMG,BUY,3.763,outside top-N conviction cut
-2026-08-20,TCPC,BUY,3.763,outside top-N conviction cut
-2026-08-20,TGT,BUY,3.763,outside top-N conviction cut
-2026-08-20,THM,BUY,3.763,outside top-N conviction cut
-2026-08-20,UGI,BUY,3.763,outside top-N conviction cut
-2026-08-20,VET,BUY,3.763,outside top-N conviction cut
-2026-08-20,VFF,BUY,3.763,outside top-N conviction cut
-2026-08-20,AKBA,BUY,3.563,outside top-N conviction cut
-2026-08-20,ALT,BUY,3.563,outside top-N conviction cut
-2026-08-20,AXTI,BUY,3.563,outside top-N conviction cut
-2026-08-20,B,BUY,3.563,outside top-N conviction cut
-2026-08-20,BLND,BUY,3.563,outside top-N conviction cut
-2026-08-20,BTDR,BUY,3.563,outside top-N conviction cut
-2026-08-20,DFDV,BUY,3.563,outside top-N conviction cut
-2026-08-20,DNUT,BUY,3.563,outside top-N conviction cut
-2026-08-20,FBRT,BUY,3.563,outside top-N conviction cut
-2026-08-20,GDRX,BUY,3.563,outside top-N conviction cut
-2026-08-20,INDI,BUY,3.563,outside top-N conviction cut
-2026-08-20,KC,BUY,3.563,outside top-N conviction cut
-2026-08-20,LLY,BUY,3.563,outside top-N conviction cut
-2026-08-20,MRNA,BUY,3.563,outside top-N conviction cut
-2026-08-20,NVO,BUY,3.563,outside top-N conviction cut
-2026-08-20,PPC,BUY,3.563,outside top-N conviction cut
-2026-08-20,QFIN,BUY,3.563,outside top-N conviction cut
-2026-08-20,QMCO,BUY,3.563,outside top-N conviction cut
-2026-08-20,SDGR,BUY,3.563,outside top-N conviction cut
-2026-08-20,SNDK,BUY,3.563,outside top-N conviction cut
-2026-08-20,SRPT,BUY,3.563,outside top-N conviction cut
-2026-08-20,VIST,BUY,3.563,outside top-N conviction cut
-2026-08-20,ZLAB,BUY,3.563,outside top-N conviction cut
-2026-08-20,AS,BUY,3.363,outside top-N conviction cut
-2026-08-20,AVGO,BUY,3.363,outside top-N conviction cut
-2026-08-20,BROS,BUY,3.363,outside top-N conviction cut
-2026-08-20,BULL,BUY,3.363,outside top-N conviction cut
-2026-08-20,BYND,BUY,3.363,outside top-N conviction cut
-2026-08-20,CSAN,BUY,3.363,outside top-N conviction cut
-2026-08-20,CURI,BUY,3.363,outside top-N conviction cut
-2026-08-20,DEC,BUY,3.363,outside top-N conviction cut
-2026-08-20,EYPT,BUY,3.363,outside top-N conviction cut
-2026-08-20,FWDI,BUY,3.363,outside top-N conviction cut
-2026-08-20,GTE,BUY,3.363,outside top-N conviction cut
-2026-08-20,HTHT,BUY,3.363,outside top-N conviction cut
-2026-08-20,KEYS,BUY,3.363,outside top-N conviction cut
-2026-08-20,KLRA,BUY,3.363,outside top-N conviction cut
-2026-08-20,NBIS,BUY,3.363,outside top-N conviction cut
-2026-08-20,NCMI,BUY,3.363,outside top-N conviction cut
-2026-08-20,OCTV,BUY,3.363,outside top-N conviction cut
-2026-08-20,SVV,BUY,3.363,outside top-N conviction cut
-2026-08-20,TLRY,BUY,2.338,outside top-N conviction cut
-2026-08-20,ANGX,BUY,3.163,outside top-N conviction cut
-2026-08-20,BLZE,BUY,3.163,outside top-N conviction cut
-2026-08-20,BNTX,BUY,2.138,outside top-N conviction cut
-2026-08-20,BTGO,BUY,2.138,outside top-N conviction cut
-2026-08-20,CAPR,BUY,2.138,outside top-N conviction cut
-2026-08-20,CBRS,BUY,2.138,outside top-N conviction cut
-2026-08-20,CHA,BUY,3.163,outside top-N conviction cut
-2026-08-20,COIN,BUY,2.138,outside top-N conviction cut
-2026-08-20,DLO,BUY,3.163,outside top-N conviction cut
-2026-08-20,DNA,BUY,2.138,outside top-N conviction cut
-2026-08-20,DVLT,BUY,2.138,outside top-N conviction cut
-2026-08-20,FN,BUY,3.163,outside top-N conviction cut
-2026-08-20,MAIR,BUY,3.163,outside top-N conviction cut
-2026-08-20,MSTR,BUY,2.138,outside top-N conviction cut
-2026-08-20,NVAX,BUY,3.163,outside top-N conviction cut
-2026-08-20,RSKD,BUY,3.163,outside top-N conviction cut
-2026-08-20,SECZ,BUY,2.138,outside top-N conviction cut
-2026-08-20,SMJF,BUY,3.163,outside top-N conviction cut
-2026-08-20,TRON,BUY,2.138,outside top-N conviction cut
-2026-08-20,VICR,BUY,3.163,outside top-N conviction cut
-2026-08-20,YMM,BUY,3.163,outside top-N conviction cut
-2026-08-20,ZIM,BUY,3.163,outside top-N conviction cut
-2026-08-20,ZTO,BUY,3.163,outside top-N conviction cut
-2026-08-20,ABR,BUY,2.963,outside top-N conviction cut
-2026-08-20,AZI,BUY,1.938,outside top-N conviction cut
-2026-08-20,BLSH,BUY,1.938,outside top-N conviction cut
-2026-08-20,BRUN,BUY,1.938,outside top-N conviction cut
-2026-08-20,EROC,BUY,1.938,outside top-N conviction cut
-2026-08-20,GEMI,BUY,1.938,outside top-N conviction cut
-2026-08-20,JELD,BUY,1.938,outside top-N conviction cut
-2026-08-20,KEEL,BUY,1.938,outside top-N conviction cut
-2026-08-20,MNSO,BUY,2.963,outside top-N conviction cut
-2026-08-20,RELX,BUY,2.963,outside top-N conviction cut
-2026-08-20,VIK,BUY,2.963,outside top-N conviction cut
-2026-08-20,WYFI,BUY,1.938,outside top-N conviction cut
-2026-08-20,YSS,BUY,1.938,outside top-N conviction cut
-2026-08-20,AEHR,BUY,1.738,outside top-N conviction cut
-2026-08-20,ALH,BUY,1.738,outside top-N conviction cut
-2026-08-20,BTBT,BUY,1.738,outside top-N conviction cut
-2026-08-20,CIFR,BUY,1.738,outside top-N conviction cut
-2026-08-20,CRNC,BUY,1.738,outside top-N conviction cut
-2026-08-20,EVTL,BUY,1.738,outside top-N conviction cut
-2026-08-20,LOW,BUY,2.763,outside top-N conviction cut
-2026-08-20,MIST,BUY,1.738,outside top-N conviction cut
-2026-08-20,RIOT,BUY,1.738,outside top-N conviction cut
-2026-08-20,SAFX,BUY,1.738,outside top-N conviction cut
-2026-08-20,STLA,BUY,1.738,outside top-N conviction cut
-2026-08-20,STOK,BUY,1.738,outside top-N conviction cut
-2026-08-20,TLN,BUY,1.738,outside top-N conviction cut
-2026-08-20,TOYO,BUY,1.738,outside top-N conviction cut
-2026-08-20,VPG,BUY,1.738,outside top-N conviction cut
-2026-08-20,BIDU,BUY,1.538,outside top-N conviction cut
-2026-08-20,CCOI,BUY,1.538,outside top-N conviction cut
-2026-08-20,ENVX,BUY,1.538,outside top-N conviction cut
-2026-08-20,HUYA,BUY,1.538,outside top-N conviction cut
-2026-08-20,IQ,BUY,1.538,outside top-N conviction cut
-2026-08-20,LZB,BUY,1.538,outside top-N conviction cut
-2026-08-20,MRCY,BUY,1.538,outside top-N conviction cut
-2026-08-20,ORBS,BUY,1.538,outside top-N conviction cut
-2026-08-20,RTO,BUY,1.538,outside top-N conviction cut
-2026-08-20,RYAAY,BUY,1.538,outside top-N conviction cut
-2026-08-21,GRAL,BUY,4.163,outside top-N conviction cut
-2026-08-21,HITI,BUY,4.163,outside top-N conviction cut
-2026-08-21,ILMN,BUY,4.163,outside top-N conviction cut
-2026-08-21,INDP,BUY,4.163,outside top-N conviction cut
-2026-08-21,INO,BUY,4.163,outside top-N conviction cut
-2026-08-21,IOVA,BUY,4.163,outside top-N conviction cut
-2026-08-21,ITUB,BUY,4.163,outside top-N conviction cut
-2026-08-21,MRNA,BUY,4.163,outside top-N conviction cut
-2026-08-21,MRVI,BUY,4.163,outside top-N conviction cut
-2026-08-21,MT,BUY,4.163,outside top-N conviction cut
-2026-08-21,MTA,BUY,4.163,outside top-N conviction cut
-2026-08-21,OABI,BUY,4.163,outside top-N conviction cut
-2026-08-21,PRQR,BUY,4.163,outside top-N conviction cut
-2026-08-21,PSNL,BUY,4.163,outside top-N conviction cut
-2026-08-21,SUZ,BUY,4.163,outside top-N conviction cut
-2026-08-21,TEM,BUY,4.163,outside top-N conviction cut
-2026-08-21,TIGR,BUY,4.163,outside top-N conviction cut
-2026-08-21,TWST,BUY,4.163,outside top-N conviction cut
-2026-08-21,VALE,BUY,4.163,outside top-N conviction cut
-2026-08-21,VIRT,BUY,4.163,outside top-N conviction cut
-2026-08-21,AYA,BUY,3.963,outside top-N conviction cut
-2026-08-21,BBNX,BUY,3.963,outside top-N conviction cut
-2026-08-21,CAI,BUY,3.963,outside top-N conviction cut
-2026-08-21,CRCL,BUY,3.963,outside top-N conviction cut
-2026-08-21,DFDV,BUY,3.963,outside top-N conviction cut
-2026-08-21,KLAR,BUY,3.963,outside top-N conviction cut
-2026-08-21,LIFE,BUY,3.963,outside top-N conviction cut
-2026-08-21,PCG,BUY,3.963,outside top-N conviction cut
-2026-08-21,RCUS,BUY,3.963,outside top-N conviction cut
-2026-08-21,SCZM,BUY,3.963,outside top-N conviction cut
-2026-08-21,AKBA,BUY,3.763,outside top-N conviction cut
-2026-08-21,APO,BUY,3.763,outside top-N conviction cut
-2026-08-21,ASM,BUY,3.763,outside top-N conviction cut
-2026-08-21,AXTA,BUY,3.763,outside top-N conviction cut
-2026-08-21,BHVN,BUY,3.763,outside top-N conviction cut
-2026-08-21,EXK,BUY,3.763,outside top-N conviction cut
-2026-08-21,EYPT,BUY,3.763,outside top-N conviction cut
-2026-08-21,GROY,BUY,3.763,outside top-N conviction cut
-2026-08-21,MWH,BUY,3.763,outside top-N conviction cut
-2026-08-21,NVAX,BUY,3.763,outside top-N conviction cut
-2026-08-21,PZG,BUY,3.763,outside top-N conviction cut
-2026-08-21,QFIN,BUY,3.763,outside top-N conviction cut
-2026-08-21,RARE,BUY,3.763,outside top-N conviction cut
-2026-08-21,STLD,BUY,3.763,outside top-N conviction cut
-2026-08-21,UPST,BUY,3.763,outside top-N conviction cut
-2026-08-21,VIST,BUY,3.763,outside top-N conviction cut
-2026-08-21,ZNTL,BUY,3.763,outside top-N conviction cut
-2026-08-21,B,BUY,3.563,outside top-N conviction cut
-2026-08-21,BTDR,BUY,3.563,outside top-N conviction cut
-2026-08-21,DE,BUY,3.563,outside top-N conviction cut
-2026-08-21,G,BUY,3.563,outside top-N conviction cut
-2026-08-21,KC,BUY,3.563,outside top-N conviction cut
-2026-08-21,NTES,BUY,3.563,outside top-N conviction cut
-2026-08-21,PBR,BUY,3.563,outside top-N conviction cut
-2026-08-21,YMM,BUY,3.563,outside top-N conviction cut
-2026-08-21,AS,BUY,3.363,outside top-N conviction cut
-2026-08-21,ATAT,BUY,3.363,outside top-N conviction cut
-2026-08-21,BULL,BUY,3.363,outside top-N conviction cut
-2026-08-21,CNH,BUY,3.363,outside top-N conviction cut
-2026-08-21,DSX,BUY,3.363,outside top-N conviction cut
-2026-08-21,HSAI,BUY,3.363,outside top-N conviction cut
-2026-08-21,NBIS,BUY,3.363,outside top-N conviction cut
-2026-08-21,OCTV,BUY,3.363,outside top-N conviction cut
-2026-08-21,ALH,BUY,3.163,outside top-N conviction cut
-2026-08-21,BABA,BUY,3.163,outside top-N conviction cut
-2026-08-21,BILL,BUY,3.163,outside top-N conviction cut
-2026-08-21,BKKT,BUY,3.163,outside top-N conviction cut
-2026-08-21,BLZE,BUY,3.163,outside top-N conviction cut
-2026-08-21,CAN,BUY,2.138,outside top-N conviction cut
-2026-08-21,CMRC,BUY,2.138,outside top-N conviction cut
-2026-08-21,COTY,BUY,3.163,outside top-N conviction cut
-2026-08-21,DQ,BUY,2.138,outside top-N conviction cut
-2026-08-21,MAIR,BUY,3.163,outside top-N conviction cut
-2026-08-21,MFP,BUY,3.163,outside top-N conviction cut
-2026-08-21,MSTR,BUY,2.138,outside top-N conviction cut
-2026-08-21,TRON,BUY,2.138,outside top-N conviction cut
-2026-08-21,WMT,BUY,3.163,outside top-N conviction cut
-2026-08-21,ABEV,BUY,2.963,outside top-N conviction cut
-2026-08-21,AMRC,BUY,2.963,outside top-N conviction cut
-2026-08-21,DKS,BUY,2.963,outside top-N conviction cut
-2026-08-21,FWDI,BUY,1.938,outside top-N conviction cut
-2026-08-21,PONY,BUY,1.938,outside top-N conviction cut
-2026-08-21,RERE,BUY,2.963,outside top-N conviction cut
-2026-08-21,RYAAY,BUY,1.938,outside top-N conviction cut
-2026-08-21,SECZ,BUY,1.938,outside top-N conviction cut
-2026-08-21,SMJF,BUY,1.938,outside top-N conviction cut
-2026-08-21,SUPV,BUY,1.938,outside top-N conviction cut
-2026-08-21,VIK,BUY,2.963,outside top-N conviction cut
-2026-08-21,WYFI,BUY,1.938,outside top-N conviction cut
-2026-08-21,AGRO,BUY,1.738,outside top-N conviction cut
-2026-08-21,BILI,BUY,2.763,outside top-N conviction cut
-2026-08-21,CNDT,BUY,1.738,outside top-N conviction cut
-2026-08-21,DVLT,BUY,1.738,outside top-N conviction cut
-2026-08-21,SBS,BUY,1.738,outside top-N conviction cut
-2026-08-21,SNDL,BUY,1.738,outside top-N conviction cut
-2026-08-21,TJX,BUY,1.738,outside top-N conviction cut
-2026-08-21,TOYO,BUY,1.738,outside top-N conviction cut
-2026-08-21,WOLF,BUY,1.738,outside top-N conviction cut
-2026-08-21,YSS,BUY,1.738,outside top-N conviction cut
-2026-08-21,AAP,BUY,1.538,outside top-N conviction cut
-2026-08-21,CPRI,BUY,1.538,outside top-N conviction cut
-2026-08-21,ENHA,BUY,1.538,outside top-N conviction cut
-2026-08-21,EOSE,BUY,1.538,outside top-N conviction cut
-2026-08-21,SES,BUY,1.538,outside top-N conviction cut
-2026-08-21,STLA,BUY,1.538,outside top-N conviction cut
-2026-08-21,XXI,BUY,1.538,outside top-N conviction cut
-2026-08-21,BIDU,BUY,1.338,outside top-N conviction cut
-2026-08-21,GOGO,BUY,1.338,outside top-N conviction cut
-2026-08-21,HUYA,BUY,1.338,outside top-N conviction cut
-2026-08-21,IQ,BUY,1.338,outside top-N conviction cut
+2026-08-20,AEM,BUY,3.963,"insufficient cash ($10,020 > $9,310)"
+2026-08-20,APA,BUY,3.963,"insufficient cash ($10,208 > $9,310)"
+2026-08-20,AQST,BUY,3.963,"insufficient cash ($10,249 > $9,310)"
+2026-08-20,AUTL,BUY,3.963,"insufficient cash ($10,274 > $9,310)"
+2026-08-20,AYA,BUY,3.963,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,CABA,BUY,3.963,"insufficient cash ($10,264 > $9,310)"
+2026-08-20,CRDL,BUY,3.963,"insufficient cash ($10,289 > $9,310)"
+2026-08-20,CRSP,BUY,3.963,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,CYPH,BUY,3.963,"insufficient cash ($10,336 > $9,310)"
+2026-08-20,DUOT,BUY,3.963,"insufficient cash ($10,232 > $9,310)"
+2026-08-20,EDIT,BUY,3.963,"insufficient cash ($10,262 > $9,310)"
+2026-08-20,FDMT,BUY,3.963,"insufficient cash ($10,221 > $9,310)"
+2026-08-20,HITI,BUY,3.963,"insufficient cash ($10,275 > $9,310)"
+2026-08-20,INO,BUY,3.963,"insufficient cash ($10,323 > $9,310)"
+2026-08-20,IOVA,BUY,3.963,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,KURA,BUY,3.963,"insufficient cash ($10,232 > $9,310)"
+2026-08-20,MRK,BUY,3.963,"insufficient cash ($10,104 > $9,310)"
+2026-08-20,MRVI,BUY,3.963,"insufficient cash ($10,239 > $9,310)"
+2026-08-20,MRVL,BUY,3.963,"insufficient cash ($10,218 > $9,310)"
+2026-08-20,NUVB,BUY,3.963,"insufficient cash ($10,237 > $9,310)"
+2026-08-20,OABI,BUY,3.963,"insufficient cash ($10,250 > $9,310)"
+2026-08-20,OMER,BUY,3.963,"insufficient cash ($10,219 > $9,310)"
+2026-08-20,PRME,BUY,3.963,"insufficient cash ($10,260 > $9,310)"
+2026-08-20,RGEN,BUY,3.963,"insufficient cash ($10,130 > $9,310)"
+2026-08-20,SANA,BUY,3.963,"insufficient cash ($10,251 > $9,310)"
+2026-08-20,SCZM,BUY,3.963,"insufficient cash ($10,231 > $9,310)"
+2026-08-20,SGMT,BUY,3.963,"insufficient cash ($10,231 > $9,310)"
+2026-08-20,TEM,BUY,3.963,"insufficient cash ($10,204 > $9,310)"
+2026-08-20,TNXP,BUY,3.963,"insufficient cash ($10,227 > $9,310)"
+2026-08-20,XNCR,BUY,3.963,"insufficient cash ($10,215 > $9,310)"
+2026-08-20,AMLX,BUY,3.763,"insufficient cash ($10,201 > $9,310)"
+2026-08-20,ASM,BUY,3.763,"insufficient cash ($10,237 > $9,310)"
+2026-08-20,BMNR,BUY,3.763,"insufficient cash ($10,221 > $9,310)"
+2026-08-20,CAI,BUY,3.763,"insufficient cash ($10,217 > $9,310)"
+2026-08-20,CGAU,BUY,3.763,"insufficient cash ($10,221 > $9,310)"
+2026-08-20,CHRS,BUY,3.763,"insufficient cash ($10,323 > $9,310)"
+2026-08-20,CRCL,BUY,3.763,"insufficient cash ($10,164 > $9,310)"
+2026-08-20,DEFT,BUY,3.763,"insufficient cash ($10,386 > $9,310)"
+2026-08-20,DUOL,BUY,3.763,"insufficient cash ($10,159 > $9,310)"
+2026-08-20,EBS,BUY,3.763,"insufficient cash ($10,246 > $9,310)"
+2026-08-20,EGO,BUY,3.763,"insufficient cash ($10,224 > $9,310)"
+2026-08-20,EL,BUY,3.763,"insufficient cash ($10,135 > $9,310)"
+2026-08-20,ETOR,BUY,3.763,"insufficient cash ($10,215 > $9,310)"
+2026-08-20,EXK,BUY,3.763,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,GAU,BUY,3.763,"insufficient cash ($10,281 > $9,310)"
+2026-08-20,GENB,BUY,3.763,"insufficient cash ($10,215 > $9,310)"
+2026-08-20,GROY,BUY,3.763,"insufficient cash ($10,259 > $9,310)"
+2026-08-20,HMY,BUY,3.763,"insufficient cash ($10,211 > $9,310)"
+2026-08-20,HTFL,BUY,3.763,"insufficient cash ($10,193 > $9,310)"
+2026-08-20,HYMC,BUY,3.763,"insufficient cash ($10,224 > $9,310)"
+2026-08-20,KLAR,BUY,3.763,"insufficient cash ($10,221 > $9,310)"
+2026-08-20,NOMD,BUY,3.763,"insufficient cash ($10,229 > $9,310)"
+2026-08-20,PAAS,BUY,3.763,"insufficient cash ($10,217 > $9,310)"
+2026-08-20,PSNL,BUY,3.763,"insufficient cash ($10,223 > $9,310)"
+2026-08-20,PURR,BUY,3.763,"insufficient cash ($10,232 > $9,310)"
+2026-08-20,SA,BUY,3.763,"insufficient cash ($10,201 > $9,310)"
+2026-08-20,SENS,BUY,3.763,"insufficient cash ($10,235 > $9,310)"
+2026-08-20,SMG,BUY,3.763,"insufficient cash ($10,176 > $9,310)"
+2026-08-20,TCPC,BUY,3.763,"insufficient cash ($10,253 > $9,310)"
+2026-08-20,TGT,BUY,3.763,"insufficient cash ($10,207 > $9,310)"
+2026-08-20,THM,BUY,3.763,"insufficient cash ($10,267 > $9,310)"
+2026-08-20,UGI,BUY,3.763,"insufficient cash ($10,220 > $9,310)"
+2026-08-20,VET,BUY,3.763,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,VFF,BUY,3.763,"insufficient cash ($10,271 > $9,310)"
+2026-08-20,AKBA,BUY,3.563,"insufficient cash ($10,359 > $9,310)"
+2026-08-20,ALT,BUY,3.563,"insufficient cash ($10,263 > $9,310)"
+2026-08-20,AXTI,BUY,3.563,"insufficient cash ($10,155 > $9,310)"
+2026-08-20,B,BUY,3.563,"insufficient cash ($10,184 > $9,310)"
+2026-08-20,BLND,BUY,3.563,"insufficient cash ($10,307 > $9,310)"
+2026-08-20,BTDR,BUY,3.563,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,DFDV,BUY,3.563,"insufficient cash ($10,257 > $9,310)"
+2026-08-20,DNUT,BUY,3.563,"insufficient cash ($10,257 > $9,310)"
+2026-08-20,FBRT,BUY,3.563,"insufficient cash ($10,230 > $9,310)"
+2026-08-20,GDRX,BUY,3.563,"insufficient cash ($10,256 > $9,310)"
+2026-08-20,INDI,BUY,3.563,"insufficient cash ($10,256 > $9,310)"
+2026-08-20,KC,BUY,3.563,"insufficient cash ($10,230 > $9,310)"
+2026-08-20,LLY,BUY,3.563,"insufficient cash ($10,195 > $9,310)"
+2026-08-20,MRNA,BUY,3.563,"insufficient cash ($10,212 > $9,310)"
+2026-08-20,NVO,BUY,3.563,"insufficient cash ($10,225 > $9,310)"
+2026-08-20,PPC,BUY,3.563,"insufficient cash ($10,211 > $9,310)"
+2026-08-20,QFIN,BUY,3.563,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,QMCO,BUY,3.563,"insufficient cash ($10,228 > $9,310)"
+2026-08-20,SDGR,BUY,3.563,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,SNDK,BUY,3.563,"insufficient cash ($9,416 > $9,310)"
+2026-08-20,SRPT,BUY,3.563,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,VIST,BUY,3.563,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,ZLAB,BUY,3.563,"insufficient cash ($10,208 > $9,310)"
+2026-08-20,AS,BUY,3.363,"insufficient cash ($10,200 > $9,310)"
+2026-08-20,AVGO,BUY,3.363,"insufficient cash ($10,205 > $9,310)"
+2026-08-20,BROS,BUY,3.363,"insufficient cash ($10,193 > $9,310)"
+2026-08-20,BULL,BUY,3.363,"insufficient cash ($10,232 > $9,310)"
+2026-08-20,BYND,BUY,3.363,"insufficient cash ($10,223 > $9,310)"
+2026-08-20,CSAN,BUY,3.363,"insufficient cash ($10,272 > $9,310)"
+2026-08-20,CURI,BUY,3.363,"insufficient cash ($10,264 > $9,310)"
+2026-08-20,DEC,BUY,3.363,"insufficient cash ($10,222 > $9,310)"
+2026-08-20,EYPT,BUY,3.363,"insufficient cash ($10,243 > $9,310)"
+2026-08-20,FWDI,BUY,3.363,"insufficient cash ($10,247 > $9,310)"
+2026-08-20,GTE,BUY,3.363,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,HTHT,BUY,3.363,"insufficient cash ($10,213 > $9,310)"
+2026-08-20,KEYS,BUY,3.363,"insufficient cash ($10,071 > $9,310)"
+2026-08-20,KLRA,BUY,3.363,"insufficient cash ($10,217 > $9,310)"
+2026-08-20,NBIS,BUY,3.363,"insufficient cash ($10,037 > $9,310)"
+2026-08-20,NCMI,BUY,3.363,"insufficient cash ($10,271 > $9,310)"
+2026-08-20,OCTV,BUY,3.363,"insufficient cash ($10,223 > $9,310)"
+2026-08-20,SVV,BUY,3.363,"insufficient cash ($10,227 > $9,310)"
+2026-08-20,TLRY,BUY,2.338,"insufficient cash ($10,247 > $9,310)"
+2026-08-20,ANGX,BUY,3.163,"insufficient cash ($10,247 > $9,310)"
+2026-08-20,BLZE,BUY,3.163,"insufficient cash ($10,229 > $9,310)"
+2026-08-20,BNTX,BUY,2.138,"insufficient cash ($10,145 > $9,310)"
+2026-08-20,BTGO,BUY,2.138,"insufficient cash ($10,238 > $9,310)"
+2026-08-20,CAPR,BUY,2.138,"insufficient cash ($10,236 > $9,310)"
+2026-08-20,CBRS,BUY,2.138,"insufficient cash ($10,224 > $9,310)"
+2026-08-20,CHA,BUY,3.163,"insufficient cash ($10,226 > $9,310)"
+2026-08-20,COIN,BUY,2.138,"insufficient cash ($10,194 > $9,310)"
+2026-08-20,DLO,BUY,3.163,"insufficient cash ($10,219 > $9,310)"
+2026-08-20,DNA,BUY,2.138,"insufficient cash ($10,239 > $9,310)"
+2026-08-20,DVLT,BUY,2.138,"insufficient cash ($10,426 > $9,310)"
+2026-08-20,FN,BUY,3.163,"insufficient cash ($9,973 > $9,310)"
+2026-08-20,MAIR,BUY,3.163,"insufficient cash ($10,204 > $9,310)"
+2026-08-20,MSTR,BUY,2.138,"insufficient cash ($10,193 > $9,310)"
+2026-08-20,NVAX,BUY,3.163,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,RSKD,BUY,3.163,"insufficient cash ($10,244 > $9,310)"
+2026-08-20,SECZ,BUY,2.138,"insufficient cash ($10,243 > $9,310)"
+2026-08-20,SMJF,BUY,3.163,"insufficient cash ($10,228 > $9,310)"
+2026-08-20,TRON,BUY,2.138,"insufficient cash ($10,301 > $9,310)"
+2026-08-20,VICR,BUY,3.163,"insufficient cash ($10,044 > $9,310)"
+2026-08-20,YMM,BUY,3.163,"insufficient cash ($10,235 > $9,310)"
+2026-08-20,ZIM,BUY,3.163,"insufficient cash ($10,216 > $9,310)"
+2026-08-20,ZTO,BUY,3.163,"insufficient cash ($10,219 > $9,310)"
+2026-08-20,ABR,BUY,2.963,"insufficient cash ($10,246 > $9,310)"
+2026-08-20,AZI,BUY,1.938,"insufficient cash ($10,318 > $9,310)"
+2026-08-20,BLSH,BUY,1.938,"insufficient cash ($10,225 > $9,310)"
+2026-08-20,BRUN,BUY,1.938,"insufficient cash ($10,221 > $9,310)"
+2026-08-20,EROC,BUY,1.938,"insufficient cash ($10,218 > $9,310)"
+2026-08-20,GEMI,BUY,1.938,"insufficient cash ($10,254 > $9,310)"
+2026-08-20,JELD,BUY,1.938,"insufficient cash ($10,287 > $9,310)"
+2026-08-20,KEEL,BUY,1.938,"insufficient cash ($10,262 > $9,310)"
+2026-08-20,MNSO,BUY,2.963,"insufficient cash ($10,231 > $9,310)"
+2026-08-20,RELX,BUY,2.963,"insufficient cash ($10,197 > $9,310)"
+2026-08-20,VIK,BUY,2.963,"insufficient cash ($10,205 > $9,310)"
+2026-08-20,WYFI,BUY,1.938,"insufficient cash ($10,214 > $9,310)"
+2026-08-20,YSS,BUY,1.938,"insufficient cash ($10,233 > $9,310)"
+2026-08-20,AEHR,BUY,1.738,"insufficient cash ($10,179 > $9,310)"
+2026-08-20,ALH,BUY,1.738,"insufficient cash ($10,205 > $9,310)"
+2026-08-20,BTBT,BUY,1.738,"insufficient cash ($10,312 > $9,310)"
+2026-08-20,CIFR,BUY,1.738,"insufficient cash ($10,214 > $9,310)"
+2026-08-20,CRNC,BUY,1.738,"insufficient cash ($10,231 > $9,310)"
+2026-08-20,EVTL,BUY,1.738,"insufficient cash ($10,364 > $9,310)"
+2026-08-20,LOW,BUY,2.763,"insufficient cash ($10,152 > $9,310)"
+2026-08-20,MIST,BUY,1.738,"insufficient cash ($10,343 > $9,310)"
+2026-08-20,RIOT,BUY,1.738,"insufficient cash ($10,223 > $9,310)"
+2026-08-20,SAFX,BUY,1.738,"insufficient cash ($10,411 > $9,310)"
+2026-08-20,STLA,BUY,1.738,"insufficient cash ($10,248 > $9,310)"
+2026-08-20,STOK,BUY,1.738,"insufficient cash ($10,203 > $9,310)"
+2026-08-20,TLN,BUY,1.738,"insufficient cash ($9,931 > $9,310)"
+2026-08-20,TOYO,BUY,1.738,"insufficient cash ($10,250 > $9,310)"
+2026-08-20,VPG,BUY,1.738,"insufficient cash ($10,186 > $9,310)"
+2026-08-20,BIDU,BUY,1.538,"insufficient cash ($10,172 > $9,310)"
+2026-08-20,CCOI,BUY,1.538,"insufficient cash ($10,232 > $9,310)"
+2026-08-20,ENVX,BUY,1.538,"insufficient cash ($10,260 > $9,310)"
+2026-08-20,HUYA,BUY,1.538,"insufficient cash ($10,281 > $9,310)"
+2026-08-20,IQ,BUY,1.538,"insufficient cash ($10,339 > $9,310)"
+2026-08-20,LZB,BUY,1.538,"insufficient cash ($10,221 > $9,310)"
+2026-08-20,MRCY,BUY,1.538,"insufficient cash ($10,192 > $9,310)"
+2026-08-20,ORBS,BUY,1.538,"insufficient cash ($10,365 > $9,310)"
+2026-08-20,RTO,BUY,1.538,"insufficient cash ($10,208 > $9,310)"
+2026-08-20,RYAAY,BUY,1.538,"insufficient cash ($10,205 > $9,310)"
+2026-08-21,GMAB,BUY,4.163,"insufficient cash ($10,779 > $9,753)"
+2026-08-21,GRAL,BUY,4.163,"insufficient cash ($10,730 > $9,753)"
+2026-08-21,HITI,BUY,4.163,"insufficient cash ($10,839 > $9,753)"
+2026-08-21,ILMN,BUY,4.163,"insufficient cash ($10,622 > $9,753)"
+2026-08-21,INDP,BUY,4.163,"insufficient cash ($10,881 > $9,753)"
+2026-08-21,INO,BUY,4.163,"insufficient cash ($10,894 > $9,753)"
+2026-08-21,IOVA,BUY,4.163,"insufficient cash ($10,793 > $9,753)"
+2026-08-21,ITUB,BUY,4.163,"insufficient cash ($10,801 > $9,753)"
+2026-08-21,MRNA,BUY,4.163,"insufficient cash ($10,784 > $9,753)"
+2026-08-21,MRVI,BUY,4.163,"insufficient cash ($10,792 > $9,753)"
+2026-08-21,MT,BUY,4.163,"insufficient cash ($10,745 > $9,753)"
+2026-08-21,MTA,BUY,4.163,"insufficient cash ($10,789 > $9,753)"
+2026-08-21,OABI,BUY,4.163,"insufficient cash ($10,812 > $9,753)"
+2026-08-21,PRQR,BUY,4.163,"insufficient cash ($10,841 > $9,753)"
+2026-08-21,PSNL,BUY,4.163,"insufficient cash ($10,784 > $9,753)"
+2026-08-21,SUZ,BUY,4.163,"insufficient cash ($10,794 > $9,753)"
+2026-08-21,TEM,BUY,4.163,"insufficient cash ($10,761 > $9,753)"
+2026-08-21,TIGR,BUY,4.163,"insufficient cash ($10,806 > $9,753)"
+2026-08-21,TWST,BUY,4.163,"insufficient cash ($10,661 > $9,753)"
+2026-08-21,VALE,BUY,4.163,"insufficient cash ($10,783 > $9,753)"
+2026-08-21,VIRT,BUY,4.163,"insufficient cash ($10,739 > $9,753)"
+2026-08-21,AYA,BUY,3.963,"insufficient cash ($10,776 > $9,753)"
+2026-08-21,BBNX,BUY,3.963,"insufficient cash ($10,771 > $9,753)"
+2026-08-21,CAI,BUY,3.963,"insufficient cash ($10,763 > $9,753)"
+2026-08-21,CRCL,BUY,3.963,"insufficient cash ($10,783 > $9,753)"
+2026-08-21,DFDV,BUY,3.963,"insufficient cash ($10,813 > $9,753)"
+2026-08-21,KLAR,BUY,3.963,"insufficient cash ($10,785 > $9,753)"
+2026-08-21,LIFE,BUY,3.963,"insufficient cash ($10,784 > $9,753)"
+2026-08-21,PCG,BUY,3.963,"insufficient cash ($10,790 > $9,753)"
+2026-08-21,RCUS,BUY,3.963,"insufficient cash ($10,765 > $9,753)"
+2026-08-21,SCZM,BUY,3.963,"insufficient cash ($10,787 > $9,753)"
+2026-08-21,AKBA,BUY,3.763,"insufficient cash ($10,925 > $9,753)"
+2026-08-21,APO,BUY,3.763,"insufficient cash ($10,758 > $9,753)"
+2026-08-21,ASM,BUY,3.763,"insufficient cash ($10,796 > $9,753)"
+2026-08-21,AXTA,BUY,3.763,"insufficient cash ($10,777 > $9,753)"
+2026-08-21,BHVN,BUY,3.763,"insufficient cash ($10,781 > $9,753)"
+2026-08-21,EXK,BUY,3.763,"insufficient cash ($10,785 > $9,753)"
+2026-08-21,EYPT,BUY,3.763,"insufficient cash ($10,805 > $9,753)"
+2026-08-21,GROY,BUY,3.763,"insufficient cash ($10,821 > $9,753)"
+2026-08-21,MWH,BUY,3.763,"insufficient cash ($10,786 > $9,753)"
+2026-08-21,NVAX,BUY,3.763,"insufficient cash ($10,794 > $9,753)"
+2026-08-21,PZG,BUY,3.763,"insufficient cash ($10,868 > $9,753)"
+2026-08-21,QFIN,BUY,3.763,"insufficient cash ($10,788 > $9,753)"
+2026-08-21,RARE,BUY,3.763,"insufficient cash ($10,773 > $9,753)"
+2026-08-21,STLD,BUY,3.763,"insufficient cash ($10,589 > $9,753)"
+2026-08-21,UPST,BUY,3.763,"insufficient cash ($10,760 > $9,753)"
+2026-08-21,VIST,BUY,3.763,"insufficient cash ($10,718 > $9,753)"
+2026-08-21,ZNTL,BUY,3.763,"insufficient cash ($10,815 > $9,753)"
+2026-08-21,B,BUY,3.563,"insufficient cash ($10,763 > $9,753)"
+2026-08-21,BTDR,BUY,3.563,"insufficient cash ($10,786 > $9,753)"
+2026-08-21,DE,BUY,3.563,"insufficient cash ($10,597 > $9,753)"
+2026-08-21,G,BUY,3.563,"insufficient cash ($10,785 > $9,753)"
+2026-08-21,KC,BUY,3.563,"insufficient cash ($10,792 > $9,753)"
+2026-08-21,NTES,BUY,3.563,"insufficient cash ($10,705 > $9,753)"
+2026-08-21,PBR,BUY,3.563,"insufficient cash ($10,783 > $9,753)"
+2026-08-21,YMM,BUY,3.563,"insufficient cash ($10,792 > $9,753)"
+2026-08-21,AS,BUY,3.363,"insufficient cash ($10,759 > $9,753)"
+2026-08-21,ATAT,BUY,3.363,"insufficient cash ($10,777 > $9,753)"
+2026-08-21,BULL,BUY,3.363,"insufficient cash ($10,794 > $9,753)"
+2026-08-21,CNH,BUY,3.363,"insufficient cash ($10,788 > $9,753)"
+2026-08-21,DSX,BUY,3.363,"insufficient cash ($10,834 > $9,753)"
+2026-08-21,HSAI,BUY,3.363,"insufficient cash ($10,780 > $9,753)"
+2026-08-21,NBIS,BUY,3.363,"insufficient cash ($10,641 > $9,753)"
+2026-08-21,OCTV,BUY,3.363,"insufficient cash ($10,772 > $9,753)"
+2026-08-21,ALH,BUY,3.163,"insufficient cash ($10,784 > $9,753)"
+2026-08-21,BABA,BUY,3.163,"insufficient cash ($10,782 > $9,753)"
+2026-08-21,BILL,BUY,3.163,"insufficient cash ($10,738 > $9,753)"
+2026-08-21,BKKT,BUY,3.163,"insufficient cash ($10,794 > $9,753)"
+2026-08-21,BLZE,BUY,3.163,"insufficient cash ($10,788 > $9,753)"
+2026-08-21,CAN,BUY,2.138,"insufficient cash ($11,000 > $9,753)"
+2026-08-21,CMRC,BUY,2.138,"insufficient cash ($10,842 > $9,753)"
+2026-08-21,COTY,BUY,3.163,"insufficient cash ($10,832 > $9,753)"
+2026-08-21,DQ,BUY,2.138,"insufficient cash ($10,779 > $9,753)"
+2026-08-21,MAIR,BUY,3.163,"insufficient cash ($10,782 > $9,753)"
+2026-08-21,MFP,BUY,3.163,"insufficient cash ($10,740 > $9,753)"
+2026-08-21,MSTR,BUY,2.138,"insufficient cash ($10,774 > $9,753)"
+2026-08-21,TRON,BUY,2.138,"insufficient cash ($10,852 > $9,753)"
+2026-08-21,WMT,BUY,3.163,"insufficient cash ($10,682 > $9,753)"
+2026-08-21,ABEV,BUY,2.963,"insufficient cash ($10,830 > $9,753)"
+2026-08-21,AMRC,BUY,2.963,"insufficient cash ($10,766 > $9,753)"
+2026-08-21,DKS,BUY,2.963,"insufficient cash ($10,696 > $9,753)"
+2026-08-21,FWDI,BUY,1.938,"insufficient cash ($10,804 > $9,753)"
+2026-08-21,PONY,BUY,1.938,"insufficient cash ($10,798 > $9,753)"
+2026-08-21,RERE,BUY,2.963,"insufficient cash ($10,813 > $9,753)"
+2026-08-21,RYAAY,BUY,1.938,"insufficient cash ($10,777 > $9,753)"
+2026-08-21,SECZ,BUY,1.938,"insufficient cash ($10,800 > $9,753)"
+2026-08-21,SMJF,BUY,1.938,"insufficient cash ($10,783 > $9,753)"
+2026-08-21,SUPV,BUY,1.938,"insufficient cash ($10,795 > $9,753)"
+2026-08-21,VIK,BUY,2.963,"insufficient cash ($10,740 > $9,753)"
+2026-08-21,WYFI,BUY,1.938,"insufficient cash ($10,776 > $9,753)"
+2026-08-21,AGRO,BUY,1.738,"insufficient cash ($10,794 > $9,753)"
+2026-08-21,BILI,BUY,2.763,"insufficient cash ($10,790 > $9,753)"
+2026-08-21,CNDT,BUY,1.738,"insufficient cash ($10,872 > $9,753)"
+2026-08-21,DVLT,BUY,1.738,"insufficient cash ($10,994 > $9,753)"
+2026-08-21,SBS,BUY,1.738,"insufficient cash ($10,811 > $9,753)"
+2026-08-21,SNDL,BUY,1.738,"insufficient cash ($10,887 > $9,753)"
+2026-08-21,TJX,BUY,1.738,"insufficient cash ($10,689 > $9,753)"
+2026-08-21,TOYO,BUY,1.738,"insufficient cash ($10,808 > $9,753)"
+2026-08-21,WOLF,BUY,1.738,"insufficient cash ($10,776 > $9,753)"
+2026-08-21,YSS,BUY,1.738,"insufficient cash ($10,794 > $9,753)"
+2026-08-21,AAP,BUY,1.538,"insufficient cash ($10,775 > $9,753)"
+2026-08-21,CPRI,BUY,1.538,"insufficient cash ($10,785 > $9,753)"
+2026-08-21,ENHA,BUY,1.538,"insufficient cash ($10,863 > $9,753)"
+2026-08-21,EOSE,BUY,1.538,"insufficient cash ($10,819 > $9,753)"
+2026-08-21,SES,BUY,1.538,"insufficient cash ($10,951 > $9,753)"
+2026-08-21,STLA,BUY,1.538,"insufficient cash ($10,808 > $9,753)"
+2026-08-21,XXI,BUY,1.538,"insufficient cash ($10,801 > $9,753)"
+2026-08-21,BIDU,BUY,1.338,"insufficient cash ($10,734 > $9,753)"
+2026-08-21,GOGO,BUY,1.338,"insufficient cash ($10,833 > $9,753)"
+2026-08-21,HUYA,BUY,1.338,"insufficient cash ($10,845 > $9,753)"
+2026-08-21,IQ,BUY,1.338,"insufficient cash ($10,914 > $9,753)"
 2026-08-24,AAP,BUY,1.306,day gate CLOSED: predict DOWN score -5.17 < +1.00
 2026-08-24,ABTC,BUY,3.163,day gate CLOSED: predict DOWN score -5.17 < +1.00
 2026-08-24,ABUS,BUY,3.563,day gate CLOSED: predict DOWN score -5.17 < +1.00
