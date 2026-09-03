@@ -124,9 +124,11 @@ def test_action_clocks_are_open_not_close() -> None:
     assert act.format_price(3.72, "2026-08-17", act.OPEN_CLOCK) == (
         "$3.72 · 2026-08-17 09:30 ET")
     assert act.format_open_close(2.69, "2026-08-17") == (
-        "+2.69% · 2026-08-17 09:30→16:00 ET")
+        f"{tl.BOX_ICON['good']} +2.69% · 2026-08-17 09:30→16:00 ET")
     assert act.format_ret(-12.69, "2026-08-18") == (
-        "-12.69% · 2026-08-18 16:00 ET")
+        f"{tl.BOX_ICON['bad']} -12.69% · 2026-08-18 16:00 ET")
+    assert act.format_ret(0.1, "2026-08-18") == (
+        f"{tl.BOX_ICON['neutral']} +0.10% · 2026-08-18 16:00 ET")
     assert act.cond_tally({
         "condition": {"tone": "good", "n": 4, "good": 3, "neutral": 0, "bad": 1},
     }) == "3/0/1"
