@@ -137,10 +137,152 @@ def _stamp_row(row: dict, params: dict, dates: list[str]) -> dict:
     if not row.get("condition"):
         row["condition"] = tl.general_condition(row.get("boxes") or {})
     row["cond_tally"] = act.cond_tally(row)
+    row["conviction"] = act.conviction(row, packed)
     if row.get("day_change") is None:
         row["day_change"] = day_change_pct(
             row.get("ticker") or "", row.get("date") or "", dates)
     return row
+
+
+# ------------------------------------------------------- regime context --
+GENERAL_DIR = ROOT / "01_daily" / "general"
+
+
+def _predict_snapshot(date: str):
+    """Premarket general predict for `date` (published ~05:55 ET, knowable
+    at the 09:30 open). Returns (direction, score) or (None, None)."""
+    import re
+    p = GENERAL_DIR / f"{date}_predict.md"
+    if not p.is_file():
+        return None, None
+    try:
+        txt = p.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None, None
+    m = re.search(r"Prediction:\s*(UP|DOWN|FLAT).*?total score\s*(-?[\d.]+)",
+                  txt)
+    if not m:
+        m2 = re.search(r"Prediction:\s*(UP|DOWN|FLAT)", txt)
+        return (m2.group(1), None) if m2 else (None, None)
+    return m.group(1), float(m.group(2))
+
+
+def _spy_closes(dates: list[str]) -> dict[str, float]:
+    """SPY close per session from the OHLC store; yfinance fallback."""
+    out = {}
+    for d in dates:
+        c = (tl.session_bar("SPY", d) or {}).get("close")
+        if c:
+            out[d] = float(c)
+    if not out:
+        try:
+            import yfinance as yf
+            df = yf.download("SPY", start=dates[0], end=None,
+                             progress=False, auto_adjust=True)
+            if df is not None and not df.empty:
+                closes = df["Close"]
+                for d in dates:
+                    try:
+                        v = closes.loc[:d].iloc[-1]
+                        out[d] = float(v.iloc[0] if hasattr(v, "iloc") else v)
+                    except Exception:
+                        continue
+        except Exception:
+            pass
+    return out
+
+
+def regime_context(dates: list[str]) -> dict[str, dict]:
+    """Per-session regime knowable at 09:30 ET:
+    spy_down_streak = consecutive down SPY closes BEFORE that session;
+    predict dir/score = that morning's premarket general predict.
+    """
+    closes = _spy_closes(dates)
+    ctx = {}
+    prev_close = None
+    streak = 0
+    for d in sorted(dates):
+        pdir, pscore = _predict_snapshot(d)
+        ctx[d] = {
+            "spy_down_streak": streak,          # strictly prior sessions
+            "predict_dir": pdir,
+            "predict_score": pscore,
+            "spy_close": closes.get(d),
+        }
+        c = closes.get(d)
+        if c is not None:
+            streak = streak + 1 if (prev_close is not None
+                                    and c < prev_close) else 0
+            prev_close = c
+    return ctx
+
+
+# ------------------------------------------------------------ leaderboard --
+def _signed_ret(r: dict, h: str):
+    v = (gla._fwd(r) or {}).get(h)
+    try:
+        v = None if v is None else float(v)
+    except (TypeError, ValueError):
+        return None
+    if v is None:
+        return None
+    return -v if r.get("action_call") == "SELL" else v
+
+
+def _ret_stats(rets: list[float]) -> dict:
+    if not rets:
+        return {"n": 0, "hit": None, "mean": None}
+    return {
+        "n": len(rets),
+        "hit": round(sum(1 for x in rets if x > 0) / len(rets), 3),
+        "mean": round(sum(rets) / len(rets), 3),
+    }
+
+
+def build_leaderboard(called_rows: list[dict], top_n: int = 10) -> dict:
+    """Per-day top-N calls by conviction vs all calls — the tradeable cut."""
+    by_day: dict[str, list[dict]] = {}
+    for r in called_rows:
+        by_day.setdefault(r.get("date"), []).append(r)
+    days = []
+    agg: dict[str, dict[str, list]] = {
+        s: {"top": {h: [] for h in act.HORIZONS},
+            "all": {h: [] for h in act.HORIZONS}}
+        for s in ("BUY", "SELL")
+    }
+    for date in sorted(by_day):
+        for side in ("BUY", "SELL"):
+            calls = [r for r in by_day[date] if r.get("action_call") == side]
+            if not calls:
+                continue
+            calls.sort(key=lambda r: -(r.get("conviction") or 0))
+            top = calls[:top_n]
+            days.append({
+                "date": date, "side": side, "n_calls": len(calls),
+                "top": [{
+                    "ticker": r.get("ticker"),
+                    "conviction": r.get("conviction"),
+                    "reason": r.get("action_reason"),
+                    "cond": r.get("cond_tally"),
+                    "fwd": {h: (gla._fwd(r) or {}).get(h)
+                            for h in act.HORIZONS},
+                    "hits": r.get("hits"),
+                } for r in top],
+            })
+            for h in act.HORIZONS:
+                agg[side]["top"][h] += [x for x in
+                                        (_signed_ret(r, h) for r in top)
+                                        if x is not None]
+                agg[side]["all"][h] += [x for x in
+                                        (_signed_ret(r, h) for r in calls)
+                                        if x is not None]
+    summary = {
+        side: {
+            "top": {h: _ret_stats(agg[side]["top"][h]) for h in act.HORIZONS},
+            "all": {h: _ret_stats(agg[side]["all"][h]) for h in act.HORIZONS},
+        } for side in ("BUY", "SELL")
+    }
+    return {"top_n": top_n, "days": days, "summary": summary}
 
 
 def walk(from_date: str = START, to_date: str | None = None,
@@ -160,19 +302,23 @@ def walk(from_date: str = START, to_date: str | None = None,
             mover_rows.append(rec)
 
     default_name = preset or act.default_preset_name()
+    regime = regime_context(meta["session_dates"])
     sweeps = {}
     for name in act.PRESETS:
         params = act.preset_params(name)
+        params["_regime"] = regime
         sweeps[name] = {
             "mover_days": gla._score_rows([dict(r) for r in mover_rows], params),
         }
 
     chosen = act.preset_params(default_name)
+    chosen["_regime"] = regime
     dates = meta["session_dates"]
     for row in mover_rows:
         _stamp_row(row, chosen, dates)
 
     called_rows = [r for r in mover_rows if r.get("action_call") in CALLED]
+    leaderboard = build_leaderboard(called_rows)
     daily = []
     by_day: dict[str, list[dict]] = {}
     for r in mover_rows:
@@ -218,6 +364,8 @@ def walk(from_date: str = START, to_date: str | None = None,
         "chosen": sweeps.get(default_name) or {},
         "daily": daily,
         "called_rows": called_rows,
+        "regime": regime,
+        "leaderboard": leaderboard,
         "lookback": {
             "generated_at": payload.get("generated_at"),
             "n_names": len(payload.get("names") or []),
@@ -333,6 +481,67 @@ def render_markdown(payload: dict) -> str:
             f"{gla._pct(d.get('catch_1d'))} | {gla._pct(d.get('buy_1d'))} | "
             f"{gla._pct(d.get('sell_1d'))} | {gla._ret(d.get('pnl_1d'))} |"
         )
+    regime = payload.get("regime") or {}
+    if regime:
+        L += [
+            "",
+            "## Regime gate inputs (knowable at 09:30 ET)",
+            "",
+            "SPY down-streak counts **prior** closes only — today's close is "
+            "never used. The **`gated`** preset in the sweep blocks SELL when "
+            "the streak reaches 3 (exhaustion: fading into a washed-out tape "
+            "is what blew up 2026-09-02).",
+            "",
+            "| Date | Predict 05:55 ET | Score | SPY down-streak (prior) |",
+            "|---|---|---:|---:|",
+        ]
+        for d in sorted(regime):
+            r = regime[d] or {}
+            L.append(
+                f"| {act.session_stamp(d, act.OPEN_CLOCK)} | "
+                f"{r.get('predict_dir') or '—'} | "
+                f"{gla._ret(r.get('predict_score'))} | "
+                f"{r.get('spy_down_streak') or 0} |"
+            )
+    lb = payload.get("leaderboard") or {}
+    if lb:
+        summ = lb.get("summary") or {}
+        L += [
+            "",
+            f"## Conviction leaderboard (top {lb.get('top_n') or 10} per side)",
+            "",
+            "Calls ranked by conviction (long-setup edge + lane bonus + "
+            "condition boxes). **Top** = the names you'd actually size into; "
+            "**all** = every call that day.",
+            "",
+            "| Side | Cut | hit 1d | mean 1d | hit 3d | mean 3d | "
+            "hit 1w | mean 1w |",
+            "|---|---|---:|---:|---:|---:|---:|---:|",
+        ]
+        for side in ("BUY", "SELL"):
+            for cut in ("top", "all"):
+                s = (summ.get(side) or {}).get(cut) or {}
+                L.append(
+                    f"| {side} | {cut} | "
+                    f"{gla._pct((s.get('1d') or {}).get('hit'))} | "
+                    f"{gla._ret((s.get('1d') or {}).get('mean'))} | "
+                    f"{gla._pct((s.get('3d') or {}).get('hit'))} | "
+                    f"{gla._ret((s.get('3d') or {}).get('mean'))} | "
+                    f"{gla._pct((s.get('1w') or {}).get('hit'))} | "
+                    f"{gla._ret((s.get('1w') or {}).get('mean'))} |"
+                )
+        recent = (lb.get("days") or [])[-8:]
+        if recent:
+            L += ["", "### Recent top calls", ""]
+            for blk in reversed(recent):
+                L.append(
+                    f"**{act.session_stamp(blk.get('date'), act.OPEN_CLOCK)} "
+                    f"{blk.get('side')}** ({blk.get('n_calls')} calls): "
+                    + " · ".join(
+                        f"`{t.get('ticker')}` {(t.get('conviction') or 0):.1f}"
+                        for t in (blk.get("top") or [])[:5]
+                    )
+                )
     L += [
         "",
         "## Called mornings (BUY / SELL / NO BUY)",
@@ -434,6 +643,30 @@ def render_html(payload: dict) -> str:
         ),
     )
     body = [_row_html(r) for r in called]
+    lb_rows = []
+    lb = payload.get("leaderboard") or {}
+    summ = lb.get("summary") or {}
+    for side in ("BUY", "SELL"):
+        for cut in ("top", "all"):
+            s = (summ.get(side) or {}).get(cut) or {}
+            lb_rows.append(
+                f"<tr><td>{side}</td><td>{cut}</td>"
+                f"<td>{html.escape(gla._pct((s.get('1d') or {}).get('hit')))}</td>"
+                f"<td>{html.escape(gla._ret((s.get('1d') or {}).get('mean')))}</td>"
+                f"<td>{html.escape(gla._pct((s.get('3d') or {}).get('hit')))}</td>"
+                f"<td>{html.escape(gla._ret((s.get('3d') or {}).get('mean')))}</td>"
+                f"<td>{html.escape(gla._pct((s.get('1w') or {}).get('hit')))}</td>"
+                f"<td>{html.escape(gla._ret((s.get('1w') or {}).get('mean')))}</td></tr>"
+            )
+    lb_section = ""
+    if lb_rows:
+        lb_section = (
+            f"<h2>Conviction leaderboard (top {html.escape(str(lb.get('top_n') or 10))} per side)</h2>"
+            "<div class='sheet'><table class='mix'>"
+            "<thead><tr><th>Side</th><th>Cut</th><th>hit 1d</th><th>mean 1d</th>"
+            "<th>hit 3d</th><th>mean 3d</th><th>hit 1w</th><th>mean 1w</th></tr></thead>"
+            f"<tbody>{''.join(lb_rows)}</tbody></table></div>"
+        )
     return f"""<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mover lookback action</title>
@@ -476,6 +709,7 @@ Action is that date 09:30 ET. 🟢 up · 🟡 flat · 🔴 down. Hits = 1d/3d/1w
 <div class="sheet"><table class="mix">
 <thead><tr><th>Date 09:30 ET</th><th>Tape</th><th>n</th><th>BUY</th><th>SELL</th><th>NO BUY</th><th>HOLD</th><th>catch 1d</th><th>BUY 1d</th><th>SELL 1d</th><th>pnl 1d</th></tr></thead>
 <tbody>{''.join(daily_rows)}</tbody></table></div>
+{lb_section}
 <h2>Called mornings (BUY / SELL / NO BUY)</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date 09:30 ET</th><th>Hits 1d/3d/1w</th><th>Ticker</th><th>Close 16:00 ET</th><th>Open 09:30 ET</th><th>Δ close 16:00 ET</th><th>o→c 09:30→16:00</th><th>Cond</th><th>Action 09:30 ET</th><th>Why</th><th>Setups</th><th>+1d 16:00 ET</th><th>+3d 16:00 ET</th><th>+1w 16:00 ET</th></tr></thead>
