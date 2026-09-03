@@ -1,0 +1,5 @@
+{
+  "default": "featured",
+  "notes": "09:30-only BUY/SELL/NO BUY/HOLD. Same-day Change% is not an input. Flip default after a sweep on GAINER_LOOKBACK_ACTION.md.",
+  "presets": {}
+}

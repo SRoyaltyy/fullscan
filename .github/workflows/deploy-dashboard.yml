@@ -70,6 +70,11 @@ jobs:
             cp -a dashboard/ticker-lookback/. pages_out/dashboard/ticker-lookback/
             echo "Overlayed dashboard/ticker-lookback from main"
           fi
+          if [ -f dashboard/gainer-lookback/index.html ]; then
+            mkdir -p pages_out/dashboard/gainer-lookback
+            cp -a dashboard/gainer-lookback/. pages_out/dashboard/gainer-lookback/
+            echo "Overlayed dashboard/gainer-lookback from main"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -90,5 +95,6 @@ jobs:
         run: |
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/gainer-lookback/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"
