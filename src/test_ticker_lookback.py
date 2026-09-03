@@ -140,7 +140,7 @@ def test_phone_html_and_returns() -> None:
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
     assert "09:30 ET" in page
-    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th><th>Setups</th>" in page
+    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
     assert day0["forward_returns"]["1d"] is not None
@@ -244,7 +244,7 @@ def test_signal_improved_is_strict() -> None:
     assert "⚪ 2026-08-19" in md
     assert "🚨 2026-08-21" in md
     assert "| Cond |" in md
-    assert "| Reg |" in md
+    assert "| Hall pass |" in md
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "lookback.xlsx"
         run.write_xlsx(payload, p)
@@ -313,7 +313,7 @@ def test_alarm_and_condition_majority() -> None:
     page = run.render_html(payload)
     assert "🚨 2026-08-20" in page
     assert ">0/2/1<" in page
-    assert "Reg = green vs red" in page
+    assert "Hall pass" in page
 
 
 def test_color_region_ignores_yellows() -> None:
@@ -442,6 +442,58 @@ def test_judge_and_digest_use_sector_print() -> None:
         {"Semis/Xlk": "bearish"}, "Technology") == "bad"
 
 
+def test_lookback_matches_readiness_lattice() -> None:
+    """Each day uses the Stock Book readiness row: cameras + coaches + lane."""
+    payload = run.scan_tickers(
+        ["CRM", "BBAI"], from_date="2026-09-01", to_date="2026-09-01")
+    assert payload.get("method") == "stock_book_readiness"
+    by = {n["ticker"]: n["days"][0] for n in payload["names"]}
+    crm = by["CRM"]
+    assert crm["factor_vintage"]["asof"] == "09:30_et"
+    assert crm["domains"]["market"] == "bad"
+    assert set(crm["domains"]) == {k for k, _ in run.DOMAIN_COLS}
+    assert crm["lane"] == "probable"
+    assert "HARD_RED" in run._hall_text(crm)
+    assert "BUY PROBABLE" in crm["decision"]
+    assert crm["labeled"].startswith("join")
+    assert crm["labeled_domains"].startswith("mkt")
+    assert "yday" in crm["boxes"]
+    assert "book" not in crm["sources"]
+    bbai = by["BBAI"]
+    assert bbai["lane"] == "blocked"
+    assert "SELL/AVOID" in bbai["decision"] or "BLOCK BUY" in bbai["decision"]
+    md = run.render_md(payload)
+    page = run.render_html(payload)
+    assert "Stock Book readiness" in md
+    assert "| Hall pass |" in md
+    assert "| mkt |" in md
+    assert "| yΔ |" in md
+    assert "BUY PROBABLE" in md
+    assert "<th>Hall pass</th>" in page
+    assert "<th>mkt</th>" in page
+    assert "BUY PROBABLE" in page
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / "lookback.xlsx"
+        run.write_xlsx(payload, p)
+        wb = load_workbook(p)
+        heads = [c.value for c in wb["CRM"][1]]
+        assert "Hall pass" in heads
+        assert "mkt" in heads
+        assert "Decision" in heads
+
+
+def test_lookback_pre_lattice_hall_pass_is_grey() -> None:
+    payload = run.scan_tickers(
+        ["AAPL"], from_date="2026-08-13", to_date="2026-08-13")
+    day = payload["names"][0]["days"][0]
+    assert day["lattice_live"] is False
+    assert day.get("lane") is None
+    from src import gainer_asof
+    assert day["lane_label"] == gainer_asof.GREY
+    assert day["decision"] == "—"
+    assert day["domains"]["market"] in {"good", "bad", "neutral", "missing"}
+
+
 if __name__ == "__main__":
     test_enriched_ab_dates_are_indexed()
     test_session_dates_skip_weekends()
@@ -462,4 +514,6 @@ if __name__ == "__main__":
     test_last_known_does_not_invent_pre_finviz_tape()
     test_heat_uses_map_heat_board()
     test_judge_and_digest_use_sector_print()
-    print("19 tests passed")
+    test_lookback_matches_readiness_lattice()
+    test_lookback_pre_lattice_hall_pass_is_grey()
+    print("21 tests passed")

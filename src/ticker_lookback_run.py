@@ -7,9 +7,13 @@ import json
 import os
 from datetime import datetime
 
+from . import gainer_asof as ga
 from . import ticker_lookback as tl
 from . import ticker_lookback_cli as scan
 from . import ticker_lookback_setups as setups
+
+CAMERA_COLS = tl.BOX_COLS + (("yday", "yΔ"),)
+DOMAIN_COLS = ga.DOMAIN_COLS
 
 
 def _icon(kind):
@@ -33,11 +37,142 @@ def _attach_day_extras(card, ticker, sess, sessions):
     return card
 
 
-def scan_ticker(ticker, sessions=None, idx=None):
+def _paint_cache(sessions):
+    cache = {}
+    for sess in sessions or []:
+        date = sess["date"]
+        if date in cache:
+            continue
+        ctx = ga.load_day_context(date)
+        ctx["buy_today"] = ga.same_day_buy_set(date)
+        ctx["sell_today"] = ga.same_day_sell_set(date)
+        ctx["era_skip"] = ga._era_skip(date)
+        cache[date] = ctx
+    return cache
+
+
+def _asof_decision(card):
+    lane = card.get("lane")
+    state = str(card.get("market_state") or "").upper() or "UNKNOWN"
+    if not card.get("lattice_live"):
+        return "—"
+    if not lane:
+        return "—"
+    if lane == "probable":
+        return f"BUY PROBABLE — most-probable long on {state} (size ×0.25)"
+    if lane == "blocked":
+        return f"BLOCK BUY — market={state}"
+    if lane == "catalyst_exception":
+        return f"BUY CATALYST_EXCEPTION — market={state}"
+    return f"BUY {str(lane).upper()} — market={state}"
+
+
+def _decision_text(card):
+    action = card.get("action") or {}
+    if action.get("bull_eligible") and action.get("bull_decision"):
+        return action["bull_decision"]
+    if action.get("bear_eligible") and action.get("bear_decision"):
+        return action["bear_decision"]
+    if action.get("bull_decision"):
+        return action["bull_decision"]
+    if action.get("bear_decision"):
+        return action["bear_decision"]
+    return _asof_decision(card)
+
+
+def _context_text(card):
+    action = card.get("action") or {}
+    bits = []
+    summary = str(action.get("company_summary") or "").strip()
+    if summary:
+        bits.append(summary)
+    group = action.get("group_label") or card.get("industry") or ""
+    d1, w1, rel = action.get("child_d1"), action.get("child_w1"), action.get("child_residual")
+    if group and any(v is not None for v in (d1, w1, rel)):
+        bits.append(
+            f"{group} "
+            f"({0.0 if d1 is None else d1:+.1f}% d1 / "
+            f"{0.0 if w1 is None else w1:+.1f}% 1w / "
+            f"{0.0 if rel is None else rel:+.1f}% rel)"
+        )
+    elif card.get("sector"):
+        bits.append(str(card["sector"]))
+    return "; ".join(bits)
+
+
+def _decision_cell(card):
+    ctx = _context_text(card)
+    why = card.get("decision") or "—"
+    if ctx and why and why != "—":
+        return f"{ctx} — {why}"
+    return ctx or why
+
+
+def _hall_text(day):
+    label = day.get("lane_label")
+    if label is None:
+        label = ga.lane_label(day.get("lane"))
+    state = str(day.get("market_state") or "").lower()
+    if state == "hard_red":
+        if label and label != ga.GREY:
+            return f"{label} · HARD_RED"
+        return "HARD_RED"
+    return label or "—"
+
+
+def _paint_day(card, sess, prior_sess, ctx):
+    t = card["ticker"]
+    painted = ga.color_name(
+        sess,
+        {
+            "ticker": t,
+            "sector": card.get("sector") or "",
+            "industry": card.get("industry") or "",
+            "size": card.get("size") or "",
+            "decision_lane": (ctx.get("lanes") or {}).get(t),
+        },
+        buy_today=ctx.get("buy_today") or set(),
+        sell_today=ctx.get("sell_today") or set(),
+        market_tone=ctx.get("market_tone"),
+        market_state=ctx.get("market_state"),
+        book_domains=ctx.get("domains"),
+        book_lanes=ctx.get("lanes"),
+        book_marks=ctx.get("marks"),
+        book_opp=ctx.get("opp"),
+        era_skip=ctx.get("era_skip"),
+        lattice_live=ctx.get("lattice_live"),
+        prior_sess=prior_sess,
+        card=card,
+        prev_boxes=(prior_sess or {}).get("_prev_boxes"),
+    )
+    card["boxes"] = dict(card.get("boxes") or {})
+    card["boxes"]["yday"] = (painted.get("boxes") or {}).get("yday") or "missing"
+    vintage = dict(card.get("factor_vintage") or {})
+    for key in ("yday", "domains"):
+        if (painted.get("factor_vintage") or {}).get(key):
+            vintage[key] = painted["factor_vintage"][key]
+    card["factor_vintage"] = vintage
+    for key in (
+        "domains", "labeled", "labeled_domains", "lane", "lane_label",
+        "marks", "marks_cell", "mid_opp", "yday_change",
+        "overnight_buy", "overnight_sell", "on_1d_buy", "on_1d_sell",
+        "lattice_live",
+    ):
+        card[key] = painted.get(key)
+    card["market_state"] = ctx.get("market_state")
+    card["market_tone"] = ctx.get("market_tone")
+    card["action"] = (ctx.get("actions") or {}).get(t) or {}
+    card["decision"] = _decision_text(card)
+    return card
+
+
+def scan_ticker(ticker, sessions=None, idx=None, paint_ctx=None):
     idx = idx or tl.build_index()
     t = tl._tick(ticker)
     days, recommended, green_days = [], [], []
     sessions = sessions if sessions is not None else idx["sessions"]
+    paint_ctx = paint_ctx if paint_ctx is not None else _paint_cache(sessions)
+    prev_card = None
     for sess in sessions:
         card = scan._scan_session(sess, t)
         if card is None:
@@ -47,7 +182,13 @@ def scan_ticker(ticker, sessions=None, idx=None):
                 "artifacts_that_day": sess["has"],
             }
         _attach_day_extras(card, t, sess, sessions)
+        prior = sess.get("prior")
+        if prev_card is not None:
+            prior = dict(prior or {})
+            prior["_prev_boxes"] = prev_card.get("boxes")
+        _paint_day(card, sess, prior, paint_ctx.get(sess["date"]) or {})
         days.append(card)
+        prev_card = card
         if card.get("buy_ranks"):
             recommended.append({
                 "date": card["date"],
@@ -73,9 +214,11 @@ def scan_tickers(tickers, from_date=None, to_date=None):
         if (not from_date or s["date"] >= from_date)
         and (not to_date or s["date"] <= to_date)
     ]
+    paint_ctx = _paint_cache(sessions)
     return {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
+        "method": "stock_book_readiness",
         "from_date": from_date, "to_date": to_date,
         "sessions": [
             {"date": s["date"], "has": s["has"], "n_book": s["n_book"],
@@ -83,7 +226,10 @@ def scan_tickers(tickers, from_date=None, to_date=None):
              "n_ab": s["n_ab"], "n_peer": s["n_peer"]}
             for s in sessions
         ],
-        "names": [scan_ticker(t, sessions=sessions, idx=idx) for t in names],
+        "names": [
+            scan_ticker(t, sessions=sessions, idx=idx, paint_ctx=paint_ctx)
+            for t in names
+        ],
     }
 
 
@@ -101,15 +247,28 @@ def _fmt_price_md(pc, tones, key):
     return f"{_icon((tones or {}).get(key) or tl.price_tone((pc or {}).get(key)))} {text}"
 
 
+def _mark_flags(day):
+    packed = day.get("marks")
+    if isinstance(packed, dict) and any(
+        packed.get(k) is not None for k in ("blue", "alarm", "white")
+    ):
+        return (
+            bool(packed.get("blue")),
+            bool(packed.get("alarm")),
+            bool(packed.get("white")),
+        )
+    return (
+        bool(day.get("signal_improved")),
+        bool(day.get("signal_alarm")),
+        bool(day.get("zero_red")),
+    )
+
+
 def _date_marks(day):
-    marks = []
-    if day.get("signal_improved"):
-        marks.append("🔵")
-    if day.get("signal_alarm"):
-        marks.append("🚨")
-    if day.get("zero_red"):
-        marks.append("⚪")
-    return "".join(marks)
+    blue, alarm, white = _mark_flags(day)
+    return "".join(
+        bit for bit, on in (("🔵", blue), ("🚨", alarm), ("⚪", white)) if on
+    )
 
 
 def _date_label(day):
@@ -119,17 +278,25 @@ def _date_label(day):
 
 def _date_classes(day):
     cls = []
-    if day.get("signal_improved"):
+    blue, alarm, white = _mark_flags(day)
+    if blue:
         cls.append("better")
-    if day.get("signal_alarm"):
+    if alarm:
         cls.append("alarm")
-    if day.get("zero_red"):
+    if white:
         cls.append("clean")
     tone = (day.get("region") or {}).get("tone")
     if tone == "good":
         cls.append("reg-good")
     elif tone == "bad":
         cls.append("reg-bad")
+    lane = day.get("lane")
+    if lane == "probable":
+        cls.append("probable")
+    elif lane == "blocked":
+        cls.append("blocked")
+    if str(day.get("market_state") or "").lower() == "hard_red":
+        cls.append("hard-red")
     return " ".join(cls)
 
 
@@ -175,45 +342,78 @@ def _region_md(reg):
     return f"{_icon((reg or {}).get('tone'))} {text}"
 
 
+def _fmt_mid_opp(value):
+    if value is None:
+        return "—"
+    try:
+        return f"{float(value):+.2f}"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def _sheet_headers():
+    return (
+        ["Date", "Price", "+1d", "+3d", "+1w", "Cond", "Hall pass", "mid_opp", "Setups"]
+        + [label for _, label in CAMERA_COLS]
+        + [label for _, label in DOMAIN_COLS]
+        + ["Decision"]
+    )
+
+
 def render_md(payload):
     setups.ensure_setups(payload)
     L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_",
-         "", "_As of 09:30 ET: last completed tape (walk back if a session "
-         "file is missing) + that morning's pre-open packet. Same-day stock "
-         "book and post-close Finviz do not color the factor boxes. "
-         "Price / +1d / +3d / +1w are session-close outcomes._", ""]
+         "", "_Same method as Stock Book readiness._ Cameras (12 + yΔ) are "
+         "the 09:30 ET packet: last completed tape (walk back if a session "
+         "file is missing) + that morning's pre-open. Same-day stock book "
+         "and post-close Finviz do not color cameras. Domain lights, hall "
+         "pass, and BUY PROBABLE / HARD_RED copy come from that day's book "
+         "when it exists, else the as-of coaches. Price / +1d / +3d / +1w "
+         "are session-close outcomes._", ""]
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
               f"mcap > $100M, avg vol > 500K_", ""]
     L += [setups.render_setup_markdown(payload, include_dates=False), ""]
-    L += ["_🔵 = vs prior session: no cell worse and at least one better, "
-          "or factor points jumped by ≥3 (red=1, yellow=2, green=3)_",
-          "_🚨 = purely worse vs prior session (no cell better, at least one worse)_",
-          "_⚪ = no red factor cells that day_",
-          "_Cond = G/Y/R tally; green or red when that color is the majority_",
-          "_Reg = green vs red cell mass (yellows ignored). Setups overlay the "
-          "color chart on the date they printed — bare 🔵 / 🚨 / ⚪ and "
-          "🔵-on-red (`turn`) did not replicate market-wide._", ""]
-    cols = " | ".join(label for _, label in tl.BOX_COLS)
-    bars = "|".join(["---"] * (9 + len(tl.BOX_COLS)))
+    L += [
+        f"_Cameras {ga._legend()}_",
+        f"_Coaches {ga._domain_legend()}_",
+        "_Hall pass = standard / group leader / catalyst / catalyst exception "
+        "/ probable / blocked — or grey before the lattice (2026-08-31). "
+        "HARD_RED may still print BUY PROBABLE (size ×0.25)._",
+        "_🔵 = vs prior session: no cell worse and at least one better, "
+        "or factor points jumped by ≥3 (red=1, yellow=2, green=3)_",
+        "_🚨 = purely worse vs prior session (no cell better, at least one worse)_",
+        "_⚪ = no red factor cells that day_",
+        "_Cond = G/Y/R tally; green or red when that color is the majority. "
+        "Setups overlay the color chart on the date they printed — bare "
+        "🔵 / 🚨 / ⚪ and 🔵-on-red (`turn`) did not replicate market-wide._",
+        "",
+    ]
+    heads = _sheet_headers()
+    bars = "|".join(["---"] * len(heads))
     for rec in payload["names"]:
         L += [f"## {rec['ticker']}", "",
-              f"| Date | Price | +1d | +3d | +1w | Class | Cond | Reg | Setups | {cols} |",
+              "| " + " | ".join(heads) + " |",
               f"|{bars}|"]
         for d in rec["days"]:
             pc = d.get("price_changes") or {}
             tones = d.get("price_tones") or _price_tones(pc)
             boxes = d.get("boxes") or {}
-            cells = " | ".join(
-                _icon(boxes.get(k, "missing")) for k, _ in tl.BOX_COLS)
+            domains = d.get("domains") or {}
+            cams = " | ".join(
+                _icon(boxes.get(k, "missing")) for k, _ in CAMERA_COLS)
+            coaches = " | ".join(
+                _icon(domains.get(k, "missing")) for k, _ in DOMAIN_COLS)
             date = _date_label(d)
+            why = str(_decision_cell(d)).replace("|", "/")
             L.append(
                 f"| {date} | {_fmt_price(pc, 'price')} | "
                 f"{_fmt_price_md(pc, tones, '1d')} | "
                 f"{_fmt_price_md(pc, tones, '3d')} | "
-                f"{_fmt_price_md(pc, tones, '1w')} | {d.get('class')} | "
+                f"{_fmt_price_md(pc, tones, '1w')} | "
                 f"{_condition_md(_condition(d))} | "
-                f"{_region_md(_region(d))} | {setups.setup_labels(d) or '—'} | {cells} |"
+                f"{_hall_text(d)} | {_fmt_mid_opp(d.get('mid_opp'))} | "
+                f"{setups.setup_labels(d) or '—'} | {cams} | {coaches} | {why} |"
             )
         L.append("")
     return "\n".join(L) + "\n"
@@ -243,11 +443,10 @@ def render_html(payload):
                 f'<td class="{html.escape((day.get("boxes") or {}).get(k, "missing"))}'
                 f'{" setup-hit setup-" + html.escape(lit[k]) if k in lit else ""}">'
                 f'{_icon((day.get("boxes") or {}).get(k, "missing"))}</td>'
-                for k, _ in tl.BOX_COLS
+                for k, _ in CAMERA_COLS
             )
             date_cls = _date_classes(day)
             cond = _condition(day)
-            reg = _region(day)
             price_tds = "".join(
                 f'<td class="{html.escape(tones.get(key, "missing"))}">'
                 f'{_fmt_price(pc, key)}</td>'
@@ -255,6 +454,15 @@ def render_html(payload):
             )
             chips = setups.setup_chips_html(day)
             row_cls = setups.row_setup_class(day)
+            hall = _hall_text(day)
+            hall_cls = html.escape(str(day.get("lane") or "missing"))
+            domains = day.get("domains") or {}
+            domain_tds = "".join(
+                f'<td class="{html.escape(domains.get(k, "missing"))}">'
+                f'{_icon(domains.get(k, "missing"))}</td>'
+                for k, _ in DOMAIN_COLS
+            )
+            why = html.escape(_decision_cell(day))
             rows.append(
                 f'<tr class="{html.escape(row_cls)}">'
                 f'<th class="{html.escape(date_cls)}">'
@@ -262,17 +470,21 @@ def render_html(payload):
                 f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
                 f'<td class="{html.escape(cond.get("tone", "missing"))}">'
                 f'{html.escape(_condition_text(cond))}</td>'
-                f'<td class="{html.escape(reg.get("tone", "missing"))}">'
-                f'{html.escape(_region_text(reg))}</td>'
-                f'<td class="setups">{chips or "—"}</td>{cells}</tr>'
+                f'<td class="hall {hall_cls}">{html.escape(hall)}</td>'
+                f'<td class="mid-opp">{html.escape(_fmt_mid_opp(day.get("mid_opp")))}</td>'
+                f'<td class="setups">{chips or "—"}</td>{cells}'
+                f'{domain_tds}'
+                f'<td class="decision">{why}</td></tr>'
             )
         factor_headers = "".join(
-            f"<th>{html.escape(label)}</th>" for _, label in tl.BOX_COLS)
+            f"<th>{html.escape(label)}</th>" for _, label in CAMERA_COLS)
+        domain_headers = "".join(
+            f"<th>{html.escape(label)}</th>" for _, label in DOMAIN_COLS)
         sections.append(f"""
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Reg</th><th>Setups</th>{factor_headers}</tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>{factor_headers}{domain_headers}<th>Decision</th></tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = '<a href="#setups">Setups</a>' + "".join(
@@ -294,7 +506,7 @@ main{{max-width:1000px;margin:auto;padding:16px}}h1,h2,h3,h4{{margin:.35em 0}}
 nav{{display:flex;gap:8px;overflow:auto;position:sticky;top:0;background:#0b1020ee;padding:10px 0;z-index:2}}
 nav a,.class{{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);text-decoration:none;white-space:nowrap}}
 .sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:22px}}
-table{{border-collapse:separate;border-spacing:0;min-width:900px;width:100%;background:var(--card)}}
+table{{border-collapse:separate;border-spacing:0;min-width:1400px;width:100%;background:var(--card)}}
 section.setups table{{min-width:640px}}
 th,td{{padding:10px 9px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
 thead th{{position:sticky;top:0;background:#17213a}}tbody th{{position:sticky;left:0;background:#17213a;text-align:left}}
@@ -311,6 +523,11 @@ tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
 tbody th.reg-good{{box-shadow:inset 0 -3px 0 #22c55e}}
 tbody th.reg-bad{{box-shadow:inset 0 -3px 0 #ef4444}}
 td.setups{{text-align:left;white-space:normal;max-width:200px;font-size:12px}}
+td.hall{{font-size:12px;white-space:normal;max-width:140px}}
+td.hall.probable{{background:#1e3a5f}}
+td.hall.blocked{{background:#4b2028}}
+td.decision{{text-align:left;white-space:normal;max-width:360px;font-size:12px}}
+tbody th.hard-red{{box-shadow:inset 0 -3px 0 #f59e0b}}
 .setup-chip{{display:inline-block;margin:1px 2px;padding:1px 7px;border-radius:999px;font-size:11px;white-space:nowrap}}
 .setup-chip.good{{background:#123d2c}}
 .setup-chip.bad{{background:#4b2028}}
@@ -318,9 +535,9 @@ td.setups{{text-align:left;white-space:normal;max-width:200px;font-size:12px}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>Factor colors = knowable by 09:30 ET (last completed tape + pre-open packet). Price / +1d / +3d / +1w are session-close outcomes.</p>
-<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Reg = green vs red mass</p>
-<p class="muted">The red/yellow/green chart is the sheet. Featured setups overlay it: gold ring on the boxes that fired, chips in the Setups column on that date. Bare 🔵 / 🚨 / ⚪ and 🔵-on-red (turn) did not replicate market-wide.</p>
+<p>Same method as Stock Book readiness. Cameras = knowable by 09:30 ET (last completed tape + pre-open packet). Domains / hall pass / BUY PROBABLE come from that day's book when it exists. Price / +1d / +3d / +1w are session-close outcomes.</p>
+<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · ⬜ no as-of · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Hall pass = standard / group leader / catalyst / probable / blocked</p>
+<p class="muted">Two scoreboards: 12 cameras + yΔ, then 6 coaches (mkt · par · chd · co · set · flw). HARD_RED may still print BUY PROBABLE (size ×0.25). Featured setups overlay the camera sheet: gold ring on the boxes that fired.</p>
 {random_note}{setups.render_setup_html(payload)}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
 
@@ -419,8 +636,10 @@ def write_xlsx(payload, path):
     wb = Workbook()
     wb.remove(wb.active)
     _write_setups_sheet(wb, payload, fills)
-    headers = ["Date", "Price", "+1d", "+3d", "+1w", "Cond", "Reg", "Setups"] + [
-        label for _, label in tl.BOX_COLS]
+    headers = _sheet_headers()
+    cam_start = 10
+    domain_start = cam_start + len(CAMERA_COLS)
+    decision_col = domain_start + len(DOMAIN_COLS)
     for rec in payload["names"]:
         ws = wb.create_sheet(rec["ticker"][:31])
         ws.freeze_panes = "B2"
@@ -433,24 +652,29 @@ def write_xlsx(payload, path):
             pc = day.get("price_changes") or {}
             tones = day.get("price_tones") or _price_tones(pc)
             cond = _condition(day)
-            reg = _region(day)
+            domains = day.get("domains") or {}
             ws.append([
                 _date_label(day), pc.get("price"), pc.get("1d"),
                 pc.get("3d"), pc.get("1w"), _condition_text(cond),
-                _region_text(reg), setups.setup_labels(day),
+                _hall_text(day), _fmt_mid_opp(day.get("mid_opp")),
+                setups.setup_labels(day),
             ] + [
                 _icon((day.get("boxes") or {}).get(k, "missing"))
-                for k, _ in tl.BOX_COLS
-            ])
+                for k, _ in CAMERA_COLS
+            ] + [
+                _icon(domains.get(k, "missing"))
+                for k, _ in DOMAIN_COLS
+            ] + [_decision_cell(day)])
             row = ws.max_row
             date_cell = ws.cell(row, 1)
-            if day.get("signal_improved"):
+            blue, alarm, white = _mark_flags(day)
+            if blue:
                 date_cell.fill = fills["better"]
                 date_cell.font = Font(bold=True, color="FFFFFF")
-            elif day.get("signal_alarm"):
+            elif alarm:
                 date_cell.fill = fills["bad"]
                 date_cell.font = Font(bold=True, color="FFFFFF")
-            elif day.get("zero_red"):
+            elif white:
                 date_cell.fill = fills["clean"]
                 date_cell.font = Font(bold=True, color="1F4E78")
             for col, key in ((3, "1d"), (4, "3d"), (5, "1w")):
@@ -461,30 +685,44 @@ def write_xlsx(payload, path):
             cond_cell = ws.cell(row, 6)
             cond_cell.fill = fills.get(cond.get("tone", "missing"), fills["missing"])
             cond_cell.alignment = Alignment(horizontal="center")
-            reg_cell = ws.cell(row, 7)
-            reg_tone = reg.get("tone", "missing")
-            if reg_tone == "thin":
-                reg_tone = "missing"
-            reg_cell.fill = fills.get(reg_tone, fills["missing"])
-            reg_cell.alignment = Alignment(horizontal="center")
-            ws.cell(row, 8).alignment = Alignment(horizontal="left", wrap_text=True)
+            ws.cell(row, 7).alignment = Alignment(horizontal="center", wrap_text=True)
+            ws.cell(row, 8).alignment = Alignment(horizontal="center")
+            ws.cell(row, 9).alignment = Alignment(horizontal="left", wrap_text=True)
             lit = setups.box_highlights(day)
-            for offset, (key, _label) in enumerate(tl.BOX_COLS, start=9):
+            for offset, (key, _label) in enumerate(CAMERA_COLS, start=cam_start):
                 tone = (day.get("boxes") or {}).get(key, "missing")
                 cell = ws.cell(row, offset)
                 cell.fill = fills.get(tone, fills["missing"])
                 cell.alignment = Alignment(horizontal="center")
                 if key in lit:
                     cell.border = gold
+            for offset, (key, _label) in enumerate(DOMAIN_COLS, start=domain_start):
+                tone = domains.get(key, "missing")
+                cell = ws.cell(row, offset)
+                cell.fill = fills.get(tone, fills["missing"])
+                cell.alignment = Alignment(horizontal="center")
+            ws.cell(row, decision_col).alignment = Alignment(
+                horizontal="left", wrap_text=True)
         ws.column_dimensions["A"].width = 18
         ws.column_dimensions["B"].width = 12
-        ws.column_dimensions["H"].width = 36
+        ws.column_dimensions["G"].width = 18
+        ws.column_dimensions["I"].width = 28
+        last_letter = _col_letter(decision_col)
+        ws.column_dimensions[last_letter].width = 56
         for col in range(3, len(headers) + 1):
-            letter = chr(64 + col) if col <= 26 else None
-            if letter and letter != "H":
-                ws.column_dimensions[letter].width = 9
+            if col in (7, 9, decision_col):
+                continue
+            ws.column_dimensions[_col_letter(col)].width = 9
         ws.auto_filter.ref = ws.dimensions
     wb.save(path)
+
+
+def _col_letter(n):
+    s = ""
+    while n:
+        n, r = divmod(n - 1, 26)
+        s = chr(65 + r) + s
+    return s
 
 
 def resolve_tickers(raw, random_pick=False, n=tl.RANDOM_N, asof=None, seed=None):

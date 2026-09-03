@@ -419,6 +419,7 @@ def load_day_context(date: str) -> dict:
     lanes: dict[str, str] = {}
     marks: dict[str, dict] = {}
     opp: dict[str, float] = {}
+    actions: dict[str, dict] = {}
     csv_path = BOOK_DIR / f"{date}_stock_book.csv"
     if csv_path.exists():
         try:
@@ -456,6 +457,19 @@ def load_day_context(date: str) -> dict:
                     val = _num(rec.get("s_opp"))
                     if val is not None:
                         opp[t] = val
+                if rec.get("bull_decision") or rec.get("bear_decision") or rec.get("company_summary"):
+                    actions[t] = {
+                        "bull_decision": str(rec.get("bull_decision") or ""),
+                        "bear_decision": str(rec.get("bear_decision") or ""),
+                        "company_summary": str(rec.get("company_summary") or ""),
+                        "group_label": str(rec.get("group_label") or ""),
+                        "child_d1": _num(rec.get("child_d1")),
+                        "child_w1": _num(rec.get("child_w1")),
+                        "child_residual": _num(rec.get("child_residual")),
+                        "score": _num(rec.get("score")),
+                        "bull_eligible": bool(rec.get("bull_eligible")),
+                        "bear_eligible": bool(rec.get("bear_eligible")),
+                    }
     if not cmap or not lanes:
         for side in ("buy", "sell"):
             for r in ((data.get("books") or {}).get("1d") or {}).get(side) or []:
@@ -486,6 +500,19 @@ def load_day_context(date: str) -> dict:
                     val = _num(r.get("s_opp"))
                     if val is not None:
                         opp[t] = val
+                if t not in actions and (r.get("bull_decision") or r.get("bear_decision")):
+                    actions[t] = {
+                        "bull_decision": str(r.get("bull_decision") or ""),
+                        "bear_decision": str(r.get("bear_decision") or ""),
+                        "company_summary": str(r.get("company") or r.get("company_summary") or ""),
+                        "group_label": str(r.get("industry") or r.get("group_label") or ""),
+                        "child_d1": _num(r.get("child_d1")),
+                        "child_w1": _num(r.get("child_w1")),
+                        "child_residual": _num(r.get("child_residual")),
+                        "score": _num(r.get("score")),
+                        "bull_eligible": side == "buy",
+                        "bear_eligible": side == "sell",
+                    }
     return {
         "market_tone": market_tone,
         "market_state": market_state,
@@ -494,6 +521,7 @@ def load_day_context(date: str) -> dict:
         "lanes": lanes,
         "marks": marks,
         "opp": opp,
+        "actions": actions,
     }
 
 
@@ -589,9 +617,12 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
                book_opp: dict[str, float] | None = None,
                era_skip: list[str] | None = None,
                lattice_live: bool | None = None,
-               prior_sess: dict | None = None) -> dict:
+               prior_sess: dict | None = None,
+               card: dict | None = None,
+               prev_boxes: dict | None = None) -> dict:
     t = row["ticker"]
-    card = scan._scan_session(sess, t) if sess else {}
+    if card is None:
+        card = scan._scan_session(sess, t) if sess else {}
     card = card or {}
     boxes = dict(card.get("boxes") or {k: "missing" for k, _ in tl.BOX_COLS})
     vintage = dict(card.get("factor_vintage") or {})
@@ -632,9 +663,8 @@ def color_name(sess: dict | None, row: dict, buy_today: set[str],
         domains, market_state=market_state, saved=saved_lane,
         lattice_live=bool(lattice_live),
     )
-    prev_boxes = None
     stored_marks = (book_marks or {}).get(t) or {}
-    if not stored_marks.get("from_book") and prior_sess:
+    if prev_boxes is None and not stored_marks.get("from_book") and prior_sess:
         prev_card = scan._scan_session(prior_sess, t) or {}
         prev_boxes = prev_card.get("boxes")
     marks = _marks_pack(row, book_marks, t, boxes=boxes, prev_boxes=prev_boxes)
