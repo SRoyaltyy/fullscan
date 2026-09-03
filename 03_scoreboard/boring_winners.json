@@ -1,8 +1,8 @@
 {
   "generated_from": "/home/runner/work/fullscan/fullscan/03_scoreboard/feature_asof_panel.parquet",
   "mode": "book_x_mine_overlay",
-  "live_date": "2026-09-02",
-  "missing_live_book": false,
+  "live_date": "2026-09-03",
+  "missing_live_book": true,
   "seats": 25,
   "sector_cap": 6,
   "max_extras": 5,
@@ -4973,29 +4973,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -5008,7 +5008,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "neutral",
             "setup": "missing",
             "flow": "bad"
           },
@@ -5061,29 +5061,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -5096,7 +5096,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "neutral",
             "setup": "missing",
             "flow": "bad"
           },
@@ -5147,31 +5147,31 @@
           },
           "marks_cell": "\u2014 \u2014 \u26aa",
           "condition": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 0,
-            "n": 5
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 0,
-            "n": 5,
-            "balance": 0.6
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe1",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -5184,7 +5184,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "neutral",
             "setup": "missing",
             "flow": "neutral"
           },
@@ -7221,40 +7221,40 @@
           "marks": {
             "blue": true,
             "alarm": false,
-            "white": true,
-            "icons": "\ud83d\udd35\u26aa",
+            "white": false,
+            "icons": "\ud83d\udd35",
             "from_book": false,
             "have_compare": true,
             "have_today": true,
             "source": "asof"
           },
-          "marks_cell": "\ud83d\udd35 \u2014 \u26aa",
+          "marks_cell": "\ud83d\udd35 \u2014 \u2014",
           "condition": {
             "tone": "good",
             "good": 4,
             "neutral": 1,
-            "bad": 0,
-            "n": 5
+            "bad": 1,
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 4,
             "neutral": 1,
-            "bad": 0,
-            "n": 5,
-            "balance": 0.8
+            "bad": 1,
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe2 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe2 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udfe2",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7267,7 +7267,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "good"
           },
@@ -7309,40 +7309,40 @@
           "marks": {
             "blue": true,
             "alarm": false,
-            "white": true,
-            "icons": "\ud83d\udd35\u26aa",
+            "white": false,
+            "icons": "\ud83d\udd35",
             "from_book": false,
             "have_compare": true,
             "have_today": true,
             "source": "asof"
           },
-          "marks_cell": "\ud83d\udd35 \u2014 \u26aa",
+          "marks_cell": "\ud83d\udd35 \u2014 \u2014",
           "condition": {
             "tone": "good",
             "good": 3,
             "neutral": 2,
-            "bad": 0,
-            "n": 5
+            "bad": 1,
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
             "neutral": 2,
-            "bad": 0,
-            "n": 5,
-            "balance": 0.6
+            "bad": 1,
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe1",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7355,7 +7355,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "neutral"
           },
@@ -7409,28 +7409,28 @@
             "tone": "good",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5
+            "bad": 2,
+            "n": 6
           },
           "region": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "bad": 2,
+            "n": 6,
+            "balance": 0.167
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7443,7 +7443,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "bad"
           },
@@ -7497,28 +7497,28 @@
             "tone": "good",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5
+            "bad": 2,
+            "n": 6
           },
           "region": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "bad": 2,
+            "n": 6,
+            "balance": 0.167
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7531,7 +7531,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "bad"
           },
@@ -7584,21 +7584,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 7,
+            "balance": 0.429
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -7606,7 +7606,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7672,21 +7672,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 7,
+            "balance": 0.429
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -7694,7 +7694,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7758,23 +7758,23 @@
           },
           "marks_cell": "\u2014 \ud83d\udea8 \u2014",
           "condition": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 1,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 1,
-            "n": 6,
-            "balance": 0.333
+            "n": 7,
+            "balance": 0.286
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "neutral",
@@ -7782,7 +7782,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -7848,21 +7848,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 7,
+            "balance": 0.429
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -7870,7 +7870,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -9942,29 +9942,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -9977,7 +9977,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "neutral",
             "setup": "missing",
             "flow": "bad"
           },
@@ -10298,29 +10298,29 @@
           "condition": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 1,
+            "neutral": 2,
             "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -10333,7 +10333,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "neutral",
             "setup": "missing",
             "flow": "bad"
           },
@@ -10474,31 +10474,31 @@
           },
           "marks_cell": "\u2014 \u2014 \u26aa",
           "condition": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 0,
-            "n": 5
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 0,
-            "n": 5,
-            "balance": 0.6
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe1",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe1 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -10511,7 +10511,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "neutral",
             "setup": "missing",
             "flow": "neutral"
           },
@@ -13134,21 +13134,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 7,
+            "balance": 0.429
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -13156,7 +13156,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14025,28 +14025,28 @@
             "tone": "good",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5
+            "bad": 2,
+            "n": 6
           },
           "region": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "bad": 2,
+            "n": 6,
+            "balance": 0.167
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14059,7 +14059,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "bad"
           },
@@ -14291,21 +14291,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 7,
+            "balance": 0.429
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -14313,7 +14313,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14381,28 +14381,28 @@
             "tone": "good",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5
+            "bad": 2,
+            "n": 6
           },
           "region": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
             "neutral": 1,
-            "bad": 1,
-            "n": 5,
-            "balance": 0.4
+            "bad": 2,
+            "n": 6,
+            "balance": 0.167
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14415,7 +14415,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "bad"
           },
@@ -14469,21 +14469,21 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 3,
+            "neutral": 4,
             "bad": 0,
-            "n": 6,
-            "balance": 0.5
+            "n": 7,
+            "balance": 0.429
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "neutral",
@@ -14491,7 +14491,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14645,23 +14645,23 @@
           },
           "marks_cell": "\u2014 \ud83d\udea8 \u2014",
           "condition": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 1,
-            "n": 6
+            "n": 7
           },
           "region": {
             "tone": "good",
             "good": 3,
-            "neutral": 2,
+            "neutral": 3,
             "bad": 1,
-            "n": 6,
-            "balance": 0.333
+            "n": 7,
+            "balance": 0.286
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe1 sect\ud83d\udfe2 gen\ud83d\udfe2 news\ud83d\udfe2 dig\u2b1c jdg\ud83d\udfe1 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udd34 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udfe2 set\u2b1c flw\ud83d\udd34",
           "boxes": {
             "join": "neutral",
@@ -14669,7 +14669,7 @@
             "gen": "good",
             "news": "good",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "neutral",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14814,40 +14814,40 @@
           "marks": {
             "blue": true,
             "alarm": false,
-            "white": true,
-            "icons": "\ud83d\udd35\u26aa",
+            "white": false,
+            "icons": "\ud83d\udd35",
             "from_book": false,
             "have_compare": true,
             "have_today": true,
             "source": "asof"
           },
-          "marks_cell": "\ud83d\udd35 \u2014 \u26aa",
+          "marks_cell": "\ud83d\udd35 \u2014 \u2014",
           "condition": {
             "tone": "good",
             "good": 3,
             "neutral": 2,
-            "bad": 0,
-            "n": 5
+            "bad": 1,
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 3,
             "neutral": 2,
-            "bad": 0,
-            "n": 5,
-            "balance": 0.6
+            "bad": 1,
+            "n": 6,
+            "balance": 0.333
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe1",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe1 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udfe1",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -14860,7 +14860,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "neutral"
           },
@@ -14992,40 +14992,40 @@
           "marks": {
             "blue": true,
             "alarm": false,
-            "white": true,
-            "icons": "\ud83d\udd35\u26aa",
+            "white": false,
+            "icons": "\ud83d\udd35",
             "from_book": false,
             "have_compare": true,
             "have_today": true,
             "source": "asof"
           },
-          "marks_cell": "\ud83d\udd35 \u2014 \u26aa",
+          "marks_cell": "\ud83d\udd35 \u2014 \u2014",
           "condition": {
             "tone": "good",
             "good": 4,
             "neutral": 1,
-            "bad": 0,
-            "n": 5
+            "bad": 1,
+            "n": 6
           },
           "region": {
             "tone": "good",
             "good": 4,
             "neutral": 1,
-            "bad": 0,
-            "n": 5,
-            "balance": 0.8
+            "bad": 1,
+            "n": 6,
+            "balance": 0.5
           },
           "lane": null,
           "lane_label": "\u2b1c",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\u2b1c AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe2 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
-          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\u2b1b set\u2b1c flw\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\u2b1c jdg\ud83d\udd34 AB\u2b1c peer\u2b1c heat\u2b1c vol\ud83d\udfe2 cat\u2b1c buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled_domains": "mkt\ud83d\udfe2 par\ud83d\udfe2 chd\u2b1c co\ud83d\udd34 set\u2b1c flw\ud83d\udfe2",
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "missing",
-            "judge": "missing",
+            "judge": "bad",
             "ab": "missing",
             "peer": "missing",
             "heat": "missing",
@@ -15038,7 +15038,7 @@
             "market": "good",
             "parent": "good",
             "child": "missing",
-            "company": "missing",
+            "company": "bad",
             "setup": "missing",
             "flow": "good"
           },
@@ -33848,7 +33848,19 @@
           "payoff": 0.745
         },
         "3d": {
-          "n": 0
+          "n": 2684,
+          "n_win": 1018,
+          "n_loss": 1628,
+          "n_flat": 38,
+          "p_win": 0.3793,
+          "p_loss": 0.6066,
+          "p_flat": 0.0142,
+          "mean": -0.84,
+          "mean_clip30": -0.873,
+          "median": -0.839,
+          "avg_win": 3.318,
+          "avg_loss": -3.46,
+          "payoff": 0.959
         },
         "1w": {
           "n": 0
@@ -33886,7 +33898,19 @@
           "payoff": 1.249
         },
         "3d": {
-          "n": 0
+          "n": 15,
+          "n_win": 8,
+          "n_loss": 7,
+          "n_flat": 0,
+          "p_win": 0.5333,
+          "p_loss": 0.4667,
+          "p_flat": 0.0,
+          "mean": -0.499,
+          "mean_clip30": -0.499,
+          "median": 0.511,
+          "avg_win": 4.641,
+          "avg_loss": -6.373,
+          "payoff": 0.728
         },
         "1w": {
           "n": 0
@@ -33924,7 +33948,19 @@
           "payoff": 0.529
         },
         "3d": {
-          "n": 0
+          "n": 12,
+          "n_win": 6,
+          "n_loss": 6,
+          "n_flat": 0,
+          "p_win": 0.5,
+          "p_loss": 0.5,
+          "p_flat": 0.0,
+          "mean": -0.868,
+          "mean_clip30": -0.868,
+          "median": -0.092,
+          "avg_win": 1.922,
+          "avg_loss": -3.658,
+          "payoff": 0.525
         },
         "1w": {
           "n": 0
@@ -33962,7 +33998,19 @@
           "payoff": 0.058
         },
         "3d": {
-          "n": 0
+          "n": 8,
+          "n_win": 3,
+          "n_loss": 4,
+          "n_flat": 1,
+          "p_win": 0.375,
+          "p_loss": 0.5,
+          "p_flat": 0.125,
+          "mean": -6.225,
+          "mean_clip30": -6.225,
+          "median": -1.03,
+          "avg_win": 2.239,
+          "avg_loss": -14.128,
+          "payoff": 0.158
         },
         "1w": {
           "n": 0
@@ -33971,13 +34019,13 @@
       "book": {
         "1d": -0.329,
         "2d": -1.275,
-        "3d": null,
+        "3d": -0.868,
         "1w": null
       },
       "short_book": {
         "1d": 2.933,
         "2d": 3.932,
-        "3d": null,
+        "3d": 6.225,
         "1w": null
       },
       "vs_book": {
@@ -33998,7 +34046,7 @@
         "book": {
           "1d": -0.485,
           "2d": -0.805,
-          "3d": null,
+          "3d": -0.009,
           "1w": null
         },
         "stats": {
@@ -34033,7 +34081,19 @@
             "payoff": 0.536
           },
           "3d": {
-            "n": 0
+            "n": 10,
+            "n_win": 6,
+            "n_loss": 4,
+            "n_flat": 0,
+            "p_win": 0.6,
+            "p_loss": 0.4,
+            "p_flat": 0.0,
+            "mean": -0.009,
+            "mean_clip30": -0.009,
+            "median": 0.719,
+            "avg_win": 1.922,
+            "avg_loss": -2.906,
+            "payoff": 0.661
           },
           "1w": {
             "n": 0
@@ -34043,7 +34103,7 @@
       "vs_mine": {
         "1d": -0.084,
         "2d": -1.116,
-        "3d": null,
+        "3d": -1.111,
         "1w": null
       },
       "mine_rule_used": "hot_ab_peer+steady_blue+blue",
@@ -34071,7 +34131,7 @@
           "sector": "Technology",
           "ret_1d": 0.622,
           "ret_2d": 1.65,
-          "ret_3d": null,
+          "ret_3d": 1.185,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34159,7 +34219,7 @@
           "sector": "Energy",
           "ret_1d": 1.088,
           "ret_2d": 2.511,
-          "ret_3d": null,
+          "ret_3d": 2.866,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34247,7 +34307,7 @@
           "sector": "Financial",
           "ret_1d": 6.362,
           "ret_2d": -3.103,
-          "ret_3d": null,
+          "ret_3d": -0.501,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34335,7 +34395,7 @@
           "sector": "Energy",
           "ret_1d": -0.672,
           "ret_2d": 1.253,
-          "ret_3d": null,
+          "ret_3d": 0.275,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34423,7 +34483,7 @@
           "sector": "Financial",
           "ret_1d": -8.67,
           "ret_2d": -8.149,
-          "ret_3d": null,
+          "ret_3d": -6.86,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34511,7 +34571,7 @@
           "sector": "Basic Materials",
           "ret_1d": -0.065,
           "ret_2d": -0.6,
-          "ret_3d": null,
+          "ret_3d": -0.459,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34599,7 +34659,7 @@
           "sector": "Consumer Cyclical",
           "ret_1d": -2.826,
           "ret_2d": -3.826,
-          "ret_3d": null,
+          "ret_3d": -3.803,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34687,7 +34747,7 @@
           "sector": "Energy",
           "ret_1d": 0.905,
           "ret_2d": 2.242,
-          "ret_3d": null,
+          "ret_3d": 3.31,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34775,7 +34835,7 @@
           "sector": "Financial",
           "ret_1d": -1.382,
           "ret_2d": -1.671,
-          "ret_3d": null,
+          "ret_3d": 1.163,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34863,7 +34923,7 @@
           "sector": "Healthcare",
           "ret_1d": -0.216,
           "ret_2d": 1.64,
-          "ret_3d": null,
+          "ret_3d": 2.735,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -34951,7 +35011,7 @@
           "sector": "Technology",
           "ret_1d": -0.64,
           "ret_2d": -5.413,
-          "ret_3d": null,
+          "ret_3d": -8.693,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -35039,7 +35099,7 @@
           "sector": "Basic Materials",
           "ret_1d": 1.543,
           "ret_2d": -1.829,
-          "ret_3d": null,
+          "ret_3d": -1.629,
           "ret_1w": null,
           "side": "buy",
           "action": "buy",
@@ -35129,7 +35189,7 @@
           "sector": "Consumer Cyclical",
           "ret_1d": -2.183,
           "ret_2d": -0.624,
-          "ret_3d": null,
+          "ret_3d": 0.0,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35185,7 +35245,7 @@
           "sector": "Utilities",
           "ret_1d": 0.343,
           "ret_2d": -1.248,
-          "ret_3d": null,
+          "ret_3d": -2.06,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35241,7 +35301,7 @@
           "sector": "Consumer Cyclical",
           "ret_1d": -2.222,
           "ret_2d": -8.889,
-          "ret_3d": null,
+          "ret_3d": -24.444,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35297,7 +35357,7 @@
           "sector": "Consumer Cyclical",
           "ret_1d": -3.75,
           "ret_2d": -5.0,
-          "ret_3d": null,
+          "ret_3d": 5.0,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35353,7 +35413,7 @@
           "sector": "Technology",
           "ret_1d": -9.677,
           "ret_2d": -10.753,
-          "ret_3d": null,
+          "ret_3d": -10.681,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35409,7 +35469,7 @@
           "sector": "Industrials",
           "ret_1d": -5.154,
           "ret_2d": -4.314,
-          "ret_3d": null,
+          "ret_3d": -19.328,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35465,7 +35525,7 @@
           "sector": "Industrials",
           "ret_1d": -0.298,
           "ret_2d": -0.893,
-          "ret_3d": null,
+          "ret_3d": 1.19,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -35521,7 +35581,7 @@
           "sector": "Real Estate",
           "ret_1d": -0.526,
           "ret_2d": 0.263,
-          "ret_3d": null,
+          "ret_3d": 0.526,
           "ret_1w": null,
           "side": "sell",
           "action": "short",
@@ -37871,7 +37931,19 @@
           "payoff": 0.734
         },
         "2d": {
-          "n": 0
+          "n": 2682,
+          "n_win": 1286,
+          "n_loss": 1350,
+          "n_flat": 46,
+          "p_win": 0.4795,
+          "p_loss": 0.5034,
+          "p_flat": 0.0172,
+          "mean": -0.069,
+          "mean_clip30": -0.049,
+          "median": -0.027,
+          "avg_win": 2.715,
+          "avg_loss": -2.722,
+          "payoff": 0.997
         },
         "3d": {
           "n": 0
@@ -37897,7 +37969,19 @@
           "payoff": 1.102
         },
         "2d": {
-          "n": 0
+          "n": 65,
+          "n_win": 36,
+          "n_loss": 27,
+          "n_flat": 2,
+          "p_win": 0.5538,
+          "p_loss": 0.4154,
+          "p_flat": 0.0308,
+          "mean": 0.039,
+          "mean_clip30": 0.039,
+          "median": 0.3,
+          "avg_win": 1.819,
+          "avg_loss": -2.33,
+          "payoff": 0.781
         },
         "3d": {
           "n": 0
@@ -37923,7 +38007,19 @@
           "payoff": 0.391
         },
         "2d": {
-          "n": 0
+          "n": 11,
+          "n_win": 6,
+          "n_loss": 5,
+          "n_flat": 0,
+          "p_win": 0.5455,
+          "p_loss": 0.4545,
+          "p_flat": 0.0,
+          "mean": -0.603,
+          "mean_clip30": -0.603,
+          "median": 0.176,
+          "avg_win": 0.663,
+          "avg_loss": -2.122,
+          "payoff": 0.312
         },
         "3d": {
           "n": 0
@@ -37949,7 +38045,19 @@
           "payoff": null
         },
         "2d": {
-          "n": 0
+          "n": 7,
+          "n_win": 3,
+          "n_loss": 3,
+          "n_flat": 1,
+          "p_win": 0.4286,
+          "p_loss": 0.4286,
+          "p_flat": 0.1429,
+          "mean": -0.547,
+          "mean_clip30": -0.547,
+          "median": 0.0,
+          "avg_win": 2.835,
+          "avg_loss": -4.112,
+          "payoff": 0.689
         },
         "3d": {
           "n": 0
@@ -37960,13 +38068,13 @@
       },
       "book": {
         "1d": -1.008,
-        "2d": null,
+        "2d": -0.603,
         "3d": null,
         "1w": null
       },
       "short_book": {
         "1d": 2.437,
-        "2d": null,
+        "2d": 0.547,
         "3d": null,
         "1w": null
       },
@@ -37987,7 +38095,7 @@
         ],
         "book": {
           "1d": -1.006,
-          "2d": null,
+          "2d": -0.508,
           "3d": null,
           "1w": null
         },
@@ -38008,7 +38116,19 @@
             "payoff": 0.379
           },
           "2d": {
-            "n": 0
+            "n": 10,
+            "n_win": 6,
+            "n_loss": 4,
+            "n_flat": 0,
+            "p_win": 0.6,
+            "p_loss": 0.4,
+            "p_flat": 0.0,
+            "mean": -0.508,
+            "mean_clip30": -0.508,
+            "median": 0.264,
+            "avg_win": 0.663,
+            "avg_loss": -2.265,
+            "payoff": 0.293
           },
           "3d": {
             "n": 0
@@ -38020,7 +38140,7 @@
       },
       "vs_mine": {
         "1d": -0.638,
-        "2d": null,
+        "2d": 0.332,
         "3d": null,
         "1w": null
       },
@@ -38048,7 +38168,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.055,
-          "ret_2d": null,
+          "ret_2d": 0.854,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38136,7 +38256,7 @@
           "gap": "down",
           "sector": "Energy",
           "ret_1d": -1.036,
-          "ret_2d": null,
+          "ret_2d": 0.352,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38224,7 +38344,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.685,
-          "ret_2d": null,
+          "ret_2d": -2.083,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38312,7 +38432,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.534,
-          "ret_2d": null,
+          "ret_2d": 0.176,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38400,7 +38520,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -0.115,
-          "ret_2d": null,
+          "ret_2d": 0.472,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38488,7 +38608,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -2.719,
-          "ret_2d": null,
+          "ret_2d": -5.226,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38576,7 +38696,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": 0.033,
-          "ret_2d": null,
+          "ret_2d": -0.033,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38664,7 +38784,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.369,
-          "ret_2d": null,
+          "ret_2d": 1.565,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38752,7 +38872,7 @@
           "gap": "flat",
           "sector": "Healthcare",
           "ret_1d": -1.606,
-          "ret_2d": null,
+          "ret_2d": -1.718,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38840,7 +38960,7 @@
           "gap": "flat",
           "sector": "Technology",
           "ret_1d": 1.022,
-          "ret_2d": null,
+          "ret_2d": 0.56,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -38928,7 +39048,7 @@
           "gap": "flat",
           "sector": "Technology",
           "ret_1d": -1.024,
-          "ret_2d": null,
+          "ret_2d": -1.549,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -39018,7 +39138,7 @@
           "gap": "flat",
           "sector": "Industrials",
           "ret_1d": -1.758,
-          "ret_2d": null,
+          "ret_2d": 1.978,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39074,7 +39194,7 @@
           "gap": "flat",
           "sector": "Financial",
           "ret_1d": -0.762,
-          "ret_2d": null,
+          "ret_2d": 3.275,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39130,7 +39250,7 @@
           "gap": "flat",
           "sector": "Real Estate",
           "ret_1d": -3.492,
-          "ret_2d": null,
+          "ret_2d": -1.905,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39186,7 +39306,7 @@
           "gap": "flat",
           "sector": "Basic Materials",
           "ret_1d": -3.571,
-          "ret_2d": null,
+          "ret_2d": -5.075,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39242,7 +39362,7 @@
           "gap": "flat",
           "sector": "Financial",
           "ret_1d": -3.571,
-          "ret_2d": null,
+          "ret_2d": -5.357,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39298,7 +39418,7 @@
           "gap": "up",
           "sector": "Communication Services",
           "ret_1d": -1.786,
-          "ret_2d": null,
+          "ret_2d": 0.0,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39354,7 +39474,7 @@
           "gap": "flat",
           "sector": "Basic Materials",
           "ret_1d": -2.122,
-          "ret_2d": null,
+          "ret_2d": 3.253,
           "ret_3d": null,
           "ret_1w": null,
           "side": "sell",
@@ -39414,7 +39534,7 @@
           "sector": "Healthcare",
           "ret_1d": -0.216,
           "ret_2d": 1.64,
-          "ret_3d": null,
+          "ret_3d": 2.735,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -39503,7 +39623,7 @@
           "sector": "Consumer Cyclical",
           "ret_1d": -2.826,
           "ret_2d": -3.826,
-          "ret_3d": null,
+          "ret_3d": -3.803,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -39592,7 +39712,7 @@
           "sector": "Financial",
           "ret_1d": -8.67,
           "ret_2d": -8.149,
-          "ret_3d": null,
+          "ret_3d": -6.86,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -39681,7 +39801,7 @@
           "sector": "Financial",
           "ret_1d": 6.362,
           "ret_2d": -3.103,
-          "ret_3d": null,
+          "ret_3d": -0.501,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -39770,7 +39890,7 @@
           "sector": "Financial",
           "ret_1d": -1.382,
           "ret_2d": -1.671,
-          "ret_3d": null,
+          "ret_3d": 1.163,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -39859,7 +39979,7 @@
           "sector": "Energy",
           "ret_1d": -0.672,
           "ret_2d": 1.253,
-          "ret_3d": null,
+          "ret_3d": 0.275,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -39948,7 +40068,7 @@
           "sector": "Energy",
           "ret_1d": 1.088,
           "ret_2d": 2.511,
-          "ret_3d": null,
+          "ret_3d": 2.866,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -40037,7 +40157,7 @@
           "sector": "Basic Materials",
           "ret_1d": 1.543,
           "ret_2d": -1.829,
-          "ret_3d": null,
+          "ret_3d": -1.629,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -40126,7 +40246,7 @@
           "sector": "Basic Materials",
           "ret_1d": -0.065,
           "ret_2d": -0.6,
-          "ret_3d": null,
+          "ret_3d": -0.459,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -40215,7 +40335,7 @@
           "sector": "Energy",
           "ret_1d": 0.905,
           "ret_2d": 2.242,
-          "ret_3d": null,
+          "ret_3d": 3.31,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -40304,7 +40424,7 @@
           "sector": "Technology",
           "ret_1d": -0.64,
           "ret_2d": -5.413,
-          "ret_3d": null,
+          "ret_3d": -8.693,
           "ret_1w": null,
           "side": "buy",
           "action": "sell",
@@ -40441,7 +40561,19 @@
       "short_held": [],
       "uni": {
         "1d": {
-          "n": 0
+          "n": 2682,
+          "n_win": 1781,
+          "n_loss": 846,
+          "n_flat": 55,
+          "p_win": 0.6641,
+          "p_loss": 0.3154,
+          "p_flat": 0.0205,
+          "mean": 1.084,
+          "mean_clip30": 1.09,
+          "median": 0.752,
+          "avg_win": 2.357,
+          "avg_loss": -1.526,
+          "payoff": 1.545
         },
         "2d": {
           "n": 0
@@ -40455,7 +40587,19 @@
       },
       "pool": {
         "1d": {
-          "n": 0
+          "n": 48,
+          "n_win": 25,
+          "n_loss": 23,
+          "n_flat": 0,
+          "p_win": 0.5208,
+          "p_loss": 0.4792,
+          "p_flat": 0.0,
+          "mean": -0.256,
+          "mean_clip30": -0.256,
+          "median": 0.152,
+          "avg_win": 2.034,
+          "avg_loss": -2.745,
+          "payoff": 0.741
         },
         "2d": {
           "n": 0
@@ -40469,7 +40613,19 @@
       },
       "seats": {
         "1d": {
-          "n": 0
+          "n": 13,
+          "n_win": 7,
+          "n_loss": 5,
+          "n_flat": 1,
+          "p_win": 0.5385,
+          "p_loss": 0.3846,
+          "p_flat": 0.0769,
+          "mean": 0.079,
+          "mean_clip30": 0.079,
+          "median": 0.152,
+          "avg_win": 0.811,
+          "avg_loss": -0.929,
+          "payoff": 0.873
         },
         "2d": {
           "n": 0
@@ -40483,7 +40639,19 @@
       },
       "shorts": {
         "1d": {
-          "n": 0
+          "n": 4,
+          "n_win": 2,
+          "n_loss": 2,
+          "n_flat": 0,
+          "p_win": 0.5,
+          "p_loss": 0.5,
+          "p_flat": 0.0,
+          "mean": 0.151,
+          "mean_clip30": 0.151,
+          "median": 0.165,
+          "avg_win": 0.655,
+          "avg_loss": -0.354,
+          "payoff": 1.85
         },
         "2d": {
           "n": 0
@@ -40496,20 +40664,20 @@
         }
       },
       "book": {
-        "1d": null,
+        "1d": 0.079,
         "2d": null,
         "3d": null,
         "1w": null
       },
       "short_book": {
-        "1d": null,
+        "1d": -0.151,
         "2d": null,
         "3d": null,
         "1w": null
       },
       "vs_book": {
         "n": 10,
-        "n_priced": 0,
+        "n_priced": 10,
         "tickers": [
           "CVS",
           "CVE",
@@ -40523,14 +40691,26 @@
           "CVX"
         ],
         "book": {
-          "1d": null,
+          "1d": 0.411,
           "2d": null,
           "3d": null,
           "1w": null
         },
         "stats": {
           "1d": {
-            "n": 0
+            "n": 10,
+            "n_win": 6,
+            "n_loss": 3,
+            "n_flat": 1,
+            "p_win": 0.6,
+            "p_loss": 0.3,
+            "p_flat": 0.1,
+            "mean": 0.411,
+            "mean_clip30": 0.411,
+            "median": 0.378,
+            "avg_win": 0.921,
+            "avg_loss": -0.47,
+            "payoff": 1.96
           },
           "2d": {
             "n": 0
@@ -40544,7 +40724,7 @@
         }
       },
       "vs_mine": {
-        "1d": null,
+        "1d": -0.294,
         "2d": null,
         "3d": null,
         "1w": null
@@ -40572,7 +40752,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Energy",
-          "ret_1d": null,
+          "ret_1d": 0.653,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -40660,7 +40840,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Defensive",
-          "ret_1d": null,
+          "ret_1d": 1.504,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -40748,7 +40928,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Healthcare",
-          "ret_1d": null,
+          "ret_1d": -0.379,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -40836,7 +41016,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Defensive",
-          "ret_1d": null,
+          "ret_1d": 0.982,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -40924,7 +41104,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Healthcare",
-          "ret_1d": null,
+          "ret_1d": 1.629,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41012,7 +41192,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Energy",
-          "ret_1d": null,
+          "ret_1d": -0.966,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41100,7 +41280,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Energy",
-          "ret_1d": null,
+          "ret_1d": 0.346,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41188,7 +41368,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Energy",
-          "ret_1d": null,
+          "ret_1d": 0.411,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41276,7 +41456,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Energy",
-          "ret_1d": null,
+          "ret_1d": 0.0,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41364,7 +41544,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Communication Services",
-          "ret_1d": null,
+          "ret_1d": -1.425,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41452,7 +41632,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Defensive",
-          "ret_1d": null,
+          "ret_1d": -1.809,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41540,7 +41720,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Defensive",
-          "ret_1d": null,
+          "ret_1d": 0.152,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41628,7 +41808,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Energy",
-          "ret_1d": null,
+          "ret_1d": -0.066,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41718,7 +41898,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Cyclical",
-          "ret_1d": null,
+          "ret_1d": -0.439,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41774,7 +41954,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Cyclical",
-          "ret_1d": null,
+          "ret_1d": -0.268,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41830,7 +42010,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Basic Materials",
-          "ret_1d": null,
+          "ret_1d": 0.598,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41886,7 +42066,7 @@
           "rsi": "missing",
           "gap": "missing",
           "sector": "Consumer Cyclical",
-          "ret_1d": null,
+          "ret_1d": 0.712,
           "ret_2d": null,
           "ret_3d": null,
           "ret_1w": null,
@@ -41946,7 +42126,7 @@
           "gap": "down",
           "sector": "Energy",
           "ret_1d": -1.036,
-          "ret_2d": null,
+          "ret_2d": 0.352,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42035,7 +42215,7 @@
           "gap": "flat",
           "sector": "Technology",
           "ret_1d": 1.022,
-          "ret_2d": null,
+          "ret_2d": 0.56,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42124,7 +42304,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.055,
-          "ret_2d": null,
+          "ret_2d": 0.854,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42213,7 +42393,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -2.719,
-          "ret_2d": null,
+          "ret_2d": -5.226,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42302,7 +42482,7 @@
           "gap": "flat",
           "sector": "Healthcare",
           "ret_1d": -1.606,
-          "ret_2d": null,
+          "ret_2d": -1.718,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42391,7 +42571,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.534,
-          "ret_2d": null,
+          "ret_2d": 0.176,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42480,7 +42660,7 @@
           "gap": "flat",
           "sector": "Technology",
           "ret_1d": -1.024,
-          "ret_2d": null,
+          "ret_2d": -1.549,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42569,7 +42749,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.369,
-          "ret_2d": null,
+          "ret_2d": 1.565,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42658,7 +42838,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -1.685,
-          "ret_2d": null,
+          "ret_2d": -2.083,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42747,7 +42927,7 @@
           "gap": "flat",
           "sector": "Energy",
           "ret_1d": -0.115,
-          "ret_2d": null,
+          "ret_2d": 0.472,
           "ret_3d": null,
           "ret_1w": null,
           "side": "buy",
@@ -42819,89 +42999,89 @@
   ],
   "totals": {
     "long_1d_days": {
-      "n_days": 11,
-      "n_win_days": 5,
+      "n_days": 12,
+      "n_win_days": 6,
       "n_loss_days": 6,
-      "p_loss_day": 0.5455,
-      "p_win_day": 0.4545,
-      "mean_day": 0.166,
-      "avg_win_day": 1.182,
+      "p_loss_day": 0.5,
+      "p_win_day": 0.5,
+      "mean_day": 0.159,
+      "avg_win_day": 0.998,
       "avg_loss_day": -0.68,
-      "cum_sum": 1.829
+      "cum_sum": 1.908
     },
     "long_2d_days": {
-      "n_days": 10,
+      "n_days": 11,
       "n_win_days": 4,
-      "n_loss_days": 6,
-      "p_loss_day": 0.6,
-      "p_win_day": 0.4,
-      "mean_day": 0.156,
+      "n_loss_days": 7,
+      "p_loss_day": 0.6364,
+      "p_win_day": 0.3636,
+      "mean_day": 0.087,
       "avg_win_day": 1.482,
-      "avg_loss_day": -0.728,
-      "cum_sum": 1.559
+      "avg_loss_day": -0.71,
+      "cum_sum": 0.956
     },
     "short_1d_days": {
-      "n_days": 2,
+      "n_days": 3,
       "n_win_days": 2,
-      "n_loss_days": 0,
-      "p_loss_day": 0.0,
-      "p_win_day": 1.0,
-      "mean_day": 2.685,
+      "n_loss_days": 1,
+      "p_loss_day": 0.3333,
+      "p_win_day": 0.6667,
+      "mean_day": 1.74,
       "avg_win_day": 2.685,
-      "avg_loss_day": null,
-      "cum_sum": 5.37
+      "avg_loss_day": -0.151,
+      "cum_sum": 5.219
     },
     "long_1d_names": {
-      "n": 212,
-      "n_win": 97,
-      "n_loss": 101,
-      "n_flat": 14,
-      "p_win": 0.4575,
-      "p_loss": 0.4764,
-      "p_flat": 0.066,
-      "mean": 0.16,
-      "mean_clip30": 0.16,
+      "n": 225,
+      "n_win": 104,
+      "n_loss": 106,
+      "n_flat": 15,
+      "p_win": 0.4622,
+      "p_loss": 0.4711,
+      "p_flat": 0.0667,
+      "mean": 0.155,
+      "mean_clip30": 0.155,
       "median": 0.0,
-      "avg_win": 2.532,
-      "avg_loss": -2.097,
-      "payoff": 1.207
+      "avg_win": 2.416,
+      "avg_loss": -2.042,
+      "payoff": 1.183
     },
     "long_2d_names": {
-      "n": 201,
-      "n_win": 101,
-      "n_loss": 100,
+      "n": 212,
+      "n_win": 107,
+      "n_loss": 105,
       "n_flat": 0,
-      "p_win": 0.5025,
-      "p_loss": 0.4975,
+      "p_win": 0.5047,
+      "p_loss": 0.4953,
       "p_flat": 0.0,
-      "mean": 0.166,
-      "mean_clip30": 0.166,
-      "median": 0.035,
-      "avg_win": 3.395,
-      "avg_loss": -3.096,
-      "payoff": 1.097
+      "mean": 0.126,
+      "mean_clip30": 0.126,
+      "median": 0.105,
+      "avg_win": 3.242,
+      "avg_loss": -3.05,
+      "payoff": 1.063
     },
     "stock_book_1d_days": {
-      "n_days": 11,
-      "n_win_days": 5,
+      "n_days": 12,
+      "n_win_days": 6,
       "n_loss_days": 6,
-      "p_loss_day": 0.5455,
-      "p_win_day": 0.4545,
-      "mean_day": 0.09,
-      "avg_win_day": 1.171,
+      "p_loss_day": 0.5,
+      "p_win_day": 0.5,
+      "mean_day": 0.117,
+      "avg_win_day": 1.044,
       "avg_loss_day": -0.81,
-      "cum_sum": 0.993
+      "cum_sum": 1.404
     },
     "mine_only_1d_days": {
-      "n_days": 11,
+      "n_days": 12,
       "n_win_days": 5,
-      "n_loss_days": 6,
-      "p_loss_day": 0.5455,
-      "p_win_day": 0.4545,
-      "mean_day": 0.293,
+      "n_loss_days": 7,
+      "p_loss_day": 0.5833,
+      "p_win_day": 0.4167,
+      "mean_day": 0.244,
       "avg_win_day": 1.585,
-      "avg_loss_day": -0.783,
-      "cum_sum": 3.226
+      "avg_loss_day": -0.713,
+      "cum_sum": 2.932
     }
   }
 }
