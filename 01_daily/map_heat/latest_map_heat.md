@@ -5,54 +5,54 @@ Export `finviz_2026-09-03.csv` · 11640 names · generated 2026-09-03T01:47:39.3
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7669.5 | -0.10% |
-| Nasdaq 100 (NQ) | 29129.0 | -0.17% |
-| Russell 2000 (ER2) | 2956.2 | -0.08% |
-| DJIA (YM) | 53145.0 | +0.06% |
-| VIX (VX) | 16.7 | +0.89% |
-| Crude Oil WTI (CL) | 90.01 | -1.11% |
-| Crude Oil Brent (QA) | 94.38 | -1.30% |
-| Natural Gas (NG) | 3.009 | +1.83% |
-| Heating Oil (HO) | 4.6333 | -0.97% |
-| Gasoline RBOB (RB) | 3.0765 | -0.76% |
-| Gold (GC) | 4475.0 | +1.41% |
-| Silver (SI) | 66.325 | +1.43% |
-| Copper (HG) | 6.5895 | -0.08% |
-| Platinum (PL) | 1778.9 | +0.89% |
-| Palladium (PA) | 1367.5 | +0.55% |
-| USD (DX) | 99.365 | -0.19% |
-| EUR (6E) | 1.1602 | +0.09% |
-| JPY (6J) | 0.6348 | +0.79% |
-| GBP (6B) | 1.3493 | +0.06% |
-| AUD (6A) | 0.71595 | -0.09% |
-| CAD (6C) | 0.7233 | +0.06% |
-| CHF (6S) | 1.2334 | +0.19% |
-| NZD (6N) | 0.5861 | +0.26% |
+| S&P 500 (ES) | 7688.25 | +0.16% |
+| Nasdaq 100 (NQ) | 29259.25 | +0.24% |
+| Russell 2000 (ER2) | 2958.1 | -0.00% |
+| DJIA (YM) | 53251.0 | +0.26% |
+| VIX (VX) | 16.55 | -0.02% |
+| Crude Oil WTI (CL) | 90.07 | -1.19% |
+| Crude Oil Brent (QA) | 94.59 | -1.07% |
+| Natural Gas (NG) | 2.987 | +1.05% |
+| Heating Oil (HO) | 4.6177 | -1.28% |
+| Gasoline RBOB (RB) | 3.0629 | -1.27% |
+| Gold (GC) | 4480.2 | +1.48% |
+| Silver (SI) | 66.585 | +1.71% |
+| Copper (HG) | 6.6 | +0.11% |
+| Platinum (PL) | 1787.3 | +1.32% |
+| Palladium (PA) | 1382.0 | +1.58% |
+| USD (DX) | 99.24 | -0.31% |
+| EUR (6E) | 1.1607 | +0.13% |
+| JPY (6J) | 0.63765 | +1.24% |
+| GBP (6B) | 1.3501 | +0.10% |
+| AUD (6A) | 0.7179 | +0.17% |
+| CAD (6C) | 0.72405 | +0.17% |
+| CHF (6S) | 1.23695 | +0.48% |
+| NZD (6N) | 0.58655 | +0.32% |
 | 10 Year Note (ZN) | 107.59375 | +0.17% |
-| 5 Year Note (ZF) | 105.640625 | +0.12% |
-| 2 Year Note (ZT) | 102.5859375 | +0.05% |
-| 30 Year Bond (ZB) | 108.6875 | +0.32% |
-| Nikkei 225 (NKD) | 63980.0 | -1.42% |
-| DAX (DY) | 25855.0 | -0.13% |
-| Euro Stoxx 50 (EX) | 6362.0 | -0.14% |
-| Corn (ZC) | 540.0 | -0.60% |
-| Soybeans (ZS) | 1312.75 | +0.21% |
-| Wheat (ZW) | 770.0 | -0.52% |
-| Soybean oil (ZL) | 69.91 | -1.01% |
-| Soybean Meal (ZM) | 344.2 | +0.35% |
-| Oats (ZO) | 374.5 | +0.00% |
+| 5 Year Note (ZF) | 105.640625 | +0.13% |
+| 2 Year Note (ZT) | 102.58984375 | +0.05% |
+| 30 Year Bond (ZB) | 108.65625 | +0.38% |
+| Nikkei 225 (NKD) | 64340.0 | -0.55% |
+| DAX (DY) | 25915.0 | +0.12% |
+| Euro Stoxx 50 (EX) | 6377.0 | +0.06% |
+| Corn (ZC) | 535.5 | -1.43% |
+| Soybeans (ZS) | 1301.25 | -0.71% |
+| Wheat (ZW) | 755.0 | -2.42% |
+| Soybean oil (ZL) | 69.34 | -1.74% |
+| Soybean Meal (ZM) | 341.5 | -0.38% |
+| Oats (ZO) | 373.75 | -0.07% |
 | Rough Rice (ZR) | 15.655 | -0.45% |
 | Coffee (KC) | 297.35 | -3.67% |
-| Sugar (SB) | 18.71 | +1.85% |
-| Cotton (CT) | 88.39 | -0.57% |
+| Sugar (SB) | 18.4 | -1.66% |
+| Cotton (CT) | 87.63 | -1.48% |
 | Cocoa (CC) | 6290.0 | -4.54% |
 | Orange Juice (JO) | 148.05 | +2.93% |
 | Lumber (LB) | 556.5 | -0.71% |
 | Live Cattle (LC) | 210.35 | -0.90% |
 | Lean Hogs (LH) | 83.8 | +0.15% |
 | Feeder Cattle (FC) | 315.0 | -0.32% |
-| Bitcoin (BTC) | 77605.0 | -0.01% |
-| Canola (RS) | 821.7 | -0.59% |
+| Bitcoin (BTC) | 78250.0 | +0.82% |
+| Canola (RS) | 812.5 | -1.67% |
 | Ethanol (ZK) | 2.09 | +0.36% |
 
 ## CALENDAR
@@ -103,14 +103,14 @@ Econ (importance ≥ 2):
 Mega-cap earnings:
 - AMC **ORCL**  EPS est 1.7349  (Oracle Corp)
 - BMO **ACN**  EPS est 3.7098  (Accenture plc)
-- AMC **ADBE**  EPS est 6.075  (Adobe Inc)
+- AMC **ADBE**  EPS est 6.0751  (Adobe Inc)
 - BMO **CIEN**  EPS est 1.7274  (CIENA Corp)
 - BMO **KR**  EPS est 1.0536  (Kroger Co)
-- AMC **CPRT**  EPS est 0.3819  (Copart Inc)
-- AMC **TCOM**  EPS est 0.8776  (Trip.com Group Ltd ADR)
+- AMC **CPRT**  EPS est 0.3832  (Copart Inc)
 - AMC **ZS**  EPS est 1.0885  (Zscaler Inc)
-- AMC **CASY**  EPS est 6.7441  (Casey's General Stores Inc)
+- AMC **CASY**  EPS est 6.7501  (Casey's General Stores Inc)
 - BMO **SUNB**  EPS est 1.0358  (Sunbelt Rentals Holdings Inc)
+- AMC **TCOM**  EPS est 0.8776  (Trip.com Group Ltd ADR)
 - AMC **IOT**  EPS est 0.16  (Samsara Inc)
 - AMC **LEN**  EPS est 1.298  (Lennar Corp)
 - AMC **GWRE**  EPS est 0.9331  (Guidewire Software Inc)
@@ -126,8 +126,8 @@ Options event-vol flags (NOT direction):
 - **CIEN** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **KR** exp 2026-09-04 ATM IV 0.0078 implied move +0.0% put/call OI —
 - **CPRT** exp 2026-09-18 ATM IV 0.0078 implied move +0.2% put/call OI —
-- **TCOM** exp 2026-09-18 ATM IV 0.0156 implied move +0.3% put/call OI —
 - **ZS** exp 2026-09-04 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **CASY** exp 2026-09-18 ATM IV 0.0039 implied move +0.1% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -247,31 +247,31 @@ COLD (1w):
 - **Natural Resources** +0.7% 1d -1.4% 1w · GUNR, GNR, PHO
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 36 min **ASTS,RKLB,SPCX** RKLB Vs ASTS: Bestselling Investing Author Picks The Lottery Ticket With Better Odds  But SpaceX Is The Top Dog (Stocktwits)
-- 40 min **HSBC,SPGI** India's services growth picks up in August but stays near four-year low, PMI shows (Reuters)
-- 46 min **FIVE** Five Below Inc (FIVE) (Q2 2026) Earnings Call Highlights: Record Sales and Strategic Momentum ... (GuruFocus.com)
-- 46 min **WOOF** Petco Health and Wellness Co Inc (WOOF) (Q2 2026) Earnings Call Highlights: Positive Comps and ... (GuruFocus.com)
-- 46 min **GOLD** Gold.com Inc (GOLD) (Q4 2026) Earnings Call Highlights: Revenue Nearly Doubles to $5 Billion, ... (GuruFocus.com)
-- 46 min **TLYS** Tilly's Inc (TLYS) (Q2 2026) Earnings Call Highlights: Third Consecutive Quarter of ... (GuruFocus.com)
-- 46 min **HPE** Hewlett Packard Enterprise Co (HPE) (Q3 2026) Earnings Call Highlights: Record Revenue and EPS ... (GuruFocus.com)
-- 46 min **NTSK** Netskope Inc (NTSK) (Q2 2027) Earnings Call Highlights: AI Security Drives Strong Growth Amid ... (GuruFocus.com)
-- 46 min **PHR** Phreesia Inc (PHR) (Q2 2027) Earnings Call Highlights: Record EBITDA Margin and Strategic ... (GuruFocus.com)
-- 46 min **AGX** Argan Inc (AGX) (Q2 2027) Earnings Call Highlights: Record Revenue and Net Income Surge 62% (GuruFocus.com)
-- 46 min **SNOW** Snowflake Inc (SNOW) (Q2 2027) Earnings Call Highlights: AI Products Drive Record Growth and ... (GuruFocus.com)
-- 46 min **AI** C3.ai Inc (AI) (Q1 2027) Earnings Call Highlights: Bookings Surge 73% and Free Cash Flow Turns ... (GuruFocus.com)
-- 47 min **MSFT** Kimi K3 Operator Moonshot Reportedly Files For Hong Kong IPO As Chinas AI Advances Weigh On OpenAI, Anthropic (Stocktwits)
-- 55 min **COP,GTLB,PFE** Why Did PFE, GTLB, COP Stocks Jump To 52-Week Highs Today? (Stocktwits)
-- 1 hour **REBN** Reborn Coffee Receives Nasdaq Notification Regarding Late 10-Q Filing and Continued Listing Requirements (GlobeNewswire)
-- 1 hour **AVGO** Broadcom says CPO fits scale-out better than scale-up (DigiTimes)
-- 1 hour **ARKK,ARKW,SHOP** SHOP Stock Heads For Weekly Loss As Cathie Woods ARK Trims Stake After 25% August Rally: Valuation Nears 100x Earnings (Stocktwits)
-- 1 hour **NIO** NIO Stock Could Get Geely Boost As Chip Push Expands Beyond Own EVs  Analyst  Calls Shares Undervalued (Stocktwits)
-- 1 hour **MSFT** Microsoft unveils two-segment reporting structure, standalone Azure financials (DigiTimes)
-- 1 hour **BIIB** LEQEMBI (lecanemab) Subcutaneous Formulation as an Initiation Treatment for Early Alzheimer's Disease Approved in China (GlobeNewswire)
-- 1 hour **HCM** HUTCHMED Announces Licensing Agreement with GSK for KRAS-EGFR-Antibody Conjugate Cancer Therapy (GlobeNewswire)
-- 1 hour **CVX** AP Top Extended Financial Headlines at 12:45 a.m. EDT (Associated Press)
-- 1 hour **CVX** AP Top Financial News at 12:45 a.m. EDT (Associated Press)
-- 1 hour **XPER** TiVo OS Unveils Major Platform Enhancements at IFA 2026, Expanding AI-Powered Discovery, Free Streaming, Live Sports and Interactive TV Experiences (Business Wire)
-- Sep-02 **AVGO** Dow, S&P 500, Nasdaq Futures Rise As Investors Look Past Iran Tensions, Focus On Earnings: AVGO, SNOW, DELL, HPE Stocks In Focus (Stocktwits)
+- 7 min **SNOW** Stock market today: Dow, S&P 500, Nasdaq futures rise as investors shrug off Middle East tensions (Yahoo Finance)
+- 18 min **HGTY** BROAD ARROW PRESENTS ULTIMATE PERFORMANCE CARS AT ITS SECOND ANNUAL ZURICH AUCTION (GlobeNewswire)
+- 19 min **SOFI,BNS** SOFI Stock Rises Premarket: Why This Analyst Sees 40% Upside From Here (Stocktwits)
+- 23 min **LCID** Lucid To Bring Award-Winning Vehicles to France with Emil Frey France's support (PR Newswire)
+- 23 min **PCG** PG&E, Rewiring America and Google Launch First-of-its-Kind Virtual Power Plant to Help Lower Costs for All Customers (PR Newswire)
+- 23 min **III** Firms in France Put Sovereignty at Core of Hybrid Cloud Plans (Business Wire)
+- 24 min **SKHY,MU** Micron, Samsung, SK Hynix Suffer Drop In DRAM Market Share As Chinas CXMT Pulls Ahead (Stocktwits)
+- 35 min **APO** Michael Burry Warns of a Private Credit 'Shell Game' That Could Leave Taxpayers on the Hook: APO, KKR, OWL In Focus (Benzinga Private Markets)
+- 43 min **MOMO** Hello Group Inc. Announces Unaudited Financial Results for the Second Quarter of 2026 (PR Newswire)
+- 46 min **NVDA** Nvidia Insider Selling Hits $1.09 Billion in Single Filing: Should Holders Worry? (BeInCrypto)
+- 52 min **RIVN** Rivian to Participate at Upcoming Investor Conferences (Business Wire)
+- 53 min **VRSK** Amid AI Boom, Verisk Launches New View of U.S. Data Center Exposure, Helping Insurers Assess Growing Concentrations of Risk (GlobeNewswire)
+- 56 min **HCM** HUTCHMED shares jump 17% on US$1.3 billion GSK cancer drug deal (Proactive)
+- 1 hour **LULU** LULU Stock Rises Overnight: Michael Burry Says Lululemon's Shareholder Base Has 'Completely Turned Over' Ahead Of Earnings (Stocktwits)
+- 1 hour **TSLA** TSLA Stock Revs Up Slowly As Elon Musk Tells A Storm Of Cybercabs Are Coming  Analyst Says Never Short A Great Company (Stocktwits)
+- 1 hour **NTAP** NetApp Inc (NTAP) (Q1 2027) Earnings Call Highlights: Record Revenue Surges 30% on AI-Driven Demand (GuruFocus.com)
+- 1 hour **SNOW** Snowflake's blowout earnings and AI product growth supercharge its valuation (Proactive)
+- 1 hour **ORCL,GOOGL,MSFT,VCSH,TLT** The Bond Market Is Changing Fast. Investors Need a New Playbook. (Barrons.com)
+- 1 hour **PLTR,ACN** Big Short Michael Burry Calls Palantir An AI FOMO Consultant  Warns Market Cap Could Crash Below $100B (Stocktwits)
+- 2 hours **TTE** TotalEnergies SE UK Regulatory Announcement: Namibia: TotalEnergies Completes Its Entry as Operator Into PEL83 License, Holding the Giant Mopane Discovery (Business Wire)
+- 2 hours **TTE** Namibia: TotalEnergies Completes Its Entry as Operator Into PEL83 License, Holding the Giant Mopane Discovery (Business Wire)
+- 2 hours **DEC** Diversified Energy Company strikes $1.8bn deal for Permian producer Birch (Proactive)
+- 2 hours **SNOW,VEEV** Michael Burry Stays Bullish On VEEV, Calls SNOW 'Overvalued'  And Revisits 'Big Short' Thesis That Best Stocks Fall By Half First (Stocktwits)
+- 2 hours **TTWO** TTWO Stock Slides Into Correction Territory: GTA VI Leak Tests Investor Confidence In Take-Twos Premium Valuation (Stocktwits)
+- 2 hours **PWR,BMY,DXCM** Revisiting Stock Picks Dexcom, Bristol Myers Squibb, Quanta Services (Barrons.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
