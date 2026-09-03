@@ -1,16 +1,13 @@
 name: Ticker Lookback (any stock)
 
-# Phone-friendly manual backtest as of 09:30 ET. Factor colors use the
-# two-packet recipe: last completed tape (walk back if a session file
-# is missing) + this morning's pre-open, plus D's join when weather
-# came from the morning predict. Map-heat industry boards and the last
-# prior predict also color when D's file is missing. Never the
-# same-day stock book (~13:00) or same-day post-close Finviz (~21:10).
-# Enter any ticker(s), or check Random for 50 liquid names
-# (mcap > $100M, avg volume > 500K). The red/yellow/green color
-# chart stays the sheet; featured setups overlay it (Setups column
-# + ring on the boxes that fired). Legend + job-summary dates
-# still show market-wide n and 1d/3d/1w edge.
+# Phone-friendly manual backtest. Same method as Stock Book readiness:
+# 12 cameras + yΔ from the 09:30 ET packet (last completed tape +
+# morning pre-open; never same-day book / post-close Finviz), then the
+# 6 domain coaches, hall-pass lane, marks, Cond, and BUY PROBABLE /
+# HARD_RED copy from that day's book when it exists (else as-of
+# coaches). Enter any ticker(s), or check Random for 50 liquid names
+# (mcap > $100M, avg volume > 500K). Featured setups still overlay
+# the camera sheet.
 
 on:
   workflow_dispatch:
