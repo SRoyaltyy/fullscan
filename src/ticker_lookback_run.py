@@ -8,6 +8,7 @@ import os
 from datetime import datetime
 
 from . import gainer_asof as ga
+from . import lookback_action as act
 from . import ticker_lookback as tl
 from . import ticker_lookback_cli as scan
 from . import ticker_lookback_setups as setups
@@ -353,23 +354,30 @@ def _fmt_mid_opp(value):
 
 def _sheet_headers():
     return (
-        ["Date", "Price", "+1d", "+3d", "+1w", "Cond", "Hall pass", "mid_opp", "Setups"]
+        ["Date", "Price", "+1d", "+3d", "+1w", "Action", "Cond", "Hall pass", "mid_opp", "Setups"]
         + [label for _, label in CAMERA_COLS]
         + [label for _, label in DOMAIN_COLS]
         + ["Decision"]
     )
 
 
+def _action_text(day):
+    return day.get("action_call") or "—"
+
+
 def render_md(payload):
     setups.ensure_setups(payload)
+    act.ensure_actions(payload)
     L = ["# Ticker lookback", "", f"_Generated {payload['generated_at']}_",
          "", "_Same method as Stock Book readiness._ Cameras (12 + yΔ) are "
          "the 09:30 ET packet: last completed tape (walk back if a session "
          "file is missing) + that morning's pre-open. Same-day stock book "
          "and post-close Finviz do not color cameras. Domain lights, hall "
-         "pass, and BUY PROBABLE / HARD_RED copy come from that day's book "
-         "when it exists, else the as-of coaches. Price / +1d / +3d / +1w "
-         "are session-close outcomes._", ""]
+        "pass, and BUY PROBABLE / HARD_RED copy come from that day's book "
+        "when it exists, else the as-of coaches. **Action** is the "
+        "authoritative BUY / SELL / NO BUY / HOLD from those 09:30 "
+        "cameras, featured mine setups, and hall pass — not the "
+        "forward +1d / +3d / +1w, which stay session-close outcomes._", ""]
     if payload.get("random"):
         L += [f"_Random {len(payload['names'])} names, "
               f"mcap > $100M, avg vol > 500K_", ""]
@@ -411,6 +419,7 @@ def render_md(payload):
                 f"{_fmt_price_md(pc, tones, '1d')} | "
                 f"{_fmt_price_md(pc, tones, '3d')} | "
                 f"{_fmt_price_md(pc, tones, '1w')} | "
+                f"**{_action_text(d)}** | "
                 f"{_condition_md(_condition(d))} | "
                 f"{_hall_text(d)} | {_fmt_mid_opp(d.get('mid_opp'))} | "
                 f"{setups.setup_labels(d) or '—'} | {cams} | {coaches} | {why} |"
@@ -432,6 +441,7 @@ def _slug(tickers, random_pick=False):
 
 def render_html(payload):
     setups.ensure_setups(payload)
+    act.ensure_actions(payload)
     sections = []
     for rec in payload["names"]:
         rows = []
@@ -463,11 +473,15 @@ def render_html(payload):
                 for k, _ in DOMAIN_COLS
             )
             why = html.escape(_decision_cell(day))
+            action = _action_text(day)
+            action_tone = act.action_tone(action)
             rows.append(
                 f'<tr class="{html.escape(row_cls)}">'
                 f'<th class="{html.escape(date_cls)}">'
                 f'{html.escape(_date_label(day))}</th>'
                 f"<td>{_fmt_price(pc, 'price')}</td>{price_tds}"
+                f'<td class="action {html.escape(action_tone)}">'
+                f'{html.escape(action)}</td>'
                 f'<td class="{html.escape(cond.get("tone", "missing"))}">'
                 f'{html.escape(_condition_text(cond))}</td>'
                 f'<td class="hall {hall_cls}">{html.escape(hall)}</td>'
@@ -484,7 +498,7 @@ def render_html(payload):
 <section class="ticker" id="{html.escape(rec['ticker'])}">
  <h2>{html.escape(rec['ticker'])}</h2>
  <div class="sheet"><table>
- <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>{factor_headers}{domain_headers}<th>Decision</th></tr></thead>
+ <thead><tr><th>Date</th><th>Price</th><th>+1d</th><th>+3d</th><th>+1w</th><th>Action</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>{factor_headers}{domain_headers}<th>Decision</th></tr></thead>
  <tbody>{''.join(rows)}</tbody></table></div>
 </section>""")
     nav = '<a href="#setups">Setups</a>' + "".join(
@@ -523,6 +537,7 @@ tbody th.clean:not(.better){{background:#e8eef7;color:#0b1020}}
 tbody th.reg-good{{box-shadow:inset 0 -3px 0 #22c55e}}
 tbody th.reg-bad{{box-shadow:inset 0 -3px 0 #ef4444}}
 td.setups{{text-align:left;white-space:normal;max-width:200px;font-size:12px}}
+td.action{{font-weight:700;font-size:12px}}
 td.hall{{font-size:12px;white-space:normal;max-width:140px}}
 td.hall.probable{{background:#1e3a5f}}
 td.hall.blocked{{background:#4b2028}}
@@ -535,8 +550,8 @@ tbody th.hard-red{{box-shadow:inset 0 -3px 0 #f59e0b}}
 @media(max-width:600px){{main{{padding:8px}}th,td{{padding:9px 7px;font-size:13px}}}}
 </style></head><body><main>
 <h1>Ticker lookback</h1>
-<p>Same method as Stock Book readiness. Cameras = knowable by 09:30 ET (last completed tape + pre-open packet). Domains / hall pass / BUY PROBABLE come from that day's book when it exists. Price / +1d / +3d / +1w are session-close outcomes.</p>
-<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · ⬜ no as-of · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Hall pass = standard / group leader / catalyst / probable / blocked</p>
+<p>Same method as Stock Book readiness. Cameras = knowable by 09:30 ET (last completed tape + pre-open packet). Domains / hall pass / BUY PROBABLE come from that day's book when it exists. <b>Action</b> is the 09:30 BUY / SELL / NO BUY / HOLD. Price / +1d / +3d / +1w are session-close outcomes.</p>
+<p>🟢 up / positive · 🟡 flat · 🔴 down / negative · ⬛ missing · ⬜ no as-of · 🔵 improved or +≥3 pts · 🚨 purely worse · ⚪ no red · Cond = G/Y/R majority · Hall pass = standard / group leader / catalyst / probable / blocked · Action = BUY / SELL / NO BUY / HOLD</p>
 <p class="muted">Two scoreboards: 12 cameras + yΔ, then 6 coaches (mkt · par · chd · co · set · flw). HARD_RED may still print BUY PROBABLE (size ×0.25). Featured setups overlay the camera sheet: gold ring on the boxes that fired.</p>
 {random_note}{setups.render_setup_html(payload)}<nav>{nav}</nav>{''.join(sections)}
 </main></body></html>"""
@@ -619,6 +634,7 @@ def write_xlsx(payload, path):
     from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
     setups.ensure_setups(payload)
+    act.ensure_actions(payload)
     gold = Border(
         left=Side(style="medium", color="EAB308"),
         right=Side(style="medium", color="EAB308"),
@@ -637,9 +653,15 @@ def write_xlsx(payload, path):
     wb.remove(wb.active)
     _write_setups_sheet(wb, payload, fills)
     headers = _sheet_headers()
-    cam_start = 10
-    domain_start = cam_start + len(CAMERA_COLS)
-    decision_col = domain_start + len(DOMAIN_COLS)
+    col_of = {name: i + 1 for i, name in enumerate(headers)}
+    cam_start = col_of["join"]
+    domain_start = col_of["mkt"]
+    decision_col = col_of["Decision"]
+    action_col = col_of["Action"]
+    cond_col = col_of["Cond"]
+    hall_col = col_of["Hall pass"]
+    opp_col = col_of["mid_opp"]
+    setups_col = col_of["Setups"]
     for rec in payload["names"]:
         ws = wb.create_sheet(rec["ticker"][:31])
         ws.freeze_panes = "B2"
@@ -655,7 +677,8 @@ def write_xlsx(payload, path):
             domains = day.get("domains") or {}
             ws.append([
                 _date_label(day), pc.get("price"), pc.get("1d"),
-                pc.get("3d"), pc.get("1w"), _condition_text(cond),
+                pc.get("3d"), pc.get("1w"), _action_text(day),
+                _condition_text(cond),
                 _hall_text(day), _fmt_mid_opp(day.get("mid_opp")),
                 setups.setup_labels(day),
             ] + [
@@ -682,12 +705,16 @@ def write_xlsx(payload, path):
                 cell.number_format = '0.00"%"'
                 cell.fill = fills.get(tones.get(key, "missing"), fills["missing"])
                 cell.alignment = Alignment(horizontal="center")
-            cond_cell = ws.cell(row, 6)
+            action_cell = ws.cell(row, action_col)
+            action_cell.fill = fills.get(
+                act.action_tone(_action_text(day)), fills["missing"])
+            action_cell.alignment = Alignment(horizontal="center")
+            cond_cell = ws.cell(row, cond_col)
             cond_cell.fill = fills.get(cond.get("tone", "missing"), fills["missing"])
             cond_cell.alignment = Alignment(horizontal="center")
-            ws.cell(row, 7).alignment = Alignment(horizontal="center", wrap_text=True)
-            ws.cell(row, 8).alignment = Alignment(horizontal="center")
-            ws.cell(row, 9).alignment = Alignment(horizontal="left", wrap_text=True)
+            ws.cell(row, hall_col).alignment = Alignment(horizontal="center", wrap_text=True)
+            ws.cell(row, opp_col).alignment = Alignment(horizontal="center")
+            ws.cell(row, setups_col).alignment = Alignment(horizontal="left", wrap_text=True)
             lit = setups.box_highlights(day)
             for offset, (key, _label) in enumerate(CAMERA_COLS, start=cam_start):
                 tone = (day.get("boxes") or {}).get(key, "missing")
@@ -705,12 +732,13 @@ def write_xlsx(payload, path):
                 horizontal="left", wrap_text=True)
         ws.column_dimensions["A"].width = 18
         ws.column_dimensions["B"].width = 12
-        ws.column_dimensions["G"].width = 18
-        ws.column_dimensions["I"].width = 28
-        last_letter = _col_letter(decision_col)
-        ws.column_dimensions[last_letter].width = 56
+        ws.column_dimensions[_col_letter(action_col)].width = 12
+        ws.column_dimensions[_col_letter(hall_col)].width = 18
+        ws.column_dimensions[_col_letter(setups_col)].width = 28
+        ws.column_dimensions[_col_letter(decision_col)].width = 56
+        wide = {action_col, hall_col, setups_col, decision_col}
         for col in range(3, len(headers) + 1):
-            if col in (7, 9, decision_col):
+            if col in wide:
                 continue
             ws.column_dimensions[_col_letter(col)].width = 9
         ws.auto_filter.ref = ws.dimensions
@@ -757,6 +785,7 @@ def run(tickers, from_date=None, to_date=None, random_pick=False):
     payload = scan_tickers(tickers, from_date=from_date, to_date=to_date)
     payload["random"] = bool(random_pick)
     setups.attach_setups(payload)
+    act.attach_actions(payload)
     tl.BOOK_DIR.mkdir(parents=True, exist_ok=True)
     tl.DAILY.mkdir(parents=True, exist_ok=True)
     tl.SCORE.mkdir(parents=True, exist_ok=True)

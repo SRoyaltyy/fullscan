@@ -1,0 +1,99 @@
+name: Gainer Lookback Action
+
+# For every session since 2026-08-13, take that day's liquid Finviz
+# top gainers (mcap ≥ $100M, adv ≥ 500k), paint them with ticker
+# lookback (09:30 cameras + coaches + featured mine setups), stamp
+# BUY / SELL / NO BUY / HOLD, and score catch on forward +1d/+3d/+1w.
+# Same-day Change% only picks the universe.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = latest tape)"
+        required: false
+        default: ""
+      top_n:
+        description: "Top N liquid gainers per day"
+        required: false
+        default: "25"
+      min_change:
+        description: "Minimum Finviz Change% to enter the universe"
+        required: false
+        default: "2"
+      preset:
+        description: "featured | strict | setups | lane | loose"
+        required: false
+        default: "featured"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: gainer-lookback-action
+  cancel-in-progress: true
+
+jobs:
+  walk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow openpyxl
+      - name: Score liquid gainers
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+          TOP_N: ${{ inputs.top_n }}
+          MIN_CHANGE: ${{ inputs.min_change }}
+          PRESET: ${{ inputs.preset }}
+        run: |
+          set -euo pipefail
+          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --top-n "${TOP_N:-25}" --min-change "${MIN_CHANGE:-2}" --write)
+          [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
+          [ -n "${PRESET:-}" ] && ARGS+=(--preset "$PRESET")
+          python -m src.gainer_lookback_action "${ARGS[@]}" | tee /tmp/gainer-lookback-action.md
+          test -s 03_scoreboard/GAINER_LOOKBACK_ACTION.md
+          test -s 03_scoreboard/gainer_lookback_action.json
+          test -s dashboard/gainer-lookback/index.html
+      - name: Publish scoreboard to main
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: gainer lookback action ${FROM_DATE:-2026-08-13}" \
+            01_daily/gainer_lookback_action.md \
+            03_scoreboard/GAINER_LOOKBACK_ACTION.md \
+            03_scoreboard/gainer_lookback_action.json \
+            dashboard/gainer-lookback/
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gainer-lookback-action
+          path: |
+            03_scoreboard/GAINER_LOOKBACK_ACTION.md
+            03_scoreboard/gainer_lookback_action.json
+            dashboard/gainer-lookback/index.html
+      - name: Add links to run summary
+        run: |
+          {
+            echo "## Gainer lookback action"
+            echo
+            echo "- [Markdown](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/GAINER_LOOKBACK_ACTION.md)"
+            echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/gainer-lookback/)"
+            echo
+            awk '/^# Gainer lookback/,/^## Gainer mornings/' 03_scoreboard/GAINER_LOOKBACK_ACTION.md
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Refresh GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main

@@ -140,7 +140,7 @@ def test_phone_html_and_returns() -> None:
     assert 'name="viewport"' in page
     assert "🟢 up / positive" in page
     assert "09:30 ET" in page
-    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>" in page
+    assert "<th>+1d</th><th>+3d</th><th>+1w</th><th>Action</th><th>Cond</th><th>Hall pass</th><th>mid_opp</th><th>Setups</th>" in page
     assert "AAPL" in page
     day0 = payload["names"][0]["days"][0]
     assert day0["forward_returns"]["1d"] is not None
@@ -466,6 +466,7 @@ def test_lookback_matches_readiness_lattice() -> None:
     page = run.render_html(payload)
     assert "Stock Book readiness" in md
     assert "| Hall pass |" in md
+    assert "| Action |" in md
     assert "| mkt |" in md
     assert "| yΔ |" in md
     assert "BUY PROBABLE" in md
