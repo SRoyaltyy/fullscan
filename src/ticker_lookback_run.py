@@ -708,6 +708,9 @@ def write_xlsx(payload, path):
     _write_setups_sheet(wb, payload, fills)
     headers = _sheet_headers()
     col_of = {name: i + 1 for i, name in enumerate(headers)}
+    col_of["1d"] = col_of["+1d"]
+    col_of["3d"] = col_of["+3d"]
+    col_of["1w"] = col_of["+1w"]
     cam_start = col_of["join"]
     domain_start = col_of["mkt"]
     decision_col = col_of["Decision"]
@@ -796,13 +799,16 @@ def write_xlsx(payload, path):
                 cell.alignment = Alignment(horizontal="center")
             ws.cell(row, decision_col).alignment = Alignment(
                 horizontal="left", wrap_text=True)
-        ws.column_dimensions["A"].width = 18
-        ws.column_dimensions["B"].width = 12
-        ws.column_dimensions[_col_letter(action_col)].width = 12
+        ws.column_dimensions["A"].width = 28
+        ws.column_dimensions["B"].width = 28
+        ws.column_dimensions[_col_letter(col_of["Open"])].width = 28
+        ws.column_dimensions[_col_letter(col_of["o→c"])].width = 28
+        ws.column_dimensions[_col_letter(action_col)].width = 28
         ws.column_dimensions[_col_letter(hall_col)].width = 18
         ws.column_dimensions[_col_letter(setups_col)].width = 28
         ws.column_dimensions[_col_letter(decision_col)].width = 56
-        wide = {action_col, hall_col, setups_col, decision_col}
+        wide = {action_col, hall_col, setups_col, decision_col,
+                col_of["Open"], col_of["o→c"]}
         for col in range(3, len(headers) + 1):
             if col in wide:
                 continue
