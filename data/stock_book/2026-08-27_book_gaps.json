@@ -1,0 +1,411 @@
+{
+  "signal_date": "2026-08-27",
+  "horizon": "1w",
+  "generated_at": "2026-09-03T17:03:25.635119-04:00",
+  "missed_movers": [
+    {
+      "ticker": "GPRO",
+      "fwd_pct": 129.75,
+      "class": "gated_out",
+      "sector": "Technology",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.722,
+        "s_sector": 0.4,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.762,
+        "s_peer": -0.683,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "CHPT",
+      "fwd_pct": 55.75,
+      "class": "gated_out",
+      "sector": "Consumer Cyclical",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.315,
+        "s_sector": -0.8,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.635,
+        "s_peer": 0.492,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "DPRO",
+      "fwd_pct": 47.14,
+      "class": "gated_out",
+      "sector": "Technology",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.411,
+        "s_sector": 0.4,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.941,
+        "s_peer": 0.221,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "CHGG",
+      "fwd_pct": 22.35,
+      "class": "gated_out",
+      "sector": "Consumer Defensive",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.297,
+        "s_sector": -0.24,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.635,
+        "s_peer": 0.357,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "MMED",
+      "fwd_pct": 22.19,
+      "class": "outweighed",
+      "sector": "Healthcare",
+      "size": "mid",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.555,
+        "s_peer": 0.0,
+        "s_opp": 0.28
+      }
+    },
+    {
+      "ticker": "FMC",
+      "fwd_pct": 21.76,
+      "class": "outweighed",
+      "sector": "Basic Materials",
+      "size": "small",
+      "signals": {
+        "s_join": 0.961,
+        "s_sector": -0.32,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.555,
+        "s_peer": 0.082,
+        "s_opp": 0.52
+      }
+    },
+    {
+      "ticker": "BRR",
+      "fwd_pct": 21.76,
+      "class": "gated_out",
+      "sector": "Financial",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.033,
+        "s_sector": 0.24,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.358,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "LENZ",
+      "fwd_pct": 21.21,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.801,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.245,
+        "s_peer": -0.304,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "CNH",
+      "fwd_pct": 21.08,
+      "class": "outweighed",
+      "sector": "Industrials",
+      "size": "large",
+      "signals": {
+        "s_join": 0.945,
+        "s_sector": -0.56,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.964,
+        "s_peer": 0.874,
+        "s_opp": 0.03
+      }
+    },
+    {
+      "ticker": "CYPH",
+      "fwd_pct": 20.11,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.564,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.245,
+        "s_peer": 1.0,
+        "s_opp": 0.08
+      }
+    },
+    {
+      "ticker": "SMMT",
+      "fwd_pct": 19.54,
+      "class": "outweighed",
+      "sector": "Healthcare",
+      "size": "large",
+      "signals": {
+        "s_join": -0.95,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.462,
+        "s_peer": 0.809,
+        "s_opp": 0.11
+      }
+    },
+    {
+      "ticker": "IRD",
+      "fwd_pct": 19.48,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.358,
+        "s_peer": 0.0,
+        "s_opp": 0.44
+      }
+    },
+    {
+      "ticker": "SLBT",
+      "fwd_pct": 19.32,
+      "class": "outweighed",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": -0.904,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.555,
+        "s_peer": 0.0,
+        "s_opp": 0.4
+      }
+    },
+    {
+      "ticker": "SID",
+      "fwd_pct": 18.87,
+      "class": "outweighed",
+      "sector": "Basic Materials",
+      "size": "small",
+      "signals": {
+        "s_join": 0.56,
+        "s_sector": -0.32,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.555,
+        "s_peer": 0.97,
+        "s_opp": 0.52
+      }
+    },
+    {
+      "ticker": "BAK",
+      "fwd_pct": 18.29,
+      "class": "gated_out",
+      "sector": "Basic Materials",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.566,
+        "s_sector": -0.32,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": -0.762,
+        "s_peer": -0.994,
+        "s_opp": 0.16
+      }
+    }
+  ],
+  "n_blind": 0,
+  "worst_buys": [
+    {
+      "ticker": "ACMR",
+      "fwd_pct": -13.75,
+      "sector": "Technology",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.953,
+        "s_sector": 0.4,
+        "s_general": 0.0,
+        "s_news": 0.345,
+        "s_ab": 0.762,
+        "s_peer": 0.516,
+        "s_opp": 0.6
+      }
+    },
+    {
+      "ticker": "ERO",
+      "fwd_pct": -11.3,
+      "sector": "Basic Materials",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": -0.32,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.983,
+        "s_peer": 0.792,
+        "s_opp": 0.4
+      }
+    },
+    {
+      "ticker": "LW",
+      "fwd_pct": -7.96,
+      "sector": "Consumer Defensive",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.587,
+        "s_sector": -0.24,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.88,
+        "s_peer": 0.558,
+        "s_opp": 0.6
+      }
+    },
+    {
+      "ticker": "SLI",
+      "fwd_pct": -7.95,
+      "sector": "Basic Materials",
+      "size": "small",
+      "signals": {
+        "s_join": 0.836,
+        "s_sector": -0.32,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.809,
+        "s_peer": 0.865,
+        "s_opp": 0.52
+      }
+    },
+    {
+      "ticker": "DNN",
+      "fwd_pct": -7.08,
+      "sector": "Energy",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.714,
+        "s_sector": -0.24,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.704,
+        "s_peer": 0.882,
+        "s_opp": 0.52
+      }
+    },
+    {
+      "ticker": "BZ",
+      "fwd_pct": -6.44,
+      "sector": "Communication Services",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.945,
+        "s_sector": 0.0,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.555,
+        "s_peer": 0.985,
+        "s_opp": 0.48
+      }
+    },
+    {
+      "ticker": "GPK",
+      "fwd_pct": -5.56,
+      "sector": "Consumer Cyclical",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.573,
+        "s_sector": -0.8,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.954,
+        "s_peer": -0.002,
+        "s_opp": 0.68
+      }
+    },
+    {
+      "ticker": "FIGR",
+      "fwd_pct": -4.76,
+      "sector": "Financial",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": 0.24,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.88,
+        "s_peer": 0.0,
+        "s_opp": 0.64
+      }
+    },
+    {
+      "ticker": "BFAM",
+      "fwd_pct": -4.36,
+      "sector": "Consumer Cyclical",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.839,
+        "s_sector": -0.8,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.848,
+        "s_peer": 0.331,
+        "s_opp": 0.64
+      }
+    },
+    {
+      "ticker": "HLNE",
+      "fwd_pct": -3.26,
+      "sector": "Financial",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.963,
+        "s_sector": 0.24,
+        "s_general": 0.0,
+        "s_news": 0.0,
+        "s_ab": 0.925,
+        "s_peer": 0.102,
+        "s_opp": 0.6
+      }
+    }
+  ],
+  "input_silence_on_movers": {
+    "s_join": 0.017,
+    "s_sector": 0.35,
+    "s_news": 1.0,
+    "s_ab": 0.083,
+    "s_peer": 0.2
+  },
+  "absent_inputs": [
+    "s_general"
+  ],
+  "universe_median_fwd_pct": -0.97
+}

@@ -1,37 +1,37 @@
-# Weather report — 2026-09-02
+# Weather report — 2026-09-03
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
-- **Risk state:** OFF (general predict down score -3.8, conf 0.52)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** falling (ratio 0.86 via vix/vix3m) spot 15.18
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.80
-- **High-impact events:** 5 bullish vs 5 bearish
+- **Risk state:** OFF (general predict flat score -0.9, conf 0.52)
+- **Yields:** rising (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** flat | **VIX:** falling (ratio 0.83 via vix/vix3m) spot 14.41
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.94
+- **High-impact events:** 3 bullish vs 5 bearish
 - ⚠️ **Data gaps:** risk tilted off by news_judge
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.52 [sector board] |
-| sector:Communication Services | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.5 [sector board] |
-| sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -5.0 dir down conf 0.52 [sector board] |
-| sector:Consumer Defensive | ⛅ neutral | high | sector predict score +2.7 dir up conf 0.52 [sector board] |
-| sector:Energy | ⛅ neutral | high | sector predict score +2.7 dir up conf 0.52 [sector board] |
-| sector:Financial | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.5 [sector board] |
+| sector:Basic Materials | 🌧️ hostile | medium | news_judge SECTOR Basic Materials [bearish] |
+| sector:Communication Services | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.52 [sector board] |
+| sector:Consumer Cyclical | ⛅ neutral | high | sector predict score -2.7 dir down conf 0.52 [sector board] |
+| sector:Consumer Defensive | ⛅ neutral | high | sector predict score +1.4 dir up conf 0.52 [sector board] |
+| sector:Energy | ⛅ neutral | high | sector predict score -2.7 dir flat conf 0.52 [sector board] |
+| sector:Financial | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.52 [sector board] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
 | sector:Industrials | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.52 [sector board] |
-| sector:Real Estate | 🌧️ hostile | high | sector predict score -5.8 dir down conf 0.52 [sector board] |
-| sector:Technology | 🌧️ hostile | medium | finviz sector median week -2.83% [tape] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week -0.92% [tape] |
+| sector:Real Estate | ⛅ neutral | high | sector predict score -0.5 dir flat conf 0.52 [sector board] |
+| sector:Technology | ⛅ neutral | high | sector predict score -1.4 dir flat conf 0.54 [sector board] |
+| sector:Utilities | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.52 [sector board] |
 
 ## Size
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | ⛅ neutral | low | risk-mixed, dollar flat [general predict + factors] |
-| size:small | ⛅ neutral | low | risk-mixed, dollar flat [general predict + factors] |
+| size:micro | ⛅ neutral | low | risk-mixed, dollar soft [general predict + factors] |
+| size:small | ⛅ neutral | low | risk-mixed, dollar soft [general predict + factors] |
 | size:large | ⛅ neutral | low | risk-mixed [general predict] |
 | size:mega | ⛅ neutral | low | risk-mixed [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -65,16 +65,16 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
+| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | ⛅ neutral | low | — |
-| lev:low | ⛅ neutral | low | — |
+| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
+| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 

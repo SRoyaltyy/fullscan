@@ -1,6 +1,6 @@
-# Book learn — weight tuner ledger (v10)
+# Book learn — weight tuner ledger (v11)
 
-Updated: **2026-09-02T16:59:25.443559-04:00** · evaluation as of **2026-09-02**
+Updated: **2026-09-03T17:03:16.991097-04:00** · evaluation as of **2026-09-03**
 
 Objective: mean forward return of the top-10 buy book **in excess of the
 liquid-universe median**, walk-forward on fully-realized dates only.
@@ -8,10 +8,10 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 | Horizon | dates | incumbent excess | best excess | decision |
 |---------|-------|------------------|-------------|----------|
-| 1d | 11 | -0.2116 | -0.0407 | hold — wins only 27% of dates (< 60%) |
-| 3d | 8 | -0.2528 | -0.1769 | hold — wins only 12% of dates (< 60%) |
-| 1w | 7 | -0.0439 | 0.2881 | hold — wins only 29% of dates (< 60%) |
-| 2w | 5 | -0.6452 | 0.35 | hold — wins only 40% of dates (< 60%) |
+| 1d | 12 | -0.2469 | -0.087 | hold — wins only 33% of dates (< 60%) |
+| 3d | 10 | -0.0255 | 0.0352 | hold — wins only 10% of dates (< 60%) |
+| 1w | 8 | 0.0328 | 0.3643 | hold — wins only 38% of dates (< 60%) |
+| 2w | 6 | 0.5829 | 0.9851 | hold — wins only 50% of dates (< 60%) |
 | 1m | 0 | — | — | observe — only 0 realized dates (< 5) |
 
 ## Adopted weights (join / sector / general / news / AB / peer)
@@ -26,18 +26,19 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 ## Sell-book construction
 
-- core=-2.290pp full=-0.791pp → sell_excludes_addons=False (n=7)
+- core=-1.296pp full=-0.145pp → sell_excludes_addons=False (n=8)
 
 ## Risk-off entry scaling (LLM weather call → sizing action)
 
-- scale: **1.0** (effective 2026-08-25) — book still makes +0.20% on risk-off days → scale back to 1.0 (cash drag not justified)
+- scale: **1.0** (effective 2026-08-25) — book still makes +0.16% on risk-off days → scale back to 1.0 (cash drag not justified)
 
 ## Map/captain heat scale (realized 1d excess return)
 
-- scale: **0.25** — incubate 0.25 — only 2 realized heat dates (< 5)
+- scale: **0.25** — incubate 0.25 — only 3 realized heat dates (< 5)
 
 ## History
 
+- v11 @ 2026-09-03: 1d: hold — wins only 33% of dates (< 60%); 3d: hold — wins only 10% of dates (< 60%); 1w: hold — wins only 38% of dates (< 60%); 2w: hold — wins only 50% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v10 @ 2026-09-02: 1d: hold — wins only 27% of dates (< 60%); 3d: hold — wins only 12% of dates (< 60%); 1w: hold — wins only 29% of dates (< 60%); 2w: hold — wins only 40% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v9 @ 2026-09-02: 1d: hold — wins only 27% of dates (< 60%); 3d: hold — wins only 12% of dates (< 60%); 1w: hold — wins only 29% of dates (< 60%); 2w: hold — wins only 40% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v8 @ 2026-09-01: 1d: hold — wins only 30% of dates (< 60%); 3d: hold — wins only 12% of dates (< 60%); 1w: hold — wins only 29% of dates (< 60%); 2w: observe — only 4 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
@@ -47,4 +48,3 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 - v4 @ 2026-08-30: 1d: hold — wins only 43% of dates (< 60%); 3d: hold — wins only 29% of dates (< 60%); 1w: hold — wins only 17% of dates (< 60%); 2w: observe — only 1 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v3 @ 2026-08-27: 1d: hold — wins only 43% of dates (< 60%); 3d: hold — wins only 29% of dates (< 60%); 1w: hold — wins only 20% of dates (< 60%); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v2 @ 2026-08-23: 1d: hold — wins only 50% of dates (< 60%); 3d: observe — only 4 realized dates (< 5); 1w: observe — only 2 realized dates (< 5); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
-- v1 @ 2026-08-22: 1d: hold — wins only 50% of dates (< 60%); 3d: observe — only 4 realized dates (< 5); 1w: observe — only 2 realized dates (< 5); 2w: observe — only 0 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
