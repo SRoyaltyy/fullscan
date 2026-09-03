@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T10:36:32",
+  "generated_at": "2026-09-03T11:34:38",
   "asof": "2026-09-03",
   "params": {
     "capital": 100000.0,
@@ -12,7 +12,7 @@
     "gate_score": 1.0
   },
   "n_trades": 29,
-  "n_skipped": 3896,
+  "n_skipped": 3917,
   "hit": 0.621,
   "total_pnl": 9259.08,
   "total_ret_pct": 9.26,

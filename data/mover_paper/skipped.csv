@@ -4,8 +4,8 @@ date,ticker,side,conviction,reason
 2026-08-18,ADCT,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,AGRO,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,ALH,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,ALM,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,ALOY,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,ALM,BUY,1.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,ALOY,BUY,1.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,ANGX,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,ARKO,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,ATAT,BUY,1.706,day gate CLOSED: predict DOWN score -6.20 < +1.00
@@ -13,7 +13,7 @@ date,ticker,side,conviction,reason
 2026-08-18,AUTL,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,AVAH,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,AXTI,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,BHP,BUY,1.706,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,BHP,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,BORR,BUY,1.906,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,BROS,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,BRUN,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
@@ -38,14 +38,14 @@ date,ticker,side,conviction,reason
 2026-08-18,EROC,BUY,1.906,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,ETON,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,ETOR,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,EXK,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,EXK,BUY,1.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,EYPT,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,FDMT,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,FIGR,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,FRVO,BUY,1.906,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,FULC,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,GEMI,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,GROY,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,GROY,BUY,1.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,HIVE,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,HTFL,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,HTHT,BUY,1.706,day gate CLOSED: predict DOWN score -6.20 < +1.00
@@ -88,7 +88,7 @@ date,ticker,side,conviction,reason
 2026-08-18,RLX,BUY,2.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,RSKD,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,RUM,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,SCZM,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,SCZM,BUY,1.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,SECZ,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,SERV,BUY,1.906,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,SEZL,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
@@ -101,10 +101,10 @@ date,ticker,side,conviction,reason
 2026-08-18,STLA,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,STUB,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,TDAY,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,TMC,BUY,1.706,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,TMC,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,TNYA,BUY,2.106,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,TOYO,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
-2026-08-18,TRX,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
+2026-08-18,TRX,BUY,1.306,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,UGP,BUY,1.906,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,UMAC,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
 2026-08-18,VERI,BUY,1.506,day gate CLOSED: predict DOWN score -6.20 < +1.00
@@ -3122,776 +3122,797 @@ date,ticker,side,conviction,reason
 2026-09-02,ZURA,BUY,2.009,day gate CLOSED: predict DOWN score -3.83 < +1.00
 2026-09-02,ZVRA,BUY,2.809,day gate CLOSED: predict DOWN score -3.83 < +1.00
 2026-09-02,ZYME,BUY,2.809,day gate CLOSED: predict DOWN score -3.83 < +1.00
-2026-09-03,CRK,BUY,4.963,no exit price (unsettleable)
-2026-09-03,PBF,BUY,4.963,no exit price (unsettleable)
-2026-09-03,ARCT,BUY,4.763,no exit price (unsettleable)
-2026-09-03,BMEA,BUY,4.763,no exit price (unsettleable)
-2026-09-03,CRDL,BUY,4.763,no exit price (unsettleable)
-2026-09-03,DK,BUY,4.763,no exit price (unsettleable)
-2026-09-03,HLX,BUY,4.763,no session bar (price data missing)
-2026-09-03,HRMY,BUY,3.759,no exit price (unsettleable)
-2026-09-03,NVAX,BUY,4.763,no exit price (unsettleable)
-2026-09-03,PBH,BUY,3.759,no exit price (unsettleable)
-2026-09-03,PCRX,BUY,3.759,no exit price (unsettleable)
-2026-09-03,RVTY,BUY,4.763,no exit price (unsettleable)
-2026-09-03,VET,BUY,4.763,no exit price (unsettleable)
-2026-09-03,VIST,BUY,4.763,no exit price (unsettleable)
-2026-09-03,VSTM,BUY,3.759,no exit price (unsettleable)
-2026-09-03,ACHV,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ADM,BUY,2.0,no exit price (unsettleable)
-2026-09-03,AGCO,BUY,4.563,no exit price (unsettleable)
-2026-09-03,ALHC,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ALVO,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ALXO,BUY,3.559,no exit price (unsettleable)
-2026-09-03,APA,BUY,3.559,no exit price (unsettleable)
-2026-09-03,AR,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ASND,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ATRC,BUY,3.559,no exit price (unsettleable)
-2026-09-03,AUTL,BUY,3.559,no exit price (unsettleable)
-2026-09-03,BCRX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,BG,BUY,2.0,no exit price (unsettleable)
-2026-09-03,BTE,BUY,1.8,no exit price (unsettleable)
-2026-09-03,CABA,BUY,3.559,no exit price (unsettleable)
-2026-09-03,CDNA,BUY,3.559,no exit price (unsettleable)
-2026-09-03,CEG,BUY,3.559,no exit price (unsettleable)
-2026-09-03,CF,BUY,4.563,no exit price (unsettleable)
-2026-09-03,CNH,BUY,4.563,no exit price (unsettleable)
-2026-09-03,CRGY,BUY,3.559,no exit price (unsettleable)
-2026-09-03,CVE,BUY,1.8,no exit price (unsettleable)
-2026-09-03,CVI,BUY,3.559,no exit price (unsettleable)
-2026-09-03,CXW,BUY,4.563,no exit price (unsettleable)
-2026-09-03,DE,BUY,4.563,no exit price (unsettleable)
-2026-09-03,DINO,BUY,3.559,no exit price (unsettleable)
-2026-09-03,DVN,BUY,3.559,no exit price (unsettleable)
-2026-09-03,EBS,BUY,3.559,no exit price (unsettleable)
-2026-09-03,EGO,BUY,4.563,no exit price (unsettleable)
-2026-09-03,EMBC,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ENGN,BUY,3.559,no exit price (unsettleable)
-2026-09-03,EXEL,BUY,3.559,no exit price (unsettleable)
-2026-09-03,FLR,BUY,4.563,no exit price (unsettleable)
-2026-09-03,FNV,BUY,3.559,no exit price (unsettleable)
-2026-09-03,FRNM,BUY,4.563,no exit price (unsettleable)
-2026-09-03,GTE,BUY,3.559,no exit price (unsettleable)
-2026-09-03,HAL,BUY,3.559,no exit price (unsettleable)
-2026-09-03,HP,BUY,4.563,no exit price (unsettleable)
-2026-09-03,HUM,BUY,3.559,no exit price (unsettleable)
-2026-09-03,IMMX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,INO,BUY,3.559,no exit price (unsettleable)
-2026-09-03,IQV,BUY,3.559,no exit price (unsettleable)
-2026-09-03,IRON,BUY,3.559,no exit price (unsettleable)
-2026-09-03,JCI,BUY,3.559,no exit price (unsettleable)
-2026-09-03,KOS,BUY,3.559,no exit price (unsettleable)
-2026-09-03,LENZ,BUY,3.559,no exit price (unsettleable)
-2026-09-03,LIVN,BUY,3.559,no exit price (unsettleable)
-2026-09-03,LPLA,BUY,4.563,no exit price (unsettleable)
-2026-09-03,MGTX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,MGY,BUY,3.559,no exit price (unsettleable)
-2026-09-03,MMED,BUY,4.563,no exit price (unsettleable)
-2026-09-03,MTDR,BUY,1.8,no exit price (unsettleable)
-2026-09-03,NBIX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,NEM,BUY,3.559,no exit price (unsettleable)
-2026-09-03,NEOG,BUY,3.559,no exit price (unsettleable)
-2026-09-03,NU,BUY,3.559,no exit price (unsettleable)
-2026-09-03,OBE,BUY,3.559,no exit price (unsettleable)
-2026-09-03,OMCL,BUY,3.559,no exit price (unsettleable)
-2026-09-03,OPK,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PARR,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PBR,BUY,4.563,no exit price (unsettleable)
-2026-09-03,PCVX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PLX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PODD,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PRGO,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PRME,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PTEN,BUY,3.559,no exit price (unsettleable)
-2026-09-03,PTGX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,QGEN,BUY,3.559,no exit price (unsettleable)
-2026-09-03,RDNT,BUY,3.559,no exit price (unsettleable)
-2026-09-03,RXST,BUY,3.559,no exit price (unsettleable)
-2026-09-03,SDGR,BUY,3.559,no exit price (unsettleable)
-2026-09-03,SLB,BUY,3.559,no exit price (unsettleable)
-2026-09-03,SLN,BUY,3.559,no exit price (unsettleable)
-2026-09-03,SMMT,BUY,3.559,no exit price (unsettleable)
-2026-09-03,SOLV,BUY,3.559,no exit price (unsettleable)
-2026-09-03,STAA,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TALO,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TDOC,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TDW,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TFX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TGTX,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TNXP,BUY,3.559,no exit price (unsettleable)
-2026-09-03,TX,BUY,4.563,no exit price (unsettleable)
-2026-09-03,VIR,BUY,3.559,no exit price (unsettleable)
-2026-09-03,WAY,BUY,3.559,no exit price (unsettleable)
-2026-09-03,WFRD,BUY,3.559,no exit price (unsettleable)
-2026-09-03,WTI,BUY,3.559,no exit price (unsettleable)
-2026-09-03,ACCO,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AG,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AGI,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AKBA,BUY,2.706,no exit price (unsettleable)
-2026-09-03,AMPY,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AMRC,BUY,3.359,no exit price (unsettleable)
-2026-09-03,APMD,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AQST,BUY,2.559,no exit price (unsettleable)
-2026-09-03,ASH,BUY,3.359,no exit price (unsettleable)
-2026-09-03,ASM,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AURA,BUY,3.359,no exit price (unsettleable)
-2026-09-03,AYA,BUY,4.363,no exit price (unsettleable)
-2026-09-03,BBD,BUY,3.359,no exit price (unsettleable)
-2026-09-03,BE,BUY,3.359,no exit price (unsettleable)
-2026-09-03,BGC,BUY,3.359,no exit price (unsettleable)
-2026-09-03,BHP,BUY,3.359,no exit price (unsettleable)
-2026-09-03,BKV,BUY,3.359,no exit price (unsettleable)
-2026-09-03,BLFS,BUY,1.6,no exit price (unsettleable)
-2026-09-03,BVN,BUY,3.359,no exit price (unsettleable)
-2026-09-03,BZ,BUY,4.563,no exit price (unsettleable)
-2026-09-03,CAI,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CARR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CDE,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CELC,BUY,2.559,no exit price (unsettleable)
-2026-09-03,CENX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CGAU,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CGON,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CHRS,BUY,2.559,no exit price (unsettleable)
-2026-09-03,CLMT,BUY,4.363,no exit price (unsettleable)
-2026-09-03,CMCO,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CNR,BUY,1.6,no exit price (unsettleable)
-2026-09-03,CRC,BUY,3.359,no exit price (unsettleable)
-2026-09-03,CRON,BUY,3.359,no exit price (unsettleable)
-2026-09-03,DAR,BUY,1.8,no exit price (unsettleable)
-2026-09-03,ECVT,BUY,3.359,no exit price (unsettleable)
-2026-09-03,ESI,BUY,4.363,no exit price (unsettleable)
-2026-09-03,EXPO,BUY,3.359,no exit price (unsettleable)
-2026-09-03,FSM,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GAU,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GENB,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GEVO,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GFI,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GGB,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GH,BUY,2.559,no exit price (unsettleable)
-2026-09-03,GIS,BUY,1.8,no exit price (unsettleable)
-2026-09-03,GRNT,BUY,4.363,no exit price (unsettleable)
-2026-09-03,GROY,BUY,3.359,no exit price (unsettleable)
-2026-09-03,GTES,BUY,3.359,no exit price (unsettleable)
-2026-09-03,HAFN,BUY,3.359,no exit price (unsettleable)
-2026-09-03,HITI,BUY,1.6,no exit price (unsettleable)
-2026-09-03,HNGE,BUY,3.359,no exit price (unsettleable)
-2026-09-03,HTFL,BUY,3.359,no exit price (unsettleable)
-2026-09-03,INVX,BUY,1.6,no exit price (unsettleable)
-2026-09-03,IRTC,BUY,3.359,no exit price (unsettleable)
-2026-09-03,JHX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,KYTX,BUY,4.363,no exit price (unsettleable)
-2026-09-03,LNC,BUY,3.359,no exit price (unsettleable)
-2026-09-03,LUV,BUY,3.359,no exit price (unsettleable)
-2026-09-03,MDLN,BUY,3.359,no exit price (unsettleable)
-2026-09-03,MEOH,BUY,3.359,no exit price (unsettleable)
-2026-09-03,MIR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,MLM,BUY,4.363,no exit price (unsettleable)
-2026-09-03,MRNA,BUY,4.363,no exit price (unsettleable)
-2026-09-03,MRX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,MUX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,NEXT,BUY,3.359,no exit price (unsettleable)
-2026-09-03,NTR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,NVT,BUY,3.359,no exit price (unsettleable)
-2026-09-03,NWL,BUY,1.8,no exit price (unsettleable)
-2026-09-03,OMDA,BUY,3.359,no exit price (unsettleable)
-2026-09-03,OR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,PBR-A,BUY,1.6,no exit price (unsettleable)
-2026-09-03,PIPR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,PRCH,BUY,3.359,no exit price (unsettleable)
-2026-09-03,PRMB,BUY,4.563,no exit price (unsettleable)
-2026-09-03,PURR,BUY,4.363,no exit price (unsettleable)
-2026-09-03,PWP,BUY,3.359,no exit price (unsettleable)
-2026-09-03,PWR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,RANI,BUY,3.359,no exit price (unsettleable)
-2026-09-03,RGLD,BUY,3.359,no exit price (unsettleable)
-2026-09-03,RRX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SB,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SBLK,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SBSW,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SENS,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SFL,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SGRY,BUY,4.363,no exit price (unsettleable)
-2026-09-03,SJM,BUY,1.8,no exit price (unsettleable)
-2026-09-03,SKWD,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SQM,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SSRM,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SVM,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SWK,BUY,3.359,no exit price (unsettleable)
-2026-09-03,SXC,BUY,3.359,no exit price (unsettleable)
-2026-09-03,TFPM,BUY,3.359,no exit price (unsettleable)
-2026-09-03,TKR,BUY,3.359,no exit price (unsettleable)
-2026-09-03,TRAX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,TWI,BUY,3.359,no exit price (unsettleable)
-2026-09-03,VERA,BUY,4.363,no exit price (unsettleable)
-2026-09-03,VKTX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,VMC,BUY,4.363,no exit price (unsettleable)
-2026-09-03,VYGR,BUY,2.559,no exit price (unsettleable)
-2026-09-03,WHD,BUY,3.359,no exit price (unsettleable)
-2026-09-03,XP,BUY,3.359,no exit price (unsettleable)
-2026-09-03,XRX,BUY,3.359,no exit price (unsettleable)
-2026-09-03,ZVRA,BUY,1.6,no exit price (unsettleable)
-2026-09-03,A,BUY,3.159,no exit price (unsettleable)
-2026-09-03,AAON,BUY,2.359,no exit price (unsettleable)
-2026-09-03,ABUS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,ACRS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,AEM,BUY,4.163,no exit price (unsettleable)
-2026-09-03,AGRO,BUY,4.363,no exit price (unsettleable)
-2026-09-03,ARIS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,AUGO,BUY,3.159,no exit price (unsettleable)
-2026-09-03,AVGO,BUY,1.4,no exit price (unsettleable)
-2026-09-03,AZTA,BUY,2.506,no exit price (unsettleable)
-2026-09-03,BHC,BUY,3.159,no exit price (unsettleable)
-2026-09-03,BIIB,BUY,1.4,no exit price (unsettleable)
-2026-09-03,BIOA,BUY,2.359,no exit price (unsettleable)
-2026-09-03,BMRN,BUY,1.4,no exit price (unsettleable)
-2026-09-03,BVS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,BWXT,BUY,4.492,no exit price (unsettleable)
-2026-09-03,CCCC,BUY,1.4,no exit price (unsettleable)
-2026-09-03,CDNL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,CLB,BUY,3.159,no exit price (unsettleable)
-2026-09-03,CLYM,BUY,3.159,no exit price (unsettleable)
-2026-09-03,CNC,BUY,3.159,no exit price (unsettleable)
-2026-09-03,CORT,BUY,3.159,no exit price (unsettleable)
-2026-09-03,CPB,BUY,1.6,no exit price (unsettleable)
-2026-09-03,CRCL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,CURI,BUY,3.359,no exit price (unsettleable)
-2026-09-03,DAL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,DEC,BUY,1.4,no exit price (unsettleable)
-2026-09-03,DHT,BUY,1.4,no exit price (unsettleable)
-2026-09-03,DVA,BUY,4.492,no exit price (unsettleable)
-2026-09-03,ECG,BUY,3.159,no exit price (unsettleable)
-2026-09-03,EMR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,EQT,BUY,3.159,no exit price (unsettleable)
-2026-09-03,ERO,BUY,4.163,no exit price (unsettleable)
-2026-09-03,ETON,BUY,3.159,no exit price (unsettleable)
-2026-09-03,EXK,BUY,3.159,no exit price (unsettleable)
-2026-09-03,FANG,BUY,3.159,no exit price (unsettleable)
-2026-09-03,FCX,BUY,3.159,no exit price (unsettleable)
-2026-09-03,FDMT,BUY,3.159,no exit price (unsettleable)
-2026-09-03,FIGR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,FLS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,FRO,BUY,1.4,no exit price (unsettleable)
-2026-09-03,GDRX,BUY,1.4,no exit price (unsettleable)
-2026-09-03,GEO,BUY,4.163,no exit price (unsettleable)
-2026-09-03,GO,BUY,1.1,no exit price (unsettleable)
-2026-09-03,GPGI,BUY,4.163,no exit price (unsettleable)
-2026-09-03,HAE,BUY,3.159,no exit price (unsettleable)
-2026-09-03,HAPN,BUY,3.159,no exit price (unsettleable)
-2026-09-03,HLF,BUY,4.363,no exit price (unsettleable)
-2026-09-03,HNST,BUY,1.6,no exit price (unsettleable)
-2026-09-03,HQY,BUY,3.159,no exit price (unsettleable)
-2026-09-03,HSLV,BUY,4.163,no exit price (unsettleable)
-2026-09-03,IDXX,BUY,3.159,no exit price (unsettleable)
-2026-09-03,ILMN,BUY,3.159,no exit price (unsettleable)
-2026-09-03,IVZ,BUY,2.282,no exit price (unsettleable)
-2026-09-03,KGC,BUY,3.159,no exit price (unsettleable)
-2026-09-03,KHC,BUY,1.6,no exit price (unsettleable)
-2026-09-03,KKR,BUY,2.282,no exit price (unsettleable)
-2026-09-03,KURA,BUY,3.159,no exit price (unsettleable)
-2026-09-03,LEGN,BUY,2.359,no exit price (unsettleable)
-2026-09-03,LFST,BUY,1.4,no exit price (unsettleable)
-2026-09-03,LLY,BUY,3.159,no exit price (unsettleable)
-2026-09-03,LNG,BUY,1.4,no exit price (unsettleable)
-2026-09-03,LQDA,BUY,3.159,no exit price (unsettleable)
-2026-09-03,LXU,BUY,3.159,no exit price (unsettleable)
-2026-09-03,MANE,BUY,2.359,no exit price (unsettleable)
-2026-09-03,MCK,BUY,3.159,no exit price (unsettleable)
-2026-09-03,MD,BUY,1.4,no exit price (unsettleable)
-2026-09-03,META,BUY,3.359,no exit price (unsettleable)
-2026-09-03,MIAX,BUY,3.159,no exit price (unsettleable)
-2026-09-03,MLI,BUY,3.159,no exit price (unsettleable)
-2026-09-03,MPC,BUY,1.4,no exit price (unsettleable)
-2026-09-03,MRK,BUY,3.159,no exit price (unsettleable)
-2026-09-03,MTCH,BUY,3.359,no exit price (unsettleable)
-2026-09-03,NEOV,BUY,2.359,no exit price (unsettleable)
-2026-09-03,NGEN,BUY,2.359,no exit price (unsettleable)
-2026-09-03,NTRA,BUY,3.159,no exit price (unsettleable)
-2026-09-03,NVO,BUY,3.159,no exit price (unsettleable)
-2026-09-03,NVST,BUY,3.159,no exit price (unsettleable)
-2026-09-03,OABI,BUY,3.159,no exit price (unsettleable)
-2026-09-03,OKE,BUY,1.4,no exit price (unsettleable)
-2026-09-03,OMER,BUY,1.4,no exit price (unsettleable)
-2026-09-03,ORA,BUY,1.4,no exit price (unsettleable)
-2026-09-03,OSCR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,OVV,BUY,1.4,no exit price (unsettleable)
-2026-09-03,OWL,BUY,4.163,no exit price (unsettleable)
-2026-09-03,PAAS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,PBLS,BUY,2.359,no exit price (unsettleable)
-2026-09-03,PHAT,BUY,2.359,no exit price (unsettleable)
-2026-09-03,POST,BUY,3.359,no exit price (unsettleable)
-2026-09-03,PR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,PRVA,BUY,3.159,no exit price (unsettleable)
-2026-09-03,PSX,BUY,3.159,no exit price (unsettleable)
-2026-09-03,RARE,BUY,3.159,no exit price (unsettleable)
-2026-09-03,RCUS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,REPL,BUY,2.359,no exit price (unsettleable)
-2026-09-03,RES,BUY,1.4,no exit price (unsettleable)
-2026-09-03,RGEN,BUY,1.4,no exit price (unsettleable)
-2026-09-03,RIG,BUY,3.159,no exit price (unsettleable)
-2026-09-03,ROK,BUY,3.159,no exit price (unsettleable)
-2026-09-03,RPM,BUY,4.163,no exit price (unsettleable)
-2026-09-03,RRC,BUY,3.159,no exit price (unsettleable)
-2026-09-03,RVMD,BUY,2.359,no exit price (unsettleable)
-2026-09-03,SIBN,BUY,3.159,no exit price (unsettleable)
-2026-09-03,SLDE,BUY,3.159,no exit price (unsettleable)
-2026-09-03,SLS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,SNDR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,SOLS,BUY,3.159,no exit price (unsettleable)
-2026-09-03,SPGI,BUY,4.492,no exit price (unsettleable)
-2026-09-03,SRE,BUY,4.163,no exit price (unsettleable)
-2026-09-03,SSL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,STNG,BUY,1.4,no exit price (unsettleable)
-2026-09-03,STOK,BUY,1.4,no exit price (unsettleable)
-2026-09-03,SU,BUY,1.4,no exit price (unsettleable)
-2026-09-03,SYK,BUY,3.159,no exit price (unsettleable)
-2026-09-03,TEM,BUY,1.4,no exit price (unsettleable)
-2026-09-03,TPG,BUY,2.282,no exit price (unsettleable)
-2026-09-03,TRMD,BUY,1.4,no exit price (unsettleable)
-2026-09-03,TWST,BUY,3.159,no exit price (unsettleable)
-2026-09-03,UGP,BUY,3.159,no exit price (unsettleable)
-2026-09-03,UPWK,BUY,3.359,no exit price (unsettleable)
-2026-09-03,UROY,BUY,4.492,no exit price (unsettleable)
-2026-09-03,VAL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,VCEL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,VLO,BUY,1.4,no exit price (unsettleable)
-2026-09-03,VRT,BUY,2.359,no exit price (unsettleable)
-2026-09-03,WMB,BUY,1.4,no exit price (unsettleable)
-2026-09-03,WT,BUY,2.282,no exit price (unsettleable)
-2026-09-03,WTTR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,XNCR,BUY,3.159,no exit price (unsettleable)
-2026-09-03,Z,BUY,3.359,no exit price (unsettleable)
-2026-09-03,ZD,BUY,3.359,no exit price (unsettleable)
-2026-09-03,ZLAB,BUY,3.159,no exit price (unsettleable)
-2026-09-03,ZURA,BUY,3.159,no exit price (unsettleable)
-2026-09-03,AA,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ACDC,BUY,2.159,no exit price (unsettleable)
-2026-09-03,ADI,BUY,1.2,no exit price (unsettleable)
-2026-09-03,AFRM,BUY,2.306,no exit price (unsettleable)
-2026-09-03,ALLE,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ALM,BUY,2.159,no exit price (unsettleable)
-2026-09-03,AMSC,BUY,2.159,no exit price (unsettleable)
-2026-09-03,AON,BUY,3.963,no exit price (unsettleable)
-2026-09-03,ARLO,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ARW,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ASC,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ATI,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ATRO,BUY,4.292,no exit price (unsettleable)
-2026-09-03,AVNT,BUY,2.959,no exit price (unsettleable)
-2026-09-03,BFH,BUY,1.2,no exit price (unsettleable)
-2026-09-03,CAT,BUY,2.159,no exit price (unsettleable)
-2026-09-03,CLNE,BUY,2.159,no exit price (unsettleable)
-2026-09-03,COCO,BUY,1.4,no exit price (unsettleable)
-2026-09-03,CRH,BUY,2.959,no exit price (unsettleable)
-2026-09-03,CRS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,CSL,BUY,2.959,no exit price (unsettleable)
-2026-09-03,CSTM,BUY,2.959,no exit price (unsettleable)
-2026-09-03,CTRI,BUY,1.2,no exit price (unsettleable)
-2026-09-03,CTVA,BUY,2.959,no exit price (unsettleable)
-2026-09-03,DELL,BUY,3.963,no exit price (unsettleable)
-2026-09-03,DMRA,BUY,2.159,no exit price (unsettleable)
-2026-09-03,DOW,BUY,2.959,no exit price (unsettleable)
-2026-09-03,DRS,BUY,4.292,no exit price (unsettleable)
-2026-09-03,DY,BUY,2.959,no exit price (unsettleable)
-2026-09-03,EGY,BUY,2.959,no exit price (unsettleable)
-2026-09-03,EL,BUY,1.4,no exit price (unsettleable)
-2026-09-03,ENS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,EQX,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ETD,BUY,3.963,no exit price (unsettleable)
-2026-09-03,ETN,BUY,2.959,no exit price (unsettleable)
-2026-09-03,FA,BUY,4.292,no exit price (unsettleable)
-2026-09-03,FDS,BUY,4.292,no exit price (unsettleable)
-2026-09-03,FMC,BUY,2.959,no exit price (unsettleable)
-2026-09-03,FRPT,BUY,1.4,no exit price (unsettleable)
-2026-09-03,FSLR,BUY,2.959,no exit price (unsettleable)
-2026-09-03,FSS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,FUTU,BUY,2.959,no exit price (unsettleable)
-2026-09-03,GERN,BUY,2.159,no exit price (unsettleable)
-2026-09-03,GLNG,BUY,1.2,no exit price (unsettleable)
-2026-09-03,GME,BUY,3.963,no exit price (unsettleable)
-2026-09-03,GMRS,BUY,1.2,no exit price (unsettleable)
-2026-09-03,GPRE,BUY,2.959,no exit price (unsettleable)
-2026-09-03,GS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,GTX,BUY,3.963,no exit price (unsettleable)
-2026-09-03,HBM,BUY,2.959,no exit price (unsettleable)
-2026-09-03,HII,BUY,4.292,no exit price (unsettleable)
-2026-09-03,HL,BUY,2.959,no exit price (unsettleable)
-2026-09-03,HLMN,BUY,2.959,no exit price (unsettleable)
-2026-09-03,HMY,BUY,2.959,no exit price (unsettleable)
-2026-09-03,HOOD,BUY,2.959,no exit price (unsettleable)
-2026-09-03,HPQ,BUY,1.2,no exit price (unsettleable)
-2026-09-03,HXL,BUY,4.292,no exit price (unsettleable)
-2026-09-03,IFF,BUY,2.959,no exit price (unsettleable)
-2026-09-03,INIO,BUY,2.159,no exit price (unsettleable)
-2026-09-03,INSW,BUY,1.2,no exit price (unsettleable)
-2026-09-03,IR,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ITT,BUY,2.959,no exit price (unsettleable)
-2026-09-03,KLAR,BUY,2.159,no exit price (unsettleable)
-2026-09-03,KMT,BUY,2.159,no exit price (unsettleable)
-2026-09-03,KNX,BUY,2.959,no exit price (unsettleable)
-2026-09-03,KYIV,BUY,4.163,no exit price (unsettleable)
-2026-09-03,LFTO,BUY,3.159,no exit price (unsettleable)
-2026-09-03,LIFE,BUY,2.159,no exit price (unsettleable)
-2026-09-03,LTM,BUY,1.2,no exit price (unsettleable)
-2026-09-03,LW,BUY,1.4,no exit price (unsettleable)
-2026-09-03,LZ,BUY,4.292,no exit price (unsettleable)
-2026-09-03,MAIR,BUY,2.159,no exit price (unsettleable)
-2026-09-03,MAN,BUY,4.292,no exit price (unsettleable)
-2026-09-03,MOS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,MSM,BUY,4.292,no exit price (unsettleable)
-2026-09-03,NE,BUY,2.959,no exit price (unsettleable)
-2026-09-03,NMAX,BUY,3.159,no exit price (unsettleable)
-2026-09-03,NOG,BUY,2.959,no exit price (unsettleable)
-2026-09-03,NOMD,BUY,1.4,no exit price (unsettleable)
-2026-09-03,NPKI,BUY,2.959,no exit price (unsettleable)
-2026-09-03,NVDA,BUY,1.2,no exit price (unsettleable)
-2026-09-03,NXT,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ON,BUY,1.2,no exit price (unsettleable)
-2026-09-03,ORKA,BUY,2.159,no exit price (unsettleable)
-2026-09-03,OTF,BUY,2.082,no exit price (unsettleable)
-2026-09-03,P,BUY,1.2,no exit price (unsettleable)
-2026-09-03,PH,BUY,2.959,no exit price (unsettleable)
-2026-09-03,PNR,BUY,2.306,no exit price (unsettleable)
-2026-09-03,PSKY,BUY,3.159,no exit price (unsettleable)
-2026-09-03,QRVO,BUY,1.2,no exit price (unsettleable)
-2026-09-03,RELY,BUY,1.2,no exit price (unsettleable)
-2026-09-03,REZI,BUY,4.292,no exit price (unsettleable)
-2026-09-03,ROAD,BUY,2.959,no exit price (unsettleable)
-2026-09-03,RPC,BUY,2.082,no exit price (unsettleable)
-2026-09-03,RR,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SCCO,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SCZM,BUY,2.159,no exit price (unsettleable)
-2026-09-03,SEZL,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SGI,BUY,3.963,no exit price (unsettleable)
-2026-09-03,SHLS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SID,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SMPL,BUY,3.159,no exit price (unsettleable)
-2026-09-03,SMTC,BUY,1.2,no exit price (unsettleable)
-2026-09-03,SWIM,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SWKS,BUY,1.2,no exit price (unsettleable)
-2026-09-03,SYF,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SYM,BUY,2.959,no exit price (unsettleable)
-2026-09-03,TECK,BUY,2.959,no exit price (unsettleable)
-2026-09-03,TEX,BUY,2.959,no exit price (unsettleable)
-2026-09-03,TKC,BUY,4.163,no exit price (unsettleable)
-2026-09-03,TRI,BUY,4.292,no exit price (unsettleable)
-2026-09-03,TRU,BUY,4.292,no exit price (unsettleable)
-2026-09-03,UAL,BUY,2.959,no exit price (unsettleable)
-2026-09-03,UMC,BUY,1.2,no exit price (unsettleable)
-2026-09-03,URGN,BUY,2.159,no exit price (unsettleable)
-2026-09-03,VALE,BUY,2.959,no exit price (unsettleable)
-2026-09-03,VCTR,BUY,1.2,no exit price (unsettleable)
-2026-09-03,VG,BUY,1.2,no exit price (unsettleable)
-2026-09-03,VVX,BUY,4.292,no exit price (unsettleable)
-2026-09-03,WCC,BUY,4.292,no exit price (unsettleable)
-2026-09-03,WPM,BUY,2.959,no exit price (unsettleable)
-2026-09-03,WWD,BUY,4.292,no exit price (unsettleable)
-2026-09-03,XPO,BUY,1.2,no exit price (unsettleable)
-2026-09-03,ZBIO,BUY,2.159,no exit price (unsettleable)
-2026-09-03,ABNB,BUY,2.759,no exit price (unsettleable)
-2026-09-03,ACI,BUY,0.7,no exit price (unsettleable)
-2026-09-03,APAM,BUY,1.0,no exit price (unsettleable)
-2026-09-03,ARCO,BUY,2.759,no exit price (unsettleable)
-2026-09-03,ASO,BUY,2.759,no exit price (unsettleable)
-2026-09-03,ATAT,BUY,2.759,no exit price (unsettleable)
-2026-09-03,AU,BUY,2.959,no exit price (unsettleable)
-2026-09-03,AVAH,BUY,1.0,no exit price (unsettleable)
-2026-09-03,AVY,BUY,2.759,no exit price (unsettleable)
-2026-09-03,B,BUY,2.959,no exit price (unsettleable)
-2026-09-03,BBAR,BUY,1.959,no exit price (unsettleable)
-2026-09-03,BBWI,BUY,2.759,no exit price (unsettleable)
-2026-09-03,BOX,BUY,3.763,no exit price (unsettleable)
-2026-09-03,BRSL,BUY,2.759,no exit price (unsettleable)
-2026-09-03,BX,BUY,1.882,no exit price (unsettleable)
-2026-09-03,CAE,BUY,4.092,no exit price (unsettleable)
-2026-09-03,CAG,BUY,1.2,no exit price (unsettleable)
-2026-09-03,CAKE,BUY,2.759,no exit price (unsettleable)
-2026-09-03,CG,BUY,1.882,no exit price (unsettleable)
-2026-09-03,CHA,BUY,3.763,no exit price (unsettleable)
-2026-09-03,CHDN,BUY,2.759,no exit price (unsettleable)
-2026-09-03,CHTR,BUY,2.959,no exit price (unsettleable)
-2026-09-03,CIG,BUY,1.0,no exit price (unsettleable)
-2026-09-03,CMBT,BUY,1.0,no exit price (unsettleable)
-2026-09-03,CNK,BUY,2.959,no exit price (unsettleable)
-2026-09-03,CRM,BUY,1.0,no exit price (unsettleable)
-2026-09-03,CRUS,BUY,3.763,no exit price (unsettleable)
-2026-09-03,CTOS,BUY,4.092,no exit price (unsettleable)
-2026-09-03,DRI,BUY,2.759,no exit price (unsettleable)
-2026-09-03,DUOL,BUY,3.763,no exit price (unsettleable)
-2026-09-03,EAT,BUY,2.759,no exit price (unsettleable)
-2026-09-03,EC,BUY,1.0,no exit price (unsettleable)
-2026-09-03,EIX,BUY,3.763,no exit price (unsettleable)
-2026-09-03,ENTX,BUY,1.959,no exit price (unsettleable)
-2026-09-03,EQPT,BUY,4.092,no exit price (unsettleable)
-2026-09-03,FBRT,BUY,3.963,no exit price (unsettleable)
-2026-09-03,FOX,BUY,1.2,no exit price (unsettleable)
-2026-09-03,FOXA,BUY,2.959,no exit price (unsettleable)
-2026-09-03,GEV,BUY,2.759,no exit price (unsettleable)
-2026-09-03,GGAL,BUY,2.759,no exit price (unsettleable)
-2026-09-03,GOOGL,BUY,2.959,no exit price (unsettleable)
-2026-09-03,HAYW,BUY,1.959,no exit price (unsettleable)
-2026-09-03,HCA,BUY,1.0,no exit price (unsettleable)
-2026-09-03,HLLY,BUY,2.759,no exit price (unsettleable)
-2026-09-03,HLNE,BUY,1.0,no exit price (unsettleable)
-2026-09-03,HTHT,BUY,2.759,no exit price (unsettleable)
-2026-09-03,HWM,BUY,4.092,no exit price (unsettleable)
-2026-09-03,IBKR,BUY,1.959,no exit price (unsettleable)
-2026-09-03,IKT,BUY,1.959,no exit price (unsettleable)
-2026-09-03,ITUB,BUY,1.959,no exit price (unsettleable)
-2026-09-03,KGS,BUY,2.759,no exit price (unsettleable)
-2026-09-03,KRMN,BUY,4.092,no exit price (unsettleable)
-2026-09-03,KSS,BUY,2.759,no exit price (unsettleable)
-2026-09-03,KVYO,BUY,3.763,no exit price (unsettleable)
-2026-09-03,LEA,BUY,2.759,no exit price (unsettleable)
-2026-09-03,LEU,BUY,4.092,no exit price (unsettleable)
-2026-09-03,LMT,BUY,1.0,no exit price (unsettleable)
-2026-09-03,LPG,BUY,1.0,no exit price (unsettleable)
-2026-09-03,MDA,BUY,4.092,no exit price (unsettleable)
-2026-09-03,MDB,BUY,3.763,no exit price (unsettleable)
-2026-09-03,NAT,BUY,1.0,no exit price (unsettleable)
-2026-09-03,PACS,BUY,1.0,no exit price (unsettleable)
-2026-09-03,PAX,BUY,1.882,no exit price (unsettleable)
-2026-09-03,PEGA,BUY,3.763,no exit price (unsettleable)
-2026-09-03,PHM,BUY,2.759,no exit price (unsettleable)
-2026-09-03,PINS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,PLAB,BUY,3.763,no exit price (unsettleable)
-2026-09-03,PLG,BUY,1.959,no exit price (unsettleable)
-2026-09-03,PLNT,BUY,2.759,no exit price (unsettleable)
-2026-09-03,PNNT,BUY,3.763,no exit price (unsettleable)
-2026-09-03,PPLI,BUY,2.959,no exit price (unsettleable)
-2026-09-03,QNST,BUY,2.959,no exit price (unsettleable)
-2026-09-03,RBA,BUY,3.292,no exit price (unsettleable)
-2026-09-03,RSI,BUY,2.759,no exit price (unsettleable)
-2026-09-03,SARO,BUY,4.092,no exit price (unsettleable)
-2026-09-03,SEI,BUY,2.759,no exit price (unsettleable)
-2026-09-03,SFM,BUY,0.7,no exit price (unsettleable)
-2026-09-03,SGHC,BUY,2.759,no exit price (unsettleable)
-2026-09-03,SKM,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SLGN,BUY,2.759,no exit price (unsettleable)
-2026-09-03,SNDK,BUY,1.0,no exit price (unsettleable)
-2026-09-03,SPHR,BUY,2.959,no exit price (unsettleable)
-2026-09-03,SRRK,BUY,1.959,no exit price (unsettleable)
-2026-09-03,SSP,BUY,2.959,no exit price (unsettleable)
-2026-09-03,STM,BUY,1.0,no exit price (unsettleable)
-2026-09-03,SUJA,BUY,1.2,no exit price (unsettleable)
-2026-09-03,TDS,BUY,1.2,no exit price (unsettleable)
-2026-09-03,TEL,BUY,3.763,no exit price (unsettleable)
-2026-09-03,THM,BUY,2.759,no exit price (unsettleable)
-2026-09-03,TK,BUY,1.0,no exit price (unsettleable)
-2026-09-03,TME,BUY,2.959,no exit price (unsettleable)
-2026-09-03,TMUS,BUY,2.959,no exit price (unsettleable)
-2026-09-03,TRGP,BUY,1.0,no exit price (unsettleable)
-2026-09-03,TTD,BUY,2.959,no exit price (unsettleable)
-2026-09-03,TXRH,BUY,2.759,no exit price (unsettleable)
-2026-09-03,ULTA,BUY,2.759,no exit price (unsettleable)
-2026-09-03,VC,BUY,2.759,no exit price (unsettleable)
-2026-09-03,VRDN,BUY,1.959,no exit price (unsettleable)
-2026-09-03,VYX,BUY,3.763,no exit price (unsettleable)
-2026-09-03,WING,BUY,2.759,no exit price (unsettleable)
-2026-09-03,XE,BUY,2.106,no exit price (unsettleable)
-2026-09-03,YELP,BUY,2.959,no exit price (unsettleable)
-2026-09-03,ZETA,BUY,3.763,no exit price (unsettleable)
-2026-09-03,ZIP,BUY,2.959,no exit price (unsettleable)
-2026-09-03,AAP,BUY,2.559,no exit price (unsettleable)
-2026-09-03,ADBE,BUY,0.8,no exit price (unsettleable)
-2026-09-03,AKAM,BUY,0.8,no exit price (unsettleable)
-2026-09-03,AMRZ,BUY,1.759,no exit price (unsettleable)
-2026-09-03,ANF,BUY,3.892,no exit price (unsettleable)
-2026-09-03,APG,BUY,2.559,no exit price (unsettleable)
-2026-09-03,ARKO,BUY,3.563,no exit price (unsettleable)
-2026-09-03,AXON,BUY,3.892,no exit price (unsettleable)
-2026-09-03,BAM,BUY,0.5,no exit price (unsettleable)
-2026-09-03,BAND,BUY,0.8,no exit price (unsettleable)
-2026-09-03,BBW,BUY,3.563,no exit price (unsettleable)
-2026-09-03,BF-B,BUY,2.759,no exit price (unsettleable)
-2026-09-03,BWA,BUY,2.559,no exit price (unsettleable)
-2026-09-03,CDW,BUY,0.8,no exit price (unsettleable)
-2026-09-03,CION,BUY,0.8,no exit price (unsettleable)
-2026-09-03,CLX,BUY,1.0,no exit price (unsettleable)
-2026-09-03,CNDT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,CNM,BUY,3.892,no exit price (unsettleable)
-2026-09-03,COHR,BUY,0.8,no exit price (unsettleable)
-2026-09-03,CRCT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,CRWD,BUY,0.8,no exit price (unsettleable)
-2026-09-03,CWEN,BUY,0.8,no exit price (unsettleable)
-2026-09-03,DHI,BUY,2.559,no exit price (unsettleable)
-2026-09-03,DLB,BUY,3.892,no exit price (unsettleable)
-2026-09-03,DOCU,BUY,0.8,no exit price (unsettleable)
-2026-09-03,DRVN,BUY,3.563,no exit price (unsettleable)
-2026-09-03,DSGX,BUY,0.8,no exit price (unsettleable)
-2026-09-03,DT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,DTM,BUY,0.8,no exit price (unsettleable)
-2026-09-03,EBAY,BUY,1.682,no exit price (unsettleable)
-2026-09-03,EMBJ,BUY,3.892,no exit price (unsettleable)
-2026-09-03,EMN,BUY,2.559,no exit price (unsettleable)
-2026-09-03,ENTG,BUY,0.8,no exit price (unsettleable)
-2026-09-03,ESTC,BUY,0.8,no exit price (unsettleable)
-2026-09-03,ETSY,BUY,1.682,no exit price (unsettleable)
-2026-09-03,EXPE,BUY,3.563,no exit price (unsettleable)
-2026-09-03,FERG,BUY,3.892,no exit price (unsettleable)
-2026-09-03,FFIV,BUY,0.8,no exit price (unsettleable)
-2026-09-03,FIS,BUY,0.8,no exit price (unsettleable)
-2026-09-03,G,BUY,0.8,no exit price (unsettleable)
-2026-09-03,GDDY,BUY,0.8,no exit price (unsettleable)
-2026-09-03,GILT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,GLW,BUY,0.8,no exit price (unsettleable)
-2026-09-03,GOF,BUY,3.092,no exit price (unsettleable)
-2026-09-03,GRAB,BUY,0.8,no exit price (unsettleable)
-2026-09-03,GTLB,BUY,1.906,no exit price (unsettleable)
-2026-09-03,GWRE,BUY,0.8,no exit price (unsettleable)
-2026-09-03,HAWK,BUY,3.092,no exit price (unsettleable)
-2026-09-03,HRI,BUY,3.892,no exit price (unsettleable)
-2026-09-03,IOT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,KD,BUY,0.8,no exit price (unsettleable)
-2026-09-03,KN,BUY,0.8,no exit price (unsettleable)
-2026-09-03,KTOS,BUY,3.892,no exit price (unsettleable)
-2026-09-03,LDOS,BUY,0.8,no exit price (unsettleable)
-2026-09-03,LOAR,BUY,3.892,no exit price (unsettleable)
-2026-09-03,LRCX,BUY,0.8,no exit price (unsettleable)
-2026-09-03,MNDY,BUY,0.8,no exit price (unsettleable)
-2026-09-03,NABL,BUY,0.8,no exit price (unsettleable)
-2026-09-03,NCNO,BUY,0.8,no exit price (unsettleable)
-2026-09-03,NOW,BUY,0.8,no exit price (unsettleable)
-2026-09-03,NTCT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,NXPI,BUY,1.759,no exit price (unsettleable)
-2026-09-03,OCTV,BUY,3.563,no exit price (unsettleable)
-2026-09-03,OKTA,BUY,0.8,no exit price (unsettleable)
-2026-09-03,OSS,BUY,0.8,no exit price (unsettleable)
-2026-09-03,OSW,BUY,3.563,no exit price (unsettleable)
-2026-09-03,PANW,BUY,0.8,no exit price (unsettleable)
-2026-09-03,PATH,BUY,0.8,no exit price (unsettleable)
-2026-09-03,PAYC,BUY,0.8,no exit price (unsettleable)
-2026-09-03,PBI,BUY,0.8,no exit price (unsettleable)
-2026-09-03,PCTY,BUY,0.8,no exit price (unsettleable)
-2026-09-03,PD,BUY,0.8,no exit price (unsettleable)
-2026-09-03,POOL,BUY,3.892,no exit price (unsettleable)
-2026-09-03,PRG,BUY,3.892,no exit price (unsettleable)
-2026-09-03,PRGS,BUY,0.8,no exit price (unsettleable)
-2026-09-03,PUBM,BUY,0.8,no exit price (unsettleable)
-2026-09-03,RCL,BUY,2.559,no exit price (unsettleable)
-2026-09-03,REYN,BUY,3.563,no exit price (unsettleable)
-2026-09-03,RLJ,BUY,2.759,no exit price (unsettleable)
-2026-09-03,RNG,BUY,0.8,no exit price (unsettleable)
-2026-09-03,RRR,BUY,2.559,no exit price (unsettleable)
-2026-09-03,SAIC,BUY,0.8,no exit price (unsettleable)
-2026-09-03,SKY,BUY,2.559,no exit price (unsettleable)
-2026-09-03,SMG,BUY,2.559,no exit price (unsettleable)
-2026-09-03,SN,BUY,3.563,no exit price (unsettleable)
-2026-09-03,SPT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,SVC,BUY,2.759,no exit price (unsettleable)
-2026-09-03,TAP,BUY,1.0,no exit price (unsettleable)
-2026-09-03,TEAM,BUY,0.8,no exit price (unsettleable)
-2026-09-03,TENB,BUY,0.8,no exit price (unsettleable)
-2026-09-03,TILE,BUY,3.563,no exit price (unsettleable)
-2026-09-03,TLS,BUY,0.8,no exit price (unsettleable)
-2026-09-03,TXN,BUY,0.8,no exit price (unsettleable)
-2026-09-03,TXT,BUY,0.8,no exit price (unsettleable)
-2026-09-03,TYL,BUY,0.8,no exit price (unsettleable)
-2026-09-03,UPST,BUY,2.559,no exit price (unsettleable)
-2026-09-03,WIX,BUY,0.8,no exit price (unsettleable)
-2026-09-03,WLK,BUY,1.759,no exit price (unsettleable)
-2026-09-03,XIFR,BUY,0.8,no exit price (unsettleable)
-2026-09-03,YMM,BUY,0.8,no exit price (unsettleable)
-2026-09-03,YOU,BUY,0.8,no exit price (unsettleable)
-2026-09-03,ADSK,BUY,0.6,no exit price (unsettleable)
-2026-09-03,AEO,BUY,3.692,no exit price (unsettleable)
-2026-09-03,AMAT,BUY,0.6,no exit price (unsettleable)
-2026-09-03,APP,BUY,1.559,no exit price (unsettleable)
-2026-09-03,APTV,BUY,2.359,no exit price (unsettleable)
-2026-09-03,ARE,BUY,1.559,no exit price (unsettleable)
-2026-09-03,ATMU,BUY,2.359,no exit price (unsettleable)
-2026-09-03,BBY,BUY,2.359,no exit price (unsettleable)
-2026-09-03,BIP,BUY,3.363,no exit price (unsettleable)
-2026-09-03,BKNG,BUY,2.359,no exit price (unsettleable)
-2026-09-03,BLMN,BUY,2.359,no exit price (unsettleable)
-2026-09-03,BR,BUY,0.6,no exit price (unsettleable)
-2026-09-03,BULL,BUY,0.6,no exit price (unsettleable)
-2026-09-03,BUR,BUY,0.6,no exit price (unsettleable)
-2026-09-03,CBRL,BUY,0.6,no exit price (unsettleable)
-2026-09-03,CBT,BUY,1.559,no exit price (unsettleable)
-2026-09-03,CXM,BUY,3.363,no exit price (unsettleable)
-2026-09-03,EFOR,BUY,0.6,no exit price (unsettleable)
-2026-09-03,EXLS,BUY,0.6,no exit price (unsettleable)
-2026-09-03,FIVE,BUY,2.359,no exit price (unsettleable)
-2026-09-03,FOSL,BUY,2.359,no exit price (unsettleable)
-2026-09-03,H,BUY,2.359,no exit price (unsettleable)
-2026-09-03,HPE,BUY,3.692,no exit price (unsettleable)
-2026-09-03,HSAI,BUY,2.359,no exit price (unsettleable)
-2026-09-03,INGM,BUY,0.6,no exit price (unsettleable)
-2026-09-03,LTH,BUY,2.359,no exit price (unsettleable)
-2026-09-03,LULU,BUY,3.692,no exit price (unsettleable)
-2026-09-03,M,BUY,2.359,no exit price (unsettleable)
-2026-09-03,MGA,BUY,0.6,no exit price (unsettleable)
-2026-09-03,MHK,BUY,2.359,no exit price (unsettleable)
-2026-09-03,MLKN,BUY,2.359,no exit price (unsettleable)
-2026-09-03,NIQ,BUY,0.6,no exit price (unsettleable)
-2026-09-03,PSEC,BUY,0.6,no exit price (unsettleable)
-2026-09-03,PTON,BUY,0.6,no exit price (unsettleable)
-2026-09-03,PVH,BUY,3.692,no exit price (unsettleable)
-2026-09-03,Q,BUY,0.6,no exit price (unsettleable)
-2026-09-03,RUSHA,BUY,2.359,no exit price (unsettleable)
-2026-09-03,RVLV,BUY,0.6,no exit price (unsettleable)
-2026-09-03,SHOE,BUY,3.692,no exit price (unsettleable)
-2026-09-03,SON,BUY,2.359,no exit price (unsettleable)
-2026-09-03,SONO,BUY,0.6,no exit price (unsettleable)
-2026-09-03,TNL,BUY,0.6,no exit price (unsettleable)
-2026-09-03,TPR,BUY,2.359,no exit price (unsettleable)
-2026-09-03,URBN,BUY,3.692,no exit price (unsettleable)
-2026-09-03,VERX,BUY,0.6,no exit price (unsettleable)
-2026-09-03,VGZ,BUY,1.559,no exit price (unsettleable)
-2026-09-03,VVV,BUY,2.359,no exit price (unsettleable)
-2026-09-03,WK,BUY,0.6,no exit price (unsettleable)
-2026-09-03,WSE,BUY,0.6,no exit price (unsettleable)
-2026-09-03,WSM,BUY,2.359,no exit price (unsettleable)
-2026-09-03,WWW,BUY,2.359,no exit price (unsettleable)
-2026-09-03,WYNN,BUY,2.359,no exit price (unsettleable)
-2026-09-03,XMAX,BUY,1.559,no exit price (unsettleable)
-2026-09-03,XYZ,BUY,0.6,no exit price (unsettleable)
-2026-09-03,YETI,BUY,2.359,no exit price (unsettleable)
-2026-09-03,ABR,BUY,2.359,no exit price (unsettleable)
-2026-09-03,ACMR,BUY,0.4,no exit price (unsettleable)
-2026-09-03,ATEN,BUY,0.4,no exit price (unsettleable)
-2026-09-03,BDC,BUY,0.4,no exit price (unsettleable)
-2026-09-03,BURL,BUY,3.492,no exit price (unsettleable)
-2026-09-03,COLM,BUY,3.492,no exit price (unsettleable)
-2026-09-03,CVLT,BUY,0.4,no exit price (unsettleable)
-2026-09-03,DBX,BUY,0.4,no exit price (unsettleable)
-2026-09-03,FOUR,BUY,0.4,no exit price (unsettleable)
-2026-09-03,GCT,BUY,0.4,no exit price (unsettleable)
-2026-09-03,GE,BUY,2.692,no exit price (unsettleable)
-2026-09-03,GEN,BUY,0.4,no exit price (unsettleable)
-2026-09-03,GIII,BUY,3.492,no exit price (unsettleable)
-2026-09-03,GNTX,BUY,1.359,no exit price (unsettleable)
-2026-09-03,GRMN,BUY,0.4,no exit price (unsettleable)
-2026-09-03,JBL,BUY,0.4,no exit price (unsettleable)
-2026-09-03,LEVI,BUY,0.4,no exit price (unsettleable)
-2026-09-03,LIF,BUY,0.4,no exit price (unsettleable)
-2026-09-03,LYFT,BUY,0.4,no exit price (unsettleable)
-2026-09-03,MANH,BUY,0.4,no exit price (unsettleable)
-2026-09-03,NTAP,BUY,0.4,no exit price (unsettleable)
-2026-09-03,OLED,BUY,0.4,no exit price (unsettleable)
-2026-09-03,ORCL,BUY,0.4,no exit price (unsettleable)
-2026-09-03,OTEX,BUY,0.4,no exit price (unsettleable)
-2026-09-03,PAY,BUY,0.4,no exit price (unsettleable)
-2026-09-03,PAYS,BUY,0.4,no exit price (unsettleable)
-2026-09-03,QLYS,BUY,0.4,no exit price (unsettleable)
-2026-09-03,RPD,BUY,0.4,no exit price (unsettleable)
-2026-09-03,S,BUY,0.4,no exit price (unsettleable)
-2026-09-03,SHOO,BUY,1.359,no exit price (unsettleable)
-2026-09-03,SHOP,BUY,0.4,no exit price (unsettleable)
-2026-09-03,SOUN,BUY,0.4,no exit price (unsettleable)
-2026-09-03,TWLO,BUY,0.4,no exit price (unsettleable)
-2026-09-03,U,BUY,0.4,no exit price (unsettleable)
-2026-09-03,UPBD,BUY,0.4,no exit price (unsettleable)
-2026-09-03,VNO,BUY,2.359,no exit price (unsettleable)
-2026-09-03,VSXY,BUY,3.492,no exit price (unsettleable)
-2026-09-03,WDAY,BUY,0.4,no exit price (unsettleable)
-2026-09-03,WEX,BUY,0.4,no exit price (unsettleable)
-2026-09-03,ZBRA,BUY,0.4,no exit price (unsettleable)
-2026-09-03,ZM,BUY,0.4,no exit price (unsettleable)
-2026-09-03,BOOT,BUY,3.292,no exit price (unsettleable)
-2026-09-03,BXP,BUY,1.159,no exit price (unsettleable)
-2026-09-03,CRI,BUY,3.292,no exit price (unsettleable)
-2026-09-03,FTDR,BUY,3.292,no exit price (unsettleable)
-2026-09-03,HRB,BUY,3.292,no exit price (unsettleable)
-2026-09-03,RL,BUY,3.292,no exit price (unsettleable)
-2026-09-03,ROST,BUY,3.292,no exit price (unsettleable)
+2026-09-03,A,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AA,BUY,1.782,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AAON,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AAP,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ABNB,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ABR,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ABUS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACCO,BUY,2.482,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACDC,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACHV,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACI,BUY,0.9,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACIW,BUY,3.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACMR,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ACRS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ADBE,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ADI,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ADIG,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ADM,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ADSK,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AEM,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AEO,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AFRM,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AG,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AGCO,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AGI,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AGRO,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AKAM,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AKBA,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ALHC,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ALLE,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ALM,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ALVO,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ALXO,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AMAT,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AMPY,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AMRC,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AMRZ,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AMSC,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ANF,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AON,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AORT,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,APA,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,APAM,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,APG,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,APMD,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,APP,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,APTV,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AQST,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AR,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARCO,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARCT,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARE,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARIS,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARKO,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARLO,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ARW,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ASAN,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ASC,BUY,2.082,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ASH,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ASM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ASND,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ASO,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ATAT,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ATEN,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ATI,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ATMU,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ATRC,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ATRO,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AUGO,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AURA,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AUTL,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AVAH,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AVGO,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AVNT,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AVY,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AXON,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AXTI,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AYA,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,AZTA,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BAND,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BBAR,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BBD,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BBW,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BBWI,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BBY,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BCRX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BDC,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BE,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BFH,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BG,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BGC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BHC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BHP,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BIIB,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BILI,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BIOA,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BIP,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BKNG,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BKV,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BLFS,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BLMN,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BMEA,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BMRN,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BOOT,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BOX,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BR,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BRSL,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BRZE,BUY,3.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BTE,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BULL,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BUR,BUY,0.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BURL,BUY,3.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BVN,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BVS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BWA,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BWXT,BUY,4.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BX,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BXP,BUY,2.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,BZ,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CABA,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CAE,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CAG,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CAI,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CAKE,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CARR,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CAT,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CBRL,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CBT,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CCCC,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CDE,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CDNA,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CDNL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CDW,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CEG,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CELC,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CELH,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CENX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CF,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CG,BUY,1.882,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CGAU,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CGON,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CHA,BUY,3.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CHDN,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CHRS,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CHTR,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CHYM,BUY,3.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CIG,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CION,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CLB,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CLMT,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CLX,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CLYM,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CMBT,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CMCO,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CNC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CNDT,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CNH,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CNM,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CNR,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,COCO,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,COHR,BUY,2.751,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,COLM,BUY,3.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CORT,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CPB,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRC,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRCL,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRCT,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRDL,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRDO,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRGY,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRI,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRK,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRM,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRON,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRS,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRUS,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRWD,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CRWV,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CSL,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CSTM,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CTOS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CTRI,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CTVA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CURI,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CVE,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CVI,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CVLT,BUY,2.151,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CWEN,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CXM,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CXW,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DAL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DAR,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DBX,BUY,2.151,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DE,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DEC,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DELL,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DHI,BUY,3.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DHT,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DINO,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DK,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DLB,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DMRA,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DOCU,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DOW,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DRH,BUY,1.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DRI,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DRS,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DRVN,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DSGX,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DT,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DTM,BUY,0.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DUOL,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DVA,BUY,4.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DVN,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,DY,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EAT,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EBAY,BUY,1.882,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EBS,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EC,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ECG,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ECVT,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EFOR,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EGO,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EGY,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EIX,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EMBC,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EMBJ,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EMN,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EMR,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ENGN,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ENS,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ENTG,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ENTX,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EQPT,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EQT,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EQX,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ERO,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ESI,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ESTC,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ETD,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ETN,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ETON,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ETSY,BUY,1.882,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EXEL,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EXK,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EXLS,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EXPE,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,EXPO,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,F,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FA,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FANG,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FBRT,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FDMT,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FDS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FERG,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FFIV,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FIGR,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FIS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FIVE,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FLR,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FLS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FMC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FNV,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FOSL,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FOUR,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FOX,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FOXA,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FOXF,BUY,1.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FRNM,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FRO,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FRPT,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FSLR,BUY,2.751,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FSM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FSS,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FTDR,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,FUTU,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,G,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GAU,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GCT,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GDDY,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GDRX,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GE,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GEN,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GENB,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GEO,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GERN,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GEV,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GEVO,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GFI,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GFS,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GGAL,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GGB,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GH,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GIII,BUY,3.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GILT,BUY,2.751,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GIS,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GLNG,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GLW,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GME,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GMRS,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GNTX,BUY,1.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GO,BUY,1.3,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GOF,BUY,3.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GOOGL,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GPGI,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GPRE,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GRAB,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GRMN,BUY,2.351,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GRNT,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GROY,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GS,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GTE,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GTES,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GTLB,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GTX,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,GWRE,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,H,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HAE,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HAFN,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HAL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HAPN,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HAWK,BUY,3.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HAYW,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HBM,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HCA,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HII,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HITI,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HLF,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HLLY,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HLMN,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HLNE,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HLX,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HMY,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HNGE,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HNST,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HOOD,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HP,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HPE,BUY,2.551,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HPQ,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HQY,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HRB,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HRI,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HRMY,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HSAI,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HSLV,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HTFL,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HTHT,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HUM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HWM,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HXL,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IBKR,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ICLR,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IDXX,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IFF,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IKT,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ILMN,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IMMX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,INGM,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,INIO,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,INO,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,INSW,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,INVX,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IOT,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IQV,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IR,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IRON,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IRTC,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ITT,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ITUB,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,IVZ,BUY,2.282,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,JBHT,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,JBL,BUY,2.351,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,JCI,BUY,4.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,JHX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KC,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KD,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KGC,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KGS,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KHC,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KKR,BUY,2.282,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KLAR,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KN,BUY,2.751,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KNX,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KOS,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KRMN,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KSS,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KTOS,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KURA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KVYO,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KYIV,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,KYTX,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LDOS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LEA,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LEGN,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LENZ,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LEU,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LEVI,BUY,0.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LFST,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LFTO,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LIF,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LIFE,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LIVN,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LLY,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LMT,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LNC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LNG,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LOAR,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LPG,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LPLA,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LQDA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LRCX,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LTH,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LTM,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LULU,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LUV,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LW,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LXU,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LYFT,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,LZ,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,M,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MAIR,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MAN,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MANE,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MANH,BUY,2.151,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MCHP,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MCK,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MD,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MDA,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MDB,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MDLN,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MEOH,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,META,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MGA,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MGTX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MGY,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MHK,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MIAX,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MIR,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MLI,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MLKN,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MLM,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MMED,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MNDY,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MOS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MPC,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MRK,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MRNA,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MRX,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MSM,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MTCH,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MTDR,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MTN,BUY,1.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MTSI,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,MUX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NABL,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NAT,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NBIX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NCNO,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NE,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NEOG,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NEOV,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NEWP,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NEXT,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NGEN,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NIQ,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NOG,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NOMD,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NOW,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NPKI,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NTAP,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NTCT,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NTR,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NTRA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NU,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NVAX,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NVDA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NVO,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NVST,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NVT,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NWL,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NXPI,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,NXT,BUY,2.751,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OABI,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OBE,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OCTV,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OKE,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OKTA,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OLED,BUY,2.351,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OMCL,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OMDA,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OMER,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ON,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OPK,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OR,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ORA,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ORCL,BUY,2.151,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ORKA,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OSCR,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OSS,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OSW,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OTEX,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OTF,BUY,2.082,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OVV,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,OWL,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,P,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PAAS,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PACS,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PAGS,BUY,3.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PANW,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PARR,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PATH,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PAX,BUY,1.882,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PAY,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PAYC,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PAYS,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PBF,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PBH,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PBI,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PBLS,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PBR,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PBR-A,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PCRX,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PCTY,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PCVX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PD,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PEGA,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PENG,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PH,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PHAT,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PHM,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PINS,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PIPR,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PLAB,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PLG,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PLNT,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PLX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PNNT,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PNR,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PODD,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,POOL,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,POST,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PPLI,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PR,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRCH,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRG,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRGO,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRGS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRMB,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRME,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PRVA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PSEC,BUY,0.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PSKY,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PSX,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PTC,BUY,3.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PTEN,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PTGX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PTON,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PUBM,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PURR,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PVH,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PWP,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,PWR,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,Q,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,QGEN,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,QLYS,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,QNST,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,QRVO,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RANI,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RARE,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RBA,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RCL,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RCUS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RDNT,BUY,4.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RELY,BUY,4.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,REPL,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RES,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,REYN,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,REZI,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RGEN,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RGLD,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RIG,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RL,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RLJ,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RNG,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ROAD,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ROK,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ROST,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RPC,BUY,2.082,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RPD,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RPM,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RR,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RRC,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RRR,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RRX,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RSI,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RUSHA,BUY,3.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RVLV,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RVMD,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RVTY,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,RXST,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,S,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SA,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SAIC,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SARO,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SB,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SBLK,BUY,2.482,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SBSW,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SCCO,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SCZM,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SDGR,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SEI,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SENS,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SEZL,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SFL,BUY,2.482,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SFM,BUY,0.9,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SGHC,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SGI,BUY,4.163,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SGRY,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SHLS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SHOE,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SHOO,BUY,1.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SHOP,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SIBN,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SID,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SITM,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SJM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SKM,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SKWD,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SKY,BUY,3.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SLB,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SLDE,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SLGN,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SLN,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SLS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SMCI,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SMG,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SMMT,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SMPL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SMTC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SN,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SNAP,BUY,1.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SNDK,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SNDR,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SNPS,BUY,3.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SOLS,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SOLV,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SON,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SONO,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SOUN,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SPGI,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SPHR,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SPT,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SQM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SRE,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SRRK,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SSL,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SSP,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,STAA,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,STM,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,STNE,BUY,3.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,STNG,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,STOK,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SU,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SUJA,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SVC,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SVM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SWIM,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SWK,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SWKS,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SXC,BUY,2.182,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SYF,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SYK,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,SYM,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TALO,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TDOC,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TDS,BUY,1.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TDW,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TEAM,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TECK,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TEL,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TEM,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TENB,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TEX,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TFPM,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TFX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TGTX,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,THM,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TILE,BUY,3.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TK,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TKC,BUY,4.363,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TKR,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TLS,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TMDX,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TME,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TMUS,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TNL,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TNXP,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TPG,BUY,2.282,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TPR,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TRAX,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TRGP,BUY,0.8,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TRI,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TRMD,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TRU,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TTD,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TWI,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TWLO,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TWST,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TX,BUY,4.963,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TXN,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TXRH,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TXT,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,TYL,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,U,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UAL,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UGP,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ULTA,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UMC,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UPBD,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UPST,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UPWK,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,URBN,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,URGN,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,UROY,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VAL,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VALE,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VC,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VCEL,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VCTR,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VERA,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VERX,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VET,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VG,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VGZ,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VIR,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VIST,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VKTX,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VLO,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VMC,BUY,4.763,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VNO,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VRDN,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VRNS,BUY,2.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VRT,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VSTM,BUY,3.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VSXY,BUY,3.692,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VVV,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VVX,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VYGR,BUY,2.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VYX,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WAY,BUY,3.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WCC,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WDAY,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WEX,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WFRD,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WHD,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WING,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WIX,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WK,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WLK,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WMB,BUY,1.2,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WMS,BUY,1.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WPM,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WSE,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WSM,BUY,0.4,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WT,BUY,2.282,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WTI,BUY,1.6,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WTTR,BUY,2.959,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WWD,BUY,4.492,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WWW,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WYNN,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XE,BUY,2.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XIFR,BUY,1.0,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XMAX,BUY,1.759,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XNCR,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XP,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XPO,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XRX,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,XYZ,BUY,4.092,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,YELP,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,YETI,BUY,2.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,YMM,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,YOU,BUY,4.292,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,Z,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZBIO,BUY,2.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZBRA,BUY,2.351,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZD,BUY,3.559,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZETA,BUY,4.563,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZIP,BUY,3.159,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZLAB,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZM,BUY,3.892,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZURA,BUY,3.359,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ZVRA,BUY,1.8,day gate CLOSED: predict FLAT score -0.90 < +1.00

@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-03T11:35:01",
+  "asof": "2026-09-03",
+  "params": {
+    "capital": 100000.0,
+    "top_n": 10,
+    "pct": 0.1,
+    "side": "long",
+    "entry": "close",
+    "hold": "1w",
+    "rank": "book",
+    "gate_score": 1.0
+  },
+  "n_trades": 29,
+  "n_skipped": 216,
+  "hit": 0.552,
+  "total_pnl": 4554.34,
+  "total_ret_pct": 4.6,
+  "final_equity": 104596.92,
+  "max_dd_pct": 4.06,
+  "avg_win": 704.22,
+  "avg_loss": -516.4,
+  "by_side": {
+    "BUY": {
+      "n": 29,
+      "hit": 0.552,
+      "pnl": 4554.34
+    },
+    "SELL": {
+      "n": 0,
+      "hit": null,
+      "pnl": 0
+    }
+  },
+  "n_days": 12
+}

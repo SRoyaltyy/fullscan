@@ -1,6 +1,6 @@
 # Mover paper trading
 
-_Generated 2026-09-03T10:36:32 — calls 2026-08-13 → 2026-09-03_
+_Generated 2026-09-03T11:34:38 — calls 2026-08-13 → 2026-09-03_
 
 **Strategy:** LONG-only · top 10/day by cond · entry open (09:30 ET) · hold 1d (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged).
 
@@ -10,7 +10,7 @@ _Generated 2026-09-03T10:36:32 — calls 2026-08-13 → 2026-09-03_
 
 | Start capital | Final equity | Return | Max DD | Trades | Skipped | Win rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $109,259.07 | **9.26%** | 0.12% | 29 | 3896 | 62.1% |
+| $100,000 | $109,259.07 | **9.26%** | 0.12% | 29 | 3917 | 62.1% |
 
 | Side | Trades | Win rate | P&L |
 |---:|---:|---:|---:|
@@ -35,7 +35,7 @@ _Generated 2026-09-03T10:36:32 — calls 2026-08-13 → 2026-09-03_
 | 2026-08-31 | DOWN | -5.85 | 0 | **CLOSED** — predict DOWN score -5.85 < +1.00 | — |
 | 2026-09-01 | DOWN | -6.3 | 1 | **CLOSED** — predict DOWN score -6.30 < +1.00 | — |
 | 2026-09-02 | DOWN | -3.825 | 2 | **CLOSED** — predict DOWN score -3.83 < +1.00 | news judge: hawkish/bearish top items |
-| 2026-09-03 | — | — | 3 | **OPEN** — no predict on file — allowed | — |
+| 2026-09-03 | FLAT | -0.9 | 3 | **CLOSED** — predict FLAT score -0.90 < +1.00 | news judge: hawkish/bearish top items |
 
 ## Last 25 filled trades
 
