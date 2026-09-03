@@ -39,7 +39,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow openpyxl
+        run: pip install pandas pyarrow openpyxl yfinance
       - name: Score liquid movers
         env:
           FROM_DATE: ${{ inputs.from_date }}
@@ -54,6 +54,12 @@ jobs:
           test -s 03_scoreboard/MOVER_LOOKBACK_ACTION.md
           test -s 03_scoreboard/mover_lookback_action.json
           test -s dashboard/mover-lookback/index.html
+      - name: Paper-trade the gated calls
+        run: |
+          python -m src.mover_paper
+          test -s data/mover_paper/state.json
+          test -s 03_scoreboard/MOVER_PAPER.md
+          test -s dashboard/mover-paper/index.html
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \
@@ -61,7 +67,10 @@ jobs:
             01_daily/mover_lookback_action.md \
             03_scoreboard/MOVER_LOOKBACK_ACTION.md \
             03_scoreboard/mover_lookback_action.json \
-            dashboard/mover-lookback/
+            03_scoreboard/MOVER_PAPER.md \
+            dashboard/mover-lookback/ \
+            dashboard/mover-paper/ \
+            data/mover_paper/
         env:
           FROM_DATE: ${{ inputs.from_date }}
       - name: Upload artifact
@@ -71,7 +80,10 @@ jobs:
           path: |
             03_scoreboard/MOVER_LOOKBACK_ACTION.md
             03_scoreboard/mover_lookback_action.json
+            03_scoreboard/MOVER_PAPER.md
             dashboard/mover-lookback/index.html
+            dashboard/mover-paper/index.html
+            data/mover_paper/
       - name: Add links to run summary
         run: |
           {
@@ -79,6 +91,7 @@ jobs:
             echo
             echo "- [Markdown](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/MOVER_LOOKBACK_ACTION.md)"
             echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/mover-lookback/)"
+            echo "- [Paper trading](https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/)"
             echo
             awk '/^# Mover lookback/,/^## Called mornings/' 03_scoreboard/MOVER_LOOKBACK_ACTION.md
           } >> "$GITHUB_STEP_SUMMARY"

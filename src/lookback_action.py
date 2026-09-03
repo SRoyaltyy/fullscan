@@ -39,12 +39,24 @@ DEFAULTS: dict[str, Any] = {
     "blocked_is_no_buy": True,
     "long_setup_without_lane": True,
     "min_printed_boxes": 3,
+    # Regime gates (need params["_regime"][date] context, see below).
+    # None = gate off. Validated on the 16-session mover window:
+    # the SELL exhaustion veto doubles per-day SELL pnl; a BUY gate on
+    # the premarket predict did NOT validate (blocks good days too).
+    "sell_max_spy_down_streak": None,
+    "buy_min_predict_score": None,
 }
 
 PRESETS: dict[str, dict[str, Any]] = {
     "featured": {
         **DEFAULTS,
         "label": "featured longs + fade SELL + lattice BUY",
+    },
+    "gated": {
+        **DEFAULTS,
+        "sell_max_spy_down_streak": 3,
+        "label": "featured + SELL veto when SPY fell 3+ straight sessions "
+                 "into the open (exhaustion bounce risk)",
     },
     "strict": {
         **DEFAULTS,
@@ -136,9 +148,20 @@ def _buy_lanes(params: dict) -> tuple[str, ...]:
     return tuple(lanes)
 
 
+def _regime_for(day: dict, p: dict) -> dict:
+    """Per-date regime context injected by the caller as params['_regime'].
+
+    {date: {"spy_down_streak": int, "predict_dir": str|None,
+            "predict_score": float|None}} — all knowable at 09:30 ET.
+    """
+    reg = p.get("_regime") or {}
+    return reg.get(str(day.get("date") or "")[:10]) or {}
+
+
 def action_call(day: dict, params: dict | None = None) -> dict[str, Any]:
     """Return {action, reason, horizon, setups} from 09:30-only fields."""
     p = {**DEFAULTS, **(params or {})}
+    regime = _regime_for(day, p)
     if (day.get("class") == "no_data" and _printed_n(day) == 0) or (
         _printed_n(day) < int(p.get("min_printed_boxes") or 0)
         and not day.get("lane")
@@ -165,6 +188,16 @@ def action_call(day: dict, params: dict | None = None) -> dict[str, Any]:
 
     if fades and p.get("fade_is_sell", True):
         names = ", ".join(s.get("short") or s.get("label") or s.get("id") for s in fades)
+        max_streak = p.get("sell_max_spy_down_streak")
+        streak = int(regime.get("spy_down_streak") or 0)
+        if max_streak and streak >= int(max_streak):
+            return {
+                "action": "HOLD",
+                "reason": (f"fade vetoed: SPY down {streak} straight "
+                           "sessions into the open — exhaustion bounce risk"),
+                "horizon": "1d",
+                "setups": [s.get("id") for s in fades],
+            }
         return {
             "action": "SELL",
             "reason": f"fade: {names}",
@@ -179,6 +212,18 @@ def action_call(day: dict, params: dict | None = None) -> dict[str, Any]:
             "horizon": "1d",
             "setups": [s.get("id") for s in matched],
         }
+
+    buy_cut = p.get("buy_min_predict_score")
+    if buy_cut is not None:
+        ps = regime.get("predict_score")
+        if ps is not None and float(ps) < float(buy_cut):
+            return {
+                "action": "HOLD",
+                "reason": (f"regime gate: premarket predict score "
+                           f"{float(ps):+.2f} < {float(buy_cut):+.2f}"),
+                "horizon": "1d",
+                "setups": [s.get("id") for s in matched],
+            }
 
     if p.get("lane_can_buy", True) and lane in _buy_lanes(p):
         extra = ""
@@ -234,7 +279,8 @@ def attach_actions(payload: dict, params: dict | None = None) -> dict:
             day["action_horizon"] = packed.get("horizon") or "1d"
             day["action_stamp"] = session_stamp(day.get("date"), OPEN_CLOCK)
             day["action_label"] = format_action(packed["action"], day.get("date"))
-    payload["action_params"] = {k: v for k, v in p.items() if k != "label"}
+    payload["action_params"] = {k: v for k, v in p.items()
+                                if k != "label" and not k.startswith("_")}
     payload["action_preset"] = p.get("label") or default_preset_name()
     return payload
 
@@ -334,3 +380,35 @@ def action_tone(action: str) -> str:
         "NO BUY": "bad",
         "HOLD": "neutral",
     }.get(str(action or ""), "missing")
+
+
+# ---------------------------------------------------------- conviction ----
+
+_LANE_BONUS = {
+    "group_leader": 1.0,
+    "catalyst": 0.8,
+    "catalyst_exception": 0.8,
+    "standard": 0.5,
+    "probable": 0.25,
+}
+
+
+def conviction(day: dict, packed: dict | None = None) -> float:
+    """0..~4 conviction score for ranking same-day calls. 09:30-only inputs:
+    strongest matched setup edge, hall-pass lane quality, condition mix.
+    Fresh rips (big edge, leader/catalyst lane, clean condition) rank first.
+    """
+    action = (packed or {}).get("action") or day.get("action_call")
+    matched = _matched_setups(day)
+    cond = day.get("condition") or {}
+    good = float(cond.get("good") or 0)
+    bad = float(cond.get("bad") or 0)
+    lane = day.get("lane")
+    if action == "BUY":
+        longs = [s for s in matched if s.get("verdict") == "long"]
+        edge = max((_edge(s) for s in longs), default=0.0)
+        return round(edge + _LANE_BONUS.get(lane, 0.0) + 0.2 * (good - bad), 3)
+    if action == "SELL":
+        fades = [s for s in matched if s.get("verdict") == "fade"]
+        return round(1.0 + 0.5 * len(fades) + 0.2 * (bad - good), 3)
+    return 0.0
