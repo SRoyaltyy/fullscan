@@ -173,10 +173,14 @@ def test_random_universe_gates() -> None:
     assert len(uni) >= 10
     path = tl.latest_finviz_path()
     import pandas as pd
-    df = pd.read_csv(path, usecols=["Ticker", "Market Cap", "Average Volume"])
+    df = pd.read_csv(path, usecols=[
+        "Ticker", "Market Cap", "Average Volume",
+        "Average True Range", "Price",
+    ])
     row = df[df["Ticker"].astype(str).str.upper() == uni[0]].iloc[0]
     assert float(row["Market Cap"]) > 100
     assert float(row["Average Volume"]) > 500
+    assert tl.moves_enough(row["Average True Range"], row["Price"])
     assert tl.RANDOM_N == 50
     a = tl.pick_random_tickers(n=tl.RANDOM_N, seed=7)
     b = tl.pick_random_tickers(n=tl.RANDOM_N, seed=7)
@@ -190,6 +194,24 @@ def test_random_universe_gates() -> None:
     names, flag = run.resolve_tickers("random", seed=7)
     assert flag is True
     assert names == a
+
+
+def test_movement_gate_drops_compressed_cvs() -> None:
+    """CVS still had range in mid-August; by 09-01 ATR% had compressed."""
+    assert tl.atr_pct(2.07, 94.02) == 2.202
+    assert tl.moves_enough(2.07, 94.02) is False  # 2.20% < 2.5
+    assert tl.moves_enough(2.86, 94.17) is True   # 3.04%
+    assert tl.MIN_ATR_PCT == 2.5
+    mid = set(tl.liquid_universe(asof="2026-08-17"))
+    late = set(tl.liquid_universe(asof="2026-09-01"))
+    assert "CVS" in mid
+    assert "CVS" not in late
+    for mover in ("HIVE", "TSLA", "NVDA"):
+        assert mover in late
+    quiet = tl.liquid_universe(asof="2026-09-01", min_atr_pct=0)
+    assert "CVS" in set(quiet)
+    assert len(late) < len(quiet)
+    assert len(late) >= 1000
 
 
 def test_price_tones() -> None:
