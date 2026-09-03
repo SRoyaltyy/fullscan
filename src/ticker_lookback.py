@@ -83,6 +83,8 @@ JOIN_FAMILIES = (
 )
 _INDEX = None
 _PRICE_PANEL = None
+_OHLC_BARS = None
+_FINVIZ_BARS = {}
 
 
 def _tick(s):
@@ -898,6 +900,128 @@ def preopen_packet(date, prior_date=None):
     }
     cache[date] = packet
     return packet
+
+
+def session_after(date: str, n: int, dates: list[str] | None = None) -> str | None:
+    """Nth trading session after `date`, or None if the tape ends."""
+    dates = dates if dates is not None else session_dates()
+    key = str(date or "")[:10]
+    try:
+        i = dates.index(key)
+    except ValueError:
+        return None
+    j = i + int(n)
+    if 0 <= j < len(dates):
+        return dates[j]
+    return None
+
+
+def horizon_dates(date: str, dates: list[str] | None = None) -> dict[str, str | None]:
+    dates = dates if dates is not None else session_dates()
+    return {
+        "1d": session_after(date, 1, dates),
+        "3d": session_after(date, 3, dates),
+        "1w": session_after(date, 5, dates),
+    }
+
+
+def _ohlc_bars():
+    """Full daily OHLC indexed by (date, ticker). Close-only panel stays separate."""
+    global _OHLC_BARS
+    if _OHLC_BARS is not None:
+        return _OHLC_BARS
+    if not PRICE_STORE.exists():
+        _OHLC_BARS = pd.DataFrame()
+        return _OHLC_BARS
+    try:
+        df = pd.read_parquet(PRICE_STORE)
+        df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+        df["ticker"] = df["ticker"].astype(str).str.upper()
+        _OHLC_BARS = (
+            df.drop_duplicates(["date", "ticker"], keep="last")
+            .set_index(["date", "ticker"])
+            .sort_index()
+        )
+    except Exception:
+        _OHLC_BARS = pd.DataFrame()
+    return _OHLC_BARS
+
+
+def _finviz_bar(ticker: str, date: str) -> dict:
+    """Same-day Finviz Open / Price when the OHLC store has no bar yet."""
+    d = str(date or "")[:10]
+    empty = {"open": None, "close": None, "close_open_pct": None}
+    if not d:
+        return empty
+    if d not in _FINVIZ_BARS:
+        df = _csv(EXPORT_DIR / f"finviz_{d}.csv")
+        out: dict[str, dict] = {}
+        if not df.empty and "Ticker" in df.columns:
+            for rec in df.to_dict(orient="records"):
+                name = _tick(rec.get("Ticker"))
+                if not name:
+                    continue
+                o = _num(rec.get("Open"))
+                c = _num(rec.get("Price"))
+                oc = _num(rec.get("Change from Open"))
+                if oc is None and o and c:
+                    oc = round(100.0 * (c / o - 1.0), 3)
+                elif oc is not None:
+                    oc = round(float(oc), 3)
+                out[name] = {
+                    "open": None if o is None else round(float(o), 4),
+                    "close": None if c is None else round(float(c), 4),
+                    "close_open_pct": oc,
+                }
+        _FINVIZ_BARS[d] = out
+    return _FINVIZ_BARS[d].get(_tick(ticker)) or empty
+
+
+def session_bar(ticker: str, date: str) -> dict:
+    """Regular-session OHLC on `date` (open ≈ 09:30 ET, close ≈ 16:00 ET)."""
+    t = _tick(ticker)
+    empty = {
+        "open": None, "high": None, "low": None, "close": None,
+        "close_open_pct": None, "open_clock": "09:30 ET",
+        "close_clock": "16:00 ET",
+    }
+    if not t or not date:
+        return empty
+    bars = _ohlc_bars()
+    key = (str(date)[:10], t)
+    o = h = low = c = oc = None
+    if not bars.empty:
+        try:
+            row = bars.loc[key]
+        except KeyError:
+            row = None
+        if row is not None:
+            if isinstance(row, pd.DataFrame):
+                row = row.iloc[-1]
+            o = _num(row.get("open") if hasattr(row, "get") else row["open"])
+            h = _num(row.get("high") if hasattr(row, "get") else row["high"])
+            low = _num(row.get("low") if hasattr(row, "get") else row["low"])
+            c = _num(row.get("close") if hasattr(row, "get") else row["close"])
+            oc = None if not o or not c else round(100.0 * (c / o - 1.0), 3)
+    if o is None or c is None:
+        fv = _finviz_bar(t, date)
+        if o is None:
+            o = fv.get("open")
+        if c is None:
+            c = fv.get("close")
+        if oc is None:
+            oc = fv.get("close_open_pct")
+            if oc is None and o and c:
+                oc = round(100.0 * (c / o - 1.0), 3)
+    return {
+        "open": None if o is None else round(float(o), 4),
+        "high": None if h is None else round(float(h), 4),
+        "low": None if low is None else round(float(low), 4),
+        "close": None if c is None else round(float(c), 4),
+        "close_open_pct": oc,
+        "open_clock": "09:30 ET",
+        "close_clock": "16:00 ET",
+    }
 
 
 def _price_panel():

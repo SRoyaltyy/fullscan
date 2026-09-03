@@ -49,7 +49,54 @@ def test_score_rows_buy_catch() -> None:
     assert scored["mean_pnl"]["1d"] == 2.0
 
 
+def test_gainer_table_stamps_clocks_prices_and_cond() -> None:
+    page = gla.render_html({
+        "generated_at": "t",
+        "preset": "featured",
+        "top_n": 25,
+        "from_date": "2026-08-17",
+        "to_date": "2026-08-17",
+        "recall_buy_rate": 0.0,
+        "sweeps": {},
+        "gainer_rows": [{
+            "date": "2026-08-17",
+            "ticker": "CBRS",
+            "gainer_rank": 5,
+            "gainer_change": 14.55,
+            "action_call": "SELL",
+            "action_label": "SELL · 2026-08-17 09:30 ET",
+            "action_reason": "fade: first crack",
+            "cond_tally": "2/3/1",
+            "session_bar": {
+                "open": 3.72, "close": 3.82, "close_open_pct": 2.688,
+            },
+            "horizon_dates": {
+                "1d": "2026-08-18", "3d": "2026-08-20", "1w": "2026-08-24",
+            },
+            "price_changes": {"1d": -12.69, "3d": -16.72, "1w": -25.70},
+            "hits": {"1d": True, "3d": True, "1w": True},
+            "setups": [{"id": "tag_context:first_crack", "short": "first crack",
+                        "verdict": "fade"}],
+        }],
+    })
+    assert "Date 09:30 ET" in page
+    assert "Close 16:00 ET" in page
+    assert "Open 09:30 ET" in page
+    assert "o→c 09:30→16:00" in page
+    assert "Action 09:30 ET" in page
+    assert "SELL · 2026-08-17 09:30 ET" in page
+    assert "$3.82 · 2026-08-17 16:00 ET" in page
+    assert "$3.72 · 2026-08-17 09:30 ET" in page
+    assert "+14.55% · 2026-08-17 16:00 ET" in page
+    assert "+2.69% · 2026-08-17 09:30→16:00 ET" in page
+    assert "2/3/1" in page
+    assert "-12.69% · 2026-08-18 16:00 ET" in page
+    assert "known at the open" in page
+    assert "Not an end-of-day call" in page
+
+
 if __name__ == "__main__":
     test_collect_gainers_is_liquid_top()
     test_score_rows_buy_catch()
-    print("2 gainer-lookback-action tests passed")
+    test_gainer_table_stamps_clocks_prices_and_cond()
+    print("3 gainer-lookback-action tests passed")
