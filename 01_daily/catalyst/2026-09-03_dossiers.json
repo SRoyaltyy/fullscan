@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T07:19:01.397463-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "CTVA",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB DOWN; both SPX captains pos (Vylor trait, Blue Point groundbreak)"
+    },
+    {
+      "ticker": "CF",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB DOWN; both SPX captains pos (Vylor trait, Blue Point groundbreak)"
+    },
+    {
+      "ticker": "ADM",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLP; crush/biofuel captains pos; CALM eggs are the intra-sleeve veto"
+    },
+    {
+      "ticker": "BG",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLP; crush/biofuel captains pos; CALM eggs are the intra-sleeve veto"
+    },
+    {
+      "ticker": "AIN",
+      "role": "opportunity",
+      "why": "long SPLIT vs XLY textile DOWN; AIN is A&D composites after CH-53K amend + Q3 EPS lift, not a fabric bounce"
+    },
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Uranium"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE card Uranium"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "CTVA",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB DOWN; both SPX captains pos (Vylor trait, Blue Point groundbreak)",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "CF",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB DOWN; both SPX captains pos (Vylor trait, Blue Point groundbreak)",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "ADM",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLP; crush/biofuel captains pos; CALM eggs are the intra-sleeve veto",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "BG",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLP; crush/biofuel captains pos; CALM eggs are the intra-sleeve veto",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "AIN",
+      "role": "opportunity",
+      "why": "long SPLIT vs XLY textile DOWN; AIN is A&D composites after CH-53K amend + Q3 EPS lift, not a fabric bounce",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Uranium",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE card Uranium",
+      "error": "'list' object has no attribute 'get'"
+    }
+  ]
+}

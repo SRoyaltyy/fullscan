@@ -1,0 +1,23 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "bearish",
+  "hawkish",
+  "bearish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "mixed",
+  "Healthcare": "bullish",
+  "Basic Materials": "bearish"
+ },
+ "tickers": {
+  "XLV": 4.0,
+  "AMGN": 7.0,
+  "AVGO": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=4\nMACRO rates: [hawkish] Hold + 3 hike votes + Warsh JH hike-odds; gold -3%; Gundlach inflation (regime/1d-1w)\nMACRO risk: [bearish] September open futures lower (session/1d)\nMACRO sentiment: [bearish] Retail selling fastest since COVID crash (session/1d-1w)\nSECTOR technology: [mixed] AVGO AI beat/raise vs Goolsbee capex warning + yield-hit hardware (XLK)\nSECTOR healthcare: [bullish] AMGN Repatha Ph3 20% mortality \u2014 XLV/biopharma sympathy (XLV)\nSECTOR materials: [bearish] Gold smash on hike repricing \u2014 miners, not a metals bid (XLB/GDX)\nINTERACTION: one hawkish-rates cluster; AI fundamental \u2260 AI-multiple expansion while Goolsbee/yields hit\nWATCH: usable is Fed-RSS conflicted (cut vs hold); stale cut headlines discarded; Iran-fuel noise unconfirmed for XLE",
+ "date": "2026-09-03"
+}

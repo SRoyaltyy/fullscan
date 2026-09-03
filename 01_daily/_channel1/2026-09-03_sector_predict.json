@@ -1,0 +1,696 @@
+{
+  "stage": "predict",
+  "fetched_at": "2026-09-03T04:57:36.561906-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 5.27,
+      "delta_1d": 0.02,
+      "delta_1w": 0.1,
+      "delta_1m": 0.04
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 4.79,
+      "delta_1d": 0.04,
+      "delta_1w": 0.15,
+      "delta_1m": 0.09
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 2.44,
+      "delta_1d": 0.0,
+      "delta_1w": 0.12,
+      "delta_1m": 0.01
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 2.65,
+      "delta_1d": 0.02,
+      "delta_1w": -0.05,
+      "delta_1m": -0.13
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 3.66,
+      "delta_1d": -0.02,
+      "delta_1w": 0.0,
+      "delta_1m": 0.01
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-09-03",
+      "current": 3.65,
+      "delta_1d": 0.0,
+      "delta_1w": 0.0,
+      "delta_1m": 0.0
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-09-02",
+      "current": 0.525,
+      "delta_1d": -0.2,
+      "delta_1w": -0.177,
+      "delta_1m": -1.726
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-09-01",
+      "current": 167.08,
+      "delta_1d": -103.59,
+      "delta_1w": 5.21,
+      "delta_1m": -47.27
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-09-03",
+      "current": 15.18,
+      "delta_1d": -0.02,
+      "delta_1w": -0.03
+    },
+    "vix3m": {
+      "date": "2026-07-17",
+      "current": 20.54,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.999,
+    "ratio_source": "vix/ma20",
+    "vix_ma20": 15.2,
+    "ratio_ma20": 0.999,
+    "ratio_stale": "VIX3M quote is 48 days older than VIX (2026-07-17 vs 2026-09-03)"
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-09-03",
+      "last": 90.77,
+      "pct_1d": -0.26
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-09-03",
+      "last": 95.36,
+      "pct_1d": -0.28
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-09-03",
+      "last": 4484.9,
+      "pct_1d": 2.72
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-09-03",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.35,
+      "pct_1m": -0.68
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-09-03",
+      "last": 7686.75,
+      "pct_1d": 0.13
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-09-03",
+      "last": 29233.25,
+      "pct_1d": 0.16
+    }
+  },
+  "finviz_futures_tape": {
+    "available": true,
+    "source": "01_daily/map_heat/2026-09-03_map_heat.json",
+    "rows": [
+      {
+        "ticker": "ES",
+        "label": "S&P 500",
+        "last": 7688.25,
+        "change": 0.16
+      },
+      {
+        "ticker": "NQ",
+        "label": "Nasdaq 100",
+        "last": 29259.25,
+        "change": 0.24
+      },
+      {
+        "ticker": "ER2",
+        "label": "Russell 2000",
+        "last": 2958.1,
+        "change": -0.0
+      },
+      {
+        "ticker": "YM",
+        "label": "DJIA",
+        "last": 53251.0,
+        "change": 0.26
+      },
+      {
+        "ticker": "VX",
+        "label": "VIX",
+        "last": 16.55,
+        "change": -0.02
+      },
+      {
+        "ticker": "CL",
+        "label": "Crude Oil WTI",
+        "last": 90.07,
+        "change": -1.19
+      },
+      {
+        "ticker": "QA",
+        "label": "Crude Oil Brent",
+        "last": 94.59,
+        "change": -1.07
+      },
+      {
+        "ticker": "NG",
+        "label": "Natural Gas",
+        "last": 2.987,
+        "change": 1.05
+      },
+      {
+        "ticker": "HO",
+        "label": "Heating Oil",
+        "last": 4.6177,
+        "change": -1.28
+      },
+      {
+        "ticker": "RB",
+        "label": "Gasoline RBOB",
+        "last": 3.0629,
+        "change": -1.27
+      },
+      {
+        "ticker": "GC",
+        "label": "Gold",
+        "last": 4480.2,
+        "change": 1.48
+      },
+      {
+        "ticker": "SI",
+        "label": "Silver",
+        "last": 66.585,
+        "change": 1.71
+      },
+      {
+        "ticker": "HG",
+        "label": "Copper",
+        "last": 6.6,
+        "change": 0.11
+      },
+      {
+        "ticker": "PL",
+        "label": "Platinum",
+        "last": 1787.3,
+        "change": 1.32
+      },
+      {
+        "ticker": "PA",
+        "label": "Palladium",
+        "last": 1382.0,
+        "change": 1.58
+      },
+      {
+        "ticker": "DX",
+        "label": "USD",
+        "last": 99.24,
+        "change": -0.31
+      },
+      {
+        "ticker": "6E",
+        "label": "EUR",
+        "last": 1.1607,
+        "change": 0.13
+      },
+      {
+        "ticker": "6J",
+        "label": "JPY",
+        "last": 0.63765,
+        "change": 1.24
+      },
+      {
+        "ticker": "6B",
+        "label": "GBP",
+        "last": 1.3501,
+        "change": 0.1
+      },
+      {
+        "ticker": "6A",
+        "label": "AUD",
+        "last": 0.7179,
+        "change": 0.17
+      },
+      {
+        "ticker": "6C",
+        "label": "CAD",
+        "last": 0.72405,
+        "change": 0.17
+      },
+      {
+        "ticker": "6S",
+        "label": "CHF",
+        "last": 1.23695,
+        "change": 0.48
+      },
+      {
+        "ticker": "6N",
+        "label": "NZD",
+        "last": 0.58655,
+        "change": 0.32
+      },
+      {
+        "ticker": "ZN",
+        "label": "10 Year Note",
+        "last": 107.59375,
+        "change": 0.17
+      },
+      {
+        "ticker": "ZF",
+        "label": "5 Year Note",
+        "last": 105.640625,
+        "change": 0.13
+      },
+      {
+        "ticker": "ZT",
+        "label": "2 Year Note",
+        "last": 102.58984375,
+        "change": 0.05
+      },
+      {
+        "ticker": "ZB",
+        "label": "30 Year Bond",
+        "last": 108.65625,
+        "change": 0.38
+      },
+      {
+        "ticker": "NKD",
+        "label": "Nikkei 225",
+        "last": 64340.0,
+        "change": -0.55
+      },
+      {
+        "ticker": "DY",
+        "label": "DAX",
+        "last": 25915.0,
+        "change": 0.12
+      },
+      {
+        "ticker": "EX",
+        "label": "Euro Stoxx 50",
+        "last": 6377.0,
+        "change": 0.06
+      },
+      {
+        "ticker": "ZC",
+        "label": "Corn",
+        "last": 535.5,
+        "change": -1.43
+      },
+      {
+        "ticker": "ZS",
+        "label": "Soybeans",
+        "last": 1301.25,
+        "change": -0.71
+      },
+      {
+        "ticker": "ZW",
+        "label": "Wheat",
+        "last": 755.0,
+        "change": -2.42
+      },
+      {
+        "ticker": "ZL",
+        "label": "Soybean oil",
+        "last": 69.34,
+        "change": -1.74
+      },
+      {
+        "ticker": "ZM",
+        "label": "Soybean Meal",
+        "last": 341.5,
+        "change": -0.38
+      },
+      {
+        "ticker": "ZO",
+        "label": "Oats",
+        "last": 373.75,
+        "change": -0.07
+      },
+      {
+        "ticker": "ZR",
+        "label": "Rough Rice",
+        "last": 15.655,
+        "change": -0.45
+      },
+      {
+        "ticker": "KC",
+        "label": "Coffee",
+        "last": 297.35,
+        "change": -3.67
+      },
+      {
+        "ticker": "SB",
+        "label": "Sugar",
+        "last": 18.4,
+        "change": -1.66
+      },
+      {
+        "ticker": "CT",
+        "label": "Cotton",
+        "last": 87.63,
+        "change": -1.48
+      },
+      {
+        "ticker": "CC",
+        "label": "Cocoa",
+        "last": 6290.0,
+        "change": -4.54
+      },
+      {
+        "ticker": "JO",
+        "label": "Orange Juice",
+        "last": 148.05,
+        "change": 2.93
+      },
+      {
+        "ticker": "LB",
+        "label": "Lumber",
+        "last": 556.5,
+        "change": -0.71
+      },
+      {
+        "ticker": "LC",
+        "label": "Live Cattle",
+        "last": 210.35,
+        "change": -0.9
+      },
+      {
+        "ticker": "LH",
+        "label": "Lean Hogs",
+        "last": 83.8,
+        "change": 0.15
+      },
+      {
+        "ticker": "FC",
+        "label": "Feeder Cattle",
+        "last": 315.0,
+        "change": -0.32
+      },
+      {
+        "ticker": "BTC",
+        "label": "Bitcoin",
+        "last": 78250.0,
+        "change": 0.82
+      },
+      {
+        "ticker": "RS",
+        "label": "Canola",
+        "last": 812.5,
+        "change": -1.67
+      },
+      {
+        "ticker": "ZK",
+        "label": "Ethanol",
+        "last": 2.09,
+        "change": 0.36
+      }
+    ]
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 64214.48,
+          "pct_1d": -0.17
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 25213.31,
+          "pct_1d": -0.39
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 3942.09,
+          "pct_1d": 0.02
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 6579.48,
+          "pct_1d": 0.26
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 9020.1,
+          "pct_1d": 0.46
+        }
+      },
+      "composite_avg": 0.04
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 10772.36,
+          "pct_1d": 0.15
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 25932.35,
+          "pct_1d": 0.36
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 8284.2,
+          "pct_1d": 0.04
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-09-03",
+          "last": 6375.67,
+          "pct_1d": 0.21
+        }
+      },
+      "composite_avg": 0.19
+    }
+  },
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.795,
+    "window": "2026-08-25..2026-09-02"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": true,
+    "count": 30,
+    "items": [
+      {
+        "source": "rss_google_markets",
+        "title": "US stock market ends 2025 on a high note after volatile year - BBC",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9UVFE3WjFVOEJVVHBsQTNZUFV1bG5SaVNmckV2Nk9MNzNZQnNpMUE2SG1McU83LUFwbjBKYTBOcmdQS1Jla2RNQ3pTbURwX1k2MVhkWWVHMmNVdw?oc=5",
+        "published_at": "Wed, 31 Dec 2025 08:00:00 GMT"
+      },
+      {
+        "source": "rss_marketwatch_pulse",
+        "title": "Wingstop’s stock slides 12% after profit falls short of estimates",
+        "url": "https://www.marketwatch.com/story/wingstops-stock-slides-12-after-profit-falls-short-of-estimates-1146f0ec?mod=mw_rss_marketpulse",
+        "published_at": "Wed, 30 Oct 2024 12:22:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve cuts key rate yet Powell says future reductions are not locked in - AP News",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOLW42Y1hra1VzY3pGdFFJSW5yVUlYbzdhWEt4aHhtM3UtdXZlNWk3X1h5d0I5SjhFMWdLeXZwUjZrVmlRLWZsQkdqUGxNSy1TNDhlaWdiaGZXYXVrYzlRY2FzNk5RN1YxdFFDNzR1Y25jTFptY0hxcHUzdm1qZXdxWlkxR21DeFhhZlZqNGdwOUhaWm5teFNNSkZ3?oc=5",
+        "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve cuts interest rates by 0.25 percentage points amid weaker labor market - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTVI4V3NsaGhkU0JBVy0xamVNNHlBbFRDNUZKbzNXWkVlaGNNb0FsV2JReEtNaHE2TEVtaThKU01la1FZMlh3eWxGdkNOdWk5OFVzWk5ibFhhakZCZFg2cGU4TVN1S2VJY21JMnJXRGhTMkRxaVdBa0FxcDNGWWxVSU5wdEtoaG5lY3JsajVaLXnSAZYBQVVfeXFMTWdGZDVzc2tndUE4bjE4M0pmR2NyMTJIZENSVDFNN0k5X0o2bkRfOHk4S255OUxsZlBYRkVyS1NzaEp4bU1KWHk4Sk1fVmZGQmpheXQ5Q2p2RzBWNmh0Vlh6QXBaUzVlSF83X1VmZDQtaUZicHpnRHFXUDRkQXllWF9WQTdOUWRsNVI2Y1p1NVRNWThJOE5B?oc=5",
+        "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve meets today for an interest rate decision. Here's what economists predict. - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSmhnNHRXSTBOb3l5dWRFYkd3V1FyQVNhZGNuWFlLRlNMNmp0RzZ6SWRVX3RyV3MzaXEzQkhtS0JZdXZfNGswQllkR29lZWItRll2TEtnRzFERzZtQmtYOHBTYXp2dFBTNDNiV28ySnFpcXd6Y0NNMHR5RGl2UDA2M1EzazRJOGdFQldLZjFySkFIRUg1dG85U1Jmb2tSd3JLUFFj0gGoAUFVX3lxTE94UkpzWmpDY2c0TUpUMEQ4cmdaUGpfXzJPNUpqQkhKT3dNMlpJT0Uyc1lWMldSVU5CeHVLTGk3Sm5Ma2JwUUNUSTBRYjZUeW5iYUZEbFdTc3B2ZlcwZ29lWkViSDFkeTNzXzVOeHRfUm5FRE9MM0dkM3VnRDZtRmxBUnNFaVNjdmpmZEdMb3ZzYk5aeUQ3WkdwTWZpcWZoRHJqd3doVGR1OQ?oc=5",
+        "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "WATCH: Powell delivers remarks after Federal Reserve cuts key rate as government shutdown clouds economic outlook - PBS",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObWhWZzJMbUt6VDlIZ2tHb0tENUt4TXc1M3VzUXI5ejhUcEdJNXNlY1ZnT3ZnUzlIeEphQks0NG9MVHhNN1RfbC1BNFF2V1R1ZGp6X0V4QkRjOEVXZmEtZ3k0OHAwa01sLTdSeWJBYnBnV2M1cXJRS3ZfVUhnRlEwSU9jd09NRlRjbmxQaVRndHdHREM1VTVpWE9nZnE4UnNBTV8xTjBrbTBBYXJ1QlJNWk9PbUdscExRZXV4aNIBwgFBVV95cUxPNnRUNml3WnRSVFVSR0JZWUI1RFRxcXNzOXRGNWI5Z01Tc18zX09LUW05cW5OclFxNW1xRHdVQjlfbHUzM0hiam9LYVdRTGVLaUNPSnpMXzYzYnU1V2w2Q1dOVEI0UXhzSjBhaDBmZEhZQTBnemQ0RldGX0hOamM4Y3g4bzVRZzNIek8zZU5iZlpuQ3AwYkdJYkhsaGlrbkZyYUhqZm9YTGpJZE5GMDQtQi10eVlVZmplREJIQ0lIemJyQQ?oc=5",
+        "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve cuts rates for second time as shutdown stalls key data - The Hill",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9oS2pwWG90OHB2QlQydjJMdzRjRTc3VVRSR3dvbVBkWFB5Zk1WeEtDUjE4LTFkbVpJVjZCMmdfQ0RXbEpIWDd5aXhoMmZiVGZnTDZpVFdYbW9aa3Y5anVtZG9FQlFpZ2VPcnd6bHdydklPTDlmYXplLUZ4RXgtUdIBgwFBVV95cUxQdVFXSm10a0VEaDZxdFdEN29ZaEowMEQtVGxCUVNfb3NIMFVlT0F1WE1yMm1xZmJvUnhHa3lhQ0xlN0ZmQ2p0QTc4aHZSaUREOVFZWVh0REkzTkFOb0lPMzRWQkhCeWJjTHZJRXRCY1IzTlZEd1VzbncteDBjeDcxYTdDdw?oc=5",
+        "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Missing government data unlikely to sway Federal Reserve from rate-cut path - PBS",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFNCb2o4WWI5Mnd1bWtaNDROQzVDWWFoNmduNWhhS0tjLXJoMnEyaVFPa0czMTM0dUdJRGlDSGEtaWZHQXhZNmZLeGs5YnA0R0lRZTZ6SG1aV3IyaTZNZ0RldEZuN0JYSEJNNTczMVJSTm1zbW04MFFRZk9memFXSXZfR1VDTUxpUFJxSkE1QWVKbGRjZ0kteTVGWndtaUhDc0JNNzJOUVlYbjRhREtVTQ?oc=5",
+        "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Samsung says chip crunch will last until 2028 as quarterly profit soars - cnbc.com",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iaXNEaUdmelc1ZzRqc19LenkyMXczc0xxVENmMkFCR2FHMDRTOTNTSDdIdVVmaHRBcUtENUlybmxOYklmcDdRNkNYTGJMN1FWSmtseFFYdmVubWEtOUNLYV9VeUp3aFJuemNhRW1Tbjg3MGvSAXhBVV95cUxOaXo3VTFKVEh6TDJIY0Q2Skw4b1RJRlNJeDJlZmJETkluVzdVN1ZjOGxSQ3BlSlBWS2JmSFQ3UmJ4bWRlUWsxd3lQZGU5eUtjV2lSQkpib3JSTEQyU1NKUW1FSWJ3WVpITnhnalNiMTl5LW9hbmdyeks?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:55:44 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Fed’s Warsh Rebuked by Investors Craving a Real Inflation Fight - Bloomberg",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYlBGZVFYVFZTNlV0WldTSTYzdXVwNUNINmhVZ19WSm9JY1RoR2o3TWRGcjUzWXc2eXpfVGZaN1R4VmxfYVd0MjVIVHJWcGdmT2IxN0RnTXZ5VkZSY0hmSE95RWc5OHBORld6SUIwZU56dTFhQWZ6Nzc3SlZLLWdsOWpZa0V3dXk0UXVud0xxMENUUWdRZGxUVjJlaHptd29NR1VxRkR0d2hNSnk1dGdlNWttT04?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:46:05 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Critical shortage: Red Cross declares second-ever blood supply crisis - USA Today",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeGpHRVRLYVdUZjJoeEswYkFRaU4tdWRkeWRUWDk0TXdkREdsaXFMSWJWMkpYM1JRdElUa3B6dXR4bFRQTVFrX3lycEc3bFBuekxCYWpxei1OLS1CRGFEU09sMjVYTVczcTBITGdDVkpVNTBlWHByRWFqZFc2cjFsNWw4cXA5cWdER2RIVkYzb3BwOWlhcWVpTExfb0RIT25yWU1KUTNRV0E?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:41:00 GMT"
+      },
+      {
+        "source": "rss_cnbc_economy",
+        "title": "What a divided Fed means for investors",
+        "url": "https://www.cnbc.com/2026/07/29/fed-meeting-interest-rates-warsh-stocks-bonds.html",
+        "published_at": "Wed, 29 Jul 2026 23:36:34 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Qualcomm forecasts weak quarterly profit, expects Apple revenue drop to accelerate - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMHFEWjZIOGc2RFUwRU9wTng2NmFmSTZha0dXeFFvMWFlNmRfeWlwSG9LNTQ5TFV0RGthQ2tvQkJuLUwxZUpaSnNTSEQ0ZE1TZ1lEc1M2YVJJS2VrS1VhblRsWHdBYVNrTFVTVkJfYXRUUDY3eWszTmJpYmYwLUwyUFB1enRyOXA5cFF1Zk0tb1FvU2ZxRnBOQmJWdW5FNGhxYWt4ZDJhZFpwV2xoWXN3cWhocmgzN3c4QXdYSTZNRjdrczZBRWV2UnctS3prdnJ5ZmwwUW53?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:29:23 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "Lithia Motors (LAD) Stock Looks Near Fair Value While Earnings Look Cheap - finance.yahoo.com",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbjdqOS1PR292RjR2VXE4V3NoZXNCRmdfdEpQQW1uei1WbTR3Y1Vnbk53YTJqMnRsNzNDX3Q3RU83WWwwMlB1aDJFWHp3enE3QnR4NXdCQW1Ib0xFSFV1X3N0bkNLX25ycERmaEtyV1VnT3VCb25SdzhJam5RdkdienZtN1hqMm1UWUZReE1BSDdCXzFrR3JHQzl3?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:11:02 GMT"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "The U.S. wants Asia to use its AI — but China dominates cheaper models",
+        "url": "https://www.cnbc.com/2026/07/30/us-wants-asia-to-use-its-ai-but-china-dominates-cheaper-models.html",
+        "published_at": "Wed, 29 Jul 2026 23:10:46 GMT"
+      },
+      {
+        "source": "rss_google_markets",
+        "title": "The Memory Crash Has 4 Big Stocks Down 30% or More From Their Highs. I'd Buy 2 of Them. - finance.yahoo.com",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQN2plM2RoUFRLeDUxdEZPU1oxd0FBNE0temNkUGkzQ3lYSUxkX0wtM3pDUEIzRGJIUkpGTkc3VDRNRGk0aHBLTFRxanc2TW5YR183SF9nSHVhQS02OG9hY2t0eFJWUjVOWXdhUm83LU03U3hWWmFORXVBaUdoeHNjQ2hBLU83UmJTNkRvMVZHWlZfT1Fr?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:07:00 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Red Cross declares crisis over blood supply shortage in US for second time its history - BBC",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ETk1DVGJPRmhCWGhrUjNmTE5JYlRqRFZlRFBsSkJYYmdKUGZjVG5rWkF6QTNUZFUzNW42NnVJdGczdFFNQ1ZKeFpxVXFJMlNrQmItMnJhbGRndw?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:04:35 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Beauty Pie founder on how she dropped out of university and built five beauty businesses",
+        "url": "https://www.bbc.co.uk/news/articles/c8jngmk93p9o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 29 Jul 2026 23:02:18 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Mark Zuckerberg predicts that billions of people will have personal AI agents in five years - TechCrunch",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNV2FlcTM4S2JHVkw0Z1F6OGtSOVBPaFF3a1dqNFFtcF9raEtsV3BqZy1SOW01b0hmRGRiVFhvaXl3a2V2OE1SVEJNZFhuU01HREk2RE80VDFGZ1RsRlVfMkJOa3JCYlBXUElCTk5ic3BoYVpkeDNNUHRRTjE3alp6WkpoTjBOLWZCWGpiV0hWeGt2bUdnOHJKd05wR1V3MGVFMUhkYUJCT2NPZE01ZTh2Q3RqX0RPbDVBb3NYSEFBNnJsYllB?oc=5",
+        "published_at": "Wed, 29 Jul 2026 23:00:11 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve holds interest rates steady amid inflation concerns - wbaltv.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZDFjV0ZpWGx6SnYzSEJDOS1EQlA3RWl5cVUzeFV3a1hCcTZ1TXZMZmxCUUlKajBrZlVIVFFJRWd6MDdQaWE0Smg3cGtvRHpwQ1B2LWt4eTBvVndNaEdOeWVtVEt0ZDJNMmEwdnlPUHJKRTB0Zk9MYUV6WjExVl83NmJTajVSdnl6MDJGODNoSTBKb24zUThOSg?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:57:00 GMT"
+      },
+      {
+        "source": "rss_cnbc_finance",
+        "title": "Here are the five big takeaways from this week's Fed meeting",
+        "url": "https://www.cnbc.com/2026/07/29/here-are-the-five-big-takeaways-from-this-weeks-fed-meeting.html",
+        "published_at": "Wed, 29 Jul 2026 22:54:09 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "News Wrap: Federal Reserve holds interest rates steady, but some vote for increase - PBS",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNkhtUWdUOUlUbHRtclpmZUpTTW04YTVVdmxxYlV6QWJvNVpCbjlZVjdMR1B1NEI0QXpVT01Ha01COEo2MkVqbmdzMGVpSWhaWEFBcWFNNDFOUkxEd1l2SWE2X1ZOdkstRjU0R0xuZDNVUEZRVEdHR2JWREpFemNMRFM5ZWViaU82NDl6ZEYtbzNtcy0ybVAwQzRiMlh5X0RDMndZMThlQVhHaWJyTUJSM3JOamw?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:45:20 GMT"
+      },
+      {
+        "source": "rss_bbc_business",
+        "title": "Meta shares fall as frustration grows over AI spending plans",
+        "url": "https://www.bbc.co.uk/news/articles/ckgd31l5yrdo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Wed, 29 Jul 2026 22:44:18 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "What a divided Fed means for investors - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQV0ZaZnlGZXBaWXRJbnNxUUtrYWpzcEt6MTRWSnYzSVNQTk9sYWFadlhWaHU1b19aLXpQVWtoc1NRODZXc0FBSXQzeUpvczNrMzFQQ1EwR29HQklITkdiTGxjMVREd0lYdGI4a0NVRkVIYmZleHhudFMwQk9OT01YdmNOclFzQjM1VUHSAY8BQVVfeXFMTUwwNmlzdjdSb2tla0g1MnNiZ2loRVpsUmkxNDhzb0R1WE8tQ1lRcGhyUTZuUFRVaEMyUFUwWk0yZHdqRHRGcEJFZFZmTTFUQ1pvN242NjFIUkU1UXV2RklLMTVNdkFBOU5MM096WVJpZDdBcTNnY1g3Sk83Mm85VGJJRHd4aGtXUF9OeXBIeTQ?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:43:19 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "The bond market to Kevin Warsh: What are you doing about inflation? - CNN",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5mVUU0YUZra21FMy1kVjNTLVZMSTF5Z2dHclBhQm9NYUZqUGF2NDl1bDhoMjlpRjdoRVZieHJFZGsxX0NjLXJ4Njh6YzRWaklBamk4cXI1NFlqWENEZlhQM0VSckFmdkI1bzJRdkJB?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:40:04 GMT"
+      },
+      {
+        "source": "rss_google_business",
+        "title": "Daimler Truck will shut Portland factory, lay off 375 and move production to the East Coast - OregonLive.com",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUlluZkZyT240N1V5LTlrZ1VVcURTYm9JM1J0dkYydWJwNnZBc3pMWXB5Z1Y4OFloX09mYmo4TlNkbHNzbjlrMHNFREpweG5HcVZyMmh1aGFwdnZwajBVSDJXUmFUdTc5WDJxcjVTcUxnMWE2YjN6YlByb2ZGLWYtaDVmZEV5MGh3MGZRT2xPWThVZ1FQMDlvZ0Ftbi03YXc2NkNV0gG3AUFVX3lxTE45Wkh1enc2OFI2VFJGNjBTb2lhNHY2YWtuRmVqWTVGX000cFAyWlg4TVE0cTJRT3NiOVBDbmpOUWdoZEdIMFpEYm5KZHVBS2lFRTdYZmRwMmQtZGZ0RFBKb0Vma0RWYXNjTE5IWjRTcjdTQ0t0MDk5V2RsaWprN3JRc0RRS1BoOE1XTmV0bzhGeTJPcEY1QkJSbVQwTGQ2azE2Z1pqQm9zUm4tclJvS3Rfb2tPN0ZxTQ?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:38:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Early dissents versus Fed chief Warsh are the most since 1970 - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOVk4Y2o5M0tqQ1dwTVByaGcxczFEamRRRzBNZlMyakFkTG1TZnFtUzVJMEJmVEdqa2pPaHFhX3lSUnQ3UjBGeWZ1TDlHV1daS1dfdHFsakQ2d0c4Vml5cFVEWjRMUXBIVEtqQ1NPVmUwRlZNNDhwd3phMm1IV1lLUTVlZDJsdG11RWkyVnlqeGczcGt4UF9udzgxYlRMd042SXdmYw?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:36:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - KTVF Fairbanks",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeHMzdDZKVnlYMFl2ZmRVNFEyX1FySXZjcGJQcUZOMDFScU1Yem5TcDczWEJVQVVoeDE5VDJUWTA3NjJwZmc4emhQSTFpRTFCclVWWDlvU0JONTlDMmpsQ295dE1hTUk4d2kyRkZtay1CaUxPOVI1a1FtQkpkdnl3c2ZZOFB2ZTdybWc4S25LekhESHVZNGhmajJjeC1FSll4S0NMVGdHWTlxNlVHazFRXzVURFU4b3Q5WjFsN3g4SG50RjFuSzZsVtIB3AFBVV95cUxNWUpPN0ljM1RfUzFKbGpocFJFdHp3QUxVSTYta3JFZnNTb0ZoTVlBbjhEQ3FjaWZkTUFDdElUbGVwY1VhN3ZfLWhzS2FVMGxVM2RnUmh1OXdEcExTck84NWw0VU1fZ0x6WloxOTFTRWNnZl9vWV9rUzdHeWxoTlE2enlqdHN6eU1ZNEJ5cFVhcTlTWnZqeDVFU09tT29XdEM0LThhemY0SURQNldJeHl6M2N2NVNPUXVHLUl4bmtVQkhXWTdwdHdWWTJHWHBCZHZKVlRXekFwSzJzZ0lO?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - knopnews2.com",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxON1l6bDJmT3luYVM5eDN3TnJkQzJaUmxBdXFGSWZhZ2I0ajFQNTlrcjc2NnBmWDA5Vmw1dUQ3Q1NjMXVFVndyZl9VN3FBb1VmdHMwUHMwRXZzdWpHc3pKODNVeWVkbGxaSjhjYVpvSVJndXJuVXZxMnhxWHJMY09tTmp2YmdyNTlndDQ1NGpWTERubmN6R1QxME9GOWpuTzBxMVV4U1lSTFY3MG1XNUFRTjBSTUxrOUxRbG1TdNIB0AFBVV95cUxPdmpMcEpya19YeFRSdEc3MTFPd3pSbGxHTE1naVBkRFFNZUQ5VjVQQkF0UW1CZzhBVXhwMnp1VEE1RTY3aDZKREpPdHl4Wll1YWlUenJDNjRiNEN1MUlXQ1hkOUt6cFoxRFo2VjFWWGR3WTRyZjhFWnZYd3dJZk83ZHRHV0QwejNwQld1NkpyajVxS2RBZTlqeDc3RUhZRDdoZHRlVnp1cUNES1FQTVc0NDZLdC0zOEszVGVRTmxjVmQ5N2ZFb3JhSkk5QjF3Z0hf?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
+        "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - 29news.com",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY0R1R2FSZjdwMmRPT3oxaXRGc3EzbU4wNzFxX3FYY2szaG5ZdjhDY2FzR0lXb3ZsSkVrOUZ2RFMzdDc5NkdaV3kyZEgyb0Q1NVJDSU4zaFJVdXAyc2d1Wi05MmZVWk9qZmVsYUV4UGx3VFF1WVZpTFN1Z3BrOFEzRkZDTGVOR3RlN0FFLXMyNVl4YTVWUEtseVNKTWpKalFVRkVPQjhIMUUtZW5YLVp3Mi02WDdtTUFC0gHMAUFVX3lxTFAzbWdKTEhKbGdXYlg3WWJCbDljWVJNVmlld3diS01oWkdNSDJURWhSV29hQk1OVC1uVWJmZmp1RlQ3VUIzeERWZGZ5RUY2SjlETnZIN3FQX0NSby1LaHZIYlpqMXhGbUp1MDJIM2I4LVpLQ2RLbzBqN3RIYzBCTW85dklaMWhuMnZjS1YxREtyWHlBaVlfdEprUzBQcDNmVnB5MWJ3QmJ5dlFvUFNYeEtJM1FibUtLRjNkbWE4VWRwVGg4bnA5aE1Gc3ExZQ?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
+      }
+    ]
+  }
+}

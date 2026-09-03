@@ -1,0 +1,183 @@
+# Sector Prediction — Basic Materials — 2026-09-03
+
+- ETF: **XLB**
+- rubric: `00_grounding/sectors/basic_materials.md`
+- predicted_direction: **up**
+- predicted_magnitude_band: **mild**
+- total_score: **3.15** (mult 0.9)
+- regime: mixed
+- divergence_flagged: **False**
+
+## Channel 1 sector ETF tape
+
+```
+ETF XLB vs SPY (yfinance, through 2026-09-02):
+  1d: XLB +1.69% | SPY +0.44% | rel +1.25%
+  3d: XLB -0.53% | SPY -0.77% | rel +0.24%
+  1w: XLB -1.18% | SPY -0.10% | rel -1.08%
+  1m: XLB +3.80% | SPY +0.99% | rel +2.81%
+```
+
+MEMORY_CONFIRM: Sector Basic Materials / XLB only. Memory index unavailable this run (embedding metadata missing) — used injected scoreboard/lessons only. Rolling last-10 dir=0.5 mag=0.6 (n=10). Last graded: 08-28 down/flat vs XLB −0.09% / rel +0.13% (dir MISS, mag HIT); 08-27 up/flat vs −0.82% / rel −1.48% (dir+mag MISS); 08-26 up/flat HIT; 08-31/09-01/09-02 still ungraded. Active XLB rules checked: **temper-severe does not fully fire** (1d rel **+1.25% > 0.5%**, oil is **down** not a live Hormuz squeeze, text is follow-through not a new copper squeeze); **8/17 China-miss + flat-futures severe ban OFF** (no same-morning China print; ES/NQ mildly green, not a China-miss overlay); **8/18 metals-as-floor ON as a ban, OFF as a down mandate** (Hormuz still in the news, but Channel 1 WTI **−1.19%** / Brent **−1.07%** — do **not** treat leftover oil>$90 as a fresh liquidation and do **not** use metals as a hedge-floor); **8/14 gold-offset ON** (GC **+1.48%**, SI **+1.71%**, DXY **−0.35%** — score the monetary bid; gold does **not** cancel China); **8/21 keep-severe OFF** (not a fresh squeeze day); **8/25 composition/transmission OFF as an up-ban** (NQ **+0.16%** vs ES **+0.13%**, not NQ>>ES; 1d rel is **not** <0.5%); **8/27 S4-cap OFF** (1d rel +1.25% is confirmation-eligible); **8/28 leftover-S2/S4 down-mandate OFF** (S1 is live-positive on gold, not S0=S1=0 with carried chemicals); **>+1% reversal follow-through is the binding rule** — score yesterday’s bounce once, default **up/mild**, do not restack it into S2+S4. No open experiment for `sector_basic_materials`. DO-INSTEAD: shrink confidence on modest |score|; do not manufacture notable. **8:30 ET claims / trade / productivity and 10:00 ET ISM Services are pending** — not “no macro print.” LIN **$1.60 ex-div today** is a single-name NAV nick, not an S1 spine.
+
+## Analysis — XLB, session of 2026-09-03
+
+This is a **Thursday follow-through after Wednesday’s gold-led materials bounce**, not a copper-squeeze day and not a 09-01 Hormuz-oil liquidation. Channel 1 through 09-02: 1d XLB **+1.69%** / SPY **+0.44%** / rel **+1.25%**, 3d rel **+0.24%**, 1w rel **−1.08%**, 1m rel **+2.81%**. The 1d print is a **>1% relative reversal**. Per the follow-through rule, that event is **already in the tape**: use it as **S4 confirmation**, do not also pay it as fresh S2 breadth, and **cap the band at mild** unless a new comparable catalyst is knowable at the open.
+
+What *is* live this morning (Channel 1, do not re-derive): ES **+0.13%**, NQ **+0.16%** (both inside ±0.5%; 08-21 ES/NQ ≥ +0.3% reversal checklist is **off**), Asia composite **+0.04%**, Europe **+0.19%**, gold **+1.48%**, silver **+1.71%**, copper **+0.11%**, WTI **−1.19%**, Brent **−1.07%**, USD **−0.31%**, 10Y note **+0.17%** / 30Y **+0.38%** (live curve easing vs the 09-01 FRED table). VIX **15.18**, VIX/VIX3M **0.999**. HY OAS **2.65** still tight.
+
+### 1. Shared macro as it hits materials (S0)
+
+Risk-on maps only **mildly**, and it is **not** a materials-specific green light.
+
+- Futures are **flat-to-barely-green**, not independently confirming ≥ +0.5%. NQ is **not** much stronger than ES, so 8/25’s tech-led transmission discount does **not** fire — but 08-21 also does **not** license an S0=+1 up call.
+- News Judge #2 (“pre-market futures lower to start September”) is **stale vs this morning’s tape**. Do not score Tuesday’s open as today’s S0.
+- News Judge #1 (divided Fed / Warsh September hike) is the **carried rates spine** (JH 8/28). Count it once. Live notes are **bid** (yields easing), so do **not** treat the 09-01 DFII10 **2.44 / 1d 0.00** column as a live real-yield shock (08-25 live-curve lesson).
+- **USD weakening** (DXY 1d **−0.35%**) is a commodity tailwind. Put the **price** of that in S1 (gold/silver), not a second S0 plus.
+- **Hormuz** is still in the news (09-01 tanker hits, traffic still thin), but **live oil is down ~1%**. 8/18 is a ban on using metals as a floor when oil is **spiking** into equity risk-off. It is **not** a mandate to keep S0 at −1 when oil is not confirming and ES is green. Processor cost relief from cheaper crude is a chemicals offset, not a metals squeeze.
+- **China** remains the industrial map: August NBS mfg **49.8** (still <50), construction **46.9**, Jan–Jul property FAI **−19.2% YoY**. T-2, not a same-morning miss, and **not** a rebound HIT.
+- **Calendar (knowable at open):** 8:30 ET initial claims (cons **205k** vs **203k**), trade balance, productivity; **10:00 ET ISM Services** (cons ~**54.1–54.3** vs July **54.1**). Two-sided. Encode as **event risk that caps magnitude**. Do not pre-score a miss. ADP / ISM Manufacturing are T-1.
+
+**S0 = 0.** Not +1 (futures sub-threshold; AVGO/Goolsbee are XLK objects, not XLB beta; China still contraction). Not −1 (oil not confirming a geo liquidation; Warsh already paid; do not ding merely because oil is still ~$90). Nested MAP HEAT ag-input/steel overrides are **child books**, not a license to lift the parent ETF.
+
+### 2. Spine + secondary (S1)
+
+**Industrial metals — tightness without a surge.** COMEX copper **$6.60 (+0.11%)**. LME cash still elevated (~**$14,355–14,395/t**) vs 3m (~**$14,213–14,227**), backwardation **intact but narrowed** (~$128/t vs August’s $250–500 squeeze). Spine “surge” is **off**. Spine “collapse” is **off**.
+
+**Inventory draw — off.** LME Cu stocks **233,850 t (+350 t on 09-02)** after the mid-August rebuild from ~205 kt to ~240 kt. One-day wiggles do not restore the ultra-tight regime.
+
+**China demand — still the industrial offset, not a rebound.** NBS 49.8 / construction 46.9 / property FAI −19%. Iron ore ~**$96–98/t**, range-bound. **Do not let gold cancel this.**
+
+**Monetary metals — HIT (different driver).** Channel 1 gold **+1.48%**, silver **+1.71%**, platinum/palladium green. News Judge #5 (“gold −3% after Warsh”) is the **prior washout**; the market already traded it, and **yesterday XLB +1.69%** was the gold-transmission day. This morning is **continuation**, not a new 8/21 squeeze. Per 8/14: score the bid. Per 8/27: it is a **sleeve**, not a +2/+3 wash against China + no copper surge.
+
+**Supply disruption / tariffs — stale.** DRC concentrate ban and Section 232 copper remain on the books; not a same-open catalyst. APD’s Q3 beat/charge is **already traded**.
+
+**Oil-down** is cost-input relief for LIN/SHW/ECL, not an XLB squeeze. Count Hormuz/oil **once** in S0 as non-confirming leftover, not again here.
+
+**S1 = +1.** Gold/silver + USD-weak sleeve, minus China/property HIT, minus no Cu surge, minus inventory rebuild. Capped well below +2/+3 so gold cannot wash the industrial breakdown. Nested CTVA/REX/NWPX prints are **single-name / child-book** — they do not drive XLB.
+
+### 3. Breadth (S2)
+
+Wednesday’s leadership was **not ETF-only**: chemicals (LIN/SHW/ECL) and miners (NEM/FCX) both participated. Premarket 09-03 is **modestly green across the same book** (LIN ~+0.3% with **$1.60 ex-div**, FCX ~+0.6%, SHW/ECL AH green). That is **participation**, not a new % names-up thrust.
+
+**Do not pay the same reversal in S2 and S4.** Same-morning chemicals confirmation is present, so S2 is **not** −1 — but it is also not a second +1.
+
+**S2 = 0.** LIN ex-div is a few bp of XLB NAV, not breadth failure.
+
+### 4. Flows / positioning (S3)
+
+XLB AUM ~$8.6–8.8B. Tracked **5d ~+$21M**, **1m ~+$121M** — modest inflow, not a relative-volume spike and not a washout. 1w relative is still **−1.08%**, so this is **not** a crowded-long extreme. MAP HEAT “avoid copper/gold” is a nested split, not an ETF outflow print.
+
+**S3 = 0.**
+
+### 5. Tape (S4, confirmation only)
+
+1d rel **+1.25%** is **decisive confirmation**, not a sub-0.5% modest print. 8/27’s S4=0 cap does **not** apply. 3d rel is only **+0.24%** and 1w is still **−1.08%** — those are **already-traded** context, not a second vote. S4 may confirm this incoming session; it does not forecast a second +1% day by itself.
+
+**S4 = +1.** Confirmation only. Direction can stay **up** while the gold sleeve is intact; magnitude stays **mild** because the catalyst is continuation, futures are flat, and 8:30/10:00 are unprinted.
+
+### Self-audit
+
+- **Lens:** chemicals-heavy XLB with a **monetary-metals sleeve**, not a pure Cu ETF.
+- **Band:** follow-through after >+1% rel → **mild**, not notable/severe. Pending claims + ISM Services cap the band. Multiplier **≤1.0**.
+- **Skew:** gold HIT is scored in **S1 only**; S0 stays 0 so USD/yields/gold are not triple-counted. China remains an explicit offset.
+- **Same-shock:** Warsh/hike is one carried rates object; Hormuz/oil is one leftover geo object (oil **down**, so not an 8/18 liquidation).
+- **Single-ticker:** AVGO, LIN ex-div, CTVA Vylor, REX 45Z, NWPX Serpentix **must not** drive the sector ETF call.
+- **Divergence:** leading S0+S1+S2+S3 = **+1** vs S4 = **+1** — **no fight**. Tape confirms the gold sleeve; it does not authorize severe. Nested heat (Cu/Au avoid vs ag-input long) is **not** averaged into XLB.
+
+**Intended residual (for pipeline reconciliation):** Σ = 0+1+0+0+1 = **+2.0** × **0.9** = **+1.8** → **up / mild-or-flat**. Narrative band is **up/mild** (follow-through default) with **confidence shrunk**. Do **not** let a pipeline rewrite emit **notable** or **severe**. Do **not** invert 8/25 into a down call.
+
+SECTOR_SCORES_BEGIN
+S0_SHARED_MACRO: 0
+S1_SECTOR_FACTORS: 1
+S2_BREADTH: 0
+S3_FLOWS_POSITIONING: 0
+S4_ETF_TAPE: 1
+MULTIPLIER: 0.9
+CONFIDENCE: 0.55
+REGIME: mixed
+HORIZON_3D: up:mild:0.52
+HORIZON_1W: down:mild:0.52
+HORIZON_2W: down:mild:0.50
+HORIZON_1M: flat:mild:0.48
+SECTOR_SCORES_END
+
+HIT_GRID_BEGIN
+Risk-on tape / equity beta expansion|MISS|0.62|2026-09-03|https://markets.businessinsider.com/premarket
+Risk-off tape / flight to safety|MISS|0.60|2026-09-03|https://markets.businessinsider.com/premarket
+Real yields rising|MISS|0.58|2026-09-03|Channel 1 10Y note +0.17% / DFII10 2.44 1d 0.00 as of 2026-09-01
+Real yields falling|PARTIAL|0.55|2026-09-03|Channel 1 10Y note +0.17%; 30Y bond +0.38% (live easing vs 09-01 FRED table)
+USD strengthening|MISS|0.70|2026-09-03|Channel 1 DXY 1d -0.35%; USD=99.24 (-0.31%)
+USD weakening|HIT|0.70|2026-09-03|Channel 1 DXY 1d -0.35%
+Sector breadth expansion (% names up)|PARTIAL|0.56|2026-09-03|https://tradesmith.com/stockdata/XLB:NYSE
+Sector breadth failure (ETF up, names flat)|MISS|0.60|2026-09-03|https://www.benzinga.com/etfs/sector-etfs/26/09/61573993/leading-and-lagging-sectors-september-2-2026
+Large-cap leadership inside sector|HIT|0.58|2026-09-03|https://finance.yahoo.com/quote/LIN
+Small/mid leadership inside sector|MISS|0.50|2026-09-03|checked, nothing material
+High-beta leadership inside sector|PARTIAL|0.52|2026-09-03|https://finance.yahoo.com/quote/FCX
+Low-beta leadership inside sector|PARTIAL|0.52|2026-09-03|https://finance.yahoo.com/quote/LIN
+Sector ETF inflow / relative volume spike|MISS|0.55|2026-09-03|https://etfdb.com/etf/XLB/
+Sector ETF outflow / volume dry-up|MISS|0.55|2026-09-03|https://etfdb.com/etf/XLB/
+Crowded long (extreme relative performance + valuation)|MISS|0.60|2026-09-03|Channel 1 1w rel -1.08%
+Index rebalance / inclusion tailwind|MISS|0.40|2026-09-03|checked, nothing material
+Index exclusion / forced selling|MISS|0.40|2026-09-03|checked, nothing material
+Industrial metal price surge (copper/aluminum/iron ore)|MISS|0.72|2026-09-03|https://www.wsj.com/market-data/quotes/futures/COPPER
+Gold/silver price surge (monetary metals)|HIT|0.78|2026-09-03|Channel 1 Gold +1.48%; Silver +1.71%; https://www.etnownews.com/markets/gold-price-today-september-3-yellow-metal-back-above-4400-as-dollar-us-yields-weaken-article-156033458
+China PMI / property demand rebound|MISS|0.74|2026-09-03|https://apnews.com/article/china-manufacturing-economy-pmi-exports-6d33b11dfd3c1ee834b169274f58f825
+Inventory draw (LME/exchange stocks down)|MISS|0.70|2026-09-03|https://thevaultreport.com/lme/copper
+Supply disruption (mine/export ban)|MISS|0.55|2026-09-03|checked, nothing material (DRC/Section 232 stale)
+Critical-minerals policy / domestic tariff support|MISS|0.50|2026-09-03|checked, nothing material (carried Section 232)
+Industrial metal price collapse|MISS|0.68|2026-09-03|Channel 1 Copper +0.11%
+China demand shock / property stress|HIT|0.72|2026-09-03|http://www.stats.gov.cn/english/PressRelease/202608/t20260819_1965077.html
+USD spike vs commodity complex|MISS|0.70|2026-09-03|Channel 1 DXY 1d -0.35%
+Supply glut / new capacity online|MISS|0.45|2026-09-03|checked, nothing material
+Margin compression / cost inflation without pricing power|MISS|0.45|2026-09-03|checked, nothing material (oil down is processor relief)
+Sector rotation into materials|PARTIAL|0.58|2026-09-03|Channel 1 1d rel +1.25%; 1w rel still -1.08%
+Sector rotation out of materials|MISS|0.58|2026-09-03|Channel 1 1d rel +1.25%
+HIT_GRID_END
+
+## RESEARCH APPENDIX
+
+**Queries run**
+- copper LME inventory stocks price September 3 2026
+- China PMI property demand August 2026 copper iron ore
+- gold silver price today September 3 2026 Fed Warsh hike
+- US economic calendar September 3 2026 8:30 ET ISM ADP
+- XLB materials stocks LIN FCX NEM SHW ECL premarket September 3 2026
+- XLB ETF flows inflows outflows September 2026
+- Hormuz oil tanker Iran September 2026 Brent WTI
+- ISM Services PMI August 2026 forecast September 3
+- copper price COMEX HG September 3 2026 LME backwardation
+- XLB breadth leadership chemicals miners September 2 2026
+- initial jobless claims forecast September 3 2026
+- Linde LIN ex-dividend September 3 2026 XLB
+- iron ore price September 2026 China property
+- X search: XLB materials copper gold LIN FCX premarket September 3 2026 (2026-09-02 to 2026-09-03)
+- web_fetch etfdb.com/etf/XLB/ (403 / blocked)
+
+**Key sources (title + URL + timestamp where available) and facts taken**
+
+1. Vault Report / CNAL LME copper — https://thevaultreport.com/lme/copper — as of 2026-09-02: LME stocks **233,850 t (+350 t)**; cash ~**$14,355/t**, 3m ~**$14,227/t**, backwardation intact but narrower. **Fact:** inventory draw HIT is off; Cu surge HIT is off.
+2. Westmetall / BRecorder LME table — https://www.westmetall.com/de/markdaten.php/home.html?action=table&field=LME_Cu_cash — 09-03 references cash bids ~**$14,395/t**. **Fact:** tightness without a same-morning squeeze.
+3. WSJ COMEX copper — https://www.wsj.com/market-data/quotes/futures/COPPER — HG ~**$6.57–6.60**, prior settle ~**$6.593**. **Fact:** Channel 1 **+0.11%** is not a surge.
+4. AP / Global Times China PMI — https://apnews.com/article/china-manufacturing-economy-pmi-exports-6d33b11dfd3c1ee834b169274f58f825 — August NBS mfg **49.8** (from 49.2), still <50; construction **46.9**. **Fact:** China rebound MISS; property stress HIT.
+5. NBS property FAI — http://www.stats.gov.cn/english/PressRelease/202608/t20260819_1965077.html — Jan–Jul 2026 real-estate development investment **−19.2% YoY**. **Fact:** traditional Cu/Fe demand still drained.
+6. ETNow / GuruFocus gold 09-03 — https://www.etnownews.com/markets/gold-price-today-september-3-yellow-metal-back-above-4400-as-dollar-us-yields-weaken-article-156033458 — gold back above **$4,400** as USD/yields ease. **Fact:** 8/14 gold-offset ON; News Judge “gold −3%” is stale vs live Channel 1 **+1.48% / +1.71%**.
+7. Politico / FT Warsh JH 2026-08-28 — https://www.politico.com/news/2026/08/28/warsh-speech-jackson-hole-fed-rates-01053899 — hawkish “work to do,” September hike odds lifted. **Fact:** carried rates spine, not a same-morning speech.
+8. Scotiabank / BLS calendar Sep 2026 — https://www.scotiabank.com/ca/en/about/economics/economics-publications/post.other-publications.calendar-of-economic-release-dates.calendar-of-economic-release-dates--september-2026-.html — 09-03 8:30 claims/trade/productivity; ISM Services **10:00 ET**; ADP was **09-02**. **Fact:** do not claim “no 8:30.”
+9. Investing.com claims preview — cons **205k** vs **203k** prior. **Fact:** two-sided, not a materials spine.
+10. NYT / Windward / The National Hormuz — https://www.nytimes.com/2026/09/01/business/ships-oil-hormuz-iran-war.html — 09-01 tanker hits, traffic still extremely low; oil had spiked then. **Fact:** leftover geo; **live Channel 1 oil is down**, so 8/18 liquidation does not fire.
+11. Yahoo LIN/FCX/NEM/SHW/ECL — premarket LIN ~**+0.28%** with **$1.60 ex-div 09-03**; FCX ~**+0.58%**; NEM/SHW/ECL modest green. **Fact:** same-morning chemicals+miners participation; LIN ex-div is single-name.
+12. ETFdb XLB flows — https://etfdb.com/etf/XLB/ — 5d **+$21.13M**, 1m **+$121.16M**, AUM ~**$8.6–8.8B**. **Fact:** modest inflow, not a volume spike (fetch of the page itself 403’d; used search extract).
+13. Benzinga / TradeSmith 09-02 sector leadership — XLB among leaders; chemicals (ECL/LIN/SHW) led, miners milder. **Fact:** Wednesday bounce was broad enough to confirm, already in 1d rel **+1.25%**.
+14. StockAnalysis LIN dividend — https://stockanalysis.com/stocks/lin/dividend/ — ex-date **2026-09-03**, **$1.60**. **Fact:** not an S1 HIT.
+15. Trading Economics iron ore — ~**$96–98/t** early Sep, property still the demand drag. **Fact:** Fe not a surge HIT.
+16. X search 09-02/03 — no incremental 09-03 premarket XLB/Cu/LIN/FCX catalyst; 09-02 posts tied XLB leadership to the gold rally. **Fact:** today’s gold print is continuation of yesterday’s transmission.
+
+**Not used / discounted:** RSS “Fed cuts rates” cluster (conflicts with News Judge divided-Fed/hold + Warsh hike; Channel 1 10Y **4.79** is not a cut tape). ISM Services “actual 51.5” snippet is **not** treated as printed — clock is **04:58 ET**, 10:00 still pending. Nested MAP HEAT ag-input/steel ups are child overrides, not XLB direction.
+
+---
+## Pipeline-computed decision (deterministic)
+
+```json
+{'components': {'S0_SHARED_MACRO': 0.0, 'S1_SECTOR_FACTORS': 1.0, 'S2_BREADTH': 0.0, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': 1.0}, 'multiplier': 0.9, 'leading_sum': 3.0, 'divergence_flagged': False, 'total_score': 3.15, 'predicted_direction': 'up', 'predicted_magnitude_band': 'mild', 'confidence_score': 0.55, 'regime': 'mixed', 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'high-impact Finviz economic calendar'}
+```

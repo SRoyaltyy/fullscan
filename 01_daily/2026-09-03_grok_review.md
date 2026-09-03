@@ -1,0 +1,5 @@
+# Grok text review — 2026-09-03
+
+ok=True
+
+Core packet is same-day 2026-09-03 and human-usable: general FLAT with MEMORY_CONFIRM/SCORES, events scan_date today (49 rows, catcher ran, not a prior-date carry), judge+parse+finviz complete, map-heat futures tape live (49 contracts), 11/11 sector essays directional and not copy-paste. News RSS timestamps cluster on 2026-07-29 with some Oct-2025 cut dupes (judge dropped them). Research is morning_refresh with 142 cards; synthesis/vetoes still match the 09-02 postclose baseline. News actions optional.
