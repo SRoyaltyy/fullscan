@@ -127,6 +127,20 @@ jobs:
             echo "======== $WF ========"
             if already_running "$WF"; then
               echo "OK — already running"
+              # Push heal is last-closed only (09-03). A slow ubuntu
+              # DeepSeek grade must not make 17:15 skip 09-04. Queue
+              # another ubuntu night_pack; concurrency serializes it.
+              if [ "$WF" = "postclose_all.yml" ]; then
+                EVENTS=$(gh api "repos/${REPO}/actions/workflows/postclose_all.yml/runs?per_page=10" \
+                  --jq '.workflow_runs[] | select(.status=="in_progress" or .status=="queued" or .status=="waiting" or .status=="pending") | .event' || true)
+                if echo "$EVENTS" | grep -qx push \
+                   && ! echo "$EVENTS" | grep -Eq '^(schedule|workflow_dispatch)$'; then
+                  if [ "$FORCE" = "true" ] || ! artifact_ok "$WF"; then
+                    echo "active run is push last-closed heal — queue ubuntu night_pack"
+                    dispatch_postclose_ubuntu
+                  fi
+                fi
+              fi
               return 0
             fi
             if [ "$WF" = "stock_book_all.yml" ] && already_running "preopen_all.yml"; then
