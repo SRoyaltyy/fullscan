@@ -1,6 +1,6 @@
 # Book gaps — what the ranker missed (signal 2026-08-27, 1w = 5 sessions)
 
-_Generated 2026-09-03T17:03:25.635119-04:00_ · universe median fwd: -0.97%
+_Generated 2026-09-04T08:20:40.986752-04:00_ · universe median fwd: -0.97%
 
 Classes: **blind** = every input was silent (unknown-unknown evidence) · **outweighed** = signals existed but the rank buried them (weight-tuner territory) · **gated_out** = excluded by hard micro/mcap gates on purpose.
 
@@ -11,7 +11,7 @@ Classes: **blind** = every input was silent (unknown-unknown evidence) · **outw
 | GPRO | +129.8 | gated_out | micro | Technology | -0.72 | +0.40 | +0.00 | +0.00 | -0.76 | -0.68 | +0.16 |
 | CHPT | +55.8 | gated_out | micro | Consumer Cyclical | -0.32 | -0.80 | +0.00 | +0.00 | +0.64 | +0.49 | +0.16 |
 | DPRO | +47.1 | gated_out | micro | Technology | -0.41 | +0.40 | +0.00 | +0.00 | -0.94 | +0.22 | +0.16 |
-| CHGG | +22.4 | gated_out | micro | Consumer Defensive | -0.30 | -0.24 | +0.00 | +0.00 | +0.64 | +0.36 | +0.16 |
+| CHGG | +22.5 | gated_out | micro | Consumer Defensive | -0.30 | -0.24 | +0.00 | +0.00 | +0.64 | +0.36 | +0.16 |
 | MMED | +22.2 | outweighed | mid | Healthcare | -0.15 | +0.00 | +0.00 | +0.00 | +0.56 | +0.00 | +0.28 |
 | FMC | +21.8 | outweighed | small | Basic Materials | +0.96 | -0.32 | +0.00 | +0.00 | +0.56 | +0.08 | +0.52 |
 | BRR | +21.8 | gated_out | micro | Financial | -0.03 | +0.24 | +0.00 | +0.00 | +0.36 | +0.00 | +0.16 |

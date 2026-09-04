@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "Let me search for a few more specific events to capture the full picture, including the Q2 earnings details and any other events within the window.\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">\"Huntsman\" HUN Q2 2026 earnings narrower loss sales beat higher volumes August 6</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Huntsman HUN Q1 2026 earnings top estimates highe",
+  "ticker": "HUN",
+  "generated_at": "2026-09-04",
+  "cutoff_date": null,
+  "role": "opportunity"
+}

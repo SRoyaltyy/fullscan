@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-03T16:51:01.966939-04:00",
+  "generated_at": "2026-09-04T08:09:16.118775-04:00",
   "aggregate": {
     "1d": {
-      "n_books": 13,
+      "n_books": 14,
       "buy_hits": 106,
       "buy_n": 229,
       "sell_hits": 134,
@@ -11,39 +11,39 @@
       "pnl_n": 12
     },
     "3d": {
-      "n_books": 13,
+      "n_books": 14,
       "buy_hits": 105,
       "buy_n": 224,
       "sell_hits": 148,
       "sell_n": 290,
-      "pnl_sum": 1.3830000000000002,
+      "pnl_sum": 1.3810000000000004,
       "pnl_n": 12
     },
     "1w": {
-      "n_books": 13,
+      "n_books": 14,
       "buy_hits": 111,
       "buy_n": 224,
       "sell_hits": 141,
       "sell_n": 289,
-      "pnl_sum": -2.4130000000000003,
+      "pnl_sum": -2.415,
       "pnl_n": 12
     },
     "2w": {
-      "n_books": 13,
+      "n_books": 14,
       "buy_hits": 106,
       "buy_n": 224,
       "sell_hits": 158,
       "sell_n": 290,
-      "pnl_sum": -16.196000000000005,
+      "pnl_sum": -16.201000000000004,
       "pnl_n": 12
     },
     "1m": {
-      "n_books": 13,
+      "n_books": 14,
       "buy_hits": 103,
       "buy_n": 225,
-      "sell_hits": 157,
+      "sell_hits": 156,
       "sell_n": 290,
-      "pnl_sum": -12.863000000000001,
+      "pnl_sum": -12.894,
       "pnl_n": 12
     }
   },
@@ -945,15 +945,15 @@
             "n": 17,
             "hits": 12,
             "hit_rate": 0.706,
-            "avg_pnl_pct": 11.239
+            "avg_pnl_pct": 11.244
           },
           "sell": {
             "n": 25,
             "hits": 9,
             "hit_rate": 0.36,
-            "avg_pnl_pct": -1.449
+            "avg_pnl_pct": -1.499
           },
-          "avg_pnl_pct_both": 4.895,
+          "avg_pnl_pct_both": 4.872,
           "detail_buy": [
             {
               "ticker": "TKVA",
@@ -1099,8 +1099,8 @@
             {
               "ticker": "NTES",
               "side": "sell",
-              "fwd": -4.566,
-              "pnl": 4.566,
+              "fwd": -4.181,
+              "pnl": 4.181,
               "hit": true
             },
             {
@@ -1120,8 +1120,8 @@
             {
               "ticker": "NWSA",
               "side": "sell",
-              "fwd": 6.928,
-              "pnl": -6.928,
+              "fwd": 6.945,
+              "pnl": -6.945,
               "hit": false
             },
             {
@@ -2070,15 +2070,15 @@
             "n": 18,
             "hits": 6,
             "hit_rate": 0.333,
-            "avg_pnl_pct": -2.843
+            "avg_pnl_pct": -2.807
           },
           "sell": {
             "n": 25,
-            "hits": 12,
-            "hit_rate": 0.48,
-            "avg_pnl_pct": -1.974
+            "hits": 11,
+            "hit_rate": 0.44,
+            "avg_pnl_pct": -1.987
           },
-          "avg_pnl_pct_both": -2.409,
+          "avg_pnl_pct_both": -2.397,
           "detail_buy": [
             {
               "ticker": "SKAIU",
@@ -2114,8 +2114,8 @@
             {
               "ticker": "BEMD",
               "side": "buy",
-              "fwd": -0.719,
-              "pnl": -0.719,
+              "fwd": -0.4,
+              "pnl": -0.4,
               "hit": false
             },
             {
@@ -2153,8 +2153,8 @@
             {
               "ticker": "LDI",
               "side": "buy",
-              "fwd": 4.783,
-              "pnl": 4.783,
+              "fwd": 4.794,
+              "pnl": 4.794,
               "hit": true
             },
             {
@@ -2183,9 +2183,9 @@
             {
               "ticker": "LIN",
               "side": "sell",
-              "fwd": -0.114,
-              "pnl": 0.114,
-              "hit": true
+              "fwd": 0.215,
+              "pnl": -0.215,
+              "hit": false
             },
             {
               "ticker": "VALE",
@@ -2232,8 +2232,8 @@
             {
               "ticker": "SIM",
               "side": "sell",
-              "fwd": -5.577,
-              "pnl": 5.577,
+              "fwd": -5.574,
+              "pnl": 5.574,
               "hit": true
             },
             {
@@ -3225,9 +3225,9 @@
             "n": 25,
             "hits": 17,
             "hit_rate": 0.68,
-            "avg_pnl_pct": 3.145
+            "avg_pnl_pct": 3.108
           },
-          "avg_pnl_pct_both": 1.788,
+          "avg_pnl_pct_both": 1.769,
           "detail_buy": [
             {
               "ticker": "TMC",
@@ -3367,8 +3367,8 @@
             {
               "ticker": "HRB",
               "side": "sell",
-              "fwd": 1.935,
-              "pnl": -1.935,
+              "fwd": 2.863,
+              "pnl": -2.863,
               "hit": false
             },
             {
@@ -4381,9 +4381,9 @@
             "n": 25,
             "hits": 14,
             "hit_rate": 0.56,
-            "avg_pnl_pct": -1.081
+            "avg_pnl_pct": -1.086
           },
-          "avg_pnl_pct_both": -0.141,
+          "avg_pnl_pct_both": -0.144,
           "detail_buy": [
             {
               "ticker": "STE",
@@ -4593,8 +4593,8 @@
             {
               "ticker": "GETY",
               "side": "sell",
-              "fwd": -13.727,
-              "pnl": 13.727,
+              "fwd": -13.653,
+              "pnl": 13.653,
               "hit": true
             }
           ]
@@ -5531,15 +5531,15 @@
             "n": 25,
             "hits": 11,
             "hit_rate": 0.44,
-            "avg_pnl_pct": -0.417
+            "avg_pnl_pct": -0.403
           },
           "sell": {
             "n": 25,
             "hits": 17,
             "hit_rate": 0.68,
-            "avg_pnl_pct": -35.345
+            "avg_pnl_pct": -35.351
           },
-          "avg_pnl_pct_both": -17.881,
+          "avg_pnl_pct_both": -17.877,
           "detail_buy": [
             {
               "ticker": "STE",
@@ -5635,8 +5635,8 @@
             {
               "ticker": "LIN",
               "side": "buy",
-              "fwd": 0.22,
-              "pnl": 0.22,
+              "fwd": 0.55,
+              "pnl": 0.55,
               "hit": true
             },
             {
@@ -5721,8 +5721,8 @@
             {
               "ticker": "GETY",
               "side": "sell",
-              "fwd": -12.105,
-              "pnl": 12.105,
+              "fwd": -12.03,
+              "pnl": 12.03,
               "hit": true
             },
             {
@@ -6463,9 +6463,9 @@
             "n": 15,
             "hits": 7,
             "hit_rate": 0.467,
-            "avg_pnl_pct": 0.313
+            "avg_pnl_pct": 0.311
           },
-          "avg_pnl_pct_both": -0.605,
+          "avg_pnl_pct_both": -0.606,
           "detail_buy": [
             {
               "ticker": "ELF",
@@ -6619,8 +6619,8 @@
             {
               "ticker": "SES",
               "side": "sell",
-              "fwd": -0.432,
-              "pnl": 0.432,
+              "fwd": -0.393,
+              "pnl": 0.393,
               "hit": true
             },
             {
@@ -6693,9 +6693,9 @@
             "n": 15,
             "hits": 8,
             "hit_rate": 0.533,
-            "avg_pnl_pct": 0.71
+            "avg_pnl_pct": 0.708
           },
-          "avg_pnl_pct_both": -0.406,
+          "avg_pnl_pct_both": -0.407,
           "detail_buy": [
             {
               "ticker": "ELF",
@@ -6835,8 +6835,8 @@
             {
               "ticker": "SES",
               "side": "sell",
-              "fwd": -0.432,
-              "pnl": 0.432,
+              "fwd": -0.393,
+              "pnl": 0.393,
               "hit": true
             },
             {
@@ -7613,15 +7613,15 @@
             "n": 25,
             "hits": 11,
             "hit_rate": 0.44,
-            "avg_pnl_pct": -0.452
+            "avg_pnl_pct": -0.449
           },
           "sell": {
             "n": 25,
             "hits": 18,
             "hit_rate": 0.72,
-            "avg_pnl_pct": 3.383
+            "avg_pnl_pct": 3.377
           },
-          "avg_pnl_pct_both": 1.466,
+          "avg_pnl_pct_both": 1.464,
           "detail_buy": [
             {
               "ticker": "GSHD",
@@ -7710,8 +7710,8 @@
             {
               "ticker": "VNT",
               "side": "buy",
-              "fwd": 0.121,
-              "pnl": 0.121,
+              "fwd": 0.198,
+              "pnl": 0.198,
               "hit": true
             },
             {
@@ -7817,8 +7817,8 @@
             {
               "ticker": "GETY",
               "side": "sell",
-              "fwd": -11.439,
-              "pnl": 11.439,
+              "fwd": -11.364,
+              "pnl": 11.364,
               "hit": true
             },
             {
@@ -7843,13 +7843,13 @@
             "n": 25,
             "hits": 9,
             "hit_rate": 0.36,
-            "avg_pnl_pct": -0.448
+            "avg_pnl_pct": -0.445
           },
           "sell": {
             "n": 25,
             "hits": 18,
             "hit_rate": 0.72,
-            "avg_pnl_pct": 3.584
+            "avg_pnl_pct": 3.58
           },
           "avg_pnl_pct_both": 1.568,
           "detail_buy": [
@@ -7947,8 +7947,8 @@
             {
               "ticker": "VNT",
               "side": "buy",
-              "fwd": 0.121,
-              "pnl": 0.121,
+              "fwd": 0.198,
+              "pnl": 0.198,
               "hit": true
             },
             {
@@ -8033,8 +8033,8 @@
             {
               "ticker": "NFE",
               "side": "sell",
-              "fwd": 1.418,
-              "pnl": -1.418,
+              "fwd": 1.455,
+              "pnl": -1.455,
               "hit": false
             },
             {
@@ -8539,15 +8539,15 @@
             "n": 25,
             "hits": 9,
             "hit_rate": 0.36,
-            "avg_pnl_pct": -1.311
+            "avg_pnl_pct": -1.308
           },
           "sell": {
             "n": 25,
             "hits": 16,
             "hit_rate": 0.64,
-            "avg_pnl_pct": 2.696
+            "avg_pnl_pct": 2.691
           },
-          "avg_pnl_pct_both": 0.693,
+          "avg_pnl_pct_both": 0.691,
           "detail_buy": [
             {
               "ticker": "RRC",
@@ -8615,8 +8615,8 @@
             {
               "ticker": "VNT",
               "side": "buy",
-              "fwd": -0.302,
-              "pnl": -0.302,
+              "fwd": -0.225,
+              "pnl": -0.225,
               "hit": false
             },
             {
@@ -8701,8 +8701,8 @@
             {
               "ticker": "EYPT",
               "side": "sell",
-              "fwd": -1.404,
-              "pnl": 1.404,
+              "fwd": -1.296,
+              "pnl": 1.296,
               "hit": true
             },
             {
@@ -8769,15 +8769,15 @@
             "n": 25,
             "hits": 9,
             "hit_rate": 0.36,
-            "avg_pnl_pct": -1.535
+            "avg_pnl_pct": -1.532
           },
           "sell": {
             "n": 25,
             "hits": 16,
             "hit_rate": 0.64,
-            "avg_pnl_pct": 2.696
+            "avg_pnl_pct": 2.691
           },
-          "avg_pnl_pct_both": 0.581,
+          "avg_pnl_pct_both": 0.579,
           "detail_buy": [
             {
               "ticker": "CRK",
@@ -8845,8 +8845,8 @@
             {
               "ticker": "VNT",
               "side": "buy",
-              "fwd": -0.302,
-              "pnl": -0.302,
+              "fwd": -0.225,
+              "pnl": -0.225,
               "hit": false
             },
             {
@@ -8931,8 +8931,8 @@
             {
               "ticker": "EYPT",
               "side": "sell",
-              "fwd": -1.404,
-              "pnl": 1.404,
+              "fwd": -1.296,
+              "pnl": 1.296,
               "hit": true
             },
             {
@@ -8999,15 +8999,15 @@
             "n": 25,
             "hits": 8,
             "hit_rate": 0.32,
-            "avg_pnl_pct": -1.25
+            "avg_pnl_pct": -1.247
           },
           "sell": {
             "n": 25,
             "hits": 17,
             "hit_rate": 0.68,
-            "avg_pnl_pct": 2.927
+            "avg_pnl_pct": 2.923
           },
-          "avg_pnl_pct_both": 0.839,
+          "avg_pnl_pct_both": 0.838,
           "detail_buy": [
             {
               "ticker": "CRK",
@@ -9075,8 +9075,8 @@
             {
               "ticker": "VNT",
               "side": "buy",
-              "fwd": -0.302,
-              "pnl": -0.302,
+              "fwd": -0.225,
+              "pnl": -0.225,
               "hit": false
             },
             {
@@ -9161,8 +9161,8 @@
             {
               "ticker": "EYPT",
               "side": "sell",
-              "fwd": -1.404,
-              "pnl": 1.404,
+              "fwd": -1.296,
+              "pnl": 1.296,
               "hit": true
             },
             {
@@ -11391,9 +11391,9 @@
             "n": 25,
             "hits": 7,
             "hit_rate": 0.28,
-            "avg_pnl_pct": -2.296
+            "avg_pnl_pct": -2.299
           },
-          "avg_pnl_pct_both": -1.52,
+          "avg_pnl_pct_both": -1.522,
           "detail_buy": [
             {
               "ticker": "DK",
@@ -14001,6 +14001,928 @@
         }
       },
       "generated_at": "2026-09-03T15:48:39.278594-04:00"
+    },
+    {
+      "signal_date": "2026-09-04",
+      "horizons": {
+        "1d": {
+          "trading_days": 1,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "WAY",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TXG",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HQY",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HNGE",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "HTFL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BTSG",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NU",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CNH",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "IE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UNFI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PACK",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SATL",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BKSY",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "COLD",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VFC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SIDU",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "3d": {
+          "trading_days": 3,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "HOOD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NVAX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ASND",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OSCR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ATRC",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MRX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NU",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUBO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UPWK",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "TMC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LODE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "METC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SPIR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TROX",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FCEL",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ASPN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NG",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LWLG",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PACK",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UNFI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "IE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AIIO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OEC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "1w": {
+          "trading_days": 5,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "HOOD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NVAX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ASND",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OSCR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ATRC",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MRX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NU",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUBO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UPWK",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "SPIR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FCEL",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UNFI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PACK",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TMC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LODE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MNSO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TROX",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "METC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AIIO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LCID",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "RCAT",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "BKSY",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "2w": {
+          "trading_days": 10,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "HOOD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NVAX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ASND",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OSCR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ATRC",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MRX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NU",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUBO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UPWK",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "SPIR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PACK",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TMC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LODE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UNFI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FCEL",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "METC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AIIO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TROX",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MNSO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LCID",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ASPN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LWLG",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        },
+        "1m": {
+          "trading_days": 21,
+          "buy": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "sell": {
+            "n": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "avg_pnl_pct": null
+          },
+          "avg_pnl_pct_both": null,
+          "detail_buy": [
+            {
+              "ticker": "HOOD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "XP",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NVAX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ASND",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "OSCR",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "ATRC",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MRX",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "NU",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "DUOL",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUBO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PD",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "VNT",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UPWK",
+              "side": "buy",
+              "fwd": null,
+              "hit": null
+            }
+          ],
+          "detail_sell": [
+            {
+              "ticker": "PACK",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FUN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "AIIO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LCID",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MNSO",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SES",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "MBC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "SPIR",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "CPNG",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "LODE",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "TMC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "UNFI",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "PENN",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "METC",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            },
+            {
+              "ticker": "FCEL",
+              "side": "sell",
+              "fwd": null,
+              "hit": null
+            }
+          ]
+        }
+      },
+      "generated_at": "2026-09-04T08:06:52.272862-04:00"
     }
   ]
 }

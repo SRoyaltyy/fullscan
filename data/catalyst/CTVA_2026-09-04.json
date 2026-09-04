@@ -1,0 +1,8 @@
+{
+  "error": "Step 2 parse failure",
+  "raw": "<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Corteva CTVA Vylor corn pipeline yield stability trait insect control 2026</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">Corteva CTVA stock buyback dividend share repurchase program</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n</\uff5c\uff5cDSML\uff5c\uff5ctool_calls>",
+  "ticker": "CTVA",
+  "generated_at": "2026-09-04",
+  "cutoff_date": null,
+  "role": "opportunity"
+}

@@ -1,7 +1,7 @@
 {
   "signal_date": "2026-08-27",
   "horizon": "1w",
-  "generated_at": "2026-09-03T17:03:25.635119-04:00",
+  "generated_at": "2026-09-04T08:20:40.986752-04:00",
   "missed_movers": [
     {
       "ticker": "GPRO",
@@ -53,7 +53,7 @@
     },
     {
       "ticker": "CHGG",
-      "fwd_pct": 22.35,
+      "fwd_pct": 22.5,
       "class": "gated_out",
       "sector": "Consumer Defensive",
       "size": "micro",

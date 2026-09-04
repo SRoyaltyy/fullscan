@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "Now I have several key events. Let me search for more details on the Q2 earnings specifics and other events.\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">\"Archer Daniels\" Q2 2026 earnings EPS beat crushing ethanol August 4</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">ADM Archer Daniels Midland $100 million oilseed crush expansion four plants</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5c",
+  "ticker": "ADM",
+  "generated_at": "2026-09-04",
+  "cutoff_date": null,
+  "role": "opportunity"
+}

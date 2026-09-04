@@ -1,0 +1,143 @@
+{
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T08:01:20.027562-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "NUE",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; NUE CSP $1,185, HRC $1,205, WS M&A; high conv"
+    },
+    {
+      "ticker": "STLD",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; NUE CSP $1,185, HRC $1,205, WS M&A; high conv"
+    },
+    {
+      "ticker": "WS",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; NUE CSP $1,185, HRC $1,205, WS M&A; high conv"
+    },
+    {
+      "ticker": "CTVA",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Vylor trait + Iran-linked nitrogen crunch"
+    },
+    {
+      "ticker": "CF",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Vylor trait + Iran-linked nitrogen crunch"
+    },
+    {
+      "ticker": "HUN",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Olin vote + REX record EPS; skip silent DOW"
+    },
+    {
+      "ticker": "REX",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Olin vote + REX record EPS; skip silent DOW"
+    },
+    {
+      "ticker": "ADM",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLP; crush/biofuels + COFCO mill sale, not CALM eggs"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "NUE",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; NUE CSP $1,185, HRC $1,205, WS M&A; high conv",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "STLD",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; NUE CSP $1,185, HRC $1,205, WS M&A; high conv",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "WS",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; NUE CSP $1,185, HRC $1,205, WS M&A; high conv",
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "ticker": "CTVA",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Vylor trait + Iran-linked nitrogen crunch",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 2 parse failure"
+    },
+    {
+      "ticker": "CF",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Vylor trait + Iran-linked nitrogen crunch",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "HUN",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Olin vote + REX record EPS; skip silent DOW",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "REX",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLB; Olin vote + REX record EPS; skip silent DOW",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "ADM",
+      "role": "opportunity",
+      "why": "long OVERRIDE vs XLP; crush/biofuels + COFCO mill sale, not CALM eggs",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    }
+  ]
+}

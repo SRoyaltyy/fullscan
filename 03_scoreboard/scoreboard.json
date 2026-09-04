@@ -14760,6 +14760,704 @@
       "sector": "Utilities",
       "etf": "XLU",
       "rubric": "00_grounding/sectors/utilities.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "general",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": 2.25,
+      "multiplier": 0.9,
+      "components": {
+        "B0_ASIA": 0.5,
+        "B0_EUROPE": 0.0,
+        "B1_CATALYSTS": 0.0,
+        "B2_BONDS": 0.0,
+        "B3_FEDPATH": 0.0,
+        "B4_VIX": 0.5,
+        "B5_SENTIMENT": 0.5,
+        "B6_FUTURES": 0.5,
+        "B7_OIL_DOLLAR": 0.0
+      },
+      "leading_sum": 1.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        }
+      },
+      "news_judge_present": true
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Basic Materials",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.55,
+      "total_score": -4.95,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      },
+      "leading_sum": -5.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Basic Materials",
+      "etf": "XLB",
+      "rubric": "00_grounding/sectors/basic_materials.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Communication Services",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": 0.0,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": 0.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Communication Services",
+      "etf": "XLC",
+      "rubric": "00_grounding/sectors/communication_services.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Consumer Cyclical",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.5,
+      "total_score": -4.5,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": -5.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Consumer Cyclical",
+      "etf": "XLY",
+      "rubric": "00_grounding/sectors/consumer_cyclical.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Consumer Defensive",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.5,
+      "total_score": -4.95,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      },
+      "leading_sum": -5.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Consumer Defensive",
+      "etf": "XLP",
+      "rubric": "00_grounding/sectors/consumer_defensive.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Energy",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": -3.15,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      },
+      "leading_sum": -3.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.48
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Energy",
+      "etf": "XLE",
+      "rubric": "00_grounding/sectors/energy.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Financial",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.5,
+      "total_score": 5.4,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.5,
+        "S1_SECTOR_FACTORS": 1.0,
+        "S2_BREADTH": 0.5,
+        "S3_FLOWS_POSITIONING": 0.5,
+        "S4_ETF_TAPE": 0.5
+      },
+      "leading_sum": 5.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.48
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.42
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        }
+      },
+      "sector": "Financial",
+      "etf": "XLF",
+      "rubric": "00_grounding/sectors/financial.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Healthcare",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": 1.35,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": 0.5,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": 1.5,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.48
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.46
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.45
+        }
+      },
+      "sector": "Healthcare",
+      "etf": "XLV",
+      "rubric": "00_grounding/sectors/healthcare.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Industrials",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": -1.35,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": 1.0,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      },
+      "leading_sum": -1.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        }
+      },
+      "sector": "Industrials",
+      "etf": "XLI",
+      "rubric": "00_grounding/sectors/industrials.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Real Estate",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": 0.0,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": 0.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Real Estate",
+      "etf": "XLRE",
+      "rubric": "00_grounding/sectors/real_estate.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Technology",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": -0.45,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.5,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": -1.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": 1.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.45
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "up",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
+      "sector": "Technology",
+      "etf": "XLK",
+      "rubric": "00_grounding/sectors/technology.md"
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "sector:Utilities",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.5,
+      "total_score": 0.0,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": 0.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.4
+        }
+      },
+      "sector": "Utilities",
+      "etf": "XLU",
+      "rubric": "00_grounding/sectors/utilities.md"
     }
   ]
 }

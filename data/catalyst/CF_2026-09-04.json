@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">\"CF Industries\" Q2 2026 earnings per share net income results August 5</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">CF Industries Iran war nitrogen fertilizer prices surge 2026</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n</\uff5c\uff5cDSML\uff5c\uff5ctool_calls>",
+  "ticker": "CF",
+  "generated_at": "2026-09-04",
+  "cutoff_date": null,
+  "role": "opportunity"
+}

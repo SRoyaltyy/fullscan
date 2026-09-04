@@ -1,0 +1,8 @@
+{
+  "error": "Step 1 parse failure",
+  "raw": "Let me search for more specific events - the Q4 fiscal 2025 earnings details from March 2026, and the Q1 fiscal 2026 earnings from June 2026, plus the executive chair share sale details.\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">REX American Resources Q4 fiscal 2025 earnings net income EPS March 2026</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n</\uff5c\uff5cDSML\uff5c\uff5cinvoke>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"web_search\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"query\" string=\"true\">REX American Resou",
+  "ticker": "REX",
+  "generated_at": "2026-09-04",
+  "cutoff_date": null,
+  "role": "opportunity"
+}

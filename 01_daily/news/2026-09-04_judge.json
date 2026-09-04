@@ -1,0 +1,20 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "bearish",
+  "bearish",
+  "bearish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Healthcare": "bullish",
+  "Financial": "bullish",
+  "Real Estate": "bearish"
+ },
+ "tickers": {
+  "AMGN": 3.0,
+  "XLU": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO Fed-hawkish: [hawkish] Divided Fed holds, 3 dissent; Warsh signals Sep hike risk; hike odds rising (regime/1w)\nMACRO Rates: [bearish] US borrowing costs hit 19-yr high; long-end yields persistent headwind for duration (regime/1w-1m)\nMACRO Gold: [bearish] Gold -3% on Warsh comments; monetary-metals bid inverts, hits XLB/GDX (session/1d-1w)\nSECTOR Healthcare: [bullish] ABBV Phase 3 + AMGN mortality data form sector-fundamental cluster; XLV relative bid (sector_etf)\nSECTOR Financials: [bullish] Hawkish repricing + steepening curve = NIM tailwind; XLF relative strength (sector_etf)\nSECTOR Real Estate: [bearish] 19-yr high borrowing costs crush duration; XLRE underperforms (sector_etf)\nINTERACTION: Fed-hawkish + gold slide = one rates cluster; do not double-count. Healthcare cluster + defensive bid supports XLV.\nWATCH: Prior-session relief rally at risk of reversal if Warsh-hawkish repricing dominates; watch for SPX fade.",
+ "date": "2026-09-04"
+}
