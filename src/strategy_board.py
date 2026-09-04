@@ -224,7 +224,7 @@ def combine_bt() -> list[dict]:
 
 def merge_books() -> list[dict]:
     rows = []
-    live_name = "flatten_hard_red"
+    live_name = "flatten_robust"
     sweep = []
     if MERGE_SWEEP.is_file():
         doc = json.loads(MERGE_SWEEP.read_text(encoding="utf-8"))
@@ -251,7 +251,7 @@ def merge_books() -> list[dict]:
             hit=r.get("hit"),
             final_equity=r.get("final_equity"),
             href="../sleeve-merge/",
-            note=("LIVE: S≤−3 no new buys; working lots stay."
+            note=("LIVE: 3d robust size book + flatten clock; S≤−3 no new buys."
                   if is_live else
                   "One-account flatten-switch, Futubull, leftover cash."),
             live=is_live,
@@ -450,13 +450,13 @@ svg text{{fill:var(--muted)}}
 <a href="../book-paper/">book paper</a>
 </p>
 <p class="muted">Window {WINDOW[0]} → {WINDOW[1]}. Live production book is
-<b>flatten_hard_red</b> (S ≤ −3: no new buys, holds continue). Returns are
+<b>flatten_robust</b> (3d size book + flatten clock; S ≤ −3: no new buys). Returns are
 not interchangeable: <b>fill</b> is one Futubull cash account,
 <b>stitch</b> is a daily-mark overlay, <b>follow_book</b> is the $10k .io
 sleeves, <b>confirm</b> is Excel (not capital), <b>leak</b> is a known
 same-day recycle.</p>
 <div class="cards">
-<div class="card">Live method<b>hard-red flatten</b></div>
+<div class="card">Live method<b>flatten_robust</b></div>
 <div class="card">Live return<b>{live_ret}</b></div>
 <div class="card">Books on this page<b>{len(rows)}</b></div>
 <div class="card">Families<b>{len(families)}</b></div>
@@ -537,9 +537,10 @@ def write_md(rows: list[dict]) -> str:
         f"_Generated {datetime.now().isoformat(timespec='seconds')} — "
         f"{WINDOW[0]} → {WINDOW[1]}_",
         "",
-        "Live production method is **`flatten_hard_red`**: same flatten-switch "
-        "recycle clock as PR #66, plus S ≤ −3 blocks new buys from either "
-        "sleeve. Working lots and due 1d exits stay on.",
+        "Live production method is **`flatten_robust`**: 3d size-book "
+        "selection (not raw 2w_size), 3-session recycle, same flatten-switch "
+        "clock, plus S ≤ −3 blocks new buys. Working lots and due 1d exits "
+        "stay on.",
         "",
         f"Live headline: **{(live or {}).get('ret_pct', '—')}%** "
         f"({(live or {}).get('name')}).",

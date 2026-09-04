@@ -36,6 +36,7 @@ from src.sleeve_merge import (
     _prior_book,
     book_ticker_set,
     io_picks,
+    io_select_picks,
     list_books,
     live_policy,
     load_book_map,
@@ -271,7 +272,9 @@ def plan_would_buy(
         clock = CLOSE_CLOCK
         sleeve = "io_core"
         source = f"io {pol.get('io_sleeve', '2w_size')} (holdings disregarded)"
-        targets = io_picks(io_book, pol.get("io_sleeve", "2w_size"))
+        targets = io_select_picks(
+            io_book, pol, date=date, score=None, mover_buys=[],
+            top_n=int(pol.get("long_top_n") or 10))
         if targets and pocket > 0:
             per = pocket / len(targets)
             for t in targets:
@@ -328,7 +331,8 @@ def plan_today(date: str, capital: float = 100_000,
         tickers = {str(r.get("ticker") or "").upper() for r in buys}
         tickers |= {t for t in (sim.get("open_io") or {})}
         tickers |= {p["ticker"] for p in (sim.get("open_mover") or [])}
-        for t in io_picks(book_map.get(date) or {}, pol.get("io_sleeve", "2w_size")):
+        for t in io_select_picks(book_map.get(date) or {}, pol, date=date,
+                                top_n=int(pol.get("long_top_n") or 10)):
             tickers.add(t)
         if tickers:
             start = cal[0] if cal else date
@@ -352,6 +356,7 @@ def plan_today(date: str, capital: float = 100_000,
     blank = score is None
     hard_red_cut = float(pol.get("hard_red", DEFAULT.get("hard_red", -3.0)))
     hard_red_no_new = bool(pol.get("hard_red_no_new", False))
+    hard_red_io_ok = bool(pol.get("hard_red_io_ok", False))
     hard_red = score is not None and float(score) <= hard_red_cut
 
     cash = float(sim.get("cash", capital))
@@ -369,7 +374,8 @@ def plan_today(date: str, capital: float = 100_000,
         cash_mover = False
     route_mover = flatten_ok or cash_mover
     can_buy = not (hard_red_no_new and hard_red)
-    route = ("hold" if (hard_red_no_new and hard_red)
+    can_buy_io = not (hard_red_no_new and hard_red and not hard_red_io_ok)
+    route = ("hold" if (hard_red_no_new and hard_red and not hard_red_io_ok)
              else "mover" if route_mover else "io")
     confirm = book_ticker_set(prior or last_print or {})
 
@@ -408,9 +414,10 @@ def plan_today(date: str, capital: float = 100_000,
         })
         return True
 
-    def try_buy(ticker, px, kind, clock, shares, reason, sleeve):
+    def try_buy(ticker, px, kind, clock, shares, reason, sleeve,
+                allow_hard_red=False):
         nonlocal cash
-        if not can_buy:
+        if not can_buy and not allow_hard_red:
             skip(clock, ticker, "BUY", "hard-red: no new buys", sleeve)
             return None
         if shares < 1 or not px:
@@ -516,22 +523,38 @@ def plan_today(date: str, capital: float = 100_000,
             still.append(p)
     mv_pos = still
 
+    # ---- 16:00 scheduled .io recycle --------------------------------
+    io_hold_key = pol.get("io_hold")
+    if io_hold_key and not route_mover:
+        for t in list(io_pos):
+            lot = io_pos[t]
+            if lot.get("exit_date") != date:
+                continue
+            if sell_lot(lot, CLOSE_CLOCK, f"io {io_hold_key} done", "close"):
+                io_pos.pop(t, None)
+
     # ---- 16:00 .io refill --------------------------------------------
     today_book = book_map.get(date)
     io_book = today_book
     if io_book is None and pol.get("carry_last_book"):
         io_book = last_print
     skip_io = bool(pol.get("skip_blank_io")) and blank
+    mover_names = [str(r.get("ticker") or "").upper()
+                   for r in priced_buys if r.get("ticker")]
     if route_mover:
         if io_book is not None:
-            for t in io_picks(io_book, pol.get("io_sleeve", "2w_size")):
+            for t in io_select_picks(io_book, pol, date=date, score=score,
+                                    mover_buys=mover_names,
+                                    top_n=int(pol.get("long_top_n") or 10)):
                 skip(CLOSE_CLOCK, t, "BUY",
                      "mover day: leftover cash overnight", "io_core")
     elif skip_io:
         skip(CLOSE_CLOCK, "", "BUY",
              "blank morning S — skip .io refill", "io_core")
-    elif hard_red_no_new and hard_red:
-        targets = io_picks(io_book or {}, pol.get("io_sleeve", "2w_size")) if io_book else []
+    elif hard_red_no_new and hard_red and not hard_red_io_ok:
+        targets = io_select_picks(io_book or {}, pol, date=date, score=score,
+                                 mover_buys=mover_names,
+                                 top_n=int(pol.get("long_top_n") or 10)) if io_book else []
         if not targets and io_book is None:
             skip(CLOSE_CLOCK, "", "BUY", "hard-red: no new buys", "io_core")
         for t in targets:
@@ -540,11 +563,20 @@ def plan_today(date: str, capital: float = 100_000,
             else:
                 skip(CLOSE_CLOCK, t, "BUY", "hard-red: no new buys", "io_core")
     elif io_book is not None:
-        targets = io_picks(io_book, pol.get("io_sleeve", "2w_size"))
+        targets = io_select_picks(io_book, pol, date=date, score=score,
+                                 mover_buys=mover_names,
+                                 top_n=int(pol.get("long_top_n") or 10))
         new = [t for t in targets if t not in io_pos]
         for t in targets:
             if t in io_pos:
                 skip(CLOSE_CLOCK, t, "BUY", "already held", "io_core")
+        io_hold_n = HOLD_SESSIONS.get(io_hold_key) if io_hold_key else None
+        io_exit = next_session(session_calendar(payload, books), date, io_hold_n) \
+            if io_hold_n else None
+        if io_hold_n and not io_exit:
+            skip(CLOSE_CLOCK, "*", "BUY",
+                 f"io {io_hold_key} cannot settle", "io_core")
+            new = []
         if new and cash > 100:
             per = cash / len(new)
             for t in new:
@@ -553,7 +585,8 @@ def plan_today(date: str, capital: float = 100_000,
                     skip(CLOSE_CLOCK, t, "BUY", "no close", "io_core")
                     continue
                 lot = try_buy(t, px, kind, CLOSE_CLOCK, int(per // px),
-                              f"io {pol.get('io_sleeve', '2w_size')}", "io_core")
+                              f"io {pol.get('io_select', 'size')}:{pol.get('io_sleeve', '2w_size')}",
+                              "io_core", allow_hard_red=can_buy_io)
                 if lot:
                     io_pos[t] = {
                         "ticker": t, "shares": lot["shares"], "side": "BUY",

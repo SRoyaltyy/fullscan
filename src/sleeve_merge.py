@@ -7,10 +7,10 @@ The two live books are complementary, not substitutes:
   .io    — 16:00 ET close fill, follow-the-book 2w_size.
            No S ≥ +1 gate. Size sleeves keep winning on down days.
 
-Live combine (``flatten_hard_red``): same flatten-switch recycle
-clock, plus S ≤ −3 blocks *new* tickets from either sleeve. Working
-lots and due 1d exits stay on. ``flatten_switch_recycle`` remains
-in the sweep as the ungated predecessor.
+Live combine (``flatten_robust``): 3d size-book picks + 3-session
+recycle, same flatten-switch clock, plus S ≤ −3 blocks *new* tickets.
+Working lots and due 1d exits stay on. ``flatten_hard_red`` (raw
+2w_size) and ``flatten_switch_recycle`` stay in the sweep.
 
   1. Default book is `.io` ``2w_size`` (close fill, same names as the
      published paper sleeve) — the down-day engine.
@@ -23,8 +23,12 @@ in the sweep as the ungated predecessor.
      at the open and rebuy today's list (honest recycle — not the
      paper book's same-day close→open leak).
   4. On days the stock-book job did not print, carry the last
-     printed ``2w_size`` list at the close.
-  5. Futubull fees, whole shares, no lookahead.
+     printed size list at the close.
+  5. ``flatten_robust`` (live) replaces raw ``2w_size`` with the 3d
+     size book, recycles those names on a 3-session clock, and still
+     lets leftover cash refill .io on a hard-red close (the down-day
+     engine in SLEEVE_COMBINE_BT). Flatten → mover is unchanged.
+  6. Futubull fees, whole shares, no lookahead.
 
 Gate: every complete calendar fortnight (14 days) and every complete
 10-session block must return ≥ +15%, and the full window must beat the
@@ -60,7 +64,7 @@ TWO_WEEK_CAL_DAYS = 14
 TARGET_2W_PCT = 15.0
 IO_TOP_SLEEVE = "2w_size"
 IO_TOP_RET_PCT = 12.85
-LIVE_POLICY = "flatten_hard_red"
+LIVE_POLICY = "flatten_robust"
 
 DEFAULT = {
     "name": "core_switch",
@@ -91,6 +95,10 @@ DEFAULT = {
     "skip_blank_io": False,          # do not buy .io when morning S is blank
     "hard_red": -3.0,                # S at or below this is hard-red
     "hard_red_no_new": False,        # hold existing; no new buys either sleeve
+    "io_select": "size",             # size | sector_good | boost | robust
+    "io_hold": None,                 # None = until flatten; "3d" recycles
+    "hard_red_io_ok": False,         # still refill .io on a hard-red close
+    "io_min_names": 4,               # sit rather than force a thin junk book
 }
 
 
@@ -157,6 +165,162 @@ def io_picks(book: dict, sleeve: str = "2w_size", top_n: int = 10) -> list[str]:
     from src.paper_trade import picks_from_book
     picks = picks_from_book(book, top_n)
     return [str(t).upper() for t in (picks.get(sleeve) or []) if t]
+
+
+def _horizon_from_sleeve(sleeve: str) -> str:
+    for h in ("1d", "3d", "1w", "2w", "1m"):
+        if sleeve.startswith(h):
+            return h
+    return "2w"
+
+
+def io_sized_rows(book: dict, sleeve: str = "2w_size",
+                  top_n: int = 10) -> list[dict]:
+    """3-per-bucket size rows (same cut as paper ``*_size``), with reasons."""
+    horizon = _horizon_from_sleeve(sleeve)
+    hb = (book.get("books") or {}).get(horizon) or {}
+    rows: list[dict] = []
+    seen: set[str] = set()
+    by_size = hb.get("buy_by_size") or {}
+    per = 3
+    for bucket in ("large+", "mid", "small/micro"):
+        for raw in (by_size.get(bucket) or [])[:per]:
+            t = str(raw.get("ticker") or "").upper()
+            if not t or t in seen:
+                continue
+            seen.add(t)
+            rows.append({**raw, "ticker": t, "bucket": bucket})
+            if len(rows) >= top_n:
+                return rows
+    if rows:
+        return rows
+    for raw in (hb.get("buy") or [])[:top_n]:
+        t = str(raw.get("ticker") or "").upper()
+        if t and t not in seen:
+            seen.add(t)
+            rows.append({**raw, "ticker": t})
+    return rows
+
+
+def _parse_reason_map(text: str) -> dict:
+    try:
+        from src.sleeve_combine_bt import parse_reasons
+        return parse_reasons(text or "")
+    except Exception:
+        return {}
+
+
+def _sector_good(row: dict) -> bool:
+    reasons = _parse_reason_map(row.get("reasons") or "")
+    s = reasons.get("sector")
+    return s is not None and s > 0
+
+
+def _join_score(row: dict):
+    reasons = _parse_reason_map(row.get("reasons") or "")
+    return reasons.get("join")
+
+
+def _lottery_stacks(date: str) -> set[str]:
+    """Tickers the boring overlay seated as rsi_oversold / gap_down / fade."""
+    path = SCOREBOARD / "boring_winners_picks.csv"
+    if not path.is_file() or not date:
+        return set()
+    bad: set[str] = set()
+    try:
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                if row.get("date") != date:
+                    continue
+                stack = (row.get("stack") or "").lower()
+                action = (row.get("action") or "").lower()
+                if stack in ("rsi_oversold", "gap_down", "fade", "first_crack") \
+                        or action == "drop":
+                    t = str(row.get("Ticker") or row.get("ticker") or "").upper()
+                    if t:
+                        bad.add(t)
+    except OSError:
+        return set()
+    return bad
+
+
+def io_select_picks(book: dict, pol: dict | None = None, *,
+                    date: str | None = None,
+                    score: float | None = None,
+                    mover_buys: list[str] | None = None,
+                    top_n: int = 10) -> list[str]:
+    """Selection used at the 16:00 .io fill.
+
+    ``size`` is the published 3-bucket sleeve (2w_size by default).
+    ``robust`` is the start-robust cut: same 3-bucket rule on the 3d
+    book (SLEEVE_COMBINE_BT's best .io hold), sector_good tilt, mover
+    overlap first (io_boost, knowable at 09:30 so legal at 16:00),
+    drop boring lottery stacks. Thin books sit rather than force junk.
+    """
+    pol = pol or {}
+    select = (pol.get("io_select") or "size").lower()
+    sleeve = pol.get("io_sleeve") or "2w_size"
+    if select == "size":
+        return io_picks(book, sleeve, top_n)
+
+    rows = io_sized_rows(book, sleeve, top_n=max(top_n, 12))
+    movers = {str(t).upper() for t in (mover_buys or []) if t}
+    lottery = _lottery_stacks(date) if date else set()
+    min_names = int(pol.get("io_min_names") or 0)
+
+    def _ok(row: dict) -> bool:
+        t = row["ticker"]
+        if t in lottery and select in ("robust", "no_lottery"):
+            return False
+        if select in ("sector_good", "robust", "boost_sector"):
+            if not _sector_good(row):
+                # 3d LEAD rows often omit sector= in reasons; keep
+                # Healthcare / Energy / Utilities (down-day engines).
+                sec = (row.get("sector") or "")
+                if select == "robust" and sec in (
+                    "Healthcare", "Energy", "Utilities", "Basic Materials",
+                ):
+                    return True
+                return False
+        if select == "robust" and score is not None and float(score) < 1.0:
+            j = _join_score(row)
+            # SLEEVE_COMBINE: on S < +1, join>0 was −0.08 vs join≤0 +5.24.
+            # Keep join≤0 / missing, rebound, or a favored sector.
+            if j is not None and j > 0:
+                sec = (row.get("sector") or "")
+                if sec not in ("Healthcare", "Energy", "Utilities",
+                               "Basic Materials") and not row.get("rebound"):
+                    return False
+        return True
+
+    kept = [r for r in rows if _ok(r)]
+    if select in ("boost", "robust", "boost_sector") and movers:
+        kept.sort(key=lambda r: (
+            0 if r["ticker"] in movers else 1,
+            -(float(r.get("score") or 0)),
+            r["ticker"],
+        ))
+    out: list[str] = []
+    seen: set[str] = set()
+    for r in kept:
+        t = r["ticker"]
+        if t in seen:
+            continue
+        seen.add(t)
+        out.append(t)
+        if len(out) >= top_n:
+            break
+    # Stay in the size book if the filter left a thin list.
+    if len(out) < max(min_names, 1) and select == "robust":
+        for r in rows:
+            t = r["ticker"]
+            if t in seen or t in lottery:
+                continue
+            seen.add(t)
+            out.append(t)
+            if len(out) >= max(min_names, 6):
+                break
+    return out
 
 
 def book_ticker_set(book: dict) -> set[str]:
@@ -774,8 +938,9 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                        policy: dict | None = None,
                        capital: float = 100_000,
                        stop_before: str | None = None,
-                       close_open: bool = True) -> dict:
-    """One book: hold .io 2w_size, flatten at the 09:30 open when the
+                       close_open: bool = True,
+                       start_date: str | None = None) -> dict:
+    """One book: hold .io size names, flatten at the 09:30 open when the
     morning score is green AND mover has BUY calls, then sit in mover
     (1d hold). Leftover cash refills .io at the close. No lookahead —
     tomorrow's score is never used at today's close, and today's book
@@ -788,13 +953,18 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     stop_before: replay sessions strictly before this date (live card).
     close_open=False leaves working lots on the book instead of the
     terminal mark-to-close so today's planner can see holdings + cash.
+    start_date: fresh cash from this session (world tape still visible
+    for flatten / carry). Weekend starts roll to the next session.
     """
     pol = dict(DEFAULT)
     if policy:
         pol.update(policy)
     pol["engine"] = "flatten_switch"
     fees, order_fees = _fees()
-    cal = session_calendar(payload, books)
+    full_cal = session_calendar(payload, books)
+    cal = list(full_cal)
+    if start_date:
+        cal = [d for d in cal if d >= start_date]
     if stop_before:
         cal = [d for d in cal if d < stop_before]
     book_map = load_book_map(books)
@@ -813,7 +983,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             doc = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
-        for t in io_picks(doc, pol.get("io_sleeve", "2w_size")):
+        for t in book_ticker_set(doc):
             tickers.add(t)
     for rows in calls_by_day.values():
         for r in rows:
@@ -841,6 +1011,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     skip_blank_io = bool(pol.get("skip_blank_io", False))
     hard_red_cut = float(pol.get("hard_red", -3.0))
     hard_red_no_new = bool(pol.get("hard_red_no_new", False))
+    hard_red_io_ok = bool(pol.get("hard_red_io_ok", False))
+    io_hold_key = pol.get("io_hold")
+    io_hold_n = HOLD_SESSIONS.get(io_hold_key) if io_hold_key else None
+    first_targets: list[str] = []
+    first_route = ""
 
     def px_close(t, d):
         return _close_from_cache(t, d, cache)
@@ -931,7 +1106,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                 skipped.append({"date": date, "ticker": t, "side": "BUY",
                                 "reason": "no 09:30 open"})
                 continue
-            xd = next_session(cal, date, long_hold_n)
+            xd = next_session(full_cal, date, long_hold_n)
             if not xd:
                 continue
             bump = pol["sizeup"] if t in confirm else 1.0
@@ -964,8 +1139,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             if t and px:
                 priced_buys.append(r)
         today_book = book_map.get(date)
-        prior = _prior_book(book_map, cal, date, book_mode)
-        last_print = _prior_book(book_map, cal, date, "last")
+        prior = _prior_book(book_map, full_cal, date, book_mode)
+        last_print = _prior_book(book_map, full_cal, date, "last")
         have_buys = len(priced_buys) >= min_buys
         green = score is not None and score >= pol["long_gate"]
         blank = score is None
@@ -980,12 +1155,14 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         cash_mover = flat and have_buys and (
             (mover_when_flat and green)
             or (blank_mover_when_flat and blank))
-        # Hard-red: keep working lots, do not put on new risk from
-        # either sleeve. Scheduled 1d exits still settle.
+        # Hard-red: keep working lots, do not put on new *mover* risk.
+        # Scheduled 1d exits still settle. .io refill on the close is
+        # optional (hard_red_io_ok) — that is the combine down-day engine.
         if hard_red_no_new and hard_red:
             flatten_ok = False
             cash_mover = False
         route_mover = flatten_ok or cash_mover
+        block_io = hard_red_no_new and hard_red and not hard_red_io_ok
         # 09:30 size-up may only see a book that already printed.
         confirm = book_ticker_set(prior or last_print or {}) 
 
@@ -1010,6 +1187,19 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                 still.append(p)
         mv_pos = still
 
+        # 16:00 scheduled .io recycle (3d hold). Flatten still dumps
+        # everything at the next green open; this only fires when we
+        # are still in the .io book.
+        if io_hold_n and not route_mover:
+            for t in list(io_pos):
+                lot = io_pos[t]
+                if lot.get("exit_date") != date:
+                    continue
+                px = px_close(t, date) or lot.get("last_px") or lot["entry_px"]
+                close_lot(lot, date, float(px), CLOSE_CLOCK,
+                          f"io {io_hold_key} done")
+                io_pos.pop(t, None)
+
         # 16:00 refill .io with leftover cash — but on a mover day keep
         # leftover cash overnight so the next green open can size in
         # (today's route, not tomorrow's score).
@@ -1017,10 +1207,30 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         if io_book is None and carry_last_book:
             io_book = last_print
         skip_io = skip_blank_io and blank
+        mover_names = [str(r.get("ticker") or "").upper()
+                       for r in priced_buys if r.get("ticker")]
+        targets = io_select_picks(
+            io_book or {}, pol, date=date, score=score,
+            mover_buys=mover_names,
+            top_n=int(pol.get("long_top_n") or 10),
+        ) if io_book is not None else []
+        if not first_route:
+            first_route = ("hold" if (hard_red_no_new and hard_red and not hard_red_io_ok)
+                           else "mover" if route_mover else "io")
+            first_targets = (
+                [str(r.get("ticker") or "").upper() for r in
+                 rank_calls(priced_buys, pol.get("long_rank", "cond"))[: pol["long_top_n"]]
+                 if r.get("ticker")]
+                if route_mover else list(targets)
+            )
         if io_book is not None and not route_mover and not skip_io \
-                and not (hard_red_no_new and hard_red):
-            targets = io_picks(io_book, pol.get("io_sleeve", "2w_size"))
+                and not block_io:
             new = [t for t in targets if t not in io_pos]
+            io_exit = next_session(full_cal, date, io_hold_n) if io_hold_n else None
+            if io_hold_n and not io_exit:
+                skipped.append({"date": date, "ticker": "*", "side": "BUY",
+                                "reason": f"io {io_hold_key} cannot settle"})
+                new = []
             if new and cash > 100:
                 per = cash / len(new)
                 for t in new:
@@ -1028,8 +1238,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                     if not px:
                         continue
                     lot = buy(date, t, px, CLOSE_CLOCK, int(per // px),
-                              f"io {pol.get('io_sleeve', '2w_size')}", "io_core")
+                              f"io {pol.get('io_select', 'size')}:{pol.get('io_sleeve', '2w_size')}",
+                              "io_core")
                     if lot:
+                        if io_exit:
+                            lot["exit_date"] = io_exit
                         io_pos[t] = lot
                     else:
                         skipped.append({"date": date, "ticker": t, "side": "BUY",
@@ -1063,6 +1276,9 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         "cash": cash,
         "open_io": {t: dict(lot) for t, lot in io_pos.items()},
         "open_mover": [dict(lot) for lot in mv_pos],
+        "start_date": start_date or (cal[0] if cal else None),
+        "first_route": first_route,
+        "first_targets": first_targets,
     }
 
 
@@ -1121,6 +1337,13 @@ SWEEP = [
      "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
      "rotate_mover": True, "carry_last_book": True,
      "hard_red_no_new": True},
+    {**DEFAULT, "name": "flatten_robust", "engine": "flatten_switch",
+     "io_sleeve": "3d_size", "io_select": "robust", "io_hold": "3d",
+     "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "rotate_mover": True, "carry_last_book": True,
+     "hard_red_no_new": True, "hard_red_io_ok": False,
+     "io_min_names": 4},
 ] + [
     DEFAULT,
     {**DEFAULT, "name": "switch_70", "core_frac": 0.30, "tac_frac": 0.70,
@@ -1158,6 +1381,65 @@ def live_policy() -> dict:
     raise KeyError(LIVE_POLICY)
 
 
+def policy_by_name(name: str) -> dict:
+    for pol in SWEEP:
+        if pol["name"] == name:
+            return dict(pol)
+    raise KeyError(name)
+
+
+def run_start_dates(payload: dict, books: list[tuple[str, Path]],
+                    policy: dict | None = None,
+                    capital: float = 100_000) -> dict:
+    """Fresh $100k on every session. Same policy, same fees, cash lockup.
+
+    Saturday/Sunday have no tape — those calendar dates are not sessions.
+    """
+    pol = policy if policy is not None else live_policy()
+    cal = session_calendar(payload, books)
+    rows = []
+    for start in cal:
+        sim = run_flatten_switch(payload, books, pol, capital,
+                                 start_date=start)
+        eq = float(sim.get("final_equity") or capital)
+        ret = round(100.0 * (eq / capital - 1.0), 2)
+        curve = sim.get("curve") or []
+        min_eq = min((c["equity"] for c in curve), default=eq)
+        dd = round(100.0 * (1.0 - min_eq / capital), 2) if capital else 0.0
+        rows.append({
+            "start": start,
+            "first_route": sim.get("first_route") or (
+                curve[0]["route"] if curve else ""),
+            "would_buy": list(sim.get("first_targets") or []),
+            "return_pct": ret,
+            "final_equity": eq,
+            "max_dd_pct": max(dd, 0.0),
+            "n_sessions": len(cal) - cal.index(start),
+            "n_trades": len(sim.get("trades") or []),
+            "made_money": ret > 0,
+        })
+    rets = [r["return_pct"] for r in rows]
+    long_enough = [r for r in rows if r["n_sessions"] >= 5]
+    mean = round(sum(rets) / len(rets), 2) if rets else 0.0
+    mean_5 = (round(sum(r["return_pct"] for r in long_enough) / len(long_enough), 2)
+              if long_enough else None)
+    return {
+        "policy": pol.get("name"),
+        "capital": capital,
+        "end": cal[-1] if cal else None,
+        "rows": rows,
+        "mean_pct": mean,
+        "mean_pct_ge5": mean_5,
+        "n": len(rows),
+        "n_ge5": len(long_enough),
+        "n_green": sum(1 for r in rows if r["made_money"]),
+        "min_pct": min(rets) if rets else 0.0,
+        "min_pct_ge5": (min(r["return_pct"] for r in long_enough)
+                        if long_enough else None),
+        "hit_mean_5": mean >= 5.0,
+    }
+
+
 def run_sweep(payload: dict, books: list[tuple[str, Path]],
               capital: float) -> list[dict]:
     io_top = io_top_return()
@@ -1177,7 +1459,8 @@ def run_sweep(payload: dict, books: list[tuple[str, Path]],
 
 
 # ----------------------------------------------------------- report --
-def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
+def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
+                  starts: dict | None = None) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     sim, st = winner["sim"], winner["stats"]
@@ -1188,7 +1471,8 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "long_hold", "long_rank", "day_cap", "min_buys", "sizeup",
         "allow_short", "book_for_flatten", "rotate_mover", "carry_last_book",
         "mover_when_flat", "blank_mover_when_flat", "skip_blank_io",
-        "hard_red", "hard_red_no_new",
+        "hard_red", "hard_red_no_new", "io_select", "io_hold",
+        "hard_red_io_ok", "io_min_names",
     )
     slim = {k: pol[k] for k in keep if k in pol}
     slim["live"] = pol.get("name") == LIVE_POLICY
@@ -1239,6 +1523,9 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
             w = csv.DictWriter(f, fieldnames=keys)
             w.writeheader()
             w.writerows(sim["skipped"])
+    if starts:
+        (OUT_DIR / "start_dates.json").write_text(
+            json.dumps(starts, indent=2), encoding="utf-8")
 
     gate = "PASS" if st["passed"] else "FAIL"
     lines = [
@@ -1355,39 +1642,84 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
                 if row["name"] == "flatten_switch_recycle"), None)
     hard = next((row for row in sweep_rows
                  if row["name"] == "flatten_hard_red"), None)
-    if rec and hard:
-        rs, hs = rec["stats"], hard["stats"]
+    rob = next((row for row in sweep_rows
+                if row["name"] == "flatten_robust"), None)
+    if rob or (rec and hard):
         lines += [
             "",
-            "## Live method: hard-red hold-only (S ≤ −3)",
+            "## Live method: 3d robust size book",
             "",
-            f"`{LIVE_POLICY}` is the production book. Working lots stay on. "
-            "Scheduled 1d exits still settle. Neither sleeve opens a new "
-            "ticket on a hard-red morning. `flatten_switch_recycle` is the "
-            "ungated predecessor (re-enters 2w_size on 08-24, S=−5.17).",
+            f"`{LIVE_POLICY}` is the production book. Selection is the 3d "
+            "size sleeve (SLEEVE_COMBINE_BT's best .io hold), not raw "
+            "`2w_size`. Names recycle every 3 sessions. Flatten → mover "
+            "on a green morning with priced BUYs is unchanged. S ≤ −3 "
+            "still blocks new tickets. `flatten_hard_red` is the old "
+            "2w_size live book (the 8-13 INO path).",
             "",
             "| Book | Role | Return | Final | Max DD | min fortnight |",
             "|---|---|---:|---:|---:|---:|",
-            f"| `flatten_hard_red` | **LIVE** | {hs['total_ret_pct']:+.2f}% | "
-            f"${hs['final_equity']:,.2f} | {hs['max_dd_pct']:.2f}% | "
-            f"{hs['min_fortnight']} |",
-            f"| `flatten_switch_recycle` | previous | {rs['total_ret_pct']:+.2f}% | "
-            f"${rs['final_equity']:,.2f} | {rs['max_dd_pct']:.2f}% | "
-            f"{rs['min_fortnight']} |",
-            "",
-            "| Date | Score | Hard-red (live) | Recycle |",
-            "|---|---:|---|---|",
         ]
-        rec_by = {r["date"]: r for r in rec["sim"]["curve"]}
-        hr_by = {r["date"]: r for r in hard["sim"]["curve"]}
-        for d in sorted(set(rec_by) | set(hr_by)):
-            a, b = hr_by.get(d) or {}, rec_by.get(d) or {}
-            sc = a.get("score") if a.get("score") is not None else b.get("score")
+        if rob:
+            s = rob["stats"]
+            lines.append(
+                f"| `flatten_robust` | **LIVE** | {s['total_ret_pct']:+.2f}% | "
+                f"${s['final_equity']:,.2f} | {s['max_dd_pct']:.2f}% | "
+                f"{s['min_fortnight']} |")
+        if hard:
+            hs = hard["stats"]
+            lines.append(
+                f"| `flatten_hard_red` | previous 2w_size | "
+                f"{hs['total_ret_pct']:+.2f}% | ${hs['final_equity']:,.2f} | "
+                f"{hs['max_dd_pct']:.2f}% | {hs['min_fortnight']} |")
+        if rec:
+            rs = rec["stats"]
+            lines.append(
+                f"| `flatten_switch_recycle` | ungated predecessor | "
+                f"{rs['total_ret_pct']:+.2f}% | ${rs['final_equity']:,.2f} | "
+                f"{rs['max_dd_pct']:.2f}% | {rs['min_fortnight']} |")
+        lines += [
+            "",
+            "| Date | Score | Robust (live) | Hard-red 2w | Recycle |",
+            "|---|---:|---|---|---|",
+        ]
+        rec_by = {r["date"]: r for r in (rec["sim"]["curve"] if rec else [])}
+        hr_by = {r["date"]: r for r in (hard["sim"]["curve"] if hard else [])}
+        rb_by = {r["date"]: r for r in (rob["sim"]["curve"] if rob else [])}
+        for d in sorted(set(rec_by) | set(hr_by) | set(rb_by)):
+            a, b, c = hr_by.get(d) or {}, rec_by.get(d) or {}, rb_by.get(d) or {}
+            sc = (c.get("score") if c.get("score") is not None
+                  else a.get("score") if a.get("score") is not None
+                  else b.get("score"))
             scs = "—" if sc is None else f"{float(sc):+.2f}"
             lines.append(
-                f"| {d} | {scs} | {a.get('route', '—')} "
+                f"| {d} | {scs} | {c.get('route', '—')} "
+                f"${c.get('equity', 0):,.0f} | {a.get('route', '—')} "
                 f"${a.get('equity', 0):,.0f} | {b.get('route', '—')} "
                 f"${b.get('equity', 0):,.0f} |")
+
+    if starts:
+        lines += [
+            "",
+            "## If you started any day",
+            "",
+            f"Fresh ${starts.get('capital', 100_000):,.0f} each session, "
+            f"policy `{starts.get('policy')}`, through {starts.get('end')}. "
+            f"Mean **{starts.get('mean_pct'):+.2f}%** across {starts.get('n')} "
+            f"starts ({starts.get('n_green')} finished above start). "
+            f"Starts with ≥5 sessions left: mean "
+            f"**{starts.get('mean_pct_ge5')}%** (n={starts.get('n_ge5')}, "
+            f"min {starts.get('min_pct_ge5')}). "
+            "Held stock ties up cash. Weekend dates have no tape.",
+            "",
+            "| Start | First route | Would-buy if you are full of cash | Return | Sessions | Made money |",
+            "|---|---|---|---:|---:|---|",
+        ]
+        for r in starts.get("rows") or []:
+            names = ", ".join(r.get("would_buy") or []) or "—"
+            lines.append(
+                f"| {r['start']} | {r.get('first_route') or '—'} | {names} | "
+                f"{r['return_pct']:+.2f}% | {r['n_sessions']} | "
+                f"{'YES' if r.get('made_money') else 'no'} |")
 
     lines += [
         "",
@@ -1521,6 +1853,23 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
             f"<td>{_html.escape(str(s.get('ticker') or ''))}</td>"
             f"<td>{_html.escape(str(s.get('side') or ''))}</td>"
             f"<td class='why'>{_html.escape(str(s.get('reason') or ''))}</td></tr>")
+    start_rows = []
+    for r in (starts or {}).get("rows") or []:
+        cls = ("good" if r["return_pct"] >= 5
+               else "bad" if r["return_pct"] < 0 else "")
+        mcls = "good" if r.get("made_money") else "bad"
+        names = _html.escape(", ".join(r.get("would_buy") or []) or "—")
+        start_rows.append(
+            f"<tr><th>{r['start']}</th><td>{r.get('first_route') or ''}</td>"
+            f"<td class='why'>{names}</td>"
+            f"<td class='{cls}'>{r['return_pct']:+.2f}%</td>"
+            f"<td>{r['n_sessions']}</td>"
+            f"<td class='{mcls}'>{'YES' if r.get('made_money') else 'no'}</td></tr>")
+    start_mean = (starts or {}).get("mean_pct", "—")
+    start_n = (starts or {}).get("n", 0)
+    start_mean5 = (starts or {}).get("mean_pct_ge5", "—")
+    start_min5 = (starts or {}).get("min_pct_ge5", "—")
+    start_hit = bool((starts or {}).get("hit_mean_5"))
     gate_rows = []
     for b in (st.get("fortnights") or []) + (st.get("blocks_2w") or []):
         kind = "fortnight" if "cal_start" in b else "block"
@@ -1572,7 +1921,7 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
 {_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
-carry last 2w list on gap days · hard-red S≤−3 = no new buys ·
+3d robust size book · 3-session recycle · hard-red S≤−3 = no new buys ·
 day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b> ·
 <a href="../strategy-board/" style="color:#93c5fd">all-strategy board</a></p>
 <!-- TODAY_BEGIN -->
@@ -1588,6 +1937,15 @@ day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b>
 <div class="sheet"><table>
 <thead><tr><th>Kind</th><th>Start</th><th>End</th><th>n</th><th>Return</th><th>Gate</th></tr></thead>
 <tbody>{''.join(gate_rows)}</tbody></table></div>
+<h2>If you started any day</h2>
+<p class="muted">Fresh $100k each session. Same flatten clock, new selector.
+Mean <b class="{'good' if start_hit else 'bad'}">{start_mean}%</b>
+across {start_n} starts.
+≥5 sessions left: mean {start_mean5}% (min {start_min5}).</p>
+<div class="sheet"><table>
+<thead><tr><th>Start</th><th>Route</th><th>Would-buy (full cash)</th>
+<th>Return</th><th>n</th><th>Made money</th></tr></thead>
+<tbody>{''.join(start_rows)}</tbody></table></div>
 <h2>Filled trades (fees on every ticket)</h2>
 <div class="sheet"><table>
 <thead><tr><th>Entry</th><th>Ticker</th><th>Sleeve</th><th>Shares</th>
@@ -1621,6 +1979,8 @@ def main(argv: list[str] | None = None) -> int:
                     help="dry-run live tickets against OpenD (see futubull_exec)")
     ap.add_argument("--submit-futubull", action="store_true",
                     help="place live tickets in Futubull paper (SIMULATE)")
+    ap.add_argument("--starts", action="store_true",
+                    help="fresh $100k start-date sweep (no full policy sweep)")
     args = ap.parse_args(argv)
 
     if args.send_futubull or args.submit_futubull:
@@ -1642,6 +2002,30 @@ def main(argv: list[str] | None = None) -> int:
     print(f"[sleeve-merge] books={len(books)} sessions "
           f"io_top={io_top:+.2f}% target={TARGET_2W_PCT:.0f}%/2w")
 
+    if args.starts:
+        name = args.policy or LIVE_POLICY
+        pol = policy_by_name(name) if args.policy else live_policy()
+        if args.policy:
+            pol = policy_by_name(args.policy)
+        starts = run_start_dates(payload, books, pol, args.capital)
+        print(f"[sleeve-merge] starts policy={starts['policy']} "
+              f"mean={starts['mean_pct']:+.2f}% "
+              f"ge5={starts['mean_pct_ge5']} "
+              f"min5={starts['min_pct_ge5']} "
+              f"green={starts['n_green']}/{starts['n']}")
+        for r in starts["rows"]:
+            print(f"  {r['start']}  {r['first_route']:6s}  "
+                  f"{r['return_pct']:+7.2f}%  n={r['n_sessions']}  "
+                  f"{', '.join(r['would_buy'][:6])}")
+        if args.write:
+            sim = run_flatten_switch(payload, books, pol, args.capital)
+            st = stats(sim, io_top)
+            write_outputs({"name": pol.get("name"), "sim": sim, "stats": st},
+                          [{"name": pol.get("name"), "sim": sim, "stats": st}],
+                          io_top, starts=starts)
+            print(f"[sleeve-merge] wrote {SCOREBOARD / 'SLEEVE_MERGE.md'}")
+        return 0 if starts.get("hit_mean_5") else 1
+
     sweep_rows = run_sweep(payload, books, args.capital)
     if args.policy:
         sweep_rows = [r for r in sweep_rows if r["name"] == args.policy] or sweep_rows
@@ -1657,8 +2041,13 @@ def main(argv: list[str] | None = None) -> int:
               f"fort={s['min_fortnight']} block={s['min_block_2w']} "
               f"{'PASS' if s['passed'] else 'no'}")
 
+    starts = None
     if args.write:
-        write_outputs(winner, sweep_rows, io_top)
+        starts = run_start_dates(payload, books, winner["sim"]["policy"],
+                                 args.capital)
+        print(f"[sleeve-merge] start-date mean={starts['mean_pct']:+.2f}% "
+              f"ge5={starts['mean_pct_ge5']}")
+        write_outputs(winner, sweep_rows, io_top, starts=starts)
         print(f"[sleeve-merge] wrote {SCOREBOARD / 'SLEEVE_MERGE.md'}")
     return 0 if st["passed"] else 1
 
