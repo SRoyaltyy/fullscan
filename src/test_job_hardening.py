@@ -693,6 +693,8 @@ def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
     assert "LLM_BACKEND: deepseek" in yml
     assert "HOME: /home/runner" in yml
     assert "ubuntu-latest" in yml
+    assert 'cron: "25 15 * * 1-5"' in yml
+    assert 'cron: "15 20 * * 1-5"' in yml
     on_push = yml.split("\n  push:\n", 1)[1].split("\n  workflow_dispatch:", 1)[0]
     assert "postclose_last_closed.yml" in on_push
     assert "src/run_postclose_all.py" not in on_push
