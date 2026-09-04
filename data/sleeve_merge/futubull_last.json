@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-04",
+  "env": "simulate",
+  "submit": false,
+  "connected": false,
+  "error": "futu-api not installed (pip install futu-api)",
+  "n_tickets": 0,
+  "sent": [],
+  "generated": "2026-09-04T14:14:05"
+}

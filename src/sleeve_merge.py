@@ -1617,7 +1617,17 @@ def main(argv: list[str] | None = None) -> int:
                     help="write today.json + dashboard TODAY panel")
     ap.add_argument("--date", default="",
                     help="card date YYYY-MM-DD (default = today ET)")
+    ap.add_argument("--send-futubull", action="store_true",
+                    help="dry-run live tickets against OpenD (see futubull_exec)")
+    ap.add_argument("--submit-futubull", action="store_true",
+                    help="place live tickets in Futubull paper (SIMULATE)")
     args = ap.parse_args(argv)
+
+    if args.send_futubull or args.submit_futubull:
+        from src.futubull_exec import run as futu_run
+        return futu_run(args.date or None, env="simulate",
+                        submit=bool(args.submit_futubull), live=False,
+                        write=True)
 
     if args.card or args.write_card:
         from src.sleeve_merge_live import run_card
