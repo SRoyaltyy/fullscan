@@ -12,14 +12,14 @@
 
   - XLF financial services stock performance in Q3 - Facebook (https://www.facebook.com/groups/3952011541713506/posts/4585150391732948/)
 
-  - Rotation into value trades! Broader markets staging a late day ... (https://www.facebook.com/FastMoney/videos/rotation-into-value-trades-broader-markets-staging-a-late-day-reversal-to-end-th/896805563441834/)
+  - Stock Market Forecast For The Next Six Months Of 2026 (https://www.investors.com/news/stock-market-forecast-next-six-months-2026-ai-stocks/)
 
-**Step 2 — Research.** The model wanted to know: *"ISM services PMI September 3 2026 actual result"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"ISM services PMI September 3 2026 actual result"* → got 6 results (via ddg)
 
-  - Services PMI® at 55.4%; August 2026 ISM® Services PMI® Report - PR Newswire (https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG9rdVlZcEx5d0dXaXAxLW9iNkhPTGNkeHlfakZSdzdOR0lxelg3NGhPT256WGVmcTVyTUlYSExzRFBndnM2S0RRY05zb3ZjY1FQN1RIeUVRRmhGNlROX0pjYXJZTjlrWno3NEh0WVJFbzlRY2ZDYUNUcEFQZHJPMzBOM3RHMlZXRFRWclQ4WkpRbUJFR3pzSjdybnZ5cEUzNEJrTkRHMmJoakluclBsNUF3?oc=5)
+  - United States ISM Services PMI (https://tradingeconomics.com/united-states/non-manufacturing-pmi)
 
-  - ISM Services PMI Points to Greater Inflation Pressure - pro.thestreet.com (https://news.google.com/rss/articles/CBMikwFBVV95cUxOSWYwM05RZUJDamRmX3lJY2xjblI4RThBOGJXRHUyUkRzOGtKSVE0UlV6WnpHUUFHSThhWXdmdVctRDJRYWtUSE9xLWFEVWdBNUhnVWljQm9HZ1RMLUlPN01zOVJDc184MzZXMGVuRTNTUVFsWTNEMF82MjZZTjdManRxTDEtb1NFVHVZNkZCUGZMd0U?oc=5)
+  - United States ISM Non-Manufacturing PMI (https://www.investing.com/economic-calendar/ism-non-manufacturing-pmi-176)
 
-  - US labor market remains stable; services input price rises point to elevated inflation - Reuters (https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdVlveWxoLTJTR0EyQmo2Sm9PLS0tR1hFUlc3bFdPenBsQmhNZG41S250UlNkaGF5cXNIbV9NS2xXckRSTGJFRjg1eTFqOUdyRTVyQUR0SUFKM2RLT0F4QmZDaWVlRVY4UnZzU0hORWNKVkhhdXN1T19uTXFXRlRWb19ETlZiWVdWRHhpOGtXWHlQZ0FmcVg1WEZPYnNfbThpOEsyMnhQLWVzZzk1OVdzeXBmeXJ0NEtGY053ZGFRZllyZw?oc=5)
+  - June 2026 ISM® Services PMI® Report (https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/services/july/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

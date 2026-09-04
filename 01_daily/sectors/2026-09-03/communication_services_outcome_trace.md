@@ -14,12 +14,12 @@
 
   - State Street Communication Services Select Sector SPDR ETF (https://etfdb.com/etf/XLC/)
 
-**Step 2 — Research.** The model wanted to know: *"Meta Alphabet Google stock September 3 2026 market close"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Meta Alphabet Google stock September 3 2026 close"* → got 6 results (via ddg)
 
-  - Alphabet Inc. (GOOGL) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/GOOGL/)
+  - GOOGL Stock Price Today (September 2026) — Alphabet Inc ... (https://tickzen.app/stocks/googl/overview)
 
-  - Alphabet Inc. (GOOG) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/GOOG/)
+  - Alphabet Inc. (GOOGL) Stock Historical Prices & Data - Yahoo ... (https://finance.yahoo.com/quote/GOOGL/history/?fr=sycsrp_catchall)
 
-  - Alphabet Inc. (GOOGL) Stock Historical Prices & Data - Yahoo Finance (https://finance.yahoo.com/quote/GOOGL/history/)
+  - Alphabet Inc. (GOOGL) Stock Price History 2004–2026 | Returns ... (https://vcpscanner.com/stock/googl/price-history)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

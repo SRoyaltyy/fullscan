@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLI industrials ETF September 3 2026 sector performance drivers"* → got 6 results (via ddg)
 
-  - State Street Industrial Select Sector SPDR ETF XLI ETF AI ... (https://danelfin.com/etf/XLI)
+  - State Street Industrial Select Sector SPDR ETF - XLI (https://www.stoxline.com/quote.php?symbol=xli)
 
-  - Industrial Select Sector SPDR ETF (XLI) - WallStreetCourier (https://www.wallstreetcourier.com/spotlights/mrnl_industrial-select-sector-spdr-etf-xli-major-trend-reversal-or-healthy-pause/)
+  - XLI: State Street® Industrial Select Sector SPDR® ETF - SSGAState Street Industrial Select Sector SPDR ETF (XLI) | TrefisIndustrials Select (XLI) ETF Forecast & Price Target (2026)State Street Industrial Select Sector SPDR ETF (XLI)XLI: Industrial Select Sector SPDR Fund - Fund Chart - Zacks.comState Street Industrial Select Sector SPDR ETF (XLI) (https://www.ssga.com/us/en/intermediary/etfs/state-street-industrial-select-sector-spdr-etf-xli)
 
-  - Industrial Select Sector SPDR Fund (XLI) Top 25 Holdings (https://www.tikr.com/blog/industrial-select-sector-spdr-fund-xli-top-25-holdings)
+  - State Street Industrial Select Sector SPDR ETF (XLI) | Trefis (https://www.trefis.com/data/etfs/XLI)
 
-**Step 2 — Research.** The model wanted to know: *"ISM services PMI September 3 2026 release result"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"ISM services PMI September 3 2026 release result"* → got 6 results (via ddg)
 
-  - Services PMI® at 55.4%; August 2026 ISM® Services PMI® Report - PR Newswire (https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG9rdVlZcEx5d0dXaXAxLW9iNkhPTGNkeHlfakZSdzdOR0lxelg3NGhPT256WGVmcTVyTUlYSExzRFBndnM2S0RRY05zb3ZjY1FQN1RIeUVRRmhGNlROX0pjYXJZTjlrWno3NEh0WVJFbzlRY2ZDYUNUcEFQZHJPMzBOM3RHMlZXRFRWclQ4WkpRbUJFR3pzSjdybnZ5cEUzNEJrTkRHMmJoakluclBsNUF3?oc=5)
+  - Services PMI® at 55.4%; August 2026 ISM® Services PMI® Report (https://www.prnewswire.com/news-releases/services-pmi-at-55-4-august-2026-ism-services-pmi-report-302868046.html)
 
-  - ISM® PMI® Reports Roundup: August Services - Institute for Supply Management (ISM) (https://news.google.com/rss/articles/CBMihgJBVV95cUxOZlJkVmI2MTNBUjVDNDFoTUE1enNlRG5hUHREejRBc0VBMjJyZmpUX19qNXlGc2hLWlFwWkd2RkgtTDJKRlFwcl9seHpMU0xWQ0JIemdzeFVHeE95aUtDSEtER1Q5Y2JScGtoeVZIZkFTTWIyOEd3aGhBckJVaGFEZV81dWdkSlRZcDhJRV9YNS1vNEJ2OXpZd3YtU2RDWUN1bWZoRzVtMjBtWXF0TWk0ZHdXRW5lOWMyLWpXZXNubmJqbEFvbUNyaktfckVYNV95OUlqZ2QtbmMxckhRc3JqTnJGZ2RsYlN6Qm9NUkQ4eHR2enlaUG9yVGtHY3dtNFVRb0t2WDR3?oc=5)
+  - ISM Services PMI August 2026 Hits 55.4 - Lines.com (https://www.lines.com/prediction-markets/economy/ism-services-pmi-august-2026)
 
-  - US labor market remains stable; services input price rises point to elevated inflation - Reuters (https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdVlveWxoLTJTR0EyQmo2Sm9PLS0tR1hFUlc3bFdPenBsQmhNZG41S250UlNkaGF5cXNIbV9NS2xXckRSTGJFRjg1eTFqOUdyRTVyQUR0SUFKM2RLT0F4QmZDaWVlRVY4UnZzU0hORWNKVkhhdXN1T19uTXFXRlRWb19ETlZiWVdWRHhpOGtXWHlQZ0FmcVg1WEZPYnNfbThpOEsyMnhQLWVzZzk1OVdzeXBmeXJ0NEtGY053ZGFRZllyZw?oc=5)
+  - PNC Economics Research - ISM Services - 3 September 2026 (https://www.pnc.com/content/dam/pnc-com/pdf/aboutpnc/EconomicReports/EconomicUpdates/2026/PNC_Economics_ISM_Services_3_September_2026.pdf)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

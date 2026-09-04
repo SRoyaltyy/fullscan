@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLV healthcare ETF September 3 2026 performance drivers"* → got 4 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLV healthcare ETF September 3 2026 performance drivers"* → got 6 results (via ddg)
 
-  - XLV – Portfolio – State Street®HlthCrSelSectSPDR®ETF (https://www.morningstar.com/etfs/arcx/xlv/portfolio)
+  - Health Care SPDR (XLV) ETF Forecast & Price Target (2026) (https://clearank.com/etf/health-care-select-spdr-xlv/)
 
-  - State Street Health Care Select Sector SPDR ETF (XLV) (https://finance.yahoo.com/quote/XLV/)
+  - XLV: State Street® Health Care Select Sector SPDR® ETF - SSGA (https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv)
 
-  - XLV ETF Stock Price & Overview (https://stockanalysis.com/etf/xlv/)
+  - XLV - Performance - State Street®HlthCrSelSectSPDR®ETF | Morningstar (https://www.morningstar.com/etfs/arcx/xlv/performance)
 
-**Step 2 — Research.** The model wanted to know: *"healthcare stocks lag September 3 2026 SPY rally"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"healthcare stocks September 3 2026 selloff laggards"* → got 6 results (via ddg)
 
-  - Healthcare Rotation Underway: 3 Stocks Leading the Charge (https://finance.yahoo.com/news/healthcare-rotation-underway-3-stocks-132400381.html)
+  - Wall Street warms to healthcare stocks as tech trade faces ... (https://www.reuters.com/business/finance/wall-street-warms-healthcare-stocks-tech-trade-faces-turbulence-2026-08-05/)
 
-  - Healthcare ETFs Are Looking Up: Here's Why - Eastern Progress (https://www.easternprogress.com/healthcare-etfs-are-looking-up-heres-why/article_8b219d1e-63e4-5c2c-b684-81e9dfcde3f0.html)
+  - Stock market news for Aug. 21, 2026 - CNBC (https://www.cnbc.com/2026/08/20/stock-market-today-live-updates.html)
 
-  - Stock market news for Aug. 3, 2026 - CNBC (https://www.cnbc.com/2026/08/02/stock-market-today-live-updates.html)
+  - Stock Market News From Sept. 1, 2026: Dow, S&P 500, Nasdaq ... (https://www.barrons.com/livecoverage/stock-market-news-today-090126)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

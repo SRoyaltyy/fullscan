@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLY consumer discretionary September 3 2026 sector performance drivers"* → got 6 results (via ddg)
 
-  - State Street Consumer Discretionary Select Sector SPDR ETF (XLY) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLY/)
+  - Rick Ducat takes a closer look at the consumer discretionary ... (https://www.facebook.com/schwabnetwork/posts/rick-ducat-takes-a-closer-look-at-the-consumer-discretionary-sector-analyzing-th/1646555137471842/)
 
-  - XLY: State Street® Consumer Discretionary Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly)
+  - Invest where you see opportunity with State Street Sector ETFs (https://www.ssga.com/us/en/intermediary/capabilities/equities/sector-investing/select-sector-etfs)
 
-  - XLY Stock Price | Consumer Discretionary Select Sector SPDR ETF - Investing.com (https://www.investing.com/etfs/spdr-consumer-discr.-select-sector)
+  - State Street Consumer Discretionary Select Sector SPDR ETF (https://www.tradingview.com/symbols/AMEX-XLY/ideas/)
 
 **Step 2 — Research.** The model wanted to know: *"stock market September 3 2026 consumer discretionary rally Amazon Tesla"* → got 6 results (via ddg)
 
-  - Stocks Up Early as Yields Retreat, Helped by Yen | Charles Schwab (https://www.schwab.com/learn/story/stock-market-update-open)
+  - Why Tesla and SpaceX Stocks Are Rising | TSLA, SPCX - INDmoney (https://www.indmoney.com/blog/us-stocks/why-tesla-spacex-stocks-rising-elon-musk-rally)
 
-  - Stock Market News for Sep 3, 2026 (https://finance.yahoo.com/markets/stocks/articles/stock-market-news-sep-3-095800036.html)
+  - Stock Market News for Sep 3, 2026 - September 3, 2026 - Zacks.com (https://www.zacks.com/stock/news/2984142/stock-market-news-for-sep-3-2026)
 
-  - 9 Consumer Discretionary Stocks Whale Activity In Today’s Session - Tesla (NASDAQ:TSLA), Alibaba Gr Hldgs - Benzinga (https://www.benzinga.com/markets/options/26/08/61530063/9-consumer-discretionary-stocks-whale-activity-today-s-session)
+  - Stock Market News, Sept. 3, 2026: Stocks Climb After Fed Official Says ... (https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-03-2026)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

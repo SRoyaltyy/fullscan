@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLK technology stocks September 3 2026 rally drivers semiconductor"* → got 6 results (via ddg)
 
-  - This past year, the Semiconductor ETF (SMH) has ... - Facebook (https://www.facebook.com/schwabnetwork/posts/this-past-year-the-semiconductor-etf-smh-has-outpaced-both-the-technology-select/1638150684978954/)
-
   - Semiconductor ETFs See Fresh Wave of New Inflows (https://www.etfaction.com/semiconductor-etfs-see-fresh-wave-of-new-inflows/)
+
+  - This past year, the Semiconductor ETF (SMH) has ... - Facebook (https://www.facebook.com/schwabnetwork/posts/this-past-year-the-semiconductor-etf-smh-has-outpaced-both-the-technology-select/1638150684978954/)
 
   - After A Chaotic Q1, I'm Buying XLK And XLC As The Market ... (https://seekingalpha.com/article/4889886-after-chaotic-q1-buying-xlk-and-xlc-as-market-exhales)
 
-**Step 2 — Research.** The model wanted to know: *"Broadcom AVGO stock September 3 2026 close reversal"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Broadcom AVGO stock September 3 2026 close reaction"* → got 6 results (via ddg)
 
-  - Broadcom (AVGO) Is Down More Than 20%—Why TD Cowen ... (https://finance.yahoo.com/markets/stocks/articles/broadcom-avgo-down-more-20-214954022.html)
+  - AVGO Earnings September 2026: Report, Implied Move & Reaction (https://earnings-watcher.com/wiki/avgo-earnings-september-2026)
 
-  - Broadcom Falls as Investors Appear to Take Profits Ahead of ... (https://www.quiverquant.com/news/Broadcom+Falls+as+Investors+Appear+to+Take+Profits+Ahead+of+Earnings)
+  - Broadcom (AVGO) Q3 earnings report 2026 - CNBC (https://www.cnbc.com/2026/09/02/broadcom-avgo-q3-earnings-report-2026.html)
 
-  - Broadcom: AVGO Stock Price Quote & News - Robinhood (https://robinhood.com/us/en/stocks/AVGO/)
+  - AVGO Q3 2026 Earnings Report on 9/2/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-9-2-broadcom-inc-stock/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

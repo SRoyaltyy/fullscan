@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLRE real estate ETF September 3 2026 what drove rally"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLRE real estate ETF September 3 2026 performance drivers"* → got 6 results (via ddg)
 
-  - State Street Real Return ETF (RLY) Touches New 52-Week High (https://finance.yahoo.com/markets/stocks/articles/state-street-real-return-etf-122200145.html)
+  - XLRE: State Street® Real Estate Select Sector SPDR® ETF - SSGAState Street Real Estate Select Sector SPDR ETF (XLRE) | TrefisThe Real Estate Select Sector Spdr Fund ETF ForecastXLRE ETF Stock Price & OverviewReal Estate Select Sector SPDR Fund (XLRE) Forecast (2026)State Street Real Estate Select Sector SPDR ETF (XLRE)XLRE – Performance – State Street Real Estate Sel SectSPDRETF ... (https://www.ssga.com/us/en/intermediary/etfs/state-street-real-estate-select-sector-spdr-etf-xlre)
 
-  - State Street Real Estate Select Sector SPDR ETF Stock Price (https://www.perplexity.ai/finance/XLRE)
+  - State Street Real Estate Select Sector SPDR ETF (XLRE) | Trefis (https://www.trefis.com/data/etfs/XLRE)
 
-  - Small Caps and Materials Lead Broad Equity Rally - ETF Action (https://www.etfaction.com/small-caps-and-materials-lead-broad-equity-rally/)
+  - The Real Estate Select Sector Spdr Fund ETF ForecastXLRE ETF Stock Price & OverviewReal Estate Select Sector SPDR Fund (XLRE) Forecast (2026)State Street Real Estate Select Sector SPDR ETF (XLRE)XLRE – Performance – State Street Real Estate Sel SectSPDRETF ... (https://stockinvest.us/stock/XLRE)
 
-**Step 2 — Research.** The model wanted to know: *"Treasury yields September 3 2026 10 year 30 year drop"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Treasury yields September 3 2026 10 year 30 year REIT rally"* → got 6 results (via ddg)
 
-  - US 10 Year Treasury Note Yield - Quote - Chart - Historical Data (https://tradingeconomics.com/united-states/government-bond-yield)
+  - 10-Year Treasury Yield Today (Sep 3, 2026) | Yield Curves Today (https://yieldcurvestoday.com/10-year-treasury-yield/)
 
-  - The 10-year Treasury Yield Eclipsed 4.6%-2026-07-21 (https://www.crfb.org/blogs/10-year-treasury-yield-eclipsed-46)
+  - U.S. Treasury Yield Curve Today (Sep 3, 2026) | Yield Curves ... (https://yieldcurvestoday.com/)
 
-  - Interest Rate Statistics | U.S. Department of the Treasury (https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics)
+  - Market Yield on U.S. Treasury Securities at 10-Year Constant ... (https://fred.stlouisfed.org/graph/?id=DGS10)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

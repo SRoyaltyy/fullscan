@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLP consumer staples September 3 2026 stock market selloff defensives lag"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLP consumer staples September 3 2026 sector performance"* → got 6 results (via ddg)
 
-  - State Street Consumer Staples Select Sector SPDR ETF (https://www.perplexity.ai/finance/XLP/earnings)
+  - State Street Consumer Staples Select Sector SPDR ETF (XLP) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLP/)
 
-  - XLP vs the NASDAQ is one of those charts that quietly tells you ... (https://www.facebook.com/asxtrader1/posts/xlp-vs-the-nasdaq-is-one-of-those-charts-that-quietly-tells-you-what-kind-of-mar/1346646150602978/)
+  - State Street Consumer Sta…: XLP Stock Price Quote & News | Robinhood (https://robinhood.com/us/en/stocks/XLP/)
 
-  - Stock Market News for Jun 29, 2026 - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/stock-market-news-jun-29-132800807.html)
+  - Consumer Staples Select Sector SPDR Fund - XLP Stock Price, Holdings, Quote & News (https://www.etf.com/XLP)
 
-**Step 2 — Research.** The model wanted to know: *"ISM Services PMI September 3 2026 result market reaction"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"ISM Services PMI September 3 2026 result market reaction"* → got 6 results (via ddg)
 
-  - Services PMI® at 55.4%; August 2026 ISM® Services PMI® Report - PR Newswire (https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG9rdVlZcEx5d0dXaXAxLW9iNkhPTGNkeHlfakZSdzdOR0lxelg3NGhPT256WGVmcTVyTUlYSExzRFBndnM2S0RRY05zb3ZjY1FQN1RIeUVRRmhGNlROX0pjYXJZTjlrWno3NEh0WVJFbzlRY2ZDYUNUcEFQZHJPMzBOM3RHMlZXRFRWclQ4WkpRbUJFR3pzSjdybnZ5cEUzNEJrTkRHMmJoakluclBsNUF3?oc=5)
+  - United States ISM Services PMI (https://tradingeconomics.com/united-states/non-manufacturing-pmi)
 
-  - ISM® PMI® Reports Roundup: August Services - Institute for Supply Management (ISM) (https://news.google.com/rss/articles/CBMihgJBVV95cUxOZlJkVmI2MTNBUjVDNDFoTUE1enNlRG5hUHREejRBc0VBMjJyZmpUX19qNXlGc2hLWlFwWkd2RkgtTDJKRlFwcl9seHpMU0xWQ0JIemdzeFVHeE95aUtDSEtER1Q5Y2JScGtoeVZIZkFTTWIyOEd3aGhBckJVaGFEZV81dWdkSlRZcDhJRV9YNS1vNEJ2OXpZd3YtU2RDWUN1bWZoRzVtMjBtWXF0TWk0ZHdXRW5lOWMyLWpXZXNubmJqbEFvbUNyaktfckVYNV95OUlqZ2QtbmMxckhRc3JqTnJGZ2RsYlN6Qm9NUkQ4eHR2enlaUG9yVGtHY3dtNFVRb0t2WDR3?oc=5)
+  - United States ISM Non-Manufacturing PMI (https://www.investing.com/economic-calendar/ism-non-manufacturing-pmi-176)
 
-  - ISM Services PMI Points to Greater Inflation Pressure - pro.thestreet.com (https://news.google.com/rss/articles/CBMikwFBVV95cUxOSWYwM05RZUJDamRmX3lJY2xjblI4RThBOGJXRHUyUkRzOGtKSVE0UlV6WnpHUUFHSThhWXdmdVctRDJRYWtUSE9xLWFEVWdBNUhnVWljQm9HZ1RMLUlPN01zOVJDc184MzZXMGVuRTNTUVFsWTNEMF82MjZZTjdManRxTDEtb1NFVHVZNkZCUGZMd0U?oc=5)
+  - United States ISM Manufacturing PMI (https://www.investing.com/economic-calendar/ism-manufacturing-pmi-173)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
