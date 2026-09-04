@@ -147,6 +147,18 @@ jobs:
             echo "Overlayed dashboard/day-board from main"
           fi
 
+          # The paper book is also copied to the site root. Mirror every
+          # sub-dash there so homepage links like sleeve-merge/ resolve.
+          for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
+                     mover-lookback sleeve-combine sleeve-merge mover-paper book-paper \
+                     strategy-board factor-mine day-board down-day-mine; do
+            if [ -d "pages_out/dashboard/${sub}" ]; then
+              mkdir -p "pages_out/${sub}"
+              cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
+              echo "Root copy pages_out/${sub}"
+            fi
+          done
+
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
             exit 1
@@ -171,6 +183,7 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-lookback/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "https://SRoyaltyy.github.io/fullscan/sleeve-merge/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/"

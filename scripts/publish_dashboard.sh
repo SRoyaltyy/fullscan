@@ -52,6 +52,13 @@ for sub in $SUBS; do
     mkdir -p "$TMP/dashboard/${sub}"
     cp -a "dashboard/${sub}/." "$TMP/dashboard/${sub}/"
   fi
+  # Root copy: the paper book is also published at /fullscan/ so
+  # href="sleeve-merge/" from the homepage must not 404.
+  # deploy-dashboard.yml also mirrors into pages_out/${sub}.
+  if [ -d "$TMP/dashboard/${sub}" ]; then
+    mkdir -p "$TMP/${sub}"
+    cp -a "$TMP/dashboard/${sub}/." "$TMP/${sub}/"
+  fi
 done
 git -C "$TMP" init -q
 git -C "$TMP" checkout -q -b gh-pages

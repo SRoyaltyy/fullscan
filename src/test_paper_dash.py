@@ -28,7 +28,14 @@ def test_template_still_has_data_slot() -> None:
     assert "__DATA__" in html
 
 
+def test_combine_link_is_absolute_pages_path() -> None:
+    html = SHELL.read_text(encoding="utf-8")
+    assert 'href="/fullscan/dashboard/sleeve-merge/"' in html
+    assert 'class="merge-hero"' in html
+
+
 if __name__ == "__main__":
     test_overview_sits_above_day_blotter()
     test_template_still_has_data_slot()
+    test_combine_link_is_absolute_pages_path()
     print("ok")
