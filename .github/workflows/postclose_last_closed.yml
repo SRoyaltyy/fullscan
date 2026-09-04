@@ -4,9 +4,13 @@ name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
 # that workflow's ubuntu group must not block yesterday's grade, and merging
 # THIS file must not cancel that pending heal (it is not listed in
 # the postclose_all.yml on-push path filter).
-# CLOCK: merge/push of this workflow + mid-session cron.
+# CLOCK: merge/push of this workflow + mid-session cron + 16:15 ET cron.
 # Always last_closed_session() — never the two-date night pack — so a
 # mid-day fire grades 09-03 and does not spend hours on 09-02.
+# Evening GH crons are not a live 09-04 clock: postclose_all 16:10 has
+# never scheduled; orch 17:15 (`15 21`) has produced no 21:15 UTC run
+# since it was re-added Sep 2. A merge of THIS file after 16:00 ET is
+# the reliable Friday last-closed start (09-04 → Monday 09-07 baseline).
 # A DeepSeek tool-dump follow-up must recover searches / force a close
 # (src/deepseek_client.py) or this job rewrites 11 dumps and skip-if-good
 # stays red. Sidecar 33890318918 (#102) recovered searches then every
@@ -16,6 +20,7 @@ name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
 on:
   schedule:
     - cron: "25 15 * * 1-5"   # ~11:25 ET — last-closed heal while session is live
+    - cron: "15 20 * * 1-5"   # ~16:15 ET — last_closed flips at the bell (Fri→Mon baseline)
   push:
     branches: [main]
     paths:
