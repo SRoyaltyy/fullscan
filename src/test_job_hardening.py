@@ -96,6 +96,7 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
     for name in (
         "preopen_all.yml",
         "postclose_all.yml",
+        "postclose_last_closed.yml",
         "map_heat_postclose.yml",
         "daily_pipeline.yml",
         "learn_cycle.yml",
@@ -111,6 +112,7 @@ def test_safe_git_push_used_by_failing_commit_jobs() -> None:
     for name in (
         "preopen_all.yml",
         "postclose_all.yml",
+        "postclose_last_closed.yml",
         "stock_book_all.yml",
         "learn_cycle.yml",
         "label_weather.yml",
@@ -193,6 +195,7 @@ def test_ecs_jobs_skip_live_finviz() -> None:
     for name in (
         "preopen_all.yml",
         "postclose_all.yml",
+        "postclose_last_closed.yml",
         "map_heat_postclose.yml",
         "stock_book_all.yml",
         "catalyst_daily.yml",
@@ -665,6 +668,23 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "push heal — last_closed=" in post_yml
     assert "src/skip_if_good.py" not in post_yml
     assert "01_daily/" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
+    assert "postclose_last_closed.yml" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
+
+
+def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
+    """A hung postclose-all-ubuntu push must not block yesterday's grade."""
+    yml = (WF / "postclose_last_closed.yml").read_text(encoding="utf-8")
+    assert "group: postclose-last-closed-ubuntu" in yml
+    assert "group: postclose-all-ubuntu" not in yml
+    assert "last_closed_session" in yml
+    run_block = yml.split("Post-Close last-closed")[1]
+    assert "night_pack_dates" not in run_block
+    assert "LLM_BACKEND: deepseek" in yml
+    assert "HOME: /home/runner" in yml
+    assert "ubuntu-latest" in yml
+    on_push = yml.split("\n  push:\n", 1)[1].split("\n  workflow_dispatch:", 1)[0]
+    assert "postclose_last_closed.yml" in on_push
+    assert "src/run_postclose_all.py" not in on_push
 
 
 def test_postclose_pushes_after_each_llm_layer() -> None:
@@ -730,6 +750,7 @@ def main() -> None:
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
+        test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
     ]
     failed = 0
