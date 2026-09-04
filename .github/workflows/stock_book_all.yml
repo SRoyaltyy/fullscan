@@ -40,6 +40,10 @@ on:
         description: "true = skip general + sector LLM (faster)"
         required: false
         default: "false"
+      skip_extras:
+        description: "true = stop after book + green.json (no paper/sleeve/catalyst)"
+        required: false
+        default: "false"
       force_sectors:
         description: "true = always run all 11 sector predicts"
         required: false
@@ -99,16 +103,25 @@ jobs:
           TOP="${{ github.event.inputs.top }}"
           FORCE="${{ github.event.inputs.force }}"
           SKIP="${{ github.event.inputs.skip_llm }}"
+          SKIP_EXTRAS="${{ github.event.inputs.skip_extras }}"
           FSEC="${{ github.event.inputs.force_sectors }}"
           TOP="${TOP:-25}"
           FORCE="${FORCE:-false}"
           SKIP="${SKIP:-false}"
+          SKIP_EXTRAS="${SKIP_EXTRAS:-false}"
           FSEC="${FSEC:-false}"
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then
+            SKIP=true
+            SKIP_EXTRAS=true
+            echo "past 09:25 ET — skip LLM + extras so the book can still land"
+          fi
 
           ARGS=(--top "$TOP")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           [ "$SKIP" = "true" ] && ARGS+=(--skip-llm)
+          [ "$SKIP_EXTRAS" = "true" ] && ARGS+=(--skip-extras)
           [ "$FSEC" = "true" ] && ARGS+=(--force-sectors)
 
           echo "CMD: python -m src.run_stock_book_all ${ARGS[*]}"

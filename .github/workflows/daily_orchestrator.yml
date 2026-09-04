@@ -2,9 +2,9 @@ name: Daily Orchestrator (missed-job guard)
 
 # Does NOT own the two ALL clocks (ECS 05:55 pre-open / 16:10+22:00 post-close).
 # Only re-dispatches when skip-if-good says the pack is incomplete AND
-# nothing is already running. Morning: scrape + Pre-Open ALL. After 09:25
-# ET: Stock Book ALL heals weather/join/AB/green/book (no new LLM packet).
-# Evening: Post-Close ALL.
+# nothing is already running. Morning: scrape + Pre-Open ALL. After 09:00
+# ET: Stock Book ALL on ubuntu-latest heals weather/join/AB/green/book
+# (no Grok, does not wait for a hung ECS pre-open). Evening: Post-Close ALL.
 
 on:
   schedule:
@@ -75,6 +75,17 @@ jobs:
               -f ref=main || true
           }
 
+          dispatch_book_ubuntu() {
+            echo "MISSING book for $TODAY → stock_book_all.yml ubuntu skip-llm"
+            gh api --method POST "repos/${REPO}/actions/workflows/stock_book_all.yml/dispatches" \
+              -f ref=main \
+              -f "inputs[runner]=ubuntu" \
+              -f "inputs[skip_llm]=true" \
+              -f "inputs[skip_extras]=true" \
+              -f "inputs[run_date]=$TODAY" \
+              || true
+          }
+
           already_running() {
             local WF="$1"
             local RAW HAS_ACTIVE=""
@@ -102,21 +113,24 @@ jobs:
               return 0
             fi
             if [ "$WF" = "stock_book_all.yml" ] && already_running "preopen_all.yml"; then
-              echo "OK — Pre-Open ALL already owns the box"
-              return 0
+              echo "Pre-Open ALL still on ECS — book heal stays on ubuntu"
             fi
             if [ "$FORCE" != "true" ] && artifact_ok "$WF"; then
               echo "OK — skip-if-good: pack already on disk"
               return 0
             fi
+            if [ "$WF" = "stock_book_all.yml" ]; then
+              dispatch_book_ubuntu
+              return 0
+            fi
             dispatch_wf "$WF"
           }
 
-          if [ "$FORCE" = "true" ] || [ "$ET_HM" -lt 925 ]; then
+          if [ "$FORCE" = "true" ] || [ "$ET_HM" -lt 900 ]; then
             maybe finviz_preopen_scrape.yml
             maybe preopen_all.yml
           elif [ "$ET_HM" -lt 1600 ]; then
-            echo "past 09:25 ET — heal ranker via Stock Book ALL (no new LLM packet)"
+            echo "past 09:00 ET — heal ranker on ubuntu (ECS may still be in Grok)"
             maybe stock_book_all.yml
           else
             echo "skip morning ALL — session already open"

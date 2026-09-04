@@ -258,6 +258,12 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "still land weather/join/AB/book" in ecs
     assert "src.skip_if_good" in orch
     assert "stock_book_all.yml" in orch
+    assert "inputs[runner]=ubuntu" in orch
+    assert "inputs[skip_llm]=true" in orch
+    assert "inputs[skip_extras]=true" in orch
+    assert "past 09:00 ET — heal ranker on ubuntu" in orch
+    assert 'already_running "preopen_all.yml"' in orch
+    assert "book heal stays on ubuntu" in orch
 
 
 def test_ranker_inputs_before_llm_packet() -> None:
@@ -282,6 +288,16 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "No retry" in pre
     assert "_exists_gt" in pre
     assert "skip_extras" in book
+    pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
+    assert "--skip-llm --skip-extras" in pre_yml
+    book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    assert "skip_extras:" in book_yml
+    assert "past 09:25 ET — skip LLM + extras" in book_yml
+    health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
+    hold = health.split('wf == "stock_book_all.yml" and (')[1].split("):")[0]
+    assert "preopen_all.yml" not in hold
+    assert '_already_running("preopen_all.yml")' not in hold
     post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
     assert "last_closed_session" in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")

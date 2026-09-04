@@ -114,6 +114,8 @@ FIX_MAP = [
 ]
 
 # ubuntu-latest — safe to GH-dispatch while this health job holds the ECS runner.
+# stock_book_all heals as skip-llm / skip-extras on ubuntu so a hung Grok
+# pre-open cannot queue the ranker behind itself.
 UBUNTU_WORKFLOWS = {
     "finviz_preopen_scrape.yml",
     "label_weather.yml",
@@ -122,6 +124,7 @@ UBUNTU_WORKFLOWS = {
     "hit_board.yml",
     "news_grade.yml",
     "ab_enrich.yml",
+    "stock_book_all.yml",
 }
 
 # ECS Grok jobs — never GH-dispatch from health; never start if OAuth is dead.
@@ -129,7 +132,6 @@ GROK_WORKFLOWS = {
     "preopen_all.yml",
     "postclose_all.yml",
     "map_heat_postclose.yml",
-    "stock_book_all.yml",
     "daily_pipeline.yml",
     "sector_daily.yml",
     "learn_cycle.yml",
@@ -1366,7 +1368,9 @@ def _dispatch_payload(wf: str, date: str, source: str, target: str, book: str) -
         return {"ref": "main", "inputs": {
             "source_date": source, "target_date": target, "force": "true"}}
     if wf == "stock_book_all.yml":
-        return {"ref": "main", "inputs": {"run_date": book or date, "force": "true"}}
+        return {"ref": "main", "inputs": {
+            "run_date": book or date, "force": "true",
+            "runner": "ubuntu", "skip_llm": "true", "skip_extras": "true"}}
     if wf == "daily_pipeline.yml":
         return {"ref": "main", "inputs": {
             "stage": "outcome", "run_date": book or date, "force": "true"}}
@@ -1481,7 +1485,8 @@ def _spawn_cmd(wf: str, date: str, source: str, target: str, book: str
         return ["bash", str(script)], {
             "SOURCE_DATE": source, "TARGET_DATE": target, "FORCE": "true"}
     if wf == "stock_book_all.yml":
-        return [py, "-m", "src.run_stock_book_all", "--date", book, "--force"], {}
+        return [py, "-m", "src.run_stock_book_all", "--date", book,
+                "--force", "--skip-llm", "--skip-extras"], {}
     if wf == "daily_pipeline.yml":
         return [py, "-m", "src.run_outcome", "--date", book], {}
     if wf == "sector_daily.yml":
@@ -1660,11 +1665,9 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
             print("[heal] scrape/baseline still in flight — hold preopen", flush=True)
             continue
         if wf == "stock_book_all.yml" and (
-                "preopen_all.yml" in started
-                or "label_weather.yml" in started
-                or "ab_checklist.yml" in started
-                or _already_running("preopen_all.yml")):
-            print("[heal] prereqs still in flight — hold book", flush=True)
+                "label_weather.yml" in started
+                or "ab_checklist.yml" in started):
+            print("[heal] weather/AB still in flight — hold book", flush=True)
             continue
         if wf in ("daily_pipeline.yml", "sector_daily.yml", "postclose_all.yml") and (
                 "stock_book_all.yml" in started or _already_running("stock_book_all.yml")):

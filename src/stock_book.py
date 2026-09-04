@@ -983,7 +983,14 @@ def build(date: str | None = None, top_n: int = 25,
 
     join = green_pile.attach_ranks(join)
     join["green"] = green_pile.green_mask(join)
-    gp = green_pile.pile_status(join)
+    try:
+        gp = green_pile.pile_status(join)
+    except Exception as e:  # noqa: BLE001 — still write the book + a stub green.json
+        print(f"[stock-book] WARN: pile_status failed: {e}")
+        gp = {
+            "n_pile": 0, "used": False, "buy_mode": "weighted_fallback",
+            "sell_mode": "core_weights", "reason": f"pile_status error: {e}",
+        }
     if as_of:
         from . import book_era
         if not book_era.live(date, "green_pile"):
@@ -2072,13 +2079,16 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         encoding="utf-8",
     )
     green_path = OUT_DIR / f"{date}_green.json"
-    tickers: list[str] = []
-    if "green" in df.columns and "Ticker" in df.columns:
-        tickers = [str(t) for t in df.loc[df["green"] == True, "Ticker"].tolist()]  # noqa: E712
-    green_path.write_text(
-        json.dumps({**gp, "tickers": tickers}, indent=2, default=str) + "\n",
-        encoding="utf-8",
-    )
+    try:
+        tickers: list[str] = []
+        if "green" in df.columns and "Ticker" in df.columns:
+            tickers = [str(t) for t in df.loc[df["green"] == True, "Ticker"].tolist()]  # noqa: E712
+        green_path.write_text(
+            json.dumps({**gp, "tickers": tickers}, indent=2, default=str) + "\n",
+            encoding="utf-8",
+        )
+    except Exception as e:  # noqa: BLE001 — book json already landed
+        print(f"[stock-book] WARN: green.json write failed: {e}")
 
     wr = meta.get("weather_risk")
     L = [

@@ -101,7 +101,8 @@ def test_ubuntu_vs_ecs_split():
     assert "preopen_all.yml" not in UBUNTU_WORKFLOWS
     assert "postclose_all.yml" not in UBUNTU_WORKFLOWS
     assert "map_heat_postclose.yml" not in UBUNTU_WORKFLOWS
-    assert "stock_book_all.yml" not in UBUNTU_WORKFLOWS
+    assert "stock_book_all.yml" in UBUNTU_WORKFLOWS
+    assert "stock_book_all.yml" not in GROK_WORKFLOWS
 
 
 def test_dispatch_payloads():
@@ -117,6 +118,12 @@ def test_dispatch_payloads():
     p = _dispatch_payload("postclose_all.yml", "2026-08-28", "2026-08-27", "2026-08-28", "2026-08-27")
     assert p["inputs"]["run_date"] == "2026-08-27"
     assert p["inputs"]["force"] == "true"
+    p = _dispatch_payload(
+        "stock_book_all.yml", "2026-09-04", "2026-09-03", "2026-09-04", "2026-09-04")
+    assert p["inputs"]["runner"] == "ubuntu"
+    assert p["inputs"]["skip_llm"] == "true"
+    assert p["inputs"]["skip_extras"] == "true"
+    assert p["inputs"]["run_date"] == "2026-09-04"
 
 
 def test_expected_files_include_green_and_dated_learn():
