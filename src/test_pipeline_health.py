@@ -11,6 +11,7 @@ from src.pipeline_health import (
     Check,
     Report,
     _dispatch_payload,
+    _expected_files,
     _healable,
     _next_weekday,
     _prev_weekday,
@@ -82,9 +83,11 @@ def test_workflow_routing():
     assert _workflow_for_step("book.weather_sectors") == "stock_book_all.yml"
     assert _workflow_for_step("book.ab") == "stock_book_all.yml"
     assert _workflow_for_step("book.book_json") == "stock_book_all.yml"
+    assert _workflow_for_step("book.green_json") == "stock_book_all.yml"
     assert _workflow_for_step("outcome.general") == "postclose_all.yml"
     assert _workflow_for_step("outcome.sector_count") == "postclose_all.yml"
     assert _workflow_for_step("learn.learnings") == "postclose_all.yml"
+    assert _workflow_for_step("learn.dated") == "postclose_all.yml"
     assert _workflow_for_step("pages.dashboard") == "deploy-dashboard.yml"
     # GH run history is observational — do not heal from clock.*.yml
     assert _workflow_for_step("clock.learn_cycle.yml") is None
@@ -114,6 +117,21 @@ def test_dispatch_payloads():
     p = _dispatch_payload("postclose_all.yml", "2026-08-28", "2026-08-27", "2026-08-28", "2026-08-27")
     assert p["inputs"]["run_date"] == "2026-08-27"
     assert p["inputs"]["force"] == "true"
+
+
+def test_expected_files_include_green_and_dated_learn():
+    book = _expected_files(
+        "stock_book_all.yml", "2026-09-04", "2026-09-03", "2026-09-04", "2026-09-04")
+    assert any(p.name == "2026-09-04_green.json" for p in book)
+    pre = _expected_files(
+        "preopen_all.yml", "2026-09-04", "2026-09-03", "2026-09-04", "2026-09-04")
+    assert any(p.name == "2026-09-04_green.json" for p in pre)
+    post = _expected_files(
+        "postclose_all.yml", "2026-09-04", "2026-09-03", "2026-09-04", "2026-09-03")
+    assert any(p.name == "2026-09-03_learnings.md" for p in post)
+    learn = _expected_files(
+        "learn_cycle.yml", "2026-09-04", "2026-09-03", "2026-09-04", "2026-09-03")
+    assert any(p.name == "2026-09-03_learnings.md" for p in learn)
 
 
 def test_clock_yml_not_healable():

@@ -302,6 +302,12 @@ def run(
     by_key = {r["key"]: r for r in rows}
     _print_status(date, rows)
 
+    from . import skip_if_good
+    if (not force) and skip_if_good.check_stock_book_all(date):
+        print(f"[all] {date}: book + green + weather + join + AB already "
+              "on disk — skip")
+        return
+
     print(f"[all] plan force={force} skip_llm={skip_llm} force_sectors={force_sectors}")
 
     def need(key: str) -> bool:

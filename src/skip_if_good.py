@@ -120,12 +120,39 @@ def check_map_heat_postclose(date: str) -> bool:
                 f"target={target} baseline present")
 
 
+def check_label_weather(date: str) -> bool:
+    """Weather JSON with enough sector stances to rank."""
+    p = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
+    if not _exists_gt(p, 200):
+        return _log(False, "label_weather", date, "weather json missing/thin")
+    try:
+        payload = json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return _log(False, "label_weather", date, "weather unreadable")
+    secs = (payload.get("signals") or {}).get("sectors") or {}
+    n = len(secs) if isinstance(secs, dict) else 0
+    ok = n >= 5
+    return _log(ok, "label_weather", date, f"weather_sectors={n}")
+
+
 def check_stock_book_all(date: str) -> bool:
+    """Book + green pile + the ranker inputs BUY/SELL need."""
     js = ROOT / "data" / "stock_book" / f"{date}_stock_book.json"
     md = ROOT / "01_daily" / f"{date}_stock_book.md"
-    ok = _exists_gt(js, 200) or _exists_gt(md, 400)
-    return _log(ok, "stock_book_all", date,
-                f"json={js.exists()} md={md.exists()}")
+    if not (_exists_gt(js, 200) or _exists_gt(md, 400)):
+        return _log(False, "stock_book_all", date, "book json/md missing")
+    green = ROOT / "data" / "stock_book" / f"{date}_green.json"
+    if not _exists_gt(green, 40):
+        return _log(False, "stock_book_all", date, "green.json missing — pile not graded")
+    if not check_label_weather(date):
+        return _log(False, "stock_book_all", date, "weather incomplete")
+    if not check_ab_checklist(date):
+        return _log(False, "stock_book_all", date, "AB missing")
+    ranked = ROOT / "data" / "join" / f"{date}_ranked.csv"
+    if not _exists_gt(ranked, 200):
+        return _log(False, "stock_book_all", date, "join ranked missing")
+    return _log(True, "stock_book_all", date,
+                "book + green + weather + join + AB")
 
 
 def check_ab_checklist(date: str) -> bool:
@@ -142,9 +169,9 @@ def check_daily_pipeline_outcome(date: str) -> bool:
 
 
 def check_learn_cycle(date: str) -> bool:
+    """Dated session file only. Stale LEARNINGS.md must not skip today."""
     daily = ROOT / "01_daily" / f"{date}_learnings.md"
-    board = ROOT / "03_scoreboard" / "LEARNINGS.md"
-    ok = _exists_gt(daily, 200) or _exists_gt(board, 400)
+    ok = _exists_gt(daily, 200)
     return _log(ok, "learn_cycle", date, f"daily_md={daily.exists()}")
 
 
@@ -153,8 +180,8 @@ def check_preopen_full(date: str) -> bool:
     if not check_preopen_all(date):
         return _log(False, "preopen_full", date, "packet incomplete")
     if not check_stock_book_all(date):
-        return _log(False, "preopen_full", date, "stock book missing")
-    return _log(True, "preopen_full", date, "packet + book on disk")
+        return _log(False, "preopen_full", date, "stock book / ranker inputs missing")
+    return _log(True, "preopen_full", date, "packet + book + green + ranker inputs")
 
 
 def check_sector_outcomes(date: str) -> bool:
@@ -181,6 +208,7 @@ JOBS = {
     "preopen_full": check_preopen_full,
     "map_heat_postclose": check_map_heat_postclose,
     "stock_book_all": check_stock_book_all,
+    "label_weather": check_label_weather,
     "ab_checklist": check_ab_checklist,
     "daily_pipeline": check_daily_pipeline_outcome,
     "learn_cycle": check_learn_cycle,

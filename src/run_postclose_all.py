@@ -132,9 +132,9 @@ def run(date: str | None = None, force: bool = False,
           "--source-date", date, "--target-date", target],
          skip_if_good.check_map_heat_postclose(date))
 
-    if not skip_if_good.check_daily_pipeline_outcome(date):
-        print(f"[postclose-all] DEGRADED {date}: outcome still missing — "
-              "wrote whatever landed; exit 0 so git still runs")
+    if not skip_if_good.check_postclose_all(date):
+        print(f"[postclose-all] DEGRADED {date}: outcome/learn/next-session "
+              "still missing — wrote whatever landed; exit 0 so git still runs")
         return
     print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
 

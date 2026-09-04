@@ -740,7 +740,9 @@ def _pull_book_paths(date: str) -> None:
         f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
         f"data/peers/{date}_peer_rs.csv",
         f"data/stock_book/{date}_stock_book.json",
+        f"data/stock_book/{date}_green.json",
         f"01_daily/{date}_stock_book.md",
+        f"01_daily/{date}_learnings.md",
         "dashboard/index.html",
         "03_scoreboard/HIT_BOARD.md",
         "03_scoreboard/PAPER_TRADING.md",
@@ -1245,6 +1247,11 @@ def check_bookchain(report: Report, date: str) -> None:
              group="book",
              path=ROOT / "data" / "stock_book" / f"{date}_stock_book.json",
              required=True, expected_date=date)
+    artifact(report, step="book.green_json",
+             name="Green pile grades (all-green BUY)",
+             group="book",
+             path=ROOT / "data" / "stock_book" / f"{date}_green.json",
+             required=True, expected_date=date)
     artifact(report, step="book.book_md", name="Stock book MD", group="book",
              path=ROOT / "01_daily" / f"{date}_stock_book.md",
              required=True, expected_date=date)
@@ -1288,6 +1295,11 @@ def check_outcomes(report: Report, date: str) -> None:
 def check_learning(report: Report, date: str) -> None:
     print(f"\n== H. LEARNING LOOP (date {date}) ==", flush=True)
     lm = ROOT / "03_scoreboard" / "LEARNINGS.md"
+    artifact(report, step="learn.dated",
+             name=f"{date}_learnings.md (session copy)",
+             group="learn",
+             path=ROOT / "01_daily" / f"{date}_learnings.md",
+             required=True, expected_date=date)
     artifact(report, step="learn.learnings", name="LEARNINGS.md digest",
              group="learn", path=lm, required=True, expected_date=date)
     if lm.exists() and not _file_contains(lm, date):
@@ -1510,12 +1522,18 @@ def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> 
     if wf == "map_heat_postclose.yml":
         return [ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json"]
     if wf == "postclose_all.yml":
+        closed = source or date
         return [
-            ROOT / "01_daily" / "general" / f"{source or date}_outcome.md",
+            ROOT / "01_daily" / "general" / f"{closed}_outcome.md",
             ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json",
+            ROOT / "01_daily" / f"{closed}_learnings.md",
         ]
     if wf == "preopen_all.yml":
-        return [ROOT / "01_daily" / f"{date}_preopen_status.json"]
+        return [
+            ROOT / "01_daily" / f"{date}_preopen_status.json",
+            ROOT / "data" / "stock_book" / f"{date}_stock_book.json",
+            ROOT / "data" / "stock_book" / f"{date}_green.json",
+        ]
     if wf == "label_weather.yml":
         return [
             ROOT / "01_daily" / "weather" / f"{book}_weather.json",
@@ -1524,11 +1542,14 @@ def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> 
     if wf == "ab_checklist.yml":
         return [ROOT / "data" / "ab_checklist" / f"{book}_ab_checklist_enriched.csv"]
     if wf == "stock_book_all.yml":
-        return [ROOT / "data" / "stock_book" / f"{book}_stock_book.json"]
+        return [
+            ROOT / "data" / "stock_book" / f"{book}_stock_book.json",
+            ROOT / "data" / "stock_book" / f"{book}_green.json",
+        ]
     if wf == "daily_pipeline.yml":
         return [ROOT / "01_daily" / "general" / f"{book}_outcome.md"]
     if wf == "learn_cycle.yml":
-        return [ROOT / "03_scoreboard" / "LEARNINGS.md"]
+        return [ROOT / "01_daily" / f"{book}_learnings.md"]
     return []
 
 

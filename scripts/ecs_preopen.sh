@@ -75,29 +75,30 @@ git_prep() {
   fi
 }
 
-# Persistent=true catch-up after a late enable must NOT rewrite today.
-# Timer is enabled for the next 05:55. Prove git push with the clock file.
-# Health healer may set FORCE=true to ignore the 09:25 cutoff.
+# Persistent=true catch-up after a late enable must NOT git-reset today
+# (would wipe a running GH pre-open or a packet already on disk).
+# Python still runs: 09:25 skips essays only; weather/join/AB/book land.
+# Health healer may set FORCE=true to reset + rewrite essays.
+LATE_CUTOFF=0
 if [ "$ET_HM" -ge 925 ] && [ "${FORCE:-false}" != "true" ] && [ "${FORCE:-0}" != "1" ]; then
-  echo "[ecs-preopen] past 09:25 ET — not running python, not resetting the tree"
-  write_clock
-  git_prep
-  bash "$ROOT/scripts/safe_git_push.sh" \
-    "chore: ecs clock status (cutoff skip) [$DAY $(TZ=America/New_York date +%H%M)]" \
-    01_daily/_ecs_clock.md || true
-  exit 0
+  LATE_CUTOFF=1
+  echo "[ecs-preopen] past 09:25 ET — no git reset; still land weather/join/AB/book"
 fi
 
 git_prep
-git fetch origin main
-git checkout main
-git reset --hard origin/main
-# reset --hard restores git's 100644 mode. systemd ExecStart uses bash
-# now, but keep +x so a hand-run still works.
-chmod +x "$ROOT/scripts/"*.sh || true
-
-# Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call.
-bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
+if [ "$LATE_CUTOFF" -eq 0 ]; then
+  git fetch origin main
+  git checkout main
+  git reset --hard origin/main
+  # reset --hard restores git's 100644 mode. systemd ExecStart uses bash
+  # now, but keep +x so a hand-run still works.
+  chmod +x "$ROOT/scripts/"*.sh || true
+  # Latest scripts are now on disk. Raise the gateway cap BEFORE any Grok call.
+  bash "$ROOT/scripts/ensure_openclaw_timeouts.sh" || true
+else
+  git fetch origin main || true
+  chmod +x "$ROOT/scripts/"*.sh || true
+fi
 
 # Live Finviz HTML is GH-hosted (finviz_preopen_scrape.yml, ~05:40 ET).
 # Do NOT scrape from this Aliyun box. Wait/pull digest + overlay, then Grok.

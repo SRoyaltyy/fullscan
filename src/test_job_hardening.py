@@ -240,6 +240,17 @@ def test_heal_targets_all_jobs() -> None:
     assert '("book.weather", "label_weather.yml")' not in text
 
 
+def test_preopen_does_not_skip_python_after_cutoff() -> None:
+    yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    ecs = (ROOT / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    assert "past 09:25 ET — skip python" not in yml
+    assert "not running python" not in ecs
+    assert "still land weather/join/AB/book" in ecs
+    assert "src.skip_if_good" in orch
+    assert "stock_book_all.yml" in orch
+
+
 def test_ranker_inputs_before_llm_packet() -> None:
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
@@ -299,6 +310,7 @@ def main() -> None:
         test_diag_exits_zero,
         test_preopen_lock_matches_postclose,
         test_heal_targets_all_jobs,
+        test_preopen_does_not_skip_python_after_cutoff,
         test_ranker_inputs_before_llm_packet,
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,

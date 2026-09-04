@@ -148,7 +148,7 @@ jobs:
             scripts/ecs_map_postclose.sh scripts/safe_git_push.sh || true
           bash scripts/ensure_ecs_clock.sh
 
-      - name: Gate — weekend / past cutoff
+      - name: Gate — weekend
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DOW=$(TZ=America/New_York date +%u)
@@ -157,10 +157,9 @@ jobs:
           if [ "$DOW" -ge 6 ]; then
             echo "Weekend — pre-open ALL skipped."
             echo "skip=yes" >> "$GITHUB_ENV"
-          elif [ "$ET_HM" -ge 925 ]; then
-            echo "past 09:25 ET — skip python"
-            echo "skip_python=yes" >> "$GITHUB_ENV"
           fi
+          # 09:25 is enforced in src.run_preopen_all (essays only).
+          # Weather / join / AB / the book still run so BUY/SELL can land.
 
       - uses: actions/setup-python@v5
         if: env.skip != 'yes' && env.skip_python != 'yes'
