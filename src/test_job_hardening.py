@@ -581,6 +581,9 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "inputs[llm_backend]=deepseek" in orch
     assert "HOME: \"/home/gha\"" not in book_yml
     assert "'/home/runner'" in book_yml
+    ds = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    assert "timeout=(15, config.OPENCLAW_TIMEOUT)" in ds
+    assert '"connect timeout"' in ds
 
 
 def test_postclose_pushes_after_each_llm_layer() -> None:

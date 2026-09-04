@@ -65,7 +65,8 @@ def test_openclaw_primary_wins() -> None:
     calls = []
 
     def fake_post(url, headers=None, json=None, timeout=None):
-        calls.append({"url": url, "headers": headers, "body": json})
+        calls.append({"url": url, "headers": headers, "body": json,
+                      "timeout": timeout})
         return _fake_response(200, "GROK ANSWER")
 
     with mock.patch.object(dc.requests, "post", side_effect=fake_post):
@@ -78,6 +79,7 @@ def test_openclaw_primary_wins() -> None:
     c = calls[0]
     assert c["url"] == "http://gw:18789/v1/chat/completions"
     assert c["body"]["model"] == config.OPENCLAW_AGENT
+    assert c["timeout"] == (15, config.OPENCLAW_TIMEOUT)
     assert c["headers"]["x-openclaw-model"] == config.OPENCLAW_BACKEND_MODEL
     assert c["headers"]["x-openclaw-session-key"].startswith("fullscan-")
 
@@ -301,6 +303,27 @@ def test_grok_only_no_fallback_when_already_down() -> None:
     assert urls == []
 
 
+def test_connect_timeout_marks_gateway_down() -> None:
+    """Firewalled SYN-drop must not burn OPENCLAW_TIMEOUT before DeepSeek."""
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    timeouts = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        timeouts.append(timeout)
+        if "gw:18789" in url:
+            raise dc.requests.ConnectTimeout("connect timed out")
+        return _fake_response(200, "DEEPSEEK ANSWER")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == "DEEPSEEK ANSWER"
+    assert dc.last_provider() == "deepseek"
+    assert timeouts[0] == (15, config.OPENCLAW_TIMEOUT)
+    assert dc._OPENCLAW_STATE["down"] is True
+
+
 def test_pick_openclaw_token_prefers_live_48() -> None:
     secret64 = "s" * 64
     live48 = "l" * 48
@@ -332,6 +355,7 @@ def main() -> None:
         test_grok_only_blocks_deepseek_and_force_flag,
         test_grok_only_no_fallback_when_gateway_401,
         test_grok_only_no_fallback_when_already_down,
+        test_connect_timeout_marks_gateway_down,
         test_pick_openclaw_token_prefers_live_48,
     ]
     failed = 0
