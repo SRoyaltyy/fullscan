@@ -108,12 +108,24 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Skip if book already satisfies the gate
+        if: ${{ github.event.inputs.force != 'true' }}
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          if python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
+            echo "Book + green already all-green — no ranker"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - name: Install
+        if: env.skip != 'yes'
         run: |
           pip install -r requirements.txt
           pip install psycopg2-binary yfinance pandas requests openai ddgs || true
 
       - name: Run Stock Book ALL
+        if: env.skip != 'yes'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -194,7 +206,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Commit everything (incl. dashboard + paper)
-        if: always()
+        if: always() && env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -213,7 +225,7 @@ jobs:
             00_grounding/book_policy.json 02_lessons/ dashboard/
 
       - name: Deploy dashboard to GitHub Pages (gh-pages)
-        if: always()
+        if: always() && env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

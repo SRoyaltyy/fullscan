@@ -8,7 +8,14 @@ import json
 import tempfile
 from pathlib import Path
 
-from src import skip_if_good
+from src import green_pile, skip_if_good
+
+
+def test_skip_constants_match_pile_and_avoid_pandas() -> None:
+    src = Path(skip_if_good.__file__).read_text(encoding="utf-8")
+    assert "from . import green_pile" not in src
+    assert skip_if_good.EPS == green_pile.EPS
+    assert skip_if_good.RELVOL_DEAD == green_pile.RELVOL_DEAD
 
 
 def test_missing_date_is_run() -> None:
@@ -162,6 +169,7 @@ def test_degraded_book_is_not_good() -> None:
 
 
 if __name__ == "__main__":
+    test_skip_constants_match_pile_and_avoid_pandas()
     test_missing_date_is_run()
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()
