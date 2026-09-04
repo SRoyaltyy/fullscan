@@ -489,6 +489,31 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "_fill_from_history" in src
     # One failure must not abort the remaining 10.
     assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
+    assert "SECTOR_ONE_TIMEOUT" in src
+    assert "SECTOR_GRADE_CHILD" in src
+    assert "TimeoutExpired" in src
+    assert "killed after" in src
+
+
+def test_sector_parent_continues_after_one_timeout() -> None:
+    """A hung first-sector chat() must not eat the other 10."""
+    import subprocess
+    from src import run_sector_outcome as so
+
+    os.environ.pop("SECTOR_GRADE_CHILD", None)
+    os.environ["SECTOR_ONE_TIMEOUT"] = "1"
+    with mock.patch.object(so.subprocess, "run",
+                           side_effect=subprocess.TimeoutExpired(["x"], 1)):
+        so._run_one_bounded("Technology", "2026-09-03")
+    os.environ.pop("SECTOR_ONE_TIMEOUT", None)
+
+    called: list[tuple[str, str]] = []
+    os.environ["SECTOR_GRADE_CHILD"] = "1"
+    with mock.patch.object(so, "run_one",
+                           side_effect=lambda s, d: called.append((s, d))):
+        so._run_one_bounded("Healthcare", "2026-09-03")
+    os.environ.pop("SECTOR_GRADE_CHILD", None)
+    assert called == [("Healthcare", "2026-09-03")]
 
 
 def test_sector_reflect_skips_existing() -> None:
@@ -499,6 +524,9 @@ def test_sector_reflect_skips_existing() -> None:
     assert "_persist" in src
     assert "actuals from outcome.md" in src
     assert 'print(f"[sector-reflect] WARN {sector}: {e}")' in src
+    assert "SECTOR_ONE_TIMEOUT" in src
+    assert "TimeoutExpired" in src
+    assert "killed after" in src
     from src.run_sector_reflect import _pct_from_outcome_md
     text = "# Sector Outcome\n\nActuals: {'etf': 'XLK', 'pct': 1.25, 'spy_pct': 0.4}\n\nbody"
     assert _pct_from_outcome_md(text) == 1.25
@@ -688,6 +716,7 @@ def main() -> None:
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
         test_sector_outcome_skips_existing_and_times_out_yf,
+        test_sector_parent_continues_after_one_timeout,
         test_sector_reflect_skips_existing,
         test_etf_actual_falls_back_to_history,
         test_general_outcome_skips_existing_and_reuses_transcript,
