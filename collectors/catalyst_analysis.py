@@ -271,96 +271,13 @@ def safe_create(**kwargs):
         print(f"  ⚠️  {name} exhausted — trying next provider")
     raise last
 
-# Finviz quote/news dates: "Sep-03-26 04:32PM", time-only "07:15AM",
-# "Today 04:32PM", "8 min", or a datetime from finvizfinance.
-# Month names are always English on Finviz — do not use locale %b.
-_FINVIZ_MONTHS = {
-    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
-    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
-}
-_FINVIZ_RELATIVE = re.compile(
-    r"(?i)^\s*(today|yesterday|(\d+)\s*(min|mins|minutes|hour|hours|hr|hrs))\b"
-)
-_FINVIZ_TIME_ONLY = re.compile(r"(?i)^\s*\d{1,2}:\d{2}\s*(AM|PM)\s*$")
-_FINVIZ_DATE_TOKEN = re.compile(
-    r"(?i)\b([A-Za-z]{3}-\d{1,2}-\d{2,4}|[A-Za-z]{3}-\d{1,2})\b"
-)
-
-
-def _date_from_finviz_token(token: str, today_d: date) -> date | None:
-    parts = (token or "").split("-")
-    if len(parts) < 2:
-        return None
-    mon = _FINVIZ_MONTHS.get(parts[0][:3].lower())
-    if not mon:
-        return None
-    try:
-        day = int(parts[1])
-        if len(parts) >= 3:
-            year = int(parts[2])
-            if year < 100:
-                year += 2000
-            return date(year, mon, day)
-        parsed = date(today_d.year, mon, day)
-        if parsed > today_d:
-            parsed = date(today_d.year - 1, mon, day)
-        return parsed
-    except ValueError:
-        return None
-
-
-def parse_finviz_news_date(raw, *, last_date=None, today=None) -> str | None:
-    """Normalize a Finviz news timestamp to YYYY-MM-DD.
-
-    Quote-page rows stamp the calendar date on the first story of a day
-    (`Sep-03-26 04:32PM`) and then emit time-only cells (`07:15AM`) that
-    inherit the previous date. The old strptime (`%I:%M %p %m/%d/%Y` and
-    `%b-%d-%y` against `Sep-03-26-2026`) never matched, so every headline
-    was labeled TODAY or compared as the garbage string `Sep-03-26 `.
-    """
-    today_s = today or TODAY
-    try:
-        today_d = datetime.strptime(str(today_s)[:10], "%Y-%m-%d").date()
-    except ValueError:
-        today_d = date.today()
-
-    if raw is None:
-        return last_date
-    if hasattr(raw, "date") and callable(getattr(raw, "date")) and not isinstance(raw, str):
-        try:
-            return raw.date().isoformat()
-        except Exception:
-            pass
-
-    s = " ".join(str(raw).split())
-    if not s or s.lower() in ("nan", "nat", "none", "nat+"):
-        return last_date
-
-    if re.match(r"^\d{4}-\d{2}-\d{2}", s):
-        return s[:10]
-
-    rel = _FINVIZ_RELATIVE.match(s)
-    if rel:
-        word = (rel.group(1) or "").lower()
-        if word == "yesterday":
-            return (today_d - timedelta(days=1)).isoformat()
-        return today_d.isoformat()
-
-    if _FINVIZ_TIME_ONLY.match(s):
-        return last_date or today_d.isoformat()
-
-    token_m = _FINVIZ_DATE_TOKEN.search(s)
-    if token_m:
-        parsed = _date_from_finviz_token(token_m.group(1), today_d)
-        if parsed:
-            return parsed.isoformat()
-
-    for fmt in ("%I:%M %p %m/%d/%Y", "%m/%d/%Y", "%Y-%m-%d %H:%M:%S"):
-        try:
-            return datetime.strptime(s, fmt).date().isoformat()
-        except ValueError:
-            continue
-    return last_date
+try:
+    from src.finviz_news import parse_finviz_news_date
+except ImportError:
+    from pathlib import Path as _P
+    import sys as _s
+    _s.path.insert(0, str(_P(__file__).resolve().parent.parent))
+    from src.finviz_news import parse_finviz_news_date
 
 
 def _in_finviz_window(date_str: str) -> bool:
