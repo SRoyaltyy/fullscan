@@ -1,6 +1,6 @@
 # flatten_hard_red card — 2026-09-04
 
-_Generated 2026-09-04T13:35:29 — live `flatten_hard_red`._
+_Generated 2026-09-04T13:44:34 — live `flatten_hard_red`._
 
 **S=+2.25; no flatten (0 priced BUYs, prior book=yes); 16:00 refill 2w_size from leftover cash; skip names already held**
 
