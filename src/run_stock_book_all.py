@@ -121,12 +121,22 @@ def _catalyst_quality_ok(date: str) -> bool:
     return catalyst_daily.already_good(date)
 
 
+def _file_ge(*parts: str, min_bytes: int) -> bool:
+    p = _p(*parts)
+    try:
+        return p.is_file() and p.stat().st_size >= min_bytes
+    except OSError:
+        return False
+
+
 def _ab_raw(date: str) -> bool:
-    return _exists("data", "ab_checklist", f"{date}_ab_checklist.csv")
+    return _file_ge("data", "ab_checklist", f"{date}_ab_checklist.csv",
+                    min_bytes=10_000)
 
 
 def _ab_enriched(date: str) -> bool:
-    return _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv")
+    return _file_ge("data", "ab_checklist",
+                    f"{date}_ab_checklist_enriched.csv", min_bytes=5_000)
 
 
 def _status_for_day(date: str) -> list[dict]:
@@ -146,7 +156,8 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Stock labeling (segments)",
             "key": "segments",
-            "done": _exists("data", "universe", f"{date}_membership.csv"),
+            "done": _file_ge("data", "universe", f"{date}_membership.csv",
+                             min_bytes=50_000),
             "artifact": f"data/universe/{date}_membership.csv",
             "required": True,
         },
@@ -160,14 +171,16 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Join / match rank",
             "key": "join",
-            "done": _exists("data", "join", f"{date}_ranked.csv"),
+            "done": _file_ge("data", "join", f"{date}_ranked.csv",
+                             min_bytes=5_000),
             "artifact": f"data/join/{date}_ranked.csv",
             "required": True,
         },
         {
             "name": "Peer relative strength",
             "key": "peer_rs",
-            "done": _exists("data", "peers", f"{date}_peer_rs.csv"),
+            "done": _file_ge("data", "peers", f"{date}_peer_rs.csv",
+                             min_bytes=5_000),
             "artifact": f"data/peers/{date}_peer_rs.csv",
             "required": False,
         },

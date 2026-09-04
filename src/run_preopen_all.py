@@ -69,9 +69,15 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
-def _run(cmd: list[str]) -> int:
+def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
-    r = subprocess.run(cmd, cwd=str(ROOT), env=os.environ.copy())
+    try:
+        r = subprocess.run(
+            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        print(f"[preopen-all] WARN: timed out after {timeout_s}s: "
+              f"{' '.join(cmd)}", flush=True)
+        return 124
     return r.returncode
 
 
@@ -435,7 +441,8 @@ def run(date: str | None = None, force: bool = False,
         "sector_predict", "catalyst",
     }
 
-    def step(key: str, title: str, cmd: list[str]) -> int:
+    def step(key: str, title: str, cmd: list[str],
+             timeout_s: int | None = None) -> int:
         if (not force) and key in llm_steps and preopen.past_predict_cutoff():
             print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
             attempts.append({"key": key, "title": title, "cmd": cmd,
@@ -447,7 +454,7 @@ def run(date: str | None = None, force: bool = False,
                              "returncode": 0, "skipped": True})
             return 0
         print(f"\n[preopen-all] → {title}")
-        code = _run(cmd)
+        code = _run(cmd, timeout_s=timeout_s)
         attempts.append({"key": key, "title": title, "cmd": cmd,
                          "returncode": code})
         if code != 0:
@@ -460,24 +467,34 @@ def run(date: str | None = None, force: bool = False,
 
     # Weather / join / AB have no LLM clock. Run them before essays so a
     # slow Grok morning cannot leave the ranker with 0/4 book outputs.
-    if force or not _exists_gt("data", "universe", f"{date}_membership.csv"):
+    if force or not _exists_gt("data", "universe", f"{date}_membership.csv",
+                               min_bytes=50_000):
         print("[preopen-all] → Universe labels (segments)")
-        _run([py, "-m", "src.segments", "--date", date])
+        _run([py, "-m", "src.segments", "--date", date], timeout_s=180)
         snapshot_persist(date)
     step("weather", "Weather / regime",
-         [py, "-m", "src.weather", "--date", date])
+         [py, "-m", "src.weather", "--date", date], timeout_s=180)
+    from . import skip_if_good
+    if not skip_if_good.check_label_weather(date):
+        print("[preopen-all] weather missing/thin — retry --offline")
+        _run([py, "-m", "src.weather", "--date", date, "--offline"],
+             timeout_s=60)
+        snapshot_persist(date)
     if force or not _exists_gt("data", "join", f"{date}_ranked.csv",
                                min_bytes=5_000):
         print("[preopen-all] → Join / match rank")
-        _run([py, "-m", "src.join", "--date", date])
+        _run([py, "-m", "src.join", "--date", date], timeout_s=180)
         snapshot_persist(date)
     if force or not _exists_gt("data", "ab_checklist",
-                               f"{date}_ab_checklist_enriched.csv"):
-        if not _exists("data", "ab_checklist", f"{date}_ab_checklist.csv"):
+                               f"{date}_ab_checklist_enriched.csv",
+                               min_bytes=5_000):
+        if not _exists_gt("data", "ab_checklist",
+                          f"{date}_ab_checklist.csv", min_bytes=10_000):
             print("[preopen-all] → AB checklist")
-            _run([py, "-m", "src.ab_checklist", "--date", date])
+            _run([py, "-m", "src.ab_checklist", "--date", date],
+                 timeout_s=1500)
         print("[preopen-all] → AB enrich")
-        _run([py, "-m", "src.ab_enrich", "--date", date])
+        _run([py, "-m", "src.ab_enrich", "--date", date], timeout_s=180)
         snapshot_persist(date)
 
     if not skip_writes:
@@ -533,8 +550,12 @@ def run(date: str | None = None, force: bool = False,
     # Book is next. Catalyst / Grok review wait until BUY/SELL is on disk —
     # 2026-09-02 eight dossiers ate the morning and the ranker never started.
     print("[preopen-all] → Weather / join refresh (before book)")
-    _run([py, "-m", "src.weather", "--date", date])
-    _run([py, "-m", "src.join", "--date", date])
+    _run([py, "-m", "src.weather", "--date", date], timeout_s=180)
+    if not skip_if_good.check_label_weather(date):
+        print("[preopen-all] weather refresh thin — retry --offline")
+        _run([py, "-m", "src.weather", "--date", date, "--offline"],
+             timeout_s=60)
+    _run([py, "-m", "src.join", "--date", date], timeout_s=180)
     snapshot_persist(date)
 
     book_ok = True

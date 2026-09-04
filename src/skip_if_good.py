@@ -186,7 +186,7 @@ def check_stock_book_all(date: str) -> bool:
 def check_ab_checklist(date: str) -> bool:
     enriched = ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist_enriched.csv"
     raw = ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist.csv"
-    ok = _exists_gt(enriched, 200) or _exists_gt(raw, 10_000)
+    ok = _exists_gt(enriched, 5_000) or _exists_gt(raw, 10_000)
     return _log(ok, "ab_checklist", date, f"enriched={enriched.exists()} raw={raw.exists()}")
 
 

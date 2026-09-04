@@ -290,6 +290,10 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "No retry" in pre
     assert 'PREOPEN_LLM_TIMEOUT", "420"' in pre
     assert "10800s ate 2026-09-04" in pre
+    assert "TimeoutExpired" in pre
+    assert "weather missing/thin — retry --offline" in pre
+    assert "timeout_s=1500" in pre
+    assert "timeout_s=180" in pre
     assert "_exists_gt" in pre
     assert "skip_extras" in book
     extras_gate = book.find("skip extras before book")
