@@ -16,6 +16,7 @@ from src.sleeve_combine import (
     max_drawdown,
     render,
     route,
+    route_empty_gap,
     route_fallback,
 )
 
@@ -71,38 +72,60 @@ def test_route_fallback_skip_day_is_io_including_hard_red() -> None:
     assert route_fallback(None)["primary"] == BUCKET_MOVER
 
 
+def test_route_empty_gap_only_when_list_empty_and_nonneg() -> None:
+    assert route_empty_gap(5.5, 0)["kind"] == "empty_gap"
+    assert route_empty_gap(5.5, 0)["primary"] == BUCKET_IO
+    assert route_empty_gap(0.0, 0)["kind"] == "empty_gap"
+    assert route_empty_gap(5.5, 1)["kind"] == "mover"
+    assert route_empty_gap(5.5, 1)["primary"] == BUCKET_MOVER
+    assert route_empty_gap(-0.9, 0)["kind"] == "skip"
+    assert route_empty_gap(-0.9, 794)["primary"] == BUCKET_IO
+    assert route_empty_gap(None, 0)["primary"] == BUCKET_MOVER
+
+
 def test_stitch_skip_io_uses_live_2w_on_skip_days() -> None:
     from src.mover_paper import stitch_skip_io
     raw = {
         "capital": 100_000, "top_n": 10, "pct": 0.10,
         "trades": [], "skipped": [],
         "curve": [
-            {"date": "2026-08-13", "score": 8.5,
+            {"date": "2026-08-13", "score": 8.5, "n_mover_calls": 0,
              "cash": 100_000, "equity": 100_000, "open": 0},
-            {"date": "2026-08-18", "score": -6.2,
+            {"date": "2026-08-14", "score": 5.5, "n_mover_calls": 0,
              "cash": 100_000, "equity": 100_000, "open": 0},
-            {"date": "2026-08-28", "score": 0.75,
+            {"date": "2026-08-17", "score": 2.25, "n_mover_calls": 1,
              "cash": 100_000, "equity": 100_000, "open": 0},
-            {"date": "2026-09-03", "score": -0.9,
+            {"date": "2026-08-18", "score": -6.2, "n_mover_calls": 117,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+            {"date": "2026-08-21", "score": 3.25, "n_mover_calls": 120,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+            {"date": "2026-08-28", "score": 0.75, "n_mover_calls": 261,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+            {"date": "2026-09-03", "score": -0.9, "n_mover_calls": 794,
              "cash": 100_000, "equity": 100_000, "open": 0},
         ],
         "final_equity": 100_000, "by_source": {},
     }
     sim, gates = stitch_skip_io(
         raw, {"regime": {}},
-        io_rets={"2026-08-18": 0.0197, "2026-09-03": 0.0199},
+        io_rets={"2026-08-14": 0.0317, "2026-08-18": 0.0197,
+                 "2026-09-03": 0.0199},
     )
     by = {g["date"]: g["decision"] for g in gates}
-    assert by["2026-08-13"] == "MOVER"
+    assert by["2026-08-13"] == "IO-GAP"
+    assert by["2026-08-14"] == "IO-GAP"
+    assert by["2026-08-17"] == "MOVER"
     assert by["2026-08-18"] == "IO"
+    assert by["2026-08-21"] == "MOVER"  # calls exist; 0 fills is not a gap
     assert by["2026-08-28"] == "IO"
     assert by["2026-09-03"] == "IO"
     assert "CASH" not in by.values()
     assert sim["io_fallback"] is True
     assert "2w_size" in sim["hold"]
-    want = 100_000 * 1.0197 * 1.0199
+    want = 100_000 * 1.0317 * 1.0197 * 1.0199
     assert abs(sim["final_equity"] - want) < 1.0
     day = {g["date"]: g.get("advisory") for g in gates}
+    assert "3.17%" in (day["2026-08-14"] or "")
     assert "1.99%" in (day["2026-09-03"] or "")
     assert "gap" in (day["2026-08-28"] or "")
 
@@ -169,6 +192,7 @@ if __name__ == "__main__":
     test_missing_predict_parks_in_io()
     test_thresholds_match_the_user_rule()
     test_route_fallback_skip_day_is_io_including_hard_red()
+    test_route_empty_gap_only_when_list_empty_and_nonneg()
     test_stitch_skip_io_uses_live_2w_on_skip_days()
     test_excel_is_never_the_primary()
     test_excel_ret_is_a_fraction()

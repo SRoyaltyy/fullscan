@@ -24,20 +24,21 @@ Strategy levers (CLI):
   --gate-score X          default 1.0   (solo mover gate; ignored when
         --io-fallback is on)
   --io-fallback / --no-io-fallback
-                          default ON for --source mover. Skip-day book:
-                          live .io 2w_size daily mark when S < +1
-                          (including hard-red); mover 1d at 09:30 when
-                          S >= +1 or missing. S <= -3 blocks new 1d
-                          tickets; it does not flatten 2w_size.
+                          default ON for --source mover. Skip-day book
+                          plus empty-list gap: live .io 2w_size when
+                          S < +1 (including hard-red) OR when mover
+                          issued 0 BUY calls and S >= 0. Mover 1d at
+                          09:30 when S >= +1 and the list is non-empty.
+                          0 fills with calls on file is not a gap.
   --pct 0.10              per-trade notional as fraction of equity
   --capital 100000
 
 Default mover-paper book (io-fallback): morning general predict S.
-S >= +1 or missing → mover 1d at 09:30. Every mover-skip morning
-(S < +1, including hard-red) takes that day's live .io 2w_size mark —
-the book that was already on, not a new 1d ticket at 16:00. Hard-red
-S <= -3 means no new 1d risk; 2w_size stays on. News-judge hawkish
-items and high-uncertainty event binaries are advisory flags.
+S >= +1 with BUY calls → mover 1d at 09:30. Empty BUY list and S >= 0
+→ live .io 2w_size (08-13/14 source gap). Every mover-skip morning
+(S < +1, including hard-red) also takes that day's 2w_size mark —
+already-on names, not a new 1d ticket. Hard-red S <= -3 means no new
+1d risk; 2w_size stays on.
 Backtest over 2026-08-13..09-03: gate score>=1 blocked all four bad BUY
 days (08-24 -1.9%, 08-28 -9.1%, 08-31 -0.4%, 09-01 -1.2%) and kept all
 three winners (+5.1 / +2.6 / +7.4).
@@ -467,20 +468,44 @@ def _mover_day_rets(curve: list[dict]) -> dict[str, float]:
     return out
 
 
-def stitch_skip_io(raw: dict, payload: dict,
-                   io_rets: dict[str, float] | None = None) -> tuple[dict, list[dict]]:
-    """Mover 1d on S>=+1; live .io 2w_size mark on every mover-skip day.
+def _mover_buy_counts(raw: dict, payload: dict,
+                      n_buy: dict[str, int] | None = None) -> dict[str, int]:
+    """BUY-call counts. 0 fills with calls still present is not a gap."""
+    if n_buy is not None:
+        return {str(k): int(v) for k, v in n_buy.items()}
+    out: dict[str, int] = {}
+    for c in raw.get("curve") or []:
+        d = c.get("date")
+        if d and "n_mover_calls" in c:
+            out[d] = int(c.get("n_mover_calls") or 0)
+    if out:
+        return out
+    for r in payload.get("called_rows") or []:
+        if r.get("action_call") != "BUY":
+            continue
+        d = r.get("date")
+        if d:
+            out[d] = out.get(d, 0) + 1
+    return out
 
-    A new 1d .io ticket at yesterday's close cannot show yesterday's win —
-    that win is the mark on 2w_size names that were already on. Hard-red
-    does not flatten that book.
+
+def stitch_skip_io(raw: dict, payload: dict,
+                   io_rets: dict[str, float] | None = None,
+                   n_buy: dict[str, int] | None = None) -> tuple[dict, list[dict]]:
+    """Mover 1d on S>=+1 when it has BUY calls; live 2w_size otherwise.
+
+    Skip days (S < +1, including hard-red) take the already-on 2w_size
+    mark. Green mornings with an empty mover BUY list and S >= 0 also
+    take that mark (08-13/14 source gap). 0 fills while calls exist is
+    not a gap — cash is locked in yesterday's 1d holds.
     """
-    from src.sleeve_combine import route_fallback
+    from src.sleeve_combine import route_empty_gap
 
     regime = payload.get("regime") or {}
     io_rets = paper_sleeve_daily() if io_rets is None else io_rets
     m_rets = _mover_day_rets(raw.get("curve") or [])
     score_by = {c["date"]: c.get("score") for c in raw.get("curve") or []}
+    buys = _mover_buy_counts(raw, payload, n_buy)
     candidates = sorted(set(m_rets) | set(io_rets) | set(score_by) | set(regime))
     candidates = [d for d in candidates if d >= "2026-08-13"]
 
@@ -491,7 +516,8 @@ def stitch_skip_io(raw: dict, payload: dict,
         score = score_by.get(d)
         if score is None:
             score = (regime.get(d) or {}).get("predict_score")
-        card = route_fallback(score)
+        n_calls = buys.get(d, 0)
+        card = route_empty_gap(score, n_calls)
         # Don't invent a flat mover day from a .io print (e.g. Sunday 08-30).
         if card["bucket"] == "mover" and d not in m_rets:
             continue
@@ -501,17 +527,26 @@ def stitch_skip_io(raw: dict, payload: dict,
             weekday = 0
         if weekday >= 5 and card["bucket"] == "mover":
             continue
+        kind = card.get("kind") or (
+            "skip" if card["bucket"] == "io" else "mover")
         if card["bucket"] == "mover":
             r = m_rets.get(d, 0.0)
             adv = ""
+            decision = "MOVER"
         else:
             if d not in io_rets and d not in m_rets and d not in score_by:
-                # regime-only skip with no mark and no mover row: still show
                 r = 0.0
             else:
                 r = io_rets.get(d, 0.0)
             pnl = round(eq * r, 2)
             gap = d not in io_rets
+            if gap:
+                reason = f"no live {IO_SKIP_SLEEVE} print (gap)"
+            elif kind == "empty_gap":
+                reason = (f"live {IO_SKIP_SLEEVE} day mark "
+                          "(mover list empty, S>=0)")
+            else:
+                reason = f"live {IO_SKIP_SLEEVE} day mark (already on)"
             io_trades.append({
                 "entry_dt": f"{d} 16:00 ET", "date": d,
                 "ticker": IO_SKIP_SLEEVE, "side": "BUY",
@@ -520,14 +555,12 @@ def stitch_skip_io(raw: dict, payload: dict,
                 "notional": round(eq, 2), "fee_in": 0.0, "fee_out": 0.0,
                 "pnl": pnl, "ret_pct": round(100 * r, 2),
                 "conviction": 0, "cond_tally": "io",
-                "reason": (
-                    f"no live {IO_SKIP_SLEEVE} print (gap)" if gap
-                    else f"live {IO_SKIP_SLEEVE} day mark (already on)"
-                ),
+                "reason": reason,
                 "source": "io",
             })
             adv = (f"no live {IO_SKIP_SLEEVE} print (gap)" if gap
                    else f"live {IO_SKIP_SLEEVE} {100 * r:+.2f}%")
+            decision = "IO-GAP" if kind == "empty_gap" else "IO"
         eq = eq * (1.0 + r)
         curve.append({"date": d, "cash": round(eq, 2),
                       "equity": round(eq, 2), "open": 0, "score": score})
@@ -537,7 +570,7 @@ def stitch_skip_io(raw: dict, payload: dict,
             "predict_dir": g.get("predict_dir"),
             "predict_score": score,
             "spy_down_streak": g.get("spy_down_streak") or 0,
-            "decision": "MOVER" if card["bucket"] == "mover" else "IO",
+            "decision": decision,
             "why": card["why"],
             "advisory": adv,
         })
@@ -575,14 +608,15 @@ def stitch_skip_io(raw: dict, payload: dict,
         },
     }
     global TITLE
-    TITLE = "Mover paper — skip days defer to live .io 2w_size"
+    TITLE = "Mover paper — empty list + skip days defer to live .io 2w_size"
     return sim, gates
 
 
 def bt_to_mover_sim(raw: dict, payload: dict,
-                    io_rets: dict[str, float] | None = None) -> tuple[dict, list[dict]]:
-    """Skip-day stitch: mover 1d on S>=+1, live 2w_size mark otherwise."""
-    return stitch_skip_io(raw, payload, io_rets=io_rets)
+                    io_rets: dict[str, float] | None = None,
+                    n_buy: dict[str, int] | None = None) -> tuple[dict, list[dict]]:
+    """Skip-day + empty-list stitch onto live 2w_size marks."""
+    return stitch_skip_io(raw, payload, io_rets=io_rets, n_buy=n_buy)
 
 
 # ------------------------------------------------- strategy sweep (daily) --
@@ -852,16 +886,16 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
         "high-uncertainty event binaries are advisory flags below."
     )
     if sim.get("io_fallback"):
-        src_note = (" Mover 1d at 09:30 when S ≥ +1 or missing. Every "
-                    "mover-skip morning (S < +1, including hard-red) "
-                    "takes the live .io 2w_size daily mark — already-on "
-                    "names, not a new 1d ticket.")
+        src_note = (" Mover 1d at 09:30 when S ≥ +1 and the BUY list is "
+                    "non-empty. Empty BUY list and S ≥ 0 takes live .io "
+                    "2w_size (source gap). Every mover-skip morning "
+                    "(S < +1, including hard-red) also takes that mark.")
         gate_line = (
-            "**Book:** skip days defer to live .io `2w_size` (same sleeve "
-            "as the .io dashboard). Hard-red S ≤ −3 blocks new 1d risk; "
-            "it does not flatten 2w_size. A same-close 1d .io fill cannot "
-            "show yesterday’s win — that print is the mark on names that "
-            "were already on."
+            "**Book:** skip days and empty non-negative mornings defer "
+            "to live .io `2w_size` (same sleeve as the .io dashboard). "
+            "0 fills while calls exist is not a gap — cash is still in "
+            "yesterday’s 1d holds. Hard-red S ≤ −3 blocks new 1d risk; "
+            "it does not flatten 2w_size."
         )
     L = [
         f"# {TITLE}", "",
@@ -976,7 +1010,7 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
         dec = g["decision"]
         if dec in ("OPEN", "MOVER"):
             cls = "good"
-        elif dec == "IO":
+        elif dec in ("IO", "IO-GAP"):
             cls = "io"
         else:
             cls = "bad"
@@ -1032,18 +1066,18 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
             f"${0 if io_pnl is None else io_pnl:,.0f}</b></div>"
         )
         fallback_note = (
-            "<p class='muted'>Rule: S ≥ +1 or missing → mover 1d at 09:30. "
-            "S &lt; +1 (including hard-red) → that day’s live .io "
-            "<code>2w_size</code> mark, the book that was already on. "
-            "S ≤ −3 blocks new 1d tickets; it does not sit in cash while "
-            "2w_size is green. A new 1d .io ticket at yesterday’s close "
-            "marks ~0 and is not yesterday’s win.</p>"
+            "<p class='muted'>Rule: S ≥ +1 and a non-empty mover BUY list "
+            "→ mover 1d at 09:30. Empty BUY list and S ≥ 0 → live .io "
+            "<code>2w_size</code> (source gap — 08-13/14). S &lt; +1 "
+            "(including hard-red) → that day’s 2w_size mark, already on. "
+            "0 fills while calls exist is not a gap. S ≤ −3 blocks new 1d "
+            "tickets; it does not flatten 2w_size.</p>"
         )
-    gs = ("skip days → live .io 2w_size; mover the rest" if sim.get("io_fallback")
+    gs = ("empty list + skip days → live .io 2w_size" if sim.get("io_fallback")
           else ("off" if gate_score is None else f"score ≥ {gate_score}"))
     title = TITLE
     if sim.get("io_fallback"):
-        title = "Mover paper — skip days defer to live .io 2w_size"
+        title = "Mover paper — empty list + skip days defer to live .io 2w_size"
     HTML_OUT.write_text(f"""<!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -1084,7 +1118,7 @@ Futubull fees · cash-accounted.
 </div>
 {fallback_note}
 {svg}
-<h2>Day book (mover / .io 2w_size)</h2>
+<h2>Day book (mover / .io skip / .io empty-gap)</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date</th><th>Predict</th><th>Score</th><th>SPY streak</th>
 <th>Book</th><th>Why</th><th>Advisory</th><th>Day P&amp;L</th></tr></thead>
@@ -1133,7 +1167,7 @@ def main() -> None:
                     help="'none' disables the day gate")
     ap.add_argument("--io-fallback", dest="io_fallback", action="store_true",
                     default=True,
-                    help="skip-day live .io 2w_size mark (default on)")
+                    help="skip-day + empty-list live .io 2w_size (default on)")
     ap.add_argument("--no-io-fallback", dest="io_fallback",
                     action="store_false")
     args = ap.parse_args()
@@ -1166,9 +1200,10 @@ def main() -> None:
                            args.capital, args.top_n, args.pct)
         sim, gates = stitch_skip_io(raw, payload)
         sweep_fn = lambda: run_sweep(payload, 0.0)
-        print(f"[mover-paper] skip-day .io {IO_SKIP_SLEEVE} stitch · "
+        print(f"[mover-paper] skip+empty-gap .io {IO_SKIP_SLEEVE} stitch · "
               f"{sum(1 for g in gates if g['decision']=='MOVER')} mover / "
-              f"{sum(1 for g in gates if g['decision']=='IO')} io")
+              f"{sum(1 for g in gates if g['decision']=='IO')} io / "
+              f"{sum(1 for g in gates if g['decision']=='IO-GAP')} gap")
     else:
         calls = tradeable_calls(payload, args.side)
         gates = gate_table(payload, gate_score)

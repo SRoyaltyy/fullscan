@@ -148,6 +148,30 @@ def route_fallback(score: float | None) -> dict:
     }
 
 
+def route_empty_gap(score: float | None, n_buy: int = 0) -> dict:
+    """Skip-day 2w_size, plus green mornings where mover called nothing.
+
+    Empty BUY list and S >= 0 → live .io 2w_size (08-13/14 style source
+    gap). Does not fire on missing S, or on 0 *fills* while calls exist
+    (cash locked in yesterday's 1d holds). Skip days (S < +1), including
+    hard-red, still take 2w_size.
+    """
+    if n_buy <= 0 and score is not None and float(score) >= 0:
+        s = float(score)
+        return {
+            "score": s,
+            "bucket": BUCKET_IO,
+            "primary": BUCKET_IO,
+            "kind": "empty_gap",
+            "excel_role": "confirm_only",
+            "why": (f"mover BUY list empty and predict {s:+.2f} >= 0 — "
+                    "live .io 2w_size mark (not a new 1d ticket)"),
+        }
+    card = route_fallback(score)
+    card["kind"] = "skip" if card["bucket"] == BUCKET_IO else "mover"
+    return card
+
+
 def _pct(n, d) -> float | None:
     if not d:
         return None
