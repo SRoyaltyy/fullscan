@@ -1,21 +1,3 @@
 date,reason,side,ticker
-2026-08-14,cash tied in open lots / fees,BUY,ASTS
-2026-08-14,cash tied in open lots / fees,BUY,SITM
-2026-08-14,cash tied in open lots / fees,BUY,DOCN
-2026-08-14,cash tied in open lots / fees,BUY,DAVE
-2026-08-14,cash tied in open lots / fees,BUY,APLD
-2026-08-14,cash tied in open lots / fees,BUY,FOUR
-2026-08-14,cash tied in open lots / fees,BUY,WOLF
-2026-08-17,cash tied in open lots / fees,BUY,EL
-2026-08-17,cash tied in open lots / fees,BUY,WTW
-2026-08-17,cash tied in open lots / fees,BUY,ECL
-2026-08-17,cash tied in open lots / fees,BUY,ERO
-2026-08-27,cash tied in open lots / fees,BUY,FUTU
-2026-08-28,cash tied in open lots / fees,BUY,FUTU
-2026-09-03,cash tied in open lots / fees,BUY,CRM
-2026-09-03,cash tied in open lots / fees,BUY,RVTY
-2026-09-03,cash tied in open lots / fees,BUY,NVDA
-2026-09-03,cash tied in open lots / fees,BUY,ATRC
-2026-09-03,cash tied in open lots / fees,BUY,HRMY
-2026-09-03,cash tied in open lots / fees,BUY,MGNI
-2026-09-03,cash tied in open lots / fees,BUY,SONO
+2026-09-03,io 3d cannot settle,BUY,*
+2026-09-04,io 3d cannot settle,BUY,*

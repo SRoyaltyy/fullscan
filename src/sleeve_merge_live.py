@@ -1,4 +1,4 @@
-"""Today's flatten_hard_red tickets — holdings + leftover cash.
+"""Today's flatten_robust tickets — holdings + leftover cash.
 
 Replay the live book through yesterday (lots stay open), then print
 the 09:30 / 16:00 card for `date`. Does not invent a third universe:
@@ -617,7 +617,9 @@ def plan_today(date: str, capital: float = 100_000,
             f"no flatten ({len(priced_buys)} priced BUYs, "
             f"prior book={'yes' if prior else 'no'})")
     if route == "io":
-        why.append("16:00 refill 2w_size from leftover cash; skip names already held")
+        why.append(
+            f"16:00 refill {pol.get('io_select', 'size')}:{pol.get('io_sleeve', '2w_size')} "
+            "from leftover cash; skip names already held")
     elif route == "mover":
         why.append("mover day: leftover cash stays overnight")
 
@@ -841,7 +843,7 @@ def inject_today_from_disk(path: Path | None = None) -> bool:
 def card_markdown(card: dict) -> str:
     sc = "—" if card.get("score") is None else f"{card['score']:+.2f}"
     lines = [
-        f"# flatten_hard_red card — {card['date']}",
+        f"# {LIVE_POLICY} card — {card['date']}",
         "",
         f"_Generated {card.get('generated')} — live `{card['policy']}`._",
         "",
@@ -940,7 +942,7 @@ def write_card(card: dict) -> dict[str, Path]:
     else:
         html_path.write_text(
             "<!doctype html><html><head><meta charset='utf-8'>"
-            "<title>flatten_hard_red today</title></head><body><main>"
+            f"<title>{LIVE_POLICY} today</title></head><body><main>"
             f"{today_panel_html(card)}</main></body></html>",
             encoding="utf-8")
     return {

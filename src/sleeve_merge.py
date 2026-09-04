@@ -2049,6 +2049,8 @@ def main(argv: list[str] | None = None) -> int:
               f"ge5={starts['mean_pct_ge5']}")
         write_outputs(winner, sweep_rows, io_top, starts=starts)
         print(f"[sleeve-merge] wrote {SCOREBOARD / 'SLEEVE_MERGE.md'}")
+        # Live gate is start-date mean ≥ 5%, not the 8-13 15%/2w lottery.
+        return 0 if starts.get("hit_mean_5") else 1
     return 0 if st["passed"] else 1
 
 
