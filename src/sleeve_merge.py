@@ -1223,6 +1223,18 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "Yesterday's score is never used at today's close.",
         "- Futubull fees, whole shares, no lookahead.",
         "",
+        "The +21% print is a real one-account ledger (sells fund buys, "
+        "Futubull fees, leftover cash). It is not a NAV stitch. It is also "
+        "not “sit in live 2w_size and sprinkle mover”: the book **breaks "
+        "the 2w hold** to flatten on the first green morning with a real "
+        "BUY list (08-20), then **re-enters a new 2w list on 08-24** "
+        "(S=−5.17, no live book that day — carry of the 08-21 print). "
+        "INO at $0.90 (12,345 sh) is the same 2w_size name the $10k paper "
+        "book held, scaled to $100k, and is ~$4.5k of the ~$21k P&L. "
+        "The 15%/2w PASS is the first fortnight; rolling 10-session "
+        "windows fail (min ~+3%). Sunday book dates are dropped; "
+        "09-04 is a morning print with no new close (flat mark).",
+        "",
         f"**Policy:** `{pol['name']}` · engine `{pol.get('engine', 'combine')}` · "
         f"{pol['io_sleeve']} · longs top {pol['long_top_n']} @ {pol['long_pct']:.0%} "
         f"· day_cap {pol.get('day_cap', 1):.0%} · min_buys {pol.get('min_buys', 5)} "
