@@ -472,6 +472,15 @@ def test_sector_reflect_skips_existing() -> None:
     assert 'print(f"[sector-reflect] WARN {sector}: {e}")' in src
 
 
+def test_general_outcome_skips_existing_and_reuses_transcript() -> None:
+    src = (ROOT / "src" / "run_outcome.py").read_text(encoding="utf-8")
+    assert "outcome already on disk" in src
+    assert "reuse transcript" in src
+    assert "last_assistant" in src
+    # LLM only after a miss — a hung 09-04 retry must not require_llm first.
+    assert src.index("last_assistant") < src.index("config.require_llm()")
+
+
 def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
     """Live main has 09-03 reflect_trace + 6k transcript and ZERO *_reflect.md."""
     import json
@@ -554,6 +563,7 @@ def main() -> None:
         test_empty_futures_tape_not_ready,
         test_sector_outcome_skips_existing_and_times_out_yf,
         test_sector_reflect_skips_existing,
+        test_general_outcome_skips_existing_and_reuses_transcript,
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
     ]

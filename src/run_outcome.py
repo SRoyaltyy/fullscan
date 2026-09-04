@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 
 from . import (compute_scores, config, deepseek_client, fetch_channel1,
                scoreboard, snapshot, verifier)
+from .run_reflect import last_assistant
 
 
 def _read(path: str) -> str:
@@ -38,7 +39,10 @@ def main() -> None:
     args = ap.parse_args()
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
 
-    config.require_llm()
+    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
+    if os.path.isfile(path) and os.path.getsize(path) >= 400:
+        print(f"[outcome] {date_str}: outcome already on disk — skip")
+        return
 
     ch1 = fetch_channel1.build("outcome", date_str)
     fetch_channel1.save(ch1, date_str, "outcome")
@@ -58,23 +62,34 @@ def main() -> None:
     predict_md = _read(predict_path)
     predict_missing = predict_md.strip() in ("", "(missing)") or not os.path.isfile(predict_path)
 
-    with open(os.path.join(config.GROUNDING, "outcome_prompt.md"), encoding="utf-8") as fh:
-        prompt = fh.read()
-    user_msg = (
-        f"TODAY: {date_str}\n\n"
-        f"=== MORNING PREDICTION ===\n{predict_md}\n\n"
-        f"=== MORNING CHANNEL 1 ===\n{morning_md}\n\n"
-        f"{fetch_channel1.to_markdown(ch1)}\n\n"
-        "Review the day. Cite sources in URL/PUBLISHED/QUOTE/SUMMARY format."
-    )
-    text = deepseek_client.chat(
-        [{"role": "system", "content": prompt},
-         {"role": "user", "content": user_msg}],
-        model=config.MODEL_OUTCOME, tools=True, max_tokens=12000,
-        transcript_path=os.path.join("01_daily/_transcripts", f"{date_str}_outcome.json"),
-        trace_path=os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome_trace.md"),
-        stage_label=f"OUTCOME {date_str}",
-    )
+    transcript_path = os.path.join(
+        "01_daily/_transcripts", f"{date_str}_outcome.json")
+    reused = last_assistant(transcript_path)
+    if len(reused) >= 200:
+        print(f"[outcome] {date_str}: reuse transcript ({len(reused)} chars) "
+              "— no LLM")
+        text = reused
+    else:
+        config.require_llm()
+        with open(os.path.join(config.GROUNDING, "outcome_prompt.md"),
+                  encoding="utf-8") as fh:
+            prompt = fh.read()
+        user_msg = (
+            f"TODAY: {date_str}\n\n"
+            f"=== MORNING PREDICTION ===\n{predict_md}\n\n"
+            f"=== MORNING CHANNEL 1 ===\n{morning_md}\n\n"
+            f"{fetch_channel1.to_markdown(ch1)}\n\n"
+            "Review the day. Cite sources in URL/PUBLISHED/QUOTE/SUMMARY format."
+        )
+        text = deepseek_client.chat(
+            [{"role": "system", "content": prompt},
+             {"role": "user", "content": user_msg}],
+            model=config.MODEL_OUTCOME, tools=True, max_tokens=12000,
+            transcript_path=transcript_path,
+            trace_path=os.path.join(config.DAILY_GENERAL,
+                                    f"{date_str}_outcome_trace.md"),
+            stage_label=f"OUTCOME {date_str}",
+        )
 
     claims, verify_md = verifier.verify_outcome(text)
 
@@ -109,7 +124,6 @@ def main() -> None:
         })
     snap_entry["path_shape"] = (actual.get("SPX", {}).get("path", {}) or {}).get("shape")
 
-    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Post-Market Outcome — {date_str}\n\n")
         if ops_fail:
