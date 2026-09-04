@@ -1143,8 +1143,8 @@
       "window_through": "2026-09-04",
       "trading_days_elapsed": 2,
       "complete": false,
-      "latest_close": 187.3,
-      "current_return_pct": -2.05,
+      "latest_close": 187.28,
+      "current_return_pct": -2.04,
       "horizon_returns_pct": {
         "1d": -1.35
       },

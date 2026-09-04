@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-04
 
-Generated: **2026-09-04T16:26:05.551268-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-04T16:41:53.925705-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,7 +15,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 156 |
 | Hypotheses written | 157 (wins=67, losses=90) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 11 |
+| Lessons promoted to active | 0 |
 | Active lesson files now | 148 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
@@ -494,17 +494,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-the-do.md`
-- `sector-etf-prediction-where-the-prior-session-s-decisive-rel.md`
-- `when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md`
-- `when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md`
-- `when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md`
-- `when-s1-sector-factors-and-s4-etf-tape-are-both-negative-1-e.md`
-- `when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md`
-- `when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md`
-- `when-a-sector-etf-is-a-deep-medium-term-laggard-1m-rel-5-and.md`
-- `when-a-sector-etf-is-a-rate-sensitive-bond-proxy-reits-with.md`
-- `when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md`
+_No new promotions this cycle (candidates incomplete or already active)._
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
