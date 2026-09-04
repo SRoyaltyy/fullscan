@@ -14,12 +14,12 @@
 
   - State Street Energy Select Sector SPDR ETF (XLE) Stock Historical Prices & Data - Yahoo Finance (https://finance.yahoo.com/quote/XLE/history/)
 
-**Step 2 — Research.** The model wanted to know: *"WTI crude oil price September 3 2026 close"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"WTI crude oil September 3 2026 close price"* → got 6 results (via ddg)
 
-  - WTI Crude Oil Price Analysis for September 3, 2026 (https://fxdailyreport.com/wti-crude-oil-price-analysis-for-september-3-2026/)
+  - Crude Oil Price Today: September 3, 2026 – Forbes Advisor (https://www.forbes.com/advisor/investing/oil-prices-today/)
 
-  - September 2026 WTI Crude Oil Historical Prices / Charts (https://futures.tradingcharts.com/historical/CO/2026/9/linechart.html)
+  - Crude Oil WTI Futures Historical Prices - Investing.com (https://www.investing.com/commodities/crude-oil-historical-data)
 
-  - Crude Oil WTI Sep '26 Futures Price - Barchart.com (https://www.barchart.com/futures/quotes/CLU26)
+  - Brent, WTI Crude Prices, Sep. 3, 2026 | Energy Intelligence (https://www.energyintel.com/000001a0-61f7-d437-a7f4-e5f775ff0000)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
