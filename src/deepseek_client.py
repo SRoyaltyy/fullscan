@@ -75,7 +75,8 @@ def _post(payload: dict, retries: int = 4) -> dict:
     last = None
     for attempt in range(retries):
         try:
-            r = requests.post(url, headers=headers, json=payload, timeout=300)
+            r = requests.post(url, headers=headers, json=payload,
+                              timeout=(15, 300))
             if r.status_code == 402:
                 raise RuntimeError(
                     f"DeepSeek 402 Payment Required: {r.text[:200]}")
@@ -85,6 +86,10 @@ def _post(payload: dict, retries: int = 4) -> dict:
                 continue
             r.raise_for_status()
             return r.json()
+        except requests.ConnectTimeout as e:
+            last = f"connect timeout: {e}"
+            print(f"[llm] DeepSeek {last} — not retrying a dead API")
+            break
         except requests.RequestException as e:
             last = str(e)
             time.sleep(20 * (attempt + 1))
