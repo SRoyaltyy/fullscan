@@ -720,6 +720,8 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     idx_gen = src.index('step("General outcome"')
     idx_push_gen = src.index("_push_pack(date)", idx_gen)
     idx_ref = src.index('step("General reflect"')
+    assert "check_general_reflect(date)" in src[idx_ref:idx_ref + 280]
+    assert '_exists_gt(f"01_daily/general/{date}_reflect.md"' not in src
     idx_push_ref = src.index("_push_pack(date)", idx_ref)
     idx_out = src.index('step("Sector outcomes"')
     idx_push_out = src.index("_push_pack(date)", idx_out)
