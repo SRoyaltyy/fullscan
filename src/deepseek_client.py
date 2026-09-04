@@ -36,6 +36,7 @@ import uuid
 import requests
 
 from . import config
+from .skip_if_good import is_tool_dump
 from .websearch import search_results
 
 SEARCH_TOOL = {
@@ -365,7 +366,7 @@ def _last_assistant_text(messages: list[dict]) -> str:
     for m in reversed(messages):
         if m.get("role") == "assistant":
             text = (m.get("content") or "").strip()
-            if text:
+            if text and not is_tool_dump(text):
                 return text
     return ""
 
@@ -494,6 +495,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             return ""
         msg = resp["choices"][0]["message"]
         content = msg.get("content") or ""
+        if is_tool_dump(content):
+            print(f"[llm] ignoring tool-dump content "
+                  f"({len(content)} chars) — not an essay", flush=True)
+            content = ""
         calls = list(msg.get("tool_calls") or [])
         # Essay already in hand — do not spend the 600s child on more search.
         if sector and len(content.strip()) >= 200:
@@ -571,6 +576,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                 print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
                 return ""
             final = resp["choices"][0]["message"].get("content") or ""
+            if is_tool_dump(final):
+                print("[llm] forced close returned a tool-dump — dropping",
+                      flush=True)
+                final = ""
             messages.append({"role": "assistant", "content": final})
 
     if transcript_path:

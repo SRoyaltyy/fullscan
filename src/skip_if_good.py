@@ -25,6 +25,23 @@ RELVOL_DEAD = 0.7
 ET = ZoneInfo("America/New_York")
 ROOT = Path(__file__).resolve().parent.parent
 
+# DeepSeek sometimes writes the DSML tool-call XML into `content`
+# instead of the tool_calls field. Those files are 600–900 B so a
+# byte-size gate treats them as a finished essay and skip-if-good
+# never rewrites them (live 2026-09-03 XLB/XLE/XLV).
+_TOOL_DUMP_MARKERS = (
+    "tool_calls>",
+    'invoke name="web_search"',
+    "DSML",
+)
+
+
+def is_tool_dump(text: str) -> bool:
+    """True when `text` is a leaked tool-call blob, not an analysis."""
+    if not text:
+        return False
+    return any(m in text for m in _TOOL_DUMP_MARKERS)
+
 
 def _today() -> str:
     return datetime.now(ET).date().isoformat()
@@ -371,21 +388,48 @@ def check_general_reflect(date: str) -> bool:
     return _log(ok, "general_reflect", date, f"reflect={p.exists()}")
 
 
+def _sector_md_is_essay(path: Path, min_bytes: int = 200) -> bool:
+    if not _exists_gt(path, min_bytes):
+        return False
+    try:
+        return not is_tool_dump(path.read_text(encoding="utf-8"))
+    except OSError:
+        return False
+
+
 def _count_sector_md(date: str, suffix: str, min_bytes: int = 200) -> int:
     d = ROOT / "01_daily" / "sectors" / date
     if not d.is_dir():
         return 0
     n = 0
     for p in d.glob(f"*{suffix}"):
-        if _exists_gt(p, min_bytes):
+        if _sector_md_is_essay(p, min_bytes):
             n += 1
+    return n
+
+
+def _count_sector_dumps(date: str, suffix: str) -> int:
+    d = ROOT / "01_daily" / "sectors" / date
+    if not d.is_dir():
+        return 0
+    n = 0
+    for p in d.glob(f"*{suffix}"):
+        try:
+            if is_tool_dump(p.read_text(encoding="utf-8")):
+                n += 1
+        except OSError:
+            continue
     return n
 
 
 def check_sector_outcomes(date: str) -> bool:
     n = _count_sector_md(date, "_outcome.md")
-    ok = n >= 8
-    return _log(ok, "sector_outcomes", date, f"outcome_md={n}/11")
+    stubs = _count_sector_dumps(date, "_outcome.md")
+    # ≥8 essays is not enough when leaked tool-call XML is sitting in
+    # the other slots — skip would freeze those stubs forever.
+    ok = n >= 8 and stubs == 0
+    return _log(ok, "sector_outcomes", date,
+                f"outcome_md={n}/11 dumps={stubs}")
 
 
 def check_sector_reflects(date: str) -> bool:
@@ -395,8 +439,10 @@ def check_sector_reflects(date: str) -> bool:
     the 11 diagnostics the night pack is supposed to land.
     """
     n = _count_sector_md(date, "_reflect.md")
-    ok = n >= 8
-    return _log(ok, "sector_reflects", date, f"reflect_md={n}/11")
+    stubs = _count_sector_dumps(date, "_reflect.md")
+    ok = n >= 8 and stubs == 0
+    return _log(ok, "sector_reflects", date,
+                f"reflect_md={n}/11 dumps={stubs}")
 
 
 def check_postclose_all(date: str) -> bool:

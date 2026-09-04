@@ -284,6 +284,9 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "MISSING night pack → postclose_all.yml ubuntu/DeepSeek" in orch
     assert "inputs[llm_backend]=deepseek" in orch
     assert "active run is push last-closed heal — queue ubuntu night_pack" in orch
+    assert "dispatch_last_closed_sidecar" in orch
+    assert "postclose_last_closed.yml/dispatches" in orch
+    assert "MISSING last-closed pack → postclose_last_closed.yml" in orch
 
 
 def test_ranker_inputs_before_llm_packet() -> None:
@@ -490,8 +493,10 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "_persist" in src
     assert "try Ticker.history" in src
     assert "_fill_from_history" in src
-    assert "empty/thin LLM" in src
+    assert "empty/thin/tool-dump LLM" in src
     assert "not writing a stub" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     # One failure must not abort the remaining 10.
     assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
     assert "SECTOR_ONE_TIMEOUT" in src
@@ -644,6 +649,10 @@ def test_search_and_sector_rounds_are_bounded() -> None:
     assert getattr(config, "MODEL_REFLECT", "") == "deepseek-chat"
     assert getattr(config, "SECTOR_MAX_SEARCHES", 0) == 2
     assert getattr(config, "SECTOR_CHAT_BUDGET_S", 0) == 420
+    assert "is_tool_dump" in (ROOT / "src" / "deepseek_client.py").read_text(
+        encoding="utf-8")
+    assert "ignoring tool-dump content" in (
+        ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
