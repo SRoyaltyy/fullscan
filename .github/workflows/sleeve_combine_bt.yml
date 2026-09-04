@@ -1,0 +1,56 @@
+name: Sleeve combine backtest
+
+# Matched-hold mover × .io fill sim (shared cash, Futubull fees, cash clock).
+# Refuses to pair mover 1d with .io 2w. No network — bars come from the
+# lookback payload + paper close cache.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hold:
+        description: "Primary hold to blotter (1d/3d/1w)"
+        required: false
+        default: "1d"
+      mode:
+        description: "combine | mover_only | io_only"
+        required: false
+        default: "combine"
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Integrity tests
+        run: |
+          python -m src.test_sleeve_combine_bt
+          python -m src.test_sleeve_combine
+      - name: Backtest
+        run: |
+          set -e
+          HOLD="${{ github.event.inputs.hold }}"
+          MODE="${{ github.event.inputs.mode }}"
+          HOLD="${HOLD:-1d}"
+          MODE="${MODE:-combine}"
+          python -m src.sleeve_combine_bt --hold "$HOLD" --mode "$MODE"
+          echo "======== blotter ========"
+          head -80 03_scoreboard/SLEEVE_COMBINE_BT.md || true
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 03_scoreboard/SLEEVE_COMBINE_BT.md \
+                  data/sleeve_combine/bt.json \
+                  data/sleeve_combine/bt_primary.json \
+                  data/sleeve_combine/bt_trades.csv \
+                  data/sleeve_combine/bt_curve.csv || true
+          git commit -m "auto: sleeve combine backtest" || echo "No changes"
+          git pull --rebase origin main || true
+          git push origin main || true

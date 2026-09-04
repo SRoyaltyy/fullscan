@@ -18,9 +18,14 @@ that also printed a fresh L3 (or L1/L2) cluster can be sized up. Raw
 Excel signals are not a capital sleeve — live tracking is underwater
 and tail-driven.
 
+The curve-stitch in this module is a sketch. The fill-level backtest
+with matched holds, shared cash, and the open/close cash clock is
+`src/sleeve_combine_bt.py`.
+
 CLI:
   python -m src.sleeve_combine            # write the scoreboard report
   python -m src.sleeve_combine --date D   # print today's route card
+  python -m src.sleeve_combine_bt         # integrity backtest
 """
 from __future__ import annotations
 

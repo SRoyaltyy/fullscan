@@ -4,6 +4,8 @@ _Generated 2026-09-04T05:04:21-04:00 — window 2026-08-13 → 2026-09-03_
 
 The three live books are complementary. They should not vote as equals. **Excel finds, mover times, .io stays long when the tape is only mildly ugly.**
 
+The equity-curve stitch below is a *sketch*. The integrity path is `src/sleeve_combine_bt.py` / [`SLEEVE_COMBINE_BT.md`](SLEEVE_COMBINE_BT.md): matched hold, shared cash, Futubull fees, 09:30-vs-16:00 cash clock, missing 8/13–8/14 mover calls logged as gaps. Do not pair mover 1d with live .io 2w.
+
 ## Route (the combine)
 
 | Morning general score S | Primary | Excel |

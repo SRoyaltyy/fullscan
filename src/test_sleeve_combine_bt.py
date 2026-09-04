@@ -1,0 +1,261 @@
+"""Matched-hold combine backtest integrity. No network.
+
+Run: python -m src.test_sleeve_combine_bt
+"""
+from __future__ import annotations
+
+from src.sleeve_combine_bt import (
+    MismatchError,
+    assert_matched_hold,
+    build_bar_fn,
+    exit_date,
+    load_fees,
+    order_fees,
+    render,
+    run_bt,
+)
+
+
+CAL = [
+    "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18",
+    "2026-08-19", "2026-08-20", "2026-08-21",
+]
+
+
+def _bars(px: dict):
+    """px[(ticker, date)] = (open, close). Missing → {}."""
+    def fn(ticker, date):
+        hit = px.get((ticker, date))
+        if not hit:
+            return {}
+        o, c = hit
+        return {"open": o, "close": c}
+    return fn
+
+
+def _fees():
+    return load_fees()
+
+
+def test_refuse_2w_combine() -> None:
+    try:
+        assert_matched_hold("combine", "2w")
+    except MismatchError as e:
+        assert "2w" in str(e)
+    else:
+        raise AssertionError("2w combine must be refused")
+    assert_matched_hold("io_only", "2w")  # reference book is allowed
+    assert_matched_hold("combine", "1d")
+
+
+def test_exit_is_sessions_not_calendar() -> None:
+    # Fri 08-14 → Mon 08-17 is ONE session for 1d
+    assert exit_date(CAL, "2026-08-14", "1d") == "2026-08-17"
+    assert exit_date(CAL, "2026-08-13", "3d") == "2026-08-18"
+    assert exit_date(CAL, "2026-08-13", "1w") == "2026-08-20"
+    assert exit_date(CAL, "2026-08-21", "1d") is None
+
+
+def test_open_cannot_spend_same_day_close_cash() -> None:
+    """1d hold: Monday buy spends the account; Tuesday 09:30 cannot reuse
+    the Tuesday 16:00 exit. With $10k and 100% sizing, day-2 open must skip."""
+    px = {}
+    for d in CAL:
+        px[("AAA", d)] = (100.0, 100.0)
+        px[("BBB", d)] = (100.0, 100.0)
+    mover = {
+        "2026-08-13": [{"ticker": "AAA", "conviction": 1}],
+        "2026-08-14": [{"ticker": "BBB", "conviction": 1}],
+    }
+    sim = run_bt(
+        calendar=CAL, scores={"2026-08-13": 5.0, "2026-08-14": 5.0},
+        mover_calls=mover, io_picks={}, bars=_bars(px),
+        hold="1d", mode="mover_only", capital=12_000, top_n=1, pct=0.90,
+        fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    am14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    assert d13["filled_am"] == 1, d13
+    assert am14["filled_am"] == 0, am14
+    assert any("insufficient cash" in (s.get("reason") or "")
+               for s in sim["skipped"] if s["date"] == "2026-08-14")
+    # Monday's exit still happens Tuesday close
+    assert am14["exits"] == 1
+
+
+def test_close_can_recycle_exit_cash_for_io() -> None:
+    """After the 16:00 exit, an .io fill the same afternoon may reuse cash."""
+    px = {}
+    for d in CAL:
+        px[("AAA", d)] = (100.0, 110.0)
+        px[("CCC", d)] = (50.0, 50.0)
+    mover = {"2026-08-13": [{"ticker": "AAA", "conviction": 1}]}
+    io = {"2026-08-14": [{"ticker": "CCC", "score": 1}]}
+    # 08-14 score in the messy band → io at close, after AAA exits
+    scores = {"2026-08-13": 5.0, "2026-08-14": 0.0}
+    sim = run_bt(
+        calendar=CAL, scores=scores, mover_calls=mover, io_picks=io,
+        bars=_bars(px),         hold="1d", mode="combine",
+        capital=12_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    d14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    assert d13["filled_am"] == 1
+    assert d14["exits"] == 1
+    assert d14["filled_pm"] == 1, d14
+    assert d14["route"] == "io"
+
+
+def test_missing_book_is_a_gap() -> None:
+    scores = {"2026-08-13": 0.0}  # io day
+    sim = run_bt(
+        calendar=CAL[:3], scores=scores, mover_calls={}, io_picks={},
+        bars=_bars({}), hold="1d", mode="combine",
+        capital=10_000, top_n=1, pct=0.1, fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    assert d13["filled_pm"] == 0
+    assert "io source missing" in d13["gap"]
+    assert sim["n_gap_days"] >= 1
+
+
+def test_missing_mover_calls_on_green_day_is_a_gap() -> None:
+    """08-13 / 08-14 style: score is +5 but mover called nothing."""
+    scores = {"2026-08-13": 5.5}
+    sim = run_bt(
+        calendar=CAL[:3], scores=scores, mover_calls={}, io_picks={},
+        bars=_bars({}), hold="1d", mode="combine",
+        capital=10_000, top_n=1, pct=0.1, fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    assert d13["route"] == "mover"
+    assert d13["filled_am"] == 0
+    assert "mover source empty" in d13["gap"]
+
+
+def test_missing_bar_skips() -> None:
+    mover = {"2026-08-13": [{"ticker": "GHOST", "conviction": 1}]}
+    sim = run_bt(
+        calendar=CAL[:3], scores={"2026-08-13": 5.0},
+        mover_calls=mover, io_picks={}, bars=_bars({}),
+        hold="1d", mode="mover_only", capital=10_000, top_n=1, pct=0.1,
+        fees=_fees(),
+    )
+    assert sim["n_trades"] == 0
+    assert any("missing open bar" in (s.get("reason") or "")
+               for s in sim["skipped"])
+
+
+def test_1w_hold_locks_cash_against_later_mover() -> None:
+    px = {}
+    for d in CAL:
+        px[("AAA", d)] = (100.0, 100.0)
+        px[("BBB", d)] = (100.0, 100.0)
+    io = {"2026-08-13": [{"ticker": "AAA", "score": 1}]}
+    mover = {"2026-08-14": [{"ticker": "BBB", "conviction": 1}]}
+    scores = {"2026-08-13": 0.0, "2026-08-14": 5.0}
+    sim = run_bt(
+        calendar=CAL, scores=scores, mover_calls=mover, io_picks=io,
+        bars=_bars(px),         hold="1w", mode="combine",
+        capital=12_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    d14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    assert d13["filled_pm"] == 1
+    assert d14["route"] == "mover"
+    assert d14["filled_am"] == 0, "1w .io hold must starve Tuesday mover"
+    assert d14["open"] == 1
+
+
+def test_hard_red_does_not_flatten() -> None:
+    px = {("AAA", d): (100.0, 100.0) for d in CAL}
+    io = {"2026-08-13": [{"ticker": "AAA", "score": 1}]}
+    scores = {"2026-08-13": 0.0, "2026-08-14": -6.0}
+    sim = run_bt(
+        calendar=CAL, scores=scores, mover_calls={}, io_picks=io,
+        bars=_bars(px),         hold="1w", mode="combine",
+        capital=12_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    d14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    assert d14["route"] == "cash"
+    assert d14["open"] == 1
+    assert d14["exits"] == 0
+    assert "no new entries" in d14["gap"]
+
+
+def test_fees_and_whole_shares() -> None:
+    px = {("AAA", d): (33.0, 33.0) for d in CAL}
+    mover = {"2026-08-13": [{"ticker": "AAA", "conviction": 1}]}
+    sim = run_bt(
+        calendar=CAL[:4], scores={"2026-08-13": 5.0},
+        mover_calls=mover, io_picks={}, bars=_bars(px),
+        hold="1d", mode="mover_only", capital=10_000, top_n=1, pct=0.10,
+        fees=_fees(),
+    )
+    assert sim["n_trades"] == 1
+    t = sim["trades"][0]
+    assert t["shares"] == int((10_000 * 0.10) // 33.0)
+    assert t["fee_in"] > 0 and t["fee_out"] > 0
+    expect_in = order_fees(t["shares"], 33.0, "buy", _fees())
+    assert abs(t["fee_in"] - expect_in) < 0.02
+
+
+def test_bar_fn_does_not_invent_open() -> None:
+    payload = {"called_rows": [
+        {"date": "2026-08-13", "ticker": "AAA",
+         "session_bar": {"open": 10.0, "close": 11.0}},
+    ]}
+    fn = build_bar_fn(payload)
+    assert fn("AAA", "2026-08-13")["open"] == 10.0
+    # unknown name / day → empty, never a fabricated open
+    ghost = fn("GHOST", "2026-08-13")
+    assert not ghost.get("open")
+
+
+def test_report_says_combine_lost_when_it_did() -> None:
+    md = render({
+        "generated_at": "t", "window": ["2026-08-13", "2026-09-03"],
+        "capital": 100000, "top_n": 10, "pct": 0.1,
+        "n_sessions": 17, "n_mover_call_days": 14, "n_book_days": 13,
+        "results": [
+            {"hold": "1d", "mode": "combine", "total_ret_pct": 0.59,
+             "max_dd_pct": 1.6, "hit": 0.38, "n_trades": 29,
+             "n_gap_days": 9, "by_source": {"mover": {"pnl": 1}, "io": {"pnl": -1}}},
+            {"hold": "1d", "mode": "mover_only", "total_ret_pct": 1.55,
+             "max_dd_pct": 0.7, "hit": 0.43, "n_trades": 30,
+             "n_gap_days": 11, "by_source": {"mover": {"pnl": 1}, "io": {"pnl": 0}}},
+            {"hold": "1d", "mode": "io_only", "total_ret_pct": 6.5,
+             "max_dd_pct": 2.5, "hit": 0.48, "n_trades": 85,
+             "n_gap_days": 4, "by_source": {"mover": {"pnl": 0}, "io": {"pnl": 6}}},
+        ],
+    })
+    assert "Finding" in md
+    assert "worse than" in md
+    assert "cannot combine mover with .io hold" not in md
+    assert "2w / 1m are not combined" in md
+
+
+def test_run_bt_rejects_bad_mode() -> None:
+    try:
+        run_bt(calendar=CAL, scores={}, mover_calls={}, io_picks={},
+               bars=_bars({}), mode="average_the_lists")
+    except ValueError:
+        return
+    raise AssertionError("bad mode must raise")
+
+
+if __name__ == "__main__":
+    test_refuse_2w_combine()
+    test_exit_is_sessions_not_calendar()
+    test_open_cannot_spend_same_day_close_cash()
+    test_close_can_recycle_exit_cash_for_io()
+    test_missing_book_is_a_gap()
+    test_missing_mover_calls_on_green_day_is_a_gap()
+    test_missing_bar_skips()
+    test_1w_hold_locks_cash_against_later_mover()
+    test_hard_red_does_not_flatten()
+    test_fees_and_whole_shares()
+    test_bar_fn_does_not_invent_open()
+    test_report_says_combine_lost_when_it_did()
+    test_run_bt_rejects_bad_mode()
+    print("ok")
