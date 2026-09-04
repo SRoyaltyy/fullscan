@@ -86,8 +86,6 @@ def _etf_actual(etf: str, date_str: str) -> dict:
 
 
 def run_one(sector: str, date_str: str) -> None:
-    config.require_llm()
-
     etf = SECTOR_ETFS[sector]
     slug = _slug(sector)
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
@@ -99,6 +97,7 @@ def run_one(sector: str, date_str: str) -> None:
     if predict_md == "(missing)":
         print(f"[sector-outcome] skip {sector}: no predict file")
         return
+    config.require_llm()
 
     actual = _etf_actual(etf, date_str)
     with open(os.path.join(config.GROUNDING, "sector_outcome_prompt.md"),

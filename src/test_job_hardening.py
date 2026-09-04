@@ -319,11 +319,11 @@ def test_ranker_inputs_before_llm_packet() -> None:
     post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
     assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
     assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
-    assert "timeout-minutes: 720" in post_yml
+    assert "timeout-minutes: 1080" in post_yml
     assert "def _push_pack" in post
     unit = (ROOT / "scripts" / "systemd" / "fullscan-map-postclose.service").read_text(
         encoding="utf-8")
-    assert "TimeoutStartSec=12h" in unit
+    assert "TimeoutStartSec=18h" in unit
     news_py = (ROOT / "src" / "news_grade.py").read_text(encoding="utf-8")
     assert "threads=False" in news_py
     assert "setdefaulttimeout(30)" in news_py
@@ -483,12 +483,18 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     idx_out = src.index('step("Sector outcomes"')
     idx_push_out = src.index("_push_pack(date)", idx_out)
     idx_sec_ref = src.index('step("Sector reflect"')
+    idx_push_sec_ref = src.index("_push_pack(date)", idx_sec_ref)
     idx_learn = src.index('step("Learn cycle"')
     idx_push_learn = src.index("_push_pack(date)", idx_learn)
     idx_cap = src.index('step("Captain research')
     assert idx_push_ref < idx_out, "must persist general reflect before sectors"
     assert idx_push_out < idx_sec_ref, "must persist sector outcomes before reflects"
+    assert idx_push_sec_ref < idx_learn, "must persist sector reflects before learn"
     assert idx_push_learn < idx_cap, "must persist dated learnings before captains"
+    # A thin dated file written before sector grades must not skip learn.
+    learn_block = src[idx_learn:idx_cap]
+    assert "check_learn_cycle" not in learn_block
+    assert "timeout_s=180" in learn_block
     heat = (ROOT / "src" / "map_heat_postclose.py").read_text(encoding="utf-8")
     assert "setdefaulttimeout(30)" in heat
     assert "threads=False" in heat

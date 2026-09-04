@@ -56,8 +56,6 @@ def _candidate_triggers(limit: int = 12) -> str:
 
 
 def run_one(sector: str, date_str: str) -> None:
-    config.require_llm()
-
     topic = topic_for(sector)
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, topic)
@@ -71,6 +69,7 @@ def run_one(sector: str, date_str: str) -> None:
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
         print(f"[sector-reflect] skip {sector}: reflect already on disk")
         return
+    config.require_llm()
     predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
     outcome_md = _read(os.path.join(out_dir, f"{slug}_outcome.md"))
 
