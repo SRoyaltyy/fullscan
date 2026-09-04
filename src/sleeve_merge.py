@@ -31,6 +31,10 @@ Gate: every complete calendar fortnight (14 days) and every complete
 current .io 2w_size top.
 
 CLI: python -m src.sleeve_merge [--capital 100000] [--write]
+
+Start-date sweep (same live rule, fresh $100k, no prior lots) answers
+"would this still make money if the first ticket was 8-14 / 8-17 / …"
+without changing flatten / hard-red / rotate / carry.
 """
 from __future__ import annotations
 
@@ -771,7 +775,8 @@ def _prior_book(book_map: dict[str, dict], cal: list[str], date: str,
 
 def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                        policy: dict | None = None,
-                       capital: float = 100_000) -> dict:
+                       capital: float = 100_000,
+                       start_date: str | None = None) -> dict:
     """One book: hold .io 2w_size, flatten at the 09:30 open when the
     morning score is green AND mover has BUY calls, then sit in mover
     (1d hold). Leftover cash refills .io at the close. No lookahead —
@@ -781,6 +786,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     Flattening ignores the 2w min-hold: the new rule is "exit at the
     first open after a green mover morning." Entries stay close-only
     for .io and open-only for mover. Fees, whole shares, HTB, 2× equity.
+
+    ``start_date`` (YYYY-MM-DD) leaves the world tape alone — prior
+    books and scores stay visible to flatten / carry — but the cash
+    account is empty until that session. Use it to ask "full cash
+    from this day, same rule." Default is the first session.
     """
     pol = dict(DEFAULT)
     if policy:
@@ -941,6 +951,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                 break
 
     for date in cal:
+        if start_date and date < start_date:
+            continue
         g = regime.get(date) or {}
         score = g.get("predict_score")
         pdir = g.get("predict_dir")
@@ -1049,9 +1061,54 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
 
     return {
         "policy": pol, "capital": capital, "calendar": cal,
+        "start_date": start_date or (cal[0] if cal else None),
         "trades": trades, "skipped": skipped, "curve": curve,
         "final_equity": curve[-1]["equity"] if curve else capital,
     }
+
+
+def live_policy() -> dict:
+    for p in SWEEP:
+        if p["name"] == LIVE_POLICY:
+            return dict(p)
+    raise KeyError(LIVE_POLICY)
+
+
+def run_start_dates(payload: dict, books: list[tuple[str, Path]],
+                    capital: float = 100_000,
+                    policy: dict | None = None) -> list[dict]:
+    """Replay the live rule from each session with a fresh cash book.
+
+    Same flatten / hard-red / rotate / carry. The only change is the
+    first day the account is allowed to spend — so day D gets the
+    names the rule would pick with full cash, not leftover crumbs
+    from an earlier start. Weekend dates have no tape.
+    """
+    pol = dict(policy) if policy else live_policy()
+    cal = session_calendar(payload, books)
+    io_top = io_top_return()
+    rows = []
+    for d in cal:
+        sim = run_flatten_switch(payload, books, pol, capital, start_date=d)
+        st = stats(sim, io_top)
+        first = [t for t in sim["trades"] if t.get("entry_date") == d]
+        curve0 = sim["curve"][0] if sim["curve"] else {}
+        rows.append({
+            "start": d,
+            "n_days": st["n_days"],
+            "first_route": curve0.get("route"),
+            "first_score": curve0.get("score"),
+            "first_names": [t["ticker"] for t in first],
+            "first_n": len(first),
+            "first_notional": round(sum(t.get("notional") or 0 for t in first), 2),
+            "final_equity": st["final_equity"],
+            "total_ret_pct": st["total_ret_pct"],
+            "max_dd_pct": st["max_dd_pct"],
+            "n_trades": st["n_trades"],
+            "fees_total": st.get("fees_total"),
+            "made_money": st["total_ret_pct"] > 0,
+        })
+    return rows
 
 
 # -------------------------------------------------------------- sweep --
@@ -1158,7 +1215,8 @@ def run_sweep(payload: dict, books: list[tuple[str, Path]],
 
 
 # ----------------------------------------------------------- report --
-def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
+def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
+                  start_rows: list[dict] | None = None) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     sim, st = winner["sim"], winner["stats"]
@@ -1193,6 +1251,18 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
                     "generated": datetime.now().isoformat(timespec="seconds")},
                    indent=2),
         encoding="utf-8")
+    if start_rows:
+        (OUT_DIR / "start_dates.json").write_text(
+            json.dumps({
+                "live": LIVE_POLICY,
+                "capital": sim["capital"],
+                "end": sim["calendar"][-1] if sim["calendar"] else None,
+                "n_starts": len(start_rows),
+                "n_made_money": sum(1 for r in start_rows if r.get("made_money")),
+                "rows": start_rows,
+                "generated": datetime.now().isoformat(timespec="seconds"),
+            }, indent=2),
+            encoding="utf-8")
     (OUT_DIR / "state.json").write_text(json.dumps({
         "policy": slim,
         "stats": {k: v for k, v in st.items()
@@ -1287,6 +1357,40 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         f"| SELL | {st['by_side']['SELL']['n']} | {st['by_side']['SELL']['hit'] or 0:.1%} | "
         f"${st['by_side']['SELL']['pnl']:,.2f} |",
         "",
+    ]
+    if start_rows:
+        n_yes = sum(1 for r in start_rows if r.get("made_money"))
+        lines += [
+            "## If you started any day (full cash, same live rule)",
+            "",
+            f"Same `{LIVE_POLICY}` book. Each row is a **fresh $100k** "
+            "account that first spends on that session — leftover crumbs "
+            "from an earlier start are not used. Day D buys the names the "
+            "rule would pick if the book were flat (the skipped ASTS/SITM "
+            "list on 08-14, the mover list on 08-20, …). Sat/Sun have no "
+            "tape (08-15/16 = start Monday 08-17).",
+            "",
+            f"**{n_yes}/{len(start_rows)}** session starts finish above "
+            f"${sim['capital']:,.0f} through "
+            f"{sim['calendar'][-1] if sim['calendar'] else '?'}.",
+            "",
+            "| Start | Days | First route | First names | Spent | Final | Return | Max DD | Made money |",
+            "|---|---:|---|---|---:|---:|---:|---:|---|",
+        ]
+        for r in start_rows:
+            names = ", ".join(r.get("first_names") or []) or "—"
+            sc = r.get("first_score")
+            route = r.get("first_route") or "—"
+            if sc is not None:
+                route = f"{route} ({sc:+.2f})"
+            yes = "YES" if r.get("made_money") else "no"
+            lines.append(
+                f"| {r['start']} | {r['n_days']} | {route} | {names} | "
+                f"${r.get('first_notional') or 0:,.0f} | "
+                f"${r['final_equity']:,.2f} | {r['total_ret_pct']:+.2f}% | "
+                f"{r['max_dd_pct']:.2f}% | **{yes}** |")
+        lines.append("")
+    lines += [
         "## 15% every 2 weeks",
         "",
         f"Target **+{TARGET_2W_PCT:.0f}%** per calendar fortnight "
@@ -1512,6 +1616,43 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
             f"<tr><td>{kind}</td><td>{b['start']}</td><td>{b['end']}</td>"
             f"<td>{b['n']}</td><td class='{cls}'>{b['ret_pct']:+.2f}%</td>"
             f"<td class='{cls}'>{tag}</td></tr>")
+    start_html = ""
+    if start_rows:
+        n_yes = sum(1 for r in start_rows if r.get("made_money"))
+        start_trs = []
+        for r in start_rows:
+            names = ", ".join(r.get("first_names") or []) or "—"
+            sc = r.get("first_score")
+            scs = "—" if sc is None else f"{float(sc):+.2f}"
+            yes = "YES" if r.get("made_money") else "no"
+            ycls = "good" if r.get("made_money") else "bad"
+            rcls = ("good" if r.get("first_route") == "mover"
+                    else "hold" if r.get("first_route") == "hold" else "")
+            start_trs.append(
+                f"<tr><th>{r['start']}</th><td>{r['n_days']}</td>"
+                f"<td>{scs}</td><td class='{rcls}'>{r.get('first_route') or '—'}</td>"
+                f"<td class='why'>{_html.escape(names)}</td>"
+                f"<td>${r.get('first_notional') or 0:,.0f}</td>"
+                f"<td>${r['final_equity']:,.0f}</td>"
+                f"<td class='{ycls}'>{r['total_ret_pct']:+.2f}%</td>"
+                f"<td>{r['max_dd_pct']:.2f}%</td>"
+                f"<td class='{ycls}'>{yes}</td></tr>")
+        start_html = (
+            "<h2>If you started any day — full cash, same live rule</h2>"
+            "<p class=\"muted\">Each row is a fresh $100k book that first "
+            "spends on that session. Same flatten_hard_red: flatten / "
+            "rotate / carry / hard-red. Day D buys the names the rule "
+            "would pick if the book were flat — not leftover crumbs from "
+            "an earlier start. Sat/Sun have no tape (08-15/16 = Monday "
+            f"08-17). <b>{n_yes}/{len(start_rows)}</b> session starts "
+            "finish above the $100k start.</p>"
+            "<div class=\"sheet\"><table>"
+            "<thead><tr><th>Start</th><th>Days</th><th>Score</th>"
+            "<th>First route</th><th>Would-buy (full cash)</th>"
+            "<th>Spent</th><th>Final</th><th>Return</th><th>Max DD</th>"
+            "<th>Made money</th></tr></thead>"
+            f"<tbody>{''.join(start_trs)}</tbody></table></div>"
+        )
     cards = (
         f"<div class='card'>Final equity<b>${st['final_equity']:,.0f}</b></div>"
         f"<div class='card'>Return<b>{st['total_ret_pct']:+.2f}%</b></div>"
@@ -1556,6 +1697,7 @@ day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b>
 <a href="../strategy-board/" style="color:#93c5fd">all-strategy board</a></p>
 <div class="cards">{cards}</div>
 {svg}
+{start_html}
 <h2>Daily book (cash left after fills)</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date</th><th>Score</th><th>Route</th><th>Equity</th>
@@ -1611,8 +1753,16 @@ def main(argv: list[str] | None = None) -> int:
               f"fort={s['min_fortnight']} block={s['min_block_2w']} "
               f"{'PASS' if s['passed'] else 'no'}")
 
+    start_rows = run_start_dates(payload, books, args.capital)
+    n_yes = sum(1 for r in start_rows if r.get("made_money"))
+    print(f"[sleeve-merge] start-dates {n_yes}/{len(start_rows)} made money")
+    for r in start_rows:
+        flag = "YES" if r.get("made_money") else "no"
+        print(f"  start {r['start']}  {r['total_ret_pct']:+7.2f}%  "
+              f"{r.get('first_route')}  n={r['first_n']}  {flag}")
+
     if args.write:
-        write_outputs(winner, sweep_rows, io_top)
+        write_outputs(winner, sweep_rows, io_top, start_rows=start_rows)
         print(f"[sleeve-merge] wrote {SCOREBOARD / 'SLEEVE_MERGE.md'}")
     return 0 if st["passed"] else 1
 

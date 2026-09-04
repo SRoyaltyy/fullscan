@@ -272,6 +272,50 @@ def test_prior_book_never_uses_today() -> None:
     assert today != {"d": "21"}
 
 
+def test_start_date_skips_earlier_sessions() -> None:
+    """A later start is a fresh $100k book; 8-13 lots are not inherited."""
+    from pathlib import Path
+    from src.sleeve_merge import (
+        list_books, live_policy, load_payload, run_flatten_switch,
+        run_start_dates, stats,
+    )
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file() or not list_books():
+        print("skip start-date sweep (no payload/books)")
+        return
+    payload = load_payload()
+    books = list_books()
+    pol = live_policy()
+    live = run_flatten_switch(payload, books, pol, 100_000)
+    later = run_flatten_switch(payload, books, pol, 100_000,
+                               start_date="2026-08-14")
+    assert live["start_date"] == "2026-08-13"
+    assert later["start_date"] == "2026-08-14"
+    assert all(r["date"] >= "2026-08-14" for r in later["curve"])
+    assert any(t["entry_date"] == "2026-08-13" for t in live["trades"])
+    assert not any(t["entry_date"] == "2026-08-13" for t in later["trades"])
+    # Full cash on 8-14 buys the names the live book skipped as crumbs.
+    day14_live = [t for t in live["trades"] if t["entry_date"] == "2026-08-14"]
+    day14_fresh = [t for t in later["trades"] if t["entry_date"] == "2026-08-14"]
+    assert day14_fresh, "fresh 8-14 book must deploy 2w_size"
+    assert sum(t["notional"] for t in day14_fresh) > 80_000
+    if day14_live:
+        assert max(t["notional"] for t in day14_live) < 50
+    skipped14 = {s["ticker"] for s in live["skipped"]
+                 if s["date"] == "2026-08-14" and s["side"] == "BUY"}
+    bought14 = {t["ticker"] for t in day14_fresh}
+    assert skipped14, "live 8-14 should have cash-tied skips"
+    assert skipped14 <= bought14, (skipped14 - bought14, bought14)
+    # Start-date table covers every session; 8-13 matches the live headline.
+    rows = run_start_dates(payload, books, 100_000)
+    by = {r["start"]: r for r in rows}
+    assert "2026-08-13" in by and "2026-08-14" in by
+    st_live = stats(live)
+    assert abs(by["2026-08-13"]["total_ret_pct"] - st_live["total_ret_pct"]) < 0.02
+    assert by["2026-08-14"]["first_n"] >= 5
+    assert by["2026-08-14"]["first_notional"] > 80_000
+
+
 def test_fortnight_is_14_calendar_days() -> None:
     # Aug 13 → Aug 26 is one complete fortnight (10 sessions).
     dates = [
@@ -307,7 +351,8 @@ def main() -> None:
     test_live_flatten_switch_clears_15pct_fortnight()
     test_live_fees_and_cash_lockup()
     test_hard_red_no_new_skips_0824_io_keeps_holds()
-    print("test_sleeve_merge: 14 ok")
+    test_start_date_skips_earlier_sessions()
+    print("test_sleeve_merge: 15 ok")
 
 
 if __name__ == "__main__":
