@@ -169,6 +169,131 @@ def replay_open(date: str, capital: float = 100_000,
     )
 
 
+def _marked_equity(cash: float, holds: list[dict], date: str, cache) -> float:
+    eq = float(cash)
+    for h in holds:
+        px, _ = _px(h["ticker"], date, "close", cache)
+        mark = px or h.get("last_px") or h.get("entry_px") or 0
+        eq += h["shares"] * float(mark)
+    return eq
+
+
+def plan_would_buy(
+    *,
+    date: str,
+    pol: dict,
+    cache,
+    priced_buys: list[dict],
+    confirm: set[str],
+    io_book: dict | None,
+    cash_open: float,
+    holds_open: list[dict],
+    live_buys: set[str],
+    flatten_without_hard_red: bool,
+    hard_red: bool,
+    route_mover: bool,
+) -> dict:
+    """Same sleeve the live rule would fill, sized as if the book were flat.
+
+    Holdings and leftover-cash skips are ignored. Hard-red still labels
+    the row; the name stays on the list so you can see the tape.
+    """
+    fees, order_fees = _fees()
+    held = {h["ticker"] for h in holds_open}
+    equity = _marked_equity(cash_open, holds_open, date, cache)
+    pocket = equity
+    rows: list[dict] = []
+
+    def take(ticker, px, kind, clock, want, reason, sleeve):
+        nonlocal pocket
+        if not px or px <= 0:
+            rows.append({
+                "date": date, "clock": clock, "side": "BUY",
+                "ticker": ticker, "shares": 0, "px": None, "px_kind": kind,
+                "sleeve": sleeve, "notional": 0, "fee": 0, "cost": 0,
+                "reason": reason, "blocked": "no price", "status": "would",
+            })
+            return
+        shares = int(want // px) if want > 0 else 0
+        fee = order_fees(shares, px, "buy", fees) if shares >= 1 else 0.0
+        cost = shares * px + fee if shares >= 1 else 0.0
+        if shares >= 1 and cost > pocket + 1e-6:
+            shares = int((pocket - fee) // px) if px > 0 else 0
+            if shares >= 1:
+                fee = order_fees(shares, px, "buy", fees)
+                cost = shares * px + fee
+            else:
+                fee, cost = 0.0, 0.0
+        if shares >= 1:
+            pocket -= cost
+        if ticker in live_buys:
+            blocked = "live"
+        elif ticker in held:
+            blocked = "already held"
+        elif hard_red:
+            blocked = "hard-red"
+        elif route_mover and sleeve == "io_core":
+            blocked = "mover day"
+        elif shares < 1:
+            blocked = "shares < 1"
+        else:
+            blocked = "cash tied"
+        rows.append({
+            "date": date, "clock": clock, "side": "BUY",
+            "ticker": ticker, "shares": shares,
+            "px": round(float(px), 4), "px_kind": kind,
+            "sleeve": sleeve,
+            "notional": round(shares * px, 2) if shares else 0,
+            "fee": round(fee, 2), "cost": round(cost, 2),
+            "reason": reason, "blocked": blocked, "status": "would",
+        })
+
+    if flatten_without_hard_red:
+        clock = OPEN_CLOCK
+        sleeve = "mover_long"
+        source = "mover (holdings disregarded)"
+        day_cap = float(pol.get("day_cap", 1.0))
+        room = min(pocket, max(0.0, equity * day_cap))
+        for r in rank_calls(priced_buys, pol.get("long_rank", "cond"))[: pol.get("long_top_n", 10)]:
+            t = str(r.get("ticker") or "").upper()
+            if not t:
+                continue
+            px, kind = _px(t, date, "open", cache)
+            bump = pol.get("sizeup", 1.0) if t in confirm else 1.0
+            want = min(equity * float(pol.get("long_pct", 0.10)) * bump, room, pocket)
+            take(t, px, kind, clock, want,
+                 f"mover BUY cond={_cond_score(r):+.0f}", sleeve)
+            if rows and rows[-1]["shares"] >= 1:
+                room -= rows[-1]["notional"] + rows[-1]["fee"]
+            if room < 1 or pocket < 1:
+                break
+    elif io_book is not None:
+        clock = CLOSE_CLOCK
+        sleeve = "io_core"
+        source = f"io {pol.get('io_sleeve', '2w_size')} (holdings disregarded)"
+        targets = io_picks(io_book, pol.get("io_sleeve", "2w_size"))
+        if targets and pocket > 0:
+            per = pocket / len(targets)
+            for t in targets:
+                px, kind = _px(t, date, "close", cache)
+                take(t, px, kind, clock, per, source, sleeve)
+        elif not targets:
+            source = "empty book"
+    else:
+        clock = CLOSE_CLOCK
+        sleeve = "io_core"
+        source = "no .io book to size"
+
+    return {
+        "equity": round(equity, 2),
+        "spent": round(equity - pocket, 2),
+        "source": source,
+        "clock": clock,
+        "sleeve": sleeve,
+        "rows": rows,
+    }
+
+
 def plan_today(date: str, capital: float = 100_000,
                payload: dict | None = None,
                books: list | None = None,
@@ -235,6 +360,7 @@ def plan_today(date: str, capital: float = 100_000,
     flat = not io_pos
     flatten_ok = green and have_buys and (
         book_mode in ("none", None, False) or prior is not None)
+    flatten_without_hard_red = flatten_ok
     cash_mover = flat and have_buys and (
         (bool(pol.get("mover_when_flat", False)) and green)
         or (bool(pol.get("blank_mover_when_flat", False)) and blank))
@@ -464,6 +590,20 @@ def plan_today(date: str, capital: float = 100_000,
 
     buy_cost = round(sum(t.get("cost") or 0 for t in tickets if t["side"] == "BUY"), 2)
     sell_proceeds = round(sum(t.get("proceeds") or 0 for t in tickets if t["side"] == "SELL"), 2)
+    holds_open = [
+        _lot_view(lot, lot.get("last_px"))
+        for lot in list((sim.get("open_io") or {}).values())
+        + list(sim.get("open_mover") or [])
+    ]
+    would = plan_would_buy(
+        date=date, pol=pol, cache=cache, priced_buys=priced_buys,
+        confirm=confirm, io_book=io_book, cash_open=cash_open,
+        holds_open=holds_open,
+        live_buys={t["ticker"] for t in tickets if t["side"] == "BUY"},
+        flatten_without_hard_red=flatten_without_hard_red,
+        hard_red=bool(hard_red_no_new and hard_red),
+        route_mover=route_mover,
+    )
 
     return {
         "date": date,
@@ -481,13 +621,10 @@ def plan_today(date: str, capital: float = 100_000,
         "cash_after_1600": round(cash_after_1600, 2),
         "buy_cost": buy_cost,
         "sell_proceeds": sell_proceeds,
-        "n_holds_open": len(sim.get("open_io") or {}) + len(sim.get("open_mover") or []),
-        "holds_open": [
-            _lot_view(lot, lot.get("last_px"))
-            for lot in list((sim.get("open_io") or {}).values())
-            + list(sim.get("open_mover") or [])
-        ],
+        "n_holds_open": len(holds_open),
+        "holds_open": holds_open,
         "holds_after": holds,
+        "would_buy": would,
         "tickets": tickets,
         "skipped": skipped,
         "why": "; ".join(why),
@@ -522,6 +659,8 @@ def today_panel_html(card: dict) -> str:
         f"{sum(1 for t in card['tickets'] if t['clock']==OPEN_CLOCK)} / "
         f"{sum(1 for t in card['tickets'] if t['clock']==CLOSE_CLOCK)}</b></div>"
         f"<div class='card'>Skipped<b>{len(card['skipped'])}</b></div>"
+        f"<div class='card'>Would-buy (flat)<b>"
+        f"{len((card.get('would_buy') or {}).get('rows') or [])}</b></div>"
         f"<div class='card'>After 16:00 cash<b>${card['cash_after_1600']:,.0f}</b></div>"
     )
 
@@ -566,6 +705,23 @@ def today_panel_html(card: dict) -> str:
                 f"<td class='why'>{_html.escape(s.get('reason') or '')}</td></tr>")
         return "".join(out)
 
+    def rows_would(would):
+        chunk = would.get("rows") or []
+        if not chunk:
+            return "<tr><td colspan='7' class='why'>none</td></tr>"
+        out = []
+        for t in chunk:
+            cls = "good" if t.get("blocked") == "live" else "hold"
+            out.append(
+                f"<tr><th>{_html.escape(t.get('clock') or '')}</th>"
+                f"<td>{_html.escape(t.get('ticker') or '')}</td>"
+                f"<td>{_html.escape(t.get('sleeve') or '')}</td>"
+                f"<td>{t.get('shares')}</td>"
+                f"<td>${t.get('px') or 0:.2f}</td>"
+                f"<td>${t.get('notional') or 0:,.0f}</td>"
+                f"<td class='why {cls}'>{_html.escape(t.get('blocked') or '')}</td></tr>")
+        return "".join(out)
+
     return f"""<style>
 .today{{border:1px solid #fbbf24;border-radius:12px;padding:12px 14px;margin:16px 0;background:#16120a}}
 .today h2{{margin-top:0}}
@@ -591,6 +747,15 @@ Already-held names are not re-bought. Hard-red S≤−3 = no new risk.</p>
 <thead><tr><th>Side</th><th>Ticker</th><th>Sleeve</th><th>Shares</th>
 <th>Px</th><th>Notional</th><th>Fee</th><th>Why</th></tr></thead>
 <tbody>{rows_tix(CLOSE_CLOCK)}</tbody></table></div>
+<h3>Would have bought — holdings disregarded</h3>
+<p class="muted">Same sleeve the live rule points at, sized from marked equity
+(${(card.get('would_buy') or {}).get('equity') or 0:,.0f}) as if the book
+were flat. Not live tickets.
+{( _html.escape((card.get('would_buy') or {}).get('source') or ''))}</p>
+<div class="sheet"><table>
+<thead><tr><th>Clock</th><th>Ticker</th><th>Sleeve</th><th>Shares</th>
+<th>Px</th><th>Notional</th><th>Blocked live by</th></tr></thead>
+<tbody>{rows_would(card.get('would_buy') or {})}</tbody></table></div>
 </section>"""
 
 
@@ -679,6 +844,24 @@ def card_markdown(card: dict) -> str:
     for s in card.get("skipped") or []:
         lines.append(
             f"| {s.get('clock')} | {s.get('ticker') or '—'} | {s.get('reason')} |")
+    would = card.get("would_buy") or {}
+    lines += [
+        "",
+        "## Would have bought — holdings disregarded",
+        "",
+        f"Sized from marked equity **${would.get('equity') or 0:,.2f}** as if "
+        f"the book were flat. `{would.get('source') or ''}`. Not live tickets.",
+        "",
+        "| Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |",
+        "|---|---|---|---:|---:|---:|---|",
+    ]
+    if not would.get("rows"):
+        lines.append("| — | — | | | | | |")
+    for t in would.get("rows") or []:
+        lines.append(
+            f"| {t.get('clock')} | {t.get('ticker')} | {t.get('sleeve')} | "
+            f"{t.get('shares')} | ${t.get('px') or 0:.2f} | "
+            f"${t.get('notional') or 0:,.2f} | {t.get('blocked')} |")
     lines += [
         "",
         "Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/",
@@ -735,6 +918,14 @@ def run_card(date: str | None = None, capital: float = 100_000,
                   f"{s.get('reason')}")
     if n_skip > 12:
         print(f"  … {n_skip - 12} more skips")
+    would = card.get("would_buy") or {}
+    print(f"[sleeve-merge-card] would-buy {would.get('source')} "
+          f"n={len(would.get('rows') or [])} "
+          f"equity=${would.get('equity') or 0:,.2f}")
+    for t in (would.get("rows") or [])[:12]:
+        print(f"  WOULD {t.get('clock')} {t.get('ticker'):6s} "
+              f"n={t.get('shares')} @ {t.get('px')}  "
+              f"blocked={t.get('blocked')}")
     if write:
         paths = write_card(card)
         for k, p in paths.items():
