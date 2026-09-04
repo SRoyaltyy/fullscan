@@ -35,7 +35,8 @@ def test_llm_backend_deepseek_skips_gateway() -> None:
 
 
 def test_skip_jobs_registered() -> None:
-    for key in ("preopen_full", "postclose_all", "sector_outcomes"):
+    for key in ("preopen_full", "postclose_all", "sector_outcomes",
+                "sector_reflects"):
         assert key in skip_if_good.JOBS
 
 
