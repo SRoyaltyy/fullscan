@@ -480,6 +480,53 @@ def check_postclose_all(date: str) -> bool:
                 "outcome + reflect + sectors + sector-reflects + baseline + learnings")
 
 
+# postclose_all.yml skip-if-good must yield when the last-closed sidecar
+# is already writing. Do not put this in check_postclose_all() — that
+# function is the pack-complete predicate (night_pack_dates, orch).
+# Only the Post-Close ALL workflow itself should skip; the sidecar
+# uses the same --job and must not skip itself.
+POSTCLOSE_ALL_WORKFLOW_NAME = "Post-Close ALL (grade + learn + next captains)"
+_SIDECAR_ACTIVE = ("in_progress", "queued", "waiting", "pending")
+
+
+def last_closed_sidecar_running() -> bool:
+    """True when postclose_last_closed.yml is already writing or queued."""
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY") or ""
+    if not token or "/" not in repo:
+        return False
+    url = (
+        f"https://api.github.com/repos/{repo}/actions/workflows/"
+        "postclose_last_closed.yml/runs?per_page=10"
+    )
+    import urllib.error
+    import urllib.request
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "User-Agent": "fullscan-skip-if-good",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except (OSError, ValueError, urllib.error.URLError):
+        return False
+    for run in payload.get("workflow_runs") or []:
+        if run.get("status") in _SIDECAR_ACTIVE:
+            return True
+    return False
+
+
+def postclose_all_should_yield_to_sidecar() -> bool:
+    """Schedule/push Post-Close ALL must not race a live sidecar persist."""
+    if os.environ.get("GITHUB_WORKFLOW") != POSTCLOSE_ALL_WORKFLOW_NAME:
+        return False
+    return last_closed_sidecar_running()
+
+
 JOBS = {
     "finviz_preopen_scrape": check_finviz_scrape,
     "preopen_all": check_preopen_all,
@@ -502,6 +549,10 @@ def main() -> None:
     ap.add_argument("--date", default=None)
     args = ap.parse_args()
     os.chdir(ROOT)
+    if args.job == "postclose_all" and postclose_all_should_yield_to_sidecar():
+        print("[skip_if_good] SKIP job=postclose_all "
+              "sidecar already writing last-closed")
+        raise SystemExit(0)
     if args.date:
         ok = JOBS[args.job](args.date)
     elif args.job == "postclose_all":

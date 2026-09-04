@@ -5,8 +5,10 @@ Run: PYTHONPATH=. python3 -m src.test_skip_if_good
 from __future__ import annotations
 
 import json
+import os
 import tempfile
 from pathlib import Path
+from unittest import mock
 
 from src import green_pile, skip_if_good
 
@@ -222,6 +224,52 @@ def test_jobs_include_label_weather() -> None:
     assert "postclose_all" in skip_if_good.JOBS
 
 
+def test_postclose_all_workflow_name_matches_yml() -> None:
+    root = Path(skip_if_good.__file__).resolve().parent.parent
+    yml = (root / ".github/workflows/postclose_all.yml").read_text(
+        encoding="utf-8")
+    sidecar = (root / ".github/workflows/postclose_last_closed.yml").read_text(
+        encoding="utf-8")
+    assert yml.startswith(
+        f"name: {skip_if_good.POSTCLOSE_ALL_WORKFLOW_NAME}\n")
+    assert sidecar.startswith(
+        "name: Post-Close last-closed (ubuntu/DeepSeek sidecar)\n")
+    assert skip_if_good.POSTCLOSE_ALL_WORKFLOW_NAME not in sidecar
+
+
+def test_sidecar_running_false_without_github_env() -> None:
+    env = {k: v for k, v in os.environ.items()
+           if k not in ("GITHUB_TOKEN", "GH_TOKEN", "GITHUB_REPOSITORY")}
+    with mock.patch.dict(os.environ, env, clear=True):
+        assert skip_if_good.last_closed_sidecar_running() is False
+        assert skip_if_good.postclose_all_should_yield_to_sidecar() is False
+
+
+def test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow() -> None:
+    """23:30 postclose_all.yml must skip; sidecar --job must not skip itself."""
+    with mock.patch.object(skip_if_good, "last_closed_sidecar_running",
+                           return_value=True):
+        with mock.patch.dict(os.environ, {
+            "GITHUB_WORKFLOW": skip_if_good.POSTCLOSE_ALL_WORKFLOW_NAME,
+        }, clear=False):
+            assert skip_if_good.postclose_all_should_yield_to_sidecar() is True
+            with mock.patch("sys.argv", ["skip_if_good", "--job",
+                                         "postclose_all"]):
+                try:
+                    skip_if_good.main()
+                except SystemExit as e:
+                    assert e.code == 0
+                else:
+                    raise AssertionError("expected SystemExit 0")
+        with mock.patch.dict(os.environ, {
+            "GITHUB_WORKFLOW":
+                "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
+        }, clear=False):
+            assert skip_if_good.postclose_all_should_yield_to_sidecar() is False
+        # Pack-complete predicate must stay disk-only (09-04 still missing).
+        assert skip_if_good.check_postclose_all("2026-09-04") is False
+
+
 def test_degraded_book_is_not_good() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         js = Path(tmp) / "book.json"
@@ -267,5 +315,8 @@ if __name__ == "__main__":
     test_is_tool_dump_detects_dsml_and_web_search()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
+    test_postclose_all_workflow_name_matches_yml()
+    test_sidecar_running_false_without_github_env()
+    test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
     test_degraded_book_is_not_good()
     print("ok")

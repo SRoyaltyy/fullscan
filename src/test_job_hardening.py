@@ -276,6 +276,9 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert 'cron: "15 21 * * 1-5"' in orch
     assert "maybe postclose_all.yml" in orch
     assert "skip postclose_all.yml second writer" in orch
+    sig = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
+    assert "sidecar already writing last-closed" in sig
+    assert "POSTCLOSE_ALL_WORKFLOW_NAME" in sig
     assert "--job postclose_all || return 1" in orch
     assert "skip Post-Close ALL until 16:00 ET" in orch
     assert "18h Post-Close ALL spans midnight" in orch
