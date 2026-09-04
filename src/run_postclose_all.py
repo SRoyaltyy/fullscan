@@ -149,6 +149,8 @@ def _run_one(date: str, force: bool = False) -> None:
          [py, "-m", "src.run_outcome", "--date", date],
          skip_if_good.check_daily_pipeline_outcome(date),
          llm_timeout_s=llm_to)
+    # Land outcome before reflect/sectors so a hang still heals the gate.
+    _push_pack(date)
     # Cheap / no-LLM — always refresh so a yesterday file cannot skip today.
     step("Horizon grade",
          [py, "-m", "src.horizon_grade", "--date", date],

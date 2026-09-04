@@ -13,6 +13,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import config, deepseek_client, scoreboard
+from .run_reflect import last_assistant
 from .sector_memory import scoreboard_summary, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS
 
@@ -55,6 +56,46 @@ def _candidate_triggers(limit: int = 12) -> str:
     return "\n".join(rows) or "(no candidate lessons yet)"
 
 
+def _persist(date_str: str) -> None:
+    """Land this sector reflect before the next Grok call or a kill."""
+    try:
+        from .run_postclose_all import _push_pack
+        _push_pack(date_str)
+    except Exception as e:  # noqa: BLE001
+        print(f"[sector-reflect] persist warn: {e}")
+
+
+def _write_reflect(sector: str, date_str: str, slug: str, out_dir: str,
+                   text: str, entry: dict, board: dict) -> None:
+    lb = _parse_lesson_block(text)
+    os.makedirs(config.LESSONS_CANDIDATE, exist_ok=True)
+    lesson_path = os.path.join(
+        config.LESSONS_CANDIDATE, f"{date_str}_sector_{slug}_lesson.md")
+    with open(lesson_path, "w", encoding="utf-8") as fh:
+        fh.write("---\n")
+        fh.write(f"trigger_pattern: \"{lb.get('TRIGGER_PATTERN', '')}\"\n")
+        fh.write(f"current_behavior: \"{lb.get('CURRENT_BEHAVIOR', '')}\"\n")
+        fh.write(f"corrected_behavior: \"{lb.get('CORRECTED_BEHAVIOR', '')}\"\n")
+        fh.write(f"evidence_cited: \"{lb.get('EVIDENCE', '')}\"\n")
+        fh.write(f"error_category: \"{lb.get('ERROR_CATEGORY', 'NONE')}\"\n")
+        fh.write(f"falsifier: \"{lb.get('FALSIFIER', '')}\"\n")
+        fh.write(f"sector: \"{sector}\"\n")
+        fh.write(f"date: \"{date_str}\"\n")
+        fh.write("status: \"candidate\"\n---\n\n")
+        fh.write(f"# Sector Reflection — {sector} — {date_str}\n\n")
+        fh.write(text + "\n")
+
+    os.makedirs(out_dir, exist_ok=True)
+    reflect_md = os.path.join(out_dir, f"{slug}_reflect.md")
+    with open(reflect_md, "w", encoding="utf-8") as fh:
+        fh.write(f"# Sector Reflect — {sector} — {date_str}\n\n")
+        fh.write(text + "\n")
+
+    entry["reflection_lesson_ref"] = lesson_path
+    scoreboard.save(board)
+    print(f"[sector-reflect] {sector}: {lb.get('ERROR_CATEGORY')} -> {lesson_path}")
+
+
 def run_one(sector: str, date_str: str) -> None:
     topic = topic_for(sector)
     board = scoreboard.load()
@@ -69,6 +110,17 @@ def run_one(sector: str, date_str: str) -> None:
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
         print(f"[sector-reflect] skip {sector}: reflect already on disk")
         return
+
+    transcript_path = os.path.join(
+        "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json")
+    reused = last_assistant(transcript_path)
+    if len(reused) >= 200:
+        print(f"[sector-reflect] {sector}: reuse transcript "
+              f"({len(reused)} chars) — no LLM")
+        _write_reflect(sector, date_str, slug, out_dir, reused, entry, board)
+        _persist(date_str)
+        return
+
     config.require_llm()
     predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
     outcome_md = _read(os.path.join(out_dir, f"{slug}_outcome.md"))
@@ -98,8 +150,7 @@ def run_one(sector: str, date_str: str) -> None:
                 (config.MODEL_REFLECT, 16000),
                 (config.MODEL_PREDICT, 8000)],
         tools=False,
-        transcript_path=os.path.join(
-            "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json"),
+        transcript_path=transcript_path,
         trace_path=os.path.join(out_dir, f"{slug}_reflect_trace.md"),
         stage_label=f"SECTOR REFLECT {sector} {date_str}",
     )
@@ -112,32 +163,8 @@ def run_one(sector: str, date_str: str) -> None:
               f"not writing reflect md or lesson")
         return
 
-    lb = _parse_lesson_block(text)
-    os.makedirs(config.LESSONS_CANDIDATE, exist_ok=True)
-    lesson_path = os.path.join(
-        config.LESSONS_CANDIDATE, f"{date_str}_sector_{slug}_lesson.md")
-    with open(lesson_path, "w", encoding="utf-8") as fh:
-        fh.write("---\n")
-        fh.write(f"trigger_pattern: \"{lb.get('TRIGGER_PATTERN', '')}\"\n")
-        fh.write(f"current_behavior: \"{lb.get('CURRENT_BEHAVIOR', '')}\"\n")
-        fh.write(f"corrected_behavior: \"{lb.get('CORRECTED_BEHAVIOR', '')}\"\n")
-        fh.write(f"evidence_cited: \"{lb.get('EVIDENCE', '')}\"\n")
-        fh.write(f"error_category: \"{lb.get('ERROR_CATEGORY', 'NONE')}\"\n")
-        fh.write(f"falsifier: \"{lb.get('FALSIFIER', '')}\"\n")
-        fh.write(f"sector: \"{sector}\"\n")
-        fh.write(f"date: \"{date_str}\"\n")
-        fh.write("status: \"candidate\"\n---\n\n")
-        fh.write(f"# Sector Reflection — {sector} — {date_str}\n\n")
-        fh.write(text + "\n")
-
-    reflect_md = os.path.join(out_dir, f"{slug}_reflect.md")
-    with open(reflect_md, "w", encoding="utf-8") as fh:
-        fh.write(f"# Sector Reflect — {sector} — {date_str}\n\n")
-        fh.write(text + "\n")
-
-    entry["reflection_lesson_ref"] = lesson_path
-    scoreboard.save(board)
-    print(f"[sector-reflect] {sector}: {lb.get('ERROR_CATEGORY')} -> {lesson_path}")
+    _write_reflect(sector, date_str, slug, out_dir, text, entry, board)
+    _persist(date_str)
 
 
 def main() -> None:

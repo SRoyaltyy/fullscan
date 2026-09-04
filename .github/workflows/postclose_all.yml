@@ -54,13 +54,40 @@ jobs:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
       FINVIZ_SKIP_LIVE: "1"
+      FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
+      MAP_POSTCLOSE_LOCK: "/home/gha/fullscan-persist/locks/map-postclose.lock"
     steps:
+      - name: Wait if ECS systemd post-close owns the box
+        run: |
+          echo "skip=" >> "$GITHUB_ENV"
+          LOCK="${MAP_POSTCLOSE_LOCK:-/home/gha/fullscan-persist/locks/map-postclose.lock}"
+          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
+            exec 9>"$LOCK"
+            if flock -n 9; then
+              echo "lock is free"
+              flock -u 9 || true
+            else
+              echo "ECS systemd job holds the lock — backing off"
+              echo "skip=yes" >> "$GITHUB_ENV"
+            fi
+          else
+            echo "no persist lock dir (ubuntu) — continue"
+          fi
+
       - uses: actions/checkout@v4
+        if: env.skip != 'yes'
         with:
           clean: false
 
+      - name: Match origin/main (leftover ECS files must not fake SKIP)
+        if: env.skip != 'yes'
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd -- 01_daily 02_lessons 03_scoreboard || true
+
       - name: Skip if post-close pack already on disk (no LLM)
-        if: github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           if [ -z "$DATE" ]; then
@@ -72,18 +99,18 @@ jobs:
           fi
 
       - uses: actions/setup-python@v5
-        if: env.skip_python != 'yes'
+        if: env.skip != 'yes' && env.skip_python != 'yes'
         with:
           python-version: "3.10"
 
       - name: Install
-        if: env.skip_python != 'yes'
+        if: env.skip != 'yes' && env.skip_python != 'yes'
         run: |
           pip install -r requirements.txt
           pip install psycopg2-binary yfinance pandas requests openai ddgs || true
 
       - name: Post-Close ALL
-        if: env.skip_python != 'yes'
+        if: env.skip != 'yes' && env.skip_python != 'yes'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
@@ -100,6 +127,14 @@ jobs:
         run: |
           set -e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
+          LOCK="${MAP_POSTCLOSE_LOCK:-/home/gha/fullscan-persist/locks/map-postclose.lock}"
+          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
+            exec 9>"$LOCK"
+            if ! flock -n 9; then
+              echo "ECS systemd job grabbed the lock — backing off"
+              exit 0
+            fi
+          fi
           DATE="${{ github.event.inputs.run_date }}"
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
@@ -111,7 +146,7 @@ jobs:
           python -m src.run_postclose_all "${ARGS[@]}"
 
       - name: Commit post-close artifacts
-        if: always() && env.skip_python != 'yes'
+        if: always() && env.skip != 'yes' && env.skip_python != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

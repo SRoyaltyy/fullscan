@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from . import compute_sector_scores, config, deepseek_client, scoreboard
+from .run_reflect import last_assistant
 from .sector_memory import topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS
 
@@ -85,47 +86,18 @@ def _etf_actual(etf: str, date_str: str) -> dict:
     return out
 
 
-def run_one(sector: str, date_str: str) -> None:
-    etf = SECTOR_ETFS[sector]
-    slug = _slug(sector)
-    out_dir = os.path.join(config.DAILY_SECTORS, date_str)
-    existing = os.path.join(out_dir, f"{slug}_outcome.md")
-    if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
-        print(f"[sector-outcome] skip {sector}: outcome already on disk")
-        return
-    predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
-    if predict_md == "(missing)":
-        print(f"[sector-outcome] skip {sector}: no predict file")
-        return
-    config.require_llm()
+def _persist(date_str: str) -> None:
+    """Land this sector before the next Grok call or a job-timeout kill."""
+    try:
+        from .run_postclose_all import _push_pack
+        _push_pack(date_str)
+    except Exception as e:  # noqa: BLE001
+        print(f"[sector-outcome] persist warn: {e}")
 
-    actual = _etf_actual(etf, date_str)
-    with open(os.path.join(config.GROUNDING, "sector_outcome_prompt.md"),
-              encoding="utf-8") as fh:
-        prompt = fh.read()
 
-    user_msg = (
-        f"DATE: {date_str}\nSECTOR: {sector}\nETF: {etf}\n\n"
-        f"=== MORNING SECTOR PREDICTION ===\n{predict_md}\n\n"
-        f"=== ACTUALS (deterministic) ===\n"
-        f"ETF_PCT: {actual.get('pct')}\nSPY_PCT: {actual.get('spy_pct')}\n"
-        f"REL_PCT: {actual.get('rel')}\nOPEN: {actual.get('open')} "
-        f"CLOSE: {actual.get('close')}\n\n"
-        "Execute the sector post-session review now."
-    )
-
-    text = deepseek_client.chat(
-        [{"role": "system", "content": prompt},
-         {"role": "user", "content": user_msg}],
-        model=config.MODEL_OUTCOME,
-        tools=True,
-        max_tokens=8000,
-        transcript_path=os.path.join(
-            "01_daily/_transcripts", f"{date_str}_sector_{slug}_outcome.json"),
-        trace_path=os.path.join(out_dir, f"{slug}_outcome_trace.md"),
-        stage_label=f"SECTOR OUTCOME {sector} {date_str}",
-    )
-
+def _write_outcome(sector: str, date_str: str, out_dir: str, slug: str,
+                   actual: dict, text: str) -> None:
+    os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}_outcome.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# Sector Outcome — {sector} — {date_str}\n\n")
@@ -156,6 +128,59 @@ def run_one(sector: str, date_str: str) -> None:
         print(f"[sector-outcome] {sector}: ETF {pct}% dir_hit={grade['direction_hit']}")
     else:
         print(f"[sector-outcome] {sector}: no ETF actuals ({actual})")
+
+
+def run_one(sector: str, date_str: str) -> None:
+    etf = SECTOR_ETFS[sector]
+    slug = _slug(sector)
+    out_dir = os.path.join(config.DAILY_SECTORS, date_str)
+    existing = os.path.join(out_dir, f"{slug}_outcome.md")
+    if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
+        print(f"[sector-outcome] skip {sector}: outcome already on disk")
+        return
+    predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
+    if predict_md == "(missing)":
+        print(f"[sector-outcome] skip {sector}: no predict file")
+        return
+
+    actual = _etf_actual(etf, date_str)
+    transcript_path = os.path.join(
+        "01_daily/_transcripts", f"{date_str}_sector_{slug}_outcome.json")
+    reused = last_assistant(transcript_path)
+    if len(reused) >= 200:
+        print(f"[sector-outcome] {sector}: reuse transcript "
+              f"({len(reused)} chars) — no LLM")
+        _write_outcome(sector, date_str, out_dir, slug, actual, reused)
+        _persist(date_str)
+        return
+
+    config.require_llm()
+    with open(os.path.join(config.GROUNDING, "sector_outcome_prompt.md"),
+              encoding="utf-8") as fh:
+        prompt = fh.read()
+
+    user_msg = (
+        f"DATE: {date_str}\nSECTOR: {sector}\nETF: {etf}\n\n"
+        f"=== MORNING SECTOR PREDICTION ===\n{predict_md}\n\n"
+        f"=== ACTUALS (deterministic) ===\n"
+        f"ETF_PCT: {actual.get('pct')}\nSPY_PCT: {actual.get('spy_pct')}\n"
+        f"REL_PCT: {actual.get('rel')}\nOPEN: {actual.get('open')} "
+        f"CLOSE: {actual.get('close')}\n\n"
+        "Execute the sector post-session review now."
+    )
+
+    text = deepseek_client.chat(
+        [{"role": "system", "content": prompt},
+         {"role": "user", "content": user_msg}],
+        model=config.MODEL_OUTCOME,
+        tools=True,
+        max_tokens=8000,
+        transcript_path=transcript_path,
+        trace_path=os.path.join(out_dir, f"{slug}_outcome_trace.md"),
+        stage_label=f"SECTOR OUTCOME {sector} {date_str}",
+    )
+    _write_outcome(sector, date_str, out_dir, slug, actual, text)
+    _persist(date_str)
 
 
 def main() -> None:

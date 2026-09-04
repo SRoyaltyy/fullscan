@@ -233,10 +233,13 @@ def test_preopen_lock_matches_postclose() -> None:
     pre = (ROOT / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
     post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
     assert "locks/preopen.lock" in pre
     assert "locks/preopen.lock" in post
     assert "/tmp/fullscan-preopen.lock" not in pre
     assert "fullscan-persist/locks/preopen.lock" in yml
+    assert "locks/map-postclose.lock" in post
+    assert "fullscan-persist/locks/map-postclose.lock" in post_yml
 
 
 def test_heal_targets_all_jobs() -> None:
@@ -269,6 +272,8 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "maybe postclose_all.yml" in orch
     assert "--job postclose_all || return 1" in orch
     assert "skip Post-Close ALL until 16:00 ET" in orch
+    assert "18h Post-Close ALL spans midnight" in orch
+    assert 'WF" != "postclose_all.yml"' in orch
 
 
 def test_ranker_inputs_before_llm_packet() -> None:
@@ -325,6 +330,12 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
     assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
     assert "timeout-minutes: 1080" in post_yml
+    assert "MAP_POSTCLOSE_LOCK" in post_yml
+    assert "leftover ECS files must not fake SKIP" in post_yml
+    assert "git reset --hard origin/main" in post_yml
+    assert "git clean -fd -- 01_daily" in post_yml
+    assert "ECS systemd job holds the lock" in post_yml
+    assert "ECS systemd job grabbed the lock" in post_yml
     assert "def _push_pack" in post
     unit = (ROOT / "scripts" / "systemd" / "fullscan-map-postclose.service").read_text(
         encoding="utf-8")
@@ -445,6 +456,9 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "setdefaulttimeout(30)" in src
     assert "threads=False" in src
     assert "outcome already on disk" in src
+    assert "reuse transcript" in src
+    assert "last_assistant" in src
+    assert "_persist" in src
     # One failure must not abort the remaining 10.
     assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
 
@@ -452,6 +466,9 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
 def test_sector_reflect_skips_existing() -> None:
     src = (ROOT / "src" / "run_sector_reflect.py").read_text(encoding="utf-8")
     assert "reflect already on disk" in src
+    assert "reuse transcript" in src
+    assert "last_assistant" in src
+    assert "_persist" in src
     assert 'print(f"[sector-reflect] WARN {sector}: {e}")' in src
 
 
@@ -483,6 +500,8 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
 def test_postclose_pushes_after_each_llm_layer() -> None:
     """Kill after reflect / sectors / learn must still leave those files on main."""
     src = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    idx_gen = src.index('step("General outcome"')
+    idx_push_gen = src.index("_push_pack(date)", idx_gen)
     idx_ref = src.index('step("General reflect"')
     idx_push_ref = src.index("_push_pack(date)", idx_ref)
     idx_out = src.index('step("Sector outcomes"')
@@ -492,6 +511,7 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     idx_learn = src.index('step("Learn cycle"')
     idx_push_learn = src.index("_push_pack(date)", idx_learn)
     idx_cap = src.index('step("Captain research')
+    assert idx_push_gen < idx_ref, "must persist general outcome before reflect"
     assert idx_push_ref < idx_out, "must persist general reflect before sectors"
     assert idx_push_out < idx_sec_ref, "must persist sector outcomes before reflects"
     assert idx_push_sec_ref < idx_learn, "must persist sector reflects before learn"
