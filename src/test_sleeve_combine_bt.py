@@ -11,6 +11,7 @@ from src.sleeve_combine_bt import (
     assert_matched_hold,
     build_bar_fn,
     dashboard_payload,
+    enrich_io_with_mover,
     exit_date,
     fills_from_trades,
     io_keep,
@@ -265,6 +266,7 @@ def test_report_says_combine_lost_when_it_did() -> None:
     assert "stay in the size book" in md_attr
     assert "How to backtest every session" in md_attr
     assert "sleeve-combine" in md_attr
+    assert "beats the raw size book" in md_attr
 
 
 def test_dual_keeps_io_on_down_days() -> None:
@@ -352,6 +354,49 @@ def test_run_bt_rejects_bad_mode() -> None:
     raise AssertionError("bad mode must raise")
 
 
+def test_overlay_keeps_io_on_red_and_caps_mover() -> None:
+    """Full .io book stays on; mover satellite is 1 name, even with 100% cash."""
+    px = {("AAA", d): (100.0, 100.0) for d in CAL}
+    px.update({("CCC", d): (50.0, 50.0) for d in CAL})
+    px.update({("DDD", d): (25.0, 25.0) for d in CAL})
+    sim = run_bt(
+        calendar=CAL,
+        scores={"2026-08-13": 5.0, "2026-08-14": -6.0},
+        mover_calls={
+            "2026-08-13": [{"ticker": "AAA", "conviction": 2},
+                           {"ticker": "DDD", "conviction": 1}],
+        },
+        io_picks={"2026-08-13": [{"ticker": "CCC", "score": 1}],
+                  "2026-08-14": [{"ticker": "CCC", "score": 1}]},
+        bars=_bars(px), hold="1d", mode="overlay",
+        capital=24_000, top_n=10, pct=0.10, sat_n=1, sat_pct=0.10,
+        fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    d14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    assert d13["filled_am"] == 1, "satellite capped at sat_n"
+    assert d13["filled_pm"] == 1, "io still fills after satellite"
+    assert d14["filled_pm"] == 1, "io still fills the red afternoon"
+    assert d14["filled_am"] == 0, "hard-red morning does not add mover"
+    srcs = {t["source"] for t in sim["trades"]}
+    assert "io" in srcs and "mover" in srcs
+
+
+def test_enrich_sizes_up_overlap_and_adds_book_extra() -> None:
+    io = {"2026-08-13": [
+        {"ticker": "AAA", "score": 1, "bucket": "large+"},
+        {"ticker": "BBB", "score": 0.5, "bucket": "mid"},
+    ]}
+    mover = {"2026-08-13": [{"ticker": "AAA"}, {"ticker": "ZZZ"}]}
+    buys = {"2026-08-13": [{"ticker": "ZZZ", "score": 0.4}]}
+    out = enrich_io_with_mover(io, mover, buys, boost_pct=0.15)
+    tickers = [p["ticker"] for p in out["2026-08-13"]]
+    assert tickers[0] == "AAA"
+    assert "ZZZ" in tickers
+    aaa = next(p for p in out["2026-08-13"] if p["ticker"] == "AAA")
+    assert aaa["_pct"] == 0.15
+
+
 def test_fills_are_buy_then_sell() -> None:
     trades = [{
         "entry_dt": "2026-08-13 09:30 ET", "date": "2026-08-13",
@@ -432,6 +477,8 @@ if __name__ == "__main__":
     test_parse_reasons_and_keeps()
     test_io_attr_cut_splits_down_vs_green()
     test_run_bt_rejects_bad_mode()
+    test_overlay_keeps_io_on_red_and_caps_mover()
+    test_enrich_sizes_up_overlap_and_adds_book_extra()
     test_fills_are_buy_then_sell()
     test_dashboard_lists_every_session_fill()
     test_calendar_from_to_clips()

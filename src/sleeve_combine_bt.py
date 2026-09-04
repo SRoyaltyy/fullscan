@@ -66,7 +66,7 @@ SIZE_BUCKETS = ("large+", "mid", "small/micro")
 OPEN_CLOCK, CLOSE_CLOCK = "09:30 ET", "16:00 ET"
 WINDOW_START = "2026-08-13"
 
-MODES = ("combine", "mover_only", "io_only", "dual")
+MODES = ("combine", "mover_only", "io_only", "dual", "overlay")
 
 
 def load_fees() -> dict:
@@ -106,7 +106,7 @@ def assert_matched_hold(mode: str, hold: str) -> None:
             f"(allowed: {', '.join(MATCHED_HOLDS)}; "
             f"2w/1m are .io-only reference books)"
         )
-    if mode == "combine" and hold not in HOLD_SESSIONS:
+    if mode in ("combine", "overlay") and hold not in HOLD_SESSIONS:
         raise MismatchError(
             f"cannot combine mover with .io hold={hold}: "
             "mover has no 2w/1m book; cash would lock across unknown sessions"
@@ -186,6 +186,69 @@ def load_io_picks(hold: str, select: str) -> dict[str, list[dict]]:
                     picks.append({**p, "ticker": t})
         by[date] = picks
     return by
+
+
+def load_io_buy_lists(hold: str) -> dict[str, list[dict]]:
+    """Full horizon BUY list (not the 3-per-bucket sleeve). Close-knowable."""
+    book_h = hold if hold in HOLD_SESSIONS or hold in IO_ONLY_HOLDS else "1d"
+    by: dict[str, list[dict]] = {}
+    for path in sorted(BOOK_DIR.glob("????-??-??_stock_book.json")):
+        date = path.name[:10]
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        book = ((doc.get("books") or {}).get(book_h)) or {}
+        picks = []
+        for p in book.get("buy") or []:
+            t = (p.get("ticker") or "").upper()
+            if t:
+                picks.append({**p, "ticker": t})
+        by[date] = picks
+    return by
+
+
+def enrich_io_with_mover(
+    io_picks: dict[str, list[dict]],
+    mover_calls: dict[str, list[dict]],
+    buy_lists: dict[str, list[dict]] | None = None,
+    *,
+    boost_pct: float = 0.20,
+) -> dict[str, list[dict]]:
+    """Mover as information on the close book — not a second account.
+
+    Today's mover BUY list is knowable at 09:30, so it is legal at the
+    16:00 .io fill. Overlap names in the size sleeve are sized up and
+    taken first. A mover name that is on the same-horizon BUY list but
+    missed the 3-per-bucket cut is appended as an extra slot (idle cash).
+    """
+    out: dict[str, list[dict]] = {}
+    for date, picks in io_picks.items():
+        movers = {(r.get("ticker") or "").upper()
+                  for r in (mover_calls.get(date) or []) if r.get("ticker")}
+        have = {(p.get("ticker") or "").upper() for p in picks}
+        boosted, rest = [], []
+        for p in picks:
+            t = (p.get("ticker") or "").upper()
+            q = dict(p)
+            if t in movers:
+                q["_pct"] = boost_pct
+                q["_boost"] = True
+                boosted.append(q)
+            else:
+                rest.append(q)
+        extras = []
+        for p in buy_lists.get(date) or [] if buy_lists else []:
+            t = (p.get("ticker") or "").upper()
+            if not t or t in have or t not in movers:
+                continue
+            extras.append({
+                **p, "ticker": t, "_pct": boost_pct, "_boost": True,
+                "bucket": p.get("bucket") or "mover-book",
+            })
+            have.add(t)
+        out[date] = boosted + rest + extras
+    return out
 
 
 def _load_close_cache() -> dict[tuple[str, str], float]:
@@ -516,8 +579,16 @@ def run_bt(
     top_n: int = 10,
     pct: float = 0.10,
     fees: dict | None = None,
+    sat_n: int = 1,
+    sat_pct: float = 0.10,
+    sat_hold: str = "1d",
 ) -> dict:
-    """Shared-account fill sim. `bars(ticker, date) -> {open, close}`."""
+    """Shared-account fill sim. `bars(ticker, date) -> {open, close}`.
+
+    overlay: .io size book still fills every close. Mover may take a
+    capped satellite at the open (sat_n names at sat_pct) when S ≥ +1.
+    That spends idle cash; it does not switch the account off .io.
+    """
     if mode not in MODES:
         raise ValueError(f"mode must be one of {MODES}")
     if mode == "dual":
@@ -541,13 +612,16 @@ def run_bt(
         return eq
 
     def try_enter(date: str, source: str, candidates: list[dict], field: str,
-                  clock: str) -> tuple[int, int]:
+                  clock: str, fill_pct: float | None = None,
+                  fill_hold: str | None = None,
+                  fill_lim: int | None = None) -> tuple[int, int]:
         nonlocal cash
         filled = 0
         looked = 0
+        lim = top_n if fill_lim is None else fill_lim
         open_tickers = {p["ticker"] for p in open_pos}
         for row in candidates:
-            if filled >= top_n:
+            if filled >= lim:
                 break
             t = (row.get("ticker") or "").upper()
             if not t:
@@ -563,13 +637,17 @@ def run_bt(
                 skipped.append({"date": date, "ticker": t, "source": source,
                                 "reason": f"missing {field} bar"})
                 continue
-            xd = exit_date(cal, date, hold)
+            use_hold = row.get("_hold") or fill_hold or hold
+            xd = exit_date(cal, date, use_hold)
             if xd is None:
                 skipped.append({"date": date, "ticker": t, "source": source,
                                 "reason": "no exit date (end of calendar)"})
                 continue
             eq = mark(date)
-            notional = round(eq * pct, 2)
+            use_pct = row.get("_pct")
+            if use_pct is None:
+                use_pct = pct if fill_pct is None else fill_pct
+            notional = round(eq * float(use_pct), 2)
             shares = int(notional // px)
             if shares <= 0:
                 skipped.append({"date": date, "ticker": t, "source": source,
@@ -588,7 +666,7 @@ def run_bt(
                 "side": "BUY", "shares": shares, "entry_px": px,
                 "notional": round(notional, 2), "fee_in": round(fee_in, 2),
                 "exit_date": xd, "exit_dt": f"{xd} {CLOSE_CLOCK}",
-                "source": source, "hold": hold,
+                "source": source, "hold": use_hold,
                 "conviction": row.get("_conv") or row.get("conviction") or row.get("score"),
                 "last_px": _px(bar, "close") or px,
             }
@@ -625,29 +703,38 @@ def run_bt(
             want = BUCKET_MOVER if (score is None or score >= MOVER_GATE) else BUCKET_CASH
         elif mode == "io_only":
             want = BUCKET_IO
+        elif mode == "overlay":
+            want = "overlay"
         else:
             want = bucket
 
         n_mover = len(mover_calls.get(date) or [])
         has_book = date in io_picks
         n_io = len(io_picks.get(date) or [])
+        want_m = want == BUCKET_MOVER or (
+            mode == "overlay" and (score is None or score >= MOVER_GATE))
+        want_i = want == BUCKET_IO or mode == "overlay"
         reasons = []
-        if want == BUCKET_MOVER and n_mover == 0:
+        if want_m and n_mover == 0:
             reasons.append("mover source empty (no BUY calls)")
-        if want == BUCKET_IO and not has_book:
+        if want_i and not has_book:
             reasons.append("io source missing (no stock_book file)")
-        elif want == BUCKET_IO and n_io == 0:
+        elif want_i and n_io == 0:
             reasons.append("io source empty (book has no buys)")
         if want == BUCKET_CASH:
             reasons.append("route cash — no new entries")
 
         filled_am = filled_pm = 0
-        if want == BUCKET_MOVER:
+        if want_m:
+            am_lim = sat_n if mode == "overlay" else top_n
+            am_pct = sat_pct if mode == "overlay" else pct
+            am_hold = sat_hold if mode == "overlay" else hold
             filled_am, _ = try_enter(
                 date, "mover", (mover_calls.get(date) or [])[: top_n * 3],
-                "open", OPEN_CLOCK)
+                "open", OPEN_CLOCK, fill_pct=am_pct, fill_hold=am_hold,
+                fill_lim=am_lim)
         n_exits = close_exits(date)
-        if want == BUCKET_IO:
+        if want_i:
             filled_pm, _ = try_enter(
                 date, "io", (io_picks.get(date) or []),
                 "close", CLOSE_CLOCK)
@@ -846,6 +933,26 @@ def sweep_live(capital: float = 100_000.0, top_n: int = 10,
             "gross_loss")}
         row["wallets"] = dual.get("wallets")
         results.append(row)
+        buys = load_io_buy_lists(hold)
+        enriched = enrich_io_with_mover(io, mover, buys)
+        for label, picks, md in (
+            ("overlay", io, "overlay"),
+            ("overlay_boost", enriched, "overlay"),
+            ("io_boost", enriched, "io_only"),
+        ):
+            sim = run_bt(
+                calendar=cal, scores=scores, mover_calls=mover, io_picks=picks,
+                bars=bars, hold=hold, mode=md, io_select="size",
+                capital=capital, top_n=top_n, pct=pct,
+            )
+            row = {k: sim[k] for k in (
+                "hold", "mode", "io_select", "n_trades", "hit",
+                "total_ret_pct", "max_dd_pct", "final_equity",
+                "n_skipped", "n_gap_days", "by_source", "gross_win",
+                "gross_loss")}
+            row["mode"] = label
+            row["io_select"] = "size+mover" if "boost" in label else "size"
+            results.append(row)
     # .io-only 2w reference — not a combine
     io2 = load_io_picks("2w", "size")
     ref = run_bt(
@@ -881,11 +988,19 @@ def run_one_live(hold: str, mode: str, io_select: str = "size",
                  pct: float = 0.10, from_date: str | None = None,
                  to_date: str | None = None) -> dict:
     payload, cal, scores, mover = load_live(from_date, to_date)
-    io = load_io_picks(hold if hold != "2w" else "2w", io_select)
+    select = "size" if str(io_select).startswith("size") else "top"
+    io = load_io_picks(hold if hold != "2w" else "2w", select)
+    engine = "overlay" if str(mode).startswith("overlay") else mode
+    if mode in ("overlay_boost", "io_boost") or io_select == "size+mover":
+        io = enrich_io_with_mover(io, mover, load_io_buy_lists(hold))
+        io_select = "size+mover"
+        if mode == "io_boost":
+            engine = "io_only"
     kw = dict(calendar=cal, scores=scores, mover_calls=mover, io_picks=io,
               bars=build_bar_fn(payload), hold=hold, io_select=io_select,
               capital=capital, top_n=top_n, pct=pct)
-    sim = run_dual(**kw) if mode == "dual" else run_bt(mode=mode, **kw)
+    sim = run_dual(**kw) if engine == "dual" else run_bt(mode=engine, **kw)
+    sim["mode"] = mode
     sim["window"] = [cal[0] if cal else None, cal[-1] if cal else None]
     sim["generated_at"] = datetime.now(ET).isoformat(timespec="seconds")
     return sim
@@ -895,8 +1010,29 @@ def _findings(rows: list[dict]) -> str:
     by = {(r.get("hold"), r.get("mode")): r for r in rows}
     c1, m1, i1 = by.get(("1d", "combine")), by.get(("1d", "mover_only")), by.get(("1d", "io_only"))
     d1 = by.get(("1d", "dual"))
+    i3 = by.get(("3d", "io_only"))
+    scored = [r for r in rows if r.get("total_ret_pct") is not None]
+    best = max(scored, key=lambda r: r["total_ret_pct"]) if scored else None
     if not (c1 and m1 and i1):
         return ""
+    champ = (
+        f" Best book this window: **{best['hold']} {best['mode']} "
+        f"{best['total_ret_pct']:+.2f}%**."
+        if best else ""
+    )
+    top_io = i3["total_ret_pct"] if i3 else i1["total_ret_pct"]
+    beat = ""
+    if best and best["total_ret_pct"] > top_io + 1e-9:
+        beat = (
+            f" Overlay / boost **beats** raw .io size "
+            f"({top_io:+.2f}%) by keeping the size book at full capital "
+            f"and using mover only as idle-cash + close-print size-up."
+        )
+    elif best:
+        beat = (
+            " Splitting capital with mover still cannot beat a full .io "
+            "size book on total return — dual is a blend, not an upgrade."
+        )
     dual_line = ""
     if d1:
         dual_line = (
@@ -910,11 +1046,11 @@ def _findings(rows: list[dict]) -> str:
         f"That is worse than mover-only 1d ({m1['total_ret_pct']:+.2f}%) "
         f"and worse than .io-only 1d size ({i1['total_ret_pct']:+.2f}%). "
         "Copying .io green-pile / join-good / sector-not-red onto mover "
-        "names also fails on down days (weak-sector mover names bounced). "
-        "The attribute that transfers is the **size book plus staying on**: "
-        "two wallets, same hold — mover gated on green mornings, .io size "
-        "always invested. That is `dual`."
+        "names also fails on down days. Fifty-fifty dual is a blend, not "
+        "an upgrade — it cannot beat the stronger sleeve."
         + dual_line
+        + champ
+        + beat
     )
 
 
@@ -1047,7 +1183,7 @@ def render(doc: dict, primary: dict | None = None) -> str:
     ]
     for r in rows:
         bs = r.get("by_source") or {}
-        tag = "**" if r.get("mode") == "dual" and r.get("hold") == "1d" else ""
+        tag = "**" if r.get("mode") == "io_boost" and r.get("hold") == "3d" else ""
         lines.append(
             f"| {tag}{r['hold']}{tag} | {tag}{r['mode']}{tag} | "
             f"{r['total_ret_pct']:+.2f}% | {r['max_dd_pct']:.2f}% | "
@@ -1058,7 +1194,27 @@ def render(doc: dict, primary: dict | None = None) -> str:
         )
     lines += [
         "",
-        "## What the 1d combine is allowed to do",
+        "## What beats the raw size book",
+        "",
+        "Do **not** split the account 50/50. That is dual, and it lost. "
+        "Keep 100% of capital on the size book. Use mover as information "
+        "at the close (today's BUY list is knowable at 09:30): size-up "
+        "overlap names and add a mover name that already printed on the "
+        "same-horizon BUY list. That is `io_boost`. On a 1d hold, also "
+        "spend idle cash on **one** gated mover name at 09:30 (`overlay`).",
+        "",
+        "| Clock | Overlay / boost |",
+        "|---|---|",
+        "| ~05:55 | Read morning S |",
+        "| 09:30 | 1d `overlay` only: if S ≥ +1, one mover name at 10% from idle cash |",
+        "| 16:00 | Exit anything whose hold elapsed |",
+        "| 16:00 | Always fill the size book. Size-up mover∩book names (20%). |",
+        "| S < −3 | No new *mover* satellite; .io size still buys |",
+        "",
+        "Switching one account (the old `combine` route) is below for "
+        "history. It is not the production book.",
+        "",
+        "## What the 1d *switch* was allowed to do (loses)",
         "",
         "| Clock | Action |",
         "|---|---|",
@@ -1348,8 +1504,9 @@ def write_outputs(doc: dict, primary: dict) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--hold", default="1d", choices=list(HOLD_SESSIONS) + ["2w"])
-    p.add_argument("--mode", default="dual", choices=MODES)
+    p.add_argument("--hold", default="3d", choices=list(HOLD_SESSIONS) + ["2w"])
+    p.add_argument("--mode", default="io_boost",
+                   choices=list(MODES) + ["overlay_boost", "io_boost"])
     p.add_argument("--io-select", default="size", choices=("size", "top"))
     p.add_argument("--capital", type=float, default=100_000)
     p.add_argument("--top-n", type=int, default=10)

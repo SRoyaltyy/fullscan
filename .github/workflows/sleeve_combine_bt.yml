@@ -10,11 +10,11 @@ on:
       hold:
         description: "Primary hold to blotter (1d/3d/1w)"
         required: false
-        default: "1d"
+        default: "3d"
       mode:
-        description: "dual | combine | mover_only | io_only"
+        description: "io_boost | overlay | dual | combine | mover_only | io_only"
         required: false
-        default: "dual"
+        default: "io_boost"
 
 permissions:
   contents: write
@@ -37,8 +37,8 @@ jobs:
           set -e
           HOLD="${{ github.event.inputs.hold }}"
           MODE="${{ github.event.inputs.mode }}"
-          HOLD="${HOLD:-1d}"
-          MODE="${MODE:-dual}"
+          HOLD="${HOLD:-3d}"
+          MODE="${MODE:-io_boost}"
           python -m src.sleeve_combine_bt --hold "$HOLD" --mode "$MODE"
           echo "======== blotter ========"
           head -80 03_scoreboard/SLEEVE_COMBINE_BT.md || true

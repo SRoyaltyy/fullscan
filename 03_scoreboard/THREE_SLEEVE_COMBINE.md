@@ -113,8 +113,8 @@ Flattening on S < −3 *hurt* this window: .io `2w_size` was the best single boo
 1. **Do not average the three pick lists.** Excel dumps 30–50 names a day; mover wants 10; .io fills 10. Averaging re-imports Excel's median-zero / tail-or-nothing payoff.
 2. **Excel = universe + confirm.** Overnight: scan. At 09:30: if the route is mover, size-up any top-N name that also confirmed L3 (midcap hold-2) or L1/L2 that session. At the close: if the route is .io, same confirm on the size-sleeve fills.
 3. **Prefer .io size sleeves over 1d_top.** `2w_size` is the down-day engine (7 SPY-down sessions, +0.2% mean, 71% win, +0.7% vs SPY). 1d_top is the dashboard headline and the weakest long sleeve.
-4. **Keep mover's +1 gate for mover fills.** Do not loosen it just because .io can buy below +1. That gate is why max DD is tiny. Below +1, do **not** switch the mover account onto the afternoon book — give .io its own cash and leave it on.
-5. **Hard-red (S < −3) = no new *mover* risk, not flatten .io.** Dual keeps buying the size book on red mornings (1d size was *better* on S < +1 than on green in this window). A shared-account "cash" route is what made the switch lose. Do not stand up an Excel short book until S1/S2 have a fee-aware paper sleeve (borrow is ignored today).
+4. **Do not split 50/50.** Dual blends a weaker book into a stronger one and loses on total return. Keep 100% on the size book. Use mover at the close to size-up overlap (`io_boost`). On 1d, one gated mover name from idle cash (`overlay`).
+5. **Hard-red (S < −3) = no new *mover* satellite, not flatten .io.** The size book still buys. Do not stand up an Excel short book until S1/S2 have a fee-aware paper sleeve (borrow is ignored today).
 6. **Intersection is a bonus, not a requirement.** Mover ∩ book tickers this window: `ACMR`, `AUPH`, `CRSP`, `MU`. Waiting for all three to agree starves the book.
 
 ## Caveats
@@ -128,7 +128,8 @@ Flattening on S < −3 *hurt* this window: .io `2w_size` was the best single boo
 Backtest every session + buy/sell dashboard:
 
 ```
-python -m src.sleeve_combine_bt --mode dual --hold 1d
+python -m src.sleeve_combine_bt --mode io_boost --hold 3d
+python -m src.sleeve_combine_bt --mode overlay --hold 1d
 ```
 
 Page: [`dashboard/sleeve-combine/index.html`](../dashboard/sleeve-combine/index.html) → [live](https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/). Linked from the .io paper dashboard.

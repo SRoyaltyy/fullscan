@@ -478,7 +478,7 @@ def run(
 
     print("[all] → Sleeve combine (dual wallets, all days, buy/sell dashboard)")
     _run(
-        [sys.executable, "-m", "src.sleeve_combine_bt", "--mode", "dual", "--hold", "1d"],
+        [sys.executable, "-m", "src.sleeve_combine_bt", "--mode", "io_boost", "--hold", "3d"],
         check=False,
     )
 
