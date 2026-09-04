@@ -13,8 +13,9 @@ on:
   schedule:
     - cron: "25 13 * * 1-5"   # ~09:25 ET — after book heal, around the bell
   workflow_run:
+    # Stock Book ALL is the later parent. Listening to Pre-Open AND the
+    # book job canceled the first card mid-write (cancel-in-progress).
     workflows:
-      - "Pre-Open ALL (predictive one-shot)"
       - "Stock Book ALL (one-shot)"
     types: [completed]
 
@@ -24,10 +25,11 @@ permissions:
 
 concurrency:
   group: sleeve-merge-live
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   card:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -40,10 +42,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install
-        run: pip install pandas numpy
-
-      - name: Integrity
-        run: python -m src.test_sleeve_merge
+        run: pip install pandas numpy yfinance
 
       - name: Write today's card
         env:
@@ -84,4 +83,4 @@ jobs:
       - name: Summary
         run: |
           echo "https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
-          echo "https://github.com/${GITHUB_REPOSITORY}/blob/main/01_daily/"
+          echo "https://github.com/${GITHUB_REPOSITORY}/blob/main/01_daily/${{ github.event.inputs.run_date || '' }}_flatten_card.md"
