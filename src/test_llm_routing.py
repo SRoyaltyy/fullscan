@@ -619,6 +619,31 @@ def test_chat_nonempty_skips_thin_reasoner_stub() -> None:
     assert n["i"] == 2
 
 
+def test_chat_nonempty_skips_tool_dump() -> None:
+    """A ≥200-char DSML blob must not become a sector reflect file."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n' + ("q" * 200)
+    )
+    answers = [dump, "R" * 220]
+
+    def fake_chat(*args, **kwargs):
+        return answers.pop(0)
+
+    with mock.patch.object(dc, "chat", side_effect=fake_chat):
+        text = dc.chat_nonempty(
+            [{"role": "user", "content": "reflect"}],
+            ladder=[("deepseek-reasoner", 12000),
+                    ("deepseek-chat", 8000)],
+            tools=False,
+            stage_label="SECTOR REFLECT Energy 2026-09-04",
+        )
+    assert text == "R" * 220
+    from src.skip_if_good import is_tool_dump
+    assert not is_tool_dump(text)
+
+
 def test_pick_openclaw_token_prefers_live_48() -> None:
     secret64 = "s" * 64
     live48 = "l" * 48
@@ -663,6 +688,7 @@ def main() -> None:
         test_forced_close_dump_assembles_essay_from_thread,
         test_map_postclose_caps_deepseek_tool_rounds,
         test_chat_nonempty_skips_thin_reasoner_stub,
+        test_chat_nonempty_skips_tool_dump,
     ]
     failed = 0
     for fn in tests:
