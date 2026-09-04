@@ -503,19 +503,27 @@ def run(date: str | None = None, force: bool = False,
         prev_llm_to = os.environ.get("OPENCLAW_TIMEOUT")
         morning_to = os.environ.get("PREOPEN_LLM_TIMEOUT", "420")
         os.environ["OPENCLAW_TIMEOUT"] = morning_to
+        try:
+            llm_sub_t = max(120, int(morning_to) + 60)
+        except ValueError:
+            llm_sub_t = 480
         print(f"[preopen-all] morning LLM HTTP timeout {morning_to}s "
+              f"subprocess {llm_sub_t}s "
               "(hung Grok fails over; 10800s ate 2026-09-04)")
         try:
             step("news_parse", "News parse",
                  [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa])
+                  "--date", date, *fa], timeout_s=llm_sub_t)
             step("events", "Event scanner (primary)",
-                 [py, "-m", "src.run_events", "--date", date, *fa])
+                 [py, "-m", "src.run_events", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
             step("events_catcher", "Event catcher (gap hunt, no carry)",
-                 [py, "-m", "src.run_events_catcher", "--date", date, *fa])
+                 [py, "-m", "src.run_events_catcher", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
             # Deliberately NO events_fallback — carry is trash for pre-open.
             step("news_judge", "News judge",
-                 [py, "-m", "src.run_news_judge", "--date", date, *fa])
+                 [py, "-m", "src.run_news_judge", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
             # Last night's 11-sector baseline is mandatory. One overnight delta
             # refresh only; never 11 sector batches in the time-critical window.
             prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
@@ -523,21 +531,25 @@ def run(date: str | None = None, force: bool = False,
                 "MAP_HEAT_REFRESH_TIMEOUT", "1200")
             try:
                 step("map_heat_research", "Map heat morning delta refresh",
-                     [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
+                     [py, "-m", "src.map_heat_refresh", "--date", date, *fa],
+                     timeout_s=1260)
                 # No retry: a second 20-min timeout ate 2026-09-02 and
                 # pushed predicts/book past 09:30. Night baseline stands.
             finally:
                 os.environ["OPENCLAW_TIMEOUT"] = prev_timeout or morning_to
             step("news_actions", "News actions",
                  [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa])
+                  "--date", date, *fa], timeout_s=llm_sub_t)
             # Time-critical predicts first. Catalyst waits until after the book.
             step("general_predict", "General market predict",
-                 [py, "-m", "src.run_predict", "--date", date, *fa])
+                 [py, "-m", "src.run_predict", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
             step("sector_predict", "Per-sector predict (all 11)",
-                 [py, "-m", "src.run_sector_predict", "--date", date, *fa])
+                 [py, "-m", "src.run_sector_predict", "--date", date, *fa],
+                 timeout_s=2400)
             step("sector_board", "Sector board",
-                 [py, "-m", "src.sector_board", "--date", date])
+                 [py, "-m", "src.sector_board", "--date", date],
+                 timeout_s=60)
         finally:
             if prev_llm_to is None:
                 os.environ.pop("OPENCLAW_TIMEOUT", None)
@@ -610,7 +622,8 @@ def run(date: str | None = None, force: bool = False,
 
     if not skip_writes:
         step("catalyst", "Catalyst dossiers (after book)",
-             [py, "-m", "src.catalyst_daily", "--date", date, *fa])
+             [py, "-m", "src.catalyst_daily", "--date", date, *fa],
+             timeout_s=1800)
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)

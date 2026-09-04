@@ -1244,12 +1244,23 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     """
     if df is None or df.empty:
         return pd.Series(dtype=bool)
+    veto = pd.Series(False, index=df.index)
+    # Printed dead relvol is a tape fact. Lattice eligibility must not
+    # put WAY/TXG-style (0, 0.7) names on 1d BUY (2026-09-04 live book).
+    rel = None
+    for c in ("relvol", "rel_vol", "Relative Volume"):
+        if c in df.columns:
+            rel = pd.to_numeric(df[c], errors="coerce")
+            break
+    if rel is not None:
+        printed = rel.notna() & (rel > 0)
+        veto |= printed & (rel < green_pile.RELVOL_DEAD)
     # In lattice mode permission has already been decided from all domains,
     # including lookback alarm/blue/white.  Do not re-apply the legacy sector
     # veto and accidentally kill a valid direct-company exception.
     if "bull_eligible" in df.columns:
-        return ~df["bull_eligible"].astype(bool)
-    veto = pd.Series(False, index=df.index)
+        veto |= ~df["bull_eligible"].astype(bool)
+        return veto
     if "s_sector" in df.columns:
         veto |= pd.to_numeric(df["s_sector"], errors="coerce").fillna(0.0) <= HARD_SECTOR_RED
     peer = (
@@ -1265,14 +1276,6 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     if reasons is not None:
         is_lag |= reasons.str.contains(r"\bLAG\b", regex=True, na=False)
     veto |= is_lag & (peer <= 0)
-    rel = None
-    for c in ("relvol", "rel_vol", "Relative Volume"):
-        if c in df.columns:
-            rel = pd.to_numeric(df[c], errors="coerce")
-            break
-    if rel is not None:
-        printed = rel.notna() & (rel > 0)
-        veto |= printed & (rel < green_pile.RELVOL_DEAD)
     try:
         from . import book_marks
         veto |= book_marks.veto_mask(df)
@@ -1338,6 +1341,10 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
                     buy_sort if buy_sort and buy_sort in pool.columns
                     else f"score_{horizon}"
                 )
+                try:
+                    pool = pool.loc[~_buy_veto_mask(pool)]
+                except Exception:
+                    pass
                 buys = pool.sort_values(sort_col, ascending=False)
                 return buys, _rank_sells(
                     df, horizon, top_n, sell_core,

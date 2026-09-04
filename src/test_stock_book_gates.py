@@ -96,6 +96,27 @@ def test_dead_relvol_is_buy_veto() -> None:
     assert bool(veto.iloc[1]) is False
 
 
+def test_lattice_eligible_dead_relvol_still_vetoed() -> None:
+    """2026-09-04 1d BUY listed WAY (relvol 0.54, green=False)."""
+    df = pd.DataFrame([
+        _row("WAY", relvol=0.54, score=1.2),
+        _row("LIVE", relvol=1.4, score=0.8),
+    ])
+    df["bull_eligible"] = True
+    df["bull_rank"] = [2.0, 1.0]
+    veto = _buy_veto_mask(df)
+    assert bool(veto[df.Ticker == "WAY"].iloc[0]) is True
+    assert bool(veto[df.Ticker == "LIVE"].iloc[0]) is False
+    buys, _ = _book_side(
+        df, "1d", 10,
+        buy_mask=df["bull_eligible"],
+        buy_sort="bull_rank",
+        respect_mask=True,
+    )
+    assert "WAY" not in set(buys["Ticker"])
+    assert "LIVE" in set(buys["Ticker"])
+
+
 def test_pile_sorts_by_green_rank_not_opp_score() -> None:
     rows = []
     sectors = [
@@ -262,6 +283,7 @@ def main() -> None:
         test_hard_sector_red_is_buy_veto,
         test_lag_and_peer_red_is_buy_veto,
         test_dead_relvol_is_buy_veto,
+        test_lattice_eligible_dead_relvol_still_vetoed,
         test_pile_sorts_by_green_rank_not_opp_score,
         test_stand_down_empties_buy,
         test_finviz_board_reads_theme_tape,

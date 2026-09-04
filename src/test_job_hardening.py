@@ -290,6 +290,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "No retry" in pre
     assert 'PREOPEN_LLM_TIMEOUT", "420"' in pre
     assert "10800s ate 2026-09-04" in pre
+    assert "subprocess {llm_sub_t}s" in pre or "llm_sub_t" in pre
+    assert 'timeout_s=llm_sub_t' in pre
+    assert "timeout_s=2400" in pre
     assert "TimeoutExpired" in pre
     assert "weather missing/thin — retry --offline" in pre
     assert "timeout_s=1500" in pre
