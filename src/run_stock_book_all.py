@@ -28,9 +28,15 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
-def _run(cmd: list[str], check: bool = True) -> int:
+def _run(cmd: list[str], check: bool = True, timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
-    r = subprocess.run(cmd, cwd=str(ROOT), env=os.environ.copy())
+    try:
+        r = subprocess.run(
+            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        print(f"[all] WARN: timed out after {timeout_s}s: {' '.join(cmd)}",
+              flush=True)
+        return 124
     if check and r.returncode != 0:
         raise SystemExit(f"step failed ({r.returncode}): {' '.join(cmd)}")
     return r.returncode
@@ -347,8 +353,17 @@ def run(
 
     # Deterministic ranker inputs before any LLM heal. A missing judge
     # or 11 sector essays must not eat the clock and leave join/AB empty.
+    # skip_extras = land the book before 09:30. Cap each input so a hung
+    # yfinance / AB fetch cannot eat the ubuntu job and leave green.json empty.
+    wx_t = 180 if skip_extras else None
+    join_t = 180 if skip_extras else None
+    peer_t = 120 if skip_extras else None
+    ab_t = 1500 if skip_extras else None
+    book_t = 900 if skip_extras else None
+
     print("[all] → Weather / regime (before LLM heals, before join)")
-    _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
+    _run([sys.executable, "-m", "src.weather", "--date", date],
+         check=False, timeout_s=wx_t)
     if not _exists("01_daily", "weather", f"{date}_weather.json"):
         print(
             f"[all] WARN: weather did not write "
@@ -357,14 +372,16 @@ def run(
         return
 
     print("[all] → Join / match rank")
-    _run([sys.executable, "-m", "src.join", "--date", date], check=False)
+    _run([sys.executable, "-m", "src.join", "--date", date],
+         check=False, timeout_s=join_t)
     if not _exists("data", "join", f"{date}_ranked.csv"):
         print(f"[all] WARN: no join ranked file for {date} — cannot rank today")
         return
 
     if need("peer_rs"):
         print("[all] → Peer relative strength")
-        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
+        _run([sys.executable, "-m", "src.peer_rs", "--date", date],
+             check=False, timeout_s=peer_t)
         if not _exists("data", "peers", f"{date}_peer_rs.csv"):
             print("[all] WARN: peer_rs missing for", date)
     else:
@@ -373,11 +390,13 @@ def run(
     if need("ab"):
         if not _ab_raw(date):
             print("[all] → AB checklist (one day, liquid universe)")
-            _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
+            _run([sys.executable, "-m", "src.ab_checklist", "--date", date],
+                 check=False, timeout_s=ab_t)
         else:
             print("[all] skip AB checklist raw (DONE) — will enrich")
         print("[all] → AB enrich (peers + industry + sector)")
-        _run([sys.executable, "-m", "src.ab_enrich", "--date", date], check=False)
+        _run([sys.executable, "-m", "src.ab_enrich", "--date", date],
+             check=False, timeout_s=180 if skip_extras else None)
         if not _ab_enriched(date) and not _ab_raw(date):
             print("[all] WARN: AB missing — book ranks without s_ab (goldmine unused)")
         elif not _ab_enriched(date):
@@ -479,7 +498,7 @@ def run(
 
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)],
-         check=False)
+         check=False, timeout_s=book_t)
     if not (_exists("data", "stock_book", f"{date}_stock_book.json")
             or _exists("01_daily", f"{date}_stock_book.md")):
         print(f"[all] WARN: stock book files missing for {date}")

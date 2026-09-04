@@ -293,6 +293,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     extras_gate = book.find("skip extras before book")
     news_parse = book.find("[all] → News parse")
     assert 0 <= extras_gate < news_parse
+    assert "TimeoutExpired" in book
+    assert "ab_t = 1500 if skip_extras" in book
     pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
     assert "--skip-llm --skip-extras" in pre_yml
@@ -307,6 +309,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert '_already_running("preopen_all.yml")' not in hold
     post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
     assert "last_closed_session" in post
+    assert "preopen lock held — skip (exit 0" in post
+    assert "preopen service active — skip (exit 0" in post
+    assert "exit 1" not in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
     assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
     learn_yml = (WF / "learn_cycle.yml").read_text(encoding="utf-8")

@@ -18,13 +18,13 @@ ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
 echo "[map-postclose] et_hm=$ET_HM uid=$(id -u)"
 
 if [ -e "$PREOPEN_LOCK" ] && ! flock -n "$PREOPEN_LOCK" -c true 2>/dev/null; then
-  echo "[map-postclose] preopen lock held — will not git reset or run"
-  exit 1
+  echo "[map-postclose] preopen lock held — skip (exit 0; GH Post-Close ALL heals)"
+  exit 0
 fi
 if command -v systemctl >/dev/null 2>&1 \
    && systemctl is-active --quiet fullscan-preopen.service; then
-  echo "[map-postclose] preopen service active — abort"
-  exit 1
+  echo "[map-postclose] preopen service active — skip (exit 0; GH Post-Close ALL heals)"
+  exit 0
 fi
 
 if [ -f "$ENVF" ]; then
