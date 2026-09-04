@@ -131,6 +131,10 @@ def run(date: str | None = None, force: bool = False,
          [py, "-m", "src.map_heat_postclose",
           "--source-date", date, "--target-date", target],
          skip_if_good.check_map_heat_postclose(date))
+    step("Flatten ACTION (close tickets from holdings)",
+         [py, "-m", "src.flatten_action", "--date", date, "--clock", "close",
+          "--write"],
+         False)
 
     if not skip_if_good.check_daily_pipeline_outcome(date):
         print(f"[postclose-all] DEGRADED {date}: outcome still missing — "

@@ -134,6 +134,7 @@ def test_jobs_publish_dashboard_in_place() -> None:
     body = script.read_text(encoding="utf-8")
     assert "gh-pages" in body
     assert "dashboard/index.html" in body
+    assert "flatten-action" in body
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "scripts/publish_dashboard.sh" in pre
@@ -155,6 +156,9 @@ def test_all_jobs_degrade_instead_of_failing() -> None:
     assert "FATAL: no join ranked" not in book
     assert "src.stock_book" in book
     assert "check=False" in book
+    assert "src.flatten_action" in book
+    assert "src.flatten_action" in pre
+    assert "src.flatten_action" in post
 
 
 def test_label_weather_yaml_inputs_not_under_permissions() -> None:

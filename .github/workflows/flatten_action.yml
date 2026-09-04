@@ -1,0 +1,76 @@
+name: Flatten ACTION (holdings → tickets)
+
+# One cash account. Reads current flatten_switch_recycle holdings and
+# emits today's BUY/SELL/HOLD from upstream prints only:
+#   --clock open   morning S + mover BUY list + prior book
+#   --clock close  today's 2w_size print + leftover cash
+# Does not replace paper_trade / lookback_action / stock_book_diag.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      clock:
+        description: "open | close | both"
+        required: false
+        default: "both"
+        type: choice
+        options:
+          - open
+          - close
+          - both
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: flatten-action
+  cancel-in-progress: false
+
+jobs:
+  tickets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Tickets
+        env:
+          RUN_DATE: ${{ inputs.run_date }}
+          CLOCK: ${{ inputs.clock }}
+        run: |
+          set -euo pipefail
+          DATE="${RUN_DATE:-$(TZ=America/New_York date +%F)}"
+          CLOCK="${CLOCK:-both}"
+          python -m src.test_flatten_action
+          python -m src.flatten_action --date "$DATE" --clock "$CLOCK" --write
+          echo "======== tickets ========"
+          cat "01_daily/${DATE}_flatten_action.md" || true
+          test -s dashboard/flatten-action/index.html
+      - name: Commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          bash scripts/safe_git_push.sh \
+            "auto: flatten ACTION tickets" \
+            data/flatten_action/ \
+            01_daily/*_flatten_action.md \
+            03_scoreboard/FLATTEN_ACTION.md \
+            dashboard/flatten-action/ \
+            00_grounding/flatten_action_policy.json
+      - name: Publish Pages
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/flatten-action/"

@@ -757,7 +757,10 @@ def _prior_book(book_map: dict[str, dict], cal: list[str], date: str,
 
 def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                        policy: dict | None = None,
-                       capital: float = 100_000) -> dict:
+                       capital: float = 100_000,
+                       through: str | None = None,
+                       keep_open: bool = False,
+                       stop_after: str | None = None) -> dict:
     """One book: hold .io 2w_size, flatten at the 09:30 open when the
     morning score is green AND mover has BUY calls, then sit in mover
     (1d hold). Leftover cash refills .io at the close. No lookahead —
@@ -774,6 +777,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     pol["engine"] = "flatten_switch"
     fees, order_fees = _fees()
     cal = session_calendar(payload, books)
+    if through:
+        cal = [d for d in cal if d <= through]
     book_map = load_book_map(books)
     regime = payload.get("regime") or {}
     calls_by_day: dict[str, list[dict]] = defaultdict(list)
@@ -969,6 +974,17 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                               "flatten .io → mover (open)")
             deploy_mover(date, priced_buys, confirm)
 
+        if stop_after == "open" and cal and date == cal[-1]:
+            eq_end = mark(date, "open")
+            curve.append({
+                "date": date, "equity": round(eq_end, 2), "cash": round(cash, 2),
+                "core_n": len(io_pos), "tac_io_n": 0, "tac_n": len(mv_pos),
+                "core_mv": 0, "tac_mv": 0,
+                "route": "mover" if route_mover else "io",
+                "score": score, "predict": pdir,
+            })
+            break
+
         # 16:00 exit mover due today
         still = []
         for p in mv_pos:
@@ -1012,21 +1028,25 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             "score": score, "predict": pdir,
         })
 
-    last = cal[-1] if cal else None
-    if last:
-        for t, lot in list(io_pos.items()):
-            close_lot(lot, last, lot.get("last_px") or lot["entry_px"],
-                      CLOSE_CLOCK, "mark [open]")
-        io_pos.clear()
-        for lot in list(mv_pos):
-            close_lot(lot, last, lot.get("last_px") or lot["entry_px"],
-                      CLOSE_CLOCK, "mark [open]")
-        mv_pos.clear()
+    if not keep_open:
+        last = cal[-1] if cal else None
+        if last:
+            for t, lot in list(io_pos.items()):
+                close_lot(lot, last, lot.get("last_px") or lot["entry_px"],
+                          CLOSE_CLOCK, "mark [open]")
+            io_pos.clear()
+            for lot in list(mv_pos):
+                close_lot(lot, last, lot.get("last_px") or lot["entry_px"],
+                          CLOSE_CLOCK, "mark [open]")
+            mv_pos.clear()
 
     return {
         "policy": pol, "capital": capital, "calendar": cal,
         "trades": trades, "skipped": skipped, "curve": curve,
         "final_equity": curve[-1]["equity"] if curve else capital,
+        "cash": round(cash, 2),
+        "io_pos": {t: dict(p) for t, p in io_pos.items()},
+        "mv_pos": [dict(p) for p in mv_pos],
     }
 
 
@@ -1441,6 +1461,7 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 </style></head><body><main>
 <h1>Combined sleeve — .io × mover</h1>
 <p class="muted"><a href="../">.io paper</a>
+ · <a href="../flatten-action/">today's tickets</a>
  · <a href="../mover-paper/">mover paper</a>
  · <a href="../book-paper/">book paper</a></p>
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·

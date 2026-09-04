@@ -1,0 +1,20 @@
+{
+  "name": "flatten_switch_recycle",
+  "engine": "flatten_switch",
+  "io_sleeve": "2w_size",
+  "long_top_n": 10,
+  "long_pct": 0.1,
+  "long_gate": 1.0,
+  "long_hold": "1d",
+  "long_rank": "cond",
+  "day_cap": 1.0,
+  "min_buys": 5,
+  "sizeup": 1.0,
+  "allow_short": false,
+  "book_for_flatten": "yesterday",
+  "rotate_mover": true,
+  "carry_last_book": true,
+  "mover_when_flat": false,
+  "blank_mover_when_flat": false,
+  "skip_blank_io": false
+}

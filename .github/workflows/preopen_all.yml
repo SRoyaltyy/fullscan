@@ -234,7 +234,9 @@ jobs:
               01_daily/*_stock_book.md
               data/catalyst/ data/stock_book/ data/paper/ data/join/
               data/universe/ data/ab_checklist/ data/peers/ data/checklist/
-              dashboard/ 03_scoreboard/ 02_lessons/)
+              data/flatten_action/ data/sleeve_merge/
+              dashboard/ 03_scoreboard/ 02_lessons/
+              01_daily/*_flatten_action.md)
           fi
           bash scripts/safe_git_push.sh \
             "auto: pre-open ALL [$(date -u +%F_%H%M)]" \

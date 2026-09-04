@@ -592,6 +592,10 @@ def run(date: str | None = None, force: bool = False,
     print(f"[preopen-all] wrote {md_path}")
     snapshot_persist(date)
 
+    print(f"\n[preopen-all] → Flatten ACTION (09:30 tickets from holdings, {date})")
+    _run([py, "-m", "src.flatten_action", "--date", date, "--clock", "open",
+          "--write"])
+
     book_ok = True
     if with_book:
         from . import run_stock_book_all, skip_if_good

@@ -101,6 +101,11 @@ jobs:
             cp -a dashboard/sleeve-merge/. pages_out/dashboard/sleeve-merge/
             echo "Overlayed dashboard/sleeve-merge from main"
           fi
+          if [ -f dashboard/flatten-action/index.html ]; then
+            mkdir -p pages_out/dashboard/flatten-action
+            cp -a dashboard/flatten-action/. pages_out/dashboard/flatten-action/
+            echo "Overlayed dashboard/flatten-action from main"
+          fi
           if [ -f dashboard/mover-paper/index.html ]; then
             mkdir -p pages_out/dashboard/mover-paper
             cp -a dashboard/mover-paper/. pages_out/dashboard/mover-paper/
@@ -130,6 +135,7 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-lookback/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/flatten-action/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

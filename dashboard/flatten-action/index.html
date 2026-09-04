@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flatten ACTION — 2026-09-04 close</title>
+<style>
+:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}
+main{max-width:1100px;margin:auto;padding:16px}h1,h2{margin:.4em 0}
+.muted{color:var(--muted)}a{color:#93c5fd}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:12px 0}
+.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}
+table{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}
+th,td{padding:7px 8px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}
+thead th{position:sticky;top:0;background:#17213a}
+tbody th{background:#17213a;text-align:left}
+td.good{color:#4ade80}td.bad{color:#f87171}
+td.why{text-align:left;white-space:normal;max-width:360px;font-size:12px}
+</style></head><body><main>
+<h1>Flatten ACTION — 2026-09-04 close</h1>
+<p class="muted"><a href="/fullscan/dashboard/">.io paper</a>
+ · <a href="/fullscan/dashboard/sleeve-merge/">combine book</a>
+ · <a href="/fullscan/dashboard/mover-paper/">mover paper</a></p>
+<div class="card">
+<b>route io</b>
+<div class="muted">S=2.25; 0 priced mover BUYs (need 5) — cannot flatten</div>
+<div class="muted">S = 2.25
+ · priced BUYs 0
+ · cash $68.54
+ · .io 16 · mover 0</div>
+</div>
+<p class='muted'>Waiting on: mover_lookback_action</p>
+<h2>Tickets</h2>
+<div class="sheet"><table>
+<thead><tr><th>Side</th><th>Ticker</th><th>Shares</th><th>Sleeve</th><th>Clock</th><th>Why</th></tr></thead>
+<tbody><tr><td class=''>HOLD</td><th>CASH</th><td>—</td><td>io_core</td><td>16:00 ET</td><td class='why'>leftover cash $68.54 — new 2w names skip</td></tr></tbody>
+</table></div>
+<h2>Holdings watched</h2>
+<div class="sheet"><table>
+<thead><tr><th>Book</th><th>Ticker</th><th>Shares</th><th>Entry</th></tr></thead>
+<tbody><tr><td>io</td><th>SOFI</th><td>718</td><td>18.239999771118164</td></tr><tr><td>io</td><th>HOOD</th><td>126</td><td>103.62000274658205</td></tr><tr><td>io</td><th>HCA</th><td>30</td><td>429.239990234375</td></tr><tr><td>io</td><th>GSHD</th><td>179</td><td>73.0</td></tr><tr><td>io</td><th>XP</th><td>767</td><td>17.06999969482422</td></tr><tr><td>io</td><th>DUOL</th><td>89</td><td>146.83999633789062</td></tr><tr><td>io</td><th>INSP</th><td>213</td><td>61.470001220703125</td></tr><tr><td>io</td><th>CRMD</th><td>1582</td><td>8.279999732971191</td></tr><tr><td>io</td><th>RZLT</th><td>2615</td><td>5.010000228881836</td></tr><tr><td>io</td><th>CNH</th><td>3</td><td>11.43000030517578</td></tr><tr><td>io</td><th>CRK</th><td>2</td><td>14.619999885559082</td></tr><tr><td>io</td><th>MOS</th><td>1</td><td>23.76000022888184</td></tr><tr><td>io</td><th>PGY</th><td>1</td><td>23.26000022888184</td></tr><tr><td>io</td><th>SLI</th><td>14</td><td>2.640000104904175</td></tr><tr><td>io</td><th>VYX</th><td>4</td><td>9.18000030517578</td></tr><tr><td>io</td><th>RRC</th><td>1</td><td>41.459999084472656</td></tr></tbody>
+</table></div>
+<p class="muted">Policy flatten_switch_recycle ·
+generated 2026-09-04T08:54:31-04:00.
+This is the live ACTION for flatten_switch_recycle — not the old per-sleeve paper stamp.</p>
+</main></body></html>

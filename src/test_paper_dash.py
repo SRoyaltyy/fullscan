@@ -26,6 +26,7 @@ def test_overview_sits_above_day_blotter() -> None:
 def test_template_still_has_data_slot() -> None:
     html = SHELL.read_text(encoding="utf-8")
     assert "__DATA__" in html
+    assert "flatten-action/" in html
 
 
 if __name__ == "__main__":

@@ -156,7 +156,7 @@ jobs:
           bash scripts/safe_git_push.sh \
             "auto: stock book ALL + paper dashboard" \
             data/universe data/exports data/join data/stock_book data/paper \
-            data/sleeve_merge \
+            data/sleeve_merge data/flatten_action \
             data/peers data/checklist data/ab_checklist data/catalyst \
             01_daily/ 03_scoreboard/ 00_grounding/mutable_policy.md \
             00_grounding/book_policy.json 02_lessons/ dashboard/
@@ -176,6 +176,7 @@ jobs:
           echo "Fixed Chrome links (after Pages is enabled):"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "  https://SRoyaltyy.github.io/fullscan/dashboard/flatten-action/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"

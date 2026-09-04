@@ -119,5 +119,7 @@ jobs:
             "auto: post-close ALL [$(date -u +%F_%H%M)]" \
             01_daily/general/ 01_daily/sectors/ 01_daily/map_heat/ \
             01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
-            01_daily/*_learnings.md \
-            02_lessons/ 03_scoreboard/ 00_grounding/mutable_policy.md
+            01_daily/*_learnings.md 01_daily/*_flatten_action.md \
+            data/flatten_action/ dashboard/flatten-action/ \
+            02_lessons/ 03_scoreboard/ 00_grounding/mutable_policy.md \
+            00_grounding/flatten_action_policy.json

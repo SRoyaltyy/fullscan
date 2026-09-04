@@ -497,6 +497,13 @@ def run(
         check=False,
     )
 
+    print("[all] → Flatten ACTION (holdings → buy/sell tickets)")
+    _run(
+        [sys.executable, "-m", "src.flatten_action", "--date", date,
+         "--clock", "both", "--write"],
+        check=False,
+    )
+
     print("[all] → Book learn (weight tuner from realized forward returns)")
     _run(
         [sys.executable, "-m", "src.book_learn", "--date", date, "--update-prices"],
@@ -516,6 +523,7 @@ def run(
     print("[all] paper trading → dashboard/index.html + 03_scoreboard/PAPER_TRADING.md")
     print("[all] sleeve combine → dashboard/sleeve-combine/index.html + 03_scoreboard/SLEEVE_COMBINE_BT.md")
     print("[all] sleeve merge → dashboard/sleeve-merge/ + 03_scoreboard/SLEEVE_MERGE.md")
+    print("[all] flatten action → dashboard/flatten-action/ + 01_daily/{date}_flatten_action.md")
 
 
 def main() -> None:
