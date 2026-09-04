@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-03
 
-Generated: **2026-09-04T11:39:43.462307-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-04T11:48:03.841207-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -79,7 +79,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 1 wins, 0 losses
 
 #### WIN — news
-- **When:** [news] summary={"n_suggestions": 912, "ever_profitable": {"n": 912, "wins": 895, "win_rate": 98.1}, "close_1d": {"n": 890, "wins": 493, "win_rate": 55.4, "avg": 0.23}, "close_3d": {"n": 795, "wins": 494, "win_rate": 62.1, "avg": 0.92}, "close_5d": {"n": 656, "wins": 420, "win_rate": 64.0, "avg": 1.53}, "close_10d"
+- **When:** [news] summary={"n_suggestions": 912, "ever_profitable": {"n": 912, "wins": 895, "win_rate": 98.1}, "close_1d": {"n": 890, "wins": 493, "win_rate": 55.4, "avg": 0.23}, "close_3d": {"n": 795, "wins": 496, "win_rate": 62.4, "avg": 0.92}, "close_5d": {"n": 656, "wins": 418, "win_rate": 63.7, "avg": 1.52}, "close_10d"
 - **Ask:** Which event families drive ever-profitable vs 1d close?
 - **Experiment:** [news] Track event-level 1d close win rate daily in learn_cycle.
 - **Do instead:** [news] Rank event families by 1d close, not ever-touch MFE.
