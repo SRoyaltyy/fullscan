@@ -334,9 +334,6 @@ def main():
 
     print("=== Finviz Financial Data Collector ===", flush=True)
 
-    conn = get_connection()
-    cur = conn.cursor()
-
     snapshot_date = datetime.now().strftime("%Y-%m-%d")
     df = None
 
@@ -351,45 +348,53 @@ def main():
         print("\nNo data source available. Options:", flush=True)
         print("  1. Set FINVIZ_EMAIL + FINVIZ_PASSWORD env vars for automated export", flush=True)
         print("  2. Save CSV from elite.finviz.com/screener → data/exports/finviz_latest.csv", flush=True)
-
-        duration = time.time() - start_time
-        cur.execute(
-            "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
-            ("finviz_financials", "skipped", 0, round(duration, 1)),
-        )
-        conn.commit()
-        cur.close()
-        conn.close()
-        print(f"\n  Finished in {duration:.1f}s (no data collected)", flush=True)
+        print(f"\n  Finished in {time.time() - start_time:.1f}s (no data collected)", flush=True)
         return
 
     print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns", flush=True)
 
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
     df.to_csv(archive_path, index=False)
+    latest_path = EXPORTS_DIR / "finviz_latest.csv"
+    df.to_csv(latest_path, index=False)
     print(f"  Archived to {archive_path}", flush=True)
 
-    count = store(conn, cur, df, snapshot_date)
-    duration = time.time() - start_time
+    os.environ["FULLSCAN_DB_OPTIONAL"] = "1"
+    conn = get_connection()
+    if conn is None:
+        print("[finviz] CSV saved; Postgres skipped (pooler down or unset)", flush=True)
+        return
 
-    cur.execute(
-        "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
-        ("finviz_financials", "ok", count, round(duration, 1)),
-    )
-    conn.commit()
-
-    cur.execute(
-        "SELECT sector, COUNT(*) FROM company_financials GROUP BY sector ORDER BY COUNT(*) DESC LIMIT 10"
-    )
-    sectors = cur.fetchall()
-    print(f"\n  Stored {count} stocks", flush=True)
-    print(f"  Top sectors:", flush=True)
-    for s, c in sectors:
-        print(f"    {s or 'N/A':<30} {c:>5}", flush=True)
-
-    print(f"\n  Done in {duration:.1f}s", flush=True)
-    cur.close()
-    conn.close()
+    cur = conn.cursor()
+    try:
+        count = store(conn, cur, df, snapshot_date)
+        duration = time.time() - start_time
+        cur.execute(
+            "INSERT INTO collection_log(collector, status, records_added, duration_sec) VALUES(%s,%s,%s,%s)",
+            ("finviz_financials", "ok", count, round(duration, 1)),
+        )
+        conn.commit()
+        cur.execute(
+            "SELECT sector, COUNT(*) FROM company_financials GROUP BY sector ORDER BY COUNT(*) DESC LIMIT 10"
+        )
+        sectors = cur.fetchall()
+        print(f"\n  Stored {count} stocks", flush=True)
+        print("  Top sectors:", flush=True)
+        for s, c in sectors:
+            print(f"    {s or 'N/A':<30} {c:>5}", flush=True)
+        print(f"\n  Done in {duration:.1f}s", flush=True)
+    except Exception as e:  # noqa: BLE001
+        print(f"[finviz] Postgres write failed after CSV archive: {e}", flush=True)
+        try:
+            conn.rollback()
+        except Exception:
+            pass
+    finally:
+        try:
+            cur.close()
+            conn.close()
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":

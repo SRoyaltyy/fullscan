@@ -17,18 +17,21 @@ from db.connection import get_connection
 
 
 def _connect(attempts: int = 4, base_delay: float = 8.0):
-    """Retry pooler timeouts (weekend Supabase blips)."""
+    """Retry pooler timeouts (weekend Supabase blips). Returns None if down."""
     last = None
     for i in range(1, attempts + 1):
         try:
-            return get_connection()
+            conn = get_connection()
+            if conn is not None:
+                return conn
+            last = "pooler unavailable"
         except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
             last = e
             print(f"[yfinance] db connect {i}/{attempts} failed: {e}")
-            if i == attempts:
-                break
+        if i < attempts:
             time.sleep(base_delay * i)
-    raise last
+    print(f"[yfinance] no database after {attempts} tries ({last})")
+    return None
 
 COMMODITIES = {
     "CL=F":     "Crude Oil WTI Futures",
@@ -74,6 +77,9 @@ def collect():
     print("[yfinance] Collecting commodity, index, and currency data...")
 
     conn = _connect()
+    if conn is None:
+        print("[yfinance] no database — skip write")
+        return
     cur = conn.cursor()
 
     all_symbols = {**COMMODITIES, **INDICES, **CURRENCIES}

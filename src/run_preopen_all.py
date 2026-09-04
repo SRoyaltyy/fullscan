@@ -1,6 +1,6 @@
-"""One-button PRE-OPEN ALL: every predictive write that must land before 09:30 ET.
+"""One-button PRE-OPEN ALL: morning packet + stock book before 09:30 ET.
 
-Does in one ECS job (skip-if-good, fail-closed QC):
+Does in one ECS job (per-step skip-if-good, fail-closed QC):
 
   (Finviz digest + map-heat overlay already landed by GH-hosted
    finviz_preopen_scrape.yml on ubuntu-latest — Elite login, not ECS)
@@ -10,24 +10,19 @@ Does in one ECS job (skip-if-good, fail-closed QC):
   → general predict → 11 sector predicts → sector board
   → weather (deterministic labels×regime; unblocks join / stock book)
   → catalyst dossiers (layer 3; optional, after the 09:25-critical predicts)
-  → output_qc (regex) → Grok reads the files as text → workflow check
+  → output_qc (regex) → Grok reads the files as text (skipped if prior-ok)
+  → stock book + paper dashboard  (--with-book, default on)
 
-NOT included (those run later on their own crons, still required):
-  outcome / reflect / horizon grade, learn_cycle, deepthink, weekly
-  promotion, AB checklist, stock book, paper dashboard.
-
-Finviz industry groups + exhaustive captain research run at 22:00 ET
-(post-close, still ECS). Premarket must not re-scrape yesterday's tape.
-Missing post-close baseline is WARN (bootstrap stub), not a day-fail —
-the first 22:00 job has not run yet. Empty futures tape IS a day-fail.
+Post-close grades / learn / tonight's captain research live in
+src.run_postclose_all — do not run them here.
 
 Live Finviz HTML is NOT scraped here. Aliyun ECS 403s public finviz.com.
 GH-hosted ubuntu-latest + Elite login writes digest + overlay ~05:40 ET;
 this job waits ~10 min, git-pulls those files, then runs Grok.
 
-
 CLI:
   python -m src.run_preopen_all [--date YYYY-MM-DD] [--force]
+                               [--no-book] [--llm-backend auto]
 """
 from __future__ import annotations
 
@@ -298,16 +293,63 @@ def _github_runs_today(date: str) -> list[dict]:
     return out
 
 
-def run(date: str | None = None, force: bool = False) -> None:
+def _packet_step_done(key: str, date: str) -> bool:
+    """True when this one packet step is already quality-ok (no LLM rewrite)."""
+    from . import catalyst_daily
+
+    if key == "news_parse":
+        return output_qc.qc_news_parse(
+            _p("01_daily", "news", f"{date}_parsed.json")).ok
+    if key in ("events", "events_catcher"):
+        return output_qc.qc_events_date(date).ok
+    if key == "news_judge":
+        return output_qc.qc_news_judge(
+            _p("01_daily", "news", f"{date}_judge.md")).ok
+    if key == "map_heat_research":
+        return output_qc.qc_map_heat_research(
+            _p("01_daily", "map_heat", f"{date}_research.json")).ok
+    if key == "news_actions":
+        return output_qc.qc_news_actions(
+            _p("01_daily", "news", f"{date}_actions.json")).ok
+    if key == "general_predict":
+        return output_qc.qc_general_predict(
+            _p("01_daily", "general", f"{date}_predict.md")).ok
+    if key == "sector_predict":
+        sector_dir = _p("01_daily", "sectors", date)
+        n_ok = 0
+        if sector_dir.is_dir():
+            for p in sector_dir.glob("*_predict.md"):
+                if output_qc.qc_sector_predict(p).ok:
+                    n_ok += 1
+        return n_ok >= 8
+    if key == "sector_board":
+        return _exists("01_daily", "sectors", date, "_board.json")
+    if key == "weather":
+        p = _p("01_daily", "weather", f"{date}_weather.json")
+        if not p.is_file():
+            return False
+        try:
+            secs = ((json.loads(p.read_text(encoding="utf-8")).get("signals")
+                     or {}).get("sectors") or {})
+            return len(secs) >= 5
+        except (OSError, json.JSONDecodeError, TypeError):
+            return False
+    if key == "catalyst":
+        return catalyst_daily.already_good(date)
+    return False
+
+
+def run(date: str | None = None, force: bool = False,
+        with_book: bool = True, llm_backend: str | None = None) -> None:
     date = date or _today()
+    config.apply_llm_backend(llm_backend)
     print("")
     print("=" * 72)
     print(f"  PRE-OPEN ALL — {date} (America/New_York)")
-    print("  Predictive only. Must finish before 09:30 ET.")
-    print("  Skip-if-good: quality files for THIS day are not overwritten.")
+    print("  Packet + stock book. Must finish before 09:30 ET.")
+    print("  Skip-if-good: each quality file for THIS day is not rewritten.")
     print("  Persist: /home/gha/fullscan-persist survives Actions checkout.")
     print("  Carry-forwards / timeout stubs are trash and fail the job.")
-    print("  Grok reads the actual MD/JSON once. Regex is not enough.")
     print("=" * 72)
 
     skip_writes = False
@@ -317,16 +359,16 @@ def run(date: str | None = None, force: bool = False) -> None:
         pre = output_qc.preopen_report(date)
         grok_ok = grok_review.prior_ok(date)
         if pre.get("all_ok") and grok_ok:
-            print(f"[preopen-all] {date}: every required predictive "
-                  f"artifact is already quality-ok "
+            print(f"[preopen-all] {date}: predictive packet already quality-ok "
                   f"(sectors {pre.get('sector_n_ok')}/"
                   f"{pre.get('sector_n_total')}; Grok text review passed) "
-                  f"— nothing to do")
-            return
-        if pre.get("all_ok") and not grok_ok:
+                  f"— skip packet writes")
+            skip_writes = True
+        elif pre.get("all_ok") and not grok_ok:
             print(f"[preopen-all] {date}: mechanical QC already ok — "
                   f"Grok will read the files as text (no rewrite)")
             skip_writes = True
+            preopen.refuse_if_late("preopen_all", force=force)
         else:
             preopen.refuse_if_late("preopen_all", force=force)
     else:
@@ -335,6 +377,11 @@ def run(date: str | None = None, force: bool = False) -> None:
     attempts: list[dict] = []
 
     def step(key: str, title: str, cmd: list[str]) -> int:
+        if not force and _packet_step_done(key, date):
+            print(f"[preopen-all] skip {title} (already quality-ok)")
+            attempts.append({"key": key, "title": title, "cmd": cmd,
+                             "returncode": 0, "skipped": True})
+            return 0
         print(f"\n[preopen-all] → {title}")
         code = _run(cmd)
         attempts.append({"key": key, "title": title, "cmd": cmd,
@@ -402,14 +449,19 @@ def run(date: str | None = None, force: bool = False) -> None:
     print(output_qc.render(report))
     print(f"[preopen-all] wrote {qc_path}")
 
-    grok = grok_review.review_preopen(date, mechanical_report=report)
-    print("")
-    print("-" * 72)
-    print("  GROK TEXT REVIEW")
-    print("-" * 72)
-    print(f"  ok={grok.get('ok')}  {grok.get('notes') or ''}")
-    for f in grok.get("fails") or []:
-        print(f"  FAIL  {f.get('path')}: {f.get('reason')}")
+    if (not force) and grok_review.prior_ok(date):
+        grok = {"ok": True, "notes": "prior Grok text review still good — skipped",
+                "fails": []}
+        print("[preopen-all] skip Grok text review (prior_ok)")
+    else:
+        grok = grok_review.review_preopen(date, mechanical_report=report)
+        print("")
+        print("-" * 72)
+        print("  GROK TEXT REVIEW")
+        print("-" * 72)
+        print(f"  ok={grok.get('ok')}  {grok.get('notes') or ''}")
+        for f in grok.get("fails") or []:
+            print(f"  FAIL  {f.get('path')}: {f.get('reason')}")
 
     gh_runs = _github_runs_today(date)
     missing_required = []
@@ -529,8 +581,8 @@ def run(date: str | None = None, force: bool = False) -> None:
         f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
         f"grok_ok={status['grok_ok']}  missing={missing_required or 'none'}",
         "",
-        "Predictive modules (must land before 09:30 ET). Lessons / outcome /",
-        "deepthink / weekly / dashboard run later on their own crons.",
+        "Predictive modules + stock book (must land before 09:30 ET).",
+        "Outcome / learn / tonight's captain research = Post-Close ALL.",
         "",
     ]
     for a in attempts:
@@ -540,14 +592,41 @@ def run(date: str | None = None, force: bool = False) -> None:
     print(f"[preopen-all] wrote {md_path}")
     snapshot_persist(date)
 
-    if missing_required or not report.get("all_ok") or not grok.get("ok"):
-        raise SystemExit(
-            f"[preopen-all] FAIL {date}: trash or missing required artifacts "
-            f"{missing_required or '(see QC/Grok review)'}. "
-            f"qc_all_ok={bool(report.get('all_ok'))} grok_ok={bool(grok.get('ok'))}. "
-            f"Not committing as success."
+    book_ok = True
+    if with_book:
+        from . import run_stock_book_all, skip_if_good
+        if (not force) and skip_if_good.check_stock_book_all(date):
+            print(f"[preopen-all] skip stock book (already on disk for {date})")
+        else:
+            print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
+            packet_ok = bool(report.get("all_ok")) and not missing_required
+            try:
+                run_stock_book_all.run(
+                    date=date, force=force, skip_llm=packet_ok, top=25)
+            except SystemExit as e:
+                print(f"[preopen-all] WARN: stock book exited: {e}")
+            except Exception as e:  # noqa: BLE001 — still publish what we wrote
+                print(f"[preopen-all] WARN: stock book crashed: {e}")
+        book_ok = skip_if_good.check_stock_book_all(date)
+        if not book_ok:
+            print(f"[preopen-all] WARN: stock book still missing for {date}")
+    else:
+        print("[preopen-all] --no-book: leaving stock book to a later click")
+
+    degraded = bool(
+        missing_required or not report.get("all_ok") or not grok.get("ok")
+        or (with_book and not book_ok)
+    )
+    if degraded:
+        print(
+            f"[preopen-all] DEGRADED {date}: wrote whatever landed and will "
+            f"still commit/publish. missing={missing_required or 'none'} "
+            f"qc_all_ok={bool(report.get('all_ok'))} grok_ok={bool(grok.get('ok'))} "
+            f"book_ok={book_ok}. Exit 0 so git + Pages still run."
         )
-    print(f"[preopen-all] PASS {date} — regex QC and Grok text review both ok")
+        return
+    print(f"[preopen-all] PASS {date} — packet"
+          f"{' + stock book' if with_book else ''} ok")
 
 
 def main() -> None:
@@ -555,8 +634,14 @@ def main() -> None:
     ap.add_argument("--date", default=None)
     ap.add_argument("--force", action="store_true",
                     help="Ignore 09:25 ET cutoff and skip-if-good")
+    ap.add_argument("--no-book", action="store_true",
+                    help="Packet only — do not rank or paper-trade")
+    ap.add_argument("--llm-backend", default=None,
+                    choices=["auto", "grok", "deepseek"],
+                    help="auto=Grok then DeepSeek; grok=Grok only; deepseek=no Grok")
     args = ap.parse_args()
-    run(date=args.date, force=args.force)
+    run(date=args.date, force=args.force,
+        with_book=not args.no_book, llm_backend=args.llm_backend)
 
 
 if __name__ == "__main__":

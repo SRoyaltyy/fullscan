@@ -1,68 +1,68 @@
-# MAP HEAT — 2026-09-04
+# MAP HEAT — 2026-09-03
 
-Export `finviz_2026-09-04.csv` · 11643 names · generated 2026-09-04T01:53:26.557511-04:00
+Export `finviz_2026-09-03.csv` · 11640 names · generated 2026-09-03T01:47:39.371074-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7762.5 | +0.10% |
-| Nasdaq 100 (NQ) | 29612.0 | +0.30% |
-| Russell 2000 (ER2) | 2973.1 | +0.12% |
-| DJIA (YM) | 53760.0 | +0.03% |
-| VIX (VX) | 16.0 | -0.86% |
-| Crude Oil WTI (CL) | 91.48 | +0.10% |
-| Crude Oil Brent (QA) | 95.45 | -0.09% |
-| Natural Gas (NG) | 2.924 | +0.38% |
-| Heating Oil (HO) | 4.5705 | -0.59% |
-| Gasoline RBOB (RB) | 3.1309 | -0.17% |
-| Gold (GC) | 4521.3 | -0.35% |
-| Silver (SI) | 67.425 | -0.38% |
-| Copper (HG) | 6.6615 | +0.00% |
-| Platinum (PL) | 1816.8 | -1.01% |
-| Palladium (PA) | 1424.5 | -1.00% |
-| USD (DX) | 98.995 | +0.11% |
-| EUR (6E) | 1.1631 | -0.06% |
-| JPY (6J) | 0.6401 | -0.53% |
-| GBP (6B) | 1.3533 | -0.04% |
-| AUD (6A) | 0.7209 | +0.05% |
-| CAD (6C) | 0.7254 | -0.03% |
-| CHF (6S) | 1.2391 | -0.12% |
-| NZD (6N) | 0.58995 | +0.25% |
+| S&P 500 (ES) | 7760.5 | +0.07% |
+| Nasdaq 100 (NQ) | 29654.25 | +0.44% |
+| Russell 2000 (ER2) | 2969.7 | -0.01% |
+| DJIA (YM) | 53702.0 | -0.08% |
+| VIX (VX) | 16.05 | -0.24% |
+| Crude Oil WTI (CL) | 90.87 | -0.53% |
+| Crude Oil Brent (QA) | 95.3 | -0.28% |
+| Natural Gas (NG) | 2.922 | +0.31% |
+| Heating Oil (HO) | 4.5502 | -1.02% |
+| Gasoline RBOB (RB) | 3.1226 | -0.39% |
+| Gold (GC) | 4525.0 | -0.33% |
+| Silver (SI) | 67.64 | -0.09% |
+| Copper (HG) | 6.6745 | +0.15% |
+| Platinum (PL) | 1824.6 | -0.51% |
+| Palladium (PA) | 1433.5 | -0.44% |
+| USD (DX) | 99.04 | +0.16% |
+| EUR (6E) | 1.16265 | -0.09% |
+| JPY (6J) | 0.64 | -0.54% |
+| GBP (6B) | 1.3532 | -0.04% |
+| AUD (6A) | 0.72015 | -0.06% |
+| CAD (6C) | 0.7248 | -0.11% |
+| CHF (6S) | 1.23765 | -0.24% |
+| NZD (6N) | 0.5885 | +0.00% |
 | 10 Year Note (ZN) | 107.6875 | +0.03% |
-| 5 Year Note (ZF) | 105.71875 | +0.01% |
-| 2 Year Note (ZT) | 102.640625 | +0.00% |
+| 5 Year Note (ZF) | 105.703125 | -0.01% |
+| 2 Year Note (ZT) | 102.62890625 | -0.01% |
 | 30 Year Bond (ZB) | 108.8125 | +0.12% |
-| Nikkei 225 (NKD) | 65100.0 | +0.74% |
-| DAX (DY) | 26096.0 | +0.25% |
-| Euro Stoxx 50 (EX) | 6397.0 | +0.11% |
-| Corn (ZC) | 539.75 | -0.23% |
-| Soybeans (ZS) | 1313.75 | -0.21% |
-| Wheat (ZW) | 748.75 | -0.80% |
-| Soybean oil (ZL) | 69.3 | -0.47% |
-| Soybean Meal (ZM) | 347.5 | -0.40% |
-| Oats (ZO) | 366.0 | -0.41% |
+| Nikkei 225 (NKD) | 65015.0 | +0.76% |
+| DAX (DY) | 26014.0 | -0.06% |
+| Euro Stoxx 50 (EX) | 6375.0 | -0.22% |
+| Corn (ZC) | 538.0 | -0.51% |
+| Soybeans (ZS) | 1310.0 | -0.47% |
+| Wheat (ZW) | 746.25 | -0.93% |
+| Soybean oil (ZL) | 68.9 | -1.03% |
+| Soybean Meal (ZM) | 345.6 | -0.80% |
+| Oats (ZO) | 364.25 | -1.15% |
 | Rough Rice (ZR) | 15.635 | -0.41% |
-| Coffee (KC) | 294.9 | -0.92% |
-| Sugar (SB) | 17.99 | -3.37% |
-| Cotton (CT) | 86.82 | +0.42% |
+| Coffee (KC) | 297.7 | +0.80% |
+| Sugar (SB) | 18.06 | -0.11% |
+| Cotton (CT) | 86.55 | +0.12% |
 | Cocoa (CC) | 6140.0 | -1.58% |
 | Orange Juice (JO) | 155.05 | +4.25% |
 | Lumber (LB) | 571.0 | +2.70% |
 | Live Cattle (LC) | 214.225 | +1.96% |
 | Lean Hogs (LH) | 83.4 | -0.39% |
 | Feeder Cattle (FC) | 321.25 | +2.14% |
-| Bitcoin (BTC) | 81205.0 | -1.09% |
-| 3 Month SOFR (SR3) | 96.1625 | -0.00% |
+| Bitcoin (BTC) | 81390.0 | -0.84% |
+| 3 Month SOFR (SR3) | 96.1575 | -0.01% |
 | 30 Day Fed Funds (ZQ) | 96.3125 | -0.00% |
 | Aluminum (ALI) | 3487.75 | +1.20% |
-| Canola (RS) | 821.4 | -0.99% |
+| Canola (RS) | 819.5 | -1.11% |
 | Coal Newcastle (NCF) | 147.0 | +0.27% |
 | Ethanol (ZK) | 2.0975 | +0.36% |
-| Gasoil (G) | 1326.25 | -1.89% |
+| Gasoil (G) | 1320.5 | -2.19% |
 | Iron Ore (TIO) | 99.42 | +1.74% |
 | Steel HRC (HRC) | 1225.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 109.4375 | +0.06% |
-| Ultra Bond (UB) | 110.21875 | +0.09% |
+| Ultra 10 Year Note (TN) | 109.4375 | +0.04% |
+| Ultra Bond (UB) | 110.28125 | +0.11% |
 | Uranium (UX) | 89.45 | +0.00% |
 
 ## CALENDAR
@@ -111,171 +111,171 @@ Econ (importance ≥ 2):
 - 16:00 ET  Net Long-term TIC Flows  actual —  cons —  surprise —  prev $172.7B
 
 Mega-cap earnings:
-- AMC **ORCL**  EPS est 1.7349  (Oracle Corp)
+- AMC **ORCL**  EPS est 1.7392  (Oracle Corp)
 - BMO **ACN**  EPS est 3.7098  (Accenture plc)
 - AMC **ADBE**  EPS est 6.0751  (Adobe Inc)
 - BMO **KR**  EPS est 1.0536  (Kroger Co)
 - AMC **CPRT**  EPS est 0.3832  (Copart Inc)
 - AMC **CASY**  EPS est 6.7501  (Casey's General Stores Inc)
-- BMO **SUNB**  EPS est 1.0358  (Sunbelt Rentals Holdings Inc)
 - AMC **TCOM**  EPS est 0.8776  (Trip.com Group Ltd ADR)
+- BMO **SUNB**  EPS est 1.0358  (Sunbelt Rentals Holdings Inc)
 - AMC **LEN**  EPS est 1.2975  (Lennar Corp)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
 - BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
 
 Options event-vol flags (NOT direction):
-- **ORCL** exp 2026-09-04 ATM IV 0.125 implied move +0.7% put/call OI —
-- **ACN** exp 2026-09-04 ATM IV 0.0625 implied move +0.3% put/call OI —
-- **ADBE** exp 2026-09-04 ATM IV 0.0625 implied move +0.3% put/call OI —
+- **ORCL** exp 2026-09-04 ATM IV 0.0156 implied move +0.1% put/call OI —
+- **ACN** exp 2026-09-04 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **ADBE** exp 2026-09-04 ATM IV 0.0078 implied move +0.0% put/call OI —
 - **KR** exp 2026-09-04 ATM IV 0.0313 implied move +0.2% put/call OI —
 - **CPRT** exp 2026-09-18 ATM IV 0.0313 implied move +0.6% put/call OI —
-- **CASY** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI —
+- **CASY** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI —
+- **TCOM** exp 2026-09-18 ATM IV 0.0313 implied move +0.6% put/call OI —
 - **SUNB** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI —
-- **TCOM** exp 2026-09-18 ATM IV 0.0625 implied move +1.2% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
 |---|---:|---:|---:|
-| Basic Materials | +0.5% | -1.9% | 0.92 |
-| Communication Services | +1.4% | +1.9% | 0.74 |
-| Consumer Cyclical | +1.4% | +0.5% | 0.97 |
-| Consumer Defensive | +0.2% | +0.9% | 0.9 |
-| Energy | -0.7% | +3.1% | 0.88 |
-| Financial | +1.7% | +1.7% | 1.05 |
-| Healthcare | +0.3% | +0.6% | 0.8 |
-| Industrials | +1.9% | -1.3% | 0.8 |
-| Real Estate | +0.9% | -1.0% | 0.78 |
-| Technology | +1.2% | -0.8% | 0.88 |
-| Utilities | +0.8% | -0.4% | 1.11 |
+| Basic Materials | +1.8% | -2.2% | 0.94 |
+| Communication Services | +1.2% | -0.2% | 0.71 |
+| Consumer Cyclical | +0.3% | -1.9% | 0.92 |
+| Consumer Defensive | +0.2% | -0.7% | 0.83 |
+| Energy | +0.2% | +3.8% | 0.9 |
+| Financial | +1.1% | -0.5% | 0.86 |
+| Healthcare | +0.9% | -0.7% | 0.93 |
+| Industrials | 0.0% | -3.5% | 0.77 |
+| Real Estate | -0.5% | -2.8% | 1.03 |
+| Technology | +0.4% | +1.0% | 0.85 |
+| Utilities | +0.2% | -1.9% | 1.48 |
 
 ## INDUSTRY_HEAT
 HOT (1w):
-- **Agricultural Inputs** (Basic Materials)  -0.8% 1d  +8.2% 1w  vs parent +10.1%
-  SPX: CTVA -1.5% none, CF -1.1% none · RUT: FMC -2.6% none, IPI -0.8% pos
-- **Oil & Gas Refining & Marketing** (Energy)  +0.2% 1d  +6.5% 1w  vs parent +3.4%
-  SPX: MPC +0.2% none, VLO +1.3% none · RUT: PBF -0.2% pos, DK +1.3% pos
-- **Auto Manufacturers** (Consumer Cyclical)  +4.2% 1d  +5.0% 1w  vs parent +4.5%
-  SPX: TSLA +5.4% none, GM +2.8% none · RUT: LCID -2.3% neg
-- **Consumer Electronics** (Technology)  +1.0% 1d  +4.3% 1w  vs parent +5.2%
-  SPX: AAPL +1.0% neg · RUT: SONO +1.2% none, GPRO -17.8% pos
-- **Textile Manufacturing** (Consumer Cyclical)  +5.6% 1d  +4.3% 1w  vs parent +3.8%
-  SPX: — · RUT: AIN +6.5% none
-- **Medical Distribution** (Healthcare)  +0.2% 1d  +4.3% 1w  vs parent +3.7%
-  SPX: MCK -0.4% none, COR +0.3% none · RUT: —
-- **Oil & Gas Integrated** (Energy)  -0.9% 1d  +4.0% 1w  vs parent +0.9%
-  SPX: XOM -1.2% none, CVX -0.2% none · RUT: DEC +3.1% none
-- **Farm Products** (Consumer Defensive)  -2.6% 1d  +3.8% 1w  vs parent +2.9%
-  SPX: ADM -1.2% pos, BG -2.2% none · RUT: CALM -3.5% neg, DMC -2.5% none
+- **Oil & Gas Drilling** (Energy)  +3.6% 1d  +10.0% 1w  vs parent +6.2%
+  SPX: — · RUT: NE +3.2% none, RIG +5.1% none
+- **Agricultural Inputs** (Basic Materials)  +2.9% 1d  +8.4% 1w  vs parent +10.6%
+  SPX: CTVA +2.5% none, CF +2.7% none · RUT: FMC +12.2% none, IPI +1.4% pos
+- **Oil & Gas Equipment & Services** (Energy)  +1.5% 1d  +6.1% 1w  vs parent +2.3%
+  SPX: SLB +1.7% none, BKR +1.5% none · RUT: KGS +3.2% none, WHD +2.0% mixed
+- **Oil & Gas Refining & Marketing** (Energy)  +1.1% 1d  +5.9% 1w  vs parent +2.1%
+  SPX: MPC +1.0% none, VLO +1.1% none · RUT: PBF +0.7% pos, DK -2.6% pos
+- **Coking Coal** (Basic Materials)  +1.7% 1d  +5.3% 1w  vs parent +7.5%
+  SPX: — · RUT: HCC +2.2% pos, AMR -0.1% pos
+- **Farm Products** (Consumer Defensive)  +1.1% 1d  +4.8% 1w  vs parent +5.5%
+  SPX: ADM +1.0% pos, BG +1.5% none · RUT: CALM -0.2% neg, DMC +0.7% none
+- **Oil & Gas Integrated** (Energy)  -0.2% 1d  +4.6% 1w  vs parent +0.8%
+  SPX: XOM -0.2% pos, CVX +0.3% none · RUT: DEC -0.7% none
+- **Marine Shipping** (Industrials)  +1.7% 1d  +4.6% 1w  vs parent +8.2%
+  SPX: — · RUT: MATX -0.5% pos, CMRE +0.5% mixed
 
 COLD (1w):
-- **Copper** (Basic Materials)  -1.5% 1d  -7.3% 1w  vs parent -5.4%
-  SPX: FCX -1.9% pos · RUT: IE -2.6% none
-- **Semiconductor Equipment & Materials** (Technology)  -0.6% 1d  -7.2% 1w  vs parent -6.3%
-  SPX: LRCX +1.5% none, AMAT -0.6% none · RUT: ACMR -0.7% pos, KLIC -0.2% none
-- **Uranium** (Energy)  +3.5% 1d  -6.8% 1w  vs parent -9.9%
-  SPX: — · RUT: UEC -0.9% none, UUUU +0.4% none
-- **Railroads** (Industrials)  +0.5% 1d  -4.8% 1w  vs parent -3.5%
-  SPX: UNP -0.2% none, CSX +0.7% none · RUT: TRN +0.4% neg, GBX +0.1% none
-- **Communication Equipment** (Technology)  -0.9% 1d  -4.8% 1w  vs parent -4.0%
-  SPX: CSCO -0.8% none, MSI -1.4% none · RUT: VSAT +2.6% none, BDC +2.7% none
-- **Coking Coal** (Basic Materials)  -6.0% 1d  -4.7% 1w  vs parent -2.8%
-  SPX: — · RUT: HCC -4.8% pos, AMR -6.9% pos
-- **Conglomerates** (Industrials)  +0.3% 1d  -4.7% 1w  vs parent -3.4%
-  SPX: MMM -0.3% none, HON +0.8% none · RUT: BBUC +0.7% none, GHC +0.9% none
-- **Scientific & Technical Instruments** (Technology)  +0.2% 1d  -4.5% 1w  vs parent -3.7%
-  SPX: KEYS +0.3% none, GRMN +0.4% none · RUT: ESE +2.6% none, NOVT +1.9% none
+- **Uranium** (Energy)  +0.6% 1d  -9.9% 1w  vs parent -13.7%
+  SPX: — · RUT: UEC +0.3% pos, UUUU +0.5% none
+- **Textile Manufacturing** (Consumer Cyclical)  +7.1% 1d  -6.9% 1w  vs parent -5.0%
+  SPX: — · RUT: AIN +8.2% none
+- **Semiconductor Equipment & Materials** (Technology)  +0.4% 1d  -6.2% 1w  vs parent -7.2%
+  SPX: LRCX -0.7% none, AMAT -0.8% none · RUT: ACMR -0.2% pos, KLIC +1.2% none
+- **Rental & Leasing Services** (Industrials)  -0.3% 1d  -6.2% 1w  vs parent -2.6%
+  SPX: URI -1.0% pos · RUT: GATX +1.3% none, HRI -2.3% none
+- **Railroads** (Industrials)  -0.0% 1d  -6.1% 1w  vs parent -2.6%
+  SPX: UNP -0.3% none, CSX -0.1% none · RUT: TRN +0.5% neg, GBX +1.8% none
+- **Lodging** (Consumer Cyclical)  +0.2% 1d  -6.1% 1w  vs parent -4.2%
+  SPX: MAR -0.4% none, HLT -0.1% none · RUT: —
+- **Real Estate - Development** (Real Estate)  -1.2% 1d  -5.7% 1w  vs parent -2.8%
+  SPX: — · RUT: CCS -1.9% none
+- **Copper** (Basic Materials)  +1.4% 1d  -5.6% 1w  vs parent -3.4%
+  SPX: FCX +2.0% pos · RUT: IE +0.6% none
 
 ## OVERRIDES (industry 1w residual vs parent ≥ 3pp)
-- **OVERRIDE** Agricultural Inputs +8.2% vs Basic Materials -1.9%  (gap +10.1%)  SPX CTVA,CF · RUT FMC,IPI
-- **OVERRIDE** Uranium -6.8% vs Energy +3.1%  (gap -9.9%)  SPX — · RUT UEC,UUUU
-- **SPLIT** Semiconductor Equipment & Materials -7.2% vs Technology -0.8%  (gap -6.3%)  SPX LRCX,AMAT · RUT ACMR,KLIC
-- **OVERRIDE** Thermal Coal -3.0% vs Energy +3.1%  (gap -6.1%)  SPX — · RUT CNR,BTU
-- **SPLIT** Copper -7.3% vs Basic Materials -1.9%  (gap -5.4%)  SPX FCX · RUT IE
-- **OVERRIDE** Electronic Gaming & Multimedia -3.3% vs Communication Services +1.9%  (gap -5.2%)  SPX TTWO · RUT —
-- **OVERRIDE** Consumer Electronics +4.3% vs Technology -0.8%  (gap +5.2%)  SPX AAPL · RUT SONO,GPRO
-- **OVERRIDE** Steel +3.1% vs Basic Materials -1.9%  (gap +5.0%)  SPX NUE,STLD · RUT WS,NWPX
-- **OVERRIDE** Packaging & Containers -4.2% vs Consumer Cyclical +0.5%  (gap -4.7%)  SPX SW,AMCR · RUT GEF,AMBP
-- **OVERRIDE** Travel Services -4.1% vs Consumer Cyclical +0.5%  (gap -4.6%)  SPX BKNG,ABNB · RUT GBTG,LIND
-- **OVERRIDE** Lodging -4.0% vs Consumer Cyclical +0.5%  (gap -4.5%)  SPX MAR,HLT · RUT —
-- **SPLIT** Auto Manufacturers +5.0% vs Consumer Cyclical +0.5%  (gap +4.5%)  SPX TSLA,GM · RUT LCID
-- **OVERRIDE** Publishing -2.6% vs Communication Services +1.9%  (gap -4.5%)  SPX — · RUT WLY,TDAY
-- **OVERRIDE** Marine Shipping +2.9% vs Industrials -1.3%  (gap +4.2%)  SPX — · RUT MATX,CMRE
-- **OVERRIDE** Leisure -3.6% vs Consumer Cyclical +0.5%  (gap -4.0%)  SPX HAS · RUT LTH,GOLF
+- **OVERRIDE** Uranium -9.9% vs Energy +3.8%  (gap -13.7%)  SPX — · RUT UEC,UUUU
+- **OVERRIDE** Agricultural Inputs +8.4% vs Basic Materials -2.2%  (gap +10.6%)  SPX CTVA,CF · RUT FMC,IPI
+- **OVERRIDE** Marine Shipping +4.6% vs Industrials -3.5%  (gap +8.2%)  SPX — · RUT MATX,CMRE
+- **OVERRIDE** Coking Coal +5.3% vs Basic Materials -2.2%  (gap +7.5%)  SPX — · RUT HCC,AMR
+- **OVERRIDE** Semiconductor Equipment & Materials -6.2% vs Technology +1.0%  (gap -7.2%)  SPX LRCX,AMAT · RUT ACMR,KLIC
+- **SPLIT** Oil & Gas Drilling +10.0% vs Energy +3.8%  (gap +6.2%)  SPX — · RUT NE,RIG
+- **OVERRIDE** Business Equipment & Supplies +2.4% vs Industrials -3.5%  (gap +6.0%)  SPX — · RUT XRX
+- **OVERRIDE** Steel +3.6% vs Basic Materials -2.2%  (gap +5.8%)  SPX NUE,STLD · RUT WS,NWPX
+- **OVERRIDE** Chemicals +3.3% vs Basic Materials -2.2%  (gap +5.5%)  SPX DOW · RUT HUN,REX
+- **OVERRIDE** Farm Products +4.8% vs Consumer Defensive -0.7%  (gap +5.5%)  SPX ADM,BG · RUT CALM,DMC
+- **OVERRIDE** Scientific & Technical Instruments -4.3% vs Technology +1.0%  (gap -5.3%)  SPX KEYS,GRMN · RUT ESE,NOVT
+- **OVERRIDE** Aluminum +3.0% vs Basic Materials -2.2%  (gap +5.2%)  SPX — · RUT CENX,CSTM
+- **SPLIT** Textile Manufacturing -6.9% vs Consumer Cyclical -1.9%  (gap -5.0%)  SPX — · RUT AIN
+- **OVERRIDE** Communication Equipment -3.8% vs Technology +1.0%  (gap -4.8%)  SPX CSCO,MSI · RUT VSAT,BDC
+- **OVERRIDE** Electronic Components -3.6% vs Technology +1.0%  (gap -4.6%)  SPX APH,GLW · RUT PLXS,BELFA
 
 ## THEME JOIN
 **Energy Traditional** (GICS Energy)
-- Oil / Majors: +2.5% 1w vs parent +3.1% → **AGREE**
-- Oil E&P: +2.6% 1w vs parent +3.1% → **AGREE**
-- Oil Services: +3.4% 1w vs parent +3.1% → **AGREE**
-- Nuclear: -3.2% 1w vs parent +3.1% → **DIVERGE**
+- Oil / Majors: +2.8% 1w vs parent +3.8% → **AGREE**
+- Oil E&P: +4.0% 1w vs parent +3.8% → **AGREE**
+- Oil Services: +6.1% 1w vs parent +3.8% → **AGREE**
+- Nuclear: -4.2% 1w vs parent +3.8% → **DIVERGE**
 **Commodities Energy** (GICS Energy, Basic Materials)
-- Uranium: -6.8% 1w vs parent +0.6% → **DIVERGE**
-- Oil (commodity): +3.3% 1w vs parent +0.6% → **AGREE**
+- Uranium: -9.9% 1w vs parent +0.8% → **DIVERGE**
+- Oil (commodity): +4.3% 1w vs parent +0.8% → **AGREE**
 **Energy Renewable** (GICS Energy, Utilities, Technology)
-- Solar: -3.7% 1w vs parent +0.6% → **DIVERGE**
-- Renewable utilities: -2.9% 1w vs parent +0.6% → **DIVERGE**
+- Solar: -3.5% 1w vs parent +0.9% → **DIVERGE**
+- Renewable utilities: -1.8% 1w vs parent +0.9% → **DIVERGE**
 **Commodities Metals** (GICS Basic Materials)
-- Gold: -2.5% 1w vs parent -1.9% → **AGREE**
-- Silver: -0.9% 1w vs parent -1.9% → **AGREE**
-- Copper: -7.3% 1w vs parent -1.9% → **AGREE**
-- Other precious: -1.1% 1w vs parent -1.9% → **AGREE**
+- Gold: -5.5% 1w vs parent -2.2% → **AGREE**
+- Silver: +0.5% 1w vs parent -2.2% → **DIVERGE**
+- Copper: -5.6% 1w vs parent -2.2% → **AGREE**
+- Other precious: -1.7% 1w vs parent -2.2% → **AGREE**
 **Semiconductors** (GICS Technology)
-- Semis: -1.4% 1w vs parent -0.8% → **AGREE**
-- Semi equipment: -7.2% 1w vs parent -0.8% → **AGREE**
+- Semis: +2.5% 1w vs parent +1.0% → **AGREE**
+- Semi equipment: -6.2% 1w vs parent +1.0% → **DIVERGE**
 **Artificial Intelligence** (GICS Technology)
-- AI compute / semis: -1.4% 1w vs parent -0.8% → **AGREE**
-- Software infra: -1.1% 1w vs parent -0.8% → **AGREE**
+- AI compute / semis: +2.5% 1w vs parent +1.0% → **AGREE**
+- Software infra: -0.5% 1w vs parent +1.0% → **DIVERGE**
 **Defense & Aerospace** (GICS Industrials)
-- Aero / defense: +0.1% 1w vs parent -1.3% → **DIVERGE**
+- Aero / defense: -3.3% 1w vs parent -3.5% → **AGREE**
 
 ## FINVIZ THEME ETF TAPE
-- **Agri-business** -0.3% 1d +6.2% 1w · MOO, VEGI, FTAG
-- **Industrials** +1.3% 1d -3.6% 1w · XLI, ITA, AIRR
-- **Space Exploration & Technology** +1.2% 1d -3.4% 1w · NASA, ARKX, UFO
-- **Technology** +0.9% 1d -2.9% 1w · VGT, XLK, SMH
-- **Materials** +1.1% 1d -2.6% 1w · GDX, GDXJ, XLB
-- **Robotics & Automation** +1.5% 1d -2.4% 1w · BAI, AIQ, QTUM
-- **Cannabis Based Businesses** -0.9% 1d +2.3% 1w · MSOS, MJ, CNBS
-- **Battery and Energy Storage** +1.5% 1d -1.6% 1w · LIT, BATT, IBAT
-- **Energy** -0.6% 1d +1.4% 1w · XLE, AMLP, VDE
-- **Future Mobility Production & Tech** +1.3% 1d -1.4% 1w · DRIV, ROKT, IDRV
-- **Innovation / Patent Based** +1.2% 1d -1.3% 1w · ARKK, XT, FWD
-- **Real Estate** +0.7% 1d -1.2% 1w · VNQ, SCHH, XLRE
-- **Green Investing** +0.9% 1d -1.1% 1w · NLR, USCL, SPYX
-- **Financials** +1.8% 1d +1.0% 1w · XLF, VFH, KBWB
-- **Infrastructure** +0.8% 1d -0.9% 1w · PAVE, GRID, IGF
-- **Demographic & Lifestyle Trends** +0.6% 1d -0.8% 1w · FFOX, FFND, BUZZ
-- **Communication Services** +0.8% 1d +0.8% 1w · XLC, VOX, FCOM
-- **Royalty & Intellectual Property** +0.8% 1d -0.8% 1w · PATN, NXTI, DTAN
-- **Utilities** +0.8% 1d -0.8% 1w · XLU, VPU, FUTY
-- **Faith & Religion** +0.7% 1d -0.6% 1w · SPUS, CATH, HLAL
+- **Agri-business** +1.9% 1d +5.5% 1w · MOO, VEGI, FTAG
+- **Industrials** +0.2% 1d -4.3% 1w · XLI, ITA, AIRR
+- **Materials** +1.7% 1d -4.1% 1w · GDX, GDXJ, XLB
+- **Space Exploration & Technology** +0.9% 1d -3.1% 1w · NASA, ARKX, UFO
+- **Fintech** +1.5% 1d -3.0% 1w · BLOK, ARKF, BITQ
+- **Energy** +0.2% 1d +2.8% 1w · XLE, AMLP, VDE
+- **Real Estate** -0.2% 1d -2.7% 1w · VNQ, SCHH, XLRE
+- **Infrastructure** +0.0% 1d -2.6% 1w · PAVE, GRID, IGF
+- **Consumer Discretionary** +0.2% 1d -2.5% 1w · XLY, VCR, TSLL
+- **Robotics & Automation** -0.0% 1d -2.2% 1w · BAI, AIQ, QTUM
+- **Utilities** +0.2% 1d -2.2% 1w · XLU, VPU, FUTY
+- **Cannabis Based Businesses** +0.8% 1d +2.1% 1w · MSOS, MJ, CNBS
+- **Technology** +0.1% 1d -2.1% 1w · VGT, XLK, SMH
+- **Demographic & Lifestyle Trends** +0.8% 1d -2.0% 1w · FFOX, FFND, AGNG
+- **Future Mobility Production & Tech** +0.2% 1d -1.9% 1w · DRIV, ROKT, IDRV
+- **Green Investing** +0.5% 1d -1.7% 1w · NLR, USCL, SPYX
+- **Battery and Energy Storage** +0.0% 1d -1.7% 1w · LIT, BATT, IBAT
+- **Lobbying & Regulatory Policy** +0.3% 1d -1.6% 1w · OPPE, SAGP, DEMZ
+- **Innovation / Patent Based** +0.2% 1d -1.5% 1w · ARKK, XT, FWD
+- **Natural Resources** +0.7% 1d -1.4% 1w · GUNR, GNR, PHO
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 8 min **BNL,CNK,EPR,IMAX** Ride This Roller Coaster if You Dare. Consider the 6% REIT That Bought It, Too. (Barrons.com)
-- 36 min **HOOD** HOOD Stock Rises Overnight: Robinhood Trust Accounts Now Have Over $150M Since Launch In August, Says CEO (Stocktwits)
-- 44 min **NVDA** Michael Burry Calls Nvidia-Hugging Face Deal A No-Brainer  Wall Street Sees New Threat For OpenAI And Anthropic (Stocktwits)
-- 48 min **CPB,JEF** CPB Stock Heads For Worst Week Since March: Jefferies Sees 2027 'Shaping Up As A Difficult Year' After Dividend Cut (Stocktwits)
-- 51 min **ZS** Zscaler Inc (ZS) (Q4 2026) Earnings Call Highlights: Record Operating Margin and Accelerating ... (GuruFocus.com)
-- 51 min **LULU** Lululemon Athletica Inc (LULU) (Q2 2026) Earnings Call Highlights: Revenue Declines 4% as ... (GuruFocus.com)
-- 51 min **KR,MAMA** Mama's Creations Inc (MAMA) (Q2 2027) Earnings Call Highlights: Revenue Surges 55% as Kroger ... (GuruFocus.com)
-- 51 min **ASAN** Asana Inc (ASAN) (Q2 2027) Earnings Call Highlights: AI Products Drive 25% of Net New ARR Amid ... (GuruFocus.com)
-- 51 min **GWRE** Guidewire Software Inc (GWRE) (Q4 2026) Earnings Call Highlights: Record ARR Growth and ... (GuruFocus.com)
-- 51 min **CURV** Torrid Holdings Inc (CURV) (Q2 2026) Earnings Call Highlights: Sub-Brand Growth and Tariff ... (GuruFocus.com)
-- 51 min **EGAN** eGain Corp (EGAN) (Q4 2026) Earnings Call Highlights: AI Growth Drives Record Cash Flow Amid ... (GuruFocus.com)
-- 51 min **SWBI** Smith & Wesson Brands Inc (SWBI) (Q1 2027) Earnings Call Highlights: Strong Sales Growth ... (GuruFocus.com)
-- 52 min **BBCP** Concrete Pumping Holdings Inc (BBCP) (Q3 2026) Earnings Call Highlights: Revenue Surges 13% and ... (GuruFocus.com)
-- 52 min **DOCU** Docusign Inc (DOCU) (Q2 2027) Earnings Call Highlights: IAM Momentum Drives Strong Results and ... (GuruFocus.com)
-- 52 min **PL** Planet Labs PBC (PL) (Q2 2027) Earnings Call Highlights: Record Revenue and Strategic Expansion ... (GuruFocus.com)
-- 52 min **AOUT** American Outdoor Brands Inc (AOUT) (Q1 2027) Earnings Call Highlights: Strong Sales Growth and ... (GuruFocus.com)
-- 58 min **HPE,ORCL** ORCL Stock Spikes On New HPE Equipment Deal: Retail Turns Bullish Ahead Of Q1 Report (Stocktwits)
-- 1 hour **AAPL** My Impressions Watching Baseball in Apple Immersive (Above Avalon)
-- 1 hour **EML,SYPR** Class 8 Truck Recovery? 2 Stocks to Watch. (Zacks)
-- 1 hour **AAPL** Apple's Memory Costs Jump 400%, iPhone 18 Pro Price May Rise $100 (BeInCrypto)
-- 1 hour **MCD,NIO,RARE** Why Did NIO, RARE, MCD Stocks Fall To 52-Week Lows? (Stocktwits)
-- 1 hour **BHP** Albemarle Names BHP Executive Ragnar Udd as Next CEO (Oilprice.com)
-- Sep-03 **NVDA,SKHY** Micron reportedly targets 2x HBM capacity by end-2026; Samsung,  SK Hynix keep the scale edge (DigiTimes)
-- Sep-03 **SNOW,DELL,TEAM** Why Did SNOW, DELL, TEAM Stocks Surge To 52-Week Highs Today? (Stocktwits)
-- Sep-03 **MSFT,AAPL** Asian benchmarks mostly rise after tech stocks lead rally on Wall Street (Associated Press)
+- 4 min **LULU,ADBE** U.S. Futures Steady as Investors Await Jobs Report; Lululemon and Adobe in Focus: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
+- 15 min **TM** Toyota to invest US$280m to upgrade its plant in Vietnam (Just Auto)
+- 18 min **AAPL** AAPL Heads For Third Weekly Gain  But Foldable iPhone Is Reportedly Stuck At A Few Hundred Units A Day (Stocktwits)
+- 19 min **BILI** Bilibili Inc. Announces Proposed Offerings of US$700 Million Convertible Senior Notes, Concurrent Equity Placement and Concurrent Share Repurchases (GlobeNewswire)
+- 28 min **CRCL,BP** Aster Leads Perp DEX Tokens With 256,000 Holders, 5 Times Its Nearest Rival (BeInCrypto)
+- 36 min **SAN** Miami Office Towers Target a Major Supply Shortage (CRE Daily)
+- 37 min **HOOD** AMC Stock Rallies Nearly 20% Premarket As CEO Adam Aron Blasts Robinhood Over Disgusting Stock Tokens (Stocktwits)
+- 39 min **PL,RKLB,LUNR,ASTS,NVDA** SPCX Stock Blasts Past ASTS, RKLB, LUNR, PL  Heres Everything Shaking Up Space Stocks This Week (Stocktwits)
+- 43 min **CME** Stock market today: Dow, S&P 500, Nasdaq futures hold steady ahead of key jobs report (Yahoo Finance)
+- 44 min **NVDA** The OpenAI Agent Breach That Led To Nvidia's $13B Hugging Face Deal  Heres The Full Story, Finally Told (Stocktwits)
+- 54 min **TSLA,UBER** Tesla opens door to third-party robotaxi operators (Proactive)
+- 1 hour **MSCI** Rising Bond Yields Threaten Commercial Real Estate Recovery (CRE Daily)
+- 1 hour **ABR** US Multifamily Permitting Shifts toward Smaller Metros (CRE Daily)
+- 1 hour **RARE,BMRN** RARE Stock Crashes In Worst Day Ever  Pharma Bro Martin Shkreli Calls It Very Cheap, Floats BioMarin Buyout (Stocktwits)
+- 1 hour **LULU,ADBE** Lululemon slumps, Adobe names new CEO,  NFP ahead - whats moving markets (Investing.com)
+- 1 hour **IHG,MAR** How Marriott, Hilton, Accor and IHG are expanding global hotel networks (Hotel Management Network)
+- 1 hour **SPCX,MS** Anthropic looks set to tie up $15bn of pre-IPO funding (Proactive)
+- 1 hour **OXM** Oxford Industries Inc (OXM) (Q2 2026) Earnings Call Highlights: Margin Expansion and Debt ... (GuruFocus.com)
+- 1 hour **TPB** ALP NAMED OFFICIAL NICOTINE POUCH PARTNER OF MATCHROOM BOXING (PR Newswire)
+- 1 hour **TDY** Teledyne Qioptiq Receives First Option from Germany for Additional PHOENIX-XR Cooled Thermal Weapon Sights Valued at More Than $21 Million (Business Wire)
+- 1 hour **BDX,NE** 3 Dividend Stocks From a Value Pro (Barrons.com)
+- 2 hours **ORCL,AMZN,META,MSFT,GOOGL** What We've Learned Since 9/11 (Barrons.com)
+- 2 hours **GPN** Interview: Unlimit CEO Irene Skrynova on BRICS fast payments push and its impact on global finance (Electronic Payments)
+- 2 hours **TSLA,F,GM** BMW Stock Has Rarely Been Cheaper Amid Pressure in Chinese Market (Barrons.com)
+- 2 hours **UMC** UMC Reports Sales for August 2026 (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

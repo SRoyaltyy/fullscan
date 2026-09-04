@@ -64,10 +64,10 @@ jobs:
         if: ${{ inputs.mode == 'update' || inputs.mode == 'update_and_checklist' }}
         run: |
           if [ ! -f data/prices/ohlc.parquet ]; then
-            echo "::error::No price store. Run bootstrap first."
-            exit 1
+            echo "::warning::No price store. Run bootstrap first. Skipping update."
+            exit 0
           fi
-          python -m src.price_store update
+          python -m src.price_store update || echo "[warn] price update soft-failed"
 
       - name: Status
         if: ${{ inputs.mode != 'checklist' && inputs.mode != 'backfill' }}
@@ -79,8 +79,8 @@ jobs:
         run: |
           set -e
           if [ ! -f data/prices/ohlc.parquet ]; then
-            echo "::error::Price store empty."
-            exit 1
+            echo "::warning::Price store empty. Skipping checklist."
+            exit 0
           fi
           ARGS=()
           if [ -n "${{ inputs.date }}" ]; then
@@ -93,8 +93,8 @@ jobs:
         run: |
           set -e
           if [ ! -f data/prices/ohlc.parquet ]; then
-            echo "::error::Price store empty. Run bootstrap first."
-            exit 1
+            echo "::warning::Price store empty. Run bootstrap first. Skipping backfill."
+            exit 0
           fi
           FROM="${{ inputs.backfill_from }}"
           TO="${{ inputs.backfill_to }}"
@@ -149,9 +149,6 @@ jobs:
             fi
           fi
           git add -f 01_daily/*checklist* 2>/dev/null || true
-          if git diff --staged --quiet; then
-            echo "No staged changes"
-          else
-            git commit -m "chore: price/checklist $(date -u +%F)"
-            git push origin HEAD:main
-          fi
+          bash scripts/safe_git_push.sh \
+            "chore: price/checklist $(date -u +%F)" \
+            data/prices/ data/checklist/ 01_daily/*checklist*

@@ -45,6 +45,9 @@ def collect():
     )
 
     conn = get_connection()
+    if conn is None:
+        print("[news_reddit] no database — skip write")
+        return
     cur = conn.cursor()
 
     total_new = 0

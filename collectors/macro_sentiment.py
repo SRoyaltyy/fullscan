@@ -292,6 +292,9 @@ def print_report(cur):
 def main():
     start_time = time.time()
     conn = get_connection()
+    if conn is None:
+        print("[macro_sentiment] no database — skip write")
+        return
     cur = conn.cursor()
 
     print("=== FRED Economic Indicators ===")

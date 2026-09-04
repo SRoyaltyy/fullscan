@@ -34,6 +34,9 @@ def collect():
     print("[newsapi] Collecting from NewsAPI...")
 
     conn = get_connection()
+    if conn is None:
+        print("[news_newsapi] no database — skip write")
+        return
     cur = conn.cursor()
 
     total_new = 0

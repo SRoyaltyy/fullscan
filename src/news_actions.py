@@ -339,7 +339,7 @@ def main() -> None:
     if args.finviz:
         os.environ["FINVIZ_CSV"] = args.finviz
     if not config.DATABASE_URL:
-        raise SystemExit("DATABASE_URL not set")
+        print("[news_actions] DATABASE_URL not set — using files / empty news")
 
     report = build_from_db(hours=args.hours, limit=args.limit)
     try:

@@ -141,19 +141,27 @@ if ! try_rebase; then
   try_merge || true
 fi
 
-if git push origin main; then
+push_once() {
+  git push origin main
+}
+
+if push_once; then
   echo "[safe-push] pushed $(git rev-parse --short HEAD)"
   [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
   exit 0
 fi
 
-echo "[safe-push] first push rejected — fetch/rebase/retry"
-if try_rebase || try_merge; then
-  git push origin main && echo "[safe-push] pushed on retry $(git rev-parse --short HEAD)" \
-    || { echo "[safe-push] FATAL: push failed after retry — files are on the runner"; exit 1; }
-else
-  echo "[safe-push] FATAL: could not rebase or merge — files are on the runner"
-  exit 1
-fi
+for attempt in 1 2 3 4; do
+  echo "[safe-push] push rejected — fetch/rebase/retry ${attempt}/4"
+  sleep $((4 * attempt))
+  if try_rebase || try_merge; then
+    if push_once; then
+      echo "[safe-push] pushed on retry ${attempt} $(git rev-parse --short HEAD)"
+      [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
+      exit 0
+    fi
+  fi
+done
+echo "[safe-push] FATAL: push failed after retries — files are on the runner"
 [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
-exit 0
+exit 1

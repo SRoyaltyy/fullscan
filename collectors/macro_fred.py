@@ -54,6 +54,9 @@ def collect():
     print("[fred] Collecting macroeconomic data from FRED...")
 
     conn = get_connection()
+    if conn is None:
+        print("[macro_fred] no database — skip write")
+        return
     cur = conn.cursor()
 
     total_points = 0

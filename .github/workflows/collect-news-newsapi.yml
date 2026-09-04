@@ -21,5 +21,6 @@ jobs:
       - name: Run collector
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FULLSCAN_DB_OPTIONAL: "1"
           NEWSAPI_KEY:  ${{ secrets.NEWSAPI_KEY }}
         run: python -m collectors.news_newsapi

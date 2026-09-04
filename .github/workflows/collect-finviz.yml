@@ -21,6 +21,7 @@ jobs:
       - name: Run collector
         env:
           DATABASE_URL:    ${{ secrets.DATABASE_URL }}
+          FULLSCAN_DB_OPTIONAL: "1"
           FINVIZ_EMAIL:    ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
         run: python -m collectors.finviz_financials

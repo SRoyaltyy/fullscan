@@ -28,4 +28,5 @@ jobs:
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FULLSCAN_DB_OPTIONAL: "1"
         run: python collectors/company_profiles_collector.py
