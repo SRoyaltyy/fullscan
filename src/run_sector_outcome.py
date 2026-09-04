@@ -217,6 +217,11 @@ def run_one(sector: str, date_str: str) -> None:
         trace_path=os.path.join(out_dir, f"{slug}_outcome_trace.md"),
         stage_label=f"SECTOR OUTCOME {sector} {date_str}",
     )
+    if len((text or "").strip()) < 200:
+        print(f"[sector-outcome] {sector}: empty/thin LLM "
+              f"({len((text or '').strip())} chars) — not writing a stub "
+              "that would skip the next heal", flush=True)
+        return
     _write_outcome(sector, date_str, out_dir, slug, actual, text)
     _persist(date_str)
 

@@ -487,6 +487,8 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "_persist" in src
     assert "try Ticker.history" in src
     assert "_fill_from_history" in src
+    assert "empty/thin LLM" in src
+    assert "not writing a stub" in src
     # One failure must not abort the remaining 10.
     assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
     assert "SECTOR_ONE_TIMEOUT" in src
