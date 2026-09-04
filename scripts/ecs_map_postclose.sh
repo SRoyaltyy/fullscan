@@ -17,24 +17,22 @@ flock -n 9 || { echo "[map-postclose] lock held — skip"; exit 0; }
 ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
 echo "[map-postclose] et_hm=$ET_HM uid=$(id -u)"
 
-if [ -e "$PREOPEN_LOCK" ] && ! flock -n "$PREOPEN_LOCK" -c true 2>/dev/null; then
-  echo "[map-postclose] preopen lock held — skip (exit 0; GH Post-Close ALL heals)"
-  exit 0
-fi
-if command -v systemctl >/dev/null 2>&1 \
-   && systemctl is-active --quiet fullscan-preopen.service; then
-  echo "[map-postclose] preopen service active — skip (exit 0; GH Post-Close ALL heals)"
-  exit 0
-fi
-
 if [ -f "$ENVF" ]; then
   set -a
   # shellcheck disable=SC1090
   . "$ENVF"
   set +a
 fi
+# 10800s ate the 2026-09-04 morning packet. Do not inherit that default
+# from .fullscan.env — night pack must fail over at 900s.
 export OPENCLAW_GATEWAY_URL="${OPENCLAW_GATEWAY_URL:-http://127.0.0.1:18789}"
-export OPENCLAW_TIMEOUT="${OPENCLAW_TIMEOUT:-10800}"
+if [ -z "${POSTCLOSE_LLM_TIMEOUT:-}" ]; then
+  if [ -z "${OPENCLAW_TIMEOUT:-}" ] || [ "${OPENCLAW_TIMEOUT}" = "10800" ]; then
+    export OPENCLAW_TIMEOUT=900
+  fi
+else
+  export OPENCLAW_TIMEOUT="$POSTCLOSE_LLM_TIMEOUT"
+fi
 export HOME="${FULLSCAN_HOME:-/home/gha}"
 export PYTHONUNBUFFERED=1
 
@@ -72,6 +70,23 @@ if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
   FORCE_FLAG=(--force)
 fi
 echo "[map-postclose] POST-CLOSE ALL source=$SOURCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
+
+if [ "${FORCE:-}" != "true" ] && [ "${FORCE:-}" != "1" ]; then
+  if "$PY" -c "from src.skip_if_good import check_postclose_all; raise SystemExit(0 if check_postclose_all('$SOURCE') else 1)"; then
+    echo "[map-postclose] $SOURCE pack already on disk — skip"
+    exit 0
+  fi
+fi
+# GH Post-Close ALL first existed 2026-09-04. A leftover morning lock
+# used to skip 22:00 and dated _learnings.md never landed. If the night
+# pack is still missing, run anyway and warn.
+if [ -e "$PREOPEN_LOCK" ] && ! flock -n "$PREOPEN_LOCK" -c true 2>/dev/null; then
+  echo "[map-postclose] WARN: preopen lock held — night pack still missing, running anyway"
+fi
+if command -v systemctl >/dev/null 2>&1 \
+   && systemctl is-active --quiet fullscan-preopen.service; then
+  echo "[map-postclose] WARN: preopen service active — night pack still missing, running anyway"
+fi
 
 # Aliyun Cloudflare-blocks Elite HTML. Never scrape here.
 export FINVIZ_SKIP_LIVE=1

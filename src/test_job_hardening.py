@@ -370,8 +370,10 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert '_already_running("preopen_all.yml")' not in hold
     post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
     assert "last_closed_session" in post
-    assert "preopen lock held — skip (exit 0" in post
-    assert "preopen service active — skip (exit 0" in post
+    assert "night pack still missing, running anyway" in post
+    assert "preopen lock held — skip (exit 0" not in post
+    assert "OPENCLAW_TIMEOUT=900" in post
+    assert '[ "${OPENCLAW_TIMEOUT}" = "10800" ]' in post
     assert "exit 1" not in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
     assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
