@@ -273,13 +273,40 @@ def safe_create(**kwargs):
 
 # Finviz quote/news dates: "Sep-03-26 04:32PM", time-only "07:15AM",
 # "Today 04:32PM", "8 min", or a datetime from finvizfinance.
+# Month names are always English on Finviz — do not use locale %b.
+_FINVIZ_MONTHS = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
+}
 _FINVIZ_RELATIVE = re.compile(
     r"(?i)^\s*(today|yesterday|(\d+)\s*(min|mins|minutes|hour|hours|hr|hrs))\b"
 )
 _FINVIZ_TIME_ONLY = re.compile(r"(?i)^\s*\d{1,2}:\d{2}\s*(AM|PM)\s*$")
 _FINVIZ_DATE_TOKEN = re.compile(
-    r"(?i)\b([A-Z][a-z]{2}-\d{1,2}-\d{2,4}|[A-Z][a-z]{2}-\d{1,2})\b"
+    r"(?i)\b([A-Za-z]{3}-\d{1,2}-\d{2,4}|[A-Za-z]{3}-\d{1,2})\b"
 )
+
+
+def _date_from_finviz_token(token: str, today_d: date) -> date | None:
+    parts = (token or "").split("-")
+    if len(parts) < 2:
+        return None
+    mon = _FINVIZ_MONTHS.get(parts[0][:3].lower())
+    if not mon:
+        return None
+    try:
+        day = int(parts[1])
+        if len(parts) >= 3:
+            year = int(parts[2])
+            if year < 100:
+                year += 2000
+            return date(year, mon, day)
+        parsed = date(today_d.year, mon, day)
+        if parsed > today_d:
+            parsed = date(today_d.year - 1, mon, day)
+        return parsed
+    except ValueError:
+        return None
 
 
 def parse_finviz_news_date(raw, *, last_date=None, today=None) -> str | None:
@@ -312,19 +339,6 @@ def parse_finviz_news_date(raw, *, last_date=None, today=None) -> str | None:
     if re.match(r"^\d{4}-\d{2}-\d{2}", s):
         return s[:10]
 
-    for fmt in (
-        "%I:%M %p %m/%d/%Y",
-        "%b-%d-%y %I:%M%p",
-        "%b-%d-%Y %I:%M%p",
-        "%b-%d-%y %I:%M %p",
-        "%m/%d/%Y",
-        "%Y-%m-%d %H:%M:%S",
-    ):
-        try:
-            return datetime.strptime(s, fmt).date().isoformat()
-        except ValueError:
-            continue
-
     rel = _FINVIZ_RELATIVE.match(s)
     if rel:
         word = (rel.group(1) or "").lower()
@@ -337,19 +351,15 @@ def parse_finviz_news_date(raw, *, last_date=None, today=None) -> str | None:
 
     token_m = _FINVIZ_DATE_TOKEN.search(s)
     if token_m:
-        token = token_m.group(1)
-        for fmt in ("%b-%d-%y", "%b-%d-%Y"):
-            try:
-                return datetime.strptime(token, fmt).date().isoformat()
-            except ValueError:
-                continue
-        try:
-            parsed = datetime.strptime(f"{token}-{today_d.year}", "%b-%d-%Y").date()
-            if parsed > today_d:
-                parsed = datetime.strptime(f"{token}-{today_d.year - 1}", "%b-%d-%Y").date()
+        parsed = _date_from_finviz_token(token_m.group(1), today_d)
+        if parsed:
             return parsed.isoformat()
+
+    for fmt in ("%I:%M %p %m/%d/%Y", "%m/%d/%Y", "%Y-%m-%d %H:%M:%S"):
+        try:
+            return datetime.strptime(s, fmt).date().isoformat()
         except ValueError:
-            pass
+            continue
     return last_date
 
 

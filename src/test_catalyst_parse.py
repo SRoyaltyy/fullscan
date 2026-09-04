@@ -102,6 +102,7 @@ def test_finviz_news_dates_are_real_calendar_days() -> None:
     assert ca.parse_finviz_news_date("Yesterday 09:00PM", today=today) == "2026-09-03"
     assert ca.parse_finviz_news_date("8 min", today=today) == today
     assert ca.parse_finviz_news_date("Sep-03", today=today) == "2026-09-03"
+    assert ca.parse_finviz_news_date("Dec-28", today="2026-01-05") == "2025-12-28"
     assert ca.parse_finviz_news_date("2026-09-02 16:55:36", today=today) == "2026-09-02"
     from datetime import datetime
     assert ca.parse_finviz_news_date(datetime(2026, 8, 27, 8, 30), today=today) == "2026-08-27"
