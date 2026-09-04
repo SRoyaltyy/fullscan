@@ -4480,6 +4480,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 3.52,
+          "actual_direction": "up",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       }
     },
@@ -6700,7 +6712,20 @@
       "rubric": "00_grounding/sectors/healthcare.md",
       "spy_pct_change": -0.6755757074274671,
       "rel_pct_change": 2.2798813804725038,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": 2.08,
+          "actual_direction": "up",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.6
+        }
+      }
     },
     {
       "date": "2026-08-18",
@@ -7572,6 +7597,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "notable",
           "confidence": 0.6
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.72,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       }
     },
@@ -7644,6 +7681,18 @@
           "direction_hit": true,
           "magnitude_hit": false,
           "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 1.78,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
         }
@@ -7720,6 +7769,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.32,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -7787,6 +7848,18 @@
           "label": "3d",
           "target_date": "2026-08-27",
           "actual_pct": -1.06,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": -0.85,
           "actual_direction": "down",
           "actual_magnitude_band": "mild",
           "direction_hit": false,
@@ -7868,6 +7941,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "notable",
           "confidence": 0.6
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 1.54,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.6
         }
       }
     },
@@ -7935,6 +8020,18 @@
           "label": "3d",
           "target_date": "2026-08-27",
           "actual_pct": 0.7,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 1.88,
           "actual_direction": "up",
           "actual_magnitude_band": "mild",
           "direction_hit": true,
@@ -8077,6 +8174,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": -3.16,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -8151,6 +8260,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.6
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.84,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       }
     },
@@ -8225,6 +8346,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 1.45,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -8296,6 +8429,18 @@
           "actual_magnitude_band": "mild",
           "direction_hit": false,
           "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-03",
+          "actual_pct": 0.61,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
@@ -9570,7 +9715,20 @@
       "rubric": "00_grounding/sectors/basic_materials.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": 0.14576472592535694,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.96,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9631,7 +9789,20 @@
       "rubric": "00_grounding/sectors/communication_services.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": -0.5258238349485911,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": 0.68,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.42
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9692,7 +9863,20 @@
       "rubric": "00_grounding/sectors/consumer_cyclical.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": -0.691971211519038,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": -0.6,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9753,7 +9937,20 @@
       "rubric": "00_grounding/sectors/consumer_defensive.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": -0.31115210067083066,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.17,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9814,7 +10011,20 @@
       "rubric": "00_grounding/sectors/energy.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": 0.5739939364040492,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": 3.51,
+          "actual_direction": "up",
+          "actual_magnitude_band": "severe",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9875,7 +10085,20 @@
       "rubric": "00_grounding/sectors/financial.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": -0.10795537459771243,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": 0.51,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9936,7 +10159,20 @@
       "rubric": "00_grounding/sectors/industrials.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": 1.0652437941031545,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": -3.21,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -9997,7 +10233,20 @@
       "rubric": "00_grounding/sectors/real_estate.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": -0.6174406541986088,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.86,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -10058,7 +10307,20 @@
       "rubric": "00_grounding/sectors/technology.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": 0.583053648261278,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": 1.71,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-08-26",
@@ -10119,7 +10381,20 @@
       "rubric": "00_grounding/sectors/utilities.md",
       "spy_pct_change": 0.02220155779071309,
       "rel_pct_change": 0.43957849739424404,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-03",
+          "actual_pct": -1.1,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
+        }
+      }
     },
     {
       "date": "2026-08-27",
@@ -14181,7 +14456,8 @@
       "etf": "XLB",
       "rubric": "00_grounding/sectors/basic_materials.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -1.6700741005132413
+      "rel_pct_change": -1.6700741005132413,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14241,7 +14517,8 @@
       "etf": "XLC",
       "rubric": "00_grounding/sectors/communication_services.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -0.1929014101588855
+      "rel_pct_change": -0.1929014101588855,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14301,7 +14578,8 @@
       "etf": "XLY",
       "rubric": "00_grounding/sectors/consumer_cyclical.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": 0.3461576485999984
+      "rel_pct_change": 0.3461576485999984,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14361,7 +14639,8 @@
       "etf": "XLP",
       "rubric": "00_grounding/sectors/consumer_defensive.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -1.3625159785235597
+      "rel_pct_change": -1.3625159785235597,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14421,7 +14700,8 @@
       "etf": "XLE",
       "rubric": "00_grounding/sectors/energy.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -1.7841618329564435
+      "rel_pct_change": -1.7841618329564435,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14481,7 +14761,8 @@
       "etf": "XLF",
       "rubric": "00_grounding/sectors/financial.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": 0.5140355503051142
+      "rel_pct_change": 0.5140355503051142,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14541,7 +14822,8 @@
       "etf": "XLV",
       "rubric": "00_grounding/sectors/healthcare.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -0.8676000424651109
+      "rel_pct_change": -0.8676000424651109,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14601,7 +14883,8 @@
       "etf": "XLI",
       "rubric": "00_grounding/sectors/industrials.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -0.01663005881007429
+      "rel_pct_change": -0.01663005881007429,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14661,7 +14944,8 @@
       "etf": "XLRE",
       "rubric": "00_grounding/sectors/real_estate.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": 0.14227489359976975
+      "rel_pct_change": 0.14227489359976975,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14721,7 +15005,8 @@
       "etf": "XLK",
       "rubric": "00_grounding/sectors/technology.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": 0.24400578115202354
+      "rel_pct_change": 0.24400578115202354,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-03",
@@ -14781,7 +15066,8 @@
       "etf": "XLU",
       "rubric": "00_grounding/sectors/utilities.md",
       "spy_pct_change": 1.046841189654324,
-      "rel_pct_change": -0.20315563586967844
+      "rel_pct_change": -0.20315563586967844,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-04",
