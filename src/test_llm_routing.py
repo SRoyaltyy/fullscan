@@ -444,6 +444,53 @@ def test_sector_outcome_caps_tool_calls_per_stage() -> None:
     assert text == "B" * 220
 
 
+def test_map_postclose_caps_deepseek_tool_rounds() -> None:
+    """11 captain batches × 10 search rounds miss the 7200s captain wall."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    posts: list[dict] = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        return _fake_response(200, "", tool_calls=[{
+            "id": f"c{len(posts)}",
+            "function": {"name": "web_search",
+                         "arguments": '{"query":"XLK close"}'},
+        }])
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              return_value='{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        dc.chat([{"role": "user", "content": "cards"}],
+                model="deepseek-chat", tools=True,
+                stage_label="MAP POSTCLOSE captains_technology 2026-09-07")
+    assert len(posts) == 3
+
+
+def test_chat_nonempty_skips_thin_reasoner_stub() -> None:
+    """A 40-char reasoner stub must not become a skip-if-good reflect file."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    n = {"i": 0}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        n["i"] += 1
+        if n["i"] == 1:
+            return _fake_response(200, "short stub")
+        return _fake_response(200, "C" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat_nonempty(
+            [{"role": "user", "content": "reflect"}],
+            ladder=[("deepseek-reasoner", 12000),
+                    ("deepseek-chat", 8000)],
+            tools=False,
+            stage_label="SECTOR REFLECT Technology 2026-09-03",
+        )
+    assert text == "C" * 220
+    assert n["i"] == 2
+
+
 def test_pick_openclaw_token_prefers_live_48() -> None:
     secret64 = "s" * 64
     live48 = "l" * 48
@@ -482,6 +529,8 @@ def main() -> None:
         test_sector_outcome_caps_deepseek_tool_rounds,
         test_sector_outcome_keeps_essay_instead_of_more_search,
         test_sector_outcome_caps_tool_calls_per_stage,
+        test_map_postclose_caps_deepseek_tool_rounds,
+        test_chat_nonempty_skips_thin_reasoner_stub,
     ]
     failed = 0
     for fn in tests:

@@ -633,9 +633,12 @@ def test_search_and_sector_rounds_are_bounded() -> None:
                                      None) == 2
     assert dc._effective_tool_rounds("SECTOR REFLECT Healthcare 2026-09-03",
                                      None) == 2
+    assert dc._effective_tool_rounds(
+        "MAP POSTCLOSE captains_technology 2026-09-07", None) == 2
     assert dc._effective_tool_rounds("GENERAL OUTCOME 2026-09-03", None) == 10
     assert dc._effective_tool_rounds("SECTOR OUTCOME X", 1) == 1
     assert getattr(config, "SECTOR_TOOL_ROUNDS", 0) == 2
+    assert getattr(config, "MODEL_REFLECT", "") == "deepseek-chat"
     assert getattr(config, "SECTOR_MAX_SEARCHES", 0) == 2
     assert getattr(config, "SECTOR_CHAT_BUDGET_S", 0) == 420
 

@@ -346,10 +346,16 @@ def _is_sector_stage(stage_label: str) -> bool:
     return "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label
 
 
+def _is_capped_search_stage(stage_label: str) -> bool:
+    """Night-pack DeepSeek stages that must finish inside a child/step wall."""
+    label = (stage_label or "").upper()
+    return _is_sector_stage(stage_label) or "MAP POSTCLOSE" in label
+
+
 def _effective_tool_rounds(stage_label: str, max_rounds: int | None) -> int:
     """Sector grades already have ETF actuals; 10 search rounds miss ≥8 files."""
     base = max_rounds if max_rounds is not None else config.MAX_TOOL_ROUNDS
-    if _is_sector_stage(stage_label):
+    if _is_capped_search_stage(stage_label):
         cap = int(getattr(config, "SECTOR_TOOL_ROUNDS", 2) or 2)
         return max(1, min(int(base), cap))
     return max(1, int(base))
@@ -462,10 +468,11 @@ def chat(messages: list[dict], model: str, tools: bool = False,
 
     rounds = _effective_tool_rounds(stage_label, max_rounds) if tools else 1
     sector = _is_sector_stage(stage_label)
+    capped = _is_capped_search_stage(stage_label)
     search_cap = (int(getattr(config, "SECTOR_MAX_SEARCHES", 2) or 2)
-                  if sector else 10 ** 9)
+                  if capped else 10 ** 9)
     budget_s = (int(getattr(config, "SECTOR_CHAT_BUDGET_S", 420) or 420)
-                if sector else 10 ** 9)
+                if capped else 10 ** 9)
     t0 = time.monotonic()
     searches_done = 0
     step = 0
@@ -511,7 +518,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             if final:
                 messages.append({"role": "assistant", "content": final})
             break
-        if sector and len(calls) > remain:
+        if capped and len(calls) > remain:
             calls = calls[:remain]
         step += 1
         messages.append({"role": "assistant", "content": msg.get("content"),
@@ -612,13 +619,14 @@ def chat_nonempty(messages: list[dict], ladder: list[tuple[str, int]],
                   f"(model={model}, max_tokens={max_tokens}): {exc} "
                   "— trying next rung")
             continue
-        if text and text.strip():
+        if text and len(text.strip()) >= 200:
             if i:
                 print(f"[llm] recovered on attempt {i + 1} "
                       f"(model={model}, max_tokens={max_tokens})")
             return text
-        print(f"[llm] EMPTY answer on attempt {i + 1} "
-              f"(model={model}, max_tokens={max_tokens}) — trying next rung")
+        print(f"[llm] thin/empty answer on attempt {i + 1} "
+              f"(model={model}, max_tokens={max_tokens}, "
+              f"chars={len((text or '').strip())}) — trying next rung")
     return ""
 
 
