@@ -178,6 +178,7 @@ def _run_one(date: str, force: bool = False) -> None:
          [py, "-m", "src.run_sector_reflect", "--date", date],
          n_reflect >= 8,
          timeout_s=sector_wall, llm_timeout_s=llm_to)
+    _push_pack(date)
     step("Sector board",
          [py, "-m", "src.sector_board", "--date", date],
          False, timeout_s=60)
@@ -190,10 +191,11 @@ def _run_one(date: str, force: bool = False) -> None:
          [py, "-m", "src.hit_board"],
          False, timeout_s=60)
 
+    # Always rewrite. A thin dated file written before sector grades must
+    # not skip the digest that includes tonight's 11 HIT% rows.
     step("Learn cycle",
          [py, "-m", "src.learn_cycle", "--date", date],
-         skip_if_good.check_learn_cycle(date),
-         llm_timeout_s=llm_to)
+         False, timeout_s=180)
     # Captains can burn 2h. Dated learnings must already be on main.
     _push_pack(date)
 

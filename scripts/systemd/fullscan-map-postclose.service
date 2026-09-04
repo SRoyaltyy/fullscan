@@ -9,6 +9,6 @@ User=gha
 Environment=HOME=/home/gha
 WorkingDirectory=/home/gha/fullscan
 ExecStart=/bin/bash /home/gha/fullscan/scripts/ecs_map_postclose.sh
-TimeoutStartSec=12h
+TimeoutStartSec=18h
 Nice=5
 

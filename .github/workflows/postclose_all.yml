@@ -46,7 +46,9 @@ concurrency:
 jobs:
   postclose:
     runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 720
+    # Two closed sessions × 11 sector grades + reflects + captains.
+    # 12h died mid-pack when several Grok calls each burned the 900s cap.
+    timeout-minutes: 1080
     env:
       OPENCLAW_TIMEOUT: "900"
       FULLSCAN_HOME: "/home/gha"
