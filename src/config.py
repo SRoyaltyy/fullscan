@@ -237,6 +237,7 @@ def _env_int(name: str, default: int, minimum: int = 1) -> int:
 
 MAX_TOOL_ROUNDS = _env_int("MAX_TOOL_ROUNDS", 10)  # web_search rounds per LLM stage
 # Sector outcome already has deterministic ETF actuals in the prompt.
-# 10 SearXNG/DDG rounds × 11 sectors dies inside sector_wall before ≥8 files.
-SECTOR_TOOL_ROUNDS = _env_int("SECTOR_TOOL_ROUNDS", 4)
+# Each DeepSeek read is 120s and the per-sector child dies at 600s.
+# 4 tool rounds + 1 forced close = 5 × 120s = 600s with no time to write.
+SECTOR_TOOL_ROUNDS = _env_int("SECTOR_TOOL_ROUNDS", 2)
 TZ = "America/New_York"

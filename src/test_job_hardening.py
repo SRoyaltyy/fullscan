@@ -630,12 +630,12 @@ def test_search_and_sector_rounds_are_bounded() -> None:
     assert time.monotonic() - t0 < 2.0
 
     assert dc._effective_tool_rounds("SECTOR OUTCOME Technology 2026-09-03",
-                                     None) == 4
+                                     None) == 2
     assert dc._effective_tool_rounds("SECTOR REFLECT Healthcare 2026-09-03",
-                                     None) == 4
+                                     None) == 2
     assert dc._effective_tool_rounds("GENERAL OUTCOME 2026-09-03", None) == 10
-    assert dc._effective_tool_rounds("SECTOR OUTCOME X", 2) == 2
-    assert getattr(config, "SECTOR_TOOL_ROUNDS", 0) == 4
+    assert dc._effective_tool_rounds("SECTOR OUTCOME X", 1) == 1
+    assert getattr(config, "SECTOR_TOOL_ROUNDS", 0) == 2
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:

@@ -384,8 +384,9 @@ def test_sector_outcome_caps_deepseek_tool_rounds() -> None:
         dc.chat([{"role": "user", "content": "grade"}],
                 model="deepseek-chat", tools=True,
                 stage_label="SECTOR OUTCOME Technology 2026-09-03")
-    # 4 capped tool rounds + 1 forced no-tool close.
-    assert len(posts) == 5
+    # 2 capped tool rounds + 1 forced no-tool close.
+    # 4+1 at 120s/read fills the 600s sector child with 0 files written.
+    assert len(posts) == 3
 
 
 def test_pick_openclaw_token_prefers_live_48() -> None:
