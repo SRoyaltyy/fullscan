@@ -744,6 +744,8 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     heat = (ROOT / "src" / "map_heat_postclose.py").read_text(encoding="utf-8")
     assert "setdefaulttimeout(30)" in heat
     assert "threads=False" in heat
+    assert "from .run_reflect import last_assistant" in heat
+    assert "last_assistant(str(trans))" in heat
 
 
 def main() -> None:
