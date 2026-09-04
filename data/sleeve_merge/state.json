@@ -1,6 +1,6 @@
 {
   "policy": {
-    "name": "flatten_switch_recycle",
+    "name": "flatten_hard_red",
     "engine": "flatten_switch",
     "io_sleeve": "2w_size",
     "long_top_n": 10,
@@ -19,21 +19,22 @@
     "blank_mover_when_flat": false,
     "skip_blank_io": false,
     "hard_red": -3.0,
-    "hard_red_no_new": false
+    "hard_red_no_new": true,
+    "live": true
   },
   "stats": {
-    "n_trades": 52,
-    "n_skipped": 14,
-    "hit": 0.615,
-    "total_pnl": 21521.25,
-    "total_ret_pct": 21.61,
-    "final_equity": 121611.18,
-    "max_dd_pct": 2.97,
+    "n_trades": 54,
+    "n_skipped": 20,
+    "hit": 0.537,
+    "total_pnl": 19015.55,
+    "total_ret_pct": 19.11,
+    "final_equity": 119105.48,
+    "max_dd_pct": 2.99,
     "by_side": {
       "BUY": {
-        "n": 52,
-        "hit": 0.615,
-        "pnl": 21521.25
+        "n": 54,
+        "hit": 0.537,
+        "pnl": 19015.55
       },
       "SELL": {
         "n": 0,
@@ -42,18 +43,18 @@
       }
     },
     "n_days": 17,
-    "min_rolling_2w": 3.1,
-    "min_block_2w": 19.17,
-    "min_fortnight": 19.17,
+    "min_rolling_2w": 0.96,
+    "min_block_2w": 16.89,
+    "min_fortnight": 16.89,
     "hit_every_rolling_2w": false,
     "hit_every_block_2w": true,
     "hit_every_fortnight": true,
     "beat_io_top": true,
     "io_top_pct": 12.85,
     "passed": true,
-    "fees_in": 738.77,
-    "fees_out": 763.33,
-    "fees_total": 1502.1
+    "fees_in": 738.73,
+    "fees_out": 763.34,
+    "fees_total": 1502.07
   },
   "rolling_2w": [
     {
@@ -61,64 +62,64 @@
       "end": "2026-08-26",
       "n": 10,
       "start_eq": 99801.45,
-      "end_eq": 118934.19,
-      "ret_pct": 19.17
+      "end_eq": 116657.68,
+      "ret_pct": 16.89
     },
     {
       "start": "2026-08-14",
       "end": "2026-08-27",
       "n": 10,
       "start_eq": 102951.36,
-      "end_eq": 118525.71,
-      "ret_pct": 15.13
+      "end_eq": 116230.99,
+      "ret_pct": 12.9
     },
     {
       "start": "2026-08-17",
       "end": "2026-08-28",
       "n": 10,
       "start_eq": 103841.32,
-      "end_eq": 116649.03,
-      "ret_pct": 12.33
+      "end_eq": 114442.8,
+      "ret_pct": 10.21
     },
     {
       "start": "2026-08-18",
       "end": "2026-08-31",
       "n": 10,
       "start_eq": 105907.01,
-      "end_eq": 117031.83,
-      "ret_pct": 10.5
+      "end_eq": 114806.7,
+      "ret_pct": 8.4
     },
     {
       "start": "2026-08-19",
       "end": "2026-09-01",
       "n": 10,
       "start_eq": 110259.52,
-      "end_eq": 116897.19,
-      "ret_pct": 6.02
+      "end_eq": 114688.26,
+      "ret_pct": 4.02
     },
     {
       "start": "2026-08-20",
       "end": "2026-09-02",
       "n": 10,
       "start_eq": 111567.07,
-      "end_eq": 119367.74,
-      "ret_pct": 6.99
+      "end_eq": 117055.9,
+      "ret_pct": 4.92
     },
     {
       "start": "2026-08-21",
       "end": "2026-09-03",
       "n": 10,
       "start_eq": 117951.61,
-      "end_eq": 121611.18,
-      "ret_pct": 3.1
+      "end_eq": 119105.48,
+      "ret_pct": 0.98
     },
     {
       "start": "2026-08-24",
       "end": "2026-09-04",
       "n": 10,
-      "start_eq": 117888.34,
-      "end_eq": 121611.18,
-      "ret_pct": 3.16
+      "start_eq": 117973.64,
+      "end_eq": 119105.48,
+      "ret_pct": 0.96
     }
   ],
   "blocks_2w": [
@@ -127,16 +128,16 @@
       "end": "2026-08-26",
       "n": 10,
       "start_eq": 99801.45,
-      "end_eq": 118934.19,
-      "ret_pct": 19.17
+      "end_eq": 116657.68,
+      "ret_pct": 16.89
     },
     {
       "start": "2026-08-27",
       "end": "2026-09-04",
       "n": 7,
-      "start_eq": 118525.71,
-      "end_eq": 121611.18,
-      "ret_pct": 2.6,
+      "start_eq": 116230.99,
+      "end_eq": 119105.48,
+      "ret_pct": 2.47,
       "partial": true
     }
   ],
@@ -148,8 +149,8 @@
       "cal_start": "2026-08-13",
       "cal_end": "2026-08-26",
       "start_eq": 99801.45,
-      "end_eq": 118934.19,
-      "ret_pct": 19.17
+      "end_eq": 116657.68,
+      "ret_pct": 16.89
     },
     {
       "start": "2026-08-27",
@@ -157,11 +158,11 @@
       "n": 7,
       "cal_start": "2026-08-27",
       "cal_end": "2026-09-09",
-      "start_eq": 118525.71,
-      "end_eq": 121611.18,
-      "ret_pct": 2.6,
+      "start_eq": 116230.99,
+      "end_eq": 119105.48,
+      "ret_pct": 2.47,
       "partial": true
     }
   ],
-  "generated": "2026-09-04T12:59:45"
+  "generated": "2026-09-04T13:10:00"
 }

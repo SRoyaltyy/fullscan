@@ -7,7 +7,10 @@ The two live books are complementary, not substitutes:
   .io    — 16:00 ET close fill, follow-the-book 2w_size.
            No S ≥ +1 gate. Size sleeves keep winning on down days.
 
-Winning combine (``flatten_switch`` / ``flatten_switch_recycle``):
+Live combine (``flatten_hard_red``): same flatten-switch recycle
+clock, plus S ≤ −3 blocks *new* tickets from either sleeve. Working
+lots and due 1d exits stay on. ``flatten_switch_recycle`` remains
+in the sweep as the ungated predecessor.
 
   1. Default book is `.io` ``2w_size`` (close fill, same names as the
      published paper sleeve) — the down-day engine.
@@ -56,6 +59,7 @@ TWO_WEEK_CAL_DAYS = 14
 TARGET_2W_PCT = 15.0
 IO_TOP_SLEEVE = "2w_size"
 IO_TOP_RET_PCT = 12.85
+LIVE_POLICY = "flatten_hard_red"
 
 DEFAULT = {
     "name": "core_switch",
@@ -1168,6 +1172,27 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "hard_red", "hard_red_no_new",
     )
     slim = {k: pol[k] for k in keep if k in pol}
+    slim["live"] = pol.get("name") == LIVE_POLICY
+    sweep_slim = []
+    for row in sweep_rows:
+        s = row["stats"]
+        sweep_slim.append({
+            "name": row["name"],
+            "live": row["name"] == LIVE_POLICY,
+            "total_ret_pct": s["total_ret_pct"],
+            "max_dd_pct": s["max_dd_pct"],
+            "n_trades": s["n_trades"],
+            "hit": s.get("hit"),
+            "final_equity": s["final_equity"],
+            "min_fortnight": s.get("min_fortnight"),
+            "passed": s.get("passed"),
+            "fees_total": s.get("fees_total"),
+        })
+    (OUT_DIR / "sweep.json").write_text(
+        json.dumps({"live": LIVE_POLICY, "rows": sweep_slim,
+                    "generated": datetime.now().isoformat(timespec="seconds")},
+                   indent=2),
+        encoding="utf-8")
     (OUT_DIR / "state.json").write_text(json.dumps({
         "policy": slim,
         "stats": {k: v for k, v in st.items()
@@ -1223,17 +1248,15 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "Yesterday's score is never used at today's close.",
         "- Futubull fees, whole shares, no lookahead.",
         "",
-        "The +21% print is a real one-account ledger (sells fund buys, "
-        "Futubull fees, leftover cash). It is not a NAV stitch. It is also "
-        "not “sit in live 2w_size and sprinkle mover”: the book **breaks "
-        "the 2w hold** to flatten on the first green morning with a real "
-        "BUY list (08-20), then **re-enters a new 2w list on 08-24** "
-        "(S=−5.17, no live book that day — carry of the 08-21 print). "
-        "INO at $0.90 (12,345 sh) is the same 2w_size name the $10k paper "
-        "book held, scaled to $100k, and is ~$4.5k of the ~$21k P&L. "
-        "The 15%/2w PASS is the first fortnight; rolling 10-session "
-        "windows fail (min ~+3%). Sunday book dates are dropped; "
-        "09-04 is a morning print with no new close (flat mark).",
+        "Live book is **hard-red hold-only**: one Futubull cash account, "
+        "flatten on a green morning with a real BUY list, rotate leftover "
+        "mover at the next green open, carry the last 2w list on gap days, "
+        "and **do not open a new ticket when S ≤ −3**. Working lots and "
+        "due 1d exits stay on. The ungated recycle predecessor reprints "
+        "~+21.6% by re-entering 2w_size on hard-red 08-24; this book "
+        "waits until 08-25 and prints ~+19.1%. INO at $0.90 is the same "
+        "2w_size name the $10k paper book held, scaled to $100k. Sunday "
+        "book dates are dropped.",
         "",
         f"**Policy:** `{pol['name']}` · engine `{pol.get('engine', 'combine')}` · "
         f"{pol['io_sleeve']} · longs top {pol['long_top_n']} @ {pol['long_pct']:.0%} "
@@ -1309,39 +1332,37 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
             f"| {r['date']} | {sc} | {r['route']} | ${r['equity']:,.2f} | "
             f"${r.get('cash', 0):,.2f} | {r['core_n']} | {r['tac_n']} |")
 
+    rec = next((row for row in sweep_rows
+                if row["name"] == "flatten_switch_recycle"), None)
     hard = next((row for row in sweep_rows
                  if row["name"] == "flatten_hard_red"), None)
-    if hard:
-        hs = hard["stats"]
-        hsim = hard["sim"]
+    if rec and hard:
+        rs, hs = rec["stats"], hard["stats"]
         lines += [
             "",
-            "## Hard-red: no new buys when S ≤ −3",
+            "## Live method: hard-red hold-only (S ≤ −3)",
             "",
-            "Working lots stay on. Scheduled 1d exits still settle. "
-            "Neither sleeve opens a new ticket on a hard-red morning "
-            "(08-18/19/24/31, 09-01/02 this window). The published "
-            "recycle book *does* re-enter a full 2w_size list on 08-24 "
-            "(S=−5.17) from the 08-21 print — that is the day this "
-            "gate removes.",
+            f"`{LIVE_POLICY}` is the production book. Working lots stay on. "
+            "Scheduled 1d exits still settle. Neither sleeve opens a new "
+            "ticket on a hard-red morning. `flatten_switch_recycle` is the "
+            "ungated predecessor (re-enters 2w_size on 08-24, S=−5.17).",
             "",
-            f"| Book | Return | Final | Max DD | Trades | min fortnight |",
-            f"|---|---:|---:|---:|---:|---:|",
-            f"| `flatten_switch_recycle` (live) | "
-            f"{st['total_ret_pct']:+.2f}% | ${st['final_equity']:,.2f} | "
-            f"{st['max_dd_pct']:.2f}% | {st['n_trades']} | "
-            f"{st['min_fortnight']} |",
-            f"| `flatten_hard_red` | {hs['total_ret_pct']:+.2f}% | "
+            "| Book | Role | Return | Final | Max DD | min fortnight |",
+            "|---|---|---:|---:|---:|---:|",
+            f"| `flatten_hard_red` | **LIVE** | {hs['total_ret_pct']:+.2f}% | "
             f"${hs['final_equity']:,.2f} | {hs['max_dd_pct']:.2f}% | "
-            f"{hs['n_trades']} | {hs['min_fortnight']} |",
+            f"{hs['min_fortnight']} |",
+            f"| `flatten_switch_recycle` | previous | {rs['total_ret_pct']:+.2f}% | "
+            f"${rs['final_equity']:,.2f} | {rs['max_dd_pct']:.2f}% | "
+            f"{rs['min_fortnight']} |",
             "",
-            "| Date | Score | Recycle | Hard-red |",
+            "| Date | Score | Hard-red (live) | Recycle |",
             "|---|---:|---|---|",
         ]
-        rec_by = {r["date"]: r for r in sim["curve"]}
-        hr_by = {r["date"]: r for r in hsim["curve"]}
+        rec_by = {r["date"]: r for r in rec["sim"]["curve"]}
+        hr_by = {r["date"]: r for r in hard["sim"]["curve"]}
         for d in sorted(set(rec_by) | set(hr_by)):
-            a, b = rec_by.get(d) or {}, hr_by.get(d) or {}
+            a, b = hr_by.get(d) or {}, rec_by.get(d) or {}
             sc = a.get("score") if a.get("score") is not None else b.get("score")
             scs = "—" if sc is None else f"{float(sc):+.2f}"
             lines.append(
@@ -1530,8 +1551,9 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
 {_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
-carry last 2w list on gap days · day_cap {pol.get('day_cap',1):.0%} ·
-Futubull fees · one cash account · 15% / 2 weeks gate</p>
+carry last 2w list on gap days · hard-red S≤−3 = no new buys ·
+day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b> ·
+<a href="../strategy-board/" style="color:#93c5fd">all-strategy board</a></p>
 <div class="cards">{cards}</div>
 {svg}
 <h2>Daily book (cash left after fills)</h2>
@@ -1577,7 +1599,8 @@ def main(argv: list[str] | None = None) -> int:
     sweep_rows = run_sweep(payload, books, args.capital)
     if args.policy:
         sweep_rows = [r for r in sweep_rows if r["name"] == args.policy] or sweep_rows
-    winner = sweep_rows[0]
+    live = next((r for r in sweep_rows if r["name"] == LIVE_POLICY), None)
+    winner = live or sweep_rows[0]
     st = winner["stats"]
     print(f"[sleeve-merge] winner={winner['name']} ret={st['total_ret_pct']:+.2f}% "
           f"min_fort={st['min_fortnight']} min_block={st['min_block_2w']} "

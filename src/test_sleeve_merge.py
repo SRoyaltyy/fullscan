@@ -18,6 +18,11 @@ from src.sleeve_merge import (
 )
 
 
+def test_live_policy_is_hard_red() -> None:
+    from src.sleeve_merge import LIVE_POLICY
+    assert LIVE_POLICY == "flatten_hard_red"
+
+
 def test_two_week_is_ten_sessions() -> None:
     assert TWO_WEEK_SESSIONS == 10
     assert TARGET_2W_PCT == 15.0
@@ -288,6 +293,7 @@ def test_fortnight_is_14_calendar_days() -> None:
 
 
 def main() -> None:
+    test_live_policy_is_hard_red()
     test_two_week_is_ten_sessions()
     test_session_calendar_drops_weekend_book()
     test_next_session_skips_weekend()
@@ -301,7 +307,7 @@ def main() -> None:
     test_live_flatten_switch_clears_15pct_fortnight()
     test_live_fees_and_cash_lockup()
     test_hard_red_no_new_skips_0824_io_keeps_holds()
-    print("test_sleeve_merge: 13 ok")
+    print("test_sleeve_merge: 14 ok")
 
 
 if __name__ == "__main__":

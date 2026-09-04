@@ -1,6 +1,6 @@
 # Combined sleeve — .io × mover
 
-_Generated 2026-09-04T12:59:45 — 2026-08-13 → 2026-09-04_
+_Generated 2026-09-04T13:10:00 — 2026-08-13 → 2026-09-04_
 
 **Method:** one cash-accounted flatten-switch book.
 
@@ -11,42 +11,42 @@ _Generated 2026-09-04T12:59:45 — 2026-08-13 → 2026-09-04_
 - **Do not flatten** on green mornings with no real BUY list (08-13/14). Yesterday's score is never used at today's close.
 - Futubull fees, whole shares, no lookahead.
 
-The +21% print is a real one-account ledger (sells fund buys, Futubull fees, leftover cash). It is not a NAV stitch. It is also not “sit in live 2w_size and sprinkle mover”: the book **breaks the 2w hold** to flatten on the first green morning with a real BUY list (08-20), then **re-enters a new 2w list on 08-24** (S=−5.17, no live book that day — carry of the 08-21 print). INO at $0.90 (12,345 sh) is the same 2w_size name the $10k paper book held, scaled to $100k, and is ~$4.5k of the ~$21k P&L. The 15%/2w PASS is the first fortnight; rolling 10-session windows fail (min ~+3%). Sunday book dates are dropped; 09-04 is a morning print with no new close (flat mark).
+Live book is **hard-red hold-only**: one Futubull cash account, flatten on a green morning with a real BUY list, rotate leftover mover at the next green open, carry the last 2w list on gap days, and **do not open a new ticket when S ≤ −3**. Working lots and due 1d exits stay on. The ungated recycle predecessor reprints ~+21.6% by re-entering 2w_size on hard-red 08-24; this book waits until 08-25 and prints ~+19.1%. INO at $0.90 is the same 2w_size name the $10k paper book held, scaled to $100k. Sunday book dates are dropped.
 
-**Policy:** `flatten_switch_recycle` · engine `flatten_switch` · 2w_size · longs top 10 @ 10% · day_cap 100% · min_buys 5 · rotate=True · carry=True · size-up ×1.0
+**Policy:** `flatten_hard_red` · engine `flatten_switch` · 2w_size · longs top 10 @ 10% · day_cap 100% · min_buys 5 · rotate=True · carry=True · size-up ×1.0
 
 ## Headline
 
 | Start | Final | Return | Max DD | Trades | Win | vs .io 2w_size | Gate |
 |---:|---:|---:|---:|---:|---:|---|---|
-| $100,000 | $121,611.18 | **+21.61%** | 2.97% | 52 | 61.5% | BEATS +12.85% | **PASS** |
+| $100,000 | $119,105.48 | **+19.11%** | 2.99% | 54 | 53.7% | BEATS +12.85% | **PASS** |
 
-Futubull fees paid **$1,502.10** (in $738.77 / out $763.33). Whole shares. A name that is already held ties up cash — later names that day only see leftover cash, so some tickets do not fill.
+Futubull fees paid **$1,502.07** (in $738.73 / out $763.34). Whole shares. A name that is already held ties up cash — later names that day only see leftover cash, so some tickets do not fill.
 
 | Side | Trades | Win | P&L |
 |---|---:|---:|---:|
-| BUY | 52 | 61.5% | $21,521.25 |
+| BUY | 54 | 53.7% | $19,015.55 |
 | SELL | 0 | 0.0% | $0.00 |
 
 ## 15% every 2 weeks
 
 Target **+15%** per calendar fortnight (14 days) and per 10 trading sessions.
-Fortnights: **PASS** (min 19.17). 10-session blocks: **PASS** (min 19.17). Rolling: **FAIL** (min 3.1).
+Fortnights: **PASS** (min 16.89). 10-session blocks: **PASS** (min 16.89). Rolling: **FAIL** (min 0.96).
 
 | Kind | Start | End | n | Return | Gate |
 |---|---|---|---:|---:|---|
-| fortnight | 2026-08-13 | 2026-08-26 | 10 | +19.17% | PASS |
-| fortnight | 2026-08-27 | 2026-09-04 | 7 | +2.60% | partial |
-| block | 2026-08-13 | 2026-08-26 | 10 | +19.17% | PASS |
-| block | 2026-08-27 | 2026-09-04 | 7 | +2.60% | partial |
-| roll | 2026-08-13 | 2026-08-26 | 10 | +19.17% | PASS |
-| roll | 2026-08-14 | 2026-08-27 | 10 | +15.13% | PASS |
-| roll | 2026-08-17 | 2026-08-28 | 10 | +12.33% | FAIL |
-| roll | 2026-08-18 | 2026-08-31 | 10 | +10.50% | FAIL |
-| roll | 2026-08-19 | 2026-09-01 | 10 | +6.02% | FAIL |
-| roll | 2026-08-20 | 2026-09-02 | 10 | +6.99% | FAIL |
-| roll | 2026-08-21 | 2026-09-03 | 10 | +3.10% | FAIL |
-| roll | 2026-08-24 | 2026-09-04 | 10 | +3.16% | FAIL |
+| fortnight | 2026-08-13 | 2026-08-26 | 10 | +16.89% | PASS |
+| fortnight | 2026-08-27 | 2026-09-04 | 7 | +2.47% | partial |
+| block | 2026-08-13 | 2026-08-26 | 10 | +16.89% | PASS |
+| block | 2026-08-27 | 2026-09-04 | 7 | +2.47% | partial |
+| roll | 2026-08-13 | 2026-08-26 | 10 | +16.89% | PASS |
+| roll | 2026-08-14 | 2026-08-27 | 10 | +12.90% | FAIL |
+| roll | 2026-08-17 | 2026-08-28 | 10 | +10.21% | FAIL |
+| roll | 2026-08-18 | 2026-08-31 | 10 | +8.40% | FAIL |
+| roll | 2026-08-19 | 2026-09-01 | 10 | +4.02% | FAIL |
+| roll | 2026-08-20 | 2026-09-02 | 10 | +4.92% | FAIL |
+| roll | 2026-08-21 | 2026-09-03 | 10 | +0.98% | FAIL |
+| roll | 2026-08-24 | 2026-09-04 | 10 | +0.96% | FAIL |
 
 ## Day route
 
@@ -55,49 +55,49 @@ Fortnights: **PASS** (min 19.17). 10-session blocks: **PASS** (min 19.17). Rolli
 | 2026-08-13 | +8.53 | io | $99,801.45 | $136.04 | 9 | 0 |
 | 2026-08-14 | +5.50 | io | $102,951.36 | $108.02 | 11 | 0 |
 | 2026-08-17 | +2.25 | io | $103,841.32 | $58.83 | 16 | 0 |
-| 2026-08-18 | -6.20 | io | $105,907.01 | $58.83 | 16 | 0 |
-| 2026-08-19 | -7.20 | io | $110,259.52 | $58.83 | 16 | 0 |
+| 2026-08-18 | -6.20 | hold | $105,907.01 | $58.83 | 16 | 0 |
+| 2026-08-19 | -7.20 | hold | $110,259.52 | $58.83 | 16 | 0 |
 | 2026-08-20 | +1.12 | mover | $111,567.07 | $201.36 | 0 | 10 |
 | 2026-08-21 | +3.25 | mover | $117,951.61 | $24.98 | 0 | 10 |
-| 2026-08-24 | -5.17 | io | $117,888.34 | $323.74 | 9 | 0 |
-| 2026-08-25 | +1.80 | io | $120,213.66 | $323.74 | 9 | 0 |
-| 2026-08-26 | +2.02 | io | $118,934.19 | $323.74 | 9 | 0 |
-| 2026-08-27 | — | io | $118,525.71 | $134.92 | 15 | 0 |
-| 2026-08-28 | +0.75 | io | $116,649.03 | $93.04 | 16 | 0 |
-| 2026-08-31 | -5.85 | io | $117,031.83 | $93.04 | 16 | 0 |
-| 2026-09-01 | -6.30 | io | $116,897.19 | $93.04 | 16 | 0 |
-| 2026-09-02 | -3.83 | io | $119,367.74 | $93.04 | 16 | 0 |
-| 2026-09-03 | -0.90 | io | $121,611.18 | $93.04 | 16 | 0 |
-| 2026-09-04 | — | io | $121,611.18 | $93.04 | 16 | 0 |
+| 2026-08-24 | -5.17 | hold | $117,973.64 | $117,973.64 | 0 | 0 |
+| 2026-08-25 | +1.80 | io | $117,889.79 | $462.96 | 9 | 0 |
+| 2026-08-26 | +2.02 | io | $116,657.68 | $462.96 | 9 | 0 |
+| 2026-08-27 | — | io | $116,230.99 | $112.16 | 16 | 0 |
+| 2026-08-28 | +0.75 | io | $114,442.80 | $112.16 | 16 | 0 |
+| 2026-08-31 | -5.85 | hold | $114,806.70 | $112.16 | 16 | 0 |
+| 2026-09-01 | -6.30 | hold | $114,688.26 | $112.16 | 16 | 0 |
+| 2026-09-02 | -3.83 | hold | $117,055.90 | $112.16 | 16 | 0 |
+| 2026-09-03 | -0.90 | io | $119,105.48 | $93.55 | 18 | 0 |
+| 2026-09-04 | — | io | $119,105.48 | $93.55 | 18 | 0 |
 
-## Hard-red: no new buys when S ≤ −3
+## Live method: hard-red hold-only (S ≤ −3)
 
-Working lots stay on. Scheduled 1d exits still settle. Neither sleeve opens a new ticket on a hard-red morning (08-18/19/24/31, 09-01/02 this window). The published recycle book *does* re-enter a full 2w_size list on 08-24 (S=−5.17) from the 08-21 print — that is the day this gate removes.
+`flatten_hard_red` is the production book. Working lots stay on. Scheduled 1d exits still settle. Neither sleeve opens a new ticket on a hard-red morning. `flatten_switch_recycle` is the ungated predecessor (re-enters 2w_size on 08-24, S=−5.17).
 
-| Book | Return | Final | Max DD | Trades | min fortnight |
-|---|---:|---:|---:|---:|---:|
-| `flatten_switch_recycle` (live) | +21.61% | $121,611.18 | 2.97% | 52 | 19.17 |
-| `flatten_hard_red` | +19.11% | $119,105.48 | 2.99% | 54 | 16.89 |
+| Book | Role | Return | Final | Max DD | min fortnight |
+|---|---|---:|---:|---:|---:|
+| `flatten_hard_red` | **LIVE** | +19.11% | $119,105.48 | 2.99% | 16.89 |
+| `flatten_switch_recycle` | previous | +21.61% | $121,611.18 | 2.97% | 19.17 |
 
-| Date | Score | Recycle | Hard-red |
+| Date | Score | Hard-red (live) | Recycle |
 |---|---:|---|---|
 | 2026-08-13 | +8.53 | io $99,801 | io $99,801 |
 | 2026-08-14 | +5.50 | io $102,951 | io $102,951 |
 | 2026-08-17 | +2.25 | io $103,841 | io $103,841 |
-| 2026-08-18 | -6.20 | io $105,907 | hold $105,907 |
-| 2026-08-19 | -7.20 | io $110,260 | hold $110,260 |
+| 2026-08-18 | -6.20 | hold $105,907 | io $105,907 |
+| 2026-08-19 | -7.20 | hold $110,260 | io $110,260 |
 | 2026-08-20 | +1.12 | mover $111,567 | mover $111,567 |
 | 2026-08-21 | +3.25 | mover $117,952 | mover $117,952 |
-| 2026-08-24 | -5.17 | io $117,888 | hold $117,974 |
-| 2026-08-25 | +1.80 | io $120,214 | io $117,890 |
-| 2026-08-26 | +2.02 | io $118,934 | io $116,658 |
-| 2026-08-27 | — | io $118,526 | io $116,231 |
-| 2026-08-28 | +0.75 | io $116,649 | io $114,443 |
-| 2026-08-31 | -5.85 | io $117,032 | hold $114,807 |
-| 2026-09-01 | -6.30 | io $116,897 | hold $114,688 |
-| 2026-09-02 | -3.83 | io $119,368 | hold $117,056 |
-| 2026-09-03 | -0.90 | io $121,611 | io $119,105 |
-| 2026-09-04 | — | io $121,611 | io $119,105 |
+| 2026-08-24 | -5.17 | hold $117,974 | io $117,888 |
+| 2026-08-25 | +1.80 | io $117,890 | io $120,214 |
+| 2026-08-26 | +2.02 | io $116,658 | io $118,934 |
+| 2026-08-27 | — | io $116,231 | io $118,526 |
+| 2026-08-28 | +0.75 | io $114,443 | io $116,649 |
+| 2026-08-31 | -5.85 | hold $114,807 | io $117,032 |
+| 2026-09-01 | -6.30 | hold $114,688 | io $116,897 |
+| 2026-09-02 | -3.83 | hold $117,056 | io $119,368 |
+| 2026-09-03 | -0.90 | io $119,105 | io $121,611 |
+| 2026-09-04 | — | io $119,105 | io $121,611 |
 
 ## Sweep (same window, same fees)
 
