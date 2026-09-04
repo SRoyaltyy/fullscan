@@ -125,6 +125,8 @@ def test_night_pack_dates_heals_prior_session_after_bell() -> None:
             "2026-09-03", "2026-09-04"]
     before_bell = datetime(2026, 9, 4, 8, 40, tzinfo=et)
     assert skip_if_good.last_closed_session(before_bell) == "2026-09-03"
+    # 09-03 pack is complete — do not prepend 09-02.
+    assert skip_if_good.night_pack_dates(before_bell) == ["2026-09-03"]
     assert skip_if_good._prev_weekday("2026-09-04") == "2026-09-03"
     assert skip_if_good._prev_weekday("2026-09-07") == "2026-09-04"
 

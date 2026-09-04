@@ -80,16 +80,18 @@ def _prev_weekday(date_s: str) -> str:
 
 
 def night_pack_dates(now: datetime | None = None) -> list[str]:
-    """Last-closed, plus the prior weekday when that night pack is missing.
+    """Last-closed, plus the prior weekday when last-closed is still missing.
 
-    2026-09-03 learnings never landed. After 16:00 ET on 2026-09-04
-    last_closed flips to the 4th; without this, the 3rd stays unhealed.
+    After 16:00 ET last_closed flips to today; if yesterday's pack never
+    landed, prepend it. Do not walk further back (live 09-03 complete
+    must not spend a pre-bell fire on 09-02's missing sectors).
     """
     closed = last_closed_session(now)
     dates = [closed]
-    prior = _prev_weekday(closed)
-    if not check_postclose_all(prior):
-        dates.insert(0, prior)
+    if not check_postclose_all(closed):
+        prior = _prev_weekday(closed)
+        if not check_postclose_all(prior):
+            dates.insert(0, prior)
     return dates
 
 
