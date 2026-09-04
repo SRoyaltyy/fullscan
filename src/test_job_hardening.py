@@ -677,6 +677,9 @@ def test_search_and_sector_rounds_are_bounded() -> None:
     assert "ignoring tool-dump content" in ds_src
     assert "from tool-dump content" in ds_src
     assert "force no-tool close" in ds_src
+    mh = (ROOT / "src" / "map_heat_postclose.py").read_text(encoding="utf-8")
+    assert "JSON-only close" in mh
+    assert "tools=False" in mh
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
