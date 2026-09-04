@@ -121,6 +121,9 @@ def is_quality_source(article_source: str, title: str) -> bool:
 
 def collect():
     conn = get_connection()
+    if conn is None:
+        print("[rss_news] no database — skip write")
+        return
     cur = conn.cursor()
 
     total_new = 0

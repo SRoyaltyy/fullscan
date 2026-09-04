@@ -1010,6 +1010,8 @@ if __name__ == "__main__":
         if HAS_DB:
             if conn is None:
                 conn = get_connection()
+                if conn is None:
+                    raise RuntimeError("database unavailable")
                 cur = conn.cursor()
             snap = build_health_snapshot(ticker, conn)
         else:

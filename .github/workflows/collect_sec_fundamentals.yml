@@ -28,4 +28,5 @@ jobs:
         env:
           EDGAR_IDENTITY: ${{ secrets.EDGAR_IDENTITY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FULLSCAN_DB_OPTIONAL: "1"
         run: python collectors/sec_fundamentals_collector.py

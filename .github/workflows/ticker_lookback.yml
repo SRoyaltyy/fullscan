@@ -66,8 +66,8 @@ jobs:
           elif [ -n "${TICKERS}" ]; then
             ARGS+=(--tickers "$TICKERS")
           else
-            echo "Provide tickers or check Random." >&2
-            exit 1
+            echo "No tickers entered — defaulting to 50 random liquid names"
+            ARGS+=(--random)
           fi
           [ -n "$FROM_DATE" ] && ARGS+=(--from-date "$FROM_DATE")
           [ -n "$TO_DATE" ] && ARGS+=(--to-date "$TO_DATE")

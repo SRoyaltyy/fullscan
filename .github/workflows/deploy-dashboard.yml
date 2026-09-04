@@ -8,8 +8,16 @@ name: Deploy dashboard to GitHub Pages
 
 on:
   workflow_run:
-    workflows: ["Stock Book ALL (one-shot)"]
+    workflows:
+      - "Stock Book ALL (one-shot)"
+      - "Pre-Open ALL (predictive one-shot)"
     types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "dashboard/**"
+      - "data/stock_book/**"
+      - "01_daily/*_stock_book.md"
   workflow_dispatch:
 
 permissions:
@@ -18,10 +26,13 @@ permissions:
 
 jobs:
   deploy:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Download dashboard artifact (from triggering run or latest on main)
         env:

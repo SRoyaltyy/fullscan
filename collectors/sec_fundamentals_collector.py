@@ -268,6 +268,9 @@ def main():
     logger.info("=" * 60)
 
     conn = get_connection()
+    if conn is None:
+        print("[sec_fundamentals] no database — skip write", flush=True)
+        return
     cur = conn.cursor()
     cur.execute("SELECT ticker FROM ticker_master WHERE is_active = true ORDER BY ticker")
     tickers = [row[0] for row in cur.fetchall()]

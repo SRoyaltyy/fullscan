@@ -297,6 +297,7 @@ def run(
     force_sectors: bool = False,
 ) -> None:
     date = date or _today()
+    config.apply_llm_backend()
     rows = _status_for_day(date)
     by_key = {r["key"]: r for r in rows}
     _print_status(date, rows)
@@ -324,10 +325,11 @@ def run(
             print("[all] → Stock labeling / segments")
             _run([sys.executable, "-m", "src.segments", "--date", date], check=False)
             if not _exists("data", "universe", f"{date}_membership.csv"):
-                raise SystemExit(
-                    f"[all] FATAL: no membership for {date}. "
-                    "Cannot use yesterday's labels as today's."
+                print(
+                    f"[all] WARN: no membership for {date} — "
+                    "cannot rank; leaving any existing book/dashboard"
                 )
+                return
         else:
             print("[all] skip Stock labeling (DONE for this day)")
     else:
@@ -408,14 +410,17 @@ def run(
     print("[all] → Weather / regime (after same-day predicts, before join)")
     _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
     if not _exists("01_daily", "weather", f"{date}_weather.json"):
-        raise SystemExit(
-            f"[all] FATAL: weather did not write 01_daily/weather/{date}_weather.json."
+        print(
+            f"[all] WARN: weather did not write "
+            f"01_daily/weather/{date}_weather.json — cannot rank today"
         )
+        return
 
     print("[all] → Join / match rank")
     _run([sys.executable, "-m", "src.join", "--date", date], check=False)
     if not _exists("data", "join", f"{date}_ranked.csv"):
-        raise SystemExit(f"[all] FATAL: no join ranked file for {date}.")
+        print(f"[all] WARN: no join ranked file for {date} — cannot rank today")
+        return
 
     if need("peer_rs"):
         print("[all] → Peer relative strength")
@@ -450,7 +455,11 @@ def run(
     _run([sys.executable, "-m", "src.input_health", "--date", date], check=False)
 
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
-    _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)], check=True)
+    _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)],
+         check=False)
+    if not (_exists("data", "stock_book", f"{date}_stock_book.json")
+            or _exists("01_daily", f"{date}_stock_book.md")):
+        print(f"[all] WARN: stock book files missing for {date}")
 
     # Optional layer 3. Must not sit in front of weather/join/book —
     # 2026-09-02 eight names ate the morning and the ranker stayed blocked.

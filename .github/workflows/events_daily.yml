@@ -56,6 +56,8 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          GROK_ONLY: "0"
+          LLM_BACKEND: auto
           DATE: ${{ github.event.inputs.run_date }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
@@ -73,6 +75,8 @@ jobs:
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          GROK_ONLY: "0"
+          LLM_BACKEND: auto
           DATE: ${{ github.event.inputs.run_date }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |

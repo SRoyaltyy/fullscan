@@ -18,8 +18,10 @@ name: Map Heat Captain Research (post-close)
 # ECS never scrapes Elite HTML (Aliyun 403). Clone today's GH-hosted heat.
 
 on:
-  schedule:
-    - cron: "0 2 * * 2-6"  # 22:00 EDT / 21:00 EST, Tue-Sat UTC
+  # Clock retired 2026-09-04 — Post-Close ALL owns captain research.
+  # ECS 22:00 timer now runs src.run_postclose_all (skip-if-good).
+  # schedule:
+  #   - cron: "0 2 * * 2-6"
   workflow_dispatch:
     inputs:
       runner:
@@ -49,7 +51,7 @@ permissions:
 
 concurrency:
   group: map-heat-postclose
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   research:
@@ -128,8 +130,8 @@ jobs:
           echo "et_hm=$ET_HM uid=$(id -u) user=$(id -un)"
           if command -v systemctl >/dev/null 2>&1 \
              && systemctl is-active --quiet fullscan-preopen.service; then
-            echo "preopen service active — abort"
-            exit 1
+            echo "preopen service active — backing off"
+            exit 0
           fi
           LOCK="${MAP_POSTCLOSE_LOCK}"
           mkdir -p "$(dirname "$LOCK")" || true

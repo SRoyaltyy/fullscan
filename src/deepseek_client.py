@@ -76,6 +76,9 @@ def _post(payload: dict, retries: int = 4) -> dict:
     for attempt in range(retries):
         try:
             r = requests.post(url, headers=headers, json=payload, timeout=300)
+            if r.status_code == 402:
+                raise RuntimeError(
+                    f"DeepSeek 402 Payment Required: {r.text[:200]}")
             if r.status_code in (429, 500, 502, 503):
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 time.sleep(20 * (attempt + 1))
@@ -129,10 +132,38 @@ def openclaw_available() -> bool:
     return config.openclaw_enabled() and not _OPENCLAW_STATE["down"]
 
 
+def _is_hard_openclaw_down(reason: str) -> bool:
+    """True only when later Grok calls cannot succeed this process.
+
+    A single HTTP 500 / 429 / idle timeout used to mark the gateway DOWN
+    for the whole 11-sector morning. That blanked every later predict.
+    Transient model/gateway blips must fall back for THAT call only.
+    """
+    r = (reason or "").lower()
+    if any(tok in r for tok in (
+        "http 500", "http 502", "http 503", "http 429",
+        "timeout after", "idle-timeout", "idle timeout",
+        "internal error",
+    )):
+        return False
+    return any(tok in r for tok in (
+        "401", "404", "connection refused", "name or service not known",
+        "nodename nor servname", "network is unreachable",
+    ))
+
+
 def _mark_openclaw_down(reason: str) -> None:
     _OPENCLAW_STATE["down"] = True
     _OPENCLAW_STATE["reason"] = reason[:300]
     print(f"[openclaw] gateway marked DOWN for this run: {reason[:200]}")
+
+
+def _note_openclaw_fail(reason: str) -> None:
+    """Trip the breaker only on hard auth/network death."""
+    if _is_hard_openclaw_down(reason):
+        _mark_openclaw_down(reason)
+        return
+    print(f"[openclaw] transient fail (not marking DOWN): {reason[:200]}")
 
 
 def looks_like_timeout_content(text: str) -> bool:
@@ -175,10 +206,19 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
     payload = {"model": config.OPENCLAW_AGENT, "messages": messages,
                "max_tokens": max_tokens, "temperature": temperature}
     last = None
+    realigned = False
     for attempt in range(retries):
+        if config.OPENCLAW_TOKEN:
+            headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
         try:
             r = requests.post(url, headers=headers, json=payload,
                               timeout=config.OPENCLAW_TIMEOUT)
+            if r.status_code in (401, 404) and not realigned:
+                last = f"HTTP {r.status_code}: {r.text[:200]}"
+                print(f"[openclaw] {r.status_code} — realign token and retry once")
+                config.align_openclaw_token(force=True)
+                realigned = True
+                continue
             if r.status_code in (429, 500, 502, 503):
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 time.sleep(15 * (attempt + 1))
@@ -218,7 +258,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                               stage_label=stage_label)
         final = (resp["choices"][0]["message"].get("content") or "").strip()
     except (RuntimeError, KeyError, IndexError, TypeError) as e:
-        _mark_openclaw_down(str(e))
+        _note_openclaw_fail(str(e))
         return ""
 
     if not final:
@@ -234,7 +274,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                 if config.grok_only() else "will fall back to DeepSeek")
         print(f"[openclaw] timeout/error stub treated as empty "
               f"({stage_label or 'llm run'}; consecutive={n}) — {note}")
-        if n >= 2:
+        if n >= 5:
             _mark_openclaw_down(
                 f"{n} consecutive idle-timeout stubs "
                 f"({stage_label or 'llm run'})")
@@ -303,6 +343,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import os
 
     _set_last_provider("")
+    if config.prefer_deepseek():
+        force_deepseek = True
+        print(f"[llm] LLM_BACKEND=deepseek — OpenClaw skipped "
+              f"({stage_label or 'llm run'})")
     grok_only = config.grok_only()
     if grok_only and force_deepseek:
         print(f"[llm] GROK_ONLY: ignoring force_deepseek "
@@ -374,7 +418,11 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     final = None
     for _round in range(rounds):
         payload["messages"] = messages
-        resp = _post(payload)
+        try:
+            resp = _post(payload)
+        except RuntimeError as e:
+            print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
+            return ""
         msg = resp["choices"][0]["message"]
         calls = msg.get("tool_calls") or []
         if not calls:
@@ -418,7 +466,11 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                      "to conclude with what it already gathered.")
         payload.pop("tools", None)
         payload.pop("tool_choice", None)
-        resp = _post(payload)
+        try:
+            resp = _post(payload)
+        except RuntimeError as e:
+            print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
+            return ""
         final = resp["choices"][0]["message"].get("content") or ""
         messages.append({"role": "assistant", "content": final})
 

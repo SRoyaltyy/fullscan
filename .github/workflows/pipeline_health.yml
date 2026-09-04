@@ -37,9 +37,9 @@ on:
         required: false
         default: ""
       no_fix:
-        description: "true = audit only, do not start or dispatch anything"
+        description: "true = audit only (default). false = try to heal (holds ECS)."
         required: false
-        default: "false"
+        default: "true"
 
 permissions:
   contents: write
@@ -56,8 +56,8 @@ jobs:
     env:
       HOME: /home/gha
       FULLSCAN_HOME: /home/gha
-      GROK_ONLY: "1"
-      HEALTH_HEAL_ROUNDS: "16"
+      GROK_ONLY: "0"
+      HEALTH_HEAL_ROUNDS: "1"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -78,7 +78,7 @@ jobs:
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-          GROK_ONLY: "1"
+          GROK_ONLY: "0"
         run: |
           set -uo pipefail
           export HOME=/home/gha
@@ -96,19 +96,15 @@ jobs:
           DATE="${{ github.event.inputs.date }}"
           SOURCE="${{ github.event.inputs.source_date }}"
           TARGET="${{ github.event.inputs.target_date }}"
-          if [ "$JOB" = "preopen" ]; then
-            export HEALTH_HEAL_SECONDS=9000
-            export HEALTH_HEAL_WAIT=180
-          else
-            export HEALTH_HEAL_SECONDS=10800
-            export HEALTH_HEAL_WAIT=600
-          fi
-          ARGS=(--job "$JOB" --write)
+          ARGS=(--job "$JOB" --write --no-fix)
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ -n "$SOURCE" ] && ARGS+=(--source-date "$SOURCE")
           [ -n "$TARGET" ] && ARGS+=(--target-date "$TARGET")
-          if [ "${{ github.event.inputs.no_fix }}" = "true" ]; then
-            ARGS+=(--no-fix)
+          if [ "${{ github.event.inputs.no_fix }}" = "false" ]; then
+            ARGS=(--job "$JOB" --write --fix)
+            [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+            [ -n "$SOURCE" ] && ARGS+=(--source-date "$SOURCE")
+            [ -n "$TARGET" ] && ARGS+=(--target-date "$TARGET")
           fi
           echo "CMD: python -m src.pipeline_health ${ARGS[*]}"
           echo "JOB=$JOB ET_HM=$(TZ=America/New_York date +%H%M)"

@@ -32,6 +32,9 @@ def collect():
     print(f"[ticker_master] Got {len(data)} entries from SEC.", flush=True)
 
     conn = get_connection()
+    if conn is None:
+        print("[ticker_master] no database — skip write", flush=True)
+        return
     cur = conn.cursor()
 
     # Build full list first

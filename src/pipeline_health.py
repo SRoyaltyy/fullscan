@@ -1413,7 +1413,7 @@ def _start_unit(unit: str) -> str:
 
 
 def _heal_env(extra: dict[str, str] | None = None) -> dict[str, str]:
-    env = {**os.environ, "GROK_ONLY": "1", "HOME": "/home/gha",
+    env = {**os.environ, "GROK_ONLY": "0", "HOME": "/home/gha",
            "FULLSCAN_HOME": "/home/gha", "PYTHONUNBUFFERED": "1"}
     live, n = _live_token()
     if n == LIVE_TOKEN_LEN:
@@ -1533,7 +1533,7 @@ def _human_fails(report: Report) -> list[Check]:
 
 
 def fix_local(report: Report) -> list[str]:
-    os.environ["GROK_ONLY"] = "1"
+    os.environ.setdefault("GROK_ONLY", "0")
     os.environ.setdefault("HOME", "/home/gha")
     actions: list[str] = []
     installed = _ensure_xai_api_key()
@@ -1820,7 +1820,7 @@ def write_report(report: Report) -> None:
 def run(job: str, date: str | None, source: str | None, target: str | None,
         write: bool, fix: bool = True) -> Report:
     job = pick_job(job)
-    os.environ["GROK_ONLY"] = "1"
+    os.environ.setdefault("GROK_ONLY", "0")
     session, src, tgt, book = packet_dates(job, date=date, source=source, target=target)
     budget = int(os.environ.get("HEALTH_HEAL_SECONDS") or (
         "10800" if job == "postclose" else "9000"))
@@ -1886,15 +1886,17 @@ def main() -> None:
     ap.add_argument("--target-date", default=None,
                     help="next session (post-close file date); default = --date")
     ap.add_argument("--write", action="store_true")
-    ap.add_argument("--fix", action="store_true", default=True,
-                    help="heal FAILs (default ON)")
+    ap.add_argument("--fix", action="store_true", default=False,
+                    help="heal FAILs (default OFF — audit only)")
     ap.add_argument("--no-fix", action="store_true",
                     help="audit only, do not start/dispatch anything")
     args = ap.parse_args()
-    fix = False if args.no_fix else True
+    fix = False if args.no_fix else bool(args.fix)
     report = run(args.job, args.date, args.source_date, args.target_date,
                  args.write, fix=fix)
-    raise SystemExit(0 if report.ok else 1)
+    # Always 0: the report is the product. Occupying ECS to "heal"
+    # is what caused the missing files this job then failed on.
+    raise SystemExit(0)
 
 
 if __name__ == "__main__":

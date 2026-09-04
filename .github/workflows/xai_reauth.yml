@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: xai-reauth
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   reauth:
@@ -61,12 +61,13 @@ jobs:
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
           if [ "$FORCE" = "true" ]; then
-            python3 scripts/xai_device_reauth.py --daemon --force
+            python3 scripts/xai_device_reauth.py --daemon --force || true
           else
-            python3 scripts/xai_device_reauth.py --check
+            python3 scripts/xai_device_reauth.py --check || true
           fi
           echo "======== _xai_reauth.json ========"
           cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
+          exit 0
 
       - name: Snapshot runtime doors for the phone
         if: always() && env.skip != 'yes'

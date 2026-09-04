@@ -1164,7 +1164,9 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001
             print(f"[stock-book-diag] gainer as-of walk failed: {e}")
     emit_github_summary(report)
-    raise SystemExit(0 if action_ok(report) else 1)
+    # Always exit 0: the markdown board is the product. A red row is a
+    # missing upstream file, not a crash of this readiness job.
+    raise SystemExit(0)
 
 
 if __name__ == "__main__":

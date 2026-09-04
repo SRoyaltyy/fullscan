@@ -44,8 +44,10 @@ on:
         description: "true = always run all 11 sector predicts"
         required: false
         default: "false"
-  schedule:
-    - cron: "0 17 * * 1-5"
+  # Clock retired 2026-09-04 — Pre-Open ALL writes the book before 09:30.
+  # Keep dispatch for a manual re-rank. Do not add a cron back.
+  # schedule:
+  #   - cron: "0 17 * * 1-5"
 
 permissions:
   contents: write
@@ -63,6 +65,7 @@ jobs:
     env:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
+      FINVIZ_SKIP_LIVE: "1"
     steps:
       - uses: actions/checkout@v4
 
@@ -89,6 +92,7 @@ jobs:
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
           GROK_ONLY: "0"
+          FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
           DATE="${{ github.event.inputs.run_date }}"
@@ -140,148 +144,29 @@ jobs:
 
       - name: Commit everything (incl. dashboard + paper)
         if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -uo pipefail
-          unset GIT_DIR GIT_WORK_TREE || true
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
-          git config --global --add safe.directory "${GITHUB_WORKSPACE:-$(pwd)}" || true
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-
           git checkout -- data/prices 2>/dev/null || true
           git clean -fd data/prices 2>/dev/null || true
-
-          git add \
+          bash scripts/safe_git_push.sh \
+            "auto: stock book ALL + paper dashboard" \
             data/universe data/exports data/join data/stock_book data/paper \
             data/peers data/checklist data/ab_checklist data/catalyst \
-            01_daily/weather 01_daily/news 01_daily/catalyst 01_daily/general 01_daily/sectors \
-            01_daily/events 01_daily/_transcripts 01_daily/_channel1 \
-            01_daily/*_universe.md 01_daily/*_match.md \
-            01_daily/*_stock_book.md 01_daily/*_stock_book_backtest.md \
-            01_daily/*_peer_rs.md \
-            03_scoreboard/STOCK_BOOK_BACKTEST.md \
-            03_scoreboard/stock_book_backtest.json \
-            03_scoreboard/scoreboard.json \
-            03_scoreboard/PAPER_TRADING.md \
-            03_scoreboard/BOOK_LEARN.md \
-            03_scoreboard/BOOK_GAPS.md \
-            00_grounding/mutable_policy.md \
-            00_grounding/book_policy.json \
-            02_lessons/ \
-            dashboard/ || true
-
-          git stash push --keep-index --include-untracked -m "all-unstaged" || true
-
-          git status
-          BOOK_PENDING=0
-          if git diff --cached --name-only | grep -E 'stock_book|peer_rs' >/dev/null; then
-            BOOK_PENDING=1
-          fi
-          if git status --porcelain -- data/stock_book data/peers 01_daily | grep -E 'stock_book|peer_rs' >/dev/null; then
-            BOOK_PENDING=1
-          fi
-
-          if git diff --staged --quiet; then
-            echo "Nothing staged — outputs may already be on main"
-            git stash pop || true
-            exit 0
-          fi
-          git commit -m "auto: stock book ALL + paper dashboard" || {
-            echo "[warn] commit failed"
-            git stash pop || true
-            if [ "$BOOK_PENDING" = "1" ]; then
-              echo "FATAL: book/peer_rs exists locally but commit failed"
-              exit 1
-            fi
-            exit 0
-          }
-
-          PUSH_OK=0
-          if ! git pull --rebase origin main; then
-            echo "[warn] pull --rebase failed; trying pull --no-rebase"
-            git pull origin main || true
-          fi
-          if git push origin HEAD:main; then
-            PUSH_OK=1
-            echo "Pushed stock book ALL outputs to main"
-          else
-            echo "[warn] first push rejected — rebase and retry"
-            git pull --rebase origin main || git pull origin main || true
-            if git push origin HEAD:main; then
-              PUSH_OK=1
-              echo "Pushed stock book ALL outputs to main (retry)"
-            fi
-          fi
-          git stash pop || true
-
-          if [ "$PUSH_OK" != "1" ]; then
-            PENDING=$(git log origin/main..HEAD --name-only --pretty=format: 2>/dev/null | grep -E 'stock_book|peer_rs' || true)
-            UNSTAGED=$(git status --porcelain -- data/stock_book data/peers 01_daily | grep -E 'stock_book|peer_rs' || true)
-            if [ "$BOOK_PENDING" = "1" ] || [ -n "$PENDING" ] || [ -n "$UNSTAGED" ]; then
-              echo "FATAL: book/peer_rs produced but push failed. Artifact is the safety net."
-              echo "$PENDING"
-              echo "$UNSTAGED"
-              exit 1
-            fi
-            echo "[warn] push failed but no local book to lose"
-          fi
-
-      - name: Prepare Pages publish dir
-        if: always()
-        run: |
-          set -euo pipefail
-          unset GIT_DIR GIT_WORK_TREE || true
-          cd "${GITHUB_WORKSPACE:-.}"
-          mkdir -p pages_out/dashboard
-          touch pages_out/.nojekyll
-          if [ -f dashboard/index.html ]; then
-            cp -a dashboard/. pages_out/dashboard/
-            cp dashboard/index.html pages_out/index.html
-            echo "Prepared pages_out with dashboard"
-          else
-            echo "WARN: dashboard/index.html missing — Pages deploy may be empty"
-          fi
-          if [ -f dashboard/boring-winners/index.html ]; then
-            mkdir -p pages_out/dashboard/boring-winners
-            cp -a dashboard/boring-winners/. pages_out/dashboard/boring-winners/
-            echo "Kept dashboard/boring-winners"
-          fi
-          if [ -f dashboard/ticker-lookback/index.html ]; then
-            mkdir -p pages_out/dashboard/ticker-lookback
-            cp -a dashboard/ticker-lookback/. pages_out/dashboard/ticker-lookback/
-            echo "Kept dashboard/ticker-lookback"
-          fi
-          ls -la pages_out pages_out/dashboard
-          ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners missing from pages_out"
+            01_daily/ 03_scoreboard/ 00_grounding/mutable_policy.md \
+            00_grounding/book_policy.json 02_lessons/ dashboard/
 
       - name: Deploy dashboard to GitHub Pages (gh-pages)
         if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -euo pipefail
-          unset GIT_DIR GIT_WORK_TREE || true
-          cd "${GITHUB_WORKSPACE:-.}"
-          if [ ! -f pages_out/index.html ]; then
-            echo "WARN: pages_out/index.html missing — not touching gh-pages"
-            exit 0
-          fi
-          test -f pages_out/dashboard/index.html
-          TMP=$(mktemp -d)
-          cp -a pages_out/. "$TMP/"
-          touch "$TMP/.nojekyll"
-          git -C "$TMP" init
-          git -C "$TMP" checkout -b gh-pages
-          git -C "$TMP" config user.name "Market-Bot-Automaton"
-          git -C "$TMP" config user.email "bot@users.noreply.github.com"
-          git -C "$TMP" add -A
-          git -C "$TMP" commit -m "deploy dashboard ${GITHUB_SHA}"
-          git -C "$TMP" remote add origin \
-            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git -C "$TMP" push --force origin gh-pages
-          echo "Published https://SRoyaltyy.github.io/fullscan/dashboard/"
-          echo "Published https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
-          echo "Published https://SRoyaltyy.github.io/fullscan/"
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
 
       - name: Print fixed dashboard URL
         if: always()

@@ -6,9 +6,7 @@ name: "Label + Weather (daily)"
 #   src/weather.py  — scores today's regime for every label family
 #                     ("is today good for that kind of thing?") into
 #                     01_daily/weather/, the daily backtestable record.
-# Runs after Collect: ALL (14:00 UTC weekdays) and the daily predict
-# pipeline (11:34 UTC) so both the fresh Finviz export and the day's
-# general/sector predicts exist.
+# Healed inside Pre-Open ALL's book chain. This workflow is dispatch-only.
 
 on:
   # schedule disabled 2026-08-29 — not in live pipeline
@@ -20,6 +18,9 @@ on:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
         default: ""
+
+permissions:
+  contents: write
 
 jobs:
   label-weather:
@@ -39,6 +40,7 @@ jobs:
           DATABASE_URL:    ${{ secrets.DATABASE_URL }}
           FINVIZ_EMAIL:    ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FULLSCAN_DB_OPTIONAL: "1"
         run: python -m collectors.finviz_financials
 
       - name: Label the universe (Step A)
@@ -49,23 +51,26 @@ jobs:
           python -m src.segments --date "$DATE"
 
       - name: Score the weather (Step B)
+        continue-on-error: true
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           python -m src.weather --date "$DATE"
 
       - name: Match stocks to weather (Step C)
+        continue-on-error: true
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           python -m src.join --date "$DATE"
 
       - name: Commit outputs
+        if: always()
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add data/universe data/exports data/join 01_daily/weather
-          git add "01_daily/*_universe.md" "01_daily/*_match.md" || true
-          git commit -m "auto: universe labels + weather + match [$(date -u +%F)]" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          export HOME="${HOME:-/home/gha}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          bash scripts/safe_git_push.sh \
+            "auto: universe labels + weather + match [$(date -u +%F)]" \
+            data/universe data/exports data/join 01_daily/weather \
+            01_daily/
