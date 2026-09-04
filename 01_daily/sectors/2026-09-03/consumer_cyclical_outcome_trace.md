@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLY consumer discretionary September 3 2026 sector performance drivers"* → got 6 results (via ddg)
 
-  - Rick Ducat takes a closer look at the consumer discretionary ... (https://www.facebook.com/schwabnetwork/posts/rick-ducat-takes-a-closer-look-at-the-consumer-discretionary-sector-analyzing-th/1646555137471842/)
+  - State Street Consumer Discretionary Select Sector SPDR ETF (XLY) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLY/)
 
-  - Invest where you see opportunity with State Street Sector ETFs (https://www.ssga.com/us/en/intermediary/capabilities/equities/sector-investing/select-sector-etfs)
+  - XLY: State Street® Consumer Discretionary Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly)
 
-  - State Street Consumer Discretionary Select Sector SPDR ETF (https://www.tradingview.com/symbols/AMEX-XLY/ideas/)
+  - XLY Stock Price | Consumer Discretionary Select Sector SPDR ETF - Investing.com (https://www.investing.com/etfs/spdr-consumer-discr.-select-sector)
 
-**Step 2 — Research.** The model wanted to know: *"stock market September 3 2026 rally consumer discretionary Amazon Tesla"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"stock market September 3 2026 consumer discretionary rally Amazon Tesla"* → got 6 results (via ddg)
 
-  - These stocks were the S&P 500, Nasdaq and Dow's top market ... (https://www.facebook.com/cnbc/posts/these-stocks-were-the-sp-500-nasdaq-and-dows-top-market-movers-for-the-day-septe/1468878098446912/)
+  - Stocks Up Early as Yields Retreat, Helped by Yen | Charles Schwab (https://www.schwab.com/learn/story/stock-market-update-open)
 
-  - Stock market news for March 4, 2026 - CNBC (https://www.cnbc.com/2026/03/03/stock-market-today-live-updates.html)
+  - Stock Market News for Sep 3, 2026 (https://finance.yahoo.com/markets/stocks/articles/stock-market-news-sep-3-095800036.html)
 
-  - Markets News, Aug. 3, 2026: Dow Closes at Record; Stocks ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-08032006-12032468)
+  - 9 Consumer Discretionary Stocks Whale Activity In Today’s Session - Tesla (NASDAQ:TSLA), Alibaba Gr Hldgs - Benzinga (https://www.benzinga.com/markets/options/26/08/61530063/9-consumer-discretionary-stocks-whale-activity-today-s-session)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

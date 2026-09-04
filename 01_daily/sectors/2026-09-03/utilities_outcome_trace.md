@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLU utilities ETF September 3 2026 what drove sector"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLU utilities ETF September 3 2026 performance drivers"* → got 6 results (via ddg)
 
-  - XLU: State Street® Utilities Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu)
+  - 5 Reasons XLU ETF Could Rally 20% in 2026 as AI Powers ... (https://tickeron.com/blogs/5-reasons-xlu-etf-could-rally-20-in-2026-as-ai-powers-utility-demand-11647/)
 
-  - State Street Utilities Select Sector SPDR ETF (XLU) (https://finance.yahoo.com/quote/XLU/)
+  - XLU vs SO: Performance Charts & Full Comparison (https://portfolioslab.com/tools/stock-comparison/XLU/SO)
 
   - XLU Price: Quote, Forecast, Charts & News - Perplexity (https://www.perplexity.ai/finance/XLU)
 
-**Step 2 — Research.** The model wanted to know: *"utilities stocks September 3 2026 ISM services jobless claims reaction"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"utilities sector September 3 2026 ISM services jobless claims reaction"* → got 6 results (via ddg)
 
   - United States ISM Services PMI - Trading Economics (https://tradingeconomics.com/united-states/non-manufacturing-pmi)
 
   - Manufacturing PMI® at 53.3%; June 2026 ISM® Manufacturing ... (https://www.prnewswire.com/news-releases/manufacturing-pmi-at-53-3-june-2026-ism-manufacturing-pmi-report-302814991.html)
 
-  - Stocks Up Early as Yields Retreat, Helped by Yen (https://www.schwab.com/learn/story/stock-market-update-open)
+  - The just-released US ISM Services Sector data disappointed ... (https://www.linkedin.com/posts/mohamedelerian_economy-jobs-services-activity-7379881502685278209-CAJO)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

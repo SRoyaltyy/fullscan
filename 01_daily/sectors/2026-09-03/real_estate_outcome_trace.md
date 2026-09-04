@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLRE real estate ETF September 3 2026 performance drivers"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLRE real estate ETF September 3 2026 what drove rally"* → got 6 results (via ddg)
 
-  - XLRE: State Street® Real Estate Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-real-estate-select-sector-spdr-etf-xlre)
+  - State Street Real Return ETF (RLY) Touches New 52-Week High (https://finance.yahoo.com/markets/stocks/articles/state-street-real-return-etf-122200145.html)
 
   - State Street Real Estate Select Sector SPDR ETF Stock Price (https://www.perplexity.ai/finance/XLRE)
 
-  - XLRE vs. VNQ ETF Comparison Analysis (https://www.etfcentral.com/compare-etfs/XLRE-vs-VNQ)
+  - Small Caps and Materials Lead Broad Equity Rally - ETF Action (https://www.etfaction.com/small-caps-and-materials-lead-broad-equity-rally/)
 
-**Step 2 — Research.** The model wanted to know: *"Treasury yields September 3 2026 10 year 30 year close"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"Treasury yields September 3 2026 10 year 30 year drop"* → got 6 results (via ddg)
 
-  - Government borrowing costs rise anew, adding to pressure on global policymakers - reuters.com (https://news.google.com/rss/articles/CBMirwFBVV95cUxOSl9GcExBdk5lb3U4c1NTalROY2NUNHE4SXdlbE5yemw4WkwteWNMdTZVTFdrcHhPUVF5Q181eTlxZ2xoUkV6Q3F4a19ldHJBdGFnaG9URjY3bXNTMDE0aV9mVDU1MUtxMTRXRl9pR2p2THVmc2JiWGlSb1prUElXTWtaNzBsb3Z5U2tCNXZlTlMtM3pHU3Y0dkVNWUhHWmVWUmJxbnZmVVFlNmVlMDR3?oc=5)
+  - US 10 Year Treasury Note Yield - Quote - Chart - Historical Data (https://tradingeconomics.com/united-states/government-bond-yield)
 
-  - Treasury Rates Today: September 3, 2026 - Forbes (https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9yck9yOUFWR0FpdE9oMU00NGZWMVVrb25MOWxBWmRuU3Ztc1FvdGJZZlBMXzZwUnpPQVp5Mlg4UzFwX2VZTG00SUFUa3p0VVoxRFZOY2M3V2N3R1ZlLXhCdVVpWHNKd2s?oc=5)
+  - The 10-year Treasury Yield Eclipsed 4.6%-2026-07-21 (https://www.crfb.org/blogs/10-year-treasury-yield-eclipsed-46)
 
-  - The Spread between 10-Year Treasury Yield & 30-Year Mortgage Rate Has Been Stuck at 2 Percentage Points despite Fannie & Freddie MBS Buybacks: Some Thoughts - Wolf Street (https://news.google.com/rss/articles/CBMilAJBVV95cUxQdUZWQnpFcjdhZmF0cEh1QWlVOEV6RjZob1JES1hIQXVlRzNUMnVneUhWSVBRSm9VcEJBMDJVMnA4c2JTR0ZrZGhiNWtNV1lOUjk5NTVKZGR4X2tkSDFSZzhQR0gyYXMxeThyRExuZzRmQmJwYzFkWXEzUGZ1bTZSeWJFVTgzS05JZE5yZ1UzNGxDcGVjM3I2dlNGR2cweTdYTGJVXzlLQlY3ek5ZU2lNWm9TWndmUjBFZXZOZGsxVDBZLUcyS1dxY19uUDVuLVk1UFdYdkVXZlUtOThCMldxcmEtOEVaT2ZENGF5dzZza0RSbTRrdndKV05xS3lLWFpCSmRVbUtNbHh1WThzb3FlRWpJUzE?oc=5)
+  - Interest Rate Statistics | U.S. Department of the Treasury (https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

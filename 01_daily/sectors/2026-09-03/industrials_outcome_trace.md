@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLI industrials ETF September 3 2026 sector performance drivers"* → got 6 results (via ddg)
 
-  - XLI: State Street® Industrial Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-industrial-select-sector-spdr-etf-xli)
+  - State Street Industrial Select Sector SPDR ETF XLI ETF AI ... (https://danelfin.com/etf/XLI)
 
-  - Top-Performing Sector SPDRs: XLK, XLE & XLI Top The List (https://etfdb.com/sector-investing-content-hub/xlk-xle-xli-top-performing-sector-spdrs/)
+  - Industrial Select Sector SPDR ETF (XLI) - WallStreetCourier (https://www.wallstreetcourier.com/spotlights/mrnl_industrial-select-sector-spdr-etf-xli-major-trend-reversal-or-healthy-pause/)
 
-  - State Street Industrial Select Sector SPDR ETF (XLI) Price, Quote, News & Analysis | Seeking Alpha (https://seekingalpha.com/symbol/XLI)
+  - Industrial Select Sector SPDR Fund (XLI) Top 25 Holdings (https://www.tikr.com/blog/industrial-select-sector-spdr-fund-xli-top-25-holdings)
 
 **Step 2 — Research.** The model wanted to know: *"ISM services PMI September 3 2026 release result"* → got 6 results (via gnews_rss)
 
@@ -20,6 +20,6 @@
 
   - ISM® PMI® Reports Roundup: August Services - Institute for Supply Management (ISM) (https://news.google.com/rss/articles/CBMihgJBVV95cUxOZlJkVmI2MTNBUjVDNDFoTUE1enNlRG5hUHREejRBc0VBMjJyZmpUX19qNXlGc2hLWlFwWkd2RkgtTDJKRlFwcl9seHpMU0xWQ0JIemdzeFVHeE95aUtDSEtER1Q5Y2JScGtoeVZIZkFTTWIyOEd3aGhBckJVaGFEZV81dWdkSlRZcDhJRV9YNS1vNEJ2OXpZd3YtU2RDWUN1bWZoRzVtMjBtWXF0TWk0ZHdXRW5lOWMyLWpXZXNubmJqbEFvbUNyaktfckVYNV95OUlqZ2QtbmMxckhRc3JqTnJGZ2RsYlN6Qm9NUkQ4eHR2enlaUG9yVGtHY3dtNFVRb0t2WDR3?oc=5)
 
-  - US labor market remains stable; services input price rises point to elevated inflation - reuters.com (https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdVlveWxoLTJTR0EyQmo2Sm9PLS0tR1hFUlc3bFdPenBsQmhNZG41S250UlNkaGF5cXNIbV9NS2xXckRSTGJFRjg1eTFqOUdyRTVyQUR0SUFKM2RLT0F4QmZDaWVlRVY4UnZzU0hORWNKVkhhdXN1T19uTXFXRlRWb19ETlZiWVdWRHhpOGtXWHlQZ0FmcVg1WEZPYnNfbThpOEsyMnhQLWVzZzk1OVdzeXBmeXJ0NEtGY053ZGFRZllyZw?oc=5)
+  - US labor market remains stable; services input price rises point to elevated inflation - Reuters (https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdVlveWxoLTJTR0EyQmo2Sm9PLS0tR1hFUlc3bFdPenBsQmhNZG41S250UlNkaGF5cXNIbV9NS2xXckRSTGJFRjg1eTFqOUdyRTVyQUR0SUFKM2RLT0F4QmZDaWVlRVY4UnZzU0hORWNKVkhhdXN1T19uTXFXRlRWb19ETlZiWVdWRHhpOGtXWHlQZ0FmcVg1WEZPYnNfbThpOEsyMnhQLWVzZzk1OVdzeXBmeXJ0NEtGY053ZGFRZllyZw?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
