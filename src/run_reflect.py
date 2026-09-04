@@ -13,6 +13,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import config, deepseek_client, lesson_schema, memory, scoreboard, snapshot
+from .skip_if_good import is_tool_dump
 
 
 def _read(path: str) -> str:
@@ -64,7 +65,9 @@ def last_assistant(path: str) -> str:
         if msg.get("role") != "assistant":
             continue
         text = str(msg.get("content") or "").strip()
-        if text:
+        # A leaked DSML tool-call in content is 600–900 B — size alone
+        # would reuse it as the reflect and freeze the dump on disk.
+        if text and not is_tool_dump(text):
             return text
     return ""
 
@@ -129,8 +132,16 @@ def main() -> None:
 
     reflect_md = os.path.join(config.DAILY_GENERAL, f"{date_str}_reflect.md")
     if os.path.isfile(reflect_md) and os.path.getsize(reflect_md) >= 200:
-        print(f"[reflect] {date_str}: reflect already on disk — skip")
-        return
+        try:
+            with open(reflect_md, encoding="utf-8") as fh:
+                on_disk = fh.read()
+        except OSError:
+            on_disk = ""
+        if not is_tool_dump(on_disk):
+            print(f"[reflect] {date_str}: reflect already on disk — skip")
+            return
+        print(f"[reflect] {date_str}: disk file is a tool-dump "
+              f"({len(on_disk)} chars) — rewriting", flush=True)
 
     transcript_path = os.path.join(
         "01_daily/_transcripts", f"{date_str}_reflect.json")

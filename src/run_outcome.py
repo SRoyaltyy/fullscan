@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 from . import (compute_scores, config, deepseek_client, fetch_channel1,
                scoreboard, snapshot, verifier)
 from .run_reflect import last_assistant
+from .skip_if_good import is_tool_dump
 
 
 def _read(path: str) -> str:
@@ -41,8 +42,16 @@ def main() -> None:
 
     path = os.path.join(config.DAILY_GENERAL, f"{date_str}_outcome.md")
     if os.path.isfile(path) and os.path.getsize(path) >= 400:
-        print(f"[outcome] {date_str}: outcome already on disk — skip")
-        return
+        try:
+            with open(path, encoding="utf-8") as fh:
+                on_disk = fh.read()
+        except OSError:
+            on_disk = ""
+        if not is_tool_dump(on_disk):
+            print(f"[outcome] {date_str}: outcome already on disk — skip")
+            return
+        print(f"[outcome] {date_str}: disk file is a tool-dump "
+              f"({len(on_disk)} chars) — rewriting", flush=True)
 
     ch1 = fetch_channel1.build("outcome", date_str)
     fetch_channel1.save(ch1, date_str, "outcome")
@@ -65,7 +74,7 @@ def main() -> None:
     transcript_path = os.path.join(
         "01_daily/_transcripts", f"{date_str}_outcome.json")
     reused = last_assistant(transcript_path)
-    if len(reused) >= 200:
+    if len(reused) >= 200 and not is_tool_dump(reused):
         print(f"[outcome] {date_str}: reuse transcript ({len(reused)} chars) "
               "— no LLM")
         text = reused

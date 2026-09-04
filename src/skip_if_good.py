@@ -365,6 +365,11 @@ def check_ab_checklist(date: str) -> bool:
 def check_daily_pipeline_outcome(date: str) -> bool:
     outcome = ROOT / "01_daily" / "general" / f"{date}_outcome.md"
     ok = _exists_gt(outcome, 400)
+    if ok:
+        try:
+            ok = not is_tool_dump(outcome.read_text(encoding="utf-8"))
+        except OSError:
+            ok = False
     return _log(ok, "daily_pipeline", date, f"outcome={outcome.exists()} size={outcome.stat().st_size if outcome.exists() else 0}")
 
 
@@ -387,6 +392,11 @@ def check_preopen_full(date: str) -> bool:
 def check_general_reflect(date: str) -> bool:
     p = ROOT / "01_daily" / "general" / f"{date}_reflect.md"
     ok = _exists_gt(p, 200)
+    if ok:
+        try:
+            ok = not is_tool_dump(p.read_text(encoding="utf-8"))
+        except OSError:
+            ok = False
     return _log(ok, "general_reflect", date, f"reflect={p.exists()}")
 
 

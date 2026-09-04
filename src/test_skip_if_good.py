@@ -178,6 +178,32 @@ def test_sector_md_counts_only_quality_files() -> None:
             skip_if_good.ROOT = old_root
 
 
+def test_general_outcome_and_reflect_reject_tool_dumps() -> None:
+    """A DSML dump in general outcome/reflect must not SKIP the night pack."""
+    dump = (
+        '# Reflect\n<｜DSML｜tool_calls>\n'
+        '<invoke name="web_search">oil' + ("x" * 400)
+    )
+    essay = "# Reflect\nLESSON_BEGIN\nERROR_CATEGORY: NONE\n" + ("body " * 80)
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        g = root / "01_daily" / "general"
+        g.mkdir(parents=True)
+        old_root = skip_if_good.ROOT
+        skip_if_good.ROOT = root
+        try:
+            (g / "1999-01-01_outcome.md").write_text(dump, encoding="utf-8")
+            (g / "1999-01-01_reflect.md").write_text(dump, encoding="utf-8")
+            assert skip_if_good.check_daily_pipeline_outcome("1999-01-01") is False
+            assert skip_if_good.check_general_reflect("1999-01-01") is False
+            (g / "1999-01-01_outcome.md").write_text(essay, encoding="utf-8")
+            (g / "1999-01-01_reflect.md").write_text(essay, encoding="utf-8")
+            assert skip_if_good.check_daily_pipeline_outcome("1999-01-01") is True
+            assert skip_if_good.check_general_reflect("1999-01-01") is True
+        finally:
+            skip_if_good.ROOT = old_root
+
+
 def test_is_tool_dump_detects_dsml_and_web_search() -> None:
     assert skip_if_good.is_tool_dump("") is False
     assert skip_if_good.is_tool_dump("# Sector Outcome\nXLE sold off.") is False
@@ -237,6 +263,7 @@ if __name__ == "__main__":
     test_postclose_all_needs_learn_not_just_outcome()
     test_postclose_all_needs_reflect_and_sector_outcomes()
     test_sector_md_counts_only_quality_files()
+    test_general_outcome_and_reflect_reject_tool_dumps()
     test_is_tool_dump_detects_dsml_and_web_search()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
