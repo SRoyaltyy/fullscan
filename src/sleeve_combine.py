@@ -114,11 +114,12 @@ def route(score: float | None, *, missing_is_io: bool = True) -> dict:
 
 
 def route_fallback(score: float | None) -> dict:
-    """1d mover-paper book: .io only on a soft-red morning.
+    """Mover-paper skip-day deferral.
 
-    S < 0 and S > -3 → .io size at the close.
-    Everything else (S >= 0, or missing predict) → mover at the open.
-    S <= -3 → no new 1d risk.
+    S >= +1 or missing → mover 1d at 09:30.
+    Otherwise (mover is off, including hard-red) → live .io 2w_size mark.
+    Hard-red is not a flatten: 2w_size was already on and is the sleeve
+    that wins on those mornings. S <= -3 only blocks *new* 1d tickets.
     """
     if score is None:
         return {
@@ -129,29 +130,21 @@ def route_fallback(score: float | None) -> dict:
             "why": "no predict on file — mover (the rest)",
         }
     s = float(score)
-    if s >= 0.0:
+    if s >= MOVER_GATE:
         return {
             "score": s,
             "bucket": BUCKET_MOVER,
             "primary": BUCKET_MOVER,
             "excel_role": "confirm_only",
-            "why": f"predict {s:+.2f} >= 0 — mover 1d (09:30)",
-        }
-    if s > IO_HARD_RED:
-        return {
-            "score": s,
-            "bucket": BUCKET_IO,
-            "primary": BUCKET_IO,
-            "excel_role": "confirm_only",
-            "why": (f"predict {s:+.2f} in ({IO_HARD_RED:+.1f}, 0) — "
-                    ".io 1d size fallback (16:00)"),
+            "why": f"predict {s:+.2f} >= {MOVER_GATE:+.1f} — mover 1d (09:30)",
         }
     return {
         "score": s,
-        "bucket": BUCKET_CASH,
-        "primary": BUCKET_CASH,
-        "excel_role": "shorts_only_unfunded",
-        "why": f"predict {s:+.2f} <= {IO_HARD_RED:+.1f} — no new 1d risk",
+        "bucket": BUCKET_IO,
+        "primary": BUCKET_IO,
+        "excel_role": "confirm_only",
+        "why": (f"predict {s:+.2f} < {MOVER_GATE:+.1f} — mover skip; "
+                "live .io 2w_size mark (already on; not a new 1d ticket)"),
     }
 
 

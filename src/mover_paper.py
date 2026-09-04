@@ -24,17 +24,20 @@ Strategy levers (CLI):
   --gate-score X          default 1.0   (solo mover gate; ignored when
         --io-fallback is on)
   --io-fallback / --no-io-fallback
-                          default ON for --source mover. 1d book:
-                          .io size at the close when -3 < S < 0;
-                          mover at the open otherwise; S <= -3 = cash.
+                          default ON for --source mover. Skip-day book:
+                          live .io 2w_size daily mark when S < +1
+                          (including hard-red); mover 1d at 09:30 when
+                          S >= +1 or missing. S <= -3 blocks new 1d
+                          tickets; it does not flatten 2w_size.
   --pct 0.10              per-trade notional as fraction of equity
   --capital 100000
 
 Default mover-paper book (io-fallback): morning general predict S.
-Soft-red (-3 < S < 0) buys the 1d size book at 16:00. The rest (S >= 0
-or missing predict) is mover 1d at 09:30. Hard-red S <= -3 takes no
-new 1d risk. News-judge hawkish items and high-uncertainty event
-binaries are advisory flags.
+S >= +1 or missing → mover 1d at 09:30. Every mover-skip morning
+(S < +1, including hard-red) takes that day's live .io 2w_size mark —
+the book that was already on, not a new 1d ticket at 16:00. Hard-red
+S <= -3 means no new 1d risk; 2w_size stays on. News-judge hawkish
+items and high-uncertainty event binaries are advisory flags.
 Backtest over 2026-08-13..09-03: gate score>=1 blocked all four bad BUY
 days (08-24 -1.9%, 08-28 -9.1%, 08-31 -0.4%, 09-01 -1.2%) and kept all
 three winners (+5.1 / +2.6 / +7.4).
@@ -423,14 +426,124 @@ def stats(sim: dict) -> dict:
             "by_side": by_side, "n_days": len(curve)}
 
 
-def bt_to_mover_sim(raw: dict, payload: dict) -> tuple[dict, list[dict]]:
-    """Map the leak-free fallback backtest onto mover-paper outputs."""
+PAPER_EQ = ROOT / "data" / "paper" / "equity_curve.csv"
+IO_SKIP_SLEEVE = "2w_size"
+
+
+def paper_sleeve_daily(sleeve: str = IO_SKIP_SLEEVE) -> dict[str, float]:
+    """Live .io paper daily returns for one sleeve (already-on marks)."""
+    eq: dict[str, float] = {}
+    if not PAPER_EQ.is_file():
+        return {}
+    with PAPER_EQ.open(encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            if row.get("sleeve") != sleeve:
+                continue
+            try:
+                eq[row["date"]] = float(row["equity"])
+            except (TypeError, ValueError):
+                pass
+    out: dict[str, float] = {}
+    dates = sorted(eq)
+    for i, d in enumerate(dates):
+        if i == 0:
+            continue
+        prev = eq[dates[i - 1]]
+        if prev:
+            out[d] = eq[d] / prev - 1.0
+    return out
+
+
+def _mover_day_rets(curve: list[dict]) -> dict[str, float]:
+    eq = {c["date"]: float(c["equity"]) for c in curve if c.get("equity") is not None}
+    dates = sorted(eq)
+    out: dict[str, float] = {}
+    for i, d in enumerate(dates):
+        if i == 0:
+            out[d] = 0.0
+            continue
+        prev = eq[dates[i - 1]]
+        out[d] = (eq[d] / prev - 1.0) if prev else 0.0
+    return out
+
+
+def stitch_skip_io(raw: dict, payload: dict,
+                   io_rets: dict[str, float] | None = None) -> tuple[dict, list[dict]]:
+    """Mover 1d on S>=+1; live .io 2w_size mark on every mover-skip day.
+
+    A new 1d .io ticket at yesterday's close cannot show yesterday's win —
+    that win is the mark on 2w_size names that were already on. Hard-red
+    does not flatten that book.
+    """
     from src.sleeve_combine import route_fallback
 
     regime = payload.get("regime") or {}
+    io_rets = paper_sleeve_daily() if io_rets is None else io_rets
+    m_rets = _mover_day_rets(raw.get("curve") or [])
+    score_by = {c["date"]: c.get("score") for c in raw.get("curve") or []}
+    candidates = sorted(set(m_rets) | set(io_rets) | set(score_by) | set(regime))
+    candidates = [d for d in candidates if d >= "2026-08-13"]
+
+    capital = float(raw.get("capital") or 100_000)
+    eq = capital
+    curve, gates, io_trades = [], [], []
+    for d in candidates:
+        score = score_by.get(d)
+        if score is None:
+            score = (regime.get(d) or {}).get("predict_score")
+        card = route_fallback(score)
+        # Don't invent a flat mover day from a .io print (e.g. Sunday 08-30).
+        if card["bucket"] == "mover" and d not in m_rets:
+            continue
+        try:
+            weekday = datetime.strptime(d, "%Y-%m-%d").weekday()
+        except ValueError:
+            weekday = 0
+        if weekday >= 5 and card["bucket"] == "mover":
+            continue
+        if card["bucket"] == "mover":
+            r = m_rets.get(d, 0.0)
+            adv = ""
+        else:
+            if d not in io_rets and d not in m_rets and d not in score_by:
+                # regime-only skip with no mark and no mover row: still show
+                r = 0.0
+            else:
+                r = io_rets.get(d, 0.0)
+            pnl = round(eq * r, 2)
+            gap = d not in io_rets
+            io_trades.append({
+                "entry_dt": f"{d} 16:00 ET", "date": d,
+                "ticker": IO_SKIP_SLEEVE, "side": "BUY",
+                "shares": 0, "entry_px": 0.0,
+                "exit_dt": f"{d} 16:00 ET", "exit_px": 0.0,
+                "notional": round(eq, 2), "fee_in": 0.0, "fee_out": 0.0,
+                "pnl": pnl, "ret_pct": round(100 * r, 2),
+                "conviction": 0, "cond_tally": "io",
+                "reason": (
+                    f"no live {IO_SKIP_SLEEVE} print (gap)" if gap
+                    else f"live {IO_SKIP_SLEEVE} day mark (already on)"
+                ),
+                "source": "io",
+            })
+            adv = (f"no live {IO_SKIP_SLEEVE} print (gap)" if gap
+                   else f"live {IO_SKIP_SLEEVE} {100 * r:+.2f}%")
+        eq = eq * (1.0 + r)
+        curve.append({"date": d, "cash": round(eq, 2),
+                      "equity": round(eq, 2), "open": 0, "score": score})
+        g = regime.get(d) or {}
+        gates.append({
+            "date": d,
+            "predict_dir": g.get("predict_dir"),
+            "predict_score": score,
+            "spy_down_streak": g.get("spy_down_streak") or 0,
+            "decision": "MOVER" if card["bucket"] == "mover" else "IO",
+            "why": card["why"],
+            "advisory": adv,
+        })
+
     trades = []
     for t in raw.get("trades") or []:
-        src = t.get("source") or "mover"
         trades.append({
             "entry_dt": t.get("entry_dt"), "date": t.get("date"),
             "ticker": t.get("ticker"), "side": "BUY",
@@ -440,49 +553,36 @@ def bt_to_mover_sim(raw: dict, payload: dict) -> tuple[dict, list[dict]]:
             "fee_out": t.get("fee_out"), "pnl": t.get("pnl"),
             "ret_pct": t.get("ret_pct"),
             "conviction": t.get("conviction") or 0,
-            "cond_tally": src, "reason": src, "source": src,
+            "cond_tally": "mover", "reason": "mover", "source": "mover",
         })
-    skipped = []
-    for s in raw.get("skipped") or []:
-        skipped.append({
-            "date": s.get("date"), "ticker": s.get("ticker"),
-            "side": "BUY", "conviction": 0,
-            "reason": s.get("reason") or "",
-        })
-    curve, gates = [], []
-    for c in raw.get("curve") or []:
-        curve.append({"date": c["date"], "cash": c.get("cash"),
-                      "equity": c.get("equity"), "open": c.get("open")})
-        card = route_fallback(c.get("score"))
-        dec = {"mover": "MOVER", "io": "IO", "cash": "CASH"}.get(
-            card["bucket"], str(card["bucket"]).upper())
-        g = regime.get(c["date"]) or {}
-        gates.append({
-            "date": c["date"],
-            "predict_dir": g.get("predict_dir"),
-            "predict_score": c.get("score"),
-            "spy_down_streak": g.get("spy_down_streak") or 0,
-            "decision": dec, "why": card["why"],
-            "advisory": c.get("gap") or "",
-        })
+    trades.extend(io_trades)
+    mv_pnl = round(sum(t["pnl"] or 0 for t in trades if t["source"] == "mover"), 2)
+    io_pnl = round(sum(t["pnl"] or 0 for t in trades if t["source"] == "io"), 2)
     sim = {
-        "capital": raw.get("capital", 100_000),
-        "top_n": raw.get("top_n", 10),
-        "pct": raw.get("pct", 0.10),
-        "side": "long",
-        "entry": "open+close",
-        "hold": "1d",
-        "rank": "cond / size",
-        "trades": trades, "skipped": skipped, "curve": curve,
-        "final_equity": raw.get("final_equity"),
-        "source": "mover+io",
-        "io_fallback": True,
-        "book_list": "1d",
-        "by_source": raw.get("by_source") or {},
+        "capital": capital, "top_n": raw.get("top_n", 10),
+        "pct": raw.get("pct", 0.10), "side": "long",
+        "entry": "open+close", "hold": "1d / 2w_size mark",
+        "rank": "cond / live 2w_size",
+        "trades": trades, "skipped": [], "curve": curve,
+        "final_equity": round(eq, 2),
+        "source": "mover+io", "io_fallback": True,
+        "book_list": "2w_size",
+        "by_source": {
+            "mover": {"n": sum(1 for t in trades if t["source"] == "mover"),
+                      "pnl": mv_pnl},
+            "io": {"n": sum(1 for t in trades if t["source"] == "io"),
+                   "pnl": io_pnl},
+        },
     }
     global TITLE
-    TITLE = "Mover paper — .io fallback on soft-red 1d"
+    TITLE = "Mover paper — skip days defer to live .io 2w_size"
     return sim, gates
+
+
+def bt_to_mover_sim(raw: dict, payload: dict,
+                    io_rets: dict[str, float] | None = None) -> tuple[dict, list[dict]]:
+    """Skip-day stitch: mover 1d on S>=+1, live 2w_size mark otherwise."""
+    return stitch_skip_io(raw, payload, io_rets=io_rets)
 
 
 # ------------------------------------------------- strategy sweep (daily) --
@@ -721,7 +821,8 @@ def write_outputs(sim, st, gates, sweep, payload, gate_score) -> None:
         w.writerows(sim["skipped"])
     with open(OUT_DIR / "equity_curve.csv", "w", newline="",
               encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=["date", "cash", "equity", "open"])
+        w = csv.DictWriter(fh, fieldnames=["date", "cash", "equity", "open"],
+                           extrasaction="ignore")
         w.writeheader()
         w.writerows(sim["curve"])
     state = {"generated_at": datetime.now().isoformat(timespec="seconds"),
@@ -751,14 +852,16 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
         "high-uncertainty event binaries are advisory flags below."
     )
     if sim.get("io_fallback"):
-        src_note = (" 1d .io size book at 16:00 when −3 < S < 0; mover "
-                    "1d at 09:30 otherwise. S ≤ −3 takes no new 1d risk.")
+        src_note = (" Mover 1d at 09:30 when S ≥ +1 or missing. Every "
+                    "mover-skip morning (S < +1, including hard-red) "
+                    "takes the live .io 2w_size daily mark — already-on "
+                    "names, not a new 1d ticket.")
         gate_line = (
-            "**Book:** .io fallback on soft-red mornings (−3 < S < 0), "
-            "mover the rest (S ≥ 0 or missing). Hard-red S ≤ −3 = cash. "
-            "Both books hold 1d. Open buys cannot spend the same day's "
-            "close-sale cash. This window’s only soft-red morning is "
-            "2026-09-03; 1d .io cannot exit until the next session prints."
+            "**Book:** skip days defer to live .io `2w_size` (same sleeve "
+            "as the .io dashboard). Hard-red S ≤ −3 blocks new 1d risk; "
+            "it does not flatten 2w_size. A same-close 1d .io fill cannot "
+            "show yesterday’s win — that print is the mark on names that "
+            "were already on."
         )
     L = [
         f"# {TITLE}", "",
@@ -929,16 +1032,18 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
             f"${0 if io_pnl is None else io_pnl:,.0f}</b></div>"
         )
         fallback_note = (
-            "<p class='muted'>Rule: −3 &lt; S &lt; 0 → 1d .io size at 16:00; "
-            "S ≥ 0 or missing → mover 1d at 09:30; S ≤ −3 → cash. "
-            "This window’s only soft-red morning is 2026-09-03; those 1d "
-            ".io names cannot exit until the next session prints.</p>"
+            "<p class='muted'>Rule: S ≥ +1 or missing → mover 1d at 09:30. "
+            "S &lt; +1 (including hard-red) → that day’s live .io "
+            "<code>2w_size</code> mark, the book that was already on. "
+            "S ≤ −3 blocks new 1d tickets; it does not sit in cash while "
+            "2w_size is green. A new 1d .io ticket at yesterday’s close "
+            "marks ~0 and is not yesterday’s win.</p>"
         )
-    gs = ("soft-red .io (−3 < S < 0); mover the rest" if sim.get("io_fallback")
+    gs = ("skip days → live .io 2w_size; mover the rest" if sim.get("io_fallback")
           else ("off" if gate_score is None else f"score ≥ {gate_score}"))
     title = TITLE
     if sim.get("io_fallback"):
-        title = "Mover paper — .io fallback on soft-red 1d"
+        title = "Mover paper — skip days defer to live .io 2w_size"
     HTML_OUT.write_text(f"""<!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -979,7 +1084,7 @@ Futubull fees · cash-accounted.
 </div>
 {fallback_note}
 {svg}
-<h2>Day book (mover / .io / cash)</h2>
+<h2>Day book (mover / .io 2w_size)</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date</th><th>Predict</th><th>Score</th><th>SPY streak</th>
 <th>Book</th><th>Why</th><th>Advisory</th><th>Day P&amp;L</th></tr></thead>
@@ -1028,7 +1133,7 @@ def main() -> None:
                     help="'none' disables the day gate")
     ap.add_argument("--io-fallback", dest="io_fallback", action="store_true",
                     default=True,
-                    help="soft-red 1d .io fallback (default on for mover)")
+                    help="skip-day live .io 2w_size mark (default on)")
     ap.add_argument("--no-io-fallback", dest="io_fallback",
                     action="store_false")
     args = ap.parse_args()
@@ -1057,14 +1162,13 @@ def main() -> None:
         sim["book_list"] = args.book_list
     elif args.io_fallback:
         from src.sleeve_combine_bt import run_one_live
-        raw = run_one_live("1d", "fallback", "size",
+        raw = run_one_live("1d", "mover_only", "size",
                            args.capital, args.top_n, args.pct)
-        sim, gates = bt_to_mover_sim(raw, payload)
+        sim, gates = stitch_skip_io(raw, payload)
         sweep_fn = lambda: run_sweep(payload, 0.0)
-        print(f"[mover-paper] io-fallback 1d · "
+        print(f"[mover-paper] skip-day .io {IO_SKIP_SLEEVE} stitch · "
               f"{sum(1 for g in gates if g['decision']=='MOVER')} mover / "
-              f"{sum(1 for g in gates if g['decision']=='IO')} io / "
-              f"{sum(1 for g in gates if g['decision']=='CASH')} cash")
+              f"{sum(1 for g in gates if g['decision']=='IO')} io")
     else:
         calls = tradeable_calls(payload, args.side)
         gates = gate_table(payload, gate_score)

@@ -715,7 +715,13 @@ def run_bt(
         want_m = want == BUCKET_MOVER or (
             mode == "overlay" and (score is None or score >= MOVER_GATE))
         want_i = want == BUCKET_IO or mode == "overlay"
+        if (mode == "fallback" and want == BUCKET_IO
+                and score is not None and score <= IO_HARD_RED):
+            want_i = False
         reasons = []
+        if (mode == "fallback" and want == BUCKET_IO
+                and score is not None and score <= IO_HARD_RED):
+            reasons.append("hard-red: no new 1d; live 2w_size stays on")
         if want_m and n_mover == 0:
             reasons.append("mover source empty (no BUY calls)")
         if want_i and not has_book:
