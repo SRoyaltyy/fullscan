@@ -530,6 +530,48 @@ def test_forced_close_retries_when_first_answer_is_a_dump() -> None:
     assert sum(1 for p in posts if "tools" not in p) >= 2
 
 
+def test_forced_close_dump_assembles_essay_from_thread() -> None:
+    """Live #102 sidecar: every no-tool close was DSML. Still land a pack file."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'XLE oil</｜｜DSML｜｜parameter>\n'
+    )
+    tool_json = json.dumps({
+        "query": "XLE oil",
+        "backend": "ddg",
+        "results": [{
+            "title": "XLE slips as crude eases",
+            "url": "https://example.com/xle",
+            "snippet": "Energy ETF closed lower with WTI.",
+        }],
+    })
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        return _fake_response(200, dump)
+
+    user = (
+        "DATE: 2026-09-03\nSECTOR: Energy\nETF: XLE\n\n"
+        "=== ACTUALS (deterministic) ===\n"
+        "ETF_PCT: -0.74\nSPY_PCT: 1.05\nREL_PCT: -1.79\n"
+        "OPEN: 65.12 CLOSE: 64.62\n"
+    )
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search", return_value=tool_json), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": user}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Energy 2026-09-03")
+    from src.skip_if_good import is_tool_dump
+    assert not is_tool_dump(text)
+    assert len(text) >= 200
+    assert "ETF_PCT: -0.74" in text
+    assert "XLE slips as crude eases" in text
+    assert "assembled" in text.lower() or "Post-session review" in text
+
+
 def test_map_postclose_caps_deepseek_tool_rounds() -> None:
     """11 captain batches × 10 search rounds miss the 7200s captain wall."""
     _reset(openclaw_url="", deepseek_key="ds-key")
@@ -618,6 +660,7 @@ def main() -> None:
         test_extracts_queries_from_dsml_tool_dump,
         test_tool_dump_followup_forces_no_tool_close,
         test_forced_close_retries_when_first_answer_is_a_dump,
+        test_forced_close_dump_assembles_essay_from_thread,
         test_map_postclose_caps_deepseek_tool_rounds,
         test_chat_nonempty_skips_thin_reasoner_stub,
     ]

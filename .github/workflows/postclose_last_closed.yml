@@ -9,7 +9,9 @@ name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
 # mid-day fire grades 09-03 and does not spend hours on 09-02.
 # A DeepSeek tool-dump follow-up must recover searches / force a close
 # (src/deepseek_client.py) or this job rewrites 11 dumps and skip-if-good
-# stays red.
+# stays red. Sidecar 33890318918 (#102) recovered searches then every
+# no-tool close was another DSML dump (0 chars written). The client now
+# assembles an essay from the thread when the close stays a dump.
 
 on:
   schedule:
