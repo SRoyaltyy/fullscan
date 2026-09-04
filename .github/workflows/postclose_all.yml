@@ -46,7 +46,7 @@ concurrency:
 jobs:
   postclose:
     runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 360
+    timeout-minutes: 720
     env:
       OPENCLAW_TIMEOUT: "900"
       FULLSCAN_HOME: "/home/gha"

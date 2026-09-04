@@ -319,6 +319,11 @@ def test_ranker_inputs_before_llm_packet() -> None:
     post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
     assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
     assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
+    assert "timeout-minutes: 720" in post_yml
+    assert "def _push_pack" in post
+    unit = (ROOT / "scripts" / "systemd" / "fullscan-map-postclose.service").read_text(
+        encoding="utf-8")
+    assert "TimeoutStartSec=12h" in unit
     news_py = (ROOT / "src" / "news_grade.py").read_text(encoding="utf-8")
     assert "threads=False" in news_py
     assert "setdefaulttimeout(30)" in news_py

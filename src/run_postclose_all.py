@@ -56,6 +56,28 @@ def _llm_http_timeout(default: int = 900) -> int:
         return default
 
 
+def _push_pack(date: str) -> None:
+    """Land this session before the next date (or a job-timeout kill)."""
+    script = ROOT / "scripts" / "safe_git_push.sh"
+    if not script.is_file():
+        print("[postclose-all] WARN: safe_git_push.sh missing — skip persist")
+        return
+    msg = f"auto: post-close ALL [{date}]"
+    paths = [
+        "01_daily/general/", "01_daily/sectors/", "01_daily/map_heat/",
+        "01_daily/news/", "01_daily/_transcripts/", "01_daily/_channel1/",
+        f"01_daily/{date}_learnings.md",
+        "02_lessons/", "03_scoreboard/",
+        "00_grounding/mutable_policy.md",
+        "00_grounding/book_policy.json",
+        "00_grounding/weather_rules_proposals.json",
+    ]
+    print(f"[postclose-all] persist {date} before the next session / timeout")
+    code = _run(["bash", str(script), msg, *paths], timeout_s=180)
+    if code != 0:
+        print(f"[postclose-all] WARN: persist {date} exited {code}")
+
+
 def _exists_gt(rel: str, n: int) -> bool:
     p = ROOT / rel
     try:
@@ -190,9 +212,11 @@ def _run_one(date: str, force: bool = False) -> None:
 
     if not skip_if_good.check_postclose_all(date):
         print(f"[postclose-all] DEGRADED {date}: outcome/learn/next-session "
-              "still missing — wrote whatever landed; exit 0 so git still runs")
+              "still missing — wrote whatever landed; persist then continue")
+        _push_pack(date)
         return
     print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
+    _push_pack(date)
 
 
 def main() -> None:
