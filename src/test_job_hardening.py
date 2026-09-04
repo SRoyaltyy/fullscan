@@ -373,6 +373,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "stock-book-all-ubuntu" in book_yml
     assert "stock-book-all-ecs" in book_yml
     assert 'branches: [main]' in book_yml
+    assert "src/green_pile.py" in book_yml
+    assert "src/stock_book.py" in book_yml
     assert "Pre-Open ALL (predictive one-shot)" in book_yml
     assert "Do not add a cron back" not in book_yml
     health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
