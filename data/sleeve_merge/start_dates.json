@@ -1,0 +1,341 @@
+{
+  "policy": "flatten_robust",
+  "capital": 100000,
+  "end": "2026-09-04",
+  "rows": [
+    {
+      "start": "2026-08-13",
+      "first_route": "io",
+      "would_buy": [
+        "BTSG",
+        "IREN",
+        "TPG",
+        "TGTX",
+        "SLS",
+        "HIMS",
+        "INO",
+        "TNDM",
+        "VOR"
+      ],
+      "return_pct": 16.48,
+      "final_equity": 116477.72,
+      "max_dd_pct": 0.19,
+      "n_sessions": 17,
+      "n_trades": 39,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-14",
+      "first_route": "io",
+      "would_buy": [
+        "TLN",
+        "VST",
+        "NRG",
+        "DAVE",
+        "SLG",
+        "MARA",
+        "LDI",
+        "BTBT",
+        "BETR"
+      ],
+      "return_pct": 3.51,
+      "final_equity": 103510.06,
+      "max_dd_pct": 5.21,
+      "n_sessions": 16,
+      "n_trades": 39,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-17",
+      "first_route": "io",
+      "would_buy": [
+        "DVN",
+        "EOG",
+        "FANG",
+        "TMC",
+        "TGB",
+        "ELF",
+        "DNN",
+        "HNST",
+        "NB"
+      ],
+      "return_pct": 8.43,
+      "final_equity": 108432.32,
+      "max_dd_pct": 0.6,
+      "n_sessions": 15,
+      "n_trades": 39,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-18",
+      "first_route": "hold",
+      "would_buy": [
+        "OXY",
+        "APA",
+        "COP",
+        "MUR",
+        "MLYS",
+        "TRMD",
+        "OBE",
+        "CYPH",
+        "TBPH"
+      ],
+      "return_pct": 13.18,
+      "final_equity": 113176.75,
+      "max_dd_pct": 0.0,
+      "n_sessions": 14,
+      "n_trades": 30,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-19",
+      "first_route": "hold",
+      "would_buy": [
+        "OBE",
+        "STE",
+        "DHR",
+        "SYK",
+        "MUR",
+        "TRMD",
+        "MLYS",
+        "TBPH",
+        "INMD"
+      ],
+      "return_pct": 13.18,
+      "final_equity": 113176.75,
+      "max_dd_pct": 0.0,
+      "n_sessions": 13,
+      "n_trades": 30,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-20",
+      "first_route": "mover",
+      "would_buy": [
+        "AG",
+        "BHP",
+        "CDE",
+        "HDSN",
+        "IAG",
+        "KGC",
+        "NFGC",
+        "WPM",
+        "ABUS",
+        "AEM"
+      ],
+      "return_pct": 13.18,
+      "final_equity": 113176.75,
+      "max_dd_pct": 0.0,
+      "n_sessions": 12,
+      "n_trades": 30,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-21",
+      "first_route": "mover",
+      "would_buy": [
+        "AU",
+        "AUPH",
+        "AEM",
+        "ARCT",
+        "AUTL",
+        "CRDL",
+        "CRSP",
+        "CYPH",
+        "FUTU",
+        "GMAB"
+      ],
+      "return_pct": 7.86,
+      "final_equity": 107856.49,
+      "max_dd_pct": 1.2,
+      "n_sessions": 11,
+      "n_trades": 20,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-24",
+      "first_route": "hold",
+      "would_buy": [
+        "RZLT",
+        "MOS",
+        "OCUL",
+        "INSP",
+        "CRMD",
+        "HCA"
+      ],
+      "return_pct": 5.18,
+      "final_equity": 105182.35,
+      "max_dd_pct": 3.64,
+      "n_sessions": 10,
+      "n_trades": 10,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-25",
+      "first_route": "io",
+      "would_buy": [
+        "MOS",
+        "OCUL",
+        "INSP",
+        "CRMD",
+        "RZLT",
+        "HCA"
+      ],
+      "return_pct": 5.18,
+      "final_equity": 105182.35,
+      "max_dd_pct": 3.64,
+      "n_sessions": 9,
+      "n_trades": 10,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-26",
+      "first_route": "io",
+      "would_buy": [
+        "OCUL",
+        "CRMD",
+        "RZLT",
+        "MOS",
+        "INSP",
+        "HCA"
+      ],
+      "return_pct": -2.25,
+      "final_equity": 97752.57,
+      "max_dd_pct": 3.15,
+      "n_sessions": 8,
+      "n_trades": 9,
+      "made_money": false
+    },
+    {
+      "start": "2026-08-27",
+      "first_route": "io",
+      "would_buy": [
+        "RRC",
+        "CRK",
+        "MOS",
+        "SLI"
+      ],
+      "return_pct": 2.18,
+      "final_equity": 102175.95,
+      "max_dd_pct": 1.85,
+      "n_sessions": 7,
+      "n_trades": 4,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-28",
+      "first_route": "io",
+      "would_buy": [
+        "RRC",
+        "CRK",
+        "MOS",
+        "SLI"
+      ],
+      "return_pct": 3.4,
+      "final_equity": 103400.04,
+      "max_dd_pct": 0.17,
+      "n_sessions": 6,
+      "n_trades": 4,
+      "made_money": true
+    },
+    {
+      "start": "2026-08-31",
+      "first_route": "hold",
+      "would_buy": [
+        "RES",
+        "PBF",
+        "NOV",
+        "WTTR"
+      ],
+      "return_pct": 0.0,
+      "final_equity": 100000.0,
+      "max_dd_pct": 0.0,
+      "n_sessions": 5,
+      "n_trades": 0,
+      "made_money": false
+    },
+    {
+      "start": "2026-09-01",
+      "first_route": "hold",
+      "would_buy": [
+        "DK",
+        "BTE",
+        "MTDR",
+        "RES",
+        "KOS",
+        "OIS",
+        "FTI",
+        "KMI",
+        "OKE"
+      ],
+      "return_pct": 0.0,
+      "final_equity": 100000.0,
+      "max_dd_pct": 0.0,
+      "n_sessions": 4,
+      "n_trades": 0,
+      "made_money": false
+    },
+    {
+      "start": "2026-09-02",
+      "first_route": "hold",
+      "would_buy": [
+        "PCRX",
+        "HRMY",
+        "PBH",
+        "VSTM",
+        "MGTX",
+        "PBR-A",
+        "PBR"
+      ],
+      "return_pct": 0.0,
+      "final_equity": 100000.0,
+      "max_dd_pct": 0.0,
+      "n_sessions": 3,
+      "n_trades": 0,
+      "made_money": false
+    },
+    {
+      "start": "2026-09-03",
+      "first_route": "io",
+      "would_buy": [
+        "ATRC",
+        "HRMY",
+        "CABA",
+        "VSTM",
+        "RVTY"
+      ],
+      "return_pct": 0.0,
+      "final_equity": 100000.0,
+      "max_dd_pct": 0.0,
+      "n_sessions": 2,
+      "n_trades": 0,
+      "made_money": false
+    },
+    {
+      "start": "2026-09-04",
+      "first_route": "io",
+      "would_buy": [
+        "ASND",
+        "OSCR",
+        "ATRC",
+        "NVAX",
+        "CABA",
+        "BVS"
+      ],
+      "return_pct": 0.0,
+      "final_equity": 100000.0,
+      "max_dd_pct": 0.0,
+      "n_sessions": 1,
+      "n_trades": 0,
+      "made_money": false
+    }
+  ],
+  "mean_pct": 5.27,
+  "mean_pct_ge5": 6.89,
+  "n": 17,
+  "n_ge5": 13,
+  "n_green": 11,
+  "min_pct": -2.25,
+  "min_pct_ge5": -2.25,
+  "hit_mean_5": true
+}

@@ -11,7 +11,8 @@ def test_catalog_has_live_hard_red_and_shipped() -> None:
     rows = collect()
     ids = {r["id"] for r in rows}
     assert any(r.get("live") and r.get("family") == "sleeve merge"
-               and "hard_red" in (r.get("id") or "") for r in rows), ids
+               and ("robust" in (r.get("id") or "")
+                    or "hard_red" in (r.get("id") or "")) for r in rows), ids
     assert "io_2w_size" in ids
     assert "excel_all" in ids or any(r["family"] == "excel" for r in rows)
     assert any(r.get("pr") == 67 for r in rows)
@@ -24,14 +25,15 @@ def test_catalog_has_live_hard_red_and_shipped() -> None:
 
 def test_render_marks_integrity() -> None:
     html = render(collect())
-    assert "flatten_hard_red" in html or "hard-red" in html.lower()
+    assert ("flatten_robust" in html or "flatten_hard_red" in html
+            or "hard-red" in html.lower() or "robust" in html.lower())
     assert "fill" in html and "stitch" in html
     assert "Excel" in html or "excel" in html
 
 
 def test_md_names_live_method() -> None:
     md = write_md(collect())
-    assert "flatten_hard_red" in md
+    assert "flatten_robust" in md or "flatten_hard_red" in md
     assert "fill" in md
 
 
