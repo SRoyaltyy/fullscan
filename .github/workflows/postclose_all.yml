@@ -2,11 +2,14 @@ name: Post-Close ALL (grade + learn + next captains)
 
 # One evening button: outcome → sector grades → learn → tomorrow's
 # captain notebook. Skip-if-good on every LLM step.
-# CLOCK: GH cron ~16:10 ET + ECS 22:00 timer (second fire spends $0).
+# CLOCK: GH ubuntu ~16:10 ET (DeepSeek; does not wait for ECS) +
+#        GH ubuntu ~23:30 ET backup + ECS 22:00 timer (Grok).
+# A queued ECS job must not block the ubuntu backup (split concurrency).
 
 on:
   schedule:
-    - cron: "10 20 * * 1-5"
+    - cron: "10 20 * * 1-5"   # ~16:10 ET — ubuntu (new cron may skip day 1)
+    - cron: "30 3 * * 2-6"    # ~23:30 ET — ubuntu backup if ECS queued/offline
   workflow_dispatch:
     inputs:
       runner:
@@ -40,12 +43,15 @@ permissions:
   actions: write
 
 concurrency:
-  group: postclose-all
+  # Queued self-hosted runs sit forever if the ECS runner is offline.
+  # Ubuntu must not share that group or the backup never starts.
+  group: postclose-all-${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
   cancel-in-progress: false
 
 jobs:
   postclose:
-    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    # Schedule is ubuntu/DeepSeek. Dispatch default and orch stay on ECS/Grok.
+    runs-on: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     # Two closed sessions × 11 sector grades + reflects + captains.
     # 12h died mid-pack when several Grok calls each burned the 900s cap.
     timeout-minutes: 1080

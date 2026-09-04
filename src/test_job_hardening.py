@@ -330,6 +330,10 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
     assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
     assert "timeout-minutes: 1080" in post_yml
+    assert 'cron: "10 20 * * 1-5"' in post_yml
+    assert 'cron: "30 3 * * 2-6"' in post_yml
+    assert "postclose-all-${{" in post_yml
+    assert "github.event_name == 'schedule'" in post_yml
     assert "MAP_POSTCLOSE_LOCK" in post_yml
     assert "leftover ECS files must not fake SKIP" in post_yml
     assert "git reset --hard origin/main" in post_yml
