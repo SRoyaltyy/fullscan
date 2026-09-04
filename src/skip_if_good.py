@@ -135,6 +135,31 @@ def check_label_weather(date: str) -> bool:
     return _log(ok, "label_weather", date, f"weather_sectors={n}")
 
 
+def book_files_are_degraded(js: Path, green: Path) -> bool:
+    """True when the crash-fallback book landed instead of a real rank."""
+    try:
+        if js.is_file():
+            payload = json.loads(js.read_text(encoding="utf-8"))
+            if not isinstance(payload, dict):
+                return True
+            if (payload.get("meta") or {}).get("degraded"):
+                return True
+            books = payload.get("books")
+            # A real rank writes 1d/3d/1w/2w/1m. Empty books = crash stub.
+            if isinstance(books, dict) and not books:
+                return True
+    except (OSError, json.JSONDecodeError, TypeError):
+        return True
+    try:
+        if green.is_file():
+            g = json.loads(green.read_text(encoding="utf-8"))
+            if isinstance(g, dict) and g.get("degraded"):
+                return True
+    except (OSError, json.JSONDecodeError, TypeError):
+        return True
+    return False
+
+
 def check_stock_book_all(date: str) -> bool:
     """Book + green pile + the ranker inputs BUY/SELL need."""
     js = ROOT / "data" / "stock_book" / f"{date}_stock_book.json"
@@ -144,12 +169,15 @@ def check_stock_book_all(date: str) -> bool:
     green = ROOT / "data" / "stock_book" / f"{date}_green.json"
     if not _exists_gt(green, 40):
         return _log(False, "stock_book_all", date, "green.json missing — pile not graded")
+    if book_files_are_degraded(js, green):
+        return _log(False, "stock_book_all", date, "degraded book — re-rank required")
     if not check_label_weather(date):
         return _log(False, "stock_book_all", date, "weather incomplete")
     if not check_ab_checklist(date):
         return _log(False, "stock_book_all", date, "AB missing")
     ranked = ROOT / "data" / "join" / f"{date}_ranked.csv"
-    if not _exists_gt(ranked, 200):
+    # Full universe is megabytes. A header-only stub must not skip rebuild.
+    if not _exists_gt(ranked, 5_000):
         return _log(False, "stock_book_all", date, "join ranked missing")
     return _log(True, "stock_book_all", date,
                 "book + green + weather + join + AB")

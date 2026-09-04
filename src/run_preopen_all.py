@@ -466,7 +466,8 @@ def run(date: str | None = None, force: bool = False,
         snapshot_persist(date)
     step("weather", "Weather / regime",
          [py, "-m", "src.weather", "--date", date])
-    if force or not _exists_gt("data", "join", f"{date}_ranked.csv"):
+    if force or not _exists_gt("data", "join", f"{date}_ranked.csv",
+                               min_bytes=5_000):
         print("[preopen-all] → Join / match rank")
         _run([py, "-m", "src.join", "--date", date])
         snapshot_persist(date)

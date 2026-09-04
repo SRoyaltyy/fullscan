@@ -374,8 +374,14 @@ def run(
     print("[all] → Join / match rank")
     _run([sys.executable, "-m", "src.join", "--date", date],
          check=False, timeout_s=join_t)
-    if not _exists("data", "join", f"{date}_ranked.csv"):
-        print(f"[all] WARN: no join ranked file for {date} — cannot rank today")
+    join_p = _p("data", "join", f"{date}_ranked.csv")
+    try:
+        join_sz = join_p.stat().st_size if join_p.is_file() else 0
+    except OSError:
+        join_sz = 0
+    if join_sz < 5_000:
+        print(f"[all] WARN: join ranked missing/thin for {date} "
+              f"({join_sz} bytes) — cannot rank today")
         return
 
     if need("peer_rs"):

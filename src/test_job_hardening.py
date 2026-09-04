@@ -300,6 +300,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "--skip-llm --skip-extras" in pre_yml
     assert "Pull scrape + export from main" in pre_yml
     assert "git checkout origin/main --" in pre_yml
+    assert 'force=true — rank even if a book is on disk' in pre_yml
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "skip_extras:" in book_yml
     assert "past 09:25 ET — skip LLM + extras" in book_yml

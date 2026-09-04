@@ -125,7 +125,10 @@ jobs:
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          if python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
+          FORCE="${{ github.event.inputs.force }}"
+          if [ "$FORCE" = "true" ]; then
+            echo "force=true — rank even if a book is on disk"
+          elif python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
             echo "Book + green already on disk — no ranker"
             echo "skip=yes" >> "$GITHUB_ENV"
           fi

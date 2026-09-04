@@ -4,6 +4,10 @@ Run: PYTHONPATH=. python3 -m src.test_skip_if_good
 """
 from __future__ import annotations
 
+import json
+import tempfile
+from pathlib import Path
+
 from src import skip_if_good
 
 
@@ -41,10 +45,40 @@ def test_jobs_include_label_weather() -> None:
     assert "postclose_all" in skip_if_good.JOBS
 
 
+def test_degraded_book_is_not_good() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        js = Path(tmp) / "book.json"
+        green = Path(tmp) / "green.json"
+        js.write_text(json.dumps({
+            "meta": {"degraded": True, "error": "boom"},
+            "universe": ["AAA"] * 400,
+            "rows": [{"ticker": "AAA", "s_join": 0.0}] * 400,
+        }), encoding="utf-8")
+        green.write_text(json.dumps({
+            "date": "1999-01-01",
+            "degraded": True,
+            "n_buy": 0,
+            "n_sell": 400,
+        }), encoding="utf-8")
+        assert skip_if_good.book_files_are_degraded(js, green) is True
+        js.write_text(json.dumps({
+            "meta": {"n": 400},
+            "books": {"1d": {"buy": [{"ticker": "AAA"}]}},
+        }), encoding="utf-8")
+        green.write_text(json.dumps({"date": "1999-01-01", "n_buy": 1}), encoding="utf-8")
+        assert skip_if_good.book_files_are_degraded(js, green) is False
+        js.write_text(json.dumps({
+            "meta": {"date": "1999-01-01"},
+            "books": {},
+        }), encoding="utf-8")
+        assert skip_if_good.book_files_are_degraded(js, green) is True
+
+
 if __name__ == "__main__":
     test_missing_date_is_run()
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()
     test_postclose_all_needs_learn_not_just_outcome()
     test_jobs_include_label_weather()
+    test_degraded_book_is_not_good()
     print("ok")

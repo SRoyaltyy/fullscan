@@ -2303,7 +2303,7 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
 
 
 def _write_degraded(date: str, reason: str) -> None:
-    """Last-ditch book + green.json so skip-if-good / heal can see a file."""
+    """Last-ditch marker files. skip-if-good rejects meta.degraded so heal re-ranks."""
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DAILY.mkdir(parents=True, exist_ok=True)
     payload = {
