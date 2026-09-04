@@ -28,6 +28,32 @@ Futubull fees paid **$1,502.07** (in $738.73 / out $763.34). Whole shares. A nam
 | BUY | 54 | 53.7% | $19,015.55 |
 | SELL | 0 | 0.0% | $0.00 |
 
+## If you started any day (full cash, same live rule)
+
+Same `flatten_hard_red` book. Each row is a **fresh $100k** account that first spends on that session — leftover crumbs from an earlier start are not used. Day D buys the names the rule would pick if the book were flat (the skipped ASTS/SITM list on 08-14, the mover list on 08-20, …). Sat/Sun have no tape (08-15/16 = start Monday 08-17).
+
+**12/17** session starts finish above $100,000 through 2026-09-04. 08-13 is the live book.
+
+| Start | Days | First route | First names | Spent | Final | Return | Max DD | Made money |
+|---|---:|---|---|---:|---:|---:|---:|---|
+| 2026-08-13 | 17 | io (+8.53) | BTSG, GH, PRAX, TGTX, SLS, TMDX, TNDM, INO, AGEN | $99,665 | $119,105.48 | +19.11% | 2.99% | **YES** |
+| 2026-08-14 | 16 | io (+5.50) | ASTS, SITM, DOCN, DAVE, APLD, FOUR, TBCH, WOLF, VERI | $99,323 | $100,280.69 | +0.28% | 7.57% | **YES** |
+| 2026-08-17 | 15 | io (+2.25) | EL, WTW, ECL, DNN, TGB, ERO, TMC, NB, HNST | $99,829 | $110,051.86 | +10.05% | 3.00% | **YES** |
+| 2026-08-18 | 14 | hold (-6.20) | — | $0 | $108,635.65 | +8.64% | 3.00% | **YES** |
+| 2026-08-19 | 13 | hold (-7.20) | — | $0 | $108,635.65 | +8.64% | 3.00% | **YES** |
+| 2026-08-20 | 12 | mover (+1.12) | AG, BHP, CDE, HDSN, IAG, KGC, NFGC, WPM, ABUS, AEM | $99,662 | $108,635.65 | +8.64% | 3.00% | **YES** |
+| 2026-08-21 | 11 | mover (+3.25) | AU, AUPH, AEM, ARCT, AUTL, CRDL, CRSP, CYPH, FUTU, GMAB | $99,701 | $103,533.77 | +3.53% | 2.99% | **YES** |
+| 2026-08-24 | 10 | hold (-5.17) | — | $0 | $100,985.34 | +0.99% | 3.00% | **YES** |
+| 2026-08-25 | 9 | io (+1.80) | SOFI, HOOD, HCA, GSHD, XP, DUOL, INSP, CRMD, RZLT | $99,456 | $100,985.34 | +0.99% | 3.00% | **YES** |
+| 2026-08-26 | 8 | io (+2.02) | SOFI, HOOD, HCA, GSHD, XP, DUOL, INSP, CRMD, RZLT | $99,690 | $102,091.39 | +2.09% | 1.95% | **YES** |
+| 2026-08-27 | 7 | io | FUTU, HOOD, CNH, CRK, RRC, MOS, PGY, SLI, VYX | $99,863 | $103,439.45 | +3.44% | 2.30% | **YES** |
+| 2026-08-28 | 6 | io (+0.75) | FUTU, HOOD, CNH, CRK, RRC, MOS, PGY, SLI, VYX | $99,800 | $105,715.77 | +5.72% | 0.12% | **YES** |
+| 2026-08-31 | 5 | hold (-5.85) | — | $0 | $99,912.99 | -0.09% | 0.09% | **no** |
+| 2026-09-01 | 4 | hold (-6.30) | — | $0 | $99,912.99 | -0.09% | 0.09% | **no** |
+| 2026-09-02 | 3 | hold (-3.83) | — | $0 | $99,912.99 | -0.09% | 0.09% | **no** |
+| 2026-09-03 | 2 | io (-0.90) | CRM, RVTY, NVDA, ATRC, HRMY, MGNI, CABA, SONO, VSTM | $99,764 | $99,912.99 | -0.09% | 0.09% | **no** |
+| 2026-09-04 | 1 | io | HOOD, XP, ASND, OSCR, ATRC, DUOL, NVAX, CABA, BVS | $99,477 | $99,914.11 | -0.09% | 0.09% | **no** |
+
 ## 15% every 2 weeks
 
 Target **+15%** per calendar fortnight (14 days) and per 10 trading sessions.
