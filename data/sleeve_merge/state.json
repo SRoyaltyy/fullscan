@@ -21,7 +21,7 @@
   },
   "stats": {
     "n_trades": 52,
-    "n_skipped": 0,
+    "n_skipped": 14,
     "hit": 0.596,
     "total_pnl": 21481.35,
     "total_ret_pct": 21.57,
@@ -48,7 +48,10 @@
     "hit_every_fortnight": true,
     "beat_io_top": true,
     "io_top_pct": 12.85,
-    "passed": true
+    "passed": true,
+    "fees_in": 738.36,
+    "fees_out": 762.94,
+    "fees_total": 1501.3
   },
   "rolling_2w": [
     {
@@ -158,5 +161,5 @@
       "partial": true
     }
   ],
-  "generated": "2026-09-04T11:34:52"
+  "generated": "2026-09-04T11:55:07"
 }

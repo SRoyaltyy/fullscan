@@ -667,6 +667,60 @@ def stats(sim: dict, io_top: float | None = None) -> dict:
         "beat_io_top": beat_top,
         "io_top_pct": io_top,
         "passed": passed,
+        "fees_in": round(sum(t.get("fee_in") or 0 for t in trades), 2),
+        "fees_out": round(sum(t.get("fee_out") or 0 for t in trades), 2),
+        "fees_total": round(sum((t.get("fee_in") or 0) + (t.get("fee_out") or 0)
+                                for t in trades), 2),
+    }
+
+
+def replay_ledger(trades: list[dict], capital: float = 100_000) -> dict:
+    """Rebuild cash from fills. Held lots consume cash until they sell.
+
+    Events sort 09:30 before 16:00 on the same date. A buy that would push
+    cash below -1 cent is a ledger break (the live engine must refuse it).
+    """
+    events = []
+    for t in trades:
+        events.append({
+            "dt": t.get("entry_dt") or "", "kind": "buy", "t": t,
+        })
+        if t.get("exit_dt"):
+            events.append({
+                "dt": t.get("exit_dt"), "kind": "sell", "t": t,
+            })
+    clock_rank = {"09:30 ET": 0, "16:00 ET": 1}
+
+    def _key(e):
+        parts = (e["dt"] or "").rsplit(" ", 2)
+        date = parts[0] if parts else ""
+        clock = " ".join(parts[1:]) if len(parts) >= 3 else ""
+        return (date, clock_rank.get(clock, 9), 0 if e["kind"] == "sell" else 1)
+
+    events.sort(key=_key)
+    cash = float(capital)
+    min_cash = cash
+    open_n = 0
+    hist = []
+    for e in events:
+        t = e["t"]
+        if e["kind"] == "buy":
+            cost = (t["shares"] * t["entry_px"]) + (t.get("fee_in") or 0)
+            cash -= cost
+            open_n += 1
+        else:
+            px = t.get("exit_px") or t.get("last_px") or t["entry_px"]
+            cash += (t["shares"] * px) - (t.get("fee_out") or 0)
+            open_n = max(0, open_n - 1)
+        min_cash = min(min_cash, cash)
+        hist.append({"dt": e["dt"], "kind": e["kind"], "cash": round(cash, 2),
+                     "ticker": t.get("ticker"), "open_n": open_n})
+    return {
+        "final_cash": round(cash, 2),
+        "min_cash": round(min_cash, 2),
+        "broke": min_cash < -0.01,
+        "events": hist,
+        "n_events": len(hist),
     }
 
 
@@ -796,6 +850,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             "pnl": round(pnl, 2),
             "ret_pct": round(100 * pnl / max(lot["notional"], 1), 2),
             "exit_reason": why,
+            "cash_after_exit": round(cash, 2),
         })
         trades.append(rec)
 
@@ -811,6 +866,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                 return None
             fee = order_fees(shares, px, "buy", fees)
             cost = shares * px + fee
+        before = cash
         cash -= cost
         return {
             "sleeve": sleeve, "ticker": ticker, "side": "BUY",
@@ -818,6 +874,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             "entry_dt": f"{date} {clock}", "fee_in": round(fee, 2),
             "notional": round(shares * px, 2), "reason": reason,
             "last_px": px,
+            "cash_before": round(before, 2),
+            "cash_after": round(cash, 2),
         }
 
     def deploy_mover(date, priced_buys, confirm):
@@ -832,7 +890,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         eq = mark(date, "open")
         already = sum(p["shares"] * (p.get("last_px") or p["entry_px"])
                       for p in mv_pos if p["side"] == "BUY")
-        room = max(0.0, eq * day_cap - already)
+        # Held stock is not cash. day_cap is an equity cap; the spendable
+        # budget is leftover cash after prior lots (and after this morning's
+        # flatten / rotate). Subsequent names in the same batch see the
+        # reduced cash — they do not get a phantom 10% of marked equity.
+        room = min(cash, max(0.0, eq * day_cap - already))
         held = {p["ticker"] for p in mv_pos}
         for r in rank_calls(priced_buys, pol.get("long_rank", "cond"))[: pol["long_top_n"]]:
             t = str(r.get("ticker") or "").upper()
@@ -848,16 +910,18 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             if not xd:
                 continue
             bump = pol["sizeup"] if t in confirm else 1.0
-            want = min(eq * pol["long_pct"] * bump, room)
+            want = min(eq * pol["long_pct"] * bump, room, cash)
             lot = buy(date, t, px, OPEN_CLOCK, int(want // px),
                       f"mover BUY cond={_cond_score(r):+.0f}", "mover_long")
             if lot is None:
+                skipped.append({"date": date, "ticker": t, "side": "BUY",
+                                "reason": "cash tied in open lots / fees"})
                 continue
-            room -= lot["notional"]
+            room -= lot["notional"] + lot["fee_in"]
             lot["exit_date"] = xd
             mv_pos.append(lot)
             held.add(t)
-            if room < 1:
+            if room < 1 or cash < 1:
                 break
 
     for date in cal:
@@ -891,7 +955,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             (mover_when_flat and green)
             or (blank_mover_when_flat and blank))
         route_mover = flatten_ok or cash_mover
-        confirm = book_ticker_set(today_book or last_print or {}) 
+        # 09:30 size-up may only see a book that already printed.
+        confirm = book_ticker_set(prior or last_print or {}) 
 
         # 09:30 flatten .io → mover / deploy leftover cash
         if route_mover:
@@ -934,6 +999,9 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                               f"io {pol.get('io_sleeve', '2w_size')}", "io_core")
                     if lot:
                         io_pos[t] = lot
+                    else:
+                        skipped.append({"date": date, "ticker": t, "side": "BUY",
+                                        "reason": "cash tied in open lots / fees"})
 
         eq_end = mark(date, "close")
         curve.append({
@@ -1146,6 +1214,11 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         f"{'BEATS' if st['beat_io_top'] else 'trails'} {io_top:+.2f}% | "
         f"**{gate}** |",
         "",
+        f"Futubull fees paid **${st.get('fees_total') or 0:,.2f}** "
+        f"(in ${st.get('fees_in') or 0:,.2f} / out ${st.get('fees_out') or 0:,.2f}). "
+        "Whole shares. A name that is already held ties up cash — later "
+        "names that day only see leftover cash, so some tickets do not fill.",
+        "",
         "| Side | Trades | Win | P&L |",
         "|---|---:|---:|---:|",
         f"| BUY | {st['by_side']['BUY']['n']} | {st['by_side']['BUY']['hit'] or 0:.1%} | "
@@ -1189,14 +1262,14 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "",
         "## Day route",
         "",
-        "| Date | Score | Route | Equity | core | tac.io | tac.mv |",
+        "| Date | Score | Route | Equity | Cash | core | tac.mv |",
         "|---|---:|---|---:|---:|---:|---:|",
     ]
     for r in sim["curve"]:
         sc = "—" if r.get("score") is None else f"{r['score']:+.2f}"
         lines.append(
             f"| {r['date']} | {sc} | {r['route']} | ${r['equity']:,.2f} | "
-            f"{r['core_n']} | {r.get('tac_io_n', 0)} | {r['tac_n']} |")
+            f"${r.get('cash', 0):,.2f} | {r['core_n']} | {r['tac_n']} |")
 
     lines += ["", "## Sweep (same window, same fees)", "",
               "| Policy | Return | Max DD | min fortnight | min block | Pass |",
@@ -1232,8 +1305,29 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "used at today's close.",
         "- **Rotate at the next green open** is the honest way to stay fully "
         "invested in mover (the paper book's same-day close→open recycle is "
-        "a leak; we do not copy it). **Carry last book** keeps the 2w sleeve "
-        "working on days the book job did not print.",
+        "a leak; we do not copy it). Sells run first so the new list is "
+        "funded with cash, not with stock you still hold. **Carry last book** "
+        "is the same 2w_size list the .io dashboard already follows on a "
+        "quiet print day — not a third model.",
+        "",
+        "## Cash and fees (not a paper NAV)",
+        "",
+        "This is one Futubull cash account. Every fill pays "
+        "`00_grounding/futubull_fees.json` (commission + platform + settlement, "
+        "plus SEC/TAF on sells). Equity = leftover cash + marked positions. "
+        "Buying 2w_size names on 08-13 spends almost the whole $100k "
+        "(day-end cash $136); those names stay held through 08-19, so the "
+        "08-14/17 add-ons are leftover crumbs (TBCH 1 share, VERI $15). "
+        "On 08-20 the flatten sells first at the open (fees out), then "
+        "mover buys consume that cash. On 08-24 the last 2w_size list is "
+        "re-entered; 08-27's new book names only get the ~$186 leftover "
+        "(CNH 3 shares, MOS 1 share) because the 08-24 lots are still open.",
+        "",
+        "Nothing here is a fringe overlay: default = published `.io` "
+        "`2w_size`, switch = published mover gate (S ≥ +1 and a real BUY "
+        "list), flatten/rotate at the 09:30 print you already have, carry = "
+        "keep the last 2w list. No NAV stitch, no same-day close→open "
+        "recycle, no Excel vote, no leverage.",
         "",
         "Code: `src/sleeve_merge.py`. Machine: `data/sleeve_merge/`. "
         "Dashboard: `dashboard/sleeve-merge/index.html`.",

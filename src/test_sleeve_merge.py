@@ -12,6 +12,7 @@ from src.sleeve_merge import (
     io_picks,
     next_session,
     rank_calls,
+    replay_ledger,
     rolling_window_returns,
     stats,
 )
@@ -136,6 +137,59 @@ def test_live_flatten_switch_clears_15pct_fortnight() -> None:
     # recycle + carry must stay ahead of the no-recycle flatten_switch_full
     assert st["min_fortnight"] >= 19.0, st
     assert st["total_ret_pct"] >= 21.0, st
+    assert st.get("fees_total", 0) > 100, st
+    led = replay_ledger(sim["trades"], 100_000)
+    assert led["broke"] is False, led["min_cash"]
+    assert led["min_cash"] >= -0.01, led
+
+
+def test_live_fees_and_cash_lockup() -> None:
+    """Every fill uses Futubull fees; held stock blocks later tickets."""
+    from pathlib import Path
+    from src.paper_trade import load_fees, order_fees
+    from src.sleeve_merge import (
+        DEFAULT, list_books, load_payload, run_flatten_switch,
+    )
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file() or not list_books():
+        print("skip live cash lockup (no payload/books)")
+        return
+    pol = {**DEFAULT, "name": "flatten_switch_recycle", "engine": "flatten_switch",
+           "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+           "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+           "rotate_mover": True, "carry_last_book": True}
+    sim = run_flatten_switch(load_payload(), list_books(), pol, 100_000)
+    fees = load_fees()
+    assert sim["trades"], "expected fills"
+    for t in sim["trades"]:
+        want_in = order_fees(t["shares"], t["entry_px"], "buy", fees)
+        assert abs((t.get("fee_in") or 0) - want_in) < 0.05, (t["ticker"], t.get("fee_in"), want_in)
+        if t.get("exit_px"):
+            want_out = order_fees(t["shares"], t["exit_px"], "sell", fees)
+            assert abs((t.get("fee_out") or 0) - want_out) < 0.05, (t["ticker"], t.get("fee_out"), want_out)
+        if t.get("cash_before") is not None:
+            assert t["cash_after"] <= t["cash_before"] + 1e-6
+            assert t["cash_after"] + t["notional"] + t["fee_in"] == t["cash_before"] \
+                or abs(t["cash_before"] - t["cash_after"] - t["notional"] - t["fee_in"]) < 0.02
+    # 08-13 spends the book; 08-14 add-ons are leftover crumbs.
+    day13 = [t for t in sim["trades"] if t["entry_date"] == "2026-08-13"]
+    day14 = [t for t in sim["trades"] if t["entry_date"] == "2026-08-14"]
+    assert day13 and sum(t["notional"] for t in day13) > 90_000
+    if day14:
+        assert max(t["notional"] for t in day14) < 50
+    # 08-24 re-enters 2w_size; 08-27 new names only get leftover cash.
+    day24 = [t for t in sim["trades"] if t["entry_date"] == "2026-08-24"]
+    day27 = [t for t in sim["trades"] if t["entry_date"] == "2026-08-27"]
+    assert day24 and sum(t["notional"] for t in day24) > 100_000
+    if day27:
+        assert max(t["notional"] for t in day27) < 200
+    cash_row = {r["date"]: r["cash"] for r in sim["curve"]}
+    # Fully invested days leave pocket change, not a second sleeve's cash.
+    assert cash_row["2026-08-13"] < 200
+    assert cash_row["2026-08-21"] < 50
+    led = replay_ledger(sim["trades"], 100_000)
+    assert led["broke"] is False
+    assert led["n_events"] == 2 * len(sim["trades"])
 
 
 def test_flatten_needs_book_and_enough_buys() -> None:
@@ -199,7 +253,8 @@ def main() -> None:
     test_prior_book_never_uses_today()
     test_fortnight_is_14_calendar_days()
     test_live_flatten_switch_clears_15pct_fortnight()
-    print("test_sleeve_merge: 10 ok")
+    test_live_fees_and_cash_lockup()
+    print("test_sleeve_merge: 11 ok")
 
 
 if __name__ == "__main__":
