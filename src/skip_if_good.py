@@ -371,11 +371,32 @@ def check_general_reflect(date: str) -> bool:
     return _log(ok, "general_reflect", date, f"reflect={p.exists()}")
 
 
-def check_sector_outcomes(date: str) -> bool:
+def _count_sector_md(date: str, suffix: str, min_bytes: int = 200) -> int:
     d = ROOT / "01_daily" / "sectors" / date
-    n = len(list(d.glob("*_outcome.md"))) if d.is_dir() else 0
+    if not d.is_dir():
+        return 0
+    n = 0
+    for p in d.glob(f"*{suffix}"):
+        if _exists_gt(p, min_bytes):
+            n += 1
+    return n
+
+
+def check_sector_outcomes(date: str) -> bool:
+    n = _count_sector_md(date, "_outcome.md")
     ok = n >= 8
     return _log(ok, "sector_outcomes", date, f"outcome_md={n}/11")
+
+
+def check_sector_reflects(date: str) -> bool:
+    """Sector reflect is part of the intended pack, not an optional extra.
+
+    Outcomes-only would let skip-if-good SKIP after 8 stubs and never write
+    the 11 diagnostics the night pack is supposed to land.
+    """
+    n = _count_sector_md(date, "_reflect.md")
+    ok = n >= 8
+    return _log(ok, "sector_reflects", date, f"reflect_md={n}/11")
 
 
 def check_postclose_all(date: str) -> bool:
@@ -391,12 +412,14 @@ def check_postclose_all(date: str) -> bool:
         return _log(False, "postclose_all", date, "reflect missing")
     if not check_sector_outcomes(date):
         return _log(False, "postclose_all", date, "sector outcomes missing")
+    if not check_sector_reflects(date):
+        return _log(False, "postclose_all", date, "sector reflects missing")
     if not check_map_heat_postclose(date):
         return _log(False, "postclose_all", date, "next-session baseline missing")
     if not check_learn_cycle(date):
         return _log(False, "postclose_all", date, "learnings missing")
     return _log(True, "postclose_all", date,
-                "outcome + reflect + sectors + baseline + learnings")
+                "outcome + reflect + sectors + sector-reflects + baseline + learnings")
 
 
 JOBS = {
@@ -410,6 +433,7 @@ JOBS = {
     "daily_pipeline": check_daily_pipeline_outcome,
     "learn_cycle": check_learn_cycle,
     "sector_outcomes": check_sector_outcomes,
+    "sector_reflects": check_sector_reflects,
     "postclose_all": check_postclose_all,
 }
 

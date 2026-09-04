@@ -131,10 +131,29 @@ def test_postclose_all_needs_learn_not_just_outcome() -> None:
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
     # 09-03 reflect.md was healed from the Grok transcript (#76).
-    # 11 predicts landed; 0 sector outcomes / no dated learnings.
+    # 11 predicts landed; 0 sector outcomes / reflects / dated learnings.
     assert skip_if_good.check_general_reflect("2026-09-03") is True
     assert skip_if_good.check_sector_outcomes("2026-09-03") is False
+    assert skip_if_good.check_sector_reflects("2026-09-03") is False
     assert skip_if_good.check_postclose_all("2026-09-03") is False
+
+
+def test_sector_md_counts_only_quality_files() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        d = root / "01_daily" / "sectors" / "1999-01-01"
+        d.mkdir(parents=True)
+        (d / "technology_outcome.md").write_text("x" * 50, encoding="utf-8")
+        (d / "healthcare_outcome.md").write_text("y" * 250, encoding="utf-8")
+        (d / "energy_reflect.md").write_text("z" * 50, encoding="utf-8")
+        (d / "financial_reflect.md").write_text("w" * 250, encoding="utf-8")
+        old_root = skip_if_good.ROOT
+        skip_if_good.ROOT = root
+        try:
+            assert skip_if_good._count_sector_md("1999-01-01", "_outcome.md") == 1
+            assert skip_if_good._count_sector_md("1999-01-01", "_reflect.md") == 1
+        finally:
+            skip_if_good.ROOT = old_root
 
 
 def test_finviz_scrape_requires_elite_export() -> None:
@@ -187,6 +206,7 @@ if __name__ == "__main__":
     test_night_pack_dates_heals_prior_session_after_bell()
     test_postclose_all_needs_learn_not_just_outcome()
     test_postclose_all_needs_reflect_and_sector_outcomes()
+    test_sector_md_counts_only_quality_files()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
     test_degraded_book_is_not_good()

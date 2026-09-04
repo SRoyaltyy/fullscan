@@ -172,13 +172,9 @@ def _run_one(date: str, force: bool = False) -> None:
          timeout_s=sector_wall, llm_timeout_s=llm_to)
     # 11 Grok calls. Land whatever graded before reflect/learn or a kill.
     _push_pack(date)
-    n_reflect = 0
-    sec = ROOT / "01_daily" / "sectors" / date
-    if sec.is_dir():
-        n_reflect = len(list(sec.glob("*_reflect.md")))
     step("Sector reflect",
          [py, "-m", "src.run_sector_reflect", "--date", date],
-         n_reflect >= 8,
+         skip_if_good.check_sector_reflects(date),
          timeout_s=sector_wall, llm_timeout_s=llm_to)
     _push_pack(date)
     step("Sector board",
