@@ -55,6 +55,13 @@ on:
   schedule:
     - cron: "10 10 * * 1-5"   # ~06:10 ET — after 05:40 scrape
     - cron: "15 13 * * 1-5"   # ~09:15 ET — last chance before the bell
+  # Merge / pre-open land on main must not wait for a newly-registered
+  # cron. skip-if-good no-ops when 1d is already all-green.
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Pre-Open ALL (predictive one-shot)"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -62,13 +69,14 @@ permissions:
   id-token: write
 
 concurrency:
-  group: stock-book-all
+  # Ubuntu heal must not queue behind a 6h ECS Grok book.
+  group: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
   cancel-in-progress: false
 
 jobs:
   all:
-    runs-on: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
+    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
     env:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
@@ -123,10 +131,12 @@ jobs:
           SKIP="${SKIP:-false}"
           SKIP_EXTRAS="${SKIP_EXTRAS:-false}"
           FSEC="${FSEC:-false}"
-          if [ "${{ github.event_name }}" = "schedule" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ] \
+             || [ "${{ github.event_name }}" = "push" ] \
+             || [ "${{ github.event_name }}" = "workflow_run" ]; then
             SKIP=true
             SKIP_EXTRAS=true
-            echo "scheduled ubuntu land-book — skip LLM + extras (do not take ECS)"
+            echo "ubuntu land-book (${{ github.event_name }}) — skip LLM + extras (do not take ECS)"
           fi
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           if [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then

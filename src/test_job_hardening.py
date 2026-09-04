@@ -366,8 +366,14 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "past 09:25 ET — skip LLM + extras" in book_yml
     assert 'cron: "10 10 * * 1-5"' in book_yml
     assert 'cron: "15 13 * * 1-5"' in book_yml
-    assert "scheduled ubuntu land-book" in book_yml
+    assert "ubuntu land-book" in book_yml
     assert 'github.event_name == \'schedule\'' in book_yml
+    assert 'github.event_name == \'push\'' in book_yml
+    assert 'github.event_name == \'workflow_run\'' in book_yml
+    assert "stock-book-all-ubuntu" in book_yml
+    assert "stock-book-all-ecs" in book_yml
+    assert 'branches: [main]' in book_yml
+    assert "Pre-Open ALL (predictive one-shot)" in book_yml
     assert "Do not add a cron back" not in book_yml
     health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
     hold = health.split('wf == "stock_book_all.yml" and (')[1].split("):")[0]
