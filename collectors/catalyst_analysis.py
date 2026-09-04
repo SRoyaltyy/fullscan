@@ -1496,6 +1496,8 @@ if __name__ == "__main__":
             if conn is None:
                 try:
                     conn = get_connection()
+                    if conn is None:
+                        raise RuntimeError("database unavailable")
                     cur = conn.cursor()
                     cur.execute("SET statement_timeout = '60000';")
                 except Exception as e:

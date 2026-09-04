@@ -43,11 +43,12 @@ on:
 
 permissions:
   contents: write
-  actions: read
+  actions: write
+  pages: write
 
 concurrency:
   group: preopen-all
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -239,7 +240,23 @@ jobs:
             "auto: pre-open ALL [$(date -u +%F_%H%M)]" \
             "${PATHS[@]}"
 
-      - name: Refresh GitHub Pages
+      - name: Upload dashboard artifact
+        if: always() && env.skip != 'yes'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard
+          path: dashboard/
+          if-no-files-found: warn
+
+      - name: Publish buy/sell dashboard to GitHub Pages
+        if: always() && env.skip != 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
+
+      - name: Refresh GitHub Pages workflow (backup)
         if: always() && env.skip != 'yes'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

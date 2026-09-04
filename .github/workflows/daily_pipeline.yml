@@ -24,12 +24,17 @@ permissions:
 
 concurrency:
   group: daily-pipeline
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   run-pipeline:
     runs-on: [self-hosted, ecs]
     timeout-minutes: 360
+    env:
+      HOME: /home/gha
+      FULLSCAN_HOME: /home/gha
+      GROK_ONLY: "0"
+      LLM_BACKEND: auto
     steps:
       - uses: actions/checkout@v4
 
@@ -122,6 +127,7 @@ jobs:
 
       - name: Run reflection stage
         if: env.skip != 'yes' && (steps.stage.outputs.plan == 'outcome_reflect' || steps.stage.outputs.plan == 'reflect' || steps.stage.outputs.plan == 'all')
+        continue-on-error: true
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}

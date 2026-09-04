@@ -98,8 +98,9 @@ def grok_only() -> bool:
     """True when DeepSeek must not run analysis.
 
     GROK_ONLY=1/0 forces the switch. LLM_BACKEND=grok is the same as 1;
-    LLM_BACKEND=deepseek or auto forces 0. Default with no env: on
-    whenever the OpenClaw gateway is configured.
+    LLM_BACKEND=deepseek or auto forces 0. Default with no env: Grok
+    first, DeepSeek if Grok is empty or transient-fails. Never pin
+    Grok-only just because the gateway URL is set.
     """
     if prefer_deepseek():
         return False
@@ -110,7 +111,7 @@ def grok_only() -> bool:
         return False
     if raw in ("1", "true", "yes", "on"):
         return True
-    return bool(OPENCLAW_GATEWAY_URL)
+    return False
 
 
 def has_llm() -> bool:

@@ -21,6 +21,7 @@ jobs:
       - name: Run RSS collector (with retry)
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FULLSCAN_DB_OPTIONAL: "1"
         run: |
           for attempt in 1 2 3; do
             echo "Attempt $attempt..."

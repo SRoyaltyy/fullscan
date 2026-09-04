@@ -14,8 +14,11 @@ WORKFLOWS = ROOT / ".github" / "workflows"
 LLM_ACTIONS = (
     "map_heat_postclose.yml",
     "preopen_all.yml",
+    "postclose_all.yml",
     "catalyst_daily.yml",
     "stock_book_all.yml",
+    "daily_pipeline.yml",
+    "events_daily.yml",
 )
 NON_LLM_ACTIONS = (
     "finviz_preopen_scrape.yml",

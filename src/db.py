@@ -7,12 +7,19 @@ from . import config
 def _conn():
     if not config.DATABASE_URL:
         return None
-    try:
-        import psycopg2
-        return psycopg2.connect(config.DATABASE_URL, connect_timeout=10)
-    except Exception as e:  # noqa: BLE001
-        print(f"[db] connect failed: {e}")
-        return None
+    last = None
+    for attempt in range(3):
+        try:
+            import psycopg2
+            return psycopg2.connect(config.DATABASE_URL, connect_timeout=10)
+        except Exception as e:  # noqa: BLE001
+            last = e
+            print(f"[db] connect failed (try {attempt + 1}/3): {e}")
+            if attempt < 2:
+                import time
+                time.sleep(2 * (attempt + 1))
+    print(f"[db] giving up — morning/collectors continue without Postgres ({last})")
+    return None
 
 
 def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:

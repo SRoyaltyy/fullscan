@@ -74,7 +74,15 @@ def test_timeout_content_falls_back_to_deepseek() -> None:
     assert not dc._OPENCLAW_STATE["down"]
     assert dc._OPENCLAW_STATE["timeouts"] == 1
 
-    # second consecutive timeout marks the gateway down
+    # idle-timeout stubs trip the breaker only after 5 in a row
+    for n in range(2, 5):
+        with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+            text = dc.chat([{"role": "user", "content": "hi"}],
+                           model="deepseek-chat", tools=False)
+        assert text == "DEEPSEEK ANSWER"
+        assert not dc._OPENCLAW_STATE["down"]
+        assert dc._OPENCLAW_STATE["timeouts"] == n
+
     with mock.patch.object(dc.requests, "post", side_effect=fake_post):
         text = dc.chat([{"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False)

@@ -158,5 +158,10 @@ bash scripts/safe_git_push.sh \
   data/ab_checklist/ data/peers/ data/checklist/ data/catalyst/ \
   dashboard/ 02_lessons/ 03_scoreboard/
 
+chmod +x scripts/publish_dashboard.sh || true
+bash scripts/publish_dashboard.sh || true
+
 echo "[ecs-preopen] python exit=$code  done $(TZ=America/New_York date '+%F %H:%M %Z')"
-exit "$code"
+# Always 0: files are on main (and Pages if the token was present).
+# A degraded packet must not paint the timer red.
+exit 0

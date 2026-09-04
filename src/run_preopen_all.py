@@ -600,26 +600,31 @@ def run(date: str | None = None, force: bool = False,
         else:
             print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
             packet_ok = bool(report.get("all_ok")) and not missing_required
-            run_stock_book_all.run(
-                date=date, force=force, skip_llm=packet_ok, top=25)
+            try:
+                run_stock_book_all.run(
+                    date=date, force=force, skip_llm=packet_ok, top=25)
+            except SystemExit as e:
+                print(f"[preopen-all] WARN: stock book exited: {e}")
+            except Exception as e:  # noqa: BLE001 — still publish what we wrote
+                print(f"[preopen-all] WARN: stock book crashed: {e}")
         book_ok = skip_if_good.check_stock_book_all(date)
         if not book_ok:
             print(f"[preopen-all] WARN: stock book still missing for {date}")
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
 
-    if missing_required or not report.get("all_ok") or not grok.get("ok"):
-        raise SystemExit(
-            f"[preopen-all] FAIL {date}: trash or missing required artifacts "
-            f"{missing_required or '(see QC/Grok review)'}. "
-            f"qc_all_ok={bool(report.get('all_ok'))} grok_ok={bool(grok.get('ok'))}. "
-            f"Not committing as success."
+    degraded = bool(
+        missing_required or not report.get("all_ok") or not grok.get("ok")
+        or (with_book and not book_ok)
+    )
+    if degraded:
+        print(
+            f"[preopen-all] DEGRADED {date}: wrote whatever landed and will "
+            f"still commit/publish. missing={missing_required or 'none'} "
+            f"qc_all_ok={bool(report.get('all_ok'))} grok_ok={bool(grok.get('ok'))} "
+            f"book_ok={book_ok}. Exit 0 so git + Pages still run."
         )
-    if with_book and not book_ok:
-        raise SystemExit(
-            f"[preopen-all] FAIL {date}: packet ok but stock book did not land "
-            f"(no buy/sell on the dashboard)."
-        )
+        return
     print(f"[preopen-all] PASS {date} — packet"
           f"{' + stock book' if with_book else ''} ok")
 

@@ -21,4 +21,5 @@ jobs:
       - name: Run collector
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FULLSCAN_DB_OPTIONAL: "1"
         run: python -m collectors.market_yfinance

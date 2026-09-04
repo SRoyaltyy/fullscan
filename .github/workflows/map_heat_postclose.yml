@@ -51,7 +51,7 @@ permissions:
 
 concurrency:
   group: map-heat-postclose
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   research:
@@ -130,8 +130,8 @@ jobs:
           echo "et_hm=$ET_HM uid=$(id -u) user=$(id -un)"
           if command -v systemctl >/dev/null 2>&1 \
              && systemctl is-active --quiet fullscan-preopen.service; then
-            echo "preopen service active — abort"
-            exit 1
+            echo "preopen service active — backing off"
+            exit 0
           fi
           LOCK="${MAP_POSTCLOSE_LOCK}"
           mkdir -p "$(dirname "$LOCK")" || true

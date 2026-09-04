@@ -387,7 +387,7 @@ def main() -> None:
         print(f"[news_parse] {date_str}: past 09:25 ET — not writing a late parse")
         return
     if not config.DATABASE_URL:
-        raise SystemExit("DATABASE_URL not set")
+        print("[news_parse] DATABASE_URL not set — writing from files only")
     report = build_report(hours=args.hours, limit=args.limit)
     jp, mp = save_report(report, date_str)
     qc = output_qc.qc_news_parse(jp)

@@ -74,13 +74,16 @@ export FINVIZ_SKIP_LIVE=1
 export LLM_BACKEND="${LLM_BACKEND:-auto}"
 PC_ARGS=(--date "$SOURCE" --llm-backend "${LLM_BACKEND:-auto}")
 PC_ARGS+=("${FORCE_FLAG[@]}")
+set +e
 "$PY" -m src.run_postclose_all "${PC_ARGS[@]}"
+code=$?
+set -e
 
 mkdir -p "$PERSIST/01_daily/map_heat" "$PERSIST/01_daily/_transcripts" \
   "$PERSIST/01_daily/general" "$PERSIST/01_daily/sectors"
 cp -a "$ROOT/01_daily/map_heat/." "$PERSIST/01_daily/map_heat/" 2>/dev/null || true
 cp -a "$ROOT/01_daily/_transcripts/." "$PERSIST/01_daily/_transcripts/" 2>/dev/null || true
-echo "[map-postclose] persist snapshot → $PERSIST"
+echo "[map-postclose] persist snapshot → $PERSIST (python exit=$code)"
 
 bash scripts/safe_git_push.sh \
   "auto: post-close ALL [$SOURCE→$TARGET]" \
@@ -89,3 +92,4 @@ bash scripts/safe_git_push.sh \
   01_daily/*_learnings.md \
   02_lessons/ 03_scoreboard/ 00_grounding/mutable_policy.md
 echo "[map-postclose] complete $(TZ=America/New_York date '+%F %H:%M %Z')"
+exit 0

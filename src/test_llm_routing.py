@@ -124,15 +124,16 @@ def test_fallback_on_gateway_failure() -> None:
     assert text == "DEEPSEEK ANSWER"
     assert dc.last_provider() == "deepseek"
     assert any("deepseek" in u for u in urls)
-    # circuit breaker: gateway now marked down for the rest of the process
-    assert dc._OPENCLAW_STATE["down"]
+    # HTTP 503 is transient — do not blank the rest of the morning
+    assert not dc._OPENCLAW_STATE["down"]
 
     urls.clear()
-    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep"):
         text = dc.chat([{"role": "user", "content": "hi"}],
                        model="deepseek-chat", tools=False)
     assert text == "DEEPSEEK ANSWER"
-    assert not any("gw:18789" in u for u in urls), "down gateway re-tried"
+    assert any("gw:18789" in u for u in urls), "transient 503 must retry Grok"
 
 
 def test_fallback_on_empty_answer() -> None:
