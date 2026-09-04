@@ -1,0 +1,1771 @@
+{
+  "signal_date": "2026-09-02",
+  "suggestions": [
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "COP",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 134.96,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 134.76,
+      "current_return_pct": -0.15,
+      "horizon_returns_pct": {
+        "1d": 0.56
+      },
+      "mfe_pct": 1.82,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "EOG",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 147.39,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 145.4,
+      "current_return_pct": -1.35,
+      "horizon_returns_pct": {
+        "1d": -0.97
+      },
+      "mfe_pct": 1.18,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "RRC",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 42.1,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 42.1,
+      "current_return_pct": 0.0,
+      "horizon_returns_pct": {
+        "1d": 0.64
+      },
+      "mfe_pct": 2.28,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "SM",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 37.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 36.65,
+      "current_return_pct": -2.27,
+      "horizon_returns_pct": {
+        "1d": 0.27
+      },
+      "mfe_pct": 3.84,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "INR",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 15.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 15.455,
+      "current_return_pct": -0.29,
+      "horizon_returns_pct": {
+        "1d": 1.48
+      },
+      "mfe_pct": 3.48,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "REPX",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 39.15,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 41.77,
+      "current_return_pct": 6.69,
+      "horizon_returns_pct": {
+        "1d": 7.51
+      },
+      "mfe_pct": 7.56,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "OXY",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 60.44,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 60.285,
+      "current_return_pct": -0.26,
+      "horizon_returns_pct": {
+        "1d": 0.28
+      },
+      "mfe_pct": 1.47,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "FANG",
+      "side": "buy",
+      "net": 6.0,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 200.83,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 199.97,
+      "current_return_pct": -0.43,
+      "horizon_returns_pct": {
+        "1d": 1.05
+      },
+      "mfe_pct": 2.0,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AMGN",
+      "side": "buy",
+      "net": 5.5,
+      "events": [
+        "news_judge"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 440.65,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 438.51,
+      "current_return_pct": -0.49,
+      "horizon_returns_pct": {
+        "1d": 0.79
+      },
+      "mfe_pct": 1.17,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "XOM",
+      "side": "buy",
+      "net": 4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 163.93,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 160.665,
+      "current_return_pct": -1.99,
+      "horizon_returns_pct": {
+        "1d": -1.05
+      },
+      "mfe_pct": 1.05,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "CVX",
+      "side": "buy",
+      "net": 4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 210.49,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 209.23,
+      "current_return_pct": -0.6,
+      "horizon_returns_pct": {
+        "1d": 0.39
+      },
+      "mfe_pct": 1.29,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "NFG",
+      "side": "buy",
+      "net": 4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 83.64,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 83.25,
+      "current_return_pct": -0.47,
+      "horizon_returns_pct": {
+        "1d": -0.13
+      },
+      "mfe_pct": 0.78,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "DEC",
+      "side": "buy",
+      "net": 4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 15.24,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 15.2801,
+      "current_return_pct": 0.26,
+      "horizon_returns_pct": {
+        "1d": 3.15
+      },
+      "mfe_pct": 4.27,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "DAL",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 77.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 79.97,
+      "current_return_pct": -3.09,
+      "horizon_returns_pct": {
+        "1d": -1.59
+      },
+      "mfe_pct": 0.65,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "UAL",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 106.8,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 110.85,
+      "current_return_pct": -3.65,
+      "horizon_returns_pct": {
+        "1d": -1.71
+      },
+      "mfe_pct": 0.52,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AAL",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 13.2,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 13.19,
+      "current_return_pct": 0.08,
+      "horizon_returns_pct": {
+        "1d": 1.77
+      },
+      "mfe_pct": 2.09,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ALK",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 41.42,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 42.54,
+      "current_return_pct": -2.63,
+      "horizon_returns_pct": {
+        "1d": 0.05
+      },
+      "mfe_pct": 1.32,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "RJET",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 17.23,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 17.965,
+      "current_return_pct": -4.09,
+      "horizon_returns_pct": {
+        "1d": 0.06
+      },
+      "mfe_pct": 1.35,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "LUV",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 38.62,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 39.6199,
+      "current_return_pct": -2.52,
+      "horizon_returns_pct": {
+        "1d": -0.28
+      },
+      "mfe_pct": 1.21,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "SKYW",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 94.74,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 98.34,
+      "current_return_pct": -3.66,
+      "horizon_returns_pct": {
+        "1d": -1.56
+      },
+      "mfe_pct": 0.46,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ALGT",
+      "side": "sell",
+      "net": -4.2,
+      "events": [
+        "hormuz_energy_risk"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 73.69,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 78.19,
+      "current_return_pct": -5.76,
+      "horizon_returns_pct": {
+        "1d": -2.86
+      },
+      "mfe_pct": 0.26,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "XLV",
+      "side": "buy",
+      "net": 4.0,
+      "events": [
+        "news_judge"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 172.09,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 171.87,
+      "current_return_pct": -0.13,
+      "horizon_returns_pct": {
+        "1d": 0.68
+      },
+      "mfe_pct": 1.39,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "CEG",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 280.0,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 292.66,
+      "current_return_pct": 4.52,
+      "horizon_returns_pct": {
+        "1d": 1.8
+      },
+      "mfe_pct": 5.94,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "VST",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 137.82,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 147.77,
+      "current_return_pct": 7.22,
+      "horizon_returns_pct": {
+        "1d": 4.64
+      },
+      "mfe_pct": 7.95,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "NEE",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 82.56,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 83.66,
+      "current_return_pct": 1.33,
+      "horizon_returns_pct": {
+        "1d": 1.82
+      },
+      "mfe_pct": 2.05,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "SO",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 87.99,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 88.535,
+      "current_return_pct": 0.62,
+      "horizon_returns_pct": {
+        "1d": 0.89
+      },
+      "mfe_pct": 1.48,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "OGE",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 46.69,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 47.04,
+      "current_return_pct": 0.75,
+      "horizon_returns_pct": {
+        "1d": 0.43
+      },
+      "mfe_pct": 0.96,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-03"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "IDA",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 136.26,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 136.505,
+      "current_return_pct": 0.18,
+      "horizon_returns_pct": {
+        "1d": -0.1
+      },
+      "mfe_pct": 0.72,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "UTL",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 53.76,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 53.74,
+      "current_return_pct": -0.04,
+      "horizon_returns_pct": {
+        "1d": -0.09
+      },
+      "mfe_pct": 1.06,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "HNRG",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 16.31,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 16.585,
+      "current_return_pct": 1.69,
+      "horizon_returns_pct": {
+        "1d": -1.23
+      },
+      "mfe_pct": 2.15,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "NVT",
+      "side": "buy",
+      "net": 3.51,
+      "events": [
+        "ai_power_demand"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 147.18,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 155.76,
+      "current_return_pct": 5.83,
+      "horizon_returns_pct": {
+        "1d": 3.34
+      },
+      "mfe_pct": 6.77,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "NVDA",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 218.79,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 231.65,
+      "current_return_pct": 5.88,
+      "horizon_returns_pct": {
+        "1d": 4.42
+      },
+      "mfe_pct": 7.3,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AVGO",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 369.68,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 356.315,
+      "current_return_pct": -3.62,
+      "horizon_returns_pct": {
+        "1d": -3.39
+      },
+      "mfe_pct": 0.38,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "RMBS",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 84.05,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 84.85,
+      "current_return_pct": 0.95,
+      "horizon_returns_pct": {
+        "1d": 0.35
+      },
+      "mfe_pct": 2.7,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "QRVO",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 96.4,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 102.36,
+      "current_return_pct": 6.18,
+      "horizon_returns_pct": {
+        "1d": 4.13
+      },
+      "mfe_pct": 6.44,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "INDI",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 3.55,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 3.58,
+      "current_return_pct": 0.85,
+      "horizon_returns_pct": {
+        "1d": -2.25
+      },
+      "mfe_pct": 3.24,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "CEVA",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 25.88,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 26.63,
+      "current_return_pct": 2.9,
+      "horizon_returns_pct": {
+        "1d": 2.16
+      },
+      "mfe_pct": 4.52,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "MU",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 930.83,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 997.54,
+      "current_return_pct": 7.17,
+      "horizon_returns_pct": {
+        "1d": 2.94
+      },
+      "mfe_pct": 7.83,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AMD",
+      "side": "buy",
+      "net": 2.52,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 459.51,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 469.705,
+      "current_return_pct": 2.22,
+      "horizon_returns_pct": {
+        "1d": -0.73
+      },
+      "mfe_pct": 3.13,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ASML",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 1672.21,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 1709.74,
+      "current_return_pct": 2.24,
+      "horizon_returns_pct": {
+        "1d": -1.56
+      },
+      "mfe_pct": 2.95,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AMAT",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 443.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 454.735,
+      "current_return_pct": 2.53,
+      "horizon_returns_pct": {
+        "1d": -1.71
+      },
+      "mfe_pct": 3.77,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-04"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "LRCX",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 291.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 302.85,
+      "current_return_pct": 3.89,
+      "horizon_returns_pct": {
+        "1d": 0.4
+      },
+      "mfe_pct": 6.45,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "FORM",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 95.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 101.805,
+      "current_return_pct": 6.6,
+      "horizon_returns_pct": {
+        "1d": 1.32
+      },
+      "mfe_pct": 7.59,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ACMR",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 70.52,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 73.315,
+      "current_return_pct": 3.96,
+      "horizon_returns_pct": {
+        "1d": -1.56
+      },
+      "mfe_pct": 4.35,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "KLAC",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 171.76,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 186.0799,
+      "current_return_pct": 8.34,
+      "horizon_returns_pct": {
+        "1d": 0.69
+      },
+      "mfe_pct": 8.87,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "TER",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 334.01,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 355.4,
+      "current_return_pct": 6.4,
+      "horizon_returns_pct": {
+        "1d": 1.37
+      },
+      "mfe_pct": 7.48,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "Q",
+      "side": "buy",
+      "net": 1.8,
+      "events": [
+        "ai_chip_demand_spike"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 116.58,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 120.73,
+      "current_return_pct": 3.56,
+      "horizon_returns_pct": {
+        "1d": 1.62
+      },
+      "mfe_pct": 4.99,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "XLK",
+      "side": "sell",
+      "net": -1.5,
+      "events": [
+        "news_judge"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 183.46,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 186.82,
+      "current_return_pct": -1.8,
+      "horizon_returns_pct": {
+        "1d": -1.35
+      },
+      "mfe_pct": 0.65,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ADI",
+      "side": "buy",
+      "net": 1.5,
+      "events": [
+        "news_judge"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 355.64,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 362.04,
+      "current_return_pct": 1.8,
+      "horizon_returns_pct": {
+        "1d": 0.24
+      },
+      "mfe_pct": 2.63,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "NEM",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 124.97,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 128.695,
+      "current_return_pct": 2.98,
+      "horizon_returns_pct": {
+        "1d": 4.37
+      },
+      "mfe_pct": 4.59,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "GOLD",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 43.69,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 45.03,
+      "current_return_pct": 3.07,
+      "horizon_returns_pct": {
+        "1d": -5.06
+      },
+      "mfe_pct": 5.52,
+      "mfe_day": "2026-09-04",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AU",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 110.2,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 109.34,
+      "current_return_pct": -0.78,
+      "horizon_returns_pct": {
+        "1d": 1.33
+      },
+      "mfe_pct": 1.72,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "SSRM",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 36.97,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 38.045,
+      "current_return_pct": 2.91,
+      "horizon_returns_pct": {
+        "1d": 5.19
+      },
+      "mfe_pct": 6.68,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "AUGO",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 83.0,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 85.35,
+      "current_return_pct": 2.83,
+      "horizon_returns_pct": {
+        "1d": 6.16
+      },
+      "mfe_pct": 7.08,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "DC",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 5.93,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 5.955,
+      "current_return_pct": 0.42,
+      "horizon_returns_pct": {
+        "1d": 3.2
+      },
+      "mfe_pct": 6.07,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "CTGO",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 19.04,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 20.0,
+      "current_return_pct": 5.04,
+      "horizon_returns_pct": {
+        "1d": 5.78
+      },
+      "mfe_pct": 7.14,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "RGLD",
+      "side": "buy",
+      "net": 1.4,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 259.77,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 263.2,
+      "current_return_pct": 1.32,
+      "horizon_returns_pct": {
+        "1d": 1.96
+      },
+      "mfe_pct": 2.34,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "JPM",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 357.55,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 356.99,
+      "current_return_pct": 0.16,
+      "horizon_returns_pct": {
+        "1d": -1.25
+      },
+      "mfe_pct": 1.06,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "BAC",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 62.28,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 62.38,
+      "current_return_pct": -0.16,
+      "horizon_returns_pct": {
+        "1d": -1.21
+      },
+      "mfe_pct": 0.55,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "FRBT",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 18.12,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 19.2,
+      "current_return_pct": -5.62,
+      "horizon_returns_pct": {
+        "1d": -5.08
+      },
+      "mfe_pct": 1.06,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "WFC",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 87.75,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 89.29,
+      "current_return_pct": -1.72,
+      "horizon_returns_pct": {
+        "1d": -1.61
+      },
+      "mfe_pct": 0.19,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "C",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 133.8,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 136.49,
+      "current_return_pct": -1.97,
+      "horizon_returns_pct": {
+        "1d": -3.14
+      },
+      "mfe_pct": 0.83,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "BNY",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 161.13,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 164.95,
+      "current_return_pct": -2.32,
+      "horizon_returns_pct": {
+        "1d": -1.95
+      },
+      "mfe_pct": 0.93,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "CM",
+      "side": "sell",
+      "net": -1.05,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 112.96,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 117.915,
+      "current_return_pct": -4.2,
+      "horizon_returns_pct": {
+        "1d": -4.4
+      },
+      "mfe_pct": 0.38,
+      "mfe_day": "2026-09-02",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "CRM",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 259.38,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 259.575,
+      "current_return_pct": 0.08,
+      "horizon_returns_pct": {
+        "1d": 1.95
+      },
+      "mfe_pct": 3.43,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "NOW",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 140.3,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 141.211,
+      "current_return_pct": 0.65,
+      "horizon_returns_pct": {
+        "1d": 3.77
+      },
+      "mfe_pct": 4.76,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "UBER",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 76.05,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 75.26,
+      "current_return_pct": -1.04,
+      "horizon_returns_pct": {
+        "1d": -0.12
+      },
+      "mfe_pct": 3.03,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ESTC",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 92.0,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 92.5,
+      "current_return_pct": 0.54,
+      "horizon_returns_pct": {
+        "1d": 4.49
+      },
+      "mfe_pct": 4.86,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "PCOR",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 59.86,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 56.74,
+      "current_return_pct": -5.21,
+      "horizon_returns_pct": {
+        "1d": 1.22
+      },
+      "mfe_pct": 3.63,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "MNTN",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 12.49,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 12.915,
+      "current_return_pct": 3.4,
+      "horizon_returns_pct": {
+        "1d": 7.77
+      },
+      "mfe_pct": 9.37,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "IBTA",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 36.23,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 38.065,
+      "current_return_pct": 5.06,
+      "horizon_returns_pct": {
+        "1d": 3.06
+      },
+      "mfe_pct": 6.5,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    },
+    {
+      "signal_date": "2026-09-02",
+      "generated_at": "2026-09-02 07:13",
+      "ticker": "ADBE",
+      "side": "buy",
+      "net": 0.88,
+      "events": [
+        "weak_labor_print"
+      ],
+      "entry_date": "2026-09-02",
+      "entry_open": 283.5,
+      "window_through": "2026-09-04",
+      "trading_days_elapsed": 2,
+      "complete": false,
+      "latest_close": 268.195,
+      "current_return_pct": -5.4,
+      "horizon_returns_pct": {
+        "1d": 0.79
+      },
+      "mfe_pct": 3.31,
+      "mfe_day": "2026-09-03",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-02"
+    }
+  ],
+  "summary": {
+    "n_suggestions": 72,
+    "ever_profitable": {
+      "n": 72,
+      "wins": 72,
+      "win_rate": 100.0
+    },
+    "close_1d": {
+      "n": 72,
+      "wins": 45,
+      "win_rate": 62.5,
+      "avg": 0.75
+    },
+    "close_3d": null,
+    "close_5d": null,
+    "close_10d": null,
+    "close_14d": null,
+    "side_buy": {
+      "n": 56,
+      "ever_profitable": {
+        "n": 56,
+        "wins": 56,
+        "win_rate": 100.0,
+        "avg": 4.06
+      },
+      "close_5d": null
+    },
+    "side_sell": {
+      "n": 16,
+      "ever_profitable": {
+        "n": 16,
+        "wins": 16,
+        "win_rate": 100.0,
+        "avg": 0.84
+      },
+      "close_5d": null
+    }
+  }
+}

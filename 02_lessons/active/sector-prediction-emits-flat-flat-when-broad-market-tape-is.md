@@ -1,0 +1,29 @@
+---
+trigger_pattern: "Sector prediction emits flat/flat when broad-market tape is flat-to-green (+0.13% ES) but a same-session macro catalyst (ISM Services) is explicitly named as two-sided event risk. The model treats 'two-sided' as neutral (S0=0) rather than recognizing that a high-impact release with a consensus beat can trigger broad risk-on that lifts SPY disproportionately vs a defensive/low-beta sector like Healthcare. The sector's own tape (1d rel +0.30%, 3d rel +1.59%) is treated as 'already paid' leftover FTS rather than as evidence the sector is extended vs SPY and vulnerable to mean-reversion when SPY catches up."
+corrected_behavior: "When a high-impact macro release (ISM Services, CPI, payrolls) is scheduled same-session and futures are flat-to-green, do NOT score S0=0 purely on 'two-sided' logic. Instead: (1) Check whether the sector is defensive/low-beta (Healthcare, Utilities, Staples) vs cyclical — if defensive and SPY has been lagging the sector on 1m RS (+7.49% rel), a macro beat that lifts SPY will compress that RS spread; (2) Score a modest negative S0 for defensive sectors when the macro release has a consensus that, if met/beaten, favors risk-on broad tape; (3) The 08-13 'forbid up/notable off 1m RS' lesson should also forbid flat when the setup is a defensive sector with extended 1m RS facing a same-session macro catalyst that could trigger SPY catch-up. The correct output would have been flat-to-mild-down or at minimum a wider confidence band acknowledging the asymmetric risk of SPY outperformance compressing the sector's relative lead."
+falsifier: "A future session where ISM Services (or similar high-impact macro) is scheduled, futures are flat-to-green, Healthcare has 1m rel >+5%, and the model emits flat/flat — if XLV then underperforms SPY by >0.5% on the session, this lesson fires. Conversely, if Healthcare outperforms or matches SPY on such a setup, the lesson is weakened."
+current_behavior: "When Channel 1 shows flat futures (ES +0.13%, NQ +0.16%) and a same-day macro release (ISM Services) is categorized as 'two-sided event risk,' the model scores S0=0 and all other channels 0, emitting flat/flat. The model treats 'two-sided' as synonymous with 'no directional information' rather than recognizing that consensus-beat macro prints typically favor cyclical/broad-market beta over defensive sectors. Additionally, the model's 08-13 lesson (forbid up/notable off 1m RS) is applied as a blanket up-ban even when the actual risk is the opposite: SPY ripping +1.05% while the defensive sector lags −0.87% relative."
+evidence_cited: "Actual: XLV +0.18% vs SPY +1.05%, rel −0.87%. The model predicted flat/flat (0.0). SPY's +1.05% day (likely ISM Services beat or risk-on catalyst) crushed the defensive sector's relative performance. The sector's 1m rel +7.49% was indeed 'extended' but the model used this only as a dampener on up-side, not as a warning of mean-reversion risk when SPY catches up. The 08-13 lesson correctly forbade up/notable but the model failed to recognize the symmetric risk: a flat call on a defensive sector with huge 1m RS lead is exposed to SPY catch-up days."
+error_category: "B"
+scope: "general"
+date: "2026-09-03"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-09-04"
+sources: "['2026-09-03_sector_healthcare_lesson.md']"
+schema_ok: "true"
+---
+
+## RULE
+When a high-impact macro release (ISM Services, CPI, payrolls) is scheduled same-session and futures are flat-to-green, do NOT score S0=0 purely on "two-sided" logic. Instead: (1) Check whether the sector is defensive/low-beta (Healthcare, Utilities, Staples) vs cyclical — if defensive and SPY has been lagging the sector on 1m RS (+7.49% rel), a macro beat that lifts SPY will compress that RS spread; (2) Score a modest negative S0 for defensive sectors when the macro release has a consensus that, if met/beaten, favors risk-on broad tape; (3) The 08-13 "forbid up/notable off 1m RS" lesson should also forbid flat when the setup is a defensive sector with extended 1m RS facing a same-session macro catalyst that could trigger SPY catch-up. The correct output would have been flat-to-mild-down or at minimum a wider confidence band acknowledging the asymmetric risk of SPY outperformance compressing the sector's relative lead.
+
+## WHEN IT FIRES
+Sector prediction emits flat/flat when broad-market tape is flat-to-green (+0.13% ES) but a same-session macro catalyst (ISM Services) is explicitly named as two-sided event risk. The model treats "two-sided" as neutral (S0=0) rather than recognizing that a high-impact release with a consensus beat can trigger broad risk-on that lifts SPY disproportionately vs a defensive/low-beta sector like Healthcare. The sector's own tape (1d rel +0.30%, 3d rel +1.59%) is treated as "already paid" leftover FTS rather than as evidence the sector is extended vs SPY and vulnerable to mean-reversion when SPY catches up.
+
+## WRONG IF
+A future session where ISM Services (or similar high-impact macro) is scheduled, futures are flat-to-green, Healthcare has 1m rel >+5%, and the model emits flat/flat — if XLV then underperforms SPY by >0.5% on the session, this lesson fires. Conversely, if Healthcare outperforms or matches SPY on such a setup, the lesson is weakened.
+
+## EVIDENCE
+Actual: XLV +0.18% vs SPY +1.05%, rel −0.87%. The model predicted flat/flat (0.0). SPY's +1.05% day (likely ISM Services beat or risk-on catalyst) crushed the defensive sector's relative performance. The sector's 1m rel +7.49% was indeed "extended" but the model used this only as a dampener on up-side, not as a warning of mean-reversion risk when SPY catches up. The 08-13 lesson correctly forbade up/notable but the model failed to recognize the symmetric risk: a flat call on a defensive sector with huge 1m RS lead is exposed to SPY catch-up days.
+
+(learn_cycle promote)

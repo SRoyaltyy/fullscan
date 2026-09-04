@@ -9,11 +9,14 @@ import argparse
 import glob
 import os
 import re
+import subprocess
+import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import config, deepseek_client, scoreboard
 from .run_reflect import last_assistant
+from .skip_if_good import is_tool_dump
 from .sector_memory import scoreboard_summary, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS
 
@@ -130,13 +133,21 @@ def run_one(sector: str, date_str: str) -> None:
         print(f"[sector-reflect] {sector}: actuals from outcome.md pct={pct}")
     existing = os.path.join(out_dir, f"{slug}_reflect.md")
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
-        print(f"[sector-reflect] skip {sector}: reflect already on disk")
-        return
+        try:
+            with open(existing, encoding="utf-8") as fh:
+                on_disk = fh.read()
+        except OSError:
+            on_disk = ""
+        if not is_tool_dump(on_disk):
+            print(f"[sector-reflect] skip {sector}: reflect already on disk")
+            return
+        print(f"[sector-reflect] {sector}: disk file is a tool-dump "
+              f"({len(on_disk)} chars) — rewriting", flush=True)
 
     transcript_path = os.path.join(
         "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json")
     reused = last_assistant(transcript_path)
-    if len(reused) >= 200:
+    if len(reused) >= 200 and not is_tool_dump(reused):
         print(f"[sector-reflect] {sector}: reuse transcript "
               f"({len(reused)} chars) — no LLM")
         _write_reflect(sector, date_str, slug, out_dir, reused, entry, board)
@@ -189,6 +200,34 @@ def run_one(sector: str, date_str: str) -> None:
     _persist(date_str)
 
 
+def _one_timeout_s(default: int = 600) -> int:
+    raw = os.environ.get("SECTOR_ONE_TIMEOUT", str(default))
+    try:
+        return max(120, int(raw))
+    except ValueError:
+        return default
+
+
+def _run_one_bounded(sector: str, date_str: str) -> None:
+    """Kill one hung reflect so the remaining sectors still write."""
+    if os.environ.get("SECTOR_GRADE_CHILD") == "1":
+        run_one(sector, date_str)
+        return
+    env = {**os.environ, "SECTOR_GRADE_CHILD": "1"}
+    timeout_s = _one_timeout_s()
+    cmd = [sys.executable, "-m", "src.run_sector_reflect",
+           "--date", date_str, "--sectors", sector]
+    try:
+        r = subprocess.run(cmd, timeout=timeout_s, env=env)
+    except subprocess.TimeoutExpired:
+        print(f"[sector-reflect] WARN {sector}: killed after {timeout_s}s "
+              "— continue so ≥8 files can still land", flush=True)
+        return
+    if r.returncode:
+        print(f"[sector-reflect] WARN {sector}: exit {r.returncode}",
+              flush=True)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -202,7 +241,7 @@ def main() -> None:
             raise SystemExit(f"unknown sector {sector}")
         print(f"\n======== SECTOR REFLECT: {sector} ========\n")
         try:
-            run_one(sector, date_str)
+            _run_one_bounded(sector, date_str)
         except Exception as e:  # noqa: BLE001
             print(f"[sector-reflect] WARN {sector}: {e}")
 

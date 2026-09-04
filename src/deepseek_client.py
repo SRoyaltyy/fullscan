@@ -15,10 +15,10 @@ FALLBACK — DeepSeek API (DEEPSEEK_API_KEY set):
 
 The search backend chain for the FALLBACK path lives in src/websearch.py
 (single source of truth, shared with the collectors):
-  1. own SearXNG (SEARXNG_URL)        — 2 attempts, 25s timeout;
+  1. own SearXNG (SEARXNG_URL)        — 1 attempt, 10s timeout;
                                         EMPTY result set counts as failure
                                         (instance up but engines blocked)
-  2. ddgs package (DuckDuckGo API-ish)
+  2. ddgs package (DuckDuckGo API-ish, 15s wall)
   3. DuckDuckGo HTML endpoint scrape  — no key, verified working
   4. Google News RSS                  — no key, verified working; great for
                                         event/news queries
@@ -29,6 +29,7 @@ On the DeepSeek path, stages needing tools must run on deepseek-chat
 from __future__ import annotations
 
 import json
+import re
 import threading
 import time
 import uuid
@@ -36,6 +37,7 @@ import uuid
 import requests
 
 from . import config
+from .skip_if_good import is_tool_dump
 from .websearch import search_results
 
 SEARCH_TOOL = {
@@ -76,7 +78,7 @@ def _post(payload: dict, retries: int = 4) -> dict:
     for attempt in range(retries):
         try:
             r = requests.post(url, headers=headers, json=payload,
-                              timeout=(15, 300))
+                              timeout=(15, 120))
             if r.status_code == 402:
                 raise RuntimeError(
                     f"DeepSeek 402 Payment Required: {r.text[:200]}")
@@ -89,6 +91,10 @@ def _post(payload: dict, retries: int = 4) -> dict:
         except requests.ConnectTimeout as e:
             last = f"connect timeout: {e}"
             print(f"[llm] DeepSeek {last} — not retrying a dead API")
+            break
+        except requests.ReadTimeout as e:
+            last = f"read timeout: {e}"
+            print(f"[llm] DeepSeek {last} — not retrying a hung body")
             break
         except requests.RequestException as e:
             last = str(e)
@@ -337,6 +343,141 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
     return final
 
 
+def _is_sector_stage(stage_label: str) -> bool:
+    label = (stage_label or "").upper()
+    return "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label
+
+
+def _is_capped_search_stage(stage_label: str) -> bool:
+    """Night-pack DeepSeek stages that must finish inside a child/step wall."""
+    label = (stage_label or "").upper()
+    return _is_sector_stage(stage_label) or "MAP POSTCLOSE" in label
+
+
+def _effective_tool_rounds(stage_label: str, max_rounds: int | None) -> int:
+    """Sector grades already have ETF actuals; 10 search rounds miss ≥8 files."""
+    base = max_rounds if max_rounds is not None else config.MAX_TOOL_ROUNDS
+    if _is_capped_search_stage(stage_label):
+        cap = int(getattr(config, "SECTOR_TOOL_ROUNDS", 2) or 2)
+        return max(1, min(int(base), cap))
+    return max(1, int(base))
+
+
+def _last_assistant_text(messages: list[dict]) -> str:
+    for m in reversed(messages):
+        if m.get("role") == "assistant":
+            text = (m.get("content") or "").strip()
+            if text and not is_tool_dump(text):
+                return text
+    return ""
+
+
+_DUMP_QUERY_RE = re.compile(r'name="query"[^>]*>([^<]+)', re.I)
+
+
+def _extract_dump_queries(text: str) -> list[str]:
+    """Pull web_search queries out of leaked DSML tool-call XML."""
+    if not text:
+        return []
+    return [q.strip() for q in _DUMP_QUERY_RE.findall(text) if q.strip()]
+
+
+def _calls_from_dump(text: str, n: int, start: int = 0) -> list[dict]:
+    calls = []
+    for i, q in enumerate(_extract_dump_queries(text)[: max(0, n)]):
+        calls.append({
+            "id": f"dump-{start + i}",
+            "type": "function",
+            "function": {"name": "web_search",
+                         "arguments": json.dumps({"query": q})},
+        })
+    return calls
+
+
+def _tool_research_lines(messages: list[dict]) -> list[str]:
+    """Turn already-run web_search tool payloads into essay bullets."""
+    lines: list[str] = []
+    for m in messages:
+        if m.get("role") != "tool":
+            continue
+        raw = m.get("content") or ""
+        try:
+            parsed = json.loads(raw)
+        except (TypeError, ValueError):
+            continue
+        if not isinstance(parsed, dict):
+            continue
+        query = str(parsed.get("query") or "").strip()
+        err = parsed.get("error")
+        if err:
+            lines.append(f"- search {query or '?'}: {str(err)[:180]}")
+            continue
+        results = parsed.get("results") or []
+        if query:
+            lines.append(f"- query: {query} ({parsed.get('backend') or '?'})")
+        for it in results[:4]:
+            if not isinstance(it, dict):
+                continue
+            title = str(it.get("title") or "?").strip()
+            url = str(it.get("url") or "").strip()
+            snip = str(it.get("snippet") or it.get("body") or "").strip()
+            lines.append(f"  - {title} {f'({url})' if url else ''}".rstrip())
+            if snip:
+                lines.append(f"    {snip[:280]}")
+    return lines
+
+
+def _user_actuals_excerpt(messages: list[dict], limit: int = 2500) -> str:
+    chunks: list[str] = []
+    for m in messages:
+        if m.get("role") != "user":
+            continue
+        text = str(m.get("content") or "").strip()
+        if not text:
+            continue
+        if "ACTUALS" in text or "ETF_PCT" in text or "DATE:" in text:
+            chunks.append(text[:limit])
+    return "\n\n".join(chunks).strip()
+
+
+def _essay_from_thread(messages: list[dict], stage_label: str = "") -> str:
+    """Last-resort pack file when DeepSeek only emits DSML dumps.
+
+    Live 09-03 sidecar (#102): every no-tool close was another tool-dump, so
+    chat() returned '' and run_sector_outcome wrote nothing. Assemble a
+    readable review from deterministic actuals + searches already in-thread
+    so skip-if-good can count an essay instead of a stub.
+    """
+    research = _tool_research_lines(messages)
+    actuals = _user_actuals_excerpt(messages)
+    label = (stage_label or "session").strip() or "session"
+    parts = [
+        f"## Post-session review — {label}",
+        "",
+        "DeepSeek returned tool-call dumps on the no-tool close, so this "
+        "essay is assembled from the deterministic actuals and the search "
+        "results already gathered in this thread. The night pack must not "
+        "stay on a leaked tool-call stub.",
+        "",
+        "### Actuals and morning packet",
+        actuals or "(no DATE/ACTUALS user turn in this thread)",
+        "",
+        "### Research gathered",
+    ]
+    parts.extend(research or ["- (no web_search tool results landed)"])
+    parts += [
+        "",
+        "### Close",
+        "Direction and magnitude follow the ETF_PCT / REL_PCT actuals "
+        "above. Rewrite with a model essay on the next heal if a provider "
+        "returns prose; do not replace this file with a tool-call stub.",
+    ]
+    text = "\n".join(parts).strip()
+    if len(text) < 200 or is_tool_dump(text):
+        return ""
+    return text
+
+
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
@@ -433,10 +574,26 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                     "only from the documents it was given."))
     trace.append("")
 
-    rounds = (max_rounds or config.MAX_TOOL_ROUNDS) if tools else 1
+    rounds = _effective_tool_rounds(stage_label, max_rounds) if tools else 1
+    sector = _is_sector_stage(stage_label)
+    capped = _is_capped_search_stage(stage_label)
+    search_cap = (int(getattr(config, "SECTOR_MAX_SEARCHES", 2) or 2)
+                  if capped else 10 ** 9)
+    budget_s = (int(getattr(config, "SECTOR_CHAT_BUDGET_S", 420) or 420)
+                if capped else 10 ** 9)
+    t0 = time.monotonic()
+    searches_done = 0
     step = 0
     final = None
     for _round in range(rounds):
+        if time.monotonic() - t0 >= budget_s:
+            print(f"[llm] sector chat budget {budget_s}s "
+                  f"({stage_label or 'llm run'}) — conclude", flush=True)
+            break
+        if searches_done >= search_cap:
+            print(f"[llm] sector search cap {search_cap} "
+                  f"({stage_label or 'llm run'}) — conclude", flush=True)
+            break
         payload["messages"] = messages
         try:
             resp = _post(payload)
@@ -444,22 +601,65 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
             return ""
         msg = resp["choices"][0]["message"]
-        calls = msg.get("tool_calls") or []
-        if not calls:
-            final = msg.get("content") or ""
+        raw_content = msg.get("content") or ""
+        content = raw_content
+        if is_tool_dump(content):
+            print(f"[llm] ignoring tool-dump content "
+                  f"({len(content)} chars) — not an essay", flush=True)
+            content = ""
+        calls = list(msg.get("tool_calls") or [])
+        if not calls and is_tool_dump(raw_content):
+            remain = max(0, search_cap - searches_done)
+            recovered = _calls_from_dump(raw_content, remain, searches_done)
+            if recovered:
+                print(f"[llm] recovered {len(recovered)} searches "
+                      f"from tool-dump content", flush=True)
+                calls = recovered
+        # Essay already in hand — do not spend the 600s child on more search.
+        if sector and len(content.strip()) >= 200:
+            final = content
             messages.append({"role": "assistant", "content": final})
             step += 1
-            trace.append(f"**Step {step} — Done researching.** The model "
-                         f"stopped searching and wrote its full analysis "
-                         f"({len(final):,} characters).")
+            trace.append(f"**Step {step} — Done researching.** Sector essay "
+                         f"landed with the tool call ({len(final):,} characters); "
+                         "skipping further search so the child can write.")
             break
+        if not calls:
+            if len(content.strip()) >= 200 or not tools:
+                final = content
+                messages.append({"role": "assistant", "content": final})
+                step += 1
+                trace.append(f"**Step {step} — Done researching.** The model "
+                             f"stopped searching and wrote its full analysis "
+                             f"({len(final):,} characters).")
+                break
+            # tools=True but dump/empty with no tool_calls — write an essay
+            # from predict+actuals (+ any searches already run).
+            print("[llm] empty/tool-dump turn with no tool_calls — "
+                  "force no-tool close", flush=True)
+            final = None
+            break
+        remain = max(0, search_cap - searches_done)
+        if remain == 0:
+            final = content if len(content.strip()) >= 200 else None
+            if final:
+                messages.append({"role": "assistant", "content": final})
+            break
+        if capped and len(calls) > remain:
+            calls = calls[:remain]
         step += 1
-        messages.append({"role": "assistant", "content": msg.get("content"),
+        messages.append({"role": "assistant",
+                         "content": content or None,
                          "tool_calls": calls})
         for call in calls:
+            if time.monotonic() - t0 >= budget_s:
+                print(f"[llm] sector chat budget {budget_s}s mid-search "
+                      f"({stage_label or 'llm run'}) — conclude", flush=True)
+                break
             args = json.loads(call["function"]["arguments"] or "{}")
             q = args.get("query", "")
             result = web_search(q)
+            searches_done += 1
             try:
                 parsed = json.loads(result)
                 n = len(parsed.get("results", []))
@@ -481,18 +681,52 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             messages.append({"role": "tool", "tool_call_id": call["id"],
                              "content": result})
     if final is None:
-        # tool budget exhausted -> one final no-tool answer
-        trace.append(f"**Step {step + 1} — Search budget exhausted.** Forced "
-                     "to conclude with what it already gathered.")
-        payload.pop("tools", None)
-        payload.pop("tool_choice", None)
-        try:
-            resp = _post(payload)
-        except RuntimeError as e:
-            print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
-            return ""
-        final = resp["choices"][0]["message"].get("content") or ""
-        messages.append({"role": "assistant", "content": final})
+        reused = _last_assistant_text(messages)
+        if len(reused) >= 200:
+            final = reused
+            trace.append(f"**Step {step + 1} — Search budget exhausted.** "
+                         f"Reused the last assistant essay ({len(final):,} chars) "
+                         "instead of another 120s DeepSeek read.")
+        else:
+            # tool budget exhausted -> one final no-tool answer
+            trace.append(f"**Step {step + 1} — Search budget exhausted.** Forced "
+                         "to conclude with what it already gathered.")
+            payload.pop("tools", None)
+            payload.pop("tool_choice", None)
+            close_msgs = list(messages) + [{
+                "role": "user",
+                "content": (
+                    "Write the full post-session essay now. "
+                    "Do not emit tool calls or DSML. "
+                    "Use the actuals and any search results already in this thread."
+                ),
+            }]
+            final = ""
+            for attempt in range(3):
+                payload["messages"] = close_msgs
+                try:
+                    resp = _post(payload)
+                except RuntimeError as e:
+                    print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
+                    break
+                cand = resp["choices"][0]["message"].get("content") or ""
+                if is_tool_dump(cand):
+                    print(f"[llm] forced close dump on attempt {attempt + 1} "
+                          f"({len(cand)} chars) — retry", flush=True)
+                    cand = ""
+                if len(cand.strip()) >= 200:
+                    final = cand
+                    break
+                print(f"[llm] forced close thin on attempt {attempt + 1} "
+                      f"({len(cand.strip())} chars) — retry", flush=True)
+            if len((final or "").strip()) < 200:
+                assembled = _essay_from_thread(messages, stage_label)
+                if assembled:
+                    print(f"[llm] assembled essay from thread "
+                          f"({len(assembled)} chars) after dump-only close",
+                          flush=True)
+                    final = assembled
+            messages.append({"role": "assistant", "content": final})
 
     if transcript_path:
         try:
@@ -540,13 +774,15 @@ def chat_nonempty(messages: list[dict], ladder: list[tuple[str, int]],
                   f"(model={model}, max_tokens={max_tokens}): {exc} "
                   "— trying next rung")
             continue
-        if text and text.strip():
+        if text and len(text.strip()) >= 200 and not is_tool_dump(text):
             if i:
                 print(f"[llm] recovered on attempt {i + 1} "
                       f"(model={model}, max_tokens={max_tokens})")
             return text
-        print(f"[llm] EMPTY answer on attempt {i + 1} "
-              f"(model={model}, max_tokens={max_tokens}) — trying next rung")
+        kind = "tool-dump" if is_tool_dump(text or "") else "thin/empty"
+        print(f"[llm] {kind} answer on attempt {i + 1} "
+              f"(model={model}, max_tokens={max_tokens}, "
+              f"chars={len((text or '').strip())}) — trying next rung")
     return ""
 
 

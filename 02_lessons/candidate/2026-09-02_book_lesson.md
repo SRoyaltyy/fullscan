@@ -7,7 +7,7 @@ evidence_cited: "CYPH 2026-08-21 gated_out (join 0.102, AB 0.704, peer 1.0, news
 error_category: "A"
 scope: "book"
 date: "2026-09-02"
-status: "candidate"
+status: "promoted"
 schema_ok: "true"
 validation_errors: ""
 ---

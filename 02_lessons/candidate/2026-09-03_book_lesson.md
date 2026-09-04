@@ -7,7 +7,7 @@ evidence_cited: "CHPT 2026-08-27 gated_out (join -0.315, AB 0.635, news 0.0, sec
 error_category: "A"
 scope: "book"
 date: "2026-09-03"
-status: "candidate"
+status: "promoted"
 schema_ok: "true"
 validation_errors: ""
 ---

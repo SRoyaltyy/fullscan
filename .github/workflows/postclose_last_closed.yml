@@ -1,0 +1,127 @@
+name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
+
+# Split concurrency from postclose_all.yml. A hung push heal in
+# that workflow's ubuntu group must not block yesterday's grade, and merging
+# THIS file must not cancel that pending heal (it is not listed in
+# the postclose_all.yml on-push path filter).
+# CLOCK: merge/push of this workflow + mid-session cron.
+# Always last_closed_session() — never the two-date night pack — so a
+# mid-day fire grades 09-03 and does not spend hours on 09-02.
+# A DeepSeek tool-dump follow-up must recover searches / force a close
+# (src/deepseek_client.py) or this job rewrites 11 dumps and skip-if-good
+# stays red. Sidecar 33890318918 (#102) recovered searches then every
+# no-tool close was another DSML dump (0 chars written). The client now
+# assembles an essay from the thread when the close stays a dump.
+
+on:
+  schedule:
+    - cron: "25 15 * * 1-5"   # ~11:25 ET — last-closed heal while session is live
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/postclose_last_closed.yml"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "true = rewrite even if files exist"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: postclose-last-closed-ubuntu
+  cancel-in-progress: false
+
+jobs:
+  postclose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 600
+    env:
+      OPENCLAW_TIMEOUT: "900"
+      FULLSCAN_HOME: /home/runner
+      HOME: /home/runner
+      FINVIZ_SKIP_LIVE: "1"
+      LLM_BACKEND: deepseek
+      GROK_ONLY: "0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+
+      - name: Match origin/main (leftover files must not fake SKIP)
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd -- 01_daily/general 01_daily/sectors \
+            01_daily/map_heat 01_daily/news 02_lessons 03_scoreboard || true
+          git ls-files -o --exclude-standard -- '01_daily/*_learnings.md' \
+            | xargs -r rm -f
+
+      - name: Skip if last-closed pack already on disk (no LLM)
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE=$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+          echo "last_closed=$DATE"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          if python3 -m src.skip_if_good --job postclose_all --date "$DATE"; then
+            echo "skip_python=yes" >> "$GITHUB_ENV"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: env.skip_python != 'yes'
+        with:
+          python-version: "3.10"
+
+      - name: Install
+        if: env.skip_python != 'yes'
+        run: |
+          pip install -r requirements.txt
+          pip install psycopg2-binary yfinance pandas requests openai ddgs || true
+
+      - name: Post-Close last-closed
+        if: env.skip_python != 'yes'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENCLAW_TIMEOUT: "900"
+          GROK_ONLY: "0"
+          LLM_BACKEND: deepseek
+          FINVIZ_SKIP_LIVE: "1"
+        run: |
+          set -e
+          export HOME="${HOME:-/home/runner}"
+          mkdir -p "$HOME" 2>/dev/null || true
+          DATE="${DATE:-$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")}"
+          FORCE="${{ github.event.inputs.force }}"
+          FORCE="${FORCE:-false}"
+          ARGS=(--llm-backend deepseek --date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.run_postclose_all ${ARGS[*]}"
+          python -m src.run_postclose_all "${ARGS[@]}"
+
+      - name: Commit post-close artifacts
+        if: always() && env.skip_python != 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export HOME="${HOME:-/home/runner}"
+          mkdir -p "$HOME" 2>/dev/null || true
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          bash scripts/safe_git_push.sh \
+            "auto: post-close last-closed [$(date -u +%F_%H%M)]" \
+            01_daily/general/ 01_daily/sectors/ 01_daily/map_heat/ \
+            01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
+            01_daily/*_learnings.md \
+            02_lessons/ 03_scoreboard/ \
+            00_grounding/mutable_policy.md \
+            00_grounding/book_policy.json \
+            00_grounding/weather_rules_proposals.json

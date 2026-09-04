@@ -12,7 +12,8 @@ on:
   schedule:
     - cron: "50 11 * * 1-5"
     - cron: "20 13 * * 1-5"   # ~09:20 ET EDT — book heal if pre-open died
-    - cron: "15 21 * * 1-5"   # ~17:15 ET — first Post-Close ALL fire (16:10 cron is new)
+    - cron: "20 20 * * 1-5"   # ~16:20 ET — if the new 16:10 postclose cron skipped day 1
+    - cron: "15 21 * * 1-5"   # ~17:15 ET — Post-Close ALL / sidecar if 16:10 still missed
     - cron: "30 16 * * 0"
   workflow_dispatch:
     inputs:
@@ -99,6 +100,13 @@ jobs:
               || true
           }
 
+          dispatch_last_closed_sidecar() {
+            echo "MISSING last-closed pack → postclose_last_closed.yml ubuntu/DeepSeek"
+            gh api --method POST \
+              "repos/${REPO}/actions/workflows/postclose_last_closed.yml/dispatches" \
+              -f ref=main || true
+          }
+
           already_running() {
             local WF="$1"
             local RAW HAS_ACTIVE=""
@@ -173,6 +181,21 @@ jobs:
 
           if [ "$FORCE" = "true" ] || [ "$ET_HM" -ge 1600 ]; then
             maybe postclose_all.yml
+            # postclose-all-ubuntu can sit behind a hung push. The sidecar
+            # has its own group so last_closed (09-04 after the bell) can
+            # start now, or queue behind a mid-day 09-03 heal.
+            echo ""
+            echo "======== postclose_last_closed.yml ========"
+            LAST=$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+            echo "last_closed=$LAST"
+            if [ "$FORCE" != "true" ] && python3 -m src.skip_if_good --job postclose_all --date "$LAST"; then
+              echo "OK — last-closed pack already on disk"
+            else
+              if already_running "postclose_last_closed.yml"; then
+                echo "sidecar running — queue another for last_closed after it lands"
+              fi
+              dispatch_last_closed_sidecar
+            fi
           else
             echo "skip Post-Close ALL until 16:00 ET"
           fi

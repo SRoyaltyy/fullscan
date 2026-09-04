@@ -8,11 +8,14 @@ from __future__ import annotations
 import argparse
 import os
 import re
+import subprocess
+import sys
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from . import compute_sector_scores, config, deepseek_client, scoreboard
 from .run_reflect import last_assistant
+from .skip_if_good import is_tool_dump
 from .sector_memory import topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS
 
@@ -172,8 +175,16 @@ def run_one(sector: str, date_str: str) -> None:
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
     existing = os.path.join(out_dir, f"{slug}_outcome.md")
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
-        print(f"[sector-outcome] skip {sector}: outcome already on disk")
-        return
+        try:
+            with open(existing, encoding="utf-8") as fh:
+                on_disk = fh.read()
+        except OSError:
+            on_disk = ""
+        if not is_tool_dump(on_disk):
+            print(f"[sector-outcome] skip {sector}: outcome already on disk")
+            return
+        print(f"[sector-outcome] {sector}: disk file is a tool-dump "
+              f"({len(on_disk)} chars) — rewriting", flush=True)
     predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
     if predict_md == "(missing)":
         print(f"[sector-outcome] skip {sector}: no predict file")
@@ -183,7 +194,7 @@ def run_one(sector: str, date_str: str) -> None:
     transcript_path = os.path.join(
         "01_daily/_transcripts", f"{date_str}_sector_{slug}_outcome.json")
     reused = last_assistant(transcript_path)
-    if len(reused) >= 200:
+    if len(reused) >= 200 and not is_tool_dump(reused):
         print(f"[sector-outcome] {sector}: reuse transcript "
               f"({len(reused)} chars) — no LLM")
         _write_outcome(sector, date_str, out_dir, slug, actual, reused)
@@ -215,8 +226,45 @@ def run_one(sector: str, date_str: str) -> None:
         trace_path=os.path.join(out_dir, f"{slug}_outcome_trace.md"),
         stage_label=f"SECTOR OUTCOME {sector} {date_str}",
     )
+    if len((text or "").strip()) < 200 or is_tool_dump(text or ""):
+        print(f"[sector-outcome] {sector}: empty/thin/tool-dump LLM "
+              f"({len((text or '').strip())} chars) — not writing a stub "
+              "that would skip the next heal", flush=True)
+        return
     _write_outcome(sector, date_str, out_dir, slug, actual, text)
     _persist(date_str)
+
+
+def _one_timeout_s(default: int = 600) -> int:
+    raw = os.environ.get("SECTOR_ONE_TIMEOUT", str(default))
+    try:
+        return max(120, int(raw))
+    except ValueError:
+        return default
+
+
+def _run_one_bounded(sector: str, date_str: str) -> None:
+    """Kill one hung chat() so the other 10 sectors still get a turn.
+
+    The live ubuntu heal sat in the first sector for 30+ min with 0 persist
+    because tools=True never returned. sector_wall then kills all 11 at once.
+    """
+    if os.environ.get("SECTOR_GRADE_CHILD") == "1":
+        run_one(sector, date_str)
+        return
+    env = {**os.environ, "SECTOR_GRADE_CHILD": "1"}
+    timeout_s = _one_timeout_s()
+    cmd = [sys.executable, "-m", "src.run_sector_outcome",
+           "--date", date_str, "--sectors", sector]
+    try:
+        r = subprocess.run(cmd, timeout=timeout_s, env=env)
+    except subprocess.TimeoutExpired:
+        print(f"[sector-outcome] WARN {sector}: killed after {timeout_s}s "
+              "— continue so ≥8 files can still land", flush=True)
+        return
+    if r.returncode:
+        print(f"[sector-outcome] WARN {sector}: exit {r.returncode}",
+              flush=True)
 
 
 def main() -> None:
@@ -232,7 +280,7 @@ def main() -> None:
             raise SystemExit(f"unknown sector {sector}")
         print(f"\n======== SECTOR OUTCOME: {sector} ========\n")
         try:
-            run_one(sector, date_str)
+            _run_one_bounded(sector, date_str)
         except Exception as e:  # noqa: BLE001
             print(f"[sector-outcome] WARN {sector}: {e}")
 

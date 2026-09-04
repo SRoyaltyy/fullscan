@@ -37,8 +37,11 @@ _OPENCLAW_TOKEN_ALIGNED = False
 # fallback runs; GROK_ONLY=1 remains available for an explicit Grok-only run.
 MODEL_PREDICT = os.environ.get("MODEL_PREDICT", "deepseek-chat")
 MODEL_OUTCOME = os.environ.get("MODEL_OUTCOME", "deepseek-chat")
-MODEL_REFLECT = os.environ.get("MODEL_REFLECT", "deepseek-reasoner")
-MODEL_DISTILL = os.environ.get("MODEL_DISTILL", "deepseek-reasoner")
+# Reasoner burns the 120s read budget on hidden tokens and often returns
+# empty/thin content — two rungs then chat ate the 600s sector-reflect child.
+# OpenClaw ignores this name. Env still overrides for an explicit reasoner run.
+MODEL_REFLECT = os.environ.get("MODEL_REFLECT", "deepseek-chat")
+MODEL_DISTILL = os.environ.get("MODEL_DISTILL", "deepseek-chat")
 DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL",
                                    "https://api.deepseek.com")
 # DeepSeek Chat rejects larger output budgets even when Grok accepts them.
@@ -225,5 +228,24 @@ MEMORY_ARCHIVE = "04_archive"
 
 TOPIC = "general"
 MEMORY_WINDOW_DAYS = 10          # rolling predict/reflect files injected
-MAX_TOOL_ROUNDS = 10             # web_search rounds per LLM stage
+def _env_int(name: str, default: int, minimum: int = 1) -> int:
+    raw = (os.environ.get(name) or "").strip()
+    if not raw:
+        return default
+    try:
+        return max(minimum, int(raw))
+    except ValueError:
+        return default
+
+
+MAX_TOOL_ROUNDS = _env_int("MAX_TOOL_ROUNDS", 10)  # web_search rounds per LLM stage
+# Sector outcome already has deterministic ETF actuals in the prompt.
+# Each DeepSeek read is 120s and the per-sector child dies at 600s.
+# 4 tool rounds + 1 forced close = 5 × 120s = 600s with no time to write.
+SECTOR_TOOL_ROUNDS = _env_int("SECTOR_TOOL_ROUNDS", 2)
+# One DeepSeek message can emit many tool_calls. Each search walks
+# SearXNG→ddgs→html→gnews (up to ~65s). Two total searches leave
+# room for the no-tool close inside the 600s child.
+SECTOR_MAX_SEARCHES = _env_int("SECTOR_MAX_SEARCHES", 2)
+SECTOR_CHAT_BUDGET_S = _env_int("SECTOR_CHAT_BUDGET_S", 420)
 TZ = "America/New_York"

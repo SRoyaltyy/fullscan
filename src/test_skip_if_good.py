@@ -27,9 +27,10 @@ def test_missing_date_is_run() -> None:
 
 
 def test_learn_requires_dated_file_not_stale_board() -> None:
-    # 2026-09-03 never wrote 01_daily/2026-09-03_learnings.md.
+    # 2026-09-04 is still the live session — no dated learnings yet.
     # 03_scoreboard/LEARNINGS.md is always large — that used to skip learn.
-    assert skip_if_good.check_learn_cycle("2026-09-03") is False
+    assert skip_if_good.check_learn_cycle("2026-09-04") is False
+    assert skip_if_good.check_learn_cycle("2026-09-03") is True
     assert skip_if_good.check_learn_cycle("2026-09-01") is True
 
 
@@ -110,32 +111,47 @@ def test_dead_relvol_1d_buy_is_not_good() -> None:
 
 def test_night_pack_dates_heals_prior_session_after_bell() -> None:
     from datetime import datetime
+    from unittest import mock
     from zoneinfo import ZoneInfo
     et = ZoneInfo("America/New_York")
     after_bell = datetime(2026, 9, 4, 16, 10, tzinfo=et)
     dates = skip_if_good.night_pack_dates(after_bell)
     assert dates[-1] == "2026-09-04"
-    assert "2026-09-03" in dates
+    # Live 09-03 pack is complete — do not re-grade it after the bell.
+    assert dates == ["2026-09-04"]
+    with mock.patch.object(skip_if_good, "check_postclose_all",
+                           return_value=False):
+        assert skip_if_good.night_pack_dates(after_bell) == [
+            "2026-09-03", "2026-09-04"]
     before_bell = datetime(2026, 9, 4, 8, 40, tzinfo=et)
     assert skip_if_good.last_closed_session(before_bell) == "2026-09-03"
+    # 09-03 pack is complete — do not prepend 09-02.
+    assert skip_if_good.night_pack_dates(before_bell) == ["2026-09-03"]
     assert skip_if_good._prev_weekday("2026-09-04") == "2026-09-03"
     assert skip_if_good._prev_weekday("2026-09-07") == "2026-09-04"
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
-    # 09-03 has an outcome + next-session baseline, but no dated learnings.
+    # 09-03 dated learnings + full sector pack must SKIP. 09-04 is still
+    # the live session and must not skip on a stale board.
     assert skip_if_good.check_daily_pipeline_outcome("2026-09-03") is True
-    assert skip_if_good.check_learn_cycle("2026-09-03") is False
-    assert skip_if_good.check_postclose_all("2026-09-03") is False
+    assert skip_if_good.check_learn_cycle("2026-09-03") is True
+    assert skip_if_good.check_postclose_all("2026-09-03") is True
+    assert skip_if_good.check_learn_cycle("2026-09-04") is False
+    assert skip_if_good.check_postclose_all("2026-09-04") is False
 
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
-    # 09-03 reflect.md was healed from the Grok transcript (#76).
-    # 11 predicts landed; 0 sector outcomes / reflects / dated learnings.
+    # Sidecar 33891191403 rewrote the last three 09-03 dumps (XLB/XLE/XLV)
+    # into real essays. Energy must not still look like tool-call XML.
     assert skip_if_good.check_general_reflect("2026-09-03") is True
-    assert skip_if_good.check_sector_outcomes("2026-09-03") is False
-    assert skip_if_good.check_sector_reflects("2026-09-03") is False
-    assert skip_if_good.check_postclose_all("2026-09-03") is False
+    assert skip_if_good.check_sector_outcomes("2026-09-03") is True
+    assert skip_if_good.check_sector_reflects("2026-09-03") is True
+    assert skip_if_good.check_postclose_all("2026-09-03") is True
+    energy = Path("01_daily/sectors/2026-09-03/energy_outcome.md")
+    assert energy.is_file()
+    assert not skip_if_good.is_tool_dump(energy.read_text(encoding="utf-8"))
+    assert len(energy.read_text(encoding="utf-8")) >= 200
 
 
 def test_sector_md_counts_only_quality_files() -> None:
@@ -145,15 +161,55 @@ def test_sector_md_counts_only_quality_files() -> None:
         d.mkdir(parents=True)
         (d / "technology_outcome.md").write_text("x" * 50, encoding="utf-8")
         (d / "healthcare_outcome.md").write_text("y" * 250, encoding="utf-8")
+        (d / "energy_outcome.md").write_text(
+            'Actuals\n<｜｜DSML｜｜tool_calls>\n'
+            '<｜｜DSML｜｜invoke name="web_search">\n' + ("q" * 200),
+            encoding="utf-8")
         (d / "energy_reflect.md").write_text("z" * 50, encoding="utf-8")
         (d / "financial_reflect.md").write_text("w" * 250, encoding="utf-8")
         old_root = skip_if_good.ROOT
         skip_if_good.ROOT = root
         try:
             assert skip_if_good._count_sector_md("1999-01-01", "_outcome.md") == 1
+            assert skip_if_good._count_sector_dumps("1999-01-01", "_outcome.md") == 1
+            assert skip_if_good.check_sector_outcomes("1999-01-01") is False
             assert skip_if_good._count_sector_md("1999-01-01", "_reflect.md") == 1
         finally:
             skip_if_good.ROOT = old_root
+
+
+def test_general_outcome_and_reflect_reject_tool_dumps() -> None:
+    """A DSML dump in general outcome/reflect must not SKIP the night pack."""
+    dump = (
+        '# Reflect\n<｜DSML｜tool_calls>\n'
+        '<invoke name="web_search">oil' + ("x" * 400)
+    )
+    essay = "# Reflect\nLESSON_BEGIN\nERROR_CATEGORY: NONE\n" + ("body " * 80)
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        g = root / "01_daily" / "general"
+        g.mkdir(parents=True)
+        old_root = skip_if_good.ROOT
+        skip_if_good.ROOT = root
+        try:
+            (g / "1999-01-01_outcome.md").write_text(dump, encoding="utf-8")
+            (g / "1999-01-01_reflect.md").write_text(dump, encoding="utf-8")
+            assert skip_if_good.check_daily_pipeline_outcome("1999-01-01") is False
+            assert skip_if_good.check_general_reflect("1999-01-01") is False
+            (g / "1999-01-01_outcome.md").write_text(essay, encoding="utf-8")
+            (g / "1999-01-01_reflect.md").write_text(essay, encoding="utf-8")
+            assert skip_if_good.check_daily_pipeline_outcome("1999-01-01") is True
+            assert skip_if_good.check_general_reflect("1999-01-01") is True
+        finally:
+            skip_if_good.ROOT = old_root
+
+
+def test_is_tool_dump_detects_dsml_and_web_search() -> None:
+    assert skip_if_good.is_tool_dump("") is False
+    assert skip_if_good.is_tool_dump("# Sector Outcome\nXLE sold off.") is False
+    assert skip_if_good.is_tool_dump(
+        'invoke name="web_search"\nquery=oil') is True
+    assert skip_if_good.is_tool_dump("<x>tool_calls></x>") is True
 
 
 def test_finviz_scrape_requires_elite_export() -> None:
@@ -207,6 +263,8 @@ if __name__ == "__main__":
     test_postclose_all_needs_learn_not_just_outcome()
     test_postclose_all_needs_reflect_and_sector_outcomes()
     test_sector_md_counts_only_quality_files()
+    test_general_outcome_and_reflect_reject_tool_dumps()
+    test_is_tool_dump_detects_dsml_and_web_search()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
     test_degraded_book_is_not_good()

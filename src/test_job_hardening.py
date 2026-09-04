@@ -5,6 +5,7 @@ Run: PYTHONPATH=. python3 -m src.test_job_hardening
 from __future__ import annotations
 
 import os
+import time
 from pathlib import Path
 from unittest import mock
 
@@ -95,6 +96,7 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
     for name in (
         "preopen_all.yml",
         "postclose_all.yml",
+        "postclose_last_closed.yml",
         "map_heat_postclose.yml",
         "daily_pipeline.yml",
         "learn_cycle.yml",
@@ -110,6 +112,7 @@ def test_safe_git_push_used_by_failing_commit_jobs() -> None:
     for name in (
         "preopen_all.yml",
         "postclose_all.yml",
+        "postclose_last_closed.yml",
         "stock_book_all.yml",
         "learn_cycle.yml",
         "label_weather.yml",
@@ -192,6 +195,7 @@ def test_ecs_jobs_skip_live_finviz() -> None:
     for name in (
         "preopen_all.yml",
         "postclose_all.yml",
+        "postclose_last_closed.yml",
         "map_heat_postclose.yml",
         "stock_book_all.yml",
         "catalyst_daily.yml",
@@ -267,7 +271,8 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "past 09:00 ET — heal ranker on ubuntu" in orch
     assert 'already_running "preopen_all.yml"' in orch
     assert "book heal stays on ubuntu" in orch
-    # 16:10 postclose cron is new and may skip day 1. 17:15 orch already fires.
+    # 16:10 postclose cron is new and may skip day 1. 16:20 + 17:15 orch fire.
+    assert 'cron: "20 20 * * 1-5"' in orch
     assert 'cron: "15 21 * * 1-5"' in orch
     assert "maybe postclose_all.yml" in orch
     assert "--job postclose_all || return 1" in orch
@@ -280,6 +285,9 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "MISSING night pack → postclose_all.yml ubuntu/DeepSeek" in orch
     assert "inputs[llm_backend]=deepseek" in orch
     assert "active run is push last-closed heal — queue ubuntu night_pack" in orch
+    assert "dispatch_last_closed_sidecar" in orch
+    assert "postclose_last_closed.yml/dispatches" in orch
+    assert "MISSING last-closed pack → postclose_last_closed.yml" in orch
 
 
 def test_ranker_inputs_before_llm_packet() -> None:
@@ -486,8 +494,37 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "_persist" in src
     assert "try Ticker.history" in src
     assert "_fill_from_history" in src
+    assert "empty/thin/tool-dump LLM" in src
+    assert "not writing a stub" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     # One failure must not abort the remaining 10.
     assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
+    assert "SECTOR_ONE_TIMEOUT" in src
+    assert "SECTOR_GRADE_CHILD" in src
+    assert "TimeoutExpired" in src
+    assert "killed after" in src
+
+
+def test_sector_parent_continues_after_one_timeout() -> None:
+    """A hung first-sector chat() must not eat the other 10."""
+    import subprocess
+    from src import run_sector_outcome as so
+
+    os.environ.pop("SECTOR_GRADE_CHILD", None)
+    os.environ["SECTOR_ONE_TIMEOUT"] = "1"
+    with mock.patch.object(so.subprocess, "run",
+                           side_effect=subprocess.TimeoutExpired(["x"], 1)):
+        so._run_one_bounded("Technology", "2026-09-03")
+    os.environ.pop("SECTOR_ONE_TIMEOUT", None)
+
+    called: list[tuple[str, str]] = []
+    os.environ["SECTOR_GRADE_CHILD"] = "1"
+    with mock.patch.object(so, "run_one",
+                           side_effect=lambda s, d: called.append((s, d))):
+        so._run_one_bounded("Healthcare", "2026-09-03")
+    os.environ.pop("SECTOR_GRADE_CHILD", None)
+    assert called == [("Healthcare", "2026-09-03")]
 
 
 def test_sector_reflect_skips_existing() -> None:
@@ -498,6 +535,11 @@ def test_sector_reflect_skips_existing() -> None:
     assert "_persist" in src
     assert "actuals from outcome.md" in src
     assert 'print(f"[sector-reflect] WARN {sector}: {e}")' in src
+    assert "SECTOR_ONE_TIMEOUT" in src
+    assert "TimeoutExpired" in src
+    assert "killed after" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     from src.run_sector_reflect import _pct_from_outcome_md
     text = "# Sector Outcome\n\nActuals: {'etf': 'XLK', 'pct': 1.25, 'spy_pct': 0.4}\n\nbody"
     assert _pct_from_outcome_md(text) == 1.25
@@ -539,6 +581,10 @@ def test_general_outcome_skips_existing_and_reuses_transcript() -> None:
     assert "outcome already on disk" in src
     assert "reuse transcript" in src
     assert "last_assistant" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
+    assert "empty/thin/tool-dump LLM" in src
+    assert "not writing a stub" in src
     # LLM only after a miss — a hung 09-04 retry must not require_llm first.
     assert src.index("last_assistant") < src.index("config.require_llm()")
 
@@ -553,6 +599,8 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
     assert 'f"{date_str}_reflect.md"' in src
     assert "reuse transcript" in src
     assert "reflect already on disk" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     with tempfile.TemporaryDirectory() as td:
         p = Path(td) / "tx.json"
         p.write_text(json.dumps({
@@ -566,6 +614,65 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
         assert text.startswith("TRIAGE")
         assert len(text) >= 200
         assert last_assistant(str(Path(td) / "missing.json")) == ""
+        dump = Path(td) / "dump.json"
+        dump.write_text(json.dumps({
+            "messages": [
+                {"role": "assistant", "content": (
+                    'TRIAGE\n<｜DSML｜tool_calls>\n'
+                    '<invoke name="web_search">' + ("q" * 200)
+                )},
+            ],
+        }), encoding="utf-8")
+        assert last_assistant(str(dump)) == ""
+
+
+def test_search_and_sector_rounds_are_bounded() -> None:
+    """Dead SearXNG / hung ddgs must not eat the first sector before persist.
+
+    These files are intentionally NOT on postclose_all.yml push: — merging
+    them must not queue a twin behind the live ubuntu heal.
+    """
+    from src import websearch as ws
+
+    push_block = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    push_paths = push_block.split("push:")[1].split("workflow_dispatch:")[0]
+    assert "src/websearch.py" not in push_paths
+    assert "src/deepseek_client.py" not in push_paths
+    assert "src/config.py" not in push_paths
+
+    assert ws.SEARXNG_TIMEOUT <= 10
+    assert ws.SEARXNG_ATTEMPTS == 1
+    assert ws.DDG_TIMEOUT <= 15
+
+    def hang(_q, _n):
+        time.sleep(30)
+        return [{"title": "late", "url": "http://x", "snippet": "no"}]
+
+    t0 = time.monotonic()
+    try:
+        ws._run_bounded(hang, 0.2, "q", 3)
+        raise AssertionError("hung search must raise")
+    except TimeoutError as e:
+        assert "exceeded" in str(e)
+    assert time.monotonic() - t0 < 2.0
+
+    assert dc._effective_tool_rounds("SECTOR OUTCOME Technology 2026-09-03",
+                                     None) == 2
+    assert dc._effective_tool_rounds("SECTOR REFLECT Healthcare 2026-09-03",
+                                     None) == 2
+    assert dc._effective_tool_rounds(
+        "MAP POSTCLOSE captains_technology 2026-09-07", None) == 2
+    assert dc._effective_tool_rounds("GENERAL OUTCOME 2026-09-03", None) == 10
+    assert dc._effective_tool_rounds("SECTOR OUTCOME X", 1) == 1
+    assert getattr(config, "SECTOR_TOOL_ROUNDS", 0) == 2
+    assert getattr(config, "MODEL_REFLECT", "") == "deepseek-chat"
+    assert getattr(config, "SECTOR_MAX_SEARCHES", 0) == 2
+    assert getattr(config, "SECTOR_CHAT_BUDGET_S", 0) == 420
+    ds_src = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    assert "is_tool_dump" in ds_src
+    assert "ignoring tool-dump content" in ds_src
+    assert "from tool-dump content" in ds_src
+    assert "force no-tool close" in ds_src
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
@@ -590,6 +697,23 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "push heal — last_closed=" in post_yml
     assert "src/skip_if_good.py" not in post_yml
     assert "01_daily/" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
+    assert "postclose_last_closed.yml" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
+
+
+def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
+    """A hung postclose-all-ubuntu push must not block yesterday's grade."""
+    yml = (WF / "postclose_last_closed.yml").read_text(encoding="utf-8")
+    assert "group: postclose-last-closed-ubuntu" in yml
+    assert "group: postclose-all-ubuntu" not in yml
+    assert "last_closed_session" in yml
+    run_block = yml.split("Post-Close last-closed")[1]
+    assert "night_pack_dates" not in run_block
+    assert "LLM_BACKEND: deepseek" in yml
+    assert "HOME: /home/runner" in yml
+    assert "ubuntu-latest" in yml
+    on_push = yml.split("\n  push:\n", 1)[1].split("\n  workflow_dispatch:", 1)[0]
+    assert "postclose_last_closed.yml" in on_push
+    assert "src/run_postclose_all.py" not in on_push
 
 
 def test_postclose_pushes_after_each_llm_layer() -> None:
@@ -598,6 +722,8 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     idx_gen = src.index('step("General outcome"')
     idx_push_gen = src.index("_push_pack(date)", idx_gen)
     idx_ref = src.index('step("General reflect"')
+    assert "check_general_reflect(date)" in src[idx_ref:idx_ref + 280]
+    assert '_exists_gt(f"01_daily/general/{date}_reflect.md"' not in src
     idx_push_ref = src.index("_push_pack(date)", idx_ref)
     idx_out = src.index('step("Sector outcomes"')
     idx_push_out = src.index("_push_pack(date)", idx_out)
@@ -618,6 +744,8 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     heat = (ROOT / "src" / "map_heat_postclose.py").read_text(encoding="utf-8")
     assert "setdefaulttimeout(30)" in heat
     assert "threads=False" in heat
+    assert "from .run_reflect import last_assistant" in heat
+    assert "last_assistant(str(trans))" in heat
 
 
 def main() -> None:
@@ -648,12 +776,15 @@ def main() -> None:
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
         test_sector_outcome_skips_existing_and_times_out_yf,
+        test_sector_parent_continues_after_one_timeout,
         test_sector_reflect_skips_existing,
         test_etf_actual_falls_back_to_history,
         test_general_outcome_skips_existing_and_reuses_transcript,
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
+        test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
+        test_search_and_sector_rounds_are_bounded,
     ]
     failed = 0
     for fn in tests:

@@ -185,7 +185,7 @@ def test_deepseek_only_unchanged() -> None:
     assert text == "DS"
     assert dc.last_provider() == "deepseek"
     assert urls == [f"{config.DEEPSEEK_BASE_URL}/chat/completions"]
-    assert timeouts == [(15, 300)]
+    assert timeouts == [(15, 120)]
 
 
 def test_deepseek_chat_caps_grok_sized_output_budget() -> None:
@@ -307,8 +307,26 @@ def test_grok_only_no_fallback_when_already_down() -> None:
     assert urls == []
 
 
+def test_deepseek_read_timeout_does_not_retry() -> None:
+    """A hung DeepSeek body must not burn 120s × 4 inside the sector wall."""
+    _reset(deepseek_key="ds-key")
+    n = {"calls": 0}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        n["calls"] += 1
+        raise dc.requests.ReadTimeout("read timed out")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep") as slept:
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == ""
+    assert n["calls"] == 1
+    slept.assert_not_called()
+
+
 def test_deepseek_connect_timeout_does_not_retry() -> None:
-    """A firewalled api.deepseek.com must not burn 300s × 4 before empty."""
+    """A firewalled api.deepseek.com must not burn 120s × 4 before empty."""
     _reset(deepseek_key="ds-key")
     n = {"calls": 0}
 
@@ -346,6 +364,286 @@ def test_connect_timeout_marks_gateway_down() -> None:
     assert dc._OPENCLAW_STATE["down"] is True
 
 
+def test_sector_outcome_caps_deepseek_tool_rounds() -> None:
+    """11 sectors × 10 search rounds miss ≥8 files inside sector_wall."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    posts: list[dict] = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        return _fake_response(200, "", tool_calls=[{
+            "id": f"c{len(posts)}",
+            "function": {"name": "web_search",
+                         "arguments": '{"query":"XLK close"}'},
+        }])
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              return_value='{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        dc.chat([{"role": "user", "content": "grade"}],
+                model="deepseek-chat", tools=True,
+                stage_label="SECTOR OUTCOME Technology 2026-09-03")
+    # 2 capped tool rounds + up to 3 forced no-tool closes (dump/thin retry).
+    # 4+1 at 120s/read fills the 600s sector child with 0 files written.
+    assert len(posts) == 5
+
+
+def test_sector_outcome_keeps_essay_instead_of_more_search() -> None:
+    """A 200+ char essay plus tool_calls must not start another search round."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    essay = "A" * 220
+    searches = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        return _fake_response(200, essay, tool_calls=[{
+            "id": "c1",
+            "function": {"name": "web_search",
+                         "arguments": '{"query":"XLK close"}'},
+        }])
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              side_effect=lambda q: searches.append(q) or
+                              '{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Technology 2026-09-03")
+    assert text == essay
+    assert searches == []
+
+
+def test_sector_outcome_caps_tool_calls_per_stage() -> None:
+    """One DeepSeek message can emit many tool_calls; each search is ~65s."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    searches = []
+    posts = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        if "tools" in (json or {}):
+            return _fake_response(200, "", tool_calls=[
+                {"id": f"c{i}",
+                 "function": {"name": "web_search",
+                              "arguments": '{"query":"q%d"}' % i}}
+                for i in range(6)
+            ])
+        return _fake_response(200, "B" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              side_effect=lambda q: searches.append(q) or
+                              '{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Technology 2026-09-03")
+    assert len(searches) == 2
+    assert len(posts) == 2  # one tool round + forced close
+    assert text == "B" * 220
+
+
+def test_extracts_queries_from_dsml_tool_dump() -> None:
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'XLE September 3 2026 oil</｜｜DSML｜｜parameter>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'WTI close</｜｜DSML｜｜parameter>\n'
+    )
+    assert dc._extract_dump_queries(dump) == [
+        "XLE September 3 2026 oil", "WTI close"]
+    assert dc._extract_dump_queries("# essay") == []
+
+
+def test_tool_dump_followup_forces_no_tool_close() -> None:
+    """Live 09-03 Energy: turn 1 real tool_calls, turn 2 DSML dump, no calls."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    searches = []
+    posts = []
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'more oil news</｜｜DSML｜｜parameter>\n'
+    )
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        if "tools" in (json or {}) and len(posts) == 1:
+            return _fake_response(200, "", tool_calls=[{
+                "id": "c1",
+                "function": {"name": "web_search",
+                             "arguments": '{"query":"XLE close"}'},
+            }])
+        if "tools" in (json or {}):
+            return _fake_response(200, dump)
+        return _fake_response(200, "E" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              side_effect=lambda q: searches.append(q) or
+                              '{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Energy 2026-09-03")
+    assert searches == ["XLE close", "more oil news"]
+    assert text == "E" * 220
+    from src.skip_if_good import is_tool_dump
+    assert not is_tool_dump(text)
+    close_posts = [p for p in posts if "tools" not in p]
+    assert close_posts
+    assert "Do not emit tool calls" in close_posts[0]["messages"][-1]["content"]
+
+
+def test_forced_close_retries_when_first_answer_is_a_dump() -> None:
+    """Live follow-up: the no-tool close can itself be DSML. Retry."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'still searching</｜｜DSML｜｜parameter>\n'
+    )
+    posts = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        if "tools" in (json or {}):
+            return _fake_response(200, dump)
+        if sum(1 for p in posts if "tools" not in p) < 2:
+            return _fake_response(200, dump)
+        return _fake_response(200, "C" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              return_value='{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Energy 2026-09-03")
+    assert text == "C" * 220
+    assert sum(1 for p in posts if "tools" not in p) >= 2
+
+
+def test_forced_close_dump_assembles_essay_from_thread() -> None:
+    """Live #102 sidecar: every no-tool close was DSML. Still land a pack file."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'XLE oil</｜｜DSML｜｜parameter>\n'
+    )
+    tool_json = json.dumps({
+        "query": "XLE oil",
+        "backend": "ddg",
+        "results": [{
+            "title": "XLE slips as crude eases",
+            "url": "https://example.com/xle",
+            "snippet": "Energy ETF closed lower with WTI.",
+        }],
+    })
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        return _fake_response(200, dump)
+
+    user = (
+        "DATE: 2026-09-03\nSECTOR: Energy\nETF: XLE\n\n"
+        "=== ACTUALS (deterministic) ===\n"
+        "ETF_PCT: -0.74\nSPY_PCT: 1.05\nREL_PCT: -1.79\n"
+        "OPEN: 65.12 CLOSE: 64.62\n"
+    )
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search", return_value=tool_json), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": user}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Energy 2026-09-03")
+    from src.skip_if_good import is_tool_dump
+    assert not is_tool_dump(text)
+    assert len(text) >= 200
+    assert "ETF_PCT: -0.74" in text
+    assert "XLE slips as crude eases" in text
+    assert "assembled" in text.lower() or "Post-session review" in text
+
+
+def test_map_postclose_caps_deepseek_tool_rounds() -> None:
+    """11 captain batches × 10 search rounds miss the 7200s captain wall."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    posts: list[dict] = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        return _fake_response(200, "", tool_calls=[{
+            "id": f"c{len(posts)}",
+            "function": {"name": "web_search",
+                         "arguments": '{"query":"XLK close"}'},
+        }])
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              return_value='{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        dc.chat([{"role": "user", "content": "cards"}],
+                model="deepseek-chat", tools=True,
+                stage_label="MAP POSTCLOSE captains_technology 2026-09-07")
+    assert len(posts) == 5
+
+
+def test_chat_nonempty_skips_thin_reasoner_stub() -> None:
+    """A 40-char reasoner stub must not become a skip-if-good reflect file."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    n = {"i": 0}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        n["i"] += 1
+        if n["i"] == 1:
+            return _fake_response(200, "short stub")
+        return _fake_response(200, "C" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat_nonempty(
+            [{"role": "user", "content": "reflect"}],
+            ladder=[("deepseek-reasoner", 12000),
+                    ("deepseek-chat", 8000)],
+            tools=False,
+            stage_label="SECTOR REFLECT Technology 2026-09-03",
+        )
+    assert text == "C" * 220
+    assert n["i"] == 2
+
+
+def test_chat_nonempty_skips_tool_dump() -> None:
+    """A ≥200-char DSML blob must not become a sector reflect file."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n' + ("q" * 200)
+    )
+    answers = [dump, "R" * 220]
+
+    def fake_chat(*args, **kwargs):
+        return answers.pop(0)
+
+    with mock.patch.object(dc, "chat", side_effect=fake_chat):
+        text = dc.chat_nonempty(
+            [{"role": "user", "content": "reflect"}],
+            ladder=[("deepseek-reasoner", 12000),
+                    ("deepseek-chat", 8000)],
+            tools=False,
+            stage_label="SECTOR REFLECT Energy 2026-09-04",
+        )
+    assert text == "R" * 220
+    from src.skip_if_good import is_tool_dump
+    assert not is_tool_dump(text)
+
+
 def test_pick_openclaw_token_prefers_live_48() -> None:
     secret64 = "s" * 64
     live48 = "l" * 48
@@ -372,6 +670,7 @@ def main() -> None:
         test_no_fallback_returns_empty,
         test_deepseek_only_unchanged,
         test_deepseek_connect_timeout_does_not_retry,
+        test_deepseek_read_timeout_does_not_retry,
         test_deepseek_chat_caps_grok_sized_output_budget,
         test_describe_routing_no_secrets,
         test_timeout_content_is_empty,
@@ -380,6 +679,16 @@ def main() -> None:
         test_grok_only_no_fallback_when_already_down,
         test_connect_timeout_marks_gateway_down,
         test_pick_openclaw_token_prefers_live_48,
+        test_sector_outcome_caps_deepseek_tool_rounds,
+        test_sector_outcome_keeps_essay_instead_of_more_search,
+        test_sector_outcome_caps_tool_calls_per_stage,
+        test_extracts_queries_from_dsml_tool_dump,
+        test_tool_dump_followup_forces_no_tool_close,
+        test_forced_close_retries_when_first_answer_is_a_dump,
+        test_forced_close_dump_assembles_essay_from_thread,
+        test_map_postclose_caps_deepseek_tool_rounds,
+        test_chat_nonempty_skips_thin_reasoner_stub,
+        test_chat_nonempty_skips_tool_dump,
     ]
     failed = 0
     for fn in tests:
