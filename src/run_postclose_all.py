@@ -157,7 +157,7 @@ def _run_one(date: str, force: bool = False) -> None:
          False, timeout_s=60)
     step("General reflect",
          [py, "-m", "src.run_reflect", "--date", date],
-         _exists_gt(f"01_daily/general/{date}_reflect.md", 200),
+         skip_if_good.check_general_reflect(date),
          llm_timeout_s=llm_to)
     # 09-03 already had a 6k-char transcript but never wrote *_reflect.md.
     # Land it before the 11-sector loop so a kill still heals the gate.
