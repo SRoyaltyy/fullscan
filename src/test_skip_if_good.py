@@ -27,9 +27,10 @@ def test_missing_date_is_run() -> None:
 
 
 def test_learn_requires_dated_file_not_stale_board() -> None:
-    # 2026-09-03 never wrote 01_daily/2026-09-03_learnings.md.
+    # 2026-09-04 is still the live session — no dated learnings yet.
     # 03_scoreboard/LEARNINGS.md is always large — that used to skip learn.
-    assert skip_if_good.check_learn_cycle("2026-09-03") is False
+    assert skip_if_good.check_learn_cycle("2026-09-04") is False
+    assert skip_if_good.check_learn_cycle("2026-09-03") is True
     assert skip_if_good.check_learn_cycle("2026-09-01") is True
 
 
@@ -123,19 +124,23 @@ def test_night_pack_dates_heals_prior_session_after_bell() -> None:
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
-    # 09-03 has an outcome + next-session baseline, but no dated learnings.
+    # 09-03 now has dated learnings, but tool-dump sector outcomes
+    # (XLB/XLE/XLV) must still fail the pack.
     assert skip_if_good.check_daily_pipeline_outcome("2026-09-03") is True
-    assert skip_if_good.check_learn_cycle("2026-09-03") is False
+    assert skip_if_good.check_learn_cycle("2026-09-03") is True
     assert skip_if_good.check_postclose_all("2026-09-03") is False
 
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
-    # 09-03 reflect.md was healed from the Grok transcript (#76).
-    # 11 predicts landed; 0 sector outcomes / reflects / dated learnings.
+    # 09-03 reflect.md + 11 sector reflects landed. Three outcome.md
+    # files are leaked DeepSeek tool-call XML and must not skip the heal.
     assert skip_if_good.check_general_reflect("2026-09-03") is True
     assert skip_if_good.check_sector_outcomes("2026-09-03") is False
-    assert skip_if_good.check_sector_reflects("2026-09-03") is False
+    assert skip_if_good.check_sector_reflects("2026-09-03") is True
     assert skip_if_good.check_postclose_all("2026-09-03") is False
+    energy = Path("01_daily/sectors/2026-09-03/energy_outcome.md")
+    assert energy.is_file()
+    assert skip_if_good.is_tool_dump(energy.read_text(encoding="utf-8"))
 
 
 def test_sector_md_counts_only_quality_files() -> None:
@@ -145,15 +150,29 @@ def test_sector_md_counts_only_quality_files() -> None:
         d.mkdir(parents=True)
         (d / "technology_outcome.md").write_text("x" * 50, encoding="utf-8")
         (d / "healthcare_outcome.md").write_text("y" * 250, encoding="utf-8")
+        (d / "energy_outcome.md").write_text(
+            'Actuals\n<｜｜DSML｜｜tool_calls>\n'
+            '<｜｜DSML｜｜invoke name="web_search">\n' + ("q" * 200),
+            encoding="utf-8")
         (d / "energy_reflect.md").write_text("z" * 50, encoding="utf-8")
         (d / "financial_reflect.md").write_text("w" * 250, encoding="utf-8")
         old_root = skip_if_good.ROOT
         skip_if_good.ROOT = root
         try:
             assert skip_if_good._count_sector_md("1999-01-01", "_outcome.md") == 1
+            assert skip_if_good._count_sector_dumps("1999-01-01", "_outcome.md") == 1
+            assert skip_if_good.check_sector_outcomes("1999-01-01") is False
             assert skip_if_good._count_sector_md("1999-01-01", "_reflect.md") == 1
         finally:
             skip_if_good.ROOT = old_root
+
+
+def test_is_tool_dump_detects_dsml_and_web_search() -> None:
+    assert skip_if_good.is_tool_dump("") is False
+    assert skip_if_good.is_tool_dump("# Sector Outcome\nXLE sold off.") is False
+    assert skip_if_good.is_tool_dump(
+        'invoke name="web_search"\nquery=oil') is True
+    assert skip_if_good.is_tool_dump("<x>tool_calls></x>") is True
 
 
 def test_finviz_scrape_requires_elite_export() -> None:
@@ -207,6 +226,7 @@ if __name__ == "__main__":
     test_postclose_all_needs_learn_not_just_outcome()
     test_postclose_all_needs_reflect_and_sector_outcomes()
     test_sector_md_counts_only_quality_files()
+    test_is_tool_dump_detects_dsml_and_web_search()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
     test_degraded_book_is_not_good()

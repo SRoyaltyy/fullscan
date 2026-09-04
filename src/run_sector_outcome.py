@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 
 from . import compute_sector_scores, config, deepseek_client, scoreboard
 from .run_reflect import last_assistant
+from .skip_if_good import is_tool_dump
 from .sector_memory import topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS
 
@@ -174,8 +175,16 @@ def run_one(sector: str, date_str: str) -> None:
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
     existing = os.path.join(out_dir, f"{slug}_outcome.md")
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
-        print(f"[sector-outcome] skip {sector}: outcome already on disk")
-        return
+        try:
+            with open(existing, encoding="utf-8") as fh:
+                on_disk = fh.read()
+        except OSError:
+            on_disk = ""
+        if not is_tool_dump(on_disk):
+            print(f"[sector-outcome] skip {sector}: outcome already on disk")
+            return
+        print(f"[sector-outcome] {sector}: disk file is a tool-dump "
+              f"({len(on_disk)} chars) — rewriting", flush=True)
     predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
     if predict_md == "(missing)":
         print(f"[sector-outcome] skip {sector}: no predict file")
@@ -185,7 +194,7 @@ def run_one(sector: str, date_str: str) -> None:
     transcript_path = os.path.join(
         "01_daily/_transcripts", f"{date_str}_sector_{slug}_outcome.json")
     reused = last_assistant(transcript_path)
-    if len(reused) >= 200:
+    if len(reused) >= 200 and not is_tool_dump(reused):
         print(f"[sector-outcome] {sector}: reuse transcript "
               f"({len(reused)} chars) — no LLM")
         _write_outcome(sector, date_str, out_dir, slug, actual, reused)
@@ -217,8 +226,8 @@ def run_one(sector: str, date_str: str) -> None:
         trace_path=os.path.join(out_dir, f"{slug}_outcome_trace.md"),
         stage_label=f"SECTOR OUTCOME {sector} {date_str}",
     )
-    if len((text or "").strip()) < 200:
-        print(f"[sector-outcome] {sector}: empty/thin LLM "
+    if len((text or "").strip()) < 200 or is_tool_dump(text or ""):
+        print(f"[sector-outcome] {sector}: empty/thin/tool-dump LLM "
               f"({len((text or '').strip())} chars) — not writing a stub "
               "that would skip the next heal", flush=True)
         return
