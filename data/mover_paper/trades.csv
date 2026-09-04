@@ -29,11 +29,13 @@ entry_dt,ticker,side,shares,entry_px,exit_dt,exit_px,notional,fee_in,fee_out,pnl
 2026-08-27 09:30 ET,DLO,BUY,654,15.6,2026-08-28 16:00 ET,15.36,10202.4,8.44,8.63,-174.03,-1.71,2.959,mover,mover,mover
 2026-08-27 09:30 ET,GEN,BUY,352,28.89,2026-08-28 16:00 ET,29.64,10169.28,4.54,4.68,254.78,2.51,2.959,mover,mover,mover
 2026-08-27 09:30 ET,LRCX,BUY,32,314.61,2026-08-28 16:00 ET,312.88,10067.52,2.09,2.18,-59.63,-0.59,2.959,mover,mover,mover
-2026-08-18 16:00 ET,2w_size,BUY,0,0.0,2026-08-18 16:00 ET,0.0,100333.73,0.0,0.0,1977.7,1.97,0,io,live 2w_size day mark (already on),io
-2026-08-19 16:00 ET,2w_size,BUY,0,0.0,2026-08-19 16:00 ET,0.0,102311.43,0.0,0.0,4173.93,4.08,0,io,live 2w_size day mark (already on),io
-2026-08-24 16:00 ET,2w_size,BUY,0,0.0,2026-08-24 16:00 ET,0.0,107880.06,0.0,0.0,0.0,0.0,0,io,no live 2w_size print (gap),io
-2026-08-28 16:00 ET,2w_size,BUY,0,0.0,2026-08-28 16:00 ET,0.0,107878.23,0.0,0.0,0.0,0.0,0,io,no live 2w_size print (gap),io
-2026-08-31 16:00 ET,2w_size,BUY,0,0.0,2026-08-31 16:00 ET,0.0,107878.23,0.0,0.0,245.26,0.23,0,io,live 2w_size day mark (already on),io
-2026-09-01 16:00 ET,2w_size,BUY,0,0.0,2026-09-01 16:00 ET,0.0,108123.49,0.0,0.0,1457.52,1.35,0,io,live 2w_size day mark (already on),io
-2026-09-02 16:00 ET,2w_size,BUY,0,0.0,2026-09-02 16:00 ET,0.0,109581.02,0.0,0.0,2089.95,1.91,0,io,live 2w_size day mark (already on),io
-2026-09-03 16:00 ET,2w_size,BUY,0,0.0,2026-09-03 16:00 ET,0.0,111670.97,0.0,0.0,2223.58,1.99,0,io,live 2w_size day mark (already on),io
+2026-08-13 16:00 ET,2w_size,BUY,0,0.0,2026-08-13 16:00 ET,0.0,100000.0,0.0,0.0,0.0,0.0,0,io,no live 2w_size print (gap),io
+2026-08-14 16:00 ET,2w_size,BUY,0,0.0,2026-08-14 16:00 ET,0.0,100000.0,0.0,0.0,3166.97,3.17,0,io,"live 2w_size day mark (mover list empty, S>=0)",io
+2026-08-18 16:00 ET,2w_size,BUY,0,0.0,2026-08-18 16:00 ET,0.0,103511.27,0.0,0.0,2040.33,1.97,0,io,live 2w_size day mark (already on),io
+2026-08-19 16:00 ET,2w_size,BUY,0,0.0,2026-08-19 16:00 ET,0.0,105551.6,0.0,0.0,4306.12,4.08,0,io,live 2w_size day mark (already on),io
+2026-08-24 16:00 ET,2w_size,BUY,0,0.0,2026-08-24 16:00 ET,0.0,111296.59,0.0,0.0,0.0,0.0,0,io,no live 2w_size print (gap),io
+2026-08-28 16:00 ET,2w_size,BUY,0,0.0,2026-08-28 16:00 ET,0.0,111294.71,0.0,0.0,0.0,0.0,0,io,no live 2w_size print (gap),io
+2026-08-31 16:00 ET,2w_size,BUY,0,0.0,2026-08-31 16:00 ET,0.0,111294.71,0.0,0.0,253.03,0.23,0,io,live 2w_size day mark (already on),io
+2026-09-01 16:00 ET,2w_size,BUY,0,0.0,2026-09-01 16:00 ET,0.0,111547.73,0.0,0.0,1503.68,1.35,0,io,live 2w_size day mark (already on),io
+2026-09-02 16:00 ET,2w_size,BUY,0,0.0,2026-09-02 16:00 ET,0.0,113051.42,0.0,0.0,2156.14,1.91,0,io,live 2w_size day mark (already on),io
+2026-09-03 16:00 ET,2w_size,BUY,0,0.0,2026-09-03 16:00 ET,0.0,115207.55,0.0,0.0,2294.0,1.99,0,io,live 2w_size day mark (already on),io
