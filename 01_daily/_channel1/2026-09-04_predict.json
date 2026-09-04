@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-04T08:01:34.333641-04:00",
+  "fetched_at": "2026-09-04T08:51:59.747362-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,59 +70,59 @@
   "vix": {
     "vix": {
       "date": "2026-09-04",
-      "current": 14.11,
-      "delta_1d": -0.21,
-      "delta_1w": -0.32
+      "current": 14.21,
+      "delta_1d": -0.11,
+      "delta_1w": -0.22
     },
     "vix3m": {
       "date": "2026-09-03",
       "current": 17.42,
       "source": "^VIX3M"
     },
-    "ratio": 0.81,
+    "ratio": 0.816,
     "ratio_source": "vix/vix3m",
     "vix_ma20": 15.08,
-    "ratio_ma20": 0.936
+    "ratio_ma20": 0.942
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-09-04",
-      "last": 90.81,
-      "pct_1d": -0.54
+      "last": 90.51,
+      "pct_1d": -0.87
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-04",
-      "last": 95.12,
-      "pct_1d": -0.42
+      "last": 94.91,
+      "pct_1d": -0.64
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-04",
-      "last": 4515.5,
-      "pct_1d": 0.53
+      "last": 4448.5,
+      "pct_1d": -0.96
     },
     "DXY": {
       "available": true,
       "date": "2026-09-04",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.05,
-      "pct_1m": -0.92
+      "pct_1d": 0.31,
+      "pct_1m": -0.67
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-04",
-      "last": 7761.5,
-      "pct_1d": 0.09
+      "last": 7742.5,
+      "pct_1d": -0.16
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-04",
-      "last": 29679.5,
-      "pct_1d": 0.52
+      "last": 29575.5,
+      "pct_1d": 0.17
     }
   },
   "finviz_futures_tape": {
@@ -526,29 +526,29 @@
         "FTSE": {
           "available": true,
           "date": "2026-09-04",
-          "last": 10833.23,
-          "pct_1d": 0.02
+          "last": 10830.18,
+          "pct_1d": -0.01
         },
         "DAX": {
           "available": true,
           "date": "2026-09-04",
-          "last": 26100.16,
-          "pct_1d": 0.37
+          "last": 26128.03,
+          "pct_1d": 0.48
         },
         "CAC": {
           "available": true,
           "date": "2026-09-04",
-          "last": 8276.85,
+          "last": 8276.15,
           "pct_1d": -0.12
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-09-04",
-          "last": 6392.96,
-          "pct_1d": 0.16
+          "last": 6395.16,
+          "pct_1d": 0.2
         }
       },
-      "composite_avg": 0.11
+      "composite_avg": 0.14
     }
   },
   "yield_spx_corr": {
@@ -596,8 +596,8 @@
       },
       {
         "source": "rss_google_macro",
-        "title": "Federal Reserve cuts interest rates by 0.25 percentage points amid weaker labor market - CBS News",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTVI4V3NsaGhkU0JBVy0xamVNNHlBbFRDNUZKbzNXWkVlaGNNb0FsV2JReEtNaHE2TEVtaThKU01la1FZMlh3eWxGdkNOdWk5OFVzWk5ibFhhakZCZFg2cGU4TVN1S2VJY21JMnJXRGhTMkRxaVdBa0FxcDNGWWxVSU5wdEtoaG5lY3JsajVaLXnSAZYBQVVfeXFMTWdGZDVzc2tndUE4bjE4M0pmR2NyMTJIZENSVDFNN0k5X0o2bkRfOHk4S255OUxsZlBYRkVyS1NzaEp4bU1KWHk4Sk1fVmZGQmpheXQ5Q2p2RzBWNmh0Vlh6QXBaUzVlSF83X1VmZDQtaUZicHpnRHFXUDRkQXllWF9WQTdOUWRsNVI2Y1p1NVRNWThJOE5B?oc=5",
+        "title": "Federal Reserve cuts key rate yet Powell says future reductions are not locked in - AP News",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOLW42Y1hra1VzY3pGdFFJSW5yVUlYbzdhWEt4aHhtM3UtdXZlNWk3X1h5d0I5SjhFMWdLeXZwUjZrVmlRLWZsQkdqUGxNSy1TNDhlaWdiaGZXYXVrYzlRY2FzNk5RN1YxdFFDNzR1Y25jTFptY0hxcHUzdm1qZXdxWlkxR21DeFhhZlZqNGdwOUhaWm5teFNNSkZ3?oc=5",
         "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
       },
       {
@@ -608,14 +608,14 @@
       },
       {
         "source": "rss_google_macro",
-        "title": "Federal Reserve cuts key rate yet Powell says future reductions are not locked in - AP News",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOLW42Y1hra1VzY3pGdFFJSW5yVUlYbzdhWEt4aHhtM3UtdXZlNWk3X1h5d0I5SjhFMWdLeXZwUjZrVmlRLWZsQkdqUGxNSy1TNDhlaWdiaGZXYXVrYzlRY2FzNk5RN1YxdFFDNzR1Y25jTFptY0hxcHUzdm1qZXdxWlkxR21DeFhhZlZqNGdwOUhaWm5teFNNSkZ3?oc=5",
+        "title": "Missing government data unlikely to sway Federal Reserve from rate-cut path - PBS",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFNCb2o4WWI5Mnd1bWtaNDROQzVDWWFoNmduNWhhS0tjLXJoMnEyaVFPa0czMTM0dUdJRGlDSGEtaWZHQXhZNmZLeGs5YnA0R0lRZTZ6SG1aV3IyaTZNZ0RldEZuN0JYSEJNNTczMVJSTm1zbW04MFFRZk9memFXSXZfR1VDTUxpUFJxSkE1QWVKbGRjZ0kteTVGWndtaUhDc0JNNzJOUVlYbjRhREtVTQ?oc=5",
         "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
       },
       {
         "source": "rss_google_macro",
-        "title": "Missing government data unlikely to sway Federal Reserve from rate-cut path - PBS",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFNCb2o4WWI5Mnd1bWtaNDROQzVDWWFoNmduNWhhS0tjLXJoMnEyaVFPa0czMTM0dUdJRGlDSGEtaWZHQXhZNmZLeGs5YnA0R0lRZTZ6SG1aV3IyaTZNZ0RldEZuN0JYSEJNNTczMVJSTm1zbW04MFFRZk9memFXSXZfR1VDTUxpUFJxSkE1QWVKbGRjZ0kteTVGWndtaUhDc0JNNzJOUVlYbjRhREtVTQ?oc=5",
+        "title": "Federal Reserve cuts interest rates by 0.25 percentage points amid weaker labor market - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTVI4V3NsaGhkU0JBVy0xamVNNHlBbFRDNUZKbzNXWkVlaGNNb0FsV2JReEtNaHE2TEVtaThKU01la1FZMlh3eWxGdkNOdWk5OFVzWk5ibFhhakZCZFg2cGU4TVN1S2VJY21JMnJXRGhTMkRxaVdBa0FxcDNGWWxVSU5wdEtoaG5lY3JsajVaLXnSAZYBQVVfeXFMTWdGZDVzc2tndUE4bjE4M0pmR2NyMTJIZENSVDFNN0k5X0o2bkRfOHk4S255OUxsZlBYRkVyS1NzaEp4bU1KWHk4Sk1fVmZGQmpheXQ5Q2p2RzBWNmh0Vlh6QXBaUzVlSF83X1VmZDQtaUZicHpnRHFXUDRkQXllWF9WQTdOUWRsNVI2Y1p1NVRNWThJOE5B?oc=5",
         "published_at": "Wed, 29 Oct 2025 07:00:00 GMT"
       },
       {
@@ -734,6 +734,12 @@
       },
       {
         "source": "rss_google_macro",
+        "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - knopnews2.com",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxON1l6bDJmT3luYVM5eDN3TnJkQzJaUmxBdXFGSWZhZ2I0ajFQNTlrcjc2NnBmWDA5Vmw1dUQ3Q1NjMXVFVndyZl9VN3FBb1VmdHMwUHMwRXZzdWpHc3pKODNVeWVkbGxaSjhjYVpvSVJndXJuVXZxMnhxWHJMY09tTmp2YmdyNTlndDQ1NGpWTERubmN6R1QxME9GOWpuTzBxMVV4U1lSTFY3MG1XNUFRTjBSTUxrOUxRbG1TdNIB0AFBVV95cUxPdmpMcEpya19YeFRSdEc3MTFPd3pSbGxHTE1naVBkRFFNZUQ5VjVQQkF0UW1CZzhBVXhwMnp1VEE1RTY3aDZKREpPdHl4Wll1YWlUenJDNjRiNEN1MUlXQ1hkOUt6cFoxRFo2VjFWWGR3WTRyZjhFWnZYd3dJZk83ZHRHV0QwejNwQld1NkpyajVxS2RBZTlqeDc3RUhZRDdoZHRlVnp1cUNES1FQTVc0NDZLdC0zOEszVGVRTmxjVmQ5N2ZFb3JhSkk5QjF3Z0hf?oc=5",
+        "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
+      },
+      {
+        "source": "rss_google_macro",
         "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - KTVF Fairbanks",
         "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeHMzdDZKVnlYMFl2ZmRVNFEyX1FySXZjcGJQcUZOMDFScU1Yem5TcDczWEJVQVVoeDE5VDJUWTA3NjJwZmc4emhQSTFpRTFCclVWWDlvU0JONTlDMmpsQ295dE1hTUk4d2kyRkZtay1CaUxPOVI1a1FtQkpkdnl3c2ZZOFB2ZTdybWc4S25LekhESHVZNGhmajJjeC1FSll4S0NMVGdHWTlxNlVHazFRXzVURFU4b3Q5WjFsN3g4SG50RjFuSzZsVtIB3AFBVV95cUxNWUpPN0ljM1RfUzFKbGpocFJFdHp3QUxVSTYta3JFZnNTb0ZoTVlBbjhEQ3FjaWZkTUFDdElUbGVwY1VhN3ZfLWhzS2FVMGxVM2RnUmh1OXdEcExTck84NWw0VU1fZ0x6WloxOTFTRWNnZl9vWV9rUzdHeWxoTlE2enlqdHN6eU1ZNEJ5cFVhcTlTWnZqeDVFU09tT29XdEM0LThhemY0SURQNldJeHl6M2N2NVNPUXVHLUl4bmtVQkhXWTdwdHdWWTJHWHBCZHZKVlRXekFwSzJzZ0lO?oc=5",
         "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
@@ -742,12 +748,6 @@
         "source": "rss_google_macro",
         "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - 29news.com",
         "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY0R1R2FSZjdwMmRPT3oxaXRGc3EzbU4wNzFxX3FYY2szaG5ZdjhDY2FzR0lXb3ZsSkVrOUZ2RFMzdDc5NkdaV3kyZEgyb0Q1NVJDSU4zaFJVdXAyc2d1Wi05MmZVWk9qZmVsYUV4UGx3VFF1WVZpTFN1Z3BrOFEzRkZDTGVOR3RlN0FFLXMyNVl4YTVWUEtseVNKTWpKalFVRkVPQjhIMUUtZW5YLVp3Mi02WDdtTUFC0gHMAUFVX3lxTFAzbWdKTEhKbGdXYlg3WWJCbDljWVJNVmlld3diS01oWkdNSDJURWhSV29hQk1OVC1uVWJmZmp1RlQ3VUIzeERWZGZ5RUY2SjlETnZIN3FQX0NSby1LaHZIYlpqMXhGbUp1MDJIM2I4LVpLQ2RLbzBqN3RIYzBCTW85dklaMWhuMnZjS1YxREtyWHlBaVlfdEprUzBQcDNmVnB5MWJ3QmJ5dlFvUFNYeEtJM1FibUtLRjNkbWE4VWRwVGg4bnA5aE1Gc3ExZQ?oc=5",
-        "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
-      },
-      {
-        "source": "rss_google_macro",
-        "title": "Federal Reserve votes to leave key rate unchanged despite persistently high inflation - knopnews2.com",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxON1l6bDJmT3luYVM5eDN3TnJkQzJaUmxBdXFGSWZhZ2I0ajFQNTlrcjc2NnBmWDA5Vmw1dUQ3Q1NjMXVFVndyZl9VN3FBb1VmdHMwUHMwRXZzdWpHc3pKODNVeWVkbGxaSjhjYVpvSVJndXJuVXZxMnhxWHJMY09tTmp2YmdyNTlndDQ1NGpWTERubmN6R1QxME9GOWpuTzBxMVV4U1lSTFY3MG1XNUFRTjBSTUxrOUxRbG1TdNIB0AFBVV95cUxPdmpMcEpya19YeFRSdEc3MTFPd3pSbGxHTE1naVBkRFFNZUQ5VjVQQkF0UW1CZzhBVXhwMnp1VEE1RTY3aDZKREpPdHl4Wll1YWlUenJDNjRiNEN1MUlXQ1hkOUt6cFoxRFo2VjFWWGR3WTRyZjhFWnZYd3dJZk83ZHRHV0QwejNwQld1NkpyajVxS2RBZTlqeDc3RUhZRDdoZHRlVnp1cUNES1FQTVc0NDZLdC0zOEszVGVRTmxjVmQ5N2ZFb3JhSkk5QjF3Z0hf?oc=5",
         "published_at": "Wed, 29 Jul 2026 22:32:00 GMT"
       }
     ]
