@@ -355,6 +355,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "book_1d_has_dead_relvol" in skip
     assert "1d BUY is not all-green" in skip
     assert "book_1d_breaks_all_green" in skip
+    assert "sector outcomes missing" in skip
+    assert "reflect missing" in skip
+    assert "check_general_reflect" in skip
     assert "book ranked without same-day essays" in skip
     assert "book_missing_same_day_essays" in skip
     fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")

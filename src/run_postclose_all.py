@@ -211,8 +211,9 @@ def _run_one(date: str, force: bool = False) -> None:
          timeout_s=7200, llm_timeout_s=captain_to)
 
     if not skip_if_good.check_postclose_all(date):
-        print(f"[postclose-all] DEGRADED {date}: outcome/learn/next-session "
-              "still missing — wrote whatever landed; persist then continue")
+        print(f"[postclose-all] DEGRADED {date}: outcome/reflect/sectors/"
+              "learn/next-session still missing — wrote whatever landed; "
+              "persist then continue")
         _push_pack(date)
         return
     print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
