@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLB basic materials ETF September 3 2026 decline"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLB basic materials stocks September 3 2026 decline copper gold"* → got 6 results (via ddg)
 
-  - XLB: State Street® Materials Select Sector SPDR® ETF - SSGAXLB - Materials Select Sector SPDR ETF: Performance ...XLB in downward trend: price may decline as a result of ...52.62 State Street Materials Select Sector Spdr Etf (XLB ...State Street Materials Select Sector SPDR ETF (XLB) Stock ...XLB ETF Stock Price & OverviewLeading And Lagging Sectors For September 3, 2026 - Benzinga (https://www.ssga.com/us/en/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb)
+  - State Street Materials Select Sector SPDR ETF (XLB) Stock Price, News ... (https://finance.yahoo.com/quote/XLB/)
 
-  - XLB - Materials Select Sector SPDR ETF: Performance ... (https://portfolioslab.com/symbol/XLB)
+  - State Street Materials Select Sector SPDR ETF (XLB) (https://finance.yahoo.com/quote/XLB/history/)
 
-  - XLB in downward trend: price may decline as a result of ... (https://tickeron.com/ticker/XLB/)
+  - Leading And Lagging Sectors For September 3, 2026 - Benzinga (https://www.benzinga.com/etfs/sector-etfs/26/09/61601023/leading-and-lagging-sectors-september-3-2026)
 
-**Step 2 — Research.** The model wanted to know: *"gold silver copper price September 3 2026 selloff"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"gold silver price September 3 2026 pullback dollar yields"* → got 6 results (via ddg)
 
-  - Gold price craters in worst decline since 80s, silver drops 36% (https://www.mining.com/gold-silver-prices-plunge-as-trumps-fed-chair-pick-triggers-selloff/)
+  - Gold advances on softer US dollar, bond yields ahead of ... (https://www.kitco.com/news/off-the-wire/2026-09-03/gold-advances-softer-us-dollar-bond-yields-ahead-payrolls-report)
 
-  - Gold & silver prices plummet: what;s behind market meltdown? (https://www.facebook.com/cgtneuropeofficial/videos/gold-silver-prices-plummet-whats-behind-market-meltdown/1424777405718702/)
+  - Gold Price Forecast For September 2026 | GoldPriceForecast.com (https://www.goldpriceforecast.com/gold-price-analysis/gold-price-forecast-for-september-2026/)
 
-  - hike expectations. Spot gold dropped to an over three - Facebook (https://www.facebook.com/DuncanOilCompany/posts/gold-and-silver-prices-are-continuing-to-fall-on-september-2-2026-extending-a-sh/1492137746273908/)
+  - Gold Rises 3% As Dollar Weakens, Rate Hike Expectations Fall (https://www.forbes.com/sites/conormurray/2026/09/03/gold-rebounds-as-september-interest-rate-hike-expectations-dip/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
