@@ -20,6 +20,7 @@ from zoneinfo import ZoneInfo
 from . import config, deepseek_client
 from .map_heat_evidence import opportunity_tickers_valid, validate_cards
 from .map_heat_research import extract_json, render
+from .run_reflect import last_assistant
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "01_daily" / "map_heat"
@@ -211,13 +212,9 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
         trans = ROOT / "01_daily" / "_transcripts" / f"{target_date}_map_postclose_{stage}.json"
         if not force and trans.exists():
             try:
-                tjs = json.loads(trans.read_text(encoding="utf-8"))
-                asst = next(
-                    (str(m.get("content") or "")
-                     for m in reversed(tjs.get("messages") or [])
-                     if m.get("role") == "assistant"),
-                    "",
-                )
+                # last_assistant skips DSML dumps so a leaked tool-call
+                # cannot burn the 7200s captain budget on a re-call.
+                asst = last_assistant(str(trans))
                 obj = extract_json(asst) or {}
                 clean, errs = validate_cards(
                     obj.get("cards") or [], batch, min_coverage=0.75)
