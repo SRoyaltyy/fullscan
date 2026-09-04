@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T11:48:03.840971-04:00",
+  "updated": "2026-09-04T16:26:05.551025-04:00",
   "window_n": 15,
   "direction_acc": 0.4,
   "notes": [
@@ -10,8 +10,10 @@
     "risk_off_score": -1.0
   },
   "sector_notes": [
-    "sector:Communication Services weak (25%): review sector taxonomy weights / search templates.",
-    "sector:Financial weak (33%): review sector taxonomy weights / search templates.",
-    "sector:Industrials weak (25%): review sector taxonomy weights / search templates."
+    "sector:Communication Services weak (23%): review sector taxonomy weights / search templates.",
+    "sector:Financial weak (31%): review sector taxonomy weights / search templates.",
+    "sector:Industrials weak (23%): review sector taxonomy weights / search templates.",
+    "sector:Technology weak (38%): review sector taxonomy weights / search templates.",
+    "sector:Utilities weak (38%): review sector taxonomy weights / search templates."
   ]
 }
