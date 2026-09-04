@@ -1,6 +1,10 @@
 # Learnings report — 2026-09-03
 
+<<<<<<< HEAD
 Generated: **2026-09-04T11:27:33.702307-04:00** by `src/learn_cycle.py`.
+=======
+Generated: **2026-09-04T11:24:36.713791-04:00** by `src/learn_cycle.py`.
+>>>>>>> origin/main
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,8 +19,13 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 145 |
 | Hypotheses written | 146 (wins=64, losses=82) |
 | News hypotheses | 1 |
+<<<<<<< HEAD
 | Lessons promoted to active | 11 |
 | Active lesson files now | 132 |
+=======
+| Lessons promoted to active | 16 |
+| Active lesson files now | 138 |
+>>>>>>> origin/main
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -79,7 +88,11 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 1 wins, 0 losses
 
 #### WIN — news
+<<<<<<< HEAD
 - **When:** [news] summary={"n_suggestions": 912, "ever_profitable": {"n": 912, "wins": 895, "win_rate": 98.1}, "close_1d": {"n": 890, "wins": 493, "win_rate": 55.4, "avg": 0.23}, "close_3d": {"n": 795, "wins": 500, "win_rate": 62.9, "avg": 0.93}, "close_5d": {"n": 656, "wins": 417, "win_rate": 63.6, "avg": 1.52}, "close_10d"
+=======
+- **When:** [news] summary={"n_suggestions": 912, "ever_profitable": {"n": 912, "wins": 895, "win_rate": 98.1}, "close_1d": {"n": 890, "wins": 493, "win_rate": 55.4, "avg": 0.23}, "close_3d": {"n": 795, "wins": 498, "win_rate": 62.6, "avg": 0.93}, "close_5d": {"n": 656, "wins": 418, "win_rate": 63.7, "avg": 1.53}, "close_10d"
+>>>>>>> origin/main
 - **Ask:** Which event families drive ever-profitable vs 1d close?
 - **Experiment:** [news] Track event-level 1d close win rate daily in learn_cycle.
 - **Do instead:** [news] Rank event families by 1d close, not ever-touch MFE.
@@ -499,12 +512,26 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - `overnight-ai-infra-s-p-bellwether-beat-already-in-ahr-not-ma.md`
 - `when-the-events-addon-already-has-earnings-inside-the-1w-hor.md`
 - `a-voting-fed-member-chair-or-governor-has-a-same-calendar-da.md`
+<<<<<<< HEAD
 - `sector-etf-prediction-where-a-1-relative-reversal-follow-thr.md`
 - `sector-etf-prediction-where-the-prior-session-had-a-1-relati.md`
 - `sector-etf-prediction-where-the-model-identifies-a-same-day.md`
 - `sector-etf-prediction-where-the-prior-session-had-a-1-relati.md`
 - `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md`
 - `sector-etf-prediction-where-the-model-identifies-a-same-day.md`
+=======
+- `a-sector-prediction-scores-a-1-relative-reversal-day-as-alre.md`
+- `sector-prediction-calls-flat-flat-when-broad-market-futures.md`
+- `a-sector-prediction-treats-a-live-two-sided-fed-narrative-hi.md`
+- `a-same-session-high-impact-macro-release-ism-services-cpi-pa.md`
+- `sector-prediction-calls-flat-flat-when-the-sector-s-own-fact.md`
+- `xlf-pre-open-setup-is-genuinely-neutral-s0-s4-all-zero-actua.md`
+- `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md`
+- `a-same-session-macro-surprise-a-voting-fed-member-or-newswir.md`
+- `rule.md`
+- `a-same-session-unscheduled-fed-speaker-surprise-resolves-a-c.md`
+- `same-session-fed-speaker-surprise-after-the-forecast-snapsho.md`
+>>>>>>> origin/main
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 

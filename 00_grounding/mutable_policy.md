@@ -9,7 +9,11 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
+<<<<<<< HEAD
 Last learn_cycle: **2026-09-03**. Promoted: 11. Human digest: `03_scoreboard/LEARNINGS.md`.
+=======
+Last learn_cycle: **2026-09-03**. Promoted: 16. Human digest: `03_scoreboard/LEARNINGS.md`.
+>>>>>>> origin/main
 
 ## Accuracy by topic (graded window)
 
@@ -264,6 +268,22 @@ corrected_behavior: "Before scoring rate easing as positive for REITs, check the
 trigger_pattern: "A REIT/XLRE session with S0=0 and S1=0 — mixed/flat futures, live 10Y/30Y not independently verified falling, 30Y still in a multi-decade stress zone, sticky inflation already in, a two-sided scheduled policy speech not yet delivered — plus confirming multi-horizon relative lag in S2/S3/S4, leftover mega-cap/NQ beta that is not duration relief, and stale DC/industrial occupancy that is not a same-day up vote."
 corrected_behavior: "No correction. Continue: do not one-way score a two-sided policy event in S0; verify the live curve rather than the prior-close 1d column; cap S0/S1 at 0 while 30Y remains in the stress zone and the open change is 1–2 bp; do not double-count the same inflation/policy object into S1 after the speech; keep magnitude at mild unless a verified o
 
+### a-same-session-high-impact-macro-release-ism-services-cpi-pa.md
+---
+trigger_pattern: "A same-session high-impact macro release (ISM Services, CPI, payrolls, etc.) is explicitly named as the load-bearing, two-sided catalyst. Premarket macro tape is flat/mild and there is no anti-FTS or risk-on tape license; S0/S2/S4 are all near zero. Only a modest sector-factor sleeve (e.g., S1 input-cost relief) is positive. The model still emits a signed direction (up) because no divergence flag is tripped."
+corrected_behavior: "When a high-impact scheduled macro release is the stated load-bearing catalyst and S0/S2/S4 are neutral, do not let S1 alone create an up/down forecast. Before the data, either emit no-sign/flat or issue an explicitly conditional call (e.g., “if ISM services beats, XLP should lag in a risk-on rotation; if it misses, XLP can hold flat/up”). If
+
+### a-same-session-macro-surprise-a-voting-fed-member-or-newswir.md
+---
+trigger_pattern: "A same-session macro surprise — a voting Fed member or newswire appearance that resolves a contested rate-hike narrative in the opposite direction from what had been priced — moves equities broadly after the sector forecast snapshot, turning a flat/flat call into a broad risk-on day. The sector layer has no event-risk marker for “Fed speaker live later today” and therefore treats the contested policy path as fully paid."
+corrected_behavior: "Before emitting S0, scan the calendar for voting Fed-member appearances — speeches, interviews, newsmaker events — not just formal meetings / next speech dates. If a Fed speaker is scheduled while rate-hike odds are contested, do not encode that binary as fully paid. Keep S0 at 0 from a direction standpoint, but lower confidence f
+
+### a-same-session-unscheduled-fed-speaker-surprise-resolves-a-c.md
+---
+trigger_pattern: "A same-session, unscheduled Fed-speaker surprise resolves a contested September hike/hold binary in the dovish direction after the pre-open snapshot, turning a flat premarket tape into a broad mega-cap tech rally. The pre-open information set contained no scheduled appearance and no tape signal inconsistent with flat."
+corrected_behavior: "Do not manufacture a directional correction for an unscheduled intraday Fed event. Keep S0 = 0 and flat/mild under the same pre-open evidence. When the Fed hike/hold binary is genuinely contested, note elevated event risk and hold confidence at or below moderate; do not convert a post-session Fed-speaker surprise into an S0 forecasting failure or a new directional rule."
+falsifier: "If future logs show Waller’s appearance was actual
+
 ### a-scheduled-high-impact-macro-data-release-nfp-cpi-fomc-with.md
 ---
 trigger_pattern: "A scheduled high-impact macro data release (NFP/CPI/FOMC) with a soft/expected-easing narrative is the flagged dominant event-risk of the day, while a separate geopolitical de-escalation story is generating positive overnight momentum; the market's actual driver becomes the macro print's repricing of the Fed path, and the geopolitical/oil catalyst fades or flips as attention shifts."
@@ -314,6 +334,16 @@ corrected_behavior: "Before finalizing, reconcile the deterministic pipeline wit
 trigger_pattern: "A sector prediction’s stated magnitude band equals the outcome’s stated actual magnitude (e.g., predicted down/mild, actual magnitude = mild), but the scoreboard line records magnitude_hit False. This scoreboard/accounting inconsistency repeats across runs and can cause a false magnitude lesson to be learned from a correct call."
 corrected_behavior: "Before writing a magnitude/reasoning lesson, cross-check the scoreboard magnitude flag against the OUTCOME block’s ACTUAL_MAGNITUDE and the predicted magnitude band. If predicted band == actual magnitude, treat the scoreboard False as a scoreboard/accounting flag error, flag the line for correction, and do not create a magnitude-threshold reasoning lesson."
 falsifier: "If a published magnitude rubric is audited and shows 
+
+### a-sector-prediction-scores-a-1-relative-reversal-day-as-alre.md
+---
+trigger_pattern: "A sector prediction scores a >+1% relative reversal day as 'already in the tape' and therefore caps the follow-through at mild/confirmation-only, while the actual session reverses hard against the prior day's leadership (XLB +1.69% on 09-02 → XLB −0.62% / rel −1.67% on 09-03). The failure mode is treating a single-day bounce as a durable regime shift when the underlying drivers (gold sleeve, USD weakness) are themselves mean-reverting and the industrial demand backdrop (China contraction) remains the dominant weight."
+corrected_behavior: "When a sector has a >+1% relative reversal day driven by a monetary-metals sleeve (gold/silver) rather than an industrial fundamental (copper squeeze, China rebound), treat the follow-through day as high-risk for reversal rather than
+
+### a-sector-prediction-treats-a-live-two-sided-fed-narrative-hi.md
+---
+trigger_pattern: "A sector prediction treats a live two-sided Fed narrative (hike vs hold odds near a coin flip) as a fully 'carried' S0=0 overlay based on prior sessions having 'already paid' the hawkish side, when a voting Fed member has a same-calendar-day appearance (speech/interview/Q&A) that could deliver a fresh dovish or hawkish counter-signal. The morning's flat-futures snapshot (ES within ±0.5%) is then used as confirmation that no fresh catalyst is pending, when in fact the snapshot predates the scheduled appearance window."
+corrected_behavior: "When a Fed narrative is live and two-sided (hike odds in the 40–70% range, not a settled consensus), the model must check the economic/political calendar for ANY same-calendar-day appearance by a voting Fed member (Chair, Governor, o
 
 ### a-technology-xlk-call-has-fresh-real-catalysts-ai-infrastruc.md
 ---
@@ -624,11 +654,11 @@ current_behavior: ""
 evidence_cited: ""
 error_category: "NONE"
 scope: "general"
-date: "2026-08-25"
+date: "2026-09-03"
 status: "active"
 occurrences: "1"
-promoted_on: "2026-08-27"
-sources: "['2026-08-25_sector_financial_lesson.md']"
+promoted_on: "2026-09-04"
+sources: "['2026-09-03_sector_real_estate_lesson.md']"
 schema_ok: "true"
 ---
 
@@ -645,6 +675,12 @@ schema_ok: "true"
 
 
 (learn_cycle promote)
+
+### same-session-fed-speaker-surprise-after-the-forecast-snapsho.md
+---
+trigger_pattern: "Same-session Fed-speaker surprise after the forecast snapshot reverses a carried hawkish hike-odds narrative. The pre-open tape and yield levels contain no signal of the speaker’s dovish pivot; the sector’s leading scores are all zero, so a flat/flat call is the modal output and the actual absolute move is a direction miss despite a correct relative-lag read."
+corrected_behavior: "No Utilities-specific rule change is warranted. A general same-calendar-day Fed-speaker rule — if promoted — should be used to flag an unresolved binary and lower confidence, not to mint a directional up or down call, because the side of the speaker surprise is not knowable at the snapshot. For XLU on a broad risk-on day, flat-lag remains the correct relative characterization."
+falsifier: "I
 
 ### scheduled-same-session-fed-chair-fomc-keynote-is-the-unresol.md
 ---
@@ -695,6 +731,20 @@ corrected_behavior: "When a same-day macro catalyst (ISM Services, claims, CPI, 
 ---
 trigger_pattern: "Sector has just recorded a strong positive relative reversal (1d/3d/1w rel > 0) and the model invokes a follow-through up/mild default, but a fresh legal/regulatory catalyst hits a top holding at the open. Instead of treating that catalyst as the explicit exception to the follow-through lesson, the model treats it only as a magnitude cap, and it fails to scan for same-theme legal catalysts (Section 230, parallel state suits, antitrust) that can turn a single-stock event into a sector-wide liability repricing."
 corrected_behavior: "When a fresh comparable top-holding catalyst is present, do not default up/mild. Treat it as the follow-through lesson's exception, score S1 negative, and search for compounding industry-wide legal/regulatory catalysts affecting the same the
+
+### sector-prediction-calls-flat-flat-when-broad-market-futures.md
+---
+trigger_pattern: "Sector prediction calls flat/flat when broad-market futures are flat (+0.13%) but the macro tape has a clear risk-on tilt (yields retreating, rate-cut hopes rising, yen dynamics supportive). The model treats 'futures inside ±0.5%' as conclusive evidence of no directional day, ignoring that futures can be flat at open while the day's macro direction (risk-on/risk-off) is already inferable from yield moves, currency dynamics, and prior-session momentum. Additionally, the model has no mechanism to anticipate that a top-2 holding (META ~17%) could rip intraday on a fresh AI-model catalyst announced mid-session — but more importantly, it fails to distinguish 'no fresh catalyst at open' from 'no catalyst possible today,' and it treats a two-name book (META+GOOGL ~35%) as re
+
+### sector-prediction-calls-flat-flat-when-the-sector-s-own-fact.md
+---
+trigger_pattern: "Sector prediction calls flat/flat when the sector's own factor (oil) is offered premarket (WTI −1.19%, Brent −1.07%) but the model suppresses the signed lean because (a) the 1d relative tape from the prior session is flat (+0.07%), (b) the sector already ran 1w rel +4.40% / 1m rel +12.04%, and (c) a DO-INSTEAD rule prefers flat/mild when factors and tape conflict. The actual session delivers a −1.78% relative reversal day — the offered barrel was the correct leading signal, and the flat 1d tape was a stall, not a neutralization."
+corrected_behavior: "When S1 is a live, verified sector-factor print (oil offered −1.19% WTI / −1.07% Brent) and S4 is 0 only because the prior session's 1d relative move was flat (not because the current session's premarket tape is confirmin
+
+### sector-prediction-emits-flat-flat-when-broad-market-tape-is.md
+---
+trigger_pattern: "Sector prediction emits flat/flat when broad-market tape is flat-to-green (+0.13% ES) but a same-session macro catalyst (ISM Services) is explicitly named as two-sided event risk. The model treats 'two-sided' as neutral (S0=0) rather than recognizing that a high-impact release with a consensus beat can trigger broad risk-on that lifts SPY disproportionately vs a defensive/low-beta sector like Healthcare. The sector's own tape (1d rel +0.30%, 3d rel +1.59%) is treated as 'already paid' leftover FTS rather than as evidence the sector is extended vs SPY and vulnerable to mean-reversion when SPY catches up."
+corrected_behavior: "When a high-impact macro release (ISM Services, CPI, payrolls) is scheduled same-session and futures are flat-to-green, do NOT score S0=0 purely 
 
 ### sector-prediction-made-when-the-sector-s-dominant-commodity.md
 ---
@@ -784,6 +834,12 @@ corrected_behavior: "If gold/silver futures are green and USD is weakening, do n
 ---
 trigger_pattern: "XLB writeup already diagnoses an 8/25 composition/transmission setup (NQ >> ES, XLB 1d rel <0.5%, mixed premarket breadth, two-sided S1) and hand-scores flat, but the emitted/graded call is still pipeline up because S4 is scored positive from a sub-0.5% tape and/or leading_sum/total_score disagrees with the written S0–S4 components. Gold HIT is allowed to keep S1 at +1 even when copper is off the record, LME stocks have rebuilt, and China/property remains HIT."
 corrected_behavior: "If 8/25 conditions hold, emitted predicted_direction cannot be up — use the writeup/hand-sum (flat/flat-mild), not a conflicting pipeline up. Cap S4 at 0 when 1d rel <0.5% (1m rel already negative is not confirmation). Net S1 at 0 when gold HIT is offset by fading copper + inventory rebuild
+
+### xlf-pre-open-setup-is-genuinely-neutral-s0-s4-all-zero-actua.md
+---
+trigger_pattern: "XLF pre-open setup is genuinely neutral (S0–S4 all zero); actual session is driven by a same-session, unscheduled Fed-speaker catalyst that no pre-open factor model could observe."
+corrected_behavior: "Do not manufacture a signed sector score for mid-session Fed comments that were not scheduled before the cash open. Treat unresolved high-impact Fed binaries as event risk in confidence/regime language, not as a directional input. If a voting Fed member appearance is scheduled at or before the open, treat it as knowable and score it under the 2026-09-03 lesson pattern."
+falsifier: "Future evidence that Waller’s 09-03 remarks were on a known pre-open schedule, or repeated demonstration that this exact pre-open configuration reliably precedes XLF gains > +1%, would reclas
 
 ## Per-scope DO-INSTEAD
 
