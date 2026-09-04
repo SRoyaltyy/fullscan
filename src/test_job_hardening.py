@@ -283,6 +283,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 0 <= land < grok
     assert "past 09:25 ET — book still runs" in pre
     assert "skip_extras=True" in pre
+    assert "refresh_ranker=True" in pre
+    assert "refresh_ranker" in book
     assert "safe_git_push.sh" in pre
     assert "timeout_s=45 if late" in pre
     assert "No retry" in pre

@@ -529,16 +529,20 @@ def run(date: str | None = None, force: bool = False,
     book_ok = True
     if with_book:
         from . import run_stock_book_all, skip_if_good
-        if (not force) and skip_if_good.check_stock_book_all(date):
-            print(f"[preopen-all] skip stock book (already on disk for {date})")
+        already = (not force) and skip_if_good.check_stock_book_all(date)
+        # ubuntu land_book may have written green.json before essays.
+        # Re-rank whenever essays had a chance to land (not a late 09:25 heal).
+        if already and late:
+            print(f"[preopen-all] skip stock book (already on disk for {date}; "
+                  "past 09:25 — not replacing with an emptier rank)")
         else:
             print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
             try:
-                # Essays already ran (or 09:25 skipped them). Rank only —
+                # Essays already ran (or packet was already ok). Rank only —
                 # paper/sleeve/catalyst must not delay green.json.
                 run_stock_book_all.run(
                     date=date, force=force, skip_llm=True,
-                    skip_extras=True, top=25)
+                    skip_extras=True, refresh_ranker=True, top=25)
             except SystemExit as e:
                 print(f"[preopen-all] WARN: stock book exited: {e}")
             except Exception as e:  # noqa: BLE001 — still publish what we wrote

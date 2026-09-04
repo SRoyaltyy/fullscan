@@ -296,6 +296,7 @@ def run(
     top: int = 25,
     force_sectors: bool = False,
     skip_extras: bool = False,
+    refresh_ranker: bool = False,
 ) -> None:
     date = date or _today()
     config.apply_llm_backend()
@@ -304,13 +305,14 @@ def run(
     _print_status(date, rows)
 
     from . import skip_if_good
-    if (not force) and skip_if_good.check_stock_book_all(date):
+    if (not force) and (not refresh_ranker) and skip_if_good.check_stock_book_all(date):
         print(f"[all] {date}: book + green + weather + join + AB already "
               "on disk — skip")
         return
 
     print(f"[all] plan force={force} skip_llm={skip_llm} "
-          f"skip_extras={skip_extras} force_sectors={force_sectors}")
+          f"skip_extras={skip_extras} refresh_ranker={refresh_ranker} "
+          f"force_sectors={force_sectors}")
 
     def need(key: str) -> bool:
         if force:
@@ -555,6 +557,8 @@ def main() -> None:
     ap.add_argument("--skip-extras", action="store_true",
                     help="Stop after the book + green.json (no paper/sleeve)")
     ap.add_argument("--force-sectors", action="store_true")
+    ap.add_argument("--refresh-ranker", action="store_true",
+                    help="Re-rank even if book + green.json already exist")
     ap.add_argument("--top", type=int, default=25)
     args = ap.parse_args()
     run(
@@ -564,6 +568,7 @@ def main() -> None:
         skip_extras=args.skip_extras,
         top=args.top,
         force_sectors=args.force_sectors,
+        refresh_ranker=args.refresh_ranker,
     )
 
 
