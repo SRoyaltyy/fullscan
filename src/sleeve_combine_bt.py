@@ -58,7 +58,7 @@ SIZE_BUCKETS = ("large+", "mid", "small/micro")
 OPEN_CLOCK, CLOSE_CLOCK = "09:30 ET", "16:00 ET"
 WINDOW_START = "2026-08-13"
 
-MODES = ("combine", "mover_only", "io_only")
+MODES = ("combine", "mover_only", "io_only", "dual")
 
 
 def load_fees() -> dict:
@@ -277,6 +277,8 @@ def run_bt(
     """Shared-account fill sim. `bars(ticker, date) -> {open, close}`."""
     if mode not in MODES:
         raise ValueError(f"mode must be one of {MODES}")
+    if mode == "dual":
+        raise ValueError("dual is two wallets — use run_dual(), not run_bt()")
     assert_matched_hold(mode, hold)
     fees = fees or load_fees()
     cal = [d for d in calendar if d >= WINDOW_START]
@@ -467,6 +469,97 @@ def run_bt(
     }
 
 
+def _stats_from(trades, curve, capital, extra: dict) -> dict:
+    pnls = [t["pnl"] for t in trades]
+    wins = [p for p in pnls if p > 0]
+    final = curve[-1]["equity"] if curve else capital
+    peak, max_dd = capital, 0.0
+    for pt in curve:
+        peak = max(peak, pt["equity"])
+        max_dd = max(max_dd, (peak - pt["equity"]) / peak if peak else 0.0)
+    by_src = {}
+    for src in ("mover", "io"):
+        sp = [t for t in trades if t.get("source") == src]
+        by_src[src] = {
+            "n": len(sp),
+            "hit": (round(sum(1 for t in sp if t["pnl"] > 0) / len(sp), 3)
+                    if sp else None),
+            "pnl": round(sum(t["pnl"] for t in sp), 2),
+        }
+    out = {
+        "capital": capital, "n_trades": len(trades),
+        "n_skipped": extra.get("n_skipped", 0),
+        "hit": round(len(wins) / len(pnls), 3) if pnls else None,
+        "final_equity": round(final, 2),
+        "total_ret_pct": round(100 * (final - capital) / capital, 2),
+        "max_dd_pct": round(100 * max_dd, 2),
+        "gross_win": round(sum(wins), 2),
+        "gross_loss": round(sum(p for p in pnls if p <= 0), 2),
+        "by_source": by_src,
+        "n_gap_days": extra.get("n_gap_days", 0),
+        "trades": trades, "curve": curve,
+        "skipped": extra.get("skipped", []),
+        "audit": extra.get("audit", []),
+    }
+    out.update({k: extra[k] for k in extra if k not in out})
+    return out
+
+
+def run_dual(**kwargs) -> dict:
+    """Two wallets, same hold: mover (gated) + .io size (always on).
+
+    This is the combine that keeps .io's down-day attribute without
+    switching the mover account or mixing 1d with 2w. Each sleeve has
+    half the capital and never spends the other's cash.
+    """
+    capital = float(kwargs.pop("capital", 100_000.0))
+    hold = kwargs.get("hold", "1d")
+    assert_matched_hold("combine", hold)
+    half = capital / 2.0
+    mover = run_bt(mode="mover_only", capital=half, **kwargs)
+    io = run_bt(mode="io_only", capital=half, **kwargs)
+    dates = sorted({c["date"] for c in mover["curve"]} |
+                   {c["date"] for c in io["curve"]})
+    im = {c["date"]: c for c in mover["curve"]}
+    ii = {c["date"]: c for c in io["curve"]}
+    curve = []
+    for d in dates:
+        a, b = im.get(d) or {}, ii.get(d) or {}
+        gaps = [g for g in ((a.get("gap") or ""), (b.get("gap") or "")) if g]
+        curve.append({
+            "date": d,
+            "score": a.get("score") if a.get("score") is not None else b.get("score"),
+            "route": "dual",
+            "why": "mover wallet + .io size wallet (independent cash)",
+            "cash": round((a.get("cash") or 0) + (b.get("cash") or 0), 2),
+            "equity": round((a.get("equity") or half) + (b.get("equity") or half), 2),
+            "open": (a.get("open") or 0) + (b.get("open") or 0),
+            "filled_am": a.get("filled_am") or 0,
+            "filled_pm": b.get("filled_pm") or 0,
+            "exits": (a.get("exits") or 0) + (b.get("exits") or 0),
+            "n_mover_calls": a.get("n_mover_calls") or 0,
+            "n_io_picks": b.get("n_io_picks") or 0,
+            "has_book": b.get("has_book") or False,
+            "gap": "; ".join(gaps),
+        })
+    extra = {
+        "hold": hold, "mode": "dual", "io_select": kwargs.get("io_select", "size"),
+        "top_n": kwargs.get("top_n", 10), "pct": kwargs.get("pct", 0.10),
+        "mover_gate": MOVER_GATE, "io_hard_red": IO_HARD_RED,
+        "n_skipped": mover["n_skipped"] + io["n_skipped"],
+        "n_gap_days": len([c for c in curve if c.get("gap")]),
+        "skipped": (mover.get("skipped") or []) + (io.get("skipped") or []),
+        "audit": (mover.get("audit") or []) + (io.get("audit") or []),
+        "wallets": {
+            "mover": {"ret": mover["total_ret_pct"], "dd": mover["max_dd_pct"],
+                      "trades": mover["n_trades"]},
+            "io": {"ret": io["total_ret_pct"], "dd": io["max_dd_pct"],
+                   "trades": io["n_trades"]},
+        },
+    }
+    return _stats_from(mover["trades"] + io["trades"], curve, capital, extra)
+
+
 def load_live() -> tuple[dict, list[str], dict, dict]:
     payload = json.loads(PAYLOAD.read_text(encoding="utf-8"))
     cal = load_calendar(payload)
@@ -483,7 +576,7 @@ def sweep_live(capital: float = 100_000.0, top_n: int = 10,
     results = []
     for hold in MATCHED_HOLDS:
         io = load_io_picks(hold, "size")
-        for mode in MODES:
+        for mode in ("combine", "mover_only", "io_only"):
             sim = run_bt(
                 calendar=cal, scores=scores, mover_calls=mover, io_picks=io,
                 bars=bars, hold=hold, mode=mode, io_select="size",
@@ -494,6 +587,18 @@ def sweep_live(capital: float = 100_000.0, top_n: int = 10,
                 "total_ret_pct", "max_dd_pct", "final_equity",
                 "n_skipped", "n_gap_days", "by_source", "gross_win",
                 "gross_loss")})
+        dual = run_dual(
+            calendar=cal, scores=scores, mover_calls=mover, io_picks=io,
+            bars=bars, hold=hold, io_select="size",
+            capital=capital, top_n=top_n, pct=pct,
+        )
+        row = {k: dual[k] for k in (
+            "hold", "mode", "io_select", "n_trades", "hit",
+            "total_ret_pct", "max_dd_pct", "final_equity",
+            "n_skipped", "n_gap_days", "by_source", "gross_win",
+            "gross_loss")}
+        row["wallets"] = dual.get("wallets")
+        results.append(row)
     # .io-only 2w reference — not a combine
     io2 = load_io_picks("2w", "size")
     ref = run_bt(
@@ -521,11 +626,10 @@ def run_one_live(hold: str, mode: str, io_select: str = "size",
                  pct: float = 0.10) -> dict:
     payload, cal, scores, mover = load_live()
     io = load_io_picks(hold if hold != "2w" else "2w", io_select)
-    sim = run_bt(
-        calendar=cal, scores=scores, mover_calls=mover, io_picks=io,
-        bars=build_bar_fn(payload), hold=hold, mode=mode, io_select=io_select,
-        capital=capital, top_n=top_n, pct=pct,
-    )
+    kw = dict(calendar=cal, scores=scores, mover_calls=mover, io_picks=io,
+              bars=build_bar_fn(payload), hold=hold, io_select=io_select,
+              capital=capital, top_n=top_n, pct=pct)
+    sim = run_dual(**kw) if mode == "dual" else run_bt(mode=mode, **kw)
     sim["window"] = [cal[0] if cal else None, cal[-1] if cal else None]
     sim["generated_at"] = datetime.now(ET).isoformat(timespec="seconds")
     return sim
@@ -534,21 +638,27 @@ def run_one_live(hold: str, mode: str, io_select: str = "size",
 def _findings(rows: list[dict]) -> str:
     by = {(r.get("hold"), r.get("mode")): r for r in rows}
     c1, m1, i1 = by.get(("1d", "combine")), by.get(("1d", "mover_only")), by.get(("1d", "io_only"))
+    d1 = by.get(("1d", "dual"))
     if not (c1 and m1 and i1):
         return ""
+    dual_line = ""
+    if d1:
+        dual_line = (
+            f" 1d dual (two wallets) is **{d1['total_ret_pct']:+.2f}%** "
+            f"/ {d1['max_dd_pct']:.2f}% DD."
+        )
     return (
         "## Finding (this window)\n"
         "\n"
-        f"The 1d **combine** is **{c1['total_ret_pct']:+.2f}%**. "
+        f"The 1d **switch** is **{c1['total_ret_pct']:+.2f}%**. "
         f"That is worse than mover-only 1d ({m1['total_ret_pct']:+.2f}%) "
         f"and worse than .io-only 1d size ({i1['total_ret_pct']:+.2f}%). "
-        "The curve-stitch that mixed mover 1d with live .io 2w_size was "
-        "not a valid combine — once holds, cash lock, and source gaps are "
-        "enforced, switching books on S does not beat running .io 1d/3d "
-        "size as its own account. Hard-red cash days skip .io fills that "
-        "the solo .io book would have taken; 08-13/14 are mover gaps "
-        "(no BUY calls), not days we can secretly fill from the afternoon "
-        "book."
+        "Copying .io green-pile / join-good / sector-not-red onto mover "
+        "names also fails on down days (weak-sector mover names bounced). "
+        "The attribute that transfers is the **size book plus staying on**: "
+        "two wallets, same hold — mover gated on green mornings, .io size "
+        "always invested. That is `dual`."
+        + dual_line
     )
 
 
@@ -598,7 +708,7 @@ def render(doc: dict, primary: dict | None = None) -> str:
     ]
     for r in rows:
         bs = r.get("by_source") or {}
-        tag = "**" if r.get("mode") == "combine" and r.get("hold") == "1d" else ""
+        tag = "**" if r.get("mode") == "dual" and r.get("hold") == "1d" else ""
         lines.append(
             f"| {tag}{r['hold']}{tag} | {tag}{r['mode']}{tag} | "
             f"{r['total_ret_pct']:+.2f}% | {r['max_dd_pct']:.2f}% | "
@@ -623,6 +733,27 @@ def render(doc: dict, primary: dict | None = None) -> str:
         "2026-08-14), that day is a **source gap**, not a silent cash day. "
         "The combine does not invent .io fills at 09:30 to paper over it — "
         "that would leak the afternoon book.",
+        "",
+        "## .io attributes that do / do not transfer onto mover",
+        "",
+        "Leak-free test: take every mover BUY with a 1d print and tag "
+        "the 09:30 boxes (same boxes the lookback already shows before "
+        "the open). Do **not** use today's afternoon book.",
+        "",
+        "| Attribute | On S < +1 (down/messy) | Use it? |",
+        "|---|---|---|",
+        "| Green pile / join-good / sector-not-red | Hurts (weak-sector "
+        "mover names bounced; join-good was −0.3% vs +1.5%) | No |",
+        "| AB-good + peer-good as a top-10 filter | Hurts vs raw cond "
+        "top-10 | No |",
+        "| Yesterday's 1d book overlap | Rare (n=25) but 64% win / +1.0% | "
+        "Size-up only, never a requirement |",
+        "| Size-bucket book, always on, own cash | This *is* the down-day "
+        "engine (1d .io size +6.5%) | **Yes — dual wallets** |",
+        "",
+        "`dual` is two accounts at half capital: mover still gated at "
+        "S ≥ +1, .io size still buys on red mornings. Same hold. No "
+        "shared cash clock.",
         "",
     ]
     if primary:

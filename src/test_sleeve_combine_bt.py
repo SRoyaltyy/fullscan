@@ -13,6 +13,7 @@ from src.sleeve_combine_bt import (
     order_fees,
     render,
     run_bt,
+    run_dual,
 )
 
 
@@ -227,12 +228,38 @@ def test_report_says_combine_lost_when_it_did() -> None:
             {"hold": "1d", "mode": "io_only", "total_ret_pct": 6.5,
              "max_dd_pct": 2.5, "hit": 0.48, "n_trades": 85,
              "n_gap_days": 4, "by_source": {"mover": {"pnl": 0}, "io": {"pnl": 6}}},
+            {"hold": "1d", "mode": "dual", "total_ret_pct": 4.0,
+             "max_dd_pct": 1.5, "hit": 0.5, "n_trades": 50,
+             "n_gap_days": 5, "by_source": {"mover": {"pnl": 1}, "io": {"pnl": 3}}},
         ],
     })
     assert "Finding" in md
     assert "worse than" in md
+    assert "dual" in md
     assert "cannot combine mover with .io hold" not in md
     assert "2w / 1m are not combined" in md
+
+
+def test_dual_keeps_io_on_down_days() -> None:
+    """Mover wallet sits out S<1; .io wallet still fills at the close."""
+    px = {("AAA", d): (100.0, 100.0) for d in CAL}
+    px.update({("CCC", d): (50.0, 50.0) for d in CAL})
+    sim = run_dual(
+        calendar=CAL,
+        scores={"2026-08-13": 5.0, "2026-08-14": -6.0},
+        mover_calls={"2026-08-13": [{"ticker": "AAA", "conviction": 1}]},
+        io_picks={"2026-08-14": [{"ticker": "CCC", "score": 1}]},
+        bars=_bars(px), hold="1d", io_select="top",
+        capital=24_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    assert sim["mode"] == "dual"
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    d14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    assert d13["filled_am"] == 1
+    assert d14["filled_pm"] == 1, "io wallet must still buy the down day"
+    assert d14["route"] == "dual"
+    srcs = {t["source"] for t in sim["trades"]}
+    assert srcs == {"mover", "io"}
 
 
 def test_run_bt_rejects_bad_mode() -> None:
@@ -242,6 +269,16 @@ def test_run_bt_rejects_bad_mode() -> None:
     except ValueError:
         return
     raise AssertionError("bad mode must raise")
+
+
+def test_run_bt_rejects_dual_inline() -> None:
+    try:
+        run_bt(calendar=CAL, scores={}, mover_calls={}, io_picks={},
+               bars=_bars({}), mode="dual")
+    except ValueError as e:
+        assert "run_dual" in str(e)
+        return
+    raise AssertionError("dual must go through run_dual")
 
 
 if __name__ == "__main__":
@@ -257,5 +294,7 @@ if __name__ == "__main__":
     test_fees_and_whole_shares()
     test_bar_fn_does_not_invent_open()
     test_report_says_combine_lost_when_it_did()
+    test_dual_keeps_io_on_down_days()
     test_run_bt_rejects_bad_mode()
+    test_run_bt_rejects_dual_inline()
     print("ok")
