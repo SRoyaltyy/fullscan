@@ -30,7 +30,7 @@ from zoneinfo import ZoneInfo
 
 from . import config, skip_if_good
 from .map_heat_postclose import next_weekday
-from .skip_if_good import last_closed_session
+from .skip_if_good import night_pack_dates
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -66,8 +66,16 @@ def _exists_gt(rel: str, n: int) -> bool:
 
 def run(date: str | None = None, force: bool = False,
         llm_backend: str | None = None) -> None:
-    date = date or last_closed_session()
     config.apply_llm_backend(llm_backend)
+    if date:
+        dates = [date]
+    else:
+        dates = night_pack_dates()
+    for one in dates:
+        _run_one(one, force=force)
+
+
+def _run_one(date: str, force: bool = False) -> None:
     target = next_weekday(date)
     py = sys.executable
     print("")

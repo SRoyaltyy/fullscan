@@ -49,6 +49,28 @@ def _next_weekday(date_s: str) -> str:
     return d.isoformat()
 
 
+def _prev_weekday(date_s: str) -> str:
+    d = datetime.strptime(date_s, "%Y-%m-%d").date()
+    d -= timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= timedelta(days=1)
+    return d.isoformat()
+
+
+def night_pack_dates(now: datetime | None = None) -> list[str]:
+    """Last-closed, plus the prior weekday when that night pack is missing.
+
+    2026-09-03 learnings never landed. After 16:00 ET on 2026-09-04
+    last_closed flips to the 4th; without this, the 3rd stays unhealed.
+    """
+    closed = last_closed_session(now)
+    dates = [closed]
+    prior = _prev_weekday(closed)
+    if not check_postclose_all(prior):
+        dates.insert(0, prior)
+    return dates
+
+
 def _exists_gt(path: Path, min_bytes: int) -> bool:
     try:
         return path.is_file() and path.stat().st_size >= min_bytes
@@ -376,14 +398,20 @@ def main() -> None:
     ap.add_argument("--job", required=True, choices=sorted(JOBS))
     ap.add_argument("--date", default=None)
     args = ap.parse_args()
-    if args.date:
-        date = args.date
-    elif args.job in ("map_heat_postclose", "postclose_all"):
-        date = last_closed_session()
-    else:
-        date = _today()
     os.chdir(ROOT)
-    ok = JOBS[args.job](date)
+    if args.date:
+        ok = JOBS[args.job](args.date)
+    elif args.job == "postclose_all":
+        # Last-closed plus a missing prior weekday (2026-09-03 learnings).
+        ok = True
+        for d in night_pack_dates():
+            if not check_postclose_all(d):
+                ok = False
+                break
+    elif args.job == "map_heat_postclose":
+        ok = JOBS[args.job](last_closed_session())
+    else:
+        ok = JOBS[args.job](_today())
     raise SystemExit(0 if ok else 1)
 
 

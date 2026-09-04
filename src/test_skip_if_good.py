@@ -101,6 +101,20 @@ def test_dead_relvol_1d_buy_is_not_good() -> None:
         assert skip_if_good.book_1d_has_dead_relvol(js) is False
 
 
+def test_night_pack_dates_heals_prior_session_after_bell() -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    et = ZoneInfo("America/New_York")
+    after_bell = datetime(2026, 9, 4, 16, 10, tzinfo=et)
+    dates = skip_if_good.night_pack_dates(after_bell)
+    assert dates[-1] == "2026-09-04"
+    assert "2026-09-03" in dates
+    before_bell = datetime(2026, 9, 4, 8, 40, tzinfo=et)
+    assert skip_if_good.last_closed_session(before_bell) == "2026-09-03"
+    assert skip_if_good._prev_weekday("2026-09-04") == "2026-09-03"
+    assert skip_if_good._prev_weekday("2026-09-07") == "2026-09-04"
+
+
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
     # 09-03 has an outcome + next-session baseline, but no dated learnings.
     assert skip_if_good.check_daily_pipeline_outcome("2026-09-03") is True
@@ -154,6 +168,7 @@ if __name__ == "__main__":
     test_book_without_essays_is_not_good()
     test_1d_buy_not_all_green_is_not_good()
     test_dead_relvol_1d_buy_is_not_good()
+    test_night_pack_dates_heals_prior_session_after_bell()
     test_postclose_all_needs_learn_not_just_outcome()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()

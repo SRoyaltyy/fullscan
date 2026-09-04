@@ -48,6 +48,8 @@ def test_packet_step_done_missing_is_false() -> None:
 def test_postclose_default_date_is_closed_session() -> None:
     d = skip_if_good.last_closed_session()
     assert len(d) == 10
+    dates = skip_if_good.night_pack_dates()
+    assert d in dates
 
 
 def test_preopen_waits_for_night_and_scrape() -> None:

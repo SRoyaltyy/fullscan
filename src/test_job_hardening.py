@@ -377,6 +377,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "exit 1" not in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
     assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
+    assert "night_pack_dates" in learn
+    assert "def _run_one" in learn
     learn_yml = (WF / "learn_cycle.yml").read_text(encoding="utf-8")
     assert "last_closed_session" in learn_yml
     assert '--date "${closed_session}"' in learn_yml
