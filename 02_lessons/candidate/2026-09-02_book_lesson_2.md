@@ -7,7 +7,7 @@ evidence_cited: "CRM 2026-08-21 outweighed into Aug 26 print (join -0.642, news 
 error_category: "B"
 scope: "book"
 date: "2026-09-02"
-status: "candidate"
+status: "promoted"
 schema_ok: "true"
 validation_errors: ""
 ---

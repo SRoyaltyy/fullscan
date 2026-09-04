@@ -62,5 +62,5 @@ Updated: 2026-09-03. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-21 | sector:Technology | 3d | down/mild | +2.89% (up/notable) | ❌ | ❌ |
 | 2026-08-21 | sector:Real Estate | 3d | up/mild | -0.93% (down/mild) | ❌ | ✅ |
 
-*485 calls still maturing (T+h close not recorded yet).*
+*533 calls still maturing (T+h close not recorded yet).*
 
