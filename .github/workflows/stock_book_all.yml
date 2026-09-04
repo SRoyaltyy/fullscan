@@ -175,6 +175,8 @@ jobs:
           echo "Fixed Chrome links (after Pages is enabled):"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
+          echo "  https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
+          echo "  https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "  https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Repo Settings → Pages → Source = Deploy from branch → gh-pages / (root)"
           echo "=============================================="

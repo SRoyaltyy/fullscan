@@ -485,6 +485,12 @@ def run(
         check=False,
     )
 
+    print("[all] → Sleeve combine (dual wallets, all days, buy/sell dashboard)")
+    _run(
+        [sys.executable, "-m", "src.sleeve_combine_bt", "--mode", "io_boost", "--hold", "3d"],
+        check=False,
+    )
+
     print("[all] → Book learn (weight tuner from realized forward returns)")
     _run(
         [sys.executable, "-m", "src.book_learn", "--date", date, "--update-prices"],
@@ -502,6 +508,7 @@ def run(
     print(f"[all] book → 01_daily/{date}_stock_book.md")
     print("[all] backtest → 03_scoreboard/STOCK_BOOK_BACKTEST.md")
     print("[all] paper trading → dashboard/index.html + 03_scoreboard/PAPER_TRADING.md")
+    print("[all] sleeve combine → dashboard/sleeve-combine/index.html + 03_scoreboard/SLEEVE_COMBINE_BT.md")
 
 
 def main() -> None:

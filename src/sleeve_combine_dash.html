@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sleeve combine — dual wallets</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --chip:#2a3450; --gold:#fbbf24; --io:#60a5fa; --mv:#fbbf24;
+ }
+ *{box-sizing:border-box}
+ html,body{overflow-x:hidden}
+ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px}
+ h1{font-size:20px;margin:0 0 4px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .sub a{color:#93c5fd}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
+ .day-nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+ .day-nav button,.day-nav select{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
+ .day-nav button:disabled{opacity:.35;cursor:default}
+ .fill{display:grid;grid-template-columns:72px 1fr 90px 90px;gap:4px 10px;padding:8px 10px;border-bottom:1px solid var(--line2);align-items:center}
+ .fill .side{font-weight:700;font-variant-numeric:tabular-nums}
+ .fill .buy{color:var(--pos)}.fill .sell{color:var(--neg)}
+ .fill .src{font-size:11px;color:var(--mut);text-transform:uppercase}
+ .sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0;background:var(--card)}
+ table{border-collapse:separate;border-spacing:0;width:100%;font-size:12.5px}
+ th,td{padding:6px 8px;border-bottom:1px solid var(--line2);text-align:right;white-space:nowrap}
+ th{color:var(--mut);text-align:right} td:first-child,th:first-child{text-align:left}
+ h2{font-size:15px;margin:18px 0 6px;color:#aeb9cf}
+ .legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--mut);margin:6px 0 0}
+ .legend i{display:inline-block;width:18px;height:3px;margin-right:5px;vertical-align:middle}
+ svg{width:100%;height:260px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ .empty{color:var(--dim);padding:16px}
+</style></head><body><div class="wrap">
+<h1>Sleeve combine — dual wallets</h1>
+<div class="sub" id="gen"></div>
+<div class="sub">Mover stays gated (09:30 open, S ≥ +1). .io size stays on (16:00 close), including hard-red mornings. Same hold. Separate cash. <a href="../">.io paper</a> · <a href="../mover-paper/">mover paper</a></div>
+<div class="cards" id="cards"></div>
+<div id="chart"></div>
+<div class="legend">
+ <span><i style="background:#4ade80"></i>combined</span>
+ <span><i style="background:#fbbf24"></i>mover wallet</span>
+ <span><i style="background:#60a5fa"></i>.io size wallet</span>
+</div>
+<h2>Sweep (this window)</h2>
+<div class="sheet"><table id="sweep"></table></div>
+<h2 id="dayTitle">Buys and sells — pick a day</h2>
+<p class="mut" style="margin:0 0 8px">Every session in the window. Sells first (cash freed), then buys. AM = mover 09:30. PM = .io 16:00.</p>
+<div class="day-nav">
+ <button type="button" id="dayPrev">← Prev</button>
+ <select id="dayPick"></select>
+ <button type="button" id="dayNext">Next →</button>
+ <select id="daySide">
+  <option value="all">Buys + sells</option>
+  <option value="BUY">Buys only</option>
+  <option value="SELL">Sells only</option>
+ </select>
+ <select id="daySrc">
+  <option value="all">Both wallets</option>
+  <option value="mover">Mover</option>
+  <option value="io">.io</option>
+ </select>
+</div>
+<div id="dayMeta" class="sub"></div>
+<div id="dayFills"></div>
+<h2>All fills</h2>
+<div class="sheet"><table id="allFills"></table></div>
+</div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const money = n => (n==null||n!==n) ? "—" : ((n<0?"-":"")+"$"+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:0,maximumFractionDigits:0}));
+const pct = n => (n==null||n!==n) ? "—" : ((n>=0?"+":"")+Number(n).toFixed(2)+"%");
+const cls = n => n>0 ? "pos" : n<0 ? "neg" : "mut";
+
+$("gen").textContent = (D.window||[]).join(" → ") + " · generated " + (D.generated||"") +
+  " · $" + (D.capital||0).toLocaleString() + " · hold " + (D.hold||"1d") + " · " + (D.mode||"dual");
+
+const st = D.stats || {};
+const cards = [
+  ["Combined", pct(st.total_ret_pct), cls(st.total_ret_pct)],
+  ["Max DD", (st.max_dd_pct!=null?st.max_dd_pct.toFixed(2)+"%":"—"), "mut"],
+  ["Win", st.hit!=null?(100*st.hit).toFixed(1)+"%":"—", "mut"],
+  ["Round-trips", String(st.n_trades||0), "mut"],
+  ["Fills (B+S)", String((D.fills||[]).length), "mut"],
+  ["Mover P&L", money((st.by_source||{}).mover && (st.by_source.mover.pnl)), cls(((st.by_source||{}).mover||{}).pnl)],
+  [".io P&L", money((st.by_source||{}).io && (st.by_source.io.pnl)), cls(((st.by_source||{}).io||{}).pnl)],
+  ["Final", money(st.final_equity), "gold"],
+];
+$("cards").innerHTML = cards.map(([k,v,c]) => `<div class="card">${k}<b class="${c}">${v}</b></div>`).join("");
+
+$("chart").innerHTML = D.svg || "";
+
+const sweepRows = (D.results||[]).map(r => {
+  const bold = r.mode==="dual" && r.hold==="1d";
+  const cell = x => bold ? `<b>${x}</b>` : x;
+  return `<tr><td>${cell(r.hold)}</td><td>${cell(r.mode)}</td>
+    <td class="${cls(r.total_ret_pct)}">${cell(pct(r.total_ret_pct))}</td>
+    <td>${r.max_dd_pct.toFixed(2)}%</td><td>${r.hit!=null?(100*r.hit).toFixed(1)+"%":"—"}</td>
+    <td>${r.n_trades}</td></tr>`;
+}).join("");
+$("sweep").innerHTML = `<thead><tr><th>Hold</th><th>Mode</th><th>Ret</th><th>Max DD</th><th>Win</th><th>Trades</th></tr></thead><tbody>${sweepRows}</tbody>`;
+
+const days = D.days || [];
+let ix = Math.max(0, days.length-1);
+const pick = $("dayPick");
+days.forEach((d,i) => {
+  const o = document.createElement("option");
+  o.value = i;
+  const n = (d.fills||[]).length;
+  o.textContent = d.date + (n?` · ${n} fill${n===1?"":"s"}`:" · flat");
+  pick.appendChild(o);
+});
+function renderDay(){
+  if (!days.length){ $("dayFills").innerHTML = '<div class="empty">No sessions.</div>'; return; }
+  ix = Math.max(0, Math.min(ix, days.length-1));
+  pick.value = String(ix);
+  $("dayPrev").disabled = ix<=0;
+  $("dayNext").disabled = ix>=days.length-1;
+  const d = days[ix];
+  const side = $("daySide").value;
+  const src = $("daySrc").value;
+  let fills = (d.fills||[]).slice();
+  if (side!=="all") fills = fills.filter(f => f.side===side);
+  if (src!=="all") fills = fills.filter(f => f.source===src);
+  $("dayTitle").textContent = "Buys and sells — " + d.date;
+  const s = d.score==null ? "—" : Number(d.score).toFixed(2);
+  $("dayMeta").textContent = `S ${s} · ${d.route||""} · AM buys ${d.filled_am||0} · PM buys ${d.filled_pm||0} · sells ${d.exits||0} · open ${d.open||0} · equity ${money(d.equity)}` + (d.gap?` · ${d.gap}`:"");
+  if (!fills.length){
+    $("dayFills").innerHTML = '<div class="empty">No fills this day for that filter.</div>';
+    return;
+  }
+  $("dayFills").innerHTML = fills.map(f => {
+    const pnl = f.side==="SELL" ? `<span class="${cls(f.pnl)}">${money(f.pnl)}</span>` : "";
+    return `<div class="fill">
+      <div class="side ${f.side==="BUY"?"buy":"sell"}">${f.side}</div>
+      <div><b>${f.ticker}</b> <span class="src">${f.source||""} · ${f.clock||""}</span></div>
+      <div>${f.shares} @ $${Number(f.price).toFixed(2)}</div>
+      <div>${pnl}</div>
+    </div>`;
+  }).join("");
+}
+$("dayPrev").onclick = () => { ix--; renderDay(); };
+$("dayNext").onclick = () => { ix++; renderDay(); };
+pick.onchange = () => { ix = +pick.value; renderDay(); };
+$("daySide").onchange = renderDay;
+$("daySrc").onchange = renderDay;
+renderDay();
+
+const all = (D.fills||[]);
+$("allFills").innerHTML = `<thead><tr><th>When</th><th>Side</th><th>Src</th><th>Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P&L</th></tr></thead><tbody>` +
+  all.map(f => `<tr>
+    <td>${f.dt}</td><td class="${f.side==="BUY"?"pos":"neg"}">${f.side}</td>
+    <td>${f.source||""}</td><td>${f.ticker}</td><td>${f.shares}</td>
+    <td>$${Number(f.price).toFixed(2)}</td><td>$${Number(f.fees||0).toFixed(2)}</td>
+    <td class="${cls(f.pnl)}">${f.side==="SELL"?money(f.pnl):"—"}</td>
+  </tr>`).join("") + "</tbody>";
+</script></body></html>
