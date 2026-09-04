@@ -8,9 +8,10 @@ set -euo pipefail
 
 ROOT="${FULLSCAN_ROOT:-/home/gha/fullscan}"
 ENVF="${FULLSCAN_ENV:-/home/gha/.fullscan.env}"
-LOCK="${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}"
+PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
+LOCK="${PREOPEN_LOCK:-$PERSIST/locks/preopen.lock}"
 LOG_DIR="${FULLSCAN_LOG:-/home/gha/fullscan-logs}"
-mkdir -p "$LOG_DIR"
+mkdir -p "$LOG_DIR" "$(dirname "$LOCK")"
 
 exec 9>"$LOCK"
 if ! flock -n 9; then

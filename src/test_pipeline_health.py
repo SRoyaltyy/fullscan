@@ -76,15 +76,15 @@ def test_workflow_routing():
     assert _workflow_for_step("runtime.oauth") is None
     assert "runtime.oauth" in HUMAN_STEPS
     assert _workflow_for_step("scrape.tape") == "finviz_preopen_scrape.yml"
-    assert _workflow_for_step("postclose.baseline_json") == "map_heat_postclose.yml"
+    assert _workflow_for_step("postclose.baseline_json") == "postclose_all.yml"
     assert _workflow_for_step("preopen.events") == "preopen_all.yml"
-    assert _workflow_for_step("book.weather") == "label_weather.yml"
-    assert _workflow_for_step("book.weather_sectors") == "label_weather.yml"
-    assert _workflow_for_step("book.ab") == "ab_checklist.yml"
+    assert _workflow_for_step("book.weather") == "stock_book_all.yml"
+    assert _workflow_for_step("book.weather_sectors") == "stock_book_all.yml"
+    assert _workflow_for_step("book.ab") == "stock_book_all.yml"
     assert _workflow_for_step("book.book_json") == "stock_book_all.yml"
-    assert _workflow_for_step("outcome.general") == "daily_pipeline.yml"
-    assert _workflow_for_step("outcome.sector_count") == "sector_daily.yml"
-    assert _workflow_for_step("learn.learnings") == "learn_cycle.yml"
+    assert _workflow_for_step("outcome.general") == "postclose_all.yml"
+    assert _workflow_for_step("outcome.sector_count") == "postclose_all.yml"
+    assert _workflow_for_step("learn.learnings") == "postclose_all.yml"
     assert _workflow_for_step("pages.dashboard") == "deploy-dashboard.yml"
     # GH run history is observational — do not heal from clock.*.yml
     assert _workflow_for_step("clock.learn_cycle.yml") is None
@@ -96,6 +96,7 @@ def test_ubuntu_vs_ecs_split():
     assert "label_weather.yml" in UBUNTU_WORKFLOWS
     assert "ab_checklist.yml" in UBUNTU_WORKFLOWS
     assert "preopen_all.yml" not in UBUNTU_WORKFLOWS
+    assert "postclose_all.yml" not in UBUNTU_WORKFLOWS
     assert "map_heat_postclose.yml" not in UBUNTU_WORKFLOWS
     assert "stock_book_all.yml" not in UBUNTU_WORKFLOWS
 
@@ -110,6 +111,9 @@ def test_dispatch_payloads():
     assert p["inputs"]["run_date"] == "2026-08-27"
     p = _dispatch_payload("daily_pipeline.yml", "2026-08-28", "2026-08-27", "2026-08-28", "2026-08-27")
     assert p["inputs"]["stage"] == "outcome"
+    p = _dispatch_payload("postclose_all.yml", "2026-08-28", "2026-08-27", "2026-08-28", "2026-08-27")
+    assert p["inputs"]["run_date"] == "2026-08-27"
+    assert p["inputs"]["force"] == "true"
 
 
 def test_clock_yml_not_healable():
@@ -125,6 +129,7 @@ def test_clock_yml_not_healable():
 
 
 def test_oauth_does_not_block_grok_healable():
+    assert "postclose_all.yml" in GROK_WORKFLOWS
     assert "map_heat_postclose.yml" in GROK_WORKFLOWS
     r = Report(job="postclose", date="2026-08-27",
                source_date="2026-08-27", target_date="2026-08-28")

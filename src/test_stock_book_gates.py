@@ -19,7 +19,7 @@ from src.stock_book import (
 )
 
 
-def _row(ticker, join=0.9, gen=-0.07, ab=0.9, peer=0.5, sector=0.2, news=0.0,
+def _row(ticker, join=0.9, gen=0.2, ab=0.9, peer=0.5, sector=0.2, news=0.0,
          relvol=1.2, size="mid", mcap=2000, score=1.0, sector_name="Technology",
          context="", reasons=""):
     return {

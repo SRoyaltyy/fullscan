@@ -335,6 +335,52 @@ def run(
     else:
         print("[all] skip Finviz + labeling (DONE for this day)")
 
+    # Deterministic ranker inputs before any LLM heal. A missing judge
+    # or 11 sector essays must not eat the clock and leave join/AB empty.
+    print("[all] → Weather / regime (before LLM heals, before join)")
+    _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
+    if not _exists("01_daily", "weather", f"{date}_weather.json"):
+        print(
+            f"[all] WARN: weather did not write "
+            f"01_daily/weather/{date}_weather.json — cannot rank today"
+        )
+        return
+
+    print("[all] → Join / match rank")
+    _run([sys.executable, "-m", "src.join", "--date", date], check=False)
+    if not _exists("data", "join", f"{date}_ranked.csv"):
+        print(f"[all] WARN: no join ranked file for {date} — cannot rank today")
+        return
+
+    if need("peer_rs"):
+        print("[all] → Peer relative strength")
+        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
+        if not _exists("data", "peers", f"{date}_peer_rs.csv"):
+            print("[all] WARN: peer_rs missing for", date)
+    else:
+        print("[all] skip Peer relative strength (DONE for this day)")
+
+    if need("ticker_checklist"):
+        print("[all] → Ticker checklist")
+        _run([sys.executable, "-m", "src.ticker_checklist", "--date", date], check=False)
+    else:
+        print("[all] skip Ticker checklist (DONE for this day)")
+
+    if need("ab"):
+        if not _ab_raw(date):
+            print("[all] → AB checklist (one day, liquid universe)")
+            _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
+        else:
+            print("[all] skip AB checklist raw (DONE) — will enrich")
+        print("[all] → AB enrich (peers + industry + sector)")
+        _run([sys.executable, "-m", "src.ab_enrich", "--date", date], check=False)
+        if not _ab_enriched(date) and not _ab_raw(date):
+            print("[all] WARN: AB missing — book ranks without s_ab (goldmine unused)")
+        elif not _ab_enriched(date):
+            print("[all] WARN: AB enrich missing — book will use raw checklist score")
+    else:
+        print("[all] skip AB checklist + enrich (DONE for this day)")
+
     if skip_llm:
         print("[all] skip Event scanner (--skip-llm)")
     elif need("events"):
@@ -407,49 +453,10 @@ def run(
     else:
         print("[all] skip Per-sector predict (DONE for this day — 11/11)")
 
-    print("[all] → Weather / regime (after same-day predicts, before join)")
-    _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
-    if not _exists("01_daily", "weather", f"{date}_weather.json"):
-        print(
-            f"[all] WARN: weather did not write "
-            f"01_daily/weather/{date}_weather.json — cannot rank today"
-        )
-        return
-
-    print("[all] → Join / match rank")
-    _run([sys.executable, "-m", "src.join", "--date", date], check=False)
-    if not _exists("data", "join", f"{date}_ranked.csv"):
-        print(f"[all] WARN: no join ranked file for {date} — cannot rank today")
-        return
-
-    if need("peer_rs"):
-        print("[all] → Peer relative strength")
-        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
-        if not _exists("data", "peers", f"{date}_peer_rs.csv"):
-            print("[all] WARN: peer_rs missing for", date)
-    else:
-        print("[all] skip Peer relative strength (DONE for this day)")
-
-    if need("ticker_checklist"):
-        print("[all] → Ticker checklist")
-        _run([sys.executable, "-m", "src.ticker_checklist", "--date", date], check=False)
-    else:
-        print("[all] skip Ticker checklist (DONE for this day)")
-
-    if need("ab"):
-        if not _ab_raw(date):
-            print("[all] → AB checklist (one day, liquid universe)")
-            _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
-        else:
-            print("[all] skip AB checklist raw (DONE) — will enrich")
-        print("[all] → AB enrich (peers + industry + sector)")
-        _run([sys.executable, "-m", "src.ab_enrich", "--date", date], check=False)
-        if not _ab_enriched(date) and not _ab_raw(date):
-            print("[all] WARN: AB missing — book ranks without s_ab (goldmine unused)")
-        elif not _ab_enriched(date):
-            print("[all] WARN: AB enrich missing — book will use raw checklist score")
-    else:
-        print("[all] skip AB checklist + enrich (DONE for this day)")
+    if not skip_llm:
+        print("[all] → Weather / join refresh (same-day predicts now on disk)")
+        _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
+        _run([sys.executable, "-m", "src.join", "--date", date], check=False)
 
     print("[all] → Input health preflight")
     _run([sys.executable, "-m", "src.input_health", "--date", date], check=False)

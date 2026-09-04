@@ -4,11 +4,12 @@ Does in one ECS job (per-step skip-if-good, fail-closed QC):
 
   (Finviz digest + map-heat overlay already landed by GH-hosted
    finviz_preopen_scrape.yml on ubuntu-latest — Elite login, not ECS)
+  → wait for GH scrape + last-night captain baseline
+  → weather / join / AB (deterministic; unblocks the ranker even if Grok dies)
   → news parse → events (+ catcher) → news judge
   → map heat research (morning delta over last night's baseline)
   → news actions
   → general predict → 11 sector predicts → sector board
-  → weather (deterministic labels×regime; unblocks join / stock book)
   → catalyst dossiers (layer 3; optional, after the 09:25-critical predicts)
   → output_qc (regex) → Grok reads the files as text (skipped if prior-ok)
   → stock book + paper dashboard  (--with-book, default on)
@@ -96,6 +97,11 @@ def _date_paths(root: Path, date: str) -> list[Path]:
         root / "01_daily" / "_transcripts",
         root / "01_daily" / "_channel1",
         root / "data" / "catalyst",
+        root / "data" / "universe",
+        root / "data" / "join",
+        root / "data" / "ab_checklist",
+        root / "data" / "peers",
+        root / "data" / "stock_book",
     ):
         if folder.is_dir():
             hits.extend(sorted(folder.glob(f"{date}*")))
@@ -179,15 +185,8 @@ def _scrape_ready(date: str) -> bool:
     return overlay_at.startswith(date) and bool(payload.get("tape") or [])
 
 
-def _pull_scrape_artifacts(date: str) -> None:
-    """Best-effort: take GH-hosted digest + overlay from origin/main."""
-    paths = [
-        f"01_daily/news/{date}_finviz_digest.json",
-        f"01_daily/news/{date}_finviz_digest.md",
-        "01_daily/news/latest_finviz_digest.md",
-        f"01_daily/map_heat/{date}_map_heat.json",
-        f"01_daily/map_heat/{date}_map_heat.md",
-    ]
+def _pull_origin_paths(date: str, paths: list[str], label: str) -> None:
+    """Best-effort: take files from origin/main into this work tree."""
     try:
         subprocess.run(
             ["git", "fetch", "origin", "main"],
@@ -207,7 +206,50 @@ def _pull_scrape_artifacts(date: str) -> None:
             cwd=str(ROOT), capture_output=True, timeout=30, check=False,
         )
     except (OSError, subprocess.SubprocessError) as e:
-        print(f"[preopen-all] scrape pull skipped: {e}", flush=True)
+        print(f"[preopen-all] {label} pull skipped: {e}", flush=True)
+
+
+def _pull_scrape_artifacts(date: str) -> None:
+    """Best-effort: take GH-hosted digest + overlay from origin/main."""
+    _pull_origin_paths(date, [
+        f"01_daily/news/{date}_finviz_digest.json",
+        f"01_daily/news/{date}_finviz_digest.md",
+        "01_daily/news/latest_finviz_digest.md",
+        f"01_daily/map_heat/{date}_map_heat.json",
+        f"01_daily/map_heat/{date}_map_heat.md",
+    ], "scrape")
+
+
+def _baseline_ready(date: str) -> bool:
+    return output_qc.qc_map_heat_baseline(
+        _p("01_daily", "map_heat", f"{date}_research_baseline.json")).ok
+
+
+def _pull_night_baseline(date: str) -> None:
+    _pull_origin_paths(date, [
+        f"01_daily/map_heat/{date}_research_baseline.json",
+        f"01_daily/map_heat/{date}_research_baseline.md",
+    ], "baseline")
+
+
+def wait_for_night_baseline(date: str, timeout_s: int | None = None) -> bool:
+    """Night packet must exist before morning research. Do not invent captains."""
+    timeout_s = int(os.environ.get("NIGHT_BASELINE_WAIT", timeout_s or 180))
+    if _baseline_ready(date):
+        print("[preopen-all] night captain baseline already on disk", flush=True)
+        return True
+    print(f"[preopen-all] waiting up to {timeout_s}s for last-night "
+          f"captain baseline", flush=True)
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        _pull_night_baseline(date)
+        if _baseline_ready(date):
+            print("[preopen-all] night captain baseline landed", flush=True)
+            return True
+        time.sleep(20)
+    print("[preopen-all] WARN: night baseline missing after wait — "
+          "map-heat refresh will bootstrap / QC-fail", flush=True)
+    return False
 
 
 def wait_for_gh_scrape(date: str, timeout_s: int | None = None) -> bool:
@@ -355,7 +397,13 @@ def run(date: str | None = None, force: bool = False,
     skip_writes = False
     restore_persist(date)
     wait_for_gh_scrape(date)
-    if not force:
+    wait_for_night_baseline(date)
+    # 09:25 gates LLM essays, not weather / AB / join / the book.
+    if not force and preopen.past_predict_cutoff():
+        print(f"[preopen-all] {date}: past 09:25 ET — skip LLM packet; "
+              "weather/AB/join/book still run so BUY/SELL can land")
+        skip_writes = True
+    elif not force:
         pre = output_qc.preopen_report(date)
         grok_ok = grok_review.prior_ok(date)
         if pre.get("all_ok") and grok_ok:
@@ -368,11 +416,6 @@ def run(date: str | None = None, force: bool = False,
             print(f"[preopen-all] {date}: mechanical QC already ok — "
                   f"Grok will read the files as text (no rewrite)")
             skip_writes = True
-            preopen.refuse_if_late("preopen_all", force=force)
-        else:
-            preopen.refuse_if_late("preopen_all", force=force)
-    else:
-        preopen.refuse_if_late("preopen_all", force=force)
 
     attempts: list[dict] = []
 
@@ -393,6 +436,27 @@ def run(date: str | None = None, force: bool = False,
 
     fa = _force_args(force)
     py = sys.executable
+
+    # Weather / join / AB have no LLM clock. Run them before essays so a
+    # slow Grok morning cannot leave the ranker with 0/4 book outputs.
+    if force or not _exists("data", "universe", f"{date}_membership.csv"):
+        print("[preopen-all] → Universe labels (segments)")
+        _run([py, "-m", "src.segments", "--date", date])
+        snapshot_persist(date)
+    step("weather", "Weather / regime",
+         [py, "-m", "src.weather", "--date", date])
+    if force or not _exists("data", "join", f"{date}_ranked.csv"):
+        print("[preopen-all] → Join / match rank")
+        _run([py, "-m", "src.join", "--date", date])
+        snapshot_persist(date)
+    if force or not _exists("data", "ab_checklist",
+                            f"{date}_ab_checklist_enriched.csv"):
+        if not _exists("data", "ab_checklist", f"{date}_ab_checklist.csv"):
+            print("[preopen-all] → AB checklist")
+            _run([py, "-m", "src.ab_checklist", "--date", date])
+        print("[preopen-all] → AB enrich")
+        _run([py, "-m", "src.ab_enrich", "--date", date])
+        snapshot_persist(date)
 
     if not skip_writes:
         step("news_parse", "News parse",
@@ -436,12 +500,16 @@ def run(date: str | None = None, force: bool = False,
              [py, "-m", "src.run_sector_predict", "--date", date, *fa])
         step("sector_board", "Sector board",
              [py, "-m", "src.sector_board", "--date", date])
-        # Deterministic, seconds. Must land before catalyst so a long
-        # dossier pass cannot leave the ranker blocked on weather.
-        step("weather", "Weather / regime",
-             [py, "-m", "src.weather", "--date", date])
+        # Weather / join / AB already ran before the LLM packet.
         step("catalyst", "Catalyst dossiers (identified names)",
              [py, "-m", "src.catalyst_daily", "--date", date, *fa])
+        # Predicts are optional weather inputs. Refresh join so s_join
+        # sees the same-day general/sector essays when they landed.
+        # Do not use step() — skip-if-good would skip this refresh.
+        print("[preopen-all] → Weather / join refresh (after predicts)")
+        _run([py, "-m", "src.weather", "--date", date])
+        _run([py, "-m", "src.join", "--date", date])
+        snapshot_persist(date)
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)

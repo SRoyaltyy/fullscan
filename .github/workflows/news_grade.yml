@@ -44,9 +44,11 @@ jobs:
         run: head -80 03_scoreboard/news_actions_report.md || true
       - name: Commit
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/news/grades 03_scoreboard/news_actions_scoreboard.json 03_scoreboard/news_actions_report.md
-          git commit -m "auto: news actions grades [$(date -u +%F)]" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          export HOME="${HOME:-/home/gha}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          bash scripts/safe_git_push.sh \
+            "auto: news actions grades [$(date -u +%F)]" \
+            01_daily/news/grades \
+            03_scoreboard/news_actions_scoreboard.json \
+            03_scoreboard/news_actions_report.md

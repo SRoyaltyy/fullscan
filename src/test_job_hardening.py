@@ -114,6 +114,8 @@ def test_safe_git_push_used_by_failing_commit_jobs() -> None:
         "learn_cycle.yml",
         "label_weather.yml",
         "ab_checklist.yml",
+        "news_grade.yml",
+        "hit_board.yml",
     ):
         text = (WF / name).read_text(encoding="utf-8")
         assert "scripts/safe_git_push.sh" in text, name
@@ -214,7 +216,40 @@ def test_pipeline_health_audit_default() -> None:
 def test_diag_exits_zero() -> None:
     text = (WF / "stock_book_diag.yml").read_text(encoding="utf-8")
     assert "exit 0" in text
+    assert "|| true" in text
     assert "13:00 ET cron" not in text
+
+
+def test_preopen_lock_matches_postclose() -> None:
+    pre = (ROOT / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
+    yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "locks/preopen.lock" in pre
+    assert "locks/preopen.lock" in post
+    assert "/tmp/fullscan-preopen.lock" not in pre
+    assert "fullscan-persist/locks/preopen.lock" in yml
+
+
+def test_heal_targets_all_jobs() -> None:
+    text = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
+    assert '("postclose.", "postclose_all.yml")' in text
+    assert '("book.weather", "stock_book_all.yml")' in text
+    assert '("book.ab", "stock_book_all.yml")' in text
+    assert '("outcome.", "postclose_all.yml")' in text
+    assert '("learn.", "postclose_all.yml")' in text
+    assert '("book.weather", "label_weather.yml")' not in text
+
+
+def test_ranker_inputs_before_llm_packet() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    assert "wait_for_night_baseline" in pre
+    wx = pre.find('step("weather", "Weather / regime"')
+    pred = pre.find('step("general_predict"')
+    assert 0 <= wx < pred
+    wxb = book.find("Weather / regime (before LLM heals")
+    ev = book.find("Event scanner (primary)")
+    assert 0 <= wxb < ev
 
 
 def test_ecs_timers_stay_green_and_push() -> None:
@@ -262,6 +297,9 @@ def main() -> None:
         test_ticker_lookback_defaults_random,
         test_pipeline_health_audit_default,
         test_diag_exits_zero,
+        test_preopen_lock_matches_postclose,
+        test_heal_targets_all_jobs,
+        test_ranker_inputs_before_llm_packet,
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
     ]

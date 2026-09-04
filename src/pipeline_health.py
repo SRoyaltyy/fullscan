@@ -68,6 +68,8 @@ WORKFLOWS = [
      {"preopen"}, "preopen"),
     ("map_heat_postclose.yml", "Map heat captain research (post-close)",
      {"preopen", "postclose"}, "postclose"),
+    ("postclose_all.yml", "Post-Close ALL",
+     {"postclose"}, "postclose"),
     ("preopen_all.yml", "Pre-Open ALL",
      {"preopen"}, "preopen"),
     ("collect-news-rss.yml", "Collect: RSS News", set(), "preopen"),
@@ -95,19 +97,19 @@ WORKFLOWS = [
 # More-specific prefixes first.
 FIX_MAP = [
     ("runtime.", "door"),
-    ("postclose.", "map_heat_postclose.yml"),
+    ("postclose.", "postclose_all.yml"),
     ("scrape.", "finviz_preopen_scrape.yml"),
     ("preopen.", "preopen_all.yml"),
-    ("book.weather", "label_weather.yml"),
-    ("book.membership", "label_weather.yml"),
-    ("book.join", "label_weather.yml"),
-    ("book.finviz", "label_weather.yml"),
-    ("book.ab", "ab_checklist.yml"),
+    ("book.weather", "stock_book_all.yml"),
+    ("book.membership", "stock_book_all.yml"),
+    ("book.join", "stock_book_all.yml"),
+    ("book.finviz", "stock_book_all.yml"),
+    ("book.ab", "stock_book_all.yml"),
     ("book.peers", "stock_book_all.yml"),
     ("book.", "stock_book_all.yml"),
-    ("outcome.sector", "sector_daily.yml"),
-    ("outcome.", "daily_pipeline.yml"),
-    ("learn.", "learn_cycle.yml"),
+    ("outcome.sector", "postclose_all.yml"),
+    ("outcome.", "postclose_all.yml"),
+    ("learn.", "postclose_all.yml"),
     ("pages.", "deploy-dashboard.yml"),
 ]
 
@@ -125,6 +127,7 @@ UBUNTU_WORKFLOWS = {
 # ECS Grok jobs — never GH-dispatch from health; never start if OAuth is dead.
 GROK_WORKFLOWS = {
     "preopen_all.yml",
+    "postclose_all.yml",
     "map_heat_postclose.yml",
     "stock_book_all.yml",
     "daily_pipeline.yml",
@@ -135,12 +138,14 @@ GROK_WORKFLOWS = {
 
 ECS_UNITS = {
     "preopen_all.yml": "fullscan-preopen.service",
+    "postclose_all.yml": "fullscan-map-postclose.service",
     "map_heat_postclose.yml": "fullscan-map-postclose.service",
     "door": "fullscan-openclaw-gateway.service",
 }
 
 ECS_SCRIPTS = {
     "preopen_all.yml": ROOT / "scripts" / "ecs_preopen.sh",
+    "postclose_all.yml": ROOT / "scripts" / "ecs_map_postclose.sh",
     "map_heat_postclose.yml": ROOT / "scripts" / "ecs_map_postclose.sh",
 }
 
@@ -148,6 +153,7 @@ GROK_NEEDLES = (
     "ecs_preopen.sh",
     "ecs_map_postclose.sh",
     "src.run_preopen_all",
+    "src.run_postclose_all",
     "src.map_heat_postclose",
     "src.run_stock_book_all",
     "src.run_outcome",
@@ -1341,6 +1347,9 @@ def _dispatch_payload(wf: str, date: str, source: str, target: str, book: str) -
         return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
     if wf == "finviz_preopen_scrape.yml":
         return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
+    if wf == "postclose_all.yml":
+        return {"ref": "main", "inputs": {
+            "run_date": source or date, "force": "true"}}
     if wf == "map_heat_postclose.yml":
         return {"ref": "main", "inputs": {
             "source_date": source, "target_date": target, "force": "true"}}
@@ -1451,6 +1460,10 @@ def _spawn_cmd(wf: str, date: str, source: str, target: str, book: str
     if wf == "preopen_all.yml":
         script = ECS_SCRIPTS[wf]
         return ["bash", str(script)], {"RUN_DATE": date, "FORCE": "true"}
+    if wf == "postclose_all.yml":
+        script = ECS_SCRIPTS[wf]
+        return ["bash", str(script)], {
+            "SOURCE_DATE": source, "TARGET_DATE": target, "FORCE": "true"}
     if wf == "map_heat_postclose.yml":
         script = ECS_SCRIPTS[wf]
         return ["bash", str(script)], {
@@ -1476,11 +1489,16 @@ def _already_running(wf: str) -> bool:
         return True
     needles = {
         "preopen_all.yml": ("ecs_preopen.sh", "src.run_preopen_all"),
-        "map_heat_postclose.yml": ("ecs_map_postclose.sh", "src.map_heat_postclose"),
+        "postclose_all.yml": ("ecs_map_postclose.sh", "src.run_postclose_all",
+                             "src.map_heat_postclose"),
+        "map_heat_postclose.yml": ("ecs_map_postclose.sh", "src.map_heat_postclose",
+                                  "src.run_postclose_all"),
         "stock_book_all.yml": ("src.run_stock_book_all",),
-        "daily_pipeline.yml": ("src.run_outcome", "src.run_reflect"),
-        "sector_daily.yml": ("src.run_sector_outcome", "src.run_sector_reflect"),
-        "learn_cycle.yml": ("src.learn_cycle",),
+        "daily_pipeline.yml": ("src.run_outcome", "src.run_reflect",
+                              "src.run_postclose_all"),
+        "sector_daily.yml": ("src.run_sector_outcome", "src.run_sector_reflect",
+                            "src.run_postclose_all"),
+        "learn_cycle.yml": ("src.learn_cycle", "src.run_postclose_all"),
         "catalyst_daily.yml": ("src.catalyst_daily",),
     }.get(wf, ())
     return bool(needles) and _pgrep(*needles)
@@ -1491,6 +1509,11 @@ def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> 
         return [ROOT / "01_daily" / "news" / f"{date}_finviz_digest.json"]
     if wf == "map_heat_postclose.yml":
         return [ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json"]
+    if wf == "postclose_all.yml":
+        return [
+            ROOT / "01_daily" / "general" / f"{source or date}_outcome.md",
+            ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json",
+        ]
     if wf == "preopen_all.yml":
         return [ROOT / "01_daily" / f"{date}_preopen_status.json"]
     if wf == "label_weather.yml":
@@ -1608,8 +1631,10 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
             continue
         if wf == "preopen_all.yml" and (
                 "map_heat_postclose.yml" in started
+                or "postclose_all.yml" in started
                 or "finviz_preopen_scrape.yml" in started
                 or _already_running("map_heat_postclose.yml")
+                or _already_running("postclose_all.yml")
                 or _already_running("finviz_preopen_scrape.yml")):
             print("[heal] scrape/baseline still in flight — hold preopen", flush=True)
             continue
@@ -1620,12 +1645,13 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
                 or _already_running("preopen_all.yml")):
             print("[heal] prereqs still in flight — hold book", flush=True)
             continue
-        if wf in ("daily_pipeline.yml", "sector_daily.yml") and (
+        if wf in ("daily_pipeline.yml", "sector_daily.yml", "postclose_all.yml") and (
                 "stock_book_all.yml" in started or _already_running("stock_book_all.yml")):
             print("[heal] book still in flight — hold outcomes", flush=True)
             continue
         if wf == "learn_cycle.yml" and (
-                "daily_pipeline.yml" in started or "sector_daily.yml" in started):
+                "daily_pipeline.yml" in started or "sector_daily.yml" in started
+                or "postclose_all.yml" in started):
             print("[heal] outcomes still in flight — hold learn", flush=True)
             continue
         if wf in GROK_WORKFLOWS and grok_busy():
@@ -1656,7 +1682,7 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
         # ECS Grok job: never GH-dispatch (would queue behind this health run).
         unit = ECS_UNITS.get(wf)
         use_unit = bool(unit)
-        if wf == "map_heat_postclose.yml":
+        if wf in ("map_heat_postclose.yml", "postclose_all.yml"):
             # unit always uses today→next weekday; dated heal must spawn the script
             today_et = _today()
             if source != today_et:

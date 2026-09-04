@@ -107,11 +107,13 @@ jobs:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
       FINVIZ_SKIP_LIVE: "1"
+      PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
     steps:
       - name: Wait if ECS systemd pre-open owns the box
         run: |
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
-          exec 9>/tmp/fullscan-preopen.lock
+          mkdir -p "$(dirname "$PREOPEN_LOCK")"
+          exec 9>"$PREOPEN_LOCK"
           if flock -n 9; then
             echo "lock is free"
             flock -u 9 || true
@@ -189,7 +191,8 @@ jobs:
         run: |
           set -e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
-          exec 9>/tmp/fullscan-preopen.lock
+          mkdir -p "$(dirname "${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}")"
+          exec 9>"${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}"
           if ! flock -n 9; then
             echo "ECS systemd job grabbed the lock — backing off"
             exit 0
