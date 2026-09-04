@@ -10,7 +10,7 @@ on:
   schedule:
     - cron: "50 11 * * 1-5"
     - cron: "20 13 * * 1-5"   # ~09:20 ET EDT — book heal if pre-open died
-    - cron: "15 21 * * 1-5"
+    - cron: "15 21 * * 1-5"   # ~17:15 ET — first Post-Close ALL fire (16:10 cron is new)
     - cron: "30 16 * * 0"
   workflow_dispatch:
     inputs:
@@ -49,18 +49,20 @@ jobs:
 
           artifact_ok() {
             local WF="$1"
+            # || return 1: skip-if-good exits 1 meaning RUN. set -e must
+            # not abort the evening pass before we dispatch Post-Close ALL.
             case "$WF" in
               finviz_preopen_scrape.yml)
-                python3 -m src.skip_if_good --job finviz_preopen_scrape --date "$TODAY"
+                python3 -m src.skip_if_good --job finviz_preopen_scrape --date "$TODAY" || return 1
                 ;;
               preopen_all.yml)
-                python3 -m src.skip_if_good --job preopen_full --date "$TODAY"
+                python3 -m src.skip_if_good --job preopen_full --date "$TODAY" || return 1
                 ;;
               stock_book_all.yml)
-                python3 -m src.skip_if_good --job stock_book_all --date "$TODAY"
+                python3 -m src.skip_if_good --job stock_book_all --date "$TODAY" || return 1
                 ;;
               postclose_all.yml)
-                python3 -m src.skip_if_good --job postclose_all
+                python3 -m src.skip_if_good --job postclose_all || return 1
                 ;;
               *)
                 return 1
