@@ -59,39 +59,52 @@ def test_thresholds_match_the_user_rule() -> None:
     assert IO_HARD_RED == -3.0
 
 
-def test_route_fallback_soft_red_is_io_else_mover() -> None:
+def test_route_fallback_skip_day_is_io_including_hard_red() -> None:
     assert route_fallback(-0.9)["primary"] == BUCKET_IO
     assert route_fallback(-2.9)["primary"] == BUCKET_IO
-    assert route_fallback(0.0)["primary"] == BUCKET_MOVER
-    assert route_fallback(0.75)["primary"] == BUCKET_MOVER
+    assert route_fallback(0.0)["primary"] == BUCKET_IO
+    assert route_fallback(0.75)["primary"] == BUCKET_IO
+    assert route_fallback(-3.0)["primary"] == BUCKET_IO
+    assert route_fallback(-6.2)["primary"] == BUCKET_IO
     assert route_fallback(2.25)["primary"] == BUCKET_MOVER
+    assert route_fallback(1.0)["primary"] == BUCKET_MOVER
     assert route_fallback(None)["primary"] == BUCKET_MOVER
-    assert route_fallback(-3.0)["primary"] == BUCKET_CASH
-    assert route_fallback(-6.2)["primary"] == BUCKET_CASH
 
 
-def test_bt_to_mover_sim_labels_soft_red_io() -> None:
-    from src.mover_paper import bt_to_mover_sim
+def test_stitch_skip_io_uses_live_2w_on_skip_days() -> None:
+    from src.mover_paper import stitch_skip_io
     raw = {
         "capital": 100_000, "top_n": 10, "pct": 0.10,
         "trades": [], "skipped": [],
         "curve": [
-            {"date": "2026-09-03", "score": -0.9,
+            {"date": "2026-08-13", "score": 8.5,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+            {"date": "2026-08-18", "score": -6.2,
              "cash": 100_000, "equity": 100_000, "open": 0},
             {"date": "2026-08-28", "score": 0.75,
              "cash": 100_000, "equity": 100_000, "open": 0},
-            {"date": "2026-08-18", "score": -6.2,
+            {"date": "2026-09-03", "score": -0.9,
              "cash": 100_000, "equity": 100_000, "open": 0},
         ],
         "final_equity": 100_000, "by_source": {},
     }
-    sim, gates = bt_to_mover_sim(raw, {"regime": {}})
+    sim, gates = stitch_skip_io(
+        raw, {"regime": {}},
+        io_rets={"2026-08-18": 0.0197, "2026-09-03": 0.0199},
+    )
     by = {g["date"]: g["decision"] for g in gates}
+    assert by["2026-08-13"] == "MOVER"
+    assert by["2026-08-18"] == "IO"
+    assert by["2026-08-28"] == "IO"
     assert by["2026-09-03"] == "IO"
-    assert by["2026-08-28"] == "MOVER"
-    assert by["2026-08-18"] == "CASH"
+    assert "CASH" not in by.values()
     assert sim["io_fallback"] is True
-    assert sim["hold"] == "1d"
+    assert "2w_size" in sim["hold"]
+    want = 100_000 * 1.0197 * 1.0199
+    assert abs(sim["final_equity"] - want) < 1.0
+    day = {g["date"]: g.get("advisory") for g in gates}
+    assert "1.99%" in (day["2026-09-03"] or "")
+    assert "gap" in (day["2026-08-28"] or "")
 
 
 def test_excel_is_never_the_primary() -> None:
@@ -155,8 +168,8 @@ if __name__ == "__main__":
     test_route_hard_red_is_cash()
     test_missing_predict_parks_in_io()
     test_thresholds_match_the_user_rule()
-    test_route_fallback_soft_red_is_io_else_mover()
-    test_bt_to_mover_sim_labels_soft_red_io()
+    test_route_fallback_skip_day_is_io_including_hard_red()
+    test_stitch_skip_io_uses_live_2w_on_skip_days()
     test_excel_is_never_the_primary()
     test_excel_ret_is_a_fraction()
     test_daily_returns_and_dd()

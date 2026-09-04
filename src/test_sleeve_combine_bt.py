@@ -373,7 +373,8 @@ def test_fallback_io_on_soft_red_mover_otherwise() -> None:
     d17 = next(c for c in sim["curve"] if c["date"] == "2026-08-17")
     assert d13["route"] == "mover" and d13["filled_am"] == 1
     assert d14["route"] == "io" and d14["filled_pm"] == 1
-    assert d17["route"] == "cash" and d17["filled_am"] == 0 and d17["filled_pm"] == 0
+    assert d17["route"] == "io" and d17["filled_am"] == 0 and d17["filled_pm"] == 0
+    assert "hard-red" in (d17.get("gap") or "")
 
 
 def test_fallback_last_day_io_is_a_gap() -> None:
