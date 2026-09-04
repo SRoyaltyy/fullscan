@@ -7,7 +7,10 @@ The two live books are complementary, not substitutes:
   .io    — 16:00 ET close fill, follow-the-book 2w_size.
            No S ≥ +1 gate. Size sleeves keep winning on down days.
 
-Winning combine (``flatten_switch`` / ``flatten_switch_recycle``):
+Live combine (``flatten_hard_red``): same flatten-switch recycle
+clock, plus S ≤ −3 blocks *new* tickets from either sleeve. Working
+lots and due 1d exits stay on. ``flatten_switch_recycle`` remains
+in the sweep as the ungated predecessor.
 
   1. Default book is `.io` ``2w_size`` (close fill, same names as the
      published paper sleeve) — the down-day engine.
@@ -56,6 +59,7 @@ TWO_WEEK_CAL_DAYS = 14
 TARGET_2W_PCT = 15.0
 IO_TOP_SLEEVE = "2w_size"
 IO_TOP_RET_PCT = 12.85
+LIVE_POLICY = "flatten_hard_red"
 
 DEFAULT = {
     "name": "core_switch",
@@ -84,6 +88,8 @@ DEFAULT = {
     "carry_last_book": False,        # refill .io from last print on gap days
     "rotate_mover": False,           # sell leftover mover at next green open
     "skip_blank_io": False,          # do not buy .io when morning S is blank
+    "hard_red": -3.0,                # S at or below this is hard-red
+    "hard_red_no_new": False,        # hold existing; no new buys either sleeve
 }
 
 
@@ -105,7 +111,15 @@ def session_calendar(payload: dict, books: list[tuple[str, Path]]) -> list[str]:
     sd = list(payload.get("session_dates") or [])
     sd += [d for d, _ in books]
     sd += [r.get("date") for r in (payload.get("called_rows") or []) if r.get("date")]
-    return sorted({d for d in sd if d and len(d) == 10})
+    out = []
+    for d in sorted({x for x in sd if x and len(x) == 10}):
+        try:
+            if datetime.strptime(d, "%Y-%m-%d").weekday() >= 5:
+                continue
+        except ValueError:
+            continue
+        out.append(d)
+    return out
 
 
 def _conviction(row: dict) -> float:
@@ -816,6 +830,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     carry_last_book = bool(pol.get("carry_last_book", False))
     rotate_mover = bool(pol.get("rotate_mover", False))
     skip_blank_io = bool(pol.get("skip_blank_io", False))
+    hard_red_cut = float(pol.get("hard_red", -3.0))
+    hard_red_no_new = bool(pol.get("hard_red_no_new", False))
 
     def px_close(t, d):
         return _close_from_cache(t, d, cache)
@@ -945,6 +961,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         green = score is not None and score >= pol["long_gate"]
         blank = score is None
         flat = not io_pos
+        hard_red = score is not None and float(score) <= hard_red_cut
         # Dump a working .io book only on a real green stamp + enough
         # priced BUYs + a book that was already printed before 09:30.
         flatten_ok = green and have_buys and (
@@ -954,6 +971,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         cash_mover = flat and have_buys and (
             (mover_when_flat and green)
             or (blank_mover_when_flat and blank))
+        # Hard-red: keep working lots, do not put on new risk from
+        # either sleeve. Scheduled 1d exits still settle.
+        if hard_red_no_new and hard_red:
+            flatten_ok = False
+            cash_mover = False
         route_mover = flatten_ok or cash_mover
         # 09:30 size-up may only see a book that already printed.
         confirm = book_ticker_set(prior or last_print or {}) 
@@ -986,7 +1008,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         if io_book is None and carry_last_book:
             io_book = last_print
         skip_io = skip_blank_io and blank
-        if io_book is not None and not route_mover and not skip_io:
+        if io_book is not None and not route_mover and not skip_io \
+                and not (hard_red_no_new and hard_red):
             targets = io_picks(io_book, pol.get("io_sleeve", "2w_size"))
             new = [t for t in targets if t not in io_pos]
             if new and cash > 100:
@@ -1008,7 +1031,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             "date": date, "equity": round(eq_end, 2), "cash": round(cash, 2),
             "core_n": len(io_pos), "tac_io_n": 0, "tac_n": len(mv_pos),
             "core_mv": 0, "tac_mv": 0,
-            "route": "mover" if route_mover else "io",
+            "route": ("hold" if (hard_red_no_new and hard_red)
+                      else "mover" if route_mover else "io"),
             "score": score, "predict": pdir,
         })
 
@@ -1080,6 +1104,11 @@ SWEEP = [
      "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
      "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
      "rotate_mover": True, "carry_last_book": True},
+    {**DEFAULT, "name": "flatten_hard_red", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "rotate_mover": True, "carry_last_book": True,
+     "hard_red_no_new": True},
 ] + [
     DEFAULT,
     {**DEFAULT, "name": "switch_70", "core_frac": 0.30, "tac_frac": 0.70,
@@ -1140,8 +1169,30 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "long_hold", "long_rank", "day_cap", "min_buys", "sizeup",
         "allow_short", "book_for_flatten", "rotate_mover", "carry_last_book",
         "mover_when_flat", "blank_mover_when_flat", "skip_blank_io",
+        "hard_red", "hard_red_no_new",
     )
     slim = {k: pol[k] for k in keep if k in pol}
+    slim["live"] = pol.get("name") == LIVE_POLICY
+    sweep_slim = []
+    for row in sweep_rows:
+        s = row["stats"]
+        sweep_slim.append({
+            "name": row["name"],
+            "live": row["name"] == LIVE_POLICY,
+            "total_ret_pct": s["total_ret_pct"],
+            "max_dd_pct": s["max_dd_pct"],
+            "n_trades": s["n_trades"],
+            "hit": s.get("hit"),
+            "final_equity": s["final_equity"],
+            "min_fortnight": s.get("min_fortnight"),
+            "passed": s.get("passed"),
+            "fees_total": s.get("fees_total"),
+        })
+    (OUT_DIR / "sweep.json").write_text(
+        json.dumps({"live": LIVE_POLICY, "rows": sweep_slim,
+                    "generated": datetime.now().isoformat(timespec="seconds")},
+                   indent=2),
+        encoding="utf-8")
     (OUT_DIR / "state.json").write_text(json.dumps({
         "policy": slim,
         "stats": {k: v for k, v in st.items()
@@ -1196,6 +1247,16 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "- **Do not flatten** on green mornings with no real BUY list (08-13/14). "
         "Yesterday's score is never used at today's close.",
         "- Futubull fees, whole shares, no lookahead.",
+        "",
+        "Live book is **hard-red hold-only**: one Futubull cash account, "
+        "flatten on a green morning with a real BUY list, rotate leftover "
+        "mover at the next green open, carry the last 2w list on gap days, "
+        "and **do not open a new ticket when S ≤ −3**. Working lots and "
+        "due 1d exits stay on. The ungated recycle predecessor reprints "
+        "~+21.6% by re-entering 2w_size on hard-red 08-24; this book "
+        "waits until 08-25 and prints ~+19.1%. INO at $0.90 is the same "
+        "2w_size name the $10k paper book held, scaled to $100k. Sunday "
+        "book dates are dropped.",
         "",
         f"**Policy:** `{pol['name']}` · engine `{pol.get('engine', 'combine')}` · "
         f"{pol['io_sleeve']} · longs top {pol['long_top_n']} @ {pol['long_pct']:.0%} "
@@ -1271,9 +1332,51 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
             f"| {r['date']} | {sc} | {r['route']} | ${r['equity']:,.2f} | "
             f"${r.get('cash', 0):,.2f} | {r['core_n']} | {r['tac_n']} |")
 
-    lines += ["", "## Sweep (same window, same fees)", "",
-              "| Policy | Return | Max DD | min fortnight | min block | Pass |",
-              "|---|---:|---:|---:|---:|---|"]
+    rec = next((row for row in sweep_rows
+                if row["name"] == "flatten_switch_recycle"), None)
+    hard = next((row for row in sweep_rows
+                 if row["name"] == "flatten_hard_red"), None)
+    if rec and hard:
+        rs, hs = rec["stats"], hard["stats"]
+        lines += [
+            "",
+            "## Live method: hard-red hold-only (S ≤ −3)",
+            "",
+            f"`{LIVE_POLICY}` is the production book. Working lots stay on. "
+            "Scheduled 1d exits still settle. Neither sleeve opens a new "
+            "ticket on a hard-red morning. `flatten_switch_recycle` is the "
+            "ungated predecessor (re-enters 2w_size on 08-24, S=−5.17).",
+            "",
+            "| Book | Role | Return | Final | Max DD | min fortnight |",
+            "|---|---|---:|---:|---:|---:|",
+            f"| `flatten_hard_red` | **LIVE** | {hs['total_ret_pct']:+.2f}% | "
+            f"${hs['final_equity']:,.2f} | {hs['max_dd_pct']:.2f}% | "
+            f"{hs['min_fortnight']} |",
+            f"| `flatten_switch_recycle` | previous | {rs['total_ret_pct']:+.2f}% | "
+            f"${rs['final_equity']:,.2f} | {rs['max_dd_pct']:.2f}% | "
+            f"{rs['min_fortnight']} |",
+            "",
+            "| Date | Score | Hard-red (live) | Recycle |",
+            "|---|---:|---|---|",
+        ]
+        rec_by = {r["date"]: r for r in rec["sim"]["curve"]}
+        hr_by = {r["date"]: r for r in hard["sim"]["curve"]}
+        for d in sorted(set(rec_by) | set(hr_by)):
+            a, b = hr_by.get(d) or {}, rec_by.get(d) or {}
+            sc = a.get("score") if a.get("score") is not None else b.get("score")
+            scs = "—" if sc is None else f"{float(sc):+.2f}"
+            lines.append(
+                f"| {d} | {scs} | {a.get('route', '—')} "
+                f"${a.get('equity', 0):,.0f} | {b.get('route', '—')} "
+                f"${b.get('equity', 0):,.0f} |")
+
+    lines += [
+        "",
+        "## Sweep (same window, same fees)",
+        "",
+        "| Policy | Return | Max DD | min fortnight | min block | Pass |",
+        "|---|---:|---:|---:|---:|---|",
+    ]
     for row in sweep_rows:
         s = row["stats"]
         lines.append(
@@ -1370,7 +1473,8 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
             dcls = ""
         prev = r["equity"]
         sc = "—" if r.get("score") is None else f"{r['score']:+.2f}"
-        rcls = "good" if r["route"] == "mover" else ""
+        rcls = ("good" if r["route"] == "mover"
+                else "hold" if r["route"] == "hold" else "")
         day_rows.append(
             f"<tr><th>{r['date']}</th><td>{sc}</td>"
             f"<td class='{rcls}'>{r['route']}</td>"
@@ -1437,6 +1541,7 @@ th,td{{padding:7px 8px;text-align:center;border-bottom:1px solid var(--line);whi
 thead th{{position:sticky;top:0;background:#17213a}}
 tbody th{{background:#17213a;text-align:left}}
 td.good,b.good,.good{{color:#4ade80}}td.bad,b.bad,.bad{{color:#f87171}}
+td.hold{{color:#fbbf24}}
 td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 </style></head><body><main>
 <h1>Combined sleeve — .io × mover</h1>
@@ -1446,8 +1551,9 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
 {_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
-carry last 2w list on gap days · day_cap {pol.get('day_cap',1):.0%} ·
-Futubull fees · one cash account · 15% / 2 weeks gate</p>
+carry last 2w list on gap days · hard-red S≤−3 = no new buys ·
+day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b> ·
+<a href="../strategy-board/" style="color:#93c5fd">all-strategy board</a></p>
 <div class="cards">{cards}</div>
 {svg}
 <h2>Daily book (cash left after fills)</h2>
@@ -1493,7 +1599,8 @@ def main(argv: list[str] | None = None) -> int:
     sweep_rows = run_sweep(payload, books, args.capital)
     if args.policy:
         sweep_rows = [r for r in sweep_rows if r["name"] == args.policy] or sweep_rows
-    winner = sweep_rows[0]
+    live = next((r for r in sweep_rows if r["name"] == LIVE_POLICY), None)
+    winner = live or sweep_rows[0]
     st = winner["stats"]
     print(f"[sleeve-merge] winner={winner['name']} ret={st['total_ret_pct']:+.2f}% "
           f"min_fort={st['min_fortnight']} min_block={st['min_block_2w']} "

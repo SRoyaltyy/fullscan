@@ -106,6 +106,16 @@ jobs:
             cp -a dashboard/mover-paper/. pages_out/dashboard/mover-paper/
             echo "Overlayed dashboard/mover-paper from main"
           fi
+          if [ -f dashboard/strategy-board/index.html ]; then
+            mkdir -p pages_out/dashboard/strategy-board
+            cp -a dashboard/strategy-board/. pages_out/dashboard/strategy-board/
+            echo "Overlayed dashboard/strategy-board from main"
+          fi
+          if [ -f dashboard/book-paper/index.html ]; then
+            mkdir -p pages_out/dashboard/book-paper
+            cp -a dashboard/book-paper/. pages_out/dashboard/book-paper/
+            echo "Overlayed dashboard/book-paper from main"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -131,5 +141,6 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

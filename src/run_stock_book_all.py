@@ -603,9 +603,15 @@ def run(
         check=False,
     )
 
-    print("[all] → Sleeve merge (.io × mover dashboard)")
+    print("[all] → Sleeve merge (.io × mover dashboard, live=hard-red)")
     _run(
         [sys.executable, "-m", "src.sleeve_merge", "--write"],
+        check=False,
+    )
+
+    print("[all] → Strategy board (every shipped book)")
+    _run(
+        [sys.executable, "-m", "src.strategy_board", "--write"],
         check=False,
     )
 
@@ -628,6 +634,7 @@ def run(
     print("[all] paper trading → dashboard/index.html + 03_scoreboard/PAPER_TRADING.md")
     print("[all] sleeve combine → dashboard/sleeve-combine/index.html + 03_scoreboard/SLEEVE_COMBINE_BT.md")
     print("[all] sleeve merge → dashboard/sleeve-merge/ + 03_scoreboard/SLEEVE_MERGE.md")
+    print("[all] strategy board → dashboard/strategy-board/ + 03_scoreboard/STRATEGY_BOARD.md")
 
 
 def main() -> None:

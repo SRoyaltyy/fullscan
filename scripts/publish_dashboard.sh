@@ -29,7 +29,7 @@ touch pages_out/.nojekyll
 cp -a dashboard/. pages_out/dashboard/
 cp dashboard/index.html pages_out/index.html
 
-for sub in boring-winners ticker-lookback gainer-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper; do
+for sub in boring-winners ticker-lookback gainer-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper strategy-board; do
   if [ -f "dashboard/${sub}/index.html" ]; then
     mkdir -p "pages_out/dashboard/${sub}"
     cp -a "dashboard/${sub}/." "pages_out/dashboard/${sub}/"

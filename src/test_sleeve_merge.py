@@ -18,9 +18,21 @@ from src.sleeve_merge import (
 )
 
 
+def test_live_policy_is_hard_red() -> None:
+    from src.sleeve_merge import LIVE_POLICY
+    assert LIVE_POLICY == "flatten_hard_red"
+
+
 def test_two_week_is_ten_sessions() -> None:
     assert TWO_WEEK_SESSIONS == 10
     assert TARGET_2W_PCT == 15.0
+
+
+def test_session_calendar_drops_weekend_book() -> None:
+    from src.sleeve_merge import session_calendar
+    payload = {"session_dates": ["2026-08-28", "2026-08-30", "2026-08-31"]}
+    books = [("2026-08-30", None)]
+    assert session_calendar(payload, books) == ["2026-08-28", "2026-08-31"]
 
 
 def test_next_session_skips_weekend() -> None:
@@ -192,6 +204,44 @@ def test_live_fees_and_cash_lockup() -> None:
     assert led["n_events"] == 2 * len(sim["trades"])
 
 
+def test_hard_red_no_new_skips_0824_io_keeps_holds() -> None:
+    """S ≤ −3: no new tickets; working lots and due 1d exits still settle."""
+    from pathlib import Path
+    from src.sleeve_merge import (
+        DEFAULT, list_books, load_payload, run_flatten_switch,
+    )
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file() or not list_books():
+        print("skip live hard-red (no payload/books)")
+        return
+    base = {**DEFAULT, "engine": "flatten_switch",
+            "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+            "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+            "rotate_mover": True, "carry_last_book": True}
+    raw = run_flatten_switch(load_payload(), list_books(), base, 100_000)
+    gated = run_flatten_switch(
+        load_payload(), list_books(),
+        {**base, "name": "flatten_hard_red", "hard_red_no_new": True},
+        100_000)
+    assert "2026-08-30" not in {r["date"] for r in raw["curve"]}
+    day20 = [t for t in gated["trades"] if t["entry_date"] == "2026-08-20"]
+    assert any(t["sleeve"] == "mover_long" for t in day20)
+    day24_io = [t for t in gated["trades"]
+                if t["entry_date"] == "2026-08-24" and t["sleeve"] == "io_core"]
+    assert day24_io == [], day24_io
+    raw24 = [t for t in raw["trades"]
+             if t["entry_date"] == "2026-08-24" and t["sleeve"] == "io_core"]
+    assert raw24, "baseline still re-enters 2w_size on hard-red 08-24"
+    by = {r["date"]: r for r in gated["curve"]}
+    assert by["2026-08-24"]["route"] == "hold"
+    assert by["2026-08-18"]["route"] == "hold"
+    # 08-18/19 already held 2w — hard-red must not flatten them.
+    assert by["2026-08-18"]["core_n"] > 0
+    assert by["2026-08-19"]["core_n"] > 0
+    # 08-20 is not hard-red; flatten still fires.
+    assert by["2026-08-20"]["route"] == "mover"
+
+
 def test_flatten_needs_book_and_enough_buys() -> None:
     """Green + 1 BUY is not a flatten day; no-book days stay in .io."""
     from src.sleeve_merge import DEFAULT
@@ -243,7 +293,9 @@ def test_fortnight_is_14_calendar_days() -> None:
 
 
 def main() -> None:
+    test_live_policy_is_hard_red()
     test_two_week_is_ten_sessions()
+    test_session_calendar_drops_weekend_book()
     test_next_session_skips_weekend()
     test_rank_calls_cond_then_conviction()
     test_io_picks_size_bucket()
@@ -254,7 +306,8 @@ def main() -> None:
     test_fortnight_is_14_calendar_days()
     test_live_flatten_switch_clears_15pct_fortnight()
     test_live_fees_and_cash_lockup()
-    print("test_sleeve_merge: 11 ok")
+    test_hard_red_no_new_skips_0824_io_keeps_holds()
+    print("test_sleeve_merge: 14 ok")
 
 
 if __name__ == "__main__":
