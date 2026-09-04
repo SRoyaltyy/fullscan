@@ -233,6 +233,7 @@ def test_preopen_all_does_not_scrape_finviz() -> None:
     assert "src.finviz_digest" not in src
     assert "--overlay" not in src
     assert "wait_for_gh_scrape" in src
+    assert "wait_for_night_baseline" in src
     assert "finviz_preopen_scrape.yml" in src
 
 

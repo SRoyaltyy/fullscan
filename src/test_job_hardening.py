@@ -114,6 +114,8 @@ def test_safe_git_push_used_by_failing_commit_jobs() -> None:
         "learn_cycle.yml",
         "label_weather.yml",
         "ab_checklist.yml",
+        "news_grade.yml",
+        "hit_board.yml",
     ):
         text = (WF / name).read_text(encoding="utf-8")
         assert "scripts/safe_git_push.sh" in text, name
@@ -211,10 +213,186 @@ def test_pipeline_health_audit_default() -> None:
     assert 'default: "true"' in text  # no_fix default
 
 
+def test_hit_and_news_grade_still_commit() -> None:
+    hit = (WF / "hit_board.yml").read_text(encoding="utf-8")
+    news = (WF / "news_grade.yml").read_text(encoding="utf-8")
+    assert "cat 03_scoreboard/HIT_BOARD.md || true" in hit
+    assert "if: always()" in hit
+    assert "if: always()" in news
+    assert "src.news_grade" in news and "|| true" in news
+
+
 def test_diag_exits_zero() -> None:
     text = (WF / "stock_book_diag.yml").read_text(encoding="utf-8")
     assert "exit 0" in text
+    assert "|| true" in text
     assert "13:00 ET cron" not in text
+
+
+def test_preopen_lock_matches_postclose() -> None:
+    pre = (ROOT / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
+    yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "locks/preopen.lock" in pre
+    assert "locks/preopen.lock" in post
+    assert "/tmp/fullscan-preopen.lock" not in pre
+    assert "fullscan-persist/locks/preopen.lock" in yml
+
+
+def test_heal_targets_all_jobs() -> None:
+    text = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
+    assert '("postclose.", "postclose_all.yml")' in text
+    assert '("book.weather", "stock_book_all.yml")' in text
+    assert '("book.ab", "stock_book_all.yml")' in text
+    assert '("outcome.", "postclose_all.yml")' in text
+    assert '("learn.", "postclose_all.yml")' in text
+    assert '("book.weather", "label_weather.yml")' not in text
+
+
+def test_preopen_does_not_skip_python_after_cutoff() -> None:
+    yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    ecs = (ROOT / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    assert "past 09:25 ET — skip python" not in yml
+    assert "not running python" not in ecs
+    assert "still land weather/join/AB/book" in ecs
+    assert "src.skip_if_good" in orch
+    assert "stock_book_all.yml" in orch
+    assert "inputs[runner]=ubuntu" in orch
+    assert "inputs[skip_llm]=true" in orch
+    assert "inputs[skip_extras]=true" in orch
+    assert "past 09:00 ET — heal ranker on ubuntu" in orch
+    assert 'already_running "preopen_all.yml"' in orch
+    assert "book heal stays on ubuntu" in orch
+
+
+def test_ranker_inputs_before_llm_packet() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    assert "wait_for_night_baseline" in pre
+    wx = pre.find('step("weather", "Weather / regime"')
+    pred = pre.find('step("general_predict"')
+    assert 0 <= wx < pred
+    wxb = book.find("Weather / regime (before LLM heals")
+    ev = book.find("Event scanner (primary)")
+    assert 0 <= wxb < ev
+    land = pre.find("Stock book + paper dashboard")
+    cat = pre.find('step("catalyst"')
+    grok = pre.find("grok_review.review_preopen")
+    assert 0 <= land < cat
+    assert 0 <= land < grok
+    assert "past 09:25 ET — book still runs" in pre
+    assert "skip_extras=True" in pre
+    assert "refresh_ranker=True" in pre
+    assert "refresh_ranker" in book
+    assert "safe_git_push.sh" in pre
+    assert "timeout_s=45 if late" in pre
+    assert "No retry" in pre
+    assert 'PREOPEN_LLM_TIMEOUT", "420"' in pre
+    assert "10800s ate 2026-09-04" in pre
+    assert "subprocess {llm_sub_t}s" in pre or "llm_sub_t" in pre
+    assert 'timeout_s=llm_sub_t' in pre
+    assert "timeout_s=2400" in pre
+    assert "TimeoutExpired" in pre
+    assert "weather missing/thin — retry --offline" in pre
+    assert "timeout_s=1500" in pre
+    assert "timeout_s=180" in pre
+    assert "_exists_gt" in pre
+    assert "skip_extras" in book
+    extras_gate = book.find("skip extras before book")
+    news_parse = book.find("[all] → News parse")
+    assert 0 <= extras_gate < news_parse
+    assert "TimeoutExpired" in book
+    assert "ab_t = 1500" in book
+    assert "wx_t = 180" in book
+    assert "PREOPEN_LLM_TIMEOUT" in book
+    assert "hung Grok must not block the book" in book
+    assert "--offline" in book
+    assert "weather missing/thin — retry --offline" in book
+    post = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    assert "TimeoutExpired" in post
+    assert "POSTCLOSE_LLM_TIMEOUT" in post
+    assert "llm_timeout_s=llm_to" in post
+    assert "timeout_s=300" in post  # news_grade yfinance bound
+    assert "src.news_grade" in post
+    assert "sector_wall = max(5400, 11 * (llm_to + 90))" in post
+    post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
+    assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
+    assert "timeout-minutes: 720" in post_yml
+    assert "def _push_pack" in post
+    unit = (ROOT / "scripts" / "systemd" / "fullscan-map-postclose.service").read_text(
+        encoding="utf-8")
+    assert "TimeoutStartSec=12h" in unit
+    news_py = (ROOT / "src" / "news_grade.py").read_text(encoding="utf-8")
+    assert "threads=False" in news_py
+    assert "setdefaulttimeout(30)" in news_py
+    wx_yml = (WF / "label_weather.yml").read_text(encoding="utf-8")
+    assert "weather missing/thin — retry --offline" in wx_yml
+    learn_yml = (WF / "learn_cycle.yml").read_text(encoding="utf-8")
+    assert 'OPENCLAW_TIMEOUT: "900"' in learn_yml
+    sb = (ROOT / "src" / "stock_book.py").read_text(encoding="utf-8")
+    assert "input_health.check(date)" in sb
+    assert "predict.md if ingest lagged" in sb
+    assert "weather.load_runs(asof)" in sb
+    assert "BUY is the green pile when it is thick enough" in sb
+    assert "def _horizon_pick" in sb
+    assert "input_health.load(date) or input_health.check" not in sb
+    pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
+    assert "--skip-llm --skip-extras" in pre_yml
+    assert "Pull scrape + export from main" in pre_yml
+    assert "git checkout origin/main --" in pre_yml
+    assert 'force=true — rank even if a book is on disk' in pre_yml
+    assert "collectors.finviz_financials" in pre_yml
+    assert "data/exports/" in pre_yml
+    scrape_yml = (WF / "finviz_preopen_scrape.yml").read_text(encoding="utf-8")
+    assert "collectors.finviz_financials" in scrape_yml
+    assert "data/exports/" in scrape_yml
+    skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
+    assert "elite export missing/thin" in skip
+    assert "1d BUY has printed dead relvol" in skip
+    assert "book_1d_has_dead_relvol" in skip
+    assert "1d BUY is not all-green" in skip
+    assert "book_1d_breaks_all_green" in skip
+    assert "book ranked without same-day essays" in skip
+    assert "book_missing_same_day_essays" in skip
+    fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")
+    assert "America/New_York" in fin
+    ch1 = (ROOT / "src" / "fetch_channel1.py").read_text(encoding="utf-8")
+    assert "setdefaulttimeout(20)" in ch1
+    book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    assert "skip_extras:" in book_yml
+    assert "past 09:25 ET — skip LLM + extras" in book_yml
+    assert 'cron: "10 10 * * 1-5"' in book_yml
+    assert 'cron: "15 13 * * 1-5"' in book_yml
+    assert "ubuntu land-book" in book_yml
+    assert 'github.event_name == \'schedule\'' in book_yml
+    assert 'github.event_name == \'push\'' in book_yml
+    assert 'github.event_name == \'workflow_run\'' in book_yml
+    assert "stock-book-all-ubuntu" in book_yml
+    assert "stock-book-all-ecs" in book_yml
+    assert 'branches: [main]' in book_yml
+    assert "Pre-Open ALL (predictive one-shot)" in book_yml
+    assert "Do not add a cron back" not in book_yml
+    health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
+    hold = health.split('wf == "stock_book_all.yml" and (')[1].split("):")[0]
+    assert "preopen_all.yml" not in hold
+    assert '_already_running("preopen_all.yml")' not in hold
+    post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
+    assert "last_closed_session" in post
+    assert "night pack still missing, running anyway" in post
+    assert "preopen lock held — skip (exit 0" not in post
+    assert "OPENCLAW_TIMEOUT=900" in post
+    assert '[ "${OPENCLAW_TIMEOUT}" = "10800" ]' in post
+    assert "exit 1" not in post
+    learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
+    assert "night_pack_dates" in learn
+    assert "def _run_one" in learn
+    learn_yml = (WF / "learn_cycle.yml").read_text(encoding="utf-8")
+    assert "last_closed_session" in learn_yml
+    assert '--date "${closed_session}"' in learn_yml
 
 
 def test_ecs_timers_stay_green_and_push() -> None:
@@ -224,6 +402,8 @@ def test_ecs_timers_stay_green_and_push() -> None:
     assert "dashboard/" in pre
     assert "exit 0" in pre
     assert "exit 0" in post
+    assert "dispatch stock_book_all.yml ubuntu skip-llm" in pre
+    assert "inputs[skip_extras]=true" in pre
 
 
 def test_empty_futures_tape_not_ready() -> None:
@@ -261,7 +441,12 @@ def main() -> None:
         test_ecs_jobs_skip_live_finviz,
         test_ticker_lookback_defaults_random,
         test_pipeline_health_audit_default,
+        test_hit_and_news_grade_still_commit,
         test_diag_exits_zero,
+        test_preopen_lock_matches_postclose,
+        test_heal_targets_all_jobs,
+        test_preopen_does_not_skip_python_after_cutoff,
+        test_ranker_inputs_before_llm_packet,
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
     ]

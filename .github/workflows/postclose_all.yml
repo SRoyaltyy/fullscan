@@ -46,9 +46,9 @@ concurrency:
 jobs:
   postclose:
     runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 360
+    timeout-minutes: 720
     env:
-      OPENCLAW_TIMEOUT: "10800"
+      OPENCLAW_TIMEOUT: "900"
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
       FINVIZ_SKIP_LIVE: "1"
@@ -91,7 +91,7 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENCLAW_TIMEOUT: "10800"
+          OPENCLAW_TIMEOUT: "900"
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
@@ -120,4 +120,7 @@ jobs:
             01_daily/general/ 01_daily/sectors/ 01_daily/map_heat/ \
             01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
             01_daily/*_learnings.md \
-            02_lessons/ 03_scoreboard/ 00_grounding/mutable_policy.md
+            02_lessons/ 03_scoreboard/ \
+            00_grounding/mutable_policy.md \
+            00_grounding/book_policy.json \
+            00_grounding/weather_rules_proposals.json

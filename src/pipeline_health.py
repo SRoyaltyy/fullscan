@@ -68,6 +68,8 @@ WORKFLOWS = [
      {"preopen"}, "preopen"),
     ("map_heat_postclose.yml", "Map heat captain research (post-close)",
      {"preopen", "postclose"}, "postclose"),
+    ("postclose_all.yml", "Post-Close ALL",
+     {"postclose"}, "postclose"),
     ("preopen_all.yml", "Pre-Open ALL",
      {"preopen"}, "preopen"),
     ("collect-news-rss.yml", "Collect: RSS News", set(), "preopen"),
@@ -95,23 +97,25 @@ WORKFLOWS = [
 # More-specific prefixes first.
 FIX_MAP = [
     ("runtime.", "door"),
-    ("postclose.", "map_heat_postclose.yml"),
+    ("postclose.", "postclose_all.yml"),
     ("scrape.", "finviz_preopen_scrape.yml"),
     ("preopen.", "preopen_all.yml"),
-    ("book.weather", "label_weather.yml"),
-    ("book.membership", "label_weather.yml"),
-    ("book.join", "label_weather.yml"),
-    ("book.finviz", "label_weather.yml"),
-    ("book.ab", "ab_checklist.yml"),
+    ("book.weather", "stock_book_all.yml"),
+    ("book.membership", "stock_book_all.yml"),
+    ("book.join", "stock_book_all.yml"),
+    ("book.finviz", "stock_book_all.yml"),
+    ("book.ab", "stock_book_all.yml"),
     ("book.peers", "stock_book_all.yml"),
     ("book.", "stock_book_all.yml"),
-    ("outcome.sector", "sector_daily.yml"),
-    ("outcome.", "daily_pipeline.yml"),
-    ("learn.", "learn_cycle.yml"),
+    ("outcome.sector", "postclose_all.yml"),
+    ("outcome.", "postclose_all.yml"),
+    ("learn.", "postclose_all.yml"),
     ("pages.", "deploy-dashboard.yml"),
 ]
 
 # ubuntu-latest — safe to GH-dispatch while this health job holds the ECS runner.
+# stock_book_all heals as skip-llm / skip-extras on ubuntu so a hung Grok
+# pre-open cannot queue the ranker behind itself.
 UBUNTU_WORKFLOWS = {
     "finviz_preopen_scrape.yml",
     "label_weather.yml",
@@ -120,13 +124,14 @@ UBUNTU_WORKFLOWS = {
     "hit_board.yml",
     "news_grade.yml",
     "ab_enrich.yml",
+    "stock_book_all.yml",
 }
 
 # ECS Grok jobs — never GH-dispatch from health; never start if OAuth is dead.
 GROK_WORKFLOWS = {
     "preopen_all.yml",
+    "postclose_all.yml",
     "map_heat_postclose.yml",
-    "stock_book_all.yml",
     "daily_pipeline.yml",
     "sector_daily.yml",
     "learn_cycle.yml",
@@ -135,12 +140,14 @@ GROK_WORKFLOWS = {
 
 ECS_UNITS = {
     "preopen_all.yml": "fullscan-preopen.service",
+    "postclose_all.yml": "fullscan-map-postclose.service",
     "map_heat_postclose.yml": "fullscan-map-postclose.service",
     "door": "fullscan-openclaw-gateway.service",
 }
 
 ECS_SCRIPTS = {
     "preopen_all.yml": ROOT / "scripts" / "ecs_preopen.sh",
+    "postclose_all.yml": ROOT / "scripts" / "ecs_map_postclose.sh",
     "map_heat_postclose.yml": ROOT / "scripts" / "ecs_map_postclose.sh",
 }
 
@@ -148,6 +155,7 @@ GROK_NEEDLES = (
     "ecs_preopen.sh",
     "ecs_map_postclose.sh",
     "src.run_preopen_all",
+    "src.run_postclose_all",
     "src.map_heat_postclose",
     "src.run_stock_book_all",
     "src.run_outcome",
@@ -734,7 +742,9 @@ def _pull_book_paths(date: str) -> None:
         f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
         f"data/peers/{date}_peer_rs.csv",
         f"data/stock_book/{date}_stock_book.json",
+        f"data/stock_book/{date}_green.json",
         f"01_daily/{date}_stock_book.md",
+        f"01_daily/{date}_learnings.md",
         "dashboard/index.html",
         "03_scoreboard/HIT_BOARD.md",
         "03_scoreboard/PAPER_TRADING.md",
@@ -1239,6 +1249,11 @@ def check_bookchain(report: Report, date: str) -> None:
              group="book",
              path=ROOT / "data" / "stock_book" / f"{date}_stock_book.json",
              required=True, expected_date=date)
+    artifact(report, step="book.green_json",
+             name="Green pile grades (all-green BUY)",
+             group="book",
+             path=ROOT / "data" / "stock_book" / f"{date}_green.json",
+             required=True, expected_date=date)
     artifact(report, step="book.book_md", name="Stock book MD", group="book",
              path=ROOT / "01_daily" / f"{date}_stock_book.md",
              required=True, expected_date=date)
@@ -1282,6 +1297,11 @@ def check_outcomes(report: Report, date: str) -> None:
 def check_learning(report: Report, date: str) -> None:
     print(f"\n== H. LEARNING LOOP (date {date}) ==", flush=True)
     lm = ROOT / "03_scoreboard" / "LEARNINGS.md"
+    artifact(report, step="learn.dated",
+             name=f"{date}_learnings.md (session copy)",
+             group="learn",
+             path=ROOT / "01_daily" / f"{date}_learnings.md",
+             required=True, expected_date=date)
     artifact(report, step="learn.learnings", name="LEARNINGS.md digest",
              group="learn", path=lm, required=True, expected_date=date)
     if lm.exists() and not _file_contains(lm, date):
@@ -1341,11 +1361,16 @@ def _dispatch_payload(wf: str, date: str, source: str, target: str, book: str) -
         return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
     if wf == "finviz_preopen_scrape.yml":
         return {"ref": "main", "inputs": {"run_date": date, "force": "true"}}
+    if wf == "postclose_all.yml":
+        return {"ref": "main", "inputs": {
+            "run_date": source or date, "force": "true"}}
     if wf == "map_heat_postclose.yml":
         return {"ref": "main", "inputs": {
             "source_date": source, "target_date": target, "force": "true"}}
     if wf == "stock_book_all.yml":
-        return {"ref": "main", "inputs": {"run_date": book or date, "force": "true"}}
+        return {"ref": "main", "inputs": {
+            "run_date": book or date, "force": "true",
+            "runner": "ubuntu", "skip_llm": "true", "skip_extras": "true"}}
     if wf == "daily_pipeline.yml":
         return {"ref": "main", "inputs": {
             "stage": "outcome", "run_date": book or date, "force": "true"}}
@@ -1451,12 +1476,17 @@ def _spawn_cmd(wf: str, date: str, source: str, target: str, book: str
     if wf == "preopen_all.yml":
         script = ECS_SCRIPTS[wf]
         return ["bash", str(script)], {"RUN_DATE": date, "FORCE": "true"}
+    if wf == "postclose_all.yml":
+        script = ECS_SCRIPTS[wf]
+        return ["bash", str(script)], {
+            "SOURCE_DATE": source, "TARGET_DATE": target, "FORCE": "true"}
     if wf == "map_heat_postclose.yml":
         script = ECS_SCRIPTS[wf]
         return ["bash", str(script)], {
             "SOURCE_DATE": source, "TARGET_DATE": target, "FORCE": "true"}
     if wf == "stock_book_all.yml":
-        return [py, "-m", "src.run_stock_book_all", "--date", book, "--force"], {}
+        return [py, "-m", "src.run_stock_book_all", "--date", book,
+                "--force", "--skip-llm", "--skip-extras"], {}
     if wf == "daily_pipeline.yml":
         return [py, "-m", "src.run_outcome", "--date", book], {}
     if wf == "sector_daily.yml":
@@ -1476,11 +1506,16 @@ def _already_running(wf: str) -> bool:
         return True
     needles = {
         "preopen_all.yml": ("ecs_preopen.sh", "src.run_preopen_all"),
-        "map_heat_postclose.yml": ("ecs_map_postclose.sh", "src.map_heat_postclose"),
+        "postclose_all.yml": ("ecs_map_postclose.sh", "src.run_postclose_all",
+                             "src.map_heat_postclose"),
+        "map_heat_postclose.yml": ("ecs_map_postclose.sh", "src.map_heat_postclose",
+                                  "src.run_postclose_all"),
         "stock_book_all.yml": ("src.run_stock_book_all",),
-        "daily_pipeline.yml": ("src.run_outcome", "src.run_reflect"),
-        "sector_daily.yml": ("src.run_sector_outcome", "src.run_sector_reflect"),
-        "learn_cycle.yml": ("src.learn_cycle",),
+        "daily_pipeline.yml": ("src.run_outcome", "src.run_reflect",
+                              "src.run_postclose_all"),
+        "sector_daily.yml": ("src.run_sector_outcome", "src.run_sector_reflect",
+                            "src.run_postclose_all"),
+        "learn_cycle.yml": ("src.learn_cycle", "src.run_postclose_all"),
         "catalyst_daily.yml": ("src.catalyst_daily",),
     }.get(wf, ())
     return bool(needles) and _pgrep(*needles)
@@ -1491,8 +1526,19 @@ def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> 
         return [ROOT / "01_daily" / "news" / f"{date}_finviz_digest.json"]
     if wf == "map_heat_postclose.yml":
         return [ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json"]
+    if wf == "postclose_all.yml":
+        closed = source or date
+        return [
+            ROOT / "01_daily" / "general" / f"{closed}_outcome.md",
+            ROOT / "01_daily" / "map_heat" / f"{target}_research_baseline.json",
+            ROOT / "01_daily" / f"{closed}_learnings.md",
+        ]
     if wf == "preopen_all.yml":
-        return [ROOT / "01_daily" / f"{date}_preopen_status.json"]
+        return [
+            ROOT / "01_daily" / f"{date}_preopen_status.json",
+            ROOT / "data" / "stock_book" / f"{date}_stock_book.json",
+            ROOT / "data" / "stock_book" / f"{date}_green.json",
+        ]
     if wf == "label_weather.yml":
         return [
             ROOT / "01_daily" / "weather" / f"{book}_weather.json",
@@ -1501,11 +1547,14 @@ def _expected_files(wf: str, date: str, source: str, target: str, book: str) -> 
     if wf == "ab_checklist.yml":
         return [ROOT / "data" / "ab_checklist" / f"{book}_ab_checklist_enriched.csv"]
     if wf == "stock_book_all.yml":
-        return [ROOT / "data" / "stock_book" / f"{book}_stock_book.json"]
+        return [
+            ROOT / "data" / "stock_book" / f"{book}_stock_book.json",
+            ROOT / "data" / "stock_book" / f"{book}_green.json",
+        ]
     if wf == "daily_pipeline.yml":
         return [ROOT / "01_daily" / "general" / f"{book}_outcome.md"]
     if wf == "learn_cycle.yml":
-        return [ROOT / "03_scoreboard" / "LEARNINGS.md"]
+        return [ROOT / "01_daily" / f"{book}_learnings.md"]
     return []
 
 
@@ -1608,24 +1657,25 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
             continue
         if wf == "preopen_all.yml" and (
                 "map_heat_postclose.yml" in started
+                or "postclose_all.yml" in started
                 or "finviz_preopen_scrape.yml" in started
                 or _already_running("map_heat_postclose.yml")
+                or _already_running("postclose_all.yml")
                 or _already_running("finviz_preopen_scrape.yml")):
             print("[heal] scrape/baseline still in flight — hold preopen", flush=True)
             continue
         if wf == "stock_book_all.yml" and (
-                "preopen_all.yml" in started
-                or "label_weather.yml" in started
-                or "ab_checklist.yml" in started
-                or _already_running("preopen_all.yml")):
-            print("[heal] prereqs still in flight — hold book", flush=True)
+                "label_weather.yml" in started
+                or "ab_checklist.yml" in started):
+            print("[heal] weather/AB still in flight — hold book", flush=True)
             continue
-        if wf in ("daily_pipeline.yml", "sector_daily.yml") and (
+        if wf in ("daily_pipeline.yml", "sector_daily.yml", "postclose_all.yml") and (
                 "stock_book_all.yml" in started or _already_running("stock_book_all.yml")):
             print("[heal] book still in flight — hold outcomes", flush=True)
             continue
         if wf == "learn_cycle.yml" and (
-                "daily_pipeline.yml" in started or "sector_daily.yml" in started):
+                "daily_pipeline.yml" in started or "sector_daily.yml" in started
+                or "postclose_all.yml" in started):
             print("[heal] outcomes still in flight — hold learn", flush=True)
             continue
         if wf in GROK_WORKFLOWS and grok_busy():
@@ -1656,7 +1706,7 @@ def fix_jobs(report: Report, date: str, source: str, target: str, book: str,
         # ECS Grok job: never GH-dispatch (would queue behind this health run).
         unit = ECS_UNITS.get(wf)
         use_unit = bool(unit)
-        if wf == "map_heat_postclose.yml":
+        if wf in ("map_heat_postclose.yml", "postclose_all.yml"):
             # unit always uses today→next weekday; dated heal must spawn the script
             today_et = _today()
             if source != today_et:

@@ -1,12 +1,15 @@
 name: Daily Orchestrator (missed-job guard)
 
 # Does NOT own the two ALL clocks (ECS 05:55 pre-open / 16:10+22:00 post-close).
-# Only re-dispatches when today's file is missing AND nothing is already running.
-# Three workflows only: scrape, Pre-Open ALL, Post-Close ALL.
+# Only re-dispatches when skip-if-good says the pack is incomplete AND
+# nothing is already running. Morning: scrape + Pre-Open ALL. After 09:00
+# ET: Stock Book ALL on ubuntu-latest heals weather/join/AB/green/book
+# (no Grok, does not wait for a hung ECS pre-open). Evening: Post-Close ALL.
 
 on:
   schedule:
     - cron: "50 11 * * 1-5"
+    - cron: "20 13 * * 1-5"   # ~09:20 ET EDT — book heal if pre-open died
     - cron: "15 21 * * 1-5"
     - cron: "30 16 * * 0"
   workflow_dispatch:
@@ -33,7 +36,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Re-dispatch only the two ALL jobs (plus scrape)
+      - name: Re-dispatch ALL jobs (plus scrape / book heal)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
@@ -44,29 +47,20 @@ jobs:
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           echo "Orchestrator date (ET): $TODAY et_hm=$ET_HM force=$FORCE"
 
-          repo_file() {
-            gh api "repos/${REPO}/contents/${1}?ref=main" --jq .sha >/dev/null 2>&1
-          }
-          repo_file_size() {
-            gh api "repos/${REPO}/contents/${1}?ref=main" --jq '.size // 0' 2>/dev/null || echo 0
-          }
-
           artifact_ok() {
             local WF="$1"
             case "$WF" in
               finviz_preopen_scrape.yml)
-                local sz
-                sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
-                [ "${sz:-0}" -gt 200 ]
+                python3 -m src.skip_if_good --job finviz_preopen_scrape --date "$TODAY"
                 ;;
               preopen_all.yml)
-                repo_file "data/stock_book/${TODAY}_stock_book.json" \
-                  || repo_file "01_daily/${TODAY}_stock_book.md"
+                python3 -m src.skip_if_good --job preopen_full --date "$TODAY"
+                ;;
+              stock_book_all.yml)
+                python3 -m src.skip_if_good --job stock_book_all --date "$TODAY"
                 ;;
               postclose_all.yml)
-                local sz
-                sz=$(repo_file_size "01_daily/general/${TODAY}_outcome.md")
-                [ "${sz:-0}" -gt 400 ]
+                python3 -m src.skip_if_good --job postclose_all
                 ;;
               *)
                 return 1
@@ -79,6 +73,17 @@ jobs:
             echo "MISSING for $TODAY → dispatching $WF"
             gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
               -f ref=main || true
+          }
+
+          dispatch_book_ubuntu() {
+            echo "MISSING book for $TODAY → stock_book_all.yml ubuntu skip-llm"
+            gh api --method POST "repos/${REPO}/actions/workflows/stock_book_all.yml/dispatches" \
+              -f ref=main \
+              -f "inputs[runner]=ubuntu" \
+              -f "inputs[skip_llm]=true" \
+              -f "inputs[skip_extras]=true" \
+              -f "inputs[run_date]=$TODAY" \
+              || true
           }
 
           already_running() {
@@ -107,18 +112,28 @@ jobs:
               echo "OK — already running"
               return 0
             fi
+            if [ "$WF" = "stock_book_all.yml" ] && already_running "preopen_all.yml"; then
+              echo "Pre-Open ALL still on ECS — book heal stays on ubuntu"
+            fi
             if [ "$FORCE" != "true" ] && artifact_ok "$WF"; then
-              echo "OK — today's file is on main"
+              echo "OK — skip-if-good: pack already on disk"
+              return 0
+            fi
+            if [ "$WF" = "stock_book_all.yml" ]; then
+              dispatch_book_ubuntu
               return 0
             fi
             dispatch_wf "$WF"
           }
 
-          if [ "$FORCE" = "true" ] || [ "$ET_HM" -lt 925 ]; then
+          if [ "$FORCE" = "true" ] || [ "$ET_HM" -lt 900 ]; then
             maybe finviz_preopen_scrape.yml
             maybe preopen_all.yml
+          elif [ "$ET_HM" -lt 1600 ]; then
+            echo "past 09:00 ET — heal ranker on ubuntu (ECS may still be in Grok)"
+            maybe stock_book_all.yml
           else
-            echo "skip morning ALL — past 09:25 ET"
+            echo "skip morning ALL — session already open"
           fi
 
           if [ "$FORCE" = "true" ] || [ "$ET_HM" -ge 1600 ]; then

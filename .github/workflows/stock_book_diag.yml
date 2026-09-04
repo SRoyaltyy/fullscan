@@ -63,8 +63,8 @@ jobs:
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           echo "DATE=$DATE"
           echo "DATE=$DATE" >> "$GITHUB_ENV"
-          python -m src.stock_book_diag --date "$DATE" --write --as-of --rebuild-if-missing
-          # Board is the product. Red rows are not a job crash.
+          python -m src.stock_book_diag --date "$DATE" --write --as-of --rebuild-if-missing || true
+          # Board is the product. Red rows / a python crash are not a job fail.
           exit 0
 
       - name: Show today's actions

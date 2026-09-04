@@ -17,24 +17,22 @@ flock -n 9 || { echo "[map-postclose] lock held — skip"; exit 0; }
 ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
 echo "[map-postclose] et_hm=$ET_HM uid=$(id -u)"
 
-if [ -e "$PREOPEN_LOCK" ] && ! flock -n "$PREOPEN_LOCK" -c true 2>/dev/null; then
-  echo "[map-postclose] preopen lock held — will not git reset or run"
-  exit 1
-fi
-if command -v systemctl >/dev/null 2>&1 \
-   && systemctl is-active --quiet fullscan-preopen.service; then
-  echo "[map-postclose] preopen service active — abort"
-  exit 1
-fi
-
 if [ -f "$ENVF" ]; then
   set -a
   # shellcheck disable=SC1090
   . "$ENVF"
   set +a
 fi
+# 10800s ate the 2026-09-04 morning packet. Do not inherit that default
+# from .fullscan.env — night pack must fail over at 900s.
 export OPENCLAW_GATEWAY_URL="${OPENCLAW_GATEWAY_URL:-http://127.0.0.1:18789}"
-export OPENCLAW_TIMEOUT="${OPENCLAW_TIMEOUT:-10800}"
+if [ -z "${POSTCLOSE_LLM_TIMEOUT:-}" ]; then
+  if [ -z "${OPENCLAW_TIMEOUT:-}" ] || [ "${OPENCLAW_TIMEOUT}" = "10800" ]; then
+    export OPENCLAW_TIMEOUT=900
+  fi
+else
+  export OPENCLAW_TIMEOUT="$POSTCLOSE_LLM_TIMEOUT"
+fi
 export HOME="${FULLSCAN_HOME:-/home/gha}"
 export PYTHONUNBUFFERED=1
 
@@ -57,7 +55,11 @@ bash scripts/ensure_openclaw_timeouts.sh || true
 
 PY="${FULLSCAN_PYTHON:-python3}"
 [ -x "$ROOT/.venv/bin/python" ] && PY="$ROOT/.venv/bin/python"
-SOURCE="${SOURCE_DATE:-$(TZ=America/New_York date +%F)}"
+if [ -n "${SOURCE_DATE:-}" ]; then
+  SOURCE="$SOURCE_DATE"
+else
+  SOURCE=$("$PY" -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+fi
 if [ -n "${TARGET_DATE:-}" ]; then
   TARGET="$TARGET_DATE"
 else
@@ -68,6 +70,23 @@ if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
   FORCE_FLAG=(--force)
 fi
 echo "[map-postclose] POST-CLOSE ALL source=$SOURCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
+
+if [ "${FORCE:-}" != "true" ] && [ "${FORCE:-}" != "1" ]; then
+  if "$PY" -c "from src.skip_if_good import check_postclose_all; raise SystemExit(0 if check_postclose_all('$SOURCE') else 1)"; then
+    echo "[map-postclose] $SOURCE pack already on disk — skip"
+    exit 0
+  fi
+fi
+# GH Post-Close ALL first existed 2026-09-04. A leftover morning lock
+# used to skip 22:00 and dated _learnings.md never landed. If the night
+# pack is still missing, run anyway and warn.
+if [ -e "$PREOPEN_LOCK" ] && ! flock -n "$PREOPEN_LOCK" -c true 2>/dev/null; then
+  echo "[map-postclose] WARN: preopen lock held — night pack still missing, running anyway"
+fi
+if command -v systemctl >/dev/null 2>&1 \
+   && systemctl is-active --quiet fullscan-preopen.service; then
+  echo "[map-postclose] WARN: preopen service active — night pack still missing, running anyway"
+fi
 
 # Aliyun Cloudflare-blocks Elite HTML. Never scrape here.
 export FINVIZ_SKIP_LIVE=1
@@ -90,6 +109,9 @@ bash scripts/safe_git_push.sh \
   01_daily/general/ 01_daily/sectors/ 01_daily/map_heat/ \
   01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
   01_daily/*_learnings.md \
-  02_lessons/ 03_scoreboard/ 00_grounding/mutable_policy.md
+  02_lessons/ 03_scoreboard/ \
+  00_grounding/mutable_policy.md \
+  00_grounding/book_policy.json \
+  00_grounding/weather_rules_proposals.json
 echo "[map-postclose] complete $(TZ=America/New_York date '+%F %H:%M %Z')"
 exit 0

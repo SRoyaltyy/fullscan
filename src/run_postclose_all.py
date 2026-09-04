@@ -30,15 +30,52 @@ from zoneinfo import ZoneInfo
 
 from . import config, skip_if_good
 from .map_heat_postclose import next_weekday
-from .skip_if_good import last_closed_session
+from .skip_if_good import night_pack_dates
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
 
 
-def _run(cmd: list[str]) -> int:
+def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
-    return subprocess.run(cmd, cwd=str(ROOT), env=os.environ.copy()).returncode
+    try:
+        r = subprocess.run(
+            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        print(f"[postclose-all] WARN: timed out after {timeout_s}s: "
+              f"{' '.join(cmd)}", flush=True)
+        return 124
+    return r.returncode
+
+
+def _llm_http_timeout(default: int = 900) -> int:
+    raw = os.environ.get("POSTCLOSE_LLM_TIMEOUT", str(default))
+    try:
+        return max(60, int(raw))
+    except ValueError:
+        return default
+
+
+def _push_pack(date: str) -> None:
+    """Land this session before the next date (or a job-timeout kill)."""
+    script = ROOT / "scripts" / "safe_git_push.sh"
+    if not script.is_file():
+        print("[postclose-all] WARN: safe_git_push.sh missing — skip persist")
+        return
+    msg = f"auto: post-close ALL [{date}]"
+    paths = [
+        "01_daily/general/", "01_daily/sectors/", "01_daily/map_heat/",
+        "01_daily/news/", "01_daily/_transcripts/", "01_daily/_channel1/",
+        f"01_daily/{date}_learnings.md",
+        "02_lessons/", "03_scoreboard/",
+        "00_grounding/mutable_policy.md",
+        "00_grounding/book_policy.json",
+        "00_grounding/weather_rules_proposals.json",
+    ]
+    print(f"[postclose-all] persist {date} before the next session / timeout")
+    code = _run(["bash", str(script), msg, *paths], timeout_s=180)
+    if code != 0:
+        print(f"[postclose-all] WARN: persist {date} exited {code}")
 
 
 def _exists_gt(rel: str, n: int) -> bool:
@@ -51,8 +88,16 @@ def _exists_gt(rel: str, n: int) -> bool:
 
 def run(date: str | None = None, force: bool = False,
         llm_backend: str | None = None) -> None:
-    date = date or last_closed_session()
     config.apply_llm_backend(llm_backend)
+    if date:
+        dates = [date]
+    else:
+        dates = night_pack_dates()
+    for one in dates:
+        _run_one(one, force=force)
+
+
+def _run_one(date: str, force: bool = False) -> None:
     target = next_weekday(date)
     py = sys.executable
     print("")
@@ -67,51 +112,83 @@ def run(date: str | None = None, force: bool = False,
               f"already on disk — nothing to do")
         return
 
-    def step(title: str, cmd: list[str], done: bool) -> int:
+    def step(title: str, cmd: list[str], done: bool,
+             timeout_s: int | None = None,
+             llm_timeout_s: int | None = None) -> int:
         if done and not force:
             print(f"[postclose-all] skip {title} (already on disk)")
             return 0
         print(f"\n[postclose-all] → {title}")
-        code = _run(cmd)
+        prev = None
+        if llm_timeout_s is not None:
+            prev = os.environ.get("OPENCLAW_TIMEOUT")
+            os.environ["OPENCLAW_TIMEOUT"] = str(llm_timeout_s)
+            print(f"[postclose-all] LLM HTTP timeout {llm_timeout_s}s "
+                  "(hung Grok fails over; 10800s ate the morning packet)")
+            if timeout_s is None:
+                timeout_s = llm_timeout_s + 60
+        try:
+            code = _run(cmd, timeout_s=timeout_s)
+        finally:
+            if llm_timeout_s is not None:
+                if prev is None:
+                    os.environ.pop("OPENCLAW_TIMEOUT", None)
+                else:
+                    os.environ["OPENCLAW_TIMEOUT"] = prev
         if code != 0:
             print(f"[postclose-all] WARN: {title} exited {code}")
         return code
 
+    llm_to = _llm_http_timeout()
+    try:
+        captain_to = max(60, int(os.environ.get("POSTCLOSE_CAPTAIN_TIMEOUT", "1200")))
+    except ValueError:
+        captain_to = 1200
+
     step("General outcome",
          [py, "-m", "src.run_outcome", "--date", date],
-         skip_if_good.check_daily_pipeline_outcome(date))
+         skip_if_good.check_daily_pipeline_outcome(date),
+         llm_timeout_s=llm_to)
     # Cheap / no-LLM — always refresh so a yesterday file cannot skip today.
     step("Horizon grade",
          [py, "-m", "src.horizon_grade", "--date", date],
-         False)
+         False, timeout_s=60)
     step("General reflect",
          [py, "-m", "src.run_reflect", "--date", date],
-         _exists_gt(f"01_daily/general/{date}_reflect.md", 200))
+         _exists_gt(f"01_daily/general/{date}_reflect.md", 200),
+         llm_timeout_s=llm_to)
 
+    # 11 sectors × (HTTP cap + slack). A 5400s wall died mid-pack when
+    # several Grok calls each burned the 900s hang budget.
+    sector_wall = max(5400, 11 * (llm_to + 90))
     step("Sector outcomes",
          [py, "-m", "src.run_sector_outcome", "--date", date],
-         skip_if_good.check_sector_outcomes(date))
+         skip_if_good.check_sector_outcomes(date),
+         timeout_s=sector_wall, llm_timeout_s=llm_to)
     n_reflect = 0
     sec = ROOT / "01_daily" / "sectors" / date
     if sec.is_dir():
         n_reflect = len(list(sec.glob("*_reflect.md")))
     step("Sector reflect",
          [py, "-m", "src.run_sector_reflect", "--date", date],
-         n_reflect >= 8)
+         n_reflect >= 8,
+         timeout_s=sector_wall, llm_timeout_s=llm_to)
     step("Sector board",
          [py, "-m", "src.sector_board", "--date", date],
-         False)
+         False, timeout_s=60)
 
+    # yfinance can hang the night pack before learn/captains. Bound it.
     step("News actions grader",
          [py, "-m", "src.news_grade"],
-         False)
+         False, timeout_s=300)
     step("HIT board",
          [py, "-m", "src.hit_board"],
-         False)
+         False, timeout_s=60)
 
     step("Learn cycle",
-         [py, "-m", "src.learn_cycle"],
-         skip_if_good.check_learn_cycle(date))
+         [py, "-m", "src.learn_cycle", "--date", date],
+         skip_if_good.check_learn_cycle(date),
+         llm_timeout_s=llm_to)
 
     heat_src = ROOT / "01_daily" / "map_heat" / f"{date}_map_heat.json"
     heat_dst = ROOT / "01_daily" / "map_heat" / f"{target}_map_heat.json"
@@ -130,13 +207,16 @@ def run(date: str | None = None, force: bool = False,
     step("Captain research → next session",
          [py, "-m", "src.map_heat_postclose",
           "--source-date", date, "--target-date", target],
-         skip_if_good.check_map_heat_postclose(date))
+         skip_if_good.check_map_heat_postclose(date),
+         timeout_s=7200, llm_timeout_s=captain_to)
 
-    if not skip_if_good.check_daily_pipeline_outcome(date):
-        print(f"[postclose-all] DEGRADED {date}: outcome still missing — "
-              "wrote whatever landed; exit 0 so git still runs")
+    if not skip_if_good.check_postclose_all(date):
+        print(f"[postclose-all] DEGRADED {date}: outcome/learn/next-session "
+              "still missing — wrote whatever landed; persist then continue")
+        _push_pack(date)
         return
     print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
+    _push_pack(date)
 
 
 def main() -> None:

@@ -4,14 +4,15 @@ Does in one ECS job (per-step skip-if-good, fail-closed QC):
 
   (Finviz digest + map-heat overlay already landed by GH-hosted
    finviz_preopen_scrape.yml on ubuntu-latest — Elite login, not ECS)
+  → wait for GH scrape + last-night captain baseline
+  → weather / join / AB (deterministic; unblocks the ranker even if Grok dies)
   → news parse → events (+ catcher) → news judge
   → map heat research (morning delta over last night's baseline)
   → news actions
   → general predict → 11 sector predicts → sector board
-  → weather (deterministic labels×regime; unblocks join / stock book)
-  → catalyst dossiers (layer 3; optional, after the 09:25-critical predicts)
-  → output_qc (regex) → Grok reads the files as text (skipped if prior-ok)
   → stock book + paper dashboard  (--with-book, default on)
+  → catalyst dossiers (layer 3; optional, AFTER the book)
+  → output_qc (regex) → Grok reads the files as text (skipped if prior-ok)
 
 Post-close grades / learn / tonight's captain research live in
 src.run_postclose_all — do not run them here.
@@ -68,9 +69,15 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
-def _run(cmd: list[str]) -> int:
+def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
-    r = subprocess.run(cmd, cwd=str(ROOT), env=os.environ.copy())
+    try:
+        r = subprocess.run(
+            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        print(f"[preopen-all] WARN: timed out after {timeout_s}s: "
+              f"{' '.join(cmd)}", flush=True)
+        return 124
     return r.returncode
 
 
@@ -80,6 +87,14 @@ def _p(*parts: str) -> Path:
 
 def _exists(*parts: str) -> bool:
     return _p(*parts).exists()
+
+
+def _exists_gt(*parts: str, min_bytes: int = 200) -> bool:
+    p = _p(*parts)
+    try:
+        return p.is_file() and p.stat().st_size >= min_bytes
+    except OSError:
+        return False
 
 
 def _date_paths(root: Path, date: str) -> list[Path]:
@@ -96,6 +111,11 @@ def _date_paths(root: Path, date: str) -> list[Path]:
         root / "01_daily" / "_transcripts",
         root / "01_daily" / "_channel1",
         root / "data" / "catalyst",
+        root / "data" / "universe",
+        root / "data" / "join",
+        root / "data" / "ab_checklist",
+        root / "data" / "peers",
+        root / "data" / "stock_book",
     ):
         if folder.is_dir():
             hits.extend(sorted(folder.glob(f"{date}*")))
@@ -179,15 +199,8 @@ def _scrape_ready(date: str) -> bool:
     return overlay_at.startswith(date) and bool(payload.get("tape") or [])
 
 
-def _pull_scrape_artifacts(date: str) -> None:
-    """Best-effort: take GH-hosted digest + overlay from origin/main."""
-    paths = [
-        f"01_daily/news/{date}_finviz_digest.json",
-        f"01_daily/news/{date}_finviz_digest.md",
-        "01_daily/news/latest_finviz_digest.md",
-        f"01_daily/map_heat/{date}_map_heat.json",
-        f"01_daily/map_heat/{date}_map_heat.md",
-    ]
+def _pull_origin_paths(date: str, paths: list[str], label: str) -> None:
+    """Best-effort: take files from origin/main into this work tree."""
     try:
         subprocess.run(
             ["git", "fetch", "origin", "main"],
@@ -207,7 +220,50 @@ def _pull_scrape_artifacts(date: str) -> None:
             cwd=str(ROOT), capture_output=True, timeout=30, check=False,
         )
     except (OSError, subprocess.SubprocessError) as e:
-        print(f"[preopen-all] scrape pull skipped: {e}", flush=True)
+        print(f"[preopen-all] {label} pull skipped: {e}", flush=True)
+
+
+def _pull_scrape_artifacts(date: str) -> None:
+    """Best-effort: take GH-hosted digest + overlay from origin/main."""
+    _pull_origin_paths(date, [
+        f"01_daily/news/{date}_finviz_digest.json",
+        f"01_daily/news/{date}_finviz_digest.md",
+        "01_daily/news/latest_finviz_digest.md",
+        f"01_daily/map_heat/{date}_map_heat.json",
+        f"01_daily/map_heat/{date}_map_heat.md",
+    ], "scrape")
+
+
+def _baseline_ready(date: str) -> bool:
+    return output_qc.qc_map_heat_baseline(
+        _p("01_daily", "map_heat", f"{date}_research_baseline.json")).ok
+
+
+def _pull_night_baseline(date: str) -> None:
+    _pull_origin_paths(date, [
+        f"01_daily/map_heat/{date}_research_baseline.json",
+        f"01_daily/map_heat/{date}_research_baseline.md",
+    ], "baseline")
+
+
+def wait_for_night_baseline(date: str, timeout_s: int | None = None) -> bool:
+    """Night packet must exist before morning research. Do not invent captains."""
+    timeout_s = int(os.environ.get("NIGHT_BASELINE_WAIT", timeout_s or 180))
+    if _baseline_ready(date):
+        print("[preopen-all] night captain baseline already on disk", flush=True)
+        return True
+    print(f"[preopen-all] waiting up to {timeout_s}s for last-night "
+          f"captain baseline", flush=True)
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        _pull_night_baseline(date)
+        if _baseline_ready(date):
+            print("[preopen-all] night captain baseline landed", flush=True)
+            return True
+        time.sleep(20)
+    print("[preopen-all] WARN: night baseline missing after wait — "
+          "map-heat refresh will bootstrap / QC-fail", flush=True)
+    return False
 
 
 def wait_for_gh_scrape(date: str, timeout_s: int | None = None) -> bool:
@@ -354,8 +410,16 @@ def run(date: str | None = None, force: bool = False,
 
     skip_writes = False
     restore_persist(date)
-    wait_for_gh_scrape(date)
-    if not force:
+    late = (not force) and preopen.past_predict_cutoff()
+    # A late heal must not spend 15 minutes waiting on scrape/baseline.
+    wait_for_gh_scrape(date, timeout_s=45 if late else None)
+    wait_for_night_baseline(date, timeout_s=20 if late else None)
+    # 09:25 gates LLM essays, not weather / AB / join / the book.
+    if late:
+        print(f"[preopen-all] {date}: past 09:25 ET — skip LLM packet; "
+              "weather/AB/join/book still run so BUY/SELL can land")
+        skip_writes = True
+    elif not force:
         pre = output_qc.preopen_report(date)
         grok_ok = grok_review.prior_ok(date)
         if pre.get("all_ok") and grok_ok:
@@ -368,22 +432,29 @@ def run(date: str | None = None, force: bool = False,
             print(f"[preopen-all] {date}: mechanical QC already ok — "
                   f"Grok will read the files as text (no rewrite)")
             skip_writes = True
-            preopen.refuse_if_late("preopen_all", force=force)
-        else:
-            preopen.refuse_if_late("preopen_all", force=force)
-    else:
-        preopen.refuse_if_late("preopen_all", force=force)
 
     attempts: list[dict] = []
 
-    def step(key: str, title: str, cmd: list[str]) -> int:
+    llm_steps = {
+        "news_parse", "events", "events_catcher", "news_judge",
+        "map_heat_research", "news_actions", "general_predict",
+        "sector_predict", "catalyst",
+    }
+
+    def step(key: str, title: str, cmd: list[str],
+             timeout_s: int | None = None) -> int:
+        if (not force) and key in llm_steps and preopen.past_predict_cutoff():
+            print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
+            attempts.append({"key": key, "title": title, "cmd": cmd,
+                             "returncode": 0, "skipped": True})
+            return 0
         if not force and _packet_step_done(key, date):
             print(f"[preopen-all] skip {title} (already quality-ok)")
             attempts.append({"key": key, "title": title, "cmd": cmd,
                              "returncode": 0, "skipped": True})
             return 0
         print(f"\n[preopen-all] → {title}")
-        code = _run(cmd)
+        code = _run(cmd, timeout_s=timeout_s)
         attempts.append({"key": key, "title": title, "cmd": cmd,
                          "returncode": code})
         if code != 0:
@@ -394,54 +465,165 @@ def run(date: str | None = None, force: bool = False,
     fa = _force_args(force)
     py = sys.executable
 
+    # Weather / join / AB have no LLM clock. Run them before essays so a
+    # slow Grok morning cannot leave the ranker with 0/4 book outputs.
+    if force or not _exists_gt("data", "universe", f"{date}_membership.csv",
+                               min_bytes=50_000):
+        print("[preopen-all] → Universe labels (segments)")
+        _run([py, "-m", "src.segments", "--date", date], timeout_s=180)
+        snapshot_persist(date)
+    step("weather", "Weather / regime",
+         [py, "-m", "src.weather", "--date", date], timeout_s=180)
+    from . import skip_if_good
+    if not skip_if_good.check_label_weather(date):
+        print("[preopen-all] weather missing/thin — retry --offline")
+        _run([py, "-m", "src.weather", "--date", date, "--offline"],
+             timeout_s=60)
+        snapshot_persist(date)
+    if force or not _exists_gt("data", "join", f"{date}_ranked.csv",
+                               min_bytes=5_000):
+        print("[preopen-all] → Join / match rank")
+        _run([py, "-m", "src.join", "--date", date], timeout_s=180)
+        snapshot_persist(date)
+    if force or not _exists_gt("data", "ab_checklist",
+                               f"{date}_ab_checklist_enriched.csv",
+                               min_bytes=5_000):
+        if not _exists_gt("data", "ab_checklist",
+                          f"{date}_ab_checklist.csv", min_bytes=10_000):
+            print("[preopen-all] → AB checklist")
+            _run([py, "-m", "src.ab_checklist", "--date", date],
+                 timeout_s=1500)
+        print("[preopen-all] → AB enrich")
+        _run([py, "-m", "src.ab_enrich", "--date", date], timeout_s=180)
+        snapshot_persist(date)
+
     if not skip_writes:
-        step("news_parse", "News parse",
-             [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-              "--date", date, *fa])
-        step("events", "Event scanner (primary)",
-             [py, "-m", "src.run_events", "--date", date, *fa])
-        step("events_catcher", "Event catcher (gap hunt, no carry)",
-             [py, "-m", "src.run_events_catcher", "--date", date, *fa])
-        # Deliberately NO events_fallback — carry is trash for pre-open.
-        step("news_judge", "News judge",
-             [py, "-m", "src.run_news_judge", "--date", date, *fa])
-        # Last night's 11-sector baseline is mandatory. One overnight delta
-        # refresh only; never 11 sector batches in the time-critical window.
-        prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
-        os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
-            "MAP_HEAT_REFRESH_TIMEOUT", "1200")
+        # A single hung Grok call at 10800s ate 2026-09-04 (0 essays on ECS).
+        # Morning packet must fail over to DeepSeek in minutes, not hours.
+        prev_llm_to = os.environ.get("OPENCLAW_TIMEOUT")
+        morning_to = os.environ.get("PREOPEN_LLM_TIMEOUT", "420")
+        os.environ["OPENCLAW_TIMEOUT"] = morning_to
         try:
-            rc = step("map_heat_research", "Map heat morning delta refresh",
-                      [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
-            if rc != 0:
-                print("[preopen-all] morning research failed — retrying once")
-                step("map_heat_research", "Map heat morning delta refresh (retry)",
-                     [py, "-m", "src.map_heat_refresh", "--date", date,
-                      "--force", *fa])
+            llm_sub_t = max(120, int(morning_to) + 60)
+        except ValueError:
+            llm_sub_t = 480
+        print(f"[preopen-all] morning LLM HTTP timeout {morning_to}s "
+              f"subprocess {llm_sub_t}s "
+              "(hung Grok fails over; 10800s ate 2026-09-04)")
+        try:
+            step("news_parse", "News parse",
+                 [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
+                  "--date", date, *fa], timeout_s=llm_sub_t)
+            step("events", "Event scanner (primary)",
+                 [py, "-m", "src.run_events", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
+            step("events_catcher", "Event catcher (gap hunt, no carry)",
+                 [py, "-m", "src.run_events_catcher", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
+            # Deliberately NO events_fallback — carry is trash for pre-open.
+            step("news_judge", "News judge",
+                 [py, "-m", "src.run_news_judge", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
+            # Last night's 11-sector baseline is mandatory. One overnight delta
+            # refresh only; never 11 sector batches in the time-critical window.
+            prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
+            os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
+                "MAP_HEAT_REFRESH_TIMEOUT", "1200")
+            try:
+                step("map_heat_research", "Map heat morning delta refresh",
+                     [py, "-m", "src.map_heat_refresh", "--date", date, *fa],
+                     timeout_s=1260)
+                # No retry: a second 20-min timeout ate 2026-09-02 and
+                # pushed predicts/book past 09:30. Night baseline stands.
+            finally:
+                os.environ["OPENCLAW_TIMEOUT"] = prev_timeout or morning_to
+            step("news_actions", "News actions",
+                 [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
+                  "--date", date, *fa], timeout_s=llm_sub_t)
+            # Time-critical predicts first. Catalyst waits until after the book.
+            step("general_predict", "General market predict",
+                 [py, "-m", "src.run_predict", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
+            step("sector_predict", "Per-sector predict (all 11)",
+                 [py, "-m", "src.run_sector_predict", "--date", date, *fa],
+                 timeout_s=2400)
+            step("sector_board", "Sector board",
+                 [py, "-m", "src.sector_board", "--date", date],
+                 timeout_s=60)
         finally:
-            if prev_timeout is None:
+            if prev_llm_to is None:
                 os.environ.pop("OPENCLAW_TIMEOUT", None)
             else:
-                os.environ["OPENCLAW_TIMEOUT"] = prev_timeout
-        step("news_actions", "News actions",
-             [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
-              "--date", date, *fa])
-        # Time-critical predicts first. Eight catalyst names each do
-        # 30+19 web searches + two LLM calls and on 2026-09-02 that ate
-        # the morning — Tech/Utilities then hit the 09:25 refuse.
-        # Dossiers still merge into actions for the later stock book.
-        step("general_predict", "General market predict",
-             [py, "-m", "src.run_predict", "--date", date, *fa])
-        step("sector_predict", "Per-sector predict (all 11)",
-             [py, "-m", "src.run_sector_predict", "--date", date, *fa])
-        step("sector_board", "Sector board",
-             [py, "-m", "src.sector_board", "--date", date])
-        # Deterministic, seconds. Must land before catalyst so a long
-        # dossier pass cannot leave the ranker blocked on weather.
-        step("weather", "Weather / regime",
-             [py, "-m", "src.weather", "--date", date])
-        step("catalyst", "Catalyst dossiers (identified names)",
-             [py, "-m", "src.catalyst_daily", "--date", date, *fa])
+                os.environ["OPENCLAW_TIMEOUT"] = prev_llm_to
+
+    # Predicts are optional weather inputs. Refresh join so s_join
+    # sees the same-day general/sector essays when they landed.
+    # Do not use step() — skip-if-good would skip this refresh.
+    # Book is next. Catalyst / Grok review wait until BUY/SELL is on disk —
+    # 2026-09-02 eight dossiers ate the morning and the ranker never started.
+    print("[preopen-all] → Weather / join refresh (before book)")
+    _run([py, "-m", "src.weather", "--date", date], timeout_s=180)
+    if not skip_if_good.check_label_weather(date):
+        print("[preopen-all] weather refresh thin — retry --offline")
+        _run([py, "-m", "src.weather", "--date", date, "--offline"],
+             timeout_s=60)
+    _run([py, "-m", "src.join", "--date", date], timeout_s=180)
+    snapshot_persist(date)
+
+    book_ok = True
+    if with_book:
+        from . import run_stock_book_all, skip_if_good
+        already = (not force) and skip_if_good.check_stock_book_all(date)
+        # ubuntu land_book may have written green.json before essays.
+        # Re-rank whenever essays had a chance to land (not a late 09:25 heal).
+        if already and late:
+            print(f"[preopen-all] skip stock book (already on disk for {date}; "
+                  "past 09:25 — not replacing with an emptier rank)")
+        else:
+            print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
+            try:
+                # Essays already ran (or packet was already ok). Rank only —
+                # paper/sleeve/catalyst must not delay green.json.
+                run_stock_book_all.run(
+                    date=date, force=force, skip_llm=True,
+                    skip_extras=True, refresh_ranker=True, top=25)
+            except SystemExit as e:
+                print(f"[preopen-all] WARN: stock book exited: {e}")
+            except Exception as e:  # noqa: BLE001 — still publish what we wrote
+                print(f"[preopen-all] WARN: stock book crashed: {e}")
+        snapshot_persist(date)
+        book_ok = skip_if_good.check_stock_book_all(date)
+        if not book_ok:
+            print(f"[preopen-all] WARN: stock book still missing for {date}")
+        else:
+            # Push the ranker layer now so 09:30 sees BUY/SELL even if
+            # paper/sleeve/catalyst hang after this.
+            print("[preopen-all] → push book + green.json + ranker inputs")
+            _run([
+                "bash", "scripts/safe_git_push.sh",
+                f"auto: stock book layer [{date}]",
+                f"data/stock_book/{date}_stock_book.json",
+                f"data/stock_book/{date}_green.json",
+                f"01_daily/{date}_stock_book.md",
+                f"01_daily/weather/{date}_weather.json",
+                f"01_daily/weather/{date}_weather.md",
+                f"data/join/{date}_ranked.csv",
+                f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
+                f"data/universe/{date}_membership.csv",
+            ])
+            if force or not preopen.past_predict_cutoff():
+                print("[preopen-all] → paper / sleeve (after book is on main)")
+                _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"])
+                _run([py, "-m", "src.sleeve_combine_bt",
+                      "--mode", "io_boost", "--hold", "3d"])
+                snapshot_persist(date)
+    else:
+        print("[preopen-all] --no-book: leaving stock book to a later click")
+
+    if not skip_writes:
+        step("catalyst", "Catalyst dossiers (after book)",
+             [py, "-m", "src.catalyst_daily", "--date", date, *fa],
+             timeout_s=1800)
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)
@@ -453,6 +635,10 @@ def run(date: str | None = None, force: bool = False,
         grok = {"ok": True, "notes": "prior Grok text review still good — skipped",
                 "fails": []}
         print("[preopen-all] skip Grok text review (prior_ok)")
+    elif (not force) and preopen.past_predict_cutoff():
+        grok = {"ok": True, "notes": "past 09:25 ET — skipped; book already landed",
+                "fails": []}
+        print("[preopen-all] skip Grok text review (past 09:25 ET)")
     else:
         grok = grok_review.review_preopen(date, mechanical_report=report)
         print("")
@@ -551,8 +737,9 @@ def run(date: str | None = None, force: bool = False,
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
         "all_ok": bool(report.get("all_ok")) and not missing_required
-                  and bool(grok.get("ok")),
+                  and bool(grok.get("ok")) and (not with_book or book_ok),
         "qc_all_ok": bool(report.get("all_ok")),
+        "book_ok": book_ok,
         "grok_ok": bool(grok.get("ok")),
         "grok_fails": grok.get("fails") or [],
         "missing_required": missing_required,
@@ -579,7 +766,8 @@ def run(date: str | None = None, force: bool = False,
         f"# Pre-open ALL status — {date}",
         "",
         f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
-        f"grok_ok={status['grok_ok']}  missing={missing_required or 'none'}",
+        f"book_ok={status['book_ok']}  grok_ok={status['grok_ok']}  "
+        f"missing={missing_required or 'none'}",
         "",
         "Predictive modules + stock book (must land before 09:30 ET).",
         "Outcome / learn / tonight's captain research = Post-Close ALL.",
@@ -591,27 +779,6 @@ def run(date: str | None = None, force: bool = False,
     print(f"[preopen-all] wrote {status_path}")
     print(f"[preopen-all] wrote {md_path}")
     snapshot_persist(date)
-
-    book_ok = True
-    if with_book:
-        from . import run_stock_book_all, skip_if_good
-        if (not force) and skip_if_good.check_stock_book_all(date):
-            print(f"[preopen-all] skip stock book (already on disk for {date})")
-        else:
-            print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
-            packet_ok = bool(report.get("all_ok")) and not missing_required
-            try:
-                run_stock_book_all.run(
-                    date=date, force=force, skip_llm=packet_ok, top=25)
-            except SystemExit as e:
-                print(f"[preopen-all] WARN: stock book exited: {e}")
-            except Exception as e:  # noqa: BLE001 — still publish what we wrote
-                print(f"[preopen-all] WARN: stock book crashed: {e}")
-        book_ok = skip_if_good.check_stock_book_all(date)
-        if not book_ok:
-            print(f"[preopen-all] WARN: stock book still missing for {date}")
-    else:
-        print("[preopen-all] --no-book: leaving stock book to a later click")
 
     degraded = bool(
         missing_required or not report.get("all_ok") or not grok.get("ok")

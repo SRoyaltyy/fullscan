@@ -29,8 +29,15 @@ FRED_SERIES = ["DGS30", "DGS10", "DFII10", "BAMLH0A0HYM2", "SOFR", "IORB",
 def _yf_history(symbol: str, days: int = 45) -> list[dict]:
     """[(date, open, high, low, close)] ascending via yfinance; [] on failure."""
     try:
+        import socket
+
         import yfinance as yf
-        hist = yf.Ticker(symbol).history(period=f"{days}d", interval="1d")
+        prev = socket.getdefaulttimeout()
+        socket.setdefaulttimeout(20)
+        try:
+            hist = yf.Ticker(symbol).history(period=f"{days}d", interval="1d")
+        finally:
+            socket.setdefaulttimeout(prev)
         out = [{"date": str(idx.date()), "open": float(row["Open"]),
                 "high": float(row["High"]), "low": float(row["Low"]),
                 "close": float(row["Close"])}

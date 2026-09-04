@@ -14,6 +14,7 @@ import re
 from datetime import datetime
 from io import StringIO
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -334,7 +335,7 @@ def main():
 
     print("=== Finviz Financial Data Collector ===", flush=True)
 
-    snapshot_date = datetime.now().strftime("%Y-%m-%d")
+    snapshot_date = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
     df = None
 
     print("\n--- Mode 1: Elite CSV Export ---", flush=True)

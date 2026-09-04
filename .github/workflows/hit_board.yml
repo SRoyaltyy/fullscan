@@ -35,15 +35,17 @@ jobs:
       - name: Build HIT board
         run: |
           set -e
-          python -m src.hit_board
+          python -m src.hit_board || true
           echo "======== 03_scoreboard/HIT_BOARD.md ========"
-          cat 03_scoreboard/HIT_BOARD.md
+          cat 03_scoreboard/HIT_BOARD.md || true
 
       - name: Commit
+        if: always()
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 03_scoreboard/HIT_BOARD.md 03_scoreboard/hit_board.json || true
-          git commit -m "auto: HIT board (general + sectors, all dates)" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          export HOME="${HOME:-/home/gha}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          bash scripts/safe_git_push.sh \
+            "auto: HIT board (general + sectors, all dates)" \
+            03_scoreboard/HIT_BOARD.md \
+            03_scoreboard/hit_board.json

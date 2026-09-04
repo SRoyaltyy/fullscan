@@ -188,6 +188,38 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
     return out.drop_duplicates("Ticker", keep="first")
 
 
+def _keep_liquid(join: pd.DataFrame) -> pd.DataFrame:
+    """Drop illiquid names. If the filter wipes everyone, keep the universe.
+
+    Missing Finviz mcap/vol/ATR used to become 0 and empty the book, so
+    green.json never wrote.
+    """
+    if join is None or join.empty:
+        return join
+    n_before = len(join)
+    if "atr_pct" not in join.columns:
+        join = join.copy()
+        join["atr_pct"] = np.nan
+    liquid = (
+        (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
+        & (join["avg_vol_k"].fillna(0) >= MIN_AVG_VOL_K)
+        & (join["atr_pct"].fillna(0) >= MIN_ATR_PCT)
+    )
+    join = join.copy()
+    join["liquid"] = liquid
+    kept = join.loc[liquid].copy()
+    print(
+        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M "
+        f"vol>={MIN_AVG_VOL_K}k ATR%>={MIN_ATR_PCT}: "
+        f"{n_before} → {len(kept)}"
+    )
+    if n_before and not len(kept):
+        print("[stock-book] WARN: liquidity filter emptied the universe — "
+              "ranking unfiltered so green.json can still land")
+        return join
+    return kept
+
+
 def _rebound_flags(date: str) -> pd.DataFrame:
     """Stock-specific checklist score floor + tape_ok (sparse mean-reversion tag).
 
@@ -302,9 +334,15 @@ def _dir_conf_to_bias(direction: str, conf: float) -> float:
 
 
 def _runs_for_date(asof: str) -> dict[str, dict]:
-    """Same-calendar-day scoreboard runs only. Stale sector/general = unused."""
-    board = scoreboard.load()
+    """Same-calendar-day essays. Scoreboard first; predict.md if ingest lagged.
+
+    Ubuntu land-book / 09:15 heal often run after the md files exist but
+    before scoreboard.json is committed. Zeros for s_general/s_sector then
+    empty the green pile and skip the later heal.
+    """
+    from . import weather
     latest: dict[str, dict] = {}
+    board = scoreboard.load()
     for r in board.get("runs", []):
         if r.get("date") != asof:
             continue
@@ -312,6 +350,14 @@ def _runs_for_date(asof: str) -> dict[str, dict]:
         if not r.get("predicted_direction"):
             continue
         latest[t] = r
+    general, sectors = weather.load_runs(asof)
+    if "general" not in latest and general and general.get("predicted_direction"):
+        latest["general"] = general
+    for name, run in (sectors or {}).items():
+        key = f"sector:{name}"
+        if key in latest or not run or not run.get("predicted_direction"):
+            continue
+        latest[key] = run
     return latest
 
 
@@ -700,7 +746,9 @@ def build(date: str | None = None, top_n: int = 25,
     health = None
     try:
         from . import input_health
-        health = input_health.load(date) or input_health.check(date)
+        # Always re-scan. A same-day snapshot from a earlier failed
+        # attempt (AB/weather missing) must not hide layers that just landed.
+        health = input_health.check(date)
         print(input_health.render(health))
     except Exception as e:  # noqa: BLE001 — health must never kill the book
         print(f"[stock-book] WARN: input health check failed: {e}")
@@ -717,21 +765,7 @@ def build(date: str | None = None, top_n: int = 25,
         join["relvol"] = np.nan
     if "relvol" not in join.columns:
         join["relvol"] = np.nan
-    n_before = len(join)
-    if "atr_pct" not in join.columns:
-        join["atr_pct"] = np.nan
-    liquid = (
-        (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
-        & (join["avg_vol_k"].fillna(0) >= MIN_AVG_VOL_K)
-        & (join["atr_pct"].fillna(0) >= MIN_ATR_PCT)
-    )
-    join["liquid"] = liquid
-    join = join.loc[liquid].copy()
-    print(
-        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M "
-        f"vol>={MIN_AVG_VOL_K}k ATR%>={MIN_ATR_PCT}: "
-        f"{n_before} → {len(join)}"
-    )
+    join = _keep_liquid(join)
 
     reb = _rebound_flags(date)
     join["rebound"] = False
@@ -983,7 +1017,14 @@ def build(date: str | None = None, top_n: int = 25,
 
     join = green_pile.attach_ranks(join)
     join["green"] = green_pile.green_mask(join)
-    gp = green_pile.pile_status(join)
+    try:
+        gp = green_pile.pile_status(join)
+    except Exception as e:  # noqa: BLE001 — still write the book + a stub green.json
+        print(f"[stock-book] WARN: pile_status failed: {e}")
+        gp = {
+            "n_pile": 0, "used": False, "buy_mode": "weighted_fallback",
+            "sell_mode": "core_weights", "reason": f"pile_status error: {e}",
+        }
     if as_of:
         from . import book_era
         if not book_era.live(date, "green_pile"):
@@ -1217,12 +1258,23 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     """
     if df is None or df.empty:
         return pd.Series(dtype=bool)
+    veto = pd.Series(False, index=df.index)
+    # Printed dead relvol is a tape fact. Lattice eligibility must not
+    # put WAY/TXG-style (0, 0.7) names on 1d BUY (2026-09-04 live book).
+    rel = None
+    for c in ("relvol", "rel_vol", "Relative Volume"):
+        if c in df.columns:
+            rel = pd.to_numeric(df[c], errors="coerce")
+            break
+    if rel is not None:
+        printed = rel.notna() & (rel > 0)
+        veto |= printed & (rel < green_pile.RELVOL_DEAD)
     # In lattice mode permission has already been decided from all domains,
     # including lookback alarm/blue/white.  Do not re-apply the legacy sector
     # veto and accidentally kill a valid direct-company exception.
     if "bull_eligible" in df.columns:
-        return ~df["bull_eligible"].astype(bool)
-    veto = pd.Series(False, index=df.index)
+        veto |= ~df["bull_eligible"].astype(bool)
+        return veto
     if "s_sector" in df.columns:
         veto |= pd.to_numeric(df["s_sector"], errors="coerce").fillna(0.0) <= HARD_SECTOR_RED
     peer = (
@@ -1238,14 +1290,6 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     if reasons is not None:
         is_lag |= reasons.str.contains(r"\bLAG\b", regex=True, na=False)
     veto |= is_lag & (peer <= 0)
-    rel = None
-    for c in ("relvol", "rel_vol", "Relative Volume"):
-        if c in df.columns:
-            rel = pd.to_numeric(df[c], errors="coerce")
-            break
-    if rel is not None:
-        printed = rel.notna() & (rel > 0)
-        veto |= printed & (rel < green_pile.RELVOL_DEAD)
     try:
         from . import book_marks
         veto |= book_marks.veto_mask(df)
@@ -1285,6 +1329,101 @@ def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
     return pool.head(0)
 
 
+def _horizon_pick(df: pd.DataFrame, horizon: str, meta: dict, top_n: int) -> dict:
+    """BUY/SELL source for one horizon.
+
+    When the green pile is thick, every horizon including 1d BUY is all-green
+    (join/general/AB/peer ≥ +0.05; sector/news yellow-or-missing pass). 1d
+    still requires lattice bull_eligible so a hard-red market can empty the
+    sleeve. SELL stays core weights on the non-green remainder.
+
+    Lattice-only 1d (bull_rank / bear_rank) is the thin-pile fallback — that
+    path listed WAY/HTFL/CNH on 2026-09-04 while 117 liquid greens sat unused.
+    """
+    gp = meta.get("green_pile") or {}
+    sd = meta.get("stand_down") or {}
+    if horizon == "1d" and sd.get("stand_down"):
+        return {
+            "buy_mask": pd.Series(False, index=df.index),
+            "buy_sort": None,
+            "allow_empty": True,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "stand_down",
+            "top_n": top_n,
+        }
+    if (
+        horizon == "1d"
+        and sd.get("restrict_to_catalysts")
+        and sd.get("catalyst_tickers")
+    ):
+        tickers = {str(t).upper() for t in sd["catalyst_tickers"]}
+        return {
+            "buy_mask": df["Ticker"].isin(tickers),
+            "buy_sort": None,
+            "allow_empty": True,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "catalyst_only",
+            "top_n": top_n,
+        }
+    if gp.get("used") and "green" in df.columns:
+        mask = df["green"] == True  # noqa: E712
+        if horizon == "1d" and "bull_eligible" in df.columns:
+            mask = mask & df["bull_eligible"].astype(bool)
+        return {
+            "buy_mask": mask,
+            "buy_sort": "green_rank" if "green_rank" in df.columns else None,
+            "allow_empty": horizon == "1d",
+            "respect_mask": False,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "green_pile",
+            "top_n": top_n,
+        }
+    if (
+        horizon == "1d"
+        and "bull_eligible" in df.columns
+        and "bear_eligible" in df.columns
+    ):
+        market = (
+            (meta.get("decision_lattice") or {}).get("market")
+            or meta.get("market_decision")
+            or {}
+        )
+        slots = max(0, int(market.get("max_long_slots", top_n)))
+        eligible = df["bull_eligible"].astype(bool)
+        allowed_idx = (
+            df.loc[eligible].sort_values(
+                "bull_rank", ascending=False
+            ).head(slots).index
+        )
+        return {
+            "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
+            "buy_sort": "bull_rank",
+            "allow_empty": True,
+            "respect_mask": True,
+            "sell_mask": df["bear_eligible"].astype(bool),
+            "sell_sort": "bear_rank",
+            "ranker": "decision_lattice",
+            "top_n": slots or top_n,
+        }
+    mask = None
+    sort = None
+    if gp.get("used") and "green" in df.columns:
+        mask = df["green"] == True  # noqa: E712
+        sort = "green_rank" if "green_rank" in df.columns else None
+    return {
+        "buy_mask": mask,
+        "buy_sort": sort,
+        "allow_empty": False,
+        "sell_mask": None,
+        "sell_sort": None,
+        "ranker": "green_pile" if gp.get("used") else "weighted",
+        "top_n": top_n,
+    }
+
+
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
               buy_mask=None, buy_sort=None, allow_empty=False,
               sell_mask=None, sell_sort=None, respect_mask=False):
@@ -1311,6 +1450,10 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
                     buy_sort if buy_sort and buy_sort in pool.columns
                     else f"score_{horizon}"
                 )
+                try:
+                    pool = pool.loc[~_buy_veto_mask(pool)]
+                except Exception:
+                    pass
                 buys = pool.sort_values(sort_col, ascending=False)
                 return buys, _rank_sells(
                     df, horizon, top_n, sell_core,
@@ -1957,77 +2100,9 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     df[cols_keep].to_csv(csv_path, index=False)
 
     sell_core = bool(meta.get("sell_excludes_addons", True))
-    gp = meta.get("green_pile") or {}
-    sd = meta.get("stand_down") or {}
 
     def selection(horizon: str):
-        """1d uses the lattice; longer horizons remain shadow-compatible."""
-        if (
-            horizon == "1d"
-            and "bull_eligible" in df.columns
-            and "bear_eligible" in df.columns
-        ):
-            market = (
-                (meta.get("decision_lattice") or {}).get("market")
-                or meta.get("market_decision")
-                or {}
-            )
-            slots = max(0, int(market.get("max_long_slots", top_n)))
-            eligible = df["bull_eligible"].astype(bool)
-            allowed_idx = (
-                df.loc[eligible].sort_values(
-                    "bull_rank", ascending=False
-                ).head(slots).index
-            )
-            return {
-                "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
-                "buy_sort": "bull_rank",
-                "allow_empty": True,
-                "respect_mask": True,
-                "sell_mask": df["bear_eligible"].astype(bool),
-                "sell_sort": "bear_rank",
-                "ranker": "decision_lattice",
-                "top_n": slots or top_n,
-            }
-        if horizon == "1d" and sd.get("stand_down"):
-            return {
-                "buy_mask": pd.Series(False, index=df.index),
-                "buy_sort": None,
-                "allow_empty": True,
-                "sell_mask": None,
-                "sell_sort": None,
-                "ranker": "stand_down",
-                "top_n": top_n,
-            }
-        if (
-            horizon == "1d"
-            and sd.get("restrict_to_catalysts")
-            and sd.get("catalyst_tickers")
-        ):
-            tickers = {str(t).upper() for t in sd["catalyst_tickers"]}
-            return {
-                "buy_mask": df["Ticker"].isin(tickers),
-                "buy_sort": None,
-                "allow_empty": True,
-                "sell_mask": None,
-                "sell_sort": None,
-                "ranker": "catalyst_only",
-                "top_n": top_n,
-            }
-        mask = None
-        sort = None
-        if gp.get("used") and "green" in df.columns:
-            mask = df["green"] == True  # noqa: E712
-            sort = "green_rank" if "green_rank" in df.columns else None
-        return {
-            "buy_mask": mask,
-            "buy_sort": sort,
-            "allow_empty": False,
-            "sell_mask": None,
-            "sell_sort": None,
-            "ranker": "green_pile" if gp.get("used") else "weighted",
-            "top_n": top_n,
-        }
+        return _horizon_pick(df, horizon, meta, top_n)
 
     books = {}
     for h in HORIZONS:
@@ -2072,13 +2147,16 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         encoding="utf-8",
     )
     green_path = OUT_DIR / f"{date}_green.json"
-    tickers: list[str] = []
-    if "green" in df.columns and "Ticker" in df.columns:
-        tickers = [str(t) for t in df.loc[df["green"] == True, "Ticker"].tolist()]  # noqa: E712
-    green_path.write_text(
-        json.dumps({**gp, "tickers": tickers}, indent=2, default=str) + "\n",
-        encoding="utf-8",
-    )
+    try:
+        tickers: list[str] = []
+        if "green" in df.columns and "Ticker" in df.columns:
+            tickers = [str(t) for t in df.loc[df["green"] == True, "Ticker"].tolist()]  # noqa: E712
+        green_path.write_text(
+            json.dumps({**gp, "tickers": tickers}, indent=2, default=str) + "\n",
+            encoding="utf-8",
+        )
+    except Exception as e:  # noqa: BLE001 — book json already landed
+        print(f"[stock-book] WARN: green.json write failed: {e}")
 
     wr = meta.get("weather_risk")
     L = [
@@ -2090,8 +2168,13 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "",
         "## How today's action is built",
         "",
-        "**1d uses a decision lattice.** Evidence is evaluated on its own "
-        "merits before any numeric rank:",
+        "**BUY is the green pile when it is thick enough** (every horizon, "
+        "including 1d). A name is all-green when join / general / AB / peer "
+        "are each ≥ +0.05, sector and news are yellow or missing (not red), "
+        "and Finviz relvol is not in (0, 0.7) when printed. 1d still requires "
+        "lattice `bull_eligible` so a hard-red market can empty the sleeve. "
+        "SELL is core weights on the non-green remainder. The lattice is "
+        "the thin-pile fallback and still writes the watch list:",
         "",
         "1. **Market gate** — raw general factor scoreboard + risk state "
         "sets exposure. An extreme confirmed red day closes ordinary longs.",
@@ -2108,8 +2191,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Its digest, judge and catalyst cells are now populated before "
         "selection. 🔵 / 🚨 / ⚪, Cond, region and featured fades remain gates. "
         "A second six-domain row prevents duplicate headlines from voting "
-        "three times. Longer horizons remain on the legacy weighted rank "
-        "while the 1d lattice is validated.",
+        "three times. Longer horizons use the same pile; they do not wait "
+        "on a separate 1d lattice experiment.",
         "",
         "## Today's regime",
         "",
@@ -2274,6 +2357,31 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     print(f"[stock-book] {copy}")
 
 
+def _write_degraded(date: str, reason: str) -> None:
+    """Last-ditch marker files. skip-if-good rejects meta.degraded so heal re-ranks."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    DAILY.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "meta": {"date": date, "degraded": True, "reason": reason},
+        "books": {},
+    }
+    (OUT_DIR / f"{date}_stock_book.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    green = {
+        "n_pile": 0, "used": False, "buy_mode": "weighted_fallback",
+        "sell_mode": "core_weights", "tickers": [], "degraded": True,
+        "reason": reason,
+    }
+    (OUT_DIR / f"{date}_green.json").write_text(
+        json.dumps(green, indent=2) + "\n", encoding="utf-8")
+    (DAILY / f"{date}_stock_book.md").write_text(
+        f"# Stock book — {date}\n\n_Degraded: {reason}_\n\n"
+        "Ranker crashed before BUY/SELL. Heal via Stock Book ALL.\n",
+        encoding="utf-8",
+    )
+    print(f"[stock-book] WARN: wrote degraded book + green.json ({reason})")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -2282,8 +2390,16 @@ def main() -> None:
                     help="Use the ranker that was live on --date "
                          "(weighted / green-pile / lattice)")
     args = ap.parse_args()
-    df, meta = build(args.date, top_n=args.top, as_of=args.as_of)
-    write_report(df, meta, top_n=args.top)
+    date = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    try:
+        df, meta = build(args.date, top_n=args.top, as_of=args.as_of)
+        write_report(df, meta, top_n=args.top)
+    except (Exception, SystemExit) as e:  # noqa: BLE001 — still land green.json
+        print(f"[stock-book] WARN: ranker crashed: {e}")
+        try:
+            _write_degraded(date, str(e)[:300])
+        except Exception as e2:  # noqa: BLE001
+            print(f"[stock-book] WARN: degraded write failed: {e2}")
 
 
 if __name__ == "__main__":

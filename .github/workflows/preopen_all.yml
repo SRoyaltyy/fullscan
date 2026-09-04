@@ -1,6 +1,8 @@
 name: Pre-Open ALL (predictive one-shot)
 
-# One morning button: GH scrape (ubuntu) → packet + stock book (ECS).
+# One morning button: GH scrape (ubuntu) → book+green (ubuntu, no Grok)
+#   → packet (ECS). The ubuntu ranker does not wait on the ECS box —
+#   a 3h Grok hang must not leave BUY/SELL empty at 09:30.
 # CLOCK: ECS systemd 05:55 ET still owns the unattended start.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 
@@ -72,7 +74,7 @@ jobs:
           fi
       - name: Install
         if: env.skip != 'yes'
-        run: pip install -r requirements.txt && pip install pandas requests beautifulsoup4 lxml || true
+        run: pip install -r requirements.txt && pip install pandas requests beautifulsoup4 lxml psycopg2-binary || true
       - name: Digest + morning overlay
         if: env.skip != 'yes'
         env:
@@ -89,12 +91,84 @@ jobs:
           ARGS=(--date "$DATE" --overlay)
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           python -m src.map_heat "${ARGS[@]}"
+          echo "CMD: python -m collectors.finviz_financials (elite CSV for the book)"
+          FULLSCAN_DB_OPTIONAL=1 python -m collectors.finviz_financials || echo "[warn] elite export soft-failed"
       - name: Commit scrape
         if: always() && env.skip != 'yes'
         run: |
           bash scripts/safe_git_push.sh \
             "auto: finviz preopen scrape (via Pre-Open ALL) [$(date -u +%F_%H%M)]" \
-            01_daily/news/ 01_daily/map_heat/
+            01_daily/news/ 01_daily/map_heat/ data/exports/
+
+  land_book:
+    name: Land book + green (ubuntu — no Grok, no ECS)
+    needs: scrape
+    if: ${{ always() && github.event.inputs.with_book != 'false' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      FINVIZ_SKIP_LIVE: "1"
+      FULLSCAN_DB_OPTIONAL: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Pull scrape + export from main (this run's SHA predates the scrape commit)
+        run: |
+          git fetch origin main
+          git checkout origin/main -- \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ \
+            data/universe/ data/join/ data/ab_checklist/ data/peers/ \
+            data/stock_book/ 01_daily/weather/ || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skip if book + green already on disk
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          FORCE="${{ github.event.inputs.force }}"
+          if [ "$FORCE" = "true" ]; then
+            echo "force=true — rank even if a book is on disk"
+          elif python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
+            echo "Book + green already on disk — no ranker"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+      - name: Install
+        if: env.skip != 'yes'
+        run: |
+          pip install -r requirements.txt
+          pip install pandas yfinance requests || true
+      - name: Rank book + green pile (skip LLM / extras)
+        if: env.skip != 'yes'
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+          FINVIZ_SKIP_LIVE: "1"
+          FULLSCAN_DB_OPTIONAL: "1"
+        run: |
+          set -e
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          FORCE="${{ github.event.inputs.force }}"
+          ARGS=(--date "$DATE" --skip-llm --skip-extras --top 25)
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.run_stock_book_all ${ARGS[*]}"
+          python -m src.run_stock_book_all "${ARGS[@]}"
+      - name: Commit book layer
+        if: always() && env.skip != 'yes'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          bash scripts/safe_git_push.sh \
+            "auto: stock book layer (ubuntu land) [${DATE}]" \
+            data/stock_book/ data/join/ data/universe/ data/ab_checklist/ \
+            data/peers/ data/exports/ 01_daily/weather/ \
+            "01_daily/${DATE}_stock_book.md"
 
   preopen:
     needs: scrape
@@ -107,11 +181,13 @@ jobs:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
       FINVIZ_SKIP_LIVE: "1"
+      PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
     steps:
       - name: Wait if ECS systemd pre-open owns the box
         run: |
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
-          exec 9>/tmp/fullscan-preopen.lock
+          mkdir -p "$(dirname "$PREOPEN_LOCK")"
+          exec 9>"$PREOPEN_LOCK"
           if flock -n 9; then
             echo "lock is free"
             flock -u 9 || true
@@ -146,7 +222,7 @@ jobs:
             scripts/ecs_map_postclose.sh scripts/safe_git_push.sh || true
           bash scripts/ensure_ecs_clock.sh
 
-      - name: Gate — weekend / past cutoff
+      - name: Gate — weekend
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DOW=$(TZ=America/New_York date +%u)
@@ -155,10 +231,9 @@ jobs:
           if [ "$DOW" -ge 6 ]; then
             echo "Weekend — pre-open ALL skipped."
             echo "skip=yes" >> "$GITHUB_ENV"
-          elif [ "$ET_HM" -ge 925 ]; then
-            echo "past 09:25 ET — skip python"
-            echo "skip_python=yes" >> "$GITHUB_ENV"
           fi
+          # 09:25 is enforced in src.run_preopen_all (essays only).
+          # Weather / join / AB / the book still run so BUY/SELL can land.
 
       - uses: actions/setup-python@v5
         if: env.skip != 'yes' && env.skip_python != 'yes'
@@ -189,7 +264,8 @@ jobs:
         run: |
           set -e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
-          exec 9>/tmp/fullscan-preopen.lock
+          mkdir -p "$(dirname "${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}")"
+          exec 9>"${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}"
           if ! flock -n 9; then
             echo "ECS systemd job grabbed the lock — backing off"
             exit 0

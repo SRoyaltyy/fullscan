@@ -1,23 +1,19 @@
 """Green pile: this ticker's tape is clean — not a weighted beauty contest.
 
 A name is green when:
-  join, AB, peer are all >= EPS (name-specific tape must have fired)
-  sector and news are not red
-  Finviz relative volume is not red (< 0.7) when a print exists
-  a hard-red general (market stamp × beta ≤ −HARD_RED) is a veto
-  unless the same-day sector call is green (relative-strength exception)
+  join, general, AB, peer are all >= EPS (all-green BUY)
+  sector and news are not red (yellow / missing = pass)
+  Finviz relative volume is not in (0, 0.7) when Finviz printed it
 
-General is a market-wide SPX stamp, not a name-specific tape. A modest
-red general (typical −0.07 on a slightly down open) must not empty the
-pile and dump the book onto a weighted walk. Missing / yellow on news,
-digest, judge, sector, general, or relvol (no Finviz print) is not a
-veto. A red is — except the hard-general exception above.
+Missing / yellow on news, digest, judge, sector, or relvol (no Finviz
+print, including 0) is not a veto. A red is. General is required green
+for the pile — a flat or red market stamp is not all-green BUY.
 
 BUY 15 is filled from that pile, ranked by green_rank = mean of the
-three name cores (no opp, no weights). Same $400M / 4-per-sector /
-3-per-industry / 4 large-mega caps. If the liquid pile is thinner than
-GREEN_MIN (usually no AB/peer file yet), keep the weighted walk so
-pre-open does not go blank.
+three name cores (join, AB, peer; no opp, no weights). Same $400M /
+4-per-sector / 3-per-industry / 4 large-mega caps. If the liquid pile
+is thinner than GREEN_MIN (usually no AB/peer file yet), keep the
+weighted walk so pre-open does not go blank.
 
 SELL never shorts a green name. When the pile is used, shorts rank on
 core weights from the non-green remainder. Otherwise core weights on
@@ -68,20 +64,16 @@ def green_mask(df: pd.DataFrame) -> pd.Series:
         if col not in df.columns:
             return pd.Series(False, index=df.index)
         ok &= _num(df[col]) >= EPS
+    gen = (
+        _num(df["s_general"])
+        if "s_general" in df.columns
+        else pd.Series(0.0, index=df.index)
+    )
+    ok &= gen >= EPS
     if "s_sector" in df.columns:
         ok &= _num(df["s_sector"]) > -EPS
     if "s_news" in df.columns:
         ok &= _num(df["s_news"]) > -EPS
-    if "s_general" in df.columns:
-        gen = _num(df["s_general"])
-        sec = (
-            _num(df["s_sector"])
-            if "s_sector" in df.columns
-            else pd.Series(0.0, index=df.index)
-        )
-        hard_gen = gen <= -HARD_RED
-        sector_support = sec >= EPS
-        ok &= ~(hard_gen & ~sector_support)
     rel = _relvol(df)
     if rel is not None:
         printed = rel.notna() & (rel > 0)

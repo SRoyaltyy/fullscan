@@ -4,6 +4,10 @@ Run: python -m src.test_stock_book_gates
 """
 from __future__ import annotations
 
+import json
+import tempfile
+from pathlib import Path
+
 import pandas as pd
 
 from src.green_pile import attach_ranks, green_mask
@@ -15,11 +19,13 @@ from src.stock_book import (
     _book_side,
     _buy_veto_mask,
     _clip_event_tilt,
+    _horizon_pick,
+    _keep_liquid,
     _load_finviz_liquidity,
 )
 
 
-def _row(ticker, join=0.9, gen=-0.07, ab=0.9, peer=0.5, sector=0.2, news=0.0,
+def _row(ticker, join=0.9, gen=0.2, ab=0.9, peer=0.5, sector=0.2, news=0.0,
          relvol=1.2, size="mid", mcap=2000, score=1.0, sector_name="Technology",
          context="", reasons=""):
     return {
@@ -93,6 +99,83 @@ def test_dead_relvol_is_buy_veto() -> None:
     veto = _buy_veto_mask(df)
     assert bool(veto.iloc[0]) is True
     assert bool(veto.iloc[1]) is False
+
+
+def test_1d_uses_pile_when_thick() -> None:
+    """2026-09-04 1d lattice listed HTFL/CNH while 117 greens sat unused."""
+    sectors = [
+        "Technology", "Healthcare", "Financial", "Energy", "Industrials",
+        "Consumer Cyclical", "Utilities", "Real Estate",
+    ]
+    rows = []
+    for i, sec in enumerate(sectors):
+        rows.append(_row(
+            f"G{i:02d}", join=0.9, ab=0.9, peer=0.8, sector=0.2,
+            score=0.4, sector_name=sec,
+        ))
+        rows[-1]["industry"] = f"g{i}"
+        rows[-1]["bull_eligible"] = True
+        rows[-1]["bull_rank"] = 0.5
+        rows[-1]["bear_eligible"] = False
+    rows.append(_row(
+        "HTFL", join=0.18, gen=0.4, ab=0.8, peer=0.0, sector=0.5,
+        relvol=0.81, score=1.5, sector_name="Healthcare",
+    ))
+    rows[-1]["industry"] = "htfl"
+    rows[-1]["bull_eligible"] = True
+    rows[-1]["bull_rank"] = 2.0
+    rows[-1]["bear_eligible"] = False
+    rows.append(_row(
+        "CNH", join=0.24, gen=0.2, ab=0.9, peer=0.99, sector=-0.45,
+        relvol=2.47, score=1.4, sector_name="Industrials",
+    ))
+    rows[-1]["industry"] = "cnh"
+    rows[-1]["bull_eligible"] = True
+    rows[-1]["bull_rank"] = 1.8
+    rows[-1]["bear_eligible"] = False
+    df = pd.DataFrame(rows)
+    df = attach_ranks(df)
+    df["green"] = green_mask(df)
+    assert bool(df.loc[df.Ticker == "HTFL", "green"].iloc[0]) is False
+    assert bool(df.loc[df.Ticker == "CNH", "green"].iloc[0]) is False
+    pick = _horizon_pick(df, "1d", {"green_pile": {"used": True}}, 8)
+    assert pick["ranker"] == "green_pile"
+    buys, sells = _book_side(
+        df, "1d", pick["top_n"],
+        buy_mask=pick["buy_mask"],
+        buy_sort=pick["buy_sort"],
+        allow_empty=pick["allow_empty"],
+        sell_mask=pick["sell_mask"],
+        sell_sort=pick["sell_sort"],
+        respect_mask=bool(pick.get("respect_mask")),
+    )
+    tickers = set(buys["Ticker"])
+    assert "HTFL" not in tickers
+    assert "CNH" not in tickers
+    assert tickers
+    assert tickers.issubset(set(df.loc[df["green"], "Ticker"]))
+    assert not set(sells["Ticker"]).intersection(set(df.loc[df["green"], "Ticker"]))
+
+
+def test_lattice_eligible_dead_relvol_still_vetoed() -> None:
+    """2026-09-04 1d BUY listed WAY (relvol 0.54, green=False)."""
+    df = pd.DataFrame([
+        _row("WAY", relvol=0.54, score=1.2),
+        _row("LIVE", relvol=1.4, score=0.8),
+    ])
+    df["bull_eligible"] = True
+    df["bull_rank"] = [2.0, 1.0]
+    veto = _buy_veto_mask(df)
+    assert bool(veto[df.Ticker == "WAY"].iloc[0]) is True
+    assert bool(veto[df.Ticker == "LIVE"].iloc[0]) is False
+    buys, _ = _book_side(
+        df, "1d", 10,
+        buy_mask=df["bull_eligible"],
+        buy_sort="bull_rank",
+        respect_mask=True,
+    )
+    assert "WAY" not in set(buys["Ticker"])
+    assert "LIVE" in set(buys["Ticker"])
 
 
 def test_pile_sorts_by_green_rank_not_opp_score() -> None:
@@ -243,18 +326,69 @@ def test_book_liquidity_requires_recent_atr() -> None:
     assert float(hive.atr_pct) >= MIN_ATR_PCT
 
 
+def test_runs_for_date_fills_from_predict_md() -> None:
+    """Scoreboard without today still loads essays from the morning packet."""
+    from src.stock_book import _runs_for_date
+    from src import weather
+    orig_daily = weather.DAILY
+    orig_board = weather.SCOREBOARD
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        weather.DAILY = root
+        weather.SCOREBOARD = root / "empty_scoreboard.json"
+        weather.SCOREBOARD.write_text(json.dumps({"runs": []}), encoding="utf-8")
+        (root / "general").mkdir()
+        (root / "general" / "2099-01-02_predict.md").write_text(
+            "SCORES_BEGIN\nHORIZON_3D: up:mild:0.55\nSCORES_END\n"
+            "- total_score: **1.5**\n- predicted_direction: **up**\n"
+            "- confidence_score: 0.6\n",
+            encoding="utf-8",
+        )
+        sec = root / "sectors" / "2099-01-02"
+        sec.mkdir(parents=True)
+        (sec / "healthcare_predict.md").write_text(
+            "- predicted_direction: **up**\n- total_score: **2.0**\n",
+            encoding="utf-8",
+        )
+        try:
+            runs = _runs_for_date("2099-01-02")
+            assert runs.get("general", {}).get("predicted_direction") == "up"
+            assert runs.get("sector:Healthcare", {}).get("predicted_direction") == "up"
+            hc = (runs["general"].get("horizon_calls") or {}).get("HORIZON_3D") or {}
+            assert hc.get("direction") == "up"
+        finally:
+            weather.DAILY = orig_daily
+            weather.SCOREBOARD = orig_board
+
+
+def test_liquidity_empty_keeps_universe() -> None:
+    df = pd.DataFrame([
+        {"Ticker": "AAA", "market_cap_m": float("nan"),
+         "avg_vol_k": float("nan"), "atr_pct": float("nan")},
+        {"Ticker": "BBB", "market_cap_m": float("nan"),
+         "avg_vol_k": float("nan"), "atr_pct": float("nan")},
+    ])
+    out = _keep_liquid(df)
+    assert len(out) == 2
+    assert set(out["Ticker"]) == {"AAA", "BBB"}
+
+
 def main() -> None:
     tests = [
         test_event_tilt_cannot_invert_essay,
         test_hard_sector_red_is_buy_veto,
         test_lag_and_peer_red_is_buy_veto,
         test_dead_relvol_is_buy_veto,
+        test_1d_uses_pile_when_thick,
+        test_lattice_eligible_dead_relvol_still_vetoed,
         test_pile_sorts_by_green_rank_not_opp_score,
         test_stand_down_empties_buy,
         test_finviz_board_reads_theme_tape,
         test_opp_cap_constant,
         test_20260831_sleeve_drops_broken_names,
         test_book_liquidity_requires_recent_atr,
+        test_runs_for_date_fills_from_predict_md,
+        test_liquidity_empty_keeps_universe,
     ]
     failed = 0
     for fn in tests:

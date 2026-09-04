@@ -344,8 +344,9 @@ def _write_learnings_report(
     hypos: list[dict],
     promoted: list[str],
     news_n: int,
+    date_str: str | None = None,
 ) -> Path:
-    today = datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    today = date_str or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
     now = datetime.now(ZoneInfo(config.TZ)).isoformat()
 
     by_scope: dict[str, list] = defaultdict(list)
@@ -462,9 +463,10 @@ def _write_learnings_report(
 
 
 def _rebuild_mutable_policy(
-    runs: list[dict], hypos: list[dict], promoted: list[str]
+    runs: list[dict], hypos: list[dict], promoted: list[str],
+    date_str: str | None = None,
 ) -> None:
-    today = datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    today = date_str or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
     active_parts = []
     for p in sorted(ACTIVE_DIR.glob("*.md")):
         if p.name.startswith("."):
@@ -567,7 +569,7 @@ def _weather_proposals(runs: list[dict]) -> None:
     print(f"[learn] weather proposals -> {PROPOSALS}")
 
 
-def run(lookback: int = 15) -> None:
+def run(lookback: int = 15, date: str | None = None) -> None:
     runs = _all_graded(lookback_per_topic=lookback)
     print(f"[learn] graded runs (all topics): {len(runs)}")
     for topic, hits, n, acc in _topic_accuracy(runs):
@@ -586,17 +588,20 @@ def run(lookback: int = 15) -> None:
     for p in promoted:
         print(f"  -> {p}")
 
-    _rebuild_mutable_policy(runs, hypos, promoted)
+    _rebuild_mutable_policy(runs, hypos, promoted, date_str=date)
     _weather_proposals(runs)
-    _write_learnings_report(runs, hypos, promoted, news_n=len(news_hypos))
+    _write_learnings_report(runs, hypos, promoted, news_n=len(news_hypos),
+                            date_str=date)
     print("[learn] done — see 03_scoreboard/LEARNINGS.md")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--lookback", type=int, default=15)
+    ap.add_argument("--date", default=None,
+                    help="Session YYYY-MM-DD for the dated learnings file")
     args = ap.parse_args()
-    run(lookback=args.lookback)
+    run(lookback=args.lookback, date=args.date)
 
 
 if __name__ == "__main__":

@@ -7,7 +7,11 @@ from __future__ import annotations
 import os
 
 from src import config, skip_if_good
-from src.run_preopen_all import _packet_step_done
+from src.run_preopen_all import (
+    _packet_step_done,
+    wait_for_night_baseline,
+    wait_for_gh_scrape,
+)
 
 
 def test_llm_backend_auto_allows_deepseek() -> None:
@@ -44,6 +48,13 @@ def test_packet_step_done_missing_is_false() -> None:
 def test_postclose_default_date_is_closed_session() -> None:
     d = skip_if_good.last_closed_session()
     assert len(d) == 10
+    dates = skip_if_good.night_pack_dates()
+    assert d in dates
+
+
+def test_preopen_waits_for_night_and_scrape() -> None:
+    assert callable(wait_for_night_baseline)
+    assert callable(wait_for_gh_scrape)
 
 
 if __name__ == "__main__":
@@ -53,4 +64,5 @@ if __name__ == "__main__":
     test_skip_jobs_registered()
     test_packet_step_done_missing_is_false()
     test_postclose_default_date_is_closed_session()
+    test_preopen_waits_for_night_and_scrape()
     print("ok")

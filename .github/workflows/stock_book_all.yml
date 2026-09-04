@@ -40,14 +40,28 @@ on:
         description: "true = skip general + sector LLM (faster)"
         required: false
         default: "false"
+      skip_extras:
+        description: "true = stop after book + green.json (no paper/sleeve/catalyst)"
+        required: false
+        default: "false"
       force_sectors:
         description: "true = always run all 11 sector predicts"
         required: false
         default: "false"
-  # Clock retired 2026-09-04 — Pre-Open ALL writes the book before 09:30.
-  # Keep dispatch for a manual re-rank. Do not add a cron back.
-  # schedule:
-  #   - cron: "0 17 * * 1-5"
+  # ubuntu-only. ECS systemd 05:55 never starts GH land_book (that job
+  # lives on preopen_all.yml, which has no schedule). A 17:00 UTC ECS
+  # cron used to steal the box and miss 09:30. Schedule MUST force
+  # ubuntu + skip_llm + skip_extras — inputs are empty on cron.
+  schedule:
+    - cron: "10 10 * * 1-5"   # ~06:10 ET — after 05:40 scrape
+    - cron: "15 13 * * 1-5"   # ~09:15 ET — last chance before the bell
+  # Merge / pre-open land on main must not wait for a newly-registered
+  # cron. skip-if-good no-ops when 1d is already all-green.
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Pre-Open ALL (predictive one-shot)"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -55,19 +69,30 @@ permissions:
   id-token: write
 
 concurrency:
-  group: stock-book-all
+  # Ubuntu heal must not queue behind a 6h ECS Grok book.
+  group: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
   cancel-in-progress: false
 
 jobs:
   all:
-    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 360
+    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
     env:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
       FINVIZ_SKIP_LIVE: "1"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull scrape + ranker inputs from main
+        run: |
+          git fetch origin main
+          git checkout origin/main -- \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ \
+            data/universe/ data/join/ data/ab_checklist/ data/peers/ \
+            data/stock_book/ 01_daily/weather/ || true
 
       - uses: actions/setup-python@v5
         with:
@@ -99,16 +124,32 @@ jobs:
           TOP="${{ github.event.inputs.top }}"
           FORCE="${{ github.event.inputs.force }}"
           SKIP="${{ github.event.inputs.skip_llm }}"
+          SKIP_EXTRAS="${{ github.event.inputs.skip_extras }}"
           FSEC="${{ github.event.inputs.force_sectors }}"
           TOP="${TOP:-25}"
           FORCE="${FORCE:-false}"
           SKIP="${SKIP:-false}"
+          SKIP_EXTRAS="${SKIP_EXTRAS:-false}"
           FSEC="${FSEC:-false}"
+          if [ "${{ github.event_name }}" = "schedule" ] \
+             || [ "${{ github.event_name }}" = "push" ] \
+             || [ "${{ github.event_name }}" = "workflow_run" ]; then
+            SKIP=true
+            SKIP_EXTRAS=true
+            echo "ubuntu land-book (${{ github.event_name }}) — skip LLM + extras (do not take ECS)"
+          fi
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$FORCE" != "true" ] && [ "$ET_HM" -ge 925 ]; then
+            SKIP=true
+            SKIP_EXTRAS=true
+            echo "past 09:25 ET — skip LLM + extras so the book can still land"
+          fi
 
           ARGS=(--top "$TOP")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           [ "$SKIP" = "true" ] && ARGS+=(--skip-llm)
+          [ "$SKIP_EXTRAS" = "true" ] && ARGS+=(--skip-extras)
           [ "$FSEC" = "true" ] && ARGS+=(--force-sectors)
 
           echo "CMD: python -m src.run_stock_book_all ${ARGS[*]}"

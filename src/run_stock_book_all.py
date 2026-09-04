@@ -28,9 +28,15 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
-def _run(cmd: list[str], check: bool = True) -> int:
+def _run(cmd: list[str], check: bool = True, timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
-    r = subprocess.run(cmd, cwd=str(ROOT), env=os.environ.copy())
+    try:
+        r = subprocess.run(
+            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        print(f"[all] WARN: timed out after {timeout_s}s: {' '.join(cmd)}",
+              flush=True)
+        return 124
     if check and r.returncode != 0:
         raise SystemExit(f"step failed ({r.returncode}): {' '.join(cmd)}")
     return r.returncode
@@ -115,12 +121,22 @@ def _catalyst_quality_ok(date: str) -> bool:
     return catalyst_daily.already_good(date)
 
 
+def _file_ge(*parts: str, min_bytes: int) -> bool:
+    p = _p(*parts)
+    try:
+        return p.is_file() and p.stat().st_size >= min_bytes
+    except OSError:
+        return False
+
+
 def _ab_raw(date: str) -> bool:
-    return _exists("data", "ab_checklist", f"{date}_ab_checklist.csv")
+    return _file_ge("data", "ab_checklist", f"{date}_ab_checklist.csv",
+                    min_bytes=10_000)
 
 
 def _ab_enriched(date: str) -> bool:
-    return _exists("data", "ab_checklist", f"{date}_ab_checklist_enriched.csv")
+    return _file_ge("data", "ab_checklist",
+                    f"{date}_ab_checklist_enriched.csv", min_bytes=5_000)
 
 
 def _status_for_day(date: str) -> list[dict]:
@@ -133,14 +149,16 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Finviz universe export",
             "key": "finviz",
-            "done": _exists("data", "exports", f"finviz_{date}.csv"),
+            "done": _file_ge("data", "exports", f"finviz_{date}.csv",
+                             min_bytes=50_000),
             "artifact": f"data/exports/finviz_{date}.csv",
             "required": False,
         },
         {
             "name": "Stock labeling (segments)",
             "key": "segments",
-            "done": _exists("data", "universe", f"{date}_membership.csv"),
+            "done": _file_ge("data", "universe", f"{date}_membership.csv",
+                             min_bytes=50_000),
             "artifact": f"data/universe/{date}_membership.csv",
             "required": True,
         },
@@ -154,14 +172,16 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Join / match rank",
             "key": "join",
-            "done": _exists("data", "join", f"{date}_ranked.csv"),
+            "done": _file_ge("data", "join", f"{date}_ranked.csv",
+                             min_bytes=5_000),
             "artifact": f"data/join/{date}_ranked.csv",
             "required": True,
         },
         {
             "name": "Peer relative strength",
             "key": "peer_rs",
-            "done": _exists("data", "peers", f"{date}_peer_rs.csv"),
+            "done": _file_ge("data", "peers", f"{date}_peer_rs.csv",
+                             min_bytes=5_000),
             "artifact": f"data/peers/{date}_peer_rs.csv",
             "required": False,
         },
@@ -295,6 +315,8 @@ def run(
     skip_llm: bool = False,
     top: int = 25,
     force_sectors: bool = False,
+    skip_extras: bool = False,
+    refresh_ranker: bool = False,
 ) -> None:
     date = date or _today()
     config.apply_llm_backend()
@@ -302,7 +324,15 @@ def run(
     by_key = {r["key"]: r for r in rows}
     _print_status(date, rows)
 
-    print(f"[all] plan force={force} skip_llm={skip_llm} force_sectors={force_sectors}")
+    from . import skip_if_good
+    if (not force) and (not refresh_ranker) and skip_if_good.check_stock_book_all(date):
+        print(f"[all] {date}: book + green + weather + join + AB already "
+              "on disk — skip")
+        return
+
+    print(f"[all] plan force={force} skip_llm={skip_llm} "
+          f"skip_extras={skip_extras} refresh_ranker={refresh_ranker} "
+          f"force_sectors={force_sectors}")
 
     def need(key: str) -> bool:
         if force:
@@ -315,7 +345,8 @@ def run(
     if need("finviz") or need("segments"):
         if need("finviz"):
             print("[all] → Finviz universe export (this trading day)")
-            code = _run([sys.executable, "-m", "collectors.finviz_financials"], check=False)
+            code = _run([sys.executable, "-m", "collectors.finviz_financials"],
+                        check=False, timeout_s=180)
             if code != 0:
                 print("[all] WARN: Finviz export failed — labeling may fail without today's file")
         else:
@@ -323,7 +354,8 @@ def run(
 
         if need("segments"):
             print("[all] → Stock labeling / segments")
-            _run([sys.executable, "-m", "src.segments", "--date", date], check=False)
+            _run([sys.executable, "-m", "src.segments", "--date", date],
+                 check=False, timeout_s=180)
             if not _exists("data", "universe", f"{date}_membership.csv"):
                 print(
                     f"[all] WARN: no membership for {date} — "
@@ -335,81 +367,30 @@ def run(
     else:
         print("[all] skip Finviz + labeling (DONE for this day)")
 
-    if skip_llm:
-        print("[all] skip Event scanner (--skip-llm)")
-    elif need("events"):
-        print("[all] → Event scanner (primary)")
-        _run([sys.executable, "-m", "src.run_events", "--date", date], check=False)
-        print("[all] → Event catcher (gap hunt / replacement if primary empty)")
-        _run([sys.executable, "-m", "src.run_events_catcher", "--date", date], check=False)
-        if _events_n(date) == 0:
-            print("[all] → Events carry-forward fallback (both passes empty)")
-            _run([sys.executable, "-m", "src.events_fallback", "--date", date], check=False)
-        if _events_n(date) == 0:
-            print("[all] WARN: events still empty for", date, "— weather/book sector tilt missing")
-    else:
-        print("[all] skip Event scanner (DONE for this day)")
+    # Deterministic ranker inputs before any LLM heal. A missing judge
+    # or 11 sector essays must not eat the clock and leave join/AB empty.
+    # Always cap — a default ECS click (skip_extras=false) used to hang
+    # forever on yfinance / Grok and never write green.json.
+    wx_t = 180
+    join_t = 180
+    peer_t = 120
+    ab_t = 1500
+    book_t = 900
+    morning_to = os.environ.get("PREOPEN_LLM_TIMEOUT", "420")
+    try:
+        llm_sub_t = max(120, int(morning_to) + 60)
+    except ValueError:
+        llm_sub_t = 480
+    sector_sub_t = 2400
 
-    if need("news_parse"):
-        print("[all] → News parse")
-        _run(
-            [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "400", "--date", date],
-            check=False,
-        )
-    else:
-        print("[all] skip News parse (DONE for this day)")
-    if need("finviz_digest"):
-        print("[all] → Finviz daily digest")
-        _run([sys.executable, "-m", "src.finviz_digest", "--date", date], check=False)
-    else:
-        print("[all] skip Finviz daily digest (DONE for this day)")
-    if need("news_judge") and not skip_llm and config.has_llm():
-        print("[all] → News judge")
-        _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
-        if not _exists("01_daily", "news", f"{date}_judge.md"):
-            print("[all] WARN: news judge missing for", date, "— s_news will lack LLM tilts")
-    elif skip_llm:
-        print("[all] skip News judge (--skip-llm)")
-    elif not config.has_llm():
-        print("[all] skip News judge (no LLM configured)")
-    else:
-        print("[all] skip News judge (DONE for this day)")
-    if need("news_actions"):
-        print("[all] → News actions (ticker edges)")
-        _run(
-            [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "400", "--date", date],
-            check=False,
-        )
-        if not _exists("01_daily", "news", f"{date}_actions.json"):
-            print("[all] WARN: news actions missing for", date, "— 1d book weaker")
-    else:
-        print("[all] skip News actions (DONE for this day)")
-
-    if not skip_llm and need("general_predict"):
-        if config.has_llm():
-            print("[all] → General market predict")
-            _run([sys.executable, "-m", "src.run_predict", "--date", date], check=False)
-        else:
-            print("[all] skip General market predict (no LLM configured)")
-    elif skip_llm:
-        print("[all] skip General market predict (--skip-llm)")
-    else:
-        print("[all] skip General market predict (DONE for this day)")
-
-    if not skip_llm and (force_sectors or need("sector_predict")):
-        if config.has_llm():
-            print("[all] → Per-sector predict (all 11 for this trading day)")
-            _run([sys.executable, "-m", "src.run_sector_predict", "--date", date], check=False)
-        else:
-            print("[all] skip Per-sector predict (no LLM configured)")
-    elif skip_llm:
-        print("[all] skip Per-sector predict (--skip-llm)")
-    else:
-        print("[all] skip Per-sector predict (DONE for this day — 11/11)")
-
-    print("[all] → Weather / regime (after same-day predicts, before join)")
-    _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
-    if not _exists("01_daily", "weather", f"{date}_weather.json"):
+    print("[all] → Weather / regime (before LLM heals, before join)")
+    _run([sys.executable, "-m", "src.weather", "--date", date],
+         check=False, timeout_s=wx_t)
+    if not _weather_has_sectors(date):
+        print("[all] weather missing/thin — retry --offline (no yfinance hang)")
+        _run([sys.executable, "-m", "src.weather", "--date", date, "--offline"],
+             check=False, timeout_s=60 if skip_extras else 180)
+    if not _weather_has_sectors(date):
         print(
             f"[all] WARN: weather did not write "
             f"01_daily/weather/{date}_weather.json — cannot rank today"
@@ -417,33 +398,37 @@ def run(
         return
 
     print("[all] → Join / match rank")
-    _run([sys.executable, "-m", "src.join", "--date", date], check=False)
-    if not _exists("data", "join", f"{date}_ranked.csv"):
-        print(f"[all] WARN: no join ranked file for {date} — cannot rank today")
+    _run([sys.executable, "-m", "src.join", "--date", date],
+         check=False, timeout_s=join_t)
+    join_p = _p("data", "join", f"{date}_ranked.csv")
+    try:
+        join_sz = join_p.stat().st_size if join_p.is_file() else 0
+    except OSError:
+        join_sz = 0
+    if join_sz < 5_000:
+        print(f"[all] WARN: join ranked missing/thin for {date} "
+              f"({join_sz} bytes) — cannot rank today")
         return
 
     if need("peer_rs"):
         print("[all] → Peer relative strength")
-        _run([sys.executable, "-m", "src.peer_rs", "--date", date], check=False)
+        _run([sys.executable, "-m", "src.peer_rs", "--date", date],
+             check=False, timeout_s=peer_t)
         if not _exists("data", "peers", f"{date}_peer_rs.csv"):
             print("[all] WARN: peer_rs missing for", date)
     else:
         print("[all] skip Peer relative strength (DONE for this day)")
 
-    if need("ticker_checklist"):
-        print("[all] → Ticker checklist")
-        _run([sys.executable, "-m", "src.ticker_checklist", "--date", date], check=False)
-    else:
-        print("[all] skip Ticker checklist (DONE for this day)")
-
     if need("ab"):
         if not _ab_raw(date):
             print("[all] → AB checklist (one day, liquid universe)")
-            _run([sys.executable, "-m", "src.ab_checklist", "--date", date], check=False)
+            _run([sys.executable, "-m", "src.ab_checklist", "--date", date],
+                 check=False, timeout_s=ab_t)
         else:
             print("[all] skip AB checklist raw (DONE) — will enrich")
         print("[all] → AB enrich (peers + industry + sector)")
-        _run([sys.executable, "-m", "src.ab_enrich", "--date", date], check=False)
+        _run([sys.executable, "-m", "src.ab_enrich", "--date", date],
+             check=False, timeout_s=180)
         if not _ab_enriched(date) and not _ab_raw(date):
             print("[all] WARN: AB missing — book ranks without s_ab (goldmine unused)")
         elif not _ab_enriched(date):
@@ -451,15 +436,141 @@ def run(
     else:
         print("[all] skip AB checklist + enrich (DONE for this day)")
 
+    if skip_extras:
+        print("[all] skip extras before book: checklist / events / news / predicts")
+        if need("finviz_digest"):
+            print("[all] → Finviz daily digest (ranker input)")
+            _run([sys.executable, "-m", "src.finviz_digest", "--date", date],
+                 check=False, timeout_s=120)
+    else:
+        if need("ticker_checklist"):
+            print("[all] → Ticker checklist")
+            _run([sys.executable, "-m", "src.ticker_checklist", "--date", date],
+                 check=False, timeout_s=180)
+        else:
+            print("[all] skip Ticker checklist (DONE for this day)")
+
+        prev_llm_to = os.environ.get("OPENCLAW_TIMEOUT")
+        if not skip_llm:
+            os.environ["OPENCLAW_TIMEOUT"] = morning_to
+            print(f"[all] extras LLM HTTP timeout {morning_to}s "
+                  "(hung Grok must not block the book)")
+        try:
+            if skip_llm:
+                print("[all] skip Event scanner (--skip-llm)")
+            elif need("events"):
+                print("[all] → Event scanner (primary)")
+                _run([sys.executable, "-m", "src.run_events", "--date", date],
+                     check=False, timeout_s=llm_sub_t)
+                print("[all] → Event catcher (gap hunt / replacement if primary empty)")
+                _run([sys.executable, "-m", "src.run_events_catcher", "--date", date],
+                     check=False, timeout_s=llm_sub_t)
+                if _events_n(date) == 0:
+                    print("[all] → Events carry-forward fallback (both passes empty)")
+                    _run([sys.executable, "-m", "src.events_fallback", "--date", date],
+                         check=False, timeout_s=60)
+                if _events_n(date) == 0:
+                    print("[all] WARN: events still empty for", date, "— weather/book sector tilt missing")
+            else:
+                print("[all] skip Event scanner (DONE for this day)")
+
+            if need("news_parse"):
+                print("[all] → News parse")
+                _run(
+                    [sys.executable, "-m", "src.news_parse", "--hours", "48",
+                     "--limit", "400", "--date", date],
+                    check=False, timeout_s=llm_sub_t,
+                )
+            else:
+                print("[all] skip News parse (DONE for this day)")
+            if need("finviz_digest"):
+                print("[all] → Finviz daily digest")
+                _run([sys.executable, "-m", "src.finviz_digest", "--date", date],
+                     check=False, timeout_s=120)
+            else:
+                print("[all] skip Finviz daily digest (DONE for this day)")
+            if need("news_judge") and not skip_llm and config.has_llm():
+                print("[all] → News judge")
+                _run([sys.executable, "-m", "src.run_news_judge", "--date", date],
+                     check=False, timeout_s=llm_sub_t)
+                if not _exists("01_daily", "news", f"{date}_judge.md"):
+                    print("[all] WARN: news judge missing for", date, "— s_news will lack LLM tilts")
+            elif skip_llm:
+                print("[all] skip News judge (--skip-llm)")
+            elif not config.has_llm():
+                print("[all] skip News judge (no LLM configured)")
+            else:
+                print("[all] skip News judge (DONE for this day)")
+            if need("news_actions"):
+                print("[all] → News actions (ticker edges)")
+                _run(
+                    [sys.executable, "-m", "src.news_actions", "--hours", "48",
+                     "--limit", "400", "--date", date],
+                    check=False, timeout_s=llm_sub_t,
+                )
+                if not _exists("01_daily", "news", f"{date}_actions.json"):
+                    print("[all] WARN: news actions missing for", date, "— 1d book weaker")
+            else:
+                print("[all] skip News actions (DONE for this day)")
+
+            if not skip_llm and need("general_predict"):
+                if config.has_llm():
+                    print("[all] → General market predict")
+                    _run([sys.executable, "-m", "src.run_predict", "--date", date],
+                         check=False, timeout_s=llm_sub_t)
+                else:
+                    print("[all] skip General market predict (no LLM configured)")
+            elif skip_llm:
+                print("[all] skip General market predict (--skip-llm)")
+            else:
+                print("[all] skip General market predict (DONE for this day)")
+
+            if not skip_llm and (force_sectors or need("sector_predict")):
+                if config.has_llm():
+                    print("[all] → Per-sector predict (all 11 for this trading day)")
+                    _run([sys.executable, "-m", "src.run_sector_predict", "--date", date],
+                         check=False, timeout_s=sector_sub_t)
+                else:
+                    print("[all] skip Per-sector predict (no LLM configured)")
+            elif skip_llm:
+                print("[all] skip Per-sector predict (--skip-llm)")
+            else:
+                print("[all] skip Per-sector predict (DONE for this day — 11/11)")
+
+            if not skip_llm:
+                print("[all] → Weather / join refresh (same-day predicts now on disk)")
+                _run([sys.executable, "-m", "src.weather", "--date", date],
+                     check=False, timeout_s=wx_t)
+                if not _weather_has_sectors(date):
+                    print("[all] weather refresh thin — retry --offline")
+                    _run([sys.executable, "-m", "src.weather", "--date", date, "--offline"],
+                         check=False, timeout_s=60)
+                _run([sys.executable, "-m", "src.join", "--date", date],
+                     check=False, timeout_s=join_t)
+        finally:
+            if not skip_llm:
+                if prev_llm_to is None:
+                    os.environ.pop("OPENCLAW_TIMEOUT", None)
+                else:
+                    os.environ["OPENCLAW_TIMEOUT"] = prev_llm_to
+
     print("[all] → Input health preflight")
     _run([sys.executable, "-m", "src.input_health", "--date", date], check=False)
 
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)],
-         check=False)
+         check=False, timeout_s=book_t)
     if not (_exists("data", "stock_book", f"{date}_stock_book.json")
             or _exists("01_daily", f"{date}_stock_book.md")):
         print(f"[all] WARN: stock book files missing for {date}")
+
+    if skip_extras:
+        print("[all] skip extras (catalyst/backtest/paper/sleeve) — "
+              "book + green.json already written")
+        print("\n[all] FINAL STATUS after run:")
+        _print_status(date, _status_for_day(date))
+        print(f"[all] book → 01_daily/{date}_stock_book.md")
+        return
 
     # Optional layer 3. Must not sit in front of weather/join/book —
     # 2026-09-02 eight names ate the morning and the ranker stayed blocked.
@@ -467,7 +578,8 @@ def run(
         print("[all] skip Catalyst daily (--skip-llm)")
     elif config.has_llm():
         print("[all] → Catalyst daily (after book; skip-if-good + merge)")
-        _run([sys.executable, "-m", "src.catalyst_daily", "--date", date], check=False)
+        _run([sys.executable, "-m", "src.catalyst_daily", "--date", date],
+             check=False, timeout_s=1800)
         if not _exists("01_daily", "catalyst", f"{date}_dossiers.json"):
             print("[all] WARN: catalyst dossiers missing for", date)
     else:
@@ -523,15 +635,21 @@ def main() -> None:
     ap.add_argument("--date", default=None, help="Trading day YYYY-MM-DD (default today ET)")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--skip-llm", action="store_true")
+    ap.add_argument("--skip-extras", action="store_true",
+                    help="Stop after the book + green.json (no paper/sleeve)")
     ap.add_argument("--force-sectors", action="store_true")
+    ap.add_argument("--refresh-ranker", action="store_true",
+                    help="Re-rank even if book + green.json already exist")
     ap.add_argument("--top", type=int, default=25)
     args = ap.parse_args()
     run(
         date=args.date,
         force=args.force,
         skip_llm=args.skip_llm,
+        skip_extras=args.skip_extras,
         top=args.top,
         force_sectors=args.force_sectors,
+        refresh_ranker=args.refresh_ranker,
     )
 
 
