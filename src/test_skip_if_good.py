@@ -131,6 +131,26 @@ def test_night_pack_dates_heals_prior_session_after_bell() -> None:
     assert skip_if_good.night_pack_dates(before_bell) == ["2026-09-03"]
     assert skip_if_good._prev_weekday("2026-09-04") == "2026-09-03"
     assert skip_if_good._prev_weekday("2026-09-07") == "2026-09-04"
+    assert skip_if_good._prev_weekday("2026-09-08") == "2026-09-04"
+
+
+def test_next_session_skips_labor_day_2026() -> None:
+    """Fri 2026-09-04 → Tue 2026-09-08. Monday is Labor Day (NYSE closed).
+
+    Captains use pandas_market_calendars and already write 09-08. A
+    weekend-only walk looked for 09-07 and left the night pack red.
+    """
+    from datetime import date, datetime
+    from zoneinfo import ZoneInfo
+    et = ZoneInfo("America/New_York")
+    assert skip_if_good.is_nyse_holiday(date(2026, 9, 7)) is True
+    assert skip_if_good.is_nyse_holiday(date(2026, 9, 4)) is False
+    assert skip_if_good._next_weekday("2026-09-04") == "2026-09-08"
+    assert skip_if_good._next_weekday("2026-08-28") == "2026-08-31"
+    assert skip_if_good.last_closed_session(
+        datetime(2026, 9, 8, 10, 0, tzinfo=et)) == "2026-09-04"
+    assert skip_if_good.last_closed_session(
+        datetime(2026, 9, 7, 17, 0, tzinfo=et)) == "2026-09-04"
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
@@ -308,6 +328,7 @@ if __name__ == "__main__":
     test_1d_buy_not_all_green_is_not_good()
     test_dead_relvol_1d_buy_is_not_good()
     test_night_pack_dates_heals_prior_session_after_bell()
+    test_next_session_skips_labor_day_2026()
     test_postclose_all_needs_learn_not_just_outcome()
     test_postclose_all_needs_reflect_and_sector_outcomes()
     test_sector_md_counts_only_quality_files()
