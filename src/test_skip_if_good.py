@@ -54,6 +54,32 @@ def test_book_without_essays_is_not_good() -> None:
         assert skip_if_good.book_missing_same_day_essays(js) is False
 
 
+def test_1d_buy_not_all_green_is_not_good() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        js = Path(tmp) / "book.json"
+        js.write_text(json.dumps({
+            "meta": {"same_day_general": True, "same_day_sectors": 11},
+            "books": {"1d": {"buy": [
+                {"ticker": "HTFL", "green": False, "relvol": 0.81,
+                 "s_join": 0.2, "s_general": 0.4, "s_ab": 0.8, "s_peer": 0.0,
+                 "s_sector": 0.5, "s_news": 0.0},
+                {"ticker": "CNH", "green": False, "relvol": 2.47,
+                 "s_join": 0.2, "s_general": 0.2, "s_ab": 0.9, "s_peer": 0.9,
+                 "s_sector": -0.45, "s_news": 0.0},
+            ]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_1d_breaks_all_green(js) is True
+        js.write_text(json.dumps({
+            "meta": {"same_day_general": True, "same_day_sectors": 11},
+            "books": {"1d": {"buy": [
+                {"ticker": "NU", "green": True, "relvol": 1.08,
+                 "s_join": 0.9, "s_general": 0.2, "s_ab": 0.7, "s_peer": 0.7,
+                 "s_sector": 0.05, "s_news": 0.3},
+            ]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_1d_breaks_all_green(js) is False
+
+
 def test_dead_relvol_1d_buy_is_not_good() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         js = Path(tmp) / "book.json"
@@ -126,6 +152,7 @@ if __name__ == "__main__":
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()
     test_book_without_essays_is_not_good()
+    test_1d_buy_not_all_green_is_not_good()
     test_dead_relvol_1d_buy_is_not_good()
     test_postclose_all_needs_learn_not_just_outcome()
     test_finviz_scrape_requires_elite_export()

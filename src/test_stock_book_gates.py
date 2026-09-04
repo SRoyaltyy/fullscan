@@ -19,6 +19,7 @@ from src.stock_book import (
     _book_side,
     _buy_veto_mask,
     _clip_event_tilt,
+    _horizon_pick,
     _keep_liquid,
     _load_finviz_liquidity,
 )
@@ -98,6 +99,62 @@ def test_dead_relvol_is_buy_veto() -> None:
     veto = _buy_veto_mask(df)
     assert bool(veto.iloc[0]) is True
     assert bool(veto.iloc[1]) is False
+
+
+def test_1d_uses_pile_when_thick() -> None:
+    """2026-09-04 1d lattice listed HTFL/CNH while 117 greens sat unused."""
+    sectors = [
+        "Technology", "Healthcare", "Financial", "Energy", "Industrials",
+        "Consumer Cyclical", "Utilities", "Real Estate",
+    ]
+    rows = []
+    for i, sec in enumerate(sectors):
+        rows.append(_row(
+            f"G{i:02d}", join=0.9, ab=0.9, peer=0.8, sector=0.2,
+            score=0.4, sector_name=sec,
+        ))
+        rows[-1]["industry"] = f"g{i}"
+        rows[-1]["bull_eligible"] = True
+        rows[-1]["bull_rank"] = 0.5
+        rows[-1]["bear_eligible"] = False
+    rows.append(_row(
+        "HTFL", join=0.18, gen=0.4, ab=0.8, peer=0.0, sector=0.5,
+        relvol=0.81, score=1.5, sector_name="Healthcare",
+    ))
+    rows[-1]["industry"] = "htfl"
+    rows[-1]["bull_eligible"] = True
+    rows[-1]["bull_rank"] = 2.0
+    rows[-1]["bear_eligible"] = False
+    rows.append(_row(
+        "CNH", join=0.24, gen=0.2, ab=0.9, peer=0.99, sector=-0.45,
+        relvol=2.47, score=1.4, sector_name="Industrials",
+    ))
+    rows[-1]["industry"] = "cnh"
+    rows[-1]["bull_eligible"] = True
+    rows[-1]["bull_rank"] = 1.8
+    rows[-1]["bear_eligible"] = False
+    df = pd.DataFrame(rows)
+    df = attach_ranks(df)
+    df["green"] = green_mask(df)
+    assert bool(df.loc[df.Ticker == "HTFL", "green"].iloc[0]) is False
+    assert bool(df.loc[df.Ticker == "CNH", "green"].iloc[0]) is False
+    pick = _horizon_pick(df, "1d", {"green_pile": {"used": True}}, 8)
+    assert pick["ranker"] == "green_pile"
+    buys, sells = _book_side(
+        df, "1d", pick["top_n"],
+        buy_mask=pick["buy_mask"],
+        buy_sort=pick["buy_sort"],
+        allow_empty=pick["allow_empty"],
+        sell_mask=pick["sell_mask"],
+        sell_sort=pick["sell_sort"],
+        respect_mask=bool(pick.get("respect_mask")),
+    )
+    tickers = set(buys["Ticker"])
+    assert "HTFL" not in tickers
+    assert "CNH" not in tickers
+    assert tickers
+    assert tickers.issubset(set(df.loc[df["green"], "Ticker"]))
+    assert not set(sells["Ticker"]).intersection(set(df.loc[df["green"], "Ticker"]))
 
 
 def test_lattice_eligible_dead_relvol_still_vetoed() -> None:
@@ -322,6 +379,7 @@ def main() -> None:
         test_hard_sector_red_is_buy_veto,
         test_lag_and_peer_red_is_buy_veto,
         test_dead_relvol_is_buy_veto,
+        test_1d_uses_pile_when_thick,
         test_lattice_eligible_dead_relvol_still_vetoed,
         test_pile_sorts_by_green_rank_not_opp_score,
         test_stand_down_empties_buy,

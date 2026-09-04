@@ -330,6 +330,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "input_health.check(date)" in sb
     assert "predict.md if ingest lagged" in sb
     assert "weather.load_runs(asof)" in sb
+    assert "BUY is the green pile when it is thick enough" in sb
+    assert "def _horizon_pick" in sb
     assert "input_health.load(date) or input_health.check" not in sb
     pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
@@ -346,6 +348,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "elite export missing/thin" in skip
     assert "1d BUY has printed dead relvol" in skip
     assert "book_1d_has_dead_relvol" in skip
+    assert "1d BUY is not all-green" in skip
+    assert "book_1d_breaks_all_green" in skip
     assert "book ranked without same-day essays" in skip
     assert "book_missing_same_day_essays" in skip
     fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")

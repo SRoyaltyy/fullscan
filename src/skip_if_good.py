@@ -217,6 +217,66 @@ def book_1d_has_dead_relvol(js: Path) -> bool:
     return False
 
 
+def book_1d_breaks_all_green(js: Path) -> bool:
+    """True when 1d BUY lists a name that fails the all-green contract.
+
+    Live 2026-09-04 kept HTFL (s_peer=0) and CNH (s_sector=−0.45) on 1d
+    after the pile of 117 liquid greens had already landed.
+    """
+    try:
+        payload = json.loads(js.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return False
+    buys = ((payload.get("books") or {}).get("1d") or {}).get("buy") or []
+    if not isinstance(buys, list):
+        return False
+    bad = []
+    eps = green_pile.EPS
+    for row in buys:
+        if not isinstance(row, dict):
+            continue
+        ticker = str(row.get("ticker") or "?")
+        if row.get("green") is False:
+            bad.append(ticker)
+            continue
+        failed = False
+        for col in ("s_join", "s_general", "s_ab", "s_peer"):
+            if col not in row or row.get(col) is None:
+                continue
+            try:
+                if float(row[col]) < eps:
+                    failed = True
+                    break
+            except (TypeError, ValueError):
+                continue
+        if not failed:
+            for col in ("s_sector", "s_news"):
+                if row.get(col) is None:
+                    continue
+                try:
+                    if float(row[col]) <= -eps:
+                        failed = True
+                        break
+                except (TypeError, ValueError):
+                    continue
+        if not failed:
+            try:
+                rv = row.get("relvol")
+                if rv is not None:
+                    rv = float(rv)
+                    if 0 < rv < green_pile.RELVOL_DEAD:
+                        failed = True
+            except (TypeError, ValueError):
+                pass
+        if failed:
+            bad.append(ticker)
+    if bad:
+        print(f"[skip_if_good] 1d BUY not all-green: {', '.join(bad[:8])}",
+              flush=True)
+        return True
+    return False
+
+
 def check_stock_book_all(date: str) -> bool:
     """Book + green pile + the ranker inputs BUY/SELL need."""
     js = ROOT / "data" / "stock_book" / f"{date}_stock_book.json"
@@ -234,6 +294,9 @@ def check_stock_book_all(date: str) -> bool:
     if js.is_file() and book_1d_has_dead_relvol(js):
         return _log(False, "stock_book_all", date,
                     "1d BUY has printed dead relvol — re-rank required")
+    if js.is_file() and book_1d_breaks_all_green(js):
+        return _log(False, "stock_book_all", date,
+                    "1d BUY is not all-green — re-rank required")
     if not check_label_weather(date):
         return _log(False, "stock_book_all", date, "weather incomplete")
     if not check_ab_checklist(date):

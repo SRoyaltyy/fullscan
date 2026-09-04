@@ -1329,6 +1329,101 @@ def _rank_sells(df: pd.DataFrame, horizon: str, top_n: int,
     return pool.head(0)
 
 
+def _horizon_pick(df: pd.DataFrame, horizon: str, meta: dict, top_n: int) -> dict:
+    """BUY/SELL source for one horizon.
+
+    When the green pile is thick, every horizon including 1d BUY is all-green
+    (join/general/AB/peer ≥ +0.05; sector/news yellow-or-missing pass). 1d
+    still requires lattice bull_eligible so a hard-red market can empty the
+    sleeve. SELL stays core weights on the non-green remainder.
+
+    Lattice-only 1d (bull_rank / bear_rank) is the thin-pile fallback — that
+    path listed WAY/HTFL/CNH on 2026-09-04 while 117 liquid greens sat unused.
+    """
+    gp = meta.get("green_pile") or {}
+    sd = meta.get("stand_down") or {}
+    if horizon == "1d" and sd.get("stand_down"):
+        return {
+            "buy_mask": pd.Series(False, index=df.index),
+            "buy_sort": None,
+            "allow_empty": True,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "stand_down",
+            "top_n": top_n,
+        }
+    if (
+        horizon == "1d"
+        and sd.get("restrict_to_catalysts")
+        and sd.get("catalyst_tickers")
+    ):
+        tickers = {str(t).upper() for t in sd["catalyst_tickers"]}
+        return {
+            "buy_mask": df["Ticker"].isin(tickers),
+            "buy_sort": None,
+            "allow_empty": True,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "catalyst_only",
+            "top_n": top_n,
+        }
+    if gp.get("used") and "green" in df.columns:
+        mask = df["green"] == True  # noqa: E712
+        if horizon == "1d" and "bull_eligible" in df.columns:
+            mask = mask & df["bull_eligible"].astype(bool)
+        return {
+            "buy_mask": mask,
+            "buy_sort": "green_rank" if "green_rank" in df.columns else None,
+            "allow_empty": horizon == "1d",
+            "respect_mask": False,
+            "sell_mask": None,
+            "sell_sort": None,
+            "ranker": "green_pile",
+            "top_n": top_n,
+        }
+    if (
+        horizon == "1d"
+        and "bull_eligible" in df.columns
+        and "bear_eligible" in df.columns
+    ):
+        market = (
+            (meta.get("decision_lattice") or {}).get("market")
+            or meta.get("market_decision")
+            or {}
+        )
+        slots = max(0, int(market.get("max_long_slots", top_n)))
+        eligible = df["bull_eligible"].astype(bool)
+        allowed_idx = (
+            df.loc[eligible].sort_values(
+                "bull_rank", ascending=False
+            ).head(slots).index
+        )
+        return {
+            "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
+            "buy_sort": "bull_rank",
+            "allow_empty": True,
+            "respect_mask": True,
+            "sell_mask": df["bear_eligible"].astype(bool),
+            "sell_sort": "bear_rank",
+            "ranker": "decision_lattice",
+            "top_n": slots or top_n,
+        }
+    mask = None
+    sort = None
+    if gp.get("used") and "green" in df.columns:
+        mask = df["green"] == True  # noqa: E712
+        sort = "green_rank" if "green_rank" in df.columns else None
+    return {
+        "buy_mask": mask,
+        "buy_sort": sort,
+        "allow_empty": False,
+        "sell_mask": None,
+        "sell_sort": None,
+        "ranker": "green_pile" if gp.get("used") else "weighted",
+        "top_n": top_n,
+    }
+
+
 def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = True,
               buy_mask=None, buy_sort=None, allow_empty=False,
               sell_mask=None, sell_sort=None, respect_mask=False):
@@ -2005,77 +2100,9 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     df[cols_keep].to_csv(csv_path, index=False)
 
     sell_core = bool(meta.get("sell_excludes_addons", True))
-    gp = meta.get("green_pile") or {}
-    sd = meta.get("stand_down") or {}
 
     def selection(horizon: str):
-        """1d uses the lattice; longer horizons remain shadow-compatible."""
-        if (
-            horizon == "1d"
-            and "bull_eligible" in df.columns
-            and "bear_eligible" in df.columns
-        ):
-            market = (
-                (meta.get("decision_lattice") or {}).get("market")
-                or meta.get("market_decision")
-                or {}
-            )
-            slots = max(0, int(market.get("max_long_slots", top_n)))
-            eligible = df["bull_eligible"].astype(bool)
-            allowed_idx = (
-                df.loc[eligible].sort_values(
-                    "bull_rank", ascending=False
-                ).head(slots).index
-            )
-            return {
-                "buy_mask": pd.Series(df.index.isin(allowed_idx), index=df.index),
-                "buy_sort": "bull_rank",
-                "allow_empty": True,
-                "respect_mask": True,
-                "sell_mask": df["bear_eligible"].astype(bool),
-                "sell_sort": "bear_rank",
-                "ranker": "decision_lattice",
-                "top_n": slots or top_n,
-            }
-        if horizon == "1d" and sd.get("stand_down"):
-            return {
-                "buy_mask": pd.Series(False, index=df.index),
-                "buy_sort": None,
-                "allow_empty": True,
-                "sell_mask": None,
-                "sell_sort": None,
-                "ranker": "stand_down",
-                "top_n": top_n,
-            }
-        if (
-            horizon == "1d"
-            and sd.get("restrict_to_catalysts")
-            and sd.get("catalyst_tickers")
-        ):
-            tickers = {str(t).upper() for t in sd["catalyst_tickers"]}
-            return {
-                "buy_mask": df["Ticker"].isin(tickers),
-                "buy_sort": None,
-                "allow_empty": True,
-                "sell_mask": None,
-                "sell_sort": None,
-                "ranker": "catalyst_only",
-                "top_n": top_n,
-            }
-        mask = None
-        sort = None
-        if gp.get("used") and "green" in df.columns:
-            mask = df["green"] == True  # noqa: E712
-            sort = "green_rank" if "green_rank" in df.columns else None
-        return {
-            "buy_mask": mask,
-            "buy_sort": sort,
-            "allow_empty": False,
-            "sell_mask": None,
-            "sell_sort": None,
-            "ranker": "green_pile" if gp.get("used") else "weighted",
-            "top_n": top_n,
-        }
+        return _horizon_pick(df, horizon, meta, top_n)
 
     books = {}
     for h in HORIZONS:
@@ -2141,8 +2168,13 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "",
         "## How today's action is built",
         "",
-        "**1d uses a decision lattice.** Evidence is evaluated on its own "
-        "merits before any numeric rank:",
+        "**BUY is the green pile when it is thick enough** (every horizon, "
+        "including 1d). A name is all-green when join / general / AB / peer "
+        "are each ≥ +0.05, sector and news are yellow or missing (not red), "
+        "and Finviz relvol is not in (0, 0.7) when printed. 1d still requires "
+        "lattice `bull_eligible` so a hard-red market can empty the sleeve. "
+        "SELL is core weights on the non-green remainder. The lattice is "
+        "the thin-pile fallback and still writes the watch list:",
         "",
         "1. **Market gate** — raw general factor scoreboard + risk state "
         "sets exposure. An extreme confirmed red day closes ordinary longs.",
@@ -2159,8 +2191,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "Its digest, judge and catalyst cells are now populated before "
         "selection. 🔵 / 🚨 / ⚪, Cond, region and featured fades remain gates. "
         "A second six-domain row prevents duplicate headlines from voting "
-        "three times. Longer horizons remain on the legacy weighted rank "
-        "while the 1d lattice is validated.",
+        "three times. Longer horizons use the same pile; they do not wait "
+        "on a separate 1d lattice experiment.",
         "",
         "## Today's regime",
         "",
