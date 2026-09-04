@@ -346,7 +346,7 @@ def _effective_tool_rounds(stage_label: str, max_rounds: int | None) -> int:
     base = max_rounds if max_rounds is not None else config.MAX_TOOL_ROUNDS
     label = (stage_label or "").upper()
     if "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label:
-        cap = int(getattr(config, "SECTOR_TOOL_ROUNDS", 4) or 4)
+        cap = int(getattr(config, "SECTOR_TOOL_ROUNDS", 2) or 2)
         return max(1, min(int(base), cap))
     return max(1, int(base))
 
