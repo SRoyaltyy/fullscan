@@ -1,0 +1,25 @@
+# Reasoning trace — MAP POSTCLOSE captains_healthcare 2026-09-08
+
+
+
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (14,033 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+
+
+
+**Step 1 — Research.** The model wanted to know: *"VRTX Vertex Pharmaceuticals news September 2026"* → got 6 results (via gnews_rss)
+
+  - Is Vertex Pharmaceuticals (VRTX) Undervalued Following Casgevy’s FDA Label Expansion? - simplywall.st (https://news.google.com/rss/articles/CBMi8gFBVV95cUxQamZZWURMSVpFakM2bjNIckxITEZKY1oxQldYelIybkpCd0VtdXFkN0d4V01pTXgtZ2JpX3dXbmZxV3FYcEIxT2l2Z2Z3WElrMXNOWVMzX3l0T2swSW9EVjJRVzVKb183R2Vic3BrNHd6X2dSU01oNE1xWVN1UnhST1NxV3Fka0NZVUtrMUs1aGlEemF5eEZmc2h5dGVKMkh6MGtpMHFDSE5NU0ZVd2E5VFh3U1gtVnI3dC1WRHVIQmcwVkVHTW5WY09HM1BZcDFuT0xuaFBzek5KeGJ5US0zSjY5UUEzMDFzOTdhOFdOcWYxQdIB8gFBVV95cUxQamZZWURMSVpFakM2bjNIckxITEZKY1oxQldYelIybkpCd0VtdXFkN0d4V01pTXgtZ2JpX3dXbmZxV3FYcEIxT2l2Z2Z3WElrMXNOWVMzX3l0T2swSW9EVjJRVzVKb183R2Vic3BrNHd6X2dSU01oNE1xWVN1UnhST1NxV3Fka0NZVUtrMUs1aGlEemF5eEZmc2h5dGVKMkh6MGtpMHFDSE5NU0ZVd2E5VFh3U1gtVnI3dC1WRHVIQmcwVkVHTW5WY09HM1BZcDFuT0xuaFBzek5KeGJ5US0zSjY5UUEzMDFzOTdhOFdOcWYxQQ?oc=5)
+
+  - Vertex (NASDAQ: VRTX) records new insider stock transaction - Stock Titan (https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZnBfRDJ5RjJ4NTBrbnVxWDlCM2NQbVVCWTlxOHBCRW5rSzktOTlwN0lYcXVwbXlxeGpyNTB1eDJjS3d5MGg0N0NvNEc2TGJyWHUydWIwVEctQUZyejgtUVozVU1kUlZZekZidlJUZFB0YXVMblZqVmN5c2VtSGRwUmtkVmxVY0lpTE5iQy1kZFpGTzNKUjRkZk4xRnJWaXItY1VzbzFxSTBwZHFTR2RhcGE3T0pubjNyeEZvQTZKNHc?oc=5)
+
+  - Vertex Completes Acquisition of Crinetics Pharmaceuticals and Announces Expansion of Executive Leadership Team - Business Wire (https://news.google.com/rss/articles/CBMi-wFBVV95cUxNUld1SzhUNEw0RWwtQlZGdXhLZ1FKOFhrejVtSW5SNFU3cFdXV1pBcXk0VGV5RGNYQk83QVczX2h5TGVMV0J1RjZiaUdJOEpKMUhQMUJ4aVhVU3VFdWN4b0dkbXhUZ1NOUk1Na01ITk05RGtLdWo3S3k2VV9IS1BzTzVuNk1yNmRMdC1BQXNNbi1nU1lQZ2NiQ05sVkI3ODlQQjd4ZVNnYlFKTnNacVYxWUFYaEtNcW5HR3dxX1B2R0dGb2lTQ2NMLWsxYU5tczlmT21IdlhxdENaZ0txWmNKX2kzYjl6Z21JUnM0dTdqbWNPdWpYX3ZxUUEzVQ?oc=5)
+
+**Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via gnews_rss)
+
+  - SEPTEMBER 14, 2026 REGN INVESTOR DEADLINE: Regeneron Pharmaceuticals, Inc. Investors with Substantial Losses Have Opportunity to Lead Class Action Lawsuit, Robbins Geller Rudman & Dowd LLP Announces - Business Wire (https://news.google.com/rss/articles/CBMi6AJBVV95cUxQZTdrdE02OF8xRmZIYV9BSGtHdU9UcDhHMWJDYkF6SlJWRVlVaHBmbDZyeE9jWUFXdV9FVmxRNDVQMmJXT1duVGVFS1dkWC1XUFpRMUwxRWZCYUdGakdFUjFVdW1QUEtKOFJzWFR5dUx1QVJIS2FnaFJJbS1mV2NiVWZoTms1azV5R3FvVWV0Wnk3dHA0SlAxRTBhRU1OUDB2X1ZHM05tZlhLZ3hxRFNOc1J3WER2TVNQYVgwZWRpREEyVzBYaGxrcW03N1hxMnh6RXU2T0tWWUdNeEVrM0ZmSGdLcUVJRm1WNjNuYzRlbjBpYjB2ajNTeVhVZXVDQ3FDZ0JGZW1wUXBrd2ZOVGowcGxkV3pWYXAxUTZRSnFPREh6SlZHbnhYNldIV3dvUnB3NkZsaU1YeV9NcDN2X090TWRHRXUxZ3RhbV94LXRaUjVscmtGek1LQlpGRTF2VEJPc3lzMXVSUkw?oc=5)
+
+  - REGN Deadline Alert: Levi & Korsinsky Reminds Regeneron Pharmaceuticals (REGN) Investors of Securities Class Action Deadline on September 14, 2026 - PR Newswire (https://news.google.com/rss/articles/CBMiowJBVV95cUxPdlluSE1DZEJuaGxMXzJfM0VKNElFOEhFSU80c1g5TzhpdUhTRk4wUWxMbmlSRGJWblllV2Jja19aRTZiRFVYYlBFUWlLTG9yV3VjcE5mNW9tUlhWUDcyVGo3Y3ZENVhnMFp3R3Mxelc2ZzltVWF0WHJJSEt4SV9CdGpwSkxmTXhad044Mm9DRVhvdTQzaDU0aF9BWk5nSXVlcmNJZUIxMVRGenRzX3prR0tWbzdJNDBzOEI4X3AwS1BLaWd2QUx0UVZ2QWtaRWE1QXI1cnplbkw4RkYyTjdDYWxJMUNiSU42QkFKTVo0NDJza2RwdmpCYl96VVd2OEZtSFhHTG5NQ0tFUjNjeTQycnBhZDViM1ZXcjFJQ3VuV3MzNGs?oc=5)
+
+  - SHAREHOLDER ALERT Bernstein Liebhard LLP Announces A - globenewswire.com (https://news.google.com/rss/articles/CBMiwgJBVV95cUxOcENnVW9JWV9IdXhoZlpHUWtIeDZtMFd2VHoyZGtOUzB1YXV3NG8zb09YazZYaExKZGJhNk9MRUdodkNVZHV1S0dONm5SaXUtNGVMRzI5cWlmMHdXZ0UtbHplSUdIOWtlajRPRElyVF9nbDZSTDFOWmRqUHgzcWJpYUNZMjYzUmRKcHp2ZmlibkNvdTdVYVZoSG5tdTJQUTMzRDczZjhWQ1daMlNmSTVkcG02a3g4Y3dJZm52WTFBREFHRzFHRE8tck5aa3FWb0s1MmNReEVoaEhtUVN2bWlyb2x5T1pJdFQwVWNBdWxYNjRHOGVOZDJrLW9uay1QX19aczYyUWNFNjZubVM4TU5Pc0trMDRwdVRaVXV1Ykp2M1VvU3M1Z211LWtnSTdxNTBIVDZyeTNjSjhJR0dPZ0lVeTln?oc=5)
+
+**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
