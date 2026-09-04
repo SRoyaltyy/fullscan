@@ -1440,9 +1440,9 @@ td.good,b.good,.good{{color:#4ade80}}td.bad,b.bad,.bad{{color:#f87171}}
 td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 </style></head><body><main>
 <h1>Combined sleeve — .io × mover</h1>
-<p class="muted"><a href="../">.io paper</a>
- · <a href="../mover-paper/">mover paper</a>
- · <a href="../book-paper/">book paper</a></p>
+<p class="muted"><a href="/fullscan/dashboard/">.io paper</a>
+ · <a href="/fullscan/dashboard/mover-paper/">mover paper</a>
+ · <a href="/fullscan/dashboard/book-paper/">book paper</a></p>
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
 {_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
