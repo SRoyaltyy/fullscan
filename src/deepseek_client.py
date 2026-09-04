@@ -29,6 +29,7 @@ On the DeepSeek path, stages needing tools must run on deepseek-chat
 from __future__ import annotations
 
 import json
+import re
 import threading
 import time
 import uuid
@@ -371,6 +372,28 @@ def _last_assistant_text(messages: list[dict]) -> str:
     return ""
 
 
+_DUMP_QUERY_RE = re.compile(r'name="query"[^>]*>([^<]+)', re.I)
+
+
+def _extract_dump_queries(text: str) -> list[str]:
+    """Pull web_search queries out of leaked DSML tool-call XML."""
+    if not text:
+        return []
+    return [q.strip() for q in _DUMP_QUERY_RE.findall(text) if q.strip()]
+
+
+def _calls_from_dump(text: str, n: int, start: int = 0) -> list[dict]:
+    calls = []
+    for i, q in enumerate(_extract_dump_queries(text)[: max(0, n)]):
+        calls.append({
+            "id": f"dump-{start + i}",
+            "type": "function",
+            "function": {"name": "web_search",
+                         "arguments": json.dumps({"query": q})},
+        })
+    return calls
+
+
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
@@ -494,12 +517,20 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
             return ""
         msg = resp["choices"][0]["message"]
-        content = msg.get("content") or ""
+        raw_content = msg.get("content") or ""
+        content = raw_content
         if is_tool_dump(content):
             print(f"[llm] ignoring tool-dump content "
                   f"({len(content)} chars) — not an essay", flush=True)
             content = ""
         calls = list(msg.get("tool_calls") or [])
+        if not calls and is_tool_dump(raw_content):
+            remain = max(0, search_cap - searches_done)
+            recovered = _calls_from_dump(raw_content, remain, searches_done)
+            if recovered:
+                print(f"[llm] recovered {len(recovered)} searches "
+                      f"from tool-dump content", flush=True)
+                calls = recovered
         # Essay already in hand — do not spend the 600s child on more search.
         if sector and len(content.strip()) >= 200:
             final = content
@@ -510,12 +541,19 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                          "skipping further search so the child can write.")
             break
         if not calls:
-            final = content
-            messages.append({"role": "assistant", "content": final})
-            step += 1
-            trace.append(f"**Step {step} — Done researching.** The model "
-                         f"stopped searching and wrote its full analysis "
-                         f"({len(final):,} characters).")
+            if len(content.strip()) >= 200 or not tools:
+                final = content
+                messages.append({"role": "assistant", "content": final})
+                step += 1
+                trace.append(f"**Step {step} — Done researching.** The model "
+                             f"stopped searching and wrote its full analysis "
+                             f"({len(final):,} characters).")
+                break
+            # tools=True but dump/empty with no tool_calls — write an essay
+            # from predict+actuals (+ any searches already run).
+            print("[llm] empty/tool-dump turn with no tool_calls — "
+                  "force no-tool close", flush=True)
+            final = None
             break
         remain = max(0, search_cap - searches_done)
         if remain == 0:
@@ -526,7 +564,8 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         if capped and len(calls) > remain:
             calls = calls[:remain]
         step += 1
-        messages.append({"role": "assistant", "content": msg.get("content"),
+        messages.append({"role": "assistant",
+                         "content": content or None,
                          "tool_calls": calls})
         for call in calls:
             if time.monotonic() - t0 >= budget_s:
