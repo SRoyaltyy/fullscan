@@ -705,6 +705,24 @@ def today_panel_html(card: dict) -> str:
                 f"<td class='why'>{_html.escape(s.get('reason') or '')}</td></tr>")
         return "".join(out)
 
+    def futubull_strip() -> str:
+        last_p = OUT_DIR / "futubull_last.json"
+        if not last_p.is_file():
+            return ("<p class='muted'>Futubull: not wired from this host. "
+                    "Run <code>python -m src.futubull_exec</code> on a box "
+                    "with OpenD (paper first).</p>")
+        try:
+            last = json.loads(last_p.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return ""
+        if last.get("connected"):
+            st = (f"Futubull {last.get('env')} cash ${last.get('cash') or 0:,.0f} · "
+                  f"{last.get('n_tickets') or 0} live tickets · "
+                  f"{'submitted' if last.get('submit') else 'dry-run'}")
+        else:
+            st = f"Futubull offline — {_html.escape(str(last.get('error') or 'OpenD not running'))}"
+        return f"<p class='muted'>{st}</p>"
+
     def rows_would(would):
         chunk = would.get("rows") or []
         if not chunk:
@@ -730,7 +748,9 @@ def today_panel_html(card: dict) -> str:
 <h2>Today — {_html.escape(card['policy'])} · {_html.escape(card['date'])}</h2>
 <p class="muted">{_html.escape(card.get('why') or '')}.
 Sells settle first. Buys only from leftover cash after Futubull fees.
-Already-held names are not re-bought. Hard-red S≤−3 = no new risk.</p>
+Already-held names are not re-bought. Hard-red S≤−3 = no new risk.
+Would-buy is not sent to Futubull.</p>
+{futubull_strip()}
 <div class="cards">{cards}</div>
 <h3>Open holdings (cash is tied here)</h3>
 <div class="sheet"><table>
