@@ -180,7 +180,14 @@ jobs:
           fi
 
           if [ "$FORCE" = "true" ] || [ "$ET_HM" -ge 1600 ]; then
-            maybe postclose_all.yml
+            # Sidecar is the last-closed writer (own concurrency). A
+            # parallel postclose_all.yml ubuntu job races persist and
+            # can overwrite a real essay with a later dump (09-03 #100).
+            if already_running "postclose_last_closed.yml"; then
+              echo "sidecar already grading last-closed — skip postclose_all.yml second writer"
+            else
+              maybe postclose_all.yml
+            fi
             # postclose-all-ubuntu can sit behind a hung push. The sidecar
             # has its own group so last_closed (09-04 after the bell) can
             # start now, or queue behind a mid-day 09-03 heal.
