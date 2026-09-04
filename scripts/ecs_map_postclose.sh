@@ -50,6 +50,12 @@ fi
 git fetch origin main
 git checkout main
 git reset --hard origin/main
+# Untracked leftover gate files fake skip-if-good and never get pushed.
+# Keep 01_daily/_transcripts so a hung Grok call resumes without LLM.
+git clean -fd -- 01_daily/general 01_daily/sectors \
+  01_daily/map_heat 01_daily/news 02_lessons 03_scoreboard || true
+git ls-files -o --exclude-standard -- '01_daily/*_learnings.md' \
+  | xargs -r rm -f
 chmod +x scripts/*.sh || true
 bash scripts/ensure_openclaw_timeouts.sh || true
 
