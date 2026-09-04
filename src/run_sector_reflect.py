@@ -96,16 +96,38 @@ def _write_reflect(sector: str, date_str: str, slug: str, out_dir: str,
     print(f"[sector-reflect] {sector}: {lb.get('ERROR_CATEGORY')} -> {lesson_path}")
 
 
+def _pct_from_outcome_md(text: str):
+    """Read Actuals: {...} written by run_sector_outcome if scoreboard lagged."""
+    import ast
+    m = re.search(r"Actuals:\s*(\{.*\})", text)
+    if not m:
+        return None
+    try:
+        payload = ast.literal_eval(m.group(1))
+    except (ValueError, SyntaxError):
+        return None
+    if not isinstance(payload, dict) or payload.get("pct") is None:
+        return None
+    try:
+        return float(payload["pct"])
+    except (TypeError, ValueError):
+        return None
+
+
 def run_one(sector: str, date_str: str) -> None:
     topic = topic_for(sector)
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, topic)
-    if entry.get("actual_pct_change") is None:
-        print(f"[sector-reflect] skip {sector}: no graded outcome")
-        return
-
     slug = _slug(sector)
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
+    if entry.get("actual_pct_change") is None:
+        outcome_md = _read(os.path.join(out_dir, f"{slug}_outcome.md"))
+        pct = _pct_from_outcome_md(outcome_md)
+        if pct is None:
+            print(f"[sector-reflect] skip {sector}: no graded outcome")
+            return
+        entry["actual_pct_change"] = pct
+        print(f"[sector-reflect] {sector}: actuals from outcome.md pct={pct}")
     existing = os.path.join(out_dir, f"{slug}_reflect.md")
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
         print(f"[sector-reflect] skip {sector}: reflect already on disk")

@@ -466,6 +466,8 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "reuse transcript" in src
     assert "last_assistant" in src
     assert "_persist" in src
+    assert "try Ticker.history" in src
+    assert "_fill_from_history" in src
     # One failure must not abort the remaining 10.
     assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
 
@@ -476,7 +478,42 @@ def test_sector_reflect_skips_existing() -> None:
     assert "reuse transcript" in src
     assert "last_assistant" in src
     assert "_persist" in src
+    assert "actuals from outcome.md" in src
     assert 'print(f"[sector-reflect] WARN {sector}: {e}")' in src
+    from src.run_sector_reflect import _pct_from_outcome_md
+    text = "# Sector Outcome\n\nActuals: {'etf': 'XLK', 'pct': 1.25, 'spy_pct': 0.4}\n\nbody"
+    assert _pct_from_outcome_md(text) == 1.25
+    assert _pct_from_outcome_md("no actuals") is None
+
+
+def test_etf_actual_falls_back_to_history() -> None:
+    from src import run_sector_outcome as so
+
+    bars = {
+        "XLK": [
+            {"date": "2026-09-02", "open": 100.0, "close": 100.0},
+            {"date": "2026-09-03", "open": 101.0, "close": 102.0},
+        ],
+        "SPY": [
+            {"date": "2026-09-02", "open": 200.0, "close": 200.0},
+            {"date": "2026-09-03", "open": 201.0, "close": 202.0},
+        ],
+    }
+
+    def fake_hist(symbol, days=15):
+        return bars[symbol]
+
+    with mock.patch.object(so, "_bars_via_history",
+                           side_effect=lambda sym, d: (
+                               bars[sym][1]["open"], bars[sym][1]["close"],
+                               bars[sym][0]["close"])):
+        out = so._fill_from_history(
+            {"etf": "XLK", "pct": None, "spy_pct": None, "rel": None,
+             "open": None, "close": None},
+            "XLK", "2026-09-03")
+    assert abs(out["pct"] - 2.0) < 1e-9
+    assert abs(out["spy_pct"] - 1.0) < 1e-9
+    assert out["source"] == "yf_history"
 
 
 def test_general_outcome_skips_existing_and_reuses_transcript() -> None:
@@ -570,6 +607,7 @@ def main() -> None:
         test_empty_futures_tape_not_ready,
         test_sector_outcome_skips_existing_and_times_out_yf,
         test_sector_reflect_skips_existing,
+        test_etf_actual_falls_back_to_history,
         test_general_outcome_skips_existing_and_reuses_transcript,
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
