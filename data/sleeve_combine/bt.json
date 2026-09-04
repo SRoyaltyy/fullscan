@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T05:56:50-04:00",
+  "generated_at": "2026-09-04T06:00:23-04:00",
   "window": [
     "2026-08-13",
     "2026-09-03"
@@ -96,7 +96,7 @@
       "max_dd_pct": 1.57,
       "final_equity": 103902.09,
       "n_skipped": 96,
-      "n_gap_days": 13,
+      "n_gap_days": 7,
       "by_source": {
         "mover": {
           "n": 30,
@@ -212,7 +212,7 @@
       "max_dd_pct": 1.3,
       "final_equity": 107614.85,
       "n_skipped": 181,
-      "n_gap_days": 13,
+      "n_gap_days": 7,
       "by_source": {
         "mover": {
           "n": 20,
@@ -328,7 +328,7 @@
       "max_dd_pct": 0.5,
       "final_equity": 106449.19,
       "n_skipped": 226,
-      "n_gap_days": 13,
+      "n_gap_days": 7,
       "by_source": {
         "mover": {
           "n": 11,
@@ -381,6 +381,346 @@
       },
       "gross_win": 9620.65,
       "gross_loss": -2940.18
+    }
+  ],
+  "io_attrs": {
+    "hold": "1d",
+    "n_prints": 85,
+    "n_down": 31,
+    "n_green": 45,
+    "cuts": {
+      "all": {
+        "n": 85,
+        "mean": 1.027,
+        "hit": 0.494
+      },
+      "down": {
+        "n": 31,
+        "mean": 1.811,
+        "hit": 0.548
+      },
+      "green": {
+        "n": 45,
+        "mean": 0.863,
+        "hit": 0.489
+      },
+      "hard_red": {
+        "n": 31,
+        "mean": 1.811,
+        "hit": 0.548
+      },
+      "down_large+": {
+        "n": 15,
+        "mean": -0.108,
+        "hit": 0.467
+      },
+      "down_mid": {
+        "n": 10,
+        "mean": 0.367,
+        "hit": 0.5
+      },
+      "down_small": {
+        "n": 6,
+        "mean": 9.019,
+        "hit": 0.833
+      },
+      "down_rebound": {
+        "n": 11,
+        "mean": 4.918,
+        "hit": 0.636
+      },
+      "down_not_rebound": {
+        "n": 20,
+        "mean": 0.103,
+        "hit": 0.5
+      },
+      "down_event": {
+        "n": 10,
+        "mean": 0.293,
+        "hit": 0.6
+      },
+      "down_no_event": {
+        "n": 21,
+        "mean": 2.534,
+        "hit": 0.524
+      },
+      "down_join_good": {
+        "n": 20,
+        "mean": -0.076,
+        "hit": 0.45
+      },
+      "down_join_not": {
+        "n": 11,
+        "mean": 5.243,
+        "hit": 0.727
+      },
+      "down_sector_good": {
+        "n": 18,
+        "mean": 3.379,
+        "hit": 0.667
+      },
+      "down_sector_not": {
+        "n": 13,
+        "mean": -0.359,
+        "hit": 0.385
+      },
+      "down_news_good": {
+        "n": 10,
+        "mean": 0.293,
+        "hit": 0.6
+      },
+      "down_news_not": {
+        "n": 21,
+        "mean": 2.534,
+        "hit": 0.524
+      },
+      "down_energy": {
+        "n": 16,
+        "mean": 0.553,
+        "hit": 0.562
+      },
+      "down_healthcare": {
+        "n": 9,
+        "mean": 4.725,
+        "hit": 0.444
+      },
+      "down_not_energy": {
+        "n": 15,
+        "mean": 3.154,
+        "hit": 0.533
+      }
+    },
+    "down_by_sector": {
+      "Energy": {
+        "n": 16,
+        "mean": 0.553,
+        "hit": 0.562
+      },
+      "Financial": {
+        "n": 1,
+        "mean": 1.487,
+        "hit": 1.0
+      },
+      "Healthcare": {
+        "n": 9,
+        "mean": 4.725,
+        "hit": 0.444
+      },
+      "Industrials": {
+        "n": 2,
+        "mean": 1.342,
+        "hit": 0.5
+      },
+      "Technology": {
+        "n": 2,
+        "mean": 0.822,
+        "hit": 1.0
+      },
+      "Utilities": {
+        "n": 1,
+        "mean": -1.024,
+        "hit": 0.0
+      }
+    }
+  },
+  "io_attr_books": [
+    {
+      "total_ret_pct": 6.5,
+      "max_dd_pct": 2.46,
+      "n_trades": 85,
+      "hit": 0.482,
+      "final_equity": 106497.92,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 85,
+          "hit": 0.482,
+          "pnl": 6497.98
+        }
+      },
+      "filter": "all",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 1.82,
+      "max_dd_pct": 0.53,
+      "n_trades": 33,
+      "hit": 0.545,
+      "final_equity": 101816.15,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 33,
+          "hit": 0.545,
+          "pnl": 1816.16
+        }
+      },
+      "filter": "large+",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": -1.51,
+      "max_dd_pct": 1.91,
+      "n_trades": 28,
+      "hit": 0.393,
+      "final_equity": 98488.91,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 28,
+          "hit": 0.393,
+          "pnl": -1511.06
+        }
+      },
+      "filter": "mid",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 6.27,
+      "max_dd_pct": 0.45,
+      "n_trades": 24,
+      "hit": 0.5,
+      "final_equity": 106269.18,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 24,
+          "hit": 0.5,
+          "pnl": 6269.16
+        }
+      },
+      "filter": "small",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 5.36,
+      "max_dd_pct": 1.27,
+      "n_trades": 20,
+      "hit": 0.6,
+      "final_equity": 105356.64,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 20,
+          "hit": 0.6,
+          "pnl": 5356.62
+        }
+      },
+      "filter": "rebound",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 0.41,
+      "max_dd_pct": 0.79,
+      "n_trades": 21,
+      "hit": 0.571,
+      "final_equity": 100413.29,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 21,
+          "hit": 0.571,
+          "pnl": 413.31
+        }
+      },
+      "filter": "event",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 1.37,
+      "max_dd_pct": 1.16,
+      "n_trades": 26,
+      "hit": 0.577,
+      "final_equity": 101374.41,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 26,
+          "hit": 0.577,
+          "pnl": 1374.42
+        }
+      },
+      "filter": "energy",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 7.0,
+      "max_dd_pct": 0.75,
+      "n_trades": 43,
+      "hit": 0.558,
+      "final_equity": 107003.09,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 43,
+          "hit": 0.558,
+          "pnl": 7003.11
+        }
+      },
+      "filter": "sector_good",
+      "hold": "1d",
+      "mode": "io_only"
+    },
+    {
+      "total_ret_pct": 1.38,
+      "max_dd_pct": 2.0,
+      "n_trades": 69,
+      "hit": 0.449,
+      "final_equity": 101383.95,
+      "by_source": {
+        "mover": {
+          "n": 0,
+          "hit": null,
+          "pnl": 0
+        },
+        "io": {
+          "n": 69,
+          "hit": 0.449,
+          "pnl": 1384.0
+        }
+      },
+      "filter": "large+_on_down",
+      "hold": "1d",
+      "mode": "io_only"
     }
   ],
   "n_sessions": 17,

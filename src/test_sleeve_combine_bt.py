@@ -6,11 +6,15 @@ from __future__ import annotations
 
 from src.sleeve_combine_bt import (
     MismatchError,
+    _dual_gap,
+    analyze_io_size_attrs,
     assert_matched_hold,
     build_bar_fn,
     exit_date,
+    io_keep,
     load_fees,
     order_fees,
+    parse_reasons,
     render,
     run_bt,
     run_dual,
@@ -238,6 +242,23 @@ def test_report_says_combine_lost_when_it_did() -> None:
     assert "dual" in md
     assert "cannot combine mover with .io hold" not in md
     assert "2w / 1m are not combined" in md
+    md_attr = render({
+        "generated_at": "t", "window": ["2026-08-13", "2026-09-03"],
+        "capital": 100000, "top_n": 10, "pct": 0.1,
+        "n_sessions": 17, "n_mover_call_days": 14, "n_book_days": 13,
+        "results": [],
+        "io_attrs": {
+            "n_prints": 10, "n_down": 6, "n_green": 4,
+            "cuts": {"down_large+": {"n": 3, "mean": 0.4, "hit": 0.67}},
+        },
+        "io_attr_books": [
+            {"filter": "all", "total_ret_pct": 6.5, "max_dd_pct": 2.5,
+             "hit": 0.48, "n_trades": 85},
+        ],
+    })
+    assert "inside the size book" in md_attr
+    assert "`all`" in md_attr
+    assert "stay in the size book" in md_attr
 
 
 def test_dual_keeps_io_on_down_days() -> None:
@@ -258,8 +279,62 @@ def test_dual_keeps_io_on_down_days() -> None:
     assert d13["filled_am"] == 1
     assert d14["filled_pm"] == 1, "io wallet must still buy the down day"
     assert d14["route"] == "dual"
+    assert "route cash" not in (d14.get("gap") or ""), d14
     srcs = {t["source"] for t in sim["trades"]}
     assert srcs == {"mover", "io"}
+
+
+def test_dual_gap_drops_expected_mover_cash() -> None:
+    assert _dual_gap("route cash — no new entries", "") == ""
+    assert _dual_gap(
+        "route cash — no new entries",
+        "io source missing (no stock_book file)",
+    ) == "io source missing (no stock_book file)"
+    assert _dual_gap("mover source empty (no BUY calls)", "") == (
+        "mover source empty (no BUY calls)")
+
+
+def test_parse_reasons_and_keeps() -> None:
+    blob = ("join=+0.32; sector=+0.65; gen=-0.08; news=+0.83; "
+            "ev={'event': 'hormuz_energy_risk', 'side': 'buy'}")
+    r = parse_reasons(blob)
+    assert r["join"] == 0.32
+    assert r["sector"] == 0.65
+    assert r["has_event"] is True
+    assert parse_reasons("join=+0.39; rebound_floor")["rebound_floor"] is True
+    pick = {"bucket": "large+", "sector": "Energy", "rebound": False,
+            "reasons": blob}
+    assert io_keep("large+")(pick)
+    assert io_keep("energy")(pick)
+    assert io_keep("event")(pick)
+    assert not io_keep("rebound")(pick)
+    assert io_keep("sector_good")(pick)
+
+
+def test_io_attr_cut_splits_down_vs_green() -> None:
+    cal = ["2026-08-13", "2026-08-14", "2026-08-17"]
+    scores = {"2026-08-13": 5.0, "2026-08-14": -6.0}
+    io = {
+        "2026-08-13": [{"ticker": "AAA", "bucket": "large+",
+                        "sector": "Tech", "reasons": "join=+0.2; sector=+0.1"}],
+        "2026-08-14": [{"ticker": "BBB", "bucket": "mid",
+                        "sector": "Energy", "reasons": "join=-0.1; sector=+0.6; "
+                        "ev={'event': 'x'}"}],
+    }
+    px = {
+        ("AAA", "2026-08-13"): (10.0, 10.0),
+        ("AAA", "2026-08-14"): (10.0, 11.0),
+        ("BBB", "2026-08-14"): (20.0, 20.0),
+        ("BBB", "2026-08-17"): (20.0, 18.0),
+    }
+    doc = analyze_io_size_attrs(cal, scores, io, _bars(px), hold="1d")
+    assert doc["n_prints"] == 2
+    assert doc["n_green"] == 1
+    assert doc["n_down"] == 1
+    assert doc["cuts"]["down"]["n"] == 1
+    assert doc["cuts"]["down"]["mean"] == -10.0
+    assert doc["cuts"]["green"]["mean"] == 10.0
+    assert doc["cuts"]["down_energy"]["n"] == 1
 
 
 def test_run_bt_rejects_bad_mode() -> None:
@@ -295,6 +370,9 @@ if __name__ == "__main__":
     test_bar_fn_does_not_invent_open()
     test_report_says_combine_lost_when_it_did()
     test_dual_keeps_io_on_down_days()
+    test_dual_gap_drops_expected_mover_cash()
+    test_parse_reasons_and_keeps()
+    test_io_attr_cut_splits_down_vs_green()
     test_run_bt_rejects_bad_mode()
     test_run_bt_rejects_dual_inline()
     print("ok")

@@ -1,6 +1,6 @@
 # Sleeve combine backtest (matched hold, shared cash)
 
-_Generated 2026-09-04T05:56:50-04:00 — 2026-08-13 → 2026-09-03 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
+_Generated 2026-09-04T06:00:23-04:00 — 2026-08-13 → 2026-09-03 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
 
 This is the integrity backtest. Both sleeves use the **same hold** (1d / 3d / 1w). Mover still enters at 09:30, .io still enters at 16:00 — those clocks are data constraints, not a style choice. Open buys cannot spend the same day's close-sale cash. Missing mover calls and missing books are logged as gaps, not as a gate.
 
@@ -19,15 +19,15 @@ The 1d **switch** is **+0.59%**. That is worse than mover-only 1d (+1.55%) and w
 | 1d | combine | +0.59% | 1.60% | 37.9% | 29 | $1,579 | $-990 | 9 |
 | 1d | mover_only | +1.55% | 0.66% | 43.3% | 30 | $1,547 | $0 | 11 |
 | 1d | io_only | +6.50% | 2.46% | 48.2% | 85 | $0 | $6,498 | 4 |
-| **1d** | **dual** | +3.90% | 1.57% | 47.0% | 115 | $743 | $3,159 | 13 |
+| **1d** | **dual** | +3.90% | 1.57% | 47.0% | 115 | $743 | $3,159 | 7 |
 | 3d | combine | +3.42% | 1.32% | 42.1% | 19 | $4,672 | $-1,257 | 9 |
 | 3d | mover_only | +4.22% | 0.90% | 50.0% | 20 | $4,223 | $0 | 11 |
 | 3d | io_only | +11.50% | 2.07% | 47.6% | 42 | $0 | $11,502 | 4 |
-| 3d | dual | +7.61% | 1.30% | 48.4% | 64 | $2,091 | $5,524 | 13 |
+| 3d | dual | +7.61% | 1.30% | 48.4% | 64 | $2,091 | $5,524 | 7 |
 | 1w | combine | +4.35% | 1.39% | 57.9% | 19 | $4,530 | $-181 | 9 |
 | 1w | mover_only | +4.53% | 0.40% | 70.0% | 10 | $4,530 | $0 | 11 |
 | 1w | io_only | +9.28% | 1.84% | 62.1% | 29 | $0 | $9,277 | 4 |
-| 1w | dual | +6.45% | 0.50% | 64.1% | 39 | $2,292 | $4,157 | 13 |
+| 1w | dual | +6.45% | 0.50% | 64.1% | 39 | $2,292 | $4,157 | 7 |
 | 2w | io_only | +6.68% | 3.68% | 70.0% | 10 | $0 | $6,680 | 4 |
 
 ## What the 1d combine is allowed to do
@@ -55,6 +55,49 @@ Leak-free test: take every mover BUY with a 1d print and tag the 09:30 boxes (sa
 
 `dual` is two accounts at half capital: mover still gated at S ≥ +1, .io size still buys on red mornings. Same hold. No shared cash clock.
 
+## .io attributes on down days (inside the size book)
+
+Different question from the mover-tag table above. Here the names are already .io size-sleeve picks, entered at the close. Unweighted close→next-close on the same 1d hold. Morning S is only used to split the tape — it does not pick the names.
+
+Prints with a 1d exit: 85 · on S < +1: 31 · on S ≥ +1: 45
+
+| Cut | Mean · win · n |
+|---|---|
+| All size prints | +1.03% · 49.4% · n=85 |
+| Down / messy (S < +1) | +1.81% · 54.8% · n=31 |
+| Hard red (S < −3) | +1.81% · 54.8% · n=31 |
+| Green mornings | +0.86% · 48.9% · n=45 |
+| Down · large+ | -0.11% · 46.7% · n=15 |
+| Down · mid | +0.37% · 50.0% · n=10 |
+| Down · small/micro | +9.02% · 83.3% · n=6 |
+| Down · rebound | +4.92% · 63.6% · n=11 |
+| Down · not rebound | +0.10% · 50.0% · n=20 |
+| Down · event-tagged | +0.29% · 60.0% · n=10 |
+| Down · no event | +2.53% · 52.4% · n=21 |
+| Down · join > 0 | -0.08% · 45.0% · n=20 |
+| Down · join ≤ 0 / missing | +5.24% · 72.7% · n=11 |
+| Down · sector > 0 | +3.38% · 66.7% · n=18 |
+| Down · sector ≤ 0 / missing | -0.36% · 38.5% · n=13 |
+| Down · Energy | +0.55% · 56.2% · n=16 |
+| Down · not Energy | +3.15% · 53.3% · n=15 |
+| Down · Healthcare | +4.72% · 44.4% · n=9 |
+
+Cash-accounted .io-only 1d (same $100k / 10% / Futubull). Filtering the size book *reduces* names; leftover cash sits. `large+_on_down` keeps the full 3-bucket book on green mornings and large+ only when S < +1.
+
+| Filter | Ret | Max DD | Win | Trades |
+|---|---:|---:|---:|---:|
+| `all` | +6.50% | 2.46% | 48.2% | 85 |
+| `large+` | +1.82% | 0.53% | 54.5% | 33 |
+| `mid` | -1.51% | 1.91% | 39.3% | 28 |
+| `small` | +6.27% | 0.45% | 50.0% | 24 |
+| `rebound` | +5.36% | 1.27% | 60.0% | 20 |
+| `event` | +0.41% | 0.79% | 57.1% | 21 |
+| `energy` | +1.37% | 1.16% | 57.7% | 26 |
+| `sector_good` | +7.00% | 0.75% | 55.8% | 43 |
+| `large+_on_down` | +1.38% | 2.00% | 44.9% | 69 |
+
+The size book itself was *better* on S < +1 than on green mornings. Extra gates mostly do not improve the cash book: large+ / Energy / event / join>0 all lose to the raw 3-bucket sleeve. `sector_good` is the one filter that beat `all` this window — slightly, on half the names, with less DD. Treat that as a size-up tilt, not a new sleeve; thirteen book days is too thin to replace the 3-bucket rule. Rebound is already how the book stays long when gen is red. The down-day attribute that survives is still **stay in the size book**.
+
 ## Primary book — dual hold=1d
 
 | Start | Final | Return | Max DD | Trades | Win | Skipped |
@@ -68,20 +111,20 @@ Leak-free test: take every mover BUY with a 1d print and tag the 09:30 boxes (sa
 | 2026-08-13 | 8.525 | dual | 0 | 9 | 0 | 9 | $99,911 | mover source empty (no BUY calls) |
 | 2026-08-14 | 5.5 | dual | 0 | 9 | 9 | 9 | $101,211 | mover source empty (no BUY calls) |
 | 2026-08-17 | 2.25 | dual | 1 | 9 | 9 | 10 | $101,411 | — |
-| 2026-08-18 | -6.2 | dual | 0 | 9 | 10 | 9 | $101,224 | route cash — no new entries |
-| 2026-08-19 | -7.2 | dual | 0 | 9 | 9 | 9 | $103,771 | route cash — no new entries |
+| 2026-08-18 | -6.2 | dual | 0 | 9 | 10 | 9 | $101,224 | — |
+| 2026-08-19 | -7.2 | dual | 0 | 9 | 9 | 9 | $103,771 | — |
 | 2026-08-20 | 1.125 | dual | 9 | 9 | 9 | 18 | $104,702 | — |
 | 2026-08-21 | 3.25 | dual | 0 | 9 | 18 | 9 | $105,563 | — |
-| 2026-08-24 | -5.175 | dual | 0 | 0 | 9 | 0 | $105,032 | route cash — no new entries; io source missing (no stock_book file) |
+| 2026-08-24 | -5.175 | dual | 0 | 0 | 9 | 0 | $105,032 | io source missing (no stock_book file) |
 | 2026-08-25 | 1.8 | dual | 10 | 0 | 0 | 10 | $104,946 | io source missing (no stock_book file) |
 | 2026-08-26 | 2.025 | dual | 0 | 0 | 10 | 0 | $104,781 | io source missing (no stock_book file) |
 | 2026-08-27 | — | dual | 10 | 9 | 0 | 19 | $104,954 | — |
-| 2026-08-28 | 0.75 | dual | 0 | 0 | 19 | 0 | $104,215 | route cash — no new entries; io source missing (no stock_book file) |
+| 2026-08-28 | 0.75 | dual | 0 | 0 | 19 | 0 | $104,215 | io source missing (no stock_book file) |
 | 2026-08-30 | — | dual | 0 | 0 | 0 | 0 | $104,215 | mover source empty (no BUY calls) |
-| 2026-08-31 | -5.85 | dual | 0 | 3 | 0 | 3 | $104,209 | route cash — no new entries |
-| 2026-09-01 | -6.3 | dual | 0 | 6 | 3 | 6 | $104,346 | route cash — no new entries |
-| 2026-09-02 | -3.825 | dual | 0 | 4 | 6 | 4 | $103,998 | route cash — no new entries |
-| 2026-09-03 | -0.9 | dual | 0 | 0 | 4 | 0 | $103,902 | route cash — no new entries |
+| 2026-08-31 | -5.85 | dual | 0 | 3 | 0 | 3 | $104,209 | — |
+| 2026-09-01 | -6.3 | dual | 0 | 6 | 3 | 6 | $104,346 | — |
+| 2026-09-02 | -3.825 | dual | 0 | 4 | 6 | 4 | $103,998 | — |
+| 2026-09-03 | -0.9 | dual | 0 | 0 | 4 | 0 | $103,902 | — |
 
 ### Last 20 fills
 

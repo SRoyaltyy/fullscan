@@ -20,7 +20,7 @@
       "pnl": 3158.92
     }
   },
-  "n_gap_days": 13,
+  "n_gap_days": 7,
   "curve": [
     {
       "date": "2026-08-13",
@@ -84,7 +84,7 @@
       "n_mover_calls": 117,
       "n_io_picks": 9,
       "has_book": true,
-      "gap": "route cash \u2014 no new entries"
+      "gap": ""
     },
     {
       "date": "2026-08-19",
@@ -100,7 +100,7 @@
       "n_mover_calls": 117,
       "n_io_picks": 9,
       "has_book": true,
-      "gap": "route cash \u2014 no new entries"
+      "gap": ""
     },
     {
       "date": "2026-08-20",
@@ -148,7 +148,7 @@
       "n_mover_calls": 132,
       "n_io_picks": 0,
       "has_book": false,
-      "gap": "route cash \u2014 no new entries; io source missing (no stock_book file)"
+      "gap": "io source missing (no stock_book file)"
     },
     {
       "date": "2026-08-25",
@@ -212,7 +212,7 @@
       "n_mover_calls": 261,
       "n_io_picks": 0,
       "has_book": false,
-      "gap": "route cash \u2014 no new entries; io source missing (no stock_book file)"
+      "gap": "io source missing (no stock_book file)"
     },
     {
       "date": "2026-08-30",
@@ -244,7 +244,7 @@
       "n_mover_calls": 95,
       "n_io_picks": 3,
       "has_book": true,
-      "gap": "route cash \u2014 no new entries"
+      "gap": ""
     },
     {
       "date": "2026-09-01",
@@ -260,7 +260,7 @@
       "n_mover_calls": 177,
       "n_io_picks": 6,
       "has_book": true,
-      "gap": "route cash \u2014 no new entries"
+      "gap": ""
     },
     {
       "date": "2026-09-02",
@@ -276,7 +276,7 @@
       "n_mover_calls": 186,
       "n_io_picks": 4,
       "has_book": true,
-      "gap": "route cash \u2014 no new entries"
+      "gap": ""
     },
     {
       "date": "2026-09-03",
@@ -292,7 +292,7 @@
       "n_mover_calls": 794,
       "n_io_picks": 6,
       "has_book": true,
-      "gap": "route cash \u2014 no new entries"
+      "gap": ""
     }
   ],
   "audit": [
@@ -560,5 +560,5 @@
     "2026-08-13",
     "2026-09-03"
   ],
-  "generated_at": "2026-09-04T05:56:51-04:00"
+  "generated_at": "2026-09-04T06:00:24-04:00"
 }

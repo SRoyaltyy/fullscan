@@ -4,7 +4,7 @@ _Generated 2026-09-04T05:04:21-04:00 — window 2026-08-13 → 2026-09-03_
 
 The three live books are complementary. They should not vote as equals. **Excel finds, mover times, .io stays long when the tape is only mildly ugly.**
 
-The equity-curve stitch below is a *sketch*. The integrity path is `src/sleeve_combine_bt.py` / [`SLEEVE_COMBINE_BT.md`](SLEEVE_COMBINE_BT.md): matched hold, shared cash, Futubull fees, 09:30-vs-16:00 cash clock, missing 8/13–8/14 mover calls logged as gaps. Do not pair mover 1d with live .io 2w.
+The equity-curve stitch below is a *sketch*. The integrity path is `src/sleeve_combine_bt.py` / [`SLEEVE_COMBINE_BT.md`](SLEEVE_COMBINE_BT.md): matched hold, Futubull fees, 09:30-vs-16:00 cash clock, missing 8/13–8/14 mover calls logged as gaps. **Switching** one shared account by S lost to both solos. The combine that keeps .io's down-day book is **dual wallets** (mover gated, .io size always on, same hold). Do not pair mover 1d with live .io 2w. Copying green-pile / join-good onto mover names also fails on down days.
 
 ## Route (the combine)
 
@@ -113,8 +113,8 @@ Flattening on S < −3 *hurt* this window: .io `2w_size` was the best single boo
 1. **Do not average the three pick lists.** Excel dumps 30–50 names a day; mover wants 10; .io fills 10. Averaging re-imports Excel's median-zero / tail-or-nothing payoff.
 2. **Excel = universe + confirm.** Overnight: scan. At 09:30: if the route is mover, size-up any top-N name that also confirmed L3 (midcap hold-2) or L1/L2 that session. At the close: if the route is .io, same confirm on the size-sleeve fills.
 3. **Prefer .io size sleeves over 1d_top.** `2w_size` is the down-day engine (7 SPY-down sessions, +0.2% mean, 71% win, +0.7% vs SPY). 1d_top is the dashboard headline and the weakest long sleeve.
-4. **Keep mover's +1 gate for mover fills.** Do not loosen it just because .io can buy below +1. That gate is why max DD is 0.12%. Below +1, *switch books*, do not dilute mover.
-5. **Hard-red (S < −3) = no new 1d risk, not flatten.** Stop fresh .io 1d fills and all mover fills. Leave 2w/1m size sleeves on. Do not stand up an Excel short book until S1/S2 have a fee-aware paper sleeve (borrow is ignored today).
+4. **Keep mover's +1 gate for mover fills.** Do not loosen it just because .io can buy below +1. That gate is why max DD is tiny. Below +1, do **not** switch the mover account onto the afternoon book — give .io its own cash and leave it on.
+5. **Hard-red (S < −3) = no new *mover* risk, not flatten .io.** Dual keeps buying the size book on red mornings (1d size was *better* on S < +1 than on green in this window). A shared-account "cash" route is what made the switch lose. Do not stand up an Excel short book until S1/S2 have a fee-aware paper sleeve (borrow is ignored today).
 6. **Intersection is a bonus, not a requirement.** Mover ∩ book tickers this window: `ACMR`, `AUPH`, `CRSP`, `MU`. Waiting for all three to agree starves the book.
 
 ## Caveats

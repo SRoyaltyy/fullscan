@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -257,6 +258,236 @@ def _px(bar: dict | None, field: str) -> float | None:
     if x <= 0:
         return None
     return x
+
+
+_REASON_RE = re.compile(r"(join|sector|gen|news)=([+-]?\d+(?:\.\d+)?)")
+
+
+def parse_reasons(text: str) -> dict:
+    """Parse the stock-book `reasons` blob. Knowable at book print (close)."""
+    out: dict = {"has_event": False, "rebound_floor": False}
+    for key, raw in _REASON_RE.findall(text or ""):
+        out[key] = float(raw)
+    blob = text or ""
+    out["has_event"] = "ev=" in blob or "'event'" in blob or '"event"' in blob
+    out["rebound_floor"] = "rebound_floor" in blob
+    return out
+
+
+def tag_io_pick(pick: dict) -> dict:
+    reasons = parse_reasons(pick.get("reasons") or "")
+    join = reasons.get("join")
+    sector_s = reasons.get("sector")
+    news = reasons.get("news")
+    return {
+        "ticker": (pick.get("ticker") or "").upper(),
+        "bucket": pick.get("bucket") or "",
+        "sector": pick.get("sector") or "",
+        "rebound": bool(pick.get("rebound")),
+        "join": join,
+        "s_sector": sector_s,
+        "news": news,
+        "has_event": bool(reasons.get("has_event")),
+        "join_good": join is not None and join > 0,
+        "sector_good": sector_s is not None and sector_s > 0,
+        "news_good": news is not None and news > 0,
+        "score": pick.get("score"),
+    }
+
+
+def _mean(xs: list[float]) -> float | None:
+    return round(sum(xs) / len(xs), 3) if xs else None
+
+
+def _hit(xs: list[float]) -> float | None:
+    return round(sum(1 for x in xs if x > 0) / len(xs), 3) if xs else None
+
+
+def _cut(rows: list[dict], pred) -> dict:
+    xs = [r["ret"] for r in rows if pred(r)]
+    return {"n": len(xs), "mean": _mean(xs), "hit": _hit(xs)}
+
+
+def analyze_io_size_attrs(
+    calendar: list[str],
+    scores: dict[str, float | None],
+    io_picks: dict[str, list[dict]],
+    bars,
+    hold: str = "1d",
+) -> dict:
+    """Unweighted 1-hold close→close of the size-sleeve names.
+
+    Attributes come from the same afternoon book that printed the pick
+    (close entry, so no leak). This answers: *inside* the .io size book,
+    which fields helped on down / messy mornings?
+    """
+    rows: list[dict] = []
+    for date, picks in io_picks.items():
+        if date not in calendar:
+            continue
+        xd = exit_date(calendar, date, hold)
+        if xd is None:
+            continue
+        score = scores.get(date)
+        if score is None:
+            band = "missing"
+        elif score >= MOVER_GATE:
+            band = "green"
+        elif score < IO_HARD_RED:
+            band = "hard_red"
+        else:
+            band = "messy"
+        down = band in ("hard_red", "messy")
+        for pick in picks:
+            tag = tag_io_pick(pick)
+            t = tag["ticker"]
+            if not t:
+                continue
+            px0 = _px(bars(t, date), "close")
+            px1 = _px(bars(t, xd), "close")
+            if px0 is None or px1 is None:
+                continue
+            rows.append({
+                **tag,
+                "date": date,
+                "ret": round(100 * (px1 - px0) / px0, 4),
+                "s": score,
+                "band": band,
+                "down": down,
+            })
+    down_rows = [r for r in rows if r["down"]]
+    green_rows = [r for r in rows if r["band"] == "green"]
+    cuts = {
+        "all": _cut(rows, lambda r: True),
+        "down": _cut(down_rows, lambda r: True),
+        "green": _cut(green_rows, lambda r: True),
+        "hard_red": _cut(rows, lambda r: r["band"] == "hard_red"),
+        "down_large+": _cut(down_rows, lambda r: r["bucket"] == "large+"),
+        "down_mid": _cut(down_rows, lambda r: r["bucket"] == "mid"),
+        "down_small": _cut(down_rows, lambda r: r["bucket"] == "small/micro"),
+        "down_rebound": _cut(down_rows, lambda r: r["rebound"]),
+        "down_not_rebound": _cut(down_rows, lambda r: not r["rebound"]),
+        "down_event": _cut(down_rows, lambda r: r["has_event"]),
+        "down_no_event": _cut(down_rows, lambda r: not r["has_event"]),
+        "down_join_good": _cut(down_rows, lambda r: r["join_good"]),
+        "down_join_not": _cut(down_rows, lambda r: not r["join_good"]),
+        "down_sector_good": _cut(down_rows, lambda r: r["sector_good"]),
+        "down_sector_not": _cut(down_rows, lambda r: not r["sector_good"]),
+        "down_news_good": _cut(down_rows, lambda r: r["news_good"]),
+        "down_news_not": _cut(down_rows, lambda r: not r["news_good"]),
+        "down_energy": _cut(down_rows, lambda r: r["sector"] == "Energy"),
+        "down_healthcare": _cut(down_rows, lambda r: r["sector"] == "Healthcare"),
+        "down_not_energy": _cut(down_rows, lambda r: r["sector"] != "Energy"),
+    }
+    by_sector: dict[str, dict] = {}
+    for sec in sorted({r["sector"] for r in down_rows if r["sector"]}):
+        by_sector[sec] = _cut(down_rows, lambda r, s=sec: r["sector"] == s)
+    return {
+        "hold": hold,
+        "n_prints": len(rows),
+        "n_down": len(down_rows),
+        "n_green": len(green_rows),
+        "cuts": cuts,
+        "down_by_sector": by_sector,
+    }
+
+
+def filter_io_picks(io_picks: dict[str, list[dict]], keep) -> dict[str, list[dict]]:
+    return {d: [p for p in rows if keep(p)] for d, rows in io_picks.items()}
+
+
+def io_keep(name: str):
+    """Named keepers for cash-accounted .io variants. Size book only."""
+    if name == "all":
+        return lambda p: True
+    if name == "large+":
+        return lambda p: (p.get("bucket") or "") == "large+"
+    if name == "mid":
+        return lambda p: (p.get("bucket") or "") == "mid"
+    if name == "small":
+        return lambda p: (p.get("bucket") or "") == "small/micro"
+    if name == "rebound":
+        return lambda p: bool(p.get("rebound"))
+    if name == "event":
+        return lambda p: bool(parse_reasons(p.get("reasons") or "").get("has_event"))
+    if name == "energy":
+        return lambda p: (p.get("sector") or "") == "Energy"
+    if name == "sector_good":
+        return lambda p: (parse_reasons(p.get("reasons") or "").get("sector") or 0) > 0
+    raise ValueError(f"unknown io keep {name!r}")
+
+
+def _slim_bt(sim: dict) -> dict:
+    return {
+        "total_ret_pct": sim["total_ret_pct"],
+        "max_dd_pct": sim["max_dd_pct"],
+        "n_trades": sim["n_trades"],
+        "hit": sim.get("hit"),
+        "final_equity": sim["final_equity"],
+        "by_source": sim.get("by_source"),
+    }
+
+
+def sweep_io_attr_books(
+    calendar: list[str],
+    scores: dict[str, float | None],
+    io_picks: dict[str, list[dict]],
+    bars,
+    *,
+    hold: str = "1d",
+    capital: float = 100_000.0,
+    top_n: int = 10,
+    pct: float = 0.10,
+    fees: dict | None = None,
+) -> list[dict]:
+    """Cash-accounted .io-only 1d books that keep only one attribute."""
+    out = []
+    for name in ("all", "large+", "mid", "small", "rebound", "event",
+                 "energy", "sector_good"):
+        sim = run_bt(
+            calendar=calendar, scores=scores, mover_calls={},
+            io_picks=filter_io_picks(io_picks, io_keep(name)),
+            bars=bars, hold=hold, mode="io_only", io_select=f"size:{name}",
+            capital=capital, top_n=top_n, pct=pct, fees=fees,
+        )
+        row = _slim_bt(sim)
+        row["filter"] = name
+        row["hold"] = hold
+        row["mode"] = "io_only"
+        out.append(row)
+    # Down-day large+ only; green mornings keep the full 3-bucket book.
+    mixed: dict[str, list[dict]] = {}
+    for date, picks in io_picks.items():
+        score = scores.get(date)
+        if score is not None and score < MOVER_GATE:
+            mixed[date] = [p for p in picks if (p.get("bucket") or "") == "large+"]
+        else:
+            mixed[date] = list(picks)
+    sim = run_bt(
+        calendar=calendar, scores=scores, mover_calls={},
+        io_picks=mixed, bars=bars, hold=hold, mode="io_only",
+        io_select="size:large+_on_down",
+        capital=capital, top_n=top_n, pct=pct, fees=fees,
+    )
+    row = _slim_bt(sim)
+    row["filter"] = "large+_on_down"
+    row["hold"] = hold
+    row["mode"] = "io_only"
+    out.append(row)
+    return out
+
+
+def _dual_gap(mover_gap: str, io_gap: str) -> str:
+    """Mover sitting in cash on a red morning is the dual design, not a gap."""
+    parts = []
+    for raw in (mover_gap or "", io_gap or ""):
+        for bit in raw.split(";"):
+            g = bit.strip()
+            if not g or g == "route cash — no new entries":
+                continue
+            if g not in parts:
+                parts.append(g)
+    return "; ".join(parts)
 
 
 def run_bt(
@@ -525,7 +756,7 @@ def run_dual(**kwargs) -> dict:
     curve = []
     for d in dates:
         a, b = im.get(d) or {}, ii.get(d) or {}
-        gaps = [g for g in ((a.get("gap") or ""), (b.get("gap") or "")) if g]
+        gap = _dual_gap(a.get("gap") or "", b.get("gap") or "")
         curve.append({
             "date": d,
             "score": a.get("score") if a.get("score") is not None else b.get("score"),
@@ -540,7 +771,7 @@ def run_dual(**kwargs) -> dict:
             "n_mover_calls": a.get("n_mover_calls") or 0,
             "n_io_picks": b.get("n_io_picks") or 0,
             "has_book": b.get("has_book") or False,
-            "gap": "; ".join(gaps),
+            "gap": gap,
         })
     extra = {
         "hold": hold, "mode": "dual", "io_select": kwargs.get("io_select", "size"),
@@ -610,11 +841,19 @@ def sweep_live(capital: float = 100_000.0, top_n: int = 10,
         "hold", "mode", "io_select", "n_trades", "hit",
         "total_ret_pct", "max_dd_pct", "final_equity",
         "n_skipped", "n_gap_days", "by_source", "gross_win", "gross_loss")})
+    io1 = load_io_picks("1d", "size")
+    attrs = analyze_io_size_attrs(cal, scores, io1, bars, hold="1d")
+    attr_books = sweep_io_attr_books(
+        cal, scores, io1, bars, hold="1d",
+        capital=capital, top_n=top_n, pct=pct,
+    )
     return {
         "generated_at": datetime.now(ET).isoformat(timespec="seconds"),
         "window": [cal[0] if cal else None, cal[-1] if cal else None],
         "capital": capital, "top_n": top_n, "pct": pct,
         "results": results,
+        "io_attrs": attrs,
+        "io_attr_books": attr_books,
         "n_sessions": len(cal),
         "n_mover_call_days": sum(1 for d in cal if mover.get(d)),
         "n_book_days": sum(1 for d in cal if (BOOK_DIR / f"{d}_stock_book.json").is_file()),
@@ -672,6 +911,89 @@ def _wr(x) -> str:
     if x is None:
         return "—"
     return f"{100 * x:.1f}%"
+
+
+def _cut_cell(c: dict | None) -> str:
+    if not c or not c.get("n"):
+        return "—"
+    mean = c.get("mean")
+    hit = c.get("hit")
+    mean_s = f"{mean:+.2f}%" if mean is not None else "—"
+    hit_s = _wr(hit)
+    return f"{mean_s} · {hit_s} · n={c['n']}"
+
+
+def _io_attr_section(doc: dict) -> list[str]:
+    attrs = doc.get("io_attrs") or {}
+    cuts = attrs.get("cuts") or {}
+    books = doc.get("io_attr_books") or []
+    if not cuts and not books:
+        return []
+    lines = [
+        "## .io attributes on down days (inside the size book)",
+        "",
+        "Different question from the mover-tag table above. Here the "
+        "names are already .io size-sleeve picks, entered at the close. "
+        "Unweighted close→next-close on the same 1d hold. Morning S is "
+        "only used to split the tape — it does not pick the names.",
+        "",
+        f"Prints with a 1d exit: {attrs.get('n_prints')} · "
+        f"on S < +1: {attrs.get('n_down')} · "
+        f"on S ≥ +1: {attrs.get('n_green')}",
+        "",
+        "| Cut | Mean · win · n |",
+        "|---|---|",
+        f"| All size prints | {_cut_cell(cuts.get('all'))} |",
+        f"| Down / messy (S < +1) | {_cut_cell(cuts.get('down'))} |",
+        f"| Hard red (S < −3) | {_cut_cell(cuts.get('hard_red'))} |",
+        f"| Green mornings | {_cut_cell(cuts.get('green'))} |",
+        f"| Down · large+ | {_cut_cell(cuts.get('down_large+'))} |",
+        f"| Down · mid | {_cut_cell(cuts.get('down_mid'))} |",
+        f"| Down · small/micro | {_cut_cell(cuts.get('down_small'))} |",
+        f"| Down · rebound | {_cut_cell(cuts.get('down_rebound'))} |",
+        f"| Down · not rebound | {_cut_cell(cuts.get('down_not_rebound'))} |",
+        f"| Down · event-tagged | {_cut_cell(cuts.get('down_event'))} |",
+        f"| Down · no event | {_cut_cell(cuts.get('down_no_event'))} |",
+        f"| Down · join > 0 | {_cut_cell(cuts.get('down_join_good'))} |",
+        f"| Down · join ≤ 0 / missing | {_cut_cell(cuts.get('down_join_not'))} |",
+        f"| Down · sector > 0 | {_cut_cell(cuts.get('down_sector_good'))} |",
+        f"| Down · sector ≤ 0 / missing | {_cut_cell(cuts.get('down_sector_not'))} |",
+        f"| Down · Energy | {_cut_cell(cuts.get('down_energy'))} |",
+        f"| Down · not Energy | {_cut_cell(cuts.get('down_not_energy'))} |",
+        f"| Down · Healthcare | {_cut_cell(cuts.get('down_healthcare'))} |",
+        "",
+    ]
+    if books:
+        lines += [
+            "Cash-accounted .io-only 1d (same $100k / 10% / Futubull). "
+            "Filtering the size book *reduces* names; leftover cash sits. "
+            "`large+_on_down` keeps the full 3-bucket book on green "
+            "mornings and large+ only when S < +1.",
+            "",
+            "| Filter | Ret | Max DD | Win | Trades |",
+            "|---|---:|---:|---:|---:|",
+        ]
+        for r in books:
+            lines.append(
+                f"| `{r.get('filter')}` | {r['total_ret_pct']:+.2f}% | "
+                f"{r['max_dd_pct']:.2f}% | {_wr(r.get('hit'))} | "
+                f"{r['n_trades']} |"
+            )
+        lines += [
+            "",
+            "The size book itself was *better* on S < +1 than on green "
+            "mornings. Extra gates mostly do not improve the cash book: "
+            "large+ / Energy / event / join>0 all lose to the raw "
+            "3-bucket sleeve. `sector_good` is the one filter that beat "
+            "`all` this window — slightly, on half the names, with less "
+            "DD. Treat that as a size-up tilt, not a new sleeve; thirteen "
+            "book days is too thin to replace the 3-bucket rule. Rebound "
+            "is already how the book stays long when gen is red. The "
+            "down-day attribute that survives is still **stay in the "
+            "size book**.",
+            "",
+        ]
+    return lines
 
 
 def render(doc: dict, primary: dict | None = None) -> str:
@@ -755,6 +1077,7 @@ def render(doc: dict, primary: dict | None = None) -> str:
         "S ≥ +1, .io size still buys on red mornings. Same hold. No "
         "shared cash clock.",
         "",
+        *_io_attr_section(doc),
     ]
     if primary:
         lines += [
