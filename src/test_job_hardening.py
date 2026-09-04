@@ -279,6 +279,7 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "dispatch_postclose_ubuntu" in orch
     assert "MISSING night pack → postclose_all.yml ubuntu/DeepSeek" in orch
     assert "inputs[llm_backend]=deepseek" in orch
+    assert "active run is push last-closed heal — queue ubuntu night_pack" in orch
 
 
 def test_ranker_inputs_before_llm_packet() -> None:
