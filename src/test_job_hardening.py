@@ -338,6 +338,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "data/exports/" in scrape_yml
     skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
     assert "elite export missing/thin" in skip
+    assert "1d BUY has printed dead relvol" in skip
+    assert "book_1d_has_dead_relvol" in skip
     fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")
     assert "America/New_York" in fin
     ch1 = (ROOT / "src" / "fetch_channel1.py").read_text(encoding="utf-8")

@@ -27,9 +27,32 @@ def test_learn_requires_dated_file_not_stale_board() -> None:
 
 
 def test_stock_book_requires_green_and_ranker_inputs() -> None:
-    assert skip_if_good.check_stock_book_all("2026-09-03") is True
+    # 2026-09-03 1d BUY still has printed dead relvol (VFF/VEEV/WAY).
+    # That must not skip the ubuntu heal.
+    assert skip_if_good.check_stock_book_all("2026-09-03") is False
     assert skip_if_good.check_label_weather("2026-09-03") is True
     assert skip_if_good.check_ab_checklist("2026-09-03") is True
+
+
+def test_dead_relvol_1d_buy_is_not_good() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        js = Path(tmp) / "book.json"
+        js.write_text(json.dumps({
+            "meta": {"n": 400},
+            "books": {"1d": {"buy": [
+                {"ticker": "WAY", "relvol": 0.54},
+                {"ticker": "LIVE", "relvol": 1.2},
+            ]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_1d_has_dead_relvol(js) is True
+        js.write_text(json.dumps({
+            "meta": {"n": 400},
+            "books": {"1d": {"buy": [
+                {"ticker": "LIVE", "relvol": 1.2},
+                {"ticker": "ZERO", "relvol": 0},
+            ]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_1d_has_dead_relvol(js) is False
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
@@ -82,6 +105,7 @@ if __name__ == "__main__":
     test_missing_date_is_run()
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()
+    test_dead_relvol_1d_buy_is_not_good()
     test_postclose_all_needs_learn_not_just_outcome()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()

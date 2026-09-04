@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import output_qc
+from . import green_pile, output_qc
 
 ET = ZoneInfo("America/New_York")
 ROOT = Path(__file__).resolve().parent.parent
@@ -166,6 +166,35 @@ def book_files_are_degraded(js: Path, green: Path) -> bool:
     return False
 
 
+def book_1d_has_dead_relvol(js: Path) -> bool:
+    """True when 1d BUY lists a name Finviz printed in (0, 0.7) relvol."""
+    try:
+        payload = json.loads(js.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return False
+    buys = ((payload.get("books") or {}).get("1d") or {}).get("buy") or []
+    if not isinstance(buys, list):
+        return False
+    dead = []
+    for row in buys:
+        if not isinstance(row, dict):
+            continue
+        try:
+            rv = row.get("relvol")
+            if rv is None:
+                continue
+            rv = float(rv)
+        except (TypeError, ValueError):
+            continue
+        if 0 < rv < green_pile.RELVOL_DEAD:
+            dead.append(str(row.get("ticker") or "?"))
+    if dead:
+        print(f"[skip_if_good] 1d BUY dead relvol: {', '.join(dead[:8])}",
+              flush=True)
+        return True
+    return False
+
+
 def check_stock_book_all(date: str) -> bool:
     """Book + green pile + the ranker inputs BUY/SELL need."""
     js = ROOT / "data" / "stock_book" / f"{date}_stock_book.json"
@@ -177,6 +206,9 @@ def check_stock_book_all(date: str) -> bool:
         return _log(False, "stock_book_all", date, "green.json missing — pile not graded")
     if book_files_are_degraded(js, green):
         return _log(False, "stock_book_all", date, "degraded book — re-rank required")
+    if js.is_file() and book_1d_has_dead_relvol(js):
+        return _log(False, "stock_book_all", date,
+                    "1d BUY has printed dead relvol — re-rank required")
     if not check_label_weather(date):
         return _log(False, "stock_book_all", date, "weather incomplete")
     if not check_ab_checklist(date):
