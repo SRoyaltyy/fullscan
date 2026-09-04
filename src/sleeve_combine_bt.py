@@ -724,6 +724,8 @@ def run_bt(
             reasons.append("io source empty (book has no buys)")
         if want == BUCKET_CASH:
             reasons.append("route cash — no new entries")
+        if (want_m or want_i) and exit_date(cal, date, hold) is None:
+            reasons.append(f"{hold} cannot settle (end of calendar)")
 
         filled_am = filled_pm = 0
         if want_m:
@@ -1460,14 +1462,14 @@ def dashboard_payload(doc: dict, primary: dict) -> dict:
     }
 
 
-def write_dashboard(doc: dict, primary: dict) -> Path:
-    DASH_DIR.mkdir(parents=True, exist_ok=True)
+def write_dashboard(doc: dict, primary: dict, path: Path | None = None) -> Path:
     shell = DASH_SHELL.read_text(encoding="utf-8")
     payload = dashboard_payload(doc, primary)
     html = shell.replace("__DATA__", json.dumps(payload, default=str))
-    path = DASH_DIR / "index.html"
-    path.write_text(html, encoding="utf-8")
-    return path
+    dest = path or (DASH_DIR / "index.html")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(html, encoding="utf-8")
+    return dest
 
 
 def write_outputs(doc: dict, primary: dict) -> None:

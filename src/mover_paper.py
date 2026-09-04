@@ -480,6 +480,8 @@ def bt_to_mover_sim(raw: dict, payload: dict) -> tuple[dict, list[dict]]:
         "book_list": "1d",
         "by_source": raw.get("by_source") or {},
     }
+    global TITLE
+    TITLE = "Mover paper — .io fallback on soft-red 1d"
     return sim, gates
 
 
@@ -755,7 +757,8 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
             "**Book:** .io fallback on soft-red mornings (−3 < S < 0), "
             "mover the rest (S ≥ 0 or missing). Hard-red S ≤ −3 = cash. "
             "Both books hold 1d. Open buys cannot spend the same day's "
-            "close-sale cash."
+            "close-sale cash. This window’s only soft-red morning is "
+            "2026-09-03; 1d .io cannot exit until the next session prints."
         )
     L = [
         f"# {TITLE}", "",
@@ -917,12 +920,19 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
     mv_pnl = (by_src.get("mover") or {}).get("pnl")
     io_pnl = (by_src.get("io") or {}).get("pnl")
     extra_cards = ""
+    fallback_note = ""
     if sim.get("io_fallback"):
         extra_cards = (
             f"<div class='card'>Mover P&amp;L<b>"
             f"${0 if mv_pnl is None else mv_pnl:,.0f}</b></div>"
             f"<div class='card'>.io P&amp;L<b>"
             f"${0 if io_pnl is None else io_pnl:,.0f}</b></div>"
+        )
+        fallback_note = (
+            "<p class='muted'>Rule: −3 &lt; S &lt; 0 → 1d .io size at 16:00; "
+            "S ≥ 0 or missing → mover 1d at 09:30; S ≤ −3 → cash. "
+            "This window’s only soft-red morning is 2026-09-03; those 1d "
+            ".io names cannot exit until the next session prints.</p>"
         )
     gs = ("soft-red .io (−3 < S < 0); mover the rest" if sim.get("io_fallback")
           else ("off" if gate_score is None else f"score ≥ {gate_score}"))
@@ -967,6 +977,7 @@ Futubull fees · cash-accounted.
 <div class="card">SELL P&amp;L<b>${bs['SELL']['pnl']:,.0f}</b></div>
 {extra_cards}
 </div>
+{fallback_note}
 {svg}
 <h2>Day book (mover / .io / cash)</h2>
 <div class="sheet"><table>

@@ -4,6 +4,9 @@ Run: python -m src.test_sleeve_combine_bt
 """
 from __future__ import annotations
 
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
 from src.sleeve_combine_bt import (
     MismatchError,
     _dual_gap,
@@ -373,6 +376,21 @@ def test_fallback_io_on_soft_red_mover_otherwise() -> None:
     assert d17["route"] == "cash" and d17["filled_am"] == 0 and d17["filled_pm"] == 0
 
 
+def test_fallback_last_day_io_is_a_gap() -> None:
+    px = {("CCC", "2026-08-17"): (50.0, 50.0)}
+    sim = run_bt(
+        calendar=["2026-08-17"],
+        scores={"2026-08-17": -0.9},
+        mover_calls={},
+        io_picks={"2026-08-17": [{"ticker": "CCC", "score": 1}]},
+        bars=_bars(px), hold="1d", mode="fallback",
+        capital=24_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    d = sim["curve"][0]
+    assert d["route"] == "io" and d["filled_pm"] == 0
+    assert "end of calendar" in (d.get("gap") or "")
+
+
 def test_overlay_keeps_io_on_red_and_caps_mover() -> None:
     """Full .io book stays on; mover satellite is 1 name, even with 100% cash."""
     px = {("AAA", d): (100.0, 100.0) for d in CAL}
@@ -451,8 +469,9 @@ def test_dashboard_lists_every_session_fill() -> None:
     assert sides == {"BUY", "SELL"}
     dates = {d["date"] for d in payload["days"]}
     assert "2026-08-13" in dates and "2026-08-14" in dates
-    html = write_dashboard(doc, sim)
-    text = html.read_text(encoding="utf-8")
+    with TemporaryDirectory() as tmp:
+        html = write_dashboard(doc, sim, path=Path(tmp) / "index.html")
+        text = html.read_text(encoding="utf-8")
     assert "Buys and sells" in text
     assert "AAA" in text and "CCC" in text
     assert '"side": "BUY"' in text
@@ -497,6 +516,7 @@ if __name__ == "__main__":
     test_io_attr_cut_splits_down_vs_green()
     test_run_bt_rejects_bad_mode()
     test_fallback_io_on_soft_red_mover_otherwise()
+    test_fallback_last_day_io_is_a_gap()
     test_overlay_keeps_io_on_red_and_caps_mover()
     test_enrich_sizes_up_overlap_and_adds_book_extra()
     test_fills_are_buy_then_sell()
