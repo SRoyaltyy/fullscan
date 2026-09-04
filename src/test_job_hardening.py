@@ -584,6 +584,11 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     ds = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
     assert "timeout=(15, config.OPENCLAW_TIMEOUT)" in ds
     assert '"connect timeout"' in ds
+    # Merge of healer code must start ubuntu last-closed (dispatch is 403).
+    assert "github.event_name == 'push'" in post_yml
+    assert "push heal — last_closed=" in post_yml
+    assert "src/skip_if_good.py" not in post_yml
+    assert "01_daily/" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
 
 
 def test_postclose_pushes_after_each_llm_layer() -> None:
