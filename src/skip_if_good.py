@@ -365,6 +365,12 @@ def check_preopen_full(date: str) -> bool:
     return _log(True, "preopen_full", date, "packet + book + green + ranker inputs")
 
 
+def check_general_reflect(date: str) -> bool:
+    p = ROOT / "01_daily" / "general" / f"{date}_reflect.md"
+    ok = _exists_gt(p, 200)
+    return _log(ok, "general_reflect", date, f"reflect={p.exists()}")
+
+
 def check_sector_outcomes(date: str) -> bool:
     d = ROOT / "01_daily" / "sectors" / date
     n = len(list(d.glob("*_outcome.md"))) if d.is_dir() else 0
@@ -373,14 +379,24 @@ def check_sector_outcomes(date: str) -> bool:
 
 
 def check_postclose_all(date: str) -> bool:
-    """Closed session graded + next-session captain baseline + learnings."""
+    """Closed session fully graded — not just a dated learnings file.
+
+    2026-09-03 has a general outcome and next-session baseline, but zero
+    sector outcomes and no reflect. Learn writing _learnings.md from
+    lookback must not skip those layers on the 22:00 retry.
+    """
     if not check_daily_pipeline_outcome(date):
         return _log(False, "postclose_all", date, "outcome missing")
+    if not check_general_reflect(date):
+        return _log(False, "postclose_all", date, "reflect missing")
+    if not check_sector_outcomes(date):
+        return _log(False, "postclose_all", date, "sector outcomes missing")
     if not check_map_heat_postclose(date):
         return _log(False, "postclose_all", date, "next-session baseline missing")
     if not check_learn_cycle(date):
         return _log(False, "postclose_all", date, "learnings missing")
-    return _log(True, "postclose_all", date, "outcome + baseline + learnings")
+    return _log(True, "postclose_all", date,
+                "outcome + reflect + sectors + baseline + learnings")
 
 
 JOBS = {

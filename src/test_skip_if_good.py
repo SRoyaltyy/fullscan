@@ -129,6 +129,13 @@ def test_postclose_all_needs_learn_not_just_outcome() -> None:
     assert skip_if_good.check_postclose_all("2026-09-03") is False
 
 
+def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
+    # 11 predicts landed; 0 outcomes / 0 reflect. Learnings must not skip those.
+    assert skip_if_good.check_general_reflect("2026-09-03") is False
+    assert skip_if_good.check_sector_outcomes("2026-09-03") is False
+    assert skip_if_good.check_postclose_all("2026-09-03") is False
+
+
 def test_finviz_scrape_requires_elite_export() -> None:
     assert skip_if_good.check_finviz_scrape("1999-01-01") is False
 
@@ -178,6 +185,7 @@ if __name__ == "__main__":
     test_dead_relvol_1d_buy_is_not_good()
     test_night_pack_dates_heals_prior_session_after_bell()
     test_postclose_all_needs_learn_not_just_outcome()
+    test_postclose_all_needs_reflect_and_sector_outcomes()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
     test_degraded_book_is_not_good()
