@@ -111,6 +111,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Pull scrape + export from main (this run's SHA predates the scrape commit)
+        run: |
+          git fetch origin main
+          git checkout origin/main -- \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ \
+            data/universe/ data/join/ data/ab_checklist/ data/peers/ \
+            data/stock_book/ 01_daily/weather/ || true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

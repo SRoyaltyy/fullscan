@@ -72,6 +72,16 @@ jobs:
       FINVIZ_SKIP_LIVE: "1"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull scrape + ranker inputs from main
+        run: |
+          git fetch origin main
+          git checkout origin/main -- \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ \
+            data/universe/ data/join/ data/ab_checklist/ data/peers/ \
+            data/stock_book/ 01_daily/weather/ || true
 
       - uses: actions/setup-python@v5
         with:
