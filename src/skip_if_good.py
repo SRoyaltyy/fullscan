@@ -148,14 +148,44 @@ def check_learn_cycle(date: str) -> bool:
     return _log(ok, "learn_cycle", date, f"daily_md={daily.exists()}")
 
 
+def check_preopen_full(date: str) -> bool:
+    """Morning packet AND today's stock book — one-click pre-open done."""
+    if not check_preopen_all(date):
+        return _log(False, "preopen_full", date, "packet incomplete")
+    if not check_stock_book_all(date):
+        return _log(False, "preopen_full", date, "stock book missing")
+    return _log(True, "preopen_full", date, "packet + book on disk")
+
+
+def check_sector_outcomes(date: str) -> bool:
+    d = ROOT / "01_daily" / "sectors" / date
+    n = len(list(d.glob("*_outcome.md"))) if d.is_dir() else 0
+    ok = n >= 8
+    return _log(ok, "sector_outcomes", date, f"outcome_md={n}/11")
+
+
+def check_postclose_all(date: str) -> bool:
+    """Closed session graded + next-session captain baseline + learnings."""
+    if not check_daily_pipeline_outcome(date):
+        return _log(False, "postclose_all", date, "outcome missing")
+    if not check_map_heat_postclose(date):
+        return _log(False, "postclose_all", date, "next-session baseline missing")
+    if not check_learn_cycle(date):
+        return _log(False, "postclose_all", date, "learnings missing")
+    return _log(True, "postclose_all", date, "outcome + baseline + learnings")
+
+
 JOBS = {
     "finviz_preopen_scrape": check_finviz_scrape,
     "preopen_all": check_preopen_all,
+    "preopen_full": check_preopen_full,
     "map_heat_postclose": check_map_heat_postclose,
     "stock_book_all": check_stock_book_all,
     "ab_checklist": check_ab_checklist,
     "daily_pipeline": check_daily_pipeline_outcome,
     "learn_cycle": check_learn_cycle,
+    "sector_outcomes": check_sector_outcomes,
+    "postclose_all": check_postclose_all,
 }
 
 
@@ -166,7 +196,7 @@ def main() -> None:
     args = ap.parse_args()
     if args.date:
         date = args.date
-    elif args.job == "map_heat_postclose":
+    elif args.job in ("map_heat_postclose", "postclose_all"):
         date = last_closed_session()
     else:
         date = _today()

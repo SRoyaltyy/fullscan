@@ -1,10 +1,9 @@
 name: Autonomous Daily Market Pipeline
 
 on:
-  schedule:
-    # NO predict cron: Pre-Open ALL owns the morning predict.
-    # ~17:03 ET — outcome + reflect only
-    - cron: '3 21 * * 0-6'
+  # Clock retired 2026-09-04 — Post-Close ALL owns outcome + reflect.
+  # schedule:
+  #   - cron: '3 21 * * 0-6'
   workflow_dispatch:
     inputs:
       stage:

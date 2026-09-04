@@ -303,6 +303,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import os
 
     _set_last_provider("")
+    if config.prefer_deepseek():
+        force_deepseek = True
+        print(f"[llm] LLM_BACKEND=deepseek — OpenClaw skipped "
+              f"({stage_label or 'llm run'})")
     grok_only = config.grok_only()
     if grok_only and force_deepseek:
         print(f"[llm] GROK_ONLY: ignoring force_deepseek "

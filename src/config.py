@@ -52,12 +52,59 @@ def openclaw_enabled() -> bool:
     return bool(OPENCLAW_GATEWAY_URL)
 
 
+def llm_backend() -> str:
+    """auto | grok | deepseek — set by LLM_BACKEND or apply_llm_backend()."""
+    raw = (os.environ.get("LLM_BACKEND") or "").strip().lower()
+    if raw in ("auto", "grok", "deepseek"):
+        return raw
+    return "auto"
+
+
+def prefer_deepseek() -> bool:
+    """True when the operator forced DeepSeek (no Grok attempt)."""
+    if llm_backend() == "deepseek":
+        return True
+    raw = (os.environ.get("FORCE_DEEPSEEK") or "").strip().lower()
+    return raw in ("1", "true", "yes", "on")
+
+
+def apply_llm_backend(name: str | None = None) -> str:
+    """Normalize LLM_BACKEND + GROK_ONLY for this process.
+
+    auto     — Grok first, DeepSeek if Grok is down/empty (GROK_ONLY=0)
+    grok     — Grok only, no DeepSeek spend (GROK_ONLY=1)
+    deepseek — skip the gateway, DeepSeek + SearXNG only
+    """
+    chosen = (name or os.environ.get("LLM_BACKEND") or "auto").strip().lower()
+    if chosen not in ("auto", "grok", "deepseek"):
+        chosen = "auto"
+    os.environ["LLM_BACKEND"] = chosen
+    if chosen == "grok":
+        os.environ["GROK_ONLY"] = "1"
+        os.environ.pop("FORCE_DEEPSEEK", None)
+    elif chosen == "deepseek":
+        os.environ["GROK_ONLY"] = "0"
+        os.environ["FORCE_DEEPSEEK"] = "1"
+    else:
+        os.environ["GROK_ONLY"] = "0"
+        os.environ.pop("FORCE_DEEPSEEK", None)
+    print(f"[llm] backend={chosen} GROK_ONLY={os.environ.get('GROK_ONLY')} "
+          f"FORCE_DEEPSEEK={os.environ.get('FORCE_DEEPSEEK', '0')}",
+          flush=True)
+    return chosen
+
+
 def grok_only() -> bool:
     """True when DeepSeek must not run analysis.
 
-    GROK_ONLY=1/0 forces the switch. Default: on whenever the OpenClaw
-    gateway is configured — Grok is the sole analysis engine.
+    GROK_ONLY=1/0 forces the switch. LLM_BACKEND=grok is the same as 1;
+    LLM_BACKEND=deepseek or auto forces 0. Default with no env: on
+    whenever the OpenClaw gateway is configured.
     """
+    if prefer_deepseek():
+        return False
+    if llm_backend() == "grok":
+        return True
     raw = (os.environ.get("GROK_ONLY") or "").strip().lower()
     if raw in ("0", "false", "no", "off"):
         return False

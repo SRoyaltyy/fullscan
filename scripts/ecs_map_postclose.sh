@@ -67,25 +67,25 @@ FORCE_FLAG=()
 if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
   FORCE_FLAG=(--force)
 fi
-echo "[map-postclose] source=$SOURCE target=$TARGET OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
+echo "[map-postclose] POST-CLOSE ALL source=$SOURCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
 
-# Aliyun Cloudflare-blocks Elite HTML. Never scrape here — clone the
-# GH-hosted finviz_all / preopen scrape artifact forward to next session.
+# Aliyun Cloudflare-blocks Elite HTML. Never scrape here.
 export FINVIZ_SKIP_LIVE=1
-if [ -s "01_daily/map_heat/${SOURCE}_map_heat.json" ]; then
-  echo "[map-postclose] clone $SOURCE map_heat → $TARGET"
-  cp -f "01_daily/map_heat/${SOURCE}_map_heat.json" "01_daily/map_heat/${TARGET}_map_heat.json" || true
-  cp -f "01_daily/map_heat/${SOURCE}_map_heat.md" "01_daily/map_heat/${TARGET}_map_heat.md" || true
-fi
-"$PY" -m src.map_heat_postclose \
-  --source-date "$SOURCE" --target-date "$TARGET" "${FORCE_FLAG[@]}"
+export LLM_BACKEND="${LLM_BACKEND:-auto}"
+PC_ARGS=(--date "$SOURCE" --llm-backend "${LLM_BACKEND:-auto}")
+PC_ARGS+=("${FORCE_FLAG[@]}")
+"$PY" -m src.run_postclose_all "${PC_ARGS[@]}"
 
-mkdir -p "$PERSIST/01_daily/map_heat" "$PERSIST/01_daily/_transcripts"
+mkdir -p "$PERSIST/01_daily/map_heat" "$PERSIST/01_daily/_transcripts" \
+  "$PERSIST/01_daily/general" "$PERSIST/01_daily/sectors"
 cp -a "$ROOT/01_daily/map_heat/." "$PERSIST/01_daily/map_heat/" 2>/dev/null || true
 cp -a "$ROOT/01_daily/_transcripts/." "$PERSIST/01_daily/_transcripts/" 2>/dev/null || true
-echo "[map-postclose] persist snapshot → $PERSIST/01_daily/map_heat"
+echo "[map-postclose] persist snapshot → $PERSIST"
 
 bash scripts/safe_git_push.sh \
-  "auto: post-close captain research [$SOURCE→$TARGET]" \
-  01_daily/map_heat/ 01_daily/_transcripts/
+  "auto: post-close ALL [$SOURCE→$TARGET]" \
+  01_daily/general/ 01_daily/sectors/ 01_daily/map_heat/ \
+  01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
+  01_daily/*_learnings.md \
+  02_lessons/ 03_scoreboard/ 00_grounding/mutable_policy.md
 echo "[map-postclose] complete $(TZ=America/New_York date '+%F %H:%M %Z')"

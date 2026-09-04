@@ -1,8 +1,8 @@
 name: Pre-Open ALL (predictive one-shot)
 
-# CLOCK: ECS systemd timer 05:55 America/New_York only.
-# No GitHub cron. Orchestrator does not re-dispatch this job.
-# Skip-if-good is file QC only (src.skip_if_good) — no Grok/DeepSeek.
+# One morning button: GH scrape (ubuntu) → packet + stock book (ECS).
+# CLOCK: ECS systemd 05:55 ET still owns the unattended start.
+# Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 
 on:
   workflow_dispatch:
@@ -23,6 +23,23 @@ on:
         description: "true = ignore 09:25 ET cutoff and skip-if-good"
         required: false
         default: "false"
+      llm_backend:
+        description: "auto = Grok then DeepSeek · grok = Grok only · deepseek = no Grok"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - grok
+          - deepseek
+      with_book:
+        description: "true = also write stock book + .io paper dashboard"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 permissions:
   contents: write
@@ -33,7 +50,54 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  scrape:
+    name: Finviz scrape (ubuntu — ECS 403s)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skip if digest + overlay already on disk
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          if python3 -m src.skip_if_good --job finviz_preopen_scrape --date "$DATE"; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+      - name: Install
+        if: env.skip != 'yes'
+        run: pip install -r requirements.txt && pip install pandas requests beautifulsoup4 lxml || true
+      - name: Digest + morning overlay
+        if: env.skip != 'yes'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.finviz_digest --date "$DATE"
+          ARGS=(--date "$DATE" --overlay)
+          [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
+          python -m src.map_heat "${ARGS[@]}"
+      - name: Commit scrape
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: finviz preopen scrape (via Pre-Open ALL) [$(date -u +%F_%H%M)]" \
+            01_daily/news/ 01_daily/map_heat/
+
   preopen:
+    needs: scrape
+    if: always()
     runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
@@ -60,13 +124,13 @@ jobs:
         with:
           clean: false
 
-      - name: Skip if morning packet already on disk (no LLM)
+      - name: Skip if packet AND stock book already on disk (no LLM)
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          if python3 -m src.skip_if_good --job preopen_all --date "$DATE"; then
-            echo "Morning packet already on disk — no Grok/DeepSeek"
+          if python3 -m src.skip_if_good --job preopen_full --date "$DATE"; then
+            echo "Packet + stock book already on disk — no Grok/DeepSeek"
             echo "skip_python=yes" >> "$GITHUB_ENV"
           fi
 
@@ -119,6 +183,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           GROK_ONLY: "0"
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
@@ -131,9 +196,13 @@ jobs:
           DATE="${{ github.event.inputs.run_date }}"
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
-          ARGS=()
+          BOOK="${{ github.event.inputs.with_book }}"
+          BOOK="${BOOK:-true}"
+          BACKEND="${LLM_BACKEND:-auto}"
+          ARGS=(--llm-backend "$BACKEND")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
+          [ "$BOOK" = "false" ] && ARGS+=(--no-book)
           echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
           python -m src.run_preopen_all "${ARGS[@]}"
 
@@ -157,12 +226,21 @@ jobs:
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(01_daily/general/ 01_daily/sectors/ 01_daily/events
               01_daily/news/ 01_daily/map_heat/ 01_daily/catalyst/
-              data/catalyst/ 01_daily/_transcripts/ 01_daily/_channel1/
+              01_daily/weather/ 01_daily/_transcripts/ 01_daily/_channel1/
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
               01_daily/*_grok_review.json 01_daily/*_grok_review.md
-              02_lessons/ 03_scoreboard/)
+              01_daily/*_stock_book.md
+              data/catalyst/ data/stock_book/ data/paper/ data/join/
+              data/universe/ data/ab_checklist/ data/peers/ data/checklist/
+              dashboard/ 03_scoreboard/ 02_lessons/)
           fi
           bash scripts/safe_git_push.sh \
             "auto: pre-open ALL [$(date -u +%F_%H%M)]" \
             "${PATHS[@]}"
+
+      - name: Refresh GitHub Pages
+        if: always() && env.skip != 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main || true

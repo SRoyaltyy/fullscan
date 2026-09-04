@@ -297,6 +297,7 @@ def run(
     force_sectors: bool = False,
 ) -> None:
     date = date or _today()
+    config.apply_llm_backend()
     rows = _status_for_day(date)
     by_key = {r["key"]: r for r in rows}
     _print_status(date, rows)

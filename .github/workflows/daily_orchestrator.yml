@@ -1,9 +1,8 @@
 name: Daily Orchestrator (missed-job guard)
 
-# Does NOT own pre-open or map-heat. Those have one clock each
-# (ECS 05:55 ET / GH map-heat 22:00 ET) plus file skip-if-good.
-# This guard only re-dispatches: Finviz scrape, stock book, pipeline
-# outcome, learn_cycle — and only when today's file is missing.
+# Does NOT own the two ALL clocks (ECS 05:55 pre-open / 16:10+22:00 post-close).
+# Only re-dispatches when today's file is missing AND nothing is already running.
+# Three workflows only: scrape, Pre-Open ALL, Post-Close ALL.
 
 on:
   schedule:
@@ -34,7 +33,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Re-dispatch only if today's file is missing
+      - name: Re-dispatch only the two ALL jobs (plus scrape)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
@@ -42,9 +41,8 @@ jobs:
           set -euo pipefail
           REPO="${{ github.repository }}"
           TODAY=$(TZ=America/New_York date +%F)
-          HOUR=$((10#$(date -u +%H)))
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "Orchestrator date (ET): $TODAY utc_hour=$HOUR et_hm=$ET_HM force=$FORCE"
+          echo "Orchestrator date (ET): $TODAY et_hm=$ET_HM force=$FORCE"
 
           repo_file() {
             gh api "repos/${REPO}/contents/${1}?ref=main" --jq .sha >/dev/null 2>&1
@@ -61,18 +59,14 @@ jobs:
                 sz=$(repo_file_size "01_daily/news/${TODAY}_finviz_digest.json")
                 [ "${sz:-0}" -gt 200 ]
                 ;;
-              stock_book_all.yml)
+              preopen_all.yml)
                 repo_file "data/stock_book/${TODAY}_stock_book.json" \
                   || repo_file "01_daily/${TODAY}_stock_book.md"
                 ;;
-              daily_pipeline.yml)
+              postclose_all.yml)
                 local sz
                 sz=$(repo_file_size "01_daily/general/${TODAY}_outcome.md")
                 [ "${sz:-0}" -gt 400 ]
-                ;;
-              learn_cycle.yml)
-                repo_file "01_daily/${TODAY}_learnings.md" \
-                  || repo_file "03_scoreboard/LEARNINGS.md"
                 ;;
               *)
                 return 1
@@ -83,67 +77,54 @@ jobs:
           dispatch_wf() {
             local WF="$1"
             echo "MISSING for $TODAY → dispatching $WF"
-            if [ "$WF" = "daily_pipeline.yml" ]; then
-              gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                -f ref=main -f "inputs[stage]=outcome_reflect" || true
-            else
-              gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
-                -f ref=main || true
-            fi
+            gh api --method POST "repos/${REPO}/actions/workflows/${WF}/dispatches" \
+              -f ref=main || true
           }
 
-          WORKFLOWS=(
-            finviz_preopen_scrape.yml
-            stock_book_all.yml
-            daily_pipeline.yml
-            learn_cycle.yml
-          )
-
-          for WF in "${WORKFLOWS[@]}"; do
-            echo ""
-            echo "======== $WF ========"
-            if [ "$FORCE" != "true" ]; then
-              if [ "$WF" = "finviz_preopen_scrape.yml" ] && [ "$ET_HM" -ge 925 ]; then
-                echo "skip $WF — past 09:25 ET"
-                continue
-              fi
-              if [ "$WF" = "stock_book_all.yml" ] && [ "$HOUR" -lt 16 ]; then
-                echo "skip book until 16:00 UTC"
-                continue
-              fi
-              if [ "$WF" = "daily_pipeline.yml" ] && [ "$ET_HM" -lt 1600 ]; then
-                echo "skip pipeline outcome until 16:00 ET"
-                continue
-              fi
-              if [ "$WF" = "learn_cycle.yml" ] && [ "$ET_HM" -lt 1700 ]; then
-                echo "skip learn until 17:00 ET"
-                continue
-              fi
-            fi
-
+          already_running() {
+            local WF="$1"
+            local RAW HAS_ACTIVE=""
             RAW=$(gh api "repos/${REPO}/actions/workflows/$WF/runs?per_page=10" \
               --jq '.workflow_runs[] | {id, status, conclusion, created_at}' || echo "")
-            HAS_ACTIVE=""
-            if [ -n "$RAW" ]; then
-              while IFS=$'\t' read -r id status conclusion created; do
-                [ -n "$id" ] || continue
-                et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
-                [ "$et" = "$TODAY" ] || continue
-                if [ "$status" = "in_progress" ] || [ "$status" = "queued" ] || [ "$status" = "waiting" ] || [ "$status" = "pending" ]; then
-                  HAS_ACTIVE="$id"
-                fi
-              done < <(echo "$RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at] | @tsv')
-            fi
+            [ -n "$RAW" ] || return 1
+            while IFS=$'\t' read -r id status conclusion created; do
+              [ -n "$id" ] || continue
+              et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
+              [ "$et" = "$TODAY" ] || continue
+              if [ "$status" = "in_progress" ] || [ "$status" = "queued" ] \
+                 || [ "$status" = "waiting" ] || [ "$status" = "pending" ]; then
+                HAS_ACTIVE="$id"
+              fi
+            done < <(echo "$RAW" | jq -r '[.id, .status, (.conclusion // ""), .created_at] | @tsv')
+            [ -n "$HAS_ACTIVE" ]
+          }
 
-            if [ -n "$HAS_ACTIVE" ]; then
-              echo "OK — already running id=$HAS_ACTIVE"
-              continue
+          maybe() {
+            local WF="$1"
+            echo ""
+            echo "======== $WF ========"
+            if already_running "$WF"; then
+              echo "OK — already running"
+              return 0
             fi
             if [ "$FORCE" != "true" ] && artifact_ok "$WF"; then
               echo "OK — today's file is on main"
-              continue
+              return 0
             fi
             dispatch_wf "$WF"
-          done
+          }
+
+          if [ "$FORCE" = "true" ] || [ "$ET_HM" -lt 925 ]; then
+            maybe finviz_preopen_scrape.yml
+            maybe preopen_all.yml
+          else
+            echo "skip morning ALL — past 09:25 ET"
+          fi
+
+          if [ "$FORCE" = "true" ] || [ "$ET_HM" -ge 1600 ]; then
+            maybe postclose_all.yml
+          else
+            echo "skip Post-Close ALL until 16:00 ET"
+          fi
 
           echo "Orchestrator pass complete at $(date -u +%F_%H%M) UTC"

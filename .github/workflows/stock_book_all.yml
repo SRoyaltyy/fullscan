@@ -44,8 +44,10 @@ on:
         description: "true = always run all 11 sector predicts"
         required: false
         default: "false"
-  schedule:
-    - cron: "0 17 * * 1-5"
+  # Clock retired 2026-09-04 — Pre-Open ALL writes the book before 09:30.
+  # Keep dispatch for a manual re-rank. Do not add a cron back.
+  # schedule:
+  #   - cron: "0 17 * * 1-5"
 
 permissions:
   contents: write
