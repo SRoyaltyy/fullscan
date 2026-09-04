@@ -124,16 +124,17 @@ def test_night_pack_dates_heals_prior_session_after_bell() -> None:
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
-    # 09-03 now has dated learnings, but tool-dump sector outcomes
-    # (XLB/XLE/XLV) must still fail the pack.
+    # 09-03 now has dated learnings + 8 restored essays, but the three
+    # dump leftovers (XLB/XLE/XLV) must still fail the pack.
     assert skip_if_good.check_daily_pipeline_outcome("2026-09-03") is True
     assert skip_if_good.check_learn_cycle("2026-09-03") is True
     assert skip_if_good.check_postclose_all("2026-09-03") is False
 
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
-    # 09-03 reflect.md + 11 sector reflects landed. Three outcome.md
-    # files are leaked DeepSeek tool-call XML and must not skip the heal.
+    # 09-03 reflect.md + 11 sector reflects landed. Eight real essays
+    # were restored from 11e5405; XLB/XLE/XLV are still tool-call dumps
+    # and must not skip the heal.
     assert skip_if_good.check_general_reflect("2026-09-03") is True
     assert skip_if_good.check_sector_outcomes("2026-09-03") is False
     assert skip_if_good.check_sector_reflects("2026-09-03") is True
