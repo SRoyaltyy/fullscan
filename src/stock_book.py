@@ -732,7 +732,9 @@ def build(date: str | None = None, top_n: int = 25,
     health = None
     try:
         from . import input_health
-        health = input_health.load(date) or input_health.check(date)
+        # Always re-scan. A same-day snapshot from a earlier failed
+        # attempt (AB/weather missing) must not hide layers that just landed.
+        health = input_health.check(date)
         print(input_health.render(health))
     except Exception as e:  # noqa: BLE001 — health must never kill the book
         print(f"[stock-book] WARN: input health check failed: {e}")

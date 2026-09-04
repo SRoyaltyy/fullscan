@@ -303,6 +303,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "ab_t = 1500 if skip_extras" in book
     assert "--offline" in book
     assert "weather missing/thin — retry --offline" in book
+    sb = (ROOT / "src" / "stock_book.py").read_text(encoding="utf-8")
+    assert "input_health.check(date)" in sb
+    assert "input_health.load(date) or input_health.check" not in sb
     pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
     assert "--skip-llm --skip-extras" in pre_yml
