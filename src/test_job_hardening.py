@@ -300,9 +300,25 @@ def test_ranker_inputs_before_llm_packet() -> None:
     news_parse = book.find("[all] → News parse")
     assert 0 <= extras_gate < news_parse
     assert "TimeoutExpired" in book
-    assert "ab_t = 1500 if skip_extras" in book
+    assert "ab_t = 1500" in book
+    assert "wx_t = 180" in book
+    assert "PREOPEN_LLM_TIMEOUT" in book
+    assert "hung Grok must not block the book" in book
     assert "--offline" in book
     assert "weather missing/thin — retry --offline" in book
+    post = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    assert "TimeoutExpired" in post
+    assert "POSTCLOSE_LLM_TIMEOUT" in post
+    assert "llm_timeout_s=llm_to" in post
+    assert "timeout_s=300" in post  # news_grade yfinance bound
+    assert "src.news_grade" in post
+    news_py = (ROOT / "src" / "news_grade.py").read_text(encoding="utf-8")
+    assert "threads=False" in news_py
+    assert "setdefaulttimeout(30)" in news_py
+    wx_yml = (WF / "label_weather.yml").read_text(encoding="utf-8")
+    assert "weather missing/thin — retry --offline" in wx_yml
+    learn_yml = (WF / "learn_cycle.yml").read_text(encoding="utf-8")
+    assert 'OPENCLAW_TIMEOUT: "900"' in learn_yml
     sb = (ROOT / "src" / "stock_book.py").read_text(encoding="utf-8")
     assert "input_health.check(date)" in sb
     assert "input_health.load(date) or input_health.check" not in sb

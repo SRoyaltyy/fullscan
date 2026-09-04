@@ -56,6 +56,10 @@ jobs:
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           python -m src.weather --date "$DATE"
+          if ! python3 -m src.skip_if_good --job label_weather --date "$DATE"; then
+            echo "weather missing/thin — retry --offline"
+            python -m src.weather --date "$DATE" --offline
+          fi
 
       - name: Match stocks to weather (Step C)
         continue-on-error: true

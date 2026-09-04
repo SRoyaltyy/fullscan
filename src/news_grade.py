@@ -69,17 +69,24 @@ def _load_actions(date_str: str) -> dict | None:
 
 def _fetch_bars(tickers: list[str], start: str) -> dict[str, list[dict]]:
     """{ticker: [{date, open, high, low, close}, ...]} ascending."""
+    import socket
+
     import yfinance as yf
     out: dict[str, list[dict]] = {t: [] for t in tickers}
     if not tickers:
         return out
+    # threads=True + no socket timeout hung Post-Close ALL before learn.
+    prev_to = socket.getdefaulttimeout()
+    socket.setdefaulttimeout(30)
     try:
         data = yf.download(tickers, start=start, interval="1d",
                            group_by="ticker", auto_adjust=False,
-                           progress=False, threads=True)
+                           progress=False, threads=False)
     except Exception as e:  # noqa: BLE001
         print(f"[grade] yfinance batch download failed: {e}")
         return out
+    finally:
+        socket.setdefaulttimeout(prev_to)
     if data.empty:
         return out
     single = len(tickers) == 1
