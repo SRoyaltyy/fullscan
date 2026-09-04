@@ -389,6 +389,61 @@ def test_sector_outcome_caps_deepseek_tool_rounds() -> None:
     assert len(posts) == 3
 
 
+def test_sector_outcome_keeps_essay_instead_of_more_search() -> None:
+    """A 200+ char essay plus tool_calls must not start another search round."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    essay = "A" * 220
+    searches = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        return _fake_response(200, essay, tool_calls=[{
+            "id": "c1",
+            "function": {"name": "web_search",
+                         "arguments": '{"query":"XLK close"}'},
+        }])
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              side_effect=lambda q: searches.append(q) or
+                              '{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Technology 2026-09-03")
+    assert text == essay
+    assert searches == []
+
+
+def test_sector_outcome_caps_tool_calls_per_stage() -> None:
+    """One DeepSeek message can emit many tool_calls; each search is ~65s."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    searches = []
+    posts = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        if "tools" in (json or {}):
+            return _fake_response(200, "", tool_calls=[
+                {"id": f"c{i}",
+                 "function": {"name": "web_search",
+                              "arguments": '{"query":"q%d"}' % i}}
+                for i in range(6)
+            ])
+        return _fake_response(200, "B" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              side_effect=lambda q: searches.append(q) or
+                              '{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Technology 2026-09-03")
+    assert len(searches) == 2
+    assert len(posts) == 2  # one tool round + forced close
+    assert text == "B" * 220
+
+
 def test_pick_openclaw_token_prefers_live_48() -> None:
     secret64 = "s" * 64
     live48 = "l" * 48
@@ -425,6 +480,8 @@ def main() -> None:
         test_connect_timeout_marks_gateway_down,
         test_pick_openclaw_token_prefers_live_48,
         test_sector_outcome_caps_deepseek_tool_rounds,
+        test_sector_outcome_keeps_essay_instead_of_more_search,
+        test_sector_outcome_caps_tool_calls_per_stage,
     ]
     failed = 0
     for fn in tests:

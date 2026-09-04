@@ -341,14 +341,27 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
     return final
 
 
+def _is_sector_stage(stage_label: str) -> bool:
+    label = (stage_label or "").upper()
+    return "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label
+
+
 def _effective_tool_rounds(stage_label: str, max_rounds: int | None) -> int:
     """Sector grades already have ETF actuals; 10 search rounds miss ≥8 files."""
     base = max_rounds if max_rounds is not None else config.MAX_TOOL_ROUNDS
-    label = (stage_label or "").upper()
-    if "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label:
+    if _is_sector_stage(stage_label):
         cap = int(getattr(config, "SECTOR_TOOL_ROUNDS", 2) or 2)
         return max(1, min(int(base), cap))
     return max(1, int(base))
+
+
+def _last_assistant_text(messages: list[dict]) -> str:
+    for m in reversed(messages):
+        if m.get("role") == "assistant":
+            text = (m.get("content") or "").strip()
+            if text:
+                return text
+    return ""
 
 
 def chat(messages: list[dict], model: str, tools: bool = False,
@@ -448,9 +461,24 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     trace.append("")
 
     rounds = _effective_tool_rounds(stage_label, max_rounds) if tools else 1
+    sector = _is_sector_stage(stage_label)
+    search_cap = (int(getattr(config, "SECTOR_MAX_SEARCHES", 2) or 2)
+                  if sector else 10 ** 9)
+    budget_s = (int(getattr(config, "SECTOR_CHAT_BUDGET_S", 420) or 420)
+                if sector else 10 ** 9)
+    t0 = time.monotonic()
+    searches_done = 0
     step = 0
     final = None
     for _round in range(rounds):
+        if time.monotonic() - t0 >= budget_s:
+            print(f"[llm] sector chat budget {budget_s}s "
+                  f"({stage_label or 'llm run'}) — conclude", flush=True)
+            break
+        if searches_done >= search_cap:
+            print(f"[llm] sector search cap {search_cap} "
+                  f"({stage_label or 'llm run'}) — conclude", flush=True)
+            break
         payload["messages"] = messages
         try:
             resp = _post(payload)
@@ -458,22 +486,45 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
             return ""
         msg = resp["choices"][0]["message"]
-        calls = msg.get("tool_calls") or []
+        content = msg.get("content") or ""
+        calls = list(msg.get("tool_calls") or [])
+        # Essay already in hand — do not spend the 600s child on more search.
+        if sector and len(content.strip()) >= 200:
+            final = content
+            messages.append({"role": "assistant", "content": final})
+            step += 1
+            trace.append(f"**Step {step} — Done researching.** Sector essay "
+                         f"landed with the tool call ({len(final):,} characters); "
+                         "skipping further search so the child can write.")
+            break
         if not calls:
-            final = msg.get("content") or ""
+            final = content
             messages.append({"role": "assistant", "content": final})
             step += 1
             trace.append(f"**Step {step} — Done researching.** The model "
                          f"stopped searching and wrote its full analysis "
                          f"({len(final):,} characters).")
             break
+        remain = max(0, search_cap - searches_done)
+        if remain == 0:
+            final = content if len(content.strip()) >= 200 else None
+            if final:
+                messages.append({"role": "assistant", "content": final})
+            break
+        if sector and len(calls) > remain:
+            calls = calls[:remain]
         step += 1
         messages.append({"role": "assistant", "content": msg.get("content"),
                          "tool_calls": calls})
         for call in calls:
+            if time.monotonic() - t0 >= budget_s:
+                print(f"[llm] sector chat budget {budget_s}s mid-search "
+                      f"({stage_label or 'llm run'}) — conclude", flush=True)
+                break
             args = json.loads(call["function"]["arguments"] or "{}")
             q = args.get("query", "")
             result = web_search(q)
+            searches_done += 1
             try:
                 parsed = json.loads(result)
                 n = len(parsed.get("results", []))
@@ -495,18 +546,25 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             messages.append({"role": "tool", "tool_call_id": call["id"],
                              "content": result})
     if final is None:
-        # tool budget exhausted -> one final no-tool answer
-        trace.append(f"**Step {step + 1} — Search budget exhausted.** Forced "
-                     "to conclude with what it already gathered.")
-        payload.pop("tools", None)
-        payload.pop("tool_choice", None)
-        try:
-            resp = _post(payload)
-        except RuntimeError as e:
-            print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
-            return ""
-        final = resp["choices"][0]["message"].get("content") or ""
-        messages.append({"role": "assistant", "content": final})
+        reused = _last_assistant_text(messages)
+        if len(reused) >= 200:
+            final = reused
+            trace.append(f"**Step {step + 1} — Search budget exhausted.** "
+                         f"Reused the last assistant essay ({len(final):,} chars) "
+                         "instead of another 120s DeepSeek read.")
+        else:
+            # tool budget exhausted -> one final no-tool answer
+            trace.append(f"**Step {step + 1} — Search budget exhausted.** Forced "
+                         "to conclude with what it already gathered.")
+            payload.pop("tools", None)
+            payload.pop("tool_choice", None)
+            try:
+                resp = _post(payload)
+            except RuntimeError as e:
+                print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
+                return ""
+            final = resp["choices"][0]["message"].get("content") or ""
+            messages.append({"role": "assistant", "content": final})
 
     if transcript_path:
         try:

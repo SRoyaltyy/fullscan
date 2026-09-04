@@ -240,4 +240,9 @@ MAX_TOOL_ROUNDS = _env_int("MAX_TOOL_ROUNDS", 10)  # web_search rounds per LLM s
 # Each DeepSeek read is 120s and the per-sector child dies at 600s.
 # 4 tool rounds + 1 forced close = 5 × 120s = 600s with no time to write.
 SECTOR_TOOL_ROUNDS = _env_int("SECTOR_TOOL_ROUNDS", 2)
+# One DeepSeek message can emit many tool_calls. Each search walks
+# SearXNG→ddgs→html→gnews (up to ~65s). Two total searches leave
+# room for the no-tool close inside the 600s child.
+SECTOR_MAX_SEARCHES = _env_int("SECTOR_MAX_SEARCHES", 2)
+SECTOR_CHAT_BUDGET_S = _env_int("SECTOR_CHAT_BUDGET_S", 420)
 TZ = "America/New_York"
