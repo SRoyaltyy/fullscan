@@ -774,12 +774,13 @@ def chat_nonempty(messages: list[dict], ladder: list[tuple[str, int]],
                   f"(model={model}, max_tokens={max_tokens}): {exc} "
                   "— trying next rung")
             continue
-        if text and len(text.strip()) >= 200:
+        if text and len(text.strip()) >= 200 and not is_tool_dump(text):
             if i:
                 print(f"[llm] recovered on attempt {i + 1} "
                       f"(model={model}, max_tokens={max_tokens})")
             return text
-        print(f"[llm] thin/empty answer on attempt {i + 1} "
+        kind = "tool-dump" if is_tool_dump(text or "") else "thin/empty"
+        print(f"[llm] {kind} answer on attempt {i + 1} "
               f"(model={model}, max_tokens={max_tokens}, "
               f"chars={len((text or '').strip())}) — trying next rung")
     return ""
