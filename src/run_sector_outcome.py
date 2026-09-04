@@ -29,6 +29,39 @@ def _read(path: str) -> str:
         return "(missing)"
 
 
+def _bars_via_history(symbol: str, date_str: str) -> tuple:
+    """(open, close, prev_close) for date_str via Ticker.history. Nones on miss.
+
+    yf.download MultiIndex layout differs across yfinance versions; the
+    Channel 1 path already grades SPX this way.
+    """
+    from .fetch_channel1 import _yf_history
+    h = _yf_history(symbol, days=15)
+    idx = None
+    for i, row in enumerate(h):
+        if row["date"] == date_str:
+            idx = i
+            break
+    if idx is None or idx < 1:
+        return None, None, None
+    return h[idx]["open"], h[idx]["close"], h[idx - 1]["close"]
+
+
+def _fill_from_history(out: dict, etf: str, date_str: str) -> dict:
+    o, c, prev = _bars_via_history(etf, date_str)
+    if c is not None and prev:
+        out["pct"] = float(c / prev - 1) * 100.0
+        out["open"] = o
+        out["close"] = c
+        out["source"] = "yf_history"
+    so, sc, sprev = _bars_via_history("SPY", date_str)
+    if sc is not None and sprev:
+        out["spy_pct"] = float(sc / sprev - 1) * 100.0
+    if out.get("pct") is not None and out.get("spy_pct") is not None:
+        out["rel"] = out["pct"] - out["spy_pct"]
+    return out
+
+
 def _etf_actual(etf: str, date_str: str) -> dict:
     """Open/close % for etf and SPY on date_str (UTC-ish daily bars)."""
     out = {"etf": etf, "pct": None, "spy_pct": None, "rel": None,
@@ -47,42 +80,45 @@ def _etf_actual(etf: str, date_str: str) -> dict:
                                progress=False, threads=False)
         finally:
             socket.setdefaulttimeout(prev_to)
-        if data is None or data.empty:
-            return out
-        if hasattr(data.columns, "levels"):
-            close = data["Close"]
-            opn = data["Open"] if "Open" in data.columns.get_level_values(0) else close
-        else:
-            close, opn = data, data
-        # find row for date_str
-        for sym, key in ((etf, "pct"), ("SPY", "spy_pct")):
-            if sym not in close.columns:
-                continue
-            s = close[sym].dropna()
-            row = None
-            for idx in s.index:
-                if str(idx.date()) == date_str:
-                    row = idx
-                    break
-            if row is None:
-                continue
-            # prior close
-            loc = list(s.index).index(row)
-            if loc == 0:
-                continue
-            prev = s.iloc[loc - 1]
-            cur = s.iloc[loc]
-            out[key] = float(cur / prev - 1) * 100.0
-            if sym == etf:
-                out["close"] = float(cur)
-                try:
-                    out["open"] = float(opn[sym].loc[row])
-                except Exception:
-                    out["open"] = None
-        if out["pct"] is not None and out["spy_pct"] is not None:
-            out["rel"] = out["pct"] - out["spy_pct"]
+        if data is not None and not data.empty:
+            if hasattr(data.columns, "levels"):
+                close = data["Close"]
+                opn = data["Open"] if "Open" in data.columns.get_level_values(0) else close
+            else:
+                close, opn = data, data
+            # find row for date_str
+            for sym, key in ((etf, "pct"), ("SPY", "spy_pct")):
+                if sym not in getattr(close, "columns", []):
+                    continue
+                s = close[sym].dropna()
+                row = None
+                for idx in s.index:
+                    if str(idx.date()) == date_str:
+                        row = idx
+                        break
+                if row is None:
+                    continue
+                # prior close
+                loc = list(s.index).index(row)
+                if loc == 0:
+                    continue
+                prev = s.iloc[loc - 1]
+                cur = s.iloc[loc]
+                out[key] = float(cur / prev - 1) * 100.0
+                if sym == etf:
+                    out["close"] = float(cur)
+                    try:
+                        out["open"] = float(opn[sym].loc[row])
+                    except Exception:
+                        out["open"] = None
+            if out["pct"] is not None and out["spy_pct"] is not None:
+                out["rel"] = out["pct"] - out["spy_pct"]
+                out["source"] = "yf_download"
     except Exception as e:  # noqa: BLE001
         out["error"] = str(e)
+    if out["pct"] is None:
+        print(f"[sector-outcome] download miss {etf} — try Ticker.history")
+        out = _fill_from_history(out, etf, date_str)
     return out
 
 
