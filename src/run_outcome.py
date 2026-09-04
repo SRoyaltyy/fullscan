@@ -100,6 +100,12 @@ def main() -> None:
             stage_label=f"OUTCOME {date_str}",
         )
 
+    if len((text or "").strip()) < 200 or is_tool_dump(text or ""):
+        print(f"[outcome] {date_str}: empty/thin/tool-dump LLM "
+              f"({len((text or '').strip())} chars) — not writing a stub "
+              "that would skip the next heal", flush=True)
+        return
+
     claims, verify_md = verifier.verify_outcome(text)
 
     board = scoreboard.load()

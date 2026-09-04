@@ -583,6 +583,8 @@ def test_general_outcome_skips_existing_and_reuses_transcript() -> None:
     assert "last_assistant" in src
     assert "disk file is a tool-dump" in src
     assert "is_tool_dump" in src
+    assert "empty/thin/tool-dump LLM" in src
+    assert "not writing a stub" in src
     # LLM only after a miss — a hung 09-04 retry must not require_llm first.
     assert src.index("last_assistant") < src.index("config.require_llm()")
 
