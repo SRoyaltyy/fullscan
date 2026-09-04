@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-04
 
-Generated: **2026-09-04T16:41:53.925705-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-04T16:50:06.345837-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
