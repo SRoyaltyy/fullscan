@@ -121,16 +121,21 @@ def test_live_flatten_switch_clears_15pct_fortnight() -> None:
     if not payload_path.is_file() or not list_books():
         print("skip live flatten (no payload/books)")
         return
-    pol = {**DEFAULT, "name": "flatten_switch_full", "engine": "flatten_switch",
+    pol = {**DEFAULT, "name": "flatten_switch_recycle", "engine": "flatten_switch",
            "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
-           "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5}
+           "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+           "rotate_mover": True, "carry_last_book": True}
     sim = run_flatten_switch(load_payload(), list_books(), pol, 100_000)
     st = stats(sim, io_top_return())
+    assert pol["rotate_mover"] is True and pol["carry_last_book"] is True
     assert st["min_fortnight"] is not None and st["min_fortnight"] >= 15.0, st
     assert st["min_block_2w"] is not None and st["min_block_2w"] >= 15.0, st
     assert st["beat_io_top"] is True, st
     assert st["passed"] is True, st
     assert st["total_ret_pct"] > 12.85, st
+    # recycle + carry must stay ahead of the no-recycle flatten_switch_full
+    assert st["min_fortnight"] >= 19.0, st
+    assert st["total_ret_pct"] >= 21.0, st
 
 
 def test_flatten_needs_book_and_enough_buys() -> None:
@@ -141,6 +146,26 @@ def test_flatten_needs_book_and_enough_buys() -> None:
     pol = {**DEFAULT, "min_buys": 5, "engine": "flatten_switch"}
     assert pol["min_buys"] >= 5
     assert pol["engine"] == "flatten_switch"
+
+
+def test_prior_book_never_uses_today() -> None:
+    """09:30 flatten may not look at today's 13:00–15:45 book print."""
+    from src.sleeve_merge import _prior_book
+    books = {"2026-08-20": {"d": "20"}, "2026-08-21": {"d": "21"}}
+    cal = ["2026-08-20", "2026-08-21", "2026-08-24"]
+    assert _prior_book(books, cal, "2026-08-21", "yesterday") == {"d": "20"}
+    assert _prior_book(books, cal, "2026-08-21", "last") == {"d": "20"}
+    # previous session is 08-21 (weekend gap); yesterday = that print or None
+    assert _prior_book(books, cal, "2026-08-24", "yesterday") == {"d": "21"}
+    assert _prior_book(books, cal, "2026-08-24", "last") == {"d": "21"}
+    # a gap day with no print: yesterday is None, last walks back
+    books2 = {"2026-08-21": {"d": "21"}}
+    cal2 = ["2026-08-21", "2026-08-24", "2026-08-25"]
+    assert _prior_book(books2, cal2, "2026-08-25", "yesterday") is None
+    assert _prior_book(books2, cal2, "2026-08-25", "last") == {"d": "21"}
+    # today's print is never returned
+    today = _prior_book(books, cal, "2026-08-21", "last")
+    assert today != {"d": "21"}
 
 
 def test_fortnight_is_14_calendar_days() -> None:
@@ -171,9 +196,10 @@ def main() -> None:
     test_rolling_and_block_gate()
     test_gate_fails_when_a_block_misses_15()
     test_flatten_needs_book_and_enough_buys()
+    test_prior_book_never_uses_today()
     test_fortnight_is_14_calendar_days()
     test_live_flatten_switch_clears_15pct_fortnight()
-    print("test_sleeve_merge: 9 ok")
+    print("test_sleeve_merge: 10 ok")
 
 
 if __name__ == "__main__":

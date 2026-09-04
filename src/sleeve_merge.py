@@ -7,18 +7,21 @@ The two live books are complementary, not substitutes:
   .io    — 16:00 ET close fill, follow-the-book 2w_size.
            No S ≥ +1 gate. Size sleeves keep winning on down days.
 
-Winning combine (``flatten_switch`` / ``flatten_switch_full``):
+Winning combine (``flatten_switch`` / ``flatten_switch_recycle``):
 
   1. Default book is `.io` ``2w_size`` (close fill, same names as the
      published paper sleeve) — the down-day engine.
   2. Flatten those names at the 09:30 open only when the morning
      general score S ≥ +1 AND at least ``min_buys`` priced mover BUY
-     calls exist AND a stock book printed that day. Then buy mover
-     top-N by cond, 1d hold.
-  3. Green mornings with no real BUY list, and no-book days, stay in
-     `.io` / cash. Leftover cash after a mover day stays cash
-     overnight (today's route, not tomorrow's score).
-  4. Futubull fees, whole shares, no lookahead.
+     calls exist AND a book was already printed before today
+     (today's 13:00–15:45 print is not known at 09:30). Then buy
+     mover top-N by cond, 1d hold.
+  3. On a consecutive green mover morning, sell leftover mover names
+     at the open and rebuy today's list (honest recycle — not the
+     paper book's same-day close→open leak).
+  4. On days the stock-book job did not print, carry the last
+     printed ``2w_size`` list at the close.
+  5. Futubull fees, whole shares, no lookahead.
 
 Gate: every complete calendar fortnight (14 days) and every complete
 10-session block must return ≥ +15%, and the full window must beat the
@@ -73,6 +76,14 @@ DEFAULT = {
     "allow_short": True,
     "fund_from_shorts": True,
     "day_cap": 0.55,
+    # flatten_switch knobs (ignored by run_combine)
+    "min_buys": 5,
+    "book_for_flatten": "yesterday",  # yesterday | last | none
+    "mover_when_flat": False,        # cash + green + min_buys → mover
+    "blank_mover_when_flat": False,  # cash + missing S + min_buys → mover
+    "carry_last_book": False,        # refill .io from last print on gap days
+    "rotate_mover": False,           # sell leftover mover at next green open
+    "skip_blank_io": False,          # do not buy .io when morning S is blank
 }
 
 
@@ -675,13 +686,29 @@ def _close_from_cache(ticker: str, date: str, cache) -> float | None:
     return _num((_bar(ticker, date) or {}).get("close"))
 
 
+def _prior_book(book_map: dict[str, dict], cal: list[str], date: str,
+                mode: str) -> dict | None:
+    """Book known at 09:30. Never today's print (that lands ~13:00–15:45)."""
+    if mode in ("none", None, False):
+        return None
+    prevs = [d for d in cal if d < date]
+    if mode == "yesterday":
+        return book_map.get(prevs[-1]) if prevs else None
+    # last printed book strictly before today
+    for d in reversed(prevs):
+        if d in book_map:
+            return book_map[d]
+    return None
+
+
 def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                        policy: dict | None = None,
                        capital: float = 100_000) -> dict:
     """One book: hold .io 2w_size, flatten at the 09:30 open when the
     morning score is green AND mover has BUY calls, then sit in mover
     (1d hold). Leftover cash refills .io at the close. No lookahead —
-    tomorrow's score is never used at today's close.
+    tomorrow's score is never used at today's close, and today's book
+    is never used for the 09:30 flatten decision.
 
     Flattening ignores the 2w min-hold: the new rule is "exit at the
     first open after a green mover morning." Entries stay close-only
@@ -702,7 +729,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         calls_by_day[r.get("date")].append(r)
 
     # official paper close cache — same prices as the .io dashboard
-    from src.paper_trade import get_prices, list_books as _lb
+    from src.paper_trade import get_prices
     tickers = set()
     for _, path in books:
         try:
@@ -729,6 +756,12 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     curve: list[dict] = []
     long_hold_n = HOLD_SESSIONS[pol.get("long_hold", "1d")]
     day_cap = float(pol.get("day_cap", 0.50))
+    book_mode = pol.get("book_for_flatten", "yesterday")
+    mover_when_flat = bool(pol.get("mover_when_flat", False))
+    blank_mover_when_flat = bool(pol.get("blank_mover_when_flat", False))
+    carry_last_book = bool(pol.get("carry_last_book", False))
+    rotate_mover = bool(pol.get("rotate_mover", False))
+    skip_blank_io = bool(pol.get("skip_blank_io", False))
 
     def px_close(t, d):
         return _close_from_cache(t, d, cache)
@@ -787,6 +820,46 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             "last_px": px,
         }
 
+    def deploy_mover(date, priced_buys, confirm):
+        nonlocal mv_pos
+        if rotate_mover:
+            for p in list(mv_pos):
+                px = px_open(p["ticker"], date)
+                if not px:
+                    continue
+                close_lot(p, date, px, OPEN_CLOCK, "rotate mover (open)")
+                mv_pos.remove(p)
+        eq = mark(date, "open")
+        already = sum(p["shares"] * (p.get("last_px") or p["entry_px"])
+                      for p in mv_pos if p["side"] == "BUY")
+        room = max(0.0, eq * day_cap - already)
+        held = {p["ticker"] for p in mv_pos}
+        for r in rank_calls(priced_buys, pol.get("long_rank", "cond"))[: pol["long_top_n"]]:
+            t = str(r.get("ticker") or "").upper()
+            if not t or t in held:
+                continue
+            px = _num(((r.get("session_bar") or _bar(t, date)) or {}).get("open")) \
+                or px_open(t, date)
+            if not px:
+                skipped.append({"date": date, "ticker": t, "side": "BUY",
+                                "reason": "no 09:30 open"})
+                continue
+            xd = next_session(cal, date, long_hold_n)
+            if not xd:
+                continue
+            bump = pol["sizeup"] if t in confirm else 1.0
+            want = min(eq * pol["long_pct"] * bump, room)
+            lot = buy(date, t, px, OPEN_CLOCK, int(want // px),
+                      f"mover BUY cond={_cond_score(r):+.0f}", "mover_long")
+            if lot is None:
+                continue
+            room -= lot["notional"]
+            lot["exit_date"] = xd
+            mv_pos.append(lot)
+            held.add(t)
+            if room < 1:
+                break
+
     for date in cal:
         g = regime.get(date) or {}
         score = g.get("predict_score")
@@ -801,52 +874,35 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                 or px_open(t, date)
             if t and px:
                 priced_buys.append(r)
-        route_mover = (
-            score is not None and score >= pol["long_gate"]
-            and len(priced_buys) >= min_buys
-            and book is not None  # no-book days: stay in .io, don't chase
-        )
-        book = book_map.get(date)
-        confirm = book_ticker_set(book) if book else set()
+        today_book = book_map.get(date)
+        prior = _prior_book(book_map, cal, date, book_mode)
+        last_print = _prior_book(book_map, cal, date, "last")
+        have_buys = len(priced_buys) >= min_buys
+        green = score is not None and score >= pol["long_gate"]
+        blank = score is None
+        flat = not io_pos
+        # Dump a working .io book only on a real green stamp + enough
+        # priced BUYs + a book that was already printed before 09:30.
+        flatten_ok = green and have_buys and (
+            book_mode in ("none", None, False) or prior is not None)
+        # Already in cash: mover paper's own gate (green, or blank if
+        # opted in). Does not use today's unprinted book.
+        cash_mover = flat and have_buys and (
+            (mover_when_flat and green)
+            or (blank_mover_when_flat and blank))
+        route_mover = flatten_ok or cash_mover
+        confirm = book_ticker_set(today_book or last_print or {}) 
 
-        # 09:30 flatten .io → mover
+        # 09:30 flatten .io → mover / deploy leftover cash
         if route_mover:
-            for t in list(io_pos):
-                px = px_open(t, date)
-                if not px:
-                    continue
-                close_lot(io_pos.pop(t), date, px, OPEN_CLOCK,
-                          "flatten .io → mover (open)")
-            eq = mark(date, "open")
-            already = sum(p["shares"] * (p.get("last_px") or p["entry_px"])
-                          for p in mv_pos if p["side"] == "BUY")
-            room = max(0.0, eq * day_cap - already)
-            held = {p["ticker"] for p in mv_pos}
-            for r in rank_calls(priced_buys, pol.get("long_rank", "cond"))[: pol["long_top_n"]]:
-                t = str(r.get("ticker") or "").upper()
-                if not t or t in held:
-                    continue
-                px = _num(((r.get("session_bar") or _bar(t, date)) or {}).get("open")) \
-                    or px_open(t, date)
-                if not px:
-                    skipped.append({"date": date, "ticker": t, "side": "BUY",
-                                    "reason": "no 09:30 open"})
-                    continue
-                xd = next_session(cal, date, long_hold_n)
-                if not xd:
-                    continue
-                bump = pol["sizeup"] if t in confirm else 1.0
-                want = min(eq * pol["long_pct"] * bump, room)
-                lot = buy(date, t, px, OPEN_CLOCK, int(want // px),
-                          f"mover BUY cond={_cond_score(r):+.0f}", "mover_long")
-                if lot is None:
-                    continue
-                room -= lot["notional"]
-                lot["exit_date"] = xd
-                mv_pos.append(lot)
-                held.add(t)
-                if room < 1:
-                    break
+            if flatten_ok:
+                for t in list(io_pos):
+                    px = px_open(t, date)
+                    if not px:
+                        continue
+                    close_lot(io_pos.pop(t), date, px, OPEN_CLOCK,
+                              "flatten .io → mover (open)")
+            deploy_mover(date, priced_buys, confirm)
 
         # 16:00 exit mover due today
         still = []
@@ -861,8 +917,12 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         # 16:00 refill .io with leftover cash — but on a mover day keep
         # leftover cash overnight so the next green open can size in
         # (today's route, not tomorrow's score).
-        if book is not None and not route_mover:
-            targets = io_picks(book, pol.get("io_sleeve", "2w_size"))
+        io_book = today_book
+        if io_book is None and carry_last_book:
+            io_book = last_print
+        skip_io = skip_blank_io and blank
+        if io_book is not None and not route_mover and not skip_io:
+            targets = io_picks(io_book, pol.get("io_sleeve", "2w_size"))
             new = [t for t in targets if t not in io_pos]
             if new and cash > 100:
                 per = cash / len(new)
@@ -928,6 +988,30 @@ SWEEP = [
     {**DEFAULT, "name": "flatten_3d", "engine": "flatten_switch",
      "io_sleeve": "3d_size", "long_top_n": 8, "long_pct": 0.12,
      "day_cap": 0.50, "sizeup": 1.25, "allow_short": False, "min_buys": 5},
+    {**DEFAULT, "name": "flatten_cash_mover", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "mover_when_flat": True},
+    {**DEFAULT, "name": "flatten_blank_cash", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "mover_when_flat": True, "blank_mover_when_flat": True},
+    {**DEFAULT, "name": "flatten_carry_book", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "carry_last_book": True},
+    {**DEFAULT, "name": "flatten_rotate", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "rotate_mover": True},
+    {**DEFAULT, "name": "flatten_skip_blank_io", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "skip_blank_io": True},
+    {**DEFAULT, "name": "flatten_switch_recycle", "engine": "flatten_switch",
+     "io_sleeve": "2w_size", "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "rotate_mover": True, "carry_last_book": True},
 ] + [
     DEFAULT,
     {**DEFAULT, "name": "switch_70", "core_frac": 0.30, "tac_frac": 0.70,
@@ -983,8 +1067,15 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
     sim, st = winner["sim"], winner["stats"]
     pol = sim["policy"]
 
+    keep = (
+        "name", "engine", "io_sleeve", "long_top_n", "long_pct", "long_gate",
+        "long_hold", "long_rank", "day_cap", "min_buys", "sizeup",
+        "allow_short", "book_for_flatten", "rotate_mover", "carry_last_book",
+        "mover_when_flat", "blank_mover_when_flat", "skip_blank_io",
+    )
+    slim = {k: pol[k] for k in keep if k in pol}
     (OUT_DIR / "state.json").write_text(json.dumps({
-        "policy": pol,
+        "policy": slim,
         "stats": {k: v for k, v in st.items()
                   if k not in ("rolling_2w", "blocks_2w", "fortnights")},
         "rolling_2w": st["rolling_2w"],
@@ -1025,18 +1116,24 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "paper sleeve. This is the down-day engine (08-14 +3.2%, 08-19 +4.1%).",
         "- **Flatten at the 09:30 open** only when (1) morning general score "
         "S ≥ +1, (2) at least `min_buys` priced mover BUY calls exist, and "
-        "(3) a stock book printed that day. Then buy mover top-N by cond, "
-        "1d hold, up to `day_cap` of equity.",
-        "- **Do not flatten** on green mornings with no real BUY list (08-13/14) "
-        "or on no-book days (08-24..26) — stay in `.io` / cash. That is how "
-        "mover's empty sessions stop stealing `.io`'s down-day edge.",
-        "- **Leftover cash after a mover day stays cash overnight** (today's "
-        "route, not tomorrow's score) so the next green open can size in.",
+        "(3) a book was already printed *before* today (known at 09:30 — "
+        "today's 13:00–15:45 print is never used for the flatten). Then buy "
+        "mover top-N by cond, 1d hold, up to `day_cap` of equity.",
+        "- **Rotate leftover mover at the next green open** when "
+        f"`rotate_mover={pol.get('rotate_mover', False)}` so yesterday's 1d "
+        "holds do not trap cash that could size into today's BUY list.",
+        "- **Carry the last printed `.io` book** across gap days when "
+        f"`carry_last_book={pol.get('carry_last_book', False)}` — same names, "
+        "close fill, no new information.",
+        "- **Do not flatten** on green mornings with no real BUY list (08-13/14). "
+        "Yesterday's score is never used at today's close.",
         "- Futubull fees, whole shares, no lookahead.",
         "",
         f"**Policy:** `{pol['name']}` · engine `{pol.get('engine', 'combine')}` · "
         f"{pol['io_sleeve']} · longs top {pol['long_top_n']} @ {pol['long_pct']:.0%} "
         f"· day_cap {pol.get('day_cap', 1):.0%} · min_buys {pol.get('min_buys', 5)} "
+        f"· rotate={pol.get('rotate_mover', False)} "
+        f"· carry={pol.get('carry_last_book', False)} "
         f"· size-up ×{pol['sizeup']}",
         "",
         "## Headline",
@@ -1126,11 +1223,17 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         "08-13/14 (zero BUY calls) sat in cash and gave the edge back.",
         "- **Flatten, don't average.** Averaging pick lists re-imports Excel's "
         "median-zero payoff. The combined book *is* `.io` until a green "
-        "morning that actually has a priced mover BUY list and a stock book, "
+        "morning that actually has a priced mover BUY list and a prior book, "
         "then it *is* mover for one session.",
         "- **Open flatten is leak-free:** `.io` names were bought at a prior "
         "close; the 09:30 open is the first price you can get after the new "
-        "morning predict. Tomorrow's score is never used at today's close.",
+        "morning predict. Today's book print is not known at 09:30 so the "
+        "flatten uses yesterday / last print only. Tomorrow's score is never "
+        "used at today's close.",
+        "- **Rotate at the next green open** is the honest way to stay fully "
+        "invested in mover (the paper book's same-day close→open recycle is "
+        "a leak; we do not copy it). **Carry last book** keeps the 2w sleeve "
+        "working on days the book job did not print.",
         "",
         "Code: `src/sleeve_merge.py`. Machine: `data/sleeve_merge/`. "
         "Dashboard: `dashboard/sleeve-merge/index.html`.",
@@ -1170,6 +1273,8 @@ th,td{{padding:7px 8px;border-bottom:1px solid var(--line)}}
 .pass{{color:#4ade80}}.fail{{color:#f87171}}
 </style></head><body><main>
 <h1>Combined sleeve — .io × mover</h1>
+<p class="muted"><a href="../" style="color:#93c5fd">.io paper</a>
+ · <a href="../mover-paper/" style="color:#93c5fd">mover paper</a></p>
 <p class="muted">{pol['name']} · {pol.get('engine','combine')} ·
 {pol['io_sleeve']} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · day_cap {pol.get('day_cap',1):.0%} ·
