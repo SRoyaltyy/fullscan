@@ -1,0 +1,92 @@
+name: Flatten Lookback Action
+
+# Paint flatten_robust would-buy names (plus that day's gainers and
+# priced mover BUYs) with ticker-lookback cameras / setups / 09:30 action.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = latest tape)"
+        required: false
+        default: ""
+      tickers:
+        description: "Optional custom tickers (comma)"
+        required: false
+        default: ""
+      preset:
+        description: "featured | strict | setups | lane | loose"
+        required: false
+        default: "featured"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: flatten-lookback-action
+  cancel-in-progress: true
+
+jobs:
+  walk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow openpyxl
+      - name: Score flatten picks
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+          TICKERS: ${{ inputs.tickers }}
+          PRESET: ${{ inputs.preset }}
+        run: |
+          set -euo pipefail
+          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write)
+          [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
+          [ -n "${TICKERS:-}" ] && ARGS+=(--tickers "$TICKERS")
+          [ -n "${PRESET:-}" ] && ARGS+=(--preset "$PRESET")
+          python -m src.flatten_lookback_action "${ARGS[@]}" | tee /tmp/flatten-lookback-action.md
+          test -s 03_scoreboard/FLATTEN_LOOKBACK_ACTION.md
+          test -s 03_scoreboard/flatten_lookback_action.json
+          test -s dashboard/flatten-lookback/index.html
+      - name: Publish scoreboard to main
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: flatten lookback action ${FROM_DATE:-2026-08-13}" \
+            01_daily/flatten_lookback_action.md \
+            03_scoreboard/FLATTEN_LOOKBACK_ACTION.md \
+            03_scoreboard/flatten_lookback_action.json \
+            dashboard/flatten-lookback/
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flatten-lookback-action
+          path: |
+            03_scoreboard/FLATTEN_LOOKBACK_ACTION.md
+            03_scoreboard/flatten_lookback_action.json
+            dashboard/flatten-lookback/index.html
+      - name: Add links to run summary
+        run: |
+          {
+            echo "## Flatten lookback action"
+            echo
+            echo "- [Markdown](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FLATTEN_LOOKBACK_ACTION.md)"
+            echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/flatten-lookback/)"
+            echo
+            awk '/^# Flatten lookback/,/^## Rows/' 03_scoreboard/FLATTEN_LOOKBACK_ACTION.md
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Refresh GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main

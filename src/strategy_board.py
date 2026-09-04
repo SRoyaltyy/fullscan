@@ -445,6 +445,7 @@ svg text{{fill:var(--muted)}}
 <p class="muted">
 <a href="../">.io paper</a> ·
 <a href="../sleeve-merge/">live combine</a> ·
+<a href="../flatten-lookback/">flatten lookback</a> ·
 <a href="../mover-paper/">mover paper</a> ·
 <a href="../sleeve-combine/">sleeve combine</a> ·
 <a href="../book-paper/">book paper</a>
