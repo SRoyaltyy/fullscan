@@ -5,9 +5,10 @@ Used by src/deepseek_client.py (LLM tool loop) and by the collectors
 fallback when the primary SearXNG instance fails.
 
 Backend chain (every step logged with result counts):
-  1. own SearXNG (config.SEARXNG_URL) — 2 attempts, 25s timeout;
+  1. own SearXNG (config.SEARXNG_URL) — 1 attempt, 10s timeout;
      EMPTY result set counts as failure (instance up but engines blocked)
-  2. ddgs package (DuckDuckGo API-ish), if installed
+  2. ddgs package (DuckDuckGo API-ish), 15s wall — unbounded ddgs hung
+     the first ubuntu sector outcome
   3. DuckDuckGo HTML endpoint scrape — no key, verified working
   4. Google News RSS — no key, verified working; great for news queries
 
@@ -15,9 +16,12 @@ search_results() never raises: it returns (backend, items, errors).
 """
 from __future__ import annotations
 
+import os
 import re
 import time
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import TimeoutError as FutTimeout
 from html import unescape
 from urllib.parse import quote_plus, unquote
 
@@ -25,10 +29,41 @@ import requests
 
 from . import config
 
-SEARXNG_TIMEOUT = 25
-SEARXNG_ATTEMPTS = 2
+
+def _env_int(name: str, default: int, minimum: int = 1) -> int:
+    raw = (os.environ.get(name) or "").strip()
+    if not raw:
+        return default
+    try:
+        return max(minimum, int(raw))
+    except ValueError:
+        return default
+
+
+# GH ubuntu often cannot reach the private SearXNG. Two 25s attempts plus
+# an unbounded ddgs hang ate the first sector outcome (~30+ min, 0 persist).
+SEARXNG_TIMEOUT = _env_int("SEARXNG_TIMEOUT", 10)
+SEARXNG_ATTEMPTS = _env_int("SEARXNG_ATTEMPTS", 1)
+DDG_TIMEOUT = _env_int("DDG_TIMEOUT", 15)
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+
+
+def _run_bounded(fn, timeout_s, *args):
+    """Call fn(*args) with a hard wall. The worker thread is abandoned.
+
+    Executor shutdown must not wait — a hung ddgs thread is why the first
+    ubuntu sector outcome never persisted.
+    """
+    ex = ThreadPoolExecutor(max_workers=1)
+    fut = ex.submit(fn, *args)
+    try:
+        return fut.result(timeout=timeout_s)
+    except FutTimeout as e:
+        raise TimeoutError(f"{getattr(fn, '__name__', fn)} exceeded "
+                           f"{timeout_s}s") from e
+    finally:
+        ex.shutdown(wait=False, cancel_futures=True)
 
 
 def _searxng(query: str, max_results: int) -> list[dict]:
@@ -41,12 +76,16 @@ def _searxng(query: str, max_results: int) -> list[dict]:
             for x in r.json().get("results", [])[:max_results]]
 
 
-def _ddg(query: str, max_results: int) -> list[dict]:
+def _ddg_unbounded(query: str, max_results: int) -> list[dict]:
     from ddgs import DDGS
     with DDGS() as ddgs:
         return [{"title": x.get("title"), "url": x.get("href"),
                  "snippet": x.get("body")}
                 for x in ddgs.text(query, max_results=max_results)]
+
+
+def _ddg(query: str, max_results: int) -> list[dict]:
+    return _run_bounded(_ddg_unbounded, DDG_TIMEOUT, query, max_results)
 
 
 def _strip_tags(s: str) -> str:

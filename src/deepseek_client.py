@@ -15,10 +15,10 @@ FALLBACK — DeepSeek API (DEEPSEEK_API_KEY set):
 
 The search backend chain for the FALLBACK path lives in src/websearch.py
 (single source of truth, shared with the collectors):
-  1. own SearXNG (SEARXNG_URL)        — 2 attempts, 25s timeout;
+  1. own SearXNG (SEARXNG_URL)        — 1 attempt, 10s timeout;
                                         EMPTY result set counts as failure
                                         (instance up but engines blocked)
-  2. ddgs package (DuckDuckGo API-ish)
+  2. ddgs package (DuckDuckGo API-ish, 15s wall)
   3. DuckDuckGo HTML endpoint scrape  — no key, verified working
   4. Google News RSS                  — no key, verified working; great for
                                         event/news queries
@@ -337,6 +337,16 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
     return final
 
 
+def _effective_tool_rounds(stage_label: str, max_rounds: int | None) -> int:
+    """Sector grades already have ETF actuals; 10 search rounds miss ≥8 files."""
+    base = max_rounds if max_rounds is not None else config.MAX_TOOL_ROUNDS
+    label = (stage_label or "").upper()
+    if "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label:
+        cap = int(getattr(config, "SECTOR_TOOL_ROUNDS", 4) or 4)
+        return max(1, min(int(base), cap))
+    return max(1, int(base))
+
+
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
@@ -433,7 +443,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                     "only from the documents it was given."))
     trace.append("")
 
-    rounds = (max_rounds or config.MAX_TOOL_ROUNDS) if tools else 1
+    rounds = _effective_tool_rounds(stage_label, max_rounds) if tools else 1
     step = 0
     final = None
     for _round in range(rounds):
