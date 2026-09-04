@@ -48,7 +48,7 @@ jobs:
     runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
-      OPENCLAW_TIMEOUT: "10800"
+      OPENCLAW_TIMEOUT: "900"
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
       FINVIZ_SKIP_LIVE: "1"
@@ -91,7 +91,7 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENCLAW_TIMEOUT: "10800"
+          OPENCLAW_TIMEOUT: "900"
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"

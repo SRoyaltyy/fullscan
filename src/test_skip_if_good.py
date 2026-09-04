@@ -34,6 +34,26 @@ def test_stock_book_requires_green_and_ranker_inputs() -> None:
     assert skip_if_good.check_ab_checklist("2026-09-03") is True
 
 
+def test_book_without_essays_is_not_good() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        js = Path(tmp) / "book.json"
+        js.write_text(json.dumps({
+            "meta": {"same_day_general": False, "same_day_sectors": 0},
+            "books": {"1d": {"buy": [{"ticker": "LIVE", "relvol": 1.2}]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_missing_same_day_essays(js) is True
+        js.write_text(json.dumps({
+            "meta": {"same_day_general": True, "same_day_sectors": 3},
+            "books": {"1d": {"buy": [{"ticker": "LIVE", "relvol": 1.2}]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_missing_same_day_essays(js) is True
+        js.write_text(json.dumps({
+            "meta": {"same_day_general": True, "same_day_sectors": 11},
+            "books": {"1d": {"buy": [{"ticker": "LIVE", "relvol": 1.2}]}},
+        }), encoding="utf-8")
+        assert skip_if_good.book_missing_same_day_essays(js) is False
+
+
 def test_dead_relvol_1d_buy_is_not_good() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         js = Path(tmp) / "book.json"
@@ -105,6 +125,7 @@ if __name__ == "__main__":
     test_missing_date_is_run()
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()
+    test_book_without_essays_is_not_good()
     test_dead_relvol_1d_buy_is_not_good()
     test_postclose_all_needs_learn_not_just_outcome()
     test_finviz_scrape_requires_elite_export()

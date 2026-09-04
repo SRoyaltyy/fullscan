@@ -334,9 +334,15 @@ def _dir_conf_to_bias(direction: str, conf: float) -> float:
 
 
 def _runs_for_date(asof: str) -> dict[str, dict]:
-    """Same-calendar-day scoreboard runs only. Stale sector/general = unused."""
-    board = scoreboard.load()
+    """Same-calendar-day essays. Scoreboard first; predict.md if ingest lagged.
+
+    Ubuntu land-book / 09:15 heal often run after the md files exist but
+    before scoreboard.json is committed. Zeros for s_general/s_sector then
+    empty the green pile and skip the later heal.
+    """
+    from . import weather
     latest: dict[str, dict] = {}
+    board = scoreboard.load()
     for r in board.get("runs", []):
         if r.get("date") != asof:
             continue
@@ -344,6 +350,14 @@ def _runs_for_date(asof: str) -> dict[str, dict]:
         if not r.get("predicted_direction"):
             continue
         latest[t] = r
+    general, sectors = weather.load_runs(asof)
+    if "general" not in latest and general and general.get("predicted_direction"):
+        latest["general"] = general
+    for name, run in (sectors or {}).items():
+        key = f"sector:{name}"
+        if key in latest or not run or not run.get("predicted_direction"):
+            continue
+        latest[key] = run
     return latest
 
 

@@ -315,6 +315,10 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "llm_timeout_s=llm_to" in post
     assert "timeout_s=300" in post  # news_grade yfinance bound
     assert "src.news_grade" in post
+    assert "sector_wall = max(5400, 11 * (llm_to + 90))" in post
+    post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
+    assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
     news_py = (ROOT / "src" / "news_grade.py").read_text(encoding="utf-8")
     assert "threads=False" in news_py
     assert "setdefaulttimeout(30)" in news_py
@@ -324,6 +328,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'OPENCLAW_TIMEOUT: "900"' in learn_yml
     sb = (ROOT / "src" / "stock_book.py").read_text(encoding="utf-8")
     assert "input_health.check(date)" in sb
+    assert "predict.md if ingest lagged" in sb
+    assert "weather.load_runs(asof)" in sb
     assert "input_health.load(date) or input_health.check" not in sb
     pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
@@ -340,6 +346,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "elite export missing/thin" in skip
     assert "1d BUY has printed dead relvol" in skip
     assert "book_1d_has_dead_relvol" in skip
+    assert "book ranked without same-day essays" in skip
+    assert "book_missing_same_day_essays" in skip
     fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")
     assert "America/New_York" in fin
     ch1 = (ROOT / "src" / "fetch_channel1.py").read_text(encoding="utf-8")

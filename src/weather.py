@@ -96,12 +96,26 @@ def _run_from_predict_md(path: Path) -> dict | None:
                 pass
     if score is None and not direction:
         return None
-    return {
+    horizon_calls: dict = {}
+    try:
+        text = path.read_text(encoding="utf-8")
+        from . import compute_scores, compute_sector_scores
+        if "SECTOR_SCORES_BEGIN" in text:
+            scores = compute_sector_scores.parse_scores(text)
+        else:
+            scores = compute_scores.parse_scores(text)
+        horizon_calls = compute_scores.parse_horizon_calls(scores)
+    except (OSError, TypeError, ValueError):
+        horizon_calls = {}
+    out = {
         "predicted_direction": direction,
         "total_score": score,
         "confidence_score": conf,
         "source": "predict_md",
     }
+    if horizon_calls:
+        out["horizon_calls"] = horizon_calls
+    return out
 
 
 def load_runs(date_str: str) -> tuple[dict | None, dict[str, dict]]:

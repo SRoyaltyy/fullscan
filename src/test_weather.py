@@ -57,6 +57,7 @@ def test_load_runs_fills_missing_scoreboard_from_md() -> None:
         weather.SCOREBOARD.write_text(json.dumps({"runs": []}), encoding="utf-8")
         (root / "general").mkdir()
         (root / "general" / "2026-09-02_predict.md").write_text(
+            "SCORES_BEGIN\nHORIZON_3D: down:mild:0.52\nSCORES_END\n"
             "- total_score: **-3.825**\n- predicted_direction: **down**\n"
             "- confidence_score: 0.52\n",
             encoding="utf-8",
@@ -71,6 +72,8 @@ def test_load_runs_fills_missing_scoreboard_from_md() -> None:
         assert general is not None
         assert general["total_score"] == -3.825
         assert sectors["Energy"]["total_score"] == 2.7
+        assert (general.get("horizon_calls") or {}).get("HORIZON_3D", {}).get(
+            "direction") == "down"
     weather.DAILY = orig_daily
     weather.SCOREBOARD = orig_board
 

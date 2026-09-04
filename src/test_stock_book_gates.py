@@ -4,6 +4,10 @@ Run: python -m src.test_stock_book_gates
 """
 from __future__ import annotations
 
+import json
+import tempfile
+from pathlib import Path
+
 import pandas as pd
 
 from src.green_pile import attach_ranks, green_mask
@@ -265,6 +269,41 @@ def test_book_liquidity_requires_recent_atr() -> None:
     assert float(hive.atr_pct) >= MIN_ATR_PCT
 
 
+def test_runs_for_date_fills_from_predict_md() -> None:
+    """Scoreboard without today still loads essays from the morning packet."""
+    from src.stock_book import _runs_for_date
+    from src import weather
+    orig_daily = weather.DAILY
+    orig_board = weather.SCOREBOARD
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        weather.DAILY = root
+        weather.SCOREBOARD = root / "empty_scoreboard.json"
+        weather.SCOREBOARD.write_text(json.dumps({"runs": []}), encoding="utf-8")
+        (root / "general").mkdir()
+        (root / "general" / "2099-01-02_predict.md").write_text(
+            "SCORES_BEGIN\nHORIZON_3D: up:mild:0.55\nSCORES_END\n"
+            "- total_score: **1.5**\n- predicted_direction: **up**\n"
+            "- confidence_score: 0.6\n",
+            encoding="utf-8",
+        )
+        sec = root / "sectors" / "2099-01-02"
+        sec.mkdir(parents=True)
+        (sec / "healthcare_predict.md").write_text(
+            "- predicted_direction: **up**\n- total_score: **2.0**\n",
+            encoding="utf-8",
+        )
+        try:
+            runs = _runs_for_date("2099-01-02")
+            assert runs.get("general", {}).get("predicted_direction") == "up"
+            assert runs.get("sector:Healthcare", {}).get("predicted_direction") == "up"
+            hc = (runs["general"].get("horizon_calls") or {}).get("HORIZON_3D") or {}
+            assert hc.get("direction") == "up"
+        finally:
+            weather.DAILY = orig_daily
+            weather.SCOREBOARD = orig_board
+
+
 def test_liquidity_empty_keeps_universe() -> None:
     df = pd.DataFrame([
         {"Ticker": "AAA", "market_cap_m": float("nan"),
@@ -290,6 +329,7 @@ def main() -> None:
         test_opp_cap_constant,
         test_20260831_sleeve_drops_broken_names,
         test_book_liquidity_requires_recent_atr,
+        test_runs_for_date_fills_from_predict_md,
         test_liquidity_empty_keeps_universe,
     ]
     failed = 0

@@ -166,6 +166,28 @@ def book_files_are_degraded(js: Path, green: Path) -> bool:
     return False
 
 
+def book_missing_same_day_essays(js: Path) -> bool:
+    """True when the book ranked without today's general + most sector essays.
+
+    An early 06:10 ubuntu book (s_general=0, pile unused) must not skip the
+    09:15 heal that applies the morning packet.
+    """
+    try:
+        payload = json.loads(js.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return True
+    meta = payload.get("meta") if isinstance(payload, dict) else None
+    if not isinstance(meta, dict):
+        return True
+    if not meta.get("same_day_general"):
+        return True
+    try:
+        n_sec = int(meta.get("same_day_sectors") or 0)
+    except (TypeError, ValueError):
+        n_sec = 0
+    return n_sec < 8
+
+
 def book_1d_has_dead_relvol(js: Path) -> bool:
     """True when 1d BUY lists a name Finviz printed in (0, 0.7) relvol."""
     try:
@@ -206,6 +228,9 @@ def check_stock_book_all(date: str) -> bool:
         return _log(False, "stock_book_all", date, "green.json missing — pile not graded")
     if book_files_are_degraded(js, green):
         return _log(False, "stock_book_all", date, "degraded book — re-rank required")
+    if js.is_file() and book_missing_same_day_essays(js):
+        return _log(False, "stock_book_all", date,
+                    "book ranked without same-day essays — re-rank required")
     if js.is_file() and book_1d_has_dead_relvol(js):
         return _log(False, "stock_book_all", date,
                     "1d BUY has printed dead relvol — re-rank required")

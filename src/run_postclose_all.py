@@ -128,10 +128,13 @@ def run(date: str | None = None, force: bool = False,
          _exists_gt(f"01_daily/general/{date}_reflect.md", 200),
          llm_timeout_s=llm_to)
 
+    # 11 sectors × (HTTP cap + slack). A 5400s wall died mid-pack when
+    # several Grok calls each burned the 900s hang budget.
+    sector_wall = max(5400, 11 * (llm_to + 90))
     step("Sector outcomes",
          [py, "-m", "src.run_sector_outcome", "--date", date],
          skip_if_good.check_sector_outcomes(date),
-         timeout_s=5400, llm_timeout_s=llm_to)
+         timeout_s=sector_wall, llm_timeout_s=llm_to)
     n_reflect = 0
     sec = ROOT / "01_daily" / "sectors" / date
     if sec.is_dir():
@@ -139,7 +142,7 @@ def run(date: str | None = None, force: bool = False,
     step("Sector reflect",
          [py, "-m", "src.run_sector_reflect", "--date", date],
          n_reflect >= 8,
-         timeout_s=5400, llm_timeout_s=llm_to)
+         timeout_s=sector_wall, llm_timeout_s=llm_to)
     step("Sector board",
          [py, "-m", "src.sector_board", "--date", date],
          False, timeout_s=60)
