@@ -10,14 +10,18 @@ from src.sleeve_combine_bt import (
     analyze_io_size_attrs,
     assert_matched_hold,
     build_bar_fn,
+    dashboard_payload,
     exit_date,
+    fills_from_trades,
     io_keep,
+    load_calendar,
     load_fees,
     order_fees,
     parse_reasons,
     render,
     run_bt,
     run_dual,
+    write_dashboard,
 )
 
 
@@ -259,6 +263,8 @@ def test_report_says_combine_lost_when_it_did() -> None:
     assert "inside the size book" in md_attr
     assert "`all`" in md_attr
     assert "stay in the size book" in md_attr
+    assert "How to backtest every session" in md_attr
+    assert "sleeve-combine" in md_attr
 
 
 def test_dual_keeps_io_on_down_days() -> None:
@@ -346,6 +352,58 @@ def test_run_bt_rejects_bad_mode() -> None:
     raise AssertionError("bad mode must raise")
 
 
+def test_fills_are_buy_then_sell() -> None:
+    trades = [{
+        "entry_dt": "2026-08-13 09:30 ET", "date": "2026-08-13",
+        "ticker": "AAA", "source": "mover", "shares": 10,
+        "entry_px": 10.0, "exit_dt": "2026-08-14 16:00 ET",
+        "exit_px": 11.0, "fee_in": 0.5, "fee_out": 0.4, "pnl": 9.1,
+        "hold": "1d",
+    }]
+    fills = fills_from_trades(trades)
+    assert [f["side"] for f in fills] == ["BUY", "SELL"]
+    assert fills[0]["clock"] == "09:30 ET"
+    assert fills[1]["side"] == "SELL" and fills[1]["pnl"] == 9.1
+
+
+def test_dashboard_lists_every_session_fill() -> None:
+    sim = run_dual(
+        calendar=CAL,
+        scores={"2026-08-13": 5.0, "2026-08-14": -6.0},
+        mover_calls={"2026-08-13": [{"ticker": "AAA", "conviction": 1}]},
+        io_picks={"2026-08-14": [{"ticker": "CCC", "score": 1}]},
+        bars=_bars({
+            **{("AAA", d): (100.0, 100.0) for d in CAL},
+            **{("CCC", d): (50.0, 50.0) for d in CAL},
+        }),
+        hold="1d", io_select="top",
+        capital=24_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    doc = {"generated_at": "t", "window": [CAL[0], CAL[-1]],
+           "capital": 24000, "results": []}
+    payload = dashboard_payload(doc, sim)
+    assert payload["fills"]
+    sides = {f["side"] for f in payload["fills"]}
+    assert sides == {"BUY", "SELL"}
+    dates = {d["date"] for d in payload["days"]}
+    assert "2026-08-13" in dates and "2026-08-14" in dates
+    html = write_dashboard(doc, sim)
+    text = html.read_text(encoding="utf-8")
+    assert "Buys and sells" in text
+    assert "AAA" in text and "CCC" in text
+    assert '"side": "BUY"' in text
+
+
+def test_calendar_from_to_clips() -> None:
+    cal = load_calendar(
+        {"session_dates": ["2026-08-13", "2026-08-14", "2026-08-17",
+                           "2026-08-18"]},
+        from_date="2026-08-14", to_date="2026-08-17",
+    )
+    assert cal[0] >= "2026-08-14"
+    assert cal[-1] <= "2026-08-17"
+
+
 def test_run_bt_rejects_dual_inline() -> None:
     try:
         run_bt(calendar=CAL, scores={}, mover_calls={}, io_picks={},
@@ -374,5 +432,8 @@ if __name__ == "__main__":
     test_parse_reasons_and_keeps()
     test_io_attr_cut_splits_down_vs_green()
     test_run_bt_rejects_bad_mode()
+    test_fills_are_buy_then_sell()
+    test_dashboard_lists_every_session_fill()
+    test_calendar_from_to_clips()
     test_run_bt_rejects_dual_inline()
     print("ok")

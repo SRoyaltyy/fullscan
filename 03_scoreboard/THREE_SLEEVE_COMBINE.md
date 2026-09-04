@@ -125,4 +125,12 @@ Flattening on S < −3 *hurt* this window: .io `2w_size` was the best single boo
 - Excel live marks are vs entry open and many names are still open (tp strategies never sold). Do not compare that mean to paper P&L.
 - Missing predict: solo mover allows the day; the *combine* parks in .io instead. A blank tape is not a +1 green light.
 
+Backtest every session + buy/sell dashboard:
+
+```
+python -m src.sleeve_combine_bt --mode dual --hold 1d
+```
+
+Page: [`dashboard/sleeve-combine/index.html`](../dashboard/sleeve-combine/index.html) → [live](https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/). Linked from the .io paper dashboard.
+
 Code: `src/sleeve_combine.py`. Machine copy: `data/sleeve_combine/analysis.json`.

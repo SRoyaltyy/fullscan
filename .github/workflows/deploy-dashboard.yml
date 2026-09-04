@@ -80,6 +80,11 @@ jobs:
             cp -a dashboard/mover-lookback/. pages_out/dashboard/mover-lookback/
             echo "Overlayed dashboard/mover-lookback from main"
           fi
+          if [ -f dashboard/sleeve-combine/index.html ]; then
+            mkdir -p pages_out/dashboard/sleeve-combine
+            cp -a dashboard/sleeve-combine/. pages_out/dashboard/sleeve-combine/
+            echo "Overlayed dashboard/sleeve-combine from main"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -102,5 +107,6 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/gainer-lookback/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-lookback/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

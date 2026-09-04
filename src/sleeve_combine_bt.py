@@ -19,9 +19,13 @@ Hard rules
   6. Existing holds ride to their scheduled exit. S < -3 blocks NEW 1d
      risk; it does not flatten.
 
-CLI:
+CLI (all days in the lookback ∪ stock books — currently 2026-08-13 → last book):
   python -m src.sleeve_combine_bt
-  python -m src.sleeve_combine_bt --hold 1d --mode combine
+  python -m src.sleeve_combine_bt --mode dual --hold 1d
+  python -m src.sleeve_combine_bt --from 2026-08-13 --to 2026-09-03
+
+Dashboard: dashboard/sleeve-combine/index.html
+Live: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/
 """
 from __future__ import annotations
 
@@ -51,6 +55,9 @@ BOOK_DIR = ROOT / "data" / "stock_book"
 FEES_PATH = ROOT / "00_grounding" / "futubull_fees.json"
 OUT_DIR = ROOT / "data" / "sleeve_combine"
 OUT_MD = ROOT / "03_scoreboard" / "SLEEVE_COMBINE_BT.md"
+DASH_DIR = ROOT / "dashboard" / "sleeve-combine"
+DASH_SHELL = Path(__file__).with_name("sleeve_combine_dash.html")
+PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
 
 HOLD_SESSIONS = {"1d": 1, "3d": 3, "1w": 5}
 IO_ONLY_HOLDS = {"2w": 10, "1m": 21}
@@ -121,14 +128,19 @@ def _cond_net(row: dict) -> int:
     return int(c.get("good") or 0) - int(c.get("bad") or 0)
 
 
-def load_calendar(payload: dict) -> list[str]:
+def load_calendar(payload: dict, from_date: str | None = None,
+                  to_date: str | None = None) -> list[str]:
     dates = set(payload.get("session_dates") or [])
     dates.update(p.name[:10] for p in BOOK_DIR.glob("????-??-??_stock_book.json"))
     dates.update((payload.get("regime") or {}).keys())
     sweeps = ((payload.get("sweeps") or {}).get("featured") or {})
     regime = ((sweeps.get("mover_days") or {}).get("params") or {}).get("_regime") or {}
     dates.update(regime)
-    return sorted(d for d in dates if d >= WINDOW_START)
+    start = from_date or WINDOW_START
+    out = sorted(d for d in dates if d >= start)
+    if to_date:
+        out = [d for d in out if d <= to_date]
+    return out
 
 
 def load_mover_calls(payload: dict) -> dict[str, list[dict]]:
@@ -512,7 +524,7 @@ def run_bt(
         raise ValueError("dual is two wallets — use run_dual(), not run_bt()")
     assert_matched_hold(mode, hold)
     fees = fees or load_fees()
-    cal = [d for d in calendar if d >= WINDOW_START]
+    cal = list(calendar)
     cash = float(capital)
     open_pos: list[dict] = []
     trades: list[dict] = []
@@ -764,6 +776,8 @@ def run_dual(**kwargs) -> dict:
             "why": "mover wallet + .io size wallet (independent cash)",
             "cash": round((a.get("cash") or 0) + (b.get("cash") or 0), 2),
             "equity": round((a.get("equity") or half) + (b.get("equity") or half), 2),
+            "equity_mover": round(a.get("equity") or half, 2),
+            "equity_io": round(b.get("equity") or half, 2),
             "open": (a.get("open") or 0) + (b.get("open") or 0),
             "filled_am": a.get("filled_am") or 0,
             "filled_pm": b.get("filled_pm") or 0,
@@ -791,9 +805,10 @@ def run_dual(**kwargs) -> dict:
     return _stats_from(mover["trades"] + io["trades"], curve, capital, extra)
 
 
-def load_live() -> tuple[dict, list[str], dict, dict]:
+def load_live(from_date: str | None = None,
+              to_date: str | None = None) -> tuple[dict, list[str], dict, dict]:
     payload = json.loads(PAYLOAD.read_text(encoding="utf-8"))
-    cal = load_calendar(payload)
+    cal = load_calendar(payload, from_date, to_date)
     regime = load_regime(payload)
     scores = {d: (g or {}).get("predict_score") for d, g in regime.items()}
     mover = load_mover_calls(payload)
@@ -801,8 +816,9 @@ def load_live() -> tuple[dict, list[str], dict, dict]:
 
 
 def sweep_live(capital: float = 100_000.0, top_n: int = 10,
-               pct: float = 0.10) -> dict:
-    payload, cal, scores, mover = load_live()
+               pct: float = 0.10, from_date: str | None = None,
+               to_date: str | None = None) -> dict:
+    payload, cal, scores, mover = load_live(from_date, to_date)
     bars = build_bar_fn(payload)
     results = []
     for hold in MATCHED_HOLDS:
@@ -862,8 +878,9 @@ def sweep_live(capital: float = 100_000.0, top_n: int = 10,
 
 def run_one_live(hold: str, mode: str, io_select: str = "size",
                  capital: float = 100_000.0, top_n: int = 10,
-                 pct: float = 0.10) -> dict:
-    payload, cal, scores, mover = load_live()
+                 pct: float = 0.10, from_date: str | None = None,
+                 to_date: str | None = None) -> dict:
+    payload, cal, scores, mover = load_live(from_date, to_date)
     io = load_io_picks(hold if hold != "2w" else "2w", io_select)
     kw = dict(calendar=cal, scores=scores, mover_calls=mover, io_picks=io,
               bars=build_bar_fn(payload), hold=hold, io_select=io_select,
@@ -1103,9 +1120,17 @@ def render(doc: dict, primary: dict | None = None) -> str:
                 f"{c['exits']} | {c['open']} | ${c['equity']:,.0f} | "
                 f"{c.get('gap') or '—'} |"
             )
-        lines += ["", "### Last 20 fills", "",
-                  "| Entry | Src | Ticker | Shares | In | Exit | Out | P&L |",
-                  "|---|---|---|---:|---:|---|---:|---:|"]
+        lines += [
+            "",
+            "### Last 20 round-trips",
+            "",
+            "Every BUY and SELL is on the dashboard day picker "
+            f"([sleeve-combine]({PAGES_URL})). This table is the tail of "
+            "`bt_trades.csv`.",
+            "",
+            "| Entry | Src | Ticker | Shares | In | Exit | Out | P&L |",
+            "|---|---|---|---:|---:|---|---:|---:|",
+        ]
         for t in (primary.get("trades") or [])[-20:]:
             lines.append(
                 f"| {t['entry_dt']} | {t.get('source')} | `{t['ticker']}` | "
@@ -1124,11 +1149,168 @@ def render(doc: dict, primary: dict | None = None) -> str:
         "- [x] S < −3 does not flatten; scheduled exits still fire",
         "- [x] No yfinance inside the sim — prices from the lookback bar store",
         "",
+        "## How to backtest every session",
+        "",
+        "The lookback payload ∪ stock books **is** all days we have "
+        f"(dashboard era starts {WINDOW_START}). Default CLI walks every "
+        "session in that union.",
+        "",
+        "```",
+        "python -m src.test_sleeve_combine_bt",
+        "python -m src.sleeve_combine_bt --mode dual --hold 1d",
+        "python -m src.sleeve_combine_bt --from 2026-08-13 --to 2026-09-03",
+        "```",
+        "",
+        f"Buy/sell blotter (every fill, day picker): `{DASH_DIR.relative_to(ROOT)}/index.html` "
+        f"— live [{PAGES_URL}]({PAGES_URL}). Round-trips: "
+        "`data/sleeve_combine/bt_trades.csv`. Expanded BUY then SELL rows: "
+        "`data/sleeve_combine/bt_fills.csv`.",
+        "",
         "Code: `src/sleeve_combine_bt.py`. Machine copy: "
         "`data/sleeve_combine/bt.json`.",
         "",
     ]
     return "\n".join(lines)
+
+
+def fills_from_trades(trades: list[dict]) -> list[dict]:
+    """One BUY row at entry + one SELL row at exit. Sells sort first."""
+    fills: list[dict] = []
+    for t in trades:
+        clock_in = "09:30 ET" if t.get("source") == "mover" else "16:00 ET"
+        fills.append({
+            "dt": t.get("entry_dt"),
+            "date": t.get("date"),
+            "clock": clock_in,
+            "ticker": t.get("ticker"),
+            "side": "BUY",
+            "source": t.get("source"),
+            "shares": t.get("shares"),
+            "price": t.get("entry_px"),
+            "fees": t.get("fee_in") or 0,
+            "pnl": None,
+            "hold": t.get("hold"),
+        })
+        if t.get("exit_dt"):
+            fills.append({
+                "dt": t.get("exit_dt"),
+                "date": str(t.get("exit_dt") or "")[:10],
+                "clock": CLOSE_CLOCK,
+                "ticker": t.get("ticker"),
+                "side": "SELL",
+                "source": t.get("source"),
+                "shares": t.get("shares"),
+                "price": t.get("exit_px") or 0,
+                "fees": t.get("fee_out") or 0,
+                "pnl": t.get("pnl"),
+                "hold": t.get("hold"),
+            })
+    fills.sort(key=lambda r: (
+        r.get("date") or "",
+        0 if r.get("side") == "SELL" else 1,
+        r.get("dt") or "",
+        r.get("ticker") or "",
+    ))
+    return fills
+
+
+def days_with_fills(curve: list[dict], fills: list[dict]) -> list[dict]:
+    by: dict[str, dict] = {}
+    for c in curve:
+        by[c["date"]] = {**c, "fills": []}
+    for f in fills:
+        d = f.get("date")
+        if d in by:
+            by[d]["fills"].append(f)
+        elif d:
+            by[d] = {"date": d, "fills": [f], "score": None, "route": "",
+                     "filled_am": 0, "filled_pm": 0, "exits": 0, "open": 0,
+                     "equity": None, "gap": ""}
+    return [by[d] for d in sorted(by)]
+
+
+def curve_svg(curve: list[dict], capital: float) -> str:
+    if len(curve) < 2:
+        return ""
+    W, H, P = 960, 260, 36
+    keys = [("equity", "#4ade80", 2.2)]
+    if any(c.get("equity_mover") is not None for c in curve):
+        keys.append(("equity_mover", "#fbbf24", 1.4))
+    if any(c.get("equity_io") is not None for c in curve):
+        keys.append(("equity_io", "#60a5fa", 1.4))
+    ys = []
+    for _, _, _ in keys:
+        pass
+    for k, _, _ in keys:
+        ys.extend(c.get(k) or capital for c in curve)
+    ys.append(capital)
+    lo, hi = min(ys), max(ys)
+    rng = (hi - lo) or 1.0
+    n = len(curve)
+
+    def X(i: int) -> float:
+        return P + (W - 2 * P) * i / (n - 1)
+
+    def Y(v: float) -> float:
+        return H - P - (H - 2 * P) * (v - lo) / rng
+
+    parts = [
+        f"<svg viewBox='0 0 {W} {H}' preserveAspectRatio='none' "
+        f"role='img' aria-label='combined equity'>",
+        f"<line x1='{P}' y1='{Y(capital):.1f}' x2='{W - P}' "
+        f"y2='{Y(capital):.1f}' stroke='#5b6b8c' stroke-dasharray='4 4'/>",
+    ]
+    for key, color, width in keys:
+        pts = " ".join(
+            f"{X(i):.1f},{Y(float(c.get(key) or capital)):.1f}"
+            for i, c in enumerate(curve))
+        parts.append(
+            f"<polyline points='{pts}' fill='none' stroke='{color}' "
+            f"stroke-width='{width}'/>")
+    parts += [
+        f"<text x='{P}' y='{Y(hi) - 6:.1f}' fill='#9cabc9' "
+        f"font-size='12'>${hi:,.0f}</text>",
+        f"<text x='{P}' y='{Y(lo) + 14:.1f}' fill='#9cabc9' "
+        f"font-size='12'>${lo:,.0f}</text>",
+        "</svg>",
+    ]
+    return "".join(parts)
+
+
+def dashboard_payload(doc: dict, primary: dict) -> dict:
+    fills = fills_from_trades(primary.get("trades") or [])
+    curve = primary.get("curve") or []
+    stats = {k: primary.get(k) for k in (
+        "capital", "hold", "mode", "total_ret_pct", "max_dd_pct",
+        "n_trades", "n_skipped", "hit", "final_equity", "by_source",
+        "n_gap_days")}
+    return {
+        "generated": doc.get("generated_at") or primary.get("generated_at"),
+        "window": doc.get("window") or primary.get("window"),
+        "capital": doc.get("capital") or primary.get("capital"),
+        "hold": primary.get("hold"),
+        "mode": primary.get("mode"),
+        "stats": stats,
+        "results": doc.get("results") or [],
+        "curve": [{k: c.get(k) for k in (
+            "date", "score", "route", "equity", "equity_mover", "equity_io",
+            "cash", "open", "filled_am", "filled_pm", "exits", "gap")}
+                  for c in curve],
+        "fills": fills,
+        "days": days_with_fills(curve, fills),
+        "svg": curve_svg(curve, float(primary.get("capital") or 100_000)),
+        "pages_url": PAGES_URL,
+    }
+
+
+def write_dashboard(doc: dict, primary: dict) -> Path:
+    DASH_DIR.mkdir(parents=True, exist_ok=True)
+    shell = DASH_SHELL.read_text(encoding="utf-8")
+    payload = dashboard_payload(doc, primary)
+    html = shell.replace("__DATA__", json.dumps(payload, default=str))
+    path = DASH_DIR / "index.html"
+    path.write_text(html, encoding="utf-8")
+    return path
 
 
 def write_outputs(doc: dict, primary: dict) -> None:
@@ -1152,28 +1334,46 @@ def write_outputs(doc: dict, primary: dict) -> None:
                            extrasaction="ignore")
         w.writeheader()
         w.writerows(primary.get("curve") or [])
+    fills = fills_from_trades(primary.get("trades") or [])
+    fcols = ["dt", "date", "clock", "side", "source", "ticker", "shares",
+             "price", "fees", "pnl", "hold"]
+    with (OUT_DIR / "bt_fills.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=fcols, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(fills)
+    dash = write_dashboard(doc, primary)
     OUT_MD.write_text(render(doc, primary), encoding="utf-8")
+    print(f"wrote {dash.relative_to(ROOT)}")
 
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--hold", default="1d", choices=list(HOLD_SESSIONS) + ["2w"])
-    p.add_argument("--mode", default="combine", choices=MODES)
+    p.add_argument("--mode", default="dual", choices=MODES)
     p.add_argument("--io-select", default="size", choices=("size", "top"))
     p.add_argument("--capital", type=float, default=100_000)
     p.add_argument("--top-n", type=int, default=10)
     p.add_argument("--pct", type=float, default=0.10)
+    p.add_argument("--from", dest="from_date", default=None,
+                   help="first session YYYY-MM-DD (default: all days from "
+                        f"{WINDOW_START})")
+    p.add_argument("--to", dest="to_date", default=None,
+                   help="last session YYYY-MM-DD (default: last book / payload day)")
     p.add_argument("--no-write", action="store_true")
     args = p.parse_args(argv)
-    doc = sweep_live(capital=args.capital, top_n=args.top_n, pct=args.pct)
+    doc = sweep_live(capital=args.capital, top_n=args.top_n, pct=args.pct,
+                     from_date=args.from_date, to_date=args.to_date)
     primary = run_one_live(args.hold, args.mode, args.io_select,
-                           args.capital, args.top_n, args.pct)
+                           args.capital, args.top_n, args.pct,
+                           from_date=args.from_date, to_date=args.to_date)
     if not args.no_write:
         write_outputs(doc, primary)
         print(f"wrote {OUT_MD.relative_to(ROOT)}")
     print(f"{args.mode} hold={args.hold} ret={primary['total_ret_pct']:+.2f}% "
           f"dd={primary['max_dd_pct']:.2f}% trades={primary['n_trades']} "
-          f"gaps={primary['n_gap_days']}")
+          f"fills={len(fills_from_trades(primary.get('trades') or []))} "
+          f"gaps={primary['n_gap_days']} "
+          f"window={primary.get('window')}")
     return 0
 
 

@@ -12,9 +12,9 @@ on:
         required: false
         default: "1d"
       mode:
-        description: "combine | mover_only | io_only"
+        description: "dual | combine | mover_only | io_only"
         required: false
-        default: "combine"
+        default: "dual"
 
 permissions:
   contents: write
@@ -38,10 +38,11 @@ jobs:
           HOLD="${{ github.event.inputs.hold }}"
           MODE="${{ github.event.inputs.mode }}"
           HOLD="${HOLD:-1d}"
-          MODE="${MODE:-combine}"
+          MODE="${MODE:-dual}"
           python -m src.sleeve_combine_bt --hold "$HOLD" --mode "$MODE"
           echo "======== blotter ========"
           head -80 03_scoreboard/SLEEVE_COMBINE_BT.md || true
+          test -s dashboard/sleeve-combine/index.html
       - name: Commit
         run: |
           git config user.name "Market-Bot-Automaton"
@@ -50,7 +51,9 @@ jobs:
                   data/sleeve_combine/bt.json \
                   data/sleeve_combine/bt_primary.json \
                   data/sleeve_combine/bt_trades.csv \
-                  data/sleeve_combine/bt_curve.csv || true
+                  data/sleeve_combine/bt_curve.csv \
+                  data/sleeve_combine/bt_fills.csv \
+                  dashboard/sleeve-combine/index.html || true
           git commit -m "auto: sleeve combine backtest" || echo "No changes"
           git pull --rebase origin main || true
           git push origin main || true

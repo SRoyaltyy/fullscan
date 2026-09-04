@@ -1,6 +1,6 @@
 # Sleeve combine backtest (matched hold, shared cash)
 
-_Generated 2026-09-04T06:00:23-04:00 — 2026-08-13 → 2026-09-03 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
+_Generated 2026-09-04T06:06:52-04:00 — 2026-08-13 → 2026-09-03 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
 
 This is the integrity backtest. Both sleeves use the **same hold** (1d / 3d / 1w). Mover still enters at 09:30, .io still enters at 16:00 — those clocks are data constraints, not a style choice. Open buys cannot spend the same day's close-sale cash. Missing mover calls and missing books are logged as gaps, not as a gate.
 
@@ -126,7 +126,9 @@ The size book itself was *better* on S < +1 than on green mornings. Extra gates 
 | 2026-09-02 | -3.825 | dual | 0 | 4 | 6 | 4 | $103,998 | — |
 | 2026-09-03 | -0.9 | dual | 0 | 0 | 4 | 0 | $103,902 | — |
 
-### Last 20 fills
+### Last 20 round-trips
+
+Every BUY and SELL is on the dashboard day picker ([sleeve-combine](https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/)). This table is the tail of `bt_trades.csv`.
 
 | Entry | Src | Ticker | Shares | In | Exit | Out | P&L |
 |---|---|---|---:|---:|---|---:|---:|
@@ -160,5 +162,17 @@ The size book itself was *better* on S < +1 than on green mornings. Extra gates 
 - [x] Missing bars / books / BUY calls logged on the blotter
 - [x] S < −3 does not flatten; scheduled exits still fire
 - [x] No yfinance inside the sim — prices from the lookback bar store
+
+## How to backtest every session
+
+The lookback payload ∪ stock books **is** all days we have (dashboard era starts 2026-08-13). Default CLI walks every session in that union.
+
+```
+python -m src.test_sleeve_combine_bt
+python -m src.sleeve_combine_bt --mode dual --hold 1d
+python -m src.sleeve_combine_bt --from 2026-08-13 --to 2026-09-03
+```
+
+Buy/sell blotter (every fill, day picker): `dashboard/sleeve-combine/index.html` — live [https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/](https://sroyaltyy.github.io/fullscan/dashboard/sleeve-combine/). Round-trips: `data/sleeve_combine/bt_trades.csv`. Expanded BUY then SELL rows: `data/sleeve_combine/bt_fills.csv`.
 
 Code: `src/sleeve_combine_bt.py`. Machine copy: `data/sleeve_combine/bt.json`.

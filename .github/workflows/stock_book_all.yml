@@ -251,6 +251,11 @@ jobs:
             cp -a dashboard/ticker-lookback/. pages_out/dashboard/ticker-lookback/
             echo "Kept dashboard/ticker-lookback"
           fi
+          if [ -f dashboard/sleeve-combine/index.html ]; then
+            mkdir -p pages_out/dashboard/sleeve-combine
+            cp -a dashboard/sleeve-combine/. pages_out/dashboard/sleeve-combine/
+            echo "Kept dashboard/sleeve-combine"
+          fi
           ls -la pages_out pages_out/dashboard
           ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners missing from pages_out"
 
@@ -290,6 +295,7 @@ jobs:
           echo "Fixed Chrome links (after Pages is enabled):"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
+          echo "  https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "  https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Repo Settings → Pages → Source = Deploy from branch → gh-pages / (root)"
           echo "=============================================="
