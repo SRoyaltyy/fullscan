@@ -1,0 +1,87 @@
+name: Sleeve merge live card
+
+# Today's flatten_hard_red tickets from leftover cash + open lots.
+# Does not run the 25-policy sweep. Must not sit in front of the 09:30 book.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "25 13 * * 1-5"   # ~09:25 ET — after book heal, around the bell
+  workflow_run:
+    workflows:
+      - "Pre-Open ALL (predictive one-shot)"
+      - "Stock Book ALL (one-shot)"
+    types: [completed]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sleeve-merge-live
+  cancel-in-progress: true
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pandas numpy
+
+      - name: Integrity
+        run: python -m src.test_sleeve_merge
+
+      - name: Write today's card
+        env:
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+        run: |
+          set -euo pipefail
+          DATE="${RUN_DATE:-}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.sleeve_merge --card --date "$DATE" --write-card
+          test -s "data/sleeve_merge/today.json"
+          test -s "data/sleeve_merge/positions.json"
+          test -s "01_daily/${DATE}_flatten_card.md"
+          test -s dashboard/sleeve-merge/index.html
+          grep -q "TODAY_BEGIN" dashboard/sleeve-merge/index.html
+          echo "======== card ========"
+          head -40 "01_daily/${DATE}_flatten_card.md"
+
+      - name: Publish card to main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          bash scripts/safe_git_push.sh \
+            "auto: flatten_hard_red card ${DATE}" \
+            "01_daily/${DATE}_flatten_card.md" \
+            data/sleeve_merge/today.json \
+            data/sleeve_merge/positions.json \
+            dashboard/sleeve-merge/
+
+      - name: Overlay Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
+
+      - name: Summary
+        run: |
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "https://github.com/${GITHUB_REPOSITORY}/blob/main/01_daily/"

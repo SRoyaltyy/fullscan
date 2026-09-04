@@ -616,6 +616,9 @@ def run(date: str | None = None, force: bool = False,
                 _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"])
                 _run([py, "-m", "src.sleeve_combine_bt",
                       "--mode", "io_boost", "--hold", "3d"])
+                print("[preopen-all] → flatten_hard_red live card (after book)")
+                _run([py, "-m", "src.sleeve_merge", "--card",
+                      "--date", date, "--write-card"])
                 snapshot_persist(date)
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")

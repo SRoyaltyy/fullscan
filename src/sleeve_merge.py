@@ -31,6 +31,7 @@ Gate: every complete calendar fortnight (14 days) and every complete
 current .io 2w_size top.
 
 CLI: python -m src.sleeve_merge [--capital 100000] [--write]
+     python -m src.sleeve_merge --card [--date YYYY-MM-DD] [--write-card]
 """
 from __future__ import annotations
 
@@ -771,7 +772,9 @@ def _prior_book(book_map: dict[str, dict], cal: list[str], date: str,
 
 def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                        policy: dict | None = None,
-                       capital: float = 100_000) -> dict:
+                       capital: float = 100_000,
+                       stop_before: str | None = None,
+                       close_open: bool = True) -> dict:
     """One book: hold .io 2w_size, flatten at the 09:30 open when the
     morning score is green AND mover has BUY calls, then sit in mover
     (1d hold). Leftover cash refills .io at the close. No lookahead —
@@ -781,6 +784,10 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     Flattening ignores the 2w min-hold: the new rule is "exit at the
     first open after a green mover morning." Entries stay close-only
     for .io and open-only for mover. Fees, whole shares, HTB, 2× equity.
+
+    stop_before: replay sessions strictly before this date (live card).
+    close_open=False leaves working lots on the book instead of the
+    terminal mark-to-close so today's planner can see holdings + cash.
     """
     pol = dict(DEFAULT)
     if policy:
@@ -788,6 +795,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     pol["engine"] = "flatten_switch"
     fees, order_fees = _fees()
     cal = session_calendar(payload, books)
+    if stop_before:
+        cal = [d for d in cal if d < stop_before]
     book_map = load_book_map(books)
     regime = payload.get("regime") or {}
     calls_by_day: dict[str, list[dict]] = defaultdict(list)
@@ -1037,7 +1046,7 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         })
 
     last = cal[-1] if cal else None
-    if last:
+    if last and close_open:
         for t, lot in list(io_pos.items()):
             close_lot(lot, last, lot.get("last_px") or lot["entry_px"],
                       CLOSE_CLOCK, "mark [open]")
@@ -1051,6 +1060,9 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         "policy": pol, "capital": capital, "calendar": cal,
         "trades": trades, "skipped": skipped, "curve": curve,
         "final_equity": curve[-1]["equity"] if curve else capital,
+        "cash": cash,
+        "open_io": {t: dict(lot) for t, lot in io_pos.items()},
+        "open_mover": [dict(lot) for lot in mv_pos],
     }
 
 
@@ -1137,6 +1149,13 @@ SWEEP = [
      "long_top_n": 6, "long_pct": 0.12, "short_top_n": 0, "short_pct": 0.0,
      "allow_short": False, "day_cap": 0.50, "sizeup": 1.25},
 ]
+
+
+def live_policy() -> dict:
+    for pol in SWEEP:
+        if pol["name"] == LIVE_POLICY:
+            return dict(pol)
+    raise KeyError(LIVE_POLICY)
 
 
 def run_sweep(payload: dict, books: list[tuple[str, Path]],
@@ -1543,6 +1562,8 @@ tbody th{{background:#17213a;text-align:left}}
 td.good,b.good,.good{{color:#4ade80}}td.bad,b.bad,.bad{{color:#f87171}}
 td.hold{{color:#fbbf24}}
 td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
+.today{{border:1px solid #fbbf24;border-radius:12px;padding:12px 14px;margin:16px 0;background:#16120a}}
+.today h2{{margin-top:0}}
 </style></head><body><main>
 <h1>Combined sleeve — .io × mover</h1>
 <p class="muted"><a href="../">.io paper</a>
@@ -1554,6 +1575,8 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 carry last 2w list on gap days · hard-red S≤−3 = no new buys ·
 day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b> ·
 <a href="../strategy-board/" style="color:#93c5fd">all-strategy board</a></p>
+<!-- TODAY_BEGIN -->
+<!-- TODAY_END -->
 <div class="cards">{cards}</div>
 {svg}
 <h2>Daily book (cash left after fills)</h2>
@@ -1579,6 +1602,8 @@ day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b>
 </main></body></html>
 """
     (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
+    from src.sleeve_merge_live import inject_today_from_disk
+    inject_today_from_disk()
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1586,7 +1611,18 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--capital", type=float, default=100_000)
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--policy", default="")
+    ap.add_argument("--card", action="store_true",
+                    help="print today's flatten_hard_red tickets (no sweep)")
+    ap.add_argument("--write-card", action="store_true",
+                    help="write today.json + dashboard TODAY panel")
+    ap.add_argument("--date", default="",
+                    help="card date YYYY-MM-DD (default = today ET)")
     args = ap.parse_args(argv)
+
+    if args.card or args.write_card:
+        from src.sleeve_merge_live import run_card
+        return run_card(date=args.date or None, capital=args.capital,
+                        write=bool(args.write_card or args.write))
 
     payload = load_payload()
     books = list_books()

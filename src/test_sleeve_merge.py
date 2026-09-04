@@ -272,6 +272,106 @@ def test_prior_book_never_uses_today() -> None:
     assert today != {"d": "21"}
 
 
+def test_stop_before_leaves_lots_open() -> None:
+    """Live card needs yesterday's working lots, not the terminal mark-close."""
+    from pathlib import Path
+    from src.sleeve_merge import (
+        DEFAULT, list_books, load_payload, live_policy, run_flatten_switch,
+    )
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file() or not list_books():
+        print("skip stop_before (no payload/books)")
+        return
+    pol = live_policy()
+    closed = run_flatten_switch(load_payload(), list_books(), pol, 100_000)
+    opened = run_flatten_switch(
+        load_payload(), list_books(), pol, 100_000,
+        stop_before="2026-09-04", close_open=False)
+    assert closed["open_io"] == {} or not closed.get("open_io")
+    assert closed["open_mover"] == []
+    assert opened["calendar"][-1] < "2026-09-04"
+    assert opened["open_io"] or opened["open_mover"] or opened["cash"] > 0
+    n_open = len(opened["open_io"]) + len(opened["open_mover"])
+    assert n_open >= 1
+    assert opened["cash"] >= 0
+
+
+def test_card_hard_red_0824_no_new_buys() -> None:
+    """S ≤ −3: card may sell due 1d lots; it must not propose a new BUY."""
+    from pathlib import Path
+    from src.sleeve_merge_live import plan_today
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file():
+        print("skip card hard-red (no payload)")
+        return
+    card = plan_today("2026-08-24")
+    assert card["hard_red"] is True
+    assert card["route"] == "hold"
+    assert card["flatten_ok"] is False
+    buys = [t for t in card["tickets"] if t["side"] == "BUY"]
+    assert buys == [], buys
+    assert any("hard-red" in (s.get("reason") or "") for s in card["skipped"])
+
+
+def test_card_skips_already_held() -> None:
+    """A name already on the book is not a buy — leftover cash only."""
+    from pathlib import Path
+    from src.sleeve_merge_live import plan_today
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file():
+        print("skip card already-held (no payload)")
+        return
+    card = plan_today("2026-09-04")
+    held = {h["ticker"] for h in card.get("holds_open") or []}
+    bought = {t["ticker"] for t in card["tickets"] if t["side"] == "BUY"}
+    assert held.isdisjoint(bought), held & bought
+    if held:
+        assert any(s.get("reason") == "already held" for s in card["skipped"]), \
+            card["skipped"][:5]
+
+
+def test_card_cost_fits_leftover_cash() -> None:
+    """Planned buys cannot spend more than leftover cash after planned sells."""
+    from pathlib import Path
+    from src.sleeve_merge_live import plan_today
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file():
+        print("skip card cash (no payload)")
+        return
+    card = plan_today("2026-09-04")
+    room = card["cash_open"] + card["sell_proceeds"]
+    assert card["buy_cost"] <= room + 0.02, (card["buy_cost"], room)
+    assert card["cash_after_1600"] >= -0.01
+    for t in card["tickets"]:
+        if t["side"] == "BUY":
+            assert t["shares"] >= 1
+            assert t.get("cost", 0) > 0
+
+
+def test_card_writes_today_json() -> None:
+    from pathlib import Path
+    from src.sleeve_merge_live import (
+        POSITIONS_JSON, TODAY_JSON, inject_today_panel, plan_today,
+        today_panel_html, write_card,
+    )
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file():
+        print("skip card write (no payload)")
+        return
+    card = plan_today("2026-09-04")
+    paths = write_card(card)
+    assert TODAY_JSON.is_file()
+    assert POSITIONS_JSON.is_file()
+    assert paths["daily"].is_file()
+    html = paths["dashboard"].read_text(encoding="utf-8")
+    assert "TODAY_BEGIN" in html
+    assert card["date"] in html
+    assert "today-card" in html
+    wrapped = inject_today_panel("<main><p>x</p>\n<div class=\"cards\">",
+                                 today_panel_html(card))
+    assert wrapped.count("TODAY_BEGIN") == 1
+
+
 def test_fortnight_is_14_calendar_days() -> None:
     # Aug 13 → Aug 26 is one complete fortnight (10 sessions).
     dates = [
@@ -307,7 +407,12 @@ def main() -> None:
     test_live_flatten_switch_clears_15pct_fortnight()
     test_live_fees_and_cash_lockup()
     test_hard_red_no_new_skips_0824_io_keeps_holds()
-    print("test_sleeve_merge: 14 ok")
+    test_stop_before_leaves_lots_open()
+    test_card_hard_red_0824_no_new_buys()
+    test_card_skips_already_held()
+    test_card_cost_fits_leftover_cash()
+    test_card_writes_today_json()
+    print("test_sleeve_merge: 19 ok")
 
 
 if __name__ == "__main__":
