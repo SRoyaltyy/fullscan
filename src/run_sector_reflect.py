@@ -16,6 +16,7 @@ from zoneinfo import ZoneInfo
 
 from . import config, deepseek_client, scoreboard
 from .run_reflect import last_assistant
+from .skip_if_good import is_tool_dump
 from .sector_memory import scoreboard_summary, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS
 
@@ -132,13 +133,21 @@ def run_one(sector: str, date_str: str) -> None:
         print(f"[sector-reflect] {sector}: actuals from outcome.md pct={pct}")
     existing = os.path.join(out_dir, f"{slug}_reflect.md")
     if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
-        print(f"[sector-reflect] skip {sector}: reflect already on disk")
-        return
+        try:
+            with open(existing, encoding="utf-8") as fh:
+                on_disk = fh.read()
+        except OSError:
+            on_disk = ""
+        if not is_tool_dump(on_disk):
+            print(f"[sector-reflect] skip {sector}: reflect already on disk")
+            return
+        print(f"[sector-reflect] {sector}: disk file is a tool-dump "
+              f"({len(on_disk)} chars) — rewriting", flush=True)
 
     transcript_path = os.path.join(
         "01_daily/_transcripts", f"{date_str}_sector_{slug}_reflect.json")
     reused = last_assistant(transcript_path)
-    if len(reused) >= 200:
+    if len(reused) >= 200 and not is_tool_dump(reused):
         print(f"[sector-reflect] {sector}: reuse transcript "
               f"({len(reused)} chars) — no LLM")
         _write_reflect(sector, date_str, slug, out_dir, reused, entry, board)

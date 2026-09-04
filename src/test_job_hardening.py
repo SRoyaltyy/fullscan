@@ -538,6 +538,8 @@ def test_sector_reflect_skips_existing() -> None:
     assert "SECTOR_ONE_TIMEOUT" in src
     assert "TimeoutExpired" in src
     assert "killed after" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     from src.run_sector_reflect import _pct_from_outcome_md
     text = "# Sector Outcome\n\nActuals: {'etf': 'XLK', 'pct': 1.25, 'spy_pct': 0.4}\n\nbody"
     assert _pct_from_outcome_md(text) == 1.25
@@ -579,6 +581,8 @@ def test_general_outcome_skips_existing_and_reuses_transcript() -> None:
     assert "outcome already on disk" in src
     assert "reuse transcript" in src
     assert "last_assistant" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     # LLM only after a miss — a hung 09-04 retry must not require_llm first.
     assert src.index("last_assistant") < src.index("config.require_llm()")
 
@@ -593,6 +597,8 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
     assert 'f"{date_str}_reflect.md"' in src
     assert "reuse transcript" in src
     assert "reflect already on disk" in src
+    assert "disk file is a tool-dump" in src
+    assert "is_tool_dump" in src
     with tempfile.TemporaryDirectory() as td:
         p = Path(td) / "tx.json"
         p.write_text(json.dumps({
@@ -606,6 +612,16 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
         assert text.startswith("TRIAGE")
         assert len(text) >= 200
         assert last_assistant(str(Path(td) / "missing.json")) == ""
+        dump = Path(td) / "dump.json"
+        dump.write_text(json.dumps({
+            "messages": [
+                {"role": "assistant", "content": (
+                    'TRIAGE\n<｜DSML｜tool_calls>\n'
+                    '<invoke name="web_search">' + ("q" * 200)
+                )},
+            ],
+        }), encoding="utf-8")
+        assert last_assistant(str(dump)) == ""
 
 
 def test_search_and_sector_rounds_are_bounded() -> None:
