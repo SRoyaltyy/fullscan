@@ -33,11 +33,19 @@ def _etf_actual(etf: str, date_str: str) -> dict:
     out = {"etf": etf, "pct": None, "spy_pct": None, "rel": None,
            "open": None, "close": None}
     try:
+        import socket
+
         import yfinance as yf
         start = (datetime.fromisoformat(date_str) - timedelta(days=5)).date().isoformat()
         end = (datetime.fromisoformat(date_str) + timedelta(days=3)).date().isoformat()
-        data = yf.download([etf, "SPY"], start=start, end=end,
-                           progress=False, threads=False)
+        # threads=True + no socket timeout hung Post-Close ALL before learn.
+        prev_to = socket.getdefaulttimeout()
+        socket.setdefaulttimeout(30)
+        try:
+            data = yf.download([etf, "SPY"], start=start, end=end,
+                               progress=False, threads=False)
+        finally:
+            socket.setdefaulttimeout(prev_to)
         if data is None or data.empty:
             return out
         if hasattr(data.columns, "levels"):
@@ -83,6 +91,10 @@ def run_one(sector: str, date_str: str) -> None:
     etf = SECTOR_ETFS[sector]
     slug = _slug(sector)
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
+    existing = os.path.join(out_dir, f"{slug}_outcome.md")
+    if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
+        print(f"[sector-outcome] skip {sector}: outcome already on disk")
+        return
     predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
     if predict_md == "(missing)":
         print(f"[sector-outcome] skip {sector}: no predict file")
@@ -159,7 +171,10 @@ def main() -> None:
         if sector not in FINVIZ_SECTORS:
             raise SystemExit(f"unknown sector {sector}")
         print(f"\n======== SECTOR OUTCOME: {sector} ========\n")
-        run_one(sector, date_str)
+        try:
+            run_one(sector, date_str)
+        except Exception as e:  # noqa: BLE001
+            print(f"[sector-outcome] WARN {sector}: {e}")
 
 
 if __name__ == "__main__":

@@ -142,11 +142,19 @@ def market_reaction(source_date: str) -> dict:
     try:
         import yfinance as yf
         source_day = datetime.fromisoformat(source_date).date()
-        raw = yf.download(
-            REACTION_TICKERS, start=(source_day - timedelta(days=5)).isoformat(),
-            end=(source_day + timedelta(days=1)).isoformat(),
-            auto_adjust=True, progress=False, group_by="column",
-        )
+        import socket
+        prev_to = socket.getdefaulttimeout()
+        socket.setdefaulttimeout(30)
+        try:
+            raw = yf.download(
+                REACTION_TICKERS,
+                start=(source_day - timedelta(days=5)).isoformat(),
+                end=(source_day + timedelta(days=1)).isoformat(),
+                auto_adjust=True, progress=False, group_by="column",
+                threads=False,
+            )
+        finally:
+            socket.setdefaulttimeout(prev_to)
         close = raw["Close"] if "Close" in raw else raw
         out = {}
         for t in REACTION_TICKERS:
