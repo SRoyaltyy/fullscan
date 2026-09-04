@@ -333,7 +333,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "MAP_POSTCLOSE_LOCK" in post_yml
     assert "leftover ECS files must not fake SKIP" in post_yml
     assert "git reset --hard origin/main" in post_yml
-    assert "git clean -fd -- 01_daily" in post_yml
+    assert "git clean -fd -- 01_daily/general" in post_yml
+    assert "01_daily/_transcripts" in post_yml
+    assert "git clean -fd -- 01_daily 02_lessons" not in post_yml
     assert "ECS systemd job holds the lock" in post_yml
     assert "ECS systemd job grabbed the lock" in post_yml
     assert "def _push_pack" in post
@@ -411,6 +413,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "exit 1" not in post
     assert "--job postclose_all" in post
     assert "night_pack_dates" in post
+    assert "Keep 01_daily/_transcripts" in post
+    assert "git clean -fd -- 01_daily/general" in post
     assert 'SKIP_ARGS=(--job postclose_all)' in post
     assert 'PC_ARGS=(--llm-backend "${LLM_BACKEND:-auto}")' in post
     assert 'dated=${SOURCE_DATE:-night_pack_dates}' in post

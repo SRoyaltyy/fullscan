@@ -84,7 +84,12 @@ jobs:
         run: |
           git fetch origin main
           git reset --hard origin/main
-          git clean -fd -- 01_daily 02_lessons 03_scoreboard || true
+          # Gate files only. Keep 01_daily/_transcripts so a hung Grok
+          # call can write *_outcome.md / *_reflect.md on retry (no LLM).
+          git clean -fd -- 01_daily/general 01_daily/sectors \
+            01_daily/map_heat 01_daily/news 02_lessons 03_scoreboard || true
+          git ls-files -o --exclude-standard -- '01_daily/*_learnings.md' \
+            | xargs -r rm -f
 
       - name: Skip if post-close pack already on disk (no LLM)
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
