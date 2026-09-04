@@ -9,11 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-<<<<<<< HEAD
-Last learn_cycle: **2026-09-03**. Promoted: 11. Human digest: `03_scoreboard/LEARNINGS.md`.
-=======
-Last learn_cycle: **2026-09-03**. Promoted: 16. Human digest: `03_scoreboard/LEARNINGS.md`.
->>>>>>> origin/main
+Last learn_cycle: **2026-09-03**. Promoted: 0. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -654,11 +650,11 @@ current_behavior: ""
 evidence_cited: ""
 error_category: "NONE"
 scope: "general"
-date: "2026-09-03"
+date: "2026-08-25"
 status: "active"
 occurrences: "1"
-promoted_on: "2026-09-04"
-sources: "['2026-09-03_sector_real_estate_lesson.md']"
+promoted_on: "2026-08-27"
+sources: "['2026-08-25_sector_financial_lesson.md']"
 schema_ok: "true"
 ---
 
