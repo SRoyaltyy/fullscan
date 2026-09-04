@@ -113,6 +113,48 @@ def route(score: float | None, *, missing_is_io: bool = True) -> dict:
     }
 
 
+def route_fallback(score: float | None) -> dict:
+    """1d mover-paper book: .io only on a soft-red morning.
+
+    S < 0 and S > -3 → .io size at the close.
+    Everything else (S >= 0, or missing predict) → mover at the open.
+    S <= -3 → no new 1d risk.
+    """
+    if score is None:
+        return {
+            "score": None,
+            "bucket": BUCKET_MOVER,
+            "primary": BUCKET_MOVER,
+            "excel_role": "confirm_only",
+            "why": "no predict on file — mover (the rest)",
+        }
+    s = float(score)
+    if s >= 0.0:
+        return {
+            "score": s,
+            "bucket": BUCKET_MOVER,
+            "primary": BUCKET_MOVER,
+            "excel_role": "confirm_only",
+            "why": f"predict {s:+.2f} >= 0 — mover 1d (09:30)",
+        }
+    if s > IO_HARD_RED:
+        return {
+            "score": s,
+            "bucket": BUCKET_IO,
+            "primary": BUCKET_IO,
+            "excel_role": "confirm_only",
+            "why": (f"predict {s:+.2f} in ({IO_HARD_RED:+.1f}, 0) — "
+                    ".io 1d size fallback (16:00)"),
+        }
+    return {
+        "score": s,
+        "bucket": BUCKET_CASH,
+        "primary": BUCKET_CASH,
+        "excel_role": "shorts_only_unfunded",
+        "why": f"predict {s:+.2f} <= {IO_HARD_RED:+.1f} — no new 1d risk",
+    }
+
+
 def _pct(n, d) -> float | None:
     if not d:
         return None

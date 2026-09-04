@@ -21,14 +21,20 @@ Strategy levers (CLI):
         conviction = setup edge + lane bonus + condition, 09:30-knowable
         dip        = biggest same-day drop first — ONLY valid with
                      --entry close (day_change needs the 16:00 print)
-  --gate-score X          default 1.0   (trade only when the morning general
-        predict score >= X; missing predict = allow; 'none' disables)
+  --gate-score X          default 1.0   (solo mover gate; ignored when
+        --io-fallback is on)
+  --io-fallback / --no-io-fallback
+                          default ON for --source mover. 1d book:
+                          .io size at the close when -3 < S < 0;
+                          mover at the open otherwise; S <= -3 = cash.
   --pct 0.10              per-trade notional as fraction of equity
   --capital 100000
 
-Day gate (the "avoid fall days" layer): the premarket general predict
-(~05:55 ET, leak-free) is the enforcement input; news-judge hawkish top
-item and high-uncertainty event binaries are recorded as advisory flags.
+Default mover-paper book (io-fallback): morning general predict S.
+Soft-red (-3 < S < 0) buys the 1d size book at 16:00. The rest (S >= 0
+or missing predict) is mover 1d at 09:30. Hard-red S <= -3 takes no
+new 1d risk. News-judge hawkish items and high-uncertainty event
+binaries are advisory flags.
 Backtest over 2026-08-13..09-03: gate score>=1 blocked all four bad BUY
 days (08-24 -1.9%, 08-28 -9.1%, 08-31 -0.4%, 09-01 -1.2%) and kept all
 three winners (+5.1 / +2.6 / +7.4).
@@ -417,6 +423,66 @@ def stats(sim: dict) -> dict:
             "by_side": by_side, "n_days": len(curve)}
 
 
+def bt_to_mover_sim(raw: dict, payload: dict) -> tuple[dict, list[dict]]:
+    """Map the leak-free fallback backtest onto mover-paper outputs."""
+    from src.sleeve_combine import route_fallback
+
+    regime = payload.get("regime") or {}
+    trades = []
+    for t in raw.get("trades") or []:
+        src = t.get("source") or "mover"
+        trades.append({
+            "entry_dt": t.get("entry_dt"), "date": t.get("date"),
+            "ticker": t.get("ticker"), "side": "BUY",
+            "shares": t.get("shares"), "entry_px": t.get("entry_px"),
+            "exit_dt": t.get("exit_dt"), "exit_px": t.get("exit_px"),
+            "notional": t.get("notional"), "fee_in": t.get("fee_in"),
+            "fee_out": t.get("fee_out"), "pnl": t.get("pnl"),
+            "ret_pct": t.get("ret_pct"),
+            "conviction": t.get("conviction") or 0,
+            "cond_tally": src, "reason": src, "source": src,
+        })
+    skipped = []
+    for s in raw.get("skipped") or []:
+        skipped.append({
+            "date": s.get("date"), "ticker": s.get("ticker"),
+            "side": "BUY", "conviction": 0,
+            "reason": s.get("reason") or "",
+        })
+    curve, gates = [], []
+    for c in raw.get("curve") or []:
+        curve.append({"date": c["date"], "cash": c.get("cash"),
+                      "equity": c.get("equity"), "open": c.get("open")})
+        card = route_fallback(c.get("score"))
+        dec = {"mover": "MOVER", "io": "IO", "cash": "CASH"}.get(
+            card["bucket"], str(card["bucket"]).upper())
+        g = regime.get(c["date"]) or {}
+        gates.append({
+            "date": c["date"],
+            "predict_dir": g.get("predict_dir"),
+            "predict_score": c.get("score"),
+            "spy_down_streak": g.get("spy_down_streak") or 0,
+            "decision": dec, "why": card["why"],
+            "advisory": c.get("gap") or "",
+        })
+    sim = {
+        "capital": raw.get("capital", 100_000),
+        "top_n": raw.get("top_n", 10),
+        "pct": raw.get("pct", 0.10),
+        "side": "long",
+        "entry": "open+close",
+        "hold": "1d",
+        "rank": "cond / size",
+        "trades": trades, "skipped": skipped, "curve": curve,
+        "final_equity": raw.get("final_equity"),
+        "source": "mover+io",
+        "io_fallback": True,
+        "book_list": "1d",
+        "by_source": raw.get("by_source") or {},
+    }
+    return sim, gates
+
+
 # ------------------------------------------------- strategy sweep (daily) --
 def _row_ret(r: dict, entry: str, hold: str):
     bar = r.get("session_bar") or {}
@@ -640,7 +706,7 @@ def write_outputs(sim, st, gates, sweep, payload, gate_score) -> None:
     HTML_OUT.parent.mkdir(parents=True, exist_ok=True)
     cols = ["entry_dt", "ticker", "side", "shares", "entry_px",
             "exit_dt", "exit_px", "notional", "fee_in", "fee_out", "pnl",
-            "ret_pct", "conviction", "cond_tally", "reason"]
+            "ret_pct", "conviction", "cond_tally", "reason", "source"]
     with open(OUT_DIR / "trades.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
@@ -676,6 +742,21 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
     if sim.get("source") == "book":
         src_note = (f" Selection: `{sim.get('book_list')}` stock-book buy "
                     "list (prints ~13:00-15:45 ET, hence close entry).")
+    gate_line = (
+        f"**Day gate:** trade only when the morning general predict score "
+        f">= {gate_score if gate_score is not None else 'off'} "
+        "(missing predict = allowed). News-judge hawkish items and "
+        "high-uncertainty event binaries are advisory flags below."
+    )
+    if sim.get("io_fallback"):
+        src_note = (" 1d .io size book at 16:00 when −3 < S < 0; mover "
+                    "1d at 09:30 otherwise. S ≤ −3 takes no new 1d risk.")
+        gate_line = (
+            "**Book:** .io fallback on soft-red mornings (−3 < S < 0), "
+            "mover the rest (S ≥ 0 or missing). Hard-red S ≤ −3 = cash. "
+            "Both books hold 1d. Open buys cannot spend the same day's "
+            "close-sale cash."
+        )
     L = [
         f"# {TITLE}", "",
         f"_Generated {datetime.now().isoformat(timespec='seconds')} — "
@@ -688,10 +769,7 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
         f"per trade · Futubull fees · cash-accounted (unfittable trades "
         f"skipped and logged).{src_note}",
         "",
-        f"**Day gate:** trade only when the morning general predict score "
-        f">= {gate_score if gate_score is not None else 'off'} "
-        "(missing predict = allowed). News-judge hawkish items and "
-        "high-uncertainty event binaries are advisory flags below.", "",
+        gate_line, "",
         "## Headline", "",
         "| Start capital | Final equity | Return | Max DD | Trades | "
         "Skipped | Win rate |",
@@ -706,7 +784,7 @@ def _write_md(sim, st, gates, payload, gate_score) -> None:
         f"| SELL (short) | {bs['SELL']['n']} | "
         f"{round(100 * (bs['SELL']['hit'] or 0), 1)}% | ${bs['SELL']['pnl']:,.2f} |",
         "", "## Day gate (per session)", "",
-        "| Date | Predict | Score | SPY streak | Gate | Advisory |",
+        "| Date | Predict | Score | SPY streak | Book | Advisory |",
         "|---|---|---:|---:|---|---|",
     ]
     for g in gates:
@@ -789,7 +867,13 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
             day_pnl = f"{100 * (c['equity'] - prev_eq) / prev_eq:+.2f}%"
         if c:
             prev_eq = c["equity"]
-        cls = "good" if g["decision"] == "OPEN" else "bad"
+        dec = g["decision"]
+        if dec in ("OPEN", "MOVER"):
+            cls = "good"
+        elif dec == "IO":
+            cls = "io"
+        else:
+            cls = "bad"
         gate_rows.append(
             f"<tr><th>{g['date']}</th>"
             f"<td>{_html.escape(str(g.get('predict_dir') or '—'))}</td>"
@@ -802,8 +886,10 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
     rows = []
     for t in sim["trades"]:
         cls = "good" if (t.get("pnl") or 0) > 0 else "bad"
+        book = t.get("source") or t.get("cond_tally") or ""
         rows.append(
             f"<tr><th>{_html.escape(t['entry_dt'])}</th>"
+            f"<td>{_html.escape(str(book))}</td>"
             f"<td>{_html.escape(t['ticker'])}</td><td>{t['side']}</td>"
             f"<td>{t['shares']}</td><td>${t['entry_px']:.2f}</td>"
             f"<td>{_html.escape(str(t.get('exit_dt') or ''))}</td>"
@@ -827,11 +913,26 @@ def _write_html(sim, st, gates, sweep, payload, gate_score) -> None:
                   f"<td><b>{r['trim_pct']}</b></td><td>{r['raw_pct']}</td>"
                   f"<td>{r['hit']}</td><td>{r['trades']}</td></tr>")
     bs = st["by_side"]
-    gs = "off" if gate_score is None else f"score ≥ {gate_score}"
+    by_src = sim.get("by_source") or {}
+    mv_pnl = (by_src.get("mover") or {}).get("pnl")
+    io_pnl = (by_src.get("io") or {}).get("pnl")
+    extra_cards = ""
+    if sim.get("io_fallback"):
+        extra_cards = (
+            f"<div class='card'>Mover P&amp;L<b>"
+            f"${0 if mv_pnl is None else mv_pnl:,.0f}</b></div>"
+            f"<div class='card'>.io P&amp;L<b>"
+            f"${0 if io_pnl is None else io_pnl:,.0f}</b></div>"
+        )
+    gs = ("soft-red .io (−3 < S < 0); mover the rest" if sim.get("io_fallback")
+          else ("off" if gate_score is None else f"score ≥ {gate_score}"))
+    title = TITLE
+    if sim.get("io_fallback"):
+        title = "Mover paper — .io fallback on soft-red 1d"
     HTML_OUT.write_text(f"""<!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{TITLE}</title>
+<title>{title}</title>
 <style>
 :root{{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}}
@@ -845,14 +946,16 @@ table{{border-collapse:separate;border-spacing:0;width:100%;background:var(--car
 th,td{{padding:7px 8px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
 thead th{{position:sticky;top:0;background:#17213a}}
 tbody th{{background:#17213a;text-align:left}}
-td.good{{color:#4ade80}}td.bad{{color:#f87171}}
+td.good{{color:#4ade80}}td.bad{{color:#f87171}}td.io{{color:#60a5fa}}
 td.why{{text-align:left;white-space:normal;max-width:320px;font-size:12px}}
 </style></head><body><main>
-<h1>{TITLE}</h1>
+<h1>{title}</h1>
 <p class="muted">{'LONG-only' if sim['side'] == 'long' else 'LONG+SHORT'} ·
 top {sim['top_n']}/day by {sim['rank']} · entry {sim['entry']} ·
-hold {sim['hold']} · {sim['pct']:.0%} equity/trade · day gate: {gs} ·
-Futubull fees · cash-accounted.</p>
+hold {sim['hold']} · {sim['pct']:.0%} equity/trade · {gs} ·
+Futubull fees · cash-accounted.
+<a href="../sleeve-combine/" style="color:#93c5fd">sleeve combine</a> ·
+<a href="../" style="color:#93c5fd">.io paper</a></p>
 <div class="cards">
 <div class="card">Final equity<b>${st['final_equity']:,.0f}</b></div>
 <div class="card">Return<b>{st['total_ret_pct']}%</b></div>
@@ -862,16 +965,17 @@ Futubull fees · cash-accounted.</p>
 <div class="card">Win rate<b>{round(100 * (st['hit'] or 0), 1)}%</b></div>
 <div class="card">BUY P&amp;L<b>${bs['BUY']['pnl']:,.0f}</b></div>
 <div class="card">SELL P&amp;L<b>${bs['SELL']['pnl']:,.0f}</b></div>
+{extra_cards}
 </div>
 {svg}
-<h2>Day gate (avoid fall days)</h2>
+<h2>Day book (mover / .io / cash)</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date</th><th>Predict</th><th>Score</th><th>SPY streak</th>
-<th>Gate</th><th>Why</th><th>Advisory</th><th>Day P&amp;L</th></tr></thead>
+<th>Book</th><th>Why</th><th>Advisory</th><th>Day P&amp;L</th></tr></thead>
 <tbody>{''.join(gate_rows)}</tbody></table></div>
 <h2>Filled trades (ET timestamps)</h2>
 <div class="sheet"><table>
-<thead><tr><th>Entry</th><th>Ticker</th><th>Side</th><th>Shares</th>
+<thead><tr><th>Entry</th><th>Book</th><th>Ticker</th><th>Side</th><th>Shares</th>
 <th>Entry px</th><th>Exit</th><th>Exit px</th><th>P&amp;L</th><th>Ret</th>
 <th>Conviction</th><th>Cond</th><th>Why</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>
@@ -911,6 +1015,11 @@ def main() -> None:
                     default=None)
     ap.add_argument("--gate-score", default="1.0",
                     help="'none' disables the day gate")
+    ap.add_argument("--io-fallback", dest="io_fallback", action="store_true",
+                    default=True,
+                    help="soft-red 1d .io fallback (default on for mover)")
+    ap.add_argument("--no-io-fallback", dest="io_fallback",
+                    action="store_false")
     args = ap.parse_args()
     entry = args.entry or ("close" if args.source == "book" else "open")
     hold = args.hold or ("1w" if args.source == "book" else "1d")
@@ -930,21 +1039,40 @@ def main() -> None:
         gates = gate_table(payload, gate_score,
                            dates=sorted(set(r["date"] for r in calls)))
         sweep_fn = lambda: run_book_sweep(calls, payload, gate_score)
+        sim = run_sim(calls, gates, capital=args.capital, top_n=args.top_n,
+                      pct=args.pct, side=args.side, entry=entry,
+                      hold=hold, rank=rank)
+        sim["source"] = args.source
+        sim["book_list"] = args.book_list
+    elif args.io_fallback:
+        from src.sleeve_combine_bt import run_one_live
+        raw = run_one_live("1d", "fallback", "size",
+                           args.capital, args.top_n, args.pct)
+        sim, gates = bt_to_mover_sim(raw, payload)
+        sweep_fn = lambda: run_sweep(payload, 0.0)
+        print(f"[mover-paper] io-fallback 1d · "
+              f"{sum(1 for g in gates if g['decision']=='MOVER')} mover / "
+              f"{sum(1 for g in gates if g['decision']=='IO')} io / "
+              f"{sum(1 for g in gates if g['decision']=='CASH')} cash")
     else:
         calls = tradeable_calls(payload, args.side)
         gates = gate_table(payload, gate_score)
         sweep_fn = lambda: run_sweep(payload, gate_score)
-    print(f"[mover-paper] source={args.source} · {len(calls)} calls · "
-          f"side={args.side} entry={entry} hold={hold} "
-          f"rank={rank} gate={gate_score} · "
-          f"{sum(1 for g in gates if g['decision'] == 'OPEN')}/{len(gates)} days open")
-    sim = run_sim(calls, gates, capital=args.capital, top_n=args.top_n,
-                  pct=args.pct, side=args.side, entry=entry,
-                  hold=hold, rank=rank)
-    sim["source"] = args.source
-    sim["book_list"] = args.book_list
+        print(f"[mover-paper] source={args.source} · {len(calls)} calls · "
+              f"side={args.side} entry={entry} hold={hold} "
+              f"rank={rank} gate={gate_score} · "
+              f"{sum(1 for g in gates if g['decision'] == 'OPEN')}/{len(gates)} days open")
+        sim = run_sim(calls, gates, capital=args.capital, top_n=args.top_n,
+                      pct=args.pct, side=args.side, entry=entry,
+                      hold=hold, rank=rank)
+        sim["source"] = args.source
+        sim["book_list"] = args.book_list
     st = stats(sim)
-    sweep = sweep_fn()
+    try:
+        sweep = sweep_fn()
+    except Exception as e:  # noqa: BLE001 — page still writes without the sweep
+        print(f"[mover-paper] sweep skipped: {e}")
+        sweep = []
     write_outputs(sim, st, gates, sweep, payload, gate_score)
     print(f"[mover-paper] {st['n_trades']} trades, {st['n_skipped']} skipped, "
           f"equity ${st['final_equity']:,.0f} ({st['total_ret_pct']}%), "

@@ -46,6 +46,7 @@ from src.sleeve_combine import (
     MOVER_GATE,
     load_regime,
     route,
+    route_fallback,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -66,7 +67,7 @@ SIZE_BUCKETS = ("large+", "mid", "small/micro")
 OPEN_CLOCK, CLOSE_CLOCK = "09:30 ET", "16:00 ET"
 WINDOW_START = "2026-08-13"
 
-MODES = ("combine", "mover_only", "io_only", "dual", "overlay")
+MODES = ("combine", "mover_only", "io_only", "dual", "overlay", "fallback")
 
 
 def load_fees() -> dict:
@@ -106,7 +107,7 @@ def assert_matched_hold(mode: str, hold: str) -> None:
             f"(allowed: {', '.join(MATCHED_HOLDS)}; "
             f"2w/1m are .io-only reference books)"
         )
-    if mode in ("combine", "overlay") and hold not in HOLD_SESSIONS:
+    if mode in ("combine", "overlay", "fallback") and hold not in HOLD_SESSIONS:
         raise MismatchError(
             f"cannot combine mover with .io hold={hold}: "
             "mover has no 2w/1m book; cash would lock across unknown sessions"
@@ -697,7 +698,7 @@ def run_bt(
 
     for date in cal:
         score = scores.get(date)
-        card = route(score)
+        card = route_fallback(score) if mode == "fallback" else route(score)
         bucket = card["bucket"]
         if mode == "mover_only":
             want = BUCKET_MOVER if (score is None or score >= MOVER_GATE) else BUCKET_CASH

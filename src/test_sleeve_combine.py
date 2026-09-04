@@ -16,6 +16,7 @@ from src.sleeve_combine import (
     max_drawdown,
     render,
     route,
+    route_fallback,
 )
 
 
@@ -56,6 +57,41 @@ def test_missing_predict_parks_in_io() -> None:
 def test_thresholds_match_the_user_rule() -> None:
     assert MOVER_GATE == 1.0
     assert IO_HARD_RED == -3.0
+
+
+def test_route_fallback_soft_red_is_io_else_mover() -> None:
+    assert route_fallback(-0.9)["primary"] == BUCKET_IO
+    assert route_fallback(-2.9)["primary"] == BUCKET_IO
+    assert route_fallback(0.0)["primary"] == BUCKET_MOVER
+    assert route_fallback(0.75)["primary"] == BUCKET_MOVER
+    assert route_fallback(2.25)["primary"] == BUCKET_MOVER
+    assert route_fallback(None)["primary"] == BUCKET_MOVER
+    assert route_fallback(-3.0)["primary"] == BUCKET_CASH
+    assert route_fallback(-6.2)["primary"] == BUCKET_CASH
+
+
+def test_bt_to_mover_sim_labels_soft_red_io() -> None:
+    from src.mover_paper import bt_to_mover_sim
+    raw = {
+        "capital": 100_000, "top_n": 10, "pct": 0.10,
+        "trades": [], "skipped": [],
+        "curve": [
+            {"date": "2026-09-03", "score": -0.9,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+            {"date": "2026-08-28", "score": 0.75,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+            {"date": "2026-08-18", "score": -6.2,
+             "cash": 100_000, "equity": 100_000, "open": 0},
+        ],
+        "final_equity": 100_000, "by_source": {},
+    }
+    sim, gates = bt_to_mover_sim(raw, {"regime": {}})
+    by = {g["date"]: g["decision"] for g in gates}
+    assert by["2026-09-03"] == "IO"
+    assert by["2026-08-28"] == "MOVER"
+    assert by["2026-08-18"] == "CASH"
+    assert sim["io_fallback"] is True
+    assert sim["hold"] == "1d"
 
 
 def test_excel_is_never_the_primary() -> None:
@@ -119,6 +155,8 @@ if __name__ == "__main__":
     test_route_hard_red_is_cash()
     test_missing_predict_parks_in_io()
     test_thresholds_match_the_user_rule()
+    test_route_fallback_soft_red_is_io_else_mover()
+    test_bt_to_mover_sim_labels_soft_red_io()
     test_excel_is_never_the_primary()
     test_excel_ret_is_a_fraction()
     test_daily_returns_and_dd()

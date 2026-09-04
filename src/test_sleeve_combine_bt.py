@@ -354,6 +354,25 @@ def test_run_bt_rejects_bad_mode() -> None:
     raise AssertionError("bad mode must raise")
 
 
+def test_fallback_io_on_soft_red_mover_otherwise() -> None:
+    px = {("AAA", d): (100.0, 100.0) for d in CAL}
+    px.update({("CCC", d): (50.0, 50.0) for d in CAL})
+    sim = run_bt(
+        calendar=CAL,
+        scores={"2026-08-13": 2.25, "2026-08-14": -0.9, "2026-08-17": -6.0},
+        mover_calls={"2026-08-13": [{"ticker": "AAA", "conviction": 1}]},
+        io_picks={"2026-08-14": [{"ticker": "CCC", "score": 1}]},
+        bars=_bars(px), hold="1d", mode="fallback",
+        capital=24_000, top_n=1, pct=0.90, fees=_fees(),
+    )
+    d13 = next(c for c in sim["curve"] if c["date"] == "2026-08-13")
+    d14 = next(c for c in sim["curve"] if c["date"] == "2026-08-14")
+    d17 = next(c for c in sim["curve"] if c["date"] == "2026-08-17")
+    assert d13["route"] == "mover" and d13["filled_am"] == 1
+    assert d14["route"] == "io" and d14["filled_pm"] == 1
+    assert d17["route"] == "cash" and d17["filled_am"] == 0 and d17["filled_pm"] == 0
+
+
 def test_overlay_keeps_io_on_red_and_caps_mover() -> None:
     """Full .io book stays on; mover satellite is 1 name, even with 100% cash."""
     px = {("AAA", d): (100.0, 100.0) for d in CAL}
@@ -477,6 +496,7 @@ if __name__ == "__main__":
     test_parse_reasons_and_keeps()
     test_io_attr_cut_splits_down_vs_green()
     test_run_bt_rejects_bad_mode()
+    test_fallback_io_on_soft_red_mover_otherwise()
     test_overlay_keeps_io_on_red_and_caps_mover()
     test_enrich_sizes_up_overlap_and_adds_book_extra()
     test_fills_are_buy_then_sell()

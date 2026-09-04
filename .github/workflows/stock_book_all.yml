@@ -256,6 +256,11 @@ jobs:
             cp -a dashboard/sleeve-combine/. pages_out/dashboard/sleeve-combine/
             echo "Kept dashboard/sleeve-combine"
           fi
+          if [ -f dashboard/mover-paper/index.html ]; then
+            mkdir -p pages_out/dashboard/mover-paper
+            cp -a dashboard/mover-paper/. pages_out/dashboard/mover-paper/
+            echo "Kept dashboard/mover-paper"
+          fi
           ls -la pages_out pages_out/dashboard
           ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners missing from pages_out"
 
