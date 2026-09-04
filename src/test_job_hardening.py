@@ -434,6 +434,66 @@ def test_empty_futures_tape_not_ready() -> None:
         assert r.reason == "empty_futures_tape"
 
 
+def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
+    """Resume leftover 09-03 sectors without re-calling the LLM."""
+    src = (ROOT / "src" / "run_sector_outcome.py").read_text(encoding="utf-8")
+    assert "setdefaulttimeout(30)" in src
+    assert "threads=False" in src
+    assert "outcome already on disk" in src
+    # One failure must not abort the remaining 10.
+    assert 'print(f"[sector-outcome] WARN {sector}: {e}")' in src
+
+
+def test_sector_reflect_skips_existing() -> None:
+    src = (ROOT / "src" / "run_sector_reflect.py").read_text(encoding="utf-8")
+    assert "reflect already on disk" in src
+    assert 'print(f"[sector-reflect] WARN {sector}: {e}")' in src
+
+
+def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
+    """Live main has 09-03 reflect_trace + 6k transcript and ZERO *_reflect.md."""
+    import json
+    import tempfile
+    from src.run_reflect import last_assistant
+
+    src = (ROOT / "src" / "run_reflect.py").read_text(encoding="utf-8")
+    assert 'f"{date_str}_reflect.md"' in src
+    assert "reuse transcript" in src
+    assert "reflect already on disk" in src
+    with tempfile.TemporaryDirectory() as td:
+        p = Path(td) / "tx.json"
+        p.write_text(json.dumps({
+            "provider": "openclaw",
+            "messages": [
+                {"role": "user", "content": "hi"},
+                {"role": "assistant", "content": "TRIAGE " + ("x" * 250)},
+            ],
+        }), encoding="utf-8")
+        text = last_assistant(str(p))
+        assert text.startswith("TRIAGE")
+        assert len(text) >= 200
+        assert last_assistant(str(Path(td) / "missing.json")) == ""
+
+
+def test_postclose_pushes_after_each_llm_layer() -> None:
+    """Kill after reflect / sectors / learn must still leave those files on main."""
+    src = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    idx_ref = src.index('step("General reflect"')
+    idx_push_ref = src.index("_push_pack(date)", idx_ref)
+    idx_out = src.index('step("Sector outcomes"')
+    idx_push_out = src.index("_push_pack(date)", idx_out)
+    idx_sec_ref = src.index('step("Sector reflect"')
+    idx_learn = src.index('step("Learn cycle"')
+    idx_push_learn = src.index("_push_pack(date)", idx_learn)
+    idx_cap = src.index('step("Captain research')
+    assert idx_push_ref < idx_out, "must persist general reflect before sectors"
+    assert idx_push_out < idx_sec_ref, "must persist sector outcomes before reflects"
+    assert idx_push_learn < idx_cap, "must persist dated learnings before captains"
+    heat = (ROOT / "src" / "map_heat_postclose.py").read_text(encoding="utf-8")
+    assert "setdefaulttimeout(30)" in heat
+    assert "threads=False" in heat
+
+
 def main() -> None:
     tests = [
         test_grok_only_default_is_off,
@@ -461,6 +521,10 @@ def main() -> None:
         test_ranker_inputs_before_llm_packet,
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
+        test_sector_outcome_skips_existing_and_times_out_yf,
+        test_sector_reflect_skips_existing,
+        test_general_reflect_writes_gate_file_and_reuses_transcript,
+        test_postclose_pushes_after_each_llm_layer,
     ]
     failed = 0
     for fn in tests:

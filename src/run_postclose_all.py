@@ -157,6 +157,9 @@ def _run_one(date: str, force: bool = False) -> None:
          [py, "-m", "src.run_reflect", "--date", date],
          _exists_gt(f"01_daily/general/{date}_reflect.md", 200),
          llm_timeout_s=llm_to)
+    # 09-03 already had a 6k-char transcript but never wrote *_reflect.md.
+    # Land it before the 11-sector loop so a kill still heals the gate.
+    _push_pack(date)
 
     # 11 sectors × (HTTP cap + slack). A 5400s wall died mid-pack when
     # several Grok calls each burned the 900s hang budget.
@@ -165,6 +168,8 @@ def _run_one(date: str, force: bool = False) -> None:
          [py, "-m", "src.run_sector_outcome", "--date", date],
          skip_if_good.check_sector_outcomes(date),
          timeout_s=sector_wall, llm_timeout_s=llm_to)
+    # 11 Grok calls. Land whatever graded before reflect/learn or a kill.
+    _push_pack(date)
     n_reflect = 0
     sec = ROOT / "01_daily" / "sectors" / date
     if sec.is_dir():
@@ -189,6 +194,8 @@ def _run_one(date: str, force: bool = False) -> None:
          [py, "-m", "src.learn_cycle", "--date", date],
          skip_if_good.check_learn_cycle(date),
          llm_timeout_s=llm_to)
+    # Captains can burn 2h. Dated learnings must already be on main.
+    _push_pack(date)
 
     heat_src = ROOT / "01_daily" / "map_heat" / f"{date}_map_heat.json"
     heat_dst = ROOT / "01_daily" / "map_heat" / f"{target}_map_heat.json"

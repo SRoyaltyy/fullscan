@@ -67,6 +67,10 @@ def run_one(sector: str, date_str: str) -> None:
 
     slug = _slug(sector)
     out_dir = os.path.join(config.DAILY_SECTORS, date_str)
+    existing = os.path.join(out_dir, f"{slug}_reflect.md")
+    if os.path.isfile(existing) and os.path.getsize(existing) >= 200:
+        print(f"[sector-reflect] skip {sector}: reflect already on disk")
+        return
     predict_md = _read(os.path.join(out_dir, f"{slug}_predict.md"))
     outcome_md = _read(os.path.join(out_dir, f"{slug}_outcome.md"))
 
@@ -149,7 +153,10 @@ def main() -> None:
         if sector not in FINVIZ_SECTORS:
             raise SystemExit(f"unknown sector {sector}")
         print(f"\n======== SECTOR REFLECT: {sector} ========\n")
-        run_one(sector, date_str)
+        try:
+            run_one(sector, date_str)
+        except Exception as e:  # noqa: BLE001
+            print(f"[sector-reflect] WARN {sector}: {e}")
 
 
 if __name__ == "__main__":
