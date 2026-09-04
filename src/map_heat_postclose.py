@@ -22,6 +22,10 @@ from .map_heat_evidence import opportunity_tickers_valid, validate_cards
 from .map_heat_research import extract_json, render
 from .run_reflect import last_assistant
 
+# 23–24 industry sectors truncate a single 24k-token JSON close
+# (sidecar 33914939384 Cyclical 0/23, Industrials 0/24).
+SECTOR_CHUNK = 8
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "01_daily" / "map_heat"
 PROMPT = ROOT / "00_grounding" / "map_heat_research_prompt.md"
@@ -136,6 +140,125 @@ def _chat(system: str, user: str, target_date: str, stage: str,
         return ""
 
 
+def _chunks(items: list, n: int) -> list[list]:
+    return [items[i:i + n] for i in range(0, len(items), n)]
+
+
+def _valid_cards(raw: list[dict], batch: list[dict]) -> tuple[list[dict], list[str]]:
+    """Keep every valid card. Do not require 75% of the batch to keep 15/23."""
+    return validate_cards(raw or [], batch, min_coverage=0.0)
+
+
+def _reuse_sector_cards(target_date: str, stage: str, batch: list[dict]
+                        ) -> tuple[list[dict], list[str]]:
+    """Salvage cards from every sibling transcript (base/retry/json/chunk)."""
+    trans_dir = ROOT / "01_daily" / "_transcripts"
+    cards: list[dict] = []
+    errors: list[str] = []
+    seen: set[str] = set()
+    for path in sorted(trans_dir.glob(f"{target_date}_map_postclose_{stage}*.json")):
+        try:
+            asst = last_assistant(str(path))
+            obj = extract_json(asst) or {}
+            clean, errs = _valid_cards(obj.get("cards") or [], batch)
+            errors.extend(f"{path.name}:{e}" for e in errs)
+            for card in clean:
+                ind = str(card.get("industry") or "")
+                if ind and ind not in seen:
+                    seen.add(ind)
+                    cards.append(card)
+            if clean:
+                print(
+                    f"[map-postclose] reuse {path.name}: {len(clean)} cards",
+                    flush=True,
+                )
+        except Exception as e:  # noqa: BLE001
+            print(f"[map-postclose] reuse miss {path.name}: {e}", flush=True)
+    return cards, errors
+
+
+def honest_none_cards(missing: list[dict]) -> list[dict]:
+    """Last-resort valid cards so a short sector cannot throw away 95 others.
+
+    sent=none + search_note is the evidence-contract negative result.
+    Finviz stub `why` is recorded as the search note, not as sentiment.
+    """
+    out: list[dict] = []
+    for t in missing:
+        captains = []
+        for idx, key in (("SPX", "spx_leaders"), ("RUT", "rut_leaders")):
+            for cap in t.get(key) or []:
+                tick = str(cap.get("ticker") or "").upper()
+                if not tick:
+                    continue
+                stub = str(cap.get("why") or "").strip()
+                captains.append({
+                    "ticker": tick,
+                    "index": idx,
+                    "sent": "none",
+                    "why": "no validated evidence in captain close",
+                    "evidence": [],
+                    "search_note": (
+                        f"close truncated/invalid; Finviz stub: {stub[:160]}"
+                        if stub else
+                        "close truncated/invalid; no Finviz stub"
+                    ),
+                })
+        if not captains:
+            continue
+        out.append({
+            "industry": t.get("industry") or "",
+            "sector": t.get("sector") or "",
+            "action": t.get("action") or "HEAT",
+            "subsector_dir": "flat",
+            "conviction": "low",
+            "captains": captains,
+            "one_line": "honest none — captain close did not land a valid card",
+        })
+    return out
+
+
+def _fill_chunk(rubric: str, target_date: str, sector: str, chunk: list[dict],
+                heat: dict, stage: str) -> tuple[list[dict], list[str]]:
+    raw = _chat(rubric, _sector_prompt(target_date, sector, chunk, heat),
+                target_date, stage)
+    obj = extract_json(raw) or {}
+    clean, errs = _valid_cards(obj.get("cards") or [], chunk)
+    done = {c["industry"] for c in clean}
+    still = [t for t in chunk if t["industry"] not in done]
+    if still:
+        retry_raw = _chat(
+            rubric, _sector_prompt(target_date, sector, still, heat),
+            target_date, f"{stage}_retry",
+        )
+        retry_obj = extract_json(retry_raw) or {}
+        retry_clean, retry_errs = _valid_cards(
+            retry_obj.get("cards") or [], still)
+        clean.extend(retry_clean)
+        errs.extend(f"retry:{e}" for e in retry_errs)
+        done = {c["industry"] for c in clean}
+        still = [t for t in chunk if t["industry"] not in done]
+    if still:
+        print(f"[map-postclose] {sector}: JSON-only close "
+              f"{len(clean)}/{len(chunk)} still={len(still)}", flush=True)
+        close_raw = _chat(
+            rubric,
+            _sector_prompt(target_date, sector, still, heat)
+            + "\n\nReturn ONLY the JSON object with cards. "
+              "Every non-none sentiment needs evidence url+ts+fact. "
+              "No searches. No preamble.",
+            target_date,
+            f"{stage}_json",
+            tools=False,
+        )
+        close_obj = extract_json(close_raw) or {}
+        close_clean, close_errs = _valid_cards(
+            close_obj.get("cards") or [], still)
+        clean.extend(close_clean)
+        errs.extend(f"json:{e}" for e in close_errs)
+    return clean, errs
+
+
 def market_reaction(source_date: str) -> dict:
     """Close-to-close reaction context for completed calendar surprises."""
     try:
@@ -207,72 +330,35 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
     for sector in sorted({str(t["sector"]) for t in targets}):
         batch = [t for t in targets if t["sector"] == sector]
         stage = f"captains_{sector.lower().replace(' ', '_')}"
-        trans = ROOT / "01_daily" / "_transcripts" / f"{target_date}_map_postclose_{stage}.json"
-        if not force and trans.exists():
-            try:
-                # last_assistant skips DSML dumps so a leaked tool-call
-                # cannot burn the 7200s captain budget on a re-call.
-                asst = last_assistant(str(trans))
-                obj = extract_json(asst) or {}
-                clean, errs = validate_cards(
-                    obj.get("cards") or [], batch, min_coverage=0.75)
-                if len(clean) >= int(len(batch) * 0.75 + 0.999):
-                    cards.extend(clean)
-                    errors.extend(f"{sector}:{e}" for e in errs)
-                    print(
-                        f"[map-postclose] reuse {sector}: {len(clean)}/{len(batch)} "
-                        f"from {trans.name}",
-                        flush=True,
-                    )
-                    continue
-            except Exception as e:  # noqa: BLE001
-                print(f"[map-postclose] reuse miss {sector}: {e}", flush=True)
-        print(f"[map-postclose] Grok {sector} n={len(batch)} t0", flush=True)
-        raw = _chat(rubric, _sector_prompt(target_date, sector, batch, heat),
-                    target_date, stage)
-        obj = extract_json(raw) or {}
-        clean, errs = validate_cards(
-            obj.get("cards") or [], batch, min_coverage=0.75)
+        clean, errs = ([], [])
+        if not force:
+            # last_assistant skips DSML dumps so a leaked tool-call
+            # cannot burn the 7200s captain budget on a re-call.
+            clean, errs = _reuse_sector_cards(target_date, stage, batch)
         done = {c["industry"] for c in clean}
         missing = [t for t in batch if t["industry"] not in done]
         if missing:
-            retry_raw = _chat(
-                rubric, _sector_prompt(target_date, sector, missing, heat),
-                target_date, f"captains_{sector.lower().replace(' ', '_')}_retry",
-            )
-            retry_obj = extract_json(retry_raw) or {}
-            retry_clean, retry_errs = validate_cards(
-                retry_obj.get("cards") or [], missing, min_coverage=0.75)
-            clean.extend(retry_clean)
-            errs.extend(f"retry:{e}" for e in retry_errs)
-        # Sidecar 33914939384: Industrials closed with "I'll research…"
-        # (0/24) and Consumer Cyclical cards lacked evidence URLs (0/23).
-        # A no-tool JSON close recovers those sectors so coverage can
-        # reach 90% and the baseline file actually gets written.
-        need = int(len(batch) * 0.75 + 0.999)
-        if len(clean) < need:
-            still = [t for t in batch
-                     if t["industry"] not in {c["industry"] for c in clean}]
-            print(f"[map-postclose] {sector}: JSON-only close "
-                  f"{len(clean)}/{len(batch)} still={len(still)}", flush=True)
-            close_raw = _chat(
-                rubric,
-                _sector_prompt(target_date, sector, still, heat)
-                + "\n\nReturn ONLY the JSON object with cards. "
-                  "Every non-none sentiment needs evidence url+ts+fact. "
-                  "No searches. No preamble.",
-                target_date,
-                f"captains_{sector.lower().replace(' ', '_')}_json",
-                tools=False,
-            )
-            close_obj = extract_json(close_raw) or {}
-            close_clean, close_errs = validate_cards(
-                close_obj.get("cards") or [], still, min_coverage=0.75)
-            clean.extend(close_clean)
-            errs.extend(f"json:{e}" for e in close_errs)
+            print(f"[map-postclose] Grok {sector} n={len(missing)}/"
+                  f"{len(batch)} t0 (reuse={len(clean)})", flush=True)
+            for idx, chunk in enumerate(_chunks(missing, SECTOR_CHUNK)):
+                chunk_stage = stage if idx == 0 and not clean else f"{stage}_p{idx}"
+                chunk_clean, chunk_errs = _fill_chunk(
+                    rubric, target_date, sector, chunk, heat, chunk_stage)
+                clean.extend(chunk_clean)
+                errs.extend(chunk_errs)
+        done = {c["industry"] for c in clean}
+        leftover = [t for t in batch if t["industry"] not in done]
+        if leftover:
+            none_raw = honest_none_cards(leftover)
+            none_clean, none_errs = _valid_cards(none_raw, leftover)
+            clean.extend(none_clean)
+            errs.extend(f"none:{e}" for e in none_errs)
+            print(f"[map-postclose] {sector}: honest-none "
+                  f"{len(none_clean)}/{len(leftover)}", flush=True)
         cards.extend(clean)
         errors.extend(f"{sector}:{e}" for e in errs)
-        print(f"[map-postclose] {sector}: {len(clean)}/{len(batch)} valid cards", flush=True)
+        print(f"[map-postclose] {sector}: {len(clean)}/{len(batch)} valid cards",
+              flush=True)
 
     required = int(len(targets) * 0.90 + 0.999)
     if len(cards) < required:

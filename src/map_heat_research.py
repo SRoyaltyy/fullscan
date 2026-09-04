@@ -105,6 +105,66 @@ def select_targets(heat: dict) -> list[dict]:
     return picked
 
 
+def _object_at(text: str, start: int) -> tuple[dict | None, int]:
+    """Parse one JSON object at start, or None if the braces never close."""
+    if start < 0 or start >= len(text) or text[start] != "{":
+        return None, start + 1
+    depth = 0
+    in_str = False
+    esc = False
+    i = start
+    while i < len(text):
+        ch = text[i]
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                blob = re.sub(r",\s*([}\]])", r"\1", text[start:i + 1])
+                try:
+                    obj = json.loads(blob)
+                except ValueError:
+                    try:
+                        obj, _ = json.JSONDecoder().raw_decode(blob)
+                    except ValueError:
+                        return None, start + 1
+                return (obj if isinstance(obj, dict) else None), i + 1
+        i += 1
+    return None, start + 1
+
+
+def salvage_cards(text: str) -> list[dict]:
+    """Keep complete industry cards when the model truncates the JSON fence.
+
+    Sidecar 33914939384 wrote a 30k Consumer Cyclical close that cut off
+    mid-card. extract_json returned None and the whole sector scored 0/23.
+    """
+    if not text:
+        return []
+    cards: list[dict] = []
+    seen: set[str] = set()
+    for m in re.finditer(r'"industry"\s*:', text):
+        start = text.rfind("{", 0, m.start())
+        obj, _ = _object_at(text, start)
+        if not obj:
+            continue
+        industry = str(obj.get("industry") or "")
+        if not industry or not obj.get("captains") or industry in seen:
+            continue
+        seen.add(industry)
+        cards.append(obj)
+    return cards
+
+
 def extract_json(text: str) -> dict | None:
     if not text or not str(text).strip():
         return None
@@ -129,6 +189,9 @@ def extract_json(text: str) -> dict | None:
         if isinstance(obj, dict) and (obj.get("cards") or obj.get("opportunities")
                                       or obj.get("parent_splits")):
             return obj
+    salvaged = salvage_cards(text)
+    if salvaged:
+        return {"cards": salvaged}
     return None
 
 

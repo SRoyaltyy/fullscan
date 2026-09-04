@@ -680,6 +680,11 @@ def test_search_and_sector_rounds_are_bounded() -> None:
     mh = (ROOT / "src" / "map_heat_postclose.py").read_text(encoding="utf-8")
     assert "JSON-only close" in mh
     assert "tools=False" in mh
+    assert "SECTOR_CHUNK" in mh
+    assert "honest_none_cards" in mh
+    assert "honest-none" in mh
+    rs = (ROOT / "src" / "map_heat_research.py").read_text(encoding="utf-8")
+    assert "def salvage_cards" in rs
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
@@ -754,7 +759,8 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     assert "setdefaulttimeout(30)" in heat
     assert "threads=False" in heat
     assert "from .run_reflect import last_assistant" in heat
-    assert "last_assistant(str(trans))" in heat
+    assert "_reuse_sector_cards" in heat
+    assert "last_assistant(str(path))" in heat
 
 
 def main() -> None:
