@@ -55,10 +55,20 @@ on:
   schedule:
     - cron: "10 10 * * 1-5"   # ~06:10 ET — after 05:40 scrape
     - cron: "15 13 * * 1-5"   # ~09:15 ET — last chance before the bell
-  # Merge / pre-open land on main must not wait for a newly-registered
-  # cron. skip-if-good no-ops when 1d is already all-green.
+  # Merge of ranker/heal code must not wait for a newly-registered cron.
+  # Do not match data/stock_book commits (GITHUB_TOKEN already will not
+  # retrigger; a PAT still must not start a second rank). Pre-Open ALL
+  # completion is covered by workflow_run. skip-if-good no-ops when
+  # 1d is already all-green.
   push:
     branches: [main]
+    paths:
+      - "src/stock_book.py"
+      - "src/green_pile.py"
+      - "src/skip_if_good.py"
+      - "src/run_stock_book_all.py"
+      - "src/weather.py"
+      - ".github/workflows/stock_book_all.yml"
   workflow_run:
     workflows: ["Pre-Open ALL (predictive one-shot)"]
     types: [completed]

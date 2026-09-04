@@ -373,6 +373,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "stock-book-all-ubuntu" in book_yml
     assert "stock-book-all-ecs" in book_yml
     assert 'branches: [main]' in book_yml
+    assert "src/green_pile.py" in book_yml
+    assert "src/stock_book.py" in book_yml
     assert "Pre-Open ALL (predictive one-shot)" in book_yml
     assert "Do not add a cron back" not in book_yml
     health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
@@ -386,6 +388,11 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "OPENCLAW_TIMEOUT=900" in post
     assert '[ "${OPENCLAW_TIMEOUT}" = "10800" ]' in post
     assert "exit 1" not in post
+    assert "--job postclose_all" in post
+    assert "night_pack_dates" in post
+    assert 'SKIP_ARGS=(--job postclose_all)' in post
+    assert 'PC_ARGS=(--llm-backend "${LLM_BACKEND:-auto}")' in post
+    assert 'dated=${SOURCE_DATE:-night_pack_dates}' in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
     assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
     assert "night_pack_dates" in learn
