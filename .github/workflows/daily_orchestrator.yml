@@ -12,7 +12,8 @@ on:
   schedule:
     - cron: "50 11 * * 1-5"
     - cron: "20 13 * * 1-5"   # ~09:20 ET EDT — book heal if pre-open died
-    - cron: "15 21 * * 1-5"   # ~17:15 ET — first Post-Close ALL fire (16:10 cron is new)
+    - cron: "20 20 * * 1-5"   # ~16:20 ET — if the new 16:10 postclose cron skipped day 1
+    - cron: "15 21 * * 1-5"   # ~17:15 ET — Post-Close ALL / sidecar if 16:10 still missed
     - cron: "30 16 * * 0"
   workflow_dispatch:
     inputs:

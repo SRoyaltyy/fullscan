@@ -111,12 +111,18 @@ def test_dead_relvol_1d_buy_is_not_good() -> None:
 
 def test_night_pack_dates_heals_prior_session_after_bell() -> None:
     from datetime import datetime
+    from unittest import mock
     from zoneinfo import ZoneInfo
     et = ZoneInfo("America/New_York")
     after_bell = datetime(2026, 9, 4, 16, 10, tzinfo=et)
     dates = skip_if_good.night_pack_dates(after_bell)
     assert dates[-1] == "2026-09-04"
-    assert "2026-09-03" in dates
+    # Live 09-03 pack is complete — do not re-grade it after the bell.
+    assert dates == ["2026-09-04"]
+    with mock.patch.object(skip_if_good, "check_postclose_all",
+                           return_value=False):
+        assert skip_if_good.night_pack_dates(after_bell) == [
+            "2026-09-03", "2026-09-04"]
     before_bell = datetime(2026, 9, 4, 8, 40, tzinfo=et)
     assert skip_if_good.last_closed_session(before_bell) == "2026-09-03"
     assert skip_if_good._prev_weekday("2026-09-04") == "2026-09-03"
@@ -124,24 +130,26 @@ def test_night_pack_dates_heals_prior_session_after_bell() -> None:
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
-    # 09-03 now has dated learnings + 8 restored essays, but the three
-    # dump leftovers (XLB/XLE/XLV) must still fail the pack.
+    # 09-03 dated learnings + full sector pack must SKIP. 09-04 is still
+    # the live session and must not skip on a stale board.
     assert skip_if_good.check_daily_pipeline_outcome("2026-09-03") is True
     assert skip_if_good.check_learn_cycle("2026-09-03") is True
-    assert skip_if_good.check_postclose_all("2026-09-03") is False
+    assert skip_if_good.check_postclose_all("2026-09-03") is True
+    assert skip_if_good.check_learn_cycle("2026-09-04") is False
+    assert skip_if_good.check_postclose_all("2026-09-04") is False
 
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
-    # 09-03 reflect.md + 11 sector reflects landed. Eight real essays
-    # were restored from 11e5405; XLB/XLE/XLV are still tool-call dumps
-    # and must not skip the heal.
+    # Sidecar 33891191403 rewrote the last three 09-03 dumps (XLB/XLE/XLV)
+    # into real essays. Energy must not still look like tool-call XML.
     assert skip_if_good.check_general_reflect("2026-09-03") is True
-    assert skip_if_good.check_sector_outcomes("2026-09-03") is False
+    assert skip_if_good.check_sector_outcomes("2026-09-03") is True
     assert skip_if_good.check_sector_reflects("2026-09-03") is True
-    assert skip_if_good.check_postclose_all("2026-09-03") is False
+    assert skip_if_good.check_postclose_all("2026-09-03") is True
     energy = Path("01_daily/sectors/2026-09-03/energy_outcome.md")
     assert energy.is_file()
-    assert skip_if_good.is_tool_dump(energy.read_text(encoding="utf-8"))
+    assert not skip_if_good.is_tool_dump(energy.read_text(encoding="utf-8"))
+    assert len(energy.read_text(encoding="utf-8")) >= 200
 
 
 def test_sector_md_counts_only_quality_files() -> None:
