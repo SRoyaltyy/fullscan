@@ -386,6 +386,11 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "OPENCLAW_TIMEOUT=900" in post
     assert '[ "${OPENCLAW_TIMEOUT}" = "10800" ]' in post
     assert "exit 1" not in post
+    assert "--job postclose_all" in post
+    assert "night_pack_dates" in post
+    assert 'SKIP_ARGS=(--job postclose_all)' in post
+    assert 'PC_ARGS=(--llm-backend "${LLM_BACKEND:-auto}")' in post
+    assert 'dated=${SOURCE_DATE:-night_pack_dates}' in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
     assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
     assert "night_pack_dates" in learn

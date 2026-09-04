@@ -55,25 +55,32 @@ bash scripts/ensure_openclaw_timeouts.sh || true
 
 PY="${FULLSCAN_PYTHON:-python3}"
 [ -x "$ROOT/.venv/bin/python" ] && PY="$ROOT/.venv/bin/python"
+# Do not pass --date last_closed. After 16:00 ET that is today, and
+# run_postclose_all --date skips night_pack_dates() — 2026-09-03
+# _learnings.md would stay missing. Explicit SOURCE_DATE is the override.
+FORCE_FLAG=()
+if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
+  FORCE_FLAG=(--force)
+fi
 if [ -n "${SOURCE_DATE:-}" ]; then
   SOURCE="$SOURCE_DATE"
+  SKIP_ARGS=(--job postclose_all --date "$SOURCE")
+  PC_ARGS=(--date "$SOURCE" --llm-backend "${LLM_BACKEND:-auto}")
 else
   SOURCE=$("$PY" -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+  SKIP_ARGS=(--job postclose_all)
+  PC_ARGS=(--llm-backend "${LLM_BACKEND:-auto}")
 fi
 if [ -n "${TARGET_DATE:-}" ]; then
   TARGET="$TARGET_DATE"
 else
   TARGET=$("$PY" -c "from src.map_heat_postclose import next_weekday; print(next_weekday('$SOURCE'))")
 fi
-FORCE_FLAG=()
-if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
-  FORCE_FLAG=(--force)
-fi
-echo "[map-postclose] POST-CLOSE ALL source=$SOURCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false}"
+echo "[map-postclose] POST-CLOSE ALL last_closed=$SOURCE OPENCLAW_TIMEOUT=$OPENCLAW_TIMEOUT force=${FORCE:-false} dated=${SOURCE_DATE:-night_pack_dates}"
 
 if [ "${FORCE:-}" != "true" ] && [ "${FORCE:-}" != "1" ]; then
-  if "$PY" -c "from src.skip_if_good import check_postclose_all; raise SystemExit(0 if check_postclose_all('$SOURCE') else 1)"; then
-    echo "[map-postclose] $SOURCE pack already on disk — skip"
+  if "$PY" -m src.skip_if_good "${SKIP_ARGS[@]}"; then
+    echo "[map-postclose] night pack already on disk — skip"
     exit 0
   fi
 fi
@@ -91,7 +98,6 @@ fi
 # Aliyun Cloudflare-blocks Elite HTML. Never scrape here.
 export FINVIZ_SKIP_LIVE=1
 export LLM_BACKEND="${LLM_BACKEND:-auto}"
-PC_ARGS=(--date "$SOURCE" --llm-backend "${LLM_BACKEND:-auto}")
 PC_ARGS+=("${FORCE_FLAG[@]}")
 set +e
 "$PY" -m src.run_postclose_all "${PC_ARGS[@]}"
