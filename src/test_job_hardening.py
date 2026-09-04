@@ -261,6 +261,12 @@ def test_ranker_inputs_before_llm_packet() -> None:
     wxb = book.find("Weather / regime (before LLM heals")
     ev = book.find("Event scanner (primary)")
     assert 0 <= wxb < ev
+    land = pre.find("Stock book + paper dashboard")
+    cat = pre.find('step("catalyst"')
+    grok = pre.find("grok_review.review_preopen")
+    assert 0 <= land < cat
+    assert 0 <= land < grok
+    assert "past 09:25 ET — book still runs" in pre
 
 
 def test_ecs_timers_stay_green_and_push() -> None:

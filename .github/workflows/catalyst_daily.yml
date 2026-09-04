@@ -5,8 +5,8 @@ name: Catalyst daily (bounded dossiers)
 # mega-cap earnings, and news-action conflicts. Writes dossiers,
 # merges net_signal into that day's news actions (dashboard path).
 #
-# Primary run is INSIDE Pre-Open ALL, after map-heat + news actions
-# and before predicts, so dossiers land before 09:30 ET.
+# Primary run is INSIDE Pre-Open ALL, AFTER the stock book.
+# Eight names × web search ate 2026-09-02 and blocked BUY/SELL.
 # This workflow is last-chance (08:15 ET) plus afternoon skip-if-good
 # so Stock Book ALL can still merge if morning burned the clock.
 # Analysis uses Grok first (OpenClaw / Grok 4.6), then DeepSeek when Grok

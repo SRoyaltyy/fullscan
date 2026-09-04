@@ -10,9 +10,9 @@ Does in one ECS job (per-step skip-if-good, fail-closed QC):
   → map heat research (morning delta over last night's baseline)
   → news actions
   → general predict → 11 sector predicts → sector board
-  → catalyst dossiers (layer 3; optional, after the 09:25-critical predicts)
-  → output_qc (regex) → Grok reads the files as text (skipped if prior-ok)
   → stock book + paper dashboard  (--with-book, default on)
+  → catalyst dossiers (layer 3; optional, AFTER the book)
+  → output_qc (regex) → Grok reads the files as text (skipped if prior-ok)
 
 Post-close grades / learn / tonight's captain research live in
 src.run_postclose_all — do not run them here.
@@ -419,7 +419,18 @@ def run(date: str | None = None, force: bool = False,
 
     attempts: list[dict] = []
 
+    llm_steps = {
+        "news_parse", "events", "events_catcher", "news_judge",
+        "map_heat_research", "news_actions", "general_predict",
+        "sector_predict", "catalyst",
+    }
+
     def step(key: str, title: str, cmd: list[str]) -> int:
+        if (not force) and key in llm_steps and preopen.past_predict_cutoff():
+            print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
+            attempts.append({"key": key, "title": title, "cmd": cmd,
+                             "returncode": 0, "skipped": True})
+            return 0
         if not force and _packet_step_done(key, date):
             print(f"[preopen-all] skip {title} (already quality-ok)")
             attempts.append({"key": key, "title": title, "cmd": cmd,
@@ -490,26 +501,49 @@ def run(date: str | None = None, force: bool = False,
         step("news_actions", "News actions",
              [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
               "--date", date, *fa])
-        # Time-critical predicts first. Eight catalyst names each do
-        # 30+19 web searches + two LLM calls and on 2026-09-02 that ate
-        # the morning — Tech/Utilities then hit the 09:25 refuse.
-        # Dossiers still merge into actions for the later stock book.
+        # Time-critical predicts first. Catalyst waits until after the book.
         step("general_predict", "General market predict",
              [py, "-m", "src.run_predict", "--date", date, *fa])
         step("sector_predict", "Per-sector predict (all 11)",
              [py, "-m", "src.run_sector_predict", "--date", date, *fa])
         step("sector_board", "Sector board",
              [py, "-m", "src.sector_board", "--date", date])
-        # Weather / join / AB already ran before the LLM packet.
-        step("catalyst", "Catalyst dossiers (identified names)",
+
+    # Predicts are optional weather inputs. Refresh join so s_join
+    # sees the same-day general/sector essays when they landed.
+    # Do not use step() — skip-if-good would skip this refresh.
+    # Book is next. Catalyst / Grok review wait until BUY/SELL is on disk —
+    # 2026-09-02 eight dossiers ate the morning and the ranker never started.
+    print("[preopen-all] → Weather / join refresh (before book)")
+    _run([py, "-m", "src.weather", "--date", date])
+    _run([py, "-m", "src.join", "--date", date])
+    snapshot_persist(date)
+
+    book_ok = True
+    if with_book:
+        from . import run_stock_book_all, skip_if_good
+        if (not force) and skip_if_good.check_stock_book_all(date):
+            print(f"[preopen-all] skip stock book (already on disk for {date})")
+        else:
+            print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
+            try:
+                # Essays already ran (or 09:25 skipped them). Do not start
+                # another 11-sector pass in front of the ranker.
+                run_stock_book_all.run(
+                    date=date, force=force, skip_llm=True, top=25)
+            except SystemExit as e:
+                print(f"[preopen-all] WARN: stock book exited: {e}")
+            except Exception as e:  # noqa: BLE001 — still publish what we wrote
+                print(f"[preopen-all] WARN: stock book crashed: {e}")
+        book_ok = skip_if_good.check_stock_book_all(date)
+        if not book_ok:
+            print(f"[preopen-all] WARN: stock book still missing for {date}")
+    else:
+        print("[preopen-all] --no-book: leaving stock book to a later click")
+
+    if not skip_writes:
+        step("catalyst", "Catalyst dossiers (after book)",
              [py, "-m", "src.catalyst_daily", "--date", date, *fa])
-        # Predicts are optional weather inputs. Refresh join so s_join
-        # sees the same-day general/sector essays when they landed.
-        # Do not use step() — skip-if-good would skip this refresh.
-        print("[preopen-all] → Weather / join refresh (after predicts)")
-        _run([py, "-m", "src.weather", "--date", date])
-        _run([py, "-m", "src.join", "--date", date])
-        snapshot_persist(date)
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)
@@ -521,6 +555,10 @@ def run(date: str | None = None, force: bool = False,
         grok = {"ok": True, "notes": "prior Grok text review still good — skipped",
                 "fails": []}
         print("[preopen-all] skip Grok text review (prior_ok)")
+    elif (not force) and preopen.past_predict_cutoff():
+        grok = {"ok": True, "notes": "past 09:25 ET — skipped; book already landed",
+                "fails": []}
+        print("[preopen-all] skip Grok text review (past 09:25 ET)")
     else:
         grok = grok_review.review_preopen(date, mechanical_report=report)
         print("")
@@ -619,8 +657,9 @@ def run(date: str | None = None, force: bool = False,
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
         "all_ok": bool(report.get("all_ok")) and not missing_required
-                  and bool(grok.get("ok")),
+                  and bool(grok.get("ok")) and (not with_book or book_ok),
         "qc_all_ok": bool(report.get("all_ok")),
+        "book_ok": book_ok,
         "grok_ok": bool(grok.get("ok")),
         "grok_fails": grok.get("fails") or [],
         "missing_required": missing_required,
@@ -647,7 +686,8 @@ def run(date: str | None = None, force: bool = False,
         f"# Pre-open ALL status — {date}",
         "",
         f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
-        f"grok_ok={status['grok_ok']}  missing={missing_required or 'none'}",
+        f"book_ok={status['book_ok']}  grok_ok={status['grok_ok']}  "
+        f"missing={missing_required or 'none'}",
         "",
         "Predictive modules + stock book (must land before 09:30 ET).",
         "Outcome / learn / tonight's captain research = Post-Close ALL.",
@@ -659,27 +699,6 @@ def run(date: str | None = None, force: bool = False,
     print(f"[preopen-all] wrote {status_path}")
     print(f"[preopen-all] wrote {md_path}")
     snapshot_persist(date)
-
-    book_ok = True
-    if with_book:
-        from . import run_stock_book_all, skip_if_good
-        if (not force) and skip_if_good.check_stock_book_all(date):
-            print(f"[preopen-all] skip stock book (already on disk for {date})")
-        else:
-            print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
-            packet_ok = bool(report.get("all_ok")) and not missing_required
-            try:
-                run_stock_book_all.run(
-                    date=date, force=force, skip_llm=packet_ok, top=25)
-            except SystemExit as e:
-                print(f"[preopen-all] WARN: stock book exited: {e}")
-            except Exception as e:  # noqa: BLE001 — still publish what we wrote
-                print(f"[preopen-all] WARN: stock book crashed: {e}")
-        book_ok = skip_if_good.check_stock_book_all(date)
-        if not book_ok:
-            print(f"[preopen-all] WARN: stock book still missing for {date}")
-    else:
-        print("[preopen-all] --no-book: leaving stock book to a later click")
 
     degraded = bool(
         missing_required or not report.get("all_ok") or not grok.get("ok")
