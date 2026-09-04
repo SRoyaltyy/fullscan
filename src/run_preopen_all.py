@@ -396,10 +396,12 @@ def run(date: str | None = None, force: bool = False,
 
     skip_writes = False
     restore_persist(date)
-    wait_for_gh_scrape(date)
-    wait_for_night_baseline(date)
+    late = (not force) and preopen.past_predict_cutoff()
+    # A late heal must not spend 15 minutes waiting on scrape/baseline.
+    wait_for_gh_scrape(date, timeout_s=45 if late else None)
+    wait_for_night_baseline(date, timeout_s=20 if late else None)
     # 09:25 gates LLM essays, not weather / AB / join / the book.
-    if not force and preopen.past_predict_cutoff():
+    if late:
         print(f"[preopen-all] {date}: past 09:25 ET — skip LLM packet; "
               "weather/AB/join/book still run so BUY/SELL can land")
         skip_writes = True
@@ -527,17 +529,41 @@ def run(date: str | None = None, force: bool = False,
         else:
             print(f"\n[preopen-all] → Stock book + paper dashboard ({date})")
             try:
-                # Essays already ran (or 09:25 skipped them). Do not start
-                # another 11-sector pass in front of the ranker.
+                # Essays already ran (or 09:25 skipped them). Rank only —
+                # paper/sleeve/catalyst must not delay green.json.
                 run_stock_book_all.run(
-                    date=date, force=force, skip_llm=True, top=25)
+                    date=date, force=force, skip_llm=True,
+                    skip_extras=True, top=25)
             except SystemExit as e:
                 print(f"[preopen-all] WARN: stock book exited: {e}")
             except Exception as e:  # noqa: BLE001 — still publish what we wrote
                 print(f"[preopen-all] WARN: stock book crashed: {e}")
+        snapshot_persist(date)
         book_ok = skip_if_good.check_stock_book_all(date)
         if not book_ok:
             print(f"[preopen-all] WARN: stock book still missing for {date}")
+        else:
+            # Push the ranker layer now so 09:30 sees BUY/SELL even if
+            # paper/sleeve/catalyst hang after this.
+            print("[preopen-all] → push book + green.json + ranker inputs")
+            _run([
+                "bash", "scripts/safe_git_push.sh",
+                f"auto: stock book layer [{date}]",
+                f"data/stock_book/{date}_stock_book.json",
+                f"data/stock_book/{date}_green.json",
+                f"01_daily/{date}_stock_book.md",
+                f"01_daily/weather/{date}_weather.json",
+                f"01_daily/weather/{date}_weather.md",
+                f"data/join/{date}_ranked.csv",
+                f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
+                f"data/universe/{date}_membership.csv",
+            ])
+            if force or not preopen.past_predict_cutoff():
+                print("[preopen-all] → paper / sleeve (after book is on main)")
+                _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"])
+                _run([py, "-m", "src.sleeve_combine_bt",
+                      "--mode", "io_boost", "--hold", "3d"])
+                snapshot_persist(date)
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
 

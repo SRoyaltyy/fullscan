@@ -267,6 +267,14 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 0 <= land < cat
     assert 0 <= land < grok
     assert "past 09:25 ET — book still runs" in pre
+    assert "skip_extras=True" in pre
+    assert "safe_git_push.sh" in pre
+    assert "timeout_s=45 if late" in pre
+    assert "skip_extras" in book
+    post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
+    assert "last_closed_session" in post
+    learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
 
 
 def test_ecs_timers_stay_green_and_push() -> None:

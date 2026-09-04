@@ -295,6 +295,7 @@ def run(
     skip_llm: bool = False,
     top: int = 25,
     force_sectors: bool = False,
+    skip_extras: bool = False,
 ) -> None:
     date = date or _today()
     config.apply_llm_backend()
@@ -308,7 +309,8 @@ def run(
               "on disk — skip")
         return
 
-    print(f"[all] plan force={force} skip_llm={skip_llm} force_sectors={force_sectors}")
+    print(f"[all] plan force={force} skip_llm={skip_llm} "
+          f"skip_extras={skip_extras} force_sectors={force_sectors}")
 
     def need(key: str) -> bool:
         if force:
@@ -474,6 +476,14 @@ def run(
             or _exists("01_daily", f"{date}_stock_book.md")):
         print(f"[all] WARN: stock book files missing for {date}")
 
+    if skip_extras:
+        print("[all] skip extras (catalyst/backtest/paper/sleeve) — "
+              "book + green.json already written")
+        print("\n[all] FINAL STATUS after run:")
+        _print_status(date, _status_for_day(date))
+        print(f"[all] book → 01_daily/{date}_stock_book.md")
+        return
+
     # Optional layer 3. Must not sit in front of weather/join/book —
     # 2026-09-02 eight names ate the morning and the ranker stayed blocked.
     if skip_llm:
@@ -536,6 +546,8 @@ def main() -> None:
     ap.add_argument("--date", default=None, help="Trading day YYYY-MM-DD (default today ET)")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--skip-llm", action="store_true")
+    ap.add_argument("--skip-extras", action="store_true",
+                    help="Stop after the book + green.json (no paper/sleeve)")
     ap.add_argument("--force-sectors", action="store_true")
     ap.add_argument("--top", type=int, default=25)
     args = ap.parse_args()
@@ -543,6 +555,7 @@ def main() -> None:
         date=args.date,
         force=args.force,
         skip_llm=args.skip_llm,
+        skip_extras=args.skip_extras,
         top=args.top,
         force_sectors=args.force_sectors,
     )

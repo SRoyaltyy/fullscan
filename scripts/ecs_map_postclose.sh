@@ -57,7 +57,11 @@ bash scripts/ensure_openclaw_timeouts.sh || true
 
 PY="${FULLSCAN_PYTHON:-python3}"
 [ -x "$ROOT/.venv/bin/python" ] && PY="$ROOT/.venv/bin/python"
-SOURCE="${SOURCE_DATE:-$(TZ=America/New_York date +%F)}"
+if [ -n "${SOURCE_DATE:-}" ]; then
+  SOURCE="$SOURCE_DATE"
+else
+  SOURCE=$("$PY" -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+fi
 if [ -n "${TARGET_DATE:-}" ]; then
   TARGET="$TARGET_DATE"
 else

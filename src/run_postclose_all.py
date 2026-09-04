@@ -110,7 +110,7 @@ def run(date: str | None = None, force: bool = False,
          False)
 
     step("Learn cycle",
-         [py, "-m", "src.learn_cycle"],
+         [py, "-m", "src.learn_cycle", "--date", date],
          skip_if_good.check_learn_cycle(date))
 
     heat_src = ROOT / "01_daily" / "map_heat" / f"{date}_map_heat.json"

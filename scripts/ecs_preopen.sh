@@ -127,6 +127,9 @@ wait_finviz_scrape() {
   echo "[ecs-preopen] WARN: GH Finviz scrape not on disk after ${wait_s}s — python QC will fail if missing"
   return 0
 }
+if [ "$LATE_CUTOFF" -eq 1 ]; then
+  export FINVIZ_SCRAPE_WAIT="${FINVIZ_SCRAPE_WAIT:-45}"
+fi
 wait_finviz_scrape
 
 PY="${FULLSCAN_PYTHON:-python3}"
