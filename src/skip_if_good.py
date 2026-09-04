@@ -11,7 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -47,26 +47,94 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
+def _nth_weekday(year: int, month: int, weekday: int, n: int) -> date:
+    """n>0 = nth weekday of month (Mon=0). n=-1 = last weekday of month."""
+    if n > 0:
+        d = date(year, month, 1)
+        d += timedelta(days=(weekday - d.weekday()) % 7)
+        return d + timedelta(weeks=n - 1)
+    if month == 12:
+        d = date(year + 1, 1, 1) - timedelta(days=1)
+    else:
+        d = date(year, month + 1, 1) - timedelta(days=1)
+    d -= timedelta(days=(d.weekday() - weekday) % 7)
+    return d
+
+
+def _easter_gregorian(year: int) -> date:
+    """Anonymous Gregorian Easter (Western)."""
+    a = year % 19
+    b, c = divmod(year, 100)
+    d, e = divmod(b, 4)
+    f = (b + 8) // 25
+    g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i, k = divmod(c, 4)
+    el = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * el) // 451
+    month, day = divmod(h + el - 7 * m + 114, 31)
+    return date(year, month, day + 1)
+
+
+def _observed_nyse(d: date) -> date:
+    """Saturday holiday → Friday; Sunday holiday → Monday."""
+    if d.weekday() == 5:
+        return d - timedelta(days=1)
+    if d.weekday() == 6:
+        return d + timedelta(days=1)
+    return d
+
+
+def is_nyse_holiday(d: date) -> bool:
+    """Full-day NYSE closures. No pandas — skip-if-good runs before pip."""
+    y = d.year
+    holidays = {
+        _observed_nyse(date(y, 1, 1)),
+        _nth_weekday(y, 1, 0, 3),
+        _nth_weekday(y, 2, 0, 3),
+        _easter_gregorian(y) - timedelta(days=2),
+        _nth_weekday(y, 5, 0, -1),
+        _observed_nyse(date(y, 6, 19)),
+        _observed_nyse(date(y, 7, 4)),
+        _nth_weekday(y, 9, 0, 1),
+        _nth_weekday(y, 11, 3, 4),
+        _observed_nyse(date(y, 12, 25)),
+    }
+    return d in holidays
+
+
+def _session_date(d: date) -> bool:
+    return d.weekday() < 5 and not is_nyse_holiday(d)
+
+
 def last_closed_session(now: datetime | None = None) -> str:
     """Most recent session that has already printed a close.
 
     Before 16:00 ET a weekday is still live, so yesterday (rolling
-    back across the weekend) is the closed source date. Post-close
-    research keys off this, not calendar 'today'.
+    back across the weekend and NYSE holidays) is the closed source
+    date. Post-close research keys off this, not calendar 'today'.
+    Labor Day 2026-09-07 is not a session — Tuesday 09-08 morning
+    must still close Friday 09-04.
     """
     now = now or datetime.now(ET)
     d = now.date()
     if now.hour < 16:
         d -= timedelta(days=1)
-    while d.weekday() >= 5:
+    while not _session_date(d):
         d -= timedelta(days=1)
     return d.isoformat()
 
 
 def _next_weekday(date_s: str) -> str:
+    """Next NYSE session (weekends + full-day holidays).
+
+    pandas_market_calendars on the runner maps Fri 2026-09-04 → Tue
+    2026-09-08 (Labor Day). A weekend-only walk looked for Monday
+    09-07 and left check_postclose_all red after captains wrote 09-08.
+    """
     d = datetime.strptime(date_s, "%Y-%m-%d").date()
     d += timedelta(days=1)
-    while d.weekday() >= 5:
+    while not _session_date(d):
         d += timedelta(days=1)
     return d.isoformat()
 
@@ -74,7 +142,7 @@ def _next_weekday(date_s: str) -> str:
 def _prev_weekday(date_s: str) -> str:
     d = datetime.strptime(date_s, "%Y-%m-%d").date()
     d -= timedelta(days=1)
-    while d.weekday() >= 5:
+    while not _session_date(d):
         d -= timedelta(days=1)
     return d.isoformat()
 
