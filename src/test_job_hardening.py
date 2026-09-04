@@ -271,7 +271,8 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "past 09:00 ET — heal ranker on ubuntu" in orch
     assert 'already_running "preopen_all.yml"' in orch
     assert "book heal stays on ubuntu" in orch
-    # 16:10 postclose cron is new and may skip day 1. 17:15 orch already fires.
+    # 16:10 postclose cron is new and may skip day 1. 16:20 + 17:15 orch fire.
+    assert 'cron: "20 20 * * 1-5"' in orch
     assert 'cron: "15 21 * * 1-5"' in orch
     assert "maybe postclose_all.yml" in orch
     assert "--job postclose_all || return 1" in orch
