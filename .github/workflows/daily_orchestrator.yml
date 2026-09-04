@@ -4,7 +4,9 @@ name: Daily Orchestrator (missed-job guard)
 # Only re-dispatches when skip-if-good says the pack is incomplete AND
 # nothing is already running. Morning: scrape + Pre-Open ALL. After 09:00
 # ET: Stock Book ALL on ubuntu-latest heals weather/join/AB/green/book
-# (no Grok, does not wait for a hung ECS pre-open). Evening: Post-Close ALL.
+# (no Grok, does not wait for a hung ECS pre-open). Evening: Post-Close
+# ALL on ubuntu/DeepSeek — 16:10/23:30 crons are new and may skip day 1;
+# a dead ECS runner must not stall the pack. systemd 22:00 still uses Grok.
 
 on:
   schedule:
@@ -88,6 +90,15 @@ jobs:
               || true
           }
 
+          dispatch_postclose_ubuntu() {
+            echo "MISSING night pack → postclose_all.yml ubuntu/DeepSeek"
+            gh api --method POST "repos/${REPO}/actions/workflows/postclose_all.yml/dispatches" \
+              -f ref=main \
+              -f "inputs[runner]=ubuntu" \
+              -f "inputs[llm_backend]=deepseek" \
+              || true
+          }
+
           already_running() {
             local WF="$1"
             local RAW HAS_ACTIVE=""
@@ -127,6 +138,10 @@ jobs:
             fi
             if [ "$WF" = "stock_book_all.yml" ]; then
               dispatch_book_ubuntu
+              return 0
+            fi
+            if [ "$WF" = "postclose_all.yml" ]; then
+              dispatch_postclose_ubuntu
               return 0
             fi
             dispatch_wf "$WF"

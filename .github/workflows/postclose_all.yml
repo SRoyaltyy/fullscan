@@ -3,7 +3,10 @@ name: Post-Close ALL (grade + learn + next captains)
 # One evening button: outcome → sector grades → learn → tomorrow's
 # captain notebook. Skip-if-good on every LLM step.
 # CLOCK: GH ubuntu ~16:10 ET (DeepSeek; does not wait for ECS) +
-#        GH ubuntu ~23:30 ET backup + ECS 22:00 timer (Grok).
+#        orch 17:15 ET ubuntu/DeepSeek (existing cron — 16:10/23:30
+#        are new and may skip day 1) + GH ubuntu ~23:30 ET backup +
+#        ECS 22:00 timer (Grok). Ubuntu must not inherit HOME=/home/gha
+#        (pip/git/token writes) or LLM_BACKEND=auto (900s Grok hang).
 # A queued ECS job must not block the ubuntu backup (split concurrency).
 
 on:
@@ -50,15 +53,19 @@ concurrency:
 
 jobs:
   postclose:
-    # Schedule is ubuntu/DeepSeek. Dispatch default and orch stay on ECS/Grok.
+    # Schedule + orch evening + explicit ubuntu dispatch = DeepSeek.
+    # Manual default stays ECS/Grok. systemd 22:00 is independent.
     runs-on: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     # Two closed sessions × 11 sector grades + reflects + captains.
     # 12h died mid-pack when several Grok calls each burned the 900s cap.
     timeout-minutes: 1080
     env:
       OPENCLAW_TIMEOUT: "900"
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      # ECS OpenClaw + persist live under /home/gha. ubuntu-latest must
+      # keep the runner home or pip/git/gh write to a directory the
+      # hosted image cannot create.
+      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
       MAP_POSTCLOSE_LOCK: "/home/gha/fullscan-persist/locks/map-postclose.lock"
@@ -133,11 +140,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "900"
           GROK_ONLY: "0"
-          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
+          # ubuntu cannot reach the ECS loopback gateway. auto would
+          # burn OPENCLAW_TIMEOUT (900s) per call when the URL hangs
+          # instead of connection-refused (timeout is not a hard DOWN).
+          LLM_BACKEND: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
-          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+          mkdir -p "$HOME" 2>/dev/null || true
           LOCK="${MAP_POSTCLOSE_LOCK:-/home/gha/fullscan-persist/locks/map-postclose.lock}"
           if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
             exec 9>"$LOCK"
@@ -161,7 +172,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+          mkdir -p "$HOME" 2>/dev/null || true
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           bash scripts/safe_git_push.sh \
             "auto: post-close ALL [$(date -u +%F_%H%M)]" \

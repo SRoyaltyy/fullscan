@@ -88,8 +88,11 @@ jobs:
     runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      # ECS persist / OpenClaw live under /home/gha. ubuntu-latest
+      # (schedule / push / workflow_run / explicit ubuntu) must keep
+      # the runner home or pip/git write to a missing directory.
+      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
     steps:
       - uses: actions/checkout@v4
@@ -212,6 +215,7 @@ jobs:
         run: |
           set -uo pipefail
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+          mkdir -p "$HOME" 2>/dev/null || true
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
           git checkout -- data/prices 2>/dev/null || true
