@@ -331,6 +331,11 @@ def test_ranker_inputs_before_llm_packet() -> None:
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "skip_extras:" in book_yml
     assert "past 09:25 ET — skip LLM + extras" in book_yml
+    assert 'cron: "10 10 * * 1-5"' in book_yml
+    assert 'cron: "15 13 * * 1-5"' in book_yml
+    assert "scheduled ubuntu land-book" in book_yml
+    assert 'github.event_name == \'schedule\'' in book_yml
+    assert "Do not add a cron back" not in book_yml
     health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
     hold = health.split('wf == "stock_book_all.yml" and (')[1].split("):")[0]
     assert "preopen_all.yml" not in hold
@@ -354,6 +359,8 @@ def test_ecs_timers_stay_green_and_push() -> None:
     assert "dashboard/" in pre
     assert "exit 0" in pre
     assert "exit 0" in post
+    assert "dispatch stock_book_all.yml ubuntu skip-llm" in pre
+    assert "inputs[skip_extras]=true" in pre
 
 
 def test_empty_futures_tape_not_ready() -> None:

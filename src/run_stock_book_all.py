@@ -344,7 +344,8 @@ def run(
     if need("finviz") or need("segments"):
         if need("finviz"):
             print("[all] → Finviz universe export (this trading day)")
-            code = _run([sys.executable, "-m", "collectors.finviz_financials"], check=False)
+            code = _run([sys.executable, "-m", "collectors.finviz_financials"],
+                        check=False, timeout_s=180)
             if code != 0:
                 print("[all] WARN: Finviz export failed — labeling may fail without today's file")
         else:
@@ -352,7 +353,8 @@ def run(
 
         if need("segments"):
             print("[all] → Stock labeling / segments")
-            _run([sys.executable, "-m", "src.segments", "--date", date], check=False)
+            _run([sys.executable, "-m", "src.segments", "--date", date],
+                 check=False, timeout_s=180)
             if not _exists("data", "universe", f"{date}_membership.csv"):
                 print(
                     f"[all] WARN: no membership for {date} — "
