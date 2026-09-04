@@ -567,9 +567,16 @@ def run(
     if skip_extras:
         print("[all] skip extras (catalyst/backtest/paper/sleeve) — "
               "book + green.json already written")
+        print("[all] → Sleeve merge live card (after book; no sweep)")
+        _run(
+            [sys.executable, "-m", "src.sleeve_merge", "--card",
+             "--date", date, "--write-card"],
+            check=False,
+        )
         print("\n[all] FINAL STATUS after run:")
         _print_status(date, _status_for_day(date))
         print(f"[all] book → 01_daily/{date}_stock_book.md")
+        print(f"[all] flatten card → 01_daily/{date}_flatten_card.md")
         return
 
     # Optional layer 3. Must not sit in front of weather/join/book —
@@ -600,6 +607,13 @@ def run(
     print("[all] → Sleeve combine (dual wallets, all days, buy/sell dashboard)")
     _run(
         [sys.executable, "-m", "src.sleeve_combine_bt", "--mode", "io_boost", "--hold", "3d"],
+        check=False,
+    )
+
+    print("[all] → Sleeve merge live card (today's tickets, no sweep)")
+    _run(
+        [sys.executable, "-m", "src.sleeve_merge", "--card",
+         "--date", date, "--write-card"],
         check=False,
     )
 
@@ -634,6 +648,7 @@ def run(
     print("[all] paper trading → dashboard/index.html + 03_scoreboard/PAPER_TRADING.md")
     print("[all] sleeve combine → dashboard/sleeve-combine/index.html + 03_scoreboard/SLEEVE_COMBINE_BT.md")
     print("[all] sleeve merge → dashboard/sleeve-merge/ + 03_scoreboard/SLEEVE_MERGE.md")
+    print(f"[all] flatten card → 01_daily/{date}_flatten_card.md + data/sleeve_merge/today.json")
     print("[all] strategy board → dashboard/strategy-board/ + 03_scoreboard/STRATEGY_BOARD.md")
 
 
