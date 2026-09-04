@@ -1,6 +1,6 @@
 # Combined sleeve — .io × mover
 
-_Generated 2026-09-04T11:55:07 — 2026-08-13 → 2026-09-03_
+_Generated 2026-09-04T12:10:39 — 2026-08-13 → 2026-09-03_
 
 **Method:** one cash-accounted flatten-switch book.
 

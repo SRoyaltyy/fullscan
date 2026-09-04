@@ -1335,6 +1335,79 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
     ]
     (SCOREBOARD / "SLEEVE_MERGE.md").write_text("\n".join(lines), encoding="utf-8")
 
+    import html as _html
+    curve = sim["curve"]
+    svg = ""
+    if len(curve) > 1:
+        W, H, P = 960, 260, 34
+        ys = [c["equity"] for c in curve]
+        lo, hi = min(ys + [sim["capital"]]), max(ys + [sim["capital"]])
+        rng = (hi - lo) or 1.0
+        X = lambda i: P + (W - 2 * P) * i / (len(curve) - 1)
+        Y = lambda v: H - P - (H - 2 * P) * (v - lo) / rng
+        pts = " ".join(f"{X(i):.1f},{Y(v):.1f}" for i, v in enumerate(ys))
+        base = Y(sim["capital"])
+        svg = (f"<svg viewBox='0 0 {W} {H}' width='100%' height='{H}'>"
+               f"<line x1='{P}' y1='{base:.1f}' x2='{W - P}' y2='{base:.1f}' "
+               f"stroke='#5b6b8c' stroke-dasharray='4 4'/>"
+               f"<polyline points='{pts}' fill='none' stroke='#4ade80' "
+               f"stroke-width='2'/>"
+               f"<text x='{P}' y='{Y(hi) - 6:.1f}' fill='#9cabc9' "
+               f"font-size='12'>${hi:,.0f}</text>"
+               f"<text x='{P}' y='{Y(lo) + 14:.1f}' fill='#9cabc9' "
+               f"font-size='12'>${lo:,.0f}</text>"
+               f"<text x='{W - P}' y='{base - 6:.1f}' fill='#9cabc9' "
+               f"font-size='12' text-anchor='end'>start "
+               f"${sim['capital']:,.0f}</text></svg>")
+    day_rows = []
+    prev = None
+    for r in curve:
+        dret = ""
+        if prev:
+            dret = f"{100 * (r['equity'] / prev - 1):+.2f}%"
+            dcls = "good" if r["equity"] >= prev else "bad"
+        else:
+            dcls = ""
+        prev = r["equity"]
+        sc = "—" if r.get("score") is None else f"{r['score']:+.2f}"
+        rcls = "good" if r["route"] == "mover" else ""
+        day_rows.append(
+            f"<tr><th>{r['date']}</th><td>{sc}</td>"
+            f"<td class='{rcls}'>{r['route']}</td>"
+            f"<td>${r['equity']:,.0f}</td><td>${r.get('cash', 0):,.0f}</td>"
+            f"<td>{r['core_n']}</td><td>{r['tac_n']}</td>"
+            f"<td class='{dcls}'>{dret}</td></tr>")
+    trade_rows = []
+    for t in sim["trades"]:
+        cls = "good" if (t.get("pnl") or 0) > 0 else "bad"
+        trade_rows.append(
+            f"<tr><th>{_html.escape(str(t.get('entry_dt') or ''))}</th>"
+            f"<td>{_html.escape(str(t.get('ticker') or ''))}</td>"
+            f"<td>{_html.escape(str(t.get('sleeve') or ''))}</td>"
+            f"<td>{t.get('shares')}</td><td>${t.get('entry_px') or 0:.2f}</td>"
+            f"<td>{_html.escape(str(t.get('exit_dt') or ''))}</td>"
+            f"<td>${t.get('exit_px') or 0:.2f}</td>"
+            f"<td>${(t.get('fee_in') or 0) + (t.get('fee_out') or 0):.2f}</td>"
+            f"<td class='{cls}'>${t.get('pnl') or 0:,.2f}</td>"
+            f"<td class='{cls}'>{t.get('ret_pct') or 0}%</td>"
+            f"<td class='why'>{_html.escape(str(t.get('exit_reason') or ''))}</td></tr>")
+    skip_rows = []
+    for s in sim["skipped"]:
+        skip_rows.append(
+            f"<tr><th>{s.get('date')}</th>"
+            f"<td>{_html.escape(str(s.get('ticker') or ''))}</td>"
+            f"<td>{_html.escape(str(s.get('side') or ''))}</td>"
+            f"<td class='why'>{_html.escape(str(s.get('reason') or ''))}</td></tr>")
+    gate_rows = []
+    for b in (st.get("fortnights") or []) + (st.get("blocks_2w") or []):
+        kind = "fortnight" if "cal_start" in b else "block"
+        tag = "partial" if b.get("partial") else (
+            "PASS" if b["ret_pct"] >= TARGET_2W_PCT else "FAIL")
+        cls = "good" if tag == "PASS" else ("bad" if tag == "FAIL" else "")
+        gate_rows.append(
+            f"<tr><td>{kind}</td><td>{b['start']}</td><td>{b['end']}</td>"
+            f"<td>{b['n']}</td><td class='{cls}'>{b['ret_pct']:+.2f}%</td>"
+            f"<td class='{cls}'>{tag}</td></tr>")
     cards = (
         f"<div class='card'>Final equity<b>${st['final_equity']:,.0f}</b></div>"
         f"<div class='card'>Return<b>{st['total_ret_pct']:+.2f}%</b></div>"
@@ -1342,13 +1415,9 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
         f"<div class='card'>Fortnight min<b>{st['min_fortnight']}</b></div>"
         f"<div class='card'>vs .io 2w<b>"
         f"{'BEATS' if st['beat_io_top'] else 'trails'} {io_top:+.1f}%</b></div>"
-        f"<div class='card'>15%/2w<b>{gate}</b></div>"
-    )
-    rows_html = "".join(
-        f"<tr><td>{r['date']}</td><td>{r['route']}</td>"
-        f"<td>${r['equity']:,.0f}</td><td>{r['core_n']}</td>"
-        f"<td>{r.get('tac_io_n', 0)}</td><td>{r['tac_n']}</td></tr>"
-        for r in sim["curve"]
+        f"<div class='card'>15%/2w<b class='{'good' if gate=='PASS' else 'bad'}'>{gate}</b></div>"
+        f"<div class='card'>Fees paid<b>${st.get('fees_total') or 0:,.0f}</b></div>"
+        f"<div class='card'>Skipped (cash)<b>{st['n_skipped']}</b></div>"
     )
     html = f"""<!doctype html>
 <html><head><meta charset="utf-8">
@@ -1357,27 +1426,50 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float) -> None:
 <style>
 :root{{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}}
-main{{max-width:1100px;margin:auto;padding:16px}}
+main{{max-width:1240px;margin:auto;padding:16px}}h1,h2{{margin:.4em 0}}
 .cards{{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}}
 .card b{{display:block;font-size:22px;margin-top:4px}}
-.muted{{color:var(--muted)}}
-table{{border-collapse:collapse;width:100%;background:var(--card)}}
-th,td{{padding:7px 8px;border-bottom:1px solid var(--line)}}
-.pass{{color:#4ade80}}.fail{{color:#f87171}}
+.muted{{color:var(--muted)}}a{{color:#93c5fd}}
+.sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}}
+table{{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}}
+th,td{{padding:7px 8px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}}
+thead th{{position:sticky;top:0;background:#17213a}}
+tbody th{{background:#17213a;text-align:left}}
+td.good,b.good,.good{{color:#4ade80}}td.bad,b.bad,.bad{{color:#f87171}}
+td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 </style></head><body><main>
 <h1>Combined sleeve — .io × mover</h1>
-<p class="muted"><a href="../" style="color:#93c5fd">.io paper</a>
- · <a href="../mover-paper/" style="color:#93c5fd">mover paper</a></p>
-<p class="muted">{pol['name']} · {pol.get('engine','combine')} ·
-{pol['io_sleeve']} · flatten when S≥{pol['long_gate']:+.1f} and
-≥{pol.get('min_buys',5)} priced BUYs · day_cap {pol.get('day_cap',1):.0%} ·
-Futubull fees · 15% / 2 weeks gate</p>
+<p class="muted"><a href="../">.io paper</a>
+ · <a href="../mover-paper/">mover paper</a>
+ · <a href="../book-paper/">book paper</a></p>
+<p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
+{_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
+≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
+carry last 2w list on gap days · day_cap {pol.get('day_cap',1):.0%} ·
+Futubull fees · one cash account · 15% / 2 weeks gate</p>
 <div class="cards">{cards}</div>
-<h2>Daily book</h2>
-<table><thead><tr><th>Date</th><th>Route</th><th>Equity</th><th>core</th><th>tac.io</th><th>tac.mv</th></tr></thead>
-<tbody>{rows_html}</tbody></table>
-<p class="muted">Full write-up: 03_scoreboard/SLEEVE_MERGE.md</p>
+{svg}
+<h2>Daily book (cash left after fills)</h2>
+<div class="sheet"><table>
+<thead><tr><th>Date</th><th>Score</th><th>Route</th><th>Equity</th>
+<th>Cash</th><th>.io names</th><th>mover</th><th>Day</th></tr></thead>
+<tbody>{''.join(day_rows)}</tbody></table></div>
+<h2>2-week gate</h2>
+<div class="sheet"><table>
+<thead><tr><th>Kind</th><th>Start</th><th>End</th><th>n</th><th>Return</th><th>Gate</th></tr></thead>
+<tbody>{''.join(gate_rows)}</tbody></table></div>
+<h2>Filled trades (fees on every ticket)</h2>
+<div class="sheet"><table>
+<thead><tr><th>Entry</th><th>Ticker</th><th>Sleeve</th><th>Shares</th>
+<th>Entry px</th><th>Exit</th><th>Exit px</th><th>Fees</th><th>P&amp;L</th>
+<th>Ret</th><th>Why</th></tr></thead>
+<tbody>{''.join(trade_rows)}</tbody></table></div>
+<h2>Skipped — cash tied in open lots / fees</h2>
+<div class="sheet"><table>
+<thead><tr><th>Date</th><th>Ticker</th><th>Side</th><th>Why</th></tr></thead>
+<tbody>{''.join(skip_rows)}</tbody></table></div>
+<p class="muted">Write-up: 03_scoreboard/SLEEVE_MERGE.md · machine: data/sleeve_merge/</p>
 </main></body></html>
 """
     (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
