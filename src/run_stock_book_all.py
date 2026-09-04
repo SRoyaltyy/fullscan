@@ -368,12 +368,6 @@ def run(
     else:
         print("[all] skip Peer relative strength (DONE for this day)")
 
-    if need("ticker_checklist"):
-        print("[all] → Ticker checklist")
-        _run([sys.executable, "-m", "src.ticker_checklist", "--date", date], check=False)
-    else:
-        print("[all] skip Ticker checklist (DONE for this day)")
-
     if need("ab"):
         if not _ab_raw(date):
             print("[all] → AB checklist (one day, liquid universe)")
@@ -389,82 +383,94 @@ def run(
     else:
         print("[all] skip AB checklist + enrich (DONE for this day)")
 
-    if skip_llm:
-        print("[all] skip Event scanner (--skip-llm)")
-    elif need("events"):
-        print("[all] → Event scanner (primary)")
-        _run([sys.executable, "-m", "src.run_events", "--date", date], check=False)
-        print("[all] → Event catcher (gap hunt / replacement if primary empty)")
-        _run([sys.executable, "-m", "src.run_events_catcher", "--date", date], check=False)
-        if _events_n(date) == 0:
-            print("[all] → Events carry-forward fallback (both passes empty)")
-            _run([sys.executable, "-m", "src.events_fallback", "--date", date], check=False)
-        if _events_n(date) == 0:
-            print("[all] WARN: events still empty for", date, "— weather/book sector tilt missing")
+    if skip_extras:
+        print("[all] skip extras before book: checklist / events / news / predicts")
+        if need("finviz_digest"):
+            print("[all] → Finviz daily digest (ranker input)")
+            _run([sys.executable, "-m", "src.finviz_digest", "--date", date], check=False)
     else:
-        print("[all] skip Event scanner (DONE for this day)")
-
-    if need("news_parse"):
-        print("[all] → News parse")
-        _run(
-            [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "400", "--date", date],
-            check=False,
-        )
-    else:
-        print("[all] skip News parse (DONE for this day)")
-    if need("finviz_digest"):
-        print("[all] → Finviz daily digest")
-        _run([sys.executable, "-m", "src.finviz_digest", "--date", date], check=False)
-    else:
-        print("[all] skip Finviz daily digest (DONE for this day)")
-    if need("news_judge") and not skip_llm and config.has_llm():
-        print("[all] → News judge")
-        _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
-        if not _exists("01_daily", "news", f"{date}_judge.md"):
-            print("[all] WARN: news judge missing for", date, "— s_news will lack LLM tilts")
-    elif skip_llm:
-        print("[all] skip News judge (--skip-llm)")
-    elif not config.has_llm():
-        print("[all] skip News judge (no LLM configured)")
-    else:
-        print("[all] skip News judge (DONE for this day)")
-    if need("news_actions"):
-        print("[all] → News actions (ticker edges)")
-        _run(
-            [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "400", "--date", date],
-            check=False,
-        )
-        if not _exists("01_daily", "news", f"{date}_actions.json"):
-            print("[all] WARN: news actions missing for", date, "— 1d book weaker")
-    else:
-        print("[all] skip News actions (DONE for this day)")
-
-    if not skip_llm and need("general_predict"):
-        if config.has_llm():
-            print("[all] → General market predict")
-            _run([sys.executable, "-m", "src.run_predict", "--date", date], check=False)
+        if need("ticker_checklist"):
+            print("[all] → Ticker checklist")
+            _run([sys.executable, "-m", "src.ticker_checklist", "--date", date], check=False)
         else:
-            print("[all] skip General market predict (no LLM configured)")
-    elif skip_llm:
-        print("[all] skip General market predict (--skip-llm)")
-    else:
-        print("[all] skip General market predict (DONE for this day)")
+            print("[all] skip Ticker checklist (DONE for this day)")
 
-    if not skip_llm and (force_sectors or need("sector_predict")):
-        if config.has_llm():
-            print("[all] → Per-sector predict (all 11 for this trading day)")
-            _run([sys.executable, "-m", "src.run_sector_predict", "--date", date], check=False)
+        if skip_llm:
+            print("[all] skip Event scanner (--skip-llm)")
+        elif need("events"):
+            print("[all] → Event scanner (primary)")
+            _run([sys.executable, "-m", "src.run_events", "--date", date], check=False)
+            print("[all] → Event catcher (gap hunt / replacement if primary empty)")
+            _run([sys.executable, "-m", "src.run_events_catcher", "--date", date], check=False)
+            if _events_n(date) == 0:
+                print("[all] → Events carry-forward fallback (both passes empty)")
+                _run([sys.executable, "-m", "src.events_fallback", "--date", date], check=False)
+            if _events_n(date) == 0:
+                print("[all] WARN: events still empty for", date, "— weather/book sector tilt missing")
         else:
-            print("[all] skip Per-sector predict (no LLM configured)")
-    elif skip_llm:
-        print("[all] skip Per-sector predict (--skip-llm)")
-    else:
-        print("[all] skip Per-sector predict (DONE for this day — 11/11)")
+            print("[all] skip Event scanner (DONE for this day)")
 
-    if not skip_llm:
-        print("[all] → Weather / join refresh (same-day predicts now on disk)")
-        _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
-        _run([sys.executable, "-m", "src.join", "--date", date], check=False)
+        if need("news_parse"):
+            print("[all] → News parse")
+            _run(
+                [sys.executable, "-m", "src.news_parse", "--hours", "48", "--limit", "400", "--date", date],
+                check=False,
+            )
+        else:
+            print("[all] skip News parse (DONE for this day)")
+        if need("finviz_digest"):
+            print("[all] → Finviz daily digest")
+            _run([sys.executable, "-m", "src.finviz_digest", "--date", date], check=False)
+        else:
+            print("[all] skip Finviz daily digest (DONE for this day)")
+        if need("news_judge") and not skip_llm and config.has_llm():
+            print("[all] → News judge")
+            _run([sys.executable, "-m", "src.run_news_judge", "--date", date], check=False)
+            if not _exists("01_daily", "news", f"{date}_judge.md"):
+                print("[all] WARN: news judge missing for", date, "— s_news will lack LLM tilts")
+        elif skip_llm:
+            print("[all] skip News judge (--skip-llm)")
+        elif not config.has_llm():
+            print("[all] skip News judge (no LLM configured)")
+        else:
+            print("[all] skip News judge (DONE for this day)")
+        if need("news_actions"):
+            print("[all] → News actions (ticker edges)")
+            _run(
+                [sys.executable, "-m", "src.news_actions", "--hours", "48", "--limit", "400", "--date", date],
+                check=False,
+            )
+            if not _exists("01_daily", "news", f"{date}_actions.json"):
+                print("[all] WARN: news actions missing for", date, "— 1d book weaker")
+        else:
+            print("[all] skip News actions (DONE for this day)")
+
+        if not skip_llm and need("general_predict"):
+            if config.has_llm():
+                print("[all] → General market predict")
+                _run([sys.executable, "-m", "src.run_predict", "--date", date], check=False)
+            else:
+                print("[all] skip General market predict (no LLM configured)")
+        elif skip_llm:
+            print("[all] skip General market predict (--skip-llm)")
+        else:
+            print("[all] skip General market predict (DONE for this day)")
+
+        if not skip_llm and (force_sectors or need("sector_predict")):
+            if config.has_llm():
+                print("[all] → Per-sector predict (all 11 for this trading day)")
+                _run([sys.executable, "-m", "src.run_sector_predict", "--date", date], check=False)
+            else:
+                print("[all] skip Per-sector predict (no LLM configured)")
+        elif skip_llm:
+            print("[all] skip Per-sector predict (--skip-llm)")
+        else:
+            print("[all] skip Per-sector predict (DONE for this day — 11/11)")
+
+        if not skip_llm:
+            print("[all] → Weather / join refresh (same-day predicts now on disk)")
+            _run([sys.executable, "-m", "src.weather", "--date", date], check=False)
+            _run([sys.executable, "-m", "src.join", "--date", date], check=False)
 
     print("[all] → Input health preflight")
     _run([sys.executable, "-m", "src.input_health", "--date", date], check=False)

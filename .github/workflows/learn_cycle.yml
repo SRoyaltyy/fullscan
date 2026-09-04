@@ -31,9 +31,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Skip if today's learnings already on disk (no LLM)
+      - name: Skip if closed-session learnings already on disk (no LLM)
         run: |
-          DATE="$(TZ=America/New_York date +%F)"
+          DATE="$(python3 -c 'from src.skip_if_good import last_closed_session; print(last_closed_session())')"
+          echo "closed_session=$DATE" >> "$GITHUB_ENV"
           if python3 -m src.skip_if_good --job learn_cycle --date "$DATE"; then
             echo "Learnings already on disk — skip LLM"
             echo "skip=yes" >> "$GITHUB_ENV"
@@ -58,7 +59,7 @@ jobs:
           set -e
           LB="${{ github.event.inputs.lookback }}"
           LB="${LB:-15}"
-          python -m src.learn_cycle --lookback "$LB"
+          python -m src.learn_cycle --lookback "$LB" --date "${closed_session}"
           echo "======== LEARNINGS.md (digest) ========"
           head -160 03_scoreboard/LEARNINGS.md || true
 

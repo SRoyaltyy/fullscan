@@ -288,6 +288,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "No retry" in pre
     assert "_exists_gt" in pre
     assert "skip_extras" in book
+    extras_gate = book.find("skip extras before book")
+    news_parse = book.find("[all] → News parse")
+    assert 0 <= extras_gate < news_parse
     pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
     assert "--skip-llm --skip-extras" in pre_yml
@@ -304,6 +307,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "last_closed_session" in post
     learn = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
     assert 'src.learn_cycle", "--date"' in learn or "--date\", date" in learn
+    learn_yml = (WF / "learn_cycle.yml").read_text(encoding="utf-8")
+    assert "last_closed_session" in learn_yml
+    assert '--date "${closed_session}"' in learn_yml
 
 
 def test_ecs_timers_stay_green_and_push() -> None:
