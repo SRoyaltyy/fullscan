@@ -96,8 +96,12 @@ jobs:
             [ -n "$RAW" ] || return 1
             while IFS=$'\t' read -r id status conclusion created; do
               [ -n "$id" ] || continue
-              et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
-              [ "$et" = "$TODAY" ] || continue
+              # 18h Post-Close ALL spans midnight. A 16:10 fire still
+              # running at the next 17:15 must not get a second dispatch.
+              if [ "$WF" != "postclose_all.yml" ]; then
+                et=$(TZ=America/New_York date -d "$created" +%F 2>/dev/null || true)
+                [ "$et" = "$TODAY" ] || continue
+              fi
               if [ "$status" = "in_progress" ] || [ "$status" = "queued" ] \
                  || [ "$status" = "waiting" ] || [ "$status" = "pending" ]; then
                 HAS_ACTIVE="$id"
