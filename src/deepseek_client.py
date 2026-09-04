@@ -609,16 +609,32 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                          "to conclude with what it already gathered.")
             payload.pop("tools", None)
             payload.pop("tool_choice", None)
-            try:
-                resp = _post(payload)
-            except RuntimeError as e:
-                print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
-                return ""
-            final = resp["choices"][0]["message"].get("content") or ""
-            if is_tool_dump(final):
-                print("[llm] forced close returned a tool-dump — dropping",
-                      flush=True)
-                final = ""
+            close_msgs = list(messages) + [{
+                "role": "user",
+                "content": (
+                    "Write the full post-session essay now. "
+                    "Do not emit tool calls or DSML. "
+                    "Use the actuals and any search results already in this thread."
+                ),
+            }]
+            final = ""
+            for attempt in range(3):
+                payload["messages"] = close_msgs
+                try:
+                    resp = _post(payload)
+                except RuntimeError as e:
+                    print(f"[llm] DeepSeek failed ({stage_label or 'llm run'}): {e}")
+                    return ""
+                cand = resp["choices"][0]["message"].get("content") or ""
+                if is_tool_dump(cand):
+                    print(f"[llm] forced close dump on attempt {attempt + 1} "
+                          f"({len(cand)} chars) — retry", flush=True)
+                    cand = ""
+                if len(cand.strip()) >= 200:
+                    final = cand
+                    break
+                print(f"[llm] forced close thin on attempt {attempt + 1} "
+                      f"({len(cand.strip())} chars) — retry", flush=True)
             messages.append({"role": "assistant", "content": final})
 
     if transcript_path:

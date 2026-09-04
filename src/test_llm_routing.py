@@ -384,9 +384,9 @@ def test_sector_outcome_caps_deepseek_tool_rounds() -> None:
         dc.chat([{"role": "user", "content": "grade"}],
                 model="deepseek-chat", tools=True,
                 stage_label="SECTOR OUTCOME Technology 2026-09-03")
-    # 2 capped tool rounds + 1 forced no-tool close.
+    # 2 capped tool rounds + up to 3 forced no-tool closes (dump/thin retry).
     # 4+1 at 120s/read fills the 600s sector child with 0 files written.
-    assert len(posts) == 3
+    assert len(posts) == 5
 
 
 def test_sector_outcome_keeps_essay_instead_of_more_search() -> None:
@@ -493,9 +493,41 @@ def test_tool_dump_followup_forces_no_tool_close() -> None:
                        stage_label="SECTOR OUTCOME Energy 2026-09-03")
     assert searches == ["XLE close", "more oil news"]
     assert text == "E" * 220
-    assert not dc.is_tool_dump(text) if hasattr(dc, "is_tool_dump") else True
     from src.skip_if_good import is_tool_dump
     assert not is_tool_dump(text)
+    close_posts = [p for p in posts if "tools" not in p]
+    assert close_posts
+    assert "Do not emit tool calls" in close_posts[0]["messages"][-1]["content"]
+
+
+def test_forced_close_retries_when_first_answer_is_a_dump() -> None:
+    """Live follow-up: the no-tool close can itself be DSML. Retry."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'still searching</｜｜DSML｜｜parameter>\n'
+    )
+    posts = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        if "tools" in (json or {}):
+            return _fake_response(200, dump)
+        if sum(1 for p in posts if "tools" not in p) < 2:
+            return _fake_response(200, dump)
+        return _fake_response(200, "C" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              return_value='{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Energy 2026-09-03")
+    assert text == "C" * 220
+    assert sum(1 for p in posts if "tools" not in p) >= 2
 
 
 def test_map_postclose_caps_deepseek_tool_rounds() -> None:
@@ -518,7 +550,7 @@ def test_map_postclose_caps_deepseek_tool_rounds() -> None:
         dc.chat([{"role": "user", "content": "cards"}],
                 model="deepseek-chat", tools=True,
                 stage_label="MAP POSTCLOSE captains_technology 2026-09-07")
-    assert len(posts) == 3
+    assert len(posts) == 5
 
 
 def test_chat_nonempty_skips_thin_reasoner_stub() -> None:
@@ -585,6 +617,7 @@ def main() -> None:
         test_sector_outcome_caps_tool_calls_per_stage,
         test_extracts_queries_from_dsml_tool_dump,
         test_tool_dump_followup_forces_no_tool_close,
+        test_forced_close_retries_when_first_answer_is_a_dump,
         test_map_postclose_caps_deepseek_tool_rounds,
         test_chat_nonempty_skips_thin_reasoner_stub,
     ]
