@@ -346,6 +346,30 @@ def test_connect_timeout_marks_gateway_down() -> None:
     assert dc._OPENCLAW_STATE["down"] is True
 
 
+def test_sector_outcome_caps_deepseek_tool_rounds() -> None:
+    """11 sectors × 10 search rounds miss ≥8 files inside sector_wall."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    posts: list[dict] = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        return _fake_response(200, "", tool_calls=[{
+            "id": f"c{len(posts)}",
+            "function": {"name": "web_search",
+                         "arguments": '{"query":"XLK close"}'},
+        }])
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              return_value='{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        dc.chat([{"role": "user", "content": "grade"}],
+                model="deepseek-chat", tools=True,
+                stage_label="SECTOR OUTCOME Technology 2026-09-03")
+    # 4 capped tool rounds + 1 forced no-tool close.
+    assert len(posts) == 5
+
+
 def test_pick_openclaw_token_prefers_live_48() -> None:
     secret64 = "s" * 64
     live48 = "l" * 48
@@ -380,6 +404,7 @@ def main() -> None:
         test_grok_only_no_fallback_when_already_down,
         test_connect_timeout_marks_gateway_down,
         test_pick_openclaw_token_prefers_live_48,
+        test_sector_outcome_caps_deepseek_tool_rounds,
     ]
     failed = 0
     for fn in tests:

@@ -225,5 +225,18 @@ MEMORY_ARCHIVE = "04_archive"
 
 TOPIC = "general"
 MEMORY_WINDOW_DAYS = 10          # rolling predict/reflect files injected
-MAX_TOOL_ROUNDS = 10             # web_search rounds per LLM stage
+def _env_int(name: str, default: int, minimum: int = 1) -> int:
+    raw = (os.environ.get(name) or "").strip()
+    if not raw:
+        return default
+    try:
+        return max(minimum, int(raw))
+    except ValueError:
+        return default
+
+
+MAX_TOOL_ROUNDS = _env_int("MAX_TOOL_ROUNDS", 10)  # web_search rounds per LLM stage
+# Sector outcome already has deterministic ETF actuals in the prompt.
+# 10 SearXNG/DDG rounds × 11 sectors dies inside sector_wall before ≥8 files.
+SECTOR_TOOL_ROUNDS = _env_int("SECTOR_TOOL_ROUNDS", 4)
 TZ = "America/New_York"

@@ -5,6 +5,7 @@ Run: PYTHONPATH=. python3 -m src.test_job_hardening
 from __future__ import annotations
 
 import os
+import time
 from pathlib import Path
 from unittest import mock
 
@@ -568,6 +569,45 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
         assert last_assistant(str(Path(td) / "missing.json")) == ""
 
 
+def test_search_and_sector_rounds_are_bounded() -> None:
+    """Dead SearXNG / hung ddgs must not eat the first sector before persist.
+
+    These files are intentionally NOT on postclose_all.yml push: — merging
+    them must not queue a twin behind the live ubuntu heal.
+    """
+    from src import websearch as ws
+
+    push_block = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    push_paths = push_block.split("push:")[1].split("workflow_dispatch:")[0]
+    assert "src/websearch.py" not in push_paths
+    assert "src/deepseek_client.py" not in push_paths
+    assert "src/config.py" not in push_paths
+
+    assert ws.SEARXNG_TIMEOUT <= 10
+    assert ws.SEARXNG_ATTEMPTS == 1
+    assert ws.DDG_TIMEOUT <= 15
+
+    def hang(_q, _n):
+        time.sleep(30)
+        return [{"title": "late", "url": "http://x", "snippet": "no"}]
+
+    t0 = time.monotonic()
+    try:
+        ws._run_bounded(hang, 0.2, "q", 3)
+        raise AssertionError("hung search must raise")
+    except TimeoutError as e:
+        assert "exceeded" in str(e)
+    assert time.monotonic() - t0 < 2.0
+
+    assert dc._effective_tool_rounds("SECTOR OUTCOME Technology 2026-09-03",
+                                     None) == 4
+    assert dc._effective_tool_rounds("SECTOR REFLECT Healthcare 2026-09-03",
+                                     None) == 4
+    assert dc._effective_tool_rounds("GENERAL OUTCOME 2026-09-03", None) == 10
+    assert dc._effective_tool_rounds("SECTOR OUTCOME X", 2) == 2
+    assert getattr(config, "SECTOR_TOOL_ROUNDS", 0) == 4
+
+
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     """16:10/23:30 + orch 17:15 must run DeepSeek under the runner HOME."""
     post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
@@ -654,6 +694,7 @@ def main() -> None:
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
+        test_search_and_sector_rounds_are_bounded,
     ]
     failed = 0
     for fn in tests:
