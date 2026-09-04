@@ -297,6 +297,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 0 <= extras_gate < news_parse
     assert "TimeoutExpired" in book
     assert "ab_t = 1500 if skip_extras" in book
+    assert "--offline" in book
+    assert "weather missing/thin — retry --offline" in book
     pre_yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "Land book + green (ubuntu — no Grok, no ECS)" in pre_yml
     assert "--skip-llm --skip-extras" in pre_yml

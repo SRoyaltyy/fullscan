@@ -75,8 +75,17 @@ def test_load_runs_fills_missing_scoreboard_from_md() -> None:
     weather.SCOREBOARD = orig_board
 
 
+def test_offline_derive_uses_disk() -> None:
+    rules = weather._load_json(weather.RULES_PATH) or {}
+    th = rules.get("thresholds", {})
+    sig, gaps = weather.derive_signals("2026-09-03", th, live=False)
+    assert isinstance(sig.get("sectors"), dict)
+    assert len(sig["sectors"]) >= 5
+
+
 if __name__ == "__main__":
     test_run_from_sector_md()
     test_run_from_general_md_footer()
+    test_offline_derive_uses_disk()
     test_load_runs_fills_missing_scoreboard_from_md()
-    print("3 tests passed")
+    print("4 tests passed")

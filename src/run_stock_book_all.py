@@ -364,7 +364,11 @@ def run(
     print("[all] → Weather / regime (before LLM heals, before join)")
     _run([sys.executable, "-m", "src.weather", "--date", date],
          check=False, timeout_s=wx_t)
-    if not _exists("01_daily", "weather", f"{date}_weather.json"):
+    if not _weather_has_sectors(date):
+        print("[all] weather missing/thin — retry --offline (no yfinance hang)")
+        _run([sys.executable, "-m", "src.weather", "--date", date, "--offline"],
+             check=False, timeout_s=60 if skip_extras else 180)
+    if not _weather_has_sectors(date):
         print(
             f"[all] WARN: weather did not write "
             f"01_daily/weather/{date}_weather.json — cannot rank today"

@@ -225,11 +225,11 @@ def load_events(date_str: str) -> dict:
 
 # ---------------------------------------------------------------- signals
 
-def derive_signals(date_str: str, th: dict) -> tuple[dict, list[str]]:
+def derive_signals(date_str: str, th: dict, live: bool = True) -> tuple[dict, list[str]]:
     gaps: list[str] = []
     general, sectors = load_runs(date_str)
     factors = load_factors(date_str)
-    ch1 = load_channel1(date_str, live=True)
+    ch1 = load_channel1(date_str, live=live)
     events = load_events(date_str)
 
     sig: dict = {"date": date_str}
@@ -693,6 +693,8 @@ def write_outputs(date_str: str, sig: dict, stances: dict,
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
+    ap.add_argument("--offline", action="store_true",
+                    help="Skip live yfinance/FRED; use on-disk Channel 1 + Finviz tape")
     args = ap.parse_args()
     date_str = args.date
     if not date_str:
@@ -703,7 +705,9 @@ def main() -> None:
 
     rules = _load_json(RULES_PATH) or {}
     th = rules.get("thresholds", {})
-    sig, gaps = derive_signals(date_str, th)
+    if args.offline:
+        print("[weather] --offline: no live Channel 1 fetch")
+    sig, gaps = derive_signals(date_str, th, live=not args.offline)
     stances = build_stances(sig, th)
     try:
         from .judge_apply import load_or_parse
