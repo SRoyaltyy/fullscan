@@ -87,6 +87,14 @@
  .skip .fill-side{font-size:10px;letter-spacing:.03em;line-height:1.2}
  .sleeve-block{margin:0 0 18px}
  #stats,#pos{display:block;overflow-x:auto;max-width:100%}
+ .sleeve-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid var(--line);color:var(--mut);font-family:ui-monospace,Menlo,Consolas,monospace}
+ .day-nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+ .day-nav button{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
+ .day-nav button:disabled{opacity:.35;cursor:default}
+ .day-sum{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;padding:8px 12px;background:var(--day);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;font-size:12px;color:#aeb9cf}
+ .day-sum b{color:var(--fg);font-size:15px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .tick-chip{display:inline-block;margin:2px 4px 0 0;padding:1px 7px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:11px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .overview{margin:0 0 8px}
  @media (max-width:640px){
    .fill{grid-template-columns:48px minmax(0,1fr);gap:4px 10px}
    .fill-cash{grid-column:2;text-align:left;margin-top:2px}
@@ -104,12 +112,44 @@
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
 <div class="sub">Overlay scenarios (hold / size / green / HARD_RED): <a href="boring-winners/" style="color:#93c5fd">boring winners lab</a></div>
+<div class="overview">
 <div class="cards" id="cards"></div>
 <div class="bar" id="sleeveBar"></div>
+<details class="curve-box" open>
+<summary id="curveTitle">Equity curve</summary>
+<canvas id="chart" height="280"></canvas>
+<div class="legend" id="legend"></div>
+</details>
+<h2>Sleeve statistics</h2>
+<table id="stats"></table>
+<details open>
+<summary>Open positions</summary>
+<table id="pos"></table>
+</details>
+</div>
 
-<section id="tapeSection">
-<h2 id="tapeTitle">Order tape</h2>
-<p class="mut" id="tapeHint" style="margin:0 0 8px"></p>
+<section id="daySection">
+<h2 id="dayTitle">Trades by day</h2>
+<p class="mut" style="margin:0 0 8px">Pick a session to see every fill that day — all sleeves in one list, not grouped by strategy. Sells run first (cash freed), then buys.</p>
+<div class="day-nav">
+ <button type="button" id="dayPrev" aria-label="Previous day">← Prev</button>
+ <select id="dayPick" aria-label="Trading day"></select>
+ <button type="button" id="dayNext" aria-label="Next day">Next →</button>
+ <select id="daySide" aria-label="Side">
+  <option value="all">Buys + sells</option>
+  <option value="buy">Buys only</option>
+  <option value="sell">Sells only</option>
+ </select>
+ <input id="dayQ" placeholder="Ticker (e.g. CVX)" aria-label="Filter ticker on this day">
+ <span class="mut" id="dayCount"></span>
+</div>
+<div class="day-sum" id="daySum"></div>
+<div class="tape" id="dayHost"></div>
+</section>
+
+<details id="tapeSection">
+<summary id="tapeTitle">Full tape / pairs / not taken</summary>
+<p class="mut" id="tapeHint" style="margin:8px 0"></p>
 <div class="bar" id="viewBar"></div>
 <div class="bar">
  <select id="sideMode" aria-label="Side">
@@ -133,12 +173,6 @@
  <span class="mut" id="fillCount"></span>
 </div>
 <div class="tape" id="tapeHost"></div>
-</section>
-
-<details class="curve-box" open>
-<summary id="curveTitle">Equity curve</summary>
-<canvas id="chart" height="280"></canvas>
-<div class="legend" id="legend"></div>
 </details>
 
 <details>
@@ -158,11 +192,6 @@
 <summary>How a buy / sell is decided</summary>
 <section class="how" id="how" style="margin-top:8px"></section>
 </details>
-
-<h2>Sleeve statistics</h2>
-<table id="stats"></table>
-<h2>Open positions</h2>
-<table id="pos"></table>
 <div class="note" id="fees"></div>
 </div>
 <script>
@@ -174,8 +203,9 @@ const HOLD = (D.rules && D.rules.hold_days) || { "1d":1,"3d":3,"1w":5,"2w":10,"1
 const HOLD_ON = !!(D.rules && D.rules.hold_applied);
 const HOLD_UNIT = (D.rules && D.rules.hold_unit) || "trading_sessions";
 const hidden = new Set();
-let sleeveFilter = sleeveNames.includes("1d_top") ? "1d_top" : (sleeveNames[0] || "all");
+let sleeveFilter = "all";
 let viewMode = "tape";
+let selectedDay = (D.dates && D.dates.length) ? D.dates[D.dates.length-1] : "";
 
 function money(n){if(n==null||n==='')return '—';return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
 function px(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:4});}
@@ -413,18 +443,16 @@ function sleevePairBlock(sleeve, rows){
   return title+body;
 }
 
-function fillCard(t){
+function fillCard(t, showSleeve){
   const sideCls=t.side==='sell'?'neg':'pos';
   const side=t.side==='sell'?'SELL':'BUY';
-  const ab=fmtAb(t.ab_score);
-  const ctx=t.ab_context || (t.ab_score==null ? 'not scored that day' : '—');
-  const ctxCls=(String(t.ab_context||'').indexOf('LEAD')>=0)?'pos':(String(t.ab_context||'').indexOf('LAG')>=0)?'neg':'mut';
   const pnl=t.realized_pnl;
   const pnlBit=(pnl==null||pnl==='')?'':` · P/L ${money(pnl)}`;
+  const sleeveBit=showSleeve && t.sleeve ? `<span class="sleeve-tag">${esc(t.sleeve)}</span>` : '';
   return `<article class="fill">
     <div class="fill-side ${sideCls}">${side}</div>
     <div>
-      <div class="fill-top"><b>${esc(t.ticker)}</b><span class="fill-sec">${esc(t.sector||'—')}</span></div>
+      <div class="fill-top"><b>${esc(t.ticker)}</b>${sleeveBit}<span class="fill-sec">${esc(t.sector||'—')}</span></div>
       <div class="fill-meta">${t.shares} sh @ ${px(t.price)} · ${money(t.amount)}${pnlBit}</div>
       ${trailHtml(t.ab_trail, t.date)}
     </div>
@@ -432,27 +460,43 @@ function fillCard(t){
   </article>`;
 }
 
-function tapeBlock(rows){
+function sortDayFills(rows){
+  return [...rows].sort((a,b)=>{
+    const da=(a.date||'').localeCompare(b.date||'');
+    if(da) return da;
+    if(a.side!==b.side) return a.side==='sell'?-1:1;
+    const sa=(a.sleeve||'').localeCompare(b.sleeve||'');
+    if(sa) return sa;
+    return String(a.ticker||'').localeCompare(String(b.ticker||''));
+  });
+}
+function tapeBlock(rows, showSleeve){
   if(!rows.length) return '<p class="mut">No fills in this view.</p>';
+  const ordered=sortDayFills(rows);
   const days=[];
   let cur=null;
-  for(const t of rows){
+  for(const t of ordered){
     if(!cur || cur.date!==t.date){
-      cur={date:t.date, fills:[], start:t.cash_before, end:t.cash_after, buys:0, sells:0};
+      cur={date:t.date, fills:[], buys:0, sells:0, sleeves:new Set()};
       days.push(cur);
     }
     cur.fills.push(t);
-    cur.end=t.cash_after;
+    cur.sleeves.add(t.sleeve);
     if(t.side==='buy') cur.buys++; else cur.sells++;
   }
-  return days.map(d=>`<div class="day">
+  return days.map(d=>{
+    const cashBit=(!showSleeve && d.fills.length)
+      ? `<span class="cash-pill">${money(d.fills[0].cash_before)} → ${money(d.fills[d.fills.length-1].cash_after)}</span>`
+      : `<span class="mut">${d.sleeves.size} sleeve${d.sleeves.size===1?'':'s'}</span>`;
+    return `<div class="day">
     <div class="day-h">
       <b>${d.date}</b>
       <span class="mut">${d.sells} sell · ${d.buys} buy</span>
-      <span class="cash-pill">${money(d.start)} → ${money(d.end)}</span>
+      ${cashBit}
     </div>
-    ${d.fills.map(fillCard).join('')}
-  </div>`).join('');
+    ${d.fills.map(t=>fillCard(t, showSleeve)).join('')}
+  </div>`;
+  }).join('');
 }
 
 function matchedFills(sleeve){
@@ -662,14 +706,11 @@ function renderTape(){
   document.getElementById('tapeTitle').textContent=
     sleeveFilter==='all' ? 'Order tape — leftover cash after each fill' : 'Order tape — '+sleeveFilter;
   document.getElementById('tapeHint').textContent=
-    'Chronological fills. Each card’s AB row is 5 sessions ending on the fill (not just that day). Not taken lists names the book wanted that never became a ticket.';
+    'Chronological fills, grouped by session (not by sleeve). Each card’s AB row is 5 sessions ending on the fill. Sleeve tag shows which book the ticket came from.';
   if(sleeveFilter==='all'){
-    host.innerHTML=sleeveNames.map(s=>{
-      const rows=matchedFills(s);
-      return `<div class="sleeve-block"><h3 class="sleeve-head">${s} · ${rows.length} fills</h3>${tapeBlock(rows)}</div>`;
-    }).join('');
+    host.innerHTML=tapeBlock(matchedFills(null), true);
   } else {
-    host.innerHTML=tapeBlock(matchedFills(sleeveFilter));
+    host.innerHTML=tapeBlock(matchedFills(sleeveFilter), false);
   }
   const n=sleeveFilter==='all'
     ? (D.trades||[]).filter(t=>{
@@ -751,6 +792,77 @@ function renderPos(){
   document.getElementById(hostId).innerHTML=tableFor(all.filter(p=>p.sleeve===sleeveFilter));
 }
 
+function dayDates(){
+  const fromTrades=[...new Set((D.trades||[]).map(t=>t.date).filter(Boolean))].sort();
+  return fromTrades.length ? fromTrades : (D.dates||[]).slice();
+}
+function dayFills(){
+  const side=document.getElementById('daySide').value;
+  const q=document.getElementById('dayQ').value.trim().toUpperCase();
+  return (D.trades||[]).filter(t=>{
+    if(t.date!==selectedDay) return false;
+    if(sleeveFilter!=='all' && t.sleeve!==sleeveFilter) return false;
+    if(side!=='all' && t.side!==side) return false;
+    if(q && !(t.ticker||'').toUpperCase().includes(q)) return false;
+    return true;
+  });
+}
+function renderDayNav(){
+  const dates=dayDates();
+  if(!selectedDay || dates.indexOf(selectedDay)<0){
+    selectedDay=dates.length?dates[dates.length-1]:'';
+  }
+  const sel=document.getElementById('dayPick');
+  const counts={};
+  (D.trades||[]).forEach(t=>{
+    if(sleeveFilter!=='all' && t.sleeve!==sleeveFilter) return;
+    counts[t.date]=(counts[t.date]||0)+1;
+  });
+  sel.innerHTML=dates.map(d=>{
+    const n=counts[d]||0;
+    return `<option value="${d}"${d===selectedDay?' selected':''}>${d} · ${n} fill${n===1?'':'s'}</option>`;
+  }).join('');
+  const i=dates.indexOf(selectedDay);
+  document.getElementById('dayPrev').disabled=i<=0;
+  document.getElementById('dayNext').disabled=i<0 || i>=dates.length-1;
+}
+function renderDayBlotter(){
+  renderDayNav();
+  const rows=sortDayFills(dayFills());
+  const buys=rows.filter(t=>t.side==='buy');
+  const sells=rows.filter(t=>t.side==='sell');
+  const sleeves=[...new Set(rows.map(t=>t.sleeve))].sort();
+  const buyTicks=[...new Set(buys.map(t=>t.ticker))].sort();
+  const sellTicks=[...new Set(sells.map(t=>t.ticker))].sort();
+  document.getElementById('dayTitle').textContent=
+    sleeveFilter==='all'
+      ? 'Trades by day — all sleeves'
+      : 'Trades by day — '+sleeveFilter;
+  document.getElementById('dayCount').textContent=rows.length+' fill'+(rows.length===1?'':'s');
+  const buyChips=buyTicks.map(t=>`<span class="tick-chip pos">${esc(t)}</span>`).join('')||'<span class="mut">none</span>';
+  const sellChips=sellTicks.map(t=>`<span class="tick-chip neg">${esc(t)}</span>`).join('')||'<span class="mut">none</span>';
+  document.getElementById('daySum').innerHTML=
+    `<b>${esc(selectedDay||'—')}</b>
+     <span>${sells.length} sell · ${buys.length} buy</span>
+     <span>${sleeveFilter==='all'?(sleeves.length+' sleeve'+(sleeves.length===1?'':'s')):esc(sleeveFilter)}</span>
+     <div style="flex-basis:100%;margin-top:4px">
+       <span class="neg">Sold</span> ${sellChips}
+       &nbsp;&nbsp;<span class="pos">Bought</span> ${buyChips}
+     </div>`;
+  const showSleeve=sleeveFilter==='all';
+  document.getElementById('dayHost').innerHTML=rows.length
+    ? `<div class="day">${rows.map(t=>fillCard(t, showSleeve)).join('')}</div>`
+    : '<p class="mut">No fills on this session in this view.</p>';
+}
+function shiftDay(delta){
+  const dates=dayDates();
+  const i=dates.indexOf(selectedDay);
+  const j=i+delta;
+  if(j<0||j>=dates.length) return;
+  selectedDay=dates[j];
+  renderDayBlotter();
+}
+
 function renderAll(){
   renderSleeveBar();
   renderViewBar();
@@ -758,6 +870,7 @@ function renderAll(){
   renderLegend();
   draw();
   renderHow();
+  renderDayBlotter();
   renderTape();
   renderFills();
   renderStats();
@@ -768,6 +881,11 @@ document.getElementById('pairStatus').onchange=renderTape;
 document.getElementById('fillQ').oninput=function(){ renderTape(); renderFills(); };
 document.getElementById('sideMode').onchange=renderTape;
 document.getElementById('skipKind').onchange=renderTape;
+document.getElementById('dayPick').onchange=function(){ selectedDay=this.value; renderDayBlotter(); };
+document.getElementById('dayPrev').onclick=function(){ shiftDay(-1); };
+document.getElementById('dayNext').onclick=function(){ shiftDay(1); };
+document.getElementById('daySide').onchange=renderDayBlotter;
+document.getElementById('dayQ').oninput=renderDayBlotter;
 addEventListener('resize',draw);
 renderAll();
 const F=D.fees||{};
