@@ -31,8 +31,11 @@ cp dashboard/index.html pages_out/index.html
 
 for sub in boring-winners ticker-lookback gainer-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper; do
   if [ -f "dashboard/${sub}/index.html" ]; then
-    mkdir -p "pages_out/dashboard/${sub}"
+    mkdir -p "pages_out/dashboard/${sub}" "pages_out/${sub}"
     cp -a "dashboard/${sub}/." "pages_out/dashboard/${sub}/"
+    # Root copy: the paper book is also published at /fullscan/ so
+    # href="sleeve-merge/" from the homepage must not 404.
+    cp -a "dashboard/${sub}/." "pages_out/${sub}/"
   fi
 done
 

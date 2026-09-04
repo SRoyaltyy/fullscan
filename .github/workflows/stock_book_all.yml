@@ -176,6 +176,7 @@ jobs:
           echo "Fixed Chrome links (after Pages is enabled):"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "  https://SRoyaltyy.github.io/fullscan/sleeve-merge/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "  https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"

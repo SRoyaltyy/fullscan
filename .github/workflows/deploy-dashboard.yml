@@ -106,6 +106,22 @@ jobs:
             cp -a dashboard/mover-paper/. pages_out/dashboard/mover-paper/
             echo "Overlayed dashboard/mover-paper from main"
           fi
+          if [ -f dashboard/book-paper/index.html ]; then
+            mkdir -p pages_out/dashboard/book-paper
+            cp -a dashboard/book-paper/. pages_out/dashboard/book-paper/
+            echo "Overlayed dashboard/book-paper from main"
+          fi
+
+          # The paper book is also copied to the site root. Mirror every
+          # sub-dash there so homepage links like sleeve-merge/ resolve.
+          for sub in boring-winners ticker-lookback gainer-lookback mover-lookback \
+                     sleeve-combine sleeve-merge mover-paper book-paper; do
+            if [ -d "pages_out/dashboard/${sub}" ]; then
+              mkdir -p "pages_out/${sub}"
+              cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
+              echo "Root copy pages_out/${sub}"
+            fi
+          done
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -130,6 +146,7 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-lookback/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "https://SRoyaltyy.github.io/fullscan/sleeve-merge/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

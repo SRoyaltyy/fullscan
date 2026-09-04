@@ -126,6 +126,8 @@ def test_deploy_dashboard_follows_preopen_and_book() -> None:
     assert "Stock Book ALL (one-shot)" in text
     assert "dashboard/**" in text
     assert "github.event_name == 'push'" in text
+    assert "Root copy pages_out/${sub}" in text
+    assert "sleeve-merge" in text
 
 
 def test_jobs_publish_dashboard_in_place() -> None:
@@ -134,6 +136,8 @@ def test_jobs_publish_dashboard_in_place() -> None:
     body = script.read_text(encoding="utf-8")
     assert "gh-pages" in body
     assert "dashboard/index.html" in body
+    assert "pages_out/${sub}" in body
+    assert "href=\"sleeve-merge/\" from the homepage" in body
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "scripts/publish_dashboard.sh" in pre
