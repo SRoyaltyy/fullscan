@@ -1,0 +1,164 @@
+{
+  "policy": {
+    "name": "flatten_switch_full",
+    "io_sleeve": "2w_size",
+    "core_frac": 0.35,
+    "tac_frac": 0.65,
+    "long_top_n": 10,
+    "short_top_n": 6,
+    "long_pct": 0.1,
+    "short_pct": 0.08,
+    "sizeup": 1.0,
+    "long_gate": 1.0,
+    "short_below": 1.0,
+    "long_hold": "1d",
+    "short_hold": "1d",
+    "long_rank": "cond",
+    "short_rank": "conviction",
+    "allow_short": false,
+    "fund_from_shorts": true,
+    "day_cap": 1.0,
+    "engine": "flatten_switch",
+    "min_buys": 5
+  },
+  "stats": {
+    "n_trades": 38,
+    "n_skipped": 0,
+    "hit": 0.605,
+    "total_pnl": 18814.29,
+    "total_ret_pct": 18.95,
+    "final_equity": 118945.5,
+    "max_dd_pct": 2.3,
+    "by_side": {
+      "BUY": {
+        "n": 38,
+        "hit": 0.605,
+        "pnl": 18814.29
+      },
+      "SELL": {
+        "n": 0,
+        "hit": null,
+        "pnl": 0
+      }
+    },
+    "n_days": 17,
+    "min_rolling_2w": 1.24,
+    "min_block_2w": 15.22,
+    "min_fortnight": 15.22,
+    "hit_every_rolling_2w": false,
+    "hit_every_block_2w": true,
+    "hit_every_fortnight": true,
+    "beat_io_top": true,
+    "io_top_pct": 12.85,
+    "passed": true
+  },
+  "rolling_2w": [
+    {
+      "start": "2026-08-13",
+      "end": "2026-08-26",
+      "n": 10,
+      "start_eq": 99801.45,
+      "end_eq": 114992.78,
+      "ret_pct": 15.22
+    },
+    {
+      "start": "2026-08-14",
+      "end": "2026-08-27",
+      "n": 10,
+      "start_eq": 102951.36,
+      "end_eq": 114864.15,
+      "ret_pct": 11.57
+    },
+    {
+      "start": "2026-08-17",
+      "end": "2026-08-28",
+      "n": 10,
+      "start_eq": 103841.32,
+      "end_eq": 112350.06,
+      "ret_pct": 8.19
+    },
+    {
+      "start": "2026-08-18",
+      "end": "2026-08-30",
+      "n": 10,
+      "start_eq": 105907.01,
+      "end_eq": 112350.06,
+      "ret_pct": 6.08
+    },
+    {
+      "start": "2026-08-19",
+      "end": "2026-08-31",
+      "n": 10,
+      "start_eq": 110259.52,
+      "end_eq": 112616.31,
+      "ret_pct": 2.14
+    },
+    {
+      "start": "2026-08-20",
+      "end": "2026-09-01",
+      "n": 10,
+      "start_eq": 111605.23,
+      "end_eq": 114185.69,
+      "ret_pct": 2.31
+    },
+    {
+      "start": "2026-08-21",
+      "end": "2026-09-02",
+      "n": 10,
+      "start_eq": 114997.56,
+      "end_eq": 116422.62,
+      "ret_pct": 1.24
+    },
+    {
+      "start": "2026-08-24",
+      "end": "2026-09-03",
+      "n": 10,
+      "start_eq": 114992.78,
+      "end_eq": 118945.5,
+      "ret_pct": 3.44
+    }
+  ],
+  "blocks_2w": [
+    {
+      "start": "2026-08-13",
+      "end": "2026-08-26",
+      "n": 10,
+      "start_eq": 99801.45,
+      "end_eq": 114992.78,
+      "ret_pct": 15.22
+    },
+    {
+      "start": "2026-08-27",
+      "end": "2026-09-03",
+      "n": 7,
+      "start_eq": 114864.15,
+      "end_eq": 118945.5,
+      "ret_pct": 3.55,
+      "partial": true
+    }
+  ],
+  "fortnights": [
+    {
+      "start": "2026-08-13",
+      "end": "2026-08-26",
+      "n": 10,
+      "cal_start": "2026-08-13",
+      "cal_end": "2026-08-26",
+      "start_eq": 99801.45,
+      "end_eq": 114992.78,
+      "ret_pct": 15.22
+    },
+    {
+      "start": "2026-08-27",
+      "end": "2026-09-03",
+      "n": 7,
+      "cal_start": "2026-08-27",
+      "cal_end": "2026-09-09",
+      "start_eq": 114864.15,
+      "end_eq": 118945.5,
+      "ret_pct": 3.55,
+      "partial": true
+    }
+  ],
+  "generated": "2026-09-04T11:23:07"
+}
