@@ -2,17 +2,31 @@ name: Post-Close ALL (grade + learn + next captains)
 
 # One evening button: outcome → sector grades → learn → tomorrow's
 # captain notebook. Skip-if-good on every LLM step.
-# CLOCK: GH ubuntu ~16:10 ET (DeepSeek; does not wait for ECS) +
-#        orch 17:15 ET ubuntu/DeepSeek (existing cron — 16:10/23:30
-#        are new and may skip day 1) + GH ubuntu ~23:30 ET backup +
-#        ECS 22:00 timer (Grok). Ubuntu must not inherit HOME=/home/gha
-#        (pip/git/token writes) or LLM_BACKEND=auto (900s Grok hang).
+# CLOCK: merge/push of this workflow (ubuntu/DeepSeek, last-closed only)
+#        + GH ubuntu ~16:10 ET + orch 17:15 ET ubuntu/DeepSeek
+#        + GH ubuntu ~23:30 ET backup + ECS 22:00 timer (Grok).
+# Push uses last_closed_session() so a mid-day heal grades yesterday
+# (09-03) and does not spend hours on 09-02 before 17:15 needs 09-04.
 # A queued ECS job must not block the ubuntu backup (split concurrency).
 
 on:
   schedule:
     - cron: "10 20 * * 1-5"   # ~16:10 ET — ubuntu (new cron may skip day 1)
     - cron: "30 3 * * 2-6"    # ~23:30 ET — ubuntu backup if ECS queued/offline
+  # This agent cannot workflow_dispatch (403). A merge of healer code
+  # must start ubuntu last-closed the same way book push starts a skip.
+  # Do not match 01_daily (GITHUB_TOKEN persist must not retrigger).
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/postclose_all.yml"
+      - "src/run_postclose_all.py"
+      - "src/run_outcome.py"
+      - "src/run_reflect.py"
+      - "src/run_sector_outcome.py"
+      - "src/run_sector_reflect.py"
+      - "src/learn_cycle.py"
+      - "src/map_heat_postclose.py"
   workflow_dispatch:
     inputs:
       runner:
@@ -48,14 +62,14 @@ permissions:
 concurrency:
   # Queued self-hosted runs sit forever if the ECS runner is offline.
   # Ubuntu must not share that group or the backup never starts.
-  group: postclose-all-${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
+  group: postclose-all-${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
   cancel-in-progress: false
 
 jobs:
   postclose:
     # Schedule + orch evening + explicit ubuntu dispatch = DeepSeek.
     # Manual default stays ECS/Grok. systemd 22:00 is independent.
-    runs-on: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     # Two closed sessions × 11 sector grades + reflects + captains.
     # 12h died mid-pack when several Grok calls each burned the 900s cap.
     timeout-minutes: 1080
@@ -64,8 +78,8 @@ jobs:
       # ECS OpenClaw + persist live under /home/gha. ubuntu-latest must
       # keep the runner home or pip/git/gh write to a directory the
       # hosted image cannot create.
-      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
       MAP_POSTCLOSE_LOCK: "/home/gha/fullscan-persist/locks/map-postclose.lock"
@@ -108,6 +122,10 @@ jobs:
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
           DATE="${{ github.event.inputs.run_date }}"
+          if [ -z "$DATE" ] && [ "${{ github.event_name }}" = "push" ]; then
+            DATE=$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+            echo "push heal — last_closed=$DATE"
+          fi
           if [ -z "$DATE" ]; then
             if python3 -m src.skip_if_good --job postclose_all; then
               echo "skip_python=yes" >> "$GITHUB_ENV"
@@ -143,7 +161,7 @@ jobs:
           # ubuntu cannot reach the ECS loopback gateway. auto would
           # burn OPENCLAW_TIMEOUT (900s) per call when the URL hangs
           # instead of connection-refused (timeout is not a hard DOWN).
-          LLM_BACKEND: ${{ (github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
@@ -158,6 +176,10 @@ jobs:
             fi
           fi
           DATE="${{ github.event.inputs.run_date }}"
+          if [ -z "$DATE" ] && [ "${{ github.event_name }}" = "push" ]; then
+            DATE=$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+            echo "push heal — last_closed=$DATE (not night_pack_dates)"
+          fi
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
           BACKEND="${LLM_BACKEND:-auto}"
