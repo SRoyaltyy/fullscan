@@ -274,6 +274,11 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert "skip Post-Close ALL until 16:00 ET" in orch
     assert "18h Post-Close ALL spans midnight" in orch
     assert 'WF" != "postclose_all.yml"' in orch
+    # 17:15 is the existing cron. New 16:10/23:30 may skip day 1;
+    # dispatch ubuntu/DeepSeek so a dead ECS runner cannot stall the pack.
+    assert "dispatch_postclose_ubuntu" in orch
+    assert "MISSING night pack → postclose_all.yml ubuntu/DeepSeek" in orch
+    assert "inputs[llm_backend]=deepseek" in orch
 
 
 def test_ranker_inputs_before_llm_packet() -> None:
@@ -334,6 +339,12 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'cron: "30 3 * * 2-6"' in post_yml
     assert "postclose-all-${{" in post_yml
     assert "github.event_name == 'schedule'" in post_yml
+    # ubuntu/DeepSeek must not inherit ECS HOME or try Grok first.
+    assert "HOME: \"/home/gha\"" not in post_yml
+    assert "FULLSCAN_HOME: \"/home/gha\"" not in post_yml
+    assert "'/home/runner'" in post_yml
+    assert "&& 'deepseek'" in post_yml
+    assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in post_yml
     assert "MAP_POSTCLOSE_LOCK" in post_yml
     assert "leftover ECS files must not fake SKIP" in post_yml
     assert "git reset --hard origin/main" in post_yml
@@ -400,6 +411,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'github.event_name == \'workflow_run\'' in book_yml
     assert "stock-book-all-ubuntu" in book_yml
     assert "stock-book-all-ecs" in book_yml
+    assert "HOME: \"/home/gha\"" not in book_yml
+    assert "'/home/runner'" in book_yml
     assert 'branches: [main]' in book_yml
     assert "src/green_pile.py" in book_yml
     assert "src/stock_book.py" in book_yml
@@ -554,6 +567,25 @@ def test_general_reflect_writes_gate_file_and_reuses_transcript() -> None:
         assert last_assistant(str(Path(td) / "missing.json")) == ""
 
 
+def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
+    """16:10/23:30 + orch 17:15 must run DeepSeek under the runner HOME."""
+    post_yml = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    assert "HOME: \"/home/gha\"" not in post_yml
+    assert "FULLSCAN_HOME: \"/home/gha\"" not in post_yml
+    assert "'/home/runner'" in post_yml
+    assert "&& 'deepseek'" in post_yml
+    assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in post_yml
+    assert "dispatch_postclose_ubuntu" in orch
+    assert "inputs[llm_backend]=deepseek" in orch
+    assert "HOME: \"/home/gha\"" not in book_yml
+    assert "'/home/runner'" in book_yml
+    ds = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    assert "timeout=(15, config.OPENCLAW_TIMEOUT)" in ds
+    assert '"connect timeout"' in ds
+
+
 def test_postclose_pushes_after_each_llm_layer() -> None:
     """Kill after reflect / sectors / learn must still leave those files on main."""
     src = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
@@ -615,6 +647,7 @@ def main() -> None:
         test_general_outcome_skips_existing_and_reuses_transcript,
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
+        test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
     ]
     failed = 0
     for fn in tests:

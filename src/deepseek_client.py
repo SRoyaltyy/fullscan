@@ -147,7 +147,8 @@ def _is_hard_openclaw_down(reason: str) -> bool:
     )):
         return False
     return any(tok in r for tok in (
-        "401", "404", "connection refused", "name or service not known",
+        "401", "404", "connection refused", "connect timeout",
+        "name or service not known",
         "nodename nor servname", "network is unreachable",
     ))
 
@@ -212,7 +213,7 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
         try:
             r = requests.post(url, headers=headers, json=payload,
-                              timeout=config.OPENCLAW_TIMEOUT)
+                              timeout=(15, config.OPENCLAW_TIMEOUT))
             if r.status_code in (401, 404) and not realigned:
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 print(f"[openclaw] {r.status_code} — realign token and retry once")
@@ -225,6 +226,10 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
                 continue
             r.raise_for_status()
             return r.json()
+        except requests.ConnectTimeout as e:
+            last = f"connect timeout: {e}"
+            print(f"[openclaw] {last} — gateway unreachable, not retrying")
+            break
         except requests.Timeout as e:
             last = f"timeout after {config.OPENCLAW_TIMEOUT}s: {e}"
             print(f"[openclaw] {last} — not retrying a hung {config.OPENCLAW_TIMEOUT}s call")
