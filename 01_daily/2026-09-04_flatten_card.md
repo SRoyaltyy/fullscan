@@ -1,6 +1,6 @@
 # flatten_hard_red card — 2026-09-04
 
-_Generated 2026-09-04T13:44:34 — live `flatten_hard_red`._
+_Generated 2026-09-04T13:52:52 — live `flatten_hard_red`._
 
 **S=+2.25; no flatten (0 priced BUYs, prior book=yes); 16:00 refill 2w_size from leftover cash; skip names already held**
 
@@ -51,5 +51,21 @@ _Generated 2026-09-04T13:44:34 — live `flatten_hard_red`._
 | 16:00 ET | ATRC | cash tied in open lots / fees |
 | 16:00 ET | NVAX | cash tied in open lots / fees |
 | 16:00 ET | BVS | cash tied in open lots / fees |
+
+## Would have bought — holdings disregarded
+
+Sized from marked equity **$119,105.48** as if the book were flat. `io 2w_size (holdings disregarded)`. Not live tickets.
+
+| Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
+|---|---|---|---:|---:|---:|---|
+| 16:00 ET | HOOD | io_core | 106 | $124.72 | $13,220.32 | already held |
+| 16:00 ET | XP | io_core | 661 | $20.00 | $13,220.00 | already held |
+| 16:00 ET | ASND | io_core | 48 | $271.12 | $13,013.76 | cash tied |
+| 16:00 ET | OSCR | io_core | 410 | $32.24 | $13,218.40 | cash tied |
+| 16:00 ET | ATRC | io_core | 252 | $52.46 | $13,219.92 | cash tied |
+| 16:00 ET | DUOL | io_core | 83 | $158.82 | $13,182.06 | already held |
+| 16:00 ET | NVAX | io_core | 1279 | $10.34 | $13,224.86 | cash tied |
+| 16:00 ET | CABA | io_core | 3802 | $3.48 | $13,230.96 | already held |
+| 16:00 ET | BVS | io_core | 921 | $14.36 | $13,225.56 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/

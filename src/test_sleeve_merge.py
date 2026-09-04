@@ -348,6 +348,30 @@ def test_card_cost_fits_leftover_cash() -> None:
             assert t.get("cost", 0) > 0
 
 
+def test_card_would_buy_ignores_holdings() -> None:
+    """Wish list still names the sleeve even when leftover cash cannot fill."""
+    from pathlib import Path
+    from src.sleeve_merge import io_picks, list_books, load_book_map
+    from src.sleeve_merge_live import plan_today
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file():
+        print("skip card would-buy (no payload)")
+        return
+    card = plan_today("2026-09-04")
+    would = card.get("would_buy") or {}
+    names = [r["ticker"] for r in would.get("rows") or []]
+    assert names, would
+    held = {h["ticker"] for h in card.get("holds_open") or []}
+    assert held & set(names), (held, names)
+    books = load_book_map(list_books())
+    want = set(io_picks(books.get("2026-09-04") or {}, "2w_size"))
+    assert want and want <= set(names), (want, names)
+    assert (would.get("equity") or 0) > 10_000
+    assert (would.get("spent") or 0) > card["cash_open"]
+    live = {t["ticker"] for t in card["tickets"] if t["side"] == "BUY"}
+    assert not (held & live)
+
+
 def test_card_writes_today_json() -> None:
     from pathlib import Path
     from src.sleeve_merge_live import (
@@ -367,6 +391,8 @@ def test_card_writes_today_json() -> None:
     assert "TODAY_BEGIN" in html
     assert card["date"] in html
     assert "today-card" in html
+    assert "holdings disregarded" in html
+    assert "Would have bought" in paths["daily"].read_text(encoding="utf-8")
     wrapped = inject_today_panel("<main><p>x</p>\n<div class=\"cards\">",
                                  today_panel_html(card))
     assert wrapped.count("TODAY_BEGIN") == 1
@@ -411,8 +437,9 @@ def main() -> None:
     test_card_hard_red_0824_no_new_buys()
     test_card_skips_already_held()
     test_card_cost_fits_leftover_cash()
+    test_card_would_buy_ignores_holdings()
     test_card_writes_today_json()
-    print("test_sleeve_merge: 19 ok")
+    print("test_sleeve_merge: 20 ok")
 
 
 if __name__ == "__main__":
