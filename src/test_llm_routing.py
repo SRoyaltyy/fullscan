@@ -444,6 +444,60 @@ def test_sector_outcome_caps_tool_calls_per_stage() -> None:
     assert text == "B" * 220
 
 
+def test_extracts_queries_from_dsml_tool_dump() -> None:
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'XLE September 3 2026 oil</｜｜DSML｜｜parameter>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'WTI close</｜｜DSML｜｜parameter>\n'
+    )
+    assert dc._extract_dump_queries(dump) == [
+        "XLE September 3 2026 oil", "WTI close"]
+    assert dc._extract_dump_queries("# essay") == []
+
+
+def test_tool_dump_followup_forces_no_tool_close() -> None:
+    """Live 09-03 Energy: turn 1 real tool_calls, turn 2 DSML dump, no calls."""
+    _reset(openclaw_url="", deepseek_key="ds-key")
+    searches = []
+    posts = []
+    dump = (
+        '<｜｜DSML｜｜tool_calls>\n'
+        '<｜｜DSML｜｜invoke name="web_search">\n'
+        '<｜｜DSML｜｜parameter name="query" string="true">'
+        'more oil news</｜｜DSML｜｜parameter>\n'
+    )
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        posts.append(json or {})
+        if "tools" in (json or {}) and len(posts) == 1:
+            return _fake_response(200, "", tool_calls=[{
+                "id": "c1",
+                "function": {"name": "web_search",
+                             "arguments": '{"query":"XLE close"}'},
+            }])
+        if "tools" in (json or {}):
+            return _fake_response(200, dump)
+        return _fake_response(200, "E" * 220)
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc, "web_search",
+                              side_effect=lambda q: searches.append(q) or
+                              '{"results":[]}'), \
+            mock.patch.object(dc.time, "sleep"):
+        text = dc.chat([{"role": "user", "content": "grade"}],
+                       model="deepseek-chat", tools=True,
+                       stage_label="SECTOR OUTCOME Energy 2026-09-03")
+    assert searches == ["XLE close", "more oil news"]
+    assert text == "E" * 220
+    assert not dc.is_tool_dump(text) if hasattr(dc, "is_tool_dump") else True
+    from src.skip_if_good import is_tool_dump
+    assert not is_tool_dump(text)
+
+
 def test_map_postclose_caps_deepseek_tool_rounds() -> None:
     """11 captain batches × 10 search rounds miss the 7200s captain wall."""
     _reset(openclaw_url="", deepseek_key="ds-key")
@@ -529,6 +583,8 @@ def main() -> None:
         test_sector_outcome_caps_deepseek_tool_rounds,
         test_sector_outcome_keeps_essay_instead_of_more_search,
         test_sector_outcome_caps_tool_calls_per_stage,
+        test_extracts_queries_from_dsml_tool_dump,
+        test_tool_dump_followup_forces_no_tool_close,
         test_map_postclose_caps_deepseek_tool_rounds,
         test_chat_nonempty_skips_thin_reasoner_stub,
     ]

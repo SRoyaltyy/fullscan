@@ -7,6 +7,9 @@ name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
 # CLOCK: merge/push of this workflow + mid-session cron.
 # Always last_closed_session() — never the two-date night pack — so a
 # mid-day fire grades 09-03 and does not spend hours on 09-02.
+# A DeepSeek tool-dump follow-up must recover searches / force a close
+# (src/deepseek_client.py) or this job rewrites 11 dumps and skip-if-good
+# stays red.
 
 on:
   schedule:

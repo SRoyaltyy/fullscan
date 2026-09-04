@@ -649,10 +649,11 @@ def test_search_and_sector_rounds_are_bounded() -> None:
     assert getattr(config, "MODEL_REFLECT", "") == "deepseek-chat"
     assert getattr(config, "SECTOR_MAX_SEARCHES", 0) == 2
     assert getattr(config, "SECTOR_CHAT_BUDGET_S", 0) == 420
-    assert "is_tool_dump" in (ROOT / "src" / "deepseek_client.py").read_text(
-        encoding="utf-8")
-    assert "ignoring tool-dump content" in (
-        ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    ds_src = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    assert "is_tool_dump" in ds_src
+    assert "ignoring tool-dump content" in ds_src
+    assert "from tool-dump content" in ds_src
+    assert "force no-tool close" in ds_src
 
 
 def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
