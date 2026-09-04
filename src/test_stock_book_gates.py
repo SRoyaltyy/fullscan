@@ -15,6 +15,7 @@ from src.stock_book import (
     _book_side,
     _buy_veto_mask,
     _clip_event_tilt,
+    _keep_liquid,
     _load_finviz_liquidity,
 )
 
@@ -243,6 +244,18 @@ def test_book_liquidity_requires_recent_atr() -> None:
     assert float(hive.atr_pct) >= MIN_ATR_PCT
 
 
+def test_liquidity_empty_keeps_universe() -> None:
+    df = pd.DataFrame([
+        {"Ticker": "AAA", "market_cap_m": float("nan"),
+         "avg_vol_k": float("nan"), "atr_pct": float("nan")},
+        {"Ticker": "BBB", "market_cap_m": float("nan"),
+         "avg_vol_k": float("nan"), "atr_pct": float("nan")},
+    ])
+    out = _keep_liquid(df)
+    assert len(out) == 2
+    assert set(out["Ticker"]) == {"AAA", "BBB"}
+
+
 def main() -> None:
     tests = [
         test_event_tilt_cannot_invert_essay,
@@ -255,6 +268,7 @@ def main() -> None:
         test_opp_cap_constant,
         test_20260831_sleeve_drops_broken_names,
         test_book_liquidity_requires_recent_atr,
+        test_liquidity_empty_keeps_universe,
     ]
     failed = 0
     for fn in tests:

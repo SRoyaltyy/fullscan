@@ -188,6 +188,38 @@ def _load_finviz_liquidity(date: str) -> pd.DataFrame:
     return out.drop_duplicates("Ticker", keep="first")
 
 
+def _keep_liquid(join: pd.DataFrame) -> pd.DataFrame:
+    """Drop illiquid names. If the filter wipes everyone, keep the universe.
+
+    Missing Finviz mcap/vol/ATR used to become 0 and empty the book, so
+    green.json never wrote.
+    """
+    if join is None or join.empty:
+        return join
+    n_before = len(join)
+    if "atr_pct" not in join.columns:
+        join = join.copy()
+        join["atr_pct"] = np.nan
+    liquid = (
+        (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
+        & (join["avg_vol_k"].fillna(0) >= MIN_AVG_VOL_K)
+        & (join["atr_pct"].fillna(0) >= MIN_ATR_PCT)
+    )
+    join = join.copy()
+    join["liquid"] = liquid
+    kept = join.loc[liquid].copy()
+    print(
+        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M "
+        f"vol>={MIN_AVG_VOL_K}k ATR%>={MIN_ATR_PCT}: "
+        f"{n_before} → {len(kept)}"
+    )
+    if n_before and not len(kept):
+        print("[stock-book] WARN: liquidity filter emptied the universe — "
+              "ranking unfiltered so green.json can still land")
+        return join
+    return kept
+
+
 def _rebound_flags(date: str) -> pd.DataFrame:
     """Stock-specific checklist score floor + tape_ok (sparse mean-reversion tag).
 
@@ -717,21 +749,7 @@ def build(date: str | None = None, top_n: int = 25,
         join["relvol"] = np.nan
     if "relvol" not in join.columns:
         join["relvol"] = np.nan
-    n_before = len(join)
-    if "atr_pct" not in join.columns:
-        join["atr_pct"] = np.nan
-    liquid = (
-        (join["market_cap_m"].fillna(0) >= MIN_MARKET_CAP_M)
-        & (join["avg_vol_k"].fillna(0) >= MIN_AVG_VOL_K)
-        & (join["atr_pct"].fillna(0) >= MIN_ATR_PCT)
-    )
-    join["liquid"] = liquid
-    join = join.loc[liquid].copy()
-    print(
-        f"[stock-book] liquidity filter mcap>={MIN_MARKET_CAP_M}M "
-        f"vol>={MIN_AVG_VOL_K}k ATR%>={MIN_ATR_PCT}: "
-        f"{n_before} → {len(join)}"
-    )
+    join = _keep_liquid(join)
 
     reb = _rebound_flags(date)
     join["rebound"] = False
@@ -2284,6 +2302,31 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     print(f"[stock-book] {copy}")
 
 
+def _write_degraded(date: str, reason: str) -> None:
+    """Last-ditch book + green.json so skip-if-good / heal can see a file."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    DAILY.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "meta": {"date": date, "degraded": True, "reason": reason},
+        "books": {},
+    }
+    (OUT_DIR / f"{date}_stock_book.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    green = {
+        "n_pile": 0, "used": False, "buy_mode": "weighted_fallback",
+        "sell_mode": "core_weights", "tickers": [], "degraded": True,
+        "reason": reason,
+    }
+    (OUT_DIR / f"{date}_green.json").write_text(
+        json.dumps(green, indent=2) + "\n", encoding="utf-8")
+    (DAILY / f"{date}_stock_book.md").write_text(
+        f"# Stock book — {date}\n\n_Degraded: {reason}_\n\n"
+        "Ranker crashed before BUY/SELL. Heal via Stock Book ALL.\n",
+        encoding="utf-8",
+    )
+    print(f"[stock-book] WARN: wrote degraded book + green.json ({reason})")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -2292,8 +2335,16 @@ def main() -> None:
                     help="Use the ranker that was live on --date "
                          "(weighted / green-pile / lattice)")
     args = ap.parse_args()
-    df, meta = build(args.date, top_n=args.top, as_of=args.as_of)
-    write_report(df, meta, top_n=args.top)
+    date = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    try:
+        df, meta = build(args.date, top_n=args.top, as_of=args.as_of)
+        write_report(df, meta, top_n=args.top)
+    except (Exception, SystemExit) as e:  # noqa: BLE001 — still land green.json
+        print(f"[stock-book] WARN: ranker crashed: {e}")
+        try:
+            _write_degraded(date, str(e)[:300])
+        except Exception as e2:  # noqa: BLE001
+            print(f"[stock-book] WARN: degraded write failed: {e2}")
 
 
 if __name__ == "__main__":
