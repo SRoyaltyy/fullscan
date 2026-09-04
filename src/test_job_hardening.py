@@ -683,6 +683,8 @@ def test_search_and_sector_rounds_are_bounded() -> None:
     assert "SECTOR_CHUNK" in mh
     assert "honest_none_cards" in mh
     assert "honest-none" in mh
+    assert "synthesis tickers dropped" in mh
+    assert 'raise SystemExit("; ".join(opp_errors' not in mh
     rs = (ROOT / "src" / "map_heat_research.py").read_text(encoding="utf-8")
     assert "def salvage_cards" in rs
 
