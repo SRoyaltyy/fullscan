@@ -172,8 +172,11 @@ def test_deepseek_only_unchanged() -> None:
     _reset(deepseek_key="ds-key")
     urls = []
 
+    timeouts = []
+
     def fake_post(url, headers=None, json=None, timeout=None):
         urls.append(url)
+        timeouts.append(timeout)
         return _fake_response(200, "DS")
 
     with mock.patch.object(dc.requests, "post", side_effect=fake_post):
@@ -182,6 +185,7 @@ def test_deepseek_only_unchanged() -> None:
     assert text == "DS"
     assert dc.last_provider() == "deepseek"
     assert urls == [f"{config.DEEPSEEK_BASE_URL}/chat/completions"]
+    assert timeouts == [(15, 300)]
 
 
 def test_deepseek_chat_caps_grok_sized_output_budget() -> None:
@@ -303,6 +307,24 @@ def test_grok_only_no_fallback_when_already_down() -> None:
     assert urls == []
 
 
+def test_deepseek_connect_timeout_does_not_retry() -> None:
+    """A firewalled api.deepseek.com must not burn 300s × 4 before empty."""
+    _reset(deepseek_key="ds-key")
+    n = {"calls": 0}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        n["calls"] += 1
+        raise dc.requests.ConnectTimeout("connect timed out")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep") as slept:
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == ""
+    assert n["calls"] == 1
+    slept.assert_not_called()
+
+
 def test_connect_timeout_marks_gateway_down() -> None:
     """Firewalled SYN-drop must not burn OPENCLAW_TIMEOUT before DeepSeek."""
     _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
@@ -349,6 +371,7 @@ def main() -> None:
         test_fallback_on_empty_answer,
         test_no_fallback_returns_empty,
         test_deepseek_only_unchanged,
+        test_deepseek_connect_timeout_does_not_retry,
         test_deepseek_chat_caps_grok_sized_output_budget,
         test_describe_routing_no_secrets,
         test_timeout_content_is_empty,
