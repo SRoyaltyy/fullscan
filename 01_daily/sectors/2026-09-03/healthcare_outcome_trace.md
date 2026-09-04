@@ -10,16 +10,16 @@
 
   - Health Care SPDR (XLV) ETF Forecast & Price Target (2026) (https://clearank.com/etf/health-care-select-spdr-xlv/)
 
-  - XLV: State Street® Health Care Select Sector SPDR® ETF - SSGA (https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv)
+  - XLV Performance History & Total Returns - FinanceCharts.com (https://www.financecharts.com/etfs/XLV/performance)
 
-  - XLV - Performance - State Street®HlthCrSelSectSPDR®ETF | Morningstar (https://www.morningstar.com/etfs/arcx/xlv/performance)
+  - XLV: State Street® Health Care Select Sector SPDR® ETF - SSGAState Street Health Care Select Sector SPDR ETF (XLV) Stock ...XLV Looks 4.0% Overvalued on GF Value™ as of September 2026XLV – Performance – State Street®HlthCrSelSectSPDR®ETF ... (https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv)
 
-**Step 2 — Research.** The model wanted to know: *"healthcare stocks September 3 2026 selloff laggards"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"SPY S&P 500 September 3 2026 rally drivers"* → got 6 results (via ddg)
 
-  - Wall Street warms to healthcare stocks as tech trade faces ... (https://www.reuters.com/business/finance/wall-street-warms-healthcare-stocks-tech-trade-faces-turbulence-2026-08-05/)
+  - Bulls Charge Into September: S&P Tops 7,739 on Broad Rally (https://www.thewhymarkets.com/recaps/2026-09-03)
 
-  - Stock market news for Aug. 21, 2026 - CNBC (https://www.cnbc.com/2026/08/20/stock-market-today-live-updates.html)
+  - Stock Market News for Thursday, Sept. 3, 2026: Dow, S&P 500, Nasdaq ... (https://www.barrons.com/livecoverage/stock-market-news-today-090326)
 
-  - Stock Market News From Sept. 1, 2026: Dow, S&P 500, Nasdaq ... (https://www.barrons.com/livecoverage/stock-market-news-today-090126)
+  - Stock Market Outlook for Friday, September 04, 2026 (https://strongbuyanalytics.com/stock-market-outlook)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
