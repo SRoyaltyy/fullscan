@@ -130,8 +130,9 @@ def test_postclose_all_needs_learn_not_just_outcome() -> None:
 
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
-    # 11 predicts landed; 0 outcomes / 0 reflect. Learnings must not skip those.
-    assert skip_if_good.check_general_reflect("2026-09-03") is False
+    # 09-03 reflect.md was healed from the Grok transcript (#76).
+    # 11 predicts landed; 0 sector outcomes / no dated learnings.
+    assert skip_if_good.check_general_reflect("2026-09-03") is True
     assert skip_if_good.check_sector_outcomes("2026-09-03") is False
     assert skip_if_good.check_postclose_all("2026-09-03") is False
 
