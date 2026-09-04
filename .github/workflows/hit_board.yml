@@ -35,11 +35,12 @@ jobs:
       - name: Build HIT board
         run: |
           set -e
-          python -m src.hit_board
+          python -m src.hit_board || true
           echo "======== 03_scoreboard/HIT_BOARD.md ========"
-          cat 03_scoreboard/HIT_BOARD.md
+          cat 03_scoreboard/HIT_BOARD.md || true
 
       - name: Commit
+        if: always()
         run: |
           export HOME="${HOME:-/home/gha}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE

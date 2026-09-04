@@ -83,6 +83,14 @@ def _exists(*parts: str) -> bool:
     return _p(*parts).exists()
 
 
+def _exists_gt(*parts: str, min_bytes: int = 200) -> bool:
+    p = _p(*parts)
+    try:
+        return p.is_file() and p.stat().st_size >= min_bytes
+    except OSError:
+        return False
+
+
 def _date_paths(root: Path, date: str) -> list[Path]:
     """Today's predictive artifacts only. Missing paths are omitted."""
     hits: list[Path] = []
@@ -452,18 +460,18 @@ def run(date: str | None = None, force: bool = False,
 
     # Weather / join / AB have no LLM clock. Run them before essays so a
     # slow Grok morning cannot leave the ranker with 0/4 book outputs.
-    if force or not _exists("data", "universe", f"{date}_membership.csv"):
+    if force or not _exists_gt("data", "universe", f"{date}_membership.csv"):
         print("[preopen-all] → Universe labels (segments)")
         _run([py, "-m", "src.segments", "--date", date])
         snapshot_persist(date)
     step("weather", "Weather / regime",
          [py, "-m", "src.weather", "--date", date])
-    if force or not _exists("data", "join", f"{date}_ranked.csv"):
+    if force or not _exists_gt("data", "join", f"{date}_ranked.csv"):
         print("[preopen-all] → Join / match rank")
         _run([py, "-m", "src.join", "--date", date])
         snapshot_persist(date)
-    if force or not _exists("data", "ab_checklist",
-                            f"{date}_ab_checklist_enriched.csv"):
+    if force or not _exists_gt("data", "ab_checklist",
+                               f"{date}_ab_checklist_enriched.csv"):
         if not _exists("data", "ab_checklist", f"{date}_ab_checklist.csv"):
             print("[preopen-all] → AB checklist")
             _run([py, "-m", "src.ab_checklist", "--date", date])
@@ -488,13 +496,10 @@ def run(date: str | None = None, force: bool = False,
         os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
             "MAP_HEAT_REFRESH_TIMEOUT", "1200")
         try:
-            rc = step("map_heat_research", "Map heat morning delta refresh",
-                      [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
-            if rc != 0:
-                print("[preopen-all] morning research failed — retrying once")
-                step("map_heat_research", "Map heat morning delta refresh (retry)",
-                     [py, "-m", "src.map_heat_refresh", "--date", date,
-                      "--force", *fa])
+            step("map_heat_research", "Map heat morning delta refresh",
+                 [py, "-m", "src.map_heat_refresh", "--date", date, *fa])
+            # No retry: a second 20-min timeout ate 2026-09-02 and
+            # pushed predicts/book past 09:30. Night baseline stands.
         finally:
             if prev_timeout is None:
                 os.environ.pop("OPENCLAW_TIMEOUT", None)

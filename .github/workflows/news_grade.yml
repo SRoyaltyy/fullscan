@@ -38,11 +38,12 @@ jobs:
       - name: Grade news actions
         env:
           MAX_DAYS: ${{ github.event.inputs.max_days }}
-        run: python -m src.news_grade ${MAX_DAYS:+--max-days "$MAX_DAYS"}
+        run: python -m src.news_grade ${MAX_DAYS:+--max-days "$MAX_DAYS"} || true
       - name: Preview report
         if: always()
         run: head -80 03_scoreboard/news_actions_report.md || true
       - name: Commit
+        if: always()
         run: |
           export HOME="${HOME:-/home/gha}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE

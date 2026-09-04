@@ -213,6 +213,15 @@ def test_pipeline_health_audit_default() -> None:
     assert 'default: "true"' in text  # no_fix default
 
 
+def test_hit_and_news_grade_still_commit() -> None:
+    hit = (WF / "hit_board.yml").read_text(encoding="utf-8")
+    news = (WF / "news_grade.yml").read_text(encoding="utf-8")
+    assert "cat 03_scoreboard/HIT_BOARD.md || true" in hit
+    assert "if: always()" in hit
+    assert "if: always()" in news
+    assert "src.news_grade" in news and "|| true" in news
+
+
 def test_diag_exits_zero() -> None:
     text = (WF / "stock_book_diag.yml").read_text(encoding="utf-8")
     assert "exit 0" in text
@@ -270,6 +279,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "skip_extras=True" in pre
     assert "safe_git_push.sh" in pre
     assert "timeout_s=45 if late" in pre
+    assert "No retry" in pre
+    assert "_exists_gt" in pre
     assert "skip_extras" in book
     post = (ROOT / "scripts" / "ecs_map_postclose.sh").read_text(encoding="utf-8")
     assert "last_closed_session" in post
@@ -321,6 +332,7 @@ def main() -> None:
         test_ecs_jobs_skip_live_finviz,
         test_ticker_lookback_defaults_random,
         test_pipeline_health_audit_default,
+        test_hit_and_news_grade_still_commit,
         test_diag_exits_zero,
         test_preopen_lock_matches_postclose,
         test_heal_targets_all_jobs,
