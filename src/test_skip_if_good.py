@@ -39,6 +39,10 @@ def test_postclose_all_needs_learn_not_just_outcome() -> None:
     assert skip_if_good.check_postclose_all("2026-09-03") is False
 
 
+def test_finviz_scrape_requires_elite_export() -> None:
+    assert skip_if_good.check_finviz_scrape("1999-01-01") is False
+
+
 def test_jobs_include_label_weather() -> None:
     assert "label_weather" in skip_if_good.JOBS
     assert "stock_book_all" in skip_if_good.JOBS
@@ -79,6 +83,7 @@ if __name__ == "__main__":
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()
     test_postclose_all_needs_learn_not_just_outcome()
+    test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
     test_degraded_book_is_not_good()
     print("ok")

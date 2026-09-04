@@ -74,7 +74,7 @@ jobs:
           fi
       - name: Install
         if: env.skip != 'yes'
-        run: pip install -r requirements.txt && pip install pandas requests beautifulsoup4 lxml || true
+        run: pip install -r requirements.txt && pip install pandas requests beautifulsoup4 lxml psycopg2-binary || true
       - name: Digest + morning overlay
         if: env.skip != 'yes'
         env:
@@ -91,12 +91,14 @@ jobs:
           ARGS=(--date "$DATE" --overlay)
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           python -m src.map_heat "${ARGS[@]}"
+          echo "CMD: python -m collectors.finviz_financials (elite CSV for the book)"
+          FULLSCAN_DB_OPTIONAL=1 python -m collectors.finviz_financials || echo "[warn] elite export soft-failed"
       - name: Commit scrape
         if: always() && env.skip != 'yes'
         run: |
           bash scripts/safe_git_push.sh \
             "auto: finviz preopen scrape (via Pre-Open ALL) [$(date -u +%F_%H%M)]" \
-            01_daily/news/ 01_daily/map_heat/
+            01_daily/news/ 01_daily/map_heat/ data/exports/
 
   land_book:
     name: Land book + green (ubuntu — no Grok, no ECS)
@@ -165,7 +167,8 @@ jobs:
           bash scripts/safe_git_push.sh \
             "auto: stock book layer (ubuntu land) [${DATE}]" \
             data/stock_book/ data/join/ data/universe/ data/ab_checklist/ \
-            data/peers/ 01_daily/weather/ "01_daily/${DATE}_stock_book.md"
+            data/peers/ data/exports/ 01_daily/weather/ \
+            "01_daily/${DATE}_stock_book.md"
 
   preopen:
     needs: scrape

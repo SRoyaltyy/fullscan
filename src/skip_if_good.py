@@ -75,9 +75,15 @@ def check_finviz_scrape(date: str) -> bool:
         return _log(False, "finviz_preopen_scrape", date, "map_heat unreadable")
     overlay = str(payload.get("overlay_at") or "")
     tape = payload.get("tape") or []
-    ok = overlay.startswith(date) and bool(tape)
-    return _log(ok, "finviz_preopen_scrape", date,
-                f"overlay_at={overlay!r} tape={len(tape) if isinstance(tape, list) else 0}")
+    if not (overlay.startswith(date) and bool(tape)):
+        return _log(False, "finviz_preopen_scrape", date,
+                    f"overlay_at={overlay!r} tape={len(tape) if isinstance(tape, list) else 0}")
+    export = ROOT / "data" / "exports" / f"finviz_{date}.csv"
+    # Full universe is megabytes. A header-only stub must not skip the book.
+    if not _exists_gt(export, 50_000):
+        return _log(False, "finviz_preopen_scrape", date, "elite export missing/thin")
+    return _log(True, "finviz_preopen_scrape", date,
+                f"overlay_at={overlay!r} tape={len(tape) if isinstance(tape, list) else 0} export_ok")
 
 
 def check_preopen_all(date: str) -> bool:

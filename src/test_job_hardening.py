@@ -328,6 +328,17 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "Pull scrape + export from main" in pre_yml
     assert "git checkout origin/main --" in pre_yml
     assert 'force=true — rank even if a book is on disk' in pre_yml
+    assert "collectors.finviz_financials" in pre_yml
+    assert "data/exports/" in pre_yml
+    scrape_yml = (WF / "finviz_preopen_scrape.yml").read_text(encoding="utf-8")
+    assert "collectors.finviz_financials" in scrape_yml
+    assert "data/exports/" in scrape_yml
+    skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
+    assert "elite export missing/thin" in skip
+    fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")
+    assert "America/New_York" in fin
+    ch1 = (ROOT / "src" / "fetch_channel1.py").read_text(encoding="utf-8")
+    assert "setdefaulttimeout(20)" in ch1
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "skip_extras:" in book_yml
     assert "past 09:25 ET — skip LLM + extras" in book_yml

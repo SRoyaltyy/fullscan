@@ -149,7 +149,8 @@ def _status_for_day(date: str) -> list[dict]:
         {
             "name": "Finviz universe export",
             "key": "finviz",
-            "done": _exists("data", "exports", f"finviz_{date}.csv"),
+            "done": _file_ge("data", "exports", f"finviz_{date}.csv",
+                             min_bytes=50_000),
             "artifact": f"data/exports/finviz_{date}.csv",
             "required": False,
         },
