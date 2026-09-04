@@ -288,6 +288,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "safe_git_push.sh" in pre
     assert "timeout_s=45 if late" in pre
     assert "No retry" in pre
+    assert 'PREOPEN_LLM_TIMEOUT", "420"' in pre
+    assert "10800s ate 2026-09-04" in pre
     assert "_exists_gt" in pre
     assert "skip_extras" in book
     extras_gate = book.find("skip extras before book")

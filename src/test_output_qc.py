@@ -50,6 +50,35 @@ def test_judge_accepted() -> None:
     assert r.ok, r.explain()
 
 
+def test_http_timeouts_trip_breaker_after_three() -> None:
+    _reset(
+        openclaw_url="http://gw:18789",
+        deepseek_key="ds-key",
+        grok_only=False,
+    )
+    import requests as req_mod
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        if "gw:18789" in url:
+            raise req_mod.Timeout("hung")
+        return _fake_response(200, "DEEPSEEK ANSWER")
+
+    for n in range(1, 3):
+        with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+            text = dc.chat([{"role": "user", "content": "hi"}],
+                           model="deepseek-chat", tools=False)
+        assert text == "DEEPSEEK ANSWER"
+        assert not dc._OPENCLAW_STATE["down"]
+        assert dc._OPENCLAW_STATE["timeouts"] == n
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat([{"role": "user", "content": "hi"}],
+                       model="deepseek-chat", tools=False)
+    assert text == "DEEPSEEK ANSWER"
+    assert dc._OPENCLAW_STATE["down"]
+    assert "HTTP timeouts" in dc._OPENCLAW_STATE["reason"]
+
+
 def test_timeout_content_falls_back_to_deepseek() -> None:
     _reset(
         openclaw_url="http://gw:18789",
@@ -157,6 +186,7 @@ def main() -> None:
         test_carried_events_rejected,
         test_general_predict_accepted,
         test_judge_accepted,
+        test_http_timeouts_trip_breaker_after_three,
         test_timeout_content_falls_back_to_deepseek,
         test_credit_exhaustion_content_falls_back_to_deepseek,
         test_real_essay_not_timeout,

@@ -258,7 +258,17 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                               stage_label=stage_label)
         final = (resp["choices"][0]["message"].get("content") or "").strip()
     except (RuntimeError, KeyError, IndexError, TypeError) as e:
-        _note_openclaw_fail(str(e))
+        reason = str(e)
+        if "timeout after" in reason.lower():
+            _OPENCLAW_STATE["timeouts"] = _OPENCLAW_STATE.get("timeouts", 0) + 1
+            n = _OPENCLAW_STATE["timeouts"]
+            print(f"[openclaw] HTTP timeout ({stage_label or 'llm run'}; "
+                  f"consecutive={n}) — will fall back to DeepSeek")
+            if n >= 3:
+                _mark_openclaw_down(
+                    f"{n} consecutive HTTP timeouts "
+                    f"({stage_label or 'llm run'})")
+        _note_openclaw_fail(reason)
         return ""
 
     if not final:
