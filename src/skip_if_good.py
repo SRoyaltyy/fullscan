@@ -15,7 +15,12 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import green_pile, output_qc
+from . import output_qc
+
+# Keep these here so Actions can skip-if-good before pip install pandas
+# (green_pile imports pandas). Must match src/green_pile.py.
+EPS = 0.05
+RELVOL_DEAD = 0.7
 
 ET = ZoneInfo("America/New_York")
 ROOT = Path(__file__).resolve().parent.parent
@@ -230,7 +235,7 @@ def book_1d_has_dead_relvol(js: Path) -> bool:
             rv = float(rv)
         except (TypeError, ValueError):
             continue
-        if 0 < rv < green_pile.RELVOL_DEAD:
+        if 0 < rv < RELVOL_DEAD:
             dead.append(str(row.get("ticker") or "?"))
     if dead:
         print(f"[skip_if_good] 1d BUY dead relvol: {', '.join(dead[:8])}",
@@ -253,7 +258,7 @@ def book_1d_breaks_all_green(js: Path) -> bool:
     if not isinstance(buys, list):
         return False
     bad = []
-    eps = green_pile.EPS
+    eps = EPS
     for row in buys:
         if not isinstance(row, dict):
             continue
@@ -286,7 +291,7 @@ def book_1d_breaks_all_green(js: Path) -> bool:
                 rv = row.get("relvol")
                 if rv is not None:
                     rv = float(rv)
-                    if 0 < rv < green_pile.RELVOL_DEAD:
+                    if 0 < rv < RELVOL_DEAD:
                         failed = True
             except (TypeError, ValueError):
                 pass
