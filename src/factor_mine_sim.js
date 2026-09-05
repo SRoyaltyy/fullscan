@@ -103,8 +103,139 @@
     if (req.rvol_min != null && !(row.ohlc_rvol != null && row.ohlc_rvol >= Number(req.rvol_min))) return false;
     if (req.rvol_max != null && !(row.ohlc_rvol != null && row.ohlc_rvol <= Number(req.rvol_max))) return false;
     if (req.days_since_E_max != null && !(row.erd_days_since_E != null && Number(row.erd_days_since_E) <= Number(req.days_since_E_max))) return false;
+    if (req.flag_E_min != null && !(row.erd_flag_E != null && Number(row.erd_flag_E) >= Number(req.flag_E_min))) return false;
+    if (req.days_since_R_max != null && !(row.erd_days_since_R != null && Number(row.erd_days_since_R) <= Number(req.days_since_R_max))) return false;
     if (req.flag_R != null && Number(row.erd_flag_R || 0) !== Number(req.flag_R)) return false;
     return true;
+  }
+  function kidGate(key, val) {
+    if (key === "live_entry") return "live flatten gate says GO";
+    if (key === "blue") return "the name is painted 🔵";
+    if (key === "zero_red") return "no morning camera is red";
+    if (key === "alarm") return "the 🚨 alarm is on";
+    if (key === "last_green") return "the last finished bar was green";
+    if (key === "last_red") return "the last finished bar was red";
+    if (key === "candle_capture") return "the prior-candle capture flag is on";
+    if (key === "break_10") return "the name broke its prior 10-session range";
+    if (key === "earn_react") return "the name is in an earnings-reaction window";
+    if (key === "news_present") return "the news camera printed something";
+    if (key === "join_present") return "the join camera printed something";
+    if (key === "catal_present") return "the catalyst camera printed something";
+    if (key === "ret_5_min") return "prior 5-session return is at least " + val + "%";
+    if (key === "ret_5_max") return "prior 5-session return is at most " + val + "%";
+    if (key === "rvol_min") return "prior relative volume is at least " + val;
+    if (key === "rvol_max") return "prior relative volume is at most " + val;
+    if (key === "days_since_E_max") return "earnings (E) printed within the last " + val + " session(s)";
+    if (key === "flag_E_min") return "the earnings flag is on";
+    if (key === "days_since_R_max") return "an analyst revision (R) printed within the last " + val + " session(s)";
+    if (key === "flag_R") {
+      if (Number(val) === 1) return "the latest revision flag is an upgrade";
+      if (Number(val) === -1) return "the latest revision flag is a downgrade";
+      return "the revision flag equals " + val;
+    }
+    const word = {good:"green", bad:"red", neutral:"yellow", missing:"blank", true:"green"}[String(val)] || String(val);
+    return key + " is " + word;
+  }
+  function matchWhy(row, rec, mornings) {
+    const failed = [], passed = [];
+    const need = (ok, msg) => { (ok ? passed : failed).push(msg); };
+    const uni = rec.universe || "union";
+    const srcs = new Set(row.sources || []);
+    if (uni !== "union") need(srcs.has(uni), "on the " + uni + " 09:30 list");
+    const req = rec.require || {}, forb = rec.forbid || {};
+    if (req.live_entry) {
+      const ok = row.flatten_ok != null ? row.flatten_ok
+        : ((mornings || {})[row.date] || {}).flatten_ok;
+      need(!!ok, "live flatten gate says GO");
+    }
+    const boxes = row.boxes || {};
+    const cams = ["join","sector","gen","news","digest","judge","ab","peer","heat","vol","catal","buy"];
+    for (const cam of cams) {
+      if (req[cam] != null) need(camOk(tone(boxes, cam), req[cam]), kidGate(cam, req[cam]));
+      if (forb[cam] != null) need(!camOk(tone(boxes, cam), forb[cam]), "not " + kidGate(cam, forb[cam]));
+    }
+    if (req.blue) need(!!row.blue, kidGate("blue", true));
+    if (req.zero_red) need(!!row.zero_red, kidGate("zero_red", true));
+    if (forb.alarm) need(!row.alarm, "no 🚨 overnight alarm");
+    if (req.alarm) need(!!row.alarm, "🚨 alarm is on");
+    if (req.last_green) need(!!row.last_green, kidGate("last_green", true));
+    if (req.last_red) need(!!row.last_red, kidGate("last_red", true));
+    if (req.candle_capture) need(!!row.candle_capture, kidGate("candle_capture", true));
+    if (req.break_10) need(!!row.ohlc_break_10, kidGate("break_10", true));
+    if (req.earn_react) need(!!row.erd_earn_react, kidGate("earn_react", true));
+    if (req.news_present) need(tone(boxes, "news") !== "missing", kidGate("news_present", true));
+    if (req.join_present) need(tone(boxes, "join") !== "missing", kidGate("join_present", true));
+    if (req.catal_present) need(tone(boxes, "catal") !== "missing", kidGate("catal_present", true));
+    if (req.ret_5_min != null) need(row.ohlc_ret_5 != null && row.ohlc_ret_5 >= Number(req.ret_5_min), kidGate("ret_5_min", req.ret_5_min));
+    if (req.ret_5_max != null) need(row.ohlc_ret_5 != null && row.ohlc_ret_5 <= Number(req.ret_5_max), kidGate("ret_5_max", req.ret_5_max));
+    if (req.rvol_min != null) need(row.ohlc_rvol != null && row.ohlc_rvol >= Number(req.rvol_min), kidGate("rvol_min", req.rvol_min));
+    if (req.rvol_max != null) need(row.ohlc_rvol != null && row.ohlc_rvol <= Number(req.rvol_max), kidGate("rvol_max", req.rvol_max));
+    if (req.days_since_E_max != null) need(row.erd_days_since_E != null && Number(row.erd_days_since_E) <= Number(req.days_since_E_max), kidGate("days_since_E_max", req.days_since_E_max));
+    if (req.flag_E_min != null) need(row.erd_flag_E != null && Number(row.erd_flag_E) >= Number(req.flag_E_min), kidGate("flag_E_min", req.flag_E_min));
+    if (req.days_since_R_max != null) need(row.erd_days_since_R != null && Number(row.erd_days_since_R) <= Number(req.days_since_R_max), kidGate("days_since_R_max", req.days_since_R_max));
+    if (req.flag_R != null) need(Number(row.erd_flag_R || 0) === Number(req.flag_R), kidGate("flag_R", req.flag_R));
+    return {ok: !failed.length, failed, passed};
+  }
+  function decisionWhy(pack, rec, date, ticker, mornings) {
+    const looks = lookDay(pack, rec, date, mornings);
+    const hit = looks.find(x => x.ticker === ticker);
+    const morn = (mornings || {})[date] || {};
+    const s = morn.s != null ? morn.s : (pack.s || {})[date];
+    const hard = !!(morn.hard_red || (s != null && s <= (pack.hard_red != null ? pack.hard_red : -3)));
+    const row = rowIndex(pack)[date + "|" + ticker];
+    const mw = row ? matchWhy(row, rec, mornings)
+      : {ok: false, failed: ["not on any 09:30 shopping list"], passed: []};
+    const topN = Number(rec.top_n || 8);
+    const lines = [];
+    if (hard) {
+      lines.push("Morning weather S is " + (s == null ? "—" : Number(s).toFixed(2)) + " (hard-red ≤ −3).");
+      lines.push("The sleeve sits — no new lots today, even if this name would pass the buy gates.");
+      if (mw.passed.length) lines.push("Gates that already pass: " + mw.passed.join("; ") + ".");
+      if (mw.failed.length) lines.push("It would still fail these gates if S were above −3: " + mw.failed.join("; ") + ".");
+      return {take: "sit", lines};
+    }
+    if (hit && hit.buy) {
+      lines.push("Would buy: on this recipe's shopping list and inside the cash cut.");
+      if (mw.passed.length) lines.push("Gates that fired: " + mw.passed.join("; ") + ".");
+      if (hit.rank != null) lines.push("Ranked #" + hit.rank + " of top " + topN + " by " + (rec.rank || "list order") + ".");
+      return {take: "buy", lines};
+    }
+    if (hit && hit.pass) {
+      lines.push("Would not buy: passed the gates but ranked #" + hit.rank + " — only the top " + topN + " get leftover cash.");
+      return {take: "no", lines};
+    }
+    lines.push("Would not buy.");
+    if (mw.failed.length) lines.push("Failed: " + mw.failed.join("; ") + ".");
+    else lines.push("Not on this recipe's 09:30 universe.");
+    return {take: "no", lines};
+  }
+  function packRets(xs) {
+    const v = (xs || []).filter(x => x != null && Number.isFinite(Number(x))).map(Number);
+    if (!v.length) return {n: 0, win: null, mean: null};
+    return {
+      n: v.length,
+      win: Math.round(10000 * v.filter(x => x > 0).length / v.length) / 10000,
+      mean: Math.round(1000 * v.reduce((a, b) => a + b, 0) / v.length) / 1000,
+    };
+  }
+  function hitTally(pack, rec, mornings) {
+    const dates = pack.dates || [];
+    const buy = [], no = [], sit = [], le2 = [], ge3 = [];
+    for (const date of dates) {
+      const looks = lookDay(pack, rec, date, mornings);
+      const morn = (mornings || {})[date] || {};
+      const s = morn.s != null ? morn.s : (pack.s || {})[date];
+      const hard = !!(morn.hard_red || (s != null && s <= (pack.hard_red != null ? pack.hard_red : -3)));
+      for (const x of looks) {
+        if (x.ret == null) continue;
+        (hard ? sit : (x.buy ? buy : no)).push(x.ret);
+        ((x.n_neg || 0) >= 3 ? ge3 : le2).push(x.ret);
+      }
+    }
+    return {
+      buy: packRets(buy), no: packRets(no), sit: packRets(sit),
+      n_neg_le2: packRets(le2), n_neg_ge3: packRets(ge3),
+    };
   }
   function rankKey(row, rec) {
     const how = rec.rank;
@@ -625,5 +756,6 @@
 
   global.FMSim = {
     matches, pickDay, rankScore, lookDay, holdReturn, simulateBook, orderFees,
+    matchWhy, decisionWhy, hitTally, packRets,
   };
 })(typeof window !== "undefined" ? window : globalThis);

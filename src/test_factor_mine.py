@@ -459,6 +459,10 @@ def test_template_has_data_slot() -> None:
     assert "syncProbeTickToBuys" in text
     assert "probeTickers" in text
     assert "This 09:30" in text
+    assert "whyHtml" in text
+    assert "erdHtml" in text
+    assert "renderHits" in text
+    assert "Hit rate" in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -1163,6 +1167,76 @@ def test_look_day_ranks_and_horizon() -> None:
     assert looks[1]["rank"] == 2
 
 
+def test_erd_polarity_does_not_paint_date_only_green() -> None:
+    from src import factor_mine_probe as fmp
+    from src import finviz_events as fe
+    unknown = fmp.erd_polarity({
+        "erd_days_since_E": 1, "erd_flag_E": 1, "erd_earn_react": True,
+        "erd_flag_R": 0,
+    }, {})
+    assert unknown["e_pol"] == "neutral"
+    assert "unknown" in unknown["e_label"]
+    assert unknown["r_pol"] == "missing"
+    beat = fmp.erd_polarity({"erd_flag_E": 1, "erd_flag_R": 0},
+                            {"EPS Surprise": "8.85%", "Analyst Recom": "1.8"})
+    assert beat["e_pol"] == "good"
+    assert "beat" in beat["e_label"]
+    assert beat["r_pol"] == "good"
+    miss = fmp.erd_polarity({"erd_flag_E": 1, "erd_flag_R": -1},
+                            {"EPS Surprise": "-4.2%", "Analyst Recom": "4.1"})
+    assert miss["e_pol"] == "bad"
+    assert miss["r_pol"] == "bad"
+    rows = fe.events_from_export_fields("AAA", "8/13/2026 4:30:00 PM", None)
+    assert rows[0]["color"] == "white"
+    assert rows[0]["label"] == "E"
+
+
+def test_match_why_and_decision() -> None:
+    rec = fm.make_recipe("union_e_green_h3", hold=3, top_n=8,
+                         require={"earn_react": True, "last_green": True},
+                         forbid={"alarm": True})
+    row = {
+        "date": "2026-08-17", "ticker": "AAA", "sources": ["union"],
+        "boxes": {}, "alarm": False, "last_green": True,
+        "erd_earn_react": True, "src_rank": 0,
+    }
+    why = fm.match_why(row, rec)
+    assert why["ok"] is True
+    assert any("earnings-reaction" in x for x in why["passed"])
+    sit = fm.decision_why(rec, hard=True, s=-6.2, look={"buy": True, "rank": 1},
+                          why=why)
+    assert sit["take"] == "sit"
+    assert any("hard-red" in x for x in sit["lines"])
+    buy = fm.decision_why(rec, hard=False, look={"buy": True, "rank": 1}, why=why)
+    assert buy["take"] == "buy"
+    fail = dict(row, last_green=False, erd_earn_react=False)
+    no = fm.decision_why(rec, hard=False, look={"buy": False, "pass": False},
+                         why=fm.match_why(fail, rec))
+    assert no["take"] == "no"
+    assert any("Failed:" in x for x in no["lines"])
+
+
+def test_hit_tally_buy_sit_and_nneg() -> None:
+    from src import factor_mine_sim as fms
+    looks = {
+        "2026-08-17": [
+            {"ticker": "A", "buy": True, "n_neg": 1, "ret": 4.0},
+            {"ticker": "B", "buy": False, "n_neg": 4, "ret": -3.0},
+        ],
+        "2026-08-18": [
+            {"ticker": "A", "buy": True, "n_neg": 0, "ret": 2.0},
+            {"ticker": "C", "buy": False, "n_neg": 5, "ret": -1.0},
+        ],
+    }
+    t = fms.hit_tally(looks, hard_dates={"2026-08-18"})
+    assert t["buy"]["n"] == 1 and t["buy"]["win"] == 1
+    assert t["no"]["n"] == 1 and t["no"]["win"] == 0
+    assert t["sit"]["n"] == 2
+    assert t["n_neg_le2"]["n"] == 2
+    assert t["n_neg_ge3"]["n"] == 2
+    assert t["n_neg_ge3"]["win"] == 0
+
+
 def test_js_sim_matches_python_later_start() -> None:
     import subprocess
     from pathlib import Path
@@ -1268,5 +1342,8 @@ if __name__ == "__main__":
     test_build_probe_quotes_repo_files_not_same_day_change()
     test_stamp_starts_and_probe_on_mined_payload()
     test_look_day_ranks_and_horizon()
+    test_erd_polarity_does_not_paint_date_only_green()
+    test_match_why_and_decision()
+    test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("41 factor-mine tests passed")
+    print("44 factor-mine tests passed")

@@ -79,6 +79,15 @@
  .buy-banner.sit{background:#7f1d1d;color:#fecaca;border:2px solid #f87171}
  .buy-banner.no{background:#1f2937;color:#cbd5e1;border:2px solid #64748b}
  .gl-banner{font:700 20px/1.2 ui-sans-serif,system-ui;text-align:center;padding:8px;border-radius:8px;margin:0 0 8px}
+ .why-box{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0 0 8px;background:#121826}
+ .why-box b{display:block;margin:0 0 4px}
+ .why-box ul{margin:0;padding-left:18px}
+ .erd-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:8px;margin:0 0 8px}
+ .erd-chip{border:1px solid var(--line);border-radius:8px;padding:7px 8px;background:#121826}
+ .erd-chip .erd-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font:700 13px/1.2 ui-monospace,Menlo,Consolas,monospace}
+ .erd-chip .erd-lab{color:var(--mut);font:12px/1.35 ui-sans-serif,system-ui;margin-top:3px}
+ .tally{border:1px solid var(--line);border-radius:8px;padding:7px 8px;margin:8px 0 0;background:#121826}
+ .tally .tally-row{display:flex;flex-wrap:wrap;gap:6px 12px;font:12px/1.35 ui-monospace,Menlo,Consolas,monospace;margin:2px 0}
  .look-row{display:grid;grid-template-columns:32px minmax(52px,1fr) 44px minmax(64px,auto) minmax(56px,auto);gap:6px;align-items:center;padding:4px 0;border-bottom:1px solid var(--line2);font:12px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
  .look-row:hover{background:rgba(251,191,36,.08)}
  .look-hd{color:var(--mut);font-weight:600;cursor:default}
@@ -156,8 +165,8 @@
   <li><b>Win rate.</b> Share of picks with horizon return &gt; 0 (long or short).</li>
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. Marks and the blotter stay as detailed as 8-13. It is not “add on top of the 8-13 book.” The investigator date follows this morning.</li>
-  <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
-  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here.</li>
+  <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade — a date-only stamp is not green. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
+  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. −N is red-camera count. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
   <li><b>AvgW vs AvgL.</b> Closed-trade mean % on the cash book (fees in).</li>
@@ -550,6 +559,59 @@ function cardPasses(rec, card){
   if(req.flag_R!=null && Number(card.flag_R||0)!==Number(req.flag_R)) return false;
   return true;
 }
+function whyHtml(why){
+  const lines=(why&&why.lines)||[];
+  if(!lines.length) return '';
+  const title=why.take==='sit'?'Why SIT':(why.take==='buy'?'Why BUY':'Why NO');
+  return `<div class="why-box"><b>${esc(title)}</b><ul>${lines.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul></div>`;
+}
+function erdHtml(card){
+  const eTone=toneOf(card.e_pol);
+  const rTone=toneOf(card.r_pol);
+  const eLab=card.e_label||'earnings polarity unknown';
+  const rLab=card.r_label||'no analyst revision on file';
+  const eWord=eTone==='good'?'beat':(eTone==='bad'?'miss':(eTone==='neutral'?'unknown':'none'));
+  const rWord=rTone==='good'?'upgrade/buy':(rTone==='bad'?'downgrade/sell':(rTone==='neutral'?'hold / unknown':'none'));
+  return `<div class="erd-row">
+    <div class="erd-chip"><div class="erd-top"><span>E · ${esc(eWord)}</span><span class="dot ${eTone}" title="${esc(eLab)}"></span></div><div class="erd-lab">${esc(eLab)}</div></div>
+    <div class="erd-chip"><div class="erd-top"><span>R · ${esc(rWord)}</span><span class="dot ${rTone}" title="${esc(rLab)}"></span></div><div class="erd-lab">${esc(rLab)}</div></div>
+  </div>`;
+}
+function tallyLine(lab, pack){
+  if(!pack || !pack.n) return `<span class="pill mut">${esc(lab)} —</span>`;
+  const pct=pack.win==null?'—':(100*pack.win).toFixed(0)+'%';
+  const mean=pack.mean==null?'—':((pack.mean>=0?'+':'')+Number(pack.mean).toFixed(2)+'%');
+  return `<span class="pill ${cls(pack.mean)}"><b>${esc(lab)}</b> ${pct} green · ${pack.n} names · mean ${mean}</span>`;
+}
+function renderHits(){
+  const el=document.getElementById('hitOut');
+  if(!el) return;
+  const name=pickedName();
+  if(!name || !D.sim || typeof FMSim==='undefined'){ el.innerHTML=''; return; }
+  const rec=recipeOf(name);
+  const all=FMSim.hitTally(D.sim, rec, D.mornings||{});
+  const date=(D.dates||[])[probeIdx];
+  const looks=lookRows(date);
+  const morn=(D.mornings||{})[date]||{};
+  const hard=!!(morn.hard_red || (morn.s!=null && Number(morn.s)<=-3));
+  const dayBuy=[], dayNo=[], daySit=[], dayLo=[], dayHi=[];
+  for(const r of looks){
+    if(r.ret==null) continue;
+    (hard?daySit:(r.buy?dayBuy:dayNo)).push(r.ret);
+    ((r.n_neg||0)>=3?dayHi:dayLo).push(r.ret);
+  }
+  const day={buy:FMSim.packRets(dayBuy), no:FMSim.packRets(dayNo), sit:FMSim.packRets(daySit),
+             n_neg_le2:FMSim.packRets(dayLo), n_neg_ge3:FMSim.packRets(dayHi)};
+  el.innerHTML =
+    `<div class="tally">
+      <b>Hit rate — profitable if bought (hold-${esc(rec.hold)})</b>
+      <div class="tally-row"><span class="mut">${esc(date)} this morning</span>${tallyLine('BUY', day.buy)}${tallyLine('NO', day.no)}${tallyLine('SIT', day.sit)}</div>
+      <div class="tally-row"><span class="mut">all mornings</span>${tallyLine('BUY', all.buy)}${tallyLine('NO', all.no)}${tallyLine('SIT', all.sit)}</div>
+      <div class="tally-row"><span class="mut">${esc(date)} −N</span>${tallyLine('≤2 red', day.n_neg_le2)}${tallyLine('≥3 red', day.n_neg_ge3)}</div>
+      <div class="tally-row"><span class="mut">all mornings −N</span>${tallyLine('≤2 red', all.n_neg_le2)}${tallyLine('≥3 red', all.n_neg_ge3)}</div>
+      <div class="mut" style="margin-top:4px">SIT = hard-red sit (would-be H% if it had bought anyway). NO = looked at, skipped. −N is red-camera count; the ≤2 vs ≥3 split is a look-list observation, not a live gate.</div>
+    </div>`;
+}
 function camCol(labs, boxes, files){
   return (labs||[]).map(([k,lab])=>{
     const tone=toneOf((boxes||{})[k]);
@@ -586,7 +648,7 @@ function renderTools(){
     </div>
     <div class="tool">
       <h2>Stock investigator</h2>
-      <p class="mut">One name, one 09:30. The huge badge is whether this recipe would buy it that morning. Horizon % is hold-H from the 09:30 open. Cameras and coaches are repo files — not today's Change%.</p>
+      <p class="mut">One name, one 09:30. The huge badge is whether this recipe would buy it that morning, with the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade — a date-only stamp is not green. Horizon % is hold-H from the 09:30 open.</p>
       <select id="probeTick" aria-label="Ticker">${tickOptions(groups, probeTick)}</select>
       ${navButtons('probe', probeDate)}
       <div><b>${esc(probeTick||'—')}</b> · ${esc(probeDate)} 09:30 ET</div>
@@ -594,8 +656,9 @@ function renderTools(){
     </div>
     <div class="tool">
       <h2>Morning board — who it looked at</h2>
-      <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort (src list, hot score, cond, …). Horizon % is hold-${esc(recipeOf(name).hold)} from the 09:30 open. Same-day Change% is not a gate.</p>
+      <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort. −N next to a name is red-camera count (plus 🚨), not the rank score. Horizon % is hold-${esc(recipeOf(name).hold)} from the 09:30 open.</p>
       <div id="lookOut"></div>
+      <div id="hitOut"></div>
     </div>`;
   box.querySelectorAll('[data-nav="start"] button').forEach(b=>{
     b.onclick=()=>{
@@ -617,6 +680,7 @@ function renderTools(){
   renderCashStart();
   renderProbe();
   renderLooks();
+  renderHits();
 }
 function renderCashStart(){
   const el=document.getElementById('cashStart');
@@ -654,8 +718,12 @@ function renderProbe(){
     let badge='NO — would not buy', badgeCls='no';
     if(hard){ badge='SIT — hard-red, no new buys'; badgeCls='sit'; }
     else if(filled || (hit&&hit.buy)){ badge=filled?'BUY — filled on this cash-start':'BUY — would take this name'; badgeCls='yes'; }
+    const why0 = (typeof FMSim!=='undefined' && D.sim)
+      ? FMSim.decisionWhy(D.sim, rec, date, ticker, D.mornings||{})
+      : {take: badgeCls==='sit'?'sit':'no', lines:[]};
     el.innerHTML=`<div class="buy-banner ${badgeCls}">${esc(badge)}</div>
       <div class="gl-banner ${cls(horizon)}">${horizon==null?'Horizon P/L — not enough tape':('Horizon P/L if bought here: '+(horizon>=0?'+':'')+Number(horizon).toFixed(2)+'% over hold '+esc(rec.hold||'?'))}</div>
+      ${whyHtml(why0)}
       <div class="mut">${esc(ticker)} is not in the 09:30 camera files on ${esc(date)} (not on any shopping list, and not in flatten lookback). Same-day tape was not used.</div>`;
     return;
   }
@@ -685,7 +753,7 @@ function renderProbe(){
     `Last finished bar: ${card.last_green?'green (closed up)':card.last_red?'red (closed down)':'not flagged'}`,
     `Prior 5-session return: ${card.ret_5==null?'—':(card.ret_5>=0?'+':'')+card.ret_5+'%'} · prior rel vol ${card.rvol==null?'—':card.rvol}${card.nr7?' · NR7':''}${card.break_10?' · broke 10-session range':''}`,
     `Candles: ${card.candle||'—'} · capture ${card.candle_capture?'yes':'no'}`,
-    `Earnings reaction window: ${card.earn_react?'yes':'no'}${card.erd?(' · '+card.erd):''}${card.days_E!=null?(' · E '+card.days_E+' sess ago'):''}`,
+    `Earnings window: ${card.earn_react?'yes':'no'}${card.days_E!=null?(' · E '+card.days_E+' sess ago'):''}${card.days_R!=null?(' · R '+card.days_R+' sess ago'):''}`,
     `News: ${newsWord} (${newsTitle}${news.when?'; retrieved '+news.when:''}${news.retrieved?'; prior export '+news.retrieved:''}) · ${news.file||'panel.json'}${news.judge!=null?(' · judge tilt '+news.judge):''}`,
     `Cond: ${card.cond_good||0} green / ${card.cond_bad||0} red cameras`,
     card.action?`Flatten Action 09:30: ${card.action}${card.action_why?(' — '+card.action_why):''}`:'',
@@ -693,9 +761,14 @@ function renderProbe(){
     morn.why?`Morning flatten gate: ${morn.route||'—'} · ${morn.why}`:'',
     `Quoted from: ${(card.files||[]).join(' · ')||'repo files'}`,
   ].filter(Boolean);
+  const why = (typeof FMSim!=='undefined' && D.sim)
+    ? FMSim.decisionWhy(D.sim, rec, date, ticker, D.mornings||{})
+    : {take: badgeCls==='sit'?'sit':(badgeCls==='yes'?'buy':'no'), lines:[]};
   el.innerHTML =
     `<div class="buy-banner ${badgeCls}">${esc(badge)}</div>
      <div class="gl-banner ${cls(horizon)}">${horizon==null?'Horizon P/L — not enough tape':('Horizon P/L if bought here: '+(horizon>=0?'+':'')+Number(horizon).toFixed(2)+'% over hold '+esc(rec.hold||'?'))}</div>
+     ${whyHtml(why)}
+     ${erdHtml(card)}
      <div class="negbox"><b>Negative factors: ${card.n_neg||0}</b>${negBits.length?' · '+negBits.join(', '):''}</div>
      <div class="cam-grid">
        <div class="cam-col"><h3>Cameras</h3>${camCol(D.cam_labs, card.boxes, D.cam_file)}</div>

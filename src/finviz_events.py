@@ -366,8 +366,10 @@ def events_from_export_fields(ticker: str, earn_raw, div_raw) -> list[dict]:
     t = str(ticker or "").strip().upper()
     ed, hm = parse_finviz_datetime(earn_raw)
     if ed:
+        # Date-only export is not a beat. Color stays white so 09:30
+        # boards do not paint a green circle when polarity is unknown.
         out.append(_row(
-            t, KIND_E, ed, hm=hm, color="green", label="E",
+            t, KIND_E, ed, hm=hm, color="white", label="E",
             detail=str(earn_raw or ""), source="finviz_export",
         ))
     dd, _ = parse_finviz_datetime(div_raw)
