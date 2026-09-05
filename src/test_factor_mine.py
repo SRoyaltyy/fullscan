@@ -1,6 +1,8 @@
 """Leak-free factor strategy miner — unit tests, no full lookback scan."""
 from __future__ import annotations
 
+import json
+
 from src import factor_mine as fm
 from src import ohlc_ripper as ohlc
 
@@ -442,6 +444,13 @@ def test_template_has_data_slot() -> None:
     assert "renderExplain" in text
     assert "fill-card" in text
     assert "overflow-x:hidden" in text.replace(" ", "")
+    assert "startSlide" in text
+    assert "Stock investigator" in text
+    assert "cam-grid" in text
+    assert "renderProbe" in text
+    assert "Cash-start" in text
+    assert "renderTools" in text
+    assert "sleeve\\'s" not in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -958,6 +967,159 @@ def test_stamp_explains_on_mined_payload() -> None:
     assert payload["recipes"][0]["explain"]["sell"]
 
 
+def test_cash_start_later_date_is_fresh_10k() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [
+        {"date": "2026-08-17", "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0},
+        {"date": "2026-08-18", "ticker": "BBB", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0},
+        {"date": "2026-08-19", "ticker": "BBB", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0},
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {"session_dates": cal, "rows": rows, "by_date": by_date}
+    bars = {("AAA", d): {"open": 10, "close": 11} for d in cal}
+    bars.update({("BBB", d): {"open": 10, "close": 12} for d in cal})
+    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
+    book = fmb.simulate_book(
+        panel, rec, bars=bars, fees=pt.load_fees(), regime={},
+        start="2026-08-18")
+    d0 = book["daily"][0]
+    assert d0["date"] == "2026-08-18"
+    assert d0["open_cash"] == 10_000
+    assert d0.get("open_held") in ([], None) or list(d0["open_held"]) == []
+    assert "BBB" in (d0.get("bought") or [])
+    assert "AAA" not in (d0.get("bought") or [])
+
+
+def test_cash_start_hard_red_still_sits() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [
+        {"date": d, "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0}
+        for d in cal
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {"session_dates": cal, "rows": rows, "by_date": by_date}
+    bars = {("AAA", d): {"open": 10, "close": 10} for d in cal}
+    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
+    book = fmb.simulate_book(
+        panel, rec, bars=bars, fees=pt.load_fees(),
+        start="2026-08-18",
+        regime={"2026-08-18": {"predict_score": -6.2}},
+    )
+    d0 = book["daily"][0]
+    assert d0["date"] == "2026-08-18"
+    assert d0["hard_red"] is True
+    assert d0["open_cash"] == 10_000
+    assert abs(float(d0["cash"]) - 10_000) < 0.05
+    assert not d0.get("bought")
+    assert all(
+        t["date"] != "2026-08-18" or t["side"] != "BUY"
+        for t in book["trades"]
+    )
+
+
+def test_replay_starts_has_first_morning_and_aligned_equity() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [
+        {"date": d, "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0}
+        for d in cal
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {"session_dates": cal, "rows": rows, "by_date": by_date}
+    bars = {("AAA", d): {"open": 10, "close": 10.5} for d in cal}
+    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
+    starts = fmb.replay_starts(
+        panel, rec, bars=bars, fees=pt.load_fees(), regime={})
+    assert len(starts) == 3
+    s0 = starts[0]
+    assert s0["start"] == "2026-08-17"
+    assert s0["open_cash"] == 10_000
+    assert s0["buys"]
+    assert s0["buys"][0]["ticker"] == "AAA"
+    assert "days" in s0 and len(s0["days"]) == 3
+    assert len(s0["equity"]) == 3
+    s1 = starts[1]
+    assert s1["start"] == "2026-08-18"
+    assert s1["equity"][0] is None
+    assert s1["equity"][1] is not None
+    assert s1["open_cash"] == 10_000
+
+
+def test_build_probe_quotes_repo_files_not_same_day_change() -> None:
+    from src import factor_mine_probe as fmp
+    panel = {
+        "rows": [{
+            "date": "2026-08-13", "ticker": "INO",
+            "sources": ["flatten"],
+            "boxes": {"join": "good", "news": "missing", "judge": "good"},
+            "alarm": False, "blue": True, "zero_red": True,
+            "last_green": True, "ohlc_ret_5": 13.24, "ohlc_rvol": 0.68,
+            "news_export_date": "2026-08-12",
+            "news_box": "missing", "news_prior": "missing",
+            "cond_good": 4, "cond_bad": 0,
+        }],
+    }
+    probe = fmp.build_probe(panel)
+    card = probe["2026-08-13"]["INO"]
+    assert card["n_neg"] >= 0
+    assert card["boxes"]["join"] == "good"
+    assert "change" not in card
+    assert "Change%" not in json.dumps(card)
+    assert card["files"]
+    assert card["news"]["file"]
+    assert card["news"].get("title") or card["news"]["file"]
+    slim = fmp.slim_probe(probe, {"INO"})
+    assert slim["2026-08-13"]["INO"]["n_neg"] == card["n_neg"]
+
+
+def test_stamp_starts_and_probe_on_mined_payload() -> None:
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18"]
+    rows = [
+        {"date": d, "ticker": "AAA", "sources": ["union"],
+         "boxes": {"join": "good"}, "alarm": False, "last_red": False,
+         "src_rank": 0, "open": 10, "close": 11}
+        for d in cal
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {
+        "from_date": cal[0], "to_date": cal[-1],
+        "session_dates": cal, "rows": rows, "by_date": by_date,
+    }
+    recs = [fm.make_recipe("union_h1", hold=1, top_n=1)]
+    bars = {("AAA", d): {"open": 10, "close": 11} for d in cal}
+    payload = {
+        "from_date": cal[0], "to_date": cal[-1],
+        "recipes": recs, "books": {}, "starts": {},
+    }
+    fm.stamp_starts_and_probe(payload, panel=panel, bars=bars)
+    paths = payload["starts"]["union_h1"]
+    assert paths[0]["open_cash"] == 10_000
+    assert paths[0]["buys"]
+    assert payload["cam_labs"]
+    assert payload["probe"]["2026-08-17"]["AAA"]["on_list"] is True
+    assert "mornings" in payload
+    _ = pt.load_fees()
+
+
 def test_action_filters_size_sell_boost() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -1003,4 +1165,9 @@ if __name__ == "__main__":
     test_explain_recipe_union_e_green_h3()
     test_explain_covers_all_recipes()
     test_stamp_explains_on_mined_payload()
-    print("34 factor-mine tests passed")
+    test_cash_start_later_date_is_fresh_10k()
+    test_cash_start_hard_red_still_sits()
+    test_replay_starts_has_first_morning_and_aligned_equity()
+    test_build_probe_quotes_repo_files_not_same_day_change()
+    test_stamp_starts_and_probe_on_mined_payload()
+    print("39 factor-mine tests passed")

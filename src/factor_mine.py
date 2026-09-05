@@ -1199,7 +1199,7 @@ def run(from_date: str = START, to_date: str | None = None,
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
         "union_e_green_h3",
-        "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
+        "flatten_h5", "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
         "union_h5_sboost", "flatten_live_h1_sizeup",
         "union_h3_cut", "union_h1_topheavy",
     ) if any(s["name"] == n for s in stats)]
@@ -1238,8 +1238,58 @@ def run(from_date: str = START, to_date: str | None = None,
         "panel_n": panel.get("n_rows"),
     }
     stamp_explains(payload)
+    from . import factor_mine_probe as fmp
+    bought = _bought_tickers(books, {s["name"]: s.get("starts") for s in stats})
+    payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
+    payload["mornings"] = fmp.build_mornings()
+    payload.update(fmp.probe_meta())
     if write:
         write_outputs(payload, stats, books=books)
+    return payload
+
+
+def _bought_tickers(books: dict | None, starts: dict | None = None) -> set[str]:
+    out: set[str] = set()
+    for bk in (books or {}).values():
+        for t in (bk or {}).get("trades") or []:
+            if t.get("side") in ("BUY", "SHORT") and t.get("ticker"):
+                out.add(_tick(t["ticker"]))
+    for paths in (starts or {}).values():
+        for p in paths or []:
+            for b in (p.get("buys") or []):
+                if b.get("ticker"):
+                    out.add(_tick(b["ticker"]))
+            for name in p.get("bought") or []:
+                if name:
+                    out.add(_tick(name))
+    return out
+
+
+def stamp_starts_and_probe(payload: dict, panel: dict | None = None,
+                           bars=None) -> dict:
+    """Replay cash-start paths + investigator cards. Does not remine books."""
+    from . import factor_mine_book as fmb
+    from . import factor_mine_probe as fmp
+    panel = panel if panel is not None else load_or_build_panel(
+        payload.get("from_date") or START,
+        payload.get("to_date"),
+    )
+    panel = rehydrate_panel(panel)
+    regime = fmb.load_regime()
+    fees = pt_fees()
+    recs = list(payload.get("recipes") or [])
+    starts = {}
+    for i, rec in enumerate(recs, 1):
+        starts[rec["name"]] = fmb.replay_starts(
+            panel, rec, bars=bars, fees=fees, regime=regime)
+        if i == 1 or i == len(recs) or i % 20 == 0:
+            print(f"[factor-mine] cash-start {i}/{len(recs)} {rec['name']}",
+                  flush=True)
+    payload["starts"] = starts
+    bought = _bought_tickers(payload.get("books"), starts)
+    payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
+    payload["mornings"] = fmp.build_mornings()
+    payload.update(fmp.probe_meta())
     return payload
 
 
@@ -1353,12 +1403,14 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "Cash book: $10k, whole shares, Futubull fees, leftover split, "
         "sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts "
         "marked as a liability. Each session starts from leftover cash "
-        "and lots actually held (butterfly). Size / sell / S-boost "
-        "tweaks sit on the same ledger. Signal-only % is the old "
-        "equal-weight path (not a fill). `flatten_h*` = wish-list "
-        "(io/HOLD mornings still buy). `flatten_live_*` = only when "
-        "the live flatten gate fires. Research only — does not change "
-        "live `flatten_robust`.",
+        "and lots actually held (butterfly). The cash-start scroller "
+        "wakes a sleeve on date X with $10k and no lots (same rules). "
+        "Stock investigator quotes 09:30 cameras / coaches / news from "
+        "repo files. Size / sell / S-boost tweaks sit on the same "
+        "ledger. Signal-only % is the old equal-weight path (not a "
+        "fill). `flatten_h*` = wish-list (io/HOLD mornings still buy). "
+        "`flatten_live_*` = only when the live flatten gate fires. "
+        "Research only — does not change live `flatten_robust`.",
         "",
         "Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).",
         "",
