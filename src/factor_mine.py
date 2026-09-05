@@ -444,7 +444,9 @@ def rank_key(row: dict, rec: dict) -> tuple:
         return (-(0.6 * hot + 0.4 * max(cond, 0)), row["ticker"])
     if how == "w_hot_candle":
         return (-(0.6 * hot + 0.4 * candle), row["ticker"])
-    return (int(row.get("src_rank") or 99), row["ticker"])
+    src = row.get("src_rank")
+    src_i = 99 if src is None else int(src)
+    return (src_i, row["ticker"])
 
 
 def pick_day(rows: list[dict], rec: dict) -> list[dict]:

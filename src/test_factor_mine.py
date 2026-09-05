@@ -326,6 +326,22 @@ def test_action_dropdown_auto_tweaks_neighbors() -> None:
     assert any(r["name"].startswith("flatten_live") for r in live)
 
 
+def test_src_rank_zero_is_first_not_last() -> None:
+    rec = fm.make_recipe("flatten_h5", universe="flatten", hold=5, top_n=8)
+    rows = [
+        {"ticker": "BTSG", "sources": ["flatten"], "src_rank": 0, "boxes": {}},
+        {"ticker": "IREN", "sources": ["flatten"], "src_rank": 1, "boxes": {}},
+        {"ticker": "VOR", "sources": ["flatten"], "src_rank": 8, "boxes": {}},
+    ]
+    # nine names, top 8 must keep rank 0 and drop rank 8
+    extra = [{"ticker": f"X{i}", "sources": ["flatten"], "src_rank": i,
+              "boxes": {}} for i in range(2, 8)]
+    picked = [r["ticker"] for r in fm.pick_day(rows + extra, rec)]
+    assert picked[0] == "BTSG"
+    assert "VOR" not in picked
+    assert len(picked) == 8
+
+
 def test_live_entry_skips_hold_mornings() -> None:
     rec_wish = fm.make_recipe("flatten_h1", universe="flatten", hold=1)
     rec_live = fm.make_recipe(
@@ -438,9 +454,10 @@ if __name__ == "__main__":
     test_cash_book_whole_shares_fees_and_hard_red()
     test_min_hold_blocks_sell_until_floor()
     test_action_dropdown_auto_tweaks_neighbors()
+    test_src_rank_zero_is_first_not_last()
     test_live_entry_skips_hold_mornings()
     test_short_book_marks_liability_and_cover()
     test_recipes_cover_holds_shorts_and_exits()
     test_template_has_data_slot()
     test_write_outputs_injects_payload()
-    print("18 factor-mine tests passed")
+    print("19 factor-mine tests passed")
